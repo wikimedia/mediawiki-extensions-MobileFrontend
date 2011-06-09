@@ -1,6 +1,6 @@
 <?php
 /**
- * Extension PatchOutputMobile — Patch HTML output for mobile
+ * Extension MobileFrontend — Mobile Frontend
  *
  * @file
  * @ingroup Extensions
@@ -16,7 +16,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 // Define the extension; allows us make sure the extension is used correctly
-define( 'PATCHOUTPUTMOBILE', 'PatchOutputMobile' );
+define( 'MOBILEFRONTEND', 'MobileFrontend' );
 // WURFL installation dir
 define( 'WURFL_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library' . 
 		DIRECTORY_SEPARATOR . 'WURFL' . DIRECTORY_SEPARATOR );
@@ -28,25 +28,25 @@ require_once( WURFL_DIR . 'Application.php' );
 
 // Extension credits that will show up on Special:Version
 $wgExtensionCredits['other'][] = array(
-	'name' => 'PatchOutputMobile',
-	'version' => ExtPatchOutputMobile::VERSION,
+	'name' => 'MobileFrontend',
+	'version' => ExtMobileFrontend::VERSION,
 	'author' => '[http://www.mediawiki.org/wiki/User:Preilly Preilly]',
-	'description' => 'Patch HTML output for mobile',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:PatchOutputMobile',
+	'description' => 'Mobile Frontend',
+	'url' => 'http://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
 
 $cwd = dirname(__FILE__) . DIRECTORY_SEPARATOR;
-$wgExtensionMessagesFiles['PatchOutputMobile'] = $cwd . 'PatchOutputMobile.i18n.php';
+$wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
 //autoload extension classes
 $wgAutoloadClasses['DeviceDetection'] = $cwd . 'DeviceDetection.php';
 $wgAutoloadClasses['CssDetection']    = $cwd . 'CssDetection.php';
 
-$wgExtPatchOutputMobile = new ExtPatchOutputMobile();
+$wgExtMobileFrontend = new ExtMobileFrontend();
 
-$wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtPatchOutputMobile,
+$wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
-class ExtPatchOutputMobile {
+class ExtMobileFrontend {
 	const VERSION = '0.4.5';
 
 	private $doc;
@@ -99,18 +99,18 @@ class ExtPatchOutputMobile {
 		
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
-		self::$messages['patch-output-mobile-show']               = wfMsg( 'patch-output-mobile-show-button' );
-		self::$messages['patch-output-mobile-hide']               = wfMsg( 'patch-output-mobile-hide-button' );
-		self::$messages['patch-output-mobile-back-to-top']        = wfMsg( 'patch-output-mobile-back-to-top-of-section' );
-		self::$messages['patch-output-mobile-regular-wikipedia']  = wfMsg( 'patch-output-mobile-regular-wikipedia' );
-		self::$messages['patch-output-mobile-perm-stop-redirect'] = wfMsg( 'patch-output-mobile-perm-stop-redirect' );
-		self::$messages['patch-output-mobile-copyright']          = wfMsg( 'patch-output-mobile-copyright' );
-		self::$messages['patch-output-mobile-home-button']        = wfMsg( 'patch-output-mobile-home-button' );
-		self::$messages['patch-output-mobile-random-button']      = wfMsg( 'patch-output-mobile-random-button' );
-		self::$messages['patch-output-mobile-are-you-sure']       = wfMsg( 'patch-output-mobile-are-you-sure' );
-		self::$messages['patch-output-mobile-explain-disable']    = wfMsg( 'patch-output-mobile-explain-disable' );
-		self::$messages['patch-output-mobile-disable-button']     = wfMsg( 'patch-output-mobile-disable-button' );
-		self::$messages['patch-output-mobile-back-button']        = wfMsg( 'patch-output-mobile-back-button' );
+		self::$messages['mobile-frontend-show']               = wfMsg( 'mobile-frontend-show-button' );
+		self::$messages['mobile-frontend-hide']               = wfMsg( 'mobile-frontend-hide-button' );
+		self::$messages['mobile-frontend-back-to-top']        = wfMsg( 'mobile-frontend-back-to-top-of-section' );
+		self::$messages['mobile-frontend-regular-wikipedia']  = wfMsg( 'mobile-frontend-regular-wikipedia' );
+		self::$messages['mobile-frontend-perm-stop-redirect'] = wfMsg( 'mobile-frontend-perm-stop-redirect' );
+		self::$messages['mobile-frontend-copyright']          = wfMsg( 'mobile-frontend-copyright' );
+		self::$messages['mobile-frontend-home-button']        = wfMsg( 'mobile-frontend-home-button' );
+		self::$messages['mobile-frontend-random-button']      = wfMsg( 'mobile-frontend-random-button' );
+		self::$messages['mobile-frontend-are-you-sure']       = wfMsg( 'mobile-frontend-are-you-sure' );
+		self::$messages['mobile-frontend-explain-disable']    = wfMsg( 'mobile-frontend-explain-disable' );
+		self::$messages['mobile-frontend-disable-button']     = wfMsg( 'mobile-frontend-disable-button' );
+		self::$messages['mobile-frontend-back-button']        = wfMsg( 'mobile-frontend-back-button' );
 		
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
@@ -157,15 +157,15 @@ class ExtPatchOutputMobile {
 		if ( $this->contentFormat == 'XHTML' ) {
 			$dir = self::$dir;
 			$code = self::$code;
-			$regularWikipedia = self::$messages['patch-output-mobile-regular-wikipedia'];
-			$permStopRedirect = self::$messages['patch-output-mobile-perm-stop-redirect'];
-			$copyright = self::$messages['patch-output-mobile-copyright'];
-			$homeButton = self::$messages['patch-output-mobile-home-button'];
-			$randomButton = self::$messages['patch-output-mobile-random-button'];
-			$areYouSure = self::$messages['patch-output-mobile-are-you-sure'];
-			$explainDisable = self::$messages['patch-output-mobile-explain-disable'];
-			$disableButton = self::$messages['patch-output-mobile-disable-button'];
-			$backButton = self::$messages['patch-output-mobile-back-button'];
+			$regularWikipedia = self::$messages['mobile-frontend-regular-wikipedia'];
+			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
+			$copyright = self::$messages['mobile-frontend-copyright'];
+			$homeButton = self::$messages['mobile-frontend-home-button'];
+			$randomButton = self::$messages['mobile-frontend-random-button'];
+			$areYouSure = self::$messages['mobile-frontend-are-you-sure'];
+			$explainDisable = self::$messages['mobile-frontend-explain-disable'];
+			$disableButton = self::$messages['mobile-frontend-disable-button'];
+			$backButton = self::$messages['mobile-frontend-back-button'];
 			$title = $areYouSure;
 			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 			require( 'views/notices/_donate.html.php' );
@@ -192,9 +192,9 @@ class ExtPatchOutputMobile {
 
 	private function showHideCallbackXHTML( $matches ) {
 		static $headings = 0;
-		$show = self::$messages['patch-output-mobile-show'];
-		$hide = self::$messages['patch-output-mobile-hide'];
-		$backToTop = self::$messages['patch-output-mobile-back-to-top'];
+		$show = self::$messages['mobile-frontend-show'];
+		$hide = self::$messages['mobile-frontend-hide'];
+		$backToTop = self::$messages['mobile-frontend-back-to-top'];
 		++$headings;
 		// Back to top link
 		$base = "<div class='section_anchors' id='anchor_" . intval( $headings - 1 ) .
@@ -375,11 +375,11 @@ class ExtPatchOutputMobile {
 		
 		$dir = self::$dir;
 		$code = self::$code;
-		$regularWikipedia = self::$messages['patch-output-mobile-regular-wikipedia'];
-		$permStopRedirect = self::$messages['patch-output-mobile-perm-stop-redirect'];
-		$copyright = self::$messages['patch-output-mobile-copyright'];
-		$homeButton = self::$messages['patch-output-mobile-home-button'];
-		$randomButton = self::$messages['patch-output-mobile-random-button'];
+		$regularWikipedia = self::$messages['mobile-frontend-regular-wikipedia'];
+		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
+		$copyright = self::$messages['mobile-frontend-copyright'];
+		$homeButton = self::$messages['mobile-frontend-home-button'];
+		$randomButton = self::$messages['mobile-frontend-random-button'];
 		
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 		
