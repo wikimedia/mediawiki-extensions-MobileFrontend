@@ -1,6 +1,6 @@
 <?php
 /**
- * Extension PatchOutputMobile — Device Detection
+ * Extension MobileFrontend — Device Detection
  *
  * @file
  * @ingroup Extensions

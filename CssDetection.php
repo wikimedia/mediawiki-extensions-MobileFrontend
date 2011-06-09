@@ -1,6 +1,6 @@
 <?php
 /**
- * Extension PatchOutputMobile — Css Detection
+ * Extension MobileFrontend — Css Detection
  *
  * @file
  * @ingroup Extensions
