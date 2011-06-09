@@ -28,10 +28,11 @@ require_once( WURFL_DIR . 'Application.php' );
 
 // Extension credits that will show up on Special:Version
 $wgExtensionCredits['other'][] = array(
+	'path' => __FILE__,
 	'name' => 'MobileFrontend',
 	'version' => ExtMobileFrontend::VERSION,
 	'author' => '[http://www.mediawiki.org/wiki/User:Preilly Preilly]',
-	'description' => 'Mobile Frontend',
+	'descriptionmsg' => 'mobile-frontend-desc',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
 

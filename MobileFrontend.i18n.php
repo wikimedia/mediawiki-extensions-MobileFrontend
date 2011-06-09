@@ -13,6 +13,7 @@ $messages = array();
 
 //en translation
 $messages['en'] = array (
+	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-search-results' => 'Search results',
@@ -4356,3 +4357,4 @@ Wikipedia®和維基百科標誌是<a href=\'http://www.wikimediafoundation.org/
 	'mobile-frontend-search-submit' => '進入',
 	'mobile-frontend-show-button' => '顯示',
 );
+
