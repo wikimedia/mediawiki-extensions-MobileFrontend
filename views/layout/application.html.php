@@ -5,7 +5,7 @@ $applicationHtml = <<<EOT
   <head> 
     <title>{$title}</title> 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-    <link href='/extensions/PatchOutputMobile/stylesheets/{$cssFileName}.css' media='all' rel='Stylesheet' type='text/css' /> 
+    <link href='/extensions/MobileFrontend/stylesheets/{$cssFileName}.css' media='all' rel='Stylesheet' type='text/css' /> 
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" /> 
     <meta name = "viewport" content = "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
     <link rel="apple-touch-icon" href="http://en.m.wikipedia.org/apple-touch-icon.png" /> 
@@ -18,8 +18,8 @@ $applicationHtml = <<<EOT
         }
       //]]>
     </script> 
-    <script type="text/javascript" language="javascript" SRC="/extensions/PatchOutputMobile/javascripts/jquery.js"></script> 
-    <script type="text/javascript" language="javascript" SRC="/extensions/PatchOutputMobile/javascripts/application.js"></script> 
+    <script type="text/javascript" language="javascript" SRC="/extensions/MobileFrontend/javascripts/jquery.js"></script> 
+    <script type="text/javascript" language="javascript" SRC="/extensions/MobileFrontend/javascripts/application.js"></script> 
   </head>
   <body>
 	{$searchWebkitHtml}
