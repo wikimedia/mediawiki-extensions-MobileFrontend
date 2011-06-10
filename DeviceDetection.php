@@ -356,8 +356,10 @@ class DeviceDetection {
 			$formatName = 'psp';
 		} elseif ( preg_match( '/PLAYSTATION 3/', $userAgent ) ) {
 			$formatName = 'ps3';
+		} elseif ( preg_match( '/SAMSUNG/', $userAgent ) ) {
+		    $formatName = 'html';
 		}
-
+		
 		if ( $formatName === '' ) {
 			if ( strpos( $acceptHeader, 'application/vnd.wap.xhtml+xml' ) !== false ) {
 				$formatName = 'wml';
