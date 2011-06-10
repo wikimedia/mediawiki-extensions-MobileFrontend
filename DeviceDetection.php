@@ -358,6 +358,8 @@ class DeviceDetection {
 			$formatName = 'ps3';
 		} elseif ( preg_match( '/SAMSUNG/', $userAgent ) ) {
 		    $formatName = 'html';
+		} elseif ( preg_match( '/BlackBerry/', $userAgent ) ) {
+			$formatName = 'blackberry';
 		}
 		
 		if ( $formatName === '' ) {
