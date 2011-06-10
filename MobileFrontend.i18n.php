@@ -408,8 +408,11 @@ $messages['be'] = array(
 	'mobile-frontend-nav-history' => 'Гісторыя',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬) */
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+ * @author EugeneZelenko
+ */
 $messages['be-tarask'] = array(
+	'mobile-frontend-desc' => 'Мабільны інтэрфэйс',
 	'mobile-frontend-wikipedia' => 'Вікіпэдыя',
 	'mobile-frontend-search-submit' => 'Знайсьці',
 	'mobile-frontend-search-results' => 'Вынікі пошуку',
@@ -808,8 +811,11 @@ $messages['da'] = array(
 	'mobile-frontend-file-namespace' => 'Fil',
 );
 
-/** German (Deutsch) */
+/** German (Deutsch)
+ * @author Kghbln
+ */
 $messages['de'] = array(
+	'mobile-frontend-desc' => 'Ermöglicht die für mobile Endgeräte optimierte Darstellung von Seiten',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Los',
 	'mobile-frontend-search-results' => 'Suchergebnisse',
@@ -2431,8 +2437,11 @@ $messages['mi'] = array(
 	'mobile-frontend-search-text' => 'Rapua',
 );
 
-/** Macedonian (Македонски) */
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
 $messages['mk'] = array(
+	'mobile-frontend-desc' => 'Кориснички дел за мобилен уред',
 	'mobile-frontend-wikipedia' => 'Википедија',
 	'mobile-frontend-search-submit' => 'Оди',
 	'mobile-frontend-search-results' => 'Резултати од пребарувањето',
@@ -3096,17 +3105,20 @@ $messages['ps'] = array(
 	'mobile-frontend-file-namespace' => 'دوتنه',
 );
 
-/** Portuguese (Português) */
+/** Portuguese (Português)
+ * @author Hamilton Abreu
+ */
 $messages['pt'] = array(
+	'mobile-frontend-desc' => 'Interface para Telemóveis',
 	'mobile-frontend-wikipedia' => 'Wikipédia',
 	'mobile-frontend-search-submit' => 'Ir',
-	'mobile-frontend-search-results' => 'Resultados da Pesquisa',
-	'mobile-frontend-no-article-found' => 'Nenhum Artigo Encontrado',
-	'mobile-frontend-featured-article' => 'Artigo em Destaque',
+	'mobile-frontend-search-results' => 'Resultados da pesquisa',
+	'mobile-frontend-no-article-found' => 'Não foi encontrada nenhuma página',
+	'mobile-frontend-featured-article' => 'Artigo em destaque',
 	'mobile-frontend-in-the-news' => 'Actualidades',
 	'mobile-frontend-home-button' => 'Início',
 	'mobile-frontend-random-button' => 'Aleatório',
-	'mobile-frontend-back-to-top-of-section' => 'Retroceder Uma Secção',
+	'mobile-frontend-back-to-top-of-section' => 'Retroceder uma secção',
 	'mobile-frontend-show-button' => 'Mostrar',
 	'mobile-frontend-hide-button' => 'Esconder',
 	'mobile-frontend-disable-button' => 'Desactivar',
@@ -3114,7 +3126,7 @@ $messages['pt'] = array(
 	'mobile-frontend-regular-wikipedia' => 'Ver esta página na Wikipédia normal',
 	'mobile-frontend-perm-stop-redirect' => 'Desactivar permanentemente o site móvel',
 	'mobile-frontend-error-page-title' => 'Temos um problema!',
-	'mobile-frontend-error-page-text' => 'A Wikipédia móvel ainda está em desenvolvimento e estamos corrigindo os erros internos. Fomos notificados deste erro e ele será corrigido brevemente. Por favor, verifique dentro de algum tempo se a correcção já está disponivel!',
+	'mobile-frontend-error-page-text' => 'A Wikipédia móvel ainda está em desenvolvimento e estamos corrigindo os erros internos. Fomos notificados deste erro e ele será corrigido brevemente. Verifique dentro de algum tempo se a correcção já está disponivel, por favor!',
 	'mobile-frontend-copyright' => "Este texto é disponibilizado nos termos da licença <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; pode estar sujeito a condições adicionais. Consulte as <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Condições de Uso</a> para mais detalhes. Wikipedia é uma marca registrada da <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, uma organização sem fins lucrativos.",
 	'mobile-frontend-are-you-sure' => 'Tem a certeza ?',
 	'mobile-frontend-explain-disable' => 'Tem a certeza de que pretende desactivar a versão móvel da Wikipédia? Se escolher <b>Desactivar</b>, a partir de agora ao visitar a Wikipédia deixará de ser reencaminhado para esta versão móvel.',
@@ -3123,9 +3135,9 @@ $messages['pt'] = array(
 	'mobile-frontend-nav-edit' => 'Editar',
 	'mobile-frontend-nav-history' => 'Navegação',
 	'mobile-frontend-search-text' => 'Pesquisar',
-	'mobile-frontend-contact-us' => 'Para perguntas ou comentários, sinta-se à vontade em nos contactar pelo email mobile@wikipedia.org',
+	'mobile-frontend-contact-us' => 'Para perguntas ou comentários, pode contactar-nos por correio electrónico em mobile@wikipedia.org',
 	'mobile-frontend-author-link' => 'Visione este ficheiro na Wikipédia normal para ver informação sobre a autoria, licenciamento e descrições adicionais.',
-	'mobile-frontend-download-full-version' => 'Download da Versão Completa',
+	'mobile-frontend-download-full-version' => 'Download da versão completa',
 	'mobile-frontend-file-namespace' => 'Ficheiro',
 );
 
@@ -3195,7 +3207,9 @@ $messages['rm'] = array(
 	'mobile-frontend-file-namespace' => 'Datoteca',
 );
 
-/** Romanian (Română) */
+/** Romanian (Română)
+ * @author Minisarm
+ */
 $messages['ro'] = array(
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Du-te',
@@ -3205,7 +3219,7 @@ $messages['ro'] = array(
 	'mobile-frontend-in-the-news' => 'Știri',
 	'mobile-frontend-home-button' => 'Acasă',
 	'mobile-frontend-random-button' => 'Aleatoriu',
-	'mobile-frontend-back-to-top-of-section' => 'Mergi în urmă cu o secțiune',
+	'mobile-frontend-back-to-top-of-section' => 'Salt la începutul secțiunii',
 	'mobile-frontend-show-button' => 'Arată',
 	'mobile-frontend-hide-button' => 'Ascunde',
 	'mobile-frontend-disable-button' => 'Dezactivează',
@@ -3214,10 +3228,10 @@ $messages['ro'] = array(
 	'mobile-frontend-perm-stop-redirect' => 'Dezactivează permanent situl pentru mobil',
 	'mobile-frontend-error-page-title' => 'Avem o problemă!',
 	'mobile-frontend-error-page-text' => 'Wikipedia mobilă este încă în curs de dezvoltare și lucrăm din greu pentru a repara orice eroare internă. Am fost anunțați despre această eroare și va fi în curând îndreptată. Vă rugăm să verificați din nou!',
-	'mobile-frontend-copyright' => 'Acest text este disponibil sub licența <a href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons cu atribuire și distribuire în condiții identice</a>; pot exista și clauze suplimentare. Vedeți detalii la <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Termenii de utilizare</a>. Wikipedia este o marcă înregistrată a organizației nonprofit <a href=\'http://www.wikimediafoundation.org/\'>Fundația Wikimedia, Inc.</a>.',
+	'mobile-frontend-copyright' => 'Acest text este disponibil sub licența <a href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons cu atribuire și distribuire în condiții identice</a>; pot exista și clauze suplimentare. Vedeți detalii la <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Termenii de utilizare</a>. Wikipedia este o marcă înregistrată a organizației nonprofit <a href=\'http://www.wikimediafoundation.org/\'>Fundația Wikimedia, Inc.</a>',
 	'mobile-frontend-are-you-sure' => 'Sunteți sigur?',
 	'mobile-frontend-explain-disable' => 'Sunteți sigur că doriți să dezactivați versiunea mobilă a Wikipediei? Dacă alegeți <b>Dezactivează</b>, de acum, atunci când veți vizita Wikipedia, nu veți mai fi redirecționat către acest sit dedicat dispozitivelor mobile.',
-	'mobile-frontend-nav-end' => 'Sfârșit',
+	'mobile-frontend-nav-end' => 'Jos',
 	'mobile-frontend-nav-top' => 'Sus',
 	'mobile-frontend-nav-edit' => 'Modificare',
 	'mobile-frontend-nav-history' => 'Istoric',
