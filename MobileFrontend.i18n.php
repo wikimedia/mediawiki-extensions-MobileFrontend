@@ -691,8 +691,11 @@ $messages['ckb'] = array(
 	'mobile-frontend-file-namespace' => 'پەڕگە',
 );
 
-/** Czech (Česky) */
+/** Czech (Česky)
+ * @author Mormegil
+ */
 $messages['cs'] = array(
+	'mobile-frontend-desc' => 'Mobilní rozhraní',
 	'mobile-frontend-wikipedia' => 'Wikipedie',
 	'mobile-frontend-search-submit' => 'Hledat',
 	'mobile-frontend-search-results' => 'Výsledky hledání',
@@ -778,7 +781,9 @@ Gweler <a href=\"http://wikimediafoundation.org/wiki/Terms_of_Use\">Telerau Defn
 	'mobile-frontend-file-namespace' => 'Ffeil',
 );
 
-/** Danish (Dansk) */
+/** Danish (Dansk)
+ * @author Peter Alberti
+ */
 $messages['da'] = array(
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Gå til',
@@ -796,7 +801,7 @@ $messages['da'] = array(
 	'mobile-frontend-regular-wikipedia' => 'Vis denne side på normale Wikipedia',
 	'mobile-frontend-perm-stop-redirect' => 'Deaktivér mobilsiden permanent',
 	'mobile-frontend-error-page-title' => 'Vi har et problem!',
-	'mobile-frontend-error-page-text' => 'Wikipedia mobil er fortsat under aktiv udvikling og vi arbejder hårdt med at fikse alle vore interne fejl. Vi er blevet advaret om denne fejl, og vi vil retter den hurtigst muligt. Kom gerne tilbage senere!',
+	'mobile-frontend-error-page-text' => 'Wikipedia mobil er fortsat under aktiv udvikling og vi arbejder hårdt med at fikse alle vore interne fejl. Vi er blevet advaret om denne fejl, og vi vil rette den hurtigst muligt. Kom gerne tilbage senere!',
 	'mobile-frontend-copyright' => "Tekst er tilgængelig under <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike-licensen</a>; yderligere betingelser kan være gældende. Se <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>brugsbetingelserne</a> for flere oplysninger. Wikipedia er et registreret varemærke under den ideelle organisation <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.",
 	'mobile-frontend-are-you-sure' => 'Er du sikker?',
 	'mobile-frontend-explain-disable' => 'Er du sikker på at du vil deaktivere den mobile udgave af Wikipedia? Hvis du vælger <b>Deaktivér</b> vil du fra nu af, hver gang du besøger Wikipedia, ikke længere blive omdirigeret til denne mobilvisningen af Wikipedia.',
@@ -1304,8 +1309,11 @@ $messages['gd'] = array(
 	'mobile-frontend-file-namespace' => 'Faidhle',
 );
 
-/** Galician (Galego) */
+/** Galician (Galego)
+ * @author Toliño
+ */
 $messages['gl'] = array(
+	'mobile-frontend-desc' => 'Interface para dispositivos móbiles',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-search-results' => 'Resultados da procura',
@@ -1467,8 +1475,11 @@ $messages['haw'] = array(
 	'mobile-frontend-file-namespace' => 'Faila',
 );
 
-/** Hebrew (עברית) */
+/** Hebrew (עברית)
+ * @author Amire80
+ */
 $messages['he'] = array(
+	'mobile-frontend-desc' => 'תצוגה עבור מכשירים ניידים',
 	'mobile-frontend-wikipedia' => 'ויקיפדיה',
 	'mobile-frontend-search-submit' => 'חיפוש',
 	'mobile-frontend-search-results' => 'תוצאות החיפוש',
