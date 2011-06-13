@@ -200,7 +200,7 @@ body {
     vertical-align: middle; }
   #searchbox #goButton {
     border: 0;
-    background: url(images/s.gif) no-repeat top left;
+    background: url(/extensions/MobileFrontend/images/s.gif) no-repeat top left;
     height: 25px;
     width: 27px; }
   #searchbox #searchField {
@@ -214,7 +214,7 @@ body {
   #nav form, #nav button {
     display: inline-block; }
   #nav button {
-    background: url(images/buttonbg.gif) no-repeat center;
+    background: url(/extensions/MobileFrontend/images/buttonbg.gif) no-repeat center;
     border: 0;
     height: 23px;
     width: 83px; }
@@ -222,7 +222,7 @@ body {
 #disableButtons {
   text-align: center; }
   #disableButtons button {
-    background: url(images/buttonbg.gif) no-repeat center;
+    background: url(/extensions/MobileFrontend/images/buttonbg.gif) no-repeat center;
     border: 0;
     height: 23px;
     width: 83px; }
@@ -288,7 +288,7 @@ button.section_heading.hide {
     vertical-align: middle; }
   #searchbox #goButton {
     border: 0;
-    background: url(images/s.gif) no-repeat top left;
+    background: url(/extensions/MobileFrontend/images/s.gif) no-repeat top left;
     height: 25px;
     width: 27px; }
   #searchbox #searchField {

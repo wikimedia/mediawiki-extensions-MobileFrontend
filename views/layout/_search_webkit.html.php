@@ -9,10 +9,9 @@ $searchWebkitHtml = <<<EOD
 	  <input type="hidden" value="Special:Search" name="title" /> 
 	  <input type="hidden" value="Search" name="fulltext" /> 
 	  <input type="hidden" value="0" name="redirs" />
-      <input id='searchField' name='search' size='27' type='search' value='{$searchField}' /> 
-      <div id='clearButton'></div> 
-      <button id='goButton' type='submit'></button> 
-    </form> 
+      <input id='searchField' name='search' size='28' type='text' value='{$searchField}' /> 
+      <button id='goButton' type='submit'></button>
+    </form>
   </div> 
   <div class='nav' id='nav'> 
     <form method="get" action="/"><button type="submit" id="homeButton">{$homeButton}</button></form> 
