@@ -48,7 +48,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.4.6';
+	const VERSION = '0.4.7';
 
 	private $doc;
 	
@@ -386,8 +386,11 @@ class ExtMobileFrontend {
 		
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 		
+		$search = isset( $_GET['search'] ) ? $_GET['search'] : '';
+		
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML' 
-			&& self::$device['supports_javascript'] === true ) {
+			&& self::$device['supports_javascript'] === true 
+			&& empty( $search ) ) {
 			$contentHtml =	$this->javascriptize( $contentHtml );
 		} else if ( $this->contentFormat == 'WML' ) {
 			$contentHtml = $this->javascriptize( $contentHtml );
