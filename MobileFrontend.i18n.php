@@ -526,8 +526,11 @@ $messages['bn'] = array(
 	'mobile-frontend-file-namespace' => 'ফাইল',
 );
 
-/** Breton (Brezhoneg) */
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
 $messages['br'] = array(
+	'mobile-frontend-desc' => 'Talbenn evit an hezougoù',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Mont',
 	'mobile-frontend-search-results' => "Disoc'hoù klask",
@@ -559,8 +562,11 @@ $messages['br'] = array(
 	'mobile-frontend-file-namespace' => 'Restr',
 );
 
-/** Bosnian (Bosanski) */
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
 $messages['bs'] = array(
+	'mobile-frontend-desc' => 'Korisnički interfejs za mobilne uređaje',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Idi',
 	'mobile-frontend-search-results' => 'Rezultati pretrage',
@@ -1210,10 +1216,13 @@ $messages['fi'] = array(
 	'mobile-frontend-file-namespace' => 'Tiedosto',
 );
 
-/** French (Français) */
+/** French (Français)
+ * @author Sherbrooke
+ */
 $messages['fr'] = array(
+	'mobile-frontend-desc' => 'Frontal pour mobile',
 	'mobile-frontend-wikipedia' => 'Wikipédia',
-	'mobile-frontend-search-submit' => 'Ftu siǧl',
+	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-search-results' => 'Résultats de la recherche',
 	'mobile-frontend-no-article-found' => 'Aucun titre de page ne correspond à la recherche',
 	'mobile-frontend-featured-article' => 'Lumière sur...',
