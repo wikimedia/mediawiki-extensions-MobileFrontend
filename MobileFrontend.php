@@ -48,7 +48,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.4.7';
+	const VERSION = '0.4.8';
 
 	private $doc;
 	
@@ -60,6 +60,8 @@ class ExtMobileFrontend {
 	public static $code;
 	public static $device;
 	public static $headings;
+	public static $mainPageUrl;
+	public static $randomPageUrl;
 
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -115,6 +117,9 @@ class ExtMobileFrontend {
 		
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
+		
+		self::$mainPageUrl = Title::newMainPage()->getFullUrl();
+		self::$randomPageUrl = SpecialPage::getTitleFor( 'Random' )->getFullUrl();
 		
 		try {
 			$wurflConfigFile = RESOURCES_DIR . 'wurfl-config.xml';
