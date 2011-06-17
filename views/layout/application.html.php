@@ -26,7 +26,6 @@ $applicationHtml = <<<EOT
   <body>
 	{$searchWebkitHtml}
 	<div class='show' id='content_wrapper'>
-	{$donateHtml}
 	{$contentHtml}
 	</div>
 	{$footerHtml}

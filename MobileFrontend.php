@@ -48,7 +48,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.4.8';
+	const VERSION = '0.4.9';
 
 	private $doc;
 
@@ -404,7 +404,6 @@ class ExtMobileFrontend {
 		}
 
 		if ( $this->contentFormat == 'XHTML' && $format != 'json' ) {
-			require( 'views/notices/_donate.html.php' );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/layout/application.html.php' );
