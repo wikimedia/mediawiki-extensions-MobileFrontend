@@ -18,10 +18,10 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 // Define the extension; allows us make sure the extension is used correctly
 define( 'MOBILEFRONTEND', 'MobileFrontend' );
 // WURFL installation dir
-define( 'WURFL_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library' . 
+define( 'WURFL_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library' .
 		DIRECTORY_SEPARATOR . 'WURFL' . DIRECTORY_SEPARATOR );
 // WURFL configuration files directory
-define( 'RESOURCES_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library' . 
+define( 'RESOURCES_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library' .
 		DIRECTORY_SEPARATOR. 'resources' . DIRECTORY_SEPARATOR );
 
 require_once( WURFL_DIR . 'Application.php' );
@@ -51,9 +51,9 @@ class ExtMobileFrontend {
 	const VERSION = '0.4.8';
 
 	private $doc;
-	
+
 	public static $messages = array();
-	
+
 	public $contentFormat = '';
 	public $WMLSectionSeperator = '***************************************************************************';
 	public static $dir;
@@ -99,7 +99,7 @@ class ExtMobileFrontend {
 
 	public function onOutputPageBeforeHTML( &$out, &$text ) {
 		global $wgContLang;
-		
+
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
 		self::$messages['mobile-frontend-show']               = wfMsg( 'mobile-frontend-show-button' );
@@ -114,13 +114,13 @@ class ExtMobileFrontend {
 		self::$messages['mobile-frontend-explain-disable']    = wfMsg( 'mobile-frontend-explain-disable' );
 		self::$messages['mobile-frontend-disable-button']     = wfMsg( 'mobile-frontend-disable-button' );
 		self::$messages['mobile-frontend-back-button']        = wfMsg( 'mobile-frontend-back-button' );
-		
+
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
-		
+
 		self::$mainPageUrl = Title::newMainPage()->getFullUrl();
 		self::$randomPageUrl = SpecialPage::getTitleFor( 'Random' )->getFullUrl();
-		
+
 		try {
 			$wurflConfigFile = RESOURCES_DIR . 'wurfl-config.xml';
 			$wurflConfig = new WURFL_Configuration_XmlConfig( $wurflConfigFile );
@@ -131,19 +131,19 @@ class ExtMobileFrontend {
 		} catch (Exception $e) {
 			//echo $e->getMessage();
 		}
-		
+
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
 		$device = new DeviceDetection();
 		$formatName = $device->formatName( $userAgent, $acceptHeader );
 		self::$device = $device->format( $formatName );
-		
+
 		if ( self::$device['view_format'] === 'wml' ) {
 			$this->contentFormat = 'WML';
 		} elseif ( self::$device['view_format'] === 'html' ) {
 			$this->contentFormat = 'XHTML';
 		}
-		
+
 		$mAction = isset( $_GET['m_action'] ) ? $_GET['m_action'] : '';
 
 		if ( $mAction == 'disable_mobile_site' ) {
@@ -152,15 +152,15 @@ class ExtMobileFrontend {
 				exit();
 			}
 		}
-		
-		if ( $mAction != 'view_normal_site' && 
+
+		if ( $mAction != 'view_normal_site' &&
 			 $props['is_wireless_device'] === 'true' &&
 			 $props['is_tablet'] === 'false' ) {
 			ob_start( array( $this, 'DOMParse' ) );
 		}
 		return true;
 	}
-	
+
 	private function renderDisableMobileSiteXHTML() {
 		if ( $this->contentFormat == 'XHTML' ) {
 			$dir = self::$dir;
@@ -185,7 +185,7 @@ class ExtMobileFrontend {
 			return $applicationHtml;
 		}
 	}
-	
+
 	private function showHideCallbackWML( $matches ) {
 		static $headings = 0;
 		++$headings;
@@ -227,7 +227,7 @@ class ExtMobileFrontend {
 	public function javascriptize( $s ) {
 		$callback = 'showHideCallback';
 		$callback .= $this->contentFormat;
-		
+
 		// Closures are a PHP 5.3 feature.
 		// MediaWiki currently requires PHP 5.2.3 or higher.
 		// So, using old style for now.
@@ -248,7 +248,7 @@ class ExtMobileFrontend {
 
 		return $s;
 	}
-	
+
 	private function createWMLCard( $s, $title = '' ) {
 		$segments = explode( $this->WMLSectionSeperator, $s );
 		$card = '';
@@ -355,7 +355,7 @@ class ExtMobileFrontend {
 				$removedElement = $element->parentNode->removeChild( $element );
 			}
 		}
-		
+
 		// Handle red links with action equal to edit
 		$redLinks = $xpath->query( '//a[@class="new"]' );
 		foreach( $redLinks as $redLink ) {
@@ -378,9 +378,9 @@ class ExtMobileFrontend {
 		if ( empty( $title ) ) {
 			$title = 'Wikipedia';
 		}
-		
-		$format = isset( $_GET['format'] ) ? $_GET['format'] : ''; 
-		
+
+		$format = isset( $_GET['format'] ) ? $_GET['format'] : '';
+
 		$dir = self::$dir;
 		$code = self::$code;
 		$regularWikipedia = self::$messages['mobile-frontend-regular-wikipedia'];
@@ -388,46 +388,46 @@ class ExtMobileFrontend {
 		$copyright = self::$messages['mobile-frontend-copyright'];
 		$homeButton = self::$messages['mobile-frontend-home-button'];
 		$randomButton = self::$messages['mobile-frontend-random-button'];
-		
+
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
-		
+
 		$search = isset( $_GET['search'] ) ? $_GET['search'] : '';
-		
-		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML' 
-			&& self::$device['supports_javascript'] === true 
+
+		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
+			&& self::$device['supports_javascript'] === true
 			&& empty( $search ) ) {
 			$contentHtml =	$this->javascriptize( $contentHtml );
-		} else if ( $this->contentFormat == 'WML' ) {
+		} elseif ( $this->contentFormat == 'WML' ) {
 			$contentHtml = $this->javascriptize( $contentHtml );
 			$contentHtml = $this->createWMLCard( $contentHtml, $title );
 			require( 'views/layout/application.wml.php' );
 		}
-		
+
 		if ( $this->contentFormat == 'XHTML' && $format != 'json' ) {
 			require( 'views/notices/_donate.html.php' );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/layout/application.html.php' );
 		}
-		
+
 		if ( $format === 'json' ) {
 			header( 'Content-Type: application/json' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
 			$json_data['title'] = $title;
 			$json_data['html'] = $contentHtml;
-			
+
 			$callback = isset( $_GET['callback'] ) ? $_GET['callback'] : '';
-			
+
 			$json = json_encode( $json_data );
-			
+
 			if ( !empty( $callback ) ) {
 				$json = urlencode( $callback ) . '(' . $json . ')';
-			} 
-			
+			}
+
 			return $json;
 		}
-		
+
 		return $applicationHtml;
 	}
 }
