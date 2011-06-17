@@ -3494,8 +3494,11 @@ $messages['sk'] = array(
 	'mobile-frontend-file-namespace' => 'Súbor',
 );
 
-/** Slovenian (Slovenščina) */
+/** Slovenian (Slovenščina)
+ * @author Dbc334
+ */
 $messages['sl'] = array(
+	'mobile-frontend-desc' => 'Mobilno obličje',
 	'mobile-frontend-wikipedia' => 'Wikipedija',
 	'mobile-frontend-search-submit' => 'Pojdi',
 	'mobile-frontend-search-results' => 'Rezultati iskanja',
