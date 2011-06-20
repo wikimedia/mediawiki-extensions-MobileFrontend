@@ -48,7 +48,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.4.9';
+	const VERSION = '0.5.0';
 
 	private $doc;
 
@@ -62,7 +62,11 @@ class ExtMobileFrontend {
 	public static $headings;
 	public static $mainPageUrl;
 	public static $randomPageUrl;
-
+	public static $requestedSegment;
+	public static $format;
+	public static $search;
+	public static $callback;
+	
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
 		'div.messagebox',	  # cleanup data
@@ -98,7 +102,7 @@ class ExtMobileFrontend {
 	);
 
 	public function onOutputPageBeforeHTML( &$out, &$text ) {
-		global $wgContLang;
+		global $wgContLang, $wgRequest;
 
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
@@ -131,6 +135,19 @@ class ExtMobileFrontend {
 		} catch (Exception $e) {
 			//echo $e->getMessage();
 		}
+		
+		// Note: The WebRequest Class calls are made in this block because
+		// since PHP 5.1.x, all objects have their destructors called 
+		// before the output buffer callback function executes. 
+		// Thus, globalized objects will not be available as expected in the function.
+		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
+		
+		$mAction = $wgRequest->getText( 'mAction' );
+		$useFormat = $wgRequest->getText( 'useFormat' );
+		self::$format = $wgRequest->getText( 'format' );
+		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
+		self::$search = $wgRequest->getText( 'search' );
+		self::$callback =  $wgRequest->getText( 'callback' );
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
@@ -144,8 +161,6 @@ class ExtMobileFrontend {
 			$this->contentFormat = 'XHTML';
 		}
 
-		$mAction = isset( $_GET['m_action'] ) ? $_GET['m_action'] : '';
-
 		if ( $mAction == 'disable_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
 				echo $this->renderDisableMobileSiteXHTML();
@@ -158,6 +173,11 @@ class ExtMobileFrontend {
 			 $props['is_tablet'] === 'false' ) {
 			ob_start( array( $this, 'DOMParse' ) );
 		}
+		
+		if ($useFormat === 'mobile') {
+			ob_start( array( $this, 'DOMParse' ) );
+		}
+		
 		return true;
 	}
 
@@ -199,6 +219,13 @@ class ExtMobileFrontend {
 	}
 
 	private function showHideCallbackXHTML( $matches ) {
+		
+		if ( isset( $matches[0] ) ) {
+			preg_match('/id="([^"]*)"/', $matches[0], $headlineMatches);
+		}
+		
+	 	$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
+		
 		static $headings = 0;
 		$show = self::$messages['mobile-frontend-show'];
 		$hide = self::$messages['mobile-frontend-hide'];
@@ -211,7 +238,7 @@ class ExtMobileFrontend {
 		// generate the HTML we are going to inject
 		$buttons = "<button class='section_heading show' section_id='{$headings}'>{$show}</button>" .
 			"<button class='section_heading hide' section_id='{$headings}'>{$hide}</button>";
-		$base .= "<h2 class='section_heading' id='section_{$headings}'{$matches[1]}{$buttons} <span>" .
+		$base .= "<h2 class='section_heading' id='section_{$headings}'{$matches[1]}{$buttons} <span id='{$headlineId}'>" .
 			"{$matches[2]}</span></h2><div class='content_block' id='content_{$headings}'>";
 
 		if ( $headings > 1 ) {
@@ -253,8 +280,8 @@ class ExtMobileFrontend {
 		$segments = explode( $this->WMLSectionSeperator, $s );
 		$card = '';
 		$idx = 0;
-
-		$requestedSegment = isset( $_GET['seg'] ) ? $_GET['seg'] : 0;
+		$requestedSegment = self::$requestedSegment;
+		
 		$card .= "<card id='{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
 		$idx = $requestedSegment + 1;
 		$segmentsCount = count($segments);
@@ -379,8 +406,6 @@ class ExtMobileFrontend {
 			$title = 'Wikipedia';
 		}
 
-		$format = isset( $_GET['format'] ) ? $_GET['format'] : '';
-
 		$dir = self::$dir;
 		$code = self::$code;
 		$regularWikipedia = self::$messages['mobile-frontend-regular-wikipedia'];
@@ -391,11 +416,9 @@ class ExtMobileFrontend {
 
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 
-		$search = isset( $_GET['search'] ) ? $_GET['search'] : '';
-
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
-			&& empty( $search ) ) {
+			&& empty( self::$search ) ) {
 			$contentHtml =	$this->javascriptize( $contentHtml );
 		} elseif ( $this->contentFormat == 'WML' ) {
 			$contentHtml = $this->javascriptize( $contentHtml );
@@ -403,25 +426,23 @@ class ExtMobileFrontend {
 			require( 'views/layout/application.wml.php' );
 		}
 
-		if ( $this->contentFormat == 'XHTML' && $format != 'json' ) {
+		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/layout/application.html.php' );
 		}
 
-		if ( $format === 'json' ) {
+		if ( self::$format === 'json' ) {
 			header( 'Content-Type: application/json' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
 			$json_data['title'] = $title;
 			$json_data['html'] = $contentHtml;
 
-			$callback = isset( $_GET['callback'] ) ? $_GET['callback'] : '';
-
 			$json = json_encode( $json_data );
 
-			if ( !empty( $callback ) ) {
-				$json = urlencode( $callback ) . '(' . $json . ')';
+			if ( !empty( self::$callback ) ) {
+				$json = urlencode( self::$callback ) . '(' . $json . ')';
 			}
 
 			return $json;

@@ -6,7 +6,7 @@ $footerHtml = <<<EOD
         <div class='mwm-notice'> 
           <a href="?m_action=view_normal_site">{$regularWikipedia}</a> 
             <div id="perm"> 
-              <a href="?m_action=disable_mobile_site">{$permStopRedirect}</a> 
+              <a href="?mAction=disable_mobile_site">{$permStopRedirect}</a> 
             </div> 
         </div> 
       </div> 
