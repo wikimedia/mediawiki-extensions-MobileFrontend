@@ -48,7 +48,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.0';
+	const VERSION = '0.5.1';
 
 	private $doc;
 
@@ -172,9 +172,7 @@ class ExtMobileFrontend {
 			 $props['is_wireless_device'] === 'true' &&
 			 $props['is_tablet'] === 'false' ) {
 			ob_start( array( $this, 'DOMParse' ) );
-		}
-		
-		if ($useFormat === 'mobile') {
+		} elseif ($useFormat === 'mobile') {
 			ob_start( array( $this, 'DOMParse' ) );
 		}
 		
