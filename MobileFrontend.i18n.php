@@ -1687,8 +1687,11 @@ $messages['hy'] = array(
 	'mobile-frontend-nav-history' => 'Պատմություն',
 );
 
-/** Interlingua (Interlingua) */
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
 $messages['ia'] = array(
+	'mobile-frontend-desc' => 'Interfacie pro apparatos mobile',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-search-results' => 'Resultatos del recerca',
