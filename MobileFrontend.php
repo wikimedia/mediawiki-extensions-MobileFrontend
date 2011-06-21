@@ -48,7 +48,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.1';
+	const VERSION = '0.5.2';
 
 	private $doc;
 
@@ -66,6 +66,7 @@ class ExtMobileFrontend {
 	public static $format;
 	public static $search;
 	public static $callback;
+	public static $useFormat;
 	
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -143,7 +144,7 @@ class ExtMobileFrontend {
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
 		
 		$mAction = $wgRequest->getText( 'mAction' );
-		$useFormat = $wgRequest->getText( 'useFormat' );
+		self::$useFormat = $wgRequest->getText( 'useFormat' );
 		self::$format = $wgRequest->getText( 'format' );
 		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
 		self::$search = $wgRequest->getText( 'search' );
@@ -160,6 +161,10 @@ class ExtMobileFrontend {
 		} elseif ( self::$device['view_format'] === 'html' ) {
 			$this->contentFormat = 'XHTML';
 		}
+		
+		if ( self::$useFormat === 'mobile-wap' ) {
+			$this->contentFormat = 'WML';
+		}
 
 		if ( $mAction == 'disable_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
@@ -172,7 +177,8 @@ class ExtMobileFrontend {
 			 $props['is_wireless_device'] === 'true' &&
 			 $props['is_tablet'] === 'false' ) {
 			ob_start( array( $this, 'DOMParse' ) );
-		} elseif ($useFormat === 'mobile') {
+		} elseif (self::$useFormat === 'mobile' || 
+				  self::$useFormat === 'mobile-wap') {
 			ob_start( array( $this, 'DOMParse' ) );
 		}
 		
@@ -284,14 +290,16 @@ class ExtMobileFrontend {
 		$idx = $requestedSegment + 1;
 		$segmentsCount = count($segments);
 		$card .= $idx . "/" . $segmentsCount;
+		
+		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useFormat=' . self::$useFormat : '';
 
 		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href='{$_SERVER['PHP_SELF']}?seg={$idx}'>Continue ...</a></p>";
+			$card .= "<p><a href='{$_SERVER['PHP_SELF']}?seg={$idx}{$useFormatParam}'>Continue ...</a></p>";
 		}
 
 		if ( $idx > 1 ) {
 			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href='{$_SERVER['PHP_SELF']}?seg={$back_idx}'>Back ...</a></p>";
+			$card .= "<p><a href='{$_SERVER['PHP_SELF']}?seg={$back_idx}{$useFormatParam}'>Back ...</a></p>";
 		}
 
 		$card .= '</card>';
