@@ -2194,34 +2194,36 @@ $messages['kv'] = array(
 	'mobile-frontend-search-text' => 'Корсьысьны',
 );
 
-/** Cornish (Kernowek) */
+/** Cornish (Kernowek)
+ * @author Kw-Moon
+ */
 $messages['kw'] = array(
 	'mobile-frontend-wikipedia' => 'Wikipedya',
 	'mobile-frontend-search-submit' => 'Ke',
-	'mobile-frontend-search-results' => 'Sewyansow whilans',
-	'mobile-frontend-no-article-found' => 'Erthygel vyth kevys',
+	'mobile-frontend-search-results' => 'Sewyanjow whilans',
+	'mobile-frontend-no-article-found' => 'Erthygel veth kevys',
 	'mobile-frontend-featured-article' => 'Erthygel disqwedhys hedhyw',
 	'mobile-frontend-in-the-news' => "E'n nowodhow",
-	'mobile-frontend-home-button' => 'Pennfolen',
+	'mobile-frontend-home-button' => 'Folen dre',
 	'mobile-frontend-random-button' => 'Dre jons',
-	'mobile-frontend-back-to-top-of-section' => 'Lamma dhe-dre unn tregh',
+	'mobile-frontend-back-to-top-of-section' => 'Labma war-dhelergh udn dregh',
 	'mobile-frontend-show-button' => 'Disqwedhes',
 	'mobile-frontend-hide-button' => 'Cudha',
 	'mobile-frontend-disable-button' => 'Dialosegy',
 	'mobile-frontend-back-button' => 'Dhe-dre',
-	'mobile-frontend-regular-wikipedia' => 'Gweles an folen-ma war Wikipedya kemmyn',
-	'mobile-frontend-perm-stop-redirect' => 'Dialosegi yn fast an wiasva pellgowsel',
-	'mobile-frontend-error-page-title' => 'Yma caletter dhyn!',
-	'mobile-frontend-error-page-text' => "Wikipedya kellgowsel yw whath yn displegyans, hag yth ero'whi owth obery yn cales dhe fastya oll agan gwallow pervedhel. Gwarnyes on a'n gwall-ma ha ni a vedn y fastya yn scon. Mar pleg, gwrewgh dewheles!",
-	'mobile-frontend-copyright' => 'Cavadow yw an text yn-dann an <a href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Cubmyas Creative Commons Attribution/Share-Alike</a>; termynyow keworransel a alja bos omvyskys. Gwelewgh <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Termynyow Devnydh</a> rag manylyon. Wikipedia yw merk-kenwerth a <a href=\'http://www.wikimediafoundation.org/\'>Fondyans Wikimedia, Inc.</a>, restrans heb budh.',
+	'mobile-frontend-regular-wikipedia' => 'Gweles an folen-ma war Wikipedya kebmen',
+	'mobile-frontend-perm-stop-redirect' => 'Dialosegy en fast an wiasva pellgowsel',
+	'mobile-frontend-error-page-title' => 'Ma cudyn dhyn!',
+	'mobile-frontend-error-page-text' => "Wikipedya kellgowsel ew whath en displegyans, hag yth ero'ni owth obery en cales dhe fastya oll agan gwallow pervedhel. Gwarnyes on a'n gwall-ma ha ni a vedn y fastya en scon. Mar pleg, gwrewgh dewheles!",
+	'mobile-frontend-copyright' => 'Cavadow ew an text en-dadn an <a href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Cubmyas Creative Commons Attribution/Share-Alike</a>; termynyow keworansel a alja bos omvyskys. Gwelowgh <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Termynyow Devnydh</a> rag manylyon. Wikipedia ew merk-kenwerth a <a href=\'http://www.wikimediafoundation.org/\'>Fondyans Wikimedia, Inc.</a>, restrans heb budh.',
 	'mobile-frontend-are-you-sure' => 'Owgh why sur?',
-	'mobile-frontend-explain-disable' => "Owgh why sur dr'eus whans dhewgh dialosegy an versyon kellgowser a Wikipedya? Mar qwresse'why dewis <b>Dialosegy</b>, ytho alebma, pan vysytyewgh Wikipedya, ny vedno'why bos daswedyes dhe'n gwel kellgowser-ma a Wikipedya.",
+	'mobile-frontend-explain-disable' => "Owgh why sur dr'eus whans dhewgh dialosegy an versyon kellgowser a Wikipedya? Mar qwresse'why dewis <b>Dialosegy</b>, ytho alebma, pan wrewgh godriga Wikipedya, na vedno'why bos daswedyes dhe'n gwel kellgowser-ma a Wikipedya.",
 	'mobile-frontend-nav-end' => 'Diwedh',
 	'mobile-frontend-nav-top' => 'Gwartha',
 	'mobile-frontend-nav-edit' => 'Chanjya',
 	'mobile-frontend-nav-history' => 'Istory',
 	'mobile-frontend-search-text' => 'Whila',
-	'mobile-frontend-contact-us' => 'Mars eus govynnadow dhewgh, mar pleg gwrewgh omglewes rydh dhe gestevewgh orthyn dhe mobile@wikipedia.org',
+	'mobile-frontend-contact-us' => 'Mars eus govydnow dhewgh, gwrewgh omglowes rydh dhe gestevewgh orthyn dhe mobile@wikipedia.org',
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
