@@ -3267,8 +3267,11 @@ $messages['ro'] = array(
 	'mobile-frontend-file-namespace' => 'Fișier',
 );
 
-/** Russian (Русский) */
+/** Russian (Русский)
+ * @author Александр Сигачёв
+ */
 $messages['ru'] = array(
+	'mobile-frontend-desc' => 'Мобильный интерфейс',
 	'mobile-frontend-wikipedia' => 'Википедия',
 	'mobile-frontend-search-submit' => 'Перейти',
 	'mobile-frontend-search-results' => 'Результаты поиска',
