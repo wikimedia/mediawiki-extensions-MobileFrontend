@@ -2226,8 +2226,11 @@ $messages['kw'] = array(
 	'mobile-frontend-contact-us' => 'Mars eus govydnow dhewgh, gwrewgh omglowes rydh dhe gestevewgh orthyn dhe mobile@wikipedia.org',
 );
 
-/** Luxembourgish (Lëtzebuergesch) */
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
 $messages['lb'] = array(
+	'mobile-frontend-desc' => 'Frontend Applicatioun fir mobil Apparater',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Lass',
 	'mobile-frontend-search-results' => 'Reaultater vun der Sich',
