@@ -1764,27 +1764,29 @@ $messages['ig'] = array(
 	'mobile-frontend-search-text' => 'Chöwá',
 );
 
-/** Ingush (ГІалгІай Ğalğaj) */
+/** Ingush (ГІалгІай Ğalğaj)
+ * @author Amire80
+ */
 $messages['inh'] = array(
 	'mobile-frontend-wikipedia' => 'Википаде',
 	'mobile-frontend-search-submit' => 'Дехьавала/яла',
-	'mobile-frontend-search-results' => 'Тахкама гIулакххилар',
+	'mobile-frontend-search-results' => 'Тахкама гӀулакххилар',
 	'mobile-frontend-no-article-found' => 'Цхьаккха йоазувнаш корадаьдац',
 	'mobile-frontend-featured-article' => 'Укх ден хьаржа йоазув',
 	'mobile-frontend-in-the-news' => 'Хоамашт юкъе',
-	'mobile-frontend-home-button' => 'ЦIенга',
+	'mobile-frontend-home-button' => 'ЦӀенга',
 	'mobile-frontend-show-button' => 'Хьахокха',
 	'mobile-frontend-hide-button' => 'Къайладаккха',
-	'mobile-frontend-disable-button' => 'ДIайоае',
+	'mobile-frontend-disable-button' => 'ДӀайоае',
 	'mobile-frontend-back-button' => 'Юхавала/яла',
-	'mobile-frontend-regular-wikipedia' => 'Ер оагIув Вкипадечу хьажа',
+	'mobile-frontend-regular-wikipedia' => 'Ер оагӀув Вкипадечу хьажа',
 	'mobile-frontend-error-page-title' => 'Вайга халонаш я!',
 	'mobile-frontend-nav-end' => 'Чаккхенга',
 	'mobile-frontend-nav-top' => 'Хьалхенга',
 	'mobile-frontend-nav-edit' => 'Хувца',
 	'mobile-frontend-nav-history' => 'Искар',
 	'mobile-frontend-search-text' => 'Лахаp',
-	'mobile-frontend-contact-us' => 'Хаттараш е леткъамаш дале, дехар да, mobile@wikipedia.org Д-фошта тIа хоам бе.',
+	'mobile-frontend-contact-us' => 'Хаттараш е леткъамаш дале, дехар да, mobile@wikipedia.org Д-фошта тӀа хоам бе.',
 	'mobile-frontend-download-full-version' => 'Деррига доржам чудаккха',
 	'mobile-frontend-file-namespace' => 'Паьл',
 );
