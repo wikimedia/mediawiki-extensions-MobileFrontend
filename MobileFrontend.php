@@ -126,13 +126,20 @@ class ExtMobileFrontend {
 		self::$mainPageUrl = Title::newMainPage()->getFullUrl();
 		self::$randomPageUrl = SpecialPage::getTitleFor( 'Random' )->getFullUrl();
 
+		$userAgent = $_SERVER['HTTP_USER_AGENT'];
+		$uAmd5 = md5($userAgent);
+		$key = wfMemcKey( 'mobile', 'ua', $uAmd5 );
 		try {
-			$wurflConfigFile = RESOURCES_DIR . 'wurfl-config.xml';
-			$wurflConfig = new WURFL_Configuration_XmlConfig( $wurflConfigFile );
-			$wurflManagerFactory = new WURFL_WURFLManagerFactory( $wurflConfig );
-			$wurflManager = $wurflManagerFactory->create();
-			$device = $wurflManager->getDeviceForHttpRequest( $_SERVER );
-			$props = $device->getAllCapabilities();
+			$props = $wgMemc->get( $key );
+			if ( ! $props ) {
+				$wurflConfigFile = RESOURCES_DIR . 'wurfl-config.xml';
+				$wurflConfig = new WURFL_Configuration_XmlConfig( $wurflConfigFile );
+				$wurflManagerFactory = new WURFL_WURFLManagerFactory( $wurflConfig );
+				$wurflManager = $wurflManagerFactory->create();
+				$device = $wurflManager->getDeviceForHttpRequest( $_SERVER );
+				$props = $device->getAllCapabilities();
+				$wgMemc->set( $key, $props, 86400 );
+			}
 		} catch (Exception $e) {
 			//echo $e->getMessage();
 		}
@@ -150,7 +157,6 @@ class ExtMobileFrontend {
 		self::$search = $wgRequest->getText( 'search' );
 		self::$callback =  $wgRequest->getText( 'callback' );
 
-		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
 		$device = new DeviceDetection();
 		$formatName = $device->formatName( $userAgent, $acceptHeader );
