@@ -51,7 +51,7 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend,
 	 													'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.5';
+	const VERSION = '0.5.6';
 
 	private $doc;
 
@@ -324,13 +324,15 @@ class ExtMobileFrontend {
 		
 		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useFormat=' . self::$useFormat : '';
 
+		$basePage = htmlspecialchars( $_SERVER['PHP_SELF'] );
+
 		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href='{$_SERVER['PHP_SELF']}?seg={$idx}{$useFormatParam}'>Continue ...</a></p>";
+			$card .= "<p><a href=\"{$basePage}?seg={$idx}{$useFormatParam}\">Continue ...</a></p>";
 		}
 
 		if ( $idx > 1 ) {
 			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href='{$_SERVER['PHP_SELF']}?seg={$back_idx}{$useFormatParam}'>Back ...</a></p>";
+			$card .= "<p><a href=\"{$basePage}?seg={$back_idx}{$useFormatParam}\">Back ...</a></p>";
 		}
 
 		$card .= '</card>';
@@ -352,7 +354,8 @@ class ExtMobileFrontend {
 
 	public function DOMParse( $html ) {
 		libxml_use_internal_errors( true );
-		$this->doc = DOMDocument::loadHTML( '<?xml encoding="UTF-8">' . $html );
+		$this->doc = new DOMDocument();
+		$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
 		libxml_use_internal_errors( false );
 		$this->doc->preserveWhiteSpace = false;
 		$this->doc->strictErrorChecking = false;
