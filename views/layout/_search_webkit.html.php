@@ -6,11 +6,13 @@ $searchField = (!empty($_GET['search'])) ? $_GET['search'] : '';
 $mainPageUrl = self::$mainPageUrl;
 $randomPageUrl = self::$randomPageUrl;
 
+$scriptUrl = wfScript();
+
 $searchWebkitHtml = <<<EOD
 <div id='header'> 
   <div id='searchbox'> 
     <img alt='W logo' id='logo' src='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/w.gif' />
-    <form action='/index.php' class='search_bar' method='get'> 
+    <form action='{$scriptUrl}' class='search_bar' method='get'>
 	  <input type="hidden" value="Special:Search" name="title" /> 
 	  <input type="hidden" value="Search" name="fulltext" /> 
 	  <input type="hidden" value="0" name="redirs" />
