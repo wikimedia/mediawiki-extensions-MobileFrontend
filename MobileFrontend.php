@@ -51,7 +51,7 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend,
 	 													'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.4';
+	const VERSION = '0.5.5';
 
 	private $doc;
 
@@ -156,7 +156,13 @@ class ExtMobileFrontend {
 				$wurflManager = $wurflManagerFactory->create();
 				$device = $wurflManager->getDeviceForHttpRequest( $_SERVER );
 				$props = $device->getAllCapabilities();
-				$wgMemc->set( $key, $props, 86400 );
+				
+				if ( $device->isSpecific() === true ) {
+					$wgMemc->set( $key, $props, 86400 );
+				} else {
+					$wgMemc->set( $key, "generic", 86400 );
+					$props = "generic";
+				}
 			}
 		} catch (Exception $e) {
 			//echo $e->getMessage();
@@ -197,7 +203,8 @@ class ExtMobileFrontend {
 			}
 		}
 
-		if ( $mAction != 'view_normal_site' &&
+		if ( is_array($props) &&
+			 $mAction != 'view_normal_site' &&
 			 $props['is_wireless_device'] === 'true' &&
 			 $props['is_tablet'] === 'false' ) {
 			ob_start( array( $this, 'DOMParse' ) );
