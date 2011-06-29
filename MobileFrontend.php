@@ -46,9 +46,12 @@ $wgExtMobileFrontend = new ExtMobileFrontend();
 
 $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
+											
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend,
+	 													'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.3';
+	const VERSION = '0.5.4';
 
 	private $doc;
 
@@ -101,6 +104,21 @@ class ExtMobileFrontend {
 		'#ogg_player_1',
 		'.nomobile',
 	);
+	
+	public function addMobileFooter( &$obj, &$tpl ) {
+		global $wgRequest; 
+		$footerlinks = $tpl->data['footerlinks'];
+		$mobileViewUrl = $wgRequest->getRequestURL();
+		$delimiter = ( strpos( $mobileViewUrl, "?" ) !== false ) ? "&" : "?";
+		$mobileViewUrl .= $delimiter . 'useFormat=mobile';
+		
+		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>Mobile View</a>");
+		$footerlinks['places'][] = 'mobileview';
+		$tpl->set('footerlinks', $footerlinks);
+		
+		wfProfileOut(__METHOD__);
+		return true;
+	}
 
 	public function onOutputPageBeforeHTML( &$out, &$text ) {
 		global $wgContLang, $wgRequest, $wgMemc;
