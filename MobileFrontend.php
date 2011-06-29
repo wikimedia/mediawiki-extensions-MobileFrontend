@@ -48,7 +48,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
 											'onOutputPageBeforeHTML' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.2';
+	const VERSION = '0.5.3';
 
 	private $doc;
 
@@ -103,7 +103,7 @@ class ExtMobileFrontend {
 	);
 
 	public function onOutputPageBeforeHTML( &$out, &$text ) {
-		global $wgContLang, $wgRequest;
+		global $wgContLang, $wgRequest, $wgMemc;
 
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
