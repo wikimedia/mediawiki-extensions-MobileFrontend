@@ -4,7 +4,7 @@ $footerHtml = <<<EOD
     <div id='footer'> 
       <div class='nav' id='footmenu'> 
         <div class='mwm-notice'> 
-          <a href="?m_action=view_normal_site">{$regularWikipedia}</a> 
+          <a href="?mAction=view_normal_site">{$regularWikipedia}</a>
             <div id="perm"> 
               <a href="?mAction=disable_mobile_site">{$permStopRedirect}</a> 
             </div> 
