@@ -3036,8 +3036,11 @@ $messages['pfl'] = array(
 	'mobile-frontend-nav-edit' => 'Bearwaide',
 );
 
-/** Polish (Polski) */
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
 $messages['pl'] = array(
+	'mobile-frontend-desc' => 'Mobilny interfejs użytkownika',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Przejdź',
 	'mobile-frontend-search-results' => 'Wyniki wyszukiwania',
