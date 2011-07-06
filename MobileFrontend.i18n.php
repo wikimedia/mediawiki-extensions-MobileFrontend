@@ -2786,8 +2786,11 @@ $messages['ne'] = array(
 	'mobile-frontend-file-namespace' => 'फाइल',
 );
 
-/** Dutch (Nederlands) */
+/** Dutch (Nederlands)
+ * @author SPQRobin
+ */
 $messages['nl'] = array(
+	'mobile-frontend-desc' => 'Mobiele Frontend',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Zoeken',
 	'mobile-frontend-search-results' => 'Zoekresultaten',
