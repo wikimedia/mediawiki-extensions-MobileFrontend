@@ -752,8 +752,11 @@ $messages['cu'] = array(
 	'mobile-frontend-search-text' => 'исканиѥ',
 );
 
-/** Welsh (Cymraeg) */
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
 $messages['cy'] = array(
+	'mobile-frontend-desc' => 'Rhaglen pen blaen i declynnau symudol',
 	'mobile-frontend-wikipedia' => 'Wicipedia',
 	'mobile-frontend-search-submit' => 'Eler',
 	'mobile-frontend-search-results' => "Canlyniadau'r chwilio",
@@ -1250,6 +1253,35 @@ $messages['fr'] = array(
 	'mobile-frontend-author-link' => 'Afficher ce fichier sur Wikipédia pour voir les informations sur son auteur, sa licence et des descriptions supplémentaires.',
 	'mobile-frontend-download-full-version' => 'Télécharger la version complète',
 	'mobile-frontend-file-namespace' => 'Fichier',
+);
+
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'mobile-frontend-wikipedia' => 'Vouiquipèdia',
+	'mobile-frontend-search-submit' => 'Alar trovar',
+	'mobile-frontend-search-results' => 'Rèsultats de la rechèrche',
+	'mobile-frontend-no-article-found' => 'Gins de pâge trovâ',
+	'mobile-frontend-featured-article' => 'Lumiére dessus...',
+	'mobile-frontend-in-the-news' => 'Novèles',
+	'mobile-frontend-home-button' => 'Reçua',
+	'mobile-frontend-random-button' => 'A l’hasârd',
+	'mobile-frontend-back-to-top-of-section' => 'Tornar d’una sèccion',
+	'mobile-frontend-show-button' => 'Fâre vêre',
+	'mobile-frontend-hide-button' => 'Cachiér',
+	'mobile-frontend-disable-button' => 'Dèsactivar',
+	'mobile-frontend-back-button' => 'Tornar',
+	'mobile-frontend-regular-wikipedia' => 'Fâre vêre ceta pâge dessus Vouiquipèdia classica',
+	'mobile-frontend-error-page-title' => 'Dèsolâ ! Nos avens un problèmo.',
+	'mobile-frontend-are-you-sure' => 'Éte-vos de sûr ?',
+	'mobile-frontend-nav-end' => 'Fin',
+	'mobile-frontend-nav-top' => 'Hôt',
+	'mobile-frontend-nav-edit' => 'Changiér',
+	'mobile-frontend-nav-history' => 'Historico',
+	'mobile-frontend-search-text' => 'Rechèrchiér',
+	'mobile-frontend-download-full-version' => 'Tèlèchargiér la vèrsion complèta',
+	'mobile-frontend-file-namespace' => 'Fichiér',
 );
 
 /** Friulian (Furlan) */
