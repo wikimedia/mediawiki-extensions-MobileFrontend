@@ -1836,8 +1836,11 @@ $messages['is'] = array(
 	'mobile-frontend-perm-stop-redirect' => 'Gera farsímasíðuna óvirka til frambúðar',
 );
 
-/** Italian (Italiano) */
+/** Italian (Italiano)
+ * @author Beta16
+ */
 $messages['it'] = array(
+	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Vai',
 	'mobile-frontend-search-results' => 'Risultati della ricerca',
