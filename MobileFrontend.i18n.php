@@ -2652,8 +2652,11 @@ $messages['mr'] = array(
 	'mobile-frontend-file-namespace' => 'संचिका',
 );
 
-/** Malay (Bahasa Melayu) */
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
 $messages['ms'] = array(
+	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-wikipedia' => 'Wikipedia',
 	'mobile-frontend-search-submit' => 'Pergi',
 	'mobile-frontend-search-results' => 'Hasil carian',
