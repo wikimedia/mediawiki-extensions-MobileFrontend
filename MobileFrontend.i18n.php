@@ -3248,7 +3248,9 @@ $messages['pt-br'] = array(
 	'mobile-frontend-file-namespace' => 'Arquivo',
 );
 
-/** Romansh (Rumantsch) */
+/** Romansh (Rumantsch)
+ * @author Kazu89
+ */
 $messages['rm'] = array(
 	'mobile-frontend-wikipedia' => 'Vichipedia',
 	'mobile-frontend-search-submit' => 'Dai',
@@ -3267,7 +3269,7 @@ $messages['rm'] = array(
 	'mobile-frontend-perm-stop-redirect' => 'Deactivar permanentamain la versiun mobila',
 	'mobile-frontend-error-page-title' => 'I dat in problem!',
 	'mobile-frontend-error-page-text' => 'La versiun mobila da da Vichipedia è anc en construcziun e nus lavurain londervi dad eliminar tut nossas errurs internas. Nuss essan vegnids infurmads davart questa errur ed la reparain bainprest. Emprova pli tard anc ina giada.',
-	'mobile-frontend-copyright' => "Il text è disponibel sut la licenza <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; ulteriuras cundiziuns pon esser applitgablas. Detagls chattas ti en las <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cundiziuns d'utilisaziun</a>. Wikipedia è ina marca registrada da la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, ina organisaziun senza finamira da profit.",
+	'mobile-frontend-copyright' => "Il text è disponibel sut la licenza <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; ulteriuras cundiziuns pon esser applitgablas. Detagls chattas ti en las <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cundiziuns d'utilisaziun</a>. Vichipedia è ina marca registrada da la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, ina organisaziun senza finamira da profit.",
 	'mobile-frontend-are-you-sure' => 'Es ti segir?',
 	'mobile-frontend-explain-disable' => 'Es ti segir che ti vuls deactivar la versiun mobila da la Vichipedia? Sche ti tschernas <b>Deactivar</b> na vegns ti en futur betg pli renvià a la versiun mobila da la Vichipedia.',
 	'mobile-frontend-nav-end' => 'Fin',
