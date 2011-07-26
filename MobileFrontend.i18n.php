@@ -2759,17 +2759,19 @@ $messages['mzn'] = array(
 	'mobile-frontend-wikipedia' => 'ویکی‌پدیا',
 );
 
-/** Nedersaksisch (Nedersaksisch) */
+/** Nedersaksisch (Nedersaksisch)
+ * @author Servien
+ */
 $messages['nds-nl'] = array(
 	'mobile-frontend-wikipedia' => 'Wikipedie',
 	'mobile-frontend-search-submit' => 'Artikel',
-	'mobile-frontend-search-results' => 'Zeukrisseltaoten',
+	'mobile-frontend-search-results' => 'Zeukresultaoten',
 	'mobile-frontend-no-article-found' => 'Gien artikel evunnen',
 	'mobile-frontend-featured-article' => 'Artikel van vandage',
-	'mobile-frontend-in-the-news' => "In 't niejs",
-	'mobile-frontend-home-button' => 'Veurpagina',
-	'mobile-frontend-random-button' => 'Willekeurig',
-	'mobile-frontend-back-to-top-of-section' => "Gao naor 't veurige kopjen",
+	'mobile-frontend-in-the-news' => 'In t niejs',
+	'mobile-frontend-home-button' => 'Veurblad',
+	'mobile-frontend-random-button' => 'Zo mer wat',
+	'mobile-frontend-back-to-top-of-section' => 'Gao naor t veurige kopjen',
 	'mobile-frontend-show-button' => 'Bekieken',
 	'mobile-frontend-hide-button' => 'Verbargen',
 	'mobile-frontend-disable-button' => 'Uutschakelen',
@@ -2777,18 +2779,18 @@ $messages['nds-nl'] = array(
 	'mobile-frontend-regular-wikipedia' => 'Disse pagina in de standardweergave bekieken',
 	'mobile-frontend-perm-stop-redirect' => 'Altied de standardweergave gebruken',
 	'mobile-frontend-error-page-title' => 'Der geet effen wat mis!',
-	'mobile-frontend-error-page-text' => "De mobiele versie van Wikipedie is in ontwikkeling en wie bin hard an 't wark um alle fouten op te lossen.
-Wie hemmen al berich ehad over disse fout en zullen 't zo gauw meugelijk verhelpen.
-Vorttemee zie-j hier 't risseltaot.",
-	'mobile-frontend-copyright' => "De tekse is beschikbaor onder de licentie <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Naamvermelding/Gelieke delen</a>. 't Kan ween dat der anvullende veurweerden van toepassing bin. Zie de <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>algemene veurweerden</a> veur meer infermasie.",
-	'mobile-frontend-are-you-sure' => 'Bi-j daor wisse van?',
-	'mobile-frontend-explain-disable' => 'Bi-j der wisse van da-j de mobiele versie van Wikipedie uut willen schakelen? A-j <b>Uutschakelen</b> kiezen, dan wö-j vanof dat mement neet deurverwezen naor disse mobiele versie van Wikipedie a-j Wikipedie bezeuken.',
+	'mobile-frontend-error-page-text' => "De mobiele versie van Wikipedie is in ontwikkeling en wulen bin hard an t wark um alle fouten op te lossen.
+Wulen hebben al bericht ehad over disse fout en zullen t zo gauw meugelik verhelpen.
+Vorttemee zie'j hier t resultaot.",
+	'mobile-frontend-copyright' => "De tekste is beschikbaor onder de lisensie <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Naamvermelding/Gelieke delen</a>. t Kan ween dat der anvullende veurweerden van toepassing bin. Zie de <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>algemene veurweerden</a> veur meer informasie.",
+	'mobile-frontend-are-you-sure' => "Bi'j daor wisse van?",
+	'mobile-frontend-explain-disable' => "Bi'j der wisse van da'j de mobiele versie van Wikipedie uut willen schakelen? A'j <b>Uutschakelen</b> kiezen, dan wö'j vanaof dat moment niet deurverwezen naor disse mobiele versie van Wikipedie a'j Wikipedie bezeuken.",
 	'mobile-frontend-nav-end' => 'Einde',
 	'mobile-frontend-nav-top' => 'Begin',
 	'mobile-frontend-nav-edit' => 'Bewarken',
 	'mobile-frontend-nav-history' => 'Geschiedenisse',
 	'mobile-frontend-search-text' => 'Zeuken',
-	'mobile-frontend-contact-us' => "A-j nog vragen of opmarkingen hemmen, stuur ons gerus een berichjen op 't adres mobile@wikipedia.org",
+	'mobile-frontend-contact-us' => "A'j nog vragen of opmarkingen hebben, stuur ons gerust een berichjen op t adres mobile@wikipedia.org",
 );
 
 /** Nepali (नेपाली) */
