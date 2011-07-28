@@ -40,18 +40,16 @@ $cwd = dirname(__FILE__) . DIRECTORY_SEPARATOR;
 $wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
 //autoload extension classes
 $wgAutoloadClasses['DeviceDetection'] = $cwd . 'DeviceDetection.php';
-$wgAutoloadClasses['CssDetection']    = $cwd . 'CssDetection.php';
+$wgAutoloadClasses['CssDetection']	  = $cwd . 'CssDetection.php';
 
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
-$wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend,
-											'onOutputPageBeforeHTML' );
+$wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPageBeforeHTML' );
 											
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend,
-	 													'addMobileFooter' );
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.6';
+	const VERSION = '0.5.7';
 
 	private $doc;
 
@@ -70,6 +68,7 @@ class ExtMobileFrontend {
 	public static $search;
 	public static $callback;
 	public static $useFormat;
+	public static $disableImages;
 	
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -125,27 +124,30 @@ class ExtMobileFrontend {
 
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
-		self::$messages['mobile-frontend-show']               = wfMsg( 'mobile-frontend-show-button' );
-		self::$messages['mobile-frontend-hide']               = wfMsg( 'mobile-frontend-hide-button' );
-		self::$messages['mobile-frontend-back-to-top']        = wfMsg( 'mobile-frontend-back-to-top-of-section' );
+		self::$messages['mobile-frontend-show']				  = wfMsg( 'mobile-frontend-show-button' );
+		self::$messages['mobile-frontend-hide']				  = wfMsg( 'mobile-frontend-hide-button' );
+		self::$messages['mobile-frontend-back-to-top']		  = wfMsg( 'mobile-frontend-back-to-top-of-section' );
 		self::$messages['mobile-frontend-regular-wikipedia']  = wfMsg( 'mobile-frontend-regular-wikipedia' );
 		self::$messages['mobile-frontend-perm-stop-redirect'] = wfMsg( 'mobile-frontend-perm-stop-redirect' );
-		self::$messages['mobile-frontend-copyright']          = wfMsg( 'mobile-frontend-copyright' );
-		self::$messages['mobile-frontend-home-button']        = wfMsg( 'mobile-frontend-home-button' );
-		self::$messages['mobile-frontend-random-button']      = wfMsg( 'mobile-frontend-random-button' );
-		self::$messages['mobile-frontend-are-you-sure']       = wfMsg( 'mobile-frontend-are-you-sure' );
-		self::$messages['mobile-frontend-explain-disable']    = wfMsg( 'mobile-frontend-explain-disable' );
-		self::$messages['mobile-frontend-disable-button']     = wfMsg( 'mobile-frontend-disable-button' );
-		self::$messages['mobile-frontend-back-button']        = wfMsg( 'mobile-frontend-back-button' );
+		self::$messages['mobile-frontend-copyright']		  = wfMsg( 'mobile-frontend-copyright' );
+		self::$messages['mobile-frontend-home-button']		  = wfMsg( 'mobile-frontend-home-button' );
+		self::$messages['mobile-frontend-random-button']	  = wfMsg( 'mobile-frontend-random-button' );
+		self::$messages['mobile-frontend-are-you-sure']		  = wfMsg( 'mobile-frontend-are-you-sure' );
+		self::$messages['mobile-frontend-explain-disable']	  = wfMsg( 'mobile-frontend-explain-disable' );
+		self::$messages['mobile-frontend-disable-button']	  = wfMsg( 'mobile-frontend-disable-button' );
+		self::$messages['mobile-frontend-back-button']		  = wfMsg( 'mobile-frontend-back-button' );
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
 
+		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
+
 		self::$mainPageUrl = Title::newMainPage()->getFullUrl();
 		self::$randomPageUrl = SpecialPage::getTitleFor( 'Random' )->getFullUrl();
-
+		
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$uAmd5 = md5($userAgent);
+
 		$key = wfMemcKey( 'mobile', 'ua', $uAmd5 );
 		try {
 			$props = $wgMemc->get( $key );
@@ -202,18 +204,35 @@ class ExtMobileFrontend {
 				exit();
 			}
 		}
-
-		if ( is_array($props) &&
-			 $mAction != 'view_normal_site' &&
-			 $props['is_wireless_device'] === 'true' &&
-			 $props['is_tablet'] === 'false' ) {
-			ob_start( array( $this, 'DOMParse' ) );
-		} elseif (self::$useFormat === 'mobile' || 
-				  self::$useFormat === 'mobile-wap') {
-			ob_start( array( $this, 'DOMParse' ) );
-		}
 		
+		// Note: Temporarily disabling this section for trial deployment
+		// if ( is_array($props) &&
+		// 	 $mAction != 'view_normal_site' &&
+		// 	 $props['is_wireless_device'] === 'true' &&
+		// 	 $props['is_tablet'] === 'false' ) {
+		// 	$this->disableCaching();
+		// 	ob_start( array( $this, 'DOMParse' ) );
+		// } elseif (self::$useFormat === 'mobile' || 
+		// 	  self::$useFormat === 'mobile-wap' ) {
+		// 	$this->disableCaching();
+		// 	ob_start( array( $this, 'DOMParse' ) );
+		// }
+
+		if (self::$useFormat === 'mobile' || 
+			self::$useFormat === 'mobile-wap' ) {
+				$this->disableCaching();
+				ob_start( array( $this, 'DOMParse' ) );
+		}
+
 		return true;
+	}
+
+	private function disableCaching() {
+		if ( isset( $_SERVER['HTTP_VIA'] ) && 
+			stripos( $_SERVER['HTTP_VIA'], '.wikimedia.org:' ) !== false ) {
+			header( "Cache-Control: no-cache, must-revalidate" ); // HTTP/1.1
+			header( "Expires: Sat, 26 Jul 1997 05:00:00 GMT" ); // Date in the past
+		}
 	}
 
 	private function renderDisableMobileSiteXHTML() {
@@ -259,7 +278,7 @@ class ExtMobileFrontend {
 			preg_match('/id="([^"]*)"/', $matches[0], $headlineMatches);
 		}
 		
-	 	$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
+		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
 		
 		static $headings = 0;
 		$show = self::$messages['mobile-frontend-show'];
@@ -376,6 +395,13 @@ class ExtMobileFrontend {
 		// iterator on the foreach out of wack and results will be quite
 		// strange. Though, making a queue of items to remove seems to work.
 		// For example:
+		
+		if ( self::$disableImages == 1 ) {
+			$itemToRemoveRecords['TAG'][] = "img";
+			$itemToRemoveRecords['CLASS'][] = "thumb tright";
+			$itemToRemoveRecords['CLASS'][] = "thumb tleft";
+			$itemToRemoveRecords['CLASS'][] = "thumbcaption";
+		}
 
 		$domElemsToRemove = array();
 		foreach ( $itemToRemoveRecords['TAG'] as $tagToRemove ) {
