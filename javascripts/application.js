@@ -24,6 +24,9 @@ $( document ).ready( function() {
 
 	updateOrientation();
 
+	// Try to scroll and hide URL bar
+	window.scrollTo( 0, 1 );
+
 	decode = $( '#searchField' );
 	decode.val( unescape( decode.val() ) );
 	decode = $( 'title' );
@@ -73,7 +76,3 @@ var wm_clearText = function() {
 	$( '#searchField' ).val( '' ).focus();
 }
 
-// If we are on iPhone, scroll down and hide URL bar
-if( navigator.userAgent.indexOf( 'iPhone' ) > 0 ) {
-	window.scrollTo( 0, 1 );
-}
