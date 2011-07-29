@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.7';
+	const VERSION = '0.5.8';
 
 	private $doc;
 
@@ -373,6 +373,7 @@ class ExtMobileFrontend {
 	}
 
 	public function DOMParse( $html ) {
+		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");	
 		libxml_use_internal_errors( true );
 		$this->doc = new DOMDocument();
 		$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
