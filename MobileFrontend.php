@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.8';
+	const VERSION = '0.5.9';
 
 	private $doc;
 
@@ -157,9 +157,9 @@ class ExtMobileFrontend {
 				$wurflManagerFactory = new WURFL_WURFLManagerFactory( $wurflConfig );
 				$wurflManager = $wurflManagerFactory->create();
 				$device = $wurflManager->getDeviceForHttpRequest( $_SERVER );
-				$props = $device->getAllCapabilities();
 
 				if ( $device->isSpecific() === true ) {
+					$props = $device->getAllCapabilities();
 					$wgMemc->set( $key, $props, 86400 );
 				} else {
 					$wgMemc->set( $key, "generic", 86400 );
