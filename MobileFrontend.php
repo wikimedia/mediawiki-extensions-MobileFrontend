@@ -45,7 +45,7 @@ $wgAutoloadClasses['CssDetection']	  = $cwd . 'CssDetection.php';
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
 $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPageBeforeHTML' );
-											
+
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
@@ -69,7 +69,7 @@ class ExtMobileFrontend {
 	public static $callback;
 	public static $useFormat;
 	public static $disableImages;
-	
+
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
 		'div.messagebox',	  # cleanup data
@@ -103,18 +103,18 @@ class ExtMobileFrontend {
 		'#ogg_player_1',
 		'.nomobile',
 	);
-	
+
 	public function addMobileFooter( &$obj, &$tpl ) {
-		global $wgRequest; 
+		global $wgRequest;
 		$footerlinks = $tpl->data['footerlinks'];
 		$mobileViewUrl = $wgRequest->getRequestURL();
 		$delimiter = ( strpos( $mobileViewUrl, "?" ) !== false ) ? "&" : "?";
 		$mobileViewUrl .= $delimiter . 'useFormat=mobile';
-		
+
 		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>Mobile View</a>");
 		$footerlinks['places'][] = 'mobileview';
 		$tpl->set('footerlinks', $footerlinks);
-		
+
 		wfProfileOut(__METHOD__);
 		return true;
 	}
@@ -143,8 +143,8 @@ class ExtMobileFrontend {
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 
 		self::$mainPageUrl = Title::newMainPage()->getFullUrl();
-		self::$randomPageUrl = SpecialPage::getTitleFor( 'Random' )->getFullUrl();
-		
+		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getFullUrl();
+
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$uAmd5 = md5($userAgent);
 
@@ -158,7 +158,7 @@ class ExtMobileFrontend {
 				$wurflManager = $wurflManagerFactory->create();
 				$device = $wurflManager->getDeviceForHttpRequest( $_SERVER );
 				$props = $device->getAllCapabilities();
-				
+
 				if ( $device->isSpecific() === true ) {
 					$wgMemc->set( $key, $props, 86400 );
 				} else {
@@ -169,13 +169,13 @@ class ExtMobileFrontend {
 		} catch (Exception $e) {
 			//echo $e->getMessage();
 		}
-		
+
 		// Note: The WebRequest Class calls are made in this block because
-		// since PHP 5.1.x, all objects have their destructors called 
-		// before the output buffer callback function executes. 
+		// since PHP 5.1.x, all objects have their destructors called
+		// before the output buffer callback function executes.
 		// Thus, globalized objects will not be available as expected in the function.
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
-		
+
 		$mAction = $wgRequest->getText( 'mAction' );
 		self::$useFormat = $wgRequest->getText( 'useFormat' );
 		self::$format = $wgRequest->getText( 'format' );
@@ -193,7 +193,7 @@ class ExtMobileFrontend {
 		} elseif ( self::$device['view_format'] === 'html' ) {
 			$this->contentFormat = 'XHTML';
 		}
-		
+
 		if ( self::$useFormat === 'mobile-wap' ) {
 			$this->contentFormat = 'WML';
 		}
@@ -204,7 +204,7 @@ class ExtMobileFrontend {
 				exit();
 			}
 		}
-		
+
 		// Note: Temporarily disabling this section for trial deployment
 		// if ( is_array($props) &&
 		// 	 $mAction != 'view_normal_site' &&
@@ -212,13 +212,13 @@ class ExtMobileFrontend {
 		// 	 $props['is_tablet'] === 'false' ) {
 		// 	$this->disableCaching();
 		// 	ob_start( array( $this, 'DOMParse' ) );
-		// } elseif (self::$useFormat === 'mobile' || 
+		// } elseif (self::$useFormat === 'mobile' ||
 		// 	  self::$useFormat === 'mobile-wap' ) {
 		// 	$this->disableCaching();
 		// 	ob_start( array( $this, 'DOMParse' ) );
 		// }
 
-		if (self::$useFormat === 'mobile' || 
+		if (self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ) {
 				$this->disableCaching();
 				ob_start( array( $this, 'DOMParse' ) );
@@ -228,7 +228,7 @@ class ExtMobileFrontend {
 	}
 
 	private function disableCaching() {
-		if ( isset( $_SERVER['HTTP_VIA'] ) && 
+		if ( isset( $_SERVER['HTTP_VIA'] ) &&
 			stripos( $_SERVER['HTTP_VIA'], '.wikimedia.org:3128' ) !== false ) {
 			header( 'Cache-Control: no-cache, must-revalidate' );
 			header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
@@ -274,13 +274,13 @@ class ExtMobileFrontend {
 	}
 
 	private function showHideCallbackXHTML( $matches ) {
-		
+
 		if ( isset( $matches[0] ) ) {
 			preg_match('/id="([^"]*)"/', $matches[0], $headlineMatches);
 		}
-		
+
 		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
-		
+
 		static $headings = 0;
 		$show = self::$messages['mobile-frontend-show'];
 		$hide = self::$messages['mobile-frontend-hide'];
@@ -336,12 +336,12 @@ class ExtMobileFrontend {
 		$card = '';
 		$idx = 0;
 		$requestedSegment = self::$requestedSegment;
-		
+
 		$card .= "<card id='{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
 		$idx = $requestedSegment + 1;
 		$segmentsCount = count($segments);
 		$card .= $idx . "/" . $segmentsCount;
-		
+
 		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useFormat=' . self::$useFormat : '';
 
 		$basePage = htmlspecialchars( $_SERVER['PHP_SELF'] );
@@ -396,7 +396,7 @@ class ExtMobileFrontend {
 		// iterator on the foreach out of wack and results will be quite
 		// strange. Though, making a queue of items to remove seems to work.
 		// For example:
-		
+
 		if ( self::$disableImages == 1 ) {
 			$itemToRemoveRecords['TAG'][] = "img";
 			$itemToRemoveRecords['CLASS'][] = "thumb tright";
