@@ -111,7 +111,7 @@ class ExtMobileFrontend {
 		$delimiter = ( strpos( $mobileViewUrl, "?" ) !== false ) ? "&" : "?";
 		$mobileViewUrl .= $delimiter . 'useFormat=mobile';
 
-		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>Mobile View</a>");
+		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>{wfMsg( 'mobile-frontend-view' )}</a>");
 		$footerlinks['places'][] = 'mobileview';
 		$tpl->set('footerlinks', $footerlinks);
 
@@ -396,7 +396,7 @@ class ExtMobileFrontend {
 	}
 
 	public function DOMParse( $html ) {
-		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");	
+		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
 		libxml_use_internal_errors( true );
 		$this->doc = new DOMDocument();
 		$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );

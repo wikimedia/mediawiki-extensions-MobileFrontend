@@ -43,6 +43,7 @@ $messages['en'] = array (
 	'mobile-frontend-author-link' => 'View this media file on regular Wikipedia to see information about authorship, licensing, and additional descriptions.',
 	'mobile-frontend-download-full-version' => 'Download full version',
 	'mobile-frontend-file-namespace' => 'File',
+	'mobile-frontend-view' => 'Mobile View',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
