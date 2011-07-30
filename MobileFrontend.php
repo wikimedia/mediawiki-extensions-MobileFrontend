@@ -284,7 +284,7 @@ class ExtMobileFrontend {
 		}
 	}
 
-	private function showHideCallbackWML( $matches ) {
+	private function headingTransformCallbackWML( $matches ) {
 		static $headings = 0;
 		++$headings;
 
@@ -296,7 +296,7 @@ class ExtMobileFrontend {
 		return $base;
 	}
 
-	private function showHideCallbackXHTML( $matches ) {
+	private function headingTransformCallbackXHTML( $matches ) {
 
 		if ( isset( $matches[0] ) ) {
 			preg_match('/id="([^"]*)"/', $matches[0], $headlineMatches);
@@ -329,8 +329,8 @@ class ExtMobileFrontend {
 		return $base;
 	}
 
-	public function javascriptize( $s ) {
-		$callback = 'showHideCallback';
+	public function headingTransform( $s ) {
+		$callback = 'headingTransformCallback';
 		$callback .= $this->contentFormat;
 
 		// Closures are a PHP 5.3 feature.
@@ -510,7 +510,7 @@ class ExtMobileFrontend {
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
 			&& empty( self::$search ) ) {
-			$contentHtml =	$this->javascriptize( $contentHtml );
+			$contentHtml =	$this->headingTransform( $contentHtml );
 		} elseif ( $this->contentFormat == 'WML' ) {
 			header( 'Content-Type: text/vnd.wap.wml' );
 
@@ -522,6 +522,9 @@ class ExtMobileFrontend {
 			// no style, no class, no h1-h6, sup, sub, ol, ul, li etc.
 			// table requires "columns" property
 			// lang and dir officially unsupported (but often work on rtl phones)
+
+			// Add segmentation markers
+			$contentHtml = $this->headingTransform( $contentHtml );
 
 			// Content wrapping
 			$contentHtml = $this->createWMLCard( $contentHtml, $title );
