@@ -218,6 +218,29 @@ class ExtMobileFrontend {
 		// 	ob_start( array( $this, 'DOMParse' ) );
 		// }
 
+		// WURFL documentation: http://wurfl.sourceforge.net/help_doc.php
+		// Determine the kind of markup
+		if( is_array($props) && $props['preferred_markup'] ) {
+			wfDebug( __METHOD__ . ": preferred markup for this device: " . $props['preferred_markup'] );
+			// xhtml/html: html_web_3_2, html_web_4_0
+			// xthml basic/xhtmlmp (wap 2.0): html_wi_w3_xhtmlbasic html_wi_oma_xhtmlmp_1_0
+			// chtml (imode): html_wi_imode_*
+			// wml (wap 1): wml_1_1, wml_1_2, wml_1_3
+		}
+		// WML options that might influence our 'style' of output
+		// $props['access_key_support'] (for creating easy keypad navigation)
+		// $props['softkey_support'] ( for creating your own menu)
+
+		// WAP2/XHTML MP
+		// xhtmlmp_preferred_mime_type ( the mime type with which you should serve your xhtml to this device
+
+		// HTML
+		// $props['pointing_method'] == touchscreen
+		// ajax_support_javascript
+		// html_preferred_dtd
+
+		// Determine  
+
 		if (self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ) {
 				$this->disableCaching();
@@ -340,7 +363,7 @@ class ExtMobileFrontend {
 		$card .= "<card id='{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
 		$idx = $requestedSegment + 1;
 		$segmentsCount = count($segments);
-		$card .= $idx . "/" . $segmentsCount;
+		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
 
 		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useFormat=' . self::$useFormat : '';
 
@@ -489,7 +512,18 @@ class ExtMobileFrontend {
 			&& empty( self::$search ) ) {
 			$contentHtml =	$this->javascriptize( $contentHtml );
 		} elseif ( $this->contentFormat == 'WML' ) {
-			$contentHtml = $this->javascriptize( $contentHtml );
+			header( 'Content-Type: text/vnd.wap.wml' );
+
+			// TODO: Content transformations required
+			// WML Validator:
+			// http://validator.w3.org
+			// 
+			// div -> p
+			// no style, no class, no h1-h6, sup, sub, ol, ul, li etc.
+			// table requires "columns" property
+			// lang and dir officially unsupported (but often work on rtl phones)
+
+			// Content wrapping
 			$contentHtml = $this->createWMLCard( $contentHtml, $title );
 			require( 'views/layout/application.wml.php' );
 		}

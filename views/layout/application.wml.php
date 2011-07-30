@@ -7,7 +7,6 @@ $applicationHtml = <<<EOT
 		<title>{$title}</title> 
 	    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 	    <meta name="character-set=utf-8" content="charset"/>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	    <meta forua="true" http-equiv="Cache-Control" content="max-age=0"/>
 	  </head>
 	{$contentHtml}
