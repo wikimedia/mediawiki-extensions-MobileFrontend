@@ -846,28 +846,35 @@ $messages['de'] = array(
 	'mobile-frontend-hide-button' => 'Ausblenden',
 	'mobile-frontend-disable-button' => 'Deaktivieren',
 	'mobile-frontend-back-button' => 'Zurück',
-	'mobile-frontend-regular-wikipedia' => 'Zur klassischen Wikipedia-Version wechseln',
-	'mobile-frontend-perm-stop-redirect' => 'Mobile Version dauerhaft deaktivieren',
-	'mobile-frontend-error-page-title' => 'Es gibt ein Problem!',
-	'mobile-frontend-error-page-text' => 'Die mobile Wikipedia-Version befindet sich noch in der Entwicklung und wir bemühen uns, noch bestehende interne Fehler zu beheben. Wir wurden über diesen Fehler informiert und werden das Problem in Kürze lösen. Bitte versuche es in einiger Zeit noch einmal.',
+	'mobile-frontend-regular-wikipedia' => 'Zur klassischen Wikipedia-Ansicht wechseln',
+	'mobile-frontend-perm-stop-redirect' => 'Mobile Ansicht dauerhaft deaktivieren',
+	'mobile-frontend-error-page-title' => 'Es ist ein Problem aufgetreten.',
+	'mobile-frontend-error-page-text' => 'Die mobile Wikipedia-Ansicht befindet sich noch in der Entwicklung und wir bemühen uns, noch bestehende interne Fehler zu beheben. Wir wurden über diesen Fehler informiert und werden das Problem in Kürze lösen. Bitte versuche es später noch einmal.',
 	'mobile-frontend-copyright' => "Der Text ist unter der Lizenz <a class='internal' href='http://de.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported'>„Creative Commons Attribution/Share-Alike“</a> verfügbar; zusätzliche Bedingungen können anwendbar sein. Einzelheiten sind in den <a class='internal' href='http://wikimediafoundation.org/wiki/Nutzungsbedingungen'>Nutzungsbedingungen</a> beschrieben. Wikipedia® ist eine eingetragene Marke der <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation Inc.</a>",
 	'mobile-frontend-are-you-sure' => 'Bist du dir sicher?',
-	'mobile-frontend-explain-disable' => 'Bist du dir sicher, die mobile Wikipedia-Version zu deaktivieren? Wenn du <b>Deaktivieren</b> wählst, wirst du von nun an bei einem Besuch von Wikipedia nicht mehr automatisch auf die mobile Wikipedia-Version weitergeleitet.',
+	'mobile-frontend-explain-disable' => 'Bist du dir sicher, dass du die mobile Wikipedia-Ansicht deaktivieren möchtest? Sofern du <b>Deaktivieren</b> wählst, wirst du von nun an bei einem Besuch von Wikipedia nicht mehr automatisch auf die mobile Wikipedia-Ansicht weitergeleitet.',
 	'mobile-frontend-nav-end' => 'Ende',
 	'mobile-frontend-nav-top' => 'Oben',
 	'mobile-frontend-nav-edit' => 'Bearbeiten',
 	'mobile-frontend-nav-history' => 'Verlauf',
 	'mobile-frontend-search-text' => 'Suche',
-	'mobile-frontend-contact-us' => 'Bei Fragen oder Anmerkungen kontaktiere uns bitte unter der E-Mail-Adresse mobile@wikipedia.org',
+	'mobile-frontend-contact-us' => 'Im Fall von Fragen oder Anmerkungen kontaktiere uns bitte unter der E-Mail-Adresse mobile@wikipedia.org',
 	'mobile-frontend-author-link' => 'Diese Datei in der regulären Wikipedia anzeigen, um Informationen über Autoren, Lizenz und erweiterte Beschreibungen zu sehen.',
 	'mobile-frontend-download-full-version' => 'Vollversion downloaden',
 	'mobile-frontend-file-namespace' => 'Datei',
+	'mobile-frontend-wml-continue' => 'Weiter ...',
+	'mobile-frontend-wml-back' => 'Zurück ...',
+	'mobile-frontend-view' => 'Mobile Ansicht',
 );
 
-/** German (formal address) (‪Deutsch (Sie-Form)‬) */
+/** German (formal address) (‪Deutsch (Sie-Form)‬)
+ * @author Kghbln
+ */
 $messages['de-formal'] = array(
+	'mobile-frontend-error-page-text' => 'Die mobile Wikipedia-Ansicht befindet sich noch in der Entwicklung und wir bemühen uns, noch bestehende interne Fehler zu beheben. Wir wurden über diesen Fehler informiert und werden das Problem in Kürze lösen. Bitte versuchen Sie es später noch einmal.',
 	'mobile-frontend-are-you-sure' => 'Sind Sie sich sicher?',
-	'mobile-frontend-explain-disable' => 'Sind Sie sich sicher, die mobile Wikipedia-Version zu deaktivieren? Wenn Sie <b>Deaktivieren</b> wählen, werden Sie von nun an bei einem Besuch von Wikipedia, nicht mehr automatisch auf die mobile Wikipedia-Version weitergeleitet.',
+	'mobile-frontend-explain-disable' => 'Sind Sie sich sicher, dass Sie die mobile Wikipedia-Ansicht deaktivieren möchten? Sofern Sie <b>Deaktivieren</b> wählen, werden Sie von nun an bei einem Besuch von Wikipedia nicht mehr automatisch auf die mobile Wikipedia-Ansicht weitergeleitet.',
+	'mobile-frontend-contact-us' => 'Im Fall von Fragen oder Anmerkungen kontaktieren Sie uns bitte unter der E-Mail-Adresse mobile@wikipedia.org',
 );
 
 /** Zazaki (Zazaki) */
@@ -1156,7 +1163,9 @@ $messages['ext'] = array(
 	'mobile-frontend-contact-us' => 'Si tiés anguna pregunta u suheréncia, empúntala a mobile@wikipedia.org',
 );
 
-/** Persian (فارسی) */
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
 $messages['fa'] = array(
 	'mobile-frontend-wikipedia' => 'ویکی‌پدیا',
 	'mobile-frontend-search-submit' => 'برو',
@@ -1177,7 +1186,7 @@ $messages['fa'] = array(
 	'mobile-frontend-error-page-text' => 'نسخه موبایل ویکی‌پدیا در حال توسعه و گسترش است و ما در حال تلاش برای رفع تمامی نواقص و خطاها هستیم. ما در مورد بسیاری از خطاها مطلع هستیم و تمام تلاش خود را برای رفع آن به کار می بریم. لطفاً به زودی مشکل را دوباره بررسی کنید!',
 	'mobile-frontend-copyright' => "همه نوشته ها تحت <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>مجوز Creative Commons Attribution/Share-Alike</a> قابل دسترسی هستند؛ شرایط اضافی ممکن است بعدها اضافه شود. برای جزئیات بیشتر <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>قوانین و مقررات استفاده</a> را ببینید. ویکی‌پدیا یک علامت تجاری ثبت شده <a href='http://www.wikimediafoundation.org/'>بنیاد ویکی‌مدیا</a> است که یک سازمان غیر انتفاعی است.",
 	'mobile-frontend-are-you-sure' => 'آیا مطمئن هستید؟',
-	'mobile-frontend-explain-disable' => 'آیا مطمئن هستید که می خواهید  نسخه موبایل ویکی‌پدیا را غیر فعال کنید؟ اگر شما <b>غیر فعال کردن</b> را انتخاب کنید، از این به بعد در زمان مشاهده ویکی‌پدیا به نسخه موبایل هدایت نخواهید شد.',
+	'mobile-frontend-explain-disable' => 'آیا مطمئن هستید که می خواهید نسخه تلفن همراه {{SITENAME}} را غیر فعال کنید؟ اگر شما <b>غیر فعال کردن</b> را انتخاب کنید، از این به بعد در زمان مشاهده {{SITENAME}} به نمای تلفن همراه هدایت نخواهید شد.',
 	'mobile-frontend-nav-end' => 'پایان',
 	'mobile-frontend-nav-top' => 'بالا',
 	'mobile-frontend-nav-edit' => 'ویرایش',
@@ -1187,6 +1196,7 @@ $messages['fa'] = array(
 	'mobile-frontend-author-link' => 'نمایش این پرونده رسانه‌ای در ویکی‌پدیای معمولی برای دیدن اطلاعات درباره مؤلف، مجوز و توضیحات اضافی.',
 	'mobile-frontend-download-full-version' => 'بارگیری نسخه کامل',
 	'mobile-frontend-file-namespace' => 'پرونده',
+	'mobile-frontend-view' => 'نمای تلفن همراه',
 );
 
 /** Finnish (Suomi) */
@@ -1224,9 +1234,10 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author Sherbrooke
+ * @author Tpt
  */
 $messages['fr'] = array(
-	'mobile-frontend-desc' => 'Frontal pour mobile',
+	'mobile-frontend-desc' => 'Affichage mobile',
 	'mobile-frontend-wikipedia' => 'Wikipédia',
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-search-results' => 'Résultats de la recherche',
@@ -1256,6 +1267,9 @@ $messages['fr'] = array(
 	'mobile-frontend-author-link' => 'Afficher ce fichier sur Wikipédia pour voir les informations sur son auteur, sa licence et des descriptions supplémentaires.',
 	'mobile-frontend-download-full-version' => 'Télécharger la version complète',
 	'mobile-frontend-file-namespace' => 'Fichier',
+	'mobile-frontend-wml-continue' => 'Continuer…',
+	'mobile-frontend-wml-back' => 'Retour…',
+	'mobile-frontend-view' => 'Affichage mobile',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -3592,6 +3606,7 @@ $messages['sl'] = array(
 	'mobile-frontend-author-link' => 'Oglejte si to predstavnostno datoteko na redni Wikipediji za vpogled v informacije o avtorstvu, licenciranju in dodatnih opisih.',
 	'mobile-frontend-download-full-version' => 'Prenos polne različice',
 	'mobile-frontend-file-namespace' => 'Datoteka',
+	'mobile-frontend-view' => 'Mobilni pogled',
 );
 
 /** Albanian (Shqip) */
