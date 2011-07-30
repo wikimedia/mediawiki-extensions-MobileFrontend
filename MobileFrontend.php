@@ -370,12 +370,12 @@ class ExtMobileFrontend {
 		$basePage = htmlspecialchars( $_SERVER['PHP_SELF'] );
 
 		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href=\"{$basePage}?seg={$idx}{$useFormatParam}\">Continue ...</a></p>";
+			$card .= "<p><a href=\"{$basePage}?seg={$idx}{$useFormatParam}\">" . wfMsg( 'mobile-frontend-wml-continue' ) . "</a></p>";
 		}
 
 		if ( $idx > 1 ) {
 			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href=\"{$basePage}?seg={$back_idx}{$useFormatParam}\">Back ...</a></p>";
+			$card .= "<p><a href=\"{$basePage}?seg={$back_idx}{$useFormatParam}\">" . wfMsg( 'mobile-frontend-wml-back' ) . "</a></p>";
 		}
 
 		$card .= '</card>';
