@@ -270,7 +270,7 @@ class ExtMobileFrontend {
 		if ( $this->contentFormat == 'XHTML' ) {
 			$dir = self::$dir;
 			$code = self::$code;
-			$regularWikipedia = self::$messages['mobile-frontend-regular-site'];
+			$regularSite = self::$messages['mobile-frontend-regular-site'];
 			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
 			$copyright = self::$messages['mobile-frontend-copyright'];
 			$homeButton = self::$messages['mobile-frontend-home-button'];
@@ -403,6 +403,8 @@ class ExtMobileFrontend {
 	}
 
 	public function DOMParse( $html ) {
+		global $wgSitename;
+		
 		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
 		libxml_use_internal_errors( true );
 		$this->doc = new DOMDocument();
@@ -501,12 +503,12 @@ class ExtMobileFrontend {
 		$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
 
 		if ( empty( $title ) ) {
-			$title = 'Wikipedia';
+			$title = $wgSitename;
 		}
 
 		$dir = self::$dir;
 		$code = self::$code;
-		$regularWikipedia = self::$messages['mobile-frontend-regular-site'];
+		$regularSite = self::$messages['mobile-frontend-regular-site'];
 		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
 		$copyright = self::$messages['mobile-frontend-copyright'];
 		$homeButton = self::$messages['mobile-frontend-home-button'];
