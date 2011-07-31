@@ -112,7 +112,7 @@ class ExtMobileFrontend {
 		$mobileViewUrl .= $delimiter . 'useFormat=mobile';
 		$mobileViewUrl = htmlspecialchars( $mobileViewUrl );
 
-		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>{wfMsg( 'mobile-frontend-view' )}</a>");
+		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>".wfMsg( 'mobile-frontend-view')."</a>");
 		$footerlinks['places'][] = 'mobileview';
 		$tpl->set('footerlinks', $footerlinks);
 
@@ -121,16 +121,21 @@ class ExtMobileFrontend {
 	}
 
 	public function onOutputPageBeforeHTML( &$out, &$text ) {
-		global $wgContLang, $wgRequest, $wgMemc;
+		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
 
+		// Need to get copyright footer from skin. The footer changes depending
+		// on whether we're using the WikimediaMessages extension or not.
+		$skin=$wgUser->getSkin();
+		$copyright=$skin->getCopyright();
+		
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
 		self::$messages['mobile-frontend-show']				  = wfMsg( 'mobile-frontend-show-button' );
 		self::$messages['mobile-frontend-hide']				  = wfMsg( 'mobile-frontend-hide-button' );
 		self::$messages['mobile-frontend-back-to-top']		  = wfMsg( 'mobile-frontend-back-to-top-of-section' );
-		self::$messages['mobile-frontend-regular-wikipedia']  = wfMsg( 'mobile-frontend-regular-wikipedia' );
+		self::$messages['mobile-frontend-regular-site']  = wfMsg( 'mobile-frontend-regular-site' );
 		self::$messages['mobile-frontend-perm-stop-redirect'] = wfMsg( 'mobile-frontend-perm-stop-redirect' );
-		self::$messages['mobile-frontend-copyright']		  = wfMsg( 'mobile-frontend-copyright' );
+		self::$messages['mobile-frontend-copyright']		  = $copyright;
 		self::$messages['mobile-frontend-home-button']		  = wfMsg( 'mobile-frontend-home-button' );
 		self::$messages['mobile-frontend-random-button']	  = wfMsg( 'mobile-frontend-random-button' );
 		self::$messages['mobile-frontend-are-you-sure']		  = wfMsg( 'mobile-frontend-are-you-sure' );
@@ -150,6 +155,7 @@ class ExtMobileFrontend {
 		$uAmd5 = md5($userAgent);
 
 		$key = wfMemcKey( 'mobile', 'ua', $uAmd5 );
+
 		try {
 			$props = $wgMemc->get( $key );
 			if ( ! $props ) {
@@ -264,7 +270,7 @@ class ExtMobileFrontend {
 		if ( $this->contentFormat == 'XHTML' ) {
 			$dir = self::$dir;
 			$code = self::$code;
-			$regularWikipedia = self::$messages['mobile-frontend-regular-wikipedia'];
+			$regularWikipedia = self::$messages['mobile-frontend-regular-site'];
 			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
 			$copyright = self::$messages['mobile-frontend-copyright'];
 			$homeButton = self::$messages['mobile-frontend-home-button'];
@@ -500,7 +506,7 @@ class ExtMobileFrontend {
 
 		$dir = self::$dir;
 		$code = self::$code;
-		$regularWikipedia = self::$messages['mobile-frontend-regular-wikipedia'];
+		$regularWikipedia = self::$messages['mobile-frontend-regular-site'];
 		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
 		$copyright = self::$messages['mobile-frontend-copyright'];
 		$homeButton = self::$messages['mobile-frontend-home-button'];
