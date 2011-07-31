@@ -4,9 +4,9 @@ $footerHtml = <<<EOD
     <div id='footer'> 
       <div class='nav' id='footmenu'> 
         <div class='mwm-notice'> 
-          <a href="{$regularSiteUrl}">{$regularSite}</a>
+          <a href="?mAction=view_normal_site">{$regularSite}</a>
             <div id="perm"> 
-              <a href="{$permStopRedirectUrl}">{$permStopRedirect}</a> 
+              <a href="?mAction=disable_mobile_site">{$permStopRedirect}</a> 
             </div> 
         </div> 
       </div> 
