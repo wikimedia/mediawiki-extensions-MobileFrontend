@@ -147,8 +147,8 @@ class ExtMobileFrontend {
 
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 
-		self::$mainPageUrl = Title::newMainPage()->getFullUrl();
-		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getFullUrl();
+		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
+                self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$uAmd5 = md5($userAgent);
