@@ -432,9 +432,12 @@ class ExtMobileFrontend {
 
 		if ( self::$disableImages == 1 ) {
 			$itemToRemoveRecords['TAG'][] = "img";
+			$itemToRemoveRecords['TAG'][] = "audio";
+			$itemToRemoveRecords['TAG'][] = "video";
 			$itemToRemoveRecords['CLASS'][] = "thumb tright";
 			$itemToRemoveRecords['CLASS'][] = "thumb tleft";
 			$itemToRemoveRecords['CLASS'][] = "thumbcaption";
+			$itemToRemoveRecords['CLASS'][] = "gallery";
 		}
 
 		$domElemsToRemove = array();
