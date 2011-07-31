@@ -110,6 +110,7 @@ class ExtMobileFrontend {
 		$mobileViewUrl = $wgRequest->getRequestURL();
 		$delimiter = ( strpos( $mobileViewUrl, "?" ) !== false ) ? "&" : "?";
 		$mobileViewUrl .= $delimiter . 'useFormat=mobile';
+		$mobileViewUrl = htmlspecialchars( $mobileViewUrl );
 
 		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>{wfMsg( 'mobile-frontend-view' )}</a>");
 		$footerlinks['places'][] = 'mobileview';
@@ -239,7 +240,7 @@ class ExtMobileFrontend {
 		// ajax_support_javascript
 		// html_preferred_dtd
 
-		// Determine  
+		// Determine
 
 		if (self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ) {
@@ -517,7 +518,7 @@ class ExtMobileFrontend {
 			// TODO: Content transformations required
 			// WML Validator:
 			// http://validator.w3.org
-			// 
+			//
 			// div -> p
 			// no style, no class, no h1-h6, sup, sub, ol, ul, li etc.
 			// table requires "columns" property
