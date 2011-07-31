@@ -20,7 +20,6 @@ $applicationHtml = <<<EOT
     <script type='text/javascript'> 
       //<![CDATA[
         var title = "{$title}";
-        var server = "http://en.wikipedia.org";
         function shouldCache() {
           return true;
         }
