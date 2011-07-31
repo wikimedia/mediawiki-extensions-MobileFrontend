@@ -57,6 +57,8 @@ class ExtMobileFrontend {
 
 	public $contentFormat = '';
 	public $WMLSectionSeperator = '***************************************************************************';
+	public static $title;
+	public static $htmlTitle;
 	public static $dir;
 	public static $code;
 	public static $device;
@@ -121,6 +123,10 @@ class ExtMobileFrontend {
 
 	public function onOutputPageBeforeHTML( &$out, &$text ) {
 		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
+
+		// The title
+		self::$title = $out->getTitle();
+		self::$htmlTitle = $out->getHTMLTitle();
 
 		// Need to get copyright footer from skin. The footer changes depending
 		// on whether we're using the WikimediaMessages extension or not.
@@ -278,7 +284,7 @@ class ExtMobileFrontend {
 			$explainDisable = self::$messages['mobile-frontend-explain-disable'];
 			$disableButton = self::$messages['mobile-frontend-disable-button'];
 			$backButton = self::$messages['mobile-frontend-back-button'];
-			$title = $areYouSure;
+			$htmlTitle = $areYouSure;
 			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 			require( 'views/notices/_donate.html.php' );
 			require( 'views/layout/_search_webkit.html.php' );
@@ -360,11 +366,12 @@ class ExtMobileFrontend {
 		return $s;
 	}
 
-	private function createWMLCard( $s, $title = '' ) {
+	private function createWMLCard( $s ) {
 		$segments = explode( $this->WMLSectionSeperator, $s );
 		$card = '';
 		$idx = 0;
 		$requestedSegment = self::$requestedSegment;
+		$title = htmlspecialchars( self::$title->getText() );
 
 		$card .= "<card id='{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
 		$idx = $requestedSegment + 1;
@@ -414,12 +421,6 @@ class ExtMobileFrontend {
 		$this->doc->encoding = 'UTF-8';
 
 		$itemToRemoveRecords = $this->parseItemsToRemove();
-
-		$titleNode = $this->doc->getElementsByTagName( 'title' );
-
-		if ( $titleNode->length > 0 ) {
-			$title = $titleNode->item( 0 )->nodeValue;
-		}
 
 		// Tags
 
@@ -516,6 +517,9 @@ class ExtMobileFrontend {
 		$homeButton = self::$messages['mobile-frontend-home-button'];
 		$randomButton = self::$messages['mobile-frontend-random-button'];
 
+		$title = htmlspecialchars( self::$title->getText() );
+		$htmlTitle = htmlspecialchars( self::$htmlTitle );
+
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
@@ -538,7 +542,7 @@ class ExtMobileFrontend {
 			$contentHtml = $this->headingTransform( $contentHtml );
 
 			// Content wrapping
-			$contentHtml = $this->createWMLCard( $contentHtml, $title );
+			$contentHtml = $this->createWMLCard( $contentHtml );
 			require( 'views/layout/application.wml.php' );
 		}
 
@@ -552,7 +556,7 @@ class ExtMobileFrontend {
 			header( 'Content-Type: application/json' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
-			$json_data['title'] = $title;
+			$json_data['title'] = self::$title->getText();
 			$json_data['html'] = $contentHtml;
 
 			$json = json_encode( $json_data );
