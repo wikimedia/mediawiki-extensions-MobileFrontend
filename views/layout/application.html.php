@@ -1,5 +1,11 @@
 <?php
-global $wgExtensionAssetsPath;
+global $wgExtensionAssetsPath, $wgAppleTouchIcon;
+
+if( $wgAppleTouchIcon !== false ) {
+	$appleTouchIconTag = Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) );;
+} else {
+	$appleTouchIconTag = "";
+}
 
 $applicationHtml = <<<EOT
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
@@ -10,7 +16,7 @@ $applicationHtml = <<<EOT
     <link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$cssFileName}.css' media='all' rel='Stylesheet' type='text/css' /> 
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" /> 
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
-    <link rel="apple-touch-icon" href="http://en.m.wikipedia.org/apple-touch-icon.png" /> 
+    ${wgAppleTouchIconTag} 
     <script type='text/javascript'> 
       //<![CDATA[
         var title = "{$title}";
