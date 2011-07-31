@@ -285,6 +285,7 @@ class ExtMobileFrontend {
 			$disableButton = self::$messages['mobile-frontend-disable-button'];
 			$backButton = self::$messages['mobile-frontend-back-button'];
 			$htmlTitle = $areYouSure;
+			$title = $areYouSure;
 			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 			require( 'views/notices/_donate.html.php' );
 			require( 'views/layout/_search_webkit.html.php' );
@@ -504,10 +505,6 @@ class ExtMobileFrontend {
 		$content = $this->doc->getElementById( 'content' );
 
 		$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
-
-		if ( empty( $title ) ) {
-			$title = $wgSitename;
-		}
 
 		$dir = self::$dir;
 		$code = self::$code;
