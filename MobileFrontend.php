@@ -117,7 +117,6 @@ class ExtMobileFrontend {
 		$footerlinks['places'][] = 'mobileview';
 		$tpl->set('footerlinks', $footerlinks);
 
-		wfProfileOut(__METHOD__);
 		return true;
 	}
 
