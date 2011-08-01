@@ -121,6 +121,11 @@ class ExtMobileFrontend {
 		return true;
 	}
 
+	/**
+	 * @param $out Outputpage
+	 * @param $text String
+	 * @return bool
+	 */
 	public function onOutputPageBeforeHTML( &$out, &$text ) {
 		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
 
@@ -132,7 +137,7 @@ class ExtMobileFrontend {
 		// on whether we're using the WikimediaMessages extension or not.
 		$skin=$wgUser->getSkin();
 		$copyright=$skin->getCopyright();
-		
+
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
 		self::$messages['mobile-frontend-show']				  = wfMsg( 'mobile-frontend-show-button' );
@@ -411,7 +416,7 @@ class ExtMobileFrontend {
 
 	public function DOMParse( $html ) {
 		global $wgSitename;
-		
+
 		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
 		libxml_use_internal_errors( true );
 		$this->doc = new DOMDocument();
