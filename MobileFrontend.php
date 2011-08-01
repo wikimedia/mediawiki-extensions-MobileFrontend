@@ -109,9 +109,7 @@ class ExtMobileFrontend {
 	public function addMobileFooter( &$obj, &$tpl ) {
 		global $wgRequest;
 		$footerlinks = $tpl->data['footerlinks'];
-		$mobileViewUrl = $wgRequest->getRequestURL();
-		$mobileViewUrl = wfAppendQuery( $mobileViewUrl, 'useFormat=mobile' );
-		$mobileViewUrl = htmlspecialchars( $mobileViewUrl );
+		$mobileViewUrl = $wgRequest->escapeAppendQuery( 'useFormat=mobile' );
 
 		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>".wfMsg( 'mobile-frontend-view')."</a>");
 		$footerlinks['places'][] = 'mobileview';
