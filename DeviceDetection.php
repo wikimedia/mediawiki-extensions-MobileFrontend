@@ -9,14 +9,14 @@
  * @licence GNU General Public Licence 2.0 or later
  */
 
-// Provides an abstraction for a device 
+// Provides an abstraction for a device
 // A device can select which format a request should recieve and
 // may be extended to provide access to particular devices functionality
 class DeviceDetection {
-	
-	public function availableFormats() {		
+
+	public function availableFormats() {
 		$formats = array (
-			  'html' => 
+			  'html' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -28,7 +28,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'capable' => 
+			  'capable' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -40,7 +40,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'simplehtml' => 
+			  'simplehtml' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
@@ -52,7 +52,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'webkit' => 
+			  'webkit' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'webkit',
@@ -64,7 +64,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'webkit_old' => 
+			  'webkit_old' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -76,7 +76,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'android' => 
+			  'android' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -88,7 +88,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'iphone' => 
+			  'iphone' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'webkit',
@@ -100,7 +100,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'iphone2' => 
+			  'iphone2' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -112,7 +112,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'native_iphone' => 
+			  'native_iphone' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => false,
@@ -124,7 +124,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => false,
 			  ),
-			  'palm_pre' => 
+			  'palm_pre' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -136,7 +136,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'kindle' => 
+			  'kindle' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'kindle',
@@ -148,7 +148,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'kindle2' => 
+			  'kindle2' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'kindle',
@@ -160,7 +160,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'blackberry' => 
+			  'blackberry' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -172,7 +172,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'netfront' => 
+			  'netfront' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
@@ -184,7 +184,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'wap2' => 
+			  'wap2' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
@@ -196,7 +196,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'psp' => 
+			  'psp' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
@@ -208,7 +208,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'ps3' => 
+			  'ps3' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
@@ -220,7 +220,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'wii' => 
+			  'wii' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'wii',
@@ -232,7 +232,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'operamini' => 
+			  'operamini' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
@@ -244,7 +244,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'nokia' => 
+			  'nokia' =>
 			  array (
 				'view_format' => 'html',
 				'search_bar' => 'webkit',
@@ -256,7 +256,7 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			  ),
-			  'wml' => 
+			  'wml' =>
 			  array (
 				'view_format' => 'wml',
 				'search_bar' => 'wml',
@@ -266,15 +266,15 @@ class DeviceDetection {
 			);
 		return $formats;
 	}
-	
+
 	public function format( $formatName ) {
 		$format = $this->availableFormats();
 		return ( isset( $format[$formatName] ) ) ? $format[$formatName] : array();
 	}
-	
+
 	public function testFormatName() {
 		$testResults = '';
-		
+
 		$userAgents = array();
 		$userAgents['android']   = 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17';
 		$userAgents['iphone2']   = 'Mozilla/5.0 (ipod: U;CPU iPhone OS 2_2 like Mac OS X: es_es) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.0 Mobile/3B48b Safari/419.3';
@@ -292,19 +292,24 @@ class DeviceDetection {
 		$userAgents['wap2']      = 'NokiaN73-2/3.0-630.0.2 Series60/3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1';
 		$userAgents['psp']       = 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)';
 		$userAgents['ps3']       = 'Mozilla/5.0 (PLAYSTATION 3; 1.00)';
-		
+
 		foreach ( $userAgents as $formatName => $userAgent ) {
 			if ( $this->formatName( $userAgent ) === $formatName ) {
 				$result = ' has PASSED!';
 			} else {
 				$result = ' has FAILED!';
 			}
-			
+
 			$testResults .= $formatName . $result . '<br/>' . PHP_EOL;
 		}
 		return $testResults;
 	}
 
+	/**
+	 * @param $userAgent string
+	 * @param $acceptHeader string
+	 * @return string
+	 */
 	public function formatName( $userAgent, $acceptHeader = '' ) {
 		$formatName = '';
 
@@ -333,7 +338,7 @@ class DeviceDetection {
 		} elseif ( preg_match( '/Opera/', $userAgent ) ) {
 			if ( strpos( $userAgent, 'Nintendo Wii' ) !== false ) {
 				$formatName = 'wii';
-			} elseif ( strpos( $userAgent, 'Opera Mini' ) !== false ) { 
+			} elseif ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$formatName = 'operamini';
 			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 				$formatName = 'iphone';
@@ -361,7 +366,7 @@ class DeviceDetection {
 		} elseif ( preg_match( '/BlackBerry/', $userAgent ) ) {
 			$formatName = 'blackberry';
 		}
-		
+
 		if ( $formatName === '' ) {
 			if ( strpos( $acceptHeader, 'application/vnd.wap.xhtml+xml' ) !== false ) {
 				// Should be wap2 or in WURFL xhtmlmp

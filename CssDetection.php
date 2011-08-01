@@ -11,6 +11,12 @@
 
 class CssDetection {
 
+	/**
+	 * @param $snippet
+	 * @param $type
+	 * @param $rawName
+	 * @return string
+	 */
 	public static function detectIdCssOrTag( $snippet, &$type, &$rawName ) {
 		$output = '';
 

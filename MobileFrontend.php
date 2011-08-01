@@ -49,14 +49,21 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.9';
+	const VERSION = '0.5.10';
 
+	/**
+	 * @var DOMDocument
+	 */
 	private $doc;
 
 	public static $messages = array();
 
 	public $contentFormat = '';
 	public $WMLSectionSeperator = '***************************************************************************';
+
+	/**
+	 * @var Title
+	 */
 	public static $title;
 	public static $htmlTitle;
 	public static $dir;
@@ -132,15 +139,15 @@ class ExtMobileFrontend {
 
 		// Need to get copyright footer from skin. The footer changes depending
 		// on whether we're using the WikimediaMessages extension or not.
-		$skin=$wgUser->getSkin();
-		$copyright=$skin->getCopyright();
+		$skin = $wgUser->getSkin();
+		$copyright = $skin->getCopyright();
 
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
 		self::$messages['mobile-frontend-show']				  = wfMsg( 'mobile-frontend-show-button' );
 		self::$messages['mobile-frontend-hide']				  = wfMsg( 'mobile-frontend-hide-button' );
 		self::$messages['mobile-frontend-back-to-top']		  = wfMsg( 'mobile-frontend-back-to-top-of-section' );
-		self::$messages['mobile-frontend-regular-site']  = wfMsg( 'mobile-frontend-regular-site' );
+		self::$messages['mobile-frontend-regular-site']		  = wfMsg( 'mobile-frontend-regular-site' );
 		self::$messages['mobile-frontend-perm-stop-redirect'] = wfMsg( 'mobile-frontend-perm-stop-redirect' );
 		self::$messages['mobile-frontend-copyright']		  = $copyright;
 		self::$messages['mobile-frontend-home-button']		  = wfMsg( 'mobile-frontend-home-button' );
@@ -156,7 +163,7 @@ class ExtMobileFrontend {
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
-                self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
+		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$uAmd5 = md5($userAgent);
@@ -234,7 +241,7 @@ class ExtMobileFrontend {
 
 		// WURFL documentation: http://wurfl.sourceforge.net/help_doc.php
 		// Determine the kind of markup
-		if( is_array($props) && $props['preferred_markup'] ) {
+		if( is_array( $props ) && $props['preferred_markup'] ) {
 			wfDebug( __METHOD__ . ": preferred markup for this device: " . $props['preferred_markup'] );
 			// xhtml/html: html_web_3_2, html_web_4_0
 			// xthml basic/xhtmlmp (wap 2.0): html_wi_w3_xhtmlbasic html_wi_oma_xhtmlmp_1_0
@@ -297,6 +304,7 @@ class ExtMobileFrontend {
 			require( 'views/layout/application.html.php' );
 			return $applicationHtml;
 		}
+		return '';
 	}
 
 	private function headingTransformCallbackWML( $matches ) {
@@ -344,6 +352,10 @@ class ExtMobileFrontend {
 		return $base;
 	}
 
+	/**
+	 * @param $s string
+	 * @return string
+	 */
 	public function headingTransform( $s ) {
 		$callback = 'headingTransformCallback';
 		$callback .= $this->contentFormat;
