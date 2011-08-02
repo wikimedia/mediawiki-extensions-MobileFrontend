@@ -126,7 +126,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getMsg() {
-		global $wgUser;
+		global $wgUser, $wgContLang;
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
@@ -143,6 +143,12 @@ class ExtMobileFrontend {
 		self::$messages['mobile-frontend-explain-disable']	  = wfMsg( 'mobile-frontend-explain-disable' );
 		self::$messages['mobile-frontend-disable-button']	  = wfMsg( 'mobile-frontend-disable-button' );
 		self::$messages['mobile-frontend-back-button']		  = wfMsg( 'mobile-frontend-back-button' );
+
+		self::$dir = $wgContLang->getDir();
+		self::$code = $wgContLang->getCode();
+
+		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
+		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
 	}
 
 	/**
@@ -177,13 +183,13 @@ class ExtMobileFrontend {
 		//self::$messages['mobile-frontend-disable-button']	  = wfMsg( 'mobile-frontend-disable-button' );
 		//self::$messages['mobile-frontend-back-button']		  = wfMsg( 'mobile-frontend-back-button' );
 
-		self::$dir = $wgContLang->getDir();
-		self::$code = $wgContLang->getCode();
+		//self::$dir = $wgContLang->getDir();
+		//self::$code = $wgContLang->getCode();
 
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 
-		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
-		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
+		//self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
+		//self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
 		
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$uAmd5 = md5($userAgent);
