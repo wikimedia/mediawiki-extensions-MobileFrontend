@@ -1212,7 +1212,7 @@ $messages['frp'] = array(
 	'mobile-frontend-hide-button' => 'Cachiér',
 	'mobile-frontend-disable-button' => 'Dèsactivar',
 	'mobile-frontend-back-button' => 'Tornar',
-	'mobile-frontend-regular-site' => 'Fâre vêre ceta pâge dessus Vouiquipèdia classica',
+	'mobile-frontend-regular-site' => 'Fâre vêre ceta pâge dessus {{SITENAME}} classica',
 	'mobile-frontend-error-page-title' => 'Dèsolâ ! Nos avens un problèmo.',
 	'mobile-frontend-are-you-sure' => 'Éte-vos de sûr ?',
 	'mobile-frontend-nav-end' => 'Fin',
@@ -1222,6 +1222,8 @@ $messages['frp'] = array(
 	'mobile-frontend-search-text' => 'Rechèrchiér',
 	'mobile-frontend-download-full-version' => 'Tèlèchargiér la vèrsion complèta',
 	'mobile-frontend-file-namespace' => 'Fichiér',
+	'mobile-frontend-wml-continue' => 'Continuar ...',
+	'mobile-frontend-wml-back' => 'Retôrn ...',
 );
 
 /** Friulian (Furlan) */
@@ -1318,6 +1320,9 @@ $messages['gl'] = array(
 	'mobile-frontend-author-link' => 'Ollar este ficheiro na {{SITENAME}} normal para ver a información sobre a autoría, a licenza e calquera descrición adicional.',
 	'mobile-frontend-download-full-version' => 'Descargar a versión completa',
 	'mobile-frontend-file-namespace' => 'Ficheiro',
+	'mobile-frontend-wml-continue' => 'Continuar...',
+	'mobile-frontend-wml-back' => 'Volver...',
+	'mobile-frontend-view' => 'Vista móbil',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
@@ -2663,7 +2668,9 @@ Vorttemee zie'j hier t resultaot.",
 	'mobile-frontend-contact-us' => "A'j nog vragen of opmarkingen hebben, stuur ons gerust n berichjen op t adres mobile@wikipedia.org",
 );
 
-/** Nepali (नेपाली) */
+/** Nepali (नेपाली)
+ * @author RajeshPandey
+ */
 $messages['ne'] = array(
 	'mobile-frontend-search-submit' => 'जाने \\',
 	'mobile-frontend-search-results' => 'खोज नतिजाहरु',
@@ -2678,7 +2685,7 @@ $messages['ne'] = array(
 	'mobile-frontend-disable-button' => 'निष्क्रिय',
 	'mobile-frontend-back-button' => 'पछाडि',
 	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित विकिपीडियामा हेर्ने \\',
-	'mobile-frontend-perm-stop-redirect' => 'मोबाइल साइट स्थाइरुमा असक्षम पार्ने \\',
+	'mobile-frontend-perm-stop-redirect' => 'मोबाइल साइट स्थाइरुमा असक्षम पार्ने',
 	'mobile-frontend-error-page-title' => 'हामीलाई समस्या आइरेको छ।',
 	'mobile-frontend-error-page-text' => 'विकिपीडिया मोबाइल अझै विकासको क्रममा नै रहेको छ र सबै आन्तरिक त्रुटिहरु सच्याउनामा हामी लागि परेका छौँ । यस त्रुटिका बारेमा हामीलाई जानकारी गराइएको छ र निकट भविष्यमा नै सच्याइने छ । कृपया पुन जाँच गर्नुहोला ।',
 	'mobile-frontend-are-you-sure' => 'पक्का हो?',
@@ -2827,7 +2834,9 @@ $messages['oc'] = array(
 	'mobile-frontend-file-namespace' => 'Fichièr',
 );
 
-/** Oriya (ଓଡ଼ିଆ) */
+/** Oriya (ଓଡ଼ିଆ)
+ * @author Psubhashish
+ */
 $messages['or'] = array(
 	'mobile-frontend-search-results' => 'ଖୋଜିବାରୁ ମିଳିଲା',
 	'mobile-frontend-show-button' => 'ଦେଖାଇବେ',
@@ -2837,6 +2846,7 @@ $messages['or'] = array(
 	'mobile-frontend-nav-history' => 'ଇତିହାସ',
 	'mobile-frontend-search-text' => 'ଖୋଜିବା',
 	'mobile-frontend-file-namespace' => 'ଫାଇଲ',
+	'mobile-frontend-view' => 'ମୋବାଇଲ ଦେଖଣା',
 );
 
 /** Ossetic (Ирон) */
@@ -2972,7 +2982,7 @@ $messages['pl'] = array(
 	'mobile-frontend-file-namespace' => 'Plik',
 	'mobile-frontend-wml-continue' => 'Dalej ...',
 	'mobile-frontend-wml-back' => 'Wstecz ...',
-	'mobile-frontend-view' => 'Przeglądaj w komórce',
+	'mobile-frontend-view' => 'Przeglądaj komórką',
 );
 
 /** Piedmontese (Piemontèis) */
