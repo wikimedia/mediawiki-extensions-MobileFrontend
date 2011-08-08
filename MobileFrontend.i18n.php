@@ -43,7 +43,7 @@ $messages['en'] = array (
 	'mobile-frontend-file-namespace' => 'File',
 	'mobile-frontend-wml-continue' => 'Continue ...',
 	'mobile-frontend-wml-back' => 'Back ...',
-	'mobile-frontend-view' => 'Mobile View',
+	'mobile-frontend-view' => 'Mobile view',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
