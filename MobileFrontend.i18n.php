@@ -264,6 +264,23 @@ $messages['ar'] = array(
 	'mobile-frontend-file-namespace' => 'ملف',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'mobile-frontend-search-submit' => 'ܙܠ',
+	'mobile-frontend-search-results' => 'ܦܠܛ̈ܐ ܕܒܘܨܝܐ',
+	'mobile-frontend-home-button' => 'ܪܝܫܝܬܐ',
+	'mobile-frontend-random-button' => 'ܚܘܝܚܐܝܬ',
+	'mobile-frontend-nav-end' => 'ܫܘܠܡܐ',
+	'mobile-frontend-nav-top' => 'ܥܠܝܐ',
+	'mobile-frontend-nav-edit' => 'ܫܚܠܦ',
+	'mobile-frontend-nav-history' => 'ܬܫܥܝܬܐ',
+	'mobile-frontend-search-text' => 'ܒܨܝ',
+	'mobile-frontend-file-namespace' => 'ܠܦܦܐ',
+	'mobile-frontend-view' => 'ܓܠܚܐ ܒܙܥܘܩܐ ܟܘܪܝܐ (ܡܫܢܝܢܐ)',
+);
+
 /** Asturian (Asturianu) */
 $messages['ast'] = array(
 	'mobile-frontend-search-submit' => 'Dir',
@@ -981,7 +998,9 @@ $messages['eo'] = array(
 	'mobile-frontend-file-namespace' => 'Dosiero',
 );
 
-/** Spanish (Español) */
+/** Spanish (Español)
+ * @author Crazymadlover
+ */
 $messages['es'] = array(
 	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-search-results' => 'Resultados de la búsqueda',
@@ -998,16 +1017,16 @@ $messages['es'] = array(
 	'mobile-frontend-regular-site' => 'Ver esta página en {{SITENAME}} estándar',
 	'mobile-frontend-perm-stop-redirect' => 'Desactivar permanentemente el sitio móvil',
 	'mobile-frontend-error-page-title' => '¡Tenemos un problema!',
-	'mobile-frontend-error-page-text' => '{{SITENAME}} para móviles está todavía bajo desarrollo activo y estamos trabajando intensamente para arreglar todos nuestros errores internos. Hemos sido notificados de este error y lo arreglaremos pronto. Por favor, revise regularmente si la petición ha sido o no atendida.',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} para móviles está todavía bajo desarrollo activo y estamos trabajando intensamente para arreglar todos nuestros errores internos. Hemos sido notificados de este error y lo arreglaremos pronto. Por favor,revíselo después.',
 	'mobile-frontend-are-you-sure' => '¿Estás seguro?',
-	'mobile-frontend-explain-disable' => '¿Estas seguro que deseas desactivar la versión móvil de {{SITENAME}}? Si escoges <b>Desactivar</b>, de ahora en adelante, cuando visites {{SITENAME}}, no serás redirigido a esta vista móvil de {{SITENAME}}.',
+	'mobile-frontend-explain-disable' => 'Estas seguro que deseas desactivar la versión móvil de {{SITENAME}}? Si escoges <b>Desactivar</b>, de ahora en adelante, cuando visites {{SITENAME}}, no serás redirigido a esta vista móvil de {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Fin',
 	'mobile-frontend-nav-top' => 'Arriba',
 	'mobile-frontend-nav-edit' => 'Editar',
 	'mobile-frontend-nav-history' => 'Historial',
 	'mobile-frontend-search-text' => 'Buscar',
 	'mobile-frontend-contact-us' => 'Si tienes alguna pregunta o comentario siéntete libre de enviarnos un correo electrónico a mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Ver este archivo de media en {{SITENAME}} para ver la información sobre la autoría, licencia y descripciones adicionales.',
+	'mobile-frontend-author-link' => 'Ver este archivo de medios en la versión regular de {{SITENAME}} para ver la información sobre la autoría, licencia y descripciones adicionales.',
 	'mobile-frontend-download-full-version' => 'Descargar la versión completa',
 	'mobile-frontend-file-namespace' => 'Archivo',
 );
@@ -1310,14 +1329,14 @@ $messages['gl'] = array(
 	'mobile-frontend-error-page-title' => 'Vaites, temos un problema!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} móbil aínda está en desenvolvemento activo e estamos a traballar arreo para arranxar os nosos erros internos. Xa se nos avisou deste erro e axiña o resolveremos. Ata a próxima!',
 	'mobile-frontend-are-you-sure' => 'Está seguro?',
-	'mobile-frontend-explain-disable' => 'Está seguro de querer desactivar a versión móbil da {{SITENAME}}? Se escolle a opción "<b>Desactivar</b>", a partir de entón, cando visite a {{SITENAME}}, non será redirixido a esta versión móbil da {{SITENAME}}.',
+	'mobile-frontend-explain-disable' => 'Está seguro de querer desactivar a versión móbil de {{SITENAME}}? Se escolle a opción "<b>Desactivar</b>", a partir de entón, cando visite {{SITENAME}}, non será redirixido a esta versión móbil de {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Fin',
 	'mobile-frontend-nav-top' => 'Comezo',
 	'mobile-frontend-nav-edit' => 'Editar',
 	'mobile-frontend-nav-history' => 'Historial',
 	'mobile-frontend-search-text' => 'Procurar',
 	'mobile-frontend-contact-us' => 'Se ten calquera pregunta, comentario ou dúbida, síntase libre de enviarnos un correo electrónico a mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Ollar este ficheiro na {{SITENAME}} normal para ver a información sobre a autoría, a licenza e calquera descrición adicional.',
+	'mobile-frontend-author-link' => 'Ollar este ficheiro en {{SITENAME}} normal para ver a información sobre a autoría, a licenza e calquera descrición adicional.',
 	'mobile-frontend-download-full-version' => 'Descargar a versión completa',
 	'mobile-frontend-file-namespace' => 'Ficheiro',
 	'mobile-frontend-wml-continue' => 'Continuar...',
@@ -3564,8 +3583,11 @@ $messages['su'] = array(
 	'mobile-frontend-contact-us' => 'Lamun aya nu rék ditanyakeun atawa rék mairan, mangga kirim surélék ka mobile@wikipedia.org',
 );
 
-/** Swedish (Svenska) */
+/** Swedish (Svenska)
+ * @author WikiPhoenix
+ */
 $messages['sv'] = array(
+	'mobile-frontend-desc' => 'Mobilt gränssnitt',
 	'mobile-frontend-search-submit' => 'Gå till',
 	'mobile-frontend-search-results' => 'Sökresultat',
 	'mobile-frontend-no-article-found' => 'Ingen artikel funnen',
@@ -3581,7 +3603,7 @@ $messages['sv'] = array(
 	'mobile-frontend-regular-site' => 'Visa denna sida på vanliga {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'Deaktivera mobilsidan permanent',
 	'mobile-frontend-error-page-title' => 'Vi har ett problem!',
-	'mobile-frontend-error-page-text' => '{{SITENAME}} mobil är fortfarande under aktiv utveckling och vi jobbar hårt for att fixa alla interna fel. Vi har blivit meddelade om detta fel och kommer att fixa det snart. Kom gärna tillbaka lite senare!',
+	'mobile-frontend-error-page-text' => 'Mobilversionen av {{SITENAME}} är fortfarande under aktiv utveckling och vi jobbar hårt for att fixa alla interna fel. Vi har blivit meddelade om detta fel och kommer att fixa det snart. Kom gärna tillbaka lite senare!',
 	'mobile-frontend-are-you-sure' => 'Är du säker?',
 	'mobile-frontend-explain-disable' => 'Är du säker på att du vill inaktivera den mobila versionen av {{SITENAME}}? Om du väljer <b>Inaktivera</b>, kommer du från och med nu, varje gång du besöker {{SITENAME}}, inte bli omdirigerad till denna mobila version av {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Slutet',
@@ -3590,9 +3612,12 @@ $messages['sv'] = array(
 	'mobile-frontend-nav-history' => 'Historik',
 	'mobile-frontend-search-text' => 'Sök',
 	'mobile-frontend-contact-us' => 'Om du har några frågor eller kommentarer får du gärna skicka ett e-post till mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Visa den här mediefilen på {{SITENAME}} för att se information om dess upphovsman, licensiering och ytterligare beskrivningar.',
+	'mobile-frontend-author-link' => 'Visa den här mediafilen på vanliga {{SITENAME}} för att se information om dess upphovsman, licensiering och ytterligare beskrivningar.',
 	'mobile-frontend-download-full-version' => 'Ladda ner Full Version',
 	'mobile-frontend-file-namespace' => 'Fil',
+	'mobile-frontend-wml-continue' => 'Fortsätt ...',
+	'mobile-frontend-wml-back' => 'Tillbaka ...',
+	'mobile-frontend-view' => 'Mobil vy',
 );
 
 /** Swahili (Kiswahili) */
@@ -3816,7 +3841,9 @@ $messages['tpi'] = array(
 	'mobile-frontend-file-namespace' => 'Fail',
 );
 
-/** Turkish (Türkçe) */
+/** Turkish (Türkçe)
+ * @author Emperyan
+ */
 $messages['tr'] = array(
 	'mobile-frontend-search-submit' => 'Git',
 	'mobile-frontend-search-results' => 'Arama Sonuçları',
@@ -3845,6 +3872,7 @@ $messages['tr'] = array(
 	'mobile-frontend-author-link' => "Bu medya dosyasını Vikipedi'de yazarlık, lisans ve ek açıklamaları hakkında bilgi için görüntüleyin.",
 	'mobile-frontend-download-full-version' => 'Tam Sürümü İndir',
 	'mobile-frontend-file-namespace' => 'Dosya',
+	'mobile-frontend-view' => 'Mobil Görünüm',
 );
 
 /** Tatar (Cyrillic) (Татарча/Tatarça (Cyrillic)) */
@@ -4179,6 +4207,7 @@ $messages['yo'] = array(
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
+ * @author PhiLiP
  * @author Shizhao
  */
 $messages['zh-hans'] = array(
@@ -4209,6 +4238,8 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-author-link' => '在维基百科主站上查看这一媒体文件的作者、许可协议和其他附加信息。',
 	'mobile-frontend-download-full-version' => '下载完整版本',
 	'mobile-frontend-file-namespace' => '文件',
+	'mobile-frontend-wml-continue' => '继续……',
+	'mobile-frontend-wml-back' => '后退……',
 	'mobile-frontend-view' => '移动浏览',
 );
 
