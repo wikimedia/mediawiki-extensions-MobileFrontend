@@ -44,6 +44,16 @@ $messages['en'] = array (
 	'mobile-frontend-wml-continue' => 'Continue ...',
 	'mobile-frontend-wml-back' => 'Back ...',
 	'mobile-frontend-view' => 'Mobile view',
+	'mobile-frontend-opt-in-message' => 'Join our opt-in testing of the new mobile frontend?',
+	'mobile-frontend-opt-in-yes-button' => 'yes',
+	'mobile-frontend-opt-in-no-button' => 'no',
+	'mobile-frontend-opt-in-title' => 'Opt-In for Testing',
+	'mobile-frontend-opt-in-explain' => 'This allows you to enter the test',
+	'mobile-frontend-opt-out-message' => 'Leave opt-in testing of the new mobile frontend?',
+	'mobile-frontend-opt-out-yes-button' => 'yes',
+	'mobile-frontend-opt-out-no-button' => 'no',
+	'mobile-frontend-opt-out-title' => 'Opt-Out of Testing',
+	'mobile-frontend-opt-out-explain' => 'This allows you to leave the test',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
