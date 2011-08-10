@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.12';
+	const VERSION = '0.5.13';
 
 	/**
 	 * @var DOMDocument
@@ -319,9 +319,12 @@ class ExtMobileFrontend {
 		// html_preferred_dtd
 
 		// Determine
+		
+		$xDevice = $_SERVER['HTTP_X_DEVICE'];
 
 		if (self::$useFormat === 'mobile' ||
-			self::$useFormat === 'mobile-wap' ) {
+			self::$useFormat === 'mobile-wap' ||
+			isset( $xDevice) ) {
 				$this->getMsg();
 				$this->disableCaching();
 				ob_start( array( $this, 'DOMParse' ) );
