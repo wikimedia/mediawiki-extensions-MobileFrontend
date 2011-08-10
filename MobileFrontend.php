@@ -323,8 +323,7 @@ class ExtMobileFrontend {
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 
 		if (self::$useFormat === 'mobile' ||
-			self::$useFormat === 'mobile-wap' ||
-			isset( $xDevice ) ) {
+			self::$useFormat === 'mobile-wap' ) {
 				$this->getMsg();
 				$this->disableCaching();
 				ob_start( array( $this, 'DOMParse' ) );
