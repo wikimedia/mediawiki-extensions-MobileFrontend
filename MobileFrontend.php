@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.10';
+	const VERSION = '0.5.11';
 
 	/**
 	 * @var DOMDocument
@@ -309,6 +309,7 @@ class ExtMobileFrontend {
 
 	private function renderDisableMobileSiteXHTML() {
 		if ( $this->contentFormat == 'XHTML' ) {
+			$this->getMsg();
 			$dir = self::$dir;
 			$code = self::$code;
 			$regularSite = self::$messages['mobile-frontend-regular-site'];
