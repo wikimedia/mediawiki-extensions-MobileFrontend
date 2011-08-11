@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.15';
+	const VERSION = '0.5.16';
 
 	/**
 	 * @var DOMDocument
@@ -277,11 +277,11 @@ class ExtMobileFrontend {
 		}
 		
 		if ( $mAction == 'opt_in_cookie' ) {
-			$wgRequest->response()->setcookie( 'optin', '1' );
+			$this->setOptInOutCookie( '1' );
 		}
 		
 		if ( $mAction == 'opt_out_cookie' ) {
-			$wgRequest->response()->setcookie( 'optin', '' );
+			$this->setOptInOutCookie( '' );
 		}
 
 		// Note: Temporarily disabling this section for trial deployment
@@ -331,6 +331,26 @@ class ExtMobileFrontend {
 		}
 
 		return true;
+	}
+	
+	private function setOptInOutCookie( $value ) {
+		global $wgCookieDomain;
+		$tempWgCookieDomain = $wgCookieDomain;
+		$wgCookieDomain = $this->getBaseDomain();
+		$wgRequest->response()->setcookie( 'optin', $value );
+		$wgCookieDomain = $tempWgCookieDomain;
+	}
+	
+	private function getBaseDomain() {
+		//Validates value as IP address
+		if( !filter_var( $_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP ) ) {
+			$domainParts = explode( '.', $_SERVER['HTTP_HOST'] );
+			$domainParts = array_reverse( $domainParts );
+			//Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included. 
+			return '.' . $domainParts[1] . '.' . $domainParts[0];
+		} else {
+			return $_SERVER['HTTP_HOST'];
+		}
 	}
 
 	private function disableCaching() {
