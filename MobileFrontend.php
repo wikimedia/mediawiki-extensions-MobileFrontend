@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.17';
+	const VERSION = '0.5.18';
 
 	/**
 	 * @var DOMDocument
@@ -173,34 +173,6 @@ class ExtMobileFrontend {
 		self::$title = $out->getTitle();
 		self::$htmlTitle = $out->getHTMLTitle();
 
-		// Need to get copyright footer from skin. The footer changes depending
-		// on whether we're using the WikimediaMessages extension or not.
-		//$skin = $wgUser->getSkin();
-		//$copyright = $skin->getCopyright();
-
-		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
-		// because at this point the database connection is shut down, etc.
-		//self::$messages['mobile-frontend-show']			  = wfMsg( 'mobile-frontend-show-button' );
-		//self::$messages['mobile-frontend-hide']			  = wfMsg( 'mobile-frontend-hide-button' );
-		//self::$messages['mobile-frontend-back-to-top']		  = wfMsg( 'mobile-frontend-back-to-top-of-section' );
-		//self::$messages['mobile-frontend-regular-site']		  = wfMsg( 'mobile-frontend-regular-site' );
-		//self::$messages['mobile-frontend-perm-stop-redirect'] = wfMsg( 'mobile-frontend-perm-stop-redirect' );
-		//self::$messages['mobile-frontend-copyright']		  = $copyright;
-		//self::$messages['mobile-frontend-home-button']		  = wfMsg( 'mobile-frontend-home-button' );
-		//self::$messages['mobile-frontend-random-button']	  = wfMsg( 'mobile-frontend-random-button' );
-		//self::$messages['mobile-frontend-are-you-sure']		  = wfMsg( 'mobile-frontend-are-you-sure' );
-		//self::$messages['mobile-frontend-explain-disable']	  = wfMsg( 'mobile-frontend-explain-disable' );
-		//self::$messages['mobile-frontend-disable-button']	  = wfMsg( 'mobile-frontend-disable-button' );
-		//self::$messages['mobile-frontend-back-button']		  = wfMsg( 'mobile-frontend-back-button' );
-
-		//self::$dir = $wgContLang->getDir();
-		//self::$code = $wgContLang->getCode();
-
-		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
-
-		//self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
-		//self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
-		
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$uAmd5 = md5($userAgent);
 
@@ -234,6 +206,8 @@ class ExtMobileFrontend {
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
 
 		$mAction = $wgRequest->getText( 'mAction' );
+		$action = $wgRequest->getText( 'action' );
+		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 		self::$useFormat = $wgRequest->getText( 'useFormat' );
 		self::$format = $wgRequest->getText( 'format' );
 		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
@@ -325,9 +299,11 @@ class ExtMobileFrontend {
 		if (self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ||
 			!empty( $xDevice ) ) {
-				$this->getMsg();
-				$this->disableCaching();
-				ob_start( array( $this, 'DOMParse' ) );
+				if ( $action !== 'edit' ) {
+					$this->getMsg();
+					$this->disableCaching();
+					ob_start( array( $this, 'DOMParse' ) );
+				}
 		}
 
 		return true;
