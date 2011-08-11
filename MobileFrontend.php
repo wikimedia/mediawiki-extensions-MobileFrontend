@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.16';
+	const VERSION = '0.5.17';
 
 	/**
 	 * @var DOMDocument
@@ -334,7 +334,7 @@ class ExtMobileFrontend {
 	}
 	
 	private function setOptInOutCookie( $value ) {
-		global $wgCookieDomain;
+		global $wgCookieDomain, $wgRequest;
 		$tempWgCookieDomain = $wgCookieDomain;
 		$wgCookieDomain = $this->getBaseDomain();
 		$wgRequest->response()->setcookie( 'optin', $value );
