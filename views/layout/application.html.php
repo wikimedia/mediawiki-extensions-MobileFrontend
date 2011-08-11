@@ -19,7 +19,7 @@ $applicationHtml = <<<EOT
     ${appleTouchIconTag}
     <script type='text/javascript'>
       //<![CDATA[
-        var title = "{$title}";
+        var title = "{$htmlTitle}";
         function shouldCache() {
           return true;
         }
