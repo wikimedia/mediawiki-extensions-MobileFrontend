@@ -692,6 +692,7 @@ $messages['ckb'] = array(
 
 /** Czech (Česky)
  * @author Mormegil
+ * @author Reaperman
  */
 $messages['cs'] = array(
 	'mobile-frontend-desc' => 'Mobilní rozhraní',
@@ -707,21 +708,24 @@ $messages['cs'] = array(
 	'mobile-frontend-hide-button' => 'Skrýt',
 	'mobile-frontend-disable-button' => 'Vypnout',
 	'mobile-frontend-back-button' => 'Zpět',
-	'mobile-frontend-regular-site' => 'Prohlédnout si tuto stránku na klasické Wikipedii',
+	'mobile-frontend-regular-site' => 'Prohlédnout si tuto stránku v klasickém zobrazení',
 	'mobile-frontend-perm-stop-redirect' => 'Natrvalo deaktivovat mobilní verzi',
 	'mobile-frontend-error-page-title' => 'Vyskytl se problém!',
-	'mobile-frontend-error-page-text' => '{{SITENAME}} Mobile se stále aktivně vyvíjí a my tvrdě pracujeme, abychom odstranili všechny chyby. O nastalém problému se už odeslalo hlášení, za chvilku to zkusíme opravit. Zkuste to znovu za chvíli!',
-	'mobile-frontend-are-you-sure' => 'Chcete to udělat ?',
-	'mobile-frontend-explain-disable' => 'Chcete skutečně vypnout mobilní verzi Wikipedie? Pokud vyberete <b>Vypnout<b>, nebudete už při dalších návštěvách Wikipedie přesměrováni na tuto mobilní verzi Wikipedie.',
+	'mobile-frontend-error-page-text' => 'Mobilní {{SITENAME}} se stále aktivně vyvíjí a my tvrdě pracujeme na tom, abychom odstranili všechny chyby. Hlášení o problému již bylo odesláno. Chybu se pokusíme opravit co nejdříve. Zkuste to znovu později!',
+	'mobile-frontend-are-you-sure' => 'Jste si jisti?',
+	'mobile-frontend-explain-disable' => 'Chcete skutečně vypnout mobilní verzi {{grammar:2sg|{{SITENAME}}}}? Pokud vyberete <b>Vypnout<b>, nebudete už při dalších návštěvách {{grammar:2sg|{{SITENAME}}}} přesměrováni na tuto mobilní verzi {{grammar:2sg|{{SITENAME}}}}.',
 	'mobile-frontend-nav-end' => 'Konec',
 	'mobile-frontend-nav-top' => 'Nahoru',
 	'mobile-frontend-nav-edit' => 'Upravit',
 	'mobile-frontend-nav-history' => 'Historie',
 	'mobile-frontend-search-text' => 'Vyhledávat',
 	'mobile-frontend-contact-us' => 'Pokud máte nějaké dotazy či připomínky, neváhejte nás kontaktovat na mobile@wikimedia.org',
-	'mobile-frontend-author-link' => 'Informace o autorství, licenci a další popis získáte zobrazením tohoto souboru na klasické Wikipedii.',
+	'mobile-frontend-author-link' => 'Informace o autorech, licenci a podrobnější popis získáte zobrazením tohoto souboru v klasické verzi {{grammar:2sg|{{SITENAME}}}}.',
 	'mobile-frontend-download-full-version' => 'Plná verze ke stažení',
 	'mobile-frontend-file-namespace' => 'Soubor',
+	'mobile-frontend-wml-continue' => 'Pokračovat …',
+	'mobile-frontend-wml-back' => 'Zpět …',
+	'mobile-frontend-view' => 'Mobilní verze',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -1041,7 +1045,9 @@ $messages['es'] = array(
 	'mobile-frontend-file-namespace' => 'Archivo',
 );
 
-/** Estonian (Eesti) */
+/** Estonian (Eesti)
+ * @author Pikne
+ */
 $messages['et'] = array(
 	'mobile-frontend-search-results' => 'Otsingu tulemused',
 	'mobile-frontend-no-article-found' => 'Artiklit ei leitud',
@@ -1052,15 +1058,16 @@ $messages['et'] = array(
 	'mobile-frontend-hide-button' => 'Peida',
 	'mobile-frontend-disable-button' => 'Keela',
 	'mobile-frontend-back-button' => 'Tagasi',
-	'mobile-frontend-regular-site' => 'Vaata lehekülge harilikus Vikipeedias',
+	'mobile-frontend-regular-site' => 'Vaata lehekülge harilikus {{GRAMMAR:inessive|{{SITENAME}}}}',
 	'mobile-frontend-perm-stop-redirect' => 'Keela mobiiliversioon jäädavalt',
 	'mobile-frontend-error-page-title' => 'Meil on probleem',
 	'mobile-frontend-are-you-sure' => 'Oled Sa kindel ?',
-	'mobile-frontend-explain-disable' => 'Oled kindel, et soovid Vikipeedia mobiiliversiooni keelata? Pärast <b>Keela</b> valimist ei ümber suunata sind enam Vikipeedia mobiilivaatesse, kui külastad Vikipeediat.',
+	'mobile-frontend-explain-disable' => 'Kas oled kindel, et soovid {{GRAMMAR:genitive|{{SITENAME}}}} mobiiliversiooni keelata? Pärast <b>Keela</b> valimist ei ümber suunata sind enam {{GRAMMAR:genitive|{{SITENAME}}}} mobiilivaatesse, kui külastad {{GRAMMAR:partitive|{{SITENAME}}}}.',
 	'mobile-frontend-nav-top' => 'Üles',
 	'mobile-frontend-nav-history' => 'Ajalugu',
 	'mobile-frontend-search-text' => 'Otsi',
 	'mobile-frontend-contact-us' => 'Saatke oma küsimused ja kommentaarid meie e-posti aadressile mobile@wikipedia.org',
+	'mobile-frontend-view' => 'Mobiilivaade',
 );
 
 /** Basque (Euskara) */
@@ -2380,7 +2387,9 @@ $messages['lzz'] = array(
 	'mobile-frontend-contact-us' => "Eger k'itxalape varna k'omment'epe giğunna, Mu iqven! mobile@wikipedia.org coxoni emailis k'ont'akt'i qvit.",
 );
 
-/** Malagasy (Malagasy) */
+/** Malagasy (Malagasy)
+ * @author Jagwar
+ */
 $messages['mg'] = array(
 	'mobile-frontend-search-submit' => 'Tsidiho',
 	'mobile-frontend-search-results' => 'Valim-pikarohana',
@@ -2404,7 +2413,7 @@ $messages['mg'] = array(
 	'mobile-frontend-nav-history' => 'Tantara',
 	'mobile-frontend-search-text' => 'Fikarohana',
 	'mobile-frontend-contact-us' => "Mandefasa imailaka any amin'i mobile@wikipedia.org raha manam-panontaniana na dinika ianao.",
-	'mobile-frontend-author-link' => "Hijery ity rakitra ity eo amin'i {{SITENAME}} mba hahalala momban'ny mpamorona, ny lisansa ary ny visavisa fanampiny.",
+	'mobile-frontend-author-link' => "Haneho ity rakitra iry eo amin'i Wikipedia hijerena ny fampahalalana mahakasika ny mpamorony, ny lisansany ary ny famisavisana fanampiny.",
 	'mobile-frontend-download-full-version' => 'Hanao telechargement ny santiôna manontolo',
 	'mobile-frontend-file-namespace' => 'Rakitra',
 );
@@ -4221,6 +4230,7 @@ $messages['yo'] = array(
  * @author Shizhao
  */
 $messages['zh-hans'] = array(
+	'mobile-frontend-desc' => '移动前端',
 	'mobile-frontend-search-submit' => '进入',
 	'mobile-frontend-search-results' => '搜索结果',
 	'mobile-frontend-no-article-found' => '未找到相关条目',
@@ -4233,19 +4243,19 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-hide-button' => '隐藏',
 	'mobile-frontend-disable-button' => '禁用',
 	'mobile-frontend-back-button' => '后退',
-	'mobile-frontend-regular-site' => '在原版维基百科浏览本页',
+	'mobile-frontend-regular-site' => '在原始{{SITENAME}}上查看此页面',
 	'mobile-frontend-perm-stop-redirect' => '永久禁用移动版网站',
 	'mobile-frontend-error-page-title' => '错误！',
-	'mobile-frontend-error-page-text' => '维基百科移动版尚在开发之中，我们正努力修复其中存在的错误。我们已收到关于本错误的通知，并将在不久后予以修复。请检查修复情况！',
+	'mobile-frontend-error-page-text' => '{{SITENAME}}移动版尚在开发之中，我们正努力修复我们的内部错误。我们已收到关于本错误的通知，并将在不久后予以修复。请稍后再检查修复情况！',
 	'mobile-frontend-are-you-sure' => '你确定吗？',
-	'mobile-frontend-explain-disable' => '你确定要禁用维基百科移动版？如果你选择<b>禁用</b>，那么从现在开始，当你访问维基百科时，你不会被重定向至维基百科移动版视图。',
+	'mobile-frontend-explain-disable' => '你确定要禁用{{SITENAME}}移动版？如果你选择<b>禁用</b>，那么从现在开始，当你访问{{SITENAME}}时，你不会被重定向至{{SITENAME}}移动版视图。',
 	'mobile-frontend-nav-end' => '结束',
 	'mobile-frontend-nav-top' => '返回页顶',
 	'mobile-frontend-nav-edit' => '编辑',
 	'mobile-frontend-nav-history' => '历史',
 	'mobile-frontend-search-text' => '搜索',
 	'mobile-frontend-contact-us' => '如果你有任何问题或建议，请发送电子邮件到mobile@wikipedia.org联系我们',
-	'mobile-frontend-author-link' => '在维基百科主站上查看这一媒体文件的作者、许可协议和其他附加信息。',
+	'mobile-frontend-author-link' => '在原始{{SITENAME}}上查看此媒体文件的作者、许可协议和其他附加信息。',
 	'mobile-frontend-download-full-version' => '下载完整版本',
 	'mobile-frontend-file-namespace' => '文件',
 	'mobile-frontend-wml-continue' => '继续……',
@@ -4255,6 +4265,7 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Bencmq
+ * @author Liangent
  */
 $messages['zh-hant'] = array(
 	'mobile-frontend-search-submit' => '進入',
@@ -4284,7 +4295,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-author-link' => '在維基百科主站上檢視這一媒體檔案的作者、許可協議和其他附加說明。',
 	'mobile-frontend-download-full-version' => '下載完整版本',
 	'mobile-frontend-file-namespace' => '檔案',
-	'mobile-frontend-view' => '移動瀏覽',
+	'mobile-frontend-view' => '行動瀏覽',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬) */
