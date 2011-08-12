@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.19';
+	const VERSION = '0.5.20';
 
 	/**
 	 * @var DOMDocument
@@ -225,7 +225,7 @@ class ExtMobileFrontend {
 		self::$format = $wgRequest->getText( 'format' );
 		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
 		self::$search = $wgRequest->getText( 'search' );
-		self::$callback =  $wgRequest->getText( 'callback' );
+		self::$callback = $wgRequest->getText( 'callback' );
 
 		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
 		$device = new DeviceDetection();
@@ -356,17 +356,17 @@ class ExtMobileFrontend {
 		$this->getMsg();
 		$dir = self::$dir;
 		$code = self::$code;
-		$regularSite		= self::$messages['mobile-frontend-regular-site'];
-		$permStopRedirect	= self::$messages['mobile-frontend-perm-stop-redirect'];
-		$copyright			= self::$messages['mobile-frontend-copyright'];
-		$homeButton			= self::$messages['mobile-frontend-home-button'];
-		$randomButton		= self::$messages['mobile-frontend-random-button'];
-		$yesButton			= self::$messages['mobile-frontend-opt-in-yes-button'];
-		$noButton			= self::$messages['mobile-frontend-opt-in-no-button'];
-		$htmlTitle			= self::$messages['mobile-frontend-opt-in-title'];
-		$explainOptIn		= self::$messages['mobile-frontend-opt-in-explain'];
-		$disableImages		= self::$messages['mobile-frontend-disable-images'];
-		$optInMessage		= self::$messages['mobile-frontend-opt-in-message'];
+		$regularSite = self::$messages['mobile-frontend-regular-site'];
+		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
+		$copyright = self::$messages['mobile-frontend-copyright'];
+		$homeButton = self::$messages['mobile-frontend-home-button'];
+		$randomButton = self::$messages['mobile-frontend-random-button'];
+		$yesButton = self::$messages['mobile-frontend-opt-in-yes-button'];
+		$noButton = self::$messages['mobile-frontend-opt-in-no-button'];
+		$htmlTitle = self::$messages['mobile-frontend-opt-in-title'];
+		$explainOptIn = self::$messages['mobile-frontend-opt-in-explain'];
+		$disableImages = self::$messages['mobile-frontend-disable-images'];
+		$optInMessage = self::$messages['mobile-frontend-opt-in-message'];
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 		require( 'views/layout/_search_webkit.html.php' );
 		require( 'views/layout/_footmenu_default.html.php' );
@@ -383,17 +383,17 @@ class ExtMobileFrontend {
 		$this->getMsg();
 		$dir = self::$dir;
 		$code = self::$code;
-		$regularSite		= self::$messages['mobile-frontend-regular-site'];
-		$permStopRedirect	= self::$messages['mobile-frontend-perm-stop-redirect'];
-		$copyright			= self::$messages['mobile-frontend-copyright'];
-		$homeButton			= self::$messages['mobile-frontend-home-button'];
-		$randomButton		= self::$messages['mobile-frontend-random-button'];
-		$yesButton			= self::$messages['mobile-frontend-opt-out-yes-button'];
-		$noButton			= self::$messages['mobile-frontend-opt-out-no-button'];
-		$htmlTitle			= self::$messages['mobile-frontend-opt-out-title'];
-		$explainOptOut		= self::$messages['mobile-frontend-opt-out-explain'];
-		$optOutMessage		= self::$messages['mobile-frontend-opt-out-message'];
-		$disableImages		= self::$messages['mobile-frontend-disable-images'];
+		$regularSite = self::$messages['mobile-frontend-regular-site'];
+		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
+		$copyright = self::$messages['mobile-frontend-copyright'];
+		$homeButton = self::$messages['mobile-frontend-home-button'];
+		$randomButton = self::$messages['mobile-frontend-random-button'];
+		$yesButton = self::$messages['mobile-frontend-opt-out-yes-button'];
+		$noButton = self::$messages['mobile-frontend-opt-out-no-button'];
+		$htmlTitle = self::$messages['mobile-frontend-opt-out-title'];
+		$explainOptOut = self::$messages['mobile-frontend-opt-out-explain'];
+		$optOutMessage = self::$messages['mobile-frontend-opt-out-message'];
+		$disableImages = self::$messages['mobile-frontend-disable-images'];
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 		require( 'views/layout/_search_webkit.html.php' );
 		require( 'views/layout/_footmenu_default.html.php' );
@@ -410,16 +410,16 @@ class ExtMobileFrontend {
 			$this->getMsg();
 			$dir = self::$dir;
 			$code = self::$code;
-			$regularSite		= self::$messages['mobile-frontend-regular-site'];
-			$permStopRedirect	= self::$messages['mobile-frontend-perm-stop-redirect'];
-			$copyright			= self::$messages['mobile-frontend-copyright'];
-			$homeButton			= self::$messages['mobile-frontend-home-button'];
-			$randomButton		= self::$messages['mobile-frontend-random-button'];
-			$areYouSure			= self::$messages['mobile-frontend-are-you-sure'];
-			$explainDisable		= self::$messages['mobile-frontend-explain-disable'];
-			$disableButton		= self::$messages['mobile-frontend-disable-button'];
-			$backButton			= self::$messages['mobile-frontend-back-button'];
-			$disableImages		= self::$messages['mobile-frontend-disable-images'];
+			$regularSite = self::$messages['mobile-frontend-regular-site'];
+			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
+			$copyright = self::$messages['mobile-frontend-copyright'];
+			$homeButton = self::$messages['mobile-frontend-home-button'];
+			$randomButton = self::$messages['mobile-frontend-random-button'];
+			$areYouSure = self::$messages['mobile-frontend-are-you-sure'];
+			$explainDisable = self::$messages['mobile-frontend-explain-disable'];
+			$disableButton = self::$messages['mobile-frontend-disable-button'];
+			$backButton = self::$messages['mobile-frontend-back-button'];
+			$disableImages = self::$messages['mobile-frontend-disable-images'];
 			$htmlTitle = $areYouSure;
 			$title = $areYouSure;
 			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
