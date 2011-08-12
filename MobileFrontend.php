@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.21';
+	const VERSION = '0.5.22';
 
 	/**
 	 * @var DOMDocument
@@ -131,29 +131,31 @@ class ExtMobileFrontend {
 		$copyright = $skin->getCopyright();
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
-		self::$messages['mobile-frontend-show']					= wfMsg( 'mobile-frontend-show-button' );
-		self::$messages['mobile-frontend-hide']					= wfMsg( 'mobile-frontend-hide-button' );
-		self::$messages['mobile-frontend-back-to-top']			= wfMsg( 'mobile-frontend-back-to-top-of-section' );
-		self::$messages['mobile-frontend-regular-site']			= wfMsg( 'mobile-frontend-regular-site' );
-		self::$messages['mobile-frontend-perm-stop-redirect']	= wfMsg( 'mobile-frontend-perm-stop-redirect' );
-		self::$messages['mobile-frontend-copyright']			= $copyright;
-		self::$messages['mobile-frontend-home-button']			= wfMsg( 'mobile-frontend-home-button' );
-		self::$messages['mobile-frontend-random-button']		= wfMsg( 'mobile-frontend-random-button' );
-		self::$messages['mobile-frontend-are-you-sure']			= wfMsg( 'mobile-frontend-are-you-sure' );
-		self::$messages['mobile-frontend-explain-disable']		= wfMsg( 'mobile-frontend-explain-disable' );
-		self::$messages['mobile-frontend-disable-button']		= wfMsg( 'mobile-frontend-disable-button' );
-		self::$messages['mobile-frontend-back-button']			= wfMsg( 'mobile-frontend-back-button' );
-		self::$messages['mobile-frontend-opt-in-message']		= wfMsg( 'mobile-frontend-opt-in-message' );
-		self::$messages['mobile-frontend-opt-in-yes-button']	= wfMsg( 'mobile-frontend-opt-in-yes-button' );
-		self::$messages['mobile-frontend-opt-in-no-button']		= wfMsg( 'mobile-frontend-opt-in-no-button' );
-		self::$messages['mobile-frontend-opt-in-title']			= wfMsg( 'mobile-frontend-opt-in-title' );
-		self::$messages['mobile-frontend-opt-out-message']		= wfMsg( 'mobile-frontend-opt-out-message' );
-		self::$messages['mobile-frontend-opt-out-yes-button']	= wfMsg( 'mobile-frontend-opt-out-yes-button' );
-		self::$messages['mobile-frontend-opt-out-no-button']	= wfMsg( 'mobile-frontend-opt-out-no-button' );
-		self::$messages['mobile-frontend-opt-out-title']		= wfMsg( 'mobile-frontend-opt-out-title' );
-		self::$messages['mobile-frontend-opt-in-explain']		= wfMsg( 'mobile-frontend-opt-in-explain' );
-		self::$messages['mobile-frontend-opt-out-explain']		= wfMsg( 'mobile-frontend-opt-out-explain' );
-		self::$messages['mobile-frontend-disable-images']		= wfMsg( 'mobile-frontend-disable-images' );
+		self::$messages['mobile-frontend-show'] = wfMsg( 'mobile-frontend-show-button' );
+		self::$messages['mobile-frontend-hide'] = wfMsg( 'mobile-frontend-hide-button' );
+		self::$messages['mobile-frontend-back-to-top'] = wfMsg( 'mobile-frontend-back-to-top-of-section' );
+		self::$messages['mobile-frontend-regular-site'] = wfMsg( 'mobile-frontend-regular-site' );
+		self::$messages['mobile-frontend-perm-stop-redirect'] = wfMsg( 'mobile-frontend-perm-stop-redirect' );
+		self::$messages['mobile-frontend-copyright'] = $copyright;
+		self::$messages['mobile-frontend-home-button'] = wfMsg( 'mobile-frontend-home-button' );
+		self::$messages['mobile-frontend-random-button'] = wfMsg( 'mobile-frontend-random-button' );
+		self::$messages['mobile-frontend-are-you-sure'] = wfMsg( 'mobile-frontend-are-you-sure' );
+		self::$messages['mobile-frontend-explain-disable'] = wfMsg( 'mobile-frontend-explain-disable' );
+		self::$messages['mobile-frontend-disable-button'] = wfMsg( 'mobile-frontend-disable-button' );
+		self::$messages['mobile-frontend-back-button'] = wfMsg( 'mobile-frontend-back-button' );
+		self::$messages['mobile-frontend-opt-in-message'] = wfMsg( 'mobile-frontend-opt-in-message' );
+		self::$messages['mobile-frontend-opt-in-yes-button'] = wfMsg( 'mobile-frontend-opt-in-yes-button' );
+		self::$messages['mobile-frontend-opt-in-no-button'] = wfMsg( 'mobile-frontend-opt-in-no-button' );
+		self::$messages['mobile-frontend-opt-in-title'] = wfMsg( 'mobile-frontend-opt-in-title' );
+		self::$messages['mobile-frontend-opt-out-message'] = wfMsg( 'mobile-frontend-opt-out-message' );
+		self::$messages['mobile-frontend-opt-out-yes-button'] = wfMsg( 'mobile-frontend-opt-out-yes-button' );
+		self::$messages['mobile-frontend-opt-out-no-button'] = wfMsg( 'mobile-frontend-opt-out-no-button' );
+		self::$messages['mobile-frontend-opt-out-title'] = wfMsg( 'mobile-frontend-opt-out-title' );
+		self::$messages['mobile-frontend-opt-in-explain'] = wfMsg( 'mobile-frontend-opt-in-explain' );
+		self::$messages['mobile-frontend-opt-out-explain'] = wfMsg( 'mobile-frontend-opt-out-explain' );
+		self::$messages['mobile-frontend-disable-images'] = wfMsg( 'mobile-frontend-disable-images' );
+		self::$messages['mobile-frontend-wml-continue'] = wfMsg( 'mobile-frontend-wml-continue' );
+		self::$messages['mobile-frontend-wml-back'] = wfMsg( 'mobile-frontend-wml-back' );
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
@@ -265,6 +267,7 @@ class ExtMobileFrontend {
 		
 		if ( $mAction == 'opt_in_cookie' ) {
 			$this->setOptInOutCookie( '1' );
+			$this->disableCaching();
 			$location = Title::newMainPage()->getFullURL();
 			header( 'Location: ' . $location );
 		}
@@ -438,9 +441,9 @@ class ExtMobileFrontend {
 	private function headingTransformCallbackWML( $matches ) {
 		static $headings = 0;
 		++$headings;
-
-		$base = $this->WMLSectionSeperator .
-			"<h2 class='section_heading' id='section_{$headings}'>{$matches[2]}</h2>";
+		
+		$base = $this->WMLSectionSeperator . 
+				"<h2 class='section_heading' id='section_{$headings}'>{$matches[2]}</h2>";
 
 		self::$headings = $headings;
 
@@ -526,12 +529,12 @@ class ExtMobileFrontend {
 		$basePage = htmlspecialchars( $_SERVER['PHP_SELF'] );
 
 		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href=\"{$basePage}?seg={$idx}{$useFormatParam}\">" . wfMsg( 'mobile-frontend-wml-continue' ) . "</a></p>";
+			$card .= "<p><a href=\"{$basePage}?seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
 		}
 
 		if ( $idx > 1 ) {
 			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href=\"{$basePage}?seg={$back_idx}{$useFormatParam}\">" . wfMsg( 'mobile-frontend-wml-back' ) . "</a></p>";
+			$card .= "<p><a href=\"{$basePage}?seg={$back_idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-back'] . "</a></p>";
 		}
 
 		$card .= '</card>';
