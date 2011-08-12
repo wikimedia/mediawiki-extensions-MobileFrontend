@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.20';
+	const VERSION = '0.5.21';
 
 	/**
 	 * @var DOMDocument
@@ -265,6 +265,8 @@ class ExtMobileFrontend {
 		
 		if ( $mAction == 'opt_in_cookie' ) {
 			$this->setOptInOutCookie( '1' );
+			$location = Title::newMainPage()->getFullURL();
+			header( 'Location: ' . $location );
 		}
 		
 		if ( $mAction == 'opt_out_cookie' ) {
