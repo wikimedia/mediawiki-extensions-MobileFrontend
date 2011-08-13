@@ -848,6 +848,16 @@ $messages['de'] = array(
 	'mobile-frontend-wml-continue' => 'Weiter ...',
 	'mobile-frontend-wml-back' => 'Zurück ...',
 	'mobile-frontend-view' => 'Mobile Ansicht',
+	'mobile-frontend-opt-in-message' => 'An den Tests der neuen mobilen Ansicht teilnehmen?',
+	'mobile-frontend-opt-in-yes-button' => 'Ja',
+	'mobile-frontend-opt-in-no-button' => 'Nein',
+	'mobile-frontend-opt-in-title' => 'Teilnahme an Tests',
+	'mobile-frontend-opt-in-explain' => 'Dies ermöglicht die Teilnahme an Tests',
+	'mobile-frontend-opt-out-message' => 'Nicht mehr an den Tests der neuen mobilen Ansicht teilnehmen?',
+	'mobile-frontend-opt-out-yes-button' => 'Ja',
+	'mobile-frontend-opt-out-no-button' => 'Nein',
+	'mobile-frontend-opt-out-title' => 'Teilnahme an Tests beenden',
+	'mobile-frontend-opt-out-explain' => 'Dies ermöglicht die Teilnahme an Tests zu beenden',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -1015,8 +1025,10 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Crazymadlover
+ * @author Fitoschido
  */
 $messages['es'] = array(
+	'mobile-frontend-desc' => 'Interfaz móvil',
 	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-search-results' => 'Resultados de la búsqueda',
 	'mobile-frontend-no-article-found' => 'No hay coincidencias',
@@ -1044,6 +1056,17 @@ $messages['es'] = array(
 	'mobile-frontend-author-link' => 'Ver este archivo de medios en la versión regular de {{SITENAME}} para ver la información sobre la autoría, licencia y descripciones adicionales.',
 	'mobile-frontend-download-full-version' => 'Descargar la versión completa',
 	'mobile-frontend-file-namespace' => 'Archivo',
+	'mobile-frontend-wml-continue' => 'Continuar...',
+	'mobile-frontend-wml-back' => 'Atrás...',
+	'mobile-frontend-view' => 'Versión para móviles',
+	'mobile-frontend-opt-in-message' => '¿Quieres unirte a nuestras pruebas de la nueva interfaz móvil?',
+	'mobile-frontend-opt-in-yes-button' => 'sí',
+	'mobile-frontend-opt-in-no-button' => 'no',
+	'mobile-frontend-opt-in-explain' => 'Esto te permite ingresar a las pruebas',
+	'mobile-frontend-opt-out-message' => '¿Quieres dejar las pruebas de la nueva interfaz móvil?',
+	'mobile-frontend-opt-out-yes-button' => 'sí',
+	'mobile-frontend-opt-out-no-button' => 'no',
+	'mobile-frontend-opt-out-explain' => 'Esto te permite dejar las pruebas',
 );
 
 /** Estonian (Eesti)
@@ -1711,6 +1734,16 @@ $messages['ia'] = array(
 	'mobile-frontend-wml-continue' => 'Continuar ...',
 	'mobile-frontend-wml-back' => 'Retornar…',
 	'mobile-frontend-view' => 'Version mobile',
+	'mobile-frontend-opt-in-message' => 'Participar a nostre test voluntari del nove interfacie mobile?',
+	'mobile-frontend-opt-in-yes-button' => 'si',
+	'mobile-frontend-opt-in-no-button' => 'no',
+	'mobile-frontend-opt-in-title' => 'Participation a tests',
+	'mobile-frontend-opt-in-explain' => 'Isto permitte entrar in le systema de test',
+	'mobile-frontend-opt-out-message' => 'Cessar le participation a nostre test voluntari del nove interfacie mobile?',
+	'mobile-frontend-opt-out-yes-button' => 'si',
+	'mobile-frontend-opt-out-no-button' => 'no',
+	'mobile-frontend-opt-out-title' => 'Cessar participation a tests',
+	'mobile-frontend-opt-out-explain' => 'Isto permitte quitar le systema de test',
 );
 
 /** Indonesian (Bahasa Indonesia) */
@@ -2229,6 +2262,14 @@ $messages['lb'] = array(
 	'mobile-frontend-wml-continue' => 'Weider ...',
 	'mobile-frontend-wml-back' => 'Zréck ...',
 	'mobile-frontend-view' => 'Mobil Vue',
+	'mobile-frontend-opt-in-yes-button' => 'jo',
+	'mobile-frontend-opt-in-no-button' => 'neen',
+	'mobile-frontend-opt-in-title' => 'Beim Teste matmaaachen',
+	'mobile-frontend-opt-in-explain' => 'Dëst erlaabt Iech fir beim Teste matzemmaachen.',
+	'mobile-frontend-opt-out-yes-button' => 'jo',
+	'mobile-frontend-opt-out-no-button' => 'neen',
+	'mobile-frontend-opt-out-title' => 'Net méi beim Teste matmaachen.',
+	'mobile-frontend-opt-out-explain' => 'Dëst erlaabt Iech fir net méi beim Teste matzemmaachen.',
 );
 
 /** Lezghian (Лезги) */
@@ -2460,6 +2501,16 @@ $messages['mk'] = array(
 	'mobile-frontend-wml-continue' => 'Продолжи ...',
 	'mobile-frontend-wml-back' => 'Назад ...',
 	'mobile-frontend-view' => 'Мобилен изглед',
+	'mobile-frontend-opt-in-message' => 'Сакате да се приклучите во доброволното испробување на новиот посредник за мобилни уреди?',
+	'mobile-frontend-opt-in-yes-button' => 'да',
+	'mobile-frontend-opt-in-no-button' => 'не',
+	'mobile-frontend-opt-in-title' => 'Пријавете се за испробување',
+	'mobile-frontend-opt-in-explain' => 'Со ова влегувате во испробувањето',
+	'mobile-frontend-opt-out-message' => 'Сакате да го напуштите доброволното испробување на новиот посредник за мобилни уреди?',
+	'mobile-frontend-opt-out-yes-button' => 'да',
+	'mobile-frontend-opt-out-no-button' => 'не',
+	'mobile-frontend-opt-out-title' => 'Откажете го вашето учество во испробувањето',
+	'mobile-frontend-opt-out-explain' => 'Со ова излегувате од испробувањето',
 );
 
 /** Malayalam (മലയാളം)
@@ -2611,6 +2662,11 @@ $messages['ms'] = array(
 	'mobile-frontend-wml-continue' => 'Teruskan ...',
 	'mobile-frontend-wml-back' => 'Kembali ...',
 	'mobile-frontend-view' => 'Paparan Mudah Alih',
+	'mobile-frontend-opt-in-message' => 'Adakah anda ingin menyertai ujian Mobile Frontend baru?',
+	'mobile-frontend-opt-in-yes-button' => 'ya',
+	'mobile-frontend-opt-in-no-button' => 'tidak',
+	'mobile-frontend-opt-out-yes-button' => 'ya',
+	'mobile-frontend-opt-out-no-button' => 'tidak',
 );
 
 /** Maltese (Malti) */
@@ -2778,6 +2834,10 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-wml-continue' => 'Doorgaan ...',
 	'mobile-frontend-wml-back' => 'Terug ...',
 	'mobile-frontend-view' => 'Mobiele weergave',
+	'mobile-frontend-opt-in-yes-button' => 'ja',
+	'mobile-frontend-opt-in-no-button' => 'nee',
+	'mobile-frontend-opt-out-yes-button' => 'ja',
+	'mobile-frontend-opt-out-no-button' => 'nee',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬) */
@@ -3021,7 +3081,13 @@ $messages['pl'] = array(
 	'mobile-frontend-file-namespace' => 'Plik',
 	'mobile-frontend-wml-continue' => 'Dalej ...',
 	'mobile-frontend-wml-back' => 'Wstecz ...',
-	'mobile-frontend-view' => 'Przeglądaj komórką',
+	'mobile-frontend-view' => 'Przeglądaj w komórce',
+	'mobile-frontend-opt-in-yes-button' => 'tak',
+	'mobile-frontend-opt-in-no-button' => 'nie',
+	'mobile-frontend-opt-in-explain' => 'Umożliwia rozpoczęcie testowania',
+	'mobile-frontend-opt-out-yes-button' => 'tak',
+	'mobile-frontend-opt-out-no-button' => 'nie',
+	'mobile-frontend-opt-out-explain' => 'Umożliwia zakończenie testowania',
 );
 
 /** Piedmontese (Piemontèis) */
@@ -3480,6 +3546,16 @@ $messages['sl'] = array(
 	'mobile-frontend-wml-continue' => 'Nadaljuj ...',
 	'mobile-frontend-wml-back' => 'Nazaj ...',
 	'mobile-frontend-view' => 'Mobilni pogled',
+	'mobile-frontend-opt-in-message' => 'Pridruži se preizkušanju novega mobilnega čelnega vmesnika?',
+	'mobile-frontend-opt-in-yes-button' => 'da',
+	'mobile-frontend-opt-in-no-button' => 'ne',
+	'mobile-frontend-opt-in-title' => 'Priključite se preizkušanju',
+	'mobile-frontend-opt-in-explain' => 'To vam omogoča priključitev k preizkusu',
+	'mobile-frontend-opt-out-message' => 'Izstopi iz preizkušanja novega mobilnega čelnega vmesnika?',
+	'mobile-frontend-opt-out-yes-button' => 'da',
+	'mobile-frontend-opt-out-no-button' => 'ne',
+	'mobile-frontend-opt-out-title' => 'Izstopite iz preizkušanja',
+	'mobile-frontend-opt-out-explain' => 'To vam omogoča izstop iz preizkusa',
 );
 
 /** Albanian (Shqip) */
