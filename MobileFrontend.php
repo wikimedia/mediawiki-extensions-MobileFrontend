@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.24';
+	const VERSION = '0.5.25';
 
 	/**
 	 * @var DOMDocument
@@ -582,7 +582,9 @@ class ExtMobileFrontend {
 		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
 		libxml_use_internal_errors( true );
 		$this->mainPage = new DOMDocument();
-		$this->mainPage->loadHTML( '<?xml encoding="UTF-8">' . $html );
+		//It seems that loadhtml() does not "attach" the html dtd that defines id as an id-attribute to the DOM.
+		$this->mainPage->loadHTML( '<?xml encoding="UTF-8"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+									<html><head><title></title></head><body>' . $html . '</body></html>' );
 		libxml_use_internal_errors( false );
 		$this->mainPage->preserveWhiteSpace = false;
 		$this->mainPage->strictErrorChecking = false;
