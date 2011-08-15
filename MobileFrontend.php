@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.25';
+	const VERSION = '0.5.26';
 
 	/**
 	 * @var DOMDocument
@@ -341,6 +341,7 @@ class ExtMobileFrontend {
 					 $mAction !== 'view_normal_site' ) {
 					$this->getMsg();
 					$this->disableCaching();
+					$this->sendXDeviceVaryHeader();
 					ob_start( array( $this, 'DOMParse' ) );
 				}
 		}
@@ -374,6 +375,15 @@ class ExtMobileFrontend {
 			header( 'Cache-Control: no-cache, must-revalidate' );
 			header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 			header( 'Pragma: no-cache' );
+		}
+	}
+	
+	private function sendXDeviceVaryHeader() {
+		global $wgOut;
+		
+		if ( !empty( $_SERVER['HTTP_X_DEVICE'] ) ) {
+			header( 'X-Device: ' . $_SERVER['HTTP_X_DEVICE'] );
+			$wgOut->addVaryHeader( 'X-Device' );
 		}
 	}
 
