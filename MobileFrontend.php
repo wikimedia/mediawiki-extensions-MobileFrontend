@@ -49,12 +49,13 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.23';
+	const VERSION = '0.5.24';
 
 	/**
 	 * @var DOMDocument
 	 */
 	private $doc;
+	private $mainPage;
 
 	public static $messages = array();
 
@@ -79,6 +80,7 @@ class ExtMobileFrontend {
 	public static $useFormat;
 	public static $disableImages;
 	public static $enableImages;
+	public static $isMainPage = false;
 
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -158,6 +160,8 @@ class ExtMobileFrontend {
 		self::$messages['mobile-frontend-wml-continue'] = wfMsg( 'mobile-frontend-wml-continue' );
 		self::$messages['mobile-frontend-wml-back'] = wfMsg( 'mobile-frontend-wml-back' );
 		self::$messages['mobile-frontend-enable-images'] = wfMsg( 'mobile-frontend-enable-images' );
+		self::$messages['mobile-frontend-featured-article'] = wfMsg( 'mobile-frontend-featured-article' );
+		self::$messages['mobile-frontend-news-items'] = wfMsg( 'mobile-frontend-news-items' );
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
@@ -176,6 +180,11 @@ class ExtMobileFrontend {
 
 		// The title
 		self::$title = $out->getTitle();
+		
+		if ( $out->getTitle()->isMainPage() ) {
+			self::$isMainPage = true;
+		}
+		
 		self::$htmlTitle = $out->getHTMLTitle();
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
@@ -328,7 +337,8 @@ class ExtMobileFrontend {
 		if (self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ||
 			!empty( $xDevice ) ) {
-				if ( $action !== 'edit' ) {
+				if ( $action !== 'edit' && 
+					 $mAction !== 'view_normal_site' ) {
 					$this->getMsg();
 					$this->disableCaching();
 					ob_start( array( $this, 'DOMParse' ) );
@@ -567,6 +577,39 @@ class ExtMobileFrontend {
 
 		return $itemToRemoveRecords;
 	}
+	
+	public function DOMParseMainPage( $html ) {
+		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
+		libxml_use_internal_errors( true );
+		$this->mainPage = new DOMDocument();
+		$this->mainPage->loadHTML( '<?xml encoding="UTF-8">' . $html );
+		libxml_use_internal_errors( false );
+		$this->mainPage->preserveWhiteSpace = false;
+		$this->mainPage->strictErrorChecking = false;
+		$this->mainPage->encoding = 'UTF-8';
+		
+		$featuredArticle = $this->mainPage->getElementById( 'mp-tfa' );
+		$newsItems = $this->mainPage->getElementById( 'mp-itn' );
+
+		$content = $this->mainPage->createElement( 'div' );
+		$content->setAttribute( 'id', 'main_box' );
+		
+		if ( $featuredArticle ) {
+			$h2FeaturedArticle = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-featured-article'] );
+			$content->appendChild( $h2FeaturedArticle );
+			$content->appendChild( $featuredArticle );
+		}
+		
+		if ( $newsItems ) {
+			$h2NewsItems = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-news-items'] );
+			$content->appendChild( $h2NewsItems );
+			$content->appendChild( $newsItems );
+		}
+		
+		$contentHtml = $this->mainPage->saveXML( $content, LIBXML_NOEMPTYTAG );
+		
+		return $contentHtml;
+	}
 
 	public function DOMParse( $html ) {
 		global $wgSitename;
@@ -664,6 +707,10 @@ class ExtMobileFrontend {
 		$content = $this->doc->getElementById( 'content' );
 
 		$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
+		
+		if ( self::$isMainPage ) {
+			$contentHtml = $this->DOMParseMainPage( $contentHtml );
+		}
 
 		$dir = self::$dir;
 		$code = self::$code;
