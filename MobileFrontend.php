@@ -214,26 +214,26 @@ class ExtMobileFrontend {
 		$action = $wgRequest->getText( 'action' );
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 		self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
-		
+
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
 		}
-		
+
 		if ( self::$disableImages == 0 ) {
 			$disableImages = $wgRequest->getCookie( 'disableImages' );
 			if ( $disableImages ) {
 				self::$disableImages = $disableImages;
 			}
 		}
-		
+
 		if ( self::$enableImages == 1 ) {
 			$disableImages = $wgRequest->getCookie( 'disableImages' );
 			if ( $disableImages ) {
 				$wgRequest->response()->setcookie( 'disableImages', '' );
 			}
 		}
-		
-		
+
+
 		self::$useFormat = $wgRequest->getText( 'useFormat' );
 		self::$format = $wgRequest->getText( 'format' );
 		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
@@ -261,28 +261,28 @@ class ExtMobileFrontend {
 				exit();
 			}
 		}
-		
+
 		if ( $mAction == 'opt_in_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
 				echo $this->renderOptInMobileSiteXHTML();
 				exit();
 			}
 		}
-		
+
 		if ( $mAction == 'opt_out_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
 				echo $this->renderOptOutMobileSiteXHTML();
 				exit();
 			}
 		}
-		
+
 		if ( $mAction == 'opt_in_cookie' ) {
 			$this->setOptInOutCookie( '1' );
 			$this->disableCaching();
 			$location = Title::newMainPage()->getFullURL();
 			header( 'Location: ' . $location );
 		}
-		
+
 		if ( $mAction == 'opt_out_cookie' ) {
 			$this->setOptInOutCookie( '' );
 		}
@@ -322,7 +322,7 @@ class ExtMobileFrontend {
 		// html_preferred_dtd
 
 		// Determine
-		
+
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 
 		if (self::$useFormat === 'mobile' ||
@@ -337,7 +337,7 @@ class ExtMobileFrontend {
 
 		return true;
 	}
-	
+
 	private function setOptInOutCookie( $value ) {
 		global $wgCookieDomain, $wgRequest;
 		$tempWgCookieDomain = $wgCookieDomain;
@@ -345,13 +345,13 @@ class ExtMobileFrontend {
 		$wgRequest->response()->setcookie( 'optin', $value );
 		$wgCookieDomain = $tempWgCookieDomain;
 	}
-	
+
 	private function getBaseDomain() {
 		//Validates value as IP address
 		if( !filter_var( $_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP ) ) {
 			$domainParts = explode( '.', $_SERVER['HTTP_HOST'] );
 			$domainParts = array_reverse( $domainParts );
-			//Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included. 
+			//Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included.
 			return '.' . $domainParts[1] . '.' . $domainParts[0];
 		} else {
 			return $_SERVER['HTTP_HOST'];
@@ -366,59 +366,59 @@ class ExtMobileFrontend {
 			header( 'Pragma: no-cache' );
 		}
 	}
-	
+
 	private function renderOptInMobileSiteXHTML() {
 		if ( $this->contentFormat == 'XHTML' ) {
-		$this->getMsg();
-		$dir = self::$dir;
-		$code = self::$code;
-		$regularSite = self::$messages['mobile-frontend-regular-site'];
-		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
-		$copyright = self::$messages['mobile-frontend-copyright'];
-		$homeButton = self::$messages['mobile-frontend-home-button'];
-		$randomButton = self::$messages['mobile-frontend-random-button'];
-		$yesButton = self::$messages['mobile-frontend-opt-in-yes-button'];
-		$noButton = self::$messages['mobile-frontend-opt-in-no-button'];
-		$htmlTitle = self::$messages['mobile-frontend-opt-in-title'];
-		$explainOptIn = self::$messages['mobile-frontend-opt-in-explain'];
-		$disableImages = self::$messages['mobile-frontend-disable-images'];
-		$enableImages = self::$messages['mobile-frontend-enable-images'];
-		$optInMessage = self::$messages['mobile-frontend-opt-in-message'];
-		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
-		require( 'views/layout/_search_webkit.html.php' );
-		require( 'views/layout/_footmenu_default.html.php' );
-		require( 'views/information/optin.html.php' );
-		$contentHtml = $optInHtml;
-		require( 'views/layout/application.html.php' );
-		return $applicationHtml;
+			$this->getMsg();
+			$dir = self::$dir;
+			$code = self::$code;
+			$regularSite = self::$messages['mobile-frontend-regular-site'];
+			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
+			$copyright = self::$messages['mobile-frontend-copyright'];
+			$homeButton = self::$messages['mobile-frontend-home-button'];
+			$randomButton = self::$messages['mobile-frontend-random-button'];
+			$yesButton = self::$messages['mobile-frontend-opt-in-yes-button'];
+			$noButton = self::$messages['mobile-frontend-opt-in-no-button'];
+			$htmlTitle = self::$messages['mobile-frontend-opt-in-title'];
+			$explainOptIn = self::$messages['mobile-frontend-opt-in-explain'];
+			$disableImages = self::$messages['mobile-frontend-disable-images'];
+			$enableImages = self::$messages['mobile-frontend-enable-images'];
+			$optInMessage = self::$messages['mobile-frontend-opt-in-message'];
+			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
+			require( 'views/layout/_search_webkit.html.php' );
+			require( 'views/layout/_footmenu_default.html.php' );
+			require( 'views/information/optin.html.php' );
+			$contentHtml = $optInHtml;
+			require( 'views/layout/application.html.php' );
+			return $applicationHtml;
 		}
 		return '';
 	}
-	
+
 	private function renderOptOutMobileSiteXHTML() {
 		if ( $this->contentFormat == 'XHTML' ) {
-		$this->getMsg();
-		$dir = self::$dir;
-		$code = self::$code;
-		$regularSite = self::$messages['mobile-frontend-regular-site'];
-		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
-		$copyright = self::$messages['mobile-frontend-copyright'];
-		$homeButton = self::$messages['mobile-frontend-home-button'];
-		$randomButton = self::$messages['mobile-frontend-random-button'];
-		$yesButton = self::$messages['mobile-frontend-opt-out-yes-button'];
-		$noButton = self::$messages['mobile-frontend-opt-out-no-button'];
-		$htmlTitle = self::$messages['mobile-frontend-opt-out-title'];
-		$explainOptOut = self::$messages['mobile-frontend-opt-out-explain'];
-		$optOutMessage = self::$messages['mobile-frontend-opt-out-message'];
-		$disableImages = self::$messages['mobile-frontend-disable-images'];
-		$enableImages = self::$messages['mobile-frontend-enable-images'];
-		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
-		require( 'views/layout/_search_webkit.html.php' );
-		require( 'views/layout/_footmenu_default.html.php' );
-		require( 'views/information/optout.html.php' );
-		$contentHtml = $optOutHtml;
-		require( 'views/layout/application.html.php' );
-		return $applicationHtml;
+			$this->getMsg();
+			$dir = self::$dir;
+			$code = self::$code;
+			$regularSite = self::$messages['mobile-frontend-regular-site'];
+			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
+			$copyright = self::$messages['mobile-frontend-copyright'];
+			$homeButton = self::$messages['mobile-frontend-home-button'];
+			$randomButton = self::$messages['mobile-frontend-random-button'];
+			$yesButton = self::$messages['mobile-frontend-opt-out-yes-button'];
+			$noButton = self::$messages['mobile-frontend-opt-out-no-button'];
+			$htmlTitle = self::$messages['mobile-frontend-opt-out-title'];
+			$explainOptOut = self::$messages['mobile-frontend-opt-out-explain'];
+			$optOutMessage = self::$messages['mobile-frontend-opt-out-message'];
+			$disableImages = self::$messages['mobile-frontend-disable-images'];
+			$enableImages = self::$messages['mobile-frontend-enable-images'];
+			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
+			require( 'views/layout/_search_webkit.html.php' );
+			require( 'views/layout/_footmenu_default.html.php' );
+			require( 'views/information/optout.html.php' );
+			$contentHtml = $optOutHtml;
+			require( 'views/layout/application.html.php' );
+			return $applicationHtml;
 		}
 		return '';
 	}
@@ -455,8 +455,8 @@ class ExtMobileFrontend {
 	private function headingTransformCallbackWML( $matches ) {
 		static $headings = 0;
 		++$headings;
-		
-		$base = $this->WMLSectionSeperator . 
+
+		$base = $this->WMLSectionSeperator .
 				"<h2 class='section_heading' id='section_{$headings}'>{$matches[2]}</h2>";
 
 		self::$headings = $headings;

@@ -16,8 +16,7 @@ class DeviceDetection {
 
 	public function availableFormats() {
 		$formats = array (
-			  'html' =>
-			  array (
+			'html' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -27,9 +26,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'capable' =>
-			  array (
+			),
+			'capable' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -39,9 +37,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'simplehtml' =>
-			  array (
+			),
+			'simplehtml' => array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
 				'footmenu' => 'simple',
@@ -51,9 +48,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'webkit' =>
-			  array (
+			),
+			'webkit' => array (
 				'view_format' => 'html',
 				'search_bar' => 'webkit',
 				'footmenu' => 'default',
@@ -63,9 +59,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'webkit_old' =>
-			  array (
+			),
+			'webkit_old' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -75,9 +70,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'android' =>
-			  array (
+			),
+			'android' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -87,9 +81,8 @@ class DeviceDetection {
 				'disable_zoom' => false,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'iphone' =>
-			  array (
+			),
+			'iphone' => array (
 				'view_format' => 'html',
 				'search_bar' => 'webkit',
 				'footmenu' => 'default',
@@ -99,9 +92,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'iphone2' =>
-			  array (
+			),
+			'iphone2' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -111,9 +103,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'native_iphone' =>
-			  array (
+			),
+			'native_iphone' => array (
 				'view_format' => 'html',
 				'search_bar' => false,
 				'footmenu' => 'default',
@@ -123,9 +114,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => false,
-			  ),
-			  'palm_pre' =>
-			  array (
+			),
+			'palm_pre' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -135,9 +125,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'kindle' =>
-			  array (
+			),
+			'kindle' => array (
 				'view_format' => 'html',
 				'search_bar' => 'kindle',
 				'footmenu' => 'default',
@@ -147,9 +136,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'kindle2' =>
-			  array (
+			),
+			'kindle2' => array (
 				'view_format' => 'html',
 				'search_bar' => 'kindle',
 				'footmenu' => 'default',
@@ -159,9 +147,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'blackberry' =>
-			  array (
+			),
+			'blackberry' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -171,9 +158,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'netfront' =>
-			  array (
+			),
+			'netfront' => array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
 				'footmenu' => 'simple',
@@ -183,9 +169,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'wap2' =>
-			  array (
+			),
+			'wap2' => array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
 				'footmenu' => 'simple',
@@ -195,9 +180,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'psp' =>
-			  array (
+			),
+			'psp' => array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
 				'footmenu' => 'simple',
@@ -207,9 +191,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'ps3' =>
-			  array (
+			),
+			'ps3' => array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
 				'footmenu' => 'simple',
@@ -219,9 +202,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'wii' =>
-			  array (
+			),
+			'wii' => array (
 				'view_format' => 'html',
 				'search_bar' => 'wii',
 				'footmenu' => 'default',
@@ -231,9 +213,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'operamini' =>
-			  array (
+			),
+			'operamini' => array (
 				'view_format' => 'html',
 				'search_bar' => 'simple',
 				'footmenu' => 'simple',
@@ -243,9 +224,8 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'nokia' =>
-			  array (
+			),
+			'nokia' => array (
 				'view_format' => 'html',
 				'search_bar' => 'webkit',
 				'footmenu' => 'default',
@@ -255,15 +235,14 @@ class DeviceDetection {
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
-			  ),
-			  'wml' =>
-			  array (
+			),
+			'wml' => array (
 				'view_format' => 'wml',
 				'search_bar' => 'wml',
 				'supports_javascript' => false,
 				'parser' => 'wml',
-			  ),
-			);
+			),
+		);
 		return $formats;
 	}
 
@@ -362,7 +341,7 @@ class DeviceDetection {
 		} elseif ( preg_match( '/PLAYSTATION 3/', $userAgent ) ) {
 			$formatName = 'ps3';
 		} elseif ( preg_match( '/SAMSUNG/', $userAgent ) ) {
-		    $formatName = 'capable';
+		$formatName = 'capable';
 		} elseif ( preg_match( '/BlackBerry/', $userAgent ) ) {
 			$formatName = 'blackberry';
 		}
