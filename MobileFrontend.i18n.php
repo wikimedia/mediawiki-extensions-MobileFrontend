@@ -55,6 +55,7 @@ $messages['en'] = array (
 	'mobile-frontend-opt-out-title' => 'Opt-Out of Testing',
 	'mobile-frontend-opt-out-explain' => 'This allows you to leave the test',
 	'mobile-frontend-disable-images' => 'Disable images on mobile site',
+	'mobile-frontend-enable-images' => 'Enable images on mobile site',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */

@@ -49,7 +49,7 @@ $wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPage
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.22';
+	const VERSION = '0.5.23';
 
 	/**
 	 * @var DOMDocument
@@ -78,6 +78,7 @@ class ExtMobileFrontend {
 	public static $callback;
 	public static $useFormat;
 	public static $disableImages;
+	public static $enableImages;
 
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -156,6 +157,7 @@ class ExtMobileFrontend {
 		self::$messages['mobile-frontend-disable-images'] = wfMsg( 'mobile-frontend-disable-images' );
 		self::$messages['mobile-frontend-wml-continue'] = wfMsg( 'mobile-frontend-wml-continue' );
 		self::$messages['mobile-frontend-wml-back'] = wfMsg( 'mobile-frontend-wml-back' );
+		self::$messages['mobile-frontend-enable-images'] = wfMsg( 'mobile-frontend-enable-images' );
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
@@ -211,6 +213,7 @@ class ExtMobileFrontend {
 		$mAction = $wgRequest->getText( 'mAction' );
 		$action = $wgRequest->getText( 'action' );
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
+		self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
 		
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
@@ -222,6 +225,14 @@ class ExtMobileFrontend {
 				self::$disableImages = $disableImages;
 			}
 		}
+		
+		if ( self::$enableImages == 1 ) {
+			$disableImages = $wgRequest->getCookie( 'disableImages' );
+			if ( $disableImages ) {
+				$wgRequest->response()->setcookie( 'disableImages', '' );
+			}
+		}
+		
 		
 		self::$useFormat = $wgRequest->getText( 'useFormat' );
 		self::$format = $wgRequest->getText( 'format' );
@@ -371,6 +382,7 @@ class ExtMobileFrontend {
 		$htmlTitle = self::$messages['mobile-frontend-opt-in-title'];
 		$explainOptIn = self::$messages['mobile-frontend-opt-in-explain'];
 		$disableImages = self::$messages['mobile-frontend-disable-images'];
+		$enableImages = self::$messages['mobile-frontend-enable-images'];
 		$optInMessage = self::$messages['mobile-frontend-opt-in-message'];
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 		require( 'views/layout/_search_webkit.html.php' );
@@ -399,6 +411,7 @@ class ExtMobileFrontend {
 		$explainOptOut = self::$messages['mobile-frontend-opt-out-explain'];
 		$optOutMessage = self::$messages['mobile-frontend-opt-out-message'];
 		$disableImages = self::$messages['mobile-frontend-disable-images'];
+		$enableImages = self::$messages['mobile-frontend-enable-images'];
 		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 		require( 'views/layout/_search_webkit.html.php' );
 		require( 'views/layout/_footmenu_default.html.php' );
@@ -425,6 +438,7 @@ class ExtMobileFrontend {
 			$disableButton = self::$messages['mobile-frontend-disable-button'];
 			$backButton = self::$messages['mobile-frontend-back-button'];
 			$disableImages = self::$messages['mobile-frontend-disable-images'];
+			$enableImages = self::$messages['mobile-frontend-enable-images'];
 			$htmlTitle = $areYouSure;
 			$title = $areYouSure;
 			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
@@ -659,6 +673,7 @@ class ExtMobileFrontend {
 		$homeButton = self::$messages['mobile-frontend-home-button'];
 		$randomButton = self::$messages['mobile-frontend-random-button'];
 		$disableImages = self::$messages['mobile-frontend-disable-images'];
+		$enableImages = self::$messages['mobile-frontend-enable-images'];
 
 		$title = htmlspecialchars( self::$title->getText() );
 		$htmlTitle = htmlspecialchars( self::$htmlTitle );
