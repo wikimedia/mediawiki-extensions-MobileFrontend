@@ -181,7 +181,7 @@ class ExtMobileFrontend {
 		// The title
 		self::$title = $out->getTitle();
 		
-		if ( $out->getTitle()->isMainPage() ) {
+		if ( Title::newMainPage()->getArticleId() === self::$title->getArticleId() ) {
 			self::$isMainPage = true;
 		}
 		
