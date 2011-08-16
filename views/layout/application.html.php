@@ -1,11 +1,16 @@
 <?php
 global $wgExtensionAssetsPath, $wgAppleTouchIcon;
 
+$dir = self::$dir;
+$code = self::$code;
+
 if( $wgAppleTouchIcon !== false ) {
 	$appleTouchIconTag = Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) );
 } else {
 	$appleTouchIconTag = "";
 }
+
+$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 
 $applicationHtml = <<<EOT
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

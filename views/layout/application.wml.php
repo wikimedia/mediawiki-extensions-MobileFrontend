@@ -1,6 +1,8 @@
 <?php
 $mainPageUrl = self::$mainPageUrl;
 $randomPageUrl = self::$randomPageUrl;
+$dir = self::$dir;
+$code = self::$code;
 
 $applicationHtml = <<<EOT
 	<?xml version='1.0' encoding='utf-8' ?>

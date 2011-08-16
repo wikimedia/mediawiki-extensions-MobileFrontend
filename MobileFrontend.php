@@ -49,7 +49,7 @@ $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDispl
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.30';
+	const VERSION = '0.5.31';
 
 	/**
 	 * @var DOMDocument
@@ -378,21 +378,11 @@ class ExtMobileFrontend {
 	private function renderOptInMobileSiteXHTML() {
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
-			$dir = self::$dir;
-			$code = self::$code;
-			$regularSite = self::$messages['mobile-frontend-regular-site'];
-			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
-			$copyright = self::$messages['mobile-frontend-copyright'];
-			$homeButton = self::$messages['mobile-frontend-home-button'];
-			$randomButton = self::$messages['mobile-frontend-random-button'];
 			$yesButton = self::$messages['mobile-frontend-opt-in-yes-button'];
 			$noButton = self::$messages['mobile-frontend-opt-in-no-button'];
 			$htmlTitle = self::$messages['mobile-frontend-opt-in-title'];
 			$explainOptIn = self::$messages['mobile-frontend-opt-in-explain'];
-			$disableImages = self::$messages['mobile-frontend-disable-images'];
-			$enableImages = self::$messages['mobile-frontend-enable-images'];
 			$optInMessage = self::$messages['mobile-frontend-opt-in-message'];
-			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/information/optin.html.php' );
@@ -406,21 +396,11 @@ class ExtMobileFrontend {
 	private function renderOptOutMobileSiteXHTML() {
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
-			$dir = self::$dir;
-			$code = self::$code;
-			$regularSite = self::$messages['mobile-frontend-regular-site'];
-			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
-			$copyright = self::$messages['mobile-frontend-copyright'];
-			$homeButton = self::$messages['mobile-frontend-home-button'];
-			$randomButton = self::$messages['mobile-frontend-random-button'];
 			$yesButton = self::$messages['mobile-frontend-opt-out-yes-button'];
 			$noButton = self::$messages['mobile-frontend-opt-out-no-button'];
 			$htmlTitle = self::$messages['mobile-frontend-opt-out-title'];
 			$explainOptOut = self::$messages['mobile-frontend-opt-out-explain'];
 			$optOutMessage = self::$messages['mobile-frontend-opt-out-message'];
-			$disableImages = self::$messages['mobile-frontend-disable-images'];
-			$enableImages = self::$messages['mobile-frontend-enable-images'];
-			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/information/optout.html.php' );
@@ -434,22 +414,12 @@ class ExtMobileFrontend {
 	private function renderDisableMobileSiteXHTML() {
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
-			$dir = self::$dir;
-			$code = self::$code;
-			$regularSite = self::$messages['mobile-frontend-regular-site'];
-			$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
-			$copyright = self::$messages['mobile-frontend-copyright'];
-			$homeButton = self::$messages['mobile-frontend-home-button'];
-			$randomButton = self::$messages['mobile-frontend-random-button'];
 			$areYouSure = self::$messages['mobile-frontend-are-you-sure'];
 			$explainDisable = self::$messages['mobile-frontend-explain-disable'];
 			$disableButton = self::$messages['mobile-frontend-disable-button'];
 			$backButton = self::$messages['mobile-frontend-back-button'];
-			$disableImages = self::$messages['mobile-frontend-disable-images'];
-			$enableImages = self::$messages['mobile-frontend-enable-images'];
 			$htmlTitle = $areYouSure;
 			$title = $areYouSure;
-			$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/information/disable.html.php' );
@@ -712,20 +682,8 @@ class ExtMobileFrontend {
 			$contentHtml = $this->DOMParseMainPage( $contentHtml );
 		}
 
-		$dir = self::$dir;
-		$code = self::$code;
-		$regularSite = self::$messages['mobile-frontend-regular-site'];
-		$permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
-		$copyright = self::$messages['mobile-frontend-copyright'];
-		$homeButton = self::$messages['mobile-frontend-home-button'];
-		$randomButton = self::$messages['mobile-frontend-random-button'];
-		$disableImages = self::$messages['mobile-frontend-disable-images'];
-		$enableImages = self::$messages['mobile-frontend-enable-images'];
-
 		$title = htmlspecialchars( self::$title->getText() );
 		$htmlTitle = htmlspecialchars( self::$htmlTitle );
-
-		$cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true

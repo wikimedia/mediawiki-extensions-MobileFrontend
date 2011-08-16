@@ -5,6 +5,8 @@ $searchField = (!empty($_GET['search'])) ? $_GET['search'] : '';
 
 $mainPageUrl = self::$mainPageUrl;
 $randomPageUrl = self::$randomPageUrl;
+$homeButton = self::$messages['mobile-frontend-home-button'];
+$randomButton = self::$messages['mobile-frontend-random-button'];
 
 $scriptUrl = wfScript();
 
