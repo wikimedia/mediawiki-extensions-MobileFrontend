@@ -49,7 +49,7 @@ $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDispl
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.27';
+	const VERSION = '0.5.28';
 
 	/**
 	 * @var DOMDocument
@@ -181,7 +181,7 @@ class ExtMobileFrontend {
 		// The title
 		self::$title = $out->getTitle();
 		
-		if ( Title::newMainPage()->getArticleId() === self::$title->getArticleId() ) {
+		if (  Title::newMainPage()->equals( self::$title ) ) {
 			self::$isMainPage = true;
 		}
 		
