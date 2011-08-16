@@ -44,12 +44,12 @@ $wgAutoloadClasses['CssDetection']	  = $cwd . 'CssDetection.php';
 
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
-$wgHooks['OutputPageBeforeHTML'][] = array( &$wgExtMobileFrontend, 'onOutputPageBeforeHTML' );
+$wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
 
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.26';
+	const VERSION = '0.5.27';
 
 	/**
 	 * @var DOMDocument
@@ -175,7 +175,7 @@ class ExtMobileFrontend {
 	 * @param $text String
 	 * @return bool
 	 */
-	public function onOutputPageBeforeHTML( &$out, &$text ) {
+	public function beforePageDisplayHTML( &$out, &$text ) {
 		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
 
 		// The title
