@@ -49,7 +49,7 @@ $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDispl
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.28';
+	const VERSION = '0.5.29';
 
 	/**
 	 * @var DOMDocument
@@ -119,7 +119,7 @@ class ExtMobileFrontend {
 	public function addMobileFooter( &$obj, &$tpl ) {
 		global $wgRequest;
 		$footerlinks = $tpl->data['footerlinks'];
-		$mobileViewUrl = $wgRequest->escapeAppendQuery( 'useFormat=mobile' );
+		$mobileViewUrl = $wgRequest->escapeAppendQuery( 'useformat=mobile' );
 
 		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>".wfMsg( 'mobile-frontend-view')."</a>");
 		$footerlinks['places'][] = 'mobileview';
@@ -219,7 +219,7 @@ class ExtMobileFrontend {
 		// Thus, globalized objects will not be available as expected in the function.
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
 
-		$mAction = $wgRequest->getText( 'mAction' );
+		$mobileAction = $wgRequest->getText( 'mobileaction' );
 		$action = $wgRequest->getText( 'action' );
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 		self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
@@ -243,7 +243,7 @@ class ExtMobileFrontend {
 		}
 
 
-		self::$useFormat = $wgRequest->getText( 'useFormat' );
+		self::$useFormat = $wgRequest->getText( 'useformat' );
 		self::$format = $wgRequest->getText( 'format' );
 		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
 		self::$search = $wgRequest->getText( 'search' );
@@ -264,50 +264,37 @@ class ExtMobileFrontend {
 			$this->contentFormat = 'WML';
 		}
 
-		if ( $mAction == 'disable_mobile_site' ) {
+		if ( $mobileAction == 'disable_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
 				echo $this->renderDisableMobileSiteXHTML();
 				exit();
 			}
 		}
 
-		if ( $mAction == 'opt_in_mobile_site' ) {
+		if ( $mobileAction == 'opt_in_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
 				echo $this->renderOptInMobileSiteXHTML();
 				exit();
 			}
 		}
 
-		if ( $mAction == 'opt_out_mobile_site' ) {
+		if ( $mobileAction == 'opt_out_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
 				echo $this->renderOptOutMobileSiteXHTML();
 				exit();
 			}
 		}
 
-		if ( $mAction == 'opt_in_cookie' ) {
+		if ( $mobileAction == 'opt_in_cookie' ) {
 			$this->setOptInOutCookie( '1' );
 			$this->disableCaching();
 			$location = Title::newMainPage()->getFullURL();
 			header( 'Location: ' . $location );
 		}
 
-		if ( $mAction == 'opt_out_cookie' ) {
+		if ( $mobileAction  == 'opt_out_cookie' ) {
 			$this->setOptInOutCookie( '' );
 		}
-
-		// Note: Temporarily disabling this section for trial deployment
-		// if ( is_array($props) &&
-		// 	 $mAction != 'view_normal_site' &&
-		// 	 $props['is_wireless_device'] === 'true' &&
-		// 	 $props['is_tablet'] === 'false' ) {
-		// 	$this->disableCaching();
-		// 	ob_start( array( $this, 'DOMParse' ) );
-		// } elseif (self::$useFormat === 'mobile' ||
-		// 	  self::$useFormat === 'mobile-wap' ) {
-		// 	$this->disableCaching();
-		// 	ob_start( array( $this, 'DOMParse' ) );
-		// }
 
 		// WURFL documentation: http://wurfl.sourceforge.net/help_doc.php
 		// Determine the kind of markup
@@ -338,7 +325,7 @@ class ExtMobileFrontend {
 			self::$useFormat === 'mobile-wap' ||
 			!empty( $xDevice ) ) {
 				if ( $action !== 'edit' && 
-					 $mAction !== 'view_normal_site' ) {
+					 $mobileAction !== 'view_normal_site' ) {
 					$this->getMsg();
 					$this->disableCaching();
 					$this->sendXDeviceVaryHeader();
@@ -558,7 +545,7 @@ class ExtMobileFrontend {
 		$segmentsCount = count($segments);
 		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
 
-		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useFormat=' . self::$useFormat : '';
+		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useformat=' . self::$useFormat : '';
 
 		$basePage = htmlspecialchars( $_SERVER['PHP_SELF'] );
 

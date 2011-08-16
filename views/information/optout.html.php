@@ -8,7 +8,7 @@ $optOutHtml = <<<EOT
         </p> 
         <div id='disableButtons'> 
           <form action='/' method='get'> 
-            <input name='mAction' type='hidden' value='opt_out_cookie' /> 
+            <input name='mobileaction' type='hidden' value='opt_out_cookie' /> 
             <button id='disableButton' type='submit'>{$yesButton}</button> 
           </form> 
           <form action='/' method='get'> 
