@@ -49,7 +49,7 @@ $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDispl
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.31';
+	const VERSION = '0.5.32';
 
 	/**
 	 * @var DOMDocument
@@ -95,6 +95,8 @@ class ExtMobileFrontend {
 		'div.stub',			  # stub warnings
 		'table.metadata',	  # ugly metadata
 		'.metadata mbox-small',
+		'.metadata plainlinks ambox ambox-content',
+		'.metadata plainlinks ambox ambox-move',
 		'form',
 		'div.sister-project',
 		'script',
