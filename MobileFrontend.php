@@ -55,7 +55,7 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, '
 $wgMFRemovableClasses = array();
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.32';
+	const VERSION = '0.5.33';
 
 	/**
 	 * @var DOMDocument
@@ -87,6 +87,7 @@ class ExtMobileFrontend {
 	public static $disableImages;
 	public static $enableImages;
 	public static $isMainPage = false;
+	public static $searchField;
 
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -257,6 +258,7 @@ class ExtMobileFrontend {
 		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
 		self::$search = $wgRequest->getText( 'search' );
 		self::$callback = $wgRequest->getText( 'callback' );
+		self::$searchField = $wgRequest->getText( 'search', '' );
 
 		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
 		$device = new DeviceDetection();

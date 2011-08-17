@@ -1,8 +1,7 @@
 <?php
 global $wgExtensionAssetsPath;
 
-$searchField = (!empty($_GET['search'])) ? $_GET['search'] : '';
-
+$searchField = self::$searchField;
 $mainPageUrl = self::$mainPageUrl;
 $randomPageUrl = self::$randomPageUrl;
 $homeButton = self::$messages['mobile-frontend-home-button'];
