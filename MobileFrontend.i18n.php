@@ -60,6 +60,14 @@ $messages['en'] = array (
 	'mobile-frontend-news-items' => 'In The News',
 );
 
+/** Message documentation (Message documentation)
+ * @author EugeneZelenko
+ */
+$messages['qqq'] = array(
+	'mobile-frontend-wml-continue' => '{{Identical|Continue}}',
+	'mobile-frontend-wml-back' => '{{Identical|Back}}',
+);
+
 /** Moroccan Spoken Arabic (Maġribi) */
 $messages['ary'] = array(
 	'mobile-frontend-search-submit' => 'Sir',
@@ -425,6 +433,7 @@ $messages['be'] = array(
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
+ * @author Jim-by
  */
 $messages['be-tarask'] = array(
 	'mobile-frontend-desc' => 'Мабільны інтэрфэйс',
@@ -440,7 +449,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-hide-button' => 'Схаваць',
 	'mobile-frontend-disable-button' => 'Выключыць',
 	'mobile-frontend-back-button' => 'Назад',
-	'mobile-frontend-regular-site' => 'Паказаць старонку ў звычайнай Вікіпэдыі',
+	'mobile-frontend-regular-site' => 'Паказаць старонку ў {{GRAMMAR:месны|{{SITENAME}}}}',
 	'mobile-frontend-perm-stop-redirect' => 'Выключыць мабільную вэрсію назаўсёды',
 	'mobile-frontend-error-page-title' => 'Мы маем праблемы!',
 	'mobile-frontend-error-page-text' => 'Мабільная Вікіпэдыя дагэтуль знаходзіцца ў стадыі актыўнай распрацоўкі, і мы шмат працуем дзеля выпраўленьня ўсіх унутраных памылак. Нам ужо паведамілі пра гэтую памылку і яна выпраўляецца. Калі ласка, праверце празь нейкі час!',
@@ -455,6 +464,9 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-author-link' => 'Паглядзець гэты мэдыя-файл у звычайнай Вікіпэдыі, каб пабачыць інфармацыю пра аўтарства, ліцэнзію і дадатковае апісаньне.',
 	'mobile-frontend-download-full-version' => 'Загрузіць поўную вэрсію',
 	'mobile-frontend-file-namespace' => 'Файл',
+	'mobile-frontend-wml-continue' => 'Далей …',
+	'mobile-frontend-wml-back' => 'Вярнуцца …',
+	'mobile-frontend-view' => 'Выгляд для мабільнага тэлефона',
 );
 
 /** Bulgarian (Български) */
@@ -1002,7 +1014,9 @@ $messages['el'] = array(
 	'mobile-frontend-file-namespace' => 'Αρχείο',
 );
 
-/** Esperanto (Esperanto) */
+/** Esperanto (Esperanto)
+ * @author ArnoLagrange
+ */
 $messages['eo'] = array(
 	'mobile-frontend-search-submit' => 'Ek',
 	'mobile-frontend-search-results' => 'Serĉaj rezultoj',
@@ -1031,6 +1045,7 @@ $messages['eo'] = array(
 	'mobile-frontend-author-link' => 'Spektu tiun ĉi aŭdvidan dosieron je normala Vikipedio por vidu informojn pri aŭtoro, permisloj kaj kromaj priskriboj.',
 	'mobile-frontend-download-full-version' => 'Elŝuti Plenan Version',
 	'mobile-frontend-file-namespace' => 'Dosiero',
+	'mobile-frontend-view' => 'Vidigo por porteblaj aparatoj',
 );
 
 /** Spanish (Español)
@@ -1249,7 +1264,7 @@ $messages['fr'] = array(
 	'mobile-frontend-hide-button' => 'Masquer',
 	'mobile-frontend-disable-button' => 'Désactiver',
 	'mobile-frontend-back-button' => 'En arrière',
-	'mobile-frontend-regular-site' => 'Afficher cette page sur Wikipédia classique',
+	'mobile-frontend-regular-site' => 'Afficher cette page sur {{SITENAME}} classique',
 	'mobile-frontend-perm-stop-redirect' => 'Désactiver le site mobile de manière permanente',
 	'mobile-frontend-error-page-title' => 'Désolé ! Nous avons un problème.',
 	'mobile-frontend-error-page-text' => 'Wikipédia mobile est toujours en développement actif et nous nous efforçons de résoudre nos erreurs internes. Nous avons été avisés de cette erreur et nous allons la corriger rapidement. Réessayez bientôt !',
@@ -1269,9 +1284,13 @@ $messages['fr'] = array(
 	'mobile-frontend-view' => 'Affichage mobile',
 	'mobile-frontend-opt-in-yes-button' => 'oui',
 	'mobile-frontend-opt-in-no-button' => 'non',
+	'mobile-frontend-opt-in-explain' => 'Cela vous permet de débuter le test',
 	'mobile-frontend-opt-out-yes-button' => 'oui',
 	'mobile-frontend-opt-out-no-button' => 'non',
+	'mobile-frontend-opt-out-explain' => 'Cela vous permet de mettre fin au test',
 	'mobile-frontend-disable-images' => 'Désactiver les images en version mobile',
+	'mobile-frontend-enable-images' => 'Activer les images sur le site mobile',
+	'mobile-frontend-news-items' => 'Actualités',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -2308,11 +2327,14 @@ $messages['lb'] = array(
 	'mobile-frontend-opt-in-no-button' => 'neen',
 	'mobile-frontend-opt-in-title' => 'Beim Teste matmaaachen',
 	'mobile-frontend-opt-in-explain' => 'Dëst erlaabt Iech fir beim Teste matzemmaachen.',
+	'mobile-frontend-opt-out-message' => "D'Tester vum neie mobile Frontend ofbriechen?",
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'neen',
 	'mobile-frontend-opt-out-title' => 'Net méi beim Teste matmaachen.',
 	'mobile-frontend-opt-out-explain' => 'Dëst erlaabt Iech fir net méi beim Teste matzemmaachen.',
 	'mobile-frontend-disable-images' => 'Biller an der Mobiler Versioun desaktivéieren',
+	'mobile-frontend-enable-images' => 'Biller an der Mobiler Versioun aktivéieren',
+	'mobile-frontend-news-items' => 'An den Neiegkeeten',
 );
 
 /** Lezghian (Лезги) */
@@ -2719,6 +2741,8 @@ $messages['ms'] = array(
 	'mobile-frontend-opt-out-title' => 'Berkecuali dari Ujian',
 	'mobile-frontend-opt-out-explain' => 'Ini membolehkan anda keluar dari ujian',
 	'mobile-frontend-disable-images' => 'Matikan imej di tapak mudah alih',
+	'mobile-frontend-enable-images' => 'Membolehkan imej di tapak mudah alih',
+	'mobile-frontend-news-items' => 'Dalam Berita',
 );
 
 /** Maltese (Malti) */
@@ -3401,8 +3425,11 @@ $messages['rue'] = array(
 	'mobile-frontend-search-text' => 'Глядати',
 );
 
-/** Sakha (Саха тыла) */
+/** Sakha (Саха тыла)
+ * @author HalanTul
+ */
 $messages['sah'] = array(
+	'mobile-frontend-desc' => 'Мобильнай интерфейс',
 	'mobile-frontend-search-submit' => 'Таһаар',
 	'mobile-frontend-search-results' => 'Булулунна',
 	'mobile-frontend-no-article-found' => 'Ыстатыйалар булуллубатылар',
@@ -3415,21 +3442,23 @@ $messages['sah'] = array(
 	'mobile-frontend-hide-button' => 'Кистээ',
 	'mobile-frontend-disable-button' => 'Араар',
 	'mobile-frontend-back-button' => 'Төнүн',
-	'mobile-frontend-regular-site' => 'Сирэйи көннөрү Бикипиэдьийэҕэ көр',
+	'mobile-frontend-regular-site' => 'Сирэйи көннөрү {{SITENAME}}ҕэ көр',
 	'mobile-frontend-perm-stop-redirect' => 'Мобильнай саайты араар',
 	'mobile-frontend-error-page-title' => 'Алҕас таҕыста!',
-	'mobile-frontend-error-page-text' => 'Бикипиэдьийэ мобильнай барыла билигин тупсарылла турар, биһиги алҕастары көннөрүүгэ туох баар күүспүтүн уурабыт. Алҕас туһунан биллэриини туттубут уонна сотору көннөрүөхпүт. Бука диэн, сотору кэминэн тургутан көрөөр!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} мобильнай барыла билигин тупсарылла турар, биһиги алҕастары көннөрүүгэ туох баар күүспүтүн уурабыт. Алҕас туһунан биллэриини туттубут уонна сотору көннөрүөхпүт. Бука диэн, сотору кэминэн тургутан көрөөр!',
 	'mobile-frontend-are-you-sure' => 'Кырдьык дуо?',
-	'mobile-frontend-explain-disable' => 'Бикипиэдьийэ мобильнай барылын араараары гынаҕын дуо? Өскө <b>Араар</b> диэни таллаххына, аныгыскы киириигэр саайт мобильнай барылыгар утаарыллыаҥ суоҕа.',
+	'mobile-frontend-explain-disable' => '{{SITENAME}} мобильнай барылын араараары гынаҕын дуо? Өскө <b>Араар</b> диэни таллаххына, аныгыскы киириигэр {{SITENAME}} мобильнай барылыгар утаарыллыаҥ суоҕа.',
 	'mobile-frontend-nav-end' => 'Кэннигэр',
 	'mobile-frontend-nav-top' => 'Саҕаланыытыгар',
 	'mobile-frontend-nav-edit' => 'Уларыт',
 	'mobile-frontend-nav-history' => 'Устуоруйата',
 	'mobile-frontend-search-text' => 'Көрдөө',
 	'mobile-frontend-contact-us' => 'Туох эрэ ыйытыылаах эбэтэр этиилээх буоллаххына манна суруйаар: mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Бу медиа-билэни Бикипиэдьийэ сүрүн саайтыгар көрөн ааптарын, лиссиэнсийэтин уонна эбии быһаарыыларын кытта билсиэххитин сөп.',
+	'mobile-frontend-author-link' => 'Бу медиа-билэни көрөн {{SITENAME}} сүрүн ситим-сиригэр ааптарын, лиссиэнсийэтин уонна эбии быһаарыыларын кытта билсиэххитин сөп.',
 	'mobile-frontend-download-full-version' => 'Толору барылын хачайдыырга',
 	'mobile-frontend-file-namespace' => 'Билэ',
+	'mobile-frontend-wml-continue' => 'Салгыы...',
+	'mobile-frontend-wml-back' => 'Төнүн...',
 );
 
 /** Sicilian (Sicilianu) */
