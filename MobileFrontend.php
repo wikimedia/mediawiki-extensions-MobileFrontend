@@ -48,6 +48,12 @@ $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDispl
 
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 
+/**
+ * Make the classes stripped from page content configurable. Each item will
+ * be stripped from the page. See $itemsToRemove for more info
+ */
+$wgMFRemovableClasses = array();
+
 class ExtMobileFrontend {
 	const VERSION = '0.5.32';
 
@@ -536,9 +542,12 @@ class ExtMobileFrontend {
 	}
 
 	private function parseItemsToRemove() {
+		global $wgMFRemovableClasses;
 		$itemToRemoveRecords = array();
 
-		foreach ( $this->itemsToRemove as $itemToRemove ) {
+		foreach ( array_merge( $this->itemsToRemove, $wgMFRemovableClasses )
+				as $itemToRemove )
+		{
 			$type = '';
 			$rawName = '';
 			CssDetection::detectIdCssOrTag( $itemToRemove, $type, $rawName );
