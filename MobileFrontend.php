@@ -55,7 +55,7 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, '
 $wgMFRemovableClasses = array();
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.33';
+	const VERSION = '0.5.34';
 
 	/**
 	 * @var DOMDocument
@@ -357,7 +357,7 @@ class ExtMobileFrontend {
 
 	private function getBaseDomain() {
 		//Validates value as IP address
-		if( !filter_var( $_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP ) ) {
+		if( !IP::isValid( $_SERVER['HTTP_HOST'] ) ) {
 			$domainParts = explode( '.', $_SERVER['HTTP_HOST'] );
 			$domainParts = array_reverse( $domainParts );
 			//Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included.
