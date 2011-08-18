@@ -62,15 +62,10 @@ $wgExtensionFunctions[] = array( &$wgExtMobileFrontend, 'setDefaultLogo' );
  * be stripped from the page. See $itemsToRemove for more info
  */
 $wgMFRemovableClasses = array(
-	'table.metadata',	  # ugly metadata
-	'.metadata mbox-small',
-	'.metadata plainlinks ambox ambox-content',
-	'.metadata plainlinks ambox ambox-move',
-	'.metadata plainlinks ambox ambox-style',
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.37';
+	const VERSION = '0.5.38';
 
 	/**
 	 * @var DOMDocument
