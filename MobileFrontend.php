@@ -55,7 +55,7 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, '
 $wgMFRemovableClasses = array();
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.34';
+	const VERSION = '0.5.35';
 
 	/**
 	 * @var DOMDocument
@@ -104,6 +104,7 @@ class ExtMobileFrontend {
 		'.metadata mbox-small',
 		'.metadata plainlinks ambox ambox-content',
 		'.metadata plainlinks ambox ambox-move',
+		'.metadata plainlinks ambox ambox-style',
 		'form',
 		'div.sister-project',
 		'script',
