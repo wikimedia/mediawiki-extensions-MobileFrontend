@@ -42,11 +42,20 @@ $wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
 $wgAutoloadClasses['DeviceDetection'] = $cwd . 'DeviceDetection.php';
 $wgAutoloadClasses['CssDetection']	  = $cwd . 'CssDetection.php';
 
+/**
+ * Path to the logo used in the mobile view
+ *
+ * Should be 22px tall at most
+ */
+$wgMobileFrontendLogo = false;
+
+
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
 $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
 
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
+$wgExtensionFunctions[] = array( &$wgExtMobileFrontend, 'setDefaultLogo' );
 
 /**
  * Make the classes stripped from page content configurable. Each item will
@@ -61,7 +70,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.36';
+	const VERSION = '0.5.37';
 
 	/**
 	 * @var DOMDocument
@@ -747,5 +756,15 @@ class ExtMobileFrontend {
 		}
 
 		return $applicationHtml;
+	}
+
+	/**
+	 * Sets up the default logo image used in mobile view if none is set
+	 */
+	public function setDefaultLogo() {
+		global $wgMobileFrontendLogo, $wgExtensionAssetsPath;
+		if ( $wgMobileFrontendLogo === false ) {
+			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/images/mw.png';
+		}
 	}
 }

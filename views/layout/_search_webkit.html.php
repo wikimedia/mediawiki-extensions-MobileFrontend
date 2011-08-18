@@ -1,5 +1,5 @@
 <?php
-global $wgExtensionAssetsPath;
+global $wgExtensionAssetsPath, $wgMobileFrontendLogo;
 
 $searchField = self::$searchField;
 $mainPageUrl = self::$mainPageUrl;
@@ -12,7 +12,7 @@ $scriptUrl = wfScript();
 $searchWebkitHtml = <<<EOD
 <div id='header'>
   <div id='searchbox'>
-    <img alt='W logo' id='logo' src='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/w.gif' />
+	<img alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' />
     <form action='{$scriptUrl}' class='search_bar' method='get'>
       <input type="hidden" value="Special:Search" name="title" />
       <input type="hidden" value="Search" name="fulltext" />
