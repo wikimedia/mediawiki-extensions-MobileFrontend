@@ -52,10 +52,16 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, '
  * Make the classes stripped from page content configurable. Each item will
  * be stripped from the page. See $itemsToRemove for more info
  */
-$wgMFRemovableClasses = array();
+$wgMFRemovableClasses = array(
+	'table.metadata',	  # ugly metadata
+	'.metadata mbox-small',
+	'.metadata plainlinks ambox ambox-content',
+	'.metadata plainlinks ambox ambox-move',
+	'.metadata plainlinks ambox ambox-style',
+);
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.35';
+	const VERSION = '0.5.36';
 
 	/**
 	 * @var DOMDocument
@@ -100,11 +106,6 @@ class ExtMobileFrontend {
 		'table.toc',		  # table of contents
 		'#catlinks',		  # category links
 		'div.stub',			  # stub warnings
-		'table.metadata',	  # ugly metadata
-		'.metadata mbox-small',
-		'.metadata plainlinks ambox ambox-content',
-		'.metadata plainlinks ambox ambox-move',
-		'.metadata plainlinks ambox ambox-style',
 		'form',
 		'div.sister-project',
 		'script',
