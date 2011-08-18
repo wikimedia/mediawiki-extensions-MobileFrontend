@@ -66,6 +66,10 @@ $messages['en'] = array (
 $messages['qqq'] = array(
 	'mobile-frontend-wml-continue' => '{{Identical|Continue}}',
 	'mobile-frontend-wml-back' => '{{Identical|Back}}',
+	'mobile-frontend-opt-in-yes-button' => '{{Identical|Yes}}',
+	'mobile-frontend-opt-in-no-button' => '{{Identical|No}}',
+	'mobile-frontend-opt-out-yes-button' => '{{Identical|Yes}}',
+	'mobile-frontend-opt-out-no-button' => '{{Identical|No}}',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
@@ -467,6 +471,15 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-wml-continue' => 'Далей …',
 	'mobile-frontend-wml-back' => 'Вярнуцца …',
 	'mobile-frontend-view' => 'Выгляд для мабільнага тэлефона',
+	'mobile-frontend-opt-in-yes-button' => 'так',
+	'mobile-frontend-opt-in-no-button' => 'не',
+	'mobile-frontend-opt-in-title' => 'Далучыцца да праверкі',
+	'mobile-frontend-opt-in-explain' => 'Гэта дазволіць Вам далучыцца да праверкі',
+	'mobile-frontend-opt-out-yes-button' => 'так',
+	'mobile-frontend-opt-out-no-button' => 'не',
+	'mobile-frontend-opt-out-title' => 'Пакінуць праверку',
+	'mobile-frontend-opt-out-explain' => 'Гэта дазволіць Вам пакінуць праверку',
+	'mobile-frontend-disable-images' => 'Забараніць выявы на сайце для мабільных тэлефонаў',
 );
 
 /** Bulgarian (Български) */
@@ -2598,24 +2611,30 @@ $messages['ml'] = array(
 	'mobile-frontend-hide-button' => 'മറയ്ക്കുക',
 	'mobile-frontend-disable-button' => 'നിർജ്ജീവമാക്കുക',
 	'mobile-frontend-back-button' => 'പുറകോട്ട്',
-	'mobile-frontend-regular-site' => 'ഈ താൾ സാധാരണ വിക്കിപീഡിയയിൽ പ്രദർശിപ്പിക്കുക',
+	'mobile-frontend-regular-site' => 'ഈ താൾ സാധാരണ {{SITENAME}} സംരംഭത്തിൽ പ്രദർശിപ്പിക്കുക',
 	'mobile-frontend-perm-stop-redirect' => 'മൊബൈൽ സൈറ്റ് സ്ഥിരമായി നിർജ്ജീവമാക്കുക',
 	'mobile-frontend-error-page-title' => 'നാം ഒരു പിഴവ് അഭിമുഖീകരിക്കുന്നു!',
-	'mobile-frontend-error-page-text' => 'വിക്കിപീഡിയ മൊബൈൽ ഇപ്പോൾ സക്രിയമായ വികസനപ്രക്രിയയിലാണ് ഒപ്പം ഞങ്ങൾ ആന്തരികമായ എല്ലാ പിഴവുകളും പരിഹരിക്കാൻ കഠിനമായി പരിശ്രമിക്കുന്നു. ഈ പിഴവിനെ കുറിച്ച് ഞങ്ങൾക്ക് അറിവു കിട്ടിയിട്ടുണ്ട്, അധികം താമസിയാതെ അത് പരിഹരിക്കുന്നതാണ്. ദയവായി വീണ്ടും വരിക!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} മൊബൈൽ ഇപ്പോൾ സക്രിയമായ വികസനപ്രക്രിയയിലാണ് ഒപ്പം ഞങ്ങൾ ആന്തരികമായ എല്ലാ പിഴവുകളും പരിഹരിക്കാൻ കഠിനമായി പരിശ്രമിക്കുന്നു. ഈ പിഴവിനെ കുറിച്ച് ഞങ്ങൾക്ക് അറിവു കിട്ടിയിട്ടുണ്ട്, അധികം താമസിയാതെ അത് പരിഹരിക്കുന്നതാണ്. ദയവായി വീണ്ടും വരിക!',
 	'mobile-frontend-are-you-sure' => 'താങ്കൾക്ക് ഉറപ്പാണോ?',
-	'mobile-frontend-explain-disable' => 'വിക്കിപീഡിയയുടെ മൊബൈൽ പതിപ്പ് നിർജ്ജീവമാക്കണം എന്നു താങ്കൾക്കുറപ്പുണ്ടോ? <b>നിർജ്ജീവമാക്കുക</b> എന്നതാണു താങ്കൾ തിരഞ്ഞെടുക്കുന്നതെങ്കിൽ, അപ്പോൾ മുതൽ, താങ്കൾ വിക്കിപീഡിയ സന്ദർശിക്കുമ്പോൾ, വിക്കിപീഡിയയുടെ ഈ മൊബൽ രൂപത്തിലേയ്ക്ക് താങ്കൾ തിരിച്ചുവിടപ്പെടുകയില്ല.',
+	'mobile-frontend-explain-disable' => '{{SITENAME}} സംരംഭത്തിന്റെ മൊബൈൽ പതിപ്പ് നിർജ്ജീവമാക്കണം എന്നു താങ്കൾക്കുറപ്പുണ്ടോ? <b>നിർജ്ജീവമാക്കുക</b> എന്നതാണു താങ്കൾ തിരഞ്ഞെടുക്കുന്നതെങ്കിൽ, അപ്പോൾ മുതൽ, താങ്കൾ {{SITENAME}} സന്ദർശിക്കുമ്പോൾ, {{SITENAME}} സംരംഭത്തിന്റെ ഈ മൊബൽ രൂപത്തിലേയ്ക്ക് താങ്കൾ തിരിച്ചുവിടപ്പെടുകയില്ല.',
 	'mobile-frontend-nav-end' => 'അവസാനം',
 	'mobile-frontend-nav-top' => 'മുകൾ',
 	'mobile-frontend-nav-edit' => 'തിരുത്തുക',
 	'mobile-frontend-nav-history' => 'നാൾവഴി',
 	'mobile-frontend-search-text' => 'തിരയൂ',
 	'mobile-frontend-contact-us' => 'താങ്കൾക്ക് എന്തെങ്കിലും ചോദ്യങ്ങളോ അഭിപ്രായങ്ങളോ ഉണ്ടെങ്കിൽ ഞങ്ങൾക്ക് mobile@wikipedia.org എന്ന വിലാസത്തിൽ ഇമെയിൽ അയക്കാൻ മടിക്കേണ്ടതില്ല',
-	'mobile-frontend-author-link' => 'രചയിതാവിനേയും, അനുമതിയും, കൂടുതൽ വിവരങ്ങളും അറിയാൻ ഈ മീഡിയ പ്രമാണം സാധാരണ വിക്കിപീഡിയയിൽ കാണുക.',
+	'mobile-frontend-author-link' => 'രചയിതാവിനേയും, അനുമതിയും, കൂടുതൽ വിവരങ്ങളും അറിയാൻ ഈ മീഡിയ പ്രമാണം സാധാരണ {{SITENAME}} സംരംഭത്തിൽ കാണുക.',
 	'mobile-frontend-download-full-version' => 'പൂർണ്ണ പതിപ്പ് ഡൗൺലോഡ് ചെയ്യുക',
 	'mobile-frontend-file-namespace' => 'പ്രമാണം',
 	'mobile-frontend-wml-continue' => 'തുടരുക...',
 	'mobile-frontend-wml-back' => 'പിന്നിലേക്ക് ...',
 	'mobile-frontend-view' => 'മൊബൈൽ ദൃശ്യരൂപം',
+	'mobile-frontend-opt-in-message' => 'ഐച്ഛികമായി ഉപയോഗിക്കാവുന്ന മൊബൈൽ രൂപ പരീക്ഷണത്തിൽ പങ്ക് ചേരുക',
+	'mobile-frontend-opt-in-yes-button' => 'വേണം',
+	'mobile-frontend-opt-in-no-button' => 'വേണ്ട',
+	'mobile-frontend-opt-out-no-button' => 'വേണ്ട',
+	'mobile-frontend-disable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനരഹിതമാക്കുക',
+	'mobile-frontend-enable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനസജ്ജമാക്കുക',
 );
 
 /** Mongolian (Монгол) */
@@ -3274,7 +3293,9 @@ $messages['pt'] = array(
 	'mobile-frontend-view' => 'Versão Para Telemóvel',
 );
 
-/** Brazilian Portuguese (Português do Brasil) */
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Giro720
+ */
 $messages['pt-br'] = array(
 	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-search-results' => 'Resultados de pesquisa',
@@ -3288,12 +3309,12 @@ $messages['pt-br'] = array(
 	'mobile-frontend-hide-button' => 'Esconder',
 	'mobile-frontend-disable-button' => 'Desativar',
 	'mobile-frontend-back-button' => 'Voltar',
-	'mobile-frontend-regular-site' => 'Ver esta página na Wikipédia normal',
+	'mobile-frontend-regular-site' => 'Ver esta página na {{SITENAME}} normal',
 	'mobile-frontend-perm-stop-redirect' => 'Desabilitar o site móvel permanentemente',
 	'mobile-frontend-error-page-title' => 'Temos um problema!',
-	'mobile-frontend-error-page-text' => 'Wikipédia móvel ainda está sob desenvolvimento ativo e estamos trabalhando duro para corrigir todos os nossos erros internos. Fomos notificados sobre esse erro e ele será corrigido em breve. Por favor, dê retorno!',
+	'mobile-frontend-error-page-text' => 'A {{SITENAME}} móvel ainda está em desenvolvimento e estamos corrigindo os erros internos. Fomos notificados deste erro e ele será corrigido brevemente. Verifique dentro de algum tempo se a correção já está disponível, por favor!',
 	'mobile-frontend-are-you-sure' => 'Você tem certeza ?',
-	'mobile-frontend-explain-disable' => 'Você tem certeza de que quer desativar a versão móvel da Wikipédia? Se escolher <b>Desativar</b>, a partir de agora, quando visitar a Wikipédia, você não será redirecionado para esta versão móvel.',
+	'mobile-frontend-explain-disable' => 'Você tem certeza de que pretende desativar a versão para celular da {{SITENAME}}? Se você escolher <b>Desativar</b>, a partir de agora ao visitar a {{SITENAME}} deixará de ser reencaminhado para esta versão móvel.',
 	'mobile-frontend-nav-end' => 'Fim',
 	'mobile-frontend-nav-top' => 'Topo',
 	'mobile-frontend-nav-edit' => 'Editar',
@@ -3375,6 +3396,7 @@ $messages['ro'] = array(
 );
 
 /** Russian (Русский)
+ * @author Kaganer
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
@@ -3391,21 +3413,37 @@ $messages['ru'] = array(
 	'mobile-frontend-hide-button' => 'Скрыть',
 	'mobile-frontend-disable-button' => 'Отключить',
 	'mobile-frontend-back-button' => 'Назад',
-	'mobile-frontend-regular-site' => 'Просмотреть страницу в обычной Википедии',
+	'mobile-frontend-regular-site' => 'Просмотреть страницу в обычной {{grammar:genitive|{{SITENAME}}}}',
 	'mobile-frontend-perm-stop-redirect' => 'Отключить мобильный сайт',
 	'mobile-frontend-error-page-title' => 'У нас проблема!',
-	'mobile-frontend-error-page-text' => 'Мобильная Википедия ещё находится в стадии активной разработки, и мы прилагаем максимум усилий, чтобы исправить все наши внутренние ошибки. Мы были уведомлены об этой ошибке и планируем её вскоре исправить. Пожалуйста, проверьте через некоторое время!',
+	'mobile-frontend-error-page-text' => 'Мобильная версия {{grammar:genitive|{{SITENAME}}}} ещё находится в стадии активной разработки, и мы прилагаем максимум усилий, чтобы исправить все наши внутренние ошибки. Мы были уведомлены об этой ошибке и планируем её вскоре исправить. Пожалуйста, проверьте через некоторое время!',
 	'mobile-frontend-are-you-sure' => 'Вы уверены?',
-	'mobile-frontend-explain-disable' => 'Вы уверены, что вы хотите отключить мобильную версию Википедии? Если вы выберете <b>Отключить</b>, то при последующем посещении Википедии, вы не будете перенаправляться на версию сайта для мобильных устройств.',
+	'mobile-frontend-explain-disable' => 'Вы уверены, что вы хотите отключить мобильную версию {{grammar:genitive|{{SITENAME}}}}? Если вы выберете <b>Отключить</b>, то при последующем посещении {{grammar:genitive|{{SITENAME}}}}, вы не будете перенаправляться на версию сайта для мобильных устройств.',
 	'mobile-frontend-nav-end' => 'В конец',
 	'mobile-frontend-nav-top' => 'В начало',
 	'mobile-frontend-nav-edit' => 'Править',
 	'mobile-frontend-nav-history' => 'История',
 	'mobile-frontend-search-text' => 'Поиск',
 	'mobile-frontend-contact-us' => 'Если у вас есть вопросы или замечания, пожалуйста, напишите нам на mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Просмотрите этот медиа-файла в обычной Википедии, чтобы узнать информацию об авторстве, лицензии, дополнительные сведения.',
+	'mobile-frontend-author-link' => 'Просмотрите этот медиафайл в обычной {{grammar:genitive|{{SITENAME}}}}, чтобы увидеть информацию об авторстве и лицензии, а также дополнительные сведения.',
 	'mobile-frontend-download-full-version' => 'Скачать полную версию',
 	'mobile-frontend-file-namespace' => 'Файл',
+	'mobile-frontend-wml-continue' => 'Далее ...',
+	'mobile-frontend-wml-back' => 'Назад ...',
+	'mobile-frontend-view' => 'Мобильное представление',
+	'mobile-frontend-opt-in-message' => 'Есть желание присоединиться к тестированию мобильного интерфейса?',
+	'mobile-frontend-opt-in-yes-button' => 'да',
+	'mobile-frontend-opt-in-no-button' => 'нет',
+	'mobile-frontend-opt-in-title' => 'Переключиться в режим тестирования',
+	'mobile-frontend-opt-in-explain' => 'Это позволит вам пройти тест',
+	'mobile-frontend-opt-out-message' => 'Хотите прекратить участие в тестировании мобильного интерфейса?',
+	'mobile-frontend-opt-out-yes-button' => 'да',
+	'mobile-frontend-opt-out-no-button' => 'нет',
+	'mobile-frontend-opt-out-title' => 'Покинуть режим тестирования',
+	'mobile-frontend-opt-out-explain' => 'Это позволит вам отложить тест',
+	'mobile-frontend-disable-images' => 'Отключить изображения на мобильном сайте',
+	'mobile-frontend-enable-images' => 'Включить изображения на мобильном сайте',
+	'mobile-frontend-news-items' => 'Новости',
 );
 
 /** Rusyn (Русиньскый) */
@@ -3459,6 +3497,7 @@ $messages['sah'] = array(
 	'mobile-frontend-file-namespace' => 'Билэ',
 	'mobile-frontend-wml-continue' => 'Салгыы...',
 	'mobile-frontend-wml-back' => 'Төнүн...',
+	'mobile-frontend-opt-out-yes-button' => 'сөп',
 );
 
 /** Sicilian (Sicilianu) */
