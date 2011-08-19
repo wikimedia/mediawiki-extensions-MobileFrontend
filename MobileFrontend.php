@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.38';
+	const VERSION = '0.5.39';
 
 	/**
 	 * @var DOMDocument
@@ -242,6 +242,8 @@ class ExtMobileFrontend {
 
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
+			$location = str_replace( '?disableImages=1', '', $wgRequest->getRequestURL() );
+			header( 'Location: ' . $location );
 		}
 
 		if ( self::$disableImages == 0 ) {
@@ -255,6 +257,8 @@ class ExtMobileFrontend {
 			$disableImages = $wgRequest->getCookie( 'disableImages' );
 			if ( $disableImages ) {
 				$wgRequest->response()->setcookie( 'disableImages', '' );
+				$location = str_replace( '?enableImages=1', '', $wgRequest->getRequestURL() );
+				header( 'Location: ' . $location );
 			}
 		}
 
