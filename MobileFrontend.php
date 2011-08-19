@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.41';
+	const VERSION = '0.5.42';
 
 	/**
 	 * @var DOMDocument
@@ -378,19 +378,20 @@ class ExtMobileFrontend {
 	}
 
 	private function disableCaching() {
+		global $wgRequest;
 		if ( isset( $_SERVER['HTTP_VIA'] ) &&
 			stripos( $_SERVER['HTTP_VIA'], '.wikimedia.org:3128' ) !== false ) {
-			header( 'Cache-Control: no-cache, must-revalidate' );
-			header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
-			header( 'Pragma: no-cache' );
+			$wgRequest->response()->header( 'Cache-Control: no-cache, must-revalidate' );
+			$wgRequest->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
+			$wgRequest->response()->header( 'Pragma: no-cache' );
 		}
 	}
 	
 	private function sendXDeviceVaryHeader() {
-		global $wgOut;
+		global $wgOut, $wgRequest;
 		
 		if ( !empty( $_SERVER['HTTP_X_DEVICE'] ) ) {
-			header( 'X-Device: ' . $_SERVER['HTTP_X_DEVICE'] );
+			$wgRequest->response()->header( 'X-Device: ' . $_SERVER['HTTP_X_DEVICE'] );
 			$wgOut->addVaryHeader( 'X-Device' );
 		}
 	}
