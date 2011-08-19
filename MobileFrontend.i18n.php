@@ -259,7 +259,9 @@ $messages['anp'] = array(
 	'mobile-frontend-file-namespace' => 'फाईल',
 );
 
-/** Arabic (العربية) */
+/** Arabic (العربية)
+ * @author OsamaK
+ */
 $messages['ar'] = array(
 	'mobile-frontend-search-submit' => 'اذهب',
 	'mobile-frontend-search-results' => 'نتائج البحث',
@@ -288,6 +290,11 @@ $messages['ar'] = array(
 	'mobile-frontend-author-link' => 'راجع ملف الوسائط هذا على نسخة ويكيبيديا الاعتيادية لتشاهد معلومات منشئه وترخيصه ووصفًا إضافيًا.',
 	'mobile-frontend-download-full-version' => 'نزّل النسخة الكاملة',
 	'mobile-frontend-file-namespace' => 'ملف',
+	'mobile-frontend-wml-continue' => 'استمر ...',
+	'mobile-frontend-wml-back' => 'ارجع ...',
+	'mobile-frontend-view' => 'عرض المحمول',
+	'mobile-frontend-opt-in-yes-button' => 'نعم',
+	'mobile-frontend-opt-in-no-button' => 'لا',
 );
 
 /** Aramaic (ܐܪܡܝܐ)
@@ -456,7 +463,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-regular-site' => 'Паказаць старонку ў {{GRAMMAR:месны|{{SITENAME}}}}',
 	'mobile-frontend-perm-stop-redirect' => 'Выключыць мабільную вэрсію назаўсёды',
 	'mobile-frontend-error-page-title' => 'Мы маем праблемы!',
-	'mobile-frontend-error-page-text' => 'Мабільная Вікіпэдыя дагэтуль знаходзіцца ў стадыі актыўнай распрацоўкі, і мы шмат працуем дзеля выпраўленьня ўсіх унутраных памылак. Нам ужо паведамілі пра гэтую памылку і яна выпраўляецца. Калі ласка, праверце празь нейкі час!',
+	'mobile-frontend-error-page-text' => 'Мабільная вэрсія {{GRAMMAR:родны|{{SITENAME}}}} дагэтуль знаходзіцца ў стадыі актыўнай распрацоўкі, і мы шмат працуем дзеля выпраўленьня ўсіх унутраных памылак. Нам ужо паведамілі пра гэтую памылку і яна выпраўляецца. Калі ласка, праверце празь нейкі час!',
 	'mobile-frontend-are-you-sure' => 'Вы ўпэўнены?',
 	'mobile-frontend-explain-disable' => 'Вы ўпэўненыя, што жадаеце выключыць мабільную вэрсію Вікіпэдыі? Калі вы абераце <b>Выключыць</b>, то падчас наступнага наведваньня вы ня будзеце перанакіраваныя да мабільнай вэрсіі сайта.',
 	'mobile-frontend-nav-end' => 'У канец',
@@ -475,11 +482,14 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-opt-in-no-button' => 'не',
 	'mobile-frontend-opt-in-title' => 'Далучыцца да праверкі',
 	'mobile-frontend-opt-in-explain' => 'Гэта дазволіць Вам далучыцца да праверкі',
+	'mobile-frontend-opt-out-message' => 'Пакінуць праверку новага мабільнага інтэрфэйсу?',
 	'mobile-frontend-opt-out-yes-button' => 'так',
 	'mobile-frontend-opt-out-no-button' => 'не',
 	'mobile-frontend-opt-out-title' => 'Пакінуць праверку',
 	'mobile-frontend-opt-out-explain' => 'Гэта дазволіць Вам пакінуць праверку',
 	'mobile-frontend-disable-images' => 'Забараніць выявы на сайце для мабільных тэлефонаў',
+	'mobile-frontend-enable-images' => 'Дазволіць выявы на сайце для мабільных тэлефонаў',
+	'mobile-frontend-news-items' => 'Навіны',
 );
 
 /** Bulgarian (Български) */
@@ -1132,6 +1142,7 @@ $messages['et'] = array(
 	'mobile-frontend-contact-us' => 'Saatke oma küsimused ja kommentaarid meie e-posti aadressile mobile@wikipedia.org',
 	'mobile-frontend-view' => 'Mobiilivaade',
 	'mobile-frontend-disable-images' => 'Keela mobiilivaates pildid',
+	'mobile-frontend-enable-images' => 'Luba mobiilivaates pildid',
 );
 
 /** Basque (Euskara) */
@@ -2632,9 +2643,11 @@ $messages['ml'] = array(
 	'mobile-frontend-opt-in-message' => 'ഐച്ഛികമായി ഉപയോഗിക്കാവുന്ന മൊബൈൽ രൂപ പരീക്ഷണത്തിൽ പങ്ക് ചേരുക',
 	'mobile-frontend-opt-in-yes-button' => 'വേണം',
 	'mobile-frontend-opt-in-no-button' => 'വേണ്ട',
+	'mobile-frontend-opt-out-yes-button' => 'വേണം',
 	'mobile-frontend-opt-out-no-button' => 'വേണ്ട',
 	'mobile-frontend-disable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനരഹിതമാക്കുക',
 	'mobile-frontend-enable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനസജ്ജമാക്കുക',
+	'mobile-frontend-news-items' => 'വാർത്തയിൽ',
 );
 
 /** Mongolian (Монгол) */
@@ -3223,6 +3236,43 @@ $messages['pms'] = array(
 	'mobile-frontend-author-link' => "Vëdde cost archivi multimedial dzora na {{SITENAME}} regolar për lese j'anformassion su autor, licensa, e le descrission adissionaj.",
 	'mobile-frontend-download-full-version' => 'Dëscarié la version Completa',
 	'mobile-frontend-file-namespace' => 'Archivi',
+);
+
+/** Western Punjabi (پنجابی)
+ * @author Khalid Mahmood
+ */
+$messages['pnb'] = array(
+	'mobile-frontend-desc' => 'ہلن والا وکھالہ',
+	'mobile-frontend-search-submit' => 'چلو',
+	'mobile-frontend-search-results' => 'نتارے لبو',
+	'mobile-frontend-no-article-found' => 'کوئی صفہ نئیں لبا',
+	'mobile-frontend-featured-article' => 'اج دا چونواں آرٹیکل',
+	'mobile-frontend-in-the-news' => 'دساں چ',
+	'mobile-frontend-home-button' => 'کعر',
+	'mobile-frontend-random-button' => 'الٹے پلٹے',
+	'mobile-frontend-back-to-top-of-section' => 'اک سیکشن پچھے چلو',
+	'mobile-frontend-show-button' => 'وکھاؤ',
+	'mobile-frontend-hide-button' => 'لکاؤ',
+	'mobile-frontend-disable-button' => 'ناکارہ',
+	'mobile-frontend-back-button' => 'پچھے',
+	'mobile-frontend-error-page-title' => 'اسیں اک رپھڑ ج آں !',
+	'mobile-frontend-are-you-sure' => 'کیا تھانوں یقین اے ؟',
+	'mobile-frontend-nav-end' => 'انت',
+	'mobile-frontend-nav-top' => 'چوٹی',
+	'mobile-frontend-nav-edit' => 'تبدیلی',
+	'mobile-frontend-nav-history' => 'ریکارڈ',
+	'mobile-frontend-search-text' => 'کھوج',
+	'mobile-frontend-file-namespace' => 'فائل',
+	'mobile-frontend-wml-continue' => 'جاری رکھو',
+	'mobile-frontend-wml-back' => 'پچھے نوں۔۔۔۔۔۔۔۔۔۔۔',
+	'mobile-frontend-view' => 'ٹردی مورت',
+	'mobile-frontend-opt-in-yes-button' => 'ہاں',
+	'mobile-frontend-opt-in-no-button' => 'نئیں',
+	'mobile-frontend-opt-in-explain' => 'اے تھانوں نتارے چ آن دندا اے',
+	'mobile-frontend-opt-out-yes-button' => 'ہاں',
+	'mobile-frontend-opt-out-no-button' => 'نئیں',
+	'mobile-frontend-opt-out-explain' => 'تسیں نتارا چھڈ سکدے او',
+	'mobile-frontend-news-items' => 'دساں چ',
 );
 
 /** Pashto (پښتو) */
