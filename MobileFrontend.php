@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.40';
+	const VERSION = '0.5.41';
 
 	/**
 	 * @var DOMDocument
@@ -243,7 +243,7 @@ class ExtMobileFrontend {
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
 			$location = str_replace( '?disableImages=1', '', $wgRequest->getRequestURL() );
-			WebResponse::header( 'Location: ' . $location );
+			$wgRequest->response()->header( 'Location: ' . $location );
 		}
 
 		if ( self::$disableImages == 0 ) {
@@ -258,7 +258,7 @@ class ExtMobileFrontend {
 			if ( $disableImages ) {
 				$wgRequest->response()->setcookie( 'disableImages', '' );
 				$location = str_replace( '?enableImages=1', '', $wgRequest->getRequestURL() );
-				WebResponse::header( 'Location: ' . $location );
+				$wgRequest->response()->header( 'Location: ' . $location );
 			}
 		}
 
@@ -310,7 +310,7 @@ class ExtMobileFrontend {
 			$this->setOptInOutCookie( '1' );
 			$this->disableCaching();
 			$location = Title::newMainPage()->getFullURL();
-			WebResponse::header( 'Location: ' . $location );
+			$wgRequest->response()->header( 'Location: ' . $location );
 		}
 
 		if ( $mobileAction  == 'opt_out_cookie' ) {
