@@ -1826,6 +1826,8 @@ $messages['ia'] = array(
 	'mobile-frontend-opt-out-title' => 'Cessar participation a tests',
 	'mobile-frontend-opt-out-explain' => 'Isto permitte quitar le systema de test',
 	'mobile-frontend-disable-images' => 'Disactivar imagines in sito mobile',
+	'mobile-frontend-enable-images' => 'Activar imagines in sito mobile',
+	'mobile-frontend-news-items' => 'Actualitates',
 );
 
 /** Indonesian (Bahasa Indonesia) */
@@ -3862,6 +3864,7 @@ $messages['su'] = array(
 );
 
 /** Swedish (Svenska)
+ * @author Ainali
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
@@ -3896,10 +3899,19 @@ $messages['sv'] = array(
 	'mobile-frontend-wml-continue' => 'Fortsätt ...',
 	'mobile-frontend-wml-back' => 'Tillbaka ...',
 	'mobile-frontend-view' => 'Mobil vy',
+	'mobile-frontend-opt-in-message' => 'Gå med i vår opt-in testning av det nya mobila gränssnittet?',
 	'mobile-frontend-opt-in-yes-button' => 'ja',
 	'mobile-frontend-opt-in-no-button' => 'nej',
+	'mobile-frontend-opt-in-title' => 'Opt-in för testning',
+	'mobile-frontend-opt-in-explain' => 'Detta gör att du kan påbörja testet',
+	'mobile-frontend-opt-out-message' => 'Lämna opt-in testning av det nya mobila gränssnittet?',
+	'mobile-frontend-opt-out-yes-button' => 'ja',
+	'mobile-frontend-opt-out-no-button' => 'nej',
+	'mobile-frontend-opt-out-title' => 'Opt-Out av testning',
 	'mobile-frontend-opt-out-explain' => 'Detta låter dig lämna testet',
 	'mobile-frontend-disable-images' => 'Inaktivera bilder på mobilsidan',
+	'mobile-frontend-enable-images' => 'Aktivera bilder på mobil webbplats',
+	'mobile-frontend-news-items' => 'I nyheterna',
 );
 
 /** Swahili (Kiswahili) */
