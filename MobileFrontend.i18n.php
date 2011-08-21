@@ -314,8 +314,11 @@ $messages['arc'] = array(
 	'mobile-frontend-view' => 'ܓܠܚܐ ܒܙܥܘܩܐ ܟܘܪܝܐ (ܡܫܢܝܢܐ)',
 );
 
-/** Asturian (Asturianu) */
+/** Asturian (Asturianu)
+ * @author Xuacu
+ */
 $messages['ast'] = array(
+	'mobile-frontend-desc' => 'Interfaz pa móviles',
 	'mobile-frontend-search-submit' => 'Dir',
 	'mobile-frontend-search-results' => 'Resultaos de la gueta',
 	'mobile-frontend-no-article-found' => "Nun s'alcontró l'artículu",
@@ -328,21 +331,37 @@ $messages['ast'] = array(
 	'mobile-frontend-hide-button' => 'Anubrir',
 	'mobile-frontend-disable-button' => 'Desactivar',
 	'mobile-frontend-back-button' => 'Anterior',
-	'mobile-frontend-regular-site' => 'Ver esta páxina na Uiquipedia normal',
+	'mobile-frontend-regular-site' => 'Ver esta páxina en {{SITENAME}} normal',
 	'mobile-frontend-perm-stop-redirect' => "Desactivar permanentemente'l sitiu pa movil",
 	'mobile-frontend-error-page-title' => '¡Tenemos un problema!',
-	'mobile-frontend-error-page-text' => "Uiquipedia móvil entá s'alcuentra en desendolcu activu y tamos trabayando duro pa iguar tolos fallos internos. Venimos de recibir avisu d'esti fallu y pondrémosnos a igualu bien aína. ¡Vuelvi pronto pa comprobalo!",
+	'mobile-frontend-error-page-text' => "{{SITENAME}} móvil entá s'alcuentra en desendolcu activu y tamos trabayando duro pa iguar tolos fallos internos. Venimos de recibir avisu d'esti fallu y vamos a igualu bien aína. ¡Vuelvi pronto pa comprobalo!",
 	'mobile-frontend-are-you-sure' => '¿Tas seguru?',
-	'mobile-frontend-explain-disable' => '¿Seguro que quies desactivar la versión pa móvil de {{SITENAME}}? Si escueyes <b>Desactivar</b>, darréu, cuando visites Uiquipedia, nun te redireicionará a esta vista pa móvil de Uiquipedia.',
+	'mobile-frontend-explain-disable' => '¿Seguro que quies desactivar la versión pa móvil de {{SITENAME}}? Si escueyes <b>Desactivar</b>, darréu, cuando visites {{SITENAME}}, nun te redireicionará a esta vista pa móvil de {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Final',
 	'mobile-frontend-nav-top' => 'Arriba',
 	'mobile-frontend-nav-edit' => 'Editar',
 	'mobile-frontend-nav-history' => 'Historial',
 	'mobile-frontend-search-text' => 'Guetar',
 	'mobile-frontend-contact-us' => 'Si tienes entrugues o comentarios, manda un corréu ensin compromisu a mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Ver esti ficheru multimedia na Uiquipedia normal pa ver información tocante al autor, llicencia, y descripciones adicionales.',
+	'mobile-frontend-author-link' => 'Ver esti ficheru multimedia na versión normal de {{SITENAME}} pa ver información tocante al autor, llicencia, y descripciones adicionales.',
 	'mobile-frontend-download-full-version' => 'Descargar versión completa',
 	'mobile-frontend-file-namespace' => 'Ficheru',
+	'mobile-frontend-wml-continue' => 'Continuar...',
+	'mobile-frontend-wml-back' => 'Volver...',
+	'mobile-frontend-view' => 'Vista pa móvil',
+	'mobile-frontend-opt-in-message' => '¿Quies xunite a les pruebes de la nueva interfaz pa móvil?',
+	'mobile-frontend-opt-in-yes-button' => 'sí',
+	'mobile-frontend-opt-in-no-button' => 'non',
+	'mobile-frontend-opt-in-title' => 'Apuntase a les pruebes',
+	'mobile-frontend-opt-in-explain' => 'Esto te permite xunite a les pruebes',
+	'mobile-frontend-opt-out-message' => '¿Quies dexar les pruebes de la nueva interfaz pa móvil?',
+	'mobile-frontend-opt-out-yes-button' => 'sí',
+	'mobile-frontend-opt-out-no-button' => 'non',
+	'mobile-frontend-opt-out-title' => 'Dexar les pruebes',
+	'mobile-frontend-opt-out-explain' => 'Esto te permite dexar les pruebes',
+	'mobile-frontend-disable-images' => 'Desactivar les imaxes nel sitiu pa móvil',
+	'mobile-frontend-enable-images' => 'Activar les imaxes nel sitiu pa móvil',
+	'mobile-frontend-news-items' => 'Actualidá',
 );
 
 /** Azerbaijani (Azərbaycanca) */
