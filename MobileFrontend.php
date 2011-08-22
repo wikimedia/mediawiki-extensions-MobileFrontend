@@ -489,7 +489,7 @@ class ExtMobileFrontend {
 		// Back to top link
 		$base = "<div class='section_anchors' id='anchor_" . intval( $headings - 1 ) .
 			"'><a href='#section_" . intval( $headings - 1 ) .
-			"' class='back_to_top'>&uarr; {$backToTop}</a></div>";
+			"' class='back_to_top'>&#8593; {$backToTop}</a></div>";
 		// generate the HTML we are going to inject
 		$buttons = "<button class='section_heading show' section_id='{$headings}'>{$show}</button>" .
 			"<button class='section_heading hide' section_id='{$headings}'>{$hide}</button>";
@@ -744,6 +744,7 @@ class ExtMobileFrontend {
 		}
 
 		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
+			header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/layout/application.html.php' );
