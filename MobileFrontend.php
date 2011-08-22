@@ -744,7 +744,7 @@ class ExtMobileFrontend {
 		}
 
 		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
-			header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
+			//header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/layout/application.html.php' );
