@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.44';
+	const VERSION = '0.5.45';
 
 	/**
 	 * @var DOMDocument
