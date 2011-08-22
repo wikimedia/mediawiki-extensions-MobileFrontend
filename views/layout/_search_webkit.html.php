@@ -12,7 +12,7 @@ $scriptUrl = wfScript();
 $searchWebkitHtml = <<<EOD
 <div id='header'>
   <div id='searchbox'>
-	<img alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' />
+	<img width="35" height="22" alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' />
     <form action='{$scriptUrl}' class='search_bar' method='get'>
       <input type="hidden" value="Special:Search" name="title" />
       <input type="hidden" value="Search" name="fulltext" />
