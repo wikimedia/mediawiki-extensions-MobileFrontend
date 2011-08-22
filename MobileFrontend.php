@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.43';
+	const VERSION = '0.5.44';
 
 	/**
 	 * @var DOMDocument
@@ -100,6 +100,8 @@ class ExtMobileFrontend {
 	public static $searchField;
 	public static $disableImagesURL;
 	public static $enableImagesURL;
+	public static $disableMobileSiteURL;
+	public static $viewNormalSiteURL;
 
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -151,6 +153,9 @@ class ExtMobileFrontend {
 		
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
+		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
+		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
+		
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
