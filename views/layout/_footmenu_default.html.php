@@ -8,10 +8,10 @@ $enableImages = self::$messages['mobile-frontend-enable-images'];
 
 if ( self::$disableImages == 0 ) {
 	$imagesToggle = $disableImages;
-	$imagesURL = '?disableImages=1';
+	$imagesURL = self::$disableImagesURL;
 } else {
 	$imagesToggle = $enableImages;
-	$imagesURL = '?enableImages=1';
+	$imagesURL = self::$enableImagesURL;
 }
 
 $footerHtml = <<<EOD
