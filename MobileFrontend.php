@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.45';
+	const VERSION = '0.5.46';
 
 	/**
 	 * @var DOMDocument
@@ -102,6 +102,7 @@ class ExtMobileFrontend {
 	public static $enableImagesURL;
 	public static $disableMobileSiteURL;
 	public static $viewNormalSiteURL;
+	public static $currentURL;
 
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -155,6 +156,7 @@ class ExtMobileFrontend {
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
 		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
+		self::$currentURL = $wgRequest->getFullRequestURL();
 		
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();

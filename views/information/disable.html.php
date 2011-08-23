@@ -1,6 +1,7 @@
 <?php
 
 $lang = self::$code;
+$currentURL = self::$currentURL;
 
 $disableHtml = <<<EOT
  <h1> 
@@ -11,7 +12,7 @@ $disableHtml = <<<EOT
         </p> 
         <div id='disableButtons'> 
           <form action='http://{$lang}.wikipedia.org/w/mobileRedirect.php' method='get'> 
-            <input name='to' type='hidden' value='http://{$lang}.wikipedia.org/' /> 
+            <input name='to' type='hidden' value='{$currentURL}' /> 
             <input name='expires_in_days' type='hidden' value='3650' /> 
             <button id='disableButton' type='submit'>{$disableButton}</button> 
           </form> 
