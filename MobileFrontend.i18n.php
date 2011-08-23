@@ -491,7 +491,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-nav-history' => 'Гісторыя',
 	'mobile-frontend-search-text' => 'Пошук',
 	'mobile-frontend-contact-us' => 'Калі вы маеце нейкія пытаньні ці заўвагі, калі ласка, дашліце нам ліст на mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Паглядзець гэты мэдыя-файл у звычайнай Вікіпэдыі, каб пабачыць інфармацыю пра аўтарства, ліцэнзію і дадатковае апісаньне.',
+	'mobile-frontend-author-link' => 'Паказаць гэты мэдыя-файл у звычайнай {{GRAMMAR:месны|{{SITENAME}}}}, каб пабачыць інфармацыю пра аўтарства, ліцэнзію і дадатковае апісаньне.',
 	'mobile-frontend-download-full-version' => 'Загрузіць поўную вэрсію',
 	'mobile-frontend-file-namespace' => 'Файл',
 	'mobile-frontend-wml-continue' => 'Далей …',
@@ -589,6 +589,7 @@ $messages['bn'] = array(
 
 /** Breton (Brezhoneg)
  * @author Fulup
+ * @author Y-M D
  */
 $messages['br'] = array(
 	'mobile-frontend-desc' => 'Talbenn evit an hezougoù',
@@ -619,6 +620,17 @@ $messages['br'] = array(
 	'mobile-frontend-author-link' => 'Diskwel ar restr-mañ war {{SITENAME}} evit gwelet an titouroù diwar-benn e oberour, e aotre-implijout ha deskrivadurioù ouzhpenn.',
 	'mobile-frontend-download-full-version' => 'Pellgargañ ar stumm klok',
 	'mobile-frontend-file-namespace' => 'Restr',
+	'mobile-frontend-wml-continue' => "Kenderc'hel...",
+	'mobile-frontend-wml-back' => 'Distreiñ...',
+	'mobile-frontend-opt-in-yes-button' => 'ya',
+	'mobile-frontend-opt-in-no-button' => 'ket',
+	'mobile-frontend-opt-in-explain' => "Aotreañ a ra ac'hanoc'h da gregiñ gant an amprouiñ",
+	'mobile-frontend-opt-out-yes-button' => 'ya',
+	'mobile-frontend-opt-out-no-button' => 'ket',
+	'mobile-frontend-opt-out-explain' => "Aotreañ a ra ac'hanoc'h da baouez gant an amprouiñ",
+	'mobile-frontend-disable-images' => "Diweredekaat ar skeudennoù war al lec'hienn hezoug",
+	'mobile-frontend-enable-images' => "Gweredekaat ar skeudennoù war al lec'hienn hezoug",
+	'mobile-frontend-news-items' => "Er C'heleier",
 );
 
 /** Bosnian (Bosanski)
@@ -4004,7 +4016,9 @@ $messages['ta'] = array(
 	'mobile-frontend-file-namespace' => 'கோப்பு',
 );
 
-/** Telugu (తెలుగు) */
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
 $messages['te'] = array(
 	'mobile-frontend-search-submit' => 'వెళ్ళు',
 	'mobile-frontend-search-results' => 'అన్వేషణ ఫలితాలు',
@@ -4033,6 +4047,13 @@ $messages['te'] = array(
 	'mobile-frontend-author-link' => 'కృతికర్త, లైసెన్సు మరియు ఇతర వివరణల గురించి సమాచారానికై ఈ మాధ్యమ దస్త్రాన్ని మామూలు వికీపీడియాలో చూడండి.',
 	'mobile-frontend-download-full-version' => 'పూర్తి కూర్పుని దించుకోండి',
 	'mobile-frontend-file-namespace' => 'దస్త్రం',
+	'mobile-frontend-wml-continue' => 'కొనసాగించు ...',
+	'mobile-frontend-wml-back' => 'వెనుకకు ...',
+	'mobile-frontend-opt-in-yes-button' => 'అవును',
+	'mobile-frontend-opt-in-no-button' => 'కాదు',
+	'mobile-frontend-opt-out-yes-button' => 'అవును',
+	'mobile-frontend-opt-out-no-button' => 'కాదు',
+	'mobile-frontend-news-items' => 'వార్తల్లో',
 );
 
 /** Tetum (Tetun) */
@@ -4385,6 +4406,8 @@ $messages['vi'] = array(
 	'mobile-frontend-opt-out-title' => 'Quyết định bỏ cuộc thử nghiệm',
 	'mobile-frontend-opt-out-explain' => 'Điều này sẽ cho phép bỏ cuộc thử nghiệm',
 	'mobile-frontend-disable-images' => 'Tắt hình ảnh tại trang di động',
+	'mobile-frontend-enable-images' => 'Hiện hình ảnh trên trang di động',
+	'mobile-frontend-news-items' => 'Tin tức',
 );
 
 /** Volapük (Volapük) */
