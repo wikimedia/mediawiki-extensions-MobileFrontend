@@ -156,7 +156,7 @@ class ExtMobileFrontend {
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
 		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
-		self::$currentURL = $wgRequest->getFullRequestURL();
+		self::$currentURL = htmlspecialchars( $wgRequest->getFullRequestURL() );
 		
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
