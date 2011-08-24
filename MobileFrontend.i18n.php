@@ -800,6 +800,7 @@ $messages['cs'] = array(
 	'mobile-frontend-wml-continue' => 'Pokračovat …',
 	'mobile-frontend-wml-back' => 'Zpět …',
 	'mobile-frontend-view' => 'Mobilní verze',
+	'mobile-frontend-news-items' => 'Aktuality',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -2350,7 +2351,7 @@ $messages['kw'] = array(
 $messages['lb'] = array(
 	'mobile-frontend-desc' => 'Frontend Applicatioun fir mobil Apparater',
 	'mobile-frontend-search-submit' => 'Lass',
-	'mobile-frontend-search-results' => 'Reaultater vun der Sich',
+	'mobile-frontend-search-results' => 'Resultater vum Sichen',
 	'mobile-frontend-no-article-found' => 'Keen Artikel fonnt',
 	'mobile-frontend-featured-article' => 'Den Artikel vum Dag',
 	'mobile-frontend-in-the-news' => 'An den Noriichten',
