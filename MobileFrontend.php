@@ -759,7 +759,7 @@ class ExtMobileFrontend {
 			$json_data['title'] = self::$title->getText();
 			$json_data['html'] = $contentHtml;
 
-			$json = json_encode( $json_data );
+			$json = FormatJson::encode( $json_data );
 
 			if ( !empty( self::$callback ) ) {
 				$json = urlencode( self::$callback ) . '(' . $json . ')';
