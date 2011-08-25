@@ -1480,6 +1480,19 @@ $messages['gl'] = array(
 	'mobile-frontend-wml-continue' => 'Continuar...',
 	'mobile-frontend-wml-back' => 'Volver...',
 	'mobile-frontend-view' => 'Vista móbil',
+	'mobile-frontend-opt-in-message' => 'Quere unirse ás nosas probas da nova versión móbil?',
+	'mobile-frontend-opt-in-yes-button' => 'si',
+	'mobile-frontend-opt-in-no-button' => 'non',
+	'mobile-frontend-opt-in-title' => 'Entrar nas probas',
+	'mobile-frontend-opt-in-explain' => 'Isto permítelle entrar nas probas',
+	'mobile-frontend-opt-out-message' => 'Quere deixar as nosas probas da nova versión móbil?',
+	'mobile-frontend-opt-out-yes-button' => 'si',
+	'mobile-frontend-opt-out-no-button' => 'non',
+	'mobile-frontend-opt-out-title' => 'Saír das probas',
+	'mobile-frontend-opt-out-explain' => 'Isto permítelle saír das probas',
+	'mobile-frontend-disable-images' => 'Desactivar as imaxes na versión móbil',
+	'mobile-frontend-enable-images' => 'Activar as imaxes na versión móbil',
+	'mobile-frontend-news-items' => 'Actualidade',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
@@ -3233,12 +3246,19 @@ $messages['pl'] = array(
 	'mobile-frontend-wml-continue' => 'Dalej ...',
 	'mobile-frontend-wml-back' => 'Wstecz ...',
 	'mobile-frontend-view' => 'Wersja na komórkę',
+	'mobile-frontend-opt-in-message' => 'Przyłączysz się do grupy testującej nowy mobilny interfejs użytkownika?',
 	'mobile-frontend-opt-in-yes-button' => 'tak',
 	'mobile-frontend-opt-in-no-button' => 'nie',
+	'mobile-frontend-opt-in-title' => 'Włącz testowanie',
 	'mobile-frontend-opt-in-explain' => 'Umożliwia rozpoczęcie testowania',
+	'mobile-frontend-opt-out-message' => 'Zakończyć testowanie nowego mobilnego interfejsu użytkownika?',
 	'mobile-frontend-opt-out-yes-button' => 'tak',
 	'mobile-frontend-opt-out-no-button' => 'nie',
+	'mobile-frontend-opt-out-title' => 'Wyłącz testowanie',
 	'mobile-frontend-opt-out-explain' => 'Umożliwia zakończenie testowania',
+	'mobile-frontend-disable-images' => 'Wyłącz wyświetlanie obrazów na mobilnej witrynie',
+	'mobile-frontend-enable-images' => 'Włącz wyświetlanie obrazów na mobilnej witrynie',
+	'mobile-frontend-news-items' => 'Aktualności',
 );
 
 /** Piedmontese (Piemontèis) */
@@ -4505,7 +4525,9 @@ $messages['xmf'] = array(
 	'mobile-frontend-file-namespace' => 'ფაილ',
 );
 
-/** Yiddish (ייִדיש) */
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
 $messages['yi'] = array(
 	'mobile-frontend-search-submit' => 'גיי',
 	'mobile-frontend-search-results' => 'זוכן רעזולטאַטן',
@@ -4519,22 +4541,24 @@ $messages['yi'] = array(
 	'mobile-frontend-hide-button' => 'באַהאַלטן',
 	'mobile-frontend-disable-button' => 'אָפאַקטיוויזירן',
 	'mobile-frontend-back-button' => 'צוריק',
-	'mobile-frontend-regular-site' => 'באַקוקן דעם בלאַט אין דער נארמאַלער וויקיפעדיע',
+	'mobile-frontend-regular-site' => 'באַקוקן דעם בלאַט אין דעם נארמאַלן {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'אָפאַקטיוויזירן די מאבילע ווערסיע אויף אייביג',
 	'mobile-frontend-error-page-title' => 'אוי, מיר האָבן אַ פּראָבלעם!',
-	'mobile-frontend-error-page-text' => "די ווערסיע פֿון מאבילע וויקיפעדיע ווערט נאך אַנטוויקלט און מיר אַרבעטן שווער צו פֿארריכטן אַלע אונזערע אינערלעכע גרײַזן. מ'האט שוין אינפֿאמירט אונז וועגן דעם דאָזיגן גרײַז און מ'וועט אים באַלד פֿאַרריכטן. באַקוקט דעם בלאַט א ביסל שפעטער!",
+	'mobile-frontend-error-page-text' => "די מאבילע ווערסיע פֿון {{SITENAME}} ווערט נאך אַנטוויקלט און מיר אַרבעטן שווער צו פֿארריכטן אַלע אונזערע אינערלעכע גרײַזן. מ'האט שוין אינפֿאמירט אונז וועגן דעם דאָזיגן גרײַז און מ'וועט אים באַלד פֿאַרריכטן. באַקוקט דעם בלאַט א ביסל שפעטער!",
 	'mobile-frontend-are-you-sure' => 'זענט איר זיכער?',
-	'mobile-frontend-explain-disable' => 'צי זענט איר זיכער איר ווילט אָפאַקטיוויזירן די מאבילע ווערסיע פֿון וויקיפעדיע ? אויב איר דרוקט <b>אָפאַקטיוויזירן</b>, דעמאלסט פֿון אַצינד אָן, ווען איר באַזוכט וויקיפעדיע, וועט איר נישט ווערן ווטערגעפֿירט צו דער מאבילע וויקיפעדיע.',
+	'mobile-frontend-explain-disable' => 'צי זענט איר זיכער איר ווילט אָפאַקטיוויזירן די מאבילע ווערסיע פֿון {{SITENAME}}? אויב איר דרוקט <b>אָפאַקטיוויזירן</b>, דעמאלסט פֿון אַצינד אָן, ווען איר באַזוכט {{SITENAME}}, וועט איר נישט ווערן ווײַטערגעפֿירט צו דער מאבילע {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'סוף',
 	'mobile-frontend-nav-top' => 'אויבן',
 	'mobile-frontend-nav-edit' => 'רעדאַקטירן',
 	'mobile-frontend-nav-history' => 'היסטאריע',
 	'mobile-frontend-search-text' => 'זוכן',
 	'mobile-frontend-contact-us' => 'טאמער איר האט א פֿראַגע אדער א הערה, זייט אזוי גוט קאנטאַקטן אונז בײַ mobile@wikipedia.org',
-	'mobile-frontend-author-link' => '
-באַקוקו די מעדיע טעקע אויף דער רעגולערער וויקיפעדיע צו זען אינפֿארמאַציע וועגן שרײַבער, ליצענץ און ווײַטער באשרײַבונגען',
+	'mobile-frontend-author-link' => 'באַקוקט די מעדיע טעקע אויף דער רעגולערער {{SITENAME}} צו זען אינפֿארמאַציע וועגן שרײַבער, ליצענץ און ווײַטערע באשרײַבונגען.',
 	'mobile-frontend-download-full-version' => 'אַראָפלאָדן פֿולע ווערסיע',
 	'mobile-frontend-file-namespace' => 'טעקע',
+	'mobile-frontend-wml-continue' => 'ווײַטער …',
+	'mobile-frontend-wml-back' => 'צוריק ...',
+	'mobile-frontend-view' => 'מאבילער קוק',
 );
 
 /** Yoruba (Yorùbá) */
