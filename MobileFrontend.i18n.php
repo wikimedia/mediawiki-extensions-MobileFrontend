@@ -263,6 +263,7 @@ $messages['anp'] = array(
  * @author OsamaK
  */
 $messages['ar'] = array(
+	'mobile-frontend-desc' => 'واجهة الجوال',
 	'mobile-frontend-search-submit' => 'اذهب',
 	'mobile-frontend-search-results' => 'نتائج البحث',
 	'mobile-frontend-no-article-found' => 'لم توجد أيّ مقالة',
@@ -275,26 +276,37 @@ $messages['ar'] = array(
 	'mobile-frontend-hide-button' => 'أخفِ',
 	'mobile-frontend-disable-button' => 'عطل',
 	'mobile-frontend-back-button' => 'ارجع',
-	'mobile-frontend-regular-site' => 'اعرض هذه الصفحة على ويكيبيديا الاعتيادية',
+	'mobile-frontend-regular-site' => 'اعرض هذه الصفحة على {{SITENAME}} الاعتيادية',
 	'mobile-frontend-perm-stop-redirect' => 'عطّل موقع النقّال بشكل دائم',
 	'mobile-frontend-error-page-title' => 'لدينا مشكلة!',
-	'mobile-frontend-error-page-text' => 'لا تزال ويكيبيديا الجوال تحت التطوير النشط ونحن نعمل بجد لإصلاح كل أخطائنا الداخلية. لقد أبلغنا عن هذا الخطأ وسوف نصلحه قريبًا. .من فضلك ارجع لاحقًا.',
+	'mobile-frontend-error-page-text' => 'لا تزال {{SITENAME}} الجوال تحت التطوير النشط ونحن نعمل بجد لإصلاح كل أخطائنا الداخلية. لقد أبلغنا عن هذا الخطأ وسوف نصلحه قريبًا. .من فضلك ارجع لاحقًا.',
 	'mobile-frontend-are-you-sure' => 'هل أنت متأكد؟',
-	'mobile-frontend-explain-disable' => 'هل أنت متأكد من أنك تريد تعطيل النسخة المحمولة من ويكيبيديا؟ لو أنك اخترت <b>عطل</b>، فمن الآن وصاعدا، عندما تزور ويكيبيديا، فلن يتم تحويلك إلى عرض المحمول هذا من ويكيبيديا.',
+	'mobile-frontend-explain-disable' => 'هل أنت متأكد من أنك تريد تعطيل النسخة المحمولة من {{SITENAME}}؟ إذا اخترت <b>عطل</b>، فمن الآن فصاعدا عندما تزور {{SITENAME}} فلن يتم تحويلك إلى عرض المحمول هذا ل{{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'نهاية',
 	'mobile-frontend-nav-top' => 'أعلى',
 	'mobile-frontend-nav-edit' => 'عدل',
 	'mobile-frontend-nav-history' => 'تاريخ',
 	'mobile-frontend-search-text' => 'ابحث',
 	'mobile-frontend-contact-us' => 'إذا كان لديك أي سؤال أو تعليق فلا تتردد في إرساله إلينا عبر البريد الإكتروني mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'راجع ملف الوسائط هذا على نسخة ويكيبيديا الاعتيادية لتشاهد معلومات منشئه وترخيصه ووصفًا إضافيًا.',
+	'mobile-frontend-author-link' => 'شاهد ملف الوسائط هذا على نسخة {{SITENAME}} الاعتيادية لترى معلومات منشئه وترخيصه ووصفًا إضافيًا.',
 	'mobile-frontend-download-full-version' => 'نزّل النسخة الكاملة',
 	'mobile-frontend-file-namespace' => 'ملف',
 	'mobile-frontend-wml-continue' => 'استمر ...',
 	'mobile-frontend-wml-back' => 'ارجع ...',
 	'mobile-frontend-view' => 'عرض المحمول',
+	'mobile-frontend-opt-in-message' => 'أتريد أن تنضم إلى التجربة الاختيارية لواجهة الجوال الجديدة؟',
 	'mobile-frontend-opt-in-yes-button' => 'نعم',
 	'mobile-frontend-opt-in-no-button' => 'لا',
+	'mobile-frontend-opt-in-title' => 'انضم إلى التجربة',
+	'mobile-frontend-opt-in-explain' => 'يسمح لك هذا بدخول التجربة',
+	'mobile-frontend-opt-out-message' => 'أتريد أن تغادر التجربة الاختيارية لواجهة الجوال الجديدة؟',
+	'mobile-frontend-opt-out-yes-button' => 'نعم',
+	'mobile-frontend-opt-out-no-button' => 'لا',
+	'mobile-frontend-opt-out-title' => 'انسحب من التجربة',
+	'mobile-frontend-opt-out-explain' => 'يسمح لك هذا بمغادرة التجربة',
+	'mobile-frontend-disable-images' => 'عطل الصور على موقع الجوال',
+	'mobile-frontend-enable-images' => 'مكّن الصور على موقع الجوال',
+	'mobile-frontend-news-items' => 'في الأخبار',
 );
 
 /** Aramaic (ܐܪܡܝܐ)
@@ -497,6 +509,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-wml-continue' => 'Далей …',
 	'mobile-frontend-wml-back' => 'Вярнуцца …',
 	'mobile-frontend-view' => 'Выгляд для мабільнага тэлефона',
+	'mobile-frontend-opt-in-message' => 'Далучыцца да праверкі новага мабільнага інтэрфэйсу?',
 	'mobile-frontend-opt-in-yes-button' => 'так',
 	'mobile-frontend-opt-in-no-button' => 'не',
 	'mobile-frontend-opt-in-title' => 'Далучыцца да праверкі',
@@ -556,35 +569,48 @@ $messages['bh'] = array(
 	'mobile-frontend-nav-history' => 'इतिहास',
 );
 
-/** Bengali (বাংলা) */
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
 $messages['bn'] = array(
+	'mobile-frontend-desc' => 'মোবাইল ফ্রন্টএন্ড',
 	'mobile-frontend-search-submit' => 'যাও',
 	'mobile-frontend-search-results' => 'অনুসন্ধানের ফলাফল',
 	'mobile-frontend-no-article-found' => 'কোনো নিবন্ধ পাওয়া যায়নি',
 	'mobile-frontend-featured-article' => 'আজকের নির্বাচিত নিবন্ধ',
 	'mobile-frontend-in-the-news' => 'খবরে',
 	'mobile-frontend-home-button' => 'প্রধান পাতা',
-	'mobile-frontend-random-button' => 'অজানা',
-	'mobile-frontend-back-to-top-of-section' => 'কোনো অনুচ্ছেদে ফিরে যাও',
+	'mobile-frontend-random-button' => 'অজানা পাতা',
+	'mobile-frontend-back-to-top-of-section' => 'অনুচ্ছেদে ফিরে যাও',
 	'mobile-frontend-show-button' => 'দেখাও',
 	'mobile-frontend-hide-button' => 'আড়াল করো',
 	'mobile-frontend-disable-button' => 'নিস্ক্রিয়',
 	'mobile-frontend-back-button' => 'পিছনে',
-	'mobile-frontend-regular-site' => 'নিয়মিত উইকিপিডিয়াতে এ পাতাটি দেখাও',
+	'mobile-frontend-regular-site' => 'নিয়মিত {{SITENAME}} সাইটে এ পাতাটি দেখাও',
 	'mobile-frontend-perm-stop-redirect' => 'স্থায়ীভাবে মোবাইল সাইট নিস্ক্রিয় করো',
 	'mobile-frontend-error-page-title' => 'আমাদের কোনো সমস্যা হয়েছে!',
-	'mobile-frontend-error-page-text' => 'উইকিপিডিয়া মোবাইল এখনও সক্রিয় উন্নয়নের মধ্যে রয়েছে এবং আমরা এর আভ্যন্তরীন সকল ত্রুটি ঠিক করতে কঠর পরিশ্রম করে যাচ্ছি। আমরা এ ত্রুটি সম্পর্কে জেনেছি এবং খুব শীঘ্রই এটি ঠিক হয়ে যাবে। দয়াকরে আবারও পরীক্ষা করবেন।',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} মোবাইল এখনও সক্রিয় উন্নয়নের মধ্যে রয়েছে এবং আমরা এর আভ্যন্তরীন সকল ত্রুটি ঠিক করতে কঠর পরিশ্রম করে যাচ্ছি। আমরা এ ত্রুটি সম্পর্কে জেনেছি এবং খুব শীঘ্রই এটি ঠিক হয়ে যাবে। দয়াকরে আবারও পরীক্ষা করুন।',
 	'mobile-frontend-are-you-sure' => 'আপনি কি নিশ্চিত ?',
-	'mobile-frontend-explain-disable' => 'আপনি কি নিশ্চিত যে আপনি উইকিপিডিয়ার মোবাইল সংস্করণ নিস্ক্রিয় করতে চান? আপনি যদি <b>নিস্ক্রিয়</b> বেছে নেন, তাহলে এখন থেকে, যখন আপনি উইকিপিডিয়া ব্রাউজ করবেন, আপনাকে উইকিপিডিয়ার মোবাইল সংস্করণে পুনর্নির্দেশ করা হবে না।',
+	'mobile-frontend-explain-disable' => 'আপনি কি নিশ্চিত যে আপনি {{SITENAME}} সাইটের মোবাইল সংস্করণ নিস্ক্রিয় করতে চান? আপনি যদি <b>নিস্ক্রিয়</b> বেছে নেন, তাহলে এখন থেকে, যখন আপনি {{SITENAME}} ব্রাউজ করবেন, আপনাকে {{SITENAME}} সাইটের মোবাইল সংস্করণে পুনর্নির্দেশ করা হবে না।',
 	'mobile-frontend-nav-end' => 'শেষ',
 	'mobile-frontend-nav-top' => 'উপরে',
 	'mobile-frontend-nav-edit' => 'সম্পাদনা',
 	'mobile-frontend-nav-history' => 'ইতিহাস',
 	'mobile-frontend-search-text' => 'অনুসন্ধান',
 	'mobile-frontend-contact-us' => 'যদি কোন প্রশ্ন বা মন্তব্য থাকে অনুগ্রহ করে নির্দ্বিধায় mobile@wikipedia.org ঠিকানায় আমাদের ইমেইল করুন।',
-	'mobile-frontend-author-link' => 'এই মিডিয়া ফাইলের মালিক, লাইসেন্স এবং অতিরিক্ত বিবরণ দেখতে ফাইলটি নিয়মিত উইকিপিডিয়ায় দেখুন।',
+	'mobile-frontend-author-link' => 'এই মিডিয়া ফাইলের মালিক, লাইসেন্স এবং অতিরিক্ত বিবরণ দেখতে ফাইলটি নিয়মিত {{SITENAME}} সাইটে দেখুন।',
 	'mobile-frontend-download-full-version' => 'সম্পূর্ণ সংস্করণ ডাউনলোড',
 	'mobile-frontend-file-namespace' => 'ফাইল',
+	'mobile-frontend-wml-continue' => 'অব্যাহত ...',
+	'mobile-frontend-wml-back' => 'পিছনে ...',
+	'mobile-frontend-view' => 'মোবাইল সংস্করণ',
+	'mobile-frontend-opt-in-yes-button' => 'হ্যাঁ',
+	'mobile-frontend-opt-in-no-button' => 'না',
+	'mobile-frontend-opt-out-yes-button' => 'হ্যাঁ',
+	'mobile-frontend-opt-out-no-button' => 'না',
+	'mobile-frontend-disable-images' => 'মোবাইল সাইটে চিত্র নিস্ক্রিয়',
+	'mobile-frontend-enable-images' => 'মোবাইল সাইটে চিত্র সক্রিয়',
+	'mobile-frontend-news-items' => 'খবরে',
 );
 
 /** Breton (Brezhoneg)
@@ -1381,6 +1407,7 @@ $messages['frp'] = array(
 	'mobile-frontend-opt-in-no-button' => 'nan',
 	'mobile-frontend-opt-out-yes-button' => 'ouè',
 	'mobile-frontend-opt-out-no-button' => 'nan',
+	'mobile-frontend-news-items' => 'Novèles',
 );
 
 /** Friulian (Furlan) */
@@ -1626,22 +1653,22 @@ $messages['he'] = array(
 	'mobile-frontend-desc' => 'תצוגה עבור מכשירים ניידים',
 	'mobile-frontend-search-submit' => 'חיפוש',
 	'mobile-frontend-search-results' => 'תוצאות החיפוש',
-	'mobile-frontend-no-article-found' => 'הדף לא נמצא',
-	'mobile-frontend-featured-article' => 'ערך מומלץ',
-	'mobile-frontend-in-the-news' => 'חדשות ואקטואליה',
+	'mobile-frontend-no-article-found' => 'לא נמצא שום דף',
+	'mobile-frontend-featured-article' => 'הערך המומלץ של היום',
+	'mobile-frontend-in-the-news' => 'בחדשות',
 	'mobile-frontend-home-button' => 'דף הבית',
-	'mobile-frontend-random-button' => 'ערך אקראי',
+	'mobile-frontend-random-button' => 'דף אקראי',
 	'mobile-frontend-back-to-top-of-section' => 'חזרה לקטע הקודם',
 	'mobile-frontend-show-button' => 'הצגה',
 	'mobile-frontend-hide-button' => 'הסתרה',
-	'mobile-frontend-disable-button' => 'ביטול',
+	'mobile-frontend-disable-button' => 'כיבוי',
 	'mobile-frontend-back-button' => 'חזרה',
 	'mobile-frontend-regular-site' => 'צפייה בדף זה באתר הרגיל של {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'הפסקה לצמיתות של השימוש באתר המותאם לניידים',
 	'mobile-frontend-error-page-title' => 'יש לנו תקלה!',
 	'mobile-frontend-error-page-text' => 'הגרסה של {{SITENAME}} למכשירים ניידים עדיין נמצאת בשלבי פיתוח ואנו עובדים קשה כדי לתקן את כל השגיאות הפנימיות שלנו. קיבלנו הודעה על שגיאה זו ונתקן אותה בהקדם. אנא בדקו מאוחר יותר!',
 	'mobile-frontend-are-you-sure' => 'בטוח שזו אכן כוונתך?',
-	'mobile-frontend-explain-disable' => 'האם אכן ברצונך לכבות גרסה זו של {{SITENAME}} עבור מכשירים ניידים? לחיצה על "ביטול" תוביל לכך שמעתה והלאה בעת גלישה באתר {{SITENAME}}, לא נפנה אותך לגרסה זו של {{SITENAME}} עבור מכשירים ניידים.',
+	'mobile-frontend-explain-disable' => 'האם אכן ברצונך לכבות גרסה זו של {{SITENAME}} עבור מכשירים ניידים? לחיצה על "כיבוי" תוביל לכך שמעתה והלאה בעת גלישה באתר {{SITENAME}}, לא נפנה אותך לגרסה זו של {{SITENAME}} עבור מכשירים ניידים.',
 	'mobile-frontend-nav-end' => 'סוף',
 	'mobile-frontend-nav-top' => 'ראש הדף',
 	'mobile-frontend-nav-edit' => 'עריכה',
@@ -2087,6 +2114,13 @@ $messages['kiu'] = array(
 	'mobile-frontend-random-button' => 'Rastamae',
 	'mobile-frontend-show-button' => 'Bıasne',
 	'mobile-frontend-hide-button' => 'Bınımne',
+);
+
+/** Kazakh (Cyrillic) (Қазақша (Cyrillic))
+ * @author GaiJin
+ */
+$messages['kk-cyrl'] = array(
+	'mobile-frontend-search-text' => 'Іздеу',
 );
 
 /** Kalaallisut (Kalaallisut) */
@@ -2690,6 +2724,7 @@ $messages['ml'] = array(
 	'mobile-frontend-opt-in-message' => 'ഐച്ഛികമായി ഉപയോഗിക്കാവുന്ന മൊബൈൽ രൂപ പരീക്ഷണത്തിൽ പങ്ക് ചേരുക',
 	'mobile-frontend-opt-in-yes-button' => 'വേണം',
 	'mobile-frontend-opt-in-no-button' => 'വേണ്ട',
+	'mobile-frontend-opt-in-explain' => 'ഇത് പരീക്ഷണത്തിലേക്ക് കടക്കാൻ താങ്കളെ അനുവദിക്കുന്നതാണ്',
 	'mobile-frontend-opt-out-yes-button' => 'വേണം',
 	'mobile-frontend-opt-out-no-button' => 'വേണ്ട',
 	'mobile-frontend-disable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനരഹിതമാക്കുക',
@@ -4637,6 +4672,7 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Bencmq
+ * @author Lauhenry
  * @author Liangent
  * @author Waihorace
  */
@@ -4683,6 +4719,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-opt-out-title' => '退出測試',
 	'mobile-frontend-opt-out-explain' => '這允許你退出測試',
 	'mobile-frontend-disable-images' => '在行動瀏覽上禁用圖像',
+	'mobile-frontend-enable-images' => '在行動瀏覽上啟用圖像',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
