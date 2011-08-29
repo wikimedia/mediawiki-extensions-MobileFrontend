@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.48';
+	const VERSION = '0.5.49';
 
 	/**
 	 * @var DOMDocument
@@ -522,18 +522,39 @@ class ExtMobileFrontend {
 		$backToTop = self::$messages['mobile-frontend-back-to-top-of-section'];
 		++$headings;
 		// Back to top link
-		$base = "<div class='section_anchors' id='anchor_" . intval( $headings - 1 ) .
-			"'><a href='#section_" . intval( $headings - 1 ) .
-			"' class='back_to_top'>&#8593; {$backToTop}</a></div>";
+		$base = Html::openElement( 'div', 
+									array( 'id' => 'anchor_' . intval( $headings - 1 ), 
+											'class' => 'section_anchors', ) 
+				) .
+				Html::rawElement( 'a',
+						array( 'href' => '#section_' . intval( $headings - 1 ), 
+								'class' => 'back_to_top' ), 
+								'&#8593;' . $backToTop  ) . 
+				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
-		$buttons = "<button class='section_heading show' section_id='{$headings}'>{$show}</button>" .
-			"<button class='section_heading hide' section_id='{$headings}'>{$hide}</button>";
-		$base .= "<h2 class='section_heading' id='section_{$headings}'{$matches[1]}{$buttons} <span id='{$headlineId}'>" .
-			"{$matches[2]}</span></h2><div class='content_block' id='content_{$headings}'>";
+		$buttons = Html::element( 'button',
+						array('class' => 'section_heading show', 
+								'section_id' => $headings ), 
+								$show ) .
+				Html::element( 'button', 
+						array('class' => 'section_heading hide',
+								'section_id' => $headings ),
+								$hide );		
+		$base .= Html::openElement( 'h2',
+						array('class' => 'section_heading',
+								'id' => 'section_' . $headings) ) . 
+			$buttons .
+				Html::element( 'span',
+						array( 'id' => $headlineId), 
+								$matches[2] ) .
+				Html::closeElement( 'h2' ) . 
+				Html::openElement( 'div', 
+						array('class' => 'content_block',
+								'id' => 'content_' . $headings) );
 
 		if ( $headings > 1 ) {
 			// Close it up here
-			$base = '</div>' . $base;
+			$base = Html::closeElement( 'div' ) . $base;
 		}
 
 		self::$headings = $headings;
