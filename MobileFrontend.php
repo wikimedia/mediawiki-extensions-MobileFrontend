@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.47';
+	const VERSION = '0.5.48';
 
 	/**
 	 * @var DOMDocument
@@ -104,7 +104,8 @@ class ExtMobileFrontend {
 	public static $viewNormalSiteURL;
 	public static $currentURL;
 	
-	public static $messageKeys = array( 'mobile-frontend-show-button',
+	public static $messageKeys = array( 
+		'mobile-frontend-show-button',
 		'mobile-frontend-hide-button',
 		'mobile-frontend-back-to-top-of-section',
 		'mobile-frontend-regular-site',
@@ -147,7 +148,7 @@ class ExtMobileFrontend {
 		'form',
 		'div.sister-project',
 		'script',
-		'div.magnify',		  # stupid magnify thing
+		'div.magnify',		  # magnify object
 		'.editsection',
 		'span.t',
 		'sup[style*="help"]',
