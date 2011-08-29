@@ -6,15 +6,15 @@ $copyright = self::$messages['mobile-frontend-copyright'];
 $disableImages = self::$messages['mobile-frontend-disable-images'];
 $enableImages = self::$messages['mobile-frontend-enable-images'];
 
-$disableMobileSiteURL = self::$disableMobileSiteURL;
-$viewNormalSiteURL = self::$viewNormalSiteURL;
+$disableMobileSiteURL = htmlspecialchars( self::$disableMobileSiteURL );
+$viewNormalSiteURL = htmlspecialchars( self::$viewNormalSiteURL );
 
 if ( self::$disableImages == 0 ) {
 	$imagesToggle = $disableImages;
-	$imagesURL = self::$disableImagesURL;
+	$imagesURL = htmlspecialchars( self::$disableImagesURL );
 } else {
 	$imagesToggle = $enableImages;
-	$imagesURL = self::$enableImagesURL;
+	$imagesURL = htmlspecialchars( self::$enableImagesURL );
 }
 
 $footerHtml = <<<EOD

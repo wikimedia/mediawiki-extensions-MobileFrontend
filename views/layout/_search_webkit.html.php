@@ -1,7 +1,7 @@
 <?php
 global $wgExtensionAssetsPath, $wgMobileFrontendLogo;
 
-$searchField = self::$searchField;
+$searchField = htmlspecialchars( self::$searchField );
 $mainPageUrl = self::$mainPageUrl;
 $randomPageUrl = self::$randomPageUrl;
 $homeButton = self::$messages['mobile-frontend-home-button'];

@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.46';
+	const VERSION = '0.5.47';
 
 	/**
 	 * @var DOMDocument
@@ -568,7 +568,7 @@ class ExtMobileFrontend {
 		$segments = explode( $this->WMLSectionSeperator, $s );
 		$card = '';
 		$idx = 0;
-		$requestedSegment = self::$requestedSegment;
+		$requestedSegment = htmlspecialchars( self::$requestedSegment );
 		$title = htmlspecialchars( self::$title->getText() );
 
 		$card .= "<card id='{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
@@ -787,13 +787,13 @@ class ExtMobileFrontend {
 			header( 'Content-Type: application/json' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
-			$json_data['title'] = self::$title->getText();
+			$json_data['title'] = htmlspecialchars ( self::$title->getText() );
 			$json_data['html'] = $contentHtml;
 
 			$json = FormatJson::encode( $json_data );
 
 			if ( !empty( self::$callback ) ) {
-				$json = urlencode( self::$callback ) . '(' . $json . ')';
+				$json = urlencode( htmlspecialchars( self::$callback ) ) . '(' . $json . ')';
 			}
 
 			wfProfileOut( __METHOD__ );
