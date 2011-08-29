@@ -327,7 +327,7 @@ class ExtMobileFrontend {
 		if ( $mobileAction == 'opt_in_cookie' ) {
 			$this->setOptInOutCookie( '1' );
 			$this->disableCaching();
-			$location = Title::newMainPage()->getFullURL();
+			$location = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
 			$wgRequest->response()->header( 'Location: ' . $location );
 		}
 
