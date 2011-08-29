@@ -55,7 +55,7 @@ window.onorientationchange = updateOrientation;
 function wm_reveal_for_hash( hash ) {
 	var targetel = $( hash );
 	if( targetel ) {
-		var parentdiv = targetel.parents( 'div.content_block' );
+		var parentdiv = targetel.closest( '.section_heading' ).next( '.content_block' );
 		if( parentdiv.length > 0 && ! parentdiv.is( ':visible' ) ) {
 			var section_idx = parseInt( parentdiv.get( 0 ).id.replace( /content_(\d+)/, '$1' ) );
 			wm_toggle_section( section_idx );
