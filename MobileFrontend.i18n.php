@@ -272,7 +272,7 @@ $messages['ar'] = array(
 	'mobile-frontend-home-button' => 'الرئيسية',
 	'mobile-frontend-random-button' => 'عشوائي',
 	'mobile-frontend-back-to-top-of-section' => 'اقفز إلى القسم السابق',
-	'mobile-frontend-show-button' => 'عرض',
+	'mobile-frontend-show-button' => 'اعرض',
 	'mobile-frontend-hide-button' => 'أخفِ',
 	'mobile-frontend-disable-button' => 'عطل',
 	'mobile-frontend-back-button' => 'ارجع',
@@ -1328,6 +1328,7 @@ $messages['fi'] = array(
 );
 
 /** French (Français)
+ * @author Gomoko
  * @author Hashar
  * @author Sherbrooke
  * @author Tpt
@@ -1349,26 +1350,30 @@ $messages['fr'] = array(
 	'mobile-frontend-regular-site' => 'Afficher cette page sur {{SITENAME}} classique',
 	'mobile-frontend-perm-stop-redirect' => 'Désactiver le site mobile de manière permanente',
 	'mobile-frontend-error-page-title' => 'Désolé ! Nous avons un problème.',
-	'mobile-frontend-error-page-text' => 'Wikipédia mobile est toujours en développement actif et nous nous efforçons de résoudre nos erreurs internes. Nous avons été avisés de cette erreur et nous allons la corriger rapidement. Réessayez bientôt !',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} mobile est toujours en développement actif et nous nous efforçons de résoudre toutes nos erreurs internes. Nous avons été avertis de cette erreur et nous allons la corriger rapidement. Réessayez bientôt !',
 	'mobile-frontend-are-you-sure' => 'Êtes-vous certain ?',
-	'mobile-frontend-explain-disable' => 'Êtes-vous certain de vouloir désactiver la version mobile de Wikipédia ? Si vous choisissez <b>Désactiver</b>, vous ne serez plus redirigé vers la version mobile lorsque vous visiterez Wikipédia.',
+	'mobile-frontend-explain-disable' => 'Êtes-vous certain de vouloir désactiver la version mobile de {{SITENAME}}? Si vous choisissez <b>Désactiver</b>, alors vous ne serez plus redirigé vers la version mobile de {{SITENAME}} lorsque vous visiterez {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Fin',
 	'mobile-frontend-nav-top' => 'Haut',
 	'mobile-frontend-nav-edit' => 'Modifier',
 	'mobile-frontend-nav-history' => 'Historique',
 	'mobile-frontend-search-text' => 'Rechercher',
 	'mobile-frontend-contact-us' => "Si vous avez des questions ou des commentaires n'hésitez pas à nous contacter à mobile@wikipedia.org",
-	'mobile-frontend-author-link' => 'Afficher ce fichier sur Wikipédia pour voir les informations sur son auteur, sa licence et des descriptions supplémentaires.',
+	'mobile-frontend-author-link' => 'Afficher ce fichier de média sur {{SITENAME}} normal pour voir les informations sur son auteur, sa licence et des descriptions supplémentaires.',
 	'mobile-frontend-download-full-version' => 'Télécharger la version complète',
 	'mobile-frontend-file-namespace' => 'Fichier',
 	'mobile-frontend-wml-continue' => 'Continuer…',
 	'mobile-frontend-wml-back' => 'Retour…',
 	'mobile-frontend-view' => 'Affichage mobile',
+	'mobile-frontend-opt-in-message' => 'Rejoindre nos volontaires de test sur le nouveau frontal mobile?',
 	'mobile-frontend-opt-in-yes-button' => 'oui',
 	'mobile-frontend-opt-in-no-button' => 'non',
+	'mobile-frontend-opt-in-title' => 'Volontaire pour tester',
 	'mobile-frontend-opt-in-explain' => 'Cela vous permet de débuter le test',
+	'mobile-frontend-opt-out-message' => 'Abandonner le test volontaire du nouveau frontal mobile?',
 	'mobile-frontend-opt-out-yes-button' => 'oui',
 	'mobile-frontend-opt-out-no-button' => 'non',
+	'mobile-frontend-opt-out-title' => 'Sortie des volontaires de test',
 	'mobile-frontend-opt-out-explain' => 'Cela vous permet de mettre fin au test',
 	'mobile-frontend-disable-images' => 'Désactiver les images en version mobile',
 	'mobile-frontend-enable-images' => 'Activer les images sur le site mobile',
@@ -2014,6 +2019,12 @@ $messages['it'] = array(
 	'mobile-frontend-author-link' => "Visualizza questo file multimediale sulla {{SITENAME}} normale per vedere le informazioni sull'autore, la licenza ed ulteriori dettagli.",
 	'mobile-frontend-download-full-version' => 'Scarica la versione completa',
 	'mobile-frontend-file-namespace' => 'File',
+	'mobile-frontend-wml-continue' => 'Continua ...',
+	'mobile-frontend-wml-back' => 'Indietro ...',
+	'mobile-frontend-opt-in-yes-button' => 'sì',
+	'mobile-frontend-opt-in-no-button' => 'no',
+	'mobile-frontend-opt-out-yes-button' => 'sì',
+	'mobile-frontend-opt-out-no-button' => 'no',
 );
 
 /** Japanese (日本語)
@@ -3147,35 +3158,46 @@ $messages['or'] = array(
 	'mobile-frontend-view' => 'ମୋବାଇଲ ଦେଖଣା',
 );
 
-/** Ossetic (Ирон) */
+/** Ossetic (Ирон)
+ * @author Bouron
+ */
 $messages['os'] = array(
-	'mobile-frontend-search-submit' => 'Агур',
-	'mobile-frontend-search-results' => 'Агуырды фæстиуæгтæ',
+	'mobile-frontend-desc' => 'Мобилон хуыз',
+	'mobile-frontend-search-submit' => 'Статьямæ',
+	'mobile-frontend-search-results' => 'Агуырды фæстиуджытæ',
 	'mobile-frontend-no-article-found' => 'Иу статья дæр нæ разынд',
 	'mobile-frontend-featured-article' => 'Боны сæрмагонд статья',
 	'mobile-frontend-in-the-news' => 'Нæуæг хабæртты',
 	'mobile-frontend-home-button' => 'Райдианмæ',
-	'mobile-frontend-random-button' => 'Æнæбары æвзæрст',
-	'mobile-frontend-back-to-top-of-section' => 'Раздæх иу хай фæстæмæ',
-	'mobile-frontend-show-button' => 'Равдис',
-	'mobile-frontend-hide-button' => 'Бамбæхс',
-	'mobile-frontend-disable-button' => 'Ахицæн кæн',
+	'mobile-frontend-random-button' => 'Халæй ист',
+	'mobile-frontend-back-to-top-of-section' => 'Раздæхын иу хай фæстæмæ',
+	'mobile-frontend-show-button' => 'Равдисын',
+	'mobile-frontend-hide-button' => 'Айсын',
+	'mobile-frontend-disable-button' => 'Ахицæн кæнын',
 	'mobile-frontend-back-button' => 'Фæстæмæ',
-	'mobile-frontend-regular-site' => 'Фен ацы фарс хуымæтæджы Википедийы',
-	'mobile-frontend-perm-stop-redirect' => 'Мобилон сайт ахицæн кæн!',
-	'mobile-frontend-error-page-title' => 'Цыдæр нæ фæрæстмæ!',
-	'mobile-frontend-error-page-text' => 'Мобилон Википеди нырмадæр кæронмæ арызт нæу, æмæ мах кусæм нæ мидæггаг рæдыддытæ раст кæныныл. Мах фехъусын кодтой ацы рæдыды тыххæй æмæ йæ тагъд хъуамæ сраст кæнæм. Дæ хорзæхæй, фæстæдæр та бафæлвар!',
+	'mobile-frontend-regular-site' => 'Фен ацы фарс нæуи {{SITENAME}}-ы',
+	'mobile-frontend-perm-stop-redirect' => 'Мобилон сайт ахицæн кæнын',
+	'mobile-frontend-error-page-title' => 'Проблемæ нæм ис!',
+	'mobile-frontend-error-page-text' => 'Мобилон {{SITENAME}} нырмадæр кæронмæ арызт нæу, æмæ мах кусæм нæ мидæггаг рæдыддытæ раст кæныныл. Мах фехъусын кодтой ацы рæдыды тыххæй æмæ йæ тагъд хъуамæ сраст кæнæм. Дæ хорзæхæй, фæстæдæр та бафæлвар!',
 	'mobile-frontend-are-you-sure' => 'Æцæг дæ фæнды?',
-	'mobile-frontend-explain-disable' => 'Æцæг дæ фæнды мобилон Википеди ахицæн кæнын? Кæд равзарай <b>Ахицæн кæн</b>, уæд умæй фæстæ Википедимæ куы хизай, уæд нал уыдзæ рвыст ацы мобилон Википедимæ.',
+	'mobile-frontend-explain-disable' => 'Æцæг дæ фæнды мобилон {{SITENAME}} ахицæн кæнын? Кæд равзарай <b>Ахицæн кæн</b>, уæд умæй фæстæ Википедимæ куы хизай, уæд нал уыдзæ рвыст ацы мобилон Википедимæ.',
 	'mobile-frontend-nav-end' => 'Кæронмæ',
 	'mobile-frontend-nav-top' => 'Райдианмæ',
-	'mobile-frontend-nav-edit' => 'Баив',
+	'mobile-frontend-nav-edit' => 'Ивын',
 	'mobile-frontend-nav-history' => 'Истори',
 	'mobile-frontend-search-text' => 'Агуырд',
-	'mobile-frontend-contact-us' => 'Фыссут нæм мобилон версийы тыххæй мæнæ ацы адрисыл mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Бакæс ацы файл хуымæтæджы Википедийы цæмæй фенай информаци автор, лицензи æмæ æндæр миниуджытыл.',
-	'mobile-frontend-download-full-version' => 'Раппар æй нæхъæнæй',
+	'mobile-frontend-contact-us' => 'Фыссут нæм мобилон версийы тыххæй мæнæ ацы адрисмæ mobile@wikipedia.org',
+	'mobile-frontend-author-link' => 'Бакæс ацы файл нæуи {{SITENAME}}-ы цæмæй фенай информаци автор, лицензи æмæ æндæр миниуджытыл.',
+	'mobile-frontend-download-full-version' => 'Раппарын нæхъæнæй',
 	'mobile-frontend-file-namespace' => 'Файл',
+	'mobile-frontend-wml-continue' => 'Дарддæр...',
+	'mobile-frontend-wml-back' => 'Фæстæмæ...',
+	'mobile-frontend-view' => 'Мобилон хуыз',
+	'mobile-frontend-opt-in-yes-button' => 'уойы',
+	'mobile-frontend-opt-in-no-button' => 'нæйы',
+	'mobile-frontend-opt-out-yes-button' => 'уойы',
+	'mobile-frontend-opt-out-no-button' => 'нæйы',
+	'mobile-frontend-news-items' => 'Нæуæг хабæртты',
 );
 
 /** Punjabi (ਪੰਜਾਬੀ) */
@@ -3361,6 +3383,8 @@ $messages['pnb'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'ہاں',
 	'mobile-frontend-opt-out-no-button' => 'نئیں',
 	'mobile-frontend-opt-out-explain' => 'تسیں نتارا چھڈ سکدے او',
+	'mobile-frontend-disable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں بند کرو',
+	'mobile-frontend-enable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں آن کرو',
 	'mobile-frontend-news-items' => 'دساں چ',
 );
 
@@ -4632,6 +4656,7 @@ $messages['yue'] = array(
 /** Simplified Chinese (‪中文(简体)‬)
  * @author PhiLiP
  * @author Shizhao
+ * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
 	'mobile-frontend-desc' => '移动前端',
@@ -4645,14 +4670,14 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-back-to-top-of-section' => '跳转至前一段落',
 	'mobile-frontend-show-button' => '展开',
 	'mobile-frontend-hide-button' => '隐藏',
-	'mobile-frontend-disable-button' => '禁用',
+	'mobile-frontend-disable-button' => '停用',
 	'mobile-frontend-back-button' => '后退',
 	'mobile-frontend-regular-site' => '在原始{{SITENAME}}上查看此页面',
 	'mobile-frontend-perm-stop-redirect' => '永久禁用移动版网站',
 	'mobile-frontend-error-page-title' => '错误！',
 	'mobile-frontend-error-page-text' => '{{SITENAME}}移动版尚在开发之中，我们正努力修复我们的内部错误。我们已收到关于本错误的通知，并将在不久后予以修复。请稍后再检查修复情况！',
 	'mobile-frontend-are-you-sure' => '你确定吗？',
-	'mobile-frontend-explain-disable' => '你确定要禁用{{SITENAME}}移动版？如果你选择<b>禁用</b>，那么从现在开始，当你访问{{SITENAME}}时，你不会被重定向至{{SITENAME}}移动版视图。',
+	'mobile-frontend-explain-disable' => '你确定要停用{{SITENAME}}移动版？如果你选择<b>停用</b>，那么从现在开始，当你访问{{SITENAME}}时，你不再会被重定向至{{SITENAME}}移动版界面。',
 	'mobile-frontend-nav-end' => '结束',
 	'mobile-frontend-nav-top' => '返回页顶',
 	'mobile-frontend-nav-edit' => '编辑',
@@ -4675,6 +4700,7 @@ $messages['zh-hans'] = array(
  * @author Lauhenry
  * @author Liangent
  * @author Waihorace
+ * @author Xiaomingyan
  */
 $messages['zh-hant'] = array(
 	'mobile-frontend-desc' => '移動前端',
@@ -4688,7 +4714,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-back-to-top-of-section' => '跳轉至前一段落',
 	'mobile-frontend-show-button' => '顯示',
 	'mobile-frontend-hide-button' => '隱藏',
-	'mobile-frontend-disable-button' => '禁用',
+	'mobile-frontend-disable-button' => '停用',
 	'mobile-frontend-back-button' => '返回',
 	'mobile-frontend-regular-site' => '在原版{{SITENAME}}瀏覽此頁',
 	'mobile-frontend-perm-stop-redirect' => '永久禁用移動版網站',
