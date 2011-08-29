@@ -103,6 +103,35 @@ class ExtMobileFrontend {
 	public static $disableMobileSiteURL;
 	public static $viewNormalSiteURL;
 	public static $currentURL;
+	
+	public static $messageKeys = array( 'mobile-frontend-show-button',
+		'mobile-frontend-hide-button',
+		'mobile-frontend-back-to-top-of-section',
+		'mobile-frontend-regular-site',
+		'mobile-frontend-perm-stop-redirect',
+		'mobile-frontend-home-button',
+		'mobile-frontend-random-button',
+		'mobile-frontend-are-you-sure',
+		'mobile-frontend-explain-disable',
+		'mobile-frontend-disable-button',
+		'mobile-frontend-back-button',
+		'mobile-frontend-opt-in-message',
+		'mobile-frontend-opt-in-yes-button',
+		'mobile-frontend-opt-in-no-button',
+		'mobile-frontend-opt-in-title',
+		'mobile-frontend-opt-out-message',
+		'mobile-frontend-opt-out-yes-button',
+		'mobile-frontend-opt-out-no-button',
+		'mobile-frontend-opt-out-title',
+		'mobile-frontend-opt-in-explain',
+		'mobile-frontend-opt-out-explain',
+		'mobile-frontend-disable-images',
+		'mobile-frontend-wml-continue',
+		'mobile-frontend-wml-back',
+		'mobile-frontend-enable-images',
+		'mobile-frontend-featured-article',
+		'mobile-frontend-news-items',
+	);
 
 	public $itemsToRemove = array(
 		'#contentSub',		  # redirection notice
@@ -164,34 +193,12 @@ class ExtMobileFrontend {
 		$copyright = $skin->getCopyright();
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
-		self::$messages['mobile-frontend-show'] = wfMsg( 'mobile-frontend-show-button' );
-		self::$messages['mobile-frontend-hide'] = wfMsg( 'mobile-frontend-hide-button' );
-		self::$messages['mobile-frontend-back-to-top'] = wfMsg( 'mobile-frontend-back-to-top-of-section' );
-		self::$messages['mobile-frontend-regular-site'] = wfMsg( 'mobile-frontend-regular-site' );
-		self::$messages['mobile-frontend-perm-stop-redirect'] = wfMsg( 'mobile-frontend-perm-stop-redirect' );
+		
 		self::$messages['mobile-frontend-copyright'] = $copyright;
-		self::$messages['mobile-frontend-home-button'] = wfMsg( 'mobile-frontend-home-button' );
-		self::$messages['mobile-frontend-random-button'] = wfMsg( 'mobile-frontend-random-button' );
-		self::$messages['mobile-frontend-are-you-sure'] = wfMsg( 'mobile-frontend-are-you-sure' );
-		self::$messages['mobile-frontend-explain-disable'] = wfMsg( 'mobile-frontend-explain-disable' );
-		self::$messages['mobile-frontend-disable-button'] = wfMsg( 'mobile-frontend-disable-button' );
-		self::$messages['mobile-frontend-back-button'] = wfMsg( 'mobile-frontend-back-button' );
-		self::$messages['mobile-frontend-opt-in-message'] = wfMsg( 'mobile-frontend-opt-in-message' );
-		self::$messages['mobile-frontend-opt-in-yes-button'] = wfMsg( 'mobile-frontend-opt-in-yes-button' );
-		self::$messages['mobile-frontend-opt-in-no-button'] = wfMsg( 'mobile-frontend-opt-in-no-button' );
-		self::$messages['mobile-frontend-opt-in-title'] = wfMsg( 'mobile-frontend-opt-in-title' );
-		self::$messages['mobile-frontend-opt-out-message'] = wfMsg( 'mobile-frontend-opt-out-message' );
-		self::$messages['mobile-frontend-opt-out-yes-button'] = wfMsg( 'mobile-frontend-opt-out-yes-button' );
-		self::$messages['mobile-frontend-opt-out-no-button'] = wfMsg( 'mobile-frontend-opt-out-no-button' );
-		self::$messages['mobile-frontend-opt-out-title'] = wfMsg( 'mobile-frontend-opt-out-title' );
-		self::$messages['mobile-frontend-opt-in-explain'] = wfMsg( 'mobile-frontend-opt-in-explain' );
-		self::$messages['mobile-frontend-opt-out-explain'] = wfMsg( 'mobile-frontend-opt-out-explain' );
-		self::$messages['mobile-frontend-disable-images'] = wfMsg( 'mobile-frontend-disable-images' );
-		self::$messages['mobile-frontend-wml-continue'] = wfMsg( 'mobile-frontend-wml-continue' );
-		self::$messages['mobile-frontend-wml-back'] = wfMsg( 'mobile-frontend-wml-back' );
-		self::$messages['mobile-frontend-enable-images'] = wfMsg( 'mobile-frontend-enable-images' );
-		self::$messages['mobile-frontend-featured-article'] = wfMsg( 'mobile-frontend-featured-article' );
-		self::$messages['mobile-frontend-news-items'] = wfMsg( 'mobile-frontend-news-items' );
+	
+		foreach ( self::$messageKeys as $messageKey ) {
+			self::$messages[$messageKey] = wfMsg( $messageKey );
+		}
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
@@ -509,9 +516,9 @@ class ExtMobileFrontend {
 		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
 
 		static $headings = 0;
-		$show = self::$messages['mobile-frontend-show'];
-		$hide = self::$messages['mobile-frontend-hide'];
-		$backToTop = self::$messages['mobile-frontend-back-to-top'];
+		$show = self::$messages['mobile-frontend-show-button'];
+		$hide = self::$messages['mobile-frontend-hide-button'];
+		$backToTop = self::$messages['mobile-frontend-back-to-top-of-section'];
 		++$headings;
 		// Back to top link
 		$base = "<div class='section_anchors' id='anchor_" . intval( $headings - 1 ) .
