@@ -3144,17 +3144,24 @@ $messages['oc'] = array(
 );
 
 /** Oriya (ଓଡ଼ିଆ)
+ * @author Odisha1
  * @author Psubhashish
  */
 $messages['or'] = array(
+	'mobile-frontend-search-submit' => 'ଯିବା',
 	'mobile-frontend-search-results' => 'ଖୋଜିବାରୁ ମିଳିଲା',
+	'mobile-frontend-home-button' => 'ମୂଳ ଜାଗା',
+	'mobile-frontend-random-button' => 'ଯାହିତାହି',
 	'mobile-frontend-show-button' => 'ଦେଖାଇବେ',
 	'mobile-frontend-hide-button' => 'ଲୁଚାଅ',
 	'mobile-frontend-disable-button' => 'ଅଚଳ କରିଦିଆଯାଇଛି',
+	'mobile-frontend-back-button' => 'ପୂର୍ବବର୍ତ୍ତୀ',
+	'mobile-frontend-nav-end' => 'ଶେଷ',
 	'mobile-frontend-nav-edit' => 'ବଦଳାଇବେ',
 	'mobile-frontend-nav-history' => 'ଇତିହାସ',
 	'mobile-frontend-search-text' => 'ଖୋଜିବା',
 	'mobile-frontend-file-namespace' => 'ଫାଇଲ',
+	'mobile-frontend-wml-back' => 'ପୂର୍ବବର୍ତ୍ତୀ ...',
 	'mobile-frontend-view' => 'ମୋବାଇଲ ଦେଖଣା',
 );
 
