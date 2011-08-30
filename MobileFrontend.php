@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.49';
+	const VERSION = '0.5.50';
 
 	/**
 	 * @var DOMDocument
@@ -292,10 +292,18 @@ class ExtMobileFrontend {
 		self::$search = $wgRequest->getText( 'search' );
 		self::$callback = $wgRequest->getText( 'callback' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
+		
+		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 
 		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
 		$device = new DeviceDetection();
-		$formatName = $device->formatName( $userAgent, $acceptHeader );
+		
+		if ( !empty( $xDevice ) ) {
+			$formatName = $xDevice;
+		} else {
+			$formatName = $device->formatName( $userAgent, $acceptHeader );
+		}
+		
 		self::$device = $device->format( $formatName );
 
 		if ( self::$device['view_format'] === 'wml' ) {
@@ -365,8 +373,6 @@ class ExtMobileFrontend {
 		// html_preferred_dtd
 
 		// Determine
-
-		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 
 		if (self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ||
@@ -529,7 +535,7 @@ class ExtMobileFrontend {
 				Html::rawElement( 'a',
 						array( 'href' => '#section_' . intval( $headings - 1 ), 
 								'class' => 'back_to_top' ), 
-								'&#8593;' . $backToTop  ) . 
+								'&#8593;' . $backToTop	) . 
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
 		$buttons = Html::element( 'button',

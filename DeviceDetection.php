@@ -294,6 +294,9 @@ class DeviceDetection {
 
 		if ( preg_match( '/Android/', $userAgent ) ) {
 			$formatName = 'android';
+			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
+				$formatName = 'operamini';
+			}
 		} elseif ( preg_match( '/iPhone.* Safari/', $userAgent ) ) {
 			if ( strpos( $userAgent, 'iPhone OS 2' ) !== false ) {
 				$formatName = 'iphone2';
