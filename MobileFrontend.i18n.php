@@ -129,7 +129,9 @@ $messages['ace'] = array(
 	'mobile-frontend-file-namespace' => 'Beureukaih',
 );
 
-/** Afrikaans (Afrikaans) */
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
 $messages['af'] = array(
 	'mobile-frontend-search-submit' => 'Soek',
 	'mobile-frontend-search-results' => 'Soekresultate',
@@ -159,6 +161,14 @@ Ons het die fout ontvang en sal dit spoedig regmaak. Besoek ons weer binnekort!'
 	'mobile-frontend-author-link' => 'Kyk na die medialêer op die gewone {{SITENAME}} om inligting oor outeurskap, lisensies, en addisionele beskrywings te sien.',
 	'mobile-frontend-download-full-version' => 'Laai volledige weergawe af',
 	'mobile-frontend-file-namespace' => 'Lêer',
+	'mobile-frontend-wml-continue' => 'Gaan voort ...',
+	'mobile-frontend-wml-back' => 'Terug ...',
+	'mobile-frontend-view' => 'Mobiele weergawe',
+	'mobile-frontend-opt-in-yes-button' => 'ja',
+	'mobile-frontend-opt-in-no-button' => 'nee',
+	'mobile-frontend-opt-out-yes-button' => 'ja',
+	'mobile-frontend-opt-out-no-button' => 'nee',
+	'mobile-frontend-news-items' => 'In die nuus',
 );
 
 /** Akan (Akan) */
@@ -1266,6 +1276,7 @@ $messages['ext'] = array(
  * @author Mjbmr
  */
 $messages['fa'] = array(
+	'mobile-frontend-desc' => 'ظاهر تلفن همراه',
 	'mobile-frontend-search-submit' => 'برو',
 	'mobile-frontend-search-results' => 'نتایج جستجو',
 	'mobile-frontend-no-article-found' => 'مقاله پیدا نشد',
@@ -1278,10 +1289,10 @@ $messages['fa'] = array(
 	'mobile-frontend-hide-button' => 'نهفتن',
 	'mobile-frontend-disable-button' => 'غیر فعال کردن',
 	'mobile-frontend-back-button' => 'بازگشت',
-	'mobile-frontend-regular-site' => 'نمایش این صفحه در خود ویکی‌پدیا',
+	'mobile-frontend-regular-site' => 'نمایش این صفحه در خود {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'غیر فعال کردن همیشگی نسخه موبایل',
 	'mobile-frontend-error-page-title' => 'مشکلی رخ داده است!',
-	'mobile-frontend-error-page-text' => 'نسخه موبایل ویکی‌پدیا در حال توسعه و گسترش است و ما در حال تلاش برای رفع تمامی نواقص و خطاها هستیم. ما در مورد بسیاری از خطاها مطلع هستیم و تمام تلاش خود را برای رفع آن به کار می بریم. لطفاً به زودی مشکل را دوباره بررسی کنید!',
+	'mobile-frontend-error-page-text' => 'نسخه موبایل {{SITENAME}} در حال توسعه و گسترش است و ما در حال تلاش برای رفع تمامی نواقص و خطاها هستیم. ما در مورد بسیاری از خطاها مطلع هستیم و تمام تلاش خود را برای رفع آن به کار می بریم. لطفاً به زودی مشکل را دوباره بررسی کنید!',
 	'mobile-frontend-are-you-sure' => 'آیا مطمئن هستید؟',
 	'mobile-frontend-explain-disable' => 'آیا مطمئن هستید که می خواهید نسخه تلفن همراه {{SITENAME}} را غیر فعال کنید؟ اگر شما <b>غیر فعال کردن</b> را انتخاب کنید، از این به بعد در زمان مشاهده {{SITENAME}} به نمای تلفن همراه هدایت نخواهید شد.',
 	'mobile-frontend-nav-end' => 'پایان',
@@ -1290,10 +1301,19 @@ $messages['fa'] = array(
 	'mobile-frontend-nav-history' => 'تاریخچه',
 	'mobile-frontend-search-text' => 'جستجو',
 	'mobile-frontend-contact-us' => 'در صورت داشتن هرگونه سوال یا نظر لطفا با ما به نشانی mobile@wikipedia.org تماس بگیرید.',
-	'mobile-frontend-author-link' => 'نمایش این پرونده رسانه‌ای در ویکی‌پدیای معمولی برای دیدن اطلاعات درباره مؤلف، مجوز و توضیحات اضافی.',
+	'mobile-frontend-author-link' => 'نمایش این پرونده رسانه‌ای در {{SITENAME}} به صورت معمولی، جهت دیدن اطلاعات درباره مؤلف، مجوز و توضیحات اضافی.',
 	'mobile-frontend-download-full-version' => 'بارگیری نسخه کامل',
 	'mobile-frontend-file-namespace' => 'پرونده',
+	'mobile-frontend-wml-continue' => 'ادامه...',
+	'mobile-frontend-wml-back' => 'بازگشت...',
 	'mobile-frontend-view' => 'نمای تلفن همراه',
+	'mobile-frontend-opt-in-yes-button' => 'بله',
+	'mobile-frontend-opt-in-no-button' => 'خیر',
+	'mobile-frontend-opt-out-yes-button' => 'بله',
+	'mobile-frontend-opt-out-no-button' => 'خیر',
+	'mobile-frontend-disable-images' => 'غیر فعال کردن تصاویر بر روی وب‌گاه تلفن همراه',
+	'mobile-frontend-enable-images' => 'فعال سازی تصاویر بر روی وب‌گاه تلفن همراه',
+	'mobile-frontend-news-items' => 'در خبرها',
 );
 
 /** Finnish (Suomi) */
