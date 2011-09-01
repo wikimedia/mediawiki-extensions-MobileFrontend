@@ -836,6 +836,18 @@ $messages['cs'] = array(
 	'mobile-frontend-wml-continue' => 'Pokračovat …',
 	'mobile-frontend-wml-back' => 'Zpět …',
 	'mobile-frontend-view' => 'Mobilní verze',
+	'mobile-frontend-opt-in-message' => 'Zúčastníte se našeho testování nového mobilního rozhraní?',
+	'mobile-frontend-opt-in-yes-button' => 'ano',
+	'mobile-frontend-opt-in-no-button' => 'ne',
+	'mobile-frontend-opt-in-title' => 'Zúčastnit se testování',
+	'mobile-frontend-opt-in-explain' => 'Tohle vám umožní zúčastnit se testu',
+	'mobile-frontend-opt-out-message' => 'Opustit testování nového mobilního rozhraní?',
+	'mobile-frontend-opt-out-yes-button' => 'ano',
+	'mobile-frontend-opt-out-no-button' => 'ne',
+	'mobile-frontend-opt-out-title' => 'Skončit s testováním',
+	'mobile-frontend-opt-out-explain' => 'Tohle vám umožní opustit test',
+	'mobile-frontend-disable-images' => 'Vypnout v mobilní verzi obrázky',
+	'mobile-frontend-enable-images' => 'Zapnout v mobilní verzi obrázky',
 	'mobile-frontend-news-items' => 'Aktuality',
 );
 
