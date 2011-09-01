@@ -265,8 +265,9 @@ class ExtMobileFrontend {
 
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
-			$location = str_replace('?disableImages=1', '', str_replace( '&disableImages=1', '', $wgRequest->appendQuery('mfi=0') ) );
-			$wgRequest->response()->header( 'Location: ' . $location );
+			$location = str_replace( '?disableImages=1', '', str_replace( '&disableImages=1', '', $wgRequest->getFullRequestURL() ) );
+			$location = str_replace( '&mfi=1', '', str_replace( '&mfi=0', '', $location ) );
+			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=0' );
 		}
 		
 		if ( self::$disableImages == 0 ) {
@@ -281,8 +282,9 @@ class ExtMobileFrontend {
 			if ( $disableImages ) {
 				$wgRequest->response()->setcookie( 'disableImages', '' );
 			}
-			$location = str_replace( '?enableImages=1', '', str_replace( '&enableImages=1', '', $wgRequest->appendQuery('mfi=1') ) );
-			$wgRequest->response()->header( 'Location: ' . $location );
+			$location = str_replace( '?enableImages=1', '', str_replace( '&enableImages=1', '', $wgRequest->getFullRequestURL() ) );
+			$location = str_replace( '&mfi=1', '', str_replace( '&mfi=0', '', $location ) );
+			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=1' );
 		}
 
 		self::$useFormat = $wgRequest->getText( 'useformat' );
