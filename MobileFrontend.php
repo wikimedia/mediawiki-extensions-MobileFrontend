@@ -333,9 +333,9 @@ class ExtMobileFrontend {
 
 		if ( $mobileAction == 'leave_feedback_post' ) {
 			
-			$subject = htmlspecialchars( $wgRequest->getText( 'subject', '' ) );
-			$message = htmlspecialchars( $wgRequest->getText( 'message', '' ) );
-			$token = htmlspecialchars( $wgRequest->getText( 'edittoken', '' ) );
+			$subject = $wgRequest->getText( 'subject', '' );
+			$message = $wgRequest->getText( 'message', '' );
+			$token = $wgRequest->getText( 'edittoken', '' );
 			
 			$title = Title::newFromText( 'MobileFrontend Extension Feedback' );
 			
