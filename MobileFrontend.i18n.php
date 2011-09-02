@@ -58,6 +58,15 @@ $messages['en'] = array (
 	'mobile-frontend-enable-images' => 'Enable images on mobile site',
 	'mobile-frontend-featured-article' => 'Today\'s Featured Article',
 	'mobile-frontend-news-items' => 'In The News',
+	'mobile-frontend-leave-feedback-title' => 'Leave feedback about Mobile Frontend',
+	'mobile-frontend-leave-feedback-notice-part-1' => 'Your feedback will be posted publicly to the page',
+	'mobile-frontend-leave-feedback-notice-part-2' => ', along with your user name, browser version and operating system.',
+	'mobile-frontend-leave-feedback-subject' => 'Subject',
+	'mobile-frontend-leave-feedback-message' => 'Message',
+	'mobile-frontend-leave-feedback-cancel' => 'Cancel',
+	'mobile-frontend-leave-feedback-submit' => 'Submit Feedback',
+	'mobile-frontend-leave-feedback-link-text' => '"Mobile Frontend feedback',
+	'mobile-frontend-leave-feedback' => 'Leave feedback',
 );
 
 /** Message documentation (Message documentation)
