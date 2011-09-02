@@ -4,6 +4,7 @@ $scriptUrl = wfScript();
 
 $leaveFeedbackHtml = <<<EOT
 <form action='{$feedbackPostURL}' method='post'>
+<input type="hidden" name="edittoken" value="{$editToken}"/>
 <div tabindex="-1">
 	<div unselectable="on">
 		<span unselectable="on"><p>{$title}</p></span>

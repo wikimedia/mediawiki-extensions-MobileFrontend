@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.52';
+	const VERSION = '0.5.53';
 
 	/**
 	 * @var DOMDocument
@@ -335,12 +335,19 @@ class ExtMobileFrontend {
 			
 			$subject = htmlspecialchars( $wgRequest->getText( 'subject', '' ) );
 			$message = htmlspecialchars( $wgRequest->getText( 'message', '' ) );
+			$token = htmlspecialchars( $wgRequest->getText( 'edittoken', '' ) );
 			
 			$title = Title::newFromText( 'MobileFrontend Extension Feedback' );
-			$article = new Article( $title, 0 ); 
-			$rawtext = $article->getRawText();
-			$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> ";
-			$article->doEdit( $rawtext, '' );
+			
+			if ( $title->userCan( 'edit' ) &&
+			 	!$wgUser->isBlockedFrom( $title ) &&
+			 	$wgUser->matchEditToken( $token ) ) {
+				$article = new Article( $title, 0 );
+				$rawtext = $article->getRawText();
+				$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> ";
+				$article->doEdit( $rawtext, '' );
+			}
+			
 			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() );
 			$wgRequest->response()->header( 'Location: ' . $location );
 			wfProfileOut( __METHOD__ );
@@ -469,10 +476,11 @@ class ExtMobileFrontend {
 	}
 	
 	private function renderLeaveFeedbackXHTML() {
-		global $wgRequest;
+		global $wgRequest, $wgUser;
 		wfProfileIn( __METHOD__ );
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
+			$editToken = $wgUser->editToken();
 			
 			$title = self::$messages['mobile-frontend-leave-feedback-title'];
 			$notice = self::$messages['mobile-frontend-leave-feedback-notice'];
