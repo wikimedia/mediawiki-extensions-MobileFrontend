@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.51';
+	const VERSION = '0.5.52';
 
 	/**
 	 * @var DOMDocument
@@ -132,6 +132,14 @@ class ExtMobileFrontend {
 		'mobile-frontend-enable-images',
 		'mobile-frontend-featured-article',
 		'mobile-frontend-news-items',
+		'mobile-frontend-leave-feedback-title',
+		'mobile-frontend-leave-feedback-notice',
+		'mobile-frontend-leave-feedback-subject',
+		'mobile-frontend-leave-feedback-message',
+		'mobile-frontend-leave-feedback-cancel',
+		'mobile-frontend-leave-feedback-submit',
+		'mobile-frontend-leave-feedback-link-text',
+		'mobile-frontend-leave-feedback',
 	);
 
 	public $itemsToRemove = array(
@@ -316,6 +324,28 @@ class ExtMobileFrontend {
 		if ( self::$useFormat === 'mobile-wap' ) {
 			$this->contentFormat = 'WML';
 		}
+		
+		if ( $mobileAction == 'leave_feedback' ) {
+			echo $this->renderLeaveFeedbackXHTML();
+			wfProfileOut( __METHOD__ );
+			exit();
+		}
+
+		if ( $mobileAction == 'leave_feedback_post' ) {
+			
+			$subject = htmlspecialchars( $wgRequest->getText( 'subject', '' ) );
+			$message = htmlspecialchars( $wgRequest->getText( 'message', '' ) );
+			
+			$title = Title::newFromText( 'MobileFrontend Extension Feedback' );
+			$article = new Article( $title ); 
+			$rawtext = $article->getRawText();
+			$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> ";
+			$article->doEdit( $rawtext, '' );
+			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() );
+			$wgRequest->response()->header( 'Location: ' . $location );
+			wfProfileOut( __METHOD__ );
+			exit();
+		}
 
 		if ( $mobileAction == 'disable_mobile_site' ) {
 			if ( $this->contentFormat == 'XHTML' ) {
@@ -436,6 +466,33 @@ class ExtMobileFrontend {
 			$wgOut->addVaryHeader( 'X-Device' );
 		}
 		wfProfileOut( __METHOD__ );
+	}
+	
+	private function renderLeaveFeedbackXHTML() {
+		global $wgRequest;
+		wfProfileIn( __METHOD__ );
+		if ( $this->contentFormat == 'XHTML' ) {
+			$this->getMsg();
+			
+			$title = self::$messages['mobile-frontend-leave-feedback-title'];
+			$notice = self::$messages['mobile-frontend-leave-feedback-notice'];
+			$linkText = self::$messages['mobile-frontend-leave-feedback-link-text'];
+			$subject = self::$messages['mobile-frontend-leave-feedback-subject'];
+			$message = self::$messages['mobile-frontend-leave-feedback-message'];
+			$cancel = self::$messages['mobile-frontend-leave-feedback-cancel'];
+			$submit = self::$messages['mobile-frontend-leave-feedback-submit'];
+			
+			$feedbackPostURL = str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post';
+			require( 'views/layout/_search_webkit.html.php' );
+			require( 'views/layout/_footmenu_default.html.php' );
+			require( 'views/information/leave_feedback.html.php' );
+			$contentHtml = $leaveFeedbackHtml;
+			require( 'views/layout/application.html.php' );
+			wfProfileOut( __METHOD__ );
+			return $applicationHtml;
+		}
+		wfProfileOut( __METHOD__ );
+		return '';
 	}
 
 	private function renderOptInMobileSiteXHTML() {

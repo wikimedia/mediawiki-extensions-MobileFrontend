@@ -5,6 +5,9 @@ $permStopRedirect = self::$messages['mobile-frontend-perm-stop-redirect'];
 $copyright = self::$messages['mobile-frontend-copyright'];
 $disableImages = self::$messages['mobile-frontend-disable-images'];
 $enableImages = self::$messages['mobile-frontend-enable-images'];
+$leaveFeedback = self::$messages['mobile-frontend-leave-feedback'];
+
+$leaveFeedbackURL = self::$currentURL . '&mobileaction=leave_feedback';
 
 $disableMobileSiteURL = self::$disableMobileSiteURL;
 $viewNormalSiteURL = self::$viewNormalSiteURL;
@@ -21,7 +24,7 @@ $footerHtml = <<<EOD
     <div id='footer'> 
       <div class='nav' id='footmenu'> 
         <div class='mwm-notice'> 
-          <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a>
+          <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> | <a href="{$leaveFeedbackURL}">{$leaveFeedback}</a>
             <div id="perm"> 
               <a href="{$disableMobileSiteURL}">{$permStopRedirect}</a> 
             </div> 
