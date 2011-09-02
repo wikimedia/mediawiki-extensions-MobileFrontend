@@ -337,7 +337,7 @@ class ExtMobileFrontend {
 			$message = htmlspecialchars( $wgRequest->getText( 'message', '' ) );
 			
 			$title = Title::newFromText( 'MobileFrontend Extension Feedback' );
-			$article = new Article( $title ); 
+			$article = new Article( $title, 0 ); 
 			$rawtext = $article->getRawText();
 			$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> ";
 			$article->doEdit( $rawtext, '' );
