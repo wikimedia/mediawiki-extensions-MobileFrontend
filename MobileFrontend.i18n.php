@@ -65,7 +65,7 @@ $messages['en'] = array (
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancel',
 	'mobile-frontend-leave-feedback-submit' => 'Submit Feedback',
-	'mobile-frontend-leave-feedback-link-text' => '"Mobile Frontend feedback',
+	'mobile-frontend-leave-feedback-link-text' => 'Mobile Frontend feedback',
 	'mobile-frontend-leave-feedback' => 'Leave feedback',
 );
 
