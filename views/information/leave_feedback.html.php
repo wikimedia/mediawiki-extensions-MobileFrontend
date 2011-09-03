@@ -1,7 +1,5 @@
 <?php
 
-$scriptUrl = wfScript();
-
 $leaveFeedbackHtml = <<<EOT
 <form action='{$feedbackPostURL}' method='post'>
 <input type="hidden" name="edittoken" value="{$editToken}"/>
@@ -11,7 +9,7 @@ $leaveFeedbackHtml = <<<EOT
 	</div>
 	<div>
 		<div>
-			<div><p><small>{$notice} "<a href="{$scriptUrl}?title=MobileFrontend_Extension_Feedback" target="_blank">{$linkText}</a>"</small>
+			<div><p><small>{$notice}</small>
 			</p></div>
 			<div><p>{$subject}:<br><input type="text" name="subject" maxlength="60" style="width:40%;"></p>
 			</div>

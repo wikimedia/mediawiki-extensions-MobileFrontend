@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.53';
+	const VERSION = '0.5.54';
 
 	/**
 	 * @var DOMDocument
@@ -206,7 +206,14 @@ class ExtMobileFrontend {
 		self::$messages['mobile-frontend-copyright'] = $copyright;
 	
 		foreach ( self::$messageKeys as $messageKey ) {
-			self::$messages[$messageKey] = wfMsg( $messageKey );
+			
+			if ( $messageKey == 'mobile-frontend-leave-feedback-notice' ) {
+				$scriptUrl = wfScript();
+				$linkText = wfMsg( 'mobile-frontend-leave-feedback-link-text' );
+				self::$messages[$messageKey] = wfMsg( $messageKey, "&quot;<a href=\"{$scriptUrl}?title=MobileFrontend_Extension_Feedback\" target=\"_blank\">{$linkText}</a>&quot;" );
+			} else {
+				self::$messages[$messageKey] = wfMsg( $messageKey );
+			}
 		}
 
 		self::$dir = $wgContLang->getDir();
