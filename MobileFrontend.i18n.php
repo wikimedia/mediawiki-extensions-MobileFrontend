@@ -702,6 +702,10 @@ $messages['br'] = array(
 	'mobile-frontend-disable-images' => "Diweredekaat ar skeudennoù war al lec'hienn hezoug",
 	'mobile-frontend-enable-images' => "Gweredekaat ar skeudennoù war al lec'hienn hezoug",
 	'mobile-frontend-news-items' => "Er C'heleier",
+	'mobile-frontend-leave-feedback-subject' => 'Danvez',
+	'mobile-frontend-leave-feedback-message' => 'Kemennadenn',
+	'mobile-frontend-leave-feedback-cancel' => 'Nullañ',
+	'mobile-frontend-leave-feedback-submit' => 'Kas evezhiadennoù',
 );
 
 /** Bosnian (Bosanski)
@@ -884,9 +888,14 @@ $messages['cs'] = array(
 	'mobile-frontend-disable-images' => 'Vypnout v mobilní verzi obrázky',
 	'mobile-frontend-enable-images' => 'Zapnout v mobilní verzi obrázky',
 	'mobile-frontend-news-items' => 'Aktuality',
+	'mobile-frontend-leave-feedback-title' => 'Komentář k mobilnímu rozhraní',
+	'mobile-frontend-leave-feedback-notice' => 'Váš komentář bude spolu s vaším uživatelským jménem, verzí prohlížeče a operačním systémem zveřejněn na stránce $1',
 	'mobile-frontend-leave-feedback-subject' => 'Předmět',
 	'mobile-frontend-leave-feedback-message' => 'Zpráva',
 	'mobile-frontend-leave-feedback-cancel' => 'Storno',
+	'mobile-frontend-leave-feedback-submit' => 'Odeslat komentář',
+	'mobile-frontend-leave-feedback-link-text' => 'Komentáře k mobilnímu rozhraní',
+	'mobile-frontend-leave-feedback' => 'Odeslat komentář',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -1614,7 +1623,7 @@ $messages['frp'] = array(
 	'mobile-frontend-enable-images' => 'Activar les émâges sur lo seto mobilo',
 	'mobile-frontend-news-items' => 'Novèles',
 	'mobile-frontend-leave-feedback-title' => 'Balyér voutron avis sur lo frontâl mobilo',
-	'mobile-frontend-leave-feedback-notice' => 'Voutron avis serat postâ publicament sur la pâge $1, avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués lo sistèmo d’èxplouètacion que vos utilisâd',
+	'mobile-frontend-leave-feedback-notice' => 'Voutron avis serat postâ publicament sur la pâge $1, avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion',
 	'mobile-frontend-leave-feedback-subject' => 'Sujèt',
 	'mobile-frontend-leave-feedback-message' => 'Mèssâjo',
 	'mobile-frontend-leave-feedback-cancel' => 'Anular',
@@ -1915,6 +1924,14 @@ $messages['he'] = array(
 	'mobile-frontend-disable-images' => 'לכבות תמונות באתר למכשירים ניידים',
 	'mobile-frontend-enable-images' => 'להפעיל תצוגת תמונות באתר למכשירים ניידים',
 	'mobile-frontend-news-items' => 'בחדשות',
+	'mobile-frontend-leave-feedback-title' => 'שליחת משוב על ממשק למכשירים ניידים',
+	'mobile-frontend-leave-feedback-notice' => 'המשוב שלכם יישלח באופן פומבי, יחד עם שם המשתמש שלך, עם גרסה הדפדפן ועם מערכת ההפעלה, לדף $1',
+	'mobile-frontend-leave-feedback-subject' => 'נושא',
+	'mobile-frontend-leave-feedback-message' => 'הודעה',
+	'mobile-frontend-leave-feedback-cancel' => 'ביטול',
+	'mobile-frontend-leave-feedback-submit' => 'שליחת משוב',
+	'mobile-frontend-leave-feedback-link-text' => 'שליחת משוב על הממשק למכשירים ניידים',
+	'mobile-frontend-leave-feedback' => 'שליחת משוב',
 );
 
 /** Hindi (हिन्दी) */
@@ -2122,7 +2139,7 @@ $messages['ia'] = array(
 	'mobile-frontend-enable-images' => 'Activar imagines in sito mobile',
 	'mobile-frontend-news-items' => 'Actualitates',
 	'mobile-frontend-leave-feedback-title' => 'Lassar retroaction super Mobile Frontend',
-	'mobile-frontend-leave-feedback-notice' => 'Tu commentario essera publicate in le pagina, con tu nomine de usator, version de navigator e systema de operation on the page $1.',
+	'mobile-frontend-leave-feedback-notice' => 'Tu commentario essera publicate in le pagina $1, con tu nomine de usator, version de navigator e systema de operation.',
 	'mobile-frontend-leave-feedback-subject' => 'Subjecto',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancellar',
@@ -2231,7 +2248,7 @@ $messages['it'] = array(
 	'mobile-frontend-regular-site' => 'Visualizza questa pagina su {{SITENAME}} normale',
 	'mobile-frontend-perm-stop-redirect' => 'Disabilitare permanentemente sito per dispositivi mobili',
 	'mobile-frontend-error-page-title' => 'Si è verificato un problema!',
-	'mobile-frontend-error-page-text' => '{{SITENAME}} mobile è ancora in fase di sviluppo attivo e stiamo lavorando sodo per risolvere tutti gli errori interni. Questo errore è già stato notificato e verrà presto corretto. Ricontrolla a breve.',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} mobile è ancora in fase di sviluppo attivo e stiamo lavorando sodo per risolvere tutti gli errori interni. Questo errore è già stato notificato e verrà presto corretto. Ricontrolla a breve!',
 	'mobile-frontend-are-you-sure' => 'Sei sicuro?',
 	'mobile-frontend-explain-disable' => "Vuoi davvero disabilitare la versione mobile di {{SITENAME}}? Se scegli <b>Disabilita</b>, d'ora in poi ogni volta che visiti {{SITENAME}} non sarai più reindirizzato alla versione mobile di {{SITENAME}}.",
 	'mobile-frontend-nav-end' => 'Fine',
@@ -3222,6 +3239,13 @@ $messages['my'] = array(
 	'mobile-frontend-file-namespace' => 'ဖိုင်',
 );
 
+/** Mazanderani (مازِرونی)
+ * @author محک
+ */
+$messages['mzn'] = array(
+	'mobile-frontend-view' => 'موبایلی هارشائن',
+);
+
 /** Nedersaksisch (Nedersaksisch)
  * @author Servien
  */
@@ -3649,8 +3673,12 @@ $messages['pl'] = array(
 	'mobile-frontend-leave-feedback' => 'Prześlij opinię',
 );
 
-/** Piedmontese (Piemontèis) */
+/** Piedmontese (Piemontèis)
+ * @author Borichèt
+ * @author Dragonòt
+ */
 $messages['pms'] = array(
+	'mobile-frontend-desc' => 'Visualisassion an sël sacociàbil',
 	'mobile-frontend-search-submit' => 'Va',
 	'mobile-frontend-search-results' => "Arzultà dl'arserca",
 	'mobile-frontend-no-article-found' => 'Pa gnun artìcoj trovà',
@@ -3666,7 +3694,7 @@ $messages['pms'] = array(
 	'mobile-frontend-regular-site' => 'Varda sta pàgina-sì an {{SITENAME}} regolar',
 	'mobile-frontend-perm-stop-redirect' => 'Disabilité permanentement ël sit "mobile"',
 	'mobile-frontend-error-page-title' => "I l'oma un problema!",
-	'mobile-frontend-error-page-text' => '{{SITENAME}} "mobile" a l\'é ancó sota ativ dësvilup e i stoma travajand sech për fissé tùit ij nòst eror antern. Noi i soma stàit avisà dë sto eror-sì e i lo fisseroma prest. Për piasì torna prové!',
+	'mobile-frontend-error-page-text' => "{{SITENAME}} mobile a l'é ancó sota ativ dësvilup e i stoma travajand sech për fissé tùit ij nòst eror antern. Noi i soma stàit avisà dë sto eror-sì e i lo fisseroma prest. Për piasì torna prové!",
 	'mobile-frontend-are-you-sure' => 'Ses-to sicur ?',
 	'mobile-frontend-explain-disable' => "Ses-to sicur ëd vorèj disabilité la version mòbil ëd {{SITENAME}}? S'it serne <b>Disabìlita</b>, da col moment an peui, quand it vìsite {{SITENAME}}, is saras pa ridiressionà a sta version mòbil ëd {{SITENAME}}.",
 	'mobile-frontend-nav-end' => 'Fin',
@@ -3678,6 +3706,30 @@ $messages['pms'] = array(
 	'mobile-frontend-author-link' => "Vëdde cost archivi multimedial dzora na {{SITENAME}} regolar për lese j'anformassion su autor, licensa, e le descrission adissionaj.",
 	'mobile-frontend-download-full-version' => 'Dëscarié la version Completa',
 	'mobile-frontend-file-namespace' => 'Archivi',
+	'mobile-frontend-wml-continue' => 'Andé anans ...',
+	'mobile-frontend-wml-back' => 'André ...',
+	'mobile-frontend-view' => 'Visualisassion an sël sacociàbil',
+	'mobile-frontend-opt-in-message' => 'Veul-lo giontesse a nòste preuve volontarie an sla neuva visualisassion për ij sacociàbij?',
+	'mobile-frontend-opt-in-yes-button' => 'é!',
+	'mobile-frontend-opt-in-no-button' => 'nò',
+	'mobile-frontend-opt-in-title' => 'Aceta për Prové',
+	'mobile-frontend-opt-in-explain' => "Sòn a-j përmët d'ancaminé la preuva",
+	'mobile-frontend-opt-out-message' => 'Chité la preuva volontaria dla neuva visualisassion për ij sacociàbij?',
+	'mobile-frontend-opt-out-yes-button' => 'é!',
+	'mobile-frontend-opt-out-no-button' => 'nò',
+	'mobile-frontend-opt-out-title' => 'Seurte da le Preuve',
+	'mobile-frontend-opt-out-explain' => 'Sòn a-j përmët ëd seurte da le preuve',
+	'mobile-frontend-disable-images' => "Disabilité le figure an sël sit pr'ij sacociàbij",
+	'mobile-frontend-enable-images' => "Abilité le figure an sël sit pr'ij sacociàbij",
+	'mobile-frontend-news-items' => 'Ant le Neuve',
+	'mobile-frontend-leave-feedback-title' => "Lassé n'opinion a propòsit dla visualisassion pr'ij sacociàbij",
+	'mobile-frontend-leave-feedback-notice' => 'Soa opinion a sarà publicà, ansema a sò stranòm, la version ëd sò navigador e sò sistema operativ a la pàgina $1',
+	'mobile-frontend-leave-feedback-subject' => 'Soget',
+	'mobile-frontend-leave-feedback-message' => 'Mëssagi',
+	'mobile-frontend-leave-feedback-cancel' => 'Scancela',
+	'mobile-frontend-leave-feedback-submit' => 'Spedì ij coment',
+	'mobile-frontend-leave-feedback-link-text' => "Opinion an sla visualisassion pr'ij sacociàbij",
+	'mobile-frontend-leave-feedback' => "Lassé n'opinion",
 );
 
 /** Western Punjabi (پنجابی)
@@ -4018,6 +4070,7 @@ $messages['ru'] = array(
 	'mobile-frontend-enable-images' => 'Включить изображения на мобильном сайте',
 	'mobile-frontend-news-items' => 'Новости',
 	'mobile-frontend-leave-feedback-title' => 'Оставить отзыв о Мобильном интерфейсе',
+	'mobile-frontend-leave-feedback-notice' => 'Содержание вашего отзыва будет общедоступно, на ряду с именем участника, версией браузера и операционной системой, на странице $1',
 	'mobile-frontend-leave-feedback-subject' => 'Тема',
 	'mobile-frontend-leave-feedback-message' => 'Сообщение',
 	'mobile-frontend-leave-feedback-cancel' => 'Отмена',
