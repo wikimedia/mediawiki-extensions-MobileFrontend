@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.55';
+	const VERSION = '0.5.56';
 
 	/**
 	 * @var DOMDocument
@@ -718,6 +718,18 @@ class ExtMobileFrontend {
 		return $itemToRemoveRecords;
 	}
 	
+	private function getClassElement($DOMElement, $Node, $className) {
+			$children = $DOMElement->childNodes;
+			foreach ( $children as $child ) {
+				if ( $child->hasAttributes() && 
+					$child->getAttribute( 'class' ) == $className ) {
+					$$Node = $child;
+					return $$Node;
+				}
+			}
+			return $DOMElement;
+	}
+	
 	public function DOMParseMainPage( $html ) {
 		wfProfileIn( __METHOD__ );
 		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
@@ -733,6 +745,29 @@ class ExtMobileFrontend {
 		
 		$featuredArticle = $this->mainPage->getElementById( 'mp-tfa' );
 		$newsItems = $this->mainPage->getElementById( 'mp-itn' );
+		
+		switch ( self::$code ) { 
+			case 'de':
+				$featuredArticle = $this->mainPage->getElementById( 'hauptseite-artikel' );
+				$featuredArticle = $this->getClassElement($featuredArticle, 'featuredArticle', 'inhalt' );
+			
+				$newsItems = $this->mainPage->getElementById( 'hauptseite-nachrichten' );
+				$newsItems = $this->getClassElement($newsItems, 'newsItems', 'inhalt' );
+			break;
+			case 'fr':
+				$featuredArticle = $this->mainPage->getElementById( 'accueil-lumieresur' );
+			    $newsItems = $this->mainPage->getElementById( 'accueil-actualite' );
+			break;
+			case 'ku':			
+				$newsItems = $this->mainPage->getElementById( 'hauptseite-wikipedia' );
+				$newsItems = $this->getClassElement($newsItems, 'newsItems', 'inhalt' );
+			break;
+			case 'bh':
+				$featuredArticle = $this->mainPage->getElementById( 'mp-featured_article' );
+			break;
+			case 'ja':
+			break;
+		}
 
 		$content = $this->mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'main_box' );
@@ -754,7 +789,7 @@ class ExtMobileFrontend {
 		return $contentHtml;
 	}
 
-	public function DOMParse( $html ) {
+	public function DOMParse( $html ) {		
 		global $wgSitename;
 		wfProfileIn( __METHOD__ );
 		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
@@ -860,7 +895,7 @@ class ExtMobileFrontend {
 
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
-			&& empty( self::$search ) ) {
+			&& empty( self::$search ) && !self::$isMainPage ) {
 			$contentHtml =	$this->headingTransform( $contentHtml );
 		} elseif ( $this->contentFormat == 'WML' ) {
 			header( 'Content-Type: text/vnd.wap.wml' );
