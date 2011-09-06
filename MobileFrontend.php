@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.56';
+	const VERSION = '0.5.57';
 
 	/**
 	 * @var DOMDocument
@@ -140,6 +140,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-leave-feedback-submit',
 		'mobile-frontend-leave-feedback-link-text',
 		'mobile-frontend-leave-feedback',
+		'mobile-frontend-feedback-page',
 	);
 
 	public $itemsToRemove = array(
@@ -209,7 +210,10 @@ class ExtMobileFrontend {
 			
 			if ( $messageKey == 'mobile-frontend-leave-feedback-notice' ) {
 				$linkText = wfMsg( 'mobile-frontend-leave-feedback-link-text' );
-				self::$messages[$messageKey] = wfMsg( $messageKey, Html::element( 'a', array( 'href' => Title::newFromText( 'MobileFrontend Extension Feedback' )->getFullURL(), 'target' => '_blank' ), $linkText ) );
+				$linkTarget = wfMsgNoTrans( 'mobile-frontend-feedback-page' );
+				self::$messages[$messageKey] = wfMsgExt( $messageKey, array( 'replaceafter' ), Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getFullURL(), 'target' => '_blank' ), $linkText ) );
+			} elseif ( $messageKey == 'mobile-frontend-feedback-page' ) {
+				self::$messages[$messageKey] = wfMsgNoTrans( $messageKey );
 			} else {
 				self::$messages[$messageKey] = wfMsg( $messageKey );
 			}
@@ -339,11 +343,13 @@ class ExtMobileFrontend {
 
 		if ( $mobileAction == 'leave_feedback_post' ) {
 			
+			$this->getMsg();
+			
 			$subject = $wgRequest->getText( 'subject', '' );
 			$message = $wgRequest->getText( 'message', '' );
 			$token = $wgRequest->getText( 'edittoken', '' );
 			
-			$title = Title::newFromText( 'MobileFrontend Extension Feedback' );
+			$title = Title::newFromText( self::$messages['mobile-frontend-feedback-page'] );
 			
 			if ( $title->userCan( 'edit' ) &&
 			 	!$wgUser->isBlockedFrom( $title ) &&
