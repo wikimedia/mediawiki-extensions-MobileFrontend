@@ -10,6 +10,8 @@ if( $wgAppleTouchIcon !== false ) {
 	$appleTouchIconTag = "";
 }
 
+$noticeHtml = empty( $noticeHtml ) ? '' : $noticeHtml;
+
 $cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
 
 $applicationHtml = <<<EOT
@@ -38,6 +40,7 @@ $applicationHtml = <<<EOT
   <body>
 	{$searchWebkitHtml}
 	<div class='show' id='content_wrapper'>
+	{$noticeHtml}
 	{$contentHtml}
 	</div>
 	{$footerHtml}

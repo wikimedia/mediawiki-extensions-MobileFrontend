@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.57';
+	const VERSION = '0.5.58';
 
 	/**
 	 * @var DOMDocument
@@ -103,6 +103,7 @@ class ExtMobileFrontend {
 	public static $disableMobileSiteURL;
 	public static $viewNormalSiteURL;
 	public static $currentURL;
+	public static $displayNoticeId;
 	
 	public static $messageKeys = array( 
 		'mobile-frontend-show-button',
@@ -141,6 +142,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-leave-feedback-link-text',
 		'mobile-frontend-leave-feedback',
 		'mobile-frontend-feedback-page',
+		'mobile-frontend-leave-feedback-thanks',
 	);
 
 	public $itemsToRemove = array(
@@ -280,6 +282,7 @@ class ExtMobileFrontend {
 		$action = $wgRequest->getText( 'action' );
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 		self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
+		self::$displayNoticeId = $wgRequest->getText( 'noticeid', '' );
 
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
@@ -360,7 +363,7 @@ class ExtMobileFrontend {
 				$article->doEdit( $rawtext, '' );
 			}
 			
-			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() );
+			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() . '&noticeid=1' );
 			$wgRequest->response()->header( 'Location: ' . $location );
 			wfProfileOut( __METHOD__ );
 			exit();
@@ -494,6 +497,7 @@ class ExtMobileFrontend {
 			$this->getMsg();
 			$editToken = $wgUser->editToken();
 			
+			$htmlTitle = self::$messages['mobile-frontend-leave-feedback'];
 			$title = self::$messages['mobile-frontend-leave-feedback-title'];
 			$notice = self::$messages['mobile-frontend-leave-feedback-notice'];
 			$subject = self::$messages['mobile-frontend-leave-feedback-subject'];
@@ -924,6 +928,13 @@ class ExtMobileFrontend {
 		}
 
 		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
+			if ( !empty( self::$displayNoticeId ) ) {
+				$noticePagePath = 'views/notices/notice_' . intval( self::$displayNoticeId ) . '.html.php';
+				if ( file_exists( dirname(__FILE__) . '/' . $noticePagePath ) ) {
+					require( $noticePagePath );
+				}
+			}
+			
 			//header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
