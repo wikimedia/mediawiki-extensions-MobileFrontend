@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.54';
+	const VERSION = '0.5.55';
 
 	/**
 	 * @var DOMDocument
@@ -208,9 +208,8 @@ class ExtMobileFrontend {
 		foreach ( self::$messageKeys as $messageKey ) {
 			
 			if ( $messageKey == 'mobile-frontend-leave-feedback-notice' ) {
-				$scriptUrl = wfScript();
 				$linkText = wfMsg( 'mobile-frontend-leave-feedback-link-text' );
-				self::$messages[$messageKey] = wfMsg( $messageKey, "&quot;<a href=\"{$scriptUrl}?title=MobileFrontend_Extension_Feedback\" target=\"_blank\">{$linkText}</a>&quot;" );
+				self::$messages[$messageKey] = wfMsg( $messageKey, Html::element( 'a', array( 'href' => Title::newFromText( 'MobileFrontend Extension Feedback' )->getFullURL(), 'target' => '_blank' ), $linkText ) );
 			} else {
 				self::$messages[$messageKey] = wfMsg( $messageKey );
 			}
@@ -491,7 +490,6 @@ class ExtMobileFrontend {
 			
 			$title = self::$messages['mobile-frontend-leave-feedback-title'];
 			$notice = self::$messages['mobile-frontend-leave-feedback-notice'];
-			$linkText = self::$messages['mobile-frontend-leave-feedback-link-text'];
 			$subject = self::$messages['mobile-frontend-leave-feedback-subject'];
 			$message = self::$messages['mobile-frontend-leave-feedback-message'];
 			$cancel = self::$messages['mobile-frontend-leave-feedback-cancel'];
