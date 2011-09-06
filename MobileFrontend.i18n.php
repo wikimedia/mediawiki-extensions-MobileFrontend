@@ -70,6 +70,7 @@ $messages['en'] = array (
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Raymond
  * @author Siebrand
  */
 $messages['qqq'] = array(
@@ -80,7 +81,7 @@ $messages['qqq'] = array(
 	'mobile-frontend-opt-out-yes-button' => '{{Identical|Yes}}',
 	'mobile-frontend-opt-out-no-button' => '{{Identical|No}}',
 	'mobile-frontend-leave-feedback-notice' => 'Parameters:
-* $1 is a link  to the page where the feedback will be posted.',
+* "$1" is a link  to the page where the feedback will be posted.',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
@@ -560,7 +561,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-enable-images' => 'Дазволіць выявы на сайце для мабільных тэлефонаў',
 	'mobile-frontend-news-items' => 'Навіны',
 	'mobile-frontend-leave-feedback-title' => 'Даслаць водгук пра Мабільны інтэрфэйс',
-	'mobile-frontend-leave-feedback-notice' => 'Ваш водгук будзе апублікаваны на старонцы разам з вашым імем карыстальніка, вэрсіяй браўзэра і апэрацыйнай сыстэмы $1',
+	'mobile-frontend-leave-feedback-notice' => 'Ваш водгук будзе апублікаваны на старонцы разам з вашым імем карыстальніка, вэрсіяй браўзэра і апэрацыйнай сыстэмы "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Тэма',
 	'mobile-frontend-leave-feedback-message' => 'Паведамленьне',
 	'mobile-frontend-leave-feedback-cancel' => 'Скасаваць',
@@ -889,7 +890,7 @@ $messages['cs'] = array(
 	'mobile-frontend-enable-images' => 'Zapnout v mobilní verzi obrázky',
 	'mobile-frontend-news-items' => 'Aktuality',
 	'mobile-frontend-leave-feedback-title' => 'Komentář k mobilnímu rozhraní',
-	'mobile-frontend-leave-feedback-notice' => 'Váš komentář bude spolu s vaším uživatelským jménem, verzí prohlížeče a operačním systémem zveřejněn na stránce $1',
+	'mobile-frontend-leave-feedback-notice' => 'Váš komentář bude spolu s vaším uživatelským jménem, verzí prohlížeče a operačním systémem zveřejněn na stránce "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Předmět',
 	'mobile-frontend-leave-feedback-message' => 'Zpráva',
 	'mobile-frontend-leave-feedback-cancel' => 'Storno',
@@ -1049,7 +1050,7 @@ $messages['de'] = array(
 	'mobile-frontend-enable-images' => 'Bilder in der mobilen Ansicht aktivieren',
 	'mobile-frontend-news-items' => 'In den Nachrichten',
 	'mobile-frontend-leave-feedback-title' => 'Rückmeldung zur mobilen Ansicht geben',
-	'mobile-frontend-leave-feedback-notice' => 'Deine Rückmeldung wird auf der Seite $1 öffentlich angezeigt, zusammen mit deinem Benutzernamen, der Version deines Browsers und deinem Betriebssystem.',
+	'mobile-frontend-leave-feedback-notice' => 'Deine Rückmeldung wird auf der Seite „$1“ öffentlich angezeigt, zusammen mit deinem Benutzernamen, der Version deines Browsers und deinem Betriebssystem.',
 	'mobile-frontend-leave-feedback-subject' => 'Betreff',
 	'mobile-frontend-leave-feedback-message' => 'Nachricht',
 	'mobile-frontend-leave-feedback-cancel' => 'Abbrechen',
@@ -1066,7 +1067,7 @@ $messages['de-formal'] = array(
 	'mobile-frontend-are-you-sure' => 'Sind Sie sich sicher?',
 	'mobile-frontend-explain-disable' => 'Sind Sie sich sicher, dass Sie die mobile Ansicht von {{SITENAME}} deaktivieren möchten? Sofern Sie <b>Deaktivieren</b> wählen, werden Sie von nun an bei einem Besuch von {{SITENAME}} nicht mehr automatisch auf die mobile Ansicht {{SITENAME}} weitergeleitet.',
 	'mobile-frontend-contact-us' => 'Im Fall von Fragen oder Anmerkungen kontaktieren Sie uns bitte unter der E-Mail-Adresse mobile@wikipedia.org',
-	'mobile-frontend-leave-feedback-notice' => 'Ihre Rückmeldung wird auf der Seite $1 öffentlich angezeigt, zusammen mit Ihrem Benutzernamen, der Version Ihres Browsers und Ihrem Betriebssystem.',
+	'mobile-frontend-leave-feedback-notice' => 'Ihre Rückmeldung wird auf der Seite „$1“ öffentlich angezeigt, zusammen mit Ihrem Benutzernamen, der Version Ihres Browsers und Ihrem Betriebssystem.',
 );
 
 /** Zazaki (Zazaki) */
@@ -1259,7 +1260,7 @@ $messages['eo'] = array(
 	'mobile-frontend-enable-images' => 'Ŝalti bildojn en poŝtelefona retejo',
 	'mobile-frontend-news-items' => 'Aktuale',
 	'mobile-frontend-leave-feedback-title' => 'Lasi komenton pri Poŝtelefona Fasado',
-	'mobile-frontend-leave-feedback-notice' => 'Viaj komentoj estos afiŝitaj publike, kune kun via salutnomo, retumila versio, kaj operaciumo al la paĝo $1',
+	'mobile-frontend-leave-feedback-notice' => 'Viaj komentoj estos afiŝitaj publike, kune kun via salutnomo, retumila versio, kaj operaciumo al la paĝo "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Temo',
 	'mobile-frontend-leave-feedback-message' => 'Mesaĝo',
 	'mobile-frontend-leave-feedback-cancel' => 'Nuligi',
@@ -1446,7 +1447,7 @@ $messages['fa'] = array(
 	'mobile-frontend-enable-images' => 'فعال سازی تصاویر بر روی وب‌گاه تلفن همراه',
 	'mobile-frontend-news-items' => 'در خبرها',
 	'mobile-frontend-leave-feedback-title' => 'دربارهٔ ظاهر تلفن همراه، بازخورد بگذارید',
-	'mobile-frontend-leave-feedback-notice' => 'بازخورد شما به طور عمومی، همراه با نام شما، نسخهٔ مرورگر و سیستم عامل در صفحه ارسال خواهد شد. $1',
+	'mobile-frontend-leave-feedback-notice' => 'بازخورد شما به طور عمومی، همراه با نام شما، نسخهٔ مرورگر و سیستم عامل در صفحه ارسال خواهد شد. "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'عنوان',
 	'mobile-frontend-leave-feedback-message' => 'پیام',
 	'mobile-frontend-leave-feedback-cancel' => 'لغو',
@@ -1503,7 +1504,7 @@ $messages['fi'] = array(
 	'mobile-frontend-enable-images' => 'Ota kuvat käyttöön kännykkäsivulla',
 	'mobile-frontend-news-items' => 'Uutisissa',
 	'mobile-frontend-leave-feedback-title' => 'Anna palautetta kännykän käyttöliittymästä',
-	'mobile-frontend-leave-feedback-notice' => 'Palautteesi lähetetään julkisesti, jonka mukana tulee käyttäjätunnuksesi, selainversiosi ja käyttöjärjestelmäsi. Tiedot lähetetään sivulle $1',
+	'mobile-frontend-leave-feedback-notice' => 'Palautteesi lähetetään julkisesti, jonka mukana tulee käyttäjätunnuksesi, selainversiosi ja käyttöjärjestelmäsi. Tiedot lähetetään sivulle "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Otsikko',
 	'mobile-frontend-leave-feedback-message' => 'Viesti',
 	'mobile-frontend-leave-feedback-cancel' => 'Peruuta',
@@ -1565,7 +1566,7 @@ $messages['fr'] = array(
 	'mobile-frontend-enable-images' => 'Activer les images sur le site mobile',
 	'mobile-frontend-news-items' => 'Actualités',
 	'mobile-frontend-leave-feedback-title' => 'Laisser un ressenti au sujet du frontal Mobile',
-	'mobile-frontend-leave-feedback-notice' => 'Votre avis sera publié publiquement sur la page $1, avec votre nom d’utilisateur, la version de votre navigateur et le système d’exploitation que vous utilisez',
+	'mobile-frontend-leave-feedback-notice' => 'Votre avis sera publié publiquement sur la page "$1", avec votre nom d’utilisateur, la version de votre navigateur et le système d’exploitation que vous utilisez',
 	'mobile-frontend-leave-feedback-subject' => 'Sujet',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Annuler',
@@ -1623,7 +1624,7 @@ $messages['frp'] = array(
 	'mobile-frontend-enable-images' => 'Activar les émâges sur lo seto mobilo',
 	'mobile-frontend-news-items' => 'Novèles',
 	'mobile-frontend-leave-feedback-title' => 'Balyér voutron avis sur lo frontâl mobilo',
-	'mobile-frontend-leave-feedback-notice' => 'Voutron avis serat postâ publicament sur la pâge $1, avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion',
+	'mobile-frontend-leave-feedback-notice' => 'Voutron avis serat postâ publicament sur la pâge "$1", avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion',
 	'mobile-frontend-leave-feedback-subject' => 'Sujèt',
 	'mobile-frontend-leave-feedback-message' => 'Mèssâjo',
 	'mobile-frontend-leave-feedback-cancel' => 'Anular',
@@ -1925,7 +1926,7 @@ $messages['he'] = array(
 	'mobile-frontend-enable-images' => 'להפעיל תצוגת תמונות באתר למכשירים ניידים',
 	'mobile-frontend-news-items' => 'בחדשות',
 	'mobile-frontend-leave-feedback-title' => 'שליחת משוב על ממשק למכשירים ניידים',
-	'mobile-frontend-leave-feedback-notice' => 'המשוב שלכם יישלח באופן פומבי, יחד עם שם המשתמש שלך, עם גרסה הדפדפן ועם מערכת ההפעלה, לדף $1',
+	'mobile-frontend-leave-feedback-notice' => 'המשוב שלכם יישלח באופן פומבי, יחד עם שם המשתמש שלך, עם גרסה הדפדפן ועם מערכת ההפעלה, לדף "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'נושא',
 	'mobile-frontend-leave-feedback-message' => 'הודעה',
 	'mobile-frontend-leave-feedback-cancel' => 'ביטול',
@@ -2139,7 +2140,7 @@ $messages['ia'] = array(
 	'mobile-frontend-enable-images' => 'Activar imagines in sito mobile',
 	'mobile-frontend-news-items' => 'Actualitates',
 	'mobile-frontend-leave-feedback-title' => 'Lassar retroaction super Mobile Frontend',
-	'mobile-frontend-leave-feedback-notice' => 'Tu commentario essera publicate in le pagina $1, con tu nomine de usator, version de navigator e systema de operation.',
+	'mobile-frontend-leave-feedback-notice' => 'Tu commentario essera publicate in le pagina "$1", con tu nomine de usator, version de navigator e systema de operation.',
 	'mobile-frontend-leave-feedback-subject' => 'Subjecto',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancellar',
@@ -2148,7 +2149,9 @@ $messages['ia'] = array(
 	'mobile-frontend-leave-feedback' => 'Lassar retroaction',
 );
 
-/** Indonesian (Bahasa Indonesia) */
+/** Indonesian (Bahasa Indonesia)
+ * @author Kenrick95
+ */
 $messages['id'] = array(
 	'mobile-frontend-search-submit' => 'Cari',
 	'mobile-frontend-search-results' => 'Hasil Pencarian',
@@ -2177,6 +2180,12 @@ $messages['id'] = array(
 	'mobile-frontend-author-link' => 'Lihat berkas ini di {{SITENAME}} biasa untuk melihat informasi tentang pembuat, lisensi, dan deskripsi tambahan.',
 	'mobile-frontend-download-full-version' => 'Unduh Versi Lengkap',
 	'mobile-frontend-file-namespace' => 'Berkas',
+	'mobile-frontend-wml-continue' => 'Lanjutkan...',
+	'mobile-frontend-wml-back' => 'Kembali ...',
+	'mobile-frontend-opt-in-yes-button' => 'iya',
+	'mobile-frontend-opt-in-no-button' => 'tidak',
+	'mobile-frontend-opt-out-yes-button' => 'iya',
+	'mobile-frontend-opt-out-no-button' => 'tidak',
 );
 
 /** Igbo (Igbo)
@@ -2580,7 +2589,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-enable-images' => 'Belder för et Mobiljerät uohlohße',
 	'mobile-frontend-news-items' => 'En de Präß',
 	'mobile-frontend-leave-feedback-title' => 'De Röckmäldunge övver de Bedeenung för Mobiljeräte verlohße',
-	'mobile-frontend-leave-feedback-notice' => 'Din Röckmälunge wääde öffentlesch op dä Sigg $1 faßjehallde, zosamme met Dingem Metmaacher-Name, Dingem Brauser singe Version un däm Name vun Dingem Bedreifssüßtehm.',
+	'mobile-frontend-leave-feedback-notice' => 'Din Röckmälunge wääde öffentlesch op dä Sigg "$1" faßjehallde, zosamme met Dingem Metmaacher-Name, Dingem Brauser singe Version un däm Name vun Dingem Bedreifssüßtehm.',
 	'mobile-frontend-leave-feedback-subject' => 'Theema',
 	'mobile-frontend-leave-feedback-message' => 'Nohreesch',
 	'mobile-frontend-leave-feedback-cancel' => 'Stopp! Avbreche!',
@@ -2987,7 +2996,7 @@ $messages['mk'] = array(
 	'mobile-frontend-enable-images' => 'Овозможи слики на мобилното мреж. место',
 	'mobile-frontend-news-items' => 'Вести',
 	'mobile-frontend-leave-feedback-title' => 'Дајте свое мислење за Мобилниот посредник',
-	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ќе биде јавно објавено на страницата, заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем на страницата $1',
+	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ќе биде јавно објавено на страницата, заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем на страницата "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Наслов:',
 	'mobile-frontend-leave-feedback-message' => 'Порака',
 	'mobile-frontend-leave-feedback-cancel' => 'Откажи',
@@ -3040,6 +3049,10 @@ $messages['ml'] = array(
 	'mobile-frontend-disable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനരഹിതമാക്കുക',
 	'mobile-frontend-enable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനസജ്ജമാക്കുക',
 	'mobile-frontend-news-items' => 'വാർത്തയിൽ',
+	'mobile-frontend-leave-feedback-subject' => 'വിഷയം',
+	'mobile-frontend-leave-feedback-message' => 'സന്ദേശം',
+	'mobile-frontend-leave-feedback-cancel' => 'റദ്ദാക്കുക',
+	'mobile-frontend-leave-feedback-submit' => 'അഭിപ്രായം സമർപ്പിക്കുക',
 );
 
 /** Mongolian (Монгол) */
@@ -3168,7 +3181,7 @@ $messages['ms'] = array(
 	'mobile-frontend-enable-images' => 'Membolehkan imej di tapak mudah alih',
 	'mobile-frontend-news-items' => 'Dalam Berita',
 	'mobile-frontend-leave-feedback-title' => 'Tinggalkan maklum balas tentang Mobile Frontend',
-	'mobile-frontend-leave-feedback-notice' => 'Maklum balas anda akan dipaparkan kepada umum, dengan nama pengguna, versi pelayar dan sistem pengendalian anda pada laman $1',
+	'mobile-frontend-leave-feedback-notice' => 'Maklum balas anda akan dipaparkan kepada umum, dengan nama pengguna, versi pelayar dan sistem pengendalian anda pada laman "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Subjek',
 	'mobile-frontend-leave-feedback-message' => 'Pesanan',
 	'mobile-frontend-leave-feedback-cancel' => 'Batalkan',
@@ -3363,7 +3376,7 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-enable-images' => 'Afbeeldingen op de mobiele site inschakelen',
 	'mobile-frontend-news-items' => 'In het nieuws',
 	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling achterlaten over Mobiele Frontend',
-	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling wordt zichtbaar geplaatst, samen met uw gebruikersnaam, browserversie en besturingssysteem op de pagina $1.',
+	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling wordt zichtbaar geplaatst, samen met uw gebruikersnaam, browserversie en besturingssysteem op de pagina "$1".',
 	'mobile-frontend-leave-feedback-subject' => 'Onderwerp',
 	'mobile-frontend-leave-feedback-message' => 'Bericht',
 	'mobile-frontend-leave-feedback-cancel' => 'Annuleren',
@@ -3664,7 +3677,7 @@ $messages['pl'] = array(
 	'mobile-frontend-enable-images' => 'Włącz wyświetlanie obrazów na mobilnej witrynie',
 	'mobile-frontend-news-items' => 'Aktualności',
 	'mobile-frontend-leave-feedback-title' => 'Pozostaw swoją opinię na temat mobilnego interfejsu użytkownika',
-	'mobile-frontend-leave-feedback-notice' => 'Twoja opinia będzie publicznie widoczna, wraz z nazwą użytkownika, wersją przeglądarki i systemem operacyjnym, na stronie $1',
+	'mobile-frontend-leave-feedback-notice' => 'Twoja opinia będzie publicznie widoczna, wraz z nazwą użytkownika, wersją przeglądarki i systemem operacyjnym, na stronie "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Temat',
 	'mobile-frontend-leave-feedback-message' => 'Wiadomość',
 	'mobile-frontend-leave-feedback-cancel' => 'Anuluj',
@@ -3694,9 +3707,9 @@ $messages['pms'] = array(
 	'mobile-frontend-regular-site' => 'Varda sta pàgina-sì an {{SITENAME}} regolar',
 	'mobile-frontend-perm-stop-redirect' => 'Disabilité permanentement ël sit "mobile"',
 	'mobile-frontend-error-page-title' => "I l'oma un problema!",
-	'mobile-frontend-error-page-text' => "{{SITENAME}} mobile a l'é ancó sota ativ dësvilup e i stoma travajand sech për fissé tùit ij nòst eror antern. Noi i soma stàit avisà dë sto eror-sì e i lo fisseroma prest. Për piasì torna prové!",
+	'mobile-frontend-error-page-text' => "{{SITENAME}} për ij sacociàbij a l'é ancó sota dësvlup ativ e i travajoma sech për rangé tùit ij nòstri eror antern. I soma stàit avisà ëd cost eror-sì e i lo rangëroma an pressa. Për piasì, ch'a torna a prové!",
 	'mobile-frontend-are-you-sure' => 'Ses-to sicur ?',
-	'mobile-frontend-explain-disable' => "Ses-to sicur ëd vorèj disabilité la version mòbil ëd {{SITENAME}}? S'it serne <b>Disabìlita</b>, da col moment an peui, quand it vìsite {{SITENAME}}, is saras pa ridiressionà a sta version mòbil ëd {{SITENAME}}.",
+	'mobile-frontend-explain-disable' => "É-lo sigur ëd vorèj disabilité la version për sacociàbil ëd {{SITENAME}}? S'a serne <b>Disabilité</b>, da col moment an peui, quand ch'a vìsita {{SITENAME}}, a sarà pa ridiressionà a costa version për sacociàbil ëd {{SITENAME}}.",
 	'mobile-frontend-nav-end' => 'Fin',
 	'mobile-frontend-nav-top' => 'Inissi',
 	'mobile-frontend-nav-edit' => 'Modìfica',
@@ -3723,7 +3736,7 @@ $messages['pms'] = array(
 	'mobile-frontend-enable-images' => "Abilité le figure an sël sit pr'ij sacociàbij",
 	'mobile-frontend-news-items' => 'Ant le Neuve',
 	'mobile-frontend-leave-feedback-title' => "Lassé n'opinion a propòsit dla visualisassion pr'ij sacociàbij",
-	'mobile-frontend-leave-feedback-notice' => 'Soa opinion a sarà publicà, ansema a sò stranòm, la version ëd sò navigador e sò sistema operativ a la pàgina $1',
+	'mobile-frontend-leave-feedback-notice' => 'Soa opinion a sarà publicà, ansema a sò stranòm, la version ëd sò navigador e sò sistema operativ a la pàgina "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Soget',
 	'mobile-frontend-leave-feedback-message' => 'Mëssagi',
 	'mobile-frontend-leave-feedback-cancel' => 'Scancela',
@@ -3853,7 +3866,7 @@ $messages['pt'] = array(
 	'mobile-frontend-enable-images' => 'Ativar imagens no site móvel',
 	'mobile-frontend-news-items' => 'Actualidade',
 	'mobile-frontend-leave-feedback-title' => 'Deixar avaliação sobre versão móbil',
-	'mobile-frontend-leave-feedback-notice' => 'Sua avaliação será postados publicamente, juntamente com seu nome de usuário, versão do navegador e sistema operacional para a página $1',
+	'mobile-frontend-leave-feedback-notice' => 'Sua avaliação será postados publicamente, juntamente com seu nome de usuário, versão do navegador e sistema operacional para a página "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Assunto',
 	'mobile-frontend-leave-feedback-message' => 'Mensagem',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancelar',
@@ -3912,7 +3925,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-enable-images' => 'Ativar imagens no site móvel',
 	'mobile-frontend-news-items' => 'Eventos recentes',
 	'mobile-frontend-leave-feedback-title' => 'Deixar feedback sobre interface móvel',
-	'mobile-frontend-leave-feedback-notice' => 'Seus comentários serão postados publicamente, junto com o seu nome de usuário, versão do navegador e sistema operacional para a página $1',
+	'mobile-frontend-leave-feedback-notice' => 'Seus comentários serão postados publicamente, junto com o seu nome de usuário, versão do navegador e sistema operacional para a página "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Assunto',
 	'mobile-frontend-leave-feedback-message' => 'Mensagem',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancelar',
@@ -4010,13 +4023,55 @@ $messages['ro'] = array(
 	'mobile-frontend-enable-images' => 'Activează imaginile pe site-urile mobile',
 	'mobile-frontend-news-items' => 'Știri',
 	'mobile-frontend-leave-feedback-title' => 'Lăsați-vă părerea despre interfața mobilă',
-	'mobile-frontend-leave-feedback-notice' => 'Părerea dumneavoastră va fi făcută publică, împreună cu numele dumneavoastră de utilizator, versiunea browserului și sistemul de operare pe pagina $1',
+	'mobile-frontend-leave-feedback-notice' => 'Părerea dumneavoastră va fi făcută publică, împreună cu numele dumneavoastră de utilizator, versiunea browserului și sistemul de operare pe pagina "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Subiect',
 	'mobile-frontend-leave-feedback-message' => 'Mesaj',
 	'mobile-frontend-leave-feedback-cancel' => 'Revocare',
 	'mobile-frontend-leave-feedback-submit' => 'Trimite părerea',
 	'mobile-frontend-leave-feedback-link-text' => 'Păreri despre interfața mobilă',
 	'mobile-frontend-leave-feedback' => 'Scrieți-vă părerea',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'mobile-frontend-desc' => "Grafeche d'u Mobile",
+	'mobile-frontend-search-submit' => 'Véje',
+	'mobile-frontend-search-results' => "Resultate d'a ricerche",
+	'mobile-frontend-no-article-found' => 'Nisciuna pàgene acchiate',
+	'mobile-frontend-featured-article' => 'Vôsce dettagliate de osce',
+	'mobile-frontend-in-the-news' => "Jndr'à le notizie",
+	'mobile-frontend-home-button' => 'Cáse',
+	'mobile-frontend-random-button' => 'A uecchije',
+	'mobile-frontend-back-to-top-of-section' => "Zumbe rrete a 'na sezione",
+	'mobile-frontend-show-button' => 'Fà vedè',
+	'mobile-frontend-hide-button' => 'Scunne',
+	'mobile-frontend-disable-button' => 'disabbilete',
+	'mobile-frontend-back-button' => 'Rrete',
+	'mobile-frontend-error-page-title' => "Nuje tenime 'nu probbleme!",
+	'mobile-frontend-are-you-sure' => 'Sì secure secure?',
+	'mobile-frontend-nav-end' => 'Fine',
+	'mobile-frontend-nav-top' => 'Inizie',
+	'mobile-frontend-nav-edit' => 'Cange',
+	'mobile-frontend-nav-history' => 'Cunde',
+	'mobile-frontend-search-text' => 'Cirche',
+	'mobile-frontend-download-full-version' => "Scareche 'a versiona comblete",
+	'mobile-frontend-file-namespace' => 'File',
+	'mobile-frontend-wml-continue' => 'Condinue ...',
+	'mobile-frontend-wml-back' => 'Rrete ...',
+	'mobile-frontend-view' => "Viste d'u mobile",
+	'mobile-frontend-opt-in-yes-button' => 'sine',
+	'mobile-frontend-opt-in-no-button' => 'none',
+	'mobile-frontend-opt-out-yes-button' => 'sine',
+	'mobile-frontend-opt-out-no-button' => 'none',
+	'mobile-frontend-news-items' => "Jndr'à le notizie",
+	'mobile-frontend-leave-feedback-subject' => 'Suggette',
+	'mobile-frontend-leave-feedback-message' => 'Messàgge',
+	'mobile-frontend-leave-feedback-cancel' => 'Annulle',
+	'mobile-frontend-leave-feedback-submit' => "Conferme 'u feedback",
+	'mobile-frontend-leave-feedback-link-text' => "Feedback d'a grafeche d'u mobile",
+	'mobile-frontend-leave-feedback' => "Lasse 'u feedbacl",
 );
 
 /** Russian (Русский)
@@ -4070,7 +4125,7 @@ $messages['ru'] = array(
 	'mobile-frontend-enable-images' => 'Включить изображения на мобильном сайте',
 	'mobile-frontend-news-items' => 'Новости',
 	'mobile-frontend-leave-feedback-title' => 'Оставить отзыв о Мобильном интерфейсе',
-	'mobile-frontend-leave-feedback-notice' => 'Содержание вашего отзыва будет общедоступно, на ряду с именем участника, версией браузера и операционной системой, на странице $1',
+	'mobile-frontend-leave-feedback-notice' => 'Содержание вашего отзыва будет общедоступно, на ряду с именем участника, версией браузера и операционной системой, на странице "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Тема',
 	'mobile-frontend-leave-feedback-message' => 'Сообщение',
 	'mobile-frontend-leave-feedback-cancel' => 'Отмена',
@@ -4122,7 +4177,7 @@ $messages['rue'] = array(
 	'mobile-frontend-enable-images' => 'Занути образчікы в мобілній верзії',
 	'mobile-frontend-news-items' => 'Новины',
 	'mobile-frontend-leave-feedback-title' => 'Зохабити одозву про мобілный інтерфейс',
-	'mobile-frontend-leave-feedback-notice' => 'Ваша одозва буде публікована, вєдно з вашым іменом хоснователя, верзіёв перезерача і операчнов сістемов on the page $1',
+	'mobile-frontend-leave-feedback-notice' => 'Ваша одозва буде публікована, вєдно з вашым іменом хоснователя, верзіёв перезерача і операчнов сістемов on the page "$1"',
 	'mobile-frontend-leave-feedback-subject' => 'Предмет',
 	'mobile-frontend-leave-feedback-message' => 'Повідомлїня',
 	'mobile-frontend-leave-feedback-cancel' => 'Сторно',
@@ -4357,7 +4412,7 @@ $messages['sl'] = array(
 	'mobile-frontend-enable-images' => 'Omogoči slike na mobilni strani',
 	'mobile-frontend-news-items' => 'V novicah',
 	'mobile-frontend-leave-feedback-title' => 'Pustite povratne informacije o mobilnem obličju',
-	'mobile-frontend-leave-feedback-notice' => 'Vaše povratne informacije bodo javno objavljene na stran $1, skupaj z vašim uporabniškim imenom, različico brskalnika in operacijskim sistemom',
+	'mobile-frontend-leave-feedback-notice' => 'Vaše povratne informacije bodo javno objavljene na stran "$1", skupaj z vašim uporabniškim imenom, različico brskalnika in operacijskim sistemom',
 	'mobile-frontend-leave-feedback-subject' => 'Zadeva',
 	'mobile-frontend-leave-feedback-message' => 'Sporočilo',
 	'mobile-frontend-leave-feedback-cancel' => 'Prekliči',
@@ -5034,7 +5089,7 @@ $messages['vi'] = array(
 	'mobile-frontend-enable-images' => 'Hiện hình ảnh trên trang di động',
 	'mobile-frontend-news-items' => 'Tin tức',
 	'mobile-frontend-leave-feedback-title' => 'Gửi phản hồi về giao diện di động',
-	'mobile-frontend-leave-feedback-notice' => 'Phản hồi của bạn sẽ được đăng công khai vào trang, cùng với tên người dùng, phiên bản trình duyệt, và hệ điều hành của bạn on the page $1.',
+	'mobile-frontend-leave-feedback-notice' => 'Phản hồi của bạn sẽ được đăng công khai vào trang “$1”, cùng với tên người dùng, phiên bản trình duyệt, và hệ điều hành của bạn.',
 	'mobile-frontend-leave-feedback-subject' => 'Tiêu đề',
 	'mobile-frontend-leave-feedback-message' => 'Thông điệp',
 	'mobile-frontend-leave-feedback-cancel' => 'Hủy bỏ',
@@ -5259,12 +5314,28 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-opt-in-message' => '愿意帮助我们测试新的移动前端吗？',
 	'mobile-frontend-opt-in-yes-button' => '是',
 	'mobile-frontend-opt-in-no-button' => '否',
+	'mobile-frontend-opt-in-title' => '参加测试',
+	'mobile-frontend-opt-in-explain' => '这使您可以输入测试',
+	'mobile-frontend-opt-out-message' => '离开选择加入新移动前端的测试吗？',
 	'mobile-frontend-opt-out-yes-button' => '是',
 	'mobile-frontend-opt-out-no-button' => '否',
+	'mobile-frontend-opt-out-title' => '退出测试',
+	'mobile-frontend-opt-out-explain' => '这使您可以退出测试',
+	'mobile-frontend-disable-images' => '移动网站上禁用图像',
+	'mobile-frontend-enable-images' => '移动网站上启用图像',
+	'mobile-frontend-news-items' => '新闻动态',
+	'mobile-frontend-leave-feedback-title' => '为关移动前端留下反馈',
+	'mobile-frontend-leave-feedback-notice' => '您的反馈将张贴在公开场合，随您的用户名称、 浏览器版本和操作系统到"$1"页面',
+	'mobile-frontend-leave-feedback-subject' => '主题',
+	'mobile-frontend-leave-feedback-message' => '信息',
 	'mobile-frontend-leave-feedback-cancel' => '取消',
+	'mobile-frontend-leave-feedback-submit' => '提交反馈',
+	'mobile-frontend-leave-feedback-link-text' => '移动前端反馈',
+	'mobile-frontend-leave-feedback' => '留下反馈',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
+ * @author Anakmalaysia
  * @author Bencmq
  * @author Lauhenry
  * @author Liangent
@@ -5315,6 +5386,15 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-opt-out-explain' => '這允許你退出測試',
 	'mobile-frontend-disable-images' => '在行動瀏覽上禁用圖像',
 	'mobile-frontend-enable-images' => '在行動瀏覽上啟用圖像',
+	'mobile-frontend-news-items' => '新聞動態',
+	'mobile-frontend-leave-feedback-title' => '為關移動前端留下反饋',
+	'mobile-frontend-leave-feedback-notice' => '您的反饋將張貼在公開場合，隨您的用戶名稱、 瀏覽器版本和操作系統到"$1"頁面',
+	'mobile-frontend-leave-feedback-subject' => '主題',
+	'mobile-frontend-leave-feedback-message' => '信息',
+	'mobile-frontend-leave-feedback-cancel' => '取消',
+	'mobile-frontend-leave-feedback-submit' => '提交反饋',
+	'mobile-frontend-leave-feedback-link-text' => '移動前端反饋',
+	'mobile-frontend-leave-feedback' => '留下反饋',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
