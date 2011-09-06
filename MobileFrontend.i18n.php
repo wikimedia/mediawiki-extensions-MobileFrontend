@@ -58,14 +58,14 @@ $messages['en'] = array (
 	'mobile-frontend-enable-images' => 'Enable images on mobile site',
 	'mobile-frontend-featured-article' => 'Today\'s Featured Article',
 	'mobile-frontend-news-items' => 'In The News',
-	'mobile-frontend-leave-feedback-title' => 'Leave feedback about Mobile Frontend',
-	'mobile-frontend-leave-feedback-notice' => 'Your feedback will be posted publicly, along with your user name, browser version and operating system to the page &quot;$1&quot;',
+	'mobile-frontend-leave-feedback-title' => 'Give us feedback about your mobile site experience',
+	'mobile-frontend-leave-feedback-notice' => 'Your feedback helps us to improve your mobile site experience. It will be posted publicly (along with your user name, browser version and operating system) to the page &quot;$1&quot;. Please try to choose an informative subject line, e.g. "Formatting issues with wide tables". Your feedback is subject to our terms of use.',
 	'mobile-frontend-leave-feedback-subject' => 'Subject',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancel',
 	'mobile-frontend-leave-feedback-submit' => 'Submit Feedback',
-	'mobile-frontend-leave-feedback-link-text' => 'Mobile Frontend feedback',
-	'mobile-frontend-leave-feedback' => 'Leave feedback',
+	'mobile-frontend-leave-feedback-link-text' => 'MobileFrontend Extension feedback',
+	'mobile-frontend-leave-feedback' => 'Mobile site feedback',
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 );
 
