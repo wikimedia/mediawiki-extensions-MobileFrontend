@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.58';
+	const VERSION = '0.5.59';
 
 	/**
 	 * @var DOMDocument
@@ -728,13 +728,12 @@ class ExtMobileFrontend {
 		return $itemToRemoveRecords;
 	}
 	
-	private function getClassElement($DOMElement, $Node, $className) {
+	private function getClassElement( $DOMElement, $className ) {
 			$children = $DOMElement->childNodes;
 			foreach ( $children as $child ) {
 				if ( $child->hasAttributes() && 
 					$child->getAttribute( 'class' ) == $className ) {
-					$$Node = $child;
-					return $$Node;
+					return $child;
 				}
 			}
 			return $DOMElement;
@@ -759,10 +758,10 @@ class ExtMobileFrontend {
 		switch ( self::$code ) { 
 			case 'de':
 				$featuredArticle = $this->mainPage->getElementById( 'hauptseite-artikel' );
-				$featuredArticle = $this->getClassElement($featuredArticle, 'featuredArticle', 'inhalt' );
+				$featuredArticle = $this->getClassElement($featuredArticle, 'inhalt' );
 			
 				$newsItems = $this->mainPage->getElementById( 'hauptseite-nachrichten' );
-				$newsItems = $this->getClassElement($newsItems, 'newsItems', 'inhalt' );
+				$newsItems = $this->getClassElement($newsItems, 'inhalt' );
 			break;
 			case 'fr':
 				$featuredArticle = $this->mainPage->getElementById( 'accueil-lumieresur' );
@@ -770,7 +769,7 @@ class ExtMobileFrontend {
 			break;
 			case 'ku':			
 				$newsItems = $this->mainPage->getElementById( 'hauptseite-wikipedia' );
-				$newsItems = $this->getClassElement($newsItems, 'newsItems', 'inhalt' );
+				$newsItems = $this->getClassElement($newsItems, 'inhalt' );
 			break;
 			case 'bh':
 				$featuredArticle = $this->mainPage->getElementById( 'mp-featured_article' );
