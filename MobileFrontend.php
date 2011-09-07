@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.59';
+	const VERSION = '0.5.60';
 
 	/**
 	 * @var DOMDocument
@@ -728,17 +728,6 @@ class ExtMobileFrontend {
 		return $itemToRemoveRecords;
 	}
 	
-	private function getClassElement( $DOMElement, $className ) {
-			$children = $DOMElement->childNodes;
-			foreach ( $children as $child ) {
-				if ( $child->hasAttributes() && 
-					$child->getAttribute( 'class' ) == $className ) {
-					return $child;
-				}
-			}
-			return $DOMElement;
-	}
-	
 	public function DOMParseMainPage( $html ) {
 		wfProfileIn( __METHOD__ );
 		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
@@ -755,28 +744,10 @@ class ExtMobileFrontend {
 		$featuredArticle = $this->mainPage->getElementById( 'mp-tfa' );
 		$newsItems = $this->mainPage->getElementById( 'mp-itn' );
 		
-		switch ( self::$code ) { 
-			case 'de':
-				$featuredArticle = $this->mainPage->getElementById( 'hauptseite-artikel' );
-				$featuredArticle = $this->getClassElement($featuredArticle, 'inhalt' );
-			
-				$newsItems = $this->mainPage->getElementById( 'hauptseite-nachrichten' );
-				$newsItems = $this->getClassElement($newsItems, 'inhalt' );
-			break;
-			case 'fr':
-				$featuredArticle = $this->mainPage->getElementById( 'accueil-lumieresur' );
-			    $newsItems = $this->mainPage->getElementById( 'accueil-actualite' );
-			break;
-			case 'ku':			
-				$newsItems = $this->mainPage->getElementById( 'hauptseite-wikipedia' );
-				$newsItems = $this->getClassElement($newsItems, 'inhalt' );
-			break;
-			case 'bh':
-				$featuredArticle = $this->mainPage->getElementById( 'mp-featured_article' );
-			break;
-			case 'ja':
-			break;
-		}
+		$xpath = new DOMXpath( $this->mainPage );
+		$elements = $xpath->query( '//*[starts-with(@id, "mp-")]' );
+		
+		$commonAttributes = array('mp-tfa', 'mp-itn');
 
 		$content = $this->mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'main_box' );
@@ -791,6 +762,18 @@ class ExtMobileFrontend {
 			$h2NewsItems = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-news-items'] );
 			$content->appendChild( $h2NewsItems );
 			$content->appendChild( $newsItems );
+		}
+		
+		foreach ( $elements as $element ) {
+			if ( $element->hasAttribute( 'id' ) ) {
+				$id = $element->getAttribute( 'id' );
+				if ( !in_array( $id, $commonAttributes ) ) {
+					$elementTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
+					$h2UnknownMobileSection = $this->mainPage->createElement( 'h2', $elementTitle );
+					$content->appendChild( $h2UnknownMobileSection );
+					$content->appendChild( $element );
+				}
+			}
 		}
 		
 		$contentHtml = $this->mainPage->saveXML( $content, LIBXML_NOEMPTYTAG );
