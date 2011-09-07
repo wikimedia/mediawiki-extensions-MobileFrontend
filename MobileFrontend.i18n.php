@@ -74,8 +74,11 @@ $messages['en'] = array (
  * @author EugeneZelenko
  * @author Raymond
  * @author Siebrand
+ * @author Yekrats
  */
 $messages['qqq'] = array(
+	'mobile-frontend-show-button' => '{{Identical|Show}}',
+	'mobile-frontend-hide-button' => '{{Identical|Hide}}',
 	'mobile-frontend-wml-continue' => '{{Identical|Continue}}',
 	'mobile-frontend-wml-back' => '{{Identical|Back}}',
 	'mobile-frontend-opt-in-yes-button' => '{{Identical|Yes}}',
@@ -1051,14 +1054,15 @@ $messages['de'] = array(
 	'mobile-frontend-disable-images' => 'Bilder in der mobilen Ansicht deaktivieren',
 	'mobile-frontend-enable-images' => 'Bilder in der mobilen Ansicht aktivieren',
 	'mobile-frontend-news-items' => 'In den Nachrichten',
-	'mobile-frontend-leave-feedback-title' => 'Rückmeldung zur mobilen Ansicht geben',
-	'mobile-frontend-leave-feedback-notice' => 'Deine Rückmeldung wird auf der Seite „$1“ öffentlich angezeigt, zusammen mit deinem Benutzernamen, der Version deines Browsers und deinem Betriebssystem.',
+	'mobile-frontend-leave-feedback-title' => 'Gib uns bitte eine Rückmeldung zu deinen Erfahrungen mit der mobilen Ansicht',
+	'mobile-frontend-leave-feedback-notice' => 'Deine Rückmeldung hilft uns dabei, die mobile Ansicht weiter zu verbessern. Sie wird öffentlich auf der Seite &quot;$1&quot; angezeigt. Dabei werden dein Benutzername, die Version des von dir genutzten Browsers sowie das von dir genutzte Betriebssystem angegeben. Bitte wähle einen informativen und aussagekräftigen Betreff, wie bswp. „Probleme bei der Anzeige von Tabellen“. Deine Rückmeldung unterliegt dabei unseren Nutzungsbedingungen.',
 	'mobile-frontend-leave-feedback-subject' => 'Betreff',
 	'mobile-frontend-leave-feedback-message' => 'Nachricht',
 	'mobile-frontend-leave-feedback-cancel' => 'Abbrechen',
 	'mobile-frontend-leave-feedback-submit' => 'Rückmeldung senden',
 	'mobile-frontend-leave-feedback-link-text' => 'Rückmeldung zur mobilen Ansicht',
 	'mobile-frontend-leave-feedback' => 'Rückmeldung geben',
+	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für deine Rückmeldung.',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -1069,7 +1073,8 @@ $messages['de-formal'] = array(
 	'mobile-frontend-are-you-sure' => 'Sind Sie sich sicher?',
 	'mobile-frontend-explain-disable' => 'Sind Sie sich sicher, dass Sie die mobile Ansicht von {{SITENAME}} deaktivieren möchten? Sofern Sie <b>Deaktivieren</b> wählen, werden Sie von nun an bei einem Besuch von {{SITENAME}} nicht mehr automatisch auf die mobile Ansicht {{SITENAME}} weitergeleitet.',
 	'mobile-frontend-contact-us' => 'Im Fall von Fragen oder Anmerkungen kontaktieren Sie uns bitte unter der E-Mail-Adresse mobile@wikipedia.org',
-	'mobile-frontend-leave-feedback-notice' => 'Ihre Rückmeldung wird auf der Seite „$1“ öffentlich angezeigt, zusammen mit Ihrem Benutzernamen, der Version Ihres Browsers und Ihrem Betriebssystem.',
+	'mobile-frontend-leave-feedback-title' => 'Geben Sie uns bitte eine Rückmeldung zu Ihren Erfahrungen mit der mobilen Ansicht',
+	'mobile-frontend-leave-feedback-notice' => 'Ihre Rückmeldung hilft uns dabei, die mobile Ansicht weiter zu verbessern. Sie wird öffentlich auf der Seite &quot;$1&quot; angezeigt. Dabei werden Ihr Benutzername, die Version des von Ihnen genutzten Browsers sowie das von Ihnen genutzte Betriebssystem angegeben. Bitte wählen Sie einen informativen und aussagekräftigen Betreff, wie bswp. „Probleme bei der Anzeige von Tabellen“. Ihre Rückmeldung unterliegt dabei unseren Nutzungsbedingungen.',
 );
 
 /** Zazaki (Zazaki) */
@@ -1261,14 +1266,15 @@ $messages['eo'] = array(
 	'mobile-frontend-disable-images' => 'Malŝalti bildojn en poŝtelefona retejo',
 	'mobile-frontend-enable-images' => 'Ŝalti bildojn en poŝtelefona retejo',
 	'mobile-frontend-news-items' => 'Aktuale',
-	'mobile-frontend-leave-feedback-title' => 'Lasi komenton pri Poŝtelefona Fasado',
-	'mobile-frontend-leave-feedback-notice' => 'Viaj komentoj estos afiŝitaj publike, kune kun via salutnomo, retumila versio, kaj operaciumo al la paĝo "$1"',
+	'mobile-frontend-leave-feedback-title' => 'Doni al ni vian opinion pri la Poŝtelefona Fasado',
+	'mobile-frontend-leave-feedback-notice' => 'Viaj komentoj helpas nin plibonigi la poŝtelefona fasado. Ĝi estos afiŝitaj publike, kune kun via salutnomo, retumila versio, kaj operaciumo al la paĝo &quot;$1&quot;. Bonvolu elekti informeca temo-linio, ekz-e "Problemoj formati vastajn tabelojn". Viaj opinioj estas regataj laŭ nia regularo pri uzado.',
 	'mobile-frontend-leave-feedback-subject' => 'Temo',
 	'mobile-frontend-leave-feedback-message' => 'Mesaĝo',
 	'mobile-frontend-leave-feedback-cancel' => 'Nuligi',
 	'mobile-frontend-leave-feedback-submit' => 'Doni Mesaĝon',
 	'mobile-frontend-leave-feedback-link-text' => 'Komentoj pri Poŝtelefona Fasado',
 	'mobile-frontend-leave-feedback' => 'Lasi komenton',
+	'mobile-frontend-leave-feedback-thanks' => 'Dankon pro viaj komentoj!',
 );
 
 /** Spanish (Español)
@@ -1567,14 +1573,15 @@ $messages['fr'] = array(
 	'mobile-frontend-disable-images' => 'Désactiver les images en version mobile',
 	'mobile-frontend-enable-images' => 'Activer les images sur le site mobile',
 	'mobile-frontend-news-items' => 'Actualités',
-	'mobile-frontend-leave-feedback-title' => 'Laisser un ressenti au sujet du frontal Mobile',
-	'mobile-frontend-leave-feedback-notice' => 'Votre avis sera publié publiquement sur la page "$1", avec votre nom d’utilisateur, la version de votre navigateur et le système d’exploitation que vous utilisez',
+	'mobile-frontend-leave-feedback-title' => 'Nous donner votre ressenti sur votre expérience du site mobile',
+	'mobile-frontend-leave-feedback-notice' => "Votre avis nous aidera à améliorer votre expérience du site mobile. Il sera publié publiquement (avec votre nom d'utilisateur, la version de votre navigateur et votre système d'exploitation) sur la page&quot;\$1&quot;. Merci d'essayer de choisir une ligne de sujet parlante, par ex. \"Problèmes de formatage avec les tableaux larges\". Votre avis est soumis à nos conditions d'utilisation.",
 	'mobile-frontend-leave-feedback-subject' => 'Sujet',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Annuler',
 	'mobile-frontend-leave-feedback-submit' => 'Soumettre son ressenti',
 	'mobile-frontend-leave-feedback-link-text' => 'ressenti du frontal Mobile',
 	'mobile-frontend-leave-feedback' => 'Laisser son ressenti',
+	'mobile-frontend-leave-feedback-thanks' => 'Merci pour votre avis!',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -1625,14 +1632,15 @@ $messages['frp'] = array(
 	'mobile-frontend-disable-images' => 'Dèsctivar les émâges sur lo seto mobilo',
 	'mobile-frontend-enable-images' => 'Activar les émâges sur lo seto mobilo',
 	'mobile-frontend-news-items' => 'Novèles',
-	'mobile-frontend-leave-feedback-title' => 'Balyér voutron avis sur lo frontâl mobilo',
-	'mobile-frontend-leave-feedback-notice' => 'Voutron avis serat postâ publicament sur la pâge "$1", avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion',
+	'mobile-frontend-leave-feedback-title' => 'Balyéd-nos voutron avis sur voutra èxpèrience du seto mobilo',
+	'mobile-frontend-leave-feedback-notice' => 'Voutron avis nos édierat a mèlyorar voutra èxpèrience du seto mobilo. Serat postâ publicament (avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion) sur la pâge « $1 ». Volyéd tâchiér de chouèsir una legne de sujèt parlenta, per ègz. « Problèmos de formatâjo avouéc les trâbles lârges ». Voutron avis est somês a noutres condicions d’usâjo.',
 	'mobile-frontend-leave-feedback-subject' => 'Sujèt',
 	'mobile-frontend-leave-feedback-message' => 'Mèssâjo',
 	'mobile-frontend-leave-feedback-cancel' => 'Anular',
 	'mobile-frontend-leave-feedback-submit' => 'Mandar voutron avis',
 	'mobile-frontend-leave-feedback-link-text' => 'Avis du frontâl mobilo',
 	'mobile-frontend-leave-feedback' => 'Balyér voutron avis',
+	'mobile-frontend-leave-feedback-thanks' => 'Grant-marci por voutron avis !',
 );
 
 /** Friulian (Furlan) */
@@ -1746,13 +1754,15 @@ $messages['gl'] = array(
 	'mobile-frontend-disable-images' => 'Desactivar as imaxes na versión móbil',
 	'mobile-frontend-enable-images' => 'Activar as imaxes na versión móbil',
 	'mobile-frontend-news-items' => 'Actualidade',
-	'mobile-frontend-leave-feedback-title' => 'Deixe un comentario sobre Frontend móbil',
+	'mobile-frontend-leave-feedback-title' => 'Deixe comentarios sobre a experiencia coa versión móbil',
+	'mobile-frontend-leave-feedback-notice' => 'Os seus comentarios axúdannos a mellorar a súa experiencia na versión móbil. Faremos os comentarios públicos (xunto ao seu nome de usuario, versión do navegador e sistema operativo) na páxina &quot;$1&quot;. Intente elixir unha liña de asunto informativa; por exemplo, "Problemas de formato co largo das táboas". Os seus comentarios están suxeitos aos nosos termos de uso.',
 	'mobile-frontend-leave-feedback-subject' => 'Asunto',
 	'mobile-frontend-leave-feedback-message' => 'Mensaxe',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancelar',
-	'mobile-frontend-leave-feedback-submit' => 'Enviar comentario',
-	'mobile-frontend-leave-feedback-link-text' => 'Comentário sobre Frotend móbil',
-	'mobile-frontend-leave-feedback' => 'Deixe un comentario',
+	'mobile-frontend-leave-feedback-submit' => 'Enviar os comentarios',
+	'mobile-frontend-leave-feedback-link-text' => 'Extensión para deixar comentarios sobre a versión móbil',
+	'mobile-frontend-leave-feedback' => 'Comentarios sobre a versión móbil',
+	'mobile-frontend-leave-feedback-thanks' => 'Grazas polos seus comentarios!',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
@@ -1927,14 +1937,15 @@ $messages['he'] = array(
 	'mobile-frontend-disable-images' => 'לכבות תמונות באתר למכשירים ניידים',
 	'mobile-frontend-enable-images' => 'להפעיל תצוגת תמונות באתר למכשירים ניידים',
 	'mobile-frontend-news-items' => 'בחדשות',
-	'mobile-frontend-leave-feedback-title' => 'שליחת משוב על ממשק למכשירים ניידים',
-	'mobile-frontend-leave-feedback-notice' => 'המשוב שלכם יישלח באופן פומבי, יחד עם שם המשתמש שלך, עם גרסה הדפדפן ועם מערכת ההפעלה, לדף "$1"',
+	'mobile-frontend-leave-feedback-title' => 'שליחת משוב על חוויית משתמש באתר למכשירים ניידים',
+	'mobile-frontend-leave-feedback-notice' => 'המשוב שלך עוזר לנו לספר את חוויית השימוש באתר למכשירים ניידים. הוא יישלח באופן פומבי (יחד עם שם המשתמש שלך, גרסה הדפדפן ומערכת ההפעלה), לדף "$1". נא לרשום משהו ברור בשורת הנושא, למשל "יש בעיית עיצוב עם טבלאות". המשוב שלכם כפוף לתנאי השימוש.',
 	'mobile-frontend-leave-feedback-subject' => 'נושא',
 	'mobile-frontend-leave-feedback-message' => 'הודעה',
 	'mobile-frontend-leave-feedback-cancel' => 'ביטול',
 	'mobile-frontend-leave-feedback-submit' => 'שליחת משוב',
 	'mobile-frontend-leave-feedback-link-text' => 'שליחת משוב על הממשק למכשירים ניידים',
 	'mobile-frontend-leave-feedback' => 'שליחת משוב',
+	'mobile-frontend-leave-feedback-thanks' => 'תודה על המשוב!',
 );
 
 /** Hindi (हिन्दी) */
@@ -2277,6 +2288,8 @@ $messages['it'] = array(
 	'mobile-frontend-opt-in-no-button' => 'no',
 	'mobile-frontend-opt-out-yes-button' => 'sì',
 	'mobile-frontend-opt-out-no-button' => 'no',
+	'mobile-frontend-disable-images' => 'Disabilita le immagini sul sito per cellulari',
+	'mobile-frontend-enable-images' => 'Abilita le immagini sul sito per cellulari',
 );
 
 /** Japanese (日本語)
@@ -2997,14 +3010,15 @@ $messages['mk'] = array(
 	'mobile-frontend-disable-images' => 'Оневозможи слики на мобилното мреж. место',
 	'mobile-frontend-enable-images' => 'Овозможи слики на мобилното мреж. место',
 	'mobile-frontend-news-items' => 'Вести',
-	'mobile-frontend-leave-feedback-title' => 'Дајте свое мислење за Мобилниот посредник',
-	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ќе биде јавно објавено на страницата, заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем на страницата "$1"',
+	'mobile-frontend-leave-feedback-title' => 'Дајте ни ваше мислење за мобилната верзија',
+	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ни помага да ја подобриме мобилната верзија. Мислењето ќе биде објавено јавно (заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем) на страницата „$1“. Одберете информативен наслов, како на пр. „Проблем со форматирање на широките табели“. Искажаното мислење подлежи на условите на употреба.',
 	'mobile-frontend-leave-feedback-subject' => 'Наслов:',
 	'mobile-frontend-leave-feedback-message' => 'Порака',
 	'mobile-frontend-leave-feedback-cancel' => 'Откажи',
 	'mobile-frontend-leave-feedback-submit' => 'Поднеси мислење',
 	'mobile-frontend-leave-feedback-link-text' => 'Мислење за Мобилниот посредник',
 	'mobile-frontend-leave-feedback' => 'Дајте мислење',
+	'mobile-frontend-leave-feedback-thanks' => 'Ви благодариме за искажаното мислење!',
 );
 
 /** Malayalam (മലയാളം)
@@ -3182,14 +3196,15 @@ $messages['ms'] = array(
 	'mobile-frontend-disable-images' => 'Matikan imej di tapak mudah alih',
 	'mobile-frontend-enable-images' => 'Membolehkan imej di tapak mudah alih',
 	'mobile-frontend-news-items' => 'Dalam Berita',
-	'mobile-frontend-leave-feedback-title' => 'Tinggalkan maklum balas tentang Mobile Frontend',
-	'mobile-frontend-leave-feedback-notice' => 'Maklum balas anda akan dipaparkan kepada umum, dengan nama pengguna, versi pelayar dan sistem pengendalian anda pada laman "$1"',
+	'mobile-frontend-leave-feedback-title' => 'Beri kami maklum balas tentang pengalaman tapak mudah alih anda',
+	'mobile-frontend-leave-feedback-notice' => 'Maklum balas anda membantu kami untuk meningkatkan pengalaman anda ketika melayari tapak mudah alih. Ia akan disiarkan secara umum (dengan nama pengguna, versi pelayar dan sistem pengendalian) pada laman &quot;$1&quot;. Sila cuba memilih baris subjek yang informatif, cth. "Masalah ketika memformatkan jadual yang lebar". Maklum balas anda tertakluk kepada terma-terma penggunaan kami.',
 	'mobile-frontend-leave-feedback-subject' => 'Subjek',
 	'mobile-frontend-leave-feedback-message' => 'Pesanan',
 	'mobile-frontend-leave-feedback-cancel' => 'Batalkan',
 	'mobile-frontend-leave-feedback-submit' => 'Hantar Maklum Balas',
 	'mobile-frontend-leave-feedback-link-text' => 'Maklum balas Mobile Frontend',
 	'mobile-frontend-leave-feedback' => 'Tinggalkan maklum balas',
+	'mobile-frontend-leave-feedback-thanks' => 'Terima kasih atas maklum balas anda!',
 );
 
 /** Maltese (Malti) */
@@ -3327,6 +3342,7 @@ $messages['ne'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Patio
  * @author SPQRobin
  * @author Siebrand
  */
@@ -3377,14 +3393,15 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-disable-images' => 'Afbeeldingen op de mobiele site uitschakelen',
 	'mobile-frontend-enable-images' => 'Afbeeldingen op de mobiele site inschakelen',
 	'mobile-frontend-news-items' => 'In het nieuws',
-	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling achterlaten over Mobiele Frontend',
-	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling wordt zichtbaar geplaatst, samen met uw gebruikersnaam, browserversie en besturingssysteem op de pagina "$1".',
+	'mobile-frontend-leave-feedback-title' => 'Geef ons terugkoppeling over uw ervaring met de mobiele site',
+	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling helpt ons uw ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (als ook uw gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alstublieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op uw terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
 	'mobile-frontend-leave-feedback-subject' => 'Onderwerp',
 	'mobile-frontend-leave-feedback-message' => 'Bericht',
 	'mobile-frontend-leave-feedback-cancel' => 'Annuleren',
 	'mobile-frontend-leave-feedback-submit' => 'Terugkoppeling opslaan',
 	'mobile-frontend-leave-feedback-link-text' => 'Mobiele Frontend-terugkoppeling',
 	'mobile-frontend-leave-feedback' => 'Terugkoppeling achterlaten',
+	'mobile-frontend-leave-feedback-thanks' => 'Dank u voor uw terugkoppeling.',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
@@ -3737,14 +3754,16 @@ $messages['pms'] = array(
 	'mobile-frontend-disable-images' => "Disabilité le figure an sël sit pr'ij sacociàbij",
 	'mobile-frontend-enable-images' => "Abilité le figure an sël sit pr'ij sacociàbij",
 	'mobile-frontend-news-items' => 'Ant le Neuve',
-	'mobile-frontend-leave-feedback-title' => "Lassé n'opinion a propòsit dla visualisassion pr'ij sacociàbij",
-	'mobile-frontend-leave-feedback-notice' => 'Soa opinion a sarà publicà, ansema a sò stranòm, la version ëd sò navigador e sò sistema operativ a la pàgina "$1"',
+	'mobile-frontend-leave-feedback-title' => "Dane n'opinion a propòsit ëd toa esperiensa dël sit mòbil",
+	'mobile-frontend-leave-feedback-notice' => '
+Soa opinion an giuta a mejoré soa esperiensa dël sit mòbil. A sarà publicà (ansema a sò stranòm, la version ëd sò navigador e sò sistema operativ) a la pàgina "$1". Për piasì ch\'a preuva a serne na linia anformativa dël soget, për esempi "Formaté eror con tàule veuide". Soa opinion a l\'é sogeta ai nòsti termo d\'usagi.',
 	'mobile-frontend-leave-feedback-subject' => 'Soget',
 	'mobile-frontend-leave-feedback-message' => 'Mëssagi',
 	'mobile-frontend-leave-feedback-cancel' => 'Scancela',
 	'mobile-frontend-leave-feedback-submit' => 'Spedì ij coment',
 	'mobile-frontend-leave-feedback-link-text' => "Opinion an sla visualisassion pr'ij sacociàbij",
 	'mobile-frontend-leave-feedback' => "Lassé n'opinion",
+	'mobile-frontend-leave-feedback-thanks' => 'Mersì, për toa opinion!',
 );
 
 /** Western Punjabi (پنجابی)
@@ -3786,7 +3805,9 @@ $messages['pnb'] = array(
 	'mobile-frontend-news-items' => 'دساں چ',
 );
 
-/** Pashto (پښتو) */
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
 $messages['ps'] = array(
 	'mobile-frontend-search-submit' => 'ورځه',
 	'mobile-frontend-search-results' => 'د پلټنې پايلې',
@@ -3815,6 +3836,12 @@ $messages['ps'] = array(
 	'mobile-frontend-author-link' => 'د دې لپاره چې د همدې رسنيزې دوتنې د خاوند، منښتليک او نورو څرګندونو په اړه مالومات ترلاسه کړۍ، نو لطفاً دا رسنۍ د ويکيپېډيا په عادي مخ وګورۍ.',
 	'mobile-frontend-download-full-version' => 'بشپړه بڼه ښکته کول',
 	'mobile-frontend-file-namespace' => 'دوتنه',
+	'mobile-frontend-opt-in-yes-button' => 'هو',
+	'mobile-frontend-opt-in-no-button' => 'نه',
+	'mobile-frontend-opt-out-yes-button' => 'هو',
+	'mobile-frontend-opt-out-no-button' => 'نه',
+	'mobile-frontend-leave-feedback-message' => 'پيغام',
+	'mobile-frontend-leave-feedback-cancel' => 'ناګارل',
 );
 
 /** Portuguese (Português)
@@ -3934,6 +3961,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Enviar comentários',
 	'mobile-frontend-leave-feedback-link-text' => 'Comentário de interface móvel',
 	'mobile-frontend-leave-feedback' => 'Deixar comentário',
+	'mobile-frontend-leave-feedback-thanks' => 'Obrigado por seus comentários!',
 );
 
 /** Romansh (Rumantsch)
@@ -4024,8 +4052,8 @@ $messages['ro'] = array(
 	'mobile-frontend-disable-images' => 'Dezactivează imaginile pe site-urile mobile',
 	'mobile-frontend-enable-images' => 'Activează imaginile pe site-urile mobile',
 	'mobile-frontend-news-items' => 'Știri',
-	'mobile-frontend-leave-feedback-title' => 'Lăsați-vă părerea despre interfața mobilă',
-	'mobile-frontend-leave-feedback-notice' => 'Părerea dumneavoastră va fi făcută publică, împreună cu numele dumneavoastră de utilizator, versiunea browserului și sistemul de operare pe pagina "$1"',
+	'mobile-frontend-leave-feedback-title' => 'Oferiți-ne părerea despre experiența dv. cu interfața mobilă',
+	'mobile-frontend-leave-feedback-notice' => 'Părerea dumneavoastră ne va ajuta să îmbunătățim navigarea pe site-ul mobil. Aceasta va fi făcută publică (împreună cu numele dumneavoastră de utilizator, versiunea browserului și sistemul de operare) pe pagina „$1”. Încercați să alegeți un titlu informativ; ex.: „Probleme cu formatarea tabelelor late”. Comentariile dumnevoastră sunt supuse condițiilor noastre de utilizare.',
 	'mobile-frontend-leave-feedback-subject' => 'Subiect',
 	'mobile-frontend-leave-feedback-message' => 'Mesaj',
 	'mobile-frontend-leave-feedback-cancel' => 'Revocare',
@@ -4051,6 +4079,8 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-hide-button' => 'Scunne',
 	'mobile-frontend-disable-button' => 'disabbilete',
 	'mobile-frontend-back-button' => 'Rrete',
+	'mobile-frontend-regular-site' => "Vide sta pàgene sus a 'na {{SITENAME}} regolare",
+	'mobile-frontend-perm-stop-redirect' => "Disabbilete pe sembre 'u site mobile",
 	'mobile-frontend-error-page-title' => "Nuje tenime 'nu probbleme!",
 	'mobile-frontend-are-you-sure' => 'Sì secure secure?',
 	'mobile-frontend-nav-end' => 'Fine',
@@ -4065,8 +4095,13 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-view' => "Viste d'u mobile",
 	'mobile-frontend-opt-in-yes-button' => 'sine',
 	'mobile-frontend-opt-in-no-button' => 'none',
+	'mobile-frontend-opt-in-title' => 'Opt-In pe Test',
+	'mobile-frontend-opt-in-explain' => "Quiste te permette de 'nzerì 'u test",
 	'mobile-frontend-opt-out-yes-button' => 'sine',
 	'mobile-frontend-opt-out-no-button' => 'none',
+	'mobile-frontend-opt-out-title' => 'Opt-Out de Test',
+	'mobile-frontend-disable-images' => "Disabbilite le immaggine sus a 'u site mobile",
+	'mobile-frontend-enable-images' => "Abbilite le immaggine sus a 'u site mobile",
 	'mobile-frontend-news-items' => "Jndr'à le notizie",
 	'mobile-frontend-leave-feedback-subject' => 'Suggette',
 	'mobile-frontend-leave-feedback-message' => 'Messàgge',
@@ -4413,14 +4448,15 @@ $messages['sl'] = array(
 	'mobile-frontend-disable-images' => 'Onemogoči slike na mobilni strani',
 	'mobile-frontend-enable-images' => 'Omogoči slike na mobilni strani',
 	'mobile-frontend-news-items' => 'V novicah',
-	'mobile-frontend-leave-feedback-title' => 'Pustite povratne informacije o mobilnem obličju',
-	'mobile-frontend-leave-feedback-notice' => 'Vaše povratne informacije bodo javno objavljene na stran "$1", skupaj z vašim uporabniškim imenom, različico brskalnika in operacijskim sistemom',
+	'mobile-frontend-leave-feedback-title' => 'Podajte nam povratne informacije o vaših izkušnjah z mobilno stranjo',
+	'mobile-frontend-leave-feedback-notice' => 'Vaše povratne informacije nam pomagajo izboljšati izkušnjo z mobilno stranjo. Objavljene bodo javno (skupaj z vašim uporabniškim imenom, različico brskalnika in operacijskim sistemom) na strani »$1«. Prosimo, da poskusite izbrati informativno zadevo, npr. »Težave pri oblikovanju širokih tabel«. Vaša povratna informacija je predmet naših pogojev uporabe.',
 	'mobile-frontend-leave-feedback-subject' => 'Zadeva',
 	'mobile-frontend-leave-feedback-message' => 'Sporočilo',
 	'mobile-frontend-leave-feedback-cancel' => 'Prekliči',
 	'mobile-frontend-leave-feedback-submit' => 'Pošljite povratne informacije',
 	'mobile-frontend-leave-feedback-link-text' => 'Povratne informacije o mobilnem obličju',
 	'mobile-frontend-leave-feedback' => 'Pustite povratne informacije',
+	'mobile-frontend-leave-feedback-thanks' => 'Hvala za povratne informacije!',
 );
 
 /** Albanian (Shqip) */
@@ -5091,13 +5127,14 @@ $messages['vi'] = array(
 	'mobile-frontend-enable-images' => 'Hiện hình ảnh trên trang di động',
 	'mobile-frontend-news-items' => 'Tin tức',
 	'mobile-frontend-leave-feedback-title' => 'Gửi phản hồi về giao diện di động',
-	'mobile-frontend-leave-feedback-notice' => 'Phản hồi của bạn sẽ được đăng công khai vào trang “$1”, cùng với tên người dùng, phiên bản trình duyệt, và hệ điều hành của bạn.',
+	'mobile-frontend-leave-feedback-notice' => 'Phản hồi giúp chúng tôi cải tiến các trang di động. Những cảm nghĩ của bạn sẽ được đăng công khai vào trang “$1”, cùng với tên người dùng, phiên bản trình duyệt, và hệ điều hành của bạn. Xin vui lòng chọn một tiêu đề có ý nghĩa, thí dụ “Vấn đề hiển thị bảng rộng”. Phản hồi của bạn sẽ được xử lý theo các điều khoản sử dụng.',
 	'mobile-frontend-leave-feedback-subject' => 'Tiêu đề',
 	'mobile-frontend-leave-feedback-message' => 'Thông điệp',
 	'mobile-frontend-leave-feedback-cancel' => 'Hủy bỏ',
 	'mobile-frontend-leave-feedback-submit' => 'Gửi phản hồi',
 	'mobile-frontend-leave-feedback-link-text' => 'Phản hồi về giao diện di động',
 	'mobile-frontend-leave-feedback' => 'Gửi phản hồi',
+	'mobile-frontend-leave-feedback-thanks' => 'Cám ơn phản hồi của bạn!',
 );
 
 /** Volapük (Volapük)
