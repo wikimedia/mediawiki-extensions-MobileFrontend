@@ -745,7 +745,7 @@ class ExtMobileFrontend {
 		$newsItems = $this->mainPage->getElementById( 'mp-itn' );
 		
 		$xpath = new DOMXpath( $this->mainPage );
-		$elements = $xpath->query( '//*[starts-with(@id, "mp-")]' );
+		$elements = $xpath->query( '//*[starts-with(@id, "mf-")]' );
 		
 		$commonAttributes = array('mp-tfa', 'mp-itn');
 
