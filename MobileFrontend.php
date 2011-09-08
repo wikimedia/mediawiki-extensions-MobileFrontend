@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.60';
+	const VERSION = '0.5.61';
 
 	/**
 	 * @var DOMDocument
@@ -770,8 +770,11 @@ class ExtMobileFrontend {
 				if ( !in_array( $id, $commonAttributes ) ) {
 					$elementTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
 					$h2UnknownMobileSection = $this->mainPage->createElement( 'h2', $elementTitle );
+					$br = $this->mainPage->createElement( 'br' );
+					$br->setAttribute( 'CLEAR', 'ALL' );
 					$content->appendChild( $h2UnknownMobileSection );
 					$content->appendChild( $element );
+					$content->appendChild( $br );
 				}
 			}
 		}
