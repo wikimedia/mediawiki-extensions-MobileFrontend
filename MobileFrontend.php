@@ -473,14 +473,14 @@ class ExtMobileFrontend {
 		}
 	}
 
-	private function getRelativeURL($url) {
+	private function getRelativeURL( $url ) {
 		wfProfileIn( __METHOD__ );
-		$parsedUrl = parse_url($url);
+		$parsedUrl = parse_url( $url );
 		//Validates value as IP address
 		if( !IP::isValid( $parsedUrl['host'] ) ) {
 			wfProfileOut( __METHOD__ );
 			$baseUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
-			$baseUrl = str_replace($baseUrl, '', $url);
+			$baseUrl = str_replace( $baseUrl, '', $url );
 			return $baseUrl;
 		} else {
 			wfProfileOut( __METHOD__ );
