@@ -7,8 +7,7 @@ $disableImages = self::$messages['mobile-frontend-disable-images'];
 $enableImages = self::$messages['mobile-frontend-enable-images'];
 $leaveFeedback = self::$messages['mobile-frontend-leave-feedback'];
 
-$leaveFeedbackURL = self::$currentURL . '&mobileaction=leave_feedback';
-
+$leaveFeedbackURL = self::$leaveFeedbackURL;
 $disableMobileSiteURL = self::$disableMobileSiteURL;
 $viewNormalSiteURL = self::$viewNormalSiteURL;
 

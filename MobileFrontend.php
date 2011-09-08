@@ -104,6 +104,7 @@ class ExtMobileFrontend {
 	public static $viewNormalSiteURL;
 	public static $currentURL;
 	public static $displayNoticeId;
+	public static $leaveFeedbackURL;
 	
 	public static $messageKeys = array( 
 		'mobile-frontend-show-button',
@@ -200,6 +201,7 @@ class ExtMobileFrontend {
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
 		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
 		self::$currentURL = htmlspecialchars( $wgRequest->getFullRequestURL() );
+		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 		
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
@@ -288,6 +290,7 @@ class ExtMobileFrontend {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
 			$location = str_replace( '?disableImages=1', '', str_replace( '&disableImages=1', '', $wgRequest->getFullRequestURL() ) );
 			$location = str_replace( '&mfi=1', '', str_replace( '&mfi=0', '', $location ) );
+			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=0' );
 		}
 		
@@ -305,6 +308,7 @@ class ExtMobileFrontend {
 			}
 			$location = str_replace( '?enableImages=1', '', str_replace( '&enableImages=1', '', $wgRequest->getFullRequestURL() ) );
 			$location = str_replace( '&mfi=1', '', str_replace( '&mfi=0', '', $location ) );
+			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=1' );
 		}
 
@@ -364,6 +368,7 @@ class ExtMobileFrontend {
 			}
 			
 			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() . '&noticeid=1' );
+			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location );
 			wfProfileOut( __METHOD__ );
 			exit();
@@ -465,6 +470,21 @@ class ExtMobileFrontend {
 		} else {
 			wfProfileOut( __METHOD__ );
 			return $_SERVER['HTTP_HOST'];
+		}
+	}
+
+	private function getRelativeURL($url) {
+		wfProfileIn( __METHOD__ );
+		$parsedUrl = parse_url($url);
+		//Validates value as IP address
+		if( !IP::isValid( $parsedUrl['host'] ) ) {
+			wfProfileOut( __METHOD__ );
+			$baseUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
+			$baseUrl = str_replace($baseUrl, '', $url);
+			return $baseUrl;
+		} else {
+			wfProfileOut( __METHOD__ );
+			return $url;
 		}
 	}
 
