@@ -19,11 +19,13 @@ if ( self::$disableImages == 0 ) {
 	$imagesURL = self::$enableImagesURL;
 }
 
+$feedbackLink = (self::$code == 'en') ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : ''; 
+
 $footerHtml = <<<EOD
     <div id='footer'> 
       <div class='nav' id='footmenu'> 
         <div class='mwm-notice'> 
-          <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> | <a href="{$leaveFeedbackURL}">{$leaveFeedback}</a>
+          <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink}
             <div id="perm"> 
               <a href="{$disableMobileSiteURL}">{$permStopRedirect}</a> 
             </div> 
