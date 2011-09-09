@@ -65,7 +65,7 @@ $wgMFRemovableClasses = array(
 );
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.61';
+	const VERSION = '0.5.62';
 
 	/**
 	 * @var DOMDocument
@@ -227,7 +227,7 @@ class ExtMobileFrontend {
 		self::$code = $wgContLang->getCode();
 
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
-		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
+		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		wfProfileOut( __METHOD__ );
 	}
 
