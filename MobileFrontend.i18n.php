@@ -416,6 +416,15 @@ $messages['ast'] = array(
 	'mobile-frontend-disable-images' => 'Desactivar les imaxes nel sitiu pa móvil',
 	'mobile-frontend-enable-images' => 'Activar les imaxes nel sitiu pa móvil',
 	'mobile-frontend-news-items' => 'Actualidá',
+	'mobile-frontend-leave-feedback-title' => 'Dexanos los tos comentarios tocante a la esperiencia cola versión pa móvil',
+	'mobile-frontend-leave-feedback-notice' => "Los tos comentarios nos ayuden a meyorar la to esperiencia na versión pa móvil. Los mesmos s'asoleyen de mou públicu (xunto col to nome d'usuariu, versión de restolador y sistema operativu) na páxina &quot;\$1&quot;. Procura escoyer una llinia d'asuntu informativa; p. ex., \"Problemes de formatu con tables anches\". Los tos comentarios tan suxetos a los nuesos términos d'usu.",
+	'mobile-frontend-leave-feedback-subject' => 'Asuntu',
+	'mobile-frontend-leave-feedback-message' => 'Mensaxe',
+	'mobile-frontend-leave-feedback-cancel' => 'Encaboxar',
+	'mobile-frontend-leave-feedback-submit' => 'Unviar comentarios',
+	'mobile-frontend-leave-feedback-link-text' => 'Comentarios a la estensión MobileFrontend',
+	'mobile-frontend-leave-feedback' => 'Comentarios sobre la versión pa móvil',
+	'mobile-frontend-leave-feedback-thanks' => '¡Gracies polos tos comentarios!',
 );
 
 /** Azerbaijani (Azərbaycanca)
@@ -586,7 +595,9 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Дзякуй за Ваш водгук!',
 );
 
-/** Bulgarian (Български) */
+/** Bulgarian (Български)
+ * @author Spiritia
+ */
 $messages['bg'] = array(
 	'mobile-frontend-search-submit' => 'Отваряне',
 	'mobile-frontend-search-results' => 'Резултати от търсенето',
@@ -615,6 +626,12 @@ $messages['bg'] = array(
 	'mobile-frontend-author-link' => 'Разгледайте този мултимедиен файл в обикновената версия на Уикипедия, за да видите информация за автора, лиценза и допълнително описание.',
 	'mobile-frontend-download-full-version' => 'Изтегляне на пълната версия',
 	'mobile-frontend-file-namespace' => 'Файл',
+	'mobile-frontend-opt-in-yes-button' => 'да',
+	'mobile-frontend-opt-in-no-button' => 'не',
+	'mobile-frontend-opt-out-yes-button' => 'да',
+	'mobile-frontend-opt-out-no-button' => 'не',
+	'mobile-frontend-leave-feedback-subject' => 'Тема',
+	'mobile-frontend-leave-feedback-message' => 'Съобщение',
 );
 
 /** Bihari (भोजपुरी) */
@@ -1798,8 +1815,11 @@ $messages['grc'] = array(
 	'mobile-frontend-home-button' => 'Κυρία',
 );
 
-/** Swiss German (Alemannisch) */
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
 $messages['gsw'] = array(
+	'mobile-frontend-desc' => 'Optimiert Darstellig fir Mobili Ändgerät',
 	'mobile-frontend-search-submit' => 'Gang',
 	'mobile-frontend-search-results' => 'Suechergebnis',
 	'mobile-frontend-no-article-found' => 'Kei Artikel gfunde',
@@ -1827,6 +1847,18 @@ $messages['gsw'] = array(
 	'mobile-frontend-author-link' => 'Die Datei in dr reguläre {{SITENAME}} aazeige go Informatione iber Autore, Lizänz un erwytereti Bschryybige säh',
 	'mobile-frontend-download-full-version' => 'Vollversion abelade',
 	'mobile-frontend-file-namespace' => 'Datei',
+	'mobile-frontend-wml-continue' => 'Wyter ...',
+	'mobile-frontend-wml-back' => 'Zruck ...',
+	'mobile-frontend-view' => 'Mobili Aasicht',
+	'mobile-frontend-opt-in-message' => 'Mitmache bi dr Tescht vu dr neje mobile Aasicht?',
+	'mobile-frontend-opt-in-yes-button' => 'Jo',
+	'mobile-frontend-opt-in-no-button' => 'Nei',
+	'mobile-frontend-opt-in-title' => 'Mitmache bi Tescht',
+	'mobile-frontend-opt-in-explain' => 'Des macht Dir s megli bi Tescht mitzmache',
+	'mobile-frontend-opt-out-message' => 'Nimi mitmache bi dr Tescht vbu dr neje mobile Aasicht?',
+	'mobile-frontend-opt-out-yes-button' => 'Jo',
+	'mobile-frontend-opt-out-no-button' => 'Nei',
+	'mobile-frontend-opt-out-title' => 'Ufhere mit d Tescht',
 );
 
 /** Manx (Gaelg) */
@@ -3046,6 +3078,7 @@ $messages['mk'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Поднеси мислење',
 	'mobile-frontend-leave-feedback-link-text' => 'Мислење за Мобилниот посредник',
 	'mobile-frontend-leave-feedback' => 'Дајте мислење',
+	'mobile-frontend-feedback-page' => 'Project:Мислења за мобилниот додаток',
 	'mobile-frontend-leave-feedback-thanks' => 'Ви благодариме за искажаното мислење!',
 );
 
@@ -3725,7 +3758,7 @@ $messages['pl'] = array(
 	'mobile-frontend-disable-images' => 'Wyłącz wyświetlanie obrazów na mobilnej witrynie',
 	'mobile-frontend-enable-images' => 'Włącz wyświetlanie obrazów na mobilnej witrynie',
 	'mobile-frontend-news-items' => 'Aktualności',
-	'mobile-frontend-leave-feedback-title' => 'Pozostaw swoją opinię na temat mobilnego interfejsu użytkownika',
+	'mobile-frontend-leave-feedback-title' => 'Pozostaw swoją opinię na temat swoich doświadczeń z mobilnym interfejsem użytkownika',
 	'mobile-frontend-leave-feedback-notice' => 'Twoja opinia pomoże poprawić mobilną witrynę. Opinia zostanie opublikowana na stronie „$1“ (wraz z nazwą użytkownika, wersją przeglądarki i systemem operacyjnym). Spróbuj wybrać najbardziej pasujący tytuł, np „Problem z formatowaniem szerokich tabel“. Twoja opinia będzie przetwarzana zgodnie z warunkami użytkowania witryny.',
 	'mobile-frontend-leave-feedback-subject' => 'Temat',
 	'mobile-frontend-leave-feedback-message' => 'Wiadomość',
@@ -3733,6 +3766,7 @@ $messages['pl'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Prześlij opinię',
 	'mobile-frontend-leave-feedback-link-text' => 'Opinia na temat mobilnego interfejsu użytkownika',
 	'mobile-frontend-leave-feedback' => 'Prześlij opinię',
+	'mobile-frontend-leave-feedback-thanks' => 'Dziękujemy za przesłaną opinię!',
 );
 
 /** Piedmontese (Piemontèis)
@@ -4142,6 +4176,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author Dim Grits
  * @author Kaganer
  * @author Rave
  * @author Александр Сигачёв
@@ -4191,14 +4226,16 @@ $messages['ru'] = array(
 	'mobile-frontend-disable-images' => 'Отключить изображения на мобильном сайте',
 	'mobile-frontend-enable-images' => 'Включить изображения на мобильном сайте',
 	'mobile-frontend-news-items' => 'Новости',
-	'mobile-frontend-leave-feedback-title' => 'Оставить отзыв о Мобильном интерфейсе',
-	'mobile-frontend-leave-feedback-notice' => 'Содержание вашего отзыва будет общедоступно, на ряду с именем участника, версией браузера и операционной системой, на странице "$1"',
+	'mobile-frontend-leave-feedback-title' => 'Оставить отзыв о пользовании мобильным интерфейсом',
+	'mobile-frontend-leave-feedback-notice' => 'Ваш отзыв поможет нам улучшить использование мобильного сайта. Он будет опубликован публично (вместе с вашим именем пользователя, версией браузера и операционной системы) на странице &quot;$1&quot;. Пожалуйста, попробуйте выбрать информативную сюжетную линию, например «вопросы форматирования широких таблиц». Ваш отзыв должен быть в соответствии с условиями использования.',
 	'mobile-frontend-leave-feedback-subject' => 'Тема',
 	'mobile-frontend-leave-feedback-message' => 'Сообщение',
 	'mobile-frontend-leave-feedback-cancel' => 'Отмена',
 	'mobile-frontend-leave-feedback-submit' => 'Отправить отзыв',
 	'mobile-frontend-leave-feedback-link-text' => 'Отзывы о Мобильном интерфейсе',
 	'mobile-frontend-leave-feedback' => 'Оставить отзыв',
+	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
+	'mobile-frontend-leave-feedback-thanks' => 'Спасибо за ваш отзыв!',
 );
 
 /** Rusyn (Русиньскый)
@@ -4221,11 +4258,17 @@ $messages['rue'] = array(
 	'mobile-frontend-regular-site' => 'Штандартный взгляд сторінкы в {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'Натырвало деактівовати мобілну верзію',
 	'mobile-frontend-error-page-title' => 'Маме проблем!',
+	'mobile-frontend-error-page-text' => 'Мобілна {{SITENAME}} ся стале актівно вывивать і мы твердо робиме, жебы сьме одстранили вшыткы хыбы. Голошіня о проблемі уж было одослане. Хыбу попробуєме справити што найскоре. Попробуйте то знову пізнїше!',
 	'mobile-frontend-are-you-sure' => 'Сьте певны?',
+	'mobile-frontend-explain-disable' => 'Досправды хочете выпнути мобілну верзію {{grammar:2sg|{{SITENAME}}}}? як выберете <b>Выпнути<b>, не будете уж при далшых навщівах {{grammar:2sg|{{SITENAME}}}} напрямлены на тоту мобілну верзію {{grammar:2sg|{{SITENAME}}}}.',
 	'mobile-frontend-nav-end' => 'Конець',
+	'mobile-frontend-nav-top' => 'На початок',
 	'mobile-frontend-nav-edit' => 'Едітовати',
 	'mobile-frontend-nav-history' => 'Історія',
 	'mobile-frontend-search-text' => 'Глядати',
+	'mobile-frontend-contact-us' => 'Кідь мате даякы звідованя ці коментарї, напиште на mobile@wikimedia.org',
+	'mobile-frontend-author-link' => 'Інформації о авторах, ліценції і детайлнїшый попис достанете зображінём того приспевку в класічній верзії {{grammar:2sg|{{SITENAME}}}}.',
+	'mobile-frontend-download-full-version' => 'Скачати повну верзію',
 	'mobile-frontend-file-namespace' => 'Файл',
 	'mobile-frontend-wml-continue' => 'Дале ...',
 	'mobile-frontend-wml-back' => 'Назад...',
@@ -4243,14 +4286,15 @@ $messages['rue'] = array(
 	'mobile-frontend-disable-images' => 'Выпнути образчікы в мобілній верзії',
 	'mobile-frontend-enable-images' => 'Занути образчікы в мобілній верзії',
 	'mobile-frontend-news-items' => 'Новины',
-	'mobile-frontend-leave-feedback-title' => 'Зохабити одозву про мобілный інтерфейс',
-	'mobile-frontend-leave-feedback-notice' => 'Ваша одозва буде публікована, вєдно з вашым іменом хоснователя, верзіёв перезерача і операчнов сістемов on the page "$1"',
+	'mobile-frontend-leave-feedback-title' => 'Здїляйте нам вашы скусености з мобілным інтерфейсом',
+	'mobile-frontend-leave-feedback-notice' => 'Ваша одозва помагать вылїпшати вашы зажыткы з мобілным сайтом. Ваша одозва буде публікована, вєдно з вашым іменом хоснователя, верзіёв перезерача і операчнов сістемов on the page "$1". Просине, звольте інформачно достаточный рядок темы, наприклад "Проблемы з форматованём шыршых таблиць". Ваша одозва є у одповідности до нашых условій схоснованя.',
 	'mobile-frontend-leave-feedback-subject' => 'Предмет',
 	'mobile-frontend-leave-feedback-message' => 'Повідомлїня',
 	'mobile-frontend-leave-feedback-cancel' => 'Сторно',
 	'mobile-frontend-leave-feedback-submit' => 'Одослати одозву',
 	'mobile-frontend-leave-feedback-link-text' => 'Одозва про мобілный інтерфейс',
 	'mobile-frontend-leave-feedback' => 'Зохабити одозву',
+	'mobile-frontend-leave-feedback-thanks' => 'Дякуєме за ваш погляд!',
 );
 
 /** Sakha (Саха тыла)
@@ -5050,6 +5094,7 @@ $messages['uk'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Залишити відгук',
 	'mobile-frontend-leave-feedback-link-text' => 'Відгуки про мобільний інтерфейс',
 	'mobile-frontend-leave-feedback' => 'Залишити відгук',
+	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Дякуємо, за ваш відгук!',
 );
 
