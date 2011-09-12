@@ -651,7 +651,7 @@ class ExtMobileFrontend {
 						array('class' => 'section_heading',
 								'id' => 'section_' . $headings) ) . 
 			$buttons .
-				Html::element( 'span',
+				Html::rawElement( 'span',
 						array( 'id' => $headlineId), 
 								$matches[2] ) .
 				Html::closeElement( 'h2' ) . 
