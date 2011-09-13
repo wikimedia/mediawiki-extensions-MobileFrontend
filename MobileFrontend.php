@@ -715,7 +715,7 @@ class ExtMobileFrontend {
 		$requestedSegment = htmlspecialchars( self::$requestedSegment );
 		$title = htmlspecialchars( self::$title->getText() );
 
-		$card .= "<card id='{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
+		$card .= "<card id='s{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
 		$idx = $requestedSegment + 1;
 		$segmentsCount = count($segments);
 		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
