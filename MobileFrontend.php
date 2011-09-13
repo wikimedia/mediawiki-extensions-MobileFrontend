@@ -733,7 +733,7 @@ class ExtMobileFrontend {
 			$card .= "<p><a href=\"{$basePage}?seg={$back_idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-back'] . "</a></p>";
 		}
 
-		$card .= '</card>';
+		$card .= '</div></card>';
 		wfProfileOut( __METHOD__ );
 		return $card;
 	}
