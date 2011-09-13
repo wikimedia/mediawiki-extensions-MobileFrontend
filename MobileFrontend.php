@@ -64,8 +64,16 @@ $wgExtensionFunctions[] = array( &$wgExtMobileFrontend, 'setDefaultLogo' );
 $wgMFRemovableClasses = array(
 );
 
+# Unit tests
+$wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
+
+function efExtMobileFrontendUnitTests( &$files ) {
+        $files[] = dirname( __FILE__ ) . '/tests/MobileFrontendTest.php';
+        return true;
+}
+
 class ExtMobileFrontend {
-	const VERSION = '0.5.62';
+	const VERSION = '0.5.63';
 
 	/**
 	 * @var DOMDocument
