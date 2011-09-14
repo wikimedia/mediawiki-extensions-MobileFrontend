@@ -19,7 +19,7 @@ if ( self::$disableImages == 0 ) {
 	$imagesURL = self::$enableImagesURL;
 }
 
-$feedbackLink = (self::$code == 'en') ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : ''; 
+$feedbackLink = ''; 
 
 $footerHtml = <<<EOD
     <div id='footer'> 
