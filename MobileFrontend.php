@@ -208,7 +208,7 @@ class ExtMobileFrontend {
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
 		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
-		self::$currentURL = htmlspecialchars( $wgRequest->getFullRequestURL() );
+		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 		
 		$skin = $wgUser->getSkin();
@@ -707,6 +707,12 @@ class ExtMobileFrontend {
 		return $s;
 	}
 
+	private function removeQuerystringVar( $url, $key ) {
+		$url = preg_replace( '/(.*)(\?|&)' . $key . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
+		$url = substr( $url, 0, -1 );
+		return ( $url );
+	}
+
 	private function createWMLCard( $s ) {
 		wfProfileIn( __METHOD__ );
 		$segments = explode( $this->WMLSectionSeperator, $s );
@@ -722,18 +728,22 @@ class ExtMobileFrontend {
 
 		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useformat=' . self::$useFormat : '';
 
-		$basePage = htmlspecialchars( $_SERVER['PHP_SELF'] );
+		$basePage = self::$currentURL;
 
+		$basePage = $this->removeQuerystringVar( $this->removeQuerystringVar( $basePage, 'useformat' ), 'seg' );
+
+		$delimiter = ( strpos( $basePage, '?' ) === false ) ? '?' : '&';
+		
 		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href=\"{$basePage}?seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
+			$card .= "<p><a href=\"{$basePage}{$delimiter}seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
 		}
 
 		if ( $idx > 1 ) {
 			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href=\"{$basePage}?seg={$back_idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-back'] . "</a></p>";
+			$card .= "<p><a href=\"{$basePage}{$delimiter}seg={$back_idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-back'] . "</a></p>";
 		}
 
-		$card .= '</div></card>';
+		$card .= '</card>';
 		wfProfileOut( __METHOD__ );
 		return $card;
 	}
@@ -921,7 +931,7 @@ class ExtMobileFrontend {
 			&& empty( self::$search ) && !self::$isMainPage ) {
 			$contentHtml =	$this->headingTransform( $contentHtml );
 		} elseif ( $this->contentFormat == 'WML' ) {
-			header( 'Content-Type: text/vnd.wap.wml' );
+			//header( 'Content-Type: text/vnd.wap.wml' );
 
 			// TODO: Content transformations required
 			// WML Validator:
