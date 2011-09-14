@@ -707,13 +707,8 @@ class ExtMobileFrontend {
 		return $s;
 	}
 
-	private function removeQuerystringVar( $url, $key ) {
-		$url = preg_replace( '/(.*)(\?|&)' . $key . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
-		$url = substr( $url, 0, -1 );
-		return ( $url );
-	}
-
 	private function createWMLCard( $s ) {
+		global $wgRequest;
 		wfProfileIn( __METHOD__ );
 		$segments = explode( $this->WMLSectionSeperator, $s );
 		$card = '';
@@ -727,20 +722,28 @@ class ExtMobileFrontend {
 		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
 
 		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useformat=' . self::$useFormat : '';
-
-		$basePage = self::$currentURL;
-
-		$basePage = $this->removeQuerystringVar( $this->removeQuerystringVar( $basePage, 'useformat' ), 'seg' );
-
-		$delimiter = ( strpos( $basePage, '?' ) === false ) ? '?' : '&';
+		
+		// Title::getLocalUrl doesn't work at this point since PHP 5.1.x, all objects have their destructors called
+		// before the output buffer callback function executes.
+		// Thus, globalized objects will not be available as expected in the function.
+		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
+		$mDefaultQuery = $wgRequest->getQueryValues();
+		unset( $mDefaultQuery['seg'] );
+		unset( $mDefaultQuery['useformat'] );
+		
+		$qs = wfArrayToCGI( $mDefaultQuery );
+		$delimiter = ( !empty( $qs ) ) ? '?' : '';
+		$basePageParts = wfParseUrl( self::$currentURL );
+		$basePage = $basePageParts['scheme'] . $basePageParts['delimiter'] . $basePageParts['host'] . $basePageParts['path'] . $delimiter . $qs;
+		$appendDelimiter = ( $delimiter === '?' ) ? '&' : '?';
 		
 		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href=\"{$basePage}{$delimiter}seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
+			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
 		}
 
 		if ( $idx > 1 ) {
 			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href=\"{$basePage}{$delimiter}seg={$back_idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-back'] . "</a></p>";
+			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$back_idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-back'] . "</a></p>";
 		}
 
 		$card .= '</card>';
@@ -931,6 +934,8 @@ class ExtMobileFrontend {
 			&& empty( self::$search ) && !self::$isMainPage ) {
 			$contentHtml =	$this->headingTransform( $contentHtml );
 		} elseif ( $this->contentFormat == 'WML' ) {
+			$homeButton = self::$messages['mobile-frontend-home-button'];
+			$randomButton = self::$messages['mobile-frontend-random-button'];
 			//header( 'Content-Type: text/vnd.wap.wml' );
 
 			// TODO: Content transformations required
