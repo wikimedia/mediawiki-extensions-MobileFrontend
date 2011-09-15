@@ -1,24 +1,34 @@
-/* Super gross hack implemented where MOST of the JS is repeated in lib/native_app_hack.rb
-If you make significant changes here, make sure to update that version too!*/
+// Ideally, this would be loaded in the head and activated by a script at the bottom,
+// I think, rather than attached to an onload...
+window.onload = function() {
+	// I don't think this makes sense. Loading this here means that this button 
+	// won't function until the page is loaded. It would probably be an 
+	// improvement to just attach an onclick straight into the html.
+	document.getElementById( 'logo' ).onclick = function() {
+		var n = document.getElementById( 'nav' ).style;
+		n.display = n.display == 'block' ? 'none' : 'block';
+	};
 
-$( document ).ready( function() {
-	$( '#logo' ).click( function() {
-		$( '#nav' ).toggle();
-	});
-
-	$( 'h2.section_heading' ).click( function() {
-		var section_idx = parseInt( $( this ).get( 0 ).id.replace( /section_(\d+)/, '$1' ) );
-		wm_toggle_section( section_idx );
-	});
-
-	$( 'a' ).click( function() {
-		var link = $( this ).get( 0 );
-		if( link.hash.indexOf( '#' ) == 0 ) {
-			wm_reveal_for_hash( link.hash );
+	// Also problematic, not working until the page loads...
+	for( var h = document.getElementsByTagName( 'h2' ), i = 0; i < h.length; i++ ) {
+		if ( h[i].className == 'section_heading' ) {
+			h[i].onclick = function() {
+				var section_idx = parseInt( this.id.replace( /section_(\d+)/, '$1' ) );
+				wm_toggle_section( section_idx );
+			}
 		}
-	});
+	};
 
-	if( document.location.hash.indexOf( '#' ) == 0 ) {
+	// And this...
+	for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
+		a[i].onclick = function() {
+			if ( this.hash.indexOf( '#' ) == 0 ) {
+				wm_reveal_for_hash( this.hash );
+			}
+		}
+	};
+
+	if ( document.location.hash.indexOf( '#' ) == 0 ) {
 		wm_reveal_for_hash( document.location.hash );
 	}
 
@@ -27,11 +37,12 @@ $( document ).ready( function() {
 	// Try to scroll and hide URL bar
 	window.scrollTo( 0, 1 );
 
-	decode = $( '#searchField' );
-	decode.val( unescape( decode.val() ) );
-	decode = $( 'title' );
-	decode.html( unescape( decode.html() ) );
-});
+	// This is a global. I don't know why.
+	decode = document.getElementById( 'searchField' );
+	decode.value = unescape( decode.value );
+	decode = document.getElementsByTagName( 'title' )[0];
+	decode.innerHTML = unescape( decode.innerHTML );
+};
 
 /**
  * updateOrientation checks the current orientation, sets the body's class
@@ -53,26 +64,27 @@ function updateOrientation() {
 window.onorientationchange = updateOrientation;
 
 function wm_reveal_for_hash( hash ) {
-	var targetel = $( hash );
-	if( targetel ) {
-		var parentdiv = targetel.closest( '.section_heading' ).next( '.content_block' );
-		if( parentdiv.length > 0 && ! parentdiv.is( ':visible' ) ) {
-			var section_idx = parseInt( parentdiv.get( 0 ).id.replace( /content_(\d+)/, '$1' ) );
+	var targetel = document.getElementById( hash.substr(1) );
+	if ( targetel ) {
+		for (var p = targetel.parentNode; p && p.className != 'content_block' && p.className != 'section_heading'; ) {
+			p = p.parentNode;
+		}
+		if ( p && p.style.display != 'block' ) {
+			var section_idx = parseInt( p.id.split( '_' )[1] );
 			wm_toggle_section( section_idx );
 		}
 	}
 }
 
 function wm_toggle_section( section_id ) {
-	$( 'h2#section_' + section_id ).children( 'button.show' ).toggle();
-	$( 'h2#section_' + section_id ).children( 'button.hide' ).toggle();
-
-	$( 'div#content_' + section_id ).toggle();
-	$( 'div#anchor_' + section_id ).toggle();
+	var b = document.getElementById( 'section_' + section_id ),
+		bb = b.getElementsByTagName( 'button' );
+	for ( var i = 0; i <= 1; i++ ) {
+		var s = bb[i].style;
+		s.display = s.display == 'none' || ( i && !s.display ) ? 'inline-block' : 'none';
+	}
+	for ( var i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
+		var s = document.getElementById( d[i] + section_id ).style;
+		s.display = s.display == 'block' ? 'none' : 'block';
+	}
 }
-
-var wm_clearText = function() {
-	document.getElementById( 'searchField' ).value = '';
-	$( '#searchField' ).val( '' ).focus();
-}
-
