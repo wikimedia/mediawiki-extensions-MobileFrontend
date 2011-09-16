@@ -727,7 +727,7 @@ class ExtMobileFrontend {
 		// before the output buffer callback function executes.
 		// Thus, globalized objects will not be available as expected in the function.
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
-		$mDefaultQuery = $wgRequest->getQueryValues();
+		$mDefaultQuery = $_GET;
 		unset( $mDefaultQuery['seg'] );
 		unset( $mDefaultQuery['useformat'] );
 		
