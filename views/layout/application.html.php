@@ -34,7 +34,7 @@ $applicationHtml = <<<EOT
         }
       //]]>
     </script>
-    <script type="text/javascript" language="javascript" src="{$wgExtensionAssetsPath}/MobileFrontend/javascripts/application.js"></script>
+    <script type="text/javascript" language="javascript" src="{$wgExtensionAssetsPath}/MobileFrontend/javascripts/application.js?version=20110912T172820Z"></script>
   </head>
   <body>
 	{$searchWebkitHtml}
