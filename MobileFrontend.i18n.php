@@ -87,6 +87,9 @@ $messages['qqq'] = array(
 	'mobile-frontend-opt-out-no-button' => '{{Identical|No}}',
 	'mobile-frontend-leave-feedback-notice' => 'Parameters:
 * "$1" is a link  to the page where the feedback will be posted.',
+	'mobile-frontend-leave-feedback-subject' => '{{Identical|Subject}}',
+	'mobile-frontend-leave-feedback-message' => '{{Identical|Message}}',
+	'mobile-frontend-leave-feedback-cancel' => '{{Identical|Cancel}}',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
@@ -877,6 +880,12 @@ $messages['ckb'] = array(
 	'mobile-frontend-author-link' => 'سەردانی ئەم پەڕگەی میدیایە لەسەر ویکیپیدیای ئاسایی بکە بۆ بینینی زانیاری سەبارەت بە خاوەنێتی، مۆڵەتنامە و شرۆڤەی زۆرتر.',
 	'mobile-frontend-download-full-version' => 'داگرتنی وەشانی تەواو',
 	'mobile-frontend-file-namespace' => 'پەڕگە',
+);
+
+/** Corsican (Corsu) */
+$messages['co'] = array(
+	'mobile-frontend-leave-feedback-subject' => 'Sughjettu',
+	'mobile-frontend-leave-feedback-message' => 'Messaghju',
 );
 
 /** Czech (Česky)
@@ -2812,6 +2821,7 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-subject' => 'Sujet',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Ofbriechen',
+	'mobile-frontend-leave-feedback-thanks' => 'Merci fir Äre Feedback!',
 );
 
 /** Lezghian (Лезги) */
@@ -3599,6 +3609,12 @@ $messages['or'] = array(
 	'mobile-frontend-wml-continue' => 'ଚାଲୁରଖ ...',
 	'mobile-frontend-wml-back' => 'ପୂର୍ବବର୍ତ୍ତୀ ...',
 	'mobile-frontend-view' => 'ମୋବାଇଲ ଦେଖଣା',
+	'mobile-frontend-opt-in-yes-button' => 'ହଁ',
+	'mobile-frontend-opt-in-no-button' => 'ନାହିଁ',
+	'mobile-frontend-opt-out-yes-button' => 'ହଁ',
+	'mobile-frontend-opt-out-no-button' => 'ନାହିଁ',
+	'mobile-frontend-leave-feedback-subject' => 'ବିଷୟ',
+	'mobile-frontend-leave-feedback-message' => 'ଖବର',
 	'mobile-frontend-leave-feedback-cancel' => 'ନାକଚ',
 );
 
