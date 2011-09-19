@@ -73,7 +73,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.63';
+	const VERSION = '0.5.64';
 
 	/**
 	 * @var DOMDocument
@@ -190,12 +190,18 @@ class ExtMobileFrontend {
 	public function addMobileFooter( &$obj, &$tpl ) {
 		global $wgRequest;
 		wfProfileIn( __METHOD__ );
-		$footerlinks = $tpl->data['footerlinks'];
-		$mobileViewUrl = $wgRequest->escapeAppendQuery( 'useformat=mobile' );
 
-		$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>".wfMsg( 'mobile-frontend-view')."</a>");
-		$footerlinks['places'][] = 'mobileview';
-		$tpl->set('footerlinks', $footerlinks);
+		$title = $obj->getTitle();
+		$isSpecial = $title->isSpecialPage();
+		
+		if ( ! $isSpecial ) {
+			$footerlinks = $tpl->data['footerlinks'];
+			$mobileViewUrl = $wgRequest->escapeAppendQuery( 'useformat=mobile' );
+
+			$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>".wfMsg( 'mobile-frontend-view')."</a>");
+			$footerlinks['places'][] = 'mobileview';
+			$tpl->set('footerlinks', $footerlinks);
+		}
 		wfProfileOut( __METHOD__ );
 		return true;
 	}

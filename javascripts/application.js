@@ -1,6 +1,36 @@
 // Ideally, this would be loaded in the head and activated by a script at the bottom,
 // I think, rather than attached to an onload...
 window.onload = function() {
+	
+	var search = document.getElementById( 'search' );
+	var clearSearch = document.getElementById( 'clearsearch' );
+
+	initClearSearchLink();
+
+	function initClearSearchLink() {
+	    clearSearch.setAttribute( 'title','Clear' );
+	    clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
+	    search.addEventListener( 'keyup', _handleClearSearchLink, false );
+	}
+
+	function _handleClearSearchLink() {
+	    if ( clearSearch ) {
+	    	if ( search.value.length > 0 ) {
+	        	clearSearch.style.display = 'block';
+	        } else {
+	        	clearSearch.style.display = 'none';
+	        }
+		}
+	}
+
+	function clearSearchBox( event ) {
+	    search.value = '';
+	    clearSearch.style.display = 'none';
+		if ( event ) {
+			event.preventDefault();
+		}
+	}
+
 	// I don't think this makes sense. Loading this here means that this button 
 	// won't function until the page is loaded. It would probably be an 
 	// improvement to just attach an onclick straight into the html.
@@ -38,7 +68,7 @@ window.onload = function() {
 	window.scrollTo( 0, 1 );
 
 	// This is a global. I don't know why.
-	decode = document.getElementById( 'searchField' );
+	decode = document.getElementById( 'search' );
 	decode.value = unescape( decode.value );
 	decode = document.getElementsByTagName( 'title' )[0];
 	decode.innerHTML = unescape( decode.innerHTML );
