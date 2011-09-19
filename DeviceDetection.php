@@ -154,7 +154,7 @@ class DeviceDetection {
 				'footmenu' => 'default',
 				'with_layout' => 'application',
 				'css_file_name' => 'blackberry',
-				'supports_javascript' => true,
+				'supports_javascript' => false,
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
