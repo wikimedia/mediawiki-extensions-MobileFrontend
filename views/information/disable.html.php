@@ -2,6 +2,7 @@
 
 $lang = self::$code;
 $currentURL = self::$currentURL;
+$currentURL = str_replace('&mobileaction=disable_mobile_site', '', $currentURL);
 
 $disableHtml = <<<EOT
  <h1>
