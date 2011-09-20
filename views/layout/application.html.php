@@ -20,20 +20,20 @@ $applicationHtml = <<<EOT
   "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
 <html lang='{$code}' dir='{$dir}' xml:lang='{$code}' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>{$htmlTitle}</title>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-    <link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$cssFileName}.css' media='all' rel='Stylesheet' type='text/css' />
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    ${appleTouchIconTag}
-    <script type='text/javascript'>
-      //<![CDATA[
-        var title = "{$htmlTitle}";
-        function shouldCache() {
-          return true;
-        }
-      //]]>
-    </script>
+	<title>{$htmlTitle}</title>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$cssFileName}.css' media='all' rel='Stylesheet' type='text/css' />
+	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	${appleTouchIconTag}
+	<script type='text/javascript'>
+	  //<![CDATA[
+		var title = "{$htmlTitle}";
+		function shouldCache() {
+		  return true;
+		}
+	  //]]>
+	</script>
   </head>
   <body>
 	{$searchWebkitHtml}

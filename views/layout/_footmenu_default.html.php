@@ -19,19 +19,19 @@ if ( self::$disableImages == 0 ) {
 	$imagesURL = self::$enableImagesURL;
 }
 
-$feedbackLink = ''; 
+$feedbackLink = '';
 
 $footerHtml = <<<EOD
-    <div id='footer'> 
-      <div class='nav' id='footmenu'> 
-        <div class='mwm-notice'> 
-          <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink}
-            <div id="perm"> 
-              <a href="{$disableMobileSiteURL}">{$permStopRedirect}</a> 
-            </div> 
-        </div> 
-      </div> 
-      <div id='copyright'>{$copyright}</div> 
-    </div>
+	<div id='footer'>
+	  <div class='nav' id='footmenu'>
+		<div class='mwm-notice'>
+		  <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink}
+			<div id="perm">
+				<a href="{$disableMobileSiteURL}">{$permStopRedirect}</a>
+			</div>
+		</div>
+	  </div>
+	  <div id='copyright'>{$copyright}</div>
+	</div>
 
 EOD;
