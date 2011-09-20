@@ -42,7 +42,7 @@ $applicationHtml = <<<EOT
 	{$contentHtml}
 	</div>
 	{$footerHtml}
-	 <script type="text/javascript" language="javascript" src="{$wgExtensionAssetsPath}/MobileFrontend/javascripts/application.js?version=20110919T172820Z"></script>
+	 <script type="text/javascript" language="javascript" src="{$wgExtensionAssetsPath}/MobileFrontend/javascripts/application.js?version=20110920T172820Z"></script>
   </body>
 </html>
 EOT;
