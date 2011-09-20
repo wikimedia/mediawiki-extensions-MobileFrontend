@@ -49,6 +49,7 @@ $wgAutoloadClasses['CssDetection']	  = $cwd . 'CssDetection.php';
  */
 $wgMobileFrontendLogo = false;
 
+$wgMobileDomain = '.m.';
 
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
@@ -56,6 +57,8 @@ $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDispl
 
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 $wgExtensionFunctions[] = array( &$wgExtMobileFrontend, 'setDefaultLogo' );
+
+$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 
 /**
  * Make the classes stripped from page content configurable. Each item will
@@ -73,7 +76,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.64';
+	const VERSION = '0.5.65';
 
 	/**
 	 * @var DOMDocument
@@ -186,6 +189,12 @@ class ExtMobileFrontend {
 		'#ogg_player_1',
 		'.nomobile',
 	);
+	
+	public function testCanonicalRedirect( $request, $title, $output ) {
+		global $wgMobileDomain;
+		$host = $request->getHeader( 'HOST' );
+		return ( stristr( $host, $wgMobileDomain ) !== false ) ? false : true;
+	}
 
 	public function addMobileFooter( &$obj, &$tpl ) {
 		global $wgRequest;
