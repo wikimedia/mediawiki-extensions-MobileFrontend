@@ -57,7 +57,7 @@ $wgMobileDomain = '.m.';
  *
  * e.g., http://en.wikipedia.org/w/mobileRedirect.php
  */
-$wgMobileRedirectFormAction;
+$wgMobileRedirectFormAction = false;
 
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
@@ -84,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.67';
+	const VERSION = '0.5.68';
 
 	/**
 	 * @var DOMDocument
@@ -259,7 +259,7 @@ class ExtMobileFrontend {
 		self::$code = $wgContLang->getCode();
 		
 		$nonMobileServerBaseURL = str_replace( $wgMobileDomain, '.', $wgServer );
-		self::$mobileRedirectFormAction = ( isset( $wgMobileRedirectFormAction ) ) ? $wgMobileRedirectFormAction : "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
+		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false ) ? $wgMobileRedirectFormAction : "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
 
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
 		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
