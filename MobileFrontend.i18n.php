@@ -3680,7 +3680,7 @@ $messages['or'] = array(
 	'mobile-frontend-news-items' => 'ଖବରରେ',
 	'mobile-frontend-leave-feedback-title' => 'ଆପଣଙ୍କ ମୋବାଇଲ ସାଇଟ ଅଭିଜ୍ଞତା ବାବଦରେ ଆମକୁ ମତାମତ ଦିଅନ୍ତୁ',
 	'mobile-frontend-leave-feedback-subject' => 'ବିଷୟ',
-	'mobile-frontend-leave-feedback-message' => 'ଖବର',
+	'mobile-frontend-leave-feedback-message' => 'ସନ୍ଦେଶ',
 	'mobile-frontend-leave-feedback-cancel' => 'ନାକଚ',
 	'mobile-frontend-leave-feedback-submit' => 'ମତାମତ ଦିଅନ୍ତୁ',
 	'mobile-frontend-leave-feedback-link-text' => 'ମୋବାଇଲ ଆଗ ଭାଗ ଏକ୍ସଟେନସନ ମତାମତ',
@@ -3937,6 +3937,7 @@ $messages['pnb'] = array(
 	'mobile-frontend-hide-button' => 'لکاؤ',
 	'mobile-frontend-disable-button' => 'ناکارہ',
 	'mobile-frontend-back-button' => 'پچھے',
+	'mobile-frontend-regular-site' => 'ایس صفے نوں ریگولر {{ساغیٹناں}} تے ویکھو',
 	'mobile-frontend-error-page-title' => 'اسیں اک رپھڑ ج آں !',
 	'mobile-frontend-are-you-sure' => 'کیا تھانوں یقین اے ؟',
 	'mobile-frontend-nav-end' => 'انت',
@@ -3957,6 +3958,13 @@ $messages['pnb'] = array(
 	'mobile-frontend-disable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں بند کرو',
 	'mobile-frontend-enable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں آن کرو',
 	'mobile-frontend-news-items' => 'دساں چ',
+	'mobile-frontend-leave-feedback-subject' => 'آرٹیکل',
+	'mobile-frontend-leave-feedback-message' => 'سنیعہ',
+	'mobile-frontend-leave-feedback-cancel' => 'کینسل',
+	'mobile-frontend-leave-feedback-submit' => 'مشورہ دیو',
+	'mobile-frontend-leave-feedback-link-text' => 'موبائل توں آئی ایکسٹنشن صلاع',
+	'mobile-frontend-leave-feedback' => 'موبائل تھاں صلاع',
+	'mobile-frontend-leave-feedback-thanks' => 'تواڈی صلاع دا شکریہ',
 );
 
 /** Pashto (پښتو)
