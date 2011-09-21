@@ -76,7 +76,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.65';
+	const VERSION = '0.5.66';
 
 	/**
 	 * @var DOMDocument
@@ -193,7 +193,7 @@ class ExtMobileFrontend {
 	public function testCanonicalRedirect( $request, $title, $output ) {
 		global $wgMobileDomain;
 		$host = $request->getHeader( 'HOST' );
-		return ( stristr( $host, $wgMobileDomain ) !== false ) ? false : true;
+		return !( stristr( $host, $wgMobileDomain ) !== false );
 	}
 
 	public function addMobileFooter( &$obj, &$tpl ) {
