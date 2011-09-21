@@ -51,6 +51,14 @@ $wgMobileFrontendLogo = false;
 
 $wgMobileDomain = '.m.';
 
+/**
+ * URL for script used to disable mobile site
+ * (protocol, host, optional port; path portion)
+ *
+ * e.g., http://en.wikipedia.org/w/mobileRedirect.php
+ */
+$wgMobileRedirectFormAction;
+
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
 $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
@@ -76,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.66';
+	const VERSION = '0.5.67';
 
 	/**
 	 * @var DOMDocument
@@ -116,6 +124,7 @@ class ExtMobileFrontend {
 	public static $currentURL;
 	public static $displayNoticeId;
 	public static $leaveFeedbackURL;
+	public static $mobileRedirectFormAction;
 	
 	public static $messageKeys = array( 
 		'mobile-frontend-show-button',
@@ -216,7 +225,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getMsg() {
-		global $wgUser, $wgContLang, $wgRequest;
+		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgMobileDomain;
 		wfProfileIn( __METHOD__ );
 		
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
@@ -248,6 +257,9 @@ class ExtMobileFrontend {
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
+		
+		$nonMobileServerBaseURL = str_replace( $wgMobileDomain, '.', $wgServer );
+		self::$mobileRedirectFormAction = ( isset( $wgMobileRedirectFormAction ) ) ? $wgMobileRedirectFormAction : "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
 
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
 		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
