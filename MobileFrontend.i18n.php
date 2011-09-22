@@ -2401,6 +2401,11 @@ $messages['it'] = array(
 	'mobile-frontend-opt-out-no-button' => 'no',
 	'mobile-frontend-disable-images' => 'Disabilita le immagini sul sito per cellulari',
 	'mobile-frontend-enable-images' => 'Abilita le immagini sul sito per cellulari',
+	'mobile-frontend-leave-feedback-subject' => 'Oggetto',
+	'mobile-frontend-leave-feedback-message' => 'Messaggio',
+	'mobile-frontend-leave-feedback-cancel' => 'Annulla',
+	'mobile-frontend-leave-feedback-submit' => 'Invia feedback',
+	'mobile-frontend-leave-feedback-thanks' => 'Grazie per aver espresso il tuo feedback.',
 );
 
 /** Japanese (日本語)
@@ -3652,6 +3657,7 @@ $messages['or'] = array(
 	'mobile-frontend-regular-site' => 'ଏକ ନିୟମିତ {{SITENAME}}ରେ ଏହି ପୃଷ୍ଠାଟି ଦେଖିବେ',
 	'mobile-frontend-perm-stop-redirect' => 'ମୋବାଇଲ ସାଇଟଟିକୁ ଚିରକାଳ ପାଇଁ ଅଚଳ କରିଦେବେ',
 	'mobile-frontend-error-page-title' => 'ଅସୁବିଧା ଟିଏ ଘଟିଲା!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} ମୋବାଇଲ ଏବେ ସଚଳ ଅବସ୍ଥାରେ ଅଛି ଓ ଆମ୍ଭେ ଏହା ଭିତରେ ଥିବା ଅସୁବିଧାସବୁକୁ ସୁଧାରିବା ନିମନ୍ତେ କଠିନ ପରିଶ୍ରମ କରୁଅଛୁ । ଆମ୍ଭେ ଏହା ବବଦରେ ଅବଗତ ଓ ସହଳ ଏହାକୁ ସୁଧାରିଦେବୁ । ଦୟାକରି କିଛି ସମୟ ପରେ ଦେଖନ୍ତୁ ।',
 	'mobile-frontend-are-you-sure' => 'ଆପଣ ନିଶ୍ଚିତ ତ?',
 	'mobile-frontend-explain-disable' => 'ଆପଣ {{SITENAME}}ର ମୋବାଇଲ ସଂସ୍କରଣଟିକୁ ଅଚଳ କରିବା ପାଇଁ ଚାହାନ୍ତି ବୋଲି ନିଶ୍ଚିତ ତ? ଯଦି ଆପଣ <b>ଅଚଳ କରିବେ</b> ବାଛନ୍ତି, ତେବେ ଏବେ ଠାରୁ, ଯେତେବେଳେ ଆପଣ {{SITENAME}} ସାଇଟଟି ଖୋଲିବେ, ଆପଣ {{SITENAME}} ସାଇଟର ମୋବାଇଲ ଦେଖଣାକୁ ପୁନପ୍ରେରିତ ହେବେ ନାହିଁ ।',
 	'mobile-frontend-nav-end' => 'ଶେଷ',
@@ -3660,6 +3666,7 @@ $messages['or'] = array(
 	'mobile-frontend-nav-history' => 'ଇତିହାସ',
 	'mobile-frontend-search-text' => 'ଖୋଜିବା',
 	'mobile-frontend-contact-us' => 'ଯଦି ଆପଣଙ୍କର କିଛି ପ୍ରଶ୍ନ ବା ମତାମତ ଥାଏ ତେବେ mobile@wikipedia.org କୁ ଇ-ମେଲ କରନ୍ତୁ',
+	'mobile-frontend-author-link' => 'ମାଲିକାନା, ଲାଇସେନ୍ସ ଓ ଅଧିକ ବିବରଣୀ ନିମନ୍ତେ ସାଧାରଣ {{SITENAME}}ରେ ଏହି ମିଡ଼ିଆ ଫାଇଲଟି ଦେଖନ୍ତୁ ।',
 	'mobile-frontend-download-full-version' => 'ପୁରା ସଂକଳନ ଡାଉନଲୋଡ଼ କରିବେ',
 	'mobile-frontend-file-namespace' => 'ଫାଇଲ',
 	'mobile-frontend-wml-continue' => 'ଚାଲୁରଖ ...',
@@ -3679,6 +3686,7 @@ $messages['or'] = array(
 	'mobile-frontend-enable-images' => 'ମୋବାଇଲ ସାଇଟ ପାଇଁ ଛବି ଦେଖଣା ସଚଳ କରିବେ',
 	'mobile-frontend-news-items' => 'ଖବରରେ',
 	'mobile-frontend-leave-feedback-title' => 'ଆପଣଙ୍କ ମୋବାଇଲ ସାଇଟ ଅଭିଜ୍ଞତା ବାବଦରେ ଆମକୁ ମତାମତ ଦିଅନ୍ତୁ',
+	'mobile-frontend-leave-feedback-notice' => 'ଆପଣଙ୍କ ମତାମତ ଆମ୍ଭଙ୍କୁ ଆପଣଙ୍କର ମୋବାଇଲ ସାଇଟର ଅନୁଭୂତି ସୁଧାରିବାରେ ସହଯୋଗ କରିଥାଏ । &quot;$1&quot; ପୃଷ୍ଠାରେ ଏହା ସାଧାରଣରେ ପ୍ରକାଶିତ ହେବ (ଆପଣଙ୍କ ଇଉଜର ନାମ, ବ୍ରାଉଜର ସଂସ୍କରଣ ଓ ଅପରେଟିଙ୍ଗ ସିଷ୍ଟମ ସହିତ) । ଦୟାକରି ସୂଚନାକାରୀ ବିଷୟ ଧାଡ଼ିଟିଏ ବାଛନ୍ତୁ; ଯଥା - "ଓସାରିଆ ସାରଣୀ ଦେଖିବାରେ ଅସୁବିଧା" । ଆପଣଙ୍କର ମତ ଆମ୍ଭର ବ୍ୟବହାର ବିଧିଭୁକ୍ତ ।',
 	'mobile-frontend-leave-feedback-subject' => 'ବିଷୟ',
 	'mobile-frontend-leave-feedback-message' => 'ସନ୍ଦେଶ',
 	'mobile-frontend-leave-feedback-cancel' => 'ନାକଚ',
