@@ -2886,7 +2886,9 @@ $messages['lez'] = array(
 	'mobile-frontend-file-namespace' => 'Шикил',
 );
 
-/** Limburgish (Limburgs) */
+/** Limburgish (Limburgs)
+ * @author Ooswesthoesbes
+ */
 $messages['li'] = array(
 	'mobile-frontend-search-submit' => 'Gank',
 	'mobile-frontend-search-results' => 'Zeukrizzeltate',
@@ -2916,6 +2918,18 @@ Betrach dit later nog ins!",
 	'mobile-frontend-author-link' => 'Bekiek dit mediabesjtand op de reguliere {{SITENAME}} um infermasie te zien euver outäörsjap, licentie en euverige besjrievinge.',
 	'mobile-frontend-download-full-version' => 'Volledige versie downloade',
 	'mobile-frontend-file-namespace' => 'Besjtand',
+	'mobile-frontend-wml-continue' => 'Gank door ...',
+	'mobile-frontend-wml-back' => 'Trögk ...',
+	'mobile-frontend-view' => 'Mobiele weergave',
+	'mobile-frontend-opt-in-message' => 'Wils se de nuuj mobiel functionaliteit oetperbere?',
+	'mobile-frontend-opt-in-yes-button' => 'jao',
+	'mobile-frontend-opt-in-no-button' => 'nae',
+	'mobile-frontend-opt-in-title' => 'Dooch mit mit teste',
+	'mobile-frontend-opt-out-yes-button' => 'jao',
+	'mobile-frontend-opt-out-no-button' => 'nae',
+	'mobile-frontend-leave-feedback-subject' => 'Óngerwerp:',
+	'mobile-frontend-leave-feedback-message' => 'Berich',
+	'mobile-frontend-leave-feedback-cancel' => 'Braek aaf',
 );
 
 /** Lumbaart (Lumbaart) */
@@ -3190,6 +3204,7 @@ $messages['ml'] = array(
 	'mobile-frontend-leave-feedback-message' => 'സന്ദേശം',
 	'mobile-frontend-leave-feedback-cancel' => 'റദ്ദാക്കുക',
 	'mobile-frontend-leave-feedback-submit' => 'അഭിപ്രായം സമർപ്പിക്കുക',
+	'mobile-frontend-leave-feedback-thanks' => 'താങ്കളുടെ അഭിപ്രായത്തിനു വളരെ നന്ദി!',
 );
 
 /** Mongolian (Монгол) */
