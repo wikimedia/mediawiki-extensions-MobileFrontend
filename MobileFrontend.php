@@ -204,7 +204,7 @@ class ExtMobileFrontend {
 		if ( empty( $xDevice ) ) {
 			return true; // Let the redirect happen
 		} else {
-			return false; // Prevent the redirect for occuring
+			return false; // Prevent the redirect from occuring
 		}
 	}
 
