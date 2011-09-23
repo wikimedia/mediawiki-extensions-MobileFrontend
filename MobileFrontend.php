@@ -201,7 +201,7 @@ class ExtMobileFrontend {
 	
 	public function testCanonicalRedirect( $request, $title, $output ) {
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
-		return ( !empty( $xDevice ) );
+		return ( empty( $xDevice ) );
 	}
 
 	public function addMobileFooter( &$obj, &$tpl ) {
