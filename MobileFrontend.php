@@ -84,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.69';
+	const VERSION = '0.5.70';
 
 	/**
 	 * @var DOMDocument
@@ -201,7 +201,11 @@ class ExtMobileFrontend {
 	
 	public function testCanonicalRedirect( $request, $title, $output ) {
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
-		return ( empty( $xDevice ) );
+		if ( empty( $xDevice ) ) {
+			return true; // Let the redirect happen
+		} else {
+			return false; // Prevent the redirect for occuring
+		}
 	}
 
 	public function addMobileFooter( &$obj, &$tpl ) {
