@@ -2869,6 +2869,7 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-subject' => 'Sujet',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Ofbriechen',
+	'mobile-frontend-leave-feedback-submit' => 'Feedback schécken',
 	'mobile-frontend-leave-feedback-thanks' => 'Merci fir Äre Feedback!',
 );
 
@@ -2890,6 +2891,7 @@ $messages['lez'] = array(
  * @author Ooswesthoesbes
  */
 $messages['li'] = array(
+	'mobile-frontend-desc' => 'Mobiel Frontend',
 	'mobile-frontend-search-submit' => 'Gank',
 	'mobile-frontend-search-results' => 'Zeukrizzeltate',
 	'mobile-frontend-no-article-found' => 'Gein rizzeltaat gevónje',
@@ -2902,7 +2904,7 @@ $messages['li'] = array(
 	'mobile-frontend-hide-button' => 'Versjtaek',
 	'mobile-frontend-disable-button' => 'Oetsjakele',
 	'mobile-frontend-back-button' => 'Trök',
-	'mobile-frontend-regular-site' => 'Betrach dees pagina in de normale layout',
+	'mobile-frontend-regular-site' => 'Betrach dees pagina in de normale layout van {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'Gebroek ummer de normale layout',
 	'mobile-frontend-error-page-title' => "D'r is 'n probleem!",
 	'mobile-frontend-error-page-text' => "{{SITENAME}} mobile is in ontwikkeling en d'r weurt hel gewirk om alle foute op te losse. V'r höbbe dees fout óntvange en goon dees zoe sjnel wie mäögelik verhelpe.
@@ -2925,11 +2927,24 @@ Betrach dit later nog ins!",
 	'mobile-frontend-opt-in-yes-button' => 'jao',
 	'mobile-frontend-opt-in-no-button' => 'nae',
 	'mobile-frontend-opt-in-title' => 'Dooch mit mit teste',
+	'mobile-frontend-opt-in-explain' => 'Hiemit kins toe mitdoon mit teste.',
+	'mobile-frontend-opt-out-message' => 'Wils se de nuuj mobiel functionaliteit neet mier oetperbere?',
 	'mobile-frontend-opt-out-yes-button' => 'jao',
 	'mobile-frontend-opt-out-no-button' => 'nae',
+	'mobile-frontend-opt-out-title' => 'Stop mit teste',
+	'mobile-frontend-opt-out-explain' => 'Hiemit kins se stoppe mit teste',
+	'mobile-frontend-disable-images' => 'Zèt aafbeildinge óppe mobiel site oet',
+	'mobile-frontend-enable-images' => 'Zèt aafbeildinge óppe mobiel site aan',
+	'mobile-frontend-news-items' => "In 't nuujs",
+	'mobile-frontend-leave-feedback-title' => 'Gaef ós feedback euver dien ervaringe mitte mobiel site',
+	'mobile-frontend-leave-feedback-notice' => 'Diene feedback hölp ós dien ervaring mitte mobiel site te baetere. Deze feedback is aopenber (mit diene gebroeker, browser en DOS) óppe pagina &quot;$1&quot;. Kees e.t.b. \'ne informatieve ongerwerpregel, bv. "Ópmaakperbleme mit brei tebelle". Op diene feedback zeen ós gebroeksverurwaerd van toepassing.',
 	'mobile-frontend-leave-feedback-subject' => 'Óngerwerp:',
 	'mobile-frontend-leave-feedback-message' => 'Berich',
 	'mobile-frontend-leave-feedback-cancel' => 'Braek aaf',
+	'mobile-frontend-leave-feedback-submit' => 'Slaon feedback óp',
+	'mobile-frontend-leave-feedback-link-text' => 'Mobiel Frontend feedback',
+	'mobile-frontend-leave-feedback' => 'Laot feedback achter',
+	'mobile-frontend-leave-feedback-thanks' => 'Danke veure feedback!',
 );
 
 /** Lumbaart (Lumbaart) */
@@ -3620,7 +3635,9 @@ $messages['no'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Send tilbakemelding',
 );
 
-/** Occitan (Occitan) */
+/** Occitan (Occitan)
+ * @author Boulaur
+ */
 $messages['oc'] = array(
 	'mobile-frontend-search-submit' => 'Consultar',
 	'mobile-frontend-search-results' => 'Resultats de la recèrca',
@@ -3649,6 +3666,12 @@ $messages['oc'] = array(
 	'mobile-frontend-author-link' => "Afichar	 aquel fichièr sus la Wikipèdia web per mai d'informacion suls dreches d'autor e la licéncia, e mai de descripcion",
 	'mobile-frontend-download-full-version' => 'Descargar la version complèta',
 	'mobile-frontend-file-namespace' => 'Fichièr',
+	'mobile-frontend-opt-in-yes-button' => 'òc',
+	'mobile-frontend-opt-in-no-button' => 'non',
+	'mobile-frontend-opt-out-yes-button' => 'òc',
+	'mobile-frontend-opt-out-no-button' => 'non',
+	'mobile-frontend-leave-feedback-message' => 'Messatge',
+	'mobile-frontend-leave-feedback-cancel' => 'Anullar',
 );
 
 /** Oriya (ଓଡ଼ିଆ)
