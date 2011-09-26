@@ -3590,9 +3590,11 @@ $messages['nn'] = array(
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Event
  * @author Nghtwlkr
  */
 $messages['no'] = array(
+	'mobile-frontend-desc' => 'Mobilgrensesnitt',
 	'mobile-frontend-search-submit' => 'Gå',
 	'mobile-frontend-search-results' => 'Søkeresultater',
 	'mobile-frontend-no-article-found' => 'Ingen artikler funnet',
