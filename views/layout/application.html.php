@@ -4,7 +4,7 @@ global $wgExtensionAssetsPath, $wgAppleTouchIcon;
 $dir = self::$dir;
 $code = self::$code;
 
-if( $wgAppleTouchIcon !== false ) {
+if ( $wgAppleTouchIcon !== false ) {
 	$appleTouchIconTag = Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) );
 } else {
 	$appleTouchIconTag = "";

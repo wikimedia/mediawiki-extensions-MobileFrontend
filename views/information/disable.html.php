@@ -1,7 +1,7 @@
 <?php
 
 $currentURL = self::$currentURL;
-$currentURL = str_replace('&mobileaction=disable_mobile_site', '', $currentURL);
+$currentURL = str_replace( '&mobileaction=disable_mobile_site', '', $currentURL );
 $mobileRedirectFormAction = self::$mobileRedirectFormAction;
 
 $disableHtml = <<<EOT

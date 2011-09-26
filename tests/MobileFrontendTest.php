@@ -1,9 +1,9 @@
 <?php
 
 class ExtMobileFrontendTest extends MediaWikiTestCase {
-	
+
 	/**
-	* PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of 
+	* PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
 	* protected and private methods directly through the Reflection API
 	*/
 	protected static function getMethod( $name ) {
@@ -12,7 +12,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$method->setAccessible( true );
 		return $method;
 	}
-	
+
 	protected function setUp() {
 		parent::setUp();
 		$this->wgExtMobileFrontend = new ExtMobileFrontend();
@@ -22,21 +22,21 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		unset( $this->wgExtMobileFrontend );
 		parent::tearDown();
 	}
-	
+
 	public function testGetBaseDomain() {
 		$getBaseDomain = self::getMethod( 'getBaseDomain' );
 		$wgExtMobileFrontend = new ExtMobileFrontend();
 		$_SERVER['HTTP_HOST'] = 'en.wikipedia.org';
 		$this->assertEquals( '.wikipedia.org', $getBaseDomain->invokeArgs( $wgExtMobileFrontend, array() ) );
 	}
-	
+
 	public function testGetRelativeURL() {
 		$getRelativeURL = self::getMethod( 'getRelativeURL' );
 		$wgExtMobileFrontend = new ExtMobileFrontend();
 		$url = 'http://en.wikipedia.org/wiki/Positional_astronomy';
 		$this->assertEquals( '/wiki/Positional_astronomy', $getRelativeURL->invokeArgs( $wgExtMobileFrontend, array( $url ) ) );
 	}
-	
+
 	public function testDisableCaching() {
 		global $wgRequest;
 		$disableCaching = self::getMethod( 'disableCaching' );
@@ -47,7 +47,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$this->assertEquals( 'Sat, 26 Jul 1997 05:00:00 GMT', $wgRequest->response()->getheader( 'Expires' ) );
 		$this->assertEquals( 'no-cache', $wgRequest->response()->getheader( 'Pragma' ) );
 	}
-	
+
 	public function testSendXDeviceVaryHeader() {
 		global $wgRequest;
 		$sendXDeviceVaryHeader = self::getMethod( 'sendXDeviceVaryHeader' );

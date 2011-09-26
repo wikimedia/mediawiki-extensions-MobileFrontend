@@ -11,7 +11,7 @@
 
 $messages = array();
 
-//en translation
+// en translation
 $messages['en'] = array (
 	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-search-submit' => 'Go',

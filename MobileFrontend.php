@@ -18,11 +18,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 // Define the extension; allows us make sure the extension is used correctly
 define( 'MOBILEFRONTEND', 'MobileFrontend' );
 // WURFL installation dir
-define( 'WURFL_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library' .
+define( 'WURFL_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'library' .
 		DIRECTORY_SEPARATOR . 'WURFL' . DIRECTORY_SEPARATOR );
 // WURFL configuration files directory
-define( 'RESOURCES_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library' .
-		DIRECTORY_SEPARATOR. 'resources' . DIRECTORY_SEPARATOR );
+define( 'RESOURCES_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'library' .
+		DIRECTORY_SEPARATOR . 'resources' . DIRECTORY_SEPARATOR );
 
 require_once( WURFL_DIR . 'Application.php' );
 
@@ -36,9 +36,9 @@ $wgExtensionCredits['other'][] = array(
 	'url' => 'http://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
 
-$cwd = dirname(__FILE__) . DIRECTORY_SEPARATOR;
+$cwd = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
 $wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
-//autoload extension classes
+// autoload extension classes
 $wgAutoloadClasses['DeviceDetection'] = $cwd . 'DeviceDetection.php';
 $wgAutoloadClasses['CssDetection']	  = $cwd . 'CssDetection.php';
 
@@ -125,8 +125,8 @@ class ExtMobileFrontend {
 	public static $displayNoticeId;
 	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
-	
-	public static $messageKeys = array( 
+
+	public static $messageKeys = array(
 		'mobile-frontend-show-button',
 		'mobile-frontend-hide-button',
 		'mobile-frontend-back-to-top-of-section',
@@ -198,7 +198,7 @@ class ExtMobileFrontend {
 		'#ogg_player_1',
 		'.nomobile',
 	);
-	
+
 	public function testCanonicalRedirect( $request, $title, $output ) {
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 		if ( empty( $xDevice ) ) {
@@ -214,14 +214,14 @@ class ExtMobileFrontend {
 
 		$title = $obj->getTitle();
 		$isSpecial = $title->isSpecialPage();
-		
+
 		if ( ! $isSpecial ) {
 			$footerlinks = $tpl->data['footerlinks'];
 			$mobileViewUrl = $wgRequest->escapeAppendQuery( 'useformat=mobile' );
 
-			$tpl->set('mobileview', "<a href='{$mobileViewUrl}'>" . wfMsg( 'mobile-frontend-view' ) . "</a>");
+			$tpl->set( 'mobileview', "<a href='{$mobileViewUrl}'>" . wfMsg( 'mobile-frontend-view' ) . "</a>" );
 			$footerlinks['places'][] = 'mobileview';
-			$tpl->set('footerlinks', $footerlinks);
+			$tpl->set( 'footerlinks', $footerlinks );
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -230,23 +230,23 @@ class ExtMobileFrontend {
 	public function getMsg() {
 		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgMobileDomain;
 		wfProfileIn( __METHOD__ );
-		
+
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
 		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
-		
+
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
-		
+
 		self::$messages['mobile-frontend-copyright'] = $copyright;
-	
+
 		foreach ( self::$messageKeys as $messageKey ) {
-			
+
 			if ( $messageKey == 'mobile-frontend-leave-feedback-notice' ) {
 				$linkText = wfMsg( 'mobile-frontend-leave-feedback-link-text' );
 				$linkTarget = wfMsgNoTrans( 'mobile-frontend-feedback-page' );
@@ -260,7 +260,7 @@ class ExtMobileFrontend {
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
-		
+
 		$nonMobileServerBaseURL = str_replace( $wgMobileDomain, '.', $wgServer );
 		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false ) ? $wgMobileRedirectFormAction : "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
 
@@ -279,15 +279,15 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		// The title
 		self::$title = $out->getTitle();
-		
+
 		if (  Title::newMainPage()->equals( self::$title ) ) {
 			self::$isMainPage = true;
 		}
-		
+
 		self::$htmlTitle = $out->getHTMLTitle();
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
-		$uAmd5 = md5($userAgent);
+		$uAmd5 = md5( $userAgent );
 
 		$key = wfMemcKey( 'mobile', 'ua', $uAmd5 );
 
@@ -308,8 +308,8 @@ class ExtMobileFrontend {
 					$props = "generic";
 				}
 			}
-		} catch (Exception $e) {
-			//echo $e->getMessage();
+		} catch ( Exception $e ) {
+			// echo $e->getMessage();
 		}
 
 		// Note: The WebRequest Class calls are made in this block because
@@ -331,7 +331,7 @@ class ExtMobileFrontend {
 			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=0' );
 		}
-		
+
 		if ( self::$disableImages == 0 ) {
 			$disableImages = $wgRequest->getCookie( 'disableImages' );
 			if ( $disableImages ) {
@@ -356,18 +356,18 @@ class ExtMobileFrontend {
 		self::$search = $wgRequest->getText( 'search' );
 		self::$callback = $wgRequest->getText( 'callback' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
-		
+
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 
 		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
 		$device = new DeviceDetection();
-		
+
 		if ( !empty( $xDevice ) ) {
 			$formatName = $xDevice;
 		} else {
 			$formatName = $device->formatName( $userAgent, $acceptHeader );
 		}
-		
+
 		self::$device = $device->format( $formatName );
 
 		if ( self::$device['view_format'] === 'wml' ) {
@@ -379,7 +379,7 @@ class ExtMobileFrontend {
 		if ( self::$useFormat === 'mobile-wap' ) {
 			$this->contentFormat = 'WML';
 		}
-		
+
 		if ( $mobileAction == 'leave_feedback' ) {
 			echo $this->renderLeaveFeedbackXHTML();
 			wfProfileOut( __METHOD__ );
@@ -387,15 +387,15 @@ class ExtMobileFrontend {
 		}
 
 		if ( $mobileAction == 'leave_feedback_post' ) {
-			
+
 			$this->getMsg();
-			
+
 			$subject = $wgRequest->getText( 'subject', '' );
 			$message = $wgRequest->getText( 'message', '' );
 			$token = $wgRequest->getText( 'edittoken', '' );
-			
+
 			$title = Title::newFromText( self::$messages['mobile-frontend-feedback-page'] );
-			
+
 			if ( $title->userCan( 'edit' ) &&
 			 	!$wgUser->isBlockedFrom( $title ) &&
 			 	$wgUser->matchEditToken( $token ) ) {
@@ -404,7 +404,7 @@ class ExtMobileFrontend {
 				$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> ";
 				$article->doEdit( $rawtext, '' );
 			}
-			
+
 			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() . '&noticeid=1' );
 			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location );
@@ -449,8 +449,8 @@ class ExtMobileFrontend {
 
 		// WURFL documentation: http://wurfl.sourceforge.net/help_doc.php
 		// Determine the kind of markup
-		if( is_array( $props ) && $props['preferred_markup'] ) {
-			//wfDebug( __METHOD__ . ": preferred markup for this device: " . $props['preferred_markup'] );
+		if ( is_array( $props ) && $props['preferred_markup'] ) {
+			// wfDebug( __METHOD__ . ": preferred markup for this device: " . $props['preferred_markup'] );
 			// xhtml/html: html_web_3_2, html_web_4_0
 			// xthml basic/xhtmlmp (wap 2.0): html_wi_w3_xhtmlbasic html_wi_oma_xhtmlmp_1_0
 			// chtml (imode): html_wi_imode_*
@@ -470,10 +470,10 @@ class ExtMobileFrontend {
 
 		// Determine
 
-		if (self::$useFormat === 'mobile' ||
+		if ( self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ||
 			!empty( $xDevice ) ) {
-				if ( $action !== 'edit' && 
+				if ( $action !== 'edit' &&
 					 $mobileAction !== 'view_normal_site' ) {
 					$this->getMsg();
 					$this->disableCaching();
@@ -498,11 +498,11 @@ class ExtMobileFrontend {
 
 	private function getBaseDomain() {
 		wfProfileIn( __METHOD__ );
-		//Validates value as IP address
-		if( !IP::isValid( $_SERVER['HTTP_HOST'] ) ) {
+		// Validates value as IP address
+		if ( !IP::isValid( $_SERVER['HTTP_HOST'] ) ) {
 			$domainParts = explode( '.', $_SERVER['HTTP_HOST'] );
 			$domainParts = array_reverse( $domainParts );
-			//Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included.
+			// Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included.
 			wfProfileOut( __METHOD__ );
 			return '.' . $domainParts[1] . '.' . $domainParts[0];
 		} else {
@@ -514,8 +514,8 @@ class ExtMobileFrontend {
 	private function getRelativeURL( $url ) {
 		wfProfileIn( __METHOD__ );
 		$parsedUrl = parse_url( $url );
-		//Validates value as IP address
-		if( !IP::isValid( $parsedUrl['host'] ) ) {
+		// Validates value as IP address
+		if ( !IP::isValid( $parsedUrl['host'] ) ) {
 			wfProfileOut( __METHOD__ );
 			$baseUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
 			$baseUrl = str_replace( $baseUrl, '', $url );
@@ -537,7 +537,7 @@ class ExtMobileFrontend {
 		}
 		wfProfileOut( __METHOD__ );
 	}
-	
+
 	private function sendXDeviceVaryHeader() {
 		global $wgOut, $wgRequest;
 		wfProfileIn( __METHOD__ );
@@ -547,14 +547,14 @@ class ExtMobileFrontend {
 		}
 		wfProfileOut( __METHOD__ );
 	}
-	
+
 	private function renderLeaveFeedbackXHTML() {
 		global $wgRequest, $wgUser;
 		wfProfileIn( __METHOD__ );
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
 			$editToken = $wgUser->editToken();
-			
+
 			$htmlTitle = self::$messages['mobile-frontend-leave-feedback'];
 			$title = self::$messages['mobile-frontend-leave-feedback-title'];
 			$notice = self::$messages['mobile-frontend-leave-feedback-notice'];
@@ -562,7 +562,7 @@ class ExtMobileFrontend {
 			$message = self::$messages['mobile-frontend-leave-feedback-message'];
 			$cancel = self::$messages['mobile-frontend-leave-feedback-cancel'];
 			$submit = self::$messages['mobile-frontend-leave-feedback-submit'];
-			
+
 			$feedbackPostURL = str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post';
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
@@ -656,7 +656,7 @@ class ExtMobileFrontend {
 	private function headingTransformCallbackXHTML( $matches ) {
 		wfProfileIn( __METHOD__ );
 		if ( isset( $matches[0] ) ) {
-			preg_match('/id="([^"]*)"/', $matches[0], $headlineMatches);
+			preg_match( '/id="([^"]*)"/', $matches[0], $headlineMatches );
 		}
 
 		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
@@ -667,35 +667,35 @@ class ExtMobileFrontend {
 		$backToTop = self::$messages['mobile-frontend-back-to-top-of-section'];
 		++$headings;
 		// Back to top link
-		$base = Html::openElement( 'div', 
-									array( 'id' => 'anchor_' . intval( $headings - 1 ), 
-											'class' => 'section_anchors', ) 
+		$base = Html::openElement( 'div',
+									array( 'id' => 'anchor_' . intval( $headings - 1 ),
+											'class' => 'section_anchors', )
 				) .
 				Html::rawElement( 'a',
-						array( 'href' => '#section_' . intval( $headings - 1 ), 
-								'class' => 'back_to_top' ), 
-								'&#8593;' . $backToTop	) . 
+						array( 'href' => '#section_' . intval( $headings - 1 ),
+								'class' => 'back_to_top' ),
+								'&#8593;' . $backToTop	) .
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
 		$buttons = Html::element( 'button',
-						array('class' => 'section_heading show', 
-								'section_id' => $headings ), 
-								$show ) .
-				Html::element( 'button', 
-						array('class' => 'section_heading hide',
+						array( 'class' => 'section_heading show',
 								'section_id' => $headings ),
-								$hide );		
+								$show ) .
+				Html::element( 'button',
+						array( 'class' => 'section_heading hide',
+								'section_id' => $headings ),
+								$hide );
 		$base .= Html::openElement( 'h2',
-						array('class' => 'section_heading',
-								'id' => 'section_' . $headings) ) . 
+						array( 'class' => 'section_heading',
+								'id' => 'section_' . $headings ) ) .
 			$buttons .
 				Html::rawElement( 'span',
-						array( 'id' => $headlineId), 
+						array( 'id' => $headlineId ),
 								$matches[2] ) .
-				Html::closeElement( 'h2' ) . 
-				Html::openElement( 'div', 
-						array('class' => 'content_block',
-								'id' => 'content_' . $headings) );
+				Html::closeElement( 'h2' ) .
+				Html::openElement( 'div',
+						array( 'class' => 'content_block',
+								'id' => 'content_' . $headings ) );
 
 		if ( $headings > 1 ) {
 			// Close it up here
@@ -748,11 +748,11 @@ class ExtMobileFrontend {
 
 		$card .= "<card id='s{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
 		$idx = $requestedSegment + 1;
-		$segmentsCount = count($segments);
+		$segmentsCount = count( $segments );
 		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
 
 		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useformat=' . self::$useFormat : '';
-		
+
 		// Title::getLocalUrl doesn't work at this point since PHP 5.1.x, all objects have their destructors called
 		// before the output buffer callback function executes.
 		// Thus, globalized objects will not be available as expected in the function.
@@ -760,13 +760,13 @@ class ExtMobileFrontend {
 		$mDefaultQuery = $_GET;
 		unset( $mDefaultQuery['seg'] );
 		unset( $mDefaultQuery['useformat'] );
-		
+
 		$qs = wfArrayToCGI( $mDefaultQuery );
 		$delimiter = ( !empty( $qs ) ) ? '?' : '';
 		$basePageParts = wfParseUrl( self::$currentURL );
 		$basePage = $basePageParts['scheme'] . $basePageParts['delimiter'] . $basePageParts['host'] . $basePageParts['path'] . $delimiter . $qs;
 		$appendDelimiter = ( $delimiter === '?' ) ? '&' : '?';
-		
+
 		if ( $idx < $segmentsCount ) {
 			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
 		}
@@ -794,47 +794,47 @@ class ExtMobileFrontend {
 			CssDetection::detectIdCssOrTag( $itemToRemove, $type, $rawName );
 			$itemToRemoveRecords[$type][] = $rawName;
 		}
-		
+
 		wfProfileOut( __METHOD__ );
 		return $itemToRemoveRecords;
 	}
-	
+
 	public function DOMParseMainPage( $html ) {
 		wfProfileIn( __METHOD__ );
-		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
+		$html = mb_convert_encoding( $html, 'HTML-ENTITIES', "UTF-8" );
 		libxml_use_internal_errors( true );
 		$this->mainPage = new DOMDocument();
-		//It seems that loadhtml() does not "attach" the html dtd that defines id as an id-attribute to the DOM.
+		// It seems that loadhtml() does not "attach" the html dtd that defines id as an id-attribute to the DOM.
 		$this->mainPage->loadHTML( '<?xml encoding="UTF-8"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 									<html><head><title></title></head><body>' . $html . '</body></html>' );
 		libxml_use_internal_errors( false );
 		$this->mainPage->preserveWhiteSpace = false;
 		$this->mainPage->strictErrorChecking = false;
 		$this->mainPage->encoding = 'UTF-8';
-		
+
 		$featuredArticle = $this->mainPage->getElementById( 'mp-tfa' );
 		$newsItems = $this->mainPage->getElementById( 'mp-itn' );
-		
+
 		$xpath = new DOMXpath( $this->mainPage );
 		$elements = $xpath->query( '//*[starts-with(@id, "mf-")]' );
-		
-		$commonAttributes = array('mp-tfa', 'mp-itn');
+
+		$commonAttributes = array( 'mp-tfa', 'mp-itn' );
 
 		$content = $this->mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'main_box' );
-		
+
 		if ( $featuredArticle ) {
 			$h2FeaturedArticle = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-featured-article'] );
 			$content->appendChild( $h2FeaturedArticle );
 			$content->appendChild( $featuredArticle );
 		}
-		
+
 		if ( $newsItems ) {
 			$h2NewsItems = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-news-items'] );
 			$content->appendChild( $h2NewsItems );
 			$content->appendChild( $newsItems );
 		}
-		
+
 		foreach ( $elements as $element ) {
 			if ( $element->hasAttribute( 'id' ) ) {
 				$id = $element->getAttribute( 'id' );
@@ -849,16 +849,16 @@ class ExtMobileFrontend {
 				}
 			}
 		}
-		
+
 		$contentHtml = $this->mainPage->saveXML( $content, LIBXML_NOEMPTYTAG );
 		wfProfileOut( __METHOD__ );
 		return $contentHtml;
 	}
 
-	public function DOMParse( $html ) {		
+	public function DOMParse( $html ) {
 		global $wgSitename;
 		wfProfileIn( __METHOD__ );
-		$html = mb_convert_encoding($html, 'HTML-ENTITIES', "UTF-8");
+		$html = mb_convert_encoding( $html, 'HTML-ENTITIES', "UTF-8" );
 		libxml_use_internal_errors( true );
 		$this->doc = new DOMDocument();
 		$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
@@ -891,14 +891,14 @@ class ExtMobileFrontend {
 		foreach ( $itemToRemoveRecords['TAG'] as $tagToRemove ) {
 			$tagToRemoveNodes = $this->doc->getElementsByTagName( $tagToRemove );
 
-			foreach( $tagToRemoveNodes as $tagToRemoveNode ) {
+			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
 				if ( $tagToRemoveNode ) {
 					$domElemsToRemove[] = $tagToRemoveNode;
 				}
 			}
 		}
 
-		foreach( $domElemsToRemove as $domElement ) {
+		foreach ( $domElemsToRemove as $domElement ) {
 			$domElement->parentNode->removeChild( $domElement );
 		}
 
@@ -915,7 +915,7 @@ class ExtMobileFrontend {
 		foreach ( $itemToRemoveRecords['CLASS'] as $classToRemove ) {
 			$elements = $xpath->query( '//*[@class="' . $classToRemove . '"]' );
 
-			foreach( $elements as $element ) {
+			foreach ( $elements as $element ) {
 				$removedElement = $element->parentNode->removeChild( $element );
 			}
 		}
@@ -928,15 +928,15 @@ class ExtMobileFrontend {
 				'//' . $parts[0] . '[@class="' . $parts[1] . '"]'
 			);
 
-			foreach( $elements as $element ) {
+			foreach ( $elements as $element ) {
 				$removedElement = $element->parentNode->removeChild( $element );
 			}
 		}
 
 		// Handle red links with action equal to edit
 		$redLinks = $xpath->query( '//a[@class="new"]' );
-		foreach( $redLinks as $redLink ) {
-			//PHP Bug #36795 — Inappropriate "unterminated entity reference"
+		foreach ( $redLinks as $redLink ) {
+			// PHP Bug #36795 — Inappropriate "unterminated entity reference"
 			$spanNode = $this->doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
 
 			if ( $redLink->hasAttributes() ) {
@@ -951,7 +951,7 @@ class ExtMobileFrontend {
 		$content = $this->doc->getElementById( 'content' );
 
 		$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
-		
+
 		if ( self::$isMainPage ) {
 			$contentHtml = $this->DOMParseMainPage( $contentHtml );
 		}
@@ -966,7 +966,7 @@ class ExtMobileFrontend {
 		} elseif ( $this->contentFormat == 'WML' ) {
 			$homeButton = self::$messages['mobile-frontend-home-button'];
 			$randomButton = self::$messages['mobile-frontend-random-button'];
-			//header( 'Content-Type: text/vnd.wap.wml' );
+			// header( 'Content-Type: text/vnd.wap.wml' );
 
 			// TODO: Content transformations required
 			// WML Validator:
@@ -988,12 +988,12 @@ class ExtMobileFrontend {
 		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
 			if ( !empty( self::$displayNoticeId ) ) {
 				$noticePagePath = 'views/notices/notice_' . intval( self::$displayNoticeId ) . '.html.php';
-				if ( file_exists( dirname(__FILE__) . '/' . $noticePagePath ) ) {
+				if ( file_exists( dirname( __FILE__ ) . '/' . $noticePagePath ) ) {
 					require( $noticePagePath );
 				}
 			}
-			
-			//header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
+
+			// header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/layout/application.html.php' );
@@ -1015,7 +1015,7 @@ class ExtMobileFrontend {
 			wfProfileOut( __METHOD__ );
 			return $json;
 		}
-		
+
 		wfProfileOut( __METHOD__ );
 		return $applicationHtml;
 	}
