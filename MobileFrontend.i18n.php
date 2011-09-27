@@ -432,6 +432,7 @@ $messages['ast'] = array(
 
 /** Azerbaijani (Azərbaycanca)
  * @author Cekli829
+ * @author Vugar 1981
  */
 $messages['az'] = array(
 	'mobile-frontend-search-submit' => 'Get',
@@ -446,7 +447,7 @@ $messages['az'] = array(
 	'mobile-frontend-hide-button' => 'Gizlət',
 	'mobile-frontend-disable-button' => 'Kənarda saxla',
 	'mobile-frontend-back-button' => 'Geri',
-	'mobile-frontend-regular-site' => 'Bu səhifəni normal Vikipediyada görüntülə',
+	'mobile-frontend-regular-site' => 'Bu səhifəni normal {{SITENAME}} görüntülə',
 	'mobile-frontend-perm-stop-redirect' => 'Mobil saytı istifadəçi olaraq kənarda saxla',
 	'mobile-frontend-error-page-title' => 'Bizim problemimiz var!',
 	'mobile-frontend-error-page-text' => 'Mobil Vikipediya hələ də aktivləşdirilmə mərhələsindədir və bütün daxili səhvlərimizi düzəltmək üçün çalışırıq. Bu xəta haqqında məlumatlandırıldıq və yaxın zamanda düzəldiləcəkdir. Lütfən təkrar yoxlayın!',
@@ -462,6 +463,8 @@ $messages['az'] = array(
 	'mobile-frontend-download-full-version' => 'Full Versiyanı yüklə',
 	'mobile-frontend-file-namespace' => 'Fayl',
 	'mobile-frontend-wml-continue' => 'Davam et ...',
+	'mobile-frontend-wml-back' => 'Geri ...',
+	'mobile-frontend-view' => 'Mobil görüntü',
 	'mobile-frontend-opt-in-yes-button' => 'bəli',
 	'mobile-frontend-opt-in-no-button' => 'xeyr',
 	'mobile-frontend-opt-out-yes-button' => 'bəli',
@@ -3631,10 +3634,13 @@ $messages['no'] = array(
 	'mobile-frontend-opt-out-no-button' => 'nei',
 	'mobile-frontend-opt-out-explain' => 'Dette lar deg forlate testen',
 	'mobile-frontend-disable-images' => 'Deaktiver bilder på mobilsiden',
+	'mobile-frontend-news-items' => 'I nyhetene',
+	'mobile-frontend-leave-feedback-title' => 'Gi oss tilbakemelding om din erfaring med mobilnettstedet',
 	'mobile-frontend-leave-feedback-subject' => 'Emne',
 	'mobile-frontend-leave-feedback-message' => 'Melding',
 	'mobile-frontend-leave-feedback-cancel' => 'Avbryt',
 	'mobile-frontend-leave-feedback-submit' => 'Send tilbakemelding',
+	'mobile-frontend-leave-feedback-thanks' => 'Takk for din tilbakemelding!',
 );
 
 /** Occitan (Occitan)
