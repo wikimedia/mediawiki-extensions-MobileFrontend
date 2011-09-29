@@ -84,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.74';
+	const VERSION = '0.5.75';
 
 	/**
 	 * @var DOMDocument
@@ -484,8 +484,7 @@ class ExtMobileFrontend {
 		if ( self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ||
 			!empty( $xDevice ) ) {
-				if ( $action !== 'edit' &&
-					 $mobileAction !== 'view_normal_site' ) {
+				if ( $action !== 'edit' ) {
 					$this->getMsg();
 					$this->disableCaching();
 					$this->sendXDeviceVaryHeader();
