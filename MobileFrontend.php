@@ -84,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.72';
+	const VERSION = '0.5.73';
 
 	/**
 	 * @var DOMDocument
@@ -240,7 +240,7 @@ class ExtMobileFrontend {
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
-		$parsedUrl = parse_url( $wgRequest->getFullRequestURL() );
+		$parsedUrl = wfParseUrl( $wgRequest->getFullRequestURL() );
 		$parsedUrl['host'] = str_replace( $wgMobileDomain, '.', $parsedUrl['host'] );
 		$parsedUrl['query'] = $this->removeQueryStringParameter( $parsedUrl['query'], 'useformat' );
 		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
