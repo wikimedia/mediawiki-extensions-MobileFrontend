@@ -84,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.70';
+	const VERSION = '0.5.71';
 
 	/**
 	 * @var DOMDocument
@@ -226,6 +226,12 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
+	
+	private function removeQueryStringParameter( $url, $field ) { 
+		$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' ); 
+		$url = substr( $url, 0, -1 ); 
+		return $url; 
+	}
 
 	public function getMsg() {
 		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgMobileDomain;
@@ -234,7 +240,8 @@ class ExtMobileFrontend {
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
-		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
+		self::$viewNormalSiteURL = str_replace( $wgMobileDomain, '.', $wgRequest->getFullRequestURL() );
+		self::$viewNormalSiteURL = $this->removeQueryStringParameter( self::$viewNormalSiteURL, 'useformat' );
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
