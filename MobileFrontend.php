@@ -84,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.71';
+	const VERSION = '0.5.72';
 
 	/**
 	 * @var DOMDocument
@@ -240,9 +240,12 @@ class ExtMobileFrontend {
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
-		self::$viewNormalSiteURL = str_replace( $wgMobileDomain, '.', $wgRequest->getFullRequestURL() );
-		self::$viewNormalSiteURL = $this->removeQueryStringParameter( self::$viewNormalSiteURL, 'useformat' );
-		self::$currentURL = $wgRequest->getFullRequestURL();
+		$parsedUrl = parse_url( $wgRequest->getFullRequestURL() );
+		$parsedUrl['host'] = str_replace( $wgMobileDomain, '.', $parsedUrl['host'] );
+		$parsedUrl['query'] = $this->removeQueryStringParameter( $parsedUrl['query'], 'useformat' );
+		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
+		self::$viewNormalSiteURL = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . '?' . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+ 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
 		$skin = $wgUser->getSkin();
