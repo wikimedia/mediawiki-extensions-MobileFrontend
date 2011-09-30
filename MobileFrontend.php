@@ -84,7 +84,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.75';
+	const VERSION = '0.5.76';
 
 	/**
 	 * @var DOMDocument
@@ -200,10 +200,52 @@ class ExtMobileFrontend {
 	);
 
 	public function testCanonicalRedirect( $request, $title, $output ) {
+		global $wgUsePathInfo, $wgMobileDomain;
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 		if ( empty( $xDevice ) ) {
 			return true; // Let the redirect happen
 		} else {
+			if ( $title->getNamespace() == NS_SPECIAL ) {
+				list( $name, $subpage ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+				if ( $name ) {
+					$title = SpecialPage::getTitleFor( $name, $subpage );
+				}
+			}
+			$targetUrl = wfExpandUrl( $title->getFullURL(), PROTO_CURRENT );
+			// Redirect to canonical url, make it a 301 to allow caching
+			if ( $targetUrl == $request->getFullRequestURL() ) {
+				$message = "Redirect loop detected!\n\n" .
+					"This means the wiki got confused about what page was " .
+					"requested; this sometimes happens when moving a wiki " .
+					"to a new server or changing the server configuration.\n\n";
+
+				if ( $wgUsePathInfo ) {
+					$message .= "The wiki is trying to interpret the page " .
+						"title from the URL path portion (PATH_INFO), which " .
+						"sometimes fails depending on the web server. Try " .
+						"setting \"\$wgUsePathInfo = false;\" in your " .
+						"LocalSettings.php, or check that \$wgArticlePath " .
+						"is correct.";
+				} else {
+					$message .= "Your web server was detected as possibly not " .
+						"supporting URL path components (PATH_INFO) correctly; " .
+						"check your LocalSettings.php for a customized " .
+						"\$wgArticlePath setting and/or toggle \$wgUsePathInfo " .
+						"to true.";
+				}
+				throw new HttpError( 500, $message );
+			} else {
+				$parsedUrl = wfParseUrl( $targetUrl );
+				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === FALSE ) {
+					$hostParts = explode( '.', $parsedUrl['host'] );
+					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
+				}
+				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
+				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
+				$targetUrl = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+				$output->setSquidMaxage( 1200 );
+				$output->redirect( $targetUrl, '301' );
+			}
 			return false; // Prevent the redirect from occuring
 		}
 	}
