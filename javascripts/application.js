@@ -63,12 +63,6 @@ updateOrientation();
 // Try to scroll and hide URL bar
 window.scrollTo( 0, 1 );
 
-// This is a global. I don't know why.
-decode = document.getElementById( 'search' );
-decode.value = unescape( decode.value );
-decode = document.getElementsByTagName( 'title' )[0];
-decode.innerHTML = unescape( decode.innerHTML );
-
 /**
  * updateOrientation checks the current orientation, sets the body's class
  * attribute to portrait, landscapeLeft, or landscapeRight,
