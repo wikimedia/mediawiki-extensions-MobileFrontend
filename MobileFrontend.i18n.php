@@ -170,7 +170,8 @@ $messages['af'] = array(
 	'mobile-frontend-perm-stop-redirect' => 'Gebruik altyd die gewone {{SITENAME}}',
 	'mobile-frontend-error-page-title' => "Ons het 'n probleem!",
 	'mobile-frontend-error-page-text' => '{{SITENAME}} mobiel is onder ontwikkeling en daar word hard gewerk om alle probleme op te los.
-Ons het die fout ontvang en sal dit spoedig regmaak. Besoek ons weer binnekort!',
+Ons het hierdie fout ontvang en sal dit spoedig regmaak.
+Besoek ons binnekort weer!',
 	'mobile-frontend-are-you-sure' => 'Is u seker?',
 	'mobile-frontend-explain-disable' => 'Is u seker u wil die selfoon weergawe van {{SITENAME}} afskakel? As u <b>afskakel</b> kies, sal u vanaf daai oomblik, as u Wikpedia besoek nie meer na die mobiele weergawe aangestuur word nie.',
 	'mobile-frontend-nav-end' => 'Onderaan',
@@ -189,13 +190,17 @@ Ons het die fout ontvang en sal dit spoedig regmaak. Besoek ons weer binnekort!'
 	'mobile-frontend-opt-in-no-button' => 'nee',
 	'mobile-frontend-opt-out-yes-button' => 'ja',
 	'mobile-frontend-opt-out-no-button' => 'nee',
+	'mobile-frontend-disable-images' => 'Skakel beelde af',
+	'mobile-frontend-enable-images' => 'Skakel beelde aan',
 	'mobile-frontend-news-items' => 'In die nuus',
+	'mobile-frontend-leave-feedback-title' => 'Gee terugvoer oor u mobiele ervaringe',
 	'mobile-frontend-leave-feedback-subject' => 'Onderwerp',
 	'mobile-frontend-leave-feedback-message' => 'Boodskap',
 	'mobile-frontend-leave-feedback-cancel' => 'Kanselleer',
 	'mobile-frontend-leave-feedback-submit' => 'Stuur terugvoer',
 	'mobile-frontend-leave-feedback-link-text' => 'Terugvoer oor mobiele koppelvlak',
 	'mobile-frontend-leave-feedback' => 'Gee terugvoer',
+	'mobile-frontend-leave-feedback-thanks' => 'Dankie vir u terugvoer!',
 );
 
 /** Akan (Akan) */
@@ -2451,7 +2456,9 @@ $messages['ja'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'はい',
 );
 
-/** Georgian (ქართული) */
+/** Georgian (ქართული)
+ * @author Dawid Deutschland
+ */
 $messages['ka'] = array(
 	'mobile-frontend-search-submit' => 'აბა ჰე',
 	'mobile-frontend-search-results' => 'ძიების შედეგები',
@@ -2480,6 +2487,11 @@ $messages['ka'] = array(
 	'mobile-frontend-author-link' => 'იხილეთ ეს მედია ფაილი ჩვეულებრივ ვიკიპედიაში, რათა გაიგოთ მისი ავტორი, ლიცენზირება და დამატებითი ინფორმაცია.',
 	'mobile-frontend-download-full-version' => 'სრული ვერსიის გადმოწერა',
 	'mobile-frontend-file-namespace' => 'ფაილი',
+	'mobile-frontend-opt-out-yes-button' => 'კი',
+	'mobile-frontend-opt-out-no-button' => 'არა',
+	'mobile-frontend-leave-feedback-subject' => 'თემა',
+	'mobile-frontend-leave-feedback-message' => 'შეტყობინება',
+	'mobile-frontend-leave-feedback-cancel' => 'გაუქმება',
 );
 
 /** Kabardian (Cyrillic) (Адыгэбзэ (Cyrillic)) */
@@ -2873,6 +2885,7 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Ofbriechen',
 	'mobile-frontend-leave-feedback-submit' => 'Feedback schécken',
+	'mobile-frontend-leave-feedback' => 'Feedback fir de mobile Site',
 	'mobile-frontend-leave-feedback-thanks' => 'Merci fir Äre Feedback!',
 );
 
@@ -3630,6 +3643,8 @@ $messages['no'] = array(
 	'mobile-frontend-view' => 'Mobilvisning',
 	'mobile-frontend-opt-in-yes-button' => 'ja',
 	'mobile-frontend-opt-in-no-button' => 'nei',
+	'mobile-frontend-opt-in-title' => 'Påmelding til testing',
+	'mobile-frontend-opt-in-explain' => 'Dette tillater deg å delta i testingen',
 	'mobile-frontend-opt-out-yes-button' => 'ja',
 	'mobile-frontend-opt-out-no-button' => 'nei',
 	'mobile-frontend-opt-out-explain' => 'Dette lar deg forlate testen',
