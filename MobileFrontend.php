@@ -803,7 +803,7 @@ class ExtMobileFrontend {
 		$segmentsCount = count( $segments );
 		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
 
-		$useFormatParam = ( isset( self::$useFormat ) ) ? '&' . 'useformat=' . self::$useFormat : '';
+		$useFormatParam = ( isset( self::$useFormat ) ) ? '&amp;' . 'useformat=' . self::$useFormat : '';
 
 		// Title::getLocalUrl doesn't work at this point since PHP 5.1.x, all objects have their destructors called
 		// before the output buffer callback function executes.
@@ -817,7 +817,7 @@ class ExtMobileFrontend {
 		$delimiter = ( !empty( $qs ) ) ? '?' : '';
 		$basePageParts = wfParseUrl( self::$currentURL );
 		$basePage = $basePageParts['scheme'] . $basePageParts['delimiter'] . $basePageParts['host'] . $basePageParts['path'] . $delimiter . $qs;
-		$appendDelimiter = ( $delimiter === '?' ) ? '&' : '?';
+		$appendDelimiter = ( $delimiter === '?' ) ? '&amp;' : '?';
 
 		if ( $idx < $segmentsCount ) {
 			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
@@ -1031,6 +1031,12 @@ class ExtMobileFrontend {
 
 			// Add segmentation markers
 			$contentHtml = $this->headingTransform( $contentHtml );
+
+			// Content removal for WML rendering			
+			$elements = array( 'span', 'div', 'sup', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'sup', 'sub' );
+			foreach ( $elements as $element ) {
+				$contentHtml = preg_replace( '#</?' . $element . '[^>]*>#is', '', $contentHtml );
+			}
 
 			// Content wrapping
 			$contentHtml = $this->createWMLCard( $contentHtml );
