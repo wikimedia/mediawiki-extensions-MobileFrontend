@@ -206,7 +206,7 @@ class ExtMobileFrontend {
 			return true; // Let the redirect happen
 		} else {
 			if ( $title->getNamespace() == NS_SPECIAL ) {
-				list( $name, $subpage ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+				list( $name, $subpage ) = SpecialPage::resolveAlias( $title->getDBkey() );
 				if ( $name ) {
 					$title = SpecialPage::getTitleFor( $name, $subpage );
 				}
