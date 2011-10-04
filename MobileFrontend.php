@@ -284,7 +284,7 @@ class ExtMobileFrontend {
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
 		$parsedUrl = wfParseUrl( $wgRequest->getFullRequestURL() );
 		$parsedUrl['host'] = str_replace( $wgMobileDomain, '.', $parsedUrl['host'] );
-		$parsedUrl['query'] = $this->removeQueryStringParameter( $parsedUrl['query'], 'useformat' );
+		$parsedUrl['query'] = $this->removeQueryStringParameter( '?' . $parsedUrl['query'], 'useformat' );
 		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
 		$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
 		self::$viewNormalSiteURL = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
