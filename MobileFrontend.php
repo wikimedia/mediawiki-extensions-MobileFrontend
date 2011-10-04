@@ -286,8 +286,7 @@ class ExtMobileFrontend {
 		$parsedUrl['host'] = str_replace( $wgMobileDomain, '.', $parsedUrl['host'] );
 		$parsedUrl['query'] = $this->removeQueryStringParameter( '?' . $parsedUrl['query'], 'useformat' );
 		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-		$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-		self::$viewNormalSiteURL = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+		self::$viewNormalSiteURL = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
  		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
