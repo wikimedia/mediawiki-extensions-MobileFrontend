@@ -164,6 +164,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-leave-feedback',
 		'mobile-frontend-feedback-page',
 		'mobile-frontend-leave-feedback-thanks',
+		'mobile-frontend-search-submit',
 	);
 
 	public $itemsToRemove = array(
@@ -907,7 +908,7 @@ class ExtMobileFrontend {
 	}
 
 	public function DOMParse( $html ) {
-		global $wgSitename;
+		global $wgSitename, $wgScript;
 		wfProfileIn( __METHOD__ );
 		$html = mb_convert_encoding( $html, 'HTML-ENTITIES', "UTF-8" );
 		libxml_use_internal_errors( true );
@@ -1017,7 +1018,7 @@ class ExtMobileFrontend {
 		} elseif ( $this->contentFormat == 'WML' ) {
 			$homeButton = self::$messages['mobile-frontend-home-button'];
 			$randomButton = self::$messages['mobile-frontend-random-button'];
-			// header( 'Content-Type: text/vnd.wap.wml' );
+			header( 'Content-Type: text/vnd.wap.wml' );
 
 			// TODO: Content transformations required
 			// WML Validator:
@@ -1036,7 +1037,12 @@ class ExtMobileFrontend {
 			foreach ( $elements as $element ) {
 				$contentHtml = preg_replace( '#</?' . $element . '[^>]*>#is', '', $contentHtml );
 			}
-
+			
+			//Wml for searching
+			$searchWml = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
+				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
+				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';
+			$contentHtml = $searchWml . $contentHtml;
 			// Content wrapping
 			$contentHtml = $this->createWMLCard( $contentHtml );
 			require( 'views/layout/application.wml.php' );
