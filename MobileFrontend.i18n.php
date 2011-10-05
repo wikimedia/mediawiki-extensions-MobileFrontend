@@ -4021,6 +4021,8 @@ $messages['pnb'] = array(
 	'mobile-frontend-nav-edit' => 'تبدیلی',
 	'mobile-frontend-nav-history' => 'ریکارڈ',
 	'mobile-frontend-search-text' => 'کھوج',
+	'mobile-frontend-contact-us' => 'اگر تواڈے کول کوئی سوال یا گل ہووے تے ازادی نال mobile@wikipedia.org تے سانوں ای-میل کرو۔',
+	'mobile-frontend-author-link' => 'ایس میڈیا فائل نوں اک ریگولر {{سائیٹناں}} تے ویکھو ایدے لکھاری بارے لسنس تے ہور گلاں پتہ لان بارے۔',
 	'mobile-frontend-download-full-version' => 'پورا ورین کاپی کرو۔',
 	'mobile-frontend-file-namespace' => 'فائل',
 	'mobile-frontend-wml-continue' => 'جاری رکھو',
@@ -4029,13 +4031,18 @@ $messages['pnb'] = array(
 	'mobile-frontend-opt-in-message' => 'ساڈے اوپٹ ان ٹیسٹنگ چ آو نويں موبائل فرنٹاینڈ لئی۔',
 	'mobile-frontend-opt-in-yes-button' => 'ہاں',
 	'mobile-frontend-opt-in-no-button' => 'نئیں',
+	'mobile-frontend-opt-in-title' => 'اوپٹ ان ٹسٹنگ لئی۔',
 	'mobile-frontend-opt-in-explain' => 'اے تھانوں نتارے چ آن دندا اے',
 	'mobile-frontend-opt-out-yes-button' => 'ہاں',
 	'mobile-frontend-opt-out-no-button' => 'نئیں',
+	'mobile-frontend-opt-out-title' => 'اوپٹ-آوث ٹیسٹنگ',
 	'mobile-frontend-opt-out-explain' => 'تسیں نتارا چھڈ سکدے او',
 	'mobile-frontend-disable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں بند کرو',
 	'mobile-frontend-enable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں آن کرو',
 	'mobile-frontend-news-items' => 'دساں چ',
+	'mobile-frontend-leave-feedback-title' => 'سانوں فیڈبیک دیو اپنے موبائل سائیٹ تجربے بارے۔',
+	'mobile-frontend-leave-feedback-notice' => 'تواڈا فیڈبیک ساڈی مدد کردا تواڈی موبائیل سائٹ ایکسپیرینس نوں ودیا کرن چ۔
+ایہ عام لوکاں ل‏ی سامنے رکھیا جاۓ گا (تواڈے ناں ، براؤزر ورین تے اوپریٹنگ سسٹم) صفہ &quot;$1&quot تے۔ مہربانی کرکے اک جانکاری لین لکھو کسے ٹاپک تے۔ تواڈا فیڈبیک ای ساڈے ورتن دی شرط اے۔',
 	'mobile-frontend-leave-feedback-subject' => 'آرٹیکل',
 	'mobile-frontend-leave-feedback-message' => 'سنیعہ',
 	'mobile-frontend-leave-feedback-cancel' => 'کینسل',
@@ -4598,7 +4605,9 @@ $messages['shi'] = array(
 	'mobile-frontend-file-namespace' => 'Asdaw',
 );
 
-/** Sinhala (සිංහල) */
+/** Sinhala (සිංහල)
+ * @author බිඟුවා
+ */
 $messages['si'] = array(
 	'mobile-frontend-search-submit' => 'යන්න',
 	'mobile-frontend-search-results' => 'ගවේෂණ ප්‍රතිඵල',
@@ -4625,6 +4634,12 @@ $messages['si'] = array(
 	'mobile-frontend-search-text' => 'සොයන්න',
 	'mobile-frontend-contact-us' => 'ඔබට යම් ප්‍රශ්න හෝ අදහස් ඇත්නම් කරුණාකර mobile@wikipedia.org වෙත අපට විද්‍යුත් තැපැල් කිරීමට නොපැකිළෙන්න',
 	'mobile-frontend-file-namespace' => 'ගොනුව',
+	'mobile-frontend-wml-continue' => 'දිගට කර ගෙන යමින්...',
+	'mobile-frontend-wml-back' => 'ආපසු...',
+	'mobile-frontend-opt-in-yes-button' => 'ඔව්',
+	'mobile-frontend-opt-in-no-button' => 'නැත',
+	'mobile-frontend-leave-feedback-message' => 'පණිවුඩය',
+	'mobile-frontend-leave-feedback-cancel' => 'අවලංගු කරන්න',
 );
 
 /** Slovak (Slovenčina) */
