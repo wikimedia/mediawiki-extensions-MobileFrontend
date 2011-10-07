@@ -3235,6 +3235,7 @@ $messages['ml'] = array(
 	'mobile-frontend-leave-feedback-message' => 'സന്ദേശം',
 	'mobile-frontend-leave-feedback-cancel' => 'റദ്ദാക്കുക',
 	'mobile-frontend-leave-feedback-submit' => 'അഭിപ്രായം സമർപ്പിക്കുക',
+	'mobile-frontend-leave-feedback' => 'മൊബൈൽ സൈറ്റിനെക്കുറിച്ചുള്ള അഭിപ്രായങ്ങൾ',
 	'mobile-frontend-leave-feedback-thanks' => 'താങ്കളുടെ അഭിപ്രായത്തിനു വളരെ നന്ദി!',
 );
 
