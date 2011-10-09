@@ -2881,6 +2881,7 @@ $messages['lb'] = array(
 	'mobile-frontend-disable-images' => 'Biller an der Mobiler Versioun desaktivéieren',
 	'mobile-frontend-enable-images' => 'Biller an der Mobiler Versioun aktivéieren',
 	'mobile-frontend-news-items' => 'An den Neiegkeeten',
+	'mobile-frontend-leave-feedback-title' => 'Gitt eis Feedback iwwer Är Erfarunge mat eisem mobile Site',
 	'mobile-frontend-leave-feedback-subject' => 'Sujet',
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Ofbriechen',
@@ -4761,7 +4762,9 @@ $messages['sq'] = array(
 	'mobile-frontend-file-namespace' => 'Skedarë',
 );
 
-/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬) */
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+ * @author Rancher
+ */
 $messages['sr-ec'] = array(
 	'mobile-frontend-search-submit' => 'Пређи',
 	'mobile-frontend-search-results' => 'Резултати претраге',
@@ -4790,6 +4793,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-author-link' => 'Погледајте ову датотеку на обичној Википедији за преглед података о ауторским правима, лиценцирању и додатним описима.',
 	'mobile-frontend-download-full-version' => 'Преузми цело издање',
 	'mobile-frontend-file-namespace' => 'Датотека',
+	'mobile-frontend-feedback-page' => 'Project:Мишљења о мобилном додатку',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬) */
