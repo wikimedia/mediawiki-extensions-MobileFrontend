@@ -412,7 +412,7 @@ class ExtMobileFrontend {
 
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 
-		$acceptHeader = $_SERVER["HTTP_ACCEPT"];
+		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		$device = new DeviceDetection();
 
 		if ( !empty( $xDevice ) ) {
