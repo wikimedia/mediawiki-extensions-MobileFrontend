@@ -281,18 +281,6 @@ body {
    outline: none;
 }
 
-#search {
-    -webkit-appearance: none;
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    outline-style: none;
-    outline-width: initial;
-    outline-color: initial;
-    height: 1.4em;
-}
-
 .divclearable {
     border: 1px solid #888;
     display: -moz-inline-stack;

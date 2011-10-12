@@ -1,3 +1,15 @@
+#search {
+    -webkit-appearance: none;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    outline-style: none;
+    outline-width: initial;
+    outline-color: initial;
+    height: 1.4em;
+}
+
 .clearlink {
     background: url(images/close-button.png) no-repeat scroll 0 0 transparent;
     background-position: center center;
