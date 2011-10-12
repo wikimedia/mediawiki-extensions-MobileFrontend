@@ -4035,6 +4035,7 @@ $messages['pnb'] = array(
 	'mobile-frontend-opt-in-no-button' => 'نئیں',
 	'mobile-frontend-opt-in-title' => 'اوپٹ ان ٹسٹنگ لئی۔',
 	'mobile-frontend-opt-in-explain' => 'اے تھانوں نتارے چ آن دندا اے',
+	'mobile-frontend-opt-out-message' => 'اوپٹ-ان ٹسٹنگ نویں ٹردے فرنٹاینڈ نوں چذڈو ؟',
 	'mobile-frontend-opt-out-yes-button' => 'ہاں',
 	'mobile-frontend-opt-out-no-button' => 'نئیں',
 	'mobile-frontend-opt-out-title' => 'اوپٹ-آوث ٹیسٹنگ',
