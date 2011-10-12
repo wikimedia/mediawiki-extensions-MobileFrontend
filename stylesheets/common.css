@@ -1,0 +1,16 @@
+.clearlink {
+    background: url(images/close-button.png) no-repeat scroll 0 0 transparent;
+    background-position: center center;
+    cursor: pointer;
+    zoom:1;
+    position: absolute;
+    right: 0.25em;
+    top: 50%;
+    margin: 1px;
+    height: 12px;
+    width: 12px;
+    margin-top: -6px;
+    z-index: 2;
+    border: 0px solid;
+    display: none;
+}
