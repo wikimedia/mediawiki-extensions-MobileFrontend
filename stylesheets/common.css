@@ -46,3 +46,22 @@ table {
 	padding: 3px;
 	margin-bottom: 15px;
 }
+
+table.gallery .thumb[style] {
+	border: 0;
+	padding: 0 !important;
+	width: auto !important;
+	margin: 0 auto;
+}
+
+table.navbox td.navbox-group {
+	background: #ddddff;
+	width: 25%;
+	padding: 3px;
+}
+
+table.toc h2 {
+	border: 0;
+	padding: 0;
+	margin-top: 5px;
+}
