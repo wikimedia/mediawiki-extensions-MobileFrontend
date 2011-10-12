@@ -65,3 +65,21 @@ table.toc h2 {
 	padding: 0;
 	margin-top: 5px;
 }
+
+table.geography[style] td[style*="text-align"], table.geography[style] td[colspan="2"] {
+	text-align: left !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+table[style] {
+	width: 100% !important;
+	float: none !important;
+	margin-left: 0 !important;
+}
+
+table.gallery th, table.gallery td {
+	display: block;
+	border: 0;
+	border-bottom: 1px solid #cccccc;
+}

@@ -33,10 +33,6 @@
       margin-bottom: 0; }
   table.wikitable th {
     background: #f3f3f3; }
-  table[style] {
-    width: 100% !important;
-    float: none !important;
-    margin-left: 0 !important; }
   table.infobox {
     background: #f9f9f9; }
     table.infobox th, table.infobox td {
@@ -46,10 +42,6 @@
   table.gallery {
     background: #f9f9f9;
     border-bottom: 0; }
-    table.gallery th, table.gallery td {
-      display: block;
-      border: 0;
-      border-bottom: 1px solid #cccccc; }
     table.gallery .gallerybox[style] {
       width: auto !important;
       margin-bottom: -16px; }
@@ -58,10 +50,6 @@
       text-align: center; }
   table.geography[style] th {
     text-align: left; }
-  table.geography[style] td[style*="text-align"], table.geography[style] td[colspan="2"] {
-    text-align: left !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important; }
     table.geography[style] td[style*="text-align"] div[style], table.geography[style] td[colspan="2"] div[style] {
       text-align: left !important; }
 
