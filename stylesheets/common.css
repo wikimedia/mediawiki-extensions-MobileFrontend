@@ -83,3 +83,58 @@ table.gallery th, table.gallery td {
 	border: 0;
 	border-bottom: 1px solid #cccccc;
 }
+
+.mwm-notice {
+	padding: 5px;
+	background: #dddddd;
+	-webkit-border-radius: 5px;
+	margin-top: 5px;
+	text-align: center;
+	border: 1px solid grey;
+}
+
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: none;
+}
+
+.thumb {
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background: #f9f9f9;
+	margin-bottom: 10px;
+}
+
+#nav #disableButtons button {
+	background: url(images/buttonbg.gif) no-repeat center;
+	border: 0;
+	height: 23px;
+	width: 83px;
+}
+
+.thumb .thumbcaption {
+	width: 100%;
+	margin: 5px 10px 0;
+	text-align: center;
+	width: auto !important;
+}
+
+#searchbox {
+	width: auto;
+	padding: 5px;
+	border: 1px solid #cccccc;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+
+#searchbox #goButton {
+	border: 0;
+	background: url(images/s.gif) no-repeat top left;
+	height: 25px;
+	width: 27px;
+}

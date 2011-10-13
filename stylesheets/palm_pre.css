@@ -56,14 +56,6 @@ table.admin {
 html {
 	font-size: 0.8em; }
 
-body {
-	line-height: 1;
-	color: black;
-	background: white;
-	font-family: sans-serif;
-	overflow-x: hidden;
-	-webkit-text-size-adjust: none; }
-
 p, li, dl, #featured_article {
 	line-height: 1.65; }
 
@@ -117,19 +109,8 @@ h2 {
 #featured_article .noprint, .today .noprint {
 	display: none; }
 
-.thumb {
-	border: 1px solid #cccccc;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	background: #f9f9f9;
-	margin-bottom: 10px; }
 .thumb .thumbinner[style] {
 	margin: 5px auto; }
-.thumb .thumbcaption {
-	width: 100%;
-	margin: 5px 10px 0;
-	text-align: center;
-	width: auto !important; }
 
 img.thumbborder {
 	border: 1px solid #cccccc; }
@@ -157,20 +138,9 @@ body {
 	vertical-align: middle;
 	display: inline-block; }
 
-#searchbox {
-	width: auto;
-	padding: 5px;
-	border: 1px solid #cccccc;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px; }
 #searchbox a, #searchbox img {
 	border: 0px;
 	vertical-align: middle; }
-#searchbox #goButton {
-	border: 0;
-	background: url(images/s.gif) no-repeat top left;
-	height: 25px;
-	width: 27px; }
 #searchbox #searchField {
 	width: auto; }
 
@@ -183,21 +153,8 @@ body {
 	display: inline-block; }
 #disableButtons {
 	text-align: center; }
-	#disableButtons nav button {
-	background: url(images/buttonbg.gif) no-repeat center;
-	border: 0;
-	height: 23px;
-	width: 83px; }
 #disableButtons #backButton {
 	margin-top: 5em; }
-
-.mwm-notice {
-	padding: 5px;
-	background: #dddddd;
-	-webkit-border-radius: 5px;
-	margin-top: 5px;
-	text-align: center;
-	border: 1px solid grey; }
 
 .mwm-message.mwm-notice {
 	font-size: 1.1em; }
