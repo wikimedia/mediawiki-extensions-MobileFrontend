@@ -78,11 +78,11 @@ h2 {
 a {
 	text-decoration: none;
 	color: #002bb8; }
-	a:visited {
+a:visited {
 	color: #5a3696; }
-	a:active {
+a:active {
 	color: #faa700; }
-	a:hover {
+a:hover {
 	text-decoration: underline; }
 
 a.new, a.new:visited, a.new:hover {
@@ -124,9 +124,11 @@ h2 {
 	-moz-border-radius: 5px;
 	background: #f9f9f9;
 	margin-bottom: 10px; }
-	.thumb .thumbinner[style] {
+
+.thumb .thumbinner[style] {
 	margin: 5px auto; }
-	.thumb .thumbcaption {
+
+.thumb .thumbcaption {
 	width: 100%;
 	margin: 5px 10px 0;
 	text-align: center;
@@ -164,15 +166,15 @@ body {
 	border: 1px solid #cccccc;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px; }
-	#searchbox a, #searchbox img {
+#searchbox a, #searchbox img {
 	border: 0px;
 	vertical-align: middle; }
-	#searchbox #goButton {
+#searchbox #goButton {
 	border: 0;
 	background: url(images/s.gif) no-repeat top left;
 	height: 25px;
 	width: 27px; }
-	#searchbox #searchField {
+#searchbox #searchField {
 	width: auto; }
 
 #nav {
@@ -180,9 +182,9 @@ body {
 	-moz-border-radius: 2px;
 	clear: both;
 	padding: 5px 0; }
-	#nav form, #nav button {
+#nav form, #nav button {
 	display: inline-block; }
-	#nav #disableButtons button {
+#nav #disableButtons button {
 	background: url(images/buttonbg.gif) no-repeat center;
 	border: 0;
 	height: 23px;
@@ -211,10 +213,10 @@ body {
 
 #footer {
 	padding-top: 1em; }
-	#footer #perm {
+#footer #perm {
 	padding-top: 2em;
 	font-size: 90%; }
-	#footer #copyright {
+#footer #copyright {
 	padding: 1em 0;
 	font-size: 80%; }
 
@@ -241,6 +243,6 @@ button.section_heading.hide {
 	padding: 0 5px 5px 5px; }
 
 #search:focus {
-	 outline: none;
+	outline: none;
 }
 
