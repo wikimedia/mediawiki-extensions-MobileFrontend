@@ -37,3 +37,38 @@
 	height: 1.5em;
 	position: relative;
 }
+
+table {
+	border-spacing: 0 !important;
+	width: 100%;
+	border-collapse: collapse !important;
+	border: 1px solid #cccccc;
+	padding: 3px;
+	margin-bottom: 15px;
+}
+
+table.gallery .thumb[style] {
+	border: 0;
+	padding: 0 !important;
+	width: auto !important;
+	margin: 0 auto;
+}
+
+table.geography[style] td[style*="text-align"], table.geography[style] td[colspan="2"] {
+	text-align: left !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+table.toc h2 {
+	border: 0;
+	padding: 0;
+	margin-top: 5px;
+}
+
+table.gallery th, table.gallery td {
+	display: block;
+	border: 0;
+	border-bottom: 1px solid #cccccc;
+}
+

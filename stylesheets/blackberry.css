@@ -2,15 +2,6 @@
 	test: 1;
 }
 
-table {
-	border-spacing: 0 !important;
-	width: 100%;
-	border-collapse: collapse !important;
-	border: 1px solid #cccccc;
-	padding: 3px;
-	margin-bottom: 15px;
-}
-
 table td, table th {
 	border: 1px solid #cccccc;
 	padding: 3px;
@@ -26,12 +17,6 @@ table table td, table table th {
 
 table.toc {
 	background: #f9f9f9;
-}
-
-table.toc h2 {
-	border: 0;
-	padding: 0;
-	margin-top: 5px;
 }
 
 table.navbox {
@@ -106,22 +91,9 @@ table.gallery {
 	border-bottom: 0;
 }
 
-table.gallery th, table.gallery td {
-	display: block;
-	border: 0;
-	border-bottom: 1px solid #cccccc;
-}
-
 table.gallery .gallerybox[style] {
 	width: auto !important;
 	margin-bottom: -16px;
-}
-
-table.gallery .thumb[style] {
-	border: 0;
-	padding: 0 !important;
-	width: auto !important;
-	margin: 0 auto;
 }
 
 table.gallery .gallerytext {
@@ -131,12 +103,6 @@ table.gallery .gallerytext {
 
 table.geography[style] th {
 	text-align: left;
-}
-
-table.geography[style] td[style*="text-align"], table.geography[style] td[colspan="2"] {
-	text-align: left !important;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
 }
 
 table.geography[style] td[style*="text-align"] div[style], table.geography[style] td[colspan="2"] div[style] {
