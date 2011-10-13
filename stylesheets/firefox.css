@@ -15,11 +15,6 @@ table.toc {
 	background: #f9f9f9;
 }
 
-table.navbox {
-	font-size: 0.9em;
-	width: 100% !important;
-}
-
 table.navbox th.navbox-title {
 	background: #ccccff;
 	padding: 5px;
@@ -68,11 +63,6 @@ table.infobox th, table.infobox td {
 
 table.infobox td[colspan="3"], table.infobox th[colspan="3"] {
 	border: 1px solid #cccccc;
-}
-
-table.gallery {
-	background: #f9f9f9;
-	border-bottom: 0;
 }
 
 table.gallery .gallerybox[style] {

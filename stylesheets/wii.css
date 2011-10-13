@@ -1,12 +1,3 @@
-table {
-	border-spacing: 0 !important;
-	width: 100%;
-	border-collapse: collapse !important;
-	border: 1px solid #cccccc;
-	padding: 3px;
-	margin-bottom: 15px;
-}
-
 table td, table th {
 	border: 1px solid #cccccc;
 	padding: 3px;
@@ -22,11 +13,6 @@ table table td, table table th {
 
 table.toc {
 	background: #f9f9f9;
-}
-
-table.navbox {
-	font-size: 0.9em;
-	width: 100% !important;
 }
 
 table.navbox th.navbox-title {
@@ -77,11 +63,6 @@ table.infobox th, table.infobox td {
 
 table.infobox td[colspan="3"], table.infobox th[colspan="3"] {
 	border: 1px solid #cccccc;
-}
-
-table.gallery {
-	background: #f9f9f9;
-	border-bottom: 0;
 }
 
 table.gallery .gallerybox[style] {

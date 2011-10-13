@@ -83,3 +83,13 @@ table.navbox td.navbox-group {
 	width: 25%;
 	padding: 3px;
 }
+
+table.gallery {
+	background: #f9f9f9;
+	border-bottom: 0;
+}
+
+table.navbox {
+	font-size: 0.9em;
+	width: 100% !important;
+}
