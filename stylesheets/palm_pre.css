@@ -181,15 +181,9 @@ body {
   padding: 5px 0; }
   #nav form, #nav button {
     display: inline-block; }
-  #nav button {
-    background: url(images/buttonbg.gif) no-repeat center;
-    border: 0;
-    height: 23px;
-    width: 83px; }
-
 #disableButtons {
   text-align: center; }
-  #disableButtons button {
+  #disableButtons nav button {
     background: url(images/buttonbg.gif) no-repeat center;
     border: 0;
     height: 23px;
