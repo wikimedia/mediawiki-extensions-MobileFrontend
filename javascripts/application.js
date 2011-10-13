@@ -3,6 +3,14 @@ var clearSearch = document.getElementById( 'clearsearch' );
 
 initClearSearchLink();
 
+function goToLanguageSelection() {
+	var languageSelection = document.getElementById( 'languageselection' );
+	var newlocation = languageSelection.options[languageSelection.selectedIndex].value;
+	if ( newlocation ) {
+		window.location = newlocation;
+	}
+}
+
 function initClearSearchLink() {
 	clearSearch.setAttribute( 'title','Clear' );
 	clearSearch.addEventListener( 'mousedown', clearSearchBox, true );

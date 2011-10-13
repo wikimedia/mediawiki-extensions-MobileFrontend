@@ -6,8 +6,11 @@ $mainPageUrl = self::$mainPageUrl;
 $randomPageUrl = self::$randomPageUrl;
 $homeButton = self::$messages['mobile-frontend-home-button'];
 $randomButton = self::$messages['mobile-frontend-random-button'];
+$languageSelectionText = self::$messages['mobile-frontend-language-selection'];
 
 $scriptUrl = wfScript();
+
+$languageSelection = self::buildLanguageSelection();
 
 $searchWebkitHtml = <<<EOD
 <div id='header'>
@@ -21,10 +24,14 @@ $searchWebkitHtml = <<<EOD
 		</div>
 	  <button id='goButton' type='submit'></button>
 	</form>
+		<div id='results'></div>
 	</div>
 	<div class='nav' id='nav'>
 	<form method="get" action="{$mainPageUrl}"><button type="submit" id="homeButton">{$homeButton}</button></form>
 	<form method="get" action="{$randomPageUrl}"><button type="submit" id="randomButton">{$randomButton}</button></form>
+	<br/>
+	<b>{$languageSelectionText}:</b>
+	{$languageSelection}
   </div>
 </div>
 EOD;

@@ -68,6 +68,7 @@ $messages['en'] = array (
 	'mobile-frontend-leave-feedback' => 'Mobile site feedback',
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Thanks, for your feedback!',
+	'mobile-frontend-language-selection' => 'Languages',
 );
 
 /** Message documentation (Message documentation)
