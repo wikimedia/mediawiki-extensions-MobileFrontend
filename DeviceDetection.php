@@ -14,6 +14,9 @@
 // may be extended to provide access to particular devices functionality
 class DeviceDetection {
 
+	/**
+	 * @return array
+	 */
 	public function availableFormats() {
 		$formats = array (
 			'html' => array (
