@@ -72,3 +72,14 @@ table.gallery th, table.gallery td {
 	border-bottom: 1px solid #cccccc;
 }
 
+table[style] {
+	width: 100% !important;
+	float: none !important;
+	margin-left: 0 !important;
+}
+
+table.navbox td.navbox-group {
+	background: #ddddff;
+	width: 25%;
+	padding: 3px;
+}

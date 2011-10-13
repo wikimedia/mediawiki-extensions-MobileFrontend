@@ -38,12 +38,6 @@ table.navbox td.navbox-abovebelow {
 	padding: 3px;
 }
 
-table.navbox td.navbox-group {
-	background: #ddddff;
-	width: 25%;
-	padding: 3px;
-}
-
 table.navbox td.navbox-group + td {
 	padding: 3px;
 }
@@ -71,12 +65,6 @@ table.navbox table {
 
 table.wikitable th {
 	background: #f3f3f3;
-}
-
-table[style] {
-	width: 100% !important;
-	float: none !important;
-	margin-left: 0 !important;
 }
 
 table.infobox {
