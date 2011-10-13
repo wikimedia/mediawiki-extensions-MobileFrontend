@@ -190,7 +190,7 @@ body {
 
 #disableButtons {
 	text-align: center; }
-	#disableButtons #backButton {
+#disableButtons #backButton {
 	margin-top: 5em; }
 
 .mwm-notice {
@@ -209,10 +209,10 @@ body {
 
 #footer {
 	padding-top: 1em; }
-	#footer #perm {
+#footer #perm {
 	padding-top: 2em;
 	font-size: 90%; }
-	#footer #copyright {
+#footer #copyright {
 	padding: 1em 0;
 	font-size: 80%; }
 
