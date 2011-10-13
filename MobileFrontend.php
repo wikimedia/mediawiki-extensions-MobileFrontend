@@ -1018,7 +1018,7 @@ class ExtMobileFrontend {
 		} elseif ( $this->contentFormat == 'WML' ) {
 			$homeButton = self::$messages['mobile-frontend-home-button'];
 			$randomButton = self::$messages['mobile-frontend-random-button'];
-			//header( 'Content-Type: text/vnd.wap.wml' );
+			header( 'Content-Type: text/vnd.wap.wml' );
 
 			// TODO: Content transformations required
 			// WML Validator:
