@@ -249,11 +249,18 @@ class DeviceDetection {
 		return $formats;
 	}
 
+	/**
+	 * @param $formatName
+	 * @return array
+	 */
 	public function format( $formatName ) {
 		$format = $this->availableFormats();
 		return ( isset( $format[$formatName] ) ) ? $format[$formatName] : array();
 	}
 
+	/**
+	 * @return string
+	 */
 	public function testFormatName() {
 		$testResults = '';
 
