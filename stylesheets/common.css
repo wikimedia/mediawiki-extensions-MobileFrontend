@@ -93,3 +93,29 @@ table.navbox {
 	font-size: 0.9em;
 	width: 100% !important;
 }
+
+table.gallery .gallerytext {
+	margin-top: -12px;
+	text-align: center;
+}
+
+table.navbox th.navbox-title {
+	background: #ccccff;
+	padding: 5px;
+}
+
+table.navbox div[style*="padding"] {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+table.gallery .gallerybox[style] {
+	width: auto !important;
+	margin-bottom: -16px;
+}
+
+table td, table th {
+	border: 1px solid #cccccc;
+	padding: 3px;
+}
+
