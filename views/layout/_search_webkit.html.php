@@ -9,8 +9,9 @@ $randomButton = self::$messages['mobile-frontend-random-button'];
 
 $scriptUrl = wfScript();
 
-if (self::$hideSearchBox)
-$searchBoxDisplayNone = ' style="display: none;" ';
+if ( self::$hideSearchBox ) {
+	$searchBoxDisplayNone = ' style="display: none;" ';
+}
 
 $searchWebkitHtml = <<<EOD
 <div id='header'>
