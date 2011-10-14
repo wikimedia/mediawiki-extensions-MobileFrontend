@@ -87,7 +87,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.76';
+	const VERSION = '0.5.77';
 
 	/**
 	 * @var DOMDocument
@@ -127,6 +127,7 @@ class ExtMobileFrontend {
 	public static $displayNoticeId;
 	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
+	public static $isBetaGroupMember = false;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -544,12 +545,23 @@ class ExtMobileFrontend {
 					$this->getMsg();
 					$this->disableCaching();
 					$this->sendXDeviceVaryHeader();
+					$this->checkUserStatus();
 					ob_start( array( $this, 'DOMParse' ) );
 				}
 		}
 
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+	
+	private function checkUserStatus() {
+		wfProfileIn( __METHOD__ );
+		$optInCookie = $this->getOptInOutCookie();
+		if ( !empty( $optInCookie ) && 
+			$optInCookie == 1 ) {
+			self::$isBetaGroupMember = true;
+		}
+		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -563,6 +575,14 @@ class ExtMobileFrontend {
 		$wgRequest->response()->setcookie( 'optin', $value );
 		$wgCookieDomain = $tempWgCookieDomain;
 		wfProfileOut( __METHOD__ );
+	}
+	
+	private function getOptInOutCookie() {
+		global $wgRequest;
+		wfProfileIn( __METHOD__ );
+		$optInCookie = $wgRequest->getCookie( 'optin' );
+		wfProfileOut( __METHOD__ );
+		return $optInCookie; 
 	}
 
 	/**
