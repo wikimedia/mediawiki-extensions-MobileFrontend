@@ -128,6 +128,7 @@ class ExtMobileFrontend {
 	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
 	public static $isBetaGroupMember = false;
+	public static $hideSearchBox = false;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -556,6 +557,12 @@ class ExtMobileFrontend {
 	
 	private function checkUserStatus() {
 		wfProfileIn( __METHOD__ );
+		
+		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) && 
+			strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Wikipedia Mobile' ) !== false ) {
+			self::$hideSearchBox = true;
+		}
+		
 		$optInCookie = $this->getOptInOutCookie();
 		if ( !empty( $optInCookie ) && 
 			$optInCookie == 1 ) {
