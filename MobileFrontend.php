@@ -1089,6 +1089,9 @@ class ExtMobileFrontend {
 		if ( self::$isMainPage ) {
 			$contentHtml = $this->DOMParseMainPage( $contentHtml );
 		}
+		
+		$title = htmlspecialchars( self::$title->getText() );
+		$htmlTitle = htmlspecialchars( self::$htmlTitle );
 
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
