@@ -759,10 +759,13 @@ $messages['br'] = array(
 	'mobile-frontend-enable-images' => "Gweredekaat ar skeudennoù war al lec'hienn hezoug",
 	'mobile-frontend-news-items' => "Er C'heleier",
 	'mobile-frontend-leave-feedback-title' => "Kasit titouroù deomp diwar-benn ar pezh a soñjit eus al lec'hienn war an hezoug",
+	'mobile-frontend-leave-feedback-notice' => "Ma roit ho soñj deomp e vimp sikouret da wellaat ar mod da embreger al lec'hienn hezoug evidoc'h. Embannet e vo ent emgefre (gant hoc'h anv implijer, stumm ho merdeer hag ho reizhiad korvoiñ) war ar bajenn&\$1quot;. Trugarez d'ober gant un titl splann, evel da sk. \"Kudennoù furmadiñ gant an taolennoù bras\". Graet e vo gant ho soñj diouzh hor reolennoù implijout.",
 	'mobile-frontend-leave-feedback-subject' => 'Danvez',
 	'mobile-frontend-leave-feedback-message' => 'Kemennadenn',
 	'mobile-frontend-leave-feedback-cancel' => 'Nullañ',
 	'mobile-frontend-leave-feedback-submit' => 'Kas evezhiadennoù',
+	'mobile-frontend-leave-feedback-link-text' => 'soñj war an astenn Talbenn Hezoug',
+	'mobile-frontend-leave-feedback' => 'Reiñ e soñj war an Talbenn Hezoug',
 	'mobile-frontend-leave-feedback-thanks' => 'Trugarez da vezañ roet ho soñj.',
 );
 
@@ -2706,7 +2709,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-hide-button' => 'Vershteishe!',
 	'mobile-frontend-disable-button' => 'Ußschallde',
 	'mobile-frontend-back-button' => 'Retuur',
-	'mobile-frontend-regular-site' => 'Bekik heh di Sigg en de nomaale Wikipedija',
+	'mobile-frontend-regular-site' => 'Bekik heh di Sigg en de nomaale {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'Donn dä mobile Zohjang op Duur ußschallde',
 	'mobile-frontend-error-page-title' => 'Mer hann_e Probleem!',
 	'mobile-frontend-error-page-text' => 'De mobile Wikkipedija ier Täschnek es noch onfäädesch un en Ärbeit, un mer sen draan am werreke, wat ennedren noch nit flupp op de Reih ze krijje. Mer wesse öm dä Fähler un mer wääde en demnääx loss hann. Kumm ens widder loore!',
