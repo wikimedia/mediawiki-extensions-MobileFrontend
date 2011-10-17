@@ -302,6 +302,7 @@ $messages['anp'] = array(
 );
 
 /** Arabic (العربية)
+ * @author AwamerT
  * @author OsamaK
  * @author زكريا
  */
@@ -351,12 +352,14 @@ $messages['ar'] = array(
 	'mobile-frontend-enable-images' => 'مكّن الصور على موقع الجوال',
 	'mobile-frontend-news-items' => 'في الأخبار',
 	'mobile-frontend-leave-feedback-title' => 'ترك تعليقات على واجهة المحمول',
+	'mobile-frontend-leave-feedback-notice' => 'ملاحظاتك تساعدنا على تحسين واجهة  المحمول. سيتم نشرها علنا ( مع اسم المستخدم الخاص بك وإصدار المستعرض ونظام التشغيل) على صفحة " $1 ". الرجاء اختيار  مواضيع ذات صلة، مثل "أشكال التصاميم مع جدولتها". ستكون ملاحظاتك خاضعة لشروط الاستخدام.',
 	'mobile-frontend-leave-feedback-subject' => 'موضوع',
 	'mobile-frontend-leave-feedback-message' => 'رسالة',
 	'mobile-frontend-leave-feedback-cancel' => 'إلغاء',
 	'mobile-frontend-leave-feedback-submit' => 'إرسال التعليقات',
 	'mobile-frontend-leave-feedback-link-text' => 'تعليقات واجهة المحمول',
 	'mobile-frontend-leave-feedback' => 'اترك تعليقات',
+	'mobile-frontend-leave-feedback-thanks' => 'شكرا على إبداء ملاحظاتك!',
 );
 
 /** Aramaic (ܐܪܡܝܐ)
@@ -2265,6 +2268,7 @@ $messages['ia'] = array(
 );
 
 /** Indonesian (Bahasa Indonesia)
+ * @author Aldnonymous
  * @author Kenrick95
  */
 $messages['id'] = array(
