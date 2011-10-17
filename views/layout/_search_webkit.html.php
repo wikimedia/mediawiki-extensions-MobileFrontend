@@ -24,8 +24,8 @@ $searchWebkitHtml = <<<EOD
 	</form>
 	</div>
 	<div class='nav' id='nav'>
-	<button onClick="javascript:location.href='{$mainPageUrl}';" type="submit" id="homeButton">{$homeButton}</button>
-	<button onClick="javascript:location.href='{$randomPageUrl}';" type="submit" id="randomButton">{$randomButton}</button>
+	<button onclick="javascript:location.href='{$mainPageUrl}';" type="submit" id="homeButton">{$homeButton}</button>
+	<button onclick="javascript:location.href='{$randomPageUrl}';" type="submit" id="randomButton">{$randomButton}</button>
   </div>
 </div>
 EOD;
