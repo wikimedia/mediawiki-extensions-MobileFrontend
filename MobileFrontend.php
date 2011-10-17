@@ -248,7 +248,7 @@ class ExtMobileFrontend {
 				throw new HttpError( 500, $message );
 			} else {
 				$parsedUrl = wfParseUrl( $targetUrl );
-				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === FALSE ) {
+				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
 					$hostParts = explode( '.', $parsedUrl['host'] );
 					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
 				}
@@ -314,6 +314,10 @@ class ExtMobileFrontend {
 
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
+		if ( stristr( $copyright, '<li>' ) !== false ) {
+			$copyright = '<ul><li>' . $copyright . '</li></ul>';
+		}
+		
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
 
