@@ -1080,7 +1080,9 @@ class ExtMobileFrontend {
 			if ( $redLink->hasAttributes() ) {
 				$attributes = $redLink->attributes;
 				foreach ( $attributes as $i => $attribute ) {
-					$spanNode->setAttribute( $attribute->name, $attribute->value );
+					if ( $attribute->name != 'href' ) {
+						$spanNode->setAttribute( $attribute->name, $attribute->value );
+					}
 				}
 			}
 
