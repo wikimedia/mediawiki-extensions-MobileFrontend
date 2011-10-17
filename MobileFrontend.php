@@ -314,7 +314,7 @@ class ExtMobileFrontend {
 
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
-		if ( stristr( $copyright, '<li>' ) !== false ) {
+		if ( stristr( $copyright, '<li class="noprint">' ) !== false ) {
 			$copyright = '<ul><li>' . $copyright . '</li></ul>';
 		}
 		
