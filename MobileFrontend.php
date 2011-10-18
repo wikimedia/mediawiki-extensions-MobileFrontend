@@ -306,7 +306,7 @@ class ExtMobileFrontend {
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
 		$parsedUrl = wfParseUrl( $wgRequest->getFullRequestURL() );
 		$parsedUrl['host'] = str_replace( $wgMobileDomain, '.', $parsedUrl['host'] );
-		$parsedUrl['query'] = $this->removeQueryStringParameter( '?' . $parsedUrl['query'], 'useformat' );
+		$parsedUrl['query'] = $this->removeQueryStringParameter( '?mobileaction=view_normal_site&' . $parsedUrl['query'], 'useformat' );
 		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
 		self::$viewNormalSiteURL = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
  		self::$currentURL = $wgRequest->getFullRequestURL();
@@ -546,7 +546,8 @@ class ExtMobileFrontend {
 		if ( self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ||
 			!empty( $xDevice ) ) {
-				if ( $action !== 'edit' ) {
+				if ( $action !== 'edit' &&
+				 	 $mobileAction !== 'view_normal_site' ) {
 					$this->getMsg();
 					$this->disableCaching();
 					$this->sendXDeviceVaryHeader();
