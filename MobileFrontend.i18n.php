@@ -2774,7 +2774,9 @@ $messages['ku'] = array(
 	'mobile-frontend-file-namespace' => 'Dosye',
 );
 
-/** Kurdish (Latin) (Kurdî (Latin)) */
+/** Kurdish (Latin script) (‪Kurdî (latînî)‬)
+ * @author Gomada
+ */
 $messages['ku-latn'] = array(
 	'mobile-frontend-search-submit' => 'Biçe',
 	'mobile-frontend-search-results' => 'Encamên lêgerînê',
@@ -2793,7 +2795,12 @@ $messages['ku-latn'] = array(
 	'mobile-frontend-nav-edit' => 'Biguherîne',
 	'mobile-frontend-nav-history' => 'Dîrok',
 	'mobile-frontend-search-text' => 'Lêbigere',
-	'mobile-frontend-file-namespace' => 'Dosye',
+	'mobile-frontend-file-namespace' => 'Pel',
+	'mobile-frontend-wml-continue' => 'Didome ...',
+	'mobile-frontend-opt-in-yes-button' => 'erê',
+	'mobile-frontend-opt-in-no-button' => 'na',
+	'mobile-frontend-opt-out-yes-button' => 'erê',
+	'mobile-frontend-opt-out-no-button' => 'na',
 );
 
 /** Komi (Коми) */
