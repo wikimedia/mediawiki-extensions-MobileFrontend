@@ -304,12 +304,8 @@ class ExtMobileFrontend {
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
-		$parsedUrl = wfParseUrl( $wgRequest->getFullRequestURL() );
-		$parsedUrl['host'] = str_replace( $wgMobileDomain, '.', $parsedUrl['host'] );
-		$parsedUrl['query'] = $this->removeQueryStringParameter( '?mobileaction=view_normal_site&' . $parsedUrl['query'], 'useformat' );
-		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-		self::$viewNormalSiteURL = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
- 		self::$currentURL = $wgRequest->getFullRequestURL();
+ 		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
+		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
 		$skin = $wgUser->getSkin();
