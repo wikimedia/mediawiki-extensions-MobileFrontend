@@ -91,6 +91,7 @@ $messages['qqq'] = array(
 	'mobile-frontend-leave-feedback-subject' => '{{Identical|Subject}}',
 	'mobile-frontend-leave-feedback-message' => '{{Identical|Message}}',
 	'mobile-frontend-leave-feedback-cancel' => '{{Identical|Cancel}}',
+	'mobile-frontend-language' => '{{Identical|Language}}',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
