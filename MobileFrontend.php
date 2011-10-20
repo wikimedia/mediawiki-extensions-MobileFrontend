@@ -547,6 +547,7 @@ class ExtMobileFrontend {
 					$this->getMsg();
 					$this->disableCaching();
 					$this->sendXDeviceVaryHeader();
+					$this->sendApplicationVersionVaryHeader();
 					$this->checkUserStatus();
 					ob_start( array( $this, 'DOMParse' ) );
 				}
@@ -646,6 +647,16 @@ class ExtMobileFrontend {
 		if ( !empty( $_SERVER['HTTP_X_DEVICE'] ) ) {
 			$wgRequest->response()->header( 'X-Device: ' . $_SERVER['HTTP_X_DEVICE'] );
 			$wgOut->addVaryHeader( 'X-Device' );
+		}
+		wfProfileOut( __METHOD__ );
+	}
+	
+	private function sendApplicationVersionVaryHeader() {
+		global $wgOut, $wgRequest;
+		wfProfileIn( __METHOD__ );
+		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) ) {
+			$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_APPLICATION_VERSION'] );
+			$wgOut->addVaryHeader( 'Application_Version' );
 		}
 		wfProfileOut( __METHOD__ );
 	}
