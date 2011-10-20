@@ -15,6 +15,17 @@
 	display: none;
 }
 
+#results {
+	display: none;
+	background-color: #ffffff;
+	border-top: none;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+	z-index: 2;
+	position: absolute;
+}
+
 #search {
 	-webkit-appearance: none;
 	border-top-width: 0px;
