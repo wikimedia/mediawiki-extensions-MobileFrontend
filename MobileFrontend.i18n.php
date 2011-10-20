@@ -969,6 +969,7 @@ $messages['cs'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Komentáře k mobilnímu rozhraní',
 	'mobile-frontend-leave-feedback' => 'Odeslat komentář',
 	'mobile-frontend-leave-feedback-thanks' => 'Děkujeme za váš názor!',
+	'mobile-frontend-language' => 'Jazyk',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -1079,6 +1080,7 @@ $messages['da'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Tilbagemeldinger om udvidelsen til mobil grænseflade',
 	'mobile-frontend-leave-feedback' => 'Giv feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Tak for dine tilbagemeldinger!',
+	'mobile-frontend-language' => 'Sprog',
 );
 
 /** German (Deutsch)
@@ -1139,6 +1141,7 @@ $messages['de'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Rückmeldung zur mobilen Ansicht',
 	'mobile-frontend-leave-feedback' => 'Rückmeldung geben',
 	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für deine Rückmeldung.',
+	'mobile-frontend-language' => 'Sprache',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -1660,6 +1663,7 @@ $messages['fr'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'ressenti du frontal Mobile',
 	'mobile-frontend-leave-feedback' => 'Laisser son ressenti',
 	'mobile-frontend-leave-feedback-thanks' => 'Merci pour votre avis!',
+	'mobile-frontend-language' => 'Langue',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -1719,6 +1723,7 @@ $messages['frp'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Avis du frontâl mobilo',
 	'mobile-frontend-leave-feedback' => 'Balyér voutron avis',
 	'mobile-frontend-leave-feedback-thanks' => 'Grant-marci por voutron avis !',
+	'mobile-frontend-language' => 'Lengoua',
 );
 
 /** Friulian (Furlan) */
@@ -3202,6 +3207,7 @@ $messages['mk'] = array(
 	'mobile-frontend-leave-feedback' => 'Дајте мислење',
 	'mobile-frontend-feedback-page' => 'Project:Мислења за мобилниот додаток',
 	'mobile-frontend-leave-feedback-thanks' => 'Ви благодариме за искажаното мислење!',
+	'mobile-frontend-language' => 'Јазик',
 );
 
 /** Malayalam (മലയാളം)
@@ -3248,6 +3254,7 @@ $messages['ml'] = array(
 	'mobile-frontend-disable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനരഹിതമാക്കുക',
 	'mobile-frontend-enable-images' => 'മൊബൈൽ സൈറ്റിൽ ചിത്രങ്ങൾ പ്രവർത്തനസജ്ജമാക്കുക',
 	'mobile-frontend-news-items' => 'വാർത്തയിൽ',
+	'mobile-frontend-leave-feedback-title' => 'താങ്കളുടെ മൊബൈൽ സൈറ്റ് അനുഭവം ഞങ്ങളെ അറിയിക്കുക',
 	'mobile-frontend-leave-feedback-subject' => 'വിഷയം',
 	'mobile-frontend-leave-feedback-message' => 'സന്ദേശം',
 	'mobile-frontend-leave-feedback-cancel' => 'റദ്ദാക്കുക',
@@ -4746,6 +4753,7 @@ $messages['sl'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Povratne informacije o mobilnem obličju',
 	'mobile-frontend-leave-feedback' => 'Pustite povratne informacije',
 	'mobile-frontend-leave-feedback-thanks' => 'Hvala za povratne informacije!',
+	'mobile-frontend-language' => 'Jezik',
 );
 
 /** Albanian (Shqip) */
@@ -4783,6 +4791,7 @@ $messages['sq'] = array(
  * @author Rancher
  */
 $messages['sr-ec'] = array(
+	'mobile-frontend-desc' => 'Кориснички део за мобилне уређаје',
 	'mobile-frontend-search-submit' => 'Пређи',
 	'mobile-frontend-search-results' => 'Резултати претраге',
 	'mobile-frontend-no-article-found' => 'Чланак није пронађен.',
@@ -4795,21 +4804,32 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-hide-button' => 'Сакриј',
 	'mobile-frontend-disable-button' => 'Онемогући',
 	'mobile-frontend-back-button' => 'Назад',
-	'mobile-frontend-regular-site' => 'Погледај ову страницу на обичној Википедији',
+	'mobile-frontend-regular-site' => 'Погледајте ову страницу у обичном режиму',
 	'mobile-frontend-perm-stop-redirect' => 'Трајно онемогући мобилни приказ',
 	'mobile-frontend-error-page-title' => 'Дошло је до проблема!',
-	'mobile-frontend-error-page-text' => 'Мобилна Википедија је још увек у фази активног развоја и радимо напорно на поправци свих унутрашњих грешака. Обавештени смо о овој грешци и исправићемо је ускоро. Свратите нам опет!',
+	'mobile-frontend-error-page-text' => 'Мобилно издање викије {{SITENAME}} је још увек у активном развоју, и напорно радимо да поправимо све унутрашње грешке. Обавештени смо о овој грешци и исправићемо је ускоро. Свратите нам опет!',
 	'mobile-frontend-are-you-sure' => 'Јесте ли сигурни?',
-	'mobile-frontend-explain-disable' => 'Желите ли да онемогућите мобилно издање Википедије? Ако изаберете <i>Онемогући</i>, од сада па надаље нећете бити преусмеравани на овај мобилни приказ када посетите Википедију.',
+	'mobile-frontend-explain-disable' => 'Желите ли да онемогућите мобилно издање овог викија? Ако изаберете <i>Онемогући</i>, од сада па надаље нећете бити преусмеравани на овај мобилни приказ када посетите {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Крај',
 	'mobile-frontend-nav-top' => 'Врх',
 	'mobile-frontend-nav-edit' => 'Уреди',
 	'mobile-frontend-nav-history' => 'Историја',
 	'mobile-frontend-search-text' => 'Претрага',
 	'mobile-frontend-contact-us' => 'Ако имате било каква питања или примедбе, слободно нам пишите на mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Погледајте ову датотеку на обичној Википедији за преглед података о ауторским правима, лиценцирању и додатним описима.',
+	'mobile-frontend-author-link' => 'Погледајте ову датотеку у обичном режиму да бисте сазнали више о аутору, лиценци и додатним описима.',
 	'mobile-frontend-download-full-version' => 'Преузми цело издање',
 	'mobile-frontend-file-namespace' => 'Датотека',
+	'mobile-frontend-opt-in-yes-button' => 'да',
+	'mobile-frontend-opt-in-no-button' => 'не',
+	'mobile-frontend-opt-in-title' => 'Пријавите се за испробавање',
+	'mobile-frontend-opt-in-explain' => 'С овим приступате испробавању',
+	'mobile-frontend-opt-out-yes-button' => 'да',
+	'mobile-frontend-opt-out-no-button' => 'не',
+	'mobile-frontend-opt-out-title' => 'Откажите своје учешће у испробавању',
+	'mobile-frontend-opt-out-explain' => 'С овим напуштате испробавање',
+	'mobile-frontend-disable-images' => 'Онемогући слике на мобилним страницама',
+	'mobile-frontend-enable-images' => 'Омогући слике на мобилним страницама',
+	'mobile-frontend-news-items' => 'Вести',
 	'mobile-frontend-feedback-page' => 'Project:Мишљења о мобилном додатку',
 );
 
@@ -5434,6 +5454,7 @@ $messages['vi'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Phản hồi về giao diện di động',
 	'mobile-frontend-leave-feedback' => 'Gửi phản hồi',
 	'mobile-frontend-leave-feedback-thanks' => 'Cám ơn phản hồi của bạn!',
+	'mobile-frontend-language' => 'Ngôn ngữ',
 );
 
 /** Volapük (Volapük)
