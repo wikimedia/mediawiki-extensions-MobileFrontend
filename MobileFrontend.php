@@ -657,6 +657,13 @@ class ExtMobileFrontend {
 		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) ) {
 			$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_APPLICATION_VERSION'] );
 			$wgOut->addVaryHeader( 'Application_Version' );
+		} else {
+			if ( !empty( $_SERVER['HTTP_X_DEVICE'] ) ) {
+				if ( stripos( $_SERVER['HTTP_X_DEVICE'], 'iphone' ) !== false ) {
+					$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_X_DEVICE'] );
+					$wgOut->addVaryHeader( 'Application_Version' );
+				}
+			}
 		}
 		wfProfileOut( __METHOD__ );
 	}
