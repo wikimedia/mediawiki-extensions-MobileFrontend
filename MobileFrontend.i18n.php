@@ -609,6 +609,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Водгук пра Мабільны інтэрфэйс',
 	'mobile-frontend-leave-feedback' => 'Пакінуць водгук',
 	'mobile-frontend-leave-feedback-thanks' => 'Дзякуй за Ваш водгук!',
+	'mobile-frontend-language' => 'Мова',
 );
 
 /** Bulgarian (Български)
@@ -1713,7 +1714,7 @@ $messages['frp'] = array(
 	'mobile-frontend-opt-out-explain' => 'Cen vos pèrmèt de quitar l’èprôva',
 	'mobile-frontend-disable-images' => 'Dèsctivar les émâges sur lo seto mobilo',
 	'mobile-frontend-enable-images' => 'Activar les émâges sur lo seto mobilo',
-	'mobile-frontend-news-items' => 'Novèles',
+	'mobile-frontend-news-items' => 'Dens les novèles',
 	'mobile-frontend-leave-feedback-title' => 'Balyéd-nos voutron avis sur voutra èxpèrience du seto mobilo',
 	'mobile-frontend-leave-feedback-notice' => 'Voutron avis nos édierat a mèlyorar voutra èxpèrience du seto mobilo. Serat postâ publicament (avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion) sur la pâge « $1 ». Volyéd tâchiér de chouèsir una legne de sujèt parlenta, per ègz. « Problèmos de formatâjo avouéc les trâbles lârges ». Voutron avis est somês a noutres condicions d’usâjo.',
 	'mobile-frontend-leave-feedback-subject' => 'Sujèt',
@@ -1846,6 +1847,7 @@ $messages['gl'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Extensión para deixar comentarios sobre a versión móbil',
 	'mobile-frontend-leave-feedback' => 'Comentarios sobre a versión móbil',
 	'mobile-frontend-leave-feedback-thanks' => 'Grazas polos seus comentarios!',
+	'mobile-frontend-language' => 'Lingua',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
@@ -2002,6 +2004,7 @@ $messages['haw'] = array(
 
 /** Hebrew (עברית)
  * @author Amire80
+ * @author Deror avi
  */
 $messages['he'] = array(
 	'mobile-frontend-desc' => 'תצוגה עבור מכשירים ניידים',
@@ -2057,6 +2060,7 @@ $messages['he'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'שליחת משוב על הממשק למכשירים ניידים',
 	'mobile-frontend-leave-feedback' => 'שליחת משוב',
 	'mobile-frontend-leave-feedback-thanks' => 'תודה על המשוב!',
+	'mobile-frontend-language' => 'שפה',
 );
 
 /** Hindi (हिन्दी) */
@@ -2272,6 +2276,7 @@ $messages['ia'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Retroaction super Mobile Frontend',
 	'mobile-frontend-leave-feedback' => 'Lassar retroaction',
 	'mobile-frontend-leave-feedback-thanks' => 'Gratias pro tu retroaction!',
+	'mobile-frontend-language' => 'Lingua',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -2983,6 +2988,7 @@ Betrach dit later nog ins!",
 	'mobile-frontend-leave-feedback-link-text' => 'Mobiel Frontend feedback',
 	'mobile-frontend-leave-feedback' => 'Laot feedback achter',
 	'mobile-frontend-leave-feedback-thanks' => 'Danke veure feedback!',
+	'mobile-frontend-language' => 'Sjpraok',
 );
 
 /** Lumbaart (Lumbaart) */
@@ -3397,6 +3403,7 @@ $messages['ms'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Maklum balas Mobile Frontend',
 	'mobile-frontend-leave-feedback' => 'Tinggalkan maklum balas',
 	'mobile-frontend-leave-feedback-thanks' => 'Terima kasih atas maklum balas anda!',
+	'mobile-frontend-language' => 'Bahasa',
 );
 
 /** Maltese (Malti) */
@@ -3594,6 +3601,7 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-leave-feedback-link-text' => 'Mobiele Frontend-terugkoppeling',
 	'mobile-frontend-leave-feedback' => 'Terugkoppeling achterlaten',
 	'mobile-frontend-leave-feedback-thanks' => 'Dank u voor uw terugkoppeling.',
+	'mobile-frontend-language' => 'Taal',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
@@ -4450,6 +4458,7 @@ $messages['ru'] = array(
 	'mobile-frontend-leave-feedback' => 'Оставить отзыв',
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Спасибо за ваш отзыв!',
+	'mobile-frontend-language' => 'Язык',
 );
 
 /** Rusyn (Русиньскый)
@@ -4830,7 +4839,15 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-disable-images' => 'Онемогући слике на мобилним страницама',
 	'mobile-frontend-enable-images' => 'Омогући слике на мобилним страницама',
 	'mobile-frontend-news-items' => 'Вести',
+	'mobile-frontend-leave-feedback-subject' => 'Наслов',
+	'mobile-frontend-leave-feedback-message' => 'Порука',
+	'mobile-frontend-leave-feedback-cancel' => 'Откажи',
+	'mobile-frontend-leave-feedback-submit' => 'Пошаљи повратну информацију',
+	'mobile-frontend-leave-feedback-link-text' => 'Мишљење о Мобилном сучељу',
+	'mobile-frontend-leave-feedback' => 'Мишљење',
 	'mobile-frontend-feedback-page' => 'Project:Мишљења о мобилном додатку',
+	'mobile-frontend-leave-feedback-thanks' => 'Хвала вам на повратној информацији.',
+	'mobile-frontend-language' => 'Језик',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬) */
