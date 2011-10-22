@@ -1857,6 +1857,7 @@ $messages['grc'] = array(
 );
 
 /** Swiss German (Alemannisch)
+ * @author Als-Chlämens
  * @author Als-Holder
  */
 $messages['gsw'] = array(
@@ -1913,6 +1914,7 @@ $messages['gsw'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Ruckmäldig zue dr mobilen Aasicht',
 	'mobile-frontend-leave-feedback' => 'Ruckmäldig gee',
 	'mobile-frontend-leave-feedback-thanks' => 'Dankschen vilmol fir Dyy Ruckmäldig!',
+	'mobile-frontend-language' => 'Sprooch',
 );
 
 /** Manx (Gaelg) */
@@ -2914,6 +2916,7 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Feedback schécken',
 	'mobile-frontend-leave-feedback' => 'Feedback fir de mobile Site',
 	'mobile-frontend-leave-feedback-thanks' => 'Merci fir Äre Feedback!',
+	'mobile-frontend-language' => 'Sprooch',
 );
 
 /** Lezghian (Лезги) */
@@ -3267,6 +3270,7 @@ $messages['ml'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'അഭിപ്രായം സമർപ്പിക്കുക',
 	'mobile-frontend-leave-feedback' => 'മൊബൈൽ സൈറ്റിനെക്കുറിച്ചുള്ള അഭിപ്രായങ്ങൾ',
 	'mobile-frontend-leave-feedback-thanks' => 'താങ്കളുടെ അഭിപ്രായത്തിനു വളരെ നന്ദി!',
+	'mobile-frontend-language' => 'ഭാഷ',
 );
 
 /** Mongolian (Монгол) */
@@ -3964,6 +3968,7 @@ $messages['pl'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Opinia na temat mobilnego interfejsu użytkownika',
 	'mobile-frontend-leave-feedback' => 'Prześlij opinię',
 	'mobile-frontend-leave-feedback-thanks' => 'Dziękujemy za przesłaną opinię!',
+	'mobile-frontend-language' => 'Język',
 );
 
 /** Piedmontese (Piemontèis)
