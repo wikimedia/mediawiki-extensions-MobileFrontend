@@ -438,6 +438,7 @@ $messages['ast'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Comentarios a la estensión MobileFrontend',
 	'mobile-frontend-leave-feedback' => 'Comentarios sobre la versión pa móvil',
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracies polos tos comentarios!',
+	'mobile-frontend-language' => 'Llingua',
 );
 
 /** Azerbaijani (Azərbaycanca)
@@ -773,6 +774,7 @@ $messages['br'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'soñj war an astenn Talbenn Hezoug',
 	'mobile-frontend-leave-feedback' => 'Reiñ e soñj war an Talbenn Hezoug',
 	'mobile-frontend-leave-feedback-thanks' => 'Trugarez da vezañ roet ho soñj.',
+	'mobile-frontend-language' => 'Yezh',
 );
 
 /** Bosnian (Bosanski)
@@ -2650,6 +2652,7 @@ $messages['kn'] = array(
 
 /** Korean (한국어)
  * @author Kwj2772
+ * @author SEVEREN
  */
 $messages['ko'] = array(
 	'mobile-frontend-search-submit' => '가기',
@@ -2678,6 +2681,10 @@ $messages['ko'] = array(
 	'mobile-frontend-contact-us' => '질문이나 의견이 있으시면 mobile@wikipedia.org 로 이메일을 보내 주시기 바랍니다.',
 	'mobile-frontend-author-link' => '이 파일를 위키백과 웹 문서로 엽니다. 파일의 소유권, 라이선스 등의 정보를 볼 수 있습니다.',
 	'mobile-frontend-download-full-version' => '전체 버전 다운로드',
+	'mobile-frontend-view' => '모바일판에서 보기',
+	'mobile-frontend-disable-images' => '모바일판 사이트에 이미지를 표시하지 않도록 설정',
+	'mobile-frontend-enable-images' => '모바일판 사이트에 이미지를 표시하도록 설정',
+	'mobile-frontend-news-items' => '새로 들어온 소식',
 	'mobile-frontend-feedback-page' => 'Project:모바일 확장 기능 피드백',
 );
 
@@ -4678,8 +4685,13 @@ $messages['si'] = array(
 	'mobile-frontend-wml-back' => 'ආපසු...',
 	'mobile-frontend-opt-in-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-in-no-button' => 'නැත',
+	'mobile-frontend-opt-out-yes-button' => 'ඔව්',
+	'mobile-frontend-opt-out-no-button' => 'නැත',
+	'mobile-frontend-leave-feedback-subject' => 'විෂයය',
 	'mobile-frontend-leave-feedback-message' => 'පණිවුඩය',
 	'mobile-frontend-leave-feedback-cancel' => 'අවලංගු කරන්න',
+	'mobile-frontend-leave-feedback-submit' => 'ප්‍රතිපෝෂණය ඉදිරිපත් කරන්න',
+	'mobile-frontend-language' => 'භාෂාව',
 );
 
 /** Slovak (Slovenčina) */
@@ -5449,7 +5461,7 @@ $messages['vi'] = array(
 	'mobile-frontend-search-text' => 'Tìm kiếm',
 	'mobile-frontend-contact-us' => 'Nếu bạn có câu hỏi hoặc nhận xét gì, xin vui lòng gửi thư cho chúng tôi tại mobile@wikipedia.org',
 	'mobile-frontend-author-link' => 'Mở tập tin phương tiện này tại phiên bản {{SITENAME}} bình thường để xem thông tin tác giả, giấy phép, và miêu tả đầy đủ.',
-	'mobile-frontend-download-full-version' => 'Tải xuống phiên bản đầy đủ',
+	'mobile-frontend-download-full-version' => 'Tải về phiên bản đầy đủ',
 	'mobile-frontend-file-namespace' => 'Tập tin',
 	'mobile-frontend-wml-continue' => 'Tiếp tục…',
 	'mobile-frontend-wml-back' => 'Quay lại…',
