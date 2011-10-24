@@ -53,8 +53,10 @@ document.getElementById( 'logo' ).onclick = function() {
 	n.display = n.display == 'block' ? 'none' : 'block';
 	if (n.display == 'block') {
 		if ( languageSelection ) {
-			var newWidth = languageSelection.offsetWidth + 30;
-			n.width = newWidth + 'px';
+			if ( languageSelection.offsetWidth > 175 ) {
+				var newWidth = languageSelection.offsetWidth + 30;
+				n.width = newWidth + 'px';
+			}
 		}
 	}
 };
