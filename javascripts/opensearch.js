@@ -34,7 +34,7 @@ function searchApi( term ) {
 	var xmlHttp;
 	if ( window.XMLHttpRequest ) {
 		xmlHttp = new XMLHttpRequest();
-	} else { //IE6, IE5
+	} else {
 		xmlHttp = new ActiveXObject( 'Microsoft.XMLHTTP' );
 	}
 	xmlHttp.onreadystatechange = function() {

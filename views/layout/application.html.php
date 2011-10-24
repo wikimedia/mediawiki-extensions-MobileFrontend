@@ -1,5 +1,5 @@
 <?php
-global $wgExtensionAssetsPath, $wgAppleTouchIcon;
+global $wgExtensionAssetsPath, $wgAppleTouchIcon, $wgScriptPath;
 
 $dir = self::$dir;
 $code = self::$code;
@@ -13,6 +13,12 @@ if ( $wgAppleTouchIcon !== false ) {
 $noticeHtml = empty( $noticeHtml ) ? '' : $noticeHtml;
 
 $cssFileName = ( isset( self::$device['css_file_name'] ) ) ? self::$device['css_file_name'] : 'default';
+
+$startScriptTag = '<script type="text/javascript" language="javascript" src="';
+$endScriptTag = '"></script>';
+$javaScriptPath = $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
+
+$openSearchScript = ( self::$isBetaGroupMember ) ? $startScriptTag . $javaScriptPath . 'opensearch.js?version=10202011120715' . $endScriptTag : '';
 
 $applicationHtml = <<<EOT
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -29,6 +35,7 @@ $applicationHtml = <<<EOT
 	<script type='text/javascript'>
 	  //<![CDATA[
 		var title = "{$htmlTitle}";
+		var scriptPath = "{$wgScriptPath}";
 		function shouldCache() {
 		  return true;
 		}
@@ -42,7 +49,8 @@ $applicationHtml = <<<EOT
 	{$contentHtml}
 	</div>
 	{$footerHtml}
-	 <script type="text/javascript" language="javascript" src="{$wgExtensionAssetsPath}/MobileFrontend/javascripts/application.min.js?version=20111014T172820Z"></script>
+	 {$startScriptTag}{$javaScriptPath}/application.js?version=10202011120715{$endScriptTag}
+  	 {$openSearchScript}
   </body>
 </html>
 EOT;

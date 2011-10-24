@@ -87,15 +87,12 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.77';
+	const VERSION = '0.5.78';
 
 	/**
 	 * @var DOMDocument
 	 */
 	private $doc, $mainPage;
-
-	public static $messages = array();
-
 	public $contentFormat = '';
 	public $WMLSectionSeperator = '***************************************************************************';
 
@@ -103,6 +100,7 @@ class ExtMobileFrontend {
 	 * @var Title
 	 */
 	public static $title;
+	public static $messages = array();
 	public static $htmlTitle;
 	public static $dir;
 	public static $code;
@@ -129,6 +127,7 @@ class ExtMobileFrontend {
 	public static $mobileRedirectFormAction;
 	public static $isBetaGroupMember = false;
 	public static $hideSearchBox = false;
+	public static $languageUrls;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -169,6 +168,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-feedback-page',
 		'mobile-frontend-leave-feedback-thanks',
 		'mobile-frontend-search-submit',
+		'mobile-frontend-language',
 	);
 
 	public $itemsToRemove = array(
@@ -298,7 +298,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getMsg() {
-		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgMobileDomain;
+		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgMobileDomain, $wgOut, $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
@@ -334,6 +334,47 @@ class ExtMobileFrontend {
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
+		
+		$languageUrls = array();
+		
+		if ( $wgLanguageCode == 'en' ) {
+			$languageUrls[] = array(
+				'href' => self::$currentURL,
+				'text' => self::$htmlTitle,
+				'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
+				'class' => 'interwiki-' . $wgLanguageCode,
+				'lang' => $wgLanguageCode,
+			);
+		}
+		
+        foreach( $wgOut->getLanguageLinks() as $l ) {
+			if ( preg_match( '!^(\w[-\w]*\w):(.+)$!', $l, $m ) ) {
+				$lang = $m[1];
+				$linkText = $m[2];
+			} else {
+				continue; //NOTE: shouldn't happen
+			}
+
+			$nt = Title::newFromText( $l );
+			$parsedUrl = wfParseUrl( $nt->getFullURL() );
+			if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
+				$hostParts = explode( '.', $parsedUrl['host'] );
+				$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
+			}
+			$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
+			$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
+			$languageUrl = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+
+			$languageUrls[] = array(
+				'href' => $languageUrl,
+				'text' => $linkText,
+				'language' => $wgContLang->getLanguageName( $lang ),
+				'class' => 'interwiki-' . $lang,
+				'lang' => $lang,
+			);
+        }
+
+		self::$languageUrls = $languageUrls;
 
 		$nonMobileServerBaseURL = str_replace( $wgMobileDomain, '.', $wgServer );
 		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false ) ? $wgMobileRedirectFormAction : "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
@@ -518,13 +559,13 @@ class ExtMobileFrontend {
 
 		// WURFL documentation: http://wurfl.sourceforge.net/help_doc.php
 		// Determine the kind of markup
-		if ( is_array( $props ) && isset( $props['preferred_markup'] ) && $props['preferred_markup'] ) {
+		//if ( is_array( $props ) && isset( $props['preferred_markup'] ) && $props['preferred_markup'] ) {
 			// wfDebug( __METHOD__ . ": preferred markup for this device: " . $props['preferred_markup'] );
 			// xhtml/html: html_web_3_2, html_web_4_0
 			// xthml basic/xhtmlmp (wap 2.0): html_wi_w3_xhtmlbasic html_wi_oma_xhtmlmp_1_0
 			// chtml (imode): html_wi_imode_*
 			// wml (wap 1): wml_1_1, wml_1_2, wml_1_3
-		}
+		//}
 		// WML options that might influence our 'style' of output
 		// $props['access_key_support'] (for creating easy keypad navigation)
 		// $props['softkey_support'] ( for creating your own menu)
@@ -659,7 +700,8 @@ class ExtMobileFrontend {
 			$wgOut->addVaryHeader( 'Application_Version' );
 		} else {
 			if ( !empty( $_SERVER['HTTP_X_DEVICE'] ) ) {
-				if ( stripos( $_SERVER['HTTP_X_DEVICE'], 'iphone' ) !== false ) {
+				if ( stripos( $_SERVER['HTTP_X_DEVICE'], 'iphone' ) !== false ||
+					stripos( $_SERVER['HTTP_X_DEVICE'], 'android' ) !== false ) {
 					$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_X_DEVICE'] );
 					$wgOut->addVaryHeader( 'Application_Version' );
 				}
@@ -1184,6 +1226,26 @@ class ExtMobileFrontend {
 
 		wfProfileOut( __METHOD__ );
 		return $applicationHtml;
+	}
+	
+	public static function buildLanguageSelection() {
+		global $wgLanguageCode;
+		$output = Html::openElement( 'select', 
+			array( 'id' => 'languageselection', 
+				'onchange' => 'javascript:navigateToLanguageSelection();' ) );
+		foreach (self::$languageUrls as $languageUrl) {
+			if ( $languageUrl['lang'] == $wgLanguageCode ) {
+				$output .= 	Html::element( 'option',
+							array( 'value' => $languageUrl['href'], 'selected' => 'selected' ),
+									$languageUrl['language'] );				
+			} else {
+				$output .= 	Html::element( 'option',
+							array( 'value' => $languageUrl['href'] ),
+									$languageUrl['language'] );
+			}
+		}
+		$output .= Html::closeElement( 'select', array() );
+		return $output;
 	}
 
 	/**
