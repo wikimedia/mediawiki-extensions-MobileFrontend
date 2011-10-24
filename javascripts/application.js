@@ -37,6 +37,9 @@ function _handleClearSearchLink() {
 function clearSearchBox( event ) {
 	search.value = '';
 	clearSearch.style.display = 'none';
+	if ( results ) {
+		results.style.display = 'none';
+	}
 	if ( event ) {
 		event.preventDefault();
 	}
