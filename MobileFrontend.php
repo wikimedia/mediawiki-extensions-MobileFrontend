@@ -82,8 +82,8 @@ $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
  * @return bool
  */
 function efExtMobileFrontendUnitTests( &$files ) {
-        $files[] = dirname( __FILE__ ) . '/tests/MobileFrontendTest.php';
-        return true;
+		$files[] = dirname( __FILE__ ) . '/tests/MobileFrontendTest.php';
+		return true;
 }
 
 class ExtMobileFrontend {
@@ -254,7 +254,7 @@ class ExtMobileFrontend {
 				}
 				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
 				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-				$targetUrl = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+				$targetUrl = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 				$output->setSquidMaxage( 1200 );
 				$output->redirect( $targetUrl, '301' );
 			}
@@ -304,7 +304,7 @@ class ExtMobileFrontend {
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
- 		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
+		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
@@ -347,7 +347,7 @@ class ExtMobileFrontend {
 			);
 		}
 		
-        foreach( $wgOut->getLanguageLinks() as $l ) {
+		foreach( $wgOut->getLanguageLinks() as $l ) {
 			if ( preg_match( '!^(\w[-\w]*\w):(.+)$!', $l, $m ) ) {
 				$lang = $m[1];
 				$linkText = $m[2];
@@ -372,7 +372,7 @@ class ExtMobileFrontend {
 				'class' => 'interwiki-' . $lang,
 				'lang' => $lang,
 			);
-        }
+		}
 
 		self::$languageUrls = $languageUrls;
 
@@ -513,8 +513,8 @@ class ExtMobileFrontend {
 			$title = Title::newFromText( self::$messages['mobile-frontend-feedback-page'] );
 
 			if ( $title->userCan( 'edit' ) &&
-			 	!$wgUser->isBlockedFrom( $title ) &&
-			 	$wgUser->matchEditToken( $token ) ) {
+				!$wgUser->isBlockedFrom( $title ) &&
+				$wgUser->matchEditToken( $token ) ) {
 				$article = new Article( $title, 0 );
 				$rawtext = $article->getRawText();
 				$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> ";
@@ -553,7 +553,7 @@ class ExtMobileFrontend {
 			$wgRequest->response()->header( 'Location: ' . $location );
 		}
 
-		if ( $mobileAction  == 'opt_out_cookie' ) {
+		if ( $mobileAction	== 'opt_out_cookie' ) {
 			$this->setOptInOutCookie( '' );
 		}
 
@@ -584,7 +584,7 @@ class ExtMobileFrontend {
 			self::$useFormat === 'mobile-wap' ||
 			!empty( $xDevice ) ) {
 				if ( $action !== 'edit' &&
-				 	 $mobileAction !== 'view_normal_site' ) {
+					 $mobileAction !== 'view_normal_site' ) {
 					$this->getMsg();
 					$this->disableCaching();
 					$this->sendXDeviceVaryHeader();
@@ -1235,11 +1235,11 @@ class ExtMobileFrontend {
 				'onchange' => 'javascript:navigateToLanguageSelection();' ) );
 		foreach (self::$languageUrls as $languageUrl) {
 			if ( $languageUrl['lang'] == $wgLanguageCode ) {
-				$output .= 	Html::element( 'option',
+				$output .=	Html::element( 'option',
 							array( 'value' => $languageUrl['href'], 'selected' => 'selected' ),
 									$languageUrl['language'] );				
 			} else {
-				$output .= 	Html::element( 'option',
+				$output .=	Html::element( 'option',
 							array( 'value' => $languageUrl['href'] ),
 									$languageUrl['language'] );
 			}
