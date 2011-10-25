@@ -15,7 +15,7 @@ var sq = document.getElementById( 'sq' );
 
 results.style.width = ( sq.offsetWidth - 2 ) + pixels;
 results.style.left = sq.offsetLeft + pixels;
-results.style.top = ( sq.offsetTop + sq.offsetHeight )  + pixels;
+results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
 
 window.onload = function () {
 	search.addEventListener( 'keyup',
