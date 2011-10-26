@@ -67,11 +67,13 @@ function writeResults( sections ) {
 	if ( !sections || sections.length < 1 ) {
 		results.innerHTML = "No results";
 	} else {
-		var html = '';
+		var html = '<div class="suggestions-results">';
 		for ( i = 0; i < sections.length; i++ ) {
 			var section = sections[i];
-			html = html + "<a href='" + section.value + "'>" + section.label + "</a><br/>";
+			var rel = i + 1;
+			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a href='" + section.value + "'>" + section.label + "</a></div>";
 		}
+		html = html + '</div>';
 		results.innerHTML = html;
 	}
 }
