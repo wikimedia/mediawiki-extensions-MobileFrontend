@@ -82,8 +82,8 @@ $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
  * @return bool
  */
 function efExtMobileFrontendUnitTests( &$files ) {
-		$files[] = dirname( __FILE__ ) . '/tests/MobileFrontendTest.php';
-		return true;
+	$files[] = dirname( __FILE__ ) . '/tests/MobileFrontendTest.php';
+	return true;
 }
 
 class ExtMobileFrontend {
@@ -291,10 +291,10 @@ class ExtMobileFrontend {
 	 * @param $field string
 	 * @return string
 	 */
-	private function removeQueryStringParameter( $url, $field ) { 
-		$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' ); 
-		$url = substr( $url, 0, -1 ); 
-		return $url; 
+	private function removeQueryStringParameter( $url, $field ) {
+		$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
+		$url = substr( $url, 0, -1 );
+		return $url;
 	}
 
 	public function getMsg() {
@@ -313,7 +313,7 @@ class ExtMobileFrontend {
 		if ( stristr( $copyright, '<li class="noprint">' ) !== false ) {
 			$copyright = '<ul><li>' . $copyright . '</li></ul>';
 		}
-		
+
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
 
@@ -597,17 +597,17 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
-	
+
 	private function checkUserStatus() {
 		wfProfileIn( __METHOD__ );
-		
-		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) && 
+
+		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) &&
 			strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Wikipedia Mobile' ) !== false ) {
 			self::$hideSearchBox = true;
 		}
-		
+
 		$optInCookie = $this->getOptInOutCookie();
-		if ( !empty( $optInCookie ) && 
+		if ( !empty( $optInCookie ) &&
 			$optInCookie == 1 ) {
 			self::$isBetaGroupMember = true;
 		}
@@ -626,13 +626,13 @@ class ExtMobileFrontend {
 		$wgCookieDomain = $tempWgCookieDomain;
 		wfProfileOut( __METHOD__ );
 	}
-	
+
 	private function getOptInOutCookie() {
 		global $wgRequest;
 		wfProfileIn( __METHOD__ );
 		$optInCookie = $wgRequest->getCookie( 'optin' );
 		wfProfileOut( __METHOD__ );
-		return $optInCookie; 
+		return $optInCookie;
 	}
 
 	/**
@@ -692,7 +692,7 @@ class ExtMobileFrontend {
 		$wgOut->addVaryHeader( 'Cookie' );
 		wfProfileOut( __METHOD__ );
 	}
-	
+
 	private function sendApplicationVersionVaryHeader() {
 		global $wgOut, $wgRequest;
 		wfProfileIn( __METHOD__ );
@@ -1153,7 +1153,7 @@ class ExtMobileFrontend {
 		if ( self::$isMainPage ) {
 			$contentHtml = $this->DOMParseMainPage( $contentHtml );
 		}
-		
+
 		$title = htmlspecialchars( self::$title->getText() );
 		$htmlTitle = htmlspecialchars( self::$htmlTitle );
 
@@ -1178,12 +1178,12 @@ class ExtMobileFrontend {
 			// Add segmentation markers
 			$contentHtml = $this->headingTransform( $contentHtml );
 
-			// Content removal for WML rendering			
+			// Content removal for WML rendering
 			$elements = array( 'span', 'div', 'sup', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'sup', 'sub' );
 			foreach ( $elements as $element ) {
 				$contentHtml = preg_replace( '#</?' . $element . '[^>]*>#is', '', $contentHtml );
 			}
-			
+
 			//Wml for searching
 			$searchWml = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
 				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
