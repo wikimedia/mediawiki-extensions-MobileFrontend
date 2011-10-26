@@ -71,6 +71,7 @@ function writeResults( sections ) {
 		for ( i = 0; i < sections.length; i++ ) {
 			var section = sections[i];
 			var rel = i + 1;
+			section.value = section.value.replace(/^(?:\/\/|[^\/]+)*\//, '/');
 			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a href='" + section.value + "'>" + section.label + "</a></div>";
 		}
 		html = html + '</div>';
