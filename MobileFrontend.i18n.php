@@ -877,7 +877,9 @@ $messages['ce'] = array(
 	'mobile-frontend-file-namespace' => 'Хlум',
 );
 
-/** Sorani (کوردی) */
+/** Sorani (کوردی)
+ * @author Asoxor
+ */
 $messages['ckb'] = array(
 	'mobile-frontend-search-submit' => 'بڕۆ',
 	'mobile-frontend-search-results' => 'ئاکامەکانی گەڕان',
@@ -891,21 +893,35 @@ $messages['ckb'] = array(
 	'mobile-frontend-hide-button' => 'بیشارەوە',
 	'mobile-frontend-disable-button' => 'ناچالاک بکە',
 	'mobile-frontend-back-button' => 'بگەڕێوە',
-	'mobile-frontend-regular-site' => 'ئەم پەڕە لەسەر ویکیپیدیای ئاسایی ببینە',
+	'mobile-frontend-regular-site' => 'ئەم پەڕە لەسەر {{SITENAME}}ی ئاسایی ببینە',
 	'mobile-frontend-perm-stop-redirect' => 'بۆ ھەمیشە سایتی مۆبایڵ ناچالاک بکە',
 	'mobile-frontend-error-page-title' => 'کێشەیەکمان ھەیە!',
-	'mobile-frontend-error-page-text' => 'مۆبایڵی ویکیپیدیا ھێشتا لەژێر پەرەپێدانی چالاکدایە و بە سەختی لەسەر چاککردنەوەی گشت ھەڵەکانی کاردەکەین. ئاگادار کراینەتەوە لەسەر ئەم ھەڵانە و بەم زووانە چاکیان دەکەینەوە. تکایە سەر بدەنەوە!',
+	'mobile-frontend-error-page-text' => 'مۆبایڵی {{SITENAME}} ھێشتا لەژێر پەرەپێدانی چالاکدایە و بە سەختی لەسەر چاککردنەوەی گشت ھەڵەکانی کاردەکەین. ئاگادار کراینەتەوە لەسەر ئەم ھەڵانە و بەم زووانە چاکیان دەکەینەوە. تکایە سەر بدەنەوە!',
 	'mobile-frontend-are-you-sure' => 'دڵنیایت؟',
-	'mobile-frontend-explain-disable' => 'دڵنیایت دەتەوێ وەشانی مۆبایلی ویکیپیدیا ناچالاک بکەیت؟ ئەگەر <b>ناچالاک بکە</b> ھەڵبژێری، لەمەو بەدوا، کاتێک سەردانی ویکیپیدیا دەکەی، ڕەوانە ناکرێیتەوە بۆ ئەم بینینەوەی مۆبایلەی ویکیپیدیا.',
+	'mobile-frontend-explain-disable' => 'دڵنیایت دەتەوێ وەشانی مۆبایلی {{SITENAME}} ناچالاک بکەیت؟ ئەگەر <b>ناچالاک بکە</b> ھەڵبژێری، لەمەو بەدوا، کاتێک سەردانی {{SITENAME}} دەکەی، ڕەوانە ناکرێیتەوە بۆ ئەم بینینەوەی مۆبایلەی {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'کۆتایی',
 	'mobile-frontend-nav-top' => 'سەرەوە',
 	'mobile-frontend-nav-edit' => 'دەستکاریی بکە',
 	'mobile-frontend-nav-history' => 'مێژوو',
 	'mobile-frontend-search-text' => 'بگەڕێ',
 	'mobile-frontend-contact-us' => 'ئەگەر پرسیار یان بۆچوونێکت ھەیە تکایە بە ئیمێڵی mobile@wikipedia.org بۆمان بنێرە',
-	'mobile-frontend-author-link' => 'سەردانی ئەم پەڕگەی میدیایە لەسەر ویکیپیدیای ئاسایی بکە بۆ بینینی زانیاری سەبارەت بە خاوەنێتی، مۆڵەتنامە و شرۆڤەی زۆرتر.',
+	'mobile-frontend-author-link' => 'سەردانی ئەم پەڕگەی میدیایە لەسەر {{SITENAME}}ی ئاسایی بکە بۆ بینینی زانیاری سەبارەت بە خاوەنێتی، مۆڵەتنامە و شرۆڤەی زۆرتر.',
 	'mobile-frontend-download-full-version' => 'داگرتنی وەشانی تەواو',
 	'mobile-frontend-file-namespace' => 'پەڕگە',
+	'mobile-frontend-wml-continue' => 'درێژەی پێبدە ...',
+	'mobile-frontend-wml-back' => 'بگەڕێوە ...',
+	'mobile-frontend-view' => 'بینینەوەی مۆبایلی',
+	'mobile-frontend-opt-in-yes-button' => 'بەڵێ',
+	'mobile-frontend-opt-in-no-button' => 'نە',
+	'mobile-frontend-opt-out-yes-button' => 'بەڵێ',
+	'mobile-frontend-opt-out-no-button' => 'نە',
+	'mobile-frontend-disable-images' => 'ڕێگە مەدە بە وێنەکان لەسەر سایتی مۆبایل',
+	'mobile-frontend-enable-images' => 'ڕێگە بدە بە وێنەکان لەسەر سایتی مۆبایل',
+	'mobile-frontend-news-items' => 'لە ھەواڵەکاندا',
+	'mobile-frontend-leave-feedback-subject' => 'بابەت',
+	'mobile-frontend-leave-feedback-message' => 'پەیام',
+	'mobile-frontend-leave-feedback-cancel' => 'ھەڵیوەشێنەوە',
+	'mobile-frontend-language' => 'زمان',
 );
 
 /** Corsican (Corsu) */
@@ -2177,8 +2193,11 @@ $messages['hsb'] = array(
 	'mobile-frontend-file-namespace' => 'Dataja',
 );
 
-/** Hungarian (Magyar) */
+/** Hungarian (Magyar)
+ * @author BáthoryPéter
+ */
 $messages['hu'] = array(
+	'mobile-frontend-desc' => 'Mobil felület',
 	'mobile-frontend-search-submit' => 'Menj',
 	'mobile-frontend-search-results' => 'Keresési eredmények',
 	'mobile-frontend-no-article-found' => 'Nem találtam egyetlen szócikket sem',
@@ -2191,12 +2210,12 @@ $messages['hu'] = array(
 	'mobile-frontend-hide-button' => 'Elrejtés',
 	'mobile-frontend-disable-button' => 'Letiltás',
 	'mobile-frontend-back-button' => 'Vissza',
-	'mobile-frontend-regular-site' => 'Lap megtekintése a szokásos Wikipédián',
+	'mobile-frontend-regular-site' => 'Lap megtekintése a szokásos {{SITENAME}} nézetben',
 	'mobile-frontend-perm-stop-redirect' => 'Mobiloldal letiltása',
 	'mobile-frontend-error-page-title' => 'Hiba történt!',
-	'mobile-frontend-error-page-text' => 'A mobilos Wikipédia még mindig fejlesztés alatt áll, folyamatosan dolgozunk a hibák javításán. Értesítve lettünk a hibáról, és hamarosan javítjuk. Kérlek, nézz vissza később!',
+	'mobile-frontend-error-page-text' => 'A mobilos {{SITENAME}} még mindig fejlesztés alatt áll, folyamatosan dolgozunk a hibák javításán. Értesítve lettünk a hibáról, és hamarosan javítjuk. Kérlek, nézz vissza később!',
 	'mobile-frontend-are-you-sure' => 'Biztos vagy benne?',
-	'mobile-frontend-explain-disable' => 'Biztos vagy benne, hogy le szeretnéd tiltani a Wikipédia mobil változatát? Ha a <b>letiltás</b>t választod, onnantól kezdve ha meglátogatod a Wikipédiát, nem leszel átirányítva erre a mobil nézetre.',
+	'mobile-frontend-explain-disable' => 'Biztos vagy benne, hogy le szeretnéd tiltani a(z) {{SITENAME}} mobil változatát? Ha a <b>letiltás</b>t választod, onnantól kezdve nem leszel átirányítva erre a mobil nézetre.',
 	'mobile-frontend-nav-end' => 'Végére',
 	'mobile-frontend-nav-top' => 'Elejére',
 	'mobile-frontend-nav-edit' => 'Szerkesztés',
@@ -2205,6 +2224,21 @@ $messages['hu'] = array(
 	'mobile-frontend-contact-us' => 'Ha bármilyen kérdésed vagy megjegyzésed van, írd meg a mobile@wikipedia.org címre',
 	'mobile-frontend-download-full-version' => 'Nagy változat letöltése',
 	'mobile-frontend-file-namespace' => 'Fájl',
+	'mobile-frontend-wml-continue' => 'Folytatás ...',
+	'mobile-frontend-wml-back' => 'Vissza ...',
+	'mobile-frontend-view' => 'Mobil nézet',
+	'mobile-frontend-opt-in-yes-button' => 'igen',
+	'mobile-frontend-opt-in-no-button' => 'nem',
+	'mobile-frontend-disable-images' => 'Képek letiltása mobil nézetben',
+	'mobile-frontend-enable-images' => 'Képek engedélyezése mobil nézetben',
+	'mobile-frontend-leave-feedback-title' => 'Küldj visszajelzést a mobil nézettel kapcsolatos tapasztalataidról',
+	'mobile-frontend-leave-feedback-subject' => 'Tárgy',
+	'mobile-frontend-leave-feedback-message' => 'Üzenet',
+	'mobile-frontend-leave-feedback-cancel' => 'Mégsem',
+	'mobile-frontend-leave-feedback-submit' => 'Visszajelzés elküldése',
+	'mobile-frontend-leave-feedback' => 'A mobil webhellyel kapcsolatos visszajelzés',
+	'mobile-frontend-leave-feedback-thanks' => 'Köszönjük a visszajelzésedet!',
+	'mobile-frontend-language' => 'Nyelv',
 );
 
 /** Armenian (Հայերեն) */
@@ -2682,8 +2716,8 @@ $messages['ko'] = array(
 	'mobile-frontend-author-link' => '이 파일를 위키백과 웹 문서로 엽니다. 파일의 소유권, 라이선스 등의 정보를 볼 수 있습니다.',
 	'mobile-frontend-download-full-version' => '전체 버전 다운로드',
 	'mobile-frontend-view' => '모바일판에서 보기',
-	'mobile-frontend-disable-images' => '모바일판 사이트에 이미지를 표시하지 않도록 설정',
-	'mobile-frontend-enable-images' => '모바일판 사이트에 이미지를 표시하도록 설정',
+	'mobile-frontend-disable-images' => '이미지를 표시하지 않도록 설정',
+	'mobile-frontend-enable-images' => '이미지를 표시하도록 설정',
 	'mobile-frontend-news-items' => '새로 들어온 소식',
 	'mobile-frontend-feedback-page' => 'Project:모바일 확장 기능 피드백',
 );
@@ -2771,6 +2805,8 @@ $messages['ksh'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Nohreesch',
 	'mobile-frontend-leave-feedback-cancel' => 'Stopp! Avbreche!',
 	'mobile-frontend-leave-feedback-submit' => 'Lohß jonn!',
+	'mobile-frontend-leave-feedback-thanks' => 'Mer bedanke uns för Ding Rökmäldong.',
+	'mobile-frontend-language' => 'Shprooch',
 );
 
 /** Kurdish (Kurdî) */
@@ -5233,22 +5269,24 @@ $messages['tr'] = array(
 	'mobile-frontend-hide-button' => 'Gizle',
 	'mobile-frontend-disable-button' => 'Devre dışı bırak',
 	'mobile-frontend-back-button' => 'Geri',
-	'mobile-frontend-regular-site' => "Bu sayfayı normal Vikipedi'de görüntüle",
+	'mobile-frontend-regular-site' => 'Bu sayfayı normal {{SITENAME}} üzerinde görüntüle',
 	'mobile-frontend-perm-stop-redirect' => 'Mobil siteyi kalıcı olarak devre dışı bırak',
 	'mobile-frontend-error-page-title' => 'Bir problem var!',
-	'mobile-frontend-error-page-text' => 'Mobil Vikipedi hala etkin geliştirme altında ve tüm dahili hatalarımızı düzeltmek için çalışıyoruz. Bu hata hakkında bilgilendirildik ve yakında düzeltiyor olacağız. Lütfen tekrar kontrol edin!',
+	'mobile-frontend-error-page-text' => 'Mobil {{SITENAME}} hala etkin geliştirme altında ve tüm dahili hatalarımızı düzeltmek için çalışıyoruz. Bu hata hakkında bilgilendirildik ve yakında düzeltiyor olacağız. Lütfen tekrar kontrol edin!',
 	'mobile-frontend-are-you-sure' => 'Emin misiniz ?',
-	'mobile-frontend-explain-disable' => "Vikipedinin mobil sürümünü devre dışı bırakmak istediğinize emin misiniz? Eğer <b>Devre dışı bırak</b>'ı seçerseniz, bundan sonra, Vikipediyi ziyaret ettiğinizde, Vikipedinin bu mobil görünümüne yönlendirilmeyeceksiniz.",
+	'mobile-frontend-explain-disable' => "{{SITENAME}}'ın mobil sürümünü devre dışı bırakmak istediğinize emin misiniz? Eğer <b>Devre dışı bırak</b>'ı seçerseniz, bundan sonra {{SITENAME}}'ı ziyaret ettiğinizde, {{SITENAME}}'ın bu mobil görünümüne yönlendirilmeyeceksiniz.",
 	'mobile-frontend-nav-end' => 'Son',
 	'mobile-frontend-nav-top' => 'En üst',
 	'mobile-frontend-nav-edit' => 'Değiştir',
 	'mobile-frontend-nav-history' => 'Geçmiş',
 	'mobile-frontend-search-text' => 'Ara',
 	'mobile-frontend-contact-us' => 'Eğer herhangi bir sorunuz veya yorumunuz varsa lütfen bize mobile@wikipedia.org adresinde e-posta göndermekten çekinmeyin',
-	'mobile-frontend-author-link' => "Bu medya dosyasını Vikipedi'de yazarlık, lisans ve ek açıklamaları hakkında bilgi için görüntüleyin.",
+	'mobile-frontend-author-link' => 'Bu medya dosyasını {{SITENAME}} üzerinde yazarlık, lisans ve ek açıklamaları hakkında bilgi için görüntüleyin.',
 	'mobile-frontend-download-full-version' => 'Tam Sürümü İndir',
 	'mobile-frontend-file-namespace' => 'Dosya',
 	'mobile-frontend-view' => 'Mobil Görünüm',
+	'mobile-frontend-opt-in-yes-button' => 'evet',
+	'mobile-frontend-opt-in-no-button' => 'hayır',
 );
 
 /** Tatar (Cyrillic) (Татарча/Tatarça (Cyrillic)) */
