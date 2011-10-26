@@ -689,6 +689,7 @@ class ExtMobileFrontend {
 			$wgRequest->response()->header( 'X-Device: ' . $_SERVER['HTTP_X_DEVICE'] );
 			$wgOut->addVaryHeader( 'X-Device' );
 		}
+		$wgOut->addVaryHeader( 'Cookie' );
 		wfProfileOut( __METHOD__ );
 	}
 	
