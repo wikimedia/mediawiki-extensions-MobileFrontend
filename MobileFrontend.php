@@ -64,7 +64,6 @@ $wgExtMobileFrontend = new ExtMobileFrontend();
 $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
 
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
-$wgExtensionFunctions[] = array( &$wgExtMobileFrontend, 'setDefaultLogo' );
 
 $wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 
@@ -592,6 +591,7 @@ class ExtMobileFrontend {
 					$this->sendXDeviceVaryHeader();
 					$this->sendApplicationVersionVaryHeader();
 					$this->checkUserStatus();
+					$this->setDefaultLogo();
 					ob_start( array( $this, 'DOMParse' ) );
 				}
 		}
