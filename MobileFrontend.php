@@ -365,7 +365,7 @@ class ExtMobileFrontend {
 			$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
 			$languageUrl = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 
-			if ( substr( $languageUrl, 0, 1 ) == ':') {
+			if ( substr( $languageUrl, 0, 1 ) == ':' ) {
 				$languageUrl = substr( $languageUrl, 1 );
 			}
 
