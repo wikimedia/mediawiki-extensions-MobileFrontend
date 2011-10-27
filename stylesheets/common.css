@@ -49,6 +49,9 @@
 	text-decoration: none;
 	color:#000000;
 }
+.suggestions-result:hover {
+	background-color: #ACD1E9;
+}
 
 #results {
 	display: none;
