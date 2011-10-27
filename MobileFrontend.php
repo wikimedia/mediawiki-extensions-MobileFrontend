@@ -523,7 +523,7 @@ class ExtMobileFrontend {
 				$article->doEdit( $rawtext, '' );
 			}
 
-			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() . '&noticeid=1' );
+			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() . '&noticeid=1&useformat=mobile' );
 			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location );
 			wfProfileOut( __METHOD__ );
