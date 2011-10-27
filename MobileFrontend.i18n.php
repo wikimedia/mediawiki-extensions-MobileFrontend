@@ -1447,6 +1447,7 @@ $messages['et'] = array(
 	'mobile-frontend-view' => 'Mobiilivaade',
 	'mobile-frontend-disable-images' => 'Keela mobiilivaates pildid',
 	'mobile-frontend-enable-images' => 'Luba mobiilivaates pildid',
+	'mobile-frontend-language' => 'Keel',
 );
 
 /** Basque (Euskara) */
@@ -2162,7 +2163,9 @@ $messages['hr'] = array(
 	'mobile-frontend-file-namespace' => 'Datoteka',
 );
 
-/** Upper Sorbian (Hornjoserbsce) */
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
 $messages['hsb'] = array(
 	'mobile-frontend-search-submit' => 'Pytać',
 	'mobile-frontend-search-results' => 'Pytanske wuslědki',
@@ -2176,21 +2179,22 @@ $messages['hsb'] = array(
 	'mobile-frontend-hide-button' => 'Schować',
 	'mobile-frontend-disable-button' => 'Znjemóžnić',
 	'mobile-frontend-back-button' => 'Wróćo',
-	'mobile-frontend-regular-site' => 'Tutu stronu sej we Wikipediji wobhladać',
+	'mobile-frontend-regular-site' => 'Tutu stronu sej we {{GRAMMAR:lokatiw|{{SITENAME}}}} wobhladać',
 	'mobile-frontend-perm-stop-redirect' => 'Mobilne sydło na přeco znjemóžnić',
 	'mobile-frontend-error-page-title' => 'Mamy problem!',
-	'mobile-frontend-error-page-text' => 'Mobilna Wikipedija so hišće aktiwnje wuwiwa a dźěłamy kruće, zo bychmy wšě interne zmylki wotstronili. Nam je tutón zmylk znaty a budźemy jón bórze wotstronjeć. Prošu skontroluj potom hišće raz!',
+	'mobile-frontend-error-page-text' => 'Mobilna {{SITENAME}} so hišće aktiwnje wuwiwa a dźěłamy kruće, zo bychmy wšě interne zmylki wotstronili. Nam je tutón zmylk znaty a budźemy jón bórze wotstronjeć. Prošu skontroluj potom hišće raz!',
 	'mobile-frontend-are-you-sure' => 'Sy sej wěsty?',
-	'mobile-frontend-explain-disable' => 'Chceš woprawdźe mobilnu wersiji Wikipedije znjemóžnić? Jeli wubjerješ <b>Znjemóžnić</b>, da njesposrědkuješ wot toho časa, hdyž wopytuješ Wikipediju, k mobilnemu napohladej Wikipedije.',
+	'mobile-frontend-explain-disable' => 'Chceš woprawdźe mobilnu wersiji {{GRAMMAR:genitiw|{{SITENAME}}}} znjemóžnić? Jeli wubjerješ <b>Znjemóžnić</b>, da njesposrědkuješ wot toho časa, hdyž wopytuješ Wikipediju, k mobilnemu napohladej {{GRAMMAR:genitiw|{{SITENAME}}}}.',
 	'mobile-frontend-nav-end' => 'Kónc',
 	'mobile-frontend-nav-top' => 'Horjeka',
 	'mobile-frontend-nav-edit' => 'Wobdźěłać',
 	'mobile-frontend-nav-history' => 'Historija',
 	'mobile-frontend-search-text' => 'Pytać',
 	'mobile-frontend-contact-us' => 'Jeli maš prašenja abo komentary, móžeš rady e-mejlku na mobile@wikipedia.org pósłać',
-	'mobile-frontend-author-link' => 'Tutu medijowu dataju w normalnej Wikipediji zwobraznić, zo by widźiš informacije wo awtorstwje, licencowanju a přidatnych wopisanjach.',
+	'mobile-frontend-author-link' => 'Tutu medijowu dataju w normalnej {{GRAMMAR:lokatiw|{{SITENAME}}}} zwobraznić, zo by widźiš informacije wo awtorstwje, licencowanju a přidatnych wopisanjach.',
 	'mobile-frontend-download-full-version' => 'Połnu wersiju sćahnyć',
 	'mobile-frontend-file-namespace' => 'Dataja',
+	'mobile-frontend-language' => 'Rěč',
 );
 
 /** Hungarian (Magyar)
@@ -5063,22 +5067,25 @@ $messages['szl'] = array(
 	'mobile-frontend-file-namespace' => 'Plik',
 );
 
-/** Tamil (தமிழ்) */
+/** Tamil (தமிழ்)
+ * @author Surya Prakash.S.A.
+ */
 $messages['ta'] = array(
+	'mobile-frontend-desc' => 'கைபேசி முகப்பு',
 	'mobile-frontend-search-submit' => 'செல்',
 	'mobile-frontend-search-results' => 'தேடல் முடிவுகள்',
 	'mobile-frontend-no-article-found' => 'கட்டுரை இல்லை',
-	'mobile-frontend-featured-article' => 'இன்றைய சிறப்புக் கட்டுரை',
+	'mobile-frontend-featured-article' => 'முதற்பக்கக் கட்டுரைகள்',
 	'mobile-frontend-in-the-news' => 'செய்திகளில்',
-	'mobile-frontend-home-button' => 'முதல் பக்கம்',
-	'mobile-frontend-random-button' => 'ஏதாவது',
+	'mobile-frontend-home-button' => 'முகப்பு',
+	'mobile-frontend-random-button' => 'ஏதாவது ஒரு கட்டுரை',
 	'mobile-frontend-back-to-top-of-section' => 'முதல் பத்திக்குச் செல்',
 	'mobile-frontend-show-button' => 'காட்டு',
 	'mobile-frontend-hide-button' => 'மறை',
 	'mobile-frontend-disable-button' => 'செயலிழக்கச் செய்',
 	'mobile-frontend-back-button' => 'பின் செல்',
 	'mobile-frontend-regular-site' => 'இப்பக்கத்தை தமிழ் விக்கிப்பீடியாவில் காண',
-	'mobile-frontend-perm-stop-redirect' => 'இனி எப்போதும் நகர்பேசித்தளம் வேண்டாம்',
+	'mobile-frontend-perm-stop-redirect' => 'இனி எப்போதும் கைபேசித்தளம் வேண்டாம்',
 	'mobile-frontend-error-page-title' => 'சிக்கல்!',
 	'mobile-frontend-error-page-text' => 'விக்கிப்பீடியா நகர்பேசி வடிவம் இன்னமும் நிறைவடையவில்லை. இதிலுள்ள வழுக்களைச் சரி செய்ய முயன்று வருகிறோம். இவ்வழு எங்களுக்குத் தெரிவிக்கப்பட்டுள்ளது, விரைவில் சரி செய்யப்படும். மீண்டும் வந்து பாருங்கள்!',
 	'mobile-frontend-are-you-sure' => 'உறுதியாகவா?',
@@ -5092,6 +5099,20 @@ $messages['ta'] = array(
 	'mobile-frontend-author-link' => 'ஆக்குனர், உரிமம் மேலும் பல விவரங்களை அறிய இவ்வூடகக் கோப்பை சாதாரண விக்கிப்பீடியாவில் பார்க்கவும்',
 	'mobile-frontend-download-full-version' => 'முழு பதிப்பையும் தரவிறக்கவும்',
 	'mobile-frontend-file-namespace' => 'கோப்பு',
+	'mobile-frontend-wml-continue' => 'தொடர்க...',
+	'mobile-frontend-wml-back' => 'பின்னால்...',
+	'mobile-frontend-view' => 'கைபேசிப் பார்வை',
+	'mobile-frontend-opt-in-yes-button' => 'ஆம்',
+	'mobile-frontend-opt-in-no-button' => 'இல்லை',
+	'mobile-frontend-opt-out-yes-button' => 'ஆம்',
+	'mobile-frontend-opt-out-no-button' => 'இல்லை',
+	'mobile-frontend-disable-images' => 'கைபேசித் தளத்தில் படிமங்களைச் செயலிழக்கச் செய்க',
+	'mobile-frontend-enable-images' => 'கைபேசித் தளத்தில் படிமங்களைச் செயற்படுத்துக',
+	'mobile-frontend-news-items' => 'செய்திகளில்',
+	'mobile-frontend-leave-feedback-title' => 'கைபேசித் தளத்தைப் பற்றிய கருத்துகளைத் தரவும்',
+	'mobile-frontend-leave-feedback-subject' => 'பொருள்',
+	'mobile-frontend-leave-feedback-message' => 'தகவல்',
+	'mobile-frontend-language' => 'மொழி',
 );
 
 /** Telugu (తెలుగు)
