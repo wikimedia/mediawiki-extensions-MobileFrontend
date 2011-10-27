@@ -1255,10 +1255,16 @@ class ExtMobileFrontend {
 	 * Sets up the default logo image used in mobile view if none is set
 	 */
 	public function setDefaultLogo() {
-		global $wgMobileFrontendLogo, $wgExtensionAssetsPath;
+		global $wgMobileFrontendLogo, $wgExtensionAssetsPath, $wgDBname, $wgConf;
 		wfProfileIn( __METHOD__ );
 		if ( $wgMobileFrontendLogo === false ) {
 			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/images/mw.png';
+		}
+		if ( self::$isBetaGroupMember ) {
+			list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+			if ( $site == 'wikipedia' ) {
+				$wgMobileFrontendLogo = '//upload.wikimedia.org/wikipedia/commons/1/16/W_logo_for_beta_test_of_Mobile_Frontend.gif';
+			}
 		}
 		wfProfileOut( __METHOD__ );
 	}
