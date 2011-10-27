@@ -337,15 +337,13 @@ class ExtMobileFrontend {
 		
 		$languageUrls = array();
 		
-		if ( $wgLanguageCode == 'en' ) {
-			$languageUrls[] = array(
-				'href' => self::$currentURL,
-				'text' => self::$htmlTitle,
-				'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
-				'class' => 'interwiki-' . $wgLanguageCode,
-				'lang' => $wgLanguageCode,
-			);
-		}
+		$languageUrls[] = array(
+			'href' => self::$currentURL,
+			'text' => self::$htmlTitle,
+			'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
+			'class' => 'interwiki-' . $wgLanguageCode,
+			'lang' => $wgLanguageCode,
+		);
 		
 		foreach( $wgOut->getLanguageLinks() as $l ) {
 			if ( preg_match( '!^(\w[-\w]*\w):(.+)$!', $l, $m ) ) {
