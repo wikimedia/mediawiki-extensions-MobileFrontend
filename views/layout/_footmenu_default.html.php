@@ -19,7 +19,7 @@ if ( self::$disableImages == 0 ) {
 	$imagesURL = self::$enableImagesURL;
 }
 
-$feedbackLink = '';
+$feedbackLink = ( self::$code == 'en' && self::$isBetaGroupMember ) ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : '';
 
 $footerHtml = <<<EOD
 	<div id='footer'>
