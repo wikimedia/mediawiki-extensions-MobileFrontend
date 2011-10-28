@@ -57,6 +57,7 @@ a.sq-val-update {
 	font-weight:normal;
 	text-decoration: none;
 	color: #000000;
+	float: right;
 }
 a.sq-val-update:link {
 	text-decoration: none;
