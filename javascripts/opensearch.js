@@ -15,19 +15,18 @@ var sq = document.getElementById( 'sq' );
 var sb = document.getElementById( 'searchbox' );
 
 function updateSearchWidth() {
-	if ( sq && search && sb ) {
+	if ( sq && search && sb && results ) {
 		var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
 		sb.style.width = ( iw - 30 ) + pixels;
 		sq.style.width = ( iw - 110 ) + pixels;
 		search.style.width = ( iw - 140 ) + pixels;
+		results.style.width = ( sq.offsetWidth - 2 ) + pixels;
+		results.style.left = sq.offsetLeft + pixels;
+		results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
 	}
 }
 
 updateSearchWidth();
-
-results.style.width = ( sq.offsetWidth - 2 ) + pixels;
-results.style.left = sq.offsetLeft + pixels;
-results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
 
 function updateOrientationSearchWidth() {
 	switch( window.orientation ) {

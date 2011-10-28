@@ -18,7 +18,7 @@ $startScriptTag = '<script type="text/javascript" language="javascript" src="';
 $endScriptTag = '"></script>';
 $javaScriptPath = $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
 
-$openSearchScript = ( self::$isBetaGroupMember ) ? $startScriptTag . $javaScriptPath . 'opensearch.js?version=10282011120819' . $endScriptTag : '';
+$openSearchScript = ( self::$isBetaGroupMember ) ? $startScriptTag . $javaScriptPath . 'opensearch.js?version=10282011121527' . $endScriptTag : '';
 
 $applicationHtml = <<<EOT
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
