@@ -2194,6 +2194,11 @@ $messages['hsb'] = array(
 	'mobile-frontend-author-link' => 'Tutu medijowu dataju w normalnej {{GRAMMAR:lokatiw|{{SITENAME}}}} zwobraznić, zo by widźiš informacije wo awtorstwje, licencowanju a přidatnych wopisanjach.',
 	'mobile-frontend-download-full-version' => 'Połnu wersiju sćahnyć',
 	'mobile-frontend-file-namespace' => 'Dataja',
+	'mobile-frontend-opt-in-yes-button' => 'haj',
+	'mobile-frontend-opt-in-no-button' => 'ně',
+	'mobile-frontend-opt-out-yes-button' => 'haj',
+	'mobile-frontend-opt-out-no-button' => 'ně',
+	'mobile-frontend-leave-feedback-cancel' => 'Přetorhnyć',
 	'mobile-frontend-language' => 'Rěč',
 );
 
