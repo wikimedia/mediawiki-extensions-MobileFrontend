@@ -14,6 +14,33 @@ var search = document.getElementById( 'search' );
 var sq = document.getElementById( 'sq' );
 var sb = document.getElementById( 'searchbox' );
 
+function hideResults() {
+	results.style.display = 'none';
+}
+
+document.onmousedown = function() {
+	whichElement(event);
+}
+results.onmousedown = function() {
+	whichElement(event);
+}
+
+function whichElement(e) { 
+	if (!e) {
+		var e = window.event;
+		e.target = e.srcElement;
+		e.cancelBubble = true;
+	} else {
+		e.stopPropagation();
+		if (e.target.className == "suggestion-result" || 
+			e.target.className == "search-result-item" || 
+			e.target.className == "sq-val-update" ) {
+		} else {
+			hideResults();
+		}
+	}
+}
+
 function updateSearchWidth() {
 	if ( sq && search && sb && results ) {
 		var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
@@ -108,7 +135,7 @@ function writeResults( sections ) {
 			var section = sections[i];
 			var rel = i + 1;
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a href='" + section.value + "'>" + section.label + "</a><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + section.label + "');\"> + &nbsp;</a></div>";
+			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a class=\"search-result-item\" href='" + section.value + "'>" + section.label + "</a><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + section.label + "');\"> + &nbsp;</a></div>";
 			if ( i < ( sections.length - 1 ) ) {
 				html = html + '<hr />';
 			}
