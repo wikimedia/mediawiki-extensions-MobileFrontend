@@ -360,11 +360,7 @@ class ExtMobileFrontend {
 			}
 			$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
 			$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-			$languageUrl = $parsedUrl['scheme'] . '://' .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
-
-			if ( substr( $languageUrl, 0, 1 ) == ':' ) {
-				$languageUrl = substr( $languageUrl, 1 );
-			}
+			$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 
 			$languageUrls[] = array(
 				'href' => $languageUrl,
