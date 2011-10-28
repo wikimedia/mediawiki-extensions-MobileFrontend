@@ -624,7 +624,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		$tempWgCookieDomain = $wgCookieDomain;
 		$wgCookieDomain = $this->getBaseDomain();
-		$wgRequest->response()->setcookie( 'optin', $value );
+		$wgRequest->response()->setcookie( 'optin', $value, 0, '' );
 		$wgCookieDomain = $tempWgCookieDomain;
 		wfProfileOut( __METHOD__ );
 	}
@@ -632,7 +632,7 @@ class ExtMobileFrontend {
 	private function getOptInOutCookie() {
 		global $wgRequest;
 		wfProfileIn( __METHOD__ );
-		$optInCookie = $wgRequest->getCookie( 'optin' );
+		$optInCookie = $wgRequest->getCookie( 'optin', '' );
 		wfProfileOut( __METHOD__ );
 		return $optInCookie;
 	}
