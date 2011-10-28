@@ -620,12 +620,15 @@ class ExtMobileFrontend {
 	 * @param $value string
 	 */
 	private function setOptInOutCookie( $value ) {
-		global $wgCookieDomain, $wgRequest;
+		global $wgCookieDomain, $wgRequest, $wgCookiePrefix;
 		wfProfileIn( __METHOD__ );
 		$tempWgCookieDomain = $wgCookieDomain;
 		$wgCookieDomain = $this->getBaseDomain();
+		$tempWgCookiePrefix = $wgCookiePrefix;
+		$wgCookiePrefix = '';
 		$wgRequest->response()->setcookie( 'optin', $value, 0, '' );
 		$wgCookieDomain = $tempWgCookieDomain;
+		$wgCookiePrefix = $tempWgCookiePrefix;
 		wfProfileOut( __METHOD__ );
 	}
 
