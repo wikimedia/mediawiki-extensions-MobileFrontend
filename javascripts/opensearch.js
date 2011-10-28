@@ -13,8 +13,8 @@ var results = document.getElementById( 'results' );
 var search = document.getElementById( 'search' );
 var sq = document.getElementById( 'sq' );
 var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
-sq.style.width = ( iw - 100 ) + pixels;
-search.style.width = ( iw - 130 ) + pixels;;
+sq.style.width = ( iw - 110 ) + pixels;
+search.style.width = ( iw - 140 ) + pixels;;
 
 results.style.width = ( sq.offsetWidth - 2 ) + pixels;
 results.style.left = sq.offsetLeft + pixels;
