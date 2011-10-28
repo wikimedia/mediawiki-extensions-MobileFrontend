@@ -12,13 +12,39 @@ var pixels = 'px';
 var results = document.getElementById( 'results' );
 var search = document.getElementById( 'search' );
 var sq = document.getElementById( 'sq' );
-var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
-sq.style.width = ( iw - 110 ) + pixels;
-search.style.width = ( iw - 140 ) + pixels;;
+var sb = document.getElementById( 'searchbox' );
+
+function updateSearchWidth() {
+	if ( sq && search && sb ) {
+		var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
+		sb.style.width = ( iw - 30 ) + pixels;
+		sq.style.width = ( iw - 110 ) + pixels;
+		search.style.width = ( iw - 140 ) + pixels;
+	}
+}
+
+updateSearchWidth();
 
 results.style.width = ( sq.offsetWidth - 2 ) + pixels;
 results.style.left = sq.offsetLeft + pixels;
 results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
+
+function updateOrientationSearchWidth() {
+	switch( window.orientation ) {
+		case 0:
+			updateSearchWidth();
+			break;
+		case 90:
+			updateSearchWidth();
+			break;
+		case -90:
+			updateSearchWidth();
+			break;
+  }
+}
+
+// Point to the updateOrientation function when iPhone switches between portrait and landscape modes.
+window.onorientationchange = updateOrientationSearchWidth;
 
 window.onload = function () {
 	search.addEventListener( 'keyup',
@@ -66,6 +92,12 @@ function createObjectArray( responseXml ) {
 	return sections;
 }
 
+function sqValUpdate( sqValue ) {
+	if ( search ) {
+		search.value = sqValue;
+	}
+}
+
 function writeResults( sections ) {
 		results.style.display = 'block';
 	if ( !sections || sections.length < 1 ) {
@@ -76,7 +108,7 @@ function writeResults( sections ) {
 			var section = sections[i];
 			var rel = i + 1;
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a href='" + section.value + "'>" + section.label + "</a></div>";
+			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a href='" + section.value + "'>" + section.label + "</a><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + section.label + "');\"> + </a></div>";
 			if ( i < ( sections.length - 1 ) ) {
 				html = html + '<hr />';
 			}

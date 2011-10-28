@@ -52,6 +52,28 @@
 .suggestions-result:hover {
 	background-color: #ACD1E9;
 }
+a.sq-val-update {
+	font-size: 1.3em;
+	font-weight:normal;
+	text-decoration: none;
+	color: #000000;
+}
+a.sq-val-update:link {
+	text-decoration: none;
+	color:#000000;
+}
+a.sq-val-update:visited {
+	text-decoration: none;
+	color:#000000;
+}
+a.sq-val-update:hover {
+	text-decoration: none;
+	color:#000000;
+}
+a.sq-val-update:active {
+	text-decoration: none;
+	color:#000000;
+}
 
 #results {
 	display: none;
