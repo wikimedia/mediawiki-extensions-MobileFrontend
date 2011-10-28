@@ -74,6 +74,9 @@ function writeResults( sections ) {
 			var rel = i + 1;
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
 			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a href='" + section.value + "'>" + section.label + "</a></div>";
+			if ( i < ( sections.length - 1 ) ) {
+				html = html + '<hr />';
+			}
 		}
 		html = html + '</div>';
 		results.innerHTML = html;

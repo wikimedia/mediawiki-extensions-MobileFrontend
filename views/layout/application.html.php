@@ -18,7 +18,7 @@ $startScriptTag = '<script type="text/javascript" language="javascript" src="';
 $endScriptTag = '"></script>';
 $javaScriptPath = $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
 
-$openSearchScript = ( self::$isBetaGroupMember ) ? $startScriptTag . $javaScriptPath . 'opensearch.js?version=10282011120715' . $endScriptTag : '';
+$openSearchScript = ( self::$isBetaGroupMember ) ? $startScriptTag . $javaScriptPath . 'opensearch.js?version=10282011120815' . $endScriptTag : '';
 
 $applicationHtml = <<<EOT
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -27,7 +27,7 @@ $applicationHtml = <<<EOT
   <head>
 	<title>{$htmlTitle}</title>
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/common.css?version=10282011120715' media='all' rel='Stylesheet' type='text/css' />
+	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/common.css?version=10282011120815' media='all' rel='Stylesheet' type='text/css' />
 	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$cssFileName}.css?version=10202011120715' media='all' rel='Stylesheet' type='text/css' />
 	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
