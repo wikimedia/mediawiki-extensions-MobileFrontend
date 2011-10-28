@@ -95,6 +95,7 @@ function createObjectArray( responseXml ) {
 function sqValUpdate( sqValue ) {
 	if ( search ) {
 		search.value = sqValue;
+		searchApi( search.value );
 	}
 }
 
