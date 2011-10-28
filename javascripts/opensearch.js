@@ -6,7 +6,7 @@ if ( scriptPath ) {
 
 var timer = -1;
 var typingDelay = 500;
-var numResults = 10;
+var numResults = 5;
 var pixels = 'px';
 
 var results = document.getElementById( 'results' );
@@ -37,6 +37,7 @@ function searchApi( term ) {
 	} else {
 		xmlHttp = new ActiveXObject( 'Microsoft.XMLHTTP' );
 	}
+	xmlHttp.overrideMimeType( 'text/xml' );
 	xmlHttp.onreadystatechange = function() {
 		if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
 			var sections = createObjectArray( xmlHttp.responseXML );
