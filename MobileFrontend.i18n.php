@@ -812,12 +812,14 @@ $messages['bs'] = array(
 );
 
 /** Catalan (Català)
+ * @author Toniher
  * @author Vriullop
  */
 $messages['ca'] = array(
+	'mobile-frontend-desc' => 'Interfície mòbil',
 	'mobile-frontend-search-submit' => 'Vés-hi',
 	'mobile-frontend-search-results' => 'Resultats de la cerca',
-	'mobile-frontend-no-article-found' => 'Cap article trobat',
+	'mobile-frontend-no-article-found' => "No s'ha trobat cap article",
 	'mobile-frontend-featured-article' => "Article destacat d'avui",
 	'mobile-frontend-in-the-news' => 'Actualitat',
 	'mobile-frontend-home-button' => 'Inici',
@@ -827,23 +829,47 @@ $messages['ca'] = array(
 	'mobile-frontend-hide-button' => 'Amaga',
 	'mobile-frontend-disable-button' => 'Inhabilita',
 	'mobile-frontend-back-button' => 'Enrere',
-	'mobile-frontend-regular-site' => 'Vegeu aquesta pàgina a la Viquipèdia',
+	'mobile-frontend-regular-site' => 'Vegeu aquesta pàgina al web {{SITENAME}} habitual',
 	'mobile-frontend-perm-stop-redirect' => 'Inhabilita permanentment la versió mòbil',
 	'mobile-frontend-error-page-title' => 'Tenim un problema!',
-	'mobile-frontend-error-page-text' => "{{SITENAME}} mobile encara està en desenvolupament i estem treballant per a resoldre tots els errors interns. Hem estat notificats d'aquest error i el repararem aviat. Si us plau, torneu-ho a intentar!",
+	'mobile-frontend-error-page-text' => "El web {{SITENAME}} mòbil encara està en desenvolupament i estem treballant per a resoldre tots els errors interns. Hem estat notificats d'aquest error i el repararem aviat. Torneu-ho a provar més endavant!",
 	'mobile-frontend-are-you-sure' => "N'esteu segur?",
-	'mobile-frontend-explain-disable' => "Esteu segur que voleu inhabilitar la versió mòbil de la Viquipèdia? Si trieu <b>Inhabilita</b>, a partir d'aleshores, quan visiteu la Viquipèdia, no se us redirigirà a la versió mòbil.",
+	'mobile-frontend-explain-disable' => "Esteu segur que voleu inhabilitar la versió mòbil del web {{SITENAME}}? Si trieu <b>Inhabilita</b>, a partir d'aleshores, quan visiteu el web {{SITENAME}}, no se us redirigirà a la versió mòbil.",
 	'mobile-frontend-nav-end' => 'Fi',
 	'mobile-frontend-nav-top' => 'A dalt',
 	'mobile-frontend-nav-edit' => 'Edita',
 	'mobile-frontend-nav-history' => 'Historial',
 	'mobile-frontend-search-text' => 'Cerca',
 	'mobile-frontend-contact-us' => 'Si teniu cap pregunta o comentari, no dubteu a contactar-nos per correu a mobile@wikipedia.org',
-	'mobile-frontend-author-link' => "Vegeu aquest fitxer multimèdia a la Viquipèdia normal per veure informació de l'autoria, llicència i descripcions addicionals.",
+	'mobile-frontend-author-link' => "Vegeu aquest fitxer multimèdia al web {{SITENAME}} habitual per consultar la informació de l'autoria, la llicència i les descripcions addicionals.",
 	'mobile-frontend-download-full-version' => 'Baixa la versió sencera',
 	'mobile-frontend-file-namespace' => 'Fitxer',
+	'mobile-frontend-wml-continue' => 'Continua ...',
+	'mobile-frontend-wml-back' => 'Enrere ...',
 	'mobile-frontend-view' => 'Versió per a mòbils',
+	'mobile-frontend-opt-in-message' => 'Voleu provar la nova interfície mòbil?',
 	'mobile-frontend-opt-in-yes-button' => 'sí',
+	'mobile-frontend-opt-in-no-button' => 'no',
+	'mobile-frontend-opt-in-title' => 'Opció a les proves',
+	'mobile-frontend-opt-in-explain' => 'Això us permet entrar al sistema de prova',
+	'mobile-frontend-opt-out-message' => 'Voleu deixar el sistema de proves de la nova interfície mòbil?',
+	'mobile-frontend-opt-out-yes-button' => 'sí',
+	'mobile-frontend-opt-out-no-button' => 'no',
+	'mobile-frontend-opt-out-title' => 'Abandonament del sistema de proves',
+	'mobile-frontend-opt-out-explain' => 'Això us permet deixar el sistema de proves',
+	'mobile-frontend-disable-images' => 'Inhabilita les imatges al lloc web mòbil',
+	'mobile-frontend-enable-images' => 'Habilita les imatges al lloc web mòbil',
+	'mobile-frontend-news-items' => 'Actualitat',
+	'mobile-frontend-leave-feedback-title' => 'Feu-nos comentaris de quina ha estat la vostra experiència des del mòbil',
+	'mobile-frontend-leave-feedback-notice' => "Els vostres comentaris ens ajuden a millorar la experiència mòbil del lloc web. Allò que ens comenteu es publicarà públicament (amb el vostre nom d'usuari, versió de navegador i sistema operatiu) a la pàgina «$1». Proveu d'emprar una línia d'assumpte prou informativa, com ara «Problemes de format de les taules amples». Els vostres comentaris es troben subjectes als nostres termes d'ús.",
+	'mobile-frontend-leave-feedback-subject' => 'Assumpte',
+	'mobile-frontend-leave-feedback-message' => 'Missatge',
+	'mobile-frontend-leave-feedback-cancel' => 'Cancel·la',
+	'mobile-frontend-leave-feedback-submit' => 'Tramet els comentaris',
+	'mobile-frontend-leave-feedback-link-text' => 'Extensió de comentaris de la interfície mòbil',
+	'mobile-frontend-leave-feedback' => 'Comentaris del lloc web mòbil',
+	'mobile-frontend-leave-feedback-thanks' => 'Gràcies pels vostres comentaris!',
+	'mobile-frontend-language' => 'Llengua',
 );
 
 /** Chechen (Нохчийн) */
@@ -2194,10 +2220,13 @@ $messages['hsb'] = array(
 	'mobile-frontend-author-link' => 'Tutu medijowu dataju w normalnej {{GRAMMAR:lokatiw|{{SITENAME}}}} zwobraznić, zo by widźiš informacije wo awtorstwje, licencowanju a přidatnych wopisanjach.',
 	'mobile-frontend-download-full-version' => 'Połnu wersiju sćahnyć',
 	'mobile-frontend-file-namespace' => 'Dataja',
+	'mobile-frontend-wml-continue' => 'Dale ...',
+	'mobile-frontend-wml-back' => 'Wróćo ...',
 	'mobile-frontend-opt-in-yes-button' => 'haj',
 	'mobile-frontend-opt-in-no-button' => 'ně',
 	'mobile-frontend-opt-out-yes-button' => 'haj',
 	'mobile-frontend-opt-out-no-button' => 'ně',
+	'mobile-frontend-leave-feedback-message' => 'Powěsć',
 	'mobile-frontend-leave-feedback-cancel' => 'Přetorhnyć',
 	'mobile-frontend-language' => 'Rěč',
 );
@@ -4859,6 +4888,7 @@ $messages['sq'] = array(
 );
 
 /** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+ * @author Nikola Smolenski
  * @author Rancher
  */
 $messages['sr-ec'] = array(
@@ -4878,7 +4908,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-regular-site' => 'Погледајте ову страницу у обичном режиму',
 	'mobile-frontend-perm-stop-redirect' => 'Трајно онемогући мобилни приказ',
 	'mobile-frontend-error-page-title' => 'Дошло је до проблема!',
-	'mobile-frontend-error-page-text' => 'Мобилно издање викије {{SITENAME}} је још увек у активном развоју, и напорно радимо да поправимо све унутрашње грешке. Обавештени смо о овој грешци и исправићемо је ускоро. Свратите нам опет!',
+	'mobile-frontend-error-page-text' => 'Мобилно издање викија {{SITENAME}} је још увек у активном развоју, и напорно радимо да поправимо све унутрашње грешке. Обавештени смо о овој грешци и исправићемо је ускоро. Свратите нам опет!',
 	'mobile-frontend-are-you-sure' => 'Јесте ли сигурни?',
 	'mobile-frontend-explain-disable' => 'Желите ли да онемогућите мобилно издање овог викија? Ако изаберете <i>Онемогући</i>, од сада па надаље нећете бити преусмеравани на овај мобилни приказ када посетите {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Крај',
