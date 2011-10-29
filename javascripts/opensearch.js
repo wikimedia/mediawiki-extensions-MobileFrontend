@@ -18,26 +18,43 @@ function hideResults() {
 	results.style.display = 'none';
 }
 
-document.onmousedown = function() {
+document.body.onmousedown = function() {
 	whichElement(event);
 }
 results.onmousedown = function() {
 	whichElement(event);
 }
 
-function whichElement(e) { 
-	if (!e) {
+document.body.ontouchstart = function() {
+	whichElement(event);
+}
+results.ontouchstart = function() {
+	whichElement(event);
+}
+
+function whichElement( e ) { 
+	var targ;
+	if ( !e ) {
 		var e = window.event;
-		e.target = e.srcElement;
-		e.cancelBubble = true;
+	}
+	if ( e.target ) {
+		targ = e.target;
+	} else if ( e.srcElement ) {
+		targ = e.srcElement;
+	}
+	
+	if ( targ.nodeType == 3 ) {
+		targ = targ.parentNode;
+	}
+	
+	e.cancelBubble = true;
+	e.stopPropagation();
+	
+	if ( targ.className == "suggestion-result" || 
+		 targ.className == "search-result-item" || 
+		 targ.className == "sq-val-update" ) {
 	} else {
-		e.stopPropagation();
-		if (e.target.className == "suggestion-result" || 
-			e.target.className == "search-result-item" || 
-			e.target.className == "sq-val-update" ) {
-		} else {
-			hideResults();
-		}
+		hideResults();
 	}
 }
 
