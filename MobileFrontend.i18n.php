@@ -1536,6 +1536,7 @@ $messages['ext'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Leyth
  * @author Mjbmr
  */
 $messages['fa'] = array(
@@ -1587,6 +1588,8 @@ $messages['fa'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'ثبت بازخورد',
 	'mobile-frontend-leave-feedback-link-text' => 'بازخورد ظاهر تلفن همراه',
 	'mobile-frontend-leave-feedback' => 'گذاشتن بازخورد',
+	'mobile-frontend-leave-feedback-thanks' => 'تشکر از ارائه بازخورد شما!',
+	'mobile-frontend-language' => 'زبان',
 );
 
 /** Finnish (Suomi)
@@ -2878,7 +2881,7 @@ $messages['ku-latn'] = array(
 	'mobile-frontend-no-article-found' => 'Tu gotar nehate dîtin',
 	'mobile-frontend-in-the-news' => 'Di nûçeyan de',
 	'mobile-frontend-home-button' => 'Mal',
-	'mobile-frontend-random-button' => 'Tesadufî',
+	'mobile-frontend-random-button' => 'Ketober',
 	'mobile-frontend-show-button' => 'Nîşan bide',
 	'mobile-frontend-hide-button' => 'Veşêre',
 	'mobile-frontend-disable-button' => 'Seqet',
