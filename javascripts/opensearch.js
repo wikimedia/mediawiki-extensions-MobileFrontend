@@ -138,6 +138,7 @@ function createObjectArray( responseXml ) {
 function sqValUpdate( sqValue ) {
 	if ( search ) {
 		search.value = sqValue;
+		search.focus();
 		searchApi( search.value );
 	}
 }
