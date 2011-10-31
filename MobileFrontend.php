@@ -356,8 +356,8 @@ class ExtMobileFrontend {
 					$hostParts = explode( '.', $parsedUrl['host'] );
 					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
 				}
-				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
+				$fragmentDelimiter = ( isset( $parsedUrl['fragment'] ) && $parsedUrl['fragment'] != null  ) ? '#' : '';
+				$queryDelimiter = ( isset( $parsedUrl['query'] ) && $parsedUrl['query'] != null  ) ? '?' : '';
 				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 
 				$languageUrls[] = array(
