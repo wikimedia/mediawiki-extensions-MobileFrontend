@@ -344,31 +344,30 @@ class ExtMobileFrontend {
 			'lang' => $wgLanguageCode,
 		);
 		
-		foreach( $wgOut->getLanguageLinks() as $l ) {
-			if ( preg_match( '!^(\w[-\w]*\w):(.+)$!', $l, $m ) ) {
-				$lang = $m[1];
-				$linkText = $m[2];
-			} else {
-				continue; //NOTE: shouldn't happen
-			}
-
+		foreach( $wgOut->getLanguageLinks() as $l ) {			
+			$tmp = explode( ':', $l, 2 );
+			$class = 'interwiki-' . $tmp[0];
+			$lang = $tmp[0];
+			unset( $tmp );		   
 			$nt = Title::newFromText( $l );
-			$parsedUrl = wfParseUrl( $nt->getFullURL() );
-			if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
-				$hostParts = explode( '.', $parsedUrl['host'] );
-				$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
-			}
-			$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-			$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-			$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .  $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+			if ( $nt ) {
+				$parsedUrl = wfParseUrl( $nt->getFullURL() );
+				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
+					$hostParts = explode( '.', $parsedUrl['host'] );
+					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
+				}
+				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
+				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
+				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 
-			$languageUrls[] = array(
-				'href' => $languageUrl,
-				'text' => $linkText,
-				'language' => $wgContLang->getLanguageName( $lang ),
-				'class' => 'interwiki-' . $lang,
-				'lang' => $lang,
-			);
+				$languageUrls[] = array(
+					'href' => $languageUrl,
+					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != '' ? $wgContLang->getLanguageName( $nt->getInterwiki() ) : $l ),
+					'language' => $wgContLang->getLanguageName( $lang ),
+					'class' => $class,
+					'lang' => $lang,
+				);
+			}
 		}
 
 		self::$languageUrls = $languageUrls;
