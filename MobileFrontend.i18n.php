@@ -362,6 +362,7 @@ $messages['ar'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'تعليقات واجهة المحمول',
 	'mobile-frontend-leave-feedback' => 'اترك تعليقات',
 	'mobile-frontend-leave-feedback-thanks' => 'شكرا على إبداء ملاحظاتك!',
+	'mobile-frontend-language' => 'اللغة',
 );
 
 /** Aramaic (ܐܪܡܝܐ)
@@ -1649,6 +1650,7 @@ $messages['fi'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Mobiilinäkymän palaute',
 	'mobile-frontend-leave-feedback' => 'Palaute mobiilisivustosta',
 	'mobile-frontend-leave-feedback-thanks' => 'Kiitos palautteestasi.',
+	'mobile-frontend-language' => 'Kieli',
 );
 
 /** French (Français)
