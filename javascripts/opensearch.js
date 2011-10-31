@@ -63,7 +63,7 @@ function updateSearchWidth() {
 		var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
 		sb.style.width = ( iw - 30 ) + pixels;
 		sq.style.width = ( iw - 110 ) + pixels;
-		search.style.width = ( iw - 140 ) + pixels;
+		search.style.width = ( iw - 130 ) + pixels;
 		if ( results ) {
 			results.style.width = ( sq.offsetWidth - 2 ) + pixels;
 			results.style.left = sq.offsetLeft + pixels;
@@ -77,13 +77,13 @@ updateSearchWidth();
 function updateOrientationSearchWidth() {
 	switch( window.orientation ) {
 		case 0:
-			updateSearchWidth();
+			setTimeout( "updateSearchWidth()", 200 );
 			break;
 		case 90:
-			updateSearchWidth();
+			setTimeout( "updateSearchWidth()", 200 );
 			break;
 		case -90:
-			updateSearchWidth();
+			setTimeout( "updateSearchWidth()", 200 );
 			break;
   }
 }
