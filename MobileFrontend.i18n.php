@@ -3730,6 +3730,7 @@ $messages['nn'] = array(
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Event
+ * @author Jon Harald Søby
  * @author Nghtwlkr
  */
 $messages['no'] = array(
@@ -3749,27 +3750,30 @@ $messages['no'] = array(
 	'mobile-frontend-regular-site' => 'Vis denne siden på vanlig {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'Deaktiver mobilside permanent',
 	'mobile-frontend-error-page-title' => 'Vi har et problem!',
-	'mobile-frontend-error-page-text' => '{{SITENAME}} mobil er fortsatt under aktiv utvikling og vi jobber hardt med å fikse alle våre interne feil. Vi har blitt varslet om denne feilen, og vil fikse den snart. Kom gjerne tilbake senere!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} for mobil er fortsatt under aktiv utvikling, og vi jobber hardt med å fikse våre interne feil. Vi har blitt varslet om denne feilen, og vil fikse den snart. Kom gjerne tilbake!',
 	'mobile-frontend-are-you-sure' => 'Er du sikker?',
-	'mobile-frontend-explain-disable' => 'Er du sikker på at du vil deaktivere den mobile utgaven av {{SITENAME}}? Dersom du velger <b>Deaktiver</b> vil du fra nå av, hver gang du besøker {{SITENAME}}, ikke lenger bli omdirigert til denne mobilvisningen av {{SITENAME}}.',
+	'mobile-frontend-explain-disable' => 'Er du sikker på at du ønsker å deaktivere mobilutgaven av {{SITENAME}}? Om du velger <b>Deaktiver</b> vil du ikke lenger bli omdirigert til mobilutgaven av {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Slutt',
 	'mobile-frontend-nav-top' => 'Topp',
 	'mobile-frontend-nav-edit' => 'Rediger',
 	'mobile-frontend-nav-history' => 'Historikk',
 	'mobile-frontend-search-text' => 'Søk',
 	'mobile-frontend-contact-us' => 'Om du har spørsmål eller kommentarer, send oss en e-post på mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Vis denne mediafilen i vanlig {{SITENAME}} for å se informasjon om forfatterskap, lisensiering og ytterligere beskrivelser.',
+	'mobile-frontend-author-link' => 'Vis denne mediefilen på vanlig {{SITENAME}} for å se informasjon om opphavsperson, lisensiering og ytterligere beskrivelser.',
 	'mobile-frontend-download-full-version' => 'Last ned fullversjon',
 	'mobile-frontend-file-namespace' => 'Fil',
 	'mobile-frontend-wml-continue' => 'Fortsett ...',
 	'mobile-frontend-wml-back' => 'Tilbake ...',
 	'mobile-frontend-view' => 'Mobilvisning',
+	'mobile-frontend-opt-in-message' => 'Bli med i vår valgfrie testing av den nye mobilutgaven?',
 	'mobile-frontend-opt-in-yes-button' => 'ja',
 	'mobile-frontend-opt-in-no-button' => 'nei',
 	'mobile-frontend-opt-in-title' => 'Påmelding til testing',
 	'mobile-frontend-opt-in-explain' => 'Dette tillater deg å delta i testingen',
+	'mobile-frontend-opt-out-message' => 'Forlate valgfri testing av mobilutgaven?',
 	'mobile-frontend-opt-out-yes-button' => 'ja',
 	'mobile-frontend-opt-out-no-button' => 'nei',
+	'mobile-frontend-opt-out-title' => 'Meld deg ut av testing',
 	'mobile-frontend-opt-out-explain' => 'Dette lar deg forlate testen',
 	'mobile-frontend-disable-images' => 'Deaktiver bilder på mobilsiden',
 	'mobile-frontend-enable-images' => 'Gjør tilgjengelig bilder på mobilnettstedet',
@@ -3783,6 +3787,7 @@ $messages['no'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Tilbakemelding på utvidelsen MobileFrontend',
 	'mobile-frontend-leave-feedback' => 'Tilbakemelding på mobilnettsted',
 	'mobile-frontend-leave-feedback-thanks' => 'Takk for din tilbakemelding!',
+	'mobile-frontend-language' => 'Språk',
 );
 
 /** Occitan (Occitan)
