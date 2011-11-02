@@ -754,6 +754,7 @@ class ExtMobileFrontend {
 			$htmlTitle = self::$messages['mobile-frontend-opt-in-title'];
 			$explainOptIn = self::$messages['mobile-frontend-opt-in-explain'];
 			$optInMessage = self::$messages['mobile-frontend-opt-in-message'];
+			$formAction = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/information/optin.html.php' );
@@ -778,6 +779,7 @@ class ExtMobileFrontend {
 			$htmlTitle = self::$messages['mobile-frontend-opt-out-title'];
 			$explainOptOut = self::$messages['mobile-frontend-opt-out-explain'];
 			$optOutMessage = self::$messages['mobile-frontend-opt-out-message'];
+			$formAction = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
 			require( 'views/layout/_search_webkit.html.php' );
 			require( 'views/layout/_footmenu_default.html.php' );
 			require( 'views/information/optout.html.php' );
