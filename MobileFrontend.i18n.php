@@ -1214,7 +1214,9 @@ $messages['diq'] = array(
 	'mobile-frontend-search-text' => 'Cıgeyre',
 );
 
-/** Lower Sorbian (Dolnoserbski) */
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
 $messages['dsb'] = array(
 	'mobile-frontend-search-submit' => 'Wótpósłaś',
 	'mobile-frontend-search-results' => 'Pytańske wuslědki',
@@ -1228,21 +1230,25 @@ $messages['dsb'] = array(
 	'mobile-frontend-hide-button' => 'Schowaś',
 	'mobile-frontend-disable-button' => 'Znjemóžniś',
 	'mobile-frontend-back-button' => 'Slědk',
-	'mobile-frontend-regular-site' => 'Toś ten bok se w normalnej Wikipediji woglědaś',
+	'mobile-frontend-regular-site' => 'Toś ten bok se w normalnej {{GRAMMAR:lokatiw|{{SITENAME}}}} woglědaś',
 	'mobile-frontend-perm-stop-redirect' => 'Mobilne sedło na pśecej znjemóžniś',
 	'mobile-frontend-error-page-title' => 'Mamy problem!',
-	'mobile-frontend-error-page-text' => 'Mobilna Wikipedija se hyšći wuwija a źěłamy žurnje, aby my wše naše interne zmólki wótpórali. Smy se wó toś tej zmólce informěrowali a wótpórajomy jen skóro. Pšosym wopytaj pózdźej hyšći raz!',
+	'mobile-frontend-error-page-text' => 'Mobilny naglěd {{GRAMMAR:genitiw|{{SITENAME}}}} se hyšći aktiwnje wuwija a źěłamy žurnje, aby my wše naše interne zmólki wótpórali. Smy se wó toś tej zmólce informěrowali a wótpórajomy jen skóro. Pšosym wopytaj pózdźej hyšći raz!',
 	'mobile-frontend-are-you-sure' => 'Sy se wěsty?',
-	'mobile-frontend-explain-disable' => 'Coš napšawdu mobilnu wersiju Wikipedije znjemóžniś? Jolic wuběraš <b>Znjemóžniś</b>, njebuźoš se wot togo casa k mobilnemu naglědoju Wikipedije dalej pósrědnjaś, gaž woglědujoš se Wikipediju.',
+	'mobile-frontend-explain-disable' => 'Coš napšawdu mobilnu wersiju {{GRAMMAR:genitiw|{{SITENAME}}}} znjemóžniś? Jolic wuběraš <b>Znjemóžniś</b>, njebuźoš se wót togo casa k mobilnemu naglědoju {{GRAMMAR:genitiw|{{SITENAME}}}} dalej pósrědnjaś, gaž woglědujoš se {{GRAMMAR:akuzatiw|{{SITENAME}}}}.',
 	'mobile-frontend-nav-end' => 'Kóńc',
 	'mobile-frontend-nav-top' => 'Górjejce',
 	'mobile-frontend-nav-edit' => 'Wobźěłaś',
 	'mobile-frontend-nav-history' => 'Historija',
 	'mobile-frontend-search-text' => 'Pytaś',
 	'mobile-frontend-contact-us' => 'Jolic maš pšašanja abo komentary, pósćel pšosym	e-mail na mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Toś tu medijowu dataju w regularnej Wikipediji pokazaś, aby se woglědał informacije wó awtorstwje, licencowanju a pśidatne wopisanje.',
+	'mobile-frontend-author-link' => 'Toś tu medijowu dataju w regularnej {{GRAMMAR:lokatiw|{{SITENAME}}}} pokazaś, aby se woglědał informacije wó awtorstwje, licencowanju a pśidatne wopisanja.',
 	'mobile-frontend-download-full-version' => 'Połnu wersiju ześěgnuś',
 	'mobile-frontend-file-namespace' => 'Dataja',
+	'mobile-frontend-opt-in-yes-button' => 'jo',
+	'mobile-frontend-opt-in-no-button' => 'ně',
+	'mobile-frontend-opt-out-yes-button' => 'jo',
+	'mobile-frontend-opt-out-no-button' => 'ně',
 );
 
 /** Central Dusun (Dusun Bundu-liwan) */
@@ -5013,6 +5019,7 @@ $messages['su'] = array(
 
 /** Swedish (Svenska)
  * @author Ainali
+ * @author Diupwijk
  * @author Lokal Profil
  * @author WikiPhoenix
  */
@@ -5070,6 +5077,7 @@ $messages['sv'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Feedback för mobilgränssnitt',
 	'mobile-frontend-leave-feedback' => 'Lämna feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Tack för din feedback!',
+	'mobile-frontend-language' => 'Språk',
 );
 
 /** Swahili (Kiswahili) */
