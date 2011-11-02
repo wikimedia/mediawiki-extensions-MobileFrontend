@@ -863,17 +863,25 @@ class ExtMobileFrontend {
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
 		$buttons = Html::element( 'button',
-						array( 'class' => 'section_heading show',
-								'section_id' => $headings ),
-								$show ) .
-				Html::element( 'button',
-						array( 'class' => 'section_heading hide',
-								'section_id' => $headings ),
-								$hide );
-		$base .= Html::openElement( 'h2',
-						array( 'class' => 'section_heading',
-								'id' => 'section_' . $headings ) ) .
-			$buttons .
+					array( 'class' => 'section_heading show',
+							'section_id' => $headings ),
+							$show ) .
+			Html::element( 'button',
+					array( 'class' => 'section_heading hide',
+							'section_id' => $headings ),
+							$hide );
+		if ( self::$device['supports_javascript'] ) {
+			$h2OnClick = 'javascript:wm_toggle_section(' . $headings . ');';
+			$base .= Html::openElement( 'h2',
+							array( 'class' => 'section_heading',
+									'id' => 'section_' . $headings,
+									'onclick' => $h2OnClick ) );
+		} else {
+			$base .= Html::openElement( 'h2',
+							array( 'class' => 'section_heading',
+									'id' => 'section_' . $headings ) );
+		}
+		$base .= $buttons .
 				Html::rawElement( 'span',
 						array( 'id' => $headlineId ),
 								$matches[2] ) .

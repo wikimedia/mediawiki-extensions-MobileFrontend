@@ -8,7 +8,7 @@ initClearSearchLink();
 function initClearSearchLink() {
 	clearSearch.setAttribute( 'title','Clear' );
 	clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
-	search.addEventListener( 'keyup', _handleClearSearchLink, false );
+	search.addEventListener( 'keyup', handleClearSearchLink, false );
 }
 
 function navigateToLanguageSelection() {
@@ -21,7 +21,7 @@ function navigateToLanguageSelection() {
 	}
 }
 
-function _handleClearSearchLink() {
+function handleClearSearchLink() {
 	if ( clearSearch ) {
 		if ( search.value.length > 0 ) {
 			clearSearch.style.display = 'block';
@@ -58,16 +58,6 @@ function logoClick() {
 	}
 };
 
-// Also problematic, not working until the page loads...
-for( var h = document.getElementsByTagName( 'h2' ), i = 0; i < h.length; i++ ) {
-	if ( h[i].className == 'section_heading' ) {
-		h[i].onclick = function() {
-			var section_idx = parseInt( this.id.replace( /section_(\d+)/, '$1' ) );
-			wm_toggle_section( section_idx );
-		}
-	}
-};
-
 // And this...
 for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 	a[i].onclick = function() {
@@ -75,7 +65,7 @@ for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 			wm_reveal_for_hash( this.hash );
 		}
 	}
-};
+}
 
 if ( document.location.hash.indexOf( '#' ) == 0 ) {
 	wm_reveal_for_hash( document.location.hash );
