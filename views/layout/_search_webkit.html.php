@@ -16,10 +16,12 @@ $languageSelection = self::buildLanguageSelection() . '<br/>';
 $languageSelectionText = '<b>' . self::$messages['mobile-frontend-language'] . ':</b><br/>';
 $languageSelectionDiv = ( self::$isBetaGroupMember ) ? '<div id="languageselectionsection">' . $languageSelectionText . $languageSelection . '</div>' : '';
 
+$logoOnClick = (self::$device['supports_javascript']) ? 'onclick="javascript:logoClick();"' : '';
+
 $searchWebkitHtml = <<<EOD
 <div id='header'>
 	<div id='searchbox'>
-	<img width="35" height="22" alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' />
+	<img width="35" height="22" alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' {$logoOnClick} />
 	<form action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 	  <input type="hidden" value="Special:Search" name="title" />
 		<div id="sq" class="divclearable">

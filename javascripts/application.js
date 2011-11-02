@@ -45,10 +45,7 @@ function clearSearchBox( event ) {
 	}
 }
 
-// I don't think this makes sense. Loading this here means that this button
-// won't function until the page is loaded. It would probably be an
-// improvement to just attach an onclick straight into the html.
-document.getElementById( 'logo' ).onclick = function() {
+function logoClick() {
 	var n = document.getElementById( 'nav' ).style;
 	n.display = n.display == 'block' ? 'none' : 'block';
 	if (n.display == 'block') {
