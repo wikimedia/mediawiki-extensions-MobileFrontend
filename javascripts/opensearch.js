@@ -96,6 +96,7 @@ window.onload = function () {
 			if ( term.length < 1 ) {
 				results.innerHTML = '';
 			} else {
+				term = encodeURIComponent( term );
 				timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 			}
 		}, false );
