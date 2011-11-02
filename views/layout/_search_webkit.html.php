@@ -16,7 +16,7 @@ $languageSelection = self::buildLanguageSelection() . '<br/>';
 $languageSelectionText = '<b>' . self::$messages['mobile-frontend-language'] . ':</b><br/>';
 $languageSelectionDiv = ( self::$isBetaGroupMember ) ? '<div id="languageselectionsection">' . $languageSelectionText . $languageSelection . '</div>' : '';
 
-$logoOnClick = (self::$device['supports_javascript']) ? 'onclick="javascript:logoClick();"' : '';
+$logoOnClick = ( self::$device['supports_javascript'] ) ? 'onclick="javascript:logoClick();"' : '';
 
 $searchWebkitHtml = <<<EOD
 <div id='header'>
