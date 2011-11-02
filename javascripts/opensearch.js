@@ -78,8 +78,9 @@ updateSearchWidth();
 function updateOrientationSearchWidth() {
 	switch( window.orientation ) {
 		case 0:
-		case 90:
 		case -90:
+		case 90:
+		case 180:
 			setTimeout( "updateSearchWidth()", 200 );
 			break;
   }
