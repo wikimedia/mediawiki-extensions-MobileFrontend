@@ -52,6 +52,7 @@ function whichElement( e ) {
 	
 	if ( targ.className == "suggestion-result" || 
 		 targ.className == "search-result-item" || 
+		 targ.className == "suggestions-result" ||
 		 targ.className == "sq-val-update" ) {
 	} else {
 		hideResults();
@@ -155,7 +156,7 @@ function writeResults( sections ) {
 			var section = sections[i];
 			var rel = i + 1;
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a class=\"search-result-item\" href='" + section.value + "'>" + section.label + "</a><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + section.label + "');\"> + &nbsp;</a></div>";
+			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + section.label + "');\">+</a><a class=\"search-result-item\" href='" + section.value + "'>" + section.label + "</a></div>";
 			if ( i < ( sections.length - 1 ) ) {
 				html = html + '<hr />';
 			}

@@ -27,6 +27,7 @@
 	line-height: 1.8em;
 	padding: 0.01em 0.25em;
 	text-align: left;
+	postion: relative;
 }
 
 .suggestions-result a {
@@ -54,10 +55,14 @@
 }
 a.sq-val-update {
 	font-size: 1.3em;
-	font-weight:normal;
+	display: block;
+	font-weight: normal;
 	text-decoration: none;
 	color: #000000;
-	float: right;
+	position: absolute;
+	right: 0;
+	width: 1.5em;
+	text-align: center;
 }
 a.sq-val-update:link {
 	text-decoration: none;
@@ -74,6 +79,11 @@ a.sq-val-update:hover {
 a.sq-val-update:active {
 	text-decoration: none;
 	color:#000000;
+}
+
+a.search-result-item {
+	display: block;
+	margin-right: 2em;
 }
 
 #results {
