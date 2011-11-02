@@ -18,17 +18,17 @@ function hideResults() {
 	results.style.display = 'none';
 }
 
-document.body.onmousedown = function() {
+document.body.onmousedown = function( event ) {
 	whichElement(event);
 }
-results.onmousedown = function() {
+results.onmousedown = function( event ) {
 	whichElement(event);
 }
 
-document.body.ontouchstart = function() {
+document.body.ontouchstart = function( event ) {
 	whichElement(event);
 }
-results.ontouchstart = function() {
+results.ontouchstart = function( event ) {
 	whichElement(event);
 }
 
