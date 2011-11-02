@@ -78,11 +78,7 @@ updateSearchWidth();
 function updateOrientationSearchWidth() {
 	switch( window.orientation ) {
 		case 0:
-			setTimeout( "updateSearchWidth()", 200 );
-			break;
 		case 90:
-			setTimeout( "updateSearchWidth()", 200 );
-			break;
 		case -90:
 			setTimeout( "updateSearchWidth()", 200 );
 			break;
