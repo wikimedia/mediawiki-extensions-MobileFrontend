@@ -517,7 +517,9 @@ $messages['ba'] = array(
 	'mobile-frontend-file-namespace' => 'Файл',
 );
 
-/** Bavarian (Boarisch) */
+/** Bavarian (Boarisch)
+ * @author Mucalexx
+ */
 $messages['bar'] = array(
 	'mobile-frontend-search-results' => 'Suachergebniss',
 	'mobile-frontend-no-article-found' => 'Koa Artikl gfundn',
@@ -533,18 +535,35 @@ $messages['bar'] = array(
 	'mobile-frontend-regular-site' => 'Seitn in da normalen {{SITENAME}} zeign',
 	'mobile-frontend-perm-stop-redirect' => 'De mobile Version füa imma deaktiviarn',
 	'mobile-frontend-error-page-title' => 'Es gibt a Problem!',
-	'mobile-frontend-error-page-text' => 'De mobile {{SITENAME}} is imma no im Entwicklungsstadium und mia versuchan alle unsane internen Fehla zu korrigiern. Von dem Fehla wissma scho und richtns boid. Versuchs später no amal.',
+	'mobile-frontend-error-page-text' => "Dé móbile Auhsicht voh {{SITENAME}} befindt sé noh in da Entwicklung und mia bemian ins, noh bsteehende interne Feeler z' behém. Mir san ywer dén Feeler informird worn und werns Próblém in Kyrze lésen. Bittscheh vasuachs spaader nohamoi.",
 	'mobile-frontend-are-you-sure' => 'Bist sicha?',
-	'mobile-frontend-explain-disable' => "Bist sicha, dassd' de mobile Version deaktiviarn mogst? Wennst <b>Deaktiviarn</b> nimmst, dann werst ab jetztad beim Bsuacha von da {{SITENAME}} nimma aufd mobile {{SITENAME}} weitergleit.",
+	'mobile-frontend-explain-disable' => "Bist da dert sicher, daas du dé móbile Auhsicht voh {{SITENAME}} deaktiviern mechterst? Waunn du <b>Deaktiviern</b> wöst, werst ob iatz ba am Bsuach voh {{SITENAME}} nimmer autómaatisch auf d' móbile Auhsicht voh {{SITENAME}} weidergloatt.",
 	'mobile-frontend-nav-end' => 'End',
 	'mobile-frontend-nav-top' => 'Ofang',
 	'mobile-frontend-nav-edit' => 'Werkln',
 	'mobile-frontend-nav-history' => 'Versionen/Autorn',
 	'mobile-frontend-search-text' => 'Suach',
 	'mobile-frontend-contact-us' => 'Wennst no Frong oda Anmerkunga host, schick uns a E-Mail and Adressn mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Zeig de Datei in da normalen {{SITENAME}}, um Informationen üba Autorn, Lizenzn und a ausführlichere Beschreibugn zum seng.',
+	'mobile-frontend-author-link' => "Dé Daatei in da reegulärn Auhsicht voh {{SITENAME}} auhzoang, um Informaziónen ywer Autórn, Lizenzen und daweiterde Bschreiwungen z' seeng.",
 	'mobile-frontend-download-full-version' => 'Ganze Datei obalodn',
 	'mobile-frontend-file-namespace' => 'Datai',
+	'mobile-frontend-wml-continue' => 'Weider ...',
+	'mobile-frontend-wml-back' => 'Zruck ...',
+	'mobile-frontend-view' => 'Móbile Auhsicht',
+	'mobile-frontend-opt-in-message' => 'An dém Test voh da neichen móbiln Auhsicht middoah?',
+	'mobile-frontend-opt-in-yes-button' => 'Jo',
+	'mobile-frontend-opt-in-no-button' => 'Naa',
+	'mobile-frontend-opt-in-title' => 'Teilnauhm an Tests',
+	'mobile-frontend-opt-in-explain' => "Dés do daméglicht d' Teilnaum an Tests",
+	'mobile-frontend-opt-out-message' => 'Nimmer an dé Test voh da neichen móbiln Auhsicht middoah?',
+	'mobile-frontend-opt-out-yes-button' => 'Jo',
+	'mobile-frontend-opt-out-no-button' => 'Naa',
+	'mobile-frontend-opt-out-title' => "D' Teilnaum an Tests beénden",
+	'mobile-frontend-opt-out-explain' => "Dés do daméglicht d' Teilnaum an Tests z' beénden",
+	'mobile-frontend-disable-images' => 'Büder in da móbiln Auhsicht deaktiviern',
+	'mobile-frontend-enable-images' => 'Büder in da móbiln Auhsicht aktiviern',
+	'mobile-frontend-news-items' => 'In dé Noochrichten',
+	'mobile-frontend-leave-feedback-title' => 'Gib ins bittscheh a Ryckmödung zua deine Erforungen mid da móbün Auhsicht',
 );
 
 /** Belarusian (Беларуская) */
@@ -1245,10 +1264,15 @@ $messages['dsb'] = array(
 	'mobile-frontend-author-link' => 'Toś tu medijowu dataju w regularnej {{GRAMMAR:lokatiw|{{SITENAME}}}} pokazaś, aby se woglědał informacije wó awtorstwje, licencowanju a pśidatne wopisanja.',
 	'mobile-frontend-download-full-version' => 'Połnu wersiju ześěgnuś',
 	'mobile-frontend-file-namespace' => 'Dataja',
+	'mobile-frontend-wml-continue' => 'Dalej ...',
+	'mobile-frontend-wml-back' => 'Slědk ...',
 	'mobile-frontend-opt-in-yes-button' => 'jo',
 	'mobile-frontend-opt-in-no-button' => 'ně',
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'ně',
+	'mobile-frontend-leave-feedback-message' => 'Powěsć',
+	'mobile-frontend-leave-feedback-cancel' => 'Pśetergnuś',
+	'mobile-frontend-language' => 'Rěc',
 );
 
 /** Central Dusun (Dusun Bundu-liwan) */
@@ -1584,8 +1608,8 @@ $messages['fa'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'بله',
 	'mobile-frontend-opt-out-no-button' => 'خیر',
 	'mobile-frontend-opt-out-explain' => 'این به شما اجازه آزمایش را می‌دهد',
-	'mobile-frontend-disable-images' => 'غیر فعال کردن تصاویر بر روی وب‌گاه تلفن همراه',
-	'mobile-frontend-enable-images' => 'فعال سازی تصاویر بر روی وب‌گاه تلفن همراه',
+	'mobile-frontend-disable-images' => 'غیر فعال کردن تصاویر بر روی تارنمای تلفن همراه',
+	'mobile-frontend-enable-images' => 'فعال سازی تصاویر بر روی تارنمای تلفن همراه',
 	'mobile-frontend-news-items' => 'در خبرها',
 	'mobile-frontend-leave-feedback-title' => 'دربارهٔ ظاهر تلفن همراه، بازخورد بگذارید',
 	'mobile-frontend-leave-feedback-notice' => 'بازخورد شما به طور عمومی، همراه با نام شما، نسخهٔ مرورگر و سیستم عامل در صفحه ارسال خواهد شد. "$1"',
