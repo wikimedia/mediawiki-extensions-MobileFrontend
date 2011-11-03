@@ -144,20 +144,30 @@ function sqValUpdate( sqValue ) {
 	}
 }
 
+function htmlEntities( str ) {
+    return String( str ).replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' ).replace( /"/g, '&quot;' ).replace( /'/g, '&#39;' );
+}
+
+function escapeJsString( str ) {
+	return String( str ).replace( /\\/g, '\\\\' ).replace( /'/g, "\\'" ).replace( /\n/g, '\\n' );
+}
+
 function writeResults( sections ) {
 		results.style.display = 'block';
 	if ( !sections || sections.length < 1 ) {
 		results.innerHTML = "No results";
-	} else {
+	} else {		
 		var html = '<div class="suggestions-results">';
 		for ( i = 0; i < sections.length; i++ ) {
 			var section = sections[i];
 			var rel = i + 1;
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			html = html + "<div class=\"suggestions-result\" rel=\"" + rel + "\" title=\"" + section.label + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + section.label + "');\">+</a><a class=\"search-result-item\" href='" + section.value + "'>" + section.label + "</a></div>";
+			console.log(htmlEntities(escapeJsString( section.label)));
+			html = html + "<div class=\"suggestions-result\" rel=\"" + htmlEntities( rel ) + "\" title=\"" + htmlEntities( section.label ) + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + htmlEntities( escapeJsString( section.label ) ) + "');\">+</a><a class=\"search-result-item\" href='" + htmlEntities( section.value ) + "'>" + htmlEntities( section.label ) + "</a></div>";
 			if ( i < ( sections.length - 1 ) ) {
 				html = html + '<hr />';
 			}
+			console.log(html);
 		}
 		html = html + '</div>';
 		results.innerHTML = html;
