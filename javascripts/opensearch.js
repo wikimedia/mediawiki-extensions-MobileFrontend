@@ -162,7 +162,6 @@ function writeResults( sections ) {
 			var section = sections[i];
 			var rel = i + 1;
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			console.log(htmlEntities(escapeJsString( section.label)));
 			html = html + "<div class=\"suggestions-result\" rel=\"" + htmlEntities( rel ) + "\" title=\"" + htmlEntities( section.label ) + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + htmlEntities( escapeJsString( section.label ) ) + "');\">+</a><a class=\"search-result-item\" href='" + htmlEntities( section.value ) + "'>" + htmlEntities( section.label ) + "</a></div>";
 			if ( i < ( sections.length - 1 ) ) {
 				html = html + '<hr />';
