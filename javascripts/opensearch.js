@@ -166,7 +166,6 @@ function writeResults( sections ) {
 			if ( i < ( sections.length - 1 ) ) {
 				html = html + '<hr />';
 			}
-			console.log(html);
 		}
 		html = html + '</div>';
 		results.innerHTML = html;
