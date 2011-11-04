@@ -2392,6 +2392,7 @@ $messages['ia'] = array(
 
 /** Indonesian (Bahasa Indonesia)
  * @author Aldnonymous
+ * @author Farras
  * @author Kenrick95
  */
 $messages['id'] = array(
@@ -2448,6 +2449,7 @@ $messages['id'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'Umpan Balik Ekstensi MobileFrontend',
 	'mobile-frontend-leave-feedback' => 'Umpan balik situs seluler',
 	'mobile-frontend-leave-feedback-thanks' => 'Terima kasih, atas umpan balik Anda!',
+	'mobile-frontend-language' => 'Bahasa',
 );
 
 /** Igbo (Igbo)
