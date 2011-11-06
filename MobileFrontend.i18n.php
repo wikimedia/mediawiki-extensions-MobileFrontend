@@ -380,6 +380,7 @@ $messages['arc'] = array(
 	'mobile-frontend-search-text' => 'ܒܨܝ',
 	'mobile-frontend-file-namespace' => 'ܠܦܦܐ',
 	'mobile-frontend-view' => 'ܓܠܚܐ ܒܙܥܘܩܐ ܟܘܪܝܐ (ܡܫܢܝܢܐ)',
+	'mobile-frontend-language' => 'ܠܫܢܐ',
 );
 
 /** Asturian (Asturianu)
@@ -5625,6 +5626,7 @@ $messages['vi'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Gửi phản hồi',
 	'mobile-frontend-leave-feedback-link-text' => 'Phản hồi về giao diện di động',
 	'mobile-frontend-leave-feedback' => 'Gửi phản hồi',
+	'mobile-frontend-feedback-page' => 'Project:Phản hồi Phần mở rộng Di động',
 	'mobile-frontend-leave-feedback-thanks' => 'Cám ơn phản hồi của bạn!',
 	'mobile-frontend-language' => 'Ngôn ngữ',
 );
