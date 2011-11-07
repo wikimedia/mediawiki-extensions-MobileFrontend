@@ -3920,6 +3920,7 @@ $messages['or'] = array(
 	'mobile-frontend-leave-feedback-link-text' => 'ମୋବାଇଲ ଆଗ ଭାଗ ଏକ୍ସଟେନସନ ମତାମତ',
 	'mobile-frontend-leave-feedback' => 'ମୋବାଇଲ ସାଇଟ ମତାମତ',
 	'mobile-frontend-leave-feedback-thanks' => 'ଆପଣଙ୍କ ମତାମତ ନିମନ୍ତେ ଧନ୍ୟବାଦ!',
+	'mobile-frontend-language' => 'ଭାଷା',
 );
 
 /** Ossetic (Ирон)
@@ -4474,6 +4475,8 @@ $messages['ro'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Trimite părerea',
 	'mobile-frontend-leave-feedback-link-text' => 'Păreri despre interfața mobilă',
 	'mobile-frontend-leave-feedback' => 'Scrieți-vă părerea',
+	'mobile-frontend-leave-feedback-thanks' => 'Vă mulțumim pentru feedback!',
+	'mobile-frontend-language' => 'Limbă',
 );
 
 /** Tarandíne (Tarandíne)
