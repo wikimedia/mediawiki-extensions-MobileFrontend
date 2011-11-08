@@ -310,7 +310,7 @@ class ExtMobileFrontend {
 		$skin = $wgUser->getSkin();
 		$copyright = $skin->getCopyright();
 		if ( stristr( $copyright, '<li class="noprint">' ) !== false ) {
-			$copyright = '<ul><li>' . $copyright . '</li></ul>';
+			$copyright = '<ul id="footer-info"><li>' . $copyright . '</li></ul>';
 		}
 
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
