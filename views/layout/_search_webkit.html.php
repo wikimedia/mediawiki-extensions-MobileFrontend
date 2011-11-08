@@ -10,11 +10,11 @@ $randomButton = self::$messages['mobile-frontend-random-button'];
 $scriptUrl = wfScript();
 $searchBoxDisplayNone = ( self::$hideSearchBox ) ? ' style="display: none;" ' : '';
 
-$openSearchResults = ( self::$isBetaGroupMember ) ? '<div id="results"></div>' : '';
+$openSearchResults = '<div id="results"></div>';
 
 $languageSelection = self::buildLanguageSelection() . '<br/>';
 $languageSelectionText = '<b>' . self::$messages['mobile-frontend-language'] . ':</b><br/>';
-$languageSelectionDiv = ( self::$isBetaGroupMember ) ? '<div id="languageselectionsection">' . $languageSelectionText . $languageSelection . '</div>' : '';
+$languageSelectionDiv = '<div id="languageselectionsection">' . $languageSelectionText . $languageSelection . '</div>';
 
 $logoOnClick = ( self::$device['supports_javascript'] ) ? 'onclick="javascript:logoClick();"' : '';
 
