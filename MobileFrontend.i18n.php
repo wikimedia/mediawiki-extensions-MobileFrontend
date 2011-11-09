@@ -2698,7 +2698,9 @@ $messages['kl'] = array(
 	'mobile-frontend-contact-us' => 'Apeqqutit oqaaseqaatillu uunga tikilluaqqusaapput mobile@wikipedia.org',
 );
 
-/** Khmer (ភាសាខ្មែរ) */
+/** Khmer (ភាសាខ្មែរ)
+ * @author គីមស៊្រុន
+ */
 $messages['km'] = array(
 	'mobile-frontend-search-submit' => 'ទៅ',
 	'mobile-frontend-search-results' => 'លទ្ធផលស្វែងរក',
@@ -2712,21 +2714,24 @@ $messages['km'] = array(
 	'mobile-frontend-hide-button' => 'លាក់',
 	'mobile-frontend-disable-button' => 'ឈប់ប្រើ',
 	'mobile-frontend-back-button' => 'ត្រលប់ក្រោយ',
-	'mobile-frontend-regular-site' => 'បើកមើលទំព័រនេះនៅលើវិគីភីឌាធម្មតា',
+	'mobile-frontend-regular-site' => 'បើកមើលទំព័រនេះនៅលើ{{SITENAME}}ធម្មតា',
 	'mobile-frontend-perm-stop-redirect' => 'ឈប់ប្រើវិបសាយចល័តជារៀងរហូត',
 	'mobile-frontend-error-page-title' => 'យើងមានបញ្ហាហើយ!',
-	'mobile-frontend-error-page-text' => 'វិគីភីឌាចល័តកំពុងស្ថិតក្រោមការអភិវឌ្ឍន៍​យ៉ាងសកម្ម ហើយយើងខ្ញុំកំពុង​ប្រឹងប្រែងយ៉ាងខ្លាំងក្លា​ក្នុងការកែប្រែកំហុសផ្ទៃក្នុងទាំងឡាយ។ យើងខ្ញុំទទួលការប្រាប់ព័ត៌មាន​អំពីកំហុសទាំងនោះ​ហើយយើងខ្ញុំនឹង​ធ្វើការកែប្រែវានាពេលឆាប់ៗនេះ។ សូមត្រលប់មកពិនិត្យមើលម្ដងទៀត!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} ចល័តកំពុងស្ថិតក្រោមការអភិវឌ្ឍន៍​យ៉ាងសកម្ម ហើយយើងខ្ញុំកំពុង​ប្រឹងប្រែងយ៉ាងខ្លាំងក្លា​ក្នុងការកែប្រែកំហុសផ្ទៃក្នុងទាំងឡាយ។ យើងខ្ញុំទទួលការប្រាប់ព័ត៌មាន​អំពីកំហុសទាំងនោះ​ហើយយើងខ្ញុំនឹង​ធ្វើការកែប្រែវានាពេលឆាប់ៗនេះ។ សូមត្រលប់មកពិនិត្យមើលម្ដងទៀត!',
 	'mobile-frontend-are-you-sure' => 'តើអ្នកប្រាកដហើយ?',
-	'mobile-frontend-explain-disable' => 'តើអ្នកពិតជាចង់ឈប់ប្រើវើសិនសំរាប់ទូរស័ព្ទចល័តរបស់វិគីភីឌាមែនទេ? ប្រើសិនបើអ្នកជ្រើសយក <b>ឈប់ប្រើ</b> នោះចាប់ពីពេលនេះទៅ នៅពេលដែលអ្នកចូលមើលវិគីភីឌា អ្នកនឹងមិនត្រូវបញ្ជូនផ្ទាល់​ទៅកាន់ទំរង់សំរាប់ទូរស័ព្ទចល័តរបស់វិគីភីឌាទេ។',
+	'mobile-frontend-explain-disable' => 'តើអ្នកពិតជាចង់ឈប់ប្រើវើសិនសំរាប់ទូរស័ព្ទចល័តរបស់{{SITENAME}}មែនទេ? ប្រើសិនបើអ្នកជ្រើសយក <b>ឈប់ប្រើ</b> នោះចាប់ពីពេលនេះទៅ នៅពេលដែលអ្នកចូលមើល{{SITENAME}} អ្នកនឹងមិនត្រូវបញ្ជូនផ្ទាល់​ទៅកាន់ទំរង់សំរាប់ទូរស័ព្ទចល័តរបស់{{SITENAME}}ទេ។',
 	'mobile-frontend-nav-end' => 'ចប់',
 	'mobile-frontend-nav-top' => 'ផ្នែកខាងលើ',
 	'mobile-frontend-nav-edit' => 'កែប្រែ',
 	'mobile-frontend-nav-history' => 'ប្រវត្តិ',
 	'mobile-frontend-search-text' => 'ស្វែងរក',
 	'mobile-frontend-contact-us' => 'ប្រសិនបើអ្នកមានសំណួរឬមតិយោបល់ សូមផ្ញើអ៊ីមែលមកកាន់យើងខ្ញុំតាមរយៈ mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'បើកមើលឯកសារមេឌានេះនៅលើវិគីភីឌាធម្មតា ដើម្បីមើលព័ត៌មានអំពីម្ចាស់កម្មសិទ្ធ អាជ្ញាប័ណ្ឌ និងការបរិយាយបន្ថែមទៀត។',
+	'mobile-frontend-author-link' => 'បើកមើលឯកសារមេឌានេះនៅលើ{{SITENAME}}ធម្មតា ដើម្បីមើលព័ត៌មានអំពីម្ចាស់កម្មសិទ្ធ អាជ្ញាប័ណ្ឌ និងការបរិយាយបន្ថែមទៀត។',
 	'mobile-frontend-download-full-version' => 'ទាញយកវើសិនពេញ',
 	'mobile-frontend-file-namespace' => 'ឯកសារ',
+	'mobile-frontend-wml-continue' => 'បន្ត...',
+	'mobile-frontend-wml-back' => 'ត្រលប់ក្រោយ...',
+	'mobile-frontend-view' => 'មើលលើឧបករណ៍ចល័ត',
 );
 
 /** Kannada (ಕನ್ನಡ) */
