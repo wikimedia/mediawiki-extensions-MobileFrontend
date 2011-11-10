@@ -2700,6 +2700,7 @@ $messages['kl'] = array(
 
 /** Khmer (ភាសាខ្មែរ)
  * @author គីមស៊្រុន
+ * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
 	'mobile-frontend-search-submit' => 'ទៅ',
@@ -2732,6 +2733,14 @@ $messages['km'] = array(
 	'mobile-frontend-wml-continue' => 'បន្ត...',
 	'mobile-frontend-wml-back' => 'ត្រលប់ក្រោយ...',
 	'mobile-frontend-view' => 'មើលលើឧបករណ៍ចល័ត',
+	'mobile-frontend-opt-in-yes-button' => 'បាទ/ចាស៎',
+	'mobile-frontend-opt-in-no-button' => 'ទេ',
+	'mobile-frontend-opt-out-yes-button' => 'បាទ/ចាស៎',
+	'mobile-frontend-opt-out-no-button' => 'ទេ',
+	'mobile-frontend-leave-feedback-subject' => 'ប្រធានបទ​',
+	'mobile-frontend-leave-feedback-message' => 'សារ',
+	'mobile-frontend-leave-feedback-cancel' => 'បោះបង់',
+	'mobile-frontend-language' => 'ភាសា',
 );
 
 /** Kannada (ಕನ್ನಡ) */
