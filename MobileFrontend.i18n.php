@@ -5468,6 +5468,7 @@ $messages['ug-arab'] = array(
 
 /** Ukrainian (Українська)
  * @author Dim Grits
+ * @author Sodmy
  */
 $messages['uk'] = array(
 	'mobile-frontend-desc' => 'Мобільний інтерфейс',
@@ -5524,6 +5525,7 @@ $messages['uk'] = array(
 	'mobile-frontend-leave-feedback' => 'Залишити відгук',
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Дякуємо, за ваш відгук!',
+	'mobile-frontend-language' => 'Мова',
 );
 
 /** Urdu (اردو) */
