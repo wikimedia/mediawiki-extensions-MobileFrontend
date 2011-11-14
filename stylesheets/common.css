@@ -109,7 +109,7 @@ a.search-result-item {
 	height: 1.4em;
 }
 
-#footer-info ul, li {
+ul#footer-info {
 	list-style: none;
 	list-style-image: none;
 	list-style-type: none;
