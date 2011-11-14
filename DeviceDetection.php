@@ -259,42 +259,6 @@ class DeviceDetection {
 	}
 
 	/**
-	 * @return string
-	 */
-	public function testFormatName() {
-		$testResults = '';
-
-		$userAgents = array();
-		$userAgents['android']   = 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17';
-		$userAgents['iphone2']   = 'Mozilla/5.0 (ipod: U;CPU iPhone OS 2_2 like Mac OS X: es_es) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.0 Mobile/3B48b Safari/419.3';
-		$userAgents['iphone']    = 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3B48b Safari/419.3';
-		$userAgents['nokia']     = 'Mozilla/5.0 (SymbianOS/9.1; U; [en]; SymbianOS/91 Series60/3.0) AppleWebKit/413 (KHTML, like Gecko) Safari/413';
-		$userAgents['palm_pre']  = 'Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0';
-		$userAgents['wii']       = 'Opera/9.00 (Nintendo Wii; U; ; 1309-9; en)';
-		$userAgents['operamini'] = 'Opera/9.50 (J2ME/MIDP; Opera Mini/4.0.10031/298; U; en)';
-		$userAgents['iphone']    = 'Opera/9.51 Beta (Microsoft Windows; PPC; Opera Mobi/1718; U; en)';
-		$userAgents['kindle']    = 'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)';
-		$userAgents['kindle2']   = 'Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 824x1200; rotate)';
-		$userAgents['capable']   = 'Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/20100101 Firefox/4.0.1';
-		$userAgents['netfront']  = 'Mozilla/4.08 (Windows; Mobile Content Viewer/1.0) NetFront/3.2';
-		$userAgents['wap2']      = 'SonyEricssonK608i/R2L/SN356841000828910 Browser/SEMC-Browser/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1';
-		$userAgents['wap2']      = 'NokiaN73-2/3.0-630.0.2 Series60/3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1';
-		$userAgents['psp']       = 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)';
-		$userAgents['ps3']       = 'Mozilla/5.0 (PLAYSTATION 3; 1.00)';
-
-		foreach ( $userAgents as $formatName => $userAgent ) {
-			if ( $this->formatName( $userAgent ) === $formatName ) {
-				$result = ' has PASSED!';
-			} else {
-				$result = ' has FAILED!';
-			}
-
-			$testResults .= $formatName . $result . '<br/>' . PHP_EOL;
-		}
-		return $testResults;
-	}
-
-	/**
 	 * @param $userAgent string
 	 * @param $acceptHeader string
 	 * @return string
