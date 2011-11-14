@@ -2810,6 +2810,7 @@ $messages['ko'] = array(
 	'mobile-frontend-enable-images' => '이미지를 표시하도록 설정',
 	'mobile-frontend-news-items' => '새로 들어온 소식',
 	'mobile-frontend-feedback-page' => 'Project:모바일 확장 기능 피드백',
+	'mobile-frontend-language' => '언어',
 );
 
 /** Karachay-Balkar (Къарачай-Малкъар) */
@@ -4036,12 +4037,21 @@ $messages['pap'] = array(
 	'mobile-frontend-contact-us' => 'Si  bo tin kualkier pregunta òf komentario por fabor manda un e-mail na mobile@wikipedia.org',
 );
 
-/** Deitsch (Deitsch) */
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
 $messages['pdc'] = array(
 	'mobile-frontend-search-submit' => 'Geh los',
+	'mobile-frontend-home-button' => 'Schtaert',
 	'mobile-frontend-show-button' => 'Zeig',
 	'mobile-frontend-back-button' => 'Zerrick',
+	'mobile-frontend-nav-end' => 'End',
 	'mobile-frontend-search-text' => 'Uffgucke',
+	'mobile-frontend-file-namespace' => 'Feil',
+	'mobile-frontend-opt-out-yes-button' => 'Ya',
+	'mobile-frontend-opt-out-no-button' => 'Nee',
+	'mobile-frontend-leave-feedback-message' => 'Melding',
+	'mobile-frontend-language' => 'Schprooch',
 );
 
 /** Pälzisch (Pälzisch) */
