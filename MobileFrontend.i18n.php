@@ -2269,6 +2269,7 @@ $messages['hsb'] = array(
 
 /** Hungarian (Magyar)
  * @author BáthoryPéter
+ * @author Dj
  */
 $messages['hu'] = array(
 	'mobile-frontend-desc' => 'Mobil felület',
@@ -2303,8 +2304,11 @@ $messages['hu'] = array(
 	'mobile-frontend-view' => 'Mobil nézet',
 	'mobile-frontend-opt-in-yes-button' => 'igen',
 	'mobile-frontend-opt-in-no-button' => 'nem',
+	'mobile-frontend-opt-out-yes-button' => 'igen',
+	'mobile-frontend-opt-out-no-button' => 'nem',
 	'mobile-frontend-disable-images' => 'Képek letiltása mobil nézetben',
 	'mobile-frontend-enable-images' => 'Képek engedélyezése mobil nézetben',
+	'mobile-frontend-news-items' => 'Hírek',
 	'mobile-frontend-leave-feedback-title' => 'Küldj visszajelzést a mobil nézettel kapcsolatos tapasztalataidról',
 	'mobile-frontend-leave-feedback-subject' => 'Tárgy',
 	'mobile-frontend-leave-feedback-message' => 'Üzenet',
