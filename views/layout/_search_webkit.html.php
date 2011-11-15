@@ -34,7 +34,7 @@ $searchWebkitHtml = <<<EOD
 	</form>
 	{$openSearchResults}
 	</div>
-	<div class='nav' id='nav'>
+	<div class='nav' id='nav' {$logoDisplayNone}>
 	{$languageSelectionDiv}
 	<button onclick="javascript:location.href='{$mainPageUrl}';" type="submit" id="homeButton">{$homeButton}</button>
 	<button onclick="javascript:location.href='{$randomPageUrl}';" type="submit" id="randomButton">{$randomButton}</button>
