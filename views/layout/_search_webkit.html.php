@@ -22,7 +22,7 @@ $logoOnClick = ( self::$device['supports_javascript'] ) ? 'onclick="javascript:l
 
 $searchWebkitHtml = <<<EOD
 <div id='header'>
-	<div id='searchbox'>
+	<div id='searchbox' {$logoDisplayNone}>
 	<img width="35" height="22" alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' {$logoOnClick} {$logoDisplayNone} />
 	<form action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 	  <input type="hidden" value="Special:Search" name="title" />
