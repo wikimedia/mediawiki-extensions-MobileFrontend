@@ -127,6 +127,7 @@ class ExtMobileFrontend {
 	public static $mobileRedirectFormAction;
 	public static $isBetaGroupMember = false;
 	public static $hideSearchBox = false;
+	public static $hideLogo = false;
 	public static $languageUrls;
 
 	public static $messageKeys = array(
@@ -602,6 +603,9 @@ class ExtMobileFrontend {
 		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) &&
 			strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Wikipedia Mobile' ) !== false ) {
 			self::$hideSearchBox = true;
+			if (strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Android' ) !== false ) {
+				self::$hideLogo = true;
+			}
 		}
 
 		$optInCookie = $this->getOptInOutCookie();

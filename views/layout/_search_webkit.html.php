@@ -10,6 +10,8 @@ $randomButton = self::$messages['mobile-frontend-random-button'];
 $scriptUrl = wfScript();
 $searchBoxDisplayNone = ( self::$hideSearchBox ) ? ' style="display: none;" ' : '';
 
+$logoDisplayNone = ( self::$hideLogo ) ? ' style="display: none;" ' : '';
+
 $openSearchResults = '<div id="results"></div>';
 
 $languageSelection = self::buildLanguageSelection() . '<br/>';
@@ -21,7 +23,7 @@ $logoOnClick = ( self::$device['supports_javascript'] ) ? 'onclick="javascript:l
 $searchWebkitHtml = <<<EOD
 <div id='header'>
 	<div id='searchbox'>
-	<img width="35" height="22" alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' {$logoOnClick} />
+	<img width="35" height="22" alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' {$logoOnClick} {$logoDisplayNone} />
 	<form action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 	  <input type="hidden" value="Special:Search" name="title" />
 		<div id="sq" class="divclearable">
