@@ -1072,10 +1072,10 @@ $messages['cy'] = array(
 	'mobile-frontend-hide-button' => 'Cuddio',
 	'mobile-frontend-disable-button' => 'Analluogi',
 	'mobile-frontend-back-button' => 'Yn ôl',
-	'mobile-frontend-regular-site' => 'Gweld y dudalen hon ar y Wicipedia arferol',
+	'mobile-frontend-regular-site' => 'Gweld y dudalen hon ar y {{SITENAME}} arferol',
 	'mobile-frontend-perm-stop-redirect' => "Analluogi'r cysylltiad at y fersiwn ar gyfer ffôn symudol am byth",
 	'mobile-frontend-error-page-title' => 'Cafwyd problem!',
-	'mobile-frontend-error-page-text' => "Y mae Wicipedia symudol yn dal i gael ei ddatblygu ac rydym wrthi'n ddiwyd yn cywiro'r gwallau mewnol. Rydym wedi cael gwybod am y gwall hwn ac fe fyddwn yn ei gywiro'n fuan. Rhowch gynnig arall arni yn y man.",
+	'mobile-frontend-error-page-text' => "Y mae {{SITENAME}} symudol yn dal i gael ei ddatblygu ac rydym wrthi'n ddiwyd yn cywiro'r gwallau mewnol. Rydym wedi cael gwybod am y gwall hwn ac fe fyddwn yn ei gywiro'n fuan. Rhowch gynnig arall arni yn y man.",
 	'mobile-frontend-are-you-sure' => "Ydych chi'n bendant am wneud hyn ?",
 	'mobile-frontend-explain-disable' => "Ydych chi'n bendant am analluogi fersiwn Wicipedia ar gyfer ffonau symudol? Os y dewiswch <b>Analluogi</b>, yna pan ymwelwch â Wicipedia, ni chewch eich ailgyfeirio at y wedd hon o Wicipedia ar gyfer ffonau symudol.",
 	'mobile-frontend-nav-end' => 'Diwedd',
@@ -1087,6 +1087,11 @@ $messages['cy'] = array(
 	'mobile-frontend-author-link' => 'Edrychwch ar y ffeil gyfrwng hon ar y {{SITENAME}} arferol er mwyn cael gwybodaeth am yr awduron, y drwydded a disgrifiadau ychwanegol.',
 	'mobile-frontend-download-full-version' => "Islwytho'r fersiwn cyflawn",
 	'mobile-frontend-file-namespace' => 'Ffeil',
+	'mobile-frontend-wml-continue' => 'Parhau ...',
+	'mobile-frontend-wml-back' => 'Nôl ...',
+	'mobile-frontend-leave-feedback-subject' => 'Pwnc',
+	'mobile-frontend-leave-feedback-message' => 'Neges',
+	'mobile-frontend-language' => 'Iaith',
 );
 
 /** Danish (Dansk)
@@ -3678,7 +3683,7 @@ $messages['ne'] = array(
 	'mobile-frontend-hide-button' => 'लुकाउने \\',
 	'mobile-frontend-disable-button' => 'निष्क्रिय',
 	'mobile-frontend-back-button' => 'पछाडि',
-	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित विकिपीडियामा हेर्ने \\',
+	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित विकिपीडियामा हेर्ने',
 	'mobile-frontend-perm-stop-redirect' => 'मोबाइल साइट स्थाइरुमा असक्षम पार्ने',
 	'mobile-frontend-error-page-title' => 'हामीलाई समस्या आइरेको छ।',
 	'mobile-frontend-error-page-text' => 'विकिपीडिया मोबाइल अझै विकासको क्रममा नै रहेको छ र सबै आन्तरिक त्रुटिहरु सच्याउनामा हामी लागि परेका छौँ । यस त्रुटिका बारेमा हामीलाई जानकारी गराइएको छ र निकट भविष्यमा नै सच्याइने छ । कृपया पुन जाँच गर्नुहोला ।',
