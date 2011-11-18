@@ -2559,6 +2559,7 @@ $messages['it'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Fryed-peach
  * @author Ohgi
  * @author Schu
  */
@@ -2596,6 +2597,7 @@ $messages['ja'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'はい',
 	'mobile-frontend-opt-in-no-button' => 'いいえ',
 	'mobile-frontend-opt-out-yes-button' => 'はい',
+	'mobile-frontend-opt-out-no-button' => 'いいえ',
 );
 
 /** Georgian (ქართული)
@@ -5324,7 +5326,9 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-file-namespace' => 'Парванда',
 );
 
-/** Thai (ไทย) */
+/** Thai (ไทย)
+ * @author Horus
+ */
 $messages['th'] = array(
 	'mobile-frontend-search-submit' => 'ไป',
 	'mobile-frontend-search-results' => 'ผลการค้นหา',
@@ -5353,6 +5357,7 @@ $messages['th'] = array(
 	'mobile-frontend-author-link' => 'ดูไฟล์สื่อนี้บนวิกิพีเดียปกติ เพื่อดูข้อมูลเกี่ยวกับเจ้าของผลงาน สัญญาอนุญาต และคำอธิบายเพิ่มเติม',
 	'mobile-frontend-download-full-version' => 'ดาวน์โหลดเวอร์ชันเต็ม',
 	'mobile-frontend-file-namespace' => 'ไฟล์',
+	'mobile-frontend-view' => 'รุ่นโมบายล์',
 );
 
 /** Turkmen (Türkmençe) */
