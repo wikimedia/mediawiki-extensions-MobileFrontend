@@ -2513,16 +2513,17 @@ $messages['is'] = array(
 
 /** Italian (Italiano)
  * @author Beta16
+ * @author Nemo bis
  */
 $messages['it'] = array(
-	'mobile-frontend-desc' => 'Mobile Frontend',
+	'mobile-frontend-desc' => 'Interfaccia mobile',
 	'mobile-frontend-search-submit' => 'Vai',
 	'mobile-frontend-search-results' => 'Risultati della ricerca',
 	'mobile-frontend-no-article-found' => 'Nessuna corrispondenza',
 	'mobile-frontend-featured-article' => 'Vetrina',
 	'mobile-frontend-in-the-news' => 'Novità',
 	'mobile-frontend-home-button' => 'Pagina principale',
-	'mobile-frontend-random-button' => 'Casuale',
+	'mobile-frontend-random-button' => 'Una pagina a caso',
 	'mobile-frontend-back-to-top-of-section' => 'Vai a inizio sezione',
 	'mobile-frontend-show-button' => 'Mostra',
 	'mobile-frontend-hide-button' => 'Nascondi',
@@ -2531,7 +2532,7 @@ $messages['it'] = array(
 	'mobile-frontend-regular-site' => 'Visualizza questa pagina su {{SITENAME}} normale',
 	'mobile-frontend-perm-stop-redirect' => 'Disabilitare permanentemente sito per dispositivi mobili',
 	'mobile-frontend-error-page-title' => 'Si è verificato un problema!',
-	'mobile-frontend-error-page-text' => '{{SITENAME}} mobile è ancora in fase di sviluppo attivo e stiamo lavorando sodo per risolvere tutti gli errori interni. Questo errore è già stato notificato e verrà presto corretto. Ricontrolla a breve!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} per dispositivi mobili è ancora in fase di sviluppo attivo e stiamo lavorando sodo per risolvere tutti gli errori interni. Questo errore è già stato notificato e verrà presto corretto. Ricontrolla a breve!',
 	'mobile-frontend-are-you-sure' => 'Sei sicuro?',
 	'mobile-frontend-explain-disable' => "Vuoi davvero disabilitare la versione mobile di {{SITENAME}}? Se scegli <b>Disabilita</b>, d'ora in poi ogni volta che visiti {{SITENAME}} non sarai più reindirizzato alla versione mobile di {{SITENAME}}.",
 	'mobile-frontend-nav-end' => 'Fine',
@@ -2539,23 +2540,36 @@ $messages['it'] = array(
 	'mobile-frontend-nav-edit' => 'Modifica',
 	'mobile-frontend-nav-history' => 'Cronologia',
 	'mobile-frontend-search-text' => 'Cerca',
-	'mobile-frontend-contact-us' => "Se avete domande o commenti potete contattarci via email all'indirizzo mobile@wikipedia.org",
+	'mobile-frontend-contact-us' => "Se hai domande o commenti puoi contattarci via posta elettronica all'indirizzo mobile@wikipedia.org",
 	'mobile-frontend-author-link' => "Visualizza questo file multimediale sulla {{SITENAME}} normale per vedere le informazioni sull'autore, la licenza ed ulteriori dettagli.",
 	'mobile-frontend-download-full-version' => 'Scarica la versione completa',
 	'mobile-frontend-file-namespace' => 'File',
 	'mobile-frontend-wml-continue' => 'Continua ...',
 	'mobile-frontend-wml-back' => 'Indietro ...',
+	'mobile-frontend-view' => 'Versione mobile',
+	'mobile-frontend-opt-in-message' => 'Vuoi provare il funzionamento della nuova interfaccia mobile?',
 	'mobile-frontend-opt-in-yes-button' => 'sì',
 	'mobile-frontend-opt-in-no-button' => 'no',
+	'mobile-frontend-opt-in-title' => 'Partecipazione al collaudo',
+	'mobile-frontend-opt-in-explain' => 'Qui puoi partecipare alla prova',
+	'mobile-frontend-opt-out-message' => 'Abbandonare la prova della nuova interfaccia mobile?',
 	'mobile-frontend-opt-out-yes-button' => 'sì',
 	'mobile-frontend-opt-out-no-button' => 'no',
-	'mobile-frontend-disable-images' => 'Disabilita le immagini sul sito per cellulari',
-	'mobile-frontend-enable-images' => 'Abilita le immagini sul sito per cellulari',
+	'mobile-frontend-opt-out-title' => 'Abbandono del collaudo',
+	'mobile-frontend-opt-out-explain' => 'Qui puoi abbandonare la prova',
+	'mobile-frontend-disable-images' => 'Disabilita le immagini sul sito per dispositivi mobili',
+	'mobile-frontend-enable-images' => 'Abilita le immagini sul sito per dispositivi mobili',
+	'mobile-frontend-news-items' => 'Novità',
+	'mobile-frontend-leave-feedback-title' => 'Commenta la tua esperienza del sito per dispositivi mobili',
+	'mobile-frontend-leave-feedback-notice' => 'I tuoi commenti ci aiutano a migliorare la tua soddisfazione per il sito per dispositivi mobili. Sarà pubblicata (insieme al tuo nome utente, versione del browser e sistema operativo) alla pagina "$1". Per piacere, scegli un oggetto descrittivo (ad esempio, "Problemi di formattazione con tabelle larghe"). Il tuo commento è soggetto alle condizioni d\'uso.',
 	'mobile-frontend-leave-feedback-subject' => 'Oggetto',
 	'mobile-frontend-leave-feedback-message' => 'Messaggio',
 	'mobile-frontend-leave-feedback-cancel' => 'Annulla',
-	'mobile-frontend-leave-feedback-submit' => 'Invia feedback',
-	'mobile-frontend-leave-feedback-thanks' => 'Grazie per aver espresso il tuo feedback.',
+	'mobile-frontend-leave-feedback-submit' => 'Invia commento',
+	'mobile-frontend-leave-feedback-link-text' => "Commenti sull'estensione interfaccia mobile",
+	'mobile-frontend-leave-feedback' => 'Commenti sul sito per dispositivi mobili',
+	'mobile-frontend-leave-feedback-thanks' => 'Grazie per aver espresso il tuo commento.',
+	'mobile-frontend-language' => 'Lingua',
 );
 
 /** Japanese (日本語)
@@ -5358,6 +5372,10 @@ $messages['th'] = array(
 	'mobile-frontend-download-full-version' => 'ดาวน์โหลดเวอร์ชันเต็ม',
 	'mobile-frontend-file-namespace' => 'ไฟล์',
 	'mobile-frontend-view' => 'รุ่นโมบายล์',
+	'mobile-frontend-news-items' => 'เรื่องจากข่าว',
+	'mobile-frontend-leave-feedback-message' => 'ข้อความ',
+	'mobile-frontend-leave-feedback-cancel' => 'ยกเลิก',
+	'mobile-frontend-language' => 'ภาษา',
 );
 
 /** Turkmen (Türkmençe) */
