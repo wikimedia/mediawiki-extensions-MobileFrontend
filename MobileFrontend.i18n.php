@@ -2589,8 +2589,10 @@ $messages['it'] = array(
  * @author Fryed-peach
  * @author Ohgi
  * @author Schu
+ * @author Whym
  */
 $messages['ja'] = array(
+	'mobile-frontend-desc' => '携帯機器フロントエンド',
 	'mobile-frontend-search-submit' => '表示',
 	'mobile-frontend-search-results' => '検索結果',
 	'mobile-frontend-no-article-found' => '検索した名称のページは存在しませんでした',
@@ -2621,10 +2623,29 @@ $messages['ja'] = array(
 	'mobile-frontend-wml-continue' => '続行 ...',
 	'mobile-frontend-wml-back' => '戻る ...',
 	'mobile-frontend-view' => 'モバイルビュー',
+	'mobile-frontend-opt-in-message' => '新しい携帯機器フロントエンドのオプトイン試用に参加しますか？',
 	'mobile-frontend-opt-in-yes-button' => 'はい',
 	'mobile-frontend-opt-in-no-button' => 'いいえ',
+	'mobile-frontend-opt-in-title' => '試用へのオプトイン',
+	'mobile-frontend-opt-in-explain' => 'これにより試用を始めることができます',
+	'mobile-frontend-opt-out-message' => '新しい携帯機器フロントエンドのオプトイン試用から離脱しますか？',
 	'mobile-frontend-opt-out-yes-button' => 'はい',
 	'mobile-frontend-opt-out-no-button' => 'いいえ',
+	'mobile-frontend-opt-out-title' => '試用からのオプトアウト',
+	'mobile-frontend-opt-out-explain' => 'これにより試用を止めることができます',
+	'mobile-frontend-disable-images' => '携帯機器ウェブサイトで画像を無効にする',
+	'mobile-frontend-enable-images' => '携帯機器ウェブサイトで画像を有効にする',
+	'mobile-frontend-news-items' => '新着情報',
+	'mobile-frontend-leave-feedback-title' => '携帯機器ウェブサイトの使用感について評価をお伝えください',
+	'mobile-frontend-leave-feedback-notice' => 'あなたの評価は携帯機器ウェブサイトの使用感を向上させる助けになります。評価は（利用者名、ブラウザのバージョン、オペレーティングシステムとともに）&quot;$1&quot;のページで公開されます。「幅の広い表の書式の問題」のように、情報の多い表題名を選ぶようにしてください。あなたから評価は私たちの利用規約の対象です。',
+	'mobile-frontend-leave-feedback-subject' => '表題',
+	'mobile-frontend-leave-feedback-message' => '本文',
+	'mobile-frontend-leave-feedback-cancel' => '中止',
+	'mobile-frontend-leave-feedback-submit' => '評価を送信',
+	'mobile-frontend-leave-feedback-link-text' => '携帯機器フロントエンド拡張の評価',
+	'mobile-frontend-leave-feedback' => '携帯機器ウェブサイトの評価',
+	'mobile-frontend-leave-feedback-thanks' => '評価をありがとうございます。',
+	'mobile-frontend-language' => '言語',
 );
 
 /** Georgian (ქართული)
@@ -2665,7 +2686,7 @@ $messages['ka'] = array(
 	'mobile-frontend-leave-feedback-cancel' => 'გაუქმება',
 );
 
-/** Kabardian (Cyrillic) (Адыгэбзэ (Cyrillic)) */
+/** Адыгэбзэ (Адыгэбзэ) */
 $messages['kbd-cyrl'] = array(
 	'mobile-frontend-search-submit' => 'ЕкIуэкIын',
 	'mobile-frontend-search-results' => 'Лъыхъуым къигъуэтахэр',
@@ -2701,7 +2722,7 @@ $messages['kiu'] = array(
 	'mobile-frontend-hide-button' => 'Bınımne',
 );
 
-/** Kazakh (Cyrillic) (Қазақша (Cyrillic))
+/** Kazakh (Cyrillic script) (‪Қазақша (кирил)‬)
  * @author GaiJin
  */
 $messages['kk-cyrl'] = array(
@@ -4794,7 +4815,7 @@ $messages['scn'] = array(
 	'mobile-frontend-contact-us' => 'Siddu aviti quistioni o cummenti putiti cuntattarini via email ô nnirizzu mobile@wikipedia.org',
 );
 
-/** Serbo-Croatian (Srpskohrvatski / Српскохрватски) */
+/** Serbo-Croatian (Srpskohrvatski) */
 $messages['sh'] = array(
 	'mobile-frontend-search-submit' => 'Idi',
 	'mobile-frontend-search-results' => 'Rezultati pretrage',
@@ -4822,7 +4843,7 @@ $messages['sh'] = array(
 	'mobile-frontend-contact-us' => 'Ako imate pitanja ili komentare slobodno nam pošaljite E-mail na mobile@wikipedia.org',
 );
 
-/** Tachelhit (Tašlḥiyt) */
+/** Tachelhit (Tašlḥiyt/ⵜⴰⵛⵍⵃⵉⵜ) */
 $messages['shi'] = array(
 	'mobile-frontend-search-results' => 'Imyakkatn n icnubc',
 	'mobile-frontend-no-article-found' => 'Ur nufa kra n umli ɣid',
@@ -5065,7 +5086,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-language' => 'Језик',
 );
 
-/** Serbian Latin ekavian (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪Srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'mobile-frontend-search-submit' => 'Idi',
 	'mobile-frontend-search-results' => 'Rezultati pretrage',
@@ -5322,7 +5343,7 @@ $messages['tet'] = array(
 	'mobile-frontend-search-text' => 'Buka',
 );
 
-/** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic)) */
+/** Tajik (Cyrillic script) (Тоҷикӣ) */
 $messages['tg-cyrl'] = array(
 	'mobile-frontend-search-submit' => 'Бирав',
 	'mobile-frontend-search-results' => 'Натоиҷи Ҷустуҷӯ',
@@ -5477,7 +5498,7 @@ $messages['tr'] = array(
 	'mobile-frontend-opt-in-no-button' => 'hayır',
 );
 
-/** Tatar (Cyrillic) (Татарча/Tatarça (Cyrillic)) */
+/** Tatar (Cyrillic script) (Татарча) */
 $messages['tt-cyrl'] = array(
 	'mobile-frontend-search-submit' => 'Күчү',
 	'mobile-frontend-search-results' => 'Эзләү нәтиҗәләре',
@@ -5508,7 +5529,7 @@ $messages['tt-cyrl'] = array(
 	'mobile-frontend-file-namespace' => 'Файл',
 );
 
-/** ئۇيغۇرچە (ئۇيغۇرچە) */
+/** Uyghur (Arabic script) (ئۇيغۇرچە) */
 $messages['ug-arab'] = array(
 	'mobile-frontend-search-submit' => 'يۆتكەل',
 	'mobile-frontend-search-results' => 'ئىزدەش نەتىجىسى',
