@@ -1075,7 +1075,7 @@ class ExtMobileFrontend {
 		$username = self::$messages['mobile-frontend-username'];
 		$password = self::$messages['mobile-frontend-password'];
 		$login = self::$messages['mobile-frontend-login'];
-		$loginHtml = Html::input( 'wpName', $this->data['name'], 'text', array(
+		$loginHtml = Html::input( 'wpName', null, 'text', array(
 		                                'class' => 'loginText',
 		                                'id' => 'wpName1',
 		                                'tabindex' => '1',
