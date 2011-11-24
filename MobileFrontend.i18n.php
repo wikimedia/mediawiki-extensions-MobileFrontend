@@ -78,6 +78,7 @@ $messages['en'] = array (
  * @author EugeneZelenko
  * @author Raymond
  * @author Siebrand
+ * @author Umherirrender
  * @author Yekrats
  */
 $messages['qqq'] = array(
@@ -94,7 +95,11 @@ $messages['qqq'] = array(
 	'mobile-frontend-leave-feedback-subject' => '{{Identical|Subject}}',
 	'mobile-frontend-leave-feedback-message' => '{{Identical|Message}}',
 	'mobile-frontend-leave-feedback-cancel' => '{{Identical|Cancel}}',
+	'mobile-frontend-feedback-page' => '{{optional}}',
 	'mobile-frontend-language' => '{{Identical|Language}}',
+	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.',
+	'mobile-frontend-password' => 'Field label for entry of password in Wikimedia mobile user interface.',
+	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
@@ -1216,6 +1221,9 @@ $messages['de'] = array(
 	'mobile-frontend-leave-feedback' => 'Rückmeldung geben',
 	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für deine Rückmeldung.',
 	'mobile-frontend-language' => 'Sprache',
+	'mobile-frontend-username' => 'Benutzername:',
+	'mobile-frontend-password' => 'Passwort:',
+	'mobile-frontend-login' => 'Anmelden',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -1754,6 +1762,9 @@ $messages['fr'] = array(
 	'mobile-frontend-leave-feedback' => 'Laisser son ressenti',
 	'mobile-frontend-leave-feedback-thanks' => 'Merci pour votre avis!',
 	'mobile-frontend-language' => 'Langue',
+	'mobile-frontend-username' => "Nom d'utilisateur:",
+	'mobile-frontend-password' => 'Mot de passe:',
+	'mobile-frontend-login' => 'Se connecter',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -1937,6 +1948,9 @@ $messages['gl'] = array(
 	'mobile-frontend-leave-feedback' => 'Comentarios sobre a versión móbil',
 	'mobile-frontend-leave-feedback-thanks' => 'Grazas polos seus comentarios!',
 	'mobile-frontend-language' => 'Lingua',
+	'mobile-frontend-username' => 'Nome de usuario:',
+	'mobile-frontend-password' => 'Contrasinal:',
+	'mobile-frontend-login' => 'Rexistro',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
@@ -2414,6 +2428,9 @@ $messages['ia'] = array(
 	'mobile-frontend-leave-feedback' => 'Lassar retroaction',
 	'mobile-frontend-leave-feedback-thanks' => 'Gratias pro tu retroaction!',
 	'mobile-frontend-language' => 'Lingua',
+	'mobile-frontend-username' => 'Nomine de usator:',
+	'mobile-frontend-password' => 'Contrasigno:',
+	'mobile-frontend-login' => 'Aperir session',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -3426,6 +3443,9 @@ $messages['mk'] = array(
 	'mobile-frontend-feedback-page' => 'Project:Мислења за мобилниот додаток',
 	'mobile-frontend-leave-feedback-thanks' => 'Ви благодариме за искажаното мислење!',
 	'mobile-frontend-language' => 'Јазик',
+	'mobile-frontend-username' => 'Корисничко име:',
+	'mobile-frontend-password' => 'Лозинка:',
+	'mobile-frontend-login' => 'Најава',
 );
 
 /** Malayalam (മലയാളം)
@@ -3815,6 +3835,9 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-leave-feedback' => 'Terugkoppeling achterlaten',
 	'mobile-frontend-leave-feedback-thanks' => 'Dank u voor uw terugkoppeling.',
 	'mobile-frontend-language' => 'Taal',
+	'mobile-frontend-username' => 'Gebruikersnaam:',
+	'mobile-frontend-password' => 'Wachtwoord:',
+	'mobile-frontend-login' => 'Aanmelden',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
@@ -5001,6 +5024,9 @@ $messages['sl'] = array(
 	'mobile-frontend-leave-feedback' => 'Pustite povratne informacije',
 	'mobile-frontend-leave-feedback-thanks' => 'Hvala za povratne informacije!',
 	'mobile-frontend-language' => 'Jezik',
+	'mobile-frontend-username' => 'Uporabniško ime:',
+	'mobile-frontend-password' => 'Geslo:',
+	'mobile-frontend-login' => 'Prijava',
 );
 
 /** Albanian (Shqip) */
@@ -5742,6 +5768,9 @@ $messages['vi'] = array(
 	'mobile-frontend-feedback-page' => 'Project:Phản hồi Phần mở rộng Di động',
 	'mobile-frontend-leave-feedback-thanks' => 'Cám ơn phản hồi của bạn!',
 	'mobile-frontend-language' => 'Ngôn ngữ',
+	'mobile-frontend-username' => 'Tên người dùng:',
+	'mobile-frontend-password' => 'Mật khẩu:',
+	'mobile-frontend-login' => 'Đăng nhập',
 );
 
 /** Volapük (Volapük)
