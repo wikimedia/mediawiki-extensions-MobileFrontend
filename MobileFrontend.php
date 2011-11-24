@@ -1083,7 +1083,7 @@ class ExtMobileFrontend {
 							<td class="mw-label"><label for="wpName1">{$username}</label></td>
 						</tr>
 						<tr>
-							<td class="mw-input"><input class="loginText" id="wpName1" tabindex="1" size="20" value="Root" name="wpName"></td>
+							<td class="mw-input"><input class="loginText" id="wpName1" tabindex="1" size="20" value="" name="wpName"></td>
 						</tr>
 						<tr>
 							<td class="mw-label"><label for="wpPassword1">{$password}</label></td>
