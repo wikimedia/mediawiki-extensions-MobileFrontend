@@ -170,6 +170,9 @@ class ExtMobileFrontend {
 		'mobile-frontend-leave-feedback-thanks',
 		'mobile-frontend-search-submit',
 		'mobile-frontend-language',
+		'mobile-frontend-username',
+		'mobile-frontend-password',
+		'mobile-frontend-login',
 	);
 
 	public $itemsToRemove = array(
@@ -665,7 +668,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		$parsedUrl = parse_url( $url );
 		// Validates value as IP address
-		if ( !IP::isValid( $parsedUrl['host'] ) ) {
+		if ( isset( $parsedUrl['host'] ) && !IP::isValid( $parsedUrl['host'] ) ) {
 			wfProfileOut( __METHOD__ );
 			$baseUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
 			$baseUrl = str_replace( $baseUrl, '', $url );
@@ -1005,6 +1008,7 @@ class ExtMobileFrontend {
 
 	/**
 	 * @param $html string
+	 * @return string
 	 */
 	public function DOMParseMainPage( $html ) {
 		wfProfileIn( __METHOD__ );
@@ -1061,6 +1065,62 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 		return $contentHtml;
 	}
+	
+	/**
+	 * @param $token string
+	 * @param $action string
+	 * @return DomElement
+	 */
+	public function renderLogin( $token, $action ) {
+		$username = self::$messages['mobile-frontend-username'];
+		$password = self::$messages['mobile-frontend-password'];
+		$login = self::$messages['mobile-frontend-login'];
+		$form  = <<<EOT
+			<form name="userlogin" method="post" action="{$action}">
+				<table class="user-login">
+					<tbody>
+						<tr>
+							<td class="mw-label"><label for="wpName1">{$username}</label></td>
+						</tr>
+						<tr>
+							<td class="mw-input"><input class="loginText" id="wpName1" tabindex="1" size="20" value="Root" name="wpName"></td>
+						</tr>
+						<tr>
+							<td class="mw-label"><label for="wpPassword1">{$password}</label></td>
+						</tr>
+						<tr>
+							<td class="mw-input"><input class="loginPassword" id="wpPassword1" tabindex="2" size="20" autofocus="" type="password" name="wpPassword"></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="mw-submit"><input id="wpLoginAttempt" tabindex="9" type="submit" value="{$login}" name="wpLoginAttempt"></td>
+						</tr>
+					</tbody>
+				</table>
+				<input type="hidden" name="wpLoginToken" value="{$token}">
+			</form>
+EOT;
+		return $this->getDomDocumentNodeByTagName( $form, 'form' );
+	}
+	
+	/**
+	 * @param $html string
+	 * @param $tagName string
+	 * @return DomElement
+	 */
+	private function getDomDocumentNodeByTagName( $html, $tagName ) {
+		libxml_use_internal_errors( true );
+		$dom = new DOMDocument(); 
+		$dom->loadHTML( $html );
+		libxml_use_internal_errors( false );
+		$dom->preserveWhiteSpace = false;
+		$dom->strictErrorChecking = false;
+		$dom->encoding = 'UTF-8';
+		$node = $dom->getElementsByTagName( $tagName )->item(0);
+		return $node;
+	}
 
 	/**
 	 * @param $html string
@@ -1079,6 +1139,39 @@ class ExtMobileFrontend {
 		$this->doc->encoding = 'UTF-8';
 
 		$itemToRemoveRecords = $this->parseItemsToRemove();
+		
+		$ptLogout = $this->doc->getElementById( 'pt-logout' );
+		
+		if ( $ptLogout ) {
+			$ptLogoutLink = $ptLogout->firstChild;
+			$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
+		}
+
+		if ( self::$title == 'Special:UserLogin' ) {
+			$userlogin = $this->doc->getElementById( 'userloginForm' );
+
+			if ( $userlogin && get_class($userlogin) === 'DOMElement' ) {
+				$inputs = $userlogin->getElementsByTagName( 'input' );
+				$forms = $userlogin->getElementsByTagName( 'form' );
+
+				if ( $forms ) {
+					foreach ( $forms as $form ) {
+						$action = $form->getAttribute( 'action' );
+					}
+				}
+
+				foreach ( $inputs as $input ) {
+					if ( $input->getAttribute( 'name' ) === 'wpLoginToken' ) {
+						$wpLoginToken = $input->getAttribute( 'value' );
+					}
+				}
+
+				$firstHeading = $this->doc->getElementById( 'firstHeading' );
+				if ( $firstHeading ) {
+					$firstHeading->nodeValue = '';
+				}
+			}
+		}
 
 		// Tags
 
@@ -1161,6 +1254,15 @@ class ExtMobileFrontend {
 
 			$redLink->parentNode->replaceChild( $spanNode, $redLink );
 		}
+		
+		if ( self::$title == 'Special:UserLogin' ) {
+			if ( isset( $wpLoginToken ) && isset( $action ) && isset( $userlogin ) ) {
+				$login = $this->renderLogin( $wpLoginToken, $action );
+				$loginNode = $this->doc->importNode( $login, true );
+				$userlogin->appendChild( $loginNode );
+			}
+		}
+		
 		$content = $this->doc->getElementById( 'content' );
 
 		$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
