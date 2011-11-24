@@ -19,13 +19,15 @@ if ( self::$disableImages == 0 ) {
 	$imagesURL = self::$enableImagesURL;
 }
 
+$logoutLink = ( $logoutHtml ) ? ' | ' . $logoutHtml : '';
+
 $feedbackLink = ( self::$code == 'en' && self::$isBetaGroupMember ) ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : '';
 
 $footerHtml = <<<EOD
 	<div id='footer'>
 	  <div class='nav' id='footmenu'>
 		<div class='mwm-notice'>
-		  <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink}
+		  <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
 			<div id="perm">
 				<a href="{$disableMobileSiteURL}">{$permStopRedirect}</a>
 			</div>
