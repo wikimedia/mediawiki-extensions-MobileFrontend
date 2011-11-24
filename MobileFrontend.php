@@ -1075,6 +1075,20 @@ class ExtMobileFrontend {
 		$username = self::$messages['mobile-frontend-username'];
 		$password = self::$messages['mobile-frontend-password'];
 		$login = self::$messages['mobile-frontend-login'];
+		$loginHtml = Html::input( 'wpName', $this->data['name'], 'text', array(
+		                                'class' => 'loginText',
+		                                'id' => 'wpName1',
+		                                'tabindex' => '1',
+		                                'size' => '20',
+		                                'required') );
+		$passwordHtml = Html::input( 'wpPassword', null, 'password', array(
+		                                'class' => 'loginPassword',
+		                                'id' => 'wpPassword1',
+		                                'tabindex' => '2',
+		                                'size' => '20') );
+		$buttonHtml = Html::input( 'wpLoginAttempt', $login, 'submit', array(
+			                        'id' => 'wpLoginAttempt',
+			                        'tabindex' => '3') );
 		$form  = <<<EOT
 			<form name="userlogin" method="post" action="{$action}">
 				<table class="user-login">
@@ -1083,19 +1097,19 @@ class ExtMobileFrontend {
 							<td class="mw-label"><label for="wpName1">{$username}</label></td>
 						</tr>
 						<tr>
-							<td class="mw-input"><input class="loginText" id="wpName1" tabindex="1" size="20" value="" name="wpName"></td>
+							<td class="mw-input">{$loginHtml}</td>
 						</tr>
 						<tr>
 							<td class="mw-label"><label for="wpPassword1">{$password}</label></td>
 						</tr>
 						<tr>
-							<td class="mw-input"><input class="loginPassword" id="wpPassword1" tabindex="2" size="20" autofocus="" type="password" name="wpPassword"></td>
+							<td class="mw-input">{$passwordHtml}</td>
 						</tr>
 						<tr>
 							<td></td>
 						</tr>
 						<tr>
-							<td class="mw-submit"><input id="wpLoginAttempt" tabindex="9" type="submit" value="{$login}" name="wpLoginAttempt"></td>
+							<td class="mw-submit">{$buttonHtml}</td>
 						</tr>
 					</tbody>
 				</table>
