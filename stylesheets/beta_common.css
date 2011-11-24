@@ -5,26 +5,31 @@
 	zoom: 1;
 	position: absolute;
 	right: 0.25em;
-	top: 50%;
+	top: 10%;
 	margin: 1px;
-	height: 12px;
-	width: 12px;
+	height: 42px;
+	width: 42px;
 	margin-top: -6px;
-	z-index: 2;
+	z-index: 99;
 	border: 0px solid;
 	display: none;
 }
 
 .suggestions-results {
-	font-size: 1.2em;
+	font-size: 1.4em;
 	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+
+.suggestions-results hr {
+	margin: 0;
 }
 
 .suggestions-result {
 	color: black;
-	color: WindowText;
 	margin: 0;
-	line-height: 1.8em;
+	line-height: 2.6em;
 	padding: 0.01em 0.25em;
 	text-align: left;
 	postion: relative;
@@ -32,23 +37,23 @@
 
 .suggestions-result a {
 	text-decoration: none;
-	color: #000000;
+	color: #666;
 }
 .suggestions-result a:link {
 	text-decoration: none;
-	color:#000000;
+	color:#666;
 }
 .suggestions-result a:visited {
 	text-decoration: none;
-	color:#000000;
+	color:#666;
 }
 .suggestions-result a:hover {
 	text-decoration: none;
-	color:#000000;
+	color:#666;
 }
 .suggestions-result a:active {
 	text-decoration: none;
-	color:#000000;
+	color:#666;
 }
 .suggestions-result:hover {
 	background-color: #ACD1E9;
@@ -58,7 +63,7 @@ a.sq-val-update {
 	display: block;
 	font-weight: normal;
 	text-decoration: none;
-	color: #000000;
+	color: #666;
 	position: absolute;
 	right: 0;
 	width: 1.5em;
@@ -66,19 +71,15 @@ a.sq-val-update {
 }
 a.sq-val-update:link {
 	text-decoration: none;
-	color:#000000;
 }
 a.sq-val-update:visited {
 	text-decoration: none;
-	color:#000000;
 }
 a.sq-val-update:hover {
 	text-decoration: none;
-	color:#000000;
 }
 a.sq-val-update:active {
 	text-decoration: none;
-	color:#000000;
 }
 
 a.search-result-item {
@@ -95,6 +96,15 @@ a.search-result-item {
 	border-bottom: 1px solid #888;
 	z-index: 2;
 	position: absolute;
+}
+
+#remove-results {
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
 }
 
 #search {
@@ -115,6 +125,35 @@ ul#footer-info {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+#left-arrow {
+	background: url(images/arrow-left.png) no-repeat scroll 0 0 transparent;
+	background-position: center center;
+	cursor: pointer;
+	zoom: 1;
+	position: absolute;
+	right: 0.25em;
+	top: 20%;
+	margin: 1px;
+	height: 40px;
+	width: 40px;
+	margin-top: -6px;
+	z-index: 99;
+	border: 0px solid;
+}
+
+#sq {
+/*	background-color: #ff0000;*/
+}
+
+#sq.animate {
+	-webkit-transition: all .3s ease-in 100ms;
+/*	background-color: #0000ff;*/
+}
+
+#searchbox {
+/*	background-color: #00ff00;*/
 }
 
 .divclearable {
