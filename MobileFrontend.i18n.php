@@ -640,6 +640,9 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-leave-feedback' => 'Пакінуць водгук',
 	'mobile-frontend-leave-feedback-thanks' => 'Дзякуй за Ваш водгук!',
 	'mobile-frontend-language' => 'Мова',
+	'mobile-frontend-username' => 'Імя ўдзельніка/ўдзельніцы:',
+	'mobile-frontend-password' => 'Пароль:',
+	'mobile-frontend-login' => 'Увайсьці',
 );
 
 /** Bulgarian (Български)
@@ -2166,6 +2169,9 @@ $messages['he'] = array(
 	'mobile-frontend-leave-feedback' => 'שליחת משוב',
 	'mobile-frontend-leave-feedback-thanks' => 'תודה על המשוב!',
 	'mobile-frontend-language' => 'שפה',
+	'mobile-frontend-username' => 'שם משתמש:',
+	'mobile-frontend-password' => 'ססמה:',
+	'mobile-frontend-login' => 'כניסה',
 );
 
 /** Hindi (हिन्दी) */
@@ -3500,6 +3506,9 @@ $messages['ml'] = array(
 	'mobile-frontend-leave-feedback' => 'മൊബൈൽ സൈറ്റിനെക്കുറിച്ചുള്ള അഭിപ്രായങ്ങൾ',
 	'mobile-frontend-leave-feedback-thanks' => 'താങ്കളുടെ അഭിപ്രായത്തിനു വളരെ നന്ദി!',
 	'mobile-frontend-language' => 'ഭാഷ',
+	'mobile-frontend-username' => 'ഉപയോക്തൃനാമം:',
+	'mobile-frontend-password' => 'രഹസ്യവാക്ക്:',
+	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
 );
 
 /** Mongolian (Монгол) */
@@ -3637,6 +3646,9 @@ $messages['ms'] = array(
 	'mobile-frontend-leave-feedback' => 'Tinggalkan maklum balas',
 	'mobile-frontend-leave-feedback-thanks' => 'Terima kasih atas maklum balas anda!',
 	'mobile-frontend-language' => 'Bahasa',
+	'mobile-frontend-username' => 'Nama pengguna:',
+	'mobile-frontend-password' => 'Kata laluan:',
+	'mobile-frontend-login' => 'Log masuk',
 );
 
 /** Maltese (Malti) */
