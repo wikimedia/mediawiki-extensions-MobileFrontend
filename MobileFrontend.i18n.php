@@ -98,8 +98,10 @@ $messages['qqq'] = array(
 	'mobile-frontend-feedback-page' => '{{optional}}',
 	'mobile-frontend-language' => '{{Identical|Language}}',
 	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.',
-	'mobile-frontend-password' => 'Field label for entry of password in Wikimedia mobile user interface.',
-	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.',
+	'mobile-frontend-password' => 'Field label for entry of password in Wikimedia mobile user interface.
+{{Identical|Password}}',
+	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
+{{Identical|Log in}}',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
@@ -640,7 +642,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-leave-feedback' => 'Пакінуць водгук',
 	'mobile-frontend-leave-feedback-thanks' => 'Дзякуй за Ваш водгук!',
 	'mobile-frontend-language' => 'Мова',
-	'mobile-frontend-username' => 'Імя ўдзельніка/ўдзельніцы:',
+	'mobile-frontend-username' => 'Імя ўдзельніка:',
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Увайсьці',
 );
@@ -2300,6 +2302,9 @@ $messages['hsb'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Komentar wotpósłać',
 	'mobile-frontend-leave-feedback-thanks' => 'Dźakujemy so za twój komentar!',
 	'mobile-frontend-language' => 'Rěč',
+	'mobile-frontend-username' => 'Wužiwarske mjeno:',
+	'mobile-frontend-password' => 'Hesło:',
+	'mobile-frontend-login' => 'Přizjewić',
 );
 
 /** Hungarian (Magyar)
@@ -2901,6 +2906,7 @@ $messages['ko'] = array(
 	'mobile-frontend-disable-images' => '이미지를 표시하지 않도록 설정',
 	'mobile-frontend-enable-images' => '이미지를 표시하도록 설정',
 	'mobile-frontend-news-items' => '새로 들어온 소식',
+	'mobile-frontend-leave-feedback-notice' => '당신의 피드백이 모바일 사이트를 개선하는 데 도움이 됩니다. 피드백은 당신의 계정 이름, 브라우저 버전과 운영 체제 정보와 함께 &quot;$1&quot; 문서에 공개적으로 게시될 것입니다. 제목에 도움이 되는 정보를 입력해주세요. 예를 들면 "넓은 표에 관한 문제"라고 쓸 수 있습니다. 당신의 피드백은 이용 규약의 적용을 받습니다.',
 	'mobile-frontend-leave-feedback-subject' => '제목',
 	'mobile-frontend-leave-feedback-message' => '메시지',
 	'mobile-frontend-leave-feedback-cancel' => '취소',
@@ -2909,6 +2915,9 @@ $messages['ko'] = array(
 	'mobile-frontend-feedback-page' => 'Project:모바일 확장 기능 피드백',
 	'mobile-frontend-leave-feedback-thanks' => '피드백해 주셔서 감사합니다!',
 	'mobile-frontend-language' => '언어',
+	'mobile-frontend-username' => '계정 이름:',
+	'mobile-frontend-password' => '비밀번호:',
+	'mobile-frontend-login' => '로그인',
 );
 
 /** Karachay-Balkar (Къарачай-Малкъар) */
@@ -3149,6 +3158,9 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback' => 'Feedback fir de mobile Site',
 	'mobile-frontend-leave-feedback-thanks' => 'Merci fir Äre Feedback!',
 	'mobile-frontend-language' => 'Sprooch',
+	'mobile-frontend-username' => 'Benotzernumm:',
+	'mobile-frontend-password' => 'Passwuert:',
+	'mobile-frontend-login' => 'Aloggen',
 );
 
 /** Lezghian (Лезги) */
@@ -3224,6 +3236,9 @@ Betrach dit later nog ins!",
 	'mobile-frontend-leave-feedback' => 'Laot feedback achter',
 	'mobile-frontend-leave-feedback-thanks' => 'Danke veure feedback!',
 	'mobile-frontend-language' => 'Sjpraok',
+	'mobile-frontend-username' => 'Gebroekersnaam:',
+	'mobile-frontend-password' => 'Wachwaord:',
+	'mobile-frontend-login' => 'Mèlj aan',
 );
 
 /** Lumbaart (Lumbaart) */
@@ -3557,7 +3572,9 @@ $messages['mo'] = array(
 	'mobile-frontend-file-namespace' => 'Фишиер',
 );
 
-/** Marathi (मराठी) */
+/** Marathi (मराठी)
+ * @author Evision
+ */
 $messages['mr'] = array(
 	'mobile-frontend-search-submit' => 'चला',
 	'mobile-frontend-search-results' => 'शोधनिकाल',
@@ -3586,6 +3603,8 @@ $messages['mr'] = array(
 	'mobile-frontend-author-link' => 'नेहमीच्या विकिपीडीयावर ही मीडिया संचिका पहा. लेखक, परवाने व आणखी विवरण तेथे मिळेल.',
 	'mobile-frontend-download-full-version' => 'पूर्ण आवृत्ती उतरवून घ्या',
 	'mobile-frontend-file-namespace' => 'संचिका',
+	'mobile-frontend-leave-feedback-submit' => 'प्रतिक्रिया द्या',
+	'mobile-frontend-leave-feedback-thanks' => 'आपल्या प्रतिक्रियेबद्दल आभार !',
 );
 
 /** Malay (Bahasa Melayu)
@@ -3845,7 +3864,7 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-leave-feedback-submit' => 'Terugkoppeling opslaan',
 	'mobile-frontend-leave-feedback-link-text' => 'Mobiele Frontend-terugkoppeling',
 	'mobile-frontend-leave-feedback' => 'Terugkoppeling achterlaten',
-	'mobile-frontend-leave-feedback-thanks' => 'Dank u voor uw terugkoppeling.',
+	'mobile-frontend-leave-feedback-thanks' => 'Bedankt voor uw terugkoppeling!',
 	'mobile-frontend-language' => 'Taal',
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wachtwoord:',
