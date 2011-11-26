@@ -364,9 +364,11 @@ class ExtMobileFrontend {
 				}
 				$fragmentDelimiter = ( isset( $parsedUrl['fragment'] ) && $parsedUrl['fragment'] !== null  ) ? '#' : '';
 				$queryDelimiter = ( isset( $parsedUrl['query'] ) && $parsedUrl['query'] !== null  ) ? '?' : '';
-				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host']
-						. $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query']
-						. $fragmentDelimiter . $parsedUrl['fragment'];
+
+				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host'] . $parsedUrl['path'];
+				if ( isset( $parsedUrl['query'] ) ) {
+					$languageUrl .= $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+				}
 
 				$languageUrls[] = array(
 					'href' => $languageUrl,
