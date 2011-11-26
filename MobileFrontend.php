@@ -258,7 +258,8 @@ class ExtMobileFrontend {
 				}
 				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
 				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-				$targetUrl = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+				$targetUrl = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path']
+						. $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 				$output->setSquidMaxage( 1200 );
 				$output->redirect( $targetUrl, '301' );
 			}
@@ -338,9 +339,9 @@ class ExtMobileFrontend {
 
 		self::$dir = $wgContLang->getDir();
 		self::$code = $wgContLang->getCode();
-		
+
 		$languageUrls = array();
-		
+
 		$languageUrls[] = array(
 			'href' => self::$currentURL,
 			'text' => self::$htmlTitle,
@@ -348,12 +349,12 @@ class ExtMobileFrontend {
 			'class' => 'interwiki-' . $wgLanguageCode,
 			'lang' => $wgLanguageCode,
 		);
-		
-		foreach( $wgOut->getLanguageLinks() as $l ) {			
+
+		foreach( $wgOut->getLanguageLinks() as $l ) {
 			$tmp = explode( ':', $l, 2 );
 			$class = 'interwiki-' . $tmp[0];
 			$lang = $tmp[0];
-			unset( $tmp );		   
+			unset( $tmp );
 			$nt = Title::newFromText( $l );
 			if ( $nt ) {
 				$parsedUrl = wfParseUrl( $nt->getFullURL() );
@@ -363,11 +364,15 @@ class ExtMobileFrontend {
 				}
 				$fragmentDelimiter = ( isset( $parsedUrl['fragment'] ) && $parsedUrl['fragment'] !== null  ) ? '#' : '';
 				$queryDelimiter = ( isset( $parsedUrl['query'] ) && $parsedUrl['query'] !== null  ) ? '?' : '';
-				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host'] . $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host']
+						. $parsedUrl['path'] . $queryDelimiter . $parsedUrl['query']
+						. $fragmentDelimiter . $parsedUrl['fragment'];
 
 				$languageUrls[] = array(
 					'href' => $languageUrl,
-					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != '' ? $wgContLang->getLanguageName( $nt->getInterwiki() ) : $l ),
+					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
+							? $wgContLang->getLanguageName( $nt->getInterwiki() )
+							: $l ),
 					'language' => $wgContLang->getLanguageName( $lang ),
 					'class' => $class,
 					'lang' => $lang,
@@ -378,7 +383,9 @@ class ExtMobileFrontend {
 		self::$languageUrls = $languageUrls;
 
 		$nonMobileServerBaseURL = str_replace( $wgMobileDomain, '.', $wgServer );
-		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false ) ? $wgMobileRedirectFormAction : "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
+		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false )
+				? $wgMobileRedirectFormAction
+				: "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
 
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
 		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
@@ -1065,7 +1072,7 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 		return $contentHtml;
 	}
-	
+
 	/**
 	 * @param $token string
 	 * @param $action string
@@ -1076,19 +1083,19 @@ class ExtMobileFrontend {
 		$password = self::$messages['mobile-frontend-password'];
 		$login = self::$messages['mobile-frontend-login'];
 		$loginHtml = Html::input( 'wpName', null, 'text', array(
-		                                'class' => 'loginText',
-		                                'id' => 'wpName1',
-		                                'tabindex' => '1',
-		                                'size' => '20',
-		                                'required') );
+										'class' => 'loginText',
+										'id' => 'wpName1',
+										'tabindex' => '1',
+										'size' => '20',
+										'required') );
 		$passwordHtml = Html::input( 'wpPassword', null, 'password', array(
-		                                'class' => 'loginPassword',
-		                                'id' => 'wpPassword1',
-		                                'tabindex' => '2',
-		                                'size' => '20') );
+										'class' => 'loginPassword',
+										'id' => 'wpPassword1',
+										'tabindex' => '2',
+										'size' => '20') );
 		$buttonHtml = Html::input( 'wpLoginAttempt', $login, 'submit', array(
-			                        'id' => 'wpLoginAttempt',
-			                        'tabindex' => '3') );
+									'id' => 'wpLoginAttempt',
+									'tabindex' => '3') );
 		$form  = <<<EOT
 			<form name="userlogin" method="post" action="{$action}">
 				<table class="user-login">
@@ -1118,7 +1125,7 @@ class ExtMobileFrontend {
 EOT;
 		return $this->getDomDocumentNodeByTagName( $form, 'form' );
 	}
-	
+
 	/**
 	 * @param $html string
 	 * @param $tagName string
@@ -1126,7 +1133,7 @@ EOT;
 	 */
 	private function getDomDocumentNodeByTagName( $html, $tagName ) {
 		libxml_use_internal_errors( true );
-		$dom = new DOMDocument(); 
+		$dom = new DOMDocument();
 		$dom->loadHTML( $html );
 		libxml_use_internal_errors( false );
 		$dom->preserveWhiteSpace = false;
@@ -1153,9 +1160,9 @@ EOT;
 		$this->doc->encoding = 'UTF-8';
 
 		$itemToRemoveRecords = $this->parseItemsToRemove();
-		
+
 		$ptLogout = $this->doc->getElementById( 'pt-logout' );
-		
+
 		if ( $ptLogout ) {
 			$ptLogoutLink = $ptLogout->firstChild;
 			$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
@@ -1268,7 +1275,7 @@ EOT;
 
 			$redLink->parentNode->replaceChild( $spanNode, $redLink );
 		}
-		
+
 		if ( self::$title == 'Special:UserLogin' ) {
 			if ( isset( $wpLoginToken ) && isset( $action ) && isset( $userlogin ) ) {
 				$login = $this->renderLogin( $wpLoginToken, $action );
@@ -1276,7 +1283,7 @@ EOT;
 				$userlogin->appendChild( $loginNode );
 			}
 		}
-		
+
 		$content = $this->doc->getElementById( 'content' );
 
 		$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
@@ -1359,17 +1366,17 @@ EOT;
 		wfProfileOut( __METHOD__ );
 		return $applicationHtml;
 	}
-	
+
 	public static function buildLanguageSelection() {
 		global $wgLanguageCode;
-		$output = Html::openElement( 'select', 
-			array( 'id' => 'languageselection', 
+		$output = Html::openElement( 'select',
+			array( 'id' => 'languageselection',
 				'onchange' => 'javascript:navigateToLanguageSelection();' ) );
 		foreach (self::$languageUrls as $languageUrl) {
 			if ( $languageUrl['lang'] == $wgLanguageCode ) {
 				$output .=	Html::element( 'option',
 							array( 'value' => $languageUrl['href'], 'selected' => 'selected' ),
-									$languageUrl['language'] );				
+									$languageUrl['language'] );
 			} else {
 				$output .=	Html::element( 'option',
 							array( 'value' => $languageUrl['href'] ),
