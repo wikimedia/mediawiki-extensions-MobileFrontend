@@ -1165,6 +1165,9 @@ $messages['da'] = array(
 	'mobile-frontend-leave-feedback' => 'Giv feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Tak for dine tilbagemeldinger!',
 	'mobile-frontend-language' => 'Sprog',
+	'mobile-frontend-username' => 'Brugernavn:',
+	'mobile-frontend-password' => 'Adgangskode:',
+	'mobile-frontend-login' => 'Log ind',
 );
 
 /** German (Deutsch)
