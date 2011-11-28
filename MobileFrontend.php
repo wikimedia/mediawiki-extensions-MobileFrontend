@@ -1084,47 +1084,62 @@ class ExtMobileFrontend {
 		$username = self::$messages['mobile-frontend-username'];
 		$password = self::$messages['mobile-frontend-password'];
 		$login = self::$messages['mobile-frontend-login'];
-		$loginHtml = Html::input( 'wpName', null, 'text', array(
-										'class' => 'loginText',
-										'id' => 'wpName1',
-										'tabindex' => '1',
-										'size' => '20',
-										'required') );
-		$passwordHtml = Html::input( 'wpPassword', null, 'password', array(
-										'class' => 'loginPassword',
-										'id' => 'wpPassword1',
-										'tabindex' => '2',
-										'size' => '20') );
-		$buttonHtml = Html::input( 'wpLoginAttempt', $login, 'submit', array(
-									'id' => 'wpLoginAttempt',
-									'tabindex' => '3') );
-		$form  = <<<EOT
-			<form name="userlogin" method="post" action="{$action}">
-				<table class="user-login">
-					<tbody>
-						<tr>
-							<td class="mw-label"><label for="wpName1">{$username}</label></td>
-						</tr>
-						<tr>
-							<td class="mw-input">{$loginHtml}</td>
-						</tr>
-						<tr>
-							<td class="mw-label"><label for="wpPassword1">{$password}</label></td>
-						</tr>
-						<tr>
-							<td class="mw-input">{$passwordHtml}</td>
-						</tr>
-						<tr>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="mw-submit">{$buttonHtml}</td>
-						</tr>
-					</tbody>
-				</table>
-				<input type="hidden" name="wpLoginToken" value="{$token}">
-			</form>
-EOT;
+		$form = Html::openElement( 'form',
+					array( 'name' => 'userlogin',
+				   		   'method' => 'post',
+				   		   'action' => $action ) ) .
+				Html::openElement( 'table',
+					array( 'class' => 'user-login' ) ) .
+				Html::openElement( 'tbody' ) .
+				Html::openElement( 'tr' ) .
+				Html::openElement( 'td',
+					array( 'class' => 'mw-label' ) ) .
+				Html::element( 'label',
+		 			array( 'for' => 'wpName1' ), $username ) .
+				Html::closeElement( 'td' ) .
+				Html::closeElement( 'tr' ) .
+				Html::openElement( 'tr' ) .
+				Html::openElement( 'td' ) .
+				Html::input( 'wpName', null, 'text',
+					array( 'class' => 'loginText',
+						   'id' => 'wpName1',
+						   'tabindex' => '1',
+						   'size' => '20',
+						   'required') ) .
+				Html::closeElement( 'td' ) .
+				Html::closeElement( 'tr' ) .
+				Html::openElement( 'tr' ) .
+				Html::openElement( 'td',
+					array( 'class' => 'mw-label' ) ) .
+				Html::element( 'label',
+		 			array( 'for' => 'wpPassword1' ), $password ) .
+				Html::closeElement( 'td' ) .
+				Html::closeElement( 'tr' ) .
+				Html::openElement( 'tr' ) .
+				Html::openElement( 'td',
+					array( 'class' => 'mw-input' ) ) .
+		 		Html::input( 'wpPassword', null, 'password',
+					array( 'class' => 'loginPassword',
+						   'id' => 'wpPassword1',
+						   'tabindex' => '2',
+						   'size' => '20') ) .
+				Html::closeElement( 'td' ) .
+				Html::closeElement( 'tr' ) .
+				Html::openElement( 'tr' ) .
+				Html::element( 'td' ) .
+				Html::closeElement( 'tr' ) .
+				Html::openElement( 'tr' ) .
+				Html::openElement( 'td',
+					array( 'class' => 'mw-submit' ) ) .
+				Html::input( 'wpLoginAttempt', $login, 'submit',
+					array( 'id' => 'wpLoginAttempt',
+						   'tabindex' => '3') ) .
+				Html::closeElement( 'td' ) .
+				Html::closeElement( 'tr' ) .
+				Html::closeElement( 'tbody' ) .
+				Html::closeElement( 'table' ) .
+				Html::input( 'wpLoginToken', $token, 'hidden' ) .
+				Html::closeElement( 'form' );
 		return $this->getDomDocumentNodeByTagName( $form, 'form' );
 	}
 
