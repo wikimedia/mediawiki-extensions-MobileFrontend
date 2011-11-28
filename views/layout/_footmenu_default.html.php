@@ -19,7 +19,7 @@ if ( self::$disableImages == 0 ) {
 	$imagesURL = self::$enableImagesURL;
 }
 
-$logoutLink = ( $logoutHtml ) ? ' | ' . $logoutHtml : '';
+$logoutLink = ( !empty( $logoutHtml ) ) ? ' | ' . $logoutHtml : '';
 
 $feedbackLink = ( self::$code == 'en' && self::$isBetaGroupMember ) ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : '';
 
