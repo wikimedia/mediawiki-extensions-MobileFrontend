@@ -451,6 +451,9 @@ $messages['ast'] = array(
 	'mobile-frontend-leave-feedback' => 'Comentarios sobre la versión pa móvil',
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracies polos tos comentarios!',
 	'mobile-frontend-language' => 'Llingua',
+	'mobile-frontend-username' => "Nome d'usuariu:",
+	'mobile-frontend-password' => 'Contraseña:',
+	'mobile-frontend-login' => 'Entrar',
 );
 
 /** Azerbaijani (Azərbaycanca)
@@ -1049,6 +1052,9 @@ $messages['cs'] = array(
 	'mobile-frontend-leave-feedback' => 'Odeslat komentář',
 	'mobile-frontend-leave-feedback-thanks' => 'Děkujeme za váš názor!',
 	'mobile-frontend-language' => 'Jazyk',
+	'mobile-frontend-username' => 'Uživatelské jméno:',
+	'mobile-frontend-password' => 'Heslo:',
+	'mobile-frontend-login' => 'Přihlásit se',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -5622,6 +5628,7 @@ $messages['ug-arab'] = array(
 
 /** Ukrainian (Українська)
  * @author Dim Grits
+ * @author Gucci Mane Burrr
  * @author Sodmy
  */
 $messages['uk'] = array(
@@ -5680,6 +5687,7 @@ $messages['uk'] = array(
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Дякуємо, за ваш відгук!',
 	'mobile-frontend-language' => 'Мова',
+	'mobile-frontend-password' => 'Пароль:',
 );
 
 /** Urdu (اردو) */
