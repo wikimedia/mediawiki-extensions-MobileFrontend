@@ -87,7 +87,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.80';
+	const VERSION = '0.5.81';
 
 	/**
 	 * @var DOMDocument
@@ -404,21 +404,6 @@ class ExtMobileFrontend {
 	public function beforePageDisplayHTML( &$out, &$text ) {
 		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
 		wfProfileIn( __METHOD__ );
-		// The title
-		self::$title = $out->getTitle();
-
-		if (  Title::newMainPage()->equals( self::$title ) ) {
-			self::$isMainPage = true;
-		}
-	
-		if ( self::$title == 'Special:UserLogin' ) {
-			self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
-			$returnToVal = $wgRequest->getVal( 'returnto' );
-		 	$returnto = ( !empty ( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
-			self::$wsLoginFormAction = self::$title->getLocalURL( 'action=submitlogin&type=login' . $returnto );
-		}
-
-		self::$htmlTitle = $out->getHTMLTitle();
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$uAmd5 = md5( $userAgent );
@@ -439,13 +424,29 @@ class ExtMobileFrontend {
 					$props = $device->getAllCapabilities();
 					$wgMemc->set( $key, $props, 86400 );
 				} else {
-					$wgMemc->set( $key, "generic", 86400 );
-					$props = "generic";
+					$wgMemc->set( $key, 'generic', 86400 );
+					$props = 'generic';
 				}
 			}
 		} catch ( Exception $e ) {
 			// echo $e->getMessage();
 		}
+		
+		// The title
+		self::$title = $out->getTitle();
+
+		if (  Title::newMainPage()->equals( self::$title ) ) {
+			self::$isMainPage = true;
+		}
+	
+		if ( self::$title == 'Special:UserLogin' ) {
+			self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
+			$returnToVal = $wgRequest->getVal( 'returnto' );
+		 	$returnto = ( !empty ( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
+			self::$wsLoginFormAction = self::$title->getLocalURL( 'action=submitlogin&type=login' . $returnto );
+		}
+
+		self::$htmlTitle = $out->getHTMLTitle();
 
 		// Note: The WebRequest Class calls are made in this block because
 		// since PHP 5.1.x, all objects have their destructors called
@@ -492,9 +493,9 @@ class ExtMobileFrontend {
 		self::$callback = $wgRequest->getText( 'callback' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
 
-		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
+		$xDevice = !empty( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 
-		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
+		$acceptHeader = !empty( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		$device = new DeviceDetection();
 
 		if ( !empty( $xDevice ) ) {
@@ -575,29 +576,6 @@ class ExtMobileFrontend {
 		if ( $mobileAction	== 'opt_out_cookie' ) {
 			$this->setOptInOutCookie( '' );
 		}
-
-		// WURFL documentation: http://wurfl.sourceforge.net/help_doc.php
-		// Determine the kind of markup
-		//if ( is_array( $props ) && isset( $props['preferred_markup'] ) && $props['preferred_markup'] ) {
-			// wfDebug( __METHOD__ . ": preferred markup for this device: " . $props['preferred_markup'] );
-			// xhtml/html: html_web_3_2, html_web_4_0
-			// xthml basic/xhtmlmp (wap 2.0): html_wi_w3_xhtmlbasic html_wi_oma_xhtmlmp_1_0
-			// chtml (imode): html_wi_imode_*
-			// wml (wap 1): wml_1_1, wml_1_2, wml_1_3
-		//}
-		// WML options that might influence our 'style' of output
-		// $props['access_key_support'] (for creating easy keypad navigation)
-		// $props['softkey_support'] ( for creating your own menu)
-
-		// WAP2/XHTML MP
-		// xhtmlmp_preferred_mime_type ( the mime type with which you should serve your xhtml to this device
-
-		// HTML
-		// $props['pointing_method'] == touchscreen
-		// ajax_support_javascript
-		// html_preferred_dtd
-
-		// Determine
 
 		if ( self::$useFormat === 'mobile' ||
 			self::$useFormat === 'mobile-wap' ||
