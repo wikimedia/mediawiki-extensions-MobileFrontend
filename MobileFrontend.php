@@ -87,7 +87,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.82';
+	const VERSION = '0.5.83';
 
 	/**
 	 * @var DOMDocument
@@ -663,10 +663,10 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		$parsedUrl = parse_url( $url );
 		// Validates value as IP address
-		if ( isset( $parsedUrl['host'] ) && !IP::isValid( $parsedUrl['host'] ) ) {
-			wfProfileOut( __METHOD__ );
+		if ( !empty( $parsedUrl['host'] ) && !IP::isValid( $parsedUrl['host'] ) ) {
 			$baseUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
 			$baseUrl = str_replace( $baseUrl, '', $url );
+			wfProfileOut( __METHOD__ );
 			return $baseUrl;
 		}
 		wfProfileOut( __METHOD__ );
