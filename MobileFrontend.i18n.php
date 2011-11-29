@@ -1598,8 +1598,10 @@ $messages['ext'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Baqeri
  * @author Leyth
  * @author Mjbmr
+ * @author ZxxZxxZ
  */
 $messages['fa'] = array(
 	'mobile-frontend-desc' => 'ظاهر تلفن همراه',
@@ -1652,6 +1654,9 @@ $messages['fa'] = array(
 	'mobile-frontend-leave-feedback' => 'گذاشتن بازخورد',
 	'mobile-frontend-leave-feedback-thanks' => 'تشکر از ارائه بازخورد شما!',
 	'mobile-frontend-language' => 'زبان',
+	'mobile-frontend-username' => 'نام کاربری:',
+	'mobile-frontend-password' => 'گذرواژه:',
+	'mobile-frontend-login' => 'ورود',
 );
 
 /** Finnish (Suomi)
