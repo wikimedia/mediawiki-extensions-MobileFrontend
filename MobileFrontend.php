@@ -87,7 +87,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.78';
+	const VERSION = '0.5.79';
 
 	/**
 	 * @var DOMDocument
@@ -129,8 +129,8 @@ class ExtMobileFrontend {
 	public static $hideSearchBox = false;
 	public static $hideLogo = false;
 	public static $languageUrls;
-	public static $wsLoginToken;
-	public static $wsLoginFormAction;
+	public static $wsLoginToken = '';
+	public static $wsLoginFormAction = '';
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -416,9 +416,6 @@ class ExtMobileFrontend {
 			$returnToVal = $wgRequest->getVal( 'returnto' );
 		 	$returnto = ( !empty ( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
 			self::$wsLoginFormAction = self::$title->getLocalURL( 'action=submitlogin&type=login' . $returnto );
-		} else {
-			self::$wsLoginToken = '';
-			self::$wsLoginFormAction = '';
 		}
 
 		self::$htmlTitle = $out->getHTMLTitle();
