@@ -129,6 +129,8 @@ class ExtMobileFrontend {
 	public static $hideSearchBox = false;
 	public static $hideLogo = false;
 	public static $languageUrls;
+	public static $wsLoginToken;
+	public static $wsLoginFormAction;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -407,6 +409,16 @@ class ExtMobileFrontend {
 
 		if (  Title::newMainPage()->equals( self::$title ) ) {
 			self::$isMainPage = true;
+		}
+	
+		if ( self::$title == 'Special:UserLogin' ) {
+			self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
+			$returnToVal = $wgRequest->getVal( 'returnto' );
+		 	$returnto = ( !empty ( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
+			self::$wsLoginFormAction = self::$title->getLocalURL( 'action=submitlogin&type=login' . $returnto );
+		} else {
+			self::$wsLoginToken = '';
+			self::$wsLoginFormAction = '';
 		}
 
 		self::$htmlTitle = $out->getHTMLTitle();
@@ -1076,18 +1088,16 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @param $token string
-	 * @param $action string
 	 * @return DomElement
 	 */
-	public function renderLogin( $token, $action ) {
+	public function renderLogin() {
 		$username = self::$messages['mobile-frontend-username'];
 		$password = self::$messages['mobile-frontend-password'];
 		$login = self::$messages['mobile-frontend-login'];
 		$form = Html::openElement( 'form',
 					array( 'name' => 'userlogin',
 				   		   'method' => 'post',
-				   		   'action' => $action ) ) .
+				   		   'action' => self::$wsLoginFormAction ) ) .
 				Html::openElement( 'table',
 					array( 'class' => 'user-login' ) ) .
 				Html::openElement( 'tbody' ) .
@@ -1138,7 +1148,7 @@ class ExtMobileFrontend {
 				Html::closeElement( 'tr' ) .
 				Html::closeElement( 'tbody' ) .
 				Html::closeElement( 'table' ) .
-				Html::input( 'wpLoginToken', $token, 'hidden' ) .
+				Html::input( 'wpLoginToken', self::$wsLoginToken, 'hidden' ) .
 				Html::closeElement( 'form' );
 		return $this->getDomDocumentNodeByTagName( $form, 'form' );
 	}
@@ -1188,24 +1198,9 @@ class ExtMobileFrontend {
 		if ( self::$title == 'Special:UserLogin' ) {
 			$userlogin = $this->doc->getElementById( 'userloginForm' );
 
-			if ( $userlogin && get_class($userlogin) === 'DOMElement' ) {
-				$inputs = $userlogin->getElementsByTagName( 'input' );
-				$forms = $userlogin->getElementsByTagName( 'form' );
-
-				if ( $forms ) {
-					foreach ( $forms as $form ) {
-						$action = $form->getAttribute( 'action' );
-					}
-				}
-
-				foreach ( $inputs as $input ) {
-					if ( $input->getAttribute( 'name' ) === 'wpLoginToken' ) {
-						$wpLoginToken = $input->getAttribute( 'value' );
-					}
-				}
-
+			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
 				$firstHeading = $this->doc->getElementById( 'firstHeading' );
-				if ( $firstHeading ) {
+				if ( !empty( $firstHeading ) ) {
 					$firstHeading->nodeValue = '';
 				}
 			}
@@ -1294,8 +1289,8 @@ class ExtMobileFrontend {
 		}
 
 		if ( self::$title == 'Special:UserLogin' ) {
-			if ( isset( $wpLoginToken ) && isset( $action ) && isset( $userlogin ) ) {
-				$login = $this->renderLogin( $wpLoginToken, $action );
+			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
+				$login = $this->renderLogin();
 				$loginNode = $this->doc->importNode( $login, true );
 				$userlogin->appendChild( $loginNode );
 			}
