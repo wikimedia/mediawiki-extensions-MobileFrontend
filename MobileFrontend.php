@@ -87,7 +87,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.79';
+	const VERSION = '0.5.80';
 
 	/**
 	 * @var DOMDocument
@@ -1088,6 +1088,7 @@ class ExtMobileFrontend {
 	 * @return DomElement
 	 */
 	public function renderLogin() {
+		wfProfileIn( __METHOD__ );
 		$username = self::$messages['mobile-frontend-username'];
 		$password = self::$messages['mobile-frontend-password'];
 		$login = self::$messages['mobile-frontend-login'];
@@ -1147,6 +1148,7 @@ class ExtMobileFrontend {
 				Html::closeElement( 'table' ) .
 				Html::input( 'wpLoginToken', self::$wsLoginToken, 'hidden' ) .
 				Html::closeElement( 'form' );
+		wfProfileOut( __METHOD__ );
 		return $this->getDomDocumentNodeByTagName( $form, 'form' );
 	}
 
@@ -1156,6 +1158,7 @@ class ExtMobileFrontend {
 	 * @return DomElement
 	 */
 	private function getDomDocumentNodeByTagName( $html, $tagName ) {
+		wfProfileIn( __METHOD__ );
 		libxml_use_internal_errors( true );
 		$dom = new DOMDocument();
 		$dom->loadHTML( $html );
@@ -1164,6 +1167,7 @@ class ExtMobileFrontend {
 		$dom->strictErrorChecking = false;
 		$dom->encoding = 'UTF-8';
 		$node = $dom->getElementsByTagName( $tagName )->item(0);
+		wfProfileOut( __METHOD__ );
 		return $node;
 	}
 
