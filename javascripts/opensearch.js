@@ -163,9 +163,6 @@ function writeResults( sections ) {
 			var rel = i + 1;
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
 			html = html + "<div class=\"suggestions-result\" rel=\"" + htmlEntities( rel ) + "\" title=\"" + htmlEntities( section.label ) + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + htmlEntities( escapeJsString( section.label ) ) + "');\">+</a><a class=\"search-result-item\" href='" + htmlEntities( section.value ) + "'>" + htmlEntities( section.label ) + "</a></div>";
-			if ( i < ( sections.length - 1 ) ) {
-				html = html + '<hr />';
-			}
 		}
 		html = html + '</div>';
 		results.innerHTML = html;
