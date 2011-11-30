@@ -263,7 +263,7 @@ function writeResults( sections ) {
 			term = htmlEntities( decodeURIComponent( term ) );
 			var label = section.label.replace( new RegExp( '(' + term + ')', 'ig' ), '<strong>$1</strong>' );
 			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			html = html + "<div class=\"suggestions-result\" rel=\"" + htmlEntities( rel ) + "\" title=\"" + htmlEntities( section.label ) + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + htmlEntities( escapeJsString( section.label ) ) + "');\">+</a><a class=\"search-result-item\" href='" + htmlEntities( section.value ) + "'>" + label + "</a><hr/></div>";
+			html = html + "<div class=\"suggestions-result\" rel=\"" + htmlEntities( rel ) + "\" title=\"" + htmlEntities( section.label ) + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + htmlEntities( escapeJsString( section.label ) ) + "');\">+</a><a class=\"search-result-item\" href='" + htmlEntities( section.value ) + "'>" + label + "</a></div>";
 		}
 		html = html + '</div>';
 		results.innerHTML = html;

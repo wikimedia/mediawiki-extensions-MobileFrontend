@@ -43,6 +43,7 @@ body {
 	padding: 0.01em 0.25em;
 	text-align: left;
 	postion: relative;
+	border-bottom: solid 1px #999999;
 }
 
 .suggestions-result a {
