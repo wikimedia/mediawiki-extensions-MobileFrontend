@@ -87,7 +87,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.84';
+	const VERSION = '0.5.85';
 
 	/**
 	 * @var DOMDocument
@@ -299,8 +299,10 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	private function removeQueryStringParameter( $url, $field ) {
+		wfProfileIn( __METHOD__ );
 		$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
 		$url = substr( $url, 0, -1 );
+		wfProfileOut( __METHOD__ );
 		return $url;
 	}
 
@@ -394,6 +396,7 @@ class ExtMobileFrontend {
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
 		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		wfProfileOut( __METHOD__ );
+		return true;
 	}
 
 	/**
@@ -613,6 +616,7 @@ class ExtMobileFrontend {
 			self::$isBetaGroupMember = true;
 		}
 		wfProfileOut( __METHOD__ );
+		return true;
 	}
 
 	/**
@@ -629,6 +633,7 @@ class ExtMobileFrontend {
 		$wgCookieDomain = $tempWgCookieDomain;
 		$wgCookiePrefix = $tempWgCookiePrefix;
 		wfProfileOut( __METHOD__ );
+		return true;
 	}
 
 	private function getOptInOutCookie() {
@@ -684,6 +689,7 @@ class ExtMobileFrontend {
 			$wgRequest->response()->header( 'Pragma: no-cache' );
 		}
 		wfProfileOut( __METHOD__ );
+		return true;
 	}
 
 	private function sendXDeviceVaryHeader() {
@@ -695,6 +701,7 @@ class ExtMobileFrontend {
 		}
 		$wgOut->addVaryHeader( 'Cookie' );
 		wfProfileOut( __METHOD__ );
+		return true;
 	}
 
 	private function sendApplicationVersionVaryHeader() {
@@ -713,6 +720,7 @@ class ExtMobileFrontend {
 			}
 		}
 		wfProfileOut( __METHOD__ );
+		return true;
 	}
 
 	/**
@@ -1360,6 +1368,7 @@ class ExtMobileFrontend {
 
 	public static function buildLanguageSelection() {
 		global $wgLanguageCode;
+		wfProfileIn( __METHOD__ );
 		$output = Html::openElement( 'select',
 			array( 'id' => 'languageselection',
 				'onchange' => 'javascript:navigateToLanguageSelection();' ) );
@@ -1375,6 +1384,7 @@ class ExtMobileFrontend {
 			}
 		}
 		$output .= Html::closeElement( 'select', array() );
+		wfProfileOut( __METHOD__ );
 		return $output;
 	}
 
