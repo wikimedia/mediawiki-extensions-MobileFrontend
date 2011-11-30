@@ -455,13 +455,6 @@ class ExtMobileFrontend {
 						self::$isMainPage = true;
 					}
 
-					if ( self::$title == 'Special:UserLogin' ) {
-						self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
-						$returnToVal = $wgRequest->getVal( 'returnto' );
-					 	$returnto = ( !empty ( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
-						self::$wsLoginFormAction = self::$title->getLocalURL( 'action=submitlogin&type=login' . $returnto );
-					}
-
 					self::$htmlTitle = $out->getHTMLTitle();
 					self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 					self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
@@ -586,6 +579,14 @@ class ExtMobileFrontend {
 					$this->sendXDeviceVaryHeader();
 					$this->sendApplicationVersionVaryHeader();
 					$this->checkUserStatus();
+					
+					if ( self::$title == 'Special:UserLogin' && self::$isBetaGroupMember ) {
+						self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
+						$returnToVal = $wgRequest->getVal( 'returnto' );
+					 	$returnto = ( !empty ( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
+						self::$wsLoginFormAction = self::$title->getLocalURL( 'action=submitlogin&type=login' . $returnto );
+					}
+					
 					$this->setDefaultLogo();
 					ob_start( array( $this, 'DOMParse' ) );
 				}
@@ -1173,7 +1174,7 @@ class ExtMobileFrontend {
 			$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
 		}
 
-		if ( self::$title == 'Special:UserLogin' ) {
+		if ( self::$title == 'Special:UserLogin' && self::$isBetaGroupMember ) {
 			$userlogin = $this->doc->getElementById( 'userloginForm' );
 
 			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
@@ -1266,7 +1267,7 @@ class ExtMobileFrontend {
 			$redLink->parentNode->replaceChild( $spanNode, $redLink );
 		}
 
-		if ( self::$title == 'Special:UserLogin' ) {
+		if ( self::$title == 'Special:UserLogin' && self::$isBetaGroupMember ) {
 			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
 				$login = $this->renderLogin();
 				$loginNode = $this->doc->importNode( $login, true );
