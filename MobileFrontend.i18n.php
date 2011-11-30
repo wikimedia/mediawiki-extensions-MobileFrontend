@@ -2628,6 +2628,9 @@ $messages['it'] = array(
 	'mobile-frontend-leave-feedback' => 'Commenti sul sito per dispositivi mobili',
 	'mobile-frontend-leave-feedback-thanks' => 'Grazie per aver espresso il tuo commento.',
 	'mobile-frontend-language' => 'Lingua',
+	'mobile-frontend-username' => 'Nome utente:',
+	'mobile-frontend-password' => 'Password:',
+	'mobile-frontend-login' => 'Entra',
 );
 
 /** Japanese (日本語)
@@ -3830,7 +3833,7 @@ $messages['nl'] = array(
 	'mobile-frontend-no-article-found' => 'Geen resultaten gevonden',
 	'mobile-frontend-featured-article' => 'Uitgelicht',
 	'mobile-frontend-in-the-news' => 'Actueel',
-	'mobile-frontend-home-button' => 'Hoofdpagina',
+	'mobile-frontend-home-button' => 'Start',
 	'mobile-frontend-random-button' => 'Willekeurig',
 	'mobile-frontend-back-to-top-of-section' => 'Een kopje terugspringen',
 	'mobile-frontend-show-button' => 'Weergeven',
@@ -4646,6 +4649,9 @@ $messages['ro'] = array(
 	'mobile-frontend-leave-feedback' => 'Scrieți-vă părerea',
 	'mobile-frontend-leave-feedback-thanks' => 'Vă mulțumim pentru feedback!',
 	'mobile-frontend-language' => 'Limbă',
+	'mobile-frontend-username' => 'Nume de utilizator:',
+	'mobile-frontend-password' => 'Parolă:',
+	'mobile-frontend-login' => 'Autentificare',
 );
 
 /** Tarandíne (Tarandíne)
@@ -4942,6 +4948,7 @@ $messages['shi'] = array(
 );
 
 /** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
  * @author බිඟුවා
  */
 $messages['si'] = array(
@@ -4957,10 +4964,10 @@ $messages['si'] = array(
 	'mobile-frontend-hide-button' => 'සඟවන්න',
 	'mobile-frontend-disable-button' => 'අක්‍රීය කරන්න',
 	'mobile-frontend-back-button' => 'ආපසු',
-	'mobile-frontend-regular-site' => 'මෙම පිටුව සාමාන්‍ය විකිපීඩියා මත දක්වන්න',
+	'mobile-frontend-regular-site' => 'මෙම පිටුව සාමාන්‍ය {{SITENAME}} මත දක්වන්න',
 	'mobile-frontend-perm-stop-redirect' => 'ජංගම අඩවිය ස්ථිරවම අක්‍රීය කරන්න',
 	'mobile-frontend-error-page-title' => 'අපට ප්‍රශ්නයක් තිබේ!',
-	'mobile-frontend-error-page-text' => 'ජංගම විකිපීඩියාව තවමත් සංවර්ධනය කරමින් පවතින අතර අභ්‍යන්තර දෝෂ සමනය කිරීමට අපි කටයුතු කරමින් සිටිමු.අපට මෙම දෝෂය පිළිබඳ දන්වනු ලැබ ඇති අතර එය ඉක්මනින් නිවැරදි කරනු ඇත.කරුණාකර නැවත පරීක්ෂා කරන්න!',
+	'mobile-frontend-error-page-text' => 'ජංගම {{SITENAME}} තවමත් සංවර්ධනය කරමින් පවතින අතර අභ්‍යන්තර දෝෂ සමනය කිරීමට අපි කටයුතු කරමින් සිටිමු. අපට මෙම දෝෂය පිළිබඳ දන්වනු ලැබ ඇති අතර එය ඉක්මනින් නිවැරදි කරනු ඇත. කරුණාකර නැවත පරීක්ෂා කරන්න!',
 	'mobile-frontend-are-you-sure' => 'ඔබට විශ්වාසද ?',
 	'mobile-frontend-explain-disable' => 'ඔබට නිසැකවම විකිපීඩියාවල ජංගම අනුවාදය අක්‍රීය කිරීමට අවශ්‍ය ද?ඔබ <b>අක්‍රීය කරන්න</b> තෝරාගනු ලැබුවහොත්,මෙතැන් සිට,ඔබ විකිපීඩියා වෙත පිවිසෙන විට,ඔබ මෙම විකිපීඩියා ජංගම දසුන වෙත ආපසු හරවා නොයවනු ඇත.',
 	'mobile-frontend-nav-end' => '෴',
@@ -4972,6 +4979,7 @@ $messages['si'] = array(
 	'mobile-frontend-file-namespace' => 'ගොනුව',
 	'mobile-frontend-wml-continue' => 'දිගට කර ගෙන යමින්...',
 	'mobile-frontend-wml-back' => 'ආපසු...',
+	'mobile-frontend-view' => 'ජංගම දසුන',
 	'mobile-frontend-opt-in-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-in-no-button' => 'නැත',
 	'mobile-frontend-opt-out-yes-button' => 'ඔව්',
@@ -4981,6 +4989,9 @@ $messages['si'] = array(
 	'mobile-frontend-leave-feedback-cancel' => 'අවලංගු කරන්න',
 	'mobile-frontend-leave-feedback-submit' => 'ප්‍රතිපෝෂණය ඉදිරිපත් කරන්න',
 	'mobile-frontend-language' => 'භාෂාව',
+	'mobile-frontend-username' => 'පරිශීලක නාමය:',
+	'mobile-frontend-password' => 'මුරපදය:',
+	'mobile-frontend-login' => 'පිවිසෙන්න',
 );
 
 /** Slovak (Slovenčina) */
