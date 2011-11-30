@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.86';
+	const VERSION = '0.5.87';
 
 	/**
 	 * @var DOMDocument
@@ -179,20 +179,20 @@ class ExtMobileFrontend {
 	);
 
 	public $itemsToRemove = array(
-		'#contentSub',		  # redirection notice
-		'div.messagebox',	  # cleanup data
-		'#siteNotice',		  # site notice
-		'#siteSub',			  # "From Wikipedia..."
-		'#jump-to-nav',		  # jump-to-nav
-		'div.editsection',	  # edit blocks
-		'div.infobox',		  # Infoboxes in the article
-		'table.toc',		  # table of contents
-		'#catlinks',		  # category links
-		'div.stub',			  # stub warnings
+		'#contentSub',
+		'div.messagebox',
+		'#siteNotice',
+		'#siteSub',
+		'#jump-to-nav',
+		'div.editsection',
+		'div.infobox',
+		'table.toc',
+		'#catlinks',
+		'div.stub',
 		'form',
 		'div.sister-project',
 		'script',
-		'div.magnify',		  # magnify object
+		'div.magnify',
 		'.editsection',
 		'span.t',
 		'sup[style*="help"]',
