@@ -21,6 +21,7 @@ $languageSelectionDiv = '<div id="languageselectionsection">' . $languageSelecti
 $logoOnClick = ( self::$device['supports_javascript'] ) ? 'onclick="javascript:logoClick();"' : '';
 
 $searchWebkitHtml = <<<EOD
+	{$openSearchResults}
 <div id='header'>
 	<div id='searchbox' {$logoDisplayNone}>
 	<img width="35" height="22" alt='Logo' id='logo' src='{$wgMobileFrontendLogo}' {$logoOnClick} {$logoDisplayNone} />
@@ -32,7 +33,6 @@ $searchWebkitHtml = <<<EOD
 		</div>
 	  <button id='goButton' type='submit'></button>
 	</form>
-	{$openSearchResults}
 	</div>
 	<div class='nav' id='nav' {$logoDisplayNone}>
 	{$languageSelectionDiv}
