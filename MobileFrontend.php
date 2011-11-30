@@ -87,7 +87,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.83';
+	const VERSION = '0.5.84';
 
 	/**
 	 * @var DOMDocument
@@ -583,7 +583,7 @@ class ExtMobileFrontend {
 					if ( self::$title == 'Special:UserLogin' && self::$isBetaGroupMember ) {
 						self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
 						$returnToVal = $wgRequest->getVal( 'returnto' );
-					 	$returnto = ( !empty ( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
+					 	$returnto = ( !empty( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
 						self::$wsLoginFormAction = self::$title->getLocalURL( 'action=submitlogin&type=login' . $returnto );
 					}
 					
