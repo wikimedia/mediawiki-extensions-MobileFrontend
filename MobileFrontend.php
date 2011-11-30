@@ -68,8 +68,9 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, '
 $wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 
 /**
- * Make the classes stripped from page content configurable. Each item will
- * be stripped from the page. See $itemsToRemove for more info
+ * Make the classes, tags and ids stripped from page content configurable. 
+ * Each item will be stripped from the page. 
+ * See $itemsToRemove for more information.
  */
 $wgMFRemovableClasses = array();
 
@@ -87,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.85';
+	const VERSION = '0.5.86';
 
 	/**
 	 * @var DOMDocument
@@ -1075,9 +1076,6 @@ class ExtMobileFrontend {
 	 */
 	public function renderLogin() {
 		wfProfileIn( __METHOD__ );
-		$username = self::$messages['mobile-frontend-username'];
-		$password = self::$messages['mobile-frontend-password'];
-		$login = self::$messages['mobile-frontend-login'];
 		$form = Html::openElement( 'form',
 					array( 'name' => 'userlogin',
 				   		   'method' => 'post',
@@ -1089,7 +1087,7 @@ class ExtMobileFrontend {
 				Html::openElement( 'td',
 					array( 'class' => 'mw-label' ) ) .
 				Html::element( 'label',
-		 			array( 'for' => 'wpName1' ), $username ) .
+		 			array( 'for' => 'wpName1' ), self::$messages['mobile-frontend-username'] ) .
 				Html::closeElement( 'td' ) .
 				Html::closeElement( 'tr' ) .
 				Html::openElement( 'tr' ) .
@@ -1106,7 +1104,7 @@ class ExtMobileFrontend {
 				Html::openElement( 'td',
 					array( 'class' => 'mw-label' ) ) .
 				Html::element( 'label',
-		 			array( 'for' => 'wpPassword1' ), $password ) .
+		 			array( 'for' => 'wpPassword1' ), self::$messages['mobile-frontend-password'] ) .
 				Html::closeElement( 'td' ) .
 				Html::closeElement( 'tr' ) .
 				Html::openElement( 'tr' ) .
@@ -1125,7 +1123,7 @@ class ExtMobileFrontend {
 				Html::openElement( 'tr' ) .
 				Html::openElement( 'td',
 					array( 'class' => 'mw-submit' ) ) .
-				Html::input( 'wpLoginAttempt', $login, 'submit',
+				Html::input( 'wpLoginAttempt', self::$messages['mobile-frontend-login'], 'submit',
 					array( 'id' => 'wpLoginAttempt',
 						   'tabindex' => '3') ) .
 				Html::closeElement( 'td' ) .
