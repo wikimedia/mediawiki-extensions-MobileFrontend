@@ -16,6 +16,8 @@ var sq = document.getElementById( 'sq' );
 var sb = document.getElementById( 'searchbox' );
 var logo = document.getElementById( 'logo' );
 var goButton = document.getElementById( 'goButton' );
+var content = document.getElementById( 'content' );
+var footer = document.getElementById( 'footer' );
 
 function hideResults() {
 	results.style.display = 'none';
@@ -49,6 +51,8 @@ search.onfocus = function() {
 		results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
 		results.style.width = document.body.clientWidth + pixels;
 		results.style.minHeight = '100%';
+		content.style.display = 'none';
+		footer.style.display = 'none';
 		results.style.borderTop = 'solid 1px #A6A6A6';
 		results.style.backgroundColor = '#E6E6E6';
 		results.style.paddingTop = 5 + pixels;
@@ -74,6 +78,12 @@ search.onfocus = function() {
 }
 
 function removeResults() {
+	if ( content ) {
+		content.style.display = 'block';
+	}
+	if ( footer ) {
+		footer.style.display = 'block';
+	}
 	if ( ol ) {
 		if ( sq ) {
 			logo.style.visibility = 'visible';

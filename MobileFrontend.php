@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.87';
+	const VERSION = '0.5.88';
 
 	/**
 	 * @var DOMDocument
@@ -1037,7 +1037,7 @@ class ExtMobileFrontend {
 		$commonAttributes = array( 'mp-tfa', 'mp-itn' );
 
 		$content = $this->mainPage->createElement( 'div' );
-		$content->setAttribute( 'id', 'main_box' );
+		$content->setAttribute( 'id', 'content' );
 
 		if ( $featuredArticle ) {
 			$h2FeaturedArticle = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-featured-article'] );
