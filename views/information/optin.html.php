@@ -9,6 +9,7 @@ $optInHtml = <<<EOT
 		<div id='disableButtons'>
 		  <form action='{$formAction}' method='get'>
 			<input name='mobileaction' type='hidden' value='opt_in_cookie' />
+			<input name='useformat' type='hidden' value='mobile' />
 			<button id='disableButton' type='submit'>{$yesButton}</button>
 		</form>
 		<form action='/' method='get'>
