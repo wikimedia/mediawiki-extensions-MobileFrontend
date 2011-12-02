@@ -569,7 +569,7 @@ class ExtMobileFrontend {
 					}
 
 					if ( $mobileAction == 'opt_in_cookie' ) {
-						wfIncrStats( 'opt_in_cookie_set' );
+						wfIncrStats( 'mobile.opt_in_cookie_set' );
 						$this->setOptInOutCookie( '1' );
 						$this->disableCaching();
 						$location = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
