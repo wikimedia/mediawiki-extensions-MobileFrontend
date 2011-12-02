@@ -49,6 +49,7 @@ function clearSearchBox( event ) {
 	if ( event ) {
 		event.preventDefault();
 	}
+	removeResults();
 }
 
 function logoClick() {

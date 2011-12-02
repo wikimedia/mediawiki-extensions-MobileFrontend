@@ -51,7 +51,7 @@ $applicationHtml = <<<EOT
 	{$contentHtml}
 	</div>
 	{$footerHtml}
-	 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=11042011120715{$endScriptTag}
+	 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=12012011120715{$endScriptTag}
 	 {$openSearchScript}
   </body>
 </html>
