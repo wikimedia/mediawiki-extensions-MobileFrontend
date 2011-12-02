@@ -103,6 +103,7 @@ $messages['qqq'] = array(
 {{Identical|Password}}',
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
 {{Identical|Log in}}',
+	'mobile-frontend-placeholder' => 'Phrase used to prompt user to use search interface for mobile full screen search',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
