@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.88';
+	const VERSION = '0.5.89';
 
 	/**
 	 * @var DOMDocument
@@ -569,6 +569,7 @@ class ExtMobileFrontend {
 					}
 
 					if ( $mobileAction == 'opt_in_cookie' ) {
+						wfIncrStats( 'opt_in_cookie_set' );
 						$this->setOptInOutCookie( '1' );
 						$this->disableCaching();
 						$location = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
