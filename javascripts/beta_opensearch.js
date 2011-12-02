@@ -32,6 +32,7 @@ search.onfocus = function() {
 		ol.sqLeft = sq.offsetLeft;
 		ol.sqTop = sq.offsetTop;
 		sq.style.position = 'absolute';
+		search.value = placeholder;
 		
 		if ( !ol.properOffsetWidth ) {
 			ol.properOffsetWidth = search.offsetLeft + 44;
@@ -159,7 +160,11 @@ function whichElement( e ) {
 		 targ.id == 'search' ||
 		 targ.id == 'searchbox' ||
 		 targ.id == 'sq' ||
+		 targ.id == 'clearsearch' ||
 		 targ.tagName == 'BODY' ) {
+			if ( targ.id == 'clearsearch' && results ) {
+				results.innerHTML = '';
+			}
 	} else {
 		hideResults();
 	}

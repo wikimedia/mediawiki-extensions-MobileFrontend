@@ -176,6 +176,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-username',
 		'mobile-frontend-password',
 		'mobile-frontend-login',
+		'mobile-frontend-placeholder',
 	);
 
 	public $itemsToRemove = array(

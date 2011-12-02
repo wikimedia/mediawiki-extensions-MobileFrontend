@@ -72,6 +72,7 @@ $messages['en'] = array (
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Log in',
+	'mobile-frontend-placeholder' => 'Type your search here...',
 );
 
 /** Message documentation (Message documentation)

@@ -9,6 +9,7 @@ function initClearSearchLink() {
 	clearSearch.setAttribute( 'title','Clear' );
 	clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
 	search.addEventListener( 'keyup', handleClearSearchLink, false );
+	search.addEventListener( 'keydown', handleDefaultText, false );
 }
 
 function navigateToLanguageSelection() {
@@ -18,6 +19,12 @@ function navigateToLanguageSelection() {
 		if ( url ) {
 			location.href = url;
 		}
+	}
+}
+
+function handleDefaultText() {
+	if (search.value == placeholder) {
+		search.value = '';
 	}
 }
 
@@ -43,13 +50,14 @@ function handleClearSearchLink() {
 function clearSearchBox( event ) {
 	search.value = '';
 	clearSearch.style.display = 'none';
-	if ( results ) {
-		results.style.display = 'none';
-	}
+	// if ( results ) {
+	// 	results.style.display = 'none';
+	// }
 	if ( event ) {
 		event.preventDefault();
 	}
-	removeResults();
+	// removeResults();
+	// search.blur();
 }
 
 function logoClick() {

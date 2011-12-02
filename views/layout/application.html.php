@@ -3,6 +3,7 @@ global $wgExtensionAssetsPath, $wgAppleTouchIcon, $wgScriptPath;
 
 $dir = self::$dir;
 $code = self::$code;
+$placeholder = self::$messages['mobile-frontend-placeholder'];
 
 if ( $wgAppleTouchIcon !== false ) {
 	$appleTouchIconTag = Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) );
@@ -20,7 +21,7 @@ $startScriptTag = '<script type="text/javascript" language="javascript" src="';
 $endScriptTag = '"></script>';
 $javaScriptPath = $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
 
-$openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12012011124437' . $endScriptTag;
+$openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12012011126437' . $endScriptTag;
 
 $applicationHtml = <<<EOT
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -29,7 +30,7 @@ $applicationHtml = <<<EOT
   <head>
 	<title>{$htmlTitle}</title>
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=12012011120954' media='all' rel='Stylesheet' type='text/css' />
+	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=12012011121954' media='all' rel='Stylesheet' type='text/css' />
 	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$cssFileName}.css?version=12012011120715' media='all' rel='Stylesheet' type='text/css' />
 	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -38,6 +39,7 @@ $applicationHtml = <<<EOT
 	  //<![CDATA[
 		var title = "{$htmlTitle}";
 		var scriptPath = "{$wgScriptPath}";
+		var placeholder = "{$placeholder}";
 		function shouldCache() {
 		  return true;
 		}
@@ -51,7 +53,7 @@ $applicationHtml = <<<EOT
 	{$contentHtml}
 	</div>
 	{$footerHtml}
-	 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=12012011120715{$endScriptTag}
+	 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=12012011120915{$endScriptTag}
 	 {$openSearchScript}
   </body>
 </html>
