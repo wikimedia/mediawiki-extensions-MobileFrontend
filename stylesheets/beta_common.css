@@ -98,9 +98,6 @@ a.search-result-item {
 	display: none;
 	background-color: #ffffff;
 	border-top: none;
-	border-left: 1px solid #888;
-	border-right: 1px solid #888;
-	border-bottom: 1px solid #888;
 	z-index: 2;
 	position: absolute;
 }
@@ -148,19 +145,6 @@ ul#footer-info {
 	margin-top: -6px;
 	z-index: 99;
 	border: 0px solid;
-}
-
-#sq {
-/*	background-color: #ff0000;*/
-}
-
-#sq.animate {
-	-webkit-transition: all .3s ease-in 100ms;
-/*	background-color: #0000ff;*/
-}
-
-#searchbox {
-/*	background-color: #00ff00;*/
 }
 
 .divclearable {

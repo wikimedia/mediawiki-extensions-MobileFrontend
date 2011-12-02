@@ -27,23 +27,27 @@ var focused = false;
 var ol = new Object();
 search.onfocus = function() {
 	if ( !focused ) {
+		content.style.display = 'none';
+		footer.style.display = 'none';
 		ol.sqLeft = sq.offsetLeft;
 		ol.sqTop = sq.offsetTop;
 		sq.style.position = 'absolute';
 		
+		if ( !ol.properOffsetWidth ) {
+			ol.properOffsetWidth = search.offsetLeft + 44;
+		}
+		
+		sq.className = '';
 		sq.style.left = sb.offsetLeft + pixels;
 		sq.style.top = sb.offsetTop + pixels;
 		sq.style.height = sb.offsetHeight + pixels;
 		sq.style.width = sb.offsetWidth + pixels;
-		
-		sq.className = 'animate';
-		
 		sq.style.left = 0 + pixels;
 		sq.style.top = 0 + pixels;
 		sq.style.height = 40 + pixels;
 		sq.style.width = document.body.clientWidth + pixels;
 		search.style.position = 'absolute';
-		search.style.left = ( search.offsetLeft + 44 ) + pixels;
+		search.style.left = ol.properOffsetWidth + pixels;
 		search.style.height = 34 + pixels;
 		search.style.width = ( document.body.clientWidth - 90 ) + pixels;
 		search.style.fontSize = 16 + pixels;
@@ -51,8 +55,6 @@ search.onfocus = function() {
 		results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
 		results.style.width = document.body.clientWidth + pixels;
 		results.style.minHeight = '100%';
-		content.style.display = 'none';
-		footer.style.display = 'none';
 		results.style.borderTop = 'solid 1px #A6A6A6';
 		results.style.backgroundColor = '#E6E6E6';
 		results.style.paddingTop = 5 + pixels;
@@ -88,8 +90,6 @@ function removeResults() {
 		if ( sq ) {
 			logo.style.visibility = 'visible';
 			goButton.style.visibility = 'visible';
-			//var reg = new RegExp('(\\s|^)animate(\\s|$)');
-			//sq.className = sq.className.replace(reg, '');
 			sq.className = 'divclearable';
 			sq.style.position = 'static';
 			sq.style.left = ol.sqLeft + pixels;
@@ -175,6 +175,11 @@ function updateSearchWidth() {
 			results.style.width = ( sq.offsetWidth - 2 ) + pixels;
 			results.style.left = sq.offsetLeft + pixels;
 			results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
+			if ( results.style.display == 'block' ) {
+				focused = false;
+				search.blur();
+				search.focus();
+			}
 		}
 	}
 }
@@ -187,7 +192,7 @@ function updateOrientationSearchWidth() {
 		case -90:
 		case 90:
 		case 180:
-			setTimeout( "updateSearchWidth()", 200 );
+			setTimeout( "updateSearchWidth()", 300 );
 			break;
   }
 }
