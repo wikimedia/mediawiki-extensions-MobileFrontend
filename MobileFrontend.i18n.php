@@ -77,6 +77,7 @@ $messages['en'] = array (
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Fryed-peach
  * @author Raymond
  * @author Siebrand
  * @author Umherirrender
@@ -98,7 +99,9 @@ $messages['qqq'] = array(
 	'mobile-frontend-leave-feedback-cancel' => '{{Identical|Cancel}}',
 	'mobile-frontend-feedback-page' => '{{optional}}',
 	'mobile-frontend-language' => '{{Identical|Language}}',
-	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.',
+	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.
+
+{{Identical|Username}}',
 	'mobile-frontend-password' => 'Field label for entry of password in Wikimedia mobile user interface.
 {{Identical|Password}}',
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
@@ -1098,7 +1101,7 @@ $messages['cy'] = array(
 	'mobile-frontend-error-page-title' => 'Cafwyd problem!',
 	'mobile-frontend-error-page-text' => "Y mae {{SITENAME}} symudol yn dal i gael ei ddatblygu ac rydym wrthi'n ddiwyd yn cywiro'r gwallau mewnol. Rydym wedi cael gwybod am y gwall hwn ac fe fyddwn yn ei gywiro'n fuan. Rhowch gynnig arall arni yn y man.",
 	'mobile-frontend-are-you-sure' => "Ydych chi'n bendant am wneud hyn ?",
-	'mobile-frontend-explain-disable' => "Ydych chi'n bendant am analluogi fersiwn Wicipedia ar gyfer ffonau symudol? Os y dewiswch <b>Analluogi</b>, yna pan ymwelwch â Wicipedia, ni chewch eich ailgyfeirio at y wedd hon o Wicipedia ar gyfer ffonau symudol.",
+	'mobile-frontend-explain-disable' => "Ydych chi'n bendant am analluogi fersiwn {{SITENAME}} ar gyfer ffonau symudol? Os y dewiswch <b>Analluogi</b>, yna pan ymwelwch â Wicipedia, ni chewch eich ailgyfeirio at y wedd hon o {{SITENAME}} ar gyfer ffonau symudol.",
 	'mobile-frontend-nav-end' => 'Diwedd',
 	'mobile-frontend-nav-top' => 'Brig',
 	'mobile-frontend-nav-edit' => 'Golygu',
@@ -1110,9 +1113,14 @@ $messages['cy'] = array(
 	'mobile-frontend-file-namespace' => 'Ffeil',
 	'mobile-frontend-wml-continue' => 'Parhau ...',
 	'mobile-frontend-wml-back' => 'Nôl ...',
+	'mobile-frontend-news-items' => 'Ar y Newyddion',
 	'mobile-frontend-leave-feedback-subject' => 'Pwnc',
 	'mobile-frontend-leave-feedback-message' => 'Neges',
+	'mobile-frontend-leave-feedback-submit' => 'Cyflwyner yr Adborth',
+	'mobile-frontend-leave-feedback-thanks' => 'Diolch am eich adborth!',
 	'mobile-frontend-language' => 'Iaith',
+	'mobile-frontend-password' => 'Cyfrinair:',
+	'mobile-frontend-login' => 'Mewngofnodi',
 );
 
 /** Danish (Dansk)
@@ -1240,6 +1248,7 @@ $messages['de'] = array(
 	'mobile-frontend-username' => 'Benutzername:',
 	'mobile-frontend-password' => 'Passwort:',
 	'mobile-frontend-login' => 'Anmelden',
+	'mobile-frontend-placeholder' => 'Gib hier deine Suche ein ...',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -1252,6 +1261,8 @@ $messages['de-formal'] = array(
 	'mobile-frontend-contact-us' => 'Im Fall von Fragen oder Anmerkungen kontaktieren Sie uns bitte unter der E-Mail-Adresse mobile@wikipedia.org',
 	'mobile-frontend-leave-feedback-title' => 'Geben Sie uns bitte eine Rückmeldung zu Ihren Erfahrungen mit der mobilen Ansicht',
 	'mobile-frontend-leave-feedback-notice' => 'Ihre Rückmeldung hilft uns dabei, die mobile Ansicht weiter zu verbessern. Sie wird öffentlich auf der Seite &quot;$1&quot; angezeigt. Dabei werden Ihr Benutzername, die Version des von Ihnen genutzten Browsers sowie das von Ihnen genutzte Betriebssystem angegeben. Bitte wählen Sie einen informativen und aussagekräftigen Betreff, wie bswp. „Probleme bei der Anzeige von Tabellen“. Ihre Rückmeldung unterliegt dabei unseren Nutzungsbedingungen.',
+	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für Ihre Rückmeldung.',
+	'mobile-frontend-placeholder' => 'Geben Sie hier Ihre Suche ein ...',
 );
 
 /** Zazaki (Zazaki) */
@@ -1846,6 +1857,9 @@ $messages['frp'] = array(
 	'mobile-frontend-leave-feedback' => 'Balyér voutron avis',
 	'mobile-frontend-leave-feedback-thanks' => 'Grant-marci por voutron avis !',
 	'mobile-frontend-language' => 'Lengoua',
+	'mobile-frontend-username' => 'Nom d’usanciér :',
+	'mobile-frontend-password' => 'Contresegno :',
+	'mobile-frontend-login' => 'Sè branchiér',
 );
 
 /** Friulian (Furlan) */
@@ -1972,6 +1986,7 @@ $messages['gl'] = array(
 	'mobile-frontend-username' => 'Nome de usuario:',
 	'mobile-frontend-password' => 'Contrasinal:',
 	'mobile-frontend-login' => 'Rexistro',
+	'mobile-frontend-placeholder' => 'Insira a súa procura aquí...',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
@@ -2458,6 +2473,7 @@ $messages['ia'] = array(
 	'mobile-frontend-username' => 'Nomine de usator:',
 	'mobile-frontend-password' => 'Contrasigno:',
 	'mobile-frontend-login' => 'Aperir session',
+	'mobile-frontend-placeholder' => 'Entra un recerca hic...',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -2696,6 +2712,9 @@ $messages['ja'] = array(
 	'mobile-frontend-leave-feedback' => '携帯機器ウェブサイトの評価',
 	'mobile-frontend-leave-feedback-thanks' => '評価をありがとうございます。',
 	'mobile-frontend-language' => '言語',
+	'mobile-frontend-username' => '利用者名:',
+	'mobile-frontend-password' => 'パスワード:',
+	'mobile-frontend-login' => 'ログイン',
 );
 
 /** Georgian (ქართული)
@@ -2973,6 +2992,7 @@ $messages['krc'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'mobile-frontend-desc' => 'Der Zohjang för Mobiljerääte',
 	'mobile-frontend-search-submit' => 'Lohß Jonn!',
 	'mobile-frontend-search-results' => 'Beim Söhke kohm eruß',
 	'mobile-frontend-no-article-found' => 'Keine Atikel jefonge',
@@ -3184,6 +3204,7 @@ $messages['lb'] = array(
 	'mobile-frontend-username' => 'Benotzernumm:',
 	'mobile-frontend-password' => 'Passwuert:',
 	'mobile-frontend-login' => 'Aloggen',
+	'mobile-frontend-placeholder' => 'Tippt hei a wat Dir sicht...',
 );
 
 /** Lezghian (Лезги) */
@@ -3490,6 +3511,7 @@ $messages['mk'] = array(
 	'mobile-frontend-username' => 'Корисничко име:',
 	'mobile-frontend-password' => 'Лозинка:',
 	'mobile-frontend-login' => 'Најава',
+	'mobile-frontend-placeholder' => 'Тука внесете го бараното...',
 );
 
 /** Malayalam (മലയാളം)
@@ -3597,6 +3619,8 @@ $messages['mo'] = array(
 
 /** Marathi (मराठी)
  * @author Evision
+ * @author Kaajawa
+ * @author Rahuldeshmukh101
  */
 $messages['mr'] = array(
 	'mobile-frontend-search-submit' => 'चला',
@@ -3611,7 +3635,7 @@ $messages['mr'] = array(
 	'mobile-frontend-hide-button' => 'लपवा',
 	'mobile-frontend-disable-button' => 'अक्षम करा',
 	'mobile-frontend-back-button' => 'मागे',
-	'mobile-frontend-regular-site' => 'हे पृष्ठ नेहमीच्या विकिपीडियात पाहा',
+	'mobile-frontend-regular-site' => 'हे पृष्ठ सामान्य {{SITENAME}}मधे पाहा',
 	'mobile-frontend-perm-stop-redirect' => 'कायमचे मोबाईल संकेतस्थळ अक्षम करा',
 	'mobile-frontend-error-page-title' => 'काहीतरी विपरित घडले !',
 	'mobile-frontend-error-page-text' => 'विकिपीडिया मोबाइल संकेतस्थळ पूर्ण झालेले नाही, आणि आम्ही आमच्या अंतर्गत चुका दुरूस्त करत आहोत. आम्हाला या चुकीबद्दल खबर मिळाली आहे आणि लवकरच ती दुरुस्त केली जाईल . कृपया पुन्हा पाहा!',
@@ -3626,8 +3650,22 @@ $messages['mr'] = array(
 	'mobile-frontend-author-link' => 'नेहमीच्या विकिपीडीयावर ही मीडिया संचिका पहा. लेखक, परवाने व आणखी विवरण तेथे मिळेल.',
 	'mobile-frontend-download-full-version' => 'पूर्ण आवृत्ती उतरवून घ्या',
 	'mobile-frontend-file-namespace' => 'संचिका',
+	'mobile-frontend-wml-continue' => 'सुरु ठेवा ...',
+	'mobile-frontend-wml-back' => 'माघारी',
+	'mobile-frontend-opt-in-yes-button' => 'हो',
+	'mobile-frontend-opt-in-no-button' => 'नाही',
+	'mobile-frontend-opt-out-yes-button' => 'हो',
+	'mobile-frontend-opt-out-no-button' => 'नाही',
+	'mobile-frontend-news-items' => 'बातम्यांमध्ये',
+	'mobile-frontend-leave-feedback-subject' => 'विषय',
+	'mobile-frontend-leave-feedback-message' => 'संदेश',
+	'mobile-frontend-leave-feedback-cancel' => 'रद्द करा',
 	'mobile-frontend-leave-feedback-submit' => 'प्रतिक्रिया द्या',
 	'mobile-frontend-leave-feedback-thanks' => 'आपल्या प्रतिक्रियेबद्दल आभार !',
+	'mobile-frontend-language' => 'भाषा',
+	'mobile-frontend-username' => 'सदस्य नाव:',
+	'mobile-frontend-password' => 'परवलीचा शब्द',
+	'mobile-frontend-login' => 'प्रवेश करा',
 );
 
 /** Malay (Bahasa Melayu)
@@ -3691,6 +3729,7 @@ $messages['ms'] = array(
 	'mobile-frontend-username' => 'Nama pengguna:',
 	'mobile-frontend-password' => 'Kata laluan:',
 	'mobile-frontend-login' => 'Log masuk',
+	'mobile-frontend-placeholder' => 'Taipkan carian anda di sini...',
 );
 
 /** Maltese (Malti) */
@@ -3892,6 +3931,7 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wachtwoord:',
 	'mobile-frontend-login' => 'Aanmelden',
+	'mobile-frontend-placeholder' => 'Zoeken...',
 );
 
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
@@ -4772,6 +4812,10 @@ $messages['ru'] = array(
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Спасибо за ваш отзыв!',
 	'mobile-frontend-language' => 'Язык',
+	'mobile-frontend-username' => 'Имя участника:',
+	'mobile-frontend-password' => 'Пароль:',
+	'mobile-frontend-login' => 'Войти',
+	'mobile-frontend-placeholder' => 'Строка для поиска...',
 );
 
 /** Rusyn (Русиньскый)
@@ -5089,6 +5133,7 @@ $messages['sl'] = array(
 	'mobile-frontend-username' => 'Uporabniško ime:',
 	'mobile-frontend-password' => 'Geslo:',
 	'mobile-frontend-login' => 'Prijava',
+	'mobile-frontend-placeholder' => 'Vnesite svoj iskalni niz tukaj ...',
 );
 
 /** Albanian (Shqip) */
@@ -5297,6 +5342,9 @@ $messages['sv'] = array(
 	'mobile-frontend-leave-feedback' => 'Lämna feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Tack för din feedback!',
 	'mobile-frontend-language' => 'Språk',
+	'mobile-frontend-username' => 'Användarnamn:',
+	'mobile-frontend-password' => 'Lösenord:',
+	'mobile-frontend-login' => 'Logga in',
 );
 
 /** Swahili (Kiswahili) */
