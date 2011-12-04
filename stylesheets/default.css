@@ -217,6 +217,7 @@ body {
 #searchbox #goButton {
 	border: 0;
 	background: url(images/s.gif) no-repeat top left;
+	background-size: 27px 25px;
 	height: 25px;
 	width: 27px;
 }

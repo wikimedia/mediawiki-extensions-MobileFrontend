@@ -217,8 +217,14 @@ body {
 #searchbox #goButton {
 	border: 0;
 	background: url(images/s.gif) no-repeat top left;
+	background-size: 27px 25px;
 	height: 25px;
 	width: 27px;
+}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {
+	#searchbox #goButton {
+		background-image: url(images/s-xhdpi.png) !important;
+	}
 }
 
 #searchbox #searchField {
