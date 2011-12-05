@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.90';
+	const VERSION = '0.5.91';
 
 	/**
 	 * @var DOMDocument
@@ -585,6 +585,7 @@ class ExtMobileFrontend {
 					$this->sendXDeviceVaryHeader();
 					$this->sendApplicationVersionVaryHeader();
 					$this->checkUserStatus();
+					$this->checkUserLoggedIn();
 					
 					if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 						self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
@@ -598,6 +599,32 @@ class ExtMobileFrontend {
 				}
 		}
 
+		wfProfileOut( __METHOD__ );
+		return true;
+	}
+	
+	/**
+	 * @return bool
+	 */
+	private function checkUserLoggedIn() {
+		global $wgUser, $wgCookieDomain, $wgRequest, $wgCookiePrefix;
+		wfProfileIn( __METHOD__ );
+		$tempWgCookieDomain = $wgCookieDomain;
+		$wgCookieDomain = $this->getBaseDomain();
+		$tempWgCookiePrefix = $wgCookiePrefix;
+		$wgCookiePrefix = '';
+		
+		if ( $wgUser->isLoggedIn() ) {
+			$wgRequest->response()->setcookie( 'mfsecure', '1', 0, '' );
+		} else {
+			$mfSecure = $wgRequest->getCookie( 'mfsecure', '' );
+			if ( !empty( $mfSecure ) && $mfSecure == '1' ) {
+				$wgRequest->response()->setcookie( 'mfsecure', '', 0, '' );
+			}
+		}
+		
+		$wgCookieDomain = $tempWgCookieDomain;
+		$wgCookiePrefix = $tempWgCookiePrefix;		
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
