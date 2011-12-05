@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.89';
+	const VERSION = '0.5.90';
 
 	/**
 	 * @var DOMDocument
@@ -586,7 +586,7 @@ class ExtMobileFrontend {
 					$this->sendApplicationVersionVaryHeader();
 					$this->checkUserStatus();
 					
-					if ( self::$title == 'Special:UserLogin' && self::$isBetaGroupMember ) {
+					if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 						self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
 						$returnToVal = $wgRequest->getVal( 'returnto' );
 					 	$returnto = ( !empty( $returnToVal ) ) ? '&returnto=' . wfUrlencode( $returnToVal ) : '';
@@ -1182,7 +1182,7 @@ class ExtMobileFrontend {
 			$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
 		}
 
-		if ( self::$title == 'Special:UserLogin' && self::$isBetaGroupMember ) {
+		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			$userlogin = $this->doc->getElementById( 'userloginForm' );
 
 			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
@@ -1275,7 +1275,7 @@ class ExtMobileFrontend {
 			$redLink->parentNode->replaceChild( $spanNode, $redLink );
 		}
 
-		if ( self::$title == 'Special:UserLogin' && self::$isBetaGroupMember ) {
+		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
 				$login = $this->renderLogin();
 				$loginNode = $this->doc->importNode( $login, true );
