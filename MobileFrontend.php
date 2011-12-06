@@ -592,7 +592,7 @@ class ExtMobileFrontend {
 						$q = array( 'action' => 'submitlogin', 'type' => 'login' );
 						$returnToVal = $wgRequest->getVal( 'returnto' );
 					 	
-						if ( !$returnToVal ) {
+						if ( $returnToVal ) {
 							$q['returnto'] = $returnToVal;
 						}
 						
