@@ -68,8 +68,8 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, '
 $wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 
 /**
- * Make the classes, tags and ids stripped from page content configurable. 
- * Each item will be stripped from the page. 
+ * Make the classes, tags and ids stripped from page content configurable.
+ * Each item will be stripped from the page.
  * See $itemsToRemove for more information.
  */
 $wgMFRemovableClasses = array();
@@ -585,19 +585,19 @@ class ExtMobileFrontend {
 					$this->sendApplicationVersionVaryHeader();
 					$this->checkUserStatus();
 					$this->checkUserLoggedIn();
-					
+
 					if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 						self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
 						$q = array( 'action' => 'submitlogin', 'type' => 'login' );
 						$returnToVal = $wgRequest->getVal( 'returnto' );
-					 	
+
 						if ( $returnToVal ) {
 							$q['returnto'] = $returnToVal;
 						}
 
 						self::$wsLoginFormAction = self::$title->getLocalURL( $q );
 					}
-					
+
 					$this->setDefaultLogo();
 					ob_start( array( $this, 'DOMParse' ) );
 				}
@@ -606,7 +606,7 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
-	
+
 	/**
 	 * @return bool
 	 */
@@ -617,7 +617,7 @@ class ExtMobileFrontend {
 		$wgCookieDomain = $this->getBaseDomain();
 		$tempWgCookiePrefix = $wgCookiePrefix;
 		$wgCookiePrefix = '';
-		
+
 		if ( $wgUser->isLoggedIn() ) {
 			$wgRequest->response()->setcookie( 'mfsecure', '1', 0, '' );
 		} else {
@@ -626,9 +626,9 @@ class ExtMobileFrontend {
 				$wgRequest->response()->setcookie( 'mfsecure', '', 0, '' );
 			}
 		}
-		
+
 		$wgCookieDomain = $tempWgCookieDomain;
-		$wgCookiePrefix = $tempWgCookiePrefix;		
+		$wgCookiePrefix = $tempWgCookiePrefix;
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
