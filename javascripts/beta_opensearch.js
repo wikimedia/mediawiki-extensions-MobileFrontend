@@ -76,7 +76,6 @@ search.onfocus = function() {
 			pE.style.position = 'absolute';
 			pE.style.left = ( search.offsetLeft + 5 ) + pixels;
 			pE.style.top = ( sq.offsetTop + 12 ) + pixels;
-			//pE.style.zIndex = -1;
 			pE.style.color = '#666666';
 			pE.style.fontSize = 16 + pixels;
 			pE.style.display = 'block';
