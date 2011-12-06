@@ -48,7 +48,7 @@ class CssDetection {
 			$rawName = $snippet;
 		}
 
-		if ( empty( $output ) ) {
+		if ( !$output ) {
 			$output = 'Unknown HTML snippet found: ';
 			$type = 'UNKNOWN';
 			$rawName = $snippet;

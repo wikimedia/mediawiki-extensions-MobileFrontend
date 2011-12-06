@@ -443,14 +443,13 @@ class ExtMobileFrontend {
 		// Thus, globalized objects will not be available as expected in the function.
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
 		
-		$xDevice = !empty( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
+		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 		self::$useFormat = $wgRequest->getText( 'useformat' );
 		$mobileAction = $wgRequest->getText( 'mobileaction' );
 		$action = $wgRequest->getText( 'action' );
 
-		if ( self::$useFormat === 'mobile' ||
-			self::$useFormat === 'mobile-wap' ||
-			!empty( $xDevice ) ) {
+		if ( self::$useFormat === 'mobile' || self::$useFormat === 'mobile-wap' ||
+			$xDevice ) {
 				if ( $action !== 'edit' &&
 					 $mobileAction !== 'view_normal_site' ) {
 
@@ -497,10 +496,10 @@ class ExtMobileFrontend {
 					self::$search = $wgRequest->getText( 'search' );
 					self::$searchField = $wgRequest->getText( 'search', '' );
 
-					$acceptHeader = !empty( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
+					$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 					$device = new DeviceDetection();
 
-					if ( !empty( $xDevice ) ) {
+					if ( $xDevice ) {
 						$formatName = $xDevice;
 					} else {
 						$formatName = $device->formatName( $userAgent, $acceptHeader );
@@ -595,7 +594,7 @@ class ExtMobileFrontend {
 						if ( $returnToVal ) {
 							$q['returnto'] = $returnToVal;
 						}
-						
+
 						self::$wsLoginFormAction = self::$title->getLocalURL( $q );
 					}
 					
