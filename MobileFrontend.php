@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.92';
+	const VERSION = '0.5.93';
 
 	/**
 	 * @var DOMDocument
@@ -589,7 +589,7 @@ class ExtMobileFrontend {
 					
 					if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 						self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
-						$q = array( 'action' => 'submitlogin' );
+						$q = array( 'action' => 'submitlogin', 'type' => 'login' );
 						$returnToVal = $wgRequest->getVal( 'returnto' );
 					 	
 						if ( !empty( $returnToVal ) ) {
