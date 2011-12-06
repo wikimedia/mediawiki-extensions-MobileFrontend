@@ -622,7 +622,7 @@ class ExtMobileFrontend {
 			$wgRequest->response()->setcookie( 'mfsecure', '1', 0, '' );
 		} else {
 			$mfSecure = $wgRequest->getCookie( 'mfsecure', '' );
-			if ( !empty( $mfSecure ) && $mfSecure == '1' ) {
+			if ( $mfSecure && $mfSecure == '1' ) {
 				$wgRequest->response()->setcookie( 'mfsecure', '', 0, '' );
 			}
 		}
@@ -729,7 +729,7 @@ class ExtMobileFrontend {
 	private function sendXDeviceVaryHeader() {
 		global $wgOut, $wgRequest;
 		wfProfileIn( __METHOD__ );
-		if ( !empty( $_SERVER['HTTP_X_DEVICE'] ) ) {
+		if ( isset( $_SERVER['HTTP_X_DEVICE'] ) ) {
 			$wgRequest->response()->header( 'X-Device: ' . $_SERVER['HTTP_X_DEVICE'] );
 			$wgOut->addVaryHeader( 'X-Device' );
 		}
@@ -741,11 +741,11 @@ class ExtMobileFrontend {
 	private function sendApplicationVersionVaryHeader() {
 		global $wgOut, $wgRequest;
 		wfProfileIn( __METHOD__ );
-		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) ) {
+		if ( isset( $_SERVER['HTTP_APPLICATION_VERSION'] ) ) {
 			$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_APPLICATION_VERSION'] );
 			$wgOut->addVaryHeader( 'Application_Version' );
 		} else {
-			if ( !empty( $_SERVER['HTTP_X_DEVICE'] ) ) {
+			if ( isset( $_SERVER['HTTP_X_DEVICE'] ) ) {
 				if ( stripos( $_SERVER['HTTP_X_DEVICE'], 'iphone' ) !== false ||
 					stripos( $_SERVER['HTTP_X_DEVICE'], 'android' ) !== false ) {
 					$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_X_DEVICE'] );
