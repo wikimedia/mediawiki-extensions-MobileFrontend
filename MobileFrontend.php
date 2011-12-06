@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.94';
+	const VERSION = '0.5.95';
 
 	/**
 	 * @var DOMDocument
@@ -1217,7 +1217,7 @@ class ExtMobileFrontend {
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			$userlogin = $this->doc->getElementById( 'userloginForm' );
 
-			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
+			if ( $userlogin && get_class($userlogin) === 'DOMElement' ) {
 				$firstHeading = $this->doc->getElementById( 'firstHeading' );
 				if ( !empty( $firstHeading ) ) {
 					$firstHeading->nodeValue = '';
@@ -1308,7 +1308,7 @@ class ExtMobileFrontend {
 		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
-			if ( !empty( $userlogin ) && get_class($userlogin) === 'DOMElement' ) {
+			if ( $userlogin && get_class($userlogin) === 'DOMElement' ) {
 				$login = $this->renderLogin();
 				$loginNode = $this->doc->importNode( $login, true );
 				$userlogin->appendChild( $loginNode );
