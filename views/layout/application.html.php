@@ -23,7 +23,7 @@ $javaScriptPath = $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
 
 $openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12012011126437' . $endScriptTag;
 
-$applicationHtml = <<<EOT
+$applicationHtml = <<<HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='{$code}' dir='{$dir}' xml:lang='{$code}' xmlns='http://www.w3.org/1999/xhtml'>
@@ -57,4 +57,4 @@ $applicationHtml = <<<EOT
 	 {$openSearchScript}
   </body>
 </html>
-EOT;
+HTML;

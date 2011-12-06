@@ -4,7 +4,7 @@ $randomPageUrl = self::$randomPageUrl;
 $dir = self::$dir;
 $code = self::$code;
 
-$applicationHtml = <<<EOT
+$applicationHtml = <<<HTML
 <?xml version='1.0' encoding='utf-8' ?>
 	<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.3//EN" 
 	"http://www.wapforum.org/DTD/wml13.dtd">
@@ -19,4 +19,4 @@ $applicationHtml = <<<EOT
 	</template>
 	{$contentHtml}
 	</wml>
-EOT;
+HTML;

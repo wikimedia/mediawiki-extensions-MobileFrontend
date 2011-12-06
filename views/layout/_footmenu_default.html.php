@@ -23,7 +23,7 @@ $logoutLink = ( !empty( $logoutHtml ) ) ? ' | ' . $logoutHtml : '';
 
 $feedbackLink = ( self::$code == 'en' && self::$isBetaGroupMember ) ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : '';
 
-$footerHtml = <<<EOD
+$footerHtml = <<<HTML
 	<div id='footer'>
 	  <div class='nav' id='footmenu'>
 		<div class='mwm-notice'>
@@ -36,4 +36,4 @@ $footerHtml = <<<EOD
 	  <div id='copyright'>{$copyright}</div>
 	</div>
 
-EOD;
+HTML;

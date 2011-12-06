@@ -1,5 +1,5 @@
 <?php
-$optInHtml = <<<EOT
+$optInHtml = <<<HTML
  <h1>
 			{$optInMessage}
 		</h1>
@@ -16,4 +16,4 @@ $optInHtml = <<<EOT
 			<button id='backButton' type='submit'>{$noButton}</button>
 		  </form>
 		</div>
-EOT;
+HTML;

@@ -20,7 +20,7 @@ $languageSelectionDiv = '<div id="languageselectionsection">' . $languageSelecti
 
 $logoOnClick = ( self::$device['supports_javascript'] ) ? 'onclick="javascript:logoClick();"' : '';
 
-$searchWebkitHtml = <<<EOD
+$searchWebkitHtml = <<<HTML
 	{$openSearchResults}
 <div id='header'>
 	<div id='searchbox' {$logoDisplayNone}>
@@ -40,4 +40,4 @@ $searchWebkitHtml = <<<EOD
 	<button onclick="javascript:location.href='{$randomPageUrl}';" type="submit" id="randomButton">{$randomButton}</button>
   </div>
 </div>
-EOD;
+HTML;

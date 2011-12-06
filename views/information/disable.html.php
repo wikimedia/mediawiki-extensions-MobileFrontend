@@ -4,7 +4,7 @@ $currentURL = self::$currentURL;
 $currentURL = str_replace( '&mobileaction=disable_mobile_site', '', $currentURL );
 $mobileRedirectFormAction = self::$mobileRedirectFormAction;
 
-$disableHtml = <<<EOT
+$disableHtml = <<<HTML
  <h1>
 		  {$areYouSure}
 		</h1>
@@ -21,4 +21,4 @@ $disableHtml = <<<EOT
 			<button id='backButton' type='submit'>{$backButton}</button>
 		</form>
 		</div>
-EOT;
+HTML;

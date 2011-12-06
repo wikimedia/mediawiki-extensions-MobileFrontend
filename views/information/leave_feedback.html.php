@@ -1,6 +1,6 @@
 <?php
 
-$leaveFeedbackHtml = <<<EOT
+$leaveFeedbackHtml = <<<HTML
 <form action='{$feedbackPostURL}' method='post'>
 <input type="hidden" name="edittoken" value="{$editToken}"/>
 <div tabindex="-1">
@@ -23,4 +23,4 @@ $leaveFeedbackHtml = <<<EOT
 </div>
 </form>
 
-EOT;
+HTML;

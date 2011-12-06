@@ -1,5 +1,5 @@
 <?php
-$optOutHtml = <<<EOT
+$optOutHtml = <<<HTML
  <h1>
 		  {$optOutMessage}
 		</h1>
@@ -16,4 +16,4 @@ $optOutHtml = <<<EOT
 			<button id='backButton' type='submit'>{$noButton}</button>
 		</form>
 		</div>
-EOT;
+HTML;
