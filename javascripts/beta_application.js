@@ -12,6 +12,10 @@ function initClearSearchLink() {
 	search.addEventListener( 'keydown', handleDefaultText, false );
 }
 
+search.onpaste = function() {
+	handleDefaultText();
+};
+
 function navigateToLanguageSelection() {
 	var url;
 	if ( languageSelection ) {
