@@ -88,7 +88,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.93';
+	const VERSION = '0.5.94';
 
 	/**
 	 * @var DOMDocument
@@ -592,7 +592,7 @@ class ExtMobileFrontend {
 						$q = array( 'action' => 'submitlogin', 'type' => 'login' );
 						$returnToVal = $wgRequest->getVal( 'returnto' );
 					 	
-						if ( !empty( $returnToVal ) ) {
+						if ( !$returnToVal ) {
 							$q['returnto'] = $returnToVal;
 						}
 						
