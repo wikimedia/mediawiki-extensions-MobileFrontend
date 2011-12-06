@@ -418,7 +418,7 @@ class ExtMobileFrontend {
 		$props = null;
 		try {
 			$props = $wgMemc->get( $key );
-			if ( ! $props ) {
+			if ( !$props ) {
 				$wurflConfigFile = RESOURCES_DIR . 'wurfl-config.xml';
 				$wurflConfig = new WURFL_Configuration_XmlConfig( $wurflConfigFile );
 				$wurflManagerFactory = new WURFL_WURFLManagerFactory( $wurflConfig );
