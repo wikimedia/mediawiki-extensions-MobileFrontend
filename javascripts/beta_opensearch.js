@@ -32,7 +32,6 @@ search.onfocus = function() {
 		ol.sqLeft = sq.offsetLeft;
 		ol.sqTop = sq.offsetTop;
 		sq.style.position = 'absolute';
-		search.value = placeholder;
 		
 		if ( !ol.properOffsetWidth ) {
 			ol.properOffsetWidth = search.offsetLeft + 44;
@@ -63,6 +62,26 @@ search.onfocus = function() {
 		sb.style.border = 0 + pixels;
 		logo.style.visibility = 'hidden';
 		goButton.style.visibility = 'hidden';
+		
+		var pE = document.getElementById( 'placeholder' );
+		if ( !pE ) {
+			pT = document.createElement( 'span' );
+			var pTT = document.createTextNode(placeholder);
+			pT.setAttribute( 'id', 'placeholder' );
+			pT.appendChild(pTT);
+			sb.insertBefore( pT, sb.firstChild );
+		}
+		var pE = document.getElementById( 'placeholder' );
+		if ( pE ) {
+			pE.style.position = 'absolute';
+			pE.style.left = ( search.offsetLeft + 5 ) + pixels;
+			pE.style.top = ( sq.offsetTop + 12 ) + pixels;
+			//pE.style.zIndex = -1;
+			pE.style.color = '#666666';
+			pE.style.fontSize = 16 + pixels;
+			pE.style.display = 'block';
+			search.style.backgroundColor = 'transparent';
+		}
 		var removeResults = document.getElementById( 'remove-results' );
 		if ( !removeResults ) {
 			rrd = document.createElement( 'a' ); 
@@ -151,7 +170,6 @@ function whichElement( e ) {
 	
 	e.cancelBubble = true;
 	e.stopPropagation();
-	
 	if ( targ.className == "suggestion-result" || 
 		 targ.className == "search-result-item" || 
 		 targ.className == "suggestions-result" ||
@@ -160,6 +178,7 @@ function whichElement( e ) {
 		 targ.id == 'search' ||
 		 targ.id == 'searchbox' ||
 		 targ.id == 'sq' ||
+		 targ.id == 'placeholder' ||
 		 targ.id == 'clearsearch' ||
 		 targ.tagName == 'BODY' ) {
 			if ( targ.id == 'clearsearch' && results ) {

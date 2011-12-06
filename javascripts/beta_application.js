@@ -27,8 +27,9 @@ function navigateToLanguageSelection() {
 }
 
 function handleDefaultText() {
-	if (search.value == placeholder) {
-		search.value = '';
+	var pE = document.getElementById( 'placeholder' );
+	if ( pE ) {
+		pE.style.display = 'none';
 	}
 }
 
@@ -38,15 +39,6 @@ function handleClearSearchLink() {
 			clearSearch.style.display = 'block';
 		} else {
 			clearSearch.style.display = 'none';
-			// if ( results ) {
-			// 	results.style.display = 'none';
-			// }
-			// if ( typeof removeResults == 'function' ) {
-			// 	removeResults();
-			// 	if ( search ) {
-			// 		search.blur();
-			// 	}				
-			// }
 		}
 	}
 }
