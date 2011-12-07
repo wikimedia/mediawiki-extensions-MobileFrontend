@@ -62,7 +62,7 @@ search.onfocus = function() {
 		sb.style.border = 0 + pixels;
 		logo.style.visibility = 'hidden';
 		goButton.style.visibility = 'hidden';
-		
+
 		var pE = document.getElementById( 'placeholder' );
 		if ( !pE ) {
 			pT = document.createElement( 'span' );
@@ -81,11 +81,11 @@ search.onfocus = function() {
 			pE.style.display = 'block';
 			search.style.backgroundColor = 'transparent';
 		}
-		
+
 		if ( pE && search.value != '' ) {
 			pE.style.display = 'none';
 		}
-		
+
 		var removeResults = document.getElementById( 'remove-results' );
 		if ( !removeResults ) {
 			rrd = document.createElement( 'a' ); 
