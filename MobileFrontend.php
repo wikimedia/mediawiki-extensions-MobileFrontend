@@ -436,13 +436,13 @@ class ExtMobileFrontend {
 		} catch ( Exception $e ) {
 			// echo $e->getMessage();
 		}
-		
+
 		// Note: The WebRequest Class calls are made in this block because
 		// since PHP 5.1.x, all objects have their destructors called
 		// before the output buffer callback function executes.
 		// Thus, globalized objects will not be available as expected in the function.
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
-		
+
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 		self::$useFormat = $wgRequest->getText( 'useformat' );
 		$mobileAction = $wgRequest->getText( 'mobileaction' );
@@ -1031,9 +1031,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		$itemToRemoveRecords = array();
 
-		foreach ( array_merge( $this->itemsToRemove, $wgMFRemovableClasses )
-				as $itemToRemove )
-		{
+		foreach ( array_merge( $this->itemsToRemove, $wgMFRemovableClasses ) as $itemToRemove ) {
 			$type = '';
 			$rawName = '';
 			CssDetection::detectIdCssOrTag( $itemToRemove, $type, $rawName );
