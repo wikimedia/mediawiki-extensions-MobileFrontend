@@ -46,14 +46,9 @@ function handleClearSearchLink() {
 function clearSearchBox( event ) {
 	search.value = '';
 	clearSearch.style.display = 'none';
-	// if ( results ) {
-	// 	results.style.display = 'none';
-	// }
 	if ( event ) {
 		event.preventDefault();
 	}
-	// removeResults();
-	// search.blur();
 }
 
 function logoClick() {
@@ -69,7 +64,6 @@ function logoClick() {
 	}
 };
 
-// And this...
 for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 	a[i].onclick = function() {
 		if ( this.hash.indexOf( '#' ) == 0 ) {
