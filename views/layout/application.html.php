@@ -22,6 +22,7 @@ $endScriptTag = '"></script>';
 $javaScriptPath = $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
 
 $openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12012011126437' . $endScriptTag;
+$jQueryScript = ( self::$device['supports_jquery'] ) ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
 
 $applicationHtml = <<<HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -35,14 +36,12 @@ $applicationHtml = <<<HTML
 	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{$appleTouchIconTag}
+	{$jQueryScript}
 	<script type='text/javascript'>
 	  //<![CDATA[
 		var title = "{$htmlTitle}";
 		var scriptPath = "{$wgScriptPath}";
 		var placeholder = "{$placeholder}";
-		function shouldCache() {
-		  return true;
-		}
 	  //]]>
 	</script>
   </head>
