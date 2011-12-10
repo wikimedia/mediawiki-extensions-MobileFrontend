@@ -132,6 +132,7 @@ class ExtMobileFrontend {
 	public static $languageUrls;
 	public static $wsLoginToken = '';
 	public static $wsLoginFormAction = '';
+	public static $isFilePage;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -457,6 +458,9 @@ class ExtMobileFrontend {
 
 					if (  Title::newMainPage()->equals( self::$title ) ) {
 						self::$isMainPage = true;
+					}
+					if ( self::$title->getNamespace() == NS_FILE ) {
+						self::$isFilePage = true;
 					}
 
 					self::$htmlTitle = $out->getHTMLTitle();

@@ -23,6 +23,11 @@ $javaScriptPath = $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
 
 $openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12012011126437' . $endScriptTag;
 $jQueryScript = ( self::$device['supports_jquery'] ) ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
+$filePageScript = ( self::$isFilePage ) ? $startScriptTag . $javaScriptPath . 'filepage.js' . $endScriptTag : '';
+
+$startLinkTag = "<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/";
+$endLinkTag = "' media='all' rel='Stylesheet' type='text/css' />";
+$filePageStyle = ( self::$isFilePage ) ? $startLinkTag . 'filepage.css' . $endLinkTag : '';
 
 $applicationHtml = <<<HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -33,6 +38,7 @@ $applicationHtml = <<<HTML
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
 	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=12012011121954' media='all' rel='Stylesheet' type='text/css' />
 	<link href='{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/{$cssFileName}.css?version=12012011120715' media='all' rel='Stylesheet' type='text/css' />
+	{$filePageStyle}
 	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{$appleTouchIconTag}
@@ -54,6 +60,7 @@ $applicationHtml = <<<HTML
 	{$footerHtml}
 	 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=12012011120915{$endScriptTag}
 	 {$openSearchScript}
+	{$filePageScript}
   </body>
 </html>
 HTML;
