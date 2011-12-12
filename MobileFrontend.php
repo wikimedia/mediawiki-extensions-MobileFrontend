@@ -259,7 +259,7 @@ class ExtMobileFrontend {
 				$parsedUrl = wfParseUrl( $targetUrl );
 				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
 					$hostParts = explode( '.', $parsedUrl['host'] );
-					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
+					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
 				}
 				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
 				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
