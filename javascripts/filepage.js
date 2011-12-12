@@ -67,7 +67,6 @@ function makeToggle(thisId) {
 				}
 			}
 		}
-		return false;
 	};
 }
 
@@ -102,6 +101,14 @@ function stopClickThrough() {
 }
 
 stopClickThrough();
-makeToggle('file')();
+
+var initial = 'file';
+if (window.location.hash) {
+	var section = window.location.hash.substr(1);
+	if (section in chunks) {
+		initial = section;
+	}
+}
+makeToggle(initial)();
 
 })();
