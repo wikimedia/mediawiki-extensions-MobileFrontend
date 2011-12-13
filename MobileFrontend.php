@@ -106,7 +106,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.98';
+	const VERSION = '0.5.99';
 
 	/**
 	 * @var DOMDocument
@@ -787,17 +787,6 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
-			$editToken = $wgUser->editToken();
-
-			$htmlTitle = self::$messages['mobile-frontend-leave-feedback'];
-			$title = self::$messages['mobile-frontend-leave-feedback-title'];
-			$notice = self::$messages['mobile-frontend-leave-feedback-notice'];
-			$subject = self::$messages['mobile-frontend-leave-feedback-subject'];
-			$message = self::$messages['mobile-frontend-leave-feedback-message'];
-			$cancel = self::$messages['mobile-frontend-leave-feedback-cancel'];
-			$submit = self::$messages['mobile-frontend-leave-feedback-submit'];
-
-			$feedbackPostURL = str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post';
 			$searchTemplate = $this->getSearchTemplate();
 			$searchWebkitHtml = $searchTemplate->getHTML();
 			$footerTemplate = $this->getFooterTemplate();
@@ -805,13 +794,13 @@ class ExtMobileFrontend {
 			$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
 			$options = array(
 							'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
-							'editToken' => $editToken,
-							'title' => $title,
-							'notice' => $notice,
-							'subject' => $subject,
-							'message' => $message,
-							'cancel' => $cancel,
-							'submit' => $submit,
+							'editToken' => $wgUser->editToken(),
+							'title' => self::$messages['mobile-frontend-leave-feedback-title'],
+							'notice' => self::$messages['mobile-frontend-leave-feedback-notice'],
+							'subject' => self::$messages['mobile-frontend-leave-feedback-subject'],
+							'message' => self::$messages['mobile-frontend-leave-feedback-message'],
+							'cancel' => self::$messages['mobile-frontend-leave-feedback-cancel'],
+							'submit' => self::$messages['mobile-frontend-leave-feedback-submit'],
 							);
 			$leaveFeedbackTemplate->setByArray( $options );
 			$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
@@ -820,7 +809,7 @@ class ExtMobileFrontend {
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
 							'noticeHtml' => $noticeHtml,
-							'htmlTitle' => $htmlTitle,
+							'htmlTitle' => self::$messages['mobile-frontend-leave-feedback'];,
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
 							'footerHtml' => $footerHtml,
