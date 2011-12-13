@@ -33,7 +33,7 @@ $wgExtensionCredits['other'][] = array(
 	'version' => ExtMobileFrontend::VERSION,
 	'author' => '[http://www.mediawiki.org/wiki/User:Preilly Preilly]',
 	'descriptionmsg' => 'mobile-frontend-desc',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:MobileFrontend',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
 
 $cwd = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
