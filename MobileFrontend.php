@@ -40,18 +40,25 @@ $cwd = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
 $wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
 
 // autoload extension classes
-$wgAutoloadClasses['DeviceDetection'] = $cwd . 'DeviceDetection.php';
-$wgAutoloadClasses['CssDetection'] = $cwd . 'CssDetection.php';
-$wgAutoloadClasses['MobileFrontendTemplate'] = $cwd . 'MobileFrontendTemplate.php';
-$wgAutoloadClasses['ApplicationTemplate'] = $cwd . 'ApplicationTemplate.php';
-$wgAutoloadClasses['SearchTemplate'] = $cwd . 'SearchTemplate.php';
-$wgAutoloadClasses['FooterTemplate'] = $cwd . 'FooterTemplate.php';
-$wgAutoloadClasses['LeaveFeedbackTemplate'] = $cwd . 'LeaveFeedbackTemplate.php';
-$wgAutoloadClasses['DisableTemplate'] = $cwd . 'DisableTemplate.php';
-$wgAutoloadClasses['OptInTemplate'] = $cwd . 'OptInTemplate.php';
-$wgAutoloadClasses['OptOutTemplate'] = $cwd . 'OptOutTemplate.php';
-$wgAutoloadClasses['ApplicationWmlTemplate'] = $cwd . 'ApplicationWmlTemplate.php';
-$wgAutoloadClasses['ThanksNoticeTemplate'] = $cwd . 'ThanksNoticeTemplate.php';
+
+$autoloadClasses = array(
+						'DeviceDetection',
+						'CssDetection',
+						'MobileFrontendTemplate',
+						'ApplicationTemplate',
+						'SearchTemplate',
+						'FooterTemplate',
+						'LeaveFeedbackTemplate',
+						'DisableTemplate',
+						'OptInTemplate',
+						'OptOutTemplate',
+						'ApplicationWmlTemplate',
+						'ThanksNoticeTemplate',
+						);
+
+foreach ( $autoloadClasses as $class ) {
+	$wgAutoloadClasses[$class] = $cwd . $class . '.php';
+}
 
 /**
  * Path to the logo used in the mobile view
@@ -99,7 +106,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.96';
+	const VERSION = '0.5.97';
 
 	/**
 	 * @var DOMDocument
