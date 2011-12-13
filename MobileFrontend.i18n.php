@@ -638,8 +638,8 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-opt-out-message' => 'Пакінуць праверку бэта-вэрсіі  мабільнага інтэрфэйсу?',
 	'mobile-frontend-opt-out-yes-button' => 'так',
 	'mobile-frontend-opt-out-no-button' => 'не',
-	'mobile-frontend-opt-out-title' => 'Пакінуць праверку',
-	'mobile-frontend-opt-out-explain' => 'Гэта дазволіць Вам пакінуць праверку',
+	'mobile-frontend-opt-out-title' => 'Пакінуць праверку бэта-вэрсіі мабільнага інтэрфэйсу',
+	'mobile-frontend-opt-out-explain' => 'Пакінуўшы праверку бэта-вэрсіі мабільнага інтэрфэйсу, Вы выключыце ўсе экспэрымэнтальныя магчымасьці і вернецеся да звычайнага мабільнага інтэрфэйсу.',
 	'mobile-frontend-disable-images' => 'Забараніць выявы на сайце для мабільных тэлефонаў',
 	'mobile-frontend-enable-images' => 'Дазволіць выявы на сайце для мабільных тэлефонаў',
 	'mobile-frontend-news-items' => 'Навіны',
@@ -3698,6 +3698,7 @@ $messages['mr'] = array(
 	'mobile-frontend-username' => 'सदस्य नाव:',
 	'mobile-frontend-password' => 'परवलीचा शब्द',
 	'mobile-frontend-login' => 'प्रवेश करा',
+	'mobile-frontend-placeholder' => 'आपला  हवा असलेला शोध येथे टंकलिखित करा ...',
 );
 
 /** Malay (Bahasa Melayu)
