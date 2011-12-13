@@ -81,7 +81,7 @@ function updateOrientationSearchWidth() {
 		case -90:
 		case 90:
 		case 180:
-			setTimeout( "updateSearchWidth()", 200 );
+			setTimeout( updateSearchWidth, 200 );
 			break;
   }
 }
@@ -97,7 +97,6 @@ window.onload = function () {
 			if ( term.length < 1 ) {
 				results.innerHTML = '';
 			} else {
-				term = encodeURIComponent( term );
 				timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 			}
 		}, false );
@@ -117,6 +116,7 @@ function searchApi( term ) {
 			writeResults( sections );
 		}
 	}
+	term = encodeURIComponent( term );
 	var url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
 	xmlHttp.open( 'GET', url, true );
 	xmlHttp.send();
