@@ -80,9 +80,7 @@ $wgMobileRedirectFormAction = false;
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
 $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
-
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
-
 $wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 
 /**
@@ -92,7 +90,7 @@ $wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonic
  */
 $wgMFRemovableClasses = array();
 
-# Unit tests
+// Unit tests
 $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
 
 /**
