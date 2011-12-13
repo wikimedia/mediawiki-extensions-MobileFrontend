@@ -807,7 +807,7 @@ class ExtMobileFrontend {
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
 							'noticeHtml' => $noticeHtml,
-							'htmlTitle' => self::$messages['mobile-frontend-leave-feedback'];,
+							'htmlTitle' => self::$messages['mobile-frontend-leave-feedback'],
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
 							'footerHtml' => $footerHtml,
