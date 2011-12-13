@@ -38,9 +38,20 @@ $wgExtensionCredits['other'][] = array(
 
 $cwd = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
 $wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
+
 // autoload extension classes
 $wgAutoloadClasses['DeviceDetection'] = $cwd . 'DeviceDetection.php';
-$wgAutoloadClasses['CssDetection']	  = $cwd . 'CssDetection.php';
+$wgAutoloadClasses['CssDetection'] = $cwd . 'CssDetection.php';
+$wgAutoloadClasses['MobileFrontendTemplate'] = $cwd . 'MobileFrontendTemplate.php';
+$wgAutoloadClasses['ApplicationTemplate'] = $cwd . 'ApplicationTemplate.php';
+$wgAutoloadClasses['SearchTemplate'] = $cwd . 'SearchTemplate.php';
+$wgAutoloadClasses['FooterTemplate'] = $cwd . 'FooterTemplate.php';
+$wgAutoloadClasses['LeaveFeedbackTemplate'] = $cwd . 'LeaveFeedbackTemplate.php';
+$wgAutoloadClasses['DisableTemplate'] = $cwd . 'DisableTemplate.php';
+$wgAutoloadClasses['OptInTemplate'] = $cwd . 'OptInTemplate.php';
+$wgAutoloadClasses['OptOutTemplate'] = $cwd . 'OptOutTemplate.php';
+$wgAutoloadClasses['ApplicationWmlTemplate'] = $cwd . 'ApplicationWmlTemplate.php';
+$wgAutoloadClasses['ThanksNoticeTemplate'] = $cwd . 'ThanksNoticeTemplate.php';
 
 /**
  * Path to the logo used in the mobile view
@@ -88,7 +99,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.95';
+	const VERSION = '0.5.96';
 
 	/**
 	 * @var DOMDocument
@@ -780,11 +791,39 @@ class ExtMobileFrontend {
 			$submit = self::$messages['mobile-frontend-leave-feedback-submit'];
 
 			$feedbackPostURL = str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post';
-			require( 'views/layout/_search_webkit.html.php' );
-			require( 'views/layout/_footmenu_default.html.php' );
-			require( 'views/information/leave_feedback.html.php' );
+			//require( 'views/layout/_search_webkit.html.php' );
+			$searchTemplate = $this->getSearchTemplate();
+			$searchWebkitHtml = $searchTemplate->getHTML();
+			//require( 'views/layout/_footmenu_default.html.php' );
+			$footerTemplate = $this->getFooterTemplate();
+			$footerHtml = $footerTemplate->getHTML(); 
+			//require( 'views/information/leave_feedback.html.php' );
+			$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
+			$options = array(
+							'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
+							'editToken' => $editToken,
+							'title' => $title,
+							'notice' => $notice,
+							'subject' => $subject,
+							'message' => $message,
+							'cancel' => $cancel,
+							'submit' => $submit,
+							);
+			$leaveFeedbackTemplate->setByArray( $options );
+			$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
 			$contentHtml = $leaveFeedbackHtml;
-			require( 'views/layout/application.html.php' );
+			//require( 'views/layout/application.html.php' );
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$applicationTemplate = $this->getApplicationTemplate();
+			$options = array(
+							'noticeHtml' => $noticeHtml,
+							'htmlTitle' => $htmlTitle,
+							'searchWebkitHtml' => $searchWebkitHtml,
+							'contentHtml' => $contentHtml,
+							'footerHtml' => $footerHtml,
+							);
+			$applicationTemplate->setByArray( $options );
+			$applicationHtml = $applicationTemplate->getHTML();
 			wfProfileOut( __METHOD__ );
 			return $applicationHtml;
 		}
@@ -799,17 +838,32 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
-			$yesButton = self::$messages['mobile-frontend-opt-in-yes-button'];
-			$noButton = self::$messages['mobile-frontend-opt-in-no-button'];
-			$htmlTitle = self::$messages['mobile-frontend-opt-in-title'];
-			$explainOptIn = self::$messages['mobile-frontend-opt-in-explain'];
-			$optInMessage = self::$messages['mobile-frontend-opt-in-message'];
-			$formAction = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
-			require( 'views/layout/_search_webkit.html.php' );
-			require( 'views/layout/_footmenu_default.html.php' );
-			require( 'views/information/optin.html.php' );
+			$searchTemplate = $this->getSearchTemplate();
+			$searchWebkitHtml = $searchTemplate->getHTML();
+			$footerTemplate = $this->getFooterTemplate();
+			$footerHtml = $footerTemplate->getHTML();
+			$optInTemplate = new OptInTemplate();
+			$options = array(
+							'explainOptIn' => self::$messages['mobile-frontend-opt-in-explain'],
+							'optInMessage' => self::$messages['mobile-frontend-opt-in-message'],
+							'yesButton' => self::$messages['mobile-frontend-opt-in-yes-button'],
+							'noButton' => self::$messages['mobile-frontend-opt-in-no-button'],
+							'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
+							);
+			$optInTemplate->setByArray( $options );
+			$optInHtml = $optInTemplate->getHTML();
 			$contentHtml = $optInHtml;
-			require( 'views/layout/application.html.php' );
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$applicationTemplate = $this->getApplicationTemplate();
+			$options = array(
+							'noticeHtml' => $noticeHtml,
+							'htmlTitle' => self::$messages['mobile-frontend-opt-in-title'],
+							'searchWebkitHtml' => $searchWebkitHtml,
+							'contentHtml' => $contentHtml,
+							'footerHtml' => $footerHtml,
+							);
+			$applicationTemplate->setByArray( $options );
+			$applicationHtml = $applicationTemplate->getHTML();
 			wfProfileOut( __METHOD__ );
 			return $applicationHtml;
 		}
@@ -824,17 +878,32 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
-			$yesButton = self::$messages['mobile-frontend-opt-out-yes-button'];
-			$noButton = self::$messages['mobile-frontend-opt-out-no-button'];
-			$htmlTitle = self::$messages['mobile-frontend-opt-out-title'];
-			$explainOptOut = self::$messages['mobile-frontend-opt-out-explain'];
-			$optOutMessage = self::$messages['mobile-frontend-opt-out-message'];
-			$formAction = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
-			require( 'views/layout/_search_webkit.html.php' );
-			require( 'views/layout/_footmenu_default.html.php' );
-			require( 'views/information/optout.html.php' );
+			$searchTemplate = $this->getSearchTemplate();
+			$searchWebkitHtml = $searchTemplate->getHTML();
+			$footerTemplate = $this->getFooterTemplate();
+			$footerHtml = $footerTemplate->getHTML();
+				$optOutTemplate = new OptOutTemplate();
+				$options = array(
+								'explainOptOut' => self::$messages['mobile-frontend-opt-out-explain'],
+								'optOutMessage' => self::$messages['mobile-frontend-opt-out-message'],
+								'yesButton' => self::$messages['mobile-frontend-opt-out-yes-button'],
+								'noButton' => self::$messages['mobile-frontend-opt-out-no-button'],
+								'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
+								);
+				$optOutTemplate->setByArray( $options );
+				$optOutHtml = $optOutTemplate->getHTML();
 			$contentHtml = $optOutHtml;
-			require( 'views/layout/application.html.php' );
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$applicationTemplate = $this->getApplicationTemplate();
+			$options = array(
+							'noticeHtml' => $noticeHtml,
+							'htmlTitle' => self::$messages['mobile-frontend-opt-out-title'],
+							'searchWebkitHtml' => $searchWebkitHtml,
+							'contentHtml' => $contentHtml,
+							'footerHtml' => $footerHtml,
+							);
+			$applicationTemplate->setByArray( $options );
+			$applicationHtml = $applicationTemplate->getHTML();
 			wfProfileOut( __METHOD__ );
 			return $applicationHtml;
 		}
@@ -855,11 +924,41 @@ class ExtMobileFrontend {
 			$backButton = self::$messages['mobile-frontend-back-button'];
 			$htmlTitle = $areYouSure;
 			$title = $areYouSure;
-			require( 'views/layout/_search_webkit.html.php' );
-			require( 'views/layout/_footmenu_default.html.php' );
-			require( 'views/information/disable.html.php' );
+			//require( 'views/layout/_search_webkit.html.php' );
+			$searchTemplate = $this->getSearchTemplate();
+			$searchWebkitHtml = $searchTemplate->getHTML();
+			//require( 'views/layout/_footmenu_default.html.php' );
+			$footerTemplate = $this->getFooterTemplate();
+			$footerHtml = $footerTemplate->getHTML();
+			//require( 'views/information/disable.html.php' );
+			
+			$disableTemplate = new DisableTemplate();
+			$options = array(
+							'currentURL' => self::$currentURL,
+							'mobileRedirectFormAction' => self::$mobileRedirectFormAction,
+							'areYouSure' => $areYouSure,
+							'explainDisable' => $explainDisable,
+							'disableButton' => $disableButton,
+							'backButton' => $backButton,
+							'htmlTitle' => $htmlTitle,
+							'title' => $title,
+							);
+			$disableTemplate->setByArray( $options );
+			$disableHtml = $disableTemplate->getHTML();
+			
 			$contentHtml = $disableHtml;
-			require( 'views/layout/application.html.php' );
+			//require( 'views/layout/application.html.php' );
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$applicationTemplate = $this->getApplicationTemplate();
+			$options = array(
+							'noticeHtml' => $noticeHtml,
+							'htmlTitle' => $htmlTitle,
+							'searchWebkitHtml' => $searchWebkitHtml,
+							'contentHtml' => $contentHtml,
+							'footerHtml' => $footerHtml,
+							);
+			$applicationTemplate->setByArray( $options );
+			$applicationHtml = $applicationTemplate->getHTML();
 			wfProfileOut( __METHOD__ );
 			return $applicationHtml;
 		}
@@ -1332,20 +1431,7 @@ class ExtMobileFrontend {
 			&& empty( self::$search ) && !self::$isMainPage ) {
 			$contentHtml =	$this->headingTransform( $contentHtml );
 		} elseif ( $this->contentFormat == 'WML' ) {
-			$homeButton = self::$messages['mobile-frontend-home-button'];
-			$randomButton = self::$messages['mobile-frontend-random-button'];
 			header( 'Content-Type: text/vnd.wap.wml' );
-
-			// TODO: Content transformations required
-			// WML Validator:
-			// http://validator.w3.org
-			//
-			// div -> p
-			// no style, no class, no h1-h6, sup, sub, ol, ul, li etc.
-			// table requires "columns" property
-			// lang and dir officially unsupported (but often work on rtl phones)
-
-			// Add segmentation markers
 			$contentHtml = $this->headingTransform( $contentHtml );
 
 			// Content removal for WML rendering
@@ -1361,21 +1447,46 @@ class ExtMobileFrontend {
 			$contentHtml = $searchWml . $contentHtml;
 			// Content wrapping
 			$contentHtml = $this->createWMLCard( $contentHtml );
-			require( 'views/layout/application.wml.php' );
+			//require( 'views/layout/application.wml.php' );
+			$applicationWmlTemplate = new ApplicationWmlTemplate();
+			$options = array(
+							'mainPageUrl' => self::$mainPageUrl,
+							'randomPageUrl' => self::$randomPageUrl,
+							'dir' => self::$dir,
+							'code' => self::$code,
+							'contentHtml' => $contentHtml,
+							'homeButton' => self::$messages['mobile-frontend-home-button'],
+							'randomButton' => self::$messages['mobile-frontend-random-button'],
+							);
+			$applicationWmlTemplate->setByArray( $options );
+			$applicationHtml = $applicationWmlTemplate->getHTML();
 		}
 
 		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
 			if ( !empty( self::$displayNoticeId ) ) {
-				$noticePagePath = 'views/notices/notice_' . intval( self::$displayNoticeId ) . '.html.php';
-				if ( file_exists( dirname( __FILE__ ) . '/' . $noticePagePath ) ) {
-					require( $noticePagePath );
+				if ( intval( self::$displayNoticeId ) === 1 ) {
+					$thanksNoticeTemplate = new ThanksNoticeTemplate();
+					$thanksNoticeTemplate->set( 'messages', self::$messages );
+					$noticeHtml = $thanksNoticeTemplate->getHTML();
 				}
 			}
 
 			// header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
-			require( 'views/layout/_search_webkit.html.php' );
-			require( 'views/layout/_footmenu_default.html.php' );
-			require( 'views/layout/application.html.php' );
+			$searchTemplate = $this->getSearchTemplate();
+			$searchWebkitHtml = $searchTemplate->getHTML();
+			$footerTemplate = $this->getFooterTemplate();
+			$footerHtml = $footerTemplate->getHTML();
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$applicationTemplate = $this->getApplicationTemplate();
+			$options = array(
+							'noticeHtml' => $noticeHtml,
+							'htmlTitle' => $htmlTitle,
+							'searchWebkitHtml' => $searchWebkitHtml,
+							'contentHtml' => $contentHtml,
+							'footerHtml' => $footerHtml,
+							);
+			$applicationTemplate->setByArray( $options );
+			$applicationHtml = $applicationTemplate->getHTML();
 		}
 
 		if ( self::$format === 'json' ) {
@@ -1397,6 +1508,68 @@ class ExtMobileFrontend {
 
 		wfProfileOut( __METHOD__ );
 		return $applicationHtml;
+	}
+
+	public function getFooterTemplate() {
+		wfProfileIn( __METHOD__ );
+		$footerTemplate = new FooterTemplate();
+		$logoutHtml = ( !empty( $logoutHtml ) ) ? $logoutHtml : '';
+		$options = array(
+						'messages' => self::$messages,
+						'leaveFeedbackURL' => self::$leaveFeedbackURL,
+						'disableMobileSiteURL' => self::$disableMobileSiteURL,
+						'viewNormalSiteURL' => self::$viewNormalSiteURL,
+						'disableImages' => self::$disableImages,
+						'disableImagesURL' => self::$disableImagesURL,
+						'enableImagesURL' => self::$enableImagesURL,
+						'logoutHtml' => $logoutHtml,
+						'code' => self::$code,
+						'isBetaGroupMember' => self::$isBetaGroupMember,
+						);
+		$footerTemplate->setByArray( $options );
+		wfProfileOut( __METHOD__ );
+		return $footerTemplate;
+	}
+
+	public function getSearchTemplate() {
+		global $wgExtensionAssetsPath, $wgMobileFrontendLogo;
+		wfProfileIn( __METHOD__ );
+		$searchTemplate = new SearchTemplate();
+		$options = array(
+						'searchField' => self::$searchField,
+						'mainPageUrl' => self::$mainPageUrl,
+						'randomPageUrl' => self::$randomPageUrl,
+						'messages' => self::$messages,
+						'hideSearchBox' => self::$hideSearchBox,
+						'hideLogo' => self::$hideLogo,
+						'buildLanguageSelection' => self::buildLanguageSelection(),
+						'device' => self::$device,
+						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
+						'wgMobileFrontendLogo' => $wgMobileFrontendLogo,
+						);
+		$searchTemplate->setByArray( $options );
+		wfProfileOut( __METHOD__ );
+		return $searchTemplate;
+	}
+
+	public function getApplicationTemplate() {
+		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath;
+		wfProfileIn( __METHOD__ );
+		$applicationTemplate = new ApplicationTemplate();
+		$options = array(
+						'dir' => self::$dir,
+						'code' => self::$code,
+						'placeholder' => self::$messages['mobile-frontend-placeholder'],
+						'wgAppleTouchIcon' => $wgAppleTouchIcon,
+						'isBetaGroupMember' => self::$isBetaGroupMember,
+						'device' => self::$device,
+						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
+						'wgScriptPath' => $wgScriptPath,
+						'isFilePage' => self::$isFilePage,
+						);
+		$applicationTemplate->setByArray( $options );
+		wfProfileOut( __METHOD__ );
+		return $applicationTemplate;
 	}
 
 	public static function buildLanguageSelection() {
