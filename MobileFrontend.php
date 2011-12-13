@@ -106,7 +106,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.97';
+	const VERSION = '0.5.98';
 
 	/**
 	 * @var DOMDocument
@@ -798,13 +798,10 @@ class ExtMobileFrontend {
 			$submit = self::$messages['mobile-frontend-leave-feedback-submit'];
 
 			$feedbackPostURL = str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post';
-			//require( 'views/layout/_search_webkit.html.php' );
 			$searchTemplate = $this->getSearchTemplate();
 			$searchWebkitHtml = $searchTemplate->getHTML();
-			//require( 'views/layout/_footmenu_default.html.php' );
 			$footerTemplate = $this->getFooterTemplate();
-			$footerHtml = $footerTemplate->getHTML(); 
-			//require( 'views/information/leave_feedback.html.php' );
+			$footerHtml = $footerTemplate->getHTML();
 			$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
 			$options = array(
 							'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
@@ -819,7 +816,6 @@ class ExtMobileFrontend {
 			$leaveFeedbackTemplate->setByArray( $options );
 			$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
 			$contentHtml = $leaveFeedbackHtml;
-			//require( 'views/layout/application.html.php' );
 			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
@@ -931,14 +927,10 @@ class ExtMobileFrontend {
 			$backButton = self::$messages['mobile-frontend-back-button'];
 			$htmlTitle = $areYouSure;
 			$title = $areYouSure;
-			//require( 'views/layout/_search_webkit.html.php' );
 			$searchTemplate = $this->getSearchTemplate();
 			$searchWebkitHtml = $searchTemplate->getHTML();
-			//require( 'views/layout/_footmenu_default.html.php' );
 			$footerTemplate = $this->getFooterTemplate();
 			$footerHtml = $footerTemplate->getHTML();
-			//require( 'views/information/disable.html.php' );
-			
 			$disableTemplate = new DisableTemplate();
 			$options = array(
 							'currentURL' => self::$currentURL,
@@ -954,7 +946,6 @@ class ExtMobileFrontend {
 			$disableHtml = $disableTemplate->getHTML();
 			
 			$contentHtml = $disableHtml;
-			//require( 'views/layout/application.html.php' );
 			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
@@ -1454,7 +1445,6 @@ class ExtMobileFrontend {
 			$contentHtml = $searchWml . $contentHtml;
 			// Content wrapping
 			$contentHtml = $this->createWMLCard( $contentHtml );
-			//require( 'views/layout/application.wml.php' );
 			$applicationWmlTemplate = new ApplicationWmlTemplate();
 			$options = array(
 							'mainPageUrl' => self::$mainPageUrl,
