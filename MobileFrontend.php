@@ -105,7 +105,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.6.0';
+	const VERSION = '0.6.1';
 
 	/**
 	 * @var DOMDocument
@@ -151,6 +151,7 @@ class ExtMobileFrontend {
 	public static $wsLoginFormAction = '';
 	public static $isFilePage;
 	public static $logoutHtml;
+	public static $loginHtml;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -435,8 +436,13 @@ class ExtMobileFrontend {
 				}
 				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
 				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-				$redirect = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path']
-				. $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+				$redirect = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path'];
+				if ( isset( $parsedUrl['query'] ) ) {
+					$redirect .= $queryDelimiter . $parsedUrl['query'];
+				}
+				if ( isset( $parsedUrl['fragment'] ) ) {
+					$redirect .= $fragmentDelimiter . $parsedUrl['fragment'];
+				}
 			}
 		}
 		return true;
@@ -1316,11 +1322,34 @@ class ExtMobileFrontend {
 
 		$itemToRemoveRecords = $this->parseItemsToRemove();
 
-		$ptLogout = $this->doc->getElementById( 'pt-logout' );
+		if ( self::$isBetaGroupMember ) {
+			$ptLogout = $this->doc->getElementById( 'pt-logout' );
 
-		if ( $ptLogout ) {
-			$ptLogoutLink = $ptLogout->firstChild;
-			self::$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
+			if ( $ptLogout ) {
+				$ptLogoutLink = $ptLogout->firstChild;
+				self::$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
+			}
+
+			$ptAnonLogin = $this->doc->getElementById( 'pt-anonlogin' );
+
+			if ( $ptAnonLogin ) {
+				$ptAnonLoginLink = $ptAnonLogin->firstChild;
+				if ( $ptAnonLoginLink && $ptAnonLoginLink->hasAttributes() ) {
+					$ptAnonLoginLinkHref = $ptAnonLoginLink->getAttributeNode( 'href' );
+					$ptAnonLoginLinkTitle = $ptAnonLoginLink->getAttributeNode( 'title' );
+					if ( $ptAnonLoginLinkTitle ) {
+						$ptAnonLoginLinkTitle->nodeValue = self::$messages['mobile-frontend-login'];
+					}
+					if ( $ptAnonLoginLinkHref ) {
+						$ptAnonLoginLinkHref->nodeValue = str_replace( "&", "&amp;", $ptAnonLoginLinkHref->nodeValue ) . '&amp;useformat=mobile';
+					}
+					$ptAnonLoginLinkText = $ptAnonLoginLink->firstChild;
+					if ( $ptAnonLoginLinkText ) {
+						$ptAnonLoginLinkText->nodeValue = self::$messages['mobile-frontend-login'];
+					}
+				}
+				self::$loginHtml = $this->doc->saveXML( $ptAnonLoginLink, LIBXML_NOEMPTYTAG );
+			}
 		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
@@ -1328,7 +1357,7 @@ class ExtMobileFrontend {
 
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
 				$firstHeading = $this->doc->getElementById( 'firstHeading' );
-				if ( !empty( $firstHeading ) ) {
+				if ( $firstHeading ) {
 					$firstHeading->nodeValue = '';
 				}
 			}
@@ -1521,7 +1550,8 @@ class ExtMobileFrontend {
 	public function getFooterTemplate() {
 		wfProfileIn( __METHOD__ );
 		$footerTemplate = new FooterTemplate();
-		$logoutHtml = ( !empty( self::$logoutHtml ) ) ? self::$logoutHtml : '';
+		$logoutHtml = ( self::$logoutHtml ) ? self::$logoutHtml : '';
+		$loginHtml = ( self::$loginHtml ) ? self::$loginHtml : '';
 		$options = array(
 						'messages' => self::$messages,
 						'leaveFeedbackURL' => self::$leaveFeedbackURL,
@@ -1531,6 +1561,7 @@ class ExtMobileFrontend {
 						'disableImagesURL' => self::$disableImagesURL,
 						'enableImagesURL' => self::$enableImagesURL,
 						'logoutHtml' => $logoutHtml,
+						'loginHtml' => $loginHtml,
 						'code' => self::$code,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
 						);

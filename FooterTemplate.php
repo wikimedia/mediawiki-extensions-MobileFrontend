@@ -27,7 +27,8 @@ class FooterTemplate extends MobileFrontendTemplate {
 			$imagesURL = $this->data['enableImagesURL'];
 		}
 
-		$logoutLink = ( !empty( $this->data['logoutHtml'] ) ) ? ' | ' . $this->data['logoutHtml'] : '';
+		$logoutLink = ( $this->data['logoutHtml'] ) ? ' | ' . $this->data['logoutHtml'] : '';
+		$logoutLink = ( $this->data['loginHtml'] ) ? ' | ' . $this->data['loginHtml'] : $logoutLink;
 
 		$feedbackLink = ( $this->data['code'] == 'en' && $this->data['isBetaGroupMember'] ) ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : '';
 
