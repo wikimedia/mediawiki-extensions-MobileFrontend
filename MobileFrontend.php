@@ -422,19 +422,22 @@ class ExtMobileFrontend {
 
 	public function beforePageRedirect( $out, &$redirect, &$code ) {
 		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
-			global $wgMobileDomain;
-			$parsedUrl = wfParseUrl( $redirect );
-			if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
-				$hostParts = explode( '.', $parsedUrl['host'] );
-				$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
+			global $wgMobileDomain, $wgRequest;
+			$requestURL = $wgRequest->getFullRequestURL();
+			if ( stristr( $requestURL, $wgMobileDomain ) !== false ) {
+				$parsedUrl = wfParseUrl( $redirect );
+				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
+					$hostParts = explode( '.', $parsedUrl['host'] );
+					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
+				}
+				if ( $parsedUrl['scheme'] == 'http' ) {
+					$parsedUrl['scheme'] = 'https';
+				}
+				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
+				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
+				$redirect = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path']
+				. $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 			}
-			if ( $parsedUrl['scheme'] == 'http' ) {
-				$parsedUrl['scheme'] = 'https';
-			}
-			$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-			$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-			$redirect = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path']
-			. $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
 		}
 		return true;
 	}
