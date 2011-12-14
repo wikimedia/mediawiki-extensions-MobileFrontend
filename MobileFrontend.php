@@ -150,6 +150,7 @@ class ExtMobileFrontend {
 	public static $wsLoginToken = '';
 	public static $wsLoginFormAction = '';
 	public static $isFilePage;
+	public static $logoutHtml;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -1316,7 +1317,7 @@ class ExtMobileFrontend {
 
 		if ( $ptLogout ) {
 			$ptLogoutLink = $ptLogout->firstChild;
-			$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
+			self::$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
 		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
@@ -1517,7 +1518,7 @@ class ExtMobileFrontend {
 	public function getFooterTemplate() {
 		wfProfileIn( __METHOD__ );
 		$footerTemplate = new FooterTemplate();
-		$logoutHtml = ( !empty( $logoutHtml ) ) ? $logoutHtml : '';
+		$logoutHtml = ( !empty( self::$logoutHtml ) ) ? self::$logoutHtml : '';
 		$options = array(
 						'messages' => self::$messages,
 						'leaveFeedbackURL' => self::$leaveFeedbackURL,
