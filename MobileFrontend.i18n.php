@@ -2308,6 +2308,7 @@ $messages['hr'] = array(
  * @author Michawiki
  */
 $messages['hsb'] = array(
+	'mobile-frontend-desc' => 'Zwobraznjenje stronow za mobilne kónčne graty',
 	'mobile-frontend-search-submit' => 'Pytać',
 	'mobile-frontend-search-results' => 'Pytanske wuslědki',
 	'mobile-frontend-no-article-found' => 'Žadyn nastawk namakany',
@@ -2338,8 +2339,10 @@ $messages['hsb'] = array(
 	'mobile-frontend-wml-continue' => 'Dale ...',
 	'mobile-frontend-wml-back' => 'Wróćo ...',
 	'mobile-frontend-view' => 'Mobilny napohlad',
+	'mobile-frontend-opt-in-message' => 'Na beta-tesće so wobdźělić?',
 	'mobile-frontend-opt-in-yes-button' => 'haj',
 	'mobile-frontend-opt-in-no-button' => 'ně',
+	'mobile-frontend-opt-out-message' => 'Beta-test wopušćić?',
 	'mobile-frontend-opt-out-yes-button' => 'haj',
 	'mobile-frontend-opt-out-no-button' => 'ně',
 	'mobile-frontend-disable-images' => 'Wobrazy w mobilnym napohledźe znjemóžnić',
@@ -2354,6 +2357,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-username' => 'Wužiwarske mjeno:',
 	'mobile-frontend-password' => 'Hesło:',
 	'mobile-frontend-login' => 'Přizjewić',
+	'mobile-frontend-placeholder' => 'Zapodaj tu swoje pytanje...',
 );
 
 /** Hungarian (Magyar)
@@ -2650,7 +2654,7 @@ $messages['it'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'sì',
 	'mobile-frontend-opt-in-no-button' => 'no',
 	'mobile-frontend-opt-in-title' => 'Partecipazione al collaudo',
-	'mobile-frontend-opt-in-explain' => 'Qui puoi partecipare alla prova',
+	'mobile-frontend-opt-in-explain' => 'Partecipando alla versione di prova avrai la possibilità di usare funzionalità sperimentali, ma con il rischio di incontrare errori e problemi.',
 	'mobile-frontend-opt-out-message' => 'Abbandonare la prova della nuova interfaccia mobile?',
 	'mobile-frontend-opt-out-yes-button' => 'sì',
 	'mobile-frontend-opt-out-no-button' => 'no',
@@ -4488,9 +4492,9 @@ $messages['ps'] = array(
 	'mobile-frontend-regular-site' => 'همدا مخ په {{SITENAME}} کتل',
 	'mobile-frontend-perm-stop-redirect' => 'د تل لپاره د موباييل وېبځی ناچارند کول',
 	'mobile-frontend-error-page-title' => 'موږ يوې ستونزې سره مخ يوو!',
-	'mobile-frontend-error-page-text' => 'د موبايل لپاره د ويکيپېډيا بڼه لا تر اوسه پورې د رغولو پر حال کې ده او موږ هم تر اوسه پورې د تېروتنو او ستونزو د ليري کولو په هڅه کې يو. موږ ته د ډېرو ستونزو او د سيستم د منځنۍ تېروتنو په اړه خبر راکړ شوی او موږ به ډېر ژر دا ستونزې حل کړو. مهرباني وکړۍ يو څه موده وروسته بيا راشۍ.',
+	'mobile-frontend-error-page-text' => 'د موبايل لپاره د {{SITENAME}} بڼه لا تر اوسه پورې د رغولو پر حال کې ده او موږ هم تر اوسه پورې د تېروتنو او ستونزو د ليري کولو په هڅه کې يو. موږ ته د ډېرو ستونزو او د سيستم د منځنۍ تېروتنو په اړه خبر راکړ شوی او موږ به ډېر ژر دا ستونزې حل کړو. مهرباني وکړۍ يو څه موده وروسته بيا راشۍ.',
 	'mobile-frontend-are-you-sure' => 'آيا تاسې ډاډه ياست؟',
-	'mobile-frontend-explain-disable' => 'آيا تاسې په رښتيا سره د ويکيپېډيا د موباييل بڼه ناچارنده کول غواړۍ؟ که تاسې<b>ناچارند کول</b> وټاکۍ، نو له هماغه دم نه راوروسته چې کله تاسې ويکيپېډيا نه ليدنه کوۍ، بيا به تاسې د موباييل لپاره د ويکيپېډيا دې مخ ته نه ورګرځول کېږۍ.',
+	'mobile-frontend-explain-disable' => 'آيا تاسې په رښتيا سره د {{SITENAME}} د موباييل بڼه ناچارنده کول غواړۍ؟ که تاسې<b>ناچارند کول</b> وټاکۍ، نو له هماغه دم نه راوروسته چې کله تاسې {{SITENAME}} نه ليدنه کوۍ، بيا به تاسې د موباييل لپاره د {{SITENAME}} دې مخ ته نه ورګرځول کېږۍ.',
 	'mobile-frontend-nav-end' => 'پای',
 	'mobile-frontend-nav-top' => 'سر',
 	'mobile-frontend-nav-edit' => 'سمول',
@@ -4508,6 +4512,10 @@ $messages['ps'] = array(
 	'mobile-frontend-news-items' => 'په خبرونو کې',
 	'mobile-frontend-leave-feedback-message' => 'پيغام',
 	'mobile-frontend-leave-feedback-cancel' => 'ناګارل',
+	'mobile-frontend-language' => 'ژبه',
+	'mobile-frontend-username' => 'کارن-نوم:',
+	'mobile-frontend-password' => 'پټنوم:',
+	'mobile-frontend-login' => 'ننوتل',
 );
 
 /** Portuguese (Português)
