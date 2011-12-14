@@ -80,6 +80,7 @@ $wgMobileRedirectFormAction = false;
 $wgExtMobileFrontend = new ExtMobileFrontend();
 
 $wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
+$wgHooks['BeforePageRedirect'][] = array( &$wgExtMobileFrontend, 'beforePageRedirect' );
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 $wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 
@@ -104,7 +105,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 class ExtMobileFrontend {
-	const VERSION = '0.5.99';
+	const VERSION = '0.6.0';
 
 	/**
 	 * @var DOMDocument
@@ -415,6 +416,25 @@ class ExtMobileFrontend {
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
 		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		wfProfileOut( __METHOD__ );
+		return true;
+	}
+
+	public function beforePageRedirect( $out, &$redirect, &$code ) {
+		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
+			global $wgMobileDomain;
+			$parsedUrl = wfParseUrl( $redirect );
+			if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
+				$hostParts = explode( '.', $parsedUrl['host'] );
+				$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
+			}
+			if ( $parsedUrl['scheme'] == 'http' ) {
+				$parsedUrl['scheme'] = 'https';
+			}
+			$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
+			$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
+			$redirect = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path']
+			. $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+		}
 		return true;
 	}
 
