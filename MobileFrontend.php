@@ -307,7 +307,7 @@ class ExtMobileFrontend {
 			$footerlinks = $tpl->data['footerlinks'];
 			$mobileViewUrl = $wgRequest->escapeAppendQuery( 'useformat=mobile' );
 
-			$tpl->set( 'mobileview', "<a href='{$mobileViewUrl}'>" . wfMsg( 'mobile-frontend-view' ) . "</a>" );
+			$tpl->set( 'mobileview', "<a href='{$mobileViewUrl}' class='noprint'>" . wfMsg( 'mobile-frontend-view' ) . "</a>" );
 			$footerlinks['places'][] = 'mobileview';
 			$tpl->set( 'footerlinks', $footerlinks );
 		}
