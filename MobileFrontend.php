@@ -1331,6 +1331,10 @@ class ExtMobileFrontend {
 			}
 
 			$ptAnonLogin = $this->doc->getElementById( 'pt-anonlogin' );
+			
+			if ( !$ptAnonLogin ) {
+				$ptAnonLogin = $this->doc->getElementById( 'pt-login' );
+			}
 
 			if ( $ptAnonLogin ) {
 				$ptAnonLoginLink = $ptAnonLogin->firstChild;
