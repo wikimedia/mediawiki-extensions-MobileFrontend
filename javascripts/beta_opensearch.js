@@ -28,7 +28,7 @@ function resetViewPort() {
 		if ( viewportmeta ) {
 			viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
 			document.body.addEventListener( 'gesturestart', function () {
-				viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+				viewportmeta.content = 'width=device-width, initial-scale=1.0';
 			}, false );
 	    }
 	}
