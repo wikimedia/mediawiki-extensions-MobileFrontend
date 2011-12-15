@@ -1345,7 +1345,7 @@ class ExtMobileFrontend {
 						$ptAnonLoginLinkTitle->nodeValue = self::$messages['mobile-frontend-login'];
 					}
 					if ( $ptAnonLoginLinkHref ) {
-						$ptAnonLoginLinkHref->nodeValue = str_replace( "&", "&amp;", $ptAnonLoginLinkHref->nodeValue ) . '&amp;useformat=mobile';
+						$ptAnonLoginLinkHref->nodeValue = str_replace( "&", "&amp;", $ptAnonLoginLinkHref->nodeValue );
 					}
 					$ptAnonLoginLinkText = $ptAnonLoginLink->firstChild;
 					if ( $ptAnonLoginLinkText ) {
