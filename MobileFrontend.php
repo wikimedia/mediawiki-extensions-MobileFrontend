@@ -393,9 +393,11 @@ class ExtMobileFrontend {
 
 				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host'] . $parsedUrl['path'];
 				if ( isset( $parsedUrl['query'] ) ) {
-					$languageUrl .= $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+					$languageUrl .= $queryDelimiter . $parsedUrl['query'];
 				}
-
+				if ( isset( $parsedUrl['fragment'] ) ) {
+					$languageUrl .= $fragmentDelimiter . $parsedUrl['fragment'];
+				}
 				$languageUrls[] = array(
 					'href' => $languageUrl,
 					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
@@ -963,7 +965,7 @@ class ExtMobileFrontend {
 							);
 			$disableTemplate->setByArray( $options );
 			$disableHtml = $disableTemplate->getHTML();
-			
+
 			$contentHtml = $disableHtml;
 			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
 			$applicationTemplate = $this->getApplicationTemplate();
@@ -1333,7 +1335,7 @@ class ExtMobileFrontend {
 			}
 
 			$ptAnonLogin = $this->doc->getElementById( 'pt-anonlogin' );
-			
+
 			if ( !$ptAnonLogin ) {
 				$ptAnonLogin = $this->doc->getElementById( 'pt-login' );
 			}
