@@ -837,7 +837,7 @@ class ExtMobileFrontend {
 			$leaveFeedbackTemplate->setByArray( $options );
 			$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
 			$contentHtml = $leaveFeedbackHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
 							'noticeHtml' => $noticeHtml,
@@ -877,7 +877,7 @@ class ExtMobileFrontend {
 			$optInTemplate->setByArray( $options );
 			$optInHtml = $optInTemplate->getHTML();
 			$contentHtml = $optInHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
 							'noticeHtml' => $noticeHtml,
@@ -906,18 +906,18 @@ class ExtMobileFrontend {
 			$searchWebkitHtml = $searchTemplate->getHTML();
 			$footerTemplate = $this->getFooterTemplate();
 			$footerHtml = $footerTemplate->getHTML();
-				$optOutTemplate = new OptOutTemplate();
-				$options = array(
-								'explainOptOut' => self::$messages['mobile-frontend-opt-out-explain'],
-								'optOutMessage' => self::$messages['mobile-frontend-opt-out-message'],
-								'yesButton' => self::$messages['mobile-frontend-opt-out-yes-button'],
-								'noButton' => self::$messages['mobile-frontend-opt-out-no-button'],
-								'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
-								);
-				$optOutTemplate->setByArray( $options );
-				$optOutHtml = $optOutTemplate->getHTML();
+			$optOutTemplate = new OptOutTemplate();
+			$options = array(
+							'explainOptOut' => self::$messages['mobile-frontend-opt-out-explain'],
+							'optOutMessage' => self::$messages['mobile-frontend-opt-out-message'],
+							'yesButton' => self::$messages['mobile-frontend-opt-out-yes-button'],
+							'noButton' => self::$messages['mobile-frontend-opt-out-no-button'],
+							'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
+							);
+			$optOutTemplate->setByArray( $options );
+			$optOutHtml = $optOutTemplate->getHTML();
 			$contentHtml = $optOutHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
 							'noticeHtml' => $noticeHtml,
@@ -967,7 +967,7 @@ class ExtMobileFrontend {
 			$disableHtml = $disableTemplate->getHTML();
 
 			$contentHtml = $disableHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
+			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
 							'noticeHtml' => $noticeHtml,
