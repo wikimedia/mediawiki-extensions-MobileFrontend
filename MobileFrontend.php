@@ -688,7 +688,20 @@ class ExtMobileFrontend {
 	}
 
 	private function checkUserStatus() {
+		global $wgRequest;
 		wfProfileIn( __METHOD__ );
+		
+		$hideSearchBox = $wgRequest->getText( 'hidesearchbox' );
+		
+		if ( $hideSearchBox && $hideSearchBox == 1 ) {
+			self::$hideSearchBox = true;
+		}
+		
+		$hideLogo = $wgRequest->getText( 'hidelogo' );
+		
+		if ( $hideLogo && $hideLogo == 1 ) {
+			self::$hideLogo = true;
+		}
 
 		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) &&
 			strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Wikipedia Mobile' ) !== false ) {
