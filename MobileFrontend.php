@@ -422,8 +422,9 @@ class ExtMobileFrontend {
 	}
 
 	public function beforePageRedirect( $out, &$redirect, &$code ) {
+		global $wgMobileDomain;
+		wfProfileIn( __METHOD__ );
 		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
-			global $wgMobileDomain;
 			$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 			if ( $xDevice ) {
 				$parsedUrl = wfParseUrl( $redirect );
@@ -445,6 +446,7 @@ class ExtMobileFrontend {
 				}
 			}
 		}
+		wfProfileOut( __METHOD__ );
 		return true;
 	}
 
