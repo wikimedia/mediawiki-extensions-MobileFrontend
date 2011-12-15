@@ -24,7 +24,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$endScriptTag = '"></script>';
 		$javaScriptPath =  $this->data['wgExtensionAssetsPath'] . '/MobileFrontend/javascripts/';
 
-		$openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12012011126437' . $endScriptTag;
+		$openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12142011126437' . $endScriptTag;
 		$jQueryScript = ( $this->data['device']['supports_jquery'] ) ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
 		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js' . $endScriptTag : '';
 

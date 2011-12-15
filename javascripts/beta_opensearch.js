@@ -110,6 +110,12 @@ function removeResults() {
 	if ( footer ) {
 		footer.style.display = 'block';
 	}
+	
+	var pE = document.getElementById( 'placeholder' );
+	if ( pE ) {
+		pE.style.display = 'none';
+	}
+	
 	if ( ol ) {
 		if ( sq ) {
 			logo.style.visibility = 'visible';
