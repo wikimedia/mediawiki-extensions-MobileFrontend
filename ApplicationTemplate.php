@@ -16,7 +16,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$betaPrefix = ( $this->data['isBetaGroupMember'] ) ? 'beta_' : '';
 
-		$noticeHtml = empty( $this->data['noticeHtml'] ) ? '' : $this->data['noticeHtml'];
+		$noticeHtml = ( isset( $this->data['noticeHtml'] ) ) ? '' : $this->data['noticeHtml'];
 
 		$cssFileName = ( isset( $this->data['device']['css_file_name'] ) ) ? $this->data['device']['css_file_name'] : 'default';
 

@@ -837,10 +837,8 @@ class ExtMobileFrontend {
 			$leaveFeedbackTemplate->setByArray( $options );
 			$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
 			$contentHtml = $leaveFeedbackHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
-							'noticeHtml' => $noticeHtml,
 							'htmlTitle' => self::$messages['mobile-frontend-leave-feedback'],
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
@@ -877,10 +875,8 @@ class ExtMobileFrontend {
 			$optInTemplate->setByArray( $options );
 			$optInHtml = $optInTemplate->getHTML();
 			$contentHtml = $optInHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
-							'noticeHtml' => $noticeHtml,
 							'htmlTitle' => self::$messages['mobile-frontend-opt-in-title'],
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
@@ -917,10 +913,8 @@ class ExtMobileFrontend {
 			$optOutTemplate->setByArray( $options );
 			$optOutHtml = $optOutTemplate->getHTML();
 			$contentHtml = $optOutHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
-							'noticeHtml' => $noticeHtml,
 							'htmlTitle' => self::$messages['mobile-frontend-opt-out-title'],
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
@@ -967,10 +961,8 @@ class ExtMobileFrontend {
 			$disableHtml = $disableTemplate->getHTML();
 
 			$contentHtml = $disableHtml;
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : ''; // FIXME: $noticeHtml is never already set
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
-							'noticeHtml' => $noticeHtml,
 							'htmlTitle' => $htmlTitle,
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
