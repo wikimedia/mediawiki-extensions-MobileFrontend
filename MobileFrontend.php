@@ -146,6 +146,7 @@ class ExtMobileFrontend {
 	public static $isBetaGroupMember = false;
 	public static $hideSearchBox = false;
 	public static $hideLogo = false;
+	public static $hideFooter = false;
 	public static $languageUrls;
 	public static $wsLoginToken = '';
 	public static $wsLoginFormAction = '';
@@ -709,6 +710,10 @@ class ExtMobileFrontend {
 			if (strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Android' ) !== false ) {
 				self::$hideLogo = true;
 			}
+		}
+		
+		if ( self::$hideLogo && self::$hideLogo == true ) {
+			self::$hideFooter = true;
 		}
 
 		$optInCookie = $this->getOptInOutCookie();
@@ -1576,6 +1581,7 @@ class ExtMobileFrontend {
 						'logoutHtml' => $logoutHtml,
 						'loginHtml' => $loginHtml,
 						'code' => self::$code,
+						'hideFooter' => self::$hideFooter,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
 						);
 		$footerTemplate->setByArray( $options );

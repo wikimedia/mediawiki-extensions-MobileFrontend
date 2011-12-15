@@ -32,8 +32,10 @@ class FooterTemplate extends MobileFrontendTemplate {
 
 		$feedbackLink = ( $this->data['code'] == 'en' && $this->data['isBetaGroupMember'] ) ? "| <a href=\"{$leaveFeedbackURL}\">{$leaveFeedback}</a>" : '';
 
+		$footerDisplayNone = ( $this->data['hideFooter'] ) ? ' style="display: none;" ' : '';
+
 		$footerHtml = <<<HTML
-			<div id='footer'>
+			<div id='footer' {$footerDisplayNone}>
 			  <div class='nav' id='footmenu'>
 				<div class='mwm-notice'>
 				  <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
