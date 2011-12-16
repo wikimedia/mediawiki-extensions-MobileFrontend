@@ -41,20 +41,20 @@ $wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
 
 // autoload extension classes
 
-$autoloadClasses = array(
-						'DeviceDetection',
-						'CssDetection',
-						'MobileFrontendTemplate',
-						'ApplicationTemplate',
-						'SearchTemplate',
-						'FooterTemplate',
-						'LeaveFeedbackTemplate',
-						'DisableTemplate',
-						'OptInTemplate',
-						'OptOutTemplate',
-						'ApplicationWmlTemplate',
-						'ThanksNoticeTemplate',
-						);
+$autoloadClasses = array (
+	'DeviceDetection',
+	'CssDetection',
+	'MobileFrontendTemplate',
+	'ApplicationTemplate',
+	'SearchTemplate',
+	'FooterTemplate',
+	'LeaveFeedbackTemplate',
+	'DisableTemplate',
+	'OptInTemplate',
+	'OptOutTemplate',
+	'ApplicationWmlTemplate',
+	'ThanksNoticeTemplate',
+);
 
 foreach ( $autoloadClasses as $class ) {
 	$wgAutoloadClasses[$class] = $cwd . $class . '.php';
