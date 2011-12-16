@@ -691,15 +691,15 @@ class ExtMobileFrontend {
 	private function checkUserStatus() {
 		global $wgRequest;
 		wfProfileIn( __METHOD__ );
-		
+
 		$hideSearchBox = $wgRequest->getInt( 'hidesearchbox' );
-		
+
 		if ( $hideSearchBox === 1 ) {
 			self::$hideSearchBox = true;
 		}
-		
+
 		$hideLogo = $wgRequest->getInt( 'hidelogo' );
-		
+
 		if ( $hideLogo === 1 ) {
 			self::$hideLogo = true;
 		}
@@ -711,7 +711,7 @@ class ExtMobileFrontend {
 				self::$hideLogo = true;
 			}
 		}
-		
+
 		if ( self::$hideLogo == true ) {
 			self::$hideFooter = true;
 		}
