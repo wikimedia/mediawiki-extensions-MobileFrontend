@@ -694,7 +694,7 @@ class ExtMobileFrontend {
 		
 		$hideSearchBox = $wgRequest->getText( 'hidesearchbox' );
 		
-		if ( $hideSearchBox && $hideSearchBox == 1 ) {
+		if ( $hideSearchBox == 1 ) {
 			self::$hideSearchBox = true;
 		}
 		
@@ -712,7 +712,7 @@ class ExtMobileFrontend {
 			}
 		}
 		
-		if ( self::$hideLogo && self::$hideLogo == true ) {
+		if ( self::$hideLogo == true ) {
 			self::$hideFooter = true;
 		}
 
