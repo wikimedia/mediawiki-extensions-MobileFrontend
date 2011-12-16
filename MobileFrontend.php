@@ -692,15 +692,15 @@ class ExtMobileFrontend {
 		global $wgRequest;
 		wfProfileIn( __METHOD__ );
 		
-		$hideSearchBox = $wgRequest->getText( 'hidesearchbox' );
+		$hideSearchBox = $wgRequest->getInt( 'hidesearchbox' );
 		
-		if ( $hideSearchBox == 1 ) {
+		if ( $hideSearchBox === 1 ) {
 			self::$hideSearchBox = true;
 		}
 		
-		$hideLogo = $wgRequest->getText( 'hidelogo' );
+		$hideLogo = $wgRequest->getInt( 'hidelogo' );
 		
-		if ( $hideLogo && $hideLogo == 1 ) {
+		if ( $hideLogo === 1 ) {
 			self::$hideLogo = true;
 		}
 
