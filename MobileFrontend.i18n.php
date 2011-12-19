@@ -1466,7 +1466,7 @@ $messages['eo'] = array(
 	'mobile-frontend-wml-continue' => 'Kontinui …',
 	'mobile-frontend-wml-back' => 'Retroiri ...',
 	'mobile-frontend-view' => 'Vidigo por porteblaj aparatoj',
-	'mobile-frontend-opt-in-message' => 'Ĉu aliĝi nian volontan testadon de la nova poŝtelefona fasado?',
+	'mobile-frontend-opt-in-message' => 'Ĉu aliĝi beta-version de poŝtelefona fasado?',
 	'mobile-frontend-opt-in-yes-button' => 'jes',
 	'mobile-frontend-opt-in-no-button' => 'ne',
 	'mobile-frontend-opt-in-title' => 'Volontado por Testado',
@@ -1684,6 +1684,7 @@ $messages['fa'] = array(
 	'mobile-frontend-username' => 'نام کاربری:',
 	'mobile-frontend-password' => 'گذرواژه:',
 	'mobile-frontend-login' => 'ورود',
+	'mobile-frontend-placeholder' => 'برای جستجو اینجا تایپ کنید...',
 );
 
 /** Finnish (Suomi)
@@ -3068,27 +3069,32 @@ $messages['ksh'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'jo',
 	'mobile-frontend-opt-in-no-button' => 'nä',
 	'mobile-frontend-opt-in-title' => 'Beim Ußprobeere metmaache',
-	'mobile-frontend-opt-in-explain' => 'Dat löht Desch beim Ußprobeere metmaache',
-	'mobile-frontend-opt-out-message' => 'Mem freiwillije Ußprobeere vun dä neue Bedeenung för Mobiljeräte ophüüre?',
+	'mobile-frontend-opt-in-explain' => 'Beim Ußprobeere metmaache löht Desch neu Saache känne liehre, ävver et künnt sind, dat De jät fengks, wat noch nit flupp.',
+	'mobile-frontend-opt-out-message' => 'Mem freiwillije Ußprobeere vun dä Neueschkeite för Mobiljeräte ophüüre?',
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'nä',
 	'mobile-frontend-opt-out-title' => 'Nit mih beim freiwillije Ußprobeere metmaaache',
-	'mobile-frontend-opt-out-explain' => 'Dat löht Desch mem Ußprobeere ophüre',
+	'mobile-frontend-opt-out-explain' => 'Dat löht Desch mem Ußprobeere ophüre, un all de neue Saache sin affjeschalldt, Do küß widder op dä ahle Schtandatt zeröck.',
 	'mobile-frontend-disable-images' => 'Belder för et Mobiljerät ußschallde',
 	'mobile-frontend-enable-images' => 'Belder för et Mobiljerät uohlohße',
 	'mobile-frontend-news-items' => 'En de Präß',
 	'mobile-frontend-leave-feedback-title' => 'Jiv ons Röckmäldunge övver de !!FUZY!!ßait för Mobiljeräte',
-	'mobile-frontend-leave-feedback-notice' => 'Din Röckmälunge wääde öffentlesch op dä Sigg "$1" faßjehallde, zosamme met Dingem Metmaacher-Name, Dingem Brauser singe Version un däm Name vun Dingem Bedreifssüßtehm.',
+	'mobile-frontend-leave-feedback-notice' => 'Ding Röckmälunge helfe met, dat De met de Mobiljeräte besser heh bedeent wees.
+Se wääde öffentlesch op dä Sigg „$1“ faßjehallde, zosamme met Dingem Metmaacher-Name, Dingem Brauser singe Version un däm Name vun Dingem Bedriefssüßtehm.
+Bes esu jood un donn en joode Övverschreff för Dinge Beidraach heh ußsöhke; esu jät wi: „E Problehm mem Ußsinn bei Tabälle.“
+För Ding Röckmälonge jällte uns Notzongesbedenonge.',
 	'mobile-frontend-leave-feedback-subject' => 'Theema',
 	'mobile-frontend-leave-feedback-message' => 'Nohreesch',
 	'mobile-frontend-leave-feedback-cancel' => 'Stopp! Avbreche!',
 	'mobile-frontend-leave-feedback-submit' => 'Lohß jonn!',
+	'mobile-frontend-leave-feedback-link-text' => 'Röckmäldonge övver de Zohsazprojramme för Mobiljerääte',
 	'mobile-frontend-leave-feedback' => 'Rückmäldonge övver der Zohjang för Mobiljerääte',
 	'mobile-frontend-leave-feedback-thanks' => 'Mer bedanke uns för Ding Rökmäldong.',
 	'mobile-frontend-language' => 'Shprooch',
 	'mobile-frontend-username' => 'Metmaacher Name:',
 	'mobile-frontend-password' => 'Paßwoot:',
 	'mobile-frontend-login' => 'Enlogge',
+	'mobile-frontend-placeholder' => 'Jiv heh en, wat De söhke wells&nbsp;&hellip;',
 );
 
 /** Kurdish (Kurdî) */
