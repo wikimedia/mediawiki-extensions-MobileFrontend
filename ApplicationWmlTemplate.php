@@ -19,10 +19,10 @@ class ApplicationWmlTemplate extends MobileFrontendTemplate {
 			<wml xml:lang="{$code}" dir="{$dir}">
 			<template>
 			<do name="home" type="options" label="{$this->data['homeButton']}" >
-			 <go href="{$this->data['mainPageUrl']}"/>
+			 <go href="{$mainPageUrl}"/>
 			</do>
 			<do name="random" type="options" label="{$this->data['randomButton']}">
-			 <go href="{$this->data['randomPageUrl']}"/>
+			 <go href="{$randomPageUrl}"/>
 			</do>
 			</template>
 			{$this->data['contentHtml']}
