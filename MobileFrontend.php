@@ -519,7 +519,7 @@ class ExtMobileFrontend {
 
 		self::$title = $out->getTitle();
 
-		if ( Title::newMainPage()->equals( self::$title ) ) {
+		if ( self::$title->isMainPage() ) {
 			self::$isMainPage = true;
 		}
 		if ( self::$title->getNamespace() == NS_FILE ) {
@@ -537,9 +537,7 @@ class ExtMobileFrontend {
 			$location = str_replace( '&mfi=1', '', str_replace( '&mfi=0', '', $location ) );
 			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=0' );
-		}
-
-		if ( self::$disableImages == 0 ) {
+		} elseif ( self::$disableImages == 0 ) {
 			$disableImages = $wgRequest->getCookie( 'disableImages' );
 			if ( $disableImages ) {
 				self::$disableImages = $disableImages;
@@ -752,6 +750,9 @@ class ExtMobileFrontend {
 		return true;
 	}
 
+	/**
+	 * @return Mixed
+	 */
 	private function getOptInOutCookie() {
 		global $wgRequest;
 		wfProfileIn( __METHOD__ );

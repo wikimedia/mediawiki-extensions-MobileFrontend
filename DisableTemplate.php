@@ -5,11 +5,10 @@ if( !defined( 'MEDIAWIKI' ) ) {
 }
 
 class DisableTemplate extends MobileFrontendTemplate {
-	
+
 	public function getHTML() {
 
-		$currentURL = $this->data['currentURL'];
-		$currentURL = str_replace( '&mobileaction=disable_mobile_site', '', $currentURL );
+		$currentURL = str_replace( '&mobileaction=disable_mobile_site', '', $this->data['currentURL'] ); // TODO: $currentURl is unused
 		$mobileRedirectFormAction = $this->data['mobileRedirectFormAction'];
 
 		$disableHtml = <<<HTML
@@ -20,7 +19,7 @@ class DisableTemplate extends MobileFrontendTemplate {
 				  {$this->data['explainDisable']}
 				</p>
 				<div id='disableButtons'>
-				<form action='{$this->data['mobileRedirectFormAction']}' method='get'>
+				<form action='{$mobileRedirectFormAction}' method='get'>
 					<input name='to' type='hidden' value='{$this->data['currentURL']}' />
 					<input name='expires_in_days' type='hidden' value='3650' />
 					<button id='disableButton' type='submit'>{$this->data['disableButton']}</button>
