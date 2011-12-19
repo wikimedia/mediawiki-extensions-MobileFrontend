@@ -1,7 +1,7 @@
 <?php
 
 if( !defined( 'MEDIAWIKI' ) ) {
-        die( -1 );
+	die( -1 );
 }
 
 class OptInTemplate extends MobileFrontendTemplate {
