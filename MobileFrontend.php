@@ -506,12 +506,12 @@ class ExtMobileFrontend {
 		$mobileAction = $wgRequest->getText( 'mobileaction' );
 		$action = $wgRequest->getText( 'action' );
 
-		if ( self::$useFormat !== 'mobile' || self::$useFormat !== 'mobile-wap' ||
+		if ( self::$useFormat !== 'mobile' && self::$useFormat !== 'mobile-wap' &&
 			!$xDevice ) {
 			wfProfileOut( __METHOD__ );
 			return true;
 		}
-		if ( $action === 'edit' &&
+		if ( $action === 'edit' ||
 			 $mobileAction === 'view_normal_site' ) {
 			wfProfileOut( __METHOD__ );
 			return true;
