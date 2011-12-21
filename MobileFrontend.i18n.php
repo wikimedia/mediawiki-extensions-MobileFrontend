@@ -2751,6 +2751,7 @@ $messages['ja'] = array(
 
 /** Georgian (ქართული)
  * @author Dawid Deutschland
+ * @author გიორგიმელა
  */
 $messages['ka'] = array(
 	'mobile-frontend-search-submit' => 'აბა ჰე',
@@ -2780,6 +2781,7 @@ $messages['ka'] = array(
 	'mobile-frontend-author-link' => 'იხილეთ ეს მედია ფაილი ჩვეულებრივ ვიკიპედიაში, რათა გაიგოთ მისი ავტორი, ლიცენზირება და დამატებითი ინფორმაცია.',
 	'mobile-frontend-download-full-version' => 'სრული ვერსიის გადმოწერა',
 	'mobile-frontend-file-namespace' => 'ფაილი',
+	'mobile-frontend-view' => 'მობილური ვერსია',
 	'mobile-frontend-opt-out-yes-button' => 'კი',
 	'mobile-frontend-opt-out-no-button' => 'არა',
 	'mobile-frontend-leave-feedback-subject' => 'თემა',
