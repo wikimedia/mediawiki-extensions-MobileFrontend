@@ -3678,6 +3678,7 @@ $messages['mo'] = array(
  * @author Evision
  * @author Kaajawa
  * @author Rahuldeshmukh101
+ * @author V.narsikar
  */
 $messages['mr'] = array(
 	'mobile-frontend-search-submit' => 'चला',
@@ -3695,7 +3696,7 @@ $messages['mr'] = array(
 	'mobile-frontend-regular-site' => 'हे पृष्ठ सामान्य {{SITENAME}}मधे पाहा',
 	'mobile-frontend-perm-stop-redirect' => 'कायमचे मोबाईल संकेतस्थळ अक्षम करा',
 	'mobile-frontend-error-page-title' => 'काहीतरी विपरित घडले !',
-	'mobile-frontend-error-page-text' => 'विकिपीडिया मोबाइल संकेतस्थळ पूर्ण झालेले नाही, आणि आम्ही आमच्या अंतर्गत चुका दुरूस्त करत आहोत. आम्हाला या चुकीबद्दल खबर मिळाली आहे आणि लवकरच ती दुरुस्त केली जाईल . कृपया पुन्हा पाहा!',
+	'mobile-frontend-error-page-text' => 'विकिपीडिया मोबाइल संकेतस्थळ अजूनही विकसनशील अवस्थेत आहे आणि आम्ही आमच्या अंतर्गत चुका दुरूस्त करीत आहोत. आम्हाला या चुकीची नोंद घेतली आहे आणि लवकरच ती दुरुस्त करण्यात येईल . कृपया पुन्हा बघा!',
 	'mobile-frontend-are-you-sure' => 'नक्की?',
 	'mobile-frontend-explain-disable' => 'तुम्हाला नक्की विकीपीडिया मोबाईल आवृत्ती अक्षम करायची आहे का? तुम्ही <b>अक्षम</b> केल्यानंतर तुम्ही विकीपीडियाला भेट द्याल तेंव्हा तुम्हाला विकीपीडिया मोबाईल आवृत्तीवर	 पाठवले जाणार नाही.',
 	'mobile-frontend-nav-end' => 'शेवट',
