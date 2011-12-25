@@ -4048,7 +4048,7 @@ $messages['nn'] = array(
  * @author Jon Harald Søby
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'mobile-frontend-desc' => 'Mobilgrensesnitt',
 	'mobile-frontend-search-submit' => 'Gå',
 	'mobile-frontend-search-results' => 'Søkeresultater',
