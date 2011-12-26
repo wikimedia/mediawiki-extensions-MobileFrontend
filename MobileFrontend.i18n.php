@@ -1757,7 +1757,7 @@ $messages['fa'] = array(
  * @author Olli
  */
 $messages['fi'] = array(
-	'mobile-frontend-desc' => 'Mobiili käyttöliittymä',
+	'mobile-frontend-desc' => 'Mobiilikäyttöliittymä',
 	'mobile-frontend-search-submit' => 'Siirry',
 	'mobile-frontend-search-results' => 'Hakutulokset',
 	'mobile-frontend-no-article-found' => 'Sivua ei löytynyt',
@@ -1789,13 +1789,13 @@ $messages['fi'] = array(
 	'mobile-frontend-wml-back' => 'Takaisin...',
 	'mobile-frontend-view' => 'Mobiilinäkymä',
 	'mobile-frontend-opt-in-message' => 'Haluatko osallistua mobiilitestiin?',
-	'mobile-frontend-opt-in-yes-button' => 'kyllä',
-	'mobile-frontend-opt-in-no-button' => 'ei',
+	'mobile-frontend-opt-in-yes-button' => 'Kyllä',
+	'mobile-frontend-opt-in-no-button' => 'Ei',
 	'mobile-frontend-opt-in-title' => 'Osallistu mobiilitestaukseen',
-	'mobile-frontend-opt-in-explain' => 'Liittymällä kokeelliseen versioon, saat mahdollisuuden käyttää kokeellisia ominaisuuksia, mutta on mahdollista, että kohtaat ohjelmavirheitä tai muita ongelmia.',
+	'mobile-frontend-opt-in-explain' => 'Liittymällä kokeelliseen versioon, saat mahdollisuuden käyttää kokeellisia ominaisuuksia, mutta on mahdollista, että kohtaat ohjelmistovirheitä tai muita ongelmia.',
 	'mobile-frontend-opt-out-message' => 'Haluatko poistua mobiilitestistä?',
-	'mobile-frontend-opt-out-yes-button' => 'kyllä',
-	'mobile-frontend-opt-out-no-button' => 'ei',
+	'mobile-frontend-opt-out-yes-button' => 'Kyllä',
+	'mobile-frontend-opt-out-no-button' => 'Ei',
 	'mobile-frontend-opt-out-title' => 'Poistu mobiilitestauksesta',
 	'mobile-frontend-opt-out-explain' => 'Jos jätät kokeellisen version, kaikki kokeelliset ominaisuudet poistetaan käytöstä ja palaat perinteiseen versioon.',
 	'mobile-frontend-disable-images' => 'Poista kuvat käytöstä mobiilisivustolla',
@@ -1811,8 +1811,8 @@ $messages['fi'] = array(
 	'mobile-frontend-leave-feedback' => 'Palaute mobiilisivustosta',
 	'mobile-frontend-leave-feedback-thanks' => 'Kiitos palautteestasi.',
 	'mobile-frontend-language' => 'Kieli',
-	'mobile-frontend-username' => 'Käyttäjätunnus:',
-	'mobile-frontend-password' => 'Salasana:',
+	'mobile-frontend-username' => 'Käyttäjätunnus',
+	'mobile-frontend-password' => 'Salasana',
 	'mobile-frontend-login' => 'Kirjaudu sisään',
 	'mobile-frontend-placeholder' => 'Kirjoita hakusi tähän...',
 );
@@ -4150,6 +4150,25 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-placeholder' => 'Zoeken...',
 );
 
+/** ‪Nederlands (informeel)‬ (‪Nederlands (informeel)‬)
+ * @author Effeietsanders
+ */
+$messages['nl-informal'] = array(
+	'mobile-frontend-error-page-text' => '{{SITENAME}} Mobiel is in ontwikkeling en er wordt hard aan gewerkt om alle fouten op te lossen.
+We hebben deze fout ontvangen en verhelpen deze zo snel mogelijk.
+Binnenkort zie je hier het resultaat.',
+	'mobile-frontend-are-you-sure' => 'Weet je het zeker?',
+	'mobile-frontend-explain-disable' => 'Weet je zeker dat je de mobiele versie van {{SITENAME}} wilt uitschakelen? Als je <b>Uitschakelen</b> kiest, dan word je vanaf dat moment niet doorverwezen naar deze mobiele versie van {{SITENAME}} als u {{SITENAME}} bezoekt.',
+	'mobile-frontend-contact-us' => 'Als je vragen of opmerkingen hebt, neem dan gerust per e-mail contact met ons op via mobile@wikipedia.org',
+	'mobile-frontend-opt-in-message' => 'Wil je de nieuwe mobiele functionaliteit testen?',
+	'mobile-frontend-opt-in-explain' => 'Als je meedoet met testen, krijg je toegang tot experimentele functionaliteit, met het risico op fouten en problemen.',
+	'mobile-frontend-opt-out-message' => 'Wil je de nieuwe mobiele functionaliteit niet langer testen?',
+	'mobile-frontend-opt-out-explain' => 'Door te stoppen met testen wordt alle experimentele functionaliteit uitgeschakeld en ga je weer de klassieke mobiele vormgeving gebruiken.',
+	'mobile-frontend-leave-feedback-title' => 'Geef ons terugkoppeling over je ervaring met de mobiele site',
+	'mobile-frontend-leave-feedback-notice' => 'Jouw terugkoppeling helpt ons om je ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (ook je gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alsjeblieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op je terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
+	'mobile-frontend-leave-feedback-thanks' => 'Bedankt voor je terugkoppeling!',
+);
+
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Ranveig
  */
@@ -4512,12 +4531,12 @@ $messages['pms'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'é!',
 	'mobile-frontend-opt-in-no-button' => 'nò',
 	'mobile-frontend-opt-in-title' => 'Aceta për prové ij sacociàbij',
-	'mobile-frontend-opt-in-explain' => "Acetand ëd prové, it l'avras drit a funsion sperimentaj, con l'arzigh d'ancontré eror e probem.",
+	'mobile-frontend-opt-in-explain' => "Partissipand a le preuve beta, a l'avrà drit a le funsion sperimentaj, con l'arzigh d'ancontré eror e problema.",
 	'mobile-frontend-opt-out-message' => 'Chité ëd prové ij sacociàbij?',
 	'mobile-frontend-opt-out-yes-button' => 'é!',
 	'mobile-frontend-opt-out-no-button' => 'nò',
-	'mobile-frontend-opt-out-title' => 'Seurt da prové ij sacociàbij',
-	'mobile-frontend-opt-out-explain' => "An surtend da prové ij sacociàbij, it l'avras disabilità tute e funsion sperimentaj e it artorneras a l'antërfacia clàssica dij sacociàbij.",
+	'mobile-frontend-opt-out-title' => "Chité la preuva beta pr'ij sacociàbij",
+	'mobile-frontend-opt-out-explain' => "An chitand la preuva beta pr'ij sacociàbij, a disabilitrà tute le funsion sperimentaj e a artornrà a l'antërfacia clàssica pr'ij sacociàbij.",
 	'mobile-frontend-disable-images' => "Disabilité le figure an sël sit pr'ij sacociàbij",
 	'mobile-frontend-enable-images' => "Abilité le figure an sël sit pr'ij sacociàbij",
 	'mobile-frontend-news-items' => 'Ant le Neuve',
@@ -4625,7 +4644,7 @@ $messages['ps'] = array(
 	'mobile-frontend-nav-history' => 'پېښليک',
 	'mobile-frontend-search-text' => 'پلټل',
 	'mobile-frontend-contact-us' => 'که تاسې کومې پوښتنې او يا هم تبصرې لرۍ نو په ډاډه زړه يې موږ ته په دې پتې mobile@wikipedia.org برېښليک کولای شی.',
-	'mobile-frontend-author-link' => 'د دې لپاره چې د همدې رسنيزې دوتنې د خاوند، منښتليک او نورو څرګندونو په اړه مالومات ترلاسه کړۍ، نو لطفاً دا رسنۍ د ويکيپېډيا په عادي مخ وګورۍ.',
+	'mobile-frontend-author-link' => 'د دې رسنيزې دوتنې د خاوند، منښتليک، څرګندونو او نورو مالوماتو د کتلو لپاره دا رسنۍ د {{SITENAME}} په عادي مخ وګورۍ.',
 	'mobile-frontend-download-full-version' => 'بشپړه بڼه ښکته کول',
 	'mobile-frontend-file-namespace' => 'دوتنه',
 	'mobile-frontend-wml-continue' => 'ادامه...',
@@ -4635,12 +4654,14 @@ $messages['ps'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'هو',
 	'mobile-frontend-opt-out-no-button' => 'نه',
 	'mobile-frontend-news-items' => 'په خبرونو کې',
+	'mobile-frontend-leave-feedback-subject' => 'سکالو',
 	'mobile-frontend-leave-feedback-message' => 'پيغام',
 	'mobile-frontend-leave-feedback-cancel' => 'ناګارل',
 	'mobile-frontend-language' => 'ژبه',
 	'mobile-frontend-username' => 'کارن-نوم:',
 	'mobile-frontend-password' => 'پټنوم:',
 	'mobile-frontend-login' => 'ننوتل',
+	'mobile-frontend-placeholder' => 'د پلټلو لپاره دلته وټاپۍ...',
 );
 
 /** Portuguese (Português)
@@ -5093,7 +5114,9 @@ $messages['sah'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'сөп',
 );
 
-/** Sicilian (Sicilianu) */
+/** Sicilian (Sicilianu)
+ * @author Aushulz
+ */
 $messages['scn'] = array(
 	'mobile-frontend-search-submit' => 'Và trova',
 	'mobile-frontend-search-results' => 'Risurtati dâ circata',
@@ -5119,6 +5142,13 @@ $messages['scn'] = array(
 	'mobile-frontend-nav-history' => 'Crunuluggìa',
 	'mobile-frontend-search-text' => 'Và cerca',
 	'mobile-frontend-contact-us' => 'Siddu aviti quistioni o cummenti putiti cuntattarini via email ô nnirizzu mobile@wikipedia.org',
+	'mobile-frontend-wml-continue' => 'Camina...',
+	'mobile-frontend-opt-in-yes-button' => 'Sè',
+	'mobile-frontend-opt-in-no-button' => 'Nò',
+	'mobile-frontend-opt-out-yes-button' => 'Sè',
+	'mobile-frontend-opt-out-no-button' => 'Nò',
+	'mobile-frontend-password' => 'Parola chiavi:',
+	'mobile-frontend-login' => 'Trasi',
 );
 
 /** Serbo-Croatian (Srpskohrvatski) */
@@ -5181,6 +5211,7 @@ $messages['shi'] = array(
  * @author බිඟුවා
  */
 $messages['si'] = array(
+	'mobile-frontend-desc' => 'ජංගම ඉදිරිපස',
 	'mobile-frontend-search-submit' => 'යන්න',
 	'mobile-frontend-search-results' => 'ගවේෂණ ප්‍රතිඵල',
 	'mobile-frontend-no-article-found' => 'ලිපියක් හමු නොවුණි',
@@ -5205,22 +5236,33 @@ $messages['si'] = array(
 	'mobile-frontend-nav-history' => 'ඉතිහාසය',
 	'mobile-frontend-search-text' => 'සොයන්න',
 	'mobile-frontend-contact-us' => 'ඔබට යම් ප්‍රශ්න හෝ අදහස් ඇත්නම් කරුණාකර mobile@wikipedia.org වෙත අපට විද්‍යුත් තැපැල් කිරීමට නොපැකිළෙන්න',
+	'mobile-frontend-download-full-version' => 'සම්පූර්ණ අනුවාදය බාගන්න',
 	'mobile-frontend-file-namespace' => 'ගොනුව',
 	'mobile-frontend-wml-continue' => 'දිගට කර ගෙන යමින්...',
 	'mobile-frontend-wml-back' => 'ආපසු...',
 	'mobile-frontend-view' => 'ජංගම දසුන',
+	'mobile-frontend-opt-in-message' => 'ජංගම අත්හදා බැලීමට එකතු වෙනවද?',
 	'mobile-frontend-opt-in-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-in-no-button' => 'නැත',
+	'mobile-frontend-opt-out-message' => 'ජංගම අත්හදා බැලීමෙන් ඉවත් වෙනවද?',
 	'mobile-frontend-opt-out-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-out-no-button' => 'නැත',
+	'mobile-frontend-disable-images' => 'ජංගම අඩවියෙහි පින්තුර අක්‍රීය කරන්න',
+	'mobile-frontend-enable-images' => 'ජංගම අඩවියෙහි පින්තුර සක්‍රීය කරන්න',
+	'mobile-frontend-news-items' => 'පුවත් වලින්',
+	'mobile-frontend-leave-feedback-title' => 'ඔබගේ ජංගම අඩවි අත්දැකීම පිළිබඳව අපට ප්‍රතිචාරය ලබා දෙන්න',
 	'mobile-frontend-leave-feedback-subject' => 'විෂයය',
 	'mobile-frontend-leave-feedback-message' => 'පණිවුඩය',
 	'mobile-frontend-leave-feedback-cancel' => 'අවලංගු කරන්න',
 	'mobile-frontend-leave-feedback-submit' => 'ප්‍රතිපෝෂණය ඉදිරිපත් කරන්න',
+	'mobile-frontend-leave-feedback-link-text' => 'ජංගමඉදිරිපස විස්තීර්ණ ප්‍රතිචාරය',
+	'mobile-frontend-leave-feedback' => 'ජංගම අඩවි ප්‍රතිචාර',
+	'mobile-frontend-leave-feedback-thanks' => 'ස්තුතියි, ඔබේ ප්‍රතිචාරයට!',
 	'mobile-frontend-language' => 'භාෂාව',
 	'mobile-frontend-username' => 'පරිශීලක නාමය:',
 	'mobile-frontend-password' => 'මුරපදය:',
 	'mobile-frontend-login' => 'පිවිසෙන්න',
+	'mobile-frontend-placeholder' => 'ඔබේ සෙවුම මෙහි යොදන්න...',
 );
 
 /** Slovak (Slovenčina)
@@ -6079,6 +6121,7 @@ $messages['uk'] = array(
 	'mobile-frontend-username' => "Ім'я користувача:",
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Увійти',
+	'mobile-frontend-placeholder' => 'Введіть пошуковий запит тут...',
 );
 
 /** Urdu (اردو) */
@@ -6346,6 +6389,7 @@ $messages['yi'] = array(
 	'mobile-frontend-wml-continue' => 'ווײַטער …',
 	'mobile-frontend-wml-back' => 'צוריק ...',
 	'mobile-frontend-view' => 'מאבילער קוק',
+	'mobile-frontend-opt-in-no-button' => 'ניין',
 );
 
 /** Yoruba (Yorùbá) */
@@ -6490,16 +6534,16 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-wml-continue' => '繼續 ...',
 	'mobile-frontend-wml-back' => '返回 ...',
 	'mobile-frontend-view' => '行動瀏覽',
-	'mobile-frontend-opt-in-message' => '加入我們對於行動瀏覽界面的可選性測試？',
+	'mobile-frontend-opt-in-message' => '您想參加移動公測嗎？',
 	'mobile-frontend-opt-in-yes-button' => '是',
 	'mobile-frontend-opt-in-no-button' => '不',
-	'mobile-frontend-opt-in-title' => '可選入的測試',
-	'mobile-frontend-opt-in-explain' => '這個使你可以進入測試',
-	'mobile-frontend-opt-out-message' => '退出對於行動瀏覽界面的可選性測試？',
+	'mobile-frontend-opt-in-title' => '參加移動公測',
+	'mobile-frontend-opt-in-explain' => '參加公測後，您將可以訪問實驗性功能，但會遇到不少錯誤和問題。',
+	'mobile-frontend-opt-out-message' => '您想退出移動公測嗎？',
 	'mobile-frontend-opt-out-yes-button' => '退出',
 	'mobile-frontend-opt-out-no-button' => '不要退出',
 	'mobile-frontend-opt-out-title' => '退出行動公測',
-	'mobile-frontend-opt-out-explain' => '這允許你退出測試',
+	'mobile-frontend-opt-out-explain' => '退出公測後，您將禁用所有實驗性功能，回歸正常移動使用。',
 	'mobile-frontend-disable-images' => '在行動瀏覽上禁用圖像',
 	'mobile-frontend-enable-images' => '在行動瀏覽上啟用圖像',
 	'mobile-frontend-news-items' => '新聞動態',
