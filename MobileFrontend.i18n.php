@@ -3427,7 +3427,7 @@ $messages['lb'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'neen',
 	'mobile-frontend-opt-out-title' => 'Net méi beim mobile Beta-Projet matmaachen.',
-	'mobile-frontend-opt-out-explain' => 'Dëst erlaabt Iech fir net méi beim Teste matzemmaachen.',
+	'mobile-frontend-opt-out-explain' => 'Wann Dir déi mobil Beta verloosst, dann desaktivéiert Dir all experimentell Fonctiounen an Dir kommt zréck an déi klassesch Mobil-Vue.',
 	'mobile-frontend-disable-images' => 'Biller an der Mobiler Versioun desaktivéieren',
 	'mobile-frontend-enable-images' => 'Biller an der Mobiler Versioun aktivéieren',
 	'mobile-frontend-news-items' => 'An den Neiegkeeten',
@@ -5375,6 +5375,7 @@ $messages['si'] = array(
 	'mobile-frontend-nav-history' => 'ඉතිහාසය',
 	'mobile-frontend-search-text' => 'සොයන්න',
 	'mobile-frontend-contact-us' => 'ඔබට යම් ප්‍රශ්න හෝ අදහස් ඇත්නම් කරුණාකර mobile@wikipedia.org වෙත අපට විද්‍යුත් තැපැල් කිරීමට නොපැකිළෙන්න',
+	'mobile-frontend-author-link' => 'කර්තෘත්වය, බලපත්‍රදායකය, සහ අතිරේක විස්තර ගැන තොරතුරු නැරඹීම සදහා මෙම මාධ්‍ය ගොනුව සාමාන්‍ය {{SITENAME}} හි නරඹන්න.',
 	'mobile-frontend-download-full-version' => 'සම්පූර්ණ අනුවාදය බාගන්න',
 	'mobile-frontend-file-namespace' => 'ගොනුව',
 	'mobile-frontend-wml-continue' => 'දිගට කර ගෙන යමින්...',
@@ -5384,10 +5385,12 @@ $messages['si'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-in-no-button' => 'නැත',
 	'mobile-frontend-opt-in-title' => 'ජංගම බීටා ඇතුලත',
+	'mobile-frontend-opt-in-explain' => 'බීටා වෙත එක් වීමෙන්, ඔබ හට දෝෂ සහ වාදපද හමුවෙන අනතුරක් වියහැකි, පරීක්ෂාත්මක මුහුණුවර වෙත ප්‍රවේශ වීමේ හැකියාව ඇත.',
 	'mobile-frontend-opt-out-message' => 'ජංගම අත්හදා බැලීමෙන් ඉවත් වෙනවද?',
 	'mobile-frontend-opt-out-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-out-no-button' => 'නැත',
 	'mobile-frontend-opt-out-title' => 'ජංගම බීටා පිටත',
+	'mobile-frontend-opt-out-explain' => 'ජංගම බීටා අතහැර යාමෙන්, පරීක්ෂාත්මක මුහුණුවර අක්‍රීය කොට ඔබව පැරණි ජංගම අත්දැකීම වෙත නැවත යවනු ඇත.',
 	'mobile-frontend-disable-images' => 'ජංගම අඩවියෙහි පින්තුර අක්‍රීය කරන්න',
 	'mobile-frontend-enable-images' => 'ජංගම අඩවියෙහි පින්තුර සක්‍රීය කරන්න',
 	'mobile-frontend-news-items' => 'පුවත් වලින්',
@@ -5861,6 +5864,7 @@ $messages['szl'] = array(
 );
 
 /** Tamil (தமிழ்)
+ * @author Shanmugamp7
  * @author Sodabottle
  * @author Surya Prakash.S.A.
  */
@@ -5906,7 +5910,16 @@ $messages['ta'] = array(
 	'mobile-frontend-leave-feedback-title' => 'கைபேசித் தளத்தைப் பற்றிய கருத்துகளைத் தரவும்',
 	'mobile-frontend-leave-feedback-subject' => 'பொருள்',
 	'mobile-frontend-leave-feedback-message' => 'தகவல்',
+	'mobile-frontend-leave-feedback-cancel' => 'ரத்து செய்',
+	'mobile-frontend-leave-feedback-submit' => 'கருத்தைச் சமர்ப்பிக்கவும்',
+	'mobile-frontend-leave-feedback-link-text' => 'MobileFrontend விரிவாக்க கருத்து',
+	'mobile-frontend-leave-feedback' => 'கைப்பேசி தளத்தின் கருத்து',
+	'mobile-frontend-leave-feedback-thanks' => 'உங்கள் கருத்துக்கு நன்றி.',
 	'mobile-frontend-language' => 'மொழி',
+	'mobile-frontend-username' => 'பயனர் பெயர்:',
+	'mobile-frontend-password' => 'கடவுச்சொல்:',
+	'mobile-frontend-login' => 'புகுபதிகை',
+	'mobile-frontend-placeholder' => 'உங்கள் தேடலை இங்கு தட்டச்சு செய்யவும்...',
 );
 
 /** Telugu (తెలుగు)
@@ -6334,13 +6347,26 @@ $messages['vec'] = array(
 	'mobile-frontend-search-text' => 'Serca',
 );
 
-/** Veps (Vepsan kel') */
+/** Veps (Vepsän kel')
+ * @author Игорь Бродский
+ */
 $messages['vep'] = array(
+	'mobile-frontend-search-results' => "Ecindan rezul'tatad",
+	'mobile-frontend-in-the-news' => 'Uzištusiš',
+	'mobile-frontend-show-button' => 'Ozutada',
 	'mobile-frontend-hide-button' => 'Peitta',
 	'mobile-frontend-back-button' => 'Tagaze',
+	'mobile-frontend-nav-end' => 'Lop',
+	'mobile-frontend-nav-top' => 'Üläh',
 	'mobile-frontend-nav-edit' => 'Redaktiruida',
 	'mobile-frontend-nav-history' => 'Istorii',
+	'mobile-frontend-search-text' => 'Ecind',
 	'mobile-frontend-file-namespace' => 'Fail',
+	'mobile-frontend-opt-out-yes-button' => 'Ka',
+	'mobile-frontend-opt-out-no-button' => 'Ei',
+	'mobile-frontend-leave-feedback-message' => 'Tedotuz',
+	'mobile-frontend-language' => 'Kel’',
+	'mobile-frontend-password' => 'Peitsana:',
 );
 
 /** Vietnamese (Tiếng Việt)
