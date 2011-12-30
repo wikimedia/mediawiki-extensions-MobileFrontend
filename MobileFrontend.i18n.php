@@ -1950,21 +1950,21 @@ $messages['frp'] = array(
 	'mobile-frontend-wml-continue' => 'Continuar ...',
 	'mobile-frontend-wml-back' => 'Retôrn ...',
 	'mobile-frontend-view' => 'Visualisacion mobila',
-	'mobile-frontend-opt-in-message' => 'Rejuendre noutra èprôva volontèra du frontâl mobilo novél ?',
+	'mobile-frontend-opt-in-message' => 'Rentrar dens la bèta-èprôva de la vèrsion mobila ?',
 	'mobile-frontend-opt-in-yes-button' => 'ouè',
 	'mobile-frontend-opt-in-no-button' => 'nan',
-	'mobile-frontend-opt-in-title' => 'Volontèro por èprovar',
-	'mobile-frontend-opt-in-explain' => 'Cen vos pèrmèt de comenciér l’èprôva',
-	'mobile-frontend-opt-out-message' => 'Quitar l’èprôva volontèra du frontâl mobilo novél ?',
+	'mobile-frontend-opt-in-title' => 'Rentrar dens la bèta-èprôva de la vèrsion mobila',
+	'mobile-frontend-opt-in-explain' => 'En rentrent dens la bèta-èprôva, vos aréd accès a les fonccionalitâts èxpèrimentâles, u risco de rencontrar cofieries et problèmos.',
+	'mobile-frontend-opt-out-message' => 'Quitar la bèta-èprôva de la vèrsion mobila ?',
 	'mobile-frontend-opt-out-yes-button' => 'ouè',
 	'mobile-frontend-opt-out-no-button' => 'nan',
-	'mobile-frontend-opt-out-title' => 'Sortia ux volontèros d’èprôva',
-	'mobile-frontend-opt-out-explain' => 'Cen vos pèrmèt de quitar l’èprôva',
+	'mobile-frontend-opt-out-title' => 'Quitar la bèta-èprôva de la vèrsion mobila',
+	'mobile-frontend-opt-out-explain' => 'En quitent la bèta-èprôva, vos dèsactiveréd totes les fonccionalitâts èxpèrimentâles et pués torneréd a l’èxpèrience mobila classica.',
 	'mobile-frontend-disable-images' => 'Dèsctivar les émâges sur lo seto mobilo',
 	'mobile-frontend-enable-images' => 'Activar les émâges sur lo seto mobilo',
 	'mobile-frontend-news-items' => 'Dens les novèles',
 	'mobile-frontend-leave-feedback-title' => 'Balyéd-nos voutron avis sur voutra èxpèrience du seto mobilo',
-	'mobile-frontend-leave-feedback-notice' => 'Voutron avis nos édierat a mèlyorar voutra èxpèrience du seto mobilo. Serat postâ publicament (avouéc voutron nom d’utilisator, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion) sur la pâge « $1 ». Volyéd tâchiér de chouèsir una legne de sujèt parlenta, per ègz. « Problèmos de formatâjo avouéc les trâbles lârges ». Voutron avis est somês a noutres condicions d’usâjo.',
+	'mobile-frontend-leave-feedback-notice' => 'Voutron avis nos édierat a mèlyorar voutra èxpèrience du seto mobilo. Serat postâ publicament (avouéc voutron nom d’usanciér, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion) sur la pâge « $1 ». Volyéd tâchiér de chouèsir una legne de sujèt parlenta, per ègz. « Problèmos de formatâjo avouéc les trâbles lârges ». Voutron avis est somês a noutres condicions d’usâjo.',
 	'mobile-frontend-leave-feedback-subject' => 'Sujèt',
 	'mobile-frontend-leave-feedback-message' => 'Mèssâjo',
 	'mobile-frontend-leave-feedback-cancel' => 'Anular',
@@ -1976,6 +1976,7 @@ $messages['frp'] = array(
 	'mobile-frontend-username' => 'Nom d’usanciér :',
 	'mobile-frontend-password' => 'Contresegno :',
 	'mobile-frontend-login' => 'Sè branchiér',
+	'mobile-frontend-placeholder' => 'Buchiéd voutra rechèrche ique...',
 );
 
 /** Friulian (Furlan) */
@@ -2940,6 +2941,7 @@ $messages['ja'] = array(
 
 /** Georgian (ქართული)
  * @author Dawid Deutschland
+ * @author ITshnik
  * @author გიორგიმელა
  */
 $messages['ka'] = array(
@@ -2971,11 +2973,16 @@ $messages['ka'] = array(
 	'mobile-frontend-download-full-version' => 'სრული ვერსიის გადმოწერა',
 	'mobile-frontend-file-namespace' => 'ფაილი',
 	'mobile-frontend-view' => 'მობილური ვერსია',
+	'mobile-frontend-opt-in-no-button' => 'არა',
 	'mobile-frontend-opt-out-yes-button' => 'კი',
 	'mobile-frontend-opt-out-no-button' => 'არა',
 	'mobile-frontend-leave-feedback-subject' => 'თემა',
 	'mobile-frontend-leave-feedback-message' => 'შეტყობინება',
 	'mobile-frontend-leave-feedback-cancel' => 'გაუქმება',
+	'mobile-frontend-language' => 'ენა',
+	'mobile-frontend-username' => 'მომხმარებელი:',
+	'mobile-frontend-password' => 'პაროლი:',
+	'mobile-frontend-login' => 'შესვლა',
 );
 
 /** Адыгэбзэ (Адыгэбзэ) */
@@ -6574,9 +6581,14 @@ $messages['yi'] = array(
 	'mobile-frontend-wml-continue' => 'ווײַטער …',
 	'mobile-frontend-wml-back' => 'צוריק ...',
 	'mobile-frontend-view' => 'מאבילער קוק',
+	'mobile-frontend-opt-in-yes-button' => 'יאָ',
 	'mobile-frontend-opt-in-no-button' => 'ניין',
 	'mobile-frontend-opt-out-yes-button' => 'יא',
 	'mobile-frontend-opt-out-no-button' => 'ניין',
+	'mobile-frontend-leave-feedback-cancel' => 'אַנולירן',
+	'mobile-frontend-language' => 'שפּראַך',
+	'mobile-frontend-username' => 'באַניצער נאָמען:',
+	'mobile-frontend-password' => 'פאסווארט:',
 );
 
 /** Yoruba (Yorùbá) */
