@@ -1316,7 +1316,9 @@ $messages['de-formal'] = array(
 	'mobile-frontend-placeholder' => 'Geben Sie hier Ihre Suche ein ...',
 );
 
-/** Zazaki (Zazaki) */
+/** Zazaki (Zazaki)
+ * @author Erdemaslancan
+ */
 $messages['diq'] = array(
 	'mobile-frontend-search-submit' => 'Şo',
 	'mobile-frontend-random-button' => 'Raştamae',
@@ -1325,7 +1327,7 @@ $messages['diq'] = array(
 	'mobile-frontend-nav-end' => 'Pey',
 	'mobile-frontend-nav-top' => 'Ser',
 	'mobile-frontend-nav-edit' => 'Bıvurne',
-	'mobile-frontend-search-text' => 'Cıgeyre',
+	'mobile-frontend-search-text' => 'Cıgeyrê',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -1782,6 +1784,7 @@ $messages['fa'] = array(
 /** Finnish (Suomi)
  * @author Crt
  * @author Nedergard
+ * @author Nike
  * @author Olli
  */
 $messages['fi'] = array(
@@ -1820,7 +1823,7 @@ $messages['fi'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'Kyllä',
 	'mobile-frontend-opt-in-no-button' => 'Ei',
 	'mobile-frontend-opt-in-title' => 'Osallistu mobiilitestaukseen',
-	'mobile-frontend-opt-in-explain' => 'Liittymällä kokeelliseen versioon, saat mahdollisuuden käyttää kokeellisia ominaisuuksia, mutta on mahdollista, että kohtaat ohjelmistovirheitä tai muita ongelmia.',
+	'mobile-frontend-opt-in-explain' => 'Liittymällä kokeelliseen versioon, saat mahdollisuuden käyttää kokeellisia ominaisuuksia, mutta on mahdollista, että kohtaat ohjelmointivirheitä tai muita ongelmia.',
 	'mobile-frontend-opt-out-message' => 'Haluatko poistua mobiilitestistä?',
 	'mobile-frontend-opt-out-yes-button' => 'Kyllä',
 	'mobile-frontend-opt-out-no-button' => 'Ei',
@@ -1843,6 +1846,51 @@ $messages['fi'] = array(
 	'mobile-frontend-password' => 'Salasana',
 	'mobile-frontend-login' => 'Kirjaudu sisään',
 	'mobile-frontend-placeholder' => 'Kirjoita hakusi tähän...',
+);
+
+/** Faroese (Føroyskt)
+ * @author EileenSanda
+ */
+$messages['fo'] = array(
+	'mobile-frontend-search-submit' => 'Far',
+	'mobile-frontend-search-results' => 'Leitiúrslit',
+	'mobile-frontend-no-article-found' => 'Ongin síða funnin',
+	'mobile-frontend-featured-article' => 'Dagsins grein',
+	'mobile-frontend-home-button' => 'Heim',
+	'mobile-frontend-random-button' => 'Tilvildarlig',
+	'mobile-frontend-show-button' => 'Vís',
+	'mobile-frontend-hide-button' => 'Fjal',
+	'mobile-frontend-disable-button' => 'Ger óvirki',
+	'mobile-frontend-back-button' => 'Aftur',
+	'mobile-frontend-regular-site' => 'Síggj hesa síðu á vanligu {{SITENAME}}',
+	'mobile-frontend-perm-stop-redirect' => 'Ger mobilu síðuna óvirknað fyri altíð',
+	'mobile-frontend-error-page-title' => 'Vit hava ein trupulleika!',
+	'mobile-frontend-are-you-sure' => 'Ert tú sikkur?',
+	'mobile-frontend-nav-end' => 'Enda',
+	'mobile-frontend-nav-top' => 'Til ovast á síðuni',
+	'mobile-frontend-nav-edit' => 'Rætta',
+	'mobile-frontend-nav-history' => 'Søga',
+	'mobile-frontend-search-text' => 'Leita',
+	'mobile-frontend-download-full-version' => 'Heinta fulla versjón',
+	'mobile-frontend-file-namespace' => 'Fíla',
+	'mobile-frontend-wml-continue' => 'Halt fram...',
+	'mobile-frontend-wml-back' => 'Aftur ...',
+	'mobile-frontend-view' => 'Mobil vísing',
+	'mobile-frontend-opt-in-message' => 'Ynskir tú at luttaka í mobilu beta?',
+	'mobile-frontend-opt-in-yes-button' => 'Ja',
+	'mobile-frontend-opt-in-no-button' => 'Nei',
+	'mobile-frontend-opt-in-title' => 'Mobilt beta opt-in',
+	'mobile-frontend-opt-out-yes-button' => 'Ja',
+	'mobile-frontend-opt-out-no-button' => 'Nei',
+	'mobile-frontend-leave-feedback-subject' => 'Evni',
+	'mobile-frontend-leave-feedback-message' => 'Boð',
+	'mobile-frontend-leave-feedback-cancel' => 'Angra',
+	'mobile-frontend-leave-feedback-submit' => 'Send viðmerking',
+	'mobile-frontend-leave-feedback-thanks' => 'Takk fyri tína afturmelding!',
+	'mobile-frontend-language' => 'Mál',
+	'mobile-frontend-username' => 'Brúkaranavn:',
+	'mobile-frontend-password' => 'Loyniorð:',
+	'mobile-frontend-login' => 'Rita inn',
 );
 
 /** French (Français)
@@ -2329,6 +2377,7 @@ $messages['he'] = array(
  * @author Ansumang
  */
 $messages['hi'] = array(
+	'mobile-frontend-desc' => 'मोबाइल फ्रंटएंड',
 	'mobile-frontend-search-submit' => 'जाएँ',
 	'mobile-frontend-search-results' => 'खोज के परिणाम',
 	'mobile-frontend-no-article-found' => 'कोई लेख नहीं मिला',
@@ -2362,14 +2411,17 @@ $messages['hi'] = array(
 	'mobile-frontend-opt-in-message' => 'मोबाइल बीटा में शामिल हो?',
 	'mobile-frontend-opt-in-yes-button' => 'हाँ',
 	'mobile-frontend-opt-in-no-button' => 'नहीं',
+	'mobile-frontend-opt-in-title' => 'मोबाइल बीटा अप्ट-इन',
 	'mobile-frontend-opt-in-explain' => 'बीटा में शामिल होने से, आपको प्रयोगात्मक विशेषताओं को उपयोग मिलेगी, तथा प्रोग्राम में त्रुटि और मुद्दों का सामना कर पाएंगे ।',
 	'mobile-frontend-opt-out-message' => 'मोबाइल बीटा छोड़ दें?',
 	'mobile-frontend-opt-out-yes-button' => 'हाँ',
 	'mobile-frontend-opt-out-no-button' => 'नहीं',
+	'mobile-frontend-opt-out-title' => 'मोबाइल बीटा अप्ट-आउट',
 	'mobile-frontend-opt-out-explain' => 'बीटा छोड़ने से, आपको प्रयोगात्मक विशेषताओं की उपयोग से हटा दीजाएगी और क्लासिक मोबाइल अनुभव उपलब्ध होगा ।',
 	'mobile-frontend-disable-images' => 'मोबाइल साइट पर छवियों को अक्षम करें',
 	'mobile-frontend-enable-images' => 'मोबाइल साइट पर छवियों को सक्षम करें',
 	'mobile-frontend-news-items' => 'समाचार में',
+	'mobile-frontend-leave-feedback-title' => 'आपकी मोबाइल साइट अनुभव का प्रतिक्रिया दें',
 	'mobile-frontend-leave-feedback-subject' => 'विषय',
 	'mobile-frontend-leave-feedback-message' => 'संदेश',
 	'mobile-frontend-leave-feedback-cancel' => 'रद्द करें',
@@ -6591,7 +6643,9 @@ $messages['yi'] = array(
 	'mobile-frontend-password' => 'פאסווארט:',
 );
 
-/** Yoruba (Yorùbá) */
+/** Yoruba (Yorùbá)
+ * @author Demmy
+ */
 $messages['yo'] = array(
 	'mobile-frontend-search-submit' => 'Lọ',
 	'mobile-frontend-search-results' => 'Àwọn Èsì Àwárí',
@@ -6606,6 +6660,9 @@ $messages['yo'] = array(
 	'mobile-frontend-nav-edit' => 'Àtúnṣe',
 	'mobile-frontend-nav-history' => 'Ìtàn',
 	'mobile-frontend-search-text' => 'Ṣàwárí',
+	'mobile-frontend-leave-feedback-cancel' => 'Fagilé',
+	'mobile-frontend-language' => 'Èdè',
+	'mobile-frontend-username' => 'Orúkọ oníṣe:',
 );
 
 /** Cantonese (粵語)
