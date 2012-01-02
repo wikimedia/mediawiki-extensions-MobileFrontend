@@ -1656,7 +1656,9 @@ $messages['et'] = array(
 	'mobile-frontend-placeholder' => 'Tipi siia otsitav...',
 );
 
-/** Basque (Euskara) */
+/** Basque (Euskara)
+ * @author An13sa
+ */
 $messages['eu'] = array(
 	'mobile-frontend-search-submit' => 'Joan',
 	'mobile-frontend-search-results' => 'Bilaketaren emaitzak',
@@ -1685,6 +1687,17 @@ $messages['eu'] = array(
 	'mobile-frontend-author-link' => 'Fitxategi hau {{SITENAME}} arruntean ikusi egilea, lizentzia eta bestelako informazioa ikusteko.',
 	'mobile-frontend-download-full-version' => 'Bertsio Osoa jaitsi',
 	'mobile-frontend-file-namespace' => 'Fitxategia',
+	'mobile-frontend-wml-continue' => 'Jarraitu ...',
+	'mobile-frontend-wml-back' => 'Atzera ...',
+	'mobile-frontend-opt-in-yes-button' => 'Bai',
+	'mobile-frontend-opt-in-no-button' => 'Ez',
+	'mobile-frontend-opt-out-no-button' => 'Ez',
+	'mobile-frontend-leave-feedback-subject' => 'Gaia',
+	'mobile-frontend-leave-feedback-message' => 'Mezua',
+	'mobile-frontend-leave-feedback-cancel' => 'Utzi',
+	'mobile-frontend-language' => 'Hizkuntza',
+	'mobile-frontend-password' => 'Pasahitza',
+	'mobile-frontend-login' => 'Saioa hasi',
 );
 
 /** Extremaduran (Estremeñu) */
