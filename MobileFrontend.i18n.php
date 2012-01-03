@@ -168,6 +168,7 @@ $messages['ace'] = array(
 
 /** Afrikaans (Afrikaans)
  * @author Naudefj
+ * @author පසිඳු කාවින්ද
  */
 $messages['af'] = array(
 	'mobile-frontend-desc' => 'Mobiele Koppelvlak',
@@ -221,6 +222,8 @@ Besoek ons binnekort weer!',
 	'mobile-frontend-language' => 'Taal',
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wagwoord',
+	'mobile-frontend-login' => 'Teken in',
+	'mobile-frontend-placeholder' => 'Tik jou Soektogteks hier ...',
 );
 
 /** Akan (Akan) */
@@ -2234,6 +2237,17 @@ $messages['gsw'] = array(
 	'mobile-frontend-language' => 'Sprooch',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author Tekina
+ */
+$messages['gu'] = array(
+	'mobile-frontend-search-results' => 'શોધના પરિણામ',
+	'mobile-frontend-no-article-found' => 'કોઇ લેખ નથી મળતો',
+	'mobile-frontend-featured-article' => 'આજનો વિશેષ લેખ',
+	'mobile-frontend-regular-site' => 'આ લેખને {{SITENAME}} પર જુવો',
+	'mobile-frontend-error-page-title' => 'અમે મુશ્કેલીમાં છીએ',
+);
+
 /** Manx (Gaelg) */
 $messages['gv'] = array(
 	'mobile-frontend-search-submit' => 'Gow',
@@ -4036,11 +4050,11 @@ $messages['ms'] = array(
 	'mobile-frontend-disable-button' => 'Matikan',
 	'mobile-frontend-back-button' => 'Kembali',
 	'mobile-frontend-regular-site' => 'Lihat laman ini di {{SITENAME}} biasa',
-	'mobile-frontend-perm-stop-redirect' => 'Lumpuhkan versi bergerak secara kekal',
+	'mobile-frontend-perm-stop-redirect' => 'Matikan versi mudah alih secara kekal',
 	'mobile-frontend-error-page-title' => 'Kami mempunyai masalah!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} mobile masih dalam pembangunan aktif dan kami sedang berusaha keras memperbaiki semua ralat dalaman kami. Kami telah dimaklumkan mengenai ralat ini dan akan segera memperbaikinya. Sila datang balik nanti!',
 	'mobile-frontend-are-you-sure' => 'Adakah anda pasti?',
-	'mobile-frontend-explain-disable' => 'Adakah anda pasti anda hendak melumpuhkan versi bergerak {{SITENAME}}? Jika anda memilih <b>Lumpuhkan</b>, maka dari sekarang, apabila anda melawat {{SITENAME}}, anda tidak akan dilencongkan ke paparan mudah alih {{SITENAME}} ini.',
+	'mobile-frontend-explain-disable' => 'Adakah anda benar-benar mahu mematikan versi mudah alih {{SITENAME}}? Jika anda memilih sedemikian, maka mulai sekarang, apabila anda melawat {{SITENAME}}, anda tidak akan dilencongkan ke paparan mudah alih {{SITENAME}} ini lagi.',
 	'mobile-frontend-nav-end' => 'Tamat',
 	'mobile-frontend-nav-top' => 'Puncak',
 	'mobile-frontend-nav-edit' => 'Sunting',
@@ -4053,15 +4067,15 @@ $messages['ms'] = array(
 	'mobile-frontend-wml-continue' => 'Teruskan ...',
 	'mobile-frontend-wml-back' => 'Kembali ...',
 	'mobile-frontend-view' => 'Paparan Mudah Alih',
-	'mobile-frontend-opt-in-message' => 'Nak masuk beta mobil?',
+	'mobile-frontend-opt-in-message' => 'Nak masuk beta mudah alih?',
 	'mobile-frontend-opt-in-yes-button' => 'ya',
 	'mobile-frontend-opt-in-no-button' => 'tidak',
-	'mobile-frontend-opt-in-title' => 'Pilih masuk beta mobil',
+	'mobile-frontend-opt-in-title' => 'Pilih masuk beta mudah alih',
 	'mobile-frontend-opt-in-explain' => 'Dengan menyertai beta ini, anda akan mendapat capaian kepada ciri-ciri percubaan, tetapi anda mungkin akan berdepan dengan pepijat dan masalah-masalah yang seumpamanya.',
-	'mobile-frontend-opt-out-message' => 'Nak keluar dari beta mobil?',
+	'mobile-frontend-opt-out-message' => 'Nak keluar dari beta mudah alih?',
 	'mobile-frontend-opt-out-yes-button' => 'ya',
 	'mobile-frontend-opt-out-no-button' => 'tidak',
-	'mobile-frontend-opt-out-title' => 'Pilih keluar beta mobil',
+	'mobile-frontend-opt-out-title' => 'Pilih keluar beta mudah alih',
 	'mobile-frontend-opt-out-explain' => 'Dengan meninggalkan beta mobil, anda akan mematikan semua ciri-ciri percubaan dan kembali kepada pengalaman mudah alih anda yang asal.',
 	'mobile-frontend-disable-images' => 'Matikan imej di tapak mudah alih',
 	'mobile-frontend-enable-images' => 'Membolehkan imej di tapak mudah alih',
@@ -5288,6 +5302,26 @@ $messages['rue'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Дякуєме за ваш погляд!',
 );
 
+/** Sanskrit (संस्कृतम्)
+ * @author Ansumang
+ */
+$messages['sa'] = array(
+	'mobile-frontend-home-button' => 'गृहम्',
+	'mobile-frontend-nav-history' => 'इतिहास',
+	'mobile-frontend-file-namespace' => 'सञ्चिका',
+	'mobile-frontend-opt-in-yes-button' => 'आम्',
+	'mobile-frontend-opt-in-no-button' => 'नहीं',
+	'mobile-frontend-opt-out-yes-button' => 'आम्',
+	'mobile-frontend-opt-out-no-button' => 'नहीं',
+	'mobile-frontend-leave-feedback-subject' => 'विषय',
+	'mobile-frontend-leave-feedback-message' => 'संदेश',
+	'mobile-frontend-leave-feedback-cancel' => 'निवर्तयते',
+	'mobile-frontend-language' => 'भाषा',
+	'mobile-frontend-username' => 'योजकनामन्:',
+	'mobile-frontend-password' => 'पासवर्ड:',
+	'mobile-frontend-login' => 'प्रविश्यताम्',
+);
+
 /** Sakha (Саха тыла)
  * @author HalanTul
  */
@@ -6423,17 +6457,25 @@ $messages['vec'] = array(
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
+	'mobile-frontend-search-submit' => 'Tehta',
 	'mobile-frontend-search-results' => "Ecindan rezul'tatad",
 	'mobile-frontend-in-the-news' => 'Uzištusiš',
+	'mobile-frontend-home-button' => 'Pälehtpolele',
 	'mobile-frontend-show-button' => 'Ozutada',
 	'mobile-frontend-hide-button' => 'Peitta',
 	'mobile-frontend-back-button' => 'Tagaze',
+	'mobile-frontend-error-page-title' => 'Meil om problem!',
+	'mobile-frontend-are-you-sure' => 'Olet-ik varmdad?',
 	'mobile-frontend-nav-end' => 'Lop',
 	'mobile-frontend-nav-top' => 'Üläh',
 	'mobile-frontend-nav-edit' => 'Redaktiruida',
 	'mobile-frontend-nav-history' => 'Istorii',
 	'mobile-frontend-search-text' => 'Ecind',
 	'mobile-frontend-file-namespace' => 'Fail',
+	'mobile-frontend-wml-continue' => 'Jätkta...',
+	'mobile-frontend-wml-back' => 'Tagaze...',
+	'mobile-frontend-opt-in-yes-button' => 'Ka',
+	'mobile-frontend-opt-in-no-button' => 'Ei',
 	'mobile-frontend-opt-out-yes-button' => 'Ka',
 	'mobile-frontend-opt-out-no-button' => 'Ei',
 	'mobile-frontend-leave-feedback-message' => 'Tedotuz',
