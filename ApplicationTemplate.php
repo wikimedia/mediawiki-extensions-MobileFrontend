@@ -1,7 +1,7 @@
 <?php
 
 if( !defined( 'MEDIAWIKI' ) ) {
-	die( -1 );
+        die( -1 );
 }
 
 class ApplicationTemplate extends MobileFrontendTemplate {
@@ -16,7 +16,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$betaPrefix = ( $this->data['isBetaGroupMember'] ) ? 'beta_' : '';
 
-		$noticeHtml = ( isset( $this->data['noticeHtml'] ) ) ? $this->data['noticeHtml'] : '';
+		$noticeHtml = empty( $this->data['noticeHtml'] ) ? '' : $this->data['noticeHtml'];
 
 		$cssFileName = ( isset( $this->data['device']['css_file_name'] ) ) ? $this->data['device']['css_file_name'] : 'default';
 
@@ -61,7 +61,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			{$this->data['contentHtml']}
 			</div>
 			{$this->data['footerHtml']}
-			 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=12012011120915{$endScriptTag}
+			 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=01052011120915{$endScriptTag}
 			 {$openSearchScript}
 			{$filePageScript}
 		  </body>
