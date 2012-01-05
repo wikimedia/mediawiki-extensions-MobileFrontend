@@ -116,7 +116,10 @@ function wm_toggle_section( section_id ) {
 		s.display = s.display == 'none' || ( i && !s.display ) ? 'inline-block' : 'none';
 	}
 	for ( var i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
-		var s = document.getElementById( d[i] + section_id ).style;
-		s.display = s.display == 'block' ? 'none' : 'block';
+		var e = document.getElementById( d[i] + section_id );
+		
+		if ( e ) {
+			e.style.display = e.style.display == 'block' ? 'none' : 'block';
+		}
 	}
 }
