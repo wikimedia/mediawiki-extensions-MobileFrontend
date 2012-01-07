@@ -946,7 +946,7 @@ $messages['ca'] = array(
 	'mobile-frontend-opt-in-no-button' => 'no',
 	'mobile-frontend-opt-in-title' => 'Opció a la versió mòbil beta',
 	'mobile-frontend-opt-in-explain' => 'Quan proveu la versió beta, tindreu accés a les característiques experimentals assumint el risc de trobar-hi problemes.',
-	'mobile-frontend-opt-out-message' => 'Voleu deixar el sistema de proves de la nova interfície mòbil?',
+	'mobile-frontend-opt-out-message' => 'Voleu deixar la versió mòbil beta?',
 	'mobile-frontend-opt-out-yes-button' => 'sí',
 	'mobile-frontend-opt-out-no-button' => 'no',
 	'mobile-frontend-opt-out-title' => 'Fora de la versió beta mòbil',
@@ -3993,6 +3993,7 @@ $messages['mo'] = array(
 /** Marathi (मराठी)
  * @author Evision
  * @author Kaajawa
+ * @author Mahitgar
  * @author Rahuldeshmukh101
  * @author V.narsikar
  */
@@ -4029,6 +4030,7 @@ $messages['mr'] = array(
 	'mobile-frontend-view' => 'लघु-दृश्य',
 	'mobile-frontend-opt-in-yes-button' => 'हो',
 	'mobile-frontend-opt-in-no-button' => 'नाही',
+	'mobile-frontend-opt-in-explain' => 'बीटा जॉईन करून तुम्हाला एक्सपेरिमेंटल फिचर्सचा उपयोग करता येईल ,अर्थात बग्स आणी इतर अवघड स्थिती अनुभवण्याची मानसिक तयारी ठेवावी',
 	'mobile-frontend-opt-out-yes-button' => 'हो',
 	'mobile-frontend-opt-out-no-button' => 'नाही',
 	'mobile-frontend-news-items' => 'बातम्यांमध्ये',
