@@ -265,8 +265,11 @@ $messages['am'] = array(
 	'mobile-frontend-search-text' => 'ፈልግ',
 );
 
-/** Aragonese (Aragonés) */
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
 $messages['an'] = array(
+	'mobile-frontend-desc' => 'Interficie mobil',
 	'mobile-frontend-search-submit' => 'Ir-ie',
 	'mobile-frontend-search-results' => "Resultaus d'a busca",
 	'mobile-frontend-no-article-found' => "No s'ha trobau garra articlo",
@@ -282,15 +285,48 @@ $messages['an'] = array(
 	'mobile-frontend-regular-site' => 'Veyer ista pachina en a {{SITENAME}} normal',
 	'mobile-frontend-perm-stop-redirect' => 'Desactivar o sitio móbil de traza permanent',
 	'mobile-frontend-error-page-title' => 'Tenemos un problema!',
-	'mobile-frontend-error-page-text' => '{{SITENAME}} móbil ye encara en desenvolique activo y somos treballando firme ta apanyar todas as nuestras errors internas. Ya nos han notificau ista error y nos meteremos luego a apanyar-la. Por favor, torne-lo a intentar más entabant.',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} móbil ye encara en desembolique activo y somos treballando de firme ta apanyar todas as nuestras errors internas. Ya nos han notificau ista error y nos meteremos luego a apanyar-la. Por favor, torne-lo a intentar más entabant.',
 	'mobile-frontend-are-you-sure' => 'Ye seguro ?',
-	'mobile-frontend-explain-disable' => 'Ye seguro que quiere desactivar a versión móbil de {{SITENAME}}? Si triga <b>Disable</b>, alabetz, quan vesite {{SITENAME}} dende agora, no será reendrezau ta ista visualización ta móbils de {{SITENAME}}.',
+	'mobile-frontend-explain-disable' => 'Ye seguro que quiere desactivar a versión mobil de {{SITENAME}}? Si triga <b>Disable</b>, alavez, quan vesite {{SITENAME}} dende agora, no será reendrezau ta ista visualización ta mobils de {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Fin',
 	'mobile-frontend-nav-top' => 'Alto',
 	'mobile-frontend-nav-edit' => 'Editar',
 	'mobile-frontend-nav-history' => 'Historial',
 	'mobile-frontend-search-text' => 'Mirar',
 	'mobile-frontend-contact-us' => 'Si tiene qualsiquier pregunta u comentario, puet ninviar-nos un correu electronico a mobile@wikipedia.org',
+	'mobile-frontend-author-link' => "Veyer iste fichero de datos audiovisuals en a versión regular de {{SITENAME}} ta veyer a información sobre l'autoría, licencia y descripcions adicionals.",
+	'mobile-frontend-download-full-version' => 'Descargar a versión completa',
+	'mobile-frontend-file-namespace' => 'Fichero',
+	'mobile-frontend-wml-continue' => 'Continar...',
+	'mobile-frontend-wml-back' => 'Enta zaga ...',
+	'mobile-frontend-view' => 'Versión ta mobils',
+	'mobile-frontend-opt-in-message' => "Quiere unir-se a las nuestras prebas d'a nueva interficie mobil?",
+	'mobile-frontend-opt-in-yes-button' => 'sí',
+	'mobile-frontend-opt-in-no-button' => 'No',
+	'mobile-frontend-opt-in-title' => 'Prebar a beta Mobil',
+	'mobile-frontend-opt-in-explain' => 'Prebando a beta, tendrá acceso a caracteristicas experimentals, con o risgo de trobar problemas u errors.',
+	'mobile-frontend-opt-out-message' => 'Quiere deixar de prebar a beta mobil?',
+	'mobile-frontend-opt-out-yes-button' => 'Sí',
+	'mobile-frontend-opt-out-no-button' => 'No',
+	'mobile-frontend-opt-out-title' => 'Deixar de prebar a beta Mobil',
+	'mobile-frontend-opt-out-explain' => 'En deixar a beta mobil, desactivará todas as caracteristicas experimentals y tornará ta la experiencia mobil clasica.',
+	'mobile-frontend-disable-images' => 'Desactivar imachens en a versión ta mobils',
+	'mobile-frontend-enable-images' => 'Activar imachens en a versión ta mobils',
+	'mobile-frontend-news-items' => 'Actualidat',
+	'mobile-frontend-leave-feedback-title' => "Informar-nos d'a tuya experiencia en en o puesto ta mobils.",
+	'mobile-frontend-leave-feedback-notice' => "A suya retroalimentación nos aduya a amillorar a suya experiencia mobil en ista pachina. Se publicará (en chunto con o suyo nombre d'usuario, a versión d'o navegador y o sistema operativo que emplega) en a pachina &quot;\$1&quot;. Mire de emplegar una linia d'afer informativa, p. eix. \"Problemas de formato con tablas amplas\". Os suyos comentarios serán subchectos a la nuestra politica d'emplego.",
+	'mobile-frontend-leave-feedback-subject' => 'Afer',
+	'mobile-frontend-leave-feedback-message' => 'Mensache',
+	'mobile-frontend-leave-feedback-cancel' => 'Cancelar',
+	'mobile-frontend-leave-feedback-submit' => 'Ninviar comentarios',
+	'mobile-frontend-leave-feedback-link-text' => 'Retroalimentación sobre a extensión MobileFrontend',
+	'mobile-frontend-leave-feedback' => 'Retroalimentación sobre o puesto web mobil',
+	'mobile-frontend-leave-feedback-thanks' => 'Gracias por o suyo comentario!',
+	'mobile-frontend-language' => 'Idioma',
+	'mobile-frontend-username' => "Nombre d'usuario:",
+	'mobile-frontend-password' => 'Contrasenya:',
+	'mobile-frontend-login' => 'Encetar sesión',
+	'mobile-frontend-placeholder' => 'Introduzca a suya busca...',
 );
 
 /** Angika (अङ्गिका) */
@@ -2885,23 +2921,45 @@ $messages['inh'] = array(
 	'mobile-frontend-file-namespace' => 'Паьл',
 );
 
-/** Icelandic (Íslenska) */
+/** Icelandic (Íslenska)
+ * @author Maxí
+ */
 $messages['is'] = array(
 	'mobile-frontend-search-submit' => 'Áfram',
 	'mobile-frontend-search-results' => 'Leitarniðurstöður',
 	'mobile-frontend-no-article-found' => 'Engin grein fannst',
 	'mobile-frontend-featured-article' => 'Grein mánaðarins',
 	'mobile-frontend-home-button' => 'Forsíða',
+	'mobile-frontend-random-button' => 'Handahófsvalið',
 	'mobile-frontend-show-button' => 'Sýna',
 	'mobile-frontend-hide-button' => 'Fela',
+	'mobile-frontend-disable-button' => 'Óvirkja',
+	'mobile-frontend-back-button' => 'Til baka',
 	'mobile-frontend-regular-site' => 'Sýna þessa síða á venjulegri Wikipediu',
 	'mobile-frontend-perm-stop-redirect' => 'Gera farsímasíðuna óvirka til frambúðar',
+	'mobile-frontend-error-page-title' => 'Villa hefur komið upp!',
+	'mobile-frontend-nav-edit' => 'Breyta',
+	'mobile-frontend-search-text' => 'Leita',
+	'mobile-frontend-file-namespace' => 'Skrá',
+	'mobile-frontend-wml-continue' => 'Áfram…',
+	'mobile-frontend-wml-back' => 'Til baka…',
+	'mobile-frontend-view' => 'Farsímaútgáfa',
+	'mobile-frontend-disable-images' => 'Fela myndir á farsímasíðunni',
+	'mobile-frontend-enable-images' => 'Sýna myndir á farsímasíðunni',
+	'mobile-frontend-leave-feedback-subject' => 'Efni',
+	'mobile-frontend-leave-feedback-message' => 'Skilaboð',
+	'mobile-frontend-leave-feedback-cancel' => 'Hætta við',
+	'mobile-frontend-language' => 'Tungumál',
+	'mobile-frontend-username' => 'Notandanafn:',
+	'mobile-frontend-password' => 'Aðgangsorð:',
+	'mobile-frontend-login' => 'Skrá inn',
 );
 
 /** Italian (Italiano)
  * @author Aushulz
  * @author Beta16
  * @author Nemo bis
+ * @author Raoli
  */
 $messages['it'] = array(
 	'mobile-frontend-desc' => 'Interfaccia mobile',
@@ -2935,12 +2993,12 @@ $messages['it'] = array(
 	'mobile-frontend-wml-continue' => 'Continua ...',
 	'mobile-frontend-wml-back' => 'Indietro ...',
 	'mobile-frontend-view' => 'Versione mobile',
-	'mobile-frontend-opt-in-message' => 'Vuoi provare il funzionamento della nuova interfaccia mobile?',
+	'mobile-frontend-opt-in-message' => 'Vuoi provare la versione beta per mobile?',
 	'mobile-frontend-opt-in-yes-button' => 'sì',
 	'mobile-frontend-opt-in-no-button' => 'no',
 	'mobile-frontend-opt-in-title' => 'Partecipazione al collaudo',
 	'mobile-frontend-opt-in-explain' => 'Partecipando alla versione di prova avrai la possibilità di usare funzionalità sperimentali, ma con il rischio di incontrare errori e problemi.',
-	'mobile-frontend-opt-out-message' => 'Abbandonare la prova della nuova interfaccia mobile?',
+	'mobile-frontend-opt-out-message' => 'Abbandonare la versione beta per mobile?',
 	'mobile-frontend-opt-out-yes-button' => 'sì',
 	'mobile-frontend-opt-out-no-button' => 'no',
 	'mobile-frontend-opt-out-title' => 'Abbandono del collaudo',
