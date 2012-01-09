@@ -153,6 +153,7 @@ class ExtMobileFrontend {
 	public static $isFilePage;
 	public static $logoutHtml;
 	public static $loginHtml;
+	public static $zeroRatedBanner;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -824,15 +825,14 @@ class ExtMobileFrontend {
 	private function sendApplicationVersionVaryHeader() {
 		global $wgOut, $wgRequest;
 		wfProfileIn( __METHOD__ );
+		$wgOut->addVaryHeader( 'Application_Version' );
 		if ( isset( $_SERVER['HTTP_APPLICATION_VERSION'] ) ) {
 			$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_APPLICATION_VERSION'] );
-			$wgOut->addVaryHeader( 'Application_Version' );
 		} else {
 			if ( isset( $_SERVER['HTTP_X_DEVICE'] ) ) {
 				if ( stripos( $_SERVER['HTTP_X_DEVICE'], 'iphone' ) !== false ||
 					stripos( $_SERVER['HTTP_X_DEVICE'], 'android' ) !== false ) {
 					$wgRequest->response()->header( 'Application_Version: ' . $_SERVER['HTTP_X_DEVICE'] );
-					$wgOut->addVaryHeader( 'Application_Version' );
 				}
 			}
 		}
@@ -1202,6 +1202,7 @@ class ExtMobileFrontend {
 		$this->mainPage->strictErrorChecking = false;
 		$this->mainPage->encoding = 'UTF-8';
 
+		$zeroLandingPage = $this->mainPage->getElementById( 'zero-landing-page' );
 		$featuredArticle = $this->mainPage->getElementById( 'mp-tfa' );
 		$newsItems = $this->mainPage->getElementById( 'mp-itn' );
 
@@ -1212,6 +1213,10 @@ class ExtMobileFrontend {
 
 		$content = $this->mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'content' );
+		
+		if ( $zeroLandingPage ) {
+			$content->appendChild( $zeroLandingPage );
+		}
 
 		if ( $featuredArticle ) {
 			$h2FeaturedArticle = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-featured-article'] );
@@ -1347,6 +1352,16 @@ class ExtMobileFrontend {
 
 		$itemToRemoveRecords = $this->parseItemsToRemove();
 
+		$zeroRatedBannerElement = $this->doc->getElementById( 'zero-rated-banner' );
+		
+		if ( !$zeroRatedBannerElement ) {
+			$zeroRatedBannerElement = $this->doc->getElementById( 'zero-rated-banner-red' );
+		}
+
+		if ( $zeroRatedBannerElement ) {
+			self::$zeroRatedBanner = $this->doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
+		}
+
 		if ( self::$isBetaGroupMember ) {
 			$ptLogout = $this->doc->getElementById( 'pt-logout' );
 
@@ -1354,9 +1369,8 @@ class ExtMobileFrontend {
 				$ptLogoutLink = $ptLogout->firstChild;
 				self::$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
 			}
-
 			$ptAnonLogin = $this->doc->getElementById( 'pt-anonlogin' );
-
+		
 			if ( !$ptAnonLogin ) {
 				$ptAnonLogin = $this->doc->getElementById( 'pt-login' );
 			}
@@ -1409,14 +1423,22 @@ class ExtMobileFrontend {
 			$itemToRemoveRecords['CLASS'][] = "thumbcaption";
 			$itemToRemoveRecords['CLASS'][] = "gallery";
 		}
+		
+		$tagToRemoveNodeIdAttributeValues = array( 'zero-language-search' );
 
 		$domElemsToRemove = array();
 		foreach ( $itemToRemoveRecords['TAG'] as $tagToRemove ) {
 			$tagToRemoveNodes = $this->doc->getElementsByTagName( $tagToRemove );
-
 			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
+				$tagToRemoveNodeIdAttributeValue = '';
 				if ( $tagToRemoveNode ) {
-					$domElemsToRemove[] = $tagToRemoveNode;
+					$tagToRemoveNodeIdAttribute = $tagToRemoveNode->getAttributeNode( 'id' );
+					if ( $tagToRemoveNodeIdAttribute ) {
+						$tagToRemoveNodeIdAttributeValue = $tagToRemoveNodeIdAttribute->value;
+					}
+					if ( !in_array( $tagToRemoveNodeIdAttributeValue, $tagToRemoveNodeIdAttributeValues ) ) {
+						$domElemsToRemove[] = $tagToRemoveNode;
+					}
 				}
 			}
 		}
@@ -1556,7 +1578,7 @@ class ExtMobileFrontend {
 		}
 
 		if ( self::$format === 'json' ) {
-			header( 'Content-Type: application/json' );
+			header( 'Content-Type: application/javascript' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
 			$json_data['title'] = htmlspecialchars ( self::$title->getText() );
@@ -1635,6 +1657,7 @@ class ExtMobileFrontend {
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'wgScriptPath' => $wgScriptPath,
 						'isFilePage' => self::$isFilePage,
+						'zeroRatedBanner' => self::$zeroRatedBanner,
 						);
 		$applicationTemplate->setByArray( $options );
 		wfProfileOut( __METHOD__ );

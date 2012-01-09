@@ -71,15 +71,19 @@ function makeToggle(thisId) {
 }
 
 function addToggle(id) {
-	var filetoc = document.getElementById('filetoc'),
-		items = filetoc.getElementsByTagName('a');
-	for (var i = 0; i < items.length; i++) {
-		var item = items[i],
-			href = item.href,
-			hashPos = href.search('#'),
-			hash = href.substr(hashPos + 1);
-		if (hash == id) {
-			items[i].onclick = makeToggle(id);
+	var filetoc = document.getElementById('filetoc');
+	if ( filetoc ) {
+		var items = filetoc.getElementsByTagName('a');
+		if ( items ) {
+			for (var i = 0; i < items.length; i++) {
+				var item = items[i],
+					href = item.href,
+					hashPos = href.search('#'),
+					hash = href.substr(hashPos + 1);
+				if (hash == id) {
+					items[i].onclick = makeToggle(id);
+				}
+			}
 		}
 	}
 }
@@ -91,12 +95,14 @@ for (id in chunks) {
 }
 
 function stopClickThrough() {
-	var file = document.getElementById('file'),
-		links = file.getElementsByTagName('a');
-	if (links.length) {
-		links[0].onclick = function() {
-			return false;
-		};
+	var file = document.getElementById('file');
+	if ( file ) {
+		var links = file.getElementsByTagName('a');
+		if (links.length) {
+			links[0].onclick = function() {
+				return false;
+			};
+		}
 	}
 }
 

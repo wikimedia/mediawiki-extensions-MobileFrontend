@@ -3,6 +3,12 @@ var clearSearch = document.getElementById( 'clearsearch' );
 var results = document.getElementById( 'results' );
 var languageSelection = document.getElementById( 'languageselection' );
 
+var zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
+
+if ( !zeroRatedBanner ) {
+	var zeroRatedBanner = document.getElementById( 'zero-rated-banner-red' );
+}
+
 initClearSearchLink();
 
 function initClearSearchLink() {

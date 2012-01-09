@@ -1,7 +1,7 @@
 <?php
 
 if( !defined( 'MEDIAWIKI' ) ) {
-        die( -1 );
+	die( -1 );
 }
 
 class ApplicationTemplate extends MobileFrontendTemplate {
@@ -13,10 +13,12 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		} else {
 			$appleTouchIconTag = '';
 		}
+		
+		$zeroRatedBanner = ( isset( $this->data['zeroRatedBanner'] ) ) ? str_replace( 'style="display:none;"', '', $this->data['zeroRatedBanner'] ) : '';
 
 		$betaPrefix = ( $this->data['isBetaGroupMember'] ) ? 'beta_' : '';
 
-		$noticeHtml = empty( $this->data['noticeHtml'] ) ? '' : $this->data['noticeHtml'];
+		$noticeHtml = ( isset( $this->data['noticeHtml'] ) ) ? $this->data['noticeHtml'] : '';
 
 		$cssFileName = ( isset( $this->data['device']['css_file_name'] ) ) ? $this->data['device']['css_file_name'] : 'default';
 
@@ -26,7 +28,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12142011129437' . $endScriptTag;
 		$jQueryScript = ( $this->data['device']['supports_jquery'] ) ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
-		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js' . $endScriptTag : '';
+		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=122920111241' . $endScriptTag : '';
 
 		$startLinkTag = "<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/";
 		$endLinkTag = "' media='all' rel='Stylesheet' type='text/css' />";
@@ -55,6 +57,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			</script>
 		  </head>
 		  <body>
+			{$zeroRatedBanner}
 			{$this->data['searchWebkitHtml']}
 			<div class='show' id='content_wrapper'>
 			{$noticeHtml}

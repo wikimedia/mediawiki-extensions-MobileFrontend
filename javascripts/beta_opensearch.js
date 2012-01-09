@@ -41,6 +41,10 @@ var ol = new Object();
 search.onfocus = function() {
 
 	resetViewPort();
+	
+	if ( zeroRatedBanner ) {
+		zeroRatedBanner.style.display = 'none';
+	}
 
 	if ( !focused ) {
 		content.style.display = 'none';
@@ -130,6 +134,10 @@ function removeResults() {
 	var pE = document.getElementById( 'placeholder' );
 	if ( pE ) {
 		pE.style.display = 'none';
+	}
+	
+	if ( zeroRatedBanner ) {
+		zeroRatedBanner.style.display = 'block';
 	}
 
 	if ( ol ) {

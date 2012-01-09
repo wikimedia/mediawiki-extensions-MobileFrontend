@@ -21,6 +21,32 @@ html, body {
 	display: none;
 }
 
+#zero-rated-banner {
+	position: relative;
+	height: 20px;
+	width: 100%;
+	z-index: 99;
+	background: #EE8833;
+	display: block;
+	border-bottom: 1px solid;
+	border-color: #000000;
+}
+
+#zero-rated-banner-red {
+	position: relative;
+	height: 20px;
+	width: 100%;
+	z-index: 99;
+	background: #FF0000;
+	display: block;
+	border-bottom: 1px solid;
+	border-color: #000000;
+}
+
+#zero-rated-banner-text {
+		margin: 0px;
+}
+
 .suggestions-results {
 	font-size: 1.4em;
 	cursor: pointer;
