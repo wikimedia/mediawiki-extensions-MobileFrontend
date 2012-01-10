@@ -470,6 +470,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
+		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		$uAmd5 = md5( $userAgent );
 
 		$key = wfMemcKey( 'mobile', 'ua', $uAmd5 );
@@ -562,7 +563,6 @@ class ExtMobileFrontend {
 		self::$search = $wgRequest->getText( 'search' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
 
-		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		$device = new DeviceDetection();
 
 		if ( $xDevice ) {
