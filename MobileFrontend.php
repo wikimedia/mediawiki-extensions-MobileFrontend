@@ -818,6 +818,7 @@ class ExtMobileFrontend {
 			$wgOut->addVaryHeader( 'X-Device' );
 		}
 		$wgOut->addVaryHeader( 'Cookie' );
+		$wgOut->addVaryHeader( 'X-Carrier' );
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
