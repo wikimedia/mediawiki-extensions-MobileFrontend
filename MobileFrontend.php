@@ -424,6 +424,29 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
+	
+	/**
+	 * @param $parsedUrl wfParseUrl Array
+	 * @return string
+	 */
+	public function parsePageRedirect( $parsedUrl ) {
+		global $wgMobileDomain;
+		wfProfileIn( __METHOD__ );
+		$redirect = '';
+		$hostParts = explode( '.', $parsedUrl['host'] );
+		$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
+		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
+		$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
+		$redirect = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $parsedUrl['path'];
+		if ( isset( $parsedUrl['query'] ) ) {
+			$redirect .= $queryDelimiter . $parsedUrl['query'];
+		}
+		if ( isset( $parsedUrl['fragment'] ) ) {
+			$redirect .= $fragmentDelimiter . $parsedUrl['fragment'];
+		}
+		wfProfileOut( __METHOD__ );
+		return $redirect;
+	}
 
 	/**
 	 * @param $out OutputPage
@@ -445,14 +468,15 @@ class ExtMobileFrontend {
 				if ( $parsedUrl['scheme'] == 'http' ) {
 					$parsedUrl['scheme'] = 'https';
 				}
-				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-				$redirect = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path'];
-				if ( isset( $parsedUrl['query'] ) ) {
-					$redirect .= $queryDelimiter . $parsedUrl['query'];
-				}
-				if ( isset( $parsedUrl['fragment'] ) ) {
-					$redirect .= $fragmentDelimiter . $parsedUrl['fragment'];
+
+				$redirect = $this->parsePageRedirect( $parsedUrl );
+			}
+		} else if ($out->getTitle()->isSpecial( 'Randompage' ) ) {
+			$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
+			if ( $xDevice ) {
+				$parsedUrl = wfParseUrl( $redirect );
+				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
+					$redirect = $this->parsePageRedirect( $parsedUrl );
 				}
 			}
 		}
