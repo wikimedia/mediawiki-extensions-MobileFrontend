@@ -1,11 +1,11 @@
 <?php
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }
 
 class OptInTemplate extends MobileFrontendTemplate {
-	
+
 	public function getHTML() {
 
 		$optInHtml = <<<HTML

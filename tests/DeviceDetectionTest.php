@@ -4,7 +4,7 @@
  * @group MobileFrontend
  */
  class DeviceDetectionTest extends MediaWikiTestCase {
- 
+
 	/**
 	 * @dataProvider provideTestFormatName
 	 */

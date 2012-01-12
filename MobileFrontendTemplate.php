@@ -1,6 +1,6 @@
 <?php
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }
 
@@ -29,7 +29,7 @@ abstract class MobileFrontendTemplate {
 	 * @param $value
 	 */
 	public function setByArray( $options ) {
-		foreach ($options as $name => $value ) {
+		foreach ( $options as $name => $value ) {
 			$this->set( $name, $value );
 		}
 	}

@@ -1,11 +1,11 @@
 <?php
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }
 
 class LeaveFeedbackTemplate extends MobileFrontendTemplate {
-	
+
 	public function getHTML() {
 
 		$leaveFeedbackHtml = <<<HTML

@@ -1,11 +1,11 @@
 <?php
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
         die( -1 );
 }
 
 class FooterTemplate extends MobileFrontendTemplate {
-	
+
 	public function getHTML() {
 
 		$regularSite = $this->data['messages']['mobile-frontend-regular-site'];

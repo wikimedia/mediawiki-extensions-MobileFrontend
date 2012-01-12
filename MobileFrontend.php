@@ -378,7 +378,7 @@ class ExtMobileFrontend {
 			'lang' => $wgLanguageCode,
 		);
 
-		foreach( $wgOut->getLanguageLinks() as $l ) {
+		foreach ( $wgOut->getLanguageLinks() as $l ) {
 			$tmp = explode( ':', $l, 2 );
 			$class = 'interwiki-' . $tmp[0];
 			$lang = $tmp[0];
@@ -424,7 +424,7 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
-	
+
 	/**
 	 * @param $parsedUrl wfParseUrl Array
 	 * @return string
@@ -471,7 +471,7 @@ class ExtMobileFrontend {
 
 				$redirect = $this->parsePageRedirect( $parsedUrl );
 			}
-		} else if ($out->getTitle()->isSpecial( 'Randompage' ) ) {
+		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) ) {
 			$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 			if ( $xDevice ) {
 				$parsedUrl = wfParseUrl( $redirect );
@@ -740,7 +740,7 @@ class ExtMobileFrontend {
 		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) &&
 			strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Wikipedia Mobile' ) !== false ) {
 			self::$hideSearchBox = true;
-			if (strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Android' ) !== false ) {
+			if ( strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Android' ) !== false ) {
 				self::$hideLogo = true;
 			}
 		}
@@ -1238,7 +1238,7 @@ class ExtMobileFrontend {
 
 		$content = $this->mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'content' );
-		
+
 		if ( $zeroLandingPage ) {
 			$content->appendChild( $zeroLandingPage );
 		}
@@ -1301,7 +1301,7 @@ class ExtMobileFrontend {
 						   'id' => 'wpName1',
 						   'tabindex' => '1',
 						   'size' => '20',
-						   'required') ) .
+						   'required' ) ) .
 				Html::closeElement( 'td' ) .
 				Html::closeElement( 'tr' ) .
 				Html::openElement( 'tr' ) .
@@ -1318,7 +1318,7 @@ class ExtMobileFrontend {
 					array( 'class' => 'loginPassword',
 						   'id' => 'wpPassword1',
 						   'tabindex' => '2',
-						   'size' => '20') ) .
+						   'size' => '20' ) ) .
 				Html::closeElement( 'td' ) .
 				Html::closeElement( 'tr' ) .
 				Html::openElement( 'tr' ) .
@@ -1329,7 +1329,7 @@ class ExtMobileFrontend {
 					array( 'class' => 'mw-submit' ) ) .
 				Html::input( 'wpLoginAttempt', self::$messages['mobile-frontend-login'], 'submit',
 					array( 'id' => 'wpLoginAttempt',
-						   'tabindex' => '3') ) .
+						   'tabindex' => '3' ) ) .
 				Html::closeElement( 'td' ) .
 				Html::closeElement( 'tr' ) .
 				Html::closeElement( 'tbody' ) .
@@ -1354,7 +1354,7 @@ class ExtMobileFrontend {
 		$dom->preserveWhiteSpace = false;
 		$dom->strictErrorChecking = false;
 		$dom->encoding = 'UTF-8';
-		$node = $dom->getElementsByTagName( $tagName )->item(0);
+		$node = $dom->getElementsByTagName( $tagName )->item( 0 );
 		wfProfileOut( __METHOD__ );
 		return $node;
 	}
@@ -1378,7 +1378,7 @@ class ExtMobileFrontend {
 		$itemToRemoveRecords = $this->parseItemsToRemove();
 
 		$zeroRatedBannerElement = $this->doc->getElementById( 'zero-rated-banner' );
-		
+
 		if ( !$zeroRatedBannerElement ) {
 			$zeroRatedBannerElement = $this->doc->getElementById( 'zero-rated-banner-red' );
 		}
@@ -1395,7 +1395,7 @@ class ExtMobileFrontend {
 				self::$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
 			}
 			$ptAnonLogin = $this->doc->getElementById( 'pt-anonlogin' );
-		
+
 			if ( !$ptAnonLogin ) {
 				$ptAnonLogin = $this->doc->getElementById( 'pt-login' );
 			}
@@ -1448,7 +1448,7 @@ class ExtMobileFrontend {
 			$itemToRemoveRecords['CLASS'][] = "thumbcaption";
 			$itemToRemoveRecords['CLASS'][] = "gallery";
 		}
-		
+
 		$tagToRemoveNodeIdAttributeValues = array( 'zero-language-search' );
 
 		$domElemsToRemove = array();
@@ -1554,7 +1554,7 @@ class ExtMobileFrontend {
 				$contentHtml = preg_replace( '#</?' . $element . '[^>]*>#is', '', $contentHtml );
 			}
 
-			//Wml for searching
+			// Wml for searching
 			$searchWml = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
 				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
 				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';
@@ -1695,7 +1695,7 @@ class ExtMobileFrontend {
 		$output = Html::openElement( 'select',
 			array( 'id' => 'languageselection',
 				'onchange' => 'javascript:navigateToLanguageSelection();' ) );
-		foreach (self::$languageUrls as $languageUrl) {
+		foreach ( self::$languageUrls as $languageUrl ) {
 			if ( $languageUrl['lang'] == $wgLanguageCode ) {
 				$output .=	Html::element( 'option',
 							array( 'value' => $languageUrl['href'], 'selected' => 'selected' ),

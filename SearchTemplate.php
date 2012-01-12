@@ -1,11 +1,11 @@
 <?php
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }
 
 class SearchTemplate extends MobileFrontendTemplate {
-	
+
 	public function getHTML() {
 
 		$searchField = htmlspecialchars( $this->data['searchField'] );

@@ -1,6 +1,6 @@
 <?php
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }
 
@@ -13,7 +13,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		} else {
 			$appleTouchIconTag = '';
 		}
-		
+
 		$zeroRatedBanner = ( isset( $this->data['zeroRatedBanner'] ) ) ? str_replace( 'style="display:none;"', '', $this->data['zeroRatedBanner'] ) : '';
 
 		$betaPrefix = ( $this->data['isBetaGroupMember'] ) ? 'beta_' : '';

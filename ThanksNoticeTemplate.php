@@ -1,11 +1,11 @@
 <?php
 
-if( !defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }
 
 class ThanksNoticeTemplate extends MobileFrontendTemplate {
-	
+
 	public function getHTML() {
 
 		$thanks = $this->data['messages']['mobile-frontend-leave-feedback-thanks'];
