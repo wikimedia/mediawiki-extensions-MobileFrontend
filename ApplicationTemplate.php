@@ -48,8 +48,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		  <head>
 			<title>{$this->data['htmlTitle']}</title>
 			<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=12012011121954' media='all' rel='Stylesheet' type='text/css' />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=12012011120715' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=01132011121954' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=01132011120715' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
 			<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,7 +71,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			{$this->data['contentHtml']}
 			</div>
 			{$this->data['footerHtml']}
-			 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=01052011120915{$endScriptTag}
+			 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=01132011120915{$endScriptTag}
 			 {$openSearchScript}
 			{$filePageScript}
 		  </body>
