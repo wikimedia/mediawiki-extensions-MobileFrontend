@@ -134,3 +134,53 @@ function wm_toggle_section( section_id ) {
 		}
 	}
 }
+
+function writeCookie( name, value, days ) {
+	if ( days ) {
+		var date = new Date();
+		date.setTime( date.getTime() + ( days * 24 * 60 * 60 *1000 ) );
+		var expires = '; expires=' + date.toGMTString();
+	} else {
+		var expires = '';
+	}
+	document.cookie = name + '=' + value + expires + '; path=/';
+}
+
+function readCookie( name ) {
+	var nameVA = name + '=';
+	var ca = document.cookie.split( ';' );
+	for( var i=0; i < ca.length; i++ ) {
+		var c = ca[i];
+		while ( c.charAt(0) === ' ' ) {
+			c = c.substring( 1, c.length );
+		}
+		if ( c.indexOf( nameVA ) == 0 ) {
+			return c.substring( nameVA.length, c.length );
+		}
+	}
+	return null;
+}
+
+function removeCookie( name ) {
+	writeCookie( name, '', -1 );
+	return null;
+}
+
+var dismissNotification = document.getElementById( 'dismiss-notification' );
+
+if ( dismissNotification ) {
+	var cookieNameZeroVisibility = 'zeroRatedBannerVisibility';
+	var zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
+	var zeroRatedBannerVisibility = readCookie( cookieNameZeroVisibility );
+	
+	if ( zeroRatedBannerVisibility === 'off' ) {
+		zeroRatedBanner.style.display = 'none';
+	}
+	
+	dismissNotification.onclick = function() {
+		if ( zeroRatedBanner ) {
+			zeroRatedBanner.style.display = 'none';
+			writeCookie( cookieNameZeroVisibility, 'off', 1 );
+		}
+	};
+}

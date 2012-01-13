@@ -199,6 +199,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-password',
 		'mobile-frontend-login',
 		'mobile-frontend-placeholder',
+		'mobile-frontend-dismiss-notification',
 	);
 
 	public $itemsToRemove = array(
@@ -1676,6 +1677,7 @@ class ExtMobileFrontend {
 						'dir' => self::$dir,
 						'code' => self::$code,
 						'placeholder' => self::$messages['mobile-frontend-placeholder'],
+						'dismissNotification' => self::$messages['mobile-frontend-dismiss-notification'],
 						'wgAppleTouchIcon' => $wgAppleTouchIcon,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
 						'device' => self::$device,

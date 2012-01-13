@@ -73,6 +73,7 @@ $messages['en'] = array (
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Log in',
 	'mobile-frontend-placeholder' => 'Type your search here...',
+	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 );
 
 /** Message documentation (Message documentation)
@@ -107,6 +108,7 @@ $messages['qqq'] = array(
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
 {{Identical|Log in}}',
 	'mobile-frontend-placeholder' => 'Phrase used to prompt user to use search interface for mobile full screen search',
+	'mobile-frontend-dismiss-notification' => 'Phrase used to dismiss the top banner notification',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
