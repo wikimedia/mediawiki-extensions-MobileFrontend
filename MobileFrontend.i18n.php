@@ -1155,6 +1155,7 @@ $messages['cs'] = array(
 	'mobile-frontend-password' => 'Heslo:',
 	'mobile-frontend-login' => 'Přihlásit se',
 	'mobile-frontend-placeholder' => 'Sem napište hledaný výraz…',
+	'mobile-frontend-dismiss-notification' => 'zavřít toto oznámení',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -1344,6 +1345,7 @@ $messages['de'] = array(
 	'mobile-frontend-password' => 'Passwort:',
 	'mobile-frontend-login' => 'Anmelden',
 	'mobile-frontend-placeholder' => 'Gib hier deine Suche ein ...',
+	'mobile-frontend-dismiss-notification' => 'diese Benachrichtigung schließen',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -2210,6 +2212,7 @@ $messages['gl'] = array(
 	'mobile-frontend-password' => 'Contrasinal:',
 	'mobile-frontend-login' => 'Rexistro',
 	'mobile-frontend-placeholder' => 'Insira a súa procura aquí...',
+	'mobile-frontend-dismiss-notification' => 'agochar esta notificación',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
@@ -2440,6 +2443,7 @@ $messages['he'] = array(
 	'mobile-frontend-password' => 'ססמה:',
 	'mobile-frontend-login' => 'כניסה',
 	'mobile-frontend-placeholder' => 'הקלידו את מילות החיפוש כאן...',
+	'mobile-frontend-dismiss-notification' => 'הסתרת ההודעה הזאת',
 );
 
 /** Hindi (हिन्दी)
@@ -2615,6 +2619,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-password' => 'Hesło:',
 	'mobile-frontend-login' => 'Přizjewić',
 	'mobile-frontend-placeholder' => 'Zapodaj tu swoje pytanje...',
+	'mobile-frontend-dismiss-notification' => 'Tute zdźělenje zaćisnyć',
 );
 
 /** Hungarian (Magyar)
@@ -2758,6 +2763,7 @@ $messages['ia'] = array(
 	'mobile-frontend-password' => 'Contrasigno:',
 	'mobile-frontend-login' => 'Aperir session',
 	'mobile-frontend-placeholder' => 'Entra un recerca hic...',
+	'mobile-frontend-dismiss-notification' => 'clauder iste notification',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -3938,6 +3944,7 @@ $messages['mk'] = array(
 	'mobile-frontend-password' => 'Лозинка:',
 	'mobile-frontend-login' => 'Најава',
 	'mobile-frontend-placeholder' => 'Тука внесете го бараното...',
+	'mobile-frontend-dismiss-notification' => 'отстрани го известувањето',
 );
 
 /** Malayalam (മലയാളം)
@@ -4181,6 +4188,7 @@ $messages['ms'] = array(
 	'mobile-frontend-password' => 'Kata laluan:',
 	'mobile-frontend-login' => 'Log masuk',
 	'mobile-frontend-placeholder' => 'Taipkan carian anda di sini...',
+	'mobile-frontend-dismiss-notification' => 'abaikan pemberitahuan ini',
 );
 
 /** Maltese (Malti) */
@@ -4322,6 +4330,7 @@ $messages['nb'] = array(
  * @author Servien
  */
 $messages['nds-nl'] = array(
+	'mobile-frontend-desc' => 'Mobiele weergave',
 	'mobile-frontend-search-submit' => 'Artikel',
 	'mobile-frontend-search-results' => 'Zeukresultaoten',
 	'mobile-frontend-no-article-found' => 'Gien artikel evunnen',
@@ -4334,20 +4343,45 @@ $messages['nds-nl'] = array(
 	'mobile-frontend-hide-button' => 'Verbargen',
 	'mobile-frontend-disable-button' => 'Uutschakelen',
 	'mobile-frontend-back-button' => 'Weerumme',
-	'mobile-frontend-regular-site' => 'Disse pagina in de standardweergave bekieken',
+	'mobile-frontend-regular-site' => 'Disse pagina in de standardweergave van {{SITENAME}} bekieken',
 	'mobile-frontend-perm-stop-redirect' => 'Altied de standardweergave gebruken',
 	'mobile-frontend-error-page-title' => 'Der geet effen wat mis!',
-	'mobile-frontend-error-page-text' => "De mobiele versie van Wikipedie is in ontwikkeling en wulen bin hard an t wark um alle fouten op te lossen.
+	'mobile-frontend-error-page-text' => "De mobiele weergave van {{SITENAME}} is in ontwikkeling en wulen bin hard an t wark um alle fouten op te lössen.
 Wulen hebben al bericht ehad over disse fout en zullen t zo gauw meugelik verhelpen.
 Vorttemee zie'j hier t resultaot.",
 	'mobile-frontend-are-you-sure' => "Bi'j daor wisse van?",
-	'mobile-frontend-explain-disable' => "Bi'j der wisse van da'j de mobiele versie van Wikipedie uut willen schakelen? A'j <b>Uutschakelen</b> kiezen, dan wö'j vanaof dat moment niet deurverwezen naor disse mobiele versie van Wikipedie a'j Wikipedie bezeuken.",
+	'mobile-frontend-explain-disable' => "Bi'j der wisse van da'j de mobiele versie van {{SITENAME}} uut willen schakelen? A'j <b>Uutschakelen</b> kiezen, dan wö'j vanaof dat moment niet deurverwezen naor disse mobiele versie van {{SITENAME}} a'j {{SITENAME}} bezeuken.",
 	'mobile-frontend-nav-end' => 'Einde',
 	'mobile-frontend-nav-top' => 'Begin',
 	'mobile-frontend-nav-edit' => 'Bewarken',
 	'mobile-frontend-nav-history' => 'Geschiedenisse',
 	'mobile-frontend-search-text' => 'Zeuken',
 	'mobile-frontend-contact-us' => "A'j nog vragen of opmarkingen hebben, stuur ons gerust n berichjen op t adres mobile@wikipedia.org",
+	'mobile-frontend-file-namespace' => 'Bestaand',
+	'mobile-frontend-wml-back' => 'Weerumme ...',
+	'mobile-frontend-view' => 'Mobiele weergave',
+	'mobile-frontend-opt-in-message' => 'Mitdoon an de mobiele bèta?',
+	'mobile-frontend-opt-in-yes-button' => 'ja',
+	'mobile-frontend-opt-in-no-button' => 'nee',
+	'mobile-frontend-opt-in-title' => 'Mitdoon mit de bèta',
+	'mobile-frontend-opt-out-message' => "Wi'j bèta uutzetten?",
+	'mobile-frontend-opt-out-yes-button' => 'ja',
+	'mobile-frontend-opt-out-no-button' => 'nee',
+	'mobile-frontend-opt-out-title' => 'Stoppen mit testen',
+	'mobile-frontend-disable-images' => 'Aofbeeldingen in de mobiele weergave uutzetten',
+	'mobile-frontend-enable-images' => 'Aofbeeldingen in de mobiele weergave anzetten',
+	'mobile-frontend-leave-feedback-subject' => 'Onderwarp:',
+	'mobile-frontend-leave-feedback-message' => 'Bericht',
+	'mobile-frontend-leave-feedback-cancel' => 'Aofbreken',
+	'mobile-frontend-leave-feedback-submit' => 'Troegkoppeling opslaon',
+	'mobile-frontend-leave-feedback-link-text' => 'Troegkoppeling over de mobiele weergave',
+	'mobile-frontend-leave-feedback' => 'Troegkoppeling achterlaoten',
+	'mobile-frontend-leave-feedback-thanks' => 'Bedankt veur joew troegkoppeling',
+	'mobile-frontend-language' => 'Taal',
+	'mobile-frontend-username' => 'Gebrukersnaam:',
+	'mobile-frontend-password' => 'Wachtwoord:',
+	'mobile-frontend-login' => 'Anmelden',
+	'mobile-frontend-placeholder' => 'Hier zeuken ...',
 );
 
 /** Nepali (नेपाली)
