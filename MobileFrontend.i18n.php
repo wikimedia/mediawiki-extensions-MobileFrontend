@@ -670,6 +670,7 @@ $messages['be'] = array(
  * @author EugeneZelenko
  * @author Jim-by
  * @author Renessaince
+ * @author Wizardist
  */
 $messages['be-tarask'] = array(
 	'mobile-frontend-desc' => 'Мабільны інтэрфэйс',
@@ -730,6 +731,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Увайсьці',
 	'mobile-frontend-placeholder' => 'Увядзіце пошукавы выраз тут…',
+	'mobile-frontend-dismiss-notification' => 'схаваць паведамленьне',
 );
 
 /** Bulgarian (Български)
@@ -3353,6 +3355,7 @@ $messages['ko'] = array(
 	'mobile-frontend-password' => '비밀번호:',
 	'mobile-frontend-login' => '로그인',
 	'mobile-frontend-placeholder' => '검색할 것을 여기 입력하세요...',
+	'mobile-frontend-dismiss-notification' => '이 알림 숨기기',
 );
 
 /** Karachay-Balkar (Къарачай-Малкъар) */
@@ -3600,6 +3603,7 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Message',
 	'mobile-frontend-leave-feedback-cancel' => 'Ofbriechen',
 	'mobile-frontend-leave-feedback-submit' => 'Feedback schécken',
+	'mobile-frontend-leave-feedback-link-text' => 'Feedback vun der Erweiderung MobileFrontend',
 	'mobile-frontend-leave-feedback' => 'Feedback fir de mobile Site',
 	'mobile-frontend-leave-feedback-thanks' => 'Merci fir Äre Feedback!',
 	'mobile-frontend-language' => 'Sprooch',
@@ -3686,6 +3690,7 @@ Betrach dit later nog ins!",
 	'mobile-frontend-password' => 'Wachwaord:',
 	'mobile-frontend-login' => 'Mèlj aan',
 	'mobile-frontend-placeholder' => 'Zeuk hie...',
+	'mobile-frontend-dismiss-notification' => 'verberg de notificatie',
 );
 
 /** Lumbaart (Lumbaart) */
@@ -4061,6 +4066,7 @@ $messages['mo'] = array(
  * @author Evision
  * @author Kaajawa
  * @author Mahitgar
+ * @author Prabodh1987
  * @author Rahuldeshmukh101
  * @author V.narsikar
  */
@@ -4124,6 +4130,7 @@ $messages['mr'] = array(
 	'mobile-frontend-password' => 'परवलीचा शब्द',
 	'mobile-frontend-login' => 'प्रवेश करा',
 	'mobile-frontend-placeholder' => 'आपला  हवा असलेला शोध येथे टंकलिखित करा ...',
+	'mobile-frontend-dismiss-notification' => 'ही सुचना पुसा',
 );
 
 /** Malay (Bahasa Melayu)
@@ -4890,6 +4897,7 @@ $messages['pms'] = array(
 	'mobile-frontend-password' => 'Ciav:',
 	'mobile-frontend-login' => 'Intra',
 	'mobile-frontend-placeholder' => 'Anseriss toa arserca ambelessì...',
+	'mobile-frontend-dismiss-notification' => 'arfuda sta notìfica',
 );
 
 /** Western Punjabi (پنجابی)
