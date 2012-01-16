@@ -2023,6 +2023,7 @@ $messages['fr'] = array(
 	'mobile-frontend-password' => 'Mot de passe:',
 	'mobile-frontend-login' => 'Se connecter',
 	'mobile-frontend-placeholder' => 'Tapez votre recherche ici...',
+	'mobile-frontend-dismiss-notification' => 'rejeter cette notification',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -5370,6 +5371,7 @@ $messages['ru'] = array(
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Войти',
 	'mobile-frontend-placeholder' => 'Строка для поиска...',
+	'mobile-frontend-dismiss-notification' => 'скрыть это уведомление',
 );
 
 /** Rusyn (Русиньскый)
