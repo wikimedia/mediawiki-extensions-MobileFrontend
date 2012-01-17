@@ -735,6 +735,7 @@ $messages['be-tarask'] = array(
 );
 
 /** Bulgarian (Български)
+ * @author DCLXVI
  * @author Spiritia
  * @author Vladimir Penov
  */
@@ -767,7 +768,7 @@ $messages['bg'] = array(
 	'mobile-frontend-download-full-version' => 'Изтегляне на пълната версия',
 	'mobile-frontend-file-namespace' => 'Файл',
 	'mobile-frontend-wml-continue' => 'Продължаване...',
-	'mobile-frontend-wml-back' => 'Назад...',
+	'mobile-frontend-wml-back' => 'Връщане...',
 	'mobile-frontend-view' => 'Мобилен изглед',
 	'mobile-frontend-opt-in-yes-button' => 'да',
 	'mobile-frontend-opt-in-no-button' => 'не',
