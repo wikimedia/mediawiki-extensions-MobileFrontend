@@ -294,6 +294,8 @@ table td, table th {
 	font-size: 1.1em;
 	color: #ffffff;
 }
-.mwm-message.mwm-notice a { 
+.mwm-message.mwm-notice a {
+	text-decoration: underline;
+	font-weight: bold;
 	color: #ffffff;
 }
