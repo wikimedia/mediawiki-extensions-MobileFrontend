@@ -74,6 +74,7 @@ $messages['en'] = array (
 	'mobile-frontend-login' => 'Log in',
 	'mobile-frontend-placeholder' => 'Type your search here...',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
+	'mobile-frontend-sopa-notice' => 'WE NEED YOU TO PROTECT FREE SPEECH ONLINE',
 );
 
 /** Message documentation (Message documentation)

@@ -54,6 +54,7 @@ $autoloadClasses = array (
 	'OptOutTemplate',
 	'ApplicationWmlTemplate',
 	'ThanksNoticeTemplate',
+	'SopaNoticeTemplate',
 );
 
 foreach ( $autoloadClasses as $class ) {
@@ -200,6 +201,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-login',
 		'mobile-frontend-placeholder',
 		'mobile-frontend-dismiss-notification',
+		'mobile-frontend-sopa-notice',
 	);
 
 	public $itemsToRemove = array(
@@ -557,6 +559,7 @@ class ExtMobileFrontend {
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 		self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
 		self::$displayNoticeId = $wgRequest->getText( 'noticeid', '' );
+		self::$displayNoticeId = 2;
 
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
@@ -1582,6 +1585,13 @@ class ExtMobileFrontend {
 					$thanksNoticeTemplate = new ThanksNoticeTemplate();
 					$thanksNoticeTemplate->set( 'messages', self::$messages );
 					$noticeHtml = $thanksNoticeTemplate->getHTML();
+				}
+			}
+			if ( !empty( self::$displayNoticeId ) ) {
+				if ( intval( self::$displayNoticeId ) === 2 ) {
+					$sopaNoticeTemplate = new SopaNoticeTemplate();
+					$sopaNoticeTemplate->set( 'messages', self::$messages );
+					$noticeHtml = $sopaNoticeTemplate->getHTML();
 				}
 			}
 
