@@ -14,11 +14,6 @@ class SopaNoticeTemplate extends MobileFrontendTemplate {
 			<div class='mwm-message mwm-notice'>
 				{$sopaNotice}
 				<br/>
-				{$sopaNotice}
-				<br/>
-				{$sopaNotice}
-				<br/>
-				{$sopaNotice}
 				<br/>
 			</div>
 HTML;
