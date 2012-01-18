@@ -4493,6 +4493,7 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-password' => 'Wachtwoord:',
 	'mobile-frontend-login' => 'Aanmelden',
 	'mobile-frontend-placeholder' => 'Zoeken...',
+	'mobile-frontend-dismiss-notification' => 'deze melding verwijderen',
 );
 
 /** ‪Nederlands (informeel)‬ (‪Nederlands (informeel)‬)
