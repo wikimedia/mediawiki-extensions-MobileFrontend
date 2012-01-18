@@ -559,7 +559,6 @@ class ExtMobileFrontend {
 		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
 		self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
 		self::$displayNoticeId = $wgRequest->getText( 'noticeid', '' );
-		self::$displayNoticeId = 2;
 
 		if ( self::$disableImages == 1 ) {
 			$wgRequest->response()->setcookie( 'disableImages', 1 );
@@ -679,6 +678,10 @@ class ExtMobileFrontend {
 		$this->sendApplicationVersionVaryHeader();
 		$this->checkUserStatus();
 		$this->checkUserLoggedIn();
+		
+		if (self::$code === 'en') {
+			self::$displayNoticeId = 2;
+		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
