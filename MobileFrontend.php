@@ -54,7 +54,6 @@ $autoloadClasses = array (
 	'OptOutTemplate',
 	'ApplicationWmlTemplate',
 	'ThanksNoticeTemplate',
-	'SopaNoticeTemplate',
 );
 
 foreach ( $autoloadClasses as $class ) {
@@ -201,7 +200,6 @@ class ExtMobileFrontend {
 		'mobile-frontend-login',
 		'mobile-frontend-placeholder',
 		'mobile-frontend-dismiss-notification',
-		'mobile-frontend-sopa-notice',
 	);
 
 	public $itemsToRemove = array(
@@ -678,10 +676,6 @@ class ExtMobileFrontend {
 		$this->sendApplicationVersionVaryHeader();
 		$this->checkUserStatus();
 		$this->checkUserLoggedIn();
-		
-		if (self::$code === 'en') {
-			self::$displayNoticeId = 2;
-		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
@@ -1588,13 +1582,6 @@ class ExtMobileFrontend {
 					$thanksNoticeTemplate = new ThanksNoticeTemplate();
 					$thanksNoticeTemplate->set( 'messages', self::$messages );
 					$noticeHtml = $thanksNoticeTemplate->getHTML();
-				}
-			}
-			if ( !empty( self::$displayNoticeId ) ) {
-				if ( intval( self::$displayNoticeId ) === 2 ) {
-					$sopaNoticeTemplate = new SopaNoticeTemplate();
-					$sopaNoticeTemplate->set( 'messages', self::$messages );
-					$noticeHtml = $sopaNoticeTemplate->getHTML();
 				}
 			}
 

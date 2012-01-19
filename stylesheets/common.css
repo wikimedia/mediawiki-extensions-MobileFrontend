@@ -288,14 +288,3 @@ table td, table th {
 	border: 1px solid #cccccc;
 	padding: 3px;
 }
-
-.mwm-message.mwm-notice {
-	background: #000000;
-	font-size: 1.1em;
-	color: #ffffff;
-}
-.mwm-message.mwm-notice a {
-	text-decoration: underline;
-	font-weight: bold;
-	color: #ffffff;
-}

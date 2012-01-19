@@ -74,7 +74,6 @@ $messages['en'] = array (
 	'mobile-frontend-login' => 'Log in',
 	'mobile-frontend-placeholder' => 'Type your search here...',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
-	'mobile-frontend-sopa-notice' => '<strong>IMAGINE A WORLD WITHOUT FREE KNOWLEDGE</strong>,<br/>Right now, the U.S. Congress is considering legislation that could cripple this site<br/> and your ability to access information online. <a href="http://en.wikipedia.org/wiki/Wikipedia:SOPA_initiative/Mobile_Learn_more">Learn more</a>.',
 );
 
 /** Message documentation (Message documentation)
