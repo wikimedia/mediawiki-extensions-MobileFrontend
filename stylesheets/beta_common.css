@@ -315,14 +315,14 @@ table td, table th {
 }
 
 .mwm-message.mwm-notice {
-	background: #000000;
+	background: #FFFFFF;
 	font-size: 1.1em;
-	color: #ffffff;
+	color: #000000;
 }
 .mwm-message.mwm-notice a {
 	text-decoration: underline;
 	font-weight: bold;
-	color: #ffffff;
+	color: #000000;
 }
 
 h3#sopa-notice {
