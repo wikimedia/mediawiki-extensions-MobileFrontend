@@ -493,7 +493,7 @@ class ExtMobileFrontend {
 	 * @return bool
 	 */
 	public function beforePageDisplayHTML( &$out, &$text ) {
-		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
+		global $wgContLang, $wgRequest, $wgMemc, $wgUser, $wgConf;
 		wfProfileIn( __METHOD__ );
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
@@ -678,8 +678,12 @@ class ExtMobileFrontend {
 		$this->sendApplicationVersionVaryHeader();
 		$this->checkUserStatus();
 		$this->checkUserLoggedIn();
-		
-		if (self::$code === 'en') {
+
+		$DB = wfGetDB( DB_MASTER );
+		$DBName = $DB->getDBname();
+
+		list( $site, $lang ) = $wgConf->siteFromDB( $DBName );
+		if ( $site == 'wikipedia' && self::$code === 'en' ) {
 			self::$displayNoticeId = 2;
 		}
 
@@ -1596,7 +1600,7 @@ class ExtMobileFrontend {
 					$sopaNoticeTemplate = new SopaNoticeTemplate();	 
 					$sopaNoticeTemplate->set( 'messages', self::$messages );	 
 					$noticeHtml = $sopaNoticeTemplate->getHTML();	 
-				}	 
+				}
 			}
 
 			// header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
