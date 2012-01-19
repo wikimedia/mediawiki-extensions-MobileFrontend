@@ -324,3 +324,9 @@ table td, table th {
 	font-weight: bold;
 	color: #ffffff;
 }
+
+h3#sopa-notice {
+	color: #000000;
+	-webkit-margin-after: 0.5em;
+	margin: 0px;
+}
