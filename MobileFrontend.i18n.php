@@ -511,6 +511,7 @@ $messages['ast'] = array(
 	'mobile-frontend-password' => 'Contraseña:',
 	'mobile-frontend-login' => 'Entrar',
 	'mobile-frontend-placeholder' => 'Escribi equí la gueta...',
+	'mobile-frontend-dismiss-notification' => 'anubrir esta notificación',
 );
 
 /** Azerbaijani (Azərbaycanca)
@@ -6825,10 +6826,12 @@ $messages['yi'] = array(
 	'mobile-frontend-opt-in-no-button' => 'ניין',
 	'mobile-frontend-opt-out-yes-button' => 'יא',
 	'mobile-frontend-opt-out-no-button' => 'ניין',
+	'mobile-frontend-leave-feedback-message' => 'מעלדונג',
 	'mobile-frontend-leave-feedback-cancel' => 'אַנולירן',
 	'mobile-frontend-language' => 'שפּראַך',
 	'mobile-frontend-username' => 'באַניצער נאָמען:',
 	'mobile-frontend-password' => 'פאסווארט:',
+	'mobile-frontend-login' => 'אַרײַנלאגירן',
 );
 
 /** Yoruba (Yorùbá)
