@@ -496,6 +496,28 @@ class ExtMobileFrontend {
 		global $wgContLang, $wgRequest, $wgMemc, $wgUser, $wgConf;
 		wfProfileIn( __METHOD__ );
 
+		// Note: The WebRequest Class calls are made in this block because
+		// since PHP 5.1.x, all objects have their destructors called
+		// before the output buffer callback function executes.
+		// Thus, globalized objects will not be available as expected in the function.
+		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
+
+		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
+		self::$useFormat = $wgRequest->getText( 'useformat' );
+		$mobileAction = $wgRequest->getText( 'mobileaction' );
+		$action = $wgRequest->getText( 'action' );
+
+		if ( self::$useFormat !== 'mobile' && self::$useFormat !== 'mobile-wap' &&
+			!$xDevice ) {
+			wfProfileOut( __METHOD__ );
+			return true;
+		}
+		if ( $action === 'edit' ||
+			 $mobileAction === 'view_normal_site' ) {
+			wfProfileOut( __METHOD__ );
+			return true;
+		}
+
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		$uAmd5 = md5( $userAgent );
@@ -522,28 +544,6 @@ class ExtMobileFrontend {
 			}
 		} catch ( Exception $e ) {
 			// echo $e->getMessage();
-		}
-
-		// Note: The WebRequest Class calls are made in this block because
-		// since PHP 5.1.x, all objects have their destructors called
-		// before the output buffer callback function executes.
-		// Thus, globalized objects will not be available as expected in the function.
-		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
-
-		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
-		self::$useFormat = $wgRequest->getText( 'useformat' );
-		$mobileAction = $wgRequest->getText( 'mobileaction' );
-		$action = $wgRequest->getText( 'action' );
-
-		if ( self::$useFormat !== 'mobile' && self::$useFormat !== 'mobile-wap' &&
-			!$xDevice ) {
-			wfProfileOut( __METHOD__ );
-			return true;
-		}
-		if ( $action === 'edit' ||
-			 $mobileAction === 'view_normal_site' ) {
-			wfProfileOut( __METHOD__ );
-			return true;
 		}
 
 		self::$title = $out->getTitle();
