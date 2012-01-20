@@ -776,8 +776,14 @@ $messages['bg'] = array(
 	'mobile-frontend-opt-in-no-button' => 'не',
 	'mobile-frontend-opt-out-yes-button' => 'да',
 	'mobile-frontend-opt-out-no-button' => 'не',
+	'mobile-frontend-news-items' => 'В новините',
 	'mobile-frontend-leave-feedback-subject' => 'Тема',
 	'mobile-frontend-leave-feedback-message' => 'Съобщение',
+	'mobile-frontend-leave-feedback-cancel' => 'Отказване',
+	'mobile-frontend-language' => 'Език',
+	'mobile-frontend-username' => 'Потребителско име:',
+	'mobile-frontend-password' => 'Парола:',
+	'mobile-frontend-login' => 'Влизане',
 );
 
 /** Bihari (भोजपुरी) */
@@ -4018,6 +4024,7 @@ $messages['ml'] = array(
 	'mobile-frontend-password' => 'രഹസ്യവാക്ക്:',
 	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-placeholder' => 'തിരയേണ്ട വാക്ക് നൽകുക...',
+	'mobile-frontend-dismiss-notification' => 'ഈ അറിയിപ്പ് ഒഴിവാക്കുക',
 );
 
 /** Mongolian (Монгол) */
@@ -6680,6 +6687,7 @@ $messages['vi'] = array(
 	'mobile-frontend-password' => 'Mật khẩu:',
 	'mobile-frontend-login' => 'Đăng nhập',
 	'mobile-frontend-placeholder' => 'Nhập tìm kiếm của bạn tại đây…',
+	'mobile-frontend-dismiss-notification' => 'bỏ qua thông báo này',
 );
 
 /** Volapük (Volapük)
