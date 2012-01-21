@@ -3621,6 +3621,7 @@ $messages['lb'] = array(
 	'mobile-frontend-password' => 'Passwuert:',
 	'mobile-frontend-login' => 'Aloggen',
 	'mobile-frontend-placeholder' => 'Tippt hei a wat Dir sicht...',
+	'mobile-frontend-dismiss-notification' => 'dës Noriicht zoumaachen',
 );
 
 /** Lezghian (Лезги) */
@@ -5782,6 +5783,7 @@ $messages['sl'] = array(
 	'mobile-frontend-password' => 'Geslo:',
 	'mobile-frontend-login' => 'Prijava',
 	'mobile-frontend-placeholder' => 'Vnesite svoj iskalni niz tukaj ...',
+	'mobile-frontend-dismiss-notification' => 'skrij obvestilo',
 );
 
 /** Albanian (Shqip)
