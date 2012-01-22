@@ -493,7 +493,7 @@ class ExtMobileFrontend {
 	 * @return bool
 	 */
 	public function beforePageDisplayHTML( &$out, &$text ) {
-		global $wgContLang, $wgRequest, $wgMemc, $wgUser, $wgConf;
+		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
 		wfProfileIn( __METHOD__ );
 
 		// Note: The WebRequest Class calls are made in this block because
@@ -678,14 +678,6 @@ class ExtMobileFrontend {
 		$this->sendApplicationVersionVaryHeader();
 		$this->checkUserStatus();
 		$this->checkUserLoggedIn();
-
-		$DB = wfGetDB( DB_MASTER );
-		$DBName = $DB->getDBname();
-
-		list( $site, $lang ) = $wgConf->siteFromDB( $DBName );
-		if ( $site == 'wikipedia' && self::$code === 'en' ) {
-			self::$displayNoticeId = 2;
-		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
