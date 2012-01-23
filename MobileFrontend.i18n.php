@@ -2838,6 +2838,9 @@ $messages['id'] = array(
 	'mobile-frontend-leave-feedback' => 'Umpan balik situs seluler',
 	'mobile-frontend-leave-feedback-thanks' => 'Terima kasih, atas umpan balik Anda!',
 	'mobile-frontend-language' => 'Bahasa',
+	'mobile-frontend-username' => 'Nama pengguna:',
+	'mobile-frontend-password' => 'Kata sandi:',
+	'mobile-frontend-placeholder' => 'Ketikkan pencarian Anda di sini...',
 );
 
 /** Igbo (Igbo)
@@ -4353,7 +4356,7 @@ $messages['nds-nl'] = array(
 	'mobile-frontend-search-submit' => 'Artikel',
 	'mobile-frontend-search-results' => 'Zeukresultaoten',
 	'mobile-frontend-no-article-found' => 'Gien artikel evunnen',
-	'mobile-frontend-featured-article' => 'Artikel van vandage',
+	'mobile-frontend-featured-article' => 'Uutekeuzen artikel',
 	'mobile-frontend-in-the-news' => 'In t niejs',
 	'mobile-frontend-home-button' => 'Veurblad',
 	'mobile-frontend-random-button' => 'Zo mer wat',
@@ -4389,6 +4392,7 @@ Vorttemee zie'j hier t resultaot.",
 	'mobile-frontend-opt-out-title' => 'Stoppen mit testen',
 	'mobile-frontend-disable-images' => 'Aofbeeldingen in de mobiele weergave uutzetten',
 	'mobile-frontend-enable-images' => 'Aofbeeldingen in de mobiele weergave anzetten',
+	'mobile-frontend-news-items' => 'In t niejs',
 	'mobile-frontend-leave-feedback-subject' => 'Onderwarp:',
 	'mobile-frontend-leave-feedback-message' => 'Bericht',
 	'mobile-frontend-leave-feedback-cancel' => 'Aofbreken',
