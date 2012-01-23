@@ -91,6 +91,13 @@ $wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonic
  * See $itemsToRemove for more information.
  */
 $wgMFRemovableClasses = array();
+/**
+ * Make the logos configurable.
+ * Key for site.
+ * Key for logo.
+ * Example: array('site' => 'mysite', 'logo' => 'mysite_logo.png');
+ */
+$wgMFCustomLogos = array( array() );
 
 // Unit tests
 $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
@@ -236,6 +243,22 @@ class ExtMobileFrontend {
 		'#ogg_player_1',
 		'.nomobile',
 	);
+
+	/**
+	 * Work out the site and language name from a database name
+	 * @param $site string
+	 * @param $lang string
+	 * @return string
+	 */
+	public function getSite( &$site, &$lang ){
+		global $wgConf;
+		wfProfileIn( __METHOD__ );
+		$DB = wfGetDB( DB_MASTER );
+		$DBName = $DB->getDBname();
+		list( $site, $lang ) = $wgConf->siteFromDB( $DBName );
+		wfProfileOut( __METHOD__ );
+		return true;
+	}
 
 	/**
 	 * @param $request WebRequest
@@ -1727,15 +1750,22 @@ class ExtMobileFrontend {
 	 * Sets up the default logo image used in mobile view if none is set
 	 */
 	public function setDefaultLogo() {
-		global $wgMobileFrontendLogo, $wgExtensionAssetsPath, $wgDBname, $wgConf;
+		global $wgMobileFrontendLogo, $wgExtensionAssetsPath, $wgMFCustomLogos;
 		wfProfileIn( __METHOD__ );
 		if ( $wgMobileFrontendLogo === false ) {
 			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/images/mw.png';
 		}
+
 		if ( self::$isBetaGroupMember ) {
-			list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-			if ( $site == 'wikipedia' ) {
-				$wgMobileFrontendLogo = '//upload.wikimedia.org/wikipedia/commons/1/16/W_logo_for_beta_test_of_Mobile_Frontend.gif';
+			$this->getSite( $site, $lang );
+			if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos[0]['site'] ) ) {
+				foreach( $wgMFCustomLogos as $wgMFCustomLogo ) {
+					if ( isset( $wgMFCustomLogo['site'] ) && $site == $wgMFCustomLogo['site'] ) {
+						if ( isset( $wgMFCustomLogo['logo'] ) ) {
+							$wgMobileFrontendLogo = $wgMFCustomLogo['logo'];
+						}
+					}
+				}
 			}
 		}
 		wfProfileOut( __METHOD__ );
