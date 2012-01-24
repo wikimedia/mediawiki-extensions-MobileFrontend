@@ -1660,6 +1660,6 @@ class ExtMobileFrontend {
 	}
 	
 	public function getVersion() {
-		return __CLASS__ . ': $Id: MobileFrontend.php 109882 2012-01-24 00:29:25Z preilly $';
+		return __CLASS__ . ': $Id$';
 	}
 }
