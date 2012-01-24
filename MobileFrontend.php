@@ -250,7 +250,7 @@ class ExtMobileFrontend {
 	 * @param $lang string
 	 * @return string
 	 */
-	public function getSite( &$site, &$lang ){
+	public function getSite( &$site, &$lang ) {
 		global $wgConf;
 		wfProfileIn( __METHOD__ );
 		$DB = wfGetDB( DB_MASTER );
@@ -1610,11 +1610,11 @@ class ExtMobileFrontend {
 				}
 			}
 
-			if ( !empty( self::$displayNoticeId ) ) {	 
-				if ( intval( self::$displayNoticeId ) === 2 ) {	 
-					$sopaNoticeTemplate = new SopaNoticeTemplate();	 
-					$sopaNoticeTemplate->set( 'messages', self::$messages );	 
-					$noticeHtml = $sopaNoticeTemplate->getHTML();	 
+			if ( !empty( self::$displayNoticeId ) ) {
+				if ( intval( self::$displayNoticeId ) === 2 ) {
+					$sopaNoticeTemplate = new SopaNoticeTemplate();
+					$sopaNoticeTemplate->set( 'messages', self::$messages );
+					$noticeHtml = $sopaNoticeTemplate->getHTML();
 				}
 			}
 
@@ -1759,7 +1759,7 @@ class ExtMobileFrontend {
 		if ( self::$isBetaGroupMember ) {
 			$this->getSite( $site, $lang );
 			if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos[0]['site'] ) ) {
-				foreach( $wgMFCustomLogos as $wgMFCustomLogo ) {
+				foreach ( $wgMFCustomLogos as $wgMFCustomLogo ) {
 					if ( isset( $wgMFCustomLogo['site'] ) && $site == $wgMFCustomLogo['site'] ) {
 						if ( isset( $wgMFCustomLogo['logo'] ) ) {
 							$wgMobileFrontendLogo = $wgMFCustomLogo['logo'];
