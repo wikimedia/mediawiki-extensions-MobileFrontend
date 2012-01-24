@@ -6888,6 +6888,7 @@ $messages['yue'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Anakmalaysia
+ * @author Hzy980512
  * @author Kuailong
  * @author Liangent
  * @author PhiLiP
@@ -6953,6 +6954,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-password' => '密码：',
 	'mobile-frontend-login' => '登录',
 	'mobile-frontend-placeholder' => '在这里输入搜索内容...',
+	'mobile-frontend-dismiss-notification' => '关闭该通知',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
