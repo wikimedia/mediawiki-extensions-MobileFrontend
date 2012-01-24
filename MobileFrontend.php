@@ -1,11 +1,11 @@
 <?php
 /**
- * Extension MobileFrontend â€” Mobile Frontend
+ * Extension MobileFrontend — Mobile Frontend
  *
  * @file
  * @ingroup Extensions
  * @author Patrick Reilly
- * @copyright Â© 2011 Patrick Reilly
+ * @copyright © 2011 Patrick Reilly
  * @licence GNU General Public Licence 2.0 or later
  */
 
