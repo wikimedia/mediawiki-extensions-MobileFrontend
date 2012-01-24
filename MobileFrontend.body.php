@@ -1658,7 +1658,7 @@ class ExtMobileFrontend {
 		}
 		wfProfileOut( __METHOD__ );
 	}
-	
+
 	public function getVersion() {
 		return __CLASS__ . ': $Id$';
 	}
