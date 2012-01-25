@@ -918,6 +918,7 @@ $messages['br'] = array(
 	'mobile-frontend-password' => 'Ger-tremen :',
 	'mobile-frontend-login' => 'Kevreañ',
 	'mobile-frontend-placeholder' => 'Merkit ar pezh a glaskit amañ...',
+	'mobile-frontend-dismiss-notification' => 'disteuler ar gemennadenn-mañ',
 );
 
 /** Bosnian (Bosanski)
