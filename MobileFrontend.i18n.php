@@ -616,6 +616,7 @@ $messages['ba'] = array(
 
 /** Bavarian (Boarisch)
  * @author Mucalexx
+ * @author Schläsinger
  */
 $messages['bar'] = array(
 	'mobile-frontend-search-results' => 'Suachergebniss',
@@ -633,7 +634,7 @@ $messages['bar'] = array(
 	'mobile-frontend-perm-stop-redirect' => 'Dé móbile Versión fyr oiwei deaktivirn',
 	'mobile-frontend-error-page-title' => 'Es gibt a Próblém!',
 	'mobile-frontend-error-page-text' => "Dé móbile Auhsicht voh {{SITENAME}} befindt sé noh in da Entwicklung und mia bemian ins, noh bsteehende interne Feeler z' behém. Mir san ywer dén Feeler informird worn und werns Próblém in Kyrze lésen. Bittscheh vasuachs spaader nohamoi.",
-	'mobile-frontend-are-you-sure' => 'Bist sicha?',
+	'mobile-frontend-are-you-sure' => 'Best du dir sicher?',
 	'mobile-frontend-explain-disable' => "Bist da dert sicher, daas du dé móbile Auhsicht voh {{SITENAME}} deaktiviern mechterst? Waunn du <b>Deaktiviern</b> wöst, werst ob iatz ba am Bsuach voh {{SITENAME}} nimmer autómaatisch auf d' móbile Auhsicht voh {{SITENAME}} weidergloatt.",
 	'mobile-frontend-nav-end' => 'End',
 	'mobile-frontend-nav-top' => 'Ofang',
@@ -705,7 +706,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-file-namespace' => 'Файл',
 	'mobile-frontend-wml-continue' => 'Далей …',
 	'mobile-frontend-wml-back' => 'Вярнуцца …',
-	'mobile-frontend-view' => 'Выгляд для мабільнага тэлефона',
+	'mobile-frontend-view' => 'Мабільная вэрсія',
 	'mobile-frontend-opt-in-message' => 'Далучыцца да праверкі бэта-вэрсіі мабільнага інтэрфэйсу?',
 	'mobile-frontend-opt-in-yes-button' => 'так',
 	'mobile-frontend-opt-in-no-button' => 'не',
@@ -4412,24 +4413,24 @@ Vorttemee zie'j hier t resultaot.",
  * @author RajeshPandey
  */
 $messages['ne'] = array(
-	'mobile-frontend-search-submit' => 'जाने \\',
+	'mobile-frontend-search-submit' => 'जाउ',
 	'mobile-frontend-search-results' => 'खोज नतिजाहरु',
 	'mobile-frontend-no-article-found' => 'कुनै पनि सामग्री भेटिएन',
 	'mobile-frontend-featured-article' => 'आजको जोडदिएको लेख',
-	'mobile-frontend-in-the-news' => 'समाचारमा \\',
-	'mobile-frontend-home-button' => 'गृह \\',
+	'mobile-frontend-in-the-news' => 'समाचारमा',
+	'mobile-frontend-home-button' => 'गृह',
 	'mobile-frontend-random-button' => 'कुनै पनि एक',
-	'mobile-frontend-back-to-top-of-section' => 'एक खण्ड पछाडि जाने \\',
+	'mobile-frontend-back-to-top-of-section' => 'एक खण्ड पछाडि जाने',
 	'mobile-frontend-show-button' => 'देखाउने',
-	'mobile-frontend-hide-button' => 'लुकाउने \\',
-	'mobile-frontend-disable-button' => 'निष्क्रिय',
+	'mobile-frontend-hide-button' => 'लुकाउने',
+	'mobile-frontend-disable-button' => 'निष्क्रिय पार',
 	'mobile-frontend-back-button' => 'पछाडि',
-	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित विकिपीडियामा हेर्ने',
-	'mobile-frontend-perm-stop-redirect' => 'मोबाइल साइट स्थाइरुमा असक्षम पार्ने',
-	'mobile-frontend-error-page-title' => 'हामीलाई समस्या आइरेको छ।',
-	'mobile-frontend-error-page-text' => 'विकिपीडिया मोबाइल अझै विकासको क्रममा नै रहेको छ र सबै आन्तरिक त्रुटिहरु सच्याउनामा हामी लागि परेका छौँ । यस त्रुटिका बारेमा हामीलाई जानकारी गराइएको छ र निकट भविष्यमा नै सच्याइने छ । कृपया पुन जाँच गर्नुहोला ।',
+	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित {{SITENAME}}मा हेर्ने',
+	'mobile-frontend-perm-stop-redirect' => 'मोबाइल साइटलाइ स्थाइरुपमा असक्षम पार्ने',
+	'mobile-frontend-error-page-title' => 'हामीलाई समस्या आइपरेको छ!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} मोबाइल अझै पनि विकासको क्रममा नै रहेको छ र सबै आन्तरिक त्रुटिहरु सच्याउनामा हामी लागि परेका छौँ । यस त्रुटिका बारेमा हामीलाई जानकारी गराइएको छ र निकट भविष्यमा नै सच्याउने छौं। कृपया पुन जाँच गर्नुहोला ।',
 	'mobile-frontend-are-you-sure' => 'पक्का हो?',
-	'mobile-frontend-explain-disable' => 'के तपाइ साँच्चिकै विकिपीडियाको मोबाइल भर्सनलाइ निष्क्रिय पार्न चाहनुहुन्छ? यदि तपाइले <b>निष्क्रिय</b> छान्नुभयो भने, अर्को पल्टदेखि जब तपाइ विकिपीडियामा आउनुहुन्छ, तब तपाइलाइ यस विकिपीडियाको मोबाइल भर्सनमा पठाइने छैन।',
+	'mobile-frontend-explain-disable' => 'के तपाइ साँच्चिकै {{SITENAME}}को मोबाइल भर्जनलाइ निष्क्रिय पार्न चाहनुहुन्छ? यदि तपाइले <b>निष्क्रिय</b> छान्नुभयो भने, अर्को पल्टदेखि जब तपाइ {{SITENAME}}मा आउनुहुन्छ, तब तपाइलाइ यस {{SITENAME}}को मोबाइल भर्जनमा पठाइने छैन।',
 	'mobile-frontend-nav-end' => 'अन्त',
 	'mobile-frontend-nav-top' => 'शीर्ष',
 	'mobile-frontend-nav-edit' => 'सम्पादन',
@@ -4439,6 +4440,7 @@ $messages['ne'] = array(
 	'mobile-frontend-author-link' => 'ग्रन्थकारिता, लाइसेन्स, तथा अतिरिक्त विवरण को बारेमा जान्न लाइ नियमित विकिपिडीयामा यो मेडिया फाइल हेर्नुहोस ।',
 	'mobile-frontend-download-full-version' => 'पुरा भर्सन डाउनलोड',
 	'mobile-frontend-file-namespace' => 'फाइल',
+	'mobile-frontend-username' => 'प्रयोगकर्ता नाम:',
 );
 
 /** Dutch (Nederlands)
