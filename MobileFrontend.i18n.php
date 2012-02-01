@@ -1378,6 +1378,7 @@ $messages['de-formal'] = array(
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Mirzali
  */
 $messages['diq'] = array(
 	'mobile-frontend-search-submit' => 'Şo',
@@ -1387,7 +1388,7 @@ $messages['diq'] = array(
 	'mobile-frontend-nav-end' => 'Pey',
 	'mobile-frontend-nav-top' => 'Ser',
 	'mobile-frontend-nav-edit' => 'Bıvurne',
-	'mobile-frontend-search-text' => 'Cıgeyrê',
+	'mobile-frontend-search-text' => 'Cı geyre',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -1607,6 +1608,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Crazymadlover
  * @author Fitoschido
  * @author Imre
@@ -1647,25 +1649,30 @@ $messages['es'] = array(
 	'mobile-frontend-opt-in-message' => '¿Quieres unirte a nuestras pruebas de la nueva interfaz móvil?',
 	'mobile-frontend-opt-in-yes-button' => 'sí',
 	'mobile-frontend-opt-in-no-button' => 'no',
-	'mobile-frontend-opt-in-explain' => 'Esto te permite ingresar a las pruebas',
-	'mobile-frontend-opt-out-message' => '¿Quieres dejar las pruebas de la nueva interfaz móvil?',
+	'mobile-frontend-opt-in-title' => 'Suscribirse a prueba beta móvil',
+	'mobile-frontend-opt-in-explain' => 'Al probar la versión beta, obtendrá acceso a características experimentales, con el riesgo de encontrarse con errores y problemas.',
+	'mobile-frontend-opt-out-message' => '¿Quieres dejar las pruebas beta de la nueva interfaz móvil?',
 	'mobile-frontend-opt-out-yes-button' => 'sí',
 	'mobile-frontend-opt-out-no-button' => 'no',
-	'mobile-frontend-opt-out-explain' => 'Esto te permite dejar las pruebas',
+	'mobile-frontend-opt-out-title' => 'Abandonar la prueba beta móvil',
+	'mobile-frontend-opt-out-explain' => 'Abandonando la prueba beta móvil, desactivarás todas las funciones experimentales y retornarás a la interfaz móvil clásica.',
 	'mobile-frontend-disable-images' => 'Desactivar imágenes en la versión para móviles',
 	'mobile-frontend-enable-images' => 'Activar imágenes en la versión para móviles',
 	'mobile-frontend-news-items' => 'Actualidad',
 	'mobile-frontend-leave-feedback-title' => 'Informarnos de tu experiencia en en el sitio para móviles.',
+	'mobile-frontend-leave-feedback-notice' => 'Sus comentarios nos ayudan a mejorar su experiencia del sitio móvil. Serán publicados en sitio accesible (junto con su nombre de usuario, versión del navegador y sistema operativo) en la página "$1". Intente elegir una línea informativa del tema, por ejemplo, "Formateando contenidos con tablas de gran anchura". Sus comentarios está sujetos a nuestros términos de uso.',
 	'mobile-frontend-leave-feedback-subject' => 'Asunto',
 	'mobile-frontend-leave-feedback-message' => 'Mensaje',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancelar',
 	'mobile-frontend-leave-feedback-submit' => 'Enviar comentarios',
+	'mobile-frontend-leave-feedback' => 'Comentarios sobre el sitio móvil',
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracias por tu comentario!',
 	'mobile-frontend-language' => 'Idioma',
 	'mobile-frontend-username' => 'Nombre de usuario:',
 	'mobile-frontend-password' => 'Contraseña:',
 	'mobile-frontend-login' => 'Iniciar sesión',
 	'mobile-frontend-placeholder' => 'Introduzca su búsqueda...',
+	'mobile-frontend-dismiss-notification' => 'Rechazar esta notificación',
 );
 
 /** Estonian (Eesti)
@@ -6383,6 +6390,7 @@ $messages['tpi'] = array(
 /** Turkish (Türkçe)
  * @author Cekli829
  * @author Emperyan
+ * @author Incelemeelemani
  */
 $messages['tr'] = array(
 	'mobile-frontend-search-submit' => 'Git',
@@ -6418,14 +6426,19 @@ $messages['tr'] = array(
 	'mobile-frontend-opt-in-no-button' => 'hayır',
 	'mobile-frontend-opt-out-yes-button' => 'Evet',
 	'mobile-frontend-opt-out-no-button' => 'Hayır',
+	'mobile-frontend-leave-feedback-subject' => 'Konu',
+	'mobile-frontend-leave-feedback-cancel' => 'İptal',
 	'mobile-frontend-language' => 'Dil',
 	'mobile-frontend-username' => 'Kullanıcı adı:',
 	'mobile-frontend-password' => 'Şifre:',
 	'mobile-frontend-login' => 'Oturum aç',
 );
 
-/** Tatar (Cyrillic script) (Татарча) */
+/** Tatar (Cyrillic script) (Татарча)
+ * @author Ильнар
+ */
 $messages['tt-cyrl'] = array(
+	'mobile-frontend-desc' => 'Мобиль интерфейс',
 	'mobile-frontend-search-submit' => 'Күчү',
 	'mobile-frontend-search-results' => 'Эзләү нәтиҗәләре',
 	'mobile-frontend-no-article-found' => 'Мәкаләләр табылмаган',
@@ -6438,21 +6451,22 @@ $messages['tt-cyrl'] = array(
 	'mobile-frontend-hide-button' => 'Яшерү',
 	'mobile-frontend-disable-button' => 'Сүндерергә',
 	'mobile-frontend-back-button' => 'Артка',
-	'mobile-frontend-regular-site' => 'Сәхифәне гади Википедиядә карау',
+	'mobile-frontend-regular-site' => 'Сәхифәне гади {{SITENAME}} сәхифәсендә карау',
 	'mobile-frontend-perm-stop-redirect' => 'Кесә телефоны өчен сайтны сүндерергә',
-	'mobile-frontend-error-page-title' => 'Бездә проблема!',
-	'mobile-frontend-error-page-text' => 'Мобиль Википедия әле актив җитештерү стадиясендә, һәм без эчке хаталарны төзәтүгә бөтен көчләребезне куябыз. Без бу хата турында хәбәрдар булдык, һәм аны тиздән төзәтәчәкбез. Зинһар, бераз вакыттан соң тикшерегез!',
+	'mobile-frontend-error-page-title' => 'Бездә кыенлыклар килеп туды!',
+	'mobile-frontend-error-page-text' => 'Мобиль {{SITENAME}} әле актив җитештерү стадиясендә, һәм без эчке хаталарны төзәтүгә бөтен көчләребезне куябыз. Без бу хата турында хәбәрдар булдык, һәм аны тиздән төзәтәчәкбез. Зинһар, бераз вакыттан соң тикшерегез!',
 	'mobile-frontend-are-you-sure' => 'Шигегез юкмы?',
-	'mobile-frontend-explain-disable' => 'Сез Википедиянең мобиль версиясен чыннап сүндерергә телисезме? Әгәр сез <b>Сүндерергә</b> төймәсен сайласагыз, киләсе тапкыр Википедиягә кергәндә, Сез мобиль версиягә автоматик рәвештә юнәлтелмәячәксез.',
+	'mobile-frontend-explain-disable' => 'Сез {{SITENAME}}нең мобиль версиясен чыннап сүндерергә телисезме? Әгәр сез <b>Сүндерергә</b> төймәсен сайласагыз, киләсе тапкыр Википедиягә кергәндә, Сез мобиль версиягә автоматик рәвештә юнәлтелмәячәксез.',
 	'mobile-frontend-nav-end' => 'Ахырга',
 	'mobile-frontend-nav-top' => 'Эскә',
 	'mobile-frontend-nav-edit' => 'Төзәтергә',
 	'mobile-frontend-nav-history' => 'Тарих',
 	'mobile-frontend-search-text' => 'Эзләү',
 	'mobile-frontend-contact-us' => 'Әгәр сездә сораулар булса, безгә mobile@wikipedia.org адресына языгыз.',
-	'mobile-frontend-author-link' => 'Әлеге медиа-файлны гади Википедия бизәлешендә карыгыз. Анда бу файлның авторлыгы, лицензиясе һәм башка мәгълүматлары бирелгән.',
+	'mobile-frontend-author-link' => 'Әлеге медиа-файлны гади {{SITENAME}} бизәлешендә карыгыз. Анда бу файлның авторлыгы, лицензиясе һәм башка мәгълүматлары бирелгән.',
 	'mobile-frontend-download-full-version' => 'Тулы юраманы алу',
 	'mobile-frontend-file-namespace' => 'Файл',
+	'mobile-frontend-view' => 'Мобиль юрама',
 );
 
 /** Uyghur (Arabic script) (ئۇيغۇرچە) */
