@@ -508,7 +508,7 @@ $messages['ast'] = array(
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracies polos tos comentarios!',
 	'mobile-frontend-language' => 'Llingua',
 	'mobile-frontend-username' => "Nome d'usuariu:",
-	'mobile-frontend-password' => 'Contraseña:',
+	'mobile-frontend-password' => 'Conseña:',
 	'mobile-frontend-login' => 'Entrar',
 	'mobile-frontend-placeholder' => 'Escribi equí la gueta...',
 	'mobile-frontend-dismiss-notification' => 'anubrir esta notificación',
@@ -1665,6 +1665,7 @@ $messages['es'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Mensaje',
 	'mobile-frontend-leave-feedback-cancel' => 'Cancelar',
 	'mobile-frontend-leave-feedback-submit' => 'Enviar comentarios',
+	'mobile-frontend-leave-feedback-link-text' => 'Comentarios de la extensión de interfaz de usuario móvil',
 	'mobile-frontend-leave-feedback' => 'Comentarios sobre el sitio móvil',
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracias por tu comentario!',
 	'mobile-frontend-language' => 'Idioma',
@@ -2304,14 +2305,42 @@ $messages['gsw'] = array(
 );
 
 /** Gujarati (ગુજરાતી)
+ * @author KartikMistry
  * @author Tekina
  */
 $messages['gu'] = array(
+	'mobile-frontend-search-submit' => 'જાઓ',
 	'mobile-frontend-search-results' => 'શોધના પરિણામ',
 	'mobile-frontend-no-article-found' => 'કોઇ લેખ નથી મળતો',
 	'mobile-frontend-featured-article' => 'આજનો વિશેષ લેખ',
+	'mobile-frontend-in-the-news' => 'સમાચારમાં',
+	'mobile-frontend-home-button' => 'ઘર',
+	'mobile-frontend-show-button' => 'બતાવો',
+	'mobile-frontend-hide-button' => 'છુપાવો',
 	'mobile-frontend-regular-site' => 'આ લેખને {{SITENAME}} પર જુવો',
 	'mobile-frontend-error-page-title' => 'અમે મુશ્કેલીમાં છીએ',
+	'mobile-frontend-nav-end' => 'અંત',
+	'mobile-frontend-nav-top' => 'ટોચ',
+	'mobile-frontend-nav-history' => 'ઇતિહાસ',
+	'mobile-frontend-search-text' => 'શોધ',
+	'mobile-frontend-file-namespace' => 'ફાઇલ',
+	'mobile-frontend-view' => 'મોબાઈલ દેખાવ',
+	'mobile-frontend-opt-in-message' => 'મોબાઈલ બીટામાં જોડાશો?',
+	'mobile-frontend-opt-in-yes-button' => 'હા',
+	'mobile-frontend-opt-in-no-button' => 'ના',
+	'mobile-frontend-opt-out-yes-button' => 'હા',
+	'mobile-frontend-opt-out-no-button' => 'ના',
+	'mobile-frontend-news-items' => 'સમાચારમાં',
+	'mobile-frontend-leave-feedback-subject' => 'વિષય',
+	'mobile-frontend-leave-feedback-message' => 'સંદેશ',
+	'mobile-frontend-leave-feedback-cancel' => 'રદ કરો',
+	'mobile-frontend-leave-feedback' => 'મોબાઈલ સાઈટ પ્રતિભાવ',
+	'mobile-frontend-leave-feedback-thanks' => 'તમારા પ્રતિભાવ માટે, આભાર!',
+	'mobile-frontend-language' => 'ભાષા',
+	'mobile-frontend-username' => 'સભ્યનામ:',
+	'mobile-frontend-password' => 'પાસવર્ડ:',
+	'mobile-frontend-login' => 'પ્રવેશ કરો',
+	'mobile-frontend-placeholder' => 'તમારી શોધ અહીં લખો...',
 );
 
 /** Manx (Gaelg) */
