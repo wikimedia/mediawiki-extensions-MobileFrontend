@@ -79,12 +79,18 @@ $wgMobileDomain = '.m.';
  */
 $wgMobileRedirectFormAction = false;
 
-$wgExtMobileFrontend = new ExtMobileFrontend();
+$wgExtMobileFrontend = null;
 
-$wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
-$wgHooks['BeforePageRedirect'][] = array( &$wgExtMobileFrontend, 'beforePageRedirect' );
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
-$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
+$wgExtensionFunctions[] = 'efMobileFrontend_Setup';
+
+function efMobileFrontend_Setup() {
+	global $wgExtMobileFrontend, $wgHooks;
+	$wgExtMobileFrontend = new ExtMobileFrontend();
+	$wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
+	$wgHooks['BeforePageRedirect'][] = array( &$wgExtMobileFrontend, 'beforePageRedirect' );
+	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
+	$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
+}
 
 /**
  * Make the classes, tags and ids stripped from page content configurable.
