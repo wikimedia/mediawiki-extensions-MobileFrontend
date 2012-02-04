@@ -2306,6 +2306,7 @@ $messages['gsw'] = array(
 
 /** Gujarati (ગુજરાતી)
  * @author KartikMistry
+ * @author Sushant savla
  * @author Tekina
  */
 $messages['gu'] = array(
@@ -2315,25 +2316,40 @@ $messages['gu'] = array(
 	'mobile-frontend-featured-article' => 'આજનો વિશેષ લેખ',
 	'mobile-frontend-in-the-news' => 'સમાચારમાં',
 	'mobile-frontend-home-button' => 'ઘર',
+	'mobile-frontend-random-button' => 'ગમે તે',
+	'mobile-frontend-back-to-top-of-section' => 'વિભાગ પર પાછાં જાઓ',
 	'mobile-frontend-show-button' => 'બતાવો',
 	'mobile-frontend-hide-button' => 'છુપાવો',
+	'mobile-frontend-disable-button' => 'નિષ્ક્રિય',
+	'mobile-frontend-back-button' => 'પાછાં જાવ',
 	'mobile-frontend-regular-site' => 'આ લેખને {{SITENAME}} પર જુવો',
+	'mobile-frontend-perm-stop-redirect' => 'કાયમી ધોરણે નિસ્ક્રીય કરાયેલ મોબાઇલ સાઈટ',
 	'mobile-frontend-error-page-title' => 'અમે મુશ્કેલીમાં છીએ',
+	'mobile-frontend-are-you-sure' => 'શું તમે ચોક્કસ છો?',
 	'mobile-frontend-nav-end' => 'અંત',
 	'mobile-frontend-nav-top' => 'ટોચ',
+	'mobile-frontend-nav-edit' => 'ફેરફાર કરો',
 	'mobile-frontend-nav-history' => 'ઇતિહાસ',
 	'mobile-frontend-search-text' => 'શોધ',
+	'mobile-frontend-download-full-version' => 'સંપૂર્ણ આવૃત્તિ ડાઉનલોડ કરો',
 	'mobile-frontend-file-namespace' => 'ફાઇલ',
+	'mobile-frontend-wml-continue' => 'ચાલુ રાખો...',
+	'mobile-frontend-wml-back' => 'પાછાં જાઓ...',
 	'mobile-frontend-view' => 'મોબાઈલ દેખાવ',
 	'mobile-frontend-opt-in-message' => 'મોબાઈલ બીટામાં જોડાશો?',
 	'mobile-frontend-opt-in-yes-button' => 'હા',
 	'mobile-frontend-opt-in-no-button' => 'ના',
+	'mobile-frontend-opt-out-message' => 'મોબાઈલ બીટામાંથી બહાર નીકળશો?',
 	'mobile-frontend-opt-out-yes-button' => 'હા',
 	'mobile-frontend-opt-out-no-button' => 'ના',
+	'mobile-frontend-disable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો નિષ્ક્રિય કરો',
+	'mobile-frontend-enable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો',
 	'mobile-frontend-news-items' => 'સમાચારમાં',
+	'mobile-frontend-leave-feedback-title' => 'તમારા મોબાઈલ સાઈટના અનુભવ વિશે પ્રતિભાવ આપો',
 	'mobile-frontend-leave-feedback-subject' => 'વિષય',
 	'mobile-frontend-leave-feedback-message' => 'સંદેશ',
 	'mobile-frontend-leave-feedback-cancel' => 'રદ કરો',
+	'mobile-frontend-leave-feedback-submit' => 'પ્રતિભાવ આપો',
 	'mobile-frontend-leave-feedback' => 'મોબાઈલ સાઈટ પ્રતિભાવ',
 	'mobile-frontend-leave-feedback-thanks' => 'તમારા પ્રતિભાવ માટે, આભાર!',
 	'mobile-frontend-language' => 'ભાષા',
