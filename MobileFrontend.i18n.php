@@ -2310,6 +2310,7 @@ $messages['gsw'] = array(
  * @author Tekina
  */
 $messages['gu'] = array(
+	'mobile-frontend-desc' => 'મોબાઈલ દેખાવ',
 	'mobile-frontend-search-submit' => 'જાઓ',
 	'mobile-frontend-search-results' => 'શોધના પરિણામ',
 	'mobile-frontend-no-article-found' => 'કોઇ લેખ નથી મળતો',
@@ -2357,6 +2358,7 @@ $messages['gu'] = array(
 	'mobile-frontend-password' => 'પાસવર્ડ:',
 	'mobile-frontend-login' => 'પ્રવેશ કરો',
 	'mobile-frontend-placeholder' => 'તમારી શોધ અહીં લખો...',
+	'mobile-frontend-dismiss-notification' => 'આ સૂચના રદ્દ કરો',
 );
 
 /** Manx (Gaelg) */
