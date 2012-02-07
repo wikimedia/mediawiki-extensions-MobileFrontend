@@ -1125,7 +1125,7 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @param DOMNode $mainPage
+	 * @param DOMDocument $mainPage
 	 * @return string
 	 */
 	public function DOMParseMainPage( DOMDocument $mainPage ) {
