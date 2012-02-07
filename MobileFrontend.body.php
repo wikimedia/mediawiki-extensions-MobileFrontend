@@ -6,7 +6,7 @@ class ExtMobileFrontend {
 	/**
 	 * @var DOMDocument
 	 */
-	private $doc, $mainPage;
+	private $doc;
 	public $contentFormat = '';
 	public $WMLSectionSeperator = '***************************************************************************';
 
@@ -711,7 +711,7 @@ class ExtMobileFrontend {
 			$domainParts = array_reverse( $domainParts );
 			// Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included.
 			wfProfileOut( __METHOD__ );
-			return '.' . $domainParts[1] . '.' . $domainParts[0];
+			return count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $_SERVER['HTTP_HOST'];
 		}
 		wfProfileOut( __METHOD__ );
 		return $_SERVER['HTTP_HOST'];
@@ -1125,32 +1125,22 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @param $html string
+	 * @param DOMNode $mainPage
 	 * @return string
 	 */
-	public function DOMParseMainPage( $html ) {
+	public function DOMParseMainPage( DOMDocument $mainPage ) {
 		wfProfileIn( __METHOD__ );
-		$html = mb_convert_encoding( $html, 'HTML-ENTITIES', "UTF-8" );
-		libxml_use_internal_errors( true );
-		$this->mainPage = new DOMDocument();
-		// It seems that loadhtml() does not "attach" the html dtd that defines id as an id-attribute to the DOM.
-		$this->mainPage->loadHTML( '<?xml encoding="UTF-8"><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-									<html><head><title></title></head><body>' . $html . '</body></html>' );
-		libxml_use_internal_errors( false );
-		$this->mainPage->preserveWhiteSpace = false;
-		$this->mainPage->strictErrorChecking = false;
-		$this->mainPage->encoding = 'UTF-8';
 
-		$zeroLandingPage = $this->mainPage->getElementById( 'zero-landing-page' );
-		$featuredArticle = $this->mainPage->getElementById( 'mp-tfa' );
-		$newsItems = $this->mainPage->getElementById( 'mp-itn' );
+		$zeroLandingPage = $mainPage->getElementById( 'zero-landing-page' );
+		$featuredArticle = $mainPage->getElementById( 'mp-tfa' );
+		$newsItems = $mainPage->getElementById( 'mp-itn' );
 
-		$xpath = new DOMXpath( $this->mainPage );
+		$xpath = new DOMXpath( $mainPage );
 		$elements = $xpath->query( '//*[starts-with(@id, "mf-")]' );
 
 		$commonAttributes = array( 'mp-tfa', 'mp-itn' );
 
-		$content = $this->mainPage->createElement( 'div' );
+		$content = $mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'content' );
 
 		if ( $zeroLandingPage ) {
@@ -1158,13 +1148,13 @@ class ExtMobileFrontend {
 		}
 
 		if ( $featuredArticle ) {
-			$h2FeaturedArticle = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-featured-article'] );
+			$h2FeaturedArticle = $mainPage->createElement( 'h2', self::$messages['mobile-frontend-featured-article'] );
 			$content->appendChild( $h2FeaturedArticle );
 			$content->appendChild( $featuredArticle );
 		}
 
 		if ( $newsItems ) {
-			$h2NewsItems = $this->mainPage->createElement( 'h2', self::$messages['mobile-frontend-news-items'] );
+			$h2NewsItems = $mainPage->createElement( 'h2', self::$messages['mobile-frontend-news-items'] );
 			$content->appendChild( $h2NewsItems );
 			$content->appendChild( $newsItems );
 		}
@@ -1174,8 +1164,8 @@ class ExtMobileFrontend {
 				$id = $element->getAttribute( 'id' );
 				if ( !in_array( $id, $commonAttributes ) ) {
 					$elementTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
-					$h2UnknownMobileSection = $this->mainPage->createElement( 'h2', $elementTitle );
-					$br = $this->mainPage->createElement( 'br' );
+					$h2UnknownMobileSection = $mainPage->createElement( 'h2', $elementTitle );
+					$br = $mainPage->createElement( 'br' );
 					$br->setAttribute( 'CLEAR', 'ALL' );
 					$content->appendChild( $h2UnknownMobileSection );
 					$content->appendChild( $element );
@@ -1184,7 +1174,7 @@ class ExtMobileFrontend {
 			}
 		}
 
-		$contentHtml = $this->mainPage->saveXML( $content, LIBXML_NOEMPTYTAG );
+		$contentHtml = $mainPage->saveXML( $content, LIBXML_NOEMPTYTAG );
 		wfProfileOut( __METHOD__ );
 		return $contentHtml;
 	}
@@ -1443,12 +1433,11 @@ class ExtMobileFrontend {
 			}
 		}
 
-		$content = $this->doc->getElementById( 'content' );
-
-		$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
-
 		if ( self::$isMainPage ) {
-			$contentHtml = $this->DOMParseMainPage( $contentHtml );
+			$contentHtml = $this->DOMParseMainPage( $this->doc );
+		} else {
+			$content = $this->doc->getElementById( 'content' );
+			$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
 		}
 
 		$title = htmlspecialchars( self::$title->getText() );
