@@ -2305,6 +2305,7 @@ $messages['gsw'] = array(
 );
 
 /** Gujarati (ગુજરાતી)
+ * @author Dsvyas
  * @author KartikMistry
  * @author Sushant savla
  * @author Tekina
@@ -2340,9 +2341,11 @@ $messages['gu'] = array(
 	'mobile-frontend-opt-in-message' => 'મોબાઈલ બીટામાં જોડાશો?',
 	'mobile-frontend-opt-in-yes-button' => 'હા',
 	'mobile-frontend-opt-in-no-button' => 'ના',
+	'mobile-frontend-opt-in-title' => 'મોબાઈલ બિટામાં ભાગ લો',
 	'mobile-frontend-opt-out-message' => 'મોબાઈલ બીટામાંથી બહાર નીકળશો?',
 	'mobile-frontend-opt-out-yes-button' => 'હા',
 	'mobile-frontend-opt-out-no-button' => 'ના',
+	'mobile-frontend-opt-out-title' => 'મોબાઈલ બિટામાં ભાગ ન લો',
 	'mobile-frontend-disable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો નિષ્ક્રિય કરો',
 	'mobile-frontend-enable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો',
 	'mobile-frontend-news-items' => 'સમાચારમાં',
