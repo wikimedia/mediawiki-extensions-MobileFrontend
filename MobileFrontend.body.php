@@ -8,7 +8,7 @@ class ExtMobileFrontend {
 	 */
 	private $doc;
 	public $contentFormat = '';
-	public $WMLSectionSeperator = '***************************************************************************';
+	public $WMLSectionSeparator = '***************************************************************************';
 
 	/**
 	 * @var Title
@@ -954,7 +954,7 @@ class ExtMobileFrontend {
 		static $headings = 0;
 		++$headings;
 
-		$base = $this->WMLSectionSeperator .
+		$base = $this->WMLSectionSeparator .
 				"<h2 class='section_heading' id='section_{$headings}'>{$matches[2]}</h2>";
 
 		self::$headings = $headings;
@@ -1064,7 +1064,7 @@ class ExtMobileFrontend {
 	 */
 	private function createWMLCard( $s ) {
 		wfProfileIn( __METHOD__ );
-		$segments = explode( $this->WMLSectionSeperator, $s );
+		$segments = explode( $this->WMLSectionSeparator, $s );
 		$card = '';
 		$idx = 0;
 		$requestedSegment = htmlspecialchars( self::$requestedSegment );
