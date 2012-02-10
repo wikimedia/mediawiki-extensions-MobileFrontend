@@ -36,8 +36,8 @@ $wgExtensionCredits['other'][] = array(
 	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
 
-$cwd = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
-$wgExtensionMessagesFiles['MobileFrontend'] = $cwd . 'MobileFrontend.i18n.php';
+$cwd = dirname( __FILE__ );
+$wgExtensionMessagesFiles['MobileFrontend'] = "$cwd/MobileFrontend.i18n.php";
 
 // autoload extension classes
 
@@ -45,21 +45,22 @@ $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'DeviceDetection' => 'DeviceDetection',
 	'CssDetection' => 'CssDetection',
-	'MobileFrontendTemplate' => 'MobileFrontendTemplate',
-	'ApplicationTemplate' => 'ApplicationTemplate',
-	'SearchTemplate'  => 'SearchTemplate',
-	'FooterTemplate' => 'FooterTemplate',
-	'LeaveFeedbackTemplate' => 'LeaveFeedbackTemplate',
-	'DisableTemplate' => 'DisableTemplate',
-	'OptInTemplate' => 'OptInTemplate',
-	'OptOutTemplate' => 'OptOutTemplate',
-	'ApplicationWmlTemplate' => 'ApplicationWmlTemplate',
-	'ThanksNoticeTemplate' => 'ThanksNoticeTemplate',
-	'SopaNoticeTemplate' => 'SopaNoticeTemplate',
+
+	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
+	'ApplicationTemplate' => 'templates/ApplicationTemplate',
+	'SearchTemplate'  => 'templates/SearchTemplate',
+	'FooterTemplate' => 'templates/FooterTemplate',
+	'LeaveFeedbackTemplate' => 'templates/LeaveFeedbackTemplate',
+	'DisableTemplate' => 'templates/DisableTemplate',
+	'OptInTemplate' => 'templates/OptInTemplate',
+	'OptOutTemplate' => 'templates/OptOutTemplate',
+	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
+	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
+	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
-	$wgAutoloadClasses[$className] = $cwd . $classFilename . '.php';
+	$wgAutoloadClasses[$className] = "$cwd/$classFilename.php";
 }
 
 /**
