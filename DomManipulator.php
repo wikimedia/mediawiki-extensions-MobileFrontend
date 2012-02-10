@@ -11,6 +11,11 @@ class DomManipulator {
 	protected $format;
 	protected $removeImages = false;
 	protected $idWhitelist = array();
+	/**
+	 * Message cache, false if they should be loaded dynamically
+	 * @var Array|bool
+	 */
+	protected $messages = false;
 
 	private static $defaultItemsToRemove = array(
 		'#contentSub',
@@ -60,6 +65,14 @@ class DomManipulator {
 		$this->doc->preserveWhiteSpace = false;
 		$this->doc->strictErrorChecking = false;
 		$this->doc->encoding = 'UTF-8';
+	}
+
+	/**
+	 * Use the given message cache
+	 * @param Array $messages
+	 */
+	public function useMessages( Array $messages ) {
+		$this->messages = $messages;
 	}
 
 	/**
@@ -193,6 +206,25 @@ class DomManipulator {
 			$redLink->parentNode->replaceChild( $spanNode, $redLink );
 		}
 		wfProfileOut( __METHOD__ );
+	}
+
+	public function getText( $id = false ) {
+		$element = $id ? $this->doc->getElementById( $id ) : null;
+		return $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+	}
+
+	/**
+	 * Returns interface message text
+	 * @param string $key: Message key
+	 * @return string
+	 */
+	protected function msg( $key ) {
+		if ( !$this->messages ) {
+			return wfMsg( $key );
+		} elseif ( isset( $this->messages[$key] ) ) {
+			return $this->messages[$key];
+		}
+		throw new MWException( __METHOD__ . ": unrecognised message key '$key' in cached mode" );
 	}
 
 	/**

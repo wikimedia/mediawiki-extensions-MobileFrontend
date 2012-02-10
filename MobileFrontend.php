@@ -43,8 +43,10 @@ $wgExtensionMessagesFiles['MobileFrontend'] = "$cwd/MobileFrontend.i18n.php";
 
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
-	'DeviceDetection' => 'DeviceDetection',
+
+	'ApiParseExtender' => 'ApiParseExtender',
 	'CssDetection' => 'CssDetection',
+	'DeviceDetection' => 'DeviceDetection',
 	'DomManipulator' => 'DomManipulator',
 
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
@@ -84,6 +86,9 @@ $wgMobileRedirectFormAction = false;
 $wgExtMobileFrontend = null;
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
+
+$wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
+$wgHooks['APIAfterExecute'][] = 'ApiParseExtender::onAPIAfterExecute';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;

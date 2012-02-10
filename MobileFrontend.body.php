@@ -474,15 +474,7 @@ class ExtMobileFrontend {
 
 		self::$device = $device->format( $formatName );
 
-		if ( self::$device['view_format'] === 'wml' ) {
-			$this->contentFormat = 'WML';
-		} elseif ( self::$device['view_format'] === 'html' ) {
-			$this->contentFormat = 'XHTML';
-		}
-
-		if ( self::$useFormat === 'mobile-wap' ) {
-			$this->contentFormat = 'WML';
-		}
+		$this->contentFormat = self::parseContentFormat( self::$device['view_format'] );
 
 		if ( $mobileAction == 'leave_feedback' ) {
 			echo $this->renderLeaveFeedbackXHTML();
@@ -570,6 +562,18 @@ class ExtMobileFrontend {
 
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	public static function parseOutputFormat( $format ) {
+		if ( $format === 'wml' ) {
+			return 'WML';
+		} elseif ( $format === 'html' ) {
+			return 'XHTML';
+		}
+		if ( $format === 'mobile-wap' ) {
+			return 'WML';
+		}
+		return 'XHTML';//@todo:
 	}
 
 	/**
@@ -1216,6 +1220,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 
 		$manipulator = new DomManipulator( $html, $this->contentFormat );
+		$manipulator->useMessages( self::$messages );
 		$doc = $manipulator->getDoc();
 
 		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
