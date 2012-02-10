@@ -1215,7 +1215,7 @@ class ExtMobileFrontend {
 		global $wgScript;
 		wfProfileIn( __METHOD__ );
 
-		$manipulator = new DomManipulator( $html, self::$format );
+		$manipulator = new DomManipulator( $html, $this->contentFormat );
 		$doc = $manipulator->getDoc();
 
 		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
@@ -1291,7 +1291,6 @@ class ExtMobileFrontend {
 			$contentHtml = $doc->saveXML( $content, LIBXML_NOEMPTYTAG );
 		}
 
-		$title = htmlspecialchars( self::$title->getText() );
 		$htmlTitle = htmlspecialchars( self::$htmlTitle );
 
 		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
