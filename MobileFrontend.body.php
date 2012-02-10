@@ -3,10 +3,6 @@
 class ExtMobileFrontend {
 	const VERSION = '0.6.1';
 
-	/**
-	 * @var DOMDocument
-	 */
-	private $doc;
 	public $contentFormat = '';
 	public $WMLSectionSeparator = '***************************************************************************';
 
@@ -97,39 +93,6 @@ class ExtMobileFrontend {
 		'mobile-frontend-placeholder',
 		'mobile-frontend-dismiss-notification',
 		'mobile-frontend-sopa-notice',
-	);
-
-	public $itemsToRemove = array(
-		'#contentSub',
-		'div.messagebox',
-		'#siteNotice',
-		'#siteSub',
-		'#jump-to-nav',
-		'div.editsection',
-		'div.infobox',
-		'table.toc',
-		'#catlinks',
-		'div.stub',
-		'form',
-		'div.sister-project',
-		'script',
-		'div.magnify',
-		'.editsection',
-		'span.t',
-		'sup[style*="help"]',
-		'.portal',
-		'#protected-icon',
-		'.printfooter',
-		'.boilerplate',
-		'#id-articulo-destacado',
-		'#coordinates',
-		'#top',
-		'.hiddenStructure',
-		'.noprint',
-		'.medialist',
-		'.mw-search-createlink',
-		'#ogg_player_1',
-		'.nomobile',
 	);
 
 	/**
@@ -1106,25 +1069,6 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @return array
-	 */
-	private function parseItemsToRemove() {
-		global $wgMFRemovableClasses;
-		wfProfileIn( __METHOD__ );
-		$itemToRemoveRecords = array();
-
-		foreach ( array_merge( $this->itemsToRemove, $wgMFRemovableClasses ) as $itemToRemove ) {
-			$type = '';
-			$rawName = '';
-			CssDetection::detectIdCssOrTag( $itemToRemove, $type, $rawName );
-			$itemToRemoveRecords[$type][] = $rawName;
-		}
-
-		wfProfileOut( __METHOD__ );
-		return $itemToRemoveRecords;
-	}
-
-	/**
 	 * @param DOMDocument $mainPage
 	 * @return string
 	 */
@@ -1270,38 +1214,31 @@ class ExtMobileFrontend {
 	public function DOMParse( $html ) {
 		global $wgScript;
 		wfProfileIn( __METHOD__ );
-		$html = mb_convert_encoding( $html, 'HTML-ENTITIES', "UTF-8" );
-		libxml_use_internal_errors( true );
-		$this->doc = new DOMDocument();
-		$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
-		libxml_use_internal_errors( false );
-		$this->doc->preserveWhiteSpace = false;
-		$this->doc->strictErrorChecking = false;
-		$this->doc->encoding = 'UTF-8';
 
-		$itemToRemoveRecords = $this->parseItemsToRemove();
+		$manipulator = new DomManipulator( $html, self::$format );
+		$doc = $manipulator->getDoc();
 
-		$zeroRatedBannerElement = $this->doc->getElementById( 'zero-rated-banner' );
+		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
 
 		if ( !$zeroRatedBannerElement ) {
-			$zeroRatedBannerElement = $this->doc->getElementById( 'zero-rated-banner-red' );
+			$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner-red' );
 		}
 
 		if ( $zeroRatedBannerElement ) {
-			self::$zeroRatedBanner = $this->doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
+			self::$zeroRatedBanner = $doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
 		}
 
 		if ( self::$isBetaGroupMember ) {
-			$ptLogout = $this->doc->getElementById( 'pt-logout' );
+			$ptLogout = $doc->getElementById( 'pt-logout' );
 
 			if ( $ptLogout ) {
 				$ptLogoutLink = $ptLogout->firstChild;
-				self::$logoutHtml = $this->doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
+				self::$logoutHtml = $doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
 			}
-			$ptAnonLogin = $this->doc->getElementById( 'pt-anonlogin' );
+			$ptAnonLogin = $doc->getElementById( 'pt-anonlogin' );
 
 			if ( !$ptAnonLogin ) {
-				$ptAnonLogin = $this->doc->getElementById( 'pt-login' );
+				$ptAnonLogin = $doc->getElementById( 'pt-login' );
 			}
 
 			if ( $ptAnonLogin ) {
@@ -1320,124 +1257,38 @@ class ExtMobileFrontend {
 						$ptAnonLoginLinkText->nodeValue = self::$messages['mobile-frontend-login'];
 					}
 				}
-				self::$loginHtml = $this->doc->saveXML( $ptAnonLoginLink, LIBXML_NOEMPTYTAG );
+				self::$loginHtml = $doc->saveXML( $ptAnonLoginLink, LIBXML_NOEMPTYTAG );
 			}
 		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
-			$userlogin = $this->doc->getElementById( 'userloginForm' );
+			$userlogin = $doc->getElementById( 'userloginForm' );
 
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
-				$firstHeading = $this->doc->getElementById( 'firstHeading' );
+				$firstHeading = $doc->getElementById( 'firstHeading' );
 				if ( $firstHeading ) {
 					$firstHeading->nodeValue = '';
 				}
 			}
 		}
 
-		// Tags
-
-		// You can't remove DOMNodes from a DOMNodeList as you're iterating
-		// over them in a foreach loop. It will seemingly leave the internal
-		// iterator on the foreach out of wack and results will be quite
-		// strange. Though, making a queue of items to remove seems to work.
-		// For example:
-
-		if ( self::$disableImages == 1 ) {
-			$itemToRemoveRecords['TAG'][] = "img";
-			$itemToRemoveRecords['TAG'][] = "audio";
-			$itemToRemoveRecords['TAG'][] = "video";
-			$itemToRemoveRecords['CLASS'][] = "thumb tright";
-			$itemToRemoveRecords['CLASS'][] = "thumb tleft";
-			$itemToRemoveRecords['CLASS'][] = "thumbcaption";
-			$itemToRemoveRecords['CLASS'][] = "gallery";
-		}
-
-		$tagToRemoveNodeIdAttributeValues = array( 'zero-language-search' );
-
-		$domElemsToRemove = array();
-		foreach ( $itemToRemoveRecords['TAG'] as $tagToRemove ) {
-			$tagToRemoveNodes = $this->doc->getElementsByTagName( $tagToRemove );
-			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
-				$tagToRemoveNodeIdAttributeValue = '';
-				if ( $tagToRemoveNode ) {
-					$tagToRemoveNodeIdAttribute = $tagToRemoveNode->getAttributeNode( 'id' );
-					if ( $tagToRemoveNodeIdAttribute ) {
-						$tagToRemoveNodeIdAttributeValue = $tagToRemoveNodeIdAttribute->value;
-					}
-					if ( !in_array( $tagToRemoveNodeIdAttributeValue, $tagToRemoveNodeIdAttributeValues ) ) {
-						$domElemsToRemove[] = $tagToRemoveNode;
-					}
-				}
-			}
-		}
-
-		foreach ( $domElemsToRemove as $domElement ) {
-			$domElement->parentNode->removeChild( $domElement );
-		}
-
-		// Elements with named IDs
-		foreach ( $itemToRemoveRecords['ID'] as $itemToRemove ) {
-			$itemToRemoveNode = $this->doc->getElementById( $itemToRemove );
-			if ( $itemToRemoveNode ) {
-				$itemToRemoveNode->parentNode->removeChild( $itemToRemoveNode );
-			}
-		}
-
-		// CSS Classes
-		$xpath = new DOMXpath( $this->doc );
-		foreach ( $itemToRemoveRecords['CLASS'] as $classToRemove ) {
-			$elements = $xpath->query( '//*[@class="' . $classToRemove . '"]' );
-
-			foreach ( $elements as $element ) {
-				$element->parentNode->removeChild( $element );
-			}
-		}
-
-		// Tags with CSS Classes
-		foreach ( $itemToRemoveRecords['TAG_CLASS'] as $classToRemove ) {
-			$parts = explode( '.', $classToRemove );
-
-			$elements = $xpath->query(
-				'//' . $parts[0] . '[@class="' . $parts[1] . '"]'
-			);
-
-			foreach ( $elements as $element ) {
-				$removedElement = $element->parentNode->removeChild( $element );
-			}
-		}
-
-		// Handle red links with action equal to edit
-		$redLinks = $xpath->query( '//a[@class="new"]' );
-		foreach ( $redLinks as $redLink ) {
-			// PHP Bug #36795 — Inappropriate "unterminated entity reference"
-			$spanNode = $this->doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
-
-			if ( $redLink->hasAttributes() ) {
-				$attributes = $redLink->attributes;
-				foreach ( $attributes as $i => $attribute ) {
-					if ( $attribute->name != 'href' ) {
-						$spanNode->setAttribute( $attribute->name, $attribute->value );
-					}
-				}
-			}
-
-			$redLink->parentNode->replaceChild( $spanNode, $redLink );
-		}
+		$manipulator->removeImages( self::$disableImages == 1 );
+		$manipulator->whitelistIds( 'zero-language-search' );
+		$manipulator->filterContent();
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
 				$login = $this->renderLogin();
-				$loginNode = $this->doc->importNode( $login, true );
+				$loginNode = $doc->importNode( $login, true );
 				$userlogin->appendChild( $loginNode );
 			}
 		}
 
 		if ( self::$isMainPage ) {
-			$contentHtml = $this->DOMParseMainPage( $this->doc );
+			$contentHtml = $this->DOMParseMainPage( $doc );
 		} else {
-			$content = $this->doc->getElementById( 'content' );
-			$contentHtml = $this->doc->saveXML( $content, LIBXML_NOEMPTYTAG );
+			$content = $doc->getElementById( 'content' );
+			$contentHtml = $doc->saveXML( $content, LIBXML_NOEMPTYTAG );
 		}
 
 		$title = htmlspecialchars( self::$title->getText() );

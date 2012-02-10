@@ -45,6 +45,7 @@ $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'DeviceDetection' => 'DeviceDetection',
 	'CssDetection' => 'CssDetection',
+	'DomManipulator' => 'DomManipulator',
 
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
