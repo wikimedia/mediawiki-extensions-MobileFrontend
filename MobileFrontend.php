@@ -89,6 +89,8 @@ $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
 
 $wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
 $wgHooks['APIAfterExecute'][] = 'ApiParseExtender::onAPIAfterExecute';
+$wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescription';
+$wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;
