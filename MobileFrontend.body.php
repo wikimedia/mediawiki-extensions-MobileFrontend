@@ -564,7 +564,7 @@ class ExtMobileFrontend {
 		return true;
 	}
 
-	public static function parseOutputFormat( $format ) {
+	public static function parseContentFormat( $format ) {
 		if ( $format === 'wml' ) {
 			return 'WML';
 		} elseif ( $format === 'html' ) {
