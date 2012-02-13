@@ -56,7 +56,7 @@ class ApiParseExtender {
 			$data = $module->getResultData();
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && isset( $params['mobileformat'] ) ) {
-				$mf = new DomManipulator( '<body><div id="content">' . $data['parse']['text']['*'] . '</div></body>',
+				$mf = new MobileFormatter( '<body><div id="content">' . $data['parse']['text']['*'] . '</div></body>',
 						ExtMobileFrontend::parseContentFormat( $params['mobileformat'] )
 				);
 				$mf->filterContent();

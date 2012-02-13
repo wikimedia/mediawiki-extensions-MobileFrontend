@@ -1219,9 +1219,9 @@ class ExtMobileFrontend {
 		global $wgScript;
 		wfProfileIn( __METHOD__ );
 
-		$manipulator = new DomManipulator( $html, $this->contentFormat );
-		$manipulator->useMessages( self::$messages );
-		$doc = $manipulator->getDoc();
+		$formatter = new MobileFormatter( $html, $this->contentFormat );
+		$formatter->useMessages( self::$messages );
+		$doc = $formatter->getDoc();
 
 		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
 
@@ -1277,9 +1277,9 @@ class ExtMobileFrontend {
 			}
 		}
 
-		$manipulator->removeImages( self::$disableImages == 1 );
-		$manipulator->whitelistIds( 'zero-language-search' );
-		$manipulator->filterContent();
+		$formatter->removeImages( self::$disableImages == 1 );
+		$formatter->whitelistIds( 'zero-language-search' );
+		$formatter->filterContent();
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {

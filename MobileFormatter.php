@@ -3,7 +3,7 @@
 /**
  * Converts HTML into a mobile-friendly version
  */
-class DomManipulator {
+class MobileFormatter {
 	/**
 	 * @var DOMDocument
 	 */

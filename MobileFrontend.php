@@ -47,7 +47,7 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'ApiParseExtender',
 	'CssDetection' => 'CssDetection',
 	'DeviceDetection' => 'DeviceDetection',
-	'DomManipulator' => 'DomManipulator',
+	'MobileFormatter' => 'MobileFormatter',
 
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
