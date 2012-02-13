@@ -218,7 +218,7 @@ class ExtMobileFrontend {
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
-		$skin = $wgUser->getSkin();
+		$skin = RequestContext::getMain()->getSkin();
 		$copyright = $skin->getCopyright();
 		if ( stristr( $copyright, '<li class="noprint">' ) !== false ) {
 			$copyright = '<ul id="footer-info"><li>' . $copyright . '</li></ul>';
