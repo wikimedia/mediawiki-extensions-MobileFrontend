@@ -2238,10 +2238,13 @@ $messages['gl'] = array(
 	'mobile-frontend-dismiss-notification' => 'agochar esta notificación',
 );
 
-/** Ancient Greek (Ἀρχαία ἑλληνικὴ) */
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Crazymadlover
+ */
 $messages['grc'] = array(
 	'mobile-frontend-search-submit' => 'Ἰέναι',
 	'mobile-frontend-home-button' => 'Κυρία',
+	'mobile-frontend-language' => 'Γλῶττα',
 );
 
 /** Swiss German (Alemannisch)
@@ -2330,6 +2333,7 @@ $messages['gu'] = array(
 	'mobile-frontend-error-page-title' => 'અમે મુશ્કેલીમાં છીએ',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} મોબાઈલનું કાર્ય પ્રગતિમાં છે અને અમે બધી આંતરિક ક્ષતિઓને સુધારવા માટે સખત મહેનત કરી રહ્યા છીએ. અમને આ ક્ષતિ વિશે માહિતી મળી છે અને જલ્દીથી તે સુધારી લેવામાં આવશે. પછીથી ફરી જોવા વિનંતી!',
 	'mobile-frontend-are-you-sure' => 'શું તમે ચોક્કસ છો?',
+	'mobile-frontend-explain-disable' => 'તમને ખાત્રી છે કે તમે {{SITENAME}}નો મોબઈલ વિકલ્પ નિષ્ક્રીય કરવા માંગો છો? જો તમે <b>Disable</b> પસંદ કરશો, જતો હવે પછી. જ્યરે તમે {{SITENAME}}ની મુલાકાત લેશો, ત્યારે તમને {{SITENAME}}ને મોબાઈલ આવૃત્તિ પર દિશાનિર્દેશીત નહીં કરાય.',
 	'mobile-frontend-nav-end' => 'અંત',
 	'mobile-frontend-nav-top' => 'ટોચ',
 	'mobile-frontend-nav-edit' => 'ફેરફાર કરો',
@@ -2356,6 +2360,7 @@ $messages['gu'] = array(
 	'mobile-frontend-enable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો',
 	'mobile-frontend-news-items' => 'સમાચારમાં',
 	'mobile-frontend-leave-feedback-title' => 'તમારા મોબાઈલ સાઈટના અનુભવ વિશે પ્રતિભાવ આપો',
+	'mobile-frontend-leave-feedback-notice' => 'તમારો સુઝાવ અમને મોબાઈલ સાઈટના અનુભવને સુધારવામાં મદદ કરશે. આને (તમારા સભ્યનામ, બ્રાઉઝર આવૃત્તિ, અને ઓપરેટીંગ સીસ્ટમ સાથે)  સાર્વજનીક રીતે &quot;$1&quot પાના પર પ્રસિદ્ધ કરવામાં આવશે. કૃપા કરી માહિતીપૂર્વકને હરોળ પસંદ કરશો. દા.ત. "Formatting issues with wide tables".  તમરો સુઝાવ અમારા નિતી નિયમોને આધીન રહેશે.',
 	'mobile-frontend-leave-feedback-subject' => 'વિષય',
 	'mobile-frontend-leave-feedback-message' => 'સંદેશ',
 	'mobile-frontend-leave-feedback-cancel' => 'રદ કરો',
@@ -3300,6 +3305,7 @@ $messages['kl'] = array(
  * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
+	'mobile-frontend-desc' => 'ឧបករណ៍ចល័ត',
 	'mobile-frontend-search-submit' => 'ទៅ',
 	'mobile-frontend-search-results' => 'លទ្ធផលស្វែងរក',
 	'mobile-frontend-no-article-found' => 'រកមិនឃើញអត្ថបទ',
@@ -3330,14 +3336,34 @@ $messages['km'] = array(
 	'mobile-frontend-wml-continue' => 'បន្ត...',
 	'mobile-frontend-wml-back' => 'ត្រលប់ក្រោយ...',
 	'mobile-frontend-view' => 'មើលលើឧបករណ៍ចល័ត',
+	'mobile-frontend-opt-in-message' => 'សាកប្រើកម្មវិធីបេតាសំរាប់ឧបករណ៍ចល័តទេ?',
 	'mobile-frontend-opt-in-yes-button' => 'បាទ/ចាស៎',
 	'mobile-frontend-opt-in-no-button' => 'ទេ',
+	'mobile-frontend-opt-in-title' => 'ការចូលរួម​សាកល្បង​ប្រើ​កម្មវិធី​បេតា​សំរាប់​ឧបករណ៍​ចល័ត',
+	'mobile-frontend-opt-in-explain' => 'ដោយ​ចូលរួម​កម្មវិធី​បេតេ អ្នក​នឹងមាន​លទ្ធភាព​ប្រើ​មុខងា​ដែល​កំពុង​ស្ថិតនៅក្រោម​ការពិសោធន៍​នៅឡើយ ដែល​ធ្វើ​អោយ​អ្នកប្រឈមមុខ​នឹង​បញ្ហា​តូចតាច​មួយចំនួន។',
+	'mobile-frontend-opt-out-message' => 'ចាកចេញពីកម្មវិធីបេតាសំរាប់ឧបករណ៍ចល័តឬ?',
 	'mobile-frontend-opt-out-yes-button' => 'បាទ/ចាស៎',
 	'mobile-frontend-opt-out-no-button' => 'ទេ',
+	'mobile-frontend-opt-out-title' => 'ការចាកចេញពី​កម្មវិធី​បេតា​សំរាប់​ឧបករណ៍​ចល័ត',
+	'mobile-frontend-opt-out-explain' => 'ដោយ​ចាកចេញ​ពី​កម្មវិធី​បេតា អ្នកនឹង​បិទ​មិនប្រើ​កម្មវិធី​ដែលស្ថិត​នៅក្រោម​ការពិសោធន៍​ទាំងអស់ រួចត្រលប់​ទៅប្រើ​កម្មវិធី​សំរាប់​ឧបករណ៍​ចល័ត​ធម្មតា​វិញ។',
+	'mobile-frontend-disable-images' => 'បិទមិនអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត',
+	'mobile-frontend-enable-images' => 'បើកអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត',
+	'mobile-frontend-news-items' => 'នៅក្នុងសារពត៌មាន',
+	'mobile-frontend-leave-feedback-title' => 'សូមផ្ដល់មតិយោបល់អំពីវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងខ្ញុំ',
+	'mobile-frontend-leave-feedback-notice' => 'មតិយោបល់របស់អ្នកនឹងជួយយើងខ្ញុំក្នុងការកែលំអវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងអោយកាន់តែប្រសើរឡើង។ មតិរបស់អ្នក (ព្រមជាមួយនឹងអត្តនាម វើសិនរបស់ឧបករណ៍រាវរក និងប្រព័ន្ធប្រតិបត្តិ) នឹងត្រូវបានផ្សព្វផ្សាយជាសាធារណៈនៅលើទំព័រ &quot;$1&quot;។ សូមជ្រើសរើសពាក្យដែលមានព័ត៌មានគ្រប់គ្រាន់​សំរាប់ដាក់ជាចំណងជើង។ ឧទាហរណ៍ "បញ្ហាទំរង់របស់តារាងធំៗ"។ មតិយោបល់របស់អ្នកនឹងត្រូវបានប្រើទៅតាមលក្ខខណ្ឌនៃការប្រើប្រាស់របស់យើងខ្ញុំ។',
 	'mobile-frontend-leave-feedback-subject' => 'ប្រធានបទ​',
 	'mobile-frontend-leave-feedback-message' => 'សារ',
 	'mobile-frontend-leave-feedback-cancel' => 'បោះបង់',
+	'mobile-frontend-leave-feedback-submit' => 'ដាក់ស្នើមតិយោបល់',
+	'mobile-frontend-leave-feedback-link-text' => 'មតិយោបល់អំពី MobileFrontend Extension',
+	'mobile-frontend-leave-feedback' => 'មតិយោបល់ស្ដីអំពីវិបសាយសំរាប់ឧបករណ៍ចល័ត',
+	'mobile-frontend-leave-feedback-thanks' => 'សូមអរគុណសំរាប់មតិយោបល់របស់អ្នក។',
 	'mobile-frontend-language' => 'ភាសា',
+	'mobile-frontend-username' => 'អត្តនាម៖',
+	'mobile-frontend-password' => 'ពាក្យសំងាត់៖',
+	'mobile-frontend-login' => 'កត់ឈ្មោះចូល',
+	'mobile-frontend-placeholder' => 'វាយបញ្ជួលពាក្យដែលអ្នកចង់ស្វែងរកនៅទីនេះ...',
+	'mobile-frontend-dismiss-notification' => 'បិទការផ្ដល់ដំណឹងនេះ',
 );
 
 /** Kannada (ಕನ್ನಡ) */
