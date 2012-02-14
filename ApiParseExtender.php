@@ -15,6 +15,7 @@ class ApiParseExtender {
 			$params['mobileformat'] = array(
 				ApiBase::PARAM_TYPE => array( 'wml', 'html' ),
 			);
+			$params['expandablesections'] = false;
 		}
 		return true;
 	}
@@ -28,6 +29,7 @@ class ApiParseExtender {
 	public static function onAPIGetParamDescription( ApiBase &$module, Array &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = 'Return parse output in a format suitable for mobile devices';
+			$params['expandablesections'] = 'Make sections collapsed by default, expandable via JavaScript';
 		}
 		return true;
 	}
@@ -56,6 +58,9 @@ class ApiParseExtender {
 			$data = $module->getResultData();
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && isset( $params['mobileformat'] ) ) {
+				$result = $module->getResult();
+				$result->reset();
+
 				$title = Title::newFromText( $data['parse']['title'] );
 				$context = new WmlContext();
 				$context->setCurrentUrl( $title->getCanonicalURL() );
@@ -70,11 +75,16 @@ class ApiParseExtender {
 					ExtMobileFrontend::parseContentFormat( $params['mobileformat'] ),
 					$context
 				);
+				if ( $params['expandablesections'] ) {
+					if ( isset( $params['section'] ) ) {
+						$module->setWarning( "`expandablesections' and `section' can't be used simultaneusly" );
+					} elseif ( !$title->isMainPage() ) {
+						$mf->enableExpandableSections();
+					}
+				}
 				$mf->filterContent();
 				$data['parse']['text'] = $mf->getText( 'content' );
 
-				$result = $module->getResult();
-				$result->reset();
 				$result->addValue( null, $module->getModuleName(), $data );
 			}
 		}
