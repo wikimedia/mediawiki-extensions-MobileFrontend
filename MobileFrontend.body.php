@@ -4,7 +4,6 @@ class ExtMobileFrontend {
 	const VERSION = '0.6.1';
 
 	public $contentFormat = '';
-	public $WMLSectionSeparator = '***************************************************************************';
 
 	/**
 	 * @var Title
@@ -18,7 +17,6 @@ class ExtMobileFrontend {
 	public static $headings;
 	public static $mainPageUrl;
 	public static $randomPageUrl;
-	public static $requestedSegment;
 	public static $format;
 	public static $search;
 	public static $callback;
@@ -46,6 +44,11 @@ class ExtMobileFrontend {
 	public static $logoutHtml;
 	public static $loginHtml;
 	public static $zeroRatedBanner;
+
+	/**
+	 * @var WmlContext
+	 */
+	private $wmlContext;
 
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
@@ -94,6 +97,10 @@ class ExtMobileFrontend {
 		'mobile-frontend-dismiss-notification',
 		'mobile-frontend-sopa-notice',
 	);
+
+	public function __construct() {
+		$this->wmlContext = new WmlContext();
+	}
 
 	/**
 	 * Work out the site and language name from a database name
@@ -378,6 +385,7 @@ class ExtMobileFrontend {
 
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 		self::$useFormat = $wgRequest->getText( 'useformat' );
+		$this->wmlContext->setUseFormat( self::$useFormat );
 		$mobileAction = $wgRequest->getText( 'mobileaction' );
 		$action = $wgRequest->getText( 'action' );
 
@@ -460,7 +468,7 @@ class ExtMobileFrontend {
 
 		self::$format = $wgRequest->getText( 'format' );
 		self::$callback = $wgRequest->getText( 'callback' );
-		self::$requestedSegment = $wgRequest->getText( 'seg', 0 );
+		$this->wmlContext->setRequestedSegment( $wgRequest->getInt( 'seg', 0 ) );
 		self::$search = $wgRequest->getText( 'search' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
 
@@ -913,168 +921,7 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @param $matches array
-	 * @return string
-	 */
-	private function headingTransformCallbackWML( $matches ) {
-		wfProfileIn( __METHOD__ );
-		static $headings = 0;
-		++$headings;
-
-		$base = $this->WMLSectionSeparator .
-				"<h2 class='section_heading' id='section_{$headings}'>{$matches[2]}</h2>";
-
-		self::$headings = $headings;
-		wfProfileOut( __METHOD__ );
-		return $base;
-	}
-
-	/**
-	 * @param $matches array
-	 * @return string
-	 */
-	private function headingTransformCallbackXHTML( $matches ) {
-		wfProfileIn( __METHOD__ );
-		if ( isset( $matches[0] ) ) {
-			preg_match( '/id="([^"]*)"/', $matches[0], $headlineMatches );
-		}
-
-		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
-
-		static $headings = 0;
-		$show = self::$messages['mobile-frontend-show-button'];
-		$hide = self::$messages['mobile-frontend-hide-button'];
-		$backToTop = self::$messages['mobile-frontend-back-to-top-of-section'];
-		++$headings;
-		// Back to top link
-		$base = Html::openElement( 'div',
-						array( 'id' => 'anchor_' . intval( $headings - 1 ),
-								'class' => 'section_anchors', )
-				) .
-				Html::rawElement( 'a',
-						array( 'href' => '#section_' . intval( $headings - 1 ),
-								'class' => 'back_to_top' ),
-								'&#8593;' . $backToTop ) .
-				Html::closeElement( 'div' );
-		// generate the HTML we are going to inject
-		$buttons = Html::element( 'button',
-					array( 'class' => 'section_heading show',
-							'section_id' => $headings ),
-							$show ) .
-			Html::element( 'button',
-					array( 'class' => 'section_heading hide',
-							'section_id' => $headings ),
-							$hide );
-		if ( self::$device['supports_javascript'] ) {
-			$h2OnClick = 'javascript:wm_toggle_section(' . $headings . ');';
-			$base .= Html::openElement( 'h2',
-							array( 'class' => 'section_heading',
-									'id' => 'section_' . $headings,
-									'onclick' => $h2OnClick ) );
-		} else {
-			$base .= Html::openElement( 'h2',
-							array( 'class' => 'section_heading',
-									'id' => 'section_' . $headings ) );
-		}
-		$base .= $buttons .
-				Html::rawElement( 'span',
-						array( 'id' => $headlineId ),
-								$matches[2] ) .
-				Html::closeElement( 'h2' ) .
-				Html::openElement( 'div',
-						array( 'class' => 'content_block',
-								'id' => 'content_' . $headings ) );
-
-		if ( $headings > 1 ) {
-			// Close it up here
-			$base = Html::closeElement( 'div' ) . $base;
-		}
-
-		self::$headings = $headings;
-		wfProfileOut( __METHOD__ );
-		return $base;
-	}
-
-	/**
-	 * @param $s string
-	 * @return string
-	 */
-	public function headingTransform( $s ) {
-		wfProfileIn( __METHOD__ );
-		$callback = 'headingTransformCallback';
-		$callback .= $this->contentFormat;
-
-		// Closures are a PHP 5.3 feature.
-		// MediaWiki currently requires PHP 5.2.3 or higher.
-		// So, using old style for now.
-		$s = preg_replace_callback(
-			'/<h2(.*)<span class="mw-headline" [^>]*>(.+)<\/span>\w*<\/h2>/',
-			array( $this, $callback ),
-			$s
-		);
-
-		// if we had any, make sure to close the whole thing!
-		if ( isset( self::$headings ) && self::$headings > 0 ) {
-			$s = str_replace(
-				'<div class="visualClear">',
-				'</div><div class="visualClear">',
-				$s
-			);
-		}
-		wfProfileOut( __METHOD__ );
-		return $s;
-	}
-
-	/**
-	 * @param $s string
-	 * @return string
-	 */
-	private function createWMLCard( $s ) {
-		wfProfileIn( __METHOD__ );
-		$segments = explode( $this->WMLSectionSeparator, $s );
-		$card = '';
-		$idx = 0;
-		$requestedSegment = htmlspecialchars( self::$requestedSegment );
-		$title = htmlspecialchars( self::$title->getText() );
-
-		$card .= "<card id='s{$idx}' title='{$title}'><p>{$segments[$requestedSegment]}</p>";
-		$idx = $requestedSegment + 1;
-		$segmentsCount = count( $segments );
-		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
-
-		$useFormatParam = ( isset( self::$useFormat ) ) ? '&amp;' . 'useformat=' . self::$useFormat : '';
-
-		// Title::getLocalUrl doesn't work at this point since PHP 5.1.x, all objects have their destructors called
-		// before the output buffer callback function executes.
-		// Thus, globalized objects will not be available as expected in the function.
-		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
-		$mDefaultQuery = $_GET;
-		unset( $mDefaultQuery['seg'] );
-		unset( $mDefaultQuery['useformat'] );
-
-		$qs = wfArrayToCGI( $mDefaultQuery );
-		$delimiter = ( !empty( $qs ) ) ? '?' : '';
-		$basePageParts = wfParseUrl( self::$currentURL );
-		$basePage = $basePageParts['scheme'] . $basePageParts['delimiter'] . $basePageParts['host'] . $basePageParts['path'] . $delimiter . $qs;
-		$appendDelimiter = ( $delimiter === '?' ) ? '&amp;' : '?';
-
-		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-continue'] . "</a></p>";
-		}
-
-		if ( $idx > 1 ) {
-			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$back_idx}{$useFormatParam}\">" . self::$messages['mobile-frontend-wml-back'] . "</a></p>";
-		}
-
-		$card .= '</card>';
-		wfProfileOut( __METHOD__ );
-		return $card;
-	}
-
-	/**
 	 * @param DOMDocument $mainPage
-	 * @return string
 	 */
 	public function DOMParseMainPage( DOMDocument $mainPage ) {
 		wfProfileIn( __METHOD__ );
@@ -1122,9 +969,7 @@ class ExtMobileFrontend {
 			}
 		}
 
-		$contentHtml = $mainPage->saveXML( $content, LIBXML_NOEMPTYTAG );
 		wfProfileOut( __METHOD__ );
-		return $contentHtml;
 	}
 
 	/**
@@ -1219,8 +1064,9 @@ class ExtMobileFrontend {
 		global $wgScript;
 		wfProfileIn( __METHOD__ );
 
-		$formatter = new MobileFormatter( $html, $this->contentFormat );
+		$formatter = new MobileFormatter( $html, self::$title, $this->contentFormat, $this->wmlContext );
 		$formatter->useMessages( self::$messages );
+		$formatter->enableJavaScript( self::$device['supports_javascript'] );
 		$doc = $formatter->getDoc();
 
 		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
@@ -1290,35 +1136,27 @@ class ExtMobileFrontend {
 		}
 
 		if ( self::$isMainPage ) {
-			$contentHtml = $this->DOMParseMainPage( $doc );
-		} else {
-			$content = $doc->getElementById( 'content' );
-			$contentHtml = $doc->saveXML( $content, LIBXML_NOEMPTYTAG );
+			$this->DOMParseMainPage( $doc );
 		}
+		$prepend = '';
+		if ( $this->contentFormat == 'WML' ) {
+			// Wml for searching
+			$prepend = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
+				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
+				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';	
+		} elseif ( $this->contentFormat == 'XHTML'
+			&& self::$device['supports_javascript'] === true
+			&& empty( self::$search ) && !self::$isMainPage )
+		{
+			$formatter->enableExpandableSections();
+		}
+		$contentHtml = $formatter->getText( 'content', $prepend );
 
 		$htmlTitle = htmlspecialchars( self::$htmlTitle );
 
-		if ( strlen( $contentHtml ) > 4000 && $this->contentFormat == 'XHTML'
-			&& self::$device['supports_javascript'] === true
-			&& empty( self::$search ) && !self::$isMainPage ) {
-			$contentHtml =	$this->headingTransform( $contentHtml );
-		} elseif ( $this->contentFormat == 'WML' ) {
+		if ( $this->contentFormat == 'WML' ) {
 			header( 'Content-Type: text/vnd.wap.wml' );
-			$contentHtml = $this->headingTransform( $contentHtml );
 
-			// Content removal for WML rendering
-			$elements = array( 'span', 'div', 'sup', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'sup', 'sub' );
-			foreach ( $elements as $element ) {
-				$contentHtml = preg_replace( '#</?' . $element . '[^>]*>#is', '', $contentHtml );
-			}
-
-			// Wml for searching
-			$searchWml = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
-				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
-				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';
-			$contentHtml = $searchWml . $contentHtml;
-			// Content wrapping
-			$contentHtml = $this->createWMLCard( $contentHtml );
 			$applicationWmlTemplate = new ApplicationWmlTemplate();
 			$options = array(
 							'mainPageUrl' => self::$mainPageUrl,

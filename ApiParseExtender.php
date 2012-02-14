@@ -56,8 +56,19 @@ class ApiParseExtender {
 			$data = $module->getResultData();
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && isset( $params['mobileformat'] ) ) {
+				$title = Title::newFromText( $data['parse']['title'] );
+				$context = new WmlContext();
+				$context->setCurrentUrl( $title->getCanonicalURL() );
+				$context->setRequestedSegment( isset( $params['section'] )
+					? $params['section'] + 1 // Segment numbers start from 1
+					: 0
+				);
+				$context->setUseFormat( 'wml' ); // Force WML links just in case
+				$context->setOnlyThisSegment( isset( $params['section'] ) );
 				$mf = new MobileFormatter( '<body><div id="content">' . $data['parse']['text']['*'] . '</div></body>',
-						ExtMobileFrontend::parseContentFormat( $params['mobileformat'] )
+					$title,
+					ExtMobileFrontend::parseContentFormat( $params['mobileformat'] ),
+					$context
 				);
 				$mf->filterContent();
 				$data['parse']['text'] = $mf->getText( 'content' );
