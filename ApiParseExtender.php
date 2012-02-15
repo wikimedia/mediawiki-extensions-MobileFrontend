@@ -17,6 +17,7 @@ class ApiParseExtender {
 			);
 			$params['expandablesections'] = false;
 			$params['noimages'] = false;
+			$params['mainpage'] = false;
 		}
 		return true;
 	}
@@ -33,6 +34,7 @@ class ApiParseExtender {
 			$params['expandablesections'] = 'Make sections in mobile output collapsed by default, expandable via JavaScript.'
 				. " Ignored if `section' parameter is set.";
 			$params['noimages'] = 'Disable images in mobile output';
+			$params['mainpage'] = 'Apply mobile main page transformations';
 		}
 		return true;
 	}
@@ -80,12 +82,16 @@ class ApiParseExtender {
 				);
 				if ( $params['expandablesections'] ) {
 					if ( isset( $params['section'] ) ) {
-						$module->setWarning( "`expandablesections' and `section' can't be used simultaneusly" );
+						$module->setWarning( "`expandablesections' and `section' can't be used simultaneously" );
 					} elseif ( !$title->isMainPage() ) {
 						$mf->enableExpandableSections();
 					}
 				}
 				$mf->removeImages( $params['noimages'] );
+				$mf->setIsMainPage( $params['mainpage'] );
+				if ( $params['mainpage'] && $params['expandablesections'] ) {
+					$module->setWarning( "`mainpage' and `expandablesections' can't be used simultaneously" );
+				}
 				$mf->filterContent();
 				$data['parse']['text'] = $mf->getText( 'content' );
 

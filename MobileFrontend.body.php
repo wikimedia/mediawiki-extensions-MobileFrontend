@@ -921,58 +921,6 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @param DOMDocument $mainPage
-	 */
-	public function DOMParseMainPage( DOMDocument $mainPage ) {
-		wfProfileIn( __METHOD__ );
-
-		$zeroLandingPage = $mainPage->getElementById( 'zero-landing-page' );
-		$featuredArticle = $mainPage->getElementById( 'mp-tfa' );
-		$newsItems = $mainPage->getElementById( 'mp-itn' );
-
-		$xpath = new DOMXpath( $mainPage );
-		$elements = $xpath->query( '//*[starts-with(@id, "mf-")]' );
-
-		$commonAttributes = array( 'mp-tfa', 'mp-itn' );
-
-		$content = $mainPage->createElement( 'div' );
-		$content->setAttribute( 'id', 'content' );
-
-		if ( $zeroLandingPage ) {
-			$content->appendChild( $zeroLandingPage );
-		}
-
-		if ( $featuredArticle ) {
-			$h2FeaturedArticle = $mainPage->createElement( 'h2', self::$messages['mobile-frontend-featured-article'] );
-			$content->appendChild( $h2FeaturedArticle );
-			$content->appendChild( $featuredArticle );
-		}
-
-		if ( $newsItems ) {
-			$h2NewsItems = $mainPage->createElement( 'h2', self::$messages['mobile-frontend-news-items'] );
-			$content->appendChild( $h2NewsItems );
-			$content->appendChild( $newsItems );
-		}
-
-		foreach ( $elements as $element ) {
-			if ( $element->hasAttribute( 'id' ) ) {
-				$id = $element->getAttribute( 'id' );
-				if ( !in_array( $id, $commonAttributes ) ) {
-					$elementTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
-					$h2UnknownMobileSection = $mainPage->createElement( 'h2', $elementTitle );
-					$br = $mainPage->createElement( 'br' );
-					$br->setAttribute( 'CLEAR', 'ALL' );
-					$content->appendChild( $h2UnknownMobileSection );
-					$content->appendChild( $element );
-					$content->appendChild( $br );
-				}
-			}
-		}
-
-		wfProfileOut( __METHOD__ );
-	}
-
-	/**
 	 * @return DomElement
 	 */
 	public function renderLogin() {
@@ -1134,9 +1082,7 @@ class ExtMobileFrontend {
 			}
 		}
 
-		if ( self::$isMainPage ) {
-			$this->DOMParseMainPage( $doc );
-		}
+		$formatter->setIsMainPage( self::$isMainPage );
 		$prepend = '';
 		if ( $this->contentFormat == 'WML' ) {
 			// Wml for searching
@@ -1145,7 +1091,7 @@ class ExtMobileFrontend {
 				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';	
 		} elseif ( $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
-			&& empty( self::$search ) && !self::$isMainPage )
+			&& empty( self::$search ) )
 		{
 			$formatter->enableExpandableSections();
 		}

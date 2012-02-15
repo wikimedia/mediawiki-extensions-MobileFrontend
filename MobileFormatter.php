@@ -20,6 +20,7 @@ class MobileFormatter {
 	protected $title;
 
 	protected $expandableSections = false;
+	protected $mainPage = false;
 
 	private $headings = 0;
 
@@ -113,6 +114,10 @@ class MobileFormatter {
 
 	public function enableExpandableSections( $flag = true ) {
 		$this->expandableSections = $flag;
+	}
+
+	public function setIsMainPage( $value = true ) {
+		$this->mainPage = $value;
 	}
 
 	/**
@@ -236,12 +241,16 @@ class MobileFormatter {
 
 	public function getText( $id = false, $prependHtml = '', $appendHtml = '' ) {
 		wfProfileIn( __METHOD__ );
-		$element = $id ? $this->doc->getElementById( $id ) : null;
-		$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+		if ( $this->mainPage ) {
+			$element = $this->parseMainPage( $this->doc );
+		} else {
+			$element = $id ? $this->doc->getElementById( $id ) : null;
+		}
+		$html = $prependHtml . $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG ) . $appendHtml;
 		
 		switch ( $this->format ) {
 			case 'XHTML':
-				if ( $this->expandableSections && strlen( $html ) > 4000 ) {
+				if ( $this->expandableSections && !$this->mainPage && strlen( $html ) > 4000 ) {
 					$html = $this->headingTransform( $html );
 				}
 				break;
@@ -469,5 +478,59 @@ class MobileFormatter {
 
 		wfProfileOut( __METHOD__ );
 		return $removals;
+	}
+
+	/**
+	 * @param DOMDocument $mainPage
+	 * @return DOMElement
+	 */
+	protected function parseMainPage( DOMDocument $mainPage ) {
+		wfProfileIn( __METHOD__ );
+
+		$zeroLandingPage = $mainPage->getElementById( 'zero-landing-page' );
+		$featuredArticle = $mainPage->getElementById( 'mp-tfa' );
+		$newsItems = $mainPage->getElementById( 'mp-itn' );
+
+		$xpath = new DOMXpath( $mainPage );
+		$elements = $xpath->query( '//*[starts-with(@id, "mf-")]' );
+
+		$commonAttributes = array( 'mp-tfa', 'mp-itn' );
+
+		$content = $mainPage->createElement( 'div' );
+		$content->setAttribute( 'id', 'content' );
+
+		if ( $zeroLandingPage ) {
+			$content->appendChild( $zeroLandingPage );
+		}
+
+		if ( $featuredArticle ) {
+			$h2FeaturedArticle = $mainPage->createElement( 'h2', $this->msg( 'mobile-frontend-featured-article' ) );
+			$content->appendChild( $h2FeaturedArticle );
+			$content->appendChild( $featuredArticle );
+		}
+
+		if ( $newsItems ) {
+			$h2NewsItems = $mainPage->createElement( 'h2', $this->msg( 'mobile-frontend-news-items' ) );
+			$content->appendChild( $h2NewsItems );
+			$content->appendChild( $newsItems );
+		}
+
+		foreach ( $elements as $element ) {
+			if ( $element->hasAttribute( 'id' ) ) {
+				$id = $element->getAttribute( 'id' );
+				if ( !in_array( $id, $commonAttributes ) ) {
+					$elementTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
+					$h2UnknownMobileSection = $mainPage->createElement( 'h2', $elementTitle );
+					$br = $mainPage->createElement( 'br' );
+					$br->setAttribute( 'CLEAR', 'ALL' );
+					$content->appendChild( $h2UnknownMobileSection );
+					$content->appendChild( $element );
+					$content->appendChild( $br );
+				}
+			}
+		}
+
+		wfProfileOut( __METHOD__ );
+		return $content;
 	}
 }
