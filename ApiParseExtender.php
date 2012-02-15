@@ -16,6 +16,7 @@ class ApiParseExtender {
 				ApiBase::PARAM_TYPE => array( 'wml', 'html' ),
 			);
 			$params['expandablesections'] = false;
+			$params['noimages'] = false;
 		}
 		return true;
 	}
@@ -29,7 +30,9 @@ class ApiParseExtender {
 	public static function onAPIGetParamDescription( ApiBase &$module, Array &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = 'Return parse output in a format suitable for mobile devices';
-			$params['expandablesections'] = 'Make sections collapsed by default, expandable via JavaScript';
+			$params['expandablesections'] = 'Make sections in mobile output collapsed by default, expandable via JavaScript.'
+				. " Ignored if `section' parameter is set.";
+			$params['noimages'] = 'Disable images in mobile output';
 		}
 		return true;
 	}
@@ -82,6 +85,7 @@ class ApiParseExtender {
 						$mf->enableExpandableSections();
 					}
 				}
+				$mf->removeImages( $params['noimages'] );
 				$mf->filterContent();
 				$data['parse']['text'] = $mf->getText( 'content' );
 
