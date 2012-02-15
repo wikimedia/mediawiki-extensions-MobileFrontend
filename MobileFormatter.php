@@ -19,7 +19,6 @@ class MobileFormatter {
 	 */
 	protected $title;
 
-	protected $enableJavaScript = false;
 	protected $expandableSections = false;
 
 	private $headings = 0;
@@ -110,10 +109,6 @@ class MobileFormatter {
 	 */
 	public function getFormat() {
 		return $this->format;
-	}
-
-	public function enableJavaScript( $flag = true ) {
-		$this->enableJavaScript = $flag;
 	}
 
 	public function enableExpandableSections( $flag = true ) {

@@ -1066,7 +1066,6 @@ class ExtMobileFrontend {
 
 		$formatter = new MobileFormatter( $html, self::$title, $this->contentFormat, $this->wmlContext );
 		$formatter->useMessages( self::$messages );
-		$formatter->enableJavaScript( self::$device['supports_javascript'] );
 		$doc = $formatter->getDoc();
 
 		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
