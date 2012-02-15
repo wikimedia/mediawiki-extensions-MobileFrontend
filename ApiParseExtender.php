@@ -8,9 +8,9 @@ class ApiParseExtender {
 	 * APIGetAllowedParams hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetAllowedParams
 	 * @param ApiBase $module
-	 * @param array $params
+	 * @param array|bool $params
 	 */
-	public static function onAPIGetAllowedParams( ApiBase &$module, Array &$params ) {
+	public static function onAPIGetAllowedParams( ApiBase &$module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = array(
 				ApiBase::PARAM_TYPE => array( 'wml', 'html' ),
