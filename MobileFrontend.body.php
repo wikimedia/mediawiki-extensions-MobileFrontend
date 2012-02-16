@@ -710,15 +710,23 @@ class ExtMobileFrontend {
 		return $url;
 	}
 
+	/**
+	 * Disables caching if the request is coming from a trusted proxy
+	 */
 	private function disableCaching() {
 		global $wgRequest;
 		wfProfileIn( __METHOD__ );
-		if ( isset( $_SERVER['HTTP_VIA'] ) &&
-			stripos( $_SERVER['HTTP_VIA'], '.wikimedia.org:3128' ) !== false ) {
+
+		// Fetch the REMOTE_ADDR and check if it's a trusted proxy.
+		// Is this enough, or should we actually step through the entire
+		// X-FORWARDED-FOR chain?
+		$ip = $wgRequest->getRawIP();
+		if ( wfIsTrustedProxy ( $ip )) {
 			$wgRequest->response()->header( 'Cache-Control: no-cache, must-revalidate' );
 			$wgRequest->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 			$wgRequest->response()->header( 'Pragma: no-cache' );
 		}
+		
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
