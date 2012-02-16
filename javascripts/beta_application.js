@@ -1,4 +1,3 @@
-document.body.className = "jsEnabled";
 var search = document.getElementById( 'search' );
 var clearSearch = document.getElementById( 'clearsearch' );
 var results = document.getElementById( 'results' );
@@ -10,18 +9,12 @@ if ( !zeroRatedBanner ) {
 	var zeroRatedBanner = document.getElementById( 'zero-rated-banner-red' );
 }
 
-initClearSearchLink();
-
 function initClearSearchLink() {
 	clearSearch.setAttribute( 'title','Clear' );
 	clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
 	search.addEventListener( 'keyup', handleClearSearchLink, false );
 	search.addEventListener( 'keydown', handleDefaultText, false );
 }
-
-search.onpaste = function() {
-	handleDefaultText();
-};
 
 function navigateToLanguageSelection() {
 	var url;
@@ -71,25 +64,47 @@ function logoClick() {
 	}
 };
 
-for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
-	a[i].onclick = function() {
-		if ( this.hash.indexOf( '#' ) == 0 ) {
-			wm_reveal_for_hash( this.hash );
+function init() {
+	document.body.className = "jsEnabled";
+	initClearSearchLink();
+	search.onpaste = function() {
+		handleDefaultText();
+	};
+	document.getElementById( 'logo' ).addEventListener( 'click', logoClick );
+	var dismissNotification = document.getElementById( 'dismiss-notification' );
+
+	if ( dismissNotification ) {
+		var cookieNameZeroVisibility = 'zeroRatedBannerVisibility';
+		var zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
+		var zeroRatedBannerVisibility = readCookie( cookieNameZeroVisibility );
+
+		if ( zeroRatedBannerVisibility === 'off' ) {
+			zeroRatedBanner.style.display = 'none';
+		}
+
+		dismissNotification.onclick = function() {
+			if ( zeroRatedBanner ) {
+				zeroRatedBanner.style.display = 'none';
+				writeCookie( cookieNameZeroVisibility, 'off', 1 );
+			}
+		};
+	}
+	if ( document.location.hash.indexOf( '#' ) == 0 ) {
+		wm_reveal_for_hash( document.location.hash );
+	}
+
+	for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
+		a[i].onclick = function() {
+			if ( this.hash.indexOf( '#' ) == 0 ) {
+				wm_reveal_for_hash( this.hash );
+			}
 		}
 	}
-}
 
-function init() {
-	document.getElementById( 'logo' ).addEventListener( 'click', logoClick );
+	// Try to scroll and hide URL bar
+	window.scrollTo( 0, 1 );
 }
 init();
-
-if ( document.location.hash.indexOf( '#' ) == 0 ) {
-	wm_reveal_for_hash( document.location.hash );
-}
-
-// Try to scroll and hide URL bar
-window.scrollTo( 0, 1 );
 
 function wm_reveal_for_hash( hash ) {
 	var targetel = document.getElementById( hash.substr(1) );
@@ -149,23 +164,4 @@ function readCookie( name ) {
 function removeCookie( name ) {
 	writeCookie( name, '', -1 );
 	return null;
-}
-
-var dismissNotification = document.getElementById( 'dismiss-notification' );
-
-if ( dismissNotification ) {
-	var cookieNameZeroVisibility = 'zeroRatedBannerVisibility';
-	var zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
-	var zeroRatedBannerVisibility = readCookie( cookieNameZeroVisibility );
-	
-	if ( zeroRatedBannerVisibility === 'off' ) {
-		zeroRatedBanner.style.display = 'none';
-	}
-	
-	dismissNotification.onclick = function() {
-		if ( zeroRatedBanner ) {
-			zeroRatedBanner.style.display = 'none';
-			writeCookie( cookieNameZeroVisibility, 'off', 1 );
-		}
-	};
 }
