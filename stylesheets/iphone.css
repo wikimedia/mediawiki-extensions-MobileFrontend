@@ -350,12 +350,13 @@ button.section_heading.hide {
 	font-size: 16px;
 }
 
-body.landscape #searchbox {
-	width: 450px;
-}
-
-body.landscape #searchbox #searchField {
-	width: 375px;
+@media all and (orientation:landscape) {
+	#searchbox {
+		width: 450px;
+	}
+	#searchbox #searchField {
+		width: 375px;
+	}
 }
 
 #header {
