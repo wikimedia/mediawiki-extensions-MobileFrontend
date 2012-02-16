@@ -124,7 +124,9 @@ $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
  * @return bool
  */
 function efExtMobileFrontendUnitTests( &$files ) {
-	$files[] = dirname( __FILE__ ) . '/tests/MobileFrontendTest.php';
-	$files[] = dirname( __FILE__ ) . '/tests/DeviceDetectionTest.php';
+	$dir = dirname( __FILE__ ) . '/tests';
+	$files[] = "$dir/MobileFrontendTest.php";
+	$files[] = "$dir/DeviceDetectionTest.php";
+	$files[] = "$dir/MobileFormatterTest.php";
 	return true;
 }
