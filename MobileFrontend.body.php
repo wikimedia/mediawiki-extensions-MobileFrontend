@@ -581,7 +581,7 @@ class ExtMobileFrontend {
 		if ( $format === 'mobile-wap' ) {
 			return 'WML';
 		}
-		return 'XHTML';//@todo:
+		return 'XHTML';
 	}
 
 	/**
