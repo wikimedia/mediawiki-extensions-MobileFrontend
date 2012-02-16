@@ -68,6 +68,11 @@ for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 	}
 }
 
+function init() {
+	document.getElementById( 'logo' ).addEventListener( 'click', logoClick );
+}
+init();
+
 if ( document.location.hash.indexOf( '#' ) == 0 ) {
 	wm_reveal_for_hash( document.location.hash );
 }

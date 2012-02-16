@@ -25,13 +25,11 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$languageSelectionText = '<b>' . $this->data['messages']['mobile-frontend-language'] . ':</b><br/>';
 		$languageSelectionDiv = '<div id="languageselectionsection">' . $languageSelectionText . $languageSelection . '</div>';
 
-		$logoOnClick = ( $this->data['device']['supports_javascript'] ) ? 'onclick="javascript:logoClick();"' : '';
-
 		$searchWebkitHtml = <<<HTML
 			{$openSearchResults}
 		<div id='header'>
 			<div id='searchbox' {$logoDisplayNone}>
-			<img width="35" height="22" alt='Logo' id='logo' src='{$this->data['wgMobileFrontendLogo']}' {$logoOnClick} {$logoDisplayNone} />
+			<img width="35" height="22" alt='Logo' id='logo' src='{$this->data['wgMobileFrontendLogo']}' {$logoDisplayNone} />
 			<form action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
