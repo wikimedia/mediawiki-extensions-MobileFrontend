@@ -70,6 +70,14 @@ class MobileFormatter {
 
 	private $itemsToRemove = array();
 
+	/**
+	 * Constructor
+	 *
+	 * @param string $html: Text to process
+	 * @param Title $title: Title to which $html belongs
+	 * @param string $format: 'XHTML' or 'WML'
+	 * @param WmlContext $wmlContext: Context for creation of WML cards, can be omitted if $format == 'XHTML'
+	 */
 	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
 		wfProfileIn( __METHOD__ );
 
@@ -145,8 +153,7 @@ class MobileFormatter {
 
 	/**
 	 * Removes content inappropriate for mobile devices
-	 * @global type $wgMFRemovableClasses
-	 * @param type $removeDefaults 
+	 * @param bool $removeDefaults: Whether default settings at self::$defaultItemsToRemove should be used
 	 */
 	public function filterContent( $removeDefaults = true ) {
 		global $wgMFRemovableClasses;
@@ -239,6 +246,14 @@ class MobileFormatter {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * Performs final transformations to mobile format and returns resulting HTML/WML
+	 *
+	 * @param string|bool $id: ID of element to get HTML from or false to get it from the whole tree
+	 * @param string $prependHtml: HTML to be prepended to result before final transformations
+	 * @param string $appendHtml: HTML to be appended to result before final transformations
+	 * @return string: Processed HTML
+	 */
 	public function getText( $id = false, $prependHtml = '', $appendHtml = '' ) {
 		wfProfileIn( __METHOD__ );
 		if ( $this->mainPage ) {
@@ -271,7 +286,8 @@ class MobileFormatter {
 	}
 
 	/**
-	 * @param $matches array
+	 * Callback for headingTransform()
+	 * @param array $matches
 	 * @return string
 	 */
 	private function headingTransformCallbackWML( $matches ) {
@@ -286,7 +302,8 @@ class MobileFormatter {
 	}
 
 	/**
-	 * @param $matches array
+	 * Callback for headingTransform()
+	 * @param array $matches
 	 * @return string
 	 */
 	private function headingTransformCallbackXHTML( $matches ) {
@@ -350,8 +367,9 @@ class MobileFormatter {
 	}
 
 	/**
-	 * @param $s string
-	 * @return string
+	 * Creates a WML card from input
+	 * @param string $s: Raw WML
+	 * @return string: WML card
 	 */
 	protected function createWMLCard( $s ) {
 		wfProfileIn( __METHOD__ );
@@ -406,7 +424,8 @@ class MobileFormatter {
 	}
 
 	/**
-	 * @param $s string
+	 * Prepares headings in WML mode, makes sections expandable in XHTML mode
+	 * @param string $s
 	 * @return string
 	 */
 	protected function headingTransform( $s ) {
@@ -449,6 +468,7 @@ class MobileFormatter {
 	}
 
 	/**
+	 * Transforms CSS selectors into an internal representation suitable for processing
 	 * @return array
 	 */
 	private function parseItemsToRemove() {
@@ -477,7 +497,8 @@ class MobileFormatter {
 	}
 
 	/**
-	 * @param DOMDocument $mainPage
+	 * Performs transformations specific to main page
+	 * @param DOMDocument $mainPage: Tree to process
 	 * @return DOMElement
 	 */
 	protected function parseMainPage( DOMDocument $mainPage ) {
