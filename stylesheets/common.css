@@ -305,3 +305,17 @@ h3#sopa-notice {
 	-webkit-margin-after: 0.5em;
 	margin: 0px;
 }
+
+button.show {
+	display: none;
+}
+
+.jsEnabled button.show {
+	display: inline-block;
+}
+
+.jsEnabled .content_block,
+.jsEnabled .section_anchors,
+button.section_heading.hide {
+	display: none;
+}

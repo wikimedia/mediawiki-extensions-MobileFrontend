@@ -1,3 +1,4 @@
+document.body.className = "jsEnabled";
 var search = document.getElementById( 'search' );
 var clearSearch = document.getElementById( 'clearsearch' );
 var results = document.getElementById( 'results' );
