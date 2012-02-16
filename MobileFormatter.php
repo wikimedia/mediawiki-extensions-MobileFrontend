@@ -276,13 +276,11 @@ class MobileFormatter {
 	 */
 	private function headingTransformCallbackWML( $matches ) {
 		wfProfileIn( __METHOD__ );
-		static $headings = 0;
-		++$headings;
+		$this->headings++;
 
 		$base = self::WML_SECTION_SEPARATOR .
-				"<h2 class='section_heading' id='section_{$headings}'>{$matches[2]}</h2>";
+				"<h2 class='section_heading' id='section_{$this->headings}'>{$this->matches[2]}</h2>";
 
-		$this->headings = $headings;
 		wfProfileOut( __METHOD__ );
 		return $base;
 	}
@@ -299,40 +297,39 @@ class MobileFormatter {
 
 		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
 
-		static $headings = 0;
 		$show = $this->msg( 'mobile-frontend-show-button' );
 		$hide = $this->msg( 'mobile-frontend-hide-button' );
 		$backToTop = $this->msg( 'mobile-frontend-back-to-top-of-section' );
-		++$headings;
+		$this->headings++;
 		// Back to top link
 		$base = Html::openElement( 'div',
-						array( 'id' => 'anchor_' . intval( $headings - 1 ),
+						array( 'id' => 'anchor_' . intval( $this->headings - 1 ),
 								'class' => 'section_anchors', )
 				) .
 				Html::rawElement( 'a',
-						array( 'href' => '#section_' . intval( $headings - 1 ),
+						array( 'href' => '#section_' . intval( $this->headings - 1 ),
 								'class' => 'back_to_top' ),
 								'&#8593;' . $backToTop ) .
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
 		$buttons = Html::element( 'button',
 					array( 'class' => 'section_heading show',
-							'section_id' => $headings ),
+							'section_id' => $this->headings ),
 							$show ) .
 			Html::element( 'button',
 					array( 'class' => 'section_heading hide',
-							'section_id' => $headings ),
+							'section_id' => $this->headings ),
 							$hide );
 		if ( $this->expandableSections ) {
-			$h2OnClick = 'javascript:wm_toggle_section(' . $headings . ');';
+			$h2OnClick = 'javascript:wm_toggle_section(' . $this->headings . ');';
 			$base .= Html::openElement( 'h2',
 							array( 'class' => 'section_heading',
-									'id' => 'section_' . $headings,
+									'id' => 'section_' . $this->headings,
 									'onclick' => $h2OnClick ) );
 		} else {
 			$base .= Html::openElement( 'h2',
 							array( 'class' => 'section_heading',
-									'id' => 'section_' . $headings ) );
+									'id' => 'section_' . $this->headings ) );
 		}
 		$base .= $buttons .
 				Html::rawElement( 'span',
@@ -341,14 +338,13 @@ class MobileFormatter {
 				Html::closeElement( 'h2' ) .
 				Html::openElement( 'div',
 						array( 'class' => 'content_block',
-								'id' => 'content_' . $headings ) );
+								'id' => 'content_' . $this->headings ) );
 
-		if ( $headings > 1 ) {
+		if ( $this->headings > 1 ) {
 			// Close it up here
 			$base = Html::closeElement( 'div' ) . $base;
 		}
 
-		$this->headings = $headings;
 		wfProfileOut( __METHOD__ );
 		return $base;
 	}
