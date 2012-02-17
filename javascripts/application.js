@@ -58,6 +58,15 @@ function logoClick() {
 
 function init() {
 	document.body.className = "jsEnabled";
+	var sectionHeadings = document.getElementsByClassName( 'section_heading' );
+	for( var i = 0; i < sectionHeadings.length; i++ ) {
+		sectionHeadings[i].addEventListener( 'click', function() {
+			var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
+			if(sectionNumber > -1) {
+				wm_toggle_section( sectionNumber );
+			}
+		}, false );
+	}
 	initClearSearchLink();
 	document.getElementById( 'logo' ).addEventListener( 'click', logoClick );
 	var dismissNotification = document.getElementById( 'dismiss-notification' );

@@ -338,11 +338,9 @@ class MobileFormatter {
 							'section_id' => $this->headings ),
 							$hide );
 		if ( $this->expandableSections ) {
-			$h2OnClick = 'javascript:wm_toggle_section(' . $this->headings . ');';
 			$base .= Html::openElement( 'h2',
 							array( 'class' => 'section_heading',
-									'id' => 'section_' . $this->headings,
-									'onclick' => $h2OnClick ) );
+									'id' => 'section_' . $this->headings ) );
 		} else {
 			$base .= Html::openElement( 'h2',
 							array( 'class' => 'section_heading',
