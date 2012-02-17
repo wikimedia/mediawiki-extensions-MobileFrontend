@@ -18,6 +18,8 @@ var logo = document.getElementById( 'logo' );
 var goButton = document.getElementById( 'goButton' );
 var content = document.getElementById( 'content' );
 var footer = document.getElementById( 'footer' );
+var zeroRatedBanner = document.getElementById( 'zero-rated-banner' ) ||
+	document.getElementById( 'zero-rated-banner-red' );
 
 function hideResults() {
 	results.style.display = 'none';
