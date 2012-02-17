@@ -1,3 +1,5 @@
+MobileFrontend.opensearch = function() {
+
 var apiUrl = '/api.php';
 
 if ( scriptPath ) {
@@ -109,18 +111,18 @@ search.onfocus = function() {
 			pE.style.display = 'none';
 		}
 
-		var removeResults = document.getElementById( 'remove-results' );
-		if ( !removeResults ) {
+		var removeResultsEl = document.getElementById( 'remove-results' );
+		if ( !removeResultsEl ) {
 			rrd = document.createElement( 'a' );
-		 	rrd.setAttribute( 'href', '#' );
+			rrd.setAttribute( 'href', '#' );
 			rrd.setAttribute( 'id', 'remove-results' );
-			rrd.setAttribute( 'onclick', 'removeResults();' );
+			rrd.addEventListener( 'click', removeResults );
 			rrdD = document.createElement( 'div' );
 			rrdD.setAttribute( 'id', 'left-arrow' );
 			rrd.appendChild( rrdD );
 			sq.insertBefore( rrd, sq.firstChild );
 		} else {
-			removeResults.style.display = 'block';
+			removeResultsEl.style.display = 'block';
 		}
 		focused = true;
 	}
@@ -174,20 +176,6 @@ function removeResults() {
 			clearSearch.style.display = 'none';
 		}
 	}
-}
-
-document.body.onmousedown = function( event ) {
-	whichElement(event);
-}
-results.onmousedown = function( event ) {
-	whichElement(event);
-}
-
-document.body.ontouchstart = function( event ) {
-	whichElement(event);
-}
-results.ontouchstart = function( event ) {
-	whichElement(event);
 }
 
 function whichElement( e ) {
@@ -309,6 +297,7 @@ function createObjectArray( responseXml ) {
 }
 
 function sqValUpdate( sqValue ) {
+	var search = document.getElementById( 'search' );
 	if ( search ) {
 		search.value = sqValue + ' ';
 		search.focus();
@@ -325,6 +314,7 @@ function escapeJsString( str ) {
 }
 
 function writeResults( sections ) {
+	var results = document.getElementById( 'results' );
 	var term = htmlEntities( document.getElementById( 'search' ).value );
 	results.style.display = 'block';
 	if ( search ) {
@@ -369,3 +359,29 @@ function writeResults( sections ) {
 		}
 	}
 }
+
+function init() {
+	var results = document.getElementById( 'results' );
+	results.onmousedown = function( event ) {
+		whichElement( event );
+	};
+	document.body.onmousedown = function( event ) {
+		whichElement( event );
+	};
+	document.body.ontouchstart = function( event ) {
+		whichElement( event );
+	};
+	results.ontouchstart = function( event ) {
+		whichElement( event );
+	};
+}
+init();
+
+return {
+	init: init,
+	writeResults: writeResults,
+	createObjectArray: createObjectArray,
+	removeResults: removeResults
+};
+
+}();

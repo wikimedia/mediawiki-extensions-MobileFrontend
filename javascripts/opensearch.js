@@ -1,3 +1,5 @@
+MobileFrontend.opensearch = function() {
+
 var apiUrl = '/api.php';
 
 if ( scriptPath ) {
@@ -15,21 +17,8 @@ var sq = document.getElementById( 'sq' );
 var sb = document.getElementById( 'searchbox' );
 
 function hideResults() {
+	var results = document.getElementById( 'results' );
 	results.style.display = 'none';
-}
-
-document.body.onmousedown = function( event ) {
-	whichElement(event);
-}
-results.onmousedown = function( event ) {
-	whichElement(event);
-}
-
-document.body.ontouchstart = function( event ) {
-	whichElement(event);
-}
-results.ontouchstart = function( event ) {
-	whichElement(event);
 }
 
 function whichElement( e ) { 
@@ -137,6 +126,7 @@ function createObjectArray( responseXml ) {
 }
 
 function sqValUpdate( sqValue ) {
+	var search = document.getElementById( 'search' );
 	if ( search ) {
 		search.value = sqValue + ' ';
 		search.focus();
@@ -145,6 +135,7 @@ function sqValUpdate( sqValue ) {
 }
 
 function writeResults( sections ) {
+	var results = document.getElementById( 'results' );
 		results.style.display = 'block';
 	if ( !sections || sections.length < 1 ) {
 		results.innerHTML = "No results";
@@ -179,3 +170,28 @@ function writeResults( sections ) {
 		}
 	}
 }
+
+function init() {
+	var results = document.getElementById( 'results' );
+	results.onmousedown = function( event ) {
+		whichElement( event );
+	};
+	document.body.onmousedown = function( event ) {
+		whichElement( event );
+	};
+	document.body.ontouchstart = function( event ) {
+		whichElement( event );
+	};
+	results.ontouchstart = function( event ) {
+		whichElement( event );
+	};
+}
+init();
+
+return {
+	init: init,
+	writeResults: writeResults,
+	createObjectArray: createObjectArray
+};
+
+}();
