@@ -1293,6 +1293,17 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ );
 	}
 
+	public function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
+		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
+			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
+				'tests/js/test_application.js' ),
+				'dependencies' => array( ),
+				'localBasePath' => dirname( __FILE__ ),
+				'remoteExtPath' => 'MobileFrontend',
+		);
+		return true;
+	}
+
 	public function getVersion() {
 		return __CLASS__ . ': $Id$';
 	}
