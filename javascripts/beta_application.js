@@ -16,16 +16,6 @@ function initClearSearchLink() {
 	search.addEventListener( 'keydown', handleDefaultText, false );
 }
 
-function navigateToLanguageSelection() {
-	var url;
-	if ( languageSelection ) {
-		url = languageSelection.options[languageSelection.selectedIndex].value;
-		if ( url ) {
-			location.href = url;
-		}
-	}
-}
-
 function handleDefaultText() {
 	var pE = document.getElementById( 'placeholder' );
 	if ( pE ) {
@@ -75,6 +65,18 @@ function init() {
 			}
 		}, false );
 	}
+
+	function navigateToLanguageSelection() {
+		var url;
+		if ( languageSelection ) {
+			url = languageSelection.options[languageSelection.selectedIndex].value;
+			if ( url ) {
+				location.href = url;
+			}
+		}
+	}
+	document.getElementById( 'languageselection' ).addEventListener( 'change', navigateToLanguageSelection );
+
 	initClearSearchLink();
 	search.onpaste = function() {
 		handleDefaultText();

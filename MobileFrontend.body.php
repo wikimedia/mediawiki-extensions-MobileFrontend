@@ -1251,8 +1251,7 @@ class ExtMobileFrontend {
 		global $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 		$output = Html::openElement( 'select',
-			array( 'id' => 'languageselection',
-				'onchange' => 'javascript:navigateToLanguageSelection();' ) );
+			array( 'id' => 'languageselection' ) );
 		foreach ( self::$languageUrls as $languageUrl ) {
 			if ( $languageUrl['lang'] == $wgLanguageCode ) {
 				$output .=	Html::element( 'option',

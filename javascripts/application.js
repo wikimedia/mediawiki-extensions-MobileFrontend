@@ -9,16 +9,6 @@ function initClearSearchLink() {
 	search.addEventListener( 'keyup', handleClearSearchLink, false );
 }
 
-function navigateToLanguageSelection() {
-	var url;
-	if ( languageSelection ) {
-		url = languageSelection.options[languageSelection.selectedIndex].value;
-		if ( url ) {
-			location.href = url;
-		}
-	}
-}
-
 function handleClearSearchLink() {
 	if ( clearSearch ) {
 		if ( search.value.length > 0 ) {
@@ -67,6 +57,18 @@ function init() {
 			}
 		}, false );
 	}
+
+	function navigateToLanguageSelection() {
+		var url;
+		if ( languageSelection ) {
+			url = languageSelection.options[languageSelection.selectedIndex].value;
+			if ( url ) {
+				location.href = url;
+			}
+		}
+	}
+	document.getElementById( 'languageselection' ).addEventListener( 'change', navigateToLanguageSelection );
+
 	initClearSearchLink();
 	document.getElementById( 'logo' ).addEventListener( 'click', logoClick );
 	var dismissNotification = document.getElementById( 'dismiss-notification' );
