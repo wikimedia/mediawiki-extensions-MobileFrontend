@@ -1799,6 +1799,7 @@ $messages['ext'] = array(
 
 /** Persian (فارسی)
  * @author Baqeri
+ * @author Huji
  * @author Leyth
  * @author Mjbmr
  * @author Rmashhadi
@@ -1839,16 +1840,16 @@ $messages['fa'] = array(
 	'mobile-frontend-opt-in-message' => 'به سامانۀ آزمایشی گوشی همراه می‌پیوندید؟',
 	'mobile-frontend-opt-in-yes-button' => 'بله',
 	'mobile-frontend-opt-in-no-button' => 'خیر',
-	'mobile-frontend-opt-in-explain' => 'این به شما اجازهٔ ورود به آزمایش را می‌دهد',
+	'mobile-frontend-opt-in-explain' => 'با پیوستن به نسخهٔ آزمایشی، شما به ویژگی‌های آزمایشی دسترسی پیدا می‌کنید اما ممکن است با مشکلاتی هم مواجه شوید.',
 	'mobile-frontend-opt-out-message' => 'سامانۀ آزمایشی گوشی همراه را ترک می‌کنید؟',
 	'mobile-frontend-opt-out-yes-button' => 'بله',
 	'mobile-frontend-opt-out-no-button' => 'خیر',
-	'mobile-frontend-opt-out-explain' => 'این به شما اجازه آزمایش را می‌دهد',
+	'mobile-frontend-opt-out-explain' => 'این به شما اجازه خروج از آزمایش را می‌دهد',
 	'mobile-frontend-disable-images' => 'غیر فعال کردن تصاویر بر روی تارنمای تلفن همراه',
 	'mobile-frontend-enable-images' => 'فعال سازی تصاویر بر روی تارنمای تلفن همراه',
 	'mobile-frontend-news-items' => 'در خبرها',
-	'mobile-frontend-leave-feedback-title' => 'دربارهٔ ظاهر تلفن همراه، بازخورد بگذارید',
-	'mobile-frontend-leave-feedback-notice' => 'بازخورد شما به طور عمومی، همراه با نام شما، نسخهٔ مرورگر و سیستم عامل در صفحه ارسال خواهد شد. "$1"',
+	'mobile-frontend-leave-feedback-title' => 'دربارهٔ تجربهٔ استفاده از وبگاه مخصوص تلفن همراه، بازخورد بگذارید',
+	'mobile-frontend-leave-feedback-notice' => 'بازخورد شما به ما کمک می‌کند تا وبگاه مخصوص تلفن همراه را بهبود ببخشیم. بازخوردتان به طور عمومی (همراه با نام کاربری شما، نسخهٔ مرورگرتان و سیستم عامل‌تان) در صفحه «$1» ارسال خواهد شد. لطفاُ تلاش کنید که عنوان آگاهی‌دهنده‌ای برگزینید، مثلاُ «مشکل قالب‌بندی با تبلت‌های پهن». بازخورد شما مشمول قوانین استفاده ماست.',
 	'mobile-frontend-leave-feedback-subject' => 'عنوان',
 	'mobile-frontend-leave-feedback-message' => 'پیام',
 	'mobile-frontend-leave-feedback-cancel' => 'لغو',
