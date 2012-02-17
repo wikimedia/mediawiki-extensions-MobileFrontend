@@ -1302,6 +1302,13 @@ class ExtMobileFrontend {
 				'localBasePath' => dirname( __FILE__ ),
 				'remoteExtPath' => 'MobileFrontend',
 		);
+		$testModules['qunit']['ext.mobilefrontend.tests.beta'] = array(
+			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/beta_application.js',
+				'javascripts/beta_opensearch.js', 'tests/js/test_beta_opensearch.js' ),
+				'dependencies' => array( ),
+				'localBasePath' => dirname( __FILE__ ),
+				'remoteExtPath' => 'MobileFrontend',
+		);
 		return true;
 	}
 

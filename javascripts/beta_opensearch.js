@@ -40,6 +40,10 @@ MobileFrontend.opensearch = (function() {
 	search.onfocus = function() {
 		var pE, pT, pTT, rrd, rrdD,
 			removeResultsEl;
+		sb = document.getElementById( 'searchbox' );
+		sq = document.getElementById( 'sq' );
+		content = document.getElementById( 'content' );
+		footer = document.getElementById( 'footer' );
 		resetViewPort();
 	
 		if ( zeroRatedBanner ) {
@@ -305,7 +309,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function escapeJsString( str ) {
-		return String( str ).replace( /\\/g, '\\\\' ).replace( /'/g, "\\'" ).replace( /\n/g, '\\n' );
+		return str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 	}
 
 	function writeResults( sections ) {
