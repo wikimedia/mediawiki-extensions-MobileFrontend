@@ -20,6 +20,7 @@ var content = document.getElementById( 'content' );
 var footer = document.getElementById( 'footer' );
 var zeroRatedBanner = document.getElementById( 'zero-rated-banner' ) ||
 	document.getElementById( 'zero-rated-banner-red' );
+var clearSearch = document.getElementById( 'clearsearch' );
 
 function hideResults() {
 	results.style.display = 'none';
