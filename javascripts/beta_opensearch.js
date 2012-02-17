@@ -1,28 +1,24 @@
-MobileFrontend.opensearch = function() {
-
-	var apiUrl = '/api.php';
+/*global document, window, MobileFrontend, navigator, placeholder */
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+MobileFrontend.opensearch = (function() {
+	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
+		numResults = 15, pixels = 'px', term,
+		results = document.getElementById( 'results' ),
+		search = document.getElementById( 'search' ),
+		sq = document.getElementById( 'sq' ),
+		sb = document.getElementById( 'searchbox' ),
+		logo = document.getElementById( 'logo' ),
+		goButton = document.getElementById( 'goButton' ),
+		content = document.getElementById( 'content' ),
+		footer = document.getElementById( 'footer' ),
+		zeroRatedBanner = document.getElementById( 'zero-rated-banner' ) ||
+			document.getElementById( 'zero-rated-banner-red' ),
+		clearSearch = document.getElementById( 'clearsearch' ),
+		focused = false, ol = {};
 
 	if ( scriptPath ) {
 		apiUrl = scriptPath + apiUrl;
 	}
-
-	var timer = -1;
-	var typingDelay = 500;
-	var numResults = 15;
-	var pixels = 'px';
-	var term;
-
-	var results = document.getElementById( 'results' );
-	var search = document.getElementById( 'search' );
-	var sq = document.getElementById( 'sq' );
-	var sb = document.getElementById( 'searchbox' );
-	var logo = document.getElementById( 'logo' );
-	var goButton = document.getElementById( 'goButton' );
-	var content = document.getElementById( 'content' );
-	var footer = document.getElementById( 'footer' );
-	var zeroRatedBanner = document.getElementById( 'zero-rated-banner' ) ||
-		document.getElementById( 'zero-rated-banner-red' );
-	var clearSearch = document.getElementById( 'clearsearch' );
 
 	function hideResults() {
 		results.style.display = 'none';
@@ -41,10 +37,9 @@ MobileFrontend.opensearch = function() {
 
 	resetViewPort();
 
-	var focused = false;
-	var ol = new Object();
 	search.onfocus = function() {
-
+		var pE, pT, pTT, rrd, rrdD,
+			removeResultsEl;
 		resetViewPort();
 	
 		if ( zeroRatedBanner ) {
@@ -67,8 +62,8 @@ MobileFrontend.opensearch = function() {
 			sq.style.top = sb.offsetTop + pixels;
 			sq.style.height = sb.offsetHeight + pixels;
 			sq.style.width = sb.offsetWidth + pixels;
-			sq.style.left = 0 + pixels;
-			sq.style.top = 0 + pixels;
+			sq.style.left = 0;
+			sq.style.top = 0;
 			sq.style.height = 40 + pixels;
 			sq.style.width = document.body.clientWidth + pixels;
 			search.style.position = 'absolute';
@@ -76,7 +71,7 @@ MobileFrontend.opensearch = function() {
 			search.style.height = 34 + pixels;
 			search.style.width = ( document.body.clientWidth - 90 ) + pixels;
 			search.style.fontSize = 16 + pixels;
-			results.style.left = 0 + pixels;
+			results.style.left = 0;
 			results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
 			results.style.width = document.body.clientWidth + pixels;
 			results.style.minHeight = '100%';
@@ -84,19 +79,19 @@ MobileFrontend.opensearch = function() {
 			results.style.backgroundColor = '#E6E6E6';
 			results.style.paddingTop = 5 + pixels;
 			results.style.display = 'block';
-			sb.style.border = 0 + pixels;
+			sb.style.border = 0;
 			logo.style.visibility = 'hidden';
 			goButton.style.visibility = 'hidden';
 
-			var pE = document.getElementById( 'placeholder' );
+			pE = document.getElementById( 'placeholder' );
 			if ( !pE ) {
 				pT = document.createElement( 'span' );
-				var pTT = document.createTextNode(placeholder);
+				pTT = document.createTextNode(placeholder);
 				pT.setAttribute( 'id', 'placeholder' );
 				pT.appendChild(pTT);
 				sb.insertBefore( pT, sb.firstChild );
 			}
-			var pE = document.getElementById( 'placeholder' );
+			pE = document.getElementById( 'placeholder' );
 			if ( pE ) {
 				pE.style.position = 'absolute';
 				pE.style.left = ( search.offsetLeft + 5 ) + pixels;
@@ -107,11 +102,11 @@ MobileFrontend.opensearch = function() {
 				search.style.backgroundColor = 'transparent';
 			}
 
-			if ( pE && search.value != '' ) {
+			if ( pE && search.value !== '' ) {
 				pE.style.display = 'none';
 			}
 
-			var removeResultsEl = document.getElementById( 'remove-results' );
+			removeResultsEl = document.getElementById( 'remove-results' );
 			if ( !removeResultsEl ) {
 				rrd = document.createElement( 'a' );
 				rrd.setAttribute( 'href', '#' );
@@ -126,9 +121,10 @@ MobileFrontend.opensearch = function() {
 			}
 			focused = true;
 		}
-	}
+	};
 
 	function removeResults() {
+		var removeResultsEl, pE = document.getElementById( 'placeholder' );
 		if ( content ) {
 			content.style.display = 'block';
 		}
@@ -136,7 +132,6 @@ MobileFrontend.opensearch = function() {
 			footer.style.display = 'block';
 		}
 
-		var pE = document.getElementById( 'placeholder' );
 		if ( pE ) {
 			pE.style.display = 'none';
 		}
@@ -164,9 +159,9 @@ MobileFrontend.opensearch = function() {
 			}
 			if ( sb ) {
 				sb.style.border = 'solid #CCC 1px';
-				var removeResults = document.getElementById( 'remove-results' );
-				if ( removeResults ) {
-					removeResults.style.display = 'none';
+				removeResultsEl = document.getElementById( 'remove-results' );
+				if ( removeResultsEl ) {
+					removeResultsEl.style.display = 'none';
 				}
 			}
 			if ( focused ) {
@@ -181,7 +176,7 @@ MobileFrontend.opensearch = function() {
 	function whichElement( e ) {
 		var targ;
 		if ( !e ) {
-			var e = window.event;
+			e = window.event;
 		}
 		if ( e.target ) {
 			targ = e.target;
@@ -189,24 +184,24 @@ MobileFrontend.opensearch = function() {
 			targ = e.srcElement;
 		}
 
-		if ( targ.nodeType == 3 ) {
+		if ( targ.nodeType === 3 ) {
 			targ = targ.parentNode;
 		}
 
 		e.cancelBubble = true;
 		e.stopPropagation();
-		if ( targ.className == "suggestion-result" ||
-			 targ.className == "search-result-item" ||
-			 targ.className == "suggestions-result" ||
-			 targ.className == "sq-val-update" ||
-			 targ.id == 'results' ||
-			 targ.id == 'search' ||
-			 targ.id == 'searchbox' ||
-			 targ.id == 'sq' ||
-			 targ.id == 'placeholder' ||
-			 targ.id == 'clearsearch' ||
-			 targ.tagName == 'BODY' ) {
-				if ( targ.id == 'clearsearch' && results ) {
+		if ( targ.className === "suggestion-result" ||
+			 targ.className === "search-result-item" ||
+			 targ.className === "suggestions-result" ||
+			 targ.className === "sq-val-update" ||
+			 targ.id === 'results' ||
+			 targ.id === 'search' ||
+			 targ.id === 'searchbox' ||
+			 targ.id === 'sq' ||
+			 targ.id === 'placeholder' ||
+			 targ.id === 'clearsearch' ||
+			 targ.tagName === 'BODY' ) {
+				if ( targ.id === 'clearsearch' && results ) {
 					results.innerHTML = '';
 				}
 		} else {
@@ -216,7 +211,7 @@ MobileFrontend.opensearch = function() {
 
 	function updateSearchWidth() {
 		if ( sq && search && sb ) {
-			var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
+			var iw = document.documentElement.clientWidth || document.body.clientWidth;
 			sb.style.width = ( iw - 30 ) + pixels;
 			sq.style.width = ( iw - 110 ) + pixels;
 			search.style.width = ( iw - 130 ) + pixels;
@@ -224,7 +219,7 @@ MobileFrontend.opensearch = function() {
 				results.style.width = ( sq.offsetWidth - 2 ) + pixels;
 				results.style.left = sq.offsetLeft + pixels;
 				results.style.top = ( sq.offsetTop + sq.offsetHeight ) + pixels;
-				if ( results.style.display == 'block' ) {
+				if ( results.style.display === 'block' ) {
 					focused = false;
 					search.blur();
 					search.focus();
@@ -241,7 +236,7 @@ MobileFrontend.opensearch = function() {
 			case -90:
 			case 90:
 			case 180:
-				setTimeout( "updateSearchWidth()", 300 );
+				setTimeout( updateSearchWidth, 300 );
 				break;
 	  }
 	}
@@ -261,10 +256,10 @@ MobileFrontend.opensearch = function() {
 					timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 				}
 			}, false );
-	}
+	};
 
 	function searchApi( term ) {
-		var xmlHttp;
+		var xmlHttp, url;
 		if ( window.XMLHttpRequest ) {
 			xmlHttp = new XMLHttpRequest();
 		} else {
@@ -272,25 +267,25 @@ MobileFrontend.opensearch = function() {
 		}
 		xmlHttp.overrideMimeType( 'text/xml' );
 		xmlHttp.onreadystatechange = function() {
-			if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
+			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200 ) {
 				var sections = createObjectArray( xmlHttp.responseXML );
 				writeResults( sections );
 			}
-		}
-		var url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
+		};
+		url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
 		xmlHttp.open( 'GET', url, true );
 		xmlHttp.send();
 	}
 
 	function createObjectArray( responseXml ) {
-		var sections = new Array();
-		var items = responseXml.getElementsByTagName( 'Item' );
+		var sections = [], i, item, section,
+			items = responseXml.getElementsByTagName( 'Item' );
 		for ( i = 0; i < items.length; i++ ) {
-			var item = items[i];
-			var section = {
+			item = items[i];
+			section = {
 				label: item.getElementsByTagName( 'Text' )[0].textContent,
-				value: item.getElementsByTagName( 'Url' )[0].textContent,
-			}
+				value: item.getElementsByTagName( 'Url' )[0].textContent
+			};
 			sections.push( section );
 		}
 		return sections;
@@ -314,8 +309,10 @@ MobileFrontend.opensearch = function() {
 	}
 
 	function writeResults( sections ) {
-		var results = document.getElementById( 'results' );
-		var term = htmlEntities( document.getElementById( 'search' ).value );
+		var results = document.getElementById( 'results' ), suggestions, i,
+			term = htmlEntities( document.getElementById( 'search' ).value ),
+			suggestionListener, section, escapedTerm, suggestionsResult, link, label;
+
 		results.style.display = 'block';
 		if ( search ) {
 			search.focus();
@@ -326,21 +323,24 @@ MobileFrontend.opensearch = function() {
 			if( results.firstChild ) {
 				results.removeChild( results.firstChild );
 			}
-			var suggestions = document.createElement( 'div' );
+			suggestions = document.createElement( 'div' );
 			suggestions.className = 'suggestions-results';
 			results.appendChild( suggestions );
+			suggestionListener = function() {
+				var title = this.parentNode.getAttribute( 'title' );
+				sqValUpdate( title );
+			};
+
 			for ( i = 0; i < sections.length; i++ ) {
-				var section = sections[i], suggestionsResult = document.createElement( 'div' ),
-					link = document.createElement( 'a' ), label;
+				section = sections[i];
+				suggestionsResult = document.createElement( 'div' );
+				link = document.createElement( 'a' );
 				suggestionsResult.setAttribute( 'title', section.label );
 				suggestionsResult.className = 'suggestions-result';
 				label = document.createTextNode( '+' );
 				link.appendChild(label);
 				link.className = 'sq-val-update';
-				link.addEventListener( 'click', function() {
-					var title = this.parentNode.getAttribute( 'title' );
-					sqValUpdate( title );
-				});
+				link.addEventListener( 'click', suggestionListener );
 				suggestionsResult.appendChild( link );
 
 				link = document.createElement( 'a' );
@@ -353,7 +353,7 @@ MobileFrontend.opensearch = function() {
 				suggestions.appendChild( suggestionsResult );
 				// TODO: simplify the highlighting code to not use htmlEntities
 				// highlight matched term
-				var escapedTerm = escapeJsString( term );
+				escapedTerm = escapeJsString( term );
 				link.innerHTML = link.innerHTML.replace( new RegExp( '(' + escapedTerm + ')' , 'ig'),
 					'<strong>$1</strong>' );
 			}
@@ -384,4 +384,4 @@ MobileFrontend.opensearch = function() {
 		removeResults: removeResults
 	};
 
-}();
+}());

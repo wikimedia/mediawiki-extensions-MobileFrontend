@@ -1,20 +1,16 @@
-MobileFrontend.opensearch = function() {
-
-	var apiUrl = '/api.php';
+/*global document, window, MobileFrontend, navigator, placeholder */
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+MobileFrontend.opensearch = (function() {
+	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
+		numResults = 5, pixels = 'px',
+		results = document.getElementById( 'results' ),
+		search = document.getElementById( 'search' ),
+		sq = document.getElementById( 'sq' ),
+		sb = document.getElementById( 'searchbox' );
 
 	if ( scriptPath ) {
 		apiUrl = scriptPath + apiUrl;	
 	}
-
-	var timer = -1;
-	var typingDelay = 500;
-	var numResults = 5;
-	var pixels = 'px';
-
-	var results = document.getElementById( 'results' );
-	var search = document.getElementById( 'search' );
-	var sq = document.getElementById( 'sq' );
-	var sb = document.getElementById( 'searchbox' );
 
 	function hideResults() {
 		var results = document.getElementById( 'results' );
@@ -24,7 +20,7 @@ MobileFrontend.opensearch = function() {
 	function whichElement( e ) { 
 		var targ;
 		if ( !e ) {
-			var e = window.event;
+			e = window.event;
 		}
 		if ( e.target ) {
 			targ = e.target;
@@ -32,25 +28,24 @@ MobileFrontend.opensearch = function() {
 			targ = e.srcElement;
 		}
 	
-		if ( targ.nodeType == 3 ) {
+		if ( targ.nodeType === 3 ) {
 			targ = targ.parentNode;
 		}
 	
 		e.cancelBubble = true;
 		e.stopPropagation();
 	
-		if ( targ.className == "suggestion-result" || 
-			 targ.className == "search-result-item" || 
-			 targ.className == "suggestions-result" ||
-			 targ.className == "sq-val-update" ) {
-		} else {
+		if (!( targ.className === "suggestion-result" || 
+			 targ.className === "search-result-item" || 
+			 targ.className === "suggestions-result" ||
+			 targ.className === "sq-val-update" ) ) {
 			hideResults();
 		}
 	}
 
 	function updateSearchWidth() {
 		if ( sq && search && sb ) {
-			var iw = ( document.documentElement.clientWidth ) ? document.documentElement.clientWidth : document.body.clientWidth;
+			var iw = document.documentElement.clientWidth || document.body.clientWidth;
 			sb.style.width = ( iw - 30 ) + pixels;
 			sq.style.width = ( iw - 110 ) + pixels;
 			search.style.width = ( iw - 130 ) + pixels;
@@ -89,10 +84,10 @@ MobileFrontend.opensearch = function() {
 					timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 				}
 			}, false );
-	}
+	};
 
 	function searchApi( term ) {
-		var xmlHttp;
+		var xmlHttp, url;
 		if ( window.XMLHttpRequest ) {
 			xmlHttp = new XMLHttpRequest();
 		} else {
@@ -100,26 +95,26 @@ MobileFrontend.opensearch = function() {
 		}
 		xmlHttp.overrideMimeType( 'text/xml' );
 		xmlHttp.onreadystatechange = function() {
-			if ( xmlHttp.readyState == 4 && xmlHttp.status == 200 ) {
+			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200 ) {
 				var sections = createObjectArray( xmlHttp.responseXML );
 				writeResults( sections );
 			}
-		}
+		};
 		term = encodeURIComponent( term );
-		var url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
+		url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
 		xmlHttp.open( 'GET', url, true );
 		xmlHttp.send();
 	}
 
 	function createObjectArray( responseXml ) {
-		var sections = new Array();
-		var items = responseXml.getElementsByTagName( 'Item' );
+		var sections = [], i, item, section,
+			items = responseXml.getElementsByTagName( 'Item' );
 		for ( i = 0; i < items.length; i++ ) {
-			var item = items[i];
-			var section = {
+			item = items[i];
+			section = {
 				label: item.getElementsByTagName( 'Text' )[0].textContent,
-				value: item.getElementsByTagName( 'Url' )[0].textContent,
-			}
+				value: item.getElementsByTagName( 'Url' )[0].textContent
+			};
 			sections.push( section );
 		}
 		return sections;
@@ -135,7 +130,9 @@ MobileFrontend.opensearch = function() {
 	}
 
 	function writeResults( sections ) {
-		var results = document.getElementById( 'results' );
+		var results = document.getElementById( 'results' ), suggestions, i,
+			suggestionListener, section, suggestionsResult, link, label;
+
 			results.style.display = 'block';
 		if ( !sections || sections.length < 1 ) {
 			results.innerHTML = "No results";
@@ -143,21 +140,24 @@ MobileFrontend.opensearch = function() {
 			if( results.firstChild ) {
 				results.removeChild( results.firstChild );
 			}
-			var suggestions = document.createElement( 'div' );
+			suggestions = document.createElement( 'div' );
 			suggestions.className = 'suggestions-results';
 			results.appendChild( suggestions );
+			suggestionListener = function() {
+				var title = this.parentNode.getAttribute( 'title' );
+				sqValUpdate( title );
+			};
+
 			for ( i = 0; i < sections.length; i++ ) {
-				var section = sections[i], suggestionsResult = document.createElement( 'div' ),
-					link = document.createElement( 'a' ), label;
+				section = sections[i];
+				suggestionsResult = document.createElement( 'div' );
+				link = document.createElement( 'a' );
 				suggestionsResult.setAttribute( 'title', section.label );
 				suggestionsResult.className = 'suggestions-result';
 				label = document.createTextNode( '+' );
 				link.appendChild(label);
 				link.className = 'sq-val-update';
-				link.addEventListener( 'click', function() {
-					var title = this.parentNode.getAttribute( 'title' );
-					sqValUpdate( title );
-				});
+				link.addEventListener( 'click', suggestionListener );
 				suggestionsResult.appendChild( link );
 
 				link = document.createElement( 'a' );
@@ -194,4 +194,4 @@ MobileFrontend.opensearch = function() {
 		createObjectArray: createObjectArray
 	};
 
-}();
+}());
