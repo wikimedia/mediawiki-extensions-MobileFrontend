@@ -325,6 +325,7 @@ function escapeJsString( str ) {
 }
 
 function writeResults( sections ) {
+	var term = htmlEntities( document.getElementById( 'search' ).value );
 	results.style.display = 'block';
 	if ( search ) {
 		search.focus();
@@ -332,16 +333,39 @@ function writeResults( sections ) {
 	if ( !sections || sections.length < 1 ) {
 		results.innerHTML = "<div class=\"suggestions-results\" title=\"No Results\">No Results</div>";
 	} else {
-		var html = '<div class="suggestions-results">';
-		for ( i = 0; i < sections.length; i++ ) {
-			var section = sections[i];
-			var rel = i + 1;
-			term = htmlEntities( decodeURIComponent( term ) );
-			var label = section.label.replace( new RegExp( '(' + term + ')', 'ig' ), '<strong>$1</strong>' );
-			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			html = html + "<div class=\"suggestions-result\" rel=\"" + htmlEntities( rel ) + "\" title=\"" + htmlEntities( section.label ) + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + htmlEntities( escapeJsString( section.label ) ) + "');\">+</a><a class=\"search-result-item\" href='" + htmlEntities( section.value ) + "'>" + label + "</a></div>";
+		if( results.firstChild ) {
+			results.removeChild( results.firstChild );
 		}
-		html = html + '</div>';
-		results.innerHTML = html;
+		var suggestions = document.createElement( 'div' );
+		suggestions.className = 'suggestions-results';
+		results.appendChild( suggestions );
+		for ( i = 0; i < sections.length; i++ ) {
+			var section = sections[i], suggestionsResult = document.createElement( 'div' ),
+				link = document.createElement( 'a' ), label;
+			suggestionsResult.setAttribute( 'title', section.label );
+			suggestionsResult.className = 'suggestions-result';
+			label = document.createTextNode( '+' );
+			link.appendChild(label);
+			link.className = 'sq-val-update';
+			link.addEventListener( 'click', function() {
+				var title = this.parentNode.getAttribute( 'title' );
+				sqValUpdate( title );
+			});
+			suggestionsResult.appendChild( link );
+
+			link = document.createElement( 'a' );
+			link.setAttribute( 'href', section.value );
+			link.className = 'search-result-item';
+			label = document.createTextNode( section.label );
+			link.appendChild( label );
+
+			suggestionsResult.appendChild( link );
+			suggestions.appendChild( suggestionsResult );
+			// TODO: simplify the highlighting code to not use htmlEntities
+			// highlight matched term
+			var escapedTerm = escapeJsString( term );
+			link.innerHTML = link.innerHTML.replace( new RegExp( '(' + escapedTerm + ')' , 'ig'),
+				'<strong>$1</strong>' );
+		}
 	}
 }

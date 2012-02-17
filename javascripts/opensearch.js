@@ -144,27 +144,38 @@ function sqValUpdate( sqValue ) {
 	}
 }
 
-function htmlEntities( str ) {
-    return String( str ).replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' ).replace( /"/g, '&quot;' ).replace( /'/g, '&#39;' );
-}
-
-function escapeJsString( str ) {
-	return String( str ).replace( /\\/g, '\\\\' ).replace( /'/g, "\\'" ).replace( /\n/g, '\\n' );
-}
-
 function writeResults( sections ) {
 		results.style.display = 'block';
 	if ( !sections || sections.length < 1 ) {
 		results.innerHTML = "No results";
 	} else {		
-		var html = '<div class="suggestions-results">';
-		for ( i = 0; i < sections.length; i++ ) {
-			var section = sections[i];
-			var rel = i + 1;
-			section.value = section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' );
-			html = html + "<div class=\"suggestions-result\" rel=\"" + htmlEntities( rel ) + "\" title=\"" + htmlEntities( section.label ) + "\"><a class=\"sq-val-update\" href=\"javascript:sqValUpdate('" + htmlEntities( escapeJsString( section.label ) ) + "');\">+</a><a class=\"search-result-item\" href='" + htmlEntities( section.value ) + "'>" + htmlEntities( section.label ) + "</a></div>";
+		if( results.firstChild ) {
+			results.removeChild( results.firstChild );
 		}
-		html = html + '</div>';
-		results.innerHTML = html;
+		var suggestions = document.createElement( 'div' );
+		suggestions.className = 'suggestions-results';
+		results.appendChild( suggestions );
+		for ( i = 0; i < sections.length; i++ ) {
+			var section = sections[i], suggestionsResult = document.createElement( 'div' ),
+				link = document.createElement( 'a' ), label;
+			suggestionsResult.setAttribute( 'title', section.label );
+			suggestionsResult.className = 'suggestions-result';
+			label = document.createTextNode( '+' );
+			link.appendChild(label);
+			link.className = 'sq-val-update';
+			link.addEventListener( 'click', function() {
+				var title = this.parentNode.getAttribute( 'title' );
+				sqValUpdate( title );
+			});
+			suggestionsResult.appendChild( link );
+
+			link = document.createElement( 'a' );
+			link.setAttribute( 'href', section.value );
+			link.className = 'search-result-item';
+			label = document.createTextNode( section.label );
+			link.appendChild( label );
+			suggestionsResult.appendChild( link );
+			suggestions.appendChild( suggestionsResult );
+		}
 	}
 }
