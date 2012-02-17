@@ -720,7 +720,11 @@ class ExtMobileFrontend {
 		// Fetch the REMOTE_ADDR and check if it's a trusted proxy.
 		// Is this enough, or should we actually step through the entire
 		// X-FORWARDED-FOR chain?
-		$ip = wfGetIP();
+		if ( isset( $_SERVER['REMOTE_ADDR'] ) ) {
+            $ip = IP::canonicalize( $_SERVER['REMOTE_ADDR'] );
+        } else {
+            $ip = null;
+        }	
 		if ( wfIsTrustedProxy ( $ip )) {
 			$wgRequest->response()->header( 'Cache-Control: no-cache, must-revalidate' );
 			$wgRequest->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
