@@ -1,6 +1,8 @@
 window.MobileFrontendTests = {
 	cleanFixtures: function() {
-		$("#zero-rated-banner").remove(); // remove remnants from another test somewhere in test suite
+		// note the ZeroRatedMobileAccess extension attaches a banner to the qunit test suite
+		// this makes sure it is removed
+		$("#zero-rated-banner").remove();
 		$("#qunit-fixture-x").remove();
 	},
 	createFixtures: function() {
