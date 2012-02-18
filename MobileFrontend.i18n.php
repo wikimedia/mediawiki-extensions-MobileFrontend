@@ -1840,10 +1840,12 @@ $messages['fa'] = array(
 	'mobile-frontend-opt-in-message' => 'به سامانۀ آزمایشی گوشی همراه می‌پیوندید؟',
 	'mobile-frontend-opt-in-yes-button' => 'بله',
 	'mobile-frontend-opt-in-no-button' => 'خیر',
+	'mobile-frontend-opt-in-title' => 'ورود انتخابی به نسخهٔ بتا برای تلفن همراه',
 	'mobile-frontend-opt-in-explain' => 'با پیوستن به نسخهٔ آزمایشی، شما به ویژگی‌های آزمایشی دسترسی پیدا می‌کنید اما ممکن است با مشکلاتی هم مواجه شوید.',
 	'mobile-frontend-opt-out-message' => 'سامانۀ آزمایشی گوشی همراه را ترک می‌کنید؟',
 	'mobile-frontend-opt-out-yes-button' => 'بله',
 	'mobile-frontend-opt-out-no-button' => 'خیر',
+	'mobile-frontend-opt-out-title' => 'خروج انتخابی از نسخهٔ بتا برای تلفن همراه',
 	'mobile-frontend-opt-out-explain' => 'این به شما اجازه خروج از آزمایش را می‌دهد',
 	'mobile-frontend-disable-images' => 'غیر فعال کردن تصاویر بر روی تارنمای تلفن همراه',
 	'mobile-frontend-enable-images' => 'فعال سازی تصاویر بر روی تارنمای تلفن همراه',
@@ -1862,6 +1864,7 @@ $messages['fa'] = array(
 	'mobile-frontend-password' => 'گذرواژه:',
 	'mobile-frontend-login' => 'ورود',
 	'mobile-frontend-placeholder' => 'برای جستجو اینجا تایپ کنید...',
+	'mobile-frontend-dismiss-notification' => 'مرخص نمودن این اعلان',
 );
 
 /** Finnish (Suomi)
