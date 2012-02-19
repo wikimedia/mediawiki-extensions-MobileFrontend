@@ -2793,7 +2793,7 @@ $messages['hy'] = array(
  */
 $messages['ia'] = array(
 	'mobile-frontend-desc' => 'Interfacie pro apparatos mobile',
-	'mobile-frontend-search-submit' => 'Ir',
+	'mobile-frontend-search-submit' => 'Va',
 	'mobile-frontend-search-results' => 'Resultatos del recerca',
 	'mobile-frontend-no-article-found' => 'Nulle articulo trovate',
 	'mobile-frontend-featured-article' => 'Le articulo del die',
@@ -4881,6 +4881,7 @@ $messages['pfl'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Leinad
  * @author Olgak85
  * @author Rzuwig
@@ -4946,6 +4947,7 @@ $messages['pl'] = array(
 	'mobile-frontend-password' => 'Hasło:',
 	'mobile-frontend-login' => 'Zaloguj się',
 	'mobile-frontend-placeholder' => 'Wpisz tutaj wyszukiwania...',
+	'mobile-frontend-dismiss-notification' => 'odrzuć to powiadomienie',
 );
 
 /** Piedmontese (Piemontèis)
