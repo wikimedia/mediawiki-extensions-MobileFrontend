@@ -183,6 +183,7 @@ a.search-result-item {
 	outline-width: initial;
 	outline-color: initial;
 	height: 1.4em;
+	padding: 0;
 }
 
 ul#footer-info {
