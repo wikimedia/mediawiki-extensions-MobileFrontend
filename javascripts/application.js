@@ -166,13 +166,40 @@ MobileFrontend = function() {
 		return null;
 	}
 
+	function utilities( el ) {
+		function addClass( name ) {
+			var className = el.className;
+			var classNames = className.split( ' ' );
+			classNames.push(name); // TODO: only push if unique
+			el.className = classNames.join( ' ' );
+		}
+
+		function removeClass( name ) {
+			var className = el.className,
+				classNames = className.split( ' ' ),
+				newClasses = [], i;
+			for( i = 0; i < classNames.length; i++ ) {
+				if( classNames[i] !== name ) {
+					newClasses.push( classNames[i] );
+				}
+			}
+			el.className = newClasses.join( ' ' );
+		}
+
+		return {
+			addClass: addClass,
+			removeClass: removeClass
+		};
+	}
+
 	return {
 		readCookie: readCookie,
 		writeCookie: writeCookie,
 		removeCookie: removeCookie,
 		wm_reveal_for_hash: wm_reveal_for_hash,
 		wm_toggle_section: wm_toggle_section,
-		init: init
+		init: init,
+		utils: utilities
 	};
 
 }();

@@ -1,6 +1,26 @@
 var MFE = MobileFrontend;
 var MFET = window.MobileFrontendTests;
 
+module("MobileFrontend application.js: utils");
+
+test("addClass", function() {
+	var el = $("<div />")[0];
+	MFE.utils(el).addClass("foo");
+	MFE.utils(el).addClass("bar");
+	strictEqual($(el).hasClass("foo"), true);
+	strictEqual($(el).hasClass("bar"), true);
+});
+
+test("removeClass", function() {
+	var el = $("<div />")[0];
+	MFE.utils(el).addClass("foo");
+	MFE.utils(el).addClass("bar");
+	MFE.utils(el).removeClass("foo");
+	MFE.utils(el).removeClass("bar");
+	strictEqual($(el).hasClass("foo"), false);
+	strictEqual($(el).hasClass("bar"), false);
+});
+
 module("MobileFrontend application.js: cookies");
 
 test("read and write cookies", function() {
