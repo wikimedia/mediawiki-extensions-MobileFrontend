@@ -186,6 +186,10 @@ a.search-result-item {
 	padding: 0;
 }
 
+#search::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
 ul#footer-info {
 	list-style: none;
 	list-style-image: none;
