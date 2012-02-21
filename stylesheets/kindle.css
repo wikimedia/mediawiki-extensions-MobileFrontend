@@ -9,7 +9,3 @@ table#header td {
 body {
 	line-height: 120%;
 }
-
-#search:focus {
-	outline: none;
-}
