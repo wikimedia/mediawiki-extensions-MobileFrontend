@@ -94,11 +94,11 @@ MobileFrontend = function() {
 		}
 
 		for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
-			a[i].onclick = function() {
+			a[i].addEventListener( 'click', function() {
 				if ( this.hash.indexOf( '#' ) == 0 ) {
 					wm_reveal_for_hash( this.hash );
 				}
-			}
+			});
 		}
 
 		// Try to scroll and hide URL bar

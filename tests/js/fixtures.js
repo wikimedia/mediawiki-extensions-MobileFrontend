@@ -18,7 +18,7 @@ window.MobileFrontendTests = {
 		'	</div>',
 		'	<div id="zero-rated-banner">',
 		'		banner',
-		'		<button id="dismiss-notification">dismiss banner</button>',
+		'		<a href="#" id="dismiss-notification">dismiss banner</button>',
 		'	</div>',
 		'	<input type="text" id="search">',
 		'	<button id="clearsearch">clear</button>',
