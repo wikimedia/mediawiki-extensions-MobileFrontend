@@ -89,10 +89,3 @@ button, input {
 	padding: 1em 0;
 	font-size: 80%;
 }
-
-.content_block,
-.section_anchors,
-button.section_heading.hide {
-	display: none;
-}
-

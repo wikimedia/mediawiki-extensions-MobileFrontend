@@ -15,16 +15,6 @@
 	display: none;
 }
 
-#nav {
-	display: none;
-	width: 172px;
-	border: 1px solid #cccccc;
-	border-top: 0px;
-	margin: -1px 0 0 0;
-	background: white;
-	padding: 0 5px 5px 5px;
-}
-
 #ogg_player_1 {
 	display: none;
 }

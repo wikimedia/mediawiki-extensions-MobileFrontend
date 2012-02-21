@@ -630,3 +630,19 @@ sup.reference:target,
 span.citation:target, cite:target {
 	background-color: #ddeeff;
 }
+
+.content_block,
+.section_anchors,
+button.section_heading.hide {
+	display: none;
+}
+
+#nav {
+	display: none;
+	width: 172px;
+	border: 1px solid #cccccc;
+	border-top: 0px;
+	margin: -1px 0 0 0;
+	background: white;
+	padding: 0 5px 5px 5px;
+}
