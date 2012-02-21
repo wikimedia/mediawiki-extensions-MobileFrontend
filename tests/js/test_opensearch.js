@@ -2,7 +2,7 @@ var MFEOS = MobileFrontend.opensearch;
 
 module("MobileFrontend opensearch.js - writeResults", {
 	setup: function() {
-		$('<input type="search" id="search">').appendTo(document.body);
+		$('<div id="sq"><input type="search" id="search"></div>').appendTo(document.body);
 		$('<div id="results"></div>').appendTo(document.body);
 	},
 	teardown: function() {
