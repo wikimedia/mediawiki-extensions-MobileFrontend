@@ -95,7 +95,7 @@ class ApiParseExtender {
 				$mf->filterContent();
 				$data['parse']['text'] = $mf->getText( 'content' );
 
-				$result->addValue( null, $module->getModuleName(), $data );
+				$result->addValue( null, $module->getModuleName(), $data['parse'] );
 			}
 		}
 		return true;
