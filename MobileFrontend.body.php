@@ -725,7 +725,18 @@ class ExtMobileFrontend {
 		} else {
 			$ip = null;
 		}	
-		if ( wfIsTrustedProxy ( $ip )) {
+
+		/**
+		 * Compatibility with potentially new function wfIsConfiguredProxy()
+		 * wfIsConfiguredProxy() checks an IP against the list of configured
+		 * Squid servers and currently only exists in trunk. 
+		 * wfIsTrustedProxy() does the same, but also exposes a hook that is
+		 * used on the WMF cluster to check and see if an IP address matches 
+		 * against a list of approved open proxies, which we don't actually 
+		 * care about.
+		 */
+		$trustedProxyCheckFunction = ( function_exists( 'wfIsConfiguredProxy' )) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
+		if ( $trustedProxyCheckFunction( $ip )) {
 			$wgRequest->response()->header( 'Cache-Control: no-cache, must-revalidate' );
 			$wgRequest->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 			$wgRequest->response()->header( 'Pragma: no-cache' );
