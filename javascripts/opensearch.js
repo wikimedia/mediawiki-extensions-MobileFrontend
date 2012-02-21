@@ -5,7 +5,6 @@ MobileFrontend.opensearch = (function() {
 		numResults = 5, pixels = 'px',
 		results = document.getElementById( 'results' ),
 		search = document.getElementById( 'search' ),
-		sq = document.getElementById( 'sq' ),
 		sb = document.getElementById( 'searchbox' );
 
 	if ( scriptPath ) {
@@ -42,36 +41,6 @@ MobileFrontend.opensearch = (function() {
 			hideResults();
 		}
 	}
-
-	function updateSearchWidth() {
-		if ( sq && search && sb ) {
-			var iw = document.documentElement.clientWidth || document.body.clientWidth;
-			sb.style.width = ( iw - 30 ) + pixels;
-			sq.style.width = ( iw - 110 ) + pixels;
-			search.style.width = ( iw - 130 ) + pixels;
-			if ( results ) {
-				results.style.width = ( sq.offsetWidth - 2 ) + pixels;
-				results.style.left = sq.offsetLeft + pixels;
-				results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
-			}
-		}
-	}
-
-	updateSearchWidth();
-
-	function updateOrientationSearchWidth() {
-		switch( window.orientation ) {
-			case 0:
-			case -90:
-			case 90:
-			case 180:
-				setTimeout( updateSearchWidth, 200 );
-				break;
-	  }
-	}
-
-	// Point to the updateOrientation function when iPhone switches between portrait and landscape modes.
-	window.onorientationchange = updateOrientationSearchWidth;
 
 	window.onload = function () {
 		search.addEventListener( 'keyup',
@@ -131,9 +100,14 @@ MobileFrontend.opensearch = (function() {
 
 	function writeResults( sections ) {
 		var results = document.getElementById( 'results' ), suggestions, i,
-			suggestionListener, section, suggestionsResult, link, label;
+			suggestionListener, section, suggestionsResult, link, label,
+			sq = document.getElementById( 'sq' );
 
-			results.style.display = 'block';
+		results.style.display = 'block';
+		var top = sq.offsetParent.offsetTop + sq.offsetHeight + sq.offsetTop + 1;
+		results.style.top = top + 'px';
+		results.style.width = sq.offsetWidth - 2 + 'px'; // -2px border left and right
+
 		if ( !sections || sections.length < 1 ) {
 			results.innerHTML = "No results";
 		} else {		

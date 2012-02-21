@@ -68,10 +68,6 @@ button, input {
 	padding-top: 20px;
 }
 
-#header #searchField {
-	width: 450px;
-}
-
 .mwm-message.mwm-notice {
 	font-size: 1.1em;
 }

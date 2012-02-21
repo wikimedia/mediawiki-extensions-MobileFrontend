@@ -170,6 +170,7 @@ a.search-result-item {
 	border-bottom: 1px solid #888;
 	z-index: 2;
 	position: absolute;
+	left: 53px;
 }
 
 #search {
@@ -194,10 +195,8 @@ ul#footer-info {
 
 .divclearable {
 	border: 1px solid #888;
-	display: -moz-inline-stack;
-	display: inline-block;
+	display: block;
 	zoom: 1;
-	*display: inline;
 	vertical-align: middle;
 	height: 1.5em;
 	position: relative;
@@ -539,26 +538,42 @@ body {
 	margin: 0 8px;
 }
 
-#header img,
-#header form,
-#header input,
-#header button {
-	vertical-align: middle;
-	display: inline-block;
+#logo {
+	position: absolute;
+	top: 4px;
+	left: 5px;
 }
 
 #searchbox {
 	width: auto;
 	padding: 5px;
+	position: relative;
+	padding: 5px 32px 5px 44px;
 	border: 1px solid #cccccc;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
+}
+ 
+#searchbox #form {
+	padding-right: 34px;
+	width: 100%;
+}
+
+#search {
+	width: 90%;
+}
+
+#goButton {
+	position: absolute;
+	right: 2px;
+	top: 2px;
 }
 
 #searchbox a,
 #searchbox img {
 	border: 0px;
 	vertical-align: middle;
+	position: absolute;
 }
 
 #search:focus {

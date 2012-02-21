@@ -45,47 +45,11 @@ MobileFrontend.opensearch = (function() {
 		content = document.getElementById( 'content' );
 		footer = document.getElementById( 'footer' );
 		resetViewPort();
-	
-		if ( zeroRatedBanner ) {
-			zeroRatedBanner.style.display = 'none';
-		}
 
 		if ( !focused ) {
-			content.style.display = 'none';
-			footer.style.display = 'none';
-			ol.sqLeft = sq.offsetLeft;
-			ol.sqTop = sq.offsetTop;
-			sq.style.position = 'absolute';
-
-			if ( !ol.properOffsetWidth ) {
-				ol.properOffsetWidth = search.offsetLeft + 44;
-			}
-
+			MobileFrontend.utils(document.body).addClass("full-screen-search");
 			sq.className = '';
-			sq.style.left = sb.offsetLeft + pixels;
-			sq.style.top = sb.offsetTop + pixels;
-			sq.style.height = sb.offsetHeight + pixels;
-			sq.style.width = sb.offsetWidth + pixels;
-			sq.style.left = 0;
-			sq.style.top = 0;
-			sq.style.height = 40 + pixels;
-			sq.style.width = document.body.clientWidth + pixels;
-			search.style.position = 'absolute';
-			search.style.left = ol.properOffsetWidth + pixels;
-			search.style.height = 34 + pixels;
-			search.style.width = ( document.body.clientWidth - 90 ) + pixels;
-			search.style.fontSize = 16 + pixels;
-			results.style.left = 0;
-			results.style.top = ( sq.offsetTop + sq.offsetHeight )	+ pixels;
 			results.style.width = document.body.clientWidth + pixels;
-			results.style.minHeight = '100%';
-			results.style.borderTop = 'solid 1px #A6A6A6';
-			results.style.backgroundColor = '#E6E6E6';
-			results.style.paddingTop = 5 + pixels;
-			results.style.display = 'block';
-			sb.style.border = 0;
-			logo.style.visibility = 'hidden';
-			goButton.style.visibility = 'hidden';
 
 			pE = document.getElementById( 'placeholder' );
 			if ( !pE ) {
@@ -97,13 +61,7 @@ MobileFrontend.opensearch = (function() {
 			}
 			pE = document.getElementById( 'placeholder' );
 			if ( pE ) {
-				pE.style.position = 'absolute';
-				pE.style.left = ( search.offsetLeft + 5 ) + pixels;
-				pE.style.top = ( sq.offsetTop + 12 ) + pixels;
-				pE.style.color = '#666666';
-				pE.style.fontSize = 16 + pixels;
 				pE.style.display = 'block';
-				search.style.backgroundColor = 'transparent';
 			}
 
 			if ( pE && search.value !== '' ) {
@@ -120,60 +78,24 @@ MobileFrontend.opensearch = (function() {
 				rrdD.setAttribute( 'id', 'left-arrow' );
 				rrd.appendChild( rrdD );
 				sq.insertBefore( rrd, sq.firstChild );
-			} else {
-				removeResultsEl.style.display = 'block';
 			}
 			focused = true;
 		}
 	};
 
 	function removeResults() {
+		MobileFrontend.utils(document.body).removeClass("full-screen-search");
 		var removeResultsEl, pE = document.getElementById( 'placeholder' );
-		if ( content ) {
-			content.style.display = 'block';
-		}
-		if ( footer ) {
-			footer.style.display = 'block';
-		}
 
 		if ( pE ) {
 			pE.style.display = 'none';
 		}
-	
-		if ( zeroRatedBanner ) {
-			zeroRatedBanner.style.display = 'block';
-		}
 
-		if ( ol ) {
-			if ( sq ) {
-				logo.style.visibility = 'visible';
-				goButton.style.visibility = 'visible';
-				sq.className = 'divclearable';
-				sq.style.position = 'static';
-				sq.style.left = ol.sqLeft + pixels;
-				sq.style.top = ol.sqTop + pixels;
-				sq.style.height = 'auto';
-			}
-			if ( search ) {
-				search.style.left = ( search.offsetLeft - 44 ) + pixels;
-				search.style.position = 'static';
-				search.style.fontSize = 11 + pixels;
-				search.style.height = 'auto';
-				updateSearchWidth();
-			}
-			if ( sb ) {
-				sb.style.border = 'solid #CCC 1px';
-				removeResultsEl = document.getElementById( 'remove-results' );
-				if ( removeResultsEl ) {
-					removeResultsEl.style.display = 'none';
-				}
-			}
-			if ( focused ) {
-				focused = false;
-			}
-			if ( clearSearch ) {
-				clearSearch.style.display = 'none';
-			}
+		if ( focused ) {
+			focused = false;
+		}
+		if ( clearSearch ) {
+			clearSearch.style.display = 'none';
 		}
 	}
 
@@ -212,41 +134,6 @@ MobileFrontend.opensearch = (function() {
 			hideResults();
 		}
 	}
-
-	function updateSearchWidth() {
-		if ( sq && search && sb ) {
-			var iw = document.documentElement.clientWidth || document.body.clientWidth;
-			sb.style.width = ( iw - 30 ) + pixels;
-			sq.style.width = ( iw - 110 ) + pixels;
-			search.style.width = ( iw - 130 ) + pixels;
-			if ( results ) {
-				results.style.width = ( sq.offsetWidth - 2 ) + pixels;
-				results.style.left = sq.offsetLeft + pixels;
-				results.style.top = ( sq.offsetTop + sq.offsetHeight ) + pixels;
-				if ( results.style.display === 'block' ) {
-					focused = false;
-					search.blur();
-					search.focus();
-				}
-			}
-		}
-	}
-
-	updateSearchWidth();
-
-	function updateOrientationSearchWidth() {
-		switch( window.orientation ) {
-			case 0:
-			case -90:
-			case 90:
-			case 180:
-				setTimeout( updateSearchWidth, 300 );
-				break;
-	  }
-	}
-
-	// Point to the updateOrientation function when iPhone switches between portrait and landscape modes.
-	window.onorientationchange = updateOrientationSearchWidth;
 
 	window.onload = function () {
 		search.addEventListener( 'keyup',
