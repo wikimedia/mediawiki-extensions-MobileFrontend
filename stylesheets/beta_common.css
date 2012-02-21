@@ -174,15 +174,6 @@ a.search-result-item {
 	top: 35px;
 }
 
-#remove-results {
-	position: absolute;
-	display: block;
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	line-height: 40px;
-}
-
 #search {
 	-webkit-appearance: none;
 	border-top-width: 0px;

@@ -47,7 +47,7 @@ MobileFrontend.opensearch = (function() {
 		resetViewPort();
 
 		if ( !focused ) {
-			MobileFrontend.utils(document.body).addClass("full-screen-search");
+			MobileFrontend.utils( document.body ).addClass( 'full-screen-search' );
 			sq.className = '';
 			results.style.width = document.body.clientWidth + pixels;
 
@@ -84,7 +84,7 @@ MobileFrontend.opensearch = (function() {
 	};
 
 	function removeResults() {
-		MobileFrontend.utils(document.body).removeClass("full-screen-search");
+		MobileFrontend.utils( document.body ).removeClass( 'full-screen-search' );
 		var removeResultsEl, pE = document.getElementById( 'placeholder' );
 
 		if ( pE ) {
