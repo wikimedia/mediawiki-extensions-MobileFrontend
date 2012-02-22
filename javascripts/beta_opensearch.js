@@ -2,7 +2,7 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
-		numResults = 15, pixels = 'px', term,
+		numResults = 15, term,
 		results = document.getElementById( 'results' ),
 		search = document.getElementById( 'search' ),
 		sq = document.getElementById( 'sq' ),
@@ -191,9 +191,9 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function htmlEntities( str ) {
-		var text = document.createTextNode(str);
+		var text = document.createTextNode( str );
 		var el = document.createElement( 'div' );
-		el.appendChild(text);
+		el.appendChild( text );
 		return el.innerHTML;
 	}
 
