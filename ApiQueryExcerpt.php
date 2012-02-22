@@ -22,6 +22,11 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		}
 	}
 
+	/**
+	 * Returns a processed, but not trimmed excerpt
+	 * @param Title $title
+	 * @return string 
+	 */
 	private function getExcerpt( Title $title ) {
 		global $wgMemc;
 
@@ -40,6 +45,12 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		return $text;
 	}
 
+	/**
+	 * Converts page HTML into an excerpt
+	 * @param string $text
+	 * @param Title $title
+	 * @return string 
+	 */
 	private function processText( $text, Title $title ) {
 		$text = preg_replace( '/<h[1-6].*$/s', '', $text );
 		$mf = new MobileFormatter( $text, $title, 'XHTML' );
@@ -53,14 +64,20 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	}
 
 	private function trimText( $text, $requestedLength ) {
+		global $wgUseTidy;
+
 		$length = mb_strlen( $text );
 		if ( $length <= $requestedLength ) {
 			return $text;
 		}
 		$pattern = "#^.{{$requestedLength}}[\\w/]*>?#su";
 		preg_match( $pattern, $text, $m );
-		var_dump($pattern);var_dump($m);die;
-		$text = $m[1];
+		$text = $m[0];
+		// Fix possibly unclosed tags
+		if ( $wgUseTidy ) {
+			$text = trim ( MWTidy::tidy( $text ) );
+		}
+		$text .= wfMessage( 'ellipsis' )->text();
 		return $text;
 	}
 
@@ -85,13 +102,14 @@ class ApiQueryExcerpt extends ApiQueryBase {
 
 	public function getParamDescription() {
 		return array(
+			'length' => 'How many characters to return, actual text returned might be slightly longer.',
 			'limit' => 'How many excerpts to return',
 			'continue' => 'When more results are available, use this to continue',
 		);
 	}
 
 	public function getDescription() {
-		return 'Returns plain-text excerpts of the given page(s)';
+		return 'Returns excerpts of the given page(s)';
 	}
 
 	public function getPossibleErrors() {
@@ -101,7 +119,9 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	}
 
 	public function getExamples() {
-		return false;//@todo:
+		return array(
+			'api.php?action=query&prop=excerpt&length=175&titles=Therion' => 'Get a 175-character excerpt',
+		);
 	}
 
 
