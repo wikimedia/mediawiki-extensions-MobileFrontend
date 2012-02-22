@@ -191,7 +191,10 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function htmlEntities( str ) {
-	    return String( str ).replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' ).replace( /"/g, '&quot;' ).replace( /'/g, '&#39;' );
+		var text = document.createTextNode(str);
+		var el = document.createElement( 'div' );
+		el.appendChild(text);
+		return el.innerHTML;
 	}
 
 	function escapeJsString( str ) {

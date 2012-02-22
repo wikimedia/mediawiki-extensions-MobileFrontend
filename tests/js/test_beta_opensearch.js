@@ -67,3 +67,14 @@ test("writeResults with highlighted text (special character ?)", function() {
 	strictEqual($(pageLink).html(), "Title <strong>with ?</strong> in it", "check the highlight is correct");
 });
 
+test("writeResults with highlighted text (safe)", function() {
+	var results = [
+		{ label: "<script>alert('FAIL')</script> should be safe", value: "/B1" }
+	];
+	$("#search").val("<script>alert('FAIL'");
+	MFET.triggerEvent($("#search")[0], "keyup");
+	MFEOS.writeResults(results);
+	var pageLink = $("#results .suggestions-result a.search-result-item")[0];
+	strictEqual($(pageLink).html(),
+		"<strong>&lt;script&gt;alert('FAIL'</strong>)&lt;/script&gt; should be safe", "check the highlight is correct");
+});
