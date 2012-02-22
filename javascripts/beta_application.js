@@ -25,10 +25,14 @@ MobileFrontend = (function() {
 			document.getElementById( 'zero-rated-banner-red' );
 
 		function initClearSearchLink() {
+			function onFocusHandler() {
+				search.select();
+			}
 			clearSearch.setAttribute( 'title', 'Clear' );
 			clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
 			search.addEventListener( 'keyup', handleClearSearchLink, false );
 			search.addEventListener( 'keydown', handleDefaultText, false );
+			search.addEventListener( 'click', onFocusHandler, true );
 		}
 
 		function navigateToLanguageSelection() {

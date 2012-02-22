@@ -22,9 +22,13 @@ MobileFrontend = (function() {
 		languageSelection = document.getElementById( 'languageselection' );
 
 		function initClearSearchLink() {
+			function onFocusHandler() {
+				search.select();
+			}
 			clearSearch.setAttribute( 'title', 'Clear' );
 			clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
 			search.addEventListener( 'keyup', handleClearSearchLink, false );
+			search.addEventListener( 'click', onFocusHandler, true );
 		}
 
 		function navigateToLanguageSelection() {
