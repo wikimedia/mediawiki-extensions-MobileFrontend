@@ -5,7 +5,8 @@ MobileFrontend.opensearch = (function() {
 		numResults = 5, pixels = 'px',
 		results = document.getElementById( 'results' ),
 		search = document.getElementById( 'search' ),
-		sb = document.getElementById( 'searchbox' );
+		sb = document.getElementById( 'searchbox' ),
+		u = MobileFrontend.utils;
 
 	if ( scriptPath ) {
 		apiUrl = scriptPath + apiUrl;	
@@ -43,7 +44,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	window.onload = function () {
-		search.addEventListener( 'keyup',
+		u( search ).bind( 'keyup',
 			function() {
 				clearTimeout( timer );
 				var term = this.value;
@@ -131,7 +132,7 @@ MobileFrontend.opensearch = (function() {
 				label = document.createTextNode( '+' );
 				link.appendChild(label);
 				link.className = 'sq-val-update';
-				link.addEventListener( 'click', suggestionListener );
+				u( link ).bind( 'click', suggestionListener );
 				suggestionsResult.appendChild( link );
 
 				link = document.createElement( 'a' );

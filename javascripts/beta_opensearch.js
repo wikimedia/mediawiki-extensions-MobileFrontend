@@ -14,7 +14,8 @@ MobileFrontend.opensearch = (function() {
 		zeroRatedBanner = document.getElementById( 'zero-rated-banner' ) ||
 			document.getElementById( 'zero-rated-banner-red' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
-		focused = false, ol = {};
+		focused = false, ol = {},
+		u = MobileFrontend.utils;
 
 	if ( scriptPath ) {
 		apiUrl = scriptPath + apiUrl;
@@ -28,7 +29,7 @@ MobileFrontend.opensearch = (function() {
 			var viewportmeta = document.querySelector( 'meta[name="viewport"]' );
 			if ( viewportmeta ) {
 				viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
-				document.body.addEventListener( 'gesturestart', function () {
+				u( document.body ).bind( 'gesturestart', function () {
 					viewportmeta.content = 'width=device-width, initial-scale=1.0';
 				}, false );
 		    }
@@ -72,7 +73,7 @@ MobileFrontend.opensearch = (function() {
 				rrd = document.createElement( 'a' );
 				rrd.setAttribute( 'href', '#' );
 				rrd.setAttribute( 'id', 'remove-results' );
-				rrd.addEventListener( 'click', removeResults );
+				u( rrd ).bind( 'click', removeResults );
 				rrdD = document.createElement( 'div' );
 				rrdD.setAttribute( 'id', 'left-arrow' );
 				rrd.appendChild( rrdD );
@@ -135,7 +136,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	window.onload = function () {
-		search.addEventListener( 'keyup',
+		u( search ).bind( 'keyup',
 			function() {
 				clearTimeout( timer );
 				term = this.value;
@@ -233,7 +234,7 @@ MobileFrontend.opensearch = (function() {
 				label = document.createTextNode( '+' );
 				link.appendChild(label);
 				link.className = 'sq-val-update';
-				link.addEventListener( 'click', suggestionListener );
+				u( link ).bind( 'click', suggestionListener );
 				suggestionsResult.appendChild( link );
 
 				link = document.createElement( 'a' );

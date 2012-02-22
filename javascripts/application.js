@@ -14,7 +14,7 @@ MobileFrontend = (function() {
 			}
 		}
 		for( i = 0; i < sectionHeadings.length; i++ ) {
-			sectionHeadings[i].addEventListener( 'click', openSectionHandler, false );
+			utilities( sectionHeadings[i] ).bind( 'click', openSectionHandler, false );
 		}
 		search = document.getElementById( 'search' );
 		clearSearch = document.getElementById( 'clearsearch' );
@@ -26,9 +26,9 @@ MobileFrontend = (function() {
 				search.select();
 			}
 			clearSearch.setAttribute( 'title', 'Clear' );
-			clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
-			search.addEventListener( 'keyup', handleClearSearchLink, false );
-			search.addEventListener( 'click', onFocusHandler, true );
+			utilities( clearSearch ).bind( 'mousedown', clearSearchBox, true );
+			utilities( search ).bind( 'keyup', handleClearSearchLink, false );
+			utilities( search ).bind( 'click', onFocusHandler, true );
 		}
 
 		function navigateToLanguageSelection() {
@@ -40,7 +40,7 @@ MobileFrontend = (function() {
 				}
 			}
 		}
-		languageSelection.addEventListener( 'change', navigateToLanguageSelection );
+		utilities( languageSelection ).bind( 'change', navigateToLanguageSelection );
 
 		function handleClearSearchLink() {
 			if ( clearSearch ) {
@@ -79,7 +79,7 @@ MobileFrontend = (function() {
 			}
 		}
 		initClearSearchLink();
-		document.getElementById( 'logo' ).addEventListener( 'click', logoClick );
+		utilities( document.getElementById( 'logo' ) ).bind( 'click', logoClick );
 		dismissNotification = document.getElementById( 'dismiss-notification' );
 
 		if ( dismissNotification ) {
@@ -107,7 +107,7 @@ MobileFrontend = (function() {
 		}
 		checkHash();
 		for ( a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
-			a[i].addEventListener( 'click', checkHash );
+			utilities( a[i] ).bind( 'click', checkHash );
 		}
 
 		// Try to scroll and hide URL bar
@@ -199,8 +199,16 @@ MobileFrontend = (function() {
 			el.className = newClasses.join( ' ' );
 		}
 
+		function bind( type, handler ) {
+			if ( el.addEventListener ) { // standardised browser
+				el.addEventListener( type, handler, false );
+			} else if( el.attachEvent ) {
+				el.attachEvent( 'on' + type, handler );
+			}
+		}
 		return {
 			addClass: addClass,
+			bind: bind,
 			removeClass: removeClass
 		};
 	}
