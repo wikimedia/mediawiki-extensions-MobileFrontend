@@ -659,12 +659,6 @@ span.citation:target, cite:target {
 	background-color: #ddeeff;
 }
 
-.content_block,
-.section_anchors,
-button.section_heading.hide {
-	display: none;
-}
-
 /*
 full screen search css
 */
