@@ -1,29 +1,31 @@
-MobileFrontend = function() {
+/*global document, window */
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+MobileFrontend = (function() {
 
 	function init() {
+		var i, search, clearSearch, results, languageSelection, a,
+			sectionHeadings = document.getElementsByClassName( 'section_heading' ),
+			dismissNotification, cookieNameZeroVisibility, zeroRatedBanner, zeroRatedBannerVisibility;
 		document.body.className = "jsEnabled";
-		var sectionHeadings = document.getElementsByClassName( 'section_heading' );
-		for( var i = 0; i < sectionHeadings.length; i++ ) {
-			sectionHeadings[i].addEventListener( 'click', function() {
-				var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
-				if(sectionNumber > -1) {
-					wm_toggle_section( sectionNumber );
-				}
-			}, false );
+		function openSectionHandler() {
+			var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
+			if( sectionNumber > -1 ) {
+				wm_toggle_section( sectionNumber );
+			}
 		}
-		var search = document.getElementById( 'search' );
-		var clearSearch = document.getElementById( 'clearsearch' );
-		var results = document.getElementById( 'results' );
-		var languageSelection = document.getElementById( 'languageselection' );
-
-		var zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
-
-		if ( !zeroRatedBanner ) {
-			var zeroRatedBanner = document.getElementById( 'zero-rated-banner-red' );
+		for( i = 0; i < sectionHeadings.length; i++ ) {
+			sectionHeadings[i].addEventListener( 'click', openSectionHandler, false );
 		}
+		search = document.getElementById( 'search' );
+		clearSearch = document.getElementById( 'clearsearch' );
+		results = document.getElementById( 'results' );
+		languageSelection = document.getElementById( 'languageselection' );
+
+		zeroRatedBanner = document.getElementById( 'zero-rated-banner' ) ||
+			document.getElementById( 'zero-rated-banner-red' );
 
 		function initClearSearchLink() {
-			clearSearch.setAttribute( 'title','Clear' );
+			clearSearch.setAttribute( 'title', 'Clear' );
 			clearSearch.addEventListener( 'mousedown', clearSearchBox, true );
 			search.addEventListener( 'keyup', handleClearSearchLink, false );
 			search.addEventListener( 'keydown', handleDefaultText, false );
@@ -38,7 +40,7 @@ MobileFrontend = function() {
 				}
 			}
 		}
-		document.getElementById( 'languageselection' ).addEventListener( 'change', navigateToLanguageSelection );
+		languageSelection.addEventListener( 'change', navigateToLanguageSelection );
 
 		function handleDefaultText() {
 			var pE = document.getElementById( 'placeholder' );
@@ -66,28 +68,28 @@ MobileFrontend = function() {
 		}
 
 		function logoClick() {
-			var n = document.getElementById( 'nav' ).style;
-			n.display = n.display == 'block' ? 'none' : 'block';
-			if (n.display == 'block') {
+			var n = document.getElementById( 'nav' ).style, newWidth;
+			n.display = n.display === 'block' ? 'none' : 'block';
+			if (n.display === 'block') {
 				if ( languageSelection ) {
 					if ( languageSelection.offsetWidth > 175 ) {
-						var newWidth = languageSelection.offsetWidth + 30;
+						newWidth = languageSelection.offsetWidth + 30;
 						n.width = newWidth + 'px';
 					}
 				}
 			}
-		};
+		}
 		initClearSearchLink();
 		search.onpaste = function() {
 			handleDefaultText();
 		};
 		document.getElementById( 'logo' ).addEventListener( 'click', logoClick );
-		var dismissNotification = document.getElementById( 'dismiss-notification' );
+		dismissNotification = document.getElementById( 'dismiss-notification' );
 
 		if ( dismissNotification ) {
-			var cookieNameZeroVisibility = 'zeroRatedBannerVisibility';
-			var zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
-			var zeroRatedBannerVisibility = readCookie( cookieNameZeroVisibility );
+			cookieNameZeroVisibility = 'zeroRatedBannerVisibility';
+			zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
+			zeroRatedBannerVisibility = readCookie( cookieNameZeroVisibility );
 
 			if ( zeroRatedBannerVisibility === 'off' ) {
 				zeroRatedBanner.style.display = 'none';
@@ -100,16 +102,16 @@ MobileFrontend = function() {
 				}
 			};
 		}
-		if ( document.location.hash.indexOf( '#' ) == 0 ) {
-			wm_reveal_for_hash( document.location.hash );
-		}
 
-		for ( var a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
-			a[i].addEventListener( 'click', function() {
-				if ( this.hash.indexOf( '#' ) == 0 ) {
-					wm_reveal_for_hash( this.hash );
-				}
-			});
+		function checkHash() {
+			var hash = this.hash || document.location.hash;
+			if ( hash.indexOf( '#' ) === 0 ) {
+				wm_reveal_for_hash( hash );
+			}
+		}
+		checkHash();
+		for ( a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
+			a[i].addEventListener( 'click', checkHash );
 		}
 
 		// Try to scroll and hide URL bar
@@ -118,13 +120,16 @@ MobileFrontend = function() {
 	init();
 
 	function wm_reveal_for_hash( hash ) {
-		var targetel = document.getElementById( hash.substr(1) );
+		var targetel = document.getElementById( hash.substr(1) ),
+			p, section_idx;
 		if ( targetel ) {
-			for (var p = targetel.parentNode; p && p.className != 'content_block' && p.className != 'section_heading'; ) {
+			p = targetel;
+			while ( p && p.className !== 'content_block' && 
+				p.className !== 'section_heading' ) {
 				p = p.parentNode;
 			}
-			if ( p && p.style.display != 'block' ) {
-				var section_idx = parseInt( p.id.split( '_' )[1] );
+			if ( p && p.style.display !== 'block' ) {
+				section_idx = parseInt( p.id.split( '_' )[1], 10 );
 				wm_toggle_section( section_idx );
 			}
 		}
@@ -132,40 +137,41 @@ MobileFrontend = function() {
 
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ),
-			bb = b.getElementsByTagName( 'button' );
-		for ( var i = 0; i <= 1; i++ ) {
-			var s = bb[i].style;
-			s.display = s.display == 'none' || ( i && !s.display ) ? 'inline-block' : 'none';
+			bb = b.getElementsByTagName( 'button' ), i, s, e;
+		for ( i = 0; i <= 1; i++ ) {
+			s = bb[i].style;
+			s.display = s.display === 'none' || ( i && !s.display ) ? 'inline-block' : 'none';
 		}
-		for ( var i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
-			var e = document.getElementById( d[i] + section_id );
-		
+		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
+			e = document.getElementById( d[i] + section_id );
 			if ( e ) {
-				e.style.display = e.style.display == 'block' ? 'none' : 'block';
+				e.style.display = e.style.display === 'block' ? 'none' : 'block';
 			}
 		}
 	}
 
 	function writeCookie( name, value, days ) {
+		var date, expires;
 		if ( days ) {
-			var date = new Date();
+			date = new Date();
 			date.setTime( date.getTime() + ( days * 24 * 60 * 60 *1000 ) );
-			var expires = '; expires=' + date.toGMTString();
+			expires = '; expires=' + date.toGMTString();
 		} else {
-			var expires = '';
+			expires = '';
 		}
 		document.cookie = name + '=' + value + expires + '; path=/';
 	}
 
 	function readCookie( name ) {
-		var nameVA = name + '=';
-		var ca = document.cookie.split( ';' );
-		for( var i=0; i < ca.length; i++ ) {
-			var c = ca[i];
+		var nameVA = name + '=',
+			ca = document.cookie.split( ';' ),
+			c, i;
+		for( i=0; i < ca.length; i++ ) {
+			c = ca[i];
 			while ( c.charAt(0) === ' ' ) {
 				c = c.substring( 1, c.length );
 			}
-			if ( c.indexOf( nameVA ) == 0 ) {
+			if ( c.indexOf( nameVA ) === 0 ) {
 				return c.substring( nameVA.length, c.length );
 			}
 		}
@@ -179,8 +185,8 @@ MobileFrontend = function() {
 
 	function utilities( el ) {
 		function addClass( name ) {
-			var className = el.className;
-			var classNames = className.split( ' ' );
+			var className = el.className,
+				classNames = className.split( ' ' );
 			classNames.push(name); // TODO: only push if unique
 			el.className = classNames.join( ' ' );
 		}
@@ -213,5 +219,4 @@ MobileFrontend = function() {
 		utils: utilities
 	};
 
-}();
-
+}());
