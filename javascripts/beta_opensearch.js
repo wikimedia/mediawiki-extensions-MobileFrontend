@@ -49,7 +49,6 @@ MobileFrontend.opensearch = (function() {
 		if ( !focused ) {
 			MobileFrontend.utils( document.body ).addClass( 'full-screen-search' );
 			sq.className = '';
-			results.style.width = document.body.clientWidth + pixels;
 
 			pE = document.getElementById( 'placeholder' );
 			if ( !pE ) {
