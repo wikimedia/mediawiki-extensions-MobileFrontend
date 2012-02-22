@@ -76,16 +76,8 @@ MobileFrontend = (function() {
 		}
 
 		function logoClick() {
-			var n = document.getElementById( 'nav' ).style, newWidth;
+			var n = document.getElementById( 'nav' ).style;
 			n.display = n.display === 'block' ? 'none' : 'block';
-			if (n.display === 'block') {
-				if ( languageSelection ) {
-					if ( languageSelection.offsetWidth > 175 ) {
-						newWidth = languageSelection.offsetWidth + 30;
-						n.width = newWidth + 'px';
-					}
-				}
-			}
 		}
 		initClearSearchLink();
 		search.onpaste = function() {
