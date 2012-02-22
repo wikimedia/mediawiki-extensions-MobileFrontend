@@ -57,23 +57,13 @@ MobileFrontend.opensearch = (function() {
 	};
 
 	function searchApi( term ) {
-		var xmlHttp, url;
-		if ( window.XMLHttpRequest ) {
-			xmlHttp = new XMLHttpRequest();
-		} else {
-			xmlHttp = new ActiveXObject( 'Microsoft.XMLHTTP' );
-		}
-		xmlHttp.overrideMimeType( 'text/xml' );
-		xmlHttp.onreadystatechange = function() {
-			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200 ) {
-				var sections = createObjectArray( xmlHttp.responseXML );
-				writeResults( sections );
-			}
-		};
 		term = encodeURIComponent( term );
 		url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
-		xmlHttp.open( 'GET', url, true );
-		xmlHttp.send();
+		u.ajax( { url: url,
+			success: function(xml) {
+				writeResults( createObjectArray( xml ) );
+			}
+			} );
 	}
 
 	function createObjectArray( responseXml ) {

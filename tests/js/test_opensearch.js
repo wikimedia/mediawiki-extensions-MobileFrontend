@@ -1,11 +1,14 @@
 var MFEOS = MobileFrontend.opensearch;
-
+var _ajax;
 module("MobileFrontend opensearch.js - writeResults", {
 	setup: function() {
+		_ajax = MobileFrontend.utils.ajax;
+		MobileFrontend.utils.ajax = function() {};
 		$('<div id="sq"><input type="search" id="search"></div>').appendTo(document.body);
 		$('<div id="results"></div>').appendTo(document.body);
 	},
 	teardown: function() {
+		MobileFrontend.utils.ajax = _ajax;
 		$("#results,#search").remove();
 	}
 });

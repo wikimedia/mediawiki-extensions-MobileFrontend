@@ -208,6 +208,22 @@ MobileFrontend = (function() {
 			removeClass: removeClass
 		};
 	}
+	utilities.ajax = function( options ) {
+		var xmlHttp, url;
+		if ( window.XMLHttpRequest ) {
+			xmlHttp = new XMLHttpRequest();
+		} else {
+			xmlHttp = new ActiveXObject( 'Microsoft.XMLHTTP' );
+		}
+		xmlHttp.overrideMimeType( 'text/xml' );
+		xmlHttp.onreadystatechange = function() {
+			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200 ) {
+				options.success( xmlHttp.responseXML );
+			}
+		};
+		xmlHttp.open( 'GET', options.url, true );
+		xmlHttp.send();
+	};
 
 	return {
 		readCookie: readCookie,
