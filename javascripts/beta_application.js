@@ -212,11 +212,7 @@ MobileFrontend = (function() {
 		}
 
 		function bind( type, handler ) {
-			if ( el.addEventListener ) { // standardised browser
-				el.addEventListener( type, handler, false );
-			} else if( el.attachEvent ) {
-				el.attachEvent( 'on' + type, handler );
-			}
+			el.addEventListener( type, handler, false );
 		}
 		return {
 			addClass: addClass,
