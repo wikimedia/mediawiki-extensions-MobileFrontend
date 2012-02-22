@@ -26,9 +26,9 @@ class ApiParseExtender {
 	 * APIGetParamDescription hook handler
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIGetParamDescription
 	 * @param ApiBase $module
-	 * @param Array $desc 
+	 * @param Array|bool $params
 	 */
-	public static function onAPIGetParamDescription( ApiBase &$module, Array &$params ) {
+	public static function onAPIGetParamDescription( ApiBase &$module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = 'Return parse output in a format suitable for mobile devices';
 			$params['expandablesections'] = 'Make sections in mobile output collapsed by default, expandable via JavaScript.'
