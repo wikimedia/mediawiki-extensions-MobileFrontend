@@ -69,6 +69,7 @@ class MobileFormatter {
 	);
 
 	private $itemsToRemove = array();
+	private $elementsToFlatten = array();
 
 	/**
 	 * Constructor
@@ -142,6 +143,14 @@ class MobileFormatter {
 	 */
 	public function remove( $selectors ) {
 		$this->itemsToRemove = array_merge( $this->itemsToRemove, (array)$selectors );
+	}
+
+	/**
+	 * Adds one or more element name to the list to flatten (remove tag, but not its content)
+	 * @param Array|string $elements: Name(s) of tag(s) to flatten
+	 */
+	public function flatten( $elements ) {
+		$this->elementsToFlatten = array_merge( $this->elementsToFlatten, (array)$elements );
 	}
 
 	/**
@@ -272,13 +281,14 @@ class MobileFormatter {
 			case 'WML':
 				$html = $this->headingTransform( $html );
 				// Content removal for WML rendering
-				$elements = array( 'span', 'div', 'sup', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'sup', 'sub' );
-				foreach ( $elements as $element ) {
-					$html = preg_replace( '#</?' . $element . '[^>]*>#is', '', $html );
-				}
+				$this->flatten( array( 'span', 'div', 'sup', 'h[1-6]', 'sup', 'sub' ) );
 				// Content wrapping
 				$html = $this->createWMLCard( $html );
 				break;
+		}
+		if ( $this->elementsToFlatten ) {
+			$elements = implode( '|', $this->elementsToFlatten );
+			$html = preg_replace( "#</?($elements)[^>]*>#is", '', $html );
 		}
 		
 		wfProfileOut( __METHOD__ );
