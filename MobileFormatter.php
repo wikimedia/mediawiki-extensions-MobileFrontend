@@ -481,7 +481,12 @@ class MobileFormatter {
 	 */
 	private function parseItemsToRemove() {
 		wfProfileIn( __METHOD__ );
-		$removals = array();
+		$removals = array(
+			'ID' => array(),
+			'TAG' => array(),
+			'CLASS' => array(),
+			'TAG_CLASS' => array(),
+		);
 
 		foreach ( $this->itemsToRemove as $itemToRemove ) {
 			$type = '';
