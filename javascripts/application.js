@@ -6,7 +6,7 @@ MobileFrontend = (function() {
 		var i, search, clearSearch, results, languageSelection, a,
 			sectionHeadings = document.getElementsByClassName( 'section_heading' ),
 			dismissNotification, cookieNameZeroVisibility, zeroRatedBanner, zeroRatedBannerVisibility;
-		document.body.className = "jsEnabled";
+		utilities( document.body ).addClass( 'jsEnabled' );
 		function openSectionHandler() {
 			var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
 			if( sectionNumber > -1 ) {
