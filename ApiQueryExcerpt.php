@@ -14,7 +14,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		}
 		$params = $this->extractRequestParams();
 		foreach ( $titles as $id => $t ) {
-			$text = $this->getExcerpt( $t );
+			$text = $this->getExcerpt( $t, $params['plaintext'] );
 			if ( isset( $params['length'] ) ) {
 				$text = $this->trimText( $text, $params['length'] );
 			}
@@ -27,7 +27,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	 * @param Title $title
 	 * @return string 
 	 */
-	private function getExcerpt( Title $title ) {
+	private function getExcerpt( Title $title, $plainText ) {
 		global $wgMemc;
 
 		$key = wfMemcKey( 'mf', 'excerpt', $title->getPrefixedDBkey(), $title->getArticleID() );
@@ -40,7 +40,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		}
 		$wp = WikiPage::factory( $title );
 		$pout = $wp->getParserOutput( $this->parserOptions );
-		$text = $this->processText( $pout->getText(), $title );
+		$text = $this->processText( $pout->getText(), $title, $plainText );
 		$wgMemc->set( $key, $text );
 		return $text;
 	}
@@ -49,17 +49,25 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	 * Converts page HTML into an excerpt
 	 * @param string $text
 	 * @param Title $title
+	 * @param bool $plainText
 	 * @return string 
 	 */
-	private function processText( $text, Title $title ) {
+	private function processText( $text, Title $title, $plainText ) {
 		$text = preg_replace( '/<h[1-6].*$/s', '', $text );
 		$mf = new MobileFormatter( $text, $title, 'XHTML' );
 		$mf->removeImages();
 		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault' ) );
-		$mf->flatten( array( 'span', 'a' ) );
+		if ( $plainText ) {
+			$mf->flatten( '[?!]?[a-z0-9]+' );
+		} else {
+			$mf->flatten( array( 'span', 'a' ) );
+		}
 		$mf->filterContent();
 		$text = $mf->getText();
 		$text = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $text );
+		if ( $plainText ) {
+			$text = html_entity_decode( $text );
+		}
 		return trim( $text );
 	}
 
@@ -77,7 +85,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		if ( $wgUseTidy ) {
 			$text = trim ( MWTidy::tidy( $text ) );
 		}
-		$text .= wfMessage( 'ellipsis' )->text();
+		$text .= wfMessage( 'ellipsis' )->inContentLanguage()->text();
 		return $text;
 	}
 
@@ -94,6 +102,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 				ApiBase::PARAM_MAX => 10,
 				ApiBase::PARAM_MAX2 => 20,
 			),
+			'plaintext' => false,
 			'continue' => array(
 				ApiBase::PARAM_TYPE => 'string',
 			),
@@ -104,6 +113,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		return array(
 			'length' => 'How many characters to return, actual text returned might be slightly longer.',
 			'limit' => 'How many excerpts to return',
+			'plaintext' => 'Return excerpts as plaintext instead of limited HTML',
 			'continue' => 'When more results are available, use this to continue',
 		);
 	}
