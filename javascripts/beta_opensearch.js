@@ -246,18 +246,10 @@ MobileFrontend.opensearch = (function() {
 
 	function init() {
 		var results = document.getElementById( 'results' );
-		results.onmousedown = function( event ) {
-			whichElement( event );
-		};
-		document.body.onmousedown = function( event ) {
-			whichElement( event );
-		};
-		document.body.ontouchstart = function( event ) {
-			whichElement( event );
-		};
-		results.ontouchstart = function( event ) {
-			whichElement( event );
-		};
+		results.onmousedown = whichElement;
+		document.body.onmousedown = whichElement;
+		document.body.ontouchstart = whichElement;
+		results.ontouchstart = whichElement;
 	}
 	init();
 

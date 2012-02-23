@@ -2,7 +2,7 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
-		numResults = 5, pixels = 'px',
+		numResults = 5,
 		results = document.getElementById( 'results' ),
 		search = document.getElementById( 'search' ),
 		sb = document.getElementById( 'searchbox' ),
@@ -17,7 +17,7 @@ MobileFrontend.opensearch = (function() {
 		results.style.display = 'none';
 	}
 
-	function whichElement( e ) { 
+	function whichElement( e ) {
 		var targ;
 		if ( !e ) {
 			e = window.event;
@@ -35,8 +35,8 @@ MobileFrontend.opensearch = (function() {
 		e.cancelBubble = true;
 		e.stopPropagation();
 	
-		if (!( targ.className === "suggestion-result" || 
-			 targ.className === "search-result-item" || 
+		if (!( targ.className === "suggestion-result" ||
+			 targ.className === "search-result-item" ||
 			 targ.className === "suggestions-result" ||
 			 targ.className === "sq-val-update" ) ) {
 			hideResults();
@@ -101,7 +101,7 @@ MobileFrontend.opensearch = (function() {
 
 		if ( !sections || sections.length < 1 ) {
 			results.innerHTML = "No results";
-		} else {		
+		} else {
 			if( results.firstChild ) {
 				results.removeChild( results.firstChild );
 			}
@@ -138,18 +138,10 @@ MobileFrontend.opensearch = (function() {
 
 	function init() {
 		var results = document.getElementById( 'results' );
-		results.onmousedown = function( event ) {
-			whichElement( event );
-		};
-		document.body.onmousedown = function( event ) {
-			whichElement( event );
-		};
-		document.body.ontouchstart = function( event ) {
-			whichElement( event );
-		};
-		results.ontouchstart = function( event ) {
-			whichElement( event );
-		};
+		results.onmousedown = whichElement;
+		document.body.onmousedown = whichElement;
+		document.body.ontouchstart = whichElement;
+		results.ontouchstart = whichElement;
 	}
 	init();
 

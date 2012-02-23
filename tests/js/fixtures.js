@@ -23,7 +23,7 @@ window.MobileFrontendTests = {
 		'	<div id="sq">',
 		'	<input type="text" id="search">',
 		'	</div>',
-		'	<button id="clearsearch">clear</button>',
+		'	<button id="clearsearch" title="Clear">clear</button>',
 		'	<div id="results">search results here</div>',
 		'	<div id="content">',
 		'		<h2 class="section_heading" id="section_1">',

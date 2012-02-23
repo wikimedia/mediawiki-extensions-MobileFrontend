@@ -37,7 +37,6 @@ MobileFrontend = (function() {
 			function onFocusHandler() {
 				search.select();
 			}
-			clearSearch.setAttribute( 'title', 'Clear' );
 			utilities( clearSearch ).bind( 'mousedown', clearSearchBox, true );
 			utilities( search ).bind( 'keyup', handleClearSearchLink, false );
 			utilities( search ).bind( 'click', onFocusHandler, true );
@@ -124,7 +123,7 @@ MobileFrontend = (function() {
 			p, section_idx;
 		if ( targetel ) {
 			p = targetel;
-			while ( p && p.className !== 'content_block' && 
+			while ( p && p.className !== 'content_block' &&
 				p.className !== 'section_heading' ) {
 				p = p.parentNode;
 			}
