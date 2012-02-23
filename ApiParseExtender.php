@@ -15,7 +15,6 @@ class ApiParseExtender {
 			$params['mobileformat'] = array(
 				ApiBase::PARAM_TYPE => array( 'wml', 'html' ),
 			);
-			$params['expandablesections'] = false;
 			$params['noimages'] = false;
 			$params['mainpage'] = false;
 		}
@@ -31,8 +30,6 @@ class ApiParseExtender {
 	public static function onAPIGetParamDescription( ApiBase &$module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = 'Return parse output in a format suitable for mobile devices';
-			$params['expandablesections'] = 'Make sections in mobile output collapsed by default, expandable via JavaScript.'
-				. " Ignored if `section' parameter is set.";
 			$params['noimages'] = 'Disable images in mobile output';
 			$params['mainpage'] = 'Apply mobile main page transformations';
 		}
@@ -47,7 +44,7 @@ class ApiParseExtender {
 	 */
 	public static function onAPIGetDescription( ApiBase &$module, &$desc ) {
 		if ( $module->getModuleName() == 'parse' ) {
-			$desc= (array)$desc;
+			$desc = (array)$desc;
 			$desc[] = 'Extended by MobileFrontend';
 		}
 		return true;
@@ -80,18 +77,8 @@ class ApiParseExtender {
 					ExtMobileFrontend::parseContentFormat( $params['mobileformat'] ),
 					$context
 				);
-				if ( $params['expandablesections'] ) {
-					if ( isset( $params['section'] ) ) {
-						$module->setWarning( "`expandablesections' and `section' can't be used simultaneously" );
-					} elseif ( !$title->isMainPage() ) {
-						$mf->enableExpandableSections();
-					}
-				}
 				$mf->removeImages( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
-				if ( $params['mainpage'] && $params['expandablesections'] ) {
-					$module->setWarning( "`mainpage' and `expandablesections' can't be used simultaneously" );
-				}
 				$mf->filterContent();
 				$data['parse']['text'] = $mf->getText( 'content' );
 

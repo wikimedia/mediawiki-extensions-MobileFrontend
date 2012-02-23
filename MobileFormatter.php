@@ -19,7 +19,6 @@ class MobileFormatter {
 	 */
 	protected $title;
 
-	protected $expandableSections = false;
 	protected $mainPage = false;
 
 	private $headings = 0;
@@ -119,10 +118,6 @@ class MobileFormatter {
 	 */
 	public function getFormat() {
 		return $this->format;
-	}
-
-	public function enableExpandableSections( $flag = true ) {
-		$this->expandableSections = $flag;
 	}
 
 	public function setIsMainPage( $value = true ) {
@@ -274,7 +269,7 @@ class MobileFormatter {
 		
 		switch ( $this->format ) {
 			case 'XHTML':
-				if ( $this->expandableSections && !$this->mainPage && strlen( $html ) > 4000 ) {
+				if ( !$this->mainPage && strlen( $html ) > 4000 ) {
 					$html = $this->headingTransform( $html );
 				}
 				break;
@@ -339,15 +334,12 @@ class MobileFormatter {
 								'&#8593;' . $backToTop ) .
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
-		if ( $this->expandableSections ) {
-			$base .= Html::openElement( 'h2',
-							array( 'class' => 'section_heading',
-									'id' => 'section_' . $this->headings ) );
-		} else {
-			$base .= Html::openElement( 'h2',
-							array( 'class' => 'section_heading',
-									'id' => 'section_' . $this->headings ) );
-		}
+		$base .= Html::openElement( 'h2',
+			array(
+				'class' => 'section_heading',
+				'id' => 'section_' . $this->headings
+			) 
+		);
 		$base .=
 				Html::rawElement( 'span',
 						array( 'id' => $headlineId ),
