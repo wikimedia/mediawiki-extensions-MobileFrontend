@@ -78,6 +78,28 @@ $wgMobileFrontendLogo = false;
 $wgMobileDomain = '.m.';
 
 /**
+ * Template for mobile URLs.
+ *
+ * This will be used to transcode regular URLs into mobile URLs for the 
+ * mobile view.
+ * 
+ * You can either statically or dynamically create the host-portion of your
+ * mobile URL. To statically create it, just set $wgMobileUrlTemplate to 
+ * the static hostname. For example:
+ *		$wgMobileUrlTemplate = "mobile.mydomain.com";
+ * 
+ * Alternatively, the host definition can include placeholders for different
+ * parts of the 'host' section of a URL. The placeholders are denoted by '%h'
+ * and followed with a digit that maps to the position of a host-part of the
+ * original, non-mobile URL. Take the host 'en.wikipedia.org' for example.
+ * '%h0' maps to 'en', '%h1' maps to 'wikipedia', and '%h2' maps to 'org'.
+ * So, if you wanted a mobile URL scheme that turned "en.wikipedia.org" into
+ * "en.m.wikipedia.org", your URL template would look like:
+ * 		%h0.m.%h1.%h2
+ */
+$wgMobileUrlTemplate = '%h0.m.%h1.%h2';
+
+/**
  * URL for script used to disable mobile site
  * (protocol, host, optional port; path portion)
  *

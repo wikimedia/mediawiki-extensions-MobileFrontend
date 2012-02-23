@@ -61,4 +61,18 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$sendXDeviceVaryHeader->invokeArgs( $wgExtMobileFrontend, array() );
 		$this->assertEquals( $_SERVER['HTTP_X_DEVICE'], $wgRequest->response()->getheader( 'X-Device' ) );
 	}
+	
+	public function testGetMobileUrl() {
+		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
+		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
+		$this->assertEquals( 'http://en.m.wikipedia.org/wiki/Article', $wgExtMobileFrontend->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' ) );
+	}
+	
+	public function testParseMobileUrlTemplate() {
+		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
+		$wgMobileUrlTemplate = "%h0.m.%h1.%h2/path/morepath";
+		$this->assertEquals( '%h0.m.%h1.%h2', $wgExtMobileFrontend->parseMobileUrlTemplate( 'host' ) );
+		$this->assertEquals( '/path/morepath', $wgExtMobileFrontend->parseMobileUrlTemplate( 'path' ) );
+		$this->assertEquals( array( 'host' => '%h0.m.%h1.%h2', 'path' => '/path/morepath' ), $wgExtMobileFrontend->parseMobileUrlTemplate());
+	}
 }

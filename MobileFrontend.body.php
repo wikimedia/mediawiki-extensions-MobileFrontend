@@ -1327,6 +1327,101 @@ class ExtMobileFrontend {
 		return true;
 	}
 
+	/**
+	 * Take a URL and return a copy that conforms to the mobile URL template
+	 * @param $url string
+	 * @return string
+	 */
+	public function getMobileUrl( $url ) {
+		global $wgMobileUrlTemplate;		
+		$parsedUrl = wfParseUrl( $url );
+		$this->updateMobileUrlHost( $parsedUrl );
+		$this->updateMobileUrlPath( $parsedUrl );		
+		return wfAssembleUrl( $parsedUrl );
+	}
+	
+	/**
+	 * Update host of given URL to conform to mobile URL template.
+	 * @param $parsedUrl array 
+	 * 		Result of parseUrl() or wfParseUrl()
+	 */
+	protected function updateMobileUrlHost( &$parsedUrl ) {		
+		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
+		if ( !strlen( $mobileUrlHostTemplate )) {
+			return;
+		}
+		
+		$parsedHostParts = explode( ".", $parsedUrl[ 'host' ] );
+		$templateHostParts = explode( ".", $mobileUrlHostTemplate );
+		$targetHostParts = array();
+		
+		foreach ( $templateHostParts as $key => $templateHostPart ) {
+			if ( strstr( $templateHostPart, '%h' ) ) {
+				$parsedHostPartKey = substr( $templateHostPart, 2 );
+				$targetHostParts[ $key ] = $parsedHostParts[ $parsedHostPartKey ];
+			} elseif ( isset( $parsedHostParts[ $key ] ) 
+					&& $templateHostPart == $parsedHostParts[ $key ] ) {
+				$targetHostParts = $parsedHostParts;
+				break;
+			} else {
+				$targetHostParts[ $key ] = $templateHostPart;
+			}
+		}
+		
+		$parsedUrl[ 'host' ] = implode( ".", $targetHostParts );
+	}
+
+	/**
+	 * Update path of given URL to conform to mobile URL template.
+	 * 
+	 * This is just a stub at the moment; does nothing. Once this does
+	 * something, be sure to update documentation for $wgMobileUrlTemplate.
+	 * @param $parsedUrl array 
+	 * 		Result of parseUrl() or wfParseUrl()
+	 */
+	protected function updateMobileUrlPath( &$parsedUrl ) {
+		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'path' );
+		if ( !strlen( $mobileUrlHostTemplate )) {
+			return;
+		}
+		return;
+	}
+
+	/**
+	 * Parse mobile URL template into its host and path components.
+	 * 
+	 * Optionally specify which portion of the template you want returned.
+	 * @param $part string
+	 * @return Mixed
+	 */
+	public function parseMobileUrlTemplate( $part = null ) {
+		global $wgMobileUrlTemplate;
+		
+		$pathStartPos = strpos( $wgMobileUrlTemplate, '/' );
+		
+		/**
+		 * This if/else block exists because of an annoying aspect of substr()
+		 * Even if you pass 'null' or 'false' into the 'length' param, it 
+		 * will return an empty string. 
+		 * http://www.stopgeek.com/wp-content/uploads/2007/07/sense.jpg
+		 */
+		if ( $pathStartPos === false ) {
+			$host = substr( $wgMobileUrlTemplate, 0 );
+		} else {
+			$host = substr( $wgMobileUrlTemplate, 0,  $pathStartPos );
+		}
+		
+		$path = substr( $wgMobileUrlTemplate, $pathStartPos );
+
+		if ( $part == 'host' ) {
+			return $host;
+		} elseif( $part == 'path' ) {
+			return $path;
+		} else {
+			return array( 'host' => $host, 'path' => $path );
+		}
+	}
+
 	public function getVersion() {
 		return __CLASS__ . ': $Id$';
 	}
