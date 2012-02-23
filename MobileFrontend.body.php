@@ -1339,49 +1339,49 @@ class ExtMobileFrontend {
 		$this->updateMobileUrlPath( $parsedUrl );		
 		return wfAssembleUrl( $parsedUrl );
 	}
-	
+
 	/**
 	 * Update host of given URL to conform to mobile URL template.
-	 * @param $parsedUrl array 
+	 * @param $parsedUrl array
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
-	protected function updateMobileUrlHost( &$parsedUrl ) {		
+	protected function updateMobileUrlHost( &$parsedUrl ) {
 		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
-		if ( !strlen( $mobileUrlHostTemplate )) {
+		if ( !strlen( $mobileUrlHostTemplate ) ) {
 			return;
 		}
-		
-		$parsedHostParts = explode( ".", $parsedUrl[ 'host' ] );
+
+		$parsedHostParts = explode( ".", $parsedUrl['host'] );
 		$templateHostParts = explode( ".", $mobileUrlHostTemplate );
 		$targetHostParts = array();
-		
+
 		foreach ( $templateHostParts as $key => $templateHostPart ) {
 			if ( strstr( $templateHostPart, '%h' ) ) {
 				$parsedHostPartKey = substr( $templateHostPart, 2 );
-				$targetHostParts[ $key ] = $parsedHostParts[ $parsedHostPartKey ];
-			} elseif ( isset( $parsedHostParts[ $key ] ) 
-					&& $templateHostPart == $parsedHostParts[ $key ] ) {
+				$targetHostParts[ $key ] = $parsedHostParts[$parsedHostPartKey];
+			} elseif ( isset( $parsedHostParts[ $key ] )
+					&& $templateHostPart == $parsedHostParts[$key] ) {
 				$targetHostParts = $parsedHostParts;
 				break;
 			} else {
-				$targetHostParts[ $key ] = $templateHostPart;
+				$targetHostParts[$key] = $templateHostPart;
 			}
 		}
-		
-		$parsedUrl[ 'host' ] = implode( ".", $targetHostParts );
+
+		$parsedUrl['host'] = implode( ".", $targetHostParts );
 	}
 
 	/**
 	 * Update path of given URL to conform to mobile URL template.
-	 * 
+	 *
 	 * This is just a stub at the moment; does nothing. Once this does
 	 * something, be sure to update documentation for $wgMobileUrlTemplate.
-	 * @param $parsedUrl array 
+	 * @param $parsedUrl array
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlPath( &$parsedUrl ) {
 		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'path' );
-		if ( !strlen( $mobileUrlHostTemplate )) {
+		if ( !strlen( $mobileUrlHostTemplate ) ) {
 			return;
 		}
 		return;
@@ -1389,7 +1389,7 @@ class ExtMobileFrontend {
 
 	/**
 	 * Parse mobile URL template into its host and path components.
-	 * 
+	 *
 	 * Optionally specify which portion of the template you want returned.
 	 * @param $part string
 	 * @return Mixed
@@ -1410,7 +1410,7 @@ class ExtMobileFrontend {
 		} else {
 			$host = substr( $wgMobileUrlTemplate, 0,  $pathStartPos );
 		}
-		
+
 		$path = substr( $wgMobileUrlTemplate, $pathStartPos );
 
 		if ( $part == 'host' ) {
