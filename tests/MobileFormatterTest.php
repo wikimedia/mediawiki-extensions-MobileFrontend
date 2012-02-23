@@ -9,6 +9,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 */
 	public function testXhtmlTransform( $input, $expected, $callback = false ) {
 		$t = Title::newFromText( 'Mobile' );
+		$input = str_replace( "\r", '', $input ); // "yay" to Windows!
 		$mf = new MobileFormatter( "<div id='content'>$input</div>", $t, 'XHTML' );
 		if ( $callback ) {
 			$callback( $mf );
