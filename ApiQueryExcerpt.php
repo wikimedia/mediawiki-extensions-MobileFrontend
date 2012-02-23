@@ -30,7 +30,8 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	private function getExcerpt( Title $title, $plainText ) {
 		global $wgMemc;
 
-		$key = wfMemcKey( 'mf', 'excerpt', $title->getPrefixedDBkey(), $title->getArticleID() );
+		$wp = WikiPage::factory( $title );
+		$key = wfMemcKey( 'mf', 'excerpt', $plainText, $title->getArticleID(), $wp->getLatest() );
 		$text = $wgMemc->get( $key );
 		if ( $text !== false ) {
 			return $text;
@@ -38,7 +39,6 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		if ( !$this->parserOptions ) {
 			$this->parserOptions = new ParserOptions( new User( '127.0.0.1' ) );
 		}
-		$wp = WikiPage::factory( $title );
 		$pout = $wp->getParserOutput( $this->parserOptions );
 		$text = $this->processText( $pout->getText(), $title, $plainText );
 		$wgMemc->set( $key, $text );
