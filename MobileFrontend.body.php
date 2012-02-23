@@ -735,8 +735,8 @@ class ExtMobileFrontend {
 		 * against a list of approved open proxies, which we don't actually 
 		 * care about.
 		 */
-		$trustedProxyCheckFunction = ( function_exists( 'wfIsConfiguredProxy' )) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
-		if ( $trustedProxyCheckFunction( $ip )) {
+		$trustedProxyCheckFunction = ( function_exists( 'wfIsConfiguredProxy' ) ) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
+		if ( $trustedProxyCheckFunction( $ip ) ) {
 			$wgRequest->response()->header( 'Cache-Control: no-cache, must-revalidate' );
 			$wgRequest->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 			$wgRequest->response()->header( 'Pragma: no-cache' );
