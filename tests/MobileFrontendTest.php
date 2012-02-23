@@ -76,4 +76,13 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$this->assertEquals( '/path/morepath', $wgExtMobileFrontend->parseMobileUrlTemplate( 'path' ) );
 		$this->assertEquals( array( 'host' => '%h0.m.%h1.%h2', 'path' => '/path/morepath' ), $wgExtMobileFrontend->parseMobileUrlTemplate());
 	}
+	
+	public function testUpdateMobileUrlHost() {
+		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
+		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
+		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
+		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/Gustavus_Airport" );
+		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
+		$this->assertEquals( "http://en.m.wikipedia.org/wiki/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+	}
 }
