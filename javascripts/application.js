@@ -3,7 +3,7 @@
 MobileFrontend = (function() {
 
 	function init() {
-		var i, search, clearSearch, results, languageSelection, a, heading,
+		var i, results, languageSelection, a, heading,
 			sectionHeadings = document.getElementsByClassName( 'section_heading' ),
 			dismissNotification, cookieNameZeroVisibility, zeroRatedBanner, zeroRatedBannerVisibility;
 		utilities( document.body ).addClass( 'jsEnabled' );
@@ -28,19 +28,8 @@ MobileFrontend = (function() {
 			heading.insertBefore( createButton( false ), heading.firstChild );
 			utilities( heading ).bind( 'click', openSectionHandler, false );
 		}
-		search = document.getElementById( 'search' );
-		clearSearch = document.getElementById( 'clearsearch' );
 		results = document.getElementById( 'results' );
 		languageSelection = document.getElementById( 'languageselection' );
-
-		function initClearSearchLink() {
-			function onFocusHandler() {
-				search.select();
-			}
-			utilities( clearSearch ).bind( 'mousedown', clearSearchBox, true );
-			utilities( search ).bind( 'keyup', handleClearSearchLink, false );
-			utilities( search ).bind( 'click', onFocusHandler, true );
-		}
 
 		function navigateToLanguageSelection() {
 			var url;
@@ -53,35 +42,10 @@ MobileFrontend = (function() {
 		}
 		utilities( languageSelection ).bind( 'change', navigateToLanguageSelection );
 
-		function handleClearSearchLink() {
-			if ( clearSearch ) {
-				if ( search.value.length > 0 ) {
-					clearSearch.style.display = 'block';
-				} else {
-					clearSearch.style.display = 'none';
-					if ( results ) {
-						results.style.display = 'none';
-					}
-				}
-			}
-		}
-
-		function clearSearchBox( event ) {
-			search.value = '';
-			clearSearch.style.display = 'none';
-			if ( results ) {
-				results.style.display = 'none';
-			}
-			if ( event ) {
-				event.preventDefault();
-			}
-		}
-
 		function logoClick() {
 			var n = document.getElementById( 'nav' ).style;
 			n.display = n.display === 'block' ? 'none' : 'block';
 		}
-		initClearSearchLink();
 		utilities( document.getElementById( 'logo' ) ).bind( 'click', logoClick );
 		dismissNotification = document.getElementById( 'dismiss-notification' );
 

@@ -244,17 +244,58 @@ MobileFrontend.opensearch = (function() {
 		}
 	}
 
+	function handleDefaultText() {
+		var pE = document.getElementById( 'placeholder' );
+		if ( pE ) {
+			pE.style.display = 'none';
+		}
+	}
+
+	function initClearSearch() {
+		var clearSearch = document.getElementById( 'clearsearch' ),
+			search = document.getElementById( 'search' ),
+			results = document.getElementById( 'results' );
+		function handleClearSearchLink() {
+			if ( clearSearch ) {
+				if ( search.value.length > 0 ) {
+					clearSearch.style.display = 'block';
+				} else {
+					clearSearch.style.display = 'none';
+				}
+			}
+		}
+
+		function clearSearchBox( event ) {
+			search.value = '';
+			clearSearch.style.display = 'none';
+			if ( event ) {
+				event.preventDefault();
+			}
+		}
+
+		function onFocusHandler() {
+			search.select();
+		}
+		u( clearSearch ).bind( 'mousedown', clearSearchBox, true );
+		u( search ).bind( 'keyup', handleClearSearchLink, false );
+		u( search ).bind( 'keydown', handleDefaultText, false );
+		u( search ).bind( 'click', onFocusHandler, true );
+	}
+
 	function init() {
 		var results = document.getElementById( 'results' );
 		results.onmousedown = whichElement;
 		document.body.onmousedown = whichElement;
 		document.body.ontouchstart = whichElement;
 		results.ontouchstart = whichElement;
+		search.onpaste = handleDefaultText;
 	}
 	init();
+	initClearSearch();
 
 	return {
 		init: init,
+		initClearSearch: initClearSearch,
 		writeResults: writeResults,
 		createObjectArray: createObjectArray,
 		removeResults: removeResults

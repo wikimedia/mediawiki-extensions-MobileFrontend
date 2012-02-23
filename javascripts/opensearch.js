@@ -136,6 +136,42 @@ MobileFrontend.opensearch = (function() {
 		}
 	}
 
+	function initClearSearch() {
+		var clearSearch = document.getElementById( 'clearsearch' ),
+			search = document.getElementById( 'search' ),
+			results = document.getElementById( 'results' );
+		function handleClearSearchLink() {
+			if ( clearSearch ) {
+				if ( search.value.length > 0 ) {
+					clearSearch.style.display = 'block';
+				} else {
+					clearSearch.style.display = 'none';
+					if ( results ) {
+						results.style.display = 'none';
+					}
+				}
+			}
+		}
+
+		function clearSearchBox( event ) {
+			search.value = '';
+			clearSearch.style.display = 'none';
+			if ( results ) {
+				results.style.display = 'none';
+			}
+			if ( event ) {
+				event.preventDefault();
+			}
+		}
+		
+		function onFocusHandler() {
+			search.select();
+		}
+		u( clearSearch ).bind( 'mousedown', clearSearchBox, true );
+		u( search ).bind( 'keyup', handleClearSearchLink, false );
+		u( search ).bind( 'click', onFocusHandler, true );
+	}
+
 	function init() {
 		var results = document.getElementById( 'results' );
 		results.onmousedown = whichElement;
@@ -144,9 +180,11 @@ MobileFrontend.opensearch = (function() {
 		results.ontouchstart = whichElement;
 	}
 	init();
+	initClearSearch();
 
 	return {
 		init: init,
+		initClearSearch: initClearSearch,
 		writeResults: writeResults,
 		createObjectArray: createObjectArray
 	};

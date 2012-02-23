@@ -1,5 +1,50 @@
 var MFEOS = MobileFrontend.opensearch;
 var _ajax;
+
+module("MobileFrontend application.js: clear search", {
+	setup: function() {
+		$(['<div id="clearsearchtest"><div id="results"></div><input type="text" id="search">',
+			'<button id="clearsearch" title="Clear" style="display:none;">clear</button></div>'].join("")).appendTo(document.body);
+		MFEOS.initClearSearch();
+	},
+	teardown: function() {
+		$("#clearsearchtest").remove();
+	}
+});
+
+test("setup", function() {
+	strictEqual($("#clearsearch").attr("title"), "Clear", "check clearsearch tooltip");
+});
+
+test("reveal clearsearch on text", function() {
+	$("#search").val("hello");
+	var initialVisibility = $("#clearsearch").is(":visible");
+	MFET.triggerEvent($("#search")[0], "keyup")
+	strictEqual(initialVisibility, false, "at start clear button should be hidden.")
+	strictEqual($("#clearsearch").is(":visible"), true, "clear search is now visible");
+});
+
+test("hide clearsearch when no text", function() {
+	$("#clearsearch").show();
+	$("#search").val("");
+	var initialVisibility = $("#clearsearch").is(":visible");
+	MFET.triggerEvent($("#search")[0], "keyup");
+	strictEqual(initialVisibility, true, "at start we made it visible")
+	strictEqual($("#clearsearch").is("visible"), false, "now invisible due to lack of text in input");
+	strictEqual($("#results").is("visible"), false, "results also hidden");
+});
+
+test("click clearSearchBox", function() {
+	$("#search").val("hello world");
+	$("#results,#clearsearch").show();
+
+	MFET.triggerEvent($("#clearsearch")[0], "mousedown")
+
+	strictEqual($("#search").val(), "", "value reset");
+	strictEqual($("#results").is(":visible"), false, "results hidden");
+	strictEqual($("#clearsearch").is(":visible"), false, "clear search hidden");
+});
+
 module("MobileFrontend opensearch.js - writeResults", {
 	setup: function() {
 		_ajax = MobileFrontend.utils.ajax;

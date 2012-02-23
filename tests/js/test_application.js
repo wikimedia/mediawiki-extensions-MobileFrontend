@@ -75,50 +75,6 @@ test("dismiss notification", function() {
 	strictEqual(cookieEnd, "off", "banner now set for dismissal");
 });
 
-module("MobileFrontend application.js: clear search", {
-	setup: function() {
-		MFET.createFixtures();
-		MFE.init();
-		$("#clearsearch").hide();
-	},
-	teardown: function() {
-		MFET.cleanFixtures();
-	}
-});
-
-test("setup", function() {
-	strictEqual($("#clearsearch").attr("title"), "Clear", "check clearsearch tooltip");
-});
-
-test("reveal clearsearch on text", function() {
-	$("#search").val("hello");
-	var initialVisibility = $("#clearsearch").is(":visible");
-	MFET.triggerEvent($("#search")[0], "keyup")
-	strictEqual(initialVisibility, false, "at start clear button should be hidden.")
-	strictEqual($("#clearsearch").is(":visible"), true, "clear search is now visible");
-});
-
-test("hide clearsearch when no text", function() {
-	$("#clearsearch").show();
-	$("#search").val("");
-	var initialVisibility = $("#clearsearch").is(":visible");
-	MFET.triggerEvent($("#search")[0], "keyup");
-	strictEqual(initialVisibility, true, "at start we made it visible")
-	strictEqual($("#clearsearch").is("visible"), false, "now invisible due to lack of text in input");
-	strictEqual($("#results").is("visible"), false, "results also hidden");
-});
-
-test("click clearSearchBox", function() {
-	$("#search").val("hello world");
-	$("#results,#clearsearch").show();
-
-	MFET.triggerEvent($("#clearsearch")[0], "mousedown")
-
-	strictEqual($("#search").val(), "", "value reset");
-	strictEqual($("#results").is(":visible"), false, "results hidden");
-	strictEqual($("#clearsearch").is(":visible"), false, "clear search hidden");
-});
-
 module("MobileFrontend application.js: logo click", {
 	setup: function() {
 		MFET.createFixtures();
