@@ -3,7 +3,7 @@
 MobileFrontend = (function() {
 
 	function init() {
-		var i, search, clearSearch, results, languageSelection, a,
+		var i, search, clearSearch, results, languageSelection, a, heading,
 			sectionHeadings = document.getElementsByClassName( 'section_heading' ),
 			dismissNotification, cookieNameZeroVisibility, zeroRatedBanner, zeroRatedBannerVisibility;
 		utilities( document.body ).addClass( 'jsEnabled' );
@@ -13,8 +13,20 @@ MobileFrontend = (function() {
 				wm_toggle_section( sectionNumber );
 			}
 		}
+		function createButton( visible ) {
+			var btn, label;
+			btn = document.createElement( 'button' );
+			label = document.createTextNode( visible ? 'Show' : 'Hide' );
+			btn.className = visible ? 'show' : 'hide';
+			btn.appendChild( label );
+			btn.style.display = visible ? 'inline-block' : 'none';
+			return btn;
+		}
 		for( i = 0; i < sectionHeadings.length; i++ ) {
-			utilities( sectionHeadings[i] ).bind( 'click', openSectionHandler, false );
+			heading = sectionHeadings[i];
+			heading.insertBefore( createButton( true ), heading.firstChild );
+			heading.insertBefore( createButton( false ), heading.firstChild );
+			utilities( heading ).bind( 'click', openSectionHandler, false );
 		}
 		search = document.getElementById( 'search' );
 		clearSearch = document.getElementById( 'clearsearch' );

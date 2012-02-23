@@ -339,14 +339,6 @@ class MobileFormatter {
 								'&#8593;' . $backToTop ) .
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
-		$buttons = Html::element( 'button',
-					array( 'class' => 'section_heading show',
-							'section_id' => $this->headings ),
-							$show ) .
-			Html::element( 'button',
-					array( 'class' => 'section_heading hide',
-							'section_id' => $this->headings ),
-							$hide );
 		if ( $this->expandableSections ) {
 			$base .= Html::openElement( 'h2',
 							array( 'class' => 'section_heading',
@@ -356,7 +348,7 @@ class MobileFormatter {
 							array( 'class' => 'section_heading',
 									'id' => 'section_' . $this->headings ) );
 		}
-		$base .= $buttons .
+		$base .=
 				Html::rawElement( 'span',
 						array( 'id' => $headlineId ),
 								$matches[2] ) .
