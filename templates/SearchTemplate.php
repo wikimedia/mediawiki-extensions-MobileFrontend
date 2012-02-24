@@ -13,6 +13,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$randomPageUrl = $this->data['randomPageUrl'];
 		$homeButton = $this->data['messages']['mobile-frontend-home-button'];
 		$randomButton = $this->data['messages']['mobile-frontend-random-button'];
+		$clearText = $this->data['messages']['mobile-frontend-clear-search'];
 
 		$scriptUrl = wfScript();
 		$searchBoxDisplayNone = ( $this->data['hideSearchBox'] ) ? ' style="display: none;" ' : '';
@@ -34,7 +35,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
 					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024" />
-					<div class="clearlink" id="clearsearch" title="Clear"></div>
+					<div class="clearlink" id="clearsearch" title="{$clearText}"></div>
 				</div>
 			  <button id='goButton' type='submit'></button>
 			</form>

@@ -95,6 +95,7 @@ class ExtMobileFrontend {
 		'mobile-frontend-placeholder',
 		'mobile-frontend-dismiss-notification',
 		'mobile-frontend-sopa-notice',
+		'mobile-frontend-clear-search',
 	);
 
 	public function __construct() {
