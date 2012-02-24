@@ -1,6 +1,9 @@
 <?php
 
 class ApiQueryExcerpt extends ApiQueryBase {
+	/**
+	 * @var ParserOptions
+	 */
 	private $parserOptions;
 
 	public function __construct( $query, $moduleName ) {
@@ -47,19 +50,43 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	private function getExcerpt( Title $title, $plainText ) {
 		global $wgMemc;
 
-		$wp = WikiPage::factory( $title );
-		$key = wfMemcKey( 'mf', 'excerpt', $plainText, $title->getArticleID(), $wp->getLatest() );
+		$page = WikiPage::factory( $title );
+		$key = wfMemcKey( 'mf', 'excerpt', $plainText, $title->getArticleID(), $page->getLatest() );
 		$text = $wgMemc->get( $key );
 		if ( $text !== false ) {
 			return $text;
 		}
+		$text = $this->parse( $page );
+		$text = $this->convertText( $text, $title, $plainText );
+		$wgMemc->set( $key, $text );
+		return $text;
+	}
+
+	/**
+	 * Returns HTML of page's zeroth section
+	 * @param WikiPage $page
+	 * @return string
+	 */
+	private function parse( WikiPage $page ) {
 		if ( !$this->parserOptions ) {
 			$this->parserOptions = new ParserOptions( new User( '127.0.0.1' ) );
 		}
-		$pout = $wp->getParserOutput( $this->parserOptions );
-		$text = $this->processText( $pout->getText(), $title, $plainText );
-		$wgMemc->set( $key, $text );
-		return $text;
+		// first try finding full page in parser cache
+		if ( $page->isParserCacheUsed( $this->parserOptions, 0 ) ) {
+			$pout = ParserCache::singleton()->get( $page, $this->parserOptions );
+			if ( $pout ) {
+				$text = $pout->getText();
+				return preg_replace( '/<h[1-6].*$/s', '', $text );
+			}
+		}
+		// in case of cache miss, render just the needed section
+		$apiMain = new ApiMain( new FauxRequest(
+			array( 'page' => $page->getTitle()->getPrefixedText(), 'section' => 0, 'prop' => 'text' ) )
+		);
+		$apiParse = new ApiParse( $apiMain, 'parse' );
+		$apiParse->execute();
+		$data = $apiParse->getResultData();
+		return $data['parse']['text']['*'];
 	}
 
 	/**
@@ -69,8 +96,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	 * @param bool $plainText
 	 * @return string 
 	 */
-	private function processText( $text, Title $title, $plainText ) {
-		$text = preg_replace( '/<h[1-6].*$/s', '', $text );
+	private function convertText( $text, Title $title, $plainText ) {
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
 		$mf->removeImages();
 		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault' ) );
