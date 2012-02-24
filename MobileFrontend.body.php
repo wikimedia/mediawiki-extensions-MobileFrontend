@@ -1366,9 +1366,6 @@ class ExtMobileFrontend {
 
 	/**
 	 * Update path of given URL to conform to mobile URL template.
-	 *
-	 * This is just a stub at the moment; does nothing. Once this does
-	 * something, be sure to update documentation for $wgMobileUrlTemplate.
 	 * @param $parsedUrl array
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
@@ -1376,6 +1373,8 @@ class ExtMobileFrontend {
 		global $wgScriptPath;
 
 		$mobileUrlPathTemplate = $this->parseMobileUrlTemplate( 'path' );
+		
+		// if there's no path template, no reason to continue.
 		if ( !strlen( $mobileUrlPathTemplate ) ) {
 			return;
 		}

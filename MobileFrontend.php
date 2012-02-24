@@ -83,6 +83,9 @@ $wgMobileDomain = '.m.';
  * This will be used to transcode regular URLs into mobile URLs for the 
  * mobile view.
  * 
+ * It's possible to specify the 'mobileness' of the URL either in the 
+ * host portion, or in the path portion.
+ *
  * You can either statically or dynamically create the host-portion of your
  * mobile URL. To statically create it, just set $wgMobileUrlTemplate to 
  * the static hostname. For example:
@@ -96,6 +99,14 @@ $wgMobileDomain = '.m.';
  * So, if you wanted a mobile URL scheme that turned "en.wikipedia.org" into
  * "en.m.wikipedia.org", your URL template would look like:
  * 		%h0.m.%h1.%h2
+ *
+ * If you prefer to use template the path, be sure to exclude $wgScriptPath.
+ * You can specify where the non-mobile path portion appears with the token %p.
+ * For instance:
+ *		$wgMobileUrlTemplate = "/mobile/%p";
+ *
+ * At the moment, this might behave strangely if you want to template both the
+ * host and path portions of the URL.
  */
 $wgMobileUrlTemplate = '%h0.m.%h1.%h2';
 
