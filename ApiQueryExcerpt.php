@@ -32,7 +32,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 			}
 			$text = $this->getExcerpt( $t, $params['plaintext'] );
 			if ( isset( $params['length'] ) ) {
-				$text = $this->trimText( $text, $params['length'] );
+				$text = $this->trimText( $text, $params['length'], $params['plaintext'] );
 			}
 			$fit = $this->addPageSubItem( $id, $text );
 			if ( !$fit ) {
@@ -114,7 +114,14 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		return trim( $text );
 	}
 
-	private function trimText( $text, $requestedLength ) {
+	/**
+	 * 
+	 * @param string $text
+	 * @param int $requestedLength
+	 * @param bool $plainText
+	 * @return string
+	 */
+	private function trimText( $text, $requestedLength, $plainText ) {
 		global $wgUseTidy;
 
 		$length = mb_strlen( $text );
@@ -125,7 +132,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		preg_match( $pattern, $text, $m );
 		$text = $m[0];
 		// Fix possibly unclosed tags
-		if ( $wgUseTidy ) {
+		if ( $wgUseTidy && !$plainText ) {
 			$text = trim ( MWTidy::tidy( $text ) );
 		}
 		$text .= wfMessage( 'ellipsis' )->inContentLanguage()->text();
