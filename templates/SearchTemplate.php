@@ -13,7 +13,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$randomPageUrl = $this->data['randomPageUrl'];
 		$homeButton = $this->data['messages']['mobile-frontend-home-button'];
 		$randomButton = $this->data['messages']['mobile-frontend-random-button'];
-		$clearText = $this->data['messages']['mobile-frontend-clear-search'];
+		$clearText = htmlentities( $this->data['messages']['mobile-frontend-clear-search'], ENT_QUOTES );
 
 		$scriptUrl = wfScript();
 		$searchBoxDisplayNone = ( $this->data['hideSearchBox'] ) ? ' style="display: none;" ' : '';
