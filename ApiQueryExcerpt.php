@@ -13,12 +13,29 @@ class ApiQueryExcerpt extends ApiQueryBase {
 			return;
 		}
 		$params = $this->extractRequestParams();
+		$continue = 0;
+		if ( isset( $params['continue'] ) ) {
+			$continue = intval( $params['continue'] );
+			if ( $continue < 0 || $continue > count( $titles ) ) {
+				$this->dieUsageMsg( '_badcontinue' );
+			}
+			$titles = array_slice( $titles, $continue, null, true );
+		}
+		$count = 0;
 		foreach ( $titles as $id => $t ) {
+			if ( ++$count > $params['limit'] ) {
+				$this->setContinueEnumParameter( 'continue', $continue + $count - 1 );
+				break;
+			}
 			$text = $this->getExcerpt( $t, $params['plaintext'] );
 			if ( isset( $params['length'] ) ) {
 				$text = $this->trimText( $text, $params['length'] );
 			}
-			$this->addPageSubItem( $id, $text );
+			$fit = $this->addPageSubItem( $id, $text );
+			if ( !$fit ) {
+				$this->setContinueEnumParameter( 'continue', $continue + $count - 1 );
+				break;
+			}
 		}
 	}
 
@@ -54,7 +71,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	 */
 	private function processText( $text, Title $title, $plainText ) {
 		$text = preg_replace( '/<h[1-6].*$/s', '', $text );
-		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text ), $title, 'XHTML' );
+		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
 		$mf->removeImages();
 		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault' ) );
 		if ( $plainText ) {
@@ -104,7 +121,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 			),
 			'plaintext' => false,
 			'continue' => array(
-				ApiBase::PARAM_TYPE => 'string',
+				ApiBase::PARAM_TYPE => 'integer',
 			),
 		);
 	}
@@ -140,7 +157,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	}
 
 	public function getVersion() {
-		return __CLASS__ . ': $Id: ApiQueryCoordinates.php 110649 2012-02-03 10:18:20Z maxsem $';
+		return __CLASS__ . ': $Id$';
 	}
 }
 

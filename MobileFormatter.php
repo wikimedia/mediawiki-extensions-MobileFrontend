@@ -99,12 +99,16 @@ class MobileFormatter {
 	}
 
 	/**
-	 * Wraps a chunk of HTML into 
+	 * Turns a chunk of HTML into a proper document
 	 * @param string $html
+	 * @param bool $contentDiv
 	 * @return string
 	 */
-	public static function wrapHTML( $html ) {
-		return '<!doctype html><html><head></head><body><div id="content">' . $html . '</div></body></html>';
+	public static function wrapHTML( $html, $contentDiv = true ) {
+		if ( $contentDiv ) {
+			$html = '<div id="content">' . $html . '</div>';
+		}
+		return '<!doctype html><html><head></head><body>' . $html . '</body></html>';
 	}
 
 	/**
