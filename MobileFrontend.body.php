@@ -1304,8 +1304,8 @@ class ExtMobileFrontend {
 	public function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
 			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
-				'javascripts/opensearch.js',
-				'tests/js/test_application.js', 'tests/js/test_opensearch.js' ),
+				'javascripts/opensearch.js', 'javascripts/banner.js',
+				'tests/js/test_application.js', 'tests/js/test_opensearch.js', 'tests/js/test_banner.js' ),
 				'dependencies' => array( ),
 				'localBasePath' => dirname( __FILE__ ),
 				'remoteExtPath' => 'MobileFrontend',

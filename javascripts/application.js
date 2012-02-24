@@ -4,8 +4,7 @@ MobileFrontend = (function() {
 
 	function init() {
 		var i, results, languageSelection, a, heading,
-			sectionHeadings = document.getElementsByClassName( 'section_heading' ),
-			dismissNotification, cookieNameZeroVisibility, zeroRatedBanner, zeroRatedBannerVisibility;
+			sectionHeadings = document.getElementsByClassName( 'section_heading' );
 		utilities( document.body ).addClass( 'jsEnabled' );
 		function openSectionHandler() {
 			var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
@@ -47,24 +46,6 @@ MobileFrontend = (function() {
 			n.display = n.display === 'block' ? 'none' : 'block';
 		}
 		utilities( document.getElementById( 'logo' ) ).bind( 'click', logoClick );
-		dismissNotification = document.getElementById( 'dismiss-notification' );
-
-		if ( dismissNotification ) {
-			cookieNameZeroVisibility = 'zeroRatedBannerVisibility';
-			zeroRatedBanner = document.getElementById( 'zero-rated-banner' );
-			zeroRatedBannerVisibility = readCookie( cookieNameZeroVisibility );
-
-			if ( zeroRatedBannerVisibility === 'off' ) {
-				zeroRatedBanner.style.display = 'none';
-			}
-
-			dismissNotification.onclick = function() {
-				if ( zeroRatedBanner ) {
-					zeroRatedBanner.style.display = 'none';
-					writeCookie( cookieNameZeroVisibility, 'off', 1 );
-				}
-			};
-		}
 
 		function checkHash() {
 			var hash = this.hash || document.location.hash;
@@ -111,39 +92,6 @@ MobileFrontend = (function() {
 				e.style.display = e.style.display === 'block' ? 'none' : 'block';
 			}
 		}
-	}
-
-	function writeCookie( name, value, days ) {
-		var date, expires;
-		if ( days ) {
-			date = new Date();
-			date.setTime( date.getTime() + ( days * 24 * 60 * 60 *1000 ) );
-			expires = '; expires=' + date.toGMTString();
-		} else {
-			expires = '';
-		}
-		document.cookie = name + '=' + value + expires + '; path=/';
-	}
-
-	function readCookie( name ) {
-		var nameVA = name + '=',
-			ca = document.cookie.split( ';' ),
-			c, i;
-		for( i=0; i < ca.length; i++ ) {
-			c = ca[i];
-			while ( c.charAt(0) === ' ' ) {
-				c = c.substring( 1, c.length );
-			}
-			if ( c.indexOf( nameVA ) === 0 ) {
-				return c.substring( nameVA.length, c.length );
-			}
-		}
-		return null;
-	}
-
-	function removeCookie( name ) {
-		writeCookie( name, '', -1 );
-		return null;
 	}
 
 	function utilities( el ) {
@@ -193,9 +141,6 @@ MobileFrontend = (function() {
 	};
 
 	return {
-		readCookie: readCookie,
-		writeCookie: writeCookie,
-		removeCookie: removeCookie,
 		wm_reveal_for_hash: wm_reveal_for_hash,
 		wm_toggle_section: wm_toggle_section,
 		init: init,
