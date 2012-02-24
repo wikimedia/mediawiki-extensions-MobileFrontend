@@ -85,4 +85,21 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
 		$this->assertEquals( "http://en.m.wikipedia.org/wiki/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
 	}
+	
+	public function testUpdateMobileUrlPath() {
+		global $wgMobileUrlTemplate, $wgExtMobileFrontend, $wgScriptPath;
+		$wgScriptPath = '/wiki';
+		$updateMobileUrlHost = self::getMethod( "updateMobileUrlPath" );
+		$wgMobileUrlTemplate = "/mobile/%p";
+		
+		// check for constructing a templated URL
+		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/Gustavus_Airport" );
+		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
+		$this->assertEquals( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+		
+		// check for maintaining an already templated URL
+		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport" );
+		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
+		$this->assertEquals( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+	}
 }

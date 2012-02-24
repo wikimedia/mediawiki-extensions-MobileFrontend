@@ -1329,7 +1329,7 @@ class ExtMobileFrontend {
 		global $wgMobileUrlTemplate;		
 		$parsedUrl = wfParseUrl( $url );
 		$this->updateMobileUrlHost( $parsedUrl );
-		$this->updateMobileUrlPath( $parsedUrl );		
+		$this->updateMobileUrlPath( $parsedUrl );
 		return wfAssembleUrl( $parsedUrl );
 	}
 
@@ -1373,11 +1373,24 @@ class ExtMobileFrontend {
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlPath( &$parsedUrl ) {
-		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'path' );
-		if ( !strlen( $mobileUrlHostTemplate ) ) {
+		global $wgScriptPath;
+
+		$mobileUrlPathTemplate = $this->parseMobileUrlTemplate( 'path' );
+		if ( !strlen( $mobileUrlPathTemplate ) ) {
 			return;
 		}
-		return;
+		
+		// find out if we already have a templated path
+		$templatePathOffset = strpos( $mobileUrlPathTemplate, '%p' );
+		$templatePathSansToken = substr( $mobileUrlPathTemplate, 0, $templatePathOffset );
+		if ( substr_compare( $parsedUrl[ 'path' ], $wgScriptPath . $templatePathSansToken, 0 ) > 0 ) {
+			return;
+		}
+
+		$scriptPathLength = strlen( $wgScriptPath );
+		// the "+ 1" removes the preceding "/" from the path sans $wgScriptPath
+		$pathSansScriptPath = substr( $parsedUrl[ 'path' ], $scriptPathLength + 1 );
+		$parsedUrl[ 'path' ] = $wgScriptPath . $templatePathSansToken . $pathSansScriptPath;	
 	}
 
 	/**
