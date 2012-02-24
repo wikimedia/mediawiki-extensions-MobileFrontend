@@ -99,6 +99,15 @@ class MobileFormatter {
 	}
 
 	/**
+	 * Wraps a chunk of HTML into 
+	 * @param string $html
+	 * @return string
+	 */
+	public static function wrapHTML( $html ) {
+		return '<!doctype html><html><head></head><body><div id="content">' . $html . '</div></body></html>';
+	}
+
+	/**
 	 * Use the given message cache
 	 * @param Array $messages
 	 */

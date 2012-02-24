@@ -54,7 +54,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	 */
 	private function processText( $text, Title $title, $plainText ) {
 		$text = preg_replace( '/<h[1-6].*$/s', '', $text );
-		$mf = new MobileFormatter( $text, $title, 'XHTML' );
+		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text ), $title, 'XHTML' );
 		$mf->removeImages();
 		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault' ) );
 		if ( $plainText ) {

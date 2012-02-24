@@ -72,7 +72,7 @@ class ApiParseExtender {
 				);
 				$context->setUseFormat( 'wml' ); // Force WML links just in case
 				$context->setOnlyThisSegment( isset( $params['section'] ) );
-				$mf = new MobileFormatter( '<body><div id="content">' . $data['parse']['text']['*'] . '</div></body>',
+				$mf = new MobileFormatter( MobileFormatter::wrapHTML( $data['parse']['text']['*'] ),
 					$title,
 					ExtMobileFrontend::parseContentFormat( $params['mobileformat'] ),
 					$context
