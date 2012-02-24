@@ -567,6 +567,7 @@ $messages['az'] = array(
 
 /** Bashkir (Башҡортса)
  * @author Haqmar
+ * @author Roustammr
  */
 $messages['ba'] = array(
 	'mobile-frontend-search-submit' => 'Күсеү',
@@ -603,6 +604,8 @@ $messages['ba'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'Эйе',
 	'mobile-frontend-opt-in-no-button' => 'Юҡ',
 	'mobile-frontend-opt-in-title' => 'Мобиль бета режимы',
+	'mobile-frontend-opt-out-yes-button' => 'Эйе',
+	'mobile-frontend-opt-out-no-button' => 'Юҡ',
 	'mobile-frontend-leave-feedback-subject' => 'Тема',
 	'mobile-frontend-leave-feedback-message' => 'Хәбәр',
 	'mobile-frontend-leave-feedback-cancel' => 'Кире алырға',
@@ -1362,6 +1365,7 @@ $messages['de'] = array(
 	'mobile-frontend-login' => 'Anmelden',
 	'mobile-frontend-placeholder' => 'Gib hier deine Suche ein ...',
 	'mobile-frontend-dismiss-notification' => 'diese Benachrichtigung schließen',
+	'mobile-frontend-clear-search' => 'Leeren',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -2947,19 +2951,19 @@ $messages['ilo'] = array(
 	'mobile-frontend-hide-button' => 'Ilemmeng',
 	'mobile-frontend-disable-button' => 'Ibaldado',
 	'mobile-frontend-back-button' => 'Agsubli',
-	'mobile-frontend-regular-site' => 'Kitaen daytoy a panid iti kadawyan a/nga {{SITENAME}}',
+	'mobile-frontend-regular-site' => 'Kitaen daytoy a panid iti kadawyan nga  {{SITENAME}}',
 	'mobile-frontend-perm-stop-redirect' => 'Agnanayon a ibaldado ti kinuti a pagsaadan',
 	'mobile-frontend-error-page-title' => 'Addaan tayo ti parikut!',
 	'mobile-frontend-error-page-text' => 'Ti {{SITENAME}} a  kinuti ket maar-aramid pay laeng ken agtrabtrabaho kami a mangsimpa amin kadagiti kinauneg a biddut. napaammuan kamin kadagitoy a biddut ken simpaen minton.',
 	'mobile-frontend-are-you-sure' => 'Segurado ka?',
-	'mobile-frontend-explain-disable' => 'Segurado ka a kayatmo nga ibaldado ti berion iti {{SITENAME}}? No piliem daytoy <b>Ibaldado</b>, manipud tattan, no sarungkaram ti {{SITENAME}}, saan kan ton a maibaw-ing tit daytoy a kinutia panagkita iti {{SITENAME}}.',
+	'mobile-frontend-explain-disable' => 'Segurado ka a kayatmo nga ibaldado ti berion iti {{SITENAME}}? No piliem daytoy <b>Ibaldado</b>, manipud tattan, no sarungkaram ti {{SITENAME}}, saan kan ton a maibaw-ing iti daytoy a kinuti a panagkita iti {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Nalpas',
 	'mobile-frontend-nav-top' => 'Rabaw',
 	'mobile-frontend-nav-edit' => 'Urnosen',
 	'mobile-frontend-nav-history' => 'Pakasaritaan',
 	'mobile-frontend-search-text' => 'Biruken',
-	'mobile-frontend-contact-us' => 'No adda saludsod mo wenno komentario pangngaasi ta agwaya ka nga agi e-surat kadakami idiay mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Kitaen daytoy media a papeles idiay kadawyan a/nga {{SITENAME}}  tapno makita ti pakaammo a maipanggep ti mannurat, lisensia, ken dagiti dadduma pay a panagipalpalawag.',
+	'mobile-frontend-contact-us' => 'No adda saludsod mo wenno komentario pangngaasi ta agwaya ka nga agpatulod ti e-surat kadakami idiay mobile@wikipedia.org',
+	'mobile-frontend-author-link' => 'Kitaen daytoy midia a papeles idiay kadawyan nga {{SITENAME}}  tapno makita ti pakaammo a maipanggep ti mannurat, lisensia, ken dagiti dadduma pay a panagipalpalawag.',
 	'mobile-frontend-download-full-version' => 'Mangipan ti sibubukel a bersion',
 	'mobile-frontend-file-namespace' => 'Papeles',
 	'mobile-frontend-wml-continue' => 'Agtuloy...',
