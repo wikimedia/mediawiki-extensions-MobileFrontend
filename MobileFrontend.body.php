@@ -394,7 +394,7 @@ class ExtMobileFrontend {
 			wfProfileOut( __METHOD__ );
 			return true;
 		}
-		if ( $action === 'edit' ||
+		if ( $action === 'edit' || $action === 'history' ||
 			 $mobileAction === 'view_normal_site' ) {
 			wfProfileOut( __METHOD__ );
 			return true;
