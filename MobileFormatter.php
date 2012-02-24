@@ -64,6 +64,7 @@ class MobileFormatter {
 		'.medialist',
 		'.mw-search-createlink',
 		'#ogg_player_1',
+		'#ogg_player_2',
 		'.nomobile',
 	);
 
