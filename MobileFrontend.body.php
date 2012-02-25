@@ -126,7 +126,7 @@ class ExtMobileFrontend {
 	 * @throws HttpError
 	 */
 	public function testCanonicalRedirect( $request, $title, $output ) {
-		global $wgUsePathInfo, $wgMobileDomain;
+		global $wgUsePathInfo;
 		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 		if ( empty( $xDevice ) ) {
 			return true; // Let the redirect happen
@@ -161,15 +161,7 @@ class ExtMobileFrontend {
 				}
 				throw new HttpError( 500, $message );
 			} else {
-				$parsedUrl = wfParseUrl( $targetUrl );
-				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
-					$hostParts = explode( '.', $parsedUrl['host'] );
-					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
-				}
-				$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-				$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-				$targetUrl = $parsedUrl['scheme'] . '://' .	 $parsedUrl['host'] . $parsedUrl['path']
-						. $queryDelimiter . $parsedUrl['query'] . $fragmentDelimiter . $parsedUrl['fragment'];
+				$targetUrl = $this->getMobileUrl( $targetUrl );
 				$output->setSquidMaxage( 1200 );
 				$output->redirect( $targetUrl, '301' );
 			}
@@ -215,7 +207,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getMsg() {
-		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgMobileDomain, $wgOut, $wgLanguageCode;
+		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgOut, $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
@@ -269,21 +261,7 @@ class ExtMobileFrontend {
 			unset( $tmp );
 			$nt = Title::newFromText( $l );
 			if ( $nt ) {
-				$parsedUrl = wfParseUrl( $nt->getFullURL() );
-				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
-					$hostParts = explode( '.', $parsedUrl['host'] );
-					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' .  $hostParts[2];
-				}
-				$fragmentDelimiter = ( isset( $parsedUrl['fragment'] ) && $parsedUrl['fragment'] !== null  ) ? '#' : '';
-				$queryDelimiter = ( isset( $parsedUrl['query'] ) && $parsedUrl['query'] !== null  ) ? '?' : '';
-
-				$languageUrl = $parsedUrl['scheme'] . $parsedUrl['delimiter'] .	 $parsedUrl['host'] . $parsedUrl['path'];
-				if ( isset( $parsedUrl['query'] ) ) {
-					$languageUrl .= $queryDelimiter . $parsedUrl['query'];
-				}
-				if ( isset( $parsedUrl['fragment'] ) ) {
-					$languageUrl .= $fragmentDelimiter . $parsedUrl['fragment'];
-				}
+				$languageUrl = $this->getMobileUrl( $nt->getFullURL() );
 				$languageUrls[] = array(
 					'href' => $languageUrl,
 					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
@@ -298,38 +276,14 @@ class ExtMobileFrontend {
 
 		self::$languageUrls = $languageUrls;
 
-		$nonMobileServerBaseURL = str_replace( $wgMobileDomain, '.', $wgServer );
 		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false )
 				? $wgMobileRedirectFormAction
-				: "{$nonMobileServerBaseURL}/w/mobileRedirect.php";
+				: "{$wgServer}/w/mobileRedirect.php";
 
 		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
 		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		wfProfileOut( __METHOD__ );
 		return true;
-	}
-
-	/**
-	 * @param $parsedUrl wfParseUrl Array
-	 * @return string
-	 */
-	public function parsePageRedirect( $parsedUrl ) {
-		global $wgMobileDomain;
-		wfProfileIn( __METHOD__ );
-		$redirect = '';
-		$hostParts = explode( '.', $parsedUrl['host'] );
-		$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
-		$fragmentDelimiter = ( !empty( $parsedUrl['fragment'] ) ) ? '#' : '';
-		$queryDelimiter = ( !empty( $parsedUrl['query'] ) ) ? '?' : '';
-		$redirect = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $parsedUrl['path'];
-		if ( isset( $parsedUrl['query'] ) ) {
-			$redirect .= $queryDelimiter . $parsedUrl['query'];
-		}
-		if ( isset( $parsedUrl['fragment'] ) ) {
-			$redirect .= $fragmentDelimiter . $parsedUrl['fragment'];
-		}
-		wfProfileOut( __METHOD__ );
-		return $redirect;
 	}
 
 	/**
@@ -339,29 +293,17 @@ class ExtMobileFrontend {
 	 * @return bool
 	 */
 	public function beforePageRedirect( $out, &$redirect, &$code ) {
-		global $wgMobileDomain;
 		wfProfileIn( __METHOD__ );
 		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
 			$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 			if ( $xDevice ) {
-				$parsedUrl = wfParseUrl( $redirect );
-				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
-					$hostParts = explode( '.', $parsedUrl['host'] );
-					$parsedUrl['host'] = $hostParts[0] . $wgMobileDomain . $hostParts[1] . '.' . $hostParts[2];
-				}
-				if ( $parsedUrl['scheme'] == 'http' ) {
-					$parsedUrl['scheme'] = 'https';
-				}
-
-				$redirect = $this->parsePageRedirect( $parsedUrl );
+				$forceHttps = true;
+				$redirect = $this->getMobileUrl( $redirect, $forceHttps );
 			}
 		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) ) {
 			$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
 			if ( $xDevice ) {
-				$parsedUrl = wfParseUrl( $redirect );
-				if ( stristr( $parsedUrl['host'], $wgMobileDomain ) === false ) {
-					$redirect = $this->parsePageRedirect( $parsedUrl );
-				}
+				$redirect = $this->getMobileUrl( $redirect );
 			}
 		}
 		wfProfileOut( __METHOD__ );
@@ -1326,11 +1268,13 @@ class ExtMobileFrontend {
 	 * @param $url string
 	 * @return string
 	 */
-	public function getMobileUrl( $url ) {
-		global $wgMobileUrlTemplate;		
+	public function getMobileUrl( $url, $forceHttps = false ) {
 		$parsedUrl = wfParseUrl( $url );
 		$this->updateMobileUrlHost( $parsedUrl );
 		$this->updateMobileUrlPath( $parsedUrl );
+		if ( $forceHttps ) {
+			$parsedUrl[ 'scheme' ] = 'https';
+		}
 		return wfAssembleUrl( $parsedUrl );
 	}
 
