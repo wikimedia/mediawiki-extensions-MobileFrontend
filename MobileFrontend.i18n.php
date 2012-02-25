@@ -515,6 +515,7 @@ $messages['ast'] = array(
 	'mobile-frontend-login' => 'Entrar',
 	'mobile-frontend-placeholder' => 'Escribi equí la gueta...',
 	'mobile-frontend-dismiss-notification' => 'anubrir esta notificación',
+	'mobile-frontend-clear-search' => 'Llimpiar',
 );
 
 /** Azerbaijani (Azərbaycanca)
@@ -741,6 +742,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-login' => 'Увайсьці',
 	'mobile-frontend-placeholder' => 'Увядзіце пошукавы выраз тут…',
 	'mobile-frontend-dismiss-notification' => 'схаваць паведамленьне',
+	'mobile-frontend-clear-search' => 'Ачысьціць',
 );
 
 /** Bulgarian (Български)
@@ -1681,6 +1683,7 @@ $messages['es'] = array(
 	'mobile-frontend-login' => 'Iniciar sesión',
 	'mobile-frontend-placeholder' => 'Introduzca su búsqueda...',
 	'mobile-frontend-dismiss-notification' => 'Rechazar esta notificación',
+	'mobile-frontend-clear-search' => 'Limpiar',
 );
 
 /** Estonian (Eesti)
@@ -2537,6 +2540,7 @@ $messages['he'] = array(
 	'mobile-frontend-login' => 'כניסה',
 	'mobile-frontend-placeholder' => 'הקלידו את מילות החיפוש כאן...',
 	'mobile-frontend-dismiss-notification' => 'הסתרת ההודעה הזאת',
+	'mobile-frontend-clear-search' => 'ניקוי',
 );
 
 /** Hindi (हिन्दी)
@@ -2857,6 +2861,7 @@ $messages['ia'] = array(
 	'mobile-frontend-login' => 'Aperir session',
 	'mobile-frontend-placeholder' => 'Entra un recerca hic...',
 	'mobile-frontend-dismiss-notification' => 'clauder iste notification',
+	'mobile-frontend-clear-search' => 'Rader',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -4068,6 +4073,7 @@ $messages['mk'] = array(
 	'mobile-frontend-login' => 'Најава',
 	'mobile-frontend-placeholder' => 'Тука внесете го бараното...',
 	'mobile-frontend-dismiss-notification' => 'отстрани го известувањето',
+	'mobile-frontend-clear-search' => 'Исчисти',
 );
 
 /** Malayalam (മലയാളം)
@@ -4611,6 +4617,8 @@ Binnenkort ziet u hier het resultaat.',
 	'mobile-frontend-password' => 'Wachtwoord:',
 	'mobile-frontend-login' => 'Aanmelden',
 	'mobile-frontend-placeholder' => 'Zoeken...',
+	'mobile-frontend-dismiss-notification' => 'deze melding verwijderen',
+	'mobile-frontend-clear-search' => 'Wissen',
 );
 
 /** ‪Nederlands (informeel)‬ (‪Nederlands (informeel)‬)
@@ -5140,6 +5148,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (Português)
+ * @author Giro720
  * @author Hamilton Abreu
  * @author João Sousa
  * @author Malafaya
@@ -5201,6 +5210,10 @@ $messages['pt'] = array(
 	'mobile-frontend-leave-feedback' => 'Deixar avaliação',
 	'mobile-frontend-leave-feedback-thanks' => 'Obrigado pela tua avaliação!',
 	'mobile-frontend-language' => 'Língua',
+	'mobile-frontend-username' => 'Nome de utilizador:',
+	'mobile-frontend-password' => 'Palavra-chave:',
+	'mobile-frontend-login' => 'Autentique-se',
+	'mobile-frontend-placeholder' => 'Digite sua busca aqui...',
 );
 
 /** Brazilian Portuguese (Português do Brasil)
