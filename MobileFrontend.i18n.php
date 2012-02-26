@@ -619,6 +619,7 @@ $messages['ba'] = array(
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Танылыу',
 	'mobile-frontend-placeholder' => 'Эҙләү юлы',
+	'mobile-frontend-clear-search' => 'Таҙартыу',
 );
 
 /** Bavarian (Boarisch)
@@ -928,6 +929,7 @@ $messages['br'] = array(
 	'mobile-frontend-login' => 'Kevreañ',
 	'mobile-frontend-placeholder' => 'Merkit ar pezh a glaskit amañ...',
 	'mobile-frontend-dismiss-notification' => 'disteuler ar gemennadenn-mañ',
+	'mobile-frontend-clear-search' => 'Riñsañ',
 );
 
 /** Bosnian (Bosanski)
@@ -1437,9 +1439,17 @@ $messages['dsb'] = array(
 	'mobile-frontend-opt-in-no-button' => 'ně',
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'ně',
+	'mobile-frontend-leave-feedback-subject' => 'Tema',
 	'mobile-frontend-leave-feedback-message' => 'Powěsć',
 	'mobile-frontend-leave-feedback-cancel' => 'Pśetergnuś',
+	'mobile-frontend-leave-feedback-submit' => 'Komentar wótpósłaś',
+	'mobile-frontend-leave-feedback-thanks' => 'Źěkujomy se za twój komentar!',
 	'mobile-frontend-language' => 'Rěc',
+	'mobile-frontend-username' => 'Wužywarske mě:',
+	'mobile-frontend-password' => 'Gronidło:',
+	'mobile-frontend-login' => 'Pśizjawiś',
+	'mobile-frontend-placeholder' => 'Zapódaj how swójo pytanje...',
+	'mobile-frontend-clear-search' => 'Wuprozniś',
 );
 
 /** Central Dusun (Dusun Bundu-liwan) */
@@ -2717,6 +2727,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-login' => 'Přizjewić',
 	'mobile-frontend-placeholder' => 'Zapodaj tu swoje pytanje...',
 	'mobile-frontend-dismiss-notification' => 'Tute zdźělenje zaćisnyć',
+	'mobile-frontend-clear-search' => 'Wuprózdnić',
 );
 
 /** Hungarian (Magyar)
@@ -3734,6 +3745,7 @@ $messages['lb'] = array(
 	'mobile-frontend-login' => 'Aloggen',
 	'mobile-frontend-placeholder' => 'Tippt hei a wat Dir sicht...',
 	'mobile-frontend-dismiss-notification' => 'dës Noriicht zoumaachen',
+	'mobile-frontend-clear-search' => 'Eidel maachen',
 );
 
 /** Lezghian (Лезги) */
@@ -5145,6 +5157,7 @@ $messages['ps'] = array(
 	'mobile-frontend-password' => 'پټنوم:',
 	'mobile-frontend-login' => 'ننوتل',
 	'mobile-frontend-placeholder' => 'د پلټلو لپاره دلته وټاپۍ...',
+	'mobile-frontend-clear-search' => 'سپينول',
 );
 
 /** Portuguese (Português)
