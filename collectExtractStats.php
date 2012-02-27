@@ -49,7 +49,7 @@ class CollectStats extends Maintenance {
 		if ( $calls > 0 ) {
 			$html /= $calls;
 			$plain /= $calls;
-			$this->output( "   Average HTML length: $html\n   Average plaintext length: $plain" );
+			$this->output( "   Average HTML length: $html\n   Average plaintext length: $plain\n" );
 		}
 	}
 
