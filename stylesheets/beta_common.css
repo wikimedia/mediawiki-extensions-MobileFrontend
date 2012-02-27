@@ -215,7 +215,7 @@ ul#footer-info {
 
 table {
 	border-spacing: 0 !important;
-	width: 100%;
+	max-width: 100%;
 	border-collapse: collapse !important;
 	border: 1px solid #cccccc;
 	padding: 3px;
@@ -248,7 +248,6 @@ table.gallery th, table.gallery td {
 }
 
 table[style] {
-	width: 100% !important;
 	float: none !important;
 	margin-left: 0 !important;
 }
@@ -292,6 +291,7 @@ table.gallery .gallerybox[style] {
 table td, table th {
 	border: 1px solid #cccccc;
 	padding: 3px;
+	word-break: break-word;
 }
 
 .mwm-message.mwm-notice {
@@ -336,11 +336,13 @@ button.section_heading.hide {
 
 table table {
 	border: 0;
+	margin-bottom: 0;
 }
 
 table table td,
 table table th {
 	border: 0;
+	padding: 0;
 }
 
 table.toc {
