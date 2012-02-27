@@ -196,7 +196,6 @@ a.search-result-item {
 	outline-style: none;
 	outline-width: initial;
 	outline-color: initial;
-	height: 1.4em;
 	padding: 0;
 }
 
@@ -213,11 +212,9 @@ ul#footer-info {
 }
 
 .divclearable {
-	border: 1px solid #888;
 	display: block;
 	zoom: 1;
 	vertical-align: middle;
-	height: 1.5em;
 	position: relative;
 }
 
@@ -690,7 +687,6 @@ full screen search css
 .full-screen-search #sq {
 	position: relative;
 	padding-left: 44px;
-	height: 34px;
 	margin-right: 0;
 	font-size: 16px;
 	border: none;
