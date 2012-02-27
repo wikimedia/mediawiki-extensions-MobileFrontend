@@ -94,7 +94,7 @@ MobileFrontend = (function() {
 		}
 	}
 
-	utilities = function( el ) {
+	utilities = typeof(jQuery) !== "undefined" ? jQuery : function( el ) {
 		if( typeof(el) === 'string' ) {
 			if( document.querySelectorAll ) {
 				return document.querySelectorAll( el );
@@ -128,7 +128,7 @@ MobileFrontend = (function() {
 			removeClass: removeClass
 		};
 	}
-	utilities.ajax = function( options ) {
+	utilities.ajax = utilities.ajax || function( options ) {
 		var xmlHttp, url;
 		if ( window.XMLHttpRequest ) {
 			xmlHttp = new XMLHttpRequest();
