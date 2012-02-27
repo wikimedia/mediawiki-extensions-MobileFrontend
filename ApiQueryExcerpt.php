@@ -110,7 +110,9 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		wfProfileIn( __METHOD__ );
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
 		$mf->removeImages();
-		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault' ) );
+		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates',
+			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt' )
+		);
 		if ( $plainText ) {
 			$mf->flatten( '[?!]?[a-z0-9]+' );
 		} else {
