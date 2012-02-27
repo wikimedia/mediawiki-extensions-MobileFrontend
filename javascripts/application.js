@@ -1,10 +1,11 @@
 /*global document, window */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend = (function() {
+	var utilities;
 
 	function init() {
 		var i, results, languageSelection, a, heading,
-			sectionHeadings = document.getElementsByClassName( 'section_heading' );
+			sectionHeadings = utilities( '.section_heading' );
 		utilities( document.body ).addClass( 'jsEnabled' );
 		function openSectionHandler() {
 			var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
@@ -61,7 +62,6 @@ MobileFrontend = (function() {
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );
 	}
-	init();
 
 	function wm_reveal_for_hash( hash ) {
 		var targetel = document.getElementById( hash.substr(1) ),
@@ -94,7 +94,12 @@ MobileFrontend = (function() {
 		}
 	}
 
-	function utilities( el ) {
+	utilities = function( el ) {
+		if( typeof(el) === 'string' ) {
+			if( document.querySelectorAll ) {
+				return document.querySelectorAll( el );
+			}
+		}
 		function addClass( name ) {
 			var className = el.className,
 				classNames = className.split( ' ' );
@@ -140,6 +145,7 @@ MobileFrontend = (function() {
 		xmlHttp.send();
 	};
 
+	init();
 	return {
 		wm_reveal_for_hash: wm_reveal_for_hash,
 		wm_toggle_section: wm_toggle_section,
