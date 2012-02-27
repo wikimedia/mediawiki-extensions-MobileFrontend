@@ -44,6 +44,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	window.onload = function () {
+		// TODO: not working in opera mini 6.5
 		u( search ).bind( 'keyup',
 			function() {
 				clearTimeout( timer );
