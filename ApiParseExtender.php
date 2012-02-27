@@ -57,6 +57,7 @@ class ApiParseExtender {
 	 */
 	public static function onAPIAfterExecute( ApiBase &$module ) {
 		if ( $module->getModuleName() == 'parse' ) {
+			wfProfileIn( __METHOD__ );
 			$data = $module->getResultData();
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && isset( $params['mobileformat'] ) ) {
@@ -84,6 +85,7 @@ class ApiParseExtender {
 
 				$result->addValue( null, $module->getModuleName(), $data['parse'] );
 			}
+			wfProfileOut( __METHOD__ );
 		}
 		return true;
 	}

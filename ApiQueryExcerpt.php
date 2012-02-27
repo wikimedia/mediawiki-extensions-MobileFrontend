@@ -11,8 +11,10 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	}
 
 	public function execute() {
+		wfProfileIn( __METHOD__ );
 		$titles = $this->getPageSet()->getGoodTitles();
 		if ( count( $titles ) == 0 ) {
+			wfProfileOut( __METHOD__ );
 			return;
 		}
 		$params = $this->extractRequestParams();
@@ -40,6 +42,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 				break;
 			}
 		}
+		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -50,15 +53,18 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	private function getExcerpt( Title $title, $plainText ) {
 		global $wgMemc;
 
+		wfProfileIn( __METHOD__ );
 		$page = WikiPage::factory( $title );
 		$key = wfMemcKey( 'mf', 'excerpt', $plainText, $title->getArticleID(), $page->getLatest() );
 		$text = $wgMemc->get( $key );
 		if ( $text !== false ) {
+			wfProfileOut( __METHOD__ );
 			return $text;
 		}
 		$text = $this->parse( $page );
 		$text = $this->convertText( $text, $title, $plainText );
 		$wgMemc->set( $key, $text );
+		wfProfileOut( __METHOD__ );
 		return $text;
 	}
 
@@ -68,6 +74,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	 * @return string
 	 */
 	private function parse( WikiPage $page ) {
+		wfProfileIn( __METHOD__ );
 		if ( !$this->parserOptions ) {
 			$this->parserOptions = new ParserOptions( new User( '127.0.0.1' ) );
 		}
@@ -76,7 +83,9 @@ class ApiQueryExcerpt extends ApiQueryBase {
 			$pout = ParserCache::singleton()->get( $page, $this->parserOptions );
 			if ( $pout ) {
 				$text = $pout->getText();
-				return preg_replace( '/<h[1-6].*$/s', '', $text );
+				$s = preg_replace( '/<h[1-6].*$/s', '', $text );
+				wfProfileOut( __METHOD__ );
+				return $s;
 			}
 		}
 		// in case of cache miss, render just the needed section
@@ -86,6 +95,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		$apiParse = new ApiParse( $apiMain, 'parse' );
 		$apiParse->execute();
 		$data = $apiParse->getResultData();
+		wfProfileOut( __METHOD__ );
 		return $data['parse']['text']['*'];
 	}
 
@@ -97,6 +107,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	 * @return string 
 	 */
 	private function convertText( $text, Title $title, $plainText ) {
+		wfProfileIn( __METHOD__ );
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
 		$mf->removeImages();
 		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault' ) );
@@ -111,6 +122,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 		if ( $plainText ) {
 			$text = html_entity_decode( $text );
 		}
+		wfProfileOut( __METHOD__ );
 		return trim( $text );
 	}
 
@@ -124,8 +136,10 @@ class ApiQueryExcerpt extends ApiQueryBase {
 	private function trimText( $text, $requestedLength, $plainText ) {
 		global $wgUseTidy;
 
+		wfProfileIn( __METHOD__ );
 		$length = mb_strlen( $text );
 		if ( $length <= $requestedLength ) {
+			wfProfileOut( __METHOD__ );
 			return $text;
 		}
 		$pattern = "#^.{{$requestedLength}}[\\w/]*>?#su";
@@ -136,6 +150,7 @@ class ApiQueryExcerpt extends ApiQueryBase {
 			$text = trim ( MWTidy::tidy( $text ) );
 		}
 		$text .= wfMessage( 'ellipsis' )->inContentLanguage()->text();
+		wfProfileOut( __METHOD__ );
 		return $text;
 	}
 
