@@ -26,7 +26,7 @@ MobileFrontend = (function() {
 			heading = sectionHeadings[i];
 			heading.insertBefore( createButton( true ), heading.firstChild );
 			heading.insertBefore( createButton( false ), heading.firstChild );
-			utilities( heading ).bind( 'click', openSectionHandler, false );
+			utilities( heading ).bind( 'click', openSectionHandler );
 		}
 		results = document.getElementById( 'results' );
 		languageSelection = document.getElementById( 'languageselection' );

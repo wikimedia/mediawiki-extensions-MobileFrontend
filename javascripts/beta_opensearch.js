@@ -31,7 +31,7 @@ MobileFrontend.opensearch = (function() {
 				viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
 				u( document.body ).bind( 'gesturestart', function () {
 					viewportmeta.content = 'width=device-width, initial-scale=1.0';
-				}, false );
+				} );
 		    }
 		}
 	}
@@ -146,7 +146,7 @@ MobileFrontend.opensearch = (function() {
 					term = encodeURIComponent( term );
 					timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 				}
-			}, false );
+			} );
 	};
 
 	function searchApi( term ) {
@@ -276,10 +276,10 @@ MobileFrontend.opensearch = (function() {
 		function onFocusHandler() {
 			search.select();
 		}
-		u( clearSearch ).bind( 'mousedown', clearSearchBox, true );
-		u( search ).bind( 'keyup', handleClearSearchLink, false );
-		u( search ).bind( 'keydown', handleDefaultText, false );
-		u( search ).bind( 'click', onFocusHandler, true );
+		u( clearSearch ).bind( 'mousedown', clearSearchBox );
+		u( search ).bind( 'keyup', handleClearSearchLink );
+		u( search ).bind( 'keydown', handleDefaultText );
+		u( search ).bind( 'click', onFocusHandler );
 	}
 
 	function init() {

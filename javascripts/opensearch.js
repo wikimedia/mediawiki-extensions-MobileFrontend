@@ -53,7 +53,7 @@ MobileFrontend.opensearch = (function() {
 				} else {
 					timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 				}
-			}, false );
+			} );
 	};
 
 	function searchApi( term ) {
@@ -167,9 +167,9 @@ MobileFrontend.opensearch = (function() {
 		function onFocusHandler() {
 			search.select();
 		}
-		u( clearSearch ).bind( 'mousedown', clearSearchBox, true );
-		u( search ).bind( 'keyup', handleClearSearchLink, false );
-		u( search ).bind( 'click', onFocusHandler, true );
+		u( clearSearch ).bind( 'mousedown', clearSearchBox );
+		u( search ).bind( 'keyup', handleClearSearchLink );
+		u( search ).bind( 'click', onFocusHandler );
 	}
 
 	function init() {
