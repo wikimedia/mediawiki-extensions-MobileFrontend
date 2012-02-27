@@ -1,7 +1,20 @@
-html, body { 
-	margin: 0px; 
-	padding: 0px; 
+html,
+body { 
+	margin: 0; 
+	padding: 0; 
 	height: 100%; 
+}
+
+html {
+	font-size: 0.8em;
+}
+
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: none;
 }
 
 .clearlink {
@@ -208,7 +221,10 @@ ul#footer-info {
 	position: relative;
 }
 
-#userloginForm table, #userloginForm .user-login tr, #userloginForm .user-login th, #userloginForm .user-login td {
+#userloginForm table,
+#userloginForm .user-login tr,
+#userloginForm .user-login th,
+#userloginForm .user-login td {
 	width: 200px;
 	border: 0px;
 }
@@ -229,7 +245,8 @@ table.gallery .thumb[style] {
 	margin: 0 auto;
 }
 
-table.geography[style] td[style*="text-align"], table.geography[style] td[colspan="2"] {
+table.geography[style] td[style*="text-align"],
+table.geography[style] td[colspan="2"] {
 	text-align: left !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
@@ -241,7 +258,8 @@ table.toc h2 {
 	margin-top: 5px;
 }
 
-table.gallery th, table.gallery td {
+table.gallery th,
+table.gallery td {
 	display: block;
 	border: 0;
 	border-bottom: 1px solid #cccccc;
@@ -288,7 +306,8 @@ table.gallery .gallerybox[style] {
 	margin-bottom: -16px;
 }
 
-table td, table th {
+table td,
+table th {
 	border: 1px solid #cccccc;
 	padding: 3px;
 	word-break: break-word;
@@ -405,19 +424,9 @@ table.admin {
 	width: 300px;
 }
 
-html {
-	font-size: 0.8em;
-}
-
-body {
-	line-height: 1;
-	color: black;
-	background: white;
-	font-family: sans-serif;
-	-webkit-text-size-adjust: none;
-}
-
-p, li, dl,
+p,
+li,
+dl,
 #featured_article {
 	line-height: 1.65;
 }
@@ -429,6 +438,7 @@ pre {
 h2 {
 	border-bottom: 1px solid #aaaaaa;
 	padding-top: 0.3em;
+	font-size: 1.3em;
 }
 
 a {
@@ -472,10 +482,6 @@ a.back_to_top:visited {
 
 #firstHeading {
 	font-size: 1.7em;
-}
-
-h2 {
-	font-size: 1.3em;
 }
 
 .section_anchors a {
@@ -527,10 +533,6 @@ img.thumbborder {
 
 #content_wrapper.home h1#firstHeading {
 	display: none;
-}
-
-body {
-	margin: 0;
 }
 
 #header {
@@ -661,7 +663,8 @@ body {
 
 ol.references > li:target,
 sup.reference:target,
-span.citation:target, cite:target {
+span.citation:target,
+cite:target {
 	background-color: #ddeeff;
 }
 

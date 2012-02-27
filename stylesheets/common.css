@@ -207,7 +207,10 @@ ul#footer-info {
 	position: relative;
 }
 
-#userloginForm table, #userloginForm .user-login tr, #userloginForm .user-login th, #userloginForm .user-login td {
+#userloginForm table,
+#userloginForm .user-login tr,
+#userloginForm .user-login th,
+#userloginForm .user-login td {
 	width: 200px;
 	border: 0px;
 }
@@ -228,7 +231,8 @@ table.gallery .thumb[style] {
 	margin: 0 auto;
 }
 
-table.geography[style] td[style*="text-align"], table.geography[style] td[colspan="2"] {
+table.geography[style] td[style*="text-align"],
+table.geography[style] td[colspan="2"] {
 	text-align: left !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
@@ -240,7 +244,8 @@ table.toc h2 {
 	margin-top: 5px;
 }
 
-table.gallery th, table.gallery td {
+table.gallery th,
+table.gallery td {
 	display: block;
 	border: 0;
 	border-bottom: 1px solid #cccccc;
@@ -287,7 +292,8 @@ table.gallery .gallerybox[style] {
 	margin-bottom: -16px;
 }
 
-table td, table th {
+table td,
+table th {
 	border: 1px solid #cccccc;
 	padding: 3px;
 	word-break: break-word;
@@ -409,6 +415,7 @@ html {
 }
 
 body {
+	margin: 0;
 	line-height: 1;
 	color: black;
 	background: white;
@@ -416,18 +423,15 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-p, li, dl,
+p,
+li,
+dl,
 #featured_article {
 	line-height: 1.65;
 }
 
 pre {
 	white-space: pre-wrap;
-}
-
-h2 {
-	border-bottom: 1px solid #aaaaaa;
-	padding-top: 0.3em;
 }
 
 a {
@@ -475,6 +479,8 @@ a.back_to_top:visited {
 
 h2 {
 	font-size: 1.3em;
+	border-bottom: 1px solid #aaaaaa;
+	padding-top: 0.3em;
 }
 
 .section_anchors a {
@@ -526,10 +532,6 @@ img.thumbborder {
 
 #content_wrapper.home h1#firstHeading {
 	display: none;
-}
-
-body {
-	margin: 0;
 }
 
 #header {
@@ -660,7 +662,8 @@ body {
 
 ol.references > li:target,
 sup.reference:target,
-span.citation:target, cite:target {
+span.citation:target,
+cite:target {
 	background-color: #ddeeff;
 }
 
