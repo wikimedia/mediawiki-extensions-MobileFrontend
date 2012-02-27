@@ -174,6 +174,7 @@ a.search-result-item {
 }
 
 #search {
+	width: 90%;
 	-webkit-appearance: none;
 	border-top-width: 0px;
 	border-right-width: 0px;
@@ -202,7 +203,6 @@ ul#footer-info {
 	display: block;
 	zoom: 1;
 	vertical-align: middle;
-	height: 1.5em;
 	position: relative;
 }
 
@@ -565,10 +565,6 @@ img.thumbborder {
 #searchbox #form {
 	padding-right: 34px;
 	width: 100%;
-}
-
-#search {
-	width: 90%;
 }
 
 #goButton {
