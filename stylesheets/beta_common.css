@@ -672,6 +672,7 @@ full screen search css
 */
 .full-screen-search #content,
 .full-screen-search #footer,
+.full-screen-search #zero-rated-banner-red,
 .full-screen-search #zero-rated-banner {
 	display: none;
 }
