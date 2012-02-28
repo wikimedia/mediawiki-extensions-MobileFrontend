@@ -1271,7 +1271,6 @@ class ExtMobileFrontend {
 	public function getMobileUrl( $url, $forceHttps = false ) {
 		$parsedUrl = wfParseUrl( $url );
 		$this->updateMobileUrlHost( $parsedUrl );
-		$this->updateMobileUrlPath( $parsedUrl );
 		if ( $forceHttps ) {
 			$parsedUrl[ 'scheme' ] = 'https';
 		}
@@ -1311,6 +1310,12 @@ class ExtMobileFrontend {
 
 	/**
 	 * Update path of given URL to conform to mobile URL template.
+	 *
+	 * NB: this is not actually being used anywhere at the moment. It will 
+	 * take some magic to get MW to properly handle path modifications like
+	 * this is intended to provide. This will hopefully be implemented someday
+	 * in the not to distant future.
+	 *
 	 * @param $parsedUrl array
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
