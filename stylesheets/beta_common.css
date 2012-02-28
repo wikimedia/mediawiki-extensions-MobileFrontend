@@ -558,6 +558,7 @@ img.thumbborder {
 
 #footer {
 	margin: 0 8px;
+	clear: both;
 }
 
 #logo {
