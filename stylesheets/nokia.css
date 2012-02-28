@@ -1,10 +1,3 @@
-#searchbox #goButton {
-	border: 0;
-	background: url(images/s.gif) no-repeat top left;
-	height: 25px;
-	width: 27px;
-}
-
 body {
 	font-size: 1.8em;
 }
