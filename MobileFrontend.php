@@ -75,8 +75,6 @@ foreach ( $autoloadClasses as $className => $classFilename ) {
  */
 $wgMobileFrontendLogo = false;
 
-$wgMobileDomain = '.m.';
-
 /**
  * Template for mobile URLs.
  *
@@ -100,7 +98,7 @@ $wgMobileDomain = '.m.';
  * "en.m.wikipedia.org", your URL template would look like:
  * 		%h0.m.%h1.%h2
  */
-$wgMobileUrlTemplate = '%h0.m.%h1.%h2';
+$wgMobileUrlTemplate = '';
 
 /**
  * URL for script used to disable mobile site
