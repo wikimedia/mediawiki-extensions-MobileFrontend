@@ -543,6 +543,10 @@ img.thumbborder {
 	float: right;
 }
 
+.floatleft {
+	float: left;
+}
+
 #content_wrapper.home h1#firstHeading {
 	display: none;
 }
