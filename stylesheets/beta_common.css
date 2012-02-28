@@ -34,6 +34,11 @@ body {
 	display: none;
 }
 
+html[dir="rtl"] .clearlink {
+	left: 0.25em;
+	right: auto;
+}
+
 #zero-rated-banner {
 	position: relative;
 	height: 20px;
@@ -120,7 +125,6 @@ body {
 	margin: 0;
 	line-height: 2.6em;
 	padding: 0.01em 0.25em;
-	text-align: left;
 	postion: relative;
 	border-bottom: solid 1px #999999;
 }
@@ -566,15 +570,24 @@ img.thumbborder {
 	width: 100%;
 }
 
+html[dir="rtl"] #logo,
 #goButton {
 	position: absolute;
 	right: 2px;
+}
+
+#goButton {
 	top: 2px;
 	border: 0;
 	background: url(images/s.gif) no-repeat top left;
 	background-size: 27px 25px;
 	height: 25px;
 	width: 27px;
+}
+
+html[dir="rtl"] #goButton {
+	right: auto;
+	left: 2px;
 }
 
 #searchbox a,
@@ -607,8 +620,17 @@ img.thumbborder {
 	float: left;
 }
 
+html[dir="rtl"] #nav {
+	float: right;
+}
+
 #languageselection {
 	margin-right: 35px;
+}
+
+html[dir="rtl"] #languageselection {
+	margin-right: 0;
+	margin-left: 35px;
 }
 
 #nav form,
@@ -682,6 +704,11 @@ full screen search css
 	font-size: 1.2em;
 }
 
+html[dir="rtl"] .full-screen-search #sq {
+	padding-left: 0;
+	padding-right: 44px;
+}
+
 .full-screen-search #sq {
 	position: relative;
 	padding-left: 44px;
@@ -720,7 +747,6 @@ full screen search css
 .full-screen-search .suggestions-results {
 	line-height: 2.6em;
 	padding: 0;
-	text-align: left;
 	position: relative;
 	border-bottom: solid 1px #999;
 	font-size: 1.4em;
@@ -754,6 +780,11 @@ full screen search css
 	border: 0px solid;
 	text-indent: -999px;
 	overflow: hidden;
+}
+
+html[dir="rtl"] #remove-results {
+	right: 0px;
+	left: auto;
 }
 
 .full-screen-search #results {
