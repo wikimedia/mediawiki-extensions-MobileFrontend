@@ -98,7 +98,7 @@ MobileFrontend = (function() {
 		}
 	}
 
-	utilities = typeof(jQuery) !== "undefined" ? jQuery : function( el ) {
+	utilities = typeof jQuery !== 'undefined' ? jQuery : function( el ) {
 		if( typeof(el) === 'string' ) {
 			if( document.querySelectorAll ) {
 				return document.querySelectorAll( el );
