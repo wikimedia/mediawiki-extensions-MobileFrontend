@@ -585,6 +585,7 @@ html[dir="rtl"] #logo,
 #goButton {
 	position: absolute;
 	right: 2px;
+	left: auto;
 }
 
 #goButton {
