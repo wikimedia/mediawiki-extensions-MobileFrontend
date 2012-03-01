@@ -135,7 +135,9 @@ MobileFrontend = (function() {
 		} else {
 			xmlHttp = new ActiveXObject( 'Microsoft.XMLHTTP' );
 		}
-		xmlHttp.overrideMimeType( 'text/xml' );
+		if( xmlHttp.overrideMimeType ) { // non standard
+			xmlHttp.overrideMimeType( 'text/xml' );
+		}
 		xmlHttp.onreadystatechange = function() {
 			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200 ) {
 				options.success( xmlHttp.responseXML );
