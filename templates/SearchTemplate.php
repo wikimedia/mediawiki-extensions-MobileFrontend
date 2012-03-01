@@ -42,8 +42,8 @@ class SearchTemplate extends MobileFrontendTemplate {
 			</div>
 			<div class='nav' id='nav' {$logoDisplayNone}>
 			{$languageSelectionDiv}
-			<button onclick="javascript:location.href='{$mainPageUrl}';" type="submit" id="homeButton">{$homeButton}</button>
-			<button onclick="javascript:location.href='{$randomPageUrl}';" type="submit" id="randomButton">{$randomButton}</button>
+			<a href="{$mainPageUrl}" id="homeButton" class="button">{$homeButton}</a>
+			<a href="{$randomPageUrl}" id="randomButton" class="button">{$randomButton}</a>
 		  </div>
 		</div>
 HTML;

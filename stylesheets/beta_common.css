@@ -653,11 +653,13 @@ html[dir="rtl"] #languageselection {
 	display: inline-block;
 }
 
+#nav .button,
 #nav button {
 	background: url(images/buttonbg.gif) no-repeat center;
 	border: 0;
-	height: 23px;
-	width: 83px;
+	padding: 8px;
+	color: black;
+	display: inline-block;
 }
 
 #disableButtons {
