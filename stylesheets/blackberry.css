@@ -1,7 +1,3 @@
-#blackberry {
-	test: 1;
-}
-
-#clearButton {
-	display: none;
+#header {
+	margin-top: 0; /* interferes with results positioning in blackberry 9300 (5.0.0.176)*/
 }

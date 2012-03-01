@@ -554,6 +554,7 @@ img.thumbborder {
 
 #header {
 	margin: 8px 8px 0 8px;
+	position: relative;
 }
 
 #content_wrapper {
@@ -582,6 +583,10 @@ img.thumbborder {
 	-moz-border-radius: 2px;
 }
 
+#searchbox form {
+	margin-bottom: 0;
+}
+
 html[dir="rtl"] #searchbox {
 	padding: 5px 44px 5px 32px
 }
@@ -605,6 +610,7 @@ html[dir="rtl"] #logo,
 	background-size: 27px 25px;
 	height: 25px;
 	width: 27px;
+	padding-bottom: 0;
 }
 
 html[dir="rtl"] #goButton {

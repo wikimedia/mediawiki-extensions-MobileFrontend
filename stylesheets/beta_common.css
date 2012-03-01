@@ -549,6 +549,7 @@ img.thumbborder {
 
 #header {
 	margin: 8px 8px 0 8px;
+	position: relative;
 }
 
 #content_wrapper {
@@ -579,6 +580,7 @@ img.thumbborder {
 #searchbox #form {
 	padding-right: 34px;
 	width: 100%;
+	margin-bottom: 0;
 }
 
 html[dir="rtl"] #logo,
@@ -595,6 +597,7 @@ html[dir="rtl"] #logo,
 	background-size: 27px 25px;
 	height: 25px;
 	width: 27px;
+	padding-bottom: 0;
 }
 
 html[dir="rtl"] #goButton {
@@ -704,6 +707,10 @@ cite:target {
 /*
 full screen search css
 */
+.full-screen-search #header {
+	margin: 0;
+}
+
 .full-screen-search #content,
 .full-screen-search #footer,
 .full-screen-search #zero-rated-banner-red,
