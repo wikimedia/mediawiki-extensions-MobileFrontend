@@ -43,6 +43,21 @@ class ExtMobileFrontend {
 	public static $logoutHtml;
 	public static $loginHtml;
 	public static $zeroRatedBanner;
+	
+	/**
+	 * @var string xDevice header information
+	 */
+	protected $xDevice;
+	
+	/**
+	 * @var string MediaWiki 'action'
+	 */
+	protected $action;
+	
+	/**
+	 * @var string
+	 */
+	protected $mobileAction;
 
 	/**
 	 * @var WmlContext
@@ -127,8 +142,7 @@ class ExtMobileFrontend {
 	 */
 	public function testCanonicalRedirect( $request, $title, $output ) {
 		global $wgUsePathInfo;
-		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
-		if ( empty( $xDevice ) ) {
+		if ( !$this->shouldDisplayMobileView() ) {
 			return true; // Let the redirect happen
 		} else {
 			if ( $title->getNamespace() == NS_SPECIAL ) {
@@ -294,15 +308,14 @@ class ExtMobileFrontend {
 	 */
 	public function beforePageRedirect( $out, &$redirect, &$code ) {
 		wfProfileIn( __METHOD__ );
+		$shouldDisplayMobileView = $this->shouldDisplayMobileView();
 		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
-			$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
-			if ( $xDevice ) {
+			if ( $shouldDisplayMobileView ) {
 				$forceHttps = true;
 				$redirect = $this->getMobileUrl( $redirect, $forceHttps );
 			}
 		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) ) {
-			$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
-			if ( $xDevice ) {
+			if ( $shouldDisplayMobileView ) {
 				$redirect = $this->getMobileUrl( $redirect );
 			}
 		}
@@ -325,19 +338,12 @@ class ExtMobileFrontend {
 		// Thus, globalized objects will not be available as expected in the function.
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
 
-		$xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? $_SERVER['HTTP_X_DEVICE'] : '';
+		$xDevice = $this->getXDevice();
 		self::$useFormat = $wgRequest->getText( 'useformat' );
 		$this->wmlContext->setUseFormat( self::$useFormat );
-		$mobileAction = $wgRequest->getText( 'mobileaction' );
-		$action = $wgRequest->getText( 'action' );
+		$mobileAction = $this->getMobileAction();		
 
-		if ( self::$useFormat !== 'mobile' && self::$useFormat !== 'mobile-wap' &&
-			!$xDevice ) {
-			wfProfileOut( __METHOD__ );
-			return true;
-		}
-		if ( $action === 'edit' || $action === 'history' ||
-			 $mobileAction === 'view_normal_site' ) {
+		if ( !$this->shouldDisplayMobileView() ) {
 			wfProfileOut( __METHOD__ );
 			return true;
 		}
@@ -1271,6 +1277,7 @@ class ExtMobileFrontend {
 	public function getMobileUrl( $url, $forceHttps = false ) {
 		$parsedUrl = wfParseUrl( $url );
 		$this->updateMobileUrlHost( $parsedUrl );
+		$this->updateMobileUrlQueryString( $parsedUrl );
 		if ( $forceHttps ) {
 			$parsedUrl[ 'scheme' ] = 'https';
 		}
@@ -1342,6 +1349,20 @@ class ExtMobileFrontend {
 		$parsedUrl[ 'path' ] = $wgScriptPath . $templatePathSansToken . $pathSansScriptPath;	
 	}
 
+	protected function updateMobileUrlQueryString( &$parsedUrl ) {
+		if ( !$this->isFauxMobileDevice() ) {
+			return;
+		}
+		
+		if ( !isset( $parsedUrl[ 'query' ] )) {
+			$parsedUrl[ 'query' ] = 'useformat=' . urlencode( self::$useFormat );
+		} else {
+			$query = wfCgiToArray( $parsedUrl[ 'query' ] );
+			$query[ 'useformat' ] = urlencode( self::$useFormat );
+			$parsedUrl[ 'query' ] = wfArrayToCgi( $query );
+		}
+	}
+
 	/**
 	 * Parse mobile URL template into its host and path components.
 	 *
@@ -1377,6 +1398,67 @@ class ExtMobileFrontend {
 		}
 	}
 
+	protected function isMobileDevice() {
+		$xDevice = $this->getXDevice();
+
+		if ( empty( $xDevice )) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	protected function isFauxMobileDevice() {
+		if ( self::$useFormat !== 'mobile' && self::$useFormat !== 'mobile-wap') {
+			return false;
+		} 
+
+		return true;
+	}
+	
+	protected function shouldDisplayMobileView() {
+		if ( !$this->isMobileDevice() && !$this->isFauxMobileDevice() ) {
+			return false;
+		}
+		
+		$action = $this->getAction();
+		$mobileAction = $this->getMobileAction();
+		
+		if ( $action === 'edit' || $action === 'history' ||
+			 $mobileAction === 'view_normal_site' ) {
+			return false;
+		}
+				
+		return true;
+	}
+
+	public function getXDevice() {
+		if ( is_null( $this->xDevice ) ) {
+			$this->xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? 
+					$_SERVER['HTTP_X_DEVICE'] : '';
+		}
+		
+		return $this->xDevice;
+	}
+
+	public function getMobileAction() {
+		global $wgRequest;
+		if ( is_null( $this->mobileAction )) {
+			$this->mobileAction = $wgRequest->getText( 'mobileaction' );
+		}
+		
+		return $this->mobileAction;
+	}
+	
+	public function getAction() {
+		global $wgRequest;
+		if ( is_null( $this->action )) {
+			$this->action = $wgRequest->getText( 'action' );
+		}
+		
+		return $this->action;
+	}
+	
 	public function getVersion() {
 		return __CLASS__ . ': $Id$';
 	}

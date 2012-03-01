@@ -26,6 +26,8 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 	protected function tearDown() {
 		global $wgExtMobileFrontend;
 		unset( $wgExtMobileFrontend );
+		unset( $_SERVER[ 'HTTP_X_DEVICE' ] );
+		ExtMobileFrontend::$useFormat = null;
 		parent::tearDown();
 	}
 
@@ -101,5 +103,204 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport" );
 		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
 		$this->assertEquals( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+	}
+	
+	/**
+	 * @dataProvider updateMobileUrlQueryStringProvider
+	 */
+	public function testUpdateMobileUrlQueryString( $assert, $useFormat ) {
+		global $wgRequest, $wgExtMobileFrontend;
+		
+		$testMethod = ( $assert ) ? 'assertTrue' : 'assertFalse';
+		$url = 'http://en.wikipedia.org/wiki/Article/?something=bananas';
+		if ( !empty( $useFormat ) ) $url .= "&useformat=" . $useFormat;
+		ExtMobileFrontend::$useFormat = $useFormat;
+		
+		$parsedUrl = wfParseUrl( $url );
+		
+		$updateMobileUrlQueryString = self::getMethod( 'updateMobileUrlQueryString' );
+		$updateMobileUrlQueryString->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl) );
+		
+		$targetUrl = wfAssembleUrl( $parsedUrl );
+		$this->$testMethod( $url == $targetUrl, $targetUrl );
+	}
+	
+	public function updateMobileUrlQueryStringProvider() {
+		return array(
+			array( true, 'mobile' ),
+			array( true, 'mobile-wap' ),
+			array( true, '' ),
+		);
+	}
+	
+	/**
+	 * @dataProvider isMobileDeviceProvider
+	 */
+	public function testIsMobileDevice( $isDevice, $msg, $xDevice = null ) {
+		global $wgReqeust, $wgExtMobileFrontend;
+		$isMobileDevice = self::getMethod( 'isMobileDevice' );
+		
+		$testMethod = ( $isDevice ) ? 'assertTrue' : 'assertFalse';
+		
+		if ( !is_null( $xDevice )) {
+			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
+		}
+		
+		$this->$testMethod( $isMobileDevice->invokeArgs( $wgExtMobileFrontend, array() ), $msg );
+	}
+	
+	public function isMobileDeviceProvider() {
+		return array(
+			array( false, 'Nothing set' ),
+			array( true, 'HTTP_X_DEVICE = webkit', 'webkit' ),
+		);
+	}
+	
+	/**
+	 * @dataProvider isFauxMobileDeviceProvider
+	 */
+	public function testIsFauxMobileDevice( $isFauxDevice, $msg, $useformat=null ) {
+		global $wgRequest, $wgExtMobileFrontend;
+		$isFauxMobileDevice = self::getMethod( 'isFauxMobileDevice' );
+		
+		$testMethod = ( $isFauxDevice ) ? 'assertTrue' : 'assertFalse';
+		
+		ExtMobileFrontend::$useFormat = $useformat;
+		$this->$testMethod( $isFauxMobileDevice->invokeArgs( $wgExtMobileFrontend, array() ), $msg );
+	}
+	
+	public function isFauxMobileDeviceProvider() {
+		return array(
+			array( false, 'Nothing set' ),
+			array( true, 'useformat=mobile', 'mobile' ),
+			array( true, 'useformat=mobile-wap', 'mobile-wap' ),
+			array( false, 'useformat=yourmom', 'yourmom' ),
+		);
+	}
+	
+	/**
+	 * @dataProvider shouldDisplayMobileViewProvider
+	 */
+	public function testShouldDisplayMobileView( $shouldDisplay, $xDevice=null, $requestVal=array(), $msg=null ) {
+		global $wgRequest, $wgExtMobileFrontend;
+		$shouldDisplayMobileView = self::getMethod( 'shouldDisplayMobileView' );
+	
+		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
+		
+		if ( count( $requestVal )) {
+			foreach ( $requestVal as $key => $val ) {
+				if ( $key == 'useformat' ) {
+					ExtMobileFrontend::$useFormat = $val;
+				} else {
+					$wgRequest->setVal( $key, $val );
+				}
+			}
+		}
+		
+		if ( !is_null( $xDevice )) {
+			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
+		}
+		
+		$this->$testMethod( $shouldDisplayMobileView->invokeArgs( $wgExtMobileFrontend, array() ), $msg );
+		
+		// clean up
+		if ( count( $requestVal )) {
+			foreach ( $requestVal as $key => $val ) {
+				if ( $key == 'useformat' ) {
+					continue;
+				} else {
+					$wgRequest->unsetVal( $key );
+				}
+			}
+		}
+	}
+	
+	public function shouldDisplayMobileViewProvider() {
+		return array(
+			array( false, null, array() ),
+			array( true, 'webkit', array() ),
+			array( false, 'webkit', array( 'action' => 'edit' ) ),
+			array( false, 'webkit', array( 'mobileaction' => 'view_normal_site' ) ),
+			array( true, null, array( 'useformat' => 'mobile-wap' ) ),
+			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'edit' ) ),
+			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'history' ) ),
+			array( false, null, array( 'useformat' => 'mobile-wap', 'mobileaction' => 'view_normal_site' ) ),
+			array( true, null, array( 'useformat' => 'mobile' ) ),
+			array( false, null, array( 'useformat' => 'mobile', 'action' => 'edit' ) ),
+			array( false, null, array( 'useformat' => 'mobile', 'action' => 'history' ) ),
+			array( false, null, array( 'useformat' => 'mobile', 'mobileaction' => 'view_normal_site' ) ),
+		);
+	}
+	
+	/**
+	 * @dataProvider getXDeviceProvider
+	 */
+	public function testGetXDevice( $xDevice=null ) {
+		global $wgExtMobileFrontend;
+		if ( is_null( $xDevice ) ) {
+			$assert = '';
+			if ( isset( $_SERVER[ 'HTTP_X_DEVICE' ] ) ) {
+				unset( $_SERVER[ 'HTTP_X_DEVICE' ] );
+			}
+		} else {
+			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
+			$assert = $xDevice;
+		}
+		$this->assertEquals( $assert, $wgExtMobileFrontend->getXDevice() );
+	}
+	
+	public function getXDeviceProvider() {
+		return array(
+			array( 'webkit' ),
+			array( null ),
+		);
+	}
+	
+	/**
+	 * @dataProvider getMobileActionProvider
+	 */
+	public function testGetMobileAction( $mobileaction=null ) {
+		global $wgRequest, $wgExtMobileFrontend;
+
+		if ( is_null( $mobileaction )) {
+			$assert = '';
+			$wgRequest->unsetVal( 'mobileaction' );
+		} else {
+			$wgRequest->setVal( 'mobileaction', $mobileaction );
+			$assert = $mobileaction;
+		}
+
+		$this->assertEquals( $assert, $wgExtMobileFrontend->getMobileAction() );
+	}
+	
+	public function getMobileActionProvider() {
+		return array(
+			array( null ),
+			array( 'view_normal_site' ),
+		);
+	}
+	
+	/**
+	 * @dataProvider getActionProvider
+	 */
+	public function testGetAction( $action=null ) {
+		global $wgRequest, $wgExtMobileFrontend;
+		
+		if ( is_null( $action )) {
+			$assert = '';
+			$wgRequest->unsetVal( 'action' );
+		} else {
+			$wgRequest->setVal( 'action', $action );
+			$assert = $action;
+		}
+		
+		$this->assertEquals( $assert, $wgExtMobileFrontend->getAction() );
+	}
+	
+	public function getActionProvider() {
+		return array(
+			array( null ),
+			array( 'edit' ),
+		);
 	}
 }
