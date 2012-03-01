@@ -98,7 +98,6 @@ MobileFrontend.opensearch = (function() {
 		results.style.display = 'block';
 		var top = sq.offsetParent.offsetTop + sq.offsetHeight + sq.offsetTop + 1;
 		results.style.top = top + 'px';
-		results.style.width = sq.offsetWidth - 2 + 'px'; // -2px border left and right
 
 		if ( !sections || sections.length < 1 ) {
 			results.innerHTML = "No results";

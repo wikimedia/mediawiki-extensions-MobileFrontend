@@ -181,6 +181,7 @@ a.external {
 	z-index: 2;
 	position: absolute;
 	left: 53px;
+	right: 41px;
 }
 
 html[dir="rtl"] #results {
