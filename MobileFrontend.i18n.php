@@ -1423,12 +1423,13 @@ $messages['diq'] = array(
  * @author Michawiki
  */
 $messages['dsb'] = array(
+	'mobile-frontend-desc' => 'Zwobraznjenje bokow za mobilne kóńcne rědy',
 	'mobile-frontend-search-submit' => 'Wótpósłaś',
 	'mobile-frontend-search-results' => 'Pytańske wuslědki',
 	'mobile-frontend-no-article-found' => 'Žeden nastawk namakany',
 	'mobile-frontend-featured-article' => 'Nastawk dnja',
 	'mobile-frontend-in-the-news' => 'W nowosćach',
-	'mobile-frontend-home-button' => 'Głowny bok',
+	'mobile-frontend-home-button' => 'Start',
 	'mobile-frontend-random-button' => 'Pśipadny',
 	'mobile-frontend-back-to-top-of-section' => 'Wótrězk slědk skócyś',
 	'mobile-frontend-show-button' => 'Pokazaś',
@@ -1452,20 +1453,35 @@ $messages['dsb'] = array(
 	'mobile-frontend-file-namespace' => 'Dataja',
 	'mobile-frontend-wml-continue' => 'Dalej ...',
 	'mobile-frontend-wml-back' => 'Slědk ...',
+	'mobile-frontend-view' => 'Mobilny naglěd',
+	'mobile-frontend-opt-in-message' => 'Na betatesće se wobźěliś?',
 	'mobile-frontend-opt-in-yes-button' => 'jo',
 	'mobile-frontend-opt-in-no-button' => 'ně',
+	'mobile-frontend-opt-in-title' => 'Wobźělenje na mobilnem betatesće',
+	'mobile-frontend-opt-in-explain' => 'Pśez wobźělenje na betatesće, změjoš pśistup na eksperimentelne funkcije, kótarež pak mógu zmólki a problemy zawinowaś.',
+	'mobile-frontend-opt-out-message' => 'Betatest spušćiś?',
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'ně',
+	'mobile-frontend-opt-out-title' => 'Wobźělenje na mobilnem betatesće skóńcyś',
+	'mobile-frontend-opt-out-explain' => 'Gaž wobźělenje na mobilnem betatesće skóńcyš, znjemóžnijoš wšykne eksperimentelne funkcije a wrośijoš se ke klasiskim funkcijam.',
+	'mobile-frontend-disable-images' => 'Wobraze w mobilnem naglěźe znjemóžniś',
+	'mobile-frontend-enable-images' => 'Wobraze w mobilnem naglěźe zmóžniś',
+	'mobile-frontend-news-items' => 'W nowosćach',
+	'mobile-frontend-leave-feedback-title' => 'Daj nam swóje nazgónjenja z mobilnym sedłom k wěsći',
+	'mobile-frontend-leave-feedback-notice' => 'Twóje komentary pomagaju nam mobilne sedło pólěpšyś. Wozjawja se z wužywarskim mjenim, wersiju wobglědowaka a źěłowym systemom na boku &quot;$1&quot;. Pšosym wubjeŕ wugroniwu temu, na ps. "Problemy pśi formatěrowanju tabelow". Twóje komentary pódlaže našym wužywarskim wuměnjenjam.',
 	'mobile-frontend-leave-feedback-subject' => 'Tema',
 	'mobile-frontend-leave-feedback-message' => 'Powěsć',
 	'mobile-frontend-leave-feedback-cancel' => 'Pśetergnuś',
 	'mobile-frontend-leave-feedback-submit' => 'Komentar wótpósłaś',
+	'mobile-frontend-leave-feedback-link-text' => 'Komentary k rozšyrjenjeju MobileFrontend',
+	'mobile-frontend-leave-feedback' => 'Komentary wó mobilnem sedle',
 	'mobile-frontend-leave-feedback-thanks' => 'Źěkujomy se za twój komentar!',
 	'mobile-frontend-language' => 'Rěc',
 	'mobile-frontend-username' => 'Wužywarske mě:',
 	'mobile-frontend-password' => 'Gronidło:',
 	'mobile-frontend-login' => 'Pśizjawiś',
 	'mobile-frontend-placeholder' => 'Zapódaj how swójo pytanje...',
+	'mobile-frontend-dismiss-notification' => 'Toś tu powěźeńku zachyśiś',
 	'mobile-frontend-clear-search' => 'Wuprozniś',
 );
 
@@ -2700,8 +2716,8 @@ $messages['hsb'] = array(
 	'mobile-frontend-no-article-found' => 'Žadyn nastawk namakany',
 	'mobile-frontend-featured-article' => 'Nastawk dnja',
 	'mobile-frontend-in-the-news' => 'W nowinkach',
-	'mobile-frontend-home-button' => 'Domoj',
-	'mobile-frontend-random-button' => 'Připadna',
+	'mobile-frontend-home-button' => 'Start',
+	'mobile-frontend-random-button' => 'Připadny',
 	'mobile-frontend-back-to-top-of-section' => 'Wotrězk wróćo skočić',
 	'mobile-frontend-show-button' => 'Pokazać',
 	'mobile-frontend-hide-button' => 'Schować',
@@ -3194,7 +3210,7 @@ $messages['ja'] = array(
 	'mobile-frontend-error-page-title' => '問題が発生しました！',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} モバイル版はいまだ活発な開発の途中であり、私たちは内部エラーのすべてを修正しようと懸命に努力しています。私たちはこのエラーを認識しており、すぐに修正する予定です。後でご確認ください。',
 	'mobile-frontend-are-you-sure' => 'よろしいですか？',
-	'mobile-frontend-explain-disable' => 'モバイル版{{SITENAME}}を無効にしてよろしいですか？<b>無効にする</b>を選択すると、ウィキペディアに次回以降アクセスした際には、現在ご覧になっているモバイル版{{SITENAME}}に自動転送されなくなります。',
+	'mobile-frontend-explain-disable' => 'モバイル版{{SITENAME}}を無効にしてよろしいですか？<b>無効にする</b>を選択すると、{{SITENAME}}に次回以降アクセスした際には、現在ご覧になっているモバイル版{{SITENAME}}に自動転送されなくなります。',
 	'mobile-frontend-nav-end' => '末尾',
 	'mobile-frontend-nav-top' => '先頭',
 	'mobile-frontend-nav-edit' => '編集',
@@ -3888,6 +3904,7 @@ Betrach dit later nog ins!",
 	'mobile-frontend-login' => 'Mèlj aan',
 	'mobile-frontend-placeholder' => 'Zeuk hie...',
 	'mobile-frontend-dismiss-notification' => 'verberg de notificatie',
+	'mobile-frontend-clear-search' => 'Wösj',
 );
 
 /** Lumbaart (Lumbaart) */
@@ -4213,6 +4230,7 @@ $messages['ml'] = array(
 	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-placeholder' => 'തിരയേണ്ട വാക്ക് നൽകുക...',
 	'mobile-frontend-dismiss-notification' => 'ഈ അറിയിപ്പ് ഒഴിവാക്കുക',
+	'mobile-frontend-clear-search' => 'ശൂന്യമാക്കുക',
 );
 
 /** Mongolian (Монгол) */
@@ -5529,6 +5547,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author Dim Grits
+ * @author Express2000
  * @author Kaganer
  * @author Rave
  * @author Александр Сигачёв
@@ -5594,6 +5613,7 @@ $messages['ru'] = array(
 	'mobile-frontend-login' => 'Войти',
 	'mobile-frontend-placeholder' => 'Строка для поиска...',
 	'mobile-frontend-dismiss-notification' => 'скрыть это уведомление',
+	'mobile-frontend-clear-search' => 'Очистить',
 );
 
 /** Rusyn (Русиньскый)
