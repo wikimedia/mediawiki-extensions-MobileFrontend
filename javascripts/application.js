@@ -22,6 +22,10 @@ MobileFrontend = (function() {
 			btn.style.display = visible ? 'inline-block' : 'none';
 			return btn;
 		}
+		if(!sectionHeadings) {
+			sectionHeadings = [];
+			utilities( document.body ).addClass( 'togglingEnabled' );
+		}
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
 			heading.insertBefore( createButton( true ), heading.firstChild );

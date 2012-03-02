@@ -334,12 +334,12 @@ button.show {
 	display: none;
 }
 
-.jsEnabled button.show {
+.togglingEnabled button.show {
 	display: inline-block;
 }
 
-.jsEnabled .content_block,
-.jsEnabled .section_anchors,
+.togglingEnabled .content_block,
+.togglingEnabled .section_anchors,
 button.section_heading.hide {
 	display: none;
 }
