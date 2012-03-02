@@ -3,6 +3,18 @@ var MFET = window.MobileFrontendTests;
 
 module("MobileFrontend application.js: utils");
 
+test("Basic selector support (#id)", function() {
+	strictEqual(MFE.utils("#section_1").length, 1, "only one element matches this selector");
+});
+
+test("Basic selector support (.className)", function() {
+	strictEqual(MFE.utils(".section_heading").length, 2, "only two elements matches this selector");
+});
+
+test("Basic selector support (tag name)", function() {
+	strictEqual(MFE.utils("body").length, 1, "only one element matches this selector");
+});
+
 test("addClass", function() {
 	var el = $("<div />")[0];
 	MFE.utils(el).addClass("foo");
