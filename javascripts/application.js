@@ -24,6 +24,7 @@ MobileFrontend = (function() {
 		}
 		if(!sectionHeadings) {
 			sectionHeadings = [];
+		} else {
 			utilities( document.body ).addClass( 'togglingEnabled' );
 		}
 		for( i = 0; i < sectionHeadings.length; i++ ) {
