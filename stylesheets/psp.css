@@ -2,28 +2,6 @@
 	margin: 0 2px;
 }
 
-#searchbox {
-	border: 0px;
-	padding: 2px;
-	height: 26px;
-}
-
-#searchbox form, #searchbox button, #searchbox img, #searchbox input {
-	display: inline;
-}
-
-#searchbox input#searchField {
-	width: 60%;
-}
-
-#searchbox input#searchButton {
-	margin-left: 2px;
-}
-
-#searchbox input#submitButton {
-	display: none;
-}
-
 /* TODO: review duplicate definition in operamini, psp, simple
 Are they even necessary? could/should they be in common.css ?
 */
@@ -77,10 +55,6 @@ a.arrow {
 .thumb .thumbinner[style] {
 	padding: 5px;
 	margin: 0;
-}
-
-#searchField {
-	font-size: 1.2em;
 }
 
 span.idx {
