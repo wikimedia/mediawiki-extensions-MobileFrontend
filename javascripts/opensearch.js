@@ -93,10 +93,11 @@ MobileFrontend.opensearch = (function() {
 	function writeResults( sections ) {
 		var results = document.getElementById( 'results' ), suggestions, i,
 			suggestionListener, section, suggestionsResult, link, label,
-			sq = document.getElementById( 'sq' );
+			sq = document.getElementById( 'sq' ),
+			header = document.getElementById( 'header' );
 
 		results.style.display = 'block';
-		var top = sq.offsetParent.offsetTop + sq.offsetHeight + sq.offsetTop + 1;
+		var top = sq.offsetParent.offsetTop + sq.offsetHeight + sq.offsetTop + 1 + header.offsetTop;
 		results.style.top = top + 'px';
 
 		if ( !sections || sections.length < 1 ) {
