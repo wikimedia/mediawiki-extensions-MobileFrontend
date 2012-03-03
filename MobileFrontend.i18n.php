@@ -564,6 +564,7 @@ $messages['az'] = array(
 	'mobile-frontend-username' => 'İstifadəçi adı:',
 	'mobile-frontend-password' => 'Parol:',
 	'mobile-frontend-login' => 'Daxil ol',
+	'mobile-frontend-clear-search' => 'Təmizlə',
 );
 
 /** Bashkir (Башҡортса)
@@ -951,6 +952,7 @@ $messages['br'] = array(
 
 /** Bosnian (Bosanski)
  * @author CERminator
+ * @author DzWiki
  */
 $messages['bs'] = array(
 	'mobile-frontend-desc' => 'Korisnički interfejs za mobilne uređaje',
@@ -981,6 +983,8 @@ $messages['bs'] = array(
 	'mobile-frontend-author-link' => 'Pogledajte ovu medijsku datoteku na običnoj Wikipediji za informacije o autoru, licenci i dodatnim opisima.',
 	'mobile-frontend-download-full-version' => 'Preuzmi punu verziju',
 	'mobile-frontend-file-namespace' => 'Datoteka',
+	'mobile-frontend-wml-continue' => 'Nastavi…',
+	'mobile-frontend-wml-back' => 'Nazad…',
 );
 
 /** Catalan (Català)
@@ -1196,6 +1200,7 @@ $messages['cs'] = array(
 	'mobile-frontend-login' => 'Přihlásit se',
 	'mobile-frontend-placeholder' => 'Sem napište hledaný výraz…',
 	'mobile-frontend-dismiss-notification' => 'zavřít toto oznámení',
+	'mobile-frontend-clear-search' => 'Smazat',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -3252,11 +3257,13 @@ $messages['ja'] = array(
 );
 
 /** Georgian (ქართული)
+ * @author David1010
  * @author Dawid Deutschland
  * @author ITshnik
  * @author გიორგიმელა
  */
 $messages['ka'] = array(
+	'mobile-frontend-desc' => 'მობილური ინტერფეისი',
 	'mobile-frontend-search-submit' => 'აბა ჰე',
 	'mobile-frontend-search-results' => 'ძიების შედეგები',
 	'mobile-frontend-no-article-found' => 'სტატია არ მოიძებნა',
@@ -3284,7 +3291,10 @@ $messages['ka'] = array(
 	'mobile-frontend-author-link' => 'იხილეთ ეს მედია ფაილი ჩვეულებრივ ვიკიპედიაში, რათა გაიგოთ მისი ავტორი, ლიცენზირება და დამატებითი ინფორმაცია.',
 	'mobile-frontend-download-full-version' => 'სრული ვერსიის გადმოწერა',
 	'mobile-frontend-file-namespace' => 'ფაილი',
+	'mobile-frontend-wml-continue' => 'შემდეგ...',
+	'mobile-frontend-wml-back' => 'უკან...',
 	'mobile-frontend-view' => 'მობილური ვერსია',
+	'mobile-frontend-opt-in-yes-button' => 'დიახ',
 	'mobile-frontend-opt-in-no-button' => 'არა',
 	'mobile-frontend-opt-out-yes-button' => 'კი',
 	'mobile-frontend-opt-out-no-button' => 'არა',
@@ -3295,6 +3305,7 @@ $messages['ka'] = array(
 	'mobile-frontend-username' => 'მომხმარებელი:',
 	'mobile-frontend-password' => 'პაროლი:',
 	'mobile-frontend-login' => 'შესვლა',
+	'mobile-frontend-clear-search' => 'გასუფთავება',
 );
 
 /** Адыгэбзэ (Адыгэбзэ) */
@@ -4285,6 +4296,7 @@ $messages['mo'] = array(
  * @author Mahitgar
  * @author Prabodh1987
  * @author Rahuldeshmukh101
+ * @author Shantanoo
  * @author V.narsikar
  */
 $messages['mr'] = array(
@@ -4312,7 +4324,7 @@ $messages['mr'] = array(
 	'mobile-frontend-nav-edit' => 'संपादन',
 	'mobile-frontend-nav-history' => 'इतिहास',
 	'mobile-frontend-search-text' => 'शोध',
-	'mobile-frontend-contact-us' => 'कोणत्याही प्रश्न	 किंवा सुचनांसाठी mobile@wikipedia.org येथे विरोप (इमेल) पाठवा',
+	'mobile-frontend-contact-us' => 'कोणत्याही प्रश्न किंवा सुचनांसाठी mobile@wikipedia.org येथे विरोप (ई-मेल) पाठवा.',
 	'mobile-frontend-author-link' => 'लेखक, परवाने व आणखी विवरण पहाण्याकरिता, ही मीडिया संचिका  नियमीत {{SITENAME}}वर पहा.',
 	'mobile-frontend-download-full-version' => 'पूर्ण आवृत्ती उतरवून घ्या',
 	'mobile-frontend-file-namespace' => 'संचिका',
@@ -6044,6 +6056,7 @@ $messages['sl'] = array(
 	'mobile-frontend-login' => 'Prijava',
 	'mobile-frontend-placeholder' => 'Vnesite svoj iskalni niz tukaj ...',
 	'mobile-frontend-dismiss-notification' => 'skrij obvestilo',
+	'mobile-frontend-clear-search' => 'Počisti',
 );
 
 /** Albanian (Shqip)
@@ -6637,6 +6650,7 @@ $messages['tpi'] = array(
  * @author Cekli829
  * @author Emperyan
  * @author Incelemeelemani
+ * @author Suelnur
  */
 $messages['tr'] = array(
 	'mobile-frontend-search-submit' => 'Git',
@@ -6678,6 +6692,7 @@ $messages['tr'] = array(
 	'mobile-frontend-username' => 'Kullanıcı adı:',
 	'mobile-frontend-password' => 'Şifre:',
 	'mobile-frontend-login' => 'Oturum aç',
+	'mobile-frontend-clear-search' => 'Temizle',
 );
 
 /** Tatar (Cyrillic script) (Татарча)
