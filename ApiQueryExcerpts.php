@@ -111,7 +111,7 @@ class ApiQueryExcerpts extends ApiQueryBase {
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
 		$mf->removeImages();
 		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates',
-			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt' )
+			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error' )
 		);
 		if ( $plainText ) {
 			$mf->flatten( '[?!]?[a-z0-9]+' );
