@@ -11,6 +11,11 @@ MobileFrontend = (function() {
 		var i, search, clearSearch, results, languageSelection, a, heading,
 			sectionHeadings = utilities( '.section_heading' );
 		utilities( document.body ).addClass( 'jsEnabled' );
+
+		// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.3
+		window.wm_toggle_section = wm_toggle_section;
+		utilities( '.section_heading button' ).remove();
+
 		function openSectionHandler() {
 			var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
 			if( sectionNumber > -1 ) {
@@ -33,6 +38,7 @@ MobileFrontend = (function() {
 		}
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
+			heading.removeAttribute( 'onclick' ); // TODO: remove any legacy onclick handlers
 			heading.insertBefore( createButton( true ), heading.firstChild );
 			heading.insertBefore( createButton( false ), heading.firstChild );
 			utilities( heading ).bind( 'click', openSectionHandler );
@@ -132,9 +138,20 @@ MobileFrontend = (function() {
 		function bind( type, handler ) {
 			el.addEventListener( type, handler, false );
 		}
+
+		// TODO: support single elements
+		function remove(els) {
+			var i, el;
+			for( i = 0; i < els.length; i++ ) {
+				el = els[i];
+				el.parentNode.removeChild(el);
+			}
+		}
+
 		return {
 			addClass: addClass,
 			bind: bind,
+			remove: remove,
 			removeClass: removeClass
 		};
 	}

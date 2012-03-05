@@ -18,6 +18,7 @@ class ExtMobileFrontend {
 	public static $mainPageUrl;
 	public static $randomPageUrl;
 	public static $format;
+	public static $search;
 	public static $callback;
 	public static $useFormat;
 	public static $disableImages;
@@ -417,6 +418,7 @@ class ExtMobileFrontend {
 		self::$format = $wgRequest->getText( 'format' );
 		self::$callback = $wgRequest->getText( 'callback' );
 		$this->wmlContext->setRequestedSegment( $wgRequest->getInt( 'seg', 0 ) );
+		self::$search = $wgRequest->getText( 'search' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
 
 		$device = new DeviceDetection();
@@ -1059,6 +1061,11 @@ class ExtMobileFrontend {
 			$prepend = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
 				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
 				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';	
+		} elseif ( $this->contentFormat == 'XHTML'
+			&& self::$device['supports_javascript'] === true
+			&& empty( self::$search ) )
+		{
+			$formatter->enableExpandableSections();
 		}
 		$contentHtml = $formatter->getText( 'content', $prepend );
 

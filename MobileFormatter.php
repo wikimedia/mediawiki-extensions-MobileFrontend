@@ -19,6 +19,7 @@ class MobileFormatter {
 	 */
 	protected $title;
 
+	protected $expandableSections = false;
 	protected $mainPage = false;
 
 	private $headings = 0;
@@ -132,6 +133,14 @@ class MobileFormatter {
 	 */
 	public function getFormat() {
 		return $this->format;
+	}
+
+	/**
+	 * @todo: kill with fire when there will be minimum of pre-1.1 app users remaining
+	 * @param bool $flag 
+	 */
+	public function enableExpandableSections( $flag = true ) {
+		$this->expandableSections = $flag;
 	}
 
 	public function setIsMainPage( $value = true ) {
@@ -283,7 +292,7 @@ class MobileFormatter {
 		
 		switch ( $this->format ) {
 			case 'XHTML':
-				if ( !$this->mainPage && strlen( $html ) > 4000 ) {
+				if ( $this->expandableSections && !$this->mainPage && strlen( $html ) > 4000 ) {
 					$html = $this->headingTransform( $html );
 				}
 				break;
@@ -348,13 +357,27 @@ class MobileFormatter {
 								'&#8593;' . $backToTop ) .
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
-		$base .= Html::openElement( 'h2',
-			array(
-				'class' => 'section_heading',
-				'id' => 'section_' . $this->headings
-			) 
-		);
-		$base .=
+		// TODO: remove legacy code for Wikipedia Mobile app < 1.3 which is not using the api
+		// when usage of said apps is low
+		$buttons = Html::element( 'button',
+					array( 'class' => 'section_heading show',
+							'section_id' => $this->headings ),
+							$show ) .
+			Html::element( 'button',
+					array( 'class' => 'section_heading hide',
+							'section_id' => $this->headings ),
+							$hide );
+		if ( $this->expandableSections ) {
+			$h2OnClick = 'javascript:wm_toggle_section(' . $this->headings . ');';
+			$base .= Html::openElement( 'h2',
+							array( 'class' => 'section_heading',
+									'id' => 'section_' . $this->headings, 'onclick' => $h2OnClick ) );
+		} else {
+			$base .= Html::openElement( 'h2',
+							array( 'class' => 'section_heading',
+									'id' => 'section_' . $this->headings ) );
+		}
+		$base .= $buttons .
 				Html::rawElement( 'span',
 						array( 'id' => $headlineId ),
 								$matches[2] ) .
