@@ -166,7 +166,7 @@ class ApiQueryExcerpts extends ApiQueryBase {
 				ApiBase::PARAM_DFLT => 1,
 				ApiBase::PARAM_TYPE => 'limit',
 				ApiBase::PARAM_MIN => 1,
-				ApiBase::PARAM_MAX => 10,
+				ApiBase::PARAM_MAX => 20,
 				ApiBase::PARAM_MAX2 => 20,
 			),
 			'plaintext' => false,
