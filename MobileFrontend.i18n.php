@@ -1929,6 +1929,7 @@ $messages['fa'] = array(
 	'mobile-frontend-login' => 'ورود',
 	'mobile-frontend-placeholder' => 'برای جستجو اینجا تایپ کنید...',
 	'mobile-frontend-dismiss-notification' => 'مرخص نمودن این اعلان',
+	'mobile-frontend-clear-search' => 'پاک‌کردن',
 );
 
 /** Finnish (Suomi)
@@ -3194,6 +3195,7 @@ $messages['it'] = array(
  * @author Fryed-peach
  * @author Ohgi
  * @author Schu
+ * @author Shirayuki
  * @author Whym
  */
 $messages['ja'] = array(
@@ -3254,6 +3256,7 @@ $messages['ja'] = array(
 	'mobile-frontend-username' => '利用者名:',
 	'mobile-frontend-password' => 'パスワード:',
 	'mobile-frontend-login' => 'ログイン',
+	'mobile-frontend-clear-search' => 'クリア',
 );
 
 /** Georgian (ქართული)
@@ -3447,6 +3450,7 @@ $messages['km'] = array(
 
 /** Kannada (ಕನ್ನಡ)
  * @author M G Harish
+ * @author VASANTH S.N.
  */
 $messages['kn'] = array(
 	'mobile-frontend-desc' => 'ಮೊಬೈಲ್ ಮುನ್ನೆಲೆ',
@@ -3472,7 +3476,7 @@ $messages['kn'] = array(
 	'mobile-frontend-nav-top' => 'ಮೇಲಕ್ಕೆ',
 	'mobile-frontend-nav-edit' => 'ಬದಲಾಯಿಸಿ',
 	'mobile-frontend-nav-history' => 'ಇತಿಹಾಸ',
-	'mobile-frontend-search-text' => 'ಸರ್ಚ್',
+	'mobile-frontend-search-text' => 'ಹುಡುಕು',
 	'mobile-frontend-contact-us' => 'ನಿಮ್ಮಲ್ಲಿ ಪ್ರಶ್ನೆಗಳು ಅಥವ ಪ್ರತಿಕ್ರಿಯೆಗಳಿದ್ದಲ್ಲಿ mobile@wikipedia.org ವಿಳಾಸಕ್ಕೆ ಬರೆಯಬಹುದು',
 	'mobile-frontend-author-link' => 'ಕರ್ತೃತ್ವ, ಪರವಾನಗೆ ಮತ್ತು ಹೆಚ್ಚಿನ ವಿವರಗಳ ಕುರಿತಾದ ಮಾಹಿತಿಯನ್ನು ನೋಡಲು ಈ ಮಾಧ್ಯಮ ಕಡತವನ್ನು ನಿಯತ {{SITENAME}} ಜಾಲತಾಣದಲ್ಲಿ ನೋಡಿ.',
 	'mobile-frontend-download-full-version' => 'ಪೂರ್ಣ ಆವೃತ್ತಿಯನ್ನು ನಕಲಿಳಿಸಿಕೊಳ್ಳಿ',
