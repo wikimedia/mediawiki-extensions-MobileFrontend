@@ -1,6 +1,6 @@
 <?php
 
-class ApiQueryExcerpt extends ApiQueryBase {
+class ApiQueryExcerpts extends ApiQueryBase {
 	/**
 	 * @var ParserOptions
 	 */
