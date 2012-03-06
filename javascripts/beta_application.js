@@ -12,7 +12,7 @@ MobileFrontend = (function() {
 			sectionHeadings = utilities( '.section_heading' );
 		utilities( document.body ).addClass( 'jsEnabled' );
 
-		// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.3
+		// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.1
 		window.wm_toggle_section = wm_toggle_section;
 		var btns = utilities( '.section_heading button' );
 		for( i = 0; i < btns.length; i++ ) {
