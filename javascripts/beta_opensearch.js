@@ -26,8 +26,9 @@ MobileFrontend.opensearch = (function() {
 	}
 	function resetViewPort() {
 		if ( navigator.userAgent.match( /iPhone/i ) || navigator.userAgent.match( /iPad/i ) ) {
-			var viewportmeta = utilities( 'meta[name="viewport"]' );
+			var viewportmeta = u( 'meta[name="viewport"]' );
 			if ( viewportmeta ) {
+				viewportmeta = viewportmeta[0];
 				viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
 				u( document.body ).bind( 'gesturestart', function () {
 					viewportmeta.content = 'width=device-width, initial-scale=1.0';
