@@ -321,6 +321,10 @@ class ExtMobileFrontend {
 			if ( $shouldDisplayMobileView ) {
 				$redirect = $this->getMobileUrl( $redirect );
 			}
+		} else if ( $out->getTitle()->isSpecial( 'Search' ) ) {			
+			if ( $shouldDisplayMobileView ) {
+				$redirect = $this->getMobileUrl( $redirect );
+			}
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
