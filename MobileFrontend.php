@@ -44,12 +44,13 @@ $wgExtensionMessagesFiles['MobileFrontend'] = "$cwd/MobileFrontend.i18n.php";
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 
-	'ApiParseExtender' => 'ApiParseExtender',
-	'ApiQueryExcerpts' => 'ApiQueryExcerpts',
 	'CssDetection' => 'CssDetection',
 	'DeviceDetection' => 'DeviceDetection',
 	'MobileFormatter' => 'MobileFormatter',
 	'WmlContext' => 'WmlContext',
+
+	'ApiParseExtender' => 'api/ApiParseExtender',
+	'ApiQueryExcerpts' => 'api/ApiQueryExcerpts',
 
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
