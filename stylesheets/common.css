@@ -575,9 +575,8 @@ img.thumbborder {
 
 #searchbox {
 	width: auto;
-	padding: 5px;
 	position: relative;
-	padding: 5px 32px 5px 44px;
+	padding: 7px 32px 7px 44px;
 	border: 1px solid #cccccc;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
