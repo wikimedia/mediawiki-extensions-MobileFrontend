@@ -34,10 +34,10 @@ class SearchTemplate extends MobileFrontendTemplate {
 			<form action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
-					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024" />
+					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024" class="search" />
 					<div class="clearlink" id="clearsearch" title="{$clearText}"></div>
 				</div>
-			  <button id='goButton' type='submit'></button>
+			  <button id='goButton' class='goButton' type='submit'></button>
 			</form>
 			</div>
 			<div class='nav' id='nav' {$logoDisplayNone}>

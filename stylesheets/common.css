@@ -188,7 +188,7 @@ html[dir="rtl"] #results {
 	left: 41px;
 }
 
-#search {
+.search_bar .search {
 	width: 90%;
 	-webkit-appearance: none;
 	border-top-width: 0px;
@@ -573,6 +573,7 @@ img.thumbborder {
 	left: 5px;
 }
 
+#zero-language-search.search_bar,
 #searchbox {
 	width: auto;
 	position: relative;
@@ -580,6 +581,10 @@ img.thumbborder {
 	border: 1px solid #cccccc;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
+}
+
+#zero-language-search.search_bar {
+	padding: 8px 32px 8px 0px;
 }
 
 #searchbox form {
@@ -596,13 +601,13 @@ html[dir="rtl"] #searchbox {
 }
 
 html[dir="rtl"] #logo,
-#goButton {
+.goButton {
 	position: absolute;
 	right: 2px;
 	left: auto;
 }
 
-#goButton {
+.goButton {
 	top: 2px;
 	border: 0;
 	background: url(images/s.gif) no-repeat top left;
@@ -610,9 +615,10 @@ html[dir="rtl"] #logo,
 	height: 25px;
 	width: 27px;
 	padding-bottom: 0;
+	text-indent: 999px;
 }
 
-html[dir="rtl"] #goButton {
+html[dir="rtl"] .goButton {
 	right: auto;
 	left: 2px;
 }
