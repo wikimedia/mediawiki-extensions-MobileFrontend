@@ -3279,7 +3279,7 @@ $messages['ka'] = array(
 	'mobile-frontend-hide-button' => 'დამალე',
 	'mobile-frontend-disable-button' => 'გათიშვა',
 	'mobile-frontend-back-button' => 'უკან',
-	'mobile-frontend-regular-site' => 'ამ გვერდის ჩვეულებრივ ვიკიპედიაში ხილვა',
+	'mobile-frontend-regular-site' => 'ამ გვერდის ჩვეულებრივ {{SITENAME}} ხილვა',
 	'mobile-frontend-perm-stop-redirect' => 'გათიშეთ მობილური საიტი',
 	'mobile-frontend-error-page-title' => 'პრობლემა გვაქვს!',
 	'mobile-frontend-error-page-text' => 'ვიკიპედია ჯერ კიდევ აქტიურად მუშავდება, ჩვენ ვმუშაობთ ყველა შეცდომის აღმოსაფხვრელად. ჩვენ შეგვატყობინეს ამ შეცდომის შესახებ და მალე მოვაგვარებთ მას. გთოვთ შეამოწმეთ!',
@@ -4851,7 +4851,7 @@ $messages['or'] = array(
 	'mobile-frontend-explain-disable' => 'ଆପଣ {{SITENAME}}ର ମୋବାଇଲ ସଂସ୍କରଣଟିକୁ ଅଚଳ କରିବା ପାଇଁ ଚାହାନ୍ତି ବୋଲି ନିଶ୍ଚିତ ତ? ଯଦି ଆପଣ <b>ଅଚଳ କରିବେ</b> ବାଛନ୍ତି, ତେବେ ଏବେ ଠାରୁ, ଯେତେବେଳେ ଆପଣ {{SITENAME}} ସାଇଟଟି ଖୋଲିବେ, ଆପଣ {{SITENAME}} ସାଇଟର ମୋବାଇଲ ଦେଖଣାକୁ ପୁନପ୍ରେରିତ ହେବେ ନାହିଁ ।',
 	'mobile-frontend-nav-end' => 'ଅନ୍ତ',
 	'mobile-frontend-nav-top' => 'ଉପର',
-	'mobile-frontend-nav-edit' => 'ବଦଳାଇବେ',
+	'mobile-frontend-nav-edit' => 'ଏହାକୁ ବଦଳାନ୍ତୁ',
 	'mobile-frontend-nav-history' => 'ଇତିହାସ',
 	'mobile-frontend-search-text' => 'ଖୋଜିବା',
 	'mobile-frontend-contact-us' => 'ଯଦି ଆପଣଙ୍କର କିଛି ପ୍ରଶ୍ନ ବା ମତାମତ ଥାଏ ତେବେ mobile@wikipedia.org କୁ ଇ-ମେଲ କରନ୍ତୁ',
@@ -5148,6 +5148,7 @@ $messages['pms'] = array(
 	'mobile-frontend-login' => 'Intra',
 	'mobile-frontend-placeholder' => 'Anseriss toa arserca ambelessì...',
 	'mobile-frontend-dismiss-notification' => 'arfuda sta notìfica',
+	'mobile-frontend-clear-search' => 'Scancela',
 );
 
 /** Western Punjabi (پنجابی)
