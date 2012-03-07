@@ -6,15 +6,16 @@ body {
 }
 
 html {
-	font-size: 0.8em;
+	font-size: 80%;
 }
 
 body {
+	font-size: 1em;
 	line-height: 1;
 	color: black;
 	background: white;
 	font-family: sans-serif;
-	-webkit-text-size-adjust: none;
+	word-break: break-word;
 }
 
 .clearlink {

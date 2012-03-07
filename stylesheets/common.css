@@ -426,16 +426,17 @@ table.admin {
 }
 
 html {
-	font-size: 0.8em;
+	font-size: 100%;
 }
 
 body {
+	font-size: 1em;
 	margin: 0;
 	line-height: 1;
 	color: black;
 	background: white;
 	font-family: sans-serif;
-	-webkit-text-size-adjust: none;
+	word-break: break-word;
 }
 
 p,
