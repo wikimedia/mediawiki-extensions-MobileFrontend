@@ -272,6 +272,7 @@ table.gallery td {
 table[style] {
 	float: none !important;
 	margin-left: 0 !important;
+	width: 100% !important;
 }
 
 table.navbox td.navbox-group {
