@@ -19,27 +19,28 @@ class ApiMobileView extends ApiBase {
 			? $this->parseSections( $params['section'] )
 			: array();
 		$prop = array_flip( $params['prop'] );
-		$sectionProp = $prop['sectionprop'];
+		$sectionProp = array_flip( $params['sectionprop'] );
 
 		$title = Title::newFromText( $params['page'] );
-		if ( !$title || !$title->exists() ) {
-			$this->dieUsage( "Page `$page' does not exist", 'nopage' );
-		}
-		if ( $title->getNamespace() < 0 || !$title->isLocal() ) {
-			$this->dieUsage($description, $errorCode);
+		if ( !$title || !$title->exists() || $title->getNamespace() < 0 || !$title->isLocal() ) {
+			$this->dieUsageMsg( array( 'invalidtitle', $params['page'] ) );
 		}
 		$data = $this->getData( $title, $params['noimages'] );
+		$result = array();
 		if ( isset( $prop['sections'] ) ) {
 			$requestedSections = array_flip( $requestedSections );
-			$result = $data['sections'];
-			for ( $i = 0; $i < count( $data['sections'] ); $i++ ) {
-				$result[$i]['id'] = $i;
-				if ( isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
-					$result[$i][$textElement] = $data['text'][$i];
+			for ( $i = 0; $i <= count( $data['sections'] ); $i++ ) {
+				$section = array();
+				if ( $i > 0 ) {
+					$section = array_intersect_key( $data['sections'][$i - 1], $sectionProp );
 				}
+				$section['id'] = $i;
+				if ( isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
+					$section[$textElement] = $data['text'][$i];
+				}
+				$result[] = $section;
 			}
 		} else {
-			$result = array();
 			foreach ( $requestedSections as $index ) {
 				$section = array( 'id' => $index );
 				if ( isset( $data['text'][$index] ) ) {
