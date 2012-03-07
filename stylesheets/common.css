@@ -179,8 +179,8 @@ a.external {
 	border-bottom: 1px solid #888;
 	z-index: 2;
 	position: absolute;
-	left: 52px; /* #searchbox padding left 44px +  margin-left */
-	right: 40px; /* #searchbox padding right 32px + header margin-right */
+	left: 53px; /* #searchbox padding left 44px +  #header margin-left + #searchbox border right */
+	right: 41px; /* #searchbox padding right 32px + #header margin-right + #searchbox border left*/
 }
 
 html[dir="rtl"] #results {
