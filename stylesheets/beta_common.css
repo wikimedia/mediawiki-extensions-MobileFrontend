@@ -42,7 +42,6 @@ html[dir="rtl"] .clearlink {
 
 #zero-rated-banner {
 	position: relative;
-	height: 20px;
 	width: 100%;
 	z-index: 99;
 	background: #F4A83D;
@@ -61,7 +60,6 @@ html[dir="rtl"] .clearlink {
 
 #zero-rated-banner-red {
 	position: relative;
-	height: 20px;
 	width: 100%;
 	z-index: 99;
 	background: #FF0000;
