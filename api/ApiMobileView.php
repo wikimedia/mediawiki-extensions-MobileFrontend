@@ -15,8 +15,8 @@ class ApiMobileView extends ApiBase {
 		// Enough '*' keys in JSON!!!
 		$textElement = $this->getMain()->getPrinter()->getFormat() == 'XML' ? '*' : 'text';
 		$params = $this->extractRequestParams();
-		$requestedSections = isset( $params['section'] )
-			? $this->parseSections( $params['section'] )
+		$requestedSections = isset( $params['sections'] )
+			? $this->parseSections( $params['sections'] )
 			: array();
 		$prop = array_flip( $params['prop'] );
 		$sectionProp = array_flip( $params['sectionprop'] );
@@ -125,7 +125,7 @@ class ApiMobileView extends ApiBase {
 			'page' => array(
 				ApiBase::PARAM_REQUIRED => true,
 			),
-			'section' => null,
+			'sections' => null,
 			'prop' => array(
 				ApiBase::PARAM_DFLT => 'text|sections',
 				ApiBase::PARAM_ISMULTI => true,
@@ -154,7 +154,7 @@ class ApiMobileView extends ApiBase {
 	public function getParamDescription() {
 		return array(
 			'page' => 'Title of page to process',
-			'section' => 'Pipe-separated list of section numbers for which to return text',
+			'sections' => 'Pipe-separated list of section numbers for which to return text',
 			'prop' => array(
 				'Which information to get',
 				' text       - HTML of selected section(s)',
@@ -180,7 +180,7 @@ class ApiMobileView extends ApiBase {
 
 	public function getExamples() {
 		return array(
-			'api.php?action=mobileview&page=Doom_metal&section=0'
+			'api.php?action=mobileview&page=Doom_metal&sections=0'
 		);
 	}
 
