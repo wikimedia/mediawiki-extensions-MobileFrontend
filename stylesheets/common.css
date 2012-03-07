@@ -62,7 +62,6 @@ html[dir="rtl"] .clearlink {
 	text-decoration: none;
 	display: block;
 	cursor: pointer;
-	height: 18px;
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
