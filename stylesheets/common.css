@@ -196,6 +196,7 @@ html[dir="rtl"] #results {
 	outline-width: initial;
 	outline-color: initial;
 	padding: 0;
+	height: 17px;
 }
 
 #search::-webkit-search-cancel-button {
