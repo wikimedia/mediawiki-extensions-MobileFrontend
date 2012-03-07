@@ -34,6 +34,7 @@ class ExtMobileFrontend {
 	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
 	public static $isBetaGroupMember = false;
+	public static $minifyJS = true;
 	public static $hideSearchBox = false;
 	public static $hideLogo = false;
 	public static $hideFooter = false;
@@ -1209,6 +1210,7 @@ class ExtMobileFrontend {
 						'dismissNotification' => self::$messages['mobile-frontend-dismiss-notification'],
 						'wgAppleTouchIcon' => $wgAppleTouchIcon,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
+						'minifyJS' => self::$minifyJS,
 						'device' => self::$device,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'wgScriptPath' => $wgScriptPath,

@@ -23,6 +23,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			}
 		}
 
+		$resourceSuffix = ( $this->data['minifyJS'] ) ? 'min.' : '';
 		$betaPrefix = ( $this->data['isBetaGroupMember'] ) ? 'beta_' : '';
 
 		$noticeHtml = ( isset( $this->data['noticeHtml'] ) ) ? $this->data['noticeHtml'] : '';
@@ -33,7 +34,6 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$endScriptTag = '"></script>';
 		$javaScriptPath =  $this->data['wgExtensionAssetsPath'] . '/MobileFrontend/javascripts/';
 
-		$openSearchScript = $startScriptTag . $javaScriptPath . $betaPrefix . 'opensearch.js?version=12142011129437' . $endScriptTag;
 		$jQueryScript = ( $this->data['device']['supports_jquery'] ) ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
 		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=122920111241' . $endScriptTag : '';
 
@@ -48,7 +48,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		  <head>
 			<title>{$this->data['htmlTitle']}</title>
 			<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=01182012210728' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1331146675' media='all' rel='Stylesheet' type='text/css' />
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=01182012210728' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
 			<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
@@ -72,9 +72,9 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
-			 {$startScriptTag}{$javaScriptPath}{$betaPrefix}application.js?version=01132011120915{$endScriptTag}
-			 {$startScriptTag}{$javaScriptPath}banner.js{$endScriptTag}
-			 {$openSearchScript}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}application.{$resourceSuffix}js?version=1331146675{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1331146675{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1331146675{$endScriptTag}
 			{$filePageScript}
 			<!--[endif]-->
 		  </body>
