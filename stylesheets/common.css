@@ -530,6 +530,7 @@ h2 {
 
 .thumb img {
 	max-width: 100% !important;
+	width: auto !important;
 }
 
 .thumb .thumbcaption {

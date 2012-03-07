@@ -523,6 +523,7 @@ a.back_to_top:visited {
 
 .thumb img {
 	max-width: 100% !important;
+	width: auto !important
 }
 
 .thumb .thumbcaption {
