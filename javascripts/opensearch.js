@@ -97,11 +97,11 @@ MobileFrontend.opensearch = (function() {
 			header = document.getElementById( 'header' );
 
 		results.style.display = 'block';
-		var top = sq.offsetParent.offsetTop + sq.offsetHeight + sq.offsetTop + 1 + header.offsetTop;
+		var top = sq.offsetParent.offsetTop + sq.offsetHeight + sq.offsetTop - 1 + header.offsetTop;
 		results.style.top = top + 'px';
 
 		if ( !sections || sections.length < 1 ) {
-			results.innerHTML = "No results";
+			results.innerHTML = '<div class="suggestions-results"><div class="suggestions-result">No results</div></div>';
 		} else {
 			if( results.firstChild ) {
 				results.removeChild( results.firstChild );

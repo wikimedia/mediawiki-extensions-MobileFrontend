@@ -180,8 +180,8 @@ a.external {
 	border-bottom: 1px solid #888;
 	z-index: 2;
 	position: absolute;
-	left: 53px;
-	right: 41px;
+	left: 52px; /* #searchbox padding left 44px +  margin-left */
+	right: 40px; /* #searchbox padding right 32px + header margin-right */
 }
 
 html[dir="rtl"] #results {
@@ -219,6 +219,7 @@ ul#footer-info {
 	zoom: 1;
 	vertical-align: middle;
 	position: relative;
+	z-index: 2;
 }
 
 #userloginForm table,
@@ -577,7 +578,7 @@ img.thumbborder {
 #searchbox {
 	width: auto;
 	position: relative;
-	padding: 7px 32px 7px 44px;
+	padding: 7px 32px 7px 44px; /* WARNING: check #results left and right */
 	border: 1px solid #cccccc;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
