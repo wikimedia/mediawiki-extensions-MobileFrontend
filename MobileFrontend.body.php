@@ -304,6 +304,9 @@ class ExtMobileFrontend {
 	}
 
 	/**
+	 * Invocation of BeforePageRedirect hook.
+	 * 
+	 * Ensures URLs are handled properly for select special pages.
 	 * @param $out OutputPage
 	 * @param $redirect
 	 * @param $code
@@ -311,21 +314,21 @@ class ExtMobileFrontend {
 	 */
 	public function beforePageRedirect( $out, &$redirect, &$code ) {
 		wfProfileIn( __METHOD__ );
+
 		$shouldDisplayMobileView = $this->shouldDisplayMobileView();
-		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
-			if ( $shouldDisplayMobileView ) {
-				$forceHttps = true;
-				$redirect = $this->getMobileUrl( $redirect, $forceHttps );
-			}
-		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) ) {
-			if ( $shouldDisplayMobileView ) {
-				$redirect = $this->getMobileUrl( $redirect );
-			}
-		} else if ( $out->getTitle()->isSpecial( 'Search' ) ) {			
-			if ( $shouldDisplayMobileView ) {
-				$redirect = $this->getMobileUrl( $redirect );
-			}
+		if ( !$shouldDisplayMobileView ) {
+			wfProfileOut( __METHOD__ );
+			return true;
 		}
+
+		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
+			$forceHttps = true;
+			$redirect = $this->getMobileUrl( $redirect, $forceHttps );
+		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) || 
+				$out->getTitle()->isSpecial( 'Search' ) ) {
+			$redirect = $this->getMobileUrl( $redirect );
+		}
+		
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
