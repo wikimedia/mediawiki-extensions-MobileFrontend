@@ -522,6 +522,8 @@ a.back_to_top:visited {
 
 .thumb .thumbinner[style] {
 	margin: 5px auto;
+	max-width: 100%;
+	width: auto !important;
 }
 
 .thumb img {
