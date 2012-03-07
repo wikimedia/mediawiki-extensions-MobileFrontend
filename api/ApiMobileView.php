@@ -22,11 +22,15 @@ class ApiMobileView extends ApiBase {
 		$sectionProp = array_flip( $params['sectionprop'] );
 
 		$title = Title::newFromText( $params['page'] );
-		if ( !$title || !$title->exists() || $title->getNamespace() < 0 || !$title->isLocal() ) {
+		if ( !$title ) {
+			$this->dieUsageMsg( array( 'missingtitle', $params['page'] ) );
+		}
+		if ( !$title->exists() ) {
 			$this->dieUsageMsg( array( 'invalidtitle', $params['page'] ) );
 		}
 		$data = $this->getData( $title, $params['noimages'] );
 		$result = array();
+		$missingSections = array();
 		if ( isset( $prop['sections'] ) ) {
 			$requestedSections = array_flip( $requestedSections );
 			for ( $i = 0; $i <= count( $data['sections'] ); $i++ ) {
@@ -37,51 +41,27 @@ class ApiMobileView extends ApiBase {
 				$section['id'] = $i;
 				if ( isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
 					$section[$textElement] = $data['text'][$i];
+					unset( $requestedSections[$i] );
 				}
 				$result[] = $section;
 			}
+			$missingSections = $requestedSections;
 		} else {
 			foreach ( $requestedSections as $index ) {
 				$section = array( 'id' => $index );
 				if ( isset( $data['text'][$index] ) ) {
 					$section[$textElement] = $data['text'][$index];
+				} else {
+					$missingSections[] = $index;
 				}
 				$result[] = $section;
 			}
 		}
+		if ( count( $missingSections ) ) {
+			$this->setWarning( 'Section(s) ' . implode( ', ', $missingSections ) . ' not found' );
+		}
 		$this->getResult()->setIndexedTagName( $result, 'section' );
 		$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
-	}
-
-	public function getAllowedParams() {
-		return array(
-			'page' => array(
-				ApiBase::PARAM_REQUIRED => true,
-			),
-			'section' => null,
-			'prop' => array(
-				ApiBase::PARAM_DFLT => 'text|sections',
-				ApiBase::PARAM_ISMULTI => true,
-				ApiBase::PARAM_TYPE => array(
-					'text',
-					'sections',
-				)
-			),
-			'sectionprop' => array(
-				ApiBase::PARAM_TYPE => array(
-					'toclevel',
-					'level',
-					'line',
-					'number',
-					'index',
-					'fromtitle',
-					'anchor',
-				),
-				ApiBase::PARAM_ISMULTI => true,
-				ApiBase::PARAM_DFLT => 'toclevel|line',
-			),
-			'noimages' => false,
-		);
 	}
 
 	private function parseSections( $str ) {
@@ -133,9 +113,48 @@ class ApiMobileView extends ApiBase {
 		return $data;
 	}
 
+	public function getAllowedParams() {
+		return array(
+			'page' => array(
+				ApiBase::PARAM_REQUIRED => true,
+			),
+			'section' => null,
+			'prop' => array(
+				ApiBase::PARAM_DFLT => 'text|sections',
+				ApiBase::PARAM_ISMULTI => true,
+				ApiBase::PARAM_TYPE => array(
+					'text',
+					'sections',
+				)
+			),
+			'sectionprop' => array(
+				ApiBase::PARAM_TYPE => array(
+					'toclevel',
+					'level',
+					'line',
+					'number',
+					'index',
+					'fromtitle',
+					'anchor',
+				),
+				ApiBase::PARAM_ISMULTI => true,
+				ApiBase::PARAM_DFLT => 'toclevel|line',
+			),
+			'noimages' => false,
+		);
+	}
+
 	public function getParamDescription() {
 		return array(
-			
+			'page' => 'Title of page to process',
+			'section' => 'Pipe-separated list of section numbers for which to return text',
+			'prop' => array(
+				'Which information to get',
+				' text       - HTML of selected section(s)',
+				' sections   - information about all sections on page',
+			),
+			'sectionprop' => 'What information about sections to get',
+			'noimages' => 'Return HTML without images',
 		);
 	}
 
@@ -146,7 +165,8 @@ class ApiMobileView extends ApiBase {
 	public function getPossibleErrors() {
 		return array_merge( parent::getPossibleErrors(),
 			array(
-				array( 'code' => 'invalid-section', 'info' => '' ),
+				array( 'missingtitle' ),
+				array( 'invalidtitle' ),
 			) 
 		);
 	}
