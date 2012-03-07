@@ -528,6 +528,10 @@ h2 {
 	margin: 5px auto;
 }
 
+.thumb img {
+	max-width: 100% !important;
+}
+
 .thumb .thumbcaption {
 	width: 100%;
 	margin: 5px 10px 0;

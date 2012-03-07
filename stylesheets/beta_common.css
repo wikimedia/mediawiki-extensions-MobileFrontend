@@ -237,7 +237,6 @@ ul#footer-info {
 
 table {
 	border-spacing: 0 !important;
-	max-width: 100%;
 	border-collapse: collapse !important;
 	border: 1px solid #cccccc;
 	padding: 3px;
@@ -520,6 +519,10 @@ a.back_to_top:visited {
 
 .thumb .thumbinner[style] {
 	margin: 5px auto;
+}
+
+.thumb img {
+	max-width: 100% !important;
 }
 
 .thumb .thumbcaption {
