@@ -206,7 +206,7 @@ class DeviceDetection {
 				'with_layout' => 'application',
 				'css_file_name' => 'wii',
 				'supports_javascript' => true,
-				'supports_jquery' => false,
+				'supports_jquery' => true,
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
