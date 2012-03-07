@@ -87,7 +87,7 @@ class ApiMobileView extends ApiBase {
 			return $data;
 		}
 		$parserOutput = $wp->getParserOutput( $parserOptions );
-		$mf = new MobileFormatter( '<html><body><div id="content">' . $parserOutput->getText() . '</div></body></html>',
+		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $parserOutput->getText() ),
 			$title,
 			'XHTML'
 		);
