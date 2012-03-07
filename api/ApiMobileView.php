@@ -4,7 +4,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
-	const CACHE_VERSION = 1;
+	const CACHE_VERSION = 2;
 
 	public function __construct( $main, $action ) {
 		parent::__construct( $main, $action );
@@ -42,6 +42,9 @@ class ApiMobileView extends ApiBase {
 				if ( isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
 					$section[$textElement] = $data['text'][$i];
 					unset( $requestedSections[$i] );
+				}
+				if ( isset( $data['refsections'][$i] ) ) {
+					$section['references'] = '';
 				}
 				$result[] = $section;
 			}
@@ -95,12 +98,16 @@ class ApiMobileView extends ApiBase {
 		$data['sections'] = $parserOutput->getSections();
 		$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
 		$data['text'] = array();
+		$data['refsections'] = array();
 		foreach ( $chunks as $chunk ) {
 			if ( count( $data['text'] ) ) {
 				$chunk = "<h$chunk";
 			}
 			if ( $wgUseTidy && count( $chunks ) > 1 ) {
 				$chunk = MWTidy::tidy( $chunk );
+			}
+			if ( preg_match( '/<ol\b[^>]*?class="references"/', $chunk ) ) {
+				$data['refsections'][count( $data['text'] )] = true;
 			}
 			$data['text'][] = $chunk;
 		}
