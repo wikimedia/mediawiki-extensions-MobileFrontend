@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	font-size: 1em;
+	font-size: 0.8em;
 	line-height: 1;
 	color: black;
 	background: white;
@@ -314,7 +314,10 @@ table td,
 table th {
 	border: 1px solid #cccccc;
 	padding: 3px;
-	word-break: break-word;
+}
+
+table th {
+	word-break: normal;
 }
 
 .mwm-message.mwm-notice {
