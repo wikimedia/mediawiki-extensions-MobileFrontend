@@ -51,7 +51,6 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1331146675' media='all' rel='Stylesheet' type='text/css' />
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=1331146675' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
-			<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			{$appleTouchIconTag}
 			{$jQueryScript}
