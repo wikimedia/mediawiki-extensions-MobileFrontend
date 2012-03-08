@@ -7182,6 +7182,7 @@ $messages['yue'] = array(
  * @author Hzy980512
  * @author Kuailong
  * @author Liangent
+ * @author Linforest
  * @author PhiLiP
  * @author Shizhao
  * @author Xiaomingyan
@@ -7246,6 +7247,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-login' => '登录',
 	'mobile-frontend-placeholder' => '在这里输入搜索内容...',
 	'mobile-frontend-dismiss-notification' => '关闭该通知',
+	'mobile-frontend-clear-search' => '清除',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
