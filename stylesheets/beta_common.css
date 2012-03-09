@@ -110,14 +110,12 @@ html[dir="rtl"] .clearlink {
 	text-decoration: none;
 	color: #666;
 }
-.suggestions-result a:link {
-	text-decoration: none;
-	color:#666;
-}
+
 .suggestions-result a:visited {
 	text-decoration: none;
 	color:#666;
 }
+
 .suggestions-result a:hover {
 	text-decoration: none;
 	color:#666;
@@ -126,9 +124,11 @@ html[dir="rtl"] .clearlink {
 	text-decoration: none;
 	color:#666;
 }
+
 .suggestions-result:hover {
 	background-color: #ACD1E9;
 }
+
 a.sq-val-update {
 	font-size: 1.3em;
 	display: block;
@@ -140,15 +140,15 @@ a.sq-val-update {
 	width: 1.5em;
 	text-align: center;
 }
-a.sq-val-update:link {
-	text-decoration: none;
-}
+
 a.sq-val-update:visited {
 	text-decoration: none;
 }
+
 a.sq-val-update:hover {
 	text-decoration: none;
 }
+
 a.sq-val-update:active {
 	text-decoration: none;
 }
