@@ -73,7 +73,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			<!--[if gt IE 9]><!-->
 			{$startScriptTag}{$javaScriptPath}{$betaPrefix}application.{$resourceSuffix}js?version=1331250586{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1331250586{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1331250586{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1331250599{$endScriptTag}
 			{$filePageScript}
 			<!--[endif]-->
 		  </body>
