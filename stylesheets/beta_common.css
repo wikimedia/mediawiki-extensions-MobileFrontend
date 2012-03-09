@@ -1,8 +1,8 @@
 html,
-body { 
-	margin: 0; 
-	padding: 0; 
-	height: 100%; 
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
 html {
@@ -104,26 +104,6 @@ html[dir="rtl"] .clearlink {
 	color: #735005;
 	font-weight: bold;
 	text-align: center;
-}
-
-.suggestions-results {
-	font-size: 1.4em;
-	cursor: pointer;
-	margin: 0;
-	padding: 0;
-}
-
-.suggestions-results hr {
-	margin: 0;
-}
-
-.suggestions-result {
-	color: black;
-	margin: 0;
-	line-height: 2.6em;
-	padding: 0.01em 0.25em;
-	postion: relative;
-	border-bottom: solid 1px #999999;
 }
 
 .suggestions-result a {
@@ -785,11 +765,19 @@ html[dir="rtl"] .full-screen-search #sq {
 	position: relative;
 	border-bottom: solid 1px #999;
 	font-size: 1.4em;
+	cursor: pointer;
+	margin: 0;
 }
 
 .full-screen-search .suggestions-result {
 	line-height: 2.6em;
 	border: none;
+	color: black;
+	margin: 0;
+	line-height: 2.6em;
+	padding: 0.01em 0.25em;
+	position: relative;
+	border-bottom: solid 1px #999999;
 }
 
 .full-screen-search .suggestions-result a:visited {
@@ -840,14 +828,4 @@ html[dir="rtl"] #remove-results {
 
 .full-screen-search #nav {
 	display: none !important;
-}
-
-#placeholder {
-	position: absolute;
-	left: 38px;
-	z-index: 2;
-	top: 0;
-	color: #666;
-	font-size: 16px;
-	padding-top: 10px;
 }
