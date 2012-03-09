@@ -40,8 +40,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$startLinkTag = "<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/";
 		$endLinkTag = "' media='all' rel='Stylesheet' type='text/css' />";
 		$filePageStyle = ( $this->data['isFilePage'] ) ? $startLinkTag . 'filepage.css' . $endLinkTag : '';
-		$buttonHideText = htmlentities( $this->data['hideText'], ENT_QUOTES );
-		$buttonShowText = htmlentities( $this->data['showText'], ENT_QUOTES );
+		$buttonHideText = Xml::escapeJsString( $this->data['hideText'] );
+		$buttonShowText = Xml::escapeJsString( $this->data['showText'] );
 
 
 		$applicationHtml = <<<HTML
