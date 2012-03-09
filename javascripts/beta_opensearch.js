@@ -185,12 +185,12 @@ MobileFrontend.opensearch = (function() {
 			search.focus();
 		}
 		if ( !sections || sections.length < 1 ) {
-			results.innerHTML = "<div class=\"suggestions-results\" title=\"No Results\">No Results</div>";
+			results.innerHTML = '<ul class="suggestions-results" title="No Results"><li class="suggestions-result">No Results</li></div>';
 		} else {
 			if( results.firstChild ) {
 				results.removeChild( results.firstChild );
 			}
-			suggestions = document.createElement( 'div' );
+			suggestions = document.createElement( 'ul' );
 			suggestions.className = 'suggestions-results';
 			results.appendChild( suggestions );
 			suggestionListener = function() {
@@ -200,7 +200,7 @@ MobileFrontend.opensearch = (function() {
 
 			for ( i = 0; i < sections.length; i++ ) {
 				section = sections[i];
-				suggestionsResult = document.createElement( 'div' );
+				suggestionsResult = document.createElement( 'li' );
 				link = document.createElement( 'a' );
 				suggestionsResult.setAttribute( 'title', section.label );
 				suggestionsResult.className = 'suggestions-result';
