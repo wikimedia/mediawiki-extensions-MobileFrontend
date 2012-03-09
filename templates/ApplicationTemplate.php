@@ -40,6 +40,9 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$startLinkTag = "<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/";
 		$endLinkTag = "' media='all' rel='Stylesheet' type='text/css' />";
 		$filePageStyle = ( $this->data['isFilePage'] ) ? $startLinkTag . 'filepage.css' . $endLinkTag : '';
+		$buttonHideText = htmlentities( $this->data['hideText'], ENT_QUOTES );
+		$buttonShowText = htmlentities( $this->data['showText'], ENT_QUOTES );
+
 
 		$applicationHtml = <<<HTML
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -59,8 +62,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				var title = "{$this->data['htmlTitle']}";
 				var scriptPath = "{$this->data['wgScriptPath']}";
 				var placeholder = "{$this->data['placeholder']}";
-				var showText = "{$this->data['showText']}";
-				var hideText = "{$this->data['hideText']}";
+				var showText = "{$buttonShowText}";
+				var hideText = "{$buttonHideText}";
 			  //]]>
 			</script>
 		  </head>
