@@ -20,7 +20,6 @@ class ExtMobileFrontend {
 	public static $format;
 	public static $search;
 	public static $callback;
-	public static $useFormat;
 	public static $disableImages;
 	public static $enableImages;
 	public static $isMainPage = false;
@@ -45,6 +44,8 @@ class ExtMobileFrontend {
 	public static $logoutHtml;
 	public static $loginHtml;
 	public static $zeroRatedBanner;
+	
+	protected $useFormat;
 	
 	/**
 	 * @var string xDevice header information
@@ -350,8 +351,9 @@ class ExtMobileFrontend {
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
 
 		$xDevice = $this->getXDevice();
-		self::$useFormat = $wgRequest->getText( 'useformat' );
-		$this->wmlContext->setUseFormat( self::$useFormat );
+		$this->checkUseFormatCookie();
+		$useFormat = $this->getUseFormat();
+		$this->wmlContext->setUseFormat( $useFormat );
 		$mobileAction = $this->getMobileAction();		
 
 		if ( !$this->shouldDisplayMobileView() ) {
@@ -1371,12 +1373,12 @@ class ExtMobileFrontend {
 		if ( !$this->isFauxMobileDevice() ) {
 			return;
 		}
-		
+		$useFormat = $this->getUseFormat();
 		if ( !isset( $parsedUrl[ 'query' ] )) {
-			$parsedUrl[ 'query' ] = 'useformat=' . urlencode( self::$useFormat );
+			$parsedUrl[ 'query' ] = 'useformat=' . urlencode( $useFormat );
 		} else {
 			$query = wfCgiToArray( $parsedUrl[ 'query' ] );
-			$query[ 'useformat' ] = urlencode( self::$useFormat );
+			$query[ 'useformat' ] = urlencode( $useFormat );
 			$parsedUrl[ 'query' ] = wfArrayToCgi( $query );
 		}
 	}
@@ -1427,7 +1429,8 @@ class ExtMobileFrontend {
 	}
 	
 	protected function isFauxMobileDevice() {
-		if ( self::$useFormat !== 'mobile' && self::$useFormat !== 'mobile-wap') {
+		$useFormat = $this->getUseFormat();
+		if ( $useFormat !== 'mobile' && $useFormat !== 'mobile-wap') {
 			return false;
 		} 
 
@@ -1475,6 +1478,47 @@ class ExtMobileFrontend {
 		}
 		
 		return $this->action;
+	}
+	
+	public function getUseFormat() {
+		global $wgRequest;
+		if ( !isset( $this->useFormat ) ) {
+			$useFormat = $wgRequest->getText( 'useformat' );
+			$this->setUseFormat( $useFormat );
+		}
+		return $this->useFormat;
+	}
+	
+	public function setUseFormat( $useFormat ) {
+		$this->useFormat = $useFormat;
+	}
+	
+	public function checkUseFormatCookie() {
+		global $wgRequest;
+		
+		$useFormat = $this->getUseFormat();
+		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat' );
+		if( !strlen( $useFormat ) && !is_null( $useFormatFromCookie ) ) {
+			$this->setUseFormat( $useFormatFromCookie );
+		}
+		
+		// if we should not be displaying the mobile view, make sure cookies are unset etc.
+		if ( !$this->shouldDisplayMobileView() ) {
+			// make sure cookie is unset for appropriate mobile actions
+			$mobileAction = $this->getMobileAction();
+			if ( in_array( $mobileAction, array( 'view_normal_site', 'disable_mobile_site' ) ) ) {
+				$wgRequest->response()->setCookie( 'mf_useformat', false, time() - 3600 );
+			}
+			
+			// make sure useformat is unset
+			$this->setUseFormat( '' );
+			return;
+		}
+		
+		// if getUseFormat and no cookie set, set the cookie
+		if ( is_null( $useFormatFromCookie ) && strlen( $useFormat ) ) {
+			$wgRequest->response()->setCookie( 'mf_useformat', $useFormat, 0 );
+		}
 	}
 	
 	public function getVersion() {

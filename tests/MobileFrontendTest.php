@@ -27,7 +27,6 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		global $wgExtMobileFrontend;
 		unset( $wgExtMobileFrontend );
 		unset( $_SERVER[ 'HTTP_X_DEVICE' ] );
-		ExtMobileFrontend::$useFormat = null;
 		parent::tearDown();
 	}
 
@@ -114,7 +113,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$testMethod = ( $assert ) ? 'assertTrue' : 'assertFalse';
 		$url = 'http://en.wikipedia.org/wiki/Article/?something=bananas';
 		if ( !empty( $useFormat ) ) $url .= "&useformat=" . $useFormat;
-		ExtMobileFrontend::$useFormat = $useFormat;
+		$wgExtMobileFrontend->setUseFormat( $useFormat );
 		
 		$parsedUrl = wfParseUrl( $url );
 		
@@ -165,7 +164,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		
 		$testMethod = ( $isFauxDevice ) ? 'assertTrue' : 'assertFalse';
 		
-		ExtMobileFrontend::$useFormat = $useformat;
+		$wgExtMobileFrontend->setUseFormat( $useformat );
 		$this->$testMethod( $isFauxMobileDevice->invokeArgs( $wgExtMobileFrontend, array() ), $msg );
 	}
 	
@@ -190,7 +189,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		if ( count( $requestVal )) {
 			foreach ( $requestVal as $key => $val ) {
 				if ( $key == 'useformat' ) {
-					ExtMobileFrontend::$useFormat = $val;
+					$wgExtMobileFrontend->setUseFormat( $val );
 				} else {
 					$wgRequest->setVal( $key, $val );
 				}
