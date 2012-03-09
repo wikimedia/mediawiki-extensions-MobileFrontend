@@ -228,7 +228,7 @@ MobileFrontend.opensearch = (function() {
 				suggestionsResult.appendChild( link );
 
 				link = document.createElement( 'a' );
-				link.setAttribute( 'href', section.value );
+				link.setAttribute( 'href', section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' ) );
 				link.className = 'search-result-item';
 				label = document.createTextNode( section.label );
 				link.appendChild( label );
