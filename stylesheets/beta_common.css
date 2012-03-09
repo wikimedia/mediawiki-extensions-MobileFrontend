@@ -591,7 +591,7 @@ html[dir="rtl"] #logo,
 	height: 25px;
 	width: 27px;
 	padding-bottom: 0;
-	text-indent: 999px;
+	text-indent: -999px;
 }
 
 html[dir="rtl"] .goButton {
