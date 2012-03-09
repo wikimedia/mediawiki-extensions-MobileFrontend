@@ -1218,6 +1218,8 @@ class ExtMobileFrontend {
 						'wgScriptPath' => $wgScriptPath,
 						'isFilePage' => self::$isFilePage,
 						'zeroRatedBanner' => self::$zeroRatedBanner,
+						'showText' => wfMessage( 'mobile-frontend-show-button' ),
+						'hideText' => wfMessage( 'mobile-frontend-hide-button' ),
 						);
 		$applicationTemplate->setByArray( $options );
 		wfProfileOut( __METHOD__ );

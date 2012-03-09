@@ -48,8 +48,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		  <head>
 			<title>{$this->data['htmlTitle']}</title>
 			<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1331250586' media='all' rel='Stylesheet' type='text/css' />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=1331250586' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1331255385' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=1331255385' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			{$appleTouchIconTag}
@@ -59,6 +59,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				var title = "{$this->data['htmlTitle']}";
 				var scriptPath = "{$this->data['wgScriptPath']}";
 				var placeholder = "{$this->data['placeholder']}";
+				var showText = "{$this->data['showText']}";
+				var hideText = "{$this->data['hideText']}";
 			  //]]>
 			</script>
 		  </head>
@@ -71,8 +73,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
-			{$startScriptTag}{$javaScriptPath}{$betaPrefix}application.{$resourceSuffix}js?version=1331250586{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1331250586{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}application.{$resourceSuffix}js?version=1331255385{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1331255385{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1331250599{$endScriptTag}
 			{$filePageScript}
 			<!--[endif]-->

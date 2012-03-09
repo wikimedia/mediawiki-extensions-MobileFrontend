@@ -24,7 +24,7 @@ MobileFrontend = (function() {
 		function createButton( visible ) {
 			var btn, label;
 			btn = document.createElement( 'button' );
-			label = document.createTextNode( visible ? 'Show' : 'Hide' );
+			label = document.createTextNode( visible ? showText : hideText );
 			btn.className = visible ? 'show' : 'hide';
 			btn.appendChild( label );
 			btn.style.display = visible ? 'inline-block' : 'none';
