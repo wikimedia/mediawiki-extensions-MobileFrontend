@@ -15,8 +15,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$callback( $mf );
 		}
 		$mf->filterContent();
-		$html = $mf->getText( 'content' );
-		$html = preg_replace( '/^<div.*?>|<\\/div>$/', '', $html ); // Forgive me father for I have sinned
+		$html = $mf->getText();
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
 	}
 

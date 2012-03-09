@@ -81,7 +81,7 @@ class ApiParseExtender {
 				$mf->removeImages( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
 				$mf->filterContent();
-				$data['parse']['text'] = $mf->getText( 'content' );
+				$data['parse']['text'] = $mf->getText();
 
 				$result->addValue( null, $module->getModuleName(), $data['parse'] );
 			}

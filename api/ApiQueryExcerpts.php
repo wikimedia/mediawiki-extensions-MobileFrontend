@@ -120,7 +120,6 @@ class ApiQueryExcerpts extends ApiQueryBase {
 		}
 		$mf->filterContent();
 		$text = $mf->getText();
-		$text = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $text );
 		if ( $plainText ) {
 			$text = html_entity_decode( $text );
 		}

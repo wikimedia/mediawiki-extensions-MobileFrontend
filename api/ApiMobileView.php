@@ -93,7 +93,7 @@ class ApiMobileView extends ApiBase {
 		);
 		$mf->removeImages( $noImages );
 		$mf->filterContent();
-		$html = $mf->getText( 'content' );
+		$html = $mf->getText();
 		$data = array();
 		$data['sections'] = $parserOutput->getSections();
 		$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );

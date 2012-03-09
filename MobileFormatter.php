@@ -103,13 +103,9 @@ class MobileFormatter {
 	/**
 	 * Turns a chunk of HTML into a proper document
 	 * @param string $html
-	 * @param bool $contentDiv
 	 * @return string
 	 */
-	public static function wrapHTML( $html, $contentDiv = true ) {
-		if ( $contentDiv ) {
-			$html = '<div id="content">' . $html . '</div>';
-		}
+	public static function wrapHTML( $html ) {
 		return '<!doctype html><html><head></head><body>' . $html . '</body></html>';
 	}
 
@@ -307,6 +303,9 @@ class MobileFormatter {
 		if ( $this->elementsToFlatten ) {
 			$elements = implode( '|', $this->elementsToFlatten );
 			$html = preg_replace( "#</?($elements)[^>]*>#is", '', $html );
+		}
+		if ( !$element ) {
+			$html = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $html );
 		}
 		
 		wfProfileOut( __METHOD__ );
