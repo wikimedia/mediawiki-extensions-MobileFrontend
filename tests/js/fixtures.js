@@ -1,3 +1,5 @@
+var showText = "show", hideText = "hide";
+
 window.MobileFrontendTests = {
 	cleanFixtures: function() {
 		// note the ZeroRatedMobileAccess extension attaches a banner to the qunit test suite
