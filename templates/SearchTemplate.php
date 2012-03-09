@@ -14,6 +14,8 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$homeButton = $this->data['messages']['mobile-frontend-home-button'];
 		$randomButton = $this->data['messages']['mobile-frontend-random-button'];
 		$clearText = htmlentities( $this->data['messages']['mobile-frontend-clear-search'], ENT_QUOTES );
+		$searchValue = $this->data['messages']['mobile-frontend-search-submit'];
+		$placeholder = htmlentities( $this->data['messages']['mobile-frontend-placeholder'], ENT_QUOTES );
 
 		$scriptUrl = wfScript();
 		$searchBoxDisplayNone = ( $this->data['hideSearchBox'] ) ? ' style="display: none;" ' : '';
@@ -34,7 +36,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 			<form action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
-					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024" class="search" />
+					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024" class="search" placeholder="{$placeholder}" />
 					<div class="clearlink" id="clearsearch" title="{$clearText}"></div>
 				</div>
 			  <button id='goButton' class='goButton' type='submit'></button>

@@ -61,7 +61,6 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			  //<![CDATA[
 				var title = "{$this->data['htmlTitle']}";
 				var scriptPath = "{$this->data['wgScriptPath']}";
-				var placeholder = "{$this->data['placeholder']}";
 				var showText = "{$buttonShowText}";
 				var hideText = "{$buttonHideText}";
 			  //]]>

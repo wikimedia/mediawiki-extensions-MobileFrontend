@@ -40,7 +40,7 @@ MobileFrontend.opensearch = (function() {
 	resetViewPort();
 
 	search.onfocus = function() {
-		var pE, pT, pTT, rrd, rrdD,
+		var rrd, rrdD,
 			removeResultsEl;
 		sb = document.getElementById( 'searchbox' );
 		sq = document.getElementById( 'sq' );
@@ -50,23 +50,6 @@ MobileFrontend.opensearch = (function() {
 
 		if ( !focused ) {
 			MobileFrontend.utils( document.body ).addClass( 'full-screen-search' );
-
-			pE = document.getElementById( 'placeholder' );
-			if ( !pE ) {
-				pT = document.createElement( 'span' );
-				pTT = document.createTextNode(placeholder);
-				pT.setAttribute( 'id', 'placeholder' );
-				pT.appendChild(pTT);
-				sb.insertBefore( pT, sb.firstChild );
-			}
-			pE = document.getElementById( 'placeholder' );
-			if ( pE ) {
-				pE.style.display = 'block';
-			}
-
-			if ( pE && search.value !== '' ) {
-				pE.style.display = 'none';
-			}
 
 			removeResultsEl = document.getElementById( 'remove-results' );
 			if ( !removeResultsEl ) {
@@ -244,13 +227,6 @@ MobileFrontend.opensearch = (function() {
 		}
 	}
 
-	function handleDefaultText() {
-		var pE = document.getElementById( 'placeholder' );
-		if ( pE ) {
-			pE.style.display = 'none';
-		}
-	}
-
 	function initClearSearch() {
 		var clearSearch = document.getElementById( 'clearsearch' ),
 			search = document.getElementById( 'search' ),
@@ -278,7 +254,6 @@ MobileFrontend.opensearch = (function() {
 		}
 		u( clearSearch ).bind( 'mousedown', clearSearchBox );
 		u( search ).bind( 'keyup', handleClearSearchLink );
-		u( search ).bind( 'keydown', handleDefaultText );
 		u( search ).bind( 'click', onFocusHandler );
 	}
 
@@ -288,7 +263,6 @@ MobileFrontend.opensearch = (function() {
 		document.body.onmousedown = whichElement;
 		document.body.ontouchstart = whichElement;
 		results.ontouchstart = whichElement;
-		search.onpaste = handleDefaultText;
 	}
 	init();
 	initClearSearch();
