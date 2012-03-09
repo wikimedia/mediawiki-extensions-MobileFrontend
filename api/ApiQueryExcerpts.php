@@ -46,6 +46,36 @@ class ApiQueryExcerpts extends ApiQueryBase {
 	}
 
 	/**
+	 * OpenSearchXml hook handler
+	 * @param array $results
+	 */
+	public static function onOpenSearchXml( &$results ) {
+		global $wgMFExtendOpenSearchXml;
+		if ( !$wgMFExtendOpenSearchXml || !count( $results ) ) {
+			return true;
+		}
+		$pageIds = array_keys( $results );
+		$api = new ApiMain( new FauxRequest(
+			array(
+				'action' => 'query',
+				'prop' => 'excerpts',
+				'explaintext' => true,
+				'exlimit' => count( $results ),
+				'pageids' => implode( '|', $pageIds ),
+			) )
+		);
+		$api->execute();
+		$data = $api->getResultData();
+		foreach ( $pageIds as $id ) {
+			if ( isset( $data['query']['pages'][$id]['excerpts'][0] ) ) {
+				$results[$id]['extract'] = $data['query']['pages'][$id]['excerpts'][0];
+				$results[$id]['extract trimmed'] = false;
+			}
+		}
+		return true;
+	}
+
+	/**
 	 * Returns a processed, but not trimmed excerpt
 	 * @param Title $title
 	 * @return string 
@@ -165,8 +195,8 @@ class ApiQueryExcerpts extends ApiQueryBase {
 				ApiBase::PARAM_DFLT => 1,
 				ApiBase::PARAM_TYPE => 'limit',
 				ApiBase::PARAM_MIN => 1,
-				ApiBase::PARAM_MAX => 20,
-				ApiBase::PARAM_MAX2 => 20,
+				ApiBase::PARAM_MAX => 100,
+				ApiBase::PARAM_MAX2 => 100,
 			),
 			'plaintext' => false,
 			'continue' => array(

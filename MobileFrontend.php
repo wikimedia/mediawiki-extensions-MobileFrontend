@@ -121,6 +121,7 @@ $wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
 $wgHooks['APIAfterExecute'][] = 'ApiParseExtender::onAPIAfterExecute';
 $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescription';
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
+$wgHooks['OpenSearchXml'][] = 'ApiQueryExcerpts::onOpenSearchXml';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;
@@ -160,3 +161,8 @@ function efExtMobileFrontendUnitTests( &$files ) {
 	$files[] = "$dir/MobileFormatterTest.php";
 	return true;
 }
+
+/**
+ * Whether this extension should provide its excerpts to OpenSearchXml extension
+ */
+$wgMFExtendOpenSearchXml = false;
