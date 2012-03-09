@@ -3,18 +3,13 @@
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term,
-		results = document.getElementById( 'results' ),
 		search = document.getElementById( 'search' ),
 		sq = document.getElementById( 'sq' ),
 		sb = document.getElementById( 'searchbox' ),
-		logo = document.getElementById( 'logo' ),
-		goButton = document.getElementById( 'goButton' ),
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
-		zeroRatedBanner = document.getElementById( 'zero-rated-banner' ) ||
-			document.getElementById( 'zero-rated-banner-red' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
-		focused = false, ol = {},
+		focused = false,
 		u = MobileFrontend.utils;
 
 	if ( scriptPath ) {
@@ -40,8 +35,7 @@ MobileFrontend.opensearch = (function() {
 	resetViewPort();
 
 	search.onfocus = function() {
-		var rrd, rrdD,
-			removeResultsEl;
+		var rrd, rrdD;
 		sb = document.getElementById( 'searchbox' );
 		sq = document.getElementById( 'sq' );
 		content = document.getElementById( 'content' );
@@ -51,8 +45,8 @@ MobileFrontend.opensearch = (function() {
 		if ( !focused ) {
 			MobileFrontend.utils( document.body ).addClass( 'full-screen-search' );
 
-			removeResultsEl = document.getElementById( 'remove-results' );
-			if ( !removeResultsEl ) {
+			rrd = document.getElementById( 'remove-results' );
+			if ( !rrd ) {
 				rrd = document.createElement( 'a' );
 				rrd.setAttribute( 'href', '#' );
 				rrd.setAttribute( 'id', 'remove-results' );
@@ -68,11 +62,6 @@ MobileFrontend.opensearch = (function() {
 
 	function removeResults() {
 		MobileFrontend.utils( document.body ).removeClass( 'full-screen-search' );
-		var removeResultsEl, pE = document.getElementById( 'placeholder' );
-
-		if ( pE ) {
-			pE.style.display = 'none';
-		}
 
 		if ( focused ) {
 			focused = false;
@@ -165,8 +154,8 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function htmlEntities( str ) {
-		var text = document.createTextNode( str );
-		var el = document.createElement( 'div' );
+		var text = document.createTextNode( str ),
+			el = document.createElement( 'div' );
 		el.appendChild( text );
 		return el.innerHTML;
 	}
@@ -229,8 +218,7 @@ MobileFrontend.opensearch = (function() {
 
 	function initClearSearch() {
 		var clearSearch = document.getElementById( 'clearsearch' ),
-			search = document.getElementById( 'search' ),
-			results = document.getElementById( 'results' );
+			search = document.getElementById( 'search' );
 		function handleClearSearchLink() {
 			if ( clearSearch ) {
 				if ( search.value.length > 0 ) {
