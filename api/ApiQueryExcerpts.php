@@ -226,7 +226,7 @@ class ApiQueryExcerpts extends ApiQueryBase {
 
 	public function getExamples() {
 		return array(
-			'api.php?action=query&prop=excerpt&length=175&titles=Therion' => 'Get a 175-character excerpt',
+			'api.php?action=query&prop=excerpts&exlength=175&titles=Therion' => 'Get a 175-character excerpt',
 		);
 	}
 
