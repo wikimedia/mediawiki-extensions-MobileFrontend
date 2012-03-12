@@ -23,7 +23,7 @@ MobileFrontend.toggle = (function() {
 		function createButton( visible ) {
 			var btn, label;
 			btn = document.createElement( 'button' );
-			label = document.createTextNode( visible ? showText : hideText );
+			label = document.createTextNode( MobileFrontend.message( visible ? 'expand-section' : 'collapse-section' ) );
 			btn.className = visible ? 'show' : 'hide';
 			btn.appendChild( label );
 			btn.style.display = visible ? 'inline-block' : 'none';
