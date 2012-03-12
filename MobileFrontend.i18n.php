@@ -5939,6 +5939,7 @@ $messages['si'] = array(
 
 /** Slovak (Slovenčina)
  * @author Helix84
+ * @author Teslaton
  */
 $messages['sk'] = array(
 	'mobile-frontend-desc' => 'Mobilné rozhranie',
@@ -5999,6 +6000,8 @@ $messages['sk'] = array(
 	'mobile-frontend-password' => 'Heslo:',
 	'mobile-frontend-login' => 'Prihlásiť sa',
 	'mobile-frontend-placeholder' => 'Sem napíšte hľadaný výraz...',
+	'mobile-frontend-dismiss-notification' => 'zavrieť toto oznámenie',
+	'mobile-frontend-clear-search' => 'Vyčistiť',
 );
 
 /** Slovenian (Slovenščina)
