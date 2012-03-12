@@ -36,6 +36,12 @@ MobileFrontend = (function() {
 				return [].slice.call( document.querySelectorAll( el ) );
 			}
 		}
+
+		function hasClass( name ) {
+			var classNames = el.className.split( '' );
+			return classNames.indexOf( name ) > -1;
+		}
+
 		function addClass( name ) {
 			var className = el.className,
 				classNames = className.split( ' ' );
@@ -66,6 +72,7 @@ MobileFrontend = (function() {
 		return {
 			addClass: addClass,
 			bind: bind,
+			hasClass: hasClass,
 			remove: remove,
 			removeClass: removeClass
 		};

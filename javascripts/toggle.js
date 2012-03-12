@@ -26,7 +26,6 @@ MobileFrontend.toggle = (function() {
 			label = document.createTextNode( MobileFrontend.message( visible ? 'expand-section' : 'collapse-section' ) );
 			btn.className = visible ? 'show' : 'hide';
 			btn.appendChild( label );
-			btn.style.display = visible ? 'inline-block' : 'none';
 			return btn;
 		}
 		if(!sectionHeadings) {
@@ -73,9 +72,10 @@ MobileFrontend.toggle = (function() {
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ),
 			bb = b.getElementsByTagName( 'button' ), i, s, e;
-		for ( i = 0; i <= 1; i++ ) {
-			s = bb[i].style;
-			s.display = s.display === 'none' || ( i && !s.display ) ? 'inline-block' : 'none';
+		if( u(b).hasClass( 'openSection' ) ) {
+			u(b).removeClass( 'openSection' );
+		} else {
+			u(b).addClass( 'openSection' );
 		}
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
 			e = document.getElementById( d[i] + section_id );

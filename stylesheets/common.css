@@ -332,17 +332,23 @@ h3#sopa-notice {
 	margin: 0px;
 }
 
-button.show {
+button.show,
+button.hide { /* for non-js browsers */
 	display: none;
 }
 
+.togglingEnabled button.hide,
+.togglingEnabled .openSection button.show {
+	display: none;
+}
+
+.togglingEnabled .openSection button.hide,
 .togglingEnabled button.show {
 	display: inline-block;
 }
 
 .togglingEnabled .content_block,
-.togglingEnabled .section_anchors,
-button.section_heading.hide {
+.togglingEnabled .section_anchors {
 	display: none;
 }
 
