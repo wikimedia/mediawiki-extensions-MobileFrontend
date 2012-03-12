@@ -75,7 +75,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
-			{$startScriptTag}{$javaScriptPath}{$betaPrefix}application.{$resourceSuffix}js?version=1331257310{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js?version=1331257310{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version=1331257310{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1331257310{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1331250599{$endScriptTag}
 			{$filePageScript}
