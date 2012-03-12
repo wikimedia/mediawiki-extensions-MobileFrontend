@@ -92,6 +92,9 @@ MobileFrontend = (function() {
 	init();
 	return {
 		init: init,
+		message: function(name) {
+			return locale[ name ];
+		},
 		utils: utilities
 	};
 
