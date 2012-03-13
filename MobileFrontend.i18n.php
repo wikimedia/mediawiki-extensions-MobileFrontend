@@ -76,10 +76,6 @@ $messages['en'] = array (
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-sopa-notice' => '<h3 id="sopa-notice">Thank you for protecting Wikipedia.</h3><br/><a href="http://en.wikipedia.org/wiki/Wikipedia:SOPA_initiative/Mobile_Learn_more">(We’re not done yet.)</a>',
 	'mobile-frontend-clear-search' => 'Clear',
-	
-	//SpecialMobileFrontendContactUs
-	'mobilefrontendcontactus' => 'Contact us',
-	'mobilefrontendcontactus-description' => 'A contact page for MobileFrontend',
 );
 
 /** Message documentation (Message documentation)
@@ -116,9 +112,6 @@ $messages['qqq'] = array(
 	'mobile-frontend-placeholder' => 'Phrase used to prompt user to use search interface for mobile full screen search',
 	'mobile-frontend-dismiss-notification' => 'Phrase used to dismiss the top banner notification',
 	'mobile-frontend-clear-search' => 'Tooltip for clear button that appears when you type into search box',
-	
-	//SpecialMobileFrontendContactUs
-	'mobilefrontendcontactus-description' => '{{desc}}',
 );
 
 /** Achinese (Acèh) */

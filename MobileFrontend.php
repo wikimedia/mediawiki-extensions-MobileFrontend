@@ -64,22 +64,10 @@ $autoloadClasses = array (
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
 	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
-	
-	// special pages
-	'SpecialMobileFrontendContactUs' => 'special/SpecialMobileFrontendContactUs',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
 	$wgAutoloadClasses[$className] = "$cwd/$classFilename.php";
-}
-
-// Special page definitions (classes autloaded above)
-$specialPages = array(
-	'MobileFrontendContactUs' => 'SpecialMobileFrontendContactUs',	
-);
-
-foreach ( $specialPages as $specialPageName => $specialClassName ) {
-	$wgSpecialPages[ $specialPageName ] = $specialClassName;
 }
 
 /**
