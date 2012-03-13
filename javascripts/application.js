@@ -35,10 +35,12 @@ MobileFrontend = (function() {
 			if( document.querySelectorAll ) {
 				return [].slice.call( document.querySelectorAll( el ) );
 			}
+		} else if( !el ) {
+			el = document.createElement( 'div' );
 		}
 
 		function hasClass( name ) {
-			var classNames = el.className.split( '' );
+			var classNames = el.className.split( ' ' );
 			return classNames.indexOf( name ) > -1;
 		}
 
