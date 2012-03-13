@@ -61,8 +61,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		  <head>
 			<title>{$this->data['htmlTitle']}</title>
 			<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1331257310' media='all' rel='Stylesheet' type='text/css' />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=1331257310' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1331676342' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=1331676342' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
 			<meta name="viewport" content="initial-scale=1.0">
 			{$appleTouchIconTag}
