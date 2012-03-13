@@ -3,16 +3,10 @@
 /**
  * Converts HTML into a mobile-friendly version
  */
-class MobileFormatter {
+class MobileFormatter extends HtmlFormatter {
 	const WML_SECTION_SEPARATOR = '***************************************************************************';
 
-	/**
-	 * @var DOMDocument
-	 */
-	protected $doc;
 	protected $format;
-	protected $removeImages = false;
-	protected $idWhitelist = array();
 
 	/**
 	 * @var Ttile
@@ -69,9 +63,6 @@ class MobileFormatter {
 		'.nomobile',
 	);
 
-	private $itemsToRemove = array();
-	private $elementsToFlatten = array();
-
 	/**
 	 * Constructor
 	 *
@@ -81,7 +72,7 @@ class MobileFormatter {
 	 * @param WmlContext $wmlContext: Context for creation of WML cards, can be omitted if $format == 'XHTML'
 	 */
 	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
-		wfProfileIn( __METHOD__ );
+		parent::__construct( $html );
 
 		$this->title = $title;
 		$this->format = $format;
@@ -89,24 +80,7 @@ class MobileFormatter {
 			throw new MWException( __METHOD__ . '(): WML context not set' );
 		}
 		$this->wmlContext = $wmlContext;
-
-		$html = mb_convert_encoding( $html, 'HTML-ENTITIES', "UTF-8" );
-		libxml_use_internal_errors( true );
-		$this->doc = new DOMDocument();
-		$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
-		libxml_use_internal_errors( false );
-		$this->doc->preserveWhiteSpace = false;
-		$this->doc->strictErrorChecking = false;
-		$this->doc->encoding = 'UTF-8';
-	}
-
-	/**
-	 * Turns a chunk of HTML into a proper document
-	 * @param string $html
-	 * @return string
-	 */
-	public static function wrapHTML( $html ) {
-		return '<!doctype html><html><head></head><body>' . $html . '</body></html>';
+		$this->flattenRedLinks();
 	}
 
 	/**
@@ -115,13 +89,6 @@ class MobileFormatter {
 	 */
 	public function useMessages( Array $messages ) {
 		$this->messages = $messages;
-	}
-
-	/**
-	 * @return DOMDocument: DOM to manipulate 
-	 */
-	public function getDoc() {
-		return $this->doc;
 	}
 
 	/**
@@ -144,148 +111,37 @@ class MobileFormatter {
 	}
 
 	/**
-	 * Sets whether images should be removed from output
-	 * @param bool $flag 
-	 */
-	public function removeImages( $flag = true ) {
-		$this->removeImages = $flag;
-	}
-
-	/**
-	 * Adds one or more selector of content to remove
-	 * @param Array|string $selectors: Selector(s) of stuff to remove
-	 */
-	public function remove( $selectors ) {
-		$this->itemsToRemove = array_merge( $this->itemsToRemove, (array)$selectors );
-	}
-
-	/**
-	 * Adds one or more element name to the list to flatten (remove tag, but not its content)
-	 * @param Array|string $elements: Name(s) of tag(s) to flatten
-	 */
-	public function flatten( $elements ) {
-		$this->elementsToFlatten = array_merge( $this->elementsToFlatten, (array)$elements );
-	}
-
-	/**
-	 * @param Array|string $ids: Id(s) of content to keep
-	 */
-	public function whitelistIds( $ids ) {
-		$this->idWhitelist = array_merge( $this->idWhitelist, array_flip( (array)$ids ) );
-	}
-
-	/**
 	 * Removes content inappropriate for mobile devices
 	 * @param bool $removeDefaults: Whether default settings at self::$defaultItemsToRemove should be used
 	 */
 	public function filterContent( $removeDefaults = true ) {
 		global $wgMFRemovableClasses;
 
-		wfProfileIn(__METHOD__ );
 		if ( $removeDefaults ) {
-			$this->itemsToRemove = array_merge( $this->itemsToRemove,
-				self::$defaultItemsToRemove, $wgMFRemovableClasses
-			);
+			$this->remove( self::$defaultItemsToRemove );
+			$this->remove( $wgMFRemovableClasses );
 		}
-		$removals = $this->parseItemsToRemove();
-		
-		// Remove tags
-
-		// You can't remove DOMNodes from a DOMNodeList as you're iterating
-		// over them in a foreach loop. It will seemingly leave the internal
-		// iterator on the foreach out of wack and results will be quite
-		// strange. Though, making a queue of items to remove seems to work.
-		// For example:
-
-		$domElemsToRemove = array();
-		foreach ( $removals['TAG'] as $tagToRemove ) {
-			$tagToRemoveNodes = $this->doc->getElementsByTagName( $tagToRemove );
-			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
-				$tagToRemoveNodeIdAttributeValue = '';
-				if ( $tagToRemoveNode ) {
-					$tagToRemoveNodeIdAttribute = $tagToRemoveNode->getAttributeNode( 'id' );
-					if ( $tagToRemoveNodeIdAttribute ) {
-						$tagToRemoveNodeIdAttributeValue = $tagToRemoveNodeIdAttribute->value;
-					}
-					if ( !isset( $this->idWhitelist[$tagToRemoveNodeIdAttributeValue] ) ) {
-						$domElemsToRemove[] = $tagToRemoveNode;
-					}
-				}
-			}
-		}
-
-		foreach ( $domElemsToRemove as $domElement ) {
-			$domElement->parentNode->removeChild( $domElement );
-		}
-
-		// Elements with named IDs
-		foreach ( $removals['ID'] as $itemToRemove ) {
-			$itemToRemoveNode = $this->doc->getElementById( $itemToRemove );
-			if ( $itemToRemoveNode ) {
-				$itemToRemoveNode->parentNode->removeChild( $itemToRemoveNode );
-			}
-		}
-
-		// CSS Classes
-		$xpath = new DOMXpath( $this->doc );
-		foreach ( $removals['CLASS'] as $classToRemove ) {
-			$elements = $xpath->query( '//*[@class="' . $classToRemove . '"]' );
-
-			foreach ( $elements as $element ) {
-				$element->parentNode->removeChild( $element );
-			}
-		}
-
-		// Tags with CSS Classes
-		foreach ( $removals['TAG_CLASS'] as $classToRemove ) {
-			$parts = explode( '.', $classToRemove );
-
-			$elements = $xpath->query(
-				'//' . $parts[0] . '[@class="' . $parts[1] . '"]'
-			);
-
-			foreach ( $elements as $element ) {
-				$removedElement = $element->parentNode->removeChild( $element );
-			}
-		}
-
-		// Handle red links with action equal to edit
-		$redLinks = $xpath->query( '//a[@class="new"]' );
-		foreach ( $redLinks as $redLink ) {
-			// PHP Bug #36795 — Inappropriate "unterminated entity reference"
-			$spanNode = $this->doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
-
-			if ( $redLink->hasAttributes() ) {
-				$attributes = $redLink->attributes;
-				foreach ( $attributes as $i => $attribute ) {
-					if ( $attribute->name != 'href' ) {
-						$spanNode->setAttribute( $attribute->name, $attribute->value );
-					}
-				}
-			}
-
-			$redLink->parentNode->replaceChild( $spanNode, $redLink );
-		}
-		wfProfileOut( __METHOD__ );
+		parent::filterContent();
 	}
 
 	/**
 	 * Performs final transformations to mobile format and returns resulting HTML/WML
 	 *
-	 * @param string|bool $id: ID of element to get HTML from or false to get it from the whole tree
-	 * @param string $prependHtml: HTML to be prepended to result before final transformations
-	 * @param string $appendHtml: HTML to be appended to result before final transformations
+	 * @param DOMElement|string|null $element: ID of element to get HTML from or false to get it from the whole tree
+
 	 * @return string: Processed HTML
 	 */
-	public function getText( $id = false, $prependHtml = '', $appendHtml = '' ) {
+	public function getText( $element = false ) {
 		wfProfileIn( __METHOD__ );
 		if ( $this->mainPage ) {
 			$element = $this->parseMainPage( $this->doc );
-		} else {
-			$element = $id ? $this->doc->getElementById( $id ) : null;
 		}
-		$html = $prependHtml . $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG ) . $appendHtml;
-		
+		$html = parent::getText( $element );
+		wfProfileOut( __METHOD__ );
+		return $html;
+	}
+
+	protected function onHtmlReady( $html ) {
 		switch ( $this->format ) {
 			case 'XHTML':
 				if ( $this->expandableSections && !$this->mainPage && strlen( $html ) > 4000 ) {
@@ -300,15 +156,6 @@ class MobileFormatter {
 				$html = $this->createWMLCard( $html );
 				break;
 		}
-		if ( $this->elementsToFlatten ) {
-			$elements = implode( '|', $this->elementsToFlatten );
-			$html = preg_replace( "#</?($elements)[^>]*>#is", '', $html );
-		}
-		if ( !$element ) {
-			$html = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $html );
-		}
-		
-		wfProfileOut( __METHOD__ );
 		return $html;
 	}
 
@@ -493,40 +340,6 @@ class MobileFormatter {
 			return $this->messages[$key];
 		}
 		throw new MWException( __METHOD__ . ": unrecognised message key '$key' in cached mode" );
-	}
-
-	/**
-	 * Transforms CSS selectors into an internal representation suitable for processing
-	 * @return array
-	 */
-	private function parseItemsToRemove() {
-		wfProfileIn( __METHOD__ );
-		$removals = array(
-			'ID' => array(),
-			'TAG' => array(),
-			'CLASS' => array(),
-			'TAG_CLASS' => array(),
-		);
-
-		foreach ( $this->itemsToRemove as $itemToRemove ) {
-			$type = '';
-			$rawName = '';
-			CssDetection::detectIdCssOrTag( $itemToRemove, $type, $rawName );
-			$removals[$type][] = $rawName;
-		}
-
-		if ( $this->removeImages ) {
-			$removals['TAG'][] = "img";
-			$removals['TAG'][] = "audio";
-			$removals['TAG'][] = "video";
-			$removals['CLASS'][] = "thumb tright";
-			$removals['CLASS'][] = "thumb tleft";
-			$removals['CLASS'][] = "thumbcaption";
-			$removals['CLASS'][] = "gallery";
-		}
-
-		wfProfileOut( __METHOD__ );
-		return $removals;
 	}
 
 	/**

@@ -1068,23 +1068,24 @@ class ExtMobileFrontend {
 
 		$formatter->setIsMainPage( self::$isMainPage );
 		$prepend = '';
-		if ( $this->contentFormat == 'WML' ) {
-			// Wml for searching
-			$prepend = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
-				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
-				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';	
-		} elseif ( $this->contentFormat == 'XHTML'
+		if ( $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
 			&& empty( self::$search ) )
 		{
 			$formatter->enableExpandableSections();
 		}
-		$contentHtml = $formatter->getText( 'content', $prepend );
+		$contentHtml = $formatter->getText( 'content' );
 
 		$htmlTitle = htmlspecialchars( self::$htmlTitle );
 
 		if ( $this->contentFormat == 'WML' ) {
 			header( 'Content-Type: text/vnd.wap.wml' );
+
+			// Wml for searching
+			$prepend = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
+				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
+				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';
+			$html = $prepend . $html;
 
 			$applicationWmlTemplate = new ApplicationWmlTemplate();
 			$options = array(

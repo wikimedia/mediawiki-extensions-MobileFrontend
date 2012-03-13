@@ -46,6 +46,7 @@ $autoloadClasses = array (
 
 	'CssDetection' => 'CssDetection',
 	'DeviceDetection' => 'DeviceDetection',
+	'HtmlFormatter' => 'HtmlFormatter',
 	'MobileFormatter' => 'MobileFormatter',
 	'WmlContext' => 'WmlContext',
 
