@@ -1,4 +1,12 @@
-var showText = "show", hideText = "hide";
+var mwMobileFrontendConfig = {
+	messages: {
+		showText: "show",
+		hideText: "hide"
+	},
+	settings: {
+		scriptPath: "/"
+	}
+};
 
 window.MobileFrontendTests = {
 	cleanFixtures: function() {

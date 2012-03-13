@@ -58,8 +58,8 @@ MobileFrontend.toggle = (function() {
 			p, section_idx;
 		if ( targetel ) {
 			p = targetel;
-			while ( p && p.className !== 'content_block' &&
-				p.className !== 'section_heading' ) {
+			while ( p && !u(p).hasClass( 'content_block' ) &&
+				!u(p).hasClass( 'section_heading' ) ) {
 				p = p.parentNode;
 			}
 			if ( p && p.style.display !== 'block' ) {
