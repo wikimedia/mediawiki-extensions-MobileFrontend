@@ -99,8 +99,11 @@ MobileFrontend = (function() {
 	init();
 	return {
 		init: init,
-		message: function(name) {
-			return locale[ name ];
+		message: function( name ) {
+			return mwMobileFrontendConfig.messages[name] || '';
+		},
+		setting: function( name ) {
+			return mwMobileFrontendConfig.settings[name] || '';
 		},
 		utils: utilities
 	};

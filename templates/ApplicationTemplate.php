@@ -43,6 +43,16 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$buttonHideText = Xml::escapeJsString( $this->data['hideText'] );
 		$buttonShowText = Xml::escapeJsString( $this->data['showText'] );
 
+		$jsconfig = array(
+			'messages' => array(
+				'expand-section' => $buttonShowText,
+				'collapse-section' => $buttonHideText
+				),
+			'settings' => array(
+				'scriptPath' => ( $this->data['wgScriptPath'] ),
+			),
+		);
+		$configuration = FormatJSON::encode( $jsconfig );
 
 		$applicationHtml = <<<HTML
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -57,15 +67,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			<meta name="viewport" content="initial-scale=1.0">
 			{$appleTouchIconTag}
 			{$jQueryScript}
-			<script type='text/javascript'>
-			  //<![CDATA[
-				var title = "{$this->data['htmlTitle']}";
-				var scriptPath = "{$this->data['wgScriptPath']}";
-				var locale = {
-					"expand-section": "{$buttonShowText}",
-					"collapse-section": "{$buttonHideText}"
-				};
-			  //]]>
+			<script type="text/javascript">
+			var mwMobileFrontendConfig = {$configuration};
 			</script>
 		  </head>
 		  <body>

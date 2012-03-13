@@ -12,9 +12,7 @@ MobileFrontend.opensearch = (function() {
 		focused = false,
 		u = MobileFrontend.utils;
 
-	if ( scriptPath ) {
-		apiUrl = scriptPath + apiUrl;
-	}
+	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
 	function hideResults() {
 		results.style.display = 'none';

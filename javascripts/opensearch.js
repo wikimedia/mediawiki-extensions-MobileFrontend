@@ -8,9 +8,7 @@ MobileFrontend.opensearch = (function() {
 		sb = document.getElementById( 'searchbox' ),
 		u = MobileFrontend.utils;
 
-	if ( scriptPath ) {
-		apiUrl = scriptPath + apiUrl;	
-	}
+	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
 	function hideResults() {
 		var results = document.getElementById( 'results' );
