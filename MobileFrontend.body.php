@@ -442,6 +442,7 @@ class ExtMobileFrontend {
 		}
 
 		self::$device = $device->format( $formatName );
+		$this->setDefaultLogo();
 
 		$this->contentFormat = self::parseContentFormat( self::$device['view_format'] );
 
@@ -526,7 +527,6 @@ class ExtMobileFrontend {
 			self::$wsLoginFormAction = self::$title->getLocalURL( $q );
 		}
 
-		$this->setDefaultLogo();
 		ob_start( array( $this, 'DOMParse' ) );
 
 		wfProfileOut( __METHOD__ );
