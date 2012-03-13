@@ -2602,6 +2602,7 @@ $messages['he'] = array(
 );
 
 /** Hindi (हिन्दी)
+ * @author Ankitgadgil
  * @author Ansumang
  */
 $messages['hi'] = array(
@@ -2618,12 +2619,12 @@ $messages['hi'] = array(
 	'mobile-frontend-hide-button' => 'छुपायें',
 	'mobile-frontend-disable-button' => 'अशक्त कर देना',
 	'mobile-frontend-back-button' => 'पीछे',
-	'mobile-frontend-regular-site' => 'यह पृष्ठ नियमित विकीपीडिया में देखें',
+	'mobile-frontend-regular-site' => 'यह पेज नियमित {{SITENAME}} में देखें',
 	'mobile-frontend-perm-stop-redirect' => 'मोबाइल साइट को स्थायी रुप से असमर्थ करें',
 	'mobile-frontend-error-page-title' => 'हमें एक समस्या है!',
-	'mobile-frontend-error-page-text' => 'विकीमीडिया मोबाइल का अभी भी सक्रिय विकास किया जा रहा है और हम अपनी सारी आंतरिक समस्याओं का समाधान करने के लिए कड़ी मेहनत कर रहे हैं। हमें इस त्रुटी के बारे में सूचना मिल चुकी है और हम इसका समाधान शीघ्र ही करेंगे। कृपया वापस जाँचें!',
+	'mobile-frontend-error-page-text' => '{{SITENAME}} मोबाईल अभी भी विकास के अंतर्गत सक्रिय है और हम हमारी आंतरिक त्रुटियों को ठिक करने के लिए कड़ी मेहनत कर रहे हैं | हमे इस त्रुटि के बारे में अधिसूचित किया गया है और यह जल्दी ही वह ठिक कर दी जाएगी |  कृपया वापस जाँच करें!',
 	'mobile-frontend-are-you-sure' => 'क्या आप को यकीन है???',
-	'mobile-frontend-explain-disable' => 'क्या तुम्हें यकीन है कि तुम विकिपीडिया के मोबाइल संस्करण को निष्क्रिय करना चाहते हैं? यदि आप <b>अक्षम</b> चुनते हैं, तो अब से, जब आप विकिपीडिया जाये, आप विकिपीडिया का यह मोबाइल दृश्य देखने के लिए नहीं भेजा जाएगा.',
+	'mobile-frontend-explain-disable' => 'क्या आपको यकीन है कि आप {{SITENAME}} के मोबाइल संस्करण को निष्क्रिय करना चाहते हैं? यदि आप <b>अक्षम</b> चुनते हैं, तो अब से, जब आप {{SITENAME}} को भेंट देंगे, आपको {{SITENAME}} का यह मोबाइल दृश्य देखने के लिए नहीं भेजा जाएगा |',
 	'mobile-frontend-nav-end' => 'अंत',
 	'mobile-frontend-nav-top' => 'सिरा',
 	'mobile-frontend-nav-edit' => 'संपादित करें',
@@ -4240,6 +4241,7 @@ $messages['ml'] = array(
 	'mobile-frontend-leave-feedback-message' => 'സന്ദേശം',
 	'mobile-frontend-leave-feedback-cancel' => 'റദ്ദാക്കുക',
 	'mobile-frontend-leave-feedback-submit' => 'അഭിപ്രായം സമർപ്പിക്കുക',
+	'mobile-frontend-leave-feedback-link-text' => 'മൊബൈൽ ഫ്രണ്ട്എൻഡ് അനുബന്ധത്തെക്കുറിച്ചുള്ള അഭിപ്രായങ്ങൾ',
 	'mobile-frontend-leave-feedback' => 'മൊബൈൽ സൈറ്റിനെക്കുറിച്ചുള്ള അഭിപ്രായങ്ങൾ',
 	'mobile-frontend-leave-feedback-thanks' => 'താങ്കളുടെ അഭിപ്രായത്തിനു വളരെ നന്ദി!',
 	'mobile-frontend-language' => 'ഭാഷ',
