@@ -230,9 +230,7 @@ MobileFrontend.opensearch = (function() {
 		function clearSearchBox( event ) {
 			search.value = '';
 			clearSearch.style.display = 'none';
-			if ( event ) {
-				event.preventDefault();
-			}
+			event.preventDefault();
 		}
 
 		function onFocusHandler() {
