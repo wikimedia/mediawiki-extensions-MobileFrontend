@@ -26,7 +26,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 
 		$languageSelection = $this->data['buildLanguageSelection'] . '<br/>';
 		$languageSelectionText = '<b>' . $this->data['messages']['mobile-frontend-language'] . ':</b><br/>';
-		$languageSelectionDiv = '<div id="languageselectionsection">' . $languageSelectionText . $languageSelection . '</div>';
+		$languageSelectionDiv = '<div id="languageselection">' . $languageSelectionText . $languageSelection . '</div>';
 
 		$searchWebkitHtml = <<<HTML
 			{$openSearchResults}
