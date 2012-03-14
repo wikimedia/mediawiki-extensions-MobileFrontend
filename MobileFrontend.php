@@ -104,6 +104,16 @@ $wgMobileFrontendLogo = false;
 $wgMobileUrlTemplate = '';
 
 /**
+ * The number of seconds the 'useformat' cookie should be valid
+ * 
+ * The useformat cookie gets set when a user manually elects to view
+ * either the mobile or desktop view of the site.
+ *
+ * If this value is not set, it will default to $wgCookieExpiration
+ */
+$wgMobileFrontendFormatCookieExpiry;
+
+/**
  * URL for script used to disable mobile site
  * (protocol, host, optional port; path portion)
  *

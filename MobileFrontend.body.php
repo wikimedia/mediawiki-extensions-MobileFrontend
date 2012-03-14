@@ -26,7 +26,6 @@ class ExtMobileFrontend {
 	public static $searchField;
 	public static $disableImagesURL;
 	public static $enableImagesURL;
-	public static $disableMobileSiteURL;
 	public static $viewNormalSiteURL;
 	public static $currentURL;
 	public static $displayNoticeId;
@@ -72,7 +71,6 @@ class ExtMobileFrontend {
 		'mobile-frontend-hide-button',
 		'mobile-frontend-back-to-top-of-section',
 		'mobile-frontend-regular-site',
-		'mobile-frontend-perm-stop-redirect',
 		'mobile-frontend-home-button',
 		'mobile-frontend-random-button',
 		'mobile-frontend-are-you-sure',
@@ -231,8 +229,7 @@ class ExtMobileFrontend {
 
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
-		self::$disableMobileSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=disable_mobile_site' );
-		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'mobileaction=view_normal_site' );
+		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'useformat=desktop' );
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
@@ -474,12 +471,6 @@ class ExtMobileFrontend {
 			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() . '&noticeid=1&useformat=mobile' );
 			$location = $this->getRelativeURL( $location );
 			$wgRequest->response()->header( 'Location: ' . $location );
-			wfProfileOut( __METHOD__ );
-			exit();
-		}
-
-		if ( $mobileAction == 'disable_mobile_site' && $this->contentFormat == 'XHTML' ) {
-			echo $this->renderDisableMobileSiteXHTML();
 			wfProfileOut( __METHOD__ );
 			exit();
 		}
@@ -858,54 +849,6 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @return string
-	 */
-	private function renderDisableMobileSiteXHTML() {
-		wfProfileIn( __METHOD__ );
-		if ( $this->contentFormat == 'XHTML' ) {
-			$this->getMsg();
-			$areYouSure = self::$messages['mobile-frontend-are-you-sure'];
-			$explainDisable = self::$messages['mobile-frontend-explain-disable'];
-			$disableButton = self::$messages['mobile-frontend-disable-button'];
-			$backButton = self::$messages['mobile-frontend-back-button'];
-			$htmlTitle = $areYouSure;
-			$title = $areYouSure;
-			$searchTemplate = $this->getSearchTemplate();
-			$searchWebkitHtml = $searchTemplate->getHTML();
-			$footerTemplate = $this->getFooterTemplate();
-			$footerHtml = $footerTemplate->getHTML();
-			$disableTemplate = new DisableTemplate();
-			$options = array(
-							'currentURL' => self::$currentURL,
-							'mobileRedirectFormAction' => self::$mobileRedirectFormAction,
-							'areYouSure' => $areYouSure,
-							'explainDisable' => $explainDisable,
-							'disableButton' => $disableButton,
-							'backButton' => $backButton,
-							'htmlTitle' => $htmlTitle,
-							'title' => $title,
-							);
-			$disableTemplate->setByArray( $options );
-			$disableHtml = $disableTemplate->getHTML();
-
-			$contentHtml = $disableHtml;
-			$applicationTemplate = $this->getApplicationTemplate();
-			$options = array(
-							'htmlTitle' => $htmlTitle,
-							'searchWebkitHtml' => $searchWebkitHtml,
-							'contentHtml' => $contentHtml,
-							'footerHtml' => $footerHtml,
-							);
-			$applicationTemplate->setByArray( $options );
-			$applicationHtml = $applicationTemplate->getHTML();
-			wfProfileOut( __METHOD__ );
-			return $applicationHtml;
-		}
-		wfProfileOut( __METHOD__ );
-		return '';
-	}
-
-	/**
 	 * @return DomElement
 	 */
 	public function renderLogin() {
@@ -1166,7 +1109,6 @@ class ExtMobileFrontend {
 		$options = array(
 						'messages' => self::$messages,
 						'leaveFeedbackURL' => self::$leaveFeedbackURL,
-						'disableMobileSiteURL' => self::$disableMobileSiteURL,
 						'viewNormalSiteURL' => self::$viewNormalSiteURL,
 						'disableImages' => self::$disableImages,
 						'disableImagesURL' => self::$disableImagesURL,
@@ -1443,15 +1385,20 @@ class ExtMobileFrontend {
 	}
 	
 	protected function shouldDisplayMobileView() {
-		if ( !$this->isMobileDevice() && !$this->isFauxMobileDevice() ) {
+		// always display desktop view if it's explicitly requested
+		$useFormat = $this->getUseFormat();
+		if ( $useFormat == 'desktop' ) {
 			return false;
 		}
+
+		if ( !$this->isMobileDevice() && !$this->isFauxMobileDevice() ) {
+			return false;
+		}		
 		
 		$action = $this->getAction();
-		$mobileAction = $this->getMobileAction();
 		
-		if ( $action === 'edit' || $action === 'history' ||
-			 $mobileAction === 'view_normal_site' ) {
+		
+		if ( $action === 'edit' || $action === 'history' ) {
 			return false;
 		}
 				
@@ -1503,27 +1450,33 @@ class ExtMobileFrontend {
 		
 		$useFormat = $this->getUseFormat();
 		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat' );
+		
+		// fetch format from cookie and set it if one is not otherwise specified
 		if( !strlen( $useFormat ) && !is_null( $useFormatFromCookie ) ) {
 			$this->setUseFormat( $useFormatFromCookie );
 		}
 		
-		// if we should not be displaying the mobile view, make sure cookies are unset etc.
-		if ( !$this->shouldDisplayMobileView() ) {
-			// make sure cookie is unset for appropriate mobile actions
-			$mobileAction = $this->getMobileAction();
-			if ( in_array( $mobileAction, array( 'view_normal_site', 'disable_mobile_site' ) ) ) {
-				$wgRequest->response()->setCookie( 'mf_useformat', false, time() - 3600 );
-			}
-			
-			// make sure useformat is unset
-			$this->setUseFormat( '' );
-			return;
+		// set appropriate cookie if necessary
+		if ( ( $useFormatFromCookie != 'mobile' && $useFormat == 'mobile' ) ||
+		 		( $useFormatFromCookie != 'desktop' && $useFormat == 'desktop' ) ) {
+			$this->setUseFormatCookie( $useFormat );
 		}
-		
-		// if getUseFormat and no cookie set, set the cookie
-		if ( is_null( $useFormatFromCookie ) && strlen( $useFormat ) ) {
-			$wgRequest->response()->setCookie( 'mf_useformat', $useFormat, 0 );
-		}
+	}
+	
+	/**
+	 * Set the mf_useformat cookie
+	 * 
+	 * This cookie can determine whether or not a user should see the mobile
+	 * version of pages.
+	 *
+	 * @param string The format to store in the cookie
+	 */
+	protected function setUseFormatCookie( $useFormat ) {
+		global $wgRequest, $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
+		$cookieDuration = ( $wgMobileFrontendFormatCookieExpiry ) ? 
+				$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
+		$expire = time() + $cookieDuration;
+		$wgRequest->response()->setCookie( 'mf_useformat', $useFormat, $expire );
 	}
 	
 	public function getVersion() {
