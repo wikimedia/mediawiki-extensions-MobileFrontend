@@ -15,9 +15,9 @@ MobileFrontend.toggle = (function() {
 		}
 
 		function openSectionHandler() {
-			var sectionNumber = this.id ? this.id.split( '_' )[1] : -1;
-			if( sectionNumber > -1 ) {
-				wm_toggle_section( sectionNumber );
+			var sectionName = this.id ? this.id.split( '_' )[1] : -1;
+			if( sectionName !== -1 ) {
+				wm_toggle_section( sectionName );
 			}
 		}
 		function createButton( visible ) {
