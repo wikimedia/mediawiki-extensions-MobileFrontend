@@ -219,15 +219,14 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 			array( false, null, array() ),
 			array( true, 'webkit', array() ),
 			array( false, 'webkit', array( 'action' => 'edit' ) ),
-			array( false, 'webkit', array( 'mobileaction' => 'view_normal_site' ) ),
+			array( false, 'webkit', array( 'useformat' => 'desktop' ) ),
 			array( true, null, array( 'useformat' => 'mobile-wap' ) ),
 			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'edit' ) ),
 			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'history' ) ),
-			array( false, null, array( 'useformat' => 'mobile-wap', 'mobileaction' => 'view_normal_site' ) ),
+			array( false, null, array( 'useformat' => 'desktop' ) ),
 			array( true, null, array( 'useformat' => 'mobile' ) ),
 			array( false, null, array( 'useformat' => 'mobile', 'action' => 'edit' ) ),
 			array( false, null, array( 'useformat' => 'mobile', 'action' => 'history' ) ),
-			array( false, null, array( 'useformat' => 'mobile', 'mobileaction' => 'view_normal_site' ) ),
 		);
 	}
 	
