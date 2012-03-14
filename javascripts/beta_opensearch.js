@@ -107,14 +107,14 @@ MobileFrontend.opensearch = (function() {
 
 	var performSearch = function(ev) {
 		ev.preventDefault();
-				clearTimeout( timer );
-				term = search.value;
-				if ( term.length < 1 ) {
-					results.innerHTML = '';
-				} else {
-					term = encodeURIComponent( term );
-					timer = setTimeout( function () { searchApi( term ); }, typingDelay );
-				}
+		clearTimeout( timer );
+		term = search.value;
+		if ( term.length < 1 ) {
+			results.innerHTML = '';
+		} else {
+			term = encodeURIComponent( term );
+			timer = setTimeout( function () { searchApi( term ); }, typingDelay );
+		}
 	};
 	u( search ).bind( 'keyup', performSearch );
 	u( document.getElementById( 'searchForm' ) ).bind( 'submit', performSearch );
