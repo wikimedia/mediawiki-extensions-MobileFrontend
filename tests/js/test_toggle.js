@@ -37,13 +37,10 @@ test("wm_toggle_section", function() {
 	strictEqual($("#section_1 .show").is(":visible"), true, "check show button now visible");
 });
 
-test("wm_reveal_for_hash", function() {
+test("clicking a hash link to reveal an already open section", function() {
+	strictEqual($("#section_1").hasClass("openSection"), true, "check section is open");
 	MFE.toggle.wm_reveal_for_hash("#First_Section");
-	applyCss();
-	strictEqual($("#content_1").is(":visible"), true, "check content is visible on a toggle");
-	strictEqual($("#anchor_1").is(":visible"), true, "check anchor is visible on toggle");
-	strictEqual($("#section_1 .hide").is(":visible"), true, "check hide button now visible");
-	strictEqual($("#section_1 .show").is(":visible"), false, "check show button now hidden");
+	strictEqual($("#section_1").hasClass("openSection"), true, "check section is still open");
 });
 
 test("wm_reveal_for_hash", function() {
