@@ -1398,7 +1398,7 @@ class ExtMobileFrontend {
 		$action = $this->getAction();
 		
 		
-		if ( $action === 'edit' ){// || $action === 'history' ) {
+		if ( $action === 'edit' || $action === 'history' ) {
 			return false;
 		}
 				
