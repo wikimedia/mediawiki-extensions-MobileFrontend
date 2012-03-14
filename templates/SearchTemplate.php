@@ -33,7 +33,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 		<div id='header'>
 			<div id='searchbox' {$logoDisplayNone}>
 			<img width="35" height="22" alt='Logo' id='logo' src='{$this->data['wgMobileFrontendLogo']}' {$logoDisplayNone} />
-			<form action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
+			<form id='searchForm' action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
 					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024" class="search" placeholder="{$placeholder}" />

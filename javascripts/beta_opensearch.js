@@ -105,25 +105,28 @@ MobileFrontend.opensearch = (function() {
 		}
 	}
 
-	window.onload = function () {
-		u( search ).bind( 'keyup',
-			function() {
+	var performSearch = function(ev) {
+		ev.preventDefault();
 				clearTimeout( timer );
-				term = this.value;
+				term = search.value;
 				if ( term.length < 1 ) {
 					results.innerHTML = '';
 				} else {
 					term = encodeURIComponent( term );
 					timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 				}
-			} );
 	};
+	u( search ).bind( 'keyup', performSearch );
+	u( document.getElementById( 'searchForm' ) ).bind( 'submit', performSearch );
+	u( search ).bind( 'blur', performSearch ); // for opera mini etc
 
 	function searchApi( term ) {
 		url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
 		u.ajax( { url: url,
 			success: function(xml) {
-				writeResults( createObjectArray( xml ) );
+				if( u( document.body ).hasClass( 'full-screen-search' ) ) {
+					writeResults( createObjectArray( xml ) );
+				}
 			}
 			} );
 	}
