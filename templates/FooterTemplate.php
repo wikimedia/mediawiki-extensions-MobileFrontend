@@ -9,12 +9,14 @@ class FooterTemplate extends MobileFrontendTemplate {
 	public function getHTML() {
 
 		$regularSite = $this->data['messages']['mobile-frontend-regular-site'];
+		$permStopRedirect = $this->data['messages']['mobile-frontend-perm-stop-redirect'];
 		$copyright = $this->data['messages']['mobile-frontend-copyright'];
 		$disableImages = $this->data['messages']['mobile-frontend-disable-images'];
 		$enableImages = $this->data['messages']['mobile-frontend-enable-images'];
 		$leaveFeedback = $this->data['messages']['mobile-frontend-leave-feedback'];
 
 		$leaveFeedbackURL = $this->data['leaveFeedbackURL'];
+		$disableMobileSiteURL = $this->data['disableMobileSiteURL'];
 		$viewNormalSiteURL = $this->data['viewNormalSiteURL'];
 
 		if ( $this->data['disableImages'] == 0 ) {
@@ -37,6 +39,9 @@ class FooterTemplate extends MobileFrontendTemplate {
 			  <div class='nav' id='footmenu'>
 				<div class='mwm-notice'>
 				  <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
+					<div id="perm">
+						<a href="{$disableMobileSiteURL}">{$permStopRedirect}</a>
+					</div>
 				</div>
 			  </div>
 			  <div id='copyright'>{$copyright}</div>
