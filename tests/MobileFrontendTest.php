@@ -301,4 +301,65 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 			array( 'edit' ),
 		);
 	}
+	
+	/**
+	 * @dataProvider getUseFormatProvider
+	 */
+	public function testGetUseFormat( $explicit, $requestParam, $expected ) {
+		global $wgRequest, $wgExtMobileFrontend;
+		$wgRequest->setVal( 'useformat', $requestParam );
+		$wgExtMobileFrontend->setUseFormat( $explicit );
+		$this->assertEquals( $expected, $wgExtMobileFrontend->getUseFormat() );
+	}
+	
+	public function getUseFormatProvider() {
+		return array(
+			array( 'mobile', null, 'mobile' ),
+			array( null, 'mobile', 'mobile' ),
+			array( null, null, '' ),
+			array( 'desktop', 'mobile', 'desktop' ),
+		);
+	}
+	
+	public function testGetUseFormatCookieExpiry() {
+		global $wgExtMobileFrontend, $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
+		$getUseFormatCookieExpiry = self::getMethod( 'getUseFormatCookieExpiry' );
+		
+		$origMFCookieExpiry = $wgMobileFrontendFormatCookieExpiry;
+		$startTime = time();
+		$wgMobileFrontendFormatCookieExpiry = 60;
+		$mfCookieExpected = $startTime + 60;
+		$this->assertTrue( $mfCookieExpected == $getUseFormatCookieExpiry->invokeArgs( $wgExtMobileFrontend, array( $startTime ) ), 'Using MobileFrontend expiry.' );
+		
+		$wgMobileFrontendFormatCookieExpiry = null;
+		$defaultMWCookieExpected = $startTime + $wgCookieExpiration;
+		$this->assertTrue( $defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs( $wgExtMobileFrontend, array( $startTime ) ), 'Using default MediaWiki cookie expiry.' );
+
+		// reset global back to original value
+		$wgMobileFrontendFormatCookieExpiry = $origMFCookieExpiry;
+	}
+	
+	/**
+     * @outputBuffering enabled
+	 */
+	/*public function testCookie() {
+		global $wgRequest;
+		$wgRequest->response()->setCookie( 'foo', 'bar' );
+		$this->assertEquals( $wgRequest->getCookie( 'foo' ), 'bar' );
+		setcookie( 'foobar', 'pants' );
+		$this->asertEquals( $_COOKIE[ 'foobar' ], 'pants' );
+	}
+	
+	/**
+	 * NB this will not work as PHPUnit seems to not make it possible to set
+	 * and retrieve cookies. Note above test, testCookie() - both assertions
+	 * currently fail, making testing ExtMobileFrontend::checkUserFormatCookie()
+	 * impossible.
+	 *
+     * @outputBuffering enabled
+	 */
+	/*public function testCheckUseFormatCookie() {
+	
+	}
+	*/
 }

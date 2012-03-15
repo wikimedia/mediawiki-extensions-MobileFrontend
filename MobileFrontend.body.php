@@ -1472,11 +1472,25 @@ class ExtMobileFrontend {
 	 * @param string The format to store in the cookie
 	 */
 	protected function setUseFormatCookie( $useFormat ) {
-		global $wgRequest, $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
-		$cookieDuration = ( $wgMobileFrontendFormatCookieExpiry ) ? 
+		global $wgRequest;
+		$expiry = $this->getUseFormatCookieExpiry();
+		$wgRequest->response()->setCookie( 'mf_useformat', $useFormat, $expiry );
+	}
+	
+	/**
+	 * Get the expiration time for the mf_useformat cookie
+	 *
+	 * If $wgMobileFrontendFormatCookieExpiry as a non-0 value, 
+	 * @param int The base time (in seconds since Epoch) from which to calculate
+	 * 		cookie expiration. If null, time() is used.
+	 */
+	protected function getUseFormatCookieExpiry( $startTime=null ) {
+		global $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
+		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ? 
 				$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
-		$expire = time() + $cookieDuration;
-		$wgRequest->response()->setCookie( 'mf_useformat', $useFormat, $expire );
+		if ( intval( $startTime ) === 0 ) $startTime = time();
+		$expiry = $startTime + $cookieDuration;
+		return $expiry;
 	}
 	
 	public function getVersion() {
