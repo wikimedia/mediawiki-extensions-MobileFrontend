@@ -10,6 +10,7 @@ MobileFrontend.opensearch = (function() {
 		footer = document.getElementById( 'footer' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
+		viewportmeta, originalViewport,
 		u = MobileFrontend.utils;
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
@@ -17,16 +18,19 @@ MobileFrontend.opensearch = (function() {
 	function hideResults() {
 		results.style.display = 'none';
 	}
+	
+	viewportmeta = u( 'meta[name="viewport"]' )
+	if ( viewportmeta ) {
+		viewportmeta = viewportmeta[0];
+		originalViewport = viewportmeta.getAttribute( 'content' );
+	}
+	// prevent auto-zoom in on clicking search for certain browsers e.g. palm pre and ipad
 	function resetViewPort() {
-		if ( navigator.userAgent.match( /iPhone/i ) || navigator.userAgent.match( /iPad/i ) ) {
-			var viewportmeta = u( 'meta[name="viewport"]' );
-			if ( viewportmeta ) {
-				viewportmeta = viewportmeta[0];
-				viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
-				u( document.body ).bind( 'gesturestart', function () {
-					viewportmeta.content = 'width=device-width, initial-scale=1.0';
-				} );
-		    }
+		if ( viewportmeta ) {
+			viewportmeta.setAttribute( 'content', 'minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0');
+			u( document.body ).bind( 'gesturestart', function () {
+				viewportmeta.setAttribute( 'content', originalViewport );
+			} );
 		}
 	}
 
