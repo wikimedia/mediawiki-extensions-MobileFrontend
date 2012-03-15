@@ -8,7 +8,9 @@ class DisableTemplate extends MobileFrontendTemplate {
 
 	public function getHTML() {
 
-		$currentURL = str_replace( '&mobileaction=disable_mobile_site', '', $this->data['currentURL'] ); // TODO: $currentURl is unused
+		
+		$currentURL = str_replace( '&mobileaction=disable_mobile_site', '', $this->data['currentURL'] ); 
+		$currentURL = str_replace( '&useformat=mobile', '', $currentURL );
 		$mobileRedirectFormAction = $this->data['mobileRedirectFormAction'];
 
 		$disableHtml = <<<HTML
@@ -20,7 +22,7 @@ class DisableTemplate extends MobileFrontendTemplate {
 				</p>
 				<div id='disableButtons'>
 				<form action='{$mobileRedirectFormAction}' method='get'>
-					<input name='to' type='hidden' value='{$this->data['currentURL']}' />
+					<input name='to' type='hidden' value='{$currentURL}' />
 					<input name='expires_in_days' type='hidden' value='3650' />
 					<button id='disableButton' type='submit'>{$this->data['disableButton']}</button>
 				</form>
