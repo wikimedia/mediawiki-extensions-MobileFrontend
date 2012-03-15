@@ -19,24 +19,21 @@ body {
 }
 
 .clearlink {
-	background: url(images/close-button.png?v=1) no-repeat scroll 0 0 transparent;
-	background-position: center center;
+	top: 9px;
+	right: -18px;
+	width: 18px;
+	height: 20px;
+	background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
+	margin: 0;
+	display: block;
+	background-position: right center;
+	background-size: auto 12px;
 	cursor: pointer;
-	zoom: 1;
 	position: absolute;
-	right: 0.25em;
-	top: 10%;
-	margin: 1px;
-	height: 42px;
-	width: 42px;
-	margin-top: -6px;
-	z-index: 99;
-	border: 0px solid;
-	display: none;
 }
 
 html[dir="rtl"] .clearlink {
-	left: 0.25em;
+	left: 0;
 	right: auto;
 }
 
@@ -151,7 +148,6 @@ a.external {
 }
 
 .search_bar .search {
-	width: 90%;
 	-webkit-appearance: none;
 	border-top-width: 0px;
 	border-right-width: 0px;
@@ -161,6 +157,10 @@ a.external {
 	outline-width: initial;
 	outline-color: initial;
 	padding: 0;
+	font-size: 1.2em;
+	padding-right: 16px;
+	width: 100%;
+	vertical-align: middle; /* don't use line height here as placeholder on ripple positions incorrectly */
 }
 
 #search::-webkit-search-cancel-button {
@@ -546,13 +546,14 @@ img.thumbborder {
 }
 
 #header {
-	margin: 8px 8px 0 8px;
+	margin: 0;
 	position: relative;
+	border-bottom: solid 1px #CCC;
 }
 
 #content_wrapper {
 	clear: both;
-	margin: 0 8px;
+	margin: 22px 22px;
 }
 
 #footer {
@@ -562,51 +563,60 @@ img.thumbborder {
 
 #logo {
 	position: absolute;
-	top: 4px;
-	left: 5px;
+	height: 22px;
+	cursor: pointer;
+	left: 22px;
+	top: 9px;
+	width: 35px;
+}
+
+html[dir="rtl"] #searchbox {
+	padding: 0px 54px 0px 20px;
 }
 
 #zero-language-search.search_bar,
 #searchbox {
 	width: auto;
 	position: relative;
-	padding: 8px 32px 8px 44px;
-	border: 1px solid #cccccc;
+	padding: 0px 40px 0px 73px; /* right = width of #logo (35px) + 22px + 16px
+	left = width of close button + 22px */
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+}
+
+.full-screen-search #searchbox {
+	padding: 0px 40px 0px 54px; /* right = width of #logo (18px) + 22px + 16px */
 }
 
 #zero-language-search.search_bar {
 	padding: 8px 32px 8px 0px;
 }
 
-#searchbox #form {
-	padding-right: 34px;
-	width: 100%;
-	margin-bottom: 0;
-}
-
-html[dir="rtl"] #logo,
-.goButton {
-	position: absolute;
-	right: 2px;
+html[dir="rtl"] #remove-results,
+html[dir="rtl"] #logo {
+	right: 18px;
 	left: auto;
 }
 
 .goButton {
-	top: 2px;
+	position: absolute;
+	right: -18px;
+	left: auto;
+	top: 0px;
 	border: 0;
-	background: url(images/s.gif) no-repeat top left;
+	background: url(images/s.gif) no-repeat center left;
 	background-size: 27px 25px;
-	height: 25px;
+	height: 40px;
 	width: 27px;
 	padding-bottom: 0;
 	text-indent: -999px;
+	cursor: pointer;
 }
 
 html[dir="rtl"] .goButton {
 	right: auto;
-	left: 2px;
+	left: 0;
 }
 
 #searchbox a,
@@ -725,32 +735,25 @@ full screen search css
 	display: none;
 }
 
-.full-screen-search #search {
-	height: 30px; /* height of #sq - 2px border */
-	font-size: 1.2em;
+#header,
+#search,
+#sq,
+form,
+#searchbox {
+	position: relative;
+	right: 0;
+	top: 0;
+	left: 0;
+	height: 40px;
 }
 
-html[dir="rtl"] .full-screen-search #sq {
-	padding-left: 0;
-	padding-right: 44px;
+#searchbox {
+	margin: 0
 }
 
 .full-screen-search #sq {
-	position: relative;
-	padding-left: 44px;
 	margin-right: 0;
 	font-size: 16px;
-	border: none;
-	background-color: transparent;
-}
-
-.full-screen-search #searchbox {
-	position: absolute;
-	width: 100%;
-	padding: 0;
-	top: 0;
-	left: 0;
-	border: none;
 }
 
 .full-screen-search #logo,
@@ -798,16 +801,16 @@ html[dir="rtl"] .full-screen-search #sq {
 #remove-results {
 	display: none;
 	position: absolute;
-	width: 40px;
+	width: 18px;
 	height: 40px;
 	text-align: center;
 	line-height: 40px;
-	background: url(images/arrow-left.png) no-repeat scroll 0 0 transparent;
-	background-position: center center;
+	background: url(images/arrow-left-beta.png) no-repeat scroll 0 0 transparent;
+	background-position: left center;
+	background-size: auto 18px;
 	cursor: pointer;
-	zoom: 1;
-	left: -3px;
-	top: 3px;
+	left: 24px;
+	top: 6px; /* (#header height - background height) / 2 */
 	margin: 1px;
 	margin-top: -6px;
 	z-index: 99;
@@ -816,25 +819,12 @@ html[dir="rtl"] .full-screen-search #sq {
 	overflow: hidden;
 }
 
-html[dir="rtl"] #remove-results {
-	right: 0px;
-	left: auto;
-}
-
 .full-screen-search #results {
 	display: block !important;
 }
 
 .full-screen-search #remove-results {
 	display: block;
-}
-
-.full-screen-search .clearlink {
-	background: url(images/close-button.png?v=1) no-repeat scroll 0 0 transparent;
-	top: 0px;
-	right: 0px;
-	height: 42px;
-	width: 42px;
 }
 
 .full-screen-search #nav {

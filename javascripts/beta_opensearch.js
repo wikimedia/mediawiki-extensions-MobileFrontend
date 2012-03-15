@@ -4,7 +4,6 @@ MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term,
 		search = document.getElementById( 'search' ),
-		sq = document.getElementById( 'sq' ),
 		sb = document.getElementById( 'searchbox' ),
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
@@ -39,7 +38,7 @@ MobileFrontend.opensearch = (function() {
 	search.onfocus = function() {
 		var rrd, rrdD;
 		sb = document.getElementById( 'searchbox' );
-		sq = document.getElementById( 'sq' );
+		header = document.getElementById( 'header' );
 		content = document.getElementById( 'content' );
 		footer = document.getElementById( 'footer' );
 		resetViewPort();
@@ -56,7 +55,7 @@ MobileFrontend.opensearch = (function() {
 				rrdD = document.createElement( 'div' );
 				rrdD.setAttribute( 'id', 'left-arrow' );
 				rrd.appendChild( rrdD );
-				sq.insertBefore( rrd, sq.firstChild );
+				header.insertBefore( rrd, header.firstChild );
 			}
 			focused = true;
 		}
