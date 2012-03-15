@@ -1,14 +1,22 @@
 var MFE = MobileFrontend;
 var MFET = window.MobileFrontendTests;
 
-module("MobileFrontend application.js: utils");
+module("MobileFrontend application.js: utils", {
+	setup: function() {
+		var section = '<div class="t_section_heading"></div>';
+		$('<div id="mfetest">' + section + '<div id="t_section_1">' + section + '</div>').appendTo(document.body);
+	},
+	teardown: function() {
+		$("#mfetest").remove();
+	}
+});
 
 test("Basic selector support (#id)", function() {
-	strictEqual(MFE.utils("#section_1").length, 1, "only one element matches this selector");
+	strictEqual(MFE.utils("#t_section_1").length, 1, "only one element matches this selector");
 });
 
 test("Basic selector support (.className)", function() {
-	strictEqual(MFE.utils(".section_heading").length, 2, "only two elements matches this selector");
+	strictEqual(MFE.utils(".t_section_heading").length, 2, "only two elements matches this selector");
 });
 
 test("Basic selector support (tag name)", function() {
