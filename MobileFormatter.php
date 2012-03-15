@@ -131,10 +131,10 @@ class MobileFormatter extends HtmlFormatter {
 
 	 * @return string: Processed HTML
 	 */
-	public function getText( $element = false ) {
+	public function getText( $element = null ) {
 		wfProfileIn( __METHOD__ );
 		if ( $this->mainPage ) {
-			$element = $this->parseMainPage( $this->doc );
+			$element = $this->parseMainPage( $this->getDoc() );
 		}
 		$html = parent::getText( $element );
 		wfProfileOut( __METHOD__ );

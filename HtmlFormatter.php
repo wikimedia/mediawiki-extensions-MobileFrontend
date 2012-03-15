@@ -7,8 +7,9 @@ class HtmlFormatter {
 	/**
 	 * @var DOMDocument
 	 */
-	protected $doc;
+	private $doc;
 
+	private $html;
 	private $itemsToRemove = array();
 	private $elementsToFlatten = array();
 	private $removeImages = false;
@@ -23,14 +24,7 @@ class HtmlFormatter {
 	public function __construct( $html ) {
 		wfProfileIn( __METHOD__ );
 
-		$html = mb_convert_encoding( $html, 'HTML-ENTITIES', "UTF-8" );
-		libxml_use_internal_errors( true );
-		$this->doc = new DOMDocument();
-		$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
-		libxml_use_internal_errors( false );
-		$this->doc->preserveWhiteSpace = false;
-		$this->doc->strictErrorChecking = false;
-		$this->doc->encoding = 'UTF-8';
+		$this->html = $html;
 
 		wfProfileOut( __METHOD__ );
 	}
@@ -57,6 +51,16 @@ class HtmlFormatter {
 	 * @return DOMDocument: DOM to manipulate
 	 */
 	public function getDoc() {
+		if ( !$this->doc ) {
+			$html = mb_convert_encoding( $this->html, 'HTML-ENTITIES', "UTF-8" );
+			libxml_use_internal_errors( true );
+			$this->doc = new DOMDocument();
+			$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
+			libxml_use_internal_errors( false );
+			$this->doc->preserveWhiteSpace = false;
+			$this->doc->strictErrorChecking = false;
+			$this->doc->encoding = 'UTF-8';
+		}
 		return $this->doc;
 	}
 
@@ -112,6 +116,12 @@ class HtmlFormatter {
 	public function filterContent() {
 		$removals = $this->parseItemsToRemove();
 
+		if ( !$removals ) {
+			return;
+		}
+
+		$doc = $this->getDoc();
+
 		// Remove tags
 
 		// You can't remove DOMNodes from a DOMNodeList as you're iterating
@@ -122,7 +132,7 @@ class HtmlFormatter {
 
 		$domElemsToRemove = array();
 		foreach ( $removals['TAG'] as $tagToRemove ) {
-			$tagToRemoveNodes = $this->doc->getElementsByTagName( $tagToRemove );
+			$tagToRemoveNodes = $doc->getElementsByTagName( $tagToRemove );
 			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
 				$tagToRemoveNodeIdAttributeValue = '';
 				if ( $tagToRemoveNode ) {
@@ -143,14 +153,14 @@ class HtmlFormatter {
 
 		// Elements with named IDs
 		foreach ( $removals['ID'] as $itemToRemove ) {
-			$itemToRemoveNode = $this->doc->getElementById( $itemToRemove );
+			$itemToRemoveNode = $doc->getElementById( $itemToRemove );
 			if ( $itemToRemoveNode ) {
 				$itemToRemoveNode->parentNode->removeChild( $itemToRemoveNode );
 			}
 		}
 
 		// CSS Classes
-		$xpath = new DOMXpath( $this->doc );
+		$xpath = new DOMXpath( $doc );
 		foreach ( $removals['CLASS'] as $classToRemove ) {
 			$elements = $xpath->query( '//*[@class="' . $classToRemove . '"]' );
 
@@ -177,7 +187,7 @@ class HtmlFormatter {
 			$redLinks = $xpath->query( '//a[@class="new"]' );
 			foreach ( $redLinks as $redLink ) {
 				// PHP Bug #36795 — Inappropriate "unterminated entity reference"
-				$spanNode = $this->doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
+				$spanNode = $doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
 
 				if ( $redLink->hasAttributes() ) {
 					$attributes = $redLink->attributes;
@@ -203,10 +213,14 @@ class HtmlFormatter {
 	public function getText( $element = null ) {
 		wfProfileIn( __METHOD__ );
 
-		if ( $element !== null && !( $element instanceof DOMElement ) ) {
-			$element = $this->doc->getElementById( $element );
+		if ( $this->doc ) {
+			if ( $element !== null && !( $element instanceof DOMElement ) ) {
+				$element = $this->doc->getElementById( $element );
+			}
+			$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+		} else {
+			$html = $this->html;
 		}
-		$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
 		if ( !$element ) {
 			$html = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $html );
 		}
