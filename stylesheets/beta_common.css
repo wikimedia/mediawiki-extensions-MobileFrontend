@@ -129,30 +129,6 @@ html[dir="rtl"] .clearlink {
 	background-color: #ACD1E9;
 }
 
-a.sq-val-update {
-	font-size: 1.3em;
-	display: block;
-	font-weight: normal;
-	text-decoration: none;
-	color: #666;
-	position: absolute;
-	right: 0;
-	width: 1.5em;
-	text-align: center;
-}
-
-a.sq-val-update:visited {
-	text-decoration: none;
-}
-
-a.sq-val-update:hover {
-	text-decoration: none;
-}
-
-a.sq-val-update:active {
-	text-decoration: none;
-}
-
 a.search-result-item {
 	display: block;
 	margin-right: 2em;

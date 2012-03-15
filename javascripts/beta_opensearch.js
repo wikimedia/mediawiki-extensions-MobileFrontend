@@ -149,15 +149,6 @@ MobileFrontend.opensearch = (function() {
 		return sections;
 	}
 
-	function sqValUpdate( sqValue ) {
-		var search = document.getElementById( 'search' );
-		if ( search ) {
-			search.value = sqValue + ' ';
-			search.focus();
-			searchApi( search.value );
-		}
-	}
-
 	function htmlEntities( str ) {
 		var text = document.createTextNode( str ),
 			el = document.createElement( 'div' );
@@ -172,7 +163,7 @@ MobileFrontend.opensearch = (function() {
 	function writeResults( sections ) {
 		var results = document.getElementById( 'results' ), suggestions, i,
 			term = htmlEntities( document.getElementById( 'search' ).value ),
-			suggestionListener, section, escapedTerm, suggestionsResult, link, label;
+			section, escapedTerm, suggestionsResult, link, label;
 
 		results.style.display = 'block';
 		if ( search ) {
@@ -187,22 +178,12 @@ MobileFrontend.opensearch = (function() {
 			suggestions = document.createElement( 'ul' );
 			suggestions.className = 'suggestions-results';
 			results.appendChild( suggestions );
-			suggestionListener = function() {
-				var title = this.parentNode.getAttribute( 'title' );
-				sqValUpdate( title );
-			};
 
 			for ( i = 0; i < sections.length; i++ ) {
 				section = sections[i];
 				suggestionsResult = document.createElement( 'li' );
-				link = document.createElement( 'a' );
 				suggestionsResult.setAttribute( 'title', section.label );
 				suggestionsResult.className = 'suggestions-result';
-				label = document.createTextNode( '+' );
-				link.appendChild(label);
-				link.className = 'sq-val-update';
-				u( link ).bind( 'click', suggestionListener );
-				suggestionsResult.appendChild( link );
 
 				link = document.createElement( 'a' );
 				link.setAttribute( 'href', section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' ) );
