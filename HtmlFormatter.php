@@ -85,6 +85,13 @@ class HtmlFormatter {
 	}
 
 	/**
+	 * Instructs the formatter to flatten all tags
+	 */
+	public function flattenAllTags() {
+		$this->flatten( '[?!]?[a-z0-9]+' );
+	}
+
+	/**
 	 * Sets whether red links should be flattened
 	 * @param bool $flag
 	 */

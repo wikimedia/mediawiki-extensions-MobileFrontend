@@ -119,12 +119,16 @@ class ApiQueryExcerpts extends ApiQueryBase {
 			}
 		}
 		// in case of cache miss, render just the needed section
-		$apiMain = new ApiMain( new FauxRequest(
-			array( 'page' => $page->getTitle()->getPrefixedText(), 'section' => 0, 'prop' => 'text' ) )
+		$api = new ApiMain( new FauxRequest(
+			array(
+				'action' => 'parse',
+				'page' => $page->getTitle()->getPrefixedText(),
+				'section' => 0,
+				'prop' => 'text'
+			) )
 		);
-		$apiParse = new ApiParse( $apiMain, 'parse' );
-		$apiParse->execute();
-		$data = $apiParse->getResultData();
+		$api->execute();
+		$data = $api->getResultData();
 		wfProfileOut( __METHOD__ );
 		return $data['parse']['text']['*'];
 	}
@@ -138,18 +142,18 @@ class ApiQueryExcerpts extends ApiQueryBase {
 	 */
 	private function convertText( $text, Title $title, $plainText ) {
 		wfProfileIn( __METHOD__ );
-		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
-		$mf->removeImages();
-		$mf->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates',
+		$fmt = new HtmlFormatter( HtmlFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
+		$fmt->removeImages();
+		$fmt->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates',
 			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error' )
 		);
 		if ( $plainText ) {
-			$mf->flatten( '[?!]?[a-z0-9]+' );
+			$fmt->flattenAllTags();
 		} else {
-			$mf->flatten( array( 'span', 'a' ) );
+			$fmt->flatten( array( 'span', 'a' ) );
 		}
-		$mf->filterContent();
-		$text = $mf->getText();
+		$fmt->filterContent();
+		$text = $fmt->getText();
 		if ( $plainText ) {
 			$text = html_entity_decode( $text );
 		}
