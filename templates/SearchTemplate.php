@@ -29,7 +29,6 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$languageSelectionDiv = '<div id="languageselection">' . $languageSelectionText . $languageSelection . '</div>';
 
 		$searchWebkitHtml = <<<HTML
-			{$openSearchResults}
 		<div id='header'>
 			<div id='searchbox' {$logoDisplayNone}>
 			<img width="35" height="22" alt='Logo' id='logo' src='{$this->data['wgMobileFrontendLogo']}' {$logoDisplayNone} />
@@ -48,6 +47,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 			<a href="{$randomPageUrl}" id="randomButton" class="button">{$randomButton}</a>
 		  </div>
 		</div>
+		{$openSearchResults}
 HTML;
 		return $searchWebkitHtml;
 	}

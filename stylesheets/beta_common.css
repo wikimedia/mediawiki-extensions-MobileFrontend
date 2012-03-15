@@ -128,23 +128,12 @@ html[dir="rtl"] .clearlink {
 
 a.search-result-item {
 	display: block;
-	margin-right: 2em;
 }
 
 /* TODO: support browsers which do not support data uris */
 a.external {
 	background: url(images/external-link-ltr-icon.png) center right no-repeat;
 	padding-right: 13px;
-}
-
-#results {
-	display: none;
-	background-color: #ffffff;
-	border-top: none;
-	z-index: 2;
-	position: absolute;
-	left: 53px;
-	top: 35px;
 }
 
 .search_bar .search {
@@ -725,13 +714,43 @@ cite:target {
 full screen search css
 */
 .full-screen-search #header {
+	-webkit-box-shadow: 3px 1px 8px #333;
+	-moz-box-shadow: 3px 1px 8px #333;
+	-o-box-shadow: 3px 1px 8px #333;
+	box-shadow: 3px 1px 8px #333;
+	z-index: 2;
 	margin: 0;
+	background-color: white;
 }
 
-.full-screen-search #content,
+#results,
+#content_wrapper {
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+#content_wrapper,
+.full-screen-search #results {
+	opacity: 1;
+	height: auto;
+}
+
+#results,
+.full-screen-search #content_wrapper {
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+
 .full-screen-search #footer,
 .full-screen-search #zero-rated-banner-red,
 .full-screen-search #zero-rated-banner {
+	display: none;
+}
+
+#search::-webkit-search-decoration {
 	display: none;
 }
 
@@ -764,34 +783,32 @@ form,
 .full-screen-search #results {
 	left: 0px;
 	width: 100% !important;
-	min-height: 100%;
-	border-bottom: none;
-	border-left: none;
-	border-right: none;
-	border-top: 1px solid #A6A6A6;
+	max-height: 99999px;
+	border: none;
+	z-index: 1;
 	background-color: #E6E6E6;
-	display: block;
+	position: relative;
+	opacity: 1;
 }
 
 .full-screen-search .suggestions-results {
-	line-height: 2.6em;
 	padding: 0;
 	position: relative;
-	border-bottom: solid 1px #999;
+	padding-bottom: 20px;
 	font-size: 1.4em;
 	cursor: pointer;
 	margin: 0;
+	background-color: white;
 }
 
 .full-screen-search .suggestions-result {
-	line-height: 2.6em;
+	color: #666;
 	border: none;
-	color: black;
-	margin: 0;
-	line-height: 2.6em;
-	padding: 0.01em 0.25em;
 	position: relative;
 	border-bottom: solid 1px #999999;
+	border-bottom: solid 1px #eee;
+	padding: 12px 56px;
+	font-size: 0.9em;
 }
 
 .full-screen-search .suggestions-result a:visited {
@@ -817,10 +834,6 @@ form,
 	border: 0px solid;
 	text-indent: -999px;
 	overflow: hidden;
-}
-
-.full-screen-search #results {
-	display: block !important;
 }
 
 .full-screen-search #remove-results {
