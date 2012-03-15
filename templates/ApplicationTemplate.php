@@ -34,7 +34,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$endScriptTag = '"></script>';
 		$javaScriptPath =  $this->data['wgExtensionAssetsPath'] . '/MobileFrontend/javascripts/';
 
-		$jQueryScript = ( $this->data['device']['supports_jquery'] ) ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
+		$jQuerySupport = $this->data['device']['supports_jquery'];
+		$jQueryScript = $jQuerySupport ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
 		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=122920111241' . $endScriptTag : '';
 
 		$startLinkTag = "<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/";
@@ -54,6 +55,13 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		);
 		$configuration = FormatJSON::encode( $jsconfig );
 
+		if( $this->data['isBetaGroupMember'] && $jQuerySupport ) {
+			$betajs = <<<HTML
+			{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js?version=1331257310{$endScriptTag}
+HTML;
+		} else {
+			$betajs = "";
+		}
 		$applicationHtml = <<<HTML
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -84,6 +92,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version=1331257310{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1331257310{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1331250599{$endScriptTag}
+			{$betajs}
 			{$filePageScript}
 			<!--[endif]-->
 		  </body>
