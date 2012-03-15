@@ -352,6 +352,10 @@ button.hide { /* for non-js browsers */
 	display: none;
 }
 
+.togglingEnabled .openSection {
+	display: block;
+}
+
 .mwm-notice {
 	padding: 5px;
 	background: #dddddd;

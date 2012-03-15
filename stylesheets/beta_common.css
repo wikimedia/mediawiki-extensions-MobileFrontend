@@ -333,9 +333,33 @@ button.hide { /* for non-js browsers */
 	display: inline-block;
 }
 
-.togglingEnabled .content_block,
+.openSection button.hide,
+.openSection button.show {
+	opacity: 1;
+}
+
 .togglingEnabled .section_anchors {
 	display: none;
+}
+
+.togglingEnabled .content_block {
+	max-height: 0;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: max-height 0.2s ease-in;
+	-moz-transition: max-height 0.2s ease-in;
+	-o-transition: max-height 0.2s ease-in;
+	transition: max-height 0.2s ease-in;
+}
+
+.togglingEnabled .openSection.section_anchors {
+	display: block;
+}
+
+.togglingEnabled .openSection.content_block {
+	max-height: 9999px; /* large number as height: auto is not effected by transitions */
+	-webkit-transition: max-height 0.7s ease-in;
+	transition: max-height 0.7s ease-in;
 }
 
 .mwm-notice {

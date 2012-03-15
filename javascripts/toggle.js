@@ -79,8 +79,10 @@ MobileFrontend.toggle = (function() {
 		}
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
 			e = document.getElementById( d[i] + section_id );
-			if ( e ) {
-				e.style.display = e.style.display === 'block' ? 'none' : 'block';
+			if ( e && u( e ).hasClass( 'openSection' ) ) {
+				u( e ).removeClass( 'openSection' )
+			} else {
+				u( e ).addClass( 'openSection' )
 			}
 		}
 	}
