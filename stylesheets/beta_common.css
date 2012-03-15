@@ -294,6 +294,10 @@ h3#sopa-notice {
 	margin: 0px;
 }
 
+.section_heading {
+	cursor: pointer;
+}
+
 button.show,
 button.hide { /* for non-js browsers */
 	display: none;
