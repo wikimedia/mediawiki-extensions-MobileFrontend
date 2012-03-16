@@ -360,7 +360,7 @@ $messages['ar'] = array(
 	'mobile-frontend-hide-button' => 'أخفِ',
 	'mobile-frontend-disable-button' => 'عطل',
 	'mobile-frontend-back-button' => 'ارجع',
-	'mobile-frontend-regular-site' => 'اعرض هذه الصفحة على {{SITENAME}} الاعتيادية',
+	'mobile-frontend-regular-site' => 'عرض سطح المكتب',
 	'mobile-frontend-error-page-title' => 'لدينا مشكلة!',
 	'mobile-frontend-error-page-text' => 'لا تزال {{SITENAME}} المحمول تحت التطوير النشط ونحن نعمل بجد لإصلاح كل أخطائنا الداخلية. لقد أُبلِغنا عن هذا الخطأ وسوف نصلحه قريبًا. .من فضلك ارجع لاحقًا.',
 	'mobile-frontend-are-you-sure' => 'هل أنت متأكد؟',
@@ -2888,6 +2888,7 @@ $messages['ia'] = array(
 
 /** Indonesian (Bahasa Indonesia)
  * @author Aldnonymous
+ * @author Anakmalaysia
  * @author Farras
  * @author Kenrick95
  */
@@ -2905,7 +2906,7 @@ $messages['id'] = array(
 	'mobile-frontend-hide-button' => 'Sembunyikan',
 	'mobile-frontend-disable-button' => 'Matikan',
 	'mobile-frontend-back-button' => 'Kembali',
-	'mobile-frontend-regular-site' => 'Lihat halaman ini di {{SITENAME}} biasa',
+	'mobile-frontend-regular-site' => 'Tampilan desktop',
 	'mobile-frontend-error-page-title' => 'Ada masalah!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} seluler masih berada di dalam tahap pengembangan aktif dan kami sedang bekerja keras untuk memperbaiki kesalahan-kesalahan internal yang terjadi. Kami telah diberitahu tentang kesalahan ini dan akan segera kami perbaiki. Tolong kembali lagi nanti!',
 	'mobile-frontend-are-you-sure' => 'Apakah Anda yakin ?',
@@ -3151,6 +3152,7 @@ $messages['it'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Anakmalaysia
  * @author Fryed-peach
  * @author Ohgi
  * @author Schu
@@ -3171,7 +3173,7 @@ $messages['ja'] = array(
 	'mobile-frontend-hide-button' => '非表示',
 	'mobile-frontend-disable-button' => '無効にする',
 	'mobile-frontend-back-button' => '戻る',
-	'mobile-frontend-regular-site' => 'このページを通常の{{SITENAME}}で表示',
+	'mobile-frontend-regular-site' => 'デスクトップビュー',
 	'mobile-frontend-error-page-title' => '問題が発生しました！',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} モバイル版はいまだ活発な開発の途中であり、私たちは内部エラーのすべてを修正しようと懸命に努力しています。私たちはこのエラーを認識しており、すぐに修正する予定です。後でご確認ください。',
 	'mobile-frontend-are-you-sure' => 'よろしいですか？',
@@ -4325,7 +4327,7 @@ $messages['ms'] = array(
 	'mobile-frontend-hide-button' => 'Sorokkan',
 	'mobile-frontend-disable-button' => 'Matikan',
 	'mobile-frontend-back-button' => 'Kembali',
-	'mobile-frontend-regular-site' => 'Lihat laman ini di {{SITENAME}} biasa',
+	'mobile-frontend-regular-site' => 'Paparan desktop',
 	'mobile-frontend-error-page-title' => 'Kami mempunyai masalah!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} mobile masih dalam pembangunan aktif dan kami sedang berusaha keras memperbaiki semua ralat dalaman kami. Kami telah dimaklumkan mengenai ralat ini dan akan segera memperbaikinya. Sila datang balik nanti!',
 	'mobile-frontend-are-you-sure' => 'Adakah anda pasti?',
@@ -6831,7 +6833,7 @@ $messages['vi'] = array(
 	'mobile-frontend-hide-button' => 'Ẩn',
 	'mobile-frontend-disable-button' => 'Tắt',
 	'mobile-frontend-back-button' => 'Trở về',
-	'mobile-frontend-regular-site' => 'Đọc trang này tại {{SITENAME}} bình thường',
+	'mobile-frontend-regular-site' => 'Bản dành cho máy tính để bàn',
 	'mobile-frontend-error-page-title' => 'Thật là xấu hổ quá!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} Di động vẫn đang được phát triển và chúng tôi đang nỗ lực sửa tất cả các lỗi nội bộ. Chúng tôi đã được thông báo về lỗi này và sẽ sớm sửa nó. Hãy ghé thăm lại!',
 	'mobile-frontend-are-you-sure' => 'Bạn có chắc không?',
@@ -7090,7 +7092,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-hide-button' => '隐藏',
 	'mobile-frontend-disable-button' => '停用',
 	'mobile-frontend-back-button' => '后退',
-	'mobile-frontend-regular-site' => '在原始{{SITENAME}}上查看此页面',
+	'mobile-frontend-regular-site' => '桌面视图',
 	'mobile-frontend-error-page-title' => '错误！',
 	'mobile-frontend-error-page-text' => '{{SITENAME}}移动版尚在开发之中，我们正努力修复我们的内部错误。我们已收到关于本错误的通知，并将在不久后予以修复。请稍后再检查修复情况！',
 	'mobile-frontend-are-you-sure' => '你确定吗？',
@@ -7160,7 +7162,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-hide-button' => '隱藏',
 	'mobile-frontend-disable-button' => '停用',
 	'mobile-frontend-back-button' => '返回',
-	'mobile-frontend-regular-site' => '在原版{{SITENAME}}瀏覽此頁',
+	'mobile-frontend-regular-site' => '桌面視圖',
 	'mobile-frontend-error-page-title' => '發生故障！',
 	'mobile-frontend-error-page-text' => '行動版{{SITENAME}}仍然在開發當中，我們正在不斷修復其錯誤的地方。我們已收到了這次錯誤的通知，並將會盡快修復。請稍後再到此頁，謝謝！',
 	'mobile-frontend-are-you-sure' => '你確定嗎？',
