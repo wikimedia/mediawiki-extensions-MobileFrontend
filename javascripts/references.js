@@ -1,5 +1,7 @@
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
+		var calculatePosition;
+
 		function collect() {
 			var references = {};
 			$( 'ol.references li' ).each(function(i, el) {
@@ -14,17 +16,20 @@ if( typeof jQuery !== 'undefined' ) {
 		// TODO: only apply to places that need it
 		// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 		// https://github.com/Modernizr/Modernizr/issues/167
-		$( document ).scroll( function(ev) {
+		calculatePosition = function() {
+			var h = $( '#mf-references' ).outerHeight();
 			$( '#mf-references' ).css( {
-				bottom: -window.pageYOffset,
+				top:  ( window.innerHeight + window.pageYOffset ) - h,
+				bottom: 'auto',
 				position: 'absolute'
 			} );
-		} );
+		};
+		$( document ).scroll(calculatePosition);
 
 		function init() {
 			$( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body );
 			var close = function( ev ) {
-				$( '#mf-references' ).slideUp();
+				$( '#mf-references' ).fadeOut( 500 );
 			};
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
@@ -42,7 +47,8 @@ if( typeof jQuery !== 'undefined' ) {
 						attr( 'href', href ).appendTo('<div />').parent().html();
 				}
 				$( '#mf-references div' ).html( html );
-				$( '#mf-references' ).slideDown( 1000 );
+				$( '#mf-references' ).fadeIn( 1000 );
+				calculatePosition();
 				ev.preventDefault();
 			});
 		}
