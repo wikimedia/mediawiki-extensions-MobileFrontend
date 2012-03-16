@@ -757,7 +757,7 @@ full screen search css
 #header,
 #search,
 #sq,
-form,
+#header form,
 #searchbox {
 	position: relative;
 	right: 0;
