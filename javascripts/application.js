@@ -26,6 +26,15 @@ MobileFrontend = (function() {
 		}
 		utilities( document.getElementById( 'logo' ) ).bind( 'click', logoClick );
 
+		function desktopViewClick() {
+			var cookieName = MobileFrontend.setting( 'useFormatCookieName' );
+			var cookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
+			// convert from seconds to days
+			cookieDuration = cookieDuration / ( 24 * 60 * 60 );
+			MobileFrontend.banner.writeCookie( cookieName, 'desktop', cookieDuration );
+		}
+		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
+
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );
 	}

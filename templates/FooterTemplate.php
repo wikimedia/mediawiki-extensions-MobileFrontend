@@ -36,7 +36,7 @@ class FooterTemplate extends MobileFrontendTemplate {
 			<div id='footer' {$footerDisplayNone}>
 			  <div class='nav' id='footmenu'>
 				<div class='mwm-notice'>
-				  <a href="{$viewNormalSiteURL}">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
+				  <a href="{$viewNormalSiteURL}" id="mf-display-toggle">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
 				</div>
 			  </div>
 			  <div id='copyright'>{$copyright}</div>

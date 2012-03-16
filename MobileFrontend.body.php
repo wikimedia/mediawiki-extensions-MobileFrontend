@@ -43,6 +43,7 @@ class ExtMobileFrontend {
 	public static $logoutHtml;
 	public static $loginHtml;
 	public static $zeroRatedBanner;
+	public static $useFormatCookieName;
 	
 	protected $useFormat;
 	
@@ -190,7 +191,7 @@ class ExtMobileFrontend {
 	 * @return bool
 	 */
 	public function addMobileFooter( &$obj, &$tpl ) {
-		global $wgRequest;
+		global $wgRequest, $wgServer;
 		wfProfileIn( __METHOD__ );
 
 		$title = $obj->getTitle();
@@ -202,6 +203,7 @@ class ExtMobileFrontend {
 					$this->removeQueryStringParameter( $wgRequest->appendQuery( 'useformat=mobile' ), 'mobileaction' )
 					);
 
+			$mobileViewUrl = $this->getMobileUrl( $wgServer . $mobileViewUrl );
 			$tpl->set( 'mobileview', "<a href='{$mobileViewUrl}' class='noprint'>" . wfMsg( 'mobile-frontend-view' ) . "</a>" );
 			$footerlinks['places'][] = 'mobileview';
 			$tpl->set( 'footerlinks', $footerlinks );
@@ -1164,6 +1166,8 @@ class ExtMobileFrontend {
 						'zeroRatedBanner' => self::$zeroRatedBanner,
 						'showText' => self::$messages[ 'mobile-frontend-show-button' ],
 						'hideText' => self::$messages[ 'mobile-frontend-hide-button' ],
+						'useFormatCookieName' => self::$useFormatCookieName,
+						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
 						);
 		$applicationTemplate->setByArray( $options );
 		wfProfileOut( __METHOD__ );
@@ -1446,7 +1450,11 @@ class ExtMobileFrontend {
 	}
 	
 	public function checkUseFormatCookie() {
-		global $wgRequest;
+		global $wgRequest, $wgCookiePrefix;
+		
+		if ( !isset( self::$useFormatCookieName )) {
+			self::$useFormatCookieName = $wgCookiePrefix . 'mf_useformat';
+		}
 		
 		$useFormat = $this->getUseFormat();
 		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat' );
@@ -1472,25 +1480,42 @@ class ExtMobileFrontend {
 	 * @param string The format to store in the cookie
 	 */
 	protected function setUseFormatCookie( $useFormat ) {
-		global $wgRequest;
+		global $wgRequest, $wgCookiePath, $wgCookieSecure, $wgCookieDomain;
 		$expiry = $this->getUseFormatCookieExpiry();
-		$wgRequest->response()->setCookie( 'mf_useformat', $useFormat, $expiry );
+		
+		// use regular php setcookie() rather than WebResponse::setCookie
+		// so we can ignore $wgCookieHttpOnly since the protection it provides
+		// is irrelevant for this cookie.
+		setcookie( self::$useFormatCookieName, $useFormat, $expiry, $wgCookiePath, $wgCookieDomain, $wgCookieSecure );
 	}
 	
 	/**
 	 * Get the expiration time for the mf_useformat cookie
 	 *
-	 * If $wgMobileFrontendFormatCookieExpiry as a non-0 value, 
 	 * @param int The base time (in seconds since Epoch) from which to calculate
 	 * 		cookie expiration. If null, time() is used.
+	 * @return int The time (in seconds since Epoch) that the cookie should expire
 	 */
 	protected function getUseFormatCookieExpiry( $startTime=null ) {
-		global $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
-		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ? 
-				$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
+		$cookieDuration = $this->getUseFormatCookieDuration();
 		if ( intval( $startTime ) === 0 ) $startTime = time();
 		$expiry = $startTime + $cookieDuration;
 		return $expiry;
+	}
+	
+	/**
+	 * Determine the duration the cookie should last.
+	 * 
+	 * If $wgMobileFrontendFormatcookieExpiry has a non-0 value, use that
+	 * for the duration. Otherwise, fall back to $wgCookieExpiration.
+	 * 
+	 * @return int The number of seconds for which the cookie should last.
+	 */
+	protected function getUseFormatCookieDuration() {
+		global $wgMobileFrontendFormatCookieExpiry, $wgCookieExpiration;
+		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ? 
+				$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
+		return $cookieDuration;
 	}
 	
 	public function getVersion() {
