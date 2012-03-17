@@ -81,6 +81,7 @@ $messages['en'] = array (
  * @author EugeneZelenko
  * @author Fryed-peach
  * @author Raymond
+ * @author SPQRobin
  * @author Siebrand
  * @author Umherirrender
  * @author Yekrats
@@ -88,6 +89,7 @@ $messages['en'] = array (
 $messages['qqq'] = array(
 	'mobile-frontend-show-button' => '{{Identical|Show}}',
 	'mobile-frontend-hide-button' => '{{Identical|Hide}}',
+	'mobile-frontend-regular-site' => 'When on the mobile site, this text links to the normal page for desktop computers',
 	'mobile-frontend-wml-continue' => '{{Identical|Continue}}',
 	'mobile-frontend-wml-back' => '{{Identical|Back}}',
 	'mobile-frontend-opt-in-yes-button' => '{{Identical|Yes}}',
@@ -711,7 +713,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-hide-button' => 'Схаваць',
 	'mobile-frontend-disable-button' => 'Выключыць',
 	'mobile-frontend-back-button' => 'Назад',
-	'mobile-frontend-regular-site' => 'Паказаць старонку ў {{GRAMMAR:месны|{{SITENAME}}}}',
+	'mobile-frontend-regular-site' => 'Поўная вэрсія',
 	'mobile-frontend-error-page-title' => 'Мы маем праблемы!',
 	'mobile-frontend-error-page-text' => 'Мабільная вэрсія {{GRAMMAR:родны|{{SITENAME}}}} дагэтуль знаходзіцца ў стадыі актыўнай распрацоўкі, і мы шмат працуем дзеля выпраўленьня ўсіх унутраных памылак. Нам ужо паведамілі пра гэтую памылку і яна выпраўляецца. Калі ласка, праверце празь нейкі час!',
 	'mobile-frontend-are-you-sure' => 'Вы ўпэўнены?',
@@ -1934,7 +1936,7 @@ $messages['fi'] = array(
 	'mobile-frontend-hide-button' => 'Piilota',
 	'mobile-frontend-disable-button' => 'Poista käytöstä',
 	'mobile-frontend-back-button' => 'Takaisin',
-	'mobile-frontend-regular-site' => 'Näytä tämä normaalissa {{GRAMMAR:inessive|{{SITENAME}}}}',
+	'mobile-frontend-regular-site' => 'Työpöytänäkymä',
 	'mobile-frontend-error-page-title' => 'Virhetilanne',
 	'mobile-frontend-error-page-text' => '{{GRAMMAR:genitive|{{SITENAME}}}} mobiiliversiota kehitetään jatkuvasti, ja työskentelemme ahkerasti kaikkien sisäisten virheiden korjaamiseksi. Tiedämme tästä virheestä ja korjaamme sen pian. Yritä myöhemmin uudelleen.',
 	'mobile-frontend-are-you-sure' => 'Oletko varma?',
@@ -3953,6 +3955,13 @@ $messages['ltg'] = array(
 	'mobile-frontend-nav-history' => 'Viesture',
 );
 
+/** Lushai (Mizo ţawng)
+ * @author RMizo
+ */
+$messages['lus'] = array(
+	'mobile-frontend-news-items' => 'Chanchin thar',
+);
+
 /** Latvian (Latviešu)
  * @author GreenZeb
  * @author Papuass
@@ -4617,7 +4626,7 @@ $messages['nl'] = array(
 	'mobile-frontend-hide-button' => 'Verbergen',
 	'mobile-frontend-disable-button' => 'Uitschakelen',
 	'mobile-frontend-back-button' => 'Terug',
-	'mobile-frontend-regular-site' => 'Deze pagina in de standaardweergave van {{SITENAME}} bekijken',
+	'mobile-frontend-regular-site' => 'Standaardweergave',
 	'mobile-frontend-error-page-title' => 'Er is een probleem!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} Mobiel is in ontwikkeling en er wordt hard aan gewerkt om alle fouten op te lossen.
 We hebben deze fout ontvangen en verhelpen deze zo spoedig mogelijk.
