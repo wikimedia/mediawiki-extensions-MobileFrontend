@@ -471,7 +471,7 @@ $messages['ast'] = array(
 	'mobile-frontend-hide-button' => 'Anubrir',
 	'mobile-frontend-disable-button' => 'Desactivar',
 	'mobile-frontend-back-button' => 'Anterior',
-	'mobile-frontend-regular-site' => 'Ver esta páxina en {{SITENAME}} normal',
+	'mobile-frontend-regular-site' => "Vista d'escritoriu",
 	'mobile-frontend-error-page-title' => '¡Tenemos un problema!',
 	'mobile-frontend-error-page-text' => "{{SITENAME}} móvil entá s'alcuentra en desendolcu activu y tamos trabayando duro pa iguar tolos fallos internos. Venimos de recibir avisu d'esti fallu y vamos a igualu bien aína. ¡Vuelvi pronto pa comprobalo!",
 	'mobile-frontend-are-you-sure' => '¿Tas seguru?',
@@ -1980,6 +1980,7 @@ $messages['fi'] = array(
 	'mobile-frontend-password' => 'Salasana',
 	'mobile-frontend-login' => 'Kirjaudu sisään',
 	'mobile-frontend-placeholder' => 'Kirjoita hakusi tähän...',
+	'mobile-frontend-clear-search' => 'Tyhjennä',
 );
 
 /** Faroese (Føroyskt)
@@ -2238,7 +2239,7 @@ $messages['gl'] = array(
 	'mobile-frontend-hide-button' => 'Agochar',
 	'mobile-frontend-disable-button' => 'Desactivar',
 	'mobile-frontend-back-button' => 'Volver',
-	'mobile-frontend-regular-site' => 'Ver esta páxina na {{SITENAME}} normal',
+	'mobile-frontend-regular-site' => 'Vista normal',
 	'mobile-frontend-error-page-title' => 'Vaites, temos un problema!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} móbil aínda está en desenvolvemento activo e estamos a traballar arreo para arranxar os nosos erros internos. Xa se nos avisou deste erro e axiña o resolveremos. Ata a próxima!',
 	'mobile-frontend-are-you-sure' => 'Está seguro?',
@@ -3411,6 +3412,7 @@ $messages['km'] = array(
 
 /** Kannada (ಕನ್ನಡ)
  * @author M G Harish
+ * @author Nayvik
  * @author VASANTH S.N.
  */
 $messages['kn'] = array(
@@ -3427,7 +3429,7 @@ $messages['kn'] = array(
 	'mobile-frontend-hide-button' => 'ಮರೆ ಮಾಡಿ',
 	'mobile-frontend-disable-button' => 'ಮರೆಮಾಡಿ',
 	'mobile-frontend-back-button' => 'ಹಿಂದಕ್ಕೆ',
-	'mobile-frontend-regular-site' => '{{SITENAME}} ನಿಯತ ಆವೃತ್ತಿಯಲ್ಲಿ ಈ ಪುಟ ನೋಡಿ',
+	'mobile-frontend-regular-site' => 'ಮುಂತೆರೆ ನೋಟ',
 	'mobile-frontend-error-page-title' => 'ಇಲ್ಲೇನೋ ತೊಂದರೆಯಾಗಿದೆ!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} ಮೊಬೈಲ್ ಆವೃತ್ತಿ ಇನ್ನೂ ಸತತ ನಿರ್ಮಾಣ ಹಂತದಲ್ಲಿದೆ. ನಾವುಗಳು ಇಲ್ಲಿಯ ತಂತ್ರಾಂಶದ ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸಲು ಶ್ರಮದಿಂದ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೇವೆ. ಈಗಾದ ದೋಷದ ಬಗ್ಗೆ ವಿವರ ನಮಗೆ ತಲುಪಿದೆ. ಇದನ್ನು ಸದ್ಯದಲ್ಲೇ ಸರಿಪಡಿಸಲಾಗುವುದು. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ!',
 	'mobile-frontend-are-you-sure' => 'ಮುಂದುವರೆಯೋಣವೆ?',
@@ -3748,7 +3750,7 @@ $messages['lb'] = array(
 	'mobile-frontend-hide-button' => 'Verstoppen',
 	'mobile-frontend-disable-button' => 'Ausschalten',
 	'mobile-frontend-back-button' => 'Zréck',
-	'mobile-frontend-regular-site' => 'Dës Säit als klassesch {{SITENAME}}-Säit weisen',
+	'mobile-frontend-regular-site' => 'Desktop-Vue',
 	'mobile-frontend-error-page-title' => 'Mir hunn e Problem!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}}-Mobil gëtt nach ëmmer weiderentwéckelt a mir schaffen dru fir all eis intern Feeler ze verbesseren. Mir goufe vun dësem Feeler informéiert a wäerten en esou séier wéi méiglech verbesseren. Versicht et w.e.g. geschwënn nachemol!',
 	'mobile-frontend-are-you-sure' => 'Sidd Dir sécher?',
@@ -5876,7 +5878,7 @@ $messages['sk'] = array(
 	'mobile-frontend-hide-button' => 'Skryť',
 	'mobile-frontend-disable-button' => 'Deaktivovať',
 	'mobile-frontend-back-button' => 'Späť',
-	'mobile-frontend-regular-site' => 'Zobraziť túto stránku na klasickej {{GRAMMAR:lokál|{{SITENAME}}}}',
+	'mobile-frontend-regular-site' => 'Klasické zobrazenie',
 	'mobile-frontend-error-page-title' => 'Vyskytol sa problém!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} mobile je v aktívnom vývoji a my sa snažíme odstrániť všetky naše interné chyby. O tejto chybe sme boli informovaní a problém čoskoro odstránime. Skúste to neskôr skontrolovať!',
 	'mobile-frontend-are-you-sure' => 'Ste si istý?',
