@@ -49,7 +49,7 @@ if( typeof jQuery !== 'undefined' ) {
 			$( '.mw-cite-backlink a' ).click( close );
 			
 			var data, html, href, references = collect();
-			$( 'sup a' ).click( function(ev) {
+			$( 'sup a' ).unbind('click').click( function(ev) {
 				var top, oh;
 				href = $(this).attr( 'href' );
 				data = href && href.charAt(0) === '#' ?
