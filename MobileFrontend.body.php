@@ -1506,6 +1506,7 @@ class ExtMobileFrontend {
 	public function getCacheVaryCookies( $out, &$cookies ) {
 		global $wgCookiePrefix;
 		$cookies[] = $wgCookiePrefix . 'mf_useformat';
+		return true;
 	}
 	
 	/**
