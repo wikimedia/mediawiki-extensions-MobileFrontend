@@ -52,7 +52,7 @@ $autoloadClasses = array (
 
 	'ApiMobileView' => 'api/ApiMobileView',
 	'ApiParseExtender' => 'api/ApiParseExtender',
-	'ApiQueryExtracts' => 'api/ApiQueryExcerpts',
+	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
