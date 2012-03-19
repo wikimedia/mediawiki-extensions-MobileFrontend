@@ -90,10 +90,10 @@ HTML;
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
-			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js?version=1332193250{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version=1332193250{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1332193250{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1332193250{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
 			{$betajs}
 			{$filePageScript}
 			<!--[endif]-->
