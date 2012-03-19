@@ -1503,6 +1503,11 @@ class ExtMobileFrontend {
 		return $expiry;
 	}
 	
+	public function getCacheVaryCookies( $out, &$cookies ) {
+		global $wgCookiePrefix;
+		$cookies[] = $wgCookiePrefix . 'mf_useformat';
+	}
+	
 	/**
 	 * Determine the duration the cookie should last.
 	 * 

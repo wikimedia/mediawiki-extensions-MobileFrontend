@@ -121,6 +121,8 @@ $wgMobileFrontendFormatCookieExpiry;
  */
 $wgMobileRedirectFormAction = false;
 
+$wgMobileResourceVersion;
+
 $wgExtMobileFrontend = null;
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
@@ -134,6 +136,7 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
+
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;
 	$wgExtMobileFrontend = new ExtMobileFrontend();
@@ -142,6 +145,7 @@ function efMobileFrontend_Setup() {
 	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 	$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 	$wgHooks['ResourceLoaderTestModules'][] = array( &$wgExtMobileFrontend, 'addTestModules' );
+	$wgHooks['GetCacheVaryCookies'][] = array( &$wgExtMobileFrontend, 'getCacheVaryCookies' );
 }
 
 /**
