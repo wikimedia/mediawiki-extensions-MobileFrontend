@@ -854,7 +854,7 @@ full screen search css
 	left: 0;
 	right: 0;
 	background-color: #E4E4E4;
-	padding: 22px 34px;
+	padding: 22px;
 	-webkit-box-shadow: 0px -20px 10px -16px #aaa;
 	-moz-box-shadow: 0px -20px 10px -16px #aaa;
 	-o-box-shadow: 0px -20px 10px -16px #aaa;
@@ -866,8 +866,8 @@ full screen search css
 
 #mf-references button {
 	top: 22px;
-	right: 16px; /* padding of mf-references - width 18 */
-	width: 18px;
+	right: 22px; /* padding of #content_wrapper */
+	width: 16px;
 	height: 12px;
 	background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
 	margin: 0;
