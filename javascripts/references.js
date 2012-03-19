@@ -4,6 +4,8 @@ if( typeof jQuery !== 'undefined' ) {
 
 		hashtest = window.location.hash.substr(1).match(/refspeed:([0-9]*)/);
 		options.animationSpeed = hashtest ? parseInt( hashtest[1], 10 ) : 500;
+		hashtest = window.location.hash.substr(1).match(/refanimation:([a-z]*)/);
+		options.animation = hashtest ? hashtest[1] : null;
 
 		function collect() {
 			var references = {};
@@ -32,13 +34,23 @@ if( typeof jQuery !== 'undefined' ) {
 		function init() {
 			$( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body );
 			var close = function() {
-				$( '#mf-references' ).fadeOut( options.animationSpeed );
+				var top;
+				lastLink = null;
+				if( options.animation === 'none' ) {
+					$( '#mf-references' ).hide();
+				} else if( options.animation === 'slide' ){
+					top = window.innerHeight + window.pageYOffset;
+					$( '#mf-references' ).show().animate( { top: top }, options.animationSpeed );
+				} else {
+					$( '#mf-references' ).fadeOut( options.animationSpeed );
+				}
 			}, lastLink;
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
 			
 			var data, html, href, references = collect();
 			$( 'sup a' ).click( function(ev) {
+				var top, oh;
 				href = $(this).attr( 'href' );
 				data = href && href.charAt(0) === '#' ?
 					references[ href.substr( 1, href.length ) ] : null;
@@ -52,11 +64,20 @@ if( typeof jQuery !== 'undefined' ) {
 							attr( 'href', href ).appendTo('<div />').parent().html();
 					}
 					$( '#mf-references div' ).html( html );
-					$( '#mf-references' ).fadeIn( options.animationSpeed );
+					calculatePosition();
+					if( options.animation === 'none' ) {
+						$( '#mf-references' ).show();
+					} else if( options.animation === 'slide' ){
+						top = window.innerHeight + window.pageYOffset;
+						oh = $( '#mf-references' ).outerHeight();
+						$( '#mf-references' ).show().css( { 'top': top } ).
+							animate( { top: top - oh }, options.animationSpeed );
+					} else {
+						$( '#mf-references' ).fadeIn( options.animationSpeed );
+					}
 				} else {
 					close();
 				}
-				calculatePosition();
 				ev.preventDefault();
 			});
 		}
