@@ -3544,8 +3544,11 @@ $messages['ko'] = array(
 	'mobile-frontend-clear-search' => '지우기',
 );
 
-/** Karachay-Balkar (Къарачай-Малкъар) */
+/** Karachay-Balkar (Къарачай-Малкъар)
+ * @author Iltever
+ */
 $messages['krc'] = array(
+	'mobile-frontend-desc' => 'Мобил интерфейс',
 	'mobile-frontend-search-submit' => 'Бар',
 	'mobile-frontend-search-results' => 'Излеуню эсеблери',
 	'mobile-frontend-no-article-found' => 'Статья табылмады',
@@ -3562,15 +3565,29 @@ $messages['krc'] = array(
 	'mobile-frontend-error-page-title' => 'Проблемабыз барды!',
 	'mobile-frontend-error-page-text' => 'Мобил Википедия тири ишлене тургъан стадиядады, биз бек кюрешебиз бютеу ичиндеги халатларыбызны кетерирге деб. Бу халатны юсюнден билдириу келгенди бизге, къысха заманны ичинде тюзетирге деб турабыз. Кесек замандан джангыдан къарагъыз.',
 	'mobile-frontend-are-you-sure' => 'Таукелмисиз ?',
-	'mobile-frontend-explain-disable' => 'Википедияны мобил версиясын джукълатыргъа таукелмисиз? <b>Джукълатны</b> сайласагъыз, Википедиягъа энди кирген сагъатыгъызда сайтны мобил аппартлагъа версиясына автомат джибериллик тюйюлсюз.',
+	'mobile-frontend-explain-disable' => '{{SITENAME}}ны мобил версиясын джукълатыргъа таукелмисиз? <b>Джукълатны</b> сайласагъыз, {{SITENAME}}гъа энди кирген сагъатыгъызда сайтны мобил аппартлагъа версиясына автомат джибериллик тюйюлсюз.',
 	'mobile-frontend-nav-end' => 'Ахырда',
 	'mobile-frontend-nav-top' => 'Башланнганына',
 	'mobile-frontend-nav-edit' => 'Тюзет',
 	'mobile-frontend-nav-history' => 'Тарих',
 	'mobile-frontend-search-text' => 'Излеу',
 	'mobile-frontend-contact-us' => 'Сорууларыгъыз неда башламчылыкъларыгъыз бар эсе, бу адресге джазыгъыз: mobile@wikipedia.org.',
-	'mobile-frontend-author-link' => 'Авторну, лицензияны юсюнден информацияны эмда къошакъ билгиле билир ючюн бу медиа-файлгъа Википедияда къарагъыз.',
+	'mobile-frontend-author-link' => 'Авторну, лицензияны юсюнден информацияны эмда къошакъ билгиле билир ючюн бу медиа-файлгъа {{SITENAME}}да къарагъыз.',
 	'mobile-frontend-download-full-version' => 'Толу версияны ал',
+	'mobile-frontend-file-namespace' => 'Файл',
+	'mobile-frontend-wml-continue' => 'Мындан арысы ...',
+	'mobile-frontend-wml-back' => 'Артха ...',
+	'mobile-frontend-view' => 'Мобил версия',
+	'mobile-frontend-opt-out-yes-button' => 'Хоу',
+	'mobile-frontend-opt-out-no-button' => 'Огъай',
+	'mobile-frontend-news-items' => 'Джангылыкълада',
+	'mobile-frontend-language' => 'Тил',
+	'mobile-frontend-username' => 'Къошулуучуну аты:',
+	'mobile-frontend-password' => 'Паролюгъуз:',
+	'mobile-frontend-login' => 'Кир',
+	'mobile-frontend-placeholder' => 'Излеу...',
+	'mobile-frontend-dismiss-notification' => 'бу билдириуню джашыр',
+	'mobile-frontend-clear-search' => 'Кетер',
 );
 
 /** Colognian (Ripoarisch)
@@ -3961,6 +3978,26 @@ $messages['ltg'] = array(
  * @author RMizo
  */
 $messages['lus'] = array(
+	'mobile-frontend-search-submit' => 'Kal rawh le',
+	'mobile-frontend-search-results' => 'Zawn hmuhte',
+	'mobile-frontend-no-article-found' => 'Phek hmuh tur awm lo',
+	'mobile-frontend-featured-article' => 'Tlangrèlthang...',
+	'mobile-frontend-in-the-news' => 'Chanchin thar lamah thung',
+	'mobile-frontend-home-button' => 'Inpui',
+	'mobile-frontend-random-button' => 'Kahpah',
+	'mobile-frontend-back-to-top-of-section' => 'Hlawm khat zuan lêtna',
+	'mobile-frontend-show-button' => 'Tihlanna',
+	'mobile-frontend-hide-button' => 'Tihbona',
+	'mobile-frontend-disable-button' => 'Tihthihna',
+	'mobile-frontend-back-button' => 'Lêtna',
+	'mobile-frontend-regular-site' => 'Hmaipui thlir',
+	'mobile-frontend-error-page-title' => 'Harsatna kan tawk tlat!',
+	'mobile-frontend-are-you-sure' => 'I chiang chiah maw?',
+	'mobile-frontend-nav-end' => 'Tawpna',
+	'mobile-frontend-nav-top' => 'Chhîp',
+	'mobile-frontend-nav-edit' => 'Siamţhatna',
+	'mobile-frontend-nav-history' => 'Chanchin',
+	'mobile-frontend-search-text' => 'Zawnna',
 	'mobile-frontend-news-items' => 'Chanchin thar',
 );
 
@@ -4974,7 +5011,7 @@ $messages['pl'] = array(
 	'mobile-frontend-hide-button' => 'Ukryj',
 	'mobile-frontend-disable-button' => 'Wyłącz',
 	'mobile-frontend-back-button' => 'Powrót',
-	'mobile-frontend-regular-site' => 'Zobacz tę stronę w {{GRAMMAR:MS.lp|{{SITENAME}}}}',
+	'mobile-frontend-regular-site' => 'Widoku pulpitu',
 	'mobile-frontend-error-page-title' => 'Wystąpił problem!',
 	'mobile-frontend-error-page-text' => 'Mobilna wersja {{GRAMMAR:D.lp|{{SITENAME}}}} jest wciąż rozwijana, ale równie intensywnie pracujemy nad naprawą wszystkich błędów. Zostaliśmy poinformowani o tym błędzie i niedługo go naprawimy. Wróć później, aby sprawdzić!',
 	'mobile-frontend-are-you-sure' => 'Czy jesteś pewien?',
