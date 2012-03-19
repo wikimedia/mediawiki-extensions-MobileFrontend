@@ -1,10 +1,14 @@
 <?php
 
-class ApiQueryExcerpts extends ApiQueryBase {
+class ApiQueryExtracts extends ApiQueryBase {
+	const SECTION_MARKER_START = "\1\2";
+	const SECTION_MARKER_END = "\2\1";
+
 	/**
 	 * @var ParserOptions
 	 */
 	private $parserOptions;
+	private $params;
 
 	public function __construct( $query, $moduleName ) {
 		parent::__construct( $query, $moduleName, 'ex' );
@@ -17,8 +21,16 @@ class ApiQueryExcerpts extends ApiQueryBase {
 			wfProfileOut( __METHOD__ );
 			return;
 		}
-		$params = $this->extractRequestParams();
+		$isXml = $this->getMain()->getPrinter()->getFormat() == 'XML';
+		$result = $this->getResult();
+		$params = $this->params = $this->extractRequestParams();
 		$continue = 0;
+		$limit = intval( $params['limit'] );
+		if ( $limit > 1 && !$params['intro'] ) {
+			$limit = 1;
+			///@todo:
+			//$result->setWarning( "Provided limit was too large for requests for whole article extracts, lowered to $limit" );
+		}
 		if ( isset( $params['continue'] ) ) {
 			$continue = intval( $params['continue'] );
 			if ( $continue < 0 || $continue > count( $titles ) ) {
@@ -28,15 +40,19 @@ class ApiQueryExcerpts extends ApiQueryBase {
 		}
 		$count = 0;
 		foreach ( $titles as $id => $t ) {
-			if ( ++$count > $params['limit'] ) {
+			if ( ++$count > $limit ) {
 				$this->setContinueEnumParameter( 'continue', $continue + $count - 1 );
 				break;
 			}
-			$text = $this->getExcerpt( $t, $params['plaintext'] );
+			$text = $this->getExtract( $t );
 			if ( isset( $params['length'] ) ) {
-				$text = $this->trimText( $text, $params['length'], $params['plaintext'] );
+				$text = $this->trimText( $text );
 			}
-			$fit = $this->addPageSubItem( $id, $text );
+			if ( $isXml ) {
+				$fit = $result->addValue( array( 'query', 'pages', $id ), 'extract', array( '*' => $text ) );
+			} else {
+				$fit = $result->addValue( array( 'query', 'pages', $id ), 'extract', $text );
+			}
 			if ( !$fit ) {
 				$this->setContinueEnumParameter( 'continue', $continue + $count - 1 );
 				break;
@@ -68,7 +84,7 @@ class ApiQueryExcerpts extends ApiQueryBase {
 		$data = $api->getResultData();
 		foreach ( $pageIds as $id ) {
 			if ( isset( $data['query']['pages'][$id]['excerpts'][0] ) ) {
-				$results[$id]['extract'] = $data['query']['pages'][$id]['excerpts'][0];
+				$results[$id]['extract'] = $data['query']['pages'][$id]['extract'][0];
 				$results[$id]['extract trimmed'] = false;
 			}
 		}
@@ -78,28 +94,63 @@ class ApiQueryExcerpts extends ApiQueryBase {
 	/**
 	 * Returns a processed, but not trimmed excerpt
 	 * @param Title $title
-	 * @return string 
+	 * @return string
 	 */
-	private function getExcerpt( Title $title, $plainText ) {
-		global $wgMemc;
-
+	private function getExtract( Title $title ) {
 		wfProfileIn( __METHOD__ );
 		$page = WikiPage::factory( $title );
-		$key = wfMemcKey( 'mf', 'excerpt', $plainText, $title->getArticleID(), $page->getLatest() );
-		$text = $wgMemc->get( $key );
-		if ( $text !== false ) {
-			wfProfileOut( __METHOD__ );
-			return $text;
+
+		$introOnly = $this->params['intro'];
+		$text = $this->getFromCache( $page, $introOnly );
+		// if we need just first section, try retrieving full page and getting first section out of it
+		if ( $text === false && $introOnly ) {
+			$text = $this->getFromCache( $page, false );
+			if ( $text !== false ) {
+				$text = $this->getFirstSection( $text, $this->params['plaintext'] );
+			}
 		}
-		$text = $this->parse( $page );
-		$text = $this->convertText( $text, $title, $plainText );
-		$wgMemc->set( $key, $text );
+		if ( $text === false ) {
+			$text = $this->parse( $page );
+			$text = $this->convertText( $text, $title, $this->params['plaintext'] );
+			$this->setCache( $page, $text );
+		}
 		wfProfileOut( __METHOD__ );
 		return $text;
 	}
 
+	private function cacheKey( WikiPage $page, $introOnly ) {
+		return wfMemcKey( 'mf', 'extract', $page->getLatest(), $this->params['plaintext'], $introOnly );
+	}
+
+	private function getFromCache( WikiPage $page, $introOnly ) {
+		global $wgMemc;
+
+		$key = $this->cacheKey( $page, $introOnly );
+		return $wgMemc->get( $key );
+	}
+
+	private function setCache( WikiPage $page, $text ) {
+		global $wgMemc;
+
+		$key = $this->cacheKey( $page, $this->params['intro'] );
+		$wgMemc->set( $key, $text );
+	}
+
+	private function getFirstSection( $text, $plainText ) {
+		if ( $plainText ) {
+			$regexp = '/^(.*?)(?=' . self::SECTION_MARKER_START . ')/s';
+		} else {
+			$regexp = '/^(.*?)(?=<h[1-6]\b)/s';
+		}
+		if ( preg_match( $regexp, $text, $matches ) ) {
+			wfDebugDieBacktrace();
+			$text = $matches[0];
+		}
+		return $text;
+	}
+
 	/**
-	 * Returns HTML of page's zeroth section
+	 * Returns page HTML
 	 * @param WikiPage $page
 	 * @return string
 	 */
@@ -113,20 +164,23 @@ class ApiQueryExcerpts extends ApiQueryBase {
 			$pout = ParserCache::singleton()->get( $page, $this->parserOptions );
 			if ( $pout ) {
 				$text = $pout->getText();
-				$s = preg_replace( '/<h[1-6].*$/s', '', $text );
+				if ( $this->params['intro'] ) {
+					$text = $this->getFirstSection( $text, false );
+				}
 				wfProfileOut( __METHOD__ );
-				return $s;
+				return $text;
 			}
 		}
-		// in case of cache miss, render just the needed section
-		$api = new ApiMain( new FauxRequest(
-			array(
-				'action' => 'parse',
-				'page' => $page->getTitle()->getPrefixedText(),
-				'section' => 0,
-				'prop' => 'text'
-			) )
+		$request = array(
+			'action' => 'parse',
+			'page' => $page->getTitle()->getPrefixedText(),
+			'prop' => 'text'
 		);
+		if ( $this->params['intro'] ) {
+			$request['section'] = 0;
+		}
+		// in case of cache miss, render just the needed section
+		$api = new ApiMain( new FauxRequest( $request )	);
 		$api->execute();
 		$data = $api->getResultData();
 		wfProfileOut( __METHOD__ );
@@ -140,23 +194,11 @@ class ApiQueryExcerpts extends ApiQueryBase {
 	 * @param bool $plainText
 	 * @return string 
 	 */
-	private function convertText( $text, Title $title, $plainText ) {
+	private function convertText( $text ) {
 		wfProfileIn( __METHOD__ );
-		$fmt = new HtmlFormatter( HtmlFormatter::wrapHTML( $text, false ), $title, 'XHTML' );
-		$fmt->removeImages();
-		$fmt->remove( array( 'table', 'div', 'sup.reference', 'span.coordinates',
-			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error' )
-		);
-		if ( $plainText ) {
-			$fmt->flattenAllTags();
-		} else {
-			$fmt->flatten( array( 'span', 'a' ) );
-		}
-		$fmt->filterContent();
+		$fmt = new ExtractFormatter( $text, $this->params['plaintext'], $this->params['sectionformat'] );
 		$text = $fmt->getText();
-		if ( $plainText ) {
-			$text = html_entity_decode( $text );
-		}
+
 		wfProfileOut( __METHOD__ );
 		return trim( $text );
 	}
@@ -202,7 +244,12 @@ class ApiQueryExcerpts extends ApiQueryBase {
 				ApiBase::PARAM_MAX => 20,
 				ApiBase::PARAM_MAX2 => 20,
 			),
+			'intro' => false,
 			'plaintext' => false,
+			'sectionformat' => array(
+				ApiBase::PARAM_TYPE => ExtractFormatter::$sectionFormats,
+				ApiBase::PARAM_DFLT => 'wiki',
+			),
 			'continue' => array(
 				ApiBase::PARAM_TYPE => 'integer',
 			),
@@ -212,14 +259,21 @@ class ApiQueryExcerpts extends ApiQueryBase {
 	public function getParamDescription() {
 		return array(
 			'length' => 'How many characters to return, actual text returned might be slightly longer.',
-			'limit' => 'How many excerpts to return',
-			'plaintext' => 'Return excerpts as plaintext instead of limited HTML',
+			'limit' => 'How many extracts to return. ',
+			'intro' => 'Return only content before the first section',
+			'plaintext' => 'Return extracts as plaintext instead of limited HTML',
+			'sectionformat' => array(
+				'How to format sections in plaintext mode:',
+				' none - No formatting',
+				' wiki - Wikitext-style formatting == like this ==',
+				" raw - Return in this module's internal representation (secton titles prefixed with <ASCII 1><ASCII 2><section level><ASCII 2><ASCII 1>",
+			),
 			'continue' => 'When more results are available, use this to continue',
 		);
 	}
 
 	public function getDescription() {
-		return 'Returns excerpts of the given page(s)';
+		return 'Returns plain-text or limited HTML extracts of the given page(s)';
 	}
 
 	public function getPossibleErrors() {
@@ -230,7 +284,7 @@ class ApiQueryExcerpts extends ApiQueryBase {
 
 	public function getExamples() {
 		return array(
-			'api.php?action=query&prop=excerpts&exlength=175&titles=Therion' => 'Get a 175-character excerpt',
+			'api.php?action=query&prop=extracts&exlength=175&titles=Therion' => 'Get a 175-character extract',
 		);
 	}
 
@@ -244,4 +298,72 @@ class ApiQueryExcerpts extends ApiQueryBase {
 	}
 }
 
+class ExtractFormatter extends HtmlFormatter {
+	private $plainText;
+	private $sectionFormat;
 
+	public static $sectionFormats = array(
+		'none',
+		'wiki',
+		'raw',
+	);
+
+	public function __construct( $text, $plainText, $sectionFormat ) {
+		parent::__construct( HtmlFormatter::wrapHTML( $text ) );
+		$this->plainText = $plainText;
+		$this->sectionFormat = $sectionFormat;
+
+		$this->removeImages();
+		$this->remove( array( 'table', 'div', '.editsection', 'sup.reference', 'span.coordinates',
+			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error' )
+		);
+		if ( $plainText ) {
+			$this->flattenAllTags();
+		} else {
+			$this->flatten( array( 'span', 'a' ) );
+		}
+	}
+
+	public function getText( $dummy = null ) {
+		$this->filterContent();
+		$text = parent::getText();
+		if ( $this->plainText ) {
+			$text = html_entity_decode( $text );
+			$text = str_replace( "\r", "\n", $text );
+			$text = preg_replace( "/\n{3,}/", "\n\n", $text );
+			$text = preg_replace_callback( 
+				"/" . ApiQueryExtracts::SECTION_MARKER_START . '(\d)'. ApiQueryExtracts::SECTION_MARKER_END . "(.*?)$/m",
+				array( $this, 'sectionCallback' ),
+				$text
+			);
+		}
+		return $text;
+	}
+
+	public function onHtmlReady( $html ) {
+		if ( $this->plainText ) {
+			$html = preg_replace( '/\s*(<h([1-6])\b)/i',
+				ApiQueryExtracts::SECTION_MARKER_START . '$2' . ApiQueryExtracts::SECTION_MARKER_END . '$1' ,
+				$html
+			);
+		}
+		return $html;
+	}
+
+	private function sectionCallback( $matches ) {
+		if ( $this->sectionFormat == 'raw' ) {
+			return $matches[0];
+		}
+		$func = "ExtractFormatter::doSection_{$this->sectionFormat}";
+		return call_user_func( $func, $matches[1], trim( $matches[2] ) );
+	}
+
+	private static function doSection_wiki( $level, $text ) {
+		$bars = str_repeat( '=', $level );
+		return "\n$bars $text $bars";
+	}
+
+	private static function doSection_none( $level, $text ) {
+		return "\n$text";
+	}
+}

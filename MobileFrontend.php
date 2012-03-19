@@ -52,7 +52,7 @@ $autoloadClasses = array (
 
 	'ApiMobileView' => 'api/ApiMobileView',
 	'ApiParseExtender' => 'api/ApiParseExtender',
-	'ApiQueryExcerpts' => 'api/ApiQueryExcerpts',
+	'ApiQueryExtracts' => 'api/ApiQueryExcerpts',
 
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
@@ -125,7 +125,7 @@ $wgExtMobileFrontend = null;
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
 
-$wgAPIPropModules['excerpts'] = 'ApiQueryExcerpts';
+$wgAPIPropModules['extracts'] = 'ApiQueryExtracts';
 $wgAPIModules['mobileview'] = 'ApiMobileView';
 
 $wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
