@@ -28,7 +28,7 @@ if( typeof jQuery !== 'undefined' ) {
 
 		function init() {
 			$( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body );
-			var close = function( ev ) {
+			var close = function() {
 				$( '#mf-references' ).fadeOut( 500 );
 			};
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
@@ -40,14 +40,18 @@ if( typeof jQuery !== 'undefined' ) {
 				data = href && href.charAt(0) === '#' ?
 					references[ href.substr( 1, href.length ) ] : null;
 
-				if( data ) {
-					html = '<h3>[' + data.label + ']</h3>' + data.html;
+				if( !$("#mf-references").is(":visible") ) {
+					if( data ) {
+						html = '<h3>[' + data.label + ']</h3>' + data.html;
+					} else {
+						html = $( '<a />' ).text( $(this).text() ).
+							attr( 'href', href ).appendTo('<div />').parent().html();
+					}
+					$( '#mf-references div' ).html( html );
+					$( '#mf-references' ).fadeIn( 1000 );
 				} else {
-					html = $( '<a />' ).text( $(this).text() ).
-						attr( 'href', href ).appendTo('<div />').parent().html();
+					close();
 				}
-				$( '#mf-references div' ).html( html );
-				$( '#mf-references' ).fadeIn( 1000 );
 				calculatePosition();
 				ev.preventDefault();
 			});
