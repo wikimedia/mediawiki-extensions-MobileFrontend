@@ -21,9 +21,10 @@ class ApiQueryExtracts extends ApiQueryBase {
 			wfProfileOut( __METHOD__ );
 			return;
 		}
-		$isXml = $this->getMain()->getPrinter()->getFormat() == 'XML';
+		$isXml = $this->getMain()->isInternalMode() || $this->getMain()->getPrinter()->getFormat() == 'XML';
 		$result = $this->getResult();
 		$params = $this->params = $this->extractRequestParams();
+		$this->requireMaxOneParameter( $params, 'chars', 'sentences' );
 		$continue = 0;
 		$limit = intval( $params['limit'] );
 		if ( $limit > 1 && !$params['intro'] ) {
@@ -45,9 +46,8 @@ class ApiQueryExtracts extends ApiQueryBase {
 				break;
 			}
 			$text = $this->getExtract( $t );
-			if ( isset( $params['length'] ) ) {
-				$text = $this->trimText( $text );
-			}
+			$text = $this->truncate( $text );
+
 			if ( $isXml ) {
 				$fit = $result->addValue( array( 'query', 'pages', $id ), 'extract', array( '*' => $text ) );
 			} else {
@@ -74,7 +74,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 		$api = new ApiMain( new FauxRequest(
 			array(
 				'action' => 'query',
-				'prop' => 'excerpts',
+				'prop' => 'extracts',
 				'explaintext' => true,
 				'exlimit' => count( $results ),
 				'pageids' => implode( '|', $pageIds ),
@@ -83,8 +83,8 @@ class ApiQueryExtracts extends ApiQueryBase {
 		$api->execute();
 		$data = $api->getResultData();
 		foreach ( $pageIds as $id ) {
-			if ( isset( $data['query']['pages'][$id]['excerpts'][0] ) ) {
-				$results[$id]['extract'] = $data['query']['pages'][$id]['extract'][0];
+			if ( isset( $data['query']['pages'][$id]['extract']['*'] ) ) {
+				$results[$id]['extract'] = $data['query']['pages'][$id]['extract']['*'];
 				$results[$id]['extract trimmed'] = false;
 			}
 		}
@@ -92,7 +92,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 	}
 
 	/**
-	 * Returns a processed, but not trimmed excerpt
+	 * Returns a processed, but not trimmed extract
 	 * @param Title $title
 	 * @return string
 	 */
@@ -188,10 +188,8 @@ class ApiQueryExtracts extends ApiQueryBase {
 	}
 
 	/**
-	 * Converts page HTML into an excerpt
+	 * Converts page HTML into an extract
 	 * @param string $text
-	 * @param Title $title
-	 * @param bool $plainText
 	 * @return string 
 	 */
 	private function convertText( $text ) {
@@ -203,16 +201,22 @@ class ApiQueryExtracts extends ApiQueryBase {
 		return trim( $text );
 	}
 
+	private function truncate( $text ) {
+		if ( $this->params['chars'] ) {
+			return $this->getFirstChars( $text, $this->params['chars'] );
+		} elseif ( $this->params['sentences'] ) {
+			return $this->getFirstSentences( $text, $this->params['sentences'] );
+		}
+		return $text;
+	}
+
 	/**
 	 * 
 	 * @param string $text
 	 * @param int $requestedLength
-	 * @param bool $plainText
 	 * @return string
 	 */
-	private function trimText( $text, $requestedLength, $plainText ) {
-		global $wgUseTidy;
-
+	private function getFirstChars( $text, $requestedLength ) {
 		wfProfileIn( __METHOD__ );
 		$length = mb_strlen( $text );
 		if ( $length <= $requestedLength ) {
@@ -223,17 +227,66 @@ class ApiQueryExtracts extends ApiQueryBase {
 		preg_match( $pattern, $text, $m );
 		$text = $m[0];
 		// Fix possibly unclosed tags
-		if ( $wgUseTidy && !$plainText ) {
+		$text = $this->tidy( $text );
+		$text .= wfMessage( 'ellipsis' )->inContentLanguage()->text();
+		wfProfileOut( __METHOD__ );
+		return $text;
+	}
+
+	/**
+	 *
+	 * @param string $text
+	 * @param int $requestedSentenceCount
+	 */
+	private function getFirstSentences( $text, $requestedSentenceCount ) {
+		wfProfileIn( __METHOD__ );
+		// Based on code from OpenSearchXml by Brion Vibber
+		$endchars = array(
+			'([^\d])\.\s', '\!\s', '\?\s', // regular ASCII
+			'。', // full-width ideographic full-stop
+			'．', '！', '？', // double-width roman forms
+			'｡', // half-width ideographic full stop
+			);
+
+		$endgroup = implode( '|', $endchars );
+		$end = "(?:$endgroup)";
+		$sentence = ".+?$end+";
+		$regexp = "/^($sentence){{$requestedSentenceCount}}/u";
+		$matches = array();
+		if( preg_match( $regexp, $text, $matches ) ) {
+			return $matches[0];
+		} else {
+			// Just return the first line
+			$lines = explode( "\n", $text );
+			return trim( $lines[0] );
+		}
+		$text = $this->tidy( $text );
+		wfProfileOut( __METHOD__ );
+		return $text;
+	}
+
+	/**
+	 * A simple wrapper around tidy
+	 * @param string $text
+	 */
+	private function tidy( $text ) {
+		global $wgUseTidy;
+
+		wfProfileIn( __METHOD__ );
+		if ( $wgUseTidy && !$this->params['plaintext'] ) {
 			$text = trim ( MWTidy::tidy( $text ) );
 		}
-		$text .= wfMessage( 'ellipsis' )->inContentLanguage()->text();
 		wfProfileOut( __METHOD__ );
 		return $text;
 	}
 
 	public function getAllowedParams() {
 		return array(
-			'length' => array(
+			'chars' => array(
+				ApiBase::PARAM_TYPE => 'integer',
+				ApiBase::PARAM_MIN => 1,
+			),
+			'sentences' => array(
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 1,
 			),
@@ -258,7 +311,8 @@ class ApiQueryExtracts extends ApiQueryBase {
 
 	public function getParamDescription() {
 		return array(
-			'length' => 'How many characters to return, actual text returned might be slightly longer.',
+			'chars' => 'How many characters to return, actual text returned might be slightly longer.',
+			'sentences' => 'How many sentences to return',
 			'limit' => 'How many extracts to return. ',
 			'intro' => 'Return only content before the first section',
 			'plaintext' => 'Return extracts as plaintext instead of limited HTML',
@@ -284,7 +338,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 
 	public function getExamples() {
 		return array(
-			'api.php?action=query&prop=extracts&exlength=175&titles=Therion' => 'Get a 175-character extract',
+			'api.php?action=query&prop=extracts&exchars=175&titles=Therion' => 'Get a 175-character extract',
 		);
 	}
 
@@ -329,8 +383,8 @@ class ExtractFormatter extends HtmlFormatter {
 		$text = parent::getText();
 		if ( $this->plainText ) {
 			$text = html_entity_decode( $text );
-			$text = str_replace( "\r", "\n", $text );
-			$text = preg_replace( "/\n{3,}/", "\n\n", $text );
+			$text = str_replace( "\r", "\n", $text ); // for Windows
+			$text = preg_replace( "/\n{3,}/", "\n\n", $text ); // normalise newlines
 			$text = preg_replace_callback( 
 				"/" . ApiQueryExtracts::SECTION_MARKER_START . '(\d)'. ApiQueryExtracts::SECTION_MARKER_END . "(.*?)$/m",
 				array( $this, 'sectionCallback' ),
