@@ -36,7 +36,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$jQuerySupport = $this->data['device']['supports_jquery'];
 		$jQueryScript = $jQuerySupport ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
-		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=122920111241' . $endScriptTag : '';
+		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=1332193250' . $endScriptTag : '';
 
 		$startLinkTag = "<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/";
 		$endLinkTag = "' media='all' rel='Stylesheet' type='text/css' />";
@@ -59,7 +59,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		if( $this->data['isBetaGroupMember'] && $jQuerySupport ) {
 			$betajs = <<<HTML
-			{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js?version=1331257310{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js?version=1332193250{$endScriptTag}
 HTML;
 		} else {
 			$betajs = "";
@@ -71,8 +71,8 @@ HTML;
 		  <head>
 			<title>{$this->data['htmlTitle']}</title>
 			<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1331678715' media='all' rel='Stylesheet' type='text/css' />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=1331678715' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version=1332193250' media='all' rel='Stylesheet' type='text/css' />
+			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version=1332193250' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
 			<meta name="viewport" content="initial-scale=1.0">
 			{$appleTouchIconTag}
@@ -90,10 +90,10 @@ HTML;
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
-			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js?version=1331257310{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version=1331257310{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1331257310{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1331250599{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js?version=1332193250{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version=1332193250{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version=1332193250{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version=1332193250{$endScriptTag}
 			{$betajs}
 			{$filePageScript}
 			<!--[endif]-->
