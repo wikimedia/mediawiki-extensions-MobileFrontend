@@ -1,6 +1,9 @@
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
-		var calculatePosition;
+		var calculatePosition, hashtest, options = {};
+
+		hashtest = window.location.hash.substr(1).match(/refspeed:([0-9]*)/);
+		options.animationSpeed = hashtest ? parseInt( hashtest[1], 10 ) : 500;
 
 		function collect() {
 			var references = {};
@@ -29,7 +32,7 @@ if( typeof jQuery !== 'undefined' ) {
 		function init() {
 			$( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body );
 			var close = function() {
-				$( '#mf-references' ).fadeOut( 500 );
+				$( '#mf-references' ).fadeOut( options.animationSpeed );
 			};
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
@@ -48,7 +51,7 @@ if( typeof jQuery !== 'undefined' ) {
 							attr( 'href', href ).appendTo('<div />').parent().html();
 					}
 					$( '#mf-references div' ).html( html );
-					$( '#mf-references' ).fadeIn( 1000 );
+					$( '#mf-references' ).fadeIn( options.animationSpeed );
 				} else {
 					close();
 				}
