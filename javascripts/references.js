@@ -33,7 +33,7 @@ if( typeof jQuery !== 'undefined' ) {
 			$( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body );
 			var close = function() {
 				$( '#mf-references' ).fadeOut( options.animationSpeed );
-			};
+			}, lastLink;
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
 			
@@ -43,7 +43,8 @@ if( typeof jQuery !== 'undefined' ) {
 				data = href && href.charAt(0) === '#' ?
 					references[ href.substr( 1, href.length ) ] : null;
 
-				if( !$("#mf-references").is(":visible") ) {
+				if( !$("#mf-references").is(":visible") || lastLink !== href) {
+					lastLink = href;
 					if( data ) {
 						html = '<h3>[' + data.label + ']</h3>' + data.html;
 					} else {
