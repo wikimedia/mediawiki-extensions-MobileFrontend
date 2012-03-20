@@ -67,9 +67,6 @@ MobileFrontend.opensearch = (function() {
 		if ( focused ) {
 			focused = false;
 		}
-		if ( clearSearch ) {
-			clearSearch.style.display = 'none';
-		}
 	}
 
 	function whichElement( e ) {
@@ -204,19 +201,9 @@ MobileFrontend.opensearch = (function() {
 	function initClearSearch() {
 		var clearSearch = document.getElementById( 'clearsearch' ),
 			search = document.getElementById( 'search' );
-		function handleClearSearchLink() {
-			if ( clearSearch ) {
-				if ( search.value.length > 0 ) {
-					clearSearch.style.display = 'block';
-				} else {
-					clearSearch.style.display = 'none';
-				}
-			}
-		}
 
 		function clearSearchBox( event ) {
 			search.value = '';
-			clearSearch.style.display = 'none';
 			event.preventDefault();
 		}
 
@@ -224,7 +211,6 @@ MobileFrontend.opensearch = (function() {
 			search.select();
 		}
 		u( clearSearch ).bind( 'mousedown', clearSearchBox );
-		u( search ).bind( 'keyup', handleClearSearchLink );
 		u( search ).bind( 'click', onFocusHandler );
 	}
 
