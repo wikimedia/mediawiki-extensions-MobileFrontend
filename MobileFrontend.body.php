@@ -31,7 +31,7 @@ class ExtMobileFrontend {
 	public static $displayNoticeId;
 	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
-	public static $isBetaGroupMember = true;
+	public static $isBetaGroupMember = false;
 	public static $minifyJS = true;
 	public static $hideSearchBox = false;
 	public static $hideLogo = false;
