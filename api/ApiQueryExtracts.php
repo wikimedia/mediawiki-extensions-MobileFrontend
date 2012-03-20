@@ -64,6 +64,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 	/**
 	 * OpenSearchXml hook handler
 	 * @param array $results
+	 * @return bool
 	 */
 	public static function onOpenSearchXml( &$results ) {
 		global $wgMFExtendOpenSearchXml;
@@ -237,6 +238,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 	 *
 	 * @param string $text
 	 * @param int $requestedSentenceCount
+	 * @return string
 	 */
 	private function getFirstSentences( $text, $requestedSentenceCount ) {
 		wfProfileIn( __METHOD__ );
@@ -254,11 +256,11 @@ class ApiQueryExtracts extends ApiQueryBase {
 		$regexp = "/^($sentence){{$requestedSentenceCount}}/u";
 		$matches = array();
 		if( preg_match( $regexp, $text, $matches ) ) {
-			return $matches[0];
+			$text = $matches[0];
 		} else {
 			// Just return the first line
 			$lines = explode( "\n", $text );
-			return trim( $lines[0] );
+			$text = trim( $lines[0] );
 		}
 		$text = $this->tidy( $text );
 		wfProfileOut( __METHOD__ );
@@ -268,6 +270,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 	/**
 	 * A simple wrapper around tidy
 	 * @param string $text
+	 * @return string
 	 */
 	private function tidy( $text ) {
 		global $wgUseTidy;
