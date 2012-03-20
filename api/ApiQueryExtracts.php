@@ -80,6 +80,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 				'action' => 'query',
 				'prop' => 'extracts',
 				'explaintext' => true,
+				'exintro' => true,
 				'exlimit' => count( $results ),
 				'pageids' => implode( '|', $pageIds ),
 			) )
