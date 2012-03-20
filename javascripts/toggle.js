@@ -48,7 +48,7 @@ MobileFrontend.toggle = (function() {
 			}
 		}
 		checkHash();
-		for ( a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
+		for ( a = u( '.content_block a' ) || [], i = 0; i < a.length; i++ ) {
 			u( a[i] ).bind( 'click', checkHash );
 		}
 	}
