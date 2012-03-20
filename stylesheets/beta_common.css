@@ -2,7 +2,6 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 
 html {
@@ -154,14 +153,6 @@ a.external {
 
 #search::-webkit-search-cancel-button {
 	-webkit-appearance: none;
-}
-
-ul#footer-info {
-	list-style: none;
-	list-style-image: none;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
 }
 
 .divclearable {
@@ -352,6 +343,15 @@ button.hide {
 	transition: max-height 0.2s ease-in;
 }
 
+/* 
+disable animations in footer
+this is so that toggling can scroll it into view
+*/
+.togglingEnabled #footer .content_block {
+	-webkit-transition: none;
+	transition: none;
+}
+
 .togglingEnabled .openSection.section_anchors {
 	display: block;
 }
@@ -488,11 +488,6 @@ a.back_to_top:visited {
 	color: blue;
 }
 
-.links {
-	float: left;
-	padding: 10px;
-}
-
 #contentSub,
 .dablink {
 	margin-bottom: 10px;
@@ -500,6 +495,7 @@ a.back_to_top:visited {
 
 #firstHeading {
 	font-size: 1.7em;
+	margin: 0;
 }
 
 .section_anchors a {
@@ -561,6 +557,11 @@ img.thumbborder {
 	float: left;
 }
 
+.floatright::after,
+.floatleft::after {
+	clear: both;
+}
+
 #content_wrapper.home h1#firstHeading {
 	display: none;
 }
@@ -572,6 +573,7 @@ img.thumbborder {
 }
 
 #content_wrapper {
+	position: relative;
 	clear: both;
 	margin: 22px 22px;
 }
@@ -584,11 +586,6 @@ img.thumbborder {
 
 #content_wrapper .section h2 {
 	margin: 0;
-}
-
-#footer {
-	margin: 0 8px;
-	clear: both;
 }
 
 #logo {
@@ -730,19 +727,6 @@ html[dir="rtl"] #languageselection {
 	margin: 8px 0 8px -3px;
 }
 
-#footer {
-	padding-top: 1em;
-}
-
-#footer #perm {
-	padding-top: 2em;
-	font-size: 90%;
-}
-
-#footer #copyright {
-	padding: 1em 0;
-	font-size: 80%;
-}
 
 ol.references > li:target,
 sup.reference:target,
@@ -885,11 +869,104 @@ full screen search css
 	display: none !important;
 }
 
+#footer {
+	-webkit-box-shadow: 0px -20px 10px -16px #ddd;
+	-moz-box-shadow: 0px -20px 10px -16px #ddd;
+	-o-box-shadow: 0px -20px 10px -16px #ddd;
+	box-shadow: 0px -20px 10px -16px #ddd;
+	padding: 12px 22px; /* see content_wrapper margin */
+	border-top: solid 1px #aaa;
+	line-height: 24px;
+	position: relative;
+	clear: both; /* cancel any floating in the content */
+}
+
+#footer ul {
+	text-align: center;
+	width: 100%;
+	padding: 0;
+	list-style: none;
+}
+
+#footer img {
+	height: 23px;
+	float: left;
+	margin-right: 4px;
+}
+
+#footer .toggleCopyright,
+#footer .license {
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 24px;
+}
+
+#footer .toggleCopyright {
+	float: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	padding-right: 32px;
+}
+
+.toggleCopyright .hide,
+.toggleCopyright .show {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 22px;
+}
+
+.copyrightNotice {
+	padding-top: 8px;
+	line-height: 1.2em;
+	margin-bottom: 12px;
+}
+
+#content_copyright {
+	text-align: center;
+	font-size: 0.9em;
+}
+
+#footer .links {
+	margin: 0;
+}
+
+#footer .links li {
+	display: block;
+	width: 25%;
+	font-size: 1.2em;
+	float: left;
+	text-align: center;
+}
+
+#footer .links li:first-child {
+	text-align: left;
+}
+
+#footer .links li:last-child {
+	text-align: right;
+}
+
+#footer .links:after {
+	content: "";
+	clear: both;
+	position: relative;
+	display: block;
+}
+
+.togglingEnabled #footer .more,
+.togglingEnabled #footer .openSection .less {
+	display: block;
+}
+
+#footer .more, /* no javascript */
+#footer .less,
+#footer .openSection .more {
+	display: none;
+}
+
 #mf-references {
-	-webkit-transition: bottom 0.1s ease-in-out;
-	-moz-transition: bottom 0.1s ease-in-out;
-	-o-transition: bottom 0.1s ease-in-out;
-	transition: bottom 0.1s ease-in-out;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -930,4 +1007,54 @@ full screen search css
 #mf-references a:visited,
 #mf-references a {
 	color: #3354C0;
+}
+
+.feedback h1 {
+	margin: 0;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #CCC;
+	padding-bottom: 10px;
+}
+
+.feedback select {
+	height: 35px;
+}
+
+.feedback .saveEmail {
+	float: right;
+	color: #9C9C9C;
+}
+.feedback input[type=submit],
+.feedback select {
+	background-color: #5E5E5E;
+	padding: 12px;
+	color: white;
+	display: block;
+	margin: 22px 0px;
+	border: none;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 3px 3px 3px #8C8C8C;
+	font-size: 1.5em;
+}
+
+.feedback input.email {
+	height: 38px;
+}
+
+.feedback textarea,
+.feedback input.email {
+	/*padding: 12px;*/
+	width: 100%;
+	border: solid 1px #888888;
+}
+
+.feedback textarea,
+.feedback input {
+	font-size: 1.5em;
+}
+
+.feedback input::-webkit-input-placeholder,
+.feedback textarea::-webkit-input-placeholder {
+	color: #747474;
 }
