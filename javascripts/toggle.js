@@ -63,7 +63,7 @@ MobileFrontend.toggle = (function() {
 				p = p.parentNode;
 			}
 			if ( p && ! u( p ).hasClass( 'openSection' ) ) {
-				section_idx = parseInt( p.id.split( '_' )[1], 10 );
+				section_idx = p.id.split( '_' )[1];
 				wm_toggle_section( section_idx );
 			}
 		}
