@@ -1453,7 +1453,7 @@ class ExtMobileFrontend {
 		global $wgRequest, $wgCookiePrefix;
 		
 		if ( !isset( self::$useFormatCookieName )) {
-			self::$useFormatCookieName = $wgCookiePrefix . 'mf_useformat';
+			self::$useFormatCookieName = 'mf_useformat';
 		}
 		
 		$useFormat = $this->getUseFormat();
@@ -1505,7 +1505,7 @@ class ExtMobileFrontend {
 	
 	public function getCacheVaryCookies( $out, &$cookies ) {
 		global $wgCookiePrefix;
-		$cookies[] = $wgCookiePrefix . 'mf_useformat';
+		$cookies[] = 'mf_useformat';
 		return true;
 	}
 	
