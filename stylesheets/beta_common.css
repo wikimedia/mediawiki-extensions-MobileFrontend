@@ -155,6 +155,10 @@ a.external {
 	-webkit-appearance: none;
 }
 
+#search.searching {
+	opacity: 0.2;
+}
+
 .divclearable {
 	display: block;
 	zoom: 1;
@@ -936,7 +940,7 @@ this is so that toggling can scroll it into view
 #footer .links li {
 	display: block;
 	width: 25%;
-	font-size: 0.8em;
+	font-size: 0.7em;
 	float: left;
 	text-align: center;
 }

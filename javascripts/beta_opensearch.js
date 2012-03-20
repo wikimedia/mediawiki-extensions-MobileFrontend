@@ -121,11 +121,13 @@ MobileFrontend.opensearch = (function() {
 	u( search ).bind( 'blur', performSearch ); // for opera mini etc
 
 	function searchApi( term ) {
+		u( search ).addClass( 'searching' );
 		url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
 		u.ajax( { url: url,
 			success: function(xml) {
 				if( u( document.body ).hasClass( 'full-screen-search' ) ) {
 					writeResults( createObjectArray( xml ) );
+					u( search ).removeClass( 'searching' );
 				}
 			}
 			} );
