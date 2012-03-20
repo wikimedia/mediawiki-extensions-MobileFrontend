@@ -360,6 +360,7 @@ button.hide {
 	max-height: 9999px; /* large number as height: auto is not effected by transitions */
 	-webkit-transition: max-height 0.7s ease-in;
 	transition: max-height 0.7s ease-in;
+	margin-top: 14px;
 }
 
 .mwm-notice {
@@ -574,6 +575,10 @@ img.thumbborder {
 #content_wrapper {
 	clear: both;
 	margin: 22px 22px;
+}
+
+#content_wrapper p {
+	margin: 0;
 }
 
 #content_wrapper .section {
