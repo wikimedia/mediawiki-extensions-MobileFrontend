@@ -231,7 +231,7 @@ class ExtMobileFrontend {
 
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
-		self::$viewNormalSiteURL = $wgRequest->escapeAppendQuery( 'useformat=desktop' );
+		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'useformat=desktop' ) ) );
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
@@ -1257,6 +1257,17 @@ class ExtMobileFrontend {
 		}
 		return wfAssembleUrl( $parsedUrl );
 	}
+	
+	/**
+	 * Take a URL and return a copy that removes any mobile tokens
+	 * @param string
+	 * @return string
+	 */
+	public function getDesktopUrl( $url ) {
+		$parsedUrl = wfParseUrl( $url );
+		$this->updateDesktopUrlHost( $parsedUrl );
+		return wfAssembleUrl( $parsedUrl );
+	}
 
 	/**
 	 * Update host of given URL to conform to mobile URL template.
@@ -1287,6 +1298,24 @@ class ExtMobileFrontend {
 		}
 
 		$parsedUrl['host'] = implode( ".", $targetHostParts );
+	}
+
+	/**
+	 * Update the host of a given URL to strip out any mobile tokens
+	 * @param $parsedUrl array
+	 *		Result of parseUrl() or wfParseUrl()
+	 */
+	protected function updateDesktopUrlHost( &$parsedUrl ) {
+		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
+		if ( !strlen( $mobileUrlHostTemplate ) ) {
+			return;
+		}
+	
+		// identify the mobile token by stripping out normal host parts
+		$mobileToken = preg_replace( "/%h[0-9]\.{0,1}/", "", $mobileUrlHostTemplate );
+		
+		// replace the mobile token with nothing, resulting in the normal hostname
+		$parsedUrl['host'] = str_replace( $mobileToken, '', $parsedUrl['host'] );
 	}
 
 	/**
