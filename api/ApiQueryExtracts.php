@@ -424,7 +424,7 @@ class ExtractFormatter extends HtmlFormatter {
 	public function onHtmlReady( $html ) {
 		if ( $this->plainText ) {
 			$html = preg_replace( '/\s*(<h([1-6])\b)/i',
-				ApiQueryExtracts::SECTION_MARKER_START . '$2' . ApiQueryExtracts::SECTION_MARKER_END . '$1' ,
+				"\n\n" . ApiQueryExtracts::SECTION_MARKER_START . '$2' . ApiQueryExtracts::SECTION_MARKER_END . '$1' ,
 				$html
 			);
 		}
