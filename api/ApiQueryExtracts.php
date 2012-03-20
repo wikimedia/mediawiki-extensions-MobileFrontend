@@ -47,6 +47,9 @@ class ApiQueryExtracts extends ApiQueryBase {
 			}
 			$text = $this->getExtract( $t );
 			$text = $this->truncate( $text );
+			if ( $this->params['plaintext'] ) {
+				$text = $this->doSections( $text );
+			}
 
 			if ( $isXml ) {
 				$fit = $result->addValue( array( 'query', 'pages', $id ), 'extract', array( '*' => $text ) );
@@ -283,6 +286,32 @@ class ApiQueryExtracts extends ApiQueryBase {
 		return $text;
 	}
 
+	private function doSections( $text ) {
+		$text = preg_replace_callback(
+			"/" . self::SECTION_MARKER_START . '(\d)'. self::SECTION_MARKER_END . "(.*?)$/m",
+			array( $this, 'sectionCallback' ),
+			$text
+		);
+		return $text;
+	}
+
+	private function sectionCallback( $matches ) {
+		if ( $this->params['sectionformat'] == 'raw' ) {
+			return $matches[0];
+		}
+		$func = __CLASS__ . "::doSection_{$this->params['sectionformat']}";
+		return call_user_func( $func, $matches[1], trim( $matches[2] ) );
+	}
+
+	private static function doSection_wiki( $level, $text ) {
+		$bars = str_repeat( '=', $level );
+		return "\n$bars $text $bars";
+	}
+
+	private static function doSection_plain( $level, $text ) {
+		return "\n$text";
+	}
+
 	public function getAllowedParams() {
 		return array(
 			'chars' => array(
@@ -321,9 +350,9 @@ class ApiQueryExtracts extends ApiQueryBase {
 			'plaintext' => 'Return extracts as plaintext instead of limited HTML',
 			'sectionformat' => array(
 				'How to format sections in plaintext mode:',
-				' none - No formatting',
+				' plain - No formatting',
 				' wiki - Wikitext-style formatting == like this ==',
-				" raw - Return in this module's internal representation (secton titles prefixed with <ASCII 1><ASCII 2><section level><ASCII 2><ASCII 1>",
+				" raw - This module's internal representation (secton titles prefixed with <ASCII 1><ASCII 2><section level><ASCII 2><ASCII 1>",
 			),
 			'continue' => 'When more results are available, use this to continue',
 		);
@@ -360,7 +389,7 @@ class ExtractFormatter extends HtmlFormatter {
 	private $sectionFormat;
 
 	public static $sectionFormats = array(
-		'none',
+		'plain',
 		'wiki',
 		'raw',
 	);
@@ -388,11 +417,6 @@ class ExtractFormatter extends HtmlFormatter {
 			$text = html_entity_decode( $text );
 			$text = str_replace( "\r", "\n", $text ); // for Windows
 			$text = preg_replace( "/\n{3,}/", "\n\n", $text ); // normalise newlines
-			$text = preg_replace_callback( 
-				"/" . ApiQueryExtracts::SECTION_MARKER_START . '(\d)'. ApiQueryExtracts::SECTION_MARKER_END . "(.*?)$/m",
-				array( $this, 'sectionCallback' ),
-				$text
-			);
 		}
 		return $text;
 	}
@@ -405,22 +429,5 @@ class ExtractFormatter extends HtmlFormatter {
 			);
 		}
 		return $html;
-	}
-
-	private function sectionCallback( $matches ) {
-		if ( $this->sectionFormat == 'raw' ) {
-			return $matches[0];
-		}
-		$func = "ExtractFormatter::doSection_{$this->sectionFormat}";
-		return call_user_func( $func, $matches[1], trim( $matches[2] ) );
-	}
-
-	private static function doSection_wiki( $level, $text ) {
-		$bars = str_repeat( '=', $level );
-		return "\n$bars $text $bars";
-	}
-
-	private static function doSection_none( $level, $text ) {
-		return "\n$text";
 	}
 }
