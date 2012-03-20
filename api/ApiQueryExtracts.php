@@ -148,7 +148,6 @@ class ApiQueryExtracts extends ApiQueryBase {
 			$regexp = '/^(.*?)(?=<h[1-6]\b)/s';
 		}
 		if ( preg_match( $regexp, $text, $matches ) ) {
-			wfDebugDieBacktrace();
 			$text = $matches[0];
 		}
 		return $text;
