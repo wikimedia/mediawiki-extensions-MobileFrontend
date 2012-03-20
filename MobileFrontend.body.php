@@ -1210,7 +1210,7 @@ class ExtMobileFrontend {
 
 		if ( self::$isBetaGroupMember ) {
 			$this->getSite( $site, $lang );
-			if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos[0]['site'] ) ) {
+			if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['site'] ) ) {
 				foreach ( $wgMFCustomLogos as $wgMFCustomLogo ) {
 					if ( isset( $wgMFCustomLogo['site'] ) && $site == $wgMFCustomLogo['site'] ) {
 						if ( isset( $wgMFCustomLogo['logo'] ) ) {
