@@ -31,7 +31,7 @@ class ExtMobileFrontend {
 	public static $displayNoticeId;
 	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
-	public static $isBetaGroupMember = false;
+	public static $isBetaGroupMember = true;
 	public static $minifyJS = true;
 	public static $hideSearchBox = false;
 	public static $hideLogo = false;
@@ -1104,6 +1104,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getFooterTemplate() {
+		global $wgExtensionAssetsPath;
 		wfProfileIn( __METHOD__ );
 		$footerTemplate = new FooterTemplate();
 		$logoutHtml = ( self::$logoutHtml ) ? self::$logoutHtml : '';
@@ -1119,6 +1120,7 @@ class ExtMobileFrontend {
 						'loginHtml' => $loginHtml,
 						'code' => self::$code,
 						'hideFooter' => self::$hideFooter,
+						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
 						);
 		$footerTemplate->setByArray( $options );

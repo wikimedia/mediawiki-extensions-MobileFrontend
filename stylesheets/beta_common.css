@@ -155,14 +155,6 @@ a.external {
 	-webkit-appearance: none;
 }
 
-ul#footer-info {
-	list-style: none;
-	list-style-image: none;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
 .divclearable {
 	display: block;
 	zoom: 1;
@@ -488,11 +480,6 @@ a.back_to_top:visited {
 	color: blue;
 }
 
-.links {
-	float: left;
-	padding: 10px;
-}
-
 #contentSub,
 .dablink {
 	margin-bottom: 10px;
@@ -588,11 +575,6 @@ img.thumbborder {
 
 #content_wrapper .section h2 {
 	margin: 0;
-}
-
-#footer {
-	margin: 0 8px;
-	clear: both;
 }
 
 #logo {
@@ -734,19 +716,6 @@ html[dir="rtl"] #languageselection {
 	margin: 8px 0 8px -3px;
 }
 
-#footer {
-	padding-top: 1em;
-}
-
-#footer #perm {
-	padding-top: 2em;
-	font-size: 90%;
-}
-
-#footer #copyright {
-	padding: 1em 0;
-	font-size: 80%;
-}
 
 ol.references > li:target,
 sup.reference:target,
@@ -887,6 +856,121 @@ full screen search css
 
 .full-screen-search #nav {
 	display: none !important;
+}
+
+/* FOOTER */
+#footer {
+	-webkit-box-shadow: 0px -20px 10px -16px #ddd;
+	-moz-box-shadow: 0px -20px 10px -16px #ddd;
+	-o-box-shadow: 0px -20px 10px -16px #ddd;
+	box-shadow: 0px -20px 10px -16px #ddd;
+	padding: 12px 22px; /* see content_wrapper margin */
+	border-top: solid 1px #aaa;
+	line-height: 24px;
+	position: relative;
+	clear: both; /* cancel any floating in the content */
+}
+
+#footer ul {
+	text-align: center;
+	width: 100%;
+	padding: 0;
+	list-style: none;
+}
+
+#footer img {
+	height: 23px;
+	float: left;
+	margin-right: 4px;
+}
+
+#footer .toggleCopyright,
+#footer .license {
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 24px;
+}
+
+#footer .toggleCopyright {
+	float: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	padding-right: 32px;
+}
+
+.toggleCopyright .hide,
+.toggleCopyright .show {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 22px;
+}
+
+/* 
+disable animations in footer
+this is so that toggling can scroll it into view
+*/
+.togglingEnabled #footer .content_block {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+.copyrightNotice {
+	padding-top: 8px;
+	line-height: 1.2em;
+	margin-bottom: 12px;
+}
+
+#content_footer {
+	text-align: center;
+	font-size: 0.9em;
+}
+
+#footer .links {
+	margin: 0;
+}
+
+#footer .links li {
+	display: block;
+	width: 25%;
+	font-size: 0.8em;
+	float: left;
+	text-align: center;
+}
+
+#footer .links li:first-child {
+	text-align: left;
+}
+
+#footer .links li:last-child {
+	text-align: right;
+}
+
+#footer .links:after {
+	content: "";
+	clear: both;
+	position: relative;
+	display: block;
+}
+
+.togglingEnabled #footer .more,
+.togglingEnabled #footer .openSection .less {
+	display: block;
+}
+
+#footer .more, /* no javascript */
+#footer .less,
+#footer .openSection .more {
+	display: none;
+}
+
+@media all and (min-width: 500px) {
+	#footer .links li {
+		font-size: 1.2em;
+	}
 }
 
 #mf-references {
