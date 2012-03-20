@@ -287,6 +287,10 @@ h3#sopa-notice {
 	cursor: pointer;
 }
 
+.section:nth-child(even) {
+	background-color: #f4f4f4;
+}
+
 button.show,
 button.hide { /* for non-js browsers */
 	display: none;
@@ -300,6 +304,33 @@ button.hide { /* for non-js browsers */
 .togglingEnabled .openSection button.hide,
 .togglingEnabled button.show {
 	display: inline-block;
+}
+
+button.show,
+button.hide {
+	width: 27px;
+	height: 16px;
+	border: none;
+	text-indent: -999px;
+	float: right;
+	cursor: pointer;
+	opacity: 0.5;
+	cursor: pointer;
+	-webkit-transition: opacity 0.4s ease-in 0.4s;
+}
+
+.togglingEnabled button.hide {
+	background: url(images/hide.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: auto 9px;
+}
+
+.togglingEnabled button.show {
+	background: url(images/show.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: auto 9px;
 }
 
 .openSection button.hide,
@@ -423,7 +454,7 @@ pre {
 }
 
 h2 {
-	border-bottom: 1px solid #aaaaaa;
+	border-bottom: none;
 	padding-top: 0.3em;
 	font-size: 1.3em;
 }
@@ -543,6 +574,16 @@ img.thumbborder {
 #content_wrapper {
 	clear: both;
 	margin: 22px 22px;
+}
+
+#content_wrapper .section {
+	padding: 14px 22px; /* see #footer padding */
+	margin-left: -22px; /* offset #content_wrapper margin */
+	margin-right: -22px;
+}
+
+#content_wrapper .section h2 {
+	margin: 0;
 }
 
 #footer {

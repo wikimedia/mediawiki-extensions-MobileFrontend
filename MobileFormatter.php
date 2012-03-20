@@ -201,6 +201,7 @@ class MobileFormatter extends HtmlFormatter {
 						array( 'href' => '#section_' . intval( $this->headings - 1 ),
 								'class' => 'back_to_top' ),
 								'&#8593;' . $backToTop ) .
+				Html::closeElement( 'div' ) .
 				Html::closeElement( 'div' );
 		// generate the HTML we are going to inject
 		// TODO: remove legacy code for Wikipedia Mobile app < 1.3 which is not using the api
@@ -213,6 +214,7 @@ class MobileFormatter extends HtmlFormatter {
 					array( 'class' => 'section_heading hide',
 							'section_id' => $this->headings ),
 							$hide );
+		$base .= Html::openElement( 'div', array( 'class' => 'section' ) );
 		if ( $this->expandableSections ) {
 			$h2OnClick = 'javascript:wm_toggle_section(' . $this->headings . ');';
 			$base .= Html::openElement( 'h2',
