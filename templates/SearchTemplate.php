@@ -28,6 +28,9 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$languageSelectionText = '<b>' . $this->data['messages']['mobile-frontend-language'] . ':</b><br/>';
 		$languageSelectionDiv = $languageSelectionText . $languageSelection;
 
+		$regularSite = $this->data['messages']['mobile-frontend-regular-site'];
+		$viewNormalSiteURL = $this->data['viewNormalSiteURL'];
+
 		$searchWebkitHtml = <<<HTML
 		<div id='header'>
 			<div id='searchbox' {$logoDisplayNone}>
@@ -45,6 +48,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 			{$languageSelectionDiv}
 			<a href="{$mainPageUrl}" id="homeButton" class="button">{$homeButton}</a>
 			<a href="{$randomPageUrl}" id="randomButton" class="button">{$randomButton}</a>
+			<a href="{$viewNormalSiteURL}" class="button">{$regularSite}</a>
 		  </div>
 		</div>
 		{$openSearchResults}

@@ -1131,6 +1131,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 		$searchTemplate = new SearchTemplate();
 		$options = array(
+						'viewNormalSiteURL' => self::$viewNormalSiteURL,
 						'searchField' => self::$searchField,
 						'mainPageUrl' => self::$mainPageUrl,
 						'randomPageUrl' => self::$randomPageUrl,
