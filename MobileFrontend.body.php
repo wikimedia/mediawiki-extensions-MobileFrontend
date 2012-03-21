@@ -1520,6 +1520,7 @@ class ExtMobileFrontend {
 		// so we can ignore $wgCookieHttpOnly since the protection it provides
 		// is irrelevant for this cookie.
 		setcookie( self::$useFormatCookieName, $useFormat, $expiry, $wgCookiePath, $wgCookieDomain, $wgCookieSecure );
+		wfIncrStats( 'mobile.useformat_' . $useFormat . '_cookie_set' );
 	}
 	
 	/**
