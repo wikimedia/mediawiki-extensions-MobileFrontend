@@ -1457,7 +1457,7 @@ class ExtMobileFrontend {
 	}
 	
 	public function checkUseFormatCookie() {
-		global $wgRequest, $wgCookiePrefix;
+		global $wgRequest, $wgCookiePrefix, $wgScriptPath;
 		
 		if ( !isset( self::$useFormatCookieName )) {
 			self::$useFormatCookieName = $wgCookiePrefix . 'mf_useformat';
@@ -1471,9 +1471,15 @@ class ExtMobileFrontend {
 			$this->setUseFormat( $useFormatFromCookie );
 		}
 		
-		// set appropriate cookie if necessary
-		if ( ( $useFormatFromCookie != 'mobile' && $useFormat == 'mobile' ) ||
-		 		( $useFormatFromCookie != 'desktop' && $useFormat == 'desktop' ) ) {
+		// set appropriate cookie if necessary, ignoring certain URL patterns
+		// eg initial requests to a mobile-specific domain with no path. this 
+		// is intended to avoid pitfalls for certain server configurations
+		// but should not get in the way of out-of-the-box configs
+		$reqUrl = $wgRequest->getRequestUrl();
+		$urlsToIgnore = array( '/?useformat=mobile', $wgScriptPath . '/?useformat=mobile' );
+		if ( ( ( $useFormatFromCookie != 'mobile' && $useFormat == 'mobile' ) ||
+		 		( $useFormatFromCookie != 'desktop' && $useFormat == 'desktop' ) ) &&
+				!in_array( $reqUrl, $urlsToIgnore ) ) {
 			$this->setUseFormatCookie( $useFormat );
 		}
 	}
