@@ -322,7 +322,7 @@ class DeviceDetection {
 
 		if ( $formatName === '' ) {
 			if ( strpos( $acceptHeader, 'application/vnd.wap.xhtml+xml' ) !== false ) {
-				// Should be wap2 or in WURFL xhtmlmp
+				// Should be wap2
 				$formatName = 'html';
 			} elseif ( strpos( $acceptHeader, 'vnd.wap.wml' ) !== false ) {
 				$formatName = 'wml';

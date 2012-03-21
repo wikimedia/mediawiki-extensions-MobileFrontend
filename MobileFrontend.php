@@ -17,14 +17,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 // Define the extension; allows us make sure the extension is used correctly
 define( 'MOBILEFRONTEND', 'MobileFrontend' );
-// WURFL installation dir
-define( 'WURFL_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'library' .
-		DIRECTORY_SEPARATOR . 'WURFL' . DIRECTORY_SEPARATOR );
-// WURFL configuration files directory
-define( 'RESOURCES_DIR', dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'library' .
-		DIRECTORY_SEPARATOR . 'resources' . DIRECTORY_SEPARATOR );
-
-require_once( WURFL_DIR . 'Application.php' );
 
 // Extension credits that will show up on Special:Version
 $wgExtensionCredits['other'][] = array(

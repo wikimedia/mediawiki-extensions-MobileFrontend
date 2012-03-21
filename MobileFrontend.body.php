@@ -362,32 +362,6 @@ class ExtMobileFrontend {
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
-		$uAmd5 = md5( $userAgent );
-
-		$key = wfMemcKey( 'mobile', 'ua', $uAmd5 );
-
-		$props = null;
-		try {
-			$props = $wgMemc->get( $key );
-			if ( !$props ) {
-				$wurflConfigFile = RESOURCES_DIR . 'wurfl-config.xml';
-				$wurflConfig = new WURFL_Configuration_XmlConfig( $wurflConfigFile );
-				$wurflManagerFactory = new WURFL_WURFLManagerFactory( $wurflConfig );
-				$wurflManager = $wurflManagerFactory->create();
-				$device = $wurflManager->getDeviceForHttpRequest( $_SERVER );
-
-				if ( $device->isSpecific() === true ) {
-					$props = $device->getAllCapabilities();
-					$wgMemc->set( $key, $props, 86400 );
-				} else {
-					$wgMemc->set( $key, 'generic', 86400 );
-					$props = 'generic';
-				}
-			}
-		} catch ( Exception $e ) {
-			// echo $e->getMessage();
-		}
-
 		self::$title = $out->getTitle();
 
 		if ( self::$title->isMainPage() ) {
