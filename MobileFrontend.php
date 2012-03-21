@@ -154,13 +154,14 @@ function efMobileFrontend_Setup() {
  * See $itemsToRemove for more information.
  */
 $wgMFRemovableClasses = array();
+
 /**
  * Make the logos configurable.
  * Key for site.
  * Key for logo.
  * Example: array('site' => 'mysite', 'logo' => 'mysite_logo.png');
  */
-$wgMFCustomLogos = array( array() );
+$wgMFCustomLogos = array();
 
 // Unit tests
 $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
