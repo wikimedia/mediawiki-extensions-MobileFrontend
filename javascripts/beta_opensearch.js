@@ -13,10 +13,6 @@ MobileFrontend.opensearch = (function() {
 		u = MobileFrontend.utils;
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
-
-	function hideResults() {
-		results.style.display = 'none';
-	}
 	
 	viewportmeta = u( 'meta[name="viewport"]' )
 	if ( viewportmeta && viewportmeta[0] ) {
@@ -71,56 +67,25 @@ MobileFrontend.opensearch = (function() {
 		}
 	}
 
-	function whichElement( e ) {
-		var targ;
-		if ( !e ) {
-			e = window.event;
-		}
-		if ( e.target ) {
-			targ = e.target;
-		} else if ( e.srcElement ) {
-			targ = e.srcElement;
-		}
-
-		if ( targ.nodeType === 3 ) {
-			targ = targ.parentNode;
-		}
-
-		e.cancelBubble = true;
-		e.stopPropagation();
-		if ( targ.className === "suggestion-result" ||
-			 targ.className === "search-result-item" ||
-			 targ.className === "suggestions-result" ||
-			 targ.className === "sq-val-update" ||
-			 targ.id === 'results' ||
-			 targ.id === 'search' ||
-			 targ.id === 'searchbox' ||
-			 targ.id === 'sq' ||
-			 targ.id === 'placeholder' ||
-			 targ.id === 'clearsearch' ||
-			 targ.tagName === 'BODY' ) {
-				if ( targ.id === 'clearsearch' && results ) {
-					results.innerHTML = '';
-				}
-		} else {
-			hideResults();
-		}
-	}
-
 	var performSearch = function(ev) {
 		ev.preventDefault();
 		clearTimeout( timer );
 		term = search.value;
-		if ( term.length < 1 ) {
-			results.innerHTML = '';
-		} else {
+		if ( term.length > 1 ) {
 			term = encodeURIComponent( term );
 			timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 		}
 	};
 	u( search ).bind( 'keyup', performSearch );
 	u( document.getElementById( 'searchForm' ) ).bind( 'submit', performSearch );
-	u( search ).bind( 'blur', performSearch ); // for opera mini etc
+	function blurSearch(ev) {
+		if( search.value.length === 0) {
+			removeResults();
+		} else {
+			performSearch(ev); // for opera mini etc
+		}
+	}
+	u( search ).bind( 'blur', blurSearch );
 
 	function searchApi( term ) {
 		u( search ).addClass( 'searching' );
@@ -208,6 +173,7 @@ MobileFrontend.opensearch = (function() {
 
 		function clearSearchBox( event ) {
 			search.value = '';
+			results.innerHTML = '';
 			event.preventDefault();
 		}
 
@@ -219,11 +185,6 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function init() {
-		var results = document.getElementById( 'results' );
-		results.onmousedown = whichElement;
-		document.body.onmousedown = whichElement;
-		document.body.ontouchstart = whichElement;
-		results.ontouchstart = whichElement;
 	}
 	init();
 	initClearSearch();
