@@ -19,9 +19,11 @@ MobileFrontend.opensearch = (function() {
 	}
 	
 	viewportmeta = u( 'meta[name="viewport"]' )
-	if ( viewportmeta ) {
+	if ( viewportmeta && viewportmeta[0] ) {
 		viewportmeta = viewportmeta[0];
 		originalViewport = viewportmeta.getAttribute( 'content' );
+	} else {
+		viewportmeta = null;
 	}
 	// prevent auto-zoom in on clicking search for certain browsers e.g. palm pre and ipad
 	function resetViewPort() {
