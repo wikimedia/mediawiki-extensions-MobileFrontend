@@ -506,6 +506,7 @@ class ExtMobileFrontend {
 		$this->sendXDeviceVaryHeader();
 		$this->sendApplicationVersionVaryHeader();
 		$this->checkUserStatus();
+		$this->setDefaultLogo();
 		$this->checkUserLoggedIn();
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
@@ -1211,11 +1212,9 @@ class ExtMobileFrontend {
 		if ( self::$isBetaGroupMember ) {
 			$this->getSite( $site, $lang );
 			if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['site'] ) ) {
-				foreach ( $wgMFCustomLogos as $wgMFCustomLogo ) {
-					if ( isset( $wgMFCustomLogo['site'] ) && $site == $wgMFCustomLogo['site'] ) {
-						if ( isset( $wgMFCustomLogo['logo'] ) ) {
-							$wgMobileFrontendLogo = $wgMFCustomLogo['logo'];
-						}
+				if ( isset( $wgMFCustomLogos['site'] ) && $site == $wgMFCustomLogos['site'] ) {
+					if ( isset( $wgMFCustomLogos['logo'] ) ) {
+						$wgMobileFrontendLogo = $wgMFCustomLogos['logo'];
 					}
 				}
 			}
