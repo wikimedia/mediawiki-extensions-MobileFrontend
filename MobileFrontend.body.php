@@ -443,7 +443,9 @@ class ExtMobileFrontend {
 		self::$device = $device->format( $formatName );
 		$this->setDefaultLogo();
 
-		$this->contentFormat = self::parseContentFormat( self::$device['view_format'] );
+		// honor useformat=mobile-wap if it's set, otherwise determine by device
+		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : self::$device['view_format'];
+		$this->contentFormat = self::parseContentFormat( $viewFormat );
 
 		if ( $mobileAction == 'leave_feedback' ) {
 			echo $this->renderLeaveFeedbackXHTML();
