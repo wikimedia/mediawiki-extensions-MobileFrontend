@@ -141,9 +141,7 @@ a.external {
 	border-right-width: 0px;
 	border-bottom-width: 0px;
 	border-left-width: 0px;
-	outline-style: none;
-	outline-width: initial;
-	outline-color: initial;
+	outline: none;
 	padding: 0;
 	font-size: 1.2em;
 	padding-right: 16px;
