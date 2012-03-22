@@ -38,7 +38,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 			<form id='searchForm' action='{$scriptUrl}' class='search_bar' method='get' {$searchBoxDisplayNone}>
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
-					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocorrect="off" autocomplete="off" autocapitalize="off" maxlength="1024" class="search" placeholder="{$placeholder}" />
+					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocomplete="off" maxlength="1024" class="search" placeholder="{$placeholder}" />
 					<div class="clearlink" id="clearsearch" title="{$clearText}"></div>
 				</div>
 			  <button id='goButton' class='goButton' type='submit'></button>
