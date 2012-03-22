@@ -169,7 +169,7 @@ class MobileFormatter extends HtmlFormatter {
 		$this->headings++;
 
 		$base = self::WML_SECTION_SEPARATOR .
-				"<h2 class='section_heading' id='section_{$this->headings}'>{$this->matches[2]}</h2>";
+				"<h2 class='section_heading' id='section_{$this->headings}'>{$matches[2]}</h2>";
 
 		wfProfileOut( __METHOD__ );
 		return $base;

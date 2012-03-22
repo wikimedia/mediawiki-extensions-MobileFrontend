@@ -181,13 +181,13 @@ class ExtMobileFrontend {
 				$output->setSquidMaxage( 1200 );
 				$output->redirect( $targetUrl, '301' );
 			}
-			return false; // Prevent the redirect from occuring
+			return false; // Prevent the redirect from occurring
 		}
 	}
 
 	/**
 	 * @param $obj Article
-	 * @param $tpl
+	 * @param $tpl MobileFrontendTemplate
 	 * @return bool
 	 */
 	public function addMobileFooter( &$obj, &$tpl ) {
@@ -226,7 +226,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getMsg() {
-		global $wgUser, $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgOut, $wgLanguageCode;
+		global $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgOut, $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
@@ -267,7 +267,7 @@ class ExtMobileFrontend {
 		$languageUrls[] = array(
 			'href' => self::$currentURL,
 			'text' => self::$htmlTitle,
-			'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
+			'language' => Language::fetchLanguageName( $wgLanguageCode ),
 			'class' => 'interwiki-' . $wgLanguageCode,
 			'lang' => $wgLanguageCode,
 		);
@@ -282,10 +282,10 @@ class ExtMobileFrontend {
 				$languageUrl = $this->getMobileUrl( $nt->getFullURL() );
 				$languageUrls[] = array(
 					'href' => $languageUrl,
-					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
-							? $wgContLang->getLanguageName( $nt->getInterwiki() )
+					'text' => ( Language::fetchLanguageName( $nt->getInterwiki() ) != ''
+							? Language::fetchLanguageName( $nt->getInterwiki() )
 							: $l ),
-					'language' => $wgContLang->getLanguageName( $lang ),
+					'language' => Language::fetchLanguageName( $lang ),
 					'class' => $class,
 					'lang' => $lang,
 				);
@@ -340,7 +340,7 @@ class ExtMobileFrontend {
 	 * @return bool
 	 */
 	public function beforePageDisplayHTML( &$out, &$text ) {
-		global $wgContLang, $wgRequest, $wgMemc, $wgUser;
+		global $wgRequest, $wgUser;
 		wfProfileIn( __METHOD__ );
 
 		// Note: The WebRequest Class calls are made in this block because
@@ -580,6 +580,7 @@ class ExtMobileFrontend {
 
 	/**
 	 * @param $value string
+	 * @return bool
 	 */
 	private function setOptInOutCookie( $value ) {
 		global $wgCookieDomain, $wgRequest, $wgCookiePrefix;
@@ -643,6 +644,7 @@ class ExtMobileFrontend {
 
 	/**
 	 * Disables caching if the request is coming from a trusted proxy
+	 * @return bool
 	 */
 	private function disableCaching() {
 		global $wgRequest;
@@ -724,7 +726,7 @@ class ExtMobileFrontend {
 			$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
 			$options = array(
 							'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
-							'editToken' => $wgUser->editToken(),
+							'editToken' => $wgUser->getEditToken(),
 							'title' => self::$messages['mobile-frontend-leave-feedback-title'],
 							'notice' => self::$messages['mobile-frontend-leave-feedback-notice'],
 							'subject' => self::$messages['mobile-frontend-leave-feedback-subject'],
@@ -990,7 +992,6 @@ class ExtMobileFrontend {
 		}
 
 		$formatter->setIsMainPage( self::$isMainPage );
-		$prepend = '';
 		if ( $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
 			&& empty( self::$search ) )
@@ -1221,6 +1222,7 @@ class ExtMobileFrontend {
 	/**
 	 * Take a URL and return a copy that conforms to the mobile URL template
 	 * @param $url string
+	 * @param $forceHttps bool
 	 * @return string
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
@@ -1490,10 +1492,10 @@ class ExtMobileFrontend {
 	 * This cookie can determine whether or not a user should see the mobile
 	 * version of pages.
 	 *
-	 * @param string The format to store in the cookie
+	 * @param string $useFormat The format to store in the cookie
 	 */
 	protected function setUseFormatCookie( $useFormat ) {
-		global $wgRequest, $wgCookiePath, $wgCookieSecure, $wgCookieDomain;
+		global $wgCookiePath, $wgCookieSecure, $wgCookieDomain;
 		$expiry = $this->getUseFormatCookieExpiry();
 		
 		// use regular php setcookie() rather than WebResponse::setCookie
@@ -1506,11 +1508,11 @@ class ExtMobileFrontend {
 	/**
 	 * Get the expiration time for the mf_useformat cookie
 	 *
-	 * @param int The base time (in seconds since Epoch) from which to calculate
+	 * @param int $startTime The base time (in seconds since Epoch) from which to calculate
 	 * 		cookie expiration. If null, time() is used.
 	 * @return int The time (in seconds since Epoch) that the cookie should expire
 	 */
-	protected function getUseFormatCookieExpiry( $startTime=null ) {
+	protected function getUseFormatCookieExpiry( $startTime = null ) {
 		$cookieDuration = $this->getUseFormatCookieDuration();
 		if ( intval( $startTime ) === 0 ) $startTime = time();
 		$expiry = $startTime + $cookieDuration;

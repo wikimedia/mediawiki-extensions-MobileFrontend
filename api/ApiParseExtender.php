@@ -9,6 +9,7 @@ class ApiParseExtender {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetAllowedParams
 	 * @param ApiBase $module
 	 * @param array|bool $params
+	 * @return bool
 	 */
 	public static function onAPIGetAllowedParams( ApiBase &$module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
@@ -26,6 +27,7 @@ class ApiParseExtender {
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIGetParamDescription
 	 * @param ApiBase $module
 	 * @param Array|bool $params
+	 * @return bool
 	 */
 	public static function onAPIGetParamDescription( ApiBase &$module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
@@ -41,6 +43,7 @@ class ApiParseExtender {
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/APIGetDescription
 	 * @param ApiBase $module
 	 * @param Array|string $desc
+	 * @return bool
 	 */
 	public static function onAPIGetDescription( ApiBase &$module, &$desc ) {
 		if ( $module->getModuleName() == 'parse' ) {
@@ -54,6 +57,7 @@ class ApiParseExtender {
 	 * APIAfterExecute hook handler
 	 * @see: https://www.mediawiki.org/wiki/Manual:Hooks/
 	 * @param ApiBase $module
+	 * @return bool
 	 */
 	public static function onAPIAfterExecute( ApiBase &$module ) {
 		if ( $module->getModuleName() == 'parse' ) {

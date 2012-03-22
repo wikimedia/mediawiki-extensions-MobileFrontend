@@ -178,7 +178,7 @@ class HtmlFormatter {
 			);
 
 			foreach ( $elements as $element ) {
-				$removedElement = $element->parentNode->removeChild( $element );
+				$element->parentNode->removeChild( $element );
 			}
 		}
 
@@ -191,7 +191,7 @@ class HtmlFormatter {
 
 				if ( $redLink->hasAttributes() ) {
 					$attributes = $redLink->attributes;
-					foreach ( $attributes as $i => $attribute ) {
+					foreach ( $attributes as $attribute ) {
 						if ( $attribute->name != 'href' ) {
 							$spanNode->setAttribute( $attribute->name, $attribute->value );
 						}
