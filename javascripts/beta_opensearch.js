@@ -68,7 +68,9 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	var performSearch = function(ev) {
-		ev.preventDefault();
+		if( ev ) {
+			ev.preventDefault();
+		}
 		clearTimeout( timer );
 		term = search.value;
 		if ( term.length > 1 ) {
@@ -76,7 +78,15 @@ MobileFrontend.opensearch = (function() {
 			timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 		}
 	};
-	u( search ).bind( 'keyup', performSearch );
+	var oldValue;
+	window.setInterval(function() {
+		var value = search.value;
+		if( value.length > 1 && value !== oldValue ) {
+			oldValue = value;
+			performSearch();
+		}
+	}, typingDelay);
+
 	u( document.getElementById( 'searchForm' ) ).bind( 'submit', performSearch );
 	function blurSearch(ev) {
 		if( search.value.length === 0) {
