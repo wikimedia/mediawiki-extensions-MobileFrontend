@@ -75,6 +75,8 @@ $messages['en'] = array (
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-sopa-notice' => '<h3 id="sopa-notice">Thank you for protecting Wikipedia.</h3><br/><a href="http://en.wikipedia.org/wiki/Wikipedia:SOPA_initiative/Mobile_Learn_more">(We’re not done yet.)</a>',
 	'mobile-frontend-clear-search' => 'Clear',
+	'mobile-frontend-privacy-link-text' => 'Privacy',
+	'mobile-frontend-about-link-text' => 'About',
 );
 
 /** Message documentation (Message documentation)
@@ -113,6 +115,8 @@ $messages['qqq'] = array(
 	'mobile-frontend-placeholder' => 'Phrase used to prompt user to use search interface for mobile full screen search',
 	'mobile-frontend-dismiss-notification' => 'Phrase used to dismiss the top banner notification',
 	'mobile-frontend-clear-search' => 'Tooltip for clear button that appears when you type into search box',
+	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible',
+	'mobile-frontend-about-link-text' => 'Custom version of "About {{Sitename}}" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible',
 );
 
 /** Ṫuroyo (Ṫuroyo)

@@ -48,4 +48,16 @@ abstract class MobileFrontendTemplate {
 	 * to show the actual HTML output
 	 */
 	abstract public function getHTML();
+	
+	/**
+	 * Intended to override things like $skin->privacyLink() for custom link
+	 * text of internal MW-generated links
+	 * @param object Skin object
+	 * @param string Mediawiki message key denoting the text of the link
+	 * @param string Mediawiki message key denoting the page the link should point to
+	 * @return string
+	*/
+	public function getCustomFooterLink( $skin, $linkText, $page ) {
+		return $skin->footerLink( $linkText, $page );
+	}
 }

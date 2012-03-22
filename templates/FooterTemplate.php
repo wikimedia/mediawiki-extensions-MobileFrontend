@@ -34,8 +34,8 @@ class FooterTemplate extends MobileFrontendTemplate {
 
 		$skin = RequestContext::getMain()->getSkin();
 		$disclaimerLink = $skin->disclaimerLink();
-		$privacyLink = $skin->privacyLink();
-		$aboutLink = $skin->aboutLink();
+		$privacyLink = $this->getCustomFooterLink( $skin, 'mobile-frontend-privacy-link-text', 'privacypage' );
+		$aboutLink = $this->getCustomFooterLink( $skin, 'mobile-frontend-about-link-text', 'aboutpage' );
 
 		$normalFooter = <<<HTML
 			<div class='nav' id='footmenu'>
@@ -77,6 +77,6 @@ HTML;
 			</div>
 
 HTML;
-	return $footerHtml;
-}
+		return $footerHtml;
+	}
 }
