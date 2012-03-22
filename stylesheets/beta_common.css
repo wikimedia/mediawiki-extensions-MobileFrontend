@@ -1011,7 +1011,7 @@ this is so that toggling can scroll it into view
 	left: 0;
 	right: 0;
 	background-color: #E4E4E4;
-	padding: 22px;
+	padding: 22px 38px 22px 22px; /* 38px is 22px padding + close button icon 16px */
 	-webkit-box-shadow: 0px -20px 10px -16px #aaa;
 	-moz-box-shadow: 0px -20px 10px -16px #aaa;
 	-o-box-shadow: 0px -20px 10px -16px #aaa;
