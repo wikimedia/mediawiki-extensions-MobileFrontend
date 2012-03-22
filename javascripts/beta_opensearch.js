@@ -13,25 +13,6 @@ MobileFrontend.opensearch = (function() {
 		u = MobileFrontend.utils;
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
-	
-	viewportmeta = u( 'meta[name="viewport"]' )
-	if ( viewportmeta && viewportmeta[0] ) {
-		viewportmeta = viewportmeta[0];
-		originalViewport = viewportmeta.getAttribute( 'content' );
-	} else {
-		viewportmeta = null;
-	}
-	// prevent auto-zoom in on clicking search for certain browsers e.g. palm pre and ipad
-	function resetViewPort() {
-		if ( viewportmeta ) {
-			viewportmeta.setAttribute( 'content', 'minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0');
-			u( document.body ).bind( 'gesturestart', function () {
-				viewportmeta.setAttribute( 'content', originalViewport );
-			} );
-		}
-	}
-
-	resetViewPort();
 
 	search.onfocus = function() {
 		var rrd, rrdD;
@@ -39,7 +20,6 @@ MobileFrontend.opensearch = (function() {
 		header = document.getElementById( 'header' );
 		content = document.getElementById( 'content' );
 		footer = document.getElementById( 'footer' );
-		resetViewPort();
 
 		if ( !focused ) {
 			MobileFrontend.utils( document.body ).addClass( 'full-screen-search' );

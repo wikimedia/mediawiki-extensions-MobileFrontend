@@ -74,7 +74,7 @@ HTML;
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
-			<meta name="viewport" content="initial-scale=1.0">
+			<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
 			{$appleTouchIconTag}
 			{$jQueryScript}
 			<script type="text/javascript">
