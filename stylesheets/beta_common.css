@@ -889,6 +889,12 @@ full screen search css
 	margin-right: 4px;
 }
 
+html[dir="rtl"] #footer img {
+	float: right;
+	margin-right: 0px;
+	margin-left: 4px;
+}
+
 #footer .toggleCopyright,
 #footer .license {
 	font-weight: bold;
@@ -904,12 +910,25 @@ full screen search css
 	padding-right: 32px;
 }
 
+html[dir="rtl"] #footer .toggleCopyright {
+	float: left;
+	padding-left: 32px;
+	padding-right: 0;
+}
+
+
 .toggleCopyright .hide,
 .toggleCopyright .show {
 	position: absolute;
 	top: 0;
 	right: 0;
 	height: 22px;
+}
+
+html[dir="rtl"] .toggleCopyright .hide,
+html[dir="rtl"] .toggleCopyright .show {
+	right: auto;
+	left: 0;
 }
 
 /* 
