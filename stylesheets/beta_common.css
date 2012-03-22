@@ -286,12 +286,6 @@ h3#sopa-notice {
 	background-color: #f4f4f4;
 }
 
-button.show,
-button.hide { /* for non-js browsers */
-	display: none;
-	overflow: hidden;
-}
-
 .togglingEnabled button.hide,
 .togglingEnabled .openSection button.show {
 	display: none;
@@ -304,6 +298,8 @@ button.hide { /* for non-js browsers */
 
 button.show,
 button.hide {
+	display: none; /* for non-js browsers */
+	overflow: hidden;
 	width: 27px;
 	height: 16px;
 	border: none;
@@ -342,10 +338,14 @@ button.hide {
 	max-height: 0;
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: max-height 0.2s ease-in;
-	-moz-transition: max-height 0.2s ease-in;
-	-o-transition: max-height 0.2s ease-in;
-	transition: max-height 0.2s ease-in;
+	-webkit-transition: max-height 0.2s ease-in,
+		margin-top 0.2s ease-in; /* for smoother toggling */
+	-moz-transition: max-height 0.2s ease-in,
+		margin-top 0.2s ease-in;
+	-o-transition: max-height 0.2s ease-in,
+		margin-top 0.2s ease-in;
+	transition: max-height 0.2s ease-in,
+		margin-top 0.2s ease-in;
 }
 
 .togglingEnabled .openSection.section_anchors {
