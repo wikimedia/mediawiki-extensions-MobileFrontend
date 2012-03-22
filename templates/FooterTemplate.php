@@ -51,7 +51,7 @@ HTML;
 			class='license' />
 		<a href="http://creativecommons.org/licenses/by-sa/3.0/" class="license">by SA 3.0</a>
 		<a href="#content_footer" class="toggleCopyright section_heading" id="section_footer">
-			<span class="more">more information</span><span class="less">less information</span>
+			<span class="more">more</span><span class="less">less</span>
 		</a>
 		<div class="content_block" id="content_footer">
 			<div class="copyrightNotice">
