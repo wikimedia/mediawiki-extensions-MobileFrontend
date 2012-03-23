@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAIn//+ME\u003d",
+        "filename": "MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1500,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2012-03-23T15:12:14Z",
+      "side": 1,
+      "message": "Trailing w/s",
+      "revId": "1184e117e82a92f823ff668a090179c0284a3478",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
