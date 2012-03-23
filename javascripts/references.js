@@ -57,11 +57,10 @@ if( typeof jQuery !== 'undefined' ) {
 				} else {
 					$( '#mf-references' ).fadeOut( options.animationSpeed );
 				}
-			}, lastLink;
+			}, lastLink, data, html, href, references = collect();
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
-			
-			var data, html, href, references = collect();
+
 			$( 'sup a' ).unbind('click').click( function(ev) {
 				var top, oh;
 				href = $(this).attr( 'href' );
@@ -97,5 +96,5 @@ if( typeof jQuery !== 'undefined' ) {
 			});
 		}
 		init();
-	})(jQuery);
+	}(jQuery));
 }
