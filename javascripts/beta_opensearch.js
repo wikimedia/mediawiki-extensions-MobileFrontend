@@ -140,7 +140,6 @@ MobileFrontend.opensearch = (function() {
 			term = htmlEntities( document.getElementById( 'search' ).value ),
 			section, escapedTerm, suggestionsResult, link, label;
 
-		results.style.display = 'block';
 		if ( search ) {
 			search.focus();
 		}

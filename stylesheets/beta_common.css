@@ -750,17 +750,22 @@ full screen search css
 	-o-transition: all 0.3s ease-in-out;
 }
 
-#content_wrapper,
-.full-screen-search #results {
-	opacity: 1;
-	height: auto;
+#results {
+	display: none;
+	width: 100%;
 }
 
-#results,
 .full-screen-search #content_wrapper {
 	height: 0;
 	overflow: hidden;
 	opacity: 0;
+}
+
+#content_wrapper,
+.full-screen-search #results {
+	opacity: 1;
+	height: auto;
+	display: block;
 }
 
 .full-screen-search #footer,
