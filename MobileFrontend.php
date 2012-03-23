@@ -113,6 +113,16 @@ $wgMobileFrontendFormatCookieExpiry;
  */
 $wgMobileRedirectFormAction = false;
 
+/**
+ * A string to mark the particular version of a Javascript or CSS resource
+ * 
+ * This is useful to update in order to force invalidation of certain caches
+ * when new versions of this software gets deployed, as this string gets
+ * appended to the query string in the request for resources, which will
+ * invalidate caches dependent on URLs.
+ *
+ * This is entirely optional.
+ */
 $wgMobileResourceVersion;
 
 $wgExtMobileFrontend = null;
