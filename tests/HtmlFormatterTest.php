@@ -7,20 +7,22 @@ class HtmlFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getHtmlData
 	 */
-	public function testXhtmlTransform( $input, $expected, $callback = false ) {
+	public function testTransform( $input, $expected, $callback = false ) {
 		$t = Title::newFromText( 'Mobile' );
-		$input = str_replace( "\r", '', $input ); // "yay" to Windows!
+		$input = self::normalize( $input );
 		$formatter = new HtmlFormatter( HtmlFormatter::wrapHTML( $input ), $t, 'XHTML' );
 		if ( $callback ) {
 			$callback( $formatter );
 		}
 		$formatter->filterContent();
 		$html = $formatter->getText();
-		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
+		$this->assertEquals( self::normalize( $expected ), self::normalize( $html ) );
 	}
 
 	private static function normalize( $s ) {
-		
+		return str_replace( "\n", '',
+			str_replace( "\r", '', $s ) // "yay" to Windows!
+		);
 	}
 
 	public function getHtmlData() {
@@ -47,11 +49,11 @@ class HtmlFormatterTest extends MediaWikiTestCase {
 			// basic tag removal
 			array(
 				'<table><tr><td>foo</td></tr></table><div class="foo">foo</div><span id="bar">bar</span>
-<strong class="foo" id="bar">foobar</strong><div class="notfoo">test</div> <div class="baz"/>
-<span class="baz">baz</span><span class="foo" id="jedi">jedi</span>',
+<strong class="foo" id="bar">foobar</strong><div class="notfoo">test</div><div class="baz"/>
+<span class="baz">baz</span> <span class="foo" id="jedi">jedi</span>',
 
 				'<div class="notfoo">test</div>
-<span class="baz">baz</span><span class="foo" id="jedi">jedi</span>',
+<span class="baz">baz</span> <span class="foo" id="jedi">jedi</span>',
 				$removeTags,
 			),
 			// don't flatten tags that start like chosen ones

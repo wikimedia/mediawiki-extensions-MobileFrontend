@@ -111,6 +111,22 @@ class HtmlFormatter {
 	}
 
 	/**
+	 * Checks whether specified element should not be removed due to whitelist
+	 * @param DOMElement $element: Element to check
+	 * @return bool
+	 */
+	private function elementNotWhitelisted( DOMElement $element ) {
+		$idAttribute = $element->getAttributeNode( 'id' );
+		if ( $idAttribute ) {
+			$id = $idAttribute->value;
+			if ( isset( $this->idWhitelist[$id] ) ) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
 	 * Removes content inappropriate for mobile devices
 	 */
 	public function filterContent() {
@@ -134,15 +150,8 @@ class HtmlFormatter {
 		foreach ( $removals['TAG'] as $tagToRemove ) {
 			$tagToRemoveNodes = $doc->getElementsByTagName( $tagToRemove );
 			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
-				$tagToRemoveNodeIdAttributeValue = '';
-				if ( $tagToRemoveNode ) {
-					$tagToRemoveNodeIdAttribute = $tagToRemoveNode->getAttributeNode( 'id' );
-					if ( $tagToRemoveNodeIdAttribute ) {
-						$tagToRemoveNodeIdAttributeValue = $tagToRemoveNodeIdAttribute->value;
-					}
-					if ( !isset( $this->idWhitelist[$tagToRemoveNodeIdAttributeValue] ) ) {
-						$domElemsToRemove[] = $tagToRemoveNode;
-					}
+				if ( $tagToRemoveNode && $this->elementNotWhitelisted( $tagToRemoveNode ) ) {
+					$domElemsToRemove[] = $tagToRemoveNode;
 				}
 			}
 		}
@@ -165,7 +174,9 @@ class HtmlFormatter {
 			$elements = $xpath->query( '//*[@class="' . $classToRemove . '"]' );
 
 			foreach ( $elements as $element ) {
-				$element->parentNode->removeChild( $element );
+				if ( $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
+					$element->parentNode->removeChild( $element );
+				}
 			}
 		}
 
@@ -178,7 +189,9 @@ class HtmlFormatter {
 			);
 
 			foreach ( $elements as $element ) {
-				$element->parentNode->removeChild( $element );
+				if ( $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
+					$element->parentNode->removeChild( $element );
+				}
 			}
 		}
 
