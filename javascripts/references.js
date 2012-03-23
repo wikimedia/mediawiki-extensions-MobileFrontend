@@ -1,6 +1,6 @@
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
-		var calculatePosition, hashtest, options = {};
+		var calculatePosition, hashtest, options = {}, wasVisible;
 
 		hashtest = window.location.hash.substr(1).match(/refspeed:([0-9]*)/);
 		options.animationSpeed = hashtest ? parseInt( hashtest[1], 10 ) : 500;
@@ -30,9 +30,22 @@ if( typeof jQuery !== 'undefined' ) {
 			} );
 		};
 		$( document ).scroll(calculatePosition);
+		document.body.ontouchstart = function() {
+			wasVisible = $( '#mf-references' ).is( ':visible' );
+			$( '#mf-references' ).hide();
+		};
+		document.body.ontouchend = function() {
+			if( wasVisible ) {
+				$( '#mf-references' ).show();
+			}
+		};
 
 		function init() {
-			$( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body );
+			var el = $( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body )[0];
+			function cancelBubble( ev ) {
+				ev.stopPropagation();
+			}
+			el.ontouchstart = cancelBubble;
 			var close = function() {
 				var top;
 				lastLink = null;
@@ -79,6 +92,8 @@ if( typeof jQuery !== 'undefined' ) {
 					close();
 				}
 				ev.preventDefault();
+			}).each(function(i, el) {
+				el.ontouchstart = cancelBubble;
 			});
 		}
 		init();
