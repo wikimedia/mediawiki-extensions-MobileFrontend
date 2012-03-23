@@ -3359,7 +3359,7 @@ $messages['km'] = array(
 	'mobile-frontend-search-results' => 'លទ្ធផលស្វែងរក',
 	'mobile-frontend-no-article-found' => 'រកមិនឃើញអត្ថបទ',
 	'mobile-frontend-featured-article' => 'អត្ថបទពិសេសសំរាប់ថ្ងៃនេះ',
-	'mobile-frontend-in-the-news' => 'នៅក្នុងសារពត៌មាន',
+	'mobile-frontend-in-the-news' => 'នៅក្នុងសារព័ត៌មាន',
 	'mobile-frontend-home-button' => 'ទំព័រដើម',
 	'mobile-frontend-random-button' => 'ចៃដន្យ',
 	'mobile-frontend-back-to-top-of-section' => 'លោតត្រលប់ទៅផ្នែកខាងលើរបស់ផ្នែកនេះ',
@@ -3367,18 +3367,18 @@ $messages['km'] = array(
 	'mobile-frontend-hide-button' => 'លាក់',
 	'mobile-frontend-disable-button' => 'ឈប់ប្រើ',
 	'mobile-frontend-back-button' => 'ត្រលប់ក្រោយ',
-	'mobile-frontend-regular-site' => 'បើកមើលទំព័រនេះនៅលើ{{SITENAME}}ធម្មតា',
+	'mobile-frontend-regular-site' => 'បើកមើលលើផ្ទៃអេក្រង់លើតុ',
 	'mobile-frontend-error-page-title' => 'យើងមានបញ្ហាហើយ!',
 	'mobile-frontend-error-page-text' => '{{SITENAME}} ចល័តកំពុងស្ថិតក្រោមការអភិវឌ្ឍន៍​យ៉ាងសកម្ម ហើយយើងខ្ញុំកំពុង​ប្រឹងប្រែងយ៉ាងខ្លាំងក្លា​ក្នុងការកែប្រែកំហុសផ្ទៃក្នុងទាំងឡាយ។ យើងខ្ញុំទទួលការប្រាប់ព័ត៌មាន​អំពីកំហុសទាំងនោះ​ហើយយើងខ្ញុំនឹង​ធ្វើការកែប្រែវានាពេលឆាប់ៗនេះ។ សូមត្រលប់មកពិនិត្យមើលម្ដងទៀត!',
 	'mobile-frontend-are-you-sure' => 'តើអ្នកប្រាកដហើយ?',
-	'mobile-frontend-explain-disable' => 'តើអ្នកពិតជាចង់ឈប់ប្រើវើសិនសំរាប់ទូរស័ព្ទចល័តរបស់{{SITENAME}}មែនទេ? ប្រើសិនបើអ្នកជ្រើសយក <b>ឈប់ប្រើ</b> នោះចាប់ពីពេលនេះទៅ នៅពេលដែលអ្នកចូលមើល{{SITENAME}} អ្នកនឹងមិនត្រូវបញ្ជូនផ្ទាល់​ទៅកាន់ទំរង់សំរាប់ទូរស័ព្ទចល័តរបស់{{SITENAME}}ទេ។',
+	'mobile-frontend-explain-disable' => 'តើអ្នកពិតជាចង់ឈប់ប្រើវើសិនសំរាប់ទូរស័ព្ទចល័តរបស់{{SITENAME}}មែនទេ? ប្រសិនបើអ្នកជ្រើសយក <b>ឈប់ប្រើ</b> នោះចាប់ពីពេលនេះទៅ នៅពេលដែលអ្នកចូលមើល{{SITENAME}} អ្នកនឹងមិនត្រូវបញ្ជូនផ្ទាល់​ទៅកាន់ទំរង់សំរាប់ទូរស័ព្ទចល័តរបស់{{SITENAME}}ទេ។',
 	'mobile-frontend-nav-end' => 'ចប់',
 	'mobile-frontend-nav-top' => 'ផ្នែកខាងលើ',
 	'mobile-frontend-nav-edit' => 'កែប្រែ',
 	'mobile-frontend-nav-history' => 'ប្រវត្តិ',
 	'mobile-frontend-search-text' => 'ស្វែងរក',
 	'mobile-frontend-contact-us' => 'ប្រសិនបើអ្នកមានសំណួរឬមតិយោបល់ សូមផ្ញើអ៊ីមែលមកកាន់យើងខ្ញុំតាមរយៈ mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'បើកមើលឯកសារមេឌានេះនៅលើ{{SITENAME}}ធម្មតា ដើម្បីមើលព័ត៌មានអំពីម្ចាស់កម្មសិទ្ធ អាជ្ញាប័ណ្ឌ និងការបរិយាយបន្ថែមទៀត។',
+	'mobile-frontend-author-link' => 'បើកមើលឯកសារមេឌានេះនៅលើ{{SITENAME}}ធម្មតា ដើម្បីមើលព័ត៌មានអំពីម្ចាស់កម្មសិទ្ធ អាជ្ញាប័ណ្ឌ និងការពណ៌នាបន្ថែមទៀត។',
 	'mobile-frontend-download-full-version' => 'ទាញយកវើសិនពេញ',
 	'mobile-frontend-file-namespace' => 'ឯកសារ',
 	'mobile-frontend-wml-continue' => 'បន្ត...',
@@ -3388,7 +3388,7 @@ $messages['km'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'បាទ/ចាស៎',
 	'mobile-frontend-opt-in-no-button' => 'ទេ',
 	'mobile-frontend-opt-in-title' => 'ការចូលរួម​សាកល្បង​ប្រើ​កម្មវិធី​បេតា​សំរាប់​ឧបករណ៍​ចល័ត',
-	'mobile-frontend-opt-in-explain' => 'ដោយ​ចូលរួម​កម្មវិធី​បេតេ អ្នក​នឹងមាន​លទ្ធភាព​ប្រើ​មុខងា​ដែល​កំពុង​ស្ថិតនៅក្រោម​ការពិសោធន៍​នៅឡើយ ដែល​ធ្វើ​អោយ​អ្នកប្រឈមមុខ​នឹង​បញ្ហា​តូចតាច​មួយចំនួន។',
+	'mobile-frontend-opt-in-explain' => 'ដោយ​ចូលរួម​កម្មវិធី​បេតា អ្នក​នឹងមាន​លទ្ធភាព​ប្រើ​មុខងា​រដែល​កំពុង​ស្ថិតនៅក្រោម​ការពិសោធន៍​នៅឡើយ ដែល​អាចធ្វើ​អោយ​អ្នកប្រឈមមុខ​នឹង​បញ្ហា​តូចតាច​មួយចំនួន។',
 	'mobile-frontend-opt-out-message' => 'ចាកចេញពីកម្មវិធីបេតាសំរាប់ឧបករណ៍ចល័តឬ?',
 	'mobile-frontend-opt-out-yes-button' => 'បាទ/ចាស៎',
 	'mobile-frontend-opt-out-no-button' => 'ទេ',
@@ -3396,7 +3396,7 @@ $messages['km'] = array(
 	'mobile-frontend-opt-out-explain' => 'ដោយ​ចាកចេញ​ពី​កម្មវិធី​បេតា អ្នកនឹង​បិទ​មិនប្រើ​កម្មវិធី​ដែលស្ថិត​នៅក្រោម​ការពិសោធន៍​ទាំងអស់ រួចត្រលប់​ទៅប្រើ​កម្មវិធី​សំរាប់​ឧបករណ៍​ចល័ត​ធម្មតា​វិញ។',
 	'mobile-frontend-disable-images' => 'បិទមិនអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត',
 	'mobile-frontend-enable-images' => 'បើកអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត',
-	'mobile-frontend-news-items' => 'នៅក្នុងសារពត៌មាន',
+	'mobile-frontend-news-items' => 'នៅក្នុងសារព័ត៌មាន',
 	'mobile-frontend-leave-feedback-title' => 'សូមផ្ដល់មតិយោបល់អំពីវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងខ្ញុំ',
 	'mobile-frontend-leave-feedback-notice' => 'មតិយោបល់របស់អ្នកនឹងជួយយើងខ្ញុំក្នុងការកែលំអវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងអោយកាន់តែប្រសើរឡើង។ មតិរបស់អ្នក (ព្រមជាមួយនឹងអត្តនាម វើសិនរបស់ឧបករណ៍រាវរក និងប្រព័ន្ធប្រតិបត្តិ) នឹងត្រូវបានផ្សព្វផ្សាយជាសាធារណៈនៅលើទំព័រ &quot;$1&quot;។ សូមជ្រើសរើសពាក្យដែលមានព័ត៌មានគ្រប់គ្រាន់​សំរាប់ដាក់ជាចំណងជើង។ ឧទាហរណ៍ "បញ្ហាទំរង់របស់តារាងធំៗ"។ មតិយោបល់របស់អ្នកនឹងត្រូវបានប្រើទៅតាមលក្ខខណ្ឌនៃការប្រើប្រាស់របស់យើងខ្ញុំ។',
 	'mobile-frontend-leave-feedback-subject' => 'ប្រធានបទ​',
@@ -3412,6 +3412,7 @@ $messages['km'] = array(
 	'mobile-frontend-login' => 'កត់ឈ្មោះចូល',
 	'mobile-frontend-placeholder' => 'វាយបញ្ជួលពាក្យដែលអ្នកចង់ស្វែងរកនៅទីនេះ...',
 	'mobile-frontend-dismiss-notification' => 'បិទការផ្ដល់ដំណឹងនេះ',
+	'mobile-frontend-clear-search' => 'ជំរះ',
 );
 
 /** Kannada (ಕನ್ನಡ)
@@ -4118,7 +4119,7 @@ $messages['mi'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'mobile-frontend-desc' => 'Кориснички дел за мобилен уред',
+	'mobile-frontend-desc' => 'Мобилен посредник',
 	'mobile-frontend-search-submit' => 'Оди',
 	'mobile-frontend-search-results' => 'Резултати од пребарувањето',
 	'mobile-frontend-no-article-found' => 'Нема пронајдено статија',
@@ -4131,18 +4132,18 @@ $messages['mk'] = array(
 	'mobile-frontend-hide-button' => 'Скриј',
 	'mobile-frontend-disable-button' => 'Оневозможи',
 	'mobile-frontend-back-button' => 'Назад',
-	'mobile-frontend-regular-site' => 'режим „работна површина“',
+	'mobile-frontend-regular-site' => 'Обичен изглед',
 	'mobile-frontend-error-page-title' => 'Имаме проблем!',
 	'mobile-frontend-error-page-text' => 'Мобилното издание на {{SITENAME}} е сè уште во активен развој, и работиме напорно за да ги поправиме сите внатрешни грешки. Известени сме за оваа грешка и набргу ќе ја поправиме. Проверете повторно!',
 	'mobile-frontend-are-you-sure' => 'Дали сте сигурни ?',
-	'mobile-frontend-explain-disable' => 'Дали сте сигурни дека сакате да ја оневозможите мобилната верзија на {{SITENAME}}? Ако одберете <b>Оневозможи</b>, тоа ќе значи дека оттогаш па натаму кога ќе ја посетите {{SITENAME}}, страницата нема да ве пренасочува на овој мобилен режим на {{SITENAME}}.',
+	'mobile-frontend-explain-disable' => 'Дали сте сигурни дека сакате да ја оневозможите мобилната верзија на {{SITENAME}}? Ако одберете <b>Оневозможи</b>, тоа ќе значи дека оттогаш па натаму кога ќе ја посетите {{SITENAME}}, страницата нема да ве пренасочува на овој мобилен изглед на {{SITENAME}}.',
 	'mobile-frontend-nav-end' => 'Најдолу',
 	'mobile-frontend-nav-top' => 'Најгоре',
 	'mobile-frontend-nav-edit' => 'Уреди',
 	'mobile-frontend-nav-history' => 'Историја',
 	'mobile-frontend-search-text' => 'Пребарај',
 	'mobile-frontend-contact-us' => 'Ако имате било какви прашања или примедби, слободно пишете ни на mobile@wikipedia.org',
-	'mobile-frontend-author-link' => 'Погледајте ја снимкава на обичен режим на {{SITENAME}} за да видите повеќе информации за авторот, лиценцата и дополнителен опис.',
+	'mobile-frontend-author-link' => 'Погледајте ја снимкава на обичен изглед на {{SITENAME}} за да видите повеќе информации за авторот, лиценцата и дополнителен опис.',
 	'mobile-frontend-download-full-version' => 'Преземи полна верзија',
 	'mobile-frontend-file-namespace' => 'Податотека',
 	'mobile-frontend-wml-continue' => 'Продолжи ...',
@@ -4158,8 +4159,8 @@ $messages['mk'] = array(
 	'mobile-frontend-opt-out-no-button' => 'не',
 	'mobile-frontend-opt-out-title' => 'Напуштање на бета-верзијата за мобилни уреди',
 	'mobile-frontend-opt-out-explain' => 'Напуштајќи ја бета-верзијата за мобилни уреди ги оневозможувате сите експериментални функции и се враќате на класичната мобилна верзија.',
-	'mobile-frontend-disable-images' => 'Оневозможи слики на мобилното мреж. место',
-	'mobile-frontend-enable-images' => 'Овозможи слики на мобилното мреж. место',
+	'mobile-frontend-disable-images' => 'Оневозможи слики во мобилниот изглед',
+	'mobile-frontend-enable-images' => 'Овозможи слики во мобилниот изглед',
 	'mobile-frontend-news-items' => 'Вести',
 	'mobile-frontend-leave-feedback-title' => 'Дајте ни ваше мислење за мобилната верзија',
 	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ни помага да ја подобриме мобилната верзија. Мислењето ќе биде објавено јавно (заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем) на страницата „$1“. Одберете информативен наслов, како на пр. „Проблем со форматирање на широките табели“. Искажаното мислење подлежи на условите на употреба.',
@@ -4892,7 +4893,7 @@ $messages['os'] = array(
 	'mobile-frontend-hide-button' => 'Айсын',
 	'mobile-frontend-disable-button' => 'Ахицæн кæнын',
 	'mobile-frontend-back-button' => 'Фæстæмæ',
-	'mobile-frontend-regular-site' => 'Кæсын ацы фарс нæуи {{grammar:genitive|{{SITENAME}}}}',
+	'mobile-frontend-regular-site' => 'Æнæхъæнæй',
 	'mobile-frontend-error-page-title' => 'Проблемæ нæм ис!',
 	'mobile-frontend-error-page-text' => 'Мобилон {{SITENAME}} нырмадæр кæронмæ арызт нæу, æмæ мах кусæм нæ мидæггаг рæдыддытæ раст кæныныл. Мах фехъусын кодтой ацы рæдыды тыххæй æмæ йæ тагъд хъуамæ сраст кæнæм. Дæ хорзæхæй, фæстæдæр та бафæлвар!',
 	'mobile-frontend-are-you-sure' => 'Æцæг дæ фæнды?',
@@ -4917,6 +4918,13 @@ $messages['os'] = array(
 	'mobile-frontend-enable-images' => 'Баиу кæнын нывтæ мобилон сайты',
 	'mobile-frontend-news-items' => 'Нæуæг хабæртты',
 	'mobile-frontend-leave-feedback-message' => 'Фыстæг',
+	'mobile-frontend-leave-feedback-cancel' => 'Ныууадзын',
+	'mobile-frontend-language' => 'Æвзаг',
+	'mobile-frontend-username' => 'Архайæджы ном:',
+	'mobile-frontend-password' => 'Пароль:',
+	'mobile-frontend-login' => 'Бахизын',
+	'mobile-frontend-clear-search' => 'Схафын',
+	'mobile-frontend-about-link-text' => 'Афыст',
 );
 
 /** Punjabi (ਪੰਜਾਬੀ) */
@@ -5537,6 +5545,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author Bouron
  * @author Dim Grits
  * @author Express2000
  * @author Kaganer
@@ -5557,7 +5566,7 @@ $messages['ru'] = array(
 	'mobile-frontend-hide-button' => 'Скрыть',
 	'mobile-frontend-disable-button' => 'Отключить',
 	'mobile-frontend-back-button' => 'Назад',
-	'mobile-frontend-regular-site' => 'Просмотреть страницу в обычной {{grammar:genitive|{{SITENAME}}}}',
+	'mobile-frontend-regular-site' => 'Обычная версия',
 	'mobile-frontend-error-page-title' => 'У нас проблема!',
 	'mobile-frontend-error-page-text' => 'Мобильная версия {{grammar:genitive|{{SITENAME}}}} ещё находится в стадии активной разработки, и мы прилагаем максимум усилий, чтобы исправить все наши внутренние ошибки. Мы были уведомлены об этой ошибке и планируем её вскоре исправить. Пожалуйста, проверьте через некоторое время!',
 	'mobile-frontend-are-you-sure' => 'Вы уверены?',
