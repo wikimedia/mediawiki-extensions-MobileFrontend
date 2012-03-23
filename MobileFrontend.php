@@ -176,6 +176,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 	$dir = dirname( __FILE__ ) . '/tests';
 	$files[] = "$dir/MobileFrontendTest.php";
 	$files[] = "$dir/DeviceDetectionTest.php";
+	$files[] = "$dir/HtmlFormatterTest.php";
 	$files[] = "$dir/MobileFormatterTest.php";
 	return true;
 }
