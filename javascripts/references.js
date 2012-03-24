@@ -1,6 +1,6 @@
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
-		var calculatePosition, hashtest, options = {}, wasVisible;
+		var calculatePosition = function() {}, hashtest, options = {}, wasVisible;
 
 		hashtest = window.location.hash.substr(1).match(/refspeed:([0-9]*)/);
 		options.animationSpeed = hashtest ? parseInt( hashtest[1], 10 ) : 500;
@@ -20,24 +20,32 @@ if( typeof jQuery !== 'undefined' ) {
 		// TODO: only apply to places that need it
 		// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 		// https://github.com/Modernizr/Modernizr/issues/167
-		calculatePosition = function() {
-			var h = $( '#mf-references' ).outerHeight();
-			$( '#mf-references' ).css( {
-				top:  ( window.innerHeight + window.pageYOffset ) - h,
-				bottom: 'auto',
-				position: 'absolute'
-			} );
-		};
-		$( document ).scroll(calculatePosition);
-		document.body.ontouchstart = function() {
-			wasVisible = $( '#mf-references' ).is( ':visible' );
-			$( '#mf-references' ).hide();
-		};
-		document.body.ontouchend = function() {
-			if( wasVisible ) {
-				$( '#mf-references' ).show();
-			}
-		};
+		function supportsPositionFixed() {
+			// TODO: don't use device detection
+			var agent = navigator.userAgent;
+			// match anything over Webkit 534
+			return agent.match( /AppleWebKit\/(53[4-9]|5[4-9]\d?|[6-9])\d?\d?/ ) ? true : false;
+		}
+		if( !supportsPositionFixed() ) {
+			calculatePosition = function() {
+				var h = $( '#mf-references' ).outerHeight();
+				$( '#mf-references' ).css( {
+					top:  ( window.innerHeight + window.pageYOffset ) - h,
+					bottom: 'auto',
+					position: 'absolute'
+				} );
+			};
+			$( document ).scroll(calculatePosition);
+			document.body.ontouchstart = function() {
+				wasVisible = $( '#mf-references' ).is( ':visible' );
+				$( '#mf-references' ).hide();
+			};
+			document.body.ontouchend = function() {
+				if( wasVisible ) {
+					$( '#mf-references' ).show();
+				}
+			};
+		}
 
 		function init() {
 			var el = $( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body )[0];
