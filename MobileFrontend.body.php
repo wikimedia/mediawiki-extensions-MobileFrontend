@@ -921,10 +921,13 @@ class ExtMobileFrontend {
 		global $wgScript;
 		wfProfileIn( __METHOD__ );
 
+		wfProfileIn( __METHOD__ . '-formatter-init' );
 		$formatter = new MobileFormatter( $html, self::$title, $this->contentFormat, $this->wmlContext );
 		$formatter->useMessages( self::$messages );
 		$doc = $formatter->getDoc();
+		wfProfileOut( __METHOD__ . '-formatter-init' );
 
+		wfProfileIn( __METHOD__ . '-zero' );
 		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
 
 		if ( !$zeroRatedBannerElement ) {
@@ -934,7 +937,9 @@ class ExtMobileFrontend {
 		if ( $zeroRatedBannerElement ) {
 			self::$zeroRatedBanner = $doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
 		}
+		wfProfileOut( __METHOD__ . '-zero' );
 
+		wfProfileIn( __METHOD__ . '-beta' );
 		if ( self::$isBetaGroupMember ) {
 			$ptLogout = $doc->getElementById( 'pt-logout' );
 
@@ -978,11 +983,15 @@ class ExtMobileFrontend {
 				}
 			}
 		}
+		wfProfileOut( __METHOD__ . '-beta' );
 
+		wfProfileIn( __METHOD__ . '-filter' );
 		$formatter->removeImages( self::$disableImages == 1 );
 		$formatter->whitelistIds( 'zero-language-search' );
 		$formatter->filterContent();
+		wfProfileOut( __METHOD__ . '-filter' );
 
+		wfProfileIn( __METHOD__ . '-userlogin' );
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
 				$login = $this->renderLogin();
@@ -990,7 +999,9 @@ class ExtMobileFrontend {
 				$userlogin->appendChild( $loginNode );
 			}
 		}
+		wfProfileOut( __METHOD__ . '-userlogin' );
 
+		wfProfileIn( __METHOD__ . '-getText' );
 		$formatter->setIsMainPage( self::$isMainPage );
 		if ( $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
@@ -999,9 +1010,11 @@ class ExtMobileFrontend {
 			$formatter->enableExpandableSections();
 		}
 		$contentHtml = $formatter->getText( 'content' );
+		wfProfileOut( __METHOD__ . '-getText' );
 
 		$htmlTitle = htmlspecialchars( self::$htmlTitle );
 
+		wfProfileIn( __METHOD__ . '-templates' );
 		if ( $this->contentFormat == 'WML' ) {
 			header( 'Content-Type: text/vnd.wap.wml' );
 
@@ -1059,8 +1072,10 @@ class ExtMobileFrontend {
 			$applicationTemplate->setByArray( $options );
 			$applicationHtml = $applicationTemplate->getHTML();
 		}
+		wfProfileOut( __METHOD__ . '-templates' );
 
 		if ( self::$format === 'json' ) {
+			wfProfileIn( __METHOD__ . '-json' );
 			header( 'Content-Type: application/javascript' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
@@ -1072,6 +1087,7 @@ class ExtMobileFrontend {
 			if ( !empty( self::$callback ) ) {
 				$json = urlencode( htmlspecialchars( self::$callback ) ) . '(' . $json . ')';
 			}
+			wfProfileOut( __METHOD__ . '-json' );
 
 			wfProfileOut( __METHOD__ );
 			return $json;
