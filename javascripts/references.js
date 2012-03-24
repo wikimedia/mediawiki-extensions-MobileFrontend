@@ -11,8 +11,7 @@ if( typeof jQuery !== 'undefined' ) {
 			var references = {};
 			$( 'ol.references li' ).each(function(i, el) {
 				references[ $(el).attr( 'id' ) ] = {
-					html: $(el).html(),
-					label: i + 1
+					html: $(el).html()
 				};
 			});
 			return references;
@@ -70,7 +69,7 @@ if( typeof jQuery !== 'undefined' ) {
 				if( !$("#mf-references").is(":visible") || lastLink !== href) {
 					lastLink = href;
 					if( data ) {
-						html = '<h3>[' + data.label + ']</h3>' + data.html;
+						html = '<h3>' + $(this).text() + '</h3>' + data.html;
 					} else {
 						html = $( '<a />' ).text( $(this).text() ).
 							attr( 'href', href ).appendTo('<div />').parent().html();
