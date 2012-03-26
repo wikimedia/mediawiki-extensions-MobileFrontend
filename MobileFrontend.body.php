@@ -269,10 +269,19 @@ class ExtMobileFrontend {
 
 		$languageUrls = array();
 
+		/**
+		 * Provide correct method name depending on MW 1.19 or MW 1.20
+		 */
+		if ( method_exists( 'Language', 'fetchLanguageName' )) {
+			$langFetchMethodName = 'fetchLanguageName';
+		} else {
+			$langFetchMethodName = 'getLanguageName';
+		}
+
 		$languageUrls[] = array(
 			'href' => self::$currentURL,
 			'text' => self::$htmlTitle,
-			'language' => Language::fetchLanguageName( $wgLanguageCode ),
+			'language' => Language::$langFetchMethodName( $wgLanguageCode ),
 			'class' => 'interwiki-' . $wgLanguageCode,
 			'lang' => $wgLanguageCode,
 		);
@@ -287,10 +296,10 @@ class ExtMobileFrontend {
 				$languageUrl = $this->getMobileUrl( $nt->getFullURL() );
 				$languageUrls[] = array(
 					'href' => $languageUrl,
-					'text' => ( Language::fetchLanguageName( $nt->getInterwiki() ) != ''
-							? Language::fetchLanguageName( $nt->getInterwiki() )
+					'text' => ( Language::$langFetchMethodName( $nt->getInterwiki() ) != ''
+							? Lanuage::$langFetchMethodName( $nt->getInterwiki() )
 							: $l ),
-					'language' => Language::fetchLanguageName( $lang ),
+					'language' => Language::$langFetchMethodName( $lang ),
 					'class' => $class,
 					'lang' => $lang,
 				);
