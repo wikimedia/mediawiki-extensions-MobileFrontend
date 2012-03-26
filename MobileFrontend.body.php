@@ -297,7 +297,7 @@ class ExtMobileFrontend {
 				$languageUrls[] = array(
 					'href' => $languageUrl,
 					'text' => ( Language::$langFetchMethodName( $nt->getInterwiki() ) != ''
-							? Lanuage::$langFetchMethodName( $nt->getInterwiki() )
+							? Language::$langFetchMethodName( $nt->getInterwiki() )
 							: $l ),
 					'language' => Language::$langFetchMethodName( $lang ),
 					'class' => $class,
