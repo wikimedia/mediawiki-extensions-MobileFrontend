@@ -113,6 +113,11 @@ class ExtMobileFrontend {
 		'mobile-frontend-dismiss-notification',
 		'mobile-frontend-sopa-notice',
 		'mobile-frontend-clear-search',
+		'mobile-frontend-footer-more',
+		'mobile-frontend-footer-less',
+		'mobile-frontend-footer-contact',
+		'mobile-frontend-footer-sitename',
+		'mobile-frontend-footer-license',
 	);
 
 	public function __construct() {
@@ -1098,7 +1103,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getFooterTemplate() {
-		global $wgExtensionAssetsPath;
+		global $wgExtensionAssetsPath, $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 		$footerTemplate = new FooterTemplate();
 		$logoutHtml = ( self::$logoutHtml ) ? self::$logoutHtml : '';
@@ -1113,6 +1118,9 @@ class ExtMobileFrontend {
 						'logoutHtml' => $logoutHtml,
 						'loginHtml' => $loginHtml,
 						'code' => self::$code,
+						'language-code' => 'en',
+						'copyright-symbol' => $wgLanguageCode === 'en' ? '®': '™',
+						'copyright-has-logo' => $wgLanguageCode === 'en',
 						'hideFooter' => self::$hideFooter,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'isBetaGroupMember' => self::$isBetaGroupMember,

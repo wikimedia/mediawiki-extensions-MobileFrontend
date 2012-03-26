@@ -9,7 +9,9 @@ class FooterTemplate extends MobileFrontendTemplate {
 	public function getHTML() {
 
 		$regularSite = $this->data['messages']['mobile-frontend-regular-site'];
-		$copyright = $this->data['messages']['mobile-frontend-copyright'];
+		$copyright = $this->data['messages']['mobile-frontend-footer-copyright'];
+		$copyrightSymbol = $this->data['copyright-symbol'];
+		$license = $this->data['messages']['mobile-frontend-footer-license'];
 		$disableImages = $this->data['messages']['mobile-frontend-disable-images'];
 		$enableImages = $this->data['messages']['mobile-frontend-enable-images'];
 		$leaveFeedback = $this->data['messages']['mobile-frontend-leave-feedback'];
@@ -45,21 +47,31 @@ class FooterTemplate extends MobileFrontendTemplate {
 			  </div>
 			  <div id='copyright'>{$copyright}</div>
 HTML;
+		if( $this->data['copyright-has-logo'] ) {
+			$licenseHTML = <<<HTML
+			<img src="{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/images/logo-copyright-{$this->data['language-code']}.png"
+				class="license" alt="{$this->data['messages']['mobile-frontend-footer-sitename']} {$copyrightSymbol}">
+HTML;
+		} else {
+			$licenseHTML = <<<HTML
+			<div class="license">{$this->data['messages']['mobile-frontend-footer-sitename']} {$copyrightSymbol}</div>
+HTML;
+		}
+		
+		
 		$betaFooter = <<<HTML
 		<!-- TODO: make license icon and text dynamic -->
-		<img src="{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/images/ccommons.png" alt="creative commons"
-			class='license' />
-		<a href="http://creativecommons.org/licenses/by-sa/3.0/" class="license">by SA 3.0</a>
+		{$licenseHTML}
 		<a href="#content_footer" class="toggleCopyright section_heading" id="section_footer">
-			<span class="more">more</span><span class="less">less</span>
+			<span class="more">{$this->data['messages']['mobile-frontend-footer-more']}</span><span class="less">{$this->data['messages']['mobile-frontend-footer-less']}</span>
 		</a>
 		<div class="content_block" id="content_footer">
-			<div class="copyrightNotice">
-				{$copyright}
+			<div class="notice">
+				{$license}
 			</div>
 			<ul class='links'>
 				<li>
-					<a href="{$this->data['leaveFeedbackURL']}">Contact</a>
+					<a href="{$this->data['leaveFeedbackURL']}">{$this->data['messages']['mobile-frontend-footer-contact']}</a>
 				</li><li>
 					{$privacyLink}
 				</li><li>

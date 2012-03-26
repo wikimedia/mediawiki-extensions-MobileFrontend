@@ -77,6 +77,11 @@ $messages['en'] = array (
 	'mobile-frontend-clear-search' => 'Clear',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-about-link-text' => 'About',
+	'mobile-frontend-footer-more' => 'more',
+	'mobile-frontend-footer-less' => 'less',
+	'mobile-frontend-footer-sitename' => 'Wikipedia',
+	'mobile-frontend-footer-license' => 'Content available under <a href="http://wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a><br><a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Terms of Use</a>',
+	'mobile-frontend-footer-contact' => 'Contact',
 );
 
 /** Message documentation (Message documentation)
@@ -117,6 +122,11 @@ $messages['qqq'] = array(
 	'mobile-frontend-clear-search' => 'Tooltip for clear button that appears when you type into search box',
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible',
 	'mobile-frontend-about-link-text' => 'Custom version of "About {{Sitename}}" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible',
+	'mobile-frontend-footer-more' => 'Label for more button in footer',
+	'mobile-frontend-footer-less' => 'Label for less button in footer',
+	'mobile-frontend-footer-contact' => 'Label for contact in footer',
+	'mobile-frontend-footer-sitename' => 'Name of site',
+	'mobile-frontend-footer-license' => 'License shown in footer',
 );
 
 /** Ṫuroyo (Ṫuroyo)

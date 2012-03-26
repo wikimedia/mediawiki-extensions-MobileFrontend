@@ -886,8 +886,12 @@ full screen search css
 	list-style: none;
 }
 
-#footer img {
-	height: 23px;
+#footer img.license {
+	margin-top: 5px; /* 24px line height - 14px / 2) */
+	height: 14px;
+}
+
+#footer .license {
 	float: left;
 	margin-right: 4px;
 }
@@ -945,15 +949,16 @@ this is so that toggling can scroll it into view
 	transition: none;
 }
 
-.copyrightNotice {
+#footer .notice {
 	padding-top: 8px;
-	line-height: 1.2em;
+	line-height: 1.6em;
 	margin-bottom: 12px;
 }
 
 #content_footer {
 	text-align: center;
 	font-size: 0.9em;
+	clear: both;
 }
 
 #footer .links {
