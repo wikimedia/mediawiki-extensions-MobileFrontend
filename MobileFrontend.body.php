@@ -890,8 +890,9 @@ class ExtMobileFrontend {
 				Html::closeElement( 'table' ) .
 				Html::input( 'wpLoginToken', self::$wsLoginToken, 'hidden' ) .
 				Html::closeElement( 'form' );
+		$result = $this->getDomDocumentNodeByTagName( $form, 'form' );
 		wfProfileOut( __METHOD__ );
-		return $this->getDomDocumentNodeByTagName( $form, 'form' );
+		return $result;
 	}
 
 	/**
@@ -1012,9 +1013,8 @@ class ExtMobileFrontend {
 		$contentHtml = $formatter->getText( 'content' );
 		wfProfileOut( __METHOD__ . '-getText' );
 
-		$htmlTitle = htmlspecialchars( self::$htmlTitle );
-
 		wfProfileIn( __METHOD__ . '-templates' );
+		$htmlTitle = htmlspecialchars( self::$htmlTitle );
 		if ( $this->contentFormat == 'WML' ) {
 			header( 'Content-Type: text/vnd.wap.wml' );
 

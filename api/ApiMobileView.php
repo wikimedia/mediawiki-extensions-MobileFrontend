@@ -65,6 +65,7 @@ class ApiMobileView extends ApiBase {
 		}
 		$this->getResult()->setIndexedTagName( $result, 'section' );
 		$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
+		wfProfileOut( __METHOD__ );
 	}
 
 	private function parseSections( $str ) {
