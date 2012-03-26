@@ -60,7 +60,7 @@ if( typeof jQuery !== 'undefined' ) {
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
 
-			$( 'sup a' ).unbind('click').click( function(ev) {
+			function clickReference(ev) {
 				var top, oh;
 				href = $(this).attr( 'href' );
 				data = href && href.charAt(0) === '#' ?
@@ -75,6 +75,7 @@ if( typeof jQuery !== 'undefined' ) {
 							attr( 'href', href ).appendTo('<div />').parent().html();
 					}
 					$( '#mf-references div' ).html( html );
+					$('#mf-references div sup a').click( clickReference );
 					calculatePosition();
 					if( options.animation === 'none' ) {
 						$( '#mf-references' ).show();
@@ -90,7 +91,8 @@ if( typeof jQuery !== 'undefined' ) {
 					close();
 				}
 				ev.preventDefault();
-			}).each(function(i, el) {
+			}
+			$( 'sup a' ).unbind('click').click( clickReference ).each(function(i, el) {
 				el.ontouchstart = cancelBubble;
 			});
 		}
