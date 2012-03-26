@@ -567,7 +567,7 @@ img.thumbborder {
 }
 
 #content_wrapper p {
-	margin: 0;
+	margin: 0 0 10px 0;
 }
 
 #content_wrapper .section {
