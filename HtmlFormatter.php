@@ -130,6 +130,7 @@ class HtmlFormatter {
 	 * Removes content inappropriate for mobile devices
 	 */
 	public function filterContent() {
+		wfProfileIn( __METHOD__ );
 		$removals = $this->parseItemsToRemove();
 
 		if ( !$removals ) {
