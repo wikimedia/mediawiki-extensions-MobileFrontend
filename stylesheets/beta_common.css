@@ -924,6 +924,9 @@ html[dir="rtl"] #footer .toggleCopyright {
 	padding-right: 0;
 }
 
+#section_footer {
+	color: #818181;
+}
 
 .toggleCopyright .hide,
 .toggleCopyright .show {
