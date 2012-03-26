@@ -786,6 +786,7 @@ full screen search css
 	top: 0;
 	left: 0;
 	height: 40px;
+	line-height: 40px; /* prevent text jumping as you search */
 }
 
 #searchbox {
