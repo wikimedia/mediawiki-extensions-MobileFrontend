@@ -70,6 +70,7 @@ class ExtMobileFrontend {
 	public static $messageKeys = array(
 		'mobile-frontend-show-button',
 		'mobile-frontend-hide-button',
+		'mobile-frontend-empty-homepage',
 		'mobile-frontend-back-to-top-of-section',
 		'mobile-frontend-regular-site',
 		'mobile-frontend-home-button',
@@ -1179,6 +1180,7 @@ class ExtMobileFrontend {
 						'zeroRatedBanner' => self::$zeroRatedBanner,
 						'showText' => self::$messages[ 'mobile-frontend-show-button' ],
 						'hideText' => self::$messages[ 'mobile-frontend-hide-button' ],
+						'configure-empty-homepage'=> self::$messages[ 'mobile-frontend-empty-homepage' ],
 						'useFormatCookieName' => self::$useFormatCookieName,
 						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
 						);

@@ -24,6 +24,7 @@ $messages['en'] = array (
 	'mobile-frontend-back-to-top-of-section' => 'Jump back a section',
 	'mobile-frontend-show-button' => 'Show',
 	'mobile-frontend-hide-button' => 'Hide',
+	'mobile-frontend-empty-homepage' => 'This homepage needs to be configured. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Read more here</a>',
 	'mobile-frontend-disable-button' => 'Disable',
 	'mobile-frontend-back-button' => 'Back',
 	'mobile-frontend-regular-site' => 'Desktop view',
@@ -96,6 +97,7 @@ $messages['en'] = array (
 $messages['qqq'] = array(
 	'mobile-frontend-show-button' => '{{Identical|Show}}',
 	'mobile-frontend-hide-button' => '{{Identical|Hide}}',
+	'mobile-frontend-empty-homepage' => 'Message to display when an empty homepage is encountered',
 	'mobile-frontend-regular-site' => 'When on the mobile site, this text links to the normal page for desktop computers',
 	'mobile-frontend-wml-continue' => '{{Identical|Continue}}',
 	'mobile-frontend-wml-back' => '{{Identical|Back}}',
