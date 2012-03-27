@@ -429,6 +429,7 @@ class ExtMobileFrontend {
 		}
 
 		self::$device = $device->format( $formatName );
+		$this->checkUserStatus();
 		$this->setDefaultLogo();
 
 		// honor useformat=mobile-wap if it's set, otherwise determine by device
@@ -495,8 +496,6 @@ class ExtMobileFrontend {
 		$this->disableCaching();
 		$this->sendXDeviceVaryHeader();
 		$this->sendApplicationVersionVaryHeader();
-		$this->checkUserStatus();
-		$this->setDefaultLogo();
 		$this->checkUserLoggedIn();
 
 		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
