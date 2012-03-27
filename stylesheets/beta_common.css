@@ -883,6 +883,11 @@ full screen search css
 	clear: both; /* cancel any floating in the content */
 }
 
+#footer .section_heading {
+	height: 24px;
+	display: block;
+}
+
 #footer ul {
 	text-align: center;
 	width: 100%;
@@ -918,7 +923,6 @@ html[dir="rtl"] #footer img {
 	margin: 0;
 	padding: 0;
 	position: relative;
-	padding-right: 32px;
 }
 
 html[dir="rtl"] #footer .toggleCopyright {
@@ -960,6 +964,10 @@ this is so that toggling can scroll it into view
 	padding-top: 8px;
 	line-height: 1.6em;
 	margin-bottom: 12px;
+}
+
+#section_footer button {
+	height: 22px;
 }
 
 #content_footer {
