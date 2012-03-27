@@ -19,9 +19,9 @@ class LeaveFeedbackTemplate extends MobileFrontendTemplate {
 				<div>
 					<div><p><small>{$this->data['notice']}</small>
 					</p></div>
-					<div><p>{$this->data['subject']}:<br><input type="text" name="subject" maxlength="60" style="width:40%;"></p>
+					<div><p>{$this->data['subject']}:<br><input type="text" name="subject" maxlength="60"></p>
 					</div>
-					<div><p>{$this->data['message']}:<br><textarea name="message" style="width:40%;" rows="5" cols="60"></textarea></p>
+					<div><p>{$this->data['message']}:<br><textarea name="message" rows="5" cols="60"></textarea></p>
 					</div>
 				</div>
 			</div>
