@@ -249,7 +249,7 @@ class ExtMobileFrontend {
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
 
-		self::$messages['mobile-frontend-copyright'] = $copyright;
+		self::$messages['mobile-frontend-footer-copyright'] = $copyright;
 
 		foreach ( self::$messageKeys as $messageKey ) {
 
