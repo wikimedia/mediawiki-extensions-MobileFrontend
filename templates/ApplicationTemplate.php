@@ -30,7 +30,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$cssFileName = ( isset( $this->data['device']['css_file_name'] ) ) ? $this->data['device']['css_file_name'] : 'default';
 
-		$startScriptTag = '<script type="text/javascript" language="javascript" src="';
+		$startScriptTag = '<script type="text/javascript" src="';
 		$endScriptTag = '"></script>';
 		$javaScriptPath =  $this->data['wgExtensionAssetsPath'] . '/MobileFrontend/javascripts/';
 
@@ -65,12 +65,11 @@ HTML;
 			$betajs = "";
 		}
 		$applicationHtml = <<<HTML
-		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<!DOCTYPE html>
 		<html lang='{$this->data['code']}' dir='{$this->data['dir']}' xml:lang='{$this->data['code']}' xmlns='http://www.w3.org/1999/xhtml'>
 		  <head>
 			<title>{$this->data['htmlTitle']}</title>
-			<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}
