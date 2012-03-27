@@ -9,7 +9,7 @@ class LeaveFeedbackTemplate extends MobileFrontendTemplate {
 	public function getHTML() {
 
 		$leaveFeedbackHtml = <<<HTML
-		<form action='{$this->data['feedbackPostURL']}' method='post'>
+		<form class="feedback" action='{$this->data['feedbackPostURL']}' method='post'>
 		<input type="hidden" name="edittoken" value="{$this->data['editToken']}"/>
 		<div tabindex="-1">
 			<div unselectable="on">
@@ -25,7 +25,6 @@ class LeaveFeedbackTemplate extends MobileFrontendTemplate {
 					</div>
 				</div>
 			</div>
-			<div><button onClick="javascript:history.back();" type="button"><span>{$this->data['cancel']}</span></button>
 			<input type="submit" value="{$this->data['submit']}"></input>
 			</div>
 		</div>
