@@ -43,11 +43,13 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$filePageStyle = ( $this->data['isFilePage'] ) ? $startLinkTag . 'filepage.css' . $endLinkTag : '';
 		$buttonHideText = Xml::escapeJsString( $this->data['hideText'] );
 		$buttonShowText = Xml::escapeJsString( $this->data['showText'] );
+		$configureHomepage = $this->data['configure-empty-homepage'];
 
 		$jsconfig = array(
 			'messages' => array(
 				'expand-section' => $buttonShowText,
-				'collapse-section' => $buttonHideText
+				'collapse-section' => $buttonHideText,
+				'empty-homepage' => $configureHomepage,
 				),
 			'settings' => array(
 				'scriptPath' => ( $this->data['wgScriptPath'] ),

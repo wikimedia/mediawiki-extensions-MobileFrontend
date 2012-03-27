@@ -3,9 +3,17 @@
 MobileFrontend = (function() {
 	var utilities;
 
+	function message( name ) {
+		return mwMobileFrontendConfig.messages[name] || '';
+	}
+
 	function init() {
-		var languageSelection;
+		var languageSelection, contentEl = document.getElementById( 'content' );
 		utilities( document.body ).addClass( 'jsEnabled' );
+
+		if( contentEl.childNodes.length === 0 ) {
+			contentEl.innerHTML = message( 'empty-homepage' );
+		}
 
 		languageSelection = document.getElementById( 'languageselection' );
 
@@ -110,9 +118,7 @@ MobileFrontend = (function() {
 	init();
 	return {
 		init: init,
-		message: function( name ) {
-			return mwMobileFrontendConfig.messages[name] || '';
-		},
+		message: message,
 		setting: function( name ) {
 			return mwMobileFrontendConfig.settings[name] || '';
 		},
