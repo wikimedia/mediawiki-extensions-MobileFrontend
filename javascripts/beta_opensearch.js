@@ -176,7 +176,11 @@ MobileFrontend.opensearch = (function() {
 			search = document.getElementById( 'search' );
 
 		function clearSearchBox( event ) {
-			search.value = '';
+			// clicking clear on some browsers triggers blur event on search
+			// when search value empty string hides results
+			window.setTimeout( function() {
+				search.value = '';
+			}, 100 );
 			results.innerHTML = '';
 			event.preventDefault();
 		}
