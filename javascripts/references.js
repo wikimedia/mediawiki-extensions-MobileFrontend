@@ -60,7 +60,15 @@ if( typeof jQuery !== 'undefined' ) {
 					$( '#mf-references' ).hide();
 				} else if( options.animation === 'slide' ){
 					top = window.innerHeight + window.pageYOffset;
-					$( '#mf-references' ).show().animate( { top: top }, options.animationSpeed );
+					if(! supportsPositionFixed() ) {
+						$( '#mf-references' ).show().animate( { top: top }, { duration: options.animationSpeed,
+								complete: function() {
+									$( '#mf-references' ).hide();
+								}
+							});
+					} else {
+						$( '#mf-references' ).slideUp();
+					}
 				} else {
 					$( '#mf-references' ).fadeOut( options.animationSpeed );
 				}
@@ -88,10 +96,14 @@ if( typeof jQuery !== 'undefined' ) {
 					if( options.animation === 'none' ) {
 						$( '#mf-references' ).show();
 					} else if( options.animation === 'slide' ){
-						top = window.innerHeight + window.pageYOffset;
-						oh = $( '#mf-references' ).outerHeight();
-						$( '#mf-references' ).show().css( { 'top': top } ).
-							animate( { top: top - oh }, options.animationSpeed );
+						if(! supportsPositionFixed() ) {
+							top = window.innerHeight + window.pageYOffset;
+							oh = $( '#mf-references' ).outerHeight();
+							$( '#mf-references' ).show().css( { 'top': top } ).
+								animate( { top: top - oh }, options.animationSpeed );
+						} else {
+							$( '#mf-references' ).slideDown();
+						}
 					} else {
 						$( '#mf-references' ).fadeIn( options.animationSpeed );
 					}
