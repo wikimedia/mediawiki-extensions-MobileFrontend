@@ -238,7 +238,7 @@ class ExtMobileFrontend {
 
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
-		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->getRequestUrl() ) );
+		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'useformat=desktop' ) ) );
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
@@ -1497,14 +1497,14 @@ class ExtMobileFrontend {
 	
 	public function checkUseFormatCookie() {
 		global $wgRequest, $wgScriptPath;
-		
+
 		if ( !isset( self::$useFormatCookieName )) {
 			self::$useFormatCookieName = 'mf_useformat';
 		}
 		
 		$useFormat = $this->getUseFormat();
 		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat', '' );
-		
+
 		// fetch format from cookie and set it if one is not otherwise specified
 		if( !strlen( $useFormat ) && !is_null( $useFormatFromCookie ) ) {
 			$this->setUseFormat( $useFormatFromCookie );
@@ -1534,7 +1534,7 @@ class ExtMobileFrontend {
 	protected function setUseFormatCookie( $useFormat ) {
 		global $wgCookiePath, $wgCookieSecure;
 		$expiry = $this->getUseFormatCookieExpiry();
-		
+
 		// use regular php setcookie() rather than WebResponse::setCookie
 		// so we can ignore $wgCookieHttpOnly since the protection it provides
 		// is irrelevant for this cookie.
