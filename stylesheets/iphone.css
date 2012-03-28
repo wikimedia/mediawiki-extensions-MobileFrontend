@@ -7,3 +7,7 @@
 #ogg_player_1 {
 	display: none;
 }
+
+#search {
+	line-height: normal; /* placeholder displays incorrectly on iphones */
+}
