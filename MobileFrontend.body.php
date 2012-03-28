@@ -1,5 +1,6 @@
 <?php
 
+
 class ExtMobileFrontend {
 	const VERSION = '0.6.1';
 
