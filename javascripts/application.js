@@ -61,9 +61,22 @@ MobileFrontend = (function() {
 			el = document.createElement( 'div' );
 		}
 
+		function inArray( array, str ) {
+			if( array.indexOf ) {
+				return array.indexOf( str ) > -1;
+			} else {
+				for( var i = 0; i < array.length; i++ ) {
+					if( str === array[i] ) {
+						return true;
+					}
+				}
+				return false;
+			}
+		}
+
 		function hasClass( name ) {
 			var classNames = el.className.split( ' ' );
-			return classNames.indexOf( name ) > -1;
+			return inArray( classNames, name );
 		}
 
 		function addClass( name ) {
