@@ -39,7 +39,11 @@ MobileFrontend = (function() {
 			var cookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
 			// convert from seconds to days
 			cookieDuration = cookieDuration / ( 24 * 60 * 60 );
-			MobileFrontend.banner.writeCookie( cookieName, 'desktop', cookieDuration );
+
+			// get the top part of the domain to make the cookie work across subdomains
+			var domainParts = window.location.host.split('.').reverse();
+			var domain = '.' + domainParts[1] + '.' + domainParts[0];
+			MobileFrontend.banner.writeCookie( cookieName, 'desktop', cookieDuration, domain );
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
