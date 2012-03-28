@@ -127,6 +127,17 @@ $wgMobileResourceVersion;
 
 $wgExtMobileFrontend = null;
 
+/**
+ * Set properties in ExtMobileFrontend to arbitrary values
+ * CAUTION: this should not be used in production environments
+ *
+ * This array can consist of key => value pairs, mapping to 
+ * '<property_name>' => <property_value>
+ * Any properties you try to set that do not exist in ExtMobileFrontend will
+ * be ignored.
+ */
+$wgMFConfigProperties = array();
+
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
 
 $wgAPIPropModules['extracts'] = 'ApiQueryExtracts';
