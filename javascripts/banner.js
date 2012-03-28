@@ -21,7 +21,7 @@ MobileFrontend.banner = (function() {
 		}
 	}
 
-	function writeCookie( name, value, days ) {
+	function writeCookie( name, value, days, domain ) {
 		var date, expires;
 		if ( days ) {
 			date = new Date();
@@ -31,6 +31,10 @@ MobileFrontend.banner = (function() {
 			expires = '';
 		}
 		document.cookie = name + '=' + value + expires + '; path=/';
+		
+		if ( typeof domain !== 'undefined' ) {
+			document.cookie = document.cookie + '; domain=' + domain;
+		}
 	}
 
 	function readCookie( name ) {

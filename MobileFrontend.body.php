@@ -238,7 +238,7 @@ class ExtMobileFrontend {
 
 		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
 		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
-		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'useformat=desktop' ) ) );
+		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->getRequestUrl() ) );
 		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
