@@ -34,12 +34,13 @@ MobileFrontend.banner = (function() {
 		if ( typeof path === 'undefined' ) {
 			path = "/";
 		}
-		
-		document.cookie = name + '=' + value + expires + '; path=' + path;
-		
+
+		var cookie = name + '=' + value + expires + '; path=' + path;
+
 		if ( typeof domain !== 'undefined' ) {
-			document.cookie = document.cookie + '; domain=' + domain;
+			cookie = cookie + '; domain=' + domain;
 		}
+		document.cookie = cookie;
 	}
 
 	function readCookie( name ) {

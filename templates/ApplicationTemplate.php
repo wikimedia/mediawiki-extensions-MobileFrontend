@@ -55,6 +55,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				'scriptPath' => ( $this->data['wgScriptPath'] ),
 				'useFormatCookieName' => ( $this->data['useFormatCookieName'] ),
 				'useFormatCookieDuration' => ( $this->data['useFormatCookieDuration'] ),
+				'useFormatCookieDomain' => ( $this->data['useFormatCookieDomain'] ),
+				'useFormatCookiePath' => ( $this->data['useFormatCookiePath'] ),
 			),
 		);
 		$configuration = FormatJSON::encode( $jsconfig );
