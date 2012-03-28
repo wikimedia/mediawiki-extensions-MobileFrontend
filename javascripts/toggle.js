@@ -4,12 +4,24 @@ MobileFrontend.toggle = (function() {
 	var u = MobileFrontend.utils;
 
 	function init() {
-		var i, a, heading, btns,
-			sectionHeadings = u( '.section_heading' );
+		var i, a, heading, h2, btns = [], buttons,
+			sectionHeadings = [];
+
+		h2 = document.getElementsByTagName( 'H2' );
+		for( i = 0; i < h2.length; i++) {
+			heading = h2[i];
+			if( u( heading ).hasClass( 'section_heading') ) {
+				sectionHeadings.push( heading );
+				// TODO: remove in future
+				buttons = heading.getElementsByTagName( 'button' );
+				for( a = 0; a < buttons.length; a++ ) {
+					btns.push( buttons[a] );
+				}
+			}
+		}
 
 		// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.1
 		window.wm_toggle_section = wm_toggle_section;
-		btns = u( '.section_heading button' );
 		for( i = 0; i < btns.length; i++ ) {
 			u( btns[i] ).remove();
 		}
@@ -28,11 +40,8 @@ MobileFrontend.toggle = (function() {
 			btn.appendChild( label );
 			return btn;
 		}
-		if(!sectionHeadings) {
-			sectionHeadings = [];
-		} else {
-			u( document.body ).addClass( 'togglingEnabled' );
-		}
+		u( document.body ).addClass( 'togglingEnabled' );
+
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
 			heading.removeAttribute( 'onclick' ); // TODO: remove any legacy onclick handlers
