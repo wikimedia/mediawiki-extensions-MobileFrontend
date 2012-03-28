@@ -67,7 +67,22 @@ MobileFrontend.opensearch = (function() {
 		}
 	}, typingDelay);
 
-	u( document.getElementById( 'searchForm' ) ).bind( 'submit', performSearch );
+	u( document.getElementById( 'searchForm' ) ).bind( 'submit', function( ev ) {
+		var el, newEv,
+			topResult = u( '.suggestions-result a' )[0];
+		if( topResult ) {
+			if ( 'fireEvent' in topResult ) {
+				topResult.fireEvent( 'click' );
+			} else {
+				newEv = document.createEvent( 'HTMLEvents' );
+				newEv.initEvent( 'click', true, true );
+				topResult.dispatchEvent( newEv );
+			}
+			ev.preventDefault();
+		} else {
+			performSearch( ev );
+		}
+	});
 	function blurSearch(ev) {
 		if( search.value.length === 0) {
 			removeResults();
