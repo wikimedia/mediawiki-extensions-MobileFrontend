@@ -1162,7 +1162,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getApplicationTemplate() {
-		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath;
+		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath, $wgCookiePath;
 		wfProfileIn( __METHOD__ );
 		$applicationTemplate = new ApplicationTemplate();
 		$options = array(
@@ -1183,6 +1183,8 @@ class ExtMobileFrontend {
 						'configure-empty-homepage'=> self::$messages[ 'mobile-frontend-empty-homepage' ],
 						'useFormatCookieName' => self::$useFormatCookieName,
 						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
+						'useFormatCookiePath' => $wgCookiePath,
+						'useFormatCookieDomain' => $this->getBaseDomain(),
 						);
 		$applicationTemplate->setByArray( $options );
 		wfProfileOut( __METHOD__ );
@@ -1493,14 +1495,14 @@ class ExtMobileFrontend {
 	}
 	
 	public function checkUseFormatCookie() {
-		global $wgRequest, $wgCookiePrefix, $wgScriptPath;
+		global $wgRequest, $wgScriptPath;
 		
 		if ( !isset( self::$useFormatCookieName )) {
-			self::$useFormatCookieName = $wgCookiePrefix . 'mf_useformat';
+			self::$useFormatCookieName = 'mf_useformat';
 		}
 		
 		$useFormat = $this->getUseFormat();
-		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat' );
+		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat', '' );
 		
 		// fetch format from cookie and set it if one is not otherwise specified
 		if( !strlen( $useFormat ) && !is_null( $useFormatFromCookie ) ) {
@@ -1529,13 +1531,13 @@ class ExtMobileFrontend {
 	 * @param string $useFormat The format to store in the cookie
 	 */
 	protected function setUseFormatCookie( $useFormat ) {
-		global $wgCookiePath, $wgCookieSecure, $wgCookieDomain;
+		global $wgCookiePath, $wgCookieSecure;
 		$expiry = $this->getUseFormatCookieExpiry();
 		
 		// use regular php setcookie() rather than WebResponse::setCookie
 		// so we can ignore $wgCookieHttpOnly since the protection it provides
 		// is irrelevant for this cookie.
-		setcookie( self::$useFormatCookieName, $useFormat, $expiry, $wgCookiePath, $wgCookieDomain, $wgCookieSecure );
+		setcookie( self::$useFormatCookieName, $useFormat, $expiry, $wgCookiePath, $this->getBaseDomain(), $wgCookieSecure );
 		wfIncrStats( 'mobile.useformat_' . $useFormat . '_cookie_set' );
 	}
 	
@@ -1554,8 +1556,7 @@ class ExtMobileFrontend {
 	}
 	
 	public function getCacheVaryCookies( $out, &$cookies ) {
-		global $wgCookiePrefix;
-		$cookies[] = $wgCookiePrefix . 'mf_useformat';
+		$cookies[] = 'mf_useformat';
 		return true;
 	}
 	

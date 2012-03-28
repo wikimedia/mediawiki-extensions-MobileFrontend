@@ -37,13 +37,14 @@ MobileFrontend = (function() {
 		function desktopViewClick() {
 			var cookieName = MobileFrontend.setting( 'useFormatCookieName' );
 			var cookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
+			var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' );
+			var cookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
+			
 			// convert from seconds to days
 			cookieDuration = cookieDuration / ( 24 * 60 * 60 );
 
 			// get the top part of the domain to make the cookie work across subdomains
-			var domainParts = window.location.host.split('.').reverse();
-			var domain = '.' + domainParts[1] + '.' + domainParts[0];
-			MobileFrontend.banner.writeCookie( cookieName, 'desktop', cookieDuration, domain );
+			MobileFrontend.banner.writeCookie( cookieName, 'desktop', cookieDuration, cookiePath, cookieDomain );
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
