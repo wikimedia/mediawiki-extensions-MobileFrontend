@@ -519,7 +519,7 @@ class ExtMobileFrontend {
 		$this->sendApplicationVersionVaryHeader();
 		$this->checkUserLoggedIn();
 
-		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
+		if ( self::$title->isSpecial( 'Userlogin' ) ) {
 			self::$wsLoginToken = $wgRequest->getSessionData( 'wsLoginToken' );
 			$q = array( 'action' => 'submitlogin', 'type' => 'login' );
 			$returnToVal = $wgRequest->getVal( 'returnto' );
@@ -1008,7 +1008,7 @@ class ExtMobileFrontend {
 			}
 		}
 
-		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
+		if ( self::$title->isSpecial( 'Userlogin' ) ) {
 			$userlogin = $doc->getElementById( 'userloginForm' );
 
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
@@ -1027,7 +1027,7 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ . '-filter' );
 
 		wfProfileIn( __METHOD__ . '-userlogin' );
-		if ( self::$title->isSpecial( 'Userlogin' ) && self::$isBetaGroupMember ) {
+		if ( self::$title->isSpecial( 'Userlogin' ) ) {
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
 				$login = $this->renderLogin();
 				$loginNode = $doc->importNode( $login, true );
