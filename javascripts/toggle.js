@@ -80,9 +80,10 @@ MobileFrontend.toggle = (function() {
 
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ),
-			bb = b.getElementsByTagName( 'button' ), i, s, e;
+			bb = b.getElementsByTagName( 'button' ), i, s, e, closed;
 		if( u(b).hasClass( 'openSection' ) ) {
 			u(b).removeClass( 'openSection' );
+			closed = true;
 		} else {
 			u(b).addClass( 'openSection' );
 		}
@@ -94,6 +95,8 @@ MobileFrontend.toggle = (function() {
 				u( e ).addClass( 'openSection' );
 			}
 		}
+		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
+		window.location.hash = closed ? '#_' : '#section_' + section_id;
 	}
 
 	init();
