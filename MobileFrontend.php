@@ -30,6 +30,7 @@ $wgExtensionCredits['other'][] = array(
 
 $cwd = dirname( __FILE__ );
 $wgExtensionMessagesFiles['MobileFrontend'] = "$cwd/MobileFrontend.i18n.php";
+$wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.php";
 
 // autoload extension classes
 
@@ -57,11 +58,16 @@ $autoloadClasses = array (
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
 	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
+	
+	// special pages
+	'SpecialMobileFrontend' => 'SpecialMobileFrontend',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
 	$wgAutoloadClasses[$className] = "$cwd/$classFilename.php";
 }
+
+$wgSpecialPages['MobileFrontend'] = 'SpecialMobileFrontend';
 
 /**
  * Path to the logo used in the mobile view

@@ -1022,7 +1022,7 @@ class ExtMobileFrontend {
 
 		wfProfileIn( __METHOD__ . '-filter' );
 		$formatter->removeImages( self::$disableImages == 1 );
-		$formatter->whitelistIds( 'zero-language-search' );
+		$formatter->whitelistIds( array( 'zero-language-search', 'mf-feedback-form' ) );
 		$formatter->filterContent();
 		wfProfileOut( __METHOD__ . '-filter' );
 
