@@ -14,7 +14,6 @@ class LeaveFeedbackTemplate extends MobileFrontendTemplate {
 		$feedbackArticleOther = $this->data['feedbackLinks']['articleOther'];
 		$leaveFeedbackHtml = <<<HTML
 		<div class='feedback'>
-		<h1>Contact Us</h1>
 		<h2 class="section_heading" id="section_1">Technical Problem</h2>
 		<div class="content_block" id="content_1">
 		<form id='mf-feedback-form' action='{$this->data['feedbackPostURL']}' method='post'>

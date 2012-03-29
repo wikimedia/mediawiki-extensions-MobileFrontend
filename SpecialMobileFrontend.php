@@ -14,9 +14,10 @@ class SpecialMobileFrontend extends SpecialPage {
 			}
 		}
 	}
-	
+
 	protected function feedback() {
 		$out = $this->getOutput();
+		$out->setPageTitle( wfMsg( 'mobile-frontend-leave-feedback-special-title' ) );
 		$request = $this->getRequest();
 		$user = $this->getUser();
 		$form = new MobileFeedbackForm( $request, $user );

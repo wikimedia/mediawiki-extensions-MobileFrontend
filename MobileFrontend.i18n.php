@@ -68,6 +68,7 @@ $messages['en'] = array (
 	'mobile-frontend-leave-feedback' => 'Mobile site feedback',
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-leave-feedback-thanks' => 'Thanks, for your feedback!',
+	'mobile-frontend-leave-feedback-special-title' => 'Contact us',
 	'mobile-frontend-language' => 'Language',
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
@@ -111,6 +112,7 @@ $messages['qqq'] = array(
 	'mobile-frontend-leave-feedback-message' => '{{Identical|Message}}',
 	'mobile-frontend-leave-feedback-cancel' => '{{Identical|Cancel}}',
 	'mobile-frontend-feedback-page' => '{{optional}}',
+	'mobile-frontend-leave-feedback-special-title' => 'Title of special page containing the feedback form',
 	'mobile-frontend-language' => '{{Identical|Language}}',
 	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.
 
