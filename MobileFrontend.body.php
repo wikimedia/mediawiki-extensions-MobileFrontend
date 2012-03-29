@@ -1192,7 +1192,7 @@ class ExtMobileFrontend {
 						'dismissNotification' => self::$messages['mobile-frontend-dismiss-notification'],
 						'wgAppleTouchIcon' => $wgAppleTouchIcon,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
-						'mobileaction' => self::getMobileAction(),
+						'mobileaction' => $this->getMobileAction(),
 						'minifyJS' => self::$minifyJS,
 						'device' => self::$device,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
