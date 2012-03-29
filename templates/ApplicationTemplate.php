@@ -68,6 +68,12 @@ HTML;
 		} else {
 			$betajs = "";
 		}
+		if( $this->data['mobileaction'] == 'leave_feedback' ) {
+			$betajs .= <<<HTML
+			{$startScriptTag}{$javaScriptPath}mf-feedback.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+HTML;
+		}
+		
 		$applicationHtml = <<<HTML
 		<!DOCTYPE html>
 		<html lang='{$this->data['code']}' dir='{$this->data['dir']}' xml:lang='{$this->data['code']}' xmlns='http://www.w3.org/1999/xhtml'>

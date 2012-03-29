@@ -9,27 +9,21 @@ class LeaveFeedbackTemplate extends MobileFrontendTemplate {
 	public function getHTML() {
 
 		$leaveFeedbackHtml = <<<HTML
-		<form class="feedback" action='{$this->data['feedbackPostURL']}' method='post'>
-		<input type="hidden" name="edittoken" value="{$this->data['editToken']}"/>
-		<div tabindex="-1">
-			<div unselectable="on">
-				<span unselectable="on"><p>{$this->data['title']}</p></span>
-			</div>
-			<div>
-				<div>
-					<div><p><small>{$this->data['notice']}</small>
-					</p></div>
-					<div><p>{$this->data['subject']}:<br><input type="text" name="subject" maxlength="60"></p>
-					</div>
-					<div><p>{$this->data['message']}:<br><textarea name="message" rows="5" cols="60"></textarea></p>
-					</div>
-				</div>
-			</div>
-			<input type="submit" value="{$this->data['submit']}"></input>
-			</div>
-		</div>
+		<div class='feedback'>
+		<h1>Contact Us</h1>
+		<form id='mf-feedback' action='{$this->data['feedbackPostURL']}' method='post'>
+			<input type='hidden' name='edittoken' value='{$this->data['editToken']}' />
+			<input type='email' class='email' name='email' maxlength='60' placeholder='Your email address'>
+			<select>
+				<option>Please select a category</option>
+				<option>Technical Problem</option>
+				<option>General</option>
+				<option>Article Feedback</option>
+			</select>
+			<textarea name='message' rows='5' placeholder='Type your comment here'></textarea>
+			<input type='submit' value='Send'></input>
 		</form>
-
+		</div>
 HTML;
 		return $leaveFeedbackHtml;
 	}
