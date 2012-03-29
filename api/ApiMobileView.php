@@ -6,6 +6,8 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 2;
 
+	var $followRedirects;
+
 	public function __construct( $main, $action ) {
 		parent::__construct( $main, $action );
 	}
@@ -20,6 +22,7 @@ class ApiMobileView extends ApiBase {
 			: array();
 		$prop = array_flip( $params['prop'] );
 		$sectionProp = array_flip( $params['sectionprop'] );
+		$this->followRedirects = $params['redirect'] == 'yes';
 
 		$title = Title::newFromText( $params['page'] );
 		if ( !$title ) {
@@ -27,6 +30,11 @@ class ApiMobileView extends ApiBase {
 		}
 		if ( !$title->exists() ) {
 			$this->dieUsageMsg( array( 'invalidtitle', $params['page'] ) );
+		}
+		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'normalizedtitle' => $title->getPrefixedText() )
+			);
 		}
 		$data = $this->getData( $title, $params['noimages'] );
 		$result = array();
@@ -78,6 +86,15 @@ class ApiMobileView extends ApiBase {
 
 		wfProfileIn( __METHOD__ );
 		$wp = WikiPage::factory( $title );
+		if ( $this->followRedirects && $wp->isRedirect() ) {
+			$newTitle = $wp->getRedirectTarget();
+			if ( $newTitle ) {
+				$wp = WikiPage::factory( $newTitle );
+				$this->getResult()->addValue( null, $this->getModuleName(),
+					array( 'redirected' => $newTitle->getPrefixedText() )
+				);
+			}
+		}
 		$parserOptions = ParserOptions::newFromContext( $this );
 		$latest = $wp->getLatest();
 		$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
@@ -126,13 +143,18 @@ class ApiMobileView extends ApiBase {
 			'page' => array(
 				ApiBase::PARAM_REQUIRED => true,
 			),
+			'redirect' => array(
+				ApiBase::PARAM_TYPE => array( 'yes', 'no' ),
+				ApiBase::PARAM_DFLT => 'yes',
+			),
 			'sections' => null,
 			'prop' => array(
-				ApiBase::PARAM_DFLT => 'text|sections',
+				ApiBase::PARAM_DFLT => 'text|sections|normalizedtitle',
 				ApiBase::PARAM_ISMULTI => true,
 				ApiBase::PARAM_TYPE => array(
 					'text',
 					'sections',
+					'normalizedtitle',
 				)
 			),
 			'sectionprop' => array(
@@ -155,11 +177,13 @@ class ApiMobileView extends ApiBase {
 	public function getParamDescription() {
 		return array(
 			'page' => 'Title of page to process',
+			'redirect' => 'Whether redirects should be followed',
 			'sections' => 'Pipe-separated list of section numbers for which to return text',
 			'prop' => array(
 				'Which information to get',
-				' text       - HTML of selected section(s)',
-				' sections   - information about all sections on page',
+				' text            - HTML of selected section(s)',
+				' sections        - information about all sections on page',
+				' normalizedtitle - normalized page title',
 			),
 			'sectionprop' => 'What information about sections to get',
 			'noimages' => 'Return HTML without images',
