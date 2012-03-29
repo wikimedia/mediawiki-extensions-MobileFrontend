@@ -60,13 +60,13 @@ HTML;
 		
 		
 		$betaFooter = <<<HTML
-		<a href="#content_footer" class="section_heading" id="section_footer">
+		<h2 class="section_heading" id="section_footer">
 		<!-- TODO: make license icon and text dynamic -->
 		{$licenseHTML}
 		<span class="toggleCopyright">
 			<span class="more">{$this->data['messages']['mobile-frontend-footer-more']}</span><span class="less">{$this->data['messages']['mobile-frontend-footer-less']}</span>
 		</span>
-		</a>
+		</h2>
 		<div class="content_block" id="content_footer">
 			<div class="notice">
 				{$license}

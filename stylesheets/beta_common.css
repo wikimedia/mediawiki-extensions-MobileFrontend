@@ -886,6 +886,8 @@ full screen search css
 #footer .section_heading {
 	height: 24px;
 	display: block;
+	margin: 0;
+	font-size: 1em;
 }
 
 #footer ul {
