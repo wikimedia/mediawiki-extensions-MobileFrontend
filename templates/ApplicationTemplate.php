@@ -44,6 +44,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$buttonHideText = Xml::escapeJsString( $this->data['hideText'] );
 		$buttonShowText = Xml::escapeJsString( $this->data['showText'] );
 		$configureHomepage = $this->data['configure-empty-homepage'];
+		$robots = isset( $this->data['robots'] ) ? "\n			{$this->data['robots']}" : '';
 
 		$jsconfig = array(
 			'messages' => array(
@@ -73,7 +74,7 @@ HTML;
 		<html lang='{$this->data['code']}' dir='{$this->data['dir']}' xml:lang='{$this->data['code']}' xmlns='http://www.w3.org/1999/xhtml'>
 		  <head>
 			<title>{$this->data['htmlTitle']}</title>
-			<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+			<meta http-equiv="content-type" content="text/html; charset=utf-8" />{$robots}
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
 			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
 			{$filePageStyle}

@@ -1006,6 +1006,11 @@ class ExtMobileFrontend {
 				self::$loginHtml = $doc->saveXML( $ptAnonLoginLink, LIBXML_NOEMPTYTAG );
 			}
 		}
+		$robotsText = '';
+		$xpath = new DOMXpath( $doc );
+		foreach ( $xpath->query( '//meta[@name="robots"]' ) as $tag ) {
+			$robotsText .= $doc->saveXML( $tag );
+		}
 
 		if ( self::$title->isSpecial( 'Userlogin' ) ) {
 			$userlogin = $doc->getElementById( 'userloginForm' );
@@ -1101,6 +1106,7 @@ class ExtMobileFrontend {
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
 							'footerHtml' => $footerHtml,
+							'robots' => $robotsText,
 							);
 			$applicationTemplate->setByArray( $options );
 			$applicationHtml = $applicationTemplate->getHTML();
