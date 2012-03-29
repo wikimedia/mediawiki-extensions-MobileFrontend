@@ -17,7 +17,7 @@ class LeaveFeedbackTemplate extends MobileFrontendTemplate {
 		<h1>Contact Us</h1>
 		<h2 class="section_heading" id="section_1">Technical Problem</h2>
 		<div class="content_block" id="content_1">
-		<form id='mf-feedback' action='{$this->data['feedbackPostURL']}' method='post'>
+		<form id='mf-feedback-form' action='{$this->data['feedbackPostURL']}' method='post'>
 			<input type='hidden' name='edittoken' value='{$this->data['editToken']}' />
 			<input type='email' class='email' name='email' maxlength='60' placeholder='Your email address'>
 			<textarea name='message' rows='5' placeholder='Type your comment here'></textarea>
