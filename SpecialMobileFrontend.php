@@ -83,6 +83,6 @@ class MobileFeedbackForm {
 	}
 
 	public function validate() {
-		
+		return true;
 	}
 }
