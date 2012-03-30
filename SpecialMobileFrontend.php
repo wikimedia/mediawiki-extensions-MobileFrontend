@@ -41,7 +41,12 @@ class SpecialMobileFrontend extends SpecialPage {
 }
 
 class MobileFeedbackForm {
-	protected $formFieldEmail;
+	protected $formFieldEmail = array(
+		'required' => true,
+		'validate' => '', // will be a callback?
+		'error' => '', // wfMsg( specific error message )
+		'value' => null,
+	);
 	protected $formFieldCategory;
 	protected $formFieldMessage;
 	protected $request;
@@ -56,7 +61,7 @@ class MobileFeedbackForm {
 		foreach( $formFieldValues as $formField => $value ) {
 			$propertyName = "formField" . ucfirst( $formField );
 			if ( property_exists( $this, $propertyName ) ) {
-				$this->${$propertyName} = $value;
+				$this->${$propertyName}['value'] = $value;
 			}
 		}
 	}
