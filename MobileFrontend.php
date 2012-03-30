@@ -58,7 +58,8 @@ $autoloadClasses = array (
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
 	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
-	
+	'LeaveFeedbackSuccessTemplate' => 'templates/LeaveFeedbackSuccessTemplate',
+
 	'SkinMobile' => 'skins/Mobile',
 
 	// special pages

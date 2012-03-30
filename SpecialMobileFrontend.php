@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( -1 );
+}
+
 class SpecialMobileFrontend extends SpecialPage {
 
 	public function __construct() {
@@ -24,9 +28,14 @@ class SpecialMobileFrontend extends SpecialPage {
 
 		// if the form was posted, validate and handle success/failure
 		if ( $request->wasPosted() ) {
-		} else { // else show form
-			$out->addHtml( $form->getForm() );
+			if ( $form->isValid() === true ) {
+				$out->addHtml( $form->onSuccess() );
+				return;
+			}
 		}
+		
+		$out->addHtml( $form->getForm() );
+		return;
 	}
 }
 
@@ -52,14 +61,13 @@ class MobileFeedbackForm {
 	
 	public function getForm() {
 		global $wgLanguageCode;
-		$extMobileFrontend = new ExtMobileFrontend();
-
+		$extMobileFrontend = $this->getExtMobileFrontend();
 		$extMobileFrontend->getMsg();
 		$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
 		$options = array(
 						'languageCode' => $wgLanguageCode ? $wgLanguageCode : 'en',
 						'feedbackLinks' => $this->getFeedbackLinks(),
-						'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $this->request->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
+						'feedbackPostURL' => $this->request->getFullRequestURL(),
 						'editToken' => $this->user->getEditToken(),
 						'title' => $extMobileFrontend::$messages['mobile-frontend-leave-feedback-title'],
 						'notice' => $extMobileFrontend::$messages['mobile-frontend-leave-feedback-notice'],
@@ -80,9 +88,29 @@ class MobileFeedbackForm {
 			'articleFactual' => '#',
 			'articleOther' => '#',
 		);
+	public function isValid() {
+		return true;
 	}
 
 	public function validate() {
 		return true;
+	}
+	
+	public function onSuccess() {
+		$extMobileFrontend = $this->getExtMobileFrontend();
+		$extMobileFrontend->getMsg();
+		$leaveFeedbackSuccessTemplate = new LeaveFeedbackSuccessTemplate();
+		$successOut = $leaveFeedbackSuccessTemplate->getHTML();
+		return $successOut;
+	}
+
+	protected function getExtMobileFrontend() {
+		static $extMobileFrontend;
+		
+		if ( !isset( $extMobileFrontend )) {
+			$extMobileFrontend = new ExtMobileFrontend();
+		}
+		
+		return $extMobileFrontend;
 	}
 }
