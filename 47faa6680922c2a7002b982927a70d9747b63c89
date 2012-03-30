@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAI3///wU\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2012-03-30T17:48:55Z",
+      "side": 1,
+      "message": "Whitespace.",
+      "revId": "47faa6680922c2a7002b982927a70d9747b63c89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
