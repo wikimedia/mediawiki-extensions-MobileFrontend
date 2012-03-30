@@ -11,7 +11,7 @@ MobileFrontend = (function() {
 		var languageSelection, contentEl = document.getElementById( 'content' );
 		utilities( document.body ).addClass( 'jsEnabled' );
 
-		if( contentEl.childNodes.length === 0 ) {
+		if( contentEl && contentEl.childNodes.length === 0 ) {
 			contentEl.innerHTML = message( 'empty-homepage' );
 		}
 
