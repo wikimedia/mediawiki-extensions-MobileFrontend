@@ -28,6 +28,7 @@ class SpecialMobileFrontend extends SpecialPage {
 
 		// if the form was posted, validate and handle success/failure
 		if ( $request->wasPosted() ) {
+			$form->setFormFieldValuesByArray( $request->getValues() );
 			if ( $form->isValid() === true ) {
 				$out->addHtml( $form->onSuccess() );
 				return;
@@ -44,6 +45,7 @@ class MobileFeedbackForm {
 	protected $formFieldCategory;
 	protected $formFieldMessage;
 	protected $request;
+	protected $isValid;
 	
 	public function __construct( WebRequest $request, User $user ) {
 		$this->request = $request;
@@ -89,11 +91,14 @@ class MobileFeedbackForm {
 			'articleOther' => '#',
 		);
 	public function isValid() {
-		return true;
+		if ( !isset( $this->isValid ) ) {
+			$this->validate();
+		}
+		return $this->isValid;
 	}
 
 	public function validate() {
-		return true;
+		$this->isValid = true;
 	}
 	
 	public function onSuccess() {
