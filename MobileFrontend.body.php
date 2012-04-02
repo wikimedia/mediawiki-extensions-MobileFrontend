@@ -1181,8 +1181,14 @@ class ExtMobileFrontend {
 	}
 
 	public function getApplicationTemplate() {
-		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath, $wgCookiePath;
+		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath, $wgCookiePath, $wgOut;
 		wfProfileIn( __METHOD__ );
+		if( self::$isBetaGroupMember ) {
+			$wgOut->addModuleStyles( 'ext.mobileFrontendBeta' );
+		} else {
+			$wgOut->addModuleStyles( 'ext.mobileFrontend' );
+		}
+		$cssLinks = $wgOut->buildCssLinks();
 		$applicationTemplate = new ApplicationTemplate();
 		$options = array(
 						'dir' => self::$dir,
@@ -1193,6 +1199,7 @@ class ExtMobileFrontend {
 						'isBetaGroupMember' => self::$isBetaGroupMember,
 						'minifyJS' => self::$minifyJS,
 						'device' => self::$device,
+						'cssLinks' => $cssLinks,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'wgScriptPath' => $wgScriptPath,
 						'isFilePage' => self::$isFilePage,
