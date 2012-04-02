@@ -44,8 +44,9 @@ class FooterTemplate extends MobileFrontendTemplate {
 				<div class='mwm-notice'>
 				  <a href="{$viewNormalSiteURL}" id="mf-display-toggle">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
 				</div>
-			  </div>
-			  <div id='copyright'>{$copyright}</div>
+				<!-- List item to mimic desktop site environment where copyright appears in list (see bug 30406) -->
+				<ul id='copyright'><li>{$copyright}</li></ul>
+			</div>
 HTML;
 		if( $this->data['copyright-has-logo'] ) {
 			$licenseHTML = <<<HTML
