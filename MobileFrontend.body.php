@@ -286,19 +286,10 @@ class ExtMobileFrontend {
 
 		$languageUrls = array();
 
-		/**
-		 * Provide correct method name depending on MW 1.19 or MW 1.20
-		 */
-		if ( method_exists( 'Language', 'fetchLanguageName' )) {
-			$langFetchMethodName = 'fetchLanguageName';
-		} else {
-			$langFetchMethodName = 'getLanguageName';
-		}
-
 		$languageUrls[] = array(
 			'href' => self::$currentURL,
 			'text' => self::$htmlTitle,
-			'language' => Language::$langFetchMethodName( $wgLanguageCode ),
+			'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
 			'class' => 'interwiki-' . $wgLanguageCode,
 			'lang' => $wgLanguageCode,
 		);
