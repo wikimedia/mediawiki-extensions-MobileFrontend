@@ -19,7 +19,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		if ( $zeroRatedBanner ) {
 			if ( strstr( $zeroRatedBanner, 'id="zero-rated-banner"><span' ) ) {
 				$dismissNotification = ( isset( $this->data['dismissNotification'] )) ? $this->data['dismissNotification'] : ''; 
-				$zeroRatedBanner = str_replace( 'id="zero-rated-banner"><span', 'id="zero-rated-banner"><span class="notify-close"><a id="dismiss-notification" title="' . $dismissNotification . '">×</a></span><span', $zeroRatedBanner );
+				$zeroRatedBanner = str_replace( 'id="zero-rated-banner"><span', 'id="zero-rated-banner"><span', $zeroRatedBanner );
 			}
 		}
 
