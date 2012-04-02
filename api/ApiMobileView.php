@@ -39,8 +39,10 @@ class ApiMobileView extends ApiBase {
 		$data = $this->getData( $title, $params['noimages'] );
 		$result = array();
 		$missingSections = array();
+		if ( $requestedSections == 'all' ) {
+			$requestedSections = range( 0, count( $data['sections'] ) );
+		}
 		if ( isset( $prop['sections'] ) ) {
-			$requestedSections = array_flip( $requestedSections );
 			for ( $i = 0; $i <= count( $data['sections'] ); $i++ ) {
 				$section = array();
 				if ( $i > 0 ) {
@@ -77,7 +79,10 @@ class ApiMobileView extends ApiBase {
 	}
 
 	private function parseSections( $str ) {
-		$sections = array_map( 'intval', explode( '|', $str ) );
+		if ( $str == 'all' ) {
+			return 'all';
+		}
+		$sections = array_flip( array_map( 'intval', explode( '|', $str ) ) );
 		return $sections;
 	}
 
@@ -178,7 +183,7 @@ class ApiMobileView extends ApiBase {
 		return array(
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
-			'sections' => 'Pipe-separated list of section numbers for which to return text',
+			'sections' => 'Pipe-separated list of section numbers for which to return text or `all\' to return for all',
 			'prop' => array(
 				'Which information to get',
 				' text            - HTML of selected section(s)',
