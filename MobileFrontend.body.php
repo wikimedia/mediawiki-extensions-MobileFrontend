@@ -304,10 +304,10 @@ class ExtMobileFrontend {
 				$languageUrl = $this->getMobileUrl( $nt->getFullURL() );
 				$languageUrls[] = array(
 					'href' => $languageUrl,
-					'text' => ( Language::$langFetchMethodName( $nt->getInterwiki() ) != ''
-							? Language::$langFetchMethodName( $nt->getInterwiki() )
+					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
+							? $wgContLang->getLanguageName( $nt->getInterwiki() )
 							: $l ),
-					'language' => Language::$langFetchMethodName( $lang ),
+					'language' => $wgContLang->getLanguageName( $lang ),
 					'class' => $class,
 					'lang' => $lang,
 				);
