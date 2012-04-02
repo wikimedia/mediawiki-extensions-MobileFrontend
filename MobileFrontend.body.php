@@ -262,9 +262,6 @@ class ExtMobileFrontend {
 
 		$skin = RequestContext::getMain()->getSkin();
 		$copyright = $skin->getCopyright();
-		if ( stristr( $copyright, '<li class="noprint">' ) !== false ) {
-			$copyright = '<ul id="footer-info"><li>' . $copyright . '</li></ul>';
-		}
 
 		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
 		// because at this point the database connection is shut down, etc.
