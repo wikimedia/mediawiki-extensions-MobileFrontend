@@ -1071,6 +1071,20 @@ this is so that toggling can scroll it into view
 }
 
 /* CONTACT FORM */
+.feedback h1 {
+	margin: 0;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #CCC;
+	padding-bottom: 10px;
+}
+
+.feedback select {
+	height: 35px;
+	width: 75%;
+	text-indent: 12px;
+}
+
+.feedback select,
 .feedback input[type=submit] {
 	background-color: #5E5E5E;
 	color: white;
@@ -1092,12 +1106,12 @@ this is so that toggling can scroll it into view
 	cursor: pointer;
 }
 
-.feedback input[type=text] {
+.feedback input[type=email] {
 	height: 38px;
 }
 
 .feedback textarea,
-.feedback input[type=text] {
+.feedback input[type=email] {
 	padding: 12px 16px;
 	width: 100%;
 	border: solid 1px #888888;
@@ -1107,8 +1121,13 @@ this is so that toggling can scroll it into view
 	-ms-box-sizing: border-box;
 }
 
+.feedback input::-webkit-input-placeholder,
+.feedback textarea::-webkit-input-placeholder {
+	color: #747474;
+}
+
 .feedback textarea,
-.feedback input[type=text] {
+.feedback input[type=email] {
 	font-size: 1.5em;
 }
 
