@@ -13,7 +13,7 @@ class SpecialMobileFrontend extends SpecialPage {
 	public function execute( $par ) {
 		if ( $par != '' ) {
 			$par = strtolower( $par );
-			if ( method_exists( $this, $par ) ) {
+			if ( method_exists( $this, $par ) ) { // @TODO make this safer
 				$this->{$par}();
 			}
 		}
