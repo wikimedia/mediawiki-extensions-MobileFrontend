@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAI3//+00\u003d",
+        "filename": "stylesheets/beta_common.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 1146,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-04-03T21:10:22Z",
+      "side": 1,
+      "message": "This should probably be #mf-feedback-form. I\u0027ve made the change in mf-feedback.js in I65015e35 (https://gerrit.wikimedia.org/r/#change,3963)",
+      "revId": "c338af5ced35a95e601c7aaaaf11f3f77494f968",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
