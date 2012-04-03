@@ -1,7 +1,6 @@
 <?php
 
 class ExtMobileFrontend {
-	const VERSION = '0.6.1';
 
 	public $contentFormat = '';
 
@@ -44,19 +43,19 @@ class ExtMobileFrontend {
 	public static $loginHtml;
 	public static $zeroRatedBanner;
 	public static $useFormatCookieName;
-	
+
 	protected $useFormat;
-	
+
 	/**
 	 * @var string xDevice header information
 	 */
 	protected $xDevice;
-	
+
 	/**
 	 * @var string MediaWiki 'action'
 	 */
 	protected $action;
-	
+
 	/**
 	 * @var string
 	 */
@@ -127,16 +126,25 @@ class ExtMobileFrontend {
 		$this->setPropertiesFromArray( $wgMFConfigProperties );
 	}
 
+	public function requestContextCreateSkin( $context, &$skin ) {
+		if ( !$this->shouldDisplayMobileView() ) {
+			return true;
+		}
+
+		$skin = new SkinMobile( $this );
+		return false;
+	}
+
 	/**
 	 * Set object properties based on an associative array
 	 * @param $properties array
 	 */
 	public function setPropertiesFromArray( array $properties ) {
-		foreach( $properties as $prop => $val ) {
+		foreach ( $properties as $prop => $val ) {
 			if ( property_exists( $this, $prop ) ) {
 				$reflectionProperty = new ReflectionProperty( 'ExtMobileFrontend', $prop );
 				if ( $reflectionProperty->isStatic() ) {
-					self::${$prop} = $val;
+					self::$ { $prop } = $val;
 				} else {
 					$this->$prop = $val;
 				}
@@ -328,7 +336,7 @@ class ExtMobileFrontend {
 
 	/**
 	 * Invocation of BeforePageRedirect hook.
-	 * 
+	 *
 	 * Ensures URLs are handled properly for select special pages.
 	 * @param $out OutputPage
 	 * @param $redirect
@@ -347,11 +355,11 @@ class ExtMobileFrontend {
 		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
 			$forceHttps = true;
 			$redirect = $this->getMobileUrl( $redirect, $forceHttps );
-		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) || 
+		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) ||
 				$out->getTitle()->isSpecial( 'Search' ) ) {
 			$redirect = $this->getMobileUrl( $redirect );
 		}
-		
+
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
@@ -361,7 +369,7 @@ class ExtMobileFrontend {
 	 * @param $text String
 	 * @return bool
 	 */
-	public function beforePageDisplayHTML( &$out, &$text ) {
+	public function beforePageDisplayHTML( &$out ) {
 		global $wgRequest, $wgUser;
 		wfProfileIn( __METHOD__ );
 
@@ -375,7 +383,7 @@ class ExtMobileFrontend {
 		$this->checkUseFormatCookie();
 		$useFormat = $this->getUseFormat();
 		$this->wmlContext->setUseFormat( $useFormat );
-		$mobileAction = $this->getMobileAction();		
+		$mobileAction = $this->getMobileAction();
 
 		if ( !$this->shouldDisplayMobileView() ) {
 			wfProfileOut( __METHOD__ );
@@ -517,8 +525,6 @@ class ExtMobileFrontend {
 
 			self::$wsLoginFormAction = self::$title->getLocalURL( $q );
 		}
-
-		ob_start( array( $this, 'DOMParse' ) );
 
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -678,15 +684,15 @@ class ExtMobileFrontend {
 			$ip = IP::canonicalize( $_SERVER['REMOTE_ADDR'] );
 		} else {
 			$ip = null;
-		}	
+		}
 
 		/**
 		 * Compatibility with potentially new function wfIsConfiguredProxy()
 		 * wfIsConfiguredProxy() checks an IP against the list of configured
-		 * Squid servers and currently only exists in trunk. 
+		 * Squid servers and currently only exists in trunk.
 		 * wfIsTrustedProxy() does the same, but also exposes a hook that is
-		 * used on the WMF cluster to check and see if an IP address matches 
-		 * against a list of approved open proxies, which we don't actually 
+		 * used on the WMF cluster to check and see if an IP address matches
+		 * against a list of approved open proxies, which we don't actually
 		 * care about.
 		 */
 		$trustedProxyCheckFunction = ( function_exists( 'wfIsConfiguredProxy' ) ) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
@@ -695,7 +701,7 @@ class ExtMobileFrontend {
 			$wgRequest->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 			$wgRequest->response()->header( 'Pragma: no-cache' );
 		}
-		
+
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
@@ -1193,7 +1199,7 @@ class ExtMobileFrontend {
 						'zeroRatedBanner' => self::$zeroRatedBanner,
 						'showText' => self::$messages[ 'mobile-frontend-show-button' ],
 						'hideText' => self::$messages[ 'mobile-frontend-hide-button' ],
-						'configure-empty-homepage'=> self::$messages[ 'mobile-frontend-empty-homepage' ],
+						'configure-empty-homepage' => self::$messages[ 'mobile-frontend-empty-homepage' ],
 						'useFormatCookieName' => self::$useFormatCookieName,
 						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
 						'useFormatCookiePath' => $wgCookiePath,
@@ -1283,7 +1289,7 @@ class ExtMobileFrontend {
 		}
 		return wfAssembleUrl( $parsedUrl );
 	}
-	
+
 	/**
 	 * Take a URL and return a copy that removes any mobile tokens
 	 * @param string
@@ -1336,10 +1342,10 @@ class ExtMobileFrontend {
 		if ( !strlen( $mobileUrlHostTemplate ) ) {
 			return;
 		}
-	
+
 		// identify the mobile token by stripping out normal host parts
 		$mobileToken = preg_replace( "/%h[0-9]\.{0,1}/", "", $mobileUrlHostTemplate );
-		
+
 		// replace the mobile token with nothing, resulting in the normal hostname
 		$parsedUrl['host'] = str_replace( $mobileToken, '', $parsedUrl['host'] );
 	}
@@ -1347,7 +1353,7 @@ class ExtMobileFrontend {
 	/**
 	 * Update path of given URL to conform to mobile URL template.
 	 *
-	 * NB: this is not actually being used anywhere at the moment. It will 
+	 * NB: this is not actually being used anywhere at the moment. It will
 	 * take some magic to get MW to properly handle path modifications like
 	 * this is intended to provide. This will hopefully be implemented someday
 	 * in the not to distant future.
@@ -1359,12 +1365,12 @@ class ExtMobileFrontend {
 		global $wgScriptPath;
 
 		$mobileUrlPathTemplate = $this->parseMobileUrlTemplate( 'path' );
-		
+
 		// if there's no path template, no reason to continue.
 		if ( !strlen( $mobileUrlPathTemplate ) ) {
 			return;
 		}
-		
+
 		// find out if we already have a templated path
 		$templatePathOffset = strpos( $mobileUrlPathTemplate, '%p' );
 		$templatePathSansToken = substr( $mobileUrlPathTemplate, 0, $templatePathOffset );
@@ -1375,7 +1381,7 @@ class ExtMobileFrontend {
 		$scriptPathLength = strlen( $wgScriptPath );
 		// the "+ 1" removes the preceding "/" from the path sans $wgScriptPath
 		$pathSansScriptPath = substr( $parsedUrl[ 'path' ], $scriptPathLength + 1 );
-		$parsedUrl[ 'path' ] = $wgScriptPath . $templatePathSansToken . $pathSansScriptPath;	
+		$parsedUrl[ 'path' ] = $wgScriptPath . $templatePathSansToken . $pathSansScriptPath;
 	}
 
 	protected function updateMobileUrlQueryString( &$parsedUrl ) {
@@ -1383,7 +1389,7 @@ class ExtMobileFrontend {
 			return;
 		}
 		$useFormat = $this->getUseFormat();
-		if ( !isset( $parsedUrl[ 'query' ] )) {
+		if ( !isset( $parsedUrl[ 'query' ] ) ) {
 			$parsedUrl[ 'query' ] = 'useformat=' . urlencode( $useFormat );
 		} else {
 			$query = wfCgiToArray( $parsedUrl[ 'query' ] );
@@ -1401,13 +1407,13 @@ class ExtMobileFrontend {
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {
 		global $wgMobileUrlTemplate;
-		
+
 		$pathStartPos = strpos( $wgMobileUrlTemplate, '/' );
-		
+
 		/**
 		 * This if/else block exists because of an annoying aspect of substr()
-		 * Even if you pass 'null' or 'false' into the 'length' param, it 
-		 * will return an empty string. 
+		 * Even if you pass 'null' or 'false' into the 'length' param, it
+		 * will return an empty string.
 		 * http://www.stopgeek.com/wp-content/uploads/2007/07/sense.jpg
 		 */
 		if ( $pathStartPos === false ) {
@@ -1420,7 +1426,7 @@ class ExtMobileFrontend {
 
 		if ( $part == 'host' ) {
 			return $host;
-		} elseif( $part == 'path' ) {
+		} elseif ( $part == 'path' ) {
 			return $path;
 		} else {
 			return array( 'host' => $host, 'path' => $path );
@@ -1430,23 +1436,23 @@ class ExtMobileFrontend {
 	protected function isMobileDevice() {
 		$xDevice = $this->getXDevice();
 
-		if ( empty( $xDevice )) {
+		if ( empty( $xDevice ) ) {
 			return false;
 		}
-		
-		return true;
-	}
-	
-	protected function isFauxMobileDevice() {
-		$useFormat = $this->getUseFormat();
-		if ( $useFormat !== 'mobile' && $useFormat !== 'mobile-wap') {
-			return false;
-		} 
 
 		return true;
 	}
-	
-	protected function shouldDisplayMobileView() {
+
+	protected function isFauxMobileDevice() {
+		$useFormat = $this->getUseFormat();
+		if ( $useFormat !== 'mobile' && $useFormat !== 'mobile-wap' ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public function shouldDisplayMobileView() {
 		// always display desktop view if it's explicitly requested
 		$useFormat = $this->getUseFormat();
 		if ( $useFormat == 'desktop' ) {
@@ -1455,45 +1461,45 @@ class ExtMobileFrontend {
 
 		if ( !$this->isMobileDevice() && !$this->isFauxMobileDevice() ) {
 			return false;
-		}		
-		
+		}
+
 		$action = $this->getAction();
-		
-		
+
+
 		if ( $action === 'edit' || $action === 'history' ) {
 			return false;
 		}
-				
+
 		return true;
 	}
 
 	public function getXDevice() {
 		if ( is_null( $this->xDevice ) ) {
-			$this->xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ? 
+			$this->xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ?
 					$_SERVER['HTTP_X_DEVICE'] : '';
 		}
-		
+
 		return $this->xDevice;
 	}
 
 	public function getMobileAction() {
 		global $wgRequest;
-		if ( is_null( $this->mobileAction )) {
+		if ( is_null( $this->mobileAction ) ) {
 			$this->mobileAction = $wgRequest->getText( 'mobileaction' );
 		}
-		
+
 		return $this->mobileAction;
 	}
-	
+
 	public function getAction() {
 		global $wgRequest;
-		if ( is_null( $this->action )) {
+		if ( is_null( $this->action ) ) {
 			$this->action = $wgRequest->getText( 'action' );
 		}
-		
+
 		return $this->action;
 	}
-	
+
 	public function getUseFormat() {
 		global $wgRequest;
 		if ( !isset( $this->useFormat ) ) {
@@ -1502,28 +1508,28 @@ class ExtMobileFrontend {
 		}
 		return $this->useFormat;
 	}
-	
+
 	public function setUseFormat( $useFormat ) {
 		$this->useFormat = $useFormat;
 	}
-	
+
 	public function checkUseFormatCookie() {
 		global $wgRequest, $wgScriptPath;
 
-		if ( !isset( self::$useFormatCookieName )) {
+		if ( !isset( self::$useFormatCookieName ) ) {
 			self::$useFormatCookieName = 'mf_useformat';
 		}
-		
+
 		$useFormat = $this->getUseFormat();
 		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat', '' );
 
 		// fetch format from cookie and set it if one is not otherwise specified
-		if( !strlen( $useFormat ) && !is_null( $useFormatFromCookie ) ) {
+		if ( !strlen( $useFormat ) && !is_null( $useFormatFromCookie ) ) {
 			$this->setUseFormat( $useFormatFromCookie );
 		}
-		
+
 		// set appropriate cookie if necessary, ignoring certain URL patterns
-		// eg initial requests to a mobile-specific domain with no path. this 
+		// eg initial requests to a mobile-specific domain with no path. this
 		// is intended to avoid pitfalls for certain server configurations
 		// but should not get in the way of out-of-the-box configs
 		$reqUrl = $wgRequest->getRequestUrl();
@@ -1534,10 +1540,10 @@ class ExtMobileFrontend {
 			$this->setUseFormatCookie( $useFormat );
 		}
 	}
-	
+
 	/**
 	 * Set the mf_useformat cookie
-	 * 
+	 *
 	 * This cookie can determine whether or not a user should see the mobile
 	 * version of pages.
 	 *
@@ -1553,7 +1559,7 @@ class ExtMobileFrontend {
 		setcookie( self::$useFormatCookieName, $useFormat, $expiry, $wgCookiePath, $this->getBaseDomain(), $wgCookieSecure );
 		wfIncrStats( 'mobile.useformat_' . $useFormat . '_cookie_set' );
 	}
-	
+
 	/**
 	 * Get the expiration time for the mf_useformat cookie
 	 *
@@ -1567,27 +1573,27 @@ class ExtMobileFrontend {
 		$expiry = $startTime + $cookieDuration;
 		return $expiry;
 	}
-	
+
 	public function getCacheVaryCookies( $out, &$cookies ) {
 		$cookies[] = 'mf_useformat';
 		return true;
 	}
-	
+
 	/**
 	 * Determine the duration the cookie should last.
-	 * 
+	 *
 	 * If $wgMobileFrontendFormatcookieExpiry has a non-0 value, use that
 	 * for the duration. Otherwise, fall back to $wgCookieExpiration.
-	 * 
+	 *
 	 * @return int The number of seconds for which the cookie should last.
 	 */
 	protected function getUseFormatCookieDuration() {
 		global $wgMobileFrontendFormatCookieExpiry, $wgCookieExpiration;
-		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ? 
+		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ?
 				$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
 		return $cookieDuration;
 	}
-	
+
 	public function getVersion() {
 		return __CLASS__ . ': $Id$';
 	}
