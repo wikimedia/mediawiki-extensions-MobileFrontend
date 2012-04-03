@@ -59,6 +59,8 @@ $autoloadClasses = array (
 	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
 	
+	'SkinMobile' => 'skins/Mobile',
+
 	// special pages
 	'SpecialMobileFrontend' => 'SpecialMobileFrontend',
 );
@@ -159,7 +161,7 @@ $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;
 	$wgExtMobileFrontend = new ExtMobileFrontend();
-	$wgHooks['BeforePageDisplay'][] = array( &$wgExtMobileFrontend, 'beforePageDisplayHTML' );
+	$wgHooks['RequestContextCreateSkin'][] = array( &$wgExtMobileFrontend, 'requestContextCreateSkin' );
 	$wgHooks['BeforePageRedirect'][] = array( &$wgExtMobileFrontend, 'beforePageRedirect' );
 	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
 	$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
