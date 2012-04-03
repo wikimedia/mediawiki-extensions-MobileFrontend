@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAI3//+5g\u003d",
+        "filename": "MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-03T19:25:24Z",
+      "side": 1,
+      "message": "Use $this",
+      "revId": "9c9cee9167bd58a7f7f8eb19c5fb72c823c0a44c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
