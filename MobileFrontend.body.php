@@ -743,7 +743,7 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	private function renderLeaveFeedbackXHTML() {
-		global $wgRequest, $wgUser;
+		global $wgRequest, $wgUser, $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 		if ( $this->contentFormat == 'XHTML' ) {
 			$this->getMsg();
@@ -755,6 +755,7 @@ class ExtMobileFrontend {
 			$options = array(
 							'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
 							'editToken' => $wgUser->getEditToken(),
+							'languageCode' => $wgLanguageCode ? $wgLanguageCode : 'en',
 							'title' => self::$messages['mobile-frontend-leave-feedback-title'],
 							'notice' => self::$messages['mobile-frontend-leave-feedback-notice'],
 							'subject' => self::$messages['mobile-frontend-leave-feedback-subject'],
