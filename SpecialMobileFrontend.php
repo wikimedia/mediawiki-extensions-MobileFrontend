@@ -44,20 +44,20 @@ class MobileFeedbackForm {
 	protected $form_fields = array(
 		'category' => array( 
 			'required' => true,
-			'validate' => null, // will be a callback?
-			'error' => '', // wfMsg( specific error message )
+			'validate' => null,
+			'error' => null,
 			'value' => null,;
 		),
 		'message' => array( 
 			'required' => true,
-			'validate' => 'validateExistence', // will be a callback?
-			'error' => '', // wfMsg( specific error message )
+			'validate' => null, 
+			'error' => null,
 			'value' => null,
 		),
 		'subject' => array( 
 			'required' => true,
-			'validate' => 'validateExistence', // will be a callback?
-			'error' => '', // wfMsg( specific error message )
+			'validate' => null,
+			'error' => null,
 			'value' => null,		
 		),
 	);
@@ -114,8 +114,39 @@ class MobileFeedbackForm {
 		return $this->isValid;
 	}
 
+	/**
+	 * Perform validation on form fields
+	 *
+	 * Loop through form fields defined in $this->form_fields. Check the
+	 * required-ness of a field, and perform any additional validation
+	 * required by the field, as specified by the callback method defined in 
+	 * the 'validate' field in the $this->form_fields array.
+	 *
+	 * Set $this->isValid to false is there is anything wrong with any of the
+	 * fields.
+	 */
 	public function validate() {
-		$this->isValid = true;
+		$valid = true;
+		
+		foreach ( $this->form_fields as $field_name => $data ) {
+			if ( $data['required'] === true ) {
+				// make sure there's some kind of value present
+				if ( !trim( $data['value'] ) ) {
+					$valid = false;
+					$this->form_fields[ $field_name ]['error'] = 'Required field'; // @TODO turn into message
+					continue;
+				}
+			}	
+			
+			// run any particular validation specified by the field definition
+			if( !empty( trim( $data['value'] ) ) && !is_null( $data['validate'] ) ) {
+				if ( $this->{$data['validate']}( $data ) === false ) {
+					$valid = false;
+				}
+			}
+		}
+		
+		$this->isValide = $valid;
 	}
 	
 	public function onSuccess() {
