@@ -951,7 +951,6 @@ class ExtMobileFrontend {
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
 		$formatter = new MobileFormatter( $html, self::$title, $this->contentFormat, $this->wmlContext );
-		$formatter->useMessages( self::$messages );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
