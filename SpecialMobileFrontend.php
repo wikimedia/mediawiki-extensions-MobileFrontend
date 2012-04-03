@@ -41,14 +41,27 @@ class SpecialMobileFrontend extends SpecialPage {
 }
 
 class MobileFeedbackForm {
-	protected $formFieldEmail = array(
-		'required' => true,
-		'validate' => '', // will be a callback?
-		'error' => '', // wfMsg( specific error message )
-		'value' => null,
+	protected $form_fields = array(
+		'category' => array( 
+			'required' => true,
+			'validate' => null, // will be a callback?
+			'error' => '', // wfMsg( specific error message )
+			'value' => null,;
+		),
+		'message' => array( 
+			'required' => true,
+			'validate' => 'validateExistence', // will be a callback?
+			'error' => '', // wfMsg( specific error message )
+			'value' => null,
+		),
+		'subject' => array( 
+			'required' => true,
+			'validate' => 'validateExistence', // will be a callback?
+			'error' => '', // wfMsg( specific error message )
+			'value' => null,		
+		),
 	);
-	protected $formFieldCategory;
-	protected $formFieldMessage;
+
 	protected $request;
 	protected $isValid;
 	
@@ -57,11 +70,10 @@ class MobileFeedbackForm {
 		$this->user = $user;
 	}
 	
-	public function setFormFieldValuesByArray( array $formFieldValues ) {
-		foreach( $formFieldValues as $formField => $value ) {
-			$propertyName = "formField" . ucfirst( $formField );
-			if ( property_exists( $this, $propertyName ) ) {
-				$this->${$propertyName}['value'] = $value;
+	public function setFormFieldValuesByArray( array $form_field_values ) {
+		foreach( $form_field_values as $field_name => $value ) {
+			if ( isset( $this->form_fields[ $field_name ]) ) {
+				$this->form_fields[ $field_name ]['value'] = $value;
 			}
 		}
 	}
