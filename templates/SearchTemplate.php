@@ -8,14 +8,14 @@ class SearchTemplate extends MobileFrontendTemplate {
 
 	public function getHTML() {
 
-		$searchField = Xml::escapeJsString( $this->data['searchField'] );
+		$searchField = Sanitizer::encodeAttribute( $this->data['searchField'] );
 		$mainPageUrl = $this->data['mainPageUrl'];
 		$randomPageUrl = $this->data['randomPageUrl'];
 		$homeButton = $this->data['messages']['mobile-frontend-home-button'];
 		$randomButton = $this->data['messages']['mobile-frontend-random-button'];
-		$clearText = Xml::escapeJsString( $this->data['messages']['mobile-frontend-clear-search'] );
+		$clearText = Sanitizer::encodeAttribute( $this->data['messages']['mobile-frontend-clear-search'] );
 		$searchValue = $this->data['messages']['mobile-frontend-search-submit'];
-		$placeholder = Xml::escapeJsString( $this->data['messages']['mobile-frontend-placeholder'] );
+		$placeholder = Sanitizer::encodeAttribute( $this->data['messages']['mobile-frontend-placeholder'] );
 
 		$scriptUrl = wfScript();
 		$searchBoxDisplayNone = ( $this->data['hideSearchBox'] ) ? ' style="display: none;" ' : '';
