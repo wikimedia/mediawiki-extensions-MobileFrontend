@@ -6,7 +6,7 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 2;
 
-	var $followRedirects;
+	var $followRedirects, $noHeadings;
 
 	public function __construct( $main, $action ) {
 		parent::__construct( $main, $action );
@@ -23,6 +23,7 @@ class ApiMobileView extends ApiBase {
 		$prop = array_flip( $params['prop'] );
 		$sectionProp = array_flip( $params['sectionprop'] );
 		$this->followRedirects = $params['redirect'] == 'yes';
+		$this->noHeadings = $params['noheadings'];
 
 		$title = Title::newFromText( $params['page'] );
 		if ( !$title ) {
@@ -50,7 +51,7 @@ class ApiMobileView extends ApiBase {
 				}
 				$section['id'] = $i;
 				if ( isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
-					$section[$textElement] = $data['text'][$i];
+					$section[$textElement] = $this->prepareSection( $data['text'][$i] );
 					unset( $requestedSections[$i] );
 				}
 				if ( isset( $data['refsections'][$i] ) ) {
@@ -76,6 +77,13 @@ class ApiMobileView extends ApiBase {
 		$this->getResult()->setIndexedTagName( $result, 'section' );
 		$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
 		wfProfileOut( __METHOD__ );
+	}
+
+	private function prepareSection( $html ) {
+		if ( $this->noHeadings ) {
+			$html = preg_replace( '#<(h[1-6])\b.*?<\s*/\s*\\1>#', '', $html );
+		}
+		return trim( $html );
 	}
 
 	private function parseSections( $str ) {
@@ -176,6 +184,7 @@ class ApiMobileView extends ApiBase {
 				ApiBase::PARAM_DFLT => 'toclevel|line',
 			),
 			'noimages' => false,
+			'noheadings' => false,
 		);
 	}
 
@@ -192,6 +201,7 @@ class ApiMobileView extends ApiBase {
 			),
 			'sectionprop' => 'What information about sections to get',
 			'noimages' => 'Return HTML without images',
+			'noheadings' => "Don't include headings in output",
 		);
 	}
 
