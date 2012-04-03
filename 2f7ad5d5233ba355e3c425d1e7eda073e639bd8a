@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAI3///IQ\u003d",
+        "filename": "SpecialMobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2012-04-03T02:11:01Z",
+      "side": 1,
+      "message": "Trailing w/s.",
+      "revId": "2f7ad5d5233ba355e3c425d1e7eda073e639bd8a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
