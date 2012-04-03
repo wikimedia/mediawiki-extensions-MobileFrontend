@@ -41,12 +41,26 @@ class SpecialMobileFrontend extends SpecialPage {
 }
 
 class MobileFeedbackForm {
+	/**
+	 * Form field definitions
+	 *
+	 * Each field in the form should be defined below following the format
+	 *		'<field name>' => array(
+	 *			'required' => <bool>, // whether or not the field is required
+	 *			'validate' => <string>, // the method name to used to \
+	 *				validate this data
+	 *			'error' => <string>, // the corresponding error message to \
+	 *				display for this field (set during validation)
+	 *			'value' => <mixed>, // the value of the form field
+	 *		)
+	 * @param array
+	 */
 	protected $form_fields = array(
 		'category' => array( 
 			'required' => true,
 			'validate' => null,
 			'error' => null,
-			'value' => null,;
+			'value' => null,
 		),
 		'message' => array( 
 			'required' => true,
@@ -58,11 +72,23 @@ class MobileFeedbackForm {
 			'required' => true,
 			'validate' => null,
 			'error' => null,
-			'value' => null,		
+			'value' => null,
 		),
 	);
 
+	/**
+	 * @param WebRequest
+	 */
 	protected $request;
+
+	/**
+	 * @param User
+	 */
+	protected $user;
+
+	/**
+	 * @param bool
+	 */
 	protected $isValid;
 	
 	public function __construct( WebRequest $request, User $user ) {
@@ -70,6 +96,13 @@ class MobileFeedbackForm {
 		$this->user = $user;
 	}
 	
+	/**
+	 * Set $this->form_fields with values from an array of field data
+	 *
+	 * Given an array of <field name> => <value> pairs, set form field data
+	 * locally (so long as the field has been defined).
+	 * @param array
+	 */
 	public function setFormFieldValuesByArray( array $form_field_values ) {
 		foreach( $form_field_values as $field_name => $value ) {
 			if ( isset( $this->form_fields[ $field_name ]) ) {
@@ -78,6 +111,10 @@ class MobileFeedbackForm {
 		}
 	}
 	
+	/**
+	 * Fetch the form to be displayed.
+	 * @return string HTML output of feedback form
+	 */
 	public function getForm() {
 		global $wgLanguageCode;
 		$extMobileFrontend = $this->getExtMobileFrontend();
@@ -107,6 +144,11 @@ class MobileFeedbackForm {
 			'articleFactual' => '#',
 			'articleOther' => '#',
 		);
+	}
+
+	/**
+	 * @return bool
+	 */
 	public function isValid() {
 		if ( !isset( $this->isValid ) ) {
 			$this->validate();
@@ -129,9 +171,11 @@ class MobileFeedbackForm {
 		$valid = true;
 		
 		foreach ( $this->form_fields as $field_name => $data ) {
+			// get rid of any extra whitespace
+			$data['value'] = trim( $data['value'] );
 			if ( $data['required'] === true ) {
 				// make sure there's some kind of value present
-				if ( !trim( $data['value'] ) ) {
+				if ( !$data['value'] ) {
 					$valid = false;
 					$this->form_fields[ $field_name ]['error'] = 'Required field'; // @TODO turn into message
 					continue;
@@ -139,14 +183,15 @@ class MobileFeedbackForm {
 			}	
 			
 			// run any particular validation specified by the field definition
-			if( !empty( trim( $data['value'] ) ) && !is_null( $data['validate'] ) ) {
-				if ( $this->{$data['validate']}( $data ) === false ) {
+			if( !empty( $data['value'] ) && !is_null( $data['validate'] ) ) {
+				$validate_method = $data['validate'];
+				$field_valid = $this->{$validate_method}( $data );
+				if ( $field_valid === false ) {
 					$valid = false;
 				}
 			}
 		}
-		
-		$this->isValide = $valid;
+		$this->isValid = $valid;
 	}
 	
 	public function onSuccess() {
