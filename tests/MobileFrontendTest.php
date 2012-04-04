@@ -87,13 +87,23 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$this->assertEquals( "http://en.m.wikipedia.org/wiki/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
 	}
 	
-	public function testUpdateDesktopUrlHost() {
+	/**
+	 * @dataProvider updateDesktopUrlHostProvider
+	 */
+	public function testUpdateDesktopUrlHost( $mobile, $desktop ) {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
-		$parsedUrl = wfParseUrl( "http://en.m.wikipedia.org/wiki/Gustavus_Airport" );
+		$parsedUrl = wfParseUrl( $mobile );
 		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
-		$this->assertEquals( "http://en.wikipedia.org/wiki/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+		$this->assertEquals( $desktop, wfAssembleUrl( $parsedUrl ) );
+	}
+
+	public function updateDesktopUrlHostProvider() {
+		return array(
+			array( 'http://en.m.wikipedia.org/wiki/Gustavus_Airport', 'http://en.wikipedia.org/wiki/Gustavus_Airport' ),
+			array( 'http://bm.m.wikipedia.org/wiki/Nyɛ_fɔlɔ', 'http://bm.wikipedia.org/wiki/Nyɛ_fɔlɔ' ),
+		);
 	}
 	
 	public function testUpdateMobileUrlPath() {

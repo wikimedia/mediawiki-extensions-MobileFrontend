@@ -1347,7 +1347,7 @@ class ExtMobileFrontend {
 		$mobileToken = preg_replace( "/%h[0-9]\.{0,1}/", "", $mobileUrlHostTemplate );
 
 		// replace the mobile token with nothing, resulting in the normal hostname
-		$parsedUrl['host'] = str_replace( $mobileToken, '', $parsedUrl['host'] );
+		$parsedUrl['host'] = str_replace( '.' . $mobileToken, '.', $parsedUrl['host'] );
 	}
 
 	/**
