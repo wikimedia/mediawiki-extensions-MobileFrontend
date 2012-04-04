@@ -1131,12 +1131,27 @@ this is so that toggling can scroll it into view
 	font-size: 1.5em;
 }
 
+.feedback .message {
+	padding: 8px;
+	border: dotted 1px red;
+	border-bottom: none;
+	margin-right: 25%;
+}
+
 .feedback #mf-feedback-message {
 	padding: 12px 0px;
+	margin-right: 0;
 	margin-bottom: 12px;
+	border: none;
 	border-bottom: solid 1px #ccc;
 }
 
 .feedback #mf-feedback-message.error {
-	border-bottom: solid 1px red;
+	border-bottom: solid 3px red;
+}
+
+.feedback input.error,
+.feedback textarea.error {
+	margin-top: 0;
+	border: solid 1px red;
 }
