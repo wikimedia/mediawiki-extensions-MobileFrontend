@@ -50,11 +50,14 @@ class MobileFeedbackForm {
 	}
 	
 	public function getForm() {
+		global $wgLanguageCode;
 		$extMobileFrontend = new ExtMobileFrontend();
-		
+
 		$extMobileFrontend->getMsg();
 		$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
 		$options = array(
+						'languageCode' => $wgLanguageCode ? $wgLanguageCode : 'en',
+						'feedbackLinks' => $this->getFeedbackLinks(),
 						'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $this->request->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
 						'editToken' => $this->user->getEditToken(),
 						'title' => $extMobileFrontend::$messages['mobile-frontend-leave-feedback-title'],
@@ -68,6 +71,14 @@ class MobileFeedbackForm {
 		$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
 		
 		return $leaveFeedbackHtml;
+	}
+
+	public function getFeedbackLinks() {
+		return array(
+			'articlePersonal' => '#',
+			'articleFactual' => '#',
+			'articleOther' => '#',
+		);
 	}
 
 	public function validate() {
