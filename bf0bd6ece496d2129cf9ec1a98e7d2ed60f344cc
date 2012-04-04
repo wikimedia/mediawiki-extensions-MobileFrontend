@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAI3//+dA\u003d",
+        "filename": "templates/LeaveFeedbackTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2012-04-04T19:20:47Z",
+      "side": 1,
+      "message": "Hmm, this \u003cselect\u003e disappeared in my rebased version, not sure what\u0027s up with that. It wasn\u0027t in the parent commit to begin with.",
+      "revId": "bf0bd6ece496d2129cf9ec1a98e7d2ed60f344cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
