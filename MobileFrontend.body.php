@@ -1269,6 +1269,11 @@ class ExtMobileFrontend {
 		return true;
 	}
 
+	/**
+	* Take a URL Host Template and return the host portion
+	* @param $mobileUrlHostTemplate string
+	* @return string
+	*/
 	public function getMobileToken( $mobileUrlHostTemplate ) {
 		wfProfileIn( __METHOD__ );
 		$mobileToken = preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
