@@ -320,11 +320,7 @@ class MobileFormatter extends HtmlFormatter {
 
 		// if we had any, make sure to close the whole thing!
 		if ( $this->headings > 0 ) {
-			$s = str_replace(
-				'<div class="visualClear">',
-				'</div><div class="visualClear">',
-				$s
-			);
+			$s .= '</div>';
 		}
 		wfProfileOut( __METHOD__ );
 		return $s;
