@@ -1054,7 +1054,7 @@ class ExtMobileFrontend {
 			$prepend = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
 				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
 				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';
-			$html = $prepend . $html;
+			$contentHtml = $prepend . $contentHtml;
 
 			$applicationWmlTemplate = new ApplicationWmlTemplate();
 			$options = array(
