@@ -385,11 +385,6 @@ class ExtMobileFrontend {
 		$this->wmlContext->setUseFormat( $useFormat );
 		$mobileAction = $this->getMobileAction();
 
-		if ( !$this->shouldDisplayMobileView() ) {
-			wfProfileOut( __METHOD__ );
-			return true;
-		}
-
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		self::$title = $out->getTitle();
