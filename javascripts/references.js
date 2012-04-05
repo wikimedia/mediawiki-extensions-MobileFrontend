@@ -36,15 +36,6 @@ if( typeof jQuery !== 'undefined' ) {
 				} );
 			};
 			$( document ).scroll(calculatePosition);
-			document.body.ontouchstart = function() {
-				wasVisible = $( '#mf-references' ).is( ':visible' );
-				$( '#mf-references' ).hide();
-			};
-			document.body.ontouchend = function() {
-				if( wasVisible ) {
-					$( '#mf-references' ).show();
-				}
-			};
 		}
 
 		function init() {
@@ -111,10 +102,13 @@ if( typeof jQuery !== 'undefined' ) {
 					close();
 				}
 				ev.preventDefault();
+				cancelBubble( ev );
 			}
 			$( 'sup a' ).unbind('click').click( clickReference ).each(function(i, el) {
 				el.ontouchstart = cancelBubble;
 			});
+			$( document.body ).bind( 'click', close );
+			document.body.ontouchstart = close;
 		}
 		init();
 	}(jQuery));
