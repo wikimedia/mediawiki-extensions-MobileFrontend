@@ -1269,6 +1269,13 @@ class ExtMobileFrontend {
 		return true;
 	}
 
+	public function getMobileToken( $mobileUrlHostTemplate ) {
+		wfProfileIn( __METHOD__ );
+		$mobileToken = preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
+		wfProfileOut( __METHOD__ );
+		return $mobileToken;
+	}
+
 	/**
 	 * Take a URL and return a copy that conforms to the mobile URL template
 	 * @param $url string
@@ -1276,13 +1283,26 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
+		if ( $this->shouldDisplayMobileView() ) {
+			if ( wfRunHooks( 'GetMobileUrl', array( &$subdomainTokenReplacement ) ) ) {
+				if ( !empty( $subdomainTokenReplacement ) ) {
+					global $wgMobileUrlTemplate;
+					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
+					$mobileToken = $this->getMobileToken( $mobileUrlHostTemplate );
+					$wgMobileUrlTemplate = str_replace( $mobileToken, $subdomainTokenReplacement, $wgMobileUrlTemplate );
+				}
+			}
+		}
+
 		$parsedUrl = wfParseUrl( $url );
 		$this->updateMobileUrlHost( $parsedUrl );
 		$this->updateMobileUrlQueryString( $parsedUrl );
 		if ( $forceHttps ) {
 			$parsedUrl[ 'scheme' ] = 'https';
 		}
-		return wfAssembleUrl( $parsedUrl );
+
+		$assembleUrl = wfAssembleUrl( $parsedUrl );
+		return $assembleUrl;
 	}
 
 	/**
@@ -1339,7 +1359,7 @@ class ExtMobileFrontend {
 		}
 
 		// identify the mobile token by stripping out normal host parts
-		$mobileToken = preg_replace( "/%h[0-9]\.{0,1}/", "", $mobileUrlHostTemplate );
+		$mobileToken = $this->getMobileToken( $mobileUrlHostTemplate );
 
 		// replace the mobile token with nothing, resulting in the normal hostname
 		$parsedUrl['host'] = str_replace( '.' . $mobileToken, '.', $parsedUrl['host'] );
