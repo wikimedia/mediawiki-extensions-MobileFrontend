@@ -14,7 +14,7 @@ class SpecialMobileFrontend extends SpecialPage {
 		if ( $par != '' ) {
 			$par = strtolower( $par );
 			if ( method_exists( $this, $par ) ) { // @TODO make this safer
-				$this->{$par}();
+				$this-> { $par } ();
 			}
 		}
 	}
@@ -34,7 +34,7 @@ class SpecialMobileFrontend extends SpecialPage {
 				return;
 			}
 		}
-		
+
 		$out->addHtml( $form->getForm() );
 		return;
 	}
@@ -56,21 +56,27 @@ class MobileFeedbackForm {
 	 * @param array
 	 */
 	protected $form_fields = array(
-		'category' => array( 
+		'category' => array(
 			'required' => true,
 			'validate' => null,
 			'error' => null,
 			'value' => null,
 		),
-		'message' => array( 
+		'message' => array(
 			'required' => true,
-			'validate' => null, 
+			'validate' => null,
 			'error' => null,
 			'value' => null,
 		),
-		'subject' => array( 
+		'subject' => array(
 			'required' => true,
 			'validate' => null,
+			'error' => null,
+			'value' => null,
+		),
+		'edittoken' => array(
+			'required' => true,
+			'validate' => 'validateEditToken',
 			'error' => null,
 			'value' => null,
 		),
@@ -90,12 +96,12 @@ class MobileFeedbackForm {
 	 * @param bool
 	 */
 	protected $isValid;
-	
+
 	public function __construct( WebRequest $request, User $user ) {
 		$this->request = $request;
 		$this->user = $user;
 	}
-	
+
 	/**
 	 * Set $this->form_fields with values from an array of field data
 	 *
@@ -104,13 +110,13 @@ class MobileFeedbackForm {
 	 * @param array
 	 */
 	public function setFormFieldValuesByArray( array $form_field_values ) {
-		foreach( $form_field_values as $field_name => $value ) {
-			if ( isset( $this->form_fields[ $field_name ]) ) {
+		foreach ( $form_field_values as $field_name => $value ) {
+			if ( isset( $this->form_fields[ $field_name ] ) ) {
 				$this->form_fields[ $field_name ]['value'] = $value;
 			}
 		}
 	}
-	
+
 	/**
 	 * Fetch the form to be displayed.
 	 * @return string HTML output of feedback form
@@ -134,7 +140,7 @@ class MobileFeedbackForm {
 						);
 		$leaveFeedbackTemplate->setByArray( $options );
 		$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
-		
+
 		return $leaveFeedbackHtml;
 	}
 
@@ -161,7 +167,7 @@ class MobileFeedbackForm {
 	 *
 	 * Loop through form fields defined in $this->form_fields. Check the
 	 * required-ness of a field, and perform any additional validation
-	 * required by the field, as specified by the callback method defined in 
+	 * required by the field, as specified by the callback method defined in
 	 * the 'validate' field in the $this->form_fields array.
 	 *
 	 * Set $this->isValid to false is there is anything wrong with any of the
@@ -169,7 +175,7 @@ class MobileFeedbackForm {
 	 */
 	public function validate() {
 		$valid = true;
-		
+
 		foreach ( $this->form_fields as $field_name => $data ) {
 			// get rid of any extra whitespace
 			$data['value'] = trim( $data['value'] );
@@ -180,12 +186,12 @@ class MobileFeedbackForm {
 					$this->form_fields[ $field_name ]['error'] = 'Required field'; // @TODO turn into message
 					continue;
 				}
-			}	
-			
+			}
+
 			// run any particular validation specified by the field definition
-			if( !empty( $data['value'] ) && !is_null( $data['validate'] ) ) {
+			if ( !empty( $data['value'] ) && !is_null( $data['validate'] ) ) {
 				$validate_method = $data['validate'];
-				$field_valid = $this->{$validate_method}( $data );
+				$field_valid = $this-> { $validate_method } ( $data );
 				if ( $field_valid === false ) {
 					$valid = false;
 				}
@@ -193,22 +199,56 @@ class MobileFeedbackForm {
 		}
 		$this->isValid = $valid;
 	}
-	
+
+	public function validateEditToken( $data ) {
+		$token = $data['value'];
+		if ( !$this->user->matchEditToken( $token ) ) {
+			$this->form_fields['edittoken']['error'] = "Match token fail"; // @TODO turn into message
+			return false;
+		}
+		return true;
+	}
+
 	public function onSuccess() {
 		$extMobileFrontend = $this->getExtMobileFrontend();
 		$extMobileFrontend->getMsg();
+		$write_success = $this->writeToWiki();
+		if ( !$write_success ) {
+			// do something on write failure?
+		} else {
+			// do something on write success?
+		}
 		$leaveFeedbackSuccessTemplate = new LeaveFeedbackSuccessTemplate();
 		$successOut = $leaveFeedbackSuccessTemplate->getHTML();
 		return $successOut;
 	}
 
+	protected function writeToWiki() {
+		$extMobileFrontend = $this->getExtMobileFrontend();
+		$title = Title::newFromText( $extMobileFrontend::$messages['mobile-frontend-feedback-page'] );
+
+		$subject = $this->form_fields['subject']['value'];
+		$message = $this->form_fields['message']['value'];
+		$userAgent = $this->request->getHeader( 'User-Agent' );
+
+		if ( $title->userCan( 'edit' ) && !$this->user->isBlockedFrom( $title ) ) {
+			$article = new Article( $title, 0 );
+			$rawtext = $article->getRawText();
+			$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> "; // @TODO do these need escaping or is that automagic?
+			$article->doEdit( $rawtext, '' );
+		} else {
+			return false;
+		}
+		return true;
+	}
+
 	protected function getExtMobileFrontend() {
 		static $extMobileFrontend;
-		
-		if ( !isset( $extMobileFrontend )) {
+
+		if ( !isset( $extMobileFrontend ) ) {
 			$extMobileFrontend = new ExtMobileFrontend();
 		}
-		
+
 		return $extMobileFrontend;
 	}
 }
