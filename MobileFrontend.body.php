@@ -67,6 +67,14 @@ class ExtMobileFrontend {
 	}
 
 	public function requestContextCreateSkin( $context, &$skin ) {
+		// check whether or not the user has requested to toggle their view
+		$mobileAction = $this->getMobileAction();
+		if ( $mobileAction == 'toggle_view_desktop' ) {
+			$this->toggleView( 'desktop' );
+		} elseif ( $mobileAction == 'toggle_view_mobile' ) {
+			$this->toggleView( 'mobile' );
+		}
+
 		if ( !$this->shouldDisplayMobileView() ) {
 			return true;
 		}
@@ -202,7 +210,7 @@ class ExtMobileFrontend {
 		global $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgOut, $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 
-		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'useformat=desktop' ) ) );
+		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'mobileaction=toggle_view_desktop' ) ) );
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
 		$languageUrls = array();
@@ -292,9 +300,7 @@ class ExtMobileFrontend {
 		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
 
 		$xDevice = $this->getXDevice();
-		$this->checkUseFormatCookie();
-		$useFormat = $this->getUseFormat();
-		$this->wmlContext->setUseFormat( $useFormat );
+		$this->setWmlContextFormat();
 		$mobileAction = $this->getMobileAction();
 
 		if( $mobileAction == 'beta' ) {
@@ -439,6 +445,13 @@ class ExtMobileFrontend {
 
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	public function setWmlContextFormat() {
+		$useFormat = $this->getUseFormat();
+		if ( $useFormat ) {
+			$this->wmlContext->setUseFormat( $useFormat );
+		}
 	}
 
 	public static function parseContentFormat( $format ) {
@@ -1125,7 +1138,7 @@ class ExtMobileFrontend {
 						'showText' => wfMsg(  'mobile-frontend-show-button'  ),
 						'hideText' => wfMsg(  'mobile-frontend-hide-button'  ),
 						'configure-empty-homepage' => wfMsg(  'mobile-frontend-empty-homepage'  ),
-						'useFormatCookieName' => self::$useFormatCookieName,
+						'useFormatCookieName' => $this->getUseFormatCookieName(),
 						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
 						'useFormatCookiePath' => $wgCookiePath,
 						'useFormatCookieDomain' => $this->getBaseDomain(),
@@ -1334,18 +1347,11 @@ class ExtMobileFrontend {
 		$parsedUrl[ 'path' ] = $wgScriptPath . $templatePathSansToken . $pathSansScriptPath;
 	}
 
+	/**
+	 * Placeholder for potential future use of query string handling
+	 */
 	protected function updateMobileUrlQueryString( &$parsedUrl ) {
-		if ( !$this->isFauxMobileDevice() ) {
-			return;
-		}
-		$useFormat = $this->getUseFormat();
-		if ( !isset( $parsedUrl[ 'query' ] ) ) {
-			$parsedUrl[ 'query' ] = 'useformat=' . urlencode( $useFormat );
-		} else {
-			$query = wfCgiToArray( $parsedUrl[ 'query' ] );
-			$query[ 'useformat' ] = urlencode( $useFormat );
-			$parsedUrl[ 'query' ] = wfArrayToCgi( $query );
-		}
+		return;
 	}
 
 	/**
@@ -1402,25 +1408,47 @@ class ExtMobileFrontend {
 		return true;
 	}
 
+	/**
+	 * Determine whether or not we should display the mobile view
+	 *
+	 * Step through the hierarchy of what should or should not trigger
+	 * the mobile view.
+	 *
+	 * Primacy is given to the page action - we will never show mobile view
+	 * for page edits or page history. 'userformat' request param is then
+	 * honored, followed by cookie settings, then actual device detection,
+	 * finally falling back on false.
+	 * @return bool
+	 */
 	public function shouldDisplayMobileView() {
-		// always display desktop view if it's explicitly requested
-		$useFormat = $this->getUseFormat();
-		if ( $useFormat == 'desktop' ) {
-			return false;
-		}
-
-		if ( !$this->isMobileDevice() && !$this->isFauxMobileDevice() ) {
-			return false;
-		}
-
+		// always display non-mobile view for edit/history
 		$action = $this->getAction();
-
-
 		if ( $action === 'edit' || $action === 'history' ) {
 			return false;
 		}
 
-		return true;
+		// always display desktop or mobile view if it's explicitly requested
+		$useFormat = $this->getUseFormat();
+		if ( $useFormat == 'desktop' ) {
+			return false;
+		} elseif ( $this->isFauxMobileDevice() ) {
+			return true;
+		}
+
+		// check cookie for what to display
+		$useFormatCookie = $this->getUseFormatCookie();
+		if ( $useFormatCookie == 'desktop' ) {
+			return false;
+		} elseif ( $useFormatCookie == 'mobile' ) {
+			return true;
+		}
+
+		// do device detection
+		if ( $this->isMobileDevice() ) {
+			return true;
+		}
+
+		return false;
 	}
 
 	public function getXDevice() {
@@ -1463,32 +1491,20 @@ class ExtMobileFrontend {
 		$this->useFormat = $useFormat;
 	}
 
-	public function checkUseFormatCookie() {
-		global $wgRequest, $wgScriptPath;
+	/**
+	 * Get the useformat cookie
+	 *
+	 * This cookie can determine whether or not a user should see the mobile
+	 * version of a page.
+	 *
+	 * @return string|null
+	 */
+	public function getUseFormatCookie() {
+		global $wgRequest;
 
-		if ( !isset( self::$useFormatCookieName ) ) {
-			self::$useFormatCookieName = 'mf_useformat';
-		}
+		$useFormatFromCookie = $wgRequest->getCookie( $this->getUseFormatCookieName(), '' );
 
-		$useFormat = $this->getUseFormat();
-		$useFormatFromCookie = $wgRequest->getCookie( 'mf_useformat', '' );
-
-		// fetch format from cookie and set it if one is not otherwise specified
-		if ( !strlen( $useFormat ) && !is_null( $useFormatFromCookie ) ) {
-			$this->setUseFormat( $useFormatFromCookie );
-		}
-
-		// set appropriate cookie if necessary, ignoring certain URL patterns
-		// eg initial requests to a mobile-specific domain with no path. this
-		// is intended to avoid pitfalls for certain server configurations
-		// but should not get in the way of out-of-the-box configs
-		$reqUrl = $wgRequest->getRequestUrl();
-		$urlsToIgnore = array( '/?useformat=mobile', $wgScriptPath . '/?useformat=mobile' );
-		if ( ( ( $useFormatFromCookie != 'mobile' && $useFormat == 'mobile' ) ||
-		 		( $useFormatFromCookie != 'desktop' && $useFormat == 'desktop' ) ) &&
-				!in_array( $reqUrl, $urlsToIgnore ) ) {
-			$this->setUseFormatCookie( $useFormat );
-		}
+		return $useFormatFromCookie;
 	}
 
 	/**
@@ -1497,17 +1513,57 @@ class ExtMobileFrontend {
 	 * This cookie can determine whether or not a user should see the mobile
 	 * version of pages.
 	 *
+	 * Uses regular php setcookie rather than WebResponse::setCookie()
+	 * so we can ignore $wgCookieHttpOnly since the protection is provides
+	 * is irrelevant for this cookie.
+	 *
 	 * @param string $useFormat The format to store in the cookie
 	 */
-	protected function setUseFormatCookie( $useFormat ) {
+	public function setUseFormatCookie( $cookieFormat ) {
 		global $wgCookiePath, $wgCookieSecure;
-		$expiry = $this->getUseFormatCookieExpiry();
 
-		// use regular php setcookie() rather than WebResponse::setCookie
-		// so we can ignore $wgCookieHttpOnly since the protection it provides
-		// is irrelevant for this cookie.
-		setcookie( self::$useFormatCookieName, $useFormat, $expiry, $wgCookiePath, $this->getBaseDomain(), $wgCookieSecure );
-		wfIncrStats( 'mobile.useformat_' . $useFormat . '_cookie_set' );
+		if ( !$this->shouldSetUseFormatCookie( $cookieFormat ) ) {
+			return;
+		}
+
+		$expiry = $this->getUseFormatCookieExpiry();
+		setcookie( $this->getUseFormatCookieName(), $cookieFormat, $expiry, $wgCookiePath, $this->getBaseDomain(), $wgCookieSecure );
+		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
+	}
+
+	public function getUseFormatCookieName() {
+		if ( !isset( self::$useFormatCookieName ) ) {
+			self::$useFormatCookieName = 'mf_useformat';
+		}
+		return self::$useFormatCookieName;
+	}
+
+	/**
+	 * Determine whether or not the requested cookie value should get set
+	 *
+	 * Ignores certain URL patterns, eg initial requests to a mobile-specific
+	 * domain with no path. This is intended to avoid pitfalls for certain
+	 * server configurations, but should not get in the way of
+	 * out-of-the-box configs.
+	 *
+	 * Also will not set cookie if the cookie's value has already been
+	 * appropriately set.
+	 * @param string
+	 * @return bool
+	 */
+	protected function shouldSetUseFormatCookie( $cookieFormat ) {
+		global $wgRequest, $wgScriptPath;
+
+		$reqUrl = $wgRequest->getRequestUrl();
+		$urlsToIgnore = array( '/?useformat=mobile', $wgScriptPath . '/?useformat=mobile' );
+		if ( in_array( $reqUrl, $urlsToIgnore ) ) {
+			return false;
+		}
+
+		if ( $this->getUseFormatCookie() === $cookieFormat ) {
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -1542,6 +1598,18 @@ class ExtMobileFrontend {
 		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ?
 				$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
 		return $cookieDuration;
+	}
+
+	/**
+	 * Toggles view to one specified by the user
+	 *
+	 * If a user has requested a particular view (eg clicked 'Desktop' from
+	 * a mobile page), set the requested view for this particular request
+	 * and set a cookie to keep them on that view for subsequent requests.
+	 */
+	public function toggleView( $view ) {
+		$this->setUseFormat( $view );
+		$this->setUseFormatCookie( $view );
 	}
 
 	public function getVersion() {
