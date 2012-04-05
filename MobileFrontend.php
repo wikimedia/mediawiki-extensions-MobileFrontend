@@ -57,7 +57,7 @@ $autoloadClasses = array (
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
 	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
-	'SkinMobile' => 'skins/Mobile',
+	'SkinMobile' => 'skins/SkinMobile',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
