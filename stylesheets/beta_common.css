@@ -872,10 +872,10 @@ full screen search css
 
 /* FOOTER */
 #footer {
-	-webkit-box-shadow: 0px -20px 10px -16px #ddd;
-	-moz-box-shadow: 0px -20px 10px -16px #ddd;
-	-o-box-shadow: 0px -20px 10px -16px #ddd;
-	box-shadow: 0px -20px 10px -16px #ddd;
+	-webkit-box-shadow: 0px -5px 30px 0px #ddd;
+	-moz-box-shadow: 0px -5px 30px 0px #ddd;
+	-o-box-shadow: 0px -5px 30px 0px #ddd;
+	box-shadow: 0px -5px 30px 0px #ddd;
 	padding: 12px 22px; /* see content_wrapper margin */
 	border-top: solid 1px #aaa;
 	line-height: 24px;
