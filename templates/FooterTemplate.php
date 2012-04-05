@@ -12,22 +12,33 @@ class FooterTemplate extends MobileFrontendTemplate {
 
 		$regularSite = wfMsg( 'mobile-frontend-regular-site' );
 		$copyright = $copyright;
+		$termsUsage = wfMsg( 'mobile-frontend-terms-use' );
 		$copyrightSymbol = $this->data['copyright-symbol'];
+
 		$license = wfMsg( 'mobile-frontend-footer-license' );
-		$disableImages = wfMsg( 'mobile-frontend-disable-images' );
-		$enableImages = wfMsg( 'mobile-frontend-enable-images' );
+		$disableImages = ( $this->data['isBetaGroupMember'] ) ? wfMsg( 'mobile-frontend-off' ) :
+			wfMsg( 'mobile-frontend-disable-images' );
+		$enableImages =  ( $this->data['isBetaGroupMember'] ) ? wfMsg( 'mobile-frontend-on' ) :
+			wfMsg( 'mobile-frontend-enable-images' );
 		$leaveFeedback = wfMsg( 'mobile-frontend-leave-feedback' );
 
 		$leaveFeedbackURL = $this->data['leaveFeedbackURL'];
 		$viewNormalSiteURL = $this->data['viewNormalSiteURL'];
+		$viewNormalSiteLabel = wfMsg( 'mobile-frontend-view-desktop' );
+		$mobileSiteLabel = wfMsg( 'mobile-frontend-view-mobile' );
 
 		if ( $this->data['disableImages'] == 0 ) {
 			$imagesToggle = $disableImages;
+			$imagesPrefix = $enableImages . " / ";
+			$imagesSuffix = "";
 			$imagesURL = $this->data['disableImagesURL'];
 		} else {
 			$imagesToggle = $enableImages;
+			$imagesPrefix = "";
+			$imagesSuffix = " / " . $disableImages;
 			$imagesURL = $this->data['enableImagesURL'];
 		}
+		$imagesToggleLabelPrefix = wfMsg( 'mobile-frontend-enable-images-prefix' );
 
 		$logoutLink = ( $this->data['logoutHtml'] ) ? ' | ' . $this->data['logoutHtml'] : '';
 		$logoutLink = ( $this->data['loginHtml'] ) ? ' | ' . $this->data['loginHtml'] : $logoutLink;
@@ -74,9 +85,18 @@ HTML;
 		</span>
 		</h2>
 		<div class="content_block" id="content_footer">
-			<div class="notice">
+			<ul class="settings">
+				<li>
+				<span class="left separator"><a href="{$viewNormalSiteURL}">{$viewNormalSiteLabel}</a></span><span class="right">
+				{$mobileSiteLabel}</span>
+				</li>
+				<li>
+				<span class="left">{$termsUsage}</span><span class="right">{$imagesToggleLabelPrefix} {$imagesPrefix}<a href="{$imagesURL}#section_footer">{$imagesToggle}</a>{$imagesSuffix}</span>
+				</li>
+				<li class="notice">
 				{$license}
-			</div>
+				</li>
+			</ul>
 			<ul class='links'>
 				<li>
 					<a href="{$this->data['leaveFeedbackURL']}">{$footerContact}</a>
