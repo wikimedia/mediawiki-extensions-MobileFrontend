@@ -13,7 +13,7 @@ MobileFrontend.opensearch = (function() {
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
-	search.onfocus = function() {
+	function onfocus() {
 		var rrd, rrdD;
 		sb = document.getElementById( 'searchbox' );
 		header = document.getElementById( 'header' );
@@ -36,7 +36,8 @@ MobileFrontend.opensearch = (function() {
 			}
 			focused = true;
 		}
-	};
+	}
+	u( search ).bind( 'focus', onfocus );
 
 	function removeResults() {
 		MobileFrontend.utils( document.body ).removeClass( 'full-screen-search' );
@@ -195,6 +196,9 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function init() {
+		if( document.activeElement && document.activeElement.id === 'search' ) {
+			onfocus();
+		}
 	}
 	init();
 	initClearSearch();
