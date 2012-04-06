@@ -340,14 +340,11 @@ button.hide {
 	max-height: 0;
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: max-height 0.2s ease-in,
-		margin-top 0.2s ease-in; /* for smoother toggling */
-	-moz-transition: max-height 0.2s ease-in,
-		margin-top 0.2s ease-in;
-	-o-transition: max-height 0.2s ease-in,
-		margin-top 0.2s ease-in;
-	transition: max-height 0.2s ease-in,
-		margin-top 0.2s ease-in;
+	-webkit-transition: max-height 0.4s ease-in-out;
+	-moz-transition: max-height 0.4s ease-in-out;
+	-o-transition: max-height 0.4s ease-in-out;
+	transition: max-height 0.4s ease-in-out;
+	margin-top: 14px;
 }
 
 .togglingEnabled .openSection.section_anchors {
@@ -356,9 +353,6 @@ button.hide {
 
 .togglingEnabled .openSection.content_block {
 	max-height: 9999px; /* large number as height: auto is not effected by transitions */
-	-webkit-transition: max-height 0.7s ease-in;
-	transition: max-height 0.7s ease-in;
-	margin-top: 14px;
 }
 
 .mwm-notice {
@@ -575,7 +569,7 @@ img.thumbborder {
 }
 
 #content_wrapper .section {
-	padding: 14px 22px; /* see #footer padding */
+	padding: 14px 22px 0 22px; /* see #footer padding and .content_block margin */
 	margin-left: -22px; /* offset #content_wrapper margin */
 	margin-right: -22px;
 }
