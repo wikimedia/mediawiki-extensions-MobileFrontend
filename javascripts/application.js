@@ -48,6 +48,20 @@ MobileFrontend = (function() {
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
+		// when rotating to landscape stop page zooming on ios
+		function fixiOSBug() {
+			// see http://adactio.com/journal/4470/
+			var viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' ),
+				ua = navigator.userAgent;
+			if( viewportmeta && ua.match( /iPhone|iPad/i )  ) {
+				viewportmeta.content = 'minimum-scale=1.0, maximum-scale=1.0';
+				document.addEventListener( 'gesturestart', function() {
+					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
+				}, false );
+			}
+		}
+		fixiOSBug();
+
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );
 	}

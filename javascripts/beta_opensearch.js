@@ -9,7 +9,6 @@ MobileFrontend.opensearch = (function() {
 		footer = document.getElementById( 'footer' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
-		viewportmeta, originalViewport,
 		u = MobileFrontend.utils;
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
