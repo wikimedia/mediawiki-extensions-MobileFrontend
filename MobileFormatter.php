@@ -179,50 +179,59 @@ class MobileFormatter extends HtmlFormatter {
 		$backToTop = $this->msg( 'mobile-frontend-back-to-top-of-section' );
 		$this->headings++;
 		// Back to top link
-		$base = Html::openElement( 'div',
-						array( 'id' => 'anchor_' . intval( $this->headings - 1 ),
-								'class' => 'section_anchors', )
-				) .
-				Html::rawElement( 'a',
-						array( 'href' => '#section_' . intval( $this->headings - 1 ),
-								'class' => 'back_to_top' ),
-								'&#8593;' . $backToTop ) .
-				Html::closeElement( 'div' ) .
-				Html::closeElement( 'div' );
+		$backToTop = Html::openElement( 'div',
+				array( 'id' => 'anchor_' . intval( $this->headings - 1 ),
+					'class' => 'section_anchors',
+				)
+			)
+			. Html::rawElement( 'a',
+				array( 'href' => '#section_' . intval( $this->headings - 1 ),
+						'class' => 'back_to_top'
+				),
+				'&#8593;' . $backToTop
+			)
+			. '</div>'; // <div id="anchor_*">
+
 		// generate the HTML we are going to inject
 		// TODO: remove legacy code for Wikipedia Mobile app < 1.3 which is not using the api
 		// when usage of said apps is low
 		$buttons = Html::element( 'button',
-					array( 'class' => 'section_heading show',
-							'section_id' => $this->headings ),
-							$show ) .
-			Html::element( 'button',
-					array( 'class' => 'section_heading hide',
-							'section_id' => $this->headings ),
-							$hide );
-		$base .= Html::openElement( 'div', array( 'class' => 'section' ) );
+				array( 'class' => 'section_heading show', 'section_id' => $this->headings ),
+				$show
+			)
+			. Html::element( 'button',
+				array( 'class' => 'section_heading hide', 'section_id' => $this->headings ),
+				$hide
+			);
+		$base = Html::openElement( 'div', array( 'class' => 'section' ) );
 		if ( $this->expandableSections ) {
 			$h2OnClick = 'javascript:wm_toggle_section(' . $this->headings . ');';
 			$base .= Html::openElement( 'h2',
-							array( 'class' => 'section_heading',
-									'id' => 'section_' . $this->headings, 'onclick' => $h2OnClick ) );
+				array( 'class' => 'section_heading',
+					'id' => 'section_' . $this->headings, 'onclick' => $h2OnClick
+				)
+			);
 		} else {
 			$base .= Html::openElement( 'h2',
-							array( 'class' => 'section_heading',
-									'id' => 'section_' . $this->headings ) );
+				array( 'class' => 'section_heading', 'id' => 'section_' . $this->headings )
+			);
 		}
 		$base .= $buttons .
-				Html::rawElement( 'span',
-						array( 'id' => $headlineId ),
-								$matches[2] ) .
-				Html::closeElement( 'h2' ) .
-				Html::openElement( 'div',
-						array( 'class' => 'content_block',
-								'id' => 'content_' . $this->headings ) );
+			Html::rawElement( 'span',
+					array( 'id' => $headlineId ),
+					$matches[2]
+				)
+				. Html::closeElement( 'h2' )
+				. Html::openElement( 'div',
+					array( 'class' => 'content_block', 'id' => 'content_' . $this->headings )
+				);
 
 		if ( $this->headings > 1 ) {
 			// Close it up here
-			$base = Html::closeElement( 'div' ) . $base;
+			$base = '</div>' // <div class="content_block">
+				. $backToTop
+				. "</div>" // <div class="section">
+				. $base;
 		}
 
 		wfProfileOut( __METHOD__ );
@@ -306,7 +315,8 @@ class MobileFormatter extends HtmlFormatter {
 
 		// if we had any, make sure to close the whole thing!
 		if ( $this->headings > 0 ) {
-			$s .= '</div>';
+			$s .= '</div>' // <div class="content_block">
+				. "\n</div>"; // <div class="section">
 		}
 		wfProfileOut( __METHOD__ );
 		return $s;
