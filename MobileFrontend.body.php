@@ -60,6 +60,9 @@ class ExtMobileFrontend {
 	 */
 	private $wmlContext;
 
+	private $forceMobileView = false;
+	private $contentTransformations = true;
+
 	public function __construct() {
 		global $wgMFConfigProperties;
 		$this->wmlContext = new WmlContext();
@@ -114,6 +117,34 @@ class ExtMobileFrontend {
 		list( $site, $lang ) = $wgConf->siteFromDB( $dbName );
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	/**
+	 * @param $value bool: Whether mobile view should always be enforced
+	 */
+	public function setForceMobileView( $value ) {
+		$this->forceMobileView = $value;
+	}
+
+	/**
+	 * @return bool: Whether mobile view should always be enforced
+	 */
+	public function getForceMobileView() {
+		return $this->forceMobileView;
+	}
+
+	/**
+	 * @param $value bool: Whether content should be transformed to better suit mobile devices
+	 */
+	public function setContentTransformations( $value ) {
+		$this->contentTransformations = $value;
+	}
+
+	/**
+	 * @return bool: Whether content should be transformed to better suit mobile devices
+	 */
+	public function getContentTransformations() {
+		return $this->contentTransformations;
 	}
 
 	/**
@@ -401,30 +432,6 @@ class ExtMobileFrontend {
 			exit();
 		}
 
-		if ( $mobileAction == 'opt_in_mobile_site' && $this->contentFormat == 'XHTML' ) {
-			echo $this->renderOptInMobileSiteXHTML();
-			wfProfileOut( __METHOD__ );
-			exit();
-		}
-
-		if ( $mobileAction == 'opt_out_mobile_site' && $this->contentFormat == 'XHTML' ) {
-			echo $this->renderOptOutMobileSiteXHTML();
-			wfProfileOut( __METHOD__ );
-			exit();
-		}
-
-		if ( $mobileAction == 'opt_in_cookie' ) {
-			wfIncrStats( 'mobile.opt_in_cookie_set' );
-			$this->setOptInOutCookie( '1' );
-			$this->disableCaching();
-			$location = wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT );
-			$wgRequest->response()->header( 'Location: ' . $location );
-		}
-
-		if ( $mobileAction == 'opt_out_cookie' ) {
-			$this->setOptInOutCookie( '' );
-		}
-
 		$this->getMsg();
 		$this->disableCaching();
 		$this->sendXDeviceVaryHeader();
@@ -533,9 +540,12 @@ class ExtMobileFrontend {
 	 * @param $value string
 	 * @return bool
 	 */
-	private function setOptInOutCookie( $value ) {
+	public function setOptInOutCookie( $value ) {
 		global $wgCookieDomain, $wgRequest, $wgCookiePrefix;
 		wfProfileIn( __METHOD__ );
+		if ( $value ) {
+			wfIncrStats( 'mobile.opt_in_cookie_set' );
+		}
 		$tempWgCookieDomain = $wgCookieDomain;
 		$wgCookieDomain = $this->getBaseDomain();
 		$tempWgCookiePrefix = $wgCookiePrefix;
@@ -713,82 +723,6 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @return string
-	 */
-	private function renderOptInMobileSiteXHTML() {
-		wfProfileIn( __METHOD__ );
-		if ( $this->contentFormat == 'XHTML' ) {
-			$this->getMsg();
-			$searchTemplate = $this->getSearchTemplate();
-			$searchWebkitHtml = $searchTemplate->getHTML();
-			$footerTemplate = $this->getFooterTemplate();
-			$footerHtml = $footerTemplate->getHTML();
-			$optInTemplate = new OptInTemplate();
-			$options = array(
-							'explainOptIn' => wfMsg( 'mobile-frontend-opt-in-explain' ),
-							'optInMessage' => wfMsg( 'mobile-frontend-opt-in-message' ),
-							'yesButton' => wfMsg( 'mobile-frontend-opt-in-yes-button' ),
-							'noButton' => wfMsg( 'mobile-frontend-opt-in-no-button' ),
-							'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
-							);
-			$optInTemplate->setByArray( $options );
-			$optInHtml = $optInTemplate->getHTML();
-			$contentHtml = $optInHtml;
-			$applicationTemplate = $this->getApplicationTemplate();
-			$options = array(
-							'htmlTitle' => wfMsg( 'mobile-frontend-opt-in-title' ),
-							'searchWebkitHtml' => $searchWebkitHtml,
-							'contentHtml' => $contentHtml,
-							'footerHtml' => $footerHtml,
-							);
-			$applicationTemplate->setByArray( $options );
-			$applicationHtml = $applicationTemplate->getHTML();
-			wfProfileOut( __METHOD__ );
-			return $applicationHtml;
-		}
-		wfProfileOut( __METHOD__ );
-		return '';
-	}
-
-	/**
-	 * @return string
-	 */
-	private function renderOptOutMobileSiteXHTML() {
-		wfProfileIn( __METHOD__ );
-		if ( $this->contentFormat == 'XHTML' ) {
-			$this->getMsg();
-			$searchTemplate = $this->getSearchTemplate();
-			$searchWebkitHtml = $searchTemplate->getHTML();
-			$footerTemplate = $this->getFooterTemplate();
-			$footerHtml = $footerTemplate->getHTML();
-			$optOutTemplate = new OptOutTemplate();
-			$options = array(
-							'explainOptOut' => wfMsg( 'mobile-frontend-opt-out-explain' ),
-							'optOutMessage' => wfMsg( 'mobile-frontend-opt-out-message' ),
-							'yesButton' => wfMsg( 'mobile-frontend-opt-out-yes-button' ),
-							'noButton' => wfMsg( 'mobile-frontend-opt-out-no-button' ),
-							'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
-							);
-			$optOutTemplate->setByArray( $options );
-			$optOutHtml = $optOutTemplate->getHTML();
-			$contentHtml = $optOutHtml;
-			$applicationTemplate = $this->getApplicationTemplate();
-			$options = array(
-							'htmlTitle' => wfMsg( 'mobile-frontend-opt-out-title' ),
-							'searchWebkitHtml' => $searchWebkitHtml,
-							'contentHtml' => $contentHtml,
-							'footerHtml' => $footerHtml,
-							);
-			$applicationTemplate->setByArray( $options );
-			$applicationHtml = $applicationTemplate->getHTML();
-			wfProfileOut( __METHOD__ );
-			return $applicationHtml;
-		}
-		wfProfileOut( __METHOD__ );
-		return '';
-	}
-
-	/**
 	 * @return DomElement
 	 */
 	public function renderLogin() {
@@ -949,11 +883,13 @@ class ExtMobileFrontend {
 		}
 		wfProfileOut( __METHOD__ . '-beta' );
 
-		wfProfileIn( __METHOD__ . '-filter' );
-		$formatter->removeImages( self::$disableImages == 1 );
-		$formatter->whitelistIds( 'zero-language-search' );
-		$formatter->filterContent();
-		wfProfileOut( __METHOD__ . '-filter' );
+		if ( $this->contentTransformations ) {
+			wfProfileIn( __METHOD__ . '-filter' );
+			$formatter->removeImages( self::$disableImages == 1 );
+			$formatter->whitelistIds( 'zero-language-search' );
+			$formatter->filterContent();
+			wfProfileOut( __METHOD__ . '-filter' );
+		}
 
 		wfProfileIn( __METHOD__ . '-userlogin' );
 		if ( self::$title->isSpecial( 'Userlogin' ) ) {
@@ -1425,6 +1361,11 @@ class ExtMobileFrontend {
 		$action = $this->getAction();
 		if ( $action === 'edit' || $action === 'history' ) {
 			return false;
+		}
+
+		// May be overridden programmatically
+		if ( $this->forceMobileView ) {
+			return true;
 		}
 
 		// always display desktop or mobile view if it's explicitly requested

@@ -83,6 +83,7 @@ $messages['en'] = array (
 	'mobile-frontend-footer-sitename' => 'Wikipedia',
 	'mobile-frontend-footer-license' => 'Content available under <a href="http://wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a><br /><a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Terms of Use</a>',
 	'mobile-frontend-footer-contact' => 'Contact',
+	'mobile-frontend-unknown-option' => 'Unrecognised option "$1".',
 );
 
 /** Message documentation (Message documentation)
@@ -129,6 +130,7 @@ $messages['qqq'] = array(
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
 	'mobile-frontend-footer-sitename' => 'Name of site',
 	'mobile-frontend-footer-license' => 'License shown in footer',
+	'mobile-frontend-unknown-option' => 'Error message shown by Special:MobileOptions',
 );
 
 /** Ṫuroyo (Ṫuroyo)

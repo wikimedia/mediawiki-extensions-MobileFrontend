@@ -30,6 +30,7 @@ $wgExtensionCredits['other'][] = array(
 
 $cwd = dirname( __FILE__ );
 $wgExtensionMessagesFiles['MobileFrontend'] = "$cwd/MobileFrontend.i18n.php";
+$wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.php";
 
 // autoload extension classes
 
@@ -46,14 +47,14 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'api/ApiParseExtender',
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
+	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
+
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
 	'SearchTemplate'  => 'templates/SearchTemplate',
 	'FooterTemplate' => 'templates/FooterTemplate',
 	'LeaveFeedbackTemplate' => 'templates/LeaveFeedbackTemplate',
 	'DisableTemplate' => 'templates/DisableTemplate',
-	'OptInTemplate' => 'templates/OptInTemplate',
-	'OptOutTemplate' => 'templates/OptOutTemplate',
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
 	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
@@ -150,6 +151,7 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
+$wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;
