@@ -39,7 +39,6 @@ class ExtMobileFrontend {
 	public static $useFormatCookieName;
 
 	protected $useFormat;
-	private $useFormatCookieChecked = false;
 
 	/**
 	 * @var string xDevice header information
@@ -1453,7 +1452,6 @@ class ExtMobileFrontend {
 
 	public function getUseFormat() {
 		global $wgRequest;
-		$this->checkUseFormatCookie();
 		if ( !isset( $this->useFormat ) ) {
 			$useFormat = $wgRequest->getText( 'useformat' );
 			$this->setUseFormat( $useFormat );
@@ -1467,10 +1465,6 @@ class ExtMobileFrontend {
 
 	public function checkUseFormatCookie() {
 		global $wgRequest, $wgScriptPath;
-		if ( $this->useFormatCookieChecked ) {
-			return;
-		}
-		$this->useFormatCookieChecked = true;
 
 		if ( !isset( self::$useFormatCookieName ) ) {
 			self::$useFormatCookieName = 'mf_useformat';
