@@ -161,9 +161,9 @@ class ExtMobileFrontend {
 	public function getSite( &$site, &$lang ) {
 		global $wgConf;
 		wfProfileIn( __METHOD__ );
-		$DB = wfGetDB( DB_MASTER );
-		$DBName = $DB->getDBname();
-		list( $site, $lang ) = $wgConf->siteFromDB( $DBName );
+		$dbr = wfGetDB( DB_SLAVE );
+		$dbName = $dbr->getDBname();
+		list( $site, $lang ) = $wgConf->siteFromDB( $dbName );
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
