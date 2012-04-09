@@ -24,12 +24,16 @@ body {
 	height: 20px;
 	background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
 	margin: 0;
-	display: block;
+	display: none;
 	background-position: right center;
 	-webkit-background-size: auto 12px;
 	background-size: auto 12px;
 	cursor: pointer;
 	position: absolute;
+}
+
+.notEmpty .clearlink {
+	display: block;
 }
 
 html[dir="rtl"] .clearlink {

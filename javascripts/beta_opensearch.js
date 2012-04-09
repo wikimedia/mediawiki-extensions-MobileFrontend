@@ -63,7 +63,10 @@ MobileFrontend.opensearch = (function() {
 		var value = search.value;
 		if( value.length > 1 && value !== oldValue ) {
 			oldValue = value;
+			u( sb ).addClass( 'notEmpty' );
 			performSearch();
+		} else if( !value ) {
+			u( sb ).removeClass( 'notEmpty' );
 		}
 	}, typingDelay);
 
