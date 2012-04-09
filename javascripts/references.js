@@ -108,7 +108,9 @@ if( typeof jQuery !== 'undefined' ) {
 				el.ontouchstart = cancelBubble;
 			});
 			$( document.body ).bind( 'click', close );
-			document.body.ontouchstart = close;
+			$( document.body ).bind( 'touchstart', function() {
+				$( '#mf-references' ).hide();
+			});
 		}
 		init();
 	}(jQuery));
