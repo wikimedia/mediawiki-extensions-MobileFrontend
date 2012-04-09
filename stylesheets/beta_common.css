@@ -26,6 +26,7 @@ body {
 	margin: 0;
 	display: block;
 	background-position: right center;
+	-webkit-background-size: auto 12px;
 	background-size: auto 12px;
 	cursor: pointer;
 	position: absolute;
@@ -313,6 +314,7 @@ button.hide {
 	background: url(images/hide.png);
 	background-repeat: no-repeat;
 	background-position: right center;
+	-webkit-background-size: auto 9px;
 	background-size: auto 9px;
 }
 
@@ -320,6 +322,7 @@ button.hide {
 	background: url(images/show.png);
 	background-repeat: no-repeat;
 	background-position: right center;
+	-webkit-background-size: auto 9px;
 	background-size: auto 9px;
 }
 
@@ -625,6 +628,7 @@ html[dir="rtl"] #logo {
 	top: 0px;
 	border: 0;
 	background: url(images/s.gif) no-repeat center left;
+	-webkit-background-size: 27px 25px; /* use -webkit prefix for older android browsers eg. nexus 1 */
 	background-size: 27px 25px;
 	height: 40px;
 	width: 27px;
@@ -850,6 +854,7 @@ full screen search css
 	line-height: 40px;
 	background: url(images/arrow-left-beta.png) no-repeat scroll 0 0 transparent;
 	background-position: left center;
+	-webkit-background-size: auto 18px;
 	background-size: auto 18px;
 	cursor: pointer;
 	left: 24px;
@@ -1051,6 +1056,7 @@ this is so that toggling can scroll it into view
 	background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
 	margin: 0;
 	background-position: right center;
+	-webkit-background-size: auto 12px;
 	background-size: auto 12px;
 	cursor: pointer;
 	position: absolute;
