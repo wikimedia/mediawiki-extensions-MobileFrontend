@@ -79,7 +79,7 @@ MobileFrontend.toggle = (function() {
 	}
 
 	function wm_toggle_section( section_id ) {
-		var b = document.getElementById( 'section_' + section_id ),
+		var b = document.getElementById( 'section_' + section_id ), id,
 			bb = b.getElementsByTagName( 'button' ), i, s, e, closed;
 		if( u(b).hasClass( 'openSection' ) ) {
 			u(b).removeClass( 'openSection' );
@@ -96,7 +96,11 @@ MobileFrontend.toggle = (function() {
 			}
 		}
 		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
-		window.location.hash = closed ? '#_' : '#section_' + section_id;
+		id = 'section_' + section_id;
+		e = document.getElementById( id );
+		e.removeAttribute( 'id' );
+		window.location.hash = closed ? '#_' : '#' + id;
+		e.setAttribute( 'id', id );
 	}
 
 	init();
