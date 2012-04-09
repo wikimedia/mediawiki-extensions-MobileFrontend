@@ -8,7 +8,7 @@ class ThanksNoticeTemplate extends MobileFrontendTemplate {
 
 	public function getHTML() {
 
-		$thanks = $this->data['messages']['mobile-frontend-leave-feedback-thanks'];
+		$thanks = wfMessage( 'mobile-frontend-leave-feedback-thanks' )->escaped();
 
 		$noticeHtml = <<<HTML
 			<div class='mwm-message mwm-notice'>

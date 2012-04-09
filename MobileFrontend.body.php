@@ -10,11 +10,8 @@ class ExtMobileFrontend {
 	public static $title;
 	public static $messages = array();
 	public static $htmlTitle;
-	public static $dir;
-	public static $code;
 	public static $device;
 	public static $headings;
-	public static $mainPageUrl;
 	public static $randomPageUrl;
 	public static $format;
 	public static $search;
@@ -23,10 +20,7 @@ class ExtMobileFrontend {
 	public static $enableImages;
 	public static $isMainPage = false;
 	public static $searchField;
-	public static $disableImagesURL;
-	public static $enableImagesURL;
 	public static $viewNormalSiteURL;
-	public static $currentURL;
 	public static $displayNoticeId;
 	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
@@ -66,60 +60,6 @@ class ExtMobileFrontend {
 	 * @var WmlContext
 	 */
 	private $wmlContext;
-
-	public static $messageKeys = array(
-		'mobile-frontend-show-button',
-		'mobile-frontend-hide-button',
-		'mobile-frontend-empty-homepage',
-		'mobile-frontend-back-to-top-of-section',
-		'mobile-frontend-regular-site',
-		'mobile-frontend-home-button',
-		'mobile-frontend-random-button',
-		'mobile-frontend-are-you-sure',
-		'mobile-frontend-explain-disable',
-		'mobile-frontend-disable-button',
-		'mobile-frontend-back-button',
-		'mobile-frontend-opt-in-message',
-		'mobile-frontend-opt-in-yes-button',
-		'mobile-frontend-opt-in-no-button',
-		'mobile-frontend-opt-in-title',
-		'mobile-frontend-opt-out-message',
-		'mobile-frontend-opt-out-yes-button',
-		'mobile-frontend-opt-out-no-button',
-		'mobile-frontend-opt-out-title',
-		'mobile-frontend-opt-in-explain',
-		'mobile-frontend-opt-out-explain',
-		'mobile-frontend-disable-images',
-		'mobile-frontend-wml-continue',
-		'mobile-frontend-wml-back',
-		'mobile-frontend-enable-images',
-		'mobile-frontend-featured-article',
-		'mobile-frontend-news-items',
-		'mobile-frontend-leave-feedback-title',
-		'mobile-frontend-leave-feedback-notice',
-		'mobile-frontend-leave-feedback-subject',
-		'mobile-frontend-leave-feedback-message',
-		'mobile-frontend-leave-feedback-cancel',
-		'mobile-frontend-leave-feedback-submit',
-		'mobile-frontend-leave-feedback-link-text',
-		'mobile-frontend-leave-feedback',
-		'mobile-frontend-feedback-page',
-		'mobile-frontend-leave-feedback-thanks',
-		'mobile-frontend-search-submit',
-		'mobile-frontend-language',
-		'mobile-frontend-username',
-		'mobile-frontend-password',
-		'mobile-frontend-login',
-		'mobile-frontend-placeholder',
-		'mobile-frontend-dismiss-notification',
-		'mobile-frontend-sopa-notice',
-		'mobile-frontend-clear-search',
-		'mobile-frontend-footer-more',
-		'mobile-frontend-footer-less',
-		'mobile-frontend-footer-contact',
-		'mobile-frontend-footer-sitename',
-		'mobile-frontend-footer-license',
-	);
 
 	public function __construct() {
 		global $wgMFConfigProperties;
@@ -263,40 +203,13 @@ class ExtMobileFrontend {
 		global $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgOut, $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 
-		self::$disableImagesURL = $wgRequest->escapeAppendQuery( 'disableImages=1' );
-		self::$enableImagesURL = $wgRequest->escapeAppendQuery( 'enableImages=1' );
 		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'useformat=desktop' ) ) );
-		self::$currentURL = $wgRequest->getFullRequestURL();
 		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
-
-		$skin = RequestContext::getMain()->getSkin();
-		$copyright = $skin->getCopyright();
-
-		// Need to stash the results of the "wfMsg" call before the Output Buffering handler
-		// because at this point the database connection is shut down, etc.
-
-		self::$messages['mobile-frontend-footer-copyright'] = $copyright;
-
-		foreach ( self::$messageKeys as $messageKey ) {
-
-			if ( $messageKey == 'mobile-frontend-leave-feedback-notice' ) {
-				$linkText = wfMsg( 'mobile-frontend-leave-feedback-link-text' );
-				$linkTarget = wfMsgNoTrans( 'mobile-frontend-feedback-page' );
-				self::$messages[$messageKey] = wfMsgExt( $messageKey, array( 'replaceafter' ), Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getFullURL(), 'target' => '_blank' ), $linkText ) );
-			} elseif ( $messageKey == 'mobile-frontend-feedback-page' ) {
-				self::$messages[$messageKey] = wfMsgNoTrans( $messageKey );
-			} else {
-				self::$messages[$messageKey] = wfMsg( $messageKey );
-			}
-		}
-
-		self::$dir = $wgContLang->getDir();
-		self::$code = $wgContLang->getCode();
 
 		$languageUrls = array();
 
 		$languageUrls[] = array(
-			'href' => self::$currentURL,
+			'href' => $wgRequest->getFullRequestURL(),
 			'text' => self::$htmlTitle,
 			'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
 			'class' => 'interwiki-' . $wgLanguageCode,
@@ -329,7 +242,6 @@ class ExtMobileFrontend {
 				? $wgMobileRedirectFormAction
 				: "{$wgServer}/w/mobileRedirect.php";
 
-		self::$mainPageUrl = Title::newMainPage()->getLocalUrl();
 		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -466,7 +378,7 @@ class ExtMobileFrontend {
 			$message = $wgRequest->getText( 'message', '' );
 			$token = $wgRequest->getText( 'edittoken', '' );
 
-			$title = Title::newFromText( self::$messages['mobile-frontend-feedback-page'] );
+			$title = Title::newFromText( wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain() );
 
 			if ( $title->userCan( 'edit' ) &&
 				!$wgUser->isBlockedFrom( $title ) &&
@@ -751,22 +663,30 @@ class ExtMobileFrontend {
 			$footerTemplate = $this->getFooterTemplate();
 			$footerHtml = $footerTemplate->getHTML();
 			$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
+			$linkText = wfMsg( 'mobile-frontend-leave-feedback-link-text' );
+			$linkTarget = wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain();
+			$leaveFeedbackText = wfMsgExt( 'mobile-frontend-leave-feedback-notice',
+				array( 'replaceafter' ),
+				Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getFullURL(), 'target' => '_blank' ),
+				$linkText )
+			);
+
 			$options = array(
 							'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
 							'editToken' => $wgUser->getEditToken(),
-							'title' => self::$messages['mobile-frontend-leave-feedback-title'],
-							'notice' => self::$messages['mobile-frontend-leave-feedback-notice'],
-							'subject' => self::$messages['mobile-frontend-leave-feedback-subject'],
-							'message' => self::$messages['mobile-frontend-leave-feedback-message'],
-							'cancel' => self::$messages['mobile-frontend-leave-feedback-cancel'],
-							'submit' => self::$messages['mobile-frontend-leave-feedback-submit'],
+							'title' => wfMsg( 'mobile-frontend-leave-feedback-title' ),
+							'notice' => $leaveFeedbackText,
+							'subject' => wfMsg( 'mobile-frontend-leave-feedback-subject' ),
+							'message' => wfMsg( 'mobile-frontend-leave-feedback-message' ),
+							'cancel' => wfMsg( 'mobile-frontend-leave-feedback-cancel' ),
+							'submit' => wfMsg( 'mobile-frontend-leave-feedback-submit' ),
 							);
 			$leaveFeedbackTemplate->setByArray( $options );
 			$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
 			$contentHtml = $leaveFeedbackHtml;
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
-							'htmlTitle' => self::$messages['mobile-frontend-leave-feedback'],
+							'htmlTitle' => wfMsg( 'mobile-frontend-leave-feedback' ),
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
 							'footerHtml' => $footerHtml,
@@ -793,10 +713,10 @@ class ExtMobileFrontend {
 			$footerHtml = $footerTemplate->getHTML();
 			$optInTemplate = new OptInTemplate();
 			$options = array(
-							'explainOptIn' => self::$messages['mobile-frontend-opt-in-explain'],
-							'optInMessage' => self::$messages['mobile-frontend-opt-in-message'],
-							'yesButton' => self::$messages['mobile-frontend-opt-in-yes-button'],
-							'noButton' => self::$messages['mobile-frontend-opt-in-no-button'],
+							'explainOptIn' => wfMsg( 'mobile-frontend-opt-in-explain' ),
+							'optInMessage' => wfMsg( 'mobile-frontend-opt-in-message' ),
+							'yesButton' => wfMsg( 'mobile-frontend-opt-in-yes-button' ),
+							'noButton' => wfMsg( 'mobile-frontend-opt-in-no-button' ),
 							'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
 							);
 			$optInTemplate->setByArray( $options );
@@ -804,7 +724,7 @@ class ExtMobileFrontend {
 			$contentHtml = $optInHtml;
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
-							'htmlTitle' => self::$messages['mobile-frontend-opt-in-title'],
+							'htmlTitle' => wfMsg( 'mobile-frontend-opt-in-title' ),
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
 							'footerHtml' => $footerHtml,
@@ -831,10 +751,10 @@ class ExtMobileFrontend {
 			$footerHtml = $footerTemplate->getHTML();
 			$optOutTemplate = new OptOutTemplate();
 			$options = array(
-							'explainOptOut' => self::$messages['mobile-frontend-opt-out-explain'],
-							'optOutMessage' => self::$messages['mobile-frontend-opt-out-message'],
-							'yesButton' => self::$messages['mobile-frontend-opt-out-yes-button'],
-							'noButton' => self::$messages['mobile-frontend-opt-out-no-button'],
+							'explainOptOut' => wfMsg( 'mobile-frontend-opt-out-explain' ),
+							'optOutMessage' => wfMsg( 'mobile-frontend-opt-out-message' ),
+							'yesButton' => wfMsg( 'mobile-frontend-opt-out-yes-button' ),
+							'noButton' => wfMsg( 'mobile-frontend-opt-out-no-button' ),
 							'formAction' => wfExpandUrl( Title::newMainPage()->getFullURL(), PROTO_CURRENT ),
 							);
 			$optOutTemplate->setByArray( $options );
@@ -842,7 +762,7 @@ class ExtMobileFrontend {
 			$contentHtml = $optOutHtml;
 			$applicationTemplate = $this->getApplicationTemplate();
 			$options = array(
-							'htmlTitle' => self::$messages['mobile-frontend-opt-out-title'],
+							'htmlTitle' => wfMsg( 'mobile-frontend-opt-out-title' ),
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
 							'footerHtml' => $footerHtml,
@@ -872,7 +792,7 @@ class ExtMobileFrontend {
 				Html::openElement( 'td',
 					array( 'class' => 'mw-label' ) ) .
 				Html::element( 'label',
-		 			array( 'for' => 'wpName1' ), self::$messages['mobile-frontend-username'] ) .
+		 			array( 'for' => 'wpName1' ), wfMsg( 'mobile-frontend-username' ) ) .
 				Html::closeElement( 'td' ) .
 				Html::closeElement( 'tr' ) .
 				Html::openElement( 'tr' ) .
@@ -889,7 +809,7 @@ class ExtMobileFrontend {
 				Html::openElement( 'td',
 					array( 'class' => 'mw-label' ) ) .
 				Html::element( 'label',
-		 			array( 'for' => 'wpPassword1' ), self::$messages['mobile-frontend-password'] ) .
+		 			array( 'for' => 'wpPassword1' ), wfMsg( 'mobile-frontend-password' ) ) .
 				Html::closeElement( 'td' ) .
 				Html::closeElement( 'tr' ) .
 				Html::openElement( 'tr' ) .
@@ -908,7 +828,7 @@ class ExtMobileFrontend {
 				Html::openElement( 'tr' ) .
 				Html::openElement( 'td',
 					array( 'class' => 'mw-submit' ) ) .
-				Html::input( 'wpLoginAttempt', self::$messages['mobile-frontend-login'], 'submit',
+				Html::input( 'wpLoginAttempt', wfMsg( 'mobile-frontend-login' ), 'submit',
 					array( 'id' => 'wpLoginAttempt',
 						   'tabindex' => '3' ) ) .
 				Html::closeElement( 'td' ) .
@@ -946,7 +866,7 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public function DOMParse( $html ) {
-		global $wgScript;
+		global $wgScript, $wgContLang;
 		wfProfileIn( __METHOD__ );
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
@@ -986,14 +906,14 @@ class ExtMobileFrontend {
 					$ptAnonLoginLinkHref = $ptAnonLoginLink->getAttributeNode( 'href' );
 					$ptAnonLoginLinkTitle = $ptAnonLoginLink->getAttributeNode( 'title' );
 					if ( $ptAnonLoginLinkTitle ) {
-						$ptAnonLoginLinkTitle->nodeValue = self::$messages['mobile-frontend-login'];
+						$ptAnonLoginLinkTitle->nodeValue = wfMsg( 'mobile-frontend-login' );
 					}
 					if ( $ptAnonLoginLinkHref ) {
 						$ptAnonLoginLinkHref->nodeValue = str_replace( "&", "&amp;", $ptAnonLoginLinkHref->nodeValue );
 					}
 					$ptAnonLoginLinkText = $ptAnonLoginLink->firstChild;
 					if ( $ptAnonLoginLinkText ) {
-						$ptAnonLoginLinkText->nodeValue = self::$messages['mobile-frontend-login'];
+						$ptAnonLoginLinkText->nodeValue = wfMsg( 'mobile-frontend-login' );
 					}
 				}
 				self::$loginHtml = $doc->saveXML( $ptAnonLoginLink, LIBXML_NOEMPTYTAG );
@@ -1051,19 +971,19 @@ class ExtMobileFrontend {
 
 			// Wml for searching
 			$prepend = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
-				'<do type="accept" label="' . self::$messages['mobile-frontend-search-submit'] . '">' .
+				'<do type="accept" label="' . wfMsg( 'mobile-frontend-search-submit' ) . '">' .
 				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';
 			$contentHtml = $prepend . $contentHtml;
 
 			$applicationWmlTemplate = new ApplicationWmlTemplate();
 			$options = array(
-							'mainPageUrl' => self::$mainPageUrl,
+							'mainPageUrl' => Title::newMainPage()->getLocalUrl(),
 							'randomPageUrl' => self::$randomPageUrl,
-							'dir' => self::$dir,
-							'code' => self::$code,
+							'dir' => $wgContLang->getDir(),
+							'code' => $wgContLang->getCode(),
 							'contentHtml' => $contentHtml,
-							'homeButton' => self::$messages['mobile-frontend-home-button'],
-							'randomButton' => self::$messages['mobile-frontend-random-button'],
+							'homeButton' => wfMsg( 'mobile-frontend-home-button' ),
+							'randomButton' => wfMsg( 'mobile-frontend-random-button' ),
 							);
 			$applicationWmlTemplate->setByArray( $options );
 			$applicationHtml = $applicationWmlTemplate->getHTML();
@@ -1130,7 +1050,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getFooterTemplate() {
-		global $wgExtensionAssetsPath, $wgLanguageCode;
+		global $wgExtensionAssetsPath, $wgLanguageCode, $wgRequest, $wgContLang;
 		wfProfileIn( __METHOD__ );
 		$footerTemplate = new FooterTemplate();
 		$logoutHtml = ( self::$logoutHtml ) ? self::$logoutHtml : '';
@@ -1140,11 +1060,11 @@ class ExtMobileFrontend {
 						'leaveFeedbackURL' => self::$leaveFeedbackURL,
 						'viewNormalSiteURL' => self::$viewNormalSiteURL,
 						'disableImages' => self::$disableImages,
-						'disableImagesURL' => self::$disableImagesURL,
-						'enableImagesURL' => self::$enableImagesURL,
+						'disableImagesURL' => $wgRequest->escapeAppendQuery( 'disableImages=1' ),
+						'enableImagesURL' => $wgRequest->escapeAppendQuery( 'enableImages=1' ),
 						'logoutHtml' => $logoutHtml,
 						'loginHtml' => $loginHtml,
-						'code' => self::$code,
+						'code' => $wgContLang->getCode(),
 						'language-code' => 'en',
 						'copyright-symbol' => $wgLanguageCode === 'en' ? '®': '™',
 						'copyright-has-logo' => $wgLanguageCode === 'en',
@@ -1164,7 +1084,7 @@ class ExtMobileFrontend {
 		$options = array(
 						'viewNormalSiteURL' => self::$viewNormalSiteURL,
 						'searchField' => self::$searchField,
-						'mainPageUrl' => self::$mainPageUrl,
+						'mainPageUrl' => Title::newMainPage()->getLocalUrl(),
 						'randomPageUrl' => self::$randomPageUrl,
 						'messages' => self::$messages,
 						'hideSearchBox' => self::$hideSearchBox,
@@ -1180,7 +1100,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getApplicationTemplate() {
-		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath, $wgCookiePath, $wgOut;
+		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath, $wgCookiePath, $wgOut, $wgContLang;
 		wfProfileIn( __METHOD__ );
 		if( self::$isBetaGroupMember ) {
 			$wgOut->addModuleStyles( 'ext.mobileFrontendBeta' );
@@ -1190,10 +1110,10 @@ class ExtMobileFrontend {
 		$cssLinks = $wgOut->buildCssLinks();
 		$applicationTemplate = new ApplicationTemplate();
 		$options = array(
-						'dir' => self::$dir,
-						'code' => self::$code,
-						'placeholder' => self::$messages['mobile-frontend-placeholder'],
-						'dismissNotification' => self::$messages['mobile-frontend-dismiss-notification'],
+						'dir' => $wgContLang->getDir(),
+						'code' => $wgContLang->getCode(),
+						'placeholder' => wfMsg( 'mobile-frontend-placeholder' ),
+						'dismissNotification' => wfMsg( 'mobile-frontend-dismiss-notification' ),
 						'wgAppleTouchIcon' => $wgAppleTouchIcon,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
 						'minifyJS' => self::$minifyJS,
@@ -1203,9 +1123,9 @@ class ExtMobileFrontend {
 						'wgScriptPath' => $wgScriptPath,
 						'isFilePage' => self::$isFilePage,
 						'zeroRatedBanner' => self::$zeroRatedBanner,
-						'showText' => self::$messages[ 'mobile-frontend-show-button' ],
-						'hideText' => self::$messages[ 'mobile-frontend-hide-button' ],
-						'configure-empty-homepage' => self::$messages[ 'mobile-frontend-empty-homepage' ],
+						'showText' => wfMsg(  'mobile-frontend-show-button'  ),
+						'hideText' => wfMsg(  'mobile-frontend-hide-button'  ),
+						'configure-empty-homepage' => wfMsg(  'mobile-frontend-empty-homepage'  ),
 						'useFormatCookieName' => self::$useFormatCookieName,
 						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
 						'useFormatCookiePath' => $wgCookiePath,

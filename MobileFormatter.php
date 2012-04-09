@@ -9,7 +9,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected $format;
 
 	/**
-	 * @var Ttile
+	 * @var Title
 	 */
 	protected $title;
 

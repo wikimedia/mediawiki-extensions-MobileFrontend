@@ -9,13 +9,12 @@ class SearchTemplate extends MobileFrontendTemplate {
 	public function getHTML() {
 
 		$searchField = Sanitizer::encodeAttribute( $this->data['searchField'] );
-		$mainPageUrl = $this->data['mainPageUrl'];
-		$randomPageUrl = $this->data['randomPageUrl'];
-		$homeButton = $this->data['messages']['mobile-frontend-home-button'];
-		$randomButton = $this->data['messages']['mobile-frontend-random-button'];
-		$clearText = Sanitizer::encodeAttribute( $this->data['messages']['mobile-frontend-clear-search'] );
-		$searchValue = $this->data['messages']['mobile-frontend-search-submit'];
-		$placeholder = Sanitizer::encodeAttribute( $this->data['messages']['mobile-frontend-placeholder'] );
+		$mainPageUrl = Sanitizer::encodeAttribute( $this->data['mainPageUrl'] );
+		$randomPageUrl = Sanitizer::encodeAttribute( $this->data['randomPageUrl'] );
+		$homeButton = wfMessage( 'mobile-frontend-home-button' )->escaped();
+		$randomButton = wfMessage( 'mobile-frontend-random-button' )->escaped();
+		$clearText = Sanitizer::encodeAttribute( wfMsg( 'mobile-frontend-clear-search' ) );
+		$placeholder = Sanitizer::encodeAttribute( wfMsg( 'mobile-frontend-placeholder' ) );
 
 		$scriptUrl = wfScript();
 		$searchBoxDisplayNone = ( $this->data['hideSearchBox'] ) ? ' style="display: none;" ' : '';
@@ -25,11 +24,11 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$openSearchResults = '<div id="results"></div>';
 
 		$languageSelection = $this->data['buildLanguageSelection'] . '<br/>';
-		$languageSelectionText = '<b>' . $this->data['messages']['mobile-frontend-language'] . ':</b><br/>';
+		$languageSelectionText = '<b>' . wfMessage( 'mobile-frontend-language' )->escaped() . ':</b><br/>';
 		$languageSelectionDiv = $languageSelectionText . $languageSelection;
 
-		$regularSite = $this->data['messages']['mobile-frontend-regular-site'];
-		$viewNormalSiteURL = $this->data['viewNormalSiteURL'];
+		$regularSite = wfMessage( 'mobile-frontend-regular-site' )->escaped();
+		$viewNormalSiteURL = Sanitizer::encodeAttribute( $this->data['viewNormalSiteURL'] );
 
 		$searchWebkitHtml = <<<HTML
 		<div id='header'>

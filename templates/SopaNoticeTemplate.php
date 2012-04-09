@@ -8,7 +8,7 @@ class SopaNoticeTemplate extends MobileFrontendTemplate {
 
 	public function getHTML() {
 
-		$sopaNotice = $this->data['messages']['mobile-frontend-sopa-notice'];
+		$sopaNotice = wfMessage( 'mobile-frontend-sopa-notice' )->escaped();
 
 		$noticeHtml = <<<HTML
 			<div class='mwm-message mwm-notice'>
