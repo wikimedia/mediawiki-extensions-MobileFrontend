@@ -197,3 +197,15 @@ function efExtMobileFrontendUnitTests( &$files ) {
  * Whether this extension should provide its extracts to OpenSearchXml extension
  */
 $wgMFExtendOpenSearchXml = false;
+
+// enable ResourceLoader for css
+$wgResourceModules['ext.mobileFrontend'] = array(
+	'styles' => array( 'stylesheets/common.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+$wgResourceModules['ext.mobileFrontendBeta'] = array(
+	'styles' => 'stylesheets/beta_common.css',
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
