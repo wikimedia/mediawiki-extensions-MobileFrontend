@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAI3//9Vg\u003d",
+        "filename": "templates/FooterTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 124
+      },
+      "writtenOn": "2012-04-09T16:49:40Z",
+      "side": 1,
+      "message": "Is there a reason for this $copyright \u003d $copyright;?",
+      "revId": "0d44bbe3942965d3b468f94be23a187a80f406f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
