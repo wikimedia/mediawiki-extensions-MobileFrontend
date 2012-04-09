@@ -939,7 +939,7 @@ html[dir="rtl"] #footer .toggleCopyright {
 }
 
 #section_footer {
-	color: #818181;
+	color: #333;
 }
 
 .toggleCopyright .hide,
@@ -990,7 +990,7 @@ this is so that toggling can scroll it into view
 #footer .links li {
 	display: block;
 	width: 25%;
-	font-size: 0.7em;
+	font-size: 1.1em;
 	float: left;
 	text-align: center;
 }
