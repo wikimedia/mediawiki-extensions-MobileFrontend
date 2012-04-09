@@ -1060,6 +1060,7 @@ this is so that toggling can scroll it into view
 	cursor: pointer;
 	position: absolute;
 	text-indent: -999px;
+	overflow: hidden;
 	border: none;
 }
 
