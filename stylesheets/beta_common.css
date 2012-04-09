@@ -15,6 +15,7 @@ body {
 	background: white;
 	font-family: sans-serif;
 	word-break: break-word;
+	-webkit-text-size-adjust: 100%;
 }
 
 .clearlink {
