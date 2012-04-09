@@ -23,12 +23,6 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	protected $wmlContext;
 
-	/**
-	 * Message cache, false if they should be loaded dynamically
-	 * @var Array|bool
-	 */
-	protected $messages = false;
-
 	private static $defaultItemsToRemove = array(
 		'#contentSub',
 		'div.messagebox',
@@ -81,14 +75,6 @@ class MobileFormatter extends HtmlFormatter {
 		}
 		$this->wmlContext = $wmlContext;
 		$this->flattenRedLinks();
-	}
-
-	/**
-	 * Use the given message cache
-	 * @param Array $messages
-	 */
-	public function useMessages( Array $messages ) {
-		$this->messages = $messages;
 	}
 
 	/**
@@ -332,12 +318,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return string
 	 */
 	protected function msg( $key ) {
-		if ( !$this->messages ) {
-			return wfMsg( $key );
-		} elseif ( isset( $this->messages[$key] ) ) {
-			return $this->messages[$key];
-		}
-		throw new MWException( __METHOD__ . ": unrecognised message key '$key' in cached mode" );
+		return wfMsg( $key );
 	}
 
 	/**
