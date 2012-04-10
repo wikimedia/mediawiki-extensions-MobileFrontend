@@ -1,3 +1,5 @@
+/*global document, window, MobileFrontend*/
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
 		var calculatePosition = function() {}, hashtest, options = {}, wasVisible;
@@ -39,12 +41,15 @@ if( typeof jQuery !== 'undefined' ) {
 		}
 
 		function init() {
-			var el = $( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body )[0];
+			var el, close, lastLink, data, html, href, references = collect();
+			$("#mf-references").remove();
+			el = $( '<div id="mf-references"><div></div></div>' ).hide().
+				appendTo( document.body )[0];
 			function cancelBubble( ev ) {
 				ev.stopPropagation();
 			}
 			el.ontouchstart = cancelBubble;
-			var close = function() {
+			close = function() {
 				var top;
 				lastLink = null;
 				if( options.animation === 'none' ) {
@@ -63,7 +68,7 @@ if( typeof jQuery !== 'undefined' ) {
 				} else {
 					$( '#mf-references' ).fadeOut( options.animationSpeed );
 				}
-			}, lastLink, data, html, href, references = collect();
+			};
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
 
@@ -107,11 +112,14 @@ if( typeof jQuery !== 'undefined' ) {
 			$( 'sup a' ).unbind('click').click( clickReference ).each(function(i, el) {
 				el.ontouchstart = cancelBubble;
 			});
-			$( document.body ).bind( 'click', close );
-			$( document.body ).bind( 'touchstart', function() {
-				$( '#mf-references' ).hide();
-			});
 		}
+		$( document.body ).bind( 'click', close );
+		$( document.body ).bind( 'touchstart', function() {
+			$( '#mf-references' ).hide();
+		});
 		init();
+		return {
+			init: init
+		};
 	}(jQuery));
 }
