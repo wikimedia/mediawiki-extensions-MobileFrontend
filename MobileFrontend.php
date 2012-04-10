@@ -54,7 +54,6 @@ $autoloadClasses = array (
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
 	'SearchTemplate'  => 'templates/SearchTemplate',
 	'FooterTemplate' => 'templates/FooterTemplate',
-	'DisableTemplate' => 'templates/DisableTemplate',
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
 
