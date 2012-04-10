@@ -20,7 +20,6 @@ class ExtMobileFrontend {
 	public static $searchField;
 	public static $viewNormalSiteURL;
 	public static $displayNoticeId;
-	public static $leaveFeedbackURL;
 	public static $mobileRedirectFormAction;
 	public static $isBetaGroupMember = false;
 	public static $minifyJS = true;
@@ -241,7 +240,6 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ );
 
 		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'mobileaction=toggle_view_desktop' ) ) );
-		self::$leaveFeedbackURL = $wgRequest->escapeAppendQuery( 'mobileaction=leave_feedback' );
 
 		$languageUrls = array();
 
@@ -383,38 +381,6 @@ class ExtMobileFrontend {
 		// honor useformat=mobile-wap if it's set, otherwise determine by device
 		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : self::$device['view_format'];
 		$this->contentFormat = self::parseContentFormat( $viewFormat );
-
-		if ( $mobileAction == 'leave_feedback' ) {
-			echo $this->renderLeaveFeedbackXHTML();
-			wfProfileOut( __METHOD__ );
-			exit();
-		}
-
-		if ( $mobileAction == 'leave_feedback_post' ) {
-
-			$this->getMsg();
-
-			$subject = $wgRequest->getText( 'subject', '' );
-			$message = $wgRequest->getText( 'message', '' );
-			$token = $wgRequest->getText( 'edittoken', '' );
-
-			$title = Title::newFromText( wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain() );
-
-			if ( $title->userCan( 'edit' ) &&
-				!$wgUser->isBlockedFrom( $title ) &&
-				$wgUser->matchEditToken( $token ) ) {
-				$article = new Article( $title, 0 );
-				$rawtext = $article->getRawText();
-				$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$userAgent}</small> ";
-				$article->doEdit( $rawtext, '' );
-			}
-
-			$location = str_replace( '&mobileaction=leave_feedback_post', '', $wgRequest->getFullRequestURL() . '&noticeid=1&useformat=mobile' );
-			$location = $this->getRelativeURL( $location );
-			$wgRequest->response()->header( 'Location: ' . $location );
-			wfProfileOut( __METHOD__ );
-			exit();
-		}
 
 		$this->getMsg();
 		$this->disableCaching();
@@ -657,56 +623,6 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * @return string
-	 */
-	private function renderLeaveFeedbackXHTML() {
-		global $wgRequest, $wgUser;
-		wfProfileIn( __METHOD__ );
-		if ( $this->contentFormat == 'XHTML' ) {
-			$this->getMsg();
-			$searchTemplate = $this->getSearchTemplate();
-			$searchWebkitHtml = $searchTemplate->getHTML();
-			$footerTemplate = $this->getFooterTemplate();
-			$footerHtml = $footerTemplate->getHTML();
-			$leaveFeedbackTemplate = new LeaveFeedbackTemplate();
-			$linkText = wfMsg( 'mobile-frontend-leave-feedback-link-text' );
-			$linkTarget = wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain();
-			$leaveFeedbackText = wfMsgExt( 'mobile-frontend-leave-feedback-notice',
-				array( 'replaceafter' ),
-				Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getFullURL(), 'target' => '_blank' ),
-				$linkText )
-			);
-
-			$options = array(
-							'feedbackPostURL' => str_replace( '&mobileaction=leave_feedback', '', $wgRequest->getFullRequestURL() ) . '&mobileaction=leave_feedback_post',
-							'editToken' => $wgUser->getEditToken(),
-							'title' => wfMsg( 'mobile-frontend-leave-feedback-title' ),
-							'notice' => $leaveFeedbackText,
-							'subject' => wfMsg( 'mobile-frontend-leave-feedback-subject' ),
-							'message' => wfMsg( 'mobile-frontend-leave-feedback-message' ),
-							'cancel' => wfMsg( 'mobile-frontend-leave-feedback-cancel' ),
-							'submit' => wfMsg( 'mobile-frontend-leave-feedback-submit' ),
-							);
-			$leaveFeedbackTemplate->setByArray( $options );
-			$leaveFeedbackHtml = $leaveFeedbackTemplate->getHTML();
-			$contentHtml = $leaveFeedbackHtml;
-			$applicationTemplate = $this->getApplicationTemplate();
-			$options = array(
-							'htmlTitle' => wfMsg( 'mobile-frontend-leave-feedback' ),
-							'searchWebkitHtml' => $searchWebkitHtml,
-							'contentHtml' => $contentHtml,
-							'footerHtml' => $footerHtml,
-							);
-			$applicationTemplate->setByArray( $options );
-			$applicationHtml = $applicationTemplate->getHTML();
-			wfProfileOut( __METHOD__ );
-			return $applicationHtml;
-		}
-		wfProfileOut( __METHOD__ );
-		return '';
-	}
-
-	/**
 	 * @return DomElement
 	 */
 	public function renderLogin() {
@@ -923,14 +839,6 @@ class ExtMobileFrontend {
 
 		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
 			if ( !empty( self::$displayNoticeId ) ) {
-				if ( intval( self::$displayNoticeId ) === 1 ) {
-					$thanksNoticeTemplate = new ThanksNoticeTemplate();
-					$thanksNoticeTemplate->set( 'messages', self::$messages );
-					$noticeHtml = $thanksNoticeTemplate->getHTML();
-				}
-			}
-
-			if ( !empty( self::$displayNoticeId ) ) {
 				if ( intval( self::$displayNoticeId ) === 2 ) {
 					$sopaNoticeTemplate = new SopaNoticeTemplate();
 					$sopaNoticeTemplate->set( 'messages', self::$messages );
@@ -989,7 +897,8 @@ class ExtMobileFrontend {
 		$loginHtml = ( self::$loginHtml ) ? self::$loginHtml : '';
 		$options = array(
 						'messages' => self::$messages,
-						'leaveFeedbackURL' => self::$leaveFeedbackURL,
+						'leaveFeedbackURL' => SpecialPage::getTitleFor( 'MobileFeedback' )
+								->getLocalURL( array( 'returnto' => self::$title->getPrefixedText() ) ),
 						'viewNormalSiteURL' => self::$viewNormalSiteURL,
 						'disableImages' => $this->disableImages,
 						'disableImagesURL' => SpecialMobileOptions::getURL( 'DisableImages', self::$title ),

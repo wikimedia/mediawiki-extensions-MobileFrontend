@@ -47,17 +47,17 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'api/ApiParseExtender',
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
+	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
 	'SearchTemplate'  => 'templates/SearchTemplate',
 	'FooterTemplate' => 'templates/FooterTemplate',
-	'LeaveFeedbackTemplate' => 'templates/LeaveFeedbackTemplate',
 	'DisableTemplate' => 'templates/DisableTemplate',
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
-	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
+
 	'SkinMobile' => 'skins/SkinMobile',
 );
 
@@ -151,6 +151,7 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
+$wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 
 function efMobileFrontend_Setup() {
