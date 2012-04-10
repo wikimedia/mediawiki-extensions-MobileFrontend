@@ -11,11 +11,9 @@ class ExtMobileFrontend {
 	public static $messages = array();
 	public static $htmlTitle;
 	public static $device;
-	public static $headings;
 	public static $randomPageUrl;
 	public static $format;
 	public static $search;
-	public static $callback;
 	public static $isMainPage = false;
 	public static $searchField;
 	public static $viewNormalSiteURL;
@@ -361,7 +359,6 @@ class ExtMobileFrontend {
 		self::$displayNoticeId = $wgRequest->getText( 'noticeid', '' );
 
 		self::$format = $wgRequest->getText( 'format' );
-		self::$callback = $wgRequest->getText( 'callback' );
 		$this->wmlContext->setRequestedSegment( $wgRequest->getInt( 'seg', 0 ) );
 		self::$search = $wgRequest->getText( 'search' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
@@ -712,7 +709,7 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public function DOMParse( $html ) {
-		global $wgScript, $wgContLang;
+		global $wgScript, $wgContLang, $wgRequest;
 		wfProfileIn( __METHOD__ );
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
@@ -876,8 +873,9 @@ class ExtMobileFrontend {
 
 			$json = FormatJson::encode( $json_data );
 
-			if ( !empty( self::$callback ) ) {
-				$json = urlencode( htmlspecialchars( self::$callback ) ) . '(' . $json . ')';
+			$callback = $wgRequest->getText( 'callback' );
+			if ( !empty( $callback ) ) {
+				$json = urlencode( htmlspecialchars( $callback ) ) . '(' . $json . ')';
 			}
 			wfProfileOut( __METHOD__ . '-json' );
 
