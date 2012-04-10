@@ -334,6 +334,16 @@ class ExtMobileFrontend {
 		$this->setWmlContextFormat();
 		$mobileAction = $this->getMobileAction();
 
+		$bcRedirects = array(
+			'opt_in_mobile_site' => 'BetaOptIn',
+			'opt_out_mobile_site' => 'BetaOptOut',
+		);
+		if ( isset( $bcRedirects[$mobileAction] ) ) {
+			$location = SpecialPage::getTitleFor( 'MobileOptions', $bcRedirects[$mobileAction] )->getFullURL();
+			$wgRequest->response()->header( 'Location: ' . wfExpandUrl( $location ) );
+			exit;
+		}
+
 		if( $mobileAction == 'beta' ) {
 			self::$isBetaGroupMember = true;
 		}
