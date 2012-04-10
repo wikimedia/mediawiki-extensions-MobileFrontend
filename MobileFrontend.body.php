@@ -16,8 +16,6 @@ class ExtMobileFrontend {
 	public static $format;
 	public static $search;
 	public static $callback;
-	public static $disableImages;
-	public static $enableImages;
 	public static $isMainPage = false;
 	public static $searchField;
 	public static $viewNormalSiteURL;
@@ -38,6 +36,7 @@ class ExtMobileFrontend {
 	public static $zeroRatedBanner;
 	public static $useFormatCookieName;
 
+	protected $disableImages;
 	protected $useFormat;
 
 	/**
@@ -339,7 +338,7 @@ class ExtMobileFrontend {
 			'opt_out_mobile_site' => 'BetaOptOut',
 		);
 		if ( isset( $bcRedirects[$mobileAction] ) ) {
-			$location = SpecialPage::getTitleFor( 'MobileOptions', $bcRedirects[$mobileAction] )->getFullURL();
+			$location = SpecialMobileOptions::getUrl( $bcRedirects[$mobileAction], null, true );
 			$wgRequest->response()->header( 'Location: ' . wfExpandUrl( $location ) );
 			exit;
 		}
@@ -360,33 +359,8 @@ class ExtMobileFrontend {
 		}
 
 		self::$htmlTitle = $out->getHTMLTitle();
-		self::$disableImages = $wgRequest->getText( 'disableImages', 0 );
-		self::$enableImages = $wgRequest->getText( 'enableImages', 0 );
+		$this->disableImages = $wgRequest->getCookie( 'disableImages' );
 		self::$displayNoticeId = $wgRequest->getText( 'noticeid', '' );
-
-		if ( self::$disableImages == 1 ) {
-			$wgRequest->response()->setcookie( 'disableImages', 1 );
-			$location = str_replace( '?disableImages=1', '', str_replace( '&disableImages=1', '', $wgRequest->getFullRequestURL() ) );
-			$location = str_replace( '&mfi=1', '', str_replace( '&mfi=0', '', $location ) );
-			$location = $this->getRelativeURL( $location );
-			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=0' );
-		} elseif ( self::$disableImages == 0 ) {
-			$disableImages = $wgRequest->getCookie( 'disableImages' );
-			if ( $disableImages ) {
-				self::$disableImages = $disableImages;
-			}
-		}
-
-		if ( self::$enableImages == 1 ) {
-			$disableImages = $wgRequest->getCookie( 'disableImages' );
-			if ( $disableImages ) {
-				$wgRequest->response()->setcookie( 'disableImages', '' );
-			}
-			$location = str_replace( '?enableImages=1', '', str_replace( '&enableImages=1', '', $wgRequest->getFullRequestURL() ) );
-			$location = str_replace( '&mfi=1', '', str_replace( '&mfi=0', '', $location ) );
-			$location = $this->getRelativeURL( $location );
-			$wgRequest->response()->header( 'Location: ' . $location . '&mfi=1' );
-		}
 
 		self::$format = $wgRequest->getText( 'format' );
 		self::$callback = $wgRequest->getText( 'callback' );
@@ -895,7 +869,7 @@ class ExtMobileFrontend {
 
 		if ( $this->contentTransformations ) {
 			wfProfileIn( __METHOD__ . '-filter' );
-			$formatter->removeImages( self::$disableImages == 1 );
+			$formatter->removeImages( $this->disableImages );
 			$formatter->whitelistIds( 'zero-language-search' );
 			$formatter->filterContent();
 			wfProfileOut( __METHOD__ . '-filter' );
@@ -1017,9 +991,9 @@ class ExtMobileFrontend {
 						'messages' => self::$messages,
 						'leaveFeedbackURL' => self::$leaveFeedbackURL,
 						'viewNormalSiteURL' => self::$viewNormalSiteURL,
-						'disableImages' => self::$disableImages,
-						'disableImagesURL' => $wgRequest->escapeAppendQuery( 'disableImages=1' ),
-						'enableImagesURL' => $wgRequest->escapeAppendQuery( 'enableImages=1' ),
+						'disableImages' => $this->disableImages,
+						'disableImagesURL' => SpecialMobileOptions::getURL( 'DisableImages', self::$title ),
+						'enableImagesURL' => SpecialMobileOptions::getURL( 'EnableImages', self::$title ),
 						'logoutHtml' => $logoutHtml,
 						'loginHtml' => $loginHtml,
 						'code' => $wgContLang->getCode(),

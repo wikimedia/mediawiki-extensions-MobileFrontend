@@ -9,6 +9,8 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	private $options = array(
 		'BetaOptIn' => array( 'get' => 'betaOptInGet', 'post' => 'betaOptInPost' ),
 		'BetaOptOut' => array( 'get' => 'betaOptOutGet', 'post' => 'betaOptOutPost' ),
+		'EnableImages' => array( 'get' => 'enableImages' ),
+		'DisableImages' => array( 'get' => 'disableImages' )
 	);
 
 	public function __construct() {
@@ -38,6 +40,19 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			$func = $option['get'];
 		}
 		$this->$func();
+	}
+
+	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
+		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
+		$params = array();
+		if ( $returnTo ) {
+			$params['returnto'] = $returnTo->getPrefixedText();
+		}
+		if ( $fullUrl ) {
+			return $t->getFullURL( $params );
+		} else {
+			return $t->getLocalURL($params );
+		}
 	}
 
 	private function showEnquiryForm( $headingMsg, $textMsg, $yesButtonMsg, $noButtonMsg ) {
@@ -120,5 +135,14 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		global $wgExtMobileFrontend;
 		$wgExtMobileFrontend->setOptInOutCookie( '' );
 		$this->doReturnTo();
+	}
+
+	private function enableImages( $enable = true ) {
+		$this->getRequest()->response()->setcookie( 'disableImages', $enable ? '' : '1' );
+		$this->doReturnTo();
+	}
+
+	private function disableImages() {
+		$this->enableImages( false );
 	}
 }
