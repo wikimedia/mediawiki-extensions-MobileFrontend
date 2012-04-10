@@ -203,12 +203,12 @@ $wgMFExtendOpenSearchXml = false;
 
 // enable ResourceLoader for css
 $wgResourceModules['ext.mobileFrontend'] = array(
-	'styles' => array( 'stylesheets/common.css' ),
+	'styles' => array( 'stylesheets/common.css', 'stylesheets/hacks.css' ),
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );
 $wgResourceModules['ext.mobileFrontendBeta'] = array(
-	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/references.css' ),
+	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/references.css', 'stylesheets/hacks.css' ),
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );

@@ -1,0 +1,9 @@
+/* the following definitions exist to deal with certain inline styles
+and common.css definitions */
+
+.navbox .hlist dd,
+.navbox .hlist dt,
+.navbox .hlist li {
+	white-space: pre-wrap !important;
+	word-break: break-word;
+}
