@@ -143,83 +143,6 @@ h3#sopa-notice {
 	margin: 0px;
 }
 
-.section_heading {
-	cursor: pointer;
-}
-
-.section:nth-child(even) {
-	background-color: #f4f4f4;
-}
-
-.togglingEnabled button.hide,
-.togglingEnabled .openSection button.show {
-	display: none;
-}
-
-.togglingEnabled .openSection button.hide,
-.togglingEnabled button.show {
-	display: inline-block;
-}
-
-button.show,
-button.hide {
-	display: none; /* for non-js browsers */
-	overflow: hidden;
-	width: 27px;
-	height: 16px;
-	border: none;
-	text-indent: -999px;
-	float: right;
-	cursor: pointer;
-	opacity: 0.5;
-	cursor: pointer;
-	-webkit-transition: opacity 0.4s ease-in 0.4s;
-}
-
-.togglingEnabled button.hide {
-	background: url(images/hide.png);
-	background-repeat: no-repeat;
-	background-position: right center;
-	-webkit-background-size: auto 9px;
-	background-size: auto 9px;
-}
-
-.togglingEnabled button.show {
-	background: url(images/show.png);
-	background-repeat: no-repeat;
-	background-position: right center;
-	-webkit-background-size: auto 9px;
-	background-size: auto 9px;
-}
-
-.openSection button.hide,
-.openSection button.show {
-	opacity: 1;
-}
-
-.togglingEnabled .section_anchors {
-	display: none;
-}
-
-.togglingEnabled .content_block {
-	max-height: 0;
-	position: relative;
-	overflow: hidden;
-	-webkit-transition: max-height 0.4s ease-in-out;
-	-moz-transition: max-height 0.4s ease-in-out;
-	-o-transition: max-height 0.4s ease-in-out;
-	transition: max-height 0.4s ease-in-out;
-	margin-top: 14px;
-}
-
-.togglingEnabled .openSection.section_anchors {
-	display: block;
-}
-
-.togglingEnabled .openSection.content_block {
-	max-height: 9999px; /* large number as height: auto is not effected by transitions */
-}
-
 .mwm-notice {
 	padding: 5px;
 	background: #dddddd;
@@ -355,15 +278,6 @@ a.back_to_top:visited {
 	font-size: 1.7em;
 }
 
-.section_anchors a {
-	display: block;
-}
-
-.section_anchor {
-	height: 1px;
-	width: 1px;
-}
-
 .printonly,
 .geo-multi-punct,
 .geo-nondefault {
@@ -431,16 +345,6 @@ img.thumbborder {
 
 #content_wrapper p {
 	margin: 0 0 10px 0;
-}
-
-#content_wrapper .section {
-	padding: 14px 22px 0 22px; /* see #footer padding and .content_block margin */
-	margin-left: -22px; /* offset #content_wrapper margin */
-	margin-right: -22px;
-}
-
-#content_wrapper .section h2 {
-	margin: 0;
 }
 
 #disableButtons {
