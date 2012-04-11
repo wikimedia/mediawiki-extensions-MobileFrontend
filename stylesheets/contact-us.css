@@ -1,0 +1,44 @@
+/* CONTACT FORM
+moved from beta_common.css in
+Change-Id: I57557fd2e359264853efadc1e5da1c9cbe6a0d97
+*/
+.feedback input[type=submit] {
+	background-color: #5E5E5E;
+	color: white;
+	display: block;
+	margin: 22px 0px;
+	border: none;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-o-box-shadow: 3px 3px 3px #8C8C8C;
+	-moz-box-shadow: 3px 3px 3px #8C8C8C;
+	-webkit-box-shadow: 3px 3px 3px #8C8C8C;
+	box-shadow: 3px 3px 3px #8C8C8C;
+	font-size: 1.5em;
+}
+
+.feedback input[type=submit] {
+	padding: 12px;
+	cursor: pointer;
+}
+
+.feedback input[type=text] {
+	height: 38px;
+}
+
+.feedback textarea,
+.feedback input[type=text] {
+	padding: 12px 16px;
+	width: 100%;
+	border: solid 1px #888888;
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+.feedback textarea,
+.feedback input[type=text] {
+	font-size: 1.5em;
+}
