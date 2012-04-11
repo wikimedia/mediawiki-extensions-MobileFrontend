@@ -44,7 +44,7 @@ MobileFrontend = (function() {
 			cookieDuration = cookieDuration / ( 24 * 60 * 60 );
 
 			// get the top part of the domain to make the cookie work across subdomains
-			MobileFrontend.banner.writeCookie( cookieName, 'desktop', cookieDuration, cookiePath, cookieDomain );
+			MobileFrontend.banner.writeCookie( cookieName, 'true', cookieDuration, cookiePath, cookieDomain );
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
