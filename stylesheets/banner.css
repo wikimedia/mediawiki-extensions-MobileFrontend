@@ -1,0 +1,69 @@
+/* ZERO-RATED BANNERS
+moved from beta_common.css in
+Change-Id: Ia25126d950ee87cbc76f2e91d679cdd27405ee51
+*/
+#zero-rated-banner {
+	position: relative;
+	width: 100%;
+	z-index: 99;
+	background: #F4A83D;
+	display: block;
+	border-bottom: 1px solid #D6800C;
+	padding: 7px 0;
+	font-weight: bold;
+	text-align: center;
+	color: #735005;
+}
+
+#zero-rated-banner a {
+	text-decoration: underline;
+	color: #735005;
+}
+
+#zero-rated-banner-red {
+	position: relative;
+	width: 100%;
+	z-index: 99;
+	background: #FF0000;
+	display: block;
+	border-bottom: 1px solid;
+	border-color: #000000;
+}
+
+#zero-rated-banner span.notify-close {
+	background-color: #FAD163;
+	float: right;
+	margin-right: 20px;
+	border: 2px solid #735005;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#zero-rated-banner span.notify-close a {
+	text-decoration: none;
+}
+
+#zero-rated-banner-red #zero-rated-banner-text {
+	margin: 0px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+#zero-rated-banner-red a {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+#zero-rated-banner-text {
+	margin: 0px;
+	color: #735005;
+	font-weight: bold;
+	text-align: center;
+}
