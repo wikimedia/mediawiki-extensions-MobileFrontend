@@ -62,13 +62,13 @@ button.hide {
 }
 
 .togglingEnabled .content_block {
-	max-height: 0;
+	height: 0; /* note this expects to be overriden in toggle.js */
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: max-height 0.4s ease-in-out;
-	-moz-transition: max-height 0.4s ease-in-out;
-	-o-transition: max-height 0.4s ease-in-out;
-	transition: max-height 0.4s ease-in-out;
+	-webkit-transition: min-height 0.4s ease-in-out;
+	-moz-transition: min-height 0.4s ease-in-out;
+	-o-transition: min-height 0.4s ease-in-out;
+	transition: min-height 0.4s ease-in-out;
 	margin-top: 14px;
 }
 
@@ -77,7 +77,7 @@ button.hide {
 }
 
 .togglingEnabled .openSection.content_block {
-	max-height: 9999px; /* large number as height: auto is not effected by transitions */
+	min-height: 9999px;
 }
 
 .section_anchors a {

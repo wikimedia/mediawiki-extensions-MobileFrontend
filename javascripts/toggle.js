@@ -80,18 +80,22 @@ MobileFrontend.toggle = (function() {
 
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ), id,
-			bb = b.getElementsByTagName( 'button' ), i, s, e, closed;
+			bb = b.getElementsByTagName( 'button' ), i, s, e, closed, reset = [];
 		if( u(b).hasClass( 'openSection' ) ) {
+			b.style.height = '';
 			u(b).removeClass( 'openSection' );
 			closed = true;
 		} else {
+			reset.push( b );
 			u(b).addClass( 'openSection' );
 		}
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
 			e = document.getElementById( d[i] + section_id );
 			if ( e && u( e ).hasClass( 'openSection' ) ) {
+				e.style.height = '';
 				u( e ).removeClass( 'openSection' );
 			} else {
+				reset.push( e );
 				u( e ).addClass( 'openSection' );
 			}
 		}
@@ -101,6 +105,11 @@ MobileFrontend.toggle = (function() {
 		e.removeAttribute( 'id' );
 		window.location.hash = closed ? '#_' : '#' + id;
 		e.setAttribute( 'id', id );
+		window.setTimeout(function() { // override the max-height property for sections over 9999px height
+			for( var i = 0; i < reset.length; i++ ) {
+				reset[ i ].style.height = 'auto';
+			}
+		}, 400); // this matches transition speed in sections.css
 	}
 
 	init();
