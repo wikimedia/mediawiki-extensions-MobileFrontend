@@ -286,10 +286,3 @@ img.thumbborder {
 #image_wrapper {
 	margin: 8px 0 8px -3px;
 }
-
-ol.references > li:target,
-sup.reference:target,
-span.citation:target,
-cite:target {
-	background-color: #ddeeff;
-}
