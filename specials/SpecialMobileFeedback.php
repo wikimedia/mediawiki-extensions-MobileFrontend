@@ -8,19 +8,24 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 	public function execute( $par = '' ) {
 		global $wgExtMobileFrontend;
 
+		$this->setHeaders();
+		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-title' ) );
 		$wgExtMobileFrontend->setForceMobileView( true );
 		$wgExtMobileFrontend->setContentTransformations( false );
 
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
-		} elseif ( $this->getRequest()->wasPosted() ) {
-			$this->postFeedback();
 		} else {
-			$this->showForm();
+			$form = new HTMLForm( $this->getForm(), $this );
+			$form->setTitle( $this->getTitle() );
+			$form->setId( 'feedback' );
+			$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
+			$form->setSubmitCallback( array( $this, 'postFeedback' ) );
+			$form->show();
 		}
 	}
 
-	private function showForm() {
+	private function getForm() {
 		$linkText = $this->msg( 'mobile-frontend-leave-feedback-link-text' )->text();
 		$linkTarget = wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain();
 		$leaveFeedbackText = wfMsgExt( 'mobile-frontend-leave-feedback-notice',
@@ -28,67 +33,53 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 			Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getFullURL(), 'target' => '_blank' ),
 			$linkText )
 		);
-		//@todo: remove hardcoded colons
-		$this->getOutput()->addHTML(
-			Html::openElement( 'form', array(
-							'class' => 'feedback',
-							'action' => $this->getTitle()->getLocalURL(),
-							'method' => 'POST',
-						)
-					)
-				. Html::element( 'input', array(
-							'type' => 'hidden',
-							'name' => 'edittoken',
-							'value' => $this->getUser()->getEditToken(),
-						)
-					)
-				. Html::element( 'input',
-						array(
-							'type' => 'hidden',
-							'name' => 'returnto',
-							'value' => $this->getRequest()->getText( 'returnto' ),
-						)
-					)
-				. '<div tabindex="-1">'
-					. '<div unselectable="on">'
-						. '<span unselectable="on"><p>'
-							. $this->msg( 'mobile-frontend-leave-feedback-title' )->parse()
-						. '</p></span>'
-					. '</div>'
-					. '<div>'
-						. '<div>'
-							. "<div><p><small>{$leaveFeedbackText}</small>"
-							. '</p></div>'
-							. '<div><p>' . $this->msg( 'mobile-frontend-leave-feedback-subject' ) ->parse()
-								. ':<br><input type="text" name="subject" maxlength="60"></p>'
-							. '</div>'
-							. '<div><p>'
-								. $this->msg( 'mobile-frontend-leave-feedback-message' )->parse()
-							. ':<br><textarea name="message" rows="5" cols="60"></textarea></p>'
-							. '</div>'
-						. '</div>'
-					. '</div>'
-					. Html::element( 'input',
-						array(
-								'type' => 'submit',
-								'value' => $this->msg( 'mobile-frontend-leave-feedback-submit' )->text(),
-							)
-						)
-					. '</div>'
-				. '</div>'
-			. '</form>'
+		return array(
+			'form-desc' => array(
+				'type' => 'info',
+				'raw' => true,
+				'default' => '<div unselectable="on">'
+					. '<p><span unselectable="on">'
+						. $this->msg( 'mobile-frontend-leave-feedback-title' )->parse()
+					. '</span><br/>'
+					. "<small>{$leaveFeedbackText}</small>"
+				. '</p></div>'
+			),
+			'subject-desc' => array(
+				'type' => 'info',
+				'raw' => true,
+				'default' => $this->msg( 'mobile-frontend-leave-feedback-subject' ) ->parse()
+					. '<br/>',
+			),
+			'returnto' => array(
+				'type' => 'hidden',
+				'default' => $this->getRequest()->getText( 'returnto', '' ),
+			),
+			'subject' => array(
+				'type' => 'text',
+			),
+			'message-desc' => array(
+				'type' => 'info',
+				'raw' => true,
+				'default' => $this->msg( 'mobile-frontend-leave-feedback-message' )->parse()
+					. '<br/>',
+			),
+			'message' => array(
+				'type' => 'textarea',
+				'rows' => 5,
+				'cols' => 60,
+				'validation-callback' => array( $this, 'validateMessage' ),
+			),
 		);
 	}
 
-	private function postFeedback() {
+	public function postFeedback( $form ) {
 		wfProfileIn( __METHOD__ );
-		$request = $this->getRequest();
-		$user = $this->getUser();
 
-		$subject = $request->getText( 'subject', '' );
-		$message = $request->getText( 'message', '' );
-		$token = $request->getText( 'edittoken', '' );
-		$returnTo = Title::newFromText( $request->getText( 'returnto' ) );
+		$subject = $form['subject']
+			? $form['subject']
+			: $this->msg( 'mobile-frontend-feedback-no-subject' )->inContentLanguage()->text();
+		$message = trim( $form['message'] );
+		$returnTo = Title::newFromText( $form['returnto'] );
 		if ( !$returnTo ) {
 			$returnTo = Title::newMainPage();
 		}
@@ -96,18 +87,26 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$title = Title::newFromText( wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain() );
 
 		if ( $title->userCan( 'edit' ) &&
-			!$user->isBlockedFrom( $title ) &&
-			$user->matchEditToken( $token ) ) {
+			!$this->getUser()->isBlockedFrom( $title ) ) {
 			$article = new Article( $title, 0 );
 			$rawtext = $article->getRawText();
-			$rawtext .= "\n== {$subject} == \n {$message} ~~~~ \n <small>User agent: {$_SERVER['HTTP_USER_AGENT']}</small> ";
-			$article->doEdit( $rawtext, '' );
+			$rawtext .= "\n== {$subject} ==\n{$message} ~~~~\n<br><small>User agent: <code>{$_SERVER['HTTP_USER_AGENT']}</code></small> ";
+			$article->doEdit( $rawtext,
+				$this->msg( 'mobile-frontend-feedback-edit-summary', $subject )->inContentLanguage()->text()
+			);
 		}
 
 		$location = $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) );
-		$request->response()->header( 'Location: ' . $location );
+		$this->getRequest()->response()->header( 'Location: ' . $location );
 		wfProfileOut( __METHOD__ );
 		exit;
+	}
+
+	public function validateMessage( $textarea ) {
+		if ( mb_strlen( trim( $textarea ) ) < 20 ) {
+			return $this->msg( 'mobile-frontend-feedback-no-message' );
+		}
+		return true;
 	}
 
 	private function showThanks() {

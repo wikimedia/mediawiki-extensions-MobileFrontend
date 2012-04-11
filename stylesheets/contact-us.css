@@ -2,7 +2,7 @@
 moved from beta_common.css in
 Change-Id: I57557fd2e359264853efadc1e5da1c9cbe6a0d97
 */
-.feedback input[type=submit] {
+#feedback input[type=submit] {
 	background-color: #5E5E5E;
 	color: white;
 	display: block;
@@ -18,17 +18,17 @@ Change-Id: I57557fd2e359264853efadc1e5da1c9cbe6a0d97
 	font-size: 1.5em;
 }
 
-.feedback input[type=submit] {
+#feedback input[type=submit] {
 	padding: 12px;
 	cursor: pointer;
 }
 
-.feedback input[type=text] {
+#feedback input#mw-input-wpsubject {
 	height: 38px;
 }
 
-.feedback textarea,
-.feedback input[type=text] {
+#feedback textarea,
+#feedback input#mw-input-wpsubject {
 	padding: 12px 16px;
 	width: 100%;
 	border: solid 1px #888888;
@@ -38,7 +38,11 @@ Change-Id: I57557fd2e359264853efadc1e5da1c9cbe6a0d97
 	-ms-box-sizing: border-box;
 }
 
-.feedback textarea,
-.feedback input[type=text] {
+#feedback textarea,
+#feedback #mw-input-wpsubject {
 	font-size: 1.5em;
+}
+
+#feedback table, #feedback td {
+	border: none;
 }
