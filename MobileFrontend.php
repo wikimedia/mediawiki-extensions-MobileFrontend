@@ -209,7 +209,7 @@ $wgResourceModules['ext.mobileFrontend'] = array(
 $wgResourceModules['ext.mobileFrontendBeta'] = array(
 	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/footer.css',
 	'stylesheets/contact-us.css', 'stylesheets/banner.css',
-	'stylesheets/header.css',
+	'stylesheets/header.css', 'stylesheets/sections.css',
 	'stylesheets/references.css', 'stylesheets/hacks.css' ),
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
