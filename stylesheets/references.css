@@ -52,3 +52,11 @@ Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 #mf-references a {
 	color: #3354C0;
 }
+
+ol.references > li:target,
+sup.reference:target,
+span.citation:target,
+cite:target {
+	background-color: #ddeeff;
+}
+
