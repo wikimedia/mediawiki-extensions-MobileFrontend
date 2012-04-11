@@ -40,7 +40,7 @@ if( typeof jQuery !== 'undefined' ) {
 			$( document ).scroll(calculatePosition);
 		}
 
-		function init() {
+		function init( firstRun ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			$("#mf-references").remove();
 			el = $( '<div id="mf-references"><div></div></div>' ).hide().
@@ -112,12 +112,14 @@ if( typeof jQuery !== 'undefined' ) {
 			$( 'sup a' ).unbind('click').click( clickReference ).each(function(i, el) {
 				el.ontouchstart = cancelBubble;
 			});
+			if( firstRun ) {
+				$( document.body ).bind( 'click', close );
+				$( document.body ).bind( 'touchstart', function() {
+					$( '#mf-references' ).hide();
+				});
+			}
 		}
-		$( document.body ).bind( 'click', close );
-		$( document.body ).bind( 'touchstart', function() {
-			$( '#mf-references' ).hide();
-		});
-		init();
+		init( true );
 		return {
 			init: init
 		};
