@@ -39,28 +39,6 @@ a.external {
 	border: 0px;
 }
 
-table {
-	border-spacing: 0 !important;
-	border-collapse: collapse !important;
-	border: 1px solid #cccccc;
-	padding: 3px;
-	margin-bottom: 15px;
-}
-
-table.gallery .thumb[style] {
-	border: 0;
-	padding: 0 !important;
-	width: auto !important;
-	margin: 0 auto;
-}
-
-table.geography[style] td[style*="text-align"],
-table.geography[style] td[colspan="2"] {
-	text-align: left !important;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
-}
-
 table.toc h2 {
 	border: 0;
 	padding: 0;
@@ -74,12 +52,6 @@ table.gallery td {
 	border-bottom: 1px solid #cccccc;
 }
 
-table[style] {
-	float: none !important;
-	margin-left: 0 !important;
-	width: 100% !important;
-}
-
 table.navbox td.navbox-group {
 	background: #ddddff;
 	width: 25%;
@@ -91,11 +63,6 @@ table.gallery {
 	border-bottom: 0;
 }
 
-table.navbox {
-	font-size: 0.9em;
-	width: 100% !important;
-}
-
 table.gallery .gallerytext {
 	margin-top: -12px;
 	text-align: center;
@@ -104,16 +71,6 @@ table.gallery .gallerytext {
 table.navbox th.navbox-title {
 	background: #ccccff;
 	padding: 5px;
-}
-
-table.navbox div[style*="padding"] {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-
-table.gallery .gallerybox[style] {
-	width: auto !important;
-	margin-bottom: -16px;
 }
 
 table td,
@@ -175,14 +132,6 @@ table.navbox td.navbox-group + td {
 	padding: 3px;
 }
 
-table.navbox div[style*="padding"] a {
-	white-space: pre-wrap;
-}
-
-table.navbox span[style*="white"] {
-	white-space: pre-wrap !important;
-}
-
 table.navbox td,
 table.navbox th {
 	padding: 0;
@@ -203,20 +152,6 @@ table.infobox {
 table.infobox th,
 table.infobox td {
 	border: 0;
-}
-
-table.infobox td[colspan="3"],
-table.infobox th[colspan="3"] {
-	border: 1px solid #cccccc;
-}
-
-table.geography[style] th {
-	text-align: left;
-}
-
-table.geography[style] td[style*="text-align"] div[style],
-table.geography[style] td[colspan="2"] div[style] {
-	text-align: left !important;
 }
 
 table.admin {
@@ -296,24 +231,6 @@ a.back_to_top:visited {
 	background: #f9f9f9;
 	margin-bottom: 10px;
 	text-align: center;
-}
-
-.thumb .thumbinner[style] {
-	margin: 5px auto;
-	max-width: 100%;
-	width: auto !important;
-}
-
-.thumb img {
-	max-width: 100% !important;
-	width: auto !important
-}
-
-.thumb .thumbcaption {
-	width: 100%;
-	margin: 5px 10px 0;
-	text-align: center;
-	width: auto !important;
 }
 
 img.thumbborder {
