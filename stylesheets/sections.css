@@ -93,6 +93,7 @@ button.hide {
 	padding: 14px 22px 0 22px; /* see #footer padding and .content_block margin */
 	margin-left: -22px; /* offset #content_wrapper margin */
 	margin-right: -22px;
+	clear: both;
 }
 
 #content_wrapper .section h2 {

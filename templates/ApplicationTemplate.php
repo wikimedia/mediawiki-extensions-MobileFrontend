@@ -85,7 +85,7 @@ HTML;
 			var mwMobileFrontendConfig = {$configuration};
 			</script>
 		  </head>
-		  <body>
+		  <body class="mobile">
 			{$zeroRatedBanner}
 			{$this->data['searchWebkitHtml']}
 			<div class='show' id='content_wrapper'>
