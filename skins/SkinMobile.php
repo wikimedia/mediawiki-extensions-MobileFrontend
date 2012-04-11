@@ -20,8 +20,7 @@ class SkinMobile extends SkinTemplate {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$this->extMobileFrontend->beforePageDisplayHTML( $out );
-		$html = $out->getHTML();
-		echo $this->extMobileFrontend->DOMParse( $html );
+		echo $this->extMobileFrontend->DOMParse( $out );
 		wfProfileOut( __METHOD__ );
 	}
 }

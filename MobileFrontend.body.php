@@ -14,7 +14,6 @@ class ExtMobileFrontend {
 	public static $randomPageUrl;
 	public static $format;
 	public static $search;
-	public static $isMainPage = false;
 	public static $searchField;
 	public static $viewNormalSiteURL;
 	public static $displayNoticeId;
@@ -28,8 +27,6 @@ class ExtMobileFrontend {
 	public static $wsLoginToken = '';
 	public static $wsLoginFormAction = '';
 	public static $isFilePage;
-	public static $logoutHtml;
-	public static $loginHtml;
 	public static $zeroRatedBanner;
 	public static $useFormatCookieName;
 
@@ -347,9 +344,6 @@ class ExtMobileFrontend {
 		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		self::$title = $out->getTitle();
 
-		if ( self::$title->isMainPage() ) {
-			self::$isMainPage = true;
-		}
 		if ( self::$title->getNamespace() == NS_FILE ) {
 			self::$isFilePage = true;
 		}
@@ -685,12 +679,7 @@ class ExtMobileFrontend {
 		return $result;
 	}
 
-	/**
-	 * @param $html string
-	 * @param $tagName string
-	 * @return DomElement
-	 */
-	private function getDomDocumentNodeByTagName( $html, $tagName ) {
+	private function getDom( $html ) {
 		wfProfileIn( __METHOD__ );
 		libxml_use_internal_errors( true );
 		$dom = new DOMDocument();
@@ -699,18 +688,80 @@ class ExtMobileFrontend {
 		$dom->preserveWhiteSpace = false;
 		$dom->strictErrorChecking = false;
 		$dom->encoding = 'UTF-8';
+		wfProfileOut( __METHOD__ );
+		return $dom;
+	}
+
+	/**
+	 * @param $html string
+	 * @param $tagName string
+	 * @return DomElement
+	 */
+	private function getDomDocumentNodeByTagName( $html, $tagName ) {
+		wfProfileIn( __METHOD__ );
+		$dom = $this->getDom( $html );
 		$node = $dom->getElementsByTagName( $tagName )->item( 0 );
 		wfProfileOut( __METHOD__ );
 		return $node;
 	}
 
 	/**
-	 * @param $html string
+	 * Extracts <meta name="robots"> from head items that we don't need
+	 * @param OutputPage $out
 	 * @return string
 	 */
-	public function DOMParse( $html ) {
+	private function getRobotsPolicy( OutputPage $out ) {
+		wfProfileIn( __METHOD__ );
+		libxml_use_internal_errors( true );
+		$dom = $this->getDom( $out->getHeadLinks() );
+		$xpath = new DOMXpath( $dom );
+		foreach ( $xpath->query( '//meta[@name="robots"]' ) as $tag ) {
+			wfProfileOut( __METHOD__ );
+			return $dom->saveXML( $tag );
+		}
+		wfProfileOut( __METHOD__ );
+		return '';
+	}
+
+	private function getLoginLinks() {
+		global $wgRequest, $wgUser;
+
+		wfProfileIn( __METHOD__ );
+		$login = $logout = '';
+		$query = array( 'returnto' => self::$title->getPrefixedText() );
+		if ( !$wgRequest->wasPosted() ) {
+			$returntoquery = $wgRequest->getValues();
+			unset( $returntoquery['title'] );
+			unset( $returntoquery['returnto'] );
+			unset( $returntoquery['returntoquery'] );
+			$query['returntoquery'] = wfArrayToCGI( $returntoquery );
+		}
+		if ( $wgUser->isLoggedIn() ) {
+			$login = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
+				wfMessage( 'mobile-frontend-login' )->escaped(),
+				array(),
+				$query
+			);
+		} else {
+			$logout = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
+				wfMessage( 'userlogout' )->escaped(),
+				array(),
+				$query
+			);
+		}
+		wfProfileOut( __METHOD__ );
+		return array( $login, $logout );
+	}
+
+	/**
+	 * @param OutputPage $out
+	 * @return string
+	 */
+	public function DOMParse( OutputPage $out ) {
 		global $wgScript, $wgContLang, $wgRequest;
 		wfProfileIn( __METHOD__ );
+
+		$html = $out->getHTML();
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
 		$formatter = new MobileFormatter( $html, self::$title, $this->contentFormat, $this->wmlContext );
@@ -730,44 +781,6 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ . '-zero' );
 
 		wfProfileIn( __METHOD__ . '-beta' );
-		if ( self::$isBetaGroupMember ) {
-			$ptLogout = $doc->getElementById( 'pt-logout' );
-
-			if ( $ptLogout ) {
-				$ptLogoutLink = $ptLogout->firstChild;
-				self::$logoutHtml = $doc->saveXML( $ptLogoutLink, LIBXML_NOEMPTYTAG );
-			}
-			$ptAnonLogin = $doc->getElementById( 'pt-anonlogin' );
-
-			if ( !$ptAnonLogin ) {
-				$ptAnonLogin = $doc->getElementById( 'pt-login' );
-			}
-
-			if ( $ptAnonLogin ) {
-				$ptAnonLoginLink = $ptAnonLogin->firstChild;
-				if ( $ptAnonLoginLink && $ptAnonLoginLink->hasAttributes() ) {
-					$ptAnonLoginLinkHref = $ptAnonLoginLink->getAttributeNode( 'href' );
-					$ptAnonLoginLinkTitle = $ptAnonLoginLink->getAttributeNode( 'title' );
-					if ( $ptAnonLoginLinkTitle ) {
-						$ptAnonLoginLinkTitle->nodeValue = wfMsg( 'mobile-frontend-login' );
-					}
-					if ( $ptAnonLoginLinkHref ) {
-						$ptAnonLoginLinkHref->nodeValue = str_replace( "&", "&amp;", $ptAnonLoginLinkHref->nodeValue );
-					}
-					$ptAnonLoginLinkText = $ptAnonLoginLink->firstChild;
-					if ( $ptAnonLoginLinkText ) {
-						$ptAnonLoginLinkText->nodeValue = wfMsg( 'mobile-frontend-login' );
-					}
-				}
-				self::$loginHtml = $doc->saveXML( $ptAnonLoginLink, LIBXML_NOEMPTYTAG );
-			}
-		}
-		$robotsText = '';
-		$xpath = new DOMXpath( $doc );
-		foreach ( $xpath->query( '//meta[@name="robots"]' ) as $tag ) {
-			$robotsText .= $doc->saveXML( $tag );
-		}
-
 		if ( self::$title->isSpecial( 'Userlogin' ) ) {
 			$userlogin = $doc->getElementById( 'userloginForm' );
 
@@ -799,7 +812,7 @@ class ExtMobileFrontend {
 		wfProfileOut( __METHOD__ . '-userlogin' );
 
 		wfProfileIn( __METHOD__ . '-getText' );
-		$formatter->setIsMainPage( self::$isMainPage );
+		$formatter->setIsMainPage( self::$title->isMainPage() );
 		if ( $this->contentFormat == 'XHTML'
 			&& self::$device['supports_javascript'] === true
 			&& empty( self::$search ) )
@@ -856,7 +869,7 @@ class ExtMobileFrontend {
 							'searchWebkitHtml' => $searchWebkitHtml,
 							'contentHtml' => $contentHtml,
 							'footerHtml' => $footerHtml,
-							'robots' => $robotsText,
+							'robots' => $this->getRobotsPolicy( $out ),
 							);
 			$applicationTemplate->setByArray( $options );
 			$applicationHtml = $applicationTemplate->getHTML();
@@ -890,9 +903,12 @@ class ExtMobileFrontend {
 	public function getFooterTemplate() {
 		global $wgExtensionAssetsPath, $wgLanguageCode, $wgRequest, $wgContLang;
 		wfProfileIn( __METHOD__ );
+		if ( self::$isBetaGroupMember ) {
+			list( $loginHtml, $logoutHtml ) = $this->getLoginLinks();
+		} else {
+			$loginHtml = $logoutHtml = '';
+		}
 		$footerTemplate = new FooterTemplate();
-		$logoutHtml = ( self::$logoutHtml ) ? self::$logoutHtml : '';
-		$loginHtml = ( self::$loginHtml ) ? self::$loginHtml : '';
 		$options = array(
 						'messages' => self::$messages,
 						'leaveFeedbackURL' => SpecialPage::getTitleFor( 'MobileFeedback' )
