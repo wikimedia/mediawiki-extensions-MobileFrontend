@@ -18,7 +18,6 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-/* TODO: support browsers which do not support data uris */
 a.external {
 	background: url(images/external-link-ltr-icon.png) center right no-repeat;
 	padding-right: 13px;
