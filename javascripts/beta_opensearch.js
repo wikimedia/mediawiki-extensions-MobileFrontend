@@ -7,6 +7,7 @@ MobileFrontend.opensearch = (function() {
 		sb = document.getElementById( 'searchbox' ),
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
+		blankImg = MobileFrontend.setting('scriptPath') + '/extensions/MobileFrontend/stylesheets/images/blank.gif',
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
 		u = MobileFrontend.utils;
@@ -14,7 +15,7 @@ MobileFrontend.opensearch = (function() {
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
 	function onfocus() {
-		var rrd, rrdD;
+		var rrd;
 		sb = document.getElementById( 'searchbox' );
 		header = document.getElementById( 'header' );
 		content = document.getElementById( 'content' );
@@ -25,13 +26,11 @@ MobileFrontend.opensearch = (function() {
 
 			rrd = document.getElementById( 'remove-results' );
 			if ( !rrd ) {
-				rrd = document.createElement( 'a' );
-				rrd.setAttribute( 'href', '#' );
+				rrd = document.createElement( 'img' );
 				rrd.setAttribute( 'id', 'remove-results' );
-				u( rrd ).bind( 'click', removeResults );
-				rrdD = document.createElement( 'div' );
-				rrdD.setAttribute( 'id', 'left-arrow' );
-				rrd.appendChild( rrdD );
+				u( rrd ).bind( 'click',  removeResults );
+				rrd.setAttribute( 'src', blankImg );
+				rrd.setAttribute( 'alt', MobileFrontend.message( 'remove-results' ) );
 				header.insertBefore( rrd, header.firstChild );
 			}
 			focused = true;

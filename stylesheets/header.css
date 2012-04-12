@@ -14,7 +14,7 @@ html[dir="rtl"] .clearlink {
 .clearlink {
 	top: 9px;
 	right: -18px;
-	width: 18px;
+	width: 24px;
 	height: 20px;
 	background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
 	margin: 0;
@@ -125,8 +125,23 @@ html[dir="rtl"] #logo {
 	height: 40px;
 	width: 27px;
 	padding-bottom: 0;
-	text-indent: -999px;
 	cursor: pointer;
+}
+
+.goButton img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 40px;
+	width: 27px;
+}
+
+/* for browsers with images disabled
+reduce font size so alt text more legible */
+#remove-results,
+.goButton img,
+.clearlink {
+	font-size: 8px;
 }
 
 html[dir="rtl"] .goButton {
@@ -309,7 +324,7 @@ full screen search css
 #remove-results {
 	display: none;
 	position: absolute;
-	width: 18px;
+	width: 30px;
 	height: 40px;
 	text-align: center;
 	line-height: 40px;
@@ -324,7 +339,6 @@ full screen search css
 	margin-top: -6px;
 	z-index: 99;
 	border: 0px solid;
-	text-indent: -999px;
 	overflow: hidden;
 }
 

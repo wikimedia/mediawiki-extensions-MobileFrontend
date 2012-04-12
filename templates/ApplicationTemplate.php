@@ -51,6 +51,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				'expand-section' => $buttonShowText,
 				'collapse-section' => $buttonHideText,
 				'empty-homepage' => $configureHomepage,
+				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ),
 				),
 			'settings' => array(
 				'scriptPath' => ( $this->data['wgScriptPath'] ),

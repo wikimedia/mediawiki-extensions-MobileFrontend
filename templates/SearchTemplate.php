@@ -15,6 +15,7 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$randomButton = wfMessage( 'mobile-frontend-random-button' )->escaped();
 		$clearText = Sanitizer::encodeAttribute( wfMsg( 'mobile-frontend-clear-search' ) );
 		$placeholder = Sanitizer::encodeAttribute( wfMsg( 'mobile-frontend-placeholder' ) );
+		$goButton = wfMessage( 'mobile-frontend-search-submit' );
 
 		$scriptUrl = wfScript();
 		$searchBoxDisplayNone = ( $this->data['hideSearchBox'] ) ? ' style="display: none;" ' : '';
@@ -35,9 +36,14 @@ class SearchTemplate extends MobileFrontendTemplate {
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
 					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocomplete="off" maxlength="1024" class="search" placeholder="{$placeholder}" />
-					<div class="clearlink" id="clearsearch" title="{$clearText}"></div>
+					<img src="{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/images/blank.gif"
+						alt="{$clearText}"
+						class="clearlink" id="clearsearch" title="{$clearText}">
 				</div>
-			  <button id='goButton' class='goButton' type='submit'></button>
+			  <button id='goButton' class='goButton' type='submit'>
+					<img src="{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/images/blank.gif"
+						alt="{$goButton}" title="{$goButton}">
+				</button>
 			</form>
 			</div>
 			<div class='nav' id='nav' {$logoDisplayNone}>
