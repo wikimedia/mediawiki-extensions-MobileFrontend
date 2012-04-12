@@ -20,6 +20,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	public function execute( $par = '' ) {
 		global $wgExtMobileFrontend;
 
+		$this->setHeaders();
 		$wgExtMobileFrontend->setForceMobileView( true );
 		$wgExtMobileFrontend->setContentTransformations( false );
 		if ( !isset( $this->options[$par] ) ) {
@@ -108,6 +109,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptInGet() {
+		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-opt-in-title' ) );
 		$this->showEnquiryForm(
 			'mobile-frontend-opt-in-message',
 			'mobile-frontend-opt-in-explain',
@@ -123,6 +125,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptOutGet() {
+		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-opt-out-title' ) );
 		$this->showEnquiryForm(
 			'mobile-frontend-opt-out-message',
 			'mobile-frontend-opt-out-explain',
