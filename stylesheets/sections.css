@@ -5,10 +5,8 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 
 .section_heading {
 	cursor: pointer;
-}
-
-.section:nth-child(even) {
-	background-color: #f4f4f4;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .togglingEnabled button.hide,
@@ -59,6 +57,8 @@ button.hide {
 
 .togglingEnabled .section_anchors {
 	display: none;
+	margin-bottom: 10px;
+	margin-left: 6px;
 }
 
 .togglingEnabled .content_block {
@@ -70,6 +70,12 @@ button.hide {
 	-o-transition: min-height 0.4s ease-in-out;
 	transition: min-height 0.4s ease-in-out;
 	margin-top: 14px;
+	border-bottom: solid 1px #E2E3E4;
+}
+
+.togglingEnabled #footer .content_block,
+.togglingEnabled .content_block:last-child {
+	border-bottom: none;
 }
 
 .togglingEnabled .openSection.section_anchors {
@@ -90,7 +96,7 @@ button.hide {
 }
 
 #content_wrapper .section {
-	padding: 14px 22px 0 22px; /* see #footer padding and .content_block margin */
+	padding: 14px 12px 0 12px; /* effects #footer left,right padding */
 	margin-left: -22px; /* offset #content_wrapper margin */
 	margin-right: -22px;
 	clear: both;
@@ -98,4 +104,10 @@ button.hide {
 
 #content_wrapper .section h2 {
 	margin: 0;
+}
+
+.section h2,
+.section .content_block {
+	padding-left: 8px;
+	padding-right: 8px;
 }
