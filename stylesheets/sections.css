@@ -62,13 +62,13 @@ button.hide {
 }
 
 .togglingEnabled .content_block {
-	height: 0; /* note this expects to be overriden in toggle.js */
+	max-height: 0;
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: min-height 0.4s ease-in-out;
-	-moz-transition: min-height 0.4s ease-in-out;
-	-o-transition: min-height 0.4s ease-in-out;
-	transition: min-height 0.4s ease-in-out;
+	-webkit-transition: max-height 0.4s ease-in-out;
+	-moz-transition: max-height 0.4s ease-in-out;
+	-o-transition: max-height 0.4s ease-in-out;
+	transition: max-height 0.4s ease-in-out;
 	margin-top: 14px;
 	border-bottom: solid 1px #E2E3E4;
 }
@@ -83,7 +83,15 @@ button.hide {
 }
 
 .togglingEnabled .openSection.content_block {
-	min-height: 9999px;
+	max-height: 9999px;  /* note this expects to be overriden in toggle.js */
+}
+
+.togglingEnabled content_block.togglefix {
+	max-height: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
 }
 
 .section_anchors a {
