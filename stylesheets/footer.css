@@ -29,6 +29,10 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 	margin: 0;
 }
 
+#footer ul li {
+	line-height: 1.4;
+}
+
 #footer .settings .left,
 #footer .settings .right {
 	width: 48%;
@@ -119,6 +123,7 @@ this is so that toggling can scroll it into view
 	-moz-transition: none;
 	-o-transition: none;
 	transition: none;
+	margin-top: 0;
 }
 
 #footer .notice .terms {
