@@ -580,6 +580,7 @@ img.thumbborder {
 }
 
 #content_wrapper {
+	margin-top: 10px;
 	clear: both;
 	margin: 0 8px;
 }
