@@ -91,6 +91,7 @@ HTML;
 			{$this->data['searchWebkitHtml']}
 			<div class='show' id='content_wrapper'>
 			{$noticeHtml}
+			<h1 id="firstHeading">{$this->data['title']}</h1>
 			{$this->data['contentHtml']}
 			</div>
 			{$this->data['footerHtml']}

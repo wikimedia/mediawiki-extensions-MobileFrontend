@@ -956,6 +956,7 @@ class ExtMobileFrontend {
 		$options = array(
 						'dir' => $wgContLang->getDir(),
 						'code' => $wgContLang->getCode(),
+						'title' => self::$title,
 						'placeholder' => wfMsg( 'mobile-frontend-placeholder' ),
 						'dismissNotification' => wfMsg( 'mobile-frontend-dismiss-notification' ),
 						'wgAppleTouchIcon' => $wgAppleTouchIcon,
