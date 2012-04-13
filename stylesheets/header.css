@@ -335,3 +335,10 @@ full screen search css
 .full-screen-search #nav {
 	display: none !important;
 }
+
+/* samsung galaxy s gt-19000 */
+@media all and (max-width:240px) {
+	#search {
+		font-size: 0.8em;
+	}
+}
