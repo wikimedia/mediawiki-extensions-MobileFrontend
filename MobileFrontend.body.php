@@ -1102,7 +1102,9 @@ class ExtMobileFrontend {
 	public function getDesktopUrl( $url ) {
 		$parsedUrl = wfParseUrl( $url );
 		$this->updateDesktopUrlHost( $parsedUrl );
-		return wfAssembleUrl( $parsedUrl );
+		$this->updateDesktopUrlQuery( $parsedUrl );
+		$desktopUrl = wfAssembleUrl( $parsedUrl );
+		return $desktopUrl;
 	}
 
 	/**
@@ -1152,6 +1154,19 @@ class ExtMobileFrontend {
 
 		// replace the mobile token with nothing, resulting in the normal hostname
 		$parsedUrl['host'] = str_replace( '.' . $mobileToken, '.', $parsedUrl['host'] );
+	}
+
+	/**
+	 * Update the query portion of a given URL to remove any 'useformat' params
+	 * @param $parsedUrl array
+	 * 		Result of parseUrl() or wfParseUrl()
+	 */
+	protected function updateDesktopUrlQuery( &$parsedUrl ) {
+		if ( strpos( $parsedUrl['query'], 'useformat' ) !== false ) {
+			$query = wfCgiToArray( html_entity_decode( $parsedUrl['query'] ) );
+			unset( $query['useformat'] );
+			$parsedUrl['query'] = wfArrayToCgi( $query );
+		}
 	}
 
 	/**
