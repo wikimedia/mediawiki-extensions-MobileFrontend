@@ -93,3 +93,11 @@ table.geography[style] td[colspan="2"] div[style] {
 	text-align: center;
 	width: auto !important;
 }
+
+/* avoid float issues in fennec caused by MediaWiki:Common.css definiton */
+div.tright,
+div.floatright,
+table.floatright {
+	clear: none !important;
+	float: none !important;
+}
