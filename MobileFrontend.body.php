@@ -8,7 +8,6 @@ class ExtMobileFrontend {
 	 * @var Title
 	 */
 	public static $title;
-	public static $messages = array();
 	public static $htmlTitle;
 	public static $device;
 	public static $randomPageUrl;
@@ -26,7 +25,6 @@ class ExtMobileFrontend {
 	public static $languageUrls;
 	public static $wsLoginToken = '';
 	public static $wsLoginFormAction = '';
-	public static $isFilePage;
 	public static $zeroRatedBanner;
 	public static $useFormatCookieName;
 
@@ -341,10 +339,6 @@ class ExtMobileFrontend {
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 		self::$title = $out->getTitle();
-
-		if ( self::$title->getNamespace() == NS_FILE ) {
-			self::$isFilePage = true;
-		}
 
 		self::$htmlTitle = $out->getHTMLTitle();
 		$this->disableImages = $wgRequest->getCookie( 'disableImages' );
@@ -849,7 +843,6 @@ class ExtMobileFrontend {
 			if ( !empty( self::$displayNoticeId ) ) {
 				if ( intval( self::$displayNoticeId ) === 2 ) {
 					$sopaNoticeTemplate = new SopaNoticeTemplate();
-					$sopaNoticeTemplate->set( 'messages', self::$messages );
 					$noticeHtml = $sopaNoticeTemplate->getHTML();
 				}
 			}
@@ -908,7 +901,6 @@ class ExtMobileFrontend {
 		}
 		$footerTemplate = new FooterTemplate();
 		$options = array(
-						'messages' => self::$messages,
 						'leaveFeedbackURL' => SpecialPage::getTitleFor( 'MobileFeedback' )
 								->getLocalURL( array( 'returnto' => self::$title->getPrefixedText() ) ),
 						'viewNormalSiteURL' => self::$viewNormalSiteURL,
@@ -939,7 +931,6 @@ class ExtMobileFrontend {
 						'searchField' => self::$searchField,
 						'mainPageUrl' => Title::newMainPage()->getLocalUrl(),
 						'randomPageUrl' => self::$randomPageUrl,
-						'messages' => self::$messages,
 						'hideSearchBox' => self::$hideSearchBox,
 						'hideLogo' => self::$hideLogo,
 						'buildLanguageSelection' => self::buildLanguageSelection(),
@@ -974,7 +965,7 @@ class ExtMobileFrontend {
 						'cssLinks' => $cssLinks,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'wgScriptPath' => $wgScriptPath,
-						'isFilePage' => self::$isFilePage,
+						'isFilePage' => self::$title->getNamespace() == NS_FILE,
 						'zeroRatedBanner' => self::$zeroRatedBanner,
 						'showText' => wfMsg(  'mobile-frontend-show-button'  ),
 						'hideText' => wfMsg(  'mobile-frontend-hide-button'  ),
