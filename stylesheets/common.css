@@ -235,6 +235,9 @@ table {
 	border: 1px solid #cccccc;
 	padding: 3px;
 	margin-bottom: 15px;
+	display: block;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 table.gallery .thumb[style] {
