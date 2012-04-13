@@ -21,7 +21,6 @@ class ExtMobileFrontend {
 	public static $hideSearchBox = false;
 	public static $hideLogo = false;
 	public static $hideFooter = false;
-	public static $languageUrls;
 	public static $wsLoginToken = '';
 	public static $wsLoginFormAction = '';
 	public static $zeroRatedBanner;
@@ -227,48 +226,16 @@ class ExtMobileFrontend {
 	}
 
 	public function getMsg() {
-		global $wgContLang, $wgRequest, $wgServer, $wgMobileRedirectFormAction, $wgOut, $wgLanguageCode;
+		global $wgRequest, $wgServer, $wgMobileRedirectFormAction;
 		wfProfileIn( __METHOD__ );
 
 		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl( $wgRequest->escapeAppendQuery( 'mobileaction=toggle_view_desktop' ) ) );
-
-		$languageUrls = array();
-
-		$languageUrls[] = array(
-			'href' => $wgRequest->getFullRequestURL(),
-			'text' => self::$htmlTitle,
-			'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
-			'class' => 'interwiki-' . $wgLanguageCode,
-			'lang' => $wgLanguageCode,
-		);
-
-		foreach ( $wgOut->getLanguageLinks() as $l ) {
-			$tmp = explode( ':', $l, 2 );
-			$class = 'interwiki-' . $tmp[0];
-			$lang = $tmp[0];
-			unset( $tmp );
-			$nt = Title::newFromText( $l );
-			if ( $nt ) {
-				$languageUrl = $this->getMobileUrl( $nt->getFullURL() );
-				$languageUrls[] = array(
-					'href' => $languageUrl,
-					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
-							? $wgContLang->getLanguageName( $nt->getInterwiki() )
-							: $l ),
-					'language' => $wgContLang->getLanguageName( $lang ),
-					'class' => $class,
-					'lang' => $lang,
-				);
-			}
-		}
-
-		self::$languageUrls = $languageUrls;
 
 		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false )
 				? $wgMobileRedirectFormAction
 				: "{$wgServer}/w/mobileRedirect.php";
 
-		self::$randomPageUrl = $this->getRelativeURL( SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
+		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
@@ -490,6 +457,44 @@ class ExtMobileFrontend {
 		return true;
 	}
 
+	private function getLanguageUrls() {
+		global $wgRequest, $wgContLang, $wgLanguageCode, $wgOut;
+
+		wfProfileIn( __METHOD__ );
+		$languageUrls = array();
+
+		$languageUrls[] = array(
+			'href' => $wgRequest->getFullRequestURL(),
+			'text' => self::$htmlTitle,
+			'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
+			'class' => 'interwiki-' . $wgLanguageCode,
+			'lang' => $wgLanguageCode,
+		);
+
+		foreach ( $wgOut->getLanguageLinks() as $l ) {
+			$tmp = explode( ':', $l, 2 );
+			$class = 'interwiki-' . $tmp[0];
+			$lang = $tmp[0];
+			unset( $tmp );
+			$nt = Title::newFromText( $l );
+			if ( $nt ) {
+				$languageUrl = $this->getMobileUrl( $nt->getFullURL() );
+				$languageUrls[] = array(
+					'href' => $languageUrl,
+					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
+							? $wgContLang->getLanguageName( $nt->getInterwiki() )
+							: $l ),
+					'language' => $wgContLang->getLanguageName( $lang ),
+					'class' => $class,
+					'lang' => $lang,
+				);
+			}
+		}
+		wfProfileOut( __METHOD__ );
+
+		return $languageUrls;
+	}
+
 	/**
 	 * @return Mixed
 	 */
@@ -516,24 +521,6 @@ class ExtMobileFrontend {
 		}
 		wfProfileOut( __METHOD__ );
 		return $_SERVER['HTTP_HOST'];
-	}
-
-	/**
-	 * @param $url string
-	 * @return string
-	 */
-	private function getRelativeURL( $url ) {
-		wfProfileIn( __METHOD__ );
-		$parsedUrl = parse_url( $url );
-		// Validates value as IP address
-		if ( !empty( $parsedUrl['host'] ) && !IP::isValid( $parsedUrl['host'] ) ) {
-			$baseUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
-			$baseUrl = str_replace( $baseUrl, '', $url );
-			wfProfileOut( __METHOD__ );
-			return $baseUrl;
-		}
-		wfProfileOut( __METHOD__ );
-		return $url;
 	}
 
 	/**
@@ -933,7 +920,7 @@ class ExtMobileFrontend {
 						'randomPageUrl' => self::$randomPageUrl,
 						'hideSearchBox' => self::$hideSearchBox,
 						'hideLogo' => self::$hideLogo,
-						'buildLanguageSelection' => self::buildLanguageSelection(),
+						'buildLanguageSelection' => $this->buildLanguageSelection(),
 						'device' => $this->device,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'wgMobileFrontendLogo' => $wgMobileFrontendLogo,
@@ -986,12 +973,12 @@ class ExtMobileFrontend {
 		return $applicationTemplate;
 	}
 
-	public static function buildLanguageSelection() {
+	public function buildLanguageSelection() {
 		global $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 		$output = Html::openElement( 'select',
 			array( 'id' => 'languageselection' ) );
-		foreach ( self::$languageUrls as $languageUrl ) {
+		foreach ( $this->getLanguageUrls() as $languageUrl ) {
 			if ( $languageUrl['lang'] == $wgLanguageCode ) {
 				$output .=	Html::element( 'option',
 							array( 'value' => $languageUrl['href'], 'selected' => 'selected' ),
@@ -1002,7 +989,7 @@ class ExtMobileFrontend {
 									$languageUrl['language'] );
 			}
 		}
-		$output .= Html::closeElement( 'select', array() );
+		$output .= Html::closeElement( 'select' );
 		wfProfileOut( __METHOD__ );
 		return $output;
 	}
