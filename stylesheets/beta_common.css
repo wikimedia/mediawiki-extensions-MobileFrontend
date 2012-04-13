@@ -108,6 +108,12 @@ h3#sopa-notice {
 	border: 1px solid gray;
 }
 
+table {
+	display: block;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
 table table {
 	border: 0;
 	margin-bottom: 0;
