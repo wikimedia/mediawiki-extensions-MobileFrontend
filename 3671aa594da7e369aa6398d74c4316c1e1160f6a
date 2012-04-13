@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJH///2U\u003d",
+        "filename": "templates/ApplicationTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2012-04-13T01:48:33Z",
+      "side": 1,
+      "message": "Is there a reason for the ALLCAPS?",
+      "revId": "3671aa594da7e369aa6398d74c4316c1e1160f6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
