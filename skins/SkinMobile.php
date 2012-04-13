@@ -19,6 +19,7 @@ class SkinMobile extends SkinTemplate {
 	function outputPage( OutputPage $out = null ) {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
+		$out->setRobotpolicy( 'noindex,nofollow' );
 		$this->extMobileFrontend->beforePageDisplayHTML( $out );
 		echo $this->extMobileFrontend->DOMParse( $out );
 		wfProfileOut( __METHOD__ );

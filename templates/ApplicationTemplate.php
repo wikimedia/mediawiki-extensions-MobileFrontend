@@ -73,7 +73,6 @@ HTML;
 			<meta http-equiv="content-type" content="text/html; charset=utf-8" />{$robots}
 			{$this->data['cssLinks']}
 			<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
-			<meta name="robots" content="noindex, nofollow">
 			{$appleTouchIconTag}
 			{$jQueryScript}
 			<script type="text/javascript">
