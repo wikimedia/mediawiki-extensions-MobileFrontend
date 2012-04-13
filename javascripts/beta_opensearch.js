@@ -138,9 +138,6 @@ MobileFrontend.opensearch = (function() {
 			term = htmlEntities( document.getElementById( 'search' ).value ),
 			section, escapedTerm, suggestionsResult, link, label;
 
-		if ( search ) {
-			search.focus();
-		}
 		if ( !sections || sections.length < 1 ) {
 			results.innerHTML = '<ul class="suggestions-results" title="No Results"><li class="suggestions-result">No Results</li></div>';
 		} else {
