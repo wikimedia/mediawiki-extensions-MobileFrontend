@@ -9,7 +9,6 @@ class ExtMobileFrontend {
 	 */
 	public static $title;
 	public static $htmlTitle;
-	public static $device;
 	public static $randomPageUrl;
 	public static $format;
 	public static $search;
@@ -53,6 +52,7 @@ class ExtMobileFrontend {
 
 	private $forceMobileView = false;
 	private $contentTransformations = true;
+	private $device;
 
 	public function __construct() {
 		global $wgMFConfigProperties;
@@ -349,20 +349,20 @@ class ExtMobileFrontend {
 		self::$search = $wgRequest->getText( 'search' );
 		self::$searchField = $wgRequest->getText( 'search', '' );
 
-		$device = new DeviceDetection();
+		$detector = new DeviceDetection();
 
 		if ( $xDevice ) {
 			$formatName = $xDevice;
 		} else {
-			$formatName = $device->formatName( $userAgent, $acceptHeader );
+			$formatName = $detector->detectFormatName( $userAgent, $acceptHeader );
 		}
 
-		self::$device = $device->format( $formatName );
+		$this->device = $detector->getDevice( $formatName );
 		$this->checkUserStatus();
 		$this->setDefaultLogo();
 
 		// honor useformat=mobile-wap if it's set, otherwise determine by device
-		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : self::$device['view_format'];
+		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : $this->device['view_format'];
 		$this->contentFormat = self::parseContentFormat( $viewFormat );
 
 		$this->getMsg();
@@ -806,7 +806,7 @@ class ExtMobileFrontend {
 		wfProfileIn( __METHOD__ . '-getText' );
 		$formatter->setIsMainPage( self::$title->isMainPage() );
 		if ( $this->contentFormat == 'XHTML'
-			&& self::$device['supports_javascript'] === true
+			&& $this->device['supports_javascript'] === true
 			&& empty( self::$search ) )
 		{
 			$formatter->enableExpandableSections();
@@ -934,7 +934,7 @@ class ExtMobileFrontend {
 						'hideSearchBox' => self::$hideSearchBox,
 						'hideLogo' => self::$hideLogo,
 						'buildLanguageSelection' => self::buildLanguageSelection(),
-						'device' => self::$device,
+						'device' => $this->device,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'wgMobileFrontendLogo' => $wgMobileFrontendLogo,
 						);
@@ -951,6 +951,11 @@ class ExtMobileFrontend {
 		} else {
 			$wgOut->addModuleStyles( 'ext.mobileFrontend' );
 		}
+		$wgOut->addModuleStyles( "ext.mobileFrontend.{$this->device['css_file_name']}" );
+		$isFilePage = self::$title->getNamespace() == NS_FILE;
+		if ( $isFilePage ) {
+			$wgOut->addModuleStyles( 'ext.mobileFrontend.filePage' );
+		}
 		$cssLinks = $wgOut->buildCssLinks();
 		$applicationTemplate = new ApplicationTemplate();
 		$options = array(
@@ -962,11 +967,11 @@ class ExtMobileFrontend {
 						'wgAppleTouchIcon' => $wgAppleTouchIcon,
 						'isBetaGroupMember' => self::$isBetaGroupMember,
 						'minifyJS' => self::$minifyJS,
-						'device' => self::$device,
+						'device' => $this->device,
 						'cssLinks' => $cssLinks,
 						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
 						'wgScriptPath' => $wgScriptPath,
-						'isFilePage' => self::$title->getNamespace() == NS_FILE,
+						'isFilePage' => $isFilePage,
 						'zeroRatedBanner' => self::$zeroRatedBanner,
 						'showText' => wfMsg(  'mobile-frontend-show-button'  ),
 						'hideText' => wfMsg(  'mobile-frontend-hide-button'  ),
@@ -1541,6 +1546,26 @@ class ExtMobileFrontend {
 				$wgOut->redirect( $desktopUrl, 301 );
 			}
 		}
+	}
+
+	/**
+	 * ResourceLoaderRegisterModules hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
+	 * @param array $modules
+	 * @return bool
+	 */
+	public function resourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+		$detector = new DeviceDetection();
+		foreach ( $detector->getCssFiles() as $file ) {
+			$resourceLoader->register("ext.mobileFrontend.$file",
+				array(
+					'styles' => array( "stylesheets/{$file}.css" ),
+					'localBasePath' => dirname( __FILE__ ),
+					'remoteExtPath' => 'MobileFrontend',
+				)
+			);
+		}
+		return true;
 	}
 
 	public function getVersion() {

@@ -162,6 +162,7 @@ function efMobileFrontend_Setup() {
 	$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
 	$wgHooks['ResourceLoaderTestModules'][] = array( &$wgExtMobileFrontend, 'addTestModules' );
 	$wgHooks['GetCacheVaryCookies'][] = array( &$wgExtMobileFrontend, 'getCacheVaryCookies' );
+	$wgHooks['ResourceLoaderRegisterModules'][] = array( &$wgExtMobileFrontend, 'resourceLoaderRegisterModules' );
 }
 
 /**
@@ -211,6 +212,11 @@ $wgResourceModules['ext.mobileFrontendBeta'] = array(
 	'stylesheets/contact-us.css', 'stylesheets/banner.css',
 	'stylesheets/header.css', 'stylesheets/sections.css',
 	'stylesheets/references.css', 'stylesheets/hacks.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+$wgResourceModules['ext.mobileFrontend.filePage'] = array(
+	'styles' => array( 'stylesheets/filepage.css' ),
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );

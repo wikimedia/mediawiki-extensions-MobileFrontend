@@ -28,8 +28,6 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$noticeHtml = ( isset( $this->data['noticeHtml'] ) ) ? $this->data['noticeHtml'] : '';
 
-		$cssFileName = ( isset( $this->data['device']['css_file_name'] ) ) ? $this->data['device']['css_file_name'] : 'default';
-
 		$startScriptTag = '<script type="text/javascript" src="';
 		$endScriptTag = '"></script>';
 		$javaScriptPath =  $this->data['wgExtensionAssetsPath'] . '/MobileFrontend/javascripts/';
@@ -38,9 +36,6 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$jQueryScript = $jQuerySupport ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
 		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=' . $wgMobileResourceVersion . $endScriptTag : '';
 
-		$startLinkTag = "<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/";
-		$endLinkTag = "' media='all' rel='Stylesheet' type='text/css' />";
-		$filePageStyle = ( $this->data['isFilePage'] ) ? $startLinkTag . 'filepage.css' . $endLinkTag : '';
 		$buttonHideText = Xml::escapeJsString( $this->data['hideText'] );
 		$buttonShowText = Xml::escapeJsString( $this->data['showText'] );
 		$configureHomepage = $this->data['configure-empty-homepage'];
@@ -77,8 +72,6 @@ HTML;
 			<title>{$this->data['htmlTitle']}</title>
 			<meta http-equiv="content-type" content="text/html; charset=utf-8" />{$robots}
 			{$this->data['cssLinks']}
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
-			{$filePageStyle}
 			<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
 			<meta name="robots" content="noindex, nofollow">
 			{$appleTouchIconTag}
