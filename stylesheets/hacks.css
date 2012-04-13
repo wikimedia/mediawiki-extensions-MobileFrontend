@@ -2,6 +2,7 @@
 present in wikitext
 and MediaWiki:Common.css definitions
 This file should not need to exist
+IMPORTANT: do not use selectors of the form [style*=padding] as they are known to damage the ios app
 */
 
 .navbox .hlist dd,
@@ -26,7 +27,7 @@ table.gallery .thumb[style] {
 	margin: 0 auto;
 }
 
-table.geography[style] td[style*="text-align"],
+table.geography[style] td[style],
 table.geography[style] td[colspan="2"] {
 	text-align: left !important;
 	margin-left: 0 !important;
@@ -44,7 +45,7 @@ table.navbox {
 	width: 100% !important;
 }
 
-table.navbox div[style*="padding"] {
+table.navbox div[style] {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
@@ -54,11 +55,8 @@ table.gallery .gallerybox[style] {
 	margin-bottom: -16px;
 }
 
-table.navbox div[style*="padding"] a {
-	white-space: pre-wrap;
-}
-
-table.navbox span[style*="white"] {
+table.navbox div[style] a,
+table.navbox span[style] {
 	white-space: pre-wrap !important;
 }
 
@@ -67,11 +65,8 @@ table.infobox th[colspan="3"] {
 	border: 1px solid #cccccc;
 }
 
-table.geography[style] th {
-	text-align: left;
-}
-
-table.geography[style] td[style*="text-align"] div[style],
+table.geography[style] th,
+table.geography[style] td[style] div[style],
 table.geography[style] td[colspan="2"] div[style] {
 	text-align: left !important;
 }
