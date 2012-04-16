@@ -29,11 +29,11 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$noticeHtml = ( isset( $this->data['noticeHtml'] ) ) ? $this->data['noticeHtml'] : '';
 
 		$startScriptTag = '<script type="text/javascript" src="';
-		$endScriptTag = '"></script>';
+		$endScriptTag = "?version={$wgMobileResourceVersion}\"></script>";
 		$javaScriptPath =  $this->data['wgExtensionAssetsPath'] . '/MobileFrontend/javascripts/';
 
 		$jQuerySupport = $this->data['device']['supports_jquery'];
-		$jQueryScript = $jQuerySupport ? $startScriptTag . $javaScriptPath . 'jquery-1.7.2.min.js' . $endScriptTag : '';
+		$jQueryScript = $jQuerySupport ? "{$startScriptTag}{$javaScriptPath}jquery-1.7.2.min.js{$endScriptTag}" : '';
 		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=' . $wgMobileResourceVersion . $endScriptTag : '';
 
 		$robots = isset( $this->data['robots'] ) ? "\n			{$this->data['robots']}" : '';
@@ -64,7 +64,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		if( $this->data['isBetaGroupMember'] && $jQuerySupport ) {
 			$betajs = <<<HTML
-			{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js{$endScriptTag}
 HTML;
 		} else {
 			$betajs = "";
@@ -95,10 +95,10 @@ HTML;
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
-			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js{$endScriptTag}
 			{$betajs}
 			{$filePageScript}
 			<!--[endif]-->
