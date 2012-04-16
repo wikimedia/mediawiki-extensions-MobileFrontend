@@ -43,7 +43,6 @@ $messages['en'] = array (
 	'mobile-frontend-enable-images-prefix' => 'Images',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-featured-article' => 'Today\'s Featured Article',
 	'mobile-frontend-news-items' => 'In The News',
 	'mobile-frontend-leave-feedback-title' => 'Give us feedback about your mobile site experience',
 	'mobile-frontend-leave-feedback-notice' => 'Your feedback helps us to improve your mobile site experience. It will be posted publicly (along with your user name, browser version and operating system) to the page &quot;$1&quot;. Please try to choose an informative subject line, e.g. "Formatting issues with wide tables". Your feedback is subject to our terms of use.',
