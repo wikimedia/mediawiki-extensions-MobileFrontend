@@ -158,9 +158,3 @@ this is so that toggling can scroll it into view
 		font-size: 1.2em;
 	}
 }
-
-@media all and (max-width: 500px) {
-	#footer {
-		padding: 12px 11px;
-	}
-}
