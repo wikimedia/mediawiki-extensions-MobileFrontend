@@ -104,7 +104,7 @@ $wgMobileUrlTemplate = '';
  *
  * If this value is not set, it will default to $wgCookieExpiration
  */
-$wgMobileFrontendFormatCookieExpiry;
+$wgMobileFrontendFormatCookieExpiry = null;
 
 /**
  * URL for script used to disable mobile site
@@ -124,7 +124,7 @@ $wgMobileRedirectFormAction = false;
  *
  * This is entirely optional.
  */
-$wgMobileResourceVersion;
+$wgMobileResourceVersion = '';
 
 $wgExtMobileFrontend = null;
 
