@@ -37,13 +37,6 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$this->assertEquals( '.wikipedia.org', $getBaseDomain->invokeArgs( $wgExtMobileFrontend, array() ) );
 	}
 
-	public function testGetRelativeURL() {
-		global $wgExtMobileFrontend;
-		$getRelativeURL = self::getMethod( 'getRelativeURL' );
-		$url = 'http://en.wikipedia.org/wiki/Positional_astronomy';
-		$this->assertEquals( '/wiki/Positional_astronomy', $getRelativeURL->invokeArgs( $wgExtMobileFrontend, array( $url ) ) );
-	}
-
 	public function testDisableCaching() {
 		global $wgRequest, $wgExtMobileFrontend, $wgSquidServers;
 		$disableCaching = self::getMethod( 'disableCaching' );

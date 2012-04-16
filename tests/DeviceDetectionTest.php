@@ -10,7 +10,7 @@
 	 */
  	public function testFormatName( $format, $userAgent ) {
 		$detector = new DeviceDetection();
-		$this->assertEquals( $format, $detector->formatName( $userAgent ) );
+		$this->assertEquals( $format, $detector->detectFormatName( $userAgent ) );
 	}
 
 	public function provideTestFormatName() {
