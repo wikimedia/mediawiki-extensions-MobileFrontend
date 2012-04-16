@@ -36,16 +36,12 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		$jQueryScript = $jQuerySupport ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
 		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=' . $wgMobileResourceVersion . $endScriptTag : '';
 
-		$buttonHideText = Xml::escapeJsString( $this->data['hideText'] );
-		$buttonShowText = Xml::escapeJsString( $this->data['showText'] );
-		$configureHomepage = $this->data['configure-empty-homepage'];
 		$robots = isset( $this->data['robots'] ) ? "\n			{$this->data['robots']}" : '';
 
 		$jsconfig = array(
 			'messages' => array(
-				'expand-section' => $buttonShowText,
-				'collapse-section' => $buttonHideText,
-				'empty-homepage' => $configureHomepage,
+				'expand-section' => wfMsg( 'mobile-frontend-show-button' ),
+				'collapse-section' => wfMsg( 'mobile-frontend-hide-button' ),
 				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ),
 				),
 			'settings' => array(
@@ -56,6 +52,14 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				'useFormatCookiePath' => ( $this->data['useFormatCookiePath'] ),
 			),
 		);
+		if ( $this->data['title']->isMainPage() ) {
+			$jsconfig['messages']['empty-homepage'] = wfMsg( 'mobile-frontend-empty-homepage' );
+			$firstHeading = Html::element( 'h1', array( 'id' => 'firstHeading' ),
+				$this->data['pageTitle']
+			);
+		} else {
+			$firstHeading = '';
+		}
 		$configuration = FormatJSON::encode( $jsconfig );
 
 		if( $this->data['isBetaGroupMember'] && $jQuerySupport ) {
@@ -84,8 +88,10 @@ HTML;
 			{$this->data['searchWebkitHtml']}
 			<div class='show' id='content_wrapper'>
 			{$noticeHtml}
-			<h1 id="firstHeading">{$this->data['title']}</h1>
+			<div id="content">
+			{$firstHeading}
 			{$this->data['contentHtml']}
+			</div>
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->

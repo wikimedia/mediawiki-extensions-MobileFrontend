@@ -743,7 +743,7 @@ class ExtMobileFrontend {
 		$html = $out->getHTML();
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
-		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( "<div id='content'>$html</div>" ), self::$title, $this->contentFormat, $this->wmlContext );
+		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $html ), self::$title, $this->contentFormat, $this->wmlContext );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
@@ -798,7 +798,7 @@ class ExtMobileFrontend {
 		{
 			$formatter->enableExpandableSections();
 		}
-		$contentHtml = $formatter->getText( 'content' );
+		$contentHtml = $formatter->getText();
 		wfProfileOut( __METHOD__ . '-getText' );
 
 		wfProfileIn( __METHOD__ . '-templates' );
@@ -949,6 +949,7 @@ class ExtMobileFrontend {
 						'dir' => $wgContLang->getDir(),
 						'code' => $wgContLang->getCode(),
 						'title' => self::$title,
+						'pageTitle' => $wgOut->getPageTitle(),
 						'placeholder' => wfMsg( 'mobile-frontend-placeholder' ),
 						'dismissNotification' => wfMsg( 'mobile-frontend-dismiss-notification' ),
 						'wgAppleTouchIcon' => $wgAppleTouchIcon,
@@ -960,9 +961,6 @@ class ExtMobileFrontend {
 						'wgScriptPath' => $wgScriptPath,
 						'isFilePage' => $isFilePage,
 						'zeroRatedBanner' => self::$zeroRatedBanner,
-						'showText' => wfMsg(  'mobile-frontend-show-button'  ),
-						'hideText' => wfMsg(  'mobile-frontend-hide-button'  ),
-						'configure-empty-homepage' => wfMsg(  'mobile-frontend-empty-homepage'  ),
 						'useFormatCookieName' => 'stopMobileRedirect',
 						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
 						'useFormatCookiePath' => $wgCookiePath,
