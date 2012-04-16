@@ -9,7 +9,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		global $wgExtMobileFrontend;
 
 		$this->setHeaders();
-		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-title' ) );
+		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-page-title' ) );
 		$wgExtMobileFrontend->setForceMobileView( true );
 		$wgExtMobileFrontend->setContentTransformations( false );
 
