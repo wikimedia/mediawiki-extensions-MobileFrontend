@@ -14,6 +14,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			$appleTouchIconTag = '';
 		}
 
+		$htmlTitle = htmlspecialchars( $this->data['htmlTitle'] );
 		$zeroRatedBanner = ( isset( $this->data['zeroRatedBanner'] ) ) ? str_replace( 'style="display:none;"', '', $this->data['zeroRatedBanner'] ) : '';
 
 		if ( $zeroRatedBanner ) {
@@ -73,7 +74,7 @@ HTML;
 		<!DOCTYPE html>
 		<html lang='{$this->data['code']}' dir='{$this->data['dir']}' xml:lang='{$this->data['code']}' xmlns='http://www.w3.org/1999/xhtml'>
 		  <head>
-			<title>{$this->data['htmlTitle']}</title>
+			<title>{$htmlTitle}</title>
 			<meta http-equiv="content-type" content="text/html; charset=utf-8" />{$robots}
 			{$this->data['cssLinks']}
 			<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">

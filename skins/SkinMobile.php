@@ -7,6 +7,7 @@ class SkinMobile extends SkinTemplate {
 	public $extMobileFrontend;
 
 	public function __construct( ExtMobileFrontend &$extMobileFrontend ) {
+		$this->setContext( $extMobileFrontend );
 		$this->extMobileFrontend = $extMobileFrontend;
 	}
 
