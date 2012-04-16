@@ -276,7 +276,7 @@ class ExtMobileFrontend {
 	 * @return bool
 	 */
 	public function beforePageDisplayHTML( &$out ) {
-		global $wgRequest, $wgUser;
+		global $wgRequest;
 		wfProfileIn( __METHOD__ );
 
 		// Note: The WebRequest Class calls are made in this block because
@@ -879,7 +879,7 @@ class ExtMobileFrontend {
 	}
 
 	public function getFooterTemplate() {
-		global $wgExtensionAssetsPath, $wgLanguageCode, $wgRequest, $wgContLang;
+		global $wgExtensionAssetsPath, $wgLanguageCode, $wgContLang;
 		wfProfileIn( __METHOD__ );
 		if ( self::$isBetaGroupMember ) {
 			list( $loginHtml, $logoutHtml ) = $this->getLoginLinks();

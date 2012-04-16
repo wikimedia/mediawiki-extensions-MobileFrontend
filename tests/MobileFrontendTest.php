@@ -145,7 +145,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 	 * @dataProvider updateMobileUrlQueryStringProvider
 	 */
 	public function testUpdateMobileUrlQueryString( $assert, $useFormat ) {
-		global $wgRequest, $wgExtMobileFrontend;
+		global $wgExtMobileFrontend;
 
 		$testMethod = ( $assert ) ? 'assertTrue' : 'assertFalse';
 		$url = 'http://en.wikipedia.org/wiki/Article/?something=bananas';
@@ -173,7 +173,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 	 * @dataProvider isMobileDeviceProvider
 	 */
 	public function testIsMobileDevice( $isDevice, $msg, $xDevice = null ) {
-		global $wgReqeust, $wgExtMobileFrontend;
+		global $wgExtMobileFrontend;
 		$isMobileDevice = self::getMethod( 'isMobileDevice' );
 
 		$testMethod = ( $isDevice ) ? 'assertTrue' : 'assertFalse';
@@ -196,7 +196,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 	 * @dataProvider isFauxMobileDeviceProvider
 	 */
 	public function testIsFauxMobileDevice( $isFauxDevice, $msg, $useformat = null ) {
-		global $wgRequest, $wgExtMobileFrontend;
+		global $wgExtMobileFrontend;
 		$isFauxMobileDevice = self::getMethod( 'isFauxMobileDevice' );
 
 		$testMethod = ( $isFauxDevice ) ? 'assertTrue' : 'assertFalse';

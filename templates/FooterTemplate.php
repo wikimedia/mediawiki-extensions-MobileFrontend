@@ -11,7 +11,7 @@ class FooterTemplate extends MobileFrontendTemplate {
 		$copyright = $skin->getCopyright();
 
 		$regularSite = wfMsg( 'mobile-frontend-regular-site' );
-		$copyright = $copyright;
+
 		$termsUsage = wfMsg( 'mobile-frontend-terms-use' );
 		$copyrightSymbol = $this->data['copyright-symbol'];
 

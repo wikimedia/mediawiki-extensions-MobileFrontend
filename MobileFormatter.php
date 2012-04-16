@@ -64,6 +64,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param Title $title: Title to which $html belongs
 	 * @param string $format: 'XHTML' or 'WML'
 	 * @param WmlContext $wmlContext: Context for creation of WML cards, can be omitted if $format == 'XHTML'
+	 * @throws MWException
 	 */
 	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
 		parent::__construct( $html );
