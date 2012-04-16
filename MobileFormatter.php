@@ -350,7 +350,7 @@ class MobileFormatter extends HtmlFormatter {
 		$commonAttributes = array( 'mp-tfa', 'mp-itn' );
 
 		$content = $mainPage->createElement( 'div' );
-		$content->setAttribute( 'id', 'content' );
+		$content->setAttribute( 'id', 'mainpage' );
 
 		if ( $zeroLandingPage ) {
 			$content->appendChild( $zeroLandingPage );

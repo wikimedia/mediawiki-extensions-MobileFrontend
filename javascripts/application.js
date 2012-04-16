@@ -8,10 +8,11 @@ MobileFrontend = (function() {
 	}
 
 	function init() {
-		var languageSelection, contentEl = document.getElementById( 'content' );
+		var languageSelection, contentEl = document.getElementById( 'content' ),
+			mainPage = document.getElementById( 'mainpage' );
 		utilities( document.body ).addClass( 'jsEnabled' );
 
-		if( contentEl && contentEl.childNodes.length === 0 ) {
+		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
 			contentEl.innerHTML = message( 'empty-homepage' );
 		}
 
