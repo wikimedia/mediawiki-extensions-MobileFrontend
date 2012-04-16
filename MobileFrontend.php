@@ -155,14 +155,8 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;
-	$wgExtMobileFrontend = new ExtMobileFrontend();
-	$wgHooks['RequestContextCreateSkin'][] = array( &$wgExtMobileFrontend, 'requestContextCreateSkin' );
-	$wgHooks['BeforePageRedirect'][] = array( &$wgExtMobileFrontend, 'beforePageRedirect' );
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
-	$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
-	$wgHooks['ResourceLoaderTestModules'][] = array( &$wgExtMobileFrontend, 'addTestModules' );
-	$wgHooks['GetCacheVaryCookies'][] = array( &$wgExtMobileFrontend, 'getCacheVaryCookies' );
-	$wgHooks['ResourceLoaderRegisterModules'][] = array( &$wgExtMobileFrontend, 'resourceLoaderRegisterModules' );
+	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
+	$wgExtMobileFrontend->attachHooks();
 }
 
 /**
