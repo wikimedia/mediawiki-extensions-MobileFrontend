@@ -60,7 +60,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			$jsconfig['messages']['empty-homepage'] = wfMsg( 'mobile-frontend-empty-homepage' );
 			$firstHeading = '';
 		} else {
-			$firstHeading = Html::element( 'h1', array( 'id' => 'firstHeading' ),
+			$firstHeading = Html::rawElement( 'h1', array( 'id' => 'firstHeading' ),
 				$this->data['pageTitle']
 			);
 		}
