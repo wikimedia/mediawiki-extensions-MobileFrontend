@@ -58,11 +58,11 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 		);
 		if ( $this->data['title']->isMainPage() ) {
 			$jsconfig['messages']['empty-homepage'] = wfMsg( 'mobile-frontend-empty-homepage' );
+			$firstHeading = '';
+		} else {
 			$firstHeading = Html::element( 'h1', array( 'id' => 'firstHeading' ),
 				$this->data['pageTitle']
 			);
-		} else {
-			$firstHeading = '';
 		}
 		$configuration = FormatJSON::encode( $jsconfig );
 
