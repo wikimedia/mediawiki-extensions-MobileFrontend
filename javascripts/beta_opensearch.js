@@ -172,6 +172,7 @@ MobileFrontend.opensearch = (function() {
 
 	function initClearSearch() {
 		var clearSearch = document.getElementById( 'clearsearch' ),
+			results = document.getElementById( 'results' ),
 			search = document.getElementById( 'search' );
 
 		function clearSearchBox( event ) {
