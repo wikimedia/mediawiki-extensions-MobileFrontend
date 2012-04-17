@@ -73,13 +73,7 @@ MobileFrontend.opensearch = (function() {
 		var el, newEv,
 			topResult = u( '.suggestions-result a' )[0];
 		if( topResult ) {
-			if ( 'fireEvent' in topResult ) {
-				topResult.fireEvent( 'click' );
-			} else {
-				newEv = document.createEvent( 'HTMLEvents' );
-				newEv.initEvent( 'click', true, true );
-				topResult.dispatchEvent( newEv );
-			}
+			window.location.href = topResult.getAttribute( 'href' );
 			ev.preventDefault();
 		} else {
 			performSearch( ev );
