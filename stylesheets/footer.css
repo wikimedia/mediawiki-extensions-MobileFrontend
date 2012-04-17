@@ -1,0 +1,160 @@
+/* FOOTER
+initially moved from beta_common.css in
+Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
+*/
+#footer {
+	-webkit-box-shadow: 0px -5px 30px 0px #ddd;
+	-moz-box-shadow: 0px -5px 30px 0px #ddd;
+	-o-box-shadow: 0px -5px 30px 0px #ddd;
+	box-shadow: 0px -5px 30px 0px #ddd;
+	padding: 12px 20px; /* see .section padding + .content_block padding */
+	border-top: solid 1px #aaa;
+	line-height: 24px;
+	position: relative;
+	clear: both; /* cancel any floating in the content */
+}
+
+#footer .section_heading {
+	height: 24px;
+	display: block;
+	margin: 0;
+	font-size: 1em;
+}
+
+#footer ul {
+	text-align: center;
+	width: 100%;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+#footer ul li {
+	line-height: 1.4;
+}
+
+#footer .settings .left,
+#footer .settings .right {
+	width: 48%;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+#footer .settings .left {
+	text-align: right;
+	padding-right: 2px;
+}
+
+#footer .settings .right {
+	text-align: left;
+	padding-left: 2px;
+}
+
+html[dir="rtl"] #footer .settings li:first-child .left:before,
+html[dir="ltr"] #footer .settings li:first-child .left:after {
+	content: " | ";
+	visibility: visible;
+}
+
+html[dir="rtl"] #footer .settings .left:before,
+html[dir="ltr"] #footer .settings .left:after {
+	content: " | ";
+	visibility: hidden;
+}
+
+#footer img.license {
+	margin-top: 3px; /* (22px line height - 16px height) / 2) */
+	height: 16px;
+}
+
+#footer .license {
+	float: left;
+	margin-right: 4px;
+}
+
+#footer .toggleCopyright,
+#footer .license {
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 22px;
+}
+
+#footer .toggleCopyright {
+	float: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#section_footer {
+	color: #333;
+}
+
+.toggleCopyright .hide,
+.toggleCopyright .show {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 22px;
+}
+
+
+/* 
+disable animations in footer
+this is so that toggling can scroll it into view
+*/
+.togglingEnabled #footer .content_block {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+	margin-top: 0;
+}
+
+#footer .notice .terms {
+	float: left;
+}
+
+#section_footer button {
+	height: 22px;
+}
+
+#content_footer {
+	font-size: 0.9em;
+	clear: both;
+}
+
+#footer .links {
+	text-align: center;
+}
+
+#footer .links li {
+	display: block;
+	width: 25%;
+	font-size: 1.1em;
+	float: left;
+}
+
+#footer .links:after {
+	content: "";
+	clear: both;
+	position: relative;
+	display: block;
+}
+
+.togglingEnabled #footer .more,
+.togglingEnabled #footer .openSection .less {
+	display: block;
+}
+
+#footer .more, /* no javascript */
+#footer .less,
+#footer .openSection .more {
+	display: none;
+}
+
+@media all and (min-width: 500px) {
+	#footer .links li {
+		font-size: 1.2em;
+	}
+}

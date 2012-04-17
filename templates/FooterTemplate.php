@@ -7,25 +7,38 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 class FooterTemplate extends MobileFrontendTemplate {
 
 	public function getHTML() {
+		$skin = RequestContext::getMain()->getSkin();
+		$copyright = $skin->getCopyright();
 
-		$regularSite = $this->data['messages']['mobile-frontend-regular-site'];
-		$copyright = $this->data['messages']['mobile-frontend-footer-copyright'];
+		$regularSite = wfMsg( 'mobile-frontend-regular-site' );
+
+		$termsUsage = wfMsg( 'mobile-frontend-terms-use' );
 		$copyrightSymbol = $this->data['copyright-symbol'];
-		$license = $this->data['messages']['mobile-frontend-footer-license'];
-		$disableImages = $this->data['messages']['mobile-frontend-disable-images'];
-		$enableImages = $this->data['messages']['mobile-frontend-enable-images'];
-		$leaveFeedback = $this->data['messages']['mobile-frontend-leave-feedback'];
+
+		$license = wfMsg( 'mobile-frontend-footer-license' );
+		$disableImages = ( $this->data['isBetaGroupMember'] ) ? wfMsg( 'mobile-frontend-off' ) :
+			wfMsg( 'mobile-frontend-disable-images' );
+		$enableImages =  ( $this->data['isBetaGroupMember'] ) ? wfMsg( 'mobile-frontend-on' ) :
+			wfMsg( 'mobile-frontend-enable-images' );
+		$leaveFeedback = wfMsg( 'mobile-frontend-leave-feedback' );
 
 		$leaveFeedbackURL = $this->data['leaveFeedbackURL'];
 		$viewNormalSiteURL = $this->data['viewNormalSiteURL'];
+		$viewNormalSiteLabel = wfMsg( 'mobile-frontend-view-desktop' );
+		$mobileSiteLabel = wfMsg( 'mobile-frontend-view-mobile' );
 
 		if ( $this->data['disableImages'] == 0 ) {
 			$imagesToggle = $disableImages;
+			$imagesPrefix = $enableImages . " / ";
+			$imagesSuffix = "";
 			$imagesURL = $this->data['disableImagesURL'];
 		} else {
 			$imagesToggle = $enableImages;
+			$imagesPrefix = "";
+			$imagesSuffix = " / " . $disableImages;
 			$imagesURL = $this->data['enableImagesURL'];
 		}
+		$imagesToggleLabelPrefix = wfMsg( 'mobile-frontend-enable-images-prefix' );
 
 		$logoutLink = ( $this->data['logoutHtml'] ) ? ' | ' . $this->data['logoutHtml'] : '';
 		$logoutLink = ( $this->data['loginHtml'] ) ? ' | ' . $this->data['loginHtml'] : $logoutLink;
@@ -48,33 +61,45 @@ class FooterTemplate extends MobileFrontendTemplate {
 				<ul id='copyright'><li>{$copyright}</li></ul>
 			</div>
 HTML;
+		$footerSitename = wfMessage( 'mobile-frontend-footer-sitename' )->escaped();
 		if( $this->data['copyright-has-logo'] ) {
 			$licenseHTML = <<<HTML
 			<img src="{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/images/logo-copyright-{$this->data['language-code']}.png"
-				class="license" alt="{$this->data['messages']['mobile-frontend-footer-sitename']} {$copyrightSymbol}">
+				class="license" alt="{$footerSitename} {$copyrightSymbol}">
 HTML;
 		} else {
 			$licenseHTML = <<<HTML
-			<div class="license">{$this->data['messages']['mobile-frontend-footer-sitename']} {$copyrightSymbol}</div>
+			<div class="license">{$footerSitename} {$copyrightSymbol}</div>
 HTML;
 		}
 		
-		
+		$footerMore = wfMessage( 'mobile-frontend-footer-more' )->escaped();
+		$footerLess = wfMessage( 'mobile-frontend-footer-less' )->escaped();
+		$footerContact = wfMessage( 'mobile-frontend-footer-contact' )->escaped();
 		$betaFooter = <<<HTML
 		<h2 class="section_heading" id="section_footer">
 		<!-- TODO: make license icon and text dynamic -->
 		{$licenseHTML}
 		<span class="toggleCopyright">
-			<span class="more">{$this->data['messages']['mobile-frontend-footer-more']}</span><span class="less">{$this->data['messages']['mobile-frontend-footer-less']}</span>
+			<span class="more">{$footerMore}</span><span class="less">{$footerLess}</span>
 		</span>
 		</h2>
 		<div class="content_block" id="content_footer">
-			<div class="notice">
+			<ul class="settings">
+				<li>
+				<span class="left separator"><a href="{$viewNormalSiteURL}">{$viewNormalSiteLabel}</a></span><span class="right">
+				{$mobileSiteLabel}</span>
+				</li>
+				<li>
+				<span class="left">{$termsUsage}</span><span class="right">{$imagesToggleLabelPrefix} {$imagesPrefix}<a href="{$imagesURL}#section_footer">{$imagesToggle}</a>{$imagesSuffix}</span>
+				</li>
+				<li class="notice">
 				{$license}
-			</div>
+				</li>
+			</ul>
 			<ul class='links'>
 				<li>
-					<a href="{$this->data['leaveFeedbackURL']}">{$this->data['messages']['mobile-frontend-footer-contact']}</a>
+					<a href="{$this->data['leaveFeedbackURL']}">{$footerContact}</a>
 				</li><li>
 					{$privacyLink}
 				</li><li>

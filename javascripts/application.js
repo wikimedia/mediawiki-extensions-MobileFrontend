@@ -8,10 +8,11 @@ MobileFrontend = (function() {
 	}
 
 	function init() {
-		var languageSelection, contentEl = document.getElementById( 'content' );
+		var languageSelection, contentEl = document.getElementById( 'content' ),
+			mainPage = document.getElementById( 'mainpage' );
 		utilities( document.body ).addClass( 'jsEnabled' );
 
-		if( contentEl && contentEl.childNodes.length === 0 ) {
+		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
 			contentEl.innerHTML = message( 'empty-homepage' );
 		}
 
@@ -35,18 +36,44 @@ MobileFrontend = (function() {
 		utilities( document.getElementById( 'logo' ) ).bind( 'click', logoClick );
 
 		function desktopViewClick() {
-			var cookieName = MobileFrontend.setting( 'useFormatCookieName' );
-			var cookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
+			// get mf_mobileFormat cookie info
+			var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' );
+			var formatCookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
 			var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' );
-			var cookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
-			
-			// convert from seconds to days
-			cookieDuration = cookieDuration / ( 24 * 60 * 60 );
+			var formatCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
 
-			// get the top part of the domain to make the cookie work across subdomains
-			MobileFrontend.banner.writeCookie( cookieName, 'desktop', cookieDuration, cookiePath, cookieDomain );
+			// convert from seconds to days
+			formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
+
+			// expire the mf_mobileFormat cookie
+			MobileFrontend.banner.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
+
+			// get stopMobileRedirect cookie info
+			var stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
+			var stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
+			var stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
+
+			// convert from seconds to days
+			stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
+
+			// set the stopMobileRedirect cookie
+			MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
+
+		// when rotating to landscape stop page zooming on ios
+		function fixiOSBug() {
+			// see http://adactio.com/journal/4470/
+			var viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' ),
+				ua = navigator.userAgent;
+			if( viewportmeta && ua.match( /iPhone|iPad/i )  ) {
+				viewportmeta.content = 'minimum-scale=1.0, maximum-scale=1.0';
+				document.addEventListener( 'gesturestart', function() {
+					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
+				}, false );
+			}
+		}
+		fixiOSBug();
 
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );

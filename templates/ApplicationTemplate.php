@@ -14,6 +14,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 			$appleTouchIconTag = '';
 		}
 
+		$htmlTitle = htmlspecialchars( $this->data['htmlTitle'] );
 		$zeroRatedBanner = ( isset( $this->data['zeroRatedBanner'] ) ) ? str_replace( 'style="display:none;"', '', $this->data['zeroRatedBanner'] ) : '';
 
 		if ( $zeroRatedBanner ) {
@@ -28,29 +29,21 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$noticeHtml = ( isset( $this->data['noticeHtml'] ) ) ? $this->data['noticeHtml'] : '';
 
-		$cssFileName = ( isset( $this->data['device']['css_file_name'] ) ) ? $this->data['device']['css_file_name'] : 'default';
-
 		$startScriptTag = '<script type="text/javascript" src="';
-		$endScriptTag = '"></script>';
+		$endScriptTag = "?version={$wgMobileResourceVersion}\"></script>";
 		$javaScriptPath =  $this->data['wgExtensionAssetsPath'] . '/MobileFrontend/javascripts/';
 
 		$jQuerySupport = $this->data['device']['supports_jquery'];
-		$jQueryScript = $jQuerySupport ? $startScriptTag . $javaScriptPath . 'jquery-1.7.1.min.js' . $endScriptTag : '';
+		$jQueryScript = $jQuerySupport ? "{$startScriptTag}{$javaScriptPath}jquery-1.7.2.min.js{$endScriptTag}" : '';
 		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=' . $wgMobileResourceVersion . $endScriptTag : '';
 
-		$startLinkTag = "<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/";
-		$endLinkTag = "' media='all' rel='Stylesheet' type='text/css' />";
-		$filePageStyle = ( $this->data['isFilePage'] ) ? $startLinkTag . 'filepage.css' . $endLinkTag : '';
-		$buttonHideText = Xml::escapeJsString( $this->data['hideText'] );
-		$buttonShowText = Xml::escapeJsString( $this->data['showText'] );
-		$configureHomepage = $this->data['configure-empty-homepage'];
 		$robots = isset( $this->data['robots'] ) ? "\n			{$this->data['robots']}" : '';
 
 		$jsconfig = array(
 			'messages' => array(
-				'expand-section' => $buttonShowText,
-				'collapse-section' => $buttonHideText,
-				'empty-homepage' => $configureHomepage,
+				'expand-section' => wfMsg( 'mobile-frontend-show-button' ),
+				'collapse-section' => wfMsg( 'mobile-frontend-hide-button' ),
+				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ),
 				),
 			'settings' => array(
 				'scriptPath' => ( $this->data['wgScriptPath'] ),
@@ -58,13 +51,24 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				'useFormatCookieDuration' => ( $this->data['useFormatCookieDuration'] ),
 				'useFormatCookieDomain' => ( $this->data['useFormatCookieDomain'] ),
 				'useFormatCookiePath' => ( $this->data['useFormatCookiePath'] ),
+				'stopMobileRedirectCookieName' => ( $this->data['stopMobileRedirectCookieName'] ),
+				'stopMobileRedirectCookieDuration' => ( $this->data['stopMobileRedirectCookieDuration'] ),
+				'stopMobileRedirectCookieDomain' => ( $this->data['stopMobileRedirectCookieDomain'] ),
 			),
 		);
+		if ( $this->data['title']->isMainPage() ) {
+			$jsconfig['messages']['empty-homepage'] = wfMsg( 'mobile-frontend-empty-homepage' );
+			$firstHeading = '';
+		} else {
+			$firstHeading = Html::element( 'h1', array( 'id' => 'firstHeading' ),
+				$this->data['pageTitle']
+			);
+		}
 		$configuration = FormatJSON::encode( $jsconfig );
 
 		if( $this->data['isBetaGroupMember'] && $jQuerySupport ) {
 			$betajs = <<<HTML
-			{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js{$endScriptTag}
 HTML;
 		} else {
 			$betajs = "";
@@ -79,11 +83,9 @@ HTML;
 		<!DOCTYPE html>
 		<html lang='{$this->data['code']}' dir='{$this->data['dir']}' xml:lang='{$this->data['code']}' xmlns='http://www.w3.org/1999/xhtml'>
 		  <head>
-			<title>{$this->data['htmlTitle']}</title>
+			<title>{$htmlTitle}</title>
 			<meta http-equiv="content-type" content="text/html; charset=utf-8" />{$robots}
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$betaPrefix}common.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
-			<link href='{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/{$cssFileName}.css?version={$wgMobileResourceVersion}' media='all' rel='Stylesheet' type='text/css' />
-			{$filePageStyle}
+			{$this->data['cssLinks']}
 			<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
 			{$appleTouchIconTag}
 			{$jQueryScript}
@@ -91,19 +93,22 @@ HTML;
 			var mwMobileFrontendConfig = {$configuration};
 			</script>
 		  </head>
-		  <body>
+		  <body class="mobile">
 			{$zeroRatedBanner}
 			{$this->data['searchWebkitHtml']}
 			<div class='show' id='content_wrapper'>
 			{$noticeHtml}
+			<div id="content">
+			{$firstHeading}
 			{$this->data['contentHtml']}
+			</div>
 			</div>
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
-			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js?version={$wgMobileResourceVersion}{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js{$endScriptTag}
 			{$betajs}
 			{$filePageScript}
 			<!--[endif]-->

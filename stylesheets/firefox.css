@@ -9,4 +9,10 @@
 	margin-top: 8px;
 }
 
-
+/* avoid float issues in fennec caused by MediaWiki:Common.css definition */
+div.tright,
+div.floatright,
+table.floatright {
+	clear: none !important;
+	float: none !important;
+}

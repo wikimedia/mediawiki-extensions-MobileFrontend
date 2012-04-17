@@ -1,6 +1,6 @@
 <?php
 /**
- * Aliases for MobileFrontend
+ * Aliases for MobileFrontend extension
  *
  * @file
  * @ingroup Extensions
@@ -12,5 +12,7 @@ $specialPageAliases = array();
  * @author <your username>
  */
 $specialPageAliases['en'] = array(
-        'MobileFrontend' => array( 'MobileFrontend' ),
+	'MobileFrontend' => array( 'MobileFrontend' ),
+	'MobileFeedback' => array( 'MobileFeedback' ),
+	'MobileOptions' => array( 'MobileOptions' ),
 );

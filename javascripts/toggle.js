@@ -1,4 +1,4 @@
-/*global document, window */
+/*global MobileFrontend, document, window */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.toggle = (function() {
 	var u = MobileFrontend.utils;
@@ -57,7 +57,7 @@ MobileFrontend.toggle = (function() {
 			}
 		}
 		checkHash();
-		for ( a = u( '.content_block a' ) || [], i = 0; i < a.length; i++ ) {
+		for ( a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 			u( a[i] ).bind( 'click', checkHash );
 		}
 	}
@@ -79,24 +79,38 @@ MobileFrontend.toggle = (function() {
 	}
 
 	function wm_toggle_section( section_id ) {
-		var b = document.getElementById( 'section_' + section_id ),
-			bb = b.getElementsByTagName( 'button' ), i, s, e, closed;
-		if( u(b).hasClass( 'openSection' ) ) {
-			u(b).removeClass( 'openSection' );
+		var b = document.getElementById( 'section_' + section_id ), id,
+			bb = b.getElementsByTagName( 'button' ), i, s, e, closed, reset = [];
+		if( u( b ).hasClass( 'openSection' ) ) {
+			u( b ).removeClass( 'togglefix' );
+			u( b ).removeClass( 'openSection' );
 			closed = true;
 		} else {
-			u(b).addClass( 'openSection' );
+			reset.push( b );
+			u( b ).addClass( 'openSection' );
 		}
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
 			e = document.getElementById( d[i] + section_id );
 			if ( e && u( e ).hasClass( 'openSection' ) ) {
+				u( e ).removeClass( 'togglefix' );
 				u( e ).removeClass( 'openSection' );
-			} else {
+			} else if( e ) {
+				reset.push( e );
 				u( e ).addClass( 'openSection' );
 			}
 		}
 		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
-		window.location.hash = closed ? '#_' : '#section_' + section_id;
+		id = 'section_' + section_id;
+		e = document.getElementById( id );
+		e.removeAttribute( 'id' );
+		window.location.hash = closed ? '#_' : '#' + id;
+		e.setAttribute( 'id', id );
+		window.setTimeout(function() { // override the max-height property for sections over 9999px height
+			var i;
+			for( i = 0; i < reset.length; i++ ) {
+				u( reset[ i ] ).addClass( 'togglefix' );
+			}
+		}, 400); // this matches transition speed in sections.css
 	}
 
 	init();
@@ -106,4 +120,4 @@ MobileFrontend.toggle = (function() {
 		init: init
 	};
 
-})();
+}());

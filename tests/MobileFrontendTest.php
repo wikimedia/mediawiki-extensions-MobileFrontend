@@ -37,17 +37,10 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$this->assertEquals( '.wikipedia.org', $getBaseDomain->invokeArgs( $wgExtMobileFrontend, array() ) );
 	}
 
-	public function testGetRelativeURL() {
-		global $wgExtMobileFrontend;
-		$getRelativeURL = self::getMethod( 'getRelativeURL' );
-		$url = 'http://en.wikipedia.org/wiki/Positional_astronomy';
-		$this->assertEquals( '/wiki/Positional_astronomy', $getRelativeURL->invokeArgs( $wgExtMobileFrontend, array( $url ) ) );
-	}
-
 	public function testDisableCaching() {
 		global $wgRequest, $wgExtMobileFrontend, $wgSquidServers;
 		$disableCaching = self::getMethod( 'disableCaching' );
-		
+
 		$wgSquidServers = array( '10.64.0.131' );
 		$_SERVER['REMOTE_ADDR'] = '10.64.0.131';
 		$disableCaching->invokeArgs( $wgExtMobileFrontend, array() );
@@ -63,21 +56,21 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$sendXDeviceVaryHeader->invokeArgs( $wgExtMobileFrontend, array() );
 		$this->assertEquals( $_SERVER['HTTP_X_DEVICE'], $wgRequest->response()->getheader( 'X-Device' ) );
 	}
-	
+
 	public function testGetMobileUrl() {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
 		$this->assertEquals( 'http://en.m.wikipedia.org/wiki/Article', $wgExtMobileFrontend->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' ) );
 	}
-	
+
 	public function testParseMobileUrlTemplate() {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2/path/morepath";
 		$this->assertEquals( '%h0.m.%h1.%h2', $wgExtMobileFrontend->parseMobileUrlTemplate( 'host' ) );
 		$this->assertEquals( '/path/morepath', $wgExtMobileFrontend->parseMobileUrlTemplate( 'path' ) );
-		$this->assertEquals( array( 'host' => '%h0.m.%h1.%h2', 'path' => '/path/morepath' ), $wgExtMobileFrontend->parseMobileUrlTemplate());
+		$this->assertEquals( array( 'host' => '%h0.m.%h1.%h2', 'path' => '/path/morepath' ), $wgExtMobileFrontend->parseMobileUrlTemplate() );
 	}
-	
+
 	public function testUpdateMobileUrlHost() {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
@@ -86,53 +79,81 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
 		$this->assertEquals( "http://en.m.wikipedia.org/wiki/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
 	}
-	
-	public function testUpdateDesktopUrlHost() {
+
+	/**
+	 * @dataProvider updateDesktopUrlQueryProvider
+	 */
+	public function testUpdateDesktopUrlQuery( $mobile, $desktop ) {
+		global $wgExtMobileFrontend;
+		$updateDesktopUrlQuery = self::getMethod( "updateDesktopUrlQuery" );
+		$parsedUrl = wfParseUrl( $mobile );
+		$updateDesktopUrlQuery->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
+		$url =  wfAssembleUrl( $parsedUrl );
+		$this->assertEquals( $desktop, $url );
+	}
+
+	public function updateDesktopUrlQueryProvider() {
+		return array(
+			array( 'http://en.m.wikipedia.org/wiki/Gustavus_Airport?useformat=mobile&mobileaction=toggle_desktop_view', 'http://en.m.wikipedia.org/wiki/Gustavus_Airport?mobileaction=toggle_desktop_view' ),
+		);
+	}
+
+	/**
+	 * @dataProvider updateDesktopUrlHostProvider
+	 */
+	public function testUpdateDesktopUrlHost( $mobile, $desktop ) {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
-		$parsedUrl = wfParseUrl( "http://en.m.wikipedia.org/wiki/Gustavus_Airport" );
+		$parsedUrl = wfParseUrl( $mobile );
 		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
-		$this->assertEquals( "http://en.wikipedia.org/wiki/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+		$this->assertEquals( $desktop, wfAssembleUrl( $parsedUrl ) );
 	}
-	
+
+	public function updateDesktopUrlHostProvider() {
+		return array(
+			array( 'http://en.m.wikipedia.org/wiki/Gustavus_Airport', 'http://en.wikipedia.org/wiki/Gustavus_Airport' ),
+			array( 'http://bm.m.wikipedia.org/wiki/Nyɛ_fɔlɔ', 'http://bm.wikipedia.org/wiki/Nyɛ_fɔlɔ' ),
+		);
+	}
+
 	public function testUpdateMobileUrlPath() {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend, $wgScriptPath;
 		$wgScriptPath = '/wiki';
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlPath" );
 		$wgMobileUrlTemplate = "/mobile/%p";
-		
+
 		// check for constructing a templated URL
 		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/Gustavus_Airport" );
 		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
 		$this->assertEquals( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
-		
+
 		// check for maintaining an already templated URL
 		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport" );
 		$updateMobileUrlHost->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
 		$this->assertEquals( "http://en.wikipedia.org/wiki/mobile/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
 	}
-	
+
 	/**
 	 * @dataProvider updateMobileUrlQueryStringProvider
 	 */
 	public function testUpdateMobileUrlQueryString( $assert, $useFormat ) {
-		global $wgRequest, $wgExtMobileFrontend;
-		
+		global $wgExtMobileFrontend;
+
 		$testMethod = ( $assert ) ? 'assertTrue' : 'assertFalse';
 		$url = 'http://en.wikipedia.org/wiki/Article/?something=bananas';
 		if ( !empty( $useFormat ) ) $url .= "&useformat=" . $useFormat;
 		$wgExtMobileFrontend->setUseFormat( $useFormat );
-		
+
 		$parsedUrl = wfParseUrl( $url );
-		
+
 		$updateMobileUrlQueryString = self::getMethod( 'updateMobileUrlQueryString' );
-		$updateMobileUrlQueryString->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl) );
-		
+		$updateMobileUrlQueryString->invokeArgs( $wgExtMobileFrontend, array( &$parsedUrl ) );
+
 		$targetUrl = wfAssembleUrl( $parsedUrl );
 		$this->$testMethod( $url == $targetUrl, $targetUrl );
 	}
-	
+
 	public function updateMobileUrlQueryStringProvider() {
 		return array(
 			array( true, 'mobile' ),
@@ -140,43 +161,43 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 			array( true, '' ),
 		);
 	}
-	
+
 	/**
 	 * @dataProvider isMobileDeviceProvider
 	 */
 	public function testIsMobileDevice( $isDevice, $msg, $xDevice = null ) {
-		global $wgReqeust, $wgExtMobileFrontend;
+		global $wgExtMobileFrontend;
 		$isMobileDevice = self::getMethod( 'isMobileDevice' );
-		
+
 		$testMethod = ( $isDevice ) ? 'assertTrue' : 'assertFalse';
-		
-		if ( !is_null( $xDevice )) {
+
+		if ( !is_null( $xDevice ) ) {
 			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
 		}
-		
+
 		$this->$testMethod( $isMobileDevice->invokeArgs( $wgExtMobileFrontend, array() ), $msg );
 	}
-	
+
 	public function isMobileDeviceProvider() {
 		return array(
 			array( false, 'Nothing set' ),
 			array( true, 'HTTP_X_DEVICE = webkit', 'webkit' ),
 		);
 	}
-	
+
 	/**
 	 * @dataProvider isFauxMobileDeviceProvider
 	 */
-	public function testIsFauxMobileDevice( $isFauxDevice, $msg, $useformat=null ) {
-		global $wgRequest, $wgExtMobileFrontend;
+	public function testIsFauxMobileDevice( $isFauxDevice, $msg, $useformat = null ) {
+		global $wgExtMobileFrontend;
 		$isFauxMobileDevice = self::getMethod( 'isFauxMobileDevice' );
-		
+
 		$testMethod = ( $isFauxDevice ) ? 'assertTrue' : 'assertFalse';
-		
+
 		$wgExtMobileFrontend->setUseFormat( $useformat );
 		$this->$testMethod( $isFauxMobileDevice->invokeArgs( $wgExtMobileFrontend, array() ), $msg );
 	}
-	
+
 	public function isFauxMobileDeviceProvider() {
 		return array(
 			array( false, 'Nothing set' ),
@@ -185,17 +206,17 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 			array( false, 'useformat=yourmom', 'yourmom' ),
 		);
 	}
-	
+
 	/**
 	 * @dataProvider shouldDisplayMobileViewProvider
 	 */
-	public function testShouldDisplayMobileView( $shouldDisplay, $xDevice=null, $requestVal=array(), $msg=null ) {
+	public function testShouldDisplayMobileView( $shouldDisplay, $xDevice = null, $requestVal = array(), $msg = null ) {
 		global $wgRequest, $wgExtMobileFrontend;
 		$shouldDisplayMobileView = self::getMethod( 'shouldDisplayMobileView' );
-	
+
 		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
-		
-		if ( count( $requestVal )) {
+
+		if ( count( $requestVal ) ) {
 			foreach ( $requestVal as $key => $val ) {
 				if ( $key == 'useformat' ) {
 					$wgExtMobileFrontend->setUseFormat( $val );
@@ -204,15 +225,15 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 				}
 			}
 		}
-		
-		if ( !is_null( $xDevice )) {
+
+		if ( !is_null( $xDevice ) ) {
 			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
 		}
-		
+
 		$this->$testMethod( $shouldDisplayMobileView->invokeArgs( $wgExtMobileFrontend, array() ), $msg );
-		
+
 		// clean up
-		if ( count( $requestVal )) {
+		if ( count( $requestVal ) ) {
 			foreach ( $requestVal as $key => $val ) {
 				if ( $key == 'useformat' ) {
 					continue;
@@ -222,7 +243,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 			}
 		}
 	}
-	
+
 	public function shouldDisplayMobileViewProvider() {
 		return array(
 			array( false, null, array() ),
@@ -238,11 +259,11 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 			array( false, null, array( 'useformat' => 'mobile', 'action' => 'history' ) ),
 		);
 	}
-	
+
 	/**
 	 * @dataProvider getXDeviceProvider
 	 */
-	public function testGetXDevice( $xDevice=null ) {
+	public function testGetXDevice( $xDevice = null ) {
 		global $wgExtMobileFrontend;
 		if ( is_null( $xDevice ) ) {
 			$assert = '';
@@ -255,21 +276,21 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		}
 		$this->assertEquals( $assert, $wgExtMobileFrontend->getXDevice() );
 	}
-	
+
 	public function getXDeviceProvider() {
 		return array(
 			array( 'webkit' ),
 			array( null ),
 		);
 	}
-	
+
 	/**
 	 * @dataProvider getMobileActionProvider
 	 */
-	public function testGetMobileAction( $mobileaction=null ) {
+	public function testGetMobileAction( $mobileaction = null ) {
 		global $wgRequest, $wgExtMobileFrontend;
 
-		if ( is_null( $mobileaction )) {
+		if ( is_null( $mobileaction ) ) {
 			$assert = '';
 			$wgRequest->unsetVal( 'mobileaction' );
 		} else {
@@ -279,38 +300,38 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 
 		$this->assertEquals( $assert, $wgExtMobileFrontend->getMobileAction() );
 	}
-	
+
 	public function getMobileActionProvider() {
 		return array(
 			array( null ),
 			array( 'view_normal_site' ),
 		);
 	}
-	
+
 	/**
 	 * @dataProvider getActionProvider
 	 */
-	public function testGetAction( $action=null ) {
+	public function testGetAction( $action = null ) {
 		global $wgRequest, $wgExtMobileFrontend;
-		
-		if ( is_null( $action )) {
+
+		if ( is_null( $action ) ) {
 			$assert = '';
 			$wgRequest->unsetVal( 'action' );
 		} else {
 			$wgRequest->setVal( 'action', $action );
 			$assert = $action;
 		}
-		
+
 		$this->assertEquals( $assert, $wgExtMobileFrontend->getAction() );
 	}
-	
+
 	public function getActionProvider() {
 		return array(
 			array( null ),
 			array( 'edit' ),
 		);
 	}
-	
+
 	/**
 	 * @dataProvider getUseFormatProvider
 	 */
@@ -320,7 +341,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$wgExtMobileFrontend->setUseFormat( $explicit );
 		$this->assertEquals( $expected, $wgExtMobileFrontend->getUseFormat() );
 	}
-	
+
 	public function getUseFormatProvider() {
 		return array(
 			array( 'mobile', null, 'mobile' ),
@@ -329,17 +350,17 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 			array( 'desktop', 'mobile', 'desktop' ),
 		);
 	}
-	
+
 	public function testGetUseFormatCookieExpiry() {
 		global $wgExtMobileFrontend, $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
 		$getUseFormatCookieExpiry = self::getMethod( 'getUseFormatCookieExpiry' );
-		
+
 		$origMFCookieExpiry = $wgMobileFrontendFormatCookieExpiry;
 		$startTime = time();
 		$wgMobileFrontendFormatCookieExpiry = 60;
 		$mfCookieExpected = $startTime + 60;
 		$this->assertTrue( $mfCookieExpected == $getUseFormatCookieExpiry->invokeArgs( $wgExtMobileFrontend, array( $startTime ) ), 'Using MobileFrontend expiry.' );
-		
+
 		$wgMobileFrontendFormatCookieExpiry = null;
 		$defaultMWCookieExpected = $startTime + $wgCookieExpiration;
 		$this->assertTrue( $defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs( $wgExtMobileFrontend, array( $startTime ) ), 'Using default MediaWiki cookie expiry.' );
@@ -347,21 +368,21 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		// reset global back to original value
 		$wgMobileFrontendFormatCookieExpiry = $origMFCookieExpiry;
 	}
-	
+
 	public function testSetPropertiesFromArray() {
 		global $wgExtMobileFrontend;
 		$props = array(
 			'xDevice' => 'android',
-			'blargh' => 'bananas', 
+			'blargh' => 'bananas',
 			'minifyJS' => false,
 		);
 		$wgExtMobileFrontend->setPropertiesFromArray( $props );
 		$this->assertEquals( $wgExtMobileFrontend::$minifyJS, false );
 		$this->assertEquals( $wgExtMobileFrontend->getXDevice(), 'android' );
 		// ensure 'balrgh' didnt get set since it was not a pre-defined property
-		$this->assertFalse( property_exists( $wgExtMobileFrontend, 'blargh' ));
+		$this->assertFalse( property_exists( $wgExtMobileFrontend, 'blargh' ) );
 	}
-		
+
 	/**
      * @outputBuffering enabled
 	 */
@@ -372,7 +393,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		setcookie( 'foobar', 'pants' );
 		$this->asertEquals( $_COOKIE[ 'foobar' ], 'pants' );
 	}
-	
+
 	/**
 	 * NB this will not work as PHPUnit seems to not make it possible to set
 	 * and retrieve cookies. Note above test, testCookie() - both assertions
@@ -382,7 +403,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
      * @outputBuffering enabled
 	 */
 	/*public function testCheckUseFormatCookie() {
-	
+
 	}
 	*/
 }

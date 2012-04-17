@@ -17,7 +17,7 @@ class DeviceDetection {
 	/**
 	 * @return array
 	 */
-	public function availableFormats() {
+	public function getAvailableFormats() {
 		$formats = array (
 			'html' => array (
 				'view_format' => 'html',
@@ -38,7 +38,7 @@ class DeviceDetection {
 				'with_layout' => 'application',
 				'css_file_name' => 'default',
 				'supports_javascript' => true,
-				'supports_jquery' => false,
+				'supports_jquery' => true,
 				'disable_zoom' => true,
 				'parser' => 'html',
 				'disable_links' => true,
@@ -247,11 +247,21 @@ class DeviceDetection {
 	}
 
 	/**
+	 * @param $userAgent
+	 * @param string $acceptHeader
+	 * @return array
+	 */
+	public function detectDevice( $userAgent, $acceptHeader = '' ) {
+		$formatName = $this->detectFormatName( $userAgent, $acceptHeader );
+		return $this->getDevice( $formatName );
+	}
+
+	/**
 	 * @param $formatName
 	 * @return array
 	 */
-	public function format( $formatName ) {
-		$format = $this->availableFormats();
+	public function getDevice( $formatName ) {
+		$format = $this->getAvailableFormats();
 		return ( isset( $format[$formatName] ) ) ? $format[$formatName] : array();
 	}
 
@@ -260,7 +270,7 @@ class DeviceDetection {
 	 * @param $acceptHeader string
 	 * @return string
 	 */
-	public function formatName( $userAgent, $acceptHeader = '' ) {
+	public function detectFormatName( $userAgent, $acceptHeader = '' ) {
 		$formatName = '';
 
 		if ( preg_match( '/Android/', $userAgent ) ) {
@@ -333,5 +343,19 @@ class DeviceDetection {
 			}
 		}
 		return $formatName;
+	}
+
+	/**
+	 * @return array: List of all device-specific stylesheets
+	 */
+	public function getCssFiles() {
+		$devices = $this->getAvailableFormats();
+		$files = array();
+		foreach ( $devices as $dev ) {
+			if ( isset( $dev['css_file_name'] ) ) {
+				$files[] = $dev['css_file_name'];
+			}
+		}
+		return array_unique( $files );
 	}
 }

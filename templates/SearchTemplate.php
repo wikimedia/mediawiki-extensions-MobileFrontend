@@ -9,13 +9,13 @@ class SearchTemplate extends MobileFrontendTemplate {
 	public function getHTML() {
 
 		$searchField = Sanitizer::encodeAttribute( $this->data['searchField'] );
-		$mainPageUrl = $this->data['mainPageUrl'];
-		$randomPageUrl = $this->data['randomPageUrl'];
-		$homeButton = $this->data['messages']['mobile-frontend-home-button'];
-		$randomButton = $this->data['messages']['mobile-frontend-random-button'];
-		$clearText = Sanitizer::encodeAttribute( $this->data['messages']['mobile-frontend-clear-search'] );
-		$searchValue = $this->data['messages']['mobile-frontend-search-submit'];
-		$placeholder = Sanitizer::encodeAttribute( $this->data['messages']['mobile-frontend-placeholder'] );
+		$mainPageUrl = Sanitizer::encodeAttribute( $this->data['mainPageUrl'] );
+		$randomPageUrl = Sanitizer::encodeAttribute( $this->data['randomPageUrl'] );
+		$homeButton = wfMessage( 'mobile-frontend-home-button' )->escaped();
+		$randomButton = wfMessage( 'mobile-frontend-random-button' )->escaped();
+		$clearText = Sanitizer::encodeAttribute( wfMsg( 'mobile-frontend-clear-search' ) );
+		$placeholder = Sanitizer::encodeAttribute( wfMsg( 'mobile-frontend-placeholder' ) );
+		$goButton = wfMessage( 'mobile-frontend-search-submit' );
 
 		$scriptUrl = wfScript();
 		$searchBoxDisplayNone = ( $this->data['hideSearchBox'] ) ? ' style="display: none;" ' : '';
@@ -25,11 +25,8 @@ class SearchTemplate extends MobileFrontendTemplate {
 		$openSearchResults = '<div id="results"></div>';
 
 		$languageSelection = $this->data['buildLanguageSelection'] . '<br/>';
-		$languageSelectionText = '<b>' . $this->data['messages']['mobile-frontend-language'] . ':</b><br/>';
+		$languageSelectionText = '<b>' . wfMessage( 'mobile-frontend-language' )->escaped() . ':</b><br/>';
 		$languageSelectionDiv = $languageSelectionText . $languageSelection;
-
-		$regularSite = $this->data['messages']['mobile-frontend-regular-site'];
-		$viewNormalSiteURL = $this->data['viewNormalSiteURL'];
 
 		$searchWebkitHtml = <<<HTML
 		<div id='header'>
@@ -39,16 +36,20 @@ class SearchTemplate extends MobileFrontendTemplate {
 			  <input type="hidden" value="Special:Search" name="title" />
 				<div id="sq" class="divclearable">
 					<input type="search" name="search" id="search" size="22" value="{$searchField}" autocomplete="off" maxlength="1024" class="search" placeholder="{$placeholder}" />
-					<div class="clearlink" id="clearsearch" title="{$clearText}"></div>
+					<img src="{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/images/blank.gif"
+						alt="{$clearText}"
+						class="clearlink" id="clearsearch" title="{$clearText}">
 				</div>
-			  <button id='goButton' class='goButton' type='submit'></button>
+			  <button id='goButton' class='goButton' type='submit'>
+					<img src="{$this->data['wgExtensionAssetsPath']}/MobileFrontend/stylesheets/images/blank.gif"
+						alt="{$goButton}" title="{$goButton}">
+				</button>
 			</form>
 			</div>
 			<div class='nav' id='nav' {$logoDisplayNone}>
 			{$languageSelectionDiv}
 			<a href="{$mainPageUrl}" id="homeButton" class="button">{$homeButton}</a>
 			<a href="{$randomPageUrl}" id="randomButton" class="button">{$randomButton}</a>
-			<a href="{$viewNormalSiteURL}" class="button">{$regularSite}</a>
 		  </div>
 		</div>
 		{$openSearchResults}

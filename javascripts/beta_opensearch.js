@@ -7,15 +7,15 @@ MobileFrontend.opensearch = (function() {
 		sb = document.getElementById( 'searchbox' ),
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
+		blankImg = MobileFrontend.setting('scriptPath') + '/extensions/MobileFrontend/stylesheets/images/blank.gif',
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
-		viewportmeta, originalViewport,
 		u = MobileFrontend.utils;
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
-	search.onfocus = function() {
-		var rrd, rrdD;
+	function onfocus() {
+		var rrd;
 		sb = document.getElementById( 'searchbox' );
 		header = document.getElementById( 'header' );
 		content = document.getElementById( 'content' );
@@ -26,18 +26,17 @@ MobileFrontend.opensearch = (function() {
 
 			rrd = document.getElementById( 'remove-results' );
 			if ( !rrd ) {
-				rrd = document.createElement( 'a' );
-				rrd.setAttribute( 'href', '#' );
+				rrd = document.createElement( 'img' );
 				rrd.setAttribute( 'id', 'remove-results' );
-				u( rrd ).bind( 'click', removeResults );
-				rrdD = document.createElement( 'div' );
-				rrdD.setAttribute( 'id', 'left-arrow' );
-				rrd.appendChild( rrdD );
+				u( rrd ).bind( 'click',  removeResults );
+				rrd.setAttribute( 'src', blankImg );
+				rrd.setAttribute( 'alt', MobileFrontend.message( 'remove-results' ) );
 				header.insertBefore( rrd, header.firstChild );
 			}
 			focused = true;
 		}
-	};
+	}
+	u( search ).bind( 'focus', onfocus );
 
 	function removeResults() {
 		MobileFrontend.utils( document.body ).removeClass( 'full-screen-search' );
@@ -63,7 +62,10 @@ MobileFrontend.opensearch = (function() {
 		var value = search.value;
 		if( value.length > 1 && value !== oldValue ) {
 			oldValue = value;
+			u( sb ).addClass( 'notEmpty' );
 			performSearch();
+		} else if( !value ) {
+			u( sb ).removeClass( 'notEmpty' );
 		}
 	}, typingDelay);
 
@@ -71,13 +73,7 @@ MobileFrontend.opensearch = (function() {
 		var el, newEv,
 			topResult = u( '.suggestions-result a' )[0];
 		if( topResult ) {
-			if ( 'fireEvent' in topResult ) {
-				topResult.fireEvent( 'click' );
-			} else {
-				newEv = document.createEvent( 'HTMLEvents' );
-				newEv.initEvent( 'click', true, true );
-				topResult.dispatchEvent( newEv );
-			}
+			window.location.href = topResult.getAttribute( 'href' );
 			ev.preventDefault();
 		} else {
 			performSearch( ev );
@@ -135,9 +131,6 @@ MobileFrontend.opensearch = (function() {
 			term = htmlEntities( document.getElementById( 'search' ).value ),
 			section, escapedTerm, suggestionsResult, link, label;
 
-		if ( search ) {
-			search.focus();
-		}
 		if ( !sections || sections.length < 1 ) {
 			results.innerHTML = '<ul class="suggestions-results" title="No Results"><li class="suggestions-result">No Results</li></div>';
 		} else {
@@ -173,6 +166,7 @@ MobileFrontend.opensearch = (function() {
 
 	function initClearSearch() {
 		var clearSearch = document.getElementById( 'clearsearch' ),
+			results = document.getElementById( 'results' ),
 			search = document.getElementById( 'search' );
 
 		function clearSearchBox( event ) {
@@ -193,6 +187,9 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function init() {
+		if( document.activeElement && document.activeElement.id === 'search' ) {
+			onfocus();
+		}
 	}
 	init();
 	initClearSearch();

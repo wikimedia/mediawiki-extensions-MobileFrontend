@@ -47,20 +47,18 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'api/ApiParseExtender',
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
+	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
+	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
+
 	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
 	'ApplicationTemplate' => 'templates/ApplicationTemplate',
 	'SearchTemplate'  => 'templates/SearchTemplate',
 	'FooterTemplate' => 'templates/FooterTemplate',
-	'LeaveFeedbackTemplate' => 'templates/LeaveFeedbackTemplate',
-	'DisableTemplate' => 'templates/DisableTemplate',
-	'OptInTemplate' => 'templates/OptInTemplate',
-	'OptOutTemplate' => 'templates/OptOutTemplate',
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
-	'ThanksNoticeTemplate' => 'templates/ThanksNoticeTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
 	'LeaveFeedbackSuccessTemplate' => 'templates/LeaveFeedbackSuccessTemplate',
 
-	'SkinMobile' => 'skins/Mobile',
+	'SkinMobile' => 'skins/SkinMobile',
 
 	// special pages
 	'SpecialMobileFrontend' => 'SpecialMobileFrontend',
@@ -112,7 +110,7 @@ $wgMobileUrlTemplate = '';
  *
  * If this value is not set, it will default to $wgCookieExpiration
  */
-$wgMobileFrontendFormatCookieExpiry;
+$wgMobileFrontendFormatCookieExpiry = null;
 
 /**
  * URL for script used to disable mobile site
@@ -132,7 +130,7 @@ $wgMobileRedirectFormAction = false;
  *
  * This is entirely optional.
  */
-$wgMobileResourceVersion;
+$wgMobileResourceVersion = '';
 
 $wgExtMobileFrontend = null;
 
@@ -158,16 +156,13 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
+$wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
+$wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgHooks;
-	$wgExtMobileFrontend = new ExtMobileFrontend();
-	$wgHooks['RequestContextCreateSkin'][] = array( &$wgExtMobileFrontend, 'requestContextCreateSkin' );
-	$wgHooks['BeforePageRedirect'][] = array( &$wgExtMobileFrontend, 'beforePageRedirect' );
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$wgExtMobileFrontend, 'addMobileFooter' );
-	$wgHooks['TestCanonicalRedirect'][] = array( &$wgExtMobileFrontend, 'testCanonicalRedirect' );
-	$wgHooks['ResourceLoaderTestModules'][] = array( &$wgExtMobileFrontend, 'addTestModules' );
-	$wgHooks['GetCacheVaryCookies'][] = array( &$wgExtMobileFrontend, 'getCacheVaryCookies' );
+	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
+	$wgExtMobileFrontend->attachHooks();
 }
 
 /**
@@ -205,3 +200,23 @@ function efExtMobileFrontendUnitTests( &$files ) {
  * Whether this extension should provide its extracts to OpenSearchXml extension
  */
 $wgMFExtendOpenSearchXml = false;
+
+// enable ResourceLoader for css
+$wgResourceModules['ext.mobileFrontend'] = array(
+	'styles' => array( 'stylesheets/common.css', 'stylesheets/hacks.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+$wgResourceModules['ext.mobileFrontendBeta'] = array(
+	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/footer.css',
+	'stylesheets/contact-us.css', 'stylesheets/banner.css',
+	'stylesheets/header.css', 'stylesheets/sections.css',
+	'stylesheets/references.css', 'stylesheets/hacks.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+$wgResourceModules['ext.mobileFrontend.filePage'] = array(
+	'styles' => array( 'stylesheets/filepage.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);

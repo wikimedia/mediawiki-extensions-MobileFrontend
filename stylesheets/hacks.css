@@ -1,0 +1,84 @@
+/* the following definitions exist to deal with certain inline styles
+present in wikitext
+and MediaWiki:Common.css definitions
+This file should not need to exist
+IMPORTANT: do not use selectors of the form [style*=padding] as they are known to damage the ios app
+*/
+
+.navbox .hlist dd,
+.navbox .hlist dt,
+.navbox .hlist li {
+	white-space: pre-wrap !important;
+	word-break: break-word;
+}
+
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	border: 1px solid #cccccc;
+	padding: 3px;
+	margin-bottom: 15px;
+}
+
+table.gallery .thumb[style] {
+	border: 0;
+	padding: 0 !important;
+	width: auto !important;
+	margin: 0 auto;
+}
+
+table.geography[style] td[style],
+table.geography[style] td[colspan="2"] {
+	text-align: left !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+table[style] {
+	float: none !important;
+	margin-left: 0 !important;
+	width: 100% !important;
+}
+
+table.navbox {
+	font-size: 0.9em;
+	width: 100% !important;
+}
+
+table.navbox div[style] {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+table.gallery .gallerybox[style] {
+	width: auto !important;
+	margin-bottom: -16px;
+}
+
+table.navbox div[style] a,
+table.navbox span[style] {
+	white-space: pre-wrap !important;
+}
+
+table.infobox td[colspan="3"],
+table.infobox th[colspan="3"] {
+	border: 1px solid #cccccc;
+}
+
+.thumb .thumbinner[style] {
+	margin: 5px auto;
+	max-width: 100%;
+	width: auto !important;
+}
+
+.thumb img {
+	max-width: 100% !important;
+	width: auto !important
+}
+
+.thumb .thumbcaption {
+	width: 100%;
+	margin: 5px 10px 0;
+	text-align: center;
+	width: auto !important;
+}

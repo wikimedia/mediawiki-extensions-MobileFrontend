@@ -1,3 +1,5 @@
+/*global document, window, MobileFrontend*/
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
 		var calculatePosition = function() {}, hashtest, options = {}, wasVisible;
@@ -36,24 +38,18 @@ if( typeof jQuery !== 'undefined' ) {
 				} );
 			};
 			$( document ).scroll(calculatePosition);
-			document.body.ontouchstart = function() {
-				wasVisible = $( '#mf-references' ).is( ':visible' );
-				$( '#mf-references' ).hide();
-			};
-			document.body.ontouchend = function() {
-				if( wasVisible ) {
-					$( '#mf-references' ).show();
-				}
-			};
 		}
 
-		function init() {
-			var el = $( '<div id="mf-references"><div></div></div>' ).hide().appendTo( document.body )[0];
+		function init( firstRun ) {
+			var el, close, lastLink, data, html, href, references = collect();
+			$("#mf-references").remove();
+			el = $( '<div id="mf-references"><div></div></div>' ).hide().
+				appendTo( document.body )[0];
 			function cancelBubble( ev ) {
 				ev.stopPropagation();
 			}
 			el.ontouchstart = cancelBubble;
-			var close = function() {
+			close = function() {
 				var top;
 				lastLink = null;
 				if( options.animation === 'none' ) {
@@ -72,7 +68,7 @@ if( typeof jQuery !== 'undefined' ) {
 				} else {
 					$( '#mf-references' ).fadeOut( options.animationSpeed );
 				}
-			}, lastLink, data, html, href, references = collect();
+			};
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
 
@@ -111,11 +107,21 @@ if( typeof jQuery !== 'undefined' ) {
 					close();
 				}
 				ev.preventDefault();
+				cancelBubble( ev );
 			}
 			$( 'sup a' ).unbind('click').click( clickReference ).each(function(i, el) {
 				el.ontouchstart = cancelBubble;
 			});
+			if( firstRun ) {
+				$( document.body ).bind( 'click', close );
+				$( document.body ).bind( 'touchstart', function() {
+					$( '#mf-references' ).hide();
+				});
+			}
 		}
-		init();
+		init( true );
+		return {
+			init: init
+		};
 	}(jQuery));
 }
