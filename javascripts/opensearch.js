@@ -1,5 +1,7 @@
 /*global document, window, MobileFrontend, navigator, placeholder */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+// TODO: enable for opera mini 6 users
+if( window.navigator.userAgent.indexOf( 'Opera Mini/6' ) === -1 ) {
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 5,
@@ -189,3 +191,4 @@ MobileFrontend.opensearch = (function() {
 	};
 
 }());
+}
