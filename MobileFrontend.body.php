@@ -958,10 +958,13 @@ class ExtMobileFrontend extends ContextSource {
 						'wgScriptPath' => $wgScriptPath,
 						'isFilePage' => $isFilePage,
 						'zeroRatedBanner' => self::$zeroRatedBanner,
-						'useFormatCookieName' => 'stopMobileRedirect',
-						'useFormatCookieDuration' => $this->getUseFormatCookieDuration(),
+						'stopMobileRedirectCookieName' => 'stopMobileRedirect',
+						'stopMobileRedirectCookieDuration' => $this->getUseFormatCookieDuration(),
+						'stopMobileRedirectCookieDomain' => $this->getBaseDomain(),
+						'useFormatCookieName' => $this->getUseFormatCookieName(),
+						'useFormatCookieDuration' => -1,
 						'useFormatCookiePath' => $wgCookiePath,
-						'useFormatCookieDomain' => $this->getBaseDomain(),
+						'useFormatCookieDomain' => $_SERVER['HTTP_HOST'],
 						);
 		$applicationTemplate->setByArray( $options );
 		wfProfileOut( __METHOD__ );
@@ -1277,8 +1280,8 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		// check cookies for what to display
-		$useFormatCookie = $this->getUseFormatCookie();
-		if ( $useFormatCookie == 'mobile' ) {
+		$useMobileFormat = $this->getUseFormatCookie();
+		if ( $useMobileFormat == 'true' ) {
 			return true;
 		}
 		$stopMobileRedirect = $this->getStopMobileRedirectCookie();
@@ -1382,7 +1385,7 @@ class ExtMobileFrontend extends ContextSource {
 	 * @param int $string The expiration to set
 	 * @param bool $force Whether or not to force the cookie getting set
 	 */
-	public function setUseFormatCookie( $cookieFormat, $expiry = null, $force = false ) {
+	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null, $force = false ) {
 		global $wgCookiePath, $wgCookieSecure;
 
 		// sanity check before setting the cookie
@@ -1394,7 +1397,7 @@ class ExtMobileFrontend extends ContextSource {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 
-		setcookie( $this->getUseFormatCookieName(), $cookieFormat, $expiry, $wgCookiePath, $this->getBaseDomain(), $wgCookieSecure );
+		setcookie( $this->getUseFormatCookieName(), $cookieFormat, $expiry, $wgCookiePath, $_SERVER['HTTP_HOST'], $wgCookieSecure );
 		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
 	}
 
@@ -1410,7 +1413,7 @@ class ExtMobileFrontend extends ContextSource {
 
 	public function getUseFormatCookieName() {
 		if ( !isset( self::$useFormatCookieName ) ) {
-			self::$useFormatCookieName = 'mf_useformat';
+			self::$useFormatCookieName = 'mf_mobileFormat';
 		}
 		return self::$useFormatCookieName;
 	}
@@ -1496,7 +1499,7 @@ class ExtMobileFrontend extends ContextSource {
 
 			// if no mobileurl template, set mobile cookie
 			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				if ( !$temporary ) $this->setUseFormatCookie( $view );
+				if ( !$temporary ) $this->setUseFormatCookie();
 				$this->setUseFormat( $view );
 			} else {
 				// else redirect to mobile domain
@@ -1507,12 +1510,16 @@ class ExtMobileFrontend extends ContextSource {
 			}
 		} elseif ( $view == 'desktop' ) {
 			// set stopMobileRedirect cookie
-			if ( !$temporary ) $this->setStopMobileRedirectCookie();
+			if ( !$temporary ) {
+				$this->setStopMobileRedirectCookie();
+				// unset useformat cookie
+				if ( $this->getUseFormatCookie() == "true" ) {
+					$this->unsetUseFormatCookie();
+				}
+			}
 
 			// if no mobileurl template, unset useformat cookie
 			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				// unset useformat cookie
-				if ( !$temporary ) $this->unsetUseFormatCookie();
 				$this->setUseFormat( $view );
 			} else {
 				// if mobileurl template, redirect to desktop domain

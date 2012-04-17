@@ -36,16 +36,28 @@ MobileFrontend = (function() {
 		utilities( document.getElementById( 'logo' ) ).bind( 'click', logoClick );
 
 		function desktopViewClick() {
-			var cookieName = MobileFrontend.setting( 'useFormatCookieName' );
-			var cookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
+			// get mf_mobileFormat cookie info
+			var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' );
+			var formatCookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
 			var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' );
-			var cookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
-			
-			// convert from seconds to days
-			cookieDuration = cookieDuration / ( 24 * 60 * 60 );
+			var formatCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
 
-			// get the top part of the domain to make the cookie work across subdomains
-			MobileFrontend.banner.writeCookie( cookieName, 'true', cookieDuration, cookiePath, cookieDomain );
+			// convert from seconds to days
+			formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
+
+			// expire the mf_mobileFormat cookie
+			MobileFrontend.banner.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
+
+			// get stopMobileRedirect cookie info
+			var stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
+			var stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
+			var stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
+
+			// convert from seconds to days
+			stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
+
+			// set the stopMobileRedirect cookie
+			MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 

@@ -51,6 +51,9 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				'useFormatCookieDuration' => ( $this->data['useFormatCookieDuration'] ),
 				'useFormatCookieDomain' => ( $this->data['useFormatCookieDomain'] ),
 				'useFormatCookiePath' => ( $this->data['useFormatCookiePath'] ),
+				'stopMobileRedirectCookieName' => ( $this->data['stopMobileRedirectCookieName'] ),
+				'stopMobileRedirectCookieDuration' => ( $this->data['stopMobileRedirectCookieDuration'] ),
+				'stopMobileRedirectCookieDomain' => ( $this->data['stopMobileRedirectCookieDomain'] ),
 			),
 		);
 		if ( $this->data['title']->isMainPage() ) {
