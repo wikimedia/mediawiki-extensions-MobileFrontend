@@ -82,11 +82,3 @@ table.infobox th[colspan="3"] {
 	text-align: center;
 	width: auto !important;
 }
-
-/* avoid float issues in fennec caused by MediaWiki:Common.css definiton */
-div.tright,
-div.floatright,
-table.floatright {
-	clear: none !important;
-	float: none !important;
-}
