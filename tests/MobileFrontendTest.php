@@ -20,7 +20,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 	protected function setUp() {
 		parent::setUp();
 		global $wgExtMobileFrontend;
-		$wgExtMobileFrontend = new ExtMobileFrontend();
+		$wgExtMobileFrontend = new ExtMobileFrontend( new RequestContext() );
 	}
 
 	protected function tearDown() {
