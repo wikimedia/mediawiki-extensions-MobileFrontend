@@ -174,6 +174,11 @@ $wgMFRemovableClasses = array();
  */
 $wgMFCustomLogos = array();
 
+/**
+ * Set to false if you need to debug JavaScript.
+ */
+$wgMFMinifyJS = true;
+
 // Unit tests
 $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
 
