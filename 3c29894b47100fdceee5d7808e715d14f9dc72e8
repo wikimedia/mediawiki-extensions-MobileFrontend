@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJX//+7k\u003d",
+        "filename": "specials/SpecialMobileFeedback.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-04-18T10:40:00Z",
+      "side": 1,
+      "message": "should be e-mail now! not subject :)",
+      "revId": "3c29894b47100fdceee5d7808e715d14f9dc72e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
