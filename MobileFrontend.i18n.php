@@ -53,6 +53,7 @@ $messages['en'] = array (
 	'mobile-frontend-leave-feedback-link-text' => 'MobileFrontend Extension feedback',
 	'mobile-frontend-leave-feedback' => 'Mobile site feedback',
 	'mobile-frontend-leave-feedback-title' => 'Mobile site feedback',
+	'mobile-frontend-leave-feedback-page-title' => 'Mobile site feedback',
 	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
 	'mobile-frontend-feedback-no-subject' => '(no subject)',
 	'mobile-frontend-feedback-no-message' => 'Please enter a message here',
