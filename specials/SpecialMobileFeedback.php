@@ -26,6 +26,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$feedbackArticleOtherLink = $this->msg( 'mobile-frontend-leave-feedback-article-other-link' );
 
 		$form = new HTMLFormMobile( $this->getForm(), $this );
+		$form->setDisplayFormat( 'raw' );
 		$form->setTitle( $this->getTitle() );
 		$form->setId( 'mf-feedback-form' );
 		$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
@@ -135,7 +136,7 @@ HTML;
  *
  * Note that __construct() and loadInputFromParameters() are reimplemented here
  * verbatim. This is because PHP is dumb and handles static methods/properties
- * very poorly and we cannot rely on late static bindings because of our 
+ * very poorly and we cannot rely on late static bindings because of our
  * PHP 5.2 compatibility requirement.
  * @see HTMLTextAreaMobileField
  */
@@ -170,6 +171,13 @@ class HTMLFormMobile extends HTMLForm {
 		'hiddendiv' => 'HTMLHiddenFieldDiv',
 	);
 
+	protected $displayFormat = 'table';
+	protected $availableDisplayFormats = array(
+		'table',
+		'div',
+		'raw',
+	);
+
 	/**
 	 * Build a new HTMLForm from an array of field attributes
 	 * @param $descriptor Array of Field constructs, as described above
@@ -178,13 +186,13 @@ class HTMLFormMobile extends HTMLForm {
 	 * @param $messagePrefix String a prefix to go in front of default messages
 	 */
 	public function __construct( $descriptor, /*IContextSource*/ $context = null, $messagePrefix = '' ) {
-		if( $context instanceof IContextSource ){
+		if ( $context instanceof IContextSource ) {
 			$this->setContext( $context );
 			$this->mTitle = false; // We don't need them to set a title
 			$this->mMessagePrefix = $messagePrefix;
 		} else {
 			// B/C since 1.18
-			if( is_string( $context ) && $messagePrefix === '' ){
+			if ( is_string( $context ) && $messagePrefix === '' ) {
 				// it's actually $messagePrefix
 				$this->mMessagePrefix = $context;
 			}
@@ -228,6 +236,17 @@ class HTMLFormMobile extends HTMLForm {
 		$this->mFieldTree = $loadedDescriptor;
 	}
 
+	public function setDisplayFormat( $format ) {
+		if ( !in_array( $format, $this->availableDisplayFormats ) ) {
+			throw new Exception ( 'Display format must be one of ' . print_r( $this->availableDisplayFormats, true ) );
+		}
+		$this->displayFormat = $format;
+	}
+
+	public function getDisplayFormat() {
+		return $this->displayFormat;
+	}
+
 	/**
 	 * TODO: Document
 	 * @param $fields array[]|HTMLFormField[] array of fields (either arrays or objects)
@@ -235,7 +254,80 @@ class HTMLFormMobile extends HTMLForm {
 	 * @param $fieldsetIDPrefix string ID prefix for the <fieldset> tag of each subsection, ignored if empty
 	 * @return String
 	 */
-	function displaySection( $fields, $sectionName = '', $fieldsetIDPrefix = '' ) {
+	public function displaySection( $fields, $sectionName = '', $fieldsetIDPrefix = '' ) {
+		$displayFormat = $this->getDisplayFormat();
+		switch ( $displayFormat ) {
+			case 'table':
+				return $this->displaySectionTable( $fields, $sectionName, $fieldsetIDPrefix );
+				break;
+			case 'div':
+				return $this->displaySectionDiv( $fields, $sectionName, $fieldsetIDPrefix );
+				break;
+			case 'raw':
+				return $this->displaySectionRaw( $fields, $sectionName, $fieldsetIDPrefix );
+				break;
+		}
+	}
+
+	protected function displaySectionRaw( $fields, $sectionName, $fieldsetIDPrefix ) {
+		$rawHtml = '';
+		$subsectionHtml = '';
+		$hasLeftColumn = false;
+
+		foreach ( $fields as $key => $value ) {
+			if ( is_object( $value ) ) {
+
+				$v = empty( $value->mParams['nodata'] )
+					? $this->mFieldData[$key]
+					: $value->getDefault();
+				$rawHtml .= $value->getRaw( $v, $value );
+
+				if ( $value->getLabel() != '&#160;' ) {
+					$hasLeftColumn = true;
+				}
+			} elseif ( is_array( $value ) ) {
+				$section = $this->displaySection( $value, $key );
+				$legend = $this->getLegend( $key );
+				if ( isset( $this->mSectionHeaders[$key] ) ) {
+					$section = $this->mSectionHeaders[$key] . $section;
+				}
+				if ( isset( $this->mSectionFooters[$key] ) ) {
+					$section .= $this->mSectionFooters[$key];
+				}
+				$attributes = array();
+				if ( $fieldsetIDPrefix ) {
+					$attributes['id'] = Sanitizer::escapeId( "$fieldsetIDPrefix$key" );
+				}
+				$subsectionHtml .= Xml::fieldset( $legend, $section, $attributes ) . "\n";
+			}
+		}
+
+		$classes = array();
+
+		if ( !$hasLeftColumn ) { // Avoid strange spacing when no labels exist
+			$classes[] = 'mw-htmlform-nolabel';
+		}
+
+		$attribs = array(
+			'class' => implode( ' ', $classes ),
+		);
+
+		if ( $sectionName ) {
+			$attribs['id'] = Sanitizer::escapeId( "mw-htmlform-$sectionName" );
+		}
+
+		if ( $this->mSubSectionBeforeFields ) {
+			return $subsectionHtml . "\n" . $rawHtml;
+		} else {
+			return $rawHtml . "\n" . $subsectionHtml;
+		}
+	}
+
+	protected function displaySectionTable( $fields, $sectionName, $fieldsetIDPrefix ) {
+		return parent::displaySection( $fields, $sectionName, $fieldsetIDPrefix );
+	}
+
+	protected function displaySectionDiv( $fields, $sectionName = '', $fieldsetIDPrefix = '' ) {
 		$divHtml = '';
 		$subsectionHtml = '';
 		$hasLeftColumn = false;
@@ -290,7 +382,7 @@ class HTMLFormMobile extends HTMLForm {
 			return $divHtml . "\n" . $subsectionHtml;
 		}
 	}
-	
+
 	/**
 	 * Initialise a new Object for the field
 	 * @param $fieldname string
@@ -367,6 +459,10 @@ class HTMLTextAreaFieldDiv extends HTMLTextAreaField {
 		return HTMLFormFieldDiv::getDiv( $value, $valueObj );
 	}
 
+	public function getRaw( $value, $valueObj ) {
+		return HTMLFormFieldDiv::getRaw( $value, $valueObj );
+	}
+
 	public function getMClass() {
 		return $this->mClass;
 	}
@@ -381,6 +477,10 @@ class HTMLTextFieldDiv extends HTMLTextField {
 		return HTMLFormFieldDiv::getDiv( $value, $valueObj );
 	}
 
+	public function getRaw( $value, $valueObj ) {
+		return HTMLFormFieldDiv::getRaw( $value, $valueObj );
+	}
+
 	public function getMClass() {
 		return $this->mClass;
 	}
@@ -392,18 +492,11 @@ class HTMLTextFieldDiv extends HTMLTextField {
  */
 class HTMLHiddenFieldDiv extends HTMLHiddenField {
 	public function getDiv( $value, $valueObj ) {
-		$params = array();
-		if ( $this->mID ) {
-			$params['id'] = $this->mID;
-		}
+		parent::getTableRow( $value, $valueObj );
+	}
 
-		$this->mParent->addHiddenField(
-			$this->mName,
-			$this->mDefault,
-			$params
-		);
-
-		return '';
+	public function getRaw( $value, $valueObj ) {
+		parent::getTableRow( $value, $valueObj );
 	}
 
 	public function getMClass() {
@@ -416,6 +509,75 @@ class HTMLHiddenFieldDiv extends HTMLHiddenField {
  * than table elements
  */
 class HTMLFormFieldDiv {
+	public static function getRaw( $value, $valueObj ) {
+		# Check for invalid data.
+
+		$errors = $valueObj->validate( $value, $valueObj->mParent->mFieldData );
+
+		$cellAttributes = array();
+		$verticalLabel = false;
+
+		if ( $errors === true || ( !$valueObj->mParent->getRequest()->wasPosted() && ( $valueObj->mParent->getMethod() == 'post' ) ) ) {
+			$errors = '';
+			$errorClass = '';
+		} else {
+			$errors = self::formatErrors( $errors );
+			$errorClass = 'mw-htmlform-invalid-input';
+		}
+
+		$label = $valueObj->getLabelHtml( $cellAttributes );
+		$field = $valueObj->getInputHTML( $value ) . "\n$errors";
+
+		$fieldType = get_class( $valueObj );
+
+		$html = $label;
+		$html .= $field;
+		/*if ( $verticalLabel ) {
+			$html = Html::rawElement( 'div',
+				array( 'class' => 'mw-htmlform-vertical-label' ), $label );
+			$html .= Html::rawElement( 'div',
+				array( 'class' => "mw-htmlform-field-$fieldType {$valueObj->getMClass()} $errorClass" ),
+				$field );
+			$html = $label;
+		} else {
+			$html = Html::rawElement( 'div',
+				array( 'class' => "mw-htmlform-field-$fieldType {$valueObj->getMClass()} $errorClass" ),
+				$label . $field );
+		}*/
+
+		$helptext = null;
+
+		if ( isset( $valueObj->mParams['help-message'] ) ) {
+			$valueObj->mParams['help-messages'] = array( $valueObj->mParams['help-message'] );
+		}
+
+		if ( isset( $valueObj->mParams['help-messages'] ) ) {
+			foreach ( $valueObj->mParams['help-messages'] as $name ) {
+				$helpMessage = (array)$name;
+				$msg = wfMessage( array_shift( $helpMessage ), $helpMessage );
+
+				if ( $msg->exists() ) {
+					$helptext .= $msg->parse(); // Append message
+				}
+			}
+		}
+		elseif ( isset( $valueObj->mParams['help'] ) ) {
+			$helptext = $valueObj->mParams['help'];
+		}
+
+		if ( !is_null( $helptext ) ) {
+			$row = Html::rawElement(
+				'div',
+				array( 'colspan' => 2, 'class' => 'htmlform-tip' ),
+				$helptext
+			);
+			$row = Html::rawElement( 'div', array(), $row );
+			$html .= "$row\n";
+		}
+
+		return $html;
+	}
+
 	public static function getDiv( $value, $valueObj ) {
 		# Check for invalid data.
 
