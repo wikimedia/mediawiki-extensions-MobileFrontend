@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJX//+7w\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-04-18T10:21:32Z",
+      "side": 1,
+      "message": "Pass RequestContext in test suite\n\nThen just avoid listing all the failures. Just state that it fixes a bunch of them and why passing the context does fix them.",
+      "revId": "ff825dd6d8123d27e04fde3b95145f7a8ebb67fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJX//+70\u003d",
+        "filename": "tests/MobileFrontendTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-04-18T10:21:32Z",
+      "side": 1,
+      "message": "I guess the ExtMobileFrontend class should by convention take care of initializing a default RequestContext() automatically",
+      "revId": "ff825dd6d8123d27e04fde3b95145f7a8ebb67fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
