@@ -30,6 +30,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$form->setId( 'mf-feedback-form' );
 		$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
 		$form->setSubmitCallback( array( $this, 'postFeedback' ) );
+		$form->setAction( $this->getRequest()->getRequestURL() . "#mf-feedback-form" );
 		$html = <<<HTML
 		<div class='feedback'>
 		<h2 class="section_heading" id="section_1">Technical Problem</h2>
