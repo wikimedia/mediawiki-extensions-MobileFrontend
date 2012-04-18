@@ -9,65 +9,72 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		global $wgExtMobileFrontend;
 
 		$this->setHeaders();
-		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-page-title' ) );
+		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-special-title' ) );
 		$wgExtMobileFrontend->setForceMobileView( true );
 		$wgExtMobileFrontend->setContentTransformations( false );
 
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
 		} else {
-			$form = new HTMLForm( $this->getForm(), $this );
-			$form->setTitle( $this->getTitle() );
-			$form->setId( 'feedback' );
-			$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
-			$form->setSubmitCallback( array( $this, 'postFeedback' ) );
-			$form->show();
+			$this->getFeedbackHtml();
 		}
 	}
 
+	protected function getFeedbackHtml() {
+		$feedbackArticlePersonalLink = $this->msg( 'mobile-frontend-leave-feedback-article-personal-link' );
+		$feedbackArticleFactualLink = $this->msg( 'mobile-frontend-leave-feedback-article-factual-link' );
+		$feedbackArticleOtherLink = $this->msg( 'mobile-frontend-leave-feedback-article-other-link' );
+
+		$form = new HTMLFormMobile( $this->getForm(), $this );
+		$form->setTitle( $this->getTitle() );
+		$form->setId( 'mf-feedback-form' );
+		$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
+		$form->setSubmitCallback( array( $this, 'postFeedback' ) );
+		$html = <<<HTML
+		<div class='feedback'>
+		<h2 class="section_heading" id="section_1">Technical Problem</h2>
+		<div class="content_block" id="content_1">
+HTML;
+		$this->getOutput()->addHtml( $html );
+		$form->show();
+		$html = <<<HTML
+		</div>
+		<h2 class="section_heading" id="section_3">Article Feedback</h2>
+		<div class="content_block" id="content_3">
+			<ul>
+				<li>
+					<a href="{$feedbackArticlePersonalLink}">Regarding me, a person or a company I represent</a>
+				</li>
+				<li>
+					<a href="{$feedbackArticleFactualLink}">Regarding a factual error</a>
+				</li>
+				<li>
+					<a href="{$feedbackArticleOtherLink}">Regarding another problem</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+HTML;
+		$this->getOutput()->addHtml( $html );
+	}
+
 	private function getForm() {
-		$linkText = $this->msg( 'mobile-frontend-leave-feedback-link-text' )->text();
-		$linkTarget = wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain();
-		$leaveFeedbackText = wfMsgExt( 'mobile-frontend-leave-feedback-notice',
-			array( 'replaceafter' ),
-			Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getFullURL(), 'target' => '_blank' ),
-			$linkText )
-		);
 		return array(
-			'form-desc' => array(
-				'type' => 'info',
-				'raw' => true,
-				'default' => '<div unselectable="on">'
-					. '<p><span unselectable="on">'
-						. $this->msg( 'mobile-frontend-leave-feedback-title' )->parse()
-					. '</span><br/>'
-					. "<small>{$leaveFeedbackText}</small>"
-				. '</p></div>'
-			),
-			'subject-desc' => array(
-				'type' => 'info',
-				'raw' => true,
-				'default' => $this->msg( 'mobile-frontend-leave-feedback-subject' ) ->parse()
-					. '<br/>',
-			),
 			'returnto' => array(
-				'type' => 'hidden',
+				'type' => 'hiddendiv',
 				'default' => $this->getRequest()->getText( 'returnto', '' ),
 			),
 			'subject' => array(
-				'type' => 'text',
-			),
-			'message-desc' => array(
-				'type' => 'info',
-				'raw' => true,
-				'default' => $this->msg( 'mobile-frontend-leave-feedback-message' )->parse()
-					. '<br/>',
+				'type' => 'textdiv',
+				'maxlength' => 60,
+				'placeholder' => 'Message subject',
 			),
 			'message' => array(
-				'type' => 'textarea',
+				'type' => 'textareadiv',
 				'rows' => 5,
 				'cols' => 60,
 				'validation-callback' => array( $this, 'validateMessage' ),
+				'placeholder' => 'Type your comment here',
 			),
 		);
 	}
@@ -117,6 +124,393 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 			$out->addReturnTo( $t );
 		} else {
 			$out->returnToMain();
+		}
+	}
+}
+
+/**
+ * Overloads HTMLForm so we can render the form in divs rather than as a table
+ * as well as extend support for our custom textarea field.
+ *
+ * Note that __construct() and loadInputFromParameters() are reimplemented here
+ * verbatim. This is because PHP is dumb and handles static methods/properties
+ * very poorly and we cannot rely on late static bindings because of our 
+ * PHP 5.2 compatibility requirement.
+ * @see HTMLTextAreaMobileField
+ */
+class HTMLFormMobile extends HTMLForm {
+	// A mapping of 'type' inputs onto standard HTMLFormField subclasses
+	static $typeMappings = array(
+		'text' => 'HTMLTextField',
+		'textarea' => 'HTMLTextAreaField',
+		'select' => 'HTMLSelectField',
+		'radio' => 'HTMLRadioField',
+		'multiselect' => 'HTMLMultiSelectField',
+		'check' => 'HTMLCheckField',
+		'toggle' => 'HTMLCheckField',
+		'int' => 'HTMLIntField',
+		'float' => 'HTMLFloatField',
+		'info' => 'HTMLInfoField',
+		'selectorother' => 'HTMLSelectOrOtherField',
+		'selectandother' => 'HTMLSelectAndOtherField',
+		'submit' => 'HTMLSubmitField',
+		'hidden' => 'HTMLHiddenField',
+		'edittools' => 'HTMLEditTools',
+
+		// HTMLTextField will output the correct type="" attribute automagically.
+		// There are about four zillion other HTML5 input types, like url, but
+		// we don't use those at the moment, so no point in adding all of them.
+		'email' => 'HTMLTextField',
+		'password' => 'HTMLTextField',
+
+		// Custom fields which will support divs rather than table rows
+		'textareadiv' => 'HTMLTextAreaFieldDiv',
+		'textdiv' => 'HTMLTextFieldDiv',
+		'hiddendiv' => 'HTMLHiddenFieldDiv',
+	);
+
+	/**
+	 * Build a new HTMLForm from an array of field attributes
+	 * @param $descriptor Array of Field constructs, as described above
+	 * @param $context IContextSource available since 1.18, will become compulsory in 1.18.
+	 *     Obviates the need to call $form->setTitle()
+	 * @param $messagePrefix String a prefix to go in front of default messages
+	 */
+	public function __construct( $descriptor, /*IContextSource*/ $context = null, $messagePrefix = '' ) {
+		if( $context instanceof IContextSource ){
+			$this->setContext( $context );
+			$this->mTitle = false; // We don't need them to set a title
+			$this->mMessagePrefix = $messagePrefix;
+		} else {
+			// B/C since 1.18
+			if( is_string( $context ) && $messagePrefix === '' ){
+				// it's actually $messagePrefix
+				$this->mMessagePrefix = $context;
+			}
+		}
+
+		// Expand out into a tree.
+		$loadedDescriptor = array();
+		$this->mFlatFields = array();
+
+		foreach ( $descriptor as $fieldname => $info ) {
+			$section = isset( $info['section'] )
+				? $info['section']
+				: '';
+
+			if ( isset( $info['type'] ) && $info['type'] == 'file' ) {
+				$this->mUseMultipart = true;
+			}
+
+			$field = self::loadInputFromParameters( $fieldname, $info );
+			$field->mParent = $this;
+
+			$setSection =& $loadedDescriptor;
+			if ( $section ) {
+				$sectionParts = explode( '/', $section );
+
+				while ( count( $sectionParts ) ) {
+					$newName = array_shift( $sectionParts );
+
+					if ( !isset( $setSection[$newName] ) ) {
+						$setSection[$newName] = array();
+					}
+
+					$setSection =& $setSection[$newName];
+				}
+			}
+
+			$setSection[$fieldname] = $field;
+			$this->mFlatFields[$fieldname] = $field;
+		}
+
+		$this->mFieldTree = $loadedDescriptor;
+	}
+
+	/**
+	 * TODO: Document
+	 * @param $fields array[]|HTMLFormField[] array of fields (either arrays or objects)
+	 * @param $sectionName string ID attribute of the <table> tag for this section, ignored if empty
+	 * @param $fieldsetIDPrefix string ID prefix for the <fieldset> tag of each subsection, ignored if empty
+	 * @return String
+	 */
+	function displaySection( $fields, $sectionName = '', $fieldsetIDPrefix = '' ) {
+		$divHtml = '';
+		$subsectionHtml = '';
+		$hasLeftColumn = false;
+
+		foreach ( $fields as $key => $value ) {
+			if ( is_object( $value ) ) {
+
+				$v = empty( $value->mParams['nodata'] )
+					? $this->mFieldData[$key]
+					: $value->getDefault();
+				$divHtml .= $value->getDiv( $v, $value );
+
+				if ( $value->getLabel() != '&#160;' ) {
+					$hasLeftColumn = true;
+				}
+			} elseif ( is_array( $value ) ) {
+				$section = $this->displaySection( $value, $key );
+				$legend = $this->getLegend( $key );
+				if ( isset( $this->mSectionHeaders[$key] ) ) {
+					$section = $this->mSectionHeaders[$key] . $section;
+				}
+				if ( isset( $this->mSectionFooters[$key] ) ) {
+					$section .= $this->mSectionFooters[$key];
+				}
+				$attributes = array();
+				if ( $fieldsetIDPrefix ) {
+					$attributes['id'] = Sanitizer::escapeId( "$fieldsetIDPrefix$key" );
+				}
+				$subsectionHtml .= Xml::fieldset( $legend, $section, $attributes ) . "\n";
+			}
+		}
+
+		$classes = array();
+
+		if ( !$hasLeftColumn ) { // Avoid strange spacing when no labels exist
+			$classes[] = 'mw-htmlform-nolabel';
+		}
+
+		$attribs = array(
+			'class' => implode( ' ', $classes ),
+		);
+
+		if ( $sectionName ) {
+			$attribs['id'] = Sanitizer::escapeId( "mw-htmlform-$sectionName" );
+		}
+
+		$divHtml = HTML::rawElement( 'div', $attribs, "\n$divHtml\n" );
+
+		if ( $this->mSubSectionBeforeFields ) {
+			return $subsectionHtml . "\n" . $divHtml;
+		} else {
+			return $divHtml . "\n" . $subsectionHtml;
+		}
+	}
+	
+	/**
+	 * Initialise a new Object for the field
+	 * @param $fieldname string
+	 * @param $descriptor string input Descriptor, as described above
+	 * @return HTMLFormField subclass
+	 */
+	static function loadInputFromParameters( $fieldname, $descriptor ) {
+		if ( isset( $descriptor['class'] ) ) {
+			$class = $descriptor['class'];
+		} elseif ( isset( $descriptor['type'] ) ) {
+			$class = self::$typeMappings[$descriptor['type']];
+			$descriptor['class'] = $class;
+		} else {
+			$class = null;
+		}
+
+		if ( !$class ) {
+			throw new MWException( "Descriptor with no class: " . print_r( $descriptor, true ) );
+		}
+
+		$descriptor['fieldname'] = $fieldname;
+
+		# TODO
+		# This will throw a fatal error whenever someone try to use
+		# 'class' to feed a CSS class instead of 'cssclass'. Would be
+		# great to avoid the fatal error and show a nice error.
+		$obj = new $class( $descriptor );
+
+		return $obj;
+	}
+}
+
+/**
+ * Overloads HTMLTextAreaField::getInputHTML() so we can use the 'placeholder'
+ * property until 'placeholder' support is merged into core.
+ *
+ * Also supports returning field in a div rather than table elements.
+ */
+class HTMLTextAreaFieldDiv extends HTMLTextAreaField {
+	function getInputHTML( $value ) {
+		$attribs = array(
+			'id' => $this->mID,
+			'name' => $this->mName,
+			'cols' => $this->getCols(),
+			'rows' => $this->getRows(),
+		) + $this->getTooltipAndAccessKey();
+
+		if ( $this->mClass !== '' ) {
+			$attribs['class'] = $this->mClass;
+		}
+
+		if ( !empty( $this->mParams['disabled'] ) ) {
+			$attribs['disabled'] = 'disabled';
+		}
+
+		if ( !empty( $this->mParams['readonly'] ) ) {
+			$attribs['readonly'] = 'readonly';
+		}
+
+		if ( !empty( $this->mParams['placeholder'] ) ) {
+			$attribs['placeholder'] = $this->mParams['placeholder'];
+		}
+
+		foreach ( array( 'required', 'autofocus' ) as $param ) {
+			if ( isset( $this->mParams[$param] ) ) {
+				$attribs[$param] = '';
+			}
+		}
+
+		return Html::element( 'textarea', $attribs, $value );
+	}
+
+	public function getDiv( $value, $valueObj ) {
+		return HTMLFormFieldDiv::getDiv( $value, $valueObj );
+	}
+
+	public function getMClass() {
+		return $this->mClass;
+	}
+}
+
+/**
+ * Overloads HTMLTextField to support returning field in a div rather than
+ * table elements.
+ */
+class HTMLTextFieldDiv extends HTMLTextField {
+	public function getDiv( $value, $valueObj ) {
+		return HTMLFormFieldDiv::getDiv( $value, $valueObj );
+	}
+
+	public function getMClass() {
+		return $this->mClass;
+	}
+}
+
+/**
+ * Overloads HTMLHiddenField to support returning field in a div rather than
+ * table elements.
+ */
+class HTMLHiddenFieldDiv extends HTMLHiddenField {
+	public function getDiv( $value, $valueObj ) {
+		$params = array();
+		if ( $this->mID ) {
+			$params['id'] = $this->mID;
+		}
+
+		$this->mParent->addHiddenField(
+			$this->mName,
+			$this->mDefault,
+			$params
+		);
+
+		return '';
+	}
+
+	public function getMClass() {
+		return $this->mClass;
+	}
+}
+
+/**
+ * Helper class to do some voodoo to support HTMLForm returning divs rather
+ * than table elements
+ */
+class HTMLFormFieldDiv {
+	public static function getDiv( $value, $valueObj ) {
+		# Check for invalid data.
+
+		$errors = $valueObj->validate( $value, $valueObj->mParent->mFieldData );
+
+		$cellAttributes = array();
+		$verticalLabel = false;
+
+		if ( $errors === true || ( !$valueObj->mParent->getRequest()->wasPosted() && ( $valueObj->mParent->getMethod() == 'post' ) ) ) {
+			$errors = '';
+			$errorClass = '';
+		} else {
+			$errors = self::formatErrors( $errors );
+			$errorClass = 'mw-htmlform-invalid-input';
+		}
+
+		$label = $valueObj->getLabelHtml( $cellAttributes );
+		$field = Html::rawElement(
+			'div',
+			array( 'class' => 'mw-input' ) + $cellAttributes,
+			$valueObj->getInputHTML( $value ) . "\n$errors"
+		);
+
+		$fieldType = get_class( $valueObj );
+
+		if ( $verticalLabel ) {
+			$html = Html::rawElement( 'div',
+				array( 'class' => 'mw-htmlform-vertical-label' ), $label );
+			$html .= Html::rawElement( 'div',
+				array( 'class' => "mw-htmlform-field-$fieldType {$valueObj->getMClass()} $errorClass" ),
+				$field );
+		} else {
+			$html = Html::rawElement( 'div',
+				array( 'class' => "mw-htmlform-field-$fieldType {$valueObj->getMClass()} $errorClass" ),
+				$label . $field );
+		}
+
+		$helptext = null;
+
+		if ( isset( $valueObj->mParams['help-message'] ) ) {
+			$valueObj->mParams['help-messages'] = array( $valueObj->mParams['help-message'] );
+		}
+
+		if ( isset( $valueObj->mParams['help-messages'] ) ) {
+			foreach ( $valueObj->mParams['help-messages'] as $name ) {
+				$helpMessage = (array)$name;
+				$msg = wfMessage( array_shift( $helpMessage ), $helpMessage );
+
+				if ( $msg->exists() ) {
+					$helptext .= $msg->parse(); // Append message
+				}
+			}
+		}
+		elseif ( isset( $valueObj->mParams['help'] ) ) {
+			$helptext = $valueObj->mParams['help'];
+		}
+
+		if ( !is_null( $helptext ) ) {
+			$row = Html::rawElement(
+				'div',
+				array( 'colspan' => 2, 'class' => 'htmlform-tip' ),
+				$helptext
+			);
+			$row = Html::rawElement( 'div', array(), $row );
+			$html .= "$row\n";
+		}
+
+		return $html;
+	}
+
+	/**
+	 * Formats one or more errors as accepted by field validation-callback.
+	 * @param $errors String|Message|Array of strings or Message instances
+	 * @return String html
+	 * @see HTMLFormField::formatErrors()
+	 */
+	public static function formatErrors( $errors ) {
+		if ( is_array( $errors ) && count( $errors ) === 1 ) {
+			$errors = array_shift( $errors );
+		}
+
+		if ( is_array( $errors ) ) {
+			$lines = array();
+			foreach ( $errors as $error ) {
+				if ( $error instanceof Message ) {
+					$lines[] = Html::rawElement( 'li', array(), $error->parse() );
+				} else {
+					$lines[] = Html::rawElement( 'li', array(), $error );
+				}
+			}
+			return Html::rawElement( 'ul', array( 'class' => 'error' ), implode( "\n", $lines ) );
+		} else {
+			if ( $errors instanceof Message ) {
+				$errors = $errors->parse();
+			}
+			return Html::rawElement( 'span', array( 'class' => 'error' ), $errors );
 		}
 	}
 }
