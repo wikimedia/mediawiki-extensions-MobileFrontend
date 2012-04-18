@@ -16,7 +16,8 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
 		} else {
-			$this->getFeedbackHtml();
+			$html = $this->getFeedbackHtml();
+			$this->getOutput()->addHtml( $html );
 		}
 	}
 
@@ -32,6 +33,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
 		$form->setSubmitCallback( array( $this, 'postFeedback' ) );
 		$form->setAction( $this->getRequest()->getRequestURL() . "#mf-feedback-form" );
+
 		$html = <<<HTML
 		<div class='feedback'>
 		<h2 class="section_heading" id="section_1">Technical Problem</h2>
@@ -39,6 +41,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 HTML;
 		$this->getOutput()->addHtml( $html );
 		$form->show();
+
 		$html = <<<HTML
 		</div>
 		<h2 class="section_heading" id="section_3">Article Feedback</h2>
@@ -57,10 +60,11 @@ HTML;
 		</div>
 		</div>
 HTML;
-		$this->getOutput()->addHtml( $html );
+
+		return $html;
 	}
 
-	private function getForm() {
+	protected function getForm() {
 		return array(
 			'returnto' => array(
 				'type' => 'hiddendiv',
@@ -83,33 +87,74 @@ HTML;
 	}
 
 	public function postFeedback( $form ) {
-		wfProfileIn( __METHOD__ );
+		global $wgMFRemotePostFeedback;
 
-		$subject = $form['subject']
-			? $form['subject']
-			: $this->msg( 'mobile-frontend-feedback-no-subject' )->inContentLanguage()->text();
-		$message = trim( $form['message'] );
-		$returnTo = Title::newFromText( $form['returnto'] );
-		if ( !$returnTo ) {
-			$returnTo = Title::newMainPage();
+		$subject = $this->getFormattedSubject( $form );
+		$message = $this->getFormattedMessage( $form );
+		$returnTo = $form['returnto'];
+		if ( $wgMFRemotePostFeedback === true ) {
+			$success = $this->postRemoteFeedback( $subject, $message );
+		} else {
+			$success = $this->postLocalFeedback( $subject, $message );
 		}
 
+		if ( $success === true ) {
+			$location = $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) );
+			$this->getRequest()->response()->header( 'Location: ' . $location );
+			exit;
+		} else {
+			// handle errors
+		}
+	}
+
+	protected function postLocalFeedback( $subject, $message ) {
+		wfProfileIn( __METHOD__ );
+
+		// Is this really right? Are people really checking all of the different
+		// language variants of this page?
+		// Perhaps this makes more sense as something non-language specific...
 		$title = Title::newFromText( wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain() );
 
 		if ( $title->userCan( 'edit' ) &&
 			!$this->getUser()->isBlockedFrom( $title ) ) {
 			$article = new Article( $title, 0 );
 			$rawtext = $article->getRawText();
-			$rawtext .= "\n== {$subject} ==\n{$message} ~~~~\n<br><small>User agent: <code>{$_SERVER['HTTP_USER_AGENT']}</code></small> ";
+			$rawtext .= "\n== {$subject} ==\n";
+			$rawtext .= $message;
 			$article->doEdit( $rawtext,
 				$this->msg( 'mobile-frontend-feedback-edit-summary', $subject )->inContentLanguage()->text()
 			);
 		}
 
-		$location = $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) );
-		$this->getRequest()->response()->header( 'Location: ' . $location );
 		wfProfileOut( __METHOD__ );
-		exit;
+		return true;
+	}
+
+	protected function getFormattedSubject( $form ) {
+		$subject = $form['subject']
+			? $form['subject']
+			: $this->msg( 'mobile-frontend-feedback-no-subject' )->inContentLanguage()->text();
+		return $subject;
+	}
+
+	protected function getFormattedMessage( $form ) {
+		$rawMsg = trim( $form['message'] );
+		$msg = "{$rawMsg} ~~~~\n<br><small>User agent: <code>{$_SERVER['HTTP_USER_AGENT']}</code></small> ";
+		return $msg;
+	}
+
+	protected function postRemoteFeedback( $subject, $message ) {
+		global $wgMFRemotePostFeedbackUrl, $wgMFRemotePostFeedbackUsername,
+			$wgMFRemotePostFeedbackPassword, $wgMFRemotePostFeedbackArticle;
+
+		try {
+			$apiClient = new MobileFrontendMWApiClient( $wgMFRemotePostFeedbackUrl,
+				$wgMFRemotePostFeedbackUsername, $wgMFRemotePostFeedbackPassword );
+			$apiClient->editArticle( $wgMFRemotePostFeedbackArticle, $subject, $message );
+		} catch ( Exception $e ) {
+			return false;
+		}
+		return true;
 	}
 
 	public function validateSubject( $textfield ) {
@@ -126,7 +171,7 @@ HTML;
 		return true;
 	}
 
-	private function showThanks() {
+	protected function showThanks() {
 		$out = $this->getOutput();
 		$out->addHtml( "<div class=mwm-message mwm-notice'>{$this->msg( 'mobile-frontend-leave-feedback-thanks' )->parse()}</div>" );
 		$t = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
@@ -135,6 +180,183 @@ HTML;
 		} else {
 			$out->returnToMain();
 		}
+	}
+}
+
+class MobileFrontendMWApiClient {
+	protected $username;
+	protected $password;
+	protected $cookieJar;
+	protected $url;
+	protected $loggedIn = false;
+
+	public function __construct( $url = null, $username = null, $password = null ) {
+		$opts = array( 'url', 'username', 'password' );
+		foreach ( $opts as $opt ) {
+			if ( !is_null( $ { $opt } ) ) {
+				$setMethodName = "set" . ucfirst( $opt );
+				$this->$setMethodName( $ { $opt } );
+			}
+		}
+	}
+
+	public function setUsername( $username ) {
+		if ( !strlen( $username ) ) {
+			throw new Exception ( 'Invalid username' );
+		}
+		$this->username = $username;
+	}
+
+	public function getUsername() {
+		return $this->username;
+	}
+
+	public function setCookieJar( $cookieJar ) {
+		$this->cookieJar = $cookieJar;
+	}
+
+	public function getCookieJar() {
+		return $this->cookieJar;
+	}
+
+	public function setPassword( $password ) {
+		if ( !strlen( $password ) ) {
+			throw new Exception ( 'Invalid password' );
+		}
+		$this->password = $password;
+	}
+
+	public function getPassword() {
+		return $this->password;
+	}
+
+	public function setUrl( $url ) {
+		if ( !strlen( $url ) ) {
+			throw new Exception ( 'Invalid URL' );
+		}
+		$this->url = $url;
+	}
+
+	public function getUrl() {
+		return $this->url;
+	}
+
+	public function login() {
+		// login
+		$options = array(
+			'postData' => array(
+				'action' => 'login',
+				'lgname' => $this->getUsername(),
+				'lgpassword' => $this->getPassword(),
+				'format' => 'json',
+			),
+			'method' => 'POST',
+		);
+		$req = MwHttpRequest::factory( $this->getUrl(), $options );
+		$status = $req->execute();
+		if ( !$status->isGood() ) {
+			echo 'login fail';
+		}
+		$loginResponse = $req->getContent();
+		$loginResponse = json_decode( $loginResponse, true );
+		$loginResult = $loginResponse['login']['result'];
+		if ( $loginResult == 'NeedToken' ) {
+			// fetch cookie jar (session info needed for auth)
+			$this->setCookieJar( $req->getCookieJar() );
+			$token = $loginResponse['login']['token'];
+			$options['postData']['lgtoken'] = $token;
+			$req = MwHttpRequest::factory( $this->getUrl(), $options );
+			// set cookie jar
+			$req->setCookieJar( $this->getCookieJar() );
+			$status = $req->execute();
+			if ( !$status->isGood() ) {
+				echo 'login fail after token';
+			}
+			$loginResponse = $req->getContent();
+			$loginResponse = json_decode( $loginResponse, true );
+			$loginResult = $loginResponse['login']['result'];
+		}
+
+		if ( $loginResult != 'Success' ) {
+			// there's some kind of problem
+			echo 'fail';
+			return false;
+		}
+		$this->loggedIn = true;
+		return true;
+	}
+
+	public function getEditToken( $articleName ) {
+		// get edit token
+		$options = array(
+			'postData' => array(
+				'action' => 'query',
+				'prop' => 'info|revisions',
+				'intoken' => 'edit',
+				'titles' => $articleName,
+				'format' => 'json',
+			),
+			'method' => 'POST',
+		);
+		$req = MwHttpRequest::factory( $this->getUrl(), $options );
+		$req->setCookieJar( $this->getCookieJar() );
+		$status = $req->execute();
+
+		if ( !$status->isGood() ) {
+			// make some kind of error?
+			echo "!isGood";
+		}
+		$response = $req->getContent();
+		$response = json_decode( $response, true );
+		$pages = $response['query']['pages'];
+		$editToken = null;
+		foreach ( $pages as $page ) {
+			if ( isset( $page['edittoken'] ) ) $editToken = $page['edittoken'];
+			if ( !is_null( $editToken ) ) break;
+		}
+		// what happens if no edit token present?!
+		return $editToken;
+	}
+
+	public function editArticle( $articleName, $sectionTitle, $text, $section = 'new' ) {
+		if ( $this->shouldLogIn() ) {
+			if ( !$this->login() ) {
+				throw new Exception( 'Login failed.' );
+			}
+		}
+
+		// edit page
+		$options = array(
+			'postData' => array(
+				'action' => 'edit',
+				'title' => $articleName,
+				'section' => $section,
+				'sectiontitle' => $sectionTitle, // change to be subject of form submit
+				'text' => $text, // change to be message of form submit + incl UA (See old post method)
+				'token' => $this->getEditToken( $articleName ),
+				'bot' => true,
+				'md5' => md5( $text ),
+				'format' => 'json',
+				// use timestamp options?
+			),
+			'method' => 'POST',
+		);
+		$req = MwHttpRequest::factory( $this->getUrl(), $options );
+		$req->setCookieJar( $this->getCookieJar() );
+		$status = $req->execute();
+		if ( !$status->isGood() ) {
+			echo '!is good editing mw.o';
+			return false;
+		}
+		$response = $req->getContent();
+		return true;
+	}
+
+	public function shouldLogIn() {
+		if ( !$this->loggedIn && isset( $this->username ) && isset( $this->password ) ) {
+			return true;
+		}
+		return false;
 	}
 }
 

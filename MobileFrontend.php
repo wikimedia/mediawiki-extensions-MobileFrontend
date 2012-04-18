@@ -80,17 +80,17 @@ $wgMobileFrontendLogo = false;
 /**
  * Template for mobile URLs.
  *
- * This will be used to transcode regular URLs into mobile URLs for the 
+ * This will be used to transcode regular URLs into mobile URLs for the
  * mobile view.
- * 
+ *
  * It's possible to specify the 'mobileness' of the URL in the host portion of
  * the URL.
  *
  * You can either statically or dynamically create the host-portion of your
- * mobile URL. To statically create it, just set $wgMobileUrlTemplate to 
+ * mobile URL. To statically create it, just set $wgMobileUrlTemplate to
  * the static hostname. For example:
  *		$wgMobileUrlTemplate = "mobile.mydomain.com";
- * 
+ *
  * Alternatively, the host definition can include placeholders for different
  * parts of the 'host' section of a URL. The placeholders are denoted by '%h'
  * and followed with a digit that maps to the position of a host-part of the
@@ -104,7 +104,7 @@ $wgMobileUrlTemplate = '';
 
 /**
  * The number of seconds the 'useformat' cookie should be valid
- * 
+ *
  * The useformat cookie gets set when a user manually elects to view
  * either the mobile or desktop view of the site.
  *
@@ -122,7 +122,7 @@ $wgMobileRedirectFormAction = false;
 
 /**
  * A string to mark the particular version of a Javascript or CSS resource
- * 
+ *
  * This is useful to update in order to force invalidation of certain caches
  * when new versions of this software gets deployed, as this string gets
  * appended to the query string in the request for resources, which will
@@ -132,13 +132,24 @@ $wgMobileRedirectFormAction = false;
  */
 $wgMobileResourceVersion = '';
 
+/**
+ * When set to true, the feedback form will post to a remote wiki, which
+ * must also be configured.
+ * @param bool
+ */
+$wgMFRemotePostFeedback = false;
+$wgMFRemotePostFeedbackUrl;
+$wgMFRemotePostFeedbackUsername;
+$wgMFRemotePostFeedbackPassword;
+$wgMFRemotePostFeedbackArticle;
+
 $wgExtMobileFrontend = null;
 
 /**
  * Set properties in ExtMobileFrontend to arbitrary values
  * CAUTION: this should not be used in production environments
  *
- * This array can consist of key => value pairs, mapping to 
+ * This array can consist of key => value pairs, mapping to
  * '<property_name>' => <property_value>
  * Any properties you try to set that do not exist in ExtMobileFrontend will
  * be ignored.
