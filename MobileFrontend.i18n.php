@@ -617,32 +617,43 @@ $messages['be-tarask'] = array(
 
 /** Bulgarian (Български)
  * @author DCLXVI
+ * @author Ivanko
  * @author Spiritia
  * @author Vladimir Penov
  */
 $messages['bg'] = array(
-	'mobile-frontend-search-submit' => 'Отваряне',
+	'mobile-frontend-search-submit' => 'Отиване',
 	'mobile-frontend-featured-article' => 'Избрана статия на деня',
 	'mobile-frontend-home-button' => 'Начало',
-	'mobile-frontend-random-button' => 'Случайна',
-	'mobile-frontend-back-to-top-of-section' => 'Връщане на предходен раздел',
-	'mobile-frontend-show-button' => '+',
-	'mobile-frontend-hide-button' => '-',
-	'mobile-frontend-regular-site' => 'Вижте страницата в обикновената версия на {{SITENAME}}',
+	'mobile-frontend-random-button' => 'Наслука',
+	'mobile-frontend-back-to-top-of-section' => 'Един раздел назад',
+	'mobile-frontend-show-button' => '<h4>+</h4>',
+	'mobile-frontend-hide-button' => '<h4>–</h4>',
+	'mobile-frontend-regular-site' => 'Настолен изглед',
 	'mobile-frontend-wml-continue' => 'Продължаване...',
-	'mobile-frontend-wml-back' => 'Връщане...',
+	'mobile-frontend-wml-back' => 'Назад...',
 	'mobile-frontend-view' => 'Мобилен изглед',
-	'mobile-frontend-opt-in-yes-button' => 'да',
-	'mobile-frontend-opt-in-no-button' => 'не',
-	'mobile-frontend-opt-out-yes-button' => 'да',
-	'mobile-frontend-opt-out-no-button' => 'не',
+	'mobile-frontend-opt-in-yes-button' => 'Да',
+	'mobile-frontend-opt-in-no-button' => 'Не',
+	'mobile-frontend-opt-out-yes-button' => 'Да',
+	'mobile-frontend-opt-out-no-button' => 'Не',
+	'mobile-frontend-disable-images' => 'Изключване изображенията по сайта',
+	'mobile-frontend-enable-images' => 'Включване изображенията по сайта',
+	'mobile-frontend-enable-images-prefix' => 'Изображения',
+	'mobile-frontend-off' => 'ИЗКЛ.',
+	'mobile-frontend-on' => 'ВКЛ.',
 	'mobile-frontend-news-items' => 'В новините',
-	'mobile-frontend-leave-feedback-subject' => 'Тема',
-	'mobile-frontend-leave-feedback-message' => 'Съобщение',
+	'mobile-frontend-leave-feedback-subject' => 'Тема:',
+	'mobile-frontend-leave-feedback-message' => 'Съобщение:',
+	'mobile-frontend-feedback-no-subject' => '(няма тема)',
 	'mobile-frontend-language' => 'Език',
 	'mobile-frontend-username' => 'Потребителско име:',
 	'mobile-frontend-password' => 'Парола:',
 	'mobile-frontend-login' => 'Влизане',
+	'mobile-frontend-privacy-link-text' => 'Поверителност',
+	'mobile-frontend-footer-more' => 'повече',
+	'mobile-frontend-footer-less' => 'по-малко',
+	'mobile-frontend-footer-contact' => 'Контакт',
 );
 
 /** Bihari (भोजपुरी) */
@@ -2894,6 +2905,7 @@ $messages['lb'] = array(
 	'mobile-frontend-wml-continue' => 'Weider ...',
 	'mobile-frontend-wml-back' => 'Zréck ...',
 	'mobile-frontend-view' => 'Mobil Vue',
+	'mobile-frontend-view-desktop' => 'Desktop',
 	'mobile-frontend-view-mobile' => 'Mobil',
 	'mobile-frontend-opt-in-message' => 'Beim mobile Beta-Projet matmaachen?',
 	'mobile-frontend-opt-in-yes-button' => 'jo',
@@ -3808,6 +3820,7 @@ $messages['pfl'] = array(
  * @author BeginaFelicysym
  * @author Leinad
  * @author Mikołka
+ * @author Odder
  * @author Olgak85
  * @author Rzuwig
  * @author Sp5uhe
@@ -3837,8 +3850,8 @@ $messages['pl'] = array(
 	'mobile-frontend-opt-out-no-button' => 'nie',
 	'mobile-frontend-opt-out-title' => 'Wyłącz wersję testową',
 	'mobile-frontend-opt-out-explain' => 'Wyłączając wersję beta mobilnego interfejsu wyłączysz również różne eksperymentalne funkcje i powrócisz do klasycznego interfejsu mobilnego.',
-	'mobile-frontend-disable-images' => 'Wyłącz wyświetlanie obrazów na mobilnej witrynie',
-	'mobile-frontend-enable-images' => 'Włącz wyświetlanie obrazów na mobilnej witrynie',
+	'mobile-frontend-disable-images' => 'Wyłącz wyświetlanie grafik w wersji mobilnej',
+	'mobile-frontend-enable-images' => 'Włącz wyświetlanie grafik w wersji mobilnej',
 	'mobile-frontend-enable-images-prefix' => 'Grafika',
 	'mobile-frontend-news-items' => 'Aktualności',
 	'mobile-frontend-leave-feedback-title' => 'Opinia witryny mobilnej',
@@ -4104,7 +4117,7 @@ $messages['rm'] = array(
 	'mobile-frontend-regular-site' => 'Visitar la pagina regulara da {{SITENAME}}',
 	'mobile-frontend-wml-continue' => 'Cuntinuar…',
 	'mobile-frontend-wml-back' => 'Enavos…',
-	'mobile-frontend-view' => 'Vista mobila',
+	'mobile-frontend-view' => 'Versiun mobila',
 	'mobile-frontend-opt-in-yes-button' => 'gea',
 	'mobile-frontend-opt-in-no-button' => 'na',
 	'mobile-frontend-leave-feedback-subject' => 'Object',
@@ -4181,9 +4194,11 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-opt-out-title' => 'Opt-Out pe Mobile beta',
 	'mobile-frontend-disable-images' => "Disabbilite le immaggine sus a 'u site mobile",
 	'mobile-frontend-enable-images' => "Abbilite le immaggine sus a 'u site mobile",
+	'mobile-frontend-off' => 'Stute',
+	'mobile-frontend-on' => 'Appizzeche',
 	'mobile-frontend-news-items' => "Jndr'à le notizie",
-	'mobile-frontend-leave-feedback-subject' => 'Suggette',
-	'mobile-frontend-leave-feedback-message' => 'Messàgge',
+	'mobile-frontend-leave-feedback-subject' => 'Suggette:',
+	'mobile-frontend-leave-feedback-message' => 'Messàgge:',
 	'mobile-frontend-leave-feedback-submit' => "Conferme 'u feedback",
 	'mobile-frontend-leave-feedback-link-text' => "Feedback d'a grafeche d'u mobile",
 	'mobile-frontend-leave-feedback' => "Lasse 'u feedbacl",
@@ -4193,6 +4208,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-password' => 'Passuord:',
 	'mobile-frontend-login' => 'Tràse',
 	'mobile-frontend-placeholder' => "Scrive 'a ricerca toje aqquà...",
+	'mobile-frontend-clear-search' => 'Pulizze',
 	'mobile-frontend-footer-sitename' => 'Uicchipèdie',
 );
 
