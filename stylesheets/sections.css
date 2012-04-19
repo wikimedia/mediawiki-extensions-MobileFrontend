@@ -9,18 +9,7 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	padding-bottom: 5px;
 }
 
-.togglingEnabled button.hide,
-.togglingEnabled .openSection button.show {
-	display: none;
-}
-
-.togglingEnabled .openSection button.hide,
-.togglingEnabled button.show {
-	display: inline-block;
-}
-
-button.show,
-button.hide {
+.section_heading button {
 	display: none; /* for non-js browsers */
 	overflow: hidden;
 	width: 27px;
@@ -34,7 +23,11 @@ button.hide {
 	-webkit-transition: opacity 0.4s ease-in 0.4s;
 }
 
-.togglingEnabled button.hide {
+.togglingEnabled .section_heading button {
+	display: inline-block;
+}
+
+.togglingEnabled .section_heading button.openSection {
 	background: url(images/hide.png);
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -42,7 +35,7 @@ button.hide {
 	background-size: auto 9px;
 }
 
-.togglingEnabled button.show {
+.togglingEnabled .section_heading button {
 	background: url(images/show.png);
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -50,8 +43,7 @@ button.hide {
 	background-size: auto 9px;
 }
 
-.openSection button.hide,
-.openSection button.show {
+.openSection button.openSection {
 	opacity: 1;
 }
 

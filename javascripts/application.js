@@ -133,12 +133,18 @@ MobileFrontend = (function() {
 			el.parentNode.removeChild(el);
 		}
 
+		function text( str ) {
+			var label = document.createTextNode( str );
+			el.appendChild( label );
+		}
+
 		return {
 			addClass: addClass,
 			bind: bind,
 			hasClass: hasClass,
 			remove: remove,
-			removeClass: removeClass
+			removeClass: removeClass,
+			text: text
 		};
 	}
 	utilities.ajax = utilities.ajax || function( options ) {

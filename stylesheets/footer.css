@@ -90,15 +90,6 @@ html[dir="ltr"] #footer .settings .left:after {
 	color: #333;
 }
 
-.toggleCopyright .hide,
-.toggleCopyright .show {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 22px;
-}
-
-
 /* 
 disable animations in footer
 this is so that toggling can scroll it into view
