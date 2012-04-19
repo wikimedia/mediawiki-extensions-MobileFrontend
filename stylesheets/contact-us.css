@@ -47,3 +47,8 @@ Change-Id: I57557fd2e359264853efadc1e5da1c9cbe6a0d97
 #mf-feedback-form td {
 	border: none;
 }
+
+#mf-feedback-form .error {
+	color: #9F0F0F;
+	padding-left: 18px;
+}
