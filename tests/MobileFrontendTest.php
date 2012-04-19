@@ -61,6 +61,7 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
 		$this->assertEquals( 'http://en.m.wikipedia.org/wiki/Article', $wgExtMobileFrontend->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' ) );
+		$this->assertEquals( '//en.m.wikipedia.org/wiki/Article', $wgExtMobileFrontend->getMobileUrl( '//en.wikipedia.org/wiki/Article' ) );
 	}
 
 	public function testParseMobileUrlTemplate() {
