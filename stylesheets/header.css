@@ -271,7 +271,7 @@ full screen search css
 }
 
 #search {
-	line-height: 40px; /* prevent text jumping as you search */
+	line-height: normal;
 	background: none; /* remove fennec default background */
 }
 
