@@ -40,7 +40,7 @@ if( typeof jQuery !== 'undefined' ) {
 			$( document ).scroll(calculatePosition);
 		}
 
-		function init( firstRun ) {
+		function init( container, firstRun ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			$("#mf-references").remove();
 			el = $( '<div id="mf-references"><div></div></div>' ).hide().
@@ -109,9 +109,10 @@ if( typeof jQuery !== 'undefined' ) {
 				ev.preventDefault();
 				cancelBubble( ev );
 			}
-			$( 'sup a' ).unbind('click').click( clickReference ).each(function(i, el) {
-				el.ontouchstart = cancelBubble;
-			});
+			$( 'sup a', container ).unbind( 'click' ).
+				click( clickReference ).each(function(i, el) {
+					el.ontouchstart = cancelBubble;
+				});
 			if( firstRun ) {
 				$( document.body ).bind( 'click', close );
 				$( document.body ).bind( 'touchstart', function() {
@@ -119,7 +120,7 @@ if( typeof jQuery !== 'undefined' ) {
 				});
 			}
 		}
-		init( true );
+		init( $("#content")[0], true );
 		return {
 			init: init
 		};
