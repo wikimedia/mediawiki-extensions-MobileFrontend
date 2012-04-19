@@ -21,6 +21,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 			$form->setId( 'feedback' );
 			$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
 			$form->setSubmitCallback( array( $this, 'postFeedback' ) );
+			$form->setAction( $this->getFullTitle()->getLocalURL() );
 			$form->show();
 		}
 	}
