@@ -69,6 +69,7 @@ HTML;
 			'subject' => array(
 				'type' => 'textdiv',
 				'maxlength' => 60,
+				'validation-callback' => array( $this, 'validateSubject' ),
 				'placeholder' => 'Message subject',
 			),
 			'message' => array(
@@ -109,6 +110,13 @@ HTML;
 		$this->getRequest()->response()->header( 'Location: ' . $location );
 		wfProfileOut( __METHOD__ );
 		exit;
+	}
+
+	public function validateSubject( $textfield ) {
+		if ( mb_strlen( trim( $textfield ) ) < 4 ) {
+			return $this->msg( 'mobile-frontend-feedback-no-subject-field' );
+		}
+		return true;
 	}
 
 	public function validateMessage( $textarea ) {
@@ -413,6 +421,21 @@ class HTMLFormMobile extends HTMLForm {
 
 		return $obj;
 	}
+
+	/**
+	 * Return nothing for the error message stack.
+	 *
+	 * Overloads parent::getErrors() because we don't want to display the
+	 * error stack - just validation errors above the message fields.
+	 *
+	 * @see parent::getErrors()
+	 * @param $errors String|Array|Status
+	 * @return String
+	 */
+	function getErrors( $errors ) {
+		return '';
+	}
+
 }
 
 /**
@@ -511,7 +534,7 @@ class HTMLHiddenFieldDiv extends HTMLHiddenField {
 class HTMLFormFieldDiv {
 	public static function getRaw( $value, $valueObj ) {
 		# Check for invalid data.
-
+		$html = '';
 		$errors = $valueObj->validate( $value, $valueObj->mParent->mFieldData );
 
 		$cellAttributes = array();
@@ -526,11 +549,12 @@ class HTMLFormFieldDiv {
 		}
 
 		$label = $valueObj->getLabelHtml( $cellAttributes );
-		$field = $valueObj->getInputHTML( $value ) . "\n$errors";
+		$field = $valueObj->getInputHTML( $value );
 
 		$fieldType = get_class( $valueObj );
 
-		$html = $label;
+		$html .= "\n$errors";
+		$html .= $label;
 		$html .= $field;
 		/*if ( $verticalLabel ) {
 			$html = Html::rawElement( 'div',
