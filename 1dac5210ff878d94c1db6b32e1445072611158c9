@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJX//+Ys\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-04-19T23:09:03Z",
+      "side": 1,
+      "message": "this should be:\nreturn $wgExtMobileFrontend-\u003egetMobileUrl( wfExpandUrl( $t-\u003egetLocalURL( $params ) ) );",
+      "revId": "1dac5210ff878d94c1db6b32e1445072611158c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
