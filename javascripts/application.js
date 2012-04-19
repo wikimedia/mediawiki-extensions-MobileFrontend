@@ -52,12 +52,15 @@ MobileFrontend = (function() {
 			var stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
 			var stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
 			var stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
+			var hookOptions = MobileFrontend.setting( 'hookOptions' );
 
 			// convert from seconds to days
 			stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
 
-			// set the stopMobileRedirect cookie
-			MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
+			if ( hookOptions != 'toggle_view_desktop' ) {
+				// set the stopMobileRedirect cookie
+				MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
+			}
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
