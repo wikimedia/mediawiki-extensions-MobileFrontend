@@ -1263,9 +1263,12 @@ class ExtMobileFrontend extends ContextSource {
 	 * @return bool
 	 */
 	public function shouldDisplayMobileView() {
-		// always display non-mobile view for edit/history
+		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
-		if ( $action === 'edit' || $action === 'history' ) {
+		$req = $this->getRequest();
+		$isDiff = $req->getText( 'diff' );
+
+		if ( $action === 'edit' || $action === 'history' || $isDiff ) {
 			return false;
 		}
 
