@@ -990,17 +990,31 @@ class ExtMobileFrontend extends ContextSource {
 	public function buildLanguageSelection() {
 		global $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
+		$supportedLanguages = null;
+		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['supported_languages'] ) ) {
+			$supportedLanguages = $this->hookOptions['supported_languages'];
+		}
 		$output = Html::openElement( 'select',
 			array( 'id' => 'languageselection' ) );
 		foreach ( $this->getLanguageUrls() as $languageUrl ) {
+			$languageUrlHref = $languageUrl['href'];
+			$languageUrlLanguage = $languageUrl['language'];
+			if ( in_array( $languageUrl['lang'], $supportedLanguages ) ) {
+				if ( isset( $this->hookOptions['toggle_view_desktop'] ) ) {
+					$request = $this->getRequest();
+					$returnto = $request->appendQuery( $this->hookOptions['toggle_view_desktop'] );
+					$languageUrlHref =  $returnto  .
+						urlencode( $languageUrlHref );
+				}
+			}
 			if ( $languageUrl['lang'] == $wgLanguageCode ) {
 				$output .=	Html::element( 'option',
-							array( 'value' => $languageUrl['href'], 'selected' => 'selected' ),
-									$languageUrl['language'] );
+							array( 'value' => $languageUrlHref, 'selected' => 'selected' ),
+									$languageUrlLanguage );
 			} else {
 				$output .=	Html::element( 'option',
-							array( 'value' => $languageUrl['href'] ),
-									$languageUrl['language'] );
+							array( 'value' => $languageUrlHref ),
+									$languageUrlLanguage );
 			}
 		}
 		$output .= Html::closeElement( 'select' );
