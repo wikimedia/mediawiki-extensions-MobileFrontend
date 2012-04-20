@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJX//+TU\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-20T14:08:34Z",
+      "side": 1,
+      "message": "These should have some default values.",
+      "revId": "3c7c6de8c34849f66e7e740cbf5721aaed1b4b4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJX//+OQ\u003d",
+        "filename": "specials/SpecialMobileFeedback.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-20T14:08:34Z",
+      "side": 1,
+      "message": "~~~~ doesn\u0027t make sense now that it\u0027s posted by a single account.",
+      "revId": "3c7c6de8c34849f66e7e740cbf5721aaed1b4b4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJX//+OM\u003d",
+        "filename": "specials/SpecialMobileFeedback.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-20T14:08:34Z",
+      "side": 1,
+      "message": "FormatJson::decode()",
+      "revId": "3c7c6de8c34849f66e7e740cbf5721aaed1b4b4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJX//+OI\u003d",
+        "filename": "specials/SpecialMobileFeedback.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-20T14:08:34Z",
+      "side": 1,
+      "message": "See above. Or use more native format\u003dphp?",
+      "revId": "3c7c6de8c34849f66e7e740cbf5721aaed1b4b4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJX//+OE\u003d",
+        "filename": "specials/SpecialMobileFeedback.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-20T14:08:34Z",
+      "side": 1,
+      "message": "two conditions could be joined into one",
+      "revId": "3c7c6de8c34849f66e7e740cbf5721aaed1b4b4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
