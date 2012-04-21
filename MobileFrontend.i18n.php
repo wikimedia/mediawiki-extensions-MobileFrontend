@@ -2505,12 +2505,12 @@ $messages['ja'] = array(
 	'mobile-frontend-opt-in-yes-button' => 'はい',
 	'mobile-frontend-opt-in-no-button' => 'いいえ',
 	'mobile-frontend-opt-in-title' => '携帯機器版ベータテストへのオプトイン',
-	'mobile-frontend-opt-in-explain' => 'ベータテストへ参加することにより、実験的機能にアクセスすることができるようになります。ただし、バグや問題に遭遇する危険性が伴います。',
+	'mobile-frontend-opt-in-explain' => 'ベータテストへ参加すると、開発中の機能にアクセスできるようになりますがバグや問題に遭遇する危険性が伴います。',
 	'mobile-frontend-opt-out-message' => '携帯機器版ベータテストから離脱しますか？',
 	'mobile-frontend-opt-out-yes-button' => 'はい',
 	'mobile-frontend-opt-out-no-button' => 'いいえ',
 	'mobile-frontend-opt-out-title' => '携帯機器版ベータテストからのオプトアウト',
-	'mobile-frontend-opt-out-explain' => '携帯機器版ベータテストから離脱することにより、実験的機能は無効化され、従来の携帯機器の画面に戻ります。',
+	'mobile-frontend-opt-out-explain' => '携帯機器版ベータテストから離脱すると、開発中の機能が無効になり従来の携帯機器の画面に戻ります。',
 	'mobile-frontend-disable-images' => '携帯機器ウェブサイトで画像を無効にする',
 	'mobile-frontend-enable-images' => '携帯機器ウェブサイトで画像を有効にする',
 	'mobile-frontend-enable-images-prefix' => '画像',
@@ -2545,6 +2545,7 @@ $messages['ja'] = array(
 	'mobile-frontend-footer-license' => 'コンテンツは<a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>で提供されています',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">利用規約</a>',
 	'mobile-frontend-footer-contact' => '連絡先',
+	'mobile-frontend-unknown-option' => '認識できないオプション "$1" です。',
 );
 
 /** Georgian (ქართული)
