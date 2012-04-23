@@ -35,7 +35,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$jQuerySupport = $this->data['device']['supports_jquery'];
 		$jQueryScript = $jQuerySupport ? "{$startScriptTag}{$javaScriptPath}jquery.min.js{$endScriptTag}" : '';
-		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.js?version=' . $wgMobileResourceVersion . $endScriptTag : '';
+		$filePageScript = ( $this->data['isFilePage'] ) ? $startScriptTag . $javaScriptPath . 'filepage.' .
+			$resourceSuffix . 'js?version=' . $wgMobileResourceVersion . $endScriptTag : '';
 
 		$robots = isset( $this->data['robots'] ) ? "\n			{$this->data['robots']}" : '';
 
