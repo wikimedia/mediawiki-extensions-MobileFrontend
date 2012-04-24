@@ -7,7 +7,8 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 	-moz-box-shadow: 0px -5px 30px 0px #ddd;
 	-o-box-shadow: 0px -5px 30px 0px #ddd;
 	box-shadow: 0px -5px 30px 0px #ddd;
-	padding: 12px 20px; /* see .section padding + .content_block padding */
+	padding: 12px 20px; /* see .section padding + .content_block padding
+		also see @media all and (max-width: 320px) */
 	border-top: solid 1px #aaa;
 	line-height: 24px;
 	position: relative;
@@ -102,6 +103,10 @@ this is so that toggling can scroll it into view
 	margin-top: 0;
 }
 
+#footer .content_block {
+	font-size: 0.7em;
+}
+
 #footer .notice .terms {
 	float: left;
 }
@@ -147,7 +152,20 @@ this is so that toggling can scroll it into view
 	display: none;
 }
 
+@media all and (max-width: 320px) {
+	#footer {
+		padding: 12px 10px;
+	}
+	#content_wrapper {
+		margin: 22px 12px;
+	}
+}
+
 @media all and (min-width: 330px) {
+	#footer .content_block {
+		font-size: 0.9em;
+	}
+
 	#footer .links li {
 		font-size: 1.1em;
 	}
