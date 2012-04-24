@@ -50,6 +50,9 @@ if( typeof jQuery !== 'undefined' ) {
 			}
 			el.ontouchstart = cancelBubble;
 			close = function() {
+				if( !$("#mf-references").is(":visible") ) {
+					return;
+				}
 				var top;
 				lastLink = null;
 				if( options.animation === 'none' ) {
