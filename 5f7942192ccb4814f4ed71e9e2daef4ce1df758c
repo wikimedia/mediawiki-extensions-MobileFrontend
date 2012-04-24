@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJ3///5g\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-04-24T17:46:06Z",
+      "side": 1,
+      "message": "This is... OK but feels hackish. Since everything else in wgMFConfigProperties gets handled in extMobileFrontend (and minifyJS no longer will since it is now no longer a property), this is inconsistent and will potentially bite a new mobile developer in the ass. I think it would be better to leave minifyJS as an object property of extMobileFrontend and access it the same way you do below with isBetaGroupMember",
+      "revId": "5f7942192ccb4814f4ed71e9e2daef4ce1df758c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJ3///5c\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-04-24T17:46:06Z",
+      "side": 1,
+      "message": "Minor stylistic point - why not use HEREDOC syntax (http://us3.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc) instead of breaking up the \u003c?php\u003e tags? I think this would be a lot easier to follow, plus making changes in the future would likely be easier.",
+      "revId": "5f7942192ccb4814f4ed71e9e2daef4ce1df758c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

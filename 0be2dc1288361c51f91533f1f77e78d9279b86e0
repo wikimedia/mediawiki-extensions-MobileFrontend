@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJ3///5k\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-04-24T17:46:06Z",
+      "side": 0,
+      "message": "You forgot to update the qqq message key to match this change",
+      "revId": "0be2dc1288361c51f91533f1f77e78d9279b86e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
