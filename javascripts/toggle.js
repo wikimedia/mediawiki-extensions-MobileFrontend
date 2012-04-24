@@ -2,14 +2,56 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.toggle = (function() {
 	var u = MobileFrontend.utils,
+		mobileTokenCookieName = 'mobiletoken',
 		showLabel = MobileFrontend.message( 'expand-section' ),
 		hideLabel = MobileFrontend.message( 'collapse-section' );
 
+	function saveMobileToken( mobileToken ) {
+		var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' );
+		var mobileTokenCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
+		MobileFrontend.banner.writeCookie( mobileTokenCookieName, mobileToken, 1, cookiePath, mobileTokenCookieDomain );
+	}
+
+	function readMobileToken() {
+		var mobileToken = MobileFrontend.banner.readCookie( mobileTokenCookieName );
+		return mobileToken;
+	}
+
+	function updateMobileToken( responseXml ) {
+		var mobileviewElements = responseXml.getElementsByTagName( 'mobileview' );
+		if ( mobileviewElements[0] ) {
+			var mobileToken = mobileviewElements[0].getAttribute( 'mobiletoken' );
+		}
+		var imagetoggle = document.getElementById( 'imagetoggle' );
+		if ( mobileToken && imagetoggle.href ) {
+			imagetoggle.href = addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken );
+			saveMobileToken( mobileToken );
+		}
+	}
+
+	function addCSRFToken( link, name, value ) {
+		return u.updateQueryStringParameter( link, name, value );
+	}
+
 	function init() {
-		var i, a, heading, h2, btns = [], buttons,
+		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php', mobileToken, imagetoggle,
 			sectionHeadings = [];
 
 		h2 = document.getElementsByTagName( 'H2' );
+		mobileToken = readMobileToken();
+		if ( !mobileToken ) {
+			apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
+			url = apiUrl + '?action=mobileview&page=mobiletoken&override=1&format=xml';
+			u.ajax( { url: url,
+				success: function(xml) {
+					updateMobileToken( xml );
+				}
+				} );
+		} else {
+			imagetoggle = document.getElementById( 'imagetoggle' );
+			imagetoggle.href = addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken );
+		}
+
 		for( i = 0; i < h2.length; i++) {
 			heading = h2[i];
 			if( u( heading ).hasClass( 'section_heading') ) {

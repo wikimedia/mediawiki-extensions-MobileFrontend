@@ -319,9 +319,6 @@ class ExtMobileFrontend extends ContextSource {
 			self::$isBetaGroupMember = true;
 		}
 
-		$userAgent = $_SERVER['HTTP_USER_AGENT'];
-		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
-
 		$this->disableImages = $request->getCookie( 'disableImages' );
 		self::$displayNoticeId = $request->getText( 'noticeid', '' );
 
@@ -330,15 +327,7 @@ class ExtMobileFrontend extends ContextSource {
 		self::$search = $request->getText( 'search' );
 		self::$searchField = $request->getText( 'search', '' );
 
-		$detector = new DeviceDetection();
-
-		if ( $xDevice ) {
-			$formatName = $xDevice;
-		} else {
-			$formatName = $detector->detectFormatName( $userAgent, $acceptHeader );
-		}
-
-		$this->device = $detector->getDevice( $formatName );
+		$this->device = $this->getDevice();
 		$this->checkUserStatus();
 		$this->setDefaultLogo();
 
@@ -896,6 +885,7 @@ class ExtMobileFrontend extends ContextSource {
 		} else {
 			$loginHtml = $logoutHtml = '';
 		}
+
 		$footerTemplate = new FooterTemplate();
 		$options = array(
 						'leaveFeedbackURL' => SpecialPage::getTitleFor( 'MobileFeedback' )
@@ -987,10 +977,26 @@ class ExtMobileFrontend extends ContextSource {
 		return $applicationTemplate;
 	}
 
+	public function getDevice() {
+		if ( !$this->device ) {
+			$xDevice = $this->getXDevice();
+			$detector = new DeviceDetection();
+			if ( $xDevice ) {
+				$formatName = $xDevice;
+			} else {
+				$userAgent = $_SERVER['HTTP_USER_AGENT'];
+				$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
+				$formatName = $detector->detectFormatName( $userAgent, $acceptHeader );
+			}
+			$this->device = $detector->getDevice( $formatName );
+		}
+		return $this->device;
+	}
+
 	public function buildLanguageSelection() {
 		global $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
-		$supportedLanguages = null;
+		$supportedLanguages = array();
 		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['supported_languages'] ) ) {
 			$supportedLanguages = $this->hookOptions['supported_languages'];
 		}
@@ -999,7 +1005,7 @@ class ExtMobileFrontend extends ContextSource {
 		foreach ( $this->getLanguageUrls() as $languageUrl ) {
 			$languageUrlHref = $languageUrl['href'];
 			$languageUrlLanguage = $languageUrl['language'];
-			if ( in_array( $languageUrl['lang'], $supportedLanguages ) ) {
+			if ( $supportedLanguages && isset( $languageUrl['lang'] ) && in_array( $languageUrl['lang'], $supportedLanguages ) ) {
 				if ( isset( $this->hookOptions['toggle_view_desktop'] ) ) {
 					$request = $this->getRequest();
 					$returnto = $request->appendQuery( $this->hookOptions['toggle_view_desktop'] );

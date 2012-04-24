@@ -55,7 +55,7 @@ class FooterTemplate extends MobileFrontendTemplate {
 		$normalFooter = <<<HTML
 			<div class='nav' id='footmenu'>
 				<div class='mwm-notice'>
-				  <a href="{$viewNormalSiteURL}" id="mf-display-toggle">{$regularSite}</a> | <a href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
+				  <a href="{$viewNormalSiteURL}" id="mf-display-toggle">{$regularSite}</a> | <a id="imagetoggle" href="{$imagesURL}">{$imagesToggle}</a> {$feedbackLink} {$logoutLink}
 				</div>
 				<!-- List item to mimic desktop site environment where copyright appears in list (see bug 30406) -->
 				<ul id='copyright'><li>{$copyright}</li></ul>
@@ -91,7 +91,7 @@ HTML;
 				{$mobileSiteLabel}</span>
 				</li>
 				<li>
-				<span class="left">{$termsUsage}</span><span class="right">{$imagesToggleLabelPrefix} {$imagesPrefix}<a href="{$imagesURL}#section_footer">{$imagesToggle}</a>{$imagesSuffix}</span>
+				<span class="left">{$termsUsage}</span><span class="right">{$imagesToggleLabelPrefix} {$imagesPrefix}<a id="imagetoggle" href="{$imagesURL}#section_footer">{$imagesToggle}</a>{$imagesSuffix}</span>
 				</li>
 				<li class="notice">
 				{$license}

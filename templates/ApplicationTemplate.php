@@ -104,8 +104,8 @@ HTML;
 			{$this->data['footerHtml']}
 			<!--[if gt IE 9]><!-->
 			{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js{$endScriptTag}
-			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js{$endScriptTag}
+			{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js{$endScriptTag}
 			{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js{$endScriptTag}
 			{$betajs}
 			{$filePageScript}
