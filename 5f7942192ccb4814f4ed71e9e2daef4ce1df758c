@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAJ3///4E\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-04-24T18:03:16Z",
+      "side": 1,
+      "message": "Sure but at least it is predictable behavior, whereas this is a one-off that will bite someone in the ass in the future. If you really want to do it this way, I suggest making minifyJS a separate configuration variable.",
+      "parentUuid": "AAAAJ3///4o\u003d",
+      "revId": "5f7942192ccb4814f4ed71e9e2daef4ce1df758c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAJ3///5c\u003d",
         "filename": "skins/SkinMobile.php",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "That\u0027s what MW skins do - they have no funstions to retrieve $data, just output its content.",
       "parentUuid": "AAAAJ3///5c\u003d",
+      "revId": "5f7942192ccb4814f4ed71e9e2daef4ce1df758c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJ3///38\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-04-24T18:03:16Z",
+      "side": 1,
+      "message": "This syntax is incredibly difficult to read, which makes review more difficult and increases the likelihood of making a mistake. I know you can\u0027t make function calls in HEREDOC, but this would be much cleaner with local variables populated from the function calls + HTML in HEREDOC.",
+      "parentUuid": "AAAAJ3///4k\u003d",
       "revId": "5f7942192ccb4814f4ed71e9e2daef4ce1df758c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
