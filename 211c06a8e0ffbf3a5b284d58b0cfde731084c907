@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJ3///xQ\u003d",
+        "filename": "MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1003,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2012-04-24T20:52:54Z",
+      "side": 1,
+      "message": "Instead of using if ( !empty( $supportedLanguages ) \u0026\u0026 ...   you should use if ( $supportedLanguages \u0026\u0026 ....\n\nThe former suppresses any error or notice that might be thrown if there\u0027s a typo in the variable name, which is why we generally recommend against using empty()",
+      "revId": "211c06a8e0ffbf3a5b284d58b0cfde731084c907",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
