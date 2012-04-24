@@ -63,6 +63,7 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	transition: max-height 0.4s ease-in-out;
 	margin-top: 14px;
 	border-bottom: solid 1px #E2E3E4;
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /* fix for Bug 36196 */
 }
 
 .togglingEnabled #footer .content_block,
@@ -76,6 +77,7 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 
 .togglingEnabled .openSection.content_block {
 	max-height: 9999px;  /* note this expects to be overriden in toggle.js */
+	-webkit-tap-highlight-color: normal; /* fix for Bug 36196 */
 }
 
 .togglingEnabled content_block.togglefix {
