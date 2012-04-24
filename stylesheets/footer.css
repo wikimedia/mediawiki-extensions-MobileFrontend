@@ -122,8 +122,11 @@ this is so that toggling can scroll it into view
 #footer .links li {
 	display: block;
 	width: 25%;
-	font-size: 1.1em;
+	font-size: 0.9em;
 	float: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 #footer .links:after {
@@ -142,6 +145,12 @@ this is so that toggling can scroll it into view
 #footer .less,
 #footer .openSection .more {
 	display: none;
+}
+
+@media all and (min-width: 330px) {
+	#footer .links li {
+		font-size: 1.1em;
+	}
 }
 
 @media all and (min-width: 500px) {
