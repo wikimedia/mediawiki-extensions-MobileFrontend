@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJ3///mI\u003d",
+        "filename": "api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-25T16:17:38Z",
+      "side": 1,
+      "message": "Now you can use action\u003dtokens for that.",
+      "revId": "b29575a116d5e896d4ed6c2defe68db536963c46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJ3///mE\u003d",
+        "filename": "javascripts/toggle.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-25T16:17:38Z",
+      "side": 1,
+      "message": "Will not work on non-WMF wikis that use .php5 extension.",
+      "revId": "b29575a116d5e896d4ed6c2defe68db536963c46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
