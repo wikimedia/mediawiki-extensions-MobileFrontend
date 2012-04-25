@@ -70,7 +70,7 @@ $messages['en'] = array (
 	'mobile-frontend-about-link-text' => 'About',
 	'mobile-frontend-footer-more' => 'more',
 	'mobile-frontend-footer-less' => 'less',
-	'mobile-frontend-footer-sitename' => 'Wikipedia',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Content available under <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Terms of Use</a>',
 	'mobile-frontend-footer-contact' => 'Contact',
