@@ -31,7 +31,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$linkTarget = wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain();
 		$leaveFeedbackText = wfMsgExt( 'mobile-frontend-leave-feedback-notice',
 			array( 'replaceafter' ),
-			Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getFullURL(), 'target' => '_blank' ),
+			Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getLocalURL(), 'target' => '_blank' ),
 			$linkText )
 		);
 		return array(
@@ -74,6 +74,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 	}
 
 	public function postFeedback( $form ) {
+		global $wgExtMobileFrontend;
 		wfProfileIn( __METHOD__ );
 
 		$subject = $form['subject']
@@ -98,7 +99,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		}
 
 		$location = $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) );
-		$this->getRequest()->response()->header( 'Location: ' . $location );
+		$this->getRequest()->response()->header( 'Location: ' . $wgExtMobileFrontend->getMobileUrl( $location ) );
 		wfProfileOut( __METHOD__ );
 		exit;
 	}
