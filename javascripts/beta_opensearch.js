@@ -190,6 +190,10 @@ MobileFrontend.opensearch = (function() {
 		if( document.activeElement && document.activeElement.id === 'search' ) {
 			onfocus();
 		}
+		function hideKeyboard() {
+			document.getElementById( 'search' ).blur();
+		}
+		document.getElementById( 'results' ).ontouchstart = hideKeyboard;
 	}
 	init();
 	initClearSearch();
