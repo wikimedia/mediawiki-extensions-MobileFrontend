@@ -644,8 +644,8 @@ $messages['bg'] = array(
 	'mobile-frontend-opt-in-no-button' => 'Не',
 	'mobile-frontend-opt-out-yes-button' => 'Да',
 	'mobile-frontend-opt-out-no-button' => 'Не',
-	'mobile-frontend-disable-images' => 'Забраняване изображенията по сайта',
-	'mobile-frontend-enable-images' => 'Разрешаване изображенията по сайта',
+	'mobile-frontend-disable-images' => 'Спиране на изображенията по сайта',
+	'mobile-frontend-enable-images' => 'Пускане на изображенията по сайта',
 	'mobile-frontend-enable-images-prefix' => 'Изображения',
 	'mobile-frontend-off' => 'ИЗКЛ.',
 	'mobile-frontend-on' => 'ВКЛ.',
@@ -4992,7 +4992,7 @@ $messages['ta'] = array(
 	'mobile-frontend-about-link-text' => 'விவரம்',
 	'mobile-frontend-footer-more' => 'மேலும்',
 	'mobile-frontend-footer-less' => 'குறைவாக',
-	'mobile-frontend-footer-sitename' => 'தளத்தின் பெயர்',
+	'mobile-frontend-footer-sitename' => 'விக்கிப்பீடியா',
 	'mobile-frontend-footer-contact' => 'தொடர்புக்கு',
 );
 
