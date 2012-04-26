@@ -2,13 +2,14 @@
 
 class ExtMobileFrontend extends ContextSource {
 
-	private $contentFormat = '';
 
-	public static $format;
 	public $isBetaGroupMember = true;
-	public static $wsLoginToken = '';
-	public static $wsLoginFormAction = '';
-	public static $useFormatCookieName;
+
+	protected $contentFormat = '';
+	protected $format;
+	protected $wsLoginToken = '';
+	protected $wsLoginFormAction = '';
+	protected $useFormatCookieName;
 
 	protected $disableImages;
 	protected $useFormat;
@@ -331,7 +332,7 @@ class ExtMobileFrontend extends ContextSource {
 
 		$this->disableImages = $request->getCookie( 'disableImages' );
 
-		self::$format = $request->getText( 'format' );
+		$this->format = $request->getText( 'format' );
 		$this->wmlContext->setRequestedSegment( $request->getInt( 'seg', 0 ) );
 
 		$this->checkUserStatus();
@@ -343,7 +344,7 @@ class ExtMobileFrontend extends ContextSource {
 		$this->checkUserLoggedIn();
 
 		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			self::$wsLoginToken = $request->getSessionData( 'wsLoginToken' );
+			$this->wsLoginToken = $request->getSessionData( 'wsLoginToken' );
 			$q = array( 'action' => 'submitlogin', 'type' => 'login' );
 			$returnToVal = $request->getVal( 'returnto' );
 
@@ -351,7 +352,7 @@ class ExtMobileFrontend extends ContextSource {
 				$q['returnto'] = $returnToVal;
 			}
 
-			self::$wsLoginFormAction = $this->getTitle()->getLocalURL( $q );
+			$this->wsLoginFormAction = $this->getTitle()->getLocalURL( $q );
 		}
 
 		wfProfileOut( __METHOD__ );
@@ -540,7 +541,7 @@ class ExtMobileFrontend extends ContextSource {
 		$form = Html::openElement( 'form',
 					array( 'name' => 'userlogin',
 				   		   'method' => 'post',
-				   		   'action' => self::$wsLoginFormAction ) ) .
+				   		   'action' => $this->wsLoginFormAction ) ) .
 				Html::openElement( 'table',
 					array( 'class' => 'user-login' ) ) .
 				Html::openElement( 'tbody' ) .
@@ -591,7 +592,7 @@ class ExtMobileFrontend extends ContextSource {
 				Html::closeElement( 'tr' ) .
 				Html::closeElement( 'tbody' ) .
 				Html::closeElement( 'table' ) .
-				Html::input( 'wpLoginToken', self::$wsLoginToken, 'hidden' ) .
+				Html::input( 'wpLoginToken', $this->wsLoginToken, 'hidden' ) .
 				Html::closeElement( 'form' );
 		$dom = $this->getDom( $form );
 		$result = $dom->getElementsByTagName( 'form' )->item( 0 );
@@ -686,7 +687,7 @@ class ExtMobileFrontend extends ContextSource {
 		$contentHtml = $formatter->getText();
 		wfProfileOut( __METHOD__ . '-getText' );
 
-		if ( self::$format === 'json' ) {
+		if ( $this->format === 'json' ) {
 			wfProfileIn( __METHOD__ . '-json' );
 			header( 'Content-Type: application/javascript' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
@@ -1133,10 +1134,10 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	public function getUseFormatCookieName() {
-		if ( !isset( self::$useFormatCookieName ) ) {
-			self::$useFormatCookieName = 'mf_mobileFormat';
+		if ( !isset( $this->useFormatCookieName ) ) {
+			$this->useFormatCookieName = 'mf_mobileFormat';
 		}
-		return self::$useFormatCookieName;
+		return $this->useFormatCookieName;
 	}
 
 	/**
