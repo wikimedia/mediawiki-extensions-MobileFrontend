@@ -494,7 +494,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				  ?></a> | <?php $this->html( 'imagesToggle' ) ?>
 			</div><?php
 			// List item to mimic desktop site environment where copyright appears in list (see bug 30406) ?>
-			<ul id="copyright"><li><?php $this->text( 'copyright' ) ?></li></ul>
+			<ul id="copyright"><li><?php $this->html( 'copyright' ) ?></li></ul>
 		</div>
 <?php
 	}
