@@ -10,6 +10,7 @@ MobileFrontend.opensearch = (function() {
 		blankImg = MobileFrontend.setting('scriptPath') + '/extensions/MobileFrontend/stylesheets/images/blank.gif',
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
+		focusBlurTimeout,
 		u = MobileFrontend.utils;
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
@@ -36,7 +37,6 @@ MobileFrontend.opensearch = (function() {
 			focused = true;
 		}
 	}
-	u( search ).bind( 'focus', onfocus );
 
 	function removeResults() {
 		MobileFrontend.utils( document.body ).removeClass( 'full-screen-search' );
@@ -86,7 +86,23 @@ MobileFrontend.opensearch = (function() {
 			performSearch(ev); // for opera mini etc
 		}
 	}
-	u( search ).bind( 'blur', blurSearch );
+	// Certain symbian devices fire blur/focus events as you mouseover an element
+	// this can lead to lag where focus and blur handlers are continously called
+	// this function allows us to delay them
+	function waitForFocusBlur( ev, handler ) {
+		window.clearTimeout( focusBlurTimeout );
+		focusBlurTimeout = window.setTimeout(function() {
+			handler( ev );
+		}, 500);
+	}
+	u( search ).bind( 'focus',
+		function( ev ) {
+			waitForFocusBlur( ev, onfocus );
+		});
+	u( search ).bind( 'blur',
+		function( ev ) {
+			waitForFocusBlur( ev, blurSearch );
+		});
 
 	function searchApi( term ) {
 		u( search ).addClass( 'searching' );
