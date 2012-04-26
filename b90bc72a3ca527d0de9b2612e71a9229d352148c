@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJ3///IQ\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-26T23:35:12Z",
+      "side": 1,
+      "message": "Use sentence case",
+      "revId": "b90bc72a3ca527d0de9b2612e71a9229d352148c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJ3///IU\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-26T23:35:12Z",
+      "side": 1,
+      "message": "Aaaaa!",
+      "revId": "b90bc72a3ca527d0de9b2612e71a9229d352148c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJ3///IY\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-26T23:35:12Z",
+      "side": 1,
+      "message": "Why not in format \"message-key \u003d\u003e url\"?",
+      "revId": "b90bc72a3ca527d0de9b2612e71a9229d352148c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAJ3///H4\u003d",
+        "filename": "specials/SpecialMobileFeedback.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-26T23:35:12Z",
+      "side": 1,
+      "message": "This uses implicit conversion from Message to string.",
+      "revId": "b90bc72a3ca527d0de9b2612e71a9229d352148c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
