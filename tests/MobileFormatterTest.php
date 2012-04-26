@@ -32,7 +32,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 <img alt="" src="/foo.jpg" width="220" height="165" class="thumbimage"/></a><div class="thumbcaption">
 <div class="magnify"><a href="/wiki/File:Foo.jpg" class="internal" title="Enlarge"></div>
 Foobar!</div></div></div>',
-				'<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Foo.jpg" class="image"><img alt="" src="/foo.jpg" width="220" height="165" class="thumbimage"></img></a><div class="thumbcaption">Foobar!</div></div></div>',
+				'<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Foo.jpg" class="image"><img alt="" src="/foo.jpg" width="220" height="165" class="thumbimage"></a><div class="thumbcaption">Foobar!</div></div></div>',
 			),
 		);
 	}

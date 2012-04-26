@@ -10,6 +10,7 @@ class HtmlFormatter {
 	private $doc;
 
 	private $html;
+	private $htmlMode;
 	private $itemsToRemove = array();
 	private $elementsToFlatten = array();
 	private $removeImages = false;
@@ -22,9 +23,11 @@ class HtmlFormatter {
 	 * @param string $html: Text to process
 	 */
 	public function __construct( $html ) {
+		global $wgHtml5;
 		wfProfileIn( __METHOD__ );
 
 		$this->html = $html;
+		$this->htmlMode = $wgHtml5;
 
 		wfProfileOut( __METHOD__ );
 	}
@@ -62,6 +65,21 @@ class HtmlFormatter {
 			$this->doc->encoding = 'UTF-8';
 		}
 		return $this->doc;
+	}
+
+	/**
+	 * @return bool: Whether this class should output HTML
+	 */
+	public function isHtmlMode() {
+		return $this->htmlMode;
+	}
+
+	/**
+	 * Sets whether this class should output HTML
+	 * @param bool $value
+	 */
+	public function setHtmlMode( $value ) {
+		$this->htmlMode = $value;
 	}
 
 	/**
@@ -231,7 +249,14 @@ class HtmlFormatter {
 			if ( $element !== null && !( $element instanceof DOMElement ) ) {
 				$element = $this->doc->getElementById( $element );
 			}
-			$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+			if ( $this->htmlMode ) {
+				$html = $this->doc->saveHTML();
+			} else {
+				$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+			}
+			if ( wfIsWindows() ) {
+				$html = str_replace( '&#13;', '', $html );
+			}
 		} else {
 			$html = $this->html;
 		}
