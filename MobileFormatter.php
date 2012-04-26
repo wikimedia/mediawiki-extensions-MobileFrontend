@@ -69,6 +69,7 @@ class MobileFormatter extends HtmlFormatter {
 	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
 		parent::__construct( $html );
 
+		$this->setHtmlMode( true ); // Our current mobile skins always output HTML
 		$this->title = $title;
 		$this->format = $format;
 		if ( !$wmlContext && $format == 'WML' ) {
