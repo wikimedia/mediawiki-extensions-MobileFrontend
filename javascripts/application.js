@@ -65,7 +65,8 @@ MobileFrontend = (function() {
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
 		// when rotating to landscape stop page zooming on ios
-		function fixiOSBug() {
+		// allow disabling of transitions in android ics 4.0.2
+		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/
 			var viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' ),
 				ua = navigator.userAgent;
@@ -74,9 +75,11 @@ MobileFrontend = (function() {
 				document.addEventListener( 'gesturestart', function() {
 					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
 				}, false );
+			} else if( ua.match(/Android 4\.0\.2/) ){
+				utilities( document ).addClass( 'android4-0-2' );
 			}
 		}
-		fixiOSBug();
+		fixBrowserBugs();
 
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );

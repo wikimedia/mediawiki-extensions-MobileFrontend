@@ -80,7 +80,8 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	-webkit-tap-highlight-color: normal; /* fix for Bug 36196 */
 }
 
-.togglingEnabled .content_block.togglefix {
+.android4-0-2 .togglingEnabled .content_block, /* fix for bug 36190 */
+.togglingEnabled content_block.togglefix {
 	max-height: none;
 	-webkit-transition: none;
 	-moz-transition: none;
