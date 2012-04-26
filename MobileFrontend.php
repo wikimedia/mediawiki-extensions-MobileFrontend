@@ -159,6 +159,46 @@ function efMobileFrontend_Setup() {
 	$wgExtMobileFrontend->attachHooks();
 }
 
+// Unit tests
+$wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
+
+/**
+ * @param $files array
+ * @return bool
+ */
+function efExtMobileFrontendUnitTests( &$files ) {
+	$dir = dirname( __FILE__ ) . '/tests';
+	$files[] = "$dir/MobileFrontendTest.php";
+	$files[] = "$dir/DeviceDetectionTest.php";
+	$files[] = "$dir/HtmlFormatterTest.php";
+	$files[] = "$dir/MobileFormatterTest.php";
+	return true;
+}
+
+// ResourceLoader modules, so far CSS-only
+$wgResourceModules['ext.mobileFrontend'] = array(
+	'styles' => array( 'stylesheets/common.css', 'stylesheets/hacks.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+$wgResourceModules['ext.mobileFrontendBeta'] = array(
+	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/footer.css',
+		'stylesheets/contact-us.css', 'stylesheets/banner.css',
+		'stylesheets/header.css', 'stylesheets/sections.css',
+		'stylesheets/references.css', 'stylesheets/hacks.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+$wgResourceModules['ext.mobileFrontend.filePage'] = array(
+	'styles' => array( 'stylesheets/filepage.css' ),
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+
+/**
+ * Begin configuration variables
+ */
+
 /**
  * Make the classes, tags and ids stripped from page content configurable.
  * Each item will be stripped from the page.
@@ -179,43 +219,7 @@ $wgMFCustomLogos = array();
  */
 $wgMFMinifyJS = true;
 
-// Unit tests
-$wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
-
-/**
- * @param $files array
- * @return bool
- */
-function efExtMobileFrontendUnitTests( &$files ) {
-	$dir = dirname( __FILE__ ) . '/tests';
-	$files[] = "$dir/MobileFrontendTest.php";
-	$files[] = "$dir/DeviceDetectionTest.php";
-	$files[] = "$dir/HtmlFormatterTest.php";
-	$files[] = "$dir/MobileFormatterTest.php";
-	return true;
-}
-
 /**
  * Whether this extension should provide its extracts to OpenSearchXml extension
  */
 $wgMFExtendOpenSearchXml = false;
-
-// enable ResourceLoader for css
-$wgResourceModules['ext.mobileFrontend'] = array(
-	'styles' => array( 'stylesheets/common.css', 'stylesheets/hacks.css' ),
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
-);
-$wgResourceModules['ext.mobileFrontendBeta'] = array(
-	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/footer.css',
-	'stylesheets/contact-us.css', 'stylesheets/banner.css',
-	'stylesheets/header.css', 'stylesheets/sections.css',
-	'stylesheets/references.css', 'stylesheets/hacks.css' ),
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
-);
-$wgResourceModules['ext.mobileFrontend.filePage'] = array(
-	'styles' => array( 'stylesheets/filepage.css' ),
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
-);
