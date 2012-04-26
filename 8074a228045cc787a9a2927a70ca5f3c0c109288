@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJ3///Ig\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-04-26T23:25:31Z",
+      "side": 1,
+      "message": "Uh... set to true or set to false to allow? It looks like you\u0027d have to change it to false to remove the \u0027noindex\u0027.",
+      "revId": "8074a228045cc787a9a2927a70ca5f3c0c109288",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
