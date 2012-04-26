@@ -227,3 +227,9 @@ $wgMFMinifyJS = true;
  * Whether this extension should provide its extracts to OpenSearchXml extension
  */
 $wgMFExtendOpenSearchXml = false;
+
+/**
+ * Set to false to allow search engines to index your mobile pages. So far, Google seems
+ * to mix mobile and non-mobile pages in its search results, creating confusion.
+ */
+$wgMFNoindexPages = true;
