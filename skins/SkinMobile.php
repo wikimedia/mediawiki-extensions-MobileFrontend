@@ -1,83 +1,5 @@
 <?php
 
-abstract class SkinMobileBase extends SkinTemplate {
-	/**
-	 * @var ExtMobileFrontend
-	 */
-	protected $extMobileFrontend;
-	protected $hookOptions;
-
-	public static function factory( ExtMobileFrontend $extMobileFrontend ) {
-		if ( $extMobileFrontend->getContentFormat() == 'XHTML' ) {
-			$skinClass = 'SkinMobile';
-		} else {
-			$skinClass = 'SkinMobileWML';
-		}
-		return new $skinClass( $extMobileFrontend );
-	}
-
-	public function __construct( ExtMobileFrontend $extMobileFrontend ) {
-		$this->setContext( $extMobileFrontend );
-		$this->extMobileFrontend = $extMobileFrontend;
-	}
-
-	public function initPage( OutputPage $out ) {
-		wfProfileIn( __METHOD__ );
-		parent::initPage( $out );
-		wfProfileOut( __METHOD__ );
-	}
-
-	public function outputPage( OutputPage $out = null ) {
-		wfProfileIn( __METHOD__ );
-		$out = $this->getOutput();
-		$out->setRobotPolicy( 'noindex,nofollow' );
-
-		$options = null;
-		if ( wfRunHooks( 'BeforePageDisplayMobile', array( &$out, &$options ) ) ) {
-			if ( is_array( $options ) ) {
-				$this->hookOptions = $options;
-			}
-		}
-		$html = $this->extMobileFrontend->DOMParse( $out );
-		if ( $html !== false ) {
-			wfProfileIn( __METHOD__  . '-tpl' );
-			$tpl = $this->prepareTemplate( $out );
-			$tpl->set( 'bodytext', $html );
-			$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
-			$tpl->set( 'notice', $this->extMobileFrontend->getNotice() );
-			$tpl->execute();
-			wfProfileOut( __METHOD__  . '-tpl' );
-		}
-		wfProfileOut( __METHOD__ );
-	}
-
-	protected function prepareTemplate( OutputPage $out ) {
-		wfProfileIn( __METHOD__ );
-		$this->setContext( $out );
-		$lang = $this->getLanguage();
-
-		$tpl = $this->setupTemplate( $this->template );
-		$tpl->setRef( 'skin', $this );
-		$tpl->set( 'code', $lang->getHtmlCode() );
-		$tpl->set( 'dir', $lang->getDir() );
-		$tpl->set( 'scriptUrl', wfScript() );
-
-		$url = $this->extMobileFrontend->getDesktopUrl( wfExpandUrl(
-			$this->getRequest()->appendQuery( 'mobileaction=toggle_view_desktop' )
-		) );
-		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['toggle_view_desktop'] ) ) {
-			$hookQuery = $this->hookOptions['toggle_view_desktop'];
-			$url = $this->getRequest()->appendQuery( $hookQuery ) . urlencode( $url );
-		}
-		$tpl->set( 'viewNormalSiteURL', $url );
-		$tpl->set( 'mainPageUrl', Title::newMainPage()->getLocalUrl() );
-		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
-		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
-
-		wfProfileOut( __METHOD__ );
-		return $tpl;
-	}
-}
 
 class SkinMobile extends SkinMobileBase {
 	public $skinname = 'SkinMobile';
@@ -86,7 +8,7 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgMobileResourceVersion,
-			$wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS;
+			   $wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -179,8 +101,8 @@ class SkinMobile extends SkinMobileBase {
 		);
 		if ( $frontend->isBetaGroupMember ) {
 			$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
-				Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
-				: ''
+					Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
+					: ''
 			);
 			$tpl->set( 'logInOut', $this->getLogInOutLink() );
 			if ( $frontend->imagesDisabled() ) {
@@ -250,12 +172,12 @@ class SkinMobile extends SkinMobileBase {
 			}
 			if ( $languageUrl['lang'] == $wgLanguageCode ) {
 				$output .=	Html::element( 'option',
-							array( 'value' => $languageUrlHref, 'selected' => 'selected' ),
-									$languageUrlLanguage );
+					array( 'value' => $languageUrlHref, 'selected' => 'selected' ),
+					$languageUrlLanguage );
 			} else {
 				$output .=	Html::element( 'option',
-							array( 'value' => $languageUrlHref ),
-									$languageUrlLanguage );
+					array( 'value' => $languageUrlHref ),
+					$languageUrlLanguage );
 			}
 		}
 		$output .= Html::closeElement( 'select' );
@@ -291,8 +213,8 @@ class SkinMobile extends SkinMobileBase {
 				$languageUrls[] = array(
 					'href' => $languageUrl,
 					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
-							? $wgContLang->getLanguageName( $nt->getInterwiki() )
-							: $l ),
+						? $wgContLang->getLanguageName( $nt->getInterwiki() )
+						: $l ),
 					'language' => $wgContLang->getLanguageName( $lang ),
 					'class' => $class,
 					'lang' => $lang,
@@ -353,36 +275,36 @@ class SkinMobileTemplate extends BaseTemplate {
 	public function execute() {
 		$this->prepareData();
 
-?><!doctype html>
-<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>">
-<head>
-	<title><?php $this->text( 'pagetitle' ) ?></title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<?php $this->html( 'robots' ) ?>
-	<?php $this->html( 'cssLinks' ) ?>
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
-	<?php $this->html( 'touchIcon' ) ?>
-	<?php $this->html( 'jQueryScript' ) ?>
-	<script type="text/javascript">
-	var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
-	</script>
-</head>
-<body class="mobile">
-	<?php $this->html( 'zeroRatedBanner' ) ?>
-	<?php $this->searchBox() ?>
+		?><!doctype html>
+	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>">
+	<head>
+		<title><?php $this->text( 'pagetitle' ) ?></title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<?php $this->html( 'robots' ) ?>
+		<?php $this->html( 'cssLinks' ) ?>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		<?php $this->html( 'touchIcon' ) ?>
+		<?php $this->html( 'jQueryScript' ) ?>
+		<script type="text/javascript">
+			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
+		</script>
+	</head>
+	<body class="mobile">
+		<?php $this->html( 'zeroRatedBanner' ) ?>
+		<?php $this->searchBox() ?>
 	<div class='show' id='content_wrapper'>
-	<?php $this->html( 'notice' ) ?>
-	<div id="content">
-	<?php $this->html( 'firstHeading' ) ?>
-	<?php $this->html( 'bodytext' ) ?>
+		<?php $this->html( 'notice' ) ?>
+		<div id="content">
+			<?php $this->html( 'firstHeading' ) ?>
+			<?php $this->html( 'bodytext' ) ?>
+		</div>
 	</div>
-	</div>
-	<?php $this->footer() ?>
+		<?php $this->footer() ?>
 	<!--[if gt IE 9]><!-->
-	<?php $this->html( 'bottomScripts' ) ?>
+		<?php $this->html( 'bottomScripts' ) ?>
 	<!--[endif]-->
-</body>
-</html><?php
+	</body>
+	</html><?php
 	}
 
 	public function prepareData() {
@@ -403,7 +325,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'expand-section' => wfMsg( 'mobile-frontend-show-button' ),
 				'collapse-section' => wfMsg( 'mobile-frontend-hide-button' ),
 				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ), //@todo: use a separate message
-				),
+			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
@@ -435,13 +357,13 @@ class SkinMobileTemplate extends BaseTemplate {
 		if ( $this->data['hideSearchBox'] ) {
 			return;
 		}
-?>
+		?>
 	<div id="header">
 		<div id="searchbox">
 			<?php if ( !$this->data['hideLogo'] ) { ?><img width="35" height="22" alt="Logo" id="logo" src="<?php
 			$this->text( 'wgMobileFrontendLogo' ) ?>" />
-		<?php } ?><form id="searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
-		 	<input type="hidden" value="Special:Search" name="title" />
+			<?php } ?><form id="searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
+			<input type="hidden" value="Special:Search" name="title" />
 			<div id="sq" class="divclearable">
 				<input type="search" name="search" id="search" size="22" value="<?php $this->text( 'searchField' )
 					?>" autocomplete="off" maxlength="1024" class="search" placeholder="<?php $this->msg( 'mobile-frontend-placeholder' ) ?>" />
@@ -449,9 +371,9 @@ class SkinMobileTemplate extends BaseTemplate {
 					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="clearsearch" title="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>"/>
 			</div>
-		 	<button id='goButton' class='goButton' type='submit'>
-				 <img src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif" alt="<?php
-				$this->msg( 'mobile-frontend-search-submit' ) ?>" title="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
+			<button id='goButton' class='goButton' type='submit'>
+				<img src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif" alt="<?php
+					$this->msg( 'mobile-frontend-search-submit' ) ?>" title="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</button>
 		</form>
 		</div>
@@ -460,11 +382,11 @@ class SkinMobileTemplate extends BaseTemplate {
 			<b><?php $this->msg( 'mobile-frontend-language' ) ?></b><br/><?php $this->html( 'languageSelection' ) ?><br/>
 			<a href="<?php $this->text( 'mainPageUrl' ) ?>" id="homeButton" class="button"><?php $this->msg( 'mobile-frontend-home-button' ) ?></a>
 			<a href="<?php $this->text( 'randomPageUrl' ) ?>" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a>
-	 	</div><?php }
+		</div><?php }
 		?>
 	</div>
 	<div id="results"></div>
-<?php
+	<?php
 	}
 
 	private function footer() {
@@ -473,101 +395,66 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 
 		?>
-		<div id="footer">
-			<?php
-			if ( $this->data['isBetaGroupMember'] ) {
-				$this->betaFooter();
-			} else {
-				$this->normalFooter();
-			}
-			?>
-		</div>
+	<div id="footer">
+		<?php
+		if ( $this->data['isBetaGroupMember'] ) {
+			$this->betaFooter();
+		} else {
+			$this->normalFooter();
+		}
+		?>
+	</div>
 
-<?php
+	<?php
 	}
 
 	private function normalFooter() {
 		?>
-		<div class="nav" id="footmenu">
-			<div class="mwm-notice">
-			  <a href="<?php $this->text( 'viewNormalSiteURL' ) ?>" id="mf-display-toggle"><?php $this->msg( 'mobile-frontend-regular-site' )
-				  ?></a> | <?php $this->html( 'imagesToggle' ) ?>
-			</div><?php
-			// List item to mimic desktop site environment where copyright appears in list (see bug 30406) ?>
-			<ul id="copyright"><li><?php $this->html( 'copyright' ) ?></li></ul>
-		</div>
-<?php
+	<div class="nav" id="footmenu">
+		<div class="mwm-notice">
+			<a href="<?php $this->text( 'viewNormalSiteURL' ) ?>" id="mf-display-toggle"><?php $this->msg( 'mobile-frontend-regular-site' )
+				?></a> | <?php $this->html( 'imagesToggle' ) ?>
+		</div><?php
+		// List item to mimic desktop site environment where copyright appears in list (see bug 30406) ?>
+		<ul id="copyright"><li><?php $this->html( 'copyright' ) ?></li></ul>
+	</div>
+	<?php
 	}
 
 	private function betaFooter() {
 		// @todo: make license icon and text dynamic
 		?>
-		<h2 class="section_heading" id="section_footer">
+	<h2 class="section_heading" id="section_footer">
 		<?php $this->html( 'license' ) ?>
 		<span class="toggleCopyright">
 			<span class="more"><?php $this->msg( 'mobile-frontend-footer-more' ) ?></span><span class="less"><?php
-				$this->msg( 'mobile-frontend-footer-less' ) ?></span>
+			$this->msg( 'mobile-frontend-footer-less' ) ?></span>
 		</span>
-		</h2>
-		<div class="content_block" id="content_footer">
-			<ul class="settings">
-				<li>
+	</h2>
+	<div class="content_block" id="content_footer">
+		<ul class="settings">
+			<li>
 				<span class="left separator"><a href="<?php $this->text( 'viewNormalSiteURL' ) ?>"><?php
 					$this->msg( 'mobile-frontend-view-desktop' ) ?></a></span><span class="right"><?php
-					$this->msg( 'mobile-frontend-view-mobile' ) ?></span>
-				</li>
-				<li>
-					<span class="left"><?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span><span class="right"><?php
-						$this->html( 'imagesToggle' ) ?></span>
-				</li>
-				<li class="notice">
+				$this->msg( 'mobile-frontend-view-mobile' ) ?></span>
+			</li>
+			<li>
+				<span class="left"><?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span><span class="right"><?php
+				$this->html( 'imagesToggle' ) ?></span>
+			</li>
+			<li class="notice">
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
-				</li>
-			</ul>
-			<ul class="links">
-				<li>
-					<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"><?php $this->msg( 'mobile-frontend-footer-contact' ) ?></a>
-				</li>
-				<li><?php $this->html( 'privacyLink' ) ?></li>
-				<li><?php $this->html( 'aboutLink' ) ?></li>
-				<li><?php $this->html( 'disclaimerLink' ) ?></li>
-			</ul>
-		</div>
-<?php
-	}
-}
-
-class SkinMobileWML extends SkinMobileBase {
-	public $skinname = 'SkinMobileWML';
-	public $stylename = 'SkinMobileWML';
-	public $template = 'SkinMobileTemplateWML';
-
-	protected function prepareTemplate( OutputPage $out ) {
-		$out->getRequest()->response()->header( 'Content-Type: text/vnd.wap.wml' );
-		return parent::prepareTemplate( $out );
-	}
-}
-
-class SkinMobileTemplateWML extends BaseTemplate {
-	public function execute() {
-		echo '<?xml version="1.0" encoding="utf-8" ?>';
-?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.3//EN"
-"http://www.wapforum.org/DTD/wml13.dtd">
-<wml xml:lang="<?php $this->text( 'code' ) ?>" dir="<?php $this->text( 'dir' ) ?>">
-<template>
-<do name="home" type="options" label="<?php $this->msg( 'mobile-frontend-home-button' ) ?>" >
-	<go href="<?php $this->text( 'mainPageUrl' ) ?>"/>
-</do>
-<do name="random" type="options" label="<?php $this->msg( 'mobile-frontend-random-button' ) ?>">
-	<go href="<?php $this->text( 'randomPageUrl' ) ?>"/>
-</do>
-</template>
-<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />
-	<do type="accept" label="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
-	<go href="<?php $this->text( 'scriptUrl' ) ?>?title=Special%3ASearch&amp;search=<?php $this->text( 'searchField' ) ?>"></go></do>
-</p>
-<?php $this->html( 'bodytext' ) ?>
-</wml>
-<?php
+			</li>
+		</ul>
+		<ul class="links">
+			<li>
+				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"><?php $this->msg( 'mobile-frontend-footer-contact' ) ?></a>
+			</li>
+			<li><?php $this->html( 'privacyLink' ) ?></li>
+			<li><?php $this->html( 'aboutLink' ) ?></li>
+			<li><?php $this->html( 'disclaimerLink' ) ?></li>
+		</ul>
+	</div>
+	<?php
 	}
 }

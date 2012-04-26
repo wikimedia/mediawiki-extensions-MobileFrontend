@@ -58,6 +58,10 @@ $autoloadClasses = array (
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
 
 	'SkinMobile' => 'skins/SkinMobile',
+	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
+	'SkinMobileBase' => 'skins/SkinMobileBase',
+	'SkinMobileWML' => 'skins/SkinMobileWML',
+	'SkinMobileTemplateWML' => 'skins/SkinMobileTemplateWML',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
