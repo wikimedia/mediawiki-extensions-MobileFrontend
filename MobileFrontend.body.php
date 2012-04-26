@@ -5,7 +5,7 @@ class ExtMobileFrontend extends ContextSource {
 	private $contentFormat = '';
 
 	public static $format;
-	public $isBetaGroupMember = false;
+	public $isBetaGroupMember = true;
 	public static $wsLoginToken = '';
 	public static $wsLoginFormAction = '';
 	public static $useFormatCookieName;
