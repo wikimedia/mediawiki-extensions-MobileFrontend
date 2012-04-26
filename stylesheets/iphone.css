@@ -11,10 +11,3 @@
 #search {
 	line-height: normal; /* placeholder displays incorrectly on iphones */
 }
-
-table {
-	/* provides momentum scrolling - note this is buggy in android devices
-	preventing scrolling altogether hence its presence here rather than
-	beta_common.css */
-	-webkit-overflow-scrolling: touch;
-}
