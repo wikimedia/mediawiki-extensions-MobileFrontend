@@ -143,6 +143,28 @@ $wgMFRemotePostFeedbackUsername;
 $wgMFRemotePostFeedbackPassword;
 $wgMFRemotePostFeedbackArticle;
 
+/**
+ * Configure the href links for the various links that appear on the
+ * MobileFrontend feedback form.
+ *
+ * These can be any value that you can use as an href value in <a href="">,
+ * eg "GeneralFeedback", "http://mysite.com/wiki/GeneralFeedback",
+ *   "mailto:someone@example.com"
+ *
+ * Leaving a value empty will default to a value of '#'
+ *
+ * Alternatively, you can invoke the 'MobileFrontendOverrideFeedbackLinks' hook
+ * rather than just set this var in your LocalSettings. This is really useful
+ * if you have more complicated/variable needs for setting up this configuration
+ * var that you might not want running on every single page load.
+ */
+$wgMFFeedbackLinks = array(
+	'General' => '', // General feedback
+	'ArticlePersonal' => '', // Regarding me, a person, or a company I work for
+	'ArticleFactual' => '', // Regarding a factual error
+	'ArticleOther' => '', // Regarding another problem
+);
+
 $wgExtMobileFrontend = null;
 
 /**

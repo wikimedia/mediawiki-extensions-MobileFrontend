@@ -9,7 +9,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		global $wgExtMobileFrontend;
 
 		$this->setHeaders();
-		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-special-title' ) );
+		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-special-title' )->escaped() );
 		$wgExtMobileFrontend->setForceMobileView( true );
 		$wgExtMobileFrontend->setContentTransformations( false );
 
@@ -22,21 +22,50 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 	}
 
 	protected function getFeedbackHtml() {
-		$feedbackArticlePersonalLink = $this->msg( 'mobile-frontend-leave-feedback-article-personal-link' );
-		$feedbackArticleFactualLink = $this->msg( 'mobile-frontend-leave-feedback-article-factual-link' );
-		$feedbackArticleOtherLink = $this->msg( 'mobile-frontend-leave-feedback-article-other-link' );
+		global $wgMFFeedbackLinks;
+		/** Section header text **/
+		$technicalProblemSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-technical-problem-section-header' )->escaped();
+		$generalSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-general-section-header' )->escaped();
+		$articleFeedbackSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-article-feedback-seciton-header' )->escaped();
 
+		wfRunHooks( 'MobileFrontendOverrideFeedbackLinks' );
+		/** Links **/
+		$allowedLinks = array(
+			'General',
+			'ArticlePersonal',
+			'ArticleFactual',
+			'ArticleOther',
+		);
+
+		// get configured link values
+		foreach ( $allowedLinks as $v ) {
+			if ( !isset( $wgMFFeedbackLinks[ $v ] ) || !strlen( trim( $wgMFFeedbackLinks[ $v ] ) ) ) {
+				$linkVal = '#';
+			} else {
+				$linkVal = $wgMFFeedbackLinks[ $v ];
+			}
+			$varName = 'feedback' . $v . 'Link';
+			$ { $varName } = $linkVal;
+		}
+
+		/** Link text **/
+		$feedbackGeneralLinkText = $this->msg( 'mobile-frontend-leave-feedback-general-link-text' )->escaped();
+		$feedbackArticlePersonalLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-personal-link-text' )->escaped();
+		$feedbackArticleFactualLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-factual-link-text' )->escaped();
+		$feedbackArticleOtherLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-other-link-text' )->escaped();
+
+		/** Fetch form HTML **/
 		$form = new HTMLFormMobile( $this->getForm(), $this );
 		$form->setDisplayFormat( 'raw' );
 		$form->setTitle( $this->getTitle() );
 		$form->setId( 'mf-feedback-form' );
-		$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
+		$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->escaped() );
 		$form->setSubmitCallback( array( $this, 'postFeedback' ) );
 		$form->setAction( $this->getRequest()->getRequestURL() . "#mf-feedback-form" );
 
 		$html = <<<HTML
 		<div class='feedback'>
-		<h2 class="section_heading" id="section_1">Technical Problem</h2>
+		<h2 class="section_heading" id="section_1">{$technicalProblemSectionHeader}</h2>
 		<div class="content_block" id="content_1">
 HTML;
 		$this->getOutput()->addHtml( $html );
@@ -44,17 +73,23 @@ HTML;
 
 		$html = <<<HTML
 		</div>
-		<h2 class="section_heading" id="section_3">Article Feedback</h2>
+		<h2 class="section_heading" id="section_2">{$generalSectionHeader}</h2>
+		<div class="content_block" id="content_2">
+			<ul>
+				<li><a href="{$feedbackGeneralLink}">{$feedbackGeneralLinkText}</a></li>
+			</ul>
+		</div>
+		<h2 class="section_heading" id="section_3">{$articleFeedbackSectionHeader}</h2>
 		<div class="content_block" id="content_3">
 			<ul>
 				<li>
-					<a href="{$feedbackArticlePersonalLink}">Regarding me, a person or a company I represent</a>
+					<a href="{$feedbackArticlePersonalLink}">{$feedbackArticlePersonalLinkText}</a>
 				</li>
 				<li>
-					<a href="{$feedbackArticleFactualLink}">Regarding a factual error</a>
+					<a href="{$feedbackArticleFactualLink}">{$feedbackArticleFactualLinkText}</a>
 				</li>
 				<li>
-					<a href="{$feedbackArticleOtherLink}">Regarding another problem</a>
+					<a href="{$feedbackArticleOtherLink}">{$feedbackArticleOtherLinkText}</a>
 				</li>
 			</ul>
 		</div>
@@ -65,6 +100,8 @@ HTML;
 	}
 
 	protected function getForm() {
+		$subjectPlaceholder = $this->msg( 'mobile-frontend-leave-feedback-form-subject-placeholder' )->escaped();
+		$messagePlaceholder = $this->msg( 'mobile-frontend-leave-feedback-form-message-placeholder' )->escaped();
 		return array(
 			'returnto' => array(
 				'type' => 'hiddendiv',
@@ -74,14 +111,14 @@ HTML;
 				'type' => 'textdiv',
 				'maxlength' => 60,
 				'validation-callback' => array( $this, 'validateSubject' ),
-				'placeholder' => 'Message subject',
+				'placeholder' => $subjectPlaceholder,
 			),
 			'message' => array(
 				'type' => 'textareadiv',
 				'rows' => 5,
 				'cols' => 60,
 				'validation-callback' => array( $this, 'validateMessage' ),
-				'placeholder' => 'Type your comment here',
+				'placeholder' => $messagePlaceholder,
 			),
 		);
 	}
@@ -159,14 +196,14 @@ HTML;
 
 	public function validateSubject( $textfield ) {
 		if ( mb_strlen( trim( $textfield ) ) < 4 ) {
-			return $this->msg( 'mobile-frontend-feedback-no-subject-field' );
+			return $this->msg( 'mobile-frontend-feedback-no-subject-field' )->text();
 		}
 		return true;
 	}
 
 	public function validateMessage( $textarea ) {
 		if ( mb_strlen( trim( $textarea ) ) < 20 ) {
-			return $this->msg( 'mobile-frontend-feedback-no-message' );
+			return $this->msg( 'mobile-frontend-feedback-no-message' )->text();
 		}
 		return true;
 	}
