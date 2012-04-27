@@ -57,6 +57,14 @@ class ExtMobileFrontend extends ContextSource {
 		$wgHooks['ResourceLoaderRegisterModules'][] = array( &$this, 'resourceLoaderRegisterModules' );
 	}
 
+	/**
+	 * RequestContextCreateSkin hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
+	 *
+	 * @param $context IContextSource
+	 * @param $skin Skin
+	 * @return bool
+	 */
 	public function requestContextCreateSkin( $context, &$skin ) {
 		// check whether or not the user has requested to toggle their view
 		$mobileAction = $this->getMobileAction();
@@ -91,6 +99,10 @@ class ExtMobileFrontend extends ContextSource {
 		}
 	}
 
+	/**
+	 * Gets the current device description
+	 * @return array
+	 */
 	public function getDevice() {
 		wfProfileIn( __METHOD__ );
 		if ( $this->device ) {
@@ -113,10 +125,16 @@ class ExtMobileFrontend extends ContextSource {
 		return $this->device;
 	}
 
+	/**
+	 * @return string
+	 */
 	public function getZeroRatedBanner() {
 		return $this->zeroRatedBanner;
 	}
 
+	/**
+	 * @return string
+	 */
 	public function getContentFormat() {
 		if ( $this->contentFormat ) {
 			return $this->contentFormat;
@@ -185,6 +203,9 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
+	 * TestCanonicalRedirect hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/TestCanonicalRedirect
+	 *
 	 * @param $request WebRequest
 	 * @param $title Title
 	 * @param $output OutputPage
@@ -235,6 +256,9 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
+	 * SkinTemplateOutputPageBeforeExec hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinTemplateOutputPageBeforeExec
+	 *
 	 * @param $obj Article
 	 * @param $tpl QuickTemplate
 	 * @return bool
@@ -276,7 +300,8 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * Invocation of BeforePageRedirect hook.
+	 * BeforePageRedirect hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageRedirect
 	 *
 	 * Ensures URLs are handled properly for select special pages.
 	 * @param $out OutputPage
@@ -736,6 +761,14 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * ResourceLoaderTestModules hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
+	 *
+	 * @param array $testModules
+	 * @param ResourceLoader $resourceLoader
+	 * @return bool
+	 */
 	public function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
 			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
@@ -1188,6 +1221,14 @@ class ExtMobileFrontend extends ContextSource {
 		return $expiry;
 	}
 
+	/**
+	 * GetCacheVaryCookies hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
+	 *
+	 * @param $out OutputPage
+	 * @param $cookies array
+	 * @return bool
+	 */
 	public function getCacheVaryCookies( $out, &$cookies ) {
 		$cookies[] = 'mf_useformat';
 		return true;
@@ -1259,7 +1300,8 @@ class ExtMobileFrontend extends ContextSource {
 	/**
 	 * ResourceLoaderRegisterModules hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
-	 * @param array $modules
+	 *
+	 * @param ResourceLoader $resourceLoader
 	 * @return bool
 	 */
 	public function resourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
