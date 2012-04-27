@@ -56,10 +56,8 @@ $autoloadClasses = array (
 	'FooterTemplate' => 'templates/FooterTemplate',
 	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
 	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
-	'LeaveFeedbackSuccessTemplate' => 'templates/LeaveFeedbackSuccessTemplate',
 
 	'SkinMobile' => 'skins/SkinMobile',
-
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
 	'SkinMobileBase' => 'skins/SkinMobileBase',
 	'SkinMobileWML' => 'skins/SkinMobileWML',
@@ -69,8 +67,6 @@ $autoloadClasses = array (
 foreach ( $autoloadClasses as $className => $classFilename ) {
 	$wgAutoloadClasses[$className] = "$cwd/$classFilename.php";
 }
-
-$wgSpecialPages['MobileFrontend'] = 'SpecialMobileFrontend';
 
 /**
  * Path to the logo used in the mobile view
