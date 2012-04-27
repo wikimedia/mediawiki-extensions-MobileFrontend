@@ -309,7 +309,7 @@ class ExtMobileFrontend extends ContextSource {
 	 * @param $out OutputPage
 	 * @return bool: Whether processing should be continued
 	 */
-	public function beforePageDisplayHTML( $out ) {
+	protected function beforePageDisplay( $out ) {
 		wfProfileIn( __METHOD__ );
 
 		$request = $this->getRequest();
@@ -357,6 +357,25 @@ class ExtMobileFrontend extends ContextSource {
 
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	/**
+	 * Special-case processing for pages
+	 * @param MobileFormatter $mf
+	 * @return string
+	 */
+	protected  function doSpecialCases( MobileFormatter $mf ) {
+		$result = '';
+		wfProfileIn( __METHOD__ );
+		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
+			$userlogin = $mf->getDoc()->getElementById( 'userloginForm' );
+
+			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
+				$result = $this->renderLogin();
+			}
+		}
+		wfProfileOut( __METHOD__ );
+		return $result;
 	}
 
 	public function setWmlContextFormat() {
@@ -534,70 +553,71 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * @return DomElement
+	 * @return string
 	 */
 	public function renderLogin() {
 		wfProfileIn( __METHOD__ );
-		$form = Html::openElement( 'form',
-					array( 'name' => 'userlogin',
-				   		   'method' => 'post',
-				   		   'action' => $this->wsLoginFormAction ) ) .
-				Html::openElement( 'table',
-					array( 'class' => 'user-login' ) ) .
-				Html::openElement( 'tbody' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-label' ) ) .
-				Html::element( 'label',
-		 			array( 'for' => 'wpName1' ), wfMsg( 'mobile-frontend-username' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td' ) .
-				Html::input( 'wpName', null, 'text',
-					array( 'class' => 'loginText',
-						   'id' => 'wpName1',
-						   'tabindex' => '1',
-						   'size' => '20',
-						   'required' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-label' ) ) .
-				Html::element( 'label',
-		 			array( 'for' => 'wpPassword1' ), wfMsg( 'mobile-frontend-password' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-input' ) ) .
-		 		Html::input( 'wpPassword', null, 'password',
-					array( 'class' => 'loginPassword',
-						   'id' => 'wpPassword1',
-						   'tabindex' => '2',
-						   'size' => '20' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::element( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-submit' ) ) .
-				Html::input( 'wpLoginAttempt', wfMsg( 'mobile-frontend-login' ), 'submit',
-					array( 'id' => 'wpLoginAttempt',
-						   'tabindex' => '3' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::closeElement( 'tbody' ) .
-				Html::closeElement( 'table' ) .
-				Html::input( 'wpLoginToken', $this->wsLoginToken, 'hidden' ) .
-				Html::closeElement( 'form' );
-		$dom = $this->getDom( $form );
-		$result = $dom->getElementsByTagName( 'form' )->item( 0 );
+		$form = Html::openElement( 'div', array( 'id' => 'userloginForm' ) ) .
+			Html::openElement( 'form',
+				array( 'name' => 'userlogin',
+					'method' => 'post',
+					'action' => $this->wsLoginFormAction ) ) .
+			Html::openElement( 'table',
+				array( 'class' => 'user-login' ) ) .
+			Html::openElement( 'tbody' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-label' ) ) .
+			Html::element( 'label',
+				array( 'for' => 'wpName1' ), wfMsg( 'mobile-frontend-username' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td' ) .
+			Html::input( 'wpName', null, 'text',
+				array( 'class' => 'loginText',
+					'id' => 'wpName1',
+					'tabindex' => '1',
+					'size' => '20',
+					'required' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-label' ) ) .
+			Html::element( 'label',
+				array( 'for' => 'wpPassword1' ), wfMsg( 'mobile-frontend-password' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-input' ) ) .
+			Html::input( 'wpPassword', null, 'password',
+				array( 'class' => 'loginPassword',
+					'id' => 'wpPassword1',
+					'tabindex' => '2',
+					'size' => '20' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::element( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-submit' ) ) .
+			Html::input( 'wpLoginAttempt', wfMsg( 'mobile-frontend-login' ), 'submit',
+				array( 'id' => 'wpLoginAttempt',
+					'tabindex' => '3' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::closeElement( 'tbody' ) .
+			Html::closeElement( 'table' ) .
+			Html::input( 'wpLoginToken', $this->wsLoginToken, 'hidden' ) .
+			Html::closeElement( 'form' ) .
+			Html::closeElement( 'div' );
+
 		wfProfileOut( __METHOD__ );
-		return $result;
+		return $form;
 	}
 
 	public function getDom( $html ) {
@@ -620,7 +640,7 @@ class ExtMobileFrontend extends ContextSource {
 	public function DOMParse( OutputPage $out ) {
 		wfProfileIn( __METHOD__ );
 
-		if ( !$this->beforePageDisplayHTML( $out ) ) {
+		if ( !$this->beforePageDisplay( $out ) ) {
 			return false;
 		}
 		$html = $out->getHTML();
@@ -644,18 +664,11 @@ class ExtMobileFrontend extends ContextSource {
 		}
 		wfProfileOut( __METHOD__ . '-zero' );
 
-		wfProfileIn( __METHOD__ . '-beta' );
-		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			$userlogin = $doc->getElementById( 'userloginForm' );
-
-			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
-				$firstHeading = $doc->getElementById( 'firstHeading' );
-				if ( $firstHeading ) {
-					$firstHeading->nodeValue = '';
-				}
-			}
+		$contentHtml = $this->doSpecialCases( $formatter );
+		if ( $contentHtml ) {
+			wfProfileOut( __METHOD__ );
+			return $contentHtml;
 		}
-		wfProfileOut( __METHOD__ . '-beta' );
 
 		if ( $this->contentTransformations ) {
 			wfProfileIn( __METHOD__ . '-filter' );
@@ -664,16 +677,6 @@ class ExtMobileFrontend extends ContextSource {
 			$formatter->filterContent();
 			wfProfileOut( __METHOD__ . '-filter' );
 		}
-
-		wfProfileIn( __METHOD__ . '-userlogin' );
-		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
-				$login = $this->renderLogin();
-				$loginNode = $doc->importNode( $login, true );
-				$userlogin->appendChild( $loginNode );
-			}
-		}
-		wfProfileOut( __METHOD__ . '-userlogin' );
 
 		wfProfileIn( __METHOD__ . '-getText' );
 		$formatter->setIsMainPage( $this->getTitle()->isMainPage() );
