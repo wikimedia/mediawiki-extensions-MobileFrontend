@@ -43,16 +43,30 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		$this->$func();
 	}
 
+	public static function getMobileToken() {
+		global $wgUser, $wgRequest;
+		$token = $wgRequest->getSessionData( 'wsMobileToken' );
+		if ( $token === null ) {
+			if ( $wgUser->isAnon() ) {
+				wfSetupSession();
+			}
+			$token = MWCryptRand::generateHex( 32 );
+			$wgRequest->setSessionData( 'wsMobileToken', $token );
+		}
+		return $token;
+	}
+
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
+		global $wgExtMobileFrontend;
 		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
 		$params = array();
 		if ( $returnTo ) {
 			$params['returnto'] = $returnTo->getPrefixedText();
 		}
 		if ( $fullUrl ) {
-			return $t->getFullURL( $params );
+			return $wgExtMobileFrontend->getMobileUrl( $t->getFullURL( $params ) );
 		} else {
-			return $t->getLocalURL($params );
+			return $t->getLocalURL( $params );
 		}
 	}
 
@@ -66,7 +80,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				. Html::openElement( 'form',
 					array(
 							'method' => 'POST',
-							'action' => $this->getTitle( $this->subpage )->getFullURL(),
+							'action' => $this->getTitle( $this->subpage )->getLocalURL(),
 						)
 					)
 				. Html::element( 'input',
@@ -87,7 +101,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				. Html::openElement( 'form',
 					array(
 							'method' => 'GET',
-							'action' => $this->returnToTitle->getFullURL(),
+							'action' => $this->returnToTitle->getLocalURL(),
 						)
 					)
 				. Html::element( 'button',
@@ -103,8 +117,12 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function doReturnTo() {
+		global $wgExtMobileFrontend;
+		$params = array();
+		$params['t'] = md5( time() ); // this is a hack to get around the 304 response and local browser cache
 		$this->getOutput()->sendCacheControl(); // cache should already be private
-		$this->getRequest()->response()->header( 'Location: ' . wfExpandUrl( $this->returnToTitle->getFullURL() ) );
+		$this->getRequest()->response()->header( 'Location: '
+			. $wgExtMobileFrontend->getMobileUrl( wfExpandUrl( $this->returnToTitle->getFullURL( $params ) ) ) );
 		exit;
 	}
 
@@ -140,8 +158,30 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		$this->doReturnTo();
 	}
 
+	private function checkMobileToken() {
+		global $wgExtMobileFrontend;
+		$qsMobileToken = $this->getRequest()->getVal( 'mobiletoken' );
+		if ( !$qsMobileToken ) {
+			$device = $wgExtMobileFrontend->getDevice();
+			if ( isset( $device['supports_javascript'] ) && $device['supports_javascript'] ) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		$mobileToken = self::getMobileToken();
+		if ( $mobileToken === $qsMobileToken ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	private function enableImages( $enable = true ) {
-		$this->getRequest()->response()->setcookie( 'disableImages', $enable ? '' : '1' );
+		if ( $this->checkMobileToken() ) {
+			$this->getRequest()->response()->setcookie( 'disableImages', $enable ? '' : '1' );
+		}
 		$this->doReturnTo();
 	}
 

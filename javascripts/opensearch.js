@@ -176,7 +176,10 @@ MobileFrontend.opensearch = (function() {
 	function init() {
 		var results = document.getElementById( 'results' );
 		results.onmousedown = whichElement;
-		document.body.onmousedown = whichElement;
+		u( search ).bind( 'blur', function( ev ) {
+			setTimeout( function() {
+				whichElement( ev );
+			}, 400 ) } );
 		document.body.ontouchstart = whichElement;
 		results.ontouchstart = whichElement;
 	}

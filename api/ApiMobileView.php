@@ -17,6 +17,16 @@ class ApiMobileView extends ApiBase {
 		// Enough '*' keys in JSON!!!
 		$textElement = $this->getMain()->getPrinter()->getFormat() == 'XML' ? '*' : 'text';
 		$params = $this->extractRequestParams();
+
+		if ( $params['page'] == 'mobiletoken' && $params['override'] == 1 ) {
+			$result = $this->getResult();
+			$result->addValue( null, $this->getModuleName(),
+				array( 'mobiletoken' => SpecialMobileOptions::getMobileToken() )
+			);
+			wfProfileOut( __METHOD__ );
+			return $result;
+		}
+
 		$requestedSections = isset( $params['sections'] )
 			? $this->parseSections( $params['sections'] )
 			: array();
@@ -153,6 +163,10 @@ class ApiMobileView extends ApiBase {
 
 	public function getAllowedParams() {
 		return array(
+			'override' => array(
+				1,
+				0,
+			),
 			'page' => array(
 				ApiBase::PARAM_REQUIRED => true,
 			),

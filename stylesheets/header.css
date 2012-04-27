@@ -55,10 +55,7 @@ a.search-result-item {
 
 .search_bar .search {
 	-webkit-appearance: none;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+	border: none;
 	outline: none;
 	padding: 0;
 	font-size: 1.2em;
@@ -274,7 +271,7 @@ full screen search css
 }
 
 #search {
-	line-height: 40px; /* prevent text jumping as you search */
+	line-height: normal;
 	background: none; /* remove fennec default background */
 }
 

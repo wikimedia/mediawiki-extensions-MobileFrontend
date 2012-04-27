@@ -230,7 +230,6 @@ ul#footer-info {
 table {
 	display: block;
 	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
 }
 
 table.toc h2 {

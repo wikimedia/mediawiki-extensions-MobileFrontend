@@ -60,8 +60,10 @@ $autoloadClasses = array (
 
 	'SkinMobile' => 'skins/SkinMobile',
 
-	// special pages
-	'SpecialMobileFrontend' => 'SpecialMobileFrontend',
+	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
+	'SkinMobileBase' => 'skins/SkinMobileBase',
+	'SkinMobileWML' => 'skins/SkinMobileWML',
+	'SkinMobileTemplateWML' => 'skins/SkinMobileTemplateWML',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
@@ -198,21 +200,6 @@ function efMobileFrontend_Setup() {
 	$wgExtMobileFrontend->attachHooks();
 }
 
-/**
- * Make the classes, tags and ids stripped from page content configurable.
- * Each item will be stripped from the page.
- * See $itemsToRemove for more information.
- */
-$wgMFRemovableClasses = array();
-
-/**
- * Make the logos configurable.
- * Key for site.
- * Key for logo.
- * Example: array('site' => 'mysite', 'logo' => 'mysite_logo.png');
- */
-$wgMFCustomLogos = array();
-
 // Unit tests
 $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
 
@@ -229,12 +216,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 	return true;
 }
 
-/**
- * Whether this extension should provide its extracts to OpenSearchXml extension
- */
-$wgMFExtendOpenSearchXml = false;
-
-// enable ResourceLoader for css
+// ResourceLoader modules, so far CSS-only
 $wgResourceModules['ext.mobileFrontend'] = array(
 	'styles' => array( 'stylesheets/common.css', 'stylesheets/hacks.css' ),
 	'localBasePath' => dirname( __FILE__ ),
@@ -242,9 +224,9 @@ $wgResourceModules['ext.mobileFrontend'] = array(
 );
 $wgResourceModules['ext.mobileFrontendBeta'] = array(
 	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/footer.css',
-	'stylesheets/contact-us.css', 'stylesheets/banner.css',
-	'stylesheets/header.css', 'stylesheets/sections.css',
-	'stylesheets/references.css', 'stylesheets/hacks.css' ),
+		'stylesheets/contact-us.css', 'stylesheets/banner.css',
+		'stylesheets/header.css', 'stylesheets/sections.css',
+		'stylesheets/references.css', 'stylesheets/hacks.css' ),
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );
@@ -253,3 +235,38 @@ $wgResourceModules['ext.mobileFrontend.filePage'] = array(
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );
+
+/**
+ * Begin configuration variables
+ */
+
+/**
+ * Make the classes, tags and ids stripped from page content configurable.
+ * Each item will be stripped from the page.
+ * See $itemsToRemove for more information.
+ */
+$wgMFRemovableClasses = array();
+
+/**
+ * Make the logos configurable.
+ * Key for site.
+ * Key for logo.
+ * Example: array('site' => 'mysite', 'logo' => 'mysite_logo.png');
+ */
+$wgMFCustomLogos = array();
+
+/**
+ * Set to false if you need to debug JavaScript.
+ */
+$wgMFMinifyJS = true;
+
+/**
+ * Whether this extension should provide its extracts to OpenSearchXml extension
+ */
+$wgMFExtendOpenSearchXml = false;
+
+/**
+ * Set to false to allow search engines to index your mobile pages. So far, Google seems
+ * to mix mobile and non-mobile pages in its search results, creating confusion.
+ */
+$wgMFNoindexPages = true;

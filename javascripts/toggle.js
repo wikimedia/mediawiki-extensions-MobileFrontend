@@ -1,13 +1,16 @@
 /*global MobileFrontend, document, window */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.toggle = (function() {
-	var u = MobileFrontend.utils;
+	var u = MobileFrontend.utils,
+		showLabel = MobileFrontend.message( 'expand-section' ),
+		hideLabel = MobileFrontend.message( 'collapse-section' );
 
 	function init() {
-		var i, a, heading, h2, btns = [], buttons,
+		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
 			sectionHeadings = [];
 
 		h2 = document.getElementsByTagName( 'H2' );
+
 		for( i = 0; i < h2.length; i++) {
 			heading = h2[i];
 			if( u( heading ).hasClass( 'section_heading') ) {
@@ -32,12 +35,9 @@ MobileFrontend.toggle = (function() {
 				wm_toggle_section( sectionName );
 			}
 		}
-		function createButton( visible ) {
-			var btn, label;
-			btn = document.createElement( 'button' );
-			label = document.createTextNode( MobileFrontend.message( visible ? 'expand-section' : 'collapse-section' ) );
-			btn.className = visible ? 'show' : 'hide';
-			btn.appendChild( label );
+		function createButton() {
+			var btn = document.createElement( 'button' );
+			u( btn ).text( showLabel );
 			return btn;
 		}
 		u( document.body ).addClass( 'togglingEnabled' );
@@ -45,8 +45,7 @@ MobileFrontend.toggle = (function() {
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
 			heading.removeAttribute( 'onclick' ); // TODO: remove any legacy onclick handlers
-			heading.insertBefore( createButton( true ), heading.firstChild );
-			heading.insertBefore( createButton( false ), heading.firstChild );
+			heading.insertBefore( createButton(), heading.firstChild );
 			u( heading ).bind( 'click', openSectionHandler );
 		}
 		
@@ -80,14 +79,18 @@ MobileFrontend.toggle = (function() {
 
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ), id,
-			bb = b.getElementsByTagName( 'button' ), i, s, e, closed, reset = [];
+			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
 		if( u( b ).hasClass( 'openSection' ) ) {
 			u( b ).removeClass( 'togglefix' );
 			u( b ).removeClass( 'openSection' );
+			u( bb ).removeClass( 'openSection' );
+			u( bb ).text( showLabel );
 			closed = true;
 		} else {
 			reset.push( b );
 			u( b ).addClass( 'openSection' );
+			u( bb ).addClass( 'openSection' );
+			u( bb ).text( hideLabel );
 		}
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
 			e = document.getElementById( d[i] + section_id );

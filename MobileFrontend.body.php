@@ -2,32 +2,24 @@
 
 class ExtMobileFrontend extends ContextSource {
 
-	public $contentFormat = '';
 
-	public static $randomPageUrl;
-	public static $format;
-	public static $search;
-	public static $searchField;
-	public static $viewNormalSiteURL;
-	public static $displayNoticeId;
-	public static $mobileRedirectFormAction;
-	public static $isBetaGroupMember = false;
-	public static $minifyJS = true;
-	public static $hideSearchBox = false;
-	public static $hideLogo = false;
-	public static $hideFooter = false;
-	public static $wsLoginToken = '';
-	public static $wsLoginFormAction = '';
-	public static $zeroRatedBanner;
-	public static $useFormatCookieName;
+	public $isBetaGroupMember = true;
+
+	protected $contentFormat = '';
+	protected $format;
+	protected $wsLoginToken = '';
+	protected $wsLoginFormAction = '';
+	protected $useFormatCookieName;
 
 	protected $disableImages;
 	protected $useFormat;
+	protected $zeroRatedBanner;
 
 	/**
 	 * @var string xDevice header information
 	 */
-	protected $xDevice;
+	private $xDevice;
+	private $device;
 
 	/**
 	 * @var string MediaWiki 'action'
@@ -46,7 +38,6 @@ class ExtMobileFrontend extends ContextSource {
 
 	private $forceMobileView = false;
 	private $contentTransformations = true;
-	private $device;
 
 	public function __construct( IContextSource $context ) {
 		global $wgMFConfigProperties;
@@ -66,6 +57,14 @@ class ExtMobileFrontend extends ContextSource {
 		$wgHooks['ResourceLoaderRegisterModules'][] = array( &$this, 'resourceLoaderRegisterModules' );
 	}
 
+	/**
+	 * RequestContextCreateSkin hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
+	 *
+	 * @param $context IContextSource
+	 * @param $skin Skin
+	 * @return bool
+	 */
 	public function requestContextCreateSkin( $context, &$skin ) {
 		// check whether or not the user has requested to toggle their view
 		$mobileAction = $this->getMobileAction();
@@ -79,7 +78,7 @@ class ExtMobileFrontend extends ContextSource {
 			return true;
 		}
 
-		$skin = new SkinMobile( $this );
+		$skin = SkinMobile::factory( $this );
 		return false;
 	}
 
@@ -101,12 +100,71 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
+	 * Gets the current device description
+	 * @return array
+	 */
+	public function getDevice() {
+		wfProfileIn( __METHOD__ );
+		if ( $this->device ) {
+			wfProfileOut( __METHOD__ );
+			return $this->device;
+		}
+		$detector = new DeviceDetection();
+
+		$xDevice = $this->getXDevice();
+		if ( $xDevice ) {
+			$formatName = $xDevice;
+		} else {
+			$userAgent = $_SERVER['HTTP_USER_AGENT'];
+			$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
+			$formatName = $detector->detectFormatName( $userAgent, $acceptHeader );
+		}
+		$this->device = $detector->getDevice( $formatName );
+
+		wfProfileOut( __METHOD__ );
+		return $this->device;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getZeroRatedBanner() {
+		return $this->zeroRatedBanner;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getContentFormat() {
+		if ( $this->contentFormat ) {
+			return $this->contentFormat;
+		}
+		// honor useformat=mobile-wap if it's set, otherwise determine by device
+		$device = $this->getDevice();
+		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : $device['view_format'];
+		$this->contentFormat = self::parseContentFormat( $viewFormat );
+		return $this->contentFormat;
+	}
+
+	public function imagesDisabled() {
+		return $this->disableImages;
+	}
+
+	/**
+	 * Returns notice to be displayed at the top of page
+	 * @return string
+	 */
+	public function getNotice() {
+		return ''; // no notices ATM
+	}
+
+	/**
 	 * Work out the site and language name from a database name
 	 * @param $site string
 	 * @param $lang string
 	 * @return string
 	 */
-	public function getSite( &$site, &$lang ) {
+	protected function getSite( &$site, &$lang ) {
 		global $wgConf;
 		wfProfileIn( __METHOD__ );
 		$dbr = wfGetDB( DB_SLAVE );
@@ -145,6 +203,9 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
+	 * TestCanonicalRedirect hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/TestCanonicalRedirect
+	 *
 	 * @param $request WebRequest
 	 * @param $title Title
 	 * @param $output OutputPage
@@ -195,12 +256,14 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
+	 * SkinTemplateOutputPageBeforeExec hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinTemplateOutputPageBeforeExec
+	 *
 	 * @param $obj Article
-	 * @param $tpl MobileFrontendTemplate
+	 * @param $tpl QuickTemplate
 	 * @return bool
 	 */
 	public function addMobileFooter( &$obj, &$tpl ) {
-		global $wgServer;
 		wfProfileIn( __METHOD__ );
 
 		$title = $obj->getTitle();
@@ -208,10 +271,14 @@ class ExtMobileFrontend extends ContextSource {
 
 		if ( ! $isSpecial ) {
 			$footerlinks = $tpl->data['footerlinks'];
-			$mobileViewUrl = $this->getRequest()->escapeAppendQuery( 'mobileaction=toggle_view_mobile' );
+			$mobileViewUrl = $this->getRequest()->appendQuery( 'mobileaction=toggle_view_mobile' );
 
-			$mobileViewUrl = $this->getMobileUrl( $wgServer . $mobileViewUrl );
-			$tpl->set( 'mobileview', "<a href='{$mobileViewUrl}' class='noprint'>" . wfMsg( 'mobile-frontend-view' ) . "</a>" );
+			$mobileViewUrl = $this->getMobileUrl( wfExpandUrl( $mobileViewUrl ) );
+			$link = Html::element( 'a',
+				array( 'href' => $mobileViewUrl, 'class' => 'noprint' ),
+				$this->msg( 'mobile-frontend-view' )->text()
+			);
+			$tpl->set( 'mobileview', $link );
 			$footerlinks['places'][] = 'mobileview';
 			$tpl->set( 'footerlinks', $footerlinks );
 		}
@@ -232,25 +299,9 @@ class ExtMobileFrontend extends ContextSource {
 		return $url;
 	}
 
-	public function getMsg() {
-		global $wgServer, $wgMobileRedirectFormAction;
-		wfProfileIn( __METHOD__ );
-
-		self::$viewNormalSiteURL = $this->getDesktopUrl( wfExpandUrl(
-			$this->getRequest()->escapeAppendQuery( 'mobileaction=toggle_view_desktop' ) )
-		);
-
-		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false )
-				? $wgMobileRedirectFormAction
-				: "{$wgServer}/w/mobileRedirect.php";
-
-		self::$randomPageUrl = SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl();
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
 	/**
-	 * Invocation of BeforePageRedirect hook.
+	 * BeforePageRedirect hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageRedirect
 	 *
 	 * Ensures URLs are handled properly for select special pages.
 	 * @param $out OutputPage
@@ -281,16 +332,12 @@ class ExtMobileFrontend extends ContextSource {
 
 	/**
 	 * @param $out OutputPage
-	 * @return bool
+	 * @return bool: Whether processing should be continued
 	 */
-	public function beforePageDisplayHTML( $out ) {
+	protected function beforePageDisplay( $out ) {
 		wfProfileIn( __METHOD__ );
 
-		if ( wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) ) ) {
-		}
-
 		$request = $this->getRequest();
-		$xDevice = $this->getXDevice();
 		$this->setWmlContextFormat();
 		$mobileAction = $this->getMobileAction();
 
@@ -301,48 +348,28 @@ class ExtMobileFrontend extends ContextSource {
 		if ( isset( $bcRedirects[$mobileAction] ) ) {
 			$location = SpecialMobileOptions::getUrl( $bcRedirects[$mobileAction], null, true );
 			$request->response()->header( 'Location: ' . wfExpandUrl( $location ) );
-			exit;
+			return false;
 		}
 
 		if ( $mobileAction == 'beta' ) {
-			self::$isBetaGroupMember = true;
+			$this->isBetaGroupMember = true;
 		}
-
-		$userAgent = $_SERVER['HTTP_USER_AGENT'];
-		$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
 
 		$this->disableImages = $request->getCookie( 'disableImages' );
-		self::$displayNoticeId = $request->getText( 'noticeid', '' );
 
-		self::$format = $request->getText( 'format' );
+		$this->format = $request->getText( 'format' );
 		$this->wmlContext->setRequestedSegment( $request->getInt( 'seg', 0 ) );
-		self::$search = $request->getText( 'search' );
-		self::$searchField = $request->getText( 'search', '' );
 
-		$detector = new DeviceDetection();
-
-		if ( $xDevice ) {
-			$formatName = $xDevice;
-		} else {
-			$formatName = $detector->detectFormatName( $userAgent, $acceptHeader );
-		}
-
-		$this->device = $detector->getDevice( $formatName );
 		$this->checkUserStatus();
 		$this->setDefaultLogo();
 
-		// honor useformat=mobile-wap if it's set, otherwise determine by device
-		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : $this->device['view_format'];
-		$this->contentFormat = self::parseContentFormat( $viewFormat );
-
-		$this->getMsg();
 		$this->disableCaching();
 		$this->sendXDeviceVaryHeader();
 		$this->sendApplicationVersionVaryHeader();
 		$this->checkUserLoggedIn();
 
 		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			self::$wsLoginToken = $request->getSessionData( 'wsLoginToken' );
+			$this->wsLoginToken = $request->getSessionData( 'wsLoginToken' );
 			$q = array( 'action' => 'submitlogin', 'type' => 'login' );
 			$returnToVal = $request->getVal( 'returnto' );
 
@@ -350,11 +377,30 @@ class ExtMobileFrontend extends ContextSource {
 				$q['returnto'] = $returnToVal;
 			}
 
-			self::$wsLoginFormAction = $this->getTitle()->getLocalURL( $q );
+			$this->wsLoginFormAction = $this->getTitle()->getLocalURL( $q );
 		}
 
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	/**
+	 * Special-case processing for pages
+	 * @param MobileFormatter $mf
+	 * @return string
+	 */
+	protected  function doSpecialCases( MobileFormatter $mf ) {
+		$result = '';
+		wfProfileIn( __METHOD__ );
+		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
+			$userlogin = $mf->getDoc()->getElementById( 'userloginForm' );
+
+			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
+				$result = $this->renderLogin();
+			}
+		}
+		wfProfileOut( __METHOD__ );
+		return $result;
 	}
 
 	public function setWmlContextFormat() {
@@ -406,34 +452,10 @@ class ExtMobileFrontend extends ContextSource {
 	private function checkUserStatus() {
 		wfProfileIn( __METHOD__ );
 
-		$hideSearchBox = $this->getRequest()->getInt( 'hidesearchbox' );
-
-		if ( $hideSearchBox === 1 ) {
-			self::$hideSearchBox = true;
-		}
-
-		$hideLogo = $this->getRequest()->getInt( 'hidelogo' );
-
-		if ( $hideLogo === 1 ) {
-			self::$hideLogo = true;
-		}
-
-		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) &&
-			strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Wikipedia Mobile' ) !== false ) {
-			self::$hideSearchBox = true;
-			if ( strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Android' ) !== false ) {
-				self::$hideLogo = true;
-			}
-		}
-
-		if ( self::$hideLogo == true ) {
-			self::$hideFooter = true;
-		}
-
 		$optInCookie = $this->getOptInOutCookie();
 		if ( !empty( $optInCookie ) &&
 			$optInCookie == 1 ) {
-			self::$isBetaGroupMember = true;
+			$this->isBetaGroupMember = true;
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -460,45 +482,6 @@ class ExtMobileFrontend extends ContextSource {
 		return true;
 	}
 
-	private function getLanguageUrls() {
-		global $wgContLang, $wgLanguageCode;
-
-		wfProfileIn( __METHOD__ );
-		$languageUrls = array();
-
-		$out = $this->getOutput();
-		$languageUrls[] = array(
-			'href' => $this->getRequest()->getFullRequestURL(),
-			'text' => $out->getHTMLTitle(),
-			'language' => $wgContLang->getLanguageName( $wgLanguageCode ),
-			'class' => 'interwiki-' . $wgLanguageCode,
-			'lang' => $wgLanguageCode,
-		);
-
-		foreach ( $out->getLanguageLinks() as $l ) {
-			$tmp = explode( ':', $l, 2 );
-			$class = 'interwiki-' . $tmp[0];
-			$lang = $tmp[0];
-			unset( $tmp );
-			$nt = Title::newFromText( $l );
-			if ( $nt ) {
-				$languageUrl = $this->getMobileUrl( $nt->getFullURL() );
-				$languageUrls[] = array(
-					'href' => $languageUrl,
-					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
-							? $wgContLang->getLanguageName( $nt->getInterwiki() )
-							: $l ),
-					'language' => $wgContLang->getLanguageName( $lang ),
-					'class' => $class,
-					'lang' => $lang,
-				);
-			}
-		}
-		wfProfileOut( __METHOD__ );
-
-		return $languageUrls;
-	}
-
 	/**
 	 * @return Mixed
 	 */
@@ -512,7 +495,7 @@ class ExtMobileFrontend extends ContextSource {
 	/**
 	 * @return string
 	 */
-	private function getBaseDomain() {
+	public function getBaseDomain() {
 		wfProfileIn( __METHOD__ );
 		// Validates value as IP address
 		if ( !IP::isValid( $_SERVER['HTTP_HOST'] ) ) {
@@ -595,72 +578,74 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * @return DomElement
+	 * @return string
 	 */
 	public function renderLogin() {
 		wfProfileIn( __METHOD__ );
-		$form = Html::openElement( 'form',
-					array( 'name' => 'userlogin',
-				   		   'method' => 'post',
-				   		   'action' => self::$wsLoginFormAction ) ) .
-				Html::openElement( 'table',
-					array( 'class' => 'user-login' ) ) .
-				Html::openElement( 'tbody' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-label' ) ) .
-				Html::element( 'label',
-		 			array( 'for' => 'wpName1' ), wfMsg( 'mobile-frontend-username' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td' ) .
-				Html::input( 'wpName', null, 'text',
-					array( 'class' => 'loginText',
-						   'id' => 'wpName1',
-						   'tabindex' => '1',
-						   'size' => '20',
-						   'required' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-label' ) ) .
-				Html::element( 'label',
-		 			array( 'for' => 'wpPassword1' ), wfMsg( 'mobile-frontend-password' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-input' ) ) .
-		 		Html::input( 'wpPassword', null, 'password',
-					array( 'class' => 'loginPassword',
-						   'id' => 'wpPassword1',
-						   'tabindex' => '2',
-						   'size' => '20' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::element( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::openElement( 'tr' ) .
-				Html::openElement( 'td',
-					array( 'class' => 'mw-submit' ) ) .
-				Html::input( 'wpLoginAttempt', wfMsg( 'mobile-frontend-login' ), 'submit',
-					array( 'id' => 'wpLoginAttempt',
-						   'tabindex' => '3' ) ) .
-				Html::closeElement( 'td' ) .
-				Html::closeElement( 'tr' ) .
-				Html::closeElement( 'tbody' ) .
-				Html::closeElement( 'table' ) .
-				Html::input( 'wpLoginToken', self::$wsLoginToken, 'hidden' ) .
-				Html::closeElement( 'form' );
-		$result = $this->getDomDocumentNodeByTagName( $form, 'form' );
+		$form = Html::openElement( 'div', array( 'id' => 'userloginForm' ) ) .
+			Html::openElement( 'form',
+				array( 'name' => 'userlogin',
+					'method' => 'post',
+					'action' => $this->wsLoginFormAction ) ) .
+			Html::openElement( 'table',
+				array( 'class' => 'user-login' ) ) .
+			Html::openElement( 'tbody' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-label' ) ) .
+			Html::element( 'label',
+				array( 'for' => 'wpName1' ), wfMsg( 'mobile-frontend-username' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td' ) .
+			Html::input( 'wpName', null, 'text',
+				array( 'class' => 'loginText',
+					'id' => 'wpName1',
+					'tabindex' => '1',
+					'size' => '20',
+					'required' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-label' ) ) .
+			Html::element( 'label',
+				array( 'for' => 'wpPassword1' ), wfMsg( 'mobile-frontend-password' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-input' ) ) .
+			Html::input( 'wpPassword', null, 'password',
+				array( 'class' => 'loginPassword',
+					'id' => 'wpPassword1',
+					'tabindex' => '2',
+					'size' => '20' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::element( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::openElement( 'tr' ) .
+			Html::openElement( 'td',
+				array( 'class' => 'mw-submit' ) ) .
+			Html::input( 'wpLoginAttempt', wfMsg( 'mobile-frontend-login' ), 'submit',
+				array( 'id' => 'wpLoginAttempt',
+					'tabindex' => '3' ) ) .
+			Html::closeElement( 'td' ) .
+			Html::closeElement( 'tr' ) .
+			Html::closeElement( 'tbody' ) .
+			Html::closeElement( 'table' ) .
+			Html::input( 'wpLoginToken', $this->wsLoginToken, 'hidden' ) .
+			Html::closeElement( 'form' ) .
+			Html::closeElement( 'div' );
+
 		wfProfileOut( __METHOD__ );
-		return $result;
+		return $form;
 	}
 
-	private function getDom( $html ) {
+	public function getDom( $html ) {
 		wfProfileIn( __METHOD__ );
 		libxml_use_internal_errors( true );
 		$dom = new DOMDocument();
@@ -674,76 +659,21 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * @param $html string
-	 * @param $tagName string
-	 * @return DomElement
-	 */
-	private function getDomDocumentNodeByTagName( $html, $tagName ) {
-		wfProfileIn( __METHOD__ );
-		$dom = $this->getDom( $html );
-		$node = $dom->getElementsByTagName( $tagName )->item( 0 );
-		wfProfileOut( __METHOD__ );
-		return $node;
-	}
-
-	/**
-	 * Extracts <meta name="robots"> from head items that we don't need
-	 * @param OutputPage $out
-	 * @return string
-	 */
-	private function getRobotsPolicy( OutputPage $out ) {
-		wfProfileIn( __METHOD__ );
-		libxml_use_internal_errors( true );
-		$dom = $this->getDom( $out->getHeadLinks() );
-		$xpath = new DOMXpath( $dom );
-		foreach ( $xpath->query( '//meta[@name="robots"]' ) as $tag ) {
-			wfProfileOut( __METHOD__ );
-			return $dom->saveXML( $tag );
-		}
-		wfProfileOut( __METHOD__ );
-		return '';
-	}
-
-	private function getLoginLinks() {
-		wfProfileIn( __METHOD__ );
-		$login = $logout = '';
-		$query = array( 'returnto' => $this->getTitle()->getPrefixedText() );
-		if ( !$this->getRequest()->wasPosted() ) {
-			$returntoquery = $this->getRequest()->getValues();
-			unset( $returntoquery['title'] );
-			unset( $returntoquery['returnto'] );
-			unset( $returntoquery['returntoquery'] );
-			$query['returntoquery'] = wfArrayToCGI( $returntoquery );
-		}
-		if ( $this->getUser()->isLoggedIn() ) {
-			$login = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
-				wfMessage( 'mobile-frontend-login' )->escaped(),
-				array(),
-				$query
-			);
-		} else {
-			$logout = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
-				wfMessage( 'userlogout' )->escaped(),
-				array(),
-				$query
-			);
-		}
-		wfProfileOut( __METHOD__ );
-		return array( $login, $logout );
-	}
-
-	/**
 	 * @param OutputPage $out
 	 * @return string
 	 */
 	public function DOMParse( OutputPage $out ) {
-		global $wgScript, $wgContLang;
 		wfProfileIn( __METHOD__ );
 
+		if ( !$this->beforePageDisplay( $out ) ) {
+			return false;
+		}
 		$html = $out->getHTML();
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
-		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $this->getTitle(), $this->contentFormat, $this->wmlContext );
+		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $this->getTitle(),
+			$this->getContentFormat(), $this->wmlContext
+		);
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
@@ -755,22 +685,15 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		if ( $zeroRatedBannerElement ) {
-			self::$zeroRatedBanner = $doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
+			$this->zeroRatedBanner = $doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
 		}
 		wfProfileOut( __METHOD__ . '-zero' );
 
-		wfProfileIn( __METHOD__ . '-beta' );
-		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			$userlogin = $doc->getElementById( 'userloginForm' );
-
-			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
-				$firstHeading = $doc->getElementById( 'firstHeading' );
-				if ( $firstHeading ) {
-					$firstHeading->nodeValue = '';
-				}
-			}
+		$contentHtml = $this->doSpecialCases( $formatter );
+		if ( $contentHtml ) {
+			wfProfileOut( __METHOD__ );
+			return $contentHtml;
 		}
-		wfProfileOut( __METHOD__ . '-beta' );
 
 		if ( $this->contentTransformations ) {
 			wfProfileIn( __METHOD__ . '-filter' );
@@ -780,80 +703,19 @@ class ExtMobileFrontend extends ContextSource {
 			wfProfileOut( __METHOD__ . '-filter' );
 		}
 
-		wfProfileIn( __METHOD__ . '-userlogin' );
-		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
-				$login = $this->renderLogin();
-				$loginNode = $doc->importNode( $login, true );
-				$userlogin->appendChild( $loginNode );
-			}
-		}
-		wfProfileOut( __METHOD__ . '-userlogin' );
-
 		wfProfileIn( __METHOD__ . '-getText' );
 		$formatter->setIsMainPage( $this->getTitle()->isMainPage() );
-		if ( $this->contentFormat == 'XHTML'
-			&& $this->device['supports_javascript'] === true
-			&& empty( self::$search ) )
+		$device = $this->getDevice();
+		if ( $this->getContentFormat() == 'XHTML'
+			&& $device['supports_javascript'] === true
+			&& $this->getRequest()->getText( 'search' ) == '' )
 		{
 			$formatter->enableExpandableSections();
 		}
 		$contentHtml = $formatter->getText();
 		wfProfileOut( __METHOD__ . '-getText' );
 
-		wfProfileIn( __METHOD__ . '-templates' );
-		if ( $this->contentFormat == 'WML' ) {
-			header( 'Content-Type: text/vnd.wap.wml' );
-
-			// Wml for searching
-			$prepend = '<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />' .
-				'<do type="accept" label="' . wfMsg( 'mobile-frontend-search-submit' ) . '">' .
-				'<go href="' . $wgScript . '?title=Special%3ASearch&amp;search=$(search)"></go></do></p>';
-			$contentHtml = $prepend . $contentHtml;
-
-			$applicationWmlTemplate = new ApplicationWmlTemplate();
-			$options = array(
-							'mainPageUrl' => Title::newMainPage()->getLocalUrl(),
-							'randomPageUrl' => self::$randomPageUrl,
-							'dir' => $wgContLang->getDir(),
-							'code' => $wgContLang->getCode(),
-							'contentHtml' => $contentHtml,
-							'homeButton' => wfMsg( 'mobile-frontend-home-button' ),
-							'randomButton' => wfMsg( 'mobile-frontend-random-button' ),
-							);
-			$applicationWmlTemplate->setByArray( $options );
-			$applicationHtml = $applicationWmlTemplate->getHTML();
-		}
-
-		if ( $this->contentFormat == 'XHTML' && self::$format != 'json' ) {
-			if ( !empty( self::$displayNoticeId ) ) {
-				if ( intval( self::$displayNoticeId ) === 2 ) {
-					$sopaNoticeTemplate = new SopaNoticeTemplate();
-					$noticeHtml = $sopaNoticeTemplate->getHTML();
-				}
-			}
-
-			// header( 'Content-Type: application/xhtml+xml; charset=utf-8' );
-			$searchTemplate = $this->getSearchTemplate();
-			$searchWebkitHtml = $searchTemplate->getHTML();
-			$footerTemplate = $this->getFooterTemplate();
-			$footerHtml = $footerTemplate->getHTML();
-			$noticeHtml = ( !empty( $noticeHtml ) ) ? $noticeHtml : '';
-			$applicationTemplate = $this->getApplicationTemplate();
-			$options = array(
-							'noticeHtml' => $noticeHtml,
-							'htmlTitle' => $out->getHTMLTitle(),
-							'searchWebkitHtml' => $searchWebkitHtml,
-							'contentHtml' => $contentHtml,
-							'footerHtml' => $footerHtml,
-							'robots' => $this->getRobotsPolicy( $out ),
-							);
-			$applicationTemplate->setByArray( $options );
-			$applicationHtml = $applicationTemplate->getHTML();
-		}
-		wfProfileOut( __METHOD__ . '-templates' );
-
-		if ( self::$format === 'json' ) {
+		if ( $this->format === 'json' ) {
 			wfProfileIn( __METHOD__ . '-json' );
 			header( 'Content-Type: application/javascript' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
@@ -867,133 +729,13 @@ class ExtMobileFrontend extends ContextSource {
 			if ( !empty( $callback ) ) {
 				$json = urlencode( htmlspecialchars( $callback ) ) . '(' . $json . ')';
 			}
+			echo $json;
+			$contentHtml = false;
 			wfProfileOut( __METHOD__ . '-json' );
-
-			wfProfileOut( __METHOD__ );
-			return $json;
 		}
 
 		wfProfileOut( __METHOD__ );
-		return $applicationHtml;
-	}
-
-	public function getFooterTemplate() {
-		global $wgExtensionAssetsPath, $wgLanguageCode, $wgContLang;
-		wfProfileIn( __METHOD__ );
-		if ( self::$isBetaGroupMember ) {
-			list( $loginHtml, $logoutHtml ) = $this->getLoginLinks();
-		} else {
-			$loginHtml = $logoutHtml = '';
-		}
-		$footerTemplate = new FooterTemplate();
-		$options = array(
-						'leaveFeedbackURL' => SpecialPage::getTitleFor( 'MobileFeedback' )
-								->getLocalURL( array( 'returnto' => $this->getTitle()->getPrefixedText() ) ),
-						'viewNormalSiteURL' => self::$viewNormalSiteURL,
-						'disableImages' => $this->disableImages,
-						'disableImagesURL' => SpecialMobileOptions::getURL( 'DisableImages', $this->getTitle() ),
-						'enableImagesURL' => SpecialMobileOptions::getURL( 'EnableImages', $this->getTitle() ),
-						'logoutHtml' => $logoutHtml,
-						'loginHtml' => $loginHtml,
-						'code' => $wgContLang->getCode(),
-						'language-code' => 'en',
-						'copyright-symbol' => $wgLanguageCode === 'en' ? '®': '™',
-						'copyright-has-logo' => $wgLanguageCode === 'en',
-						'hideFooter' => self::$hideFooter,
-						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
-						'isBetaGroupMember' => self::$isBetaGroupMember,
-						);
-		$footerTemplate->setByArray( $options );
-		wfProfileOut( __METHOD__ );
-		return $footerTemplate;
-	}
-
-	public function getSearchTemplate() {
-		global $wgExtensionAssetsPath, $wgMobileFrontendLogo;
-		wfProfileIn( __METHOD__ );
-		$searchTemplate = new SearchTemplate();
-		$options = array(
-						'viewNormalSiteURL' => self::$viewNormalSiteURL,
-						'searchField' => self::$searchField,
-						'mainPageUrl' => Title::newMainPage()->getLocalUrl(),
-						'randomPageUrl' => self::$randomPageUrl,
-						'hideSearchBox' => self::$hideSearchBox,
-						'hideLogo' => self::$hideLogo,
-						'buildLanguageSelection' => $this->buildLanguageSelection(),
-						'device' => $this->device,
-						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
-						'wgMobileFrontendLogo' => $wgMobileFrontendLogo,
-						);
-		$searchTemplate->setByArray( $options );
-		wfProfileOut( __METHOD__ );
-		return $searchTemplate;
-	}
-
-	public function getApplicationTemplate() {
-		global $wgAppleTouchIcon, $wgExtensionAssetsPath, $wgScriptPath, $wgCookiePath, $wgContLang;
-		wfProfileIn( __METHOD__ );
-		$out = $this->getOutput();
-		if ( self::$isBetaGroupMember ) {
-			$out->addModuleStyles( 'ext.mobileFrontendBeta' );
-		} else {
-			$out->addModuleStyles( 'ext.mobileFrontend' );
-		}
-		$out->addModuleStyles( "ext.mobileFrontend.{$this->device['css_file_name']}" );
-		$isFilePage = $this->getTitle()->getNamespace() == NS_FILE;
-		if ( $isFilePage ) {
-			$out->addModuleStyles( 'ext.mobileFrontend.filePage' );
-		}
-		$cssLinks = $out->buildCssLinks();
-		$applicationTemplate = new ApplicationTemplate();
-		$options = array(
-						'dir' => $wgContLang->getDir(),
-						'code' => $wgContLang->getCode(),
-						'title' => $this->getTitle(),
-						'pageTitle' => $out->getPageTitle(),
-						'placeholder' => wfMsg( 'mobile-frontend-placeholder' ),
-						'dismissNotification' => wfMsg( 'mobile-frontend-dismiss-notification' ),
-						'wgAppleTouchIcon' => $wgAppleTouchIcon,
-						'isBetaGroupMember' => self::$isBetaGroupMember,
-						'mobileaction' => $this->getMobileAction(),
-						'minifyJS' => self::$minifyJS,
-						'device' => $this->device,
-						'cssLinks' => $cssLinks,
-						'wgExtensionAssetsPath' => $wgExtensionAssetsPath,
-						'wgScriptPath' => $wgScriptPath,
-						'isFilePage' => $isFilePage,
-						'zeroRatedBanner' => self::$zeroRatedBanner,
-						'stopMobileRedirectCookieName' => 'stopMobileRedirect',
-						'stopMobileRedirectCookieDuration' => $this->getUseFormatCookieDuration(),
-						'stopMobileRedirectCookieDomain' => $this->getBaseDomain(),
-						'useFormatCookieName' => $this->getUseFormatCookieName(),
-						'useFormatCookieDuration' => -1,
-						'useFormatCookiePath' => $wgCookiePath,
-						'useFormatCookieDomain' => $_SERVER['HTTP_HOST'],
-						);
-		$applicationTemplate->setByArray( $options );
-		wfProfileOut( __METHOD__ );
-		return $applicationTemplate;
-	}
-
-	public function buildLanguageSelection() {
-		global $wgLanguageCode;
-		wfProfileIn( __METHOD__ );
-		$output = Html::openElement( 'select',
-			array( 'id' => 'languageselection' ) );
-		foreach ( $this->getLanguageUrls() as $languageUrl ) {
-			if ( $languageUrl['lang'] == $wgLanguageCode ) {
-				$output .=	Html::element( 'option',
-							array( 'value' => $languageUrl['href'], 'selected' => 'selected' ),
-									$languageUrl['language'] );
-			} else {
-				$output .=	Html::element( 'option',
-							array( 'value' => $languageUrl['href'] ),
-									$languageUrl['language'] );
-			}
-		}
-		$output .= Html::closeElement( 'select' );
-		wfProfileOut( __METHOD__ );
-		return $output;
+		return $contentHtml;
 	}
 
 	/**
@@ -1006,7 +748,7 @@ class ExtMobileFrontend extends ContextSource {
 			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/images/mw.png';
 		}
 
-		if ( self::$isBetaGroupMember ) {
+		if ( $this->isBetaGroupMember ) {
 			$this->getSite( $site, $lang );
 			if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['site'] ) ) {
 				if ( isset( $wgMFCustomLogos['site'] ) && $site == $wgMFCustomLogos['site'] ) {
@@ -1019,6 +761,14 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * ResourceLoaderTestModules hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
+	 *
+	 * @param array $testModules
+	 * @param ResourceLoader $resourceLoader
+	 * @return bool
+	 */
 	public function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
 			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
@@ -1031,7 +781,8 @@ class ExtMobileFrontend extends ContextSource {
 		);
 		$testModules['qunit']['ext.mobilefrontend.tests.beta'] = array(
 			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
-				'javascripts/beta_opensearch.js', 'tests/js/test_beta_opensearch.js' ),
+				'javascripts/beta_opensearch.js', 'tests/js/test_beta_opensearch.js',
+				'javascripts/references.js', 'tests/js/test_references.js' ),
 				'dependencies' => array( ),
 				'localBasePath' => dirname( __FILE__ ),
 				'remoteExtPath' => 'MobileFrontend',
@@ -1264,9 +1015,12 @@ class ExtMobileFrontend extends ContextSource {
 	 * @return bool
 	 */
 	public function shouldDisplayMobileView() {
-		// always display non-mobile view for edit/history
+		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
-		if ( $action === 'edit' || $action === 'history' ) {
+		$req = $this->getRequest();
+		$isDiff = $req->getText( 'diff' );
+
+		if ( $action === 'edit' || $action === 'history' || $isDiff ) {
 			return false;
 		}
 
@@ -1416,10 +1170,10 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	public function getUseFormatCookieName() {
-		if ( !isset( self::$useFormatCookieName ) ) {
-			self::$useFormatCookieName = 'mf_mobileFormat';
+		if ( !isset( $this->useFormatCookieName ) ) {
+			$this->useFormatCookieName = 'mf_mobileFormat';
 		}
-		return self::$useFormatCookieName;
+		return $this->useFormatCookieName;
 	}
 
 	/**
@@ -1467,6 +1221,14 @@ class ExtMobileFrontend extends ContextSource {
 		return $expiry;
 	}
 
+	/**
+	 * GetCacheVaryCookies hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
+	 *
+	 * @param $out OutputPage
+	 * @param $cookies array
+	 * @return bool
+	 */
 	public function getCacheVaryCookies( $out, &$cookies ) {
 		$cookies[] = 'mf_useformat';
 		return true;
@@ -1480,7 +1242,7 @@ class ExtMobileFrontend extends ContextSource {
 	 *
 	 * @return int The number of seconds for which the cookie should last.
 	 */
-	protected function getUseFormatCookieDuration() {
+	public function getUseFormatCookieDuration() {
 		global $wgMobileFrontendFormatCookieExpiry, $wgCookieExpiration;
 		$cookieDuration = ( abs( intval( $wgMobileFrontendFormatCookieExpiry ) ) > 0 ) ?
 				$wgMobileFrontendFormatCookieExpiry : $wgCookieExpiration;
@@ -1538,13 +1300,14 @@ class ExtMobileFrontend extends ContextSource {
 	/**
 	 * ResourceLoaderRegisterModules hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
-	 * @param array $modules
+	 *
+	 * @param ResourceLoader $resourceLoader
 	 * @return bool
 	 */
 	public function resourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
 		$detector = new DeviceDetection();
 		foreach ( $detector->getCssFiles() as $file ) {
-			$resourceLoader->register("ext.mobileFrontend.$file",
+			$resourceLoader->register( "ext.mobileFrontend.$file",
 				array(
 					'styles' => array( "stylesheets/{$file}.css" ),
 					'localBasePath' => dirname( __FILE__ ),

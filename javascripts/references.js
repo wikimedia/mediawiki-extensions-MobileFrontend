@@ -40,7 +40,7 @@ if( typeof jQuery !== 'undefined' ) {
 			$( document ).scroll(calculatePosition);
 		}
 
-		function init( firstRun ) {
+		function init( container, firstRun ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			$("#mf-references").remove();
 			el = $( '<div id="mf-references"><div></div></div>' ).hide().
@@ -50,11 +50,16 @@ if( typeof jQuery !== 'undefined' ) {
 			}
 			el.ontouchstart = cancelBubble;
 			close = function() {
+				if( !$("#mf-references").is(":visible") ) {
+					return;
+				}
 				var top;
 				lastLink = null;
 				if( options.animation === 'none' ) {
 					$( '#mf-references' ).hide();
-				} else if( options.animation === 'slide' ){
+				} else if( options.animation === 'fade' ) {
+					$( '#mf-references' ).fadeOut( options.animationSpeed );
+				} else {
 					top = window.innerHeight + window.pageYOffset;
 					if(! supportsPositionFixed() ) {
 						$( '#mf-references' ).show().animate( { top: top }, { duration: options.animationSpeed,
@@ -65,8 +70,6 @@ if( typeof jQuery !== 'undefined' ) {
 					} else {
 						$( '#mf-references' ).slideUp();
 					}
-				} else {
-					$( '#mf-references' ).fadeOut( options.animationSpeed );
 				}
 			};
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
@@ -91,7 +94,9 @@ if( typeof jQuery !== 'undefined' ) {
 					calculatePosition();
 					if( options.animation === 'none' ) {
 						$( '#mf-references' ).show();
-					} else if( options.animation === 'slide' ){
+					} else if( options.animation === 'fade' ){
+						$( '#mf-references' ).fadeIn( options.animationSpeed );
+					} else {
 						if(! supportsPositionFixed() ) {
 							top = window.innerHeight + window.pageYOffset;
 							oh = $( '#mf-references' ).outerHeight();
@@ -100,8 +105,6 @@ if( typeof jQuery !== 'undefined' ) {
 						} else {
 							$( '#mf-references' ).slideDown();
 						}
-					} else {
-						$( '#mf-references' ).fadeIn( options.animationSpeed );
 					}
 				} else {
 					close();
@@ -109,9 +112,10 @@ if( typeof jQuery !== 'undefined' ) {
 				ev.preventDefault();
 				cancelBubble( ev );
 			}
-			$( 'sup a' ).unbind('click').click( clickReference ).each(function(i, el) {
-				el.ontouchstart = cancelBubble;
-			});
+			$( 'sup a', container ).unbind( 'click' ).
+				click( clickReference ).each(function(i, el) {
+					el.ontouchstart = cancelBubble;
+				});
 			if( firstRun ) {
 				$( document.body ).bind( 'click', close );
 				$( document.body ).bind( 'touchstart', function() {
@@ -119,7 +123,7 @@ if( typeof jQuery !== 'undefined' ) {
 				});
 			}
 		}
-		init( true );
+		init( $("#content")[0], true );
 		return {
 			init: init
 		};

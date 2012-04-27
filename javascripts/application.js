@@ -52,17 +52,21 @@ MobileFrontend = (function() {
 			var stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
 			var stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
 			var stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
+			var hookOptions = MobileFrontend.setting( 'hookOptions' );
 
 			// convert from seconds to days
 			stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
 
-			// set the stopMobileRedirect cookie
-			MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
+			if ( hookOptions != 'toggle_view_desktop' ) {
+				// set the stopMobileRedirect cookie
+				MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
+			}
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
 		// when rotating to landscape stop page zooming on ios
-		function fixiOSBug() {
+		// allow disabling of transitions in android ics 4.0.2
+		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/
 			var viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' ),
 				ua = navigator.userAgent;
@@ -71,9 +75,11 @@ MobileFrontend = (function() {
 				document.addEventListener( 'gesturestart', function() {
 					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
 				}, false );
+			} else if( ua.match(/Android 4\.0\.2/) ){
+				utilities( document.documentElement ).addClass( 'android4-0-2' );
 			}
 		}
-		fixiOSBug();
+		fixBrowserBugs();
 
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );
@@ -133,13 +139,28 @@ MobileFrontend = (function() {
 			el.parentNode.removeChild(el);
 		}
 
+		function text( str ) {
+			var label = document.createTextNode( str );
+			el.appendChild( label );
+		}
+
 		return {
 			addClass: addClass,
 			bind: bind,
 			hasClass: hasClass,
 			remove: remove,
-			removeClass: removeClass
+			removeClass: removeClass,
+			text: text
 		};
+	}
+	utilities.updateQueryStringParameter = utilities.updateQueryStringParameter || function( a, k, v ) {
+		var re = new RegExp( "([?|&])" + k + "=.*?(&|$)", "i" ),
+			separator = a.indexOf( '?' ) !== -1 ? "&" : "?";
+		if ( a.match( re ) ) {
+			return a.replace( re, '$1' + k + "=" + v + '$2' );
+		} else {
+			return a + separator + k + "=" + v;
+		}
 	}
 	utilities.ajax = utilities.ajax || function( options ) {
 		var xmlHttp, url;

@@ -7,7 +7,8 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 	-moz-box-shadow: 0px -5px 30px 0px #ddd;
 	-o-box-shadow: 0px -5px 30px 0px #ddd;
 	box-shadow: 0px -5px 30px 0px #ddd;
-	padding: 12px 20px; /* see .section padding + .content_block padding */
+	padding: 12px 20px; /* see .section padding + .content_block padding
+		also see @media all and (max-width: 320px) */
 	border-top: solid 1px #aaa;
 	line-height: 24px;
 	position: relative;
@@ -90,15 +91,6 @@ html[dir="ltr"] #footer .settings .left:after {
 	color: #333;
 }
 
-.toggleCopyright .hide,
-.toggleCopyright .show {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 22px;
-}
-
-
 /* 
 disable animations in footer
 this is so that toggling can scroll it into view
@@ -109,6 +101,10 @@ this is so that toggling can scroll it into view
 	-o-transition: none;
 	transition: none;
 	margin-top: 0;
+}
+
+#footer .content_block {
+	font-size: 0.7em;
 }
 
 #footer .notice .terms {
@@ -131,8 +127,11 @@ this is so that toggling can scroll it into view
 #footer .links li {
 	display: block;
 	width: 25%;
-	font-size: 1.1em;
+	font-size: 0.9em;
 	float: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 #footer .links:after {
@@ -151,6 +150,25 @@ this is so that toggling can scroll it into view
 #footer .less,
 #footer .openSection .more {
 	display: none;
+}
+
+@media all and (max-width: 320px) {
+	#footer {
+		padding: 12px 10px;
+	}
+	#content_wrapper {
+		margin: 22px 12px;
+	}
+}
+
+@media all and (min-width: 330px) {
+	#footer .content_block {
+		font-size: 0.9em;
+	}
+
+	#footer .links li {
+		font-size: 1.1em;
+	}
 }
 
 @media all and (min-width: 500px) {

@@ -18,6 +18,10 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
+input {
+	word-break: normal;
+}
+
 a.external {
 	background: url(images/external-link-ltr-icon.png) center right no-repeat;
 	padding-right: 13px;
@@ -111,7 +115,6 @@ h3#sopa-notice {
 table {
 	display: block;
 	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
 }
 
 table table {

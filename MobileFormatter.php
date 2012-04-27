@@ -69,6 +69,7 @@ class MobileFormatter extends HtmlFormatter {
 	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
 		parent::__construct( $html );
 
+		$this->setHtmlMode( true ); // Our current mobile skins always output HTML
 		$this->title = $title;
 		$this->format = $format;
 		if ( !$wmlContext && $format == 'WML' ) {
@@ -309,7 +310,7 @@ class MobileFormatter extends HtmlFormatter {
 		// MediaWiki currently requires PHP 5.2.3 or higher.
 		// So, using old style for now.
 		$s = preg_replace_callback(
-			'/<h2(.*)<span class="mw-headline" [^>]*>(.+)<\/span>\w*<\/h2>/',
+			'%<h2(.*)<span class="mw-headline" [^>]*>(.+)</span>.*/h2>%sU',
 			array( $this, $callback ),
 			$s
 		);
