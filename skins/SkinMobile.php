@@ -60,6 +60,7 @@ class SkinMobile extends SkinMobileBase {
 		$bottomScripts ="{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js{$endScriptTag}
 	{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js{$endScriptTag}
 	{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js{$endScriptTag}
+	{$startScriptTag}{$javaScriptPath}settings.{$resourceSuffix}js{$endScriptTag}
 	{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js{$endScriptTag}
 	{$betajs}
 	{$filePageScript}";
