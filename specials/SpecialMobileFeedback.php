@@ -16,7 +16,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
 		} else {
-			if ( $wgExtMobileFrontend::$isBetaGroupMember ) {
+			if ( $wgExtMobileFrontend->isBetaGroupMember ) {
 				$html = $this->getFeedbackHtml();
 				$this->getOutput()->addHtml( $html );
 			} else {
@@ -186,7 +186,7 @@ HTML;
 		$subject = $this->getFormattedSubject( $form );
 		$message = $this->getFormattedMessage( $form );
 		$returnTo = $form['returnto'];
-		if ( $wgMFRemotePostFeedback === true && $wgExtMobileFrontend::$isBetaGroupMember ) {
+		if ( $wgMFRemotePostFeedback === true && $wgExtMobileFrontend->isBetaGroupMember ) {
 			$success = $this->postRemoteFeedback( $subject, $message );
 		} else {
 			$success = $this->postLocalFeedback( $subject, $message );
