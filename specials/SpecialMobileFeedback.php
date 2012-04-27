@@ -16,9 +16,66 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
 		} else {
-			$html = $this->getFeedbackHtml();
-			$this->getOutput()->addHtml( $html );
+			if ( $wgExtMobileFrontend::$isBetaGroupMember ) {
+				$html = $this->getFeedbackHtml();
+				$this->getOutput()->addHtml( $html );
+			} else {
+				$form = new HTMLForm( $this->getOldForm(), $this );
+				$form->setTitle( $this->getTitle() );
+				$form->setId( 'feedback' );
+				$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->text() );
+				$form->setSubmitCallback( array( $this, 'postFeedback' ) );
+				$form->setAction( $this->getFullTitle()->getLocalURL() );
+				$form->show();
+			}
 		}
+	}
+
+	private function getOldForm() {
+		$linkText = $this->msg( 'mobile-frontend-leave-feedback-link-text' )->text();
+		$linkTarget = wfMessage( 'mobile-frontend-feedback-page' )->inContentLanguage()->plain();
+		$leaveFeedbackText = wfMsgExt( 'mobile-frontend-leave-feedback-notice',
+			array( 'replaceafter' ),
+			Html::element( 'a', array( 'href' => Title::newFromText( $linkTarget )->getLocalURL(), 'target' => '_blank' ),
+			$linkText )
+		);
+		return array(
+			'form-desc' => array(
+				'type' => 'info',
+				'raw' => true,
+				'default' => '<div unselectable="on">'
+					. '<p><span unselectable="on">'
+						. $this->msg( 'mobile-frontend-leave-feedback-title' )->parse()
+					. '</span><br/>'
+					. "<small>{$leaveFeedbackText}</small>"
+				. '</p></div>'
+			),
+			'subject-desc' => array(
+				'type' => 'info',
+				'raw' => true,
+				'default' => $this->msg( 'mobile-frontend-leave-feedback-subject' ) ->parse()
+					. '<br/>',
+			),
+			'returnto' => array(
+				'type' => 'hidden',
+				'default' => $this->getRequest()->getText( 'returnto', '' ),
+			),
+			'subject' => array(
+				'type' => 'text',
+			),
+			'message-desc' => array(
+				'type' => 'info',
+				'raw' => true,
+				'default' => $this->msg( 'mobile-frontend-leave-feedback-message' )->parse()
+					. '<br/>',
+			),
+			'message' => array(
+				'type' => 'textarea',
+				'rows' => 5,
+				'cols' => 60,
+				'validation-callback' => array( $this, 'validateMessage' ),
+			),
+		);
 	}
 
 	protected function getFeedbackHtml() {
@@ -124,12 +181,12 @@ HTML;
 	}
 
 	public function postFeedback( $form ) {
-		global $wgMFRemotePostFeedback;
+		global $wgMFRemotePostFeedback, $wgExtMobileFrontend;
 
 		$subject = $this->getFormattedSubject( $form );
 		$message = $this->getFormattedMessage( $form );
 		$returnTo = $form['returnto'];
-		if ( $wgMFRemotePostFeedback === true ) {
+		if ( $wgMFRemotePostFeedback === true && $wgExtMobileFrontend::$isBetaGroupMember ) {
 			$success = $this->postRemoteFeedback( $subject, $message );
 		} else {
 			$success = $this->postLocalFeedback( $subject, $message );
