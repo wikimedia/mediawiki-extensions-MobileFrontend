@@ -28,9 +28,12 @@ abstract class SkinMobileBase extends SkinTemplate {
 	}
 
 	public function outputPage( OutputPage $out = null ) {
+		global $wgMFNoindexPages;
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
-		$out->setRobotPolicy( 'noindex,nofollow' );
+		if ( $wgMFNoindexPages ) {
+			$out->setRobotPolicy( 'noindex,nofollow' );
+		}
 
 		$options = null;
 		if ( wfRunHooks( 'BeforePageDisplayMobile', array( &$out, &$options ) ) ) {
