@@ -81,6 +81,7 @@ $messages['en'] = array (
  * @author Amire80
  * @author EugeneZelenko
  * @author Fryed-peach
+ * @author McDutchie
  * @author Raymond
  * @author SPQRobin
  * @author Siebrand
@@ -113,8 +114,8 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-opt-out-yes-button' => '{{Identical|Yes}}',
 	'mobile-frontend-opt-out-no-button' => '{{Identical|No}}',
 	'mobile-frontend-toggle-images' => '$1 and $2 are {{msg-mw|Mobile-frontend-off}} and {{msg-mw|Mobile-frontend-on}}, respectively',
-	'mobile-frontend-off' => 'Refers to images - means that they are not shown. Appears after {{msg-mw|Mobile-frontend-enable-images-prefix}}.',
-	'mobile-frontend-on' => 'Refers to images - means that they are shown. Appears after {{msg-mw|Mobile-frontend-enable-images-prefix}}.',
+	'mobile-frontend-off' => 'Refers to images - means that they are not shown. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
+	'mobile-frontend-on' => 'Refers to images - means that they are shown. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
 	'mobile-frontend-leave-feedback-title' => 'Special page title',
 	'mobile-frontend-leave-feedback-notice' => 'Parameters:
@@ -1308,6 +1309,7 @@ $messages['eo'] = array(
  * @author Crazymadlover
  * @author Fitoschido
  * @author Imre
+ * @author Invadinado
  * @author Platonides
  */
 $messages['es'] = array(
@@ -1342,7 +1344,7 @@ $messages['es'] = array(
 	'mobile-frontend-off' => 'APAGADO',
 	'mobile-frontend-on' => 'ENCENDIDO',
 	'mobile-frontend-news-items' => 'Actualidad',
-	'mobile-frontend-leave-feedback-title' => 'Comentarios sobre el sitio para móviles.',
+	'mobile-frontend-leave-feedback-title' => 'Cuéntanos tu experiencia en el sitio para móviles.',
 	'mobile-frontend-leave-feedback-notice' => 'Sus comentarios nos ayudan a mejorar su experiencia del sitio móvil. Serán publicados en sitio accesible (junto con su nombre de usuario, versión del navegador y sistema operativo) en la página "$1". Intente elegir una línea informativa del tema, por ejemplo, "Formateando contenidos con tablas de gran anchura". Sus comentarios está sujetos a nuestros términos de uso.',
 	'mobile-frontend-leave-feedback-subject' => 'Asunto:',
 	'mobile-frontend-leave-feedback-message' => 'Mensaje:',
@@ -2245,8 +2247,9 @@ $messages['ia'] = array(
 	'mobile-frontend-opt-out-explain' => 'Per quitar le beta-test mobile, tu disactivara tote le functionalitate experimental e retornara al interfacie mobile classic.',
 	'mobile-frontend-disable-images' => 'Disactivar imagines in sito mobile',
 	'mobile-frontend-enable-images' => 'Activar imagines in sito mobile',
-	'mobile-frontend-off' => 'CLAUDITE',
-	'mobile-frontend-on' => 'APERITE',
+	'mobile-frontend-toggle-images' => 'Imagines $1 / $2',
+	'mobile-frontend-off' => 'INACTIVE',
+	'mobile-frontend-on' => 'ACTIVE',
 	'mobile-frontend-news-items' => 'Actualitates',
 	'mobile-frontend-leave-feedback-title' => 'Evalutation sur le sito mobile',
 	'mobile-frontend-leave-feedback-notice' => 'Tu commentario nos adjuta a meliorar tu experientia del sito mobile. Illo essera publicate in le pagina "$1", con tu nomine de usator, version de navigator e systema de operation. Per favor tenta eliger un linea de subjecto informative, p.ex. "Problema con le formatation de tabellas large". Le evalutation que tu invia es subjecte a nostre conditiones de uso.',
@@ -2260,7 +2263,7 @@ $messages['ia'] = array(
 	'mobile-frontend-feedback-no-message' => 'Per favor entra un message hic',
 	'mobile-frontend-feedback-edit-summary' => '$1 - automaticamente publicate usante le [[Special:MobileFeedback|instrumento de evalutation mobile]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Gratias pro tu commentario!',
-	'mobile-frontend-language' => 'Lingua',
+	'mobile-frontend-language' => 'Lingua:',
 	'mobile-frontend-username' => 'Nomine de usator:',
 	'mobile-frontend-password' => 'Contrasigno:',
 	'mobile-frontend-login' => 'Aperir session',
@@ -3388,7 +3391,7 @@ $messages['ml'] = array(
 	'mobile-frontend-feedback-no-message' => 'സന്ദേശം ഇവിടെ നൽകുക',
 	'mobile-frontend-feedback-edit-summary' => '$1 - [[Special:MobileFeedback|മൊബൈൽ അഭിപ്രായമറിയിക്കൽ ഉപകരണം]] ഉപയോഗിച്ച് സ്വയം അയച്ചു',
 	'mobile-frontend-leave-feedback-thanks' => 'താങ്കളുടെ അഭിപ്രായത്തിനു വളരെ നന്ദി!',
-	'mobile-frontend-language' => 'ഭാഷ',
+	'mobile-frontend-language' => 'ഭാഷ:',
 	'mobile-frontend-username' => 'ഉപയോക്തൃനാമം:',
 	'mobile-frontend-password' => 'രഹസ്യവാക്ക്:',
 	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
@@ -4288,7 +4291,7 @@ $messages['ro'] = array(
 	'mobile-frontend-leave-feedback' => 'Scrieți-vă părerea',
 	'mobile-frontend-leave-feedback-page-title' => 'Păreri despre interfața mobilă',
 	'mobile-frontend-leave-feedback-thanks' => 'Vă mulțumim pentru feedback!',
-	'mobile-frontend-language' => 'Limbă',
+	'mobile-frontend-language' => 'Limbă:',
 	'mobile-frontend-username' => 'Nume de utilizator:',
 	'mobile-frontend-password' => 'Parolă:',
 	'mobile-frontend-login' => 'Autentificare',
@@ -5521,6 +5524,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-wml-continue' => '繼續 ...',
 	'mobile-frontend-wml-back' => '返回 ...',
 	'mobile-frontend-view' => '行動瀏覽',
+	'mobile-frontend-view-desktop' => '桌面版',
 	'mobile-frontend-opt-in-message' => '您想參加移動公測嗎？',
 	'mobile-frontend-opt-in-yes-button' => '是',
 	'mobile-frontend-opt-in-no-button' => '不',
@@ -5533,6 +5537,8 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-opt-out-explain' => '退出公測後，您將禁用所有實驗性功能，回歸正常移動使用。',
 	'mobile-frontend-disable-images' => '在行動瀏覽上禁用圖像',
 	'mobile-frontend-enable-images' => '在行動瀏覽上啟用圖像',
+	'mobile-frontend-off' => '關',
+	'mobile-frontend-on' => '開',
 	'mobile-frontend-news-items' => '新聞動態',
 	'mobile-frontend-leave-feedback-title' => '為有關手提網站體驗留下反饋',
 	'mobile-frontend-leave-feedback-notice' => '您的反饋意見幫助我們改善您的移動網站體驗。它將公開（隨您的用戶名稱、 瀏覽器版本和操作系統） 張貼到頁面「$1」。請選擇內容豐富的主題行，例如「寬表格式有問題」。您的反饋受我們的使用條款。',
@@ -5542,12 +5548,20 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-leave-feedback-link-text' => '移動前端反饋',
 	'mobile-frontend-leave-feedback' => '留下反饋',
 	'mobile-frontend-leave-feedback-page-title' => '為有關手提網站體驗留下反饋',
+	'mobile-frontend-feedback-no-subject' => '（沒有主題）',
+	'mobile-frontend-feedback-no-message' => '請在這裡輸入信息。',
 	'mobile-frontend-leave-feedback-thanks' => '謝謝您的反饋！',
 	'mobile-frontend-language' => '語言:',
 	'mobile-frontend-username' => '用戶名：',
 	'mobile-frontend-password' => '密碼：',
 	'mobile-frontend-login' => '登錄',
 	'mobile-frontend-placeholder' => '在這裡輸入搜索內容...',
+	'mobile-frontend-clear-search' => '清除',
+	'mobile-frontend-privacy-link-text' => '隱私',
+	'mobile-frontend-about-link-text' => '關於',
+	'mobile-frontend-footer-more' => '更多',
+	'mobile-frontend-footer-less' => '最少',
+	'mobile-frontend-footer-contact' => '聯繫',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
