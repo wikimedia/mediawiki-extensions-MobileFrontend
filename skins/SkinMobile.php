@@ -43,14 +43,13 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->setRef( 'wgAppleTouchIcon', $wgAppleTouchIcon );
 
 		$resourceSuffix = $wgMFMinifyJS ? 'min.' : '';
-		$betaPrefix = $frontend->isBetaGroupMember ? 'beta_' : '';
 		$startScriptTag = '<script type="text/javascript" src="';
 		$endScriptTag = "?version={$wgMobileResourceVersion}\"></script>";
 		$javaScriptPath =  $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
-		if ( $frontend->isBetaGroupMember && $device['supports_jquery'] ) {
-			$betajs = "{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js{$endScriptTag}";
+		if ( $device['supports_jquery'] ) {
+			$additionaljs = "{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js{$endScriptTag}";
 		} else {
-			$betajs = "";
+			$additionaljs = "";
 		}
 
 		$tpl->set( 'jQueryScript',
@@ -61,8 +60,8 @@ class SkinMobile extends SkinMobileBase {
 	{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js{$endScriptTag}
 	{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js{$endScriptTag}
 	{$startScriptTag}{$javaScriptPath}settings.{$resourceSuffix}js{$endScriptTag}
-	{$startScriptTag}{$javaScriptPath}{$betaPrefix}opensearch.{$resourceSuffix}js{$endScriptTag}
-	{$betajs}
+	{$startScriptTag}{$javaScriptPath}beta_opensearch.{$resourceSuffix}js{$endScriptTag}
+	{$additionaljs}
 	{$filePageScript}";
 		$tpl->set( 'bottomScripts', $bottomScripts );
 
@@ -100,39 +99,27 @@ class SkinMobile extends SkinMobileBase {
 		$imagesSwitchTitle = SpecialPage::getTitleFor( 'MobileOptions',
 			$frontend->imagesDisabled() ? 'EnableImages' : 'DisableImages'
 		);
-		if ( $frontend->isBetaGroupMember ) {
-			$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
-					Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
-					: ''
-			);
-			$tpl->set( 'logInOut', $this->getLogInOutLink() );
-			if ( $frontend->imagesDisabled() ) {
-				$on = Linker::link( $imagesSwitchTitle,
-					$this->msg( 'mobile-frontend-on' )->escaped(),
-					array( 'id' => 'imagetoggle' ),
-					array( 'returnto' => $title->getPrefixedText() )
-				);
-				$off = $this->msg( 'mobile-frontend-off' )->escaped();
-			} else {
-				$on = $this->msg( 'mobile-frontend-on' )->escaped();
-				$off = Linker::link( $imagesSwitchTitle,
-					$this->msg( 'mobile-frontend-off' )->escaped(),
-					array( 'id' => 'imagetoggle' ),
-					array( 'returnto' => $title->getPrefixedText() )
-				);
-			}
-			$tpl->set( 'imagesToggle', $this->msg( 'mobile-frontend-toggle-images' )->rawParams( $on, $off )->escaped() );
-		} else {
-			$tpl->set( 'feedbackLink', '' );
-			$link = Linker::link( $imagesSwitchTitle,
-				$this->msg( $frontend->imagesDisabled()
-					? 'mobile-frontend-enable-images'
-					: 'mobile-frontend-disable-images' )->escaped(),
+		$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
+				Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
+				: ''
+		);
+		$tpl->set( 'logInOut', $this->getLogInOutLink() );
+		if ( $frontend->imagesDisabled() ) {
+			$on = Linker::link( $imagesSwitchTitle,
+				$this->msg( 'mobile-frontend-on' )->escaped(),
 				array( 'id' => 'imagetoggle' ),
 				array( 'returnto' => $title->getPrefixedText() )
 			);
-			$tpl->set( 'imagesToggle', $link );
+			$off = $this->msg( 'mobile-frontend-off' )->escaped();
+		} else {
+			$on = $this->msg( 'mobile-frontend-on' )->escaped();
+			$off = Linker::link( $imagesSwitchTitle,
+				$this->msg( 'mobile-frontend-off' )->escaped(),
+				array( 'id' => 'imagetoggle' ),
+				array( 'returnto' => $title->getPrefixedText() )
+			);
 		}
+		$tpl->set( 'imagesToggle', $this->msg( 'mobile-frontend-toggle-images' )->rawParams( $on, $off )->escaped() );
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( $wgLanguageCode === 'en' ) { //@fixme: de-WMFize
 			$license = Html::element( 'img', array(
@@ -399,31 +386,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 	<div id="footer">
 		<?php
-		if ( $this->data['isBetaGroupMember'] ) {
-			$this->betaFooter();
-		} else {
-			$this->normalFooter();
-		}
-		?>
-	</div>
-
-	<?php
-	}
-
-	private function normalFooter() {
-		?>
-	<div class="nav" id="footmenu">
-		<div class="mwm-notice">
-			<a href="<?php $this->text( 'viewNormalSiteURL' ) ?>" id="mf-display-toggle"><?php $this->msg( 'mobile-frontend-regular-site' )
-				?></a> | <?php $this->html( 'imagesToggle' ) ?>
-		</div><?php
-		// List item to mimic desktop site environment where copyright appears in list (see bug 30406) ?>
-		<ul id="copyright"><li><?php $this->html( 'copyright' ) ?></li></ul>
-	</div>
-	<?php
-	}
-
-	private function betaFooter() {
 		// @todo: make license icon and text dynamic
 		?>
 	<h2 class="section_heading" id="section_footer">
@@ -456,6 +418,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<li><?php $this->html( 'aboutLink' ) ?></li>
 			<li><?php $this->html( 'disclaimerLink' ) ?></li>
 		</ul>
+	</div>
 	</div>
 	<?php
 	}
