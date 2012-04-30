@@ -1,0 +1,11 @@
+.togglingEnabled .content_block {
+	height: 0;
+}
+
+.togglingEnabled .openSection.content_block {
+	height: 300px;  /* note this expects to be overriden in toggle.js */
+}
+
+.togglingEnabled .content_block.togglefix {
+	height: auto;
+}

@@ -20,6 +20,7 @@ class SkinMobile extends SkinMobileBase {
 
 		$tpl->set( 'isBetaGroupMember', $frontend->isBetaGroupMember );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
+		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		$tpl->set( 'title', $out->getPageTitle() );
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
@@ -272,7 +273,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<?php $this->html( 'robots' ) ?>
 		<?php $this->html( 'cssLinks' ) ?>
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
 		<?php $this->html( 'touchIcon' ) ?>
 		<?php $this->html( 'jQueryScript' ) ?>
 		<script type="text/javascript">

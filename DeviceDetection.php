@@ -223,6 +223,18 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			),
+			'operamobile' => array (
+				'view_format' => 'html',
+				'search_bar' => 'simple',
+				'footmenu' => 'simple',
+				'with_layout' => 'application',
+				'css_file_name' => 'operamobile',
+				'supports_javascript' => true,
+				'supports_jquery' => true,
+				'disable_zoom' => true,
+				'parser' => 'html',
+				'disable_links' => true,
+			),
 			'nokia' => array (
 				'view_format' => 'html',
 				'search_bar' => 'webkit',
@@ -278,6 +290,8 @@ class DeviceDetection {
 			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$formatName = 'operamini';
 			}
+		} else if ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
+			$formatName = 'operamobile';
 		} elseif ( preg_match( '/iPad.* Safari/', $userAgent ) ) {
 			$formatName = 'iphone';
 		} elseif ( preg_match( '/iPhone.* Safari/', $userAgent ) ) {
