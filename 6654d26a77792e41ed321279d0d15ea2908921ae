@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJ3//+bc\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-04-30T20:08:23Z",
+      "side": 1,
+      "message": "Might worth to rename it.",
+      "revId": "6654d26a77792e41ed321279d0d15ea2908921ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
