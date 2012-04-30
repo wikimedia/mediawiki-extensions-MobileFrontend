@@ -375,10 +375,8 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		$props = array(
 			'xDevice' => 'android',
 			'blargh' => 'bananas',
-			'minifyJS' => false,
 		);
 		$wgExtMobileFrontend->setPropertiesFromArray( $props );
-		$this->assertEquals( $wgExtMobileFrontend::$minifyJS, false );
 		$this->assertEquals( $wgExtMobileFrontend->getXDevice(), 'android' );
 		// ensure 'balrgh' didnt get set since it was not a pre-defined property
 		$this->assertFalse( property_exists( $wgExtMobileFrontend, 'blargh' ) );

@@ -34,6 +34,13 @@ class MobileFormatterTest extends MediaWikiTestCase {
 Foobar!</div></div></div>',
 				'<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Foo.jpg" class="image"><img alt="" src="/foo.jpg" width="220" height="165" class="thumbimage"></a><div class="thumbcaption">Foobar!</div></div></div>',
 			),
+			array(
+				'fooo
+<div id="mp-itn">bar</div>
+<div id="mf-custom" title="custom">blah</div>',
+				'<div id="mainpage"><h2>In The News</h2><div id="mp-itn">bar</div><h2>custom</h2><div id="mf-custom" title="custom">blah</div><br clear="all"></div>',
+				function( MobileFormatter $mf ) { $mf->setIsMainPage( true ); },
+			),
 		);
 	}
 }

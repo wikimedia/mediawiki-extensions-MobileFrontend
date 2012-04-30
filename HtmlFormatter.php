@@ -250,6 +250,13 @@ class HtmlFormatter {
 				$element = $this->doc->getElementById( $element );
 			}
 			if ( $this->htmlMode ) {
+				if ( $element ) {
+					$body = $this->doc->getElementsByTagName( 'body' )->item( 0 );
+					foreach ( $body->childNodes as $node ) {
+						$body->removeChild( $node );
+					}
+					$body->appendChild( $element );
+				}
 				$html = $this->doc->saveHTML();
 			} else {
 				$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
@@ -260,9 +267,7 @@ class HtmlFormatter {
 		} else {
 			$html = $this->html;
 		}
-		if ( !$element ) {
-			$html = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $html );
-		}
+		$html = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $html );
 		$html = $this->onHtmlReady( $html );
 
 		if ( $this->elementsToFlatten ) {
