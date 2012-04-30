@@ -270,6 +270,10 @@ full screen search css
 	height: 40px;
 }
 
+#sq {
+	margin-right: 12px;
+}
+
 #search {
 	line-height: normal;
 	background: none; /* remove fennec default background */
