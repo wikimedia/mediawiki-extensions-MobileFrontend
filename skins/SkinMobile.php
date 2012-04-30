@@ -303,6 +303,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->footer() ?>
 	<!--[if gt IE 9]><!-->
 		<?php $this->html( 'bottomScripts' ) ?>
+	<script type='text/javascript'>MobileFrontend.init();</script>
 	<!--[endif]-->
 	</body>
 	</html><?php
