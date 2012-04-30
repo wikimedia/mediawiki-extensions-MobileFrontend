@@ -116,7 +116,7 @@ MobileFrontend.toggle = (function() {
 		}, 400); // this matches transition speed in sections.css
 	}
 
-	init();
+	MobileFrontend.registerModule( 'toggle' );
 	return {
 		wm_reveal_for_hash: wm_reveal_for_hash,
 		wm_toggle_section: wm_toggle_section,

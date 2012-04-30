@@ -1,12 +1,26 @@
 /*global document, window */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend = (function() {
-	var utilities;
+	var utilities, modules = [];
 
 	function message( name ) {
 		return mwMobileFrontendConfig.messages[name] || '';
 	}
 
+	function registerModule( module ) {
+		modules.push( module );
+	}
+
+	function initModules() {
+		var module, i;
+		for( i = 0; i < modules.length; i++ ) {
+			module = MobileFrontend[ modules[ i ] ];
+			if( module && module.init ) {
+				module.init();
+			}
+		}
+	}
+	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var languageSelection, contentEl = document.getElementById( 'content' ),
 			mainPage = document.getElementById( 'mainpage' );
@@ -81,6 +95,7 @@ MobileFrontend = (function() {
 		}
 		fixBrowserBugs();
 
+		initModules();
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );
 	}
@@ -181,10 +196,10 @@ MobileFrontend = (function() {
 		xmlHttp.send();
 	};
 
-	init();
 	return {
 		init: init,
 		message: message,
+		registerModule: registerModule,
 		setting: function( name ) {
 			return mwMobileFrontendConfig.settings[name] || '';
 		},

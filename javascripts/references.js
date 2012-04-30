@@ -42,6 +42,8 @@ if( typeof jQuery !== 'undefined' ) {
 
 		function init( container, firstRun ) {
 			var el, close, lastLink, data, html, href, references = collect();
+			container = container || $("#content")[0];
+			firstRun = typeof( firstRun ) === 'undefined' ? true : false;
 			$("#mf-references").remove();
 			el = $( '<div id="mf-references"><div></div></div>' ).hide().
 				appendTo( document.body )[0];
@@ -123,7 +125,7 @@ if( typeof jQuery !== 'undefined' ) {
 				});
 			}
 		}
-		init( $("#content")[0], true );
+		MobileFrontend.registerModule( 'references' );
 		return {
 			init: init
 		};

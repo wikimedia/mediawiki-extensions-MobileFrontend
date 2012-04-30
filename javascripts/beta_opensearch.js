@@ -210,9 +210,10 @@ MobileFrontend.opensearch = (function() {
 			document.getElementById( 'search' ).blur();
 		}
 		document.getElementById( 'results' ).ontouchstart = hideKeyboard;
+		initClearSearch();
 	}
-	init();
-	initClearSearch();
+
+	MobileFrontend.registerModule( 'opensearch' );
 
 	return {
 		init: init,
