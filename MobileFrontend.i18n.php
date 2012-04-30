@@ -43,6 +43,7 @@ $messages['en'] = array (
 	'mobile-frontend-toggle-images' => 'Images $1 / $2',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
+	'mobile-frontend-footer-contributors' => 'Article by <a href="$1">contributors</a> like you',
 	'mobile-frontend-featured-article' => 'Today\'s Featured Article',
 	'mobile-frontend-news-items' => 'In The News',
 	'mobile-frontend-leave-feedback-title' => 'Give us feedback about your mobile site experience',

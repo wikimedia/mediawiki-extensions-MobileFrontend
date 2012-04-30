@@ -88,6 +88,8 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'languageSelection', $this->buildLanguageSelection() );
 
 		// footer
+		$link = $this->extMobileFrontend->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
+		$tpl->set( 'historyLink', $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text() );
 		$tpl->set( 'copyright', $this->getCopyright() );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
@@ -407,6 +409,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				$this->html( 'imagesToggle' ) ?></span>
 			</li>
 			<li class="notice">
+				<?php $this->html( 'historyLink' ) ?> |
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 			</li>
 		</ul>
