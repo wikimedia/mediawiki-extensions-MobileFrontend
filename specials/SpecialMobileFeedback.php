@@ -246,11 +246,10 @@ HTML;
 		try {
 			$apiClient = new MobileFrontendMWApiClient( $wgMFRemotePostFeedbackUrl,
 				$wgMFRemotePostFeedbackUsername, $wgMFRemotePostFeedbackPassword );
-			$apiClient->editArticle( $wgMFRemotePostFeedbackArticle, $subject, $message );
+			return $apiClient->editArticle( $wgMFRemotePostFeedbackArticle, $subject, $message );
 		} catch ( Exception $e ) {
 			return false;
 		}
-		return true;
 	}
 
 	public function validateSubject( $textfield ) {
@@ -441,7 +440,6 @@ class MobileFrontendMWApiClient {
 		$req->setCookieJar( $this->getCookieJar() );
 		$status = $req->execute();
 		if ( !$status->isGood() ) {
-			echo '!is good editing mw.o';
 			return false;
 		}
 		$response = $req->getContent();
