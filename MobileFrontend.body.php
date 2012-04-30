@@ -3,7 +3,7 @@
 class ExtMobileFrontend extends ContextSource {
 
 
-	public $isBetaGroupMember = true;
+	public $isBetaGroupMember = false;
 
 	protected $contentFormat = '';
 	protected $format;
