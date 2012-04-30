@@ -23,10 +23,6 @@ Change-Id: I57557fd2e359264853efadc1e5da1c9cbe6a0d97
 	cursor: pointer;
 }
 
-#mw-input-wpsubject {
-	height: 38px;
-}
-
 #mf-feedback-form textarea,
 #mw-input-wpsubject {
 	padding: 12px 16px;
