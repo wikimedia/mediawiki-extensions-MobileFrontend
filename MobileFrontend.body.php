@@ -449,7 +449,7 @@ class ExtMobileFrontend extends ContextSource {
 		return true;
 	}
 
-	private function checkUserStatus() {
+	public function checkUserStatus() {
 		wfProfileIn( __METHOD__ );
 
 		$optInCookie = $this->getOptInOutCookie();

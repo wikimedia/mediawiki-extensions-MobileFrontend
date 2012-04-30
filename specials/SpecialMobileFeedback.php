@@ -16,6 +16,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
 		} else {
+			$wgExtMobileFrontend->checkUserStatus();
 			if ( $wgExtMobileFrontend->isBetaGroupMember ) {
 				$html = $this->getFeedbackHtml();
 				$this->getOutput()->addHtml( $html );
