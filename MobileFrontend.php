@@ -214,18 +214,14 @@ function efExtMobileFrontendUnitTests( &$files ) {
 
 // ResourceLoader modules, so far CSS-only
 $wgResourceModules['ext.mobileFrontend'] = array(
-	'styles' => array( 'stylesheets/common.css', 'stylesheets/hacks.css' ),
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
-);
-$wgResourceModules['ext.mobileFrontendBeta'] = array(
-	'styles' => array( 'stylesheets/beta_common.css', 'stylesheets/footer.css',
+	'styles' => array( 'stylesheets/common.css', 'stylesheets/footer.css',
 		'stylesheets/contact-us.css', 'stylesheets/banner.css',
 		'stylesheets/header.css', 'stylesheets/sections.css',
 		'stylesheets/references.css', 'stylesheets/hacks.css' ),
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );
+$wgResourceModules['ext.mobileFrontendBeta'] = $wgResourceModules['ext.mobileFrontend'];
 $wgResourceModules['ext.mobileFrontend.filePage'] = array(
 	'styles' => array( 'stylesheets/filepage.css' ),
 	'localBasePath' => dirname( __FILE__ ),

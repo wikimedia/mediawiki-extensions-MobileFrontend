@@ -772,15 +772,6 @@ class ExtMobileFrontend extends ContextSource {
 	public function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
 			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
-				'javascripts/opensearch.js', 'javascripts/banner.js',
-				'javascripts/toggle.js', 'tests/js/test_toggle.js',
-				'tests/js/test_application.js', 'tests/js/test_opensearch.js', 'tests/js/test_banner.js' ),
-				'dependencies' => array( ),
-				'localBasePath' => dirname( __FILE__ ),
-				'remoteExtPath' => 'MobileFrontend',
-		);
-		$testModules['qunit']['ext.mobilefrontend.tests.beta'] = array(
-			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
 				'javascripts/beta_opensearch.js', 'tests/js/test_beta_opensearch.js',
 				'javascripts/references.js', 'tests/js/test_references.js' ),
 				'dependencies' => array( ),
