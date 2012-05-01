@@ -203,6 +203,7 @@ HTML;
 	}
 
 	protected function postLocalFeedback( $subject, $message ) {
+		global $wgExtMobileFrontend;
 		wfProfileIn( __METHOD__ );
 
 		// Is this really right? Are people really checking all of the different
