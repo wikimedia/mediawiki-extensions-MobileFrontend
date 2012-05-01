@@ -5,10 +5,6 @@ module("beta_opensearch.js - test highlight", {
 	setup: function() {
 		MFET.createFixtures();
 		MFEOS.init();
-	},
-	teardown: function() {
-		$("#betaos").remove();
-		MFET.cleanFixtures();
 	}
 });
 

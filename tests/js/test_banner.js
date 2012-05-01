@@ -30,13 +30,11 @@ test("remove cookie via write", function() {
 var BANNER_COOKIE_NAME = "zeroRatedBannerVisibility";
 module("MobileFrontend application.js: notifications", {
 	setup: function() {
-		MFEBT.cleanFixtures();
 		MFEB.removeCookie(BANNER_COOKIE_NAME);
 		MFEBT.createFixtures();
 		MFEB.init();
 	},
 	teardown: function() {
-		MFEBT.cleanFixtures();
 		MFEB.removeCookie(BANNER_COOKIE_NAME);
 	}
 });

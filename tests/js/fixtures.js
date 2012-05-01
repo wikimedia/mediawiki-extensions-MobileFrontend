@@ -9,14 +9,7 @@ var mwMobileFrontendConfig = {
 };
 
 window.MobileFrontendTests = {
-	cleanFixtures: function() {
-		// note the ZeroRatedMobileAccess extension attaches a banner to the qunit test suite
-		// this makes sure it is removed
-		$("#zero-rated-banner").remove();
-		$("#qunit-fixture-x").remove();
-	},
 	createFixtures: function() {
-		this.cleanFixtures();
 		$('<div id="qunit-fixture-x">').html(['<div id="test-env">',
 		'	<img id="logo" src="" alt="logo">',
 		'	<div id="nav" style="display:none">',
