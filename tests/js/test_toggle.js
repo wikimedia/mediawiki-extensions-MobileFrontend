@@ -5,7 +5,6 @@ module("MobileFrontend toggle.js: wm_toggle_section", {
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
-		MFET.cleanFixtures();
 		window.location.hash = "#";
 	}
 });

@@ -7,9 +7,6 @@ module("MobileFrontend application.js: utils", {
 		var section = '<div class="t_section_heading"></div>';
 		$('<div id="mfetest">' + section + '<div id="t_section_1">' + section + '</div>').
 			appendTo('#qunit-fixture');
-	},
-	teardown: function() {
-		$("#mfetest").remove();
 	}
 });
 
@@ -47,9 +44,6 @@ module("MobileFrontend application.js: logo click", {
 	setup: function() {
 		MFET.createFixtures();
 		MFE.init();
-	},
-	teardown: function() {
-		MFET.cleanFixtures();
 	}
 });
 
