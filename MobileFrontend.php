@@ -23,7 +23,7 @@ $wgExtensionCredits['other'][] = array(
 	'path' => __FILE__,
 	'name' => 'MobileFrontend',
 	'version' => '0.7.0',
-	'author' => '[http://www.mediawiki.org/wiki/User:Preilly Preilly]',
+	'author' => 'Patrick Reilly',
 	'descriptionmsg' => 'mobile-frontend-desc',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 );
