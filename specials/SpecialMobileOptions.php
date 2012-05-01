@@ -179,9 +179,9 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function enableImages( $enable = true ) {
-		if ( $this->checkMobileToken() ) {
-			$this->getRequest()->response()->setcookie( 'disableImages', $enable ? '' : '1' );
-		}
+		//if ( $this->checkMobileToken() ) {
+		$this->getRequest()->response()->setcookie( 'disableImages', $enable ? '' : '1' );
+		//}
 		$this->doReturnTo();
 	}
 
