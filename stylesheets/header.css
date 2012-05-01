@@ -6,11 +6,6 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 	display: block;
 }
 
-html[dir="rtl"] .clearlink {
-	left: 0;
-	right: auto;
-}
-
 .clearlink {
 	top: 9px;
 	right: -18px;
@@ -64,11 +59,6 @@ a.search-result-item {
 	vertical-align: middle; /* don't use line height here as placeholder on ripple positions incorrectly */
 }
 
-html[dir="rtl"] .search_bar .search {
-	/* @noflip */padding-right: 32px;
-}
-
-
 #search::-webkit-search-cancel-button {
 	-webkit-appearance: none;
 }
@@ -84,10 +74,6 @@ html[dir="rtl"] .search_bar .search {
 	left: 22px;
 	top: 9px;
 	width: 35px;
-}
-
-html[dir="rtl"] #searchbox {
-	padding: 0px 54px 0px 20px;
 }
 
 #zero-language-search.search_bar,
@@ -107,12 +93,6 @@ html[dir="rtl"] #searchbox {
 
 #zero-language-search.search_bar {
 	padding: 8px 32px 8px 0px;
-}
-
-html[dir="rtl"] #remove-results,
-html[dir="rtl"] #logo {
-	right: 18px;
-	left: auto;
 }
 
 .goButton {
@@ -146,11 +126,6 @@ reduce font size so alt text more legible */
 	font-size: 8px;
 }
 
-html[dir="rtl"] .goButton {
-	right: auto;
-	left: 0;
-}
-
 #searchbox a,
 #searchbox img {
 	border: 0px;
@@ -181,17 +156,8 @@ html[dir="rtl"] .goButton {
 	float: left;
 }
 
-html[dir="rtl"] #nav {
-	float: right;
-}
-
 #languageselection {
 	margin-right: 35px;
-}
-
-html[dir="rtl"] #languageselection {
-	margin-right: 0;
-	margin-left: 35px;
 }
 
 #nav form,
