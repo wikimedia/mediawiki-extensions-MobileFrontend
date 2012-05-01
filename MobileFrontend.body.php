@@ -774,6 +774,8 @@ class ExtMobileFrontend extends ContextSource {
 			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
 				'tests/js/test_application.js',
 				'javascripts/beta_opensearch.js', 'tests/js/test_beta_opensearch.js',
+				'javascripts/banner.js', 'tests/js/test_banner.js',
+				'javascripts/toggle.js', 'tests/js/test_toggle.js',
 				'javascripts/references.js', 'tests/js/test_references.js' ),
 				'dependencies' => array( ),
 				'localBasePath' => dirname( __FILE__ ),
