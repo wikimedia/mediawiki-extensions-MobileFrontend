@@ -252,8 +252,12 @@ class HtmlFormatter {
 			if ( $this->htmlMode ) {
 				if ( $element ) {
 					$body = $this->doc->getElementsByTagName( 'body' )->item( 0 );
+					$nodesArray = array();
 					foreach ( $body->childNodes as $node ) {
-						$body->removeChild( $node );
+						$nodesArray[] = $node;
+					}
+					foreach ( $nodesArray as $nodeArray ) {
+						$body->removeChild( $nodeArray );
 					}
 					$body->appendChild( $element );
 				}
