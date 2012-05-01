@@ -28,6 +28,16 @@ test("addClass", function() {
 	strictEqual($(el).hasClass("bar"), true);
 });
 
+test("hasClass", function() {
+	var el = $("#mfe-test-classes")[0];
+	strictEqual(MFE.utils(el).hasClass("test"), true, "testing classes #1");
+	strictEqual(MFE.utils(el).hasClass("hello-world"), true, "testing classes #2");
+	strictEqual(MFE.utils(el).hasClass("goodbye"), true, "testing classes #3");
+	strictEqual(MFE.utils(el).hasClass("camelCase"), true, "testing classes #4");
+	strictEqual(MFE.utils(el).hasClass("camelcase"), false, "testing classes #5 (case sensitive)");
+	strictEqual(MFE.utils(el).hasClass("hello"), false, "testing classes #6 (impartial matches)");
+});
+
 test("removeClass", function() {
 	var el = $("<div />")[0];
 	MFE.utils(el).addClass("foo");

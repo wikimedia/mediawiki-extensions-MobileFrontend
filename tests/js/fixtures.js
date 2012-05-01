@@ -46,6 +46,7 @@ window.MobileFrontendTests = {
 		'		</h2>',
 		'		<div class="content_block" id="content_2"  style="display:none"><p>Text with a <a href="#First_Section">section 1</a> link! and to <a href="#First_Section_2">section 1.2</a></p></div>',
 		'	</div>',
+		'<div id="mfe-test-classes" class="test hello-world goodbye camelCase">for testing classes</div>',
 		'</div>'].join("")).appendTo("#qunit-fixture");
 	},
 	triggerEvent: function(el, eventName) {
