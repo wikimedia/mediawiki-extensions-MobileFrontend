@@ -50,6 +50,7 @@ MobileFrontend.toggle = (function() {
 		}
 		
 		function checkHash() {
+			window.location.hash = '#_'; // clear existing hash for case of jump to top
 			var hash = this.hash || document.location.hash;
 			if ( hash.indexOf( '#' ) === 0 ) {
 				wm_reveal_for_hash( hash );
