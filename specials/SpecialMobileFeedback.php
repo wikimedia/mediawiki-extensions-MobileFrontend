@@ -194,7 +194,7 @@ HTML;
 		}
 
 		if ( $success === true ) {
-			$location = $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) );
+			$location = $wgExtMobileFrontend->getMobileUrl( $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) ) );
 			$this->getRequest()->response()->header( 'Location: ' . $location );
 			exit;
 		} else {
@@ -221,8 +221,6 @@ HTML;
 			);
 		}
 
-		$location = $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) );
-		$this->getRequest()->response()->header( 'Location: ' . $wgExtMobileFrontend->getMobileUrl( $location ) );
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
