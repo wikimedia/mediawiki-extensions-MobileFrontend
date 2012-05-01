@@ -417,10 +417,10 @@ class SkinMobileTemplate extends BaseTemplate {
 		<ul class="links">
 			<li>
 				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"><?php $this->msg( 'mobile-frontend-footer-contact' ) ?></a>
-			</li>
-			<li><?php $this->html( 'privacyLink' ) ?></li>
-			<li><?php $this->html( 'aboutLink' ) ?></li>
-			<li><?php $this->html( 'disclaimerLink' ) ?></li>
+			</li><li>
+			<?php $this->html( 'privacyLink' ) ?></li><li>
+			<?php $this->html( 'aboutLink' ) ?></li><li>
+			<?php $this->html( 'disclaimerLink' ) ?></li>
 		</ul>
 	</div>
 	</div>

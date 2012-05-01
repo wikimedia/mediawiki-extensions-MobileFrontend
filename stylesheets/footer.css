@@ -125,20 +125,12 @@ this is so that toggling can scroll it into view
 }
 
 #footer .links li {
-	display: block;
+	display: inline-block;
 	width: 25%;
 	font-size: 0.9em;
-	float: left;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-}
-
-#footer .links:after {
-	content: "";
-	clear: both;
-	position: relative;
-	display: block;
 }
 
 .togglingEnabled #footer .more,
