@@ -1,6 +1,4 @@
-var MFEOS = MobileFrontend.opensearch;
-var MFET = window.MobileFrontendTests;
-
+(function ($, MFEOS, MFET) {
 module("beta_opensearch.js - test highlight", {
 	setup: function() {
 		MFET.createFixtures();
@@ -74,3 +72,4 @@ test("writeResults with highlighted text (safe)", function() {
 	strictEqual($(pageLink).html(),
 		"<strong>&lt;script&gt;alert('FAIL'</strong>)&lt;/script&gt; should be safe", "check the highlight is correct");
 });
+}(jQuery, MobileFrontend.opensearch, window.MobileFrontendTests));

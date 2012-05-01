@@ -1,6 +1,4 @@
-var MFEB = MobileFrontend.banner;
-var MFEBT = window.MobileFrontendTests;
-
+(function ($, MFEB, MFET) {
 module("MobileFrontend banner.js: cookies");
 
 test("read and write cookies", function() {
@@ -31,7 +29,7 @@ var BANNER_COOKIE_NAME = "zeroRatedBannerVisibility";
 module("MobileFrontend application.js: notifications", {
 	setup: function() {
 		MFEB.removeCookie(BANNER_COOKIE_NAME);
-		MFEBT.createFixtures();
+		MFET.createFixtures();
 		MFEB.init();
 	},
 	teardown: function() {
@@ -52,3 +50,4 @@ test("MobileFrontend banner.js: dismiss notification", function() {
 	strictEqual($("#zero-rated-banner").is(":visible"), false, "banner should now be hidden");
 	strictEqual(cookieEnd, "off", "banner now set for dismissal");
 });
+}(jQuery, MobileFrontend.banner, MobileFrontendTests));
