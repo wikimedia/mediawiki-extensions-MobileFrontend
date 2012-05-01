@@ -8,9 +8,13 @@
 }
 
 #searchbox form {
-	padding-left: 44px;
+	padding-left: 64px;
 }
 
 #goButton {
 	height: 27px;
+}
+
+#logo {
+	z-index: 1; /* see bug 36384 (blackberry 9300) */
 }
