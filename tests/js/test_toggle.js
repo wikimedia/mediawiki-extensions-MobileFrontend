@@ -1,3 +1,4 @@
+( function ($, MFE, MFET) {
 module("MobileFrontend toggle.js: wm_toggle_section", {
 	setup: function() {
 		MFET.createFixtures();
@@ -49,3 +50,4 @@ test("clicking a heading toggles it", function() {
 	strictEqual(visibilityStart, false, "check content is hidden at start");
 	strictEqual($("#content_2").hasClass("openSection"), true, "check content is shown on a toggle");
 });
+}(jQuery, MobileFrontend, MobileFrontendTests));

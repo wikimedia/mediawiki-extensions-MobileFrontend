@@ -1,6 +1,4 @@
-var MFE = MobileFrontend;
-var MFET = window.MobileFrontendTests;
-
+(function ($, MFE, MFET) {
 module("MobileFrontend application.js: utils", {
 	setup: function() {
 		MFET.createFixtures();
@@ -60,4 +58,4 @@ test("logoClick", function() {
 	strictEqual(visible2, true, "toggle");
 	strictEqual(visible3, false, "toggle");
 });
-
+}(jQuery, MobileFrontend, MobileFrontendTests));
