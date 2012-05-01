@@ -3,7 +3,7 @@
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term,
-		search = document.getElementById( 'search' ),
+		search = document.getElementById( 'search' ), oldValue,
 		sb = document.getElementById( 'searchbox' ),
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
@@ -57,28 +57,7 @@ MobileFrontend.opensearch = (function() {
 			timer = setTimeout( function () { searchApi( term ); }, typingDelay );
 		}
 	};
-	var oldValue;
-	window.setInterval(function() {
-		var value = search.value;
-		if( value.length > 1 && value !== oldValue ) {
-			oldValue = value;
-			u( sb ).addClass( 'notEmpty' );
-			performSearch();
-		} else if( !value ) {
-			u( sb ).removeClass( 'notEmpty' );
-		}
-	}, typingDelay);
 
-	u( document.getElementById( 'searchForm' ) ).bind( 'submit', function( ev ) {
-		var el, newEv,
-			topResult = u( '.suggestions-result a' )[0];
-		if( topResult ) {
-			window.location.href = topResult.getAttribute( 'href' );
-			ev.preventDefault();
-		} else {
-			performSearch( ev );
-		}
-	});
 	function blurSearch(ev) {
 		if( search.value.length === 0) {
 			removeResults();
@@ -95,14 +74,39 @@ MobileFrontend.opensearch = (function() {
 			handler( ev );
 		}, 500);
 	}
-	u( search ).bind( 'focus',
-		function( ev ) {
-			waitForFocusBlur( ev, onfocus );
+
+	function enhanceElements() {
+		window.setInterval(function() {
+			var value = search.value;
+			if( value.length > 1 && value !== oldValue ) {
+				oldValue = value;
+				u( sb ).addClass( 'notEmpty' );
+				performSearch();
+			} else if( !value ) {
+				u( sb ).removeClass( 'notEmpty' );
+			}
+		}, typingDelay);
+
+		u( document.getElementById( 'searchForm' ) ).bind( 'submit', function( ev ) {
+			var el, newEv,
+				topResult = u( '.suggestions-result a' )[0];
+			if( topResult ) {
+				window.location.href = topResult.getAttribute( 'href' );
+				ev.preventDefault();
+			} else {
+				performSearch( ev );
+			}
 		});
-	u( search ).bind( 'blur',
-		function( ev ) {
-			waitForFocusBlur( ev, blurSearch );
-		});
+	
+		u( search ).bind( 'focus',
+			function( ev ) {
+				waitForFocusBlur( ev, onfocus );
+			});
+		u( search ).bind( 'blur',
+			function( ev ) {
+				waitForFocusBlur( ev, blurSearch );
+			});
+	}
 
 	function searchApi( term ) {
 		u( search ).addClass( 'searching' );
@@ -203,6 +207,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function init() {
+		enhanceElements();
 		if( document.activeElement && document.activeElement.id === 'search' ) {
 			onfocus();
 		}
