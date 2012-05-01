@@ -53,7 +53,7 @@ window.MobileFrontendTests = {
 		'		</h2>',
 		'		<div class="content_block" id="content_2"  style="display:none"><p>Text with a <a href="#First_Section">section 1</a> link! and to <a href="#First_Section_2">section 1.2</a></p></div>',
 		'	</div>',
-		'</div>'].join("")).appendTo(document.body);
+		'</div>'].join("")).appendTo("#qunit-fixture");
 	},
 	triggerEvent: function(el, eventName) {
 		// NOTE: this will not work on legacy browsers
@@ -62,5 +62,4 @@ window.MobileFrontendTests = {
 		el.dispatchEvent(ev);
 	}
 }
-var scriptPath = "/";
-window.MobileFrontendTests.createFixtures(); // setup so scripts can initialise
+

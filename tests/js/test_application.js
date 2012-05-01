@@ -3,8 +3,10 @@ var MFET = window.MobileFrontendTests;
 
 module("MobileFrontend application.js: utils", {
 	setup: function() {
+		MFET.createFixtures();
 		var section = '<div class="t_section_heading"></div>';
-		$('<div id="mfetest">' + section + '<div id="t_section_1">' + section + '</div>').appendTo(document.body);
+		$('<div id="mfetest">' + section + '<div id="t_section_1">' + section + '</div>').
+			appendTo('#qunit-fixture');
 	},
 	teardown: function() {
 		$("#mfetest").remove();
