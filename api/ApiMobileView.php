@@ -6,7 +6,7 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 2;
 
-	var $followRedirects, $noHeadings;
+	private $followRedirects, $noHeadings, $mainPage;
 
 	public function __construct( $main, $action ) {
 		parent::__construct( $main, $action );
@@ -42,6 +42,7 @@ class ApiMobileView extends ApiBase {
 		if ( !$title->exists() ) {
 			$this->dieUsageMsg( array( 'invalidtitle', $params['page'] ) );
 		}
+		$this->mainPage = $title->isMainPage();
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'normalizedtitle' => $title->getPrefixedText() )
@@ -52,6 +53,12 @@ class ApiMobileView extends ApiBase {
 		$missingSections = array();
 		if ( $requestedSections == 'all' ) {
 			$requestedSections = range( 0, count( $data['sections'] ) );
+		}
+		if ( $this->mainPage ) {
+			$requestedSections = array( 0 );
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'mainpage' => '' )
+			);
 		}
 		if ( isset( $prop['sections'] ) ) {
 			for ( $i = 0; $i <= count( $data['sections'] ); $i++ ) {
@@ -134,26 +141,34 @@ class ApiMobileView extends ApiBase {
 		);
 		$mf->removeImages( $noImages );
 		$mf->filterContent();
+		$mf->setIsMainPage( $this->mainPage );
 		$html = $mf->getText();
-		$data = array();
-		$data['sections'] = $parserOutput->getSections();
-		$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
-		$data['text'] = array();
-		$data['refsections'] = array();
-		foreach ( $chunks as $chunk ) {
-			if ( count( $data['text'] ) ) {
-				$chunk = "<h$chunk";
+		if ( $this->mainPage ) {
+			$data = array(
+				'sections' => array(),
+				'text' => array( $html ),
+			);
+		} else {
+			$data = array();
+			$data['sections'] = $parserOutput->getSections();
+			$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
+			$data['text'] = array();
+			$data['refsections'] = array();
+			foreach ( $chunks as $chunk ) {
+				if ( count( $data['text'] ) ) {
+					$chunk = "<h$chunk";
+				}
+				if ( $wgUseTidy && count( $chunks ) > 1 ) {
+					$chunk = MWTidy::tidy( $chunk );
+				}
+				if ( preg_match( '/<ol\b[^>]*?class="references"/', $chunk ) ) {
+					$data['refsections'][count( $data['text'] )] = true;
+				}
+				$data['text'][] = $chunk;
 			}
-			if ( $wgUseTidy && count( $chunks ) > 1 ) {
-				$chunk = MWTidy::tidy( $chunk );
+			if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
+				wfDebug( __METHOD__ . "(): mismatching number of sections from parser and split. oldid=$latest\n" );
 			}
-			if ( preg_match( '/<ol\b[^>]*?class="references"/', $chunk ) ) {
-				$data['refsections'][count( $data['text'] )] = true;
-			}
-			$data['text'][] = $chunk;
-		}
-		if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
-			wfDebug( __METHOD__ . "(): mismatching number of sections from parser and split. oldid=$latest\n" );
 		}
 		// store for the same time as original parser output
 		$wgMemc->set( $key, $data, $parserOutput->getCacheTime() );
@@ -228,7 +243,7 @@ class ApiMobileView extends ApiBase {
 			array(
 				array( 'missingtitle' ),
 				array( 'invalidtitle' ),
-			) 
+			)
 		);
 	}
 
