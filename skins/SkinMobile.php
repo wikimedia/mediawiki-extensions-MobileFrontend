@@ -153,7 +153,7 @@ class SkinMobile extends SkinMobileBase {
 		foreach ( $this->getLanguageUrls() as $languageUrl ) {
 			$languageUrlHref = $languageUrl['href'];
 			$languageUrlLanguage = $languageUrl['language'];
-			if ( in_array( $languageUrl['lang'], $supportedLanguages ) ) {
+			if ( is_array( $supportedLanguages ) && in_array( $languageUrl['lang'], $supportedLanguages ) ) {
 				if ( isset( $this->hookOptions['toggle_view_desktop'] ) ) {
 					$request = $this->getRequest();
 					$returnto = $request->appendQuery( $this->hookOptions['toggle_view_desktop'] );
