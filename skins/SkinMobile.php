@@ -8,7 +8,8 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgMobileResourceVersion,
-			   $wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS;
+			   $wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS,
+			   $wgMFFeedbackFallbackURL;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -95,9 +96,25 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
-		$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
-			array( 'returnto' => $this->getTitle()->getPrefixedText() )
-		);
+
+		// fix to prevent non-beta users from seeing the old feedback form -
+		// instead send them to the site's contact page, falling back to
+		// a predefined default if we can't figure out what the page is
+		if ( $frontend->isBetaGroupMember ) {
+			$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
+				array( 'returnto' => $this->getTitle()->getPrefixedText() )
+			);
+		} else {
+			// most projects seem to use locally configured 'Contact-url' messages
+			// to define the location of their contact pages
+			$feedbackTitle = Title::newFromText( wfMsg( 'Contact-url') );
+			if ( $feedbackTitle && $feedbackTitle->isKnown() ) {
+				$leaveFeedbackURL = $feedbackTitle->getLocalUrl();
+			} else {
+				$leaveFeedbackURL = htmlspecialchars( $wgMFFeedbackFallbackURL );
+			}
+		}
+
 		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
 		$imagesSwitchTitle = SpecialPage::getTitleFor( 'MobileOptions',
 			$frontend->imagesDisabled() ? 'EnableImages' : 'DisableImages'

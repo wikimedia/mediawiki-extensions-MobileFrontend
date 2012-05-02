@@ -166,6 +166,13 @@ $wgMFFeedbackLinks = array(
 $wgExtMobileFrontend = null;
 
 /**
+ * A fallback URL for a 'contact us' page if one cannot be dynamically
+ * determined for the project (using wfMsg( 'Contact-us' )). This is only
+ * used in non-beta mode.
+ */
+$wgMFFeedbackFallbackURL = '#';
+
+/**
  * Set properties in ExtMobileFrontend to arbitrary values
  * CAUTION: this should not be used in production environments
  *
