@@ -57,10 +57,11 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	max-height: 0;
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: max-height 0.4s ease-in-out;
-	-moz-transition: max-height 0.4s ease-in-out;
-	-o-transition: max-height 0.4s ease-in-out;
-	transition: max-height 0.4s ease-in-out;
+	-webkit-transform: translateZ(0); /* attempt to enable graphics processing unit */
+	-webkit-transition: max-height 0.2s ease-in-out;
+	-moz-transition: max-height 0.2s ease-in-out;
+	-o-transition: max-height 0.2s ease-in-out;
+	transition: max-height 0.2s ease-in-out;
 	margin-top: 14px;
 	border-bottom: solid 1px #E2E3E4;
 	-webkit-tap-highlight-color: rgba(0,0,0,0); /* fix for Bug 36196 */
