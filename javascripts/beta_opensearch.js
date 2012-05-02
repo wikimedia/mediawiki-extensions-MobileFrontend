@@ -218,7 +218,7 @@ MobileFrontend.opensearch = (function() {
 		initClearSearch();
 	}
 
-	MobileFrontend.registerModule( 'opensearch' );
+	MobileFrontend.registerModule( 'opensearch', 1000 );
 
 	return {
 		init: init,
