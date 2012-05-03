@@ -67,6 +67,9 @@ MobileFrontend.opensearch = (function() {
 	// this can lead to lag where focus and blur handlers are continously called
 	// this function allows us to delay them
 	function waitForFocusBlur( ev, handler ) {
+		if( navigator.userAgent.match(/Android 2\./) ) { // timeouts do not fire on focused input in android 2
+			handler( ev );
+		}
 		window.clearTimeout( focusBlurTimeout );
 		focusBlurTimeout = window.setTimeout(function() {
 			handler( ev );
