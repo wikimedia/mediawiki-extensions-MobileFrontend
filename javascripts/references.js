@@ -2,12 +2,7 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
-		var calculatePosition = function() {}, hashtest, options = {}, wasVisible;
-
-		hashtest = window.location.hash.substr(1).match(/refspeed:([0-9]*)/);
-		options.animationSpeed = hashtest ? parseInt( hashtest[1], 10 ) : 500;
-		hashtest = window.location.hash.substr(1).match(/refanimation:([a-z]*)/);
-		options.animation = hashtest ? hashtest[1] : null;
+		var calculatePosition = function() {}, wasVisible;
 
 		function collect() {
 			var references = {};
@@ -39,9 +34,23 @@ if( typeof jQuery !== 'undefined' ) {
 			};
 			$( document ).scroll(calculatePosition);
 		}
+		function getOptions( options ) {
+			var hashtest;
+			options = options || {};
+			if( !options.animationSpeed ) {
+				hashtest = window.location.hash.substr(1).match(/refspeed:([0-9]*)/);
+				options.animationSpeed = hashtest ? parseInt( hashtest[1], 10 ) : 500;
+			}
+			if( !options.animation ) {
+				hashtest = window.location.hash.substr(1).match(/refanimation:([a-z]*)/);
+				options.animation = hashtest ? hashtest[1] : null;
+			}
+			return options;
+		}
 
-		function init( container, firstRun ) {
+		function init( container, firstRun, options ) {
 			var el, close, lastLink, data, html, href, references = collect();
+			options = getOptions( options );
 			container = container || $("#content")[0];
 			firstRun = typeof( firstRun ) === 'undefined' ? true : firstRun;
 			$("#mf-references").remove();
