@@ -4,7 +4,6 @@ MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term,
 		search = document.getElementById( 'search' ), oldValue,
-		sb = document.getElementById( 'searchbox' ),
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
 		blankImg = MobileFrontend.setting('scriptPath') + '/extensions/MobileFrontend/stylesheets/images/blank.gif',
@@ -17,7 +16,6 @@ MobileFrontend.opensearch = (function() {
 
 	function onfocus() {
 		var rrd;
-		sb = document.getElementById( 'searchbox' );
 		header = document.getElementById( 'header' );
 		content = document.getElementById( 'content' );
 		footer = document.getElementById( 'footer' );
@@ -76,6 +74,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function enhanceElements() {
+		var sb = document.getElementById( 'searchForm' );
 		window.setInterval(function() {
 			var value = search.value;
 			if( value.length > 1 && value !== oldValue ) {

@@ -100,18 +100,10 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 
 #content_wrapper .section {
-	padding: 14px 12px 0 12px; /* effects #footer left,right padding */
-	margin-left: -22px; /* offset #content_wrapper margin */
-	margin-right: -22px;
+	padding: 14px 0 0 0; /* effects #footer left,right padding */
 	clear: both;
 }
 
 #content_wrapper .section h2 {
 	margin: 0;
-}
-
-.section h2,
-.section .content_block {
-	padding-left: 8px;
-	padding-right: 8px;
 }

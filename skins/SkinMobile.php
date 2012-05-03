@@ -368,10 +368,10 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 		?>
 	<div id="header">
-		<div id="searchbox">
+			<form id="searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
 			<?php if ( !$this->data['hideLogo'] ) { ?><img width="35" height="22" alt="Logo" id="logo" src="<?php
 			$this->text( 'wgMobileFrontendLogo' ) ?>" />
-			<?php } ?><form id="searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
+			<?php } ?>
 			<input type="hidden" value="Special:Search" name="title" />
 			<div id="sq" class="divclearable">
 				<input type="search" name="search" id="search" size="22" value="<?php $this->text( 'searchField' )
@@ -385,7 +385,6 @@ class SkinMobileTemplate extends BaseTemplate {
 					$this->msg( 'mobile-frontend-search-submit' ) ?>" title="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</button>
 		</form>
-		</div>
 		<?php if ( !$this->data['hideLogo'] ) { ?>
 		<div class='nav' id='nav'>
 			<b><?php $this->msg( 'mobile-frontend-language' ) ?></b><br/><?php $this->html( 'languageSelection' ) ?><br/>
