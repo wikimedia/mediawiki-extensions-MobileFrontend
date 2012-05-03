@@ -157,6 +157,18 @@ class DeviceDetection {
 				'footmenu' => 'default',
 				'with_layout' => 'application',
 				'css_file_name' => 'blackberry',
+				'supports_javascript' => true,
+				'supports_jquery' => false,
+				'disable_zoom' => true,
+				'parser' => 'html',
+				'disable_links' => true,
+			),
+			'blackberry-lt5' => array (
+				'view_format' => 'html',
+				'search_bar' => 'default',
+				'footmenu' => 'default',
+				'with_layout' => 'application',
+				'css_file_name' => 'blackberry',
 				'supports_javascript' => false,
 				'supports_jquery' => false,
 				'disable_zoom' => true,
@@ -357,7 +369,11 @@ class DeviceDetection {
 		} elseif ( preg_match( '/SAMSUNG/', $userAgent ) ) {
 			$formatName = 'capable';
 		} elseif ( preg_match( '/BlackBerry/', $userAgent ) ) {
-			$formatName = 'blackberry';
+			if( preg_match( '/BlackBerry[\/]*\/[1-4]\./', $userAgent ) ) {
+				$formatName = 'blackberry-lt5';
+			} else {
+				$formatName = 'blackberry';
+			}
 		}
 
 		if ( $formatName === '' ) {
