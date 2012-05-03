@@ -55,6 +55,18 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			),
+			'ie9' => array (
+				'view_format' => 'html',
+				'search_bar' => 'default',
+				'footmenu' => 'default',
+				'with_layout' => 'application',
+				'css_file_name' => 'default',
+				'supports_javascript' => true,
+				'supports_jquery' => true,
+				'disable_zoom' => false,
+				'parser' => 'html',
+				'disable_links' => true,
+			),
 			'android' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -290,6 +302,8 @@ class DeviceDetection {
 			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$formatName = 'operamini';
 			}
+		} else if ( preg_match( '/MSIE 9.0/', $userAgent ) ) {
+			$formatName = 'ie9';
 		} else if ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 			$formatName = 'operamobile';
 		} elseif ( preg_match( '/iPad.* Safari/', $userAgent ) ) {

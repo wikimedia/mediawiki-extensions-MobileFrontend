@@ -308,10 +308,14 @@ class SkinMobileTemplate extends BaseTemplate {
 		</div>
 	</div>
 		<?php $this->footer() ?>
-	<!--[if gt IE 9]><!-->
+	<!--[if gt IE 8]><!-->
 		<?php $this->html( 'bottomScripts' ) ?>
-	<script type='text/javascript'>MobileFrontend.init();</script>
-	<!--[endif]-->
+	<script type='text/javascript'>
+	window.onload = function() {
+		MobileFrontend.init();
+	};
+	</script>
+	<!--><![endif]-->
 	</body>
 	</html><?php
 	}
