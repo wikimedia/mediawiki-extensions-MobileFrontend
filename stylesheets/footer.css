@@ -148,8 +148,14 @@ this is so that toggling can scroll it into view
 	#footer {
 		padding: 12px 10px;
 	}
+	#logo {
+		left: 12px !important;
+	}
+	.goButton {
+		right: 12px !important;
+	}
 	#content_wrapper {
-		margin: 22px 12px;
+		margin: 0 12px;
 	}
 }
 

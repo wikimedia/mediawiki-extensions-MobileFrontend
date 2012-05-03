@@ -2,19 +2,6 @@
 	margin-top: 0; /* interferes with results positioning in blackberry 9300 (5.0.0.176)*/
 }
 
-/* blackberry 9300 search box rendering fixes */ 
-#searchbox {
-	padding-left: 2px;
-}
-
-#searchbox form {
-	padding-left: 64px;
-}
-
-#goButton {
-	height: 27px;
-}
-
 #logo {
 	z-index: 1; /* see bug 36384 (blackberry 9300) */
 }

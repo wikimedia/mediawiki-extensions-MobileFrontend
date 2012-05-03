@@ -77,7 +77,7 @@ a.search-result-item {
 }
 
 #zero-language-search.search_bar,
-#searchbox {
+#searchForm {
 	width: auto;
 	position: relative;
 	padding: 0px 40px 0px 73px; /* right = width of #logo (35px) + 22px + 16px
@@ -87,7 +87,7 @@ a.search-result-item {
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
 }
 
-.full-screen-search #searchbox {
+.full-screen-search #searchForm {
 	padding: 0px 40px 0px 54px; /* right = width of #logo (18px) + 22px + 16px */
 }
 
@@ -97,7 +97,7 @@ a.search-result-item {
 
 .goButton {
 	position: absolute;
-	right: -18px;
+	right: 22px;
 	left: auto;
 	top: 0px;
 	border: 0;
@@ -126,8 +126,8 @@ reduce font size so alt text more legible */
 	font-size: 8px;
 }
 
-#searchbox a,
-#searchbox img {
+#searchForm a,
+#searchForm img {
 	border: 0px;
 	vertical-align: middle;
 	position: absolute;
@@ -137,7 +137,7 @@ reduce font size so alt text more legible */
 	outline: none;
 }
 
-#searchbox #searchField {
+#searchField {
 	width: auto;
 }
 
@@ -227,8 +227,7 @@ full screen search css
 #header,
 #search,
 #sq,
-#header form,
-#searchbox {
+#header form {
 	position: relative;
 	right: 0;
 	top: 0;
@@ -243,10 +242,6 @@ full screen search css
 #search {
 	line-height: normal;
 	background: none; /* remove fennec default background */
-}
-
-#searchbox {
-	margin: 0;
 }
 
 .full-screen-search #sq {

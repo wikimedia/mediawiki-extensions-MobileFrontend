@@ -115,6 +115,7 @@ h3#sopa-notice {
 table {
 	display: block;
 	overflow-x: auto;
+	display: none;
 }
 
 table table {
@@ -265,7 +266,7 @@ img.thumbborder {
 
 #content_wrapper {
 	clear: both;
-	margin: 22px 22px;
+	margin: 0px 22px;
 }
 
 #content_wrapper p {
