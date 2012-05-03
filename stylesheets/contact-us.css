@@ -2,6 +2,9 @@
 moved from beta_common.css in
 Change-Id: I57557fd2e359264853efadc1e5da1c9cbe6a0d97
 */
+#feedback table textarea { /* old contact us form */
+	width: 100%;
+}
 #mf-feedback-form input[type=submit] {
 	background-color: #5E5E5E;
 	color: white;

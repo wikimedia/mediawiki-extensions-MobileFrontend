@@ -63,6 +63,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 			),
 			'subject' => array(
 				'type' => 'text',
+				'size' => false,
 			),
 			'message-desc' => array(
 				'type' => 'info',
@@ -73,7 +74,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 			'message' => array(
 				'type' => 'textarea',
 				'rows' => 5,
-				'cols' => 60,
+				'cols' => false,
 				'validation-callback' => array( $this, 'validateMessage' ),
 			),
 		);
