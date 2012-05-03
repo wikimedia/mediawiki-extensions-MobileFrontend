@@ -43,7 +43,7 @@ if( typeof jQuery !== 'undefined' ) {
 		function init( container, firstRun ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			container = container || $("#content")[0];
-			firstRun = typeof( firstRun ) === 'undefined' ? true : false;
+			firstRun = typeof( firstRun ) === 'undefined' ? true : firstRun;
 			$("#mf-references").remove();
 			el = $( '<div id="mf-references"><div></div></div>' ).hide().
 				appendTo( document.body )[0];
