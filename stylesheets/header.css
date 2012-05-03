@@ -82,8 +82,6 @@ a.search-result-item {
 	position: relative;
 	padding: 0px 40px 0px 73px; /* right = width of #logo (35px) + 22px + 16px
 	left = width of close button + 22px */
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
 }
 
