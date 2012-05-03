@@ -2,13 +2,13 @@
 moved from beta_common.css in
 Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 */
-.notEmpty .clearlink {
+.full-screen-search .notEmpty .clearlink {
 	display: block;
 }
 
 .clearlink {
 	top: 9px;
-	right: -18px;
+	right: 0;
 	width: 24px;
 	height: 20px;
 	background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
