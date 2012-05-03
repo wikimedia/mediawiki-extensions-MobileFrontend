@@ -7,6 +7,10 @@ class ApiMobileView extends ApiBase {
 	const CACHE_VERSION = 2;
 
 	private $followRedirects, $noHeadings, $mainPage;
+	/**
+	 * @var File
+	 */
+	private $file;
 
 	public function __construct( $main, $action ) {
 		parent::__construct( $main, $action );
@@ -37,10 +41,13 @@ class ApiMobileView extends ApiBase {
 
 		$title = Title::newFromText( $params['page'] );
 		if ( !$title ) {
-			$this->dieUsageMsg( array( 'missingtitle', $params['page'] ) );
-		}
-		if ( !$title->exists() ) {
 			$this->dieUsageMsg( array( 'invalidtitle', $params['page'] ) );
+		}
+		if ( $title->getNamespace() == NS_FILE ) {
+			$this->file = wfFindFile( $title );
+		}
+		if ( !$title->exists() && !$this->file ) {
+			$this->dieUsageMsg( array( 'missingtitle', $params['page'] ) );
 		}
 		$this->mainPage = $title->isMainPage();
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
@@ -111,7 +118,7 @@ class ApiMobileView extends ApiBase {
 		return $sections;
 	}
 
-	private function getData( $title, $noImages ) {
+	private function getData( Title $title, $noImages ) {
 		global $wgMemc, $wgUseTidy;
 
 		wfProfileIn( __METHOD__ );
@@ -123,6 +130,7 @@ class ApiMobileView extends ApiBase {
 				$this->getResult()->addValue( null, $this->getModuleName(),
 					array( 'redirected' => $newTitle->getPrefixedText() )
 				);
+				$title = $newTitle;
 			}
 		}
 		$parserOptions = ParserOptions::newFromContext( $this );
@@ -135,7 +143,11 @@ class ApiMobileView extends ApiBase {
 			return $data;
 		}
 		$parserOutput = $wp->getParserOutput( $parserOptions );
-		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $parserOutput->getText() ),
+		$html = $parserOutput->getText();
+		if ( $this->file && !$this->file->isLocal() ) {
+			$html = $this->getFilePage( $title, $html );
+		}
+		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ),
 			$title,
 			'XHTML'
 		);
@@ -143,7 +155,7 @@ class ApiMobileView extends ApiBase {
 		$mf->filterContent();
 		$mf->setIsMainPage( $this->mainPage );
 		$html = $mf->getText();
-		if ( $this->mainPage ) {
+		if ( $this->mainPage || $this->file ) {
 			$data = array(
 				'sections' => array(),
 				'text' => array( $html ),
@@ -174,6 +186,27 @@ class ApiMobileView extends ApiBase {
 		$wgMemc->set( $key, $data, $parserOutput->getCacheTime() );
 		wfProfileOut( __METHOD__ );
 		return $data;
+	}
+
+	private function getFilePage( Title $title, $html ) {
+		$file = $this->file;
+		$descUrl = $file->getDescriptionUrl();
+		$descText = $file->getDescriptionText();
+
+		$wrap = "<div class=\"sharedUploadNotice\">\n$1\n</div>\n";
+		$repo = $file->getRepo()->getDisplayName();
+
+		if ( $descUrl && $descText && !wfMessage( 'sharedupload-desc-here' )->isDisabled() ) {
+			$msg = 'sharedupload-desc-here';
+		} elseif ( $descUrl && !wfMessage( 'sharedupload-desc-there' )->isDisabled() ) {
+			$msg = 'sharedupload-desc-there';
+		} else {
+			$msg = 'sharedupload';
+			$descUrl = '';
+		}
+		$msg = wfMessage( $msg, $repo, $descUrl )->parse();
+		$sharedNotice = "<div class=\"sharedUploadNotice\">\n{$msg}\n</div>";
+		return $sharedNotice . $html . $descText;
 	}
 
 	public function getAllowedParams() {
