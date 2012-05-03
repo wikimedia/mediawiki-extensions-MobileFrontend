@@ -84,6 +84,10 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 .android4-0-2 .togglingEnabled .openSection.content_block, /* fix for bug 36190 */
 .togglingEnabled .content_block.togglefix {
 	max-height: none;
+}
+
+.togglingEnabled .content_block.togglefix,
+.noTransitions .togglingEnabled .content_block {
 	-webkit-transition: none;
 	-moz-transition: none;
 	-o-transition: none;
