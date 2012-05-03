@@ -55,6 +55,18 @@ class DeviceDetection {
 				'parser' => 'html',
 				'disable_links' => true,
 			),
+			'ie9' => array (
+				'view_format' => 'html',
+				'search_bar' => 'default',
+				'footmenu' => 'default',
+				'with_layout' => 'application',
+				'css_file_name' => 'default',
+				'supports_javascript' => true,
+				'supports_jquery' => true,
+				'disable_zoom' => false,
+				'parser' => 'html',
+				'disable_links' => true,
+			),
 			'android' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
@@ -140,6 +152,18 @@ class DeviceDetection {
 				'disable_links' => true,
 			),
 			'blackberry' => array (
+				'view_format' => 'html',
+				'search_bar' => 'default',
+				'footmenu' => 'default',
+				'with_layout' => 'application',
+				'css_file_name' => 'blackberry',
+				'supports_javascript' => true,
+				'supports_jquery' => false,
+				'disable_zoom' => true,
+				'parser' => 'html',
+				'disable_links' => true,
+			),
+			'blackberry-lt5' => array (
 				'view_format' => 'html',
 				'search_bar' => 'default',
 				'footmenu' => 'default',
@@ -290,6 +314,8 @@ class DeviceDetection {
 			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$formatName = 'operamini';
 			}
+		} else if ( preg_match( '/MSIE 9.0/', $userAgent ) ) {
+			$formatName = 'ie9';
 		} else if ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 			$formatName = 'operamobile';
 		} elseif ( preg_match( '/iPad.* Safari/', $userAgent ) ) {
@@ -343,7 +369,11 @@ class DeviceDetection {
 		} elseif ( preg_match( '/SAMSUNG/', $userAgent ) ) {
 			$formatName = 'capable';
 		} elseif ( preg_match( '/BlackBerry/', $userAgent ) ) {
-			$formatName = 'blackberry';
+			if( preg_match( '/BlackBerry[\/]*\/[1-4]\./', $userAgent ) ) {
+				$formatName = 'blackberry-lt5';
+			} else {
+				$formatName = 'blackberry';
+			}
 		}
 
 		if ( $formatName === '' ) {

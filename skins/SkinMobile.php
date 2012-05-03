@@ -65,7 +65,7 @@ class SkinMobile extends SkinMobileBase {
 	{$startScriptTag}{$javaScriptPath}beta_opensearch.{$resourceSuffix}js{$endScriptTag}
 	{$additionaljs}
 	{$filePageScript}";
-		$tpl->set( 'bottomScripts', $bottomScripts );
+		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
 		$tpl->set( 'stopMobileRedirectCookieDuration', $frontend->getUseFormatCookieDuration() );
@@ -308,10 +308,14 @@ class SkinMobileTemplate extends BaseTemplate {
 		</div>
 	</div>
 		<?php $this->footer() ?>
-	<!--[if gt IE 9]><!-->
+	<!--[if gt IE 8]><!-->
 		<?php $this->html( 'bottomScripts' ) ?>
-	<script type='text/javascript'>MobileFrontend.init();</script>
-	<!--[endif]-->
+	<script type='text/javascript'>
+	window.onload = function() {
+		MobileFrontend.init();
+	};
+	</script>
+	<!--><![endif]-->
 	</body>
 	</html><?php
 	}
