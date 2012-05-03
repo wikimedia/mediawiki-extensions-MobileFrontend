@@ -65,7 +65,7 @@ class SkinMobile extends SkinMobileBase {
 	{$startScriptTag}{$javaScriptPath}beta_opensearch.{$resourceSuffix}js{$endScriptTag}
 	{$additionaljs}
 	{$filePageScript}";
-		$tpl->set( 'bottomScripts', $bottomScripts );
+		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
 		$tpl->set( 'stopMobileRedirectCookieDuration', $frontend->getUseFormatCookieDuration() );
