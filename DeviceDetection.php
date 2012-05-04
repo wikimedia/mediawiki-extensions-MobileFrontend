@@ -369,7 +369,7 @@ class DeviceDetection {
 		} elseif ( preg_match( '/SAMSUNG/', $userAgent ) ) {
 			$formatName = 'capable';
 		} elseif ( preg_match( '/BlackBerry/', $userAgent ) ) {
-			if( preg_match( '/BlackBerry[\/]*\/[1-4]\./', $userAgent ) ) {
+			if( preg_match( '/BlackBerry[^\/]*\/[1-4]\./', $userAgent ) ) {
 				$formatName = 'blackberry-lt5';
 			} else {
 				$formatName = 'blackberry';

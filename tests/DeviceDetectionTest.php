@@ -22,7 +22,7 @@
 			array( 'palm_pre',  'Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0' ),
 			array( 'wii',       'Opera/9.00 (Nintendo Wii; U; ; 1309-9; en)' ),
 			array( 'operamini', 'Opera/9.50 (J2ME/MIDP; Opera Mini/4.0.10031/298; U; en)' ),
-			array( 'iphone',    'Opera/9.51 Beta (Microsoft Windows; PPC; Opera Mobi/1718; U; en)' ),
+			array( 'operamobile',    'Opera/9.51 Beta (Microsoft Windows; PPC; Opera Mobi/1718; U; en)' ),
 			array( 'kindle',    'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)' ),
 			array( 'kindle2',   'Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 824x1200; rotate)' ),
 			array( 'capable',   'Mozilla/5.0 (X11; Linux i686; rv:2.0.1) Gecko/20100101 Firefox/4.0.1' ),
