@@ -1,17 +1,17 @@
-#header {
+#mw-mf-header {
 	margin-top: 0; /* interferes with results positioning in blackberry 9300 (5.0.0.176)*/
 }
 
-#logo {
+#mw-mf-logo {
 	z-index: 1; /* see bug 36384 (blackberry 9300) */
 }
 
 /* blackberry 9300 search box rendering fixes */
-#searchForm {
+#mw-mf-searchForm {
 	padding-left: 22px !important;
 }
 
-#searchForm #search {
+#mw-mf-search {
 	left: 40px;
 	top: 12px;
 }

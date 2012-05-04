@@ -39,25 +39,6 @@ MobileFrontend = (function() {
 			contentEl.innerHTML = message( 'empty-homepage' );
 		}
 
-		languageSelection = document.getElementById( 'languageselection' );
-
-		function navigateToLanguageSelection() {
-			var url;
-			if ( languageSelection ) {
-				url = languageSelection.options[languageSelection.selectedIndex].value;
-				if ( url ) {
-					location.href = url;
-				}
-			}
-		}
-		utilities( languageSelection ).bind( 'change', navigateToLanguageSelection );
-
-		function logoClick() {
-			var n = document.getElementById( 'nav' ).style;
-			n.display = n.display === 'block' ? 'none' : 'block';
-		}
-		utilities( document.getElementById( 'logo' ) ).bind( 'click', logoClick );
-
 		function desktopViewClick() {
 			// get mf_mobileFormat cookie info
 			var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' ),
@@ -240,6 +221,7 @@ MobileFrontend = (function() {
 	return {
 		init: init,
 		message: message,
+		prefix: 'mw-mf-',
 		registerModule: registerModule,
 		setting: function( name ) {
 			return mwMobileFrontendConfig.settings[name] || '';

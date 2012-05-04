@@ -1,0 +1,14 @@
+#mw-mf-logo {
+	position: absolute;
+	height: 22px;
+	cursor: pointer;
+	left: 22px;
+	top: 9px;
+	width: 35px;
+}
+
+@media all and (max-width: 320px) {
+	#mw-mf-logo {
+		left: 12px !important;
+	}
+}

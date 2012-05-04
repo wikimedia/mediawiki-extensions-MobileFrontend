@@ -2,9 +2,10 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
-		numResults = 15, term,
+		numResults = 15, term, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message,
-		search = document.getElementById( 'search' ), oldValue,
+		search = document.getElementById(  mfePrefix + 'search' ),
+		oldValue,
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
 		blankImg = MobileFrontend.setting('scriptPath') + '/extensions/MobileFrontend/stylesheets/images/blank.gif',
@@ -17,7 +18,7 @@ MobileFrontend.opensearch = (function() {
 
 	function onfocus() {
 		var rrd, header, content, footer;
-		header = document.getElementById( 'header' );
+		header = document.getElementById(  mfePrefix + 'header' );
 		content = document.getElementById( 'content' );
 		footer = document.getElementById( 'footer' );
 
@@ -82,7 +83,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function enhanceElements() {
-		var sb = document.getElementById( 'searchForm' );
+		var sb = document.getElementById(  mfePrefix + 'searchForm' );
 		window.setInterval(function() {
 			var value = search.value;
 			if( value.length > 1 && value !== oldValue ) {
@@ -150,8 +151,11 @@ MobileFrontend.opensearch = (function() {
 
 	function writeResults( sections ) {
 		var results = document.getElementById( 'results' ), suggestions, i,
-			term = htmlEntities( document.getElementById( 'search' ).value ),
+			term, search,
 			section, escapedTerm, suggestionsResult, link, label;
+
+		search = document.getElementById(  mfePrefix + 'search' );
+		term = htmlEntities( search.value );
 
 		if ( !sections || sections.length < 1 ) {
 			printMessage( message( 'mobile-frontend-search-noresults' ) );
@@ -187,9 +191,9 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function initClearSearch() {
-		var clearSearch = document.getElementById( 'clearsearch' ),
+		var clearSearch = document.getElementById(  mfePrefix + 'clearsearch' ),
 			results = document.getElementById( 'results' ),
-			search = document.getElementById( 'search' );
+			search = document.getElementById( mfePrefix + 'search' );
 
 		function clearSearchBox( event ) {
 			// clicking clear on some browsers triggers blur event on search

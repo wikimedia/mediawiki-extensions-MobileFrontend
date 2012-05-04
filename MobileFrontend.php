@@ -121,8 +121,12 @@ $wgResourceModules['ext.mobileFrontend'] = array(
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );
+
 $wgResourceModules['ext.mobileFrontendBeta'] = $wgResourceModules['ext.mobileFrontend'];
+
+$wgResourceModules['ext.mobileFrontend']['styles'][] = 'stylesheets/mf-navigation-legacy.css';
 $wgResourceModules['ext.mobileFrontendBeta']['styles'][] = 'stylesheets/mf-navigation.css';
+
 $wgResourceModules['ext.mobileFrontend.filePage'] = array(
 	'styles' => array( 'stylesheets/filepage.css' ),
 	'localBasePath' => dirname( __FILE__ ),

@@ -1,11 +1,11 @@
-#searchForm #goButton {
+#mw-mf-searchForm #goButton {
 	border: 0;
 	background: url(images/s.gif) no-repeat top left;
 	height: 25px;
 	width: 27px;
 }
 
-#nav {
+#mw-mf-nav {
 	margin-top: 8px;
 }
 

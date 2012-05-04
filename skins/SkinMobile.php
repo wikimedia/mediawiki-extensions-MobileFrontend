@@ -19,8 +19,9 @@ class SkinMobile extends SkinMobileBase {
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
 		$language = $this->getLanguage();
+		$inBeta = $context->isBetaGroupMember();
 
-		$tpl->set( 'isBetaGroupMember', $context->isBetaGroupMember() );
+		$tpl->set( 'isBetaGroupMember', $inBeta );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		$tpl->set( 'title', $out->getPageTitle() );
@@ -57,6 +58,11 @@ class SkinMobile extends SkinMobileBase {
 			$additionaljs = "{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js{$endScriptTag}";
 		} else {
 			$additionaljs = "";
+		}
+		if( $inBeta ) {
+			$additionaljs .= "{$startScriptTag}{$javaScriptPath}mf-navigation.{$resourceSuffix}js{$endScriptTag}";
+		} else {
+			$additionaljs .= "{$startScriptTag}{$javaScriptPath}mf-navigation-legacy.{$resourceSuffix}js{$endScriptTag}";
 		}
 
 		$tpl->set( 'jQueryScript',
@@ -169,8 +175,14 @@ class SkinMobile extends SkinMobileBase {
 		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['supported_languages'] ) ) {
 			$supportedLanguages = $this->hookOptions['supported_languages'];
 		}
-		$output = Html::openElement( 'select',
-			array( 'id' => 'languageselection' ) );
+		$frontend = $this->extMobileFrontend;
+		$context = MobileContext::singleton();
+		$inBeta = $context->isBetaGroupMember();
+		
+		$output = $inBeta ?
+			Html::openElement( 'select' ) :
+			Html::openElement( 'select',
+				array( 'id' => 'languageselection' ) );
 		foreach ( $this->getLanguageUrls() as $languageUrl ) {
 			$languageUrlHref = $languageUrl['href'];
 			$languageUrlLanguage = $languageUrl['language'];
@@ -305,6 +317,11 @@ class SkinMobileTemplate extends BaseTemplate {
 		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
 	</head>
 	<body class="mobile">
+		<?php
+		if ( $this->data['isBetaGroupMember'] ) {
+			$this->navigationStart();
+		}
+		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<?php $this->searchBox() ?>
 	<div class='show' id='content_wrapper'>
@@ -315,6 +332,11 @@ class SkinMobileTemplate extends BaseTemplate {
 		</div>
 	</div>
 		<?php $this->footer() ?>
+		<?php
+		if ( $this->data['isBetaGroupMember'] ) {
+			$this->navigationEnd();
+		}
+		?>
 	<!--[if gt IE 7]><!-->
 		<?php $this->html( 'bottomScripts' ) ?>
 	<script type='text/javascript'>
@@ -325,6 +347,33 @@ class SkinMobileTemplate extends BaseTemplate {
 	<!--><![endif]-->
 	</body>
 	</html><?php
+	}
+
+	public function navigationStart() {
+		?>
+		<div id="mw-mf-viewport">
+		<div id="mw-mf-page-left">
+		<div id='mw-mf-content-left'>
+		<ul id="mw-mf-menu-main">
+			<li class='icon2'><a href="<?php $this->text( 'mainPageUrl' ) ?>">
+				<?php $this->msg( 'mobile-frontend-main-menu-featured' ) ?></a></li>
+			<li class='icon3'><a href="<?php $this->text( 'randomPageUrl' ) ?>" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
+			<li class='icon4 disabled'><?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?></li>
+			<li class='icon5 disabled'><?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?></li>
+			<li class='icon6 disabled'><?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?></li>
+		</ul>
+		</div>
+		</div>
+		<div id='mw-mf-page-center'>
+		<?php
+	}
+
+	public function navigationEnd() {
+		//close #mw-mf-page-center then viewport;
+		?>
+		</div>
+		</div>
+		<?php
 	}
 
 	public function prepareData() {
@@ -346,6 +395,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				'collapse-section' => wfMsg( 'mobile-frontend-hide-button' ),
 				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ), //@todo: use a separate message
 				'mobile-frontend-search-noresults' => wfMsg( 'mobile-frontend-search-noresults' ),
+				'contents-heading' => wfMsg( 'mobile-frontend-page-menu-contents-heading' ),
+				'language-heading' => wfMsg( 'mobile-frontend-page-menu-language-heading' ),
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
@@ -379,32 +430,78 @@ class SkinMobileTemplate extends BaseTemplate {
 			return;
 		}
 		?>
-	<div id="header">
-			<form id="searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
-			<?php if ( !$this->data['hideLogo'] ) { ?><img width="35" height="22" alt="Logo" id="logo" src="<?php
-			$this->text( 'wgMobileFrontendLogo' ) ?>" />
-			<?php } ?>
+	<div id="mw-mf-header">
+		<?php
+		if ( $this->data['isBetaGroupMember'] ) { ?>
+			<a href="#mw-mf-page-left" id="mw-mf-main-menu-button">
+				<img alt="menu"
+				src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif">
+			</a>
+		<?php
+		}
+		?>
+			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
+			<?php
+				if ( !$this->data['hideLogo'] ) { ?>
+				<img width="35" height="22" alt="Logo" id="mw-mf-logo" src="<?php
+					$this->text( 'wgMobileFrontendLogo' ) ?>" />
+			<?php
+				}
+			?>
 			<input type="hidden" value="Special:Search" name="title" />
-			<div id="sq" class="divclearable">
-				<input type="search" name="search" id="search" size="22" value="<?php $this->text( 'searchField' )
-					?>" autocomplete="off" maxlength="1024" class="search" placeholder="<?php $this->msg( 'mobile-frontend-placeholder' ) ?>" />
+			<div id="mw-mf-sq" class="divclearable">
+				<input type="search" name="search" id="mw-mf-search" size="22" value="<?php $this->text( 'searchField' )
+					?>" autocomplete="off" maxlength="1024" class="search"
+					placeholder="<?php $this->msg( 'mobile-frontend-placeholder' ) ?>"
+					/>
 				<img src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif" alt="<?php
-					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="clearsearch" title="<?php
+					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="mw-mf-clearsearch" title="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>"/>
 			</div>
+			<?php
+			if ( !$this->data['isBetaGroupMember'] ) { ?>
 			<button id='goButton' class='goButton' type='submit'>
 				<img src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif" alt="<?php
 					$this->msg( 'mobile-frontend-search-submit' ) ?>" title="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</button>
+			<?php } ?>
 		</form>
+		<?php
+		if ( $this->data['isBetaGroupMember'] ) { ?>
+		<a href="#mw-mf-nav" id="mw-mf-page-menu-button">
+		<img
+			alt="page menu"
+			src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif">
+		</a>
+		<?php
+		}
+		?>
 		<?php if ( !$this->data['hideLogo'] ) { ?>
-		<div class='nav' id='nav'>
+		<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
+			<div class='nav' id='nav'>
 			<b><?php $this->msg( 'mobile-frontend-language' ) ?></b><br/><?php $this->html( 'languageSelection' ) ?><br/>
 			<a href="<?php $this->text( 'mainPageUrl' ) ?>" id="homeButton" class="button"><?php $this->msg( 'mobile-frontend-home-button' ) ?></a>
 			<a href="<?php $this->text( 'randomPageUrl' ) ?>" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a>
-		</div><?php }
+			</div>
+		</div>
+		<?php } else {
+		// close header first
 		?>
+		</div>
+		<ul id="mw-mf-nav" class="sub-menu">
+			<li class="item2" id="mw-mf-toc"><?php $this->msg( 'mobile-frontend-page-menu-contents' ) ?></li>
+			<li class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language' ) ?></li>
+		</ul>
+		<?php
+		}
+		}
+		?>
+	<?php if ( $this->data['isBetaGroupMember'] ) { ?>
+	<div id="mw-mf-language-selection">
+		<?php $this->msg( 'mobile-frontend-language' ) ?><br/>
+		<?php $this->html( 'languageSelection' ) ?>
 	</div>
+	<?php } ?>
 	<div id="results"></div>
 	<?php
 	}

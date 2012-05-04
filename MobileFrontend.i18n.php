@@ -92,6 +92,14 @@ $messages['en'] = array (
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-unknown-option' => 'Unrecognised option "$1".',
 	'mobile-frontend-search-noresults' => 'No article titles match your search. Change your search, or press the keyboard search button to search inside articles.',
+	'mobile-frontend-main-menu-featured' => 'Featured',
+	'mobile-frontend-main-menu-nearby' => 'Nearby',
+	'mobile-frontend-main-menu-settings' => 'Settings',
+	'mobile-frontend-main-menu-contact' => 'Contact',
+	'mobile-frontend-page-menu-contents' => 'contents',
+	'mobile-frontend-page-menu-language' => 'language',
+	'mobile-frontend-page-menu-contents-heading' => 'Contents',
+	'mobile-frontend-page-menu-language-heading' => 'Read this article in',
 );
 
 /** Message documentation (Message documentation)
@@ -180,6 +188,14 @@ This buttons takes the user to a random page.',
 * $3 - last edit date',
 	'mobile-frontend-unknown-option' => 'Error message shown by Special:MobileOptions',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
+	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu',
+	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu',
+	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
+	'mobile-frontend-main-menu-contact' => 'Contact link text in main menu',
+	'mobile-frontend-page-menu-contents' => 'contents link text in secondary menu',
+	'mobile-frontend-page-menu-language' => 'language link text in secondary menu',
+	'mobile-frontend-page-menu-contents-heading' => 'Contents overlay heading',
+	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
 );
 
 /** Ṫuroyo (Ṫuroyo)
