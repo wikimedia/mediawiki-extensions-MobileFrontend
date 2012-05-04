@@ -62,6 +62,8 @@ $autoloadClasses = array (
 	'SkinMobileBase' => 'skins/SkinMobileBase',
 	'SkinMobileWML' => 'skins/SkinMobileWML',
 	'SkinMobileTemplateWML' => 'skins/SkinMobileTemplateWML',
+
+	'MFCompatCheck' => 'MFCompatCheck',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {

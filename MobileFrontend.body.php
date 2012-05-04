@@ -300,8 +300,17 @@ class ExtMobileFrontend extends ContextSource {
 	 */
 	private function removeQueryStringParameter( $url, $field ) {
 		wfProfileIn( __METHOD__ );
-		$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
-		$url = substr( $url, 0, -1 );
+		static $coreSupport;
+		if ( !isset( $coreSupport ) ) {
+			$coreSuport = MFCompatCheck::checkRemoveQueryString();
+		}
+
+		if ( $coreSupport ) {
+			$url = wfExpandUrl( $this->getRequest()->removeQueryValue( $field ) );
+		} else {
+			$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
+			$url = substr( $url, 0, -1 );
+		}
 		wfProfileOut( __METHOD__ );
 		return $url;
 	}
@@ -541,7 +550,7 @@ class ExtMobileFrontend extends ContextSource {
 		 * against a list of approved open proxies, which we don't actually
 		 * care about.
 		 */
-		$trustedProxyCheckFunction = ( function_exists( 'wfIsConfiguredProxy' ) ) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
+		$trustedProxyCheckFunction = ( MFCompatCheck::checkWfIsConfiguredProxy() ) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
 		$request = $this->getRequest();
 		if ( $trustedProxyCheckFunction( $ip ) ) {
 			$request->response()->header( 'Cache-Control: no-cache, must-revalidate' );
