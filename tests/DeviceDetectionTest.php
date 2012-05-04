@@ -31,6 +31,9 @@
 			array( 'wap2',      'NokiaN73-2/3.0-630.0.2 Series60/3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1' ),
 			array( 'psp',       'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)' ),
 			array( 'ps3',       'Mozilla/5.0 (PLAYSTATION 3; 1.00)' ),
+			array( 'ie9', 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)' ),
+			array( 'blackberry', 'BlackBerry9300/5.0.0.716 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/133' ),
+			array( 'blackberry-lt5', 'BlackBerry7250/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1' ),
 		);
 	}
 }
