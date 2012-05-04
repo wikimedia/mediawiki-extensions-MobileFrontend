@@ -112,6 +112,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$feedbackArticlePersonalLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-personal-link-text' )->escaped();
 		$feedbackArticleFactualLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-factual-link-text' )->escaped();
 		$feedbackArticleOtherLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-other-link-text' )->escaped();
+		$warning = $this->msg( 'mobile-frontend-leave-feedback-warning' );
 
 		/** Fetch form HTML **/
 		$form = new HTMLFormMobile( $this->getForm(), $this );
@@ -123,6 +124,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$form->setAction( $this->getRequest()->getRequestURL() . "#mf-feedback-form" );
 
 		$html = <<<HTML
+		{$warning}
 		<div class='feedback'>
 		<h2 class="section_heading" id="section_1">{$technicalProblemSectionHeader}</h2>
 		<div class="content_block" id="content_1">
