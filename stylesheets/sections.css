@@ -63,7 +63,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	-o-transition: max-height 0.2s ease-in-out;
 	transition: max-height 0.2s ease-in-out;
 	margin-top: 14px;
-	border-bottom: solid 1px #E2E3E4;
 	-webkit-tap-highlight-color: rgba(0,0,0,0); /* fix for Bug 36196 */
 }
 
@@ -106,6 +105,7 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 #content_wrapper .section {
 	padding: 14px 0 0 0; /* effects #footer left,right padding */
 	clear: both;
+	border-bottom: solid 1px #E2E3E4;
 }
 
 #content_wrapper .section h2 {
