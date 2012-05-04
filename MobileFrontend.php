@@ -67,7 +67,9 @@ $autoloadClasses = array (
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
-	$wgAutoloadClasses[$className] = "$cwd/$classFilename.php";
+	if ( !isset( $wgAutoloadClasses[$className] ) ) {
+		$wgAutoloadClasses[$className] = "$cwd/$classFilename.php";
+	}
 }
 
 /**
