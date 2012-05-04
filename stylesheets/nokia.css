@@ -1,1 +1,4 @@
 /* empty */
+#search {
+	background-color: white; /* see bug 36490 */
+}
