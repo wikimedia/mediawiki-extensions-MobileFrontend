@@ -1020,9 +1020,10 @@ $messages['cy'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Neges:',
 	'mobile-frontend-leave-feedback-submit' => 'Cyflwyner yr Adborth',
 	'mobile-frontend-leave-feedback-thanks' => 'Diolch am eich adborth!',
-	'mobile-frontend-language' => 'Iaith',
+	'mobile-frontend-language' => 'Iaith:',
 	'mobile-frontend-password' => 'Cyfrinair:',
 	'mobile-frontend-login' => 'Mewngofnodi',
+	'mobile-frontend-privacy-link-text' => 'Preifatrwydd',
 );
 
 /** Danish (Dansk)
@@ -2148,6 +2149,7 @@ $messages['he'] = array(
 	'mobile-frontend-news-items' => 'בחדשות',
 	'mobile-frontend-leave-feedback-title' => 'משוב על האתר למכשירים ניידים',
 	'mobile-frontend-leave-feedback-notice' => 'המשוב שלך עוזר לנו לספר את חוויית השימוש באתר למכשירים ניידים. הוא יישלח באופן פומבי (יחד עם שם המשתמש שלך, גרסה הדפדפן ומערכת ההפעלה), לדף "$1". נא לרשום משהו ברור בשורת הנושא, למשל "יש בעיית עיצוב עם טבלאות". המשוב שלכם כפוף לתנאי השימוש.',
+	'mobile-frontend-leave-feedback-warning' => 'נא לא לכתוב מידע אישי בהערה שלך.',
 	'mobile-frontend-leave-feedback-subject' => 'נושא:',
 	'mobile-frontend-leave-feedback-message' => 'הודעה:',
 	'mobile-frontend-leave-feedback-submit' => 'שליחת משוב',
@@ -3230,6 +3232,7 @@ $messages['lb'] = array(
 	'mobile-frontend-toggle-images' => 'Biller $1 / $2',
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'UN',
+	'mobile-frontend-footer-contributors' => 'Artikel vu <a href="$1">Mataarbechter</a> wéi Dir',
 	'mobile-frontend-news-items' => 'An den Neiegkeeten',
 	'mobile-frontend-leave-feedback-title' => 'Feedback vum mobile Site',
 	'mobile-frontend-leave-feedback-notice' => 'Äre Feedback hëlleft eis déi mobil Versioun vun eisem Site ze verbesseren. E gëtt ëffentlech op der Säit &quot;$1&quot; gewisen (zesumme mat Ärem Benotzernumm, der Versioun vun Ärem Browser a Betriibssystem). Versicht w.e.g. fir de Sujet vun Ärem Feedback informativ ze formuléieren, z. Bsp. "Formatéierungsproblemer bäi breeden Tabellen". Äre Feedback ënnerléit eisen allgemenge Conditiounen.',
