@@ -270,6 +270,7 @@ full screen search css
 	cursor: pointer;
 	margin: 0;
 	background-color: white;
+	list-style: none;
 }
 
 .full-screen-search .suggestions-result {
