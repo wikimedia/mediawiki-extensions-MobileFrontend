@@ -129,8 +129,8 @@ MobileFrontend.opensearch = (function() {
 		for ( i = 0; i < items.length; i++ ) {
 			item = items[i];
 			section = {
-				label: item.getElementsByTagName( 'Text' )[0].textContent,
-				value: item.getElementsByTagName( 'Url' )[0].textContent
+				label: u( item.getElementsByTagName( 'Text' )[0] ).text(),
+				value: u( item.getElementsByTagName( 'Url' )[0] ).text()
 			};
 			sections.push( section );
 		}

@@ -172,9 +172,33 @@ MobileFrontend = (function() {
 			el.parentNode.removeChild(el);
 		}
 
+		function getChildText( el ) {
+			var child, value = '';
+			for ( i = 0; i < el.childNodes.length; i++ ) {
+				child = el.childNodes[i];
+				if ( child.nodeType !== 8 ) { // ignore comment node
+					value += utilities( child ).text();
+				}
+			}
+			return value;
+		}
+
 		function text( str ) {
-			var label = document.createTextNode( str );
-			el.appendChild( label );
+			var i, label;
+			if( str ) {
+				label = document.createTextNode( str );
+				el.appendChild( label );
+			} else {
+				if( el.nodeType === 3 ) { // TEXT_NODE
+					return el.nodeValue;
+				} else if( typeof el.textContent === 'string' ) {
+					return el.textContent; // standards compliant
+				} else if( typeof el.innerText === 'string' ) {
+					return el.innerText;
+				} else {
+					return getChildText( el );
+				}
+			}
 		}
 
 		return {
