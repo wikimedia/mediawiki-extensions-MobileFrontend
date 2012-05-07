@@ -213,15 +213,6 @@ MobileFrontend = (function() {
 			text: text
 		};
 	}
-	utilities.updateQueryStringParameter = utilities.updateQueryStringParameter || function( a, k, v ) {
-		var re = new RegExp( "([?|&])" + k + "=.*?(&|$)", "i" ),
-			separator = a.indexOf( '?' ) !== -1 ? "&" : "?";
-		if ( a.match( re ) ) {
-			return a.replace( re, '$1' + k + "=" + v + '$2' );
-		} else {
-			return a + separator + k + "=" + v;
-		}
-	}
 	utilities.ajax = utilities.ajax || function( options ) {
 		var xmlHttp, url;
 		if ( window.XMLHttpRequest ) {
