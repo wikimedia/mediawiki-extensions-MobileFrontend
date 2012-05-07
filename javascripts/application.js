@@ -59,10 +59,12 @@ MobileFrontend = (function() {
 
 		function desktopViewClick() {
 			// get mf_mobileFormat cookie info
-			var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' );
-			var formatCookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' );
-			var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' );
-			var formatCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
+			var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' ),
+				formatCookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' ),
+				cookiePath = MobileFrontend.setting( 'useFormatCookiePath' ),
+				formatCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' ),
+				stopMobileRedirectCookieName, stopMobileRedirectCookieDuration, stopMobileRedirectCookieDomain,
+				hookOptions;
 
 			// convert from seconds to days
 			formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
@@ -71,15 +73,15 @@ MobileFrontend = (function() {
 			MobileFrontend.banner.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
 
 			// get stopMobileRedirect cookie info
-			var stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
-			var stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
-			var stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
-			var hookOptions = MobileFrontend.setting( 'hookOptions' );
+			stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
+			stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
+			stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
+			hookOptions = MobileFrontend.setting( 'hookOptions' );
 
 			// convert from seconds to days
 			stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
 
-			if ( hookOptions != 'toggle_view_desktop' ) {
+			if ( hookOptions !== 'toggle_view_desktop' ) {
 				// set the stopMobileRedirect cookie
 				MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
 			}
@@ -128,10 +130,11 @@ MobileFrontend = (function() {
 		}
 
 		function inArray( array, str ) {
+			var i;
 			if( array.indexOf ) {
 				return array.indexOf( str ) > -1;
 			} else {
-				for( var i = 0; i < array.length; i++ ) {
+				for( i = 0; i < array.length; i++ ) {
 					if( str === array[i] ) {
 						return true;
 					}
