@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALH///ek\u003d",
+        "filename": "javascripts/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-07T18:13:38Z",
+      "side": 1,
+      "message": "trailing ws",
+      "revId": "fe949356f0a20602e8ed32b05967b75d66d9de08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
