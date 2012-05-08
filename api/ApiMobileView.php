@@ -28,7 +28,6 @@ class ApiMobileView extends ApiBase {
 				array( 'mobiletoken' => SpecialMobileOptions::getMobileToken() )
 			);
 			wfProfileOut( __METHOD__ );
-			return $result;
 		}
 
 		$requestedSections = isset( $params['sections'] )
@@ -133,20 +132,28 @@ class ApiMobileView extends ApiBase {
 				$title = $newTitle;
 			}
 		}
-		$parserOptions = ParserOptions::newFromContext( $this );
 		$latest = $wp->getLatest();
-		$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
-		$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $parserCacheKey );
+		if ( $this->file ) {
+			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->file->getSha1() );
+			$cacheTime = 3600;
+		} else {
+			$parserOptions = ParserOptions::newFromContext( $this );
+			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
+			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $parserCacheKey );
+		}
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
 			wfProfileOut( __METHOD__ );
 			return $data;
 		}
-		$parserOutput = $wp->getParserOutput( $parserOptions );
-		$html = $parserOutput->getText();
-		if ( $this->file && !$this->file->isLocal() ) {
-			$html = $this->getFilePage( $title, $html );
+		if ( $this->file ) {
+			$html = $this->getFilePage( $title );
+		} else {
+			$parserOutput = $wp->getParserOutput( $parserOptions );
+			$html = $parserOutput->getText();
+			$cacheTime = $parserOutput->getCacheTime();
 		}
+
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ),
 			$title,
 			'XHTML'
@@ -183,30 +190,18 @@ class ApiMobileView extends ApiBase {
 			}
 		}
 		// store for the same time as original parser output
-		$wgMemc->set( $key, $data, $parserOutput->getCacheTime() );
+		$wgMemc->set( $key, $data, $cacheTime );
 		wfProfileOut( __METHOD__ );
 		return $data;
 	}
 
-	private function getFilePage( Title $title, $html ) {
-		$file = $this->file;
-		$descUrl = $file->getDescriptionUrl();
-		$descText = $file->getDescriptionText();
-
-		$wrap = "<div class=\"sharedUploadNotice\">\n$1\n</div>\n";
-		$repo = $file->getRepo()->getDisplayName();
-
-		if ( $descUrl && $descText && !wfMessage( 'sharedupload-desc-here' )->isDisabled() ) {
-			$msg = 'sharedupload-desc-here';
-		} elseif ( $descUrl && !wfMessage( 'sharedupload-desc-there' )->isDisabled() ) {
-			$msg = 'sharedupload-desc-there';
-		} else {
-			$msg = 'sharedupload';
-			$descUrl = '';
-		}
-		$msg = wfMessage( $msg, $repo, $descUrl )->parse();
-		$sharedNotice = "<div class=\"sharedUploadNotice\">\n{$msg}\n</div>";
-		return $sharedNotice . $html . $descText;
+	private function getFilePage( Title $title ) {
+		//HACK: HACK: HACK:
+		$page = new ImagePage( $title );
+		$page->setContext( $this->getContext() );
+		$page->view();
+		global $wgOut;
+		return $wgOut->getHTML();
 	}
 
 	public function getAllowedParams() {
