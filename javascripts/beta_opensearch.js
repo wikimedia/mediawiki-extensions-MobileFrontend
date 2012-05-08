@@ -21,7 +21,7 @@ MobileFrontend.opensearch = (function() {
 		footer = document.getElementById( 'footer' );
 
 		if ( !focused ) {
-			MobileFrontend.utils( document.body ).addClass( 'full-screen-search' );
+			u( document.body ).addClass( 'full-screen-search' );
 
 			rrd = document.getElementById( 'remove-results' );
 			if ( !rrd ) {
@@ -37,7 +37,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function removeResults() {
-		MobileFrontend.utils( document.body ).removeClass( 'full-screen-search' );
+		u( document.body ).removeClass( 'full-screen-search' );
 
 		if ( focused ) {
 			focused = false;
