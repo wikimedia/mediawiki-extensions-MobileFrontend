@@ -40,7 +40,6 @@ MobileFrontend.toggle = (function() {
 			u( btn ).text( showLabel );
 			return btn;
 		}
-		u( document.body ).addClass( 'togglingEnabled' );
 
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
