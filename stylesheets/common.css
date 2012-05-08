@@ -115,7 +115,6 @@ h3#sopa-notice {
 table {
 	display: block;
 	overflow-x: auto;
-	display: none;
 }
 
 table table {
