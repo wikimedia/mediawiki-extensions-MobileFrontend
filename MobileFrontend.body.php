@@ -302,11 +302,12 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileIn( __METHOD__ );
 		static $coreSupport;
 		if ( !isset( $coreSupport ) ) {
-			$coreSuport = MFCompatCheck::checkRemoveQueryString();
+			$coreSupport = MFCompatCheck::checkRemoveQueryString();
 		}
 
 		if ( $coreSupport ) {
-			$url = wfExpandUrl( $this->getRequest()->removeQueryValue( $field ) );
+			$queryString = $this->getRequest()->removeQueryValue( $field );
+			$url = $this->getTitle()->getFullUrl( $queryString );
 		} else {
 			$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
 			$url = substr( $url, 0, -1 );
