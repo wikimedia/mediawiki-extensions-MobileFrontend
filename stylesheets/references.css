@@ -28,6 +28,10 @@ Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 	padding: 22px 38px 22px 22px;  /* 38px is 22px padding + close button icon 16px */
 }
 
+#mf-references .mw-cite-backlink {
+	display: none;
+}
+
 #mf-references button {
 	top: 22px;
 	right: 22px; /* padding of #content_wrapper */
