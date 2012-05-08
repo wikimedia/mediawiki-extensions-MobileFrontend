@@ -66,6 +66,8 @@ class SkinMobile extends SkinMobileBase {
 	{$additionaljs}
 	{$filePageScript}";
 		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
+		$tpl->set( 'preambleScript', $device['supports_javascript'] ?
+			"document.documentElement.className = 'jsEnabled togglingEnabled page-loading';" : '' );
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
 		$tpl->set( 'stopMobileRedirectCookieDuration', $frontend->getUseFormatCookieDuration() );
@@ -295,6 +297,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'jQueryScript' ) ?>
 		<script type="text/javascript">
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
+			<?php $this->html( 'preambleScript' ) ?>
 		</script>
 	</head>
 	<body class="mobile">

@@ -27,12 +27,12 @@ MobileFrontend = (function() {
 				}
 			}
 		}
+		utilities( document.documentElement ).removeClass( 'page-loading' );
 	}
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var languageSelection, contentEl = document.getElementById( 'content' ),
 			mainPage = document.getElementById( 'mainpage' );
-		utilities( document.body ).addClass( 'jsEnabled' );
 
 		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
 			contentEl.innerHTML = message( 'empty-homepage' );

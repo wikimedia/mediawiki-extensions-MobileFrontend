@@ -40,7 +40,6 @@ MobileFrontend.toggle = (function() {
 			u( btn ).text( showLabel );
 			return btn;
 		}
-		u( document.body ).addClass( 'togglingEnabled' );
 
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
@@ -50,12 +49,13 @@ MobileFrontend.toggle = (function() {
 		}
 		
 		function checkHash() {
-			if( window.location.hash) {
-				window.location.hash = '#_'; // clear existing hash for case of jump to top
-			}
-			var hash = this.hash || document.location.hash;
+			var hash = window.location.hash;
 			if ( hash.indexOf( '#' ) === 0 ) {
 				wm_reveal_for_hash( hash );
+			}
+			if( hash ) {
+				window.location.hash = '#_'; // clear existing hash for case of jump to top
+				window.location.hash = hash;
 			}
 		}
 		checkHash();

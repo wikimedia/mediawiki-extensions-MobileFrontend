@@ -23,6 +23,14 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	-webkit-transition: opacity 0.4s ease-in 0.4s;
 }
 
+.page-loading .section {
+	opacity: 0.2;
+}
+
+.page-loading.togglingEnabled .section_heading button {
+	display: none;
+}
+
 .togglingEnabled .section_heading button {
 	display: inline-block;
 }
