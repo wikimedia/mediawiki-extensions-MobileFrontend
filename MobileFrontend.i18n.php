@@ -369,7 +369,7 @@ $messages['arc'] = array(
 	'mobile-frontend-hide-button' => 'ܛܫܝ',
 	'mobile-frontend-regular-site' => 'ܚܘܝ ܐܝܟ ܚܫܘܒܬܐ',
 	'mobile-frontend-view' => 'ܓܠܚܐ ܒܙܥܘܩܐ ܟܘܪܝܐ (ܡܫܢܝܢܐ)',
-	'mobile-frontend-language' => 'ܠܫܢܐ',
+	'mobile-frontend-language' => 'ܠܫܢܐ:',
 );
 
 /** Moroccan Spoken Arabic (Maġribi) */
@@ -693,7 +693,7 @@ $messages['bg'] = array(
 	'mobile-frontend-toggle-images' => 'Изображения  $1  /$2',
 	'mobile-frontend-off' => 'ИЗКЛ.',
 	'mobile-frontend-on' => 'ВКЛ.',
-	'mobile-frontend-footer-contributors' => 'Статия от <a href="<span class=" notranslate"="">$1 "> сътрудници</a> като Вас',
+	'mobile-frontend-footer-contributors' => 'Статия от <a href="$1">сътрудници</a> като вас',
 	'mobile-frontend-news-items' => 'В новините',
 	'mobile-frontend-leave-feedback-subject' => 'Тема:',
 	'mobile-frontend-leave-feedback-message' => 'Съобщение:',
