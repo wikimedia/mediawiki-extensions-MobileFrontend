@@ -48,6 +48,12 @@ if( typeof jQuery !== 'undefined' ) {
 			return options;
 		}
 
+		function getReferenceTop() {
+			// http://bugs.jquery.com/ticket/6724
+			var winHeight = window.innerHeight ? window.innerHeight : $( window ).height();
+			return winHeight + $( window ).scrollTop();
+		}
+
 		function init( container, firstRun, options ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			options = getOptions( options );
@@ -71,7 +77,7 @@ if( typeof jQuery !== 'undefined' ) {
 				} else if( options.animation === 'fade' ) {
 					$( '#mf-references' ).fadeOut( options.animationSpeed );
 				} else {
-					top = window.innerHeight + window.pageYOffset;
+					top = getReferenceTop();
 					if(! supportsPositionFixed() ) {
 						$( '#mf-references' ).show().animate( { top: top }, { duration: options.animationSpeed,
 								complete: function() {
@@ -109,7 +115,7 @@ if( typeof jQuery !== 'undefined' ) {
 						$( '#mf-references' ).fadeIn( options.animationSpeed );
 					} else {
 						if(! supportsPositionFixed() ) {
-							top = window.innerHeight + window.pageYOffset;
+							top = getReferenceTop();
 							oh = $( '#mf-references' ).outerHeight();
 							$( '#mf-references' ).show().css( { 'top': top } ).
 								animate( { top: top - oh }, options.animationSpeed );
@@ -128,6 +134,9 @@ if( typeof jQuery !== 'undefined' ) {
 					el.ontouchstart = cancelBubble;
 				});
 			if( firstRun ) {
+				$( window ).scroll(function( ev ) {
+					close();
+				});
 				$( document.body ).bind( 'click', close );
 				$( document.body ).bind( 'touchstart', function() {
 					$( '#mf-references' ).hide();

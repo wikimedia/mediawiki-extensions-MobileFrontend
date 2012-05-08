@@ -311,7 +311,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		</div>
 	</div>
 		<?php $this->footer() ?>
-	<!--[if gt IE 8]><!-->
+	<!--[if gt IE 7]><!-->
 		<?php $this->html( 'bottomScripts' ) ?>
 	<script type='text/javascript'>
 	window.onload = function() {
