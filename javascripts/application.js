@@ -116,6 +116,10 @@ MobileFrontend = (function() {
 		fixBrowserBugs();
 
 		initModules();
+
+		// TODO: make this a user preference
+		utilities( document.documentElement ).addClass( 'noTransitions' );
+
 		// Try to scroll and hide URL bar
 		window.scrollTo( 0, 1 );
 	}
