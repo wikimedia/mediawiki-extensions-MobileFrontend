@@ -15,7 +15,7 @@ MobileFrontend.opensearch = (function() {
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
 	function onfocus() {
-		var rrd;
+		var rrd, header, content, footer;
 		header = document.getElementById( 'header' );
 		content = document.getElementById( 'content' );
 		footer = document.getElementById( 'footer' );
