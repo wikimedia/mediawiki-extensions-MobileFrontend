@@ -9,7 +9,7 @@ class SkinMobile extends SkinMobileBase {
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgMobileResourceVersion,
 			   $wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS,
-			   $wgMFFeedbackFallbackURL;
+			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -26,6 +26,9 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
+		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
+			$wgMFCustomLogos['copyright'] :
+			"{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png";
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device['supports_jquery'] );
@@ -145,7 +148,7 @@ class SkinMobile extends SkinMobileBase {
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( $wgLanguageCode === 'en' ) { //@fixme: de-WMFize
 			$license = Html::element( 'img', array(
-				'src' => "{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png",
+				'src' => $copyrightLogo,
 				'class' => 'license',
 				'alt' => "{$footerSitename} ®"
 			) );
