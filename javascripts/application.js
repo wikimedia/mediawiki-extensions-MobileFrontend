@@ -32,7 +32,8 @@ MobileFrontend = (function() {
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var languageSelection, contentEl = document.getElementById( 'content' ),
-			mainPage = document.getElementById( 'mainpage' );
+			mainPage = document.getElementById( 'mainpage' ),
+			scrollY;
 
 		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
 			contentEl.innerHTML = message( 'empty-homepage' );
@@ -115,13 +116,16 @@ MobileFrontend = (function() {
 		scoreBrowser();
 		fixBrowserBugs();
 
+		// Try to scroll and hide URL bar
+		scrollY = window.scrollY || 0;
+		if( !window.location.hash && scrollY < 10 ) {
+			window.scrollTo( 0, 1 );
+		}
+
 		initModules();
 
 		// TODO: make this a user preference
 		utilities( document.documentElement ).addClass( 'noTransitions' );
-
-		// Try to scroll and hide URL bar
-		window.scrollTo( 0, 1 );
 	}
 
 	utilities = typeof jQuery  !== 'undefined' ? jQuery : function( el ) {
