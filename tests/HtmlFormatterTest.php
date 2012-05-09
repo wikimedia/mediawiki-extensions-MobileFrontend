@@ -3,7 +3,7 @@
 /**
  * @group MobileFrontend
  */
-class HtmlFormatterTest extends MediaWikiTestCase {
+class MF_HtmlFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getHtmlData
 	 */
