@@ -20,6 +20,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	}
 
 	public function getXhtmlData() {
+		$enableSections = function ( MobileFormatter $mf ) {
+			$mf->enableExpandableSections();
+		};
+		$longLine = "\n" . str_repeat( 'A', 5000 );
 		return array(
 			// down with infoboxes
 			array(
@@ -40,6 +44,23 @@ Foobar!</div></div></div>',
 <div id="mf-custom" title="custom">blah</div>',
 				'<div id="mainpage"><h2>In The News</h2><div id="mp-itn">bar</div><h2>custom</h2><div id="mf-custom" title="custom">blah</div><br clear="all"></div>',
 				function( MobileFormatter $mf ) { $mf->setIsMainPage( true ); },
+			),
+			// \n</h2> in headers
+			array(
+				'<h2><span class="editsection">[<a href="/w/index.php?title=California_Gold_Rush&amp;action=edit&amp;section=2" title="Edit section: Forty-niners">edit</a>]</span> <span class="mw-headline" id="Forty-niners">Forty-niners</span>
+
+ 	 </h2>' . $longLine,
+				'<div class="section"><h2 class="section_heading" id="section_1" onclick="javascript:wm_toggle_section(1);"><button class="section_heading show" section_id="1">Show</button><button class="section_heading hide" section_id="1">Hide</button><span id="Forty-niners">Forty-niners</span></h2><div class="content_block" id="content_1">'
+					. $longLine . '</div></div>',
+				$enableSections
+			),
+			// Bug 36670
+			array(
+				'<h2><span class="editsection">[<a href="/w/index.php?title=California_Gold_Rush&amp;action=edit&amp;section=1" title="Edit section: History">edit</a>]</span> <span class="mw-headline" id="History"><span id="Overview"></span>History</span></h2>'
+					. $longLine,
+				'<div class="section"><h2 class="section_heading" id="section_1" onclick="javascript:wm_toggle_section(1);"><button class="section_heading show" section_id="1">Show</button><button class="section_heading hide" section_id="1">Hide</button><span id="History"><span id="Overview"></span>History</span></h2><div class="content_block" id="content_1">'
+					. $longLine . '</div></div>',
+				$enableSections
 			),
 		);
 	}
