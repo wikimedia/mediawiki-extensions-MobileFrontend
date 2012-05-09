@@ -5,3 +5,13 @@
 #logo {
 	z-index: 1; /* see bug 36384 (blackberry 9300) */
 }
+
+/* blackberry 9300 search box rendering fixes */
+#searchForm {
+	padding-left: 22px !important;
+}
+
+#searchForm #search {
+	left: 40px;
+	top: 12px;
+}
