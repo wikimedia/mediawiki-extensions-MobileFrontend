@@ -87,13 +87,14 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	-webkit-tap-highlight-color: normal; /* fix for Bug 36196 */
 }
 
-.android4-0-2 .togglingEnabled .openSection.content_block, /* fix for bug 36190 */
+.android4-0-2.togglingEnabled .openSection.content_block, /* fix for bug 36190 */
 .togglingEnabled .content_block.togglefix {
 	max-height: none;
 }
 
+.noTransitions .section_heading button,
 .togglingEnabled .content_block.togglefix,
-.noTransitions .togglingEnabled .content_block {
+.noTransitions.togglingEnabled .content_block {
 	-webkit-transition: none;
 	-moz-transition: none;
 	-o-transition: none;
