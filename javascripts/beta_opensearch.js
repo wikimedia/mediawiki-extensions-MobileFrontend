@@ -22,6 +22,7 @@ MobileFrontend.opensearch = (function() {
 
 		if ( !focused ) {
 			u( document.body ).addClass( 'full-screen-search' );
+			window.scrollTo( 0, 1 );
 
 			rrd = document.getElementById( 'remove-results' );
 			if ( !rrd ) {
