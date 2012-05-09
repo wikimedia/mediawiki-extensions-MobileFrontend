@@ -70,7 +70,7 @@ class HtmlFormatter {
 	/**
 	 * @return bool: Whether this class should output HTML
 	 */
-	public function isHtmlMode() {
+	public function getHtmlMode() {
 		return $this->htmlMode;
 	}
 
@@ -284,6 +284,37 @@ class HtmlFormatter {
 	}
 
 	/**
+	 * @param $selector: CSS selector to parse
+	 * @param $type
+	 * @param $rawName
+	 * @return bool: Whether the selector was successfully recognised
+	 */
+	protected function parseSelector( $selector, &$type, &$rawName ) {
+		if ( strpos( $selector, '.' ) === 0 ) {
+			$type = 'CLASS';
+			$rawName = substr( $selector, 1 );
+		} elseif ( strpos( $selector, '#' ) === 0 ) {
+			$type = 'ID';
+			$rawName = substr( $selector, 1 );
+		} elseif ( strpos( $selector, '.' ) !== 0 &&
+			strpos( $selector, '.' ) !== false )
+		{
+			$type = 'TAG_CLASS';
+			$rawName = $selector;
+		} elseif ( strpos( $selector, '[' ) === false
+			&& strpos( $selector, ']' ) === false )
+		{
+			$type = 'TAG';
+			$rawName = $selector;
+		} else {
+			wfDebug( __METHOD__ . ": unrecognised selector '$selector'\n" );
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
 	 * Transforms CSS selectors into an internal representation suitable for processing
 	 * @return array
 	 */
@@ -299,8 +330,9 @@ class HtmlFormatter {
 		foreach ( $this->itemsToRemove as $itemToRemove ) {
 			$type = '';
 			$rawName = '';
-			CssDetection::detectIdCssOrTag( $itemToRemove, $type, $rawName );
-			$removals[$type][] = $rawName;
+			if ( $this->parseSelector( $itemToRemove, $type, $rawName ) ) {
+				$removals[$type][] = $rawName;
+			}
 		}
 
 		if ( $this->removeImages ) {

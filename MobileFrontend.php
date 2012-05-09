@@ -37,7 +37,6 @@ $wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.ph
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 
-	'CssDetection' => 'CssDetection',
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlFormatter' => 'HtmlFormatter',
 	'MobileFormatter' => 'MobileFormatter',
