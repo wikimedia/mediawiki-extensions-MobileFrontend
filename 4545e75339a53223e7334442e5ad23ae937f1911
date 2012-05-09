@@ -33,6 +33,24 @@
       "revId": "4545e75339a53223e7334442e5ad23ae937f1911",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALX///cs\u003d",
+        "filename": "tests/MobileFormatterTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-09T18:52:37Z",
+      "side": 1,
+      "message": "I take it back - apparently this white space is intentional. There should probably be a code comment lest someone else thinks this WS was in error.",
+      "parentUuid": "AAAALX///c4\u003d",
+      "revId": "4545e75339a53223e7334442e5ad23ae937f1911",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
