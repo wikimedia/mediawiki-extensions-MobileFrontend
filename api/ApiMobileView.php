@@ -156,7 +156,7 @@ class ApiMobileView extends ApiBase {
 
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ),
 			$title,
-			'XHTML'
+			'HTML'
 		);
 		$mf->removeImages( $noImages );
 		$mf->filterContent();

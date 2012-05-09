@@ -431,12 +431,12 @@ class ExtMobileFrontend extends ContextSource {
 		if ( $format === 'wml' ) {
 			return 'WML';
 		} elseif ( $format === 'html' ) {
-			return 'XHTML';
+			return 'HTML';
 		}
 		if ( $format === 'mobile-wap' ) {
 			return 'WML';
 		}
-		return 'XHTML';
+		return 'HTML';
 	}
 
 	/**
@@ -723,7 +723,7 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileIn( __METHOD__ . '-getText' );
 		$formatter->setIsMainPage( $this->getTitle()->isMainPage() );
 		$device = $this->getDevice();
-		if ( $this->getContentFormat() == 'XHTML'
+		if ( $this->getContentFormat() == 'HTML'
 			&& $device['supports_javascript'] === true
 			&& $this->getRequest()->getText( 'search' ) == '' )
 		{
