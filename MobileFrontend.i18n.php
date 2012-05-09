@@ -1092,6 +1092,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Filzstift
  * @author Geitost
  * @author Kghbln
  * @author Metalhead64
@@ -1110,7 +1111,7 @@ $messages['de'] = array(
 	'mobile-frontend-wml-continue' => 'Weiter ...',
 	'mobile-frontend-wml-back' => 'Zurück ...',
 	'mobile-frontend-view' => 'Mobile Ansicht',
-	'mobile-frontend-view-desktop' => 'Arbeitsfläche',
+	'mobile-frontend-view-desktop' => 'Klassische Ansicht',
 	'mobile-frontend-view-mobile' => 'Mobil',
 	'mobile-frontend-opt-in-message' => 'Am Beta-Test teilnehmen?',
 	'mobile-frontend-opt-in-yes-button' => 'Ja',
@@ -2727,7 +2728,7 @@ $messages['it'] = array(
 	'mobile-frontend-footer-contributors' => 'Voce scritta da <a href="$1">contributori</a> come te',
 	'mobile-frontend-news-items' => 'Novità',
 	'mobile-frontend-leave-feedback-title' => 'Commenti sul sito per dispositivi mobili',
-	'mobile-frontend-leave-feedback-notice' => 'I tuoi commenti ci aiutano a migliorare la tua soddisfazione per il sito per dispositivi mobili. Sarà pubblicata (insieme al tuo nome utente, versione del browser e sistema operativo) alla pagina "$1". Per favore, scegli un oggetto descrittivo (ad esempio, "Problemi di formattazione con tabelle larghe"). Il tuo commento è soggetto alle condizioni d\'uso.',
+	'mobile-frontend-leave-feedback-notice' => 'I tuoi commenti ci aiutano a migliorare la tua soddisfazione del sito per dispositivi mobili. Sarà pubblicata (insieme al tuo nome utente, versione del browser e sistema operativo) alla pagina "$1". Per favore, scegli un oggetto descrittivo (ad esempio, "Problemi di formattazione con tabelle larghe"). Il tuo commento è soggetto alle condizioni d\'uso.',
 	'mobile-frontend-leave-feedback-warning' => 'Si prega di non inserire informazioni personali nel tuo commento.',
 	'mobile-frontend-leave-feedback-subject' => 'Oggetto:',
 	'mobile-frontend-leave-feedback-message' => 'Messaggio:',
@@ -3828,6 +3829,7 @@ $messages['ms'] = array(
 	'mobile-frontend-news-items' => 'Dalam Berita',
 	'mobile-frontend-leave-feedback-title' => 'Maklum balas tapak mudah alih',
 	'mobile-frontend-leave-feedback-notice' => 'Maklum balas anda membantu kami untuk meningkatkan pengalaman anda ketika melayari tapak mudah alih. Ia akan disiarkan secara umum (dengan nama pengguna, versi pelayar dan sistem pengendalian) pada laman &quot;$1&quot;. Sila cuba memilih baris subjek yang informatif, cth. "Masalah ketika memformatkan jadual yang lebar". Maklum balas anda tertakluk kepada terma-terma penggunaan kami.',
+	'mobile-frontend-leave-feedback-warning' => 'Tolong jangan sertakan maklumat peribadi dalam komen anda.',
 	'mobile-frontend-leave-feedback-subject' => 'Perkara:',
 	'mobile-frontend-leave-feedback-message' => 'Pesanan:',
 	'mobile-frontend-leave-feedback-submit' => 'Hantar Maklum Balas',
@@ -4325,7 +4327,7 @@ $messages['pl'] = array(
 	'mobile-frontend-feedback-no-message' => 'Wprowadź tutaj wiadomość',
 	'mobile-frontend-feedback-edit-summary' => '$1 - opublikowano automatycznie przy użyciu [[Special:MobileFeedback|mobilnego narzędzia przesyłania komentarzy]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Dziękujemy za przesłaną opinię!',
-	'mobile-frontend-language' => 'Język',
+	'mobile-frontend-language' => 'Język:',
 	'mobile-frontend-username' => 'Nazwa użytkownika:',
 	'mobile-frontend-password' => 'Hasło:',
 	'mobile-frontend-login' => 'Zaloguj się',
@@ -5533,6 +5535,7 @@ $messages['tpi'] = array(
 /** Turkish (Türkçe)
  * @author Cekli829
  * @author Emperyan
+ * @author Hcagri
  * @author Incelemeelemani
  * @author Suelnur
  */
@@ -5540,7 +5543,7 @@ $messages['tr'] = array(
 	'mobile-frontend-search-submit' => 'Git',
 	'mobile-frontend-featured-article' => 'Haftanın Seçkin Maddesi',
 	'mobile-frontend-home-button' => 'Ana',
-	'mobile-frontend-random-button' => 'Rasgele',
+	'mobile-frontend-random-button' => 'Rastgele',
 	'mobile-frontend-back-to-top-of-section' => 'Bir Bölüm Geri Atla',
 	'mobile-frontend-show-button' => 'Göster',
 	'mobile-frontend-hide-button' => 'Gizle',
@@ -5557,7 +5560,11 @@ $messages['tr'] = array(
 	'mobile-frontend-password' => 'Şifre:',
 	'mobile-frontend-login' => 'Oturum aç',
 	'mobile-frontend-clear-search' => 'Temizle',
+	'mobile-frontend-about-link-text' => 'Hakkında',
+	'mobile-frontend-footer-more' => 'daha fazla',
+	'mobile-frontend-footer-less' => 'daha az',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-contact' => 'İletişim',
 );
 
 /** Tatar (Cyrillic script) (Татарча)
