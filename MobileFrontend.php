@@ -189,7 +189,9 @@ $wgMFConfigProperties = array();
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
 
-$wgAPIPropModules['extracts'] = 'ApiQueryExtracts';
+if ( version_compare( $wgVersion, '1.20alpha', '<' ) ) {
+	$wgAPIPropModules['extracts'] = 'ApiQueryExtracts';
+}
 $wgAPIModules['mobileview'] = 'ApiMobileView';
 
 $wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
