@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX///c8\u003d",
+        "filename": "MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-09T18:46:29Z",
+      "side": 1,
+      "message": "Is there ever an instance of there being something other than a space/carriage return/newline after the closing \u003c/span\u003e tag? If not, then this should be fine - otherwise, we should make sure to accommodate for that as well.",
+      "revId": "4545e75339a53223e7334442e5ad23ae937f1911",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALX///c4\u003d",
+        "filename": "tests/MobileFormatterTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-09T18:46:29Z",
+      "side": 1,
+      "message": "WS",
+      "revId": "4545e75339a53223e7334442e5ad23ae937f1911",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
