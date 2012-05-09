@@ -317,7 +317,7 @@ class DeviceDetection {
 		} else if ( preg_match( '/MSIE 9.0/', $userAgent ) ||
 				preg_match( '/MSIE 8.0/', $userAgent ) ) {
 			$formatName = 'ie';
-		} else if( preg_match( 'MSIE', $userAgent ) ) {
+		} else if( preg_match( '/MSIE/', $userAgent ) ) {
 			$formatName = 'html';
 		} else if ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 			$formatName = 'operamobile';
