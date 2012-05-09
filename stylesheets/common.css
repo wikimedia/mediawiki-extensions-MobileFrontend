@@ -294,3 +294,14 @@ img.thumbborder {
 #image_wrapper {
 	margin: 8px 0 8px -3px;
 }
+
+/* TODO: move into MediaWiki:Common.css ? */
+@media all and (max-width: 500px) {
+	.mobile div.tright,
+	.mobile div.floatright,
+	.mobile table.floatright {
+		float: none;
+		clear: none;
+		margin: auto;
+	}
+}
