@@ -8,7 +8,7 @@ abstract class SkinMobileBase extends SkinTemplate {
 	protected $hookOptions;
 
 	public static function factory( ExtMobileFrontend $extMobileFrontend ) {
-		if ( $extMobileFrontend->getContentFormat() == 'XHTML' ) {
+		if ( $extMobileFrontend->getContentFormat() == 'HTML' ) {
 			$skinClass = 'SkinMobile';
 		} else {
 			$skinClass = 'SkinMobileWML';

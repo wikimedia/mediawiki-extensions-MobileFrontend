@@ -5,12 +5,12 @@
  */
 class MobileFormatterTest extends MediaWikiTestCase {
 	/**
-	 * @dataProvider getXhtmlData
+	 * @dataProvider getHtmlData
 	 */
-	public function testXhtmlTransform( $input, $expected, $callback = false ) {
+	public function testHtmlTransform( $input, $expected, $callback = false ) {
 		$t = Title::newFromText( 'Mobile' );
 		$input = str_replace( "\r", '', $input ); // "yay" to Windows!
-		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $input ), $t, 'XHTML' );
+		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $input ), $t, 'HTML' );
 		if ( $callback ) {
 			$callback( $mf );
 		}
@@ -19,7 +19,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
 	}
 
-	public function getXhtmlData() {
+	public function getHtmlData() {
 		$enableSections = function ( MobileFormatter $mf ) {
 			$mf->enableExpandableSections();
 		};

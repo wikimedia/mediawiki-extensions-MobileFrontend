@@ -62,8 +62,8 @@ class MobileFormatter extends HtmlFormatter {
 	 *
 	 * @param string $html: Text to process
 	 * @param Title $title: Title to which $html belongs
-	 * @param string $format: 'XHTML' or 'WML'
-	 * @param WmlContext $wmlContext: Context for creation of WML cards, can be omitted if $format == 'XHTML'
+	 * @param string $format: 'HTML' or 'WML'
+	 * @param WmlContext $wmlContext: Context for creation of WML cards, can be omitted if $format == 'HTML'
 	 * @throws MWException
 	 */
 	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
@@ -130,7 +130,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	protected function onHtmlReady( $html ) {
 		switch ( $this->format ) {
-			case 'XHTML':
+			case 'HTML':
 				if ( $this->expandableSections && !$this->mainPage && strlen( $html ) > 4000 ) {
 					$html = $this->headingTransform( $html );
 				}
@@ -167,7 +167,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param array $matches
 	 * @return string
 	 */
-	private function headingTransformCallbackXHTML( $matches ) {
+	private function headingTransformCallbackHTML( $matches ) {
 		wfProfileIn( __METHOD__ );
 		if ( isset( $matches[0] ) ) {
 			preg_match( '/id="([^"]*)"/', $matches[0], $headlineMatches );
@@ -297,7 +297,7 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Prepares headings in WML mode, makes sections expandable in XHTML mode
+	 * Prepares headings in WML mode, makes sections expandable in HTML mode
 	 * @param string $s
 	 * @return string
 	 */

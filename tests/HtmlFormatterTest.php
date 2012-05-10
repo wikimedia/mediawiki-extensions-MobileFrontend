@@ -8,9 +8,8 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 	 * @dataProvider getHtmlData
 	 */
 	public function testTransform( $input, $expected, $callback = false ) {
-		$t = Title::newFromText( 'Mobile' );
 		$input = self::normalize( $input );
-		$formatter = new HtmlFormatter( HtmlFormatter::wrapHTML( $input ), $t, 'XHTML' );
+		$formatter = new HtmlFormatter( HtmlFormatter::wrapHTML( $input ) );
 		if ( $callback ) {
 			$callback( $formatter );
 		}
