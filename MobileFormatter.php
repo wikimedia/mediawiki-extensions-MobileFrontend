@@ -116,7 +116,6 @@ class MobileFormatter extends HtmlFormatter {
 	 * Performs final transformations to mobile format and returns resulting HTML/WML
 	 *
 	 * @param DOMElement|string|null $element: ID of element to get HTML from or false to get it from the whole tree
-
 	 * @return string: Processed HTML
 	 */
 	public function getText( $element = null ) {
