@@ -101,6 +101,18 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	transition: none;
 }
 
+/* when no transitions resort to display block/none for open/closed sections */
+.noTransitions.togglingEnabled .openSection.content_block,
+.noTransitions.togglingEnabled content_block {
+	max-height: none; /* turn off max height used for transitions */
+	height: auto;
+	display: none;
+}
+
+.noTransitions.togglingEnabled .openSection.content_block {
+	display: block;
+}
+
 .section_anchors a {
 	display: block;
 }
