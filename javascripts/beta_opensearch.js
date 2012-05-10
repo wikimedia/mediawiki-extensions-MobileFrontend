@@ -92,17 +92,6 @@ MobileFrontend.opensearch = (function() {
 				u( sb ).removeClass( 'notEmpty' );
 			}
 		}, typingDelay);
-
-		u( document.getElementById( 'searchForm' ) ).bind( 'submit', function( ev ) {
-			var el, newEv,
-				topResult = u( '.suggestions-result a' )[0];
-			if( topResult ) {
-				window.location.href = topResult.getAttribute( 'href' );
-				ev.preventDefault();
-			} else {
-				performSearch( ev );
-			}
-		});
 	
 		u( search ).bind( 'focus',
 			function( ev ) {
