@@ -296,6 +296,9 @@ img.thumbborder {
 }
 
 /* TODO: move into MediaWiki:Common.css ? */
+.mobile div.searchresult {
+	width: 100%;
+}
 @media all and (max-width: 500px) {
 	.mobile div.tright,
 	.mobile div.floatright,
