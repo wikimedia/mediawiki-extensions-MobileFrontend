@@ -2350,6 +2350,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-news-items' => 'W powěsćach',
 	'mobile-frontend-leave-feedback-title' => 'Komentary wo mobilnym sydle',
 	'mobile-frontend-leave-feedback-notice' => 'Twoje komentary pomhaja nam mobilne sydło polěpšić. Wozjewja so z wužiwarskim mjenom, wersiju wobhladowaka a dźěłowym systemom na stronje &quot;$1&quot;. Prošu wubjer wuprajiwu temu, na př. "Problemy při formatowanju tabelow". Twoje komentary podleža našim wužiwarskim wuměnjenjam.',
+	'mobile-frontend-leave-feedback-warning' => 'Prošu njezapřimiće wosobinske informacije do swojich komentarow, chibazo sy přezjedny, zo so twoje informacije wozjawja.',
 	'mobile-frontend-leave-feedback-subject' => 'Tema:',
 	'mobile-frontend-leave-feedback-message' => 'Powěsć:',
 	'mobile-frontend-leave-feedback-submit' => 'Komentar wotpósłać',
@@ -3832,7 +3833,7 @@ $messages['ms'] = array(
 	'mobile-frontend-news-items' => 'Dalam Berita',
 	'mobile-frontend-leave-feedback-title' => 'Maklum balas tapak mudah alih',
 	'mobile-frontend-leave-feedback-notice' => 'Maklum balas anda membantu kami untuk meningkatkan pengalaman anda ketika melayari tapak mudah alih. Ia akan disiarkan secara umum (dengan nama pengguna, versi pelayar dan sistem pengendalian) pada laman &quot;$1&quot;. Sila cuba memilih baris subjek yang informatif, cth. "Masalah ketika memformatkan jadual yang lebar". Maklum balas anda tertakluk kepada terma-terma penggunaan kami.',
-	'mobile-frontend-leave-feedback-warning' => 'Tolong jangan sertakan maklumat peribadi dalam komen anda.',
+	'mobile-frontend-leave-feedback-warning' => 'Melainkan anda bersetuju untuk mendedahkan maklumat anda kepada umum, tolong jangan sertakan maklumat peribadi dalam komen anda.',
 	'mobile-frontend-leave-feedback-subject' => 'Perkara:',
 	'mobile-frontend-leave-feedback-message' => 'Pesanan:',
 	'mobile-frontend-leave-feedback-submit' => 'Hantar Maklum Balas',
@@ -4692,6 +4693,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (Русский)
+ * @author AlexSm
  * @author Bouron
  * @author DR
  * @author Dim Grits
@@ -4730,7 +4732,7 @@ $messages['ru'] = array(
 	'mobile-frontend-on' => 'ВКЛ',
 	'mobile-frontend-news-items' => 'Новости',
 	'mobile-frontend-leave-feedback-title' => 'Отзыв о мобильной версии сайта',
-	'mobile-frontend-leave-feedback-notice' => 'Ваш отзыв поможет нам улучшить использование мобильного сайта. Он будет опубликован публично (вместе с вашим именем пользователя, версией браузера и операционной системы) на странице &quot;$1&quot;. Пожалуйста, попробуйте выбрать информативную сюжетную линию, например «вопросы форматирования широких таблиц». Ваш отзыв должен быть в соответствии с условиями использования.',
+	'mobile-frontend-leave-feedback-notice' => 'Ваш отзыв поможет нам улучшить использование мобильного сайта. Он будет опубликован публично (вместе с вашим именем пользователя, версией браузера и операционной системы) на странице &quot;$1&quot;. Пожалуйста, попробуйте выбрать информативную сюжетную линию, например «вопросы форматирования широких таблиц». Ваш отзыв должен соответствовать условиям использования.',
 	'mobile-frontend-leave-feedback-subject' => 'Тема:',
 	'mobile-frontend-leave-feedback-message' => 'Сообщение:',
 	'mobile-frontend-leave-feedback-submit' => 'Отправить отзыв',
@@ -5538,6 +5540,7 @@ $messages['tpi'] = array(
 /** Turkish (Türkçe)
  * @author Cekli829
  * @author Emperyan
+ * @author Erdemaslancan
  * @author Hcagri
  * @author Incelemeelemani
  * @author Suelnur
@@ -5558,7 +5561,7 @@ $messages['tr'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'Evet',
 	'mobile-frontend-opt-out-no-button' => 'Hayır',
 	'mobile-frontend-leave-feedback-subject' => 'Konu',
-	'mobile-frontend-language' => 'Dil',
+	'mobile-frontend-language' => 'Dil:',
 	'mobile-frontend-username' => 'Kullanıcı adı:',
 	'mobile-frontend-password' => 'Şifre:',
 	'mobile-frontend-login' => 'Oturum aç',
