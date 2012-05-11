@@ -81,3 +81,13 @@ table.infobox th[colspan="3"] {
 	text-align: center;
 	width: auto !important;
 }
+
+/* bug 34878 */
+.reflist,
+.references-column-width,
+.references-column-count-2 {
+	-moz-column-count: auto !important;
+	-webkit-column-count: auto !important;
+	column-count: auto !important;
+	-webkit-column-width: auto !important;
+}
