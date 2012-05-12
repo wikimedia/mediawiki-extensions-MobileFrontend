@@ -189,8 +189,6 @@ $messages['ace'] = array(
 	'mobile-frontend-show-button' => 'Peuleumah',
 	'mobile-frontend-hide-button' => 'Peusom',
 	'mobile-frontend-regular-site' => 'Eu on nyoe bak {{SITENAME}} biyasa',
-	'mobile-frontend-explain-disable' => "Peue Droeneuh yakin neujak pumate versi seluler {{SITENAME}}? Meunyo neupileh <b>Pumate</b>, maka mulai jinoe, 'oh watee neusaweue halaman {{SITENAME}}, Droeneuh hana geupeuarah le u versi seluler {{SITENAME}} nyoe.",
-	'mobile-frontend-contact-us' => "Meunyo Droeneuh na teunanyong atawa beunalaih neupeu'et laju surat ubak kamoe bak mobile@wikipedia.org",
 );
 
 /** Afrikaans (Afrikaans)
@@ -375,7 +373,6 @@ $messages['arc'] = array(
 /** Moroccan Spoken Arabic (Maġribi) */
 $messages['ary'] = array(
 	'mobile-frontend-search-submit' => 'Sir',
-	'mobile-frontend-search-results' => "N-Naṫa'ij dyal l-beḫṫ",
 	'mobile-frontend-featured-article' => 'L-Maqal dyal lyoma',
 	'mobile-frontend-home-button' => 'Sṫiqbal',
 	'mobile-frontend-random-button' => 'Ĝel l-lah',
@@ -592,10 +589,6 @@ $messages['bar'] = array(
 	'mobile-frontend-placeholder' => 'Gib do deih Suach eih ...',
 	'mobile-frontend-dismiss-notification' => 'dé Benoochrichtigung schliassen',
 	'mobile-frontend-clear-search' => 'Laarn',
-);
-
-/** Belarusian (Беларуская) */
-$messages['be'] = array(
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
@@ -1618,8 +1611,6 @@ $messages['ext'] = array(
 	'mobile-frontend-show-button' => 'Muestral',
 	'mobile-frontend-hide-button' => 'Açonchal',
 	'mobile-frontend-regular-site' => 'Guipal esta páhina ena Güiquipeya estándal',
-	'mobile-frontend-error-page-text' => "La velsión móvil de Güiquipeya está entovia en esarrollu i estamus labutandu entensamenti p'arregral los marrus entelnus. Amus recibiu esti marru i lo arregraremus de que mos vagui. Pol favol, echali una guipaina de vidi en cuandu á si el marru á siu solventau.",
-	'mobile-frontend-explain-disable' => "Estas siguru de que quiés esatival la velsión móvil la Güiquipeya? Si lihis <b>Esatival</b>, a partil d'agora, cuandu vesitis Güiquipeya, nu sedrás rederihiu a la vista móvil de Güiquipeya.",
 );
 
 /** Persian (فارسی)
@@ -1894,6 +1885,85 @@ $messages['frp'] = array(
 	'mobile-frontend-placeholder' => 'Buchiéd voutra rechèrche ique...',
 );
 
+/** Northern Frisian (Nordfriisk)
+ * @author Murma174
+ */
+$messages['frr'] = array(
+	'mobile-frontend-desc' => 'Iinstelang för mobiil aperooten',
+	'mobile-frontend-search-submit' => 'Widjer',
+	'mobile-frontend-featured-article' => 'Artiikel faan a muun',
+	'mobile-frontend-home-button' => 'Tüs',
+	'mobile-frontend-random-button' => 'Tufaal',
+	'mobile-frontend-back-to-top-of-section' => 'En straal turag gung',
+	'mobile-frontend-show-button' => 'Wise',
+	'mobile-frontend-hide-button' => 'Fersteeg',
+	'mobile-frontend-empty-homepage' => 'Detdiar homepage skal noch iinracht wurd.
+<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Lees widjer...</a>',
+	'mobile-frontend-regular-site' => 'Normool uunsicht',
+	'mobile-frontend-wml-continue' => 'Widjer ...',
+	'mobile-frontend-wml-back' => 'Turag ...',
+	'mobile-frontend-view' => 'Mobiil uunsicht',
+	'mobile-frontend-view-desktop' => 'Normool uunsicht',
+	'mobile-frontend-view-mobile' => 'Mobiil uunsicht',
+	'mobile-frontend-opt-in-message' => 'Bi a beta-test mämaage?',
+	'mobile-frontend-opt-in-yes-button' => 'Ja',
+	'mobile-frontend-opt-in-no-button' => 'Naan',
+	'mobile-frontend-opt-in-title' => 'Bi a beta-test mämaage',
+	'mobile-frontend-opt-in-explain' => 'Wan dü bi a beta-test mämaaget, heest dü muar mögelkhaiden, ferlicht werket det oober noch ei ales so üs det skal.',
+	'mobile-frontend-opt-out-message' => 'Ei muar bi a beta-test mämaage?',
+	'mobile-frontend-opt-out-yes-button' => 'Ja',
+	'mobile-frontend-opt-out-no-button' => 'Naan',
+	'mobile-frontend-opt-out-title' => 'Ei muar bi a beta-test mämaage',
+	'mobile-frontend-opt-out-explain' => 'Wan dü ei muar bi a beta-test mämaagest, heest dü weder jo ual mobiil iinstelangen.',
+	'mobile-frontend-disable-images' => "Nian bilen uunwise bi't mobiil uunsicht",
+	'mobile-frontend-enable-images' => "Bilen uunwise bi't mobiil uunsicht",
+	'mobile-frontend-toggle-images' => 'Bilen $1 / $2',
+	'mobile-frontend-off' => 'ÜTJ',
+	'mobile-frontend-on' => 'UUN',
+	'mobile-frontend-footer-contributors' => 'Artiikel faan <a href="$1">brükern</a> üs di',
+	'mobile-frontend-news-items' => 'Uun a noorachten',
+	'mobile-frontend-leave-feedback-title' => "Komentaar tu't mobiil uunsicht",
+	'mobile-frontend-leave-feedback-notice' => 'Dan komentaar helept üs, det mobiil uunsicht tu ferbeedrin. Hi woort üüb det sidj &quot;$1&quot; uunwiset. Diarbi woort uk dan brükernööm, dan browser an din bedrifsüsteem uunwiset. För ales wat dü skrafst, tääl üüs brüker-reegeln.',
+	'mobile-frontend-leave-feedback-warning' => 'Skriiw niks persöönelks, wan dü ei wel, dat arken det lees koon.',
+	'mobile-frontend-leave-feedback-subject' => 'Teemoo:',
+	'mobile-frontend-leave-feedback-message' => 'Nooracht:',
+	'mobile-frontend-leave-feedback-submit' => 'Komentaar ufsjüür',
+	'mobile-frontend-leave-feedback-link-text' => "Komentaar tu't mobiil uunsicht",
+	'mobile-frontend-leave-feedback' => 'Komentaar skriiw',
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technisk probleem',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Algemian',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Komentaar tu di artiikel',
+	'mobile-frontend-leave-feedback-general-link-text' => 'Algemian komentaar',
+	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Tu mi, en persuun of en onernemen',
+	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Tu en feeler',
+	'mobile-frontend-leave-feedback-article-other-link-text' => 'Tu wat ööders',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => "Teemoo faan't nooracht",
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Skriiw din nooracht diar',
+	'mobile-frontend-leave-feedback-page-title' => "Komentaar tu't mobiil uunsicht",
+	'mobile-frontend-leave-feedback-special-title' => 'Kontaktiire üüs',
+	'mobile-frontend-feedback-no-subject' => '(nian teemoo)',
+	'mobile-frontend-feedback-no-subject-field' => 'Wees so gud an du en teemoo uun',
+	'mobile-frontend-feedback-no-message' => 'Skriiw din nooracht diar',
+	'mobile-frontend-feedback-edit-summary' => '$1 - automaatisk seekerd [[Special:MobileFeedback|komentaar]]',
+	'mobile-frontend-leave-feedback-thanks' => 'Föl soonk för dan komentaar!',
+	'mobile-frontend-language' => 'Spriak:',
+	'mobile-frontend-username' => 'Brükernööm:',
+	'mobile-frontend-password' => 'Paaswurd:',
+	'mobile-frontend-login' => 'Uunmelde',
+	'mobile-frontend-placeholder' => 'Skriiw wat dü sjükst ...',
+	'mobile-frontend-dismiss-notification' => 'detdiar nooracht strik',
+	'mobile-frontend-clear-search' => 'Leesag maage',
+	'mobile-frontend-privacy-link-text' => 'Dootenseekerhaid',
+	'mobile-frontend-about-link-text' => 'Auer',
+	'mobile-frontend-footer-more' => 'muar',
+	'mobile-frontend-footer-less' => 'maner',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'Detdiar stäänt oner det lisens<a href="//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile">CC BY-SA 3.0</a>',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Brüker-reegeln</a>',
+	'mobile-frontend-footer-contact' => 'Kontakt',
+	'mobile-frontend-unknown-option' => 'Ünbekäänd optsjuun „$1“.',
+);
+
 /** Friulian (Furlan) */
 $messages['fur'] = array(
 	'mobile-frontend-search-submit' => 'Va',
@@ -1916,8 +1986,6 @@ $messages['gd'] = array(
 	'mobile-frontend-show-button' => 'Seall',
 	'mobile-frontend-hide-button' => 'Falaich',
 	'mobile-frontend-regular-site' => 'Seall an duilleag seo air an Uicipeid àbhaisteach',
-	'mobile-frontend-error-page-text' => "Tha an tionndadh dhen Uicipeid airson fònaichean-làimhe 'ga leasachadh fhathast is tha sinn ag obair gu cruaidh gus gach mearachd a rèiteachadh ann. Fhuair sinn fios mun mhearachd seo 's cuiridh sinn ceart e cho luath 's a ghabhas. Na bi fada gun tilleadh!",
-	'mobile-frontend-author-link' => "Seall am faidhle mheadhanan seo air an Uicipeid àbhaisteach airson fiosrachadh mun ùghdar, ceadachasan 's fiosrachadh eile.",
 );
 
 /** Galician (Galego)
@@ -2124,7 +2192,6 @@ $messages['gu'] = array(
 $messages['gv'] = array(
 	'mobile-frontend-search-submit' => 'Gow',
 	'mobile-frontend-featured-article' => 'Yn Art Reiht Jiu',
-	'mobile-frontend-in-the-news' => "'Sy Naight",
 	'mobile-frontend-home-button' => 'Balley',
 	'mobile-frontend-random-button' => 'Gyn tort',
 	'mobile-frontend-back-to-top-of-section' => 'Goll Erash Un Rheynn',
@@ -2143,7 +2210,6 @@ $messages['ha'] = array(
 	'mobile-frontend-show-button' => 'Nuna',
 	'mobile-frontend-hide-button' => 'Ɓoye',
 	'mobile-frontend-regular-site' => 'A duba wannan shafi a kan {{SITENAME}} na kullum',
-	'mobile-frontend-contact-us' => "Idan kuna son ƙarin bayani ko kuna da wani ra'ayi, don Allah ku tuntuɓe mu a mobile@wikipedia.org",
 );
 
 /** Hawaiian (Hawai`i) */
@@ -2632,7 +2698,7 @@ Pangngaasi a padasen ti agpili iti pakaammo a gandat a linia, a kasla daytoy. "K
 	'mobile-frontend-footer-contact' => 'Pagdamagan',
 );
 
-/** Ingush (ГІалгІай Ğalğaj)
+/** Ingush (ГӀалгӀай)
  * @author Amire80
  */
 $messages['inh'] = array(
@@ -3263,19 +3329,17 @@ $messages['kv'] = array(
 
 /** Cornish (Kernowek)
  * @author Kw-Moon
+ * @author Nrowe
  */
 $messages['kw'] = array(
-	'mobile-frontend-search-submit' => 'Ke',
-	'mobile-frontend-featured-article' => 'Erthygel disqwedhys hedhyw',
-	'mobile-frontend-in-the-news' => "E'n nowodhow",
+	'mobile-frontend-search-submit' => 'Mos',
+	'mobile-frontend-featured-article' => 'Erthygel diskwedhys an jydh',
 	'mobile-frontend-home-button' => 'Folen dre',
 	'mobile-frontend-random-button' => 'Dre jons',
 	'mobile-frontend-back-to-top-of-section' => 'Labma war-dhelergh udn dregh',
-	'mobile-frontend-show-button' => 'Disqwedhes',
-	'mobile-frontend-hide-button' => 'Cudha',
-	'mobile-frontend-regular-site' => 'Gweles an folen-ma war Wikipedya kebmen',
-	'mobile-frontend-error-page-text' => "Wikipedya kellgowsel ew whath en displegyans, hag yth ero'ni owth obery en cales dhe fastya oll agan gwallow pervedhel. Gwarnyes on a'n gwall-ma ha ni a vedn y fastya en scon. Mar pleg, gwrewgh dewheles!",
-	'mobile-frontend-explain-disable' => "Owgh why sur dr'eus whans dhewgh dialosegy an versyon kellgowser a Wikipedya? Mar qwresse'why dewis <b>Dialosegy</b>, ytho alebma, pan wrewgh godriga Wikipedya, na vedno'why bos daswedyes dhe'n gwel kellgowser-ma a Wikipedya.",
+	'mobile-frontend-show-button' => 'Diskwedhes',
+	'mobile-frontend-hide-button' => 'Kudha',
+	'mobile-frontend-regular-site' => 'Gwel desktop',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -3447,9 +3511,6 @@ $messages['lmo'] = array(
 	'mobile-frontend-show-button' => 'Fàm vedè',
 	'mobile-frontend-hide-button' => 'Scund',
 	'mobile-frontend-regular-site' => "Varda 'sta pagina chì in sü la {{SITENAME}} nurmala",
-	'mobile-frontend-error-page-title' => "Gh'è un prublema!",
-	'mobile-frontend-error-page-text' => "{{SITENAME}} \"mòbil\" a l'è anmò adree a vess desvilüpada e sem adree a lavurà fort per resolv tüt i nòster erur intèren. Quel erur chì l'è giamò staa nutifegaa e 'l sarà metüü in quader a la svelta. Per piasè pröva turna da chì a un poo!",
-	'mobile-frontend-contact-us' => "Se te gh'heet di dumand o cument, gh'abia mia gena de scrivess a mobile@wikipedia.org",
 );
 
 /** Lithuanian (Lietuvių)
@@ -3534,20 +3595,13 @@ $messages['lv'] = array(
 /** Lazuri (Lazuri) */
 $messages['lzz'] = array(
 	'mobile-frontend-search-submit' => 'İgzali',
-	'mobile-frontend-no-article-found' => "Çkar but'k'a va ren",
 	'mobile-frontend-featured-article' => "Dolonişi Favori St'at'ia",
 	'mobile-frontend-home-button' => 'Dudi',
 	'mobile-frontend-random-button' => 'Randomi',
 	'mobile-frontend-back-to-top-of-section' => "Ar burme uk'uni idi",
 	'mobile-frontend-show-button' => "Ko3'iri",
 	'mobile-frontend-hide-button' => 'Doşinaxi',
-	'mobile-frontend-disable-button' => "Tilifoniş versiyoni ip't'ali qvi",
-	'mobile-frontend-back-button' => "Uk'uni",
 	'mobile-frontend-regular-site' => "Am but'k'a normaluri Vik'ip'edias ko3'iri",
-	'mobile-frontend-error-page-title' => "Ar p'roblemi ren!",
-	'mobile-frontend-error-page-text' => "Xolo Tilifoniş vik'ip'edia versiyoni şeni viçalişept do mtel çilatape oktiru şeni viçalişept. Am çilata miçkinan do yakini oras çilatape viktiraten. Mu iqven xolo ik'ont'rolit!",
-	'mobile-frontend-explain-disable' => "Vik'ip'ediaşi tilifoniş versiyoni ip't'ali oqvapu ginoni? Egeri <b>Tilifoniş versiyoni ip't'ali qvi</b> t'uşis gebaz'ga na, a3'işk'ule, Vik'ip'ediaşa na moxti ora, Vik'ip'ediaşi am tilifoni versiyonişa var idare.",
-	'mobile-frontend-contact-us' => "Eger k'itxalape varna k'omment'epe giğunna, Mu iqven! mobile@wikipedia.org coxoni emailis k'ont'akt'i qvit.",
 );
 
 /** Malagasy (Malagasy)
@@ -3563,8 +3617,6 @@ $messages['mg'] = array(
 	'mobile-frontend-show-button' => 'Aseho',
 	'mobile-frontend-hide-button' => 'Asitriho',
 	'mobile-frontend-regular-site' => "Aseho amin'ny {{SITENAME}} tsotra ity pejy ity",
-	'mobile-frontend-contact-us' => "Mandefasa imailaka any amin'i mobile@wikipedia.org raha manam-panontaniana na dinika ianao.",
-	'mobile-frontend-author-link' => "Haneho ity rakitra iry eo amin'i {{SITENAME}} hijerena ny fampahalalana mahakasika ny mpamorony, ny lisansany ary ny famisavisana fanampiny.",
 );
 
 /** Maori (Māori) */
@@ -3883,8 +3935,6 @@ $messages['mt'] = array(
 	'mobile-frontend-show-button' => 'Uri',
 	'mobile-frontend-hide-button' => 'Aħbi',
 	'mobile-frontend-regular-site' => 'Ara din il-paġna fuq il-Wikipedija normali',
-	'mobile-frontend-error-page-text' => "{{SITENAME}} mobile għadu f'fażi ta' żvilupp u qegħdin naħdmu biex insolvu l-iżbalji interni tagħna. Diġà ġejna notifikati b'dan l-iżball u se nagħmlu l-almu tagħna biex insolvuh. Erġa' agħti daqqa t'għajn lura minn hawn u ftit ieħor!",
-	'mobile-frontend-explain-disable' => "Inti ċert li tixtieq tinvalida l-verżjoni tal-mowbajl tal-Wikipedija? Jekk tagħżel <b>Invalida</b>, minn issa 'l quddiem, meta żżur 'l-Wikipedija, mintix se tiġi rindirizzat għall-verżjoni tal-mowbajl tal-Wikipedija.",
 );
 
 /** Burmese (မြန်မာဘာသာ) */
@@ -4010,6 +4060,7 @@ $messages['ne'] = array(
  * @author AvatarTeam
  * @author Patio
  * @author SPQRobin
+ * @author Saruman
  * @author Siebrand
  */
 $messages['nl'] = array(
@@ -4047,6 +4098,7 @@ $messages['nl'] = array(
 	'mobile-frontend-news-items' => 'In het nieuws',
 	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling over de mobiele site',
 	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling helpt ons uw ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (als ook uw gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alstublieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op uw terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
+	'mobile-frontend-leave-feedback-warning' => 'Neem geen persoonlijke informatie op in uw opmerkingen, tenzij u akkoord gaat met het openbaar maken ervan.',
 	'mobile-frontend-leave-feedback-subject' => 'Onderwerp:',
 	'mobile-frontend-leave-feedback-message' => 'Bericht:',
 	'mobile-frontend-leave-feedback-submit' => 'Terugkoppeling opslaan',
@@ -4205,15 +4257,20 @@ $messages['os'] = array(
 	'mobile-frontend-wml-continue' => 'Дарддæр...',
 	'mobile-frontend-wml-back' => 'Фæстæмæ...',
 	'mobile-frontend-view' => 'Мобилон хуыз',
+	'mobile-frontend-view-desktop' => 'Æнæхъæн',
+	'mobile-frontend-view-mobile' => 'Мобилон',
 	'mobile-frontend-opt-in-yes-button' => 'уойы',
 	'mobile-frontend-opt-in-no-button' => 'нæйы',
 	'mobile-frontend-opt-out-yes-button' => 'уойы',
 	'mobile-frontend-opt-out-no-button' => 'нæйы',
 	'mobile-frontend-disable-images' => 'Ахицæн кæнын нывтæ мобилон сайты',
 	'mobile-frontend-enable-images' => 'Баиу кæнын нывтæ мобилон сайты',
+	'mobile-frontend-toggle-images' => 'Нывтæ $1 / $2',
+	'mobile-frontend-off' => 'ХИЦӔН',
+	'mobile-frontend-on' => 'ИУ',
 	'mobile-frontend-news-items' => 'Нæуæг хабæртты',
-	'mobile-frontend-leave-feedback-message' => 'Фыстæг',
-	'mobile-frontend-language' => 'Æвзаг',
+	'mobile-frontend-leave-feedback-message' => 'Фыстæг:',
+	'mobile-frontend-language' => 'Æвзаг:',
 	'mobile-frontend-username' => 'Архайæджы ном:',
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Бахизын',
@@ -4222,7 +4279,7 @@ $messages['os'] = array(
 	'mobile-frontend-footer-more' => 'фылдæр',
 	'mobile-frontend-footer-less' => 'цъусдæр',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Ацы æрмæг у сæрибар <a href="http://wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> лицензимæ гæсгæ. <br /><a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Архайыны домæнтæ</a>',
+	'mobile-frontend-footer-license' => 'Ацы æрмæг у сæрибар <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> лицензимæ гæсгæ.',
 	'mobile-frontend-footer-contact' => 'Контакт',
 );
 
@@ -4230,7 +4287,6 @@ $messages['os'] = array(
 $messages['pa'] = array(
 	'mobile-frontend-search-submit' => 'ਜਾਓ',
 	'mobile-frontend-featured-article' => 'ਅੱਜ ਦੇ ਖਾਸ ਲੇਖ',
-	'mobile-frontend-in-the-news' => "ਖ਼ਬਰਾਂ 'ਚ",
 	'mobile-frontend-home-button' => 'ਘਰ',
 	'mobile-frontend-back-to-top-of-section' => 'A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ',
 	'mobile-frontend-show-button' => 'ਵੇਖਾਓ',
@@ -5276,7 +5332,6 @@ $messages['su'] = array(
 	'mobile-frontend-show-button' => 'Témbongkeun',
 	'mobile-frontend-hide-button' => 'Sumputkeun',
 	'mobile-frontend-regular-site' => 'Pidangkeun ieu kaca dina Wikipédia biasa',
-	'mobile-frontend-explain-disable' => "Anjeun yakin rék numpurkeun Wikipédia vérsi ''mobile''? Lamun anjeun milih <b>Disable</b>, mangka ti mimiti ayeuna, mun anjeun nganjang ka Wikipédia, anjeun moal diarahkeun ka ieu vérsi.",
 );
 
 /** Swedish (Svenska)
@@ -5358,7 +5413,9 @@ $messages['sv'] = array(
 	'mobile-frontend-unknown-option' => 'Okänd valmöjlighet "$1".',
 );
 
-/** Swahili (Kiswahili) */
+/** Swahili (Kiswahili)
+ * @author Muddyb Blast Producer
+ */
 $messages['sw'] = array(
 	'mobile-frontend-search-submit' => 'Nenda',
 	'mobile-frontend-featured-article' => 'Makala Bora ya Leo',
@@ -5463,10 +5520,6 @@ $messages['te'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 );
 
-/** Tetum (Tetun) */
-$messages['tet'] = array(
-);
-
 /** Tajik (Cyrillic script) (Тоҷикӣ) */
 $messages['tg-cyrl'] = array(
 	'mobile-frontend-search-submit' => 'Бирав',
@@ -5479,7 +5532,7 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-regular-site' => 'Намоиши ин саҳифа дар Википедиаи маъмулӣ',
 );
 
-/** Tajik (Latin script) (tojikī) */
+/** Tajik (Latin script) (Tojikī) */
 $messages['tg-latn'] = array(
 	'mobile-frontend-search-submit' => 'Birav',
 	'mobile-frontend-featured-article' => 'Maqolai Barguzidai Imrūz',
@@ -5488,8 +5541,6 @@ $messages['tg-latn'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Bozgaşt Ba Qismati A',
 	'mobile-frontend-show-button' => 'Namoiş',
 	'mobile-frontend-hide-button' => 'Nuhuftan',
-	'mobile-frontend-disable-button' => "Ƣajrifa'ol kardan",
-	'mobile-frontend-nav-history' => "Ta'rix",
 );
 
 /** Thai (ไทย)
@@ -5526,6 +5577,22 @@ $messages['tl'] = array(
 	'mobile-frontend-show-button' => 'Ipakita',
 	'mobile-frontend-hide-button' => 'Itago',
 	'mobile-frontend-regular-site' => 'Tingnan ang pahinang sa karaniwang {{SITENAME}}',
+);
+
+/** Толышә зывон (Толышә зывон)
+ * @author Гусейн
+ */
+$messages['tly'] = array(
+	'mobile-frontend-search-submit' => 'Давардеј',
+	'mobile-frontend-home-button' => 'Әсосә сәһифә',
+	'mobile-frontend-random-button' => 'Рајрастә',
+	'mobile-frontend-show-button' => 'Нишо дој',
+	'mobile-frontend-wml-continue' => 'Давом...',
+	'mobile-frontend-wml-back' => 'Бә думо...',
+	'mobile-frontend-opt-in-yes-button' => 'Бәле',
+	'mobile-frontend-opt-in-no-button' => 'Не',
+	'mobile-frontend-opt-out-yes-button' => 'Бәле',
+	'mobile-frontend-opt-out-no-button' => 'Не',
 );
 
 /** Tok Pisin (Tok Pisin) */
@@ -5671,7 +5738,6 @@ $messages['vec'] = array(
 	'mobile-frontend-show-button' => 'Mostra',
 	'mobile-frontend-hide-button' => 'Scondi',
 	'mobile-frontend-regular-site' => 'Varda sta pagina su la {{SITENAME}} normale',
-	'mobile-frontend-error-page-text' => "{{SITENAME}} mobile la semo 'ncora drio svilupar e semo drio laorar come i mussi par risòlvar tuti i nostri erori interni. Gavemo zà avisà de sto eror e presto el vegnarà sistemà. Próa da novo pi vanti!",
 );
 
 /** Veps (Vepsän kel’)
