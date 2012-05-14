@@ -38,6 +38,9 @@ table[style] {
 	float: none !important;
 	margin-left: 0 !important;
 	width: 100% !important;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
