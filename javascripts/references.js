@@ -54,6 +54,17 @@ if( typeof jQuery !== 'undefined' ) {
 			return winHeight + $( window ).scrollTop();
 		}
 
+		/*
+		init
+			options:
+				animation: <string>
+					Define the animation that should run on clicking a reference
+					Possible values: 'none', 'fade', 'slide'
+				animationSpeed: <integer>
+					The time in milliseconds the open reference animation should take
+				onClickReference: <function>
+					Define a handler that is run upon clicking a reference
+		*/
 		function init( container, firstRun, options ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			options = getOptions( options );
@@ -125,6 +136,9 @@ if( typeof jQuery !== 'undefined' ) {
 					}
 				} else {
 					close();
+				}
+				if( options.onClickReference ) {
+					options.onClickReference( ev );
 				}
 				ev.preventDefault();
 				cancelBubble( ev );
