@@ -302,6 +302,9 @@ img.thumbborder {
 	width: 100%;
 }
 @media all and (max-width: 500px) {
+	.mobile div.tleft,
+	.mobile div.floatleft,
+	.mobile table.floatleft,
 	.mobile div.tright,
 	.mobile div.floatright,
 	.mobile table.floatright {
