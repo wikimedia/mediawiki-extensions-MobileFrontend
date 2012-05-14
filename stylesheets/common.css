@@ -113,7 +113,10 @@ h3#sopa-notice {
 }
 
 table {
+	/* following 3 rules are needed for scrolling */
 	overflow-x: auto;
+	word-break: normal;
+	display: block;
 }
 
 table table {
