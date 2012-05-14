@@ -68,9 +68,9 @@ if( typeof jQuery !== 'undefined' ) {
 		function init( container, firstRun, options ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			options = getOptions( options );
-			container = container || $("#content")[0];
+			container = container || $( '#content' )[0];
 			firstRun = typeof( firstRun ) === 'undefined' ? true : firstRun;
-			$("#mf-references").remove();
+			$( '#mf-references' ).remove();
 			el = $( '<div id="mf-references"><div></div></div>' ).hide().
 				appendTo( document.body )[0];
 			function cancelBubble( ev ) {
@@ -78,7 +78,7 @@ if( typeof jQuery !== 'undefined' ) {
 			}
 			el.ontouchstart = cancelBubble;
 			close = function() {
-				if( !$("#mf-references").is(":visible") ) {
+				if( !$( '#mf-references' ).is( ':visible' ) ) {
 					return;
 				}
 				var top;
@@ -105,20 +105,20 @@ if( typeof jQuery !== 'undefined' ) {
 
 			function clickReference(ev) {
 				var top, oh;
-				href = $(this).attr( 'href' );
+				href = $( this ).attr( 'href' );
 				data = href && href.charAt(0) === '#' ?
 					references[ href.substr( 1, href.length ) ] : null;
 
-				if( !$("#mf-references").is(":visible") || lastLink !== href) {
+				if( !$( '#mf-references' ).is( ':visible' ) || lastLink !== href) {
 					lastLink = href;
 					if( data ) {
-						html = '<h3>' + $(this).text() + '</h3>' + data.html;
+						html = '<h3>' + $( this ).text() + '</h3>' + data.html;
 					} else {
 						html = $( '<a />' ).text( $(this).text() ).
-							attr( 'href', href ).appendTo('<div />').parent().html();
+							attr( 'href', href ).appendTo( '<div />' ).parent().html();
 					}
 					$( '#mf-references div' ).html( html );
-					$('#mf-references div sup a').click( clickReference );
+					$( '#mf-references div sup a' ).click( clickReference );
 					calculatePosition();
 					if( options.animation === 'none' ) {
 						$( '#mf-references' ).show();
