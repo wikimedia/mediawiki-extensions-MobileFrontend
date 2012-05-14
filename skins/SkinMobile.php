@@ -344,6 +344,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'expand-section' => wfMsg( 'mobile-frontend-show-button' ),
 				'collapse-section' => wfMsg( 'mobile-frontend-hide-button' ),
 				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ), //@todo: use a separate message
+				'mobile-frontend-search-noresults' => wfMsg( 'mobile-frontend-search-noresults' ),
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,

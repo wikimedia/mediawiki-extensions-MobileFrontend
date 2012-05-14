@@ -89,6 +89,7 @@ $messages['en'] = array (
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Terms of Use</a>',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-unknown-option' => 'Unrecognised option "$1".',
+	'mobile-frontend-search-noresults' => 'No article titles match your search. Change your search, or press the keyboard search button to search inside articles.',
 );
 
 /** Message documentation (Message documentation)
@@ -170,6 +171,7 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-footer-license' => 'License shown in footer',
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
 	'mobile-frontend-unknown-option' => 'Error message shown by Special:MobileOptions',
+	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
 );
 
 /** Ṫuroyo (Ṫuroyo)

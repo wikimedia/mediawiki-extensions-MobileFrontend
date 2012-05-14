@@ -147,7 +147,8 @@ MobileFrontend.opensearch = (function() {
 			section, escapedTerm, suggestionsResult, link, label;
 
 		if ( !sections || sections.length < 1 ) {
-			results.innerHTML = '<ul class="suggestions-results" title="No Results"><li class="suggestions-result">No Results</li></div>';
+			results.innerHTML = '<ul class="suggestions-results" title="No Results"><li class="suggestions-result">' +
+				MobileFrontend.message( 'mobile-frontend-search-noresults' ) + '</li></div>';
 		} else {
 			if( results.firstChild ) {
 				results.removeChild( results.firstChild );
