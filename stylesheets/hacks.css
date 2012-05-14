@@ -38,6 +38,7 @@ table[style] {
 	float: none !important;
 	margin-left: 0 !important;
 	width: 100% !important;
+	box-sizing: border-box;
 }
 
 table.navbox {
