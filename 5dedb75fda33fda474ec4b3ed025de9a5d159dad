@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX//91I\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 355,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-05-14T21:25:09Z",
+      "side": 1,
+      "message": "Unlocalised messages.",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALX//91E\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 453,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-05-14T21:25:09Z",
+      "side": 1,
+      "message": "trailing ws",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
