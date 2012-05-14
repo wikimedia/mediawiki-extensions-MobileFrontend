@@ -159,6 +159,10 @@ this is so that toggling can scroll it into view
 	}
 }
 
+.page-loading #content_footer {
+	max-height: none;
+}
+
 @media all and (min-width: 330px) {
 	#footer .content_block {
 		font-size: 0.9em;
