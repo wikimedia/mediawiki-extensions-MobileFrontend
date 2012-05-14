@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAALX//91Y\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-14T21:25:35Z",
+      "side": 1,
+      "message": "Should these have $resourceSuffix appended to them for minification support?",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALX//91U\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-14T21:25:35Z",
+      "side": 1,
+      "message": "$frontend doesn\u0027t appear to have been initialized yet",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAALX//91I\u003d",
         "filename": "skins/SkinMobile.php",
         "patchSetId": 3
@@ -19,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "AAAALX//91Q\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-14T21:25:35Z",
+      "side": 1,
+      "message": "All of this HTML generation would be much easier to read inside of a HEREDOC and \u003c?\u003d is frowned upon",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAALX//91E\u003d",
         "filename": "skins/SkinMobile.php",
         "patchSetId": 3
@@ -30,6 +81,57 @@
       "writtenOn": "2012-05-14T21:25:09Z",
       "side": 1,
       "message": "trailing ws",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALX//91M\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 453,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-14T21:25:35Z",
+      "side": 1,
+      "message": "trailing ws",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALX//91A\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-14T21:25:35Z",
+      "side": 1,
+      "message": "Strings like this need to be translated",
+      "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALX//908\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-14T21:25:35Z",
+      "side": 1,
+      "message": "The output method of this message should be handled explicitly (eg $this-\u003emsg( \u0027some message\u0027 )-\u003etext() or -\u003eescaped() or whatever is appropriate)",
       "revId": "5dedb75fda33fda474ec4b3ed025de9a5d159dad",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
