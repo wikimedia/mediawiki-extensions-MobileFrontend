@@ -112,23 +112,37 @@ function efExtMobileFrontendUnitTests( &$files ) {
 	return true;
 }
 
-// ResourceLoader modules, so far CSS-only
-$wgResourceModules['ext.mobileFrontend'] = array(
+// ResourceLoader modules
+$wgResourceModules['mobile'] = array(
 	'styles' => array( 'stylesheets/common.css', 'stylesheets/footer.css',
 		'stylesheets/contact-us.css', 'stylesheets/banner.css',
 		'stylesheets/header.css', 'stylesheets/sections.css',
-		'stylesheets/references.css', 'stylesheets/hacks.css' ),
+		'stylesheets/hacks.css' ),
+	'scripts' => array( 'javascripts/application.js', 'javascripts/banner.js',
+		'javascripts/toggle.js', 'javascripts/settings.js', 'javascripts/beta_opensearch.js' ),
+	'raw' => true,
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );
 
-$wgResourceModules['ext.mobileFrontendBeta'] = $wgResourceModules['ext.mobileFrontend'];
+$wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
-$wgResourceModules['ext.mobileFrontend']['styles'][] = 'stylesheets/mf-navigation-legacy.css';
-$wgResourceModules['ext.mobileFrontendBeta']['styles'][] = 'stylesheets/mf-navigation.css';
+$wgResourceModules['mobile']['styles'][] = 'stylesheets/mf-navigation-legacy.css';
+$wgResourceModules['mobile']['scripts'][] = 'javascripts/mf-navigation-legacy.js';
+$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/mf-navigation.css';
+$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/mf-navigation.js';
 
-$wgResourceModules['ext.mobileFrontend.filePage'] = array(
+$wgResourceModules['mobile.filePage'] = array(
 	'styles' => array( 'stylesheets/filepage.css' ),
+	'scripts' => array( 'javascripts/filepage.js' ),
+	'raw' => true,
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+$wgResourceModules['mobile.references'] = array(
+	'styles' => array( 'stylesheets/references.css' ),
+	'scripts' => array( 'javascripts/references.js' ),
+	'raw' => true,
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
 );
@@ -178,18 +192,6 @@ $wgMobileUrlTemplate = '';
  * If this value is not set, it will default to $wgCookieExpiration
  */
 $wgMobileFrontendFormatCookieExpiry = null;
-
-/**
- * A string to mark the particular version of a Javascript or CSS resource
- *
- * This is useful to update in order to force invalidation of certain caches
- * when new versions of this software gets deployed, as this string gets
- * appended to the query string in the request for resources, which will
- * invalidate caches dependent on URLs.
- *
- * This is entirely optional.
- */
-$wgMobileResourceVersion = '';
 
 /**
  * When set to true, the feedback form will post to a remote wiki, which
@@ -258,11 +260,6 @@ $wgMFRemovableClasses = array();
  * Example: array('site' => 'mysite', 'logo' => 'mysite_logo.png');
  */
 $wgMFCustomLogos = array();
-
-/**
- * Set to false if you need to debug JavaScript.
- */
-$wgMFMinifyJS = true;
 
 /**
  * Whether this extension should provide its extracts to OpenSearchXml extension

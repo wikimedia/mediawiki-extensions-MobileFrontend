@@ -2,13 +2,13 @@
 
 
 class SkinMobile extends SkinMobileBase {
-	public $skinname = 'SkinMobile';
-	public $stylename = 'SkinMobile';
+	public $skinname = 'mobile';
+	public $stylename = 'mobile';
 	public $template = 'SkinMobileTemplate';
+	private $resourceLoader;
 
 	protected function prepareTemplate( OutputPage $out ) {
-		global $wgAppleTouchIcon, $wgCookiePath, $wgMobileResourceVersion,
-			   $wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS,
+		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
 			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos;
 
 		wfProfileIn( __METHOD__ );
@@ -35,47 +35,39 @@ class SkinMobile extends SkinMobileBase {
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device['supports_jquery'] );
-		if ( $context->isBetaGroupMember() ) {
-			$out->addModuleStyles( 'ext.mobileFrontendBeta' );
+		$styles = array();
+		$scripts = array();
+		if ( $inBeta ) {
+			$styles[] = 'mobile.beta';
+			$scripts[] = 'mobile.beta';
 		} else {
-			$out->addModuleStyles( 'ext.mobileFrontend' );
+			$styles[] = 'mobile';
+			$scripts[] = 'mobile';
 		}
-		$out->addModuleStyles( "ext.mobileFrontend.{$device['css_file_name']}" );
+		$styles[] = "mobile.device.{$device['css_file_name']}";
+		$styles[] = 'mobile.references';
+		$styleLinks = array( $this->resourceLoaderLink( $styles, 'styles' ) );
 		$isFilePage = $title->getNamespace() == NS_FILE;
 		if ( $isFilePage ) {
-			$out->addModuleStyles( 'ext.mobileFrontend.filePage' );
+			$styleLinks[] = $this->resourceLoaderLink( 'mobile.filePage', 'styles' );
 		}
-		$tpl->set( 'cssLinks', $out->buildCssLinks() );
+		$tpl->set( 'cssLinks', implode( "\n", $styleLinks ) );
 		wfProfileOut( __METHOD__ . '-modules' );
 
 		$tpl->setRef( 'wgAppleTouchIcon', $wgAppleTouchIcon );
 
-		$resourceSuffix = $wgMFMinifyJS ? 'min.' : '';
-		$startScriptTag = '<script type="text/javascript" src="';
-		$endScriptTag = "?version={$wgMobileResourceVersion}\"></script>";
-		$javaScriptPath =  $wgExtensionAssetsPath . '/MobileFrontend/javascripts/';
 		if ( $device['supports_jquery'] ) {
-			$additionaljs = "{$startScriptTag}{$javaScriptPath}references.{$resourceSuffix}js{$endScriptTag}";
-		} else {
-			$additionaljs = "";
+			$scripts[] = 'mobile.references';
 		}
-		if( $inBeta ) {
-			$additionaljs .= "{$startScriptTag}{$javaScriptPath}mf-navigation.{$resourceSuffix}js{$endScriptTag}";
-		} else {
-			$additionaljs .= "{$startScriptTag}{$javaScriptPath}mf-navigation-legacy.{$resourceSuffix}js{$endScriptTag}";
+		$scriptLinks = array();
+		if ( $device['supports_jquery'] ) {
+			$scriptLinks[] = $this->resourceLoaderLink( 'jquery', 'scripts', true, true );
 		}
-
-		$tpl->set( 'jQueryScript',
-			$device['supports_jquery'] ? "{$startScriptTag}{$javaScriptPath}jquery.min.js{$endScriptTag}" : ''
-		);
-		$filePageScript = $isFilePage ? "{$startScriptTag}{$javaScriptPath}filepage.{$resourceSuffix}js{$endScriptTag}" : '';
-		$bottomScripts ="{$startScriptTag}{$javaScriptPath}application.{$resourceSuffix}js{$endScriptTag}
-	{$startScriptTag}{$javaScriptPath}banner.{$resourceSuffix}js{$endScriptTag}
-	{$startScriptTag}{$javaScriptPath}toggle.{$resourceSuffix}js{$endScriptTag}
-	{$startScriptTag}{$javaScriptPath}settings.{$resourceSuffix}js{$endScriptTag}
-	{$startScriptTag}{$javaScriptPath}beta_opensearch.{$resourceSuffix}js{$endScriptTag}
-	{$additionaljs}
-	{$filePageScript}";
+		$scriptLinks[] = $this->resourceLoaderLink( $scripts, 'scripts' );
+		if ( $isFilePage ) {
+			$scriptLinks[] = $this->resourceLoaderLink( 'mobile.filePage', 'scripts' );
+		}
+		$bottomScripts = implode( "\n", $scriptLinks );
 		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
 		$tpl->set( 'preambleScript', $device['supports_javascript'] ?
 			"document.documentElement.className = 'jsEnabled togglingEnabled page-loading';" : '' );
@@ -166,6 +158,76 @@ class SkinMobile extends SkinMobileBase {
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;
+	}
+
+	/**
+	 * @return ResourceLoader
+	 */
+	protected function getResourceLoader() {
+		if ( !$this->resourceLoader ) {
+			$this->resourceLoader = new ResourceLoader();
+		}
+		return $this->resourceLoader;
+	}
+
+	protected function resourceLoaderLink( $moduleNames, $type, $useVersion = true, $forceRaw = false ) {
+		if ( $type == 'scripts' ) {
+			$only = ResourceLoaderModule::TYPE_SCRIPTS;
+		} elseif ( $type == 'styles' ) {
+			$only = ResourceLoaderModule::TYPE_STYLES;
+		} else {
+			throw new MWException( __METHOD__ . "(): undefined link type '$type'" );
+		}
+		wfProfileIn( __METHOD__ );
+		$out = $this->getOutput();
+		$moduleNames = array_flip( (array)$moduleNames );
+		$resourceLoader = $this->getResourceLoader();
+		$query = ResourceLoader::makeLoaderQuery(
+			array(), // modules; not determined yet
+			$this->getLanguage()->getCode(),
+			$this->getSkinName(),
+			null, // so far all the modules we use are user-agnostic
+			null, // version; not determined yet
+			ResourceLoader::inDebugMode()
+		);
+		$context = new ResourceLoaderContext( $resourceLoader, new FauxRequest( $query ) );
+		$version = 0;
+		foreach ( array_keys( $moduleNames ) as $name ) {
+			$module = $resourceLoader->getModule( $name );
+			# Check that we're allowed to include this module on this page
+			if ( !$module
+				|| ( $module->getOrigin() > $out->getAllowedModules( ResourceLoaderModule::TYPE_SCRIPTS )
+					&& $type == 'scripts' )
+				|| ( $module->getOrigin() > $out->getAllowedModules( ResourceLoaderModule::TYPE_STYLES )
+					&& $type == 'styles' )
+			)
+			{
+				unset( $moduleNames[$name] );
+				continue;
+			}
+			if ( $useVersion ) {
+				$version = max( $version, $module->getModifiedTime( $context ) );
+			}
+		}
+		$url = ResourceLoader::makeLoaderURL(
+			array_keys( $moduleNames ),
+			$this->getLanguage()->getCode(),
+			$this->getSkinName(),
+			null, // so far all the modules we use are user-agnostic
+			$useVersion ? $version : null,
+			ResourceLoader::inDebugMode(),
+			$only,
+			false,
+			false,
+			$forceRaw ? array( 'raw' => 'true' ) : array()
+		);
+		if ( $type == 'scripts' ) {
+			$link = Html::linkedScript( $url );
+		} else {
+			$link = Html::linkedStyle( $url );
+		}
+		wfProfileOut( __METHOD__ );
+		return $link;
 	}
 
 	public function buildLanguageSelection() {
@@ -308,7 +370,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'cssLinks' ) ?>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
 		<?php $this->html( 'touchIcon' ) ?>
-		<?php $this->html( 'jQueryScript' ) ?>
 		<script type="text/javascript">
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
 			<?php $this->html( 'preambleScript' ) ?>
