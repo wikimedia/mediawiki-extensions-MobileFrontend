@@ -24,6 +24,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		$tpl->set( 'title', $out->getPageTitle() );
 		$tpl->set( 'isMainPage', $title->isMainPage() );
+		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
 		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
@@ -302,6 +303,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
 			<?php $this->html( 'preambleScript' ) ?>
 		</script>
+		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
 	</head>
 	<body class="mobile">
 		<?php $this->html( 'zeroRatedBanner' ) ?>
