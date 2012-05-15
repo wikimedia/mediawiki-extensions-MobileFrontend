@@ -92,3 +92,9 @@ table.infobox th {
 	column-count: auto !important;
 	-webkit-column-width: auto !important;
 }
+
+.thumb .thumbinner > div {
+	float: none !important;
+	width: auto !important;
+	clear: both !important;
+}
