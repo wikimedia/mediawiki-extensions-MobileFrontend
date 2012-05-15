@@ -62,14 +62,8 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 
 .togglingEnabled .content_block {
-	max-height: 0;
 	position: relative;
 	overflow: hidden;
-	-webkit-transition: max-height 0.2s ease-in-out;
-	-moz-transition: max-height 0.2s ease-in-out;
-	-o-transition: max-height 0.2s ease-in-out;
-	transition: max-height 0.2s ease-in-out;
-	margin-top: 14px;
 	-webkit-tap-highlight-color: rgba(0,0,0,0); /* fix for Bug 36196 */
 }
 
@@ -83,33 +77,14 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 
 .togglingEnabled .openSection.content_block {
-	max-height: 300px;  /* note this expects to be overriden in toggle.js */
 	-webkit-tap-highlight-color: normal; /* fix for Bug 36196 */
 }
 
-.android4-0-2.togglingEnabled .openSection.content_block, /* fix for bug 36190 */
-.togglingEnabled .content_block.togglefix {
-	max-height: none;
-}
-
-.noTransitions .section_heading button,
-.togglingEnabled .content_block.togglefix,
-.noTransitions.togglingEnabled .content_block {
-	-webkit-transition: none;
-	-moz-transition: none;
-	-o-transition: none;
-	transition: none;
-}
-
-/* when no transitions resort to display block/none for open/closed sections */
-.noTransitions.togglingEnabled .openSection.content_block,
-.noTransitions.togglingEnabled content_block {
-	max-height: none; /* turn off max height used for transitions */
-	height: auto;
+.togglingEnabled .content_block {
 	display: none;
 }
 
-.noTransitions.togglingEnabled .openSection.content_block {
+.togglingEnabled .openSection.content_block {
 	display: block;
 }
 
@@ -130,4 +105,5 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 
 #content_wrapper .section h2 {
 	margin: 0;
+	margin-bottom: 14px;
 }

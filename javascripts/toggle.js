@@ -84,7 +84,6 @@ MobileFrontend.toggle = (function() {
 		var b = document.getElementById( 'section_' + section_id ), id,
 			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
 		if( u( b ).hasClass( 'openSection' ) ) {
-			u( b ).removeClass( 'togglefix' );
 			u( b ).removeClass( 'openSection' );
 			u( bb ).removeClass( 'openSection' );
 			u( bb ).text( showLabel );
@@ -98,7 +97,6 @@ MobileFrontend.toggle = (function() {
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
 			e = document.getElementById( d[i] + section_id );
 			if ( e && u( e ).hasClass( 'openSection' ) ) {
-				u( e ).removeClass( 'togglefix' );
 				u( e ).removeClass( 'openSection' );
 			} else if( e ) {
 				reset.push( e );
@@ -111,12 +109,6 @@ MobileFrontend.toggle = (function() {
 		e.removeAttribute( 'id' );
 		window.location.hash = closed ? '#_' : '#' + id;
 		e.setAttribute( 'id', id );
-		window.setTimeout(function() { // override the max-height property for sections over 9999px height
-			var i;
-			for( i = 0; i < reset.length; i++ ) {
-				u( reset[ i ] ).addClass( 'togglefix' );
-			}
-		}, 400); // this matches transition speed in sections.css
 	}
 
 	MobileFrontend.registerModule( 'toggle' );

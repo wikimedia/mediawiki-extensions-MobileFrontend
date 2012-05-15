@@ -101,7 +101,7 @@ MobileFrontend = (function() {
 					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
 				}, false );
 			} else if( ua.match(/Android 4\.0\.2/) ){
-				utilities( document.documentElement ).addClass( 'android4-0-2 noTransitions' );
+				utilities( document.documentElement ).addClass( 'android4-0-2' );
 			}
 		}
 		// scores browser's capability
@@ -123,9 +123,6 @@ MobileFrontend = (function() {
 		}
 
 		initModules();
-
-		// TODO: make this a user preference
-		utilities( document.documentElement ).addClass( 'noTransitions' );
 	}
 
 	utilities = typeof jQuery  !== 'undefined' ? jQuery : function( el ) {
