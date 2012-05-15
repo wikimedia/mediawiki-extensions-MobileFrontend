@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX//9gs\u003d",
+        "filename": "stylesheets/common.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-05-15T12:36:59Z",
+      "side": 1,
+      "message": "It\u0027s .new only when this link\u0027s destination doesn\u0027t exist, which is not the case on production wikis.",
+      "revId": "66991062d14678a0bcd503f02e84356be8186ccc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
