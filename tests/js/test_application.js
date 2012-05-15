@@ -48,4 +48,37 @@ test("removeClass", function() {
 	strictEqual($(el).hasClass("bar"), false);
 });
 
+module("MobileFrontend application.js: logo click", {
+	setup: function() {
+		MFET.createFixtures();
+		MFE.init();
+	}
+});
+
+test("logoClick", function() {
+	var visible1 = $("#nav").is(":visible");
+
+	var logo = $("#logo")[0];
+	MFET.triggerEvent(logo, "click");
+	var visible2 = $("#nav").is(":visible");
+	MFET.triggerEvent(logo, "click");
+	var visible3 = $("#nav").is(":visible");
+
+	strictEqual(visible1, false, "starts invisible");
+	strictEqual(visible2, true, "toggle");
+	strictEqual(visible3, false, "toggle");
+});
+
+module("MobileFrontend application.js: history", {
+	setup: function() {
+		window.location.hash = "#hash1";
+		window.location.hash = "#hash2";
+	}
+});
+
+test("history.replaceHash", function() {
+	MFE.history.replaceHash("#hash3");
+	strictEqual(window.location.hash, "#hash3", "the hash was set for the first time");
+});
+
 }(jQuery, MobileFrontend, MobileFrontendTests));

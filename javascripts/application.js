@@ -220,6 +220,11 @@ MobileFrontend = (function() {
 
 	return {
 		init: init,
+		history: {
+			replaceHash: function( newHash ) {
+				window.location.replace( newHash );
+			}
+		},
 		message: message,
 		prefix: 'mw-mf-',
 		registerModule: registerModule,

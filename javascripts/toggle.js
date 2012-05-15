@@ -54,8 +54,8 @@ MobileFrontend.toggle = (function() {
 				wm_reveal_for_hash( hash );
 			}
 			if( hash ) {
-				window.location.hash = '#_'; // clear existing hash for case of jump to top
-				window.location.hash = hash;
+				MobileFrontend.history.replaceHash( '#_' ); // clear existing hash for case of jump to top
+				MobileFrontend.history.replaceHash( hash );
 			}
 		}
 		checkHash();
@@ -82,6 +82,7 @@ MobileFrontend.toggle = (function() {
 
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ), id,
+			hash,
 			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
 		if( u( b ).hasClass( 'openSection' ) ) {
 			u( b ).removeClass( 'openSection' );
@@ -107,7 +108,8 @@ MobileFrontend.toggle = (function() {
 		id = 'section_' + section_id;
 		e = document.getElementById( id );
 		e.removeAttribute( 'id' );
-		window.location.hash = closed ? '#_' : '#' + id;
+		hash = closed ? '#_' : '#' + id;
+		MobileFrontend.history.replaceHash( hash );
 		e.setAttribute( 'id', id );
 	}
 
