@@ -19,6 +19,13 @@ table {
 	border: 1px solid #cccccc;
 	padding: 3px;
 	margin-bottom: 15px;
+	float: none !important;
+	margin-left: 0 !important;
+	width: 100% !important;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 table.gallery .thumb {
@@ -32,16 +39,6 @@ table.geography td {
 	text-align: left !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
-}
-
-table {
-	float: none !important;
-	margin-left: 0 !important;
-	width: 100% !important;
-	-o-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 table.navbox {
