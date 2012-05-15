@@ -319,6 +319,7 @@ img.thumbborder {
 		float: none;
 		clear: none;
 		margin: auto;
+		width: auto !important;
 	}
 
 	/* styling for warning boxes (see bug 36674)*/
