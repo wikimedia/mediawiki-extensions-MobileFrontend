@@ -31,18 +31,12 @@ class ExtMobileFrontend extends ContextSource {
 	 */
 	protected $mobileAction;
 
-	/**
-	 * @var WmlContext
-	 */
-	private $wmlContext;
-
 	private $forceMobileView = false;
 	private $contentTransformations = true;
 
 	public function __construct( IContextSource $context ) {
 		global $wgMFConfigProperties;
 		$this->setContext( $context );
-		$this->wmlContext = new WmlContext();
 		$this->setPropertiesFromArray( $wgMFConfigProperties );
 	}
 
@@ -355,7 +349,6 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileIn( __METHOD__ );
 
 		$request = $this->getRequest();
-		$this->setWmlContextFormat();
 		$mobileAction = $this->getMobileAction();
 
 		$bcRedirects = array(
@@ -375,7 +368,6 @@ class ExtMobileFrontend extends ContextSource {
 		$this->disableImages = $request->getCookie( 'disableImages' );
 
 		$this->format = $request->getText( 'format' );
-		$this->wmlContext->setRequestedSegment( $request->getInt( 'seg', 0 ) );
 
 		$this->checkUserStatus();
 		$this->setDefaultLogo();
@@ -418,13 +410,6 @@ class ExtMobileFrontend extends ContextSource {
 		}
 		wfProfileOut( __METHOD__ );
 		return $result;
-	}
-
-	public function setWmlContextFormat() {
-		$useFormat = $this->getUseFormat();
-		if ( $useFormat ) {
-			$this->wmlContext->setUseFormat( $useFormat );
-		}
 	}
 
 	public static function parseContentFormat( $format ) {
@@ -688,8 +673,9 @@ class ExtMobileFrontend extends ContextSource {
 		$html = $out->getHTML();
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
+		$wmlContext = $this->getContentFormat() == 'WML' ? new WmlContext( $this ) : null;
 		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $this->getTitle(),
-			$this->getContentFormat(), $this->wmlContext
+			$this->getContentFormat(), $wmlContext
 		);
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );

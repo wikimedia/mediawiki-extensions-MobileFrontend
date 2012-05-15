@@ -9,6 +9,15 @@ class WmlContext {
 	private $currentUrl;
 	private $onlyThisSegment = false;
 
+	public function __construct( ExtMobileFrontend $frontend ) {
+		$request = $frontend->getRequest();
+		$this->requestedSegment = $request->getInt( 'seg', 0 );
+		$useFormat = $frontend->getUseFormat();
+		if ( $useFormat ) {
+			$this->useFormat = $useFormat;
+		}
+	}
+
 	public function getRequestedSegment() {
 		return $this->requestedSegment;
 	}
