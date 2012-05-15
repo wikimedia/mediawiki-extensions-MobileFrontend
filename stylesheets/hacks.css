@@ -83,6 +83,16 @@ table.infobox th {
 	width: auto !important;
 }
 
+/* bug 20030 */
+.thumb .noresize {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.thumb .noresize img {
+	max-width: none !important;
+}
+
 /* bug 34878 */
 .reflist,
 .references-column-width,
