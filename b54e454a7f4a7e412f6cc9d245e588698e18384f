@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX//9dQ\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-15T18:24:02Z",
+      "side": 1,
+      "message": "$frontend does not exist yet in this method. Use $this-\u003eextMobileFrontend, or assign $this-\u003eextMobileFrontend to $frontend first.",
+      "revId": "b54e454a7f4a7e412f6cc9d245e588698e18384f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
