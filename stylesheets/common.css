@@ -48,6 +48,10 @@ table.toc h2 {
 	margin-top: 5px;
 }
 
+.mobile #coordinates {
+	display: none; /* TODO: style for mobile */
+}
+
 table.gallery th,
 table.gallery td {
 	display: block;

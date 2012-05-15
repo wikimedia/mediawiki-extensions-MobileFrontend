@@ -46,7 +46,6 @@ class MobileFormatter extends HtmlFormatter {
 		'.printfooter',
 		'.boilerplate',
 		'#id-articulo-destacado',
-		'#coordinates',
 		'#top',
 		'.hiddenStructure',
 		'.noprint',
