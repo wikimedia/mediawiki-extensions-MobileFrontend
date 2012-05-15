@@ -119,6 +119,10 @@ table {
 	display: block;
 }
 
+tbody {
+	display: inline-block;
+}
+
 table table {
 	border: 0;
 	margin-bottom: 0;
