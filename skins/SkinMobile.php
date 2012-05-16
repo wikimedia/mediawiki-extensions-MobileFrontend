@@ -9,7 +9,7 @@ class SkinMobile extends SkinMobileBase {
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgMobileResourceVersion,
 			   $wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS,
-			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos;
+			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos, $wgArticle;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -96,8 +96,11 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'languageSelection', $this->buildLanguageSelection() );
 
 		// footer
+		$lastEdit = wfTimestamp( TS_RFC2822, $wgArticle->getPage()->getTimestamp() );
 		$link = $this->extMobileFrontend->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 		$tpl->set( 'historyLink', $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text() );
+		$tpl->set( 'activityInfo', $this->msg( 'mobile-frontend-footer-article-edit-info',
+			htmlspecialchars( $lastEdit ) ) );
 		$tpl->set( 'copyright', $this->getCopyright() );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
@@ -440,6 +443,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			</li>
 			<li class="notice">
 				<?php $this->html( 'historyLink' ) ?><br>
+				<?php $this->html( 'activityInfo' ) ?><br>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 			</li>
 		</ul>
