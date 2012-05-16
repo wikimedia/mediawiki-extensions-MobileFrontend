@@ -1,0 +1,46 @@
+= MobileFrontend Extension =
+The MobileFrontend extension adds a mobile view to your mediawiki instance.
+
+== Installation ==
+	See http://www.mediawiki.org/wiki/Extension:MobileFrontend#Installation
+
+== Configuration ==
+See http://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settings
+
+== Development ==
+
+=== CSS ===
+Ensure all css passes the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS|style guidelines]
+When adding a javascript module, ensure that the css module has the same name.
+e.g. javascripts/banner.js has the corresponding stylesheet stylesheets/banner.css
+
+Introduce any browser specific patches in the relevant stylesheet. If the browser does not have its own stylesheet considering adding one in DeviceDetection.php
+
+=== Javascript ===
+Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript|style guidelines]
+
+=== HTML ===
+HTML should validate via http://validator.w3.org/ - note at the current time do not worry about markup introduced via wikitext.
+
+=== Committing ===
+* Commits are important as they give the reviewer more information to successfully review your code and find errors or potential problems you might not have thought of
+* Commits are also useful when troubleshooting issues and refactoring. If it's not clear why a line of code is in the repository important bug fixes could be lost.
+* Commits should be as minor as possible. Please avoid removing unrelated console.log statements, fixing unrelated whitespace etc.. do that in a separate commit which mentions the word cleanup.
+* First line commit should summarise the commit with bug it fixes if applicable. e.g. Fix problem with toggling see bug x
+* Second line should be blank
+* Third line should go into detail where necessary providing links to blog posts/other bugs to provide more background. Mention the platforms/browsers the change is for where necessary
+** e.g. 'this is a problem on android but not osx see http://<url> which explains problem in detail'
+** e.g. 'this is a workaround for a known bug in opera mobile see http://<url>'
+
+=== Testing ===
+
+==== Unit tests ====
+Before commiting anything please ensure that you run [[Special:JavaScriptTest/qunit]] - ensure you do this on the desktop site!
+
+==== Selenium tests ====
+There are currently no selenium tests. If you want to contribute these they would be greatly received!
+
+== Deployment ==
+When deploying the latest version of MobileFrontend ensure beforehand that you have the latest minified javascript. To do this download [[yuicompressor-2.4.6.jar|http://developer.yahoo.com/yui/compressor/]] and run
+
+	make minified
