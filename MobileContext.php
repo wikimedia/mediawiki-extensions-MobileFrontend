@@ -145,10 +145,14 @@ class MobileContext extends ContextSource {
 		if ( is_null( $this->betaGroupMember ) ) {
 			$this->checkUserStatus();
 			if ( $this->getMobileAction() == 'beta' ) {
-				$this->setBetaGroupMember ( true );
+				$this->setBetaGroupMember( true );
 			}
 		}
 		return $this->betaGroupMember;
+	}
+
+	public function setBetaGroupMember( $value ) {
+		$this->betaGroupMember = $value;
 	}
 
 	/**
