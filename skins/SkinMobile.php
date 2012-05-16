@@ -16,11 +16,11 @@ class SkinMobile extends SkinMobileBase {
 		$out = $this->getOutput();
 		$title = $this->getTitle();
 		$request = $this->getRequest();
-		$frontend = $this->extMobileFrontend;
-		$device = $frontend->getDevice();
+		$context = MobileContext::singleton();
+		$device = $context->getDevice();
 		$language = $this->getLanguage();
 
-		$tpl->set( 'isBetaGroupMember', $frontend->isBetaGroupMember );
+		$tpl->set( 'isBetaGroupMember', $context->isBetaGroupMember() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		$tpl->set( 'title', $out->getPageTitle() );
@@ -34,7 +34,7 @@ class SkinMobile extends SkinMobileBase {
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device['supports_jquery'] );
-		if ( $this->extMobileFrontend->isBetaGroupMember ) {
+		if ( $context->isBetaGroupMember() ) {
 			$out->addModuleStyles( 'ext.mobileFrontendBeta' );
 		} else {
 			$out->addModuleStyles( 'ext.mobileFrontend' );
@@ -75,9 +75,9 @@ class SkinMobile extends SkinMobileBase {
 			"document.documentElement.className = 'jsEnabled togglingEnabled page-loading';" : '' );
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
-		$tpl->set( 'stopMobileRedirectCookieDuration', $frontend->getUseFormatCookieDuration() );
-		$tpl->set( 'stopMobileRedirectCookieDomain', $frontend->getBaseDomain() );
-		$tpl->set( 'useFormatCookieName', $frontend->getUseFormatCookieName() );
+		$tpl->set( 'stopMobileRedirectCookieDuration', $context->getUseFormatCookieDuration() );
+		$tpl->set( 'stopMobileRedirectCookieDomain', $context->getBaseDomain() );
+		$tpl->set( 'useFormatCookieName', $context->getUseFormatCookieName() );
 		$tpl->set( 'useFormatCookieDuration', -1 );
 		$tpl->set( 'useFormatCookiePath', $wgCookiePath );
 		$tpl->set( 'useFormatCookieDomain', $_SERVER['HTTP_HOST'] );
@@ -97,8 +97,8 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'languageSelection', $this->buildLanguageSelection() );
 
 		// footer
+		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 		$lastEdit = $this->getWikiPage()->getTimestamp();
-		$link = $this->extMobileFrontend->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 		$tpl->set( 'historyLink', $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text() );
 		$tpl->set( 'activityInfo', $this->msg( 'mobile-frontend-footer-article-edit-info',
 			$language->timeanddate( $lastEdit ),
@@ -112,7 +112,7 @@ class SkinMobile extends SkinMobileBase {
 		// fix to prevent non-beta users from seeing the old feedback form -
 		// instead send them to the site's contact page, falling back to
 		// a predefined default if we can't figure out what the page is
-		if ( $frontend->isBetaGroupMember ) {
+		if ( $context->isBetaGroupMember() ) {
 			$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
 				array( 'returnto' => $this->getTitle()->getPrefixedText() )
 			);
@@ -129,14 +129,14 @@ class SkinMobile extends SkinMobileBase {
 
 		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
 		$imagesSwitchTitle = SpecialPage::getTitleFor( 'MobileOptions',
-			$frontend->imagesDisabled() ? 'EnableImages' : 'DisableImages'
+			$context->imagesDisabled() ? 'EnableImages' : 'DisableImages'
 		);
 		$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
 				Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
 				: ''
 		);
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
-		if ( $frontend->imagesDisabled() ) {
+		if ( $context->imagesDisabled() ) {
 			$on = Linker::link( $imagesSwitchTitle,
 				$this->msg( 'mobile-frontend-on' )->escaped(),
 				array( 'id' => 'imagetoggle' ),
@@ -210,6 +210,7 @@ class SkinMobile extends SkinMobileBase {
 		global $wgContLang;
 
 		wfProfileIn( __METHOD__ );
+		$context = MobileContext::singleton();
 		$languageUrls = array();
 
 		$langCode = $this->getLanguage()->getHtmlCode();
@@ -229,7 +230,7 @@ class SkinMobile extends SkinMobileBase {
 			unset( $tmp );
 			$nt = Title::newFromText( $l );
 			if ( $nt ) {
-				$languageUrl = $this->extMobileFrontend->getMobileUrl( $nt->getFullURL() );
+				$languageUrl = $context->getMobileUrl( $nt->getFullURL() );
 				$languageUrls[] = array(
 					'href' => $languageUrl,
 					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''

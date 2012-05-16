@@ -8,7 +8,7 @@ abstract class SkinMobileBase extends SkinTemplate {
 	protected $hookOptions;
 
 	public static function factory( ExtMobileFrontend $extMobileFrontend ) {
-		if ( $extMobileFrontend->getContentFormat() == 'HTML' ) {
+		if ( MobileContext::singleton()->getContentFormat() == 'HTML' ) {
 			$skinClass = 'SkinMobile';
 		} else {
 			$skinClass = 'SkinMobileWML';
@@ -65,7 +65,7 @@ abstract class SkinMobileBase extends SkinTemplate {
 		$tpl->set( 'dir', $lang->getDir() );
 		$tpl->set( 'scriptUrl', wfScript() );
 
-		$url = $this->extMobileFrontend->getDesktopUrl( wfExpandUrl(
+		$url = MobileContext::singleton()->getDesktopUrl( wfExpandUrl(
 			$this->getRequest()->appendQuery( 'mobileaction=toggle_view_desktop' )
 		) );
 		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['toggle_view_desktop'] ) ) {

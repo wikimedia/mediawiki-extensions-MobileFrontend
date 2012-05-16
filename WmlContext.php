@@ -9,11 +9,11 @@ class WmlContext {
 	private $currentUrl;
 	private $onlyThisSegment = false;
 
-	public function __construct( ExtMobileFrontend $frontend = null ) {
-		if ( $frontend ) {
-			$request = $frontend->getRequest();
+	public function __construct( MobileContext $context = null ) {
+		if ( $context ) {
+			$request = $context->getRequest();
 			$this->requestedSegment = $request->getInt( 'seg', 0 );
-			$useFormat = $frontend->getUseFormat();
+			$useFormat = $context->getUseFormat();
 			if ( $useFormat ) {
 				$this->useFormat = $useFormat;
 			}

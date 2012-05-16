@@ -39,6 +39,7 @@ $autoloadClasses = array (
 
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlFormatter' => 'HtmlFormatter',
+	'MobileContext' => 'MobileContext',
 	'MobileFormatter' => 'MobileFormatter',
 	'WmlContext' => 'WmlContext',
 
@@ -218,6 +219,7 @@ $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
 function efExtMobileFrontendUnitTests( &$files ) {
 	$dir = dirname( __FILE__ ) . '/tests';
 	$files[] = "$dir/ApiParseExtenderTest.php";
+	$files[] = "$dir/MobileContextTest.php";
 	$files[] = "$dir/MobileFrontendTest.php";
 	$files[] = "$dir/DeviceDetectionTest.php";
 	$files[] = "$dir/HtmlFormatterTest.php";

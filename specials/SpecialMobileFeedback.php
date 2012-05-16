@@ -6,18 +6,16 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 	}
 
 	public function execute( $par = '' ) {
-		global $wgExtMobileFrontend;
-
 		$this->setHeaders();
-		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-special-title' )->escaped() );
-		$wgExtMobileFrontend->setForceMobileView( true );
-		$wgExtMobileFrontend->setContentTransformations( false );
+		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-special-title' )->text() );
+		$context = MobileContext::singleton();
+		$context->setForceMobileView( true );
+		$context->setContentTransformations( false );
 
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
 		} else {
-			$wgExtMobileFrontend->checkUserStatus();
-			if ( $wgExtMobileFrontend->isBetaGroupMember ) {
+			if ( $context->isBetaGroupMember() ) {
 				$html = $this->getFeedbackHtml();
 				$this->getOutput()->addHtml( $html );
 			} else {
@@ -185,19 +183,21 @@ HTML;
 	}
 
 	public function postFeedback( $form ) {
-		global $wgMFRemotePostFeedback, $wgExtMobileFrontend;
+		global $wgMFRemotePostFeedback;
 
 		$subject = $this->getFormattedSubject( $form );
 		$message = $this->getFormattedMessage( $form );
 		$returnTo = $form['returnto'];
-		if ( $wgMFRemotePostFeedback === true && $wgExtMobileFrontend->isBetaGroupMember ) {
+		$context = MobileContext::singleton();
+		if ( $wgMFRemotePostFeedback === true && $context->isBetaGroupMember() ) {
 			$success = $this->postRemoteFeedback( $subject, $message );
 		} else {
 			$success = $this->postLocalFeedback( $subject, $message );
 		}
 
 		if ( $success === true ) {
-			$location = $wgExtMobileFrontend->getMobileUrl( $this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) ) );
+			$location = MobileContext::singleton()->getMobileUrl(
+				$this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) ) );
 			$this->getRequest()->response()->header( 'Location: ' . $location );
 			exit;
 		} else {
@@ -206,7 +206,6 @@ HTML;
 	}
 
 	protected function postLocalFeedback( $subject, $message ) {
-		global $wgExtMobileFrontend;
 		wfProfileIn( __METHOD__ );
 
 		// Is this really right? Are people really checking all of the different

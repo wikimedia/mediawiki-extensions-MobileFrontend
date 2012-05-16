@@ -18,11 +18,10 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	public function execute( $par = '' ) {
-		global $wgExtMobileFrontend;
-
 		$this->setHeaders();
-		$wgExtMobileFrontend->setForceMobileView( true );
-		$wgExtMobileFrontend->setContentTransformations( false );
+		$context = MobileContext::singleton();
+		$context->setForceMobileView( true );
+		$context->setContentTransformations( false );
 		if ( !isset( $this->options[$par] ) ) {
 			$this->getOutput()->showErrorPage( 'error', 'mobile-frontend-unknown-option', array( $par ) );
 			return;
@@ -57,14 +56,13 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
-		global $wgExtMobileFrontend;
 		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
 		$params = array();
 		if ( $returnTo ) {
 			$params['returnto'] = $returnTo->getPrefixedText();
 		}
 		if ( $fullUrl ) {
-			return $wgExtMobileFrontend->getMobileUrl( $t->getFullURL( $params ) );
+			return MobileContext::singleton()->getMobileUrl( $t->getFullURL( $params ) );
 		} else {
 			return $t->getLocalURL( $params );
 		}
@@ -117,12 +115,11 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function doReturnTo() {
-		global $wgExtMobileFrontend;
 		$params = array();
 		$params['t'] = md5( time() ); // this is a hack to get around the 304 response and local browser cache
 		$this->getOutput()->sendCacheControl(); // cache should already be private
 		$this->getRequest()->response()->header( 'Location: '
-			. $wgExtMobileFrontend->getMobileUrl( wfExpandUrl( $this->returnToTitle->getFullURL( $params ) ) ) );
+			. MobileContext::singleton()->getMobileUrl( wfExpandUrl( $this->returnToTitle->getFullURL( $params ) ) ) );
 		exit;
 	}
 
@@ -137,8 +134,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptInPost() {
-		global $wgExtMobileFrontend;
-		$wgExtMobileFrontend->setOptInOutCookie( '1' );
+		MobileContext::singleton()->setOptInOutCookie( '1' );
 		$this->doReturnTo();
 	}
 
@@ -153,16 +149,14 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptOutPost() {
-		global $wgExtMobileFrontend;
-		$wgExtMobileFrontend->setOptInOutCookie( '' );
+		MobileContext::singleton()->setOptInOutCookie( '' );
 		$this->doReturnTo();
 	}
 
 	private function checkMobileToken() {
-		global $wgExtMobileFrontend;
 		$qsMobileToken = $this->getRequest()->getVal( 'mobiletoken' );
 		if ( !$qsMobileToken ) {
-			$device = $wgExtMobileFrontend->getDevice();
+			$device = MobileContext::singleton()->getDevice();
 			if ( isset( $device['supports_javascript'] ) && $device['supports_javascript'] ) {
 				return false;
 			} else {
