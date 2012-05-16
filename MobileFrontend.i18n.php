@@ -171,7 +171,10 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-footer-sitename' => 'Name of site',
 	'mobile-frontend-footer-license' => 'License shown in footer',
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
-	'mobile-frontend-footer-article-edit-info' => 'Information about how up to date the article is',
+	'mobile-frontend-footer-article-edit-info' => 'Parameters:
+* $1 - last edit time and date
+* $2 - last edit time
+* $3 - last edit date',
 	'mobile-frontend-unknown-option' => 'Error message shown by Special:MobileOptions',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
 );

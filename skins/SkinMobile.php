@@ -9,7 +9,7 @@ class SkinMobile extends SkinMobileBase {
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgMobileResourceVersion,
 			   $wgExtensionAssetsPath, $wgLanguageCode, $wgMFMinifyJS,
-			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos, $wgArticle;
+			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -18,6 +18,7 @@ class SkinMobile extends SkinMobileBase {
 		$request = $this->getRequest();
 		$frontend = $this->extMobileFrontend;
 		$device = $frontend->getDevice();
+		$language = $this->getLanguage();
 
 		$tpl->set( 'isBetaGroupMember', $frontend->isBetaGroupMember );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
@@ -96,11 +97,13 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'languageSelection', $this->buildLanguageSelection() );
 
 		// footer
-		$lastEdit = wfTimestamp( TS_RFC2822, $wgArticle->getPage()->getTimestamp() );
+		$lastEdit = $this->getWikiPage()->getTimestamp();
 		$link = $this->extMobileFrontend->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 		$tpl->set( 'historyLink', $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text() );
 		$tpl->set( 'activityInfo', $this->msg( 'mobile-frontend-footer-article-edit-info',
-			htmlspecialchars( $lastEdit ) ) );
+			$language->timeanddate( $lastEdit ),
+			$language->time( $lastEdit ),
+			$language->date( $lastEdit ) )->parse() );
 		$tpl->set( 'copyright', $this->getCopyright() );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
