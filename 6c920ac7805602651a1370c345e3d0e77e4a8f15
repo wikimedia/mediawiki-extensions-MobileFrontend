@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX//9PY\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-05-16T10:52:59Z",
+      "side": 1,
+      "message": "Settings appears twice",
+      "revId": "6c920ac7805602651a1370c345e3d0e77e4a8f15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
