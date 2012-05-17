@@ -314,12 +314,12 @@ class DeviceDetection {
 			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$formatName = 'operamini';
 			}
-		} else if ( preg_match( '/MSIE 9.0/', $userAgent ) ||
+		} elseif ( preg_match( '/MSIE 9.0/', $userAgent ) ||
 				preg_match( '/MSIE 8.0/', $userAgent ) ) {
 			$formatName = 'ie';
-		} else if( preg_match( '/MSIE/', $userAgent ) ) {
+		} elseif( preg_match( '/MSIE/', $userAgent ) ) {
 			$formatName = 'html';
-		} else if ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
+		} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 			$formatName = 'operamobile';
 		} elseif ( preg_match( '/iPad.* Safari/', $userAgent ) ) {
 			$formatName = 'iphone';
