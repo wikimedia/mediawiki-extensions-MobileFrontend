@@ -98,35 +98,26 @@ class SkinMobile extends SkinMobileBase {
 
 		// footer
 		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
-		$lastEdit = $this->getWikiPage()->getTimestamp();
-		$tpl->set( 'historyLink', $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text() );
-		$tpl->set( 'activityInfo', $this->msg( 'mobile-frontend-footer-article-edit-info',
-			$language->timeanddate( $lastEdit ),
-			$language->time( $lastEdit ),
-			$language->date( $lastEdit ) )->parse() );
+		if ( !$title->isSpecialPage() ) {
+			$lastEdit = $this->getWikiPage()->getTimestamp();
+			$historyLink = $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text();
+			$activityLink = $this->msg( 'mobile-frontend-footer-article-edit-info',
+				$language->timeanddate( $lastEdit ),
+				$language->time( $lastEdit ),
+				$language->date( $lastEdit ) )->parse();
+			$historyAndActivityLink = $historyLink . "<br>" . $activityLink . "<br>";
+		} else {
+			$historyAndActivityLink = '';
+		}
+		$tpl->set( 'historyAndActivityLink', $historyAndActivityLink );
 		$tpl->set( 'copyright', $this->getCopyright() );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
 
-		// fix to prevent non-beta users from seeing the old feedback form -
-		// instead send them to the site's contact page, falling back to
-		// a predefined default if we can't figure out what the page is
-		if ( $context->isBetaGroupMember() ) {
-			$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
-				array( 'returnto' => $this->getTitle()->getPrefixedText() )
-			);
-		} else {
-			// most projects seem to use locally configured 'Contact-url' messages
-			// to define the location of their contact pages
-			$feedbackTitle = Title::newFromText( wfMsg( 'Contact-url') );
-			if ( $feedbackTitle && $feedbackTitle->isKnown() ) {
-				$leaveFeedbackURL = $feedbackTitle->getLocalUrl();
-			} else {
-				$leaveFeedbackURL = htmlspecialchars( $wgMFFeedbackFallbackURL );
-			}
-		}
-
+		$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
+			array( 'returnto' => $this->getTitle()->getPrefixedText() )
+		);
 		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
 		$imagesSwitchTitle = SpecialPage::getTitleFor( 'MobileOptions',
 			$context->imagesDisabled() ? 'EnableImages' : 'DisableImages'
@@ -135,6 +126,7 @@ class SkinMobile extends SkinMobileBase {
 				Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
 				: ''
 		);
+
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 		if ( $context->imagesDisabled() ) {
 			$on = Linker::link( $imagesSwitchTitle,
@@ -446,8 +438,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				$this->html( 'imagesToggle' ) ?></span>
 			</li>
 			<li class="notice">
-				<?php $this->html( 'historyLink' ) ?><br>
-				<?php $this->html( 'activityInfo' ) ?><br>
+				<?php $this->html( 'historyAndActivityLink' ) ?>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 			</li>
 		</ul>
