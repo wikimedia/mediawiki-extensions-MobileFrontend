@@ -3,6 +3,7 @@
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term,
+		message = MobileFrontend.message,
 		search = document.getElementById( 'search' ), oldValue,
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
@@ -30,7 +31,7 @@ MobileFrontend.opensearch = (function() {
 				rrd.setAttribute( 'id', 'remove-results' );
 				u( rrd ).bind( 'click',  removeResults );
 				rrd.setAttribute( 'src', blankImg );
-				rrd.setAttribute( 'alt', MobileFrontend.message( 'remove-results' ) );
+				rrd.setAttribute( 'alt', message( 'remove-results' ) );
 				header.insertBefore( rrd, header.firstChild );
 			}
 			focused = true;
@@ -141,14 +142,19 @@ MobileFrontend.opensearch = (function() {
 		return str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 	}
 
+	function printMessage( msg ) {
+		var results = document.getElementById( 'results' );
+		results.innerHTML = '<ul class="suggestions-results" title="No Results"><li class="suggestions-result">' +
+			msg + '</li></div>';
+	}
+
 	function writeResults( sections ) {
 		var results = document.getElementById( 'results' ), suggestions, i,
 			term = htmlEntities( document.getElementById( 'search' ).value ),
 			section, escapedTerm, suggestionsResult, link, label;
 
 		if ( !sections || sections.length < 1 ) {
-			results.innerHTML = '<ul class="suggestions-results" title="No Results"><li class="suggestions-result">' +
-				MobileFrontend.message( 'mobile-frontend-search-noresults' ) + '</li></div>';
+			printMessage( message( 'mobile-frontend-search-noresults' ) );
 		} else {
 			if( results.firstChild ) {
 				results.removeChild( results.firstChild );
@@ -211,6 +217,7 @@ MobileFrontend.opensearch = (function() {
 			document.getElementById( 'search' ).blur();
 		}
 		document.getElementById( 'results' ).ontouchstart = hideKeyboard;
+		printMessage( message( 'mobile-frontend-search-help' ) );
 		initClearSearch();
 	}
 
