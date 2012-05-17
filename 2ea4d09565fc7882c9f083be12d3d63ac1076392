@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX//8sg\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-05-17T22:44:57Z",
+      "side": 1,
+      "message": "You can make them above and set one template instead of two",
+      "revId": "2ea4d09565fc7882c9f083be12d3d63ac1076392",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
