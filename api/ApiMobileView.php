@@ -25,7 +25,7 @@ class ApiMobileView extends ApiBase {
 		if ( $params['page'] == 'mobiletoken' && $params['override'] == 1 ) {
 			$result = $this->getResult();
 			$result->addValue( null, $this->getModuleName(),
-				array( 'mobiletoken' => SpecialMobileOptions::getMobileToken() )
+				array( 'mobiletoken' => MobileContext::singleton()->getMobileToken() )
 			);
 			wfProfileOut( __METHOD__ );
 		}

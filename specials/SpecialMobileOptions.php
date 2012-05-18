@@ -42,19 +42,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		$this->$func();
 	}
 
-	public static function getMobileToken() {
-		global $wgUser, $wgRequest;
-		$token = $wgRequest->getSessionData( 'wsMobileToken' );
-		if ( $token === null ) {
-			if ( $wgUser->isAnon() ) {
-				wfSetupSession();
-			}
-			$token = MWCryptRand::generateHex( 32 );
-			$wgRequest->setSessionData( 'wsMobileToken', $token );
-		}
-		return $token;
-	}
-
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
 		$t = SpecialPage::getTitleFor( 'MobileOptions', $option );
 		$params = array();
@@ -164,7 +151,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			}
 		}
 
-		$mobileToken = self::getMobileToken();
+		$mobileToken = MobileContext::singleton()->getMobileToken();
 		if ( $mobileToken === $qsMobileToken ) {
 			return true;
 		} else {

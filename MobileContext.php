@@ -157,6 +157,18 @@ class MobileContext extends ContextSource {
 		$this->betaGroupMember = $value;
 	}
 
+	public function getMobileToken() {
+		$token = $this->getRequest()->getSessionData( 'wsMobileToken' );
+		if ( $token === null ) {
+			if ( $this->getUser()->isAnon() ) {
+				wfSetupSession();
+			}
+			$token = MWCryptRand::generateHex( 32 );
+			$this->getRequest()->setSessionData( 'wsMobileToken', $token );
+		}
+		return $token;
+	}
+
 	/**
 	 * Determine whether or not we should display the mobile view
 	 *
@@ -485,7 +497,7 @@ class MobileContext extends ContextSource {
 	 * @param $mobileUrlHostTemplate string
 	 * @return string
 	 */
-	public function getMobileToken( $mobileUrlHostTemplate ) {
+	public function getMobileHost( $mobileUrlHostTemplate ) {
 		wfProfileIn( __METHOD__ );
 		$mobileToken = preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
 		wfProfileOut( __METHOD__ );
@@ -505,7 +517,7 @@ class MobileContext extends ContextSource {
 				if ( !empty( $subdomainTokenReplacement ) ) {
 					global $wgMobileUrlTemplate;
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
-					$mobileToken = $this->getMobileToken( $mobileUrlHostTemplate );
+					$mobileToken = $this->getMobileHost( $mobileUrlHostTemplate );
 					$wgMobileUrlTemplate = str_replace( $mobileToken, $subdomainTokenReplacement, $wgMobileUrlTemplate );
 				}
 			}
@@ -578,7 +590,7 @@ class MobileContext extends ContextSource {
 		}
 
 		// identify the mobile token by stripping out normal host parts
-		$mobileToken = $this->getMobileToken( $mobileUrlHostTemplate );
+		$mobileToken = $this->getMobileHost( $mobileUrlHostTemplate );
 
 		// replace the mobile token with nothing, resulting in the normal hostname
 		$parsedUrl['host'] = str_replace( '.' . $mobileToken, '.', $parsedUrl['host'] );
