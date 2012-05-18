@@ -57,13 +57,15 @@ class MobileContext extends ContextSource {
 			return $this->device;
 		}
 		$detector = new DeviceDetection();
+		$request = $this->getRequest();
 
 		$xDevice = $this->getXDevice();
 		if ( $xDevice ) {
 			$formatName = $xDevice;
 		} else {
-			$userAgent = $_SERVER['HTTP_USER_AGENT'];
-			$acceptHeader = isset( $_SERVER["HTTP_ACCEPT"] ) ? $_SERVER["HTTP_ACCEPT"] : '';
+			$userAgent = $request->getHeader( 'User-agent' );
+			$acceptHeader = $request->getHeader( 'Accept' );
+			$acceptHeader = $acceptHeader === false ? '' : $acceptHeader;
 			$formatName = $detector->detectFormatName( $userAgent, $acceptHeader );
 		}
 		$this->device = $detector->getDevice( $formatName );
@@ -210,8 +212,8 @@ class MobileContext extends ContextSource {
 
 	public function getXDevice() {
 		if ( is_null( $this->xDevice ) ) {
-			$this->xDevice = isset( $_SERVER['HTTP_X_DEVICE'] ) ?
-				$_SERVER['HTTP_X_DEVICE'] : '';
+			$this->xDevice = $this->getRequest()->getHeader( 'X-Device' );
+			$this->xDevice = $this->xDevice === false ? '' : $this->xDevice;
 		}
 
 		return $this->xDevice;
@@ -358,15 +360,16 @@ class MobileContext extends ContextSource {
 	public function getBaseDomain() {
 		wfProfileIn( __METHOD__ );
 		// Validates value as IP address
-		if ( !IP::isValid( $_SERVER['HTTP_HOST'] ) ) {
-			$domainParts = explode( '.', $_SERVER['HTTP_HOST'] );
+		$host = $this->getRequest()->getHeader( 'Host' );
+		if ( !IP::isValid( $host ) ) {
+			$domainParts = explode( '.', $host );
 			$domainParts = array_reverse( $domainParts );
 			// Although some browsers will accept cookies without the initial ., » RFC 2109 requires it to be included.
 			wfProfileOut( __METHOD__ );
-			return count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $_SERVER['HTTP_HOST'];
+			return count( $domainParts ) >= 2 ? '.' . $domainParts[1] . '.' . $domainParts[0] : $host;
 		}
 		wfProfileOut( __METHOD__ );
-		return $_SERVER['HTTP_HOST'];
+		return $host;
 	}
 
 	/**
@@ -395,7 +398,8 @@ class MobileContext extends ContextSource {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 
-		setcookie( $this->getUseFormatCookieName(), $cookieFormat, $expiry, $wgCookiePath, $_SERVER['HTTP_HOST'], $wgCookieSecure );
+		setcookie( $this->getUseFormatCookieName(), $cookieFormat, $expiry, $wgCookiePath,
+			$this->getRequest()->getHeader( 'Host' ), $wgCookieSecure );
 		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
 	}
 

@@ -19,17 +19,18 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	protected function setUp() {
 		parent::setUp();
-		MobileContext::setInstance( null ); //refresh it
+		$context = new DerivativeContext( RequestContext::getMain() );
+		$context->setRequest( new FauxRequest() );
+		MobileContext::singleton()->setContext( $context );
 	}
 
 	protected function tearDown() {
 		MobileContext::setInstance( null ); //refresh it
-		unset( $_SERVER[ 'HTTP_X_DEVICE' ] );
 		parent::tearDown();
 	}
 
 	public function testGetBaseDomain() {
-		$_SERVER['HTTP_HOST'] = 'en.wikipedia.org';
+		MobileContext::singleton()->getRequest()->setHeader( 'Host', 'en.wikipedia.org' );
 		$this->assertEquals( '.wikipedia.org', MobileContext::singleton()->getBaseDomain() );
 	}
 
@@ -144,7 +145,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$testMethod = ( $isDevice ) ? 'assertTrue' : 'assertFalse';
 
 		if ( !is_null( $xDevice ) ) {
-			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
+			MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
 		}
 
 		$this->$testMethod( MobileContext::singleton()->isMobileDevice(), $msg );
@@ -182,36 +183,24 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider shouldDisplayMobileViewProvider
 	 */
 	public function testShouldDisplayMobileView( $shouldDisplay, $xDevice = null, $requestVal = array(), $msg = null ) {
-		global $wgRequest;
-
 		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
 
+		$request = MobileContext::singleton()->getRequest();
 		if ( count( $requestVal ) ) {
 			foreach ( $requestVal as $key => $val ) {
 				if ( $key == 'useformat' ) {
 					MobileContext::singleton()->setUseFormat( $val );
 				} else {
-					$wgRequest->setVal( $key, $val );
+					$request->setVal( $key, $val );
 				}
 			}
 		}
 
 		if ( !is_null( $xDevice ) ) {
-			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
+			MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
 		}
 
 		$this->$testMethod( MobileContext::singleton()->shouldDisplayMobileView(), $msg );
-
-		// clean up
-		if ( count( $requestVal ) ) {
-			foreach ( $requestVal as $key => $val ) {
-				if ( $key == 'useformat' ) {
-					continue;
-				} else {
-					$wgRequest->unsetVal( $key );
-				}
-			}
-		}
 	}
 
 	public function shouldDisplayMobileViewProvider() {
@@ -235,13 +224,10 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testGetXDevice( $xDevice = null ) {
 		if ( is_null( $xDevice ) ) {
-			$assert = '';
-			if ( isset( $_SERVER[ 'HTTP_X_DEVICE' ] ) ) {
-				unset( $_SERVER[ 'HTTP_X_DEVICE' ] );
-			}
-		} else {
-			$_SERVER[ 'HTTP_X_DEVICE' ] = $xDevice;
+			MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
 			$assert = $xDevice;
+		} else {
+			$assert = '';
 		}
 		$this->assertEquals( $assert, MobileContext::singleton()->getXDevice() );
 	}
@@ -257,13 +243,10 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider getMobileActionProvider
 	 */
 	public function testGetMobileAction( $mobileaction = null ) {
-		global $wgRequest;
-
 		if ( is_null( $mobileaction ) ) {
 			$assert = '';
-			$wgRequest->unsetVal( 'mobileaction' );
 		} else {
-			$wgRequest->setVal( 'mobileaction', $mobileaction );
+			MobileContext::singleton()->getRequest()->setVal( 'mobileaction', $mobileaction );
 			$assert = $mobileaction;
 		}
 
@@ -281,13 +264,10 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider getActionProvider
 	 */
 	public function testGetAction( $action = null ) {
-		global $wgRequest;
-
 		if ( is_null( $action ) ) {
 			$assert = '';
-			$wgRequest->unsetVal( 'action' );
 		} else {
-			$wgRequest->setVal( 'action', $action );
+			MobileContext::singleton()->getRequest()->setVal( 'action', $action );
 			$assert = $action;
 		}
 
@@ -305,8 +285,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider getUseFormatProvider
 	 */
 	public function testGetUseFormat( $explicit, $requestParam, $expected ) {
-		global $wgRequest;
-		$wgRequest->setVal( 'useformat', $requestParam );
+		MobileContext::singleton()->getRequest()->setVal( 'useformat', $requestParam );
 		MobileContext::singleton()->setUseFormat( $explicit );
 		$this->assertEquals( $expected, MobileContext::singleton()->getUseFormat() );
 	}
