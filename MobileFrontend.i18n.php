@@ -73,6 +73,7 @@ $messages['en'] = array (
 	'mobile-frontend-feedback-no-message' => 'Please enter a message here',
 	'mobile-frontend-feedback-edit-summary' => '$1 - automatically posted using the [[Special:MobileFeedback|mobile feedback tool]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Thanks for your feedback!',
+	'mobile-frontend-leave-feedback-post-error' => 'There was an error processing your message. Please try again later.',
 	'mobile-frontend-language' => 'Language:',
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
@@ -153,6 +154,7 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-feedback-no-subject' => 'Used for section heading on the feedback page if user entered no subject',
 	'mobile-frontend-feedback-no-message' => 'Error message on feedback form',
 	'mobile-frontend-feedback-edit-summary' => "Edit summary, $1 is feedback subject. Don't translate the special page name",
+	'mobile-frontend-leave-feedback-post-error' => "Message displayed to user when there is an internal error processing form submission",
 	'mobile-frontend-language' => '{{Identical|Language}}',
 	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.
 

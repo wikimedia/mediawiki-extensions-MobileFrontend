@@ -14,6 +14,8 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 
 		if ( $par == 'thanks' ) {
 			$this->showThanks();
+		} elseif ( $par == 'error' ) {
+			$this->showError();
 		} else {
 			$html = $this->getFeedbackHtml();
 			$this->getOutput()->addHtml( $html );
@@ -143,7 +145,10 @@ HTML;
 			$this->getRequest()->response()->header( 'Location: ' . $location );
 			exit;
 		} else {
-			// handle errors
+			$location = MobileContext::singleton()->getMobileUrl(
+				$this->getTitle( 'error' )->getFullURL( array( 'returnto' => $returnTo ) ) );
+			$this->getRequest()->response()->header( 'Location: ' . $location );
+			exit;
 		}
 	}
 
@@ -164,10 +169,13 @@ HTML;
 			$article->doEdit( $rawtext,
 				$this->msg( 'mobile-frontend-feedback-edit-summary', $subject )->inContentLanguage()->text()
 			);
+			$ret = true;
+		} else {
+			$ret = false;
 		}
 
 		wfProfileOut( __METHOD__ );
-		return true;
+		return $ret;
 	}
 
 	protected function getFormattedSubject( $form ) {
@@ -197,22 +205,30 @@ HTML;
 	}
 
 	public function validateSubject( $textfield ) {
-		if ( mb_strlen( trim( $textfield ) ) < 4 ) {
+		if ( mb_strlen( trim( $textfield ) ) < 1 ) {
 			return $this->msg( 'mobile-frontend-feedback-no-subject-field' )->text();
 		}
 		return true;
 	}
 
 	public function validateMessage( $textarea ) {
-		if ( mb_strlen( trim( $textarea ) ) < 20 ) {
+		if ( mb_strlen( trim( $textarea ) ) < 1 ) {
 			return $this->msg( 'mobile-frontend-feedback-no-message' )->text();
 		}
 		return true;
 	}
 
 	protected function showThanks() {
+		$this->showPostFeedbackOutput( 'mobile-frontend-leave-feedback-thanks' );
+	}
+
+	protected function showError() {
+		$this->showPostFeedbackOutput( 'mobile-frontend-leave-feedback-post-error' );
+	}
+
+	protected function showPostFeedbackOutput( $msg ) {
 		$out = $this->getOutput();
-		$out->addHtml( "<div class=mwm-message mwm-notice'>{$this->msg( 'mobile-frontend-leave-feedback-thanks' )->parse()}</div>" );
+		$out->addHtml( "<div class=mwm-message mwm-notice'>{$this->msg( $msg )->parse()}</div>" );
 		$t = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
 		if ( $t ) {
 			$out->addReturnTo( $t );
@@ -294,7 +310,7 @@ class MobileFrontendMWApiClient {
 		$req = MwHttpRequest::factory( $this->getUrl(), $options );
 		$status = $req->execute();
 		if ( !$status->isGood() ) {
-			echo 'login fail';
+			throw new Exception( 'Remote posting login request failed.' );
 		}
 		$loginResponse = $req->getContent();
 		$loginResponse = json_decode( $loginResponse, true );
@@ -309,7 +325,7 @@ class MobileFrontendMWApiClient {
 			$req->setCookieJar( $this->getCookieJar() );
 			$status = $req->execute();
 			if ( !$status->isGood() ) {
-				echo 'login fail after token';
+				throw new Exception( 'Remote posting login failed after token.' );
 			}
 			$loginResponse = $req->getContent();
 			$loginResponse = json_decode( $loginResponse, true );
@@ -318,7 +334,7 @@ class MobileFrontendMWApiClient {
 
 		if ( $loginResult != 'Success' ) {
 			// there's some kind of problem
-			echo 'fail';
+			throw new Exception( 'Remote posting login failed.' );
 			return false;
 		}
 		$this->loggedIn = true;
@@ -343,7 +359,7 @@ class MobileFrontendMWApiClient {
 
 		if ( !$status->isGood() ) {
 			// make some kind of error?
-			echo "!isGood";
+			throw new Exception( 'Failed fetching edit token.' );
 		}
 		$response = $req->getContent();
 		$response = json_decode( $response, true );
