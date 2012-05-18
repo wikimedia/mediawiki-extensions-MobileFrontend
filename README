@@ -22,6 +22,9 @@ Javascript can be found in the javascript folder. Any javascript committed to th
 === HTML ===
 HTML should validate via http://validator.w3.org/ - note at the current time do not worry about markup introduced via wikitext.
 
+== Images ==
+If you are adding images to the extension please ensure they have been [http://pmt.sourceforge.net/pngcrush/ optimised] beforehand.
+
 === Committing ===
 * Commits are important as they give the reviewer more information to successfully review your code and find errors or potential problems you might not have thought of
 * Commits are also useful when troubleshooting issues and refactoring. If it's not clear why a line of code is in the repository important bug fixes could be lost.
