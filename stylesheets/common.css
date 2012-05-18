@@ -167,6 +167,10 @@ table.infobox {
 	background: #f9f9f9;
 }
 
+table.infobox caption {
+	display: block;
+}
+
 table.infobox th,
 table.infobox td {
 	border: 0;
