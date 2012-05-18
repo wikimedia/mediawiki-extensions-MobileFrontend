@@ -10,14 +10,14 @@ See http://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_setting
 == Development ==
 
 === CSS ===
-Ensure all css passes the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS|style guidelines]
+Ensure all css passes the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS style guidelines]
 When adding a javascript module, ensure that the css module has the same name.
 e.g. javascripts/banner.js has the corresponding stylesheet stylesheets/banner.css
 
 Introduce any browser specific patches in the relevant stylesheet. If the browser does not have its own stylesheet considering adding one in DeviceDetection.php
 
 === Javascript ===
-Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript|style guidelines]
+Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
 
 === HTML ===
 HTML should validate via http://validator.w3.org/ - note at the current time do not worry about markup introduced via wikitext.
@@ -44,6 +44,6 @@ Before commiting anything please ensure that you run [[Special:JavaScriptTest/qu
 There are currently no selenium tests. If you want to contribute these they would be greatly received!
 
 == Deployment ==
-When deploying the latest version of MobileFrontend ensure beforehand that you have the latest minified javascript. To do this download [[yuicompressor-2.4.6.jar|http://developer.yahoo.com/yui/compressor/]] and run
+When deploying the latest version of MobileFrontend ensure beforehand that you have the latest minified javascript. To do this download [http://developer.yahoo.com/yui/compressor/ yuicompressor-2.4.6.jar] and run
 
 	make minified
