@@ -80,7 +80,6 @@ $messages['en'] = array (
 	'mobile-frontend-placeholder' => 'Type your search here...',
 	'mobile-frontend-search-help' => 'Type search term above and matching article titles will appear here.',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
-	'mobile-frontend-sopa-notice' => '<h3 id="sopa-notice">Thank you for protecting Wikipedia.</h3><br /><a href="http://en.wikipedia.org/wiki/Wikipedia:SOPA_initiative/Mobile_Learn_more">(We’re not done yet.)</a>',
 	'mobile-frontend-clear-search' => 'Clear',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-about-link-text' => 'About',
