@@ -30,9 +30,6 @@ class ApiMobileView extends ApiBase {
 			wfProfileOut( __METHOD__ );
 		}
 
-		$requestedSections = isset( $params['sections'] )
-			? $this->parseSections( $params['sections'] )
-			: array();
 		$prop = array_flip( $params['prop'] );
 		$sectionProp = array_flip( $params['sectionprop'] );
 		$this->followRedirects = $params['redirect'] == 'yes';
@@ -57,9 +54,9 @@ class ApiMobileView extends ApiBase {
 		$data = $this->getData( $title, $params['noimages'] );
 		$result = array();
 		$missingSections = array();
-		if ( $requestedSections == 'all' ) {
-			$requestedSections = range( 0, count( $data['sections'] ) );
-		}
+		$requestedSections = isset( $params['sections'] )
+			? $this->parseSections( $params['sections'], $data )
+			: array();
 		if ( $this->mainPage ) {
 			$requestedSections = array( 0 );
 			$this->getResult()->addValue( null, $this->getModuleName(),
@@ -73,7 +70,7 @@ class ApiMobileView extends ApiBase {
 					$section = array_intersect_key( $data['sections'][$i - 1], $sectionProp );
 				}
 				$section['id'] = $i;
-				if ( isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
+				if ( isset( $prop['text'] ) && isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
 					$section[$textElement] = $this->prepareSection( $data['text'][$i] );
 					unset( $requestedSections[$i] );
 				}
@@ -84,7 +81,7 @@ class ApiMobileView extends ApiBase {
 			}
 			$missingSections = $requestedSections;
 		} else {
-			foreach ( $requestedSections as $index ) {
+			foreach ( array_keys( $requestedSections ) as $index ) {
 				$section = array( 'id' => $index );
 				if ( isset( $data['text'][$index] ) ) {
 					$section[$textElement] = $data['text'][$index];
@@ -94,7 +91,7 @@ class ApiMobileView extends ApiBase {
 				$result[] = $section;
 			}
 		}
-		if ( count( $missingSections ) ) {
+		if ( count( $missingSections ) && isset( $prop['text'] ) ) {
 			$this->setWarning( 'Section(s) ' . implode( ', ', $missingSections ) . ' not found' );
 		}
 		$this->getResult()->setIndexedTagName( $result, 'section' );
@@ -109,11 +106,15 @@ class ApiMobileView extends ApiBase {
 		return trim( $html );
 	}
 
-	private function parseSections( $str ) {
-		if ( $str == 'all' ) {
-			return 'all';
+	private function parseSections( $str, $data ) {
+		if ( trim( $str ) == 'all' ) {
+			return range( 0, count( $data['sections'] ) );
 		}
-		$sections = array_flip( array_map( 'intval', explode( '|', $str ) ) );
+		$sections = array_flip( array_map( 'trim', explode( '|', $str ) ) );
+		if ( isset( $sections['references'] ) ) {
+			unset( $sections['references'] );
+			$sections += $data['refsections'];
+		}
 		return $sections;
 	}
 
@@ -249,7 +250,8 @@ class ApiMobileView extends ApiBase {
 		return array(
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
-			'sections' => 'Pipe-separated list of section numbers for which to return text or `all\' to return for all',
+			'sections' => "Pipe-separated list of section numbers for which to return text or `all' to return for all. "
+				. "`references' can be used to specify that all sections containing references should be returned.",
 			'prop' => array(
 				'Which information to get',
 				' text            - HTML of selected section(s)',
@@ -277,12 +279,13 @@ class ApiMobileView extends ApiBase {
 
 	public function getExamples() {
 		return array(
-			'api.php?action=mobileview&page=Doom_metal&sections=0'
+			'api.php?action=mobileview&page=Doom_metal&sections=0',
+			'api.php?action=mobileview&page=Candlemass&sections=0|references',
 		);
 	}
 
 	public function getHelpUrls() {
-		return 'https://www.mediawiki.org/wiki/Extension:MobileFrontend#New_API';
+		return 'https://www.mediawiki.org/wiki/Extension:MobileFrontend#action.3Dmobileview';
 	}
 
 	public function getVersion() {
