@@ -178,7 +178,7 @@ class SkinMobile extends SkinMobileBase {
 		$frontend = $this->extMobileFrontend;
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
-		
+
 		$output = $inBeta ?
 			Html::openElement( 'select' ) :
 			Html::openElement( 'select',
