@@ -61,6 +61,10 @@ table.navbox span {
 	white-space: pre-wrap !important;
 }
 
+table.infobox {
+	text-align: center !important;
+}
+
 table.infobox td,
 table.infobox th {
 	border: 1px solid #cccccc;
