@@ -190,7 +190,7 @@
 }
 
 #mw-mf-nav {
-	height: 50px;
+	height: 45px;
 	background-color: #757575;
 	text-align: center;
 	display: none;
@@ -200,7 +200,7 @@
 
 #mw-mf-nav li {
 	background-image: url(images/icons_sub_menu.png);
-	padding-top: 20px;
+	padding-top: 15px;
 	background-repeat: no-repeat;
 	display: inline-block;
 	height: 40px;
