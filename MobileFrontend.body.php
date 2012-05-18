@@ -67,6 +67,19 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
+	 * GetCacheVaryCookies hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
+	 *
+	 * @param $out OutputPage
+	 * @param $cookies array
+	 * @return bool
+	 */
+	public function getCacheVaryCookies( $out, &$cookies ) {
+		$cookies[] = 'mf_useformat';
+		return true;
+	}
+
+	/**
 	 * @return string
 	 */
 	public function getZeroRatedBanner() {

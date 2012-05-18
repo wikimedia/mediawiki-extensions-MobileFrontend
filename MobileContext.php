@@ -462,19 +462,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * GetCacheVaryCookies hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
-	 *
-	 * @param $out OutputPage
-	 * @param $cookies array
-	 * @return bool
-	 */
-	public function getCacheVaryCookies( $out, &$cookies ) {
-		$cookies[] = 'mf_useformat';
-		return true;
-	}
-
-	/**
 	 * Determine the duration the cookie should last.
 	 *
 	 * If $wgMobileFrontendFormatcookieExpiry has a non-0 value, use that
