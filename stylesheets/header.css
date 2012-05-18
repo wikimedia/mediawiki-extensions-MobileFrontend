@@ -21,29 +21,27 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 	position: absolute;
 }
 
-.suggestions-result a {
-	text-decoration: none;
-	color: #666;
-}
-
-.suggestions-result a:visited {
-	text-decoration: none;
-	color:#666;
-}
-
+#mw-mf-overlay a:hover,
+#mw-mf-overlay a:visited,
+#mw-mf-overlay a,
+.suggestions-result a,
+.suggestions-result a:visited,
 .suggestions-result a:hover {
 	text-decoration: none;
 	color:#666;
 }
+
 .suggestions-result a:active {
 	text-decoration: none;
 	color:#666;
 }
 
+#mw-mf-overlay li:hover,
 .suggestions-result:hover {
 	background-color: #ACD1E9;
 }
 
+#mw-mf-overlay li a,
 a.search-result-item {
 	display: block;
 }
@@ -273,6 +271,7 @@ full screen search css
 	list-style: none;
 }
 
+#mw-mf-overlay li,
 .full-screen-search .suggestions-result {
 	color: #666;
 	border: none;
