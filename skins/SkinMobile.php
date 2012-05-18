@@ -175,7 +175,6 @@ class SkinMobile extends SkinMobileBase {
 		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['supported_languages'] ) ) {
 			$supportedLanguages = $this->hookOptions['supported_languages'];
 		}
-		$frontend = $this->extMobileFrontend;
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
 
