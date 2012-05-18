@@ -67,6 +67,8 @@
 	padding-left: 40px;
 	-webkit-appearance: none;
 	padding-right: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #mw-mf-search::-webkit-search-cancel-button {
@@ -87,7 +89,7 @@
 }
 
 #mw-mf-main-menu-button {
-	background-position-x: -38px;
+	background-position: -38px 0px;
 	left: 22px;
 }
 
