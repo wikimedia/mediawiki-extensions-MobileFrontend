@@ -16,6 +16,8 @@ e.g. javascripts/banner.js has the corresponding stylesheet stylesheets/banner.c
 
 Introduce any browser specific patches in the relevant stylesheet. If the browser does not have its own stylesheet considering adding one in DeviceDetection.php
 
+NEVER use [http://www.w3.org/TR/CSS2/selector.html#attribute-selectors attribute selectors] - these are known to cause issues in the [https://github.com/wikimedia/WikipediaMobile phonegap app] which shares some of this codebase.
+
 === Javascript ===
 Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
 
