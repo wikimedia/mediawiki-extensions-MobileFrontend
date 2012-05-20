@@ -141,6 +141,10 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-toggle-images' => '$1 and $2 are {{msg-mw|Mobile-frontend-off}} and {{msg-mw|Mobile-frontend-on}}, respectively',
 	'mobile-frontend-off' => 'Refers to images - means that they are not shown. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
 	'mobile-frontend-on' => 'Refers to images - means that they are shown. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
+	'mobile-frontend-footer-article-edit-info' => 'Parameters:
+* $1 - last edit time and date
+* $2 - last edit time
+* $3 - last edit date',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
 	'mobile-frontend-leave-feedback-title' => 'Special page title',
 	'mobile-frontend-leave-feedback-notice' => 'Parameters:
@@ -162,7 +166,7 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-feedback-no-subject' => 'Used for section heading on the feedback page if user entered no subject',
 	'mobile-frontend-feedback-no-message' => 'Error message on feedback form',
 	'mobile-frontend-feedback-edit-summary' => "Edit summary, $1 is feedback subject. Don't translate the special page name",
-	'mobile-frontend-leave-feedback-post-error' => "Message displayed to user when there is an internal error processing form submission",
+	'mobile-frontend-leave-feedback-post-error' => 'Message displayed to user when there is an internal error processing form submission',
 	'mobile-frontend-language' => '{{Identical|Language}}',
 	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.
 
@@ -182,10 +186,6 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-footer-sitename' => 'Name of site',
 	'mobile-frontend-footer-license' => 'License shown in footer',
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
-	'mobile-frontend-footer-article-edit-info' => 'Parameters:
-* $1 - last edit time and date
-* $2 - last edit time
-* $3 - last edit date',
 	'mobile-frontend-unknown-option' => 'Error message shown by Special:MobileOptions',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
 	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu',
@@ -196,6 +196,16 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-page-menu-language' => 'language link text in secondary menu',
 	'mobile-frontend-page-menu-contents-heading' => 'Contents overlay heading',
 	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
+);
+
+/** Tati (Tati)
+ * @author Erdemaslancan
+ */
+$messages['ttt'] = array(
+	'mobile-frontend-search-submit' => 'Buşu',
+	'mobile-frontend-home-button' => 'Keye',
+	'mobile-frontend-opt-in-yes-button' => 'De',
+	'mobile-frontend-opt-in-no-button' => 'Ne',
 );
 
 /** Ṫuroyo (Ṫuroyo)
@@ -871,10 +881,13 @@ $messages['ca'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Salteu enrere una secció',
 	'mobile-frontend-show-button' => 'Mostra',
 	'mobile-frontend-hide-button' => 'Amaga',
-	'mobile-frontend-regular-site' => 'Mostra la pàgina en la versió habitual',
+	'mobile-frontend-empty-homepage' => 'Aquesta pàgina d\'inici ha de ser configurada. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Vegeu més informació</a>',
+	'mobile-frontend-regular-site' => "Vista d'escriptori",
 	'mobile-frontend-wml-continue' => 'Continua ...',
 	'mobile-frontend-wml-back' => 'Enrere ...',
 	'mobile-frontend-view' => 'Versió per a mòbils',
+	'mobile-frontend-view-desktop' => 'Escriptori',
+	'mobile-frontend-view-mobile' => 'Mòbil',
 	'mobile-frontend-opt-in-message' => 'Voleu provar la versió mòbil beta?',
 	'mobile-frontend-opt-in-yes-button' => 'sí',
 	'mobile-frontend-opt-in-no-button' => 'no',
@@ -887,21 +900,53 @@ $messages['ca'] = array(
 	'mobile-frontend-opt-out-explain' => "En deixar la versió mòbil beta, s'inhabilitaran les característiques experimentals i tornareu a l'experiència mòbil clàssica.",
 	'mobile-frontend-disable-images' => 'Inhabilita les imatges al lloc web mòbil',
 	'mobile-frontend-enable-images' => 'Habilita les imatges al lloc web mòbil',
+	'mobile-frontend-toggle-images' => 'Imatges $1 / $2',
+	'mobile-frontend-off' => 'NO',
+	'mobile-frontend-on' => 'SÍ',
+	'mobile-frontend-footer-contributors' => 'Article per <a href="$1">coŀlaboradors</a> com vós',
+	'mobile-frontend-footer-article-edit-info' => 'Darrera modificació: $1',
 	'mobile-frontend-news-items' => 'Actualitat',
 	'mobile-frontend-leave-feedback-title' => 'Feu-nos comentaris de quina ha estat la vostra experiència des del mòbil',
 	'mobile-frontend-leave-feedback-notice' => "Els vostres comentaris ens ajuden a millorar la experiència mòbil del lloc web. Allò que ens comenteu es publicarà públicament (amb el vostre nom d'usuari, versió de navegador i sistema operatiu) a la pàgina «$1». Proveu d'emprar una línia d'assumpte prou informativa, com ara «Problemes de format de les taules amples». Els vostres comentaris es troben subjectes als nostres termes d'ús.",
-	'mobile-frontend-leave-feedback-subject' => 'Assumpte',
-	'mobile-frontend-leave-feedback-message' => 'Missatge',
+	'mobile-frontend-leave-feedback-warning' => 'A no ser que vulgueu que la vostra informació sigui pública, no afegiu informació personal en els vostres comentaris.',
+	'mobile-frontend-leave-feedback-subject' => 'Assumpte:',
+	'mobile-frontend-leave-feedback-message' => 'Missatge:',
 	'mobile-frontend-leave-feedback-submit' => 'Tramet els comentaris',
 	'mobile-frontend-leave-feedback-link-text' => 'Extensió de comentaris de la interfície mòbil',
 	'mobile-frontend-leave-feedback' => 'Comentaris del lloc web mòbil',
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema tècnic',
+	'mobile-frontend-leave-feedback-general-section-header' => 'General',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => "Avaluació de l'article",
+	'mobile-frontend-leave-feedback-general-link-text' => 'Comentaris generals',
+	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Pel que fa a mi, una persona o una empresa que represento',
+	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Sobre un error factual',
+	'mobile-frontend-leave-feedback-article-other-link-text' => 'Sobre altres problemes',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Assumpte del missatge',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Escriviu aquí el vostre missatge',
 	'mobile-frontend-leave-feedback-page-title' => 'Feu-nos comentaris de quina ha estat la vostra experiència des del mòbil',
+	'mobile-frontend-leave-feedback-special-title' => 'Contacte',
+	'mobile-frontend-feedback-no-subject' => '(sense assumpte)',
+	'mobile-frontend-feedback-no-subject-field' => 'Indiqueu un assumpte',
+	'mobile-frontend-feedback-no-message' => 'Escriviu un missatge aquí',
+	'mobile-frontend-feedback-edit-summary' => "$1 - publicat automàticament amb l'[[Special:MobileFeedback|eina de resposta per mòbil]]",
 	'mobile-frontend-leave-feedback-thanks' => 'Gràcies pels comentaris!',
-	'mobile-frontend-language' => 'Llengua',
+	'mobile-frontend-language' => 'Llengua:',
 	'mobile-frontend-username' => "Nom d'usuari:",
 	'mobile-frontend-password' => 'Contrasenya:',
 	'mobile-frontend-login' => 'Inicia una sessió',
 	'mobile-frontend-placeholder' => 'Escriviu la cerca a continuació...',
+	'mobile-frontend-dismiss-notification' => 'rebutja aquesta notificació',
+	'mobile-frontend-clear-search' => 'Anuŀla',
+	'mobile-frontend-privacy-link-text' => 'Privadesa',
+	'mobile-frontend-about-link-text' => 'Quant a',
+	'mobile-frontend-footer-more' => 'més',
+	'mobile-frontend-footer-less' => 'menys',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'Contingut disponible sota <a href="//ca.m.wikipedia.org/wiki/Viquip%C3%A8dia:Text_de_la_llic%C3%A8ncia_de_Creative_Commons_Reconeixement-Compartir_Igual_3.0_No_adaptada?useformat=mobile">CC BY-SA 3.0</a>',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Condicions_d%27%C3%BAs?useformat=mobile">Condicions d\'ús</a>',
+	'mobile-frontend-footer-contact' => 'Contacte',
+	'mobile-frontend-unknown-option' => 'Opció "$1" no reconeguda.',
+	'mobile-frontend-search-noresults' => "Cap títol d'article coincideix amb la vostra cerca. Modifiqueu-la o utilitzeu el botó de cerca del teclat per cercar en el text dels articles.",
 );
 
 /** Chechen (Нохчийн) */
@@ -1018,6 +1063,7 @@ $messages['cs'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Podm%C3%ADnky_u%C5%BEit%C3%AD?useformat=mobile">Podmínky užití</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Nerozpoznaná volba „$1“.',
+	'mobile-frontend-search-noresults' => 'Vašemu hledání neodpovídají žádné názvy článků. Změňte zadání nebo stiskněte tlačítko hledání pro hledání v článcích.',
 );
 
 /** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -1150,6 +1196,7 @@ $messages['de'] = array(
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'AN',
 	'mobile-frontend-footer-contributors' => 'Artikel von <a href="$1">Mitwirkenden</a> wie dir',
+	'mobile-frontend-footer-article-edit-info' => 'Zuletzt bearbeitet: $1',
 	'mobile-frontend-news-items' => 'In den Nachrichten',
 	'mobile-frontend-leave-feedback-title' => 'Rückmeldung zur mobilen Ansicht',
 	'mobile-frontend-leave-feedback-notice' => 'Deine Rückmeldung hilft uns dabei, die mobile Ansicht weiter zu verbessern. Sie wird öffentlich auf der Seite &quot;$1&quot; angezeigt. Dabei werden dein Benutzername, die Version des von dir genutzten Browsers sowie das von dir genutzte Betriebssystem angegeben. Bitte wähle einen informativen und aussagekräftigen Betreff, wie bswp. „Probleme bei der Anzeige von Tabellen“. Deine Rückmeldung unterliegt dabei unseren Nutzungsbedingungen.',
@@ -1175,11 +1222,13 @@ $messages['de'] = array(
 	'mobile-frontend-feedback-no-message' => 'Bitte gib deine Nachricht an dieser Stelle ein',
 	'mobile-frontend-feedback-edit-summary' => '$1 - automatisch gespeicherte [[Special:MobileFeedback|Rückmeldung]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für deine Rückmeldung.',
+	'mobile-frontend-leave-feedback-post-error' => 'Beim Verarbeiten deiner Nachricht ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
 	'mobile-frontend-language' => 'Sprache:',
 	'mobile-frontend-username' => 'Benutzername:',
 	'mobile-frontend-password' => 'Passwort:',
 	'mobile-frontend-login' => 'Anmelden',
 	'mobile-frontend-placeholder' => 'Gib hier deine Suche ein ...',
+	'mobile-frontend-search-help' => 'Gib oben den Suchbegriff ein. Passende Artikelnamen werden dann hier angezeigt.',
 	'mobile-frontend-dismiss-notification' => 'diese Benachrichtigung schließen',
 	'mobile-frontend-clear-search' => 'Leeren',
 	'mobile-frontend-privacy-link-text' => 'Datenschutz',
@@ -1191,6 +1240,15 @@ $messages['de'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Nutzungsbedingungen</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Unbekannte Option „$1“.',
+	'mobile-frontend-search-noresults' => 'Kein Artikeltitel entspricht deiner Suche. Ändere deine Suche oder drücke die Suchschaltfläche deiner Tastatur, um die Suche auf den Inhalt der Artikel auszuweiten.',
+	'mobile-frontend-main-menu-featured' => 'Exzellent',
+	'mobile-frontend-main-menu-nearby' => 'In der Nähe',
+	'mobile-frontend-main-menu-settings' => 'Einstellungen',
+	'mobile-frontend-main-menu-contact' => 'Kontakt',
+	'mobile-frontend-page-menu-contents' => 'Inhalte',
+	'mobile-frontend-page-menu-language' => 'Sprache',
+	'mobile-frontend-page-menu-contents-heading' => 'Inhalte',
+	'mobile-frontend-page-menu-language-heading' => 'Diesen Artikel lesen auf',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -1213,7 +1271,10 @@ $messages['de-formal'] = array(
 	'mobile-frontend-feedback-no-subject-field' => 'Geben Sie einen Betreff ein',
 	'mobile-frontend-feedback-no-message' => 'Bitte geben Sie Ihre Nachricht an dieser Stelle ein',
 	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für Ihre Rückmeldung.',
+	'mobile-frontend-leave-feedback-post-error' => 'Beim Verarbeiten Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.',
 	'mobile-frontend-placeholder' => 'Geben Sie hier Ihre Suche ein ...',
+	'mobile-frontend-search-help' => 'Geben Sie oben den Suchbegriff ein. Passende Artikelnamen werden dann hier angezeigt.',
+	'mobile-frontend-search-noresults' => 'Kein Artikeltitel entspricht Ihrer Suche. Ändern sie Ihre Suche oder drücken Sie die Suchschaltfläche Ihrer Tastatur, um die Suche auf den Inhalt der Artikel auszuweiten.',
 );
 
 /** Zazaki (Zazaki)
@@ -1286,7 +1347,7 @@ $messages['diq'] = array(
 	'mobile-frontend-clear-search' => 'Bestern',
 	'mobile-frontend-privacy-link-text' => 'Nımıtış',
 	'mobile-frontend-about-link-text' => 'Sılasnayış',
-	'mobile-frontend-footer-more' => 'Vêşi',
+	'mobile-frontend-footer-more' => 'Dehana vêşi',
 	'mobile-frontend-footer-less' => 'Kemi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Zerrey enay <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> dero',
@@ -1330,9 +1391,11 @@ $messages['dsb'] = array(
 	'mobile-frontend-off' => 'WUŠALTOWANY',
 	'mobile-frontend-on' => 'ZAŠALTOWANY',
 	'mobile-frontend-footer-contributors' => 'Nadawk wót <a href="$1">awtorow</a> kaž ty',
+	'mobile-frontend-footer-article-edit-info' => 'Slědny raz wobźěłany $1',
 	'mobile-frontend-news-items' => 'W nowosćach',
 	'mobile-frontend-leave-feedback-title' => 'Komentary wó mobilnem sedle',
 	'mobile-frontend-leave-feedback-notice' => 'Twóje komentary pomagaju nam mobilne sedło pólěpšyś. Wozjawja se z wužywarskim mjenim, wersiju wobglědowaka a źěłowym systemom na boku &quot;$1&quot;. Pšosym wubjeŕ wugroniwu temu, na ps. "Problemy pśi formatěrowanju tabelow". Twóje komentary pódlaže našym wužywarskim wuměnjenjam.',
+	'mobile-frontend-leave-feedback-warning' => 'Pšosym njezapśimjej wósobinske informacije do swójich komentarow, mimo až sy wobjadny, až se twóje informacije wózjawiju.',
 	'mobile-frontend-leave-feedback-subject' => 'Tema:',
 	'mobile-frontend-leave-feedback-message' => 'Powěsć:',
 	'mobile-frontend-leave-feedback-submit' => 'Komentar wótpósłaś',
@@ -1370,6 +1433,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Wužywańske wuměnjenja</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Njespóznata opcija "$1".',
+	'mobile-frontend-search-noresults' => 'Twójomu pytanjeju žedne nastawkowe titele njewotpówěduju. Změń swójo pytanje abo tłoc pytańsku tastu swójeje tastatury, aby w nastawkach pytał.',
 );
 
 /** Central Dusun (Dusun Bundu-liwan) */
@@ -1521,6 +1585,7 @@ $messages['es'] = array(
 	'mobile-frontend-off' => 'APAGADO',
 	'mobile-frontend-on' => 'ENCENDIDO',
 	'mobile-frontend-footer-contributors' => 'Artículo realizado por <a href="$1"> colaboradores</a> como tú',
+	'mobile-frontend-footer-article-edit-info' => 'Última edición en $1',
 	'mobile-frontend-news-items' => 'Actualidad',
 	'mobile-frontend-leave-feedback-title' => 'Comentarios sobre la versión para móviles.',
 	'mobile-frontend-leave-feedback-notice' => 'Sus comentarios nos ayudan a mejorar su experiencia del sitio móvil. Serán publicados en sitio accesible (junto con su nombre de usuario, versión del navegador y sistema operativo) en la página "$1". Intente elegir una línea informativa del tema, por ejemplo, "Formateando contenidos con tablas de gran anchura". Sus comentarios está sujetos a nuestros términos de uso.',
@@ -1546,11 +1611,13 @@ $messages['es'] = array(
 	'mobile-frontend-feedback-no-message' => 'Introduce un mensaje aquí',
 	'mobile-frontend-feedback-edit-summary' => '$1 - publicado automáticamente con la [[Special:MobileFeedback|herramienta de comentarios sobre el sitio móvil]]',
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracias por tu comentario!',
+	'mobile-frontend-leave-feedback-post-error' => 'Hubo un error al procesar el mensaje. Inténtalo de nuevo más tarde.',
 	'mobile-frontend-language' => 'Idioma:',
 	'mobile-frontend-username' => 'Nombre de usuario:',
 	'mobile-frontend-password' => 'Contraseña:',
 	'mobile-frontend-login' => 'Iniciar sesión',
 	'mobile-frontend-placeholder' => 'Introduzca su búsqueda...',
+	'mobile-frontend-search-help' => 'Teclea el término de búsqueda encima y los títulos de artículo coincidentes aparecerán aquí.',
 	'mobile-frontend-dismiss-notification' => 'Rechazar esta notificación',
 	'mobile-frontend-clear-search' => 'Limpiar',
 	'mobile-frontend-privacy-link-text' => 'Privacidad',
@@ -1562,6 +1629,15 @@ $messages['es'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Condiciones de uso</a>',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-unknown-option' => 'Opción no reconocida "$1".',
+	'mobile-frontend-search-noresults' => 'No hay ningún título de artículo que coincida con tu búsqueda. Cambia tu búsqueda, o pulsa el botón de búsqueda del teclado para buscar dentro del artículo.',
+	'mobile-frontend-main-menu-featured' => 'Destacado',
+	'mobile-frontend-main-menu-nearby' => 'Cercano',
+	'mobile-frontend-main-menu-settings' => 'Configuración',
+	'mobile-frontend-main-menu-contact' => 'Contacto',
+	'mobile-frontend-page-menu-contents' => 'contenidos',
+	'mobile-frontend-page-menu-language' => 'idioma',
+	'mobile-frontend-page-menu-contents-heading' => 'Contenidos',
+	'mobile-frontend-page-menu-language-heading' => 'Lee este artículo en',
 );
 
 /** Estonian (Eesti)
@@ -1581,12 +1657,18 @@ $messages['et'] = array(
 	'mobile-frontend-wml-continue' => 'Jätka...',
 	'mobile-frontend-wml-back' => 'Tagasi...',
 	'mobile-frontend-view' => 'Mobiilivaade',
+	'mobile-frontend-view-desktop' => 'Lauaarvuti',
+	'mobile-frontend-view-mobile' => 'Mobiil',
 	'mobile-frontend-opt-in-yes-button' => 'Jah',
 	'mobile-frontend-opt-in-no-button' => 'Ei',
 	'mobile-frontend-opt-out-yes-button' => 'Jah',
 	'mobile-frontend-opt-out-no-button' => 'Ei',
 	'mobile-frontend-disable-images' => 'Keela mobiilivaates pildid',
 	'mobile-frontend-enable-images' => 'Luba mobiilivaates pildid',
+	'mobile-frontend-toggle-images' => 'Pildid $1 / $2',
+	'mobile-frontend-off' => 'VÄLJAS',
+	'mobile-frontend-on' => 'SEES',
+	'mobile-frontend-footer-contributors' => 'Sinusuguste <a href="$1">kaastööliste</a> kirjutatud artikkel',
 	'mobile-frontend-news-items' => 'Päevakajaline',
 	'mobile-frontend-leave-feedback-subject' => 'Teema:',
 	'mobile-frontend-leave-feedback-message' => 'Sõnum:',
@@ -1599,8 +1681,15 @@ $messages['et'] = array(
 	'mobile-frontend-login' => 'Logi sisse',
 	'mobile-frontend-placeholder' => 'Tipi siia otsitav...',
 	'mobile-frontend-clear-search' => 'Tühjenda',
+	'mobile-frontend-privacy-link-text' => 'Privaatsus',
+	'mobile-frontend-about-link-text' => 'Tiitelandmed',
+	'mobile-frontend-footer-more' => 'rohkem',
+	'mobile-frontend-footer-less' => 'vähem',
 	'mobile-frontend-footer-license' => 'Sisu on saadaval litsentsi <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> all.',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Kasutustingimused</a>',
+	'mobile-frontend-footer-contact' => 'Kontakt',
+	'mobile-frontend-unknown-option' => 'Tundmatu suvand "$1".',
+	'mobile-frontend-search-noresults' => 'Otsitavale vastavad artiklipealkirjad puuduvad. Vaheta otsisõna või vajuta sõrmistiku otsinuppu, et otsida artiklitest.',
 );
 
 /** Basque (Euskara)
@@ -1823,6 +1912,7 @@ $messages['fr'] = array(
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-footer-contributors' => 'Article par <a href="$1">des contributeurs</a> comme vous',
+	'mobile-frontend-footer-article-edit-info' => 'Dernière modification le $1',
 	'mobile-frontend-news-items' => 'Actualités',
 	'mobile-frontend-leave-feedback-title' => 'Ressenti sur le site mobile',
 	'mobile-frontend-leave-feedback-notice' => "Votre avis nous aidera à améliorer votre expérience du site mobile. Il sera publié publiquement (avec votre nom d'utilisateur, la version de votre navigateur et votre système d'exploitation) sur la page&quot;\$1&quot;. Merci d'essayer de choisir une ligne de sujet parlante, par ex. \"Problèmes de formatage avec les tableaux larges\". Votre avis est soumis à nos conditions d'utilisation.",
@@ -1864,6 +1954,7 @@ $messages['fr'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Conditions d\'utilisation</a>',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-unknown-option' => 'Option "$1" non reconnue.',
+	'mobile-frontend-search-noresults' => "Aucun titre d'article ne correspond à votre recherche. Modifiez-la, ou appuyez sur le bouton de recherche du clavier pour chercher à l'intérieur des articles.",
 );
 
 /** Franco-Provençal (Arpetan)
@@ -1947,6 +2038,7 @@ $messages['frr'] = array(
 	'mobile-frontend-off' => 'ÜTJ',
 	'mobile-frontend-on' => 'UUN',
 	'mobile-frontend-footer-contributors' => 'Artiikel faan <a href="$1">brükern</a> üs di',
+	'mobile-frontend-footer-article-edit-info' => 'Leetst tooch bewerket: $1',
 	'mobile-frontend-news-items' => 'Uun a noorachten',
 	'mobile-frontend-leave-feedback-title' => "Komentaar tu't mobiil uunsicht",
 	'mobile-frontend-leave-feedback-notice' => 'Dan komentaar helept üs, det mobiil uunsicht tu ferbeedrin. Hi woort üüb det sidj &quot;$1&quot; uunwiset. Diarbi woort uk dan brükernööm, dan browser an din bedrifsüsteem uunwiset. För ales wat dü skrafst, tääl üüs brüker-reegeln.',
@@ -1988,6 +2080,7 @@ $messages['frr'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Brüker-reegeln</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Ünbekäänd optsjuun „$1“.',
+	'mobile-frontend-search-noresults' => 'Son artiikel jaft at ei. Sjük en öödern artiikel of trak üüb di sjük-knoop faan din tastatuur, am det wurd uk banen uun a artiikler tu sjüken.',
 );
 
 /** Friulian (Furlan) */
@@ -2050,6 +2143,7 @@ $messages['gl'] = array(
 	'mobile-frontend-off' => 'DESACTIVADAS',
 	'mobile-frontend-on' => 'ACTIVADAS',
 	'mobile-frontend-footer-contributors' => 'Artigo realizado por <a href="$1">colaboradores</a> coma vostede',
+	'mobile-frontend-footer-article-edit-info' => 'Última edición o $1',
 	'mobile-frontend-news-items' => 'Actualidade',
 	'mobile-frontend-leave-feedback-title' => 'Comentarios sobre a versión móbil',
 	'mobile-frontend-leave-feedback-notice' => 'Os seus comentarios axúdannos a mellorar a súa experiencia na versión móbil. Faremos os comentarios públicos (xunto ao seu nome de usuario, versión do navegador e sistema operativo) na páxina &quot;$1&quot;. Intente elixir unha liña de asunto informativa; por exemplo, "Problemas de formato co largo das táboas". Os seus comentarios están suxeitos aos nosos termos de uso.',
@@ -2091,6 +2185,7 @@ $messages['gl'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Termos de uso</a>',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-unknown-option' => 'Non se recoñece a opción "$1"',
+	'mobile-frontend-search-noresults' => 'Non hai ningún título que coincida coa súa procura. Probe con outras palabras ou prema no botón de procuras do teclado para pescudar dentro dos artigos.',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -2291,6 +2386,7 @@ $messages['he'] = array(
 	'mobile-frontend-off' => 'כבויות',
 	'mobile-frontend-on' => 'מופעלות',
 	'mobile-frontend-footer-contributors' => 'ערך שנכתב על־ידי <a href="$1">תורמים</a> כמוך',
+	'mobile-frontend-footer-article-edit-info' => 'נערך לאחרונה ב־$1',
 	'mobile-frontend-news-items' => 'בחדשות',
 	'mobile-frontend-leave-feedback-title' => 'משוב על האתר למכשירים ניידים',
 	'mobile-frontend-leave-feedback-notice' => 'המשוב שלך עוזר לנו לספר את חוויית השימוש באתר למכשירים ניידים. הוא יישלח באופן פומבי (יחד עם שם המשתמש שלך, גרסה הדפדפן ומערכת ההפעלה), לדף "$1". נא לרשום משהו ברור בשורת הנושא, למשל "יש בעיית עיצוב עם טבלאות". המשוב שלכם כפוף לתנאי השימוש.',
@@ -2332,6 +2428,7 @@ $messages['he'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">תנאי שימוש</a>',
 	'mobile-frontend-footer-contact' => 'יצירת קשר',
 	'mobile-frontend-unknown-option' => 'אפשרות בלתי־ידועה "$1".',
+	'mobile-frontend-search-noresults' => 'שום כותרת של ערך לא תאמה לחיפוש שלך. יש להחליף את החיפוש או ללחוץ על כתפור החיפוש במקלדת כדי לחפש בערכים.',
 );
 
 /** Hindi (हिन्दी)
@@ -2444,10 +2541,11 @@ $messages['hsb'] = array(
 	'mobile-frontend-off' => 'WUPINJENY',
 	'mobile-frontend-on' => 'ZAPINJENY',
 	'mobile-frontend-footer-contributors' => 'Nadawk wot <a href="$1">awtorow</a> kaž ty',
+	'mobile-frontend-footer-article-edit-info' => 'Posledni raz wobdźěłany $1',
 	'mobile-frontend-news-items' => 'W powěsćach',
 	'mobile-frontend-leave-feedback-title' => 'Komentary wo mobilnym sydle',
 	'mobile-frontend-leave-feedback-notice' => 'Twoje komentary pomhaja nam mobilne sydło polěpšić. Wozjewja so z wužiwarskim mjenom, wersiju wobhladowaka a dźěłowym systemom na stronje &quot;$1&quot;. Prošu wubjer wuprajiwu temu, na př. "Problemy při formatowanju tabelow". Twoje komentary podleža našim wužiwarskim wuměnjenjam.',
-	'mobile-frontend-leave-feedback-warning' => 'Prošu njezapřimiće wosobinske informacije do swojich komentarow, chibazo sy přezjedny, zo so twoje informacije wozjawja.',
+	'mobile-frontend-leave-feedback-warning' => 'Prošu njezapřimiće wosobinske informacije do swojich komentarow, chibazo sy přezjedny, zo so twoje informacije wozjewja.',
 	'mobile-frontend-leave-feedback-subject' => 'Tema:',
 	'mobile-frontend-leave-feedback-message' => 'Powěsć:',
 	'mobile-frontend-leave-feedback-submit' => 'Komentar wotpósłać',
@@ -2485,11 +2583,13 @@ $messages['hsb'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Wužiwanske wuměnjenja</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Njespóznata opcija "$1".',
+	'mobile-frontend-search-noresults' => 'Twojemu pytanju žane nastawkowe titule njewotpowěduja. Změń swoje pytanje abo stłóč pytansku tastu swojeje tastatury, zo by znutřka nastawkow pytał.',
 );
 
 /** Hungarian (Magyar)
  * @author BáthoryPéter
  * @author Dj
+ * @author Misibacsi
  */
 $messages['hu'] = array(
 	'mobile-frontend-desc' => 'Mobil felület',
@@ -2616,6 +2716,7 @@ $messages['ia'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Conditiones de uso</a>',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-unknown-option' => 'Option "$1" non recognoscite.',
+	'mobile-frontend-search-noresults' => 'Nulle titulo de articulo corresponde a tu recerca. Cambia le recerca, o preme le button de recerca de claviero pro cercar intra articulos.',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -2827,6 +2928,7 @@ $messages['it'] = array(
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-footer-contributors' => 'Voce scritta da <a href="$1">contributori</a> come te',
+	'mobile-frontend-footer-article-edit-info' => 'Ultima modifica il $1',
 	'mobile-frontend-news-items' => 'Novità',
 	'mobile-frontend-leave-feedback-title' => 'Commenti sul sito per dispositivi mobili',
 	'mobile-frontend-leave-feedback-notice' => 'I tuoi commenti ci aiutano a migliorare la tua soddisfazione del sito per dispositivi mobili. Sarà pubblicata (insieme al tuo nome utente, versione del browser e sistema operativo) alla pagina "$1". Per favore, scegli un oggetto descrittivo (ad esempio, "Problemi di formattazione con tabelle larghe"). Il tuo commento è soggetto alle condizioni d\'uso.',
@@ -2852,11 +2954,13 @@ $messages['it'] = array(
 	'mobile-frontend-feedback-no-message' => 'Si prega di inserire un messaggio qui',
 	'mobile-frontend-feedback-edit-summary' => '$1 - inviato automaticamente utilizzando lo [[Special:MobileFeedback|strumento mobile feedback]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Grazie per aver espresso il tuo commento.',
+	'mobile-frontend-leave-feedback-post-error' => "Si è verificato un errore durante l'elaborazione del messaggio. Si prega di riprovare più tardi.",
 	'mobile-frontend-language' => 'Lingua:',
 	'mobile-frontend-username' => 'Nome utente:',
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Entra',
 	'mobile-frontend-placeholder' => 'Digita la tua ricerca qui...',
+	'mobile-frontend-search-help' => 'Digita qui la parola da ricercare e i titoli degli articoli risultanti appariranno qui.',
 	'mobile-frontend-dismiss-notification' => 'ignora questa notifica',
 	'mobile-frontend-clear-search' => 'Pulisci',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
@@ -2868,6 +2972,15 @@ $messages['it'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Condizioni d\'uso</a>',
 	'mobile-frontend-footer-contact' => 'Contatti',
 	'mobile-frontend-unknown-option' => 'Opzione non riconosciuta "$1".',
+	'mobile-frontend-search-noresults' => 'Nessuna voce ha un titolo che corrisponde alla tua ricerca. Modifica la tua ricerca, oppure premi il pulsante della tastiera "Cerca" per la ricerca nel testo delle voci.',
+	'mobile-frontend-main-menu-featured' => 'In primo piano',
+	'mobile-frontend-main-menu-nearby' => 'Nelle vicinanze',
+	'mobile-frontend-main-menu-settings' => 'Impostazioni',
+	'mobile-frontend-main-menu-contact' => 'Contatto',
+	'mobile-frontend-page-menu-contents' => 'contenuti',
+	'mobile-frontend-page-menu-language' => 'lingua',
+	'mobile-frontend-page-menu-contents-heading' => 'Contenuti',
+	'mobile-frontend-page-menu-language-heading' => 'Leggi questo articolo su',
 );
 
 /** Japanese (日本語)
@@ -3068,7 +3181,7 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Мәлімдеме:',
 	'mobile-frontend-leave-feedback-submit' => 'Кері байланыс',
 	'mobile-frontend-feedback-no-subject' => '(тақырыпсыз)',
-	'mobile-frontend-language' => 'Тілі',
+	'mobile-frontend-language' => 'Тілі:',
 	'mobile-frontend-username' => 'Қатысушы аты:',
 	'mobile-frontend-password' => 'Құпия сөз:',
 	'mobile-frontend-login' => 'Кіру',
@@ -3197,16 +3310,18 @@ $messages['kn'] = array(
  * @author Klutzy
  * @author Kwj2772
  * @author SEVEREN
+ * @author 관인생략
  */
 $messages['ko'] = array(
 	'mobile-frontend-desc' => '모바일 프론트엔드',
 	'mobile-frontend-search-submit' => '가기',
-	'mobile-frontend-featured-article' => '알찬 글 읽어보기',
+	'mobile-frontend-featured-article' => '오늘의 알찬 글',
 	'mobile-frontend-home-button' => '대문',
 	'mobile-frontend-random-button' => '임의 문서',
 	'mobile-frontend-back-to-top-of-section' => '문단 처음으로',
 	'mobile-frontend-show-button' => '보이기',
 	'mobile-frontend-hide-button' => '숨기기',
+	'mobile-frontend-empty-homepage' => '이 홈페이지는 재구성되어야 합니다. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">자세한 내용은 이곳을 참고하세요.</a>',
 	'mobile-frontend-regular-site' => '데스크톱 버전',
 	'mobile-frontend-wml-continue' => '계속...',
 	'mobile-frontend-wml-back' => '뒤로...',
@@ -3220,11 +3335,16 @@ $messages['ko'] = array(
 	'mobile-frontend-opt-in-explain' => '베타에 참여하면서, 버그나 문제가 생길 위험을 감수하고 실험 중인 기능을 사용해볼 수 있습니다.',
 	'mobile-frontend-opt-out-message' => '모바일 베타를 빠져나올까요?',
 	'mobile-frontend-opt-out-yes-button' => '예',
-	'mobile-frontend-opt-out-no-button' => '오아니오',
+	'mobile-frontend-opt-out-no-button' => '아니오',
 	'mobile-frontend-opt-out-title' => '모바일 베타 끄기',
 	'mobile-frontend-opt-out-explain' => '모바일 베타를 끄면서 모든 실험 중인 기능을 끄고 기본 모바일 환경으로 돌아갈 것입니다.',
 	'mobile-frontend-disable-images' => '이미지를 표시하지 않도록 설정',
 	'mobile-frontend-enable-images' => '이미지를 표시하도록 설정',
+	'mobile-frontend-toggle-images' => '이미지 $1 / $2',
+	'mobile-frontend-off' => '끄기',
+	'mobile-frontend-on' => '켜기',
+	'mobile-frontend-footer-contributors' => '이 문서는 당신과 같은 <a href="$1">사용자</a>가 기여하였습니다.',
+	'mobile-frontend-footer-article-edit-info' => '이 문서는 $1에 마지막으로 바뀌었습니다.',
 	'mobile-frontend-news-items' => '새로 들어온 소식',
 	'mobile-frontend-leave-feedback-title' => '모바일 사이트 피드백',
 	'mobile-frontend-leave-feedback-notice' => '당신의 피드백이 모바일 사이트를 개선하는 데 도움이 됩니다. 피드백은 당신의 계정 이름, 브라우저 버전과 운영 체제 정보와 함께 &quot;$1&quot; 문서에 공개적으로 게시될 것입니다. 제목에 도움이 되는 정보를 입력해주세요. 예를 들면 "넓은 표에 관한 문제"라고 쓸 수 있습니다. 당신의 피드백은 이용 규약의 적용을 받습니다.',
@@ -3236,17 +3356,26 @@ $messages['ko'] = array(
 	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => '문서 평가',
 	'mobile-frontend-leave-feedback-page-title' => '모바일 사이트 피드백',
 	'mobile-frontend-feedback-page' => 'Project:모바일 확장 기능 피드백',
+	'mobile-frontend-leave-feedback-special-title' => '문의하기',
 	'mobile-frontend-feedback-no-subject' => '(제목 없음)',
 	'mobile-frontend-leave-feedback-thanks' => '피드백해 주셔서 감사합니다!',
+	'mobile-frontend-leave-feedback-post-error' => '메시지를 처리 하는 동안 오류가 발생 했습니다. 나중에 다시 시도 하십시오.',
 	'mobile-frontend-language' => '언어:',
 	'mobile-frontend-username' => '계정 이름:',
 	'mobile-frontend-password' => '비밀번호:',
 	'mobile-frontend-login' => '로그인',
-	'mobile-frontend-placeholder' => '검색할 것을 여기 입력하세요...',
+	'mobile-frontend-placeholder' => '검색할 것을 여기에 입력하세요...',
 	'mobile-frontend-dismiss-notification' => '이 알림 숨기기',
 	'mobile-frontend-clear-search' => '지우기',
+	'mobile-frontend-privacy-link-text' => '개인정보 정책',
+	'mobile-frontend-about-link-text' => '소개',
+	'mobile-frontend-footer-more' => '더 보기',
+	'mobile-frontend-footer-less' => '감추기',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => '모든 문서는 <a href="//ko.m.wikipedia.org/w/index.php?title=%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License&mobileaction=toggle_view_mobile">크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0</a>에 따라 사용할 수 있습니다.',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">이용 약관</a>',
+	'mobile-frontend-search-noresults' => '검색 결과와 일치하는 문서를 찾지 못했습니다. 검색을 변경하시거나, 키보드의 검색 단추를 누르면 본문 내용을 검색합니다.',
+	'mobile-frontend-page-menu-language' => '언어',
 );
 
 /** Karachay-Balkar (Къарачай-Малкъар)
@@ -3346,6 +3475,7 @@ $messages['ku-latn'] = array(
 	'mobile-frontend-hide-button' => 'Veşêre',
 	'mobile-frontend-regular-site' => 'Vê rûpelê di Wîkîpediya asayî de bibîne',
 	'mobile-frontend-wml-continue' => 'Didome ...',
+	'mobile-frontend-view' => 'Xuyakirina mobîl',
 	'mobile-frontend-opt-in-yes-button' => 'erê',
 	'mobile-frontend-opt-in-no-button' => 'na',
 	'mobile-frontend-opt-out-yes-button' => 'erê',
@@ -3410,9 +3540,11 @@ $messages['lb'] = array(
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'UN',
 	'mobile-frontend-footer-contributors' => 'Artikel vu <a href="$1">Mataarbechter</a> wéi Dir',
+	'mobile-frontend-footer-article-edit-info' => "Fir d'lescht geännert den $1",
 	'mobile-frontend-news-items' => 'An den Neiegkeeten',
 	'mobile-frontend-leave-feedback-title' => 'Feedback vum mobile Site',
 	'mobile-frontend-leave-feedback-notice' => 'Äre Feedback hëlleft eis déi mobil Versioun vun eisem Site ze verbesseren. E gëtt ëffentlech op der Säit &quot;$1&quot; gewisen (zesumme mat Ärem Benotzernumm, der Versioun vun Ärem Browser a Betriibssystem). Versicht w.e.g. fir de Sujet vun Ärem Feedback informativ ze formuléieren, z. Bsp. "Formatéierungsproblemer bäi breeden Tabellen". Äre Feedback ënnerléit eisen allgemenge Conditiounen.',
+	'mobile-frontend-leave-feedback-warning' => "Ausser wann Dir d'accord sidd datt Är perséinlech Informatiounen verëffentlecht ginn, sollt Dir w.e.g. keng perséinlech Informatiounen an Är Bemierkungen drasetzen.",
 	'mobile-frontend-leave-feedback-subject' => 'Sujet:',
 	'mobile-frontend-leave-feedback-message' => 'Message:',
 	'mobile-frontend-leave-feedback-submit' => 'Feedback schécken',
@@ -3445,8 +3577,15 @@ $messages['lb'] = array(
 	'mobile-frontend-footer-more' => 'méi',
 	'mobile-frontend-footer-less' => 'manner',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Benotzungsbedingungen</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Net erkannten Optioun "$1".',
+	'mobile-frontend-main-menu-nearby' => 'Nobäi',
+	'mobile-frontend-main-menu-settings' => 'Astellungen',
+	'mobile-frontend-main-menu-contact' => 'Kontakt',
+	'mobile-frontend-page-menu-contents' => 'Inhalter',
+	'mobile-frontend-page-menu-language' => 'Sprooch',
+	'mobile-frontend-page-menu-language-heading' => 'Liest dësen Artikel op',
 );
 
 /** Lezghian (Лезги)
@@ -3501,6 +3640,7 @@ $messages['li'] = array(
 	'mobile-frontend-opt-out-explain' => 'Door eweg te gaon bieje mobiel bèta zölle alle experimenteel óngerdeil oetgaon en geis se trögk nao de klassiek mobiel oetveuring',
 	'mobile-frontend-disable-images' => 'Zèt aafbeildinge óppe mobiel site oet',
 	'mobile-frontend-enable-images' => 'Zèt aafbeildinge óppe mobiel site aan',
+	'mobile-frontend-toggle-images' => 'Aafbeildjinge $1 / $2',
 	'mobile-frontend-off' => 'OET',
 	'mobile-frontend-on' => 'AAN',
 	'mobile-frontend-news-items' => "In 't nuujs",
@@ -3511,8 +3651,13 @@ $messages['li'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Slaon feedback óp',
 	'mobile-frontend-leave-feedback-link-text' => 'Mobiel Frontend feedback',
 	'mobile-frontend-leave-feedback' => 'Laot feedback achter',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Algemein',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Paginabeoerdeiling',
+	'mobile-frontend-leave-feedback-general-link-text' => 'Algemeine feedback',
 	'mobile-frontend-leave-feedback-page-title' => 'Gaef ós feedback euver dien ervaringe mitte mobiel site',
+	'mobile-frontend-leave-feedback-special-title' => 'Nöm kóntak op',
 	'mobile-frontend-feedback-no-subject' => '(gein óngerwèrp)',
+	'mobile-frontend-feedback-no-subject-field' => "Gaef 'n óngerwèrp op",
 	'mobile-frontend-feedback-no-message' => 'Veur hiej e berich in',
 	'mobile-frontend-feedback-edit-summary' => "$1 - autematis geplaats via 't [[Special:MobileFeedback|hölpprogramma veur trögkkoppeling via mobiel]]",
 	'mobile-frontend-leave-feedback-thanks' => 'Danke veure feedback!',
@@ -3582,6 +3727,7 @@ $messages['ltg'] = array(
  * @author RMizo
  */
 $messages['lus'] = array(
+	'mobile-frontend-desc' => 'Biakhlatna hmanga thlìrna',
 	'mobile-frontend-search-submit' => 'Kal rawh le',
 	'mobile-frontend-featured-article' => 'Tlangrèlthang...',
 	'mobile-frontend-home-button' => 'Inpui',
@@ -3590,7 +3736,36 @@ $messages['lus'] = array(
 	'mobile-frontend-show-button' => 'Tihlanna',
 	'mobile-frontend-hide-button' => 'Tihbona',
 	'mobile-frontend-regular-site' => 'Hmaipui thlir',
+	'mobile-frontend-wml-continue' => 'Chhunzawmna...',
+	'mobile-frontend-wml-back' => 'Lêtna...',
+	'mobile-frontend-view' => 'Biakhlatna hmanga thlìrna',
+	'mobile-frontend-view-desktop' => 'Khawlthluaknei',
+	'mobile-frontend-view-mobile' => 'Biakhlatna',
+	'mobile-frontend-opt-in-message' => 'Biakhlatna enchhinna i zawm chhin duh maw?',
+	'mobile-frontend-opt-in-yes-button' => 'Aw',
+	'mobile-frontend-opt-in-no-button' => 'Äih',
+	'mobile-frontend-opt-in-title' => 'Biakhlatna beta thlanna',
 	'mobile-frontend-news-items' => 'Chanchin thar',
+	'mobile-frontend-leave-feedback-subject' => 'Thupui:',
+	'mobile-frontend-leave-feedback-message' => 'Lehkha:',
+	'mobile-frontend-leave-feedback-submit' => 'Finchhuahna thehlut rawh le',
+	'mobile-frontend-language' => 'Ṭawng:',
+	'mobile-frontend-username' => 'Hmangtuhming:',
+	'mobile-frontend-password' => 'Thurûk:',
+	'mobile-frontend-login' => 'Luhna',
+	'mobile-frontend-placeholder' => 'I zawn duh hetah hian ziak rawh le. . .',
+	'mobile-frontend-dismiss-notification' => 'he hriattirna hi hnâwl rawh',
+	'mobile-frontend-clear-search' => 'Nawhrehna',
+	'mobile-frontend-privacy-link-text' => 'Inthupna',
+	'mobile-frontend-about-link-text' => 'Chanchin',
+	'mobile-frontend-footer-more' => 'sawi zawmna',
+	'mobile-frontend-footer-less' => 'thup ṭhenna',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'Thuziak leh thildang rëng rëng hi <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> dàn hmanga hman theih a ni.',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Hman phalphung</a>',
+	'mobile-frontend-footer-contact' => 'Biakna',
+	'mobile-frontend-unknown-option' => 'Duhthlanna hriat loh "$1"',
+	'mobile-frontend-search-noresults' => 'I thuzawnin thuziak mil pakhat mah a nei lo. I thuzawn i thlâk loh pawhin i khawlthluaknei chhutthlènga zawnna hmehkhep hmet la, thuziak chhúngah i zawng thei ang.',
 );
 
 /** Latvian (Latviešu)
@@ -3692,6 +3867,7 @@ $messages['mk'] = array(
 	'mobile-frontend-off' => 'ИСКЛ',
 	'mobile-frontend-on' => 'ВКЛЧ',
 	'mobile-frontend-footer-contributors' => 'Статијата ја напишаа <a href="$1">учесници</a> како вас',
+	'mobile-frontend-footer-article-edit-info' => 'Последно уредување: $1',
 	'mobile-frontend-news-items' => 'Вести',
 	'mobile-frontend-leave-feedback-title' => 'Мислење за мобилната верзија',
 	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ни помага да ја подобриме мобилната верзија. Мислењето ќе биде објавено јавно (заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем) на страницата „$1“. Одберете информативен наслов, како на пр. „Проблем со форматирање на широките табели“. Искажаното мислење подлежи на условите на употреба.',
@@ -3734,6 +3910,7 @@ $messages['mk'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Услови_на_употреба?useformat=mobile">Услови на употреба</a>',
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-unknown-option' => 'Непрепознаена можност „$1“.',
+	'mobile-frontend-search-noresults' => 'Нема наслови што одговараат на бараното. Изменете го она што го барате или пребарувајте по текстот на самите статии.',
 );
 
 /** Malayalam (മലയാളം)
@@ -3956,6 +4133,7 @@ $messages['ms'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Syarat-Syarat Penggunaan</a>',
 	'mobile-frontend-footer-contact' => 'Hubungi',
 	'mobile-frontend-unknown-option' => 'Pilihan "$1" tidak dikenali.',
+	'mobile-frontend-search-noresults' => 'Tiada tajuk rencana yang sepadan dengan carian anda. Ubah carian anda, atau tekan butang carian papan kekunci untuk mencari di dalam rencana.',
 );
 
 /** Maltese (Malti) */
@@ -4128,6 +4306,7 @@ $messages['nl'] = array(
 	'mobile-frontend-off' => 'UIT',
 	'mobile-frontend-on' => 'AAN',
 	'mobile-frontend-footer-contributors' => 'Pagina door <a href="$1">gebruikers</a> zoals u',
+	'mobile-frontend-footer-article-edit-info' => 'Laatst bewerkt op $1',
 	'mobile-frontend-news-items' => 'In het nieuws',
 	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling over de mobiele site',
 	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling helpt ons uw ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (als ook uw gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alstublieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op uw terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
@@ -4153,11 +4332,14 @@ $messages['nl'] = array(
 	'mobile-frontend-feedback-no-message' => 'Voer hier een bericht in',
 	'mobile-frontend-feedback-edit-summary' => '$1 - automatisch geplaatst via het [[Special:MobileFeedback|hulpprogramma voor terugkoppeling via mobiel]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Bedankt voor uw terugkoppeling!',
+	'mobile-frontend-leave-feedback-post-error' => 'Er is een fout opgetreden tijdens het verwerken van uw bericht.
+Probeer het later nog een keer.',
 	'mobile-frontend-language' => 'Taal:',
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wachtwoord:',
 	'mobile-frontend-login' => 'Aanmelden',
 	'mobile-frontend-placeholder' => 'Zoeken...',
+	'mobile-frontend-search-help' => 'Voer de trefwoorden hierboven in. Zoekresultaten worden hier weergegeven.',
 	'mobile-frontend-dismiss-notification' => 'deze melding verwijderen',
 	'mobile-frontend-clear-search' => 'Wissen',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
@@ -4169,6 +4351,15 @@ $messages['nl'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Gebruiksvoorwaarden?useformat=mobile">Gebruiksvoorwaarden</a>',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-unknown-option' => 'Niet-herkende optie "$1".',
+	'mobile-frontend-search-noresults' => "Er zijn geen resultaten voor uw zoekopdracht. Wijzig uw zoekopdracht of klik op de zoekknop op het toetsenbord om binnen pagina's te zoeken.",
+	'mobile-frontend-main-menu-featured' => 'Uitgelicht',
+	'mobile-frontend-main-menu-nearby' => 'In de buurt',
+	'mobile-frontend-main-menu-settings' => 'Instellingen',
+	'mobile-frontend-main-menu-contact' => 'Contact',
+	'mobile-frontend-page-menu-contents' => 'inhoud',
+	'mobile-frontend-page-menu-language' => 'taal',
+	'mobile-frontend-page-menu-contents-heading' => 'Inhoud',
+	'mobile-frontend-page-menu-language-heading' => 'Deze pagina lezen in',
 );
 
 /** ‪Nederlands (informeel)‬ (‪Nederlands (informeel)‬)
@@ -4275,6 +4466,7 @@ $messages['or'] = array(
 );
 
 /** Ossetic (Ирон)
+ * @author Amikeco
  * @author Bouron
  */
 $messages['os'] = array(
@@ -4293,7 +4485,7 @@ $messages['os'] = array(
 	'mobile-frontend-view-desktop' => 'Æнæхъæн',
 	'mobile-frontend-view-mobile' => 'Мобилон',
 	'mobile-frontend-opt-in-yes-button' => 'уойы',
-	'mobile-frontend-opt-in-no-button' => 'нæйы',
+	'mobile-frontend-opt-in-no-button' => 'нæ',
 	'mobile-frontend-opt-out-yes-button' => 'уойы',
 	'mobile-frontend-opt-out-no-button' => 'нæйы',
 	'mobile-frontend-disable-images' => 'Ахицæн кæнын нывтæ мобилон сайты',
@@ -4768,6 +4960,15 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-leave-feedback-submit' => "Conferme 'u feedback",
 	'mobile-frontend-leave-feedback-link-text' => "Feedback d'a grafeche d'u mobile",
 	'mobile-frontend-leave-feedback' => "Lasse 'u feedbacl",
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Probbleme tecniche',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Generale',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => "Segnalazione sus 'a vôsce",
+	'mobile-frontend-leave-feedback-general-link-text' => 'Segnalazione generale',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => "Suggette d'u messàgge",
+	'mobile-frontend-leave-feedback-special-title' => 'Condattace',
+	'mobile-frontend-feedback-no-subject' => '(nisciune oggette)',
+	'mobile-frontend-feedback-no-subject-field' => "Pe piacere scacchie 'n'oggette",
+	'mobile-frontend-feedback-no-message' => "Pe piacere sckaffe 'u messàgge aqquà",
 	'mobile-frontend-leave-feedback-thanks' => 'Grazie, pu feedback tune!',
 	'mobile-frontend-language' => 'Lènghe:',
 	'mobile-frontend-username' => 'Nome utende:',
@@ -4783,6 +4984,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author AlexSm
+ * @author Biathlon
  * @author Bouron
  * @author DR
  * @author Dim Grits
@@ -4842,6 +5044,7 @@ $messages['ru'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Условия использования</a>',
 	'mobile-frontend-unknown-option' => 'Неизвестный параметр "$1".',
+	'mobile-frontend-main-menu-settings' => 'Настройки',
 );
 
 /** Rusyn (Русиньскый)
@@ -5179,6 +5382,8 @@ $messages['sl'] = array(
 	'mobile-frontend-toggle-images' => 'Slike $1 / $2',
 	'mobile-frontend-off' => 'IZKL',
 	'mobile-frontend-on' => 'VKL',
+	'mobile-frontend-footer-contributors' => 'Članek <a href="$1">sodelavcev</a>, kot ste vi',
+	'mobile-frontend-footer-article-edit-info' => 'Nazadnje urejeno $1',
 	'mobile-frontend-news-items' => 'V novicah',
 	'mobile-frontend-leave-feedback-title' => 'Povratne informacije mobilne strani',
 	'mobile-frontend-leave-feedback-notice' => 'Vaše povratne informacije nam pomagajo izboljšati izkušnjo z mobilno stranjo. Objavljene bodo javno (skupaj z vašim uporabniškim imenom, različico brskalnika in operacijskim sistemom) na strani »$1«. Prosimo, da poskusite izbrati informativno zadevo, npr. »Težave pri oblikovanju širokih tabel«. Vaša povratna informacija je predmet naših pogojev uporabe.',
@@ -5644,9 +5849,11 @@ $messages['tpi'] = array(
  * @author Erdemaslancan
  * @author Hcagri
  * @author Incelemeelemani
+ * @author Nazif İLBEK
  * @author Suelnur
  */
 $messages['tr'] = array(
+	'mobile-frontend-desc' => 'Mobil Arayüz',
 	'mobile-frontend-search-submit' => 'Git',
 	'mobile-frontend-featured-article' => 'Haftanın Seçkin Maddesi',
 	'mobile-frontend-home-button' => 'Ana',
@@ -5654,23 +5861,48 @@ $messages['tr'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Bir Bölüm Geri Atla',
 	'mobile-frontend-show-button' => 'Göster',
 	'mobile-frontend-hide-button' => 'Gizle',
+	'mobile-frontend-empty-homepage' => 'Bu ana sayfa yapılandırılmalıdır. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Devamını buradan okuyun</a>.',
 	'mobile-frontend-regular-site' => 'Masaüstü görünümü',
+	'mobile-frontend-wml-continue' => 'Devamı...',
 	'mobile-frontend-wml-back' => 'Geri...',
 	'mobile-frontend-view' => 'Mobil Görünüm',
+	'mobile-frontend-view-desktop' => 'Masaüstü',
+	'mobile-frontend-view-mobile' => 'Mobil',
 	'mobile-frontend-opt-in-yes-button' => 'evet',
 	'mobile-frontend-opt-in-no-button' => 'hayır',
 	'mobile-frontend-opt-out-yes-button' => 'Evet',
 	'mobile-frontend-opt-out-no-button' => 'Hayır',
-	'mobile-frontend-leave-feedback-subject' => 'Konu',
+	'mobile-frontend-toggle-images' => 'Resimler $1 / $2',
+	'mobile-frontend-off' => 'KAPALI',
+	'mobile-frontend-on' => 'AÇIK',
+	'mobile-frontend-leave-feedback-title' => 'Mobil site geri bildirimi',
+	'mobile-frontend-leave-feedback-subject' => 'Konu:',
+	'mobile-frontend-leave-feedback-message' => 'İleti:',
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknik sorun',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Genel',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Madde geri bildirimi',
+	'mobile-frontend-leave-feedback-general-link-text' => 'Genel geri bildirim',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'İleti konusu',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Eleştirilerinizi buraya yazınız',
+	'mobile-frontend-leave-feedback-page-title' => 'Mobil site geri bildirimi',
+	'mobile-frontend-leave-feedback-special-title' => 'İletişim',
+	'mobile-frontend-feedback-no-subject' => '(konu yok)',
+	'mobile-frontend-feedback-no-subject-field' => 'Lütfen bir konu giriniz.',
+	'mobile-frontend-feedback-no-message' => 'Buraya bir ileti giriniz',
+	'mobile-frontend-leave-feedback-thanks' => 'Geri bildiriminiz için teşekkürler!',
 	'mobile-frontend-language' => 'Dil:',
 	'mobile-frontend-username' => 'Kullanıcı adı:',
 	'mobile-frontend-password' => 'Şifre:',
 	'mobile-frontend-login' => 'Oturum aç',
+	'mobile-frontend-placeholder' => 'Buraya arayacağınız kelimeleri yazınız...',
 	'mobile-frontend-clear-search' => 'Temizle',
+	'mobile-frontend-privacy-link-text' => 'Gizlilik',
 	'mobile-frontend-about-link-text' => 'Hakkında',
 	'mobile-frontend-footer-more' => 'daha fazla',
 	'mobile-frontend-footer-less' => 'daha az',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'İçerik <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> Lisansı altındadır.',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Kullanım Koşulları</a>',
 	'mobile-frontend-footer-contact' => 'İletişim',
 );
 
@@ -5831,6 +6063,7 @@ $messages['vi'] = array(
 	'mobile-frontend-off' => 'TẮT',
 	'mobile-frontend-on' => 'BẬT',
 	'mobile-frontend-footer-contributors' => 'Bài do <a href="$1">những người giống bạn</a> đóng góp',
+	'mobile-frontend-footer-article-edit-info' => 'Sửa đổi lần cuối vào $1',
 	'mobile-frontend-news-items' => 'Tin tức',
 	'mobile-frontend-leave-feedback-title' => 'Phản hồi về giao diện di động',
 	'mobile-frontend-leave-feedback-notice' => 'Phản hồi giúp chúng tôi cải tiến các trang di động. Những cảm nghĩ của bạn sẽ được đăng công khai vào trang “$1”, cùng với tên người dùng, phiên bản trình duyệt, và hệ điều hành của bạn. Xin vui lòng chọn một tiêu đề có ý nghĩa, thí dụ “Vấn đề hiển thị bảng rộng”. Phản hồi của bạn sẽ được xử lý theo các điều khoản sử dụng.',
@@ -5873,6 +6106,7 @@ $messages['vi'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Điều_khoản_Sử_dụng?useformat=mobile&uselang=vi">Các Điều khoản Sử dụng</a>',
 	'mobile-frontend-footer-contact' => 'Liên lạc',
 	'mobile-frontend-unknown-option' => 'Tùy chọn “$1” là bất ngờ.',
+	'mobile-frontend-search-noresults' => 'Không tìm thấy bài trùng tên. Hãy thay đổi truy vấn hoặc bấm phím tìm kiếm để tìm kiếm trong bài.',
 );
 
 /** Volapük (Volapük)
@@ -5954,10 +6188,11 @@ $messages['yi'] = array(
 	'mobile-frontend-leave-feedback-message' => 'מעלדונג:',
 	'mobile-frontend-leave-feedback-submit' => 'ארײַנגעבן פֿידבעק',
 	'mobile-frontend-feedback-no-subject' => '(קיין טעמע)',
-	'mobile-frontend-language' => 'שפּראַך',
+	'mobile-frontend-language' => 'שפּראַך:',
 	'mobile-frontend-username' => 'באַניצער נאָמען:',
 	'mobile-frontend-password' => 'פאסווארט:',
 	'mobile-frontend-login' => 'אַרײַנלאגירן',
+	'mobile-frontend-placeholder' => 'קלאפט ארײַן אײַער זוך דא …',
 	'mobile-frontend-about-link-text' => 'וועגן',
 	'mobile-frontend-footer-more' => 'מער',
 	'mobile-frontend-footer-less' => 'ווינציגער',
@@ -6083,11 +6318,13 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-back-to-top-of-section' => '跳轉至前一段落',
 	'mobile-frontend-show-button' => '顯示',
 	'mobile-frontend-hide-button' => '隱藏',
+	'mobile-frontend-empty-homepage' => '本首頁需要設置，<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">在此看詳情</a>',
 	'mobile-frontend-regular-site' => '桌面視圖',
 	'mobile-frontend-wml-continue' => '繼續 ...',
 	'mobile-frontend-wml-back' => '返回 ...',
 	'mobile-frontend-view' => '行動瀏覽',
 	'mobile-frontend-view-desktop' => '桌面版',
+	'mobile-frontend-view-mobile' => '手機',
 	'mobile-frontend-opt-in-message' => '您想參加移動公測嗎？',
 	'mobile-frontend-opt-in-yes-button' => '是',
 	'mobile-frontend-opt-in-no-button' => '不',
@@ -6100,32 +6337,53 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-opt-out-explain' => '退出公測後，您將禁用所有實驗性功能，回歸正常移動使用。',
 	'mobile-frontend-disable-images' => '在行動瀏覽上禁用圖像',
 	'mobile-frontend-enable-images' => '在行動瀏覽上啟用圖像',
+	'mobile-frontend-toggle-images' => '圖像 $1 / $2',
 	'mobile-frontend-off' => '關',
 	'mobile-frontend-on' => '開',
 	'mobile-frontend-footer-contributors' => '由像您一樣的<a href="$1">貢獻者</a>編寫',
+	'mobile-frontend-footer-article-edit-info' => '最後編輯在$1',
 	'mobile-frontend-news-items' => '新聞動態',
 	'mobile-frontend-leave-feedback-title' => '為有關手提網站體驗留下反饋',
 	'mobile-frontend-leave-feedback-notice' => '您的反饋意見幫助我們改善您的移動網站體驗。它將公開（隨您的用戶名稱、 瀏覽器版本和操作系統） 張貼到頁面「$1」。請選擇內容豐富的主題行，例如「寬表格式有問題」。您的反饋受我們的使用條款。',
+	'mobile-frontend-leave-feedback-warning' => '除非您同意將您發佈的資訊公開，否則請勿在備註中加入個人資料。',
 	'mobile-frontend-leave-feedback-subject' => '主題:',
 	'mobile-frontend-leave-feedback-message' => '信息:',
 	'mobile-frontend-leave-feedback-submit' => '提交反饋',
 	'mobile-frontend-leave-feedback-link-text' => '移動前端反饋',
 	'mobile-frontend-leave-feedback' => '留下反饋',
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => '技術問題',
+	'mobile-frontend-leave-feedback-general-section-header' => '一般',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => '條目意見',
+	'mobile-frontend-leave-feedback-general-link-text' => '一般意見',
+	'mobile-frontend-leave-feedback-article-personal-link-text' => '我代表一個人或一家公司',
+	'mobile-frontend-leave-feedback-article-factual-link-text' => '關於事實的錯誤',
+	'mobile-frontend-leave-feedback-article-other-link-text' => '關於另一個問題',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => '信息主題',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => '在這裡鍵入您的意見',
 	'mobile-frontend-leave-feedback-page-title' => '為有關手提網站體驗留下反饋',
+	'mobile-frontend-leave-feedback-special-title' => '聯繫我們',
 	'mobile-frontend-feedback-no-subject' => '（沒有主題）',
+	'mobile-frontend-feedback-no-subject-field' => '請輸入主題',
 	'mobile-frontend-feedback-no-message' => '請在這裡輸入信息。',
+	'mobile-frontend-feedback-edit-summary' => '$1 - 通過[[Special:MobileFeedback|手機回應工具]]自動張貼',
 	'mobile-frontend-leave-feedback-thanks' => '謝謝您的反饋！',
 	'mobile-frontend-language' => '語言:',
 	'mobile-frontend-username' => '用戶名：',
 	'mobile-frontend-password' => '密碼：',
 	'mobile-frontend-login' => '登錄',
 	'mobile-frontend-placeholder' => '在這裡輸入搜索內容...',
+	'mobile-frontend-dismiss-notification' => '關閉此通知',
 	'mobile-frontend-clear-search' => '清除',
 	'mobile-frontend-privacy-link-text' => '隱私',
 	'mobile-frontend-about-link-text' => '關於',
 	'mobile-frontend-footer-more' => '更多',
 	'mobile-frontend-footer-less' => '最少',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => '內容在<a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>協議下提供',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">使用條款</a>',
 	'mobile-frontend-footer-contact' => '聯繫',
+	'mobile-frontend-unknown-option' => '未認可的選項“$1”。',
+	'mobile-frontend-search-noresults' => '沒有文章標題匹配您的搜索。更改您的搜索，或按鍵盤搜索按鈕來全文搜索。',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
