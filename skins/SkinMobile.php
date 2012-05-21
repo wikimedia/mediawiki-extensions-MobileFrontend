@@ -463,6 +463,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'collapse-section' => wfMsg( 'mobile-frontend-hide-button' ),
 				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ), //@todo: use a separate message
 				'mobile-frontend-search-noresults' => wfMsg( 'mobile-frontend-search-noresults' ),
+				'mobile-frontend-search-help' => wfMsg( 'mobile-frontend-search-help' ),
 				'contents-heading' => wfMsg( 'mobile-frontend-page-menu-contents-heading' ),
 				'language-heading' => wfMsg( 'mobile-frontend-page-menu-language-heading' ),
 			),
