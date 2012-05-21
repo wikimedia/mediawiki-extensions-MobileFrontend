@@ -84,7 +84,10 @@ MobileFrontend.opensearch = (function() {
 
 	function enhanceElements() {
 		var sb = document.getElementById(  mfePrefix + 'searchForm' );
-		window.setInterval(function() {
+		var interval = window.setInterval(function() {
+			if( !search ) {
+				return window.clearInterval( interval );
+			}
 			var value = search.value;
 			if( value.length > 1 && value !== oldValue ) {
 				oldValue = value;
