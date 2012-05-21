@@ -299,6 +299,7 @@ img.thumbborder {
 
 #disableButtons #backButton {
 	margin-top: 5em;
+	margin-bottom: 2em;
 }
 
 .mwm-message.mwm-notice {
