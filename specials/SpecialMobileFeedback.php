@@ -17,12 +17,11 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		} elseif ( $par == 'error' ) {
 			$this->showError();
 		} else {
-			$html = $this->getFeedbackHtml();
-			$this->getOutput()->addHtml( $html );
+			$this->renderFeedbackHtml();
 		}
 	}
 
-	protected function getFeedbackHtml() {
+	protected function renderFeedbackHtml() {
 		global $wgMFFeedbackLinks;
 		/** Section header text **/
 		$technicalProblemSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-technical-problem-section-header' )->escaped();
@@ -32,6 +31,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		wfRunHooks( 'MobileFrontendOverrideFeedbackLinks' );
 		/** Links **/
 		$allowedLinks = array(
+			'Technical',
 			'General',
 			'ArticlePersonal',
 			'ArticleFactual',
@@ -43,31 +43,26 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 			if ( !isset( $wgMFFeedbackLinks[ $v ] ) || !strlen( trim( $wgMFFeedbackLinks[ $v ] ) ) ) {
 				$linkVal = '#';
 			} else {
-				$linkVal = $wgMFFeedbackLinks[ $v ];
+				$linkVal = htmlspecialchars( $wgMFFeedbackLinks[ $v ], ENT_QUOTES, 'UTF-8', false );
 			}
 			$varName = 'feedback' . $v . 'Link';
 			$ { $varName } = $linkVal;
 		}
 
+		// Do we display the feedback form or use the link?
+		if ( isset( $feedbackTechnicalLink ) && $feedbackTechnicalLink != '#' ) {
+			$useFeedbackForm = false;
+		} else {
+			$useFeedbackForm = true;
+		}
+
 		/** Link text **/
+		$feedbackTechnicalLinkText = ( $useFeedbackForm ) ? '' : $this->msg( 'mobile-frontend-leave-feedback-technical-link-text' )->escaped();
 		$feedbackGeneralLinkText = $this->msg( 'mobile-frontend-leave-feedback-general-link-text' )->escaped();
 		$feedbackArticlePersonalLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-personal-link-text' )->escaped();
 		$feedbackArticleFactualLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-factual-link-text' )->escaped();
 		$feedbackArticleOtherLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-other-link-text' )->escaped();
 		$warning = $this->msg( 'mobile-frontend-leave-feedback-warning' );
-
-		/** Fetch form HTML **/
-		if ( MFCompatCheck::checkHTMLFormCoreUpdates() ) {
-			$form = new HTMLForm( $this->getForm(), $this );
-		} else {
-			$form = new HTMLFormMobile( $this->getForm( 'div' ), $this );
-		}
-		$form->setDisplayFormat( 'raw' );
-		$form->setTitle( $this->getTitle() );
-		$form->setId( 'mf-feedback-form' );
-		$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->escaped() );
-		$form->setSubmitCallback( array( $this, 'postFeedback' ) );
-		$form->setAction( $this->getRequest()->getRequestURL() . "#mf-feedback-form" );
 
 		$html = <<<HTML
 		{$warning}
@@ -76,7 +71,29 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		<div class="content_block" id="content_1">
 HTML;
 		$this->getOutput()->addHtml( $html );
-		$form->show();
+
+		if ( $useFeedbackForm ) {
+			/** Fetch form HTML **/
+			if ( MFCompatCheck::checkHTMLFormCoreUpdates() ) {
+				$form = new HTMLForm( $this->getForm(), $this );
+			} else {
+				$form = new HTMLFormMobile( $this->getForm( 'div' ), $this );
+			}
+			$form->setDisplayFormat( 'raw' );
+			$form->setTitle( $this->getTitle() );
+			$form->setId( 'mf-feedback-form' );
+			$form->setSubmitText( $this->msg( 'mobile-frontend-leave-feedback-submit' )->escaped() );
+			$form->setSubmitCallback( array( $this, 'postFeedback' ) );
+			$form->setAction( $this->getRequest()->getRequestURL() . "#mf-feedback-form" );
+			$form->show();
+		} else {
+			$html = <<<HTML
+			<ul>
+				<li><a href="{$feedbackTechnicalLink}">{$feedbackTechnicalLinkText}</a></li>
+			</ul>
+HTML;
+			$this->getOutput()->addHtml( $html );
+		}
 
 		$html = <<<HTML
 		</div>
@@ -103,7 +120,7 @@ HTML;
 		</div>
 HTML;
 
-		return $html;
+		$this->getOutput()->addHtml( $html );
 	}
 
 	protected function getForm( $displaySuffix = '' ) {
