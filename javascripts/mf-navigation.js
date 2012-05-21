@@ -31,6 +31,10 @@ MobileFrontend.navigation = (function() {
 		});
 	}
 
+	function countContentHeadings() {
+		return $( '.section h2 span' ).length;
+	}
+
 	function createTableOfContents() {
 		var ul = $( '<ul />' )[0], li, a,
 			click = function() {
@@ -49,6 +53,10 @@ MobileFrontend.navigation = (function() {
 		createOverlay( message( 'contents-heading' ), ul );
 	}
 
+	function countAvailableLanguages() {
+		return $( '#' + mfePrefix + 'language-selection option' ).length;
+	}
+
 	function createLanguagePage() {
 		var ul = $( '<ul />' )[0], li, a;
 
@@ -61,7 +69,9 @@ MobileFrontend.navigation = (function() {
 
 	function init() {
 		$( '<div id="' + mfePrefix + 'overlay"></div>' ).appendTo( document.body );
-		var search = document.getElementById(  mfePrefix + 'search' );
+		var search = document.getElementById(  mfePrefix + 'search' ),
+			actionMenuButton = document.getElementById( mfePrefix + 'language' ),
+			tocMenuButton = document.getElementById( mfePrefix + 'toc' );
 
 		function toggleNavigation() {
 			if( !u( document.body ).hasClass( 'navigationEnabled' ) ) {
@@ -89,8 +99,17 @@ MobileFrontend.navigation = (function() {
 			toggleActionBar();
 		});
 
-		$( '#' + mfePrefix + 'toc' ).click( createTableOfContents );
-		$( '#' + mfePrefix + 'language' ).click( createLanguagePage );
+		if( countContentHeadings() > 0 ) {
+			$( tocMenuButton ).bind( 'click', createTableOfContents );
+		} else {
+			$( tocMenuButton ).addClass( 'disabled' );
+		}
+
+		if( countAvailableLanguages() > 1 ) {
+			$( actionMenuButton ).bind( 'click', createLanguagePage );
+		} else {
+			$( actionMenuButton ).addClass( 'disabled' );
+		}
 
 		u( search ).bind( 'focus', function() {
 			u( document.body ).removeClass( 'navigationEnabled' );
