@@ -230,6 +230,12 @@
 	-webkit-transition-function: ease-in-out;
 }
 
+.noTransitions #mw-mf-page-center {
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
 #mw-mf-clearsearch {
 	top: 12px;
 }

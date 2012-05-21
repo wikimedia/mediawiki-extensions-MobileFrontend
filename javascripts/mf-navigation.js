@@ -50,14 +50,25 @@ MobileFrontend.navigation = (function() {
 		$( '<div id="' + mfePrefix + 'overlay"></div>' ).appendTo( document.body );
 		var search = document.getElementById(  mfePrefix + 'search' );
 
-		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
+		function toggleNavigation() {
 			if( !u( document.body ).hasClass( 'navigationEnabled' ) ) {
 				u( document.body ).addClass( 'navigationEnabled' );
 			} else {
 				u( document.body ).removeClass( 'navigationEnabled' );
 			}
+		}
+		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
+			toggleNavigation();
 			ev.stopPropagation();
 		} );
+
+		if( window.location.hash === '#mw-mf-page-left' ) {
+			u( document.body ).addClass( 'noTransitions' );
+			toggleNavigation();
+			window.setTimeout( function() {
+				u( document.body ).removeClass( 'noTransitions' );
+			}, 1000 );
+		}
 
 		$( '#' + mfePrefix + 'page-menu-button' ).click( function( ev ) {
 			ev.preventDefault();
