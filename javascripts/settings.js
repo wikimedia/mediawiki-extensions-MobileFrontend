@@ -40,6 +40,33 @@ MobileFrontend.settings = (function() {
 		return updateQueryStringParameter( link, name, value );
 	}
 
+	function enhanceCheckboxes() {
+	u( document.body ).addClass( 'mw-mf-checkboxes' );
+		var inputs = document.getElementsByTagName( 'input' ), i, el, special;
+		function clickChkBox() {
+			var parent = this,
+				box = parent.getElementsByTagName( 'input' )[ 0 ];
+
+			if( !u( parent ).hasClass( 'checked' ) ) {
+				u( parent ).addClass( 'checked' );
+				box.checked = true;
+			} else {
+				u( parent ).removeClass( 'checked' );
+				box.checked = false;
+			}
+		}
+		for( i = 0; i < inputs.length; i++ ) {
+			el = inputs[i];
+			special = u( el.parentNode ).hasClass( 'mw-mf-checkbox-css3' );
+			if( el.getAttribute( 'type' ) === 'checkbox' && special ) {
+				u( el.parentNode ).bind( 'click', clickChkBox );
+				if( el.checked ) {
+					u( el.parentNode ).addClass( 'checked ');
+				}
+			}
+		}
+	}
+
 	function init() {
 		var mobileToken = readMobileToken(), imagetoggle, apiUrl = '/api.php';
 
@@ -55,6 +82,7 @@ MobileFrontend.settings = (function() {
 			imagetoggle = document.getElementById( 'imagetoggle' );
 			imagetoggle.href = addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken );
 		}
+		enhanceCheckboxes();
 	}
 	init();
 

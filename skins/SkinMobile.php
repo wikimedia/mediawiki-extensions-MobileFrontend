@@ -121,6 +121,7 @@ class SkinMobile extends SkinMobileBase {
 				Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
 				: ''
 		);
+		$tpl->set( 'settingsUrl', SpecialPage::getTitleFor( 'MobileOptions' )->getLocalUrl() );
 
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 		if ( $context->imagesDisabled() ) {
@@ -435,8 +436,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
 				</a>
 			</li>
-			<li class='icon6 disabled'>
-				<a href='#'>
+			<li class='icon6'>
+				<a href='<?php $this->text( 'settingsUrl' ) ?>'>
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>

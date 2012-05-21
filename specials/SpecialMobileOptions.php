@@ -18,21 +18,31 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	public function execute( $par = '' ) {
-		$this->setHeaders();
 		$context = MobileContext::singleton();
-		$context->setForceMobileView( true );
-		$context->setContentTransformations( false );
-		if ( !isset( $this->options[$par] ) ) {
-			$this->getOutput()->showErrorPage( 'error', 'mobile-frontend-unknown-option', array( $par ) );
-			return;
-		}
-		$this->subpage = $par;
-		$option = $this->options[$par];
+		$out = $this->getOutput();
 
 		$this->returnToTitle = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
 		if ( !$this->returnToTitle ) {
 			$this->returnToTitle = Title::newMainPage();
 		}
+
+		$this->setHeaders();
+		$context->setForceMobileView( true );
+		$context->setContentTransformations( false );
+		if( $par == '' ) {
+			if ( $this->getRequest()->wasPosted() ) {
+				$this->submitSettingsForm();
+			} else {
+				$this->getSettingsForm();
+			}
+			return;
+		} elseif ( !isset( $this->options[$par] ) ) {
+			$out->showErrorPage( 'error', 'mobile-frontend-unknown-option', array( $par ) );
+			return;
+		}
+
+		$this->subpage = $par;
+		$option = $this->options[$par];
 
 		if ( $this->getRequest()->wasPosted() && isset( $option['post'] ) ) {
 			$func = $option['post'];
@@ -40,6 +50,84 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			$func = $option['get'];
 		}
 		$this->$func();
+	}
+
+	private function getSettingsForm() {
+		$out = $this->getOutput();
+		$user = $this->getUser();
+		$context = MobileContext::singleton();
+
+		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
+
+		if ( $this->getRequest()->getCheck( 'success' ) ) {
+			$out->wrapWikiMsg(
+				"<div class=\"successbox\"><strong>\n$1\n</strong></div><div id=\"mw-pref-clear\"></div>",
+				'savedprefs'
+			);
+		}
+
+		$imagesChecked = $context->imagesDisabled() ? 'checked' : '';
+		$imagesBeta = $context->isBetaGroupMember() ? 'checked' : '';
+		$username = $user->getName();
+		$disableMsg = $this->msg( 'mobile-frontend-images-status' )->parse();
+		$betaEnableMsg = $this->msg( 'mobile-frontend-settings-beta' )->parse();
+		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
+
+		$saveSettings = $this->msg( 'mobile-frontend-save-settings' )->escaped();
+		$onoff = '<span class="mw-mf-settings-on">' . $this->msg( 'mobile-frontend-on' )->escaped() . '</span><span class="mw-mf-settings-off">' .
+			$this->msg( 'mobile-frontend-off' )->escaped() .'</span>';
+		$action = $this->getTitle()->getLocalURL();
+		$html = Html::openElement( 'form',
+			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
+		);
+		$aboutMessage = $this->msg( 'mobile-frontend-settings-description' )->parse();
+		$token = Html::hidden( 'token', $context->getMobileToken() );
+		$html .= <<<HTML
+	<p>
+		{$aboutMessage}
+	</p>
+	<ul>
+		<li>
+			{$disableMsg}
+			<span class="mw-mf-checkbox-css3">
+				<input type="checkbox" name="disableImages"
+				{$imagesChecked}>{$onoff}
+			</span>
+		</li>
+		<li>
+			{$betaEnableMsg}
+			<div class="mw-mf-checkbox-css3">
+				<input type="checkbox" name="enableBeta"
+				{$imagesBeta}>{$onoff}
+			</div>
+		</li>
+		<li class="mw-mf-settings-description">
+				{$betaDescriptionMsg}
+		</li>
+		<li>
+			<input type="submit" id="mw-mf-settings-save" value="{$saveSettings}">
+		</li>
+	</ul>
+	$token
+</form>
+HTML;
+		$out->addHTML( $html );
+	}
+
+	private function submitSettingsForm() {
+		$context = MobileContext::singleton();
+		$request = $this->getRequest();
+
+		if ( $request->getVal( 'token' ) != $context->getMobileToken() ) {
+			return; // Display something here?
+		}
+		$inBeta = $request->getBool( 'enableBeta' );
+		$imagesDisabled = $request->getBool( 'disableImages' );
+		$context->setDisableImagesCookie( $imagesDisabled );
+		$context->setOptInOutCookie( $inBeta ? '1' : '' );
+		$context->setBetaGroupMember( $inBeta );
+		$url = $context->getMobileUrl( $this->getTitle()->getFullURL( 'success' ) );
+		$context->getOutput()->redirect( $url );
 	}
 
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
@@ -60,7 +148,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		$out->setPageTitle( $this->msg( $headingMsg ) );
 
 		$out->addHTML( '
-			<p>' . wfMessage( $textMsg )->parse() . '</p>
+			<p>' . $this->msg( $textMsg )->parse() . '</p>
 			<div id="disableButtons">'
 				. Html::openElement( 'form',
 					array(
@@ -80,7 +168,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 							'id' => 'disableButton',
 							'type' => 'submit',
 						),
-						wfMessage( $yesButtonMsg )->text()
+					$this->msg( $yesButtonMsg )->text()
 					)
 				. Html::closeElement( 'form' )
 				. Html::openElement( 'form',
@@ -94,7 +182,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 							'id' => 'backButton',
 							'type' => 'submit',
 						),
-						wfMessage( $noButtonMsg )->text()
+					$this->msg( $noButtonMsg )->text()
 					)
 				. Html::closeElement( 'form' )
 			. '</div>'
