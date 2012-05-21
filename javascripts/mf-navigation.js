@@ -59,6 +59,7 @@ MobileFrontend.navigation = (function() {
 		}
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
 			toggleNavigation();
+			ev.preventDefault();
 			ev.stopPropagation();
 		} );
 
