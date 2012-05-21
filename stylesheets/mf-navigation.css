@@ -149,11 +149,12 @@
 	height: 1.3em;
 	padding: 12px;
 	font-weight: normal;
-	padding-left: 64px;
 }
 
 #mw-mf-menu-main li a {
 	color: black;
+	display: block;
+	padding-left: 64px;
 }
 
 #mw-mf-content-left {

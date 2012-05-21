@@ -417,18 +417,22 @@ class SkinMobileTemplate extends BaseTemplate {
 		<ul id="mw-mf-menu-main">
 			<li class='icon2'><a href="<?php $this->text( 'mainPageUrl' ) ?>#mw-mf-page-left">
 				<?php $this->msg( 'mobile-frontend-main-menu-featured' ) ?></a></li>
-			<li class='icon3'>
-				<a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton" class="button">
-					<?php $this->msg( 'mobile-frontend-random-button' ) ?>
+			<li class='icon3'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
+			<li class='icon4 disabled'>
+				<a href='#'>
+				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
 				</a>
 			</li>
-			<li class='icon4 disabled'><?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?></li>
-			<li class='icon5'>
-				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>#mw-mf-page-left">
-					<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
+			<li class='icon5 disabled'>
+				<a href='#'>
+				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
 				</a>
 			</li>
-			<li class='icon6 disabled'><?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?></li>
+			<li class='icon6 disabled'>
+				<a href='#'>
+				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
+				</a>
+			</li>
 		</ul>
 		</div>
 		</div>
