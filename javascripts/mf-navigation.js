@@ -4,18 +4,31 @@ MobileFrontend.navigation = (function() {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message;
 
+	function toggleActionBar() {
+		var menu = $( '#' + mfePrefix + 'nav' )[0];
+		if( menu.style.display ) {
+			menu.style.display = '';
+		} else {
+			menu.style.display = 'block';
+		}
+		window.location.hash = '#';
+	}
 	function closeOverlay( ) {
 		$( '#' + mfePrefix + 'overlay' ).empty();
 		$( 'html' ).removeClass( 'overlay' );
 	}
 
 	function createOverlay( heading, contents ) {
+		var overlay = document.getElementById( mfePrefix + 'overlay' );
 		$( 'html' ).addClass( 'overlay' );
 		$( '<div class="header">' ).appendTo( '#' + mfePrefix + 'overlay' );
 		$( '<button id="close"></button>' ).text( message( 'collapse-section' ) ).
 			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
 		$( '<h2>' ).text( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
-		$( '#' + mfePrefix + 'overlay' ).append( contents );
+		$( overlay ).append( contents );
+		$( 'a', overlay.lastChild ).bind( 'click', function() {
+			toggleActionBar();
+		});
 	}
 
 	function createTableOfContents() {
@@ -73,13 +86,7 @@ MobileFrontend.navigation = (function() {
 
 		$( '#' + mfePrefix + 'page-menu-button' ).click( function( ev ) {
 			ev.preventDefault();
-			var menu = $( '#' + mfePrefix + 'nav' )[0];
-			if( menu.style.display ) {
-				menu.style.display = '';
-			} else {
-				menu.style.display = 'block';
-			}
-			window.location.hash = '#';
+			toggleActionBar();
 		});
 
 		$( '#' + mfePrefix + 'toc' ).click( createTableOfContents );
