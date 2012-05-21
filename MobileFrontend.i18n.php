@@ -107,6 +107,7 @@ $messages['en'] = array (
  * @author EugeneZelenko
  * @author Fryed-peach
  * @author McDutchie
+ * @author Minh Nguyen
  * @author Raymond
  * @author SPQRobin
  * @author Siebrand
@@ -192,9 +193,9 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu',
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
 	'mobile-frontend-main-menu-contact' => 'Contact link text in main menu',
-	'mobile-frontend-page-menu-contents' => 'contents link text in secondary menu',
+	'mobile-frontend-page-menu-contents' => 'table of contents link text in secondary menu',
 	'mobile-frontend-page-menu-language' => 'language link text in secondary menu',
-	'mobile-frontend-page-menu-contents-heading' => 'Contents overlay heading',
+	'mobile-frontend-page-menu-contents-heading' => 'Table of contents overlay heading',
 	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
 );
 
@@ -1031,6 +1032,7 @@ $messages['cs'] = array(
 	'mobile-frontend-off' => 'VYP',
 	'mobile-frontend-on' => 'ZAP',
 	'mobile-frontend-footer-contributors' => 'Článek od <a href="$1">přispěvatelů</a> jako vy',
+	'mobile-frontend-footer-article-edit-info' => 'Naposledy změněno $1',
 	'mobile-frontend-news-items' => 'Aktuality',
 	'mobile-frontend-leave-feedback-title' => 'Sdělte nám své zkušenosti s mobilním rozhraním',
 	'mobile-frontend-leave-feedback-notice' => 'Váš komentář bude spolu s vaším uživatelským jménem, verzí prohlížeče a operačním systémem zveřejněn na stránce „$1“',
@@ -2675,6 +2677,7 @@ $messages['ia'] = array(
 	'mobile-frontend-off' => 'INACTIVE',
 	'mobile-frontend-on' => 'ACTIVE',
 	'mobile-frontend-footer-contributors' => 'Articulo per <a href="$1">contributores</a> como tu',
+	'mobile-frontend-footer-article-edit-info' => 'Ultime modification le $1',
 	'mobile-frontend-news-items' => 'Actualitates',
 	'mobile-frontend-leave-feedback-title' => 'Evalutation sur le sito mobile',
 	'mobile-frontend-leave-feedback-notice' => 'Tu commentario nos adjuta a meliorar tu experientia del sito mobile. Illo essera publicate in le pagina "$1", con tu nomine de usator, version de navigator e systema de operation. Per favor tenta eliger un linea de subjecto informative, p.ex. "Problema con le formatation de tabellas large". Le evalutation que tu invia es subjecte a nostre conditiones de uso.',
@@ -2700,11 +2703,13 @@ $messages['ia'] = array(
 	'mobile-frontend-feedback-no-message' => 'Per favor entra un message hic',
 	'mobile-frontend-feedback-edit-summary' => '$1 - automaticamente publicate usante le [[Special:MobileFeedback|instrumento de evalutation mobile]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Gratias pro tu commentario!',
+	'mobile-frontend-leave-feedback-post-error' => 'Un error occurreva durante le tractamento de tu message. Per favor reproba plus tarde.',
 	'mobile-frontend-language' => 'Lingua:',
 	'mobile-frontend-username' => 'Nomine de usator:',
 	'mobile-frontend-password' => 'Contrasigno:',
 	'mobile-frontend-login' => 'Aperir session',
 	'mobile-frontend-placeholder' => 'Entra un recerca hic...',
+	'mobile-frontend-search-help' => 'Scribe parolas a cercar hic supra e le titulos del articulos correspondente apparera hic.',
 	'mobile-frontend-dismiss-notification' => 'clauder iste notification',
 	'mobile-frontend-clear-search' => 'Rader',
 	'mobile-frontend-privacy-link-text' => 'Confidentialitate',
@@ -2717,6 +2722,14 @@ $messages['ia'] = array(
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-unknown-option' => 'Option "$1" non recognoscite.',
 	'mobile-frontend-search-noresults' => 'Nulle titulo de articulo corresponde a tu recerca. Cambia le recerca, o preme le button de recerca de claviero pro cercar intra articulos.',
+	'mobile-frontend-main-menu-featured' => 'Eminente',
+	'mobile-frontend-main-menu-nearby' => 'A proximitate',
+	'mobile-frontend-main-menu-settings' => 'Configuration',
+	'mobile-frontend-main-menu-contact' => 'Contacto',
+	'mobile-frontend-page-menu-contents' => 'contento',
+	'mobile-frontend-page-menu-language' => 'lingua',
+	'mobile-frontend-page-menu-contents-heading' => 'Contento',
+	'mobile-frontend-page-menu-language-heading' => 'Leger iste articulo in',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -2980,7 +2993,7 @@ $messages['it'] = array(
 	'mobile-frontend-page-menu-contents' => 'contenuti',
 	'mobile-frontend-page-menu-language' => 'lingua',
 	'mobile-frontend-page-menu-contents-heading' => 'Contenuti',
-	'mobile-frontend-page-menu-language-heading' => 'Leggi questo articolo su',
+	'mobile-frontend-page-menu-language-heading' => 'Leggi questo articolo in',
 );
 
 /** Japanese (日本語)
@@ -3894,11 +3907,13 @@ $messages['mk'] = array(
 	'mobile-frontend-feedback-no-message' => 'Тука напишете ја пораката',
 	'mobile-frontend-feedback-edit-summary' => '$1 - автоматски објавено користејќи ја [[Special:MobileFeedback|алатката за мислења за мобилната верзија]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Ви благодариме за искажаното мислење!',
+	'mobile-frontend-leave-feedback-post-error' => 'Настана грешка при обработката на пораката. Обидете се повторно.',
 	'mobile-frontend-language' => 'Јазик:',
 	'mobile-frontend-username' => 'Корисничко име:',
 	'mobile-frontend-password' => 'Лозинка:',
 	'mobile-frontend-login' => 'Најава',
 	'mobile-frontend-placeholder' => 'Тука внесете го бараното...',
+	'mobile-frontend-search-help' => 'Погоре внесете го она што го барате, а овде ќе се прикажат статиите што се совпаѓаат со бараното.',
 	'mobile-frontend-dismiss-notification' => 'отстрани го известувањето',
 	'mobile-frontend-clear-search' => 'Исчисти',
 	'mobile-frontend-privacy-link-text' => 'Приватност',
@@ -3911,6 +3926,14 @@ $messages['mk'] = array(
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-unknown-option' => 'Непрепознаена можност „$1“.',
 	'mobile-frontend-search-noresults' => 'Нема наслови што одговараат на бараното. Изменете го она што го барате или пребарувајте по текстот на самите статии.',
+	'mobile-frontend-main-menu-featured' => 'Избрано',
+	'mobile-frontend-main-menu-nearby' => 'Околни',
+	'mobile-frontend-main-menu-settings' => 'Нагодувања',
+	'mobile-frontend-main-menu-contact' => 'Контакт',
+	'mobile-frontend-page-menu-contents' => 'содржина',
+	'mobile-frontend-page-menu-language' => 'јазик',
+	'mobile-frontend-page-menu-contents-heading' => 'Содржина',
+	'mobile-frontend-page-menu-language-heading' => 'Прочитајте ја статијава на',
 );
 
 /** Malayalam (മലയാളം)
@@ -3949,6 +3972,7 @@ $messages['ml'] = array(
 	'mobile-frontend-off' => 'വേണ്ട',
 	'mobile-frontend-on' => 'വേണം',
 	'mobile-frontend-footer-contributors' => 'താങ്കളെപ്പോലെയുള്ള <a href="$1">സന്നദ്ധ സംഭാവകരാണ്</a> ലേഖനം എഴുതിയത്',
+	'mobile-frontend-footer-article-edit-info' => 'അവസാനം തിരുത്തിയത് : $1',
 	'mobile-frontend-news-items' => 'വാർത്തയിൽ',
 	'mobile-frontend-leave-feedback-title' => 'മൊബൈൽ സൈറ്റ് അഭിപ്രായം',
 	'mobile-frontend-leave-feedback-notice' => 'മൊബൈൽ സൈറ്റ് അനുഭവം മെച്ചപ്പെടുത്താൻ താങ്കളുടെ അഭിപ്രായം ഞങ്ങളെ സഹായിക്കുന്നതാണ്. അത് &quot;$1&quot; താളിൽ പരസ്യമായി (താങ്കളുടെ ഉപയോക്തൃനാമത്തോടും, ബ്രൗസർ വേർഷനോടും ഓപ്പറേറ്റിങ് സിസ്റ്റത്തിനോടും കൂടി) ലഭ്യമായിരിക്കും. ദയവായി തലക്കെട്ട് കുറിപ്പായി വിവരദായകമായ ഒരു വരി നൽകുക, ഉദാ: "പട്ടിക പ്രദർശിപ്പിക്കുന്നതിലെ പ്രശ്നങ്ങൾ".
@@ -6090,11 +6114,13 @@ $messages['vi'] = array(
 	'mobile-frontend-feedback-no-message' => 'Xin vui lòng nhắn tin vào đây',
 	'mobile-frontend-feedback-edit-summary' => '$1 – do [[Special:MobileFeedback|công cụ phản hồi di động]] đăng tự động',
 	'mobile-frontend-leave-feedback-thanks' => 'Cám ơn phản hồi của bạn!',
+	'mobile-frontend-leave-feedback-post-error' => 'Đã xảy ra lỗi khi xử lý thông điệp của bạn. Xin hãy thử lại sau.',
 	'mobile-frontend-language' => 'Ngôn ngữ:',
 	'mobile-frontend-username' => 'Tên người dùng:',
 	'mobile-frontend-password' => 'Mật khẩu:',
 	'mobile-frontend-login' => 'Đăng nhập',
 	'mobile-frontend-placeholder' => 'Nhập tìm kiếm của bạn tại đây…',
+	'mobile-frontend-search-help' => 'Nhập từ khóa tìm kiếm ở trên để xem các bài trùng tên ở đây.',
 	'mobile-frontend-dismiss-notification' => 'bỏ qua thông báo này',
 	'mobile-frontend-clear-search' => 'Tẩy trống',
 	'mobile-frontend-privacy-link-text' => 'Riêng tư',
@@ -6107,6 +6133,14 @@ $messages['vi'] = array(
 	'mobile-frontend-footer-contact' => 'Liên lạc',
 	'mobile-frontend-unknown-option' => 'Tùy chọn “$1” là bất ngờ.',
 	'mobile-frontend-search-noresults' => 'Không tìm thấy bài trùng tên. Hãy thay đổi truy vấn hoặc bấm phím tìm kiếm để tìm kiếm trong bài.',
+	'mobile-frontend-main-menu-featured' => 'Chọn lọc',
+	'mobile-frontend-main-menu-nearby' => 'Kề bên',
+	'mobile-frontend-main-menu-settings' => 'Tùy chọn',
+	'mobile-frontend-main-menu-contact' => 'Liên lạc',
+	'mobile-frontend-page-menu-contents' => 'mục lục',
+	'mobile-frontend-page-menu-language' => 'ngôn ngữ',
+	'mobile-frontend-page-menu-contents-heading' => 'Mục lục',
+	'mobile-frontend-page-menu-language-heading' => 'Đọc bài này trong',
 );
 
 /** Volapük (Volapük)
