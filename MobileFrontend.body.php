@@ -605,6 +605,7 @@ class ExtMobileFrontend extends ContextSource {
 		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
 			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/application.js',
 				'tests/js/test_application.js',
+				'javascripts/mf-navigation-legacy.js', 'tests/js/test_mf-navigation-legacy.js',
 				'javascripts/beta_opensearch.js', 'tests/js/test_beta_opensearch.js',
 				'javascripts/banner.js', 'tests/js/test_banner.js',
 				'javascripts/toggle.js', 'tests/js/test_toggle.js',

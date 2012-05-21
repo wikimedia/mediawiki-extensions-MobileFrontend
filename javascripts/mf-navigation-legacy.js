@@ -21,4 +21,7 @@ MobileFrontend.navigationLegacy = (function() {
 		u( document.getElementById( 'mw-mf-logo' ) ).bind( 'click', logoClick );
 	}
 	init();
+	return {
+		init: init
+	}
 }());
