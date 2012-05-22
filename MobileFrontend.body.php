@@ -349,6 +349,7 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		/**
+		 * Compatibility with potentially new function wfIsConfiguredProxy()
 		 * wfIsConfiguredProxy() checks an IP against the list of configured
 		 * Squid servers and currently only exists in trunk.
 		 * wfIsTrustedProxy() does the same, but also exposes a hook that is
@@ -356,8 +357,9 @@ class ExtMobileFrontend extends ContextSource {
 		 * against a list of approved open proxies, which we don't actually
 		 * care about.
 		 */
-		if ( wfIsConfiguredProxy( $ip ) ) {
-			$request = $this->getRequest();
+		$trustedProxyCheckFunction = ( MFCompatCheck::checkWfIsConfiguredProxy() ) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
+		$request = $this->getRequest();
+		if ( $trustedProxyCheckFunction( $ip ) ) {
 			$request->response()->header( 'Cache-Control: no-cache, must-revalidate' );
 			$request->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 			$request->response()->header( 'Pragma: no-cache' );
