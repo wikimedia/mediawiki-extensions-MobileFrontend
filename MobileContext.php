@@ -336,7 +336,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * @param $value string
+	 * @param $value bool
 	 * @return bool
 	 */
 	public function setOptInOutCookie( $value ) {
@@ -349,7 +349,7 @@ class MobileContext extends ContextSource {
 		$wgCookieDomain = $this->getBaseDomain();
 		$tempWgCookiePrefix = $wgCookiePrefix;
 		$wgCookiePrefix = '';
-		$this->getRequest()->response()->setcookie( 'optin', $value, 0, '' );
+		$this->getRequest()->response()->setcookie( 'optin', $value ? '1' : '', 0, '' );
 		$wgCookieDomain = $tempWgCookieDomain;
 		$wgCookiePrefix = $tempWgCookiePrefix;
 		wfProfileOut( __METHOD__ );
@@ -364,6 +364,13 @@ class MobileContext extends ContextSource {
 		$optInCookie = $this->getRequest()->getCookie( 'optin', '' );
 		wfProfileOut( __METHOD__ );
 		return $optInCookie;
+	}
+
+	/**
+	 * @param $disable bool
+	 */
+	public function setDisableImagesCookie( $disable ) {
+		$this->getRequest()->response()->setcookie( 'disableImages', $disable ? '1' : '' );
 	}
 
 	/**
