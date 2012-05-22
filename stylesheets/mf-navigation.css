@@ -143,18 +143,20 @@
 	background-color: #F0F0F0;
 	text-shadow: 0 1px 0 white;
 	border-bottom: 1px inset #E0E0E0;
-	background-image: url(images/icons_main_menu.png);
-	background-repeat: no-repeat;
-	background-position: 10px 6px;
-	height: 1.3em;
-	padding: 12px;
 	font-weight: normal;
 }
 
 #mw-mf-menu-main li a {
 	color: black;
 	display: block;
+	padding: 12px;
 	padding-left: 64px;
+	line-height: 22px;
+	background-image: url(images/icons_main_menu.png);
+	background-repeat: no-repeat;
+	background-position: 0 6px;
+	height: 21px;
+	margin-left: 10px;
 }
 
 #mw-mf-content-left {
@@ -162,24 +164,24 @@
 	border-left: solid 12px #252525;
 }
 
-#mw-mf-menu-main li.icon2 {
-	background-position: 10px -30px
+#mw-mf-menu-main li.icon2 a {
+	background-position: 0 -30px
 }
-#mw-mf-menu-main li.icon3 {
-	background-position: 10px -65px
+#mw-mf-menu-main li.icon3 a {
+	background-position: 0 -65px
 }
-#mw-mf-menu-main li.icon4 {
-	background-position: 10px -100px
+#mw-mf-menu-main li.icon4 a {
+	background-position: 0 -100px
 }
-#mw-mf-menu-main li.icon5 {
-	background-position: 10px -135px;
+#mw-mf-menu-main li.icon5 a {
+	background-position: 0 -135px;
 }
-#mw-mf-menu-main li.icon6 {
-	background-position: 10px -170px;
+#mw-mf-menu-main li.icon6 a {
+	background-position: 0 -170px;
 }
 
-#mw-mf-menu-main li.icon7 {
-	background-position: 10px -205px;
+#mw-mf-menu-main li.icon7 a {
+	background-position: 0 -205px;
 }
 
 #mw-mf-nav li.disabled,
@@ -363,5 +365,43 @@ body {
 
 	#mw-mf-page-menu-button {
 		right: 12px;
+	}
+}
+
+@media all and (max-width: 240px) {
+	#mw-mf-logo {
+		display: none;
+	}
+
+	#mw-mf-search {
+		padding-left: 0;
+	}
+
+	#mw-mf-menu-main li a {
+		padding-left: 12px;
+	}
+
+	#mw-mf-menu-main li {
+		background-position: 0px 0px;
+		font-size: 0.8em;
+	}
+}
+
+/*
+each menu item is 21px height + 24px padding = 45px
+5 items therefore has a height of 225px if we cannot accomodate
+throw away icons
+TODO: make this the default and add icons with media queries
+*/
+@media all and (max-height: 225px) {
+	#mw-mf-menu-main li {
+		display: inline-block;
+		width: 40px;
+		overflow: hidden;
+		text-indent: -999px;
+	}
+	#mw-mf-menu-main li:hover {
+		border: none;
+		margin-left: 0;
 	}
 }
