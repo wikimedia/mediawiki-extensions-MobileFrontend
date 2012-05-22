@@ -354,6 +354,10 @@ body {
 		padding: 0px 30px 0px 40px;
 	}
 
+	.full-screen-search .suggestions-result {
+		padding-left: 40px;
+	}
+
 	.full-screen-search #mw-mf-searchForm {
 		padding: 0px 8px 0px 40px;
 	}
