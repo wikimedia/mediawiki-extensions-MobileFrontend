@@ -7,8 +7,9 @@ MobileFrontend.toggle = (function() {
 
 	function init() {
 		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
-			sectionHeadings = [];
+			sectionHeadings = [], content;
 
+		content = document.getElementById( 'content_wrapper' );
 		h2 = document.getElementsByTagName( 'H2' );
 
 		for( i = 0; i < h2.length; i++) {
@@ -59,7 +60,7 @@ MobileFrontend.toggle = (function() {
 			}
 		}
 		checkHash();
-		for ( a = document.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
+		for ( a = content.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 			u( a[i] ).bind( 'click', checkHash );
 		}
 	}
