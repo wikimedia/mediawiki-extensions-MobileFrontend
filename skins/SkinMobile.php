@@ -423,8 +423,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
 				</a>
 			</li>
-			<li class='icon5 disabled'>
-				<a href='#'>
+			<li class='icon5'>
+				<a href='<?php $this->text( 'leaveFeedbackURL' ) ?>#mw-mf-page-left'>
 				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
 				</a>
 			</li>
