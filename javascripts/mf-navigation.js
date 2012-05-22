@@ -64,10 +64,11 @@ MobileFrontend.navigation = (function() {
 		var search = document.getElementById(  mfePrefix + 'search' );
 
 		function toggleNavigation() {
-			if( !u( document.body ).hasClass( 'navigationEnabled' ) ) {
-				u( document.body ).addClass( 'navigationEnabled' );
+			var doc = document.documentElement;
+			if( !u( doc ).hasClass( 'navigationEnabled' ) ) {
+				u( doc ).addClass( 'navigationEnabled' );
 			} else {
-				u( document.body ).removeClass( 'navigationEnabled' );
+				u( doc ).removeClass( 'navigationEnabled' );
 			}
 		}
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
@@ -93,7 +94,7 @@ MobileFrontend.navigation = (function() {
 		$( '#' + mfePrefix + 'language' ).click( createLanguagePage );
 
 		u( search ).bind( 'focus', function() {
-			u( document.body ).removeClass( 'navigationEnabled' );
+			u( document.documentElement ).removeClass( 'navigationEnabled' );
 		} );
 	}
 	if( typeof(jQuery) !== 'undefined' ) {

@@ -322,6 +322,25 @@ html:not(.jsEnabled) #mw-mf-page-left:target {
 	top: 8px;
 }
 
+html.navigationEnabled,
+.navigationEnabled body,
+.navigationEnabled #mw-mf-viewport,
+.navigationEnabled #mw-page-center {
+	overflow: hidden;
+	height: 100%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+#mw-mf-page-left,
+#mw-mf-page-center {
+	min-height: 100%;
+}
+
+
 @media all and (max-width: 320px) {
 	/* -10px */
 	#mw-mf-logo {
@@ -345,4 +364,3 @@ html:not(.jsEnabled) #mw-mf-page-left:target {
 		right: 12px;
 	}
 }
-
