@@ -37,4 +37,13 @@ class MFCompatCheck {
 		global $wgVersion;
 		return version_compare( $wgVersion, '1.20alpha' , '>=' );
 	}
+
+	/**
+	 * Check to see if HTMLForm has been updated in core to support multiple
+	 * display formats.
+	 * @return Bool
+	 */
+	public static function checkHTMLFormCoreUpdates() {
+		return method_exists( 'HTMLForm', 'setDisplayFormat' );
+	}
 }

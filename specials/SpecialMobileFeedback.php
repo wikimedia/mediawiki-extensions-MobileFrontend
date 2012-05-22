@@ -57,7 +57,11 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$warning = $this->msg( 'mobile-frontend-leave-feedback-warning' );
 
 		/** Fetch form HTML **/
-		$form = new HTMLFormMobile( $this->getForm(), $this );
+		if ( MFCompatCheck::checkHTMLFormCoreUpdates() ) {
+			$form = new HTMLForm( $this->getForm(), $this );
+		} else {
+			$form = new HTMLFormMobile( $this->getForm( 'div' ), $this );
+		}
 		$form->setDisplayFormat( 'raw' );
 		$form->setTitle( $this->getTitle() );
 		$form->setId( 'mf-feedback-form' );
@@ -102,22 +106,22 @@ HTML;
 		return $html;
 	}
 
-	protected function getForm() {
+	protected function getForm( $displaySuffix = '' ) {
 		$subjectPlaceholder = $this->msg( 'mobile-frontend-leave-feedback-form-subject-placeholder' )->escaped();
 		$messagePlaceholder = $this->msg( 'mobile-frontend-leave-feedback-form-message-placeholder' )->escaped();
 		return array(
 			'returnto' => array(
-				'type' => 'hiddendiv',
+				'type' => 'hidden' . $displaySuffix,
 				'default' => $this->getRequest()->getText( 'returnto', '' ),
 			),
 			'subject' => array(
-				'type' => 'textdiv',
+				'type' => 'text' . $displaySuffix,
 				'maxlength' => 60,
 				'validation-callback' => array( $this, 'validateSubject' ),
 				'placeholder' => $subjectPlaceholder,
 			),
 			'message' => array(
-				'type' => 'textareadiv',
+				'type' => 'textarea' . $displaySuffix,
 				'rows' => 5,
 				'cols' => 60,
 				'validation-callback' => array( $this, 'validateMessage' ),
@@ -564,7 +568,7 @@ class HTMLFormMobile extends HTMLForm {
 				$v = empty( $value->mParams['nodata'] )
 					? $this->mFieldData[$key]
 					: $value->getDefault();
-				$rawHtml .= $value->getRaw( $v, $value );
+				$rawHtml .= $value->getRaw( $v );
 
 				if ( $value->getLabel() != '&#160;' ) {
 					$hasLeftColumn = true;
@@ -622,7 +626,7 @@ class HTMLFormMobile extends HTMLForm {
 				$v = empty( $value->mParams['nodata'] )
 					? $this->mFieldData[$key]
 					: $value->getDefault();
-				$divHtml .= $value->getDiv( $v, $value );
+				$divHtml .= $value->getDiv( $v );
 
 				if ( $value->getLabel() != '&#160;' ) {
 					$hasLeftColumn = true;
@@ -754,12 +758,12 @@ class HTMLTextAreaFieldDiv extends HTMLTextAreaField {
 		return Html::element( 'textarea', $attribs, $value );
 	}
 
-	public function getDiv( $value, $valueObj ) {
-		return HTMLFormFieldDiv::getDiv( $value, $valueObj );
+	public function getDiv( $value ) {
+		return HTMLFormFieldDiv::getDiv( $value, $this );
 	}
 
-	public function getRaw( $value, $valueObj ) {
-		return HTMLFormFieldDiv::getRaw( $value, $valueObj );
+	public function getRaw( $value ) {
+		return HTMLFormFieldDiv::getRaw( $value, $this );
 	}
 
 	public function getMClass() {
@@ -772,12 +776,12 @@ class HTMLTextAreaFieldDiv extends HTMLTextAreaField {
  * table elements.
  */
 class HTMLTextFieldDiv extends HTMLTextField {
-	public function getDiv( $value, $valueObj ) {
-		return HTMLFormFieldDiv::getDiv( $value, $valueObj );
+	public function getDiv( $value ) {
+		return HTMLFormFieldDiv::getDiv( $value, $this );
 	}
 
-	public function getRaw( $value, $valueObj ) {
-		return HTMLFormFieldDiv::getRaw( $value, $valueObj );
+	public function getRaw( $value ) {
+		return HTMLFormFieldDiv::getRaw( $value, $this );
 	}
 
 	public function getMClass() {
@@ -790,12 +794,12 @@ class HTMLTextFieldDiv extends HTMLTextField {
  * table elements.
  */
 class HTMLHiddenFieldDiv extends HTMLHiddenField {
-	public function getDiv( $value, $valueObj ) {
-		parent::getTableRow( $value, $valueObj );
+	public function getDiv( $value ) {
+		parent::getTableRow( $value, $this );
 	}
 
-	public function getRaw( $value, $valueObj ) {
-		parent::getTableRow( $value, $valueObj );
+	public function getRaw( $value ) {
+		parent::getTableRow( $value, $this );
 	}
 
 	public function getMClass() {
