@@ -182,6 +182,7 @@
 	background-position: 10px -205px;
 }
 
+#mw-mf-nav li.disabled,
 #mw-mf-menu-main li.disabled {
 	opacity: 0.2;
 }
