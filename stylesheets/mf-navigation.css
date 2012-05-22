@@ -130,6 +130,7 @@
 	margin-right: 0px;
 	position: absolute;
 	border-right: solid 1px #AAA;
+	display: none;
 }
 
 #mw-mf-menu-main {

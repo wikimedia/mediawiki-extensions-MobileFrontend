@@ -75,10 +75,13 @@ MobileFrontend.navigation = (function() {
 
 		function toggleNavigation() {
 			var doc = document.documentElement;
+			var mwMfPageLeft = document.getElementById( 'mw-mf-page-left' );
 			if( !u( doc ).hasClass( 'navigationEnabled' ) ) {
+				mwMfPageLeft.style.display = 'block';
 				u( doc ).addClass( 'navigationEnabled' );
 			} else {
 				u( doc ).removeClass( 'navigationEnabled' );
+				mwMfPageLeft.style.display = 'none';
 			}
 		}
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
