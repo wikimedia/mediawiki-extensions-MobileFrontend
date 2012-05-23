@@ -101,11 +101,7 @@ class SkinMobile extends SkinMobileBase {
 				$language->timeanddate( $lastEdit ),
 				$language->time( $lastEdit ),
 				$language->date( $lastEdit ) )->parse();
-			$historyAndActivityLink = $historyLink . "<br>" . $activityLink . "<br>";
-		} else {
-			$historyAndActivityLink = '';
 		}
-		$tpl->set( 'historyAndActivityLink', $historyAndActivityLink );
 		$tpl->set( 'copyright', $this->getCopyright() );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
@@ -594,7 +590,6 @@ class SkinMobileTemplate extends BaseTemplate {
 				$this->html( 'imagesToggle' ) ?></span>
 			</li>
 			<li class="notice">
-				<?php $this->html( 'historyAndActivityLink' ) ?>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 			</li>
 		</ul>
