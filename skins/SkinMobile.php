@@ -8,8 +8,8 @@ class SkinMobile extends SkinMobileBase {
 	private $resourceLoader;
 
 	protected function prepareTemplate( OutputPage $out ) {
-		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos;
+		global $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
+			   $wgMFCustomLogos;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -27,7 +27,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'title', $out->getPageTitle() );
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
-		$tpl->set( 'robots', $this->getRobotsPolicy() );
+		$tpl->set( 'headItems', $this->getHeadItems() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
 		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
 			$wgMFCustomLogos['copyright'] :
@@ -53,8 +53,6 @@ class SkinMobile extends SkinMobileBase {
 		}
 		$tpl->set( 'cssLinks', implode( "\n", $styleLinks ) );
 		wfProfileOut( __METHOD__ . '-modules' );
-
-		$tpl->setRef( 'wgAppleTouchIcon', $wgAppleTouchIcon );
 
 		if ( $device['supports_jquery'] ) {
 			$scripts[] = 'mobile.references';
@@ -313,20 +311,15 @@ class SkinMobile extends SkinMobileBase {
 	}
 
 	/**
-	 * Extracts <meta name="robots"> from head items that we don't need
+	 * Extracts stuff like <meta name="robots"> from head items that we don't need
 	 * @return string
 	 */
-	private function getRobotsPolicy() {
+	private function getHeadItems() {
 		wfProfileIn( __METHOD__ );
-		libxml_use_internal_errors( true );
-		$dom = $this->extMobileFrontend->getDom( $this->getOutput()->getHeadLinks() );
-		$xpath = new DOMXpath( $dom );
-		foreach ( $xpath->query( '//meta[@name="robots"]' ) as $tag ) {
-			wfProfileOut( __METHOD__ );
-			return $dom->saveXML( $tag );
-		}
+		$links = $this->getOutput()->getHeadLinksArray();
+		$links = array_intersect_key( $links, array( 'meta-robots' => 1, 'apple-touch-icon' => 1 ) );
 		wfProfileOut( __METHOD__ );
-		return '';
+		return implode( "\n", $links );
 	}
 
 	private function getLogInOutLink() {
@@ -366,10 +359,9 @@ class SkinMobileTemplate extends BaseTemplate {
 	<head>
 		<title><?php $this->text( 'pagetitle' ) ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<?php $this->html( 'robots' ) ?>
+		<?php $this->html( 'headItems' ) ?>
 		<?php $this->html( 'cssLinks' ) ?>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
-		<?php $this->html( 'touchIcon' ) ?>
 		<script type="text/javascript">
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
 			<?php $this->html( 'preambleScript' ) ?>
@@ -453,12 +445,6 @@ class SkinMobileTemplate extends BaseTemplate {
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
-		if ( $this->data['wgAppleTouchIcon'] !== false ) {
-			$link = Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $this->data['wgAppleTouchIcon'] ) );
-		} else {
-			$link = '';
-		}
-		$this->set( 'touchIcon', $link );
 		$hookOptions = isset( $this->data['hookOptions']['toggle_view_desktop'] ) ? 'toggle_view_desktop' : '';
 
 		$jsconfig = array(
