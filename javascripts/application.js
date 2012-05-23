@@ -222,7 +222,11 @@ MobileFrontend = (function() {
 		init: init,
 		history: {
 			replaceHash: function( newHash ) {
-				window.location.replace( newHash );
+				if( window.history && window.history.replaceState ) {
+					window.history.replaceState( null, null, newHash );
+				} else {
+					window.location.hash = newHash;
+				}
 			}
 		},
 		message: message,
