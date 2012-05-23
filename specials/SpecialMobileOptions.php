@@ -57,9 +57,9 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 
 	private function showEnquiryForm( $headingMsg, $textMsg, $yesButtonMsg, $noButtonMsg ) {
 		$out = $this->getOutput();
+		$out->setPageTitle( $this->msg( $headingMsg ) );
 
 		$out->addHTML( '
-			<h1>' . wfMessage( $headingMsg )->parse() . '</h1>
 			<p>' . wfMessage( $textMsg )->parse() . '</p>
 			<div id="disableButtons">'
 				. Html::openElement( 'form',
@@ -111,7 +111,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptInGet() {
-		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-opt-in-title' ) );
 		$this->showEnquiryForm(
 			'mobile-frontend-opt-in-message',
 			'mobile-frontend-opt-in-explain',
@@ -126,7 +125,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptOutGet() {
-		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-opt-out-title' ) );
 		$this->showEnquiryForm(
 			'mobile-frontend-opt-out-message',
 			'mobile-frontend-opt-out-explain',
