@@ -58,7 +58,7 @@ class HtmlFormatter {
 			$html = mb_convert_encoding( $this->html, 'HTML-ENTITIES', "UTF-8" );
 			libxml_use_internal_errors( true );
 			$this->doc = new DOMDocument();
-			$this->doc->loadHTML( '<?xml encoding="UTF-8">' . $html );
+			$this->doc->loadHTML( $html );
 			libxml_use_internal_errors( false );
 			$this->doc->preserveWhiteSpace = false;
 			$this->doc->strictErrorChecking = false;
@@ -237,6 +237,31 @@ class HtmlFormatter {
 	}
 
 	/**
+	 * libxml in its usual pointlessness converts many chars to entities - this function
+	 * perfoms a reverse conversion
+	 * @param string $html
+	 * @return string
+	 */
+	private function fixLibXML( $html ) {
+		wfProfileIn( __METHOD__ );
+		static $replacements;
+		if ( ! $replacements ) {
+			// We don't include rules like '&#34;' => '&amp;quot;' because entities had already been
+			// normalized by libxml. Using this function with input not sanitized by libxml is UNSAFE!
+			$replacements = new ReplacementArray( array(
+				'&quot;' => '&amp;quot;',
+				'&amp;' => '&amp;amp;',
+				'&lt;' => '&amp;lt;',
+				'&gt;' => '&amp;gt;',
+			) );
+		}
+		$html = $replacements->replace( $html );
+		$html = mb_convert_encoding( $html, 'UTF-8', 'HTML-ENTITIES' );
+		wfProfileOut( __METHOD__ );
+		return $html;
+	}
+
+	/**
 	 * Performs final transformations and returns resulting HTML
 	 *
 	 * @param DOMElement|string|null $element: ID of element to get HTML from or false to get it from the whole tree
@@ -262,6 +287,7 @@ class HtmlFormatter {
 					$body->appendChild( $element );
 				}
 				$html = $this->doc->saveHTML();
+				$html = $this->fixLibXml( $html );
 			} else {
 				$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
 			}
