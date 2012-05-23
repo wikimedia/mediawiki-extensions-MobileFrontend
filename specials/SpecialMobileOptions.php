@@ -121,7 +121,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptInPost() {
-		MobileContext::singleton()->setOptInOutCookie( '1' );
+		MobileContext::singleton()->setOptInOutCookie( true );
 		$this->doReturnTo();
 	}
 
@@ -136,7 +136,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function betaOptOutPost() {
-		MobileContext::singleton()->setOptInOutCookie( '' );
+		MobileContext::singleton()->setOptInOutCookie( false );
 		$this->doReturnTo();
 	}
 
@@ -161,7 +161,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 
 	private function enableImages( $enable = true ) {
 		//if ( $this->checkMobileToken() ) {
-		$this->getRequest()->response()->setcookie( 'disableImages', $enable ? '' : '1' );
+		MobileContext::singleton()->setDisableImagesCookie( !$enable );
 		//}
 		$this->doReturnTo();
 	}
