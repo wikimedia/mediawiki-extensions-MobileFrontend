@@ -20,7 +20,7 @@ Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 	word-break: break-word;
 	line-height: 1.4em;
 	font-size: 0.8em;
-	z-index: 2;
+	z-index: 3;
 }
 
 #mf-references div {
