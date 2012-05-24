@@ -136,11 +136,11 @@ class ApiMobileView extends ApiBase {
 		$latest = $wp->getLatest();
 		if ( $this->file ) {
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->file->getSha1() );
-			$cacheTime = 3600;
+			$cacheExpiry = 3600;
 		} else {
 			$parserOptions = ParserOptions::newFromContext( $this );
 			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
-			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $parserCacheKey );
+			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $parserCacheKey );
 		}
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
@@ -152,7 +152,7 @@ class ApiMobileView extends ApiBase {
 		} else {
 			$parserOutput = $wp->getParserOutput( $parserOptions );
 			$html = $parserOutput->getText();
-			$cacheTime = $parserOutput->getCacheTime();
+			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
 
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ),
@@ -191,7 +191,7 @@ class ApiMobileView extends ApiBase {
 			}
 		}
 		// store for the same time as original parser output
-		$wgMemc->set( $key, $data, $cacheTime );
+		$wgMemc->set( $key, $data, $cacheExpiry );
 		wfProfileOut( __METHOD__ );
 		return $data;
 	}
