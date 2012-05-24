@@ -50,4 +50,28 @@ test("clicking a heading toggles it", function() {
 	strictEqual(visibilityStart, false, "check content is hidden at start");
 	strictEqual($("#content_2").hasClass("openSection"), true, "check content is shown on a toggle");
 });
+
+module("MobileFrontend toggle.js (beta): closing sections", {
+	setup: function() {
+		MFET.createFixtures();
+		$("body").addClass('beta');
+		MFE.toggle.init();
+		$("#section_1,#content_1,#anchor_1").addClass("openSection");
+	},
+	teardown: function() {
+		$("body").removeClass('beta');
+	}
+});
+
+test("close a section", function() {
+	var startVisibility = $("#content_1").hasClass("openSection"), endVisibility,
+		closeLink = $("#anchor_1")[0];
+
+	$(closeLink).trigger("click");
+	endVisibility = $("#content_1").hasClass("openSection");
+	strictEqual($(closeLink).text(), MFE.message("mobile-frontend-close-section"), "text has been updated");
+	strictEqual(startVisibility, true, "it is open at start");
+	strictEqual(endVisibility, false, "clicking has hidden section content");
+});
+
 }(jQuery, MobileFrontend, MobileFrontendTests));

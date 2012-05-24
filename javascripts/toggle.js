@@ -2,12 +2,14 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.toggle = (function() {
 	var u = MobileFrontend.utils,
-		showLabel = MobileFrontend.message( 'expand-section' ),
-		hideLabel = MobileFrontend.message( 'collapse-section' );
+		message = MobileFrontend.message,
+		showLabel = message( 'expand-section' ),
+		hideLabel = message( 'collapse-section' );
 
 	function init() {
 		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
-			sectionHeadings = [], content;
+			sectionHeadings = [], content,
+			inBeta = u( document.body ).hasClass( 'beta' );
 
 		content = document.getElementById( 'content_wrapper' );
 		h2 = document.getElementsByTagName( 'H2' );
@@ -46,6 +48,11 @@ MobileFrontend.toggle = (function() {
 			heading = sectionHeadings[i];
 			heading.removeAttribute( 'onclick' ); // TODO: remove any legacy onclick handlers
 			heading.insertBefore( createButton(), heading.firstChild );
+			a = document.getElementById( 'anchor_' + heading.id.split( '_' )[ 1 ] );
+			if( a && inBeta ) {
+				u( a ).text( message( 'mobile-frontend-close-section' ) );
+				u( a ).bind( 'click', openSectionHandler );
+			}
 			u( heading ).bind( 'click', openSectionHandler );
 		}
 		

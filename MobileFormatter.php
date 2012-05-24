@@ -179,18 +179,11 @@ class MobileFormatter extends HtmlFormatter {
 		$backToTop = $this->msg( 'mobile-frontend-back-to-top-of-section' );
 		$this->headings++;
 		// Back to top link
-		$backToTop = Html::openElement( 'div',
+		$backToTop = Html::rawElement( 'a',
 				array( 'id' => 'anchor_' . intval( $this->headings - 1 ),
-					'class' => 'section_anchors',
-				)
-			)
-			. Html::rawElement( 'a',
-				array( 'href' => '#section_' . intval( $this->headings - 1 ),
-						'class' => 'back_to_top'
-				),
-				'&#8593;' . $backToTop
-			)
-			. '</div>'; // <div id="anchor_*">
+					'href' => '#section_' . intval( $this->headings - 1 ),
+					'class' => 'section_anchors back_to_top' ),
+				'&#8593;' . $backToTop );
 
 		// generate the HTML we are going to inject
 		// TODO: remove legacy code for Wikipedia Mobile app < 1.3 which is not using the api
