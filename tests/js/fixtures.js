@@ -32,6 +32,7 @@ window.MobileFrontendTests = {
 		'	</div>',
 		'	<button id="mw-mf-clearsearch" title="Clear">clear</button>',
 		'	<div id="results">search results here</div>',
+		'	<div id="content_wrapper">',
 		'	<div id="content">',
 		'		<h2 class="section_heading" id="section_1">',
 		'			<span id="First_Section">First Section</span>',
@@ -49,6 +50,7 @@ window.MobileFrontendTests = {
 		'			<span id="Second_Section">Second Section</span>',
 		'		</h2>',
 		'		<div class="content_block" id="content_2"  style="display:none"><p>Text with a <a href="#First_Section">section 1</a> link! and to <a href="#First_Section_2">section 1.2</a></p></div>',
+		'	</div>',
 		'	</div>',
 		'<div id="mfe-test-classes" class="test hello-world goodbye camelCase">for testing classes</div>',
 		'</div>'].join("")).appendTo("#qunit-fixture");
