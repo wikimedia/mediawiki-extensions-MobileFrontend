@@ -394,20 +394,16 @@ body {
 }
 
 /*
-each menu item is 21px height + 24px padding = 45px
-5 items therefore has a height of 225px if we cannot accomodate
+each menu item is 21px height + 24px padding + 1px border = 46px
+5 items therefore has a height of 230px if we cannot accomodate
 throw away icons
 TODO: make this the default and add icons with media queries
 */
-@media all and (max-height: 225px) {
-	#mw-mf-menu-main li {
-		display: inline-block;
-		width: 40px;
-		overflow: hidden;
-		text-indent: -999px;
-	}
-	#mw-mf-menu-main li:hover {
-		border: none;
-		margin-left: 0;
+@media all and (max-height: 230px) {
+	html.navigationEnabled,
+	.navigationEnabled body,
+	.navigationEnabled #mw-mf-viewport,
+	.navigationEnabled #mw-page-center {
+		min-height: 230px;
 	}
 }
