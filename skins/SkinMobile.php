@@ -349,6 +349,8 @@ class SkinMobile extends SkinMobileBase {
 class SkinMobileTemplate extends BaseTemplate {
 	public function execute() {
 		$this->prepareData();
+		$this->data['isBetaGroupMember'] ? $this->set( 'bodyClasses', 'mobile beta' ) :
+			$this->set( 'bodyClasses', 'mobile' );
 
 		?><!doctype html>
 	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>">
@@ -364,7 +366,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		</script>
 		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
 	</head>
-	<body class="mobile">
+	<body class="<?php $this->text( 'bodyClasses' ) ?>">
 		<?php
 		if ( $this->data['isBetaGroupMember'] ) {
 			$this->navigationStart();
