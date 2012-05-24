@@ -10,6 +10,7 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 	public function testTransform( $input, $expected, $callback = false ) {
 		$input = self::normalize( $input );
 		$formatter = new HtmlFormatter( HtmlFormatter::wrapHTML( $input ) );
+		$formatter->setHtmlMode( true );
 		if ( $callback ) {
 			$callback( $formatter );
 		}
@@ -66,6 +67,11 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 				'<div style="foo">bar<sup>2</sup></div>',
 				'bar2',
 				$flattenEverything,
+			),
+			// UTF-8 preservation and security
+			array(
+				'<span title="&quot; \' &amp;">&lt;Тест!&gt;</span> &amp;&lt;&#38;&#0038;&#x26;&#x026;',
+				'<span title="&quot; \' &amp;">&lt;Тест!&gt;</span> &amp;&lt;&amp;&amp;&amp;&amp;',
 			),
 		);
 	}
