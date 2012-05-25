@@ -263,14 +263,24 @@ body.navigationEnabled {
 	right: 8px;
 }
 
+#mw-mf-page-menu-button {
+	display: none;
+}
 
-html:not(.jsEnabled) #mw-mf-nav:target {
+#mw-mf-language-selection {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.jsEnabled #mw-mf-page-menu-button {
 	display: block;
 }
 
 html:not(.jsEnabled) #mw-mf-page-left:target {
 	right: 20%;
-	z-index: 4;
+	z-index: 1000;
+	display: block;
+	top: 50px;
 }
 
 .overlay .header {
