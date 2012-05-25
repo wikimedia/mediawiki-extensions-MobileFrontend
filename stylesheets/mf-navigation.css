@@ -100,6 +100,7 @@
 #mw-mf-viewport {
 	width: 100%;
 	position: relative;
+	height: 100%; /* for non-existant file pages */
 }
 
 #mw-mf-page-center {
