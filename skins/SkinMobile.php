@@ -9,7 +9,7 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos;
+			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos, $wgVersion;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -151,6 +151,13 @@ class SkinMobile extends SkinMobileBase {
 			);
 		}
 		$tpl->set( 'license', $license );
+
+		// @todo: kill me with fire
+		if ( version_compare( $wgVersion, '1.20alpha', '<' ) ) {
+			$tpl->set( 'bcHack', '<script type="text/javascript">mw={loader:{state:function(){}}};</script>' );
+		} else {
+			$tpl->set( 'bcHack', '' );
+		}
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;
@@ -396,6 +403,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 		?>
 	<!--[if gt IE 7]><!-->
+		<?php $this->html( 'bcHack' ) ?>
 		<?php $this->html( 'bottomScripts' ) ?>
 	<script type='text/javascript'>
 	window.onload = function() {
