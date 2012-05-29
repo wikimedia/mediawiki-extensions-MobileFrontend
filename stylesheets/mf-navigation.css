@@ -161,6 +161,10 @@
 	margin-left: 10px;
 }
 
+#mw-mf-menu-main li a:hover {
+	text-decoration: none;
+}
+
 #mw-mf-content-left {
 	height: 100%;
 	border-left: solid 12px #252525;
