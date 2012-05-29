@@ -1163,6 +1163,7 @@ $messages['cy'] = array(
 /** Danish (Dansk)
  * @author Lokal Profil
  * @author Peter Alberti
+ * @author Tjernobyl
  */
 $messages['da'] = array(
 	'mobile-frontend-desc' => 'Mobil grænseflade',
@@ -1181,12 +1182,10 @@ $messages['da'] = array(
 	'mobile-frontend-opt-in-message' => 'Deltag i vores frivillige test af den nye mobile brugerflade?',
 	'mobile-frontend-opt-in-yes-button' => 'ja',
 	'mobile-frontend-opt-in-no-button' => 'nej',
-	'mobile-frontend-opt-in-title' => 'Valgfri test',
 	'mobile-frontend-opt-in-explain' => 'Dette giver dig mulighed for at deltage i testen',
 	'mobile-frontend-opt-out-message' => 'Forlad den frivillige test af den nye mobile brugerflade?',
 	'mobile-frontend-opt-out-yes-button' => 'ja',
 	'mobile-frontend-opt-out-no-button' => 'nej',
-	'mobile-frontend-opt-out-title' => 'Fravalg af test',
 	'mobile-frontend-opt-out-explain' => 'Dette giver dig mulighed for at forlade testen',
 	'mobile-frontend-disable-images' => 'Slå billeder til på den mobile hjemmeside',
 	'mobile-frontend-enable-images' => 'Slå billeder fra på den mobile hjemmeside',
@@ -1215,6 +1214,11 @@ $messages['da'] = array(
 	'mobile-frontend-footer-less' => 'mindre',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Ukendt indstilling "$1".',
+	'mobile-frontend-main-menu-featured' => 'Fremhævet',
+	'mobile-frontend-main-menu-settings' => 'Indstillinger',
+	'mobile-frontend-main-menu-contact' => 'Kontakt',
+	'mobile-frontend-page-menu-language' => 'sprog',
+	'mobile-frontend-page-menu-language-heading' => 'Læs artiklen på',
 );
 
 /** German (Deutsch)
@@ -2779,6 +2783,7 @@ $messages['ia'] = array(
 	'mobile-frontend-home-button' => 'Initio',
 	'mobile-frontend-random-button' => 'Aleatori',
 	'mobile-frontend-back-to-top-of-section' => 'Retroceder un section',
+	'mobile-frontend-close-section' => 'Clauder iste section',
 	'mobile-frontend-show-button' => 'Monstrar',
 	'mobile-frontend-hide-button' => 'Celar',
 	'mobile-frontend-empty-homepage' => 'Iste pagina initial debe esser configurate. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Plus information</a>',
@@ -2815,6 +2820,8 @@ $messages['ia'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema technic',
 	'mobile-frontend-leave-feedback-general-section-header' => 'General',
 	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Evalutation de articulos',
+	'mobile-frontend-leave-feedback-email-body' => 'Per favor scribe tu message supra iste linea.',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'Problema technic',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Commentario general',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'A proposito de me, un persona, o un compania que io representa',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'A proposito de un error factual',
@@ -3075,8 +3082,8 @@ $messages['it'] = array(
 	'mobile-frontend-leave-feedback' => 'Commenti sul sito per dispositivi mobili',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema tecnico',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Generale',
-	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Commento articolo',
-	'mobile-frontend-leave-feedback-email-body' => 'Per favore, scrivi la tua email sotto questa linea.',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Commenta una voce',
+	'mobile-frontend-leave-feedback-email-body' => 'Per favore, scrivi la tua email sopra questa linea.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problema tecnico',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Commento generale',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => "Che riguarda me, una persona o un'azienda che rappresento",
@@ -3273,9 +3280,12 @@ $messages['ka'] = array(
 	'mobile-frontend-footer-contact' => 'კონტაქტი',
 	'mobile-frontend-unknown-option' => 'ამოუცნობი ვარიანტი "$1".',
 	'mobile-frontend-main-menu-featured' => 'რჩეული',
+	'mobile-frontend-main-menu-nearby' => 'სიახლოვეს',
 	'mobile-frontend-main-menu-settings' => 'პარამეტრები',
 	'mobile-frontend-main-menu-contact' => 'კონტაქტი',
+	'mobile-frontend-page-menu-contents' => 'შინაარსი',
 	'mobile-frontend-page-menu-language' => 'ენა',
+	'mobile-frontend-page-menu-contents-heading' => 'შინაარსი',
 	'mobile-frontend-page-menu-language-heading' => 'ამ სტატიის წაკითხვა',
 );
 
@@ -6024,7 +6034,7 @@ $messages['te'] = array(
 	'mobile-frontend-home-button' => 'ముంగిలి',
 	'mobile-frontend-random-button' => 'యాదృచ్చిక',
 	'mobile-frontend-back-to-top-of-section' => 'ఒక విభాగం వెనక్కి గెంతండి',
-	'mobile-frontend-close-section' => 'ఈ విభాగమును మూసివేయుము',
+	'mobile-frontend-close-section' => 'ఈ విభాగాన్ని మూసివేయి',
 	'mobile-frontend-show-button' => 'చూపించు',
 	'mobile-frontend-hide-button' => 'దాచు',
 	'mobile-frontend-regular-site' => 'ఈ పేజీని మామూలు {{SITENAME}}లో చూడండి',
@@ -6035,18 +6045,18 @@ $messages['te'] = array(
 	'mobile-frontend-opt-in-no-button' => 'కాదు',
 	'mobile-frontend-opt-out-yes-button' => 'అవును',
 	'mobile-frontend-opt-out-no-button' => 'కాదు',
-	'mobile-frontend-toggle-images' => 'ప్రతిమలు $1 / $2',
+	'mobile-frontend-toggle-images' => 'బొమ్మలు $1 / $2',
 	'mobile-frontend-news-items' => 'వార్తల్లో',
 	'mobile-frontend-leave-feedback-subject' => 'విషయం:',
 	'mobile-frontend-leave-feedback-message' => 'సందేశం:',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'సాంకేతిక సమస్య',
 	'mobile-frontend-leave-feedback-general-section-header' => 'సాధారణం',
-	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'సంచిక ప్రతిస్పందన',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'వ్యాసంపై ప్రతిస్పందన',
 	'mobile-frontend-leave-feedback-email-body' => 'ఈ పంక్తిపైన మీ ఈమెయిల్‌ను రాయుము',
-	'mobile-frontend-leave-feedback-technical-link-text' => 'సాంకేతిక లోపం',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'సాంకేతిక సమస్య',
 	'mobile-frontend-leave-feedback-article-other-link-text' => 'ఇతర లోపము కొరకై',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'సందేశ పాఠ్యాంశము',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'మీ వ్యాఖ్యను ఇక్కడ రాయుము',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'సందేశ విషయం',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'మీ వ్యాఖ్యను ఇక్కడ వ్రాయండి',
 	'mobile-frontend-leave-feedback-special-title' => 'మమ్మల్ని సంప్రదించండి',
 	'mobile-frontend-feedback-no-subject-field' => 'పాఠ్యాంశమును రాయుము',
 	'mobile-frontend-feedback-no-message' => ' ఇక్కడ సమాచారమును రాయండి',
@@ -6057,13 +6067,13 @@ $messages['te'] = array(
 	'mobile-frontend-login' => 'ప్రవేశించండి',
 	'mobile-frontend-placeholder' => 'మీ శోధనపదమును ఇక్కడ రాయుము',
 	'mobile-frontend-search-help' => 'పైన శోధనపదమును రాసినచో, సంబంధిత సంచికలు ఇక్కడ కనిపించును',
-	'mobile-frontend-clear-search' => 'తొలిగించు',
+	'mobile-frontend-clear-search' => 'తుడిచివేయి',
 	'mobile-frontend-about-link-text' => 'గురించి',
 	'mobile-frontend-footer-more' => 'ఇంకా',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-contact' => 'సంప్రదించు',
+	'mobile-frontend-footer-contact' => 'సంప్రదింపులు',
 	'mobile-frontend-main-menu-settings' => 'అమరికలు',
-	'mobile-frontend-main-menu-contact' => 'సంప్రదించు',
+	'mobile-frontend-main-menu-contact' => 'సంప్రదింపులు',
 	'mobile-frontend-page-menu-language' => 'భాష',
 	'mobile-frontend-page-menu-contents-heading' => 'విషయాలు',
 );
@@ -6544,7 +6554,7 @@ $messages['yue'] = array(
 	'mobile-frontend-disable-images' => '喺手機版唔睇圖',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Anakmalaysia
  * @author Bencmq
  * @author Dimension
@@ -6576,12 +6586,10 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-opt-in-message' => '您想参加移动公测吗？',
 	'mobile-frontend-opt-in-yes-button' => '是',
 	'mobile-frontend-opt-in-no-button' => '否',
-	'mobile-frontend-opt-in-title' => '参加移动公测',
 	'mobile-frontend-opt-in-explain' => '参加公测后，您将可以访问实验性功能，但会遇到不少错误和问题。',
 	'mobile-frontend-opt-out-message' => '您想离开移动公测吗？',
 	'mobile-frontend-opt-out-yes-button' => '是',
 	'mobile-frontend-opt-out-no-button' => '否',
-	'mobile-frontend-opt-out-title' => '退出移动公测',
 	'mobile-frontend-opt-out-explain' => '离开公测后，您将禁用所有实验性功能，回归经典移动使用。',
 	'mobile-frontend-disable-images' => '移动网站上禁用图像',
 	'mobile-frontend-enable-images' => '移动网站上启用图像',
@@ -6597,6 +6605,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-leave-feedback-submit' => '提交反馈',
 	'mobile-frontend-leave-feedback-link-text' => '移动前端反馈',
 	'mobile-frontend-leave-feedback' => '留下反馈',
+	'mobile-frontend-leave-feedback-technical-link-text' => '技术问题',
 	'mobile-frontend-leave-feedback-page-title' => '移动版网站反馈',
 	'mobile-frontend-feedback-no-subject' => '（没有主题）',
 	'mobile-frontend-feedback-no-message' => '请在这里输入信息',
@@ -6618,6 +6627,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">使用条款</a>',
 	'mobile-frontend-footer-contact' => '联系',
 	'mobile-frontend-unknown-option' => '未认可的选项“$1”。',
+	'mobile-frontend-page-menu-language' => '语言',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
