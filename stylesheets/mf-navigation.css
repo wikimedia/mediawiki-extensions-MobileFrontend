@@ -38,7 +38,7 @@
 .jsEnabled #mw-mf-language-selection,
 .overlay #mw-mf-viewport,
 .full-screen-search #mw-mf-page-left,
-.full-screen-search #mw-mf-page-menu-button,
+.jsEnabled .full-screen-search #mw-mf-page-menu-button,
 .full-screen-search #mw-mf-main-menu-button {
 	display: none;
 }
