@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALn//9hQ\u003d",
+        "filename": "javascripts/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-05-29T19:18:07Z",
+      "side": 1,
+      "message": "jQuery objects should start with $",
+      "revId": "17f453354351b6ae647b82c695388d3bc35a5352",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
