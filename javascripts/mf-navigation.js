@@ -70,9 +70,12 @@ MobileFrontend.navigation = (function() {
 	}
 
 	function createLanguagePage() {
-		var ul = $( '<ul />' )[0], li, a;
+		var ul = $( '<ul />' )[0], li, a,
+			$languages = $( '#' + mfePrefix + 'language-selection option' );
 
-		$( '#' + mfePrefix + 'language-selection option' ).each( function(i, el) {
+		$( '<li />' ).addClass( 'mw-mf-language-header' ).
+			text( message( 'mobile-frontend-language-header' ).replace( '$1', $languages.length ) ).appendTo( ul );
+		$languages.each( function(i, el) {
 			li = $( '<li />' ).appendTo( ul )[0];
 			a = $( '<a />' ).attr( 'href', el.value ).text( $( el ).text() ).appendTo( li );
 		} );

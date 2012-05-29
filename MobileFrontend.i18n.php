@@ -76,6 +76,7 @@ $messages['en'] = array (
 	'mobile-frontend-leave-feedback-thanks' => 'Thanks for your feedback!',
 	'mobile-frontend-leave-feedback-post-error' => 'There was an error processing your message. Please try again later.',
 	'mobile-frontend-language' => 'Language:',
+	'mobile-frontend-language-header' => 'This article is written in $1 languages',
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Log in',
@@ -172,6 +173,7 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-feedback-edit-summary' => "Edit summary, $1 is feedback subject. Don't translate the special page name",
 	'mobile-frontend-leave-feedback-post-error' => 'Message displayed to user when there is an internal error processing form submission',
 	'mobile-frontend-language' => '{{Identical|Language}}',
+	'mobile-frontend-language-header' => 'Header at top of language selection overlay describing number of languages that it is possible to read the article in',
 	'mobile-frontend-username' => 'Field label for entry of username in Wikimedia mobile user interface.
 
 {{Identical|Username}}',
