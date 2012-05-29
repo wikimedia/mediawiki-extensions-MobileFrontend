@@ -227,6 +227,13 @@ MobileFrontend = (function() {
 				} else {
 					window.location.hash = newHash;
 				}
+			},
+			pushState: function( hash ) {
+				if( window.history && window.history.pushState ) {
+					window.history.pushState( null, null, hash );
+				} else {
+					window.location.hash = hash;
+				}
 			}
 		},
 		message: message,
