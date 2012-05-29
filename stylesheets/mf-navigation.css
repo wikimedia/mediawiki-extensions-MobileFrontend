@@ -273,6 +273,14 @@ html:not(.jsEnabled) #mw-mf-page-left:target {
 	z-index: 4;
 }
 
+#mw-mf-overlay {
+	display: none;
+}
+
+.overlay #mw-mf-overlay {
+	display: block;
+}
+
 .overlay .header {
 	line-height: 40px;
 	border-bottom: solid 1px #CCC;

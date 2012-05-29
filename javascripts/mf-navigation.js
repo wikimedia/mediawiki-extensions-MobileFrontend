@@ -4,23 +4,34 @@ MobileFrontend.navigation = (function() {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message;
 
+	function resetActionBar() {
+		var menu = $( '#' + mfePrefix + 'nav' )[0];
+		menu.style.display = '';
+	}
+
 	function toggleActionBar() {
 		var menu = $( '#' + mfePrefix + 'nav' )[0];
 		if( menu.style.display ) {
-			menu.style.display = '';
+			resetActionBar();
 		} else {
 			menu.style.display = 'block';
 		}
 		window.location.hash = '#';
 	}
 	function closeOverlay( ) {
-		$( '#' + mfePrefix + 'overlay' ).empty();
 		$( 'html' ).removeClass( 'overlay' );
+		MobileFrontend.history.replaceHash( '#' );
+	}
+
+	function showOverlay() {
+		$( 'html' ).addClass( 'overlay' );
+		$( 'html' ).removeClass( 'navigationEnabled' );
 	}
 
 	function createOverlay( heading, contents ) {
 		var overlay = document.getElementById( mfePrefix + 'overlay' );
-		$( 'html' ).addClass( 'overlay' );
+		showOverlay();
+		$( overlay ).empty();
 		$( '<div class="header">' ).appendTo( '#' + mfePrefix + 'overlay' );
 		$( '<button id="close"></button>' ).text( message( 'collapse-section' ) ).
 			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
@@ -29,6 +40,7 @@ MobileFrontend.navigation = (function() {
 		$( 'a', overlay.lastChild ).bind( 'click', function() {
 			toggleActionBar();
 		});
+		MobileFrontend.history.pushState( '#mw-mf-overlay' );
 	}
 
 	function countContentHeadings() {
@@ -68,6 +80,14 @@ MobileFrontend.navigation = (function() {
 	}
 
 	function init() {
+		u( window ).bind( 'hashchange', function() {
+			var hash = window.location.hash;
+			if( hash === '#mw-mf-overlay' ) {
+				showOverlay();
+			} else if( !hash ) { // destroy overlay
+				closeOverlay();
+			}
+		});
 		$( '<div id="' + mfePrefix + 'overlay"></div>' ).appendTo( document.body );
 		var search = document.getElementById(  mfePrefix + 'search' ),
 			actionMenuButton = document.getElementById( mfePrefix + 'language' ),
