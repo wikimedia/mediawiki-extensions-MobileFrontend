@@ -112,7 +112,6 @@ MobileFrontend.navigation = (function() {
 
 		if( window.location.hash === '#mw-mf-page-left' ) {
 			u( document.body ).addClass( 'noTransitions' );
-			toggleNavigation();
 			window.setTimeout( function() {
 				u( document.body ).removeClass( 'noTransitions' );
 			}, 1000 );
