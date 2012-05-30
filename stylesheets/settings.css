@@ -134,7 +134,6 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 .mw-mf-checkboxes .mw-mf-checkbox-css3 span::before {
 	content: "";
 	width: 50%;
-	height: 29px;
 	border: solid 1px white;
 	border-top: none;
 	border-bottom: solid 1px #aaa;
