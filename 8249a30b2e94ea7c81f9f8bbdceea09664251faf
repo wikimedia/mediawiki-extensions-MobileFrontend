@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALn//9Vo\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-30T00:16:39Z",
+      "side": 1,
+      "message": "As is right now, $historyLink only get initialized if you\u0027re NOT looking at a SpecialPage. $historyLink should probably be initialized to an empty string above this if() block, or something like that. Otherwise, this will generate a PHP notice.",
+      "revId": "8249a30b2e94ea7c81f9f8bbdceea09664251faf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALn//9Vk\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 619,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-05-30T00:16:39Z",
+      "side": 1,
+      "message": "if history link is an empty string (because you\u0027re on a special page), this will still render a \u003cbr\u003e. Is that desired?",
+      "revId": "8249a30b2e94ea7c81f9f8bbdceea09664251faf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
