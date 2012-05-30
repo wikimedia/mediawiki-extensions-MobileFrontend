@@ -16,7 +16,6 @@ MobileFrontend.navigation = (function() {
 		} else {
 			menu.style.display = 'block';
 		}
-		window.location.hash = '#';
 	}
 	function closeOverlay( ) {
 		$( 'html' ).removeClass( 'overlay' );
@@ -54,7 +53,7 @@ MobileFrontend.navigation = (function() {
 				MobileFrontend.toggle.wm_reveal_for_hash( hash );
 				closeOverlay();
 				if( hash ) {
-					window.location.hash = hash;
+					MobileFrontend.history.replaceHash( hash );
 				}
 			};
 		$( '.section h2 span' ).each( function( i, el ) {
