@@ -52,10 +52,10 @@ MobileFrontend.navigation = (function() {
 			click = function() {
 				var hash = this.getAttribute( 'href' );
 				MobileFrontend.toggle.wm_reveal_for_hash( hash );
+				closeOverlay();
 				if( hash ) {
 					window.location.hash = hash;
 				}
-				closeOverlay();
 			};
 		$( '.section h2 span' ).each( function( i, el ) {
 			li = $( '<li />' ).appendTo( ul )[0];
