@@ -90,7 +90,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		<li>
 			{$disableMsg}
 			<span class="mw-mf-checkbox-css3">
-				<input type="checkbox" name="disableImages"
+				<input type="checkbox" name="enableImages"
 				{$imagesChecked}>{$onoff}
 			</span>
 		</li>
@@ -122,7 +122,7 @@ HTML;
 			return; // Display something here?
 		}
 		$inBeta = $request->getBool( 'enableBeta' );
-		$imagesDisabled = $request->getBool( 'disableImages' );
+		$imagesDisabled = !$request->getBool( 'enableImages' );
 		$context->setDisableImagesCookie( $imagesDisabled );
 		$context->setOptInOutCookie( $inBeta ? '1' : '' );
 		$context->setBetaGroupMember( $inBeta );
