@@ -66,7 +66,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			);
 		}
 
-		$imagesChecked = $context->imagesDisabled() ? 'checked' : '';
+		$imagesChecked = $context->imagesDisabled() ? '' : 'checked'; // images are off when disabled
 		$imagesBeta = $context->isBetaGroupMember() ? 'checked' : '';
 		$username = $user->getName();
 		$disableMsg = $this->msg( 'mobile-frontend-images-status' )->parse();
