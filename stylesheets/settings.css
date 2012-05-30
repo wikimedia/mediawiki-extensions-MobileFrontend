@@ -10,7 +10,9 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 }
 
 #content .mw-mf-settings li {
-	line-height: 3em;
+	min-height: 3em;
+	line-height: 2em;
+	vertical-align: middle;
 	display: block;
 	font-weight: bold;
 	font-size: 1.1em;
@@ -37,13 +39,16 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 	line-height: 2em;
 }
 
-#content .mw-mf-settings li a.mw-mf-button,
+#content .mw-mf-settings li {
+	position: relative;
+}
+
+.jsEnabled #content .mw-mf-settings li a.mw-mf-button,
 .mw-mf-checkbox-css3,
-.mw-mf-checkbox-css3 span,
-.mw-mf-checkbox-css3 input {
+.jsEnabled .mw-mf-checkbox-css3 span,
+.jsEnabled .mw-mf-checkbox-css3 input {
 	width: 76px;
-	display: inline-block;
-	height: 2em;
+	display: block;
 	position: absolute;
 	right: 8px; /* compensate for padding on the on/off labels */
 	top: 0;
