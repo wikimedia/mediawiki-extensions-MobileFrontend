@@ -1,6 +1,5 @@
 <?php
 
-
 class SkinMobile extends SkinMobileBase {
 	public $skinname = 'mobile';
 	public $stylename = 'mobile';
@@ -96,6 +95,7 @@ class SkinMobile extends SkinMobileBase {
 
 		// footer
 		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
+		$historyLink = '';
 		if ( !$title->isSpecialPage() ) {
 			$lastEdit = $this->getWikiPage()->getTimestamp();
 			$historyLink = $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text();
@@ -104,6 +104,7 @@ class SkinMobile extends SkinMobileBase {
 				$language->time( $lastEdit ),
 				$language->date( $lastEdit ) )->parse();
 		}
+		$tpl->set( 'historyLink', $historyLink );
 		$tpl->set( 'copyright', $this->getCopyright() );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
@@ -615,6 +616,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				$this->html( 'imagesToggle' ) ?></span>
 			</li>
 			<li class="notice">
+				<?php $this->html( 'historyLink' ) . '<br>' ?>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 			</li>
 		</ul>
