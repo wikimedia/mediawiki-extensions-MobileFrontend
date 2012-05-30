@@ -106,6 +106,9 @@ MobileFrontend.navigation = (function() {
 				u( doc ).removeClass( 'navigationEnabled' );
 				mwMfPageLeft.style.display = 'none';
 			}
+			$( '#mw-mf-menu-main a' ).click( function( ev ) {
+				toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
+			} );
 		}
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
 			toggleNavigation();
