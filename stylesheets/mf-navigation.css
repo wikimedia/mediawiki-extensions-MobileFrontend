@@ -39,6 +39,7 @@
 .overlay #mw-mf-viewport,
 .full-screen-search #mw-mf-page-left,
 .jsEnabled .full-screen-search #mw-mf-page-menu-button,
+.jsEnabled .full-screen-search #mw-mf-main-menu-button,
 .full-screen-search #mw-mf-main-menu-button {
 	display: none;
 }
