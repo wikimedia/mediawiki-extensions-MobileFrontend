@@ -618,7 +618,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				$this->html( 'imagesToggle' ) ?></span>
 			</li>
 			<li class="notice">
-				<?php $this->html( 'historyLink' ) . '<br>' ?>
+				<?php $this->html( 'historyLink' ) ?><br>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 			</li>
 		</ul>
