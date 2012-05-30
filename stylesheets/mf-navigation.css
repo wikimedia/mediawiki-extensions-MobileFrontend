@@ -368,6 +368,12 @@ body {
 	min-height: 100%;
 }
 
+#mw-mf-overlay li.mw-mf-language-header {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-size: 0.8em;
+	background-color: #ccc;
+}
 
 @media all and (max-width: 320px) {
 	/* -10px */

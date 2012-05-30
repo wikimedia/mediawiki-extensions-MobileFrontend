@@ -478,6 +478,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'contents-heading' => wfMsg( 'mobile-frontend-page-menu-contents-heading' ),
 				'language-heading' => wfMsg( 'mobile-frontend-page-menu-language-heading' ),
 				'mobile-frontend-close-section' => wfMsg( 'mobile-frontend-close-section' ),
+				'mobile-frontend-language-header' => wfMsg( 'mobile-frontend-language-header' ),
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
