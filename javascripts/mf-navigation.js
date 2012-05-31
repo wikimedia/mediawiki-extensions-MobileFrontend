@@ -54,6 +54,9 @@ MobileFrontend.navigation = (function() {
 				closeOverlay();
 				if( hash ) {
 					MobileFrontend.history.replaceHash( hash );
+					window.setTimeout( function() {
+						window.scrollTo( 0, document.getElementById( hash.substr( 1, hash.length ) ).offsetTop );
+					}, 100 ); // timeout hack for ios 4.*
 				}
 			};
 		$( '.section h2 span' ).each( function( i, el ) {
