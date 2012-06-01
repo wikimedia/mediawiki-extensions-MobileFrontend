@@ -1,10 +1,12 @@
+/*global document, window, MobileFrontend */
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.settings = (function() {
 	var u = MobileFrontend.utils,
 		mobileTokenCookieName = 'mobiletoken';
 
 	function saveMobileToken( mobileToken ) {
-		var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' );
-		var mobileTokenCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
+		var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' ),
+			mobileTokenCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
 		MobileFrontend.banner.writeCookie( mobileTokenCookieName,
 			mobileToken, 1, cookiePath, mobileTokenCookieDomain );
 	}
@@ -15,25 +17,29 @@ MobileFrontend.settings = (function() {
 	}
 
 	function updateMobileToken( responseXml ) {
-		var mobileviewElements = responseXml.getElementsByTagName( 'mobileview' );
+		var mobileviewElements = responseXml.getElementsByTagName( 'mobileview' ),
+			imagetoggle, mobileToken;
 		if ( mobileviewElements[0] ) {
-			var mobileToken = mobileviewElements[0].getAttribute( 'mobiletoken' );
+			mobileToken = mobileviewElements[0].getAttribute( 'mobiletoken' );
 		}
-		var imagetoggle = document.getElementById( 'imagetoggle' );
+		imagetoggle = document.getElementById( 'imagetoggle' );
 		if ( mobileToken && imagetoggle.href ) {
-			imagetoggle.href = addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken );
+			imagetoggle.setAttribute( 'href',
+				addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
 			saveMobileToken( mobileToken );
 		}
 	}
 
 	function updateQueryStringParameter( a, k, v ) {
 		var re = new RegExp( "([?|&])" + k + "=.*?(&|$)", "i" ),
+			rtn,
 			separator = a.indexOf( '?' ) !== -1 ? "&" : "?";
 		if ( a.match( re ) ) {
-			return a.replace( re, '$1' + k + "=" + v + '$2' );
+			rtn = a.replace( re, '$1' + k + "=" + v + '$2' );
 		} else {
-			return a + separator + k + "=" + v;
+			rtn = a + separator + k + "=" + v;
 		}
+		return rtn;
 	}
 
 	function addCSRFToken( link, name, value ) {
@@ -68,7 +74,8 @@ MobileFrontend.settings = (function() {
 	}
 
 	function init() {
-		var mobileToken = readMobileToken(), imagetoggle, apiUrl = '/api.php';
+		var mobileToken = readMobileToken(), imagetoggle, apiUrl = '/api.php',
+			url;
 
 		if ( !mobileToken ) {
 			apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
@@ -80,10 +87,9 @@ MobileFrontend.settings = (function() {
 				} );
 		} else {
 			imagetoggle = document.getElementById( 'imagetoggle' );
-			imagetoggle.href = addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken );
+			imagetoggle.setAttribute( 'href', addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
 		}
 		enhanceCheckboxes();
 	}
 	init();
-
 }());
