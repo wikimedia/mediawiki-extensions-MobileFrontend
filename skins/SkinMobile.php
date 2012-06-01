@@ -242,6 +242,11 @@ class SkinMobile extends SkinMobileBase {
 		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['supported_languages'] ) ) {
 			$supportedLanguages = $this->hookOptions['supported_languages'];
 		}
+		$languageUrls = $this->getLanguageUrls();
+		if ( count( $languageUrls ) <= 1 ) {
+			wfProfileOut( __METHOD__ );
+			return '';
+		}
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
 
@@ -249,7 +254,7 @@ class SkinMobile extends SkinMobileBase {
 			Html::openElement( 'select' ) :
 			Html::openElement( 'select',
 				array( 'id' => 'languageselection' ) );
-		foreach ( $this->getLanguageUrls() as $languageUrl ) {
+		foreach ( $languageUrls as $languageUrl ) {
 			$languageUrlHref = $languageUrl['href'];
 			$languageUrlLanguage = $languageUrl['language'];
 			if ( is_array( $supportedLanguages ) && in_array( $languageUrl['lang'], $supportedLanguages ) ) {
@@ -271,6 +276,12 @@ class SkinMobile extends SkinMobileBase {
 			}
 		}
 		$output .= Html::closeElement( 'select' );
+		$output = <<<HTML
+	<div id="mw-mf-language-selection">
+		{$this->msg( 'mobile-frontend-language' )->escaped()}<br/>
+		{$output}
+	</div>
+HTML;
 		wfProfileOut( __METHOD__ );
 		return $output;
 	}
@@ -562,7 +573,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php if ( !$this->data['hideLogo'] ) { ?>
 		<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 			<div class='nav' id='nav'>
-			<b><?php $this->msg( 'mobile-frontend-language' ) ?></b><br/><?php $this->html( 'languageSelection' ) ?><br/>
+			<?php $this->html( 'languageSelection' ) ?><br/>
 			<a href="<?php $this->text( 'mainPageUrl' ) ?>" id="homeButton" class="button"><?php $this->msg( 'mobile-frontend-home-button' ) ?></a>
 			<a href="<?php $this->text( 'randomPageUrl' ) ?>" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a>
 			</div>
@@ -580,10 +591,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 		?>
 	<?php if ( $this->data['isBetaGroupMember'] ) { ?>
-	<div id="mw-mf-language-selection">
-		<?php $this->msg( 'mobile-frontend-language' ) ?><br/>
-		<?php $this->html( 'languageSelection' ) ?>
-	</div>
+	<?php $this->html( 'languageSelection' ) ?>
 	<?php } ?>
 	<div id="results"></div>
 	<?php
