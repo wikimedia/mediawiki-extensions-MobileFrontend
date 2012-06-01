@@ -29,6 +29,16 @@ class MFCompatCheck {
 	}
 
 	/**
+	 * Check to see if wfIsConfiguredProxy() is available
+	 * Available in 1.20alpha as of 05e5a819
+	 * @return Bool
+	 */
+	public static function checkWfIsConfiguredProxy() {
+		global $wgVersion;
+		return version_compare( $wgVersion, '1.20alpha' , '>=' );
+	}
+
+	/**
 	 * Check to see if HTMLForm has been updated in core to support multiple
 	 * display formats.
 	 * @return Bool

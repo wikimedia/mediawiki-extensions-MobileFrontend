@@ -284,6 +284,7 @@ class ExtMobileFrontend extends ContextSource {
 
 		$this->disableCaching();
 		$this->sendXDeviceVaryHeader();
+		$this->sendApplicationVersionVaryHeader();
 
 		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
 			$this->wsLoginToken = $request->getSessionData( 'wsLoginToken' );
@@ -349,6 +350,7 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		/**
+		 * Compatibility with potentially new function wfIsConfiguredProxy()
 		 * wfIsConfiguredProxy() checks an IP against the list of configured
 		 * Squid servers and currently only exists in trunk.
 		 * wfIsTrustedProxy() does the same, but also exposes a hook that is
@@ -356,8 +358,9 @@ class ExtMobileFrontend extends ContextSource {
 		 * against a list of approved open proxies, which we don't actually
 		 * care about.
 		 */
-		if ( wfIsConfiguredProxy( $ip ) ) {
-			$request = $this->getRequest();
+		$trustedProxyCheckFunction = ( MFCompatCheck::checkWfIsConfiguredProxy() ) ? 'wfIsConfiguredProxy' : 'wfIsTrustedProxy';
+		$request = $this->getRequest();
+		if ( $trustedProxyCheckFunction( $ip ) ) {
 			$request->response()->header( 'Cache-Control: no-cache, must-revalidate' );
 			$request->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
 			$request->response()->header( 'Pragma: no-cache' );
@@ -378,6 +381,28 @@ class ExtMobileFrontend extends ContextSource {
 		$out->addVaryHeader( 'Cookie' );
 		$out->addVaryHeader( 'X-Carrier' );
 		$out->addVaryHeader( 'X-Images' );
+		wfProfileOut( __METHOD__ );
+		return true;
+	}
+
+	/**
+	 * @todo: Kill when old screen-scraping apps extinct
+	 * @return bool
+	 */
+	private function sendApplicationVersionVaryHeader() {
+		wfProfileIn( __METHOD__ );
+		$this->getOutput()->addVaryHeader( 'Application_Version' );
+		if ( isset( $_SERVER['HTTP_APPLICATION_VERSION'] ) ) {
+			$this->getRequest()->response()->header( 'Application_Version: ' . $_SERVER['HTTP_APPLICATION_VERSION'] );
+		} else {
+			$xDevice = MobileContext::singleton()->getXDevice();
+			if ( $xDevice !== '' ) {
+				if ( stripos( $xDevice, 'iphone' ) !== false ||
+					stripos( $xDevice, 'android' ) !== false ) {
+					$this->getRequest()->response()->header( "Application_Version: {$xDevice}" );
+				}
+			}
+		}
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
