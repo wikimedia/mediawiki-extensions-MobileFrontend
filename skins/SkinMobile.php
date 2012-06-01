@@ -28,6 +28,10 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
+		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) );
+		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
+			$wgMFCustomLogos['copyright'] :
+			"{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png";
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device['supports_jquery'] );
@@ -468,7 +472,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function prepareData() {
-		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo;
+		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgLang;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
@@ -490,7 +494,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				'contents-heading' => wfMsg( 'mobile-frontend-page-menu-contents-heading' ),
 				'language-heading' => wfMsg( 'mobile-frontend-page-menu-language-heading' ),
 				'mobile-frontend-close-section' => wfMsg( 'mobile-frontend-close-section' ),
-				'mobile-frontend-language-header' => wfMsg( 'mobile-frontend-language-header' ),
+				'mobile-frontend-language-header' => wfMessage( 'mobile-frontend-language-header',
+					$wgLang->formatNum( $this->data['languageCount'] ) )->text(),
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
