@@ -307,6 +307,7 @@ class DeviceDetection {
 	 * @return string
 	 */
 	public function detectFormatName( $userAgent, $acceptHeader = '' ) {
+		// see https://gerrit.wikimedia.org/r/gitweb?p=operations/puppet.git;a=blob;f=templates/varnish/mobile-frontend.inc.vcl.erb;h=051c33cd8d319e6dfdc53a82bc0c7ca8f0b6ad9d;hb=e253f4dd5fd96de040e4bd28d9be6cb45d6396fd for varnish configuration
 		$formatName = '';
 
 		if ( preg_match( '/Android/', $userAgent ) ) {
@@ -348,10 +349,8 @@ class DeviceDetection {
 				$formatName = 'wii';
 			} elseif ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$formatName = 'operamini';
-			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
-				$formatName = 'iphone';
 			} else {
-				$formatName = 'webkit';
+				$formatName = 'operamobile';
 			}
 		} elseif ( preg_match( '/Kindle\/1.0/', $userAgent ) ) {
 			$formatName = 'kindle';
