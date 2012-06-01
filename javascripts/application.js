@@ -23,7 +23,11 @@ MobileFrontend = (function() {
 			if( typeof minScore === 'undefined' || getBrowserScore() > minScore ) {
 				module = MobileFrontend[ module[ 0 ] ];
 				if( module && module.init ) {
-					module.init();
+					try {
+						module.init();
+					} catch( e ) {
+						// module failed to load for some reason
+					}
 				}
 			}
 		}
