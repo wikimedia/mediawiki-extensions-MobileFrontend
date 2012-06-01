@@ -34,12 +34,7 @@ class ExtMobileFrontend extends ContextSource {
 	public function requestContextCreateSkin( $context, &$skin ) {
 		// check whether or not the user has requested to toggle their view
 		$context = MobileContext::singleton();
-		$mobileAction = $context->getMobileAction();
-		if ( $mobileAction == 'toggle_view_desktop' ) {
-			$this->toggleView( 'desktop' );
-		} elseif ( $mobileAction == 'toggle_view_mobile' ) {
-			$this->toggleView( 'mobile' );
-		}
+		$context->checkToggleView();
 
 		if ( !$context->shouldDisplayMobileView() ) {
 			return true;
@@ -200,29 +195,6 @@ class ExtMobileFrontend extends ContextSource {
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
-	}
-
-	/**
-	 * @param $url string
-	 * @param $field string
-	 * @return string
-	 */
-	private function removeQueryStringParameter( $url, $field ) {
-		wfProfileIn( __METHOD__ );
-		static $coreSupport;
-		if ( !isset( $coreSupport ) ) {
-			$coreSupport = MFCompatCheck::checkRemoveQueryString();
-		}
-
-		if ( $coreSupport ) {
-			$queryString = $this->getRequest()->removeQueryValue( $field );
-			$url = $this->getTitle()->getFullUrl( $queryString );
-		} else {
-			$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
-			$url = substr( $url, 0, -1 );
-		}
-		wfProfileOut( __METHOD__ );
-		return $url;
 	}
 
 	/**
@@ -616,55 +588,6 @@ class ExtMobileFrontend extends ContextSource {
 				'remoteExtPath' => 'MobileFrontend',
 		);
 		return true;
-	}
-
-	/**
-	 * Toggles view to one specified by the user
-	 *
-	 * If a user has requested a particular view (eg clicked 'Desktop' from
-	 * a mobile page), set the requested view for this particular request
-	 * and set a cookie to keep them on that view for subsequent requests.
-	 */
-	public function toggleView( $view, $temporary = false ) {
-		global $wgMobileUrlTemplate;
-
-		$context = MobileContext::singleton();
-		if ( $view == 'mobile' ) {
-			// unset stopMobileRedirect cookie
-			if ( !$temporary ) $context->unsetStopMobileRedirectCookie();
-
-			// if no mobileurl template, set mobile cookie
-			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				if ( !$temporary ) $context->setUseFormatCookie();
-				$context->setUseFormat( $view );
-			} else {
-				// else redirect to mobile domain
-				$currentUrl = wfExpandUrl( $this->getRequest()->getRequestURL() );
-				$currentUrl = $this->removeQueryStringParameter( $currentUrl, 'mobileaction' );
-				$mobileUrl = $context->getMobileUrl( $currentUrl );
-				$this->getOutput()->redirect( $mobileUrl, 301 );
-			}
-		} elseif ( $view == 'desktop' ) {
-			// set stopMobileRedirect cookie
-			if ( !$temporary ) {
-				$context->setStopMobileRedirectCookie();
-				// unset useformat cookie
-				if ( $context->getUseFormatCookie() == "true" ) {
-					$context->unsetUseFormatCookie();
-				}
-			}
-
-			// if no mobileurl template, unset useformat cookie
-			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				$context->setUseFormat( $view );
-			} else {
-				// if mobileurl template, redirect to desktop domain
-				$currentUrl = wfExpandUrl( $this->getRequest()->getRequestURL() );
-				$currentUrl = $this->removeQueryStringParameter( $currentUrl, 'mobileaction' );
-				$desktopUrl = $context->getDesktopUrl( $currentUrl );
-				$this->getOutput()->redirect( $desktopUrl, 301 );
-			}
-		}
 	}
 
 	/**
