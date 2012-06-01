@@ -313,6 +313,8 @@ class DeviceDetection {
 			$formatName = 'android';
 			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$formatName = 'operamini';
+			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
+				$formatName = 'operamobile';
 			}
 		} elseif ( preg_match( '/MSIE 9.0/', $userAgent ) ||
 				preg_match( '/MSIE 8.0/', $userAgent ) ) {
