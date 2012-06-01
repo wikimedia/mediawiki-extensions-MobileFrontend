@@ -607,6 +607,7 @@ class ExtMobileFrontend extends ContextSource {
 				'tests/js/test_application.js',
 				'javascripts/mf-navigation-legacy.js', 'tests/js/test_mf-navigation-legacy.js',
 				'javascripts/beta_opensearch.js', 'tests/js/test_beta_opensearch.js',
+				'javascripts/settings.js', 'tests/js/test_settings.js',
 				'javascripts/banner.js', 'tests/js/test_banner.js',
 				'javascripts/toggle.js', 'tests/js/test_toggle.js',
 				'javascripts/references.js', 'tests/js/test_references.js' ),
