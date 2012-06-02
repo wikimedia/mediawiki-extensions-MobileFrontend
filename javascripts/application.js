@@ -43,37 +43,6 @@ mw.mobileFrontend = (function() {
 			contentEl.innerHTML = message( 'empty-homepage' );
 		}
 
-		function desktopViewClick() {
-			// get mf_mobileFormat cookie info
-			var formatCookieName = mw.mobileFrontend.setting( 'useFormatCookieName' ),
-				formatCookieDuration = mw.mobileFrontend.setting( 'useFormatCookieDuration' ),
-				cookiePath = mw.mobileFrontend.setting( 'useFormatCookiePath' ),
-				formatCookieDomain = mw.mobileFrontend.setting( 'useFormatCookieDomain' ),
-				stopMobileRedirectCookieName, stopMobileRedirectCookieDuration, stopMobileRedirectCookieDomain,
-				hookOptions;
-
-			// convert from seconds to days
-			formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
-
-			// expire the mf_mobileFormat cookie
-			mw.mobileFrontend.settings.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
-
-			// get stopMobileRedirect cookie info
-			stopMobileRedirectCookieName = mw.mobileFrontend.setting( 'stopMobileRedirectCookieName' );
-			stopMobileRedirectCookieDuration = mw.mobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
-			stopMobileRedirectCookieDomain = mw.mobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
-			hookOptions = mw.mobileFrontend.setting( 'hookOptions' );
-
-			// convert from seconds to days
-			stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
-
-			if ( hookOptions !== 'toggle_view_desktop' ) {
-				// set the stopMobileRedirect cookie
-				mw.mobileFrontend.settings.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
-			}
-		}
-		utilities( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
-
 		// when rotating to landscape stop page zooming on ios
 		// allow disabling of transitions in android ics 4.0.2
 		function fixBrowserBugs() {

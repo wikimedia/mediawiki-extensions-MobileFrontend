@@ -117,6 +117,34 @@ MobileFrontend.settings = (function() {
 		}
 	}
 
+	function desktopViewClick() {
+		// get mf_mobileFormat cookie info
+		var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' ),
+			formatCookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' ),
+			cookiePath = MobileFrontend.setting( 'useFormatCookiePath' ),
+			formatCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' ),
+			stopMobileRedirectCookieName, stopMobileRedirectCookieDuration, stopMobileRedirectCookieDomain,
+			hookOptions;
+
+		// convert from seconds to days
+		formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
+		// expire the mf_mobileFormat cookie
+		MobileFrontend.settings.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
+
+		// get stopMobileRedirect cookie info
+		stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
+		stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
+		stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
+		hookOptions = MobileFrontend.setting( 'hookOptions' );
+		// convert from seconds to days
+		stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
+
+		if ( hookOptions !== 'toggle_view_desktop' ) {
+			// set the stopMobileRedirect cookie
+			MobileFrontend.settings.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
+		}
+	}
+
 	function init() {
 		var mobileToken = readMobileToken(), imagetoggle, apiUrl = '/api.php',
 			url;
@@ -134,6 +162,7 @@ MobileFrontend.settings = (function() {
 			imagetoggle.setAttribute( 'href', addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
 		}
 		enhanceCheckboxes();
+		u( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 	}
 	init();
 	return {
