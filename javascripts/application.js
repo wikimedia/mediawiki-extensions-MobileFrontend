@@ -72,7 +72,7 @@ MobileFrontend = (function() {
 				MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
 			}
 		}
-		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );
+		utilities( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 
 		// when rotating to landscape stop page zooming on ios
 		// allow disabling of transitions in android ics 4.0.2

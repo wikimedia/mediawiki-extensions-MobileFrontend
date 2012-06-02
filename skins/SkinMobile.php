@@ -617,7 +617,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	<div class="content_block" id="content_footer">
 		<ul class="settings">
 			<li>
-				<span class="left separator"><a href="<?php $this->text( 'viewNormalSiteURL' ) ?>"><?php
+				<span class="left separator"><a id="mw-mf-display-toggle" href="<?php $this->text( 'viewNormalSiteURL' ) ?>"><?php
 					$this->msg( 'mobile-frontend-view-desktop' ) ?></a></span><span class="right"><?php
 				$this->msg( 'mobile-frontend-view-mobile' ) ?></span>
 			</li>
