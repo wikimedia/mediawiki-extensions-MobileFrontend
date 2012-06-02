@@ -389,6 +389,9 @@ class SkinMobileTemplate extends BaseTemplate {
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
 		<?php $this->html( 'touchIcon' ) ?>
 		<script type="text/javascript">
+			if( typeof mw === 'undefined' ) {
+				mw = {};
+			}
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
 			<?php $this->html( 'preambleScript' ) ?>
 		</script>
@@ -420,7 +423,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'bottomScripts' ) ?>
 	<script type='text/javascript'>
 	window.onload = function() {
-		MobileFrontend.init();
+		mw.mobileFrontend.init();
 	};
 	</script>
 	<!--><![endif]-->

@@ -1,6 +1,6 @@
-/*global document, window */
+/*global document, window, mw */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-MobileFrontend = (function() {
+mw.mobileFrontend = (function() {
 	var utilities, modules = [], browserScore = 2000;
 
 	function getBrowserScore() {
@@ -21,7 +21,7 @@ MobileFrontend = (function() {
 			module = modules[ i ];
 			minScore = module[ 1 ];
 			if( typeof minScore === 'undefined' || getBrowserScore() > minScore ) {
-				module = MobileFrontend[ module[ 0 ] ];
+				module = mw.mobileFrontend[ module[ 0 ] ];
 				if( module && module.init ) {
 					try {
 						module.init();
@@ -45,10 +45,10 @@ MobileFrontend = (function() {
 
 		function desktopViewClick() {
 			// get mf_mobileFormat cookie info
-			var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' ),
-				formatCookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' ),
-				cookiePath = MobileFrontend.setting( 'useFormatCookiePath' ),
-				formatCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' ),
+			var formatCookieName = mw.mobileFrontend.setting( 'useFormatCookieName' ),
+				formatCookieDuration = mw.mobileFrontend.setting( 'useFormatCookieDuration' ),
+				cookiePath = mw.mobileFrontend.setting( 'useFormatCookiePath' ),
+				formatCookieDomain = mw.mobileFrontend.setting( 'useFormatCookieDomain' ),
 				stopMobileRedirectCookieName, stopMobileRedirectCookieDuration, stopMobileRedirectCookieDomain,
 				hookOptions;
 
@@ -56,20 +56,20 @@ MobileFrontend = (function() {
 			formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
 
 			// expire the mf_mobileFormat cookie
-			MobileFrontend.banner.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
+			mw.mobileFrontend.settings.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
 
 			// get stopMobileRedirect cookie info
-			stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
-			stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
-			stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
-			hookOptions = MobileFrontend.setting( 'hookOptions' );
+			stopMobileRedirectCookieName = mw.mobileFrontend.setting( 'stopMobileRedirectCookieName' );
+			stopMobileRedirectCookieDuration = mw.mobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
+			stopMobileRedirectCookieDomain = mw.mobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
+			hookOptions = mw.mobileFrontend.setting( 'hookOptions' );
 
 			// convert from seconds to days
 			stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
 
 			if ( hookOptions !== 'toggle_view_desktop' ) {
 				// set the stopMobileRedirect cookie
-				MobileFrontend.banner.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
+				mw.mobileFrontend.settings.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
 			}
 		}
 		utilities( document.getElementById( 'mf-display-toggle' ) ).bind( 'click', desktopViewClick );

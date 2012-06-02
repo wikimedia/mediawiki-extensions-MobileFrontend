@@ -19,4 +19,4 @@ test("logoClick", function() {
 	strictEqual(visible2, true, "toggle");
 	strictEqual(visible3, false, "toggle");
 });
-}(jQuery, MobileFrontend, MobileFrontendTests));
+}(jQuery, mw.mobileFrontend, MobileFrontendTests));

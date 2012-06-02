@@ -1,5 +1,6 @@
-/*global document, window, MobileFrontend, navigator, placeholder */
+/*global document, window, mw, navigator, placeholder */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+(function( MobileFrontend ) {
 MobileFrontend.navigation = (function() {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message;
@@ -147,3 +148,4 @@ MobileFrontend.navigation = (function() {
 		init();
 	}
 }());
+})( mw.mobileFrontend );

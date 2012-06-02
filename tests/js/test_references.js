@@ -1,4 +1,4 @@
-(function() {
+(function( MobileFrontend ) {
 var _slideUp, runSlide = false;
 module("MobileFrontend references.js", {
 	setup: function() {
@@ -26,4 +26,4 @@ test("Bug 36192", function() {
 	$("body").trigger("click");
 	strictEqual(runSlide, false, "slide animation was not run as references hidden");
 });
-})();
+})( mw.mobileFrontend );

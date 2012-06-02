@@ -67,4 +67,4 @@ test("history.replaceHash", function() {
 	strictEqual(window.location.hash, "#hash3", "the hash was set for the first time");
 });
 
-}(jQuery, MobileFrontend, MobileFrontendTests));
+}(jQuery, mw.mobileFrontend, MobileFrontendTests));

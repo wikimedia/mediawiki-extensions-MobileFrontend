@@ -1,3 +1,4 @@
+(function( MobileFrontend ) {
 MobileFrontend.navigationLegacy = (function() {
 	function init() {
 		var languageSelection = document.getElementById( 'languageselection' ),
@@ -25,3 +26,4 @@ MobileFrontend.navigationLegacy = (function() {
 		init: init
 	}
 }());
+})( mw.mobileFrontend );

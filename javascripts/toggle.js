@@ -1,5 +1,6 @@
-/*global MobileFrontend, document, window */
+/*global mw, document, window */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+(function( MobileFrontend ) {
 MobileFrontend.toggle = (function() {
 	var u = MobileFrontend.utils,
 		message = MobileFrontend.message,
@@ -129,3 +130,4 @@ MobileFrontend.toggle = (function() {
 	};
 
 }());
+})( mw.mobileFrontend );

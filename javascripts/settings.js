@@ -1,5 +1,6 @@
 /*global document, window, MobileFrontend */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+(function( MobileFrontend ) {
 MobileFrontend.settings = (function() {
 	var u = MobileFrontend.utils,
 		mobileTokenCookieName = 'mobiletoken';
@@ -141,3 +142,4 @@ MobileFrontend.settings = (function() {
 		writeCookie: writeCookie,
 	}
 }());
+})( mw.mobileFrontend );

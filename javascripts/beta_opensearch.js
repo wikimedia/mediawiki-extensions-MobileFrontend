@@ -1,5 +1,6 @@
-/*global document, window, MobileFrontend, navigator, placeholder */
+/*global document, window, mw, navigator, placeholder */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+(function( MobileFrontend ) {
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term, mfePrefix = MobileFrontend.prefix,
@@ -239,3 +240,4 @@ MobileFrontend.opensearch = (function() {
 	};
 
 }());
+})( mw.mobileFrontend );

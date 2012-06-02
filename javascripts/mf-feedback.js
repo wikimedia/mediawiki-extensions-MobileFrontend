@@ -1,4 +1,4 @@
-/*global document, window, MobileFrontend, navigator, placeholder */
+/*global document, window, mw, navigator, placeholder */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 MobileFrontend.feedback = (function() {
 	var u = MobileFrontend.utils,

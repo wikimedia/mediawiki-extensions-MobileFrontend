@@ -1,5 +1,6 @@
-/*global document, window, MobileFrontend*/
+/*global document, window, mw */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+(function( MobileFrontend ) {
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
 		var calculatePosition = function() {}, wasVisible;
@@ -163,3 +164,4 @@ if( typeof jQuery !== 'undefined' ) {
 		};
 	}(jQuery));
 }
+})( mw.mobileFrontend );

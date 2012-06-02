@@ -74,4 +74,4 @@ test("close a section", function() {
 	strictEqual(endVisibility, false, "clicking has hidden section content");
 });
 
-}(jQuery, MobileFrontend, MobileFrontendTests));
+}(jQuery, mw.mobileFrontend, MobileFrontendTests));

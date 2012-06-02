@@ -1,3 +1,4 @@
+(function( MobileFrontend ) {
 MobileFrontend.banner = (function() {
 	function init() {
 		var dismissNotification, cookieNameZeroVisibility, zeroRatedBanner,
@@ -29,3 +30,4 @@ MobileFrontend.banner = (function() {
 		init: init
 	}
 })();
+})( mw.mobileFrontend );
