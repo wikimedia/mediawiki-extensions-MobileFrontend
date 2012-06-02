@@ -28,9 +28,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
-		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
-			$wgMFCustomLogos['copyright'] :
-			"{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png";
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device['supports_jquery'] );
@@ -141,9 +138,9 @@ class SkinMobile extends SkinMobileBase {
 		}
 		$tpl->set( 'imagesToggle', $this->msg( 'mobile-frontend-toggle-images' )->rawParams( $on, $off )->escaped() );
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
-		if ( $wgLanguageCode === 'en' ) { //@fixme: de-WMFize
+		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
 			$license = Html::element( 'img', array(
-				'src' => $copyrightLogo,
+				'src' => $wgMFCustomLogos['copyright'],
 				'class' => 'license',
 				'alt' => "{$footerSitename} ®"
 			) );
