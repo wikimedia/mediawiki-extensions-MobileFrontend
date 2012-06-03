@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALn//79I\u003d",
+        "filename": "javascripts/mf-feedback.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-06-03T01:32:43Z",
+      "side": 0,
+      "message": "This one needs aliasing as well I suppose? Assuming the MobileFrontend global really does no longer exist.",
+      "revId": "e03ba026b9901acd445b955cb2902e65d15f7ad3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
