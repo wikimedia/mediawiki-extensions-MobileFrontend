@@ -468,6 +468,7 @@ $messages['as'] = array(
 	'mobile-frontend-home-button' => 'বেটুপাত',
 	'mobile-frontend-logged-out' => 'প্ৰৱেশ কৰা নাই',
 	'mobile-frontend-logged-in' => '$1 নামেৰে প্ৰৱেশ কৰিলে',
+	'mobile-frontend-settings-description' => "এই মোবাইল ছেটিংসমূহৰ সৈতে আপোনাৰ মোবাইলৰ অভিজ্ঞতা কাষ্ট'মাইজ কৰক।",
 	'mobile-frontend-settings-beta' => 'বিটা',
 	'mobile-frontend-save-settings' => 'ছেটিংসমূহ সাঁচক',
 	'mobile-frontend-random-button' => 'যিকোনো',
@@ -526,6 +527,7 @@ $messages['as'] = array(
 	'mobile-frontend-login' => 'প্ৰৱেশ',
 	'mobile-frontend-logout' => 'প্ৰস্থান',
 	'mobile-frontend-placeholder' => 'আপোনাৰ সন্ধান বিষয় ইয়াত লিখক...',
+	'mobile-frontend-dismiss-notification' => 'এই জাননী বাতিল কৰক',
 	'mobile-frontend-clear-search' => 'পৰিস্কাৰ',
 	'mobile-frontend-privacy-link-text' => 'গোপনীয়তা',
 	'mobile-frontend-about-link-text' => 'পৰিচিতি',
@@ -971,7 +973,7 @@ $messages['bn'] = array(
 	'mobile-frontend-page-menu-contents-heading' => 'বিষয়বস্তু',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  * @author Y-M D
  */
@@ -1009,6 +1011,8 @@ $messages['br'] = array(
 	'mobile-frontend-toggle-images' => 'Skeudennoù $1 / $2',
 	'mobile-frontend-off' => 'LAZHET',
 	'mobile-frontend-on' => 'ENAOUET',
+	'mobile-frontend-footer-contributors' => 'Pennad kensavet gantr <a href="$1"> implijer</a> eveldout',
+	'mobile-frontend-footer-article-edit-info' => "Kemmet da ziwezhañ d'an $1",
 	'mobile-frontend-news-items' => "Er C'heleier",
 	'mobile-frontend-leave-feedback-title' => "Kasit titouroù deomp diwar-benn ar pezh a soñjit eus al lec'hienn war an hezoug",
 	'mobile-frontend-leave-feedback-notice' => "Ma roit ho soñj deomp e vimp sikouret da wellaat ar mod da embreger al lec'hienn hezoug evidoc'h. Embannet e vo ent emgefre (gant hoc'h anv implijer, stumm ho merdeer hag ho reizhiad korvoiñ) war ar bajenn&\$1quot;. Trugarez d'ober gant un titl splann, evel da sk. \"Kudennoù furmadiñ gant an taolennoù bras\". Graet e vo gant ho soñj diouzh hor reolennoù implijout.",
@@ -1019,13 +1023,17 @@ $messages['br'] = array(
 	'mobile-frontend-leave-feedback' => 'Reiñ e soñj war an Talbenn Hezoug',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Kudenn deknikel',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Hollek',
+	'mobile-frontend-leave-feedback-email-body' => "Merkit ho chomlec'h postel a-us d'al linenn-mañ",
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Kudenn deknikel',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Danvez ar gemennadenn',
 	'mobile-frontend-leave-feedback-page-title' => "Kasit titouroù deomp diwar-benn ar pezh a soñjit eus al lec'hienn war an hezoug",
 	'mobile-frontend-leave-feedback-special-title' => 'Mont e darempred ganeomp',
 	'mobile-frontend-feedback-no-subject' => '(danvez ebet)',
+	'mobile-frontend-feedback-no-subject-field' => 'Skrivit anv un danvez bennak',
 	'mobile-frontend-feedback-no-message' => 'Merkit ur gemennadenn amañ',
 	'mobile-frontend-leave-feedback-thanks' => 'Trugarez da vezañ roet ho soñj.',
 	'mobile-frontend-language' => 'Yezh :',
+	'mobile-frontend-language-header' => 'Skrivet eo ar pennad-mañ e $1 yezh',
 	'mobile-frontend-username' => 'Anv implijer :',
 	'mobile-frontend-password' => 'Ger-tremen :',
 	'mobile-frontend-login' => 'Kevreañ',
@@ -1041,7 +1049,13 @@ $messages['br'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Doareoù Implijout</a>',
 	'mobile-frontend-footer-contact' => 'Darempred',
 	'mobile-frontend-unknown-option' => 'Dibarzh "$1" dianav.',
+	'mobile-frontend-main-menu-featured' => 'War wel',
 	'mobile-frontend-main-menu-nearby' => 'Nepell',
+	'mobile-frontend-main-menu-settings' => 'Arventennoù',
+	'mobile-frontend-main-menu-contact' => 'Darempred',
+	'mobile-frontend-page-menu-contents' => 'Danvez',
+	'mobile-frontend-page-menu-language' => 'yezh',
+	'mobile-frontend-page-menu-language-heading' => 'Lenn ar pennad-mañ e',
 );
 
 /** Bosnian (Bosanski)
@@ -1186,7 +1200,7 @@ $messages['co'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Messaghju',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Jezevec
  * @author Mormegil
  * @author Reaperman
@@ -1315,7 +1329,7 @@ $messages['cy'] = array(
 	'mobile-frontend-privacy-link-text' => 'Preifatrwydd',
 );
 
-/** Danish (Dansk)
+/** Danish (dansk)
  * @author Lokal Profil
  * @author Peter Alberti
  * @author Tjernobyl
@@ -1516,6 +1530,10 @@ $messages['diq'] = array(
 	'mobile-frontend-search-submit' => 'Şo',
 	'mobile-frontend-featured-article' => 'Wesiqey Ewroy',
 	'mobile-frontend-home-button' => 'Keye',
+	'mobile-frontend-logged-out' => 'Tı çı nêkewtê',
+	'mobile-frontend-logged-in' => 'Dekewê $1',
+	'mobile-frontend-settings-beta' => 'Beta',
+	'mobile-frontend-save-settings' => 'Saza star ke',
 	'mobile-frontend-random-button' => 'Pelaya ke raştamê',
 	'mobile-frontend-back-to-top-of-section' => 'Yew cay ser çek',
 	'mobile-frontend-show-button' => 'Bımocne',
@@ -1535,12 +1553,14 @@ $messages['diq'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'E',
 	'mobile-frontend-opt-out-no-button' => 'Nê',
 	'mobile-frontend-opt-out-explain' => 'Şıma qayıle ke mobile beta hewade se, şıma bızane ke bıbo zeyde verqayte klasik mobili.',
+	'mobile-frontend-images-status' => 'Resımi',
 	'mobile-frontend-disable-images' => 'Mobile site ra resıman  racne',
 	'mobile-frontend-enable-images' => 'Mobile site ra resıman aktiv kere',
 	'mobile-frontend-toggle-images' => 'Resımi $1 / $2',
 	'mobile-frontend-off' => 'RACNE',
 	'mobile-frontend-on' => 'AKE',
 	'mobile-frontend-footer-contributors' => 'ena wesiqe weştê  <a href="$1">İştırakkari</a> şi',
+	'mobile-frontend-footer-article-edit-info' => 'Vurnayışê peyênê $1',
 	'mobile-frontend-news-items' => 'Xeberi',
 	'mobile-frontend-leave-feedback-title' => 'Mobil site ra peyd rıştış',
 	'mobile-frontend-leave-feedback-notice' => 'Peyd rıştışe şıma mare tewr zaf rındi.ena pela do &quot;$1&quot;.  (name de karberi ra, wastekar...) tepya şari re erz bo. Şıma ra reca vatışe xo xet da "eni tabloy formule keri" sera mare fına peyd bırşe u bewni re şarte karkerdışi.',
@@ -1553,6 +1573,7 @@ $messages['diq'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknik xeta',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Seran',
 	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Wesiqe peyd rıştış',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'Teknik xeta',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Seran peyd rıştış',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Heqa mı zi, ez merduma yana ez yew şirketa',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Mı het ke xetaya fabrikasyona',
@@ -1570,6 +1591,7 @@ $messages['diq'] = array(
 	'mobile-frontend-username' => 'Namey karberi:',
 	'mobile-frontend-password' => 'Parola:',
 	'mobile-frontend-login' => 'Ronıştış ak',
+	'mobile-frontend-logout' => 'Bıvciyê',
 	'mobile-frontend-placeholder' => 'Babeta cı geyrayışte şıma...',
 	'mobile-frontend-dismiss-notification' => 'Eno xeberdayışê wezifayo',
 	'mobile-frontend-clear-search' => 'Bestern',
@@ -1582,6 +1604,15 @@ $messages['diq'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Şertê karkerdışi</a>',
 	'mobile-frontend-footer-contact' => 'İrtibat',
 	'mobile-frontend-unknown-option' => 'Weçineya "$1"\'i ne şınasiya.',
+	'mobile-frontend-main-menu-featured' => 'Xasiyey',
+	'mobile-frontend-main-menu-nearby' => 'Nezdıra',
+	'mobile-frontend-main-menu-settings' => 'Sazi',
+	'mobile-frontend-main-menu-settings-heading' => 'Sazê mobil sita',
+	'mobile-frontend-main-menu-contact' => 'İrtibat',
+	'mobile-frontend-page-menu-contents' => 'miyandene',
+	'mobile-frontend-page-menu-language' => 'Zıwan',
+	'mobile-frontend-page-menu-contents-heading' => 'miyandene',
+	'mobile-frontend-page-menu-language-heading' => 'Enê wesiqi bıwanê',
 );
 
 /** Lower Sorbian (Dolnoserbski)
@@ -1794,7 +1825,7 @@ $messages['eo'] = array(
 	'mobile-frontend-placeholder' => 'Entajpu serĉon ĉi tie...',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Armando-Martin
  * @author Crazymadlover
  * @author Fitoschido
@@ -1899,7 +1930,7 @@ $messages['es'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Lee este artículo en',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Pikne
  */
 $messages['et'] = array(
@@ -2133,7 +2164,7 @@ $messages['fo'] = array(
 	'mobile-frontend-login' => 'Rita inn',
 );
 
-/** French (Français)
+/** French (français)
  * @author Crochet.david
  * @author DavidL
  * @author Gomoko
@@ -2531,8 +2562,13 @@ $messages['gsw'] = array(
 	'mobile-frontend-search-submit' => 'Gang',
 	'mobile-frontend-featured-article' => 'Artikel vum Tag',
 	'mobile-frontend-home-button' => 'Start',
+	'mobile-frontend-logged-out' => 'Nit aagmäldet',
+	'mobile-frontend-logged-in' => 'Aagmäldet als $1',
+	'mobile-frontend-settings-beta' => 'Beta',
+	'mobile-frontend-save-settings' => 'Yystellige spychere',
 	'mobile-frontend-random-button' => 'Zuefall',
 	'mobile-frontend-back-to-top-of-section' => 'Ei Abschnitt zruckgumpe',
+	'mobile-frontend-close-section' => 'De Abschnitt zuemache',
 	'mobile-frontend-show-button' => 'Zeige',
 	'mobile-frontend-hide-button' => 'Uusblände',
 	'mobile-frontend-empty-homepage' => 'Die Homepage mueß konfiguriert wäre. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Do wyterläse</a>',
@@ -2545,18 +2581,19 @@ $messages['gsw'] = array(
 	'mobile-frontend-opt-in-message' => 'Bim Beta-Test mitmache?',
 	'mobile-frontend-opt-in-yes-button' => 'Jo',
 	'mobile-frontend-opt-in-no-button' => 'Nei',
-	'mobile-frontend-opt-in-title' => 'Mitmache bi Tescht',
 	'mobile-frontend-opt-in-explain' => 'Wänn du bim Beta-Test mitmachsch, chunnsch Zuegriff uf experimentälli Funktione iber, wu aber au Probläm un Fähler chenne verursache.',
 	'mobile-frontend-opt-out-message' => 'Nimit bim Beta-Tescht mitmache?',
 	'mobile-frontend-opt-out-yes-button' => 'Jo',
 	'mobile-frontend-opt-out-no-button' => 'Nei',
-	'mobile-frontend-opt-out-title' => 'Ufhere mit em Beta-Tescht',
 	'mobile-frontend-opt-out-explain' => 'Wänn du nimi bim Beta-Tescht mitmachsch, no wäre di experimentälle Funktione deaktiviert un di klassische Funktione aktiviert.',
+	'mobile-frontend-images-status' => 'Bilder',
 	'mobile-frontend-disable-images' => 'Bilder in dr mobilen Aasicht deaktiviere',
 	'mobile-frontend-enable-images' => 'Bilder in dr mobilen Aasicht aktiviere',
 	'mobile-frontend-toggle-images' => 'Bilder $1 / $2',
 	'mobile-frontend-off' => 'UUS',
 	'mobile-frontend-on' => 'AA',
+	'mobile-frontend-footer-contributors' => 'Artikel vo <a href="$1">Lüt wo mitgmacht hen</a> wie dir',
+	'mobile-frontend-footer-article-edit-info' => 'Zum letschte Mool bearbeitet: $1',
 	'mobile-frontend-news-items' => 'In dr Nochrichte',
 	'mobile-frontend-leave-feedback-title' => 'Gib is bitte ne Ruckmäldig zue Dyne Erfahrige mit dr mobilen Aasicht',
 	'mobile-frontend-leave-feedback-notice' => 'Dyy Ruckmäldig hilft is derby, di mobil Aasicht wyter z verbessere. Si wird effetlig uf dr Syte &quot;$1&quot; aazeigt. Doderby wäre Dyy Benutzername, d Version vum Browser, wu Du brucht hesch, un s vu Dir brucht Betribssyschtem aagee. Bitte wehl e informativen un uussagechreftig Beträff, wie z. B. „Probläm bi dr Aazeig vu Tabälle“. Dyy Ruckmädig unterlyt doderby unsere Nutzigsbedingige.',
@@ -2565,15 +2602,29 @@ $messages['gsw'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Ruckmäldig ibertrage',
 	'mobile-frontend-leave-feedback-link-text' => 'Ruckmäldig zue dr mobilen Aasicht',
 	'mobile-frontend-leave-feedback' => 'Ruckmäldig gee',
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technischs Problem',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Allgmein',
+	'mobile-frontend-leave-feedback-article-feedback-seciton-header' => 'Ruggmäldig zum Artikel',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'Technischs Problem',
+	'mobile-frontend-leave-feedback-general-link-text' => 'Allgemeini Ruggmäldig',
+	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Zu eme sachliche Fääler',
+	'mobile-frontend-leave-feedback-article-other-link-text' => 'Zue eme andere Problem',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Beträff vo de Noochricht',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Gib doo dyni Noochricht yy',
 	'mobile-frontend-leave-feedback-page-title' => 'Gib is bitte ne Ruckmäldig zue Dyne Erfahrige mit dr mobilen Aasicht',
+	'mobile-frontend-leave-feedback-special-title' => 'Kontaktier üs',
 	'mobile-frontend-feedback-no-subject' => '(kei Beträff)',
+	'mobile-frontend-feedback-no-subject-field' => 'Bitte gib en Betreff yy',
 	'mobile-frontend-feedback-no-message' => 'Bitte gib Dyy Nochricht an däre Stell yy',
 	'mobile-frontend-feedback-edit-summary' => '$1 - automatisch gspychereti [[Special:MobileFeedback|Ruckmäldig]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Dankschen vilmol fir Dyy Ruckmäldig!',
+	'mobile-frontend-leave-feedback-post-error' => "S het bim Verarbeite vo dynrer Noochricht en Fääler gee. Bitte probier's spööter no emool.",
 	'mobile-frontend-language' => 'Sproch:',
+	'mobile-frontend-language-header' => 'De Artikel isch in {{PLURAL:$1|einere Sprooch|$1 Sprooche}} verfiegbar',
 	'mobile-frontend-username' => 'Benutzername:',
 	'mobile-frontend-password' => 'Passwort:',
 	'mobile-frontend-login' => 'Aamälde',
+	'mobile-frontend-logout' => 'Abmälde',
 	'mobile-frontend-placeholder' => 'Gib Dyy Suechi do yy ...',
 	'mobile-frontend-dismiss-notification' => 'die Benochrichtigung zuemache',
 	'mobile-frontend-clear-search' => 'Lääre',
@@ -2586,6 +2637,15 @@ $messages['gsw'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Nutzigsbedingige</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Nit bekannti Option „$1“.',
+	'mobile-frontend-main-menu-featured' => 'Bsundersch glunge',
+	'mobile-frontend-main-menu-nearby' => 'In de Nööchi',
+	'mobile-frontend-main-menu-settings' => 'Yystellige',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobilyystellige',
+	'mobile-frontend-main-menu-contact' => 'Kontakt',
+	'mobile-frontend-page-menu-contents' => 'Inhalt',
+	'mobile-frontend-page-menu-language' => 'Sprooch',
+	'mobile-frontend-page-menu-contents-heading' => 'Inhalt',
+	'mobile-frontend-page-menu-language-heading' => 'De Artikel läse uff',
 );
 
 /** Gujarati (ગુજરાતી)
@@ -3003,7 +3063,7 @@ $messages['hy'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Վերադառնալ մեկ բաժին առաջ',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -3262,7 +3322,7 @@ $messages['is'] = array(
 	'mobile-frontend-about-link-text' => 'Um',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Aushulz
  * @author Beta16
  * @author Nemo bis
@@ -4311,7 +4371,7 @@ $messages['mi'] = array(
 	'mobile-frontend-search-submit' => 'Haere',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -5432,7 +5492,7 @@ $messages['rm'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Trametter il resun',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author Firilacroco
  * @author Minisarm
  */
@@ -5591,7 +5651,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-footer-contact' => 'Condatte',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author AlexSm
  * @author Biathlon
  * @author Bouron
@@ -7131,6 +7191,13 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-footer-contact' => '聯繫',
 	'mobile-frontend-unknown-option' => '未認可的選項“$1”。',
 	'mobile-frontend-search-noresults' => '沒有文章標題匹配您的搜索。更改您的搜索，或按鍵盤搜索按鈕來全文搜索。',
+	'mobile-frontend-main-menu-featured' => '特色',
+	'mobile-frontend-main-menu-nearby' => '附近',
+	'mobile-frontend-main-menu-settings' => '設定',
+	'mobile-frontend-main-menu-contact' => '聯繫',
+	'mobile-frontend-page-menu-language' => '語言',
+	'mobile-frontend-page-menu-contents-heading' => '目錄',
+	'mobile-frontend-page-menu-language-heading' => '閱讀這篇文章',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
