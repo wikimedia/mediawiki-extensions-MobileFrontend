@@ -1,5 +1,5 @@
-/*global document, window, mw */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+/*global document, window, mw, navigator, mwMobileFrontendConfig, jQuery */
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true, sub:true */
 mw.mobileFrontend = (function() {
 	var utilities, modules = [], browserScore = 2000;
 
@@ -16,7 +16,7 @@ mw.mobileFrontend = (function() {
 	}
 
 	function initModules() {
-		var module, i;
+		var module, i, minScore;
 		for( i = 0; i < modules.length; i++ ) {
 			module = modules[ i ];
 			minScore = module[ 1 ];
@@ -166,7 +166,7 @@ mw.mobileFrontend = (function() {
 		}
 
 		function getChildText( el ) {
-			var child, value = '';
+			var child, value = '', i;
 			for ( i = 0; i < el.childNodes.length; i++ ) {
 				child = el.childNodes[i];
 				if ( child.nodeType !== 8 ) { // ignore comment node

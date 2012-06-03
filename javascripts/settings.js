@@ -1,4 +1,4 @@
-/*global document, window, MobileFrontend */
+/*global document, window, mw */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 (function( MobileFrontend ) {
 MobileFrontend.settings = (function() {
@@ -6,7 +6,7 @@ MobileFrontend.settings = (function() {
 		mobileTokenCookieName = 'mobiletoken';
 
 	function writeCookie( name, value, days, path, domain ) {
-		var date, expires;
+		var date, expires, cookie;
 		if ( days ) {
 			date = new Date();
 			date.setTime( date.getTime() + ( days * 24 * 60 * 60 *1000 ) );
@@ -19,7 +19,7 @@ MobileFrontend.settings = (function() {
 			path = "/";
 		}
 
-		var cookie = name + '=' + value + expires + '; path=' + path;
+		cookie = name + '=' + value + expires + '; path=' + path;
 
 		if ( typeof domain !== 'undefined' ) {
 			cookie = cookie + '; domain=' + domain;
@@ -139,7 +139,7 @@ MobileFrontend.settings = (function() {
 	return {
 		readCookie: readCookie,
 		removeCookie: removeCookie,
-		writeCookie: writeCookie,
-	}
+		writeCookie: writeCookie
+	};
 }());
-})( mw.mobileFrontend );
+}( mw.mobileFrontend ));

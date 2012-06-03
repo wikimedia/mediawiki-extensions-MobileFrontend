@@ -1,3 +1,5 @@
+/*global document, window, mw, navigator, clearTimeout, setTimeout */
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
 (function( MobileFrontend ) {
 MobileFrontend.banner = (function() {
 	function init() {
@@ -28,6 +30,6 @@ MobileFrontend.banner = (function() {
 	init();
 	return {
 		init: init
-	}
-})();
-})( mw.mobileFrontend );
+	};
+}());
+}( mw.mobileFrontend ));

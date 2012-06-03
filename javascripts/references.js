@@ -1,4 +1,4 @@
-/*global document, window, mw */
+/*global document, window, mw, jQuery, navigator */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 (function( MobileFrontend ) {
 if( typeof jQuery !== 'undefined' ) {
@@ -51,7 +51,7 @@ if( typeof jQuery !== 'undefined' ) {
 
 		function getReferenceTop() {
 			// http://bugs.jquery.com/ticket/6724
-			var winHeight = window.innerHeight ? window.innerHeight : $( window ).height();
+			var winHeight = window.innerHeight || $( window ).height();
 			return winHeight + $( window ).scrollTop();
 		}
 
@@ -164,4 +164,4 @@ if( typeof jQuery !== 'undefined' ) {
 		};
 	}(jQuery));
 }
-})( mw.mobileFrontend );
+}( mw.mobileFrontend ));

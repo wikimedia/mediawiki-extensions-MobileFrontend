@@ -1,5 +1,5 @@
-/*global document, window, mw, navigator, placeholder */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
+/*global document, window, mw, navigator, clearTimeout, setTimeout */
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
 (function( MobileFrontend ) {
 MobileFrontend.opensearch = (function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
@@ -16,6 +16,14 @@ MobileFrontend.opensearch = (function() {
 		u = MobileFrontend.utils;
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
+
+	function removeResults() {
+		u( document.body ).removeClass( 'full-screen-search' );
+
+		if ( focused ) {
+			focused = false;
+		}
+	}
 
 	function onfocus() {
 		var rrd, header, content, footer;
@@ -40,33 +48,6 @@ MobileFrontend.opensearch = (function() {
 		}
 	}
 
-	function removeResults() {
-		u( document.body ).removeClass( 'full-screen-search' );
-
-		if ( focused ) {
-			focused = false;
-		}
-	}
-
-	var performSearch = function(ev) {
-		if( ev ) {
-			ev.preventDefault();
-		}
-		clearTimeout( timer );
-		term = search.value;
-		if ( term.length > 1 ) {
-			term = encodeURIComponent( term );
-			timer = setTimeout( function () { searchApi( term ); }, typingDelay );
-		}
-	};
-
-	function blurSearch(ev) {
-		if( search.value.length === 0) {
-			removeResults();
-		} else {
-			performSearch(ev); // for opera mini etc
-		}
-	}
 	// Certain symbian devices fire blur/focus events as you mouseover an element
 	// this can lead to lag where focus and blur handlers are continously called
 	// this function allows us to delay them
@@ -81,45 +62,6 @@ MobileFrontend.opensearch = (function() {
 				handler( ev );
 			}, 500);
 		}
-	}
-
-	function enhanceElements() {
-		var sb = document.getElementById(  mfePrefix + 'searchForm' );
-		var interval = window.setInterval(function() {
-			if( !search ) {
-				return window.clearInterval( interval );
-			}
-			var value = search.value;
-			if( value.length > 1 && value !== oldValue ) {
-				oldValue = value;
-				u( sb ).addClass( 'notEmpty' );
-				performSearch();
-			} else if( !value ) {
-				u( sb ).removeClass( 'notEmpty' );
-			}
-		}, typingDelay);
-	
-		u( search ).bind( 'focus',
-			function( ev ) {
-				waitForFocusBlur( ev, onfocus );
-			});
-		u( search ).bind( 'blur',
-			function( ev ) {
-				waitForFocusBlur( ev, blurSearch );
-			});
-	}
-
-	function searchApi( term ) {
-		u( search ).addClass( 'searching' );
-		url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
-		u.ajax( { url: url,
-			success: function(xml) {
-				if( u( document.body ).hasClass( 'full-screen-search' ) ) {
-					writeResults( createObjectArray( xml ) );
-					u( search ).removeClass( 'searching' );
-				}
-			}
-			} );
 	}
 
 	function createObjectArray( responseXml ) {
@@ -144,7 +86,7 @@ MobileFrontend.opensearch = (function() {
 	}
 
 	function escapeJsString( str ) {
-		return str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+		return str.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
 	}
 
 	function printMessage( msg ) {
@@ -194,6 +136,65 @@ MobileFrontend.opensearch = (function() {
 		}
 	}
 
+	function searchApi( term ) {
+		u( search ).addClass( 'searching' );
+		var url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
+		u.ajax( { url: url,
+			success: function(xml) {
+				if( u( document.body ).hasClass( 'full-screen-search' ) ) {
+					writeResults( createObjectArray( xml ) );
+					u( search ).removeClass( 'searching' );
+				}
+			}
+			} );
+	}
+
+	function performSearch( ev ) {
+		if( ev ) {
+			ev.preventDefault();
+		}
+		clearTimeout( timer );
+		term = search.value;
+		if ( term.length > 1 ) {
+			term = encodeURIComponent( term );
+			timer = setTimeout( function () { searchApi( term ); }, typingDelay );
+		}
+	}
+
+	function blurSearch(ev) {
+		if( search.value.length === 0) {
+			removeResults();
+		} else {
+			performSearch(ev); // for opera mini etc
+		}
+	}
+
+	function enhanceElements() {
+		var sb = document.getElementById(  mfePrefix + 'searchForm' ),
+			interval = window.setInterval(function() {
+			if( !search ) {
+				return window.clearInterval( interval );
+			}
+			var value = search.value;
+			if( value.length > 1 && value !== oldValue ) {
+				oldValue = value;
+				u( sb ).addClass( 'notEmpty' );
+				performSearch();
+			} else if( !value ) {
+				u( sb ).removeClass( 'notEmpty' );
+			}
+		}, typingDelay);
+
+		u( search ).bind( 'focus',
+			function( ev ) {
+				waitForFocusBlur( ev, onfocus );
+			});
+		u( search ).bind( 'blur',
+			function( ev ) {
+				waitForFocusBlur( ev, blurSearch );
+			});
+	}
+
 	function initClearSearch() {
 		var clearSearch = document.getElementById(  mfePrefix + 'clearsearch' ),
 			results = document.getElementById( 'results' ),
@@ -240,4 +241,4 @@ MobileFrontend.opensearch = (function() {
 	};
 
 }());
-})( mw.mobileFrontend );
+}( mw.mobileFrontend ));

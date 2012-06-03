@@ -7,6 +7,55 @@ MobileFrontend.toggle = (function() {
 		showLabel = message( 'expand-section' ),
 		hideLabel = message( 'collapse-section' );
 
+	function wm_toggle_section( section_id ) {
+		var b = document.getElementById( 'section_' + section_id ), id,
+			hash, d,
+			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
+		if( u( b ).hasClass( 'openSection' ) ) {
+			u( b ).removeClass( 'openSection' );
+			u( bb ).removeClass( 'openSection' );
+			u( bb ).text( showLabel );
+			closed = true;
+		} else {
+			reset.push( b );
+			u( b ).addClass( 'openSection' );
+			u( bb ).addClass( 'openSection' );
+			u( bb ).text( hideLabel );
+		}
+		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
+			e = document.getElementById( d[i] + section_id );
+			if ( e && u( e ).hasClass( 'openSection' ) ) {
+				u( e ).removeClass( 'openSection' );
+			} else if( e ) {
+				reset.push( e );
+				u( e ).addClass( 'openSection' );
+			}
+		}
+		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
+		id = 'section_' + section_id;
+		e = document.getElementById( id );
+		e.removeAttribute( 'id' );
+		hash = closed ? '#_' : '#' + id;
+		MobileFrontend.history.replaceHash( hash );
+		e.setAttribute( 'id', id );
+	}
+
+	function wm_reveal_for_hash( hash ) {
+		var targetel = document.getElementById( hash.substr(1) ),
+			p, section_idx;
+		if ( targetel ) {
+			p = targetel;
+			while ( p && !u(p).hasClass( 'content_block' ) &&
+				!u(p).hasClass( 'section_heading' ) ) {
+				p = p.parentNode;
+			}
+			if ( p && ! u( p ).hasClass( 'openSection' ) ) {
+				section_idx = p.id.split( '_' )[1];
+				wm_toggle_section( section_idx );
+			}
+		}
+	}
+
 	function init() {
 		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
 			sectionHeadings = [], content,
@@ -28,7 +77,6 @@ MobileFrontend.toggle = (function() {
 		}
 
 		// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.1
-		window.wm_toggle_section = wm_toggle_section;
 		for( i = 0; i < btns.length; i++ ) {
 			u( btns[i] ).remove();
 		}
@@ -73,55 +121,8 @@ MobileFrontend.toggle = (function() {
 		}
 	}
 
-	function wm_reveal_for_hash( hash ) {
-		var targetel = document.getElementById( hash.substr(1) ),
-			p, section_idx;
-		if ( targetel ) {
-			p = targetel;
-			while ( p && !u(p).hasClass( 'content_block' ) &&
-				!u(p).hasClass( 'section_heading' ) ) {
-				p = p.parentNode;
-			}
-			if ( p && ! u( p ).hasClass( 'openSection' ) ) {
-				section_idx = p.id.split( '_' )[1];
-				wm_toggle_section( section_idx );
-			}
-		}
-	}
-
-	function wm_toggle_section( section_id ) {
-		var b = document.getElementById( 'section_' + section_id ), id,
-			hash,
-			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
-		if( u( b ).hasClass( 'openSection' ) ) {
-			u( b ).removeClass( 'openSection' );
-			u( bb ).removeClass( 'openSection' );
-			u( bb ).text( showLabel );
-			closed = true;
-		} else {
-			reset.push( b );
-			u( b ).addClass( 'openSection' );
-			u( bb ).addClass( 'openSection' );
-			u( bb ).text( hideLabel );
-		}
-		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
-			e = document.getElementById( d[i] + section_id );
-			if ( e && u( e ).hasClass( 'openSection' ) ) {
-				u( e ).removeClass( 'openSection' );
-			} else if( e ) {
-				reset.push( e );
-				u( e ).addClass( 'openSection' );
-			}
-		}
-		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
-		id = 'section_' + section_id;
-		e = document.getElementById( id );
-		e.removeAttribute( 'id' );
-		hash = closed ? '#_' : '#' + id;
-		MobileFrontend.history.replaceHash( hash );
-		e.setAttribute( 'id', id );
-	}
-
+	// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.1
+	window.wm_toggle_section = wm_toggle_section;
 	MobileFrontend.registerModule( 'toggle' );
 	return {
 		wm_reveal_for_hash: wm_reveal_for_hash,
@@ -130,4 +131,4 @@ MobileFrontend.toggle = (function() {
 	};
 
 }());
-})( mw.mobileFrontend );
+}( mw.mobileFrontend ));

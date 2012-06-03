@@ -1,7 +1,7 @@
-/*global document, window, mw, navigator, placeholder */
+/*global document, window, mw, navigator, jQuery */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 (function( MobileFrontend ) {
-MobileFrontend.navigation = (function() {
+MobileFrontend.navigation = (function( $ ) {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message;
 
@@ -97,8 +97,8 @@ MobileFrontend.navigation = (function() {
 			tocMenuButton = document.getElementById( mfePrefix + 'toc' );
 
 		function toggleNavigation() {
-			var doc = document.documentElement;
-			var mwMfPageLeft = document.getElementById( 'mw-mf-page-left' );
+			var doc = document.documentElement,
+				mwMfPageLeft = document.getElementById( 'mw-mf-page-left' );
 			if( !u( doc ).hasClass( 'navigationEnabled' ) ) {
 				mwMfPageLeft.style.display = 'block';
 				u( doc ).addClass( 'navigationEnabled' );
@@ -144,8 +144,8 @@ MobileFrontend.navigation = (function() {
 			u( document.documentElement ).removeClass( 'navigationEnabled' );
 		} );
 	}
-	if( typeof(jQuery) !== 'undefined' ) {
+	if( typeof( $ ) !== 'undefined' ) {
 		init();
 	}
-}());
-})( mw.mobileFrontend );
+}( jQuery ));
+}( mw.mobileFrontend ));

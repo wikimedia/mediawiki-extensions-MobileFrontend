@@ -1,0 +1,5 @@
+#!/bin/sh
+# First you will need to install jslint
+# Enable this pre-commit hook by executing the following from the project root directory
+# $ ln -s $PWD/scripts/pre-commit .git/hooks/pre-commit
+git diff --cached --name-only --diff-filter=ACM | grep -P '\.js$' | xargs jslint --sloppy --plusplus --white --regex

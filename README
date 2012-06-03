@@ -20,6 +20,7 @@ NEVER use [http://www.w3.org/TR/CSS2/selector.html#attribute-selectors attribute
 
 === Javascript ===
 Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
+A pre-commit hook is provided in the scripts directory to assist with adhering to javascript code standards
 
 === HTML ===
 HTML should validate via http://validator.w3.org/ - note at the current time do not worry about markup introduced via wikitext.
