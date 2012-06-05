@@ -9,6 +9,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	private $options = array(
 		'BetaOptIn' => array( 'get' => 'betaOptInGet', 'post' => 'betaOptInPost' ),
 		'BetaOptOut' => array( 'get' => 'betaOptOutGet', 'post' => 'betaOptOutPost' ),
+		'Language' => array( 'get' => 'chooseLanguage' ),
 		'EnableImages' => array( 'get' => 'enableImages' ),
 		'DisableImages' => array( 'get' => 'disableImages' )
 	);
@@ -114,7 +115,55 @@ HTML;
 		$out->addHTML( $html );
 	}
 
+	private function getSiteSelector() {
+		global $wgLanguageCode;
+
+		wfProfileIn( __METHOD__ );
+		$selector = '';
+		$count = 0;
+		$language = $this->getLanguage();
+		foreach ( Interwiki::getAllPrefixes( true ) as $interwiki ) {
+			$code = $interwiki['iw_prefix'];
+			$name = $language->getLanguageName( $code );
+			if ( !$name ) {
+				continue;
+			}
+			$title = Title::newFromText( "$code:" );
+			if ( $title ) {
+				$url = $title->getFullURL();
+			} else {
+				$url = '';
+			}
+			$attrs = array( 'href' => $url );
+			$count++;
+			if( $code == $wgLanguageCode ) {
+				$attrs['class'] = 'selected';
+			}
+			$selector .= Html::openElement( 'li' );
+			$selector .= Html::element( 'a', $attrs, $name );
+			$selector .= Html::closeElement( 'li' );
+		}
+
+		if ( $selector && $count > 1 ) {
+			$selector = <<<HTML
+			<p>{$this->msg( 'mobile-frontend-settings-site-description', $count - 1 )->parse()}</p>
+			<ul id='mw-mf-language-list'>
+				{$selector}
+			</ul>
+HTML;
+		}
+		wfProfileOut( __METHOD__ );
+		return $selector;
+	}
+
+	private function chooseLanguage() {
+		$out = $this->getOutput();
+		$out->setPageTitle( $this->msg( 'mobile-frontend-settings-site-header' )->escaped() );
+		$out->addHTML( $this->getSiteSelector() );
+	}
+
 	private function submitSettingsForm() {
+		global $wgLanguageCode;
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
 
@@ -126,8 +175,8 @@ HTML;
 		$context->setDisableImagesCookie( $imagesDisabled );
 		$context->setOptInOutCookie( $inBeta ? '1' : '' );
 		$context->setBetaGroupMember( $inBeta );
-		$url = $context->getMobileUrl( $this->getTitle()->getFullURL( 'success' ) );
-		$context->getOutput()->redirect( $url );
+		$url = $this->getTitle()->getFullURL( 'success' );
+		$context->getOutput()->redirect( $context->getMobileUrl( $url ) );
 	}
 
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {

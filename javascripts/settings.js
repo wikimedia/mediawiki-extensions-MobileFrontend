@@ -1,8 +1,9 @@
-/*global document, window, mw */
+/*global document, window, mw, jQuery */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-(function( MobileFrontend ) {
+(function( MobileFrontend, $ ) {
 MobileFrontend.settings = (function() {
 	var u = MobileFrontend.utils,
+		message = MobileFrontend.message,
 		mobileTokenCookieName = 'mobiletoken';
 
 	function writeCookie( name, value, days, path, domain ) {
@@ -140,6 +141,45 @@ MobileFrontend.settings = (function() {
 		}
 	}
 
+	/* REQUIRES: jQuery */
+	function showLanguageOverlay() {
+		var links, overlay, i, search,
+			nav = MobileFrontend.navigation,
+			container = $( '#mw-mf-language-list' ).clone();
+		search = $( '<input type="search" class="mw-mf-search" id="mw-mf-language-search" >' ).
+			attr( 'placeholder', message( 'mobile-frontend-language-site-choose' ) )[0];
+		$( '<li>' ).text( message( 'mobile-frontend-language-site-nomatches' ) ).
+			hide().appendTo( container );
+		nav.createOverlay( search, container, { locked: true } );
+		overlay = nav.getOverlay();
+
+		nav.showOverlay();
+
+		// bind search to filter the list of languages
+		search = $( '#mw-mf-overlay input' )[0];
+		function filterLanguages() {
+			var val = this.value.toLowerCase(), choice, matches = 0, i,
+				choices = $( 'li', overlay ),
+				totalchoices = choices.length;
+			for( i = 0; i < totalchoices; i++ ) {
+				choice = choices[i];
+				if( u( choice ).text().toLowerCase().indexOf( val ) > -1 ) {
+					matches += 1;
+					$( choice ).show();
+				} else if( i > 0 ) { // don't hide header
+					$( choice ).hide();
+				}
+			}
+			// reveal / hide the no results message
+			if( matches === 0 ) {
+				$( choice ).show();
+			} else {
+				$( choice ).hide();
+			}
+		}
+		$( search ).on( 'keyup', filterLanguages ).focus();
+	}
+
 	function init() {
 		var mobileToken = readMobileToken(), imagetoggle, apiUrl = '/api.php',
 			url;
@@ -158,12 +198,18 @@ MobileFrontend.settings = (function() {
 		}
 		enhanceCheckboxes();
 		u( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
+		if( MobileFrontend.navigation && MobileFrontend.jQuery ) {
+			if( $( '#mw-mf-language-list' )[0] ) {
+				showLanguageOverlay();
+			}
+		}
 	}
-	init();
+	MobileFrontend.registerModule( 'settings' );
 	return {
+		init: init,
 		readCookie: readCookie,
 		removeCookie: removeCookie,
 		writeCookie: writeCookie
 	};
 }());
-}( mw.mobileFrontend ));
+}( mw.mobileFrontend, jQuery ));
