@@ -17,7 +17,6 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 	font-weight: bold;
 	font-size: 1.1em;
 	position: relative;
-	padding-right: 84px; /* leave space for checkboxes (76px + 8px padding) */
 }
 
 #content .mw-mf-settings li:last-child {
@@ -44,15 +43,19 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 }
 
 .jsEnabled #content .mw-mf-settings li a.mw-mf-button,
-.mw-mf-checkbox-css3,
 .jsEnabled .mw-mf-checkbox-css3 span,
+.mw-mf-checkbox-css3,
 .jsEnabled .mw-mf-checkbox-css3 input {
-	width: 76px;
+	min-width: 76px;
 	display: block;
 	position: absolute;
-	right: 8px; /* compensate for padding on the on/off labels */
+	right: 0;
 	top: 0;
 	text-transform: lowercase;
+}
+
+.mw-mf-checkbox-css3 {
+	position: relative;
 }
 
 #content .mw-mf-settings li input[type=submit],
@@ -66,7 +69,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 #content .mw-mf-settings li a.mw-mf-button,
 #content .mw-mf-settings span.mw-mf-settings-off {
 	padding-right: 8px;
-	padding-left: 0;
+	padding-left: 8px;
 }
 
 #content .mw-mf-settings li input[type=submit] {
@@ -77,6 +80,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 
 #content .mw-mf-settings span.mw-mf-settings-on {
 	padding-left: 8px;
+	padding-right: 8px;
 }
 
 #content .mw-mf-settings li input[type=submit],
@@ -121,8 +125,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 }
 
 .mw-mf-checkbox-css3 input,
-.mw-mf-checkbox-css3 span::before,
-.mw-mf-checkbox-css3 span::after {
+.mw-mf-checkbox-css3 span::before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -133,7 +136,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 /* small 'sliding' switch for checkboxes */
 .mw-mf-checkboxes .mw-mf-checkbox-css3 span::before {
 	content: "";
-	width: 50%;
+	width: 30%;
 	border: solid 1px white;
 	border-top: none;
 	border-bottom: solid 1px #aaa;
