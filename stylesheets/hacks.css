@@ -13,6 +13,15 @@ IMPORTANT: do not use selectors containing attribute notation e.g. [style] [cols
 	word-break: break-word;
 }
 
+/* force portals to use a one column layout on mobile */
+.mobile .portal-column-left-wide,
+.mobile .portal-column-left,
+.mobile .portal-column-right,
+.mobile .portal-column-right-narrow {
+	float: none;
+	width: 100%;
+}
+
 table {
 	border-spacing: 0 !important;
 	border-collapse: collapse !important;
