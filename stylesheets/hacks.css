@@ -28,6 +28,10 @@ table {
 	box-sizing: border-box;
 }
 
+.collapsible td {
+	width: auto !important;
+}
+
 table.gallery .thumb {
 	border: 0;
 	padding: 0 !important;
