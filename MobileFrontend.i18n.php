@@ -488,12 +488,12 @@ $messages['as'] = array(
 	'mobile-frontend-opt-out-message' => 'মোবাইল বিটা এৰক?',
 	'mobile-frontend-opt-out-yes-button' => 'হয়',
 	'mobile-frontend-opt-out-no-button' => 'নহয়',
-	'mobile-frontend-images-status' => 'চিত্ৰ',
+	'mobile-frontend-images-status' => 'চিত্ৰসমূহ',
 	'mobile-frontend-disable-images' => 'মোবাইল চাইটত ছবি নিষ্ক্ৰিয় কৰক',
 	'mobile-frontend-enable-images' => 'মোবাইল চাইটত ছবি সক্ৰিয় কৰক',
 	'mobile-frontend-toggle-images' => 'চিত্র $1 / $2',
-	'mobile-frontend-off' => 'অফ্‌',
-	'mobile-frontend-on' => 'অন্‌',
+	'mobile-frontend-off' => 'বন্ধ',
+	'mobile-frontend-on' => 'আৰম্ভ',
 	'mobile-frontend-footer-article-edit-info' => 'শেষ সম্পাদনাৰ সময় $1',
 	'mobile-frontend-news-items' => 'খবৰৰ শীৰ্ষত',
 	'mobile-frontend-leave-feedback-title' => 'মোবাইল চাইট ফীডবেক',
@@ -520,7 +520,7 @@ $messages['as'] = array(
 	'mobile-frontend-feedback-no-message' => 'অনুগ্ৰহ কৰি ইয়াত এটা বাৰ্তা লিখক',
 	'mobile-frontend-leave-feedback-thanks' => 'আপোনাৰ প্ৰতিক্ৰিয়াৰ বাবে ধন্যবাদ!',
 	'mobile-frontend-leave-feedback-post-error' => 'আপোনাৰ বাৰ্তা প্ৰচেছ কৰাত ত্ৰুটী হৈছে। অনুগ্ৰহ কৰি অলপ পিছত চেষ্টা কৰক।',
-	'mobile-frontend-language' => 'ভাষা:',
+	'mobile-frontend-language' => 'ভাষাসমূহ:',
 	'mobile-frontend-language-header' => 'এই প্ৰবন্ধটো $1 ভাষাত লিখা',
 	'mobile-frontend-username' => 'সদস্যনাম:',
 	'mobile-frontend-password' => 'গুপ্তশব্দ:',
@@ -1034,7 +1034,7 @@ $messages['br'] = array(
 	'mobile-frontend-feedback-no-message' => 'Merkit ur gemennadenn amañ',
 	'mobile-frontend-leave-feedback-thanks' => 'Trugarez da vezañ roet ho soñj.',
 	'mobile-frontend-language' => 'Yezh :',
-	'mobile-frontend-language-header' => 'Skrivet eo ar pennad-mañ e $1 yezh',
+	'mobile-frontend-language-header' => 'Ar pennad-mañ zo anezhañ e {{PLURAL:$1|yezh|yezh}}',
 	'mobile-frontend-username' => 'Anv implijer :',
 	'mobile-frontend-password' => 'Ger-tremen :',
 	'mobile-frontend-login' => 'Kevreañ',
@@ -1691,7 +1691,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Pśi pśeźěłowanju twójeje powěsći jo zmólka nastała.
 Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-language' => 'Rěc:',
-	'mobile-frontend-language-header' => 'Toś ten nastawk jo se w {{PLURAL:$1|jadnej rěcy|$1 rěcoma|$1 rěcach|$1 rěcach}} napisał',
+	'mobile-frontend-language-header' => 'Toś ten nastawk stoj w $1 {{PLURAL:$1|rěcy|rěcoma|rěcach|rěcach}} k dispoziciji',
 	'mobile-frontend-username' => 'Wužywarske mě:',
 	'mobile-frontend-password' => 'Gronidło:',
 	'mobile-frontend-login' => 'Pśizjawiś',
@@ -1905,7 +1905,7 @@ $messages['es'] = array(
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracias por tu comentario!',
 	'mobile-frontend-leave-feedback-post-error' => 'Hubo un error al procesar el mensaje. Inténtalo de nuevo más tarde.',
 	'mobile-frontend-language' => 'Idioma:',
-	'mobile-frontend-language-header' => 'Este artículo está escrito en  $1 idiomas',
+	'mobile-frontend-language-header' => 'Este artículo está disponible en  $1 {{PLURAL:$1|idioma|idiomas}}',
 	'mobile-frontend-username' => 'Nombre de usuario:',
 	'mobile-frontend-password' => 'Contraseña:',
 	'mobile-frontend-login' => 'Iniciar sesión',
@@ -2629,7 +2629,7 @@ $messages['gsw'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Dankschen vilmol fir Dyy Ruckmäldig!',
 	'mobile-frontend-leave-feedback-post-error' => "S het bim Verarbeite vo dynrer Noochricht en Fääler gee. Bitte probier's spööter no emool.",
 	'mobile-frontend-language' => 'Sproch:',
-	'mobile-frontend-language-header' => 'De Artikel isch in {{PLURAL:$1|einere Sprooch|$1 Sprooche}} verfiegbar',
+	'mobile-frontend-language-header' => 'De Artikel isch uff {{PLURAL:$1|einere Sprooch|$1 Sprooche}} verfiegbar',
 	'mobile-frontend-username' => 'Benutzername:',
 	'mobile-frontend-password' => 'Passwort:',
 	'mobile-frontend-login' => 'Aamälde',
@@ -2990,7 +2990,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Při předźěłowanju wašeje powěsće je zmylk wustupił.
 Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-language' => 'Rěč:',
-	'mobile-frontend-language-header' => 'Tutón nastawk je so w {{PLURAL:$1|jednej rěči|$1 rěčomaj|$1 rěčach|$1 rěčach}} napisał',
+	'mobile-frontend-language-header' => 'Tutón nastawk steji w $1 {{PLURAL:$1|rěči|rěčomaj|rěčach|rěčach}} k dispoziciji',
 	'mobile-frontend-username' => 'Wužiwarske mjeno:',
 	'mobile-frontend-password' => 'Hesło:',
 	'mobile-frontend-login' => 'Přizjewić',
@@ -3291,7 +3291,7 @@ $messages['inh'] = array(
 	'mobile-frontend-regular-site' => 'Ер оагӀув Вкипадечу хьажа',
 );
 
-/** Icelandic (Íslenska)
+/** Icelandic (íslenska)
  * @author Maxí
  * @author Snævar
  */
@@ -3315,8 +3315,12 @@ $messages['is'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'Já',
 	'mobile-frontend-opt-out-no-button' => 'Nei',
 	'mobile-frontend-opt-out-explain' => 'Með því að hætta beta prófun, verða allir tilrauna möguleikar afvirkjaðir og þú munt fara aftur á hefðbundna farsímaútgáfu.',
+	'mobile-frontend-images-status' => 'Myndir',
 	'mobile-frontend-disable-images' => 'Fela myndir á farsímasíðunni',
 	'mobile-frontend-enable-images' => 'Sýna myndir á farsímasíðunni',
+	'mobile-frontend-toggle-images' => 'Myndir $1 / $2',
+	'mobile-frontend-off' => 'AF',
+	'mobile-frontend-on' => 'Á',
 	'mobile-frontend-news-items' => 'Í fréttum',
 	'mobile-frontend-leave-feedback-title' => 'Skilja eftir svörun um farsímaútgáfuna',
 	'mobile-frontend-leave-feedback-subject' => 'Efni',
@@ -3334,6 +3338,10 @@ $messages['is'] = array(
 	'mobile-frontend-clear-search' => 'Hreinsa',
 	'mobile-frontend-privacy-link-text' => 'Persónuvernd',
 	'mobile-frontend-about-link-text' => 'Um',
+	'mobile-frontend-footer-more' => 'meira',
+	'mobile-frontend-footer-less' => 'minna',
+	'mobile-frontend-footer-license' => 'Textinn er laus undir <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0 leyfi</a>',
+	'mobile-frontend-main-menu-contact' => 'Hafa samband',
 );
 
 /** Italian (italiano)
@@ -3410,7 +3418,7 @@ $messages['it'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Grazie per aver espresso il tuo commento.',
 	'mobile-frontend-leave-feedback-post-error' => "Si è verificato un errore durante l'elaborazione del messaggio. Si prega di riprovare più tardi.",
 	'mobile-frontend-language' => 'Lingua:',
-	'mobile-frontend-language-header' => 'Questa voce è stata scritta in $1 lingue',
+	'mobile-frontend-language-header' => 'Questa voce è disponibile in $1 {{PLURAL:$1|lingua|lingue}}',
 	'mobile-frontend-username' => 'Nome utente:',
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Entra',
@@ -4211,7 +4219,7 @@ $messages['li'] = array(
 	'mobile-frontend-leave-feedback-post-error' => "d'r Is 'n fout opgetraoje tiejes 't verwirke van die berich.
 Verzeuk 't lader nag 'ne kieër.",
 	'mobile-frontend-language' => 'Spraok:',
-	'mobile-frontend-language-header' => 'Dees pagina steit in {{PLURAL:$1|ein spraok|$1 spräök}}',
+	'mobile-frontend-language-header' => 'Dees pagina is besjikbaar in {{PLURAL:$1|ein spraok|$1 spräök}}',
 	'mobile-frontend-username' => 'Gebroekersnaam:',
 	'mobile-frontend-password' => 'Wachwaord:',
 	'mobile-frontend-login' => 'Mèlj aan',
@@ -4471,7 +4479,7 @@ $messages['mk'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Ви благодариме за искажаното мислење!',
 	'mobile-frontend-leave-feedback-post-error' => 'Настана грешка при обработката на пораката. Обидете се повторно.',
 	'mobile-frontend-language' => 'Јазик:',
-	'mobile-frontend-language-header' => 'Оваа статија е напишана на $1 јазици',
+	'mobile-frontend-language-header' => 'Оваа статија е достапна на $1 {{PLURAL:$1|јазик|јазици}}',
 	'mobile-frontend-username' => 'Корисничко име:',
 	'mobile-frontend-password' => 'Лозинка:',
 	'mobile-frontend-login' => 'Најава',
@@ -4982,7 +4990,7 @@ $messages['nl'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Er is een fout opgetreden tijdens het verwerken van uw bericht.
 Probeer het later nog een keer.',
 	'mobile-frontend-language' => 'Taal:',
-	'mobile-frontend-language-header' => 'Deze pagina is geschreven in {{PLURAL:$1|één taal|$1 talen}}',
+	'mobile-frontend-language-header' => 'Deze pagina is beschikbaar in {{PLURAL:$1|één taal|$1 talen}}',
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wachtwoord:',
 	'mobile-frontend-login' => 'Aanmelden',
@@ -5601,7 +5609,7 @@ $messages['ro'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Vă mulțumim pentru păreri!',
 	'mobile-frontend-leave-feedback-post-error' => 'A apărut o eroare în timpul procesării mesajului dumneavoastră. Vă rugăm să reîncercați mai târziu.',
 	'mobile-frontend-language' => 'Limbă:',
-	'mobile-frontend-language-header' => 'Acest articol este scris în $1 limbi',
+	'mobile-frontend-language-header' => 'Acest articol este disponibil {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}',
 	'mobile-frontend-username' => 'Nume de utilizator:',
 	'mobile-frontend-password' => 'Parolă:',
 	'mobile-frontend-login' => 'Autentificare',
