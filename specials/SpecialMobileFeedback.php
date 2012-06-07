@@ -26,7 +26,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		/** Section header text **/
 		$technicalProblemSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-technical-problem-section-header' )->escaped();
 		$generalSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-general-section-header' )->escaped();
-		$articleFeedbackSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-article-feedback-seciton-header' )->escaped();
+		$articleFeedbackSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-article-feedback-section-header' )->escaped();
 
 		wfRunHooks( 'MobileFrontendOverrideFeedbackLinks' );
 		/** Links **/
