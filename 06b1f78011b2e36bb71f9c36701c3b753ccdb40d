@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAL3//+8A\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-08T15:41:33Z",
+      "side": 1,
+      "message": "Should be in sentence case.",
+      "revId": "06b1f78011b2e36bb71f9c36701c3b753ccdb40d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAL3//+8E\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 499,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-08T15:41:33Z",
+      "side": 1,
+      "message": "More messages in every page source. This has to stop sometimes - I propse to load everyrthing not direly needed dynamically.",
+      "revId": "06b1f78011b2e36bb71f9c36701c3b753ccdb40d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAL3//+8Q\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-08T15:41:33Z",
+      "side": 1,
+      "message": "The wg prefix is for globals only. Class name is misspelled.",
+      "revId": "06b1f78011b2e36bb71f9c36701c3b753ccdb40d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAL3//+8M\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-08T15:41:33Z",
+      "side": 1,
+      "message": "This code relies on wikis in every language supported being present, which isn\u0027t the case. It also looks a bit WMF-centric.",
+      "revId": "06b1f78011b2e36bb71f9c36701c3b753ccdb40d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAL3//+8I\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-08T15:41:33Z",
+      "side": 1,
+      "message": "Use Html::element()",
+      "revId": "06b1f78011b2e36bb71f9c36701c3b753ccdb40d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
