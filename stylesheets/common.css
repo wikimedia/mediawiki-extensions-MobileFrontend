@@ -351,3 +351,10 @@ img.thumbborder {
 		border-bottom: 10px solid #F28500;
 	}
 }
+
+/* Plainlinks - this can be used to switch
+ * off special external link styling */
+.plainlinks a {
+	background: none !important;
+	padding: 0 !important;
+}
