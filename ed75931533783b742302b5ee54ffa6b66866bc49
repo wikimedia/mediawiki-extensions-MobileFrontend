@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAMH//+MM\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-13T16:49:16Z",
+      "side": 1,
+      "message": "Still lowercase",
+      "revId": "ed75931533783b742302b5ee54ffa6b66866bc49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAMH//+MI\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-13T16:49:16Z",
+      "side": 1,
+      "message": "Main page has different title in different languages, initial colon isn\u0027t needed.",
+      "revId": "ed75931533783b742302b5ee54ffa6b66866bc49",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
