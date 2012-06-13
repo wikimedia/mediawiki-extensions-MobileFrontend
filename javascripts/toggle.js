@@ -96,6 +96,9 @@ MobileFrontend.toggle = (function() {
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
 			heading.removeAttribute( 'onclick' ); // TODO: remove any legacy onclick handlers
+			if( heading.removeEventListener ) {
+				heading.removeEventListener( 'click' ); // TODO: Remove me! Here to support App v < 1.1 - Needed for WP7
+			}
 			heading.insertBefore( createButton(), heading.firstChild );
 			a = document.getElementById( 'anchor_' + heading.id.split( '_' )[ 1 ] );
 			if( a && inBeta ) {
