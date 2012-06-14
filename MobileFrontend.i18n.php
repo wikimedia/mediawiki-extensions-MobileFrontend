@@ -331,12 +331,10 @@ $messages['an'] = array(
 	'mobile-frontend-opt-in-message' => "Quiere unir-se a las nuestras prebas d'a nueva interficie mobil?",
 	'mobile-frontend-opt-in-yes-button' => 'sí',
 	'mobile-frontend-opt-in-no-button' => 'No',
-	'mobile-frontend-opt-in-title' => 'Prebar a beta Mobil',
 	'mobile-frontend-opt-in-explain' => 'Prebando a beta, tendrá acceso a caracteristicas experimentals, con o risgo de trobar problemas u errors.',
 	'mobile-frontend-opt-out-message' => 'Quiere deixar de prebar a beta mobil?',
 	'mobile-frontend-opt-out-yes-button' => 'Sí',
 	'mobile-frontend-opt-out-no-button' => 'No',
-	'mobile-frontend-opt-out-title' => 'Deixar de prebar a beta Mobil',
 	'mobile-frontend-opt-out-explain' => 'En deixar a beta mobil, desactivará todas as caracteristicas experimentals y tornará ta la experiencia mobil clasica.',
 	'mobile-frontend-disable-images' => 'Desactivar imachens en a versión ta mobils',
 	'mobile-frontend-enable-images' => 'Activar imachens en a versión ta mobils',
@@ -558,7 +556,7 @@ $messages['as'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'এই প্ৰবন্ধটো পঢ়ক',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Xuacu
  */
 $messages['ast'] = array(
@@ -580,12 +578,10 @@ $messages['ast'] = array(
 	'mobile-frontend-opt-in-message' => '¿Quies probar la versión beta pa móvil?',
 	'mobile-frontend-opt-in-yes-button' => 'sí',
 	'mobile-frontend-opt-in-no-button' => 'non',
-	'mobile-frontend-opt-in-title' => 'Entrar na beta pa móvil',
 	'mobile-frontend-opt-in-explain' => "Al xunite a la versión beta tendrás accesu a carauterístiques esperimentales, pero col riesgu d'atopar fallos y problemes.",
 	'mobile-frontend-opt-out-message' => '¿Quies dexar la versión beta pa móvil?',
 	'mobile-frontend-opt-out-yes-button' => 'sí',
 	'mobile-frontend-opt-out-no-button' => 'non',
-	'mobile-frontend-opt-out-title' => 'Salir de la beta pa móvil',
 	'mobile-frontend-opt-out-explain' => 'Al dexar la beta pa móviles, desactivarás toles carauterístiques esperimentales y tornarás a la interfaz para móvil clásica.',
 	'mobile-frontend-disable-images' => 'Desactivar les imaxes nel sitiu pa móvil',
 	'mobile-frontend-enable-images' => 'Activar les imaxes nel sitiu pa móvil',
@@ -636,7 +632,7 @@ $messages['ast'] = array(
 	'mobile-frontend-unknown-option' => 'Opción non reconocida "$1".',
 );
 
-/** Azerbaijani (Azərbaycanca)
+/** Azerbaijani (azərbaycanca)
  * @author Cekli829
  * @author Vugar 1981
  */
@@ -745,12 +741,10 @@ $messages['bar'] = array(
 	'mobile-frontend-opt-in-message' => 'Ban Beta-Test middoah?',
 	'mobile-frontend-opt-in-yes-button' => 'Jo',
 	'mobile-frontend-opt-in-no-button' => 'Naa',
-	'mobile-frontend-opt-in-title' => 'Teilnaum am Beta-Test',
 	'mobile-frontend-opt-in-explain' => "Durch d' Teilnaum am Beta-Test dahoitst an Zuagrieff af experimenteje Funkzióner, dé dert owerraa Próbléme und Feeler vaursocher kennern.",
 	'mobile-frontend-opt-out-message' => 'Nimmer am Beta-Test middoah?',
 	'mobile-frontend-opt-out-yes-button' => 'Jo',
 	'mobile-frontend-opt-out-no-button' => 'Naa',
-	'mobile-frontend-opt-out-title' => 'Teilnaum am Beta-Test beénden',
 	'mobile-frontend-opt-out-explain' => "Mim Énd vah da Teilnaum am Beta-Test wern d' experimentejn Funkzióner deaktivierd und d' klassischen Fukzióner aktivierd.",
 	'mobile-frontend-disable-images' => "Bijder a' da móbiln Auhsicht deaktiviern",
 	'mobile-frontend-enable-images' => "Bijder a' da móbiln Auhsicht aktiviern",
@@ -860,7 +854,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Налады мабільнага сайту',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author DCLXVI
  * @author Ivanko
  * @author Spiritia
@@ -1078,7 +1072,7 @@ $messages['br'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Lenn ar pennad-mañ e',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  * @author DzWiki
  */
@@ -1208,7 +1202,7 @@ $messages['ce'] = array(
 	'mobile-frontend-regular-site' => 'Хьажа гуттаралера Википедийа агlоне',
 );
 
-/** Sorani (کوردی)
+/** Sorani Kurdish (کوردی)
  * @author Asoxor
  */
 $messages['ckb'] = array(
@@ -1235,7 +1229,7 @@ $messages['ckb'] = array(
 	'mobile-frontend-language' => 'زمان',
 );
 
-/** Corsican (Corsu) */
+/** Corsican (corsu) */
 $messages['co'] = array(
 	'mobile-frontend-leave-feedback-subject' => 'Sughjettu',
 	'mobile-frontend-leave-feedback-message' => 'Messaghju',
@@ -1778,7 +1772,7 @@ $messages['dtp'] = array(
 	'mobile-frontend-regular-site' => 'Intaai bolikon koubasanan Wikipodia',
 );
 
-/** Ewe (Eʋegbe) */
+/** Ewe (eʋegbe) */
 $messages['ee'] = array(
 	'mobile-frontend-search-submit' => 'Yi',
 	'mobile-frontend-random-button' => 'Ɖesiaɖe ko',
@@ -1849,12 +1843,10 @@ $messages['eo'] = array(
 	'mobile-frontend-opt-in-message' => 'Ĉu aliĝi beta-version de poŝtelefona fasado?',
 	'mobile-frontend-opt-in-yes-button' => 'jes',
 	'mobile-frontend-opt-in-no-button' => 'ne',
-	'mobile-frontend-opt-in-title' => 'Malnepra testado por poŝtelefona beta-versio',
 	'mobile-frontend-opt-in-explain' => 'Aliĝante la beta-version, vi eblos atingi eksperimentajn ecojn, riskante renkonti cimojn kaj problemojn.',
 	'mobile-frontend-opt-out-message' => 'Ĉu foriri la poŝtelefonan beta-version?',
 	'mobile-frontend-opt-out-yes-button' => 'jes',
 	'mobile-frontend-opt-out-no-button' => 'ne',
-	'mobile-frontend-opt-out-title' => 'Foriri Testado de Poŝtelefona Fasado',
 	'mobile-frontend-opt-out-explain' => 'Eliĝante la poŝtelefonan version, vi malŝalti ĉiujn eksperimentajn ecojn kaj ŝalti la klasikan poŝtelefonan etoson.',
 	'mobile-frontend-disable-images' => 'Malŝalti bildojn en poŝtelefona retejo',
 	'mobile-frontend-enable-images' => 'Ŝalti bildojn en poŝtelefona retejo',
@@ -2034,7 +2026,7 @@ $messages['et'] = array(
 	'mobile-frontend-search-noresults' => 'Otsitavale vastavad artiklipealkirjad puuduvad. Vaheta otsisõna või vajuta sõrmistiku otsinuppu, et otsida artiklitest.',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author An13sa
  */
 $messages['eu'] = array(
@@ -2058,7 +2050,7 @@ $messages['eu'] = array(
 	'mobile-frontend-login' => 'Saioa hasi',
 );
 
-/** Extremaduran (Estremeñu) */
+/** Extremaduran (estremeñu) */
 $messages['ext'] = array(
 	'mobile-frontend-search-submit' => 'Dil',
 	'mobile-frontend-featured-article' => 'Artículu destacau',
@@ -2095,12 +2087,10 @@ $messages['fa'] = array(
 	'mobile-frontend-opt-in-message' => 'به سامانۀ آزمایشی گوشی همراه می‌پیوندید؟',
 	'mobile-frontend-opt-in-yes-button' => 'بله',
 	'mobile-frontend-opt-in-no-button' => 'خیر',
-	'mobile-frontend-opt-in-title' => 'ورود انتخابی به نسخهٔ بتا برای تلفن همراه',
 	'mobile-frontend-opt-in-explain' => 'با پیوستن به نسخهٔ آزمایشی، شما به ویژگی‌های آزمایشی دسترسی پیدا می‌کنید اما ممکن است با مشکلاتی هم مواجه شوید.',
 	'mobile-frontend-opt-out-message' => 'سامانۀ آزمایشی گوشی همراه را ترک می‌کنید؟',
 	'mobile-frontend-opt-out-yes-button' => 'بله',
 	'mobile-frontend-opt-out-no-button' => 'خیر',
-	'mobile-frontend-opt-out-title' => 'خروج انتخابی از نسخهٔ بتا برای تلفن همراه',
 	'mobile-frontend-opt-out-explain' => 'این به شما اجازه خروج از آزمایش را می‌دهد',
 	'mobile-frontend-disable-images' => 'غیر فعال کردن تصاویر بر روی تارنمای تلفن همراه',
 	'mobile-frontend-enable-images' => 'فعال سازی تصاویر بر روی تارنمای تلفن همراه',
@@ -2129,7 +2119,7 @@ $messages['fa'] = array(
 	'mobile-frontend-footer-contact' => 'تماس',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Crt
  * @author Kulmalukko
  * @author Linnea
@@ -2184,7 +2174,7 @@ $messages['fi'] = array(
 	'mobile-frontend-footer-less' => 'vähemmän',
 );
 
-/** Faroese (Føroyskt)
+/** Faroese (føroyskt)
  * @author EileenSanda
  */
 $messages['fo'] = array(
@@ -2201,7 +2191,6 @@ $messages['fo'] = array(
 	'mobile-frontend-opt-in-message' => 'Ynskir tú at luttaka í mobilu beta?',
 	'mobile-frontend-opt-in-yes-button' => 'Ja',
 	'mobile-frontend-opt-in-no-button' => 'Nei',
-	'mobile-frontend-opt-in-title' => 'Mobilt beta opt-in',
 	'mobile-frontend-opt-out-yes-button' => 'Ja',
 	'mobile-frontend-opt-out-no-button' => 'Nei',
 	'mobile-frontend-leave-feedback-subject' => 'Evni',
@@ -2321,7 +2310,7 @@ $messages['fr'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Lire cet article en',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -2340,12 +2329,10 @@ $messages['frp'] = array(
 	'mobile-frontend-opt-in-message' => 'Rentrar dens la bèta-èprôva de la vèrsion mobila ?',
 	'mobile-frontend-opt-in-yes-button' => 'ouè',
 	'mobile-frontend-opt-in-no-button' => 'nan',
-	'mobile-frontend-opt-in-title' => 'Rentrar dens la bèta-èprôva de la vèrsion mobila',
 	'mobile-frontend-opt-in-explain' => 'En rentrent dens la bèta-èprôva, vos aréd accès a les fonccionalitâts èxpèrimentâles, u risco de rencontrar cofieries et problèmos.',
 	'mobile-frontend-opt-out-message' => 'Quitar la bèta-èprôva de la vèrsion mobila ?',
 	'mobile-frontend-opt-out-yes-button' => 'ouè',
 	'mobile-frontend-opt-out-no-button' => 'nan',
-	'mobile-frontend-opt-out-title' => 'Quitar la bèta-èprôva de la vèrsion mobila',
 	'mobile-frontend-opt-out-explain' => 'En quitent la bèta-èprôva, vos dèsactiveréd totes les fonccionalitâts èxpèrimentâles et pués torneréd a l’èxpèrience mobila classica.',
 	'mobile-frontend-disable-images' => 'Dèsctivar les émâges sur lo seto mobilo',
 	'mobile-frontend-enable-images' => 'Activar les émâges sur lo seto mobilo',
@@ -2467,7 +2454,7 @@ $messages['frr'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Lees di artiikel üüb',
 );
 
-/** Friulian (Furlan) */
+/** Friulian (furlan) */
 $messages['fur'] = array(
 	'mobile-frontend-search-submit' => 'Va',
 	'mobile-frontend-featured-article' => 'Articul in vitrine di vuê',
@@ -2726,12 +2713,10 @@ $messages['gu'] = array(
 	'mobile-frontend-opt-in-message' => 'મોબાઈલ બિટામાં જોડાશો?',
 	'mobile-frontend-opt-in-yes-button' => 'હા',
 	'mobile-frontend-opt-in-no-button' => 'ના',
-	'mobile-frontend-opt-in-title' => 'મોબાઈલ બિટામાં ભાગ લો',
 	'mobile-frontend-opt-in-explain' => 'બીટામાં જોડાઈને તમે પ્રાયોગિક ધોરણે કાર્યાન્વીત થયેલી સેવા પામી શકશો. આમાં ત્રુટી, ક્ષતિ અનુભવી શકો છો.',
 	'mobile-frontend-opt-out-message' => 'મોબાઈલ બિટામાંથી બહાર નીકળશો?',
 	'mobile-frontend-opt-out-yes-button' => 'હા',
 	'mobile-frontend-opt-out-no-button' => 'ના',
-	'mobile-frontend-opt-out-title' => 'મોબાઈલ બિટામાં ભાગ ન લો',
 	'mobile-frontend-opt-out-explain' => 'બીટા છોડીને તમે પ્રાયોગિક ધોરણે કાર્યાન્વીત થયેલી સેવા પામી બંધ કરશો અને મૂળ સેવાઓ અનુભવી શકો છો.',
 	'mobile-frontend-disable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો નિષ્ક્રિય કરો',
 	'mobile-frontend-enable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો',
@@ -2910,12 +2895,10 @@ $messages['hi'] = array(
 	'mobile-frontend-opt-in-message' => 'मोबाइल बीटा में शामिल हो?',
 	'mobile-frontend-opt-in-yes-button' => 'हाँ',
 	'mobile-frontend-opt-in-no-button' => 'नहीं',
-	'mobile-frontend-opt-in-title' => 'मोबाइल बीटा ऑप्ट-इन',
 	'mobile-frontend-opt-in-explain' => 'बीटा में शामिल होने से आपको प्रयोगात्मक विशेषताएँ दिखाई जाएँगी, तथा प्रोग्राम में त्रुटियाँ और समस्याएँ आने का खतरा होगा।',
 	'mobile-frontend-opt-out-message' => 'मोबाइल बीटा छोड़ दें?',
 	'mobile-frontend-opt-out-yes-button' => 'हाँ',
 	'mobile-frontend-opt-out-no-button' => 'नहीं',
-	'mobile-frontend-opt-out-title' => 'मोबाइल बीटा ऑप्ट-आउट',
 	'mobile-frontend-opt-out-explain' => 'बीटा छोड़ने से आप सभी प्रयोगात्मक विशेषताओं को अक्षम कर देंगे और क्लासिक मोबाइल अनुभव पर वापिस चले जाएँगे।',
 	'mobile-frontend-disable-images' => 'मोबाइल साइट पर छवियों को अक्षम करें',
 	'mobile-frontend-enable-images' => 'मोबाइल साइट पर छवियों को सक्षम करें',
@@ -2946,7 +2929,7 @@ $messages['hil'] = array(
 	'mobile-frontend-regular-site' => 'Tan-awon ini nga pahina sa regular na Wikipedya',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Roberta F.
  */
 $messages['hr'] = array(
@@ -3065,7 +3048,7 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-page-menu-language-heading' => 'Tutón nastawk čitać w',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author BáthoryPéter
  * @author Dj
  * @author Misibacsi
@@ -3241,12 +3224,10 @@ $messages['id'] = array(
 	'mobile-frontend-opt-in-message' => 'Bergabung dengan pengujian tampilan depan situs seluler?',
 	'mobile-frontend-opt-in-yes-button' => 'iya',
 	'mobile-frontend-opt-in-no-button' => 'tidak',
-	'mobile-frontend-opt-in-title' => 'Daftar untuk Pengujian',
 	'mobile-frontend-opt-in-explain' => 'Hal ini mengizinkan Anda masuk ke pengujian',
 	'mobile-frontend-opt-out-message' => 'Tinggalkan pengujian tampilan depan situs seluler?',
 	'mobile-frontend-opt-out-yes-button' => 'iya',
 	'mobile-frontend-opt-out-no-button' => 'tidak',
-	'mobile-frontend-opt-out-title' => 'Tinggalkan Pengujian',
 	'mobile-frontend-opt-out-explain' => 'Hal ini memungkinkan Anda untuk meinggalkan pengujian',
 	'mobile-frontend-disable-images' => 'Nonaktifkan gambar pada situs seluler',
 	'mobile-frontend-enable-images' => 'Aktifkan gambar pada situs seluler',
@@ -3757,7 +3738,7 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-unknown-option' => 'Белгісіз параметр "$1".',
 );
 
-/** Kalaallisut (Kalaallisut) */
+/** Kalaallisut (kalaallisut) */
 $messages['kl'] = array(
 	'mobile-frontend-search-submit' => 'Tassunngarit',
 	'mobile-frontend-featured-article' => 'Allaaserisaq ullumi',
@@ -3789,12 +3770,10 @@ $messages['km'] = array(
 	'mobile-frontend-opt-in-message' => 'សាកប្រើកម្មវិធីបេតាសំរាប់ឧបករណ៍ចល័តទេ?',
 	'mobile-frontend-opt-in-yes-button' => 'បាទ/ចាស៎',
 	'mobile-frontend-opt-in-no-button' => 'ទេ',
-	'mobile-frontend-opt-in-title' => 'ការចូលរួម​សាកល្បង​ប្រើ​កម្មវិធី​បេតា​សំរាប់​ឧបករណ៍​ចល័ត',
 	'mobile-frontend-opt-in-explain' => 'ដោយ​ចូលរួម​កម្មវិធី​បេតា អ្នក​នឹងមាន​លទ្ធភាព​ប្រើ​មុខងា​រដែល​កំពុង​ស្ថិតនៅក្រោម​ការពិសោធន៍​នៅឡើយ ដែល​អាចធ្វើ​អោយ​អ្នកប្រឈមមុខ​នឹង​បញ្ហា​តូចតាច​មួយចំនួន។',
 	'mobile-frontend-opt-out-message' => 'ចាកចេញពីកម្មវិធីបេតាសំរាប់ឧបករណ៍ចល័តឬ?',
 	'mobile-frontend-opt-out-yes-button' => 'បាទ/ចាស៎',
 	'mobile-frontend-opt-out-no-button' => 'ទេ',
-	'mobile-frontend-opt-out-title' => 'ការចាកចេញពី​កម្មវិធី​បេតា​សំរាប់​ឧបករណ៍​ចល័ត',
 	'mobile-frontend-opt-out-explain' => 'ដោយ​ចាកចេញ​ពី​កម្មវិធី​បេតា អ្នកនឹង​បិទ​មិនប្រើ​កម្មវិធី​ដែលស្ថិត​នៅក្រោម​ការពិសោធន៍​ទាំងអស់ រួចត្រលប់​ទៅប្រើ​កម្មវិធី​សំរាប់​ឧបករណ៍​ចល័ត​ធម្មតា​វិញ។',
 	'mobile-frontend-disable-images' => 'បិទមិនអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត',
 	'mobile-frontend-enable-images' => 'បើកអោយមើលរូបភាពនៅលើវិបសាយសំរាប់ឧបករណ៍ចល័ត',
@@ -3838,12 +3817,10 @@ $messages['kn'] = array(
 	'mobile-frontend-opt-in-message' => 'ಮೊಬೈಲ್ ಬೀಟಾ ಸೇರಬೇಕೆ?',
 	'mobile-frontend-opt-in-yes-button' => 'ಹೌದು',
 	'mobile-frontend-opt-in-no-button' => 'ಇಲ್ಲ',
-	'mobile-frontend-opt-in-title' => 'ಮೊಬೈಲ್ ಬೀಟಾ ಆಯ್ಕೆ ಮಾಡಿ',
 	'mobile-frontend-opt-in-explain' => 'ಬೀಟಾವನ್ನು ಸೇರುವುದರಿಂದ, ದೋಷಗಳು ಮತ್ತು ವಿವಾದಾಂಶಗಳ ಅಪಾಯದೊಂದಿಗೆ, ನೀವು ಪ್ರಾಯೋಗಿಕ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪಡೆಯುವಿರಿ.',
 	'mobile-frontend-opt-out-message' => 'ಮೊಬೈಲ್ ಬೀಟಾ ತೊರೆಯಬೇಕೆ?',
 	'mobile-frontend-opt-out-yes-button' => 'ಹೌದು',
 	'mobile-frontend-opt-out-no-button' => 'ಇಲ್ಲ',
-	'mobile-frontend-opt-out-title' => 'ಮೊಬೈಲ್ ಬೀಟಾ ಬಿಟ್ಟು ಬಿಡಿ',
 	'mobile-frontend-opt-out-explain' => 'ಬೀಟಾವನ್ನು ತೊರೆಯುವುದರಿಂದ, ನೀವು ಪ್ರಾಯೋಗಿಕ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಅನರ್ಹಗೊಳಿಸಿ ಸಾಂಪ್ರದಾಯಿಕ ಮೊಬೈಲ್ ಅನುಭವ ಪಡೆದುಕೊಳ್ಳುವಿರಿ.',
 	'mobile-frontend-disable-images' => 'ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ಅಡಗಿಸು',
 	'mobile-frontend-enable-images' => 'ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ತೋರಿಸು',
@@ -4019,12 +3996,10 @@ $messages['ksh'] = array(
 	'mobile-frontend-opt-in-message' => 'Beim freiwillije Ußprobeere för Mobiljeräte metmaache?',
 	'mobile-frontend-opt-in-yes-button' => 'jo',
 	'mobile-frontend-opt-in-no-button' => 'nä',
-	'mobile-frontend-opt-in-title' => 'Beim Ußprobeere metmaache',
 	'mobile-frontend-opt-in-explain' => 'Beim Ußprobeere metmaache löht Desch neu Saache känne liehre, ävver et künnt sind, dat De jät fengks, wat noch nit flupp.',
 	'mobile-frontend-opt-out-message' => 'Mem freiwillije Ußprobeere vun dä Neueschkeite för Mobiljeräte ophüüre?',
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'nä',
-	'mobile-frontend-opt-out-title' => 'Nit mih beim freiwillije Ußprobeere metmaaache',
 	'mobile-frontend-opt-out-explain' => 'Dat löht Desch mem Ußprobeere ophüre, un all de neue Saache sin affjeschalldt, Do küß widder op dä ahle Schtandatt zeröck.',
 	'mobile-frontend-disable-images' => 'Belder för et Mobiljerät ußschallde',
 	'mobile-frontend-enable-images' => 'Belder för et Mobiljerät uohlohße',
@@ -4096,7 +4071,7 @@ $messages['kv'] = array(
 	'mobile-frontend-hide-button' => 'Дзебны',
 );
 
-/** Cornish (Kernowek)
+/** Cornish (kernowek)
  * @author Kw-Moon
  * @author Nrowe
  */
@@ -4328,7 +4303,7 @@ Verzeuk 't lader nag 'ne kieër.",
 	'mobile-frontend-page-menu-language-heading' => 'Laes dees pagina in',
 );
 
-/** Lumbaart (Lumbaart) */
+/** lumbaart (lumbaart) */
 $messages['lmo'] = array(
 	'mobile-frontend-search-submit' => 'Inanz',
 	'mobile-frontend-featured-article' => 'Vedrína',
@@ -4340,7 +4315,7 @@ $messages['lmo'] = array(
 	'mobile-frontend-regular-site' => "Varda 'sta pagina chì in sü la {{SITENAME}} nurmala",
 );
 
-/** Lithuanian (Lietuvių)
+/** Lithuanian (lietuvių)
  * @author Eitvys200
  */
 $messages['lt'] = array(
@@ -4366,7 +4341,7 @@ $messages['lt'] = array(
 	'mobile-frontend-leave-feedback' => 'Palikti atsiliepimą',
 );
 
-/** Latgalian (Latgaļu) */
+/** Latgalian (latgaļu) */
 $messages['ltg'] = array(
 	'mobile-frontend-show-button' => 'Paruodeit',
 	'mobile-frontend-hide-button' => 'Nūglobuot',
@@ -4423,7 +4398,7 @@ $messages['lus'] = array(
 	'mobile-frontend-main-menu-featured' => 'Tlángrèlthang',
 );
 
-/** Latvian (Latviešu)
+/** Latvian (latviešu)
  * @author GreenZeb
  * @author Papuass
  */
@@ -4690,7 +4665,7 @@ $messages['ml'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'ഈ ലേഖനം വായിക്കാനുള്ള',
 );
 
-/** Mongolian (Монгол) */
+/** Mongolian (монгол) */
 $messages['mn'] = array(
 	'mobile-frontend-search-submit' => 'Явах',
 	'mobile-frontend-featured-article' => 'Өнөөдрийн онцлох өгүүлэл',
@@ -4702,7 +4677,7 @@ $messages['mn'] = array(
 	'mobile-frontend-regular-site' => 'Энэ хуудсыг ердийн Википедиа дээр үзэх',
 );
 
-/** Moldavian (Молдовеняскэ) */
+/** Moldavian (молдовеняскэ) */
 $messages['mo'] = array(
 	'mobile-frontend-search-submit' => 'Ду-те',
 	'mobile-frontend-random-button' => 'Аляториу',
@@ -4735,12 +4710,10 @@ $messages['mr'] = array(
 	'mobile-frontend-opt-in-message' => 'मोबाइल बीटात सामील व्हा',
 	'mobile-frontend-opt-in-yes-button' => 'हो',
 	'mobile-frontend-opt-in-no-button' => 'नाही',
-	'mobile-frontend-opt-in-title' => 'मोबाइल बीटा स्विकार',
 	'mobile-frontend-opt-in-explain' => 'बीटा जॉईन करून तुम्हाला एक्सपेरिमेंटल फिचर्सचा उपयोग करता येईल ,अर्थात बग्स आणी इतर अवघड स्थिती अनुभवण्याची मानसिक तयारी ठेवावी',
 	'mobile-frontend-opt-out-message' => 'मोबाइल बीटातनं बाहेर पडायचे ?',
 	'mobile-frontend-opt-out-yes-button' => 'हो',
 	'mobile-frontend-opt-out-no-button' => 'नाही',
-	'mobile-frontend-opt-out-title' => 'मोबाइल बीटातन बाहेर पडू',
 	'mobile-frontend-opt-out-explain' => 'मोबाइल बीटा सोडल्यावर ,सारी प्रायोगिक वैष्ट्ये बंद होतील आणि तुम्ही क्लासिक मोबाईल एक्सपिरीअन्सला वापस पोहोचाल',
 	'mobile-frontend-disable-images' => 'मोबाईल साईटवरील प्रतिमा अक्षम करा',
 	'mobile-frontend-enable-images' => 'मोबाईल साईटवरील प्रतिमा सक्षम करा',
@@ -4958,11 +4931,9 @@ $messages['nds-nl'] = array(
 	'mobile-frontend-opt-in-message' => 'Mitdoon an de mobiele bèta?',
 	'mobile-frontend-opt-in-yes-button' => 'ja',
 	'mobile-frontend-opt-in-no-button' => 'nee',
-	'mobile-frontend-opt-in-title' => 'Mitdoon mit de bèta',
 	'mobile-frontend-opt-out-message' => "Wi'j bèta uutzetten?",
 	'mobile-frontend-opt-out-yes-button' => 'ja',
 	'mobile-frontend-opt-out-no-button' => 'nee',
-	'mobile-frontend-opt-out-title' => 'Stoppen mit testen',
 	'mobile-frontend-disable-images' => 'Aofbeeldingen in de mobiele weergave uutzetten',
 	'mobile-frontend-enable-images' => 'Aofbeeldingen in de mobiele weergave anzetten',
 	'mobile-frontend-news-items' => 'In t niejs',
@@ -5114,7 +5085,7 @@ $messages['nl-informal'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Bedankt voor je terugkoppeling!',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Ranveig
  */
 $messages['nn'] = array(
@@ -5129,7 +5100,7 @@ $messages['nn'] = array(
 	'mobile-frontend-view' => 'For mobil',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Boulaur
  */
 $messages['oc'] = array(
@@ -5319,7 +5290,7 @@ $messages['pfl'] = array(
 	'mobile-frontend-footer-less' => 'wenischa',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author BeginaFelicysym
  * @author Leinad
  * @author Mikołka
@@ -5346,12 +5317,10 @@ $messages['pl'] = array(
 	'mobile-frontend-opt-in-message' => 'Przyłącz się do mobilnego interfejsu użytkownika w wersji testowej?',
 	'mobile-frontend-opt-in-yes-button' => 'tak',
 	'mobile-frontend-opt-in-no-button' => 'nie',
-	'mobile-frontend-opt-in-title' => 'Włącz testowanie',
 	'mobile-frontend-opt-in-explain' => 'Przyłączając się do wersji beta otrzymasz dostęp do eksperymentalnych funkcji, mogących wywołać błędy i problemy.',
 	'mobile-frontend-opt-out-message' => 'Pozostaw nowy mobilny interfejs użytkownika?',
 	'mobile-frontend-opt-out-yes-button' => 'tak',
 	'mobile-frontend-opt-out-no-button' => 'nie',
-	'mobile-frontend-opt-out-title' => 'Wyłącz wersję testową',
 	'mobile-frontend-opt-out-explain' => 'Wyłączając wersję beta mobilnego interfejsu wyłączysz również różne eksperymentalne funkcje i powrócisz do klasycznego interfejsu mobilnego.',
 	'mobile-frontend-disable-images' => 'Wyłącz wyświetlanie grafik w wersji mobilnej',
 	'mobile-frontend-enable-images' => 'Włącz wyświetlanie grafik w wersji mobilnej',
@@ -5406,12 +5375,10 @@ $messages['pms'] = array(
 	'mobile-frontend-opt-in-message' => 'Veul-lo giontesse a prové ij sacociàbij?',
 	'mobile-frontend-opt-in-yes-button' => 'é!',
 	'mobile-frontend-opt-in-no-button' => 'nò',
-	'mobile-frontend-opt-in-title' => 'Aceta për prové ij sacociàbij',
 	'mobile-frontend-opt-in-explain' => "Partissipand a le preuve beta, a l'avrà drit a le funsion sperimentaj, con l'arzigh d'ancontré eror e problema.",
 	'mobile-frontend-opt-out-message' => 'Chité ëd prové ij sacociàbij?',
 	'mobile-frontend-opt-out-yes-button' => 'é!',
 	'mobile-frontend-opt-out-no-button' => 'nò',
-	'mobile-frontend-opt-out-title' => "Chité la preuva beta pr'ij sacociàbij",
 	'mobile-frontend-opt-out-explain' => "An chitand la preuva beta pr'ij sacociàbij, a disabilitrà tute le funsion sperimentaj e a artornrà a l'antërfacia clàssica pr'ij sacociàbij.",
 	'mobile-frontend-disable-images' => "Disabilité le figure an sël sit pr'ij sacociàbij",
 	'mobile-frontend-enable-images' => "Abilité le figure an sël sit pr'ij sacociàbij",
@@ -5453,12 +5420,10 @@ $messages['pnb'] = array(
 	'mobile-frontend-opt-in-message' => 'موبائل بیٹا پسند کروگے؟',
 	'mobile-frontend-opt-in-yes-button' => 'ہاں',
 	'mobile-frontend-opt-in-no-button' => 'نئیں',
-	'mobile-frontend-opt-in-title' => 'موبا‏يل اوپٹ ان ٹسٹنگ لئی۔',
 	'mobile-frontend-opt-in-explain' => 'بیٹا پسند کرن نال تسیں اج کم ہوندیاں تھانواں تے آؤگے جتھے مسلے تے بگز ہوسکدے نیں۔',
 	'mobile-frontend-opt-out-message' => 'موبائل بیٹا نوں چھڈو گے ؟',
 	'mobile-frontend-opt-out-yes-button' => 'ہاں',
 	'mobile-frontend-opt-out-no-button' => 'نئیں',
-	'mobile-frontend-opt-out-title' => 'موبا‏يل اوپٹ اون ٹسٹنگ لئی۔',
 	'mobile-frontend-opt-out-explain' => 'موبائل بیٹا چذڈن نال تسیں کئی ہوندے کماں نون چھڈوگے تے کلاسک موباءل ول آجاؤگے۔',
 	'mobile-frontend-disable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں بند کرو',
 	'mobile-frontend-enable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں آن کرو',
@@ -5515,7 +5480,7 @@ $messages['ps'] = array(
 	'mobile-frontend-about-link-text' => 'په اړه',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Giro720
  * @author Hamilton Abreu
  * @author João Sousa
@@ -5539,12 +5504,10 @@ $messages['pt'] = array(
 	'mobile-frontend-opt-in-message' => 'Junta-se a nós do nosso teste opt-in da nova versão móbil?',
 	'mobile-frontend-opt-in-yes-button' => 'sim',
 	'mobile-frontend-opt-in-no-button' => 'não',
-	'mobile-frontend-opt-in-title' => 'Opt-In para Testes',
 	'mobile-frontend-opt-in-explain' => 'Isto permite-lhe entrar ao teste',
 	'mobile-frontend-opt-out-message' => 'Deixar os testes opt-in da nova versão móbil?',
 	'mobile-frontend-opt-out-yes-button' => 'sim',
 	'mobile-frontend-opt-out-no-button' => 'não',
-	'mobile-frontend-opt-out-title' => 'Sair dos testes',
 	'mobile-frontend-opt-out-explain' => 'Isto permite-lhe sair do teste',
 	'mobile-frontend-disable-images' => 'Desativar imagens no site móvel',
 	'mobile-frontend-enable-images' => 'Ativar imagens no site móvel',
@@ -5565,7 +5528,7 @@ $messages['pt'] = array(
 	'mobile-frontend-placeholder' => 'Digite sua busca aqui...',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author 555
  * @author Giro720
  * @author MetalBrasil
@@ -5587,12 +5550,10 @@ $messages['pt-br'] = array(
 	'mobile-frontend-opt-in-message' => 'Deseja participar dos testes da nova interface móvel?',
 	'mobile-frontend-opt-in-yes-button' => 'sim',
 	'mobile-frontend-opt-in-no-button' => 'não',
-	'mobile-frontend-opt-in-title' => 'Participar dos testes da interface móvel',
 	'mobile-frontend-opt-in-explain' => 'Ao participar dos testes, você terá acesso a recursos experimentais, correndo o risco de encontrar erros e problemas.',
 	'mobile-frontend-opt-out-message' => 'Deseja participar dos testes da nova interface móvel?',
 	'mobile-frontend-opt-out-yes-button' => 'sim',
 	'mobile-frontend-opt-out-no-button' => 'não',
-	'mobile-frontend-opt-out-title' => 'Abandonar os testes da interface móvel',
 	'mobile-frontend-opt-out-explain' => 'Ao abandonar os testes da interface móvel, todos os recursos experimentais serão desativados e retornará para a experiência móvel clássica.',
 	'mobile-frontend-disable-images' => 'Desativar imagens no site móvel',
 	'mobile-frontend-enable-images' => 'Ativar imagens no site móvel',
@@ -5613,7 +5574,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-placeholder' => 'Digite sua pesquisa aqui...',
 );
 
-/** Romansh (Rumantsch)
+/** Romansh (rumantsch)
  * @author Gion-andri
  * @author Kazu89
  */
@@ -5737,7 +5698,7 @@ $messages['ro'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Citiți acest articol în',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -5756,12 +5717,10 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-view-mobile' => 'Mobile',
 	'mobile-frontend-opt-in-yes-button' => 'sine',
 	'mobile-frontend-opt-in-no-button' => 'none',
-	'mobile-frontend-opt-in-title' => 'Opt-In pe Mobile beta',
 	'mobile-frontend-opt-in-explain' => "Trasenne jndr'à beta, tu puè ausà le funzionalità sperimendale, rischianne de acchià errore e casine varie.",
 	'mobile-frontend-opt-out-message' => "Lasse 'u Mobile beta?",
 	'mobile-frontend-opt-out-yes-button' => 'sine',
 	'mobile-frontend-opt-out-no-button' => 'none',
-	'mobile-frontend-opt-out-title' => 'Opt-Out pe Mobile beta',
 	'mobile-frontend-disable-images' => "Disabbilite le immaggine sus a 'u site mobile",
 	'mobile-frontend-enable-images' => "Abbilite le immaggine sus a 'u site mobile",
 	'mobile-frontend-toggle-images' => 'Immaggine $1 / $2',
@@ -5924,12 +5883,10 @@ $messages['rue'] = array(
 	'mobile-frontend-opt-in-message' => 'Возьмете участь на тестованю нового мобілного інтерфейсу?',
 	'mobile-frontend-opt-in-yes-button' => 'гей',
 	'mobile-frontend-opt-in-no-button' => 'нїт',
-	'mobile-frontend-opt-in-title' => 'Брати участь на тестованю',
 	'mobile-frontend-opt-in-explain' => 'Тото вам уможнить брати участь на тестї',
 	'mobile-frontend-opt-out-message' => 'Опустити тест нового мобілного інтерфейсу?',
 	'mobile-frontend-opt-out-yes-button' => 'гей',
 	'mobile-frontend-opt-out-no-button' => 'нїт',
-	'mobile-frontend-opt-out-title' => 'Скінчіти з тестованём',
 	'mobile-frontend-opt-out-explain' => 'Тото вам уможнить /рушыти участь на тестї',
 	'mobile-frontend-disable-images' => 'Выпнути образчікы в мобілній верзії',
 	'mobile-frontend-enable-images' => 'Занути образчікы в мобілній верзії',
@@ -5962,7 +5919,7 @@ $messages['sa'] = array(
 	'mobile-frontend-login' => 'प्रविश्यताम्',
 );
 
-/** Sakha (Саха тыла)
+/** Sakha (саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
@@ -5981,12 +5938,10 @@ $messages['sah'] = array(
 	'mobile-frontend-opt-in-message' => 'Мобил бета-барылыгар холбоноҕун дуо?',
 	'mobile-frontend-opt-in-yes-button' => 'Сөп',
 	'mobile-frontend-opt-in-no-button' => 'Суох',
-	'mobile-frontend-opt-in-title' => 'Мобил бета-барыл',
 	'mobile-frontend-opt-in-explain' => 'Бета-тургутууга холбостоххуна сорох тургутуу кыахтары туһанар буолуоҥ, ол гынан баран алҕаһы көрсөрүҥ элбиэн сөп.',
 	'mobile-frontend-opt-out-message' => 'Мобил бетаттан тахсаҕын дуо?',
 	'mobile-frontend-opt-out-yes-button' => 'сөп',
 	'mobile-frontend-opt-out-no-button' => 'Суох',
-	'mobile-frontend-opt-out-title' => 'Мобил бета-барылтан тахсыы',
 	'mobile-frontend-opt-out-explain' => 'Мобил бета-барылтан таҕыстаххына саҥа тургутар кыахтартан матыаҥ уонна урукку барылга төннүөҥ.',
 	'mobile-frontend-disable-images' => 'Мобил ситим-сир ойууларын араар',
 	'mobile-frontend-enable-images' => 'Мобил ситим-сир ойууларын холбоо',
@@ -6009,7 +5964,7 @@ $messages['sah'] = array(
 	'mobile-frontend-clear-search' => 'Сот',
 );
 
-/** Sicilian (Sicilianu)
+/** Sicilian (sicilianu)
  * @author Aushulz
  * @author Gmelfi
  */
@@ -6032,12 +5987,10 @@ $messages['scn'] = array(
 	'mobile-frontend-opt-in-message' => 'Vuoi pruvari la virsioni beta pi dispusitivi mòbbili?',
 	'mobile-frontend-opt-in-yes-button' => 'Sì',
 	'mobile-frontend-opt-in-no-button' => 'Nò',
-	'mobile-frontend-opt-in-title' => 'Juncìrisi ô test beta pi dispusitivi mòbbili',
 	'mobile-frontend-opt-in-explain' => 'Participannu â virsioni beta, ci hai la pussibbilitati di usari funziunalitati spririmintali, ma cô rìsicu di ncuntrari errura e prubblemi',
 	'mobile-frontend-opt-out-message' => 'Abbannuna la virsioni beta pi dispusitivi mòbbili',
 	'mobile-frontend-opt-out-yes-button' => 'Sì',
 	'mobile-frontend-opt-out-no-button' => 'Nò',
-	'mobile-frontend-opt-out-title' => 'Abbannunari la virsioni beta dû test pi dispusitivi mòbbili',
 	'mobile-frontend-opt-out-explain' => 'Abbannunannu la virsioni beta pi dispusitivi mòbbili, disabbìliti tutti li funzioni spirimintali e arriturni â virsioni classica pi dispusitivi mòbbili.',
 	'mobile-frontend-disable-images' => 'Disabbìlita li mmàggini supra lu situ pi dispusitivi mòbbili',
 	'mobile-frontend-enable-images' => 'Abbilita li mmàggini supra lu situ pi dispusitivi mòbbili',
@@ -6087,7 +6040,7 @@ $messages['scn'] = array(
 	'mobile-frontend-unknown-option' => 'Opzioni "$1" nun arricanusciuta',
 );
 
-/** Serbo-Croatian (Srpskohrvatski) */
+/** Serbo-Croatian (srpskohrvatski / српскохрватски) */
 $messages['sh'] = array(
 	'mobile-frontend-search-submit' => 'Idi',
 	'mobile-frontend-featured-article' => 'Odabrani članak',
@@ -6131,12 +6084,10 @@ $messages['si'] = array(
 	'mobile-frontend-opt-in-message' => 'ජංගම අත්හදා බැලීමට එකතු වෙනවද?',
 	'mobile-frontend-opt-in-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-in-no-button' => 'නැත',
-	'mobile-frontend-opt-in-title' => 'ජංගම බීටා ඇතුලත',
 	'mobile-frontend-opt-in-explain' => 'බීටා වෙත එක් වීමෙන්, ඔබ හට දෝෂ සහ වාදපද හමුවෙන අනතුරක් වියහැකි, පරීක්ෂාත්මක මුහුණුවර වෙත ප්‍රවේශ වීමේ හැකියාව ඇත.',
 	'mobile-frontend-opt-out-message' => 'ජංගම අත්හදා බැලීමෙන් ඉවත් වෙනවද?',
 	'mobile-frontend-opt-out-yes-button' => 'ඔව්',
 	'mobile-frontend-opt-out-no-button' => 'නැත',
-	'mobile-frontend-opt-out-title' => 'ජංගම බීටා පිටත',
 	'mobile-frontend-opt-out-explain' => 'ජංගම බීටා අතහැර යාමෙන්, පරීක්ෂාත්මක මුහුණුවර අක්‍රීය කොට ඔබව පැරණි ජංගම අත්දැකීම වෙත නැවත යවනු ඇත.',
 	'mobile-frontend-disable-images' => 'ජංගම අඩවියෙහි පින්තුර අක්‍රීය කරන්න',
 	'mobile-frontend-enable-images' => 'ජංගම අඩවියෙහි පින්තුර සක්‍රීය කරන්න',
@@ -6156,7 +6107,7 @@ $messages['si'] = array(
 	'mobile-frontend-placeholder' => 'ඔබේ සෙවුම මෙහි යොදන්න...',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  * @author Kusavica
  * @author Teslaton
@@ -6177,12 +6128,10 @@ $messages['sk'] = array(
 	'mobile-frontend-opt-in-message' => 'Skúsiť beta verziu mobilného rozhrania?',
 	'mobile-frontend-opt-in-yes-button' => 'Áno',
 	'mobile-frontend-opt-in-no-button' => 'Nie',
-	'mobile-frontend-opt-in-title' => 'Prihlásenie sa do programu Mobilné zobrazenie (beta)',
 	'mobile-frontend-opt-in-explain' => 'Ak zapnete beta verziu, budete mať prístup k experimentálnym funkciám, ktorý je však spojený s rizikom, že narazíte na chyby a problémy.',
 	'mobile-frontend-opt-out-message' => 'Opustiť beta verziu mobilného rozhrania?',
 	'mobile-frontend-opt-out-yes-button' => 'Áno',
 	'mobile-frontend-opt-out-no-button' => 'Nie',
-	'mobile-frontend-opt-out-title' => 'Odhlásenie sa z programu Mobilné zobrazenie (beta)',
 	'mobile-frontend-opt-out-explain' => 'Opustením beta verzie mobilného rozhrania vypnete všetky experimentálne funkcie a vrátite sa na klasické mobilné rozhranie.',
 	'mobile-frontend-disable-images' => 'Vypnúť obrázky v mobilnom rozhraní',
 	'mobile-frontend-enable-images' => 'Zapnúť obrázky v mobilnom rozhraní',
@@ -6205,7 +6154,7 @@ $messages['sk'] = array(
 	'mobile-frontend-clear-search' => 'Vyčistiť',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  * @author Irena Plahuta
  */
@@ -6228,12 +6177,10 @@ $messages['sl'] = array(
 	'mobile-frontend-opt-in-message' => 'Se pridružim mobilni beta?',
 	'mobile-frontend-opt-in-yes-button' => 'da',
 	'mobile-frontend-opt-in-no-button' => 'ne',
-	'mobile-frontend-opt-in-title' => 'Priključitev mobilni beta',
 	'mobile-frontend-opt-in-explain' => 'Če se pridružite mobilni beta, boste prejeli dostop do preizkusnih funkcij, vendar ob tem lahko naletite na hrošče in težave.',
 	'mobile-frontend-opt-out-message' => 'Zapustim mobilno beta?',
 	'mobile-frontend-opt-out-yes-button' => 'da',
 	'mobile-frontend-opt-out-no-button' => 'ne',
-	'mobile-frontend-opt-out-title' => 'Odhod iz mobilne beta',
 	'mobile-frontend-opt-out-explain' => 'Če zapustite mobilno beta, boste onemogočili vse preizkusne funkcije in se vrnili na klasično mobilno izkušnjo.',
 	'mobile-frontend-disable-images' => 'Onemogoči slike na mobilni strani',
 	'mobile-frontend-enable-images' => 'Omogoči slike na mobilni strani',
@@ -6284,7 +6231,7 @@ $messages['sl'] = array(
 	'mobile-frontend-unknown-option' => 'Neprepoznana možnost »$1«.',
 );
 
-/** Albanian (Shqip)
+/** Albanian (shqip)
  * @author Olsi
  */
 $messages['sq'] = array(
@@ -6303,12 +6250,10 @@ $messages['sq'] = array(
 	'mobile-frontend-opt-in-message' => 'Bashkohu me versionin beta për celular?',
 	'mobile-frontend-opt-in-yes-button' => 'Po',
 	'mobile-frontend-opt-in-no-button' => 'Jo',
-	'mobile-frontend-opt-in-title' => 'Versioni beta opt-in për celular',
 	'mobile-frontend-opt-in-explain' => 'Duke iu bashkuar versionit beta, ju do të keni qasje në tipare eksperimentale, me riskun e ndeshjes me probleme.',
 	'mobile-frontend-opt-out-message' => 'Doni ta lini versionin beta për celular?',
 	'mobile-frontend-opt-out-yes-button' => 'Po',
 	'mobile-frontend-opt-out-no-button' => 'Jo',
-	'mobile-frontend-opt-out-title' => 'Versioni beta opt-out për celular',
 	'mobile-frontend-opt-out-explain' => 'Duke lënë versionin beta për celular, ju do të çaktivizoni të gjitha tiparet eksperimentale dhe do të ktheheni tek përvoja e versionit klasik për celular.',
 	'mobile-frontend-disable-images' => 'Çaktivizo figurat në versionin për celular',
 	'mobile-frontend-enable-images' => 'Aktivizo figurat në versionin për celular',
@@ -6329,7 +6274,7 @@ $messages['sq'] = array(
 	'mobile-frontend-placeholder' => 'Shkruani kërkimin tuaj këtu...',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Nikola Smolenski
  * @author Rancher
  */
@@ -6349,12 +6294,10 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-opt-in-message' => 'Желите ли да се придружите бета верзији мобилног уређаја?',
 	'mobile-frontend-opt-in-yes-button' => 'да',
 	'mobile-frontend-opt-in-no-button' => 'не',
-	'mobile-frontend-opt-in-title' => 'Приступање бета верији мобилног уређаја',
 	'mobile-frontend-opt-in-explain' => 'Користећи бета верзију, добијате приступ до пробних могућности, али с ризиком да дођете до грешака и проблема.',
 	'mobile-frontend-opt-out-message' => 'Желите ли да напустите бета верзију мобилног уређаја?',
 	'mobile-frontend-opt-out-yes-button' => 'да',
 	'mobile-frontend-opt-out-no-button' => 'не',
-	'mobile-frontend-opt-out-title' => 'Напустите бета верзију мобилног уређаја',
 	'mobile-frontend-opt-out-explain' => 'Напуштањем бета верзије мобилног уређаја, одричете се свих пробних могућности и враћате се класичној мобилној верзији.',
 	'mobile-frontend-disable-images' => 'Онемогући слике на мобилним страницама',
 	'mobile-frontend-enable-images' => 'Омогући слике на мобилним страницама',
@@ -6375,7 +6318,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-placeholder' => 'Овде унесите упит за претрагу…',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'mobile-frontend-desc' => 'Korisnički deo za mobilne uređaje',
 	'mobile-frontend-search-submit' => 'Idi',
@@ -6392,12 +6335,10 @@ $messages['sr-el'] = array(
 	'mobile-frontend-opt-in-message' => 'Želite li da se pridružite beta verziji mobilnog uređaja?',
 	'mobile-frontend-opt-in-yes-button' => 'da',
 	'mobile-frontend-opt-in-no-button' => 'ne',
-	'mobile-frontend-opt-in-title' => 'Pristupanje beta veriji mobilnog uređaja',
 	'mobile-frontend-opt-in-explain' => 'Koristeći beta verziju, dobijate pristup do probnih mogućnosti, ali s rizikom da dođete do grešaka i problema.',
 	'mobile-frontend-opt-out-message' => 'Želite li da napustite beta verziju mobilnog uređaja?',
 	'mobile-frontend-opt-out-yes-button' => 'da',
 	'mobile-frontend-opt-out-no-button' => 'ne',
-	'mobile-frontend-opt-out-title' => 'Napustite beta verziju mobilnog uređaja',
 	'mobile-frontend-opt-out-explain' => 'Napuštanjem beta verzije mobilnog uređaja, odričete se svih probnih mogućnosti i vraćate se klasičnoj mobilnoj verziji.',
 	'mobile-frontend-disable-images' => 'Onemogući slike na mobilnim stranicama',
 	'mobile-frontend-enable-images' => 'Omogući slike na mobilnim stranicama',
@@ -6430,7 +6371,7 @@ $messages['su'] = array(
 	'mobile-frontend-regular-site' => 'Pidangkeun ieu kaca dina Wikipédia biasa',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Ainali
  * @author Diupwijk
  * @author Lokal Profil
@@ -6455,12 +6396,10 @@ $messages['sv'] = array(
 	'mobile-frontend-opt-in-message' => 'Gå med i mobila betaprogrammet?',
 	'mobile-frontend-opt-in-yes-button' => 'ja',
 	'mobile-frontend-opt-in-no-button' => 'nej',
-	'mobile-frontend-opt-in-title' => 'Mobil beta opt-in',
 	'mobile-frontend-opt-in-explain' => 'Genom att gå med i betaprogrammet, får du tillgång till experimentella funktioner, med risk för att stöta på problem och buggar.',
 	'mobile-frontend-opt-out-message' => 'Lämna mobila betaprogrammet?',
 	'mobile-frontend-opt-out-yes-button' => 'ja',
 	'mobile-frontend-opt-out-no-button' => 'nej',
-	'mobile-frontend-opt-out-title' => 'Mobil beta opt-out',
 	'mobile-frontend-opt-out-explain' => 'Genom att lämna det mobila betaprogrammet, kommer du inaktivera alla experimentella funktioner och återgå till den klassiska mobila upplevelsen.',
 	'mobile-frontend-disable-images' => 'Inaktivera bilder på mobilsidan',
 	'mobile-frontend-enable-images' => 'Aktivera bilder på mobil webbplats',
@@ -6677,7 +6616,7 @@ $messages['te'] = array(
 	'mobile-frontend-page-menu-contents-heading' => 'విషయాలు',
 );
 
-/** Tajik (Cyrillic script) (Тоҷикӣ) */
+/** Tajik (Cyrillic script) (тоҷикӣ) */
 $messages['tg-cyrl'] = array(
 	'mobile-frontend-search-submit' => 'Бирав',
 	'mobile-frontend-featured-article' => 'Мақолаи Баргузидаи Имрӯз',
@@ -6689,7 +6628,7 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-regular-site' => 'Намоиши ин саҳифа дар Википедиаи маъмулӣ',
 );
 
-/** Tajik (Latin script) (Tojikī) */
+/** Tajik (Latin script) (tojikī) */
 $messages['tg-latn'] = array(
 	'mobile-frontend-search-submit' => 'Birav',
 	'mobile-frontend-featured-article' => 'Maqolai Barguzidai Imrūz',
@@ -6751,7 +6690,7 @@ $messages['tl'] = array(
 	'mobile-frontend-leave-feedback-article-other-link-text' => 'Hinggil sa ibang suliranin',
 );
 
-/** Толышә зывон (Толышә зывон)
+/** толышә зывон (толышә зывон)
  * @author Гусейн
  */
 $messages['tly'] = array(
@@ -6850,7 +6789,7 @@ $messages['tr'] = array(
 	'mobile-frontend-page-menu-language' => 'Dil',
 );
 
-/** Tatar (Cyrillic script) (Татарча)
+/** Tatar (Cyrillic script) (татарча)
  * @author Ильнар
  */
 $messages['tt-cyrl'] = array(
@@ -6971,7 +6910,7 @@ $messages['ur'] = array(
 	'mobile-frontend-regular-site' => 'یہ صفحہ اصل ویکیپیڈیا پر ملاحظہ کیجئے',
 );
 
-/** Vèneto (Vèneto) */
+/** vèneto (vèneto) */
 $messages['vec'] = array(
 	'mobile-frontend-search-submit' => 'Và',
 	'mobile-frontend-featured-article' => 'Vetrina',
