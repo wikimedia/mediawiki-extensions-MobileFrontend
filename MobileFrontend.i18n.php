@@ -668,20 +668,24 @@ $messages['az'] = array(
  * @author Amire80
  * @author Haqmar
  * @author Roustammr
+ * @author Гүзәл Ситдиҡова
  * @author ҒатаУлла
  */
 $messages['ba'] = array(
 	'mobile-frontend-search-submit' => 'Күсеү',
 	'mobile-frontend-featured-article' => 'Бөгөнгө көндә иң яҡшы мәҡәлә',
 	'mobile-frontend-home-button' => 'Башына',
+	'mobile-frontend-logged-out' => 'Танылмағанһығыҙ',
+	'mobile-frontend-save-settings' => 'Көйләүҙәрҙе һаҡларға',
 	'mobile-frontend-random-button' => 'Осраҡлы',
 	'mobile-frontend-back-to-top-of-section' => 'Бер бүлеккә кире ҡайтырға',
+	'mobile-frontend-close-section' => 'Был бүлекте ябырға',
 	'mobile-frontend-show-button' => 'Күрһәтергә',
 	'mobile-frontend-hide-button' => 'Йәшерергә',
 	'mobile-frontend-regular-site' => 'Был битте ғәҙәти Википедияла ҡарарға',
 	'mobile-frontend-wml-continue' => 'Дауамы...',
 	'mobile-frontend-wml-back' => 'Кирегә...',
-	'mobile-frontend-view' => 'Мобиль версия',
+	'mobile-frontend-view' => 'Мобиль нөсхә',
 	'mobile-frontend-opt-in-message' => 'Мобиль бета-версияға бәйләнергәме?',
 	'mobile-frontend-opt-in-yes-button' => 'Эйе',
 	'mobile-frontend-opt-in-no-button' => 'Юҡ',
@@ -692,6 +696,8 @@ $messages['ba'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Кире белдереү ебәрергә',
 	'mobile-frontend-leave-feedback-link-text' => 'Мобиль арайөҙ тураһында баһаламалар',
 	'mobile-frontend-leave-feedback' => 'Баһалама яҙырға',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Дөйөм',
+	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Мәҡәлә баһаһы',
 	'mobile-frontend-feedback-no-message' => 'Рәхим итеп, бында үҙ хәбәрегеҙҙе яҙығыҙ',
 	'mobile-frontend-leave-feedback-thanks' => 'Баһаламағыҙ өсөн рәхмәт!',
 	'mobile-frontend-leave-feedback-post-error' => 'Һеҙҙен хәберҙе эшкәртеү ваҡытында хата килеп сыҡты. Зинһар, һуңыраҡ тағы ҡабатлап ҡарағыҙ.',
@@ -1580,6 +1586,7 @@ $messages['diq'] = array(
 	'mobile-frontend-save-settings' => 'Saza star ke',
 	'mobile-frontend-random-button' => 'Pelaya ke raştamê',
 	'mobile-frontend-back-to-top-of-section' => 'Yew cay ser çek',
+	'mobile-frontend-close-section' => 'Nê leti racnê',
 	'mobile-frontend-show-button' => 'Bımocne',
 	'mobile-frontend-hide-button' => 'Bınımne',
 	'mobile-frontend-empty-homepage' => 'Ena keyepela timarkerdışi rê şırê <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">tiyay buwanê</a>',
@@ -1617,6 +1624,7 @@ $messages['diq'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknik xeta',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Seran',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Wesiqe peyd rıştış',
+	'mobile-frontend-leave-feedback-email-body' => 'Xet da cori ra  şıma reca e- postay xo bınusnê.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Teknik xeta',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Seran peyd rıştış',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Heqa mı zi, ez merduma yana ez yew şirketa',
@@ -1825,6 +1833,7 @@ $messages['el'] = array(
 
 /** Esperanto (Esperanto)
  * @author ArnoLagrange
+ * @author Karika
  * @author Yekrats
  */
 $messages['eo'] = array(
@@ -1865,6 +1874,7 @@ $messages['eo'] = array(
 	'mobile-frontend-password' => 'Pasvorto:',
 	'mobile-frontend-login' => 'Ensaluti',
 	'mobile-frontend-placeholder' => 'Entajpu serĉon ĉi tie...',
+	'mobile-frontend-page-menu-language' => 'Lingvo',
 );
 
 /** Spanish (español)
@@ -3052,6 +3062,7 @@ Prošu spytajće pozdźišo hišće raz.',
 /** Hungarian (magyar)
  * @author BáthoryPéter
  * @author Dj
+ * @author Hunyadym
  * @author Misibacsi
  */
 $messages['hu'] = array(
@@ -3059,14 +3070,21 @@ $messages['hu'] = array(
 	'mobile-frontend-search-submit' => 'Menj',
 	'mobile-frontend-featured-article' => 'A nap kiemelt szócikke',
 	'mobile-frontend-home-button' => 'Kezdőlap',
+	'mobile-frontend-logged-out' => 'Nem vagy bejelentkezve',
+	'mobile-frontend-logged-in' => 'Be vagy jelentkezve $1 néven',
+	'mobile-frontend-settings-beta' => 'Béta',
+	'mobile-frontend-save-settings' => 'Beállítások mentése',
 	'mobile-frontend-random-button' => 'Véletlen lap',
 	'mobile-frontend-back-to-top-of-section' => 'Vissza egy bekezdést',
+	'mobile-frontend-close-section' => 'Szakasz bezárása',
 	'mobile-frontend-show-button' => 'Mutasd',
 	'mobile-frontend-hide-button' => 'Elrejtés',
 	'mobile-frontend-regular-site' => 'Lap megtekintése a szokásos {{SITENAME}} nézetben',
 	'mobile-frontend-wml-continue' => 'Folytatás ...',
 	'mobile-frontend-wml-back' => 'Vissza ...',
 	'mobile-frontend-view' => 'Mobil nézet',
+	'mobile-frontend-view-desktop' => 'Asztali',
+	'mobile-frontend-view-mobile' => 'Mobil',
 	'mobile-frontend-opt-in-message' => 'Csatlakozol a mobil béta teszteléséhez?',
 	'mobile-frontend-opt-in-yes-button' => 'igen',
 	'mobile-frontend-opt-in-no-button' => 'nem',
@@ -3075,10 +3093,14 @@ $messages['hu'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'igen',
 	'mobile-frontend-opt-out-no-button' => 'nem',
 	'mobile-frontend-opt-out-explain' => 'Ha kilépsz a mobil béta tesztelésből, letiltod a kísérleti funkciókat, és visszatérsz a klasszikus mobil felülethez.',
+	'mobile-frontend-images-status' => 'Képek',
 	'mobile-frontend-disable-images' => 'Képek letiltása mobil nézetben',
 	'mobile-frontend-enable-images' => 'Képek engedélyezése mobil nézetben',
-	'mobile-frontend-off' => 'Ki',
-	'mobile-frontend-on' => 'Be',
+	'mobile-frontend-toggle-images' => 'Képek $1 / $2',
+	'mobile-frontend-off' => 'ki',
+	'mobile-frontend-on' => 'be',
+	'mobile-frontend-footer-contributors' => 'Egy szócikk ugyanolyan <a href="$1">szerkesztőktől</a>, mint te.',
+	'mobile-frontend-footer-article-edit-info' => 'Utolsó szerkesztés: $1',
 	'mobile-frontend-news-items' => 'Hírek',
 	'mobile-frontend-leave-feedback-title' => 'Küldj visszajelzést a mobil nézettel kapcsolatos tapasztalataidról',
 	'mobile-frontend-leave-feedback-subject' => 'Tárgy:',
@@ -3086,13 +3108,41 @@ $messages['hu'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Visszajelzés elküldése',
 	'mobile-frontend-leave-feedback-link-text' => 'Visszajelzés a mobil felületről',
 	'mobile-frontend-leave-feedback' => 'A mobil webhellyel kapcsolatos visszajelzés',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Üzenet tárgya',
 	'mobile-frontend-leave-feedback-page-title' => 'Küldj visszajelzést a mobil nézettel kapcsolatos tapasztalataidról',
+	'mobile-frontend-leave-feedback-special-title' => 'Kapcsolatfelvétel',
+	'mobile-frontend-feedback-no-subject' => '(nincs tárgy)',
 	'mobile-frontend-leave-feedback-thanks' => 'Köszönjük a visszajelzésedet!',
+	'mobile-frontend-leave-feedback-post-error' => 'Hiba történt az üzeneted feldolgozása közben. Próbáld meg újra később!',
 	'mobile-frontend-language' => 'Nyelv',
+	'mobile-frontend-language-header' => 'A szócikk $1 nyelven elérhető',
 	'mobile-frontend-username' => 'Felhasználónév:',
 	'mobile-frontend-password' => 'Jelszó:',
 	'mobile-frontend-login' => 'Bejelentkezés',
+	'mobile-frontend-logout' => 'Kijelentkezés',
 	'mobile-frontend-placeholder' => 'Ide írd be a keresésed...',
+	'mobile-frontend-search-help' => 'Írd be felülre a keresőkifejezést, a találatok a szócikkek címeiben itt fognak megjelenni.',
+	'mobile-frontend-dismiss-notification' => 'figyelmeztetés elutasítása',
+	'mobile-frontend-clear-search' => 'Törlés',
+	'mobile-frontend-privacy-link-text' => 'Adatvédelem',
+	'mobile-frontend-about-link-text' => 'Rólunk',
+	'mobile-frontend-footer-more' => 'több',
+	'mobile-frontend-footer-less' => 'kevesebb',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'A tartalomra <a href="//hu.m.wikipedia.org/wiki/Wikipédia:CC-BY-SA-3.0?useformat=mobile">CC BY-SA 3.0</a> licenc vonatkozik',
+	'mobile-frontend-terms-use' => '<a href="//hu.m.wikipedia.org/wiki/Wikip%C3%A9dia:Felhaszn%C3%A1l%C3%A1si_felt%C3%A9telek?useformat=mobile">Felhasználási feltételek</a>',
+	'mobile-frontend-footer-contact' => 'Kapcsolatfelvétel',
+	'mobile-frontend-unknown-option' => 'Ismeretlen beállítás: "$1"',
+	'mobile-frontend-search-noresults' => 'Nincs találat a keresésedre. Változtasd meg a keresőszavakat, vagy nyomd meg a keresés gombot, hogy a szócikkeken belül is keress.',
+	'mobile-frontend-main-menu-featured' => 'Kiemelt',
+	'mobile-frontend-main-menu-nearby' => 'Közeli',
+	'mobile-frontend-main-menu-settings' => 'Beállítások',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobil oldal beállításai',
+	'mobile-frontend-main-menu-contact' => 'Kapcsolatfelvétel',
+	'mobile-frontend-page-menu-contents' => 'tartalom',
+	'mobile-frontend-page-menu-language' => 'nyelv',
+	'mobile-frontend-page-menu-contents-heading' => 'Tartalomjegyzék',
+	'mobile-frontend-page-menu-language-heading' => 'A szócikk olvasása a következő nyelven:',
 );
 
 /** Armenian (Հայերեն) */
@@ -3549,6 +3599,7 @@ $messages['ja'] = array(
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'コメントをここに入力',
 	'mobile-frontend-leave-feedback-page-title' => '携帯機器ウェブサイトのフィードバック',
 	'mobile-frontend-feedback-page' => 'Project:モバイル拡張フィードバック',
+	'mobile-frontend-leave-feedback-special-title' => 'お問い合わせ',
 	'mobile-frontend-feedback-no-subject' => '（表題なし）',
 	'mobile-frontend-feedback-no-subject-field' => '件名を入力してください',
 	'mobile-frontend-feedback-no-message' => 'ここにメッセージをお書きください',
@@ -4097,6 +4148,7 @@ $messages['lb'] = array(
 	'mobile-frontend-home-button' => 'Haaptsäit',
 	'mobile-frontend-logged-out' => 'Net ageloggt',
 	'mobile-frontend-logged-in' => 'Als $1 ageloggt',
+	'mobile-frontend-settings-description' => 'Personaliséiert Är Erfarung op Ärem mobilen Apparat mat dëse spezifesche mobilen Astellungen.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Astellunge späicheren',
 	'mobile-frontend-random-button' => 'Zoufall',
@@ -4161,6 +4213,7 @@ $messages['lb'] = array(
 	'mobile-frontend-login' => 'Aloggen',
 	'mobile-frontend-logout' => 'Ausloggen',
 	'mobile-frontend-placeholder' => 'Tippt hei a wat Dir sicht...',
+	'mobile-frontend-search-help' => "Gitt de' Wuert wat Dir sicht hei driwwer an an déi passend Artikele ginn dann hei gewisen.",
 	'mobile-frontend-dismiss-notification' => 'dës Noriicht zoumaachen',
 	'mobile-frontend-clear-search' => 'Eidel maachen',
 	'mobile-frontend-privacy-link-text' => 'Dateschutz',
@@ -4171,6 +4224,7 @@ $messages['lb'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Benotzungsbedingungen</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Net erkannten Optioun "$1".',
+	'mobile-frontend-search-noresults' => "Keen Artikel gouf beim siche fonnt. Ännert d'Critèren oder dréckt de Sichknäppchen op Ärer Tastatur fir bannen an den Artikelen ze sichen.",
 	'mobile-frontend-main-menu-featured' => 'Exzellent',
 	'mobile-frontend-main-menu-nearby' => 'Nobäi',
 	'mobile-frontend-main-menu-settings' => 'Astellungen',
@@ -7231,6 +7285,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-password' => '密码：',
 	'mobile-frontend-login' => '登录',
 	'mobile-frontend-placeholder' => '在这里输入搜索内容...',
+	'mobile-frontend-search-help' => '于上面键入要搜寻的词汇，相关文章的标题便会出现。',
 	'mobile-frontend-dismiss-notification' => '关闭该通知',
 	'mobile-frontend-clear-search' => '清除',
 	'mobile-frontend-privacy-link-text' => '隐私',
@@ -7326,6 +7381,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-login' => '登錄',
 	'mobile-frontend-logout' => '登出',
 	'mobile-frontend-placeholder' => '在這裡輸入搜索內容...',
+	'mobile-frontend-search-help' => '於上面鍵入要搜尋的詞彙，相關文章的標題便會出現。',
 	'mobile-frontend-dismiss-notification' => '關閉此通知',
 	'mobile-frontend-clear-search' => '清除',
 	'mobile-frontend-privacy-link-text' => '隱私',
