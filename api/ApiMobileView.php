@@ -28,6 +28,7 @@ class ApiMobileView extends ApiBase {
 				array( 'mobiletoken' => MobileContext::singleton()->getMobileToken() )
 			);
 			wfProfileOut( __METHOD__ );
+			return;
 		}
 
 		$prop = array_flip( $params['prop'] );
