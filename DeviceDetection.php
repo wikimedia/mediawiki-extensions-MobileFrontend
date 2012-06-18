@@ -358,7 +358,8 @@ class DeviceDetection {
 			$formatName = 'kindle';
 		} elseif ( preg_match( '/Kindle\/2.0/', $userAgent ) ) {
 			$formatName = 'kindle2';
-		} elseif ( preg_match( '/Firefox/', $userAgent ) ) {
+		} elseif ( preg_match( '/Firefox/', $userAgent ) ||
+			preg_match( '/Maemo Browser/', $userAgent ) ) {
 			$formatName = 'capable';
 		} elseif ( preg_match( '/NetFront/', $userAgent ) ) {
 			$formatName = 'netfront';

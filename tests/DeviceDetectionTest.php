@@ -35,6 +35,7 @@
 			array( 'ie', 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)' ),
 			array( 'blackberry', 'BlackBerry9300/5.0.0.716 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/133' ),
 			array( 'blackberry-lt5', 'BlackBerry7250/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1' ),
+			array( 'capable', 'Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2b6pre) Gecko/20100318 Firefox/3.5 Maemo Browser 1.7.4.8 RX-51 N900' )
 		);
 	}
 }
