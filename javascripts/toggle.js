@@ -68,17 +68,7 @@ MobileFrontend.toggle = (function() {
 			heading = h2[i];
 			if( u( heading ).hasClass( 'section_heading') ) {
 				sectionHeadings.push( heading );
-				// TODO: remove in future
-				buttons = heading.getElementsByTagName( 'button' );
-				for( a = 0; a < buttons.length; a++ ) {
-					btns.push( buttons[a] );
-				}
 			}
-		}
-
-		// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.1
-		for( i = 0; i < btns.length; i++ ) {
-			u( btns[i] ).remove();
 		}
 
 		function openSectionHandler() {
@@ -95,10 +85,6 @@ MobileFrontend.toggle = (function() {
 
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
-			heading.removeAttribute( 'onclick' ); // TODO: remove any legacy onclick handlers
-			if( heading.removeEventListener ) {
-				heading.removeEventListener( 'click' ); // TODO: Remove me! Here to support App v < 1.1 - Needed for WP7
-			}
 			heading.insertBefore( createButton(), heading.firstChild );
 			a = document.getElementById( 'anchor_' + heading.id.split( '_' )[ 1 ] );
 			if( a && inBeta ) {
@@ -124,8 +110,6 @@ MobileFrontend.toggle = (function() {
 		}
 	}
 
-	// TODO: remove in future - currently enables toggling in Wikipedia Mobile App v < 1.1
-	window.wm_toggle_section = wm_toggle_section;
 	MobileFrontend.registerModule( 'toggle' );
 	return {
 		wm_reveal_for_hash: wm_reveal_for_hash,

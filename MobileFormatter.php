@@ -186,30 +186,11 @@ class MobileFormatter extends HtmlFormatter {
 				'&#8593;' . $backToTop );
 
 		// generate the HTML we are going to inject
-		// TODO: remove legacy code for Wikipedia Mobile app < 1.3 which is not using the api
-		// when usage of said apps is low
-		$buttons = Html::element( 'button',
-				array( 'class' => 'section_heading show', 'section_id' => $this->headings ),
-				$show
-			)
-			. Html::element( 'button',
-				array( 'class' => 'section_heading hide', 'section_id' => $this->headings ),
-				$hide
-			);
 		$base = Html::openElement( 'div', array( 'class' => 'section' ) );
-		if ( $this->expandableSections ) {
-			$h2OnClick = 'javascript:wm_toggle_section(' . $this->headings . ');';
-			$base .= Html::openElement( 'h2',
-				array( 'class' => 'section_heading',
-					'id' => 'section_' . $this->headings, 'onclick' => $h2OnClick
-				)
-			);
-		} else {
-			$base .= Html::openElement( 'h2',
+		$base .= Html::openElement( 'h2',
 				array( 'class' => 'section_heading', 'id' => 'section_' . $this->headings )
 			);
-		}
-		$base .= $buttons .
+		$base .=
 			Html::rawElement( 'span',
 					array( 'id' => $headlineId ),
 					$matches[2]
