@@ -112,7 +112,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
 
 		$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
-			array( 'returnto' => $this->getTitle()->getPrefixedText() )
+			array( 'returnto' => $this->getTitle()->getPrefixedText(), 'feedbacksource' => 'MobileFrontend' )
 		);
 		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
 		$imagesSwitchTitle = SpecialPage::getTitleFor( 'MobileOptions',
