@@ -131,6 +131,10 @@ HTML;
 				'type' => 'hidden' . $displaySuffix,
 				'default' => $this->getRequest()->getText( 'returnto', '' ),
 			),
+			'source' => array(
+				'type' => 'hidden' . $displaySuffix,
+				'default' => $this->getRequest()->getText( 'feedbacksource', '' )
+			),
 			'subject' => array(
 				'type' => 'text' . $displaySuffix,
 				'maxlength' => 60,
@@ -208,7 +212,9 @@ HTML;
 
 	protected function getFormattedMessage( $form ) {
 		$rawMsg = trim( $form['message'] );
-		$msg = "{$rawMsg} ~~~~\n<br><small>User agent: <code>{$_SERVER['HTTP_USER_AGENT']}</code></small> ";
+		$feedbackSource = trim( $form['source'] );
+		$returnTo = trim( $form['returnto'] );
+		$msg = "{$rawMsg} ~~~~\n<br><small>User agent: <code>{$_SERVER['HTTP_USER_AGENT']}</code> Source: <code>{$feedbackSource}</code> Referring page: {$returnTo}</small> ";
 		return $msg;
 	}
 
