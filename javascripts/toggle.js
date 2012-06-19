@@ -57,6 +57,7 @@ MobileFrontend.toggle = (function() {
 	}
 
 	function init() {
+		u( document.documentElement ).addClass( 'togglingEnabled' );
 		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
 			sectionHeadings = [], content,
 			inBeta = u( document.body ).hasClass( 'beta' );

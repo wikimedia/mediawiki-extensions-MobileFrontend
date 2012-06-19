@@ -70,7 +70,7 @@ class SkinMobile extends SkinMobileBase {
 		$bottomScripts = implode( "\n", $scriptLinks );
 		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
 		$tpl->set( 'preambleScript', $device['supports_javascript'] ?
-			"document.documentElement.className = 'jsEnabled togglingEnabled page-loading';" : '' );
+			"document.documentElement.className = 'jsEnabled page-loading';" : '' );
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
 		$tpl->set( 'stopMobileRedirectCookieDuration', $context->getUseFormatCookieDuration() );
