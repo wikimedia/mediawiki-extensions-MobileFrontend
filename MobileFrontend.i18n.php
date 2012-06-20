@@ -6629,6 +6629,7 @@ $messages['ta'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Jprmvnvijay5
  * @author Veeven
  * @author Wellwisher
  */
@@ -6681,9 +6682,9 @@ $messages['te'] = array(
 	'mobile-frontend-login' => 'ప్రవేశించండి',
 	'mobile-frontend-placeholder' => 'మీ శోధనపదమును ఇక్కడ రాయుము',
 	'mobile-frontend-search-help' => 'పైన శోధనపదమును రాసినచో, సంబంధిత సంచికలు ఇక్కడ కనిపించును',
-	'mobile-frontend-dismiss-notification' => 'ఈ ప్రకటనను తొలగించు',
+	'mobile-frontend-dismiss-notification' => 'ఈ చాటింపును తొలగించు',
 	'mobile-frontend-clear-search' => 'తుడిచివేయి',
-	'mobile-frontend-privacy-link-text' => 'గోప్యత',
+	'mobile-frontend-privacy-link-text' => 'మరుగు',
 	'mobile-frontend-about-link-text' => 'గురించి',
 	'mobile-frontend-footer-more' => 'ఇంకా',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
