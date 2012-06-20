@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAOX///5w\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 499,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-20T16:18:17Z",
+      "side": 1,
+      "message": "I still don\u0027t like the growth of every page\u0027s size.",
+      "revId": "4b9698497fefff3162d1c0cba562512424001da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAOX///6I\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-20T16:18:17Z",
+      "side": 1,
+      "message": "This is unmaintainable, use SiteMatrix.",
+      "revId": "4b9698497fefff3162d1c0cba562512424001da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAOX///6E\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-20T16:18:17Z",
+      "side": 1,
+      "message": "Main pages in other languages have different titles.",
+      "revId": "4b9698497fefff3162d1c0cba562512424001da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAOX///6A\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-20T16:18:17Z",
+      "side": 1,
+      "message": "Not localised",
+      "revId": "4b9698497fefff3162d1c0cba562512424001da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAOX///50\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-20T16:18:17Z",
+      "side": 1,
+      "message": "Non-standard name for inputs, standard would be wpSomething",
+      "revId": "4b9698497fefff3162d1c0cba562512424001da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
