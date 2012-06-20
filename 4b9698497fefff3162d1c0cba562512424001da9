@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAOX///r0\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-06-20T21:06:14Z",
+      "side": 1,
+      "message": "Does this not redirect to the correct main page if it exists? If not what would you suggest instead.",
+      "parentUuid": "AAAAOX///6E\u003d",
+      "revId": "4b9698497fefff3162d1c0cba562512424001da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAOX///6A\u003d",
         "filename": "specials/SpecialMobileOptions.php",
         "patchSetId": 7
@@ -81,6 +99,24 @@
       "writtenOn": "2012-06-20T16:18:17Z",
       "side": 1,
       "message": "Non-standard name for inputs, standard would be wpSomething",
+      "revId": "4b9698497fefff3162d1c0cba562512424001da9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAOX///r4\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-06-20T21:06:14Z",
+      "side": 1,
+      "message": "Can you link me to a wiki page with these guidelines?",
+      "parentUuid": "AAAAOX///50\u003d",
       "revId": "4b9698497fefff3162d1c0cba562512424001da9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
