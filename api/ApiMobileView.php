@@ -6,7 +6,7 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 2;
 
-	private $followRedirects, $noHeadings, $mainPage;
+	private $followRedirects, $noHeadings, $mainPage, $noTransform;
 	/**
 	 * @var File
 	 */
@@ -35,6 +35,7 @@ class ApiMobileView extends ApiBase {
 		$sectionProp = array_flip( $params['sectionprop'] );
 		$this->followRedirects = $params['redirect'] == 'yes';
 		$this->noHeadings = $params['noheadings'];
+		$this->noTransform = $params['notransform'];
 
 		$title = Title::newFromText( $params['page'] );
 		if ( !$title ) {
@@ -136,12 +137,12 @@ class ApiMobileView extends ApiBase {
 		}
 		$latest = $wp->getLatest();
 		if ( $this->file ) {
-			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->file->getSha1() );
+			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->noTransform, $this->file->getSha1() );
 			$cacheExpiry = 3600;
 		} else {
 			$parserOptions = ParserOptions::newFromContext( $this );
 			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
-			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $parserCacheKey );
+			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->noTransform, $parserCacheKey );
 		}
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
@@ -161,8 +162,10 @@ class ApiMobileView extends ApiBase {
 			'HTML'
 		);
 		$mf->removeImages( $noImages );
-		$mf->filterContent();
-		$mf->setIsMainPage( $this->mainPage );
+		if ( !$this->noTransform ) {
+			$mf->filterContent();
+			$mf->setIsMainPage( $this->mainPage );
+		}
 		$html = $mf->getText();
 		if ( $this->mainPage || $this->file ) {
 			$data = array(
@@ -244,6 +247,7 @@ class ApiMobileView extends ApiBase {
 			),
 			'noimages' => false,
 			'noheadings' => false,
+			'notransform' => false,
 		);
 	}
 
@@ -262,6 +266,7 @@ class ApiMobileView extends ApiBase {
 			'sectionprop' => 'What information about sections to get',
 			'noimages' => 'Return HTML without images',
 			'noheadings' => "Don't include headings in output",
+			'notransform' => "Don't transform HTML into mobile-specific version",
 		);
 	}
 
