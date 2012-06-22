@@ -2364,7 +2364,7 @@ $messages['fr'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Il y a eu une erreur de traitement de votre message. Veuillez réessayer plus tard.',
 	'mobile-frontend-language' => 'Langue :',
 	'mobile-frontend-language-header' => 'Cet article est disponible en $1 {{PLURAL:$1|langue|langues}}',
-	'mobile-frontend-username' => "Nom d'utilisateur :",
+	'mobile-frontend-username' => 'Nom d’utilisateur :',
 	'mobile-frontend-password' => 'Mot de passe :',
 	'mobile-frontend-login' => 'Se connecter',
 	'mobile-frontend-logout' => 'Déconnexion',
@@ -6727,7 +6727,7 @@ $messages['te'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'మీ ప్రతిస్పందనకు కృతజ్ఞతలు!',
 	'mobile-frontend-leave-feedback-post-error' => 'ఈ సందేశాన్ని పరిక్రియాపన చెయ్యడంలో పొరపాటు జరిగింది. దయచేసి కాసేపాగి ప్రయత్నించండి.',
 	'mobile-frontend-language' => 'భాష:',
-	'mobile-frontend-language-header' => 'ఈ వ్యాసం $1 భాషలలో లభ్యమవుతూంది',
+	'mobile-frontend-language-header' => 'ఈ వ్యాసం $1 భాషలలో దొరుకును',
 	'mobile-frontend-username' => 'వాడుకరి పేరు:',
 	'mobile-frontend-password' => 'సంకేతపదం:',
 	'mobile-frontend-login' => 'ప్రవేశించండి',
@@ -6932,7 +6932,7 @@ $messages['tr'] = array(
 	'mobile-frontend-featured-article' => 'Haftanın Seçkin Maddesi',
 	'mobile-frontend-home-button' => 'Ana',
 	'mobile-frontend-settings-beta' => 'Deneme',
-	'mobile-frontend-save-settings' => 'Ayarları Kaydet',
+	'mobile-frontend-save-settings' => 'Ayarları kaydet',
 	'mobile-frontend-random-button' => 'Rastgele',
 	'mobile-frontend-back-to-top-of-section' => 'Bir Bölüm Geri Atla',
 	'mobile-frontend-close-section' => 'Bu bölümü kapat',
@@ -6988,7 +6988,7 @@ $messages['tr'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Kullanım Koşulları</a>',
 	'mobile-frontend-footer-contact' => 'İletişim',
 	'mobile-frontend-main-menu-settings' => 'Ayarlar',
-	'mobile-frontend-page-menu-language' => 'Dil',
+	'mobile-frontend-page-menu-language' => 'dil',
 );
 
 /** Tatar (Cyrillic script) (татарча)
