@@ -4216,6 +4216,18 @@ $messages['kw'] = array(
 	'mobile-frontend-regular-site' => 'Gwel desktop',
 );
 
+/** Kirghiz (Кыргызча)
+ * @author Chorobek
+ */
+$messages['ky'] = array(
+	'mobile-frontend-username' => 'Колдонуучунун аты:',
+	'mobile-frontend-password' => 'Сырсөз:',
+	'mobile-frontend-login' => 'Кирүү',
+	'mobile-frontend-logout' => 'Чыгуу',
+	'mobile-frontend-placeholder' => 'Издегениңизди бул жакка жазыңыз',
+	'mobile-frontend-privacy-link-text' => 'Купуялыкты сактоо',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
