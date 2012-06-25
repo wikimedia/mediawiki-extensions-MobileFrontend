@@ -11,6 +11,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 }
 mw.mobileFrontend = (function() {
 	var utilities, modules = [], browserScore = 2000,
+		scrollY,
 		doc = document.documentElement;
 
 	function getBrowserScore() {
@@ -64,11 +65,18 @@ mw.mobileFrontend = (function() {
 		}
 		utilities( document.documentElement ).removeClass( 'page-loading' );
 	}
+
+	// Try to scroll and hide URL bar
+	scrollY = window.scrollY || 0;
+	if( !window.location.hash && scrollY < 10 ) {
+		window.scrollTo( 0, 1 );
+	}
+
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var languageSelection, contentEl = document.getElementById( 'content' ),
 			mainPage = document.getElementById( 'mainpage' ),
-			scrollY, h2;
+			h2;
 
 		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
 			h2 = document.createElement( 'h2' );
@@ -106,12 +114,6 @@ mw.mobileFrontend = (function() {
 		}
 		scoreBrowser();
 		fixBrowserBugs();
-
-		// Try to scroll and hide URL bar
-		scrollY = window.scrollY || 0;
-		if( !window.location.hash && scrollY < 10 ) {
-			window.scrollTo( 0, 1 );
-		}
 
 		initModules();
 	}
