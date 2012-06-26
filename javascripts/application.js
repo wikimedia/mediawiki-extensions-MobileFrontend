@@ -1,7 +1,17 @@
 /*global document, window, mw, navigator, mwMobileFrontendConfig, jQuery */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true, sub:true */
+/* some polyfill */
+if( typeof Array.prototype.forEach === 'undefined' ) {
+	Array.prototype.forEach = function( callback ) {
+		var i;
+		for( i = 0; i < this.length; i++ ) {
+			callback( this[ i ], i );
+		}
+	};
+}
 mw.mobileFrontend = (function() {
-	var utilities, modules = [], browserScore = 2000;
+	var utilities, modules = [], browserScore = 2000,
+		doc = document.documentElement;
 
 	function getBrowserScore() {
 		return browserScore;
@@ -9,6 +19,27 @@ mw.mobileFrontend = (function() {
 
 	function message( name ) {
 		return mwMobileFrontendConfig.messages[name] || '';
+	}
+
+	// TODO: only apply to places that need it
+	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
+	// https://github.com/Modernizr/Modernizr/issues/167
+	function supportsPositionFixed() {
+		// TODO: don't use device detection
+		var agent = navigator.userAgent,
+			support = false,
+			supportedAgents = [
+			// match anything over Webkit 534
+			/AppleWebKit\/(53[4-9]|5[4-9]\d?|[6-9])\d?\d?/,
+			// Android 3+
+			/Android [3-9]/
+		];
+		supportedAgents.forEach( function( item, i ) {
+			if( agent.match( item ) ) {
+				support = true;
+			}
+		} );
+		return support;
 	}
 
 	function registerModule( module, minScore ) {
@@ -43,6 +74,10 @@ mw.mobileFrontend = (function() {
 			h2 = document.createElement( 'h2' );
 			h2.innerHTML = message( 'empty-homepage' );
 			mainPage.appendChild( h2 );
+		}
+
+		if( supportsPositionFixed() ) {
+			utilities( doc ).addClass( 'supportsPositionFixed' );
 		}
 
 		// when rotating to landscape stop page zooming on ios
@@ -217,6 +252,7 @@ mw.mobileFrontend = (function() {
 		setting: function( name ) {
 			return mwMobileFrontendConfig.settings[name] || '';
 		},
+		supportsPositionFixed: supportsPositionFixed,
 		utils: utilities
 	};
 

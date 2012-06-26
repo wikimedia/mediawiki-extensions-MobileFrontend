@@ -3,7 +3,8 @@
 (function( MobileFrontend ) {
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
-		var calculatePosition = function() {}, wasVisible;
+		var calculatePosition = function() {}, wasVisible,
+			supportsPositionFixed = MobileFrontend.supportsPositionFixed;
 
 		function collect() {
 			var references = {};
@@ -15,15 +16,6 @@ if( typeof jQuery !== 'undefined' ) {
 			return references;
 		}
 
-		// TODO: only apply to places that need it
-		// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
-		// https://github.com/Modernizr/Modernizr/issues/167
-		function supportsPositionFixed() {
-			// TODO: don't use device detection
-			var agent = navigator.userAgent;
-			// match anything over Webkit 534
-			return agent.match( /AppleWebKit\/(53[4-9]|5[4-9]\d?|[6-9])\d?\d?/ ) ? true : false;
-		}
 		if( !supportsPositionFixed() ) {
 			calculatePosition = function() {
 				var h = $( '#mf-references' ).outerHeight();
@@ -90,7 +82,7 @@ if( typeof jQuery !== 'undefined' ) {
 					$( '#mf-references' ).fadeOut( options.animationSpeed );
 				} else {
 					top = getReferenceTop();
-					if(! supportsPositionFixed() ) {
+					if( !supportsPositionFixed() ) {
 						$( '#mf-references' ).show().animate( { top: top }, { duration: options.animationSpeed,
 								complete: function() {
 									$( '#mf-references' ).hide();
@@ -126,7 +118,7 @@ if( typeof jQuery !== 'undefined' ) {
 					} else if( options.animation === 'fade' ){
 						$( '#mf-references' ).fadeIn( options.animationSpeed );
 					} else {
-						if(! supportsPositionFixed() ) {
+						if( !supportsPositionFixed() ) {
 							top = getReferenceTop();
 							oh = $( '#mf-references' ).outerHeight();
 							$( '#mf-references' ).show().css( { 'top': top } ).
