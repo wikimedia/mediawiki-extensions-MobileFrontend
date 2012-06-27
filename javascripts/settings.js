@@ -129,7 +129,7 @@ MobileFrontend.settings = (function() {
 		// convert from seconds to days
 		formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
 		// expire the mf_mobileFormat cookie
-		MobileFrontend.settings.writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
+		writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
 
 		// get stopMobileRedirect cookie info
 		stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
@@ -141,7 +141,7 @@ MobileFrontend.settings = (function() {
 
 		if ( hookOptions !== 'toggle_view_desktop' ) {
 			// set the stopMobileRedirect cookie
-			MobileFrontend.settings.writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
+			writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
 		}
 	}
 
