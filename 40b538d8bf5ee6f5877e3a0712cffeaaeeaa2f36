@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAO3///xs\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-27T14:19:59Z",
+      "side": 1,
+      "message": "\"site language\" is the UI language which can be different fro content language. This switch is about switching between *sites* in different languages.",
+      "revId": "40b538d8bf5ee6f5877e3a0712cffeaaeeaa2f36",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
