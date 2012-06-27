@@ -48,13 +48,6 @@ MobileFrontend.settings = (function() {
 		return null;
 	}
 
-	function saveMobileToken( mobileToken ) {
-		var cookiePath = MobileFrontend.setting( 'useFormatCookiePath' ),
-			mobileTokenCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' );
-		writeCookie( mobileTokenCookieName,
-			mobileToken, 1, cookiePath, mobileTokenCookieDomain );
-	}
-
 	function updateQueryStringParameter( a, k, v ) {
 		var re = new RegExp( "([?|&])" + k + "=.*?(&|$)", "i" ),
 			rtn,
@@ -83,10 +76,12 @@ MobileFrontend.settings = (function() {
 			mobileToken = mobileviewElements[0].getAttribute( 'mobiletoken' );
 		}
 		imagetoggle = document.getElementById( 'imagetoggle' );
-		if ( mobileToken && imagetoggle.href ) {
-			imagetoggle.setAttribute( 'href',
-				addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
-			saveMobileToken( mobileToken );
+		if ( mobileToken ) {
+			writeCookie( mobileTokenCookieName, mobileToken, 1 );
+			if( imagetoggle && imagetoggle.getAttribute( 'href' ) ) {
+				imagetoggle.setAttribute( 'href',
+					addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
+			}
 		}
 	}
 
