@@ -37,10 +37,12 @@ mw.mobileFrontend = (function() {
 	function init() {
 		var languageSelection, contentEl = document.getElementById( 'content' ),
 			mainPage = document.getElementById( 'mainpage' ),
-			scrollY;
+			scrollY, h2;
 
 		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
-			contentEl.innerHTML = message( 'empty-homepage' );
+			h2 = document.createElement( 'h2' );
+			h2.innerHTML = message( 'empty-homepage' );
+			mainPage.appendChild( h2 );
 		}
 
 		// when rotating to landscape stop page zooming on ios
