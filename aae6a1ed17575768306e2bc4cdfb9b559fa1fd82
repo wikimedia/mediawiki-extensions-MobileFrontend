@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAO3///vA\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-27T15:03:49Z",
+      "side": 1,
+      "message": "This works only in English, use isSpecial( \u0027MobileFeedback\u0027 )",
+      "revId": "aae6a1ed17575768306e2bc4cdfb9b559fa1fd82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
