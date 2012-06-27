@@ -521,6 +521,7 @@ class ExtMobileFrontend extends ContextSource {
 
 		if ( $this->getRequest()->getText( 'format' ) === 'json' ) {
 			wfProfileIn( __METHOD__ . '-json' );
+			wfDebugLog( 'json-hack', $this->getRequest()->getHeader( 'User-Agent' ) . "\n" );
 			header( 'Content-Type: application/javascript' );
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
