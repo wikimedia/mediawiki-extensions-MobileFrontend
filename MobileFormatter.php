@@ -345,9 +345,10 @@ class MobileFormatter extends HtmlFormatter {
 			if ( $element->hasAttribute( 'id' ) ) {
 				$id = $element->getAttribute( 'id' );
 				if ( !in_array( $id, $commonAttributes ) ) {
-					$elementTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
-					if( $elementTitle ) {
-						$h2UnknownMobileSection = $mainPage->createElement( 'h2', $elementTitle );
+					$sectionTitle = $element->hasAttribute( 'title' ) ? $element->getAttribute( 'title' ) : '';
+					if( $sectionTitle !== '' ) {
+						$element->removeAttribute( 'title' );
+						$h2UnknownMobileSection = $mainPage->createElement( 'h2', $sectionTitle );
 						$content->appendChild( $h2UnknownMobileSection );
 					}
 					$br = $mainPage->createElement( 'br' );
