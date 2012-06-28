@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAPX///v8\u003d",
+        "filename": "skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-28T23:23:09Z",
+      "side": 1,
+      "message": "Does it work in WML? If not, this should go to SkinMobile",
+      "revId": "5aa18bd81499af5f067187035365bee38b811447",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAPX///wA\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-28T23:23:09Z",
+      "side": 1,
+      "message": "Post to it /Language should be handled in a separate function, not in submitSettingsForm()",
+      "revId": "5aa18bd81499af5f067187035365bee38b811447",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAPX///wE\u003d",
+        "filename": "specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-28T23:23:09Z",
+      "side": 1,
+      "message": "aaaa!",
+      "revId": "5aa18bd81499af5f067187035365bee38b811447",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
