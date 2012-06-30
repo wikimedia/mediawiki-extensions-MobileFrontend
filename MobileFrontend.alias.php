@@ -35,6 +35,11 @@ $specialPageAliases['ko'] = array(
 	'MobileOptions' => array( '모바일옵션', '모바일설정' ),
 );
 
+/** Luxembourgish (Lëtzebuergesch) */
+$specialPageAliases['lb'] = array(
+	'MobileOptions' => array( 'Mobil_Optiounen' ),
+);
+
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'MobileFrontend' => array( 'МобиленПосредник' ),
