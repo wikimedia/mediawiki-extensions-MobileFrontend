@@ -312,7 +312,7 @@ $messages['am'] = array(
 	'mobile-frontend-hide-button' => 'ደብቅ',
 );
 
-/** Aragonese (Aragonés)
+/** Aragonese (aragonés)
  * @author Juanpabl
  */
 $messages['an'] = array(
@@ -797,7 +797,7 @@ $messages['bar'] = array(
 	'mobile-frontend-clear-search' => 'Laarn',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Renessaince
@@ -1368,7 +1368,7 @@ $messages['cs'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Přečíst si tento článek v',
 );
 
-/** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
+/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
 $messages['cu'] = array(
 	'mobile-frontend-search-submit' => 'прѣиди',
 	'mobile-frontend-home-button' => 'главьна страница',
@@ -1691,7 +1691,7 @@ $messages['diq'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Enê wesiqi bıwanê',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -2609,7 +2609,7 @@ $messages['gd'] = array(
 	'mobile-frontend-regular-site' => 'Seall an duilleag seo air an Uicipeid àbhaisteach',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author MetalBrasil
  * @author Toliño
  */
@@ -3079,7 +3079,7 @@ $messages['hr'] = array(
 	'mobile-frontend-opt-out-no-button' => 'Ne',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
@@ -4166,11 +4166,17 @@ $messages['ksh'] = array(
 	'mobile-frontend-search-submit' => 'Lohß Jonn!',
 	'mobile-frontend-featured-article' => 'Der Atikel vum Daach',
 	'mobile-frontend-home-button' => 'Houpsigg',
+	'mobile-frontend-logged-out' => 'Nit enjelogg',
+	'mobile-frontend-logged-in' => 'Bes als $1 enjelogg.',
+	'mobile-frontend-settings-description' => 'Met heh dä Enschtällonge kanns De Dinge Zohjang för Mobiljerääte för Ding Bedörfniße paraat maache.',
+	'mobile-frontend-settings-beta' => 'Betta',
+	'mobile-frontend-save-settings' => 'Enschtellunge faßhallde',
 	'mobile-frontend-random-button' => 'Zohfallsigg',
 	'mobile-frontend-back-to-top-of-section' => 'Jangk ene Afschnett zerök',
+	'mobile-frontend-close-section' => 'Donn dä Afschnet heh aan et Ängk bränge',
 	'mobile-frontend-show-button' => 'Zeisch!',
 	'mobile-frontend-hide-button' => 'Vershteishe!',
-	'mobile-frontend-regular-site' => 'Bekik heh di Sigg en de nomaale {{SITENAME}}',
+	'mobile-frontend-regular-site' => 'jangk op de nomaale Belscherrem',
 	'mobile-frontend-wml-continue' => 'Wiggermaache&nbsp;...',
 	'mobile-frontend-wml-back' => 'Retuur&nbsp;...',
 	'mobile-frontend-view' => 'Aansech om Mobiljerät',
@@ -4182,8 +4188,12 @@ $messages['ksh'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'jo',
 	'mobile-frontend-opt-out-no-button' => 'nä',
 	'mobile-frontend-opt-out-explain' => 'Dat löht Desch mem Ußprobeere ophüre, un all de neue Saache sin affjeschalldt, Do küß widder op dä ahle Schtandatt zeröck.',
+	'mobile-frontend-images-status' => 'Belder',
 	'mobile-frontend-disable-images' => 'Belder för et Mobiljerät ußschallde',
 	'mobile-frontend-enable-images' => 'Belder för et Mobiljerät uohlohße',
+	'mobile-frontend-off' => 'Uß',
+	'mobile-frontend-on' => 'Aan',
+	'mobile-frontend-footer-contributors' => 'Enne Atikel vun <a href="$1">Metmaachere</a> wi Do eine bes.',
 	'mobile-frontend-news-items' => 'En de Präß',
 	'mobile-frontend-leave-feedback-title' => 'Jiv ons Röckmäldunge övver de !!FUZY!!ßait för Mobiljeräte',
 	'mobile-frontend-leave-feedback-notice' => 'Ding Röckmälunge helfe met, dat De met de Mobiljeräte besser heh bedeent wees.
@@ -4195,13 +4205,38 @@ För Ding Röckmälonge jällte uns Notzongesbedenonge.',
 	'mobile-frontend-leave-feedback-submit' => 'Lohß jonn!',
 	'mobile-frontend-leave-feedback-link-text' => 'Röckmäldonge övver de Zohsazprojramme för Mobiljerääte',
 	'mobile-frontend-leave-feedback' => 'Rückmäldonge övver der Zohjang för Mobiljerääte',
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'E täschnesch Probleem',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Alljemein',
+	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Enschäzonge för Sigge',
+	'mobile-frontend-leave-feedback-email-body' => 'Donn Ding <i lang="en">e-mail</i> övver heh dä Linnesch enjävve.',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'E täschnesch Probleem',
 	'mobile-frontend-leave-feedback-page-title' => 'Jiv ons Röckmäldunge övver de !!FUZY!!ßait för Mobiljeräte',
+	'mobile-frontend-feedback-page' => 'Project:Röckmäldonge för der Zohjang för Mobiljerääte',
+	'mobile-frontend-feedback-no-subject' => '(Kei Theema)',
+	'mobile-frontend-feedback-no-subject-field' => 'Donn e Theema enjävve',
+	'mobile-frontend-feedback-no-message' => 'Jivv_en Nohreesch heh en',
 	'mobile-frontend-leave-feedback-thanks' => 'Mer bedanke uns för Ding Rökmäldong.',
 	'mobile-frontend-language' => 'Shprooch',
+	'mobile-frontend-language-header' => 'Heh dä Atikel jidd_et en {{PLURAL:$1|eine Schprooch|$1 Schprooche|keine Schprooch}}.',
 	'mobile-frontend-username' => 'Metmaacher Name:',
 	'mobile-frontend-password' => 'Paßwoot:',
 	'mobile-frontend-login' => 'Enlogge',
+	'mobile-frontend-logout' => 'Ußlogge',
 	'mobile-frontend-placeholder' => 'Jiv heh en, wat De söhke wells&nbsp;&hellip;',
+	'mobile-frontend-clear-search' => 'Läddesch maache',
+	'mobile-frontend-about-link-text' => 'Övver',
+	'mobile-frontend-footer-more' => 'mieh',
+	'mobile-frontend-footer-less' => 'winnijer',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-contact' => 'Kumtak',
+	'mobile-frontend-main-menu-nearby' => 'En de Nöh',
+	'mobile-frontend-main-menu-settings' => 'Enschtällonge',
+	'mobile-frontend-main-menu-settings-heading' => 'Enschtällonge för Mobiljerääte',
+	'mobile-frontend-main-menu-contact' => 'Kumtak',
+	'mobile-frontend-page-menu-contents' => 'Enhalt',
+	'mobile-frontend-page-menu-language' => 'Schprooch',
+	'mobile-frontend-page-menu-contents-heading' => 'Enhallde',
+	'mobile-frontend-page-menu-language-heading' => 'Donn heh dä Atikel lässe op',
 );
 
 /** Kurdish (Kurdî) */
@@ -6060,7 +6095,7 @@ $messages['ru'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Эта статья на других языках',
 );
 
-/** Rusyn (Русиньскый)
+/** Rusyn (русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
@@ -6658,7 +6693,7 @@ $messages['sw'] = array(
 	'mobile-frontend-regular-site' => 'Onesha ukurasa huu katika {{SITENAME}} ya kawaida',
 );
 
-/** Silesian (Ślůnski) */
+/** Silesian (ślůnski) */
 $messages['szl'] = array(
 	'mobile-frontend-home-button' => 'Přodńo zajta',
 );
