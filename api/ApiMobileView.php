@@ -171,6 +171,7 @@ class ApiMobileView extends ApiBase {
 			$data = array(
 				'sections' => array(),
 				'text' => array( $html ),
+				'refsections' => array(),
 			);
 		} else {
 			$data = array();
