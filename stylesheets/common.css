@@ -259,11 +259,11 @@ img.thumbborder {
 	border: 1px solid #cccccc;
 }
 
-.floatright {
+/* @noflip */div.floatright, table.floatright {
 	float: right;
 }
 
-.floatleft {
+/* @noflip */div.floatleft, table.floatright {
 	float: left;
 }
 
