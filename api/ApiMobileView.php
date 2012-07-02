@@ -48,6 +48,10 @@ class ApiMobileView extends ApiBase {
 			$this->dieUsageMsg( array( 'missingtitle', $params['page'] ) );
 		}
 		$this->mainPage = $title->isMainPage();
+		if ( $this->mainPage && $this->noHeadings ) {
+			$this->noHeadings = false;
+			$this->setWarning( "``noheadings'' makes no sense on the main page, ignoring" );
+		}
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'normalizedtitle' => $title->getPrefixedText() )
