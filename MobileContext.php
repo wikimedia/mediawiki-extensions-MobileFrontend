@@ -704,40 +704,41 @@ class MobileContext extends ContextSource {
 	public function toggleView( $view, $temporary = false ) {
 		global $wgMobileUrlTemplate;
 
-		$context = MobileContext::singleton();
+		$url = $this->getTitle()->getFullURL();
+
 		if ( $view == 'mobile' ) {
 			// unset stopMobileRedirect cookie
-			if ( !$temporary ) $context->unsetStopMobileRedirectCookie();
+			if ( !$temporary ) {
+				$this->unsetStopMobileRedirectCookie();
+			}
 
 			// if no mobileurl template, set mobile cookie
 			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				if ( !$temporary ) $context->setUseFormatCookie();
-				$context->setUseFormat( $view );
+				if ( !$temporary ) {
+					$this->setUseFormatCookie();
+				}
+				$this->setUseFormat( $view );
 			} else {
 				// else redirect to mobile domain
-				$currentUrl = wfExpandUrl( $this->getRequest()->getRequestURL() );
-				$currentUrl = $this->removeQueryStringParameter( $currentUrl, 'mobileaction' );
-				$mobileUrl = $context->getMobileUrl( $currentUrl );
+				$mobileUrl = $this->getMobileUrl( $url );
 				$this->getOutput()->redirect( $mobileUrl, 301 );
 			}
 		} elseif ( $view == 'desktop' ) {
 			// set stopMobileRedirect cookie
 			if ( !$temporary ) {
-				$context->setStopMobileRedirectCookie();
+				$this->setStopMobileRedirectCookie();
 				// unset useformat cookie
-				if ( $context->getUseFormatCookie() == "true" ) {
-					$context->unsetUseFormatCookie();
+				if ( $this->getUseFormatCookie() == "true" ) {
+					$this->unsetUseFormatCookie();
 				}
 			}
 
 			// if no mobileurl template, unset useformat cookie
 			if ( !strlen( trim( $wgMobileUrlTemplate ) ) ) {
-				$context->setUseFormat( $view );
+				$this->setUseFormat( $view );
 			} else {
 				// if mobileurl template, redirect to desktop domain
-				$currentUrl = wfExpandUrl( $this->getRequest()->getRequestURL() );
-				$currentUrl = $this->removeQueryStringParameter( $currentUrl, 'mobileaction' );
-				$desktopUrl = $context->getDesktopUrl( $currentUrl );
+				$desktopUrl = $this->getDesktopUrl( $url );
 				$this->getOutput()->redirect( $desktopUrl, 301 );
 			}
 		}
