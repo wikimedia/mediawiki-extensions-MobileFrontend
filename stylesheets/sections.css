@@ -84,6 +84,8 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	-webkit-tap-highlight-color: normal; /* fix for Bug 36196 */
 }
 
+.page-loading .section_anchors,
+.page-loading .content_block,
 .togglingEnabled .content_block {
 	display: none;
 }
