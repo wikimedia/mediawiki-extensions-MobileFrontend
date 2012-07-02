@@ -103,7 +103,38 @@ MobileFrontend.navigation = (function( $ ) {
 		createOverlay( message( 'language-heading' ), ul );
 	}
 
+	/* Fixed navigation */
+	function setupScrollBehaviour() {
+		var y = window.scrollY, threshold = 5, timeout,
+			$header = $( '#mw-mf-header' );
+		function scroll() {
+			var newY = window.scrollY,
+				navVisible = $( '#mw-mf-nav' ).is( ':visible' ),
+				visible = $header.is( ':visible' );
+			if ( ( newY < threshold * 2 || newY < y - threshold ) ) {  // reverse scroll
+				window.clearTimeout( timeout );
+				timeout = window.setTimeout( function() {
+					$header.slideDown( 0 );
+				}, 0 );
+				y = newY;
+			// don't EVER hide when nav is expanded
+			} else if( !navVisible &&  newY > y + threshold ) {
+				window.clearTimeout( timeout );
+				timeout = window.setTimeout( function() {
+					$header.slideUp( 0 );
+				}, 500 );
+				y = newY;
+			}
+		}
+		$( window ).scroll( scroll );
+	}
+
 	function init() {
+		if( MobileFrontend.supportsPositionFixed() ) {
+			window.setTimeout( function() { // delayed so that any hashes are taken care of first
+				setupScrollBehaviour();
+			}, 100 );
+		}
 		u( window ).bind( 'hashchange', function() {
 			var hash = window.location.hash;
 			if( hash === '#mw-mf-overlay' ) {

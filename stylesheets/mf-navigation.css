@@ -126,6 +126,7 @@
 	-moz-box-shadow: 5px 1px 8px #333;
 	-o-box-shadow: 5px 1px 8px #333;
 	box-shadow: 5px 1px 8px #333;
+	z-index: 2;
 }
 
 #mw-mf-page-left {
@@ -245,6 +246,8 @@
 	background-position: -114px 0px;
 }
 
+.supportsPositionFixed.navigationEnabled #mw-mf-header,
+.supportsPositionFixed.navigationEnabled #mw-mf-nav,
 #mw-mf-page-center {
 	-webkit-transform: scale3d(1,1);
 	-moz-transition-property: right,left;
@@ -391,6 +394,11 @@ body {
 	height: 100%;
 }
 
+html.supportsPositionFixed,
+body {
+	height: auto;
+}
+
 #mw-mf-page-left,
 #mw-mf-page-center {
 	min-height: 100%;
@@ -405,6 +413,10 @@ body {
 
 #mw-mf-overlay li.mw-mf-overlay-header {
 	background-color: #ccc;
+}
+
+.supportsPositionFixed #mw-mf-page-center {
+	min-height: none !important;
 }
 
 @media all and (max-width: 320px) {
@@ -467,4 +479,37 @@ TODO: make this the default and add icons with media queries
 	.navigationEnabled #mw-page-center {
 		min-height: 230px;
 	}
+}
+
+/* enable position fixed */
+.supportsPositionFixed #mw-mf-page-left,
+.supportsPositionFixed #mw-mf-header {
+	position: fixed;
+	top: 0;
+}
+
+.supportsPositionFixed.navigationEnabled #mw-mf-viewport {
+	overflow-y: auto;
+}
+
+.supportsPositionFixed #results {
+	padding-top: 45px;
+}
+
+.supportsPositionFixed.navigationEnabled #mw-mf-header,
+.supportsPositionFixed.navigationEnabled #mw-mf-nav {
+	left: 80%;
+	right: -80%;
+}
+
+.supportsPositionFixed #mw-mf-nav {
+	position: fixed;
+	top: 45px;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.supportsPositionFixed #content_wrapper {
+	padding-top: 45px;
 }
