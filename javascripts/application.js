@@ -195,6 +195,7 @@ mw.mobileFrontend = (function() {
 
 	return {
 		init: init,
+		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		history: {
 			replaceHash: function( newHash ) {
 				if( window.history && window.history.replaceState ) {

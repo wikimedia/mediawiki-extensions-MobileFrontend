@@ -18,6 +18,11 @@ MobileFrontend.navigation = (function( $ ) {
 			menu.style.display = 'block';
 		}
 	}
+
+	function getOverlay() {
+		return document.getElementById( 'mw-mf-overlay' );
+	}
+
 	function closeOverlay( ) {
 		$( 'html' ).removeClass( 'overlay' );
 		MobileFrontend.history.replaceHash( '#' );
@@ -28,19 +33,27 @@ MobileFrontend.navigation = (function( $ ) {
 		$( 'html' ).removeClass( 'navigationEnabled' );
 	}
 
-	function createOverlay( heading, contents ) {
+	function createOverlay( heading, contents, options ) {
+		options = options || {};
 		var overlay = document.getElementById( mfePrefix + 'overlay' );
 		showOverlay();
 		$( overlay ).empty();
 		$( '<div class="header">' ).appendTo( '#' + mfePrefix + 'overlay' );
 		$( '<button id="close"></button>' ).text( message( 'collapse-section' ) ).
 			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
-		$( '<h2>' ).text( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
+		if( typeof heading === 'string' ) {
+			heading = $( '<h2 />' ).text( heading );
+		}
+		$( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
 		$( overlay ).append( contents );
 		$( 'a', overlay.lastChild ).bind( 'click', function() {
 			toggleActionBar();
 		});
-		MobileFrontend.history.pushState( '#mw-mf-overlay' );
+		$( contents ).addClass( 'content' );
+		if( options.locked ) { // locked overlays cannot be escaped.
+			$( '#mw-mf-overlay .header' ).addClass( 'mw-mf-locked' );
+			$( '#mw-mf-overlay #close' ).remove();
+		}
 	}
 
 	function countContentHeadings() {
@@ -73,15 +86,20 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function createLanguagePage() {
-		var ul = $( '<ul />' )[0], li, a,
+		var ul = $( '<ul />' )[0], li, a, $a, href, footer,
 			$languages = $( '#' + mfePrefix + 'language-selection option' );
 
-		$( '<li />' ).addClass( 'mw-mf-language-header' ).
+		$( '<li />' ).addClass( 'mw-mf-overlay-header' ).
 			text( message( 'mobile-frontend-language-header' ).replace( '$1', $languages.length ) ).appendTo( ul );
 		$languages.each( function(i, el) {
 			li = $( '<li />' ).appendTo( ul )[0];
 			a = $( '<a />' ).attr( 'href', el.value ).text( $( el ).text() ).appendTo( li );
 		} );
+		footer = $( '<li />' ).addClass( 'mw-mf-overlay-footer' ).
+			html( message( 'mobile-frontend-language-footer' ) ).appendTo( ul );
+		$a = $( 'a', footer );
+		href = $( '#mw-mf-universal-language' ).attr( 'href' )
+		$a.attr( 'href', href );
 		createOverlay( message( 'language-heading' ), ul );
 	}
 
@@ -150,5 +168,11 @@ MobileFrontend.navigation = (function( $ ) {
 	if( typeof( $ ) !== 'undefined' ) {
 		init();
 	}
+	return {
+		closeOverlay: closeOverlay,
+		createOverlay: createOverlay,
+		getOverlay: getOverlay,
+		showOverlay: showOverlay
+	};
 }( jQuery ));
 }( mw.mobileFrontend ));

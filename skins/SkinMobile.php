@@ -29,6 +29,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
 		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) );
+		$tpl->set( 'siteLanguageLink', SpecialPage::getTitleFor( 'MobileOptions', 'Language' )->getLocalUrl() );
 		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
 			$wgMFCustomLogos['copyright'] :
 			"{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png";
@@ -457,6 +458,9 @@ class SkinMobileTemplate extends BaseTemplate {
 				</a>
 			</li>
 		</ul>
+		<a id="mw-mf-universal-language" href="<?php $this->text( 'siteLanguageLink' ) ?>">
+			<?php $this->msg( 'mobile-frontend-current-language' ) ?>
+		</a>
 		</div>
 		</div>
 		<div id='mw-mf-page-center'>
@@ -496,6 +500,9 @@ class SkinMobileTemplate extends BaseTemplate {
 				'mobile-frontend-close-section' => wfMsg( 'mobile-frontend-close-section' ),
 				'mobile-frontend-language-header' => wfMessage( 'mobile-frontend-language-header',
 					$wgLang->formatNum( $this->data['languageCount'] ) )->text(),
+				'mobile-frontend-language-footer' => wfMessage( 'mobile-frontend-language-footer' )->parse(),
+				'mobile-frontend-language-site-choose' => wfMsg( 'mobile-frontend-language-site-choose' ),
+				'mobile-frontend-language-site-nomatches' => wfMsg( 'mobile-frontend-language-site-nomatches' ),
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
