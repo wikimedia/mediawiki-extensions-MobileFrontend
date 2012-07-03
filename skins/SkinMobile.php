@@ -500,7 +500,11 @@ class SkinMobileTemplate extends BaseTemplate {
 				'mobile-frontend-close-section' => wfMsg( 'mobile-frontend-close-section' ),
 				'mobile-frontend-language-header' => wfMessage( 'mobile-frontend-language-header',
 					$wgLang->formatNum( $this->data['languageCount'] ) )->text(),
-				'mobile-frontend-language-footer' => wfMessage( 'mobile-frontend-language-footer' )->parse(),
+				'mobile-frontend-language-footer' => Html::element( 'a',
+					array(
+						'href' => SpecialPage::getTitleFor( 'Special:MobileOptions/Language' )->getLocalUrl(),
+					),
+					wfMessage( 'mobile-frontend-language-footer' ) ),
 				'mobile-frontend-language-site-choose' => wfMsg( 'mobile-frontend-language-site-choose' ),
 				'mobile-frontend-language-site-nomatches' => wfMsg( 'mobile-frontend-language-site-nomatches' ),
 			),
