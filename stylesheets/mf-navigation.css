@@ -143,6 +143,10 @@
 	display: none;
 }
 
+.navigationEnabled #mw-mf-page-left {
+	display: block;
+}
+
 #mw-mf-menu-main {
 	list-style: none;
 	margin: 0;

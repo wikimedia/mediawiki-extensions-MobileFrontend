@@ -149,14 +149,11 @@ MobileFrontend.navigation = (function( $ ) {
 			tocMenuButton = document.getElementById( mfePrefix + 'toc' );
 
 		function toggleNavigation() {
-			var doc = document.documentElement,
-				mwMfPageLeft = document.getElementById( 'mw-mf-page-left' );
+			var doc = document.documentElement;
 			if( !u( doc ).hasClass( 'navigationEnabled' ) ) {
-				mwMfPageLeft.style.display = 'block';
 				u( doc ).addClass( 'navigationEnabled' );
 			} else {
 				u( doc ).removeClass( 'navigationEnabled' );
-				mwMfPageLeft.style.display = 'none';
 			}
 			$( '#mw-mf-menu-main a' ).click( function( ev ) {
 				toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
