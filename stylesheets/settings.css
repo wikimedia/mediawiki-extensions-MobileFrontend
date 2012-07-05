@@ -42,10 +42,10 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 	position: relative;
 }
 
-.jsEnabled #content .mw-mf-settings li a.mw-mf-button,
-.jsEnabled .mw-mf-checkbox-css3 span,
-.mw-mf-checkbox-css3,
-.jsEnabled .mw-mf-checkbox-css3 input {
+.mw-mf-checkboxes #content .mw-mf-settings li a.mw-mf-button,
+.mw-mf-checkboxes .mw-mf-checkbox-css3 span,
+.mw-mf-checkboxes .mw-mf-checkbox-css3,
+.mw-mf-checkboxes .mw-mf-checkbox-css3 input {
 	min-width: 76px;
 	display: block;
 	position: absolute;
