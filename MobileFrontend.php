@@ -36,6 +36,7 @@ $wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.ph
 
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
+	'MobileFrontendSiteModule' => 'MobileFrontend.body',
 
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlFormatter' => 'HtmlFormatter',
@@ -159,6 +160,10 @@ $wgResourceModules['mobile.references'] = array(
 	'raw' => true,
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
+);
+
+$wgResourceModules['mobile.site'] = array(
+	'class' => 'MobileFrontendSiteModule',
 );
 
 /**
@@ -285,3 +290,12 @@ $wgMFExtendOpenSearchXml = false;
  * to mix mobile and non-mobile pages in its search results, creating confusion.
  */
 $wgMFNoindexPages = true;
+
+/**
+ * Which pages should be included in mobile.site
+ */
+$wgMobileSiteResourceLoaderModule = array(
+	'MediaWiki:Mobile.css' => array( 'type' => 'style' ),
+	'MediaWiki:Mobile.js' => array( 'type' => 'script' ),
+);
+

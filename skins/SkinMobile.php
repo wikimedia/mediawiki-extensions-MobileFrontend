@@ -56,6 +56,7 @@ class SkinMobile extends SkinMobileBase {
 		if ( $isFilePage ) {
 			$styleLinks[] = $this->resourceLoaderLink( 'mobile.filePage', 'styles' );
 		}
+		$styleLinks[] = $this->resourceLoaderLink( array( 'mobile.site' ), 'styles', false );
 		$tpl->set( 'cssLinks', implode( "\n", $styleLinks ) );
 		wfProfileOut( __METHOD__ . '-modules' );
 
@@ -72,6 +73,7 @@ class SkinMobile extends SkinMobileBase {
 		if ( $isFilePage ) {
 			$scriptLinks[] = $this->resourceLoaderLink( 'mobile.filePage', 'scripts' );
 		}
+		$scriptLinks[] = $this->resourceLoaderLink( array( 'mobile.site' ), 'scripts', false );
 		$bottomScripts = implode( "\n", $scriptLinks );
 		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
 		$tpl->set( 'preambleScript', $device['supports_javascript'] ?

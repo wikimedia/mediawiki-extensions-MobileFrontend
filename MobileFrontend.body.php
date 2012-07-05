@@ -584,3 +584,10 @@ class ExtMobileFrontend extends ContextSource {
 		return true;
 	}
 }
+
+class MobileFrontendSiteModule extends ResourceLoaderSiteModule {
+	protected function getPages( ResourceLoaderContext $context ) {
+		global $wgMobileSiteResourceLoaderModule;
+		return $wgMobileSiteResourceLoaderModule;
+	}
+}

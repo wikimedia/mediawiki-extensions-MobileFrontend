@@ -14,6 +14,8 @@ $messages = array();
 // en translation
 $messages['en'] = array (
 	'mobile-frontend-desc' => 'Mobile Frontend',
+	'mobile.css' => '/* CSS placed here will affect users of the mobile site */', # only translate this message to other languages if you have to change it
+	'mobile.js' => '/* Any JavaScript here will be loaded for users using the mobile site */', # only translate this message to other languages if you have to change it
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-home-button' => 'Home',
 	'mobile-frontend-logged-out' => 'Not logged in',
@@ -235,9 +237,10 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-page-menu-history' => 'history link text in secondary menu',
 	'mobile-frontend-page-menu-contents-heading' => 'Table of contents overlay heading',
 	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
-
 	'mobile-frontend-meta-data-issues-header' => 'Call to action that shows on an overlay when opened when an article has cleanup templates on it',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading mobile-frontend-meta-data-issues-header',
+	'mobile.css' => '{{optional}}',
+	'mobile.js' => '{{optional}}',
 );
 
 /** Tati (Tati)
