@@ -163,12 +163,12 @@ HTML;
 	}
 
 	private function submitSettingsForm() {
-		global $wgLanguageCode;
 		$context = MobileContext::singleton();
 		$request = $this->getRequest();
 
 		if ( $request->getVal( 'token' ) != $context->getMobileToken() ) {
-			return; // Display something here?
+			wfDebug( __METHOD__ . "(): token mismatch\n" );
+			//return; // Display something here?
 		}
 		$inBeta = $request->getBool( 'enableBeta' );
 		$imagesDisabled = !$request->getBool( 'enableImages' );
