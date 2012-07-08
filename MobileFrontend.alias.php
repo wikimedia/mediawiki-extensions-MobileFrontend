@@ -22,6 +22,13 @@ $specialPageAliases['ar'] = array(
 	'MobileOptions' => array( 'خيارات_المحمول' ),
 );
 
+/** German (Deutsch) */
+$specialPageAliases['de'] = array(
+	'MobileFrontend' => array( 'Mobile_Ansicht' ),
+	'MobileFeedback' => array( 'Mobile_Rückmeldung' ),
+	'MobileOptions' => array( 'Mobile_Optionen' ),
+);
+
 /** Hindi (हिन्दी) */
 $specialPageAliases['hi'] = array(
 	'MobileFeedback' => array( 'मोबाइल_प्रतिक्रिया' ),
