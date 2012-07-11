@@ -704,7 +704,7 @@ $messages['az'] = array(
 	'mobile-frontend-footer-more' => 'daha çox',
 );
 
-/** Bashkir (Башҡортса)
+/** Bashkir (башҡортса)
  * @author Amire80
  * @author Haqmar
  * @author Roustammr
@@ -1236,7 +1236,7 @@ $messages['ca'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Llegiu aquest article en',
 );
 
-/** Chechen (Нохчийн) */
+/** Chechen (нохчийн) */
 $messages['ce'] = array(
 	'mobile-frontend-search-submit' => 'Дехьа вала',
 	'mobile-frontend-featured-article' => 'Хаьржина яззам',
@@ -3061,7 +3061,7 @@ $messages['he'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'אירעה שגיאה בעיבוד ההודעה שלך. נא לנסות שוב מאוחר יותר.',
 	'mobile-frontend-language' => 'שפה:',
 	'mobile-frontend-language-header' => 'הערך הזה זמין {{PLURAL:$1|בשפה אחת|ב־$1 שפות}}',
-	'mobile-frontend-language-footer' => '[[Special:MobileOptions|לא רואה את השפה שלך? עוד]].',
+	'mobile-frontend-language-footer' => 'אתר {{SITENAME}} זמין בשפות נוספות.',
 	'mobile-frontend-language-site-choose' => 'חיפוש שפה',
 	'mobile-frontend-language-site-nomatches' => 'לא נמצאו שפות תואמות',
 	'mobile-frontend-username' => 'שם משתמש:',
@@ -3439,7 +3439,7 @@ $messages['ia'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Un error occurreva durante le tractamento de tu message. Per favor reproba plus tarde.',
 	'mobile-frontend-language' => 'Lingua:',
 	'mobile-frontend-language-header' => 'Iste articulo es disponibile in $1 {{PLURAL:$1|lingua|linguas}}',
-	'mobile-frontend-language-footer' => '[[Special:MobileOptions|Non trova le tue lingua? Vide alteres]].',
+	'mobile-frontend-language-footer' => '{{SITENAME}} es disponibile in altere linguas.',
 	'mobile-frontend-language-site-choose' => 'Cercar lingua',
 	'mobile-frontend-language-site-nomatches' => 'Nulle lingua trovate',
 	'mobile-frontend-username' => 'Nomine de usator:',
@@ -4018,7 +4018,7 @@ $messages['kiu'] = array(
 	'mobile-frontend-hide-button' => 'Bınımne',
 );
 
-/** Kazakh (Cyrillic script) (‪Қазақша (кирил)‬)
+/** Kazakh (Cyrillic script) (‪қазақша (кирил)‬)
  * @author GaiJin
  * @author Kaztrans
  */
@@ -4245,7 +4245,7 @@ $messages['ko'] = array(
 	'mobile-frontend-leave-feedback-post-error' => '메시지를 처리 하는 동안 오류가 발생 했습니다. 나중에 다시 시도하세요.',
 	'mobile-frontend-language' => '언어:',
 	'mobile-frontend-language-header' => '이 문서는 $1 {{PLURAL:$1|언어}}에 있습니다.',
-	'mobile-frontend-language-footer' => '[[Special:MobileOptions|당신의 언어로 찾을 수 없습니까? 자세히 참고하세요]].',
+	'mobile-frontend-language-footer' => '{{SITENAME}}(은)는 다른 언어로 사용할 수 있습니다.',
 	'mobile-frontend-language-site-choose' => '찾을 언어',
 	'mobile-frontend-language-site-nomatches' => '일치하는 언어가 없습니다',
 	'mobile-frontend-username' => '계정 이름:',
@@ -4279,7 +4279,7 @@ $messages['ko'] = array(
 	'mobile-frontend-page-menu-language-heading' => '이 문서 읽기',
 );
 
-/** Karachay-Balkar (Къарачай-Малкъар)
+/** Karachay-Balkar (къарачай-малкъар)
  * @author Iltever
  */
 $messages['krc'] = array(
@@ -4428,7 +4428,7 @@ $messages['ku-latn'] = array(
 	'mobile-frontend-page-menu-contents-heading' => 'Naverok',
 );
 
-/** Komi (Коми) */
+/** Komi (коми) */
 $messages['kv'] = array(
 	'mobile-frontend-search-submit' => 'Выльлаö',
 	'mobile-frontend-home-button' => 'Керка',
@@ -4566,7 +4566,7 @@ $messages['lb'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Liest dësen Artikel op',
 );
 
-/** Lezghian (Лезги)
+/** Lezghian (лезги)
  * @author Migraghvi
  */
 $messages['lez'] = array(
@@ -5292,8 +5292,10 @@ $messages['mzn'] = array(
 	'mobile-frontend-view' => 'موبایلی هارشائن',
 );
 
-/** Norwegian Bokmål (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
+ * @author Danmichaelo
  * @author Event
+ * @author Lokal Profil
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -5301,41 +5303,79 @@ $messages['nb'] = array(
 	'mobile-frontend-search-submit' => 'Gå',
 	'mobile-frontend-featured-article' => 'Dagens utvalgte artikkel',
 	'mobile-frontend-home-button' => 'Hjem',
+	'mobile-frontend-logged-out' => 'Ikke innlogget',
+	'mobile-frontend-logged-in' => 'Innlogget som $1',
+	'mobile-frontend-settings-beta' => 'Beta',
+	'mobile-frontend-save-settings' => 'Lagre innstillinger',
 	'mobile-frontend-random-button' => 'Tilfeldig',
 	'mobile-frontend-back-to-top-of-section' => 'Gå ett avsnitt tilbake',
 	'mobile-frontend-show-button' => 'Vis',
 	'mobile-frontend-hide-button' => 'Skjul',
-	'mobile-frontend-regular-site' => 'Vis denne siden på vanlig {{SITENAME}}',
+	'mobile-frontend-empty-homepage' => 'Denne hjemmesiden trenger å konfigureres. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Les mer her</a>',
+	'mobile-frontend-regular-site' => 'Bordmaskinvisning',
 	'mobile-frontend-wml-continue' => 'Fortsett ...',
-	'mobile-frontend-wml-back' => 'Tilbake ...',
+	'mobile-frontend-wml-back' => 'Tilbake...',
 	'mobile-frontend-view' => 'Mobilvisning',
-	'mobile-frontend-opt-in-message' => 'Bli med på mobilbetatesting?',
+	'mobile-frontend-view-desktop' => 'Bordmaskin',
+	'mobile-frontend-view-mobile' => 'Mobil',
+	'mobile-frontend-opt-in-message' => 'Blir du med på mobil-betatesting?',
 	'mobile-frontend-opt-in-yes-button' => 'ja',
 	'mobile-frontend-opt-in-no-button' => 'nei',
-	'mobile-frontend-opt-in-title' => 'Påmelding til mobilbetatesting',
 	'mobile-frontend-opt-in-explain' => 'Ved å bli med på betatestingen vil du få tilgang til eksperimentelle funksjoner, som kan inneholde feil og problemer.',
 	'mobile-frontend-opt-out-message' => 'Forlate mobilbetatesting?',
 	'mobile-frontend-opt-out-yes-button' => 'ja',
 	'mobile-frontend-opt-out-no-button' => 'nei',
-	'mobile-frontend-opt-out-title' => 'Avmelding fra mobilbetatesting',
 	'mobile-frontend-opt-out-explain' => 'Ved å forlate mobilbetatestingen vil du slå av alle eksperimentelle funksjoner og gå tilbake til den vanlige mobilsiden.',
+	'mobile-frontend-images-status' => 'Bilder',
 	'mobile-frontend-disable-images' => 'Deaktiver bilder på mobilsiden',
 	'mobile-frontend-enable-images' => 'Gjør tilgjengelig bilder på mobilnettstedet',
+	'mobile-frontend-toggle-images' => 'Bilder $1 / $2',
+	'mobile-frontend-off' => 'AV',
+	'mobile-frontend-on' => 'PÅ',
+	'mobile-frontend-footer-contributors' => 'Artikkel av <a href="$1">bidragsytere</a> som deg',
+	'mobile-frontend-footer-article-edit-info' => 'Sist redigert $1',
 	'mobile-frontend-news-items' => 'I nyhetene',
 	'mobile-frontend-leave-feedback-title' => 'Gi oss tilbakemelding om din erfaring med mobilnettstedet',
 	'mobile-frontend-leave-feedback-notice' => 'Din tilbakemelding hjelper oss å forbedre brukeropplevelsen på ditt mobilnettsted. Den vil bli publisert offentlig, sammen med ditt brukernavn, nettleserversjon og operativsystem, på siden &quot;$1&quot;. Vennligst lag en informativ emnetekst, f. eks. "Formateringsdetaljer for brede tabeller". For din tilbakemelding gjelder våre bruksvilkår.',
-	'mobile-frontend-leave-feedback-subject' => 'Emne',
-	'mobile-frontend-leave-feedback-message' => 'Melding',
+	'mobile-frontend-leave-feedback-subject' => 'Emne:',
+	'mobile-frontend-leave-feedback-message' => 'Melding:',
 	'mobile-frontend-leave-feedback-submit' => 'Send tilbakemelding',
 	'mobile-frontend-leave-feedback-link-text' => 'Tilbakemelding på utvidelsen MobileFrontend',
 	'mobile-frontend-leave-feedback' => 'Tilbakemelding på mobilnettsted',
+	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknisk problem',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Generelt',
+	'mobile-frontend-leave-feedback-page-title' => 'Gi oss tilbakemelding om din erfaring med mobilnettstedet',
+	'mobile-frontend-feedback-no-subject' => '(mangler emnetekst)',
+	'mobile-frontend-feedback-no-message' => 'Vennligst legg inn en melding her',
+	'mobile-frontend-feedback-edit-summary' => '$1 - automatisk sendt ved hjelp av [[Special:MobileFeedback|tilbakemeldingsverktøy for mobiler]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Takk for din tilbakemelding!',
-	'mobile-frontend-language' => 'Språk',
+	'mobile-frontend-language' => 'Språk:',
+	'mobile-frontend-language-header' => 'Artikkelen er tilgjengelig på {{PLURAL:$1|ett språk|$1 språk}}',
 	'mobile-frontend-username' => 'Brukernavn:',
 	'mobile-frontend-password' => 'Passord:',
 	'mobile-frontend-login' => 'Logg inn',
+	'mobile-frontend-logout' => 'Logg ut',
 	'mobile-frontend-placeholder' => 'Skriv inn søkord her...',
+	'mobile-frontend-search-help' => 'Skriv inn søkeord ovenfor og treffende artikkelnavn vises her.',
 	'mobile-frontend-dismiss-notification' => 'se bort i fra denne beskjeden',
+	'mobile-frontend-clear-search' => 'Tilbakestill',
+	'mobile-frontend-privacy-link-text' => 'Privat',
+	'mobile-frontend-about-link-text' => 'Om',
+	'mobile-frontend-footer-more' => 'mer',
+	'mobile-frontend-footer-less' => 'mindre',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'Innholdet er tilgjengelig under <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Bruksbetingelser</a>',
+	'mobile-frontend-footer-contact' => 'Kontakt',
+	'mobile-frontend-unknown-option' => 'Ukjent valgmulighet "$1".',
+	'mobile-frontend-main-menu-nearby' => 'I nærheten',
+	'mobile-frontend-main-menu-settings' => 'Innstillinger',
+	'mobile-frontend-main-menu-settings-heading' => 'Innstillinger for mobilside',
+	'mobile-frontend-main-menu-contact' => 'Kontakt',
+	'mobile-frontend-page-menu-contents' => 'innhold',
+	'mobile-frontend-page-menu-language' => 'språk',
+	'mobile-frontend-page-menu-contents-heading' => 'Innhold',
+	'mobile-frontend-page-menu-language-heading' => 'Les artikkelen på',
 );
 
 /** Nedersaksisch (Nedersaksisch)
@@ -7550,7 +7590,7 @@ $messages['vec'] = array(
 	'mobile-frontend-regular-site' => 'Varda sta pagina su la {{SITENAME}} normale',
 );
 
-/** Veps (Vepsän kel’)
+/** Veps (vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
@@ -7713,7 +7753,7 @@ $messages['wo'] = array(
 	'mobile-frontend-regular-site' => 'Wone xët wi ci {{SITENAME}} wees baaxoo',
 );
 
-/** Kalmyk (Хальмг) */
+/** Kalmyk (хальмг) */
 $messages['xal'] = array(
 	'mobile-frontend-search-submit' => 'Ор',
 	'mobile-frontend-featured-article' => 'Өдрә суңһгдсн халх',
