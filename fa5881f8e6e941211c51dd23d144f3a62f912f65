@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAQX//8Us\u003d",
+        "filename": "api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-07-12T18:25:42Z",
+      "side": 1,
+      "message": "Putting pool counter in this message isn\u0027t really much use for non WMF...",
+      "revId": "fa5881f8e6e941211c51dd23d144f3a62f912f65",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
