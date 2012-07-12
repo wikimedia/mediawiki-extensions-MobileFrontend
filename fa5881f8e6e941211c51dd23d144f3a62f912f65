@@ -16,6 +16,24 @@
       "revId": "fa5881f8e6e941211c51dd23d144f3a62f912f65",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAQX//8TU\u003d",
+        "filename": "api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-07-12T19:08:58Z",
+      "side": 1,
+      "message": "PoolCounter is a MW class;) And PoolWorkArticleView failure is the only way WikiPage::getParserOutput() could return false. If you still dislike this message I can rephrase it though:)",
+      "parentUuid": "AAAAQX//8Us\u003d",
+      "revId": "fa5881f8e6e941211c51dd23d144f3a62f912f65",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
