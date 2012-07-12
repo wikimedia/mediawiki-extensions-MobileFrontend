@@ -157,6 +157,9 @@ class ApiMobileView extends ApiBase {
 			$html = $this->getFilePage( $title );
 		} else {
 			$parserOutput = $wp->getParserOutput( $parserOptions );
+			if ( !$parserOutput ) {
+				throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
+			}
 			$html = $parserOutput->getText();
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
