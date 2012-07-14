@@ -9,6 +9,10 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	padding-bottom: 5px;
 }
 
+.section_heading a {
+	color: #333;
+}
+
 .section_heading button {
 	display: none; /* for non-js browsers */
 	overflow: hidden;
@@ -59,6 +63,7 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	opacity: 1;
 }
 
+.beta .section_anchors,
 .togglingEnabled .section_anchors {
 	display: none;
 	margin-bottom: 10px;
@@ -76,6 +81,7 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	border-bottom: none;
 }
 
+.togglingEnabled.beta .openSection.section_anchors,
 .togglingEnabled .openSection.section_anchors {
 	display: block;
 }

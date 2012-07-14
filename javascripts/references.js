@@ -4,6 +4,7 @@
 if( typeof jQuery !== 'undefined' ) {
 	MobileFrontend.references = (function($) {
 		var calculatePosition = function() {}, wasVisible,
+			inBeta = MobileFrontend.utils( document.body ).hasClass( 'beta' ),
 			supportsPositionFixed = MobileFrontend.supportsPositionFixed;
 
 		function collect() {
@@ -150,7 +151,9 @@ if( typeof jQuery !== 'undefined' ) {
 				});
 			}
 		}
-		MobileFrontend.registerModule( 'references' );
+		if( !inBeta ) {
+			MobileFrontend.registerModule( 'references' );
+		}
 		return {
 			init: init
 		};

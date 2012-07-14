@@ -1,8 +1,10 @@
-/*global mw, document, window */
+/*global mw, document, window, jQuery */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 (function( MobileFrontend ) {
-MobileFrontend.toggle = (function() {
+MobileFrontend.toggle = (function( $ ) {
 	var u = MobileFrontend.utils,
+		M = MobileFrontend,
+		inBeta = u( document.body ).hasClass( 'beta' ),
 		message = MobileFrontend.message,
 		showLabel = message( 'expand-section' ),
 		hideLabel = message( 'collapse-section' );
@@ -10,6 +12,7 @@ MobileFrontend.toggle = (function() {
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ), id,
 			hash, d,
+			html = '',
 			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
 		if( u( b ).hasClass( 'openSection' ) ) {
 			u( b ).removeClass( 'openSection' );
@@ -38,6 +41,14 @@ MobileFrontend.toggle = (function() {
 		hash = closed ? '#_' : '#' + id;
 		MobileFrontend.history.replaceHash( hash );
 		e.setAttribute( 'id', id );
+
+		if( M.jQuery && inBeta ) {
+			if( $( b ).data( 'section' ) ) {
+				$( '#content_' + section_id ).html( $( b ).data( 'section' ) );
+				mw.mobileFrontend.references.init();
+				$( b ).data( 'section', false );
+			}
+		}
 	}
 
 	function wm_reveal_for_hash( hash ) {
@@ -57,10 +68,10 @@ MobileFrontend.toggle = (function() {
 	}
 
 	function init() {
-		u( document.documentElement ).addClass( 'togglingEnabled' );
-		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
-			sectionHeadings = [], content,
-			inBeta = u( document.body ).hasClass( 'beta' );
+		var i, a, heading, h2, btns = [], buttons,
+			apiUrl = M.setting( 'scriptPath' ) + '/api.php',
+			sections = [],
+			sectionHeadings = [], content;
 
 		content = document.getElementById( 'content_wrapper' );
 		h2 = document.getElementsByTagName( 'H2' );
@@ -72,8 +83,11 @@ MobileFrontend.toggle = (function() {
 			}
 		}
 
-		function openSectionHandler() {
+		function openSectionHandler( ev ) {
 			var sectionName = this.id ? this.id.split( '_' )[1] : -1;
+			if( ev && ev.preventDefault ) {
+				ev.preventDefault();
+			}
 			if( sectionName !== -1 ) {
 				wm_toggle_section( sectionName );
 			}
@@ -84,15 +98,29 @@ MobileFrontend.toggle = (function() {
 			return btn;
 		}
 
-		for( i = 0; i < sectionHeadings.length; i++ ) {
-			heading = sectionHeadings[i];
-			heading.insertBefore( createButton(), heading.firstChild );
-			a = document.getElementById( 'anchor_' + heading.id.split( '_' )[ 1 ] );
-			if( a && inBeta ) {
-				u( a ).text( message( 'mobile-frontend-close-section' ) );
-				u( a ).bind( 'click', openSectionHandler );
+		function enableToggling( sectionsHtml ) {
+			var id, sec;
+			u( document.documentElement ).addClass( 'togglingEnabled' );
+			for( i = 0; i < sectionHeadings.length; i++ ) {
+				heading = sectionHeadings[i];
+				id = heading.id.split( '_' )[ 1 ]
+				heading.insertBefore( createButton(), heading.firstChild );
+				a = document.getElementById( 'anchor_' + id );
+				sec = sectionsHtml[ i ];
+				if( inBeta && sectionsHtml && sec ) {
+					if( sec.references ) {
+						$( '#content_' + id ).html( sec.html );
+						mw.mobileFrontend.references.init();
+					} else {
+						$( heading ).data( 'section',  sec.html );
+					}
+				}
+				if( a && inBeta ) {
+					u( a ).text( message( 'mobile-frontend-close-section' ) );
+					u( a ).bind( 'click', openSectionHandler );
+				}
+				u( heading ).bind( 'click', openSectionHandler );
 			}
-			u( heading ).bind( 'click', openSectionHandler );
 		}
 		
 		function checkHash() {
@@ -105,7 +133,56 @@ MobileFrontend.toggle = (function() {
 				MobileFrontend.history.replaceHash( hash );
 			}
 		}
-		checkHash();
+
+		sections = [];
+		$( 'h2' ).each( function( i, el ) {
+			sections.push( i + 1 );
+		} );
+		if( inBeta && MobileFrontend.jQuery ) {
+			var data = {
+				action: 'mobileview',
+				page: $( 'h1' ).text(),
+				redirects: 'yes',
+				prop: 'sections|text',
+				noheadings: 'yes',
+				sectionprop: 'level|line',
+				format: 'json',
+				sections: sections.join('|')
+			};
+			$.ajax({
+				url: apiUrl,
+				data: data,
+				dataType: 'json',
+				success: function( resp ) {
+					if( resp && resp.mobileview && resp.mobileview.sections ) {
+						var i, secs = resp.mobileview.sections, s,
+							html = [], sectionNum = -1, level;
+						for( i = 0; i < secs.length; i++ ) {
+							s = secs[ i ];
+							level = s.level;
+							if( level === '2' ) {
+								sectionNum += 1;
+								html[ sectionNum ] = { html: s.text };
+							} else if( level ) {
+								html[ sectionNum ].html += $( '<h' + level + '>' ).text( s.line ).html() + s.text;
+							}
+							if( s.hasOwnProperty( 'references' ) ) {
+								html[ sectionNum ].references = true;
+							}
+						}
+						enableToggling( html );
+						checkHash();
+					}
+				},
+				error: function() {
+					u( document.documentElement ).addClass( 'togglingEnabled' );
+				}
+			});
+		} else {
+			enableToggling();
+			checkHash();
+		}
+
 		for ( a = content.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 			u( a[i] ).bind( 'click', checkHash );
 		}
@@ -118,5 +195,5 @@ MobileFrontend.toggle = (function() {
 		init: init
 	};
 
-}());
+}( jQuery ));
 }( mw.mobileFrontend ));

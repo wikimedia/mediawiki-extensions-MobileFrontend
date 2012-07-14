@@ -299,6 +299,9 @@ class HtmlFormatter {
 		}
 		$html = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $html );
 		$html = $this->onHtmlReady( $html );
+		// strip all characters including new lines between START and end comments (not greedy)
+		// TODO: beta only
+		$html = preg_replace( '/<!--START-->.*<!--END-->/Us', '', $html );
 
 		if ( $this->elementsToFlatten ) {
 			$elements = implode( '|', $this->elementsToFlatten );

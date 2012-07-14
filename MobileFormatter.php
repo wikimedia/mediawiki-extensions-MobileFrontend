@@ -17,6 +17,8 @@ class MobileFormatter extends HtmlFormatter {
 	protected $mainPage = false;
 
 	private $headings = 0;
+	private $protectedSection = '';
+	private $lastHeading = '';
 
 	/**
 	 * @var WmlContext
@@ -63,13 +65,15 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param Title $title: Title to which $html belongs
 	 * @param string $format: 'HTML' or 'WML'
 	 * @param WmlContext $wmlContext: Context for creation of WML cards, can be omitted if $format == 'HTML'
+	 * @param string $protectedSection: A section name that should not be scrubbed from the output
 	 * @throws MWException
 	 */
-	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
+	public function __construct( $html, $title, $format, WmlContext $wmlContext = null, $protectedSection = '' ) {
 		parent::__construct( $html );
 
 		$this->setHtmlMode( true ); // Our current mobile skins always output HTML
 		$this->title = $title;
+		$this->protectedSection = $protectedSection;
 		$this->format = $format;
 		if ( !$wmlContext && $format == 'WML' ) {
 			throw new MWException( __METHOD__ . '(): WML context not set' );
@@ -190,15 +194,27 @@ class MobileFormatter extends HtmlFormatter {
 		$base .= Html::openElement( 'h2',
 				array( 'class' => 'section_heading', 'id' => 'section_' . $this->headings )
 			);
+		$name = $matches[2];
+		$name = trim( $name );
+		$pageTitle = $this->title->getText();
+		$url = SpecialPage::getTitleFor( 'MobileSection', $pageTitle . '/' . $name )->getLocalUrl() . '#' . $name;
 		$base .=
-			Html::rawElement( 'span',
-					array( 'id' => $headlineId ),
+			Html::rawElement( 'a',
+					array( 'id' => $headlineId,
+						'href' => $url ),
 					$matches[2]
 				)
 				. Html::closeElement( 'h2' )
 				. Html::openElement( 'div',
 					array( 'class' => 'content_block', 'id' => 'content_' . $this->headings )
 				);
+		$p = $this->protectedSection;
+		$h = $this->lastHeading;
+		if( $p !== $h ) {
+			$base .= '<!--START-->';
+		} else {
+			$base .= '<!--START--><!--END-->'; // mark up an empty area to scrub to avoid scrubbing section.
+		}
 
 		if ( $this->headings > 1 ) {
 			// Close it up here
@@ -206,7 +222,11 @@ class MobileFormatter extends HtmlFormatter {
 				. $backToTop
 				. "</div>" // <div class="section">
 				. $base;
+			if( $p !== $h ) {
+				$base = '<!--END-->' . $base;
+			}
 		}
+		$this->lastHeading = $name;
 
 		wfProfileOut( __METHOD__ );
 		return $base;
@@ -289,6 +309,11 @@ class MobileFormatter extends HtmlFormatter {
 
 		// if we had any, make sure to close the whole thing!
 		if ( $this->headings > 0 ) {
+			$p = $this->protectedSection;
+			$h = $this->lastHeading;
+			if( $p !== $h ) {
+				$s .= '<!--END-->';
+			}
 			$s .= '</div>' // <div class="content_block">
 				. "\n</div>"; // <div class="section">
 		}
