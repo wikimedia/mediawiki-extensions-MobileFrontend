@@ -1607,7 +1607,6 @@ $messages['de-formal'] = array(
 	'mobile-frontend-settings-description' => 'Passen Sie Ihr mobiles Endgerät mit diesen Einstellungen an Ihre Bedürfnisse an.',
 	'mobile-frontend-opt-in-explain' => 'Durch die Teilnahme am Beta-Test erhalten Sie Zugriff auf experimentelle Funktionen, die allerdings auch Probleme und Fehler verursachen können.',
 	'mobile-frontend-footer-contributors' => 'Artikel von <a href="$1">Mitwirkenden</a> wie Ihnen',
-	'mobile-frontend-leave-feedback-title' => 'Geben Sie uns bitte eine Rückmeldung zu Ihren Erfahrungen mit der mobilen Ansicht',
 	'mobile-frontend-leave-feedback-notice' => 'Ihre Rückmeldung hilft uns dabei, die mobile Ansicht weiter zu verbessern. Sie wird öffentlich auf der Seite &quot;$1&quot; angezeigt. Dabei werden Ihr Benutzername, die Version des von Ihnen genutzten Browsers sowie das von Ihnen genutzte Betriebssystem angegeben. Bitte wählen Sie einen informativen und aussagekräftigen Betreff, wie bswp. „Probleme bei der Anzeige von Tabellen“. Ihre Rückmeldung unterliegt dabei unseren Nutzungsbedingungen.',
 	'mobile-frontend-leave-feedback-warning' => 'Nehmen Sie bitte keine personenbezogenen Informationen von Ihnen in Ihre Kommentare auf, es sei denn, Sie sind damit einverstanden, dass sie veröffentlicht werden.',
 	'mobile-frontend-leave-feedback-email-body' => 'Bitte schreiben Sie Ihre E-Mail oberhalb dieser Zeile.',
