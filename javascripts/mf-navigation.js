@@ -88,6 +88,34 @@ MobileFrontend.navigation = (function( $ ) {
 
 	/* Fixed navigation */
 	function setupScrollBehaviour() {
+		var startY, reverseScroll, canToggle;
+		function touchmove( ev ) {
+			var touch = ev.touches[ ev.touches.length - 1 ],
+				deltaY = startY - touch.pageY;
+			reverseScroll = deltaY < 0 ? true : false;
+			canToggle = startY > $( window ).height();
+			touchend( ev );
+		}
+
+		function touchstart( ev ) {
+			var touch = ev && ev.touches ? ev.touches[ 0 ] : { pageY: 0 };
+			startY = touch.pageY;
+		}
+
+		document.addEventListener( 'touchstart', touchstart, false );
+		document.addEventListener( 'touchmove', touchmove, false );
+
+		function touchend( ev ) {
+			var touch = ev && ev.touches ? ev.touches[ 0 ] : { pageY: 0 };
+			if( reverseScroll ) {
+				$( '#mw-mf-header' ).show();
+			} else if( canToggle ) {
+				$( '#mw-mf-header' ).hide();
+			}
+		}
+
+		document.addEventListener( 'touchend', touchend, false );
+		document.addEventListener( 'touchcancel', touchend, false );
 	}
 
 	function init() {
