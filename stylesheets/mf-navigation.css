@@ -555,6 +555,10 @@ TODO: make this the default and add icons with media queries
 	padding-top: 75px;
 }
 
+.supportsPositionFixed.actionbarEnabled #content_wrapper {
+	padding-top: 115px; /* add height of #content_nav */
+}
+
 .supportsPositionFixed.navigationEnabled #mw-mf-header,
 .supportsPositionFixed.navigationEnabled #content_nav,
 .supportsPositionFixed.navigationEnabled #section_nav {

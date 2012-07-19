@@ -36,7 +36,9 @@ MobileFrontend.toggle = (function() {
 		e = document.getElementById( id );
 		e.removeAttribute( 'id' );
 		hash = closed ? '#_' : '#' + id;
-		MobileFrontend.history.replaceHash( hash );
+		if ( hash !== '#section_nav' ) {
+			MobileFrontend.history.replaceHash( hash );
+		}
 		e.setAttribute( 'id', id );
 	}
 

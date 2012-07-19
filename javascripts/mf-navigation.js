@@ -131,6 +131,9 @@ MobileFrontend.navigation = (function( $ ) {
 
 	function init() {
 		if( MobileFrontend.supportsPositionFixed() ) {
+			$( '#section_nav' ).on( 'click', function( ev ) {
+				$( 'html' ).toggleClass( 'actionbarEnabled' );
+			} );
 			window.setTimeout( function() { // delayed so that any hashes are taken care of first
 				setupScrollBehaviour();
 			}, 100 );
