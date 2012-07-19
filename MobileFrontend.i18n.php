@@ -114,6 +114,7 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-page-menu-contents' => 'contents',
 	'mobile-frontend-page-menu-language' => '{{#language:{{CONTENTLANG}}}}',
+	'mobile-frontend-page-menu-history' => '<a href="$1">History</a>',
 	'mobile-frontend-page-menu-contents-heading' => 'Contents',
 	'mobile-frontend-page-menu-language-heading' => 'Read this article in',
 );
@@ -229,6 +230,7 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-main-menu-contact' => 'Contact link text in main menu',
 	'mobile-frontend-page-menu-contents' => 'table of contents link text in secondary menu',
 	'mobile-frontend-page-menu-language' => 'language link text in secondary menu',
+	'mobile-frontend-page-menu-history' => 'history link text in secondary menu',
 	'mobile-frontend-page-menu-contents-heading' => 'Table of contents overlay heading',
 	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
 );

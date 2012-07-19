@@ -100,11 +100,21 @@ class SkinMobile extends SkinMobileBase {
 		$historyLink = '';
 		if ( !$title->isSpecialPage() ) {
 			$lastEdit = $this->getWikiPage()->getTimestamp();
-			$historyLink = $this->msg( 'mobile-frontend-footer-contributors', htmlspecialchars( $link ) )->text();
+			if ( !$inBeta ) {
+				$historyKey = 'mobile-frontend-footer-contributors';
+			} else {
+				$historyKey = 'mobile-frontend-page-menu-history';
+			}
+			$historyLink = $this->msg( $historyKey, htmlspecialchars( $link ) )->text();
 			$activityLink = $this->msg( 'mobile-frontend-footer-article-edit-info',
 				$language->timeanddate( $lastEdit ),
 				$language->time( $lastEdit ),
 				$language->date( $lastEdit ) )->parse();
+		}
+		if( !$historyLink ) {
+			$tpl->set( 'historyLinkClass', 'disabled' );
+		} else {
+			$tpl->set( 'historyLinkClass', '' );
 		}
 		$tpl->set( 'historyLink', $historyLink );
 		$tpl->set( 'copyright', $this->getCopyright() );
@@ -587,6 +597,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<ul id="content_nav" class="content_block sub-menu">
 				<li class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language' ) ?></li>
 				<li class="item2" id="mw-mf-toc"><?php $this->msg( 'mobile-frontend-page-menu-contents' ) ?></li>
+				<li class="item-history <?php $this->html( 'historyLinkClass' ) ?>"><?php $this->html( 'historyLink' ) ?></li>
 			</ul>
 			<h2 class="section_heading navigationBar" id="section_nav">Nav Menu</h2>
 		</div>
@@ -631,7 +642,9 @@ class SkinMobileTemplate extends BaseTemplate {
 				$this->html( 'imagesToggle' ) ?></span>
 			</li>
 			<li class="notice">
+				<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 				<?php $this->html( 'historyLink' ) ?><br>
+				<?php } ?>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 			</li>
 		</ul>
