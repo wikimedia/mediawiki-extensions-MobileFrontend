@@ -4,6 +4,7 @@
 MobileFrontend.navigation = (function( $ ) {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
 		lastScrollTopPosition = 0,
+		M = MobileFrontend,
 		message = MobileFrontend.message;
 
 	function getOverlay() {
@@ -17,6 +18,7 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function showOverlay() {
+		M.history.pushState( '#mw-mf-overlay' );
 		lastScrollTopPosition = document.body.scrollTop;
 		$( 'html' ).addClass( 'overlay' );
 		window.scrollTo( 0, 0 ); // scroll right to top
