@@ -439,28 +439,25 @@ class SkinMobileTemplate extends BaseTemplate {
 		<div id="mw-mf-page-left">
 		<div id='mw-mf-content-left'>
 		<ul id="mw-mf-menu-main">
-			<li class='icon2'><a href="<?php $this->text( 'mainPageUrl' ) ?>">
+			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-featured' ) ?></a></li>
-			<li class='icon3'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
-			<li class='icon4 disabled'>
+			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
+			<li class='icon3 disabled'>
 				<a href='#'>
 				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
 				</a>
 			</li>
-			<li class='icon5'>
+			<li class='icon4'>
 				<a href='<?php $this->text( 'leaveFeedbackURL' ) ?>'>
 				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
 				</a>
 			</li>
-			<li class='icon6'>
+			<li class='icon5'>
 				<a href='<?php $this->text( 'settingsUrl' ) ?>'>
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
 		</ul>
-		<a id="mw-mf-universal-language" href="<?php $this->text( 'siteLanguageLink' ) ?>">
-			<?php $this->msg( 'mobile-frontend-current-language' ) ?>
-		</a>
 		</div>
 		</div>
 		<div id='mw-mf-page-center'>
@@ -552,7 +549,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
 			<?php
-				if ( !$this->data['hideLogo'] ) { ?>
+				if ( !$this->data['hideLogo'] && !$this->data['isBetaGroupMember'] ) { ?>
 				<img width="35" height="22" alt="Logo" id="mw-mf-logo" src="<?php
 					$this->text( 'wgMobileFrontendLogo' ) ?>" />
 			<?php
@@ -576,16 +573,6 @@ class SkinMobileTemplate extends BaseTemplate {
 			</button>
 			<?php } ?>
 		</form>
-		<?php
-		if ( $this->data['isBetaGroupMember'] ) { ?>
-		<a href="#mw-mf-nav" id="mw-mf-page-menu-button">
-		<img
-			alt="page menu"
-			src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif">
-		</a>
-		<?php
-		}
-		?>
 		<?php if ( !$this->data['hideLogo'] ) { ?>
 		<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 			<div class='nav' id='nav'>
@@ -595,13 +582,15 @@ class SkinMobileTemplate extends BaseTemplate {
 			</div>
 		</div>
 		<?php } else {
-		// close header first
 		?>
+		<div id="mw-mf-actionbar">
+			<ul id="content_nav" class="content_block sub-menu">
+				<li class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language' ) ?></li>
+				<li class="item2" id="mw-mf-toc"><?php $this->msg( 'mobile-frontend-page-menu-contents' ) ?></li>
+			</ul>
+			<h2 class="section_heading navigationBar" id="section_nav">Nav Menu</h2>
 		</div>
-		<ul id="mw-mf-nav" class="sub-menu">
-			<li class="item2" id="mw-mf-toc"><?php $this->msg( 'mobile-frontend-page-menu-contents' ) ?></li>
-			<li class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language' ) ?></li>
-		</ul>
+		</div>
 		<?php
 		}
 		}

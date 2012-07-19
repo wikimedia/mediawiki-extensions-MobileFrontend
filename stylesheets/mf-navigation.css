@@ -2,17 +2,8 @@
 	background-color: white;
 }
 
-#mw-mf-overlay .header,
-#mw-mf-header {
-	background-color: #F0F0F0;
-	-webkit-box-shadow: 3px 1px 8px #6d6d6d;
-	-moz-box-shadow: 3px 1px 8px #6d6d6d;
-	-o-box-shadow: 3px 1px 8px #6d6d6d;
-	box-shadow: 3px 1px 8px #6d6d6d;
-	border-bottom: solid 1px #CCC;
-}
-
 #mw-mf-header form,
+#mw-mf-actionbar,
 #mw-mf-header,
 #mw-mf-search,
 #mw-mf-sq {
@@ -20,19 +11,31 @@
 	right: 0;
 	top: 0;
 	left: 0;
+}
+
+#mw-mf-header form,
+#mw-mf-search,
+#mw-mf-sq {
 	height: 45px;
 }
 
 #mw-mf-searchForm {
-	padding: 0px 52px 0px 50px; /* check mw-mf-logo */
+	padding: 0px 8px 0px 50px; /* check mw-mf-logo */
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/* visual indication that search is happening */
+#mw-mf-search.searching {
+	background-color: #eee;
 }
 
 .full-screen-search #mw-mf-searchForm {
 	padding: 0px 8px 0px 52px;
 }
 
-.full-screen-search #mw-mf-nav {
+.overlay #footer,
+.full-screen-search #section_nav,
+.full-screen-search #content_nav {
 	display: none !important;
 }
 
@@ -67,7 +70,7 @@
 	height: 30px;
 	margin-top: 8px;
 	background-color: white;
-	padding-left: 40px;
+	padding-left: 4px;
 	-webkit-appearance: none;
 	padding-right: 0;
 	-moz-box-sizing: border-box;
@@ -83,26 +86,24 @@
 	-webkit-appearance: none;
 }
 
-#mw-mf-main-menu-button,
-#mw-mf-page-menu-button {
+#mw-mf-main-menu-button {
 	display: inline-block;
 	height: 30px;
 	width: 24px;
 	background-image: url(images/Mobile_nav_bar_icons.png);
 	overflow: hidden;
 	position: absolute;
-	top: 8px;
+	top: 7px;
 	background-repeat: no-repeat;
 	z-index: 2;
+	background-position: -28px 0px;
+	left: 12px;
+	padding-left: 10px;
+	border-radius: 5px 5px 5px;
 }
 
-#mw-mf-main-menu-button {
-	background-position: -38px 0px;
-	left: 22px;
-}
-
-#mw-mf-page-menu-button {
-	right: 22px;
+#mw-mf-main-menu-button:active {
+	background-color: #4C4C4C;
 }
 
 #mw-mf-viewport {
@@ -119,18 +120,24 @@
 	height: 100%;
 }
 
+.overlay .header,
+#mw-mf-overlay .header,
 .full-screen-search #mw-mf-header,
 #mw-mf-header {
-	background-color: #F0F0F0;
-	-webkit-box-shadow: 5px 1px 8px #333;
-	-moz-box-shadow: 5px 1px 8px #333;
-	-o-box-shadow: 5px 1px 8px #333;
-	box-shadow: 5px 1px 8px #333;
 	z-index: 2;
+	color: white;
+	background-color: #393939;
+}
+
+#mw-mf-actionbar {
+	display: none; /* hide until javascript is known to be available */
+}
+
+.jsEnabled #mw-mf-actionbar {
+	display: block;
 }
 
 #mw-mf-page-left {
-	background-color: #F0F0F0;
 	width: 80%;
 	right: 20%;
 	font-family: Helvetica;
@@ -151,7 +158,6 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	background-color: #F0F0F0;
 	padding-bottom: 12px;
 }
 
@@ -160,24 +166,30 @@
 	margin-left: 14px; /* margin-left of #mw-mf-menu-main li a + 4px on left of icon background-position */
 }
 
+#mw-mf-page-left,
+#mw-mf-menu-main,
 #mw-mf-menu-main li {
-	background-color: #F0F0F0;
-	text-shadow: 0 1px 0 white;
-	border-bottom: 1px inset #E0E0E0;
+	background-color: #4E4E4E;
+}
+
+#mw-mf-menu-main li {
+	text-shadow: 0 1px 0 black;
+	border-bottom: 1px inset #717171;
 	font-weight: normal;
 }
 
 #mw-mf-menu-main li a {
-	color: black;
+	color: white;
 	display: block;
 	padding: 12px;
-	padding-left: 64px;
+	padding-left: 32px;
 	line-height: 22px;
 	background-image: url(images/icons_main_menu.png);
 	background-repeat: no-repeat;
 	background-position: 0 6px;
 	height: 21px;
 	margin-left: 10px;
+	border-bottom: 1px inset #3e3e3e;
 }
 
 #mw-mf-menu-main li a:hover {
@@ -187,71 +199,117 @@
 #mw-mf-content-left {
 	height: 100%;
 	border-left: solid 12px #252525;
+	border-right: solid 1px black;
 }
 
 #mw-mf-menu-main li.icon2 a {
-	background-position: 0 -30px
+	background-position: 0 -28px;
 }
 #mw-mf-menu-main li.icon3 a {
-	background-position: 0 -65px
+	background-position: 0 -62px
 }
 #mw-mf-menu-main li.icon4 a {
-	background-position: 0 -100px
+	background-position: 0 -96px
 }
 #mw-mf-menu-main li.icon5 a {
-	background-position: 0 -135px;
+	background-position: 0 -130px;
 }
 #mw-mf-menu-main li.icon6 a {
-	background-position: 0 -170px;
+	background-position: 0 -164px;
 }
 
 #mw-mf-menu-main li.icon7 a {
-	background-position: 0 -205px;
+	background-position: 0 -198px;
 }
 
-#mw-mf-nav li.disabled,
+#mw-mf-actionbar li.disabled,
 #mw-mf-menu-main li.disabled {
 	opacity: 0.2;
 }
 
 #mw-mf-menu-main li:hover {
-	background-color: #F8F8F8;
-	border-left: solid 12px #069;
+	background-color: #5C5C5C;
+	border-left: solid 12px #3366BB;
 	margin-left: -12px;
 }
 
-#mw-mf-nav {
-	height: 45px;
-	background-color: #757575;
+.navigationBar {
+	text-indent: -9999px;
+	height: 30px;
+	overflow: hidden;
 	text-align: center;
-	display: none;
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 
-#mw-mf-nav li {
-	background-image: url(images/icons_sub_menu.png);
-	padding-top: 15px;
-	background-repeat: no-repeat;
-	display: inline-block;
+.navigationBar.section_heading button {
+	float: none;
+	display: block;
+	margin: auto;
+	height: 30px;
+	position: relative;
+}
+
+.navigationBar.open {
+	height: 45px;
+}
+
+#section_nav {
+	border-bottom: 1px solid #C5C5C5;
+}
+
+.navigationBar,
+#content_nav {
+	background-color: #F1F1F1;
+}
+
+#content_nav {
+	margin: 0;
+	padding: 0 8px 0 8px;
+	text-align: center;
 	height: 40px;
-	line-height: 40px;
+}
+
+#content_nav li {
+	background-image: url(images/icons_sub_menu.png);
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
+	height: 30px;
+	line-height: 30px;
 	padding-left: 8px;
-	min-width: 50px;
-	color: white;
+	min-width: 30px;
+	text-indent: -999px;
+	overflow: hidden;
 	cursor: pointer;
 }
 
 #mw-mf-toc {
-	background-position: -47px 0px;
+	background-position: 0 -30px;
 }
 
-#mw-mf-language {
-	background-position: -114px 0px;
+#content_nav li#mw-mf-language {
+	background-position: -36px 7px;
+	color: black;
+	text-indent: 40px;
+	line-height: 35px;
+	float: left;
+}
+
+#content_nav li.item-history {
+	text-indent: 0;
+}
+
+#content_nav li.item-history a {
+	text-indent: -999px;
+	overflow: hidden;
+	display: block;
 }
 
 .supportsPositionFixed.navigationEnabled #mw-mf-header,
-.supportsPositionFixed.navigationEnabled #mw-mf-nav,
+.supportsPositionFixed.navigationEnabled #section_nav,
+.supportsPositionFixed.navigationEnabled #content_nav,
 #mw-mf-page-center {
 	-webkit-transform: scale3d(1,1);
 	-moz-transition-property: right,left;
@@ -270,10 +328,6 @@
 
 #mw-mf-clearsearch {
 	top: 12px;
-}
-
-#mw-mf-searchForm {
-	padding: 0px 40px 0px 52px;
 }
 
 .navigationEnabled #mw-mf-page-center {
@@ -330,10 +384,6 @@ body.navigationEnabled {
 	height: 40px;
 	margin: 0;
 	padding-bottom: 0;
-	-webkit-box-shadow: 3px 1px 8px #6d6d6d;
-	-moz-box-shadow: 3px 1px 8px #6d6d6d;
-	-o-box-shadow: 3px 1px 8px #6d6d6d;
-	box-shadow: 3px 1px 8px #6d6d6d;
 }
 
 #mw-mf-overlay .header.mw-mf-locked {
@@ -365,16 +415,17 @@ body.navigationEnabled {
 	margin: 0;
 }
 
+#remove-results,
 .overlay #close {
 	cursor: pointer;
 	position: absolute;
 	border: none;
 	height: 27px;
 	border-radius: 5px;
-	top: 7px;
+	top: 6px;
 	left: 16px;
 	background: none;
-	background-image: url(images/arrow-left-beta.png);
+	background-image: url(images/arrow-left-2.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-indent: -999px;
@@ -382,7 +433,7 @@ body.navigationEnabled {
 }
 
 #remove-results {
-	top: 8px;
+	top: 14px;
 }
 
 html.navigationEnabled,
@@ -416,7 +467,7 @@ body {
 }
 
 #mw-mf-overlay li.mw-mf-overlay-header {
-	background-color: #ccc;
+	background-color: #F1F1F1;
 }
 
 .supportsPositionFixed #mw-mf-page-center {
@@ -430,7 +481,7 @@ body {
 	}
 
 	#mw-mf-searchForm {
-		padding: 0px 30px 0px 40px;
+		padding: 0px 8px 0px 40px;
 	}
 
 	.full-screen-search .suggestions-result {
@@ -443,7 +494,7 @@ body {
 
 	#remove-results,
 	#mw-mf-main-menu-button {
-		left: 12px;
+		left: 2px;
 	}
 
 	#mw-mf-page-menu-button {
@@ -500,13 +551,19 @@ TODO: make this the default and add icons with media queries
 	padding-top: 45px;
 }
 
+.supportsPositionFixed #content_wrapper {
+	padding-top: 75px;
+}
+
 .supportsPositionFixed.navigationEnabled #mw-mf-header,
-.supportsPositionFixed.navigationEnabled #mw-mf-nav {
+.supportsPositionFixed.navigationEnabled #content_nav,
+.supportsPositionFixed.navigationEnabled #section_nav {
 	left: 80%;
 	right: -80%;
 }
 
-.supportsPositionFixed #mw-mf-nav {
+.supportsPositionFixed #section_nav,
+.supportsPositionFixed #content_nav {
 	position: fixed;
 	top: 45px;
 	left: 0;
@@ -514,6 +571,7 @@ TODO: make this the default and add icons with media queries
 	z-index: 5;
 }
 
-.supportsPositionFixed #content_wrapper {
-	padding-top: 45px;
+.supportsPositionFixed #section_nav.openSection {
+	position: fixed;
+	top: 85px;
 }

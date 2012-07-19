@@ -91,7 +91,7 @@ $messages['en'] = array (
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Log in',
 	'mobile-frontend-logout' => 'Log out',
-	'mobile-frontend-placeholder' => 'Type your search here...',
+	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
 	'mobile-frontend-search-help' => 'Type search term above and matching article titles will appear here.',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-clear-search' => 'Clear',
@@ -113,7 +113,7 @@ $messages['en'] = array (
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below',
 	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-page-menu-contents' => 'contents',
-	'mobile-frontend-page-menu-language' => 'language',
+	'mobile-frontend-page-menu-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-page-menu-contents-heading' => 'Contents',
 	'mobile-frontend-page-menu-language-heading' => 'Read this article in',
 );
