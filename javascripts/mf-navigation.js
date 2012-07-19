@@ -5,20 +5,6 @@ MobileFrontend.navigation = (function( $ ) {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message;
 
-	function resetActionBar() {
-		var menu = $( '#' + mfePrefix + 'nav' )[0];
-		menu.style.display = '';
-	}
-
-	function toggleActionBar() {
-		var menu = $( '#' + mfePrefix + 'nav' )[0];
-		if( menu.style.display ) {
-			resetActionBar();
-		} else {
-			menu.style.display = 'block';
-		}
-	}
-
 	function getOverlay() {
 		return document.getElementById( 'mw-mf-overlay' );
 	}
@@ -46,9 +32,6 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 		$( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
 		$( overlay ).append( contents );
-		$( 'a', overlay.lastChild ).bind( 'click', function() {
-			toggleActionBar();
-		});
 		$( contents ).addClass( 'content' );
 		if( options.locked ) { // locked overlays cannot be escaped.
 			$( '#mw-mf-overlay .header' ).addClass( 'mw-mf-locked' );
@@ -105,28 +88,6 @@ MobileFrontend.navigation = (function( $ ) {
 
 	/* Fixed navigation */
 	function setupScrollBehaviour() {
-		var y = window.scrollY, threshold = 5, timeout,
-			$header = $( '#mw-mf-header' );
-		function scroll() {
-			var newY = window.scrollY,
-				navVisible = $( '#mw-mf-nav' ).is( ':visible' ),
-				visible = $header.is( ':visible' );
-			if ( ( newY < threshold * 2 || newY < y - threshold ) ) {  // reverse scroll
-				window.clearTimeout( timeout );
-				timeout = window.setTimeout( function() {
-					$header.slideDown( 0 );
-				}, 0 );
-				y = newY;
-			// don't EVER hide when nav is expanded
-			} else if( !navVisible &&  newY > y + threshold ) {
-				window.clearTimeout( timeout );
-				timeout = window.setTimeout( function() {
-					$header.slideUp( 0 );
-				}, 500 );
-				y = newY;
-			}
-		}
-		$( window ).scroll( scroll );
 	}
 
 	function init() {
@@ -174,11 +135,6 @@ MobileFrontend.navigation = (function( $ ) {
 				u( document.body ).removeClass( 'noTransitions' );
 			}, 1000 );
 		}
-
-		$( '#' + mfePrefix + 'page-menu-button' ).click( function( ev ) {
-			ev.preventDefault();
-			toggleActionBar();
-		});
 
 		if( countContentHeadings() > 0 ) {
 			$( tocMenuButton ).bind( 'click', createTableOfContents );
