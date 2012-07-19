@@ -3,6 +3,7 @@
 (function( MobileFrontend ) {
 MobileFrontend.navigation = (function( $ ) {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
+		lastScrollTopPosition = 0,
 		message = MobileFrontend.message;
 
 	function getOverlay() {
@@ -11,11 +12,14 @@ MobileFrontend.navigation = (function( $ ) {
 
 	function closeOverlay( ) {
 		$( 'html' ).removeClass( 'overlay' );
+		window.scrollTo( document.body.scrollLeft, lastScrollTopPosition )
 		MobileFrontend.history.replaceHash( '#' );
 	}
 
 	function showOverlay() {
+		lastScrollTopPosition = document.body.scrollTop;
 		$( 'html' ).addClass( 'overlay' );
+		window.scrollTo( 0, 0 ); // scroll right to top
 		$( 'html' ).removeClass( 'navigationEnabled' );
 	}
 
