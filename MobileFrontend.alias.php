@@ -39,7 +39,7 @@ $specialPageAliases['hi'] = array(
 $specialPageAliases['ko'] = array(
 	'MobileFrontend' => array( '모바일프론트엔드' ),
 	'MobileFeedback' => array( '모바일피드백' ),
-	'MobileOptions' => array( '모바일옵션', '모바일설정' ),
+	'MobileOptions' => array( '모바일설정' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
