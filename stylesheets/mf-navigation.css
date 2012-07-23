@@ -235,7 +235,7 @@
 
 .navigationBar {
 	text-indent: -9999px;
-	height: 30px;
+	height: 18px;
 	overflow: hidden;
 	text-align: center;
 	margin: 0;
@@ -247,8 +247,17 @@
 	float: none;
 	display: block;
 	margin: auto;
-	height: 30px;
+	height: 18px;
+	width: 100%;
+	background-position: center 4px;
 	position: relative;
+	text-indent: -9999px;
+	overflow: hidden;
+	border-bottom: 1px solid #C5C5C5;
+}
+
+.navigationBar.section_heading button.openSection {
+	background-position: center center;
 }
 
 .navigationBar.open {
@@ -256,11 +265,12 @@
 }
 
 #section_nav {
-	border-bottom: 1px solid #C5C5C5;
+	border-bottom: solid 18px transparent; /* keep touch area */
 }
 
-.navigationBar,
+#section_nav button,
 #content_nav {
+	opacity: 1;
 	background-color: #F1F1F1;
 }
 
