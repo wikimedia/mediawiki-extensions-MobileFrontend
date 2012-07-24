@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAQ3//+R0\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-07-24T20:01:48Z",
+      "side": 1,
+      "message": "Wouldn\u0027t the same issue mentioned in the bug apply to the change to this line made in 3002efab?",
+      "revId": "761f7715bbe3db3caa7a316437e9d24b4a65a6e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAQ3//+Rw\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-07-24T20:01:48Z",
+      "side": 1,
+      "message": "Please use a more descriptive key as \u0027current\u0027 is ambiguous - do you mean \u0027current\u0027 as in \u0027this is the language key we will use NOW\u0027 or as in \u0027this is the current language\u0027? If the it is the latter, it\u0027s probably OK to keep this if you clarify in the qqq string.",
+      "revId": "761f7715bbe3db3caa7a316437e9d24b4a65a6e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAQ3//+Rs\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-07-24T20:01:48Z",
+      "side": 1,
+      "message": "See comment from line 116. You should provide clearer context than \u0027secondary menu\u0027 as that is probably meaningless to many who might want to translate the associated string.",
+      "revId": "761f7715bbe3db3caa7a316437e9d24b4a65a6e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
