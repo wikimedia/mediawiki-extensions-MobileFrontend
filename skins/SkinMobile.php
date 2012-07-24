@@ -595,7 +595,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 		<div id="mw-mf-actionbar">
 			<ul id="content_nav" class="content_block sub-menu">
-				<li class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language' ) ?></li>
+				<li class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language-current' ) ?></li>
 				<li class="item2" id="mw-mf-toc"><?php $this->msg( 'mobile-frontend-page-menu-contents' ) ?></li>
 				<li class="item-history <?php $this->html( 'historyLinkClass' ) ?>"><?php $this->html( 'historyLink' ) ?></li>
 			</ul>
