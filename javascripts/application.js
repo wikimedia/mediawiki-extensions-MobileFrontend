@@ -11,7 +11,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 }
 mw.mobileFrontend = (function() {
 	var utilities, modules = [],
-		scrollY,
+		scrollY, tokenQuery,
 		doc = document.documentElement;
 
 	function message( name ) {
@@ -218,9 +218,37 @@ mw.mobileFrontend = (function() {
 		xmlHttp.send();
 	};
 
+	function setting( name ) {
+		return mwMobileFrontendConfig.settings[name] || '';
+	}
+
+	function getApiUrl() {
+		return setting( 'scriptPath' ) + '/api.php';
+	}
+
+	function getToken( tokenType, callback ) {
+		var data;
+		if( tokenQuery ) {
+			tokenQuery.done( callback );
+		} else {
+			data = {
+				format: 'json',
+				action: 'tokens',
+				type: tokenType
+			};
+			tokenQuery = jQuery.ajax( {
+				url: getApiUrl(),
+				dataType: 'json',
+				data: data,
+			} ).done( callback );
+		}
+	}
+
 	return {
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
+		getApiUrl: getApiUrl,
+		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
 		history: {
 			replaceHash: function( newHash ) {
 				if( window.history && window.history.replaceState ) {
@@ -240,9 +268,7 @@ mw.mobileFrontend = (function() {
 		message: message,
 		prefix: 'mw-mf-',
 		registerModule: registerModule,
-		setting: function( name ) {
-			return mwMobileFrontendConfig.settings[name] || '';
-		},
+		setting: setting,
 		supportsPositionFixed: supportsPositionFixed,
 		utils: utilities
 	};
