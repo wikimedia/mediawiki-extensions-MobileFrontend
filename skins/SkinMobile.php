@@ -40,6 +40,10 @@ class SkinMobile extends SkinMobileBase {
 		if ( $inBeta ) {
 			$styles[] = 'mobile.beta';
 			$scripts[] = 'mobile.beta';
+			if( $device['supports_jquery'] ) {
+				$styles[] = 'mobile.beta.jquery';
+				$scripts[] = 'mobile.beta.jquery';
+			}
 		} else {
 			$styles[] = 'mobile';
 			$scripts[] = 'mobile';
