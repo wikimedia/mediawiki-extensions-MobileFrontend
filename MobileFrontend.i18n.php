@@ -112,8 +112,8 @@ $messages['en'] = array (
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below',
 	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-page-menu-contents' => 'contents',
-	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
-	'mobile-frontend-page-menu-history' => '<a href="$1">History</a>',
+	'mobile-frontend-page-menu-language' => '{{#language:{{CONTENTLANG}}}}',
+	'mobile-frontend-page-menu-history' => 'History',
 	'mobile-frontend-page-menu-contents-heading' => 'Contents',
 	'mobile-frontend-page-menu-language-heading' => 'Read this article in',
 );
