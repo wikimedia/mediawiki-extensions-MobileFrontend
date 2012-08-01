@@ -106,10 +106,6 @@ class SkinMobile extends SkinMobileBase {
 				$historyKey = 'mobile-frontend-page-menu-history';
 			}
 			$historyLink = $this->msg( $historyKey, htmlspecialchars( $link ) )->text();
-			$activityLink = $this->msg( 'mobile-frontend-footer-article-edit-info',
-				$language->timeanddate( $lastEdit ),
-				$language->time( $lastEdit ),
-				$language->date( $lastEdit ) )->parse();
 		}
 		if( !$historyLink ) {
 			$tpl->set( 'historyLinkClass', 'disabled' );

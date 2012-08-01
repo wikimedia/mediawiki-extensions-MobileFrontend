@@ -49,7 +49,6 @@ $messages['en'] = array (
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
 	'mobile-frontend-footer-contributors' => 'Article by <a href="$1">contributors</a> like you',
-	'mobile-frontend-footer-article-edit-info' => 'Last edited on $1',
 	'mobile-frontend-featured-article' => 'Today\'s Featured Article',
 	'mobile-frontend-news-items' => 'In The News',
 	'mobile-frontend-leave-feedback-title' => 'Give us feedback about your mobile site experience',
