@@ -102,10 +102,12 @@ class SkinMobile extends SkinMobileBase {
 			$lastEdit = $this->getWikiPage()->getTimestamp();
 			if ( !$inBeta ) {
 				$historyKey = 'mobile-frontend-footer-contributors';
+				$historyLink = $this->msg( $historyKey, htmlspecialchars( $link ) )->text();
 			} else {
 				$historyKey = 'mobile-frontend-page-menu-history';
+				$historyLink = Html::element( 'a', array( 'href' => $link ),
+					wfMsg( $historyKey ) );
 			}
-			$historyLink = $this->msg( $historyKey, htmlspecialchars( $link ) )->text();
 		}
 		if( !$historyLink ) {
 			$tpl->set( 'historyLinkClass', 'disabled' );
