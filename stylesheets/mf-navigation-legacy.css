@@ -62,11 +62,13 @@ full screen search css
 
 #mw-mf-logo {
 	position: absolute;
-	height: 22px;
+	max-height: 22px;
 	cursor: pointer;
 	left: 22px;
 	top: 9px;
-	width: 35px;
+	max-width: 35px;
+	width: auto;
+	height: auto;
 }
 
 @media all and (max-width: 320px) {

@@ -558,7 +558,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
 			<?php
 				if ( !$this->data['hideLogo'] && !$this->data['isBetaGroupMember'] ) { ?>
-				<img width="35" height="22" alt="Logo" id="mw-mf-logo" src="<?php
+				<img alt="Logo" id="mw-mf-logo" src="<?php
 					$this->text( 'wgMobileFrontendLogo' ) ?>" />
 			<?php
 				}
