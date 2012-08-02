@@ -27,7 +27,7 @@ $messages['en'] = array (
 	'mobile-frontend-close-section' => 'Close this section',
 	'mobile-frontend-show-button' => 'Show',
 	'mobile-frontend-hide-button' => 'Hide',
-	'mobile-frontend-empty-homepage' => 'This homepage needs to be configured. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Read more here</a>',
+	'mobile-frontend-empty-homepage' => 'This homepage needs to be configured. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instructions on how to get this site mobile enabled</a>',
 	'mobile-frontend-regular-site' => 'Desktop view',
 	'mobile-frontend-wml-continue' => 'Continue...',
 	'mobile-frontend-wml-back' => 'Back...',
