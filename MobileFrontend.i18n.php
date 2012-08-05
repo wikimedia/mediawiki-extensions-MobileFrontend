@@ -467,6 +467,7 @@ $messages['ary'] = array(
 /** Assamese (অসমীয়া)
  * @author Bishnu Saikia
  * @author Gitartha.bordoloi
+ * @author Nilamdyuti
  */
 $messages['as'] = array(
 	'mobile-frontend-desc' => "মোবাইল ফ্ৰ'ণ্টএণ্ড",
@@ -483,7 +484,7 @@ $messages['as'] = array(
 	'mobile-frontend-close-section' => 'এই অনুচ্ছেদ বন্ধ কৰক',
 	'mobile-frontend-show-button' => 'দেখুৱাওক',
 	'mobile-frontend-hide-button' => 'লুকুৱাওক',
-	'mobile-frontend-empty-homepage' => 'এই মুখ্যপৃষ্ঠাখন কন্‌ফিগাৰ কৰাৰ প্ৰয়োজন হৈছে। <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">ইয়াত অধিক পঢ়ক</a>',
+	'mobile-frontend-empty-homepage' => 'এই ঘৰপৃষ্ঠা সংৰূপণ কৰাৰ প্ৰয়োজন। <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">এই ছাইট ম\'বাইলৰ বাবে সামৰ্থবান কৰিবলে নিৰ্দেশবোৰ </a>',
 	'mobile-frontend-regular-site' => 'ডেক্সটপ সংস্কৰণ',
 	'mobile-frontend-wml-continue' => 'অব্যাহত ...',
 	'mobile-frontend-wml-back' => 'ঘূৰি যাওক...',
@@ -542,7 +543,7 @@ $messages['as'] = array(
 	'mobile-frontend-password' => 'গুপ্তশব্দ:',
 	'mobile-frontend-login' => 'প্ৰৱেশ',
 	'mobile-frontend-logout' => 'প্ৰস্থান',
-	'mobile-frontend-placeholder' => 'আপোনাৰ সন্ধান বিষয় ইয়াত লিখক...',
+	'mobile-frontend-placeholder' => 'সন্ধান কৰক {{SITENAME}}',
 	'mobile-frontend-search-help' => 'অনুসন্ধান বিষয় ওপৰত টাইপ কৰক আৰু মিলা প্ৰবন্ধ শিৰোনামবোৰ ইয়াত দেখা পাব।',
 	'mobile-frontend-dismiss-notification' => 'এই জাননী বাতিল কৰক',
 	'mobile-frontend-clear-search' => 'পৰিস্কাৰ',
@@ -587,7 +588,7 @@ $messages['ast'] = array(
 	'mobile-frontend-close-section' => 'Zarrar esta sección',
 	'mobile-frontend-show-button' => 'Amosar',
 	'mobile-frontend-hide-button' => 'Anubrir',
-	'mobile-frontend-empty-homepage' => 'Esta páxina d\'aniciu ta por configurar. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Lleer más equí</a>',
+	'mobile-frontend-empty-homepage' => 'Esta páxina d\'aniciu ta por configurar. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrucciones p\'activar esti sitiu pa móvil</a>',
 	'mobile-frontend-regular-site' => "Vista d'escritoriu",
 	'mobile-frontend-wml-continue' => 'Continuar...',
 	'mobile-frontend-wml-back' => 'Volver...',
@@ -1661,7 +1662,7 @@ $messages['diq'] = array(
 	'mobile-frontend-close-section' => 'Nê leti racnê',
 	'mobile-frontend-show-button' => 'Bımocne',
 	'mobile-frontend-hide-button' => 'Bınımne',
-	'mobile-frontend-empty-homepage' => 'Ena keyepela timarkerdışi rê şırê <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">tiyay buwanê</a>',
+	'mobile-frontend-empty-homepage' => 'Ena keyepela timarkerdışi nêbiya. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">ena mobil sita buwanê</a>',
 	'mobile-frontend-regular-site' => 'Verqaydê serêmasi',
 	'mobile-frontend-wml-continue' => 'Peyniya cı...',
 	'mobile-frontend-wml-back' => 'Peyd be...',
@@ -1980,7 +1981,7 @@ $messages['es'] = array(
 	'mobile-frontend-close-section' => 'Cerrar esta sección',
 	'mobile-frontend-show-button' => 'Mostrar',
 	'mobile-frontend-hide-button' => 'Ocultar',
-	'mobile-frontend-empty-homepage' => 'Esta página debe configurarse. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Leer más aquí</a>',
+	'mobile-frontend-empty-homepage' => 'Esta página debe configurarse. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrucciones sobre cómo activar este sitio móvil</a>',
 	'mobile-frontend-regular-site' => 'Vista del escritorio',
 	'mobile-frontend-wml-continue' => 'Continuar...',
 	'mobile-frontend-wml-back' => 'Atrás...',
@@ -2601,7 +2602,7 @@ $messages['frr'] = array(
 	'mobile-frontend-show-button' => 'Wise',
 	'mobile-frontend-hide-button' => 'Fersteeg',
 	'mobile-frontend-empty-homepage' => 'Detdiar homepage skal noch iinracht wurd.
-<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Lees widjer...</a>',
+<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Lees widjer, hü det gongt.</a>',
 	'mobile-frontend-regular-site' => 'Normool uunsicht',
 	'mobile-frontend-wml-continue' => 'Widjer ...',
 	'mobile-frontend-wml-back' => 'Turag ...',
@@ -3029,7 +3030,7 @@ $messages['he'] = array(
 	'mobile-frontend-close-section' => 'לסגור את החלק הזה',
 	'mobile-frontend-show-button' => 'הצגה',
 	'mobile-frontend-hide-button' => 'הסתרה',
-	'mobile-frontend-empty-homepage' => 'יש לבצע הגדרות מתאימות לדף הבית הזה. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">למידע נוסף</a>',
+	'mobile-frontend-empty-homepage' => 'צריך להגדיר את דף הבית הזה. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">הוראות איך להתאים את האתר הזה למכשירים ניידים.</a>',
 	'mobile-frontend-regular-site' => 'תצוגה למחשבים',
 	'mobile-frontend-wml-continue' => 'המשך...',
 	'mobile-frontend-wml-back' => 'חזרה...',
@@ -4219,7 +4220,7 @@ $messages['ko'] = array(
 	'mobile-frontend-close-section' => '이 문단 닫기',
 	'mobile-frontend-show-button' => '보이기',
 	'mobile-frontend-hide-button' => '숨기기',
-	'mobile-frontend-empty-homepage' => '이 홈페이지는 재구성되어야 합니다. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">자세한 내용은 이곳을 참고하세요.</a>',
+	'mobile-frontend-empty-homepage' => '이 홈페이지는 재구성해야 합니다. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">이 사이트를 모바일로 활성화하는 방법에 대한 지침</a>',
 	'mobile-frontend-regular-site' => '데스크톱 버전',
 	'mobile-frontend-wml-continue' => '계속...',
 	'mobile-frontend-wml-back' => '뒤로...',
@@ -4923,7 +4924,7 @@ $messages['mk'] = array(
 	'mobile-frontend-close-section' => 'Затвори го поднасловот',
 	'mobile-frontend-show-button' => 'Прикажи',
 	'mobile-frontend-hide-button' => 'Скриј',
-	'mobile-frontend-empty-homepage' => 'Оваа домашна страница треба да се намести. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Прочитајте повеќе</a>',
+	'mobile-frontend-empty-homepage' => 'Оваа домашна страница треба да се намести. Погл. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Напатствија за вклучување на мобилната верзија</a>',
 	'mobile-frontend-regular-site' => 'Обичен изглед',
 	'mobile-frontend-wml-continue' => 'Продолжи ...',
 	'mobile-frontend-wml-back' => 'Назад ...',
@@ -5506,7 +5507,7 @@ $messages['nl'] = array(
 	'mobile-frontend-close-section' => 'Deze paragraaf sluiten',
 	'mobile-frontend-show-button' => 'Weergeven',
 	'mobile-frontend-hide-button' => 'Verbergen',
-	'mobile-frontend-empty-homepage' => 'Deze startpagina moet worden samengesteld. <a href="//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Hier kunt u meer lezen</a>.',
+	'mobile-frontend-empty-homepage' => 'Deze startpagina moet worden samengesteld. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instructies over hoe deze mobiele site in te schakelen</a>.',
 	'mobile-frontend-regular-site' => 'Standaardweergave',
 	'mobile-frontend-wml-continue' => 'Doorgaan ...',
 	'mobile-frontend-wml-back' => 'Terug ...',
@@ -6878,7 +6879,7 @@ $messages['sl'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Skoči nazaj za oddelek',
 	'mobile-frontend-show-button' => 'pokaži',
 	'mobile-frontend-hide-button' => 'skrij',
-	'mobile-frontend-empty-homepage' => 'Domača stran potrebuje popravilo. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Več lahko preberete tukaj.</a>',
+	'mobile-frontend-empty-homepage' => 'Domačo stran morate konfigurirati. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Navodila, kako stran omogočiti na mobilnih napravah</a>',
 	'mobile-frontend-regular-site' => 'Pogled namizja',
 	'mobile-frontend-wml-continue' => 'Nadaljuj ...',
 	'mobile-frontend-wml-back' => 'Nazaj ...',
@@ -6927,7 +6928,7 @@ $messages['sl'] = array(
 	'mobile-frontend-username' => 'Uporabniško ime:',
 	'mobile-frontend-password' => 'Geslo:',
 	'mobile-frontend-login' => 'Prijava',
-	'mobile-frontend-placeholder' => 'Vnesite svoj iskalni niz tukaj ...',
+	'mobile-frontend-placeholder' => 'Iščite po {{GRAMMAR:mestnik|{{SITENAME}}}}',
 	'mobile-frontend-dismiss-notification' => 'skrij obvestilo',
 	'mobile-frontend-clear-search' => 'Počisti',
 	'mobile-frontend-privacy-link-text' => 'Zasebnost',
@@ -7508,10 +7509,11 @@ $messages['tl'] = array(
 );
 
 /** толышә зывон (толышә зывон)
+ * @author Erdemaslancan
  * @author Гусейн
  */
 $messages['tly'] = array(
-	'mobile-frontend-search-submit' => 'Давардеј',
+	'mobile-frontend-search-submit' => 'Давард',
 	'mobile-frontend-home-button' => 'Әсосә сәһифә',
 	'mobile-frontend-random-button' => 'Рајрастә',
 	'mobile-frontend-show-button' => 'Нишо дој',
