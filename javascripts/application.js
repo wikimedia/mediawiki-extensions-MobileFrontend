@@ -10,13 +10,9 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 	};
 }
 mw.mobileFrontend = (function() {
-	var utilities, modules = [], browserScore = 2000,
+	var utilities, modules = [],
 		scrollY,
 		doc = document.documentElement;
-
-	function getBrowserScore() {
-		return browserScore;
-	}
 
 	function message( name ) {
 		return mwMobileFrontendConfig.messages[name] || '';
@@ -43,23 +39,20 @@ mw.mobileFrontend = (function() {
 		return support;
 	}
 
-	function registerModule( module, minScore ) {
-		modules.push( [ module, minScore ] );
+	function registerModule( module ) {
+		modules.push( [ module ] );
 	}
 
 	function initModules() {
 		var module, i, minScore;
 		for( i = 0; i < modules.length; i++ ) {
 			module = modules[ i ];
-			minScore = module[ 1 ];
-			if( typeof minScore === 'undefined' || getBrowserScore() > minScore ) {
-				module = mw.mobileFrontend[ module[ 0 ] ];
-				if( module && module.init ) {
-					try {
-						module.init();
-					} catch( e ) {
-						// module failed to load for some reason
-					}
+			module = mw.mobileFrontend[ module[ 0 ] ];
+			if( module && module.init ) {
+				try {
+					module.init();
+				} catch( e ) {
+					// module failed to load for some reason
 				}
 			}
 		}
@@ -103,16 +96,6 @@ mw.mobileFrontend = (function() {
 				utilities( document.documentElement ).addClass( 'android4-0-2' );
 			}
 		}
-		// scores browser's capability
-		// the higher the score the better the browser
-		function scoreBrowser() {
-			var ua = navigator.userAgent;
-			// browsers not capable of search
-			if( ua.match( /Opera Mini\/4/ ) ) {
-				browserScore = 1000;
-			}
-		}
-		scoreBrowser();
 		fixBrowserBugs();
 
 		initModules();
