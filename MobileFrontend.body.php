@@ -78,7 +78,7 @@ class ExtMobileFrontend extends ContextSource {
 	 * @return string
 	 */
 	public function getZeroRatedBanner() {
-		$zeroRatedBanner = $this->zeroRatedBanner ? str_replace( 'style="display:none;"', '', $this->zeroRatedBanner ) : '';
+		$zeroRatedBanner = $this->zeroRatedBanner ? str_replace( 'display:none;', '', $this->zeroRatedBanner ) : '';
 
 		if ( $zeroRatedBanner ) {
 			if ( strstr( $zeroRatedBanner, 'id="zero-rated-banner"><span' ) ) {
