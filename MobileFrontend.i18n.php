@@ -241,7 +241,7 @@ $messages['ttt'] = array(
 	'mobile-frontend-opt-in-no-button' => 'Ne',
 );
 
-/** Ṫuroyo (Ṫuroyo)
+/** Turoyo (Ṫuroyo)
  * @author Ariyo
  */
 $messages['tru'] = array(
@@ -428,7 +428,6 @@ $messages['ar'] = array(
 	'mobile-frontend-disable-images' => 'عطل الصور على موقع المحمول',
 	'mobile-frontend-enable-images' => 'مكّن الصور على موقع المحمول',
 	'mobile-frontend-footer-contributors' => 'كتب المقالة <a href="$1">مساهمون</a> مثلك',
-	'mobile-frontend-footer-article-edit-info' => 'آخر تعديل بتاريخ $1',
 	'mobile-frontend-news-items' => 'في الأخبار',
 	'mobile-frontend-leave-feedback-title' => 'أعطنا ملاحظاتك عن تجربة موقع المحمول',
 	'mobile-frontend-leave-feedback-notice' => 'ملاحظاتك تساعدنا على تحسين واجهة  المحمول. سيتم نشرها علنا ( مع اسم المستخدم الخاص بك وإصدار المستعرض ونظام التشغيل) على صفحة " $1 ". الرجاء اختيار  مواضيع ذات صلة، مثل "أشكال التصاميم مع جدولتها". ستكون ملاحظاتك خاضعة لشروط الاستخدام.',
@@ -779,7 +778,6 @@ $messages['ba'] = array(
 	'mobile-frontend-main-menu-settings' => 'Көйләүҙәр',
 	'mobile-frontend-main-menu-contact' => 'Бәйләнеш өсөн мәғлүмәт',
 	'mobile-frontend-page-menu-contents' => 'йөкмәткеһе',
-	'mobile-frontend-page-menu-language' => 'тел',
 	'mobile-frontend-page-menu-contents-heading' => 'Йөкмәткеһе',
 	'mobile-frontend-page-menu-language-heading' => 'Был мәҡәлә башҡа телдәрҙә',
 );
@@ -3302,6 +3300,7 @@ $messages['hi'] = array(
 	'mobile-frontend-search-submit' => 'जाएँ',
 	'mobile-frontend-featured-article' => 'आज का निर्वाचित लेख',
 	'mobile-frontend-home-button' => 'गृह',
+	'mobile-frontend-logged-out' => 'लॉग इन नहीं किया है',
 	'mobile-frontend-random-button' => 'बेतरतीब',
 	'mobile-frontend-back-to-top-of-section' => 'पिछला अनुभाग',
 	'mobile-frontend-show-button' => 'दिखाएँ',
@@ -4727,7 +4726,6 @@ $messages['ku-latn'] = array(
 	'mobile-frontend-footer-contact' => 'Têkilî',
 	'mobile-frontend-main-menu-contact' => 'Têkilî',
 	'mobile-frontend-page-menu-contents' => 'naverok',
-	'mobile-frontend-page-menu-language' => 'ziman',
 	'mobile-frontend-page-menu-contents-heading' => 'Naverok',
 );
 
@@ -5474,7 +5472,6 @@ $messages['mr'] = array(
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} भाषा',
 	'mobile-frontend-main-menu-contact' => 'संपर्क',
 	'mobile-frontend-page-menu-contents' => 'मजकूर',
-	'mobile-frontend-page-menu-language' => 'भाषा',
 	'mobile-frontend-page-menu-contents-heading' => 'मजकूर',
 	'mobile-frontend-page-menu-language-heading' => 'हा लेख इथुन वाचा',
 );
@@ -6030,7 +6027,6 @@ $messages['or'] = array(
 	'mobile-frontend-disable-images' => 'ମୋବାଇଲ ସାଇଟ ପାଇଁ ଛବି ଦେଖଣା ଅଚଳ କରିବେ',
 	'mobile-frontend-enable-images' => 'ମୋବାଇଲ ସାଇଟ ପାଇଁ ଛବି ଦେଖଣା ସଚଳ କରିବେ',
 	'mobile-frontend-toggle-images' => '$1 / $2 ଛବିଗୁଡିକ',
-	'mobile-frontend-footer-article-edit-info' => '$1 ଦିନ ଶେଷ ସମ୍ପାଦନା ହୋଇଥିଲା',
 	'mobile-frontend-news-items' => 'ଖବରରେ',
 	'mobile-frontend-leave-feedback-title' => 'ଆପଣଙ୍କ ମୋବାଇଲ ସାଇଟ ଅଭିଜ୍ଞତା ବାବଦରେ ଆମକୁ ମତାମତ ଦିଅନ୍ତୁ',
 	'mobile-frontend-leave-feedback-notice' => 'ଆପଣଙ୍କ ମତାମତ ଆମ୍ଭଙ୍କୁ ଆପଣଙ୍କର ମୋବାଇଲ ସାଇଟର ଅନୁଭୂତି ସୁଧାରିବାରେ ସହଯୋଗ କରିଥାଏ । &quot;$1&quot; ପୃଷ୍ଠାରେ ଏହା ସାଧାରଣରେ ପ୍ରକାଶିତ ହେବ (ଆପଣଙ୍କ ଇଉଜର ନାମ, ବ୍ରାଉଜର ସଂସ୍କରଣ ଓ ଅପରେଟିଙ୍ଗ ସିଷ୍ଟମ ସହିତ) । ଦୟାକରି ସୂଚନାକାରୀ ବିଷୟ ଧାଡ଼ିଟିଏ ବାଛନ୍ତୁ; ଯଥା - "ଓସାରିଆ ସାରଣୀ ଦେଖିବାରେ ଅସୁବିଧା" । ଆପଣଙ୍କର ମତ ଆମ୍ଭର ବ୍ୟବହାର ବିଧିଭୁକ୍ତ ।',
@@ -6339,17 +6335,53 @@ $messages['pms'] = array(
 	'mobile-frontend-leave-feedback-email-body' => 'Për piasì scriv toa e-mail sota sta linia-sì.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Probem técnich',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Opinion general',
+	'mobile-frontend-leave-feedback-article-personal-link-text' => "Arvardant mi, na përson-a o n'asienda che mi i rapresento",
+	'mobile-frontend-leave-feedback-article-factual-link-text' => "Arvardant n'eror fatual",
+	'mobile-frontend-leave-feedback-article-other-link-text' => "Arvardant n'àutr problem",
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Soget dël mëssagi',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Scriv tò coment ambelessì',
 	'mobile-frontend-leave-feedback-page-title' => 'Opinion a propòsit dël sit për ij sacociàbij',
+	'mobile-frontend-leave-feedback-special-title' => 'Contatne',
+	'mobile-frontend-feedback-no-subject' => '(pa gnun soget)',
+	'mobile-frontend-feedback-no-subject-field' => "Për piasì ch'a buta un soget",
+	'mobile-frontend-feedback-no-message' => "Për piasì ch'a buta un mëssagi ambelessì",
+	'mobile-frontend-feedback-edit-summary' => "$1 - spedì automaticament an dovrand l'[[Special:MobileFeedback|utiss d'artorn dël sacobciàbil]]",
 	'mobile-frontend-leave-feedback-thanks' => 'Mersì, për toa opinion!',
+	'mobile-frontend-leave-feedback-post-error' => "A l'é staie n'eror an processand tò mëssagi. Për piasì prova torna pì tard.",
 	'mobile-frontend-language' => 'Lenga:',
+	'mobile-frontend-language-header' => "Sta vos a l'é disponìbil an $1 {{PLURAL:$1|lenga|lenghe}}",
+	'mobile-frontend-language-footer' => "{{SITENAME}} a l'é disponìbil an autre lenghe.",
+	'mobile-frontend-language-site-choose' => 'Serca lenga',
+	'mobile-frontend-language-site-nomatches' => 'Pa gnun-e lenghe corispondente',
 	'mobile-frontend-username' => 'Stranòm:',
 	'mobile-frontend-password' => 'Ciav:',
 	'mobile-frontend-login' => 'Intra',
+	'mobile-frontend-logout' => 'Seurte da',
 	'mobile-frontend-placeholder' => 'Sërca an {{SITENAME}}',
+	'mobile-frontend-search-help' => 'Scriv sota le paròle ëd serca e ij tìtoj dle vos corispondente a apariran ambelessì.',
 	'mobile-frontend-dismiss-notification' => 'arfuda sta notìfica',
 	'mobile-frontend-clear-search' => 'Scancela',
+	'mobile-frontend-privacy-link-text' => 'Privacy',
+	'mobile-frontend-about-link-text' => 'A propòsit',
+	'mobile-frontend-footer-more' => 'pi',
+	'mobile-frontend-footer-less' => 'men',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'Contnù disponìbil sota <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Condission d\'Usagi</a>',
 	'mobile-frontend-footer-contact' => 'Contat',
+	'mobile-frontend-unknown-option' => 'Opsion pa arconossùa "$1".',
+	'mobile-frontend-search-noresults' => "Pa gnun-e vos a corispondo a toa arserca. Cangia toa arserca, o sgnaca ël boton d'arserca dla tastera për serché ant le vos.",
+	'mobile-frontend-main-menu-featured' => 'Premià',
+	'mobile-frontend-main-menu-nearby' => 'Vzin',
+	'mobile-frontend-main-menu-settings' => 'Regolassion',
+	'mobile-frontend-main-menu-settings-heading' => 'Regolassion dël sit dël sacociàbil',
+	'mobile-frontend-settings-site-header' => 'Lenghe ëd {{SITENAME}}',
+	'mobile-frontend-settings-site-description' => "{{SITENAME}} a l'é disponìbil an $1 {{PLURAL:$1|lenga|lenghe}}. Tute le vërsion disponìbij a son listà sota",
+	'mobile-frontend-main-menu-contact' => 'Contat',
+	'mobile-frontend-page-menu-contents' => 'contnù',
+	'mobile-frontend-page-menu-history' => 'Stòria',
+	'mobile-frontend-page-menu-contents-heading' => 'Contnù',
+	'mobile-frontend-page-menu-language-heading' => 'Les sta vos an',
 );
 
 /** Western Punjabi (پنجابی)
@@ -6442,7 +6474,6 @@ $messages['ps'] = array(
 	'mobile-frontend-main-menu-settings' => 'امستنې',
 	'mobile-frontend-main-menu-contact' => 'اړيکه',
 	'mobile-frontend-page-menu-contents' => 'منځپانګه',
-	'mobile-frontend-page-menu-language' => 'ژبه',
 	'mobile-frontend-page-menu-contents-heading' => 'منځپانګه',
 );
 
