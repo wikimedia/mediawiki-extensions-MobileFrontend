@@ -454,6 +454,7 @@ $messages['ar'] = array(
 	'mobile-frontend-images-status' => 'الصور',
 	'mobile-frontend-disable-images' => 'عطل الصور على موقع المحمول',
 	'mobile-frontend-enable-images' => 'مكّن الصور على موقع المحمول',
+	'mobile-frontend-toggle-images' => 'الصور $1 / $2',
 	'mobile-frontend-off' => 'مطفأة',
 	'mobile-frontend-on' => 'مفعلة',
 	'mobile-frontend-footer-contributors' => 'كتب المقالة <a href="$1">مساهمون</a> مثلك',
@@ -467,15 +468,27 @@ $messages['ar'] = array(
 	'mobile-frontend-leave-feedback' => 'اترك تعليقات',
 	'mobile-frontend-leave-feedback-general-section-header' => 'عام',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'ملاحظات المقالة',
+	'mobile-frontend-leave-feedback-email-body' => 'من فضلك اكتب بريدك الغلكتروني أعلى هذا السطر.',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'مشكلة تقنية',
+	'mobile-frontend-leave-feedback-general-link-text' => 'تغذية راجعة عامة',
+	'mobile-frontend-leave-feedback-article-factual-link-text' => 'بخصوص خطأ معرفي',
+	'mobile-frontend-leave-feedback-article-other-link-text' => 'بخصوص مشكلة أخرى',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'موضوع الرسالة',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'اكتب تعليقك هنا',
 	'mobile-frontend-leave-feedback-page-title' => 'أعطنا ملاحظاتك عن تجربة موقع المحمول',
 	'mobile-frontend-feedback-page' => 'Project:تعليقات امتداد المحمول',
 	'mobile-frontend-leave-feedback-special-title' => 'اتصل بنا',
 	'mobile-frontend-feedback-no-subject' => '(غير معنون)',
+	'mobile-frontend-feedback-no-subject-field' => 'من فضلك أدخل موضوعا',
+	'mobile-frontend-feedback-no-message' => 'من فضلك أدخل رسالة هنا',
 	'mobile-frontend-leave-feedback-thanks' => 'شكرا على إبداء ملاحظاتك!',
 	'mobile-frontend-language' => 'اللغة:',
+	'mobile-frontend-language-site-choose' => 'بحث اللغة',
+	'mobile-frontend-language-site-nomatches' => 'لا لغات مطابقة',
 	'mobile-frontend-username' => 'اسم المستخدم:',
 	'mobile-frontend-password' => 'كلمة السر:',
 	'mobile-frontend-login' => 'تسجيل الدخول',
+	'mobile-frontend-logout' => 'تسجيل الخروج',
 	'mobile-frontend-placeholder' => 'ابحث في {{SITENAME}}',
 	'mobile-frontend-clear-search' => 'إفراغ',
 	'mobile-frontend-privacy-link-text' => 'الخصوصية',
@@ -483,11 +496,11 @@ $messages['ar'] = array(
 	'mobile-frontend-footer-more' => 'أكثر',
 	'mobile-frontend-footer-less' => 'أقل',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">شروط الاستخدام</a>',
-	'mobile-frontend-main-menu-featured' => 'مختارة',
+	'mobile-frontend-main-menu-featured' => 'مميزة',
 	'mobile-frontend-main-menu-nearby' => 'قريب',
 	'mobile-frontend-main-menu-settings' => 'الإعدادات',
 	'mobile-frontend-main-menu-settings-heading' => 'إعدادات موقع المحمول',
-	'mobile-frontend-main-menu-contact' => 'معلومات الاتصال',
+	'mobile-frontend-main-menu-contact' => 'اتصال',
 	'mobile-frontend-page-menu-contents' => 'محتويات',
 	'mobile-frontend-page-menu-history' => 'التاريخ',
 	'mobile-frontend-page-menu-contents-heading' => 'المحتويات',
@@ -2365,6 +2378,8 @@ $messages['eu'] = array(
 	'mobile-frontend-search-submit' => 'Joan',
 	'mobile-frontend-featured-article' => 'Gaur Nabarmendutako Artikulua',
 	'mobile-frontend-home-button' => 'Azala',
+	'mobile-frontend-logged-out' => 'Saioa hasi gabe',
+	'mobile-frontend-save-settings' => 'Konfigurazioa gorde',
 	'mobile-frontend-random-button' => 'Ausazkoa',
 	'mobile-frontend-back-to-top-of-section' => 'Atal Bat Atzera Joan',
 	'mobile-frontend-show-button' => 'Erakutsi',
@@ -2376,11 +2391,30 @@ $messages['eu'] = array(
 	'mobile-frontend-opt-in-no-button' => 'Ez',
 	'mobile-frontend-opt-out-yes-button' => 'Bai',
 	'mobile-frontend-opt-out-no-button' => 'Ez',
+	'mobile-frontend-images-status' => 'Irudiak',
 	'mobile-frontend-leave-feedback-subject' => 'Gaia',
 	'mobile-frontend-leave-feedback-message' => 'Mezua',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Orokorra',
+	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Artikuluaren feedbacka',
 	'mobile-frontend-language' => 'Hizkuntza',
+	'mobile-frontend-username' => 'Lankide izena:',
 	'mobile-frontend-password' => 'Pasahitza',
 	'mobile-frontend-login' => 'Saioa hasi',
+	'mobile-frontend-logout' => 'Saioa itxi',
+	'mobile-frontend-clear-search' => 'Garbitu',
+	'mobile-frontend-privacy-link-text' => 'Pribatutasuna',
+	'mobile-frontend-about-link-text' => 'Honi buruz',
+	'mobile-frontend-footer-more' => 'gehiago',
+	'mobile-frontend-footer-less' => 'gutxiago',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-contact' => 'Kontaktatu',
+	'mobile-frontend-main-menu-featured' => 'Nabarmendua',
+	'mobile-frontend-main-menu-nearby' => 'Gertukoak',
+	'mobile-frontend-main-menu-settings' => 'Ezarpenak',
+	'mobile-frontend-main-menu-contact' => 'Kontaktatu',
+	'mobile-frontend-page-menu-contents' => 'Edukiak',
+	'mobile-frontend-page-menu-history' => 'Historia',
+	'mobile-frontend-page-menu-contents-heading' => 'Edukiak',
 );
 
 /** Extremaduran (estremeñu) */
@@ -2508,6 +2542,7 @@ $messages['fa'] = array(
 );
 
 /** Finnish (suomi)
+ * @author Beluga
  * @author Crt
  * @author Kulmalukko
  * @author Linnea
@@ -2563,7 +2598,7 @@ $messages['fi'] = array(
 	'mobile-frontend-leave-feedback' => 'Palaute mobiilisivustosta',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tekninen ongelma',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Yleinen',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Palaute artikkeleistä',
+	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Palaute artikkeleista',
 	'mobile-frontend-leave-feedback-email-body' => 'Kirjoita sähköpostiosoitteesi tämän rivin yläpuolelle.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tekninen ongelma',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Yleinen palaute',
@@ -2774,10 +2809,12 @@ $messages['frp'] = array(
 	'mobile-frontend-close-section' => 'Cllôre ceta sèccion',
 	'mobile-frontend-show-button' => 'Fâre vêre',
 	'mobile-frontend-hide-button' => 'Cachiér',
-	'mobile-frontend-regular-site' => 'Fâre vêre ceta pâge dessus {{SITENAME}} classica',
+	'mobile-frontend-regular-site' => 'Visualisacion classica',
 	'mobile-frontend-wml-continue' => 'Continuar ...',
 	'mobile-frontend-wml-back' => 'Retôrn ...',
 	'mobile-frontend-view' => 'Visualisacion mobila',
+	'mobile-frontend-view-desktop' => 'Classica',
+	'mobile-frontend-view-mobile' => 'Enfatâblo',
 	'mobile-frontend-opt-in-message' => 'Rentrar dens la bèta-èprôva de la vèrsion mobila ?',
 	'mobile-frontend-opt-in-yes-button' => 'ouè',
 	'mobile-frontend-opt-in-no-button' => 'nan',
@@ -2805,6 +2842,7 @@ $messages['frp'] = array(
 	'mobile-frontend-leave-feedback-general-section-header' => 'G·ènèral',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Èvaluacion de l’articllo',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problèmo tècnico',
+	'mobile-frontend-leave-feedback-general-link-text' => 'Avis g·ènèral',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Sujèt du mèssâjo',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Buchiéd voutron comentèro ique',
 	'mobile-frontend-leave-feedback-page-title' => 'Balyéd-nos voutron avis sur voutra èxpèrience du seto mobilo',
@@ -2958,6 +2996,27 @@ $messages['fur'] = array(
 	'mobile-frontend-show-button' => 'Mostre',
 	'mobile-frontend-hide-button' => 'Plate',
 	'mobile-frontend-regular-site' => 'Viôt cheste pagjine te Vichipedie',
+);
+
+/** Irish (Gaeilge)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ga'] = array(
+	'mobile-frontend-show-button' => 'Taispeáin',
+	'mobile-frontend-hide-button' => 'Folaigh',
+	'mobile-frontend-opt-in-no-button' => 'Ní',
+	'mobile-frontend-opt-out-no-button' => 'Ní',
+	'mobile-frontend-leave-feedback-message' => 'Teachtaireacht:',
+	'mobile-frontend-language' => 'Teanga:',
+	'mobile-frontend-username' => 'Ainm úsáideora:',
+	'mobile-frontend-password' => "D'fhocal faire:",
+	'mobile-frontend-login' => 'Logáil isteach',
+	'mobile-frontend-about-link-text' => 'Maidir leis',
+	'mobile-frontend-footer-more' => 'Níos mó',
+	'mobile-frontend-footer-less' => 'Níos lú',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-main-menu-settings' => 'Sainroghanna',
+	'mobile-frontend-page-menu-history' => 'Stair',
 );
 
 /** Scottish Gaelic (Gàidhlig) */
@@ -5979,7 +6038,7 @@ $messages['mt'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Termini ta\' użu</a>',
 	'mobile-frontend-footer-contact' => 'Kuntatt',
 	'mobile-frontend-unknown-option' => 'L-opzjoni "$1" mhux magħrufa.',
-	'mobile-frontend-search-noresults' => 'L-ebda titlu tal-artiklu ma kkorrisponda t-tfittxija tiegħek. Biddel it-tfittxija tiegħek, jew agħfas il-buttuna tat-tastiera "Fittex" sabiex tfittex fi ħdan it-test tal-artikli.',
+	'mobile-frontend-search-noresults' => 'L-ebda titlu tal-artiklu ma kkorrisponda mat-tfittxija tiegħek. Biddel it-tfittxija tiegħek, jew agħfas il-buttuna tat-tastiera "Fittex" sabiex tfittex fi ħdan it-test tal-artikli.',
 	'mobile-frontend-main-menu-featured' => 'Fil-vetrina',
 	'mobile-frontend-main-menu-nearby' => 'Fil-qrib',
 	'mobile-frontend-main-menu-settings' => 'Konfigurazzjoni',
@@ -6264,14 +6323,22 @@ Probeer het later nog een keer.',
  * @author Siebrand
  */
 $messages['nl-informal'] = array(
+	'mobile-frontend-settings-description' => 'Pas je gebruikerservaring op je mobiele apparaat aan via deze instellingen.',
 	'mobile-frontend-opt-in-message' => 'Wil je de nieuwe mobiele functionaliteit testen?',
 	'mobile-frontend-opt-in-explain' => 'Als je meedoet met testen, krijg je toegang tot experimentele functionaliteit, met het risico op fouten en problemen.',
 	'mobile-frontend-opt-out-message' => 'Wil je de nieuwe mobiele functionaliteit niet langer testen?',
 	'mobile-frontend-opt-out-explain' => 'Door te stoppen met testen wordt alle experimentele functionaliteit uitgeschakeld en ga je weer de klassieke mobiele vormgeving gebruiken.',
+	'mobile-frontend-footer-contributors' => 'Pagina door <a href="$1">gebruikers</a> zoals jij',
 	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling over de mobiele site',
 	'mobile-frontend-leave-feedback-notice' => 'Jouw terugkoppeling helpt ons om je ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (ook je gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alsjeblieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op je terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
+	'mobile-frontend-leave-feedback-warning' => 'Neem geen persoonlijke gegevens op in je opmerkingen, tenzij je akkoord gaat met het openbaar maken ervan.',
+	'mobile-frontend-leave-feedback-email-body' => 'Schrijf je e-mail boven deze regel.',
+	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Voer hier je opmerking in',
 	'mobile-frontend-leave-feedback-page-title' => 'Geef ons terugkoppeling over je ervaring met de mobiele site',
 	'mobile-frontend-leave-feedback-thanks' => 'Bedankt voor je terugkoppeling!',
+	'mobile-frontend-leave-feedback-post-error' => 'Er is een fout opgetreden tijdens het verwerken van je bericht.
+Probeer het later nog een keer.',
+	'mobile-frontend-search-noresults' => "Er zijn geen resultaten voor je zoekopdracht. Wijzig je zoekopdracht of klik op de zoekknop op het toetsenbord om binnen pagina's te zoeken.",
 );
 
 /** Norwegian Nynorsk (‪norsk (nynorsk)‬)
@@ -6320,6 +6387,7 @@ $messages['or'] = array(
 	'mobile-frontend-home-button' => 'ମୂଳ ଜାଗା',
 	'mobile-frontend-logged-out' => 'ଲଗ‌‌ ଇନ କରିନାହାନ୍ତି',
 	'mobile-frontend-logged-in' => '$1 ଭାବେ ଲଗଇନ ହେଲା',
+	'mobile-frontend-save-settings' => 'ସଜାଣି ସାଇତିବେ',
 	'mobile-frontend-random-button' => 'ଯାହିତାହି',
 	'mobile-frontend-back-to-top-of-section' => 'ଏକ ଭାଗକୁ ଡେଇଁଯିବେ',
 	'mobile-frontend-show-button' => 'ଦେଖାଇବେ',
@@ -6382,6 +6450,10 @@ $messages['or'] = array(
 	'mobile-frontend-footer-contact' => 'ଯୋଗାଯୋଗ',
 	'mobile-frontend-main-menu-nearby' => 'ପାଖାପାଖି',
 	'mobile-frontend-main-menu-settings' => 'ସଜାଣି',
+	'mobile-frontend-main-menu-contact' => 'ସମ୍ପର୍କ',
+	'mobile-frontend-page-menu-contents' => 'ସୂଚୀପତ୍ର',
+	'mobile-frontend-page-menu-history' => 'ଇତିହାସ',
+	'mobile-frontend-page-menu-contents-heading' => 'ଭିତର ଚିଜ',
 );
 
 /** Ossetic (Ирон)
