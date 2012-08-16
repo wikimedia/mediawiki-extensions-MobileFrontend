@@ -1,2 +1,7 @@
-/* currently no opera mobile specific hacks */
+table {
+	overflow-y: scroll;
+}
 
+tbody {
+	height: 200px;
+}
