@@ -1082,6 +1082,7 @@ $messages['bn'] = array(
 	'mobile-frontend-leave-feedback-technical-link-text' => 'কারিগরি সমস্যা',
 	'mobile-frontend-leave-feedback-general-link-text' => 'সাধারণ ফিডব্যাক',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'আমার নিজের, একজন ব্যক্তি অথবা আমার পরিচিত একটি কোম্পানি সম্পর্কে',
+	'mobile-frontend-leave-feedback-article-factual-link-text' => 'ফ্যাটাল ত্রুটি সম্পর্কিত',
 	'mobile-frontend-leave-feedback-article-other-link-text' => 'অন্য ত্রুটি সম্পর্কে',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'বার্তার বিষয়',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'আপনার মন্তব্য লিখুন',
@@ -1103,13 +1104,18 @@ $messages['bn'] = array(
 	'mobile-frontend-login' => 'প্রবেশ',
 	'mobile-frontend-logout' => 'প্রস্থান',
 	'mobile-frontend-placeholder' => '{{SITENAME}} অনুসন্ধান',
+	'mobile-frontend-search-help' => 'অনুসন্ধানের বিষয়টি উপরে লিখুন এবং এর সাথে মিল রয়েছে এমন নিবন্ধের শিরনামগুলো দেখানো হবে।',
+	'mobile-frontend-dismiss-notification' => 'নোটিফিকেশন বন্ধ করুন',
 	'mobile-frontend-clear-search' => 'পরিস্কার',
 	'mobile-frontend-privacy-link-text' => 'গোপনীয়তা',
 	'mobile-frontend-about-link-text' => 'পরিচিতি',
 	'mobile-frontend-footer-more' => 'আরও',
 	'mobile-frontend-footer-less' => 'কম',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'তথ্য প্রকাশিত হয়েছে <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> লাইসেন্সের অধিনে',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">ব্যবহারের নীতিমালা</a>',
 	'mobile-frontend-footer-contact' => 'যোগাযোগ',
+	'mobile-frontend-unknown-option' => 'অজানা অপশন "$1"।',
 	'mobile-frontend-main-menu-featured' => 'নির্বাচিত',
 	'mobile-frontend-main-menu-nearby' => 'কাছাকাছি',
 	'mobile-frontend-main-menu-settings' => 'সেটিং',
@@ -4488,8 +4494,10 @@ $messages['jv'] = array(
 	'mobile-frontend-footer-less' => 'kurang',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Kontèn sumadhiya sakisoré <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Katemton Panganggoan</a>',
 	'mobile-frontend-footer-contact' => 'Kontak',
 	'mobile-frontend-unknown-option' => 'Pilihan ora dikenal "$1".',
+	'mobile-frontend-search-noresults' => 'Ora ana artikel sing padha karo panggolèkan Sampéyan. Ganti panggolèkan, utawa teken tombol golèk nèng keyboard kanggo nggolèki saknjeroné artikel.',
 	'mobile-frontend-main-menu-featured' => 'Pinilih',
 	'mobile-frontend-main-menu-nearby' => 'Paling cedhak',
 	'mobile-frontend-main-menu-settings' => 'Pangaturan',
@@ -7223,10 +7231,14 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Termine de l\'Ause</a>',
 	'mobile-frontend-footer-contact' => 'Condatte',
+	'mobile-frontend-main-menu-featured' => 'Dettagliate',
+	'mobile-frontend-main-menu-nearby' => 'Vicine a',
 	'mobile-frontend-main-menu-settings' => "'Mbostaziune",
 	'mobile-frontend-main-menu-settings-heading' => "'Mbostaziune d'u site mobbile",
+	'mobile-frontend-settings-site-header' => 'Lènghe de {{SITENAME}}',
 	'mobile-frontend-main-menu-contact' => 'Condatte',
 	'mobile-frontend-page-menu-contents' => 'condenute',
+	'mobile-frontend-page-menu-history' => 'Cunde',
 	'mobile-frontend-page-menu-contents-heading' => 'Condenute',
 );
 
@@ -7492,6 +7504,7 @@ $messages['sa'] = array(
 	'mobile-frontend-leave-feedback-subject' => 'विषयः',
 	'mobile-frontend-leave-feedback-message' => 'सन्देशः :',
 	'mobile-frontend-leave-feedback-submit' => 'प्रतिस्पन्दः प्रेष्यताम्',
+	'mobile-frontend-leave-feedback-link-text' => 'मोबैल्-फ़्रण्टेण्ड्-एक्स्टेंशन् प्रतिस्पन्दः',
 	'mobile-frontend-leave-feedback' => 'चरक्षेत्रानुभवविषये लिख्यताम्',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'तान्त्रिकसमस्या',
 	'mobile-frontend-leave-feedback-general-section-header' => 'सामान्यम्',
@@ -7509,6 +7522,7 @@ $messages['sa'] = array(
 	'mobile-frontend-feedback-no-subject' => '(न कोपि विषयः)',
 	'mobile-frontend-feedback-no-subject-field' => 'कृपया विषयः निर्दिश्यताम्',
 	'mobile-frontend-feedback-no-message' => 'कृपया अत्र सन्देशः लिख्यताम्',
+	'mobile-frontend-feedback-edit-summary' => '[[Special:MobileFeedback|mobile feedback tool]] इत्येतत् उपयुज्य $1 स्वयं प्रेषितम्',
 	'mobile-frontend-leave-feedback-thanks' => 'प्रतिस्पन्दाय धन्यवादः !',
 	'mobile-frontend-leave-feedback-post-error' => 'भवतः सन्दॆशस्य प्रापणे दोषः जातः । पुनः प्रयतताम् ।',
 	'mobile-frontend-language' => 'भाषा :',
@@ -8962,16 +8976,50 @@ $messages['uk'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Ця стаття іншими мовами',
 );
 
-/** Urdu (اردو) */
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
 $messages['ur'] = array(
+	'mobile-frontend-desc' => 'موبائل پیشدید',
 	'mobile-frontend-search-submit' => 'چلو',
 	'mobile-frontend-featured-article' => 'آج کا منتخب مقالہ',
 	'mobile-frontend-home-button' => 'سرورق',
+	'mobile-frontend-logged-out' => 'لاگ ان نہیں',
+	'mobile-frontend-save-settings' => 'ترتیبات کو محفوظ کریں',
 	'mobile-frontend-random-button' => 'بےترتیب',
 	'mobile-frontend-back-to-top-of-section' => 'ایک قطعہ پیچھے جاؤ',
+	'mobile-frontend-close-section' => 'اس سیکشن میں بند',
 	'mobile-frontend-show-button' => 'دکھاؤ',
 	'mobile-frontend-hide-button' => 'چُھپاؤ',
 	'mobile-frontend-regular-site' => 'یہ صفحہ اصل ویکیپیڈیا پر ملاحظہ کیجئے',
+	'mobile-frontend-view' => 'موبائل دیکھیں',
+	'mobile-frontend-view-desktop' => 'ڈیسک ٹاپ',
+	'mobile-frontend-view-mobile' => 'موبائل',
+	'mobile-frontend-opt-in-message' => 'اس موبائل بیٹا میں شامل ہے ؟',
+	'mobile-frontend-opt-in-yes-button' => 'جی ہاں',
+	'mobile-frontend-opt-in-no-button' => 'نہیں',
+	'mobile-frontend-opt-out-yes-button' => 'جی ہاں',
+	'mobile-frontend-opt-out-no-button' => 'نہیں',
+	'mobile-frontend-leave-feedback-subject' => 'موضوع:',
+	'mobile-frontend-leave-feedback-message' => 'پیغام:',
+	'mobile-frontend-leave-feedback-general-section-header' => 'جنرل',
+	'mobile-frontend-leave-feedback-special-title' => 'ہم سے رابطہ کریں',
+	'mobile-frontend-language' => 'زبان:',
+	'mobile-frontend-username' => 'صارف کا نام:',
+	'mobile-frontend-password' => 'پاس ورڈ:',
+	'mobile-frontend-login' => 'میں لاگ ان کریں',
+	'mobile-frontend-clear-search' => 'واضح',
+	'mobile-frontend-privacy-link-text' => 'پرائیویسی',
+	'mobile-frontend-about-link-text' => 'کے بارے میں',
+	'mobile-frontend-footer-more' => 'مزید',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-contact' => 'سے رابطہ کریں',
+	'mobile-frontend-main-menu-featured' => 'نمایاں',
+	'mobile-frontend-main-menu-nearby' => 'قریبی',
+	'mobile-frontend-main-menu-settings' => 'ترتیبات',
+	'mobile-frontend-main-menu-contact' => 'سے رابطہ کریں',
+	'mobile-frontend-page-menu-history' => 'تاریخچہ',
+	'mobile-frontend-page-menu-language-heading' => 'میں اس مضمون کو پڑھیں',
 );
 
 /** vèneto (vèneto) */
@@ -9009,6 +9057,7 @@ $messages['vep'] = array(
 
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
+ * @author පසිඳු කාවින්ද
  */
 $messages['vi'] = array(
 	'mobile-frontend-desc' => 'Giao diện di động',
@@ -9107,6 +9156,7 @@ $messages['vi'] = array(
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} có sẵn trong $1 ngôn ngữ. Tất cả các phiên bản có sẵn ở dưới:',
 	'mobile-frontend-main-menu-contact' => 'Liên lạc',
 	'mobile-frontend-page-menu-contents' => 'mục lục',
+	'mobile-frontend-page-menu-history' => 'Lịch sử',
 	'mobile-frontend-page-menu-contents-heading' => 'Mục lục',
 	'mobile-frontend-page-menu-language-heading' => 'Đọc bài này trong',
 );
