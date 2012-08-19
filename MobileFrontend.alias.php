@@ -29,6 +29,12 @@ $specialPageAliases['de'] = array(
 	'MobileOptions' => array( 'Mobile_Optionen' ),
 );
 
+/** Estonian (eesti) */
+$specialPageAliases['et'] = array(
+	'MobileFeedback' => array( 'Mobiili_tagasiside' ),
+	'MobileOptions' => array( 'Mobiili_suvandid' ),
+);
+
 /** Hindi (हिन्दी) */
 $specialPageAliases['hi'] = array(
 	'MobileFeedback' => array( 'मोबाइल_प्रतिक्रिया' ),
