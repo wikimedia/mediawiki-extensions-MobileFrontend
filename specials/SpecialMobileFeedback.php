@@ -362,7 +362,6 @@ class MobileFrontendMWApiClient {
 		if ( $loginResult != 'Success' ) {
 			// there's some kind of problem
 			throw new Exception( 'Remote posting login failed.' );
-			return false;
 		}
 		$this->loggedIn = true;
 		return true;
