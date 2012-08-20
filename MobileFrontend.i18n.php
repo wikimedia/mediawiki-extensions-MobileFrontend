@@ -15,7 +15,6 @@ $messages = array();
 $messages['en'] = array (
 	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-search-submit' => 'Go',
-	'mobile-frontend-featured-article' => 'Today\'s featured article',
 	'mobile-frontend-home-button' => 'Home',
 	'mobile-frontend-logged-out' => 'Not logged in',
 	'mobile-frontend-logged-in' => 'Logged in as $1',
@@ -51,7 +50,6 @@ $messages['en'] = array (
 	'mobile-frontend-footer-contributors' => 'Article by <a href="$1">contributors</a> like you',
 	'mobile-frontend-featured-article' => 'Today\'s Featured Article',
 	'mobile-frontend-news-items' => 'In The News',
-	'mobile-frontend-leave-feedback-title' => 'Give us feedback about your mobile site experience',
 	'mobile-frontend-leave-feedback-notice' => 'Your feedback helps us to improve your mobile site experience. It will be posted publicly (along with your user name, browser version and operating system) to the page &quot;$1&quot;. Please try to choose an informative subject line, e.g. "Formatting issues with wide tables". Your feedback is subject to our terms of use.',
 	'mobile-frontend-leave-feedback-warning' => 'Unless you agree to have your information made public, please do not include personal information in your comments.',
 	'mobile-frontend-leave-feedback-subject' => 'Subject:',
