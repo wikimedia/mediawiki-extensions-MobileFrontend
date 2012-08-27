@@ -17,6 +17,7 @@ class WmlContext {
 			if ( $useFormat ) {
 				$this->useFormat = $useFormat;
 			}
+			$this->currentUrl = $context->getTitle()->getCanonicalURL();
 		}
 	}
 
