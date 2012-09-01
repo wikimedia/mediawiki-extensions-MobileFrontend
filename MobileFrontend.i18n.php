@@ -2454,6 +2454,7 @@ $messages['ext'] = array(
  * @author Reza1615
  * @author Rmashhadi
  * @author ZxxZxxZ
+ * @author پسر یاس
  */
 $messages['fa'] = array(
 	'mobile-frontend-desc' => 'ظاهر تلفن همراه',
@@ -2469,7 +2470,7 @@ $messages['fa'] = array(
 	'mobile-frontend-close-section' => 'این بخش را ببندید',
 	'mobile-frontend-show-button' => 'نمایش',
 	'mobile-frontend-hide-button' => 'نهفتن',
-	'mobile-frontend-empty-homepage' => 'این صفحه نیاز به پیکربندی دارد. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">دستورالعمل فعال‌سازی تلفن همراه برای این وب‌گاه</a>',
+	'mobile-frontend-empty-homepage' => 'این صفحه نیاز به پیکربندی دارد. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">دستورالعمل فعال‌سازی نسخه تلفن همراه برای این وب‌گاه</a>',
 	'mobile-frontend-regular-site' => 'نمایش دسکتاپ',
 	'mobile-frontend-wml-continue' => 'ادامه...',
 	'mobile-frontend-wml-back' => 'بازگشت...',
