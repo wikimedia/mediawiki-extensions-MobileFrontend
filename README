@@ -2,15 +2,15 @@
 The MobileFrontend extension adds a mobile view to your mediawiki instance.
 
 == Installation ==
-	See http://www.mediawiki.org/wiki/Extension:MobileFrontend#Installation
+	See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Installation
 
 == Configuration ==
-See http://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settings
+See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settings
 
 == Development ==
 
 === CSS ===
-Ensure all css passes the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS style guidelines]
+Ensure all css passes the [https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS style guidelines]
 When adding a javascript module, ensure that the css module has the same name.
 e.g. javascripts/banner.js has the corresponding stylesheet stylesheets/banner.css
 
@@ -19,7 +19,7 @@ Introduce any browser specific patches in the relevant stylesheet. If the browse
 NEVER use [http://www.w3.org/TR/CSS2/selector.html#attribute-selectors attribute selectors] - these are known to cause issues in the [https://github.com/wikimedia/WikipediaMobile phonegap app] which shares some of this codebase.
 
 === Javascript ===
-Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [http://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
+Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
 A pre-commit hook is provided in the scripts directory to assist with adhering to javascript code standards
 
 === HTML ===
@@ -35,7 +35,7 @@ If you are adding images to the extension please ensure they have been [http://p
 * First line commit should summarise the commit with bug it fixes if applicable. e.g. Fix problem with toggling see bug x
 * Second line should be blank
 * Third line should go into detail where necessary providing links to blog posts/other bugs to provide more background. Mention the platforms/browsers the change is for where necessary
-** e.g. 'this is a problem on android but not osx see http://<url> which explains problem in detail'
+** e.g. 'this is a problem on Android but not OSX see http://<url> which explains problem in detail'
 ** e.g. 'this is a workaround for a known bug in opera mobile see http://<url>'
 
 === Testing ===
