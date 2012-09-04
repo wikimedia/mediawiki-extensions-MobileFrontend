@@ -8962,6 +8962,7 @@ $messages['ug-arab'] = array(
  * @author Base
  * @author Dim Grits
  * @author Gucci Mane Burrr
+ * @author Microcell
  * @author Olvin
  * @author Sodmy
  * @author Тест
@@ -8969,7 +8970,6 @@ $messages['ug-arab'] = array(
 $messages['uk'] = array(
 	'mobile-frontend-desc' => 'Мобільний інтерфейс',
 	'mobile-frontend-search-submit' => 'Перейти',
-	'mobile-frontend-featured-article' => 'Вибрана стаття',
 	'mobile-frontend-home-button' => 'Домашня',
 	'mobile-frontend-logged-out' => 'Ви не ввійшли до системи',
 	'mobile-frontend-logged-in' => 'Увійти в систему як $1',
@@ -9003,14 +9003,15 @@ $messages['uk'] = array(
 	'mobile-frontend-off' => 'ВИМК',
 	'mobile-frontend-on' => 'ВКЛ',
 	'mobile-frontend-footer-contributors' => 'Статті <a href="$1">учасників</a> таких як Ви',
+	'mobile-frontend-featured-article' => 'Вибрана стаття',
 	'mobile-frontend-news-items' => 'У новинах',
-	'mobile-frontend-leave-feedback-title' => 'Залиште для нас власний відгук про мобільний інтерфейс',
 	'mobile-frontend-leave-feedback-notice' => 'Ваш відгук допоможе нам покращити користування мобільним сайтом. Він буде розміщений публічно (разом з іменем користувача, версією браузера та операційної системи) на сторінці &quot;$1&quot;. Будь ласка, оберіть інформативний рядок, наприклад, "Проблеми форматування широких таблиць". Висловлюйтесь у відповідності до наших умов використання.',
 	'mobile-frontend-leave-feedback-subject' => 'Тема:',
 	'mobile-frontend-leave-feedback-message' => 'Повідомлення:',
 	'mobile-frontend-leave-feedback-submit' => 'Залишити відгук',
 	'mobile-frontend-leave-feedback-link-text' => 'Відгуки про мобільний інтерфейс',
 	'mobile-frontend-leave-feedback' => 'Залишити відгук',
+	'mobile-frontend-leave-feedback-title' => 'Залиште для нас власний відгук про мобільний інтерфейс',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Загальні',
 	'mobile-frontend-leave-feedback-email-body' => 'Будь ласка, напишіть свою адресу електронної пошти, вище цієї лінії.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Технічна проблема',
@@ -9040,11 +9041,14 @@ $messages['uk'] = array(
 	'mobile-frontend-footer-license' => 'Вміст доступний під ліцензією <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Умови використання</a>',
 	'mobile-frontend-footer-contact' => "Зв'язок",
+	'mobile-frontend-unknown-option' => 'Нерозпізнаний параметр "$1".',
 	'mobile-frontend-main-menu-featured' => 'Вибране',
+	'mobile-frontend-main-menu-nearby' => 'Поблизу',
 	'mobile-frontend-main-menu-settings' => 'Налаштування',
 	'mobile-frontend-main-menu-settings-heading' => 'Налаштування мобільної версії сайту',
 	'mobile-frontend-main-menu-contact' => 'Контакт',
 	'mobile-frontend-page-menu-contents' => 'зміст',
+	'mobile-frontend-page-menu-history' => 'Історія',
 	'mobile-frontend-page-menu-contents-heading' => 'Зміст',
 	'mobile-frontend-page-menu-language-heading' => 'Ця стаття іншими мовами',
 );
