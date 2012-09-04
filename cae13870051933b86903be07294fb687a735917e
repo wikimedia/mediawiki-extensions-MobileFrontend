@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAARn//9D8\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-09-04T19:12:59Z",
+      "side": 1,
+      "message": "Please add qqq. {{optional}} should do it.",
+      "revId": "cae13870051933b86903be07294fb687a735917e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAARH//9KU\u003d",
         "filename": "MobileFrontend.php",
         "patchSetId": 2
