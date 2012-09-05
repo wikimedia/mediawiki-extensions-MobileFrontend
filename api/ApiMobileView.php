@@ -184,6 +184,12 @@ class ApiMobileView extends ApiBase {
 			$data = array();
 			$data['sections'] = $parserOutput->getSections();
 			$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
+			if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
+				wfDebug( __METHOD__ . "(): mismatching number of sections from parser and split. oldid=$latest\n" );
+				// We can't be sure about anything here, return all page HTML as one big section
+				$chunks = array( $html );
+				$data['sections'] = array();
+			}
 			$data['text'] = array();
 			$data['refsections'] = array();
 			foreach ( $chunks as $chunk ) {
@@ -197,9 +203,6 @@ class ApiMobileView extends ApiBase {
 					$data['refsections'][count( $data['text'] )] = true;
 				}
 				$data['text'][] = $chunk;
-			}
-			if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
-				wfDebug( __METHOD__ . "(): mismatching number of sections from parser and split. oldid=$latest\n" );
 			}
 		}
 		// store for the same time as original parser output
