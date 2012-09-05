@@ -60,6 +60,13 @@ $specialPageAliases['mk'] = array(
 	'MobileOptions' => array( 'МобилниПоставки' ),
 );
 
+/** Malayalam (മലയാളം) */
+$specialPageAliases['ml'] = array(
+	'MobileFrontend' => array( 'മൊബൈൽസമ്പർക്കം' ),
+	'MobileFeedback' => array( 'മൊബൈൽപ്രതികരണം' ),
+	'MobileOptions' => array( 'മൊബൈൽഐച്ഛികങ്ങൾ' ),
+);
+
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
 	'MobileFrontend' => array( 'MobieleVoorkant' ),
