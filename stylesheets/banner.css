@@ -2,6 +2,7 @@
 moved from beta_common.css in
 Change-Id: Ia25126d950ee87cbc76f2e91d679cdd27405ee51
 */
+.mw-mf-banner,
 #zero-rated-banner {
 	position: relative;
 	width: 100%;
@@ -9,12 +10,17 @@ Change-Id: Ia25126d950ee87cbc76f2e91d679cdd27405ee51
 	background: #F4A83D;
 	display: block;
 	border-bottom: 1px solid #D6800C;
-	padding: 7px 0;
 	font-weight: bold;
+	padding: 0;
 	text-align: center;
 	color: #735005;
 }
 
+#zero-rated-banner {
+	padding: 7px 0;
+}
+
+.mw-mf-banner a,
 #zero-rated-banner a {
 	text-decoration: underline;
 	color: #735005;
@@ -28,6 +34,19 @@ Change-Id: Ia25126d950ee87cbc76f2e91d679cdd27405ee51
 	display: block;
 	border-bottom: 1px solid;
 	border-color: #000000;
+}
+
+.mw-mf-banner button.notify-close {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	background-color: #FAD163;
+	margin-right: 0;
+	border: 2px solid #735005;
+}
+
+.mw-mf-banner p {
+	line-height: normal;
 }
 
 #zero-rated-banner span.notify-close {
@@ -45,6 +64,7 @@ Change-Id: Ia25126d950ee87cbc76f2e91d679cdd27405ee51
 	text-align: center;
 }
 
+.mw-mf-banner button.notify-close,
 #zero-rated-banner span.notify-close a {
 	text-decoration: none;
 }

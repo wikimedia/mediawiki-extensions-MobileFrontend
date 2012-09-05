@@ -21,6 +21,23 @@ abstract class SkinMobileBase extends SkinTemplate {
 		$this->extMobileFrontend = $extMobileFrontend;
 	}
 
+	/**
+	 * createDismissableBanner
+	 *
+	 * @param $id string: unique identification string for banner to distinguish it from other banners
+	 * @param $content string: html string to put in banner
+	 * @param $classNames string: additional classes that can be added to the banner. In particular used to target certain devices (e.g. android)
+	 * @param $bannerStyle string: additional styling for banner
+	*/
+	public function createDismissableBanner( $id, $content="", $classNames="", $bannerStyle="" ) {
+		return <<<HTML
+			<div class="mw-mf-banner {$classNames}" id="mw-mf-banner-{$id}"
+				style="{$bannerStyle}">
+			{$content}
+			</div>
+HTML;
+	}
+
 	public function initPage( OutputPage $out ) {
 		wfProfileIn( __METHOD__ );
 		parent::initPage( $out );
@@ -47,7 +64,9 @@ abstract class SkinMobileBase extends SkinTemplate {
 			$tpl = $this->prepareTemplate( $out );
 			$tpl->set( 'bodytext', $html );
 			$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
-			$tpl->set( 'notice', $this->extMobileFrontend->getNotice() );
+			$notice = '';
+			wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
+			$tpl->set( 'notice', $notice );
 			$tpl->execute();
 			wfProfileOut( __METHOD__  . '-tpl' );
 		}

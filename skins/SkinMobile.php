@@ -414,9 +414,9 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
+		<?php $this->html( 'notice' ) ?>
 		<?php $this->searchBox() ?>
 	<div class='show' id='content_wrapper'>
-		<?php $this->html( 'notice' ) ?>
 		<div id="content">
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php $this->html( 'bodytext' ) ?>

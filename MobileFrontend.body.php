@@ -89,14 +89,6 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * Returns notice to be displayed at the top of page
-	 * @return string
-	 */
-	public function getNotice() {
-		return ''; // no notices ATM
-	}
-
-	/**
 	 * Work out the site and language name from a database name
 	 * @param $site string
 	 * @param $lang string
