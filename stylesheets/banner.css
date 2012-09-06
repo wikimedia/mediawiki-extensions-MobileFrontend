@@ -16,6 +16,14 @@ Change-Id: Ia25126d950ee87cbc76f2e91d679cdd27405ee51
 	color: #735005;
 }
 
+.android.mw-mf-banner {
+	display: none;
+}
+
+html.android .android.mw-mf-banner {
+	display: block;
+}
+
 #zero-rated-banner {
 	padding: 7px 0;
 }

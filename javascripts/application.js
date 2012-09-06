@@ -86,14 +86,19 @@ mw.mobileFrontend = (function() {
 		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/
 			var viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' ),
-				ua = navigator.userAgent;
+				doc = document.documentElement,
+				ua = navigator.userAgent,
+				android = ua.match( /Android/ );
 			if( viewportmeta && ua.match( /iPhone|iPad/i )  ) {
 				viewportmeta.content = 'minimum-scale=1.0, maximum-scale=1.0';
 				document.addEventListener( 'gesturestart', function() {
 					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
 				}, false );
 			} else if( ua.match(/Android 4\.0\.2/) ){
-				utilities( document.documentElement ).addClass( 'android4-0-2' );
+				utilities( doc ).addClass( 'android4-0-2' );
+			}
+			if ( android ) {
+				utilities( doc ).addClass( 'android' );
 			}
 		}
 		fixBrowserBugs();
