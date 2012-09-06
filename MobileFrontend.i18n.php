@@ -4394,6 +4394,7 @@ $messages['ja'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'メッセージの処理中にエラーが発生しました。後ほどまたお試しください。',
 	'mobile-frontend-language' => '言語:',
 	'mobile-frontend-language-header' => 'この項目は $1 言語で提供されています。',
+	'mobile-frontend-language-footer' => '{{SITENAME}}は他の言語でも利用できます。',
 	'mobile-frontend-language-site-choose' => '言語を選択',
 	'mobile-frontend-username' => '利用者名:',
 	'mobile-frontend-password' => 'パスワード:',
