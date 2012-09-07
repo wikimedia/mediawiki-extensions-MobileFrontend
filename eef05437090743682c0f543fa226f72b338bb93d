@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//+q0\u003d",
+        "filename": "javascripts/banner.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-09-07T20:41:05Z",
+      "side": 1,
+      "message": "In the event that both a Zero banner AND another banner are displayed at the same time, this would cause dismissal of both, which is probably not the desired functionality.",
+      "revId": "eef05437090743682c0f543fa226f72b338bb93d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//+qw\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 417,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-09-07T20:41:05Z",
+      "side": 1,
+      "message": "Will this move cause problems for zero banners?",
+      "revId": "eef05437090743682c0f543fa226f72b338bb93d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
