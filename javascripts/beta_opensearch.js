@@ -7,6 +7,7 @@ MobileFrontend.opensearch = (function() {
 		message = MobileFrontend.message,
 		search = document.getElementById(  mfePrefix + 'search' ),
 		oldValue,
+		$ = MobileFrontend.jQuery,
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
 		blankImg = MobileFrontend.setting('scriptPath') + '/extensions/MobileFrontend/stylesheets/images/blank.gif',
@@ -125,6 +126,9 @@ MobileFrontend.opensearch = (function() {
 				label = document.createTextNode( section.label );
 				link.appendChild( label );
 
+				if ( $ ) {
+					$( window ).trigger( 'mw-mf-search-result', [ suggestionsResult, section.label ] );
+				}
 				suggestionsResult.appendChild( link );
 				suggestions.appendChild( suggestionsResult );
 				// TODO: simplify the highlighting code to not use htmlEntities

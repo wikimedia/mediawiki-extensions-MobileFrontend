@@ -21,3 +21,7 @@ a.watch-this-article.watched {
 .full-screen-search #mw-mf-searchForm a.watch-this-article {
 	display: none;
 }
+
+.suggestions-result a.watch-this-article {
+	right: 12px;
+}

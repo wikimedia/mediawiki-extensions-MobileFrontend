@@ -87,6 +87,12 @@ M.watchlist = (function() {
 		} );
 	}
 
+	function upgradeSearch() {
+		$( window ).bind( 'mw-mf-search-result', function( ev, container, title ) {
+			initWatchList( container, title );
+			} );
+	}
+
 	function init( container, title ) {
 		var pageTitle = $( '#firstHeading' ).text();
 		if ( $( '#mainpage' ).length === 0 ) { // FIXME: enable watching of main page
@@ -94,6 +100,7 @@ M.watchlist = (function() {
 			title = title || pageTitle;
 			initWatchList( container, title );
 		}
+		upgradeSearch();
 	}
 
 	return {
