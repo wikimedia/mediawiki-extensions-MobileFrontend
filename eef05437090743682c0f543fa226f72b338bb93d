@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAASn//96c\u003d",
+        "filename": "javascripts/banner.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-09-10T18:14:54Z",
+      "side": 1,
+      "message": "I take it back - cookieNameZeroVisibility should point to the correct banner based off its construction in line 6. We should probably just rename \u0027cookieNameZeroVisibility\u0027 to make it a little more clear what\u0027s happening here.",
+      "parentUuid": "AAAASn//+q0\u003d",
+      "revId": "eef05437090743682c0f543fa226f72b338bb93d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAASn//+qw\u003d",
         "filename": "skins/SkinMobile.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2012-09-07T20:41:05Z",
       "side": 1,
       "message": "Will this move cause problems for zero banners?",
+      "revId": "eef05437090743682c0f543fa226f72b338bb93d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//96Y\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 417,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-09-10T18:14:54Z",
+      "side": 1,
+      "message": "I also take this back - it was explained to me IRL that this had been used for the SOPA banner delivery and should affect Zero banners as they are loaded elsewhere.",
+      "parentUuid": "AAAASn//+qw\u003d",
       "revId": "eef05437090743682c0f543fa226f72b338bb93d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
