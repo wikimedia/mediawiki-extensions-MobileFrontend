@@ -4,7 +4,15 @@
 MobileFrontend.settings = (function() {
 	var u = MobileFrontend.utils,
 		message = MobileFrontend.message,
+		supportsLocalStorage,
 		mobileTokenCookieName = 'mobiletoken';
+
+	// using feature detection used by http://diveintohtml5.info/storage.html
+	try {
+		supportsLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null;
+	} catch ( e ) {
+		supportsLocalStorage = false;
+	}
 
 	function writeCookie( name, value, days, path, domain ) {
 		var date, expires, cookie;
@@ -47,6 +55,15 @@ MobileFrontend.settings = (function() {
 	function removeCookie( name ) {
 		writeCookie( name, '', -1 );
 		return null;
+	}
+
+	function saveUserSetting( name, value ) {
+		return supportsLocalStorage ?
+			localStorage.setItem( name, value ) : writeCookie( name, value, 1 );
+	}
+
+	function getUserSetting( name, value ) {
+		return supportsLocalStorage ? localStorage.getItem( name ) : readCookie( name );
 	}
 
 	function updateQueryStringParameter( a, k, v ) {
@@ -207,8 +224,10 @@ MobileFrontend.settings = (function() {
 	MobileFrontend.registerModule( 'settings' );
 	return {
 		init: init,
+		getUserSetting: getUserSetting,
 		readCookie: readCookie,
 		removeCookie: removeCookie,
+		saveUserSetting: saveUserSetting,
 		writeCookie: writeCookie
 	};
 }());

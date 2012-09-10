@@ -4,14 +4,15 @@
 MobileFrontend.banner = (function() {
 	function init( banner ) {
 		var cookieNameZeroVisibility = banner ? banner.getAttribute( 'id' ) : 'zeroRatedBannerVisibility',
-			writeCookie = MobileFrontend.settings.writeCookie,
-			readCookie = MobileFrontend.settings.readCookie,
+			M = MobileFrontend,
+			saveUserSetting = M.settings.saveUserSetting,
+			getUserSetting = M.settings.getUserSetting,
 			dismissNotification = banner ? banner.getElementsByTagName( 'button' )[ 0 ] : document.getElementById( 'dismiss-notification' ),
 			banner = banner || document.getElementById( 'zero-rated-banner' ) ||
 				document.getElementById( 'zero-rated-banner-red' );
 
 		if ( dismissNotification ) {
-			zeroRatedBannerVisibility = readCookie( cookieNameZeroVisibility );
+			zeroRatedBannerVisibility = getUserSetting( cookieNameZeroVisibility );
 
 			if ( zeroRatedBannerVisibility === 'off' ) {
 				banner.style.display = 'none';
@@ -19,7 +20,7 @@ MobileFrontend.banner = (function() {
 
 			dismissNotification.onclick = function() {
 				banner.parentNode.removeChild( banner );
-				writeCookie( cookieNameZeroVisibility, 'off', 1 );
+				saveUserSetting( cookieNameZeroVisibility, 'off' );
 			};
 		}
 	}
