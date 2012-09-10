@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//9vM\u003d",
+        "filename": "javascripts/banner.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-09-10T21:20:38Z",
+      "side": 1,
+      "message": "This will have an impact on current functioning of zero.",
+      "revId": "3121dc2bbd1435a493bc2b6b99465f072d5da25d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
