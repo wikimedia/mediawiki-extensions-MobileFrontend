@@ -4336,7 +4336,7 @@ $messages['ja'] = array(
 	'mobile-frontend-logged-in' => '$1 としてログインしています',
 	'mobile-frontend-settings-beta' => 'ベータ',
 	'mobile-frontend-save-settings' => '設定を保存',
-	'mobile-frontend-random-button' => 'ランダム',
+	'mobile-frontend-random-button' => 'おまかせ表示',
 	'mobile-frontend-back-to-top-of-section' => '節の先頭に戻る',
 	'mobile-frontend-close-section' => 'この節を閉じる',
 	'mobile-frontend-show-button' => '表示',
@@ -7978,12 +7978,16 @@ $messages['sk'] = array(
 /** Slovenian (slovenščina)
  * @author Dbc334
  * @author Irena Plahuta
+ * @author Yerpo
  */
 $messages['sl'] = array(
 	'mobile-frontend-desc' => 'Mobilno obličje',
 	'mobile-frontend-search-submit' => 'Pojdi',
-	'mobile-frontend-featured-article' => 'Današnji izbrani članek',
 	'mobile-frontend-home-button' => 'Domov',
+	'mobile-frontend-logged-out' => 'Niste prijavljeni',
+	'mobile-frontend-logged-in' => 'Prijavljeni ste kot $1',
+	'mobile-frontend-settings-beta' => 'Beta',
+	'mobile-frontend-save-settings' => 'Shrani nastavitve',
 	'mobile-frontend-random-button' => 'Naključno',
 	'mobile-frontend-back-to-top-of-section' => 'Skoči nazaj za oddelek',
 	'mobile-frontend-show-button' => 'pokaži',
@@ -8009,17 +8013,20 @@ $messages['sl'] = array(
 	'mobile-frontend-off' => 'IZKL',
 	'mobile-frontend-on' => 'VKL',
 	'mobile-frontend-footer-contributors' => 'Članek <a href="$1">sodelavcev</a>, kot ste vi',
+	'mobile-frontend-featured-article' => 'Današnji izbrani članek',
 	'mobile-frontend-news-items' => 'V novicah',
-	'mobile-frontend-leave-feedback-title' => 'Povratne informacije mobilne strani',
 	'mobile-frontend-leave-feedback-notice' => 'Vaše povratne informacije nam pomagajo izboljšati izkušnjo z mobilno stranjo. Objavljene bodo javno (skupaj z vašim uporabniškim imenom, različico brskalnika in operacijskim sistemom) na strani »$1«. Prosimo, da poskusite izbrati informativno zadevo, npr. »Težave pri oblikovanju širokih tabel«. Vaša povratna informacija je predmet naših pogojev uporabe.',
 	'mobile-frontend-leave-feedback-subject' => 'Zadeva:',
 	'mobile-frontend-leave-feedback-message' => 'Sporočilo:',
 	'mobile-frontend-leave-feedback-submit' => 'Pošljite povratne informacije',
 	'mobile-frontend-leave-feedback-link-text' => 'Povratne informacije o mobilnem obličju',
 	'mobile-frontend-leave-feedback' => 'Pustite povratne informacije',
+	'mobile-frontend-leave-feedback-title' => 'Povratne informacije mobilne strani',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tehnična težava',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Splošno',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Povratna informacija o članku',
+	'mobile-frontend-leave-feedback-email-body' => 'Prosimo, napišite svoje e-poštno sporočilo nad to vrstico.',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'Tehnična težava',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Splošna povratna informacija',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'V zvezi z mano, osebo ali podjetjem, ki ga zastopam',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'V zvezi z napako v podatku',
@@ -8037,6 +8044,7 @@ $messages['sl'] = array(
 	'mobile-frontend-username' => 'Uporabniško ime:',
 	'mobile-frontend-password' => 'Geslo:',
 	'mobile-frontend-login' => 'Prijava',
+	'mobile-frontend-logout' => 'Odjava',
 	'mobile-frontend-placeholder' => 'Iščite po {{GRAMMAR:mestnik|{{SITENAME}}}}',
 	'mobile-frontend-dismiss-notification' => 'skrij obvestilo',
 	'mobile-frontend-clear-search' => 'Počisti',
@@ -8049,6 +8057,11 @@ $messages['sl'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Pogoji uporabe</a>',
 	'mobile-frontend-footer-contact' => 'Stik',
 	'mobile-frontend-unknown-option' => 'Neprepoznana možnost »$1«.',
+	'mobile-frontend-main-menu-settings' => 'Nastavitve',
+	'mobile-frontend-main-menu-settings-heading' => 'Nastavitve strani za prenosne naprave',
+	'mobile-frontend-page-menu-contents' => 'vsebina',
+	'mobile-frontend-page-menu-history' => 'zgodovina',
+	'mobile-frontend-page-menu-contents-heading' => 'Vsebina',
 );
 
 /** Albanian (shqip)
