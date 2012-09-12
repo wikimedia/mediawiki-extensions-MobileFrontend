@@ -24,11 +24,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected $wmlContext;
 
 	private static $defaultItemsToRemove = array(
-		'#contentSub',
 		'div.messagebox',
-		'#siteNotice',
-		'#siteSub',
-		'#jump-to-nav',
 		'div.editsection',
 		'div.infobox',
 		'table.toc',
