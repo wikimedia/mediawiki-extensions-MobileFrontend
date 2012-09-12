@@ -16,6 +16,7 @@ class SkinMobile extends SkinMobileBase {
 		$title = $this->getTitle();
 		$tpl->set( 'articleTitle', $title->getPrefixedText() );
 		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
+		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
@@ -25,6 +26,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		$tpl->set( 'title', $out->getPageTitle() );
 		$tpl->set( 'isMainPage', $title->isMainPage() );
+		$tpl->set( 'articleClass', $title->isMainPage() || $specialPage ? 'mw-mf-special' : '' );
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
@@ -52,6 +54,8 @@ class SkinMobile extends SkinMobileBase {
 		} else {
 			$styles[] = 'mobile';
 			$scripts[] = 'mobile';
+			$styles[] = 'mobile.production-only';
+			$scripts[] = 'mobile.production-only';
 		}
 		$styles[] = "mobile.device.{$device['css_file_name']}";
 		$styles[] = 'mobile.references';
@@ -427,7 +431,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<?php $this->html( 'notice' ) ?>
 		<?php $this->searchBox() ?>
-	<div class='show' id='content_wrapper'>
+	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
 		<div id="content">
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>

@@ -115,7 +115,7 @@ $wgResourceModules['mobile'] = array(
 		'stylesheets/common/mf-hacks.css' ),
 	'scripts' => array( 'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
-		'javascripts/modules/mf-toggle.js', 'javascripts/common/mf-settings.js', 'javascripts/modules/mf-search.js',
+		'javascripts/common/mf-settings.js', 'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-banner.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
@@ -139,7 +139,16 @@ $wgResourceModules['mobile.beta.jquery.eventlog'] = array(
 	'remoteExtPath' => $remoteExtPath,
 );
 
+$wgResourceModules['mobile.production-only'] = array(
+	'styles' => array( 'stylesheets/modules/mf-toggle.css' ),
+	'scripts' => array( 'javascripts/modules/mf-toggle.js' ),
+	'raw' => true,
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
+$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/modules/mf-toggle-dynamic.js';
 
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-navigation-legacy.css';
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-header.css';
