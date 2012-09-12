@@ -442,7 +442,7 @@ class ExtMobileFrontend extends ContextSource {
 	 * @param OutputPage $out
 	 * @return string
 	 */
-	public function DOMParse( OutputPage $out ) {
+	public function DOMParse( OutputPage $out, $removeSections ) {
 		wfProfileIn( __METHOD__ );
 
 		if ( !$this->beforePageDisplay( $out ) ) {
@@ -456,6 +456,7 @@ class ExtMobileFrontend extends ContextSource {
 		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $this->getTitle(),
 			$context->getContentFormat(), $wmlContext
 		);
+                $formatter->enableRemovableSections( $removeSections );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 

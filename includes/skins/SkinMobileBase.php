@@ -59,7 +59,7 @@ HTML;
 				$this->hookOptions = $options;
 			}
 		}
-		$html = $this->extMobileFrontend->DOMParse( $out );
+		$html = $this->extMobileFrontend->DOMParse( $out, true /* remove sections if beta */ );
 		if ( $html !== false ) {
 			wfProfileIn( __METHOD__  . '-tpl' );
 			$tpl = $this->prepareTemplate( $out );
