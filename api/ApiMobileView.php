@@ -164,6 +164,7 @@ class ApiMobileView extends ApiBase {
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 		}
 
+		wfProfileIn( __METHOD__ . '-MobileFormatter' );
 		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ),
 			$title,
 			'HTML'
@@ -174,6 +175,8 @@ class ApiMobileView extends ApiBase {
 			$mf->setIsMainPage( $this->mainPage );
 		}
 		$html = $mf->getText();
+		wfProfileOut( __METHOD__ . '-MobileFormatter' );
+
 		if ( $this->mainPage || $this->file ) {
 			$data = array(
 				'sections' => array(),
@@ -181,6 +184,7 @@ class ApiMobileView extends ApiBase {
 				'refsections' => array(),
 			);
 		} else {
+			wfProfileIn( __METHOD__ . '-sections' );
 			$data = array();
 			$data['sections'] = $parserOutput->getSections();
 			$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
@@ -204,6 +208,7 @@ class ApiMobileView extends ApiBase {
 				}
 				$data['text'][] = $chunk;
 			}
+			wfProfileOut( __METHOD__ . '-sections' );
 		}
 		// store for the same time as original parser output
 		$wgMemc->set( $key, $data, $cacheExpiry );
