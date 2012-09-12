@@ -81,18 +81,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'useFormatCookiePath', $wgCookiePath );
 		$tpl->set( 'useFormatCookieDomain', $_SERVER['HTTP_HOST'] );
 
-		$hideSearchBox = $request->getInt( 'hidesearchbox', 0 ) == 1;
-		$hideLogo = $this->getRequest()->getInt( 'hidelogo' ) == 1;
-		if ( !empty( $_SERVER['HTTP_APPLICATION_VERSION'] ) &&
-			strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Wikipedia Mobile' ) !== false ) {
-			$hideSearchBox = true;
-			if ( strpos( $_SERVER['HTTP_APPLICATION_VERSION'], 'Android' ) !== false ) {
-				$hideLogo = true;
-			}
-		}
-		$tpl->set( 'hideSearchBox', $hideSearchBox );
-		$tpl->set( 'hideLogo', $hideLogo );
-		$tpl->set( 'hideFooter', $hideLogo );
 		$tpl->set( 'languageSelection', $this->buildLanguageSelection() );
 
 		// footer
@@ -541,9 +529,6 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	private function searchBox() {
-		if ( $this->data['hideSearchBox'] ) {
-			return;
-		}
 		?>
 	<div id="mw-mf-header">
 		<?php
@@ -557,7 +542,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
 			<?php
-				if ( !$this->data['hideLogo'] && !$this->data['isBetaGroupMember'] ) { ?>
+				if ( !$this->data['isBetaGroupMember'] ) { ?>
 				<img alt="Logo" id="mw-mf-logo" src="<?php
 					$this->text( 'wgMobileFrontendLogo' ) ?>" />
 			<?php
@@ -581,7 +566,6 @@ class SkinMobileTemplate extends BaseTemplate {
 			</button>
 			<?php } ?>
 		</form>
-		<?php if ( !$this->data['hideLogo'] ) { ?>
 		<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 			<div class='nav' id='nav'>
 			<?php $this->html( 'languageSelection' ) ?><br/>
@@ -602,7 +586,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		</div>
 		<?php
 		}
-		}
 		?>
 	<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 	<?php $this->html( 'languageSelection' ) ?>
@@ -612,10 +595,6 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	private function footer() {
-		if ( $this->data['hideFooter'] ) {
-			return;
-		}
-
 		?>
 	<div id="footer">
 		<?php
