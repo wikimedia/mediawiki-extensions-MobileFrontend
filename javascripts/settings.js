@@ -57,9 +57,10 @@ MobileFrontend.settings = (function() {
 		return null;
 	}
 
-	function saveUserSetting( name, value ) {
+	function saveUserSetting( name, value, useCookieFallback ) {
 		return supportsLocalStorage ?
-			localStorage.setItem( name, value ) : writeCookie( name, value, 1 );
+			localStorage.setItem( name, value ) :
+				( useCookieFallback ? writeCookie( name, value, 1 ) : false );
 	}
 
 	function getUserSetting( name, value ) {

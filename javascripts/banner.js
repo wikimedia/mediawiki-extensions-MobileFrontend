@@ -20,7 +20,10 @@ MobileFrontend.banner = (function() {
 
 			dismissNotification.onclick = function() {
 				banner.parentNode.removeChild( banner );
-				saveUserSetting( cookieNameZeroVisibility, 'off' );
+				saveUserSetting( cookieNameZeroVisibility, 'off',
+					// FIXME: currently we only resort to cookie saving for the zero rated banners to avoid cache fragmentation
+					// (this has side effect that any banners shown on pages which do not support localStorage are not supported)
+					'zeroRatedBannerVisibility' === cookieNameZeroVisibility );
 			};
 		}
 	}
