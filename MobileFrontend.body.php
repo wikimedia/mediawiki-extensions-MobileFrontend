@@ -256,7 +256,6 @@ class ExtMobileFrontend extends ContextSource {
 
 		$this->disableCaching();
 		$this->sendXDeviceVaryHeader();
-		$this->sendApplicationVersionVaryHeader();
 
 		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
 			$this->wsLoginToken = $request->getSessionData( 'wsLoginToken' );
@@ -354,28 +353,6 @@ class ExtMobileFrontend extends ContextSource {
 		$out->addVaryHeader( 'X-Carrier' );
 		$out->addVaryHeader( 'X-Subdomain' );
 		$out->addVaryHeader( 'X-Images' );
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
-	/**
-	 * @todo: Kill when old screen-scraping apps extinct
-	 * @return bool
-	 */
-	private function sendApplicationVersionVaryHeader() {
-		wfProfileIn( __METHOD__ );
-		$this->getOutput()->addVaryHeader( 'Application_Version' );
-		if ( isset( $_SERVER['HTTP_APPLICATION_VERSION'] ) ) {
-			$this->getRequest()->response()->header( 'Application_Version: ' . $_SERVER['HTTP_APPLICATION_VERSION'] );
-		} else {
-			$xDevice = MobileContext::singleton()->getXDevice();
-			if ( $xDevice !== '' ) {
-				if ( stripos( $xDevice, 'iphone' ) !== false ||
-					stripos( $xDevice, 'android' ) !== false ) {
-					$this->getRequest()->response()->header( "Application_Version: {$xDevice}" );
-				}
-			}
-		}
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
