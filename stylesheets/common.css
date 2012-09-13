@@ -18,6 +18,15 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
+.mw-mf-image-replacement {
+	font-style: italic;
+	color: #706E6E;
+	text-decoration: underline;
+	border: dotted 1px #CCC;
+	padding: 10px;
+	display: inline-block;
+}
+
 input {
 	word-break: normal;
 }

@@ -43,7 +43,7 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 			// remove images if asked
 			array(
 				'<img src="/foo/bar.jpg">Blah</img>',
-				'Blah',
+				'<span class="mw-mf-image-replacement">['. wfMessage( 'mobile-frontend-missing-image' ) .']</span>Blah',
 				$disableImages,
 			),
 			// basic tag removal
@@ -73,6 +73,27 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 				'<span title="&quot; \' &amp;">&lt;Тест!&gt;</span> &amp;&lt;&#38;&#0038;&#x26;&#x026;',
 				'<span title="&quot; \' &amp;">&lt;Тест!&gt;</span> &amp;&lt;&amp;&amp;&amp;&amp;',
 			),
+			array(
+				'<img alt="picture of kitty" src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[picture of kitty]</span>',
+				$disableImages,
+			),
+			array(
+				'<img src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
+				$disableImages,
+			),
+			array(
+				'<img alt src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
+				$disableImages,
+			),
+			array(
+				'<img alt src="kitty.jpg">look at the cute kitty!<img alt="picture of angry dog" src="dog.jpg">',
+				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!'.
+					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
+				$disableImages,
+			)
 		);
 	}
 }

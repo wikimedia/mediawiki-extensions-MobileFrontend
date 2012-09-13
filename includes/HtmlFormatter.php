@@ -166,13 +166,30 @@ class HtmlFormatter {
 		// For example:
 
 		$domElemsToRemove = array();
+		$domElemsToReplace = array();
 		foreach ( $removals['TAG'] as $tagToRemove ) {
 			$tagToRemoveNodes = $doc->getElementsByTagName( $tagToRemove );
 			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
 				if ( $tagToRemoveNode && $this->elementNotWhitelisted( $tagToRemoveNode ) ) {
-					$domElemsToRemove[] = $tagToRemoveNode;
+					if ( $tagToRemoveNode->nodeName == 'img' ) {
+						$domElemsToReplace[] = $tagToRemoveNode;
+					} else {
+						$domElemsToRemove[] = $tagToRemoveNode;
+					}
 				}
 			}
+		}
+
+		foreach ( $domElemsToReplace as $domElement ) {
+			$alt = $domElement->getAttribute( 'alt' );
+			if ( $alt === '' ) {
+				$alt = '[' . wfMessage( 'mobile-frontend-missing-image' )->inContentLanguage() . ']';
+			} else {
+				$alt = '[' . $alt . ']';
+			}
+			$replacement = $doc->createElement( 'span', $alt );
+			$replacement->setAttribute( 'class', 'mw-mf-image-replacement' );
+			$domElement->parentNode->replaceChild( $replacement, $domElement );
 		}
 
 		foreach ( $domElemsToRemove as $domElement ) {
