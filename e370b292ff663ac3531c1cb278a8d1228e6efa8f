@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//8ZI\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-09-13T20:35:43Z",
+      "side": 1,
+      "message": "This is unmaintainable, all kinds of problems are possible if someone forgets to update this list.",
+      "revId": "e370b292ff663ac3531c1cb278a8d1228e6efa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//8gM\u003d",
+        "filename": "skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 466,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-09-13T20:35:43Z",
+      "side": 1,
+      "message": "Why lowercase this? The convention is camelCase.",
+      "revId": "e370b292ff663ac3531c1cb278a8d1228e6efa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//8Zk\u003d",
+        "filename": "skins/SkinMobileBase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-09-13T20:35:43Z",
+      "side": 1,
+      "message": "This direct property access is scary - all this stuff is not private only because of PHP4 legacy.",
+      "revId": "e370b292ff663ac3531c1cb278a8d1228e6efa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//8Zc\u003d",
+        "filename": "skins/SkinMobileBase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-09-13T20:35:43Z",
+      "side": 1,
+      "message": "in_array() in a loop is not the fastest way to do stuff.",
+      "revId": "e370b292ff663ac3531c1cb278a8d1228e6efa8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
