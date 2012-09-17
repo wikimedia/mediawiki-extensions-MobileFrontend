@@ -88,6 +88,7 @@ table.infobox th {
 	max-width: 100%;
 }
 
+img.tex,
 .thumb img {
 	max-width: 100% !important;
 	width: auto !important
