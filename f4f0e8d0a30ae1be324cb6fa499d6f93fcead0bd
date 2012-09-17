@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//6+I\u003d",
+        "filename": "HtmlFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-09-17T17:50:13Z",
+      "side": 1,
+      "message": "Replacing the element in this loop here seems to break the iterator; not all images get removed in my testing.",
+      "revId": "f4f0e8d0a30ae1be324cb6fa499d6f93fcead0bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//698\u003d",
+        "filename": "stylesheets/common.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-09-17T17:50:13Z",
+      "side": 1,
+      "message": "This causes inline images to expand into a block; we should instead simply insert the alt text as though the image weren\u0027t there probably?",
+      "revId": "f4f0e8d0a30ae1be324cb6fa499d6f93fcead0bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
