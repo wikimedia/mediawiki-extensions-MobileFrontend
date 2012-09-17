@@ -7,9 +7,10 @@ MobileFrontend.banner = (function() {
 			M = MobileFrontend,
 			saveUserSetting = M.settings.saveUserSetting,
 			getUserSetting = M.settings.getUserSetting,
-			dismissNotification = banner ? banner.getElementsByTagName( 'button' )[ 0 ] : document.getElementById( 'dismiss-notification' ),
-			banner = banner || document.getElementById( 'zero-rated-banner' ) ||
-				document.getElementById( 'zero-rated-banner-red' );
+			dismissNotification = banner ? banner.getElementsByTagName( 'button' )[ 0 ] : document.getElementById( 'dismiss-notification' );
+
+		banner = banner || document.getElementById( 'zero-rated-banner' ) ||
+			document.getElementById( 'zero-rated-banner-red' );
 
 		if ( dismissNotification ) {
 			zeroRatedBannerVisibility = getUserSetting( cookieNameZeroVisibility );
