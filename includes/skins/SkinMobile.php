@@ -72,6 +72,10 @@ class SkinMobile extends SkinMobileBase {
 		$scriptLinks = array();
 		if ( $device['supports_jquery'] ) {
 			$scriptLinks[] = $this->resourceLoaderLink( 'jquery', 'scripts', true, true );
+			global $wgResponsiveImages;
+			if ( $wgResponsiveImages ) {
+				$scriptLinks[] = $this->resourceLoaderLink( array( 'jquery.hidpi', 'mediawiki.hidpi' ), 'scripts', true, true );
+			}
 		}
 		$scriptLinks[] = $this->resourceLoaderLink( $scripts, 'scripts' );
 		if ( $isFilePage ) {
