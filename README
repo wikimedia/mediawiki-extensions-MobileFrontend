@@ -41,7 +41,8 @@ If you are adding images to the extension please ensure they have been [http://p
 === Testing ===
 
 ==== Unit tests ====
-Before commiting anything please ensure that you run [[Special:JavaScriptTest/qunit]] - ensure you do this on the desktop site!
+Javascript: Before commiting anything please ensure that you run [[Special:JavaScriptTest/qunit]] - ensure you do this on the desktop site!
+PHP: PHP tests can be run the normal way. See [[http://www.mediawiki.org/wiki/Manual:PHP_unit_testing/Writing_unit_tests_for_extensions]] for explanations on how to exclusively run php unit tests for the MobileFrontend extension.
 
 ==== Selenium tests ====
 There are currently no selenium tests. If you want to contribute these they would be greatly received!
