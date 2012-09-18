@@ -51,13 +51,6 @@ $autoloadClasses = array (
 	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 
-	'MobileFrontendTemplate' => 'templates/MobileFrontendTemplate',
-	'ApplicationTemplate' => 'templates/ApplicationTemplate',
-	'SearchTemplate'  => 'templates/SearchTemplate',
-	'FooterTemplate' => 'templates/FooterTemplate',
-	'ApplicationWmlTemplate' => 'templates/ApplicationWmlTemplate',
-	'SopaNoticeTemplate' => 'templates/SopaNoticeTemplate',
-
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
 	'SkinMobileBase' => 'skins/SkinMobileBase',
@@ -69,7 +62,7 @@ $autoloadClasses = array (
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
 	if ( !isset( $wgAutoloadClasses[$className] ) ) {
-		$wgAutoloadClasses[$className] = "$cwd/$classFilename.php";
+		$wgAutoloadClasses[$className] = "$cwd/includes/$classFilename.php";
 	}
 }
 
