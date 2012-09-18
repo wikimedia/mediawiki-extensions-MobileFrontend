@@ -30,7 +30,7 @@ MobileFrontend.navigation = (function( $ ) {
 		var overlay = document.getElementById( mfePrefix + 'overlay' );
 		showOverlay();
 		$( overlay ).empty();
-		$( '<div class="header">' ).appendTo( '#' + mfePrefix + 'overlay' );
+		$( '<div class="header">' ).click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
 		$( '<button id="close"></button>' ).text( message( 'collapse-section' ) ).
 			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
 		if( typeof heading === 'string' ) {
