@@ -39,7 +39,7 @@ a.external {
 #userloginForm .user-login th,
 #userloginForm .user-login td {
 	width: 200px;
-	border: 0px;
+	border: 0;
 }
 
 table.toc h2 {
@@ -104,7 +104,7 @@ table th {
 h3#sopa-notice {
 	color: #000000;
 	-webkit-margin-after: 0.5em;
-	margin: 0px;
+	margin: 0;
 }
 
 .mwm-notice {
@@ -281,7 +281,7 @@ img.thumbborder {
 
 #content_wrapper {
 	clear: both;
-	margin: 0px 22px;
+	margin: 0 22px;
 }
 
 #content_wrapper p {

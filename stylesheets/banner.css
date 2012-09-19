@@ -78,7 +78,7 @@ html.android .android.mw-mf-banner {
 }
 
 #zero-rated-banner-red #zero-rated-banner-text {
-	margin: 0px;
+	margin: 0;
 	color: #ffffff;
 	font-weight: bold;
 	text-align: center;

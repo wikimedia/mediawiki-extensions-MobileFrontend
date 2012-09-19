@@ -13,10 +13,10 @@ Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 	left: 0;
 	right: 0;
 	background-color: #E4E4E4;
-	-webkit-box-shadow: 0px -20px 10px -16px #aaa;
-	-moz-box-shadow: 0px -20px 10px -16px #aaa;
-	-o-box-shadow: 0px -20px 10px -16px #aaa;
-	box-shadow: 0px -20px 10px -16px #aaa;
+	-webkit-box-shadow: 0 -20px 10px -16px #aaa;
+	-moz-box-shadow: 0 -20px 10px -16px #aaa;
+	-o-box-shadow: 0 -20px 10px -16px #aaa;
+	box-shadow: 0 -20px 10px -16px #aaa;
 	word-break: break-word;
 	line-height: 1.4em;
 	font-size: 0.8em;

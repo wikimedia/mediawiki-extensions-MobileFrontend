@@ -170,8 +170,6 @@ class MobileFormatter extends HtmlFormatter {
 
 		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
 
-		$show = $this->msg( 'mobile-frontend-show-button' );
-		$hide = $this->msg( 'mobile-frontend-hide-button' );
 		$backToTop = $this->msg( 'mobile-frontend-back-to-top-of-section' );
 		$this->headings++;
 		// Back to top link
@@ -295,10 +293,10 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Returns interface message text
 	 * @param string $key: Message key
-	 * @return string
+	 * @return string Wiki text
 	 */
 	protected function msg( $key ) {
-		return wfMsg( $key );
+		return wfMessage( $key )->text();
 	}
 
 	/**

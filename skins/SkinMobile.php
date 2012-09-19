@@ -8,16 +8,14 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFFeedbackFallbackURL, $wgMFCustomLogos, $wgVersion;
+			   $wgMFCustomLogos, $wgVersion;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
 		$out = $this->getOutput();
 		$title = $this->getTitle();
-		$request = $this->getRequest();
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
-		$language = $this->getLanguage();
 		$inBeta = $context->isBetaGroupMember();
 
 		$tpl->set( 'isBetaGroupMember', $inBeta );
@@ -30,6 +28,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'hookOptions', $this->hookOptions );
 		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) );
 		$tpl->set( 'siteLanguageLink', SpecialPage::getTitleFor( 'MobileOptions', 'Language' )->getLocalUrl() );
+		// @todo FIXME: Unused local variable?
 		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
 			$wgMFCustomLogos['copyright'] :
 			"{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png";
@@ -87,14 +86,13 @@ class SkinMobile extends SkinMobileBase {
 		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 		$historyLink = '';
 		if ( !$title->isSpecialPage() ) {
-			$lastEdit = $this->getWikiPage()->getTimestamp();
 			if ( !$inBeta ) {
 				$historyKey = 'mobile-frontend-footer-contributors';
 				$historyLink = $this->msg( $historyKey, htmlspecialchars( $link ) )->text();
 			} else {
 				$historyKey = 'mobile-frontend-page-menu-history';
 				$historyLink = Html::element( 'a', array( 'href' => $link ),
-					wfMsg( $historyKey ) );
+					$this->msg( $historyKey )->text() );
 			}
 		}
 		if( !$historyLink ) {
@@ -116,8 +114,12 @@ class SkinMobile extends SkinMobileBase {
 			$context->imagesDisabled() ? 'EnableImages' : 'DisableImages'
 		);
 		$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
-				Html::element( 'a', array( 'href' => $leaveFeedbackURL ), wfMsg( 'mobile-frontend-leave-feedback' ) )
-				: ''
+			Html::element(
+				'a',
+				array( 'href' => $leaveFeedbackURL ),
+				$this->msg( 'mobile-frontend-leave-feedback' )->text()
+			)
+			: ''
 		);
 		$tpl->set( 'settingsUrl', SpecialPage::getTitleFor( 'MobileOptions' )->getLocalUrl() );
 
@@ -297,7 +299,7 @@ HTML;
 		$languageUrls[] = array(
 			'href' => $this->getRequest()->getFullRequestURL(),
 			'text' => $out->getHTMLTitle(),
-			'language' => $wgContLang->getLanguageName( $langCode ),
+			'language' => $wgContLang->fetchLanguageName( $langCode ),
 			'class' => 'interwiki-' . $langCode,
 			'lang' => $langCode,
 		);
@@ -312,10 +314,10 @@ HTML;
 				$languageUrl = $context->getMobileUrl( $nt->getFullURL() );
 				$languageUrls[] = array(
 					'href' => $languageUrl,
-					'text' => ( $wgContLang->getLanguageName( $nt->getInterwiki() ) != ''
-						? $wgContLang->getLanguageName( $nt->getInterwiki() )
+					'text' => ( $wgContLang->fetchLanguageName( $nt->getInterwiki() ) != ''
+						? $wgContLang->fetchLanguageName( $nt->getInterwiki() )
 						: $l ),
-					'language' => $wgContLang->getLanguageName( $lang ),
+					'language' => $wgContLang->fetchLanguageName( $lang ),
 					'class' => $class,
 					'lang' => $lang,
 				);
@@ -483,14 +485,15 @@ class SkinMobileTemplate extends BaseTemplate {
 
 		$jsconfig = array(
 			'messages' => array(
-				'expand-section' => wfMsg( 'mobile-frontend-show-button' ),
-				'collapse-section' => wfMsg( 'mobile-frontend-hide-button' ),
-				'remove-results' => wfMsg( 'mobile-frontend-wml-back' ), //@todo: use a separate message
-				'mobile-frontend-search-noresults' => wfMsg( 'mobile-frontend-search-noresults' ),
-				'mobile-frontend-search-help' => wfMsg( 'mobile-frontend-search-help' ),
-				'contents-heading' => wfMsg( 'mobile-frontend-page-menu-contents-heading' ),
-				'language-heading' => wfMsg( 'mobile-frontend-page-menu-language-heading' ),
-				'mobile-frontend-close-section' => wfMsg( 'mobile-frontend-close-section' ),
+				'expand-section' => wfMessage( 'mobile-frontend-show-button' )->text(),
+				'collapse-section' => wfMessage( 'mobile-frontend-hide-button' )->text(),
+				'remove-results' => wfMessage( 'mobile-frontend-wml-back' )->text(), //@todo: use a separate message
+				'mobile-frontend-search-noresults' => wfMessage(
+					'mobile-frontend-search-noresults' )->text(),
+				'mobile-frontend-search-help' => wfMessage( 'mobile-frontend-search-help' )->text(),
+				'contents-heading' => wfMessage( 'mobile-frontend-page-menu-contents-heading' )->text(),
+				'language-heading' => wfMessage( 'mobile-frontend-page-menu-language-heading' )->text(),
+				'mobile-frontend-close-section' => wfMessage( 'mobile-frontend-close-section' )->text(),
 				'mobile-frontend-language-header' => wfMessage( 'mobile-frontend-language-header',
 					$wgLang->formatNum( $this->data['languageCount'] ) )->text(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
@@ -498,8 +501,10 @@ class SkinMobileTemplate extends BaseTemplate {
 						'href' => SpecialPage::getTitleFor( 'Special:MobileOptions/Language' )->getLocalUrl(),
 					),
 					wfMessage( 'mobile-frontend-language-footer' ) ),
-				'mobile-frontend-language-site-choose' => wfMsg( 'mobile-frontend-language-site-choose' ),
-				'mobile-frontend-language-site-nomatches' => wfMsg( 'mobile-frontend-language-site-nomatches' ),
+				'mobile-frontend-language-site-choose' => wfMessage(
+					'mobile-frontend-language-site-choose' )->text(),
+				'mobile-frontend-language-site-nomatches' => wfMessage(
+					'mobile-frontend-language-site-nomatches' )->text(),
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
@@ -514,7 +519,8 @@ class SkinMobileTemplate extends BaseTemplate {
 			),
 		);
 		if ( $this->data['isMainPage'] ) {
-			$jsconfig['messages']['empty-homepage'] = wfMsg( 'mobile-frontend-empty-homepage' );
+			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage'
+			)->text();
 			$firstHeading = '';
 		} else {
 			$firstHeading = Html::rawElement( 'h1', array( 'id' => 'firstHeading' ),

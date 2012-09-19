@@ -84,8 +84,7 @@ MobileFrontend.settings = (function() {
 	}
 
 	function readMobileToken() {
-		var mobileToken = readCookie( mobileTokenCookieName );
-		return mobileToken;
+		return readCookie( mobileTokenCookieName );
 	}
 
 	function updateMobileToken( responseXml ) {

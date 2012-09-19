@@ -20,7 +20,7 @@
 }
 
 #mw-mf-searchForm {
-	padding: 0px 8px 0px 50px; /* check mw-mf-logo */
+	padding: 0 8px 0 50px; /* check mw-mf-logo */
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
@@ -30,7 +30,7 @@
 }
 
 .full-screen-search #mw-mf-searchForm {
-	padding: 0px 8px 0px 52px;
+	padding: 0 8px 0 52px;
 }
 
 .overlay #footer,
@@ -96,7 +96,7 @@
 	top: 7px;
 	background-repeat: no-repeat;
 	z-index: 2;
-	background-position: -28px 0px;
+	background-position: -28px 0;
 	left: 12px;
 	padding-left: 10px;
 	border-radius: 5px 5px 5px;
@@ -140,11 +140,11 @@
 #mw-mf-page-left {
 	width: 80%;
 	right: 20%;
-	font-family: Helvetica;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 1.2em;
 	bottom: 0;
 	top: 0;
-	margin-right: 0px;
+	margin-right: 0;
 	position: absolute;
 	border-right: solid 1px #AAA;
 	display: none;
@@ -412,7 +412,7 @@ body.navigationEnabled {
 
 .overlay ul {
 	text-align: left;
-	left: 0px;
+	left: 0;
 	width: 100% !important;
 	border: none;
 	z-index: 1;
@@ -491,7 +491,7 @@ body {
 	}
 
 	#mw-mf-searchForm {
-		padding: 0px 8px 0px 40px;
+		padding: 0 8px 0 40px;
 	}
 
 	.full-screen-search .suggestions-result {
@@ -499,7 +499,7 @@ body {
 	}
 
 	.full-screen-search #mw-mf-searchForm {
-		padding: 0px 8px 0px 40px;
+		padding: 0 8px 0 40px;
 	}
 
 	#remove-results,
@@ -526,7 +526,7 @@ body {
 	}
 
 	#mw-mf-menu-main li {
-		background-position: 0px 0px;
+		background-position: 0 0;
 		font-size: 0.8em;
 	}
 }

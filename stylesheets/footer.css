@@ -3,10 +3,10 @@ initially moved from beta_common.css in
 Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 */
 #footer {
-	-webkit-box-shadow: 0px -5px 30px 0px #ddd;
-	-moz-box-shadow: 0px -5px 30px 0px #ddd;
-	-o-box-shadow: 0px -5px 30px 0px #ddd;
-	box-shadow: 0px -5px 30px 0px #ddd;
+	-webkit-box-shadow: 0 -5px 30px 0 #ddd;
+	-moz-box-shadow: 0 -5px 30px 0 #ddd;
+	-o-box-shadow: 0 -5px 30px 0 #ddd;
+	box-shadow: 0 -5px 30px 0 #ddd;
 	padding: 12px 22px; /* see content_wrapper padding
 		also see @media all and (max-width: 320px) */
 	border-top: solid 1px #aaa;

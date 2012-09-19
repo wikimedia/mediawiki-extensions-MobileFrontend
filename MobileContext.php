@@ -755,27 +755,4 @@ class MobileContext extends ContextSource {
 			$this->toggleView( 'mobile' );
 		}
 	}
-
-	/**
-	 * @param $url string
-	 * @param $field string
-	 * @return string
-	 */
-	private function removeQueryStringParameter( $url, $field ) {
-		wfProfileIn( __METHOD__ );
-		static $coreSupport;
-		if ( !isset( $coreSupport ) ) {
-			$coreSupport = MFCompatCheck::checkRemoveQueryString();
-		}
-
-		if ( $coreSupport ) {
-			$queryString = $this->getRequest()->removeQueryValue( $field );
-			$url = $this->getTitle()->getFullUrl( $queryString );
-		} else {
-			$url = preg_replace( '/(.*)(\?|&)' . $field . '=[^&]+?(&)(.*)/i', '$1$2$4', $url . '&' );
-			$url = substr( $url, 0, -1 );
-		}
-		wfProfileOut( __METHOD__ );
-		return $url;
-	}
 }

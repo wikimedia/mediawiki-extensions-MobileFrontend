@@ -121,7 +121,7 @@ class ExtMobileFrontend extends ContextSource {
 			return true; // Let the redirect happen
 		} else {
 			if ( $title->getNamespace() == NS_SPECIAL ) {
-				list( $name, $subpage ) = SpecialPage::resolveAlias( $title->getDBkey() );
+				list( $name, $subpage ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 				if ( $name ) {
 					$title = SpecialPage::getTitleFor( $name, $subpage );
 				}
@@ -366,7 +366,7 @@ class ExtMobileFrontend extends ContextSource {
 			Html::openElement( 'td',
 				array( 'class' => 'mw-label' ) ) .
 			Html::element( 'label',
-				array( 'for' => 'wpName1' ), wfMsg( 'mobile-frontend-username' ) ) .
+				array( 'for' => 'wpName1' ), wfMessage( 'mobile-frontend-username' )->text() ) .
 			Html::closeElement( 'td' ) .
 			Html::closeElement( 'tr' ) .
 			Html::openElement( 'tr' ) .
@@ -383,7 +383,7 @@ class ExtMobileFrontend extends ContextSource {
 			Html::openElement( 'td',
 				array( 'class' => 'mw-label' ) ) .
 			Html::element( 'label',
-				array( 'for' => 'wpPassword1' ), wfMsg( 'mobile-frontend-password' ) ) .
+				array( 'for' => 'wpPassword1' ), wfMessage( 'mobile-frontend-password' )->text() ) .
 			Html::closeElement( 'td' ) .
 			Html::closeElement( 'tr' ) .
 			Html::openElement( 'tr' ) .
@@ -402,7 +402,7 @@ class ExtMobileFrontend extends ContextSource {
 			Html::openElement( 'tr' ) .
 			Html::openElement( 'td',
 				array( 'class' => 'mw-submit' ) ) .
-			Html::input( 'wpLoginAttempt', wfMsg( 'mobile-frontend-login' ), 'submit',
+			Html::input( 'wpLoginAttempt', wfMessage( 'mobile-frontend-login' )->text(), 'submit',
 				array( 'id' => 'wpLoginAttempt',
 					'tabindex' => '3' ) ) .
 			Html::closeElement( 'td' ) .

@@ -13,7 +13,6 @@
 // A device can select which format a request should recieve and
 // may be extended to provide access to particular devices functionality
 class DeviceDetection {
-
 	/**
 	 * @return array
 	 */

@@ -89,7 +89,7 @@ $wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend, $wgHooks;
+	global $wgExtMobileFrontend;
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 	$wgExtMobileFrontend->attachHooks();
 }

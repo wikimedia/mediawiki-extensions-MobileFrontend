@@ -13,7 +13,7 @@ MobileFrontend.navigation = (function( $ ) {
 
 	function closeOverlay( ) {
 		$( 'html' ).removeClass( 'overlay' );
-		window.scrollTo( document.body.scrollLeft, lastScrollTopPosition )
+		window.scrollTo( document.body.scrollLeft, lastScrollTopPosition );
 		MobileFrontend.history.replaceHash( '#' );
 	}
 
@@ -87,7 +87,7 @@ MobileFrontend.navigation = (function( $ ) {
 		footer = $( '<li />' ).addClass( 'mw-mf-overlay-footer' ).
 			html( message( 'mobile-frontend-language-footer' ) ).appendTo( ul );
 		$a = $( 'a', footer );
-		href = $( '#mw-mf-universal-language' ).attr( 'href' )
+		href = $( '#mw-mf-universal-language' ).attr( 'href' );
 		$a.attr( 'href', href );
 		createOverlay( message( 'language-heading' ), ul );
 	}

@@ -48,9 +48,9 @@ var chunks = {
 	],
 	metadata: [
 		'#metadata',
-		'.mw-imagepage-section-metadata',
+		'.mw-imagepage-section-metadata'
 	]
-}
+};
 
 function makeToggle(thisId) {
 	return function(event) {

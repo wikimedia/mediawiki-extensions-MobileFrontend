@@ -28,7 +28,8 @@ abstract class SkinMobileBase extends SkinTemplate {
 	 * @param $content string: html string to put in banner
 	 * @param $classNames string: additional classes that can be added to the banner. In particular used to target certain devices (e.g. android)
 	 * @param $bannerStyle string: additional styling for banner
-	*/
+	 * @return string
+	 */
 	public function createDismissableBanner( $id, $content="", $classNames="", $bannerStyle="" ) {
 		return <<<HTML
 			<div class="mw-mf-banner {$classNames}" id="mw-mf-banner-{$id}"

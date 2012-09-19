@@ -55,7 +55,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 
 	private function getSettingsForm() {
 		$out = $this->getOutput();
-		$user = $this->getUser();
 		$context = MobileContext::singleton();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
@@ -69,7 +68,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 
 		$imagesChecked = $context->imagesDisabled() ? '' : 'checked'; // images are off when disabled
 		$imagesBeta = $context->isBetaGroupMember() ? 'checked' : '';
-		$username = $user->getName();
 		$disableMsg = $this->msg( 'mobile-frontend-images-status' )->parse();
 		$betaEnableMsg = $this->msg( 'mobile-frontend-settings-beta' )->parse();
 		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
@@ -124,7 +122,7 @@ HTML;
 		$language = $this->getLanguage();
 		foreach ( Interwiki::getAllPrefixes( true ) as $interwiki ) {
 			$code = $interwiki['iw_prefix'];
-			$name = $language->getLanguageName( $code );
+			$name = $language->fetchLanguageName( $code );
 			if ( !$name ) {
 				continue;
 			}
@@ -275,29 +273,8 @@ HTML;
 		$this->doReturnTo();
 	}
 
-	private function checkMobileToken() {
-		$qsMobileToken = $this->getRequest()->getVal( 'mobiletoken' );
-		if ( !$qsMobileToken ) {
-			$device = MobileContext::singleton()->getDevice();
-			if ( isset( $device['supports_javascript'] ) && $device['supports_javascript'] ) {
-				return false;
-			} else {
-				return true;
-			}
-		}
-
-		$mobileToken = MobileContext::singleton()->getMobileToken();
-		if ( $mobileToken === $qsMobileToken ) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	private function enableImages( $enable = true ) {
-		//if ( $this->checkMobileToken() ) {
 		MobileContext::singleton()->setDisableImagesCookie( !$enable );
-		//}
 		$this->doReturnTo();
 	}
 

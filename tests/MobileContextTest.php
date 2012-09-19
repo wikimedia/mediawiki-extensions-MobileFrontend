@@ -9,7 +9,8 @@ class MobileContextTest extends MediaWikiTestCase {
 	* protected and private methods directly through the Reflection API
 	 *
 	 * @param $name string
-	*/
+	 * @return \ReflectionMethod
+	 */
 	protected static function getMethod( $name ) {
 		$class = new ReflectionClass( 'MobileContext' );
 		$method = $class->getMethod( $name );

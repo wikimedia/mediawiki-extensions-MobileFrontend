@@ -44,7 +44,7 @@ mw.mobileFrontend = (function() {
 	}
 
 	function initModules() {
-		var module, i, minScore;
+		var module, i;
 		for( i = 0; i < modules.length; i++ ) {
 			module = modules[ i ];
 			module = mw.mobileFrontend[ module[ 0 ] ];
@@ -106,22 +106,22 @@ mw.mobileFrontend = (function() {
 		initModules();
 	}
 
-	utilities = typeof jQuery  !== 'undefined' ? jQuery : function( el ) {
-		if( typeof(el) === 'string' ) {
-			if( document.querySelectorAll ) {
+	utilities = typeof jQuery !== 'undefined' ? jQuery : function ( el ) {
+		if ( typeof el === 'string' ) {
+			if ( document.querySelectorAll ) {
 				return [].slice.call( document.querySelectorAll( el ) );
 			}
-		} else if( !el ) {
+		} else if ( !el ) {
 			el = document.createElement( 'div' );
 		}
 
 		function inArray( array, str ) {
 			var i;
-			if( array.indexOf ) {
+			if ( array.indexOf ) {
 				return array.indexOf( str ) > -1;
 			} else {
-				for( i = 0; i < array.length; i++ ) {
-					if( str === array[i] ) {
+				for ( i = 0; i < array.length; i++ ) {
+					if ( str === array[i] ) {
 						return true;
 					}
 				}
@@ -137,7 +137,7 @@ mw.mobileFrontend = (function() {
 		function addClass( name ) {
 			var className = el.className,
 				classNames = className.split( ' ' );
-			classNames.push(name); // TODO: only push if unique
+			classNames.push( name ); // TODO: only push if unique
 			el.className = classNames.join( ' ' );
 		}
 
@@ -145,8 +145,8 @@ mw.mobileFrontend = (function() {
 			var className = el.className,
 				classNames = className.split( ' ' ),
 				newClasses = [], i;
-			for( i = 0; i < classNames.length; i++ ) {
-				if( classNames[i] !== name ) {
+			for ( i = 0; i < classNames.length; i++ ) {
+				if ( classNames[i] !== name ) {
 					newClasses.push( classNames[i] );
 				}
 			}
@@ -158,7 +158,7 @@ mw.mobileFrontend = (function() {
 		}
 
 		function remove() {
-			el.parentNode.removeChild(el);
+			el.parentNode.removeChild( el );
 		}
 
 		function getChildText( el ) {
@@ -174,15 +174,15 @@ mw.mobileFrontend = (function() {
 
 		function text( str ) {
 			var i, label;
-			if( str ) {
+			if ( str ) {
 				label = document.createTextNode( str );
 				el.appendChild( label );
 			} else {
-				if( el.nodeType === 3 ) { // TEXT_NODE
+				if ( el.nodeType === 3 ) { // TEXT_NODE
 					return el.nodeValue;
-				} else if( typeof el.textContent === 'string' ) {
+				} else if ( typeof el.textContent === 'string' ) {
 					return el.textContent; // standards compliant
-				} else if( typeof el.innerText === 'string' ) {
+				} else if ( typeof el.innerText === 'string' ) {
 					return el.innerText;
 				} else {
 					return getChildText( el );
@@ -198,7 +198,7 @@ mw.mobileFrontend = (function() {
 			removeClass: removeClass,
 			text: text
 		};
-	}
+	};
 	utilities.ajax = utilities.ajax || function( options ) {
 		var xmlHttp, url;
 		if ( window.XMLHttpRequest ) {
@@ -239,7 +239,7 @@ mw.mobileFrontend = (function() {
 			tokenQuery = jQuery.ajax( {
 				url: getApiUrl(),
 				dataType: 'json',
-				data: data,
+				data: data
 			} ).done( callback );
 		}
 	}

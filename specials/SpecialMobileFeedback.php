@@ -165,12 +165,12 @@ HTML;
 		}
 
 		if ( $success === true ) {
-			$location = MobileContext::singleton()->getMobileUrl(
+			$location = $context->getMobileUrl(
 				$this->getTitle( 'thanks' )->getFullURL( array( 'returnto' => $returnTo ) ) );
 			$this->getRequest()->response()->header( 'Location: ' . $location );
 			exit;
 		} else {
-			$location = MobileContext::singleton()->getMobileUrl(
+			$location = $context->getMobileUrl(
 				$this->getTitle( 'error' )->getFullURL( array( 'returnto' => $returnTo ) ) );
 			$this->getRequest()->response()->header( 'Location: ' . $location );
 			exit;
@@ -428,7 +428,7 @@ class MobileFrontendMWApiClient {
 		if ( !$status->isGood() ) {
 			return false;
 		}
-		$response = $req->getContent();
+		$req->getContent();
 		return true;
 	}
 
@@ -569,13 +569,10 @@ class HTMLFormMobile extends HTMLForm {
 		switch ( $displayFormat ) {
 			case 'table':
 				return $this->displaySectionTable( $fields, $sectionName, $fieldsetIDPrefix );
-				break;
 			case 'div':
 				return $this->displaySectionDiv( $fields, $sectionName, $fieldsetIDPrefix );
-				break;
 			case 'raw':
 				return $this->displaySectionRaw( $fields, $sectionName, $fieldsetIDPrefix );
-				break;
 		}
 	}
 
@@ -697,6 +694,7 @@ class HTMLFormMobile extends HTMLForm {
 	 * Initialise a new Object for the field
 	 * @param $fieldname string
 	 * @param $descriptor string input Descriptor, as described above
+	 * @throws MWException
 	 * @return HTMLFormField subclass
 	 */
 	static function loadInputFromParameters( $fieldname, $descriptor ) {
@@ -840,36 +838,19 @@ class HTMLFormFieldDiv {
 		$errors = $valueObj->validate( $value, $valueObj->mParent->mFieldData );
 
 		$cellAttributes = array();
-		$verticalLabel = false;
 
 		if ( $errors === true || ( !$valueObj->mParent->getRequest()->wasPosted() && ( $valueObj->mParent->getMethod() == 'post' ) ) ) {
 			$errors = '';
-			$errorClass = '';
 		} else {
 			$errors = self::formatErrors( $errors );
-			$errorClass = 'mw-htmlform-invalid-input';
 		}
 
 		$label = $valueObj->getLabelHtml( $cellAttributes );
 		$field = $valueObj->getInputHTML( $value );
 
-		$fieldType = get_class( $valueObj );
-
 		$html .= "\n$errors";
 		$html .= $label;
 		$html .= $field;
-		/*if ( $verticalLabel ) {
-			$html = Html::rawElement( 'div',
-				array( 'class' => 'mw-htmlform-vertical-label' ), $label );
-			$html .= Html::rawElement( 'div',
-				array( 'class' => "mw-htmlform-field-$fieldType {$valueObj->getMClass()} $errorClass" ),
-				$field );
-			$html = $label;
-		} else {
-			$html = Html::rawElement( 'div',
-				array( 'class' => "mw-htmlform-field-$fieldType {$valueObj->getMClass()} $errorClass" ),
-				$label . $field );
-		}*/
 
 		$helptext = null;
 
@@ -906,7 +887,6 @@ class HTMLFormFieldDiv {
 
 	public static function getDiv( $value, $valueObj ) {
 		# Check for invalid data.
-
 		$errors = $valueObj->validate( $value, $valueObj->mParent->mFieldData );
 
 		$cellAttributes = array();

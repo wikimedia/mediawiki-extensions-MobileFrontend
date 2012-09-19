@@ -74,24 +74,24 @@ a.search-result-item {
 #mw-mf-searchForm {
 	width: auto;
 	position: relative;
-	padding: 0px 40px 0px 73px; /* right = width of #logo (35px) + 22px + 16px
+	padding: 0 40px 0 73px; /* right = width of #logo (35px) + 22px + 16px
 	left = width of close button + 22px */
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
 }
 
 .full-screen-search #mw-mf-searchForm {
-	padding: 0px 40px 0px 54px; /* right = width of #logo (18px) + 22px + 16px */
+	padding: 0 40px 0 54px; /* right = width of #logo (18px) + 22px + 16px */
 }
 
 #zero-language-search.search_bar {
-	padding: 8px 32px 8px 0px;
+	padding: 8px 32px 8px 0;
 }
 
 .goButton {
 	position: absolute;
 	right: 22px;
 	left: auto;
-	top: 0px;
+	top: 0;
 	border: 0;
 	background: url(images/s.gif) no-repeat center left;
 	-webkit-background-size: 27px 25px; /* use -webkit prefix for older android browsers eg. nexus 1 */
@@ -120,7 +120,7 @@ reduce font size so alt text more legible */
 
 #mw-mf-searchForm a,
 #mw-mf-searchForm img {
-	border: 0px;
+	border: 0;
 	vertical-align: middle;
 	position: absolute;
 }
@@ -200,7 +200,7 @@ reduce font size so alt text more legible */
 }
 
 .full-screen-search #results {
-	left: 0px;
+	left: 0;
 	width: 100% !important;
 	max-height: 99999px;
 	border: none;
@@ -253,7 +253,7 @@ reduce font size so alt text more legible */
 	margin: 1px;
 	margin-top: -6px;
 	z-index: 99;
-	border: 0px solid;
+	border: 0 solid;
 	overflow: hidden;
 }
 
