@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//50o\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-09-19T05:39:45Z",
+      "side": 1,
+      "message": "These should probably be more meaningful..",
+      "revId": "fd2a02e7d13ae6bed9051565cb2de4949e36746c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
