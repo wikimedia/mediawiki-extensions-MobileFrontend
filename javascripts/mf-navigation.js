@@ -45,53 +45,6 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 	}
 
-	function countContentHeadings() {
-		return $( '.section h2 span' ).length;
-	}
-
-	function createTableOfContents() {
-		var ul = $( '<ul />' )[0], li, a,
-			click = function() {
-				var hash = this.getAttribute( 'href' );
-				MobileFrontend.toggle.wm_reveal_for_hash( hash );
-				closeOverlay();
-				if( hash ) {
-					MobileFrontend.history.replaceHash( hash );
-					window.setTimeout( function() {
-						window.scrollTo( 0, document.getElementById( hash.substr( 1, hash.length ) ).offsetTop );
-					}, 100 ); // timeout hack for ios 4.*
-				}
-			};
-		$( '.section h2 span' ).each( function( i, el ) {
-			li = $( '<li />' ).appendTo( ul )[0];
-			a = $( '<a />' ).attr( 'href', '#' + $( el ).attr( 'id' ) ).
-				text( $( el ).text() ).bind( 'click', click).appendTo( li );
-		} );
-		createOverlay( message( 'contents-heading' ), ul );
-	}
-
-	function countAvailableLanguages() {
-		return $( '#' + mfePrefix + 'language-selection option' ).length;
-	}
-
-	function createLanguagePage() {
-		var ul = $( '<ul />' )[0], li, a, $a, href, footer,
-			$languages = $( '#' + mfePrefix + 'language-selection option' );
-
-		$( '<li />' ).addClass( 'mw-mf-overlay-header' ).
-			text( message( 'mobile-frontend-language-header' ).replace( '$1', $languages.length ) ).appendTo( ul );
-		$languages.each( function(i, el) {
-			li = $( '<li />' ).appendTo( ul )[0];
-			a = $( '<a />' ).attr( 'href', el.value ).text( $( el ).text() ).appendTo( li );
-		} );
-		footer = $( '<li />' ).addClass( 'mw-mf-overlay-footer' ).
-			html( message( 'mobile-frontend-language-footer' ) ).appendTo( ul );
-		$a = $( 'a', footer );
-		href = $( '#mw-mf-universal-language' ).attr( 'href' );
-		$a.attr( 'href', href );
-		createOverlay( message( 'language-heading' ), ul );
-	}
-
 	function init() {
 		u( window ).bind( 'hashchange', function() {
 			var hash = window.location.hash;
@@ -102,9 +55,7 @@ MobileFrontend.navigation = (function( $ ) {
 			}
 		});
 		$( '<div id="' + mfePrefix + 'overlay"></div>' ).appendTo( document.body );
-		var search = document.getElementById(  mfePrefix + 'search' ),
-			actionMenuButton = document.getElementById( mfePrefix + 'language' ),
-			tocMenuButton = document.getElementById( mfePrefix + 'toc' );
+		var search = document.getElementById(  mfePrefix + 'search' );
 
 		function toggleNavigation() {
 			var doc = document.documentElement;
@@ -128,18 +79,6 @@ MobileFrontend.navigation = (function( $ ) {
 			window.setTimeout( function() {
 				u( document.body ).removeClass( 'noTransitions' );
 			}, 1000 );
-		}
-
-		if( countContentHeadings() > 0 ) {
-			$( tocMenuButton ).bind( 'click', createTableOfContents );
-		} else {
-			$( tocMenuButton ).addClass( 'disabled' );
-		}
-
-		if( countAvailableLanguages() > 1 ) {
-			$( actionMenuButton ).bind( 'click', createLanguagePage );
-		} else {
-			$( actionMenuButton ).addClass( 'disabled' );
 		}
 
 		u( search ).bind( 'focus', function() {

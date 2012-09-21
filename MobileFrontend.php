@@ -141,6 +141,7 @@ $wgResourceModules['mobile']['styles'][] = 'stylesheets/mf-navigation-legacy.css
 $wgResourceModules['mobile']['scripts'][] = 'javascripts/mf-navigation-legacy.js';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/mf-navigation.css';
 $wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/mf-navigation.js';
+$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/mf-languages.js';
 
 $wgResourceModules['mobile.filePage'] = array(
 	'styles' => array( 'stylesheets/filepage.css' ),
