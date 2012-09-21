@@ -193,6 +193,12 @@ MobileFrontend.opensearch = (function() {
 			function( ev ) {
 				waitForFocusBlur( ev, blurSearch );
 			});
+		// ensure pressing enter triggers full text search (bug 37945)
+		u( search ).bind( 'keyup', function( ev ) {
+			if ( ev.keyCode && ev.keyCode === 13 ) {
+				sb.submit();
+			}
+		} );
 	}
 
 	function initClearSearch() {
