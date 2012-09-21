@@ -43,20 +43,6 @@
 	display: none;
 }
 
-#mw-mf-logo {
-	position: absolute;
-	top: 10px;
-	left: 54px; /* #mw-mf-searchForm + 2 */
-	z-index: 2;
-	height: 22px;
-	margin-top: 2px;
-	width: 37px;
-}
-
-.full-screen-search #mw-mf-logo {
-	display: block;
-}
-
 .mw-mf-search,
 #mw-mf-search {
 	line-height: normal;
@@ -385,11 +371,6 @@ body {
 }
 
 @media all and (max-width: 320px) {
-	/* -10px */
-	#mw-mf-logo {
-		left: 44px;
-	}
-
 	#mw-mf-searchForm {
 		padding: 0 8px 0 40px;
 	}
@@ -413,10 +394,6 @@ body {
 }
 
 @media all and (max-width: 240px) {
-	#mw-mf-logo {
-		display: none;
-	}
-
 	#mw-mf-search {
 		padding-left: 0;
 	}
