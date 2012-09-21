@@ -185,6 +185,7 @@ table.admin {
 p,
 li,
 dl,
+#mainpage,
 #featured_article {
 	line-height: 1.65;
 }
