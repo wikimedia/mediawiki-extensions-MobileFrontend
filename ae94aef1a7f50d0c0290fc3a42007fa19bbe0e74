@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAATH///oI\u003d",
+        "filename": "javascripts/mf-watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-09-22T19:13:34Z",
+      "side": 1,
+      "message": "Apply the class with .addClass or include a close tag here.",
+      "revId": "ae94aef1a7f50d0c0290fc3a42007fa19bbe0e74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///oA\u003d",
+        "filename": "javascripts/mf-watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-09-22T19:13:34Z",
+      "side": 1,
+      "message": "use .toggleClass()?",
+      "revId": "ae94aef1a7f50d0c0290fc3a42007fa19bbe0e74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///oE\u003d",
+        "filename": "javascripts/mf-watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-09-22T19:13:34Z",
+      "side": 1,
+      "message": "use .toggleClass()?",
+      "revId": "ae94aef1a7f50d0c0290fc3a42007fa19bbe0e74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///n8\u003d",
+        "filename": "javascripts/mf-watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-09-22T19:13:34Z",
+      "side": 1,
+      "message": "Not sure I understand purpose of the one-time \u0027prevent\u0027 setting. Shouldn\u0027t this always do ev.preventDefault() to prevent standard link handling?",
+      "revId": "ae94aef1a7f50d0c0290fc3a42007fa19bbe0e74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///nw\u003d",
+        "filename": "javascripts/mf-watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-09-22T19:13:34Z",
+      "side": 1,
+      "message": "This looks like it\u0027ll do an API hit to fetch a token on every logged-in page view... then a second to check the watch status. Can we afford these uncacheable requests on view?",
+      "revId": "ae94aef1a7f50d0c0290fc3a42007fa19bbe0e74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
