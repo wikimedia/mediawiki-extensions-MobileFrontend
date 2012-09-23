@@ -577,6 +577,8 @@ class HTMLFormMobile extends HTMLForm {
 			case 'raw':
 				return $this->displaySectionRaw( $fields, $sectionName, $fieldsetIDPrefix );
 		}
+
+		return '';
 	}
 
 	protected function displaySectionRaw( $fields, $sectionName, $fieldsetIDPrefix ) {
