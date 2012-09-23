@@ -124,6 +124,7 @@ $messages['en'] = array (
  * @author Kghbln
  * @author McDutchie
  * @author Minh Nguyen
+ * @author Purodha
  * @author Raymond
  * @author SPQRobin
  * @author Siebrand
@@ -132,6 +133,7 @@ $messages['en'] = array (
  * @author Yekrats
  */
 $messages['qqq'] = array(
+	'mobile-frontend-desc' => '{{desc}}',
 	'mobile-frontend-search-submit' => 'Label for the button near the search box.',
 	'mobile-frontend-home-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
 
@@ -1908,7 +1910,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Techniski problem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Powšykny',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Komentary k nastawkam',
-	'mobile-frontend-leave-feedback-email-body' => 'Pšosym piš swóju e-mail nad toś teju smužku.',
+	'mobile-frontend-leave-feedback-email-body' => 'Pšosym wopisaj problem, na kótaryž sy z {{GRAMMAR:instrumental|{{SITENAME}}}} wuše toś teje linije starcył. Pšosym źiwaj na to, až njamóžomy na kuždu powěsć wótegroniś, kótaruž dostawamy.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Techniski problem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Powšykne komentary',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Nastupajucy mě, wósobu abo pśedewześe, kótarež reprezentěrujom',
@@ -3141,7 +3143,7 @@ $messages['gl'] = array(
 	'mobile-frontend-footer-more' => 'máis',
 	'mobile-frontend-footer-less' => 'menos',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Os contidos están dispoñibles baixo a licenza <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
+	'mobile-frontend-footer-license' => 'Os contidos están dispoñibles baixo a licenza <a href="//gl.m.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_Use/gl?useformat=mobile">Termos de uso</a>',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-unknown-option' => 'Non se recoñece a opción "$1"',
@@ -5965,7 +5967,7 @@ $messages['ms'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Masalah teknikal',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Umum',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Maklum balas rencana',
-	'mobile-frontend-leave-feedback-email-body' => 'Sila taipkan e-mel anda di atas baris ini.',
+	'mobile-frontend-leave-feedback-email-body' => 'Sila jelaskan masalah yang anda hadapi di {{SITENAME}} di atas baris ini. Sila ambil maklum bahawa kami tidak boleh membalas setiap pesanan yang kami terima.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Masalah teknikal',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Maklum balas am',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Berkenaan, seseorang atau sesebuah syarikat yang saya wakili',
@@ -9410,7 +9412,7 @@ $messages['yi'] = array(
  */
 $messages['yo'] = array(
 	'mobile-frontend-search-submit' => 'Lọ',
-	'mobile-frontend-home-button' => 'Ìbẹ̀rẹ̀',
+	'mobile-frontend-home-button' => 'Ibùdó',
 	'mobile-frontend-random-button' => 'Ojúewé àrìnnàkò',
 	'mobile-frontend-show-button' => 'Fihàn',
 	'mobile-frontend-hide-button' => 'Bòmọ́lẹ̀',
