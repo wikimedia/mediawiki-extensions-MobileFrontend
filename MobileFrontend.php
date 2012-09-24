@@ -127,6 +127,14 @@ $wgResourceModules['mobile'] = array(
 	'remoteExtPath' => 'MobileFrontend',
 );
 
+$wgResourceModules['mobile.beta.jquery'] = array(
+	'styles' => array( 'stylesheets/mf-watchlist.css' ),
+	'scripts' => array( 'javascripts/mf-watchlist.js' ),
+	'raw' => true,
+	'localBasePath' => dirname( __FILE__ ),
+	'remoteExtPath' => 'MobileFrontend',
+);
+
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/mf-navigation-legacy.css';
