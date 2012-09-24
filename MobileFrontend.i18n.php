@@ -7184,7 +7184,7 @@ $messages['ro'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problemă tehnică',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Generalități',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Evaluare articol',
-	'mobile-frontend-leave-feedback-email-body' => 'Vă rugăm să vă scrieți adresa de e-mail deasupra acestei linii.',
+	'mobile-frontend-leave-feedback-email-body' => 'Vă rugăm să detaliați problema cu care vă confruntați la {{SITENAME}} deasupra acestei linii. Rețineți că nu putem răspunde tuturor mesajelor pe care le primim.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problemă tehnică',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Păreri generale',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Cu privire la mine, o persoană, sau o societate pe care o reprezint',
@@ -9122,6 +9122,13 @@ $messages['ur'] = array(
 	'mobile-frontend-main-menu-contact' => 'سے رابطہ کریں',
 	'mobile-frontend-page-menu-history' => 'تاریخچہ',
 	'mobile-frontend-page-menu-language-heading' => 'میں اس مضمون کو پڑھیں',
+);
+
+/** Uzbek (oʻzbekcha)
+ * @author CoderSI
+ */
+$messages['uz'] = array(
+	'mobile-frontend-view' => 'Mobil versiya',
 );
 
 /** vèneto (vèneto) */
