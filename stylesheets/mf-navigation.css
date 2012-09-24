@@ -1,9 +1,4 @@
-#content-wrapper {
-	background-color: white;
-}
-
 #mw-mf-header form,
-#mw-mf-actionbar,
 #mw-mf-header,
 #mw-mf-search,
 #mw-mf-sq {
@@ -129,14 +124,6 @@
 	background-color: #393939;
 }
 
-#mw-mf-actionbar {
-	display: none; /* hide until javascript is known to be available */
-}
-
-.jsEnabled #mw-mf-actionbar {
-	display: block;
-}
-
 #mw-mf-page-left {
 	width: 80%;
 	right: 20%;
@@ -222,7 +209,6 @@
 	background-position: 0 -198px;
 }
 
-#mw-mf-actionbar li.disabled,
 #mw-mf-menu-main li.disabled {
 	opacity: 0.2;
 }
@@ -233,88 +219,21 @@
 	margin-left: -12px;
 }
 
-.navigationBar {
-	text-indent: -9999px;
-	height: 18px;
-	overflow: hidden;
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	position: relative;
+.supportsPositionFixed.navigationEnabled #mw-mf-header,
+#mw-mf-page-center {
+	-webkit-transform: scale3d(1,1);
+	-moz-transition-property: right,left;
+	-moz-transition-duration: 0.4s,0.4s;
+	-moz-transition-function: ease-in-out;
+	-webkit-transition-property: right,left;
+	-webkit-transition-duration: 0.4s,0.4s;
+	-webkit-transition-function: ease-in-out;
 }
 
-.navigationBar.section_heading button {
-	float: none;
-	display: block;
-	margin: auto;
-	height: 18px;
-	width: 100%;
-	background-position: center 4px;
-	position: relative;
-	text-indent: -9999px;
-	overflow: hidden;
-	border-bottom: 1px solid #C5C5C5;
-}
-
-.navigationBar.section_heading button.openSection {
-	background-position: center center;
-}
-
-.navigationBar.open {
-	height: 45px;
-}
-
-#section_nav {
-	border-bottom: solid 18px transparent; /* keep touch area */
-}
-
-#section_nav button,
-#content_nav {
-	opacity: 1;
-	background-color: #F1F1F1;
-}
-
-#content_nav {
-	margin: 0;
-	padding: 0 8px 0 8px;
-	text-align: center;
-	height: 40px;
-}
-
-#content_nav li {
-	background-image: url(images/icons_sub_menu.png);
-	background-repeat: no-repeat;
-	display: block;
-	float: right;
-	height: 30px;
-	line-height: 30px;
-	padding-left: 8px;
-	min-width: 30px;
-	text-indent: -999px;
-	overflow: hidden;
-	cursor: pointer;
-}
-
-#mw-mf-toc {
-	background-position: 0 -30px;
-}
-
-#content_nav li#mw-mf-language {
-	background-position: -36px 7px;
-	color: black;
-	text-indent: 40px;
-	line-height: 35px;
-	float: left;
-}
-
-#content_nav li.item-history {
-	text-indent: 0;
-}
-
-#content_nav li.item-history a {
-	text-indent: -999px;
-	overflow: hidden;
-	display: block;
+.noTransitions #mw-mf-page-center {
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
 }
 
 #mw-mf-clearsearch {
@@ -538,35 +457,17 @@ TODO: make this the default and add icons with media queries
 	overflow-y: auto;
 }
 
-.supportsPositionFixed #results {
-	padding-top: 45px;
-}
-
+.supportsPositionFixed #results,
 .supportsPositionFixed #content_wrapper {
-	padding-top: 75px;
+	padding-top: 45px;
 }
 
 .supportsPositionFixed.actionbarEnabled #content_wrapper {
 	padding-top: 115px; /* add height of #content_nav */
 }
 
-.supportsPositionFixed.navigationEnabled #mw-mf-header,
-.supportsPositionFixed.navigationEnabled #content_nav,
-.supportsPositionFixed.navigationEnabled #section_nav {
+.supportsPositionFixed.navigationEnabled #mw-mf-header {
 	left: 80%;
 	right: -80%;
 }
 
-.supportsPositionFixed #section_nav,
-.supportsPositionFixed #content_nav {
-	position: fixed;
-	top: 45px;
-	left: 0;
-	right: 0;
-	z-index: 5;
-}
-
-.supportsPositionFixed #section_nav.openSection {
-	position: fixed;
-	top: 85px;
-}
