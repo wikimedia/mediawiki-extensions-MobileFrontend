@@ -92,47 +92,7 @@ MobileFrontend.navigation = (function( $ ) {
 		createOverlay( message( 'language-heading' ), ul );
 	}
 
-	/* Fixed navigation */
-	function setupScrollBehaviour() {
-		var startY, reverseScroll, canToggle;
-		function touchmove( ev ) {
-			var touch = ev.touches[ ev.touches.length - 1 ],
-				deltaY = startY - touch.pageY;
-			reverseScroll = deltaY < 0 ? true : false;
-			canToggle = startY > $( window ).height();
-			touchend( ev );
-		}
-
-		function touchstart( ev ) {
-			var touch = ev && ev.touches ? ev.touches[ 0 ] : { pageY: 0 };
-			startY = touch.pageY;
-		}
-
-		document.addEventListener( 'touchstart', touchstart, false );
-		document.addEventListener( 'touchmove', touchmove, false );
-
-		function touchend( ev ) {
-			var touch = ev && ev.touches ? ev.touches[ 0 ] : { pageY: 0 };
-			if( reverseScroll ) {
-				$( '#mw-mf-header' ).show();
-			} else if( canToggle ) {
-				$( '#mw-mf-header' ).hide();
-			}
-		}
-
-		document.addEventListener( 'touchend', touchend, false );
-		document.addEventListener( 'touchcancel', touchend, false );
-	}
-
 	function init() {
-		if( MobileFrontend.supportsPositionFixed() ) {
-			$( '#section_nav' ).on( 'click', function( ev ) {
-				$( 'html' ).toggleClass( 'actionbarEnabled' );
-			} );
-			window.setTimeout( function() { // delayed so that any hashes are taken care of first
-				setupScrollBehaviour();
-			}, 100 );
-		}
 		u( window ).bind( 'hashchange', function() {
 			var hash = window.location.hash;
 			if( hash === '#mw-mf-overlay' ) {
