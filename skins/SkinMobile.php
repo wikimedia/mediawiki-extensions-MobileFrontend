@@ -446,11 +446,6 @@ class SkinMobileTemplate extends BaseTemplate {
 			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-featured' ) ?></a></li>
 			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
-			<li class='icon3 disabled'>
-				<a href='#'>
-				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
-				</a>
-			</li>
 			<li class='icon4'>
 				<a href='<?php $this->text( 'leaveFeedbackURL' ) ?>'>
 				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
