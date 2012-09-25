@@ -4,6 +4,13 @@
 
 M.history = ( function() {
 
+	if ( typeof $ !== 'undefined' ) {
+		$( window ).bind( 'hashchange', function() {
+			var curPage = { hash: window.location.hash };
+			$( window ).trigger( 'mw-mf-history-change', [ curPage ] );
+		} );
+	}
+
 	return {
 		replaceHash: function( newHash ) {
 			var hashChanged = newHash != window.location.hash;
