@@ -504,7 +504,7 @@ class SkinMobileTemplate extends BaseTemplate {
 					$wgLang->formatNum( $this->data['languageCount'] ) )->text(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
 					array(
-						'href' => SpecialPage::getTitleFor( 'Special:MobileOptions/Language' )->getLocalUrl(),
+						'href' => SpecialPage::getTitleFor( 'MobileOptions/Language' )->getLocalUrl(),
 					),
 					wfMessage( 'mobile-frontend-language-footer' ) ),
 				'mobile-frontend-language-site-choose' => wfMessage(
