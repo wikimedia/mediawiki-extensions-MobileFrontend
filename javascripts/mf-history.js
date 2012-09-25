@@ -3,12 +3,21 @@
 ( function( M ) {
 
 M.history = ( function() {
+	var initialised = false;
 
 	if ( typeof $ !== 'undefined' ) {
 		$( window ).bind( 'hashchange', function() {
 			var curPage = { hash: window.location.hash };
 			$( window ).trigger( 'mw-mf-history-change', [ curPage ] );
 		} );
+	}
+
+	// ensures the history change event fires on initial load
+	function initialise( hash ) {
+		if ( !initialised && hash !== '#_' ) {
+			initialised = true;
+			$( window ).trigger( 'mw-mf-history-change', [ { hash: hash } ] );
+		}
 	}
 
 	return {
@@ -19,6 +28,7 @@ M.history = ( function() {
 			} else if ( hashChanged ){
 				window.location.hash = newHash;
 			}
+			initialise( newHash );
 		},
 		pushState: function( hash ) {
 			var hashChanged = hash != window.location.hash;
@@ -27,6 +37,7 @@ M.history = ( function() {
 			} else if ( hashChanged ) {
 				window.location.hash = hash;
 			}
+			initialise( hash );
 		}
 	};
 }() );
