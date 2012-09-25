@@ -144,7 +144,7 @@ HTML;
 
 		if ( $selector && $count > 1 ) {
 			$selector = <<<HTML
-			<p>{$this->msg( 'mobile-frontend-settings-site-description', $count - 1 )->parse()}</p>
+			<p>{$this->msg( 'mobile-frontend-settings-site-description', $count )->parse()}</p>
 			<ul id='mw-mf-language-list'>
 				{$selector}
 			</ul>
