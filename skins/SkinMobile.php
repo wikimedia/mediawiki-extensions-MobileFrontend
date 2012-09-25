@@ -619,14 +619,19 @@ class SkinMobileTemplate extends BaseTemplate {
 				$this->msg( 'mobile-frontend-view-mobile' ) ?></span>
 			</li>
 			<li>
+				<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 				<span class="left"><?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span><span class="right"><?php
 				$this->html( 'imagesToggle' ) ?></span>
+				<?php } ?>
 			</li>
 			<li class="notice">
 				<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 				<?php $this->html( 'historyLink' ) ?><br>
 				<?php } ?>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
+				<?php if ( $this->data['isBetaGroupMember'] ) { ?>
+				<span>| <?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span>
+				<?php } ?>
 			</li>
 		</ul>
 		<ul class="links">
