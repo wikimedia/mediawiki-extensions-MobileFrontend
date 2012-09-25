@@ -18,7 +18,6 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function showOverlay() {
-		M.history.pushState( '#mw-mf-overlay' );
 		lastScrollTopPosition = document.body.scrollTop;
 		$( 'html' ).addClass( 'overlay' );
 		window.scrollTo( 0, 0 ); // scroll right to top
@@ -28,6 +27,7 @@ MobileFrontend.navigation = (function( $ ) {
 	function createOverlay( heading, contents, options ) {
 		options = options || {};
 		var overlay = document.getElementById( mfePrefix + 'overlay' );
+		M.history.pushState( options.hash || '#mw-mf-overlay' );
 		showOverlay();
 		$( overlay ).empty();
 		$( '<div class="header">' ).click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );

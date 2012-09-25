@@ -23,7 +23,7 @@ M.languages = (function() {
 		$a = $( 'a', footer );
 		href = $( '#mw-mf-universal-language' ).attr( 'href' )
 		$a.attr( 'href', href );
-		createOverlay( M.message( 'language-heading' ), ul );
+		createOverlay( M.message( 'language-heading' ), ul, { hash: '#mw-mf-overlay-language' } );
 	}
 
 	function init() {
@@ -37,6 +37,11 @@ M.languages = (function() {
 
 	if( typeof $ !== 'undefined' ) {
 		init();
+		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
+			if ( curPage.hash === '#mw-mf-overlay-language' ) {
+				createLanguagePage();
+			}
+		} );
 	}
 	return {
 		init: init
