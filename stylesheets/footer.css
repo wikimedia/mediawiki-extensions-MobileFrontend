@@ -140,6 +140,10 @@ this is so that toggling can scroll it into view
 	overflow: hidden;
 }
 
+.beta #footer .links li {
+	width: 33%;
+}
+
 .togglingEnabled #footer .more,
 .togglingEnabled #footer .openSection .less {
 	display: block;
