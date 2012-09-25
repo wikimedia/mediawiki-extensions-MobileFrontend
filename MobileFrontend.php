@@ -116,7 +116,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 $wgResourceModules['mobile'] = array(
 	'styles' => array( 'stylesheets/common.css', 'stylesheets/footer.css',
 		'stylesheets/contact-us.css', 'stylesheets/banner.css',
-		'stylesheets/settings.css',
+		'stylesheets/mf-settings.css',
 		'stylesheets/header.css', 'stylesheets/sections.css',
 		'stylesheets/hacks.css' ),
 	'scripts' => array( 'javascripts/application.js',
