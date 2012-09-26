@@ -249,22 +249,6 @@ mw.mobileFrontend = (function() {
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getApiUrl: getApiUrl,
 		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
-		history: {
-			replaceHash: function( newHash ) {
-				if( window.history && window.history.replaceState ) {
-					window.history.replaceState( null, null, newHash );
-				} else {
-					window.location.hash = newHash;
-				}
-			},
-			pushState: function( hash ) {
-				if( window.history && window.history.pushState ) {
-					window.history.pushState( null, null, hash );
-				} else {
-					window.location.hash = hash;
-				}
-			}
-		},
 		message: message,
 		prefix: 'mw-mf-',
 		registerModule: registerModule,

@@ -120,6 +120,7 @@ $wgResourceModules['mobile'] = array(
 		'stylesheets/header.css', 'stylesheets/sections.css',
 		'stylesheets/hacks.css' ),
 	'scripts' => array( 'javascripts/application.js',
+		'javascripts/mf-history.js',
 		'javascripts/toggle.js', 'javascripts/settings.js', 'javascripts/beta_opensearch.js',
 		'javascripts/banner.js' ),
 	'raw' => true,
