@@ -345,6 +345,10 @@ body {
 	font-size: 0.8em;
 }
 
+#mw-mf-overlay li.mw-mf-overlay-footer a {
+	color: #002BB8;
+}
+
 #mw-mf-overlay li.mw-mf-overlay-header {
 	background-color: #F1F1F1;
 }
