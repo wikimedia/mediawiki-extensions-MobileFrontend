@@ -115,7 +115,10 @@ class SkinMobile extends SkinMobileBase {
 			)
 			: ''
 		);
-		$tpl->set( 'settingsUrl', SpecialPage::getTitleFor( 'MobileOptions' )->getLocalUrl() );
+		$tpl->set( 'settingsUrl',
+			SpecialPage::getTitleFor( 'MobileOptions' )->
+				getLocalUrl( 'returnto=' . $this->getTitle()->getPrefixedText() )
+		);
 
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 		if ( $context->imagesDisabled() ) {
