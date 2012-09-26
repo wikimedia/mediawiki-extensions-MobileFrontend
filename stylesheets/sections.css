@@ -36,22 +36,19 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 
 .togglingEnabled .section_heading button {
 	display: inline-block;
+	background: none;
+	background-repeat: no-repeat;
+	background-position: right center;
+	-webkit-background-size: auto 9px;
+	background-size: auto 9px;
 }
 
 .togglingEnabled .section_heading.openSection button {
-	background: url(images/hide.png);
-	background-repeat: no-repeat;
-	background-position: right center;
-	-webkit-background-size: auto 9px;
-	background-size: auto 9px;
+	background-image: url(images/hide.png);
 }
 
 .togglingEnabled .section_heading button {
-	background: url(images/show.png);
-	background-repeat: no-repeat;
-	background-position: right center;
-	-webkit-background-size: auto 9px;
-	background-size: auto 9px;
+	background-image: url(images/show.png);
 }
 
 .openSection button {
