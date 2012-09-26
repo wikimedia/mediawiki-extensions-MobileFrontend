@@ -126,7 +126,7 @@ MobileFrontend.opensearch = (function() {
 				label = document.createTextNode( section.label );
 				link.appendChild( label );
 
-				if ( $ ) {
+				if ( typeof $ !== 'undefined' ) {
 					$( window ).trigger( 'mw-mf-search-result', [ suggestionsResult, section.label ] );
 				}
 				suggestionsResult.appendChild( link );
