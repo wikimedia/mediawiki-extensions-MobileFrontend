@@ -242,7 +242,7 @@ $wgExtMobileFrontend = null;
 
 /**
  * A fallback URL for a 'contact us' page if one cannot be dynamically
- * determined for the project (using wfMsg( 'Contact-us' )). This is only
+ * determined for the project (using wfMessage( 'contact-us' )). This is only
  * used in non-beta mode.
  */
 $wgMFFeedbackFallbackURL = '#';
