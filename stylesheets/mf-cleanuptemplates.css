@@ -1,0 +1,18 @@
+button.mw-mf-cleanup {
+	background: none;
+	border: solid 1px orange;
+	padding: 10px;
+	font-size: 1em;
+	padding-left: 50px;
+	margin-bottom: 8px;
+	margin-left: 0; /* undo default styling */
+	line-height: 20px;
+	background-image: url(images/warning.png);
+	background-repeat: no-repeat;
+	cursor: pointer; /* if on desktop */
+}
+
+button.mw-mf-cleanup:hover {
+	opacity: 0.2;
+	border-left-width: 2px;
+}

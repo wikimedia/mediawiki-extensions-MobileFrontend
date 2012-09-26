@@ -481,6 +481,8 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
+				'mobile-frontend-meta-data-issues' => wfMessage( 'mobile-frontend-meta-data-issues' )->text(),
+				'mobile-frontend-meta-data-issues-header' => wfMessage( 'mobile-frontend-meta-data-issues-header' )->text(),
 				'expand-section' => wfMessage( 'mobile-frontend-show-button' )->text(),
 				'collapse-section' => wfMessage( 'mobile-frontend-hide-button' )->text(),
 				'remove-results' => wfMessage( 'mobile-frontend-wml-back' )->text(), //@todo: use a separate message

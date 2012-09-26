@@ -114,6 +114,8 @@ $messages['en'] = array (
 	'mobile-frontend-page-menu-history' => 'History',
 	'mobile-frontend-page-menu-contents-heading' => 'Contents',
 	'mobile-frontend-page-menu-language-heading' => 'Read this article in',
+	'mobile-frontend-meta-data-issues-header' => 'Improve this article',
+	'mobile-frontend-meta-data-issues' => 'This article has issues',
 );
 
 /** Message documentation (Message documentation)
@@ -233,6 +235,9 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-page-menu-history' => 'history link text in secondary menu',
 	'mobile-frontend-page-menu-contents-heading' => 'Table of contents overlay heading',
 	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
+
+	'mobile-frontend-meta-data-issues-header' => 'Call to action that shows on an overlay when opened when an article has cleanup templates on it',
+	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading mobile-frontend-meta-data-issues-header',
 );
 
 /** Tati (Tati)
