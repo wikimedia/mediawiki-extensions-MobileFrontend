@@ -478,6 +478,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$this->set( 'touchIcon', $link );
 		$hookOptions = isset( $this->data['hookOptions']['toggle_view_desktop'] ) ? 'toggle_view_desktop' : '';
 
+		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
 				'expand-section' => wfMessage( 'mobile-frontend-show-button' )->text(),
@@ -503,6 +504,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
+				'beta' => $inBeta,
 				'title' => $this->data['articleTitle'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
 				'useFormatCookieDuration' => $this->data['useFormatCookieDuration'],
@@ -519,7 +521,12 @@ class SkinMobileTemplate extends BaseTemplate {
 			)->text();
 			$firstHeading = '';
 		} else {
-			$firstHeading = Html::rawElement( 'h1', array( 'id' => 'firstHeading' ),
+			if ( $this->data['isBetaGroupMember'] ) {
+				$headingOptions = array( 'id' => 'section_0', 'class' => 'section_heading openSection' );
+			} else {
+				$headingOptions = array( 'id' => 'firstHeading' );
+			}
+			$firstHeading = Html::rawElement( 'h1', $headingOptions,
 				$this->data['title']
 			);
 		}

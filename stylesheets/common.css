@@ -238,7 +238,7 @@ a.back_to_top:visited {
 	margin-bottom: 10px;
 }
 
-#firstHeading {
+#content_wrapper h1 {
 	font-size: 1.7em;
 }
 
@@ -274,7 +274,7 @@ img.thumbborder {
 	float: left;
 }
 
-#content_wrapper.home h1#firstHeading {
+#content_wrapper.home h1 {
 	display: none;
 }
 

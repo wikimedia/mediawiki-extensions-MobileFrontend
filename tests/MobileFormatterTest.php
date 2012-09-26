@@ -24,6 +24,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$mf->enableExpandableSections();
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
+		$summarySection = '<div id="content_0" class="content_block openSection"></div>';
 		return array(
 			// down with infoboxes
 			array(
@@ -50,6 +51,7 @@ Foobar!</div></div></div>',
 				'<h2><span class="editsection">[<a href="/w/index.php?title=California_Gold_Rush&amp;action=edit&amp;section=2" title="Edit section: Forty-niners">edit</a>]</span> <span class="mw-headline" id="Forty-niners">Forty-niners</span>
 
  	 </h2>' . $longLine,
+				$summarySection.
 				'<div class="section"><h2 class="section_heading" id="section_1"><span id="Forty-niners">Forty-niners</span></h2><div class="content_block" id="content_1">'
 					. $longLine . '</div></div>',
 				$enableSections
@@ -58,6 +60,7 @@ Foobar!</div></div></div>',
 			array(
 				'<h2><span class="editsection">[<a href="/w/index.php?title=California_Gold_Rush&amp;action=edit&amp;section=1" title="Edit section: History">edit</a>]</span> <span class="mw-headline" id="History"><span id="Overview"></span>History</span></h2>'
 					. $longLine,
+				$summarySection.
 				'<div class="section"><h2 class="section_heading" id="section_1"><span id="History"><span id="Overview"></span>History</span></h2><div class="content_block" id="content_1">'
 					. $longLine . '</div></div>',
 				$enableSections
