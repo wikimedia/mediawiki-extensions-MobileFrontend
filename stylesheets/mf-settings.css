@@ -5,6 +5,12 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 /* variables */
 /* mixins */
 /* styling */
+.page-loading #content form.mw-mf-settings ul li .mw-mf-checkbox-css3,
+.page-loading #content form.mw-mf-settings ul li #mw-mf-settings-save {
+  /* hide when still loading to avoid screen flash */
+
+  display: none;
+}
 #content form.mw-mf-settings ul {
   margin: 0;
   padding: 0;
