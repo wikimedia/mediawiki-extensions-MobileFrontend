@@ -170,7 +170,7 @@ MobileFrontend.settings = (function() {
 					updateMobileToken( xml );
 				}
 				} );
-		} else {
+		} else if ( !u( 'body' ).hasClass( 'beta' ) ) {
 			imagetoggle = document.getElementById( 'imagetoggle' );
 			imagetoggle.setAttribute( 'href', addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
 		}
