@@ -625,9 +625,10 @@ class SkinMobileTemplate extends BaseTemplate {
 			</li>
 		</ul>
 		<ul class="links">
+			<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 			<li>
 				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"><?php $this->msg( 'mobile-frontend-footer-contact' ) ?></a>
-			</li><li>
+			</li><?php } ?><li>
 			<?php $this->html( 'privacyLink' ) ?></li><li>
 			<?php $this->html( 'aboutLink' ) ?></li><li>
 			<?php $this->html( 'disclaimerLink' ) ?></li>
