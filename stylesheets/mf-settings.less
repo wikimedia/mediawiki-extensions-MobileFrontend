@@ -1,0 +1,170 @@
+/*
+SETTINGS PAGE
+based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
+*/
+
+/* variables */
+@btngrey:#818181;
+@btnblue:#57A7F2;
+
+/* mixins */
+.gradient(@pos, @from, @to) {
+	background: @to;
+	background: -moz-linear-gradient(@pos, @from, @to);
+	background: -webkit-linear-gradient(@pos, @from, @to);
+	background: linear-gradient(@pos, @from, @to);
+}
+
+.checkboxBtn() {
+	min-width: 76px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-transform: lowercase;
+}
+
+/* styling */
+#content form.mw-mf-settings ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-bottom: 40px;
+
+	li {
+		min-height: 4em;
+		line-height: 2em;
+		vertical-align: middle;
+		display: block;
+		font-weight: bold;
+		font-size: 1.1em;
+		position: relative;
+
+		div.mw-mf-checkbox-css3 {
+			display: inline;
+		}
+
+		#mw-mf-settings-save,
+		.mw-mf-checkbox-css3 {
+			cursor: pointer;
+			position: relative;
+			line-height: 2em;
+			padding: 0 0 0 8px;
+			text-align: right;
+		}
+
+		#mw-mf-settings-save {
+			width: 50%;
+			text-align: center;
+			display: block;
+			&:hover {
+				text-decoration: none;
+				background-color: @btnblue;
+				background: @btnblue;
+			}
+		}
+
+		span.mw-mf-settings-on,
+		span.mw-mf-settings-off {
+			display: none;
+		}
+	}
+
+	li.mw-mf-settings-description {
+		font-size: 0.8em;
+		line-height: 1.8em;
+		font-weight: normal;
+		padding-right: 8px;
+	}
+
+}
+
+.mw-mf-checkboxes {
+	#content form.mw-mf-settings {
+
+		ul {
+			li {
+				input[type=submit],
+				.mw-mf-checkbox-css3 span {
+					border-radius: 8px;
+					font-weight: normal;
+					font-size: 15px;
+					color: white;
+					.gradient(top, #AEAEAE, @btngrey);
+					position: relative;
+					border: solid 1px @btngrey;
+				}
+
+				.mw-mf-checkbox-css3 {
+					border: none;
+					.checkboxBtn();
+
+					input {
+						.checkboxBtn();
+						display: none;
+						z-index: 6;
+					}
+
+					span {
+						.checkboxBtn();
+						&::before { /* small 'sliding' switch for checkboxes */
+							content: "";
+							width: 30%;
+							border: solid 1px white;
+							border-top: none;
+							border-bottom: solid 1px #aaa;
+							.gradient(top, #EEE, #EBEBEB);
+							border-radius: 8px;
+							position: absolute;
+							bottom: 0;
+							top: 0;
+						}
+					}
+
+					.mw-mf-settings-on {
+						display: none;
+						&::before {
+							right: 0;
+							left: auto;
+						}
+					}
+
+					.mw-mf-settings-off {
+						padding-right: 8px;
+						padding-left: 8px;
+						display: inline-block;
+						&::before {
+							left: 0;
+							right: auto;
+						}
+					}
+				}
+
+				.mw-mf-checkbox-css3.checked {
+					border: none;
+
+					.mw-mf-settings-on {
+						display: inline-block;
+						text-align: left;
+						padding-left: 8px;
+						padding-right: 8px;
+						text-decoration: none;
+						background-color: @btnblue;
+						background: @btnblue;
+					}
+
+					.mw-mf-settings-off {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
