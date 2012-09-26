@@ -90,20 +90,10 @@ class SkinMobile extends SkinMobileBase {
 		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 		$historyLink = '';
 		if ( !$title->isSpecialPage() ) {
-			if ( !$inBeta ) {
 				$historyKey = 'mobile-frontend-footer-contributors';
 				$historyLink = $this->msg( $historyKey, htmlspecialchars( $link ) )->text();
-			} else {
-				$historyKey = 'mobile-frontend-page-menu-history';
-				$historyLink = Html::element( 'a', array( 'href' => $link ),
-					$this->msg( $historyKey )->text() );
-			}
 		}
-		if( !$historyLink ) {
-			$tpl->set( 'historyLinkClass', 'disabled' );
-		} else {
-			$tpl->set( 'historyLinkClass', '' );
-		}
+
 		$tpl->set( 'historyLink', $historyLink );
 		$tpl->set( 'copyright', $this->getCopyright() );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
@@ -620,9 +610,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php } ?>
 			</li>
 			<li class="notice">
-				<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 				<?php $this->html( 'historyLink' ) ?><br>
-				<?php } ?>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
 				<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 				<span>| <?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span>
