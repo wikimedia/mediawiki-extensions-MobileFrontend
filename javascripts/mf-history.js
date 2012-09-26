@@ -6,16 +6,18 @@ M.history = ( function() {
 
 	return {
 		replaceHash: function( newHash ) {
-			if( window.history && window.history.replaceState ) {
+			var hashChanged = newHash != window.location.hash;
+			if ( window.history && window.history.replaceState && hashChanged ) {
 				window.history.replaceState( null, null, newHash );
-			} else {
+			} else if ( hashChanged ){
 				window.location.hash = newHash;
 			}
 		},
 		pushState: function( hash ) {
-			if( window.history && window.history.pushState ) {
+			var hashChanged = hash != window.location.hash;
+			if ( window.history && window.history.pushState && hashChanged ) {
 				window.history.pushState( null, null, hash );
-			} else {
+			} else if ( hashChanged ) {
 				window.location.hash = hash;
 			}
 		}
