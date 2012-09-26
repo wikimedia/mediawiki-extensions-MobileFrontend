@@ -13,13 +13,11 @@ MobileFrontend.toggle = (function() {
 			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
 		if( u( b ).hasClass( 'openSection' ) ) {
 			u( b ).removeClass( 'openSection' );
-			u( bb ).removeClass( 'openSection' );
 			u( bb ).text( showLabel );
 			closed = true;
 		} else {
 			reset.push( b );
 			u( b ).addClass( 'openSection' );
-			u( bb ).addClass( 'openSection' );
 			u( bb ).text( hideLabel );
 		}
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
