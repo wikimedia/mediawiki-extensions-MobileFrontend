@@ -1,7 +1,8 @@
 /*global document, window, mw, navigator, clearTimeout, setTimeout */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
-(function( MobileFrontend ) {
-MobileFrontend.opensearch = (function() {
+( function( M ) {
+var MobileFrontend = M;
+var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message,
@@ -240,8 +241,6 @@ MobileFrontend.opensearch = (function() {
 		initClearSearch();
 	}
 
-	MobileFrontend.registerModule( 'opensearch' );
-
 	return {
 		init: init,
 		initClearSearch: initClearSearch,
@@ -251,4 +250,7 @@ MobileFrontend.opensearch = (function() {
 	};
 
 }());
+
+MobileFrontend.registerModule( 'opensearch', opensearch );
+
 }( mw.mobileFrontend ));

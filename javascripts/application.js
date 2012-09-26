@@ -12,6 +12,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 mw.mobileFrontend = (function() {
 	var utilities, modules = [],
 		scrollY, tokenQuery,
+		moduleNamespace = {},
 		doc = document.documentElement;
 
 	function message( name ) {
@@ -39,15 +40,23 @@ mw.mobileFrontend = (function() {
 		return support;
 	}
 
-	function registerModule( module ) {
-		modules.push( [ module ] );
+	function registerModule( moduleName, module ) {
+		modules.push( moduleName );
+		if ( module ) {
+			moduleNamespace[ moduleName ] = module;
+		} else { // for backwards compatibility
+			moduleNamespace[ moduleName ] = mw.mobileFrontend[ moduleName ];
+		}
+	}
+
+	function getModule( name ) {
+		return moduleNamespace[ name ] || mw.mobileFrontend[ name ];
 	}
 
 	function initModules() {
 		var module, i;
 		for( i = 0; i < modules.length; i++ ) {
-			module = modules[ i ];
-			module = mw.mobileFrontend[ module[ 0 ] ];
+			module = getModule( modules[ i ] );
 			if( module && module.init ) {
 				try {
 					module.init();
@@ -248,6 +257,7 @@ mw.mobileFrontend = (function() {
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getApiUrl: getApiUrl,
+		getModule: getModule,
 		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
 		message: message,
 		prefix: 'mw-mf-',

@@ -5,8 +5,9 @@ MobileFrontend.banner = (function() {
 	function init( banner ) {
 		var cookieNameZeroVisibility = banner ? banner.getAttribute( 'id' ) : 'zeroRatedBannerVisibility',
 			M = MobileFrontend,
-			saveUserSetting = M.settings.saveUserSetting,
-			getUserSetting = M.settings.getUserSetting,
+			settings = M.getModule( 'settings' ),
+			saveUserSetting = settings.saveUserSetting,
+			getUserSetting = settings.getUserSetting,
 			dismissNotification = banner ? banner.getElementsByTagName( 'button' )[ 0 ] : document.getElementById( 'dismiss-notification' );
 
 		banner = banner || document.getElementById( 'zero-rated-banner' ) ||

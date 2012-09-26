@@ -1,8 +1,9 @@
 /*global document, window, mw, jQuery, navigator */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-(function( MobileFrontend ) {
+( function( M ) {
+var MobileFrontend = M, references;
 if( typeof jQuery !== 'undefined' ) {
-	MobileFrontend.references = (function($) {
+	references = ( function( $ ) {
 		var calculatePosition = function() {}, wasVisible,
 			supportsPositionFixed = MobileFrontend.supportsPositionFixed;
 
@@ -150,10 +151,11 @@ if( typeof jQuery !== 'undefined' ) {
 				});
 			}
 		}
-		MobileFrontend.registerModule( 'references' );
 		return {
 			init: init
 		};
 	}(jQuery));
+
+	M.registerModule( 'references', references );
 }
 }( mw.mobileFrontend ));

@@ -1,7 +1,8 @@
 /*global document, window, mw, jQuery */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-(function( MobileFrontend, $ ) {
-MobileFrontend.settings = (function() {
+( function( M, $ ) {
+var MobileFrontend = M;
+var settings = ( function() {
 	var u = MobileFrontend.utils,
 		message = MobileFrontend.message,
 		supportsLocalStorage,
@@ -177,7 +178,7 @@ MobileFrontend.settings = (function() {
 		enhanceCheckboxes();
 		u( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 	}
-	MobileFrontend.registerModule( 'settings' );
+
 	return {
 		init: init,
 		getUserSetting: getUserSetting,
@@ -187,4 +188,7 @@ MobileFrontend.settings = (function() {
 		writeCookie: writeCookie
 	};
 }());
+
+M.registerModule( 'settings', settings );
+
 }( mw.mobileFrontend, jQuery ));

@@ -1,8 +1,9 @@
 /*global mw, document, window */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-(function( M ) {
+( function( M ) {
 var MobileFrontend = M;
-MobileFrontend.toggle = (function() {
+var toggle = ( function() {
+
 	var u = MobileFrontend.utils,
 		message = MobileFrontend.message,
 		showLabel = message( 'expand-section' ),
@@ -115,7 +116,6 @@ MobileFrontend.toggle = (function() {
 		}
 	}
 
-	MobileFrontend.registerModule( 'toggle' );
 	return {
 		wm_reveal_for_hash: wm_reveal_for_hash,
 		wm_toggle_section: wm_toggle_section,
@@ -123,4 +123,7 @@ MobileFrontend.toggle = (function() {
 	};
 
 }());
+
+MobileFrontend.registerModule( 'toggle', toggle );
+
 }( mw.mobileFrontend ));

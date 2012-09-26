@@ -2,7 +2,7 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 (function( M, $ ) {
 
-M.watchlist = (function() {
+var w = ( function() {
 	var lastToken;
 
 	function toggleWatch( title, token, unwatchflag, callback, errback ) {
@@ -109,6 +109,6 @@ M.watchlist = (function() {
 	};
 }());
 
-M.registerModule( 'watchlist' );
+M.registerModule( 'watchlist', w );
 
 }( mw.mobileFrontend, jQuery ));
