@@ -81,6 +81,8 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		);
 		$aboutMessage = $this->msg( 'mobile-frontend-settings-description' )->parse();
 		$token = Html::hidden( 'token', $context->getMobileToken() );
+		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
+
 		$html .= <<<HTML
 	<p>
 		{$aboutMessage}
@@ -108,6 +110,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		</li>
 	</ul>
 	$token
+	$returnto
 </form>
 HTML;
 		$out->addHTML( $html );
@@ -174,7 +177,7 @@ HTML;
 		$context->setOptInOutCookie( $inBeta ? '1' : '' );
 		$context->setBetaGroupMember( $inBeta );
 		$url = $this->getTitle()->getFullURL( 'success' );
-		$context->getOutput()->redirect( $context->getMobileUrl( $url ) );
+		$context->getOutput()->redirect( $request->getText( 'returnto' ) );
 	}
 
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
