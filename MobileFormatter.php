@@ -180,7 +180,12 @@ class MobileFormatter extends HtmlFormatter {
 				'&#8593;' . $backToTop );
 
 		// generate the HTML we are going to inject
-		$base = Html::openElement( 'div', array( 'class' => 'section' ) );
+		if ( $this->headings === 1 ) {
+			$base = '</div>'; // close up content_0 section
+		} else {
+			$base = '';
+		}
+		$base .= Html::openElement( 'div', array( 'class' => 'section' ) );
 		$base .= Html::openElement( 'h2',
 				array( 'class' => 'section_heading', 'id' => 'section_' . $this->headings )
 			);
@@ -275,7 +280,8 @@ class MobileFormatter extends HtmlFormatter {
 		// Closures are a PHP 5.3 feature.
 		// MediaWiki currently requires PHP 5.2.3 or higher.
 		// So, using old style for now.
-		$s = preg_replace_callback(
+		$s = '<div id="content_0" class="content_block openSection">'
+			. preg_replace_callback(
 			'%<h2(.*)<span class="mw-headline" [^>]*>(.+)</span>[\s\r\n]*</h2>%sU',
 			array( $this, $callback ),
 			$s

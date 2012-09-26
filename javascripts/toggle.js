@@ -1,6 +1,7 @@
 /*global mw, document, window */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-(function( MobileFrontend ) {
+(function( M ) {
+var MobileFrontend = M;
 MobileFrontend.toggle = (function() {
 	var u = MobileFrontend.utils,
 		message = MobileFrontend.message,
@@ -64,6 +65,9 @@ MobileFrontend.toggle = (function() {
 
 		content = document.getElementById( 'content_wrapper' );
 		h2 = document.getElementsByTagName( 'H2' );
+		if ( M.setting( 'beta' ) ) {
+			sectionHeadings.push( document.getElementsByTagName( 'H1' )[ 0 ] );
+		}
 
 		for( i = 0; i < h2.length; i++) {
 			heading = h2[i];
