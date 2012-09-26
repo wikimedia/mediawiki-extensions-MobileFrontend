@@ -1,0 +1,4 @@
+JS files in this directory are intended to be used on
+the desktop version of the site only. They may contain
+functionality that is not available on the mobile
+version of the site (eg jQuery).

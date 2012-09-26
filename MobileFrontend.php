@@ -107,6 +107,8 @@ function efExtMobileFrontendUnitTests( &$files ) {
 }
 
 // ResourceLoader modules
+$localBasePath = dirname( __FILE__ );
+$remoteExtPath = 'MobileFrontend';
 $wgResourceModules['mobile'] = array(
 	'styles' => array( 'stylesheets/common.css', 'stylesheets/footer.css',
 		'stylesheets/contact-us.css', 'stylesheets/banner.css',
@@ -118,16 +120,16 @@ $wgResourceModules['mobile'] = array(
 		'javascripts/toggle.js', 'javascripts/settings.js', 'javascripts/beta_opensearch.js',
 		'javascripts/banner.js' ),
 	'raw' => true,
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
 );
 
 $wgResourceModules['mobile.beta.jquery'] = array(
 	'styles' => array( 'stylesheets/mf-watchlist.css' ),
 	'scripts' => array( 'javascripts/mf-watchlist.js' ),
 	'raw' => true,
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
 );
 
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
@@ -144,19 +146,27 @@ $wgResourceModules['mobile.filePage'] = array(
 	'styles' => array( 'stylesheets/filepage.css' ),
 	'scripts' => array( 'javascripts/filepage.js' ),
 	'raw' => true,
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
 );
 $wgResourceModules['mobile.references'] = array(
 	'styles' => array( 'stylesheets/references.css' ),
 	'scripts' => array( 'javascripts/references.js' ),
 	'raw' => true,
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
 );
 
 $wgResourceModules['mobile.site'] = array(
 	'class' => 'MobileFrontendSiteModule',
+);
+
+// Resources to be loaded on desktop version of site
+$wgResourceModules['mobile.desktop'] = array(
+	'scripts' => array( 'javascripts/desktop/unset_stopmobileredirect.js' ),
+	'dependencies' => array( 'jquery.cookie' ),
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
 );
 
 /**
@@ -292,3 +302,21 @@ $wgMobileSiteResourceLoaderModule = array(
 	'MediaWiki:Mobile.js' => array( 'type' => 'script' ),
 );
 
+/**
+ * Set the domain of the stopMobileRedirect cookie
+ *
+ * If this value is not set, it will default to the top domain of the host name
+ * (eg en.wikipedia.org = .wikipedia.org)
+ * If you want to set this to a top domain (to cover all subdomains), be sure
+ * to include the preceding '.' (eg .wikipedia.org NOT wikipedia.org)
+ */
+$wgMFStopRedirectCookieHost = null;
+
+/**
+ * Whether or not to load desktop-specific ResourceLoader resources
+ *
+ * Current usecase is for deciding whether or not to load JS for unsetting
+ * the stopMobileRedirect cookie
+ * @var bool
+ */
+$wgMFEnableDesktopResources = false;

@@ -81,7 +81,7 @@ class SkinMobile extends SkinMobileBase {
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
 		$tpl->set( 'stopMobileRedirectCookieDuration', $context->getUseFormatCookieDuration() );
-		$tpl->set( 'stopMobileRedirectCookieDomain', $context->getBaseDomain() );
+		$tpl->set( 'stopMobileRedirectCookieDomain', $context->getStopMobileRedirectCookieDomain() );
 		$tpl->set( 'useFormatCookieName', $context->getUseFormatCookieName() );
 		$tpl->set( 'useFormatCookieDuration', -1 );
 		$tpl->set( 'useFormatCookiePath', $wgCookiePath );
