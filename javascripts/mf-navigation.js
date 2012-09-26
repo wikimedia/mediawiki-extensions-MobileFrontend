@@ -46,14 +46,11 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function init() {
-		u( window ).bind( 'hashchange', function() {
-			var hash = window.location.hash;
-			if( hash === '#mw-mf-overlay' ) {
-				showOverlay();
-			} else if( !hash ) { // destroy overlay
+		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
+			if ( curPage.hash === '#' || curPage.hash === '' ) {
 				closeOverlay();
 			}
-		});
+		} );
 		$( '<div id="' + mfePrefix + 'overlay"></div>' ).appendTo( document.body );
 		var search = document.getElementById(  mfePrefix + 'search' );
 
