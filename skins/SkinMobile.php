@@ -14,6 +14,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl = parent::prepareTemplate( $out );
 		$out = $this->getOutput();
 		$title = $this->getTitle();
+		$tpl->set( 'articleTitle', $title->getPrefixedText() );
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
@@ -502,6 +503,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
+				'title' => $this->data['articleTitle'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
 				'useFormatCookieDuration' => $this->data['useFormatCookieDuration'],
 				'useFormatCookieDomain' => $this->data['useFormatCookieDomain'],
