@@ -86,6 +86,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'useFormatCookieDuration', -1 );
 		$tpl->set( 'useFormatCookiePath', $wgCookiePath );
 		$tpl->set( 'useFormatCookieDomain', $_SERVER['HTTP_HOST'] );
+		$tpl->set( 'isSpecialPage', $title->isSpecialPage() );
 
 		$tpl->set( 'languageSelection', $this->buildLanguageSelection() );
 
@@ -525,7 +526,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			)->text();
 			$firstHeading = '';
 		} else {
-			if ( $this->data['isBetaGroupMember'] ) {
+			if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] && !$this->data['isMainPage'] ) {
 				$headingOptions = array( 'id' => 'section_0', 'class' => 'section_heading openSection' );
 			} else {
 				$headingOptions = array( 'id' => 'firstHeading' );
