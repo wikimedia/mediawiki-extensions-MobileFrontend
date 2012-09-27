@@ -126,11 +126,11 @@ var opensearch = ( function() {
 				link.className = 'search-result-item';
 				label = document.createTextNode( section.label );
 				link.appendChild( label );
+				suggestionsResult.appendChild( link );
 
 				if ( typeof $ !== 'undefined' ) {
 					$( window ).trigger( 'mw-mf-search-result', [ suggestionsResult, section.label ] );
 				}
-				suggestionsResult.appendChild( link );
 				suggestions.appendChild( suggestionsResult );
 				// TODO: simplify the highlighting code to not use htmlEntities
 				// highlight matched term
