@@ -10,6 +10,7 @@ button.mw-mf-cleanup {
 	background-image: url(images/warning.png);
 	background-repeat: no-repeat;
 	cursor: pointer; /* if on desktop */
+	width: 100%;
 }
 
 button.mw-mf-cleanup:hover {
