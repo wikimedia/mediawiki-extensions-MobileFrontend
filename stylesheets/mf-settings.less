@@ -148,23 +148,23 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 							right: auto;
 						}
 					}
-				}
+					
+					&.checked {
+						border: none;
 
-				.mw-mf-checkbox-css3.checked {
-					border: none;
+						.mw-mf-settings-on {
+							display: inline-block;
+							text-align: left;
+							padding-left: 8px;
+							padding-right: 8px;
+							text-decoration: none;
+							background-color: @btnblue;
+							background: @btnblue;
+						}
 
-					.mw-mf-settings-on {
-						display: inline-block;
-						text-align: left;
-						padding-left: 8px;
-						padding-right: 8px;
-						text-decoration: none;
-						background-color: @btnblue;
-						background: @btnblue;
-					}
-
-					.mw-mf-settings-off {
-						display: none;
+						.mw-mf-settings-off {
+							display: none;
+						}
 					}
 				}
 			}
