@@ -11,13 +11,13 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 
   display: none;
 }
-#content form.mw-mf-settings ul {
+form.mw-mf-settings ul {
   margin: 0;
   padding: 0;
   list-style: none;
   padding-bottom: 40px;
 }
-#content form.mw-mf-settings ul li {
+form.mw-mf-settings ul li {
   min-height: 4em;
   line-height: 2em;
   vertical-align: middle;
@@ -26,39 +26,39 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
   font-size: 1.1em;
   position: relative;
 }
-#content form.mw-mf-settings ul li div.mw-mf-checkbox-css3 {
+form.mw-mf-settings ul li div.mw-mf-checkbox-css3 {
   display: inline;
 }
-#content form.mw-mf-settings ul li #mw-mf-settings-save,
-#content form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
+form.mw-mf-settings ul li #mw-mf-settings-save,
+form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
   cursor: pointer;
   position: relative;
   line-height: 2em;
   padding: 0 0 0 8px;
   text-align: right;
 }
-#content form.mw-mf-settings ul li #mw-mf-settings-save {
+form.mw-mf-settings ul li #mw-mf-settings-save {
   width: 50%;
   text-align: center;
   display: block;
 }
-#content form.mw-mf-settings ul li #mw-mf-settings-save:hover {
+form.mw-mf-settings ul li #mw-mf-settings-save:hover {
   text-decoration: none;
   background-color: #57a7f2;
   background: #57a7f2;
 }
-#content form.mw-mf-settings ul li span.mw-mf-settings-on,
-#content form.mw-mf-settings ul li span.mw-mf-settings-off {
+form.mw-mf-settings ul li span.mw-mf-settings-on,
+form.mw-mf-settings ul li span.mw-mf-settings-off {
   display: none;
 }
-#content form.mw-mf-settings ul li.mw-mf-settings-description {
+form.mw-mf-settings ul li.mw-mf-settings-description {
   font-size: 0.8em;
   line-height: 1.8em;
   font-weight: normal;
   padding-right: 8px;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li input[type=submit],
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
+.mw-mf-checkboxes form.mw-mf-settings ul li input[type=submit],
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   border-radius: 8px;
   font-weight: normal;
   font-size: 15px;
@@ -70,7 +70,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
   position: relative;
   border: solid 1px #818181;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
   border: none;
   min-width: 76px;
   display: block;
@@ -79,7 +79,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
   top: 0;
   text-transform: lowercase;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 input {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 input {
   min-width: 76px;
   display: block;
   position: absolute;
@@ -89,7 +89,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
   display: none;
   z-index: 6;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   min-width: 76px;
   display: block;
   position: absolute;
@@ -97,7 +97,7 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
   top: 0;
   text-transform: lowercase;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 span::before {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 span::before {
   /* small 'sliding' switch for checkboxes */
 
   content: "";
@@ -114,26 +114,26 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
   bottom: 0;
   top: 0;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on {
   display: none;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on::before {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on::before {
   right: 0;
   left: auto;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off {
   padding-right: 8px;
   padding-left: 8px;
   display: inline-block;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off::before {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off::before {
   left: 0;
   right: auto;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked {
   border: none;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-on {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-on {
   display: inline-block;
   text-align: left;
   padding-left: 8px;
@@ -142,6 +142,6 @@ based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
   background-color: #57a7f2;
   background: #57a7f2;
 }
-.mw-mf-checkboxes #content form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-off {
+.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-off {
   display: none;
 }
