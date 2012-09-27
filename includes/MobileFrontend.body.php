@@ -590,4 +590,8 @@ class MobileFrontendSiteModule extends ResourceLoaderSiteModule {
 		global $wgMobileSiteResourceLoaderModule;
 		return $wgMobileSiteResourceLoaderModule;
 	}
+
+	public function isRaw() {
+		return true;
+	}
 }
