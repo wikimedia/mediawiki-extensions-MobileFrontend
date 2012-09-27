@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAATX///b4\u003d",
+        "filename": "javascripts/desktop/unset_stopmobileredierct.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-09-27T22:56:42Z",
+      "side": 1,
+      "message": "whitespace after \"]\u0027 and before function(){",
+      "revId": "f8770c2ead2af98df6640d333c57457b46db7899",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
