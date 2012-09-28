@@ -125,7 +125,7 @@ $wgResourceModules['mobile'] = array(
 );
 
 $wgResourceModules['mobile.beta.jquery'] = array(
-	'styles' => array( 'stylesheets/modules/mf-watchlist.css' ),
+	'styles' => array( 'stylesheets/modules/mf-watchlist.css', 'stylesheets/common/mf-nav-ribbon.css' ),
 	'scripts' => array( 'javascripts/modules/mf-watchlist.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,

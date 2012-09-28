@@ -293,6 +293,10 @@ img.thumbborder {
 	margin: 0 22px;
 }
 
+.beta #content_wrapper {
+	margin: 0 32px 0 22px;
+}
+
 #content_wrapper p {
 	margin: 0 0 10px 0;
 }
@@ -389,4 +393,12 @@ ol {
 
 i {
 	font-style: italic;
+}
+
+.jsonly {
+	display: none;
+}
+
+.jsEnabled .jsonly {
+	display: block;
 }
