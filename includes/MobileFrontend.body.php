@@ -471,7 +471,9 @@ class ExtMobileFrontend extends ContextSource {
 
 		if ( $context->getContentTransformations() ) {
 			wfProfileIn( __METHOD__ . '-filter' );
-			$formatter->removeImages( $context->imagesDisabled() );
+			if ( $this->getTitle()->getNamespace() !== NS_FILE ) {
+				$formatter->removeImages( $context->imagesDisabled() );
+			}
 			$formatter->whitelistIds( 'zero-language-search' );
 			$formatter->filterContent();
 			wfProfileOut( __METHOD__ . '-filter' );
