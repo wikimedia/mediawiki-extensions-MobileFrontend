@@ -920,7 +920,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-close-section' => 'Зачыніць гэты разьдзел',
 	'mobile-frontend-show-button' => 'Паказаць',
 	'mobile-frontend-hide-button' => 'Схаваць',
-	'mobile-frontend-empty-homepage' => 'Трэба наладзіць галоўную старонку. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Даведацца болей</a>',
+	'mobile-frontend-empty-homepage' => 'Трэба наладзіць галоўную старонку. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Даведайцеся болей пра наладку мабільнай вэрсіі</a>',
 	'mobile-frontend-regular-site' => 'Поўная вэрсія',
 	'mobile-frontend-wml-continue' => 'Далей …',
 	'mobile-frontend-wml-back' => 'Вярнуцца …',
@@ -970,6 +970,8 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-feedback-edit-summary' => '$1 — адпраўлены аўтаматычна са [[Special:MobileFeedback|старонкі водгукаў]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Дзякуй за Ваш водгук!',
 	'mobile-frontend-language' => 'Мова:',
+	'mobile-frontend-language-header' => 'Гэты артыкул даступны на $1 {{PLURAL:$1|мове|мовах}}',
+	'mobile-frontend-language-footer' => 'Заўвага: гэты артыкул, магчыма, напісаны не на пажаданай мове. Вы можаце аглядзець сьпіс моваў, якія падтрымлівае {{SITENAME}}, тут.',
 	'mobile-frontend-username' => 'Імя ўдзельніка:',
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Увайсьці',
@@ -989,10 +991,13 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-main-menu-nearby' => 'Паблізу',
 	'mobile-frontend-main-menu-settings' => 'Налады',
 	'mobile-frontend-main-menu-settings-heading' => 'Налады мабільнага сайту',
+	'mobile-frontend-main-menu-contact' => 'Кантакты',
 	'mobile-frontend-page-menu-contents' => 'зьмест',
 	'mobile-frontend-page-menu-history' => 'Гісторыя',
 	'mobile-frontend-page-menu-contents-heading' => 'Зьмест',
 	'mobile-frontend-page-menu-language-heading' => 'Артыкул на іншых мовах',
+	'mobile-frontend-meta-data-issues-header' => 'Палепшыце гэты артыкул',
+	'mobile-frontend-meta-data-issues' => 'Гэты артыкул мае хібы',
 );
 
 /** Bulgarian (български)
@@ -1243,6 +1248,7 @@ $messages['br'] = array(
 	'mobile-frontend-page-menu-history' => 'Istor',
 	'mobile-frontend-page-menu-contents-heading' => 'Danvez',
 	'mobile-frontend-page-menu-language-heading' => 'Lenn ar pennad-mañ e',
+	'mobile-frontend-meta-data-issues' => "Kudennoù 'zo gant ar pennad-mañ",
 );
 
 /** Bosnian (bosanski)
@@ -1532,12 +1538,14 @@ $messages['cu'] = array(
 
 /** Welsh (Cymraeg)
  * @author Lloffiwr
+ * @author Xxglennxx
  */
 $messages['cy'] = array(
 	'mobile-frontend-desc' => 'Rhaglen pen blaen i declynnau symudol',
 	'mobile-frontend-search-submit' => 'Eler',
-	'mobile-frontend-featured-article' => 'Erthygl y Dydd',
 	'mobile-frontend-home-button' => 'Hafan',
+	'mobile-frontend-logged-out' => 'Nid ydych wedi mewngofnodi',
+	'mobile-frontend-logged-in' => 'Yr ydych wedi mewngofnodi dan yr enw $1',
 	'mobile-frontend-random-button' => 'Ar hap',
 	'mobile-frontend-back-to-top-of-section' => 'Neidio Un Adran Am Nôl',
 	'mobile-frontend-show-button' => 'Dangos',
@@ -1545,6 +1553,7 @@ $messages['cy'] = array(
 	'mobile-frontend-regular-site' => 'Gweld y fersiwn i gyfrifiadur',
 	'mobile-frontend-wml-continue' => 'Parhau ...',
 	'mobile-frontend-wml-back' => 'Nôl ...',
+	'mobile-frontend-featured-article' => 'Erthygl y Dydd',
 	'mobile-frontend-news-items' => 'Ar y Newyddion',
 	'mobile-frontend-leave-feedback-subject' => 'Pwnc:',
 	'mobile-frontend-leave-feedback-message' => 'Neges:',
@@ -1678,6 +1687,7 @@ $messages['de'] = array(
 	'mobile-frontend-disable-images' => 'Bilder in der mobilen Ansicht deaktivieren',
 	'mobile-frontend-enable-images' => 'Bilder in der mobilen Ansicht aktivieren',
 	'mobile-frontend-toggle-images' => 'Bilder $1 / $2',
+	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'AN',
 	'mobile-frontend-footer-contributors' => 'Artikel von <a href="$1">Mitwirkenden</a> wie dir',
@@ -1852,7 +1862,7 @@ $messages['diq'] = array(
 	'mobile-frontend-language-site-nomatches' => 'Na zıwan hewl niya',
 	'mobile-frontend-username' => 'Namey karberi:',
 	'mobile-frontend-password' => 'Parola:',
-	'mobile-frontend-login' => 'Ronıştış ak',
+	'mobile-frontend-login' => 'Ronıştış akerê',
 	'mobile-frontend-logout' => 'Bıvciyê',
 	'mobile-frontend-placeholder' => '{{SITENAME}} dı cıgeyrê',
 	'mobile-frontend-search-help' => 'Babeta cı geyrayışi terim u wesiqeyo hewl bo se odo itad bıaso.',
@@ -2362,7 +2372,7 @@ $messages['et'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tehniline probleem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Üldine',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Artikli tagasiside',
-	'mobile-frontend-leave-feedback-email-body' => 'Palun kirjuta oma e-kiri sellest reast ülespoole.',
+	'mobile-frontend-leave-feedback-email-body' => 'Palun kirjelda sellest reast ülalpool probleemi, millega {{GRAMMAR:inessive|{{SITENAME}}}} kokku puutusid. Pane tähele, et meil pole võimalik vastata kõigile vastuvõetud sõnumitele.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tehniline probleem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Üldine tagasiside',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Minu, muu isiku või minu esindatava ettevõtte kohta',
@@ -2377,7 +2387,7 @@ $messages['et'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Aitäh tagasiside eest!',
 	'mobile-frontend-language' => 'Keel:',
 	'mobile-frontend-language-header' => 'See artikkel on saadaval {{PLURAL:$1|ühes|$1}} keeles.',
-	'mobile-frontend-language-footer' => '{{SITENAME}} on saadaval teistes keeltes.',
+	'mobile-frontend-language-footer' => 'Märkus: See artikkel ei pruugi olla kirjutatud keeles, mida eelistad. Saad vaadata, milliseid keeli {{SITENAME}} toetab, kui klõpsad siia.',
 	'mobile-frontend-language-site-choose' => 'Otsi keelt',
 	'mobile-frontend-language-site-nomatches' => 'Vastavaid keeli pole.',
 	'mobile-frontend-username' => 'Kasutajanimi:',
@@ -4922,7 +4932,7 @@ $messages['ko'] = array(
 	'mobile-frontend-leave-feedback-post-error' => '메시지를 처리 하는 동안 오류가 발생 했습니다. 나중에 다시 시도하세요.',
 	'mobile-frontend-language' => '언어:',
 	'mobile-frontend-language-header' => '이 문서는 $1 {{PLURAL:$1|언어}}에 있습니다.',
-	'mobile-frontend-language-footer' => '{{SITENAME}}(은)는 다른 언어로 사용할 수 있습니다.',
+	'mobile-frontend-language-footer' => '참고: 이 문서는 선호하는 언어로 쓰여지지 않았습니다. 여기를 클릭하여 {{SITENAME}}에서 지원하는 언어를 볼 수 있습니다.',
 	'mobile-frontend-language-site-choose' => '찾을 언어',
 	'mobile-frontend-language-site-nomatches' => '일치하는 언어가 없습니다',
 	'mobile-frontend-username' => '사용자 이름:',
@@ -4954,6 +4964,8 @@ $messages['ko'] = array(
 	'mobile-frontend-page-menu-history' => '역사',
 	'mobile-frontend-page-menu-contents-heading' => '목차',
 	'mobile-frontend-page-menu-language-heading' => '이 문서 읽기',
+	'mobile-frontend-meta-data-issues-header' => '이 문서 개선하기',
+	'mobile-frontend-meta-data-issues' => '이 문서에 문제가 있습니다',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -5219,7 +5231,7 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technesche Problem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Allgemeng',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Artikel Feedback',
-	'mobile-frontend-leave-feedback-email-body' => 'Schreift Ären Email iwwer dëser Linn.',
+	'mobile-frontend-leave-feedback-email-body' => 'Beschreift w.e.g. de Problem deen Dir op {{SITENAME}}  hutt iwwer dëser Linn. Leider kënne mir net op all Message äntwerten dee mir kréien.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technesche Problem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Allgemenge Feedback',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Dee mech, eng Persoun oder eng Gesellschaft déi ech vertriede betrëfft',
@@ -5236,7 +5248,7 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Et gouf e Feeler beim Verschaffe vun Ärem Message. Probéiert et w.e.g. spéider nach eng Kéier.',
 	'mobile-frontend-language' => 'Sprooch:',
 	'mobile-frontend-language-header' => 'Dësen Artikel ass {{PLURAL:$1|an enger Sprooch| a(n) $1 Sproochen}} disponibel',
-	'mobile-frontend-language-footer' => '{{SITENAME}} ass an anere Sproochen disponibel.',
+	'mobile-frontend-language-footer' => 'Informatioun: Et ka sinn datt dësen Artikel net an Ärer Sprooch geschriwwen ass. Dir kënnt déi Sprooche gesinn déi vu(n) {{SITENAME}} ënnerstëtzt ginn, wann Dir hei klickt.',
 	'mobile-frontend-language-site-choose' => 'Sprooch sichen',
 	'mobile-frontend-language-site-nomatches' => 'Esou eng Sprooche gëtt et hei net',
 	'mobile-frontend-username' => 'Benotzernumm:',
@@ -5267,6 +5279,8 @@ $messages['lb'] = array(
 	'mobile-frontend-page-menu-history' => 'Versiounen',
 	'mobile-frontend-page-menu-contents-heading' => 'Inhalter',
 	'mobile-frontend-page-menu-language-heading' => 'Liest dësen Artikel op',
+	'mobile-frontend-meta-data-issues-header' => 'Dësen Artikel verbesseren',
+	'mobile-frontend-meta-data-issues' => 'Dësen Artikel huet Problemer',
 );
 
 /** Lezghian (лезги)
