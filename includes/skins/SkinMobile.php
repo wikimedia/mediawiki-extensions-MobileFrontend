@@ -410,7 +410,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	<div class='show' id='content_wrapper'>
 		<div id="content">
 			<?php $this->html( 'firstHeading' ) ?>
-			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
+			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
 			<!--TODO: find better place for this -->
 			<button class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language-current' ) ?></button>
 			<?php } ?>
