@@ -265,7 +265,7 @@ class MobileContext extends ContextSource {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 
-		setcookie( 'stopMobileRedirect', 'true', $expiry, $wgCookiePath, $this->getBaseDomain(), $wgCookieSecure );
+		setcookie( 'stopMobileRedirect', 'true', $expiry, $wgCookiePath, $this->getStopMobileRedirectCookieDomain(), $wgCookieSecure );
 	}
 
 	public function unsetStopMobileRedirectCookie() {
@@ -389,6 +389,23 @@ class MobileContext extends ContextSource {
 		}
 		wfProfileOut( __METHOD__ );
 		return $host;
+	}
+
+	/**
+	 * Determine the correct domain to use for the stopMobileRedirect cookie
+	 *
+	 * Will use $wgMFStopRedirectCookieHost if it's set, otherwise will use
+	 * result of getBaseDomain()
+	 * @return string
+	 */
+	public function getStopMobileRedirectCookieDomain() {
+		global $wgMFStopRedirectCookieHost;
+
+		if ( !$wgMFStopRedirectCookieHost ) {
+			$wgMFStopRedirectCookieHost = $this->getBaseDomain();
+		}
+
+		return $wgMFStopRedirectCookieHost;
 	}
 
 	/**
@@ -709,6 +726,7 @@ class MobileContext extends ContextSource {
 		if ( $view == 'mobile' ) {
 			// unset stopMobileRedirect cookie
 			if ( !$temporary ) {
+				// @TODO is this necessary with unsetting the cookie via JS?
 				$this->unsetStopMobileRedirectCookie();
 			}
 

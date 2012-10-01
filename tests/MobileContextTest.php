@@ -33,6 +33,8 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function testGetBaseDomain() {
 		MobileContext::singleton()->getRequest()->setHeader( 'Host', 'en.wikipedia.org' );
 		$this->assertEquals( '.wikipedia.org', MobileContext::singleton()->getBaseDomain() );
+		MobileContext::singleton()->getRequest()->setHeader( 'Host', 'en.m.wikipedia.org' );
+		$this->assertEquals( '.wikipedia.org', MobileContext::singleton()->getBaseDomain() );
 	}
 
 	public function testGetMobileUrl() {
@@ -317,5 +319,15 @@ class MobileContextTest extends MediaWikiTestCase {
 
 		// reset global back to original value
 		$wgMobileFrontendFormatCookieExpiry = $origMFCookieExpiry;
+	}
+
+	public function testGetStopMobileRedirectCookieDomain(){
+		global $wgMFStopRedirectCookieHost;
+		$context = MobileContext::singleton();
+		$wgMFStopRedirectCookieHost = null;
+		$context->getRequest()->setHeader( 'Host', 'en.wikipedia.org' );
+		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), '.wikipedia.org' );
+		$wgMFStopRedirectCookieHost = 'foo.bar.baz';
+		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), 'foo.bar.baz' );
 	}
 }

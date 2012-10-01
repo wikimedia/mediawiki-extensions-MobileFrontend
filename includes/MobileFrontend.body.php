@@ -21,6 +21,7 @@ class ExtMobileFrontend extends ContextSource {
 		$wgHooks['ResourceLoaderTestModules'][] = array( &$this, 'addTestModules' );
 		$wgHooks['GetCacheVaryCookies'][] = array( &$this, 'getCacheVaryCookies' );
 		$wgHooks['ResourceLoaderRegisterModules'][] = array( &$this, 'resourceLoaderRegisterModules' );
+		$wgHooks['ResourceLoaderGetConfigVars'][] = array( &$this, 'resourceLoaderGetConfigVars' );
 	}
 
 	/**
@@ -32,11 +33,18 @@ class ExtMobileFrontend extends ContextSource {
 	 * @return bool
 	 */
 	public function requestContextCreateSkin( $context, &$skin ) {
+		global $wgMFEnableDesktopResources;
+
 		// check whether or not the user has requested to toggle their view
 		$context = MobileContext::singleton();
 		$context->checkToggleView();
 
 		if ( !$context->shouldDisplayMobileView() ) {
+			// add any necessary resources for desktop view, if enabled
+			if ( $wgMFEnableDesktopResources ) {
+				$out = $this->getOutput();
+				$out->addModules( 'mobile.desktop' );
+			}
 			return true;
 		}
 
@@ -178,7 +186,7 @@ class ExtMobileFrontend extends ContextSource {
 
 			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( wfExpandUrl( $mobileViewUrl ) );
 			$link = Html::element( 'a',
-				array( 'href' => $mobileViewUrl, 'class' => 'noprint' ),
+				array( 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ),
 				$this->msg( 'mobile-frontend-view' )->text()
 			);
 			$tpl->set( 'mobileview', $link );
@@ -583,6 +591,13 @@ class ExtMobileFrontend extends ContextSource {
 				)
 			);
 		}
+		return true;
+	}
+
+	public function resourceLoaderGetConfigVars( &$vars ) {
+		global $wgMFStopRedirectCookieHost, $wgCookiePath;
+		$vars['wgCookiePath'] = $wgCookiePath;
+		$vars['wgMFStopRedirectCookieHost'] = MobileContext::singleton()->getStopMobileRedirectCookieDomain();
 		return true;
 	}
 }
