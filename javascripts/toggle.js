@@ -61,13 +61,16 @@ var toggle = ( function() {
 	function init() {
 		u( document.documentElement ).addClass( 'togglingEnabled' );
 		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
-			sectionHeadings = [], content,
+			sectionHeadings = [], content, firstHeadings,
 			inBeta = u( document.body ).hasClass( 'beta' );
 
 		content = document.getElementById( 'content_wrapper' );
 		h2 = document.getElementsByTagName( 'H2' );
 		if ( M.setting( 'beta' ) ) {
-			sectionHeadings.push( document.getElementsByTagName( 'H1' )[ 0 ] );
+			firstHeadings = document.getElementsByTagName( 'H1' );
+			if ( firstHeadings.length === 1 ) { // special cases for some pages do not have an H1 (e.g. main page) - off topic they should..
+				sectionHeadings.push( firstHeadings[ 0 ] );
+			}
 		}
 
 		for( i = 0; i < h2.length; i++) {
