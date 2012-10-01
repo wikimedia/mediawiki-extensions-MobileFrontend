@@ -95,11 +95,9 @@ var w = ( function() {
 
 	function init( container, title ) {
 		var pageTitle = M.setting( 'title' );
-		if ( $( '#mainpage' ).length === 0 ) { // FIXME: enable watching of main page
-			container = container || $( '#mw-mf-sq' )[ 0 ];
-			title = title || pageTitle;
-			initWatchList( container, title );
-		}
+		container = container || $( '#mw-mf-sq' )[ 0 ];
+		title = title || pageTitle;
+		initWatchList( container, title );
 		upgradeSearch();
 	}
 
