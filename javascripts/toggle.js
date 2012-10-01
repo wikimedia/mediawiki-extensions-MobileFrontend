@@ -68,7 +68,8 @@ var toggle = ( function() {
 		h2 = document.getElementsByTagName( 'H2' );
 		if ( M.setting( 'beta' ) ) {
 			firstHeadings = document.getElementsByTagName( 'H1' );
-			if ( firstHeadings.length === 1 ) { // special cases for some pages do not have an H1 (e.g. main page) - off topic they should..
+			if ( firstHeadings.length === 1 &&  // special cases for some pages do not have an H1 (e.g. main page) - off topic they should..
+				u( firstHeadings[ 0 ] ).hasClass( 'section_heading' ) ) {
 				sectionHeadings.push( firstHeadings[ 0 ] );
 			}
 		}
