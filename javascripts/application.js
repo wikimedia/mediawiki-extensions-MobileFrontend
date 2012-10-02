@@ -66,6 +66,9 @@ mw.mobileFrontend = (function() {
 			}
 		}
 		utilities( document.documentElement ).removeClass( 'page-loading' );
+		if ( typeof jQuery !== 'undefined' ) {
+			$( window ).trigger( 'mw-mf-ready' );
+		}
 	}
 
 	// Try to scroll and hide URL bar
