@@ -20,6 +20,7 @@ var opensearch = ( function() {
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
 	function removeResults() {
+		M.history.replaceHash( '#' );
 		u( document.body ).removeClass( 'full-screen-search' );
 
 		if ( focused ) {
@@ -35,6 +36,7 @@ var opensearch = ( function() {
 
 		if ( !focused ) {
 			u( document.body ).addClass( 'full-screen-search' );
+			M.history.pushState( '#mw-mf-search' );
 			window.scrollTo( 0, 1 );
 
 			rrd = document.getElementById( 'remove-results' );
@@ -239,6 +241,13 @@ var opensearch = ( function() {
 		document.getElementById( 'results' ).ontouchstart = hideKeyboard;
 		printMessage( message( 'mobile-frontend-search-help' ) );
 		initClearSearch();
+		u( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
+			if ( curPage.hash === '#mw-mf-search' ) {
+				onfocus();
+			} else {
+				removeResults();
+			}
+		} );
 	}
 
 	return {
