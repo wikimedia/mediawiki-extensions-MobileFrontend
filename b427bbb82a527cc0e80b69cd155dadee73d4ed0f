@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAT3///zg\u003d",
+        "filename": "javascripts/externals/eventlog.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-10-02T22:41:54Z",
+      "side": 1,
+      "message": "This is a WMF-specific hack.",
+      "revId": "b427bbb82a527cc0e80b69cd155dadee73d4ed0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
