@@ -52,8 +52,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 
 .togglingEnabled h1.section_heading button {
-	-webkit-background-size: auto auto;
-	background-size: auto auto;
 	height: 1.7em;
 }
 
