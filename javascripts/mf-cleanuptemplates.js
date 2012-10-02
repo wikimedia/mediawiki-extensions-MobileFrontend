@@ -6,7 +6,7 @@ var module = (function() {
 	var nav = M.getModule( 'navigation' );
 
 	function init() {
-		var $metadata = $( 'table.metadata' ),
+		var $metadata = $( 'table.ambox' ),
 			$clone = $metadata.clone();
 		$( '<button class="mw-mf-cleanup">' ).click( function() {
 			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), $clone );
