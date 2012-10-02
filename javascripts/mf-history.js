@@ -14,9 +14,11 @@ M.history = ( function() {
 
 	// ensures the history change event fires on initial load
 	function initialise( hash ) {
-		if ( !initialised && hash !== '#_' ) {
+		if ( !initialised && hash !== '#_' && typeof $ !== 'undefined' ) {
 			initialised = true;
-			$( window ).trigger( 'mw-mf-history-change', [ { hash: hash } ] );
+			$( window ).bind( 'mw-mf-ready', function() {
+				$( window ).trigger( 'mw-mf-history-change', [ { hash: hash } ] );
+			} );
 		}
 	}
 
