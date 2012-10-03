@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAVH///8s\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-03T21:38:26Z",
+      "side": 1,
+      "message": "I\u0027d just call this mobile.beta.eventlog",
+      "revId": "0ec34d4149f67adb9c638abd371a82a7670ce167",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAVH///8w\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-03T21:38:26Z",
+      "side": 1,
+      "message": "actually eventlog.js can actually be inserted when it doesn\u0027t support jquery.",
+      "revId": "0ec34d4149f67adb9c638abd371a82a7670ce167",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
