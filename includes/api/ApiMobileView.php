@@ -22,7 +22,7 @@ class ApiMobileView extends ApiBase {
 		$textElement = $this->getMain()->getPrinter()->getFormat() == 'XML' ? '*' : 'text';
 		$params = $this->extractRequestParams();
 
-		if ( $params['page'] == 'mobiletoken' && $params['override'] == 1 ) {
+		if ( $params['page'] == 'mobiletoken' ) {
 			$result = $this->getResult();
 			$result->addValue( null, $this->getModuleName(),
 				array( 'mobiletoken' => MobileContext::singleton()->getMobileToken() )
@@ -227,10 +227,6 @@ class ApiMobileView extends ApiBase {
 
 	public function getAllowedParams() {
 		return array(
-			'override' => array(
-				1,
-				0,
-			),
 			'page' => array(
 				ApiBase::PARAM_REQUIRED => true,
 			),
