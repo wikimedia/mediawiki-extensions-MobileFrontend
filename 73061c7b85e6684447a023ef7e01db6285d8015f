@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAVH///78\u003d",
+        "filename": "javascripts/beta_opensearch.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-03T21:43:57Z",
+      "side": 1,
+      "message": "I don\u0027t like implicitly using 0? 1? Whatever the default values are here, it\u0027s a bit unclear and mysterious looking at it just in context.",
+      "revId": "73061c7b85e6684447a023ef7e01db6285d8015f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
