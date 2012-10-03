@@ -187,7 +187,7 @@ class HtmlFormatter {
 			} else {
 				$alt = '[' . $alt . ']';
 			}
-			$replacement = $doc->createElement( 'span', $alt );
+			$replacement = $doc->createElement( 'span', htmlspecialchars( $alt ) );
 			$replacement->setAttribute( 'class', 'mw-mf-image-replacement' );
 			$domElement->parentNode->replaceChild( $replacement, $domElement );
 		}
