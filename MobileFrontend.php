@@ -132,6 +132,13 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'remoteExtPath' => $remoteExtPath,
 );
 
+$wgResourceModules['mobile.beta.jquery.eventlog'] = array(
+	'scripts' => array( 'javascripts/external/eventlog.js' ),
+	'raw' => true,
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+);
+
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/mf-navigation-legacy.css';
@@ -320,3 +327,11 @@ $wgMFStopRedirectCookieHost = null;
  * @var bool
  */
 $wgMFEnableDesktopResources = false;
+
+/**
+ * Log events to a (currently Wikimedia-specific) logging endpoint in beta mode.
+ * When off, events will still log to local console.
+ *
+ * Defaults to false.
+ */
+$wgMFLogEvents = false;

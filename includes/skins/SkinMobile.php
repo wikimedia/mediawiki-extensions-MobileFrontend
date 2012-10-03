@@ -8,7 +8,7 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFCustomLogos, $wgVersion;
+			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -44,6 +44,9 @@ class SkinMobile extends SkinMobileBase {
 			if( $device['supports_jquery'] ) {
 				$styles[] = 'mobile.beta.jquery';
 				$scripts[] = 'mobile.beta.jquery';
+				if ( $wgMFLogEvents ) {
+					$scripts[] = 'mobile.beta.jquery.eventlog';
+				}
 			}
 		} else {
 			$styles[] = 'mobile';
