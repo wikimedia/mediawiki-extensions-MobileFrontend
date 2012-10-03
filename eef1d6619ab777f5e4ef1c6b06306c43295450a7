@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAUH///xg\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2012-10-03T18:54:59Z",
+      "side": 1,
+      "message": "better: window._evq \u003d window._evq || [];\n\nYou may change the order in which you load scripts in the future, in which case you\u0027ll potentially clobber an existing _evq.",
+      "revId": "eef1d6619ab777f5e4ef1c6b06306c43295450a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
