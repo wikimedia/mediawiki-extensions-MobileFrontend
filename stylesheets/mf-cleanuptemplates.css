@@ -1,7 +1,10 @@
 button.mw-mf-cleanup {
 	background: none;
-	border: solid 1px orange;
-	padding: 10px;
+	-webkit-background-size: auto 50px;
+	background-size: auto 50px;
+	background-position: 10px center;
+	border: solid 1px #aaa;
+	padding: 15px;
 	font-size: 1em;
 	padding-left: 50px;
 	margin-bottom: 8px;
