@@ -165,7 +165,7 @@ var settings = ( function() {
 
 		if ( !mobileToken ) {
 			apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
-			url = apiUrl + '?action=mobileview&page=mobiletoken&override=1&format=xml';
+			url = apiUrl + '?action=mobileview&page=mobiletoken&format=xml';
 			u.ajax( { url: url,
 				success: function( xml ) {
 					updateMobileToken( xml );
