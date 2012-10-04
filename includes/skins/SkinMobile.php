@@ -494,7 +494,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function prepareData() {
-		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgLang;
+		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgLang, $wgArticlePath;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
@@ -535,6 +535,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
 				'shim' => $this->data['shim'],
+				'pageUrl' => $wgArticlePath,
 				'beta' => $inBeta,
 				'title' => $this->data['articleTitle'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],

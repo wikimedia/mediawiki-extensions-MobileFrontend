@@ -4,6 +4,7 @@
 var MobileFrontend = M;
 var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
+		urlTemplate = M.setting( 'pageUrl' ),
 		numResults = 15, term, mfePrefix = MobileFrontend.prefix,
 		message = MobileFrontend.message,
 		search = document.getElementById(  mfePrefix + 'search' ),
@@ -70,14 +71,14 @@ var opensearch = ( function() {
 		}
 	}
 
-	function createObjectArray( responseXml ) {
+	function createObjectArray( json ) {
 		var sections = [], i, item, section,
-			items = responseXml.getElementsByTagName( 'Item' );
+			items = json[ 1 ] || [];
 		for ( i = 0; i < items.length; i++ ) {
 			item = items[i];
 			section = {
-				label: u( item.getElementsByTagName( 'Text' )[0] ).text(),
-				value: u( item.getElementsByTagName( 'Url' )[0] ).text()
+				label: item,
+				value: urlTemplate.replace( '$1', item )
 			};
 			sections.push( section );
 		}
@@ -126,7 +127,7 @@ var opensearch = ( function() {
 				suggestionsResult.className = 'suggestions-result';
 
 				link = document.createElement( 'a' );
-				link.setAttribute( 'href', section.value.replace( /^(?:\/\/|[^\/]+)*\//, '/' ) );
+				link.setAttribute( 'href', section.value );
 				link.className = 'search-result-item';
 				label = document.createTextNode( section.label );
 				link.appendChild( label );
@@ -147,11 +148,12 @@ var opensearch = ( function() {
 
 	function searchApi( term ) {
 		u( search ).addClass( 'searching' );
-		var url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=xml&search=' + term;
+		var url = apiUrl + '?action=opensearch&limit=' + numResults + '&namespace=0&format=json&search=' + term;
 		u.ajax( { url: url,
-			success: function(xml) {
+			dataType: 'json',
+			success: function( data ) {
 				if( u( document.body ).hasClass( 'full-screen-search' ) ) {
-					writeResults( createObjectArray( xml ) );
+					writeResults( createObjectArray( data ) );
 					u( search ).removeClass( 'searching' );
 				}
 			}
@@ -262,6 +264,8 @@ var opensearch = ( function() {
 
 }());
 
-MobileFrontend.registerModule( 'opensearch', opensearch );
+if ( typeof JSON !== 'undefined' ) {
+	MobileFrontend.registerModule( 'opensearch', opensearch );
+}
 
 }( mw.mobileFrontend ));

@@ -222,8 +222,15 @@ mw.mobileFrontend = (function() {
 			xmlHttp.overrideMimeType( 'text/xml' );
 		}
 		xmlHttp.onreadystatechange = function() {
+			var resp;
 			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200 ) {
-				options.success( xmlHttp.responseXML );
+				if ( options && options.dataType === 'json' ) {
+					resp = xmlHttp.responseText;
+					resp = resp && typeof JSON !== 'undefined' ? JSON.parse( resp ) : resp;
+				} else {
+					resp = xmlHttp.responseXML;
+				}
+				options.success( resp );
 			}
 		};
 		xmlHttp.open( 'GET', options.url, true );
