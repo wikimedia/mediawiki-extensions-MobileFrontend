@@ -110,7 +110,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 $localBasePath = dirname( __FILE__ );
 $remoteExtPath = 'MobileFrontend';
 $wgResourceModules['mobile'] = array(
-	'styles' => array( 'stylesheets/common.css', 'stylesheets/footer.css',
+	'styles' => array( 'stylesheets/reset.css', 'stylesheets/common.css', 'stylesheets/footer.css',
 		'stylesheets/contact-us.css', 'stylesheets/banner.css',
 		'stylesheets/mf-settings.css',
 		'stylesheets/header.css', 'stylesheets/sections.css',
