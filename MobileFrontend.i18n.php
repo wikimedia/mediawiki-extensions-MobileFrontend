@@ -1882,6 +1882,7 @@ $messages['diq'] = array(
 	'mobile-frontend-main-menu-settings' => 'Sazi',
 	'mobile-frontend-main-menu-settings-heading' => 'Sazê mobil sita',
 	'mobile-frontend-settings-site-header' => 'Zıwanê {{SITENAME}}',
+	'mobile-frontend-settings-site-description' => '{{SITENAME}} de $1 {{PLURAL:$1|zıwanê|zıwanan}} mewcudo. Versiyona cı bini da lista de esta.',
 	'mobile-frontend-main-menu-contact' => 'İrtibat',
 	'mobile-frontend-page-menu-contents' => 'miyandene',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
@@ -5224,6 +5225,7 @@ $messages['lb'] = array(
 	'mobile-frontend-disable-images' => 'Biller an der Mobiler Versioun desaktivéieren',
 	'mobile-frontend-enable-images' => 'Biller an der Mobiler Versioun aktivéieren',
 	'mobile-frontend-toggle-images' => 'Biller $1 / $2',
+	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'UN',
 	'mobile-frontend-footer-contributors' => 'Artikel vu <a href="$1">Mataarbechter</a> wéi Dir',
@@ -6497,18 +6499,38 @@ Probeer het later nog een keer.',
 );
 
 /** Norwegian Nynorsk (norsk (nynorsk)‎)
+ * @author Njardarlogar
  * @author Ranveig
  */
 $messages['nn'] = array(
 	'mobile-frontend-search-submit' => 'Gå',
 	'mobile-frontend-home-button' => 'Heim',
 	'mobile-frontend-random-button' => 'Tilfeldig',
-	'mobile-frontend-back-to-top-of-section' => 'Gå éin bolk tilbake',
+	'mobile-frontend-back-to-top-of-section' => 'Gå éin bolk attende',
 	'mobile-frontend-show-button' => 'Vis',
 	'mobile-frontend-hide-button' => 'Gøym',
 	'mobile-frontend-regular-site' => 'Vis denne sida med vanleg {{SITENAME}}-vising',
 	'mobile-frontend-view' => 'For mobil',
+	'mobile-frontend-view-desktop' => 'Stasjonær',
+	'mobile-frontend-view-mobile' => 'Mobil',
+	'mobile-frontend-images-status' => 'Bilete',
+	'mobile-frontend-toggle-images' => 'Bilete $1 / $2',
+	'mobile-frontend-missing-image' => 'Bilete',
+	'mobile-frontend-off' => 'AV',
+	'mobile-frontend-on' => 'PÅ',
+	'mobile-frontend-footer-contributors' => 'Artikkel av <a href="$1">bidragsytarar</a> som deg',
 	'mobile-frontend-featured-article' => 'Dagens artikkel',
+	'mobile-frontend-language' => 'Språk:',
+	'mobile-frontend-placeholder' => 'Søk i {{SITENAME}}',
+	'mobile-frontend-search-help' => 'Skriv inn eit søkjeord ovanfor og artikkeltitlar som passar vert viste her.',
+	'mobile-frontend-privacy-link-text' => 'Personvern',
+	'mobile-frontend-about-link-text' => 'Om',
+	'mobile-frontend-footer-more' => 'meir',
+	'mobile-frontend-footer-less' => 'mindre',
+	'mobile-frontend-footer-license' => 'Innhaldet er tilgjengeleg under <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Bruksvilkår</a>',
+	'mobile-frontend-footer-contact' => 'Kontakt',
+	'mobile-frontend-search-noresults' => 'Ingen artikkeltitlar passar med søket ditt. Endra søket ditt eller trykk på søkjeknappen på tastaturet for å søkja i artikkeltekstane.',
 );
 
 /** Occitan (occitan)
