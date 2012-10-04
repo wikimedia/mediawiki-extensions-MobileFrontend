@@ -1,0 +1,9 @@
+These images are all at 2x resolution (48x48) for Retina and xhdpi devices.
+Currently, they are scaled down in the browser for hdpi and mdpi/non-Retina devices.
+
+We may wish to make 24x24 and 36x36 assets as well if they don't scale cleanly.
+
+
+Extracted from the (vector?) icon sets in Heather & Lindsey's designer domain,
+converted to grayscale+alpha and pngcrush -brute'd.
+
