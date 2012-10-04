@@ -1,6 +1,6 @@
-/*global document, window, mw, jQuery */
+/*global document, window, mw */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-( function( M, $ ) {
+( function( M ) {
 var MobileFrontend = M;
 var settings = ( function() {
 	var u = MobileFrontend.utils,
@@ -191,4 +191,4 @@ var settings = ( function() {
 
 M.registerModule( 'settings', settings );
 
-}( mw.mobileFrontend, jQuery ));
+}( mw.mobileFrontend ));

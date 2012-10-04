@@ -133,7 +133,7 @@ var opensearch = ( function() {
 				link.appendChild( label );
 				suggestionsResult.appendChild( link );
 
-				if ( typeof $ !== 'undefined' ) {
+				if ( $ ) {
 					$( window ).trigger( 'mw-mf-search-result', [ suggestionsResult, section.label ] );
 				}
 				suggestions.appendChild( suggestionsResult );

@@ -124,7 +124,9 @@ $wgResourceModules['mobile'] = array(
 
 $wgResourceModules['mobile.beta.jquery'] = array(
 	'styles' => array( 'stylesheets/modules/mf-watchlist.css', 'stylesheets/common/mf-nav-ribbon.css' ),
-	'scripts' => array( 'javascripts/modules/mf-watchlist.js' ),
+	'scripts' => array( 'javascripts/common/mf-navigation.js',
+		'javascripts/modules/mf-cleanuptemplates.js',
+		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
@@ -143,9 +145,6 @@ $wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-navigation-leg
 $wgResourceModules['mobile']['scripts'][] = 'javascripts/common/mf-navigation-legacy.js';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/common/mf-navigation.css';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-cleanuptemplates.css';
-$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/common/mf-navigation.js';
-$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/modules/mf-languages.js';
-$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/modules/mf-cleanuptemplates.js';
 
 $wgResourceModules['mobile.filePage'] = array(
 	'styles' => array( 'stylesheets/specials/filepage.css' ),

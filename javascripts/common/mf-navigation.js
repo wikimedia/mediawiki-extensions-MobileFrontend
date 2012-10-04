@@ -91,9 +91,8 @@ MobileFrontend.navigation = (function( $ ) {
 			u( document.documentElement ).removeClass( 'navigationEnabled' );
 		} );
 	}
-	if( typeof( $ ) !== 'undefined' ) {
-		init();
-	}
+	init();
+
 	return {
 		closeOverlay: closeOverlay,
 		createOverlay: createOverlay,

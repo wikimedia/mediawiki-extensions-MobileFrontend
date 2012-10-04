@@ -1,10 +1,12 @@
 /*global document, window, mw, navigator, clearTimeout, setTimeout */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
-( function( MobileFrontend, $ ) {
+( function( MobileFrontend ) {
+var M = MobileFrontend;
 MobileFrontend.banner = (function() {
+	var $ = M.jQuery;
+
 	function init( banner ) {
 		var cookieNameZeroVisibility = banner ? banner.getAttribute( 'id' ) : 'zeroRatedBannerVisibility',
-			M = MobileFrontend,
 			settings = M.getModule( 'settings' ),
 			saveUserSetting = settings.saveUserSetting,
 			getUserSetting = settings.getUserSetting,
@@ -30,7 +32,7 @@ MobileFrontend.banner = (function() {
 		}
 	}
 
-	if ( MobileFrontend.jQuery ) {
+	if ( $ ) {
 		$( '.mw-mf-banner' ).each( function() {
 			$( '<button class="notify-close">' ).text( '×' ).appendTo( this );
 			init( this );
@@ -43,4 +45,4 @@ MobileFrontend.banner = (function() {
 		init: init
 	};
 }());
-}( mw.mobileFrontend, jQuery ));
+}( mw.mobileFrontend ));
