@@ -11,7 +11,7 @@ var opensearch = ( function() {
 		$ = MobileFrontend.jQuery,
 		content = document.getElementById( 'content' ),
 		footer = document.getElementById( 'footer' ),
-		blankImg = MobileFrontend.setting('scriptPath') + '/extensions/MobileFrontend/stylesheets/images/blank.gif',
+		blankImg = MobileFrontend.setting( 'shim' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
 		focusBlurTimeout,

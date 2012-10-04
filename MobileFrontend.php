@@ -110,23 +110,23 @@ function efExtMobileFrontendUnitTests( &$files ) {
 $localBasePath = dirname( __FILE__ );
 $remoteExtPath = 'MobileFrontend';
 $wgResourceModules['mobile'] = array(
-	'styles' => array( 'stylesheets/reset.css', 'stylesheets/common.css', 'stylesheets/footer.css',
-		'stylesheets/contact-us.css', 'stylesheets/banner.css',
-		'stylesheets/mf-settings.css',
-		'stylesheets/header.css', 'stylesheets/sections.css',
-		'stylesheets/hacks.css' ),
-	'scripts' => array( 'javascripts/application.js',
-		'javascripts/mf-history.js',
-		'javascripts/toggle.js', 'javascripts/settings.js', 'javascripts/beta_opensearch.js',
-		'javascripts/banner.js' ),
+	'styles' => array( 'stylesheets/common/reset.css', 'stylesheets/common/mf-common.css', 'stylesheets/common/mf-footer.css',
+		'stylesheets/specials/contact-us.css', 'stylesheets/modules/mf-banner.css',
+		'stylesheets/specials/mf-settings.css',
+		'stylesheets/common/mf-header.css', 'stylesheets/modules/mf-toggle.css',
+		'stylesheets/common/mf-hacks.css' ),
+	'scripts' => array( 'javascripts/common/mf-application.js',
+		'javascripts/common/mf-history.js',
+		'javascripts/modules/mf-toggle.js', 'javascripts/common/mf-settings.js', 'javascripts/modules/mf-search.js',
+		'javascripts/modules/mf-banner.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 );
 
 $wgResourceModules['mobile.beta.jquery'] = array(
-	'styles' => array( 'stylesheets/mf-watchlist.css' ),
-	'scripts' => array( 'javascripts/mf-watchlist.js' ),
+	'styles' => array( 'stylesheets/modules/mf-watchlist.css' ),
+	'scripts' => array( 'javascripts/modules/mf-watchlist.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
@@ -141,24 +141,24 @@ $wgResourceModules['mobile.beta.jquery.eventlog'] = array(
 
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
-$wgResourceModules['mobile']['styles'][] = 'stylesheets/mf-navigation-legacy.css';
-$wgResourceModules['mobile']['scripts'][] = 'javascripts/mf-navigation-legacy.js';
-$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/mf-navigation.css';
-$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/mf-cleanuptemplates.css';
-$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/mf-navigation.js';
-$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/mf-languages.js';
-$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/mf-cleanuptemplates.js';
+$wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-navigation-legacy.css';
+$wgResourceModules['mobile']['scripts'][] = 'javascripts/common/mf-navigation-legacy.js';
+$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/common/mf-navigation.css';
+$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-cleanuptemplates.css';
+$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/common/mf-navigation.js';
+$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/modules/mf-languages.js';
+$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/modules/mf-cleanuptemplates.js';
 
 $wgResourceModules['mobile.filePage'] = array(
-	'styles' => array( 'stylesheets/filepage.css' ),
-	'scripts' => array( 'javascripts/filepage.js' ),
+	'styles' => array( 'stylesheets/specials/filepage.css' ),
+	'scripts' => array( 'javascripts/specials/filepage.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 );
 $wgResourceModules['mobile.references'] = array(
-	'styles' => array( 'stylesheets/references.css' ),
-	'scripts' => array( 'javascripts/references.js' ),
+	'styles' => array( 'stylesheets/modules/mf-references.css' ),
+	'scripts' => array( 'javascripts/modules/mf-references.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,

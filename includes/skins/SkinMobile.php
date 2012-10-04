@@ -15,6 +15,7 @@ class SkinMobile extends SkinMobileBase {
 		$out = $this->getOutput();
 		$title = $this->getTitle();
 		$tpl->set( 'articleTitle', $title->getPrefixedText() );
+		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
@@ -529,6 +530,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			),
 			'settings' => array(
 				'scriptPath' => $wgScriptPath,
+				'shim' => $this->data['shim'],
 				'beta' => $inBeta,
 				'title' => $this->data['articleTitle'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
@@ -569,7 +571,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		if ( $this->data['isBetaGroupMember'] ) { ?>
 			<a href="#mw-mf-page-left" id="mw-mf-main-menu-button">
 				<img alt="menu"
-				src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif">
+				src="<?php $this->text( 'shim' ) ?>">
 			</a>
 		<?php
 		}
@@ -588,14 +590,14 @@ class SkinMobileTemplate extends BaseTemplate {
 					?>" autocomplete="off" maxlength="1024" class="search"
 					placeholder="<?php $this->msg( 'mobile-frontend-placeholder' ) ?>"
 					/>
-				<img src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif" alt="<?php
+				<img src="<?php $this->text( 'shim' ) ?>" alt="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="mw-mf-clearsearch" title="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>"/>
 			</div>
 			<?php
 			if ( !$this->data['isBetaGroupMember'] ) { ?>
 			<button id='goButton' class='goButton' type='submit'>
-				<img src="<?php $this->text( 'wgExtensionAssetsPath' ) ?>/MobileFrontend/stylesheets/images/blank.gif" alt="<?php
+				<img src="<?php $this->text( 'shim' ) ?>" alt="<?php
 					$this->msg( 'mobile-frontend-search-submit' ) ?>" title="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</button>
 			<?php } ?>

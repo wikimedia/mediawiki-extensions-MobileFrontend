@@ -1,7 +1,7 @@
 .PHONY: less
 
 less:
-	lessc stylesheets/mf-settings.less > stylesheets/mf-settings.css
+	lessc stylesheets/less/specials/mf-settings.less > stylesheets/specials/mf-settings.css
 
 remotes:
 	curl -Lo javascripts/externals/eventlog.js \
