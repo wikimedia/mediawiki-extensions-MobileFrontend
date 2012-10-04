@@ -585,7 +585,7 @@ class ExtMobileFrontend extends ContextSource {
 		foreach ( $detector->getCssFiles() as $file ) {
 			$resourceLoader->register( "mobile.device.$file",
 				array(
-					'styles' => array( "stylesheets/{$file}.css" ),
+					'styles' => array( "stylesheets/devices/{$file}.css" ),
 					'localBasePath' => dirname( __DIR__ ),
 					'remoteExtPath' => 'MobileFrontend',
 				)
