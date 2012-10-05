@@ -27,6 +27,7 @@
 #mw-mf-ribbon .content_block.openSection {
   min-height: auto;
   min-width: 45px;
+  width: auto;
 }
 #mw-mf-ribbon .content_block a,
 #mw-mf-ribbon .content_block button {
