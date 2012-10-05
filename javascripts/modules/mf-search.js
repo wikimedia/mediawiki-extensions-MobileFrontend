@@ -1,22 +1,21 @@
 /*global document, window, mw, navigator, clearTimeout, setTimeout */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
 ( function( M ) {
-var MobileFrontend = M;
 var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		urlTemplate = M.setting( 'pageUrl' ),
-		numResults = 15, term, mfePrefix = MobileFrontend.prefix,
-		message = MobileFrontend.message,
+		numResults = 15, term, mfePrefix = M.prefix,
+		message = M.message,
 		search = document.getElementById(  mfePrefix + 'search' ),
 		oldValue,
-		$ = MobileFrontend.jQuery,
-		blankImg = MobileFrontend.setting( 'shim' ),
+		$ = M.jQuery,
+		blankImg = M.setting( 'shim' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
 		focusBlurTimeout,
-		u = MobileFrontend.utils;
+		u = M.utils;
 
-	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
+	apiUrl = M.setting( 'scriptPath' ) + apiUrl;
 
 	function removeResults( ev, silently ) {
 		if ( !silently ) {
@@ -257,7 +256,7 @@ var opensearch = ( function() {
 }());
 
 if ( typeof JSON !== 'undefined' ) {
-	MobileFrontend.registerModule( 'opensearch', opensearch );
+	M.registerModule( 'opensearch', opensearch );
 }
 
 }( mw.mobileFrontend ));
