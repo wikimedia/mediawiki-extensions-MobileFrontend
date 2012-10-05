@@ -18,6 +18,10 @@ class ApiMobileView extends ApiBase {
 
 	public function execute() {
 		wfProfileIn( __METHOD__ );
+
+		// Logged-in users' parser options depend on preferences
+		$this->getMain()->setCacheMode( 'anon-public-user-private' );
+
 		// Enough '*' keys in JSON!!!
 		$textElement = $this->getMain()->getPrinter()->getFormat() == 'XML' ? '*' : 'text';
 		$params = $this->extractRequestParams();
