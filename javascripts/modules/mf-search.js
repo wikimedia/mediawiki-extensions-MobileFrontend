@@ -11,7 +11,6 @@ var opensearch = ( function() {
 		$ = M.jQuery,
 		blankImg = M.setting( 'shim' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
-		focused = false,
 		focusBlurTimeout,
 		u = M.utils;
 
@@ -22,17 +21,12 @@ var opensearch = ( function() {
 			M.history.replaceHash( '#' );
 		}
 		u( document.body ).removeClass( 'full-screen-search' );
-
-		if ( focused ) {
-			focused = false;
-		}
 	}
 
 	function onfocus() {
 		var rrd, header;
 		header = document.getElementById(  mfePrefix + 'header' );
 
-		if ( !focused ) {
 			u( document.body ).addClass( 'full-screen-search' );
 			M.history.pushState( '#mw-mf-search' );
 			window.scrollTo( 0, 1 );
@@ -46,8 +40,6 @@ var opensearch = ( function() {
 				rrd.setAttribute( 'alt', message( 'remove-results' ) );
 				header.insertBefore( rrd, header.firstChild );
 			}
-			focused = true;
-		}
 	}
 
 	// Certain symbian devices fire blur/focus events as you mouseover an element
