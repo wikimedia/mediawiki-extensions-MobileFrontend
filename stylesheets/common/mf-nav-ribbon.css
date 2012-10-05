@@ -66,6 +66,10 @@
 #mw-mf-ribbon .content_block button.watch-this-article.watched {
   background-image: url(images/ribbon/watched.png);
 }
+#mw-mf-ribbon .content_block a.disabled,
+#mw-mf-ribbon .content_block button.disabled {
+  opacity: 0.1;
+}
 #mw-mf-ribbon button,
 #mw-mf-ribbon a {
   display: inline-block;
