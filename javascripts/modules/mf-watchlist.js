@@ -95,7 +95,7 @@ var w = ( function() {
 
 	function init( container, title ) {
 		var pageTitle = M.setting( 'title' );
-		container = container || $( '#mw-mf-sq' )[ 0 ];
+		container = container || $( '#content_ribbon' )[ 0 ];
 		title = title || pageTitle;
 		initWatchList( container, title );
 		upgradeSearch();
