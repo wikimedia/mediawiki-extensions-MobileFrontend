@@ -9,11 +9,4 @@
 	}
 }
 
-.supportsPositionFixed #mw-mf-main-menu-button {
-	position: fixed;
-}
-
-.supportsPositionFixed.navigationEnabled #mw-mf-main-menu-button {
-	position: absolute;
-}
 

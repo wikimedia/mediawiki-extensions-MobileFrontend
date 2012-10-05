@@ -427,8 +427,12 @@ class SkinMobileTemplate extends BaseTemplate {
 		<div id="content">
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
-			<!--TODO: find better place for this -->
-			<button class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language-current' ) ?></button>
+			<div id="mw-mf-ribbon" class="jsonly">
+				<div id="content_ribbon" class="content_block">
+					<button class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language-current' ) ?></button>
+				</div>
+				<h2 id="section_ribbon" class="section_heading">ribbon</h2>
+			</div>
 			<?php } ?>
 			<?php $this->html( 'bodytext' ) ?>
 		</div>

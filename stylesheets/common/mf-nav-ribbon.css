@@ -1,0 +1,104 @@
+#mw-mf-overlay .header {
+  background-color: #4b7dce;
+}
+#mw-mf-header {
+  box-shadow: 0 0 11px 0px #aaaaaa;
+  border-bottom: none;
+}
+.supportsPositionFixed #mw-mf-main-menu-button {
+  position: absolute;
+}
+#mw-mf-ribbon {
+  position: absolute;
+  background-color: #3366ba;
+  z-index: 1;
+  right: 0;
+  top: 49px;
+  height: 45px;
+  width: auto;
+  padding-right: 20px;
+}
+#mw-mf-ribbon .content_block {
+  height: 45px;
+  width: 0;
+  background-color: #4b7dce;
+  overflow: hidden;
+}
+#mw-mf-ribbon .content_block.openSection {
+  min-height: auto;
+  min-width: 45px;
+}
+#mw-mf-ribbon .content_block a,
+#mw-mf-ribbon .content_block button {
+  display: block;
+  float: left;
+  height: 45px;
+  background: none;
+  -webkit-background-size: auto 32px;
+  background-size: auto 32px;
+  border: 0;
+  text-indent: -999px;
+  width: 45px;
+  height: 45px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+#mw-mf-ribbon .content_block a#mw-mf-language,
+#mw-mf-ribbon .content_block button#mw-mf-language {
+  background-image: url(images/ribbon/language.png);
+}
+#mw-mf-ribbon .content_block a:hover,
+#mw-mf-ribbon .content_block button:hover {
+  opacity: 0.5;
+}
+#mw-mf-ribbon .content_block a.watch-this-article,
+#mw-mf-ribbon .content_block button.watch-this-article {
+  top: 0;
+  right: 0;
+  position: relative;
+  display: block;
+  background-image: url(images/ribbon/watch.png);
+}
+#mw-mf-ribbon .content_block a.watch-this-article.watched,
+#mw-mf-ribbon .content_block button.watch-this-article.watched {
+  background-image: url(images/ribbon/watched.png);
+}
+#mw-mf-ribbon button,
+#mw-mf-ribbon a {
+  display: inline-block;
+}
+#mw-mf-ribbon .section_heading {
+  position: absolute;
+  text-indent: -999px;
+  overflow: hidden;
+  right: 0;
+  margin: 0;
+  /* reset */
+
+  padding: 0;
+  /* reset */
+
+  top: 0;
+  bottom: 0;
+  width: 20px;
+}
+#mw-mf-ribbon .section_heading button {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  position: absolute;
+  display: block;
+  -webkit-background-size: auto 22px;
+  background-size: auto 22px;
+  background-image: url(images/ribbon/dots.png);
+  background-position: 6px center;
+}
+.supportsPositionFixed.togglingEnabled.readingMode #mw-mf-ribbon {
+  position: fixed;
+  top: 0;
+}

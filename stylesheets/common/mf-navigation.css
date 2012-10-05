@@ -56,6 +56,7 @@
 	padding-right: 0;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	border-radius: 0; /* reset any browsers that add this by default e.g. iphone */
 }
 
 .mw-mf-search {
@@ -410,22 +411,11 @@ TODO: make this the default and add icons with media queries
 	}
 }
 
-/* enable position fixed */
-.supportsPositionFixed #mw-mf-page-left,
-.supportsPositionFixed #mw-mf-header {
-	position: fixed;
-	top: 0;
-}
-
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
 	overflow-y: auto;
 }
 
-.supportsPositionFixed #results,
-.supportsPositionFixed #content_wrapper {
-	padding-top: 45px;
-}
-
+.navigationEnabled #mw-mf-ribbon
 .supportsPositionFixed.navigationEnabled #mw-mf-header {
 	left: 80%;
 	right: -80%;

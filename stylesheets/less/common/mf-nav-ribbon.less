@@ -1,0 +1,115 @@
+@import "../mf-mixins.less";
+
+@topnavheight:45px;
+@ribbonopencolor:#4B7DCE;
+@ribbon-color:#3366BA;
+@ribbonwidth:50px;
+@ribbonclosedwidth: 20px;
+
+.background-size( @x:auto, @y:auto ) {
+	-webkit-background-size: @x @y;
+	background-size: @x @y;
+}
+
+#mw-mf-overlay .header {
+	background-color: @ribbonopencolor;
+}
+
+#mw-mf-header {
+	.boxshadow(0, 0, 11px, 0px, #aaa);
+	border-bottom: none;
+}
+
+.supportsPositionFixed #mw-mf-main-menu-button {
+	position: absolute;
+}
+
+#mw-mf-ribbon {
+	position: absolute;
+	background-color: @ribbon-color;
+	z-index: 1;
+	right: 0;
+	top: @topnavheight + 4;
+	height: @topnavheight;
+	width: auto;
+	padding-right: @ribbonclosedwidth;
+
+	.content_block {
+		height: @topnavheight;
+		width: 0;
+		background-color: @ribbonopencolor;
+		overflow: hidden;
+		&.openSection {
+			min-height: auto;
+			min-width: @topnavheight;
+		}
+		a,
+		button {
+			display: block;
+			float: left;
+			height: @topnavheight;
+			background: none;
+			-webkit-background-size: auto 32px;
+			background-size: auto 32px;
+			border: 0;
+			text-indent: -999px;
+			width: @topnavheight;
+			height: @topnavheight;
+			background-position: center center;
+			background-repeat: no-repeat;
+			padding: 0;
+			margin: 0;
+			cursor: pointer;
+			&#mw-mf-language {
+				background-image: url(images/ribbon/language.png);
+			}
+			&:hover {
+				opacity: 0.5;
+			}
+			&.watch-this-article {
+				top: 0;
+				right: 0;
+				position: relative;
+				display: block;
+				background-image: url(images/ribbon/watch.png);
+				&.watched {
+					background-image: url(images/ribbon/watched.png);
+				}
+			}
+		}
+	}
+	button, a {
+		display: inline-block;
+	}
+	.section_heading {
+		position: absolute;
+		text-indent: -999px;
+		overflow: hidden;
+		right: 0;
+		margin: 0; /* reset */
+		padding: 0; /* reset */
+		top: 0;
+		bottom: 0;
+		width: @ribbonclosedwidth;
+		button {
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: auto;
+			position: absolute;
+			display: block;
+			-webkit-background-size: auto 22px;
+			background-size: auto 22px;
+			background-image: url(images/ribbon/dots.png);
+			background-position: 6px center;
+		}
+	}
+}
+
+.supportsPositionFixed.togglingEnabled.readingMode {
+	#mw-mf-ribbon {
+		position: fixed;
+		top: 0;
+	}
+}
