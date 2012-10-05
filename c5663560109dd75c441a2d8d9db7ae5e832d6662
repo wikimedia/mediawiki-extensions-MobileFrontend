@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAhX///7w\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 532,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-05T17:41:41Z",
+      "side": 1,
+      "message": "what should I be doing to get this?",
+      "revId": "c5663560109dd75c441a2d8d9db7ae5e832d6662",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
