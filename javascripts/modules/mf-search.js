@@ -19,7 +19,7 @@ var opensearch = ( function() {
 
 	apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
 
-	function removeResults( silently ) {
+	function removeResults( ev, silently ) {
 		if ( !silently ) {
 			M.history.replaceHash( '#' );
 		}
@@ -243,7 +243,7 @@ var opensearch = ( function() {
 			if ( curPage.hash === '#mw-mf-search' ) {
 				onfocus();
 			} else {
-				removeResults( true );
+				removeResults( ev, true );
 			}
 		} );
 	}
