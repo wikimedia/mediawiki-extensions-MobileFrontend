@@ -27,19 +27,19 @@ var opensearch = ( function() {
 		var rrd, header;
 		header = document.getElementById(  mfePrefix + 'header' );
 
-			u( document.body ).addClass( 'full-screen-search' );
-			M.history.pushState( '#mw-mf-search' );
-			window.scrollTo( 0, 1 );
+		u( document.body ).addClass( 'full-screen-search' );
+		M.history.pushState( '#mw-mf-search' );
+		window.scrollTo( 0, 1 );
 
-			rrd = document.getElementById( 'remove-results' );
-			if ( !rrd ) {
-				rrd = document.createElement( 'img' );
-				rrd.setAttribute( 'id', 'remove-results' );
-				u( rrd ).bind( 'click',  removeResults );
-				rrd.setAttribute( 'src', blankImg );
-				rrd.setAttribute( 'alt', message( 'remove-results' ) );
-				header.insertBefore( rrd, header.firstChild );
-			}
+		rrd = document.getElementById( 'remove-results' );
+		if ( !rrd ) {
+			rrd = document.createElement( 'img' );
+			rrd.setAttribute( 'id', 'remove-results' );
+			u( rrd ).bind( 'click',  removeResults );
+			rrd.setAttribute( 'src', blankImg );
+			rrd.setAttribute( 'alt', message( 'remove-results' ) );
+			header.insertBefore( rrd, header.firstChild );
+		}
 	}
 
 	// Certain symbian devices fire blur/focus events as you mouseover an element
