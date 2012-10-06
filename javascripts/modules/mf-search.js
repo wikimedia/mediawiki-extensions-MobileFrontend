@@ -171,11 +171,7 @@ var opensearch = ( function() {
 	}
 
 	function blurSearch(ev) {
-		if( search.value.length === 0) {
-			removeResults();
-		} else {
-			performSearch(ev); // for opera mini etc
-		}
+		performSearch( ev ); // for opera mini etc
 	}
 
 	function enhanceElements() {
