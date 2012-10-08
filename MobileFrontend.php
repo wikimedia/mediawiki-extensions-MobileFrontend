@@ -68,9 +68,7 @@ foreach ( $autoloadClasses as $className => $classFilename ) {
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
 
-if ( version_compare( $wgVersion, '1.20alpha', '<' ) ) {
-	$wgAPIPropModules['extracts'] = 'ApiQueryExtracts';
-}
+$wgAPIPropModules['extracts'] = 'ApiQueryExtracts';
 $wgAPIModules['mobileview'] = 'ApiMobileView';
 
 $wgHooks['APIGetAllowedParams'][] = 'ApiParseExtender::onAPIGetAllowedParams';
