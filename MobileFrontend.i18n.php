@@ -6220,6 +6220,7 @@ $messages['mzn'] = array(
 /** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Danmichaelo
  * @author Event
+ * @author Jsoby
  * @author Lokal Profil
  * @author Nghtwlkr
  */
@@ -6233,6 +6234,7 @@ $messages['nb'] = array(
 	'mobile-frontend-save-settings' => 'Lagre innstillinger',
 	'mobile-frontend-random-button' => 'Tilfeldig',
 	'mobile-frontend-back-to-top-of-section' => 'Gå ett avsnitt tilbake',
+	'mobile-frontend-close-section' => 'Lukk dette avsnittet',
 	'mobile-frontend-show-button' => 'Vis',
 	'mobile-frontend-hide-button' => 'Skjul',
 	'mobile-frontend-empty-homepage' => 'Denne hjemmesiden må konfigureres. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruksjoner for hvordan man aktiverer denne mobilsiden</a>',
@@ -6254,6 +6256,7 @@ $messages['nb'] = array(
 	'mobile-frontend-disable-images' => 'Deaktiver bilder på mobilsiden',
 	'mobile-frontend-enable-images' => 'Gjør tilgjengelig bilder på mobilnettstedet',
 	'mobile-frontend-toggle-images' => 'Bilder $1 / $2',
+	'mobile-frontend-missing-image' => 'Bilde',
 	'mobile-frontend-off' => 'AV',
 	'mobile-frontend-on' => 'PÅ',
 	'mobile-frontend-footer-contributors' => 'Artikkel av <a href="$1">bidragsytere</a> som deg',
@@ -6268,6 +6271,7 @@ $messages['nb'] = array(
 	'mobile-frontend-leave-feedback-title' => 'Gi oss tilbakemelding om din erfaring med mobilnettstedet',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknisk problem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Generelt',
+	'mobile-frontend-leave-feedback-technical-link-text' => 'Teknisk problem',
 	'mobile-frontend-leave-feedback-page-title' => 'Gi oss tilbakemelding om din erfaring med mobilnettstedet',
 	'mobile-frontend-leave-feedback-special-title' => 'Kontakt oss',
 	'mobile-frontend-feedback-no-subject' => '(mangler emnetekst)',
@@ -6534,6 +6538,8 @@ $messages['nn'] = array(
 	'mobile-frontend-footer-contributors' => 'Artikkel av <a href="$1">bidragsytarar</a> som deg',
 	'mobile-frontend-featured-article' => 'Dagens artikkel',
 	'mobile-frontend-news-items' => 'Nyhende',
+	'mobile-frontend-leave-feedback-subject' => 'Emne:',
+	'mobile-frontend-leave-feedback-message' => 'Melding:',
 	'mobile-frontend-language' => 'Språk:',
 	'mobile-frontend-language-site-nomatches' => 'Fann ingen passande språk',
 	'mobile-frontend-username' => 'Brukarnamn:',
@@ -9362,6 +9368,8 @@ $messages['vep'] = array(
  */
 $messages['vi'] = array(
 	'mobile-frontend-desc' => 'Giao diện di động',
+	'mobile.css' => '/* Mã CSS đặt ở đây sẽ ảnh hưởng đến những người sử dụng trang di động */',
+	'mobile.js' => '/* Mã JavaScript đặt ở đây sẽ được tải khi nào sử dụng trang di động */',
 	'mobile-frontend-search-submit' => 'Xem',
 	'mobile-frontend-home-button' => 'Trang đầu',
 	'mobile-frontend-logged-out' => 'Chưa đăng nhập',
@@ -9393,6 +9401,7 @@ $messages['vi'] = array(
 	'mobile-frontend-disable-images' => 'Tắt hình ảnh tại trang di động',
 	'mobile-frontend-enable-images' => 'Hiện hình ảnh trên trang di động',
 	'mobile-frontend-toggle-images' => 'Hình ảnh $1 / $2',
+	'mobile-frontend-missing-image' => 'Hình',
 	'mobile-frontend-off' => 'TẮT',
 	'mobile-frontend-on' => 'BẬT',
 	'mobile-frontend-footer-contributors' => 'Bài do <a href="$1">những người giống bạn</a> đóng góp',
