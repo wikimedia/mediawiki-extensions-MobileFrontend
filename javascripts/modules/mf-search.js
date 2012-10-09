@@ -10,8 +10,6 @@ var opensearch = ( function() {
 		search = document.getElementById(  mfePrefix + 'search' ),
 		oldValue,
 		$ = MobileFrontend.jQuery,
-		content = document.getElementById( 'content' ),
-		footer = document.getElementById( 'footer' ),
 		blankImg = MobileFrontend.setting( 'shim' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focused = false,
@@ -32,10 +30,8 @@ var opensearch = ( function() {
 	}
 
 	function onfocus() {
-		var rrd, header, content, footer;
+		var rrd, header;
 		header = document.getElementById(  mfePrefix + 'header' );
-		content = document.getElementById( 'content' );
-		footer = document.getElementById( 'footer' );
 
 		if ( !focused ) {
 			u( document.body ).addClass( 'full-screen-search' );
