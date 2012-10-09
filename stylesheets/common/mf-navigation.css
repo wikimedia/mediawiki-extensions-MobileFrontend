@@ -293,6 +293,7 @@ body.navigationEnabled {
 	font-size: 1.4em;
 	cursor: pointer;
 	margin: 0;
+	list-style: none;
 }
 
 #remove-results,
