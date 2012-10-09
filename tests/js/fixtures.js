@@ -8,6 +8,8 @@ var mwMobileFrontendConfig = {
 	}
 };
 
+function _mwLogEvent() {}
+
 window.MobileFrontendTests = {
 	createFixtures: function () {
 		$( '<div id="qunit-fixture-x">' ).html( [
