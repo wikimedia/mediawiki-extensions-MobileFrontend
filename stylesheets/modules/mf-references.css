@@ -37,7 +37,7 @@ Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 	right: 22px; /* padding of #content_wrapper */
 	width: 16px;
 	height: 12px;
-	background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
+	background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
 	margin: 0;
 	background-position: right center;
 	-webkit-background-size: auto 12px;
