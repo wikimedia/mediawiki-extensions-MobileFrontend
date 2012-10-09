@@ -8,9 +8,3 @@
 		background-image: url(images/s-xhdpi.png) !important;
 	}
 }
-
-.supportsPositionFixed #mw-mf-main-menu-button {
-	border: solid 1px red;
-	margin: 0;
-	display: block !important;
-}
