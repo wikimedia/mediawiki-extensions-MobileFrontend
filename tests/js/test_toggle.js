@@ -1,8 +1,8 @@
-( function ($, MFE, MFET) {
+( function ( $, MFE, MFET, toggle ) {
 module("MobileFrontend toggle.js: wm_toggle_section", {
 	setup: function() {
 		MFET.createFixtures();
-		MFE.toggle.init();
+		toggle.init();
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
@@ -12,13 +12,13 @@ module("MobileFrontend toggle.js: wm_toggle_section", {
 
 test("wm_toggle_section", function() {
 	strictEqual($("#section_1").hasClass("openSection"), true, "openSection class present");
-	MFE.toggle.wm_toggle_section("1");
+	toggle.wm_toggle_section( '1' );
 	strictEqual($("#content_1").hasClass("openSection"), false, "check content is closed on a toggle");
 	strictEqual($("#anchor_1").hasClass("openSection"), false, "check anchor is closed on toggle");
 	strictEqual($("#section_1").hasClass("openSection"), false, "check section is closed");
 	
 	// perform second toggle
-	MFE.toggle.wm_toggle_section("1");
+	toggle.wm_toggle_section( '1' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content reopened");
 	strictEqual($("#anchor_1").hasClass("openSection"), true, "check anchor reopened");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section has reopened");
@@ -26,12 +26,12 @@ test("wm_toggle_section", function() {
 
 test("clicking a hash link to reveal an already open section", function() {
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section is open");
-	MFE.toggle.wm_reveal_for_hash("#First_Section");
+	toggle.wm_reveal_for_hash( 'First_Section' );
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section is still open");
 });
 
 test("wm_reveal_for_hash", function() {
-	MFE.toggle.wm_reveal_for_hash("#First_Section_2");
+	toggle.wm_reveal_for_hash( '#First_Section_2' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content is visible on a toggle");
 	strictEqual($("#anchor_1").hasClass("openSection"), true, "check anchor is visible on toggle");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section is marked as open");
@@ -55,7 +55,7 @@ module("MobileFrontend toggle.js (beta): closing sections", {
 	setup: function() {
 		MFET.createFixtures();
 		$("body").addClass('beta');
-		MFE.toggle.init();
+		toggle.init();
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
@@ -74,4 +74,4 @@ test("close a section", function() {
 	strictEqual(endVisibility, false, "clicking has hidden section content");
 });
 
-}(jQuery, mw.mobileFrontend, MobileFrontendTests));
+}( jQuery, mw.mobileFrontend, MobileFrontendTests, mw.mobileFrontend.getModule( 'toggle' ) ) );

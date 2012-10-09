@@ -1,4 +1,4 @@
-( function ( $, M ) {
+( function ( $, M, W ) {
 
 var _ajax;
 module( 'MobileFrontend mf-watchlist.js', {
@@ -33,16 +33,16 @@ module( 'MobileFrontend mf-watchlist.js', {
 
 test( 'init watched article', function() {
 	var $container = $( '<div>' );
-	M.watchlist.initWatchList( $container[ 0 ], 'Spongebob' );
+	W.initWatchList( $container[ 0 ], 'Spongebob' );
 	strictEqual( $container.find( '.watch-this-article' ).length, 1, 'button created' );
 	strictEqual( $container.find( '.watch-this-article' ).hasClass( 'watched' ), true, 'article is marked as watched' );
 } );
 
 test( 'init unwatched article', function() {
 	var $container = $( '<div>' );
-	M.watchlist.initWatchList( $container[ 0 ], 'Popeye' );
+	W.initWatchList( $container[ 0 ], 'Popeye' );
 	strictEqual( $container.find( '.watch-this-article' ).length, 1, 'button created' );
 	strictEqual( $container.find( '.watch-this-article' ).hasClass( 'watched' ), false, 'article is not marked as watched' );
 } );
 
-}( jQuery, mw.mobileFrontend ) );
+}( jQuery, mw.mobileFrontend, mw.mobileFrontend.getModule( 'watchlist' ) ) );

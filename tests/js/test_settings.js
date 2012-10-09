@@ -25,4 +25,4 @@ test("remove cookie via write", function() {
 	strictEqual(cookieVal, null, "Cookie deleted");
 });
 
-}(jQuery, mw.mobileFrontend.settings, MobileFrontendTests, mw.mobileFrontend));
+}( jQuery, mw.mobileFrontend.getModule( 'settings' ), MobileFrontendTests, mw.mobileFrontend ) );
