@@ -1,0 +1,70 @@
+#mw-mf-search.searching {
+  opacity: 0.2;
+}
+#nav {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  clear: both;
+  padding: 5px 0;
+  display: none;
+  border: 1px solid #cccccc;
+  border-top: 0;
+  margin: -1px 0 0 0;
+  background: white;
+  padding: 0 5px 5px 5px;
+  position: relative;
+  float: left;
+}
+#nav form,
+#nav button {
+  display: inline-block;
+}
+#nav .button,
+#nav button {
+  background: url(images/buttonbg.gif) no-repeat center;
+  border: 0;
+  padding: 8px;
+  color: black;
+  display: inline-block;
+  background-size: 100% 100%;
+}
+/*
+full screen search css
+*/
+.full-screen-search #mw-mf-header {
+  -webkit-box-shadow: 3px 1px 8px #333;
+  -moz-box-shadow: 3px 1px 8px #333;
+  -o-box-shadow: 3px 1px 8px #333;
+  box-shadow: 3px 1px 8px #333;
+  z-index: 2;
+  margin: 0;
+  background-color: white;
+}
+#mw-mf-header,
+#mw-mf-search,
+#mw-mf-sq,
+#mw-mf-header form {
+  position: relative;
+  right: 0;
+  top: 0;
+  left: 0;
+  height: 40px;
+}
+.full-screen-search #nav {
+  display: none !important;
+}
+#mw-mf-logo {
+  position: absolute;
+  max-height: 22px;
+  cursor: pointer;
+  left: 22px;
+  top: 9px;
+  max-width: 35px;
+  width: auto;
+  height: auto;
+}
+@media all and (max-width: 320px) {
+  #mw-mf-logo {
+    left: 12px !important;
+  }
+}

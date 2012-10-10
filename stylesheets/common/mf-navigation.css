@@ -1,0 +1,365 @@
+#mw-mf-header form,
+#mw-mf-header,
+#mw-mf-search,
+#mw-mf-sq {
+  position: relative;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+#mw-mf-header form,
+#mw-mf-search,
+#mw-mf-sq {
+  height: 45px;
+}
+#mw-mf-searchForm {
+  padding: 0 8px 0 50px;
+  /* check mw-mf-logo */
+
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+/* visual indication that search is happening */
+#mw-mf-search.searching {
+  background-color: #eee;
+}
+.full-screen-search #mw-mf-searchForm {
+  padding: 0 8px 0 52px;
+}
+.overlay #footer,
+.full-screen-search #section_nav,
+.full-screen-search #content_nav {
+  display: none !important;
+}
+.jsEnabled #mw-mf-language-selection,
+.overlay #mw-mf-viewport,
+.full-screen-search #mw-mf-page-left,
+.jsEnabled .full-screen-search #mw-mf-page-menu-button,
+.jsEnabled .full-screen-search #mw-mf-main-menu-button,
+.full-screen-search #mw-mf-main-menu-button {
+  display: none;
+}
+.mw-mf-search,
+#mw-mf-search {
+  line-height: normal;
+  background: none;
+  border: solid 1px #D9D9D9;
+  height: 30px;
+  margin-top: 8px;
+  background-color: white;
+  padding-left: 4px;
+  -webkit-appearance: none;
+  padding-right: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0;
+  /* reset any browsers that add this by default e.g. iphone */
+
+}
+.mw-mf-search {
+  margin-top: 0;
+  width: 99%;
+}
+#mw-mf-search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+#mw-mf-main-menu-button {
+  display: inline-block;
+  height: 30px;
+  width: 24px;
+  background-image: /* @embed */ url(images/menu/main.png);
+  -webkit-background-size: 24px 30px;
+  background-size: 24px 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 7px;
+  background-repeat: no-repeat;
+  z-index: 2;
+  left: 12px;
+  padding-left: 10px;
+  border-radius: 5px 5px 5px;
+}
+#mw-mf-main-menu-button:active {
+  background-color: #4C4C4C;
+}
+#mw-mf-viewport {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  /* for non-existant file pages */
+
+}
+#mw-mf-page-center {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+.overlay .header,
+#mw-mf-overlay .header,
+.full-screen-search #mw-mf-header,
+#mw-mf-header {
+  z-index: 2;
+  color: white;
+  background-color: #393939;
+}
+#mw-mf-page-left {
+  width: 80%;
+  right: 20%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  bottom: 0;
+  top: 0;
+  margin-right: 0;
+  position: absolute;
+  border-right: solid 1px #AAA;
+  display: none;
+}
+.navigationEnabled #mw-mf-page-left {
+  display: block;
+}
+#mw-mf-menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 12px;
+}
+#mw-mf-universal-language {
+  font-size: 0.8em;
+  margin-left: 14px;
+  /* margin-left of #mw-mf-menu-main li a + 4px on left of icon background-position */
+
+}
+#mw-mf-page-left,
+#mw-mf-menu-main,
+#mw-mf-menu-main li {
+  background-color: #4E4E4E;
+}
+#mw-mf-menu-main li {
+  text-shadow: 0 1px 0 black;
+  border-bottom: 1px inset #717171;
+  font-weight: normal;
+}
+#mw-mf-menu-main li a {
+  color: white;
+  display: block;
+  padding: 12px;
+  padding-left: 32px;
+  line-height: 22px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: 0px 12px;
+  height: 21px;
+  margin-left: 10px;
+  border-bottom: 1px inset #3e3e3e;
+}
+#mw-mf-menu-main li a:hover {
+  text-decoration: none;
+}
+#mw-mf-content-left {
+  height: 100%;
+  border-left: solid 12px #252525;
+  border-right: solid 1px black;
+}
+#mw-mf-menu-main li.icon a {
+  background-image: /* @embed */ url(images/menu/home.png);
+}
+#mw-mf-menu-main li.icon2 a {
+  background-image: /* @embed */ url(images/menu/random.png);
+}
+#mw-mf-menu-main li.icon3 a {
+  background-image: /* @embed */ url(images/menu/nearby.png);
+}
+#mw-mf-menu-main li.icon4 a {
+  background-image: /* @embed */ url(images/menu/contact.png);
+}
+#mw-mf-menu-main li.icon5 a {
+  background-image: /* @embed */ url(images/menu/settings.png);
+}
+#mw-mf-menu-main li.disabled {
+  opacity: 0.2;
+}
+#mw-mf-menu-main li:hover {
+  background-color: #5C5C5C;
+  border-left: solid 12px #3366BB;
+  margin-left: -12px;
+}
+#mw-mf-clearsearch {
+  top: 12px;
+}
+.navigationEnabled #mw-mf-page-center {
+  left: 80%;
+}
+body.navigationEnabled {
+  height: 100%;
+  overflow: hidden;
+}
+.clearlink {
+  right: 8px;
+}
+#mw-mf-main-menu-button,
+#mw-mf-page-menu-button {
+  display: none;
+}
+#mw-mf-language-selection {
+  text-align: center;
+  padding-top: 10px;
+}
+.jsEnabled #mw-mf-main-menu-button,
+.jsEnabled #mw-mf-page-menu-button {
+  display: block;
+}
+#mw-mf-overlay {
+  display: none;
+}
+#mw-mf-overlay li {
+  padding-left: 22px;
+  text-align: left;
+}
+#mw-mf-overlay .mw-mf-overlay-footer a {
+  display: inline;
+}
+.overlay #mw-mf-overlay {
+  display: block;
+}
+.overlay .header {
+  line-height: 40px;
+  border-bottom: solid 1px #CCC;
+  padding: 0;
+  padding-left: 56px;
+  color: #666;
+  height: 40px;
+  margin: 0;
+  padding-bottom: 0;
+}
+#mw-mf-overlay .header.mw-mf-locked {
+  padding-left: 22px;
+}
+.overlay .header h2 {
+  margin: 0;
+  padding: 0;
+}
+.overlay div.content input {
+  margin: 22px 0 8px 22px;
+  width: 60%;
+}
+.overlay ul {
+  text-align: left;
+  left: 0;
+  width: 100% !important;
+  border: none;
+  z-index: 1;
+  position: relative;
+  opacity: 1;
+  padding: 0;
+  padding-bottom: 20px;
+  font-size: 1.4em;
+  cursor: pointer;
+  margin: 0;
+  list-style: none;
+}
+#remove-results,
+.overlay #close {
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  height: 27px;
+  border-radius: 5px;
+  top: 6px;
+  left: 16px;
+  background: none;
+  background-image: url(images/arrow-left-2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -999px;
+  background-size: 12px 16px;
+}
+#remove-results {
+  top: 14px;
+}
+html.navigationEnabled,
+.navigationEnabled body,
+.navigationEnabled #mw-mf-viewport,
+.navigationEnabled #mw-page-center {
+  overflow: hidden;
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+html.supportsPositionFixed,
+body {
+  height: auto;
+}
+#mw-mf-page-left,
+#mw-mf-page-center {
+  min-height: 100%;
+}
+#mw-mf-overlay li.mw-mf-overlay-footer,
+#mw-mf-overlay li.mw-mf-overlay-header {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 0.8em;
+}
+#mw-mf-overlay li.mw-mf-overlay-footer a {
+  color: #002BB8;
+}
+#mw-mf-overlay li.mw-mf-overlay-header {
+  background-color: #F1F1F1;
+}
+.supportsPositionFixed #mw-mf-page-center {
+  min-height: none !important;
+}
+@media all and (max-width: 320px) {
+  #mw-mf-searchForm {
+    padding: 0 8px 0 40px;
+  }
+  .full-screen-search .suggestions-result {
+    padding-left: 40px;
+  }
+  .full-screen-search #mw-mf-searchForm {
+    padding: 0 8px 0 40px;
+  }
+  #remove-results,
+  #mw-mf-main-menu-button {
+    left: 2px;
+  }
+  #mw-mf-page-menu-button {
+    right: 12px;
+  }
+}
+@media all and (max-width: 240px) {
+  #mw-mf-search {
+    padding-left: 0;
+  }
+  #mw-mf-menu-main li a {
+    padding-left: 12px;
+  }
+  #mw-mf-menu-main li {
+    background-position: 0 0;
+    font-size: 0.8em;
+  }
+}
+/*
+each menu item is 21px height + 24px padding + 1px border = 46px
+5 items therefore has a height of 230px if we cannot accomodate
+throw away icons
+TODO: make this the default and add icons with media queries
+*/
+@media all and (max-height: 230px) {
+  html.navigationEnabled,
+  .navigationEnabled body,
+  .navigationEnabled #mw-mf-viewport,
+  .navigationEnabled #mw-page-center {
+    min-height: 230px;
+  }
+}
+.supportsPositionFixed.navigationEnabled #mw-mf-viewport {
+  overflow-y: auto;
+}
+.navigationEnabled #mw-mf-ribbon.supportsPositionFixed.navigationEnabled #mw-mf-header {
+  left: 80%;
+  right: -80%;
+}
