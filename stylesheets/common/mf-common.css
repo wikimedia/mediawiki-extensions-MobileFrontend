@@ -1,0 +1,346 @@
+html {
+  font-size: 80%;
+}
+body {
+  font-size: 1em;
+  line-height: 1;
+  color: black;
+  background: white;
+  font-family: sans-serif;
+  word-break: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+.mw-mf-image-replacement {
+  font-style: italic;
+  color: #706E6E;
+  text-decoration: underline;
+  border: dotted 1px #CCC;
+  padding: 10px;
+  display: inline-block;
+}
+input {
+  word-break: normal;
+}
+button.disabled {
+  opacity: 0.2;
+}
+a.external {
+  background: url(images/external-link-ltr-icon.png) center right no-repeat;
+  padding-right: 13px;
+}
+.divclearable {
+  display: block;
+  zoom: 1;
+  vertical-align: middle;
+  position: relative;
+}
+#userloginForm table,
+#userloginForm .user-login tr,
+#userloginForm .user-login th,
+#userloginForm .user-login td {
+  width: 200px;
+  border: 0;
+}
+table.toc h2 {
+  border: 0;
+  padding: 0;
+  margin-top: 5px;
+}
+.mobile #coordinates {
+  display: none;
+  /* TODO: style for mobile */
+
+}
+table.gallery th,
+table.gallery td {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+}
+table.navbox td.navbox-group {
+  background: #ddddff;
+  width: 25%;
+  padding: 3px;
+}
+table.gallery {
+  background: #f9f9f9;
+  border-bottom: 0;
+}
+table.gallery .gallerytext {
+  margin-top: -12px;
+  text-align: center;
+}
+table.navbox th.navbox-title {
+  background: #ccccff;
+  padding: 5px;
+}
+table td,
+table th {
+  border: 1px solid #cccccc;
+  padding: 3px;
+}
+table th {
+  word-break: normal;
+}
+.mwm-message.mwm-notice {
+  background: #FFFFFF;
+  font-size: 1.1em;
+  color: #000000;
+}
+.mwm-message.mwm-notice a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #000000;
+}
+h3#sopa-notice {
+  color: #000000;
+  -webkit-margin-after: 0.5em;
+  margin: 0;
+}
+.mwm-notice {
+  padding: 5px;
+  background: #dddddd;
+  -webkit-border-radius: 5px;
+  margin-top: 5px;
+  text-align: center;
+  border: 1px solid gray;
+}
+table {
+  /* following 5 rules are needed for scrolling */
+
+  overflow: auto;
+  /* for browsers that don't support overflow-y */
+
+  overflow-y: hidden;
+  overflow-x: auto;
+  word-break: normal;
+  display: block;
+}
+tbody {
+  display: inline-block;
+}
+table table {
+  border: 0;
+  margin-bottom: 0;
+}
+table table td,
+table table th {
+  border: 0;
+  padding: 0;
+}
+table.toc {
+  background: #f9f9f9;
+}
+table.navbox td.navbox-abovebelow {
+  padding: 3px;
+}
+table.navbox td.navbox-group + td {
+  padding: 3px;
+}
+table.navbox td,
+table.navbox th {
+  padding: 0;
+}
+table.navbox table {
+  margin-bottom: 0;
+}
+table.wikitable th {
+  background: #f3f3f3;
+}
+table.infobox {
+  background: #f9f9f9;
+}
+table.infobox caption {
+  display: block;
+}
+table.infobox th,
+table.infobox td {
+  border: 0;
+}
+table.admin {
+  width: 300px;
+}
+p,
+li,
+dl,
+#mainpage,
+#featured_article {
+  line-height: 1.65;
+}
+pre {
+  white-space: pre-wrap;
+}
+h2 {
+  border-bottom: none;
+  padding-top: 0.3em;
+  font-size: 1.3em;
+}
+a {
+  text-decoration: none;
+  color: #002bb8;
+}
+a:visited {
+  color: #5a3696;
+}
+a:active {
+  color: #faa700;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.new,
+a.new:visited,
+a.new:hover {
+  color: red;
+}
+a.back_to_top,
+a.back_to_top:visited {
+  margin-top: 7px;
+  color: blue;
+}
+#contentSub,
+.dablink {
+  margin-bottom: 10px;
+}
+#content_wrapper h1 {
+  font-size: 1.7em;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0.7em 0 0.7em 0;
+}
+.printonly,
+.geo-multi-punct,
+.geo-nondefault {
+  display: none;
+}
+#featured_article .noprint,
+.today .noprint {
+  display: none;
+}
+.thumb {
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  text-align: center;
+}
+img.thumbborder {
+  border: 1px solid #cccccc;
+}
+/* @noflip */div.floatright,
+table.floatright {
+  float: right;
+}
+/* @noflip */div.floatleft,
+table.floatright {
+  float: left;
+}
+#content_wrapper.home h1 {
+  display: none;
+}
+#mw-mf-header {
+  margin: 0;
+  position: relative;
+  border-bottom: solid 1px #CCC;
+}
+#content_wrapper {
+  clear: both;
+  margin: 0 22px;
+}
+.beta #content_wrapper {
+  margin: 0 32px 0 22px;
+}
+#content_wrapper p {
+  margin: 0 0 10px 0;
+}
+#disableButtons {
+  text-align: center;
+}
+#disableButtons button {
+  background: url(images/buttonbg.gif) no-repeat center;
+  border: 0;
+  height: 23px;
+  width: 83px;
+}
+#disableButtons #backButton {
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+.mwm-message.mwm-notice {
+  font-size: 1.1em;
+}
+#image_wrapper {
+  margin: 8px 0 8px -3px;
+}
+/* TODO: move into MediaWiki:Common.css ? */
+.mobile div.searchresult {
+  width: 100%;
+}
+@media all and (max-width: 500px) {
+  .mobile div.tleft,
+  .mobile div.floatleft,
+  .mobile table.floatleft,
+  .mobile div.tright,
+  .mobile div.floatright,
+  .mobile table.floatright {
+    float: none;
+    clear: none;
+    margin: auto;
+    width: auto !important;
+  }
+  /* styling for warning boxes (see bug 36674)*/
+  .mobile td.mbox-image div {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .mobile .mbox-text div {
+    text-align: center !important;
+  }
+  .mobile th.mbox-text,
+  .mobile td.mbox-text,
+  .mobile td.mbox-image {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center !important;
+  }
+  .mobile table.ambox-content {
+    border-left: 1px solid #AAA;
+    box-sizing: border-box;
+    border-bottom: 10px solid #F28500;
+  }
+}
+/* Plainlinks - this can be used to switch
+ * off special external link styling */
+.plainlinks a {
+  background: none !important;
+  padding: 0 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+b {
+  font-weight: bold;
+}
+ul {
+  list-style: square inside;
+}
+ol {
+  list-style: decimal inside;
+}
+i {
+  font-style: italic;
+}
+.jsonly {
+  display: none;
+}
+.jsEnabled .jsonly {
+  display: block;
+}

@@ -1,0 +1,245 @@
+/* Search and navigation menu
+moved from beta_common.css in
+Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
+*/
+.full-screen-search .notEmpty .clearlink {
+  display: block;
+}
+.clearlink {
+  top: 9px;
+  right: 0;
+  width: 24px;
+  height: 20px;
+  background: url(images/close-button-beta.png) no-repeat scroll 0 0 transparent;
+  margin: 0;
+  display: none;
+  background-position: right center;
+  -webkit-background-size: auto 12px;
+  background-size: auto 12px;
+  cursor: pointer;
+  position: absolute;
+}
+#mw-mf-overlay a:hover,
+#mw-mf-overlay a:visited,
+#mw-mf-overlay a,
+.suggestions-result a,
+.suggestions-result a:visited,
+.suggestions-result a:hover {
+  text-decoration: none;
+  color: #666;
+}
+.suggestions-result a:active {
+  text-decoration: none;
+  color: #666;
+}
+#mw-mf-overlay li:hover,
+.suggestions-result:hover {
+  background-color: #ACD1E9;
+}
+#mw-mf-overlay li a,
+a.search-result-item {
+  display: block;
+}
+.search_bar .search {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 1.2em;
+  padding-right: 16px;
+  width: 100%;
+  vertical-align: middle;
+  /* don't use line height here as placeholder on ripple positions incorrectly */
+
+}
+#mw-mf-search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+#mw-mf-logo {
+  position: absolute;
+  height: 22px;
+  cursor: pointer;
+  left: 22px;
+  top: 9px;
+  width: 35px;
+}
+#zero-language-search.search_bar,
+#mw-mf-searchForm {
+  width: auto;
+  position: relative;
+  padding: 0 40px 0 73px;
+  /* right = width of #logo (35px) + 22px + 16px
+	left = width of close button + 22px */
+
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.full-screen-search #mw-mf-searchForm {
+  padding: 0 40px 0 54px;
+  /* right = width of #logo (18px) + 22px + 16px */
+
+}
+#zero-language-search.search_bar {
+  padding: 8px 32px 8px 0;
+}
+.goButton {
+  position: absolute;
+  right: 22px;
+  left: auto;
+  top: 0;
+  border: 0;
+  background: url(images/s.gif) no-repeat center left;
+  -webkit-background-size: 27px 25px;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  background-size: 27px 25px;
+  height: 40px;
+  width: 27px;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+.goButton img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 27px;
+}
+/* for browsers with images disabled
+reduce font size so alt text more legible */
+#remove-results,
+.goButton img,
+.clearlink {
+  font-size: 8px;
+}
+#mw-mf-searchForm a,
+#mw-mf-searchForm img {
+  border: 0;
+  vertical-align: middle;
+  position: absolute;
+}
+#mw-mf-search:focus {
+  outline: none;
+}
+#mw-mf-searchField {
+  width: auto;
+}
+#mw-mf-languageselection {
+  margin-right: 35px;
+}
+#results,
+#content_wrapper {
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+.noTransitions #content_wrapper,
+.noTransitions #results {
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+}
+#results {
+  display: none;
+  width: 100%;
+}
+.full-screen-search #content_wrapper {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+#content_wrapper,
+.full-screen-search #results {
+  opacity: 1;
+  height: auto;
+  display: block;
+}
+.full-screen-search #footer,
+.full-screen-search #zero-rated-banner-red,
+.full-screen-search #zero-rated-banner {
+  display: none;
+}
+#mw-mf-search::-webkit-search-decoration {
+  display: none;
+}
+#mw-mf-sq {
+  margin-right: 12px;
+}
+#mw-mf-search {
+  line-height: normal;
+  background: none;
+  /* remove fennec default background */
+
+}
+.full-screen-search #mw-mf-sq {
+  margin-right: 0;
+}
+.full-screen-search #mw-mf-logo,
+.full-screen-search .goButton {
+  display: none;
+}
+.full-screen-search #results {
+  left: 0;
+  width: 100% !important;
+  max-height: 99999px;
+  border: none;
+  z-index: 1;
+  background-color: #E6E6E6;
+  position: relative;
+  opacity: 1;
+}
+.full-screen-search .suggestions-results {
+  padding: 0;
+  position: relative;
+  padding-bottom: 20px;
+  font-size: 1.4em;
+  cursor: pointer;
+  margin: 0;
+  background-color: white;
+  list-style: none;
+}
+#mw-mf-overlay li,
+.full-screen-search .suggestions-result {
+  color: #666;
+  border: none;
+  position: relative;
+  border-bottom: solid 1px #999999;
+  border-bottom: solid 1px #eee;
+  padding: 12px 56px;
+  font-size: 0.9em;
+}
+.full-screen-search .suggestions-result a:visited {
+  color: #666;
+}
+#remove-results {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: url(images/arrow-left-beta.png) no-repeat scroll 0 0 transparent;
+  background-position: left center;
+  -webkit-background-size: auto 18px;
+  background-size: auto 18px;
+  cursor: pointer;
+  left: 24px;
+  top: 6px;
+  /* (#mw-mf-header height - background height) / 2 */
+
+  margin: 1px;
+  margin-top: -6px;
+  z-index: 99;
+  border: 0 solid;
+  overflow: hidden;
+}
+.full-screen-search #remove-results {
+  display: block;
+}
+/* samsung galaxy s gt-19000 */
+@media all and (max-width: 240px) {
+  #mw-mf-search {
+    font-size: 0.8em;
+  }
+}

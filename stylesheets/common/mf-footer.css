@@ -1,0 +1,165 @@
+/* FOOTER
+initially moved from beta_common.css in
+Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
+*/
+#footer {
+  -webkit-box-shadow: 0 -5px 30px 0 #dddddd;
+  -moz-box-shadow: 0 -5px 30px 0 #dddddd;
+  -o-box-shadow: 0 -5px 30px 0 #dddddd;
+  box-shadow: 0 -5px 30px 0 #dddddd;
+  padding: 12px 22px;
+  /* see content_wrapper padding
+		also see @media all and (max-width: 320px) */
+
+  border-top: solid 1px #aaa;
+  line-height: 24px;
+  position: relative;
+  clear: both;
+  /* cancel any floating in the content */
+
+}
+.navigationEnabled #footer {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+#footer .section_heading {
+  height: 24px;
+  display: block;
+  margin: 0;
+  font-size: 1em;
+}
+#footer ul {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+#footer ul li {
+  line-height: 1.4;
+}
+#footer .settings .left,
+#footer .settings .right {
+  width: 48%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+#footer .settings .left {
+  text-align: right;
+  padding-right: 2px;
+}
+#footer .settings .right {
+  text-align: left;
+  padding-left: 2px;
+}
+html[dir="rtl"] #footer .settings li:first-child .left:before,
+html[dir="ltr"] #footer .settings li:first-child .left:after {
+  content: " | ";
+  visibility: visible;
+}
+html[dir="rtl"] #footer .settings .left:before,
+html[dir="ltr"] #footer .settings .left:after {
+  content: " | ";
+  visibility: hidden;
+}
+#footer img.license {
+  margin-top: 3px;
+  /* (22px line height - 16px height) / 2) */
+
+  height: 16px;
+}
+#footer .license {
+  float: left;
+  margin-right: 4px;
+}
+#footer .toggleCopyright,
+#footer .license {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 22px;
+}
+#footer .toggleCopyright {
+  float: right;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#section_footer {
+  color: #333;
+}
+/* 
+disable animations in footer
+this is so that toggling can scroll it into view
+*/
+.togglingEnabled #footer .content_block {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  margin-top: 0;
+}
+#footer .content_block {
+  font-size: 0.7em;
+}
+#footer .notice .terms {
+  float: left;
+}
+#section_footer button {
+  height: 22px;
+}
+#content_footer {
+  font-size: 0.9em;
+  clear: both;
+}
+#footer .links {
+  text-align: center;
+}
+#footer .links li {
+  display: inline-block;
+  width: 25%;
+  font-size: 0.9em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.beta #footer .links li {
+  width: 33%;
+}
+.togglingEnabled #footer .more,
+.togglingEnabled #footer .openSection .less {
+  display: block;
+}
+#footer .more,
+#footer .less,
+#footer .openSection .more {
+  display: none;
+}
+@media all and (max-width: 320px) {
+  #footer {
+    padding: 12px 10px;
+  }
+  .goButton {
+    right: 12px !important;
+  }
+  #content_wrapper {
+    margin: 0 12px;
+  }
+}
+.page-loading #content_footer {
+  max-height: none;
+}
+@media all and (min-width: 330px) {
+  #footer .content_block {
+    font-size: 0.9em;
+  }
+  #footer .links li {
+    font-size: 1.1em;
+  }
+}
+@media all and (min-width: 500px) {
+  #footer .links li {
+    font-size: 1.2em;
+  }
+}

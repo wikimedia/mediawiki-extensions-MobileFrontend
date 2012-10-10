@@ -1,0 +1,109 @@
+/* the following definitions exist to deal with certain inline styles
+present in wikitext
+and MediaWiki:Common.css definitions
+This file should not need to exist
+IMPORTANT: do not use selectors containing attribute notation e.g. [style] [colspan]
+	as they are known to damage the ios app
+*/
+.navbox .hlist dd,
+.navbox .hlist dt,
+.navbox .hlist li {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+}
+/* force portals to use a one column layout on mobile */
+.mobile .portal-column-left-wide,
+.mobile .portal-column-left,
+.mobile .portal-column-right,
+.mobile .portal-column-right-narrow {
+  float: none;
+  width: 100%;
+}
+table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  border: 1px solid #cccccc;
+  padding: 3px;
+  margin-bottom: 15px;
+  float: none !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.collapsible td {
+  width: auto !important;
+}
+table.gallery .thumb {
+  border: 0;
+  padding: 0 !important;
+  width: auto !important;
+  margin: 0 auto;
+}
+table.geography td {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+table.navbox {
+  font-size: 0.9em;
+  width: 100% !important;
+}
+table.navbox div {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+table.gallery .gallerybox {
+  width: auto !important;
+  margin-bottom: -16px;
+}
+table.navbox div a,
+table.navbox span {
+  white-space: pre-wrap !important;
+}
+table.infobox {
+  text-align: center !important;
+}
+table.infobox td,
+table.infobox th {
+  border: 1px solid #cccccc;
+}
+.thumb .thumbinner {
+  margin: 5px auto;
+  max-width: 100%;
+}
+img.tex,
+.thumb img {
+  max-width: 100% !important;
+  width: auto !important;
+}
+.thumb .thumbcaption {
+  width: 100%;
+  margin: 5px 10px 0;
+  text-align: center;
+  width: auto !important;
+}
+/* bug 20030 */
+.thumb .noresize {
+  width: 100%;
+  overflow-x: auto;
+}
+.thumb .noresize img {
+  max-width: none !important;
+}
+/* bug 34878 */
+.reflist,
+.references-column-width,
+.references-column-count-2 {
+  -moz-column-count: auto !important;
+  -webkit-column-count: auto !important;
+  column-count: auto !important;
+  -webkit-column-width: auto !important;
+}
+.thumb .thumbinner > div {
+  float: none !important;
+  width: auto !important;
+  clear: both !important;
+}
