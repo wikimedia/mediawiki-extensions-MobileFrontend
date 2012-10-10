@@ -148,7 +148,7 @@ class ApiMobileView extends ApiBase {
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->noTransform, $this->file->getSha1() );
 			$cacheExpiry = 3600;
 		} else {
-			$parserOptions = ParserOptions::newFromContext( $this );
+			$parserOptions = $wp->makeParserOptions( $this );
 			$parserCacheKey = ParserCache::singleton()->getKey( $wp, $parserOptions );
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->noTransform, $parserCacheKey );
 		}
