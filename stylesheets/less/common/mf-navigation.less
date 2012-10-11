@@ -76,8 +76,7 @@
 	height: @headerHeight;
 	width: @searchBoxMarginLeft;
 	background-image: /* @embed */ url(images/menu/main.png);
-	-webkit-background-size: 24px 30px;
-	background-size: 24px 30px;
+	.background-size( 24px, 30px );
 	overflow: hidden;
 	position: absolute;
 	top: 0;
@@ -311,7 +310,7 @@ body.navigationEnabled {
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-indent: -999px;
-	background-size: 12px 16px;
+	.background-size( 12px, 16px );
 }
 
 html.navigationEnabled,

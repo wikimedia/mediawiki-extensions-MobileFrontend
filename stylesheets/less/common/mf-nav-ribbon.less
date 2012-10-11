@@ -6,11 +6,6 @@
 @ribbonwidth:50px;
 @ribbonclosedwidth: 20px;
 
-.background-size( @x:auto, @y:auto ) {
-	-webkit-background-size: @x @y;
-	background-size: @x @y;
-}
-
 #mw-mf-overlay .header {
 	background-color: @ribbonopencolor;
 }
@@ -50,8 +45,7 @@
 			float: left;
 			height: @topnavheight;
 			background: none;
-			-webkit-background-size: auto 32px;
-			background-size: auto 32px;
+			.background-size( auto, 32px );
 			border: 0;
 			text-indent: -999px;
 			width: @topnavheight;
@@ -103,8 +97,7 @@
 			height: auto;
 			position: absolute;
 			display: block;
-			-webkit-background-size: auto 22px;
-			background-size: auto 22px;
+			.background-size( auto, 22px );
 			background-image: url(images/ribbon/dots.png);
 			background-position: 6px center;
 		}

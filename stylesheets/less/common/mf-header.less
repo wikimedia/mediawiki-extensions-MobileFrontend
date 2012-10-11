@@ -3,6 +3,7 @@ moved from beta_common.css in
 Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 */
 @import "../mf-variables.less";
+@import "../mf-mixins.less";
 
 .full-screen-search .notEmpty .clearlink {
 	display: block;
@@ -17,8 +18,7 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 	margin: 0;
 	display: none;
 	background-position: right center;
-	-webkit-background-size: auto 12px;
-	background-size: auto 12px;
+	.background-size( auto, 12px );
 	cursor: pointer;
 	position: absolute;
 }
@@ -92,8 +92,7 @@ a.search-result-item {
 	top: 0;
 	border: 0;
 	background: url(images/s.gif) no-repeat center left;
-	-webkit-background-size: 27px 25px; /* use -webkit prefix for older android browsers eg. nexus 1 */
-	background-size: 27px 25px;
+	.background-size( 27px, 25px );
 	height: 40px;
 	width: 27px;
 	padding-bottom: 0;
@@ -241,8 +240,7 @@ reduce font size so alt text more legible */
 	line-height: @headerHeight;
 	background: url(images/arrow-left-beta.png) no-repeat scroll 0 0 transparent;
 	background-position: center center;
-	-webkit-background-size: auto 18px;
-	background-size: auto 18px;
+	.background-size( auto, 18px );
 	cursor: pointer;
 	z-index: 99;
 	border: 0 solid;

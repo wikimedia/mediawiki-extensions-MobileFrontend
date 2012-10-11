@@ -67,6 +67,8 @@
   height: 45px;
   width: 40px;
   background-image: /* @embed */ url(images/menu/main.png);
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
   -webkit-background-size: 24px 30px;
   background-size: 24px 30px;
   overflow: hidden;
@@ -147,6 +149,8 @@
   padding-left: 32px;
   line-height: 22px;
   background-repeat: no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
   background-position: 0px 12px;
@@ -274,6 +278,9 @@ body.navigationEnabled {
   background-repeat: no-repeat;
   background-position: center center;
   text-indent: -999px;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -webkit-background-size: 12px 16px;
   background-size: 12px 16px;
 }
 html.navigationEnabled,
