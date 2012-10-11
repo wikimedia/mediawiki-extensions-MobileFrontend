@@ -35,6 +35,7 @@ var opensearch = ( function() {
 		if ( !rrd ) {
 			rrd = document.createElement( 'button' );
 			rrd.setAttribute( 'id', 'remove-results' );
+			u( rrd ).addClass( 'escapeOverlay' );
 			u( rrd ).bind( 'click',  removeResults );
 			u( rrd ).text( message( 'remove-results' ) );
 			header.insertBefore( rrd, header.firstChild );

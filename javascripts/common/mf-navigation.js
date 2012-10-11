@@ -32,6 +32,7 @@ MobileFrontend.navigation = (function( $ ) {
 		$( overlay ).empty();
 		$( '<div class="header">' ).click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
 		$( '<button id="close"></button>' ).text( message( 'collapse-section' ) ).
+			addClass( 'escapeOverlay' ).
 			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
 		if( typeof heading === 'string' ) {
 			heading = $( '<h2 />' ).text( heading );
