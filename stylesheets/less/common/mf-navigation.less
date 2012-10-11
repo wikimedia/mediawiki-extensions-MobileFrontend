@@ -313,22 +313,18 @@ body.navigationEnabled {
 	.background-size( 12px, 16px );
 }
 
-html.navigationEnabled,
-.navigationEnabled body,
-.navigationEnabled #mw-mf-viewport,
-.navigationEnabled #mw-page-center {
-	overflow: hidden;
-	height: 100%;
+html.navigationEnabled {
+	body,
+	#mw-mf-viewport,
+	#mw-mf-page-center {
+		overflow: hidden;
+		height: 100%;
+	}
 }
 
 html,
 body {
 	height: 100%;
-}
-
-html.supportsPositionFixed,
-body {
-	height: auto;
 }
 
 #mw-mf-page-left,
@@ -350,11 +346,6 @@ body {
 #mw-mf-overlay li.mw-mf-overlay-header {
 	background-color: #F1F1F1;
 }
-
-.supportsPositionFixed #mw-mf-page-center {
-	min-height: none !important;
-}
-
 
 #mw-mf-searchForm {
 	padding: 0 8px 0 40px;

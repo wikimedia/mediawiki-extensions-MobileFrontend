@@ -283,20 +283,15 @@ body.navigationEnabled {
   -webkit-background-size: 12px 16px;
   background-size: 12px 16px;
 }
-html.navigationEnabled,
-.navigationEnabled body,
-.navigationEnabled #mw-mf-viewport,
-.navigationEnabled #mw-page-center {
+html.navigationEnabled body,
+html.navigationEnabled #mw-mf-viewport,
+html.navigationEnabled #mw-mf-page-center {
   overflow: hidden;
   height: 100%;
 }
 html,
 body {
   height: 100%;
-}
-html.supportsPositionFixed,
-body {
-  height: auto;
 }
 #mw-mf-page-left,
 #mw-mf-page-center {
@@ -313,9 +308,6 @@ body {
 }
 #mw-mf-overlay li.mw-mf-overlay-header {
   background-color: #F1F1F1;
-}
-.supportsPositionFixed #mw-mf-page-center {
-  min-height: none !important;
 }
 #mw-mf-searchForm {
   padding: 0 8px 0 40px;
