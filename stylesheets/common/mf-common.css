@@ -321,6 +321,14 @@ table.floatright {
   background: none !important;
   padding: 0 !important;
 }
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
 h1,
 h2,
 h3,
