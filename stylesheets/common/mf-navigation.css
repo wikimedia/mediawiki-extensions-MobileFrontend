@@ -64,19 +64,19 @@
 }
 #mw-mf-main-menu-button {
   display: inline-block;
-  height: 30px;
-  width: 24px;
+  height: 45px;
+  width: 40px;
   background-image: /* @embed */ url(images/menu/main.png);
   -webkit-background-size: 24px 30px;
   background-size: 24px 30px;
   overflow: hidden;
   position: absolute;
-  top: 7px;
+  top: 0;
   background-repeat: no-repeat;
   z-index: 2;
-  left: 12px;
-  padding-left: 10px;
+  left: 0;
   border-radius: 5px 5px 5px;
+  background-position: center center;
 }
 #mw-mf-main-menu-button:active {
   background-color: #4C4C4C;
@@ -214,7 +214,7 @@ body.navigationEnabled {
   display: none;
 }
 #mw-mf-overlay li {
-  padding-left: 22px;
+  padding-left: 40px;
   text-align: left;
 }
 #mw-mf-overlay .mw-mf-overlay-footer a {
@@ -224,12 +224,12 @@ body.navigationEnabled {
   display: block;
 }
 .overlay .header {
-  line-height: 40px;
+  line-height: 45px;
   border-bottom: solid 1px #CCC;
   padding: 0;
-  padding-left: 56px;
+  padding-left: 40px;
   color: #666;
-  height: 40px;
+  height: 45px;
   margin: 0;
   padding-bottom: 0;
 }
@@ -264,19 +264,17 @@ body.navigationEnabled {
   cursor: pointer;
   position: absolute;
   border: none;
-  height: 27px;
+  height: 45px;
+  width: 40px;
   border-radius: 5px;
-  top: 6px;
-  left: 16px;
+  top: 0;
+  left: 0;
   background: none;
   background-image: url(images/arrow-left-2.png);
   background-repeat: no-repeat;
   background-position: center center;
   text-indent: -999px;
   background-size: 12px 16px;
-}
-#remove-results {
-  top: 14px;
 }
 html.navigationEnabled,
 .navigationEnabled body,
@@ -312,23 +310,14 @@ body {
 .supportsPositionFixed #mw-mf-page-center {
   min-height: none !important;
 }
-@media all and (max-width: 320px) {
-  #mw-mf-searchForm {
-    padding: 0 8px 0 40px;
-  }
-  .full-screen-search .suggestions-result {
-    padding-left: 40px;
-  }
-  .full-screen-search #mw-mf-searchForm {
-    padding: 0 8px 0 40px;
-  }
-  #remove-results,
-  #mw-mf-main-menu-button {
-    left: 2px;
-  }
-  #mw-mf-page-menu-button {
-    right: 12px;
-  }
+#mw-mf-searchForm {
+  padding: 0 8px 0 40px;
+}
+.full-screen-search .suggestions-result {
+  padding-left: 40px;
+}
+.full-screen-search #mw-mf-searchForm {
+  padding: 0 8px 0 40px;
 }
 @media all and (max-width: 240px) {
   #mw-mf-search {

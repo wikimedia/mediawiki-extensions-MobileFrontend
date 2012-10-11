@@ -33,11 +33,10 @@ var opensearch = ( function() {
 
 		rrd = document.getElementById( 'remove-results' );
 		if ( !rrd ) {
-			rrd = document.createElement( 'img' );
+			rrd = document.createElement( 'button' );
 			rrd.setAttribute( 'id', 'remove-results' );
 			u( rrd ).bind( 'click',  removeResults );
-			rrd.setAttribute( 'src', blankImg );
-			rrd.setAttribute( 'alt', message( 'remove-results' ) );
+			u( rrd ).text( message( 'remove-results' ) );
 			header.insertBefore( rrd, header.firstChild );
 		}
 	}

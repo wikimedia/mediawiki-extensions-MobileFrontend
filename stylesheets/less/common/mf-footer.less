@@ -2,6 +2,8 @@
 initially moved from beta_common.css in
 Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 */
+@import "../mf-variables.less";
+
 #footer {
 	-webkit-box-shadow: 0 -5px 30px 0 #ddd;
 	-moz-box-shadow: 0 -5px 30px 0 #ddd;
@@ -13,6 +15,10 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 	line-height: 24px;
 	position: relative;
 	clear: both; /* cancel any floating in the content */
+}
+
+.beta #footer {
+	padding: 12px @contentMarginRight 12px @contentMarginLeft;
 }
 
 .navigationEnabled #footer {

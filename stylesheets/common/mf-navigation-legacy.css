@@ -1,3 +1,12 @@
+#remove-results {
+  height: 40px;
+  width: 54px;
+}
+.full-screen-search #mw-mf-searchForm {
+  padding: 0 40px 0 54px;
+  /* right = width of #logo (18px) + 22px + 16px */
+
+}
 #mw-mf-search.searching {
   opacity: 0.2;
 }

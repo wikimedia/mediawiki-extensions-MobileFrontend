@@ -18,6 +18,9 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
   /* cancel any floating in the content */
 
 }
+.beta #footer {
+  padding: 12px 28px 12px 28px;
+}
 .navigationEnabled #footer {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
