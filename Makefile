@@ -9,6 +9,7 @@ less:
 	lessc stylesheets/less/common/mf-header.less > stylesheets/common/mf-header.css
 	lessc stylesheets/less/common/mf-navigation-legacy.less > stylesheets/common/mf-navigation-legacy.css
 	lessc stylesheets/less/common/mf-navigation.less > stylesheets/common/mf-navigation.css
+	lessc stylesheets/less/modules/mf-toggle.less > stylesheets/modules/mf-toggle.css
 
 remotes:
 	curl -Lo javascripts/externals/eventlog.js \
