@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABAH///+w\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-11T19:40:59Z",
+      "side": 1,
+      "message": "From Munaf\u0027s specs it looks like h3 is the only one that is supposed to be italic - unless I am missing something?",
+      "revId": "696d37d60b84f152c4c79f9f902ecdbc25d70124",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
