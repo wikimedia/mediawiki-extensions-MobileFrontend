@@ -9,3 +9,29 @@
 	-webkit-background-size: @width @height;
 	background-size: @width @height;
 }
+
+.overlayListItem() {
+	color: #666;
+	border: none;
+	position: relative;
+	border-bottom: solid 1px #999999;
+	border-bottom: solid 1px #eee;
+	padding: 12px @searchBoxMarginLeft;
+	font-size: 0.9em;
+	a {
+		display: block;
+		text-decoration: none;
+		color: #666;
+
+		&:active,
+		&:hover,
+		&:visited {
+			text-decoration: none;
+			color: #666;
+		}
+	}
+
+	&:hover {
+		background-color: #ACD1E9;
+	}
+}

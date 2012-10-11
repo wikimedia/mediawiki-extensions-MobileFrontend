@@ -11,63 +11,8 @@
 }
 
 #mw-mf-header form,
-#mw-mf-search,
 #mw-mf-sq {
 	height: 45px;
-}
-
-#mw-mf-searchForm {
-	padding: 0 8px 0 50px; /* check mw-mf-logo */
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-}
-
-/* visual indication that search is happening */
-#mw-mf-search.searching {
-	background-color: #eee;
-}
-
-.full-screen-search #mw-mf-searchForm {
-	padding: 0 8px 0 52px;
-}
-
-.overlay #footer,
-.full-screen-search #section_nav,
-.full-screen-search #content_nav {
-	display: none !important;
-}
-
-.jsEnabled #mw-mf-language-selection,
-.overlay #mw-mf-viewport,
-.full-screen-search #mw-mf-page-left,
-.jsEnabled .full-screen-search #mw-mf-page-menu-button,
-.jsEnabled .full-screen-search #mw-mf-main-menu-button,
-.full-screen-search #mw-mf-main-menu-button {
-	display: none;
-}
-
-.mw-mf-search,
-#mw-mf-search {
-	line-height: normal;
-	background: none;
-	border: solid 1px #D9D9D9;
-	height: 30px;
-	margin-top: 8px;
-	background-color: white;
-	padding-left: 4px;
-	-webkit-appearance: none;
-	padding-right: 0;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	border-radius: 0; /* reset any browsers that add this by default e.g. iphone */
-}
-
-.mw-mf-search {
-	margin-top: 0;
-	width: 99%;
-}
-
-#mw-mf-search::-webkit-search-cancel-button {
-	-webkit-appearance: none;
 }
 
 #mw-mf-main-menu-button {
@@ -106,7 +51,6 @@
 
 .overlay .header,
 #mw-mf-overlay .header,
-.full-screen-search #mw-mf-header,
 #mw-mf-header {
 	z-index: 2;
 	color: white;
@@ -236,6 +180,7 @@ body.navigationEnabled {
 	display: block;
 }
 
+.jsEnabled #mw-mf-language-selection,
 #mw-mf-overlay {
 	display: none;
 }
@@ -247,6 +192,28 @@ body.navigationEnabled {
 
 #mw-mf-overlay .mw-mf-overlay-footer a {
 	display: inline;
+}
+
+button.escapeOverlay {
+	display: none;
+}
+
+html.overlay {
+	#mw-mf-viewport {
+		display: none;
+	}
+
+	button.escapeOverlay {
+		display: block;
+	}
+
+	#footer {
+		display: none !important;
+	}
+
+	li {
+		.overlayListItem();
+	}
 }
 
 .overlay #mw-mf-overlay {
@@ -294,8 +261,7 @@ body.navigationEnabled {
 	list-style: none;
 }
 
-#remove-results,
-.overlay #close {
+button.escapeOverlay {
 	cursor: pointer;
 	position: absolute;
 	border: none;
@@ -310,6 +276,7 @@ body.navigationEnabled {
 	background-position: center center;
 	text-indent: -999px;
 	.background-size( 12px, 16px );
+	z-index: 2;
 }
 
 html.navigationEnabled {
@@ -346,16 +313,8 @@ body {
 	background-color: #F1F1F1;
 }
 
-#mw-mf-searchForm {
-	padding: 0 8px 0 40px;
-}
-
-.full-screen-search .suggestions-result {
-	padding-left: 40px;
-}
-
-.full-screen-search #mw-mf-searchForm {
-	padding: 0 8px 0 40px;
+.supportsPositionFixed #mw-mf-page-center {
+	min-height: none !important;
 }
 
 @media all and (max-width: 240px) {
@@ -397,5 +356,3 @@ TODO: make this the default and add icons with media queries
 	left: 80%;
 	right: -80%;
 }
-
-

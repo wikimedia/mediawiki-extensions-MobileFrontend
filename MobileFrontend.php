@@ -111,7 +111,7 @@ $wgResourceModules['mobile'] = array(
 	'styles' => array( 'stylesheets/common/reset.css', 'stylesheets/common/mf-common.css', 'stylesheets/common/mf-footer.css',
 		'stylesheets/specials/contact-us.css', 'stylesheets/modules/mf-banner.css',
 		'stylesheets/specials/mf-settings.css',
-		'stylesheets/common/mf-header.css', 'stylesheets/modules/mf-toggle.css',
+		'stylesheets/modules/mf-toggle.css',
 		'stylesheets/common/mf-hacks.css' ),
 	'scripts' => array( 'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
@@ -142,8 +142,10 @@ $wgResourceModules['mobile.beta.jquery.eventlog'] = array(
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-navigation-legacy.css';
+$wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-header.css';
 $wgResourceModules['mobile']['scripts'][] = 'javascripts/common/mf-navigation-legacy.js';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/common/mf-navigation.css';
+$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-search.css';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-cleanuptemplates.css';
 
 $wgResourceModules['mobile.filePage'] = array(
