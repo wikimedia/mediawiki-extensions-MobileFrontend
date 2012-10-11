@@ -1,0 +1,92 @@
+@import "../mf-variables.less";
+
+html {
+	font-size: 100%; /* default browser size is 16px (12pt - our @baseFontSize) */
+}
+
+@bodyLineHeight: ( @baseFontSize / 3 ) * 4; /* = 16pt */
+@headingLineHeight: 24pt;
+
+body {
+	font-family: @fontFamily;
+	font-size: @baseFontSize;
+	line-height: @bodyLineHeight;
+	color: #252525;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Georgia", serif;
+	margin-top: 14pt;
+	margin-bottom: 9pt;
+	button {
+		height: @headingLineHeight;
+	}
+}
+
+p {
+	margin-bottom: 8pt;
+}
+
+@2xBaseFontSize: ( @baseFontSize * 2 );
+h1 {
+	font-size: @2xBaseFontSize;
+	line-height: @headingLineHeight;
+	color: black;
+}
+
+h2 {
+	font-size: ( @baseFontSize / 2 ) * 3; /* 18pt */
+	line-height: @headingLineHeight;
+}
+
+h3 {
+	font-size: ( @baseFontSize / 6 ) * 7; /* 14pt */
+	line-height: @headingLineHeight;
+	font-style: italic;
+	margin-bottom: 8pt;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+sup {
+	vertical-align: super;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sub,
+sup {
+	font-size: ( 3 * @baseFontSize / 4 );
+}
+
+#content_wrapper {
+	margin: 0 @contentMarginRight 0 @contentMarginLeft;
+
+	.section {
+		h3:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.thumb {
+		border: 1px solid #cccccc;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		background: #f9f9f9;
+		margin: 15px 0 15px 0;
+		text-align: center;
+	}
+}
+
+input.search {
+	font-family: @fontFamily;
+	font-size: @baseFontSize;
+}
+
+#footer {
+	margin-top: 5px;
+}

@@ -227,6 +227,8 @@ html.overlay li:hover {
 .overlay .header h2 {
   margin: 0;
   padding: 0;
+  line-height: 45px;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 .overlay div.content input {
   margin: 22px 0 8px 22px;
@@ -242,7 +244,6 @@ html.overlay li:hover {
   opacity: 1;
   padding: 0;
   padding-bottom: 20px;
-  font-size: 1.4em;
   cursor: pointer;
   margin: 0;
   list-style: none;

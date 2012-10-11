@@ -2,18 +2,12 @@
 moved from beta_common.css in
 Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 */
-.section_heading {
-  cursor: pointer;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
 .section_heading button {
   display: none;
   /* for non-js browsers */
 
   overflow: hidden;
   width: 27px;
-  height: 16px;
   border: none;
   text-indent: -999px;
   float: right;
@@ -43,9 +37,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 .togglingEnabled .section_heading button {
   background-image: url(images/show.png);
-}
-.togglingEnabled h1.section_heading button {
-  height: 1.7em;
 }
 .openSection button {
   opacity: 1;
@@ -95,13 +86,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
   width: 1px;
 }
 #content_wrapper .section {
-  padding: 14px 0 0 0;
-  /* effects #footer left,right padding */
-
   clear: both;
   border-bottom: solid 1px #E2E3E4;
-}
-#content_wrapper .section h2 {
-  margin: 0;
-  margin-bottom: 14px;
 }
