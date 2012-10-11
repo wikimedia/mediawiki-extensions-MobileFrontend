@@ -8920,7 +8920,9 @@ $messages['te'] = array(
 	'mobile-frontend-page-menu-contents-heading' => 'విషయాలు',
 );
 
-/** Tajik (Cyrillic script) (тоҷикӣ) */
+/** Tajik (Cyrillic script) (тоҷикӣ)
+ * @author Ibrahim
+ */
 $messages['tg-cyrl'] = array(
 	'mobile-frontend-search-submit' => 'Бирав',
 	'mobile-frontend-home-button' => 'Хона',
@@ -8929,7 +8931,14 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-show-button' => 'Намоиш',
 	'mobile-frontend-hide-button' => 'Нуҳуфтан',
 	'mobile-frontend-regular-site' => 'Намоиши ин саҳифа дар Википедиаи маъмулӣ',
+	'mobile-frontend-view-desktop' => 'Компютер',
+	'mobile-frontend-view-mobile' => 'Мобил',
+	'mobile-frontend-off' => 'Хомӯш',
+	'mobile-frontend-on' => 'Равшан',
 	'mobile-frontend-featured-article' => 'Мақолаи Баргузидаи Имрӯз',
+	'mobile-frontend-footer-less' => 'камтар',
+	'mobile-frontend-footer-license' => 'Мӯҳтаво таҳти иҷозатномаи <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> дастрас аст.',
+	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Шароити Истифода</a>',
 );
 
 /** Tajik (Latin script) (tojikī) */
@@ -9594,7 +9603,7 @@ $messages['yi'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'טעכנישער פראבלעם',
 	'mobile-frontend-leave-feedback-general-section-header' => 'אַלגעמיין',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'ארטיקל פֿידבעק',
-	'mobile-frontend-leave-feedback-email-body' => 'ביטע שרײַבט אײַער ע־פאסט אדרעס איבער דער שורה.',
+	'mobile-frontend-leave-feedback-email-body' => '!ביטע שילדערט דעם פראבלעם וואס איר האט מיט {{SITENAME}} איבער דער שורה. ליידער קענען מיר נישט ענטפערן יעדע מעלדונג וואס מיר באקומען.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'טעכנישער פראבלעם',
 	'mobile-frontend-leave-feedback-general-link-text' => 'אלגעמיינער פֿידבעק',
 	'mobile-frontend-leave-feedback-article-other-link-text' => 'וועגן אן אנדער פראבלעם',
@@ -9636,6 +9645,8 @@ $messages['yi'] = array(
 	'mobile-frontend-page-menu-history' => 'היסטאריע',
 	'mobile-frontend-page-menu-contents-heading' => 'אינהאַלט',
 	'mobile-frontend-page-menu-language-heading' => 'לייענט דעם ארטיקל אין',
+	'mobile-frontend-meta-data-issues-header' => 'פֿארבעסערן דעם ארטיקל',
+	'mobile-frontend-meta-data-issues' => 'דער ארטיקל האט פראגעס',
 );
 
 /** Yoruba (Yorùbá)
