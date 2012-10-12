@@ -13,7 +13,7 @@ M.languages = (function() {
 			$languages = $( '#mw-mf-language-selection a' );
 
 		$( '<li />' ).addClass( 'mw-mf-overlay-header' ).
-			text( M.message( 'mobile-frontend-language-header' ).replace( '$1', $languages.length ) ).appendTo( ul );
+			text( $( '#content_languages p' ).text() ).appendTo( ul );
 		$languages.each( function(i, el) {
 			li = $( '<li />' ).appendTo( ul )[0];
 			a = $( '<a />' ).attr( 'href', $( el ).attr( 'href' ) ).text( $( el ).text() ).appendTo( li );

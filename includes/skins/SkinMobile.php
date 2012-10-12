@@ -297,12 +297,14 @@ class SkinMobile extends SkinMobileBase {
 			}
 		}
 		$output .= $inBeta ? Html::closeElement( 'ul' ) : Html::closeElement( 'select' );
+		$msg = wfMessage( 'mobile-frontend-language-header', count( $languageUrls ) - 1 )->text();
 		if ( $inBeta ) {
 			$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 			$output = <<<HTML
 			<div class="section">
 				<h2 class="section_heading" id="section_languages">{$heading}</h2>
 				<div class="content_block" id="content_languages">
+					<p>{$msg}</p>
 					{$output}
 				</div>
 			</div>
@@ -550,8 +552,6 @@ class SkinMobileTemplate extends BaseTemplate {
 				'contents-heading' => wfMessage( 'mobile-frontend-page-menu-contents-heading' )->text(),
 				'language-heading' => wfMessage( 'mobile-frontend-page-menu-language-heading' )->text(),
 				'mobile-frontend-close-section' => wfMessage( 'mobile-frontend-close-section' )->text(),
-				'mobile-frontend-language-header' => wfMessage( 'mobile-frontend-language-header',
-					$wgLang->formatNum( $this->data['languageCount'] ) )->text(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
 					array(
 						'href' => SpecialPage::getTitleFor( 'MobileOptions/Language' )->getLocalUrl(),
