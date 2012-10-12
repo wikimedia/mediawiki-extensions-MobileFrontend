@@ -689,6 +689,7 @@ $messages['ast'] = array(
 	'mobile-frontend-disable-images' => 'Desactivar les imaxes nel sitiu pa móvil',
 	'mobile-frontend-enable-images' => 'Activar les imaxes nel sitiu pa móvil',
 	'mobile-frontend-toggle-images' => 'Imaxes $1 / $2',
+	'mobile-frontend-missing-image' => 'Imaxe',
 	'mobile-frontend-off' => 'DESACTIVAES',
 	'mobile-frontend-on' => 'ACTIVAES',
 	'mobile-frontend-footer-contributors' => 'Artículu de <a href="$1">collaboradores</a> como tu',
@@ -705,7 +706,7 @@ $messages['ast'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema técnicu',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Xeneral',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => "Comentarios sobro l'artículu",
-	'mobile-frontend-leave-feedback-email-body' => "Por favor escribi la to direición de corréu electrónicu encima d'esta llinia.",
+	'mobile-frontend-leave-feedback-email-body' => "Describi la clase problema que tienes con {{SITENAME}} encima d'esta llinia. Por favor, ten en cuenta que nun podemos responder a cada mensaxe que recibimos.",
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problema técnicu',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Comentarios xenerales',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Tocante a min, una persona, o una empresa a la que represento',
@@ -723,7 +724,7 @@ $messages['ast'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Hebo un fallu al procesar el to mensaxe. Torna a intentalo más sero.',
 	'mobile-frontend-language' => 'Llingua:',
 	'mobile-frontend-language-header' => 'Esti artículu ta disponible en  $1 {{PLURAL:$1|llingua|llingües}}',
-	'mobile-frontend-language-footer' => "{{SITENAME}} tá disponible n'otres llingües.",
+	'mobile-frontend-language-footer' => 'Nota: Esti artículu pue que nun tea na to llingua preferida. Pues ver les llingües que sofita {{SITENAME}} calcando equí.',
 	'mobile-frontend-language-site-choose' => 'Guetar llingua',
 	'mobile-frontend-language-site-nomatches' => 'Nun coincide denguna llingua',
 	'mobile-frontend-username' => "Nome d'usuariu:",
@@ -755,6 +756,8 @@ $messages['ast'] = array(
 	'mobile-frontend-page-menu-history' => 'Historial',
 	'mobile-frontend-page-menu-contents-heading' => 'Conteníu',
 	'mobile-frontend-page-menu-language-heading' => 'Lleer esti artículu en',
+	'mobile-frontend-meta-data-issues-header' => 'Ameyorar esti artículu',
+	'mobile-frontend-meta-data-issues' => 'Esti artículu tien problemes',
 );
 
 /** Azerbaijani (azərbaycanca)
@@ -1458,6 +1461,7 @@ $messages['cs'] = array(
 	'mobile-frontend-disable-images' => 'Vypnout v mobilní verzi obrázky',
 	'mobile-frontend-enable-images' => 'Zapnout v mobilní verzi obrázky',
 	'mobile-frontend-toggle-images' => 'Obrázky $1 / $2',
+	'mobile-frontend-missing-image' => 'Obrázek',
 	'mobile-frontend-off' => 'VYP',
 	'mobile-frontend-on' => 'ZAP',
 	'mobile-frontend-footer-contributors' => 'Článek od <a href="$1">přispěvatelů</a> jako vy',
@@ -1474,7 +1478,7 @@ $messages['cs'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technický problém',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Obecné',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Odezva k článku',
-	'mobile-frontend-leave-feedback-email-body' => 'Svůj e-mail prosíme napište nad tento řádek.',
+	'mobile-frontend-leave-feedback-email-body' => 'Nad tímto řádkem popište problém, na který jste na {{grammar:6sg|{{SITENAME}}}} narazili. Uvědomte si prosím, že nemůžeme odpovídat na každou zprávu, kterou obdržíme.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technický problém',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Obecný názor',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Týkající se mě, osoby nebo společnosti, kterou zastupuji',
@@ -1493,7 +1497,7 @@ $messages['cs'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Při zpracování vaší zprávy došlo k chybě. Zkuste to znovu o něco později.',
 	'mobile-frontend-language' => 'Jazyk:',
 	'mobile-frontend-language-header' => 'Tento článek je k dispozici v $1 {{PLURAL:$1|jazyce|jazycích}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} existuje v dalších jazycích.',
+	'mobile-frontend-language-footer' => 'Poznámka: Tento článek nemusí být ve vašem preferovaném jazyce. Pokud chcete, můžete se podívat, jaké další jazyky {{SITENAME}} podporuje.',
 	'mobile-frontend-language-site-choose' => 'Hledání jazyka',
 	'mobile-frontend-language-site-nomatches' => 'Žádné odpovídající jazyky',
 	'mobile-frontend-username' => 'Uživatelské jméno:',
@@ -1525,6 +1529,8 @@ $messages['cs'] = array(
 	'mobile-frontend-page-menu-history' => 'Historie',
 	'mobile-frontend-page-menu-contents-heading' => 'Obsah',
 	'mobile-frontend-page-menu-language-heading' => 'Přečíst si tento článek v',
+	'mobile-frontend-meta-data-issues-header' => 'Vylepšete tento článek',
+	'mobile-frontend-meta-data-issues' => 'Tento článek má nedostatky',
 );
 
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -1649,6 +1655,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Als-Holder
  * @author Filzstift
  * @author Geitost
  * @author Kghbln
@@ -1704,7 +1711,7 @@ $messages['de'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technisches Problem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Allgemein',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Rückmeldung zum Artikel',
-	'mobile-frontend-leave-feedback-email-body' => 'Bitte beschreibe das Problem, dass du bei {{SITENAME}} entdeckt hast, oberhalb dieser Linie. Bitte bedenke, dass wir nicht auf jede Nachricht antworten können, die wir erhalten.',
+	'mobile-frontend-leave-feedback-email-body' => 'Bitte beschreibe das Problem, das du bei {{SITENAME}} entdeckt hast, oberhalb dieser Linie. Bitte bedenke, dass wir nicht auf jede Nachricht antworten können, die wir erhalten.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technisches Problem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Allgemeine Rückmeldung',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Zu mir, einer Person oder einem Unternehmen, das ich vertrete',
@@ -3276,7 +3283,7 @@ $messages['gsw'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technischs Problem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Allgmein',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Ruggmäldig zum Artikel',
-	'mobile-frontend-leave-feedback-email-body' => 'Bitte schryyb dyn E-Mail ob dere Zyyle.',
+	'mobile-frontend-leave-feedback-email-body' => 'Bitte bschryb s Problem, wu Du bi {{SITENAME}} entdeckt hesch, oberhalb vu däre Lischt. Bitte dänk dra, dass mir nit uf jedi Nochricht chenne Antwort gee, wu mit iberchemme.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technischs Problem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Allgemeini Ruggmäldig',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Zue mir, enere Person oder eme Unternämme, wonni vertritt.',
@@ -3294,11 +3301,14 @@ $messages['gsw'] = array(
 	'mobile-frontend-leave-feedback-post-error' => "S het bim Verarbeite vo dynrer Noochricht en Fääler gee. Bitte probier's spööter no emool.",
 	'mobile-frontend-language' => 'Sproch:',
 	'mobile-frontend-language-header' => 'De Artikel isch uff {{PLURAL:$1|einere Sprooch|$1 Sprooche}} verfiegbar',
+	'mobile-frontend-language-footer' => 'Hiiweis: Dää Artikel isch villicht nit in Dyre Sproch gschribe. Du chasch aaluege, weli Sproche {{SITENAME}} unterstitzt, indäm Du do klicksch.',
+	'mobile-frontend-language-site-choose' => 'Sproch sueche',
+	'mobile-frontend-language-site-nomatches' => 'S git kei Sproche, wu zue Dyre Suech passe.',
 	'mobile-frontend-username' => 'Benutzername:',
 	'mobile-frontend-password' => 'Passwort:',
 	'mobile-frontend-login' => 'Aamälde',
 	'mobile-frontend-logout' => 'Abmälde',
-	'mobile-frontend-placeholder' => 'Gib Dyy Suechi do yy ...',
+	'mobile-frontend-placeholder' => '{{SITENAME}} dursueche',
 	'mobile-frontend-search-help' => 'Gib obe de Suechbegriff yy. Artikelname, wo passe, werde deno doo aazeigt.',
 	'mobile-frontend-dismiss-notification' => 'die Benochrichtigung zuemache',
 	'mobile-frontend-clear-search' => 'Lääre',
@@ -3316,10 +3326,15 @@ $messages['gsw'] = array(
 	'mobile-frontend-main-menu-nearby' => 'In de Nööchi',
 	'mobile-frontend-main-menu-settings' => 'Yystellige',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobilyystellige',
+	'mobile-frontend-settings-site-header' => '{{SITENAME}}-Sproche',
+	'mobile-frontend-settings-site-description' => '{{SITENAME}} stoht in {{PLURAL:$1|ere Sproch|$1 Sproche}} z Verfiegig. Alli verfiegbare Sprochversione sin unten ufgfiert.',
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-page-menu-contents' => 'Inhalt',
+	'mobile-frontend-page-menu-history' => 'Versione',
 	'mobile-frontend-page-menu-contents-heading' => 'Inhalt',
 	'mobile-frontend-page-menu-language-heading' => 'De Artikel läse uff',
+	'mobile-frontend-meta-data-issues-header' => 'Dää Artikel verbessere',
+	'mobile-frontend-meta-data-issues' => 'Mit däm Artikel git s Probläm',
 );
 
 /** Gujarati (ગુજરાતી)
