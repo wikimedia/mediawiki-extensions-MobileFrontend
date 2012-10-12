@@ -264,7 +264,7 @@ class SkinMobile extends SkinMobileBase {
 		$inBeta = $context->isBetaGroupMember();
 
 		$output = $inBeta ?
-			Html::openElement( 'select' ) :
+			Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) ) :
 			Html::openElement( 'select',
 				array( 'id' => 'languageselection' ) );
 		foreach ( $languageUrls as $languageUrl ) {
@@ -278,23 +278,43 @@ class SkinMobile extends SkinMobileBase {
 						urlencode( $languageUrlHref );
 				}
 			}
-			if ( $languageUrl['lang'] == $wgLanguageCode ) {
-				$output .=	Html::element( 'option',
-					array( 'value' => $languageUrlHref, 'selected' => 'selected' ),
-					$languageUrlLanguage );
+			if ( $inBeta ) {
+				if ( $languageUrl['lang'] != $wgLanguageCode ) {
+					$output .= Html::openElement( 'li' ) . Html::element( 'a',
+						array( 'href' => $languageUrlHref ),
+						$languageUrlLanguage ) . Html::closeElement( 'li' );
+				}
 			} else {
-				$output .=	Html::element( 'option',
-					array( 'value' => $languageUrlHref ),
-					$languageUrlLanguage );
+				if ( $languageUrl['lang'] == $wgLanguageCode ) {
+					$output .= Html::element( 'option',
+						array( 'value' => $languageUrlHref, 'selected' => 'selected' ),
+						$languageUrlLanguage );
+				} else {
+					$output .= Html::element( 'option',
+						array( 'value' => $languageUrlHref ),
+						$languageUrlLanguage );
+				}
 			}
 		}
-		$output .= Html::closeElement( 'select' );
-		$output = <<<HTML
-	<div id="mw-mf-language-selection">
-		{$this->msg( 'mobile-frontend-language' )->escaped()}<br/>
-		{$output}
-	</div>
+		$output .= $inBeta ? Html::closeElement( 'ul' ) : Html::closeElement( 'select' );
+		if ( $inBeta ) {
+			$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
+			$output = <<<HTML
+			<div class="section">
+				<h2 class="section_heading" id="section_languages">{$heading}</h2>
+				<div class="content_block" id="content_languages">
+					{$output}
+				</div>
+			</div>
 HTML;
+		} else {
+			$output = <<<HTML
+		<div id="mw-mf-language-selection">
+			{$this->msg( 'mobile-frontend-language' )->escaped()}<br/>
+			{$output}
+		</div>
+HTML;
+		}
 		wfProfileOut( __METHOD__ );
 		return $output;
 	}
@@ -437,12 +457,14 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
 			<div id="mw-mf-ribbon" class="jsonly">
 				<div id="content_ribbon" class="content_block">
-					<button class="item3" id="mw-mf-language"><?php $this->msg( 'mobile-frontend-page-menu-language-current' ) ?></button>
 				</div>
 				<h2 id="section_ribbon" class="section_heading">ribbon</h2>
 			</div>
 			<?php } ?>
 			<?php $this->html( 'bodytext' ) ?>
+			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
+			<?php $this->html( 'languageSelection' ) ?>
+			<?php } ?>
 		</div>
 	</div>
 		<?php $this->footer() ?>
@@ -628,9 +650,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php
 		}
 		?>
-	<?php if ( $this->data['isBetaGroupMember'] ) { ?>
-	<?php $this->html( 'languageSelection' ) ?>
-	<?php } ?>
 	<div id="results"></div>
 	<?php
 	}

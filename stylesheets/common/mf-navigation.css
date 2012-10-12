@@ -145,15 +145,10 @@ body.navigationEnabled {
 #mw-mf-page-menu-button {
   display: none;
 }
-#mw-mf-language-selection {
-  text-align: center;
-  padding-top: 10px;
-}
 .jsEnabled #mw-mf-main-menu-button,
 .jsEnabled #mw-mf-page-menu-button {
   display: block;
 }
-.jsEnabled #mw-mf-language-selection,
 #mw-mf-overlay {
   display: none;
 }

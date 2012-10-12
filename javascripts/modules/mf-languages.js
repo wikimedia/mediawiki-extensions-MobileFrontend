@@ -5,18 +5,18 @@ M.languages = (function() {
 	var createOverlay = M.navigation.createOverlay;
 
 	function countAvailableLanguages() {
-		return $( '#mw-mf-language-selection option' ).length;
+		return $( '#mw-mf-language-selection a' ).length;
 	}
 
 	function createLanguagePage() {
 		var ul = $( '<ul />' )[0], li, a, $a, href, footer,
-			$languages = $( '#mw-mf-language-selection option' );
+			$languages = $( '#mw-mf-language-selection a' );
 
 		$( '<li />' ).addClass( 'mw-mf-overlay-header' ).
 			text( M.message( 'mobile-frontend-language-header' ).replace( '$1', $languages.length ) ).appendTo( ul );
 		$languages.each( function(i, el) {
 			li = $( '<li />' ).appendTo( ul )[0];
-			a = $( '<a />' ).attr( 'href', el.value ).text( $( el ).text() ).appendTo( li );
+			a = $( '<a />' ).attr( 'href', $( el ).attr( 'href' ) ).text( $( el ).text() ).appendTo( li );
 		} );
 		footer = $( '<li />' ).addClass( 'mw-mf-overlay-footer' ).
 			html( M.message( 'mobile-frontend-language-footer' ) ).appendTo( ul );
@@ -27,12 +27,15 @@ M.languages = (function() {
 	}
 
 	function init() {
-		var actionMenuButton = document.getElementById( 'mw-mf-language' );
+		var $a = $( '#section_languages' );
+
 		if( countAvailableLanguages() > 1 ) {
-			$( actionMenuButton ).on( 'click', createLanguagePage );
+			$( '<button>' ).text( $a.text() ).
+					on( 'click', createLanguagePage ).appendTo( '#content_languages' );
 		} else {
 			$( actionMenuButton ).addClass( 'disabled' );
 		}
+		$( '#mw-mf-language-selection' ).hide();
 	}
 
 	if( typeof $ !== 'undefined' ) {
