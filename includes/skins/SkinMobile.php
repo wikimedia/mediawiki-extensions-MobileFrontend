@@ -386,7 +386,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	public function execute() {
 		$this->prepareData();
 		$this->data['isBetaGroupMember'] ? $this->set( 'bodyClasses', 'mobile beta' ) :
-			$this->set( 'bodyClasses', 'mobile' );
+			$this->set( 'bodyClasses', 'mobile live' );
 
 		?><!doctype html>
 	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>">
