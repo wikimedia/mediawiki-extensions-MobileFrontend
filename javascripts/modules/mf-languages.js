@@ -13,7 +13,7 @@ M.languages = (function() {
 			$languages = $( '#mw-mf-language-selection a' );
 
 		$( '<li />' ).addClass( 'mw-mf-overlay-header' ).
-			text( $( '#content_languages p' ).text() ).appendTo( ul );
+			text( $( '#mw-mf-language-section .content_block p' ).text() ).appendTo( ul );
 		$languages.each( function(i, el) {
 			li = $( '<li />' ).appendTo( ul )[0];
 			a = $( '<a />' ).attr( 'href', $( el ).attr( 'href' ) ).text( $( el ).text() ).appendTo( li );
@@ -27,15 +27,15 @@ M.languages = (function() {
 	}
 
 	function init() {
-		var $a = $( '#section_languages' );
+		var $a = $( '#mw-mf-language-section' );
 
 		if( countAvailableLanguages() > 1 ) {
-			$( '<button>' ).text( $a.text() ).
-					on( 'click', createLanguagePage ).appendTo( '#content_languages' );
+			$( '<button>' ).text( $a.find( 'h2' ).text() ).
+					on( 'click', createLanguagePage ).insertBefore( $a );
 		} else {
 			$( actionMenuButton ).addClass( 'disabled' );
 		}
-		$( '#mw-mf-language-selection' ).hide();
+		$a.hide();
 	}
 
 	if( typeof $ !== 'undefined' ) {
