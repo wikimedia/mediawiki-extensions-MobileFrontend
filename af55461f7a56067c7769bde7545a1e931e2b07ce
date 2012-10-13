@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABEn///Ug\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 456,
+      "author": {
+        "id": 18
+      },
+      "writtenOn": "2012-10-13T21:59:18Z",
+      "side": 1,
+      "message": "Please fix this whitespace.",
+      "revId": "af55461f7a56067c7769bde7545a1e931e2b07ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
