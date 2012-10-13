@@ -11,6 +11,8 @@ less:
 	lessc stylesheets/less/common/mf-navigation.less > stylesheets/common/mf-navigation.css
 	lessc stylesheets/less/modules/mf-toggle.less > stylesheets/modules/mf-toggle.css
 	lessc stylesheets/less/modules/mf-search.less > stylesheets/modules/mf-search.css
+	lessc stylesheets/less/common/mf-common-legacy.less > stylesheets/common/mf-common-legacy.css
+	lessc stylesheets/less/common/mf-typography.less > stylesheets/common/mf-typography.css
 
 remotes:
 	curl -Lo javascripts/externals/eventlog.js \

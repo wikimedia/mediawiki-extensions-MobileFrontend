@@ -150,6 +150,9 @@ $wgResourceModules['mobile.production-only'] = array(
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 $wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/modules/mf-toggle-dynamic.js';
 
+$wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-common-legacy.css';
+$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/common/mf-typography.css';
+
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-navigation-legacy.css';
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-header.css';
 $wgResourceModules['mobile']['scripts'][] = 'javascripts/common/mf-navigation-legacy.js';

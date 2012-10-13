@@ -1,0 +1,86 @@
+html {
+  font-size: 100%;
+  /* default browser size is 16px (12pt - our @baseFontSize) */
+
+}
+/* = 16pt */
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.3333333333333333em;
+  color: #252525;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Georgia", serif;
+  margin-top: 14pt;
+  margin-bottom: 9pt;
+}
+h1 button,
+h2 button,
+h3 button,
+h4 button,
+h5 button,
+h6 button {
+  height: 24pt;
+}
+p {
+  margin-bottom: 8pt;
+}
+h1 {
+  font-size: 2em;
+  line-height: 24pt;
+  color: black;
+}
+h2 {
+  font-size: 1.5em;
+  /* 18pt */
+
+  line-height: 24pt;
+}
+h3 {
+  font-size: 1.1666666666666665em;
+  /* 14pt */
+
+  line-height: 24pt;
+  font-style: italic;
+  margin-bottom: 8pt;
+}
+h4 {
+  font-weight: bold;
+}
+sup {
+  vertical-align: super;
+}
+sub {
+  vertical-align: sub;
+}
+sub,
+sup {
+  font-size: 0.75em;
+}
+#content_wrapper {
+  margin: 0 28px 0 28px;
+}
+#content_wrapper .section h3:first-child {
+  margin-top: 0;
+}
+#content_wrapper .thumb {
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #f9f9f9;
+  margin: 15px 0 15px 0;
+  text-align: center;
+}
+input.search {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1em;
+}
+#footer {
+  margin-top: 5px;
+}
