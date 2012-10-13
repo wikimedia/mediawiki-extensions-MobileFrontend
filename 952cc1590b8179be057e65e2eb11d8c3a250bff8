@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABEn///kE\u003d",
+        "filename": "stylesheets/common/mf-navigation.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 110
+      },
+      "writtenOn": "2012-10-13T06:34:45Z",
+      "side": 1,
+      "message": "Why this is in px? Irrespective of actual font size or inherited font size, this will be always 45px. Best practice is to use number value like 1.5.",
+      "revId": "952cc1590b8179be057e65e2eb11d8c3a250bff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
