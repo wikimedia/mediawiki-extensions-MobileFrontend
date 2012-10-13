@@ -1,13 +1,4 @@
 #mw-mf-header form,
-#mw-mf-header,
-#mw-mf-search,
-#mw-mf-sq {
-  position: relative;
-  right: 0;
-  top: 0;
-  left: 0;
-}
-#mw-mf-header form,
 #mw-mf-sq {
   height: 45px;
 }
