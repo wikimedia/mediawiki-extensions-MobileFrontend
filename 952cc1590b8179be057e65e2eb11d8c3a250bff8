@@ -16,6 +16,24 @@
       "revId": "952cc1590b8179be057e65e2eb11d8c3a250bff8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABEn///Lk\u003d",
+        "filename": "stylesheets/common/mf-navigation.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-14T17:14:40Z",
+      "side": 1,
+      "message": "It\u0027s due to the @headerHeight variable which defines the height of the entire header which will always be a fixed 45px. So actually line-height is the same as the height of the header (45px) - equivalent to number value 1.\n\nhttps://gerrit.wikimedia.org/r/gitweb?p\u003dmediawiki/extensions/MobileFrontend.git;a\u003dblob;f\u003dstylesheets/less/mf-variables.less;h\u003d5b904ff0fb2aa294b4c89322b64d41d5dadf73bb;hb\u003dHEAD#l2",
+      "parentUuid": "AAABEn///kE\u003d",
+      "revId": "952cc1590b8179be057e65e2eb11d8c3a250bff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
