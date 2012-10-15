@@ -302,8 +302,8 @@ class SkinMobile extends SkinMobileBase {
 			$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 			$output = <<<HTML
 			<div class="section" id="mw-mf-language-section">
-				<h2 class="section_heading">{$heading}</h2>
-				<div class="content_block">
+				<h2 id="section_language" class="section_heading">{$heading}</h2>
+				<div id="content_language" class="content_block">
 					<p>{$msg}</p>
 					{$output}
 				</div>
