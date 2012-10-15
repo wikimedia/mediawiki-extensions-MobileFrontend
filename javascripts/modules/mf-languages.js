@@ -32,8 +32,6 @@ M.languages = (function() {
 		if( countAvailableLanguages() > 1 ) {
 			$( '<button>' ).text( $a.find( 'h2' ).text() ).
 					on( 'click', createLanguagePage ).insertBefore( $a );
-		} else {
-			$( actionMenuButton ).addClass( 'disabled' );
 		}
 		$a.hide();
 	}
