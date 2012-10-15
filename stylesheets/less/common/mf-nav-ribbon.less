@@ -18,32 +18,32 @@
 	background-color: @ribbon-color;
 	z-index: 1;
 	right: 0;
-	top: @topnavheight + 4;
-	height: @topnavheight;
+	top: @headerHeight + 4;
+	height: @headerHeight;
 	width: auto;
 	padding-right: @ribbonclosedwidth;
 
 	.content_block {
-		height: @topnavheight;
+		height: @headerHeight;
 		width: 0;
 		background-color: @ribbonopencolor;
 		overflow: hidden;
 		&.openSection {
 			min-height: auto;
-			min-width: @topnavheight;
+			min-width: @headerHeight;
 			width: auto;
 		}
 		a,
 		button {
 			display: block;
 			float: left;
-			height: @topnavheight;
+			height: @headerHeight;
 			background: none;
 			.background-size( auto, 32px );
 			border: 0;
 			text-indent: -999px;
-			width: @topnavheight;
-			height: @topnavheight;
+			width: @headerHeight;
+			height: @headerHeight;
 			background-position: center center;
 			background-repeat: no-repeat;
 			padding: 0;
