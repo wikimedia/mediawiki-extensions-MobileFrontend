@@ -568,7 +568,7 @@ class ExtMobileFrontend extends ContextSource {
 				'javascripts/modules/mf-references.js', 'tests/js/test_references.js',
 				'javascripts/modules/mf-watchlist.js', 'tests/js/test_mf-watchlist.js' ),
 				'dependencies' => array( ),
-				'localBasePath' => dirname( __FILE__ ),
+				'localBasePath' => dirname( dirname( __FILE__ ) ),
 				'remoteExtPath' => 'MobileFrontend',
 		);
 		return true;

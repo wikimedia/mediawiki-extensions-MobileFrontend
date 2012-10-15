@@ -133,7 +133,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 );
 
 $wgResourceModules['mobile.beta.jquery.eventlog'] = array(
-	'scripts' => array( 'javascripts/external/eventlog.js' ),
+	'scripts' => array( 'javascripts/externals/eventlog.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
