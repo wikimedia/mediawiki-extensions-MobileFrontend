@@ -541,6 +541,8 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
+				'mobile-frontend-ajax-page-loading' => wfMessage( 'mobile-frontend-ajax-page-loading' )->text(),
+				'mobile-frontend-ajax-page-error' => wfMessage( 'mobile-frontend-ajax-page-error' )->text(),
 				'mobile-frontend-meta-data-issues' => wfMessage( 'mobile-frontend-meta-data-issues' )->text(),
 				'mobile-frontend-meta-data-issues-header' => wfMessage( 'mobile-frontend-meta-data-issues-header' )->text(),
 				'expand-section' => wfMessage( 'mobile-frontend-show-button' )->text(),

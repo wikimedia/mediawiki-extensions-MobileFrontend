@@ -115,9 +115,15 @@ var opensearch = ( function() {
 
 				link = document.createElement( 'a' );
 				link.setAttribute( 'href', section.value );
+				link.setAttribute( 'title', section.label );
 				link.className = 'search-result-item';
 				label = document.createTextNode( section.label );
 				link.appendChild( label );
+				u( link ).bind( 'click', function( ev ) {
+					M.history.navigateToPage( this.getAttribute( 'title' ) );
+					ev.preventDefault();
+					removeResults( ev );
+				} );
 				suggestionsResult.appendChild( link );
 
 				if ( $ ) {

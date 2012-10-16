@@ -5,7 +5,6 @@
 var T = ( function() {
 	var inBeta = $( 'body' ).hasClass( 'beta' ),
 		message = M.message,
-		apiUrl = M.setting( 'scriptPath' ) + '/api.php',
 		sectionData = {},
 		showLabel = message( 'expand-section' ),
 		hideLabel = message( 'collapse-section' );
@@ -47,14 +46,15 @@ var T = ( function() {
 		}
 	}
 
-	function enableToggling() {
+	function enableToggling( $container ) {
+		var $headings = $container ? $container.find( '.section_heading' ) : $( '.section_heading' );
 		$( 'html' ).addClass( 'togglingEnabled' );
 
 		function openSectionHandler() {
 			wm_toggle_section( $( this ).attr( 'id' ).split( '_' )[ 1 ] );
 		}
 
-		$( '.section_heading' ).each( function() {
+		$headings.each( function() {
 			var $this = $( this ), section = $this.attr( 'id' ).split( '_' )[ 1 ];
 			if ( $this.parents( '.section' ).length === 1 ) {
 				$( '#anchor_' +  section ).
@@ -78,48 +78,16 @@ var T = ( function() {
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
 
-	function retrieveSections( pageTitle ) {
-		$.ajax( {
-			url: apiUrl, dataType: 'json',
-			data: {
-				action: 'mobileview', format: 'json',
-				page: pageTitle,
-				redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
-				sectionprop: 'level|line', sections: 'all' }
-			} ).done( function( resp ) {
-				var i, secs, s, sectionNum = 0, level, text;
-				sectionData = {};
-				if ( resp && resp.mobileview && resp.mobileview.sections ) {
-					secs = resp.mobileview.sections;
-					for( i = 0; i < secs.length; i++ ) {
-						s = secs[ i ];
-						level = s.level;
-						text = s.text || '';
-						if ( level === '2' ) {
-							sectionNum = sectionNum + 1;
-							sectionData[ sectionNum ] = { html: text };
-						} else if ( level ) {
-							sectionData[ sectionNum ].html += $( '<h' + level + '>' ).text( s.line ).html() + text;
-						}
-						if( s.hasOwnProperty( 'references' ) ) {
-							sectionData[ sectionNum ].references = true;
-							$( '<div class="content_block">' ).attr( 'id', 'content_' + sectionNum ).
-								html( sectionData[ sectionNum ].html ).insertAfter( '#section_' + sectionNum );
-						}
-					}
-					enableToggling();
-					_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
-				}
-			} ).fail( function() { // resort to non-javascript mode
-				$( 'html' ).addClass( 'togglingEnabled' );
-			} );
-	}
-
 	function init() {
 		var sections = [], pageTitle = $( 'h1' ).text();
 
 		if ( !$( '#content_wrapper' ).hasClass( 'mw-mf-special' ) ) {
-			retrieveSections( pageTitle );
+			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
+				sectionData = article;
+				enableToggling( $( '#content' ) );
+				_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
+			} );
+			M.history.loadPage( pageTitle, false );
 		} else {
 			enableToggling();
 		}

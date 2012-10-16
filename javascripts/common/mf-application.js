@@ -15,8 +15,12 @@ mw.mobileFrontend = (function() {
 		moduleNamespace = {},
 		doc = document.documentElement;
 
-	function message( name ) {
-		return mwMobileFrontendConfig.messages[name] || '';
+	function message( name, arg1 ) {
+		var msg = mwMobileFrontendConfig.messages[name] || '';
+		if ( arg1 ) {
+			msg = msg.replace( '$1', arg1 );
+		}
+		return msg;
 	}
 
 	// TODO: only apply to places that need it
