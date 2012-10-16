@@ -218,10 +218,7 @@ class ExtMobileFrontend extends ContextSource {
 			return true;
 		}
 
-		if ( $out->getTitle()->isSpecial( 'Userlogin' ) ) {
-			$forceHttps = true;
-			$redirect = $context->getMobileUrl( $redirect, $forceHttps );
-		} else if ( $out->getTitle()->isSpecial( 'Randompage' ) ||
+		if ( $out->getTitle()->isSpecial( 'Randompage' ) ||
 				$out->getTitle()->isSpecial( 'Search' ) ) {
 			$redirect = $context->getMobileUrl( $redirect );
 		}
