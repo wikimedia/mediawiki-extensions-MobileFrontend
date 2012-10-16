@@ -365,6 +365,7 @@ class ExtMobileFrontend extends ContextSource {
 	 */
 	public function renderLogin( &$template ) {
 		wfProfileIn( __METHOD__ );
+		$template = new UserLoginMobileTemplate( $template );
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
