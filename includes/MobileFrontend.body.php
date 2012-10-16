@@ -22,6 +22,7 @@ class ExtMobileFrontend extends ContextSource {
 		$wgHooks['GetCacheVaryCookies'][] = array( &$this, 'getCacheVaryCookies' );
 		$wgHooks['ResourceLoaderRegisterModules'][] = array( &$this, 'resourceLoaderRegisterModules' );
 		$wgHooks['ResourceLoaderGetConfigVars'][] = array( &$this, 'resourceLoaderGetConfigVars' );
+		$wgHooks['UserLoginForm'][] = array( &$this, 'renderLogin' );
 	}
 
 	/**
@@ -363,69 +364,10 @@ class ExtMobileFrontend extends ContextSource {
 	/**
 	 * @return string
 	 */
-	public function renderLogin() {
+	public function renderLogin( &$template ) {
 		wfProfileIn( __METHOD__ );
-		$form = Html::openElement( 'div', array( 'id' => 'userloginForm' ) ) .
-			Html::openElement( 'form',
-				array( 'name' => 'userlogin',
-					'method' => 'post',
-					'action' => $this->wsLoginFormAction ) ) .
-			Html::openElement( 'table',
-				array( 'class' => 'user-login' ) ) .
-			Html::openElement( 'tbody' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpName1' ), wfMessage( 'mobile-frontend-username' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td' ) .
-			Html::input( 'wpName', null, 'text',
-				array( 'class' => 'loginText',
-					'id' => 'wpName1',
-					'tabindex' => '1',
-					'size' => '20',
-					'required' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpPassword1' ), wfMessage( 'mobile-frontend-password' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-input' ) ) .
-			Html::input( 'wpPassword', null, 'password',
-				array( 'class' => 'loginPassword',
-					'id' => 'wpPassword1',
-					'tabindex' => '2',
-					'size' => '20' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::element( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-submit' ) ) .
-			Html::input( 'wpLoginAttempt', wfMessage( 'mobile-frontend-login' )->text(), 'submit',
-				array( 'id' => 'wpLoginAttempt',
-					'tabindex' => '3' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::closeElement( 'tbody' ) .
-			Html::closeElement( 'table' ) .
-			Html::input( 'wpLoginToken', $this->wsLoginToken, 'hidden' ) .
-			Html::closeElement( 'form' ) .
-			Html::closeElement( 'div' );
-
 		wfProfileOut( __METHOD__ );
-		return $form;
+		return true;
 	}
 
 	public function getDom( $html ) {
