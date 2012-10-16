@@ -359,7 +359,9 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * @return string
+	 * Invocation of hook UserLoginForm
+	 * @param object Login form template object
+	 * @return bool
 	 */
 	public function renderLogin( &$template ) {
 		wfProfileIn( __METHOD__ );
