@@ -2302,6 +2302,7 @@ $messages['es'] = array(
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracias por tu comentario!',
 	'mobile-frontend-leave-feedback-post-error' => 'Hubo un error al procesar el mensaje. Inténtalo de nuevo más tarde.',
 	'mobile-frontend-language' => 'Idioma:',
+	'mobile-frontend-language-article-heading' => 'Leer en otro idioma',
 	'mobile-frontend-language-header' => 'Este artículo está disponible en  $1 {{PLURAL:$1|idioma|idiomas}}',
 	'mobile-frontend-language-footer' => 'Nota: Este artículo puede no estar escrito en su idioma preferido. Puede ver qué idiomas soporta {{SITENAME}} haciendo clic aquí.',
 	'mobile-frontend-language-site-choose' => 'Seleccionar idioma',
