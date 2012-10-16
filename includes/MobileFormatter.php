@@ -24,7 +24,7 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	protected $wmlContext;
 
-	private static $defaultItemsToRemove = array(
+	private $defaultItemsToRemove = array(
 		'div.messagebox',
 		'div.editsection',
 		'div.infobox',
@@ -106,7 +106,7 @@ class MobileFormatter extends HtmlFormatter {
 		global $wgMFRemovableClasses;
 
 		if ( $removeDefaults ) {
-			$this->remove( self::$defaultItemsToRemove );
+			$this->remove( $this->getDefaultItemsToRemove() );
 			$this->remove( $wgMFRemovableClasses );
 		}
 		parent::filterContent();
@@ -126,6 +126,27 @@ class MobileFormatter extends HtmlFormatter {
 		$html = parent::getText( $element );
 		wfProfileOut( __METHOD__ );
 		return $html;
+	}
+
+	/**
+	 * Getter for $this->defaultItemsToRemove
+	 * @return array
+	 */
+	public function getDefaultItemsToRemove() {
+		return $this->defaultItemsToRemove;
+	}
+
+	/**
+	 * Setter for $this->defaultItemsToRemove
+	 * @param array Indexed array of HTML elements to be stripped during mobile formatting
+	 * @throws MWException
+	 * @return array
+	 */
+	public function setDefaultItemsToRemove( $defaultItemsToRemove ) {
+		if ( !is_array( $defaultItemsToRemove ) ) {
+			throw new MWException( __METHOD__ . '(): defaultItemsToRemove must be an array.' );
+		}
+		$this->defaultItemsToRemove = $defaultItemsToRemove;
 	}
 
 	protected function onHtmlReady( $html ) {
