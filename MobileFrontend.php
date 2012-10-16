@@ -126,6 +126,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'styles' => array( 'stylesheets/modules/mf-watchlist.css', 'stylesheets/common/mf-nav-ribbon.css' ),
 	'scripts' => array( 'javascripts/common/mf-navigation.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
+		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
@@ -148,7 +149,6 @@ $wgResourceModules['mobile.production-only'] = array(
 );
 
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
-$wgResourceModules['mobile.beta']['scripts'][] = 'javascripts/modules/mf-toggle-dynamic.js';
 
 $wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-common-legacy.css';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/common/mf-typography.css';
