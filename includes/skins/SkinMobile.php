@@ -282,12 +282,8 @@ mediawiki.hidpi' ), 'scripts', true, true );
 			return '';
 		}
 		$context = MobileContext::singleton();
-		$inBeta = $context->isBetaGroupMember();
 
-		$output = $inBeta ?
-			Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) ) :
-			Html::openElement( 'select',
-				array( 'id' => 'languageselection' ) );
+		$output = Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) );
 		foreach ( $languageUrls as $languageUrl ) {
 			$languageUrlHref = $languageUrl['href'];
 			$languageUrlLanguage = $languageUrl['language'];
@@ -299,29 +295,16 @@ mediawiki.hidpi' ), 'scripts', true, true );
 						urlencode( $languageUrlHref );
 				}
 			}
-			if ( $inBeta ) {
-				if ( $languageUrl['lang'] != $wgLanguageCode ) {
-					$output .= Html::openElement( 'li' ) . Html::element( 'a',
-						array( 'href' => $languageUrlHref ),
-						$languageUrlLanguage ) . Html::closeElement( 'li' );
-				}
-			} else {
-				if ( $languageUrl['lang'] == $wgLanguageCode ) {
-					$output .= Html::element( 'option',
-						array( 'value' => $languageUrlHref, 'selected' => 'selected' ),
-						$languageUrlLanguage );
-				} else {
-					$output .= Html::element( 'option',
-						array( 'value' => $languageUrlHref ),
-						$languageUrlLanguage );
-				}
+			if ( $languageUrl['lang'] != $wgLanguageCode ) {
+				$output .= Html::openElement( 'li' ) . Html::element( 'a',
+					array( 'href' => $languageUrlHref ),
+					$languageUrlLanguage ) . Html::closeElement( 'li' );
 			}
 		}
-		$output .= $inBeta ? Html::closeElement( 'ul' ) : Html::closeElement( 'select' );
+		$output .= Html::closeElement( 'ul' );
 		$msg = wfMessage( 'mobile-frontend-language-header', count( $languageUrls ) - 1 )->text();
-		if ( $inBeta ) {
-			$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
-			$output = <<<HTML
+		$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
+		$output = <<<HTML
 			<div class="section" id="mw-mf-language-section">
 				<h2 id="section_language" class="section_heading">{$heading}</h2>
 				<div id="content_language" class="content_block">
@@ -330,14 +313,6 @@ mediawiki.hidpi' ), 'scripts', true, true );
 				</div>
 			</div>
 HTML;
-		} else {
-			$output = <<<HTML
-		<div id="mw-mf-language-selection">
-			{$this->msg( 'mobile-frontend-language' )->escaped()}<br/>
-			{$output}
-		</div>
-HTML;
-		}
 		wfProfileOut( __METHOD__ );
 		return $output;
 	}
@@ -475,9 +450,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	</head>
 	<body class="<?php $this->text( 'bodyClasses' ) ?>">
 		<?php
-		if ( $this->data['isBetaGroupMember'] ) {
 			$this->navigationStart();
-		}
 		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<?php $this->html( 'notice' ) ?>
@@ -493,16 +466,12 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php } ?>
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
-			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<?php $this->html( 'languageSelection' ) ?>
-			<?php } ?>
 		</div>
 	</div>
 		<?php $this->footer() ?>
 		<?php
-		if ( $this->data['isBetaGroupMember'] ) {
 			$this->navigationEnd();
-		}
 		?>
 	<!--[if gt IE 7]><!-->
 		<?php $this->html( 'bcHack' ) ?>
@@ -645,7 +614,6 @@ class SkinMobileTemplate extends BaseTemplate {
 	<div id="mw-mf-header">
 		<?php
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
-		if ( $this->data['isBetaGroupMember'] ) {
 			echo Html::openElement( 'a', array(
 				'href' => $url, 'id'=> 'mw-mf-main-menu-button'
 			) );
@@ -654,16 +622,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				src="<?php $this->text( 'shim' ) ?>">
 		<?php
 			echo Html::closeElement( 'a' );
-		}
 		?>
 			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
-			<?php
-				if ( !$this->data['isBetaGroupMember'] ) { ?>
-				<img alt="Logo" id="mw-mf-logo" src="<?php
-					$this->text( 'wgMobileFrontendLogo' ) ?>" />
-			<?php
-				}
-			?>
 			<input type="hidden" value="Special:Search" name="title" />
 			<div id="mw-mf-sq" class="divclearable">
 				<input type="search" name="search" id="mw-mf-search" size="22" value="<?php $this->text( 'searchField' )
@@ -674,27 +634,8 @@ class SkinMobileTemplate extends BaseTemplate {
 					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="mw-mf-clearsearch" title="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>"/>
 			</div>
-			<?php
-			if ( !$this->data['isBetaGroupMember'] ) { ?>
-			<button id='goButton' class='goButton' type='submit'>
-				<img src="<?php $this->text( 'shim' ) ?>" alt="<?php
-					$this->msg( 'mobile-frontend-search-submit' ) ?>" title="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
-			</button>
-			<?php } ?>
 		</form>
-		<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
-			<div class='nav' id='nav'>
-			<?php $this->html( 'languageSelection' ) ?><br/>
-			<a href="<?php $this->text( 'mainPageUrl' ) ?>" id="homeButton" class="button"><?php $this->msg( 'mobile-frontend-home-button' ) ?></a>
-			<a href="<?php $this->text( 'randomPageUrl' ) ?>" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a>
-			</div>
-		</div>
-		<?php } else {
-		?>
-		</div>
-		<?php
-		}
-		?>
+	</div>
 	<div id="results"></div>
 	<?php
 	}
@@ -719,25 +660,13 @@ class SkinMobileTemplate extends BaseTemplate {
 					$this->msg( 'mobile-frontend-view-desktop' ) ?></a></span><span class="right"><?php
 				$this->msg( 'mobile-frontend-view-mobile' ) ?></span>
 			</li>
-			<li>
-				<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
-				<span class="left"><?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span><span class="right"><?php
-				$this->html( 'imagesToggle' ) ?></span>
-				<?php } ?>
-			</li>
 			<li class="notice">
 				<?php $this->html( 'historyLink' ) ?><br>
 				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
-				<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 				<span>| <?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span>
-				<?php } ?>
 			</li>
 		</ul>
 		<ul class="links">
-			<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
-			<li>
-				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"><?php $this->msg( 'mobile-frontend-footer-contact' ) ?></a>
-			</li><?php } ?><li>
 			<?php $this->html( 'privacyLink' ) ?></li><li>
 			<?php $this->html( 'aboutLink' ) ?></li><li>
 			<?php $this->html( 'disclaimerLink' ) ?></li>

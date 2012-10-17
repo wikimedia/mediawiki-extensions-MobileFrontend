@@ -112,6 +112,8 @@ $localBasePath = dirname( __FILE__ );
 $remoteExtPath = 'MobileFrontend';
 $wgResourceModules['mobile'] = array(
 	'styles' => array( 'stylesheets/common/reset.css', 'stylesheets/common/mf-common.css', 'stylesheets/common/mf-footer.css',
+		'stylesheets/common/mf-typography.css', 'stylesheets/common/mf-navigation.css',
+		'stylesheets/modules/mf-search.css',
 		'stylesheets/specials/contact-us.css', 'stylesheets/modules/mf-banner.css',
 		'stylesheets/specials/mf-settings.css',
 		'stylesheets/modules/mf-toggle.css',
@@ -128,7 +130,7 @@ $wgResourceModules['mobile'] = array(
 
 $wgResourceModules['mobile.beta.jquery'] = array(
 	'styles' => array( 'stylesheets/modules/mf-watchlist.css', 'stylesheets/common/mf-nav-ribbon.css' ),
-	'scripts' => array( 'javascripts/common/mf-navigation.js',
+	'scripts' => array(
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
@@ -157,14 +159,6 @@ $wgResourceModules['mobile.production-only'] = array(
 
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
-$wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-common-legacy.css';
-$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/common/mf-typography.css';
-
-$wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-navigation-legacy.css';
-$wgResourceModules['mobile']['styles'][] = 'stylesheets/common/mf-header.css';
-$wgResourceModules['mobile']['scripts'][] = 'javascripts/common/mf-navigation-legacy.js';
-$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/common/mf-navigation.css';
-$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-search.css';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-cleanuptemplates.css';
 
 $wgResourceModules['mobile.filePage'] = array(
@@ -177,7 +171,9 @@ $wgResourceModules['mobile.filePage'] = array(
 );
 $wgResourceModules['mobile.references'] = array(
 	'styles' => array( 'stylesheets/modules/mf-references.css' ),
-	'scripts' => array( 'javascripts/modules/mf-references.js' ),
+	'scripts' => array(
+		'javascripts/common/mf-navigation.js',
+		'javascripts/modules/mf-references.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
