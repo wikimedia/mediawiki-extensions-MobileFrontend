@@ -276,20 +276,23 @@ class ExtMobileFrontend extends ContextSource {
 	/**
 	 * Special-case processing for pages
 	 * @param MobileFormatter $mf
-	 * @return string
 	 */
 	protected  function doSpecialCases( MobileFormatter $mf ) {
-		$result = '';
 		wfProfileIn( __METHOD__ );
 		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
 			$userlogin = $mf->getDoc()->getElementById( 'userloginForm' );
 
 			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
-				$result = $this->renderLogin();
+				// make sure the 'form' element is not getting removed by the formatter
+				$itemsToRemove = $mf->getDefaultItemsToRemove();
+				$itemsToUnRemove = array_keys( $itemsToRemove, 'form' );
+				foreach ( $itemsToUnRemove as $item ) {
+					unset( $itemsToRemove[ $item ] );
+				}
+				$mf->setDefaultItemsToRemove( array_values( $itemsToRemove ) );
 			}
 		}
 		wfProfileOut( __METHOD__ );
-		return $result;
 	}
 
 	public static function parseContentFormat( $format ) {
