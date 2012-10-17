@@ -24,6 +24,7 @@ class MobileContext extends ContextSource {
 	protected $mobileAction;
 
 	private $forceMobileView = false;
+	private $forceLeftMenu = false;
 	private $contentTransformations = true;
 
 	private static $instance = null;
@@ -104,6 +105,17 @@ class MobileContext extends ContextSource {
 		}
 
 		return true;
+	}
+
+	/**
+	 * @return bool: Whether skin should render the left menu
+	 */
+	public function getForceLeftMenu() {
+		return $this->forceLeftMenu;
+	}
+
+	public function setForceLeftMenu( $value ) {
+		$this->forceLeftMenu = $value;
 	}
 
 	/**

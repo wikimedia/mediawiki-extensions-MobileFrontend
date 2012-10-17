@@ -106,6 +106,9 @@ $messages['en'] = array (
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-unknown-option' => 'Unrecognised option "$1".',
 	'mobile-frontend-search-noresults' => 'No article titles match your search. Change your search, or press the keyboard search button to search inside articles.',
+
+	// Site navigation menu
+	'mobile-frontend-main-menu-page-title' => 'Site navigation',
 	'mobile-frontend-main-menu-featured' => 'Featured',
 	'mobile-frontend-main-menu-nearby' => 'Nearby',
 	'mobile-frontend-main-menu-settings' => 'Settings',
@@ -230,6 +233,7 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
 	'mobile-frontend-unknown-option' => 'Error message shown by Special:MobileOptions',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
+	'mobile-frontend-main-menu-page-title' => 'Title for Special:MobileMenu - shown to user in title bar of browser window',
 	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu',
 	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu',
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',

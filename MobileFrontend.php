@@ -50,6 +50,7 @@ $autoloadClasses = array (
 
 	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
+	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
@@ -80,6 +81,7 @@ $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
 $wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
+$wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend;
