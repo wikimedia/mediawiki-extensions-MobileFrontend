@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABEn//9RA\u003d",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-17T17:19:45Z",
+      "side": 1,
+      "message": "Our lives may be simplified by just not stripping forms -- see bug 38515 \u003chttps://bugzilla.wikimedia.org/show_bug.cgi?id\u003d38515\u003e specialized search forms may appear in content etc.",
+      "revId": "5e601e6ee607e6c59c3fc990d4ef78a459690725",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
