@@ -31,6 +31,7 @@ M.languages = (function() {
 
 		if( countAvailableLanguages() > 1 ) {
 			$( '<button>' ).text( $a.find( 'h2' ).text() ).
+				addClass( 'languageSelector' ).
 					on( 'click', createLanguagePage ).insertBefore( $a );
 		}
 		$a.hide();

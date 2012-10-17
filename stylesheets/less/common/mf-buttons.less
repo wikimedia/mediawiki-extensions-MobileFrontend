@@ -1,0 +1,38 @@
+@import "../mf-mixins.less";
+
+/* reuses https://github.com/wikimedia/agora */
+button,
+input[type=submit] {
+	display: inline-block;
+	.border-radius( 3px );
+	padding: ( @baseFontSize/2 ) ( @baseFontSize * 1.5 ) ( @baseFontSize/2 );
+	line-height: 1;
+	text-align: center;
+	cursor: pointer;
+	border: 1px #33589f solid;
+	.text-with-shadow( white );
+	.vertical-gradient( #3670C8, @blueBase );
+
+	&:hover {
+		.vertical-gradient( #4c84da, #3f77d7 );
+	}
+
+	&:active {
+		.vertical-gradient( #2d5ea9, #2a549c );
+	}
+
+	&:disabled,
+	&:disabled.hover,
+	&.disabled,
+	&.disabled:hover {
+		@disabledColor: lighten( desaturate( #3f77d7, 10% ), 10% );
+		color: white;
+		text-shadow:  none;
+		.vertical-gradient( @disabledColor,@disabledColor );
+		border-color: darken( @disabledColor, 5% );
+	}
+
+	&.languageSelector {
+		margin-top: @headingMarginTop;
+	}
+}

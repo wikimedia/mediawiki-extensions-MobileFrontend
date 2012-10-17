@@ -1,3 +1,109 @@
+/* reuses https://github.com/wikimedia/agora */
+button,
+input[type=submit] {
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0.5em 1.5em 0.5em;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  border: 1px #33589f solid;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #3366bb;
+  background-image: -moz-linear-gradient(top, #3670c8, #3366bb);
+  background-image: -ms-linear-gradient(top, #3670c8, #3366bb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3670c8), color-stop(100%, #3366bb));
+  background-image: -webkit-linear-gradient(top, #3670c8, #3366bb);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3670c8', endColorstr='#3366bb', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#3670c8', endColorstr='#3366bb', GradientType=0)";
+  background-image: linear-gradient(#3670c8, #3366bb);
+  background-color: #3366bb;
+  background-image: -moz-linear-gradient(top, #3670c8, #3366bb);
+  background-image: -ms-linear-gradient(top, #3670c8, #3366bb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3670c8), color-stop(100%, #3366bb));
+  background-image: -webkit-linear-gradient(top, #3670c8, #3366bb);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3670c8', endColorstr='#3366bb', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#3670c8', endColorstr='#3366bb', GradientType=0)";
+  background-image: linear-gradient(#3670c8, #3366bb);
+}
+button:hover,
+input[type=submit]:hover {
+  background-color: #3f77d7;
+  background-image: -moz-linear-gradient(top, #4c84da, #3f77d7);
+  background-image: -ms-linear-gradient(top, #4c84da, #3f77d7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c84da), color-stop(100%, #3f77d7));
+  background-image: -webkit-linear-gradient(top, #4c84da, #3f77d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c84da', endColorstr='#3f77d7', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c84da', endColorstr='#3f77d7', GradientType=0)";
+  background-image: linear-gradient(#4c84da, #3f77d7);
+  background-color: #3f77d7;
+  background-image: -moz-linear-gradient(top, #4c84da, #3f77d7);
+  background-image: -ms-linear-gradient(top, #4c84da, #3f77d7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c84da), color-stop(100%, #3f77d7));
+  background-image: -webkit-linear-gradient(top, #4c84da, #3f77d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c84da', endColorstr='#3f77d7', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c84da', endColorstr='#3f77d7', GradientType=0)";
+  background-image: linear-gradient(#4c84da, #3f77d7);
+}
+button:active,
+input[type=submit]:active {
+  background-color: #2a549c;
+  background-image: -moz-linear-gradient(top, #2d5ea9, #2a549c);
+  background-image: -ms-linear-gradient(top, #2d5ea9, #2a549c);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2d5ea9), color-stop(100%, #2a549c));
+  background-image: -webkit-linear-gradient(top, #2d5ea9, #2a549c);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d5ea9', endColorstr='#2a549c', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d5ea9', endColorstr='#2a549c', GradientType=0)";
+  background-image: linear-gradient(#2d5ea9, #2a549c);
+  background-color: #2a549c;
+  background-image: -moz-linear-gradient(top, #2d5ea9, #2a549c);
+  background-image: -ms-linear-gradient(top, #2d5ea9, #2a549c);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2d5ea9), color-stop(100%, #2a549c));
+  background-image: -webkit-linear-gradient(top, #2d5ea9, #2a549c);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d5ea9', endColorstr='#2a549c', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d5ea9', endColorstr='#2a549c', GradientType=0)";
+  background-image: linear-gradient(#2d5ea9, #2a549c);
+}
+button:disabled,
+input[type=submit]:disabled,
+button:disabled.hover,
+input[type=submit]:disabled.hover,
+button.disabled,
+input[type=submit].disabled,
+button.disabled:hover,
+input[type=submit].disabled:hover {
+  color: white;
+  text-shadow: none;
+  background-color: #7297d7;
+  background-image: -moz-linear-gradient(top, #7297d7, #7297d7);
+  background-image: -ms-linear-gradient(top, #7297d7, #7297d7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7297d7), color-stop(100%, #7297d7));
+  background-image: -webkit-linear-gradient(top, #7297d7, #7297d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7297d7', endColorstr='#7297d7', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#7297d7', endColorstr='#7297d7', GradientType=0)";
+  background-image: linear-gradient(#7297d7, #7297d7);
+  background-color: #7297d7;
+  background-image: -moz-linear-gradient(top, #7297d7, #7297d7);
+  background-image: -ms-linear-gradient(top, #7297d7, #7297d7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7297d7), color-stop(100%, #7297d7));
+  background-image: -webkit-linear-gradient(top, #7297d7, #7297d7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7297d7', endColorstr='#7297d7', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#7297d7', endColorstr='#7297d7', GradientType=0)";
+  background-image: linear-gradient(#7297d7, #7297d7);
+  border-color: #5e89d1;
+}
+button.languageSelector,
+input[type=submit].languageSelector {
+  margin-top: 14pt;
+}
 #mw-mf-header form,
 #mw-mf-sq {
   height: 45px;
@@ -7,6 +113,10 @@
   height: 45px;
   width: 40px;
   background-image: /* @embed */ url(images/menu/main.png);
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -webkit-background-size: 24px 30px;
+  background-size: 24px 30px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -webkit-background-size: 24px 30px;
@@ -88,6 +198,10 @@
   padding-left: 32px;
   line-height: 22px;
   background-repeat: no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -webkit-background-size: 24px 24px;
+  background-size: 24px 24px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -webkit-background-size: 24px 24px;
@@ -179,6 +293,27 @@ html.overlay li {
   border-bottom: solid 1px #eee;
   padding: 12px 40px;
   font-size: 0.9em;
+  color: #666;
+  border: none;
+  position: relative;
+  border-bottom: solid 1px #999999;
+  border-bottom: solid 1px #eee;
+  padding: 12px 40px;
+  font-size: 0.9em;
+}
+html.overlay li a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+}
+html.overlay li a:active,
+html.overlay li a:hover,
+html.overlay li a:visited {
+  text-decoration: none;
+  color: #666;
+}
+html.overlay li:hover {
+  background-color: #ACD1E9;
 }
 html.overlay li a {
   display: block;
@@ -248,6 +383,10 @@ button.escapeOverlay {
   background-repeat: no-repeat;
   background-position: center center;
   text-indent: -999px;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -webkit-background-size: 12px 16px;
+  background-size: 12px 16px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -webkit-background-size: 12px 16px;

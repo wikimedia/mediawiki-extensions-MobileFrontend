@@ -1,5 +1,11 @@
 @import "../mf-variables.less";
 
+.border-radius ( @radius: 3px ) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
 .boxshadow(@horizontalOffset, @verticalOffset, @blurRadius, @spreadDistance, @color) {
 	box-shadow: @horizontalOffset @verticalOffset @blurRadius @spreadDistance @color;
 }
@@ -34,4 +40,20 @@
 	&:hover {
 		background-color: #ACD1E9;
 	}
+}
+
+.text-with-shadow( @color:white ){
+  color: @color;
+  text-shadow:  0 -1px 0 fade( black, 25% );
+}
+
+.vertical-gradient ( @startColor: gray, @endColor: white ) {
+	background-color: @endColor;
+	background-image: -moz-linear-gradient( top, @startColor, @endColor ); // Firefox 3.6+
+	background-image: -ms-linear-gradient( top, @startColor, @endColor );  // IE10
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop( 0%, @startColor ), color-stop( 100%, @endColor ) ); // Safari 4+, Chrome 2+ 
+	background-image: -webkit-linear-gradient( top, @startColor, @endColor ); // Safari 5.1+, Chrome 10+
+	filter: e( %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @startColor, @endColor) ); // IE6 & IE7
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @startColor, @endColor); // IE8+
+	background-image: linear-gradient( @startColor, @endColor ); // Standard
 }
