@@ -74,7 +74,7 @@ M.history = ( function() {
 									html( sectionData[ sectionNum ].html ).insertAfter( '#section_' + sectionNum );
 							}
 						}
-						$( window ).trigger( 'mw-mf-page-loaded', [ sectionData ] );
+						$( window ).trigger( 'mw-mf-page-loaded', [ { title: pageTitle, data: sectionData } ] );
 						$( '#content_0' ).removeClass( 'loading' ); // reset loader
 					}
 				} ).fail( function() { // resort to non-javascript mode

@@ -25,7 +25,9 @@ var w = ( function() {
 	function createWatchListButton( container, title, isWatchedArticle ) {
 		var watchBtn, prevent;
 
-		watchBtn = $( '<a class="watch-this-article">' ).appendTo( container );
+		watchBtn = $( container ).find( '.watch-this-article' )[ 0 ] ||
+			$( '<a class="watch-this-article">' ).appendTo( container )[ 0 ];
+
 		if( isWatchedArticle ) {
 			$( watchBtn ).addClass( 'watched' );
 		}
@@ -97,7 +99,10 @@ var w = ( function() {
 		var pageTitle = M.setting( 'title' );
 		container = container || $( '#content_ribbon' )[ 0 ];
 		title = title || pageTitle;
-		initWatchList( container, title );
+		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
+			initWatchList( container, article.title );
+		} );
+
 		upgradeSearch();
 	}
 

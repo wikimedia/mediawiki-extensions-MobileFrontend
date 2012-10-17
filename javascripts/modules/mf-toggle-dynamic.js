@@ -84,7 +84,7 @@ var T = ( function() {
 
 		if ( !$( '#content_wrapper' ).hasClass( 'mw-mf-special' ) ) {
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
-				sectionData = article;
+				sectionData = article.data;
 				enableToggling( $( '#content' ) );
 				if ( !footerInitialised ) {
 					enableToggling( $( '#footer,#mw-mf-ribbon' ) );
