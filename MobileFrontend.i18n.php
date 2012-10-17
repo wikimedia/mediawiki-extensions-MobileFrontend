@@ -1869,6 +1869,7 @@ $messages['diq'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Kande peyd rıştışi homay şıma ra razi bo!',
 	'mobile-frontend-leave-feedback-post-error' => 'Mesaj karkerdeış de xırabin vıciye, Reca kem fına bıcerbne.',
 	'mobile-frontend-language' => 'Zıwan:',
+	'mobile-frontend-language-article-heading' => 'Zıwanê bin de bıwane',
 	'mobile-frontend-language-header' => 'Na wesiqa {{PLURAL:$1|zıwan dê|zıwanan dê}} $1 dı esta',
 	'mobile-frontend-language-footer' => 'Not: Na wesiqa zıwan de iıma de nênusêna. Şıma şenê {{SITENAME}} ra qeydê zıwan de xo qebul kerê.',
 	'mobile-frontend-language-site-choose' => 'Bı geyr zıwan',
