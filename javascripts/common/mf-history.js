@@ -1,5 +1,5 @@
 /*global mw, document, window, _mwStart */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true, nomen: true*/
+/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true, nomen: true */
 ( function( M ) {
 
 M.history = ( function() {
@@ -129,7 +129,7 @@ M.history = ( function() {
 		loadPage: loadPage,
 		navigateToPage: navigateToPage,
 		replaceHash: function( newHash ) {
-			var hashChanged = newHash != window.location.hash;
+			var hashChanged = newHash !== window.location.hash;
 			if ( window.history && window.history.replaceState && hashChanged ) {
 				window.history.replaceState( { title: currentTitle, hash: true }, currentTitle, newHash );
 			} else if ( hashChanged ){
@@ -138,7 +138,7 @@ M.history = ( function() {
 			initialise( newHash );
 		},
 		pushState: function( hash ) {
-			var hashChanged = hash != window.location.hash;
+			var hashChanged = hash !== window.location.hash;
 			if ( window.history && window.history.pushState && hashChanged ) {
 				window.history.pushState( { title: currentTitle, hash: true }, currentTitle, hash );
 			} else if ( hashChanged ) {
@@ -149,4 +149,4 @@ M.history = ( function() {
 	};
 }() );
 
-} )( mw.mobileFrontend );
+} ( mw.mobileFrontend ) );
