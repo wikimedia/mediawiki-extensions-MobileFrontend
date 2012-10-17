@@ -7,9 +7,15 @@ var module = (function() {
 
 	function init() {
 		var $metadata = $( 'table.ambox' ),
-			$clone = $metadata.clone();
+			clones = [];
+
+		$metadata.each( function() {
+			if ( $( this ).children( 'table.ambox' ).length === 0 ) {
+				clones.push( this );
+			}
+		} );
 		$( '<button class="mw-mf-cleanup">' ).click( function() {
-			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), $clone );
+			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), clones );
 		} ).text( M.message( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
 	}
