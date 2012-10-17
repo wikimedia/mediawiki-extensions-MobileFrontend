@@ -479,12 +479,22 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'bcHack' ) ?>
 		<?php $this->html( 'bottomScripts' ) ?>
 	<script type='text/javascript'>
+	( function() {
+	var domLoaded;
 	if ( document.addEventListener ) {
 		document.addEventListener( 'DOMContentLoaded', function() {
+			domLoaded = true;
 			_mwLogEvent( 'DOMContentLoaded' );
 			mw.mobileFrontend.init();
 		} );
 	}
+	window.onload = function() {
+		if ( !domLoaded ) {
+			mw.mobileFrontend.init();
+		}
+	};
+
+	}() ) ;
 	</script>
 	<!--><![endif]-->
 	</body>
