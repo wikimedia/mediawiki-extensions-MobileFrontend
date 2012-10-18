@@ -10,9 +10,22 @@ See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settin
 == Development ==
 
 === CSS ===
+We currently use http://lesscss.org/ to generate stylesheets.
+Ensure when you contribute CSS code you update the less files in stylesheets/less and to generate run:
+
+	make less
+
+To install less via npm (node package manager)
+
+	npm install less
+
+When installed you may need to update your PATH so that you can run the lessc compiler. To do this edit your path (on OSX found in ~/.profile) like so (note your path may differ):
+
+	export PATH=/Users/{username}/.npm/less/1.3.0/package/bin/.
+
 Ensure all css passes the [https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS style guidelines]
 When adding a javascript module, ensure that the css module has the same name.
-e.g. javascripts/banner.js has the corresponding stylesheet stylesheets/banner.css
+e.g. javascripts/modules/mf-toggle.js has the corresponding less/css stylesheets stylesheets/less/modules/mf-toggle.less and stylesheets/modules/mf-toggle.css
 
 Introduce any browser specific patches in the relevant stylesheet. If the browser does not have its own stylesheet considering adding one in DeviceDetection.php
 
