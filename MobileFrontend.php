@@ -123,6 +123,7 @@ $wgResourceModules['mobile'] = array(
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
 );
 
 $wgResourceModules['mobile.beta.jquery'] = array(
@@ -134,6 +135,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
 );
 
 $wgResourceModules['mobile.beta.jquery.eventlog'] = array(
@@ -141,6 +143,7 @@ $wgResourceModules['mobile.beta.jquery.eventlog'] = array(
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
 );
 
 $wgResourceModules['mobile.production-only'] = array(
@@ -149,6 +152,7 @@ $wgResourceModules['mobile.production-only'] = array(
 	'raw' => true,
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
+	'targets' => 'mobile',
 );
 
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
@@ -169,6 +173,7 @@ $wgResourceModules['mobile.filePage'] = array(
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
 );
 $wgResourceModules['mobile.references'] = array(
 	'styles' => array( 'stylesheets/modules/mf-references.css' ),
@@ -176,10 +181,12 @@ $wgResourceModules['mobile.references'] = array(
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
 );
 
 $wgResourceModules['mobile.site'] = array(
 	'class' => 'MobileFrontendSiteModule',
+	'targets' => 'mobile',
 );
 
 // Resources to be loaded on desktop version of site
@@ -188,6 +195,7 @@ $wgResourceModules['mobile.desktop'] = array(
 	'dependencies' => array( 'jquery.cookie' ),
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
 );
 
 /**
@@ -349,3 +357,10 @@ $wgMFEnableDesktopResources = false;
  * Defaults to false.
  */
 $wgMFLogEvents = false;
+
+
+/**
+ * Whether to use ResourceLoader, filtered to mobile target.
+ * If not, old method of loading will be used for all scripts.
+ */
+$wgMFEnableResourceLoader = true;

@@ -76,10 +76,27 @@ class SkinMobile extends SkinMobileBase {
 		}
 		$scriptLinks = array();
 		if ( $device['supports_jquery'] ) {
-			$scriptLinks[] = $this->resourceLoaderLink( 'jquery', 'scripts', true, true );
-			global $wgResponsiveImages;
-			if ( $wgResponsiveImages ) {
-				$scriptLinks[] = $this->resourceLoaderLink( array( 'jquery.hidpi', 'mediawiki.hidpi' ), 'scripts', true, true );
+			global $wgMFEnableResourceLoader;
+			if ( $inBeta && $wgMFEnableResourceLoader ) {
+				// Initialize ResourceLoader, targeted to mobile...
+				$scriptLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
+				$modules = $this->getOutput()->getModules( true );
+				if ( $modules ) {
+					// Load ResourceLoader modules
+					$scriptLinks[] = Html::inlineScript(
+						ResourceLoader::makeLoaderConditionalScript(
+							Xml::encodeJsCall( 'mw.loader.load', array( $modules ) )
+						)
+					);
+				}
+			} else {
+				// Not beta or RL mode disabled; use old method of loading jquery.
+				$scriptLinks[] = $this->resourceLoaderLink( 'jquery', 'scripts', true, true );
+				global $wgResponsiveImages;
+				if ( $wgResponsiveImages ) {
+					$scriptLinks[] = $this->resourceLoaderLink( array( 'jquery.hidpi', '
+mediawiki.hidpi' ), 'scripts', true, true );
+				}
 			}
 		}
 		$scriptLinks[] = $this->resourceLoaderLink( $scripts, 'scripts' );
@@ -189,7 +206,7 @@ class SkinMobile extends SkinMobileBase {
 		return $this->resourceLoader;
 	}
 
-	protected function resourceLoaderLink( $moduleNames, $type, $useVersion = true, $forceRaw = false ) {
+	protected function resourceLoaderLink( $moduleNames, $type, $useVersion = true, $forceRaw = false, $target = false ) {
 		if ( $type == 'scripts' ) {
 			$only = ResourceLoaderModule::TYPE_SCRIPTS;
 		} elseif ( $type == 'styles' ) {
@@ -240,6 +257,9 @@ class SkinMobile extends SkinMobileBase {
 			false,
 			$forceRaw ? array( 'raw' => 'true' ) : array()
 		);
+		if ( $target !== false ) {
+			$url .= '&target=' . urlencode( $target );
+		}
 		if ( $type == 'scripts' ) {
 			$link = Html::linkedScript( $url );
 		} else {
