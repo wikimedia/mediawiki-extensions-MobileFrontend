@@ -157,6 +157,8 @@ if( M.jQuery ) {
 			if ( inBeta ) {
 				$( window ).on( 'mw-mf-page-loaded', function() {
 					setupReferences( $( '#content' )[ 0 ] );
+				} ).on( 'mw-mf-section-rendered', function( ev, container ) {
+					setupReferences( container );
 				} );
 			} else {
 				setupReferences.apply( this, arguments );
