@@ -23,7 +23,7 @@
 }
 
 #mw-mf-main-menu-button:active {
-	background-color: #4C4C4C;
+	background-color: darken( @searchBoxColor, 0.4% );
 }
 
 #mw-mf-viewport {
@@ -45,7 +45,8 @@
 #mw-mf-header {
 	z-index: 2;
 	color: white;
-	background-color: #393939;
+	.vertical-gradient( @searchBoxColor, darken( @searchBoxColor, 2.75% ) );
+	border-bottom: 1px solid #e2e2e2;
 }
 
 #mw-mf-page-left {
@@ -118,7 +119,7 @@
 	line-height: 22px;
 	background-repeat: no-repeat;
 	.background-size(24px, 24px);
-	background-position: 0px 12px;
+	background-position: 0px 9px;
 	height: 21px;
 	margin-left: 10px;
 	border-bottom: 1px inset #3e3e3e;
@@ -268,7 +269,7 @@ button.escapeOverlay {
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-indent: -999px;
-	.background-size( 12px, 16px );
+	.background-size( auto, @searchBoxHeight );
 	z-index: 2;
 }
 

@@ -7,20 +7,19 @@ input.search {
   -webkit-appearance: none;
   line-height: normal;
   background: none;
-  border: solid 1px #D9D9D9;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-radius: 0;
-  /* reset any browsers that add this by default e.g. iphone */
-
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   margin-top: 0;
   width: 99%;
-  border: none;
+  border: 1px solid #c9c9c9;
   outline: none;
   padding: 0;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 9px;
   height: 30px;
   vertical-align: middle;
   /* don't use line height here as placeholder on ripple positions incorrectly */
@@ -45,10 +44,10 @@ input.search.searching {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 #mw-mf-searchForm .clearlink {
-  top: 12px;
+  top: 9px;
   right: 8px;
   width: 24px;
-  height: 20px;
+  height: 30px;
   background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
   margin: 0;
   display: none;
@@ -67,7 +66,7 @@ input.search.searching {
 .full-screen-search #mw-mf-header {
   z-index: 2;
   color: white;
-  background-color: #393939;
+  background-color: #fafafa;
 }
 .full-screen-search #results,
 .full-screen-search #mw-mf-searchForm.notEmpty .clearlink,
