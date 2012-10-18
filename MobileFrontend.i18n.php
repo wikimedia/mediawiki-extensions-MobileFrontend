@@ -253,7 +253,6 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
 	'mobile-frontend-meta-data-issues-header' => 'Call to action that shows on an overlay when opened when an article has cleanup templates on it',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
-
 	'mobile-frontend-ajax-page-loading' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript',
 	'mobile-frontend-ajax-page-error' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript and it fails',
 );
@@ -1531,6 +1530,7 @@ $messages['cs'] = array(
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Nerozpoznaná volba „$1“.',
 	'mobile-frontend-search-noresults' => 'Vašemu hledání neodpovídají žádné názvy článků. Změňte zadání nebo stiskněte tlačítko hledání pro hledání v článcích.',
+	'mobile-frontend-main-menu-page-title' => 'Navigace po webu',
 	'mobile-frontend-main-menu-featured' => 'Nejlepší',
 	'mobile-frontend-main-menu-nearby' => 'Poblíž',
 	'mobile-frontend-main-menu-settings' => 'Nastavení',
@@ -1544,6 +1544,8 @@ $messages['cs'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Přečíst si tento článek v',
 	'mobile-frontend-meta-data-issues-header' => 'Vylepšete tento článek',
 	'mobile-frontend-meta-data-issues' => 'Tento článek má nedostatky',
+	'mobile-frontend-ajax-page-loading' => 'Načítá se $1',
+	'mobile-frontend-ajax-page-error' => 'Jejda! Něco se tu pokazilo. Zkuste obnovit okno prohlížeče.',
 );
 
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
@@ -1764,6 +1766,7 @@ $messages['de'] = array(
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Unbekannte Option „$1“.',
 	'mobile-frontend-search-noresults' => 'Kein Artikeltitel entspricht deiner Suche. Ändere deine Suche oder drücke die Suchschaltfläche deiner Tastatur, um die Suche auf den Inhalt der Artikel auszuweiten.',
+	'mobile-frontend-main-menu-page-title' => 'Websitenavigation',
 	'mobile-frontend-main-menu-featured' => 'Exzellent',
 	'mobile-frontend-main-menu-nearby' => 'In der Nähe',
 	'mobile-frontend-main-menu-settings' => 'Einstellungen',
@@ -1778,6 +1781,8 @@ $messages['de'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Diesen Artikel lesen auf',
 	'mobile-frontend-meta-data-issues-header' => 'Diesen Artikel verbessern',
 	'mobile-frontend-meta-data-issues' => 'Mit diesem Artikel gibt es Probleme',
+	'mobile-frontend-ajax-page-loading' => 'Lade $1',
+	'mobile-frontend-ajax-page-error' => 'Hoppla! Irgend etwas ist schief gelaufen. Bitte versuche, dein Browserfenster zu aktualisieren.',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -1902,6 +1907,7 @@ $messages['diq'] = array(
 	'mobile-frontend-footer-contact' => 'İrtibat',
 	'mobile-frontend-unknown-option' => 'Weçineya "$1"\'i ne şınasiya.',
 	'mobile-frontend-search-noresults' => 'Sernameyo ke şımayê geyrenê wesiqeyo do wuni çıniyo. Cı geyreyışê xo bıvurnê yana zerrey wesiqer de cıgeyrayışi re klawye ra butona cıgeyrayışi pıploğne.',
+	'mobile-frontend-main-menu-page-title' => 'Pusulaya sita',
 	'mobile-frontend-main-menu-featured' => 'Weçinaye',
 	'mobile-frontend-main-menu-nearby' => 'Nezdıra',
 	'mobile-frontend-main-menu-settings' => 'Sazi',
@@ -1911,11 +1917,13 @@ $messages['diq'] = array(
 	'mobile-frontend-main-menu-contact' => 'İrtibat',
 	'mobile-frontend-page-menu-contents' => 'miyandene',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
-	'mobile-frontend-page-menu-history' => 'Werênayış',
+	'mobile-frontend-page-menu-history' => 'Verêne',
 	'mobile-frontend-page-menu-contents-heading' => 'miyandene',
 	'mobile-frontend-page-menu-language-heading' => 'Enê wesiqi bıwanê',
 	'mobile-frontend-meta-data-issues-header' => 'Na wesiqer vıraşten de',
 	'mobile-frontend-meta-data-issues' => 'Mersela ena wesiqer',
+	'mobile-frontend-ajax-page-loading' => "$1'a wanêna",
+	'mobile-frontend-ajax-page-error' => 'Hooop! Tay çi ters şı. Şıma rarecay ma teqay waster de xo newe kere u fına bıcerbne.',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -1954,6 +1962,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-disable-images' => 'Wobraze w mobilnem naglěźe znjemóžniś',
 	'mobile-frontend-enable-images' => 'Wobraze w mobilnem naglěźe zmóžniś',
 	'mobile-frontend-toggle-images' => 'Wobraze $1 / $2',
+	'mobile-frontend-missing-image' => 'Wobraz',
 	'mobile-frontend-off' => 'WUŠALTOWANY',
 	'mobile-frontend-on' => 'ZAŠALTOWANY',
 	'mobile-frontend-footer-contributors' => 'Nadawk wót <a href="$1">awtorow</a> kaž ty',
@@ -1988,6 +1997,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Pśi pśeźěłowanju twójeje powěsći jo zmólka nastała.
 Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-language' => 'Rěc:',
+	'mobile-frontend-language-article-heading' => 'W drugej rěcy cytaś',
 	'mobile-frontend-language-header' => 'Toś ten nastawk stoj w $1 {{PLURAL:$1|rěcy|rěcoma|rěcach|rěcach}} k dispoziciji',
 	'mobile-frontend-language-footer' => 'Glědaj: Toś ten nastawk njejo snaź w twójej preferěrowanej rěcy napisał. Móžoš wiźeś, kótare rěcy {{SITENAME}} pódpěra, z tym až kliknjoš how.',
 	'mobile-frontend-language-site-choose' => 'Rěc pytaś',
@@ -3773,6 +3783,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Při předźěłowanju wašeje powěsće je zmylk wustupił.
 Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-language' => 'Rěč:',
+	'mobile-frontend-language-article-heading' => 'W druhej rěči čitać',
 	'mobile-frontend-language-header' => 'Tutón nastawk steji w $1 {{PLURAL:$1|rěči|rěčomaj|rěčach|rěčach}} k dispoziciji',
 	'mobile-frontend-language-footer' => 'Kedźbu: Tutón nastawk njeje snano w twojej preferowanej rěči napisał. Móžeš widźeć, kotre rěče {{SITENAME}} podpěruje, kliknjo tu.',
 	'mobile-frontend-language-site-choose' => 'Rěč pytać',
@@ -4404,6 +4415,7 @@ $messages['it'] = array(
 	'mobile-frontend-footer-contact' => 'Contatti',
 	'mobile-frontend-unknown-option' => 'Opzione non riconosciuta "$1".',
 	'mobile-frontend-search-noresults' => 'Nessuna voce ha un titolo che corrisponde alla tua ricerca. Modifica la tua ricerca, oppure premi il pulsante della tastiera "Cerca" per la ricerca nel testo delle voci.',
+	'mobile-frontend-main-menu-page-title' => 'Navigazione sul sito',
 	'mobile-frontend-main-menu-featured' => 'In primo piano',
 	'mobile-frontend-main-menu-nearby' => 'Nelle vicinanze',
 	'mobile-frontend-main-menu-settings' => 'Impostazioni',
@@ -4417,6 +4429,8 @@ $messages['it'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Leggi questa voce in',
 	'mobile-frontend-meta-data-issues-header' => 'Migliora questa voce',
 	'mobile-frontend-meta-data-issues' => 'Questa voce ha dei problemi',
+	'mobile-frontend-ajax-page-loading' => 'Sto caricando $1',
+	'mobile-frontend-ajax-page-error' => 'Whoops! Qualcosa è andato storto. Prova ad aggiornare la finestra del browser.',
 );
 
 /** Japanese (日本語)
@@ -4532,6 +4546,8 @@ $messages['ja'] = array(
 	'mobile-frontend-page-menu-contents-heading' => '目次',
 	'mobile-frontend-meta-data-issues-header' => 'この記事を改善',
 	'mobile-frontend-meta-data-issues' => 'この記事には問題点があります',
+	'mobile-frontend-ajax-page-loading' => '$1 を読み込み中',
+	'mobile-frontend-ajax-page-error' => 'エラー! 何らかのエラーが発生しました。ブラウザーの再読込を試してください。',
 );
 
 /** Javanese (Basa Jawa)
@@ -7422,6 +7438,7 @@ $messages['ro'] = array(
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-unknown-option' => 'Opțiunea „$1”  nu este cunoscută.',
 	'mobile-frontend-search-noresults' => 'Niciun titlu de articol nu corespunde căutării dumneavoastră. Căutați altceva sau apăsați butonul de căutare de pe tastatură pentru a căuta în interiorul articolelor.',
+	'mobile-frontend-main-menu-page-title' => 'Navigare în site',
 	'mobile-frontend-main-menu-featured' => 'De calitate',
 	'mobile-frontend-main-menu-nearby' => 'În apropiere',
 	'mobile-frontend-main-menu-settings' => 'Setări',
@@ -7435,6 +7452,8 @@ $messages['ro'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Citiți acest articol în',
 	'mobile-frontend-meta-data-issues-header' => 'Îmbunătățiți acest articol',
 	'mobile-frontend-meta-data-issues' => 'Acest articol are anumite probleme',
+	'mobile-frontend-ajax-page-loading' => 'Se încarcă $1',
+	'mobile-frontend-ajax-page-error' => 'Hopa! Ceva nu a funcționat bine. Încercați să reîmprospătați fereastra navigatorului dv.',
 );
 
 /** tarandíne (tarandíne)
@@ -7520,6 +7539,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (русский)
  * @author AlexSm
+ * @author Amire80
  * @author Biathlon
  * @author Bouron
  * @author DR
@@ -7545,7 +7565,7 @@ $messages['ru'] = array(
 	'mobile-frontend-close-section' => 'Закрыть этот раздел',
 	'mobile-frontend-show-button' => 'Показать',
 	'mobile-frontend-hide-button' => 'Скрыть',
-	'mobile-frontend-empty-homepage' => 'Эта домашняя страница нуждается в настройке. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Инструкции по организации мобильной версии сайта</a>',
+	'mobile-frontend-empty-homepage' => 'Эта заглавная страница нуждается в настройке. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Инструкции по организации мобильной версии сайта</a>',
 	'mobile-frontend-regular-site' => 'Обычная версия',
 	'mobile-frontend-wml-continue' => 'Далее ...',
 	'mobile-frontend-wml-back' => 'Назад ...',
@@ -7606,8 +7626,8 @@ $messages['ru'] = array(
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Войти',
 	'mobile-frontend-logout' => 'Выйти',
-	'mobile-frontend-placeholder' => 'Искать на {{SITENAME}}',
-	'mobile-frontend-search-help' => 'Введите выше искомый термин, и здесь будут показаны совпадающие заголовки статей.',
+	'mobile-frontend-placeholder' => 'Искать в {{grammar:genitive|{{SITENAME}}}}',
+	'mobile-frontend-search-help' => 'Введите выше искомый термин, и здесь отобразятся совпадающие с ним заголовки статей.',
 	'mobile-frontend-dismiss-notification' => 'скрыть это уведомление',
 	'mobile-frontend-clear-search' => 'Очистить',
 	'mobile-frontend-privacy-link-text' => 'Конфиденциальность',
