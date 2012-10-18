@@ -19,6 +19,28 @@ class UserLoginMobileTemplate extends QuickTemplate {
 	public function execute() {
 		$action = $this->data['action'];
 		$token = $this->data['token'];
+		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
+		$message = $this->data['message'];
+		$messageType = $this->data['messagetype'];
+		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
+
+		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login' ) );
+
+		$loginHead = Html::rawElement( 'div', array( 'class' => 'info' ),
+			wfMessage( 'mobile-frontend-sign-in-why' )->text() );
+
+		if ( $message ) {
+			$heading = '';
+			if ( $messageType == 'error' ) {
+				$heading = wfMessage( 'mobile-frontend-sign-in-error-heading' )->text();
+				$class = 'error alert';
+			}
+
+			$msgBox .= Html::openElement( 'div', array( 'class' => $class ) );
+			$msgBox .= Html::rawElement( 'h2', array(), $heading );
+			$msgBox .= $message;
+			$msgBox .= Html::closeElement( 'div' );
+		}
 
 		$form = Html::openElement( 'div', array( 'id' => 'userloginForm' ) ) .
 			Html::openElement( 'form',
@@ -37,7 +59,7 @@ class UserLoginMobileTemplate extends QuickTemplate {
 			Html::closeElement( 'tr' ) .
 			Html::openElement( 'tr' ) .
 			Html::openElement( 'td' ) .
-			Html::input( 'wpName', null, 'text',
+			Html::input( 'wpName', $username, 'text',
 				array( 'class' => 'loginText',
 					'id' => 'wpName1',
 					'tabindex' => '1',
@@ -78,7 +100,9 @@ class UserLoginMobileTemplate extends QuickTemplate {
 			Html::input( 'wpLoginToken', $token, 'hidden' ) .
 			Html::closeElement( 'form' ) .
 			Html::closeElement( 'div' );
-		echo $form;
+		$login .= $loginHead . $msgBox . $form;
+		$login .= Html::closeElement( 'div' );
+		echo $login;
 	}
 
 	/**
