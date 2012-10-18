@@ -22,6 +22,7 @@ class SkinMobile extends SkinMobileBase {
 		$inBeta = $context->isBetaGroupMember();
 
 		$tpl->set( 'isBetaGroupMember', $inBeta );
+		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		$tpl->set( 'title', $out->getPageTitle() );
@@ -89,7 +90,7 @@ class SkinMobile extends SkinMobileBase {
 		$bottomScripts = implode( "\n", $scriptLinks );
 		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
 		$tpl->set( 'preambleScript', $device['supports_javascript'] ?
-			"document.documentElement.className = 'jsEnabled page-loading';" : '' );
+			"document.documentElement.className += ' jsEnabled page-loading';" : '' );
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
 		$tpl->set( 'stopMobileRedirectCookieDuration', $context->getUseFormatCookieDuration() );
@@ -414,8 +415,16 @@ class SkinMobileTemplate extends BaseTemplate {
 		$this->data['isBetaGroupMember'] ? $this->set( 'bodyClasses', 'mobile beta' ) :
 			$this->set( 'bodyClasses', 'mobile live' );
 
+		if ( $this->data['renderLeftMenu'] ) {
+			$htmlClass = 'navigationEnabled navigationFullScreen';
+		} else {
+			$htmlClass = '';
+		}
+		$this->set( 'htmlClasses', $htmlClass );
+
 		?><!doctype html>
-	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>">
+	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>"
+		class="<?php $this->text( 'htmlClasses' )  ?>">
 	<head>
 		<title><?php $this->text( 'pagetitle' ) ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -613,12 +622,16 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 	<div id="mw-mf-header">
 		<?php
-		if ( $this->data['isBetaGroupMember'] ) { ?>
-			<a href="#mw-mf-page-left" id="mw-mf-main-menu-button">
+		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
+		if ( $this->data['isBetaGroupMember'] ) {
+			echo Html::openElement( 'a', array(
+				'href' => $url, 'id'=> 'mw-mf-main-menu-button'
+			) );
+		?>
 				<img alt="menu"
 				src="<?php $this->text( 'shim' ) ?>">
-			</a>
 		<?php
+			echo Html::closeElement( 'a' );
 		}
 		?>
 			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
