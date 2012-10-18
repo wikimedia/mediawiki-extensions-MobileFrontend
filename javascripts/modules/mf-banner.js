@@ -6,14 +6,11 @@ MobileFrontend.banner = (function() {
 	var $ = M.jQuery;
 
 	function init( banner ) {
-		var cookieNameZeroVisibility = banner ? banner.getAttribute( 'id' ) : 'zeroRatedBannerVisibility',
+		var cookieNameZeroVisibility = banner.getAttribute( 'id' ),
 			settings = M.getModule( 'settings' ),
 			saveUserSetting = settings.saveUserSetting,
 			getUserSetting = settings.getUserSetting,
-			dismissNotification = banner ? banner.getElementsByTagName( 'button' )[ 0 ] : document.getElementById( 'dismiss-notification' );
-
-		banner = banner || document.getElementById( 'zero-rated-banner' ) ||
-			document.getElementById( 'zero-rated-banner-red' );
+			dismissNotification = banner.getElementsByTagName( 'button' )[ 0 ];
 
 		if ( dismissNotification ) {
 			zeroRatedBannerVisibility = getUserSetting( cookieNameZeroVisibility );
@@ -34,13 +31,14 @@ MobileFrontend.banner = (function() {
 
 	if ( $ ) {
 		$( '.mw-mf-banner' ).each( function() {
-			$( '<button class="notify-close">' ).text( '×' ).appendTo( this );
+			if ( $( this ).find( 'button.notify-close' ).length === 0 &&
+				!$( this ).hasClass( 'mw-mf-banner-undismissable' ) ) {
+				$( '<button class="notify-close">' ).text( '×' ).appendTo( this );
+			}
 			init( this );
 		} );
 	}
 
-	// TODO: this is only here for legacy reasons - ZeroRatedMobileAccess extension should be refactored to serve generic banners
-	init();
 	return {
 		init: init
 	};
