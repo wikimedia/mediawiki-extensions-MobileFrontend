@@ -15,14 +15,14 @@ module("MobileFrontend references.js", {
 });
 
 test("Standard", function() {
-	R.init( $( '#mfe-test-references' )[ 0 ] );
+	R.setupReferences( $( '#mfe-test-references' )[ 0 ] );
 	$("#mfe-test-references sup a").trigger("click");
 	strictEqual($("#mf-references div h3").text(), "[1]");
 	strictEqual($("#mf-references div a").text(), "test reference");
 });
 
 test("Bug 36192", function() {
-	R.init( $( '#mfe-test-references' )[ 0 ] );
+	R.setupReferences( $( '#mfe-test-references' )[ 0 ] );
 	$("body").trigger("click");
 	strictEqual(runSlide, false, "slide animation was not run as references hidden");
 });
