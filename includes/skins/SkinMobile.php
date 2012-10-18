@@ -470,8 +470,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				<h2 id="section_ribbon" class="section_heading">ribbon</h2>
 			</div>
 			<div id="content">
-			<?php $this->html( 'firstHeading' ) ?>
 			<?php } ?>
+			<?php $this->html( 'firstHeading' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
 			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<?php $this->html( 'languageSelection' ) ?>
