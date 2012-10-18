@@ -5,6 +5,7 @@ var MobileFrontend = M, references;
 if( typeof jQuery !== 'undefined' ) {
 	references = ( function( $ ) {
 		var calculatePosition = function() {}, wasVisible,
+			inBeta = M.setting( 'beta' ),
 			supportsPositionFixed = MobileFrontend.supportsPositionFixed;
 
 		function collect() {
@@ -59,7 +60,7 @@ if( typeof jQuery !== 'undefined' ) {
 				onClickReference: <function>
 					Define a handler that is run upon clicking a reference
 		*/
-		function init( container, firstRun, options ) {
+		function setupReferences( container, firstRun, options ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			options = getOptions( options );
 			container = container || $( '#content' )[0];
@@ -151,8 +152,19 @@ if( typeof jQuery !== 'undefined' ) {
 				});
 			}
 		}
+
+		function init() {
+			if ( inBeta ) {
+				$( window ).on( 'mw-mf-page-loaded', function( ev, page ) {
+					setupReferences( $( '#content' )[ 0 ] );
+				} );
+			} else {
+				setupReferences.apply( this, arguments );
+			}
+		}
 		return {
-			init: init
+			init: init,
+			setupReferences: setupReferences
 		};
 	}(jQuery));
 
