@@ -9,6 +9,7 @@ less:
 	lessc stylesheets/less/common/mf-header.less > stylesheets/common/mf-header.css
 	lessc stylesheets/less/common/mf-navigation-legacy.less > stylesheets/common/mf-navigation-legacy.css
 	lessc stylesheets/less/common/mf-navigation.less > stylesheets/common/mf-navigation.css
+	lessc stylesheets/less/modules/mf-cleanuptemplates.less > stylesheets/modules/mf-cleanuptemplates.css
 	lessc stylesheets/less/modules/mf-toggle.less > stylesheets/modules/mf-toggle.css
 	lessc stylesheets/less/modules/mf-search.less > stylesheets/modules/mf-search.css
 	lessc stylesheets/less/common/mf-common-legacy.less > stylesheets/common/mf-common-legacy.css
