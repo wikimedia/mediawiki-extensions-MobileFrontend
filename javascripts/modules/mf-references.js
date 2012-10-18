@@ -1,20 +1,20 @@
 /*global document, window, mw, jQuery, navigator */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 ( function( M ) {
-var MobileFrontend = M, references;
-if( typeof jQuery !== 'undefined' ) {
+var references;
+if( M.jQuery ) {
 	references = ( function( $ ) {
-		var calculatePosition = function() {}, wasVisible,
+		var calculatePosition = function() {},
 			inBeta = M.setting( 'beta' ),
-			supportsPositionFixed = MobileFrontend.supportsPositionFixed;
+			supportsPositionFixed = M.supportsPositionFixed;
 
 		function collect() {
 			var references = {};
-			$( 'ol.references li' ).each(function(i, el) {
-				references[ $(el).attr( 'id' ) ] = {
-					html: $(el).html()
+			$( 'ol.references li' ).each( function() {
+				references[ $( this ).attr( 'id' ) ] = {
+					html: $( this ).html()
 				};
-			});
+			} );
 			return references;
 		}
 
@@ -27,7 +27,7 @@ if( typeof jQuery !== 'undefined' ) {
 					position: 'absolute'
 				} );
 			};
-			$( document ).scroll(calculatePosition);
+			$( document ).scroll( calculatePosition );
 		}
 		function getOptions( options ) {
 			var hashtest;
@@ -63,11 +63,11 @@ if( typeof jQuery !== 'undefined' ) {
 		function setupReferences( container, firstRun, options ) {
 			var el, close, lastLink, data, html, href, references = collect();
 			options = getOptions( options );
-			container = container || $( '#content' )[0];
-			firstRun = typeof( firstRun ) === 'undefined' ? true : firstRun;
+			container = container || $( '#content' )[ 0 ];
+			firstRun = firstRun === undefined ? true : firstRun;
 			$( '#mf-references' ).remove();
 			el = $( '<div id="mf-references"><div></div></div>' ).hide().
-				appendTo( document.body )[0];
+				appendTo( document.body )[ 0 ];
 			function cancelBubble( ev ) {
 				ev.stopPropagation();
 			}
@@ -89,7 +89,7 @@ if( typeof jQuery !== 'undefined' ) {
 								complete: function() {
 									$( '#mf-references' ).hide();
 								}
-							});
+							} );
 					} else {
 						$( '#mf-references' ).slideUp();
 					}
@@ -98,7 +98,7 @@ if( typeof jQuery !== 'undefined' ) {
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
 
-			function clickReference(ev) {
+			function clickReference( ev ) {
 				var top, oh;
 				href = $( this ).attr( 'href' );
 				data = href && href.charAt(0) === '#' ?
@@ -139,24 +139,26 @@ if( typeof jQuery !== 'undefined' ) {
 				cancelBubble( ev );
 			}
 			$( 'sup a', container ).unbind( 'click' ).
-				click( clickReference ).each(function(i, el) {
+				click( clickReference ).each( function() {
 					el.ontouchstart = cancelBubble;
-				});
+				} );
 			if( firstRun ) {
-				$( window ).scroll(function( ev ) {
+				$( window ).scroll( function() {
 					close();
-				});
+				} );
 				$( document.body ).bind( 'click', close );
 				$( document.body ).bind( 'touchstart', function() {
 					$( '#mf-references' ).hide();
-				});
+				} );
 			}
 		}
 
 		function init() {
 			if ( inBeta ) {
-				$( window ).on( 'mw-mf-page-loaded', function( ev, page ) {
+				$( window ).on( 'mw-mf-page-loaded', function() {
 					setupReferences( $( '#content' )[ 0 ] );
+				} ).on( 'mw-mf-section-rendered', function( ev, container ) {
+					setupReferences( container );
 				} );
 			} else {
 				setupReferences.apply( this, arguments );
