@@ -18,6 +18,7 @@ button.mw-mf-cleanup {
   /* if on desktop */
 
   width: 100%;
+  color: black;
 }
 button.mw-mf-cleanup:hover {
   opacity: 0.2;
