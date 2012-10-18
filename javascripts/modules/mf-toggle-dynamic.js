@@ -6,6 +6,7 @@ var T = ( function() {
 	var inBeta = $( 'body' ).hasClass( 'beta' ),
 		message = M.message,
 		sectionData = {},
+		footerInitialised = false,
 		showLabel = message( 'expand-section' ),
 		hideLabel = message( 'collapse-section' );
 
@@ -83,8 +84,12 @@ var T = ( function() {
 
 		if ( !$( '#content_wrapper' ).hasClass( 'mw-mf-special' ) ) {
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
-				sectionData = article;
+				sectionData = article.data;
 				enableToggling( $( '#content' ) );
+				if ( !footerInitialised ) {
+					enableToggling( $( '#footer,#mw-mf-ribbon' ) );
+					footerInitialised = true;
+				}
 				_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
 			} );
 			M.history.loadPage( pageTitle, false );
