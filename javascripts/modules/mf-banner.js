@@ -1,8 +1,7 @@
 /*global document, window, mw, navigator, clearTimeout, setTimeout */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
-( function( MobileFrontend ) {
-var M = MobileFrontend;
-MobileFrontend.banner = (function() {
+( function( M ) {
+M.banner = (function() {
 	var $ = M.jQuery;
 
 	function init( banner ) {
