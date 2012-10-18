@@ -7,6 +7,7 @@ M.history = ( function() {
 		firstRun,
 		loadPage = function() {},
 		$ = M.jQuery,
+		inBeta = M.setting( 'beta' ),
 		currentTitle = M.setting( 'title' ),
 		apiUrl = M.setting( 'scriptPath' ) + '/api.php',
 		URL_TEMPLATE = mw.mobileFrontend.setting( 'pageUrl' ),
@@ -90,7 +91,7 @@ M.history = ( function() {
 			hijackLinks();
 		} );
 
-		if ( window.history && window.history.pushState ) {
+		if ( window.history && window.history.pushState && inBeta ) {
 			navigateToPage = function( title ) {
 				_mwStart = +new Date; // reset logger
 				loadPage( title, true );
