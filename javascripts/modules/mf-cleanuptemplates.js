@@ -6,7 +6,7 @@ var module = (function() {
 	var nav = M.getModule( 'navigation' );
 
 	function init() {
-		var $metadata = $( 'table.ambox' ),
+		var $metadata = $( '#content_0 table.ambox' ),
 			clones = [];
 
 		$metadata.each( function() {
