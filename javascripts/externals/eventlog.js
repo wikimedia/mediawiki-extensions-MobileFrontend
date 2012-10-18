@@ -24,7 +24,7 @@
 
 		var kv = [], key, param;
 
-		if ( 'event_id' in ev && ev.event_id.length ) {
+		if ( !( 'event_id' in ev ) || !( ev.event_id.length ) ) {
 			throw new Error( 'Event is missing "event_id" key' );
 		}
 
@@ -63,5 +63,7 @@
 
 	window.setInterval( dequeue, POLL_INTERVAL );
 	window.onbeforeunload = dequeue;
+
+	window._evq.track = track;
 
 } ( window, document, window.encodeURIComponent ));
