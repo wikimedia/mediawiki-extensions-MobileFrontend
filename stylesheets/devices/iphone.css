@@ -1,9 +1,3 @@
-@media screen and (-webkit-device-pixel-ratio: 2.0) {
-	#goButton {
-		background-image: url(images/s-xhdpi.png) !important;
-	}
-}
-
 #ogg_player_1 {
 	display: none;
 }
