@@ -46,6 +46,7 @@ M.history = ( function() {
 					sectionprop: 'level|line', sections: 'all' }
 				} ).done( function( resp ) {
 					var i, secs, s, sectionNum = 0, level, text,
+						$tmpContainer = $( '<div>' ),
 						sectionData = {};
 					if ( resp && resp.mobileview && resp.mobileview.sections ) {
 						secs = resp.mobileview.sections;
@@ -67,7 +68,9 @@ M.history = ( function() {
 										text( s.line ).appendTo( $section );
 								}
 							} else if ( level ) {
-								sectionData[ sectionNum ].html += $( '<h' + level + '>' ).text( s.line ).html() + text;
+								$tmpContainer.html( text );
+								$tmpContainer.prepend( $( '<h' + level + '>' ).text( s.line ) );
+								sectionData[ sectionNum ].html += $tmpContainer.html();
 							}
 							if( s.hasOwnProperty( 'references' ) ) {
 								sectionData[ sectionNum ].references = true;
