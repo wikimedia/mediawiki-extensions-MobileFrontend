@@ -98,7 +98,7 @@ var toggle = ( function() {
 			heading = sectionHeadings[i];
 			heading.insertBefore( createButton(), heading.firstChild );
 			a = document.getElementById( 'anchor_' + heading.id.split( '_' )[ 1 ] );
-			if( a && inBeta ) {
+			if( a ) {
 				u( a ).text( message( 'mobile-frontend-close-section' ) );
 				u( a ).bind( 'click', openSectionHandler );
 			}
