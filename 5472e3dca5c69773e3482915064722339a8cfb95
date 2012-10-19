@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//+e4\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-19T23:49:21Z",
+      "side": 1,
+      "message": "put these in mobile.beta.jquery",
+      "revId": "5472e3dca5c69773e3482915064722339a8cfb95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
