@@ -505,18 +505,22 @@ class SkinMobileTemplate extends BaseTemplate {
 		<div id="mw-mf-page-left">
 		<div id='mw-mf-content-left'>
 		<ul id="mw-mf-menu-main">
-			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>">
+			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>"
+				title="<?php $this->msg( 'mobile-frontend-home-button' ) ?>">
 				<?php $this->msg( 'mobile-frontend-home-button' ) ?></a></li>
-			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
-			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
+			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
+				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
+				class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
 			<li class='icon4'>
-				<a href='<?php $this->text( 'leaveFeedbackURL' ) ?>'>
+				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"
+					title="<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
 				</a>
 			</li>
 			<?php } ?>
 			<li class='icon5'>
-				<a href='<?php $this->text( 'settingsUrl' ) ?>'>
+				<a href="<?php $this->text( 'settingsUrl' ) ?>"
+					title="<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
@@ -617,6 +621,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
 			echo Html::openElement( 'a', array(
+				'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' )->text(),
 				'href' => $url, 'id'=> 'mw-mf-main-menu-button'
 			) );
 		?>
