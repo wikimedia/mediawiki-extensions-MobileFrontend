@@ -508,11 +508,13 @@ class SkinMobileTemplate extends BaseTemplate {
 			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>">
 				<?php $this->msg( 'mobile-frontend-home-button' ) ?></a></li>
 			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton" class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
+			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<li class='icon4'>
 				<a href='<?php $this->text( 'leaveFeedbackURL' ) ?>'>
 				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
 				</a>
 			</li>
+			<?php } ?>
 			<li class='icon5'>
 				<a href='<?php $this->text( 'settingsUrl' ) ?>'>
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
@@ -667,6 +669,15 @@ class SkinMobileTemplate extends BaseTemplate {
 			</li>
 		</ul>
 		<ul class="links">
+			<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
+			<li>
+			<a href='<?php $this->text( 'leaveFeedbackURL' ) ?>'>
+				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
+			</a>
+			</li><li>
+			<?php } else { ?>
+				<li>
+			<?php } ?>
 			<?php $this->html( 'privacyLink' ) ?></li><li>
 			<?php $this->html( 'aboutLink' ) ?></li><li>
 			<?php $this->html( 'disclaimerLink' ) ?></li>
