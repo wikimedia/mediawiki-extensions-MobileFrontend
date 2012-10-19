@@ -26,7 +26,7 @@ class UserLoginMobileTemplate extends QuickTemplate {
 
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login' ) );
 
-		$loginHead = Html::rawElement( 'div', array( 'class' => 'info' ),
+		$loginHead = Html::rawElement( 'div', array( 'class' => 'alert info' ),
 			wfMessage( 'mobile-frontend-sign-in-why' )->text() );
 
 		if ( $message ) {

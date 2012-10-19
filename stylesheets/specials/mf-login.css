@@ -1,0 +1,43 @@
+.specialPage.overlay body {
+  background-color: #f0f0f0;
+}
+.specialPage.overlay #mw-mf-overlay .header {
+  background-color: #393939;
+}
+.specialPage.overlay #mw-mf-overlay .header h1 {
+  padding-left: 0.4em;
+}
+#userloginForm {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+table.user-login {
+  border: none;
+  display: table;
+}
+table.user-login tbody {
+  display: table-row-group;
+}
+table.user-login tr {
+  display: table-row;
+}
+table.user-login tr td {
+  border: none;
+}
+table.user-login .mw-label {
+  display: none;
+}
+table.user-login td,
+table.user-login tr,
+table.user-login input {
+  width: 100%;
+}
+table.user-login input.loginPassword,
+table.user-login input.loginText {
+  box-sizing: border-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 100%;
+  padding: 1em 3em 1em 0.4em;
+}

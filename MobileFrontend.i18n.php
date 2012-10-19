@@ -22,6 +22,7 @@ $messages['en'] = array (
 	'mobile-frontend-logged-in' => 'Logged in as $1',
 
 	/** log-in page **/
+	'mobile-frontend-sign-in-heading' => 'Sign in',
 	'mobile-frontend-sign-in-why' => 'If you have a {{SITENAME}} account, you may sign in below.',
 	'mobile-frontend-sign-in-error-heading' => 'Whoops',
 	/** end log-in page**/
@@ -96,7 +97,7 @@ $messages['en'] = array (
 	'mobile-frontend-language-site-nomatches' => 'No matching languages',
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
-	'mobile-frontend-login' => 'Log in',
+	'mobile-frontend-login' => 'Sign in',
 	'mobile-frontend-logout' => 'Log out',
 	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
 	'mobile-frontend-search-help' => 'Type search term above and matching article titles will appear here.',
@@ -118,6 +119,8 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-page-title' => 'Site navigation',
 	'mobile-frontend-main-menu-featured' => 'Featured',
 	'mobile-frontend-main-menu-nearby' => 'Nearby',
+	'mobile-frontend-main-menu-login' => 'Log in',
+	'mobile-frontend-main-menu-logout' => 'Log out',
 	'mobile-frontend-main-menu-settings' => 'Settings',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
@@ -165,6 +168,7 @@ This buttons takes the user to the home page.',
 	'mobile-frontend-logged-in' => 'Message telling user that they are logged in on settings page where $1 is username',
 
 	/** log-in page **/
+	'mobile-frontend-sign-in-heading' => 'Header for login page',
 	'mobile-frontend-sign-in-why' => 'Short summary before login page explaining why someone should bother signing in',
 	'mobile-frontend-sign-in-error-headin' => 'Friendly error message heading when a login fails',
 	/** end log-in page **/
@@ -254,6 +258,8 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-main-menu-page-title' => 'Title for Special:MobileMenu - shown to user in title bar of browser window',
 	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu',
 	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu',
+	'mobile-frontend-main-menu-login' => 'Text for log in link in main menu',
+	'mobile-frontend-main-menu-logout' => 'Text for logout link in main menu',
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
 	'mobile-frontend-main-menu-settings-heading' => 'Heading for Special:MobileOptions page',
 	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non javascript users',

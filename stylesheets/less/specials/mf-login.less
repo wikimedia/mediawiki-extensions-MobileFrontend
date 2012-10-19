@@ -1,0 +1,58 @@
+@import "../mf-variables.less";
+@import "../mf-mixins.less";
+
+.specialPage.overlay {
+
+	body {
+		background-color: @overlayContentBackground;
+	}
+
+	#mw-mf-overlay {
+		.header {
+			background-color: @chromeHeaderColor;
+			h1 {
+				padding-left: @overlayHeadingIndent;
+			}
+		}
+	}
+
+}
+
+#userloginForm {
+	margin-left: @searchBoxMarginLeft;
+	margin-right: @searchBoxMarginLeft;
+}
+
+table.user-login {
+	border: none;
+	display: table;
+
+	tbody {
+		display: table-row-group;
+	}
+
+	tr {
+		display: table-row;
+		td {
+			border: none;
+		}
+	}
+
+	.mw-label {
+		display: none;
+	}
+
+	td,
+	tr,
+	input {
+		width: 100%;
+	}
+
+	input.loginPassword,
+	input.loginText {
+		box-sizing: border-box;
+		.border-radius(0);
+		width: 100%;
+		padding: ( @inputFontSize/2 ) ( @inputFontSize * 1.5 ) ( @inputFontSize/2 ) ( @overlayHeadingIndent );
+	}
+}

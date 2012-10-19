@@ -5,9 +5,6 @@ input[type=submit] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   padding: 0.5em 1.5em 0.5em;
   line-height: 1;
   text-align: center;
@@ -15,14 +12,6 @@ input[type=submit] {
   border: 1px #33589f solid;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #3366bb;
-  background-image: -moz-linear-gradient(top, #3670c8, #3366bb);
-  background-image: -ms-linear-gradient(top, #3670c8, #3366bb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3670c8), color-stop(100%, #3366bb));
-  background-image: -webkit-linear-gradient(top, #3670c8, #3366bb);
-  background-image: linear-gradient(#3670c8, #3366bb);
   background-color: #3366bb;
   background-image: -moz-linear-gradient(top, #3670c8, #3366bb);
   background-image: -ms-linear-gradient(top, #3670c8, #3366bb);
@@ -38,21 +27,9 @@ input[type=submit]:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c84da), color-stop(100%, #3f77d7));
   background-image: -webkit-linear-gradient(top, #4c84da, #3f77d7);
   background-image: linear-gradient(#4c84da, #3f77d7);
-  background-color: #3f77d7;
-  background-image: -moz-linear-gradient(top, #4c84da, #3f77d7);
-  background-image: -ms-linear-gradient(top, #4c84da, #3f77d7);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c84da), color-stop(100%, #3f77d7));
-  background-image: -webkit-linear-gradient(top, #4c84da, #3f77d7);
-  background-image: linear-gradient(#4c84da, #3f77d7);
 }
 button:active,
 input[type=submit]:active {
-  background-color: #2a549c;
-  background-image: -moz-linear-gradient(top, #2d5ea9, #2a549c);
-  background-image: -ms-linear-gradient(top, #2d5ea9, #2a549c);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2d5ea9), color-stop(100%, #2a549c));
-  background-image: -webkit-linear-gradient(top, #2d5ea9, #2a549c);
-  background-image: linear-gradient(#2d5ea9, #2a549c);
   background-color: #2a549c;
   background-image: -moz-linear-gradient(top, #2d5ea9, #2a549c);
   background-image: -ms-linear-gradient(top, #2d5ea9, #2a549c);
@@ -76,12 +53,6 @@ input[type=submit].disabled:hover {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7297d7), color-stop(100%, #7297d7));
   background-image: -webkit-linear-gradient(top, #7297d7, #7297d7);
   background-image: linear-gradient(#7297d7, #7297d7);
-  background-color: #7297d7;
-  background-image: -moz-linear-gradient(top, #7297d7, #7297d7);
-  background-image: -ms-linear-gradient(top, #7297d7, #7297d7);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7297d7), color-stop(100%, #7297d7));
-  background-image: -webkit-linear-gradient(top, #7297d7, #7297d7);
-  background-image: linear-gradient(#7297d7, #7297d7);
   border-color: #5e89d1;
 }
 button.languageSelector,
@@ -97,10 +68,6 @@ input[type=submit].languageSelector {
   height: 46px;
   width: 40px;
   background-image: /* @embed */ url(images/menu/main.png);
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -webkit-background-size: 24px 30px;
-  background-size: 24px 30px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -webkit-background-size: 24px 30px;
@@ -214,11 +181,7 @@ input[type=submit].languageSelector {
 
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -webkit-background-size: 24px 24px;
-  background-size: 24px 24px;
-  background-position: 0px 9px;
+  background-position: 0px 12px;
   height: 21px;
   margin-left: 10px;
   border-bottom: 1px inset #3e3e3e;
@@ -245,6 +208,12 @@ input[type=submit].languageSelector {
 }
 #mw-mf-menu-main li.icon5 a {
   background-image: /* @embed */ url(images/menu/settings.png);
+}
+#mw-mf-menu-main li.icon6 a.logout {
+  background-image: /* @embed */ url(images/menu/logout.png);
+}
+#mw-mf-menu-main li.icon6 a.login {
+  background-image: /* @embed */ url(images/menu/login.png);
 }
 #mw-mf-menu-main li.disabled {
   opacity: 0.2;
@@ -274,12 +243,14 @@ body.navigationEnabled {
 #mw-mf-overlay .mw-mf-overlay-footer a {
   display: inline;
 }
+a.escapeOverlay,
 button.escapeOverlay {
   display: none;
 }
 html.overlay #mw-mf-viewport {
   display: none;
 }
+html.overlay a.escapeOverlay,
 html.overlay button.escapeOverlay {
   display: block;
 }
@@ -294,27 +265,6 @@ html.overlay li {
   border-bottom: solid 1px #eee;
   padding: 12px 40px;
   font-size: 0.9em;
-  color: #666;
-  border: none;
-  position: relative;
-  border-bottom: solid 1px #999999;
-  border-bottom: solid 1px #eee;
-  padding: 12px 40px;
-  font-size: 0.9em;
-}
-html.overlay li a {
-  display: block;
-  text-decoration: none;
-  color: #666;
-}
-html.overlay li a:active,
-html.overlay li a:hover,
-html.overlay li a:visited {
-  text-decoration: none;
-  color: #666;
-}
-html.overlay li:hover {
-  background-color: #ACD1E9;
 }
 html.overlay li a {
   display: block;
@@ -332,6 +282,53 @@ html.overlay li:hover {
 }
 .overlay #mw-mf-overlay {
   display: block;
+}
+#mw-mf-overlay .alert {
+  padding: 8px;
+  padding-left: 88px;
+  margin: 0 40px 0 40px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  margin-bottom: 8px;
+  min-height: 64px;
+}
+#mw-mf-overlay .alert.info {
+  padding-left: 106px;
+  background-image: url(images/W.png);
+  padding-top: 24.5px;
+  padding-bottom: 8px;
+  font-size: 1.2em;
+  background-position: left center;
+  /* no border */
+
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -webkit-background-size: 98px 98px;
+  background-size: 98px 98px;
+}
+#mw-mf-overlay .alert.tip {
+  border: solid 2px #000000;
+}
+#mw-mf-overlay .alert.tip.tip-watchlist {
+  /* TODO: swap out for better images */
+
+  background-image: url(../modules/images/watchlist.png);
+  background-position: -78px center;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -webkit-background-size: auto 64px;
+  background-size: auto 64px;
+}
+#mw-mf-overlay .alert.success {
+  border: solid 2px #008000;
+  background-image: url(images/success.png);
+}
+#mw-mf-overlay .alert.error {
+  border: solid 2px #ff0000;
+  background-image: url(images/fail.png);
+}
+#mw-mf-overlay .alert h2 {
+  margin: 0 0 8px 0;
 }
 .overlay .header {
   line-height: 46px;
@@ -352,10 +349,6 @@ html.overlay li:hover {
   line-height: 46px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-.overlay div.content input {
-  margin: 22px 0 8px 22px;
-  width: 60%;
-}
 .overlay ul {
   text-align: left;
   left: 0;
@@ -370,6 +363,7 @@ html.overlay li:hover {
   margin: 0;
   list-style: none;
 }
+a.escapeOverlay,
 button.escapeOverlay {
   cursor: pointer;
   position: absolute;
@@ -386,12 +380,8 @@ button.escapeOverlay {
   text-indent: -999px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -webkit-background-size: auto 30px;
-  background-size: auto 30px;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -webkit-background-size: auto 30px;
-  background-size: auto 30px;
+  -webkit-background-size: 12px 16px;
+  background-size: 12px 16px;
   z-index: 2;
 }
 html.navigationEnabled body,

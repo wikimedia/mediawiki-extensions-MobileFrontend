@@ -21,11 +21,18 @@ class SkinMobile extends SkinMobileBase {
 		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
 
+		$userLogin = $title->isSpecial( 'Userlogin' );
+		$tpl->set( 'isOverlay', ( $userLogin ) ); // quick hack
 		$tpl->set( 'isBetaGroupMember', $inBeta );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
-		$tpl->set( 'title', $out->getPageTitle() );
+		if ( $userLogin ) {
+			$tpl->set( 'title', wfMessage( 'mobile-frontend-sign-in-heading' )->text() );
+		} else {
+			$tpl->set( 'title', $out->getPageTitle() );
+		}
+
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		$tpl->set( 'articleClass', $title->isMainPage() || $specialPage ? 'mw-mf-special' : '' );
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
@@ -134,6 +141,13 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
 
+		$returnToTitle =  $this->getRequest()->getText( 'returnto' );
+		if ( $returnToTitle ) {
+			$rtnUrl = Title::newFromText( $returnToTitle )->getLocalURL();
+		} else {
+			$rtnUrl = Title::newMainPage()->getLocalUrl();
+		}
+		$tpl->set( 'returnto', $rtnUrl );
 		$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
 			array( 'returnto' => $this->getTitle()->getPrefixedText(), 'feedbacksource' => 'MobileFrontend' )
 		);
@@ -388,14 +402,14 @@ HTML;
 		}
 		if ( $this->getUser()->isLoggedIn() ) {
 			$link = Linker::link( SpecialPage::getTitleFor( 'UserLogout' ),
-				wfMessage( 'userlogout' )->escaped(),
-				array(),
+				wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
+				array( 'class' => 'logout' ),
 				$query
 			);
 		} else {
 			$link = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
-				wfMessage( 'mobile-frontend-login' )->escaped(),
-				array(),
+				wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
+				array( 'class' => 'login' ),
 				$query
 			);
 		}
@@ -405,21 +419,68 @@ HTML;
 }
 
 class SkinMobileTemplate extends BaseTemplate {
+	public function renderArticleSkin() {
+		if ( $this->data['isBetaGroupMember'] ) {
+			$this->navigationStart();
+		}
+		?>
+		<?php $this->html( 'zeroRatedBanner' ) ?>
+		<?php $this->html( 'notice' ) ?>
+		<?php $this->searchBox() ?>
+	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
+			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
+			<div id="mw-mf-ribbon" class="jsonly">
+				<div id="content_ribbon" class="content_block">
+				</div>
+				<h2 id="section_ribbon" class="section_heading">ribbon</h2>
+			</div>
+			<div id="content">
+			<?php } ?>
+			<?php $this->html( 'firstHeading' ) ?>
+			<?php $this->html( 'bodytext' ) ?>
+			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
+			<?php $this->html( 'languageSelection' ) ?>
+			<?php } ?>
+		</div>
+	</div>
+		<?php $this->footer() ?>
+		<?php
+		if ( $this->data['isBetaGroupMember'] ) {
+			$this->navigationEnd();
+		}
+	}
+
+	public function renderOverlaySkin() {
+		?>
+		<div id="mw-mf-overlay">
+			<?php $this->html( 'firstHeading' ) ?>
+				<a class="escapeOverlay" href="<?php $this->text( 'returnto' ) ?>">close</a>
+				<div class="content">
+					<?php $this->html( 'bodytext' ) ?>
+				</div>
+			</div>
+		<?php
+	}
+
 	public function execute() {
 		$this->prepareData();
 		$this->data['isBetaGroupMember'] ? $this->set( 'bodyClasses', 'mobile beta' ) :
 			$this->set( 'bodyClasses', 'mobile live' );
 
-		if ( $this->data['renderLeftMenu'] ) {
-			$htmlClass = 'navigationEnabled navigationFullScreen';
-		} else {
-			$htmlClass = '';
+		$htmlClass = '';
+		if ( $this->data['isOverlay'] ) {
+			$htmlClass .= ' overlay';
+			if ( $this->data[ 'isSpecialPage' ] ) {
+				$htmlClass .= ' specialPage';
+			}
 		}
-		$this->set( 'htmlClasses', $htmlClass );
+		if ( $this->data['renderLeftMenu'] ) {
+			$htmlClass .= 'navigationEnabled navigationFullScreen';
+		}
+		$this->set( 'htmlClasses', trim( $htmlClass ) );
 
 		?><!doctype html>
-	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>"
-		class="<?php $this->text( 'htmlClasses' )  ?>">
+	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>" class="<?php $this->text( 'htmlClasses' )  ?>">
 	<head>
 		<title><?php $this->text( 'pagetitle' ) ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -450,28 +511,11 @@ class SkinMobileTemplate extends BaseTemplate {
 	</head>
 	<body class="<?php $this->text( 'bodyClasses' ) ?>">
 		<?php
-			$this->navigationStart();
-		?>
-		<?php $this->html( 'zeroRatedBanner' ) ?>
-		<?php $this->html( 'notice' ) ?>
-		<?php $this->searchBox() ?>
-	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
-			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
-			<div id="mw-mf-ribbon" class="jsonly">
-				<div id="content_ribbon" class="content_block">
-				</div>
-				<h2 id="section_ribbon" class="section_heading">ribbon</h2>
-			</div>
-			<div id="content">
-			<?php } ?>
-			<?php $this->html( 'firstHeading' ) ?>
-			<?php $this->html( 'bodytext' ) ?>
-			<?php $this->html( 'languageSelection' ) ?>
-		</div>
-	</div>
-		<?php $this->footer() ?>
-		<?php
-			$this->navigationEnd();
+			if ( $this->data['isOverlay'] ) {
+				echo $this->renderOverlaySkin();
+			} else {
+				echo $this->renderArticleSkin();
+			}
 		?>
 	<!--[if gt IE 7]><!-->
 		<?php $this->html( 'bcHack' ) ?>
@@ -523,6 +567,9 @@ class SkinMobileTemplate extends BaseTemplate {
 					title="<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
+			</li>
+			<li class='icon6'>
+				<?php $this->html( 'logInOut' ) ?>
 			</li>
 		</ul>
 		</div>
@@ -599,7 +646,9 @@ class SkinMobileTemplate extends BaseTemplate {
 			)->text();
 			$firstHeading = '';
 		} else {
-			if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] && !$this->data['isMainPage'] ) {
+			if ( $this->data['isOverlay'] ) {
+				$headingOptions = array( 'class' => 'header' );
+			} elseif ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] && !$this->data['isMainPage'] ) {
 				$headingOptions = array( 'id' => 'section_0', 'class' => 'section_heading openSection' );
 			} else {
 				$headingOptions = array( 'id' => 'firstHeading' );

@@ -47,7 +47,8 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function init() {
-		var headerHeight = $( '#mw-mf-header' ).height();
+		var headerHeight = $( '#mw-mf-header' ).height(),
+			id = mfePrefix + 'overlay';
 		// work out when the header is out of view
 		$( window ).bind( 'scroll', function() {
 			if ( document.body.scrollTop > headerHeight ) {
@@ -61,7 +62,9 @@ MobileFrontend.navigation = (function( $ ) {
 				closeOverlay();
 			}
 		} );
-		$( '<div id="' + mfePrefix + 'overlay"></div>' ).appendTo( document.body );
+		if ( !document.getElementById( id ) ) {
+			$( '<div>' ).attr( 'id', id ).appendTo( document.body );
+		}
 		var search = document.getElementById(  mfePrefix + 'search' );
 
 		function toggleNavigation() {

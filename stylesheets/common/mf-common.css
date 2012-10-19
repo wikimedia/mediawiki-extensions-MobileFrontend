@@ -22,13 +22,6 @@ a.external {
   vertical-align: middle;
   position: relative;
 }
-#userloginForm table,
-#userloginForm .user-login tr,
-#userloginForm .user-login th,
-#userloginForm .user-login td {
-  width: 200px;
-  border: 0;
-}
 table.toc h2 {
   border: 0;
   padding: 0;

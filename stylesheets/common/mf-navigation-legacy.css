@@ -80,3 +80,10 @@ full screen search css
     left: 12px !important;
   }
 }
+#userloginForm table,
+#userloginForm .user-login tr,
+#userloginForm .user-login th,
+#userloginForm .user-login td {
+  width: 200px;
+  border: 0;
+}

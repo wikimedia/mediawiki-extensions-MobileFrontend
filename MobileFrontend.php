@@ -116,6 +116,7 @@ $wgResourceModules['mobile'] = array(
 		'stylesheets/modules/mf-search.css',
 		'stylesheets/specials/contact-us.css', 'stylesheets/modules/mf-banner.css',
 		'stylesheets/specials/mf-settings.css',
+		'stylesheets/specials/mf-login.css',
 		'stylesheets/modules/mf-toggle.css',
 		'stylesheets/common/mf-hacks.css' ),
 	'scripts' => array( 'javascripts/common/mf-application.js',
