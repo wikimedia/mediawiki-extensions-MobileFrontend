@@ -53,6 +53,13 @@ If you are adding images to the extension please ensure they have been [http://p
 
 === Testing ===
 
+=== Run Test Suite ===
+To run the full test suite run
+
+	make tests
+
+Note currently unit tests are run in the browser. It would be great to have these run using phantomjs - if anyone wants to take that challenge that would be awesome.
+
 ==== Unit tests ====
 Javascript: Before commiting anything please ensure that you run [[Special:JavaScriptTest/qunit]] - ensure you do this on the desktop site!
 PHP: PHP tests can be run the normal way. See [[http://www.mediawiki.org/wiki/Manual:PHP_unit_testing/Writing_unit_tests_for_extensions]] for explanations on how to exclusively run php unit tests for the MobileFrontend extension.
