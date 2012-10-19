@@ -1,10 +1,10 @@
 /*global document, window, mw, navigator, clearTimeout, setTimeout */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
 ( function( M ) {
-M.banner = (function() {
+var m = ( function() {
 	var $ = M.jQuery;
 
-	function init( banner ) {
+	function initBanner( banner ) {
 		var cookieNameZeroVisibility = banner.getAttribute( 'id' ),
 			settings = M.getModule( 'settings' ),
 			saveUserSetting = settings.saveUserSetting,
@@ -28,18 +28,22 @@ M.banner = (function() {
 		}
 	}
 
-	if ( $ ) {
-		$( '.mw-mf-banner' ).each( function() {
-			if ( $( this ).find( 'button.notify-close' ).length === 0 &&
-				!$( this ).hasClass( 'mw-mf-banner-undismissable' ) ) {
-				$( '<button class="notify-close">' ).text( '×' ).appendTo( this );
-			}
-			init( this );
-		} );
+	function init() {
+		if ( $ ) {
+			$( '.mw-mf-banner' ).each( function() {
+				if ( $( this ).find( 'button.notify-close' ).length === 0 &&
+					!$( this ).hasClass( 'mw-mf-banner-undismissable' ) ) {
+					$( '<button class="notify-close">' ).text( '×' ).appendTo( this );
+				}
+				initBanner( this );
+			} );
+		}
 	}
 
 	return {
-		init: init
+		init: init,
+		initBanner: initBanner
 	};
 }());
+M.registerModule( 'banner', m );
 }( mw.mobileFrontend ));

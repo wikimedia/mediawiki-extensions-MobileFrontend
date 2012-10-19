@@ -1,12 +1,13 @@
 (function ($, MFEB, MFET, settings) {
-var BANNER_COOKIE_NAME = "zeroRatedBannerVisibility";
+var BANNER_COOKIE_NAME = "zero-rated-banner";
 module("MobileFrontend banner.js: notifications", {
 	setup: function() {
 		localStorage.clear();
 		settings.removeCookie(BANNER_COOKIE_NAME);
-		MFET.createFixtures();
+		$( '<div id="zero-rated-banner" class="mw-mf-banner"><button></div>' ).appendTo( document.body );
 	},
 	teardown: function() {
+		$( '#zero-rated-banner' ).remove();
 		settings.removeCookie(BANNER_COOKIE_NAME);
 	}
 });
@@ -19,7 +20,7 @@ test("MobileFrontend banner.js: dismiss notification", function() {
 	strictEqual($("#zero-rated-banner").is(":visible"), true, "banner should be on show");
 
 	// trigger dismiss event
-	$("#dismiss-notification").trigger("click");
+	$( '#zero-rated-banner button' ).trigger( 'click' );
 
 	cookieEnd = settings.getUserSetting( BANNER_COOKIE_NAME );
 	strictEqual(cookieStart, null, "no cookie set at start");
