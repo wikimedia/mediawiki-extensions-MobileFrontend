@@ -171,9 +171,6 @@ var settings = ( function() {
 					updateMobileToken( xml );
 				}
 				} );
-		} else if ( !u( 'body' ).hasClass( 'beta' ) ) {
-			imagetoggle = document.getElementById( 'imagetoggle' );
-			imagetoggle.setAttribute( 'href', addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
 		}
 		enhanceCheckboxes();
 		u( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
