@@ -27,6 +27,7 @@ input.search {
   background-color: white;
   /* remove fennec default background */
 
+  padding-left: 2px;
   /* visual indication that search is happening */
 
 }
