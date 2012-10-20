@@ -19,3 +19,10 @@ remotes:
 	curl -Lo javascripts/externals/eventlog.js \
 			"http://bits.wikimedia.org/static-1.20wmf12/extensions/E3Experiments/lib/event/eventlog.js"
 
+phpunit:
+	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml
+
+qunit:
+	open http://localhost/w/index.php/Special:JavaScriptTest/qunit?filter=MobileFrontend
+
+tests: phpunit qunit
