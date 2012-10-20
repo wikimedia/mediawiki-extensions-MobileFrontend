@@ -84,3 +84,14 @@ input.search {
 #footer {
   margin-top: 5px;
 }
+@media all and (max-width: 280px) {
+  body {
+    font-size: 0.8em;
+  }
+  #footer {
+    padding: 12px 10px;
+  }
+  #content_wrapper {
+    margin: 0 12px;
+  }
+}
