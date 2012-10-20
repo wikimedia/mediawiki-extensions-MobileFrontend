@@ -20,6 +20,12 @@ $messages['en'] = array (
 	'mobile-frontend-home-button' => 'Home',
 	'mobile-frontend-logged-out' => 'Not logged in',
 	'mobile-frontend-logged-in' => 'Logged in as $1',
+
+	/** log-in page **/
+	'mobile-frontend-sign-in-why' => 'If you have a {{SITENAME}} account, you may sign in below.',
+	'mobile-frontend-sign-in-error-heading' => 'Whoops',
+	/** end log-in page**/
+
 	'mobile-frontend-settings-description' => 'Customize your experience on your mobile device with these mobile specific site settings.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Save settings',
@@ -157,6 +163,12 @@ $messages['qqq'] = array(
 This buttons takes the user to the home page.',
 	'mobile-frontend-logged-out' => 'Message telling user they are not logged in on settings page',
 	'mobile-frontend-logged-in' => 'Message telling user that they are logged in on settings page where $1 is username',
+
+	/** log-in page **/
+	'mobile-frontend-sign-in-why' => 'Short summary before login page explaining why someone should bother signing in',
+	'mobile-frontend-sign-in-error-headin' => 'Friendly error message heading when a login fails',
+	/** end log-in page **/
+
 	'mobile-frontend-settings-description' => 'Text at top of the settings page explaining its purpose',
 	'mobile-frontend-settings-beta' => 'Text for beta on settings page',
 	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions',
