@@ -213,7 +213,7 @@ reduce font size so alt text more legible */
   display: none;
   position: absolute;
   text-align: center;
-  line-height: 45px;
+  line-height: 46px;
   background: url(images/arrow-left-beta.png) no-repeat scroll 0 0 transparent;
   background-position: center center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */

@@ -106,11 +106,11 @@ input[type=submit].languageSelector {
 }
 #mw-mf-header form,
 #mw-mf-sq {
-  height: 45px;
+  height: 46px;
 }
 #mw-mf-main-menu-button {
   display: inline-block;
-  height: 45px;
+  height: 46px;
   width: 40px;
   background-image: /* @embed */ url(images/menu/main.png);
   /* use -webkit prefix for older android browsers eg. nexus 1 */
@@ -131,7 +131,7 @@ input[type=submit].languageSelector {
   background-position: center center;
 }
 #mw-mf-main-menu-button:active {
-  background-color: #4C4C4C;
+  background-color: #f9f9f9;
 }
 #mw-mf-viewport {
   width: 100%;
@@ -152,7 +152,23 @@ input[type=submit].languageSelector {
 #mw-mf-header {
   z-index: 2;
   color: white;
-  background-color: #393939;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -ms-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0)";
+  background-image: linear-gradient(#fafafa, #f3f3f3);
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -ms-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f3f3f3', GradientType=0)";
+  background-image: linear-gradient(#fafafa, #f3f3f3);
+  border-bottom: 1px solid #e2e2e2;
 }
 #mw-mf-page-left {
   font-family: Helvetica, Arial, sans-serif;
@@ -218,7 +234,7 @@ input[type=submit].languageSelector {
 
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
-  background-position: 0px 12px;
+  background-position: 0px 9px;
   height: 21px;
   margin-left: 10px;
   border-bottom: 1px inset #3e3e3e;
@@ -334,12 +350,12 @@ html.overlay li:hover {
   display: block;
 }
 .overlay .header {
-  line-height: 45px;
+  line-height: 46px;
   border-bottom: solid 1px #CCC;
   padding: 0;
   padding-left: 40px;
   color: #666;
-  height: 45px;
+  height: 46px;
   margin: 0;
   padding-bottom: 0;
 }
@@ -349,7 +365,7 @@ html.overlay li:hover {
 .overlay .header h2 {
   margin: 0;
   padding: 0;
-  line-height: 45px;
+  line-height: 46px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 .overlay div.content input {
@@ -374,7 +390,7 @@ button.escapeOverlay {
   cursor: pointer;
   position: absolute;
   border: none;
-  height: 45px;
+  height: 46px;
   width: 40px;
   border-radius: 5px;
   top: 0;
@@ -386,12 +402,12 @@ button.escapeOverlay {
   text-indent: -999px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -webkit-background-size: 12px 16px;
-  background-size: 12px 16px;
+  -webkit-background-size: auto 30px;
+  background-size: auto 30px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -webkit-background-size: 12px 16px;
-  background-size: 12px 16px;
+  -webkit-background-size: auto 30px;
+  background-size: auto 30px;
   z-index: 2;
 }
 html.navigationEnabled body,

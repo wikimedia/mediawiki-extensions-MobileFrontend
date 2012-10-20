@@ -4,24 +4,25 @@ moved from beta_common.css in
 Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 */
 @import "../mf-mixins.less";
+@searchBorderHeight: 1px;
+@searchMarginTop: ( ( @headerHeight - @searchBoxHeight ) / 2 ) + @searchBorderHeight;
 
 input.search {
 	-webkit-appearance: none;
 	line-height: normal;
 	background: none;
-	border: solid 1px #D9D9D9;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	border-radius: 0; /* reset any browsers that add this by default e.g. iphone */
+	.border-radius( 3px );
 	margin-top: 0;
 	width: 99%;
-	border: none;
+	border: @searchBorderHeight solid #c9c9c9;
 	outline: none;
 	padding: 0;
 	width: 100%;
-	margin-top: 8px;
-	height: ( @headerHeight - 15px );
+	margin-top: @searchMarginTop;
+	height: @searchBoxHeight;
 	vertical-align: middle; /* don't use line height here as placeholder on ripple positions incorrectly */
 	background-color: white; /* remove fennec default background */
 
@@ -44,10 +45,10 @@ input.search {
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
 	.clearlink {
-		top: 12px;
+		top: @searchMarginTop;
 		right: 8px;
 		width: 24px;
-		height: 20px;
+		height: @searchBoxHeight;
 		background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
 		margin: 0;
 		display: none;
@@ -69,7 +70,7 @@ input.search {
 	#mw-mf-header {
 		z-index: 2;
 		color: white;
-		background-color: #393939;
+		.vertical-gradient( @searchBoxColor, darken( @searchBoxColor, 2.75% ) );
 	}
 
 	#results,

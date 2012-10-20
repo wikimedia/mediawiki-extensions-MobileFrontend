@@ -13,27 +13,27 @@
   background-color: #3366ba;
   z-index: 1;
   right: 0;
-  top: 49px;
-  height: 45px;
+  top: 50px;
+  height: 46px;
   width: auto;
   padding-right: 20px;
 }
 #mw-mf-ribbon .content_block {
-  height: 45px;
+  height: 46px;
   width: 0;
   background-color: #4b7dce;
   overflow: hidden;
 }
 #mw-mf-ribbon .content_block.openSection {
   min-height: auto;
-  min-width: 45px;
+  min-width: 46px;
   width: auto;
 }
 #mw-mf-ribbon .content_block a,
 #mw-mf-ribbon .content_block button {
   display: block;
   float: left;
-  height: 45px;
+  height: 46px;
   background: none;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
@@ -41,8 +41,8 @@
   background-size: auto 32px;
   border: 0;
   text-indent: -999px;
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
   background-position: center center;
   background-repeat: no-repeat;
   padding: 0;
