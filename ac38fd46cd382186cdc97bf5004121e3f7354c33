@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//9x0\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 511,
+      "author": {
+        "id": 13
+      },
+      "writtenOn": "2012-10-21T23:47:18Z",
+      "side": 0,
+      "message": "Removing this if causes a syntax error on the code at line 517",
+      "revId": "ac38fd46cd382186cdc97bf5004121e3f7354c33",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
