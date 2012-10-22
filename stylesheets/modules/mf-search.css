@@ -55,6 +55,7 @@ input.search.searching {
   background-position: right center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
+  -o-background-size: auto 12px;
   -webkit-background-size: auto 12px;
   background-size: auto 12px;
   cursor: pointer;
