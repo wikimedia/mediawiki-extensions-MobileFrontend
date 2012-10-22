@@ -78,6 +78,21 @@ form.mw-mf-settings ul {
 		span.mw-mf-settings-off {
 			display: none;
 		}
+
+		input[type=submit],
+		.mw-mf-checkbox-css3 span {
+			border-radius: 8px;
+			font-weight: normal;
+			font-size: 15px;
+			color: white;
+			.gradient(top, #AEAEAE, @btngrey);
+			position: relative;
+			border: solid 1px @btngrey;
+		}
+
+		input[type=submit] {
+			.checkboxBtn();
+		}
 	}
 
 	li.mw-mf-settings-description {
@@ -94,17 +109,6 @@ form.mw-mf-settings ul {
 
 		ul {
 			li {
-				input[type=submit],
-				.mw-mf-checkbox-css3 span {
-					border-radius: 8px;
-					font-weight: normal;
-					font-size: 15px;
-					color: white;
-					.gradient(top, #AEAEAE, @btngrey);
-					position: relative;
-					border: solid 1px @btngrey;
-				}
-
 				.mw-mf-checkbox-css3 {
 					border: none;
 					.checkboxBtn();

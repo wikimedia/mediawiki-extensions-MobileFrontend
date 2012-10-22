@@ -51,14 +51,8 @@ form.mw-mf-settings ul li span.mw-mf-settings-on,
 form.mw-mf-settings ul li span.mw-mf-settings-off {
   display: none;
 }
-form.mw-mf-settings ul li.mw-mf-settings-description {
-  font-size: 0.8em;
-  line-height: 1.8em;
-  font-weight: normal;
-  padding-right: 8px;
-}
-.mw-mf-checkboxes form.mw-mf-settings ul li input[type=submit],
-.mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
+form.mw-mf-settings ul li input[type=submit],
+form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   border-radius: 8px;
   font-weight: normal;
   font-size: 15px;
@@ -69,6 +63,20 @@ form.mw-mf-settings ul li.mw-mf-settings-description {
   background: linear-gradient(top, #aeaeae, #818181);
   position: relative;
   border: solid 1px #818181;
+}
+form.mw-mf-settings ul li input[type=submit] {
+  min-width: 76px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-transform: lowercase;
+}
+form.mw-mf-settings ul li.mw-mf-settings-description {
+  font-size: 0.8em;
+  line-height: 1.8em;
+  font-weight: normal;
+  padding-right: 8px;
 }
 .mw-mf-checkboxes form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
   border: none;
