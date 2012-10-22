@@ -1,0 +1,125 @@
+@import "../mf-mixins.less";
+
+#mw-mf-watchlist {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	.mw-mf-watchlist-selector {
+		text-align: center;
+		padding: 8px 0px;
+		background-color: #f0f0f0;
+
+		li {
+			display: inline-block;
+			border: solid 1px #444;
+			padding: 0px 8px;
+			margin: 0;
+			color: #808080;
+			background-color: white;
+
+			&.selected {
+				color: white;
+				background-color: #808080;
+			}
+
+			a {
+				color: inherit;
+			}
+		}
+	}
+}
+
+ul.mw-mf-watchlist-results {
+	background-color: white;
+	list-style: none;
+
+	li {
+		padding: 8px 28px 8px 28px;
+		border-top: solid 1px #c0c0c0;
+		position: relative;
+		color: #808080;
+		background-image: /* @embed */url(images/drilldown.png);
+		.background-size( 20px, 20px );
+		background-repeat: no-repeat;
+		background-position: right center;
+
+		&.date {
+			background: none;
+			padding-top: 0;
+			padding-bottom: 0;
+			background-color: #f0f0f0;
+		}
+
+		div {
+			font-size: 80%;
+			white-space: nowrap;
+			-webkit-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		.mw-mf-user {
+			width: 75%; /* shorten to make room for time */
+
+			.mw-mf-ip {
+				color: white;
+				background: red;
+				padding: 0px 6px;
+			}
+		}
+
+		.mw-mf-title {
+			color: #202020;
+			font-size: 100%;
+		}
+
+		.mw-mf-time {
+			position: absolute;
+			top: 3em;
+			right: 28px;
+		}
+	}
+}
+
+#mw-mf-diffview {
+	.mw-mf-bytesadded {
+		color: green;
+	}
+
+	.mw-mf-bytesremoved {
+		color: red;
+	}
+
+	ins {
+		color: green;
+		text-decoration: none;
+	}
+
+	del {
+		color: #444;
+		text-decoration: strikethrough;
+	}
+
+	#mw-mf-diffarea {
+		padding: 1em;
+	}
+
+	#mw-mf-diff-info {
+		padding-bottom: 1em;
+	}
+
+	#mw-mf-diff-comment {
+		padding-bottom: 1em;
+	}
+
+	#mw-mf-userinfo {
+		position: relative;
+		height: 5em;
+		padding: 1em;
+		background-color: #f0f0f0;
+		border-top: solid 1px #c0c0c0;
+	}
+}

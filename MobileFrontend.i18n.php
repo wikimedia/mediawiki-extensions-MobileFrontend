@@ -128,6 +128,7 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-nearby' => 'Nearby',
 	'mobile-frontend-main-menu-login' => 'Log in',
 	'mobile-frontend-main-menu-logout' => 'Log out',
+	'mobile-frontend-main-menu-watchlist' => 'Watchlist',
 	'mobile-frontend-main-menu-settings' => 'Settings',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
@@ -149,6 +150,19 @@ $messages['en'] = array (
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
 	'mobile-frontend-watchlist-removed' => 'Removed $1 from your watchlist',
 	'mobile-frontend-watchlist-view' => 'View your watchlist',
+
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'no edit summary',
+	'mobile-frontend-watchlist-filter-all' => 'All',
+	'mobile-frontend-watchlist-filter-articles' => 'Articles',
+	'mobile-frontend-watchlist-filter-talk' => 'Talk',
+	'mobile-frontend-watchlist-filter-other' => 'Other',
+
+	'mobile-frontend-diffview-title' => 'Change to $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edit|edits}}',
+	'mobile-frontend-diffview-anonymous' => 'Anonymous user',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} added',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} removed',
 );
 
 /** Message documentation (Message documentation)
@@ -279,6 +293,7 @@ Don't translate the special page name",
 	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu',
 	'mobile-frontend-main-menu-login' => 'Text for log in link in main menu',
 	'mobile-frontend-main-menu-logout' => 'Text for logout link in main menu',
+	'mobile-frontend-main-menu-watchlist' => 'Text for watchlist link in main menu',
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
 	'mobile-frontend-main-menu-settings-heading' => 'Heading for Special:MobileOptions page',
 	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non javascript users',
@@ -302,6 +317,19 @@ Don't translate the special page name",
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
+
+	'mobile-frontend-changeslist-ip' => 'Label used in mobile watchlist/history/recentchanges overview for IP (non-logged-in) edits.',
+	'mobile-frontend-changeslist-nocomment' => 'Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.',
+	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages',
+	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: article pages only',
+	'mobile-frontend-watchlist-filter-talk' => 'Label on filter selector for mobile watchlist: talk pages',
+	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or article)',
+
+	'mobile-frontend-diffview-title' => 'Header for common mobile diff/change view. $1 is page title.',
+	'mobile-frontend-diffview-editcount' => 'Edit count of user in common mobile diff/change view. $1 is the count, may use PLURAL.',
+	'mobile-frontend-diffview-anonymous' => 'Label to indicate anonymous user in common mobile diff/change view.',
+	'mobile-frontend-diffview-bytesadded' => 'Edit byte-changed counter for common mobile diff/change view when change adds bytes. $1 is byte count; may use PLURAL.',
+	'mobile-frontend-diffview-bytesremoved' => 'Edit byte-changed counter for common mobile diff/change view when change removes bytes. $1 is byte count; may use PLURAL.',
 );
 
 /** Achinese (Acèh)
