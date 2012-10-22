@@ -7,6 +7,20 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 @searchBorderHeight: 1px;
 @searchMarginTop: ( ( @headerHeight - @searchBoxHeight ) / 2 ) + @searchBorderHeight;
 
+html.page-loading,
+html.jsSearch {
+	input.searchSubmit {
+		display: none;
+	}
+}
+
+input.searchSubmit {
+	position: absolute;
+	top: @searchMarginTop + 1px;
+	right: 0;
+	height: @searchBoxHeight - ( @searchBorderHeight * 2 ) - 2px;
+}
+
 input.search {
 	-webkit-appearance: none;
 	line-height: normal;

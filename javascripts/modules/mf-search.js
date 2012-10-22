@@ -199,6 +199,7 @@ var opensearch = ( function() {
 				sb.submit();
 			}
 		} );
+		u( document.documentElement ).addClass( 'jsSearch' );
 	}
 
 	function initClearSearch() {

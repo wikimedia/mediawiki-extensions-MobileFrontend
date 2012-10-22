@@ -675,6 +675,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				<img src="<?php $this->text( 'shim' ) ?>" alt="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="mw-mf-clearsearch" title="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>"/>
+				<input class='searchSubmit' type="submit" value="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</div>
 		</form>
 	</div>
