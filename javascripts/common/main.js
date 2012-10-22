@@ -19,4 +19,13 @@ window.onload = function() {
 	}
 };
 
+// if page hasn't loaded in 7s revert to non-javascript mode
+window.setTimeout( function() {
+	if ( !domLoaded ) {
+		domLoaded = true;
+		var className = document.documentElement.className.replace( ' jsEnabled page-loading', '' );
+		document.documentElement.className = className;
+	}
+}, 7000 );
+
 }() );
