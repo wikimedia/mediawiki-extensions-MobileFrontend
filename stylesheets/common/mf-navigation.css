@@ -5,7 +5,7 @@ input[type=submit] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  padding: 0.5em 1.5em 0.5em;
+  padding: 1em 1.5em 1em;
   line-height: 1;
   text-align: center;
   cursor: pointer;
@@ -104,7 +104,7 @@ input[type=submit].languageSelector {
 #mw-mf-overlay .header,
 #mw-mf-header {
   z-index: 2;
-  color: white;
+  color: black;
   background-color: #f3f3f3;
   background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
   background-image: -ms-linear-gradient(top, #fafafa, #f3f3f3);
