@@ -16,7 +16,7 @@
 	display: inline-block;
 	height: @headerHeight;
 	width: @searchBoxMarginLeft;
-	background-image: /* @embed */ url(images/menu/main.png);
+	background-image: url(images/menu/lowres/main.png);
 	.background-size( 24px, 30px );
 	overflow: hidden;
 	position: absolute;
@@ -26,6 +26,12 @@
 	left: 0;
 	border-radius: 5px 5px 5px;
 	background-position: center center;
+}
+
+.jsEnabled {
+	#mw-mf-main-menu-button {
+		background-image: /* @embed */ url(images/menu/main.png);
+	}
 }
 
 #mw-mf-main-menu-button:active {
@@ -126,7 +132,6 @@
 	background-repeat: no-repeat;
 	.background-size(24px, 24px);
 	background-position: 0px 9px;
-	height: 21px;
 	margin-left: 10px;
 	border-bottom: 1px inset #3e3e3e;
 }
@@ -141,23 +146,60 @@
 	border-right: solid 1px black;
 }
 
-#mw-mf-menu-main li.icon a {
-	background-image: /* @embed */url(images/menu/home.png);
-}
-#mw-mf-menu-main li.icon2 a {
-	background-image: /* @embed */url(images/menu/random.png);
-}
-#mw-mf-menu-main li.icon3 a {
-	background-image: /* @embed */url(images/menu/nearby.png);
-}
-#mw-mf-menu-main li.icon4 a {
-	background-image: /* @embed */url(images/menu/contact.png);
-}
-#mw-mf-menu-main li.icon5 a {
-	background-image: /* @embed */url(images/menu/settings.png);
+#mw-mf-menu-main li {
+	&.icon a {
+		background-image: url(images/menu/lowres/home.png);
+	}
+
+	&.icon2 a {
+		background-image: url(images/menu/lowres/random.png);
+	}
+
+	&.icon3 a {
+		background-image: url(images/menu/lowres/nearby.png);
+	}
+
+	&.icon4 a {
+		background-image: url(images/menu/lowres/contact.png);
+	}
+
+	&.icon5 a {
+		background-image: url(images/menu/lowres/settings.png);
+	}
+
+	&.icon6 {
+		a.logout {
+			background-image: url(images/menu/lowres/logout.png);
+		}
+
+		a.login {
+			background-image: url(images/menu/lowres/login.png);
+		}
+	}
 }
 
-#mw-mf-menu-main li {
+.jsEnabled #mw-mf-menu-main li {
+
+	&.icon a {
+		background-image: /* @embed */url(images/menu/home.png);
+	}
+
+	&.icon2 a {
+		background-image: /* @embed */url(images/menu/random.png);
+	}
+
+	&.icon3 a {
+		background-image: /* @embed */url(images/menu/nearby.png);
+	}
+
+	&.icon4 a {
+		background-image: /* @embed */url(images/menu/contact.png);
+	}
+
+	&.icon5 a {
+		background-image: /* @embed */url(images/menu/settings.png);
+	}
+
 	&.icon6 {
 		a.logout {
 			background-image: /* @embed */url(images/menu/logout.png);

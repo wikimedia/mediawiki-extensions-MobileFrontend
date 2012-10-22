@@ -67,7 +67,7 @@ input[type=submit].languageSelector {
   display: inline-block;
   height: 46px;
   width: 40px;
-  background-image: /* @embed */ url(images/menu/main.png);
+  background-image: url(images/menu/lowres/main.png);
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -moz-background-size: 24px 30px;
@@ -82,6 +82,9 @@ input[type=submit].languageSelector {
   left: 0;
   border-radius: 5px 5px 5px;
   background-position: center center;
+}
+.jsEnabled #mw-mf-main-menu-button {
+  background-image: /* @embed */ url(images/menu/main.png);
 }
 #mw-mf-main-menu-button:active {
   background-color: #f9f9f9;
@@ -176,7 +179,6 @@ input[type=submit].languageSelector {
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
   background-position: 0px 9px;
-  height: 21px;
   margin-left: 10px;
   border-bottom: 1px inset #3e3e3e;
 }
@@ -189,24 +191,45 @@ input[type=submit].languageSelector {
   border-right: solid 1px black;
 }
 #mw-mf-menu-main li.icon a {
-  background-image: /* @embed */ url(images/menu/home.png);
+  background-image: url(images/menu/lowres/home.png);
 }
 #mw-mf-menu-main li.icon2 a {
-  background-image: /* @embed */ url(images/menu/random.png);
+  background-image: url(images/menu/lowres/random.png);
 }
 #mw-mf-menu-main li.icon3 a {
-  background-image: /* @embed */ url(images/menu/nearby.png);
+  background-image: url(images/menu/lowres/nearby.png);
 }
 #mw-mf-menu-main li.icon4 a {
-  background-image: /* @embed */ url(images/menu/contact.png);
+  background-image: url(images/menu/lowres/contact.png);
 }
 #mw-mf-menu-main li.icon5 a {
-  background-image: /* @embed */ url(images/menu/settings.png);
+  background-image: url(images/menu/lowres/settings.png);
 }
 #mw-mf-menu-main li.icon6 a.logout {
-  background-image: /* @embed */ url(images/menu/logout.png);
+  background-image: url(images/menu/lowres/logout.png);
 }
 #mw-mf-menu-main li.icon6 a.login {
+  background-image: url(images/menu/lowres/login.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon a {
+  background-image: /* @embed */ url(images/menu/home.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon2 a {
+  background-image: /* @embed */ url(images/menu/random.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon3 a {
+  background-image: /* @embed */ url(images/menu/nearby.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon4 a {
+  background-image: /* @embed */ url(images/menu/contact.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon5 a {
+  background-image: /* @embed */ url(images/menu/settings.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon6 a.logout {
+  background-image: /* @embed */ url(images/menu/logout.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon6 a.login {
   background-image: /* @embed */ url(images/menu/login.png);
 }
 #mw-mf-menu-main li.disabled {
