@@ -11,7 +11,6 @@
 
 $messages = array();
 
-// en translation
 $messages['en'] = array (
 	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile.css' => '/* CSS placed here will affect users of the mobile site */', # only translate this message to other languages if you have to change it
@@ -223,6 +222,7 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-leave-feedback-post-error' => 'Message displayed to user when there is an internal error processing form submission',
 	'mobile-frontend-language' => '{{Identical|Language}}',
 	'mobile-frontend-language-article-heading' => 'A heading within the article the content of which lists the other languages available for this article',
+	'mobile-frontend-current-language' => '{{optional}}',
 	'mobile-frontend-language-header' => 'Header at top of language selection overlay describing number of languages that it is possible to read the article in',
 	'mobile-frontend-language-footer' => 'Footer at bottom of language selection overlay. This informs a user that if they cannot see a certain language in the list that there are other language versions of the current site that can be viewed by clicking on this link.',
 	'mobile-frontend-language-site-choose' => 'Header for overlay when click on language on settings page',
@@ -273,24 +273,8 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-ajax-page-error' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript and it fails',
 );
 
-/** Tati (Tati)
- * @author Erdemaslancan
+/** Achinese (Acèh)
  */
-$messages['ttt'] = array(
-	'mobile-frontend-search-submit' => 'Buşu',
-	'mobile-frontend-home-button' => 'Keye',
-	'mobile-frontend-opt-in-yes-button' => 'De',
-	'mobile-frontend-opt-in-no-button' => 'Ne',
-);
-
-/** Turoyo (Ṫuroyo)
- * @author Ariyo
- */
-$messages['tru'] = array(
-	'mobile-frontend-language' => 'Leşono',
-);
-
-/** Achinese (Acèh) */
 $messages['ace'] = array(
 	'mobile-frontend-search-submit' => 'Jak u',
 	'mobile-frontend-home-button' => 'Keue',
@@ -298,7 +282,7 @@ $messages['ace'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Riwang u bagian sigoh nyoe',
 	'mobile-frontend-show-button' => 'Peuleumah',
 	'mobile-frontend-hide-button' => 'Peusom',
-	'mobile-frontend-regular-site' => 'Eu on nyoe bak {{SITENAME}} biyasa',
+	'mobile-frontend-regular-site' => 'Eu on nyoe bak {{SITENAME}} biyasa', # Fuzzy
 	'mobile-frontend-featured-article' => 'Teunuleh Peunileh Uroe Nyoe',
 );
 
@@ -346,7 +330,7 @@ $messages['af'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tegniese probleem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Algemeen',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Bladsybeoordeling',
-	'mobile-frontend-leave-feedback-email-body' => 'Skryf u e-pos bokant die reël.',
+	'mobile-frontend-leave-feedback-email-body' => 'Skryf u e-pos bokant die reël.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tegniese probleem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Algemene terugvoer',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => "Met betrekking tot my, 'n persoon of 'n maatskappy wat ek verteenwoordig",
@@ -362,7 +346,7 @@ $messages['af'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Dankie vir u terugvoer!',
 	'mobile-frontend-language' => 'Taal:',
 	'mobile-frontend-language-header' => "Hierdie bladsy is in {{PLURAL:$1|'n taal|$1 tale}} beskikbaar",
-	'mobile-frontend-language-footer' => '{{SITENAME}} is in ander tale beskikbaar.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} is in ander tale beskikbaar.', # Fuzzy
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wagwoord',
 	'mobile-frontend-login' => 'Teken in',
@@ -380,18 +364,20 @@ $messages['af'] = array(
 	'mobile-frontend-page-menu-history' => 'Geskiedenis',
 );
 
-/** Akan (Akan) */
+/** Akan (Akan)
+ */
 $messages['ak'] = array(
 	'mobile-frontend-search-submit' => 'Kɔ',
 	'mobile-frontend-home-button' => 'Fie',
 	'mobile-frontend-random-button' => 'Randɔm',
 	'mobile-frontend-show-button' => 'Kyerɛ',
 	'mobile-frontend-hide-button' => 'Suma',
-	'mobile-frontend-regular-site' => 'Hwɛ krataafa yi wɔ {{SITENAME}} a yenim dada so',
+	'mobile-frontend-regular-site' => 'Hwɛ krataafa yi wɔ {{SITENAME}} a yenim dada so', # Fuzzy
 	'mobile-frontend-featured-article' => 'Aatikel a Ɛwɔ So Ndɛ',
 );
 
-/** Amharic (አማርኛ) */
+/** Amharic (አማርኛ)
+ */
 $messages['am'] = array(
 	'mobile-frontend-search-submit' => 'ሂድ',
 	'mobile-frontend-home-button' => 'ቤት',
@@ -413,7 +399,7 @@ $messages['an'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Ir una sección entazaga',
 	'mobile-frontend-show-button' => 'Amostrar',
 	'mobile-frontend-hide-button' => 'Amagar',
-	'mobile-frontend-regular-site' => 'Veyer ista pachina en a {{SITENAME}} normal',
+	'mobile-frontend-regular-site' => 'Veyer ista pachina en a {{SITENAME}} normal', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Continar...',
 	'mobile-frontend-wml-back' => 'Enta zaga ...',
 	'mobile-frontend-view' => 'Versión ta mobils',
@@ -430,23 +416,24 @@ $messages['an'] = array(
 	'mobile-frontend-featured-article' => 'Articlo destacau de hue',
 	'mobile-frontend-news-items' => 'Actualidat',
 	'mobile-frontend-leave-feedback-notice' => "A suya retroalimentación nos aduya a amillorar a suya experiencia mobil en ista pachina. Se publicará (en chunto con o suyo nombre d'usuario, a versión d'o navegador y o sistema operativo que emplega) en a pachina &quot;\$1&quot;. Mire de emplegar una linia d'afer informativa, p. eix. \"Problemas de formato con tablas amplas\". Os suyos comentarios serán subchectos a la nuestra politica d'emplego.",
-	'mobile-frontend-leave-feedback-subject' => 'Afer',
-	'mobile-frontend-leave-feedback-message' => 'Mensache',
+	'mobile-frontend-leave-feedback-subject' => 'Afer', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Mensache', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'Ninviar comentarios',
 	'mobile-frontend-leave-feedback-link-text' => 'Retroalimentación sobre a extensión MobileFrontend',
 	'mobile-frontend-leave-feedback' => 'Retroalimentación sobre o puesto web mobil',
 	'mobile-frontend-leave-feedback-title' => "Informar-nos d'a tuya experiencia en en o puesto ta mobils.",
 	'mobile-frontend-leave-feedback-page-title' => "Informar-nos d'a tuya experiencia en en o puesto ta mobils.",
 	'mobile-frontend-leave-feedback-thanks' => 'Gracias por o suyo comentario!',
-	'mobile-frontend-language' => 'Idioma',
+	'mobile-frontend-language' => 'Idioma', # Fuzzy
 	'mobile-frontend-username' => "Nombre d'usuario:",
 	'mobile-frontend-password' => "Clau d'acceso:",
 	'mobile-frontend-login' => 'Encetar sesión',
-	'mobile-frontend-placeholder' => 'Introduzca a suya busca...',
+	'mobile-frontend-placeholder' => 'Introduzca a suya busca...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'refusar ista notificación',
 );
 
-/** Angika (अङ्गिका) */
+/** Angika (अङ्गिका)
+ */
 $messages['anp'] = array(
 	'mobile-frontend-search-submit' => 'चलॊ',
 	'mobile-frontend-home-button' => 'मुखपृष्ठ',
@@ -454,7 +441,7 @@ $messages['anp'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'एक अनुभाग पीछू जा',
 	'mobile-frontend-show-button' => 'देखाबॊ',
 	'mobile-frontend-hide-button' => 'छुपाबॊ',
-	'mobile-frontend-regular-site' => 'इ पृष्ठ नियमित विकीपीडिया मॆ देखॊ',
+	'mobile-frontend-regular-site' => 'इ पृष्ठ नियमित विकीपीडिया मॆ देखॊ', # Fuzzy
 	'mobile-frontend-featured-article' => 'आजकॊ विशेष लेख',
 );
 
@@ -510,7 +497,7 @@ $messages['ar'] = array(
 	'mobile-frontend-leave-feedback-title' => 'أعطنا ملاحظاتك عن تجربة موقع المحمول',
 	'mobile-frontend-leave-feedback-general-section-header' => 'عام',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'ملاحظات المقالة',
-	'mobile-frontend-leave-feedback-email-body' => 'من فضلك اكتب بريدك الغلكتروني أعلى هذا السطر.',
+	'mobile-frontend-leave-feedback-email-body' => 'من فضلك اكتب بريدك الغلكتروني أعلى هذا السطر.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'مشكلة تقنية',
 	'mobile-frontend-leave-feedback-general-link-text' => 'تغذية راجعة عامة',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'بخصوص خطأ معرفي',
@@ -562,7 +549,8 @@ $messages['arc'] = array(
 	'mobile-frontend-language' => 'ܠܫܢܐ:',
 );
 
-/** Moroccan Spoken Arabic (Maġribi) */
+/** Moroccan Spoken Arabic (Maġribi)
+ */
 $messages['ary'] = array(
 	'mobile-frontend-search-submit' => 'Sir',
 	'mobile-frontend-home-button' => 'Sṫiqbal',
@@ -570,7 +558,7 @@ $messages['ary'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Ṛjeĝ s-séksyon li men qbel',
 	'mobile-frontend-show-button' => 'Werri',
 	'mobile-frontend-hide-button' => 'Ĥebbi',
-	'mobile-frontend-regular-site' => 'Qra had ṣ-ṣefḫa fe l-Wikipédya l-ĝadi',
+	'mobile-frontend-regular-site' => 'Qra had ṣ-ṣefḫa fe l-Wikipédya l-ĝadi', # Fuzzy
 	'mobile-frontend-featured-article' => 'L-Maqal dyal lyoma',
 );
 
@@ -628,7 +616,7 @@ $messages['as'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'কাৰিকৰী সমস্যা',
 	'mobile-frontend-leave-feedback-general-section-header' => 'সাধাৰণ',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'প্ৰবন্ধৰ প্ৰতিক্ৰিয়া',
-	'mobile-frontend-leave-feedback-email-body' => 'অনুগ্ৰহ কৰি এই শাৰীৰ ওপৰত আপোনাৰ ই-মেইল ঠিকনা লিখক।',
+	'mobile-frontend-leave-feedback-email-body' => 'অনুগ্ৰহ কৰি এই শাৰীৰ ওপৰত আপোনাৰ ই-মেইল ঠিকনা লিখক।', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'কাৰিকৰী সমস্যা',
 	'mobile-frontend-leave-feedback-general-link-text' => 'সাধাৰণ প্ৰতিক্ৰিয়া',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'কোনো ব্যক্তি, মই প্ৰতিনিধিত্ব কৰা কোম্পানী বা মোৰ বিষয়ে',
@@ -646,7 +634,7 @@ $messages['as'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'আপোনাৰ বাৰ্তা প্ৰচেছ কৰাত ত্ৰুটী হৈছে। অনুগ্ৰহ কৰি অলপ পিছত চেষ্টা কৰক।',
 	'mobile-frontend-language' => 'ভাষাসমূহ:',
 	'mobile-frontend-language-header' => 'এই প্ৰবন্ধটো $1 {{PLURAL:$1|টা ভাষাত|টা ভাষাত}} উপলব্ধ',
-	'mobile-frontend-language-footer' => '{{SITENAME}} অন্যান্য ভাষাসমূহটো উপলদ্ধ।',
+	'mobile-frontend-language-footer' => '{{SITENAME}} অন্যান্য ভাষাসমূহটো উপলদ্ধ।', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'ভাষা অনুসন্ধান:',
 	'mobile-frontend-language-site-nomatches' => 'কোনো মিল থকা ভাষা নাই',
 	'mobile-frontend-username' => 'সদস্যনাম:',
@@ -689,6 +677,9 @@ $messages['ast'] = array(
 	'mobile-frontend-home-button' => 'Entamu',
 	'mobile-frontend-logged-out' => 'Non identificáu',
 	'mobile-frontend-logged-in' => 'Aniciasti sesión como $1',
+	'mobile-frontend-sign-in-heading' => 'Entrar',
+	'mobile-frontend-sign-in-why' => 'Si tienes una cuenta en {{SITENAME}}, pues entrar más abaxo.',
+	'mobile-frontend-sign-in-error-heading' => '¡Coime!',
 	'mobile-frontend-settings-description' => 'Personaliza la to esperiencia nel preséu móvil con estes configuraciones específiques pa móvil.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Guardar la configuración',
@@ -750,6 +741,7 @@ $messages['ast'] = array(
 	'mobile-frontend-leave-feedback-thanks' => '¡Gracies polos tos comentarios!',
 	'mobile-frontend-leave-feedback-post-error' => 'Hebo un fallu al procesar el to mensaxe. Torna a intentalo más sero.',
 	'mobile-frontend-language' => 'Llingua:',
+	'mobile-frontend-language-article-heading' => "Lleer n'otra llingua",
 	'mobile-frontend-language-header' => 'Esti artículu ta disponible en  $1 {{PLURAL:$1|llingua|llingües}}',
 	'mobile-frontend-language-footer' => 'Nota: Esti artículu pue que nun tea na to llingua preferida. Pues ver les llingües que sofita {{SITENAME}} calcando equí.',
 	'mobile-frontend-language-site-choose' => 'Guetar llingua',
@@ -772,8 +764,12 @@ $messages['ast'] = array(
 	'mobile-frontend-footer-contact' => 'Contautu',
 	'mobile-frontend-unknown-option' => 'Opción non reconocida "$1".',
 	'mobile-frontend-search-noresults' => "Dengún títulu d'artículu casa cola to gueta. Camuda la gueta o calca nel botón de gueta del tecláu pa guetar dientro de los artículos.",
+	'mobile-frontend-main-menu-button-tooltip' => 'Abrir el menú principal',
+	'mobile-frontend-main-menu-page-title' => 'Navegación del sitiu',
 	'mobile-frontend-main-menu-featured' => 'Destacada',
 	'mobile-frontend-main-menu-nearby' => 'Cercanu',
+	'mobile-frontend-main-menu-login' => 'Identificase',
+	'mobile-frontend-main-menu-logout' => 'Colar',
 	'mobile-frontend-main-menu-settings' => 'Configuración',
 	'mobile-frontend-main-menu-settings-heading' => 'Configuración del sitiu móvil',
 	'mobile-frontend-settings-site-header' => 'Llingües de {{SITENAME}}',
@@ -785,6 +781,8 @@ $messages['ast'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Lleer esti artículu en',
 	'mobile-frontend-meta-data-issues-header' => 'Ameyorar esti artículu',
 	'mobile-frontend-meta-data-issues' => 'Esti artículu tien problemes',
+	'mobile-frontend-ajax-page-loading' => 'Cargando $1',
+	'mobile-frontend-ajax-page-error' => '¡Coime! Daqué nun funcionó. Prueba a recargar la ventana del navegador.',
 );
 
 /** Azerbaijani (azərbaycanca)
@@ -798,7 +796,7 @@ $messages['az'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Bir bölüm geriyə dön',
 	'mobile-frontend-show-button' => 'Göstər',
 	'mobile-frontend-hide-button' => 'Gizlət',
-	'mobile-frontend-regular-site' => 'Bu səhifəni normal {{SITENAME}} görüntülə',
+	'mobile-frontend-regular-site' => 'Bu səhifəni normal {{SITENAME}} görüntülə', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Davam et ...',
 	'mobile-frontend-wml-back' => 'Geri ...',
 	'mobile-frontend-view' => 'Mobil görüntü',
@@ -807,10 +805,10 @@ $messages['az'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'bəli',
 	'mobile-frontend-opt-out-no-button' => 'xeyr',
 	'mobile-frontend-featured-article' => 'Günün seçilmiş məqaləsi',
-	'mobile-frontend-leave-feedback-subject' => 'Mövzu',
-	'mobile-frontend-leave-feedback-message' => 'Mesaj',
+	'mobile-frontend-leave-feedback-subject' => 'Mövzu', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Mesaj', # Fuzzy
 	'mobile-frontend-leave-feedback-general-section-header' => 'Ümumi',
-	'mobile-frontend-language' => 'Dil',
+	'mobile-frontend-language' => 'Dil', # Fuzzy
 	'mobile-frontend-username' => 'İstifadəçi adı:',
 	'mobile-frontend-password' => 'Parol:',
 	'mobile-frontend-login' => 'Daxil ol',
@@ -836,7 +834,7 @@ $messages['ba'] = array(
 	'mobile-frontend-close-section' => 'Был бүлекте ябырға',
 	'mobile-frontend-show-button' => 'Күрһәтергә',
 	'mobile-frontend-hide-button' => 'Йәшерергә',
-	'mobile-frontend-regular-site' => 'Был битте ғәҙәти Википедияла ҡарарға',
+	'mobile-frontend-regular-site' => 'Был битте ғәҙәти Википедияла ҡарарға', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Дауамы...',
 	'mobile-frontend-wml-back' => 'Кирегә...',
 	'mobile-frontend-view' => 'Мобиль нөсхә',
@@ -859,7 +857,7 @@ $messages['ba'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Баһаламағыҙ өсөн рәхмәт!',
 	'mobile-frontend-leave-feedback-post-error' => 'Һеҙҙен хәберҙе эшкәртеү ваҡытында хата килеп сыҡты. Зинһар, һуңыраҡ тағы ҡабатлап ҡарағыҙ.',
 	'mobile-frontend-language' => 'Тел:',
-	'mobile-frontend-language-header' => 'Был мәҡәлә $1 телдә бар',
+	'mobile-frontend-language-header' => 'Был мәҡәлә $1 телдә бар', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Тел һайлау:',
 	'mobile-frontend-username' => 'Ҡулланыусы исеме:',
 	'mobile-frontend-password' => 'Пароль:',
@@ -897,7 +895,7 @@ $messages['bar'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Oah Kapitel zruck springer',
 	'mobile-frontend-show-button' => 'Auhzoang',
 	'mobile-frontend-hide-button' => 'Vastecker',
-	'mobile-frontend-regular-site' => 'Za da klassischen {{SITENAME}}-Auhsicht wexeln',
+	'mobile-frontend-regular-site' => 'Za da klassischen {{SITENAME}}-Auhsicht wexeln', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Weider ...',
 	'mobile-frontend-wml-back' => 'Zruck ...',
 	'mobile-frontend-view' => 'Móbile Auhsicht',
@@ -914,19 +912,19 @@ $messages['bar'] = array(
 	'mobile-frontend-featured-article' => 'Artiké vam Toog',
 	'mobile-frontend-news-items' => "A' d' Noochrichten",
 	'mobile-frontend-leave-feedback-notice' => "Deih Ryckmejdung hijft ins dodabei, d' móbile Auhsicht weider z' vabéssern. Sie werd éfferntlich af da Seiten &quot;$1&quot; auhzoagt. Deih Benutzernaum, d' Versión dé vah dir gnytzden Browser sówiaras vah dir gnytzde Betriabssystém auhgeem. Bittscheh wejh an informatiavm und assogkräfting Bedreff, wia z. Bsp.: „A Próblém ba da Auhzoag vah Tabejn“. Deih Ryckmejdung unterliagt inserne Nutzungsbedingunger.",
-	'mobile-frontend-leave-feedback-subject' => 'Bedreff:',
-	'mobile-frontend-leave-feedback-message' => 'Noochricht',
+	'mobile-frontend-leave-feedback-subject' => 'Bedreff:', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Noochricht', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'Ryckmejdung sénden',
 	'mobile-frontend-leave-feedback-link-text' => 'Ryckmejdung za da móbiln Auhsicht',
 	'mobile-frontend-leave-feedback' => 'Ryckmejdung geem',
 	'mobile-frontend-leave-feedback-title' => 'Gib ins bittscheh a Ryckmejdung zua deine Erforunger mid da móbiln Auhsicht',
 	'mobile-frontend-leave-feedback-page-title' => 'Gib ins bittscheh a Ryckmejdung zua deine Erforunger mid da móbiln Auhsicht',
 	'mobile-frontend-leave-feedback-thanks' => "An recht an scheener Daunk fyr d' Ryckmejdung.",
-	'mobile-frontend-language' => 'Sprooch',
+	'mobile-frontend-language' => 'Sprooch', # Fuzzy
 	'mobile-frontend-username' => 'Benutzernaum:',
 	'mobile-frontend-password' => 'Posswort:',
 	'mobile-frontend-login' => 'Auhmejn',
-	'mobile-frontend-placeholder' => 'Gib do deih Suach eih ...',
+	'mobile-frontend-placeholder' => 'Gib do deih Suach eih ...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'dé Benoochrichtigung schliassen',
 	'mobile-frontend-clear-search' => 'Laarn',
 );
@@ -1081,7 +1079,8 @@ $messages['bg'] = array(
 	'mobile-frontend-footer-contact' => 'Контакт',
 );
 
-/** Bihari (भोजपुरी) */
+/** Bihari (भोजपुरी)
+ */
 $messages['bh'] = array(
 	'mobile-frontend-home-button' => 'गृह',
 	'mobile-frontend-back-to-top-of-section' => 'एक खण्ड पिछे जाईं',
@@ -1106,7 +1105,7 @@ $messages['bn'] = array(
 	'mobile-frontend-close-section' => 'বন্ধ করুন',
 	'mobile-frontend-show-button' => 'দেখাও',
 	'mobile-frontend-hide-button' => 'আড়াল করো',
-	'mobile-frontend-empty-homepage' => 'এই হোমপেজটি কনফিগার করা প্রয়োজন। <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">বিস্তারিত দেখুন</a>',
+	'mobile-frontend-empty-homepage' => 'এই হোমপেজটি কনফিগার করা প্রয়োজন। <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">বিস্তারিত দেখুন</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'ডেক্সটপ সংস্করণ',
 	'mobile-frontend-wml-continue' => 'অব্যাহত ...',
 	'mobile-frontend-wml-back' => 'পিছনে ...',
@@ -1139,7 +1138,7 @@ $messages['bn'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'কারিগরি সমস্যা',
 	'mobile-frontend-leave-feedback-general-section-header' => 'সাধারণ',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'নিবন্ধ প্রতিক্রিয়া',
-	'mobile-frontend-leave-feedback-email-body' => 'অনুগ্রহ করে এই লাইনের উপরে আপনার ই-মেইল ঠিকানা লিখুন।',
+	'mobile-frontend-leave-feedback-email-body' => 'অনুগ্রহ করে এই লাইনের উপরে আপনার ই-মেইল ঠিকানা লিখুন।', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'কারিগরি সমস্যা',
 	'mobile-frontend-leave-feedback-general-link-text' => 'সাধারণ ফিডব্যাক',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'আমার নিজের, একজন ব্যক্তি অথবা আমার পরিচিত একটি কোম্পানি সম্পর্কে',
@@ -1157,7 +1156,7 @@ $messages['bn'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'আপনার বার্তাটি পাঠানোর সময় কোনো সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্ঠা করুন।',
 	'mobile-frontend-language' => 'ভাষা:',
 	'mobile-frontend-language-header' => 'এই নিবন্ধটি $1টি {{PLURAL:$1|ভাষায়|ভাষায়}} রয়েছে',
-	'mobile-frontend-language-footer' => '{{SITENAME}} অন্যান্য ভাষাতেও রয়েছে।',
+	'mobile-frontend-language-footer' => '{{SITENAME}} অন্যান্য ভাষাতেও রয়েছে।', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'ভাষা অনুসন্ধান',
 	'mobile-frontend-language-site-nomatches' => 'কোনো ভাষা পাওয়া যায়নি',
 	'mobile-frontend-username' => 'ব্যবহারকারী নাম:',
@@ -1239,7 +1238,7 @@ $messages['br'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Kudenn deknikel',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Hollek',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Soñj diwar-benn ar pennad',
-	'mobile-frontend-leave-feedback-email-body' => "Merkit ho chomlec'h postel a-us d'al linenn-mañ",
+	'mobile-frontend-leave-feedback-email-body' => "Merkit ho chomlec'h postel a-us d'al linenn-mañ", # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Kudenn deknikel',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Soñjoù dre-vras',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Diwar ma fenn, un den, pe un embregerezh dileuriet ganin',
@@ -1296,7 +1295,7 @@ $messages['bs'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Skoči nazad za jednu sekciju',
 	'mobile-frontend-show-button' => 'Pokaži',
 	'mobile-frontend-hide-button' => 'Sakrij',
-	'mobile-frontend-regular-site' => 'Vidi ovu stranicu na običnoj Wikipediji',
+	'mobile-frontend-regular-site' => 'Vidi ovu stranicu na običnoj Wikipediji', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Nastavi…',
 	'mobile-frontend-wml-back' => 'Nazad…',
 	'mobile-frontend-featured-article' => 'Odabrani članak',
@@ -1356,7 +1355,7 @@ $messages['ca'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema tècnic',
 	'mobile-frontend-leave-feedback-general-section-header' => 'General',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => "Avaluació de l'article",
-	'mobile-frontend-leave-feedback-email-body' => "Escriviu la vostra adreça de correu electrònic sobre d'aquesta línia",
+	'mobile-frontend-leave-feedback-email-body' => "Escriviu la vostra adreça de correu electrònic sobre d'aquesta línia", # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problema tècnic',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Comentaris generals',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Pel que fa a mi, una persona o una empresa que represento',
@@ -1374,7 +1373,7 @@ $messages['ca'] = array(
 	'mobile-frontend-leave-feedback-post-error' => "S'ha produït un error en processar el vostre missatge. Torneu-ho a provar més tard.",
 	'mobile-frontend-language' => 'Llengua:',
 	'mobile-frontend-language-header' => 'Aquest article està disponible en $1 {{PLURAL:$1|llengua|llengües}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} està disponible en altres llengües.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} està disponible en altres llengües.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Cerca idioma',
 	'mobile-frontend-language-site-nomatches' => 'No hi ha idiomes coincidents',
 	'mobile-frontend-username' => "Nom d'usuari:",
@@ -1408,7 +1407,8 @@ $messages['ca'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Llegiu aquest article en',
 );
 
-/** Chechen (нохчийн) */
+/** Chechen (нохчийн)
+ */
 $messages['ce'] = array(
 	'mobile-frontend-search-submit' => 'Дехьа вала',
 	'mobile-frontend-home-button' => 'Цlехьа',
@@ -1416,7 +1416,7 @@ $messages['ce'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Юхагlо оцу даакъан',
 	'mobile-frontend-show-button' => 'Гайта',
 	'mobile-frontend-hide-button' => 'Къайла яккха',
-	'mobile-frontend-regular-site' => 'Хьажа гуттаралера Википедийа агlоне',
+	'mobile-frontend-regular-site' => 'Хьажа гуттаралера Википедийа агlоне', # Fuzzy
 	'mobile-frontend-featured-article' => 'Хаьржина яззам',
 );
 
@@ -1430,7 +1430,7 @@ $messages['ckb'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'بپەڕێوە بۆ بە بەشی پێشوو',
 	'mobile-frontend-show-button' => 'نیشانیبدە',
 	'mobile-frontend-hide-button' => 'بیشارەوە',
-	'mobile-frontend-regular-site' => 'ئەم پەڕە لەسەر {{SITENAME}}ی ئاسایی ببینە',
+	'mobile-frontend-regular-site' => 'ئەم پەڕە لەسەر {{SITENAME}}ی ئاسایی ببینە', # Fuzzy
 	'mobile-frontend-wml-continue' => 'درێژەی پێبدە ...',
 	'mobile-frontend-wml-back' => 'بگەڕێوە ...',
 	'mobile-frontend-view' => 'بینینەوەی مۆبایلی',
@@ -1442,15 +1442,16 @@ $messages['ckb'] = array(
 	'mobile-frontend-enable-images' => 'ڕێگە بدە بە وێنەکان لەسەر سایتی مۆبایل',
 	'mobile-frontend-featured-article' => 'وتاری ھەڵبژاردەی ئەمڕۆ',
 	'mobile-frontend-news-items' => 'لە ھەواڵەکاندا',
-	'mobile-frontend-leave-feedback-subject' => 'بابەت',
-	'mobile-frontend-leave-feedback-message' => 'پەیام',
-	'mobile-frontend-language' => 'زمان',
+	'mobile-frontend-leave-feedback-subject' => 'بابەت', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'پەیام', # Fuzzy
+	'mobile-frontend-language' => 'زمان', # Fuzzy
 );
 
-/** Corsican (corsu) */
+/** Corsican (corsu)
+ */
 $messages['co'] = array(
-	'mobile-frontend-leave-feedback-subject' => 'Sughjettu',
-	'mobile-frontend-leave-feedback-message' => 'Messaghju',
+	'mobile-frontend-leave-feedback-subject' => 'Sughjettu', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Messaghju', # Fuzzy
 );
 
 /** Czech (česky)
@@ -1567,7 +1568,8 @@ $messages['cs'] = array(
 	'mobile-frontend-ajax-page-error' => 'Jejda! Něco se tu pokazilo. Zkuste obnovit okno prohlížeče.',
 );
 
-/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ) */
+/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
+ */
 $messages['cu'] = array(
 	'mobile-frontend-search-submit' => 'прѣиди',
 	'mobile-frontend-home-button' => 'главьна страница',
@@ -1767,6 +1769,7 @@ $messages['de'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Beim Verarbeiten deiner Nachricht ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
 	'mobile-frontend-language' => 'Sprache:',
 	'mobile-frontend-language-article-heading' => 'In einer anderen Sprache lesen',
+	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-header' => 'Dieser Artikel ist in {{PLURAL:$1|einer Sprache|$1 Sprachen}} verfügbar',
 	'mobile-frontend-language-footer' => 'Hinweis: Dieser Artikel ist möglicherweise nicht in deiner Sprache geschrieben. Du kannst einsehen, welche Sprachen {{SITENAME}} unterstützt, indem du hier klickst.',
 	'mobile-frontend-language-site-choose' => 'Sprache suchen',
@@ -1834,7 +1837,7 @@ $messages['de-formal'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für Ihre Rückmeldung.',
 	'mobile-frontend-leave-feedback-post-error' => 'Beim Verarbeiten Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.',
 	'mobile-frontend-language-footer' => 'Hinweis: Dieser Artikel ist möglicherweise nicht in Ihrer Sprache geschrieben. Sie können einsehen, welche Sprachen {{SITENAME}} unterstützt, indem Sie hier klicken.',
-	'mobile-frontend-placeholder' => 'Geben Sie hier Ihre Suche ein ...',
+	'mobile-frontend-placeholder' => 'Geben Sie hier Ihre Suche ein ...', # Fuzzy
 	'mobile-frontend-search-help' => 'Geben Sie oben den Suchbegriff ein. Passende Artikelnamen werden dann hier angezeigt.',
 	'mobile-frontend-search-noresults' => 'Kein Artikeltitel entspricht Ihrer Suche. Ändern sie Ihre Suche oder drücken Sie die Suchschaltfläche Ihrer Tastatur, um die Suche auf den Inhalt der Artikel auszuweiten.',
 );
@@ -1849,6 +1852,9 @@ $messages['diq'] = array(
 	'mobile-frontend-home-button' => 'Keye',
 	'mobile-frontend-logged-out' => 'Şıma de nêkewtê',
 	'mobile-frontend-logged-in' => 'Dekewê $1',
+	'mobile-frontend-sign-in-heading' => 'Qeyd be',
+	'mobile-frontend-sign-in-why' => 'Eke yew hesabê {{SITENAME}} şıma esto, wa şıma şenê cêr qeyd bê.',
+	'mobile-frontend-sign-in-error-heading' => 'Wey',
 	'mobile-frontend-settings-description' => 'Nışanyaye sitan u mobil cihazan dı sazanê cerbnayışane xo xısusi kerê.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Saza star ke',
@@ -1933,9 +1939,12 @@ $messages['diq'] = array(
 	'mobile-frontend-footer-contact' => 'İrtibat',
 	'mobile-frontend-unknown-option' => 'Weçineya "$1"\'i ne şınasiya.',
 	'mobile-frontend-search-noresults' => 'Sernameyo ke şımayê geyrenê wesiqeyo do wuni çıniyo. Cı geyreyışê xo bıvurnê yana zerrey wesiqer de cıgeyrayışi re klawye ra butona cıgeyrayışi pıploğne.',
+	'mobile-frontend-main-menu-button-tooltip' => 'Menuyê bıngehi ake',
 	'mobile-frontend-main-menu-page-title' => 'Pusulaya sita',
 	'mobile-frontend-main-menu-featured' => 'Weçinaye',
 	'mobile-frontend-main-menu-nearby' => 'Nezdıra',
+	'mobile-frontend-main-menu-login' => 'Cı kewe',
+	'mobile-frontend-main-menu-logout' => 'Bıveciye',
 	'mobile-frontend-main-menu-settings' => 'Sazi',
 	'mobile-frontend-main-menu-settings-heading' => 'Sazê mobil sita',
 	'mobile-frontend-settings-site-header' => 'Zıwanê {{SITENAME}}',
@@ -1961,6 +1970,9 @@ $messages['dsb'] = array(
 	'mobile-frontend-home-button' => 'Start',
 	'mobile-frontend-logged-out' => 'Njepśizjawjony',
 	'mobile-frontend-logged-in' => 'Pśizjawjony ako $1',
+	'mobile-frontend-sign-in-heading' => 'Registrěrowaś',
+	'mobile-frontend-sign-in-why' => 'Jolic maš konto na {{GRAMMAR:lokatiw|{{SITENAME}}}}, móžoš se dołojce registrěrowaś.',
+	'mobile-frontend-sign-in-error-heading' => 'Hopla',
 	'mobile-frontend-settings-description' => 'Pśiměŕ swój mobilny rěd z toś tymi mobilnymi specifiskimi nastajenjami.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Nastajenja składowaś',
@@ -2024,6 +2036,7 @@ $messages['dsb'] = array(
 Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-language' => 'Rěc:',
 	'mobile-frontend-language-article-heading' => 'W drugej rěcy cytaś',
+	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-header' => 'Toś ten nastawk stoj w $1 {{PLURAL:$1|rěcy|rěcoma|rěcach|rěcach}} k dispoziciji',
 	'mobile-frontend-language-footer' => 'Glědaj: Toś ten nastawk njejo snaź w twójej preferěrowanej rěcy napisał. Móžoš wiźeś, kótare rěcy {{SITENAME}} pódpěra, z tym až kliknjoš how.',
 	'mobile-frontend-language-site-choose' => 'Rěc pytaś',
@@ -2046,8 +2059,12 @@ Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Njespóznata opcija "$1".',
 	'mobile-frontend-search-noresults' => 'Twójomu pytanjeju žedne nastawkowe titele njewotpówěduju. Změń swójo pytanje abo tłoc pytańsku tastu swójeje tastatury, aby w nastawkach pytał.',
+	'mobile-frontend-main-menu-button-tooltip' => 'Głowny meni wócyniś',
+	'mobile-frontend-main-menu-page-title' => 'Sedłowa nawigacija',
 	'mobile-frontend-main-menu-featured' => 'Nabejny',
 	'mobile-frontend-main-menu-nearby' => 'W bliskosći',
+	'mobile-frontend-main-menu-login' => 'Pśizjawiś',
+	'mobile-frontend-main-menu-logout' => 'Wótzjawiś',
 	'mobile-frontend-main-menu-settings' => 'Nastajenja',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja',
 	'mobile-frontend-settings-site-header' => 'Rěcy {{GRAMMAR:genitiw|{{SITENAME}}}}',
@@ -2059,9 +2076,12 @@ Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-page-menu-language-heading' => 'Toś ten nastawk cytaś w',
 	'mobile-frontend-meta-data-issues-header' => 'Toś ten nastawk pólěpšyś',
 	'mobile-frontend-meta-data-issues' => 'Toś ten nastawk ma problemy',
+	'mobile-frontend-ajax-page-loading' => '$1 se zacytujo',
+	'mobile-frontend-ajax-page-error' => 'Hopla! Něco jo se njeraźiło. Pšosym wopytaj wokno swójogo wobglědowaka aktualizěrowaś.',
 );
 
-/** Central Dusun (Dusun Bundu-liwan) */
+/** Central Dusun (Dusun Bundu-liwan)
+ */
 $messages['dtp'] = array(
 	'mobile-frontend-search-submit' => 'Ibok',
 	'mobile-frontend-home-button' => 'Damin',
@@ -2069,17 +2089,18 @@ $messages['dtp'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Poningguli Id Boogian A',
 	'mobile-frontend-show-button' => 'Popokito',
 	'mobile-frontend-hide-button' => 'Popolisok',
-	'mobile-frontend-regular-site' => 'Intaai bolikon koubasanan Wikipodia',
+	'mobile-frontend-regular-site' => 'Intaai bolikon koubasanan Wikipodia', # Fuzzy
 	'mobile-frontend-featured-article' => 'Babasaon Tadau Diti',
 );
 
-/** Ewe (eʋegbe) */
+/** Ewe (eʋegbe)
+ */
 $messages['ee'] = array(
 	'mobile-frontend-search-submit' => 'Yi',
 	'mobile-frontend-random-button' => 'Ɖesiaɖe ko',
 	'mobile-frontend-show-button' => 'Fia',
 	'mobile-frontend-hide-button' => 'Ɣlae',
-	'mobile-frontend-regular-site' => 'Kpɔ axa sia le {{SITENAME}} ŋutɔ dzi',
+	'mobile-frontend-regular-site' => 'Kpɔ axa sia le {{SITENAME}} ŋutɔ dzi', # Fuzzy
 );
 
 /** Greek (Ελληνικά)
@@ -2129,7 +2150,7 @@ $messages['el'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Τεχνικό πρόβλημα',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Γενικά',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Ανατροφοδότηση λήμματος',
-	'mobile-frontend-leave-feedback-email-body' => 'Παρακαλούμε γράψτε το e-mail σας πάνω απ΄αυτή τη γραμμή.',
+	'mobile-frontend-leave-feedback-email-body' => 'Παρακαλούμε γράψτε το e-mail σας πάνω απ΄αυτή τη γραμμή.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Τεχνικό πρόβλημα',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Θέμα μηνύματος',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Πληκτρολογήστε το σχόλιό σας εδώ',
@@ -2140,7 +2161,7 @@ $messages['el'] = array(
 	'mobile-frontend-feedback-no-message' => 'Παρακαλούμε εισάγετε ένα μήνυμα εδώ',
 	'mobile-frontend-leave-feedback-thanks' => 'Ευχαριστούμε, για τα σχόλιά σας!',
 	'mobile-frontend-language' => 'Γλώσσα:',
-	'mobile-frontend-language-footer' => '{{SITENAME}} είναι διαθέσημη σε άλλες γλώσσες.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} είναι διαθέσημη σε άλλες γλώσσες.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Αναζήτηση γλώσσας',
 	'mobile-frontend-language-site-nomatches' => 'Δεν υπάρχουν γλώσσες που να ταιριάζουν',
 	'mobile-frontend-username' => 'Όνομα χρήστη:',
@@ -2222,7 +2243,7 @@ $messages['eo'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknika problemo',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Ĝenerala',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Rimarkoj pri artikolo',
-	'mobile-frontend-leave-feedback-email-body' => 'Bonvolu skribi vian retpoŝtadreson supre de ĉi tiu linio.',
+	'mobile-frontend-leave-feedback-email-body' => 'Bonvolu skribi vian retpoŝtadreson supre de ĉi tiu linio.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Teknika problemo',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Ĝeneralaj rimarkoj',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Pri mi, persono aŭ firmao kiun mi reprezentas',
@@ -2240,7 +2261,7 @@ $messages['eo'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Estis eraro traktante vian mesaĝon. Bonvolu provi denove pli poste.',
 	'mobile-frontend-language' => 'Lingvo:',
 	'mobile-frontend-language-header' => 'Ĉi tiu artikolo disponas per $1 {{PLURAL:$1|lingvo|lingvoj}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} disponas en aliaj lingvoj.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} disponas en aliaj lingvoj.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Traserĉi lingvon',
 	'mobile-frontend-language-site-nomatches' => 'Neniuj kongruaj lingvo',
 	'mobile-frontend-username' => 'Salutnomo:',
@@ -2551,7 +2572,8 @@ $messages['eu'] = array(
 	'mobile-frontend-page-menu-contents-heading' => 'Edukiak',
 );
 
-/** Extremaduran (estremeñu) */
+/** Extremaduran (estremeñu)
+ */
 $messages['ext'] = array(
 	'mobile-frontend-search-submit' => 'Dil',
 	'mobile-frontend-home-button' => 'Encetu',
@@ -2559,7 +2581,7 @@ $messages['ext'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Dil alatrás un apaltihu',
 	'mobile-frontend-show-button' => 'Muestral',
 	'mobile-frontend-hide-button' => 'Açonchal',
-	'mobile-frontend-regular-site' => 'Guipal esta páhina ena Güiquipeya estándal',
+	'mobile-frontend-regular-site' => 'Guipal esta páhina ena Güiquipeya estándal', # Fuzzy
 	'mobile-frontend-featured-article' => 'Artículu destacau',
 );
 
@@ -2627,7 +2649,7 @@ $messages['fa'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'مشکل فنی',
 	'mobile-frontend-leave-feedback-general-section-header' => 'عمومی',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'ارزیابی مقاله',
-	'mobile-frontend-leave-feedback-email-body' => 'لطفاً ایمیل خود را در بالای این خط بنویسید.',
+	'mobile-frontend-leave-feedback-email-body' => 'لطفاً مشکلاتی را که با آنها در {{SITENAME}} مواجه شده‌اید را در بالای این خط بنویسید.لطفاً توجه داشته باشید که به علت زیاد بودن درخواست ممکن است نتوانیم پاسخی به پیام‌های دریافتی بدهیم.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'مشکل فنی',
 	'mobile-frontend-leave-feedback-general-link-text' => 'انتقادات و پیشنهادات عمومی',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'من ، یک شخص حقیقی یا نماینده یک شرکت',
@@ -2636,7 +2658,7 @@ $messages['fa'] = array(
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'موضوع پیام',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'نظر خود را اینجا بنویسید',
 	'mobile-frontend-leave-feedback-page-title' => 'دربارهٔ تجربهٔ استفاده از وبگاه مخصوص تلفن همراه، بازخورد بگذارید',
-	'mobile-frontend-feedback-page' => 'پروژه: نظرخواهی درباره افزونه موبایل',
+	'mobile-frontend-feedback-page' => 'پروژه: نظرخواهی درباره افزونه موبایل', # Fuzzy
 	'mobile-frontend-leave-feedback-special-title' => 'تماس با ما',
 	'mobile-frontend-feedback-no-subject' => '(بدون موضوع)',
 	'mobile-frontend-feedback-no-subject-field' => 'لطفاً یک موضوع را وارد کنید',
@@ -2647,7 +2669,7 @@ $messages['fa'] = array(
 	'mobile-frontend-language' => 'زبان:',
 	'mobile-frontend-language-article-heading' => 'به زبان‌های دیگر مطالعه کنید',
 	'mobile-frontend-language-header' => 'این مقاله در $1   {{PLURAL:$1| زبان|زبان‌ها}}  دسترس است',
-	'mobile-frontend-language-footer' => '{{SITENAME}} در زبان‌های دیگر نیز موجود است.',
+	'mobile-frontend-language-footer' => 'توجه:ممکن است این مقاله در زبان مورد نظر شما نگاشته نشده‌باشد. با کلیک کردن در اینجا می‌توانید ببینید که در کدام زبان {{SITENAME}} موجود است.',
 	'mobile-frontend-language-site-choose' => 'جستجوی زبان',
 	'mobile-frontend-language-site-nomatches' => 'زبان یافت نشد',
 	'mobile-frontend-username' => 'نام کاربری:',
@@ -2748,7 +2770,7 @@ $messages['fi'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tekninen ongelma',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Yleinen',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Palaute artikkeleista',
-	'mobile-frontend-leave-feedback-email-body' => 'Kirjoita sähköpostiosoitteesi tämän rivin yläpuolelle.',
+	'mobile-frontend-leave-feedback-email-body' => 'Kirjoita sähköpostiosoitteesi tämän rivin yläpuolelle.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tekninen ongelma',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Yleinen palaute',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Liittyen minuun, tai yritykseen, jota edustan',
@@ -2766,7 +2788,7 @@ $messages['fi'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Viestiäsi käsiteltäessä tapahtui virhe. Yritä myöhemmin uudelleen.',
 	'mobile-frontend-language' => 'Kieli:',
 	'mobile-frontend-language-header' => 'Tämä artikkeli on saatavilla {{PLURAL:$1|yhdellä|$1}} kielellä.',
-	'mobile-frontend-language-footer' => '{{SITENAME}} on saatavana muilla kielillä.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} on saatavana muilla kielillä.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Etsi kieltä',
 	'mobile-frontend-language-site-nomatches' => 'Ei vastaavia kieliä',
 	'mobile-frontend-username' => 'Käyttäjätunnus',
@@ -2809,7 +2831,7 @@ $messages['fo'] = array(
 	'mobile-frontend-random-button' => 'Tilvildarlig',
 	'mobile-frontend-show-button' => 'Vís',
 	'mobile-frontend-hide-button' => 'Fjal',
-	'mobile-frontend-regular-site' => 'Síggj hesa síðu á vanligu {{SITENAME}}',
+	'mobile-frontend-regular-site' => 'Síggj hesa síðu á vanligu {{SITENAME}}', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Halt fram...',
 	'mobile-frontend-wml-back' => 'Aftur ...',
 	'mobile-frontend-view' => 'Mobil vísing',
@@ -2819,11 +2841,11 @@ $messages['fo'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'Ja',
 	'mobile-frontend-opt-out-no-button' => 'Nei',
 	'mobile-frontend-featured-article' => 'Dagsins grein',
-	'mobile-frontend-leave-feedback-subject' => 'Evni',
-	'mobile-frontend-leave-feedback-message' => 'Boð',
+	'mobile-frontend-leave-feedback-subject' => 'Evni', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Boð', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'Send viðmerking',
 	'mobile-frontend-leave-feedback-thanks' => 'Takk fyri tína afturmelding!',
-	'mobile-frontend-language' => 'Mál',
+	'mobile-frontend-language' => 'Mál', # Fuzzy
 	'mobile-frontend-username' => 'Brúkaranavn:',
 	'mobile-frontend-password' => 'Loyniorð:',
 	'mobile-frontend-login' => 'Rita inn',
@@ -3005,7 +3027,7 @@ $messages['frp'] = array(
 	'mobile-frontend-feedback-no-message' => 'Volyéd buchiér un mèssâjo ique',
 	'mobile-frontend-leave-feedback-thanks' => 'Grant-marci por voutron avis !',
 	'mobile-frontend-language' => 'Lengoua :',
-	'mobile-frontend-language-footer' => '{{SITENAME}} est disponiblo dens d’ôtres lengoues.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} est disponiblo dens d’ôtres lengoues.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Rechèrchiér la lengoua',
 	'mobile-frontend-username' => 'Nom d’usanciér :',
 	'mobile-frontend-password' => 'Contresegno :',
@@ -3087,7 +3109,7 @@ $messages['frr'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technisk probleem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Algemian',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Komentaar tu di artiikel',
-	'mobile-frontend-leave-feedback-email-body' => 'Wees so gud an skriiw din E-Mail auer detdiar rä.',
+	'mobile-frontend-leave-feedback-email-body' => 'Wees so gud an skriiw din E-Mail auer detdiar rä.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technisk probleem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Algemian komentaar',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Tu mi, en persuun of en onernemen',
@@ -3105,7 +3127,7 @@ $messages['frr'] = array(
 	'mobile-frontend-leave-feedback-post-error' => "Bi't ferwerkin faan din nooracht as wat skiaf gingen. Fersjük det leeder noch ans.",
 	'mobile-frontend-language' => 'Spriak:',
 	'mobile-frontend-language-header' => 'Didiar artiikel jaft at uun $1 {{PLURAL:$1|spriak|spriaken}}.',
-	'mobile-frontend-language-footer' => '{{SITENAME}} as uk uun ööder spriaken diar.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} as uk uun ööder spriaken diar.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Spriak sjük',
 	'mobile-frontend-language-site-nomatches' => 'Nian paasin spriaken fünjen.',
 	'mobile-frontend-username' => 'Brükernööm:',
@@ -3139,7 +3161,8 @@ $messages['frr'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Lees di artiikel üüb',
 );
 
-/** Friulian (furlan) */
+/** Friulian (furlan)
+ */
 $messages['fur'] = array(
 	'mobile-frontend-search-submit' => 'Va',
 	'mobile-frontend-home-button' => 'Cjase',
@@ -3147,7 +3170,7 @@ $messages['fur'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Salte indaûr di une sezion',
 	'mobile-frontend-show-button' => 'Mostre',
 	'mobile-frontend-hide-button' => 'Plate',
-	'mobile-frontend-regular-site' => 'Viôt cheste pagjine te Vichipedie',
+	'mobile-frontend-regular-site' => 'Viôt cheste pagjine te Vichipedie', # Fuzzy
 	'mobile-frontend-featured-article' => 'Articul in vitrine di vuê',
 );
 
@@ -3172,7 +3195,8 @@ $messages['ga'] = array(
 	'mobile-frontend-page-menu-history' => 'Stair',
 );
 
-/** Scottish Gaelic (Gàidhlig) */
+/** Scottish Gaelic (Gàidhlig)
+ */
 $messages['gd'] = array(
 	'mobile-frontend-search-submit' => 'Rach',
 	'mobile-frontend-home-button' => 'Dhachaigh',
@@ -3180,7 +3204,7 @@ $messages['gd'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Leum earrann air ais',
 	'mobile-frontend-show-button' => 'Seall',
 	'mobile-frontend-hide-button' => 'Falaich',
-	'mobile-frontend-regular-site' => 'Seall an duilleag seo air an Uicipeid àbhaisteach',
+	'mobile-frontend-regular-site' => 'Seall an duilleag seo air an Uicipeid àbhaisteach', # Fuzzy
 	'mobile-frontend-featured-article' => 'Artaigil taghta an-diugh',
 );
 
@@ -3473,7 +3497,7 @@ $messages['gu'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'ટેકનિકલ મુશ્કેલી',
 	'mobile-frontend-leave-feedback-general-section-header' => 'સામાન્ય',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'લેખ પ્રતિભાવ',
-	'mobile-frontend-leave-feedback-email-body' => 'મહેરબાની કરી આ લીટીની ઉપર તમારું ઇ-મેલ લખો.',
+	'mobile-frontend-leave-feedback-email-body' => 'મહેરબાની કરી આ લીટીની ઉપર તમારું ઇ-મેલ લખો.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'ટેકનિકલ મુશ્કેલી',
 	'mobile-frontend-leave-feedback-general-link-text' => 'સામાન્ય પ્રતિભાવ',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'સત્યતા ક્ષતિ વિષે',
@@ -3487,7 +3511,7 @@ $messages['gu'] = array(
 	'mobile-frontend-feedback-no-message' => 'મહેરબાની કરી સંદેશ અહીં લખો',
 	'mobile-frontend-leave-feedback-thanks' => 'તમારા પ્રતિભાવ માટે, આભાર!',
 	'mobile-frontend-language' => 'ભાષા:',
-	'mobile-frontend-language-footer' => '{{SITENAME}} બીજી ભાષાઓમાં પ્રાપ્ત છે.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} બીજી ભાષાઓમાં પ્રાપ્ત છે.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'શોધ ભાષા',
 	'mobile-frontend-language-site-nomatches' => 'કોઇ ભાષાઓ મેળ ખાતી નથી',
 	'mobile-frontend-username' => 'સભ્યનામ:',
@@ -3516,7 +3540,8 @@ $messages['gu'] = array(
 	'mobile-frontend-page-menu-contents-heading' => 'વિષયસૂચિ',
 );
 
-/** Manx (Gaelg) */
+/** Manx (Gaelg)
+ */
 $messages['gv'] = array(
 	'mobile-frontend-search-submit' => 'Gow',
 	'mobile-frontend-home-button' => 'Balley',
@@ -3524,11 +3549,12 @@ $messages['gv'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Goll Erash Un Rheynn',
 	'mobile-frontend-show-button' => 'Taishbyney',
 	'mobile-frontend-hide-button' => 'Follaghey',
-	'mobile-frontend-regular-site' => 'Jeeagh er y duillag shoh er {{SITENAME}} chadjin',
+	'mobile-frontend-regular-site' => 'Jeeagh er y duillag shoh er {{SITENAME}} chadjin', # Fuzzy
 	'mobile-frontend-featured-article' => 'Yn Art Reiht Jiu',
 );
 
-/** Hausa (Hausa) */
+/** Hausa (Hausa)
+ */
 $messages['ha'] = array(
 	'mobile-frontend-search-submit' => 'Mu je',
 	'mobile-frontend-home-button' => 'Marhabin',
@@ -3536,11 +3562,12 @@ $messages['ha'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'A tsallaka baya sashe guda',
 	'mobile-frontend-show-button' => 'Nuna',
 	'mobile-frontend-hide-button' => 'Ɓoye',
-	'mobile-frontend-regular-site' => 'A duba wannan shafi a kan {{SITENAME}} na kullum',
+	'mobile-frontend-regular-site' => 'A duba wannan shafi a kan {{SITENAME}} na kullum', # Fuzzy
 	'mobile-frontend-featured-article' => 'Zaɓaɓɓar maƙala ta yau',
 );
 
-/** Hawaiian (Hawai`i) */
+/** Hawaiian (Hawai`i)
+ */
 $messages['haw'] = array(
 	'mobile-frontend-search-submit' => 'Hele',
 	'mobile-frontend-home-button' => 'Home',
@@ -3548,7 +3575,7 @@ $messages['haw'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Hoʻi i ka Māhele ma mua',
 	'mobile-frontend-show-button' => 'Hōʻike',
 	'mobile-frontend-hide-button' => 'Hūnā',
-	'mobile-frontend-regular-site' => 'Nānā kēia ʻaoʻao ma Wikipikia maʻamau',
+	'mobile-frontend-regular-site' => 'Nānā kēia ʻaoʻao ma Wikipikia maʻamau', # Fuzzy
 	'mobile-frontend-featured-article' => 'Ka ʻAtikala Nui o Kēia Lā',
 );
 
@@ -3695,20 +3722,20 @@ $messages['hi'] = array(
 	'mobile-frontend-toggle-images' => ' चित्र $1 / $2',
 	'mobile-frontend-featured-article' => 'आज का निर्वाचित लेख',
 	'mobile-frontend-news-items' => 'समाचार में',
-	'mobile-frontend-leave-feedback-subject' => 'विषय',
-	'mobile-frontend-leave-feedback-message' => 'संदेश',
+	'mobile-frontend-leave-feedback-subject' => 'विषय', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'संदेश', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'प्रतिक्रिया भेजें',
 	'mobile-frontend-leave-feedback-link-text' => 'मोबाइल फ़्रंटएंड एक्स्टेंशन प्रतिक्रिया',
 	'mobile-frontend-leave-feedback' => 'मोबाइल साइट पे सुझाव',
 	'mobile-frontend-leave-feedback-title' => 'अपने मोबाइल साइट के अनुभव पर प्रतिक्रिया दें',
 	'mobile-frontend-leave-feedback-page-title' => 'अपने मोबाइल साइट के अनुभव पर प्रतिक्रिया दें',
 	'mobile-frontend-leave-feedback-thanks' => 'प्रतिक्रिया के लिए धन्यवाद!',
-	'mobile-frontend-language' => 'भाषा',
+	'mobile-frontend-language' => 'भाषा', # Fuzzy
 	'mobile-frontend-username' => 'सदस्य नाम:',
 	'mobile-frontend-password' => 'कूटशब्द:',
 	'mobile-frontend-login' => 'लॉग इन',
 	'mobile-frontend-logout' => 'सत्रान्त',
-	'mobile-frontend-placeholder' => 'खोज शब्द यहाँ टाइप करें...',
+	'mobile-frontend-placeholder' => 'खोज शब्द यहाँ टाइप करें...', # Fuzzy
 	'mobile-frontend-footer-less' => 'कम',
 	'mobile-frontend-page-menu-history' => 'इतिहास',
 );
@@ -3740,14 +3767,15 @@ $messages['hif-latn'] = array(
 	'mobile-frontend-page-menu-history' => 'Itihaas',
 );
 
-/** Hiligaynon (Ilonggo) */
+/** Hiligaynon (Ilonggo)
+ */
 $messages['hil'] = array(
 	'mobile-frontend-search-submit' => 'Lakat',
 	'mobile-frontend-home-button' => 'Balay',
 	'mobile-frontend-random-button' => 'Randum',
 	'mobile-frontend-show-button' => 'Ipakita',
 	'mobile-frontend-hide-button' => 'Taguon',
-	'mobile-frontend-regular-site' => 'Tan-awon ini nga pahina sa regular na Wikipedya',
+	'mobile-frontend-regular-site' => 'Tan-awon ini nga pahina sa regular na Wikipedya', # Fuzzy
 	'mobile-frontend-featured-article' => 'Subong nga Napili na Artikulo',
 );
 
@@ -3761,7 +3789,7 @@ $messages['hr'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Skoči natrag na odjeljak',
 	'mobile-frontend-show-button' => 'Prikaži',
 	'mobile-frontend-hide-button' => 'Sakrij',
-	'mobile-frontend-regular-site' => 'Vidi ovu stranicu na redovnoj Wikipediji',
+	'mobile-frontend-regular-site' => 'Vidi ovu stranicu na redovnoj Wikipediji', # Fuzzy
 	'mobile-frontend-opt-in-yes-button' => 'Da',
 	'mobile-frontend-opt-in-no-button' => 'Ne',
 	'mobile-frontend-opt-out-yes-button' => 'Da',
@@ -3778,6 +3806,9 @@ $messages['hsb'] = array(
 	'mobile-frontend-home-button' => 'Start',
 	'mobile-frontend-logged-out' => 'Njepřizjewjeny',
 	'mobile-frontend-logged-in' => 'Přizjewjeny jako $1',
+	'mobile-frontend-sign-in-heading' => 'Registrować',
+	'mobile-frontend-sign-in-why' => 'Jeli maš konto na {{GRAMMAR:lokatiw|{{SITENAME}}}}, móžeš so deleka registrować.',
+	'mobile-frontend-sign-in-error-heading' => 'Hopla',
 	'mobile-frontend-settings-description' => 'Přiměr swój mobilny grat z tutymi mobilnymi specifiskimi nastajenjemi.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Nastajenja składować',
@@ -3841,6 +3872,7 @@ $messages['hsb'] = array(
 Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-language' => 'Rěč:',
 	'mobile-frontend-language-article-heading' => 'W druhej rěči čitać',
+	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-header' => 'Tutón nastawk steji w $1 {{PLURAL:$1|rěči|rěčomaj|rěčach|rěčach}} k dispoziciji',
 	'mobile-frontend-language-footer' => 'Kedźbu: Tutón nastawk njeje snano w twojej preferowanej rěči napisał. Móžeš widźeć, kotre rěče {{SITENAME}} podpěruje, kliknjo tu.',
 	'mobile-frontend-language-site-choose' => 'Rěč pytać',
@@ -3863,9 +3895,12 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Njespóznata opcija "$1".',
 	'mobile-frontend-search-noresults' => 'Twojemu pytanju žane nastawkowe titule njewotpowěduja. Změń swoje pytanje abo stłóč pytansku tastu swojeje tastatury, zo by znutřka nastawkow pytał.',
+	'mobile-frontend-main-menu-button-tooltip' => 'Hłowny meni wočinić',
 	'mobile-frontend-main-menu-page-title' => 'Sydłowa nawigacija',
 	'mobile-frontend-main-menu-featured' => 'Wuběrny',
 	'mobile-frontend-main-menu-nearby' => 'W bliskosći',
+	'mobile-frontend-main-menu-login' => 'Přizjewić',
+	'mobile-frontend-main-menu-logout' => 'Wotzjewić',
 	'mobile-frontend-main-menu-settings' => 'Nastajenja',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja',
 	'mobile-frontend-settings-site-header' => 'Rěče {{GRAMMAR:genitiw|{{SITENAME}}}}',
@@ -3878,6 +3913,7 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-meta-data-issues-header' => 'Tutón nastawk polěpšić',
 	'mobile-frontend-meta-data-issues' => 'Nastawk ma problemy',
 	'mobile-frontend-ajax-page-loading' => '$1 so začituje',
+	'mobile-frontend-ajax-page-error' => 'Hopla! Něšto je so nimokuliło. Prošu spytaj wokno swojeho wobhladowaka aktualizować.',
 );
 
 /** Hungarian (magyar)
@@ -3899,7 +3935,7 @@ $messages['hu'] = array(
 	'mobile-frontend-close-section' => 'Szakasz bezárása',
 	'mobile-frontend-show-button' => 'Mutasd',
 	'mobile-frontend-hide-button' => 'Elrejtés',
-	'mobile-frontend-regular-site' => 'Lap megtekintése a szokásos {{SITENAME}} nézetben',
+	'mobile-frontend-regular-site' => 'Lap megtekintése a szokásos {{SITENAME}} nézetben', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Folytatás ...',
 	'mobile-frontend-wml-back' => 'Vissza ...',
 	'mobile-frontend-view' => 'Mobil nézet',
@@ -3931,7 +3967,7 @@ $messages['hu'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technikai probléma',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Általános',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Cikk értékelése',
-	'mobile-frontend-leave-feedback-email-body' => 'Kérlek írd az email címedet a vonal fölé!',
+	'mobile-frontend-leave-feedback-email-body' => 'Kérlek írd az email címedet a vonal fölé!', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technikai probléma',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Általános visszajelzés',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Üzenet tárgya',
@@ -3945,7 +3981,7 @@ $messages['hu'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Hiba történt az üzeneted feldolgozása közben. Próbáld meg újra később!',
 	'mobile-frontend-language' => 'Nyelv',
 	'mobile-frontend-language-header' => 'A szócikk $1 nyelven elérhető',
-	'mobile-frontend-language-footer' => '{{SITENAME}} más nyelveken is elérhető.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} más nyelveken is elérhető.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Nyelv keresése',
 	'mobile-frontend-language-site-nomatches' => 'Nincs megfelelő nyelv',
 	'mobile-frontend-username' => 'Felhasználónév:',
@@ -3979,7 +4015,8 @@ $messages['hu'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'A szócikk olvasása a következő nyelven:',
 );
 
-/** Armenian (Հայերեն) */
+/** Armenian (Հայերեն)
+ */
 $messages['hy'] = array(
 	'mobile-frontend-home-button' => 'Դեպի տուն',
 	'mobile-frontend-random-button' => 'Պատահական',
@@ -4039,7 +4076,7 @@ $messages['ia'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema technic',
 	'mobile-frontend-leave-feedback-general-section-header' => 'General',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Evalutation de articulos',
-	'mobile-frontend-leave-feedback-email-body' => 'Per favor scribe tu message supra iste linea.',
+	'mobile-frontend-leave-feedback-email-body' => 'Per favor scribe tu message supra iste linea.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problema technic',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Commentario general',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'A proposito de me, un persona, o un compania que io representa',
@@ -4057,7 +4094,7 @@ $messages['ia'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Un error occurreva durante le tractamento de tu message. Per favor reproba plus tarde.',
 	'mobile-frontend-language' => 'Lingua:',
 	'mobile-frontend-language-header' => 'Iste articulo es disponibile in $1 {{PLURAL:$1|lingua|linguas}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} es disponibile in altere linguas.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} es disponibile in altere linguas.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Cercar lingua',
 	'mobile-frontend-language-site-nomatches' => 'Nulle lingua trovate',
 	'mobile-frontend-username' => 'Nomine de usator:',
@@ -4144,7 +4181,7 @@ $messages['id'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Masalah teknis',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Umum',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Umpan balik artikel',
-	'mobile-frontend-leave-feedback-email-body' => 'Silakan tulis surel Anda di atas garis ini.',
+	'mobile-frontend-leave-feedback-email-body' => 'Silakan tulis surel Anda di atas garis ini.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Masalah teknis',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Umpan balik umum',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Tentang saya, seseorang, atau perusahaan yang saya wakili',
@@ -4162,7 +4199,7 @@ $messages['id'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Terjadi kesalahan dalam pemrosesan pesan Anda, Silakan coba lagi nanti.',
 	'mobile-frontend-language' => 'Bahasa:',
 	'mobile-frontend-language-header' => 'Artikel ini tersedia dalam $1 {{PLURAL:$1|bahasa|bahasa}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} tersedia dalam bahasa lain.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} tersedia dalam bahasa lain.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Cari bahasa',
 	'mobile-frontend-language-site-nomatches' => 'Bahasa tidak ditemukan',
 	'mobile-frontend-username' => 'Nama pengguna:',
@@ -4218,7 +4255,7 @@ $messages['ilo'] = array(
 	'mobile-frontend-close-section' => 'Irikep daytoy a paset',
 	'mobile-frontend-show-button' => 'Ipakita',
 	'mobile-frontend-hide-button' => 'Ilemmeng',
-	'mobile-frontend-empty-homepage' => 'Daytoy balay a panid ket nasken a maparnuay. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Agbasa pay ti adu ditoy</a>',
+	'mobile-frontend-empty-homepage' => 'Daytoy balay a panid ket nasken a maparnuay. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Agbasa pay ti adu ditoy</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Desktop a panagkita',
 	'mobile-frontend-wml-continue' => 'Agtuloy...',
 	'mobile-frontend-wml-back' => 'Agsubli...',
@@ -4251,7 +4288,7 @@ Pangngaasi a padasen ti agpili iti pakaammo a gandat a linia, a kasla daytoy. "K
 	'mobile-frontend-username' => 'Nagan ti agar-aramat:',
 	'mobile-frontend-password' => 'Kontrasenias:',
 	'mobile-frontend-login' => 'Sumrek',
-	'mobile-frontend-placeholder' => 'Imakinilia dagiti birukem ditoy...',
+	'mobile-frontend-placeholder' => 'Imakinilia dagiti birukem ditoy...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'pugsayen daytoy a paammo',
 	'mobile-frontend-clear-search' => 'Dalusan',
 	'mobile-frontend-privacy-link-text' => 'Panaka-pribado',
@@ -4271,7 +4308,7 @@ $messages['inh'] = array(
 	'mobile-frontend-home-button' => 'ЦӀенга',
 	'mobile-frontend-show-button' => 'Хьахокха',
 	'mobile-frontend-hide-button' => 'Къайладаккха',
-	'mobile-frontend-regular-site' => 'Ер оагӀув Вкипадечу хьажа',
+	'mobile-frontend-regular-site' => 'Ер оагӀув Вкипадечу хьажа', # Fuzzy
 	'mobile-frontend-featured-article' => 'Укх ден хьаржа йоазув',
 );
 
@@ -4326,7 +4363,7 @@ $messages['is'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tæknileg villa',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Almennt',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Svörun um grein',
-	'mobile-frontend-leave-feedback-email-body' => 'Vinsamlegast skrifaðu tölvupóstfangið þitt fyrir ofan þessa línu.',
+	'mobile-frontend-leave-feedback-email-body' => 'Vinsamlegast skrifaðu tölvupóstfangið þitt fyrir ofan þessa línu.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tæknileg villa',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Almenn svörun',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Varðandi mig, persónu eða fyrirtæki sem ég er fulltrúi fyrir',
@@ -4344,7 +4381,7 @@ $messages['is'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Mistókst að bæta við svörun þinni. Vinsamlegast reyndu aftur síðar.',
 	'mobile-frontend-language' => 'Tungumál:',
 	'mobile-frontend-language-header' => 'Þessi grein er aðgengileg á $1 {{PLURAL:$1|tungumál|tungumálum}}.',
-	'mobile-frontend-language-footer' => '{{SITENAME}} er aðgengilegt á öðrum tungumálum.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} er aðgengilegt á öðrum tungumálum.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Leita að tungumáli',
 	'mobile-frontend-language-site-nomatches' => 'Engin tungumál fundust',
 	'mobile-frontend-username' => 'Notandanafn:',
@@ -4574,7 +4611,7 @@ $messages['ja'] = array(
 	'mobile-frontend-language' => '言語:',
 	'mobile-frontend-language-article-heading' => '別の言語で閲覧',
 	'mobile-frontend-language-header' => 'この項目は $1 言語で提供されています。',
-	'mobile-frontend-language-footer' => '{{SITENAME}}は他の言語でも利用できます。',
+	'mobile-frontend-language-footer' => '{{SITENAME}}は他の言語でも利用できます。', # Fuzzy
 	'mobile-frontend-language-site-choose' => '言語を選択',
 	'mobile-frontend-language-site-nomatches' => '該当する言語はありません',
 	'mobile-frontend-username' => '利用者名:',
@@ -4664,7 +4701,7 @@ $messages['jv'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Masalah tèhnis',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Umum',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Labon saran artikel',
-	'mobile-frontend-leave-feedback-email-body' => 'Mangga tulis layang èlèktronik Sampéyan ndhuwuré garis iki.',
+	'mobile-frontend-leave-feedback-email-body' => 'Mangga tulis layang èlèktronik Sampéyan ndhuwuré garis iki.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Masalah tèhnis',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Lebon saran umum',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Bab kula, uwong, utawa prusahan sing tak wakili',
@@ -4682,7 +4719,7 @@ $messages['jv'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Ana kasalahan nalika mrosès layang Sampéyan. Mangga dijajal manèh.',
 	'mobile-frontend-language' => 'Basa:',
 	'mobile-frontend-language-header' => 'Artikel iki sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} sumadhiya nèng basa liya.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} sumadhiya nèng basa liya.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Golèk basa',
 	'mobile-frontend-language-site-nomatches' => 'Basa ora ditemokaké',
 	'mobile-frontend-username' => 'Jeneng panganggo:',
@@ -4770,7 +4807,7 @@ $messages['ka'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'ტექნიკური პრობლემა',
 	'mobile-frontend-leave-feedback-general-section-header' => 'მთავარი',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'სტატიის შეფასება',
-	'mobile-frontend-leave-feedback-email-body' => 'გთხოვთ თქვენი ელ.ფოსტა მიუთითეთ ამ ხაზის ზევით.',
+	'mobile-frontend-leave-feedback-email-body' => 'გთხოვთ თქვენი ელ.ფოსტა მიუთითეთ ამ ხაზის ზევით.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'ტექნიკური პრობლემა',
 	'mobile-frontend-leave-feedback-general-link-text' => 'მთავარი შეფასება',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'ფაქტიური შეცდომის შესახებ',
@@ -4786,7 +4823,7 @@ $messages['ka'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'გმადლობთ თქვენი შეფასებისთვის',
 	'mobile-frontend-language' => 'ენა:',
 	'mobile-frontend-language-header' => 'ეს სტატია ხელმისაწვდომია $1-ში {{PLURAL:$1|ენაზე|ენებზე}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} ხელმისაწვდომია სხვა ენებზეც.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} ხელმისაწვდომია სხვა ენებზეც.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'ენის ძიება',
 	'mobile-frontend-language-site-nomatches' => 'მსგავსი ენა ვერ მოიძებნა',
 	'mobile-frontend-username' => 'მომხმარებელი:',
@@ -4817,7 +4854,8 @@ $messages['ka'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'ამ სტატიის წაკითხვა',
 );
 
-/** Адыгэбзэ (Адыгэбзэ) */
+/** Адыгэбзэ (Адыгэбзэ)
+ */
 $messages['kbd-cyrl'] = array(
 	'mobile-frontend-search-submit' => 'ЕкIуэкIын',
 	'mobile-frontend-home-button' => 'ПэщIэдзэм',
@@ -4825,11 +4863,12 @@ $messages['kbd-cyrl'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Зы разделкIэ къэгъэзэжын',
 	'mobile-frontend-show-button' => 'Къэгъэлъэгъуэн',
 	'mobile-frontend-hide-button' => 'ГъэпщкIун',
-	'mobile-frontend-regular-site' => 'НапэкIуэцIым Википедиедыдэм щеплъын',
+	'mobile-frontend-regular-site' => 'НапэкIуэцIым Википедиедыдэм щеплъын', # Fuzzy
 	'mobile-frontend-featured-article' => 'Нобэ и статья хэхар',
 );
 
-/** Kirmanjki (Kırmancki) */
+/** Kirmanjki (Kırmancki)
+ */
 $messages['kiu'] = array(
 	'mobile-frontend-search-submit' => 'So',
 	'mobile-frontend-random-button' => 'Rastamae',
@@ -4871,7 +4910,7 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-username' => 'Қатысушы аты:',
 	'mobile-frontend-password' => 'Құпия сөз:',
 	'mobile-frontend-login' => 'Кіру',
-	'mobile-frontend-placeholder' => 'Іздеу жолағы...',
+	'mobile-frontend-placeholder' => 'Іздеу жолағы...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'бұл хабарламаны жасыру',
 	'mobile-frontend-clear-search' => 'Тазарту',
 	'mobile-frontend-footer-more' => 'көбірек',
@@ -4882,7 +4921,8 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-unknown-option' => 'Белгісіз параметр "$1".',
 );
 
-/** Kalaallisut (kalaallisut) */
+/** Kalaallisut (kalaallisut)
+ */
 $messages['kl'] = array(
 	'mobile-frontend-search-submit' => 'Tassunngarit',
 	'mobile-frontend-home-button' => 'Angerlamut',
@@ -4890,7 +4930,7 @@ $messages['kl'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Immikkoortup qulaanut',
 	'mobile-frontend-show-button' => 'Saqqummiuk',
 	'mobile-frontend-hide-button' => 'Assequt',
-	'mobile-frontend-regular-site' => 'Takutiguk {{SITENAME}} naliginnaasumut',
+	'mobile-frontend-regular-site' => 'Takutiguk {{SITENAME}} naliginnaasumut', # Fuzzy
 	'mobile-frontend-featured-article' => 'Allaaserisaq ullumi',
 );
 
@@ -4923,19 +4963,19 @@ $messages['km'] = array(
 	'mobile-frontend-featured-article' => 'អត្ថបទពិសេសសំរាប់ថ្ងៃនេះ',
 	'mobile-frontend-news-items' => 'នៅក្នុងសារព័ត៌មាន',
 	'mobile-frontend-leave-feedback-notice' => 'មតិយោបល់របស់អ្នកនឹងជួយយើងខ្ញុំក្នុងការកែលំអវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងអោយកាន់តែប្រសើរឡើង។ មតិរបស់អ្នក (ព្រមជាមួយនឹងអត្តនាម វើសិនរបស់ឧបករណ៍រាវរក និងប្រព័ន្ធប្រតិបត្តិ) នឹងត្រូវបានផ្សព្វផ្សាយជាសាធារណៈនៅលើទំព័រ &quot;$1&quot;។ សូមជ្រើសរើសពាក្យដែលមានព័ត៌មានគ្រប់គ្រាន់​សំរាប់ដាក់ជាចំណងជើង។ ឧទាហរណ៍ "បញ្ហាទំរង់របស់តារាងធំៗ"។ មតិយោបល់របស់អ្នកនឹងត្រូវបានប្រើទៅតាមលក្ខខណ្ឌនៃការប្រើប្រាស់របស់យើងខ្ញុំ។',
-	'mobile-frontend-leave-feedback-subject' => 'ប្រធានបទ​',
-	'mobile-frontend-leave-feedback-message' => 'សារ',
+	'mobile-frontend-leave-feedback-subject' => 'ប្រធានបទ​', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'សារ', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'ដាក់ស្នើមតិយោបល់',
 	'mobile-frontend-leave-feedback-link-text' => 'មតិយោបល់អំពី MobileFrontend Extension',
 	'mobile-frontend-leave-feedback' => 'មតិយោបល់ស្ដីអំពីវិបសាយសំរាប់ឧបករណ៍ចល័ត',
 	'mobile-frontend-leave-feedback-title' => 'សូមផ្ដល់មតិយោបល់អំពីវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងខ្ញុំ',
 	'mobile-frontend-leave-feedback-page-title' => 'សូមផ្ដល់មតិយោបល់អំពីវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងខ្ញុំ',
 	'mobile-frontend-leave-feedback-thanks' => 'សូមអរគុណសំរាប់មតិយោបល់របស់អ្នក។',
-	'mobile-frontend-language' => 'ភាសា',
+	'mobile-frontend-language' => 'ភាសា', # Fuzzy
 	'mobile-frontend-username' => 'អត្តនាម៖',
 	'mobile-frontend-password' => 'ពាក្យសំងាត់៖',
 	'mobile-frontend-login' => 'កត់ឈ្មោះចូល',
-	'mobile-frontend-placeholder' => 'វាយបញ្ជួលពាក្យដែលអ្នកចង់ស្វែងរកនៅទីនេះ...',
+	'mobile-frontend-placeholder' => 'វាយបញ្ជួលពាក្យដែលអ្នកចង់ស្វែងរកនៅទីនេះ...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'បិទការផ្ដល់ដំណឹងនេះ',
 	'mobile-frontend-clear-search' => 'ជំរះ',
 );
@@ -4970,19 +5010,19 @@ $messages['kn'] = array(
 	'mobile-frontend-featured-article' => 'ಇಂದಿನ ವಿಶೇಷ ಲೇಖನ',
 	'mobile-frontend-news-items' => 'ಸುದ್ದಿಯಲ್ಲಿ',
 	'mobile-frontend-leave-feedback-notice' => 'ನಿಮ್ಮ ಮರುಮಾಹಿತಿ ನಿಮ್ಮ ಮೊಬೈಲ್ ಜಾಲತಾಣದ ಅನುಭವವನ್ನು ಉತ್ತಮಗೊಳಿಸಲು ನಮಗೆ ಸಹಕರಿಸುತ್ತದೆ. ಇದನ್ನು (ನಿಮ್ಮ ಹೆಸರು, ಜಾಲ ವೀಕ್ಷಕದ ಆವೃತ್ತಿ ಮತ್ತು ಕಾರ್ಯಾಚರಣೆ ವ್ಯವಸ್ಥೆಯ ಜೊತೆ) ಸಾರ್ವಜನಿಕವಾಗಿ &quot;$1&quot; ಪುಟದಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುತ್ತದೆ. ದಯವಿಟ್ಟು ಮಾಹಿತಿಪೂರ್ಣ ವಿಷಯವನ್ನು ಸೂಚಿಸಿ. ಉದಾ: "ಕೋಷ್ಟಕಗಳ ವಿನ್ಯಾಸದಲ್ಲಿ ತೊಂದರೆ". ನಿಮ್ಮ ಮರುಮಾಹಿತಿಯು ನಮ್ಮ ಬಳಕೆಯ ನಿಬಂಧನೆಗಳಿಗೊಳಪಟ್ಟಿರುತ್ತದೆ.',
-	'mobile-frontend-leave-feedback-subject' => 'ವಿಷಯ',
-	'mobile-frontend-leave-feedback-message' => 'ಸಂದೇಶ',
+	'mobile-frontend-leave-feedback-subject' => 'ವಿಷಯ', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'ಸಂದೇಶ', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'ಮರುಮಾಹಿತಿ ಕಳಿಸಿ',
 	'mobile-frontend-leave-feedback-link-text' => 'MobileFrontend  ವಿಸ್ತರಣೆ ಬಗ್ಗೆ ಮರುಮಾಹಿತಿ',
 	'mobile-frontend-leave-feedback' => 'ಮೊಬೈಲ್ ಜಾಲತಾಣ ಮರುಮಾಹಿತಿ',
 	'mobile-frontend-leave-feedback-title' => 'ಮೊಬೈಲ್ ಜಾಲತಾಣದ ಬಗ್ಗೆ ನಿಮ್ಮ ಅನುಭವವನ್ನು ನಮಗೆ ತಿಳಿಸಿ',
 	'mobile-frontend-leave-feedback-page-title' => 'ಮೊಬೈಲ್ ಜಾಲತಾಣದ ಬಗ್ಗೆ ನಿಮ್ಮ ಅನುಭವವನ್ನು ನಮಗೆ ತಿಳಿಸಿ',
 	'mobile-frontend-leave-feedback-thanks' => 'ನಿಮ್ಮ ಮರುಮಾಹಿತಿಗಾಗಿ ಧನ್ಯವಾದ!',
-	'mobile-frontend-language' => 'ಭಾಷೆ',
+	'mobile-frontend-language' => 'ಭಾಷೆ', # Fuzzy
 	'mobile-frontend-username' => 'ಬಳಕೆದಾರ ಹೆಸರು:',
 	'mobile-frontend-password' => 'ಪ್ರವೇಶಪದ:',
 	'mobile-frontend-login' => 'ಒಳ ಬಾ',
-	'mobile-frontend-placeholder' => 'ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ...',
+	'mobile-frontend-placeholder' => 'ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'ಈ ಅಧಿಸೂಚನೆಯನ್ನು ತೊಡೆದುಹಾಕಿ',
 	'mobile-frontend-clear-search' => 'ಅಳಿಸಿ',
 );
@@ -5123,11 +5163,11 @@ $messages['krc'] = array(
 	'mobile-frontend-opt-out-no-button' => 'Огъай',
 	'mobile-frontend-featured-article' => 'Бюгюннгю сайланнган статья',
 	'mobile-frontend-news-items' => 'Джангылыкълада',
-	'mobile-frontend-language' => 'Тил',
+	'mobile-frontend-language' => 'Тил', # Fuzzy
 	'mobile-frontend-username' => 'Къошулуучуну аты:',
 	'mobile-frontend-password' => 'Паролюгъуз:',
 	'mobile-frontend-login' => 'Кир',
-	'mobile-frontend-placeholder' => 'Излеу...',
+	'mobile-frontend-placeholder' => 'Излеу...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'бу билдириуню джашыр',
 	'mobile-frontend-clear-search' => 'Кетер',
 );
@@ -5149,7 +5189,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-close-section' => 'Donn dä Afschnet heh aan et Ängk bränge',
 	'mobile-frontend-show-button' => 'Zeisch!',
 	'mobile-frontend-hide-button' => 'Vershteishe!',
-	'mobile-frontend-empty-homepage' => 'He di Aanfangssigg moß noch <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">enjereschdt wääde</a>.',
+	'mobile-frontend-empty-homepage' => 'He di Aanfangssigg moß noch <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">enjereschdt wääde</a>.', # Fuzzy
 	'mobile-frontend-regular-site' => 'jangk op de nomaale Belscherrem',
 	'mobile-frontend-wml-continue' => 'Wiggermaache&nbsp;...',
 	'mobile-frontend-wml-back' => 'Retuur&nbsp;...',
@@ -5187,7 +5227,7 @@ För Ding Röckmälonge jällte uns Notzongesbedenonge.',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'E täschnesch Probleem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Alljemein',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Enschäzonge för Sigge',
-	'mobile-frontend-leave-feedback-email-body' => 'Donn Ding <i lang="en">e-mail</i> övver heh dä Linnesch enjävve.',
+	'mobile-frontend-leave-feedback-email-body' => 'Donn Ding <i lang="en">e-mail</i> övver heh dä Linnesch enjävve.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'E täschnesch Probleem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Allgemein Röckmäldonge',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Övver mesch, udder Eine, udder en Ferma, för di esch schtonn',
@@ -5207,7 +5247,7 @@ För Ding Röckmälonge jällte uns Notzongesbedenonge.',
 Versöhg_et schpääder noch ens.',
 	'mobile-frontend-language' => 'Schprooch:',
 	'mobile-frontend-language-header' => 'Heh dä Atikel jidd_et en {{PLURAL:$1|eine Schprooch|$1 Schprooche|keine Schprooch}}.',
-	'mobile-frontend-language-footer' => '{{ucfirst:{{GRAMMAR:Nominative|{{ucfirst:{{SITENAME}}}}}}}} jidd_et en ander Schprooche.',
+	'mobile-frontend-language-footer' => '{{ucfirst:{{GRAMMAR:Nominative|{{ucfirst:{{SITENAME}}}}}}}} jidd_et en ander Schprooche.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Schprooch söhke',
 	'mobile-frontend-language-site-nomatches' => 'Et jidd_er kein zopaß Schprooche',
 	'mobile-frontend-username' => 'Metmaacher_Naame:',
@@ -5262,7 +5302,7 @@ $messages['ku-latn'] = array(
 	'mobile-frontend-random-button' => 'Ketober',
 	'mobile-frontend-show-button' => 'Nîşan bide',
 	'mobile-frontend-hide-button' => 'veşêre',
-	'mobile-frontend-regular-site' => 'Vê rûpelê di Wîkîpediya asayî de bibîne',
+	'mobile-frontend-regular-site' => 'Vê rûpelê di Wîkîpediya asayî de bibîne', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Didome ...',
 	'mobile-frontend-view' => 'Xuyakirina mobîl',
 	'mobile-frontend-opt-in-yes-button' => 'erê',
@@ -5280,7 +5320,8 @@ $messages['ku-latn'] = array(
 	'mobile-frontend-page-menu-contents-heading' => 'Naverok',
 );
 
-/** Komi (коми) */
+/** Komi (коми)
+ */
 $messages['kv'] = array(
 	'mobile-frontend-search-submit' => 'Выльлаö',
 	'mobile-frontend-home-button' => 'Керка',
@@ -5311,7 +5352,7 @@ $messages['ky'] = array(
 	'mobile-frontend-password' => 'Сырсөз:',
 	'mobile-frontend-login' => 'Кирүү',
 	'mobile-frontend-logout' => 'Чыгуу',
-	'mobile-frontend-placeholder' => 'Издегениңизди бул жакка жазыңыз',
+	'mobile-frontend-placeholder' => 'Издегениңизди бул жакка жазыңыз', # Fuzzy
 	'mobile-frontend-privacy-link-text' => 'Купуялыкты сактоо',
 );
 
@@ -5435,8 +5476,8 @@ $messages['lez'] = array(
 	'mobile-frontend-opt-in-no-button' => 'Ваъ',
 	'mobile-frontend-opt-out-yes-button' => 'Эхь',
 	'mobile-frontend-opt-out-no-button' => 'ваъ',
-	'mobile-frontend-leave-feedback-message' => 'Чар',
-	'mobile-frontend-language' => 'Чlал',
+	'mobile-frontend-leave-feedback-message' => 'Чар', # Fuzzy
+	'mobile-frontend-language' => 'Чlал', # Fuzzy
 	'mobile-frontend-username' => 'Уртахдин тlвар:',
 	'mobile-frontend-password' => 'Парол:',
 );
@@ -5458,7 +5499,7 @@ $messages['li'] = array(
 	'mobile-frontend-close-section' => 'Sloet dit deil',
 	'mobile-frontend-show-button' => 'Tuin',
 	'mobile-frontend-hide-button' => 'Versjtaek',
-	'mobile-frontend-empty-homepage' => 'Dees startpagina mót waere samegesteldj. <a href="//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Hie kóns se mieë laeze</a>.',
+	'mobile-frontend-empty-homepage' => 'Dees startpagina mót waere samegesteldj. <a href="//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Hie kóns se mieë laeze</a>.', # Fuzzy
 	'mobile-frontend-regular-site' => 'Standerdbetrachting',
 	'mobile-frontend-wml-continue' => 'Gank door ...',
 	'mobile-frontend-wml-back' => 'Trögk ...',
@@ -5493,7 +5534,7 @@ $messages['li'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technisch perbleem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Algemein',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Paginabeoerdeiling',
-	'mobile-frontend-leave-feedback-email-body' => 'Sjrief dienen e-mail baove dizze lien.',
+	'mobile-frontend-leave-feedback-email-body' => 'Sjrief dienen e-mail baove dizze lien.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technisch perbleem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Algemeine feedback',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Mit betrèkking toet mich, emes of e bedrief det ich vertaengewuuerjig.',
@@ -5512,7 +5553,7 @@ $messages['li'] = array(
 Verzeuk 't lader nag 'ne kieër.",
 	'mobile-frontend-language' => 'Spraok:',
 	'mobile-frontend-language-header' => 'Dees pagina is besjikbaar in {{PLURAL:$1|ein spraok|$1 spräök}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} is in anger spräök besjikbaar.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} is in anger spräök besjikbaar.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Zeuk spraok',
 	'mobile-frontend-language-site-nomatches' => "d'r Zeen 's gein spräök gevónje",
 	'mobile-frontend-username' => 'Gebroekersnaam:',
@@ -5546,7 +5587,8 @@ Verzeuk 't lader nag 'ne kieër.",
 	'mobile-frontend-page-menu-language-heading' => 'Laes dees pagina in',
 );
 
-/** lumbaart (lumbaart) */
+/** lumbaart (lumbaart)
+ */
 $messages['lmo'] = array(
 	'mobile-frontend-search-submit' => 'Inanz',
 	'mobile-frontend-home-button' => 'Pagina principala',
@@ -5554,7 +5596,7 @@ $messages['lmo'] = array(
 	'mobile-frontend-back-to-top-of-section' => "Sàlta Indree d'una Sezión",
 	'mobile-frontend-show-button' => 'Fàm vedè',
 	'mobile-frontend-hide-button' => 'Scund',
-	'mobile-frontend-regular-site' => "Varda 'sta pagina chì in sü la {{SITENAME}} nurmala",
+	'mobile-frontend-regular-site' => "Varda 'sta pagina chì in sü la {{SITENAME}} nurmala", # Fuzzy
 	'mobile-frontend-featured-article' => 'Vedrína',
 );
 
@@ -5574,7 +5616,7 @@ $messages['lt'] = array(
 	'mobile-frontend-close-section' => 'Uždarykite šį skirsnį',
 	'mobile-frontend-show-button' => 'Rodyti',
 	'mobile-frontend-hide-button' => 'Slėpti',
-	'mobile-frontend-regular-site' => 'Peržiūrėti šį puslapį įprastoje Vikipedijoje',
+	'mobile-frontend-regular-site' => 'Peržiūrėti šį puslapį įprastoje Vikipedijoje', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Toliau ...',
 	'mobile-frontend-wml-back' => 'Atgal ...',
 	'mobile-frontend-view' => 'Mobili peržiūra',
@@ -5596,14 +5638,14 @@ $messages['lt'] = array(
 	'mobile-frontend-on' => 'IJUNGTI',
 	'mobile-frontend-featured-article' => 'Dienos straipsnis',
 	'mobile-frontend-news-items' => 'Naujienose',
-	'mobile-frontend-leave-feedback-subject' => 'Tema',
-	'mobile-frontend-leave-feedback-message' => 'Žinutė',
+	'mobile-frontend-leave-feedback-subject' => 'Tema', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Žinutė', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'Siųsti atsiliepimus',
 	'mobile-frontend-leave-feedback' => 'Palikti atsiliepimą',
 	'mobile-frontend-leave-feedback-title' => 'Palikti atsiliepimą',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Techninė problema',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Straipsnio atsiliepimai',
-	'mobile-frontend-leave-feedback-email-body' => 'Prašome parašyti savo el. pašto aukščiau šis eilutės.',
+	'mobile-frontend-leave-feedback-email-body' => 'Prašome parašyti savo el. pašto aukščiau šis eilutės.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Techninė problema',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Žinutės tema',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Įveskite savo komentarą čia',
@@ -5616,7 +5658,7 @@ $messages['lt'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Įvyko klaida apdorojant jūsų pranešimą. Mėginkite dar kartą vėliau.',
 	'mobile-frontend-language' => 'Kalba:',
 	'mobile-frontend-language-header' => 'Šis straipsnis prieinamas $1 {{PLURAL:$1|kalba|kalbomis}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} yra prieinamas kitomis kalbomis',
+	'mobile-frontend-language-footer' => '{{SITENAME}} yra prieinamas kitomis kalbomis', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Paieškos kalba',
 	'mobile-frontend-username' => 'Naudotojo vardas:',
 	'mobile-frontend-password' => 'Slaptažodis:',
@@ -5640,7 +5682,8 @@ $messages['lt'] = array(
 	'mobile-frontend-page-menu-history' => 'Istorija',
 );
 
-/** Latgalian (latgaļu) */
+/** Latgalian (latgaļu)
+ */
 $messages['ltg'] = array(
 	'mobile-frontend-show-button' => 'Paruodeit',
 	'mobile-frontend-hide-button' => 'Nūglobuot',
@@ -5658,7 +5701,7 @@ $messages['lus'] = array(
 	'mobile-frontend-close-section' => 'Hläwm khàrna',
 	'mobile-frontend-show-button' => 'Tihlanna',
 	'mobile-frontend-hide-button' => 'Tihbona',
-	'mobile-frontend-empty-homepage' => 'Inpui herrem a ngai. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">\'Tah hian chhiar belh rawh.</a>',
+	'mobile-frontend-empty-homepage' => 'Inpui herrem a ngai. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">\'Tah hian chhiar belh rawh.</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Hmaipui thlir',
 	'mobile-frontend-wml-continue' => 'Chhunzawmna...',
 	'mobile-frontend-wml-back' => 'Lêtna...',
@@ -5675,13 +5718,13 @@ $messages['lus'] = array(
 	'mobile-frontend-leave-feedback-submit' => 'Finchhuahna thehlut rawh le',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Rokhawlhna',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Thuziak fakselna',
-	'mobile-frontend-leave-feedback-email-body' => 'Khawngaihin hemi rìn chungah hian i e-lehkha ziak rawh.',
+	'mobile-frontend-leave-feedback-email-body' => 'Khawngaihin hemi rìn chungah hian i e-lehkha ziak rawh.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Rokhawlhna',
 	'mobile-frontend-language' => 'Ṭawng:',
 	'mobile-frontend-username' => 'Hmangtuhming:',
 	'mobile-frontend-password' => 'Thurûk:',
 	'mobile-frontend-login' => 'Luhna',
-	'mobile-frontend-placeholder' => 'I zawn duh hetah hian ziak rawh le. . .',
+	'mobile-frontend-placeholder' => 'I zawn duh hetah hian ziak rawh le. . .', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'he hriattirna hi hnâwl rawh',
 	'mobile-frontend-clear-search' => 'Nawhrehna',
 	'mobile-frontend-privacy-link-text' => 'Inthupna',
@@ -5708,7 +5751,7 @@ $messages['lv'] = array(
 	'mobile-frontend-random-button' => 'Nejaušs raksts',
 	'mobile-frontend-show-button' => 'Parādīt',
 	'mobile-frontend-hide-button' => 'Paslēpt',
-	'mobile-frontend-regular-site' => 'Apskatīt šo lapu parastajā {{SITENAME}}',
+	'mobile-frontend-regular-site' => 'Apskatīt šo lapu parastajā {{SITENAME}}', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Turpināt...',
 	'mobile-frontend-wml-back' => 'Atpakaļ...',
 	'mobile-frontend-view' => 'Mobilais skats',
@@ -5730,7 +5773,7 @@ $messages['lv'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tehniska problēma',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Vispārīgi',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Raksta atsauksmes',
-	'mobile-frontend-leave-feedback-email-body' => 'Lūdzu, rakstiet savu e-pastu virs šīs rindas.',
+	'mobile-frontend-leave-feedback-email-body' => 'Lūdzu, rakstiet savu e-pastu virs šīs rindas.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tehniska problēma',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Vispārējas atsauksmes',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Attiecībā uz mani, personu vai uzņēmumu, ko es pārstāvu',
@@ -5747,7 +5790,7 @@ $messages['lv'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Radās kļūda, apstrādājot jūsu ziņojumu. Lūdzu, vēlāk mēģiniet vēlreiz.',
 	'mobile-frontend-language' => 'Valoda:',
 	'mobile-frontend-language-header' => 'Šis raksts ir pieejams $1 {{PLURAL:$1|valodā|valodās}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} ir pieejama arī citās valodās.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} ir pieejama arī citās valodās.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Meklēt valodu',
 	'mobile-frontend-language-site-nomatches' => 'Nav atbilstošu valodu',
 	'mobile-frontend-username' => 'Lietotājvārds:',
@@ -5771,7 +5814,8 @@ $messages['lv'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Lasīt šo rakstu',
 );
 
-/** Lazuri (Lazuri) */
+/** Lazuri (Lazuri)
+ */
 $messages['lzz'] = array(
 	'mobile-frontend-search-submit' => 'İgzali',
 	'mobile-frontend-home-button' => 'Dudi',
@@ -5779,7 +5823,7 @@ $messages['lzz'] = array(
 	'mobile-frontend-back-to-top-of-section' => "Ar burme uk'uni idi",
 	'mobile-frontend-show-button' => "Ko3'iri",
 	'mobile-frontend-hide-button' => 'Doşinaxi',
-	'mobile-frontend-regular-site' => "Am but'k'a normaluri Vik'ip'edias ko3'iri",
+	'mobile-frontend-regular-site' => "Am but'k'a normaluri Vik'ip'edias ko3'iri", # Fuzzy
 	'mobile-frontend-featured-article' => "Dolonişi Favori St'at'ia",
 );
 
@@ -5794,11 +5838,12 @@ $messages['mg'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Hiverina any amina fizarana nialoha',
 	'mobile-frontend-show-button' => 'Aseho',
 	'mobile-frontend-hide-button' => 'Asitriho',
-	'mobile-frontend-regular-site' => "Aseho amin'ny {{SITENAME}} tsotra ity pejy ity",
+	'mobile-frontend-regular-site' => "Aseho amin'ny {{SITENAME}} tsotra ity pejy ity", # Fuzzy
 	'mobile-frontend-featured-article' => "Takelak'ity andro ity",
 );
 
-/** Maori (Māori) */
+/** Maori (Māori)
+ */
 $messages['mi'] = array(
 	'mobile-frontend-search-submit' => 'Haere',
 );
@@ -5814,6 +5859,9 @@ $messages['mk'] = array(
 	'mobile-frontend-home-button' => 'Почетна',
 	'mobile-frontend-logged-out' => 'Не сте најавени',
 	'mobile-frontend-logged-in' => 'Најавени сте како $1',
+	'mobile-frontend-sign-in-heading' => 'Најава',
+	'mobile-frontend-sign-in-why' => 'Ако имате сметка на {{SITENAME}}, тогаш најавете се подолу.',
+	'mobile-frontend-sign-in-error-heading' => 'Упс!',
 	'mobile-frontend-settings-description' => 'Прилагодете си ја околината на мобилниот уред со овие наменски поставки',
 	'mobile-frontend-settings-beta' => 'Бета',
 	'mobile-frontend-save-settings' => 'Зачувај поставки',
@@ -5877,6 +5925,7 @@ $messages['mk'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Настана грешка при обработката на пораката. Обидете се повторно.',
 	'mobile-frontend-language' => 'Јазик:',
 	'mobile-frontend-language-article-heading' => 'На други јазици',
+	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-header' => 'Оваа статија е достапна на $1 {{PLURAL:$1|јазик|јазици}}',
 	'mobile-frontend-language-footer' => 'Напомена: Статијава може да ја нема на вашиот претпочитан јазик. За да видите на кои јазици е достапен проектот {{SITENAME}}, стиснете тука.',
 	'mobile-frontend-language-site-choose' => 'Пребарување на јазик',
@@ -5899,9 +5948,12 @@ $messages['mk'] = array(
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-unknown-option' => 'Непрепознаена можност „$1“.',
 	'mobile-frontend-search-noresults' => 'Нема наслови што одговараат на бараното. Изменете го она што го барате или пребарувајте по текстот на самите статии.',
+	'mobile-frontend-main-menu-button-tooltip' => 'Отвори го главното мени',
 	'mobile-frontend-main-menu-page-title' => 'Навигација',
 	'mobile-frontend-main-menu-featured' => 'Избрано',
 	'mobile-frontend-main-menu-nearby' => 'Околни',
+	'mobile-frontend-main-menu-login' => 'Најава',
+	'mobile-frontend-main-menu-logout' => 'Одјава',
 	'mobile-frontend-main-menu-settings' => 'Нагодувања',
 	'mobile-frontend-main-menu-settings-heading' => 'Поставки на мобилната околина',
 	'mobile-frontend-settings-site-header' => 'Јазици на {{SITENAME}}',
@@ -5989,7 +6041,7 @@ $messages['ml'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'താങ്കളുടെ സന്ദേശം കൈകാര്യം ചെയ്തുകൊണ്ടിരിക്കെ ഒരു പിഴവുണ്ടായിരിക്കുന്നു. ദയവായി അൽപ്പസമയത്തിനു ശേഷം ശ്രമിക്കുക.',
 	'mobile-frontend-language' => 'ഭാഷ:',
 	'mobile-frontend-language-header' => 'ഈ ലേഖനം {{PLURAL:$1|ഒരു ഭാഷയിൽ|$1 ഭാഷകളിൽ}} ലഭ്യമാണ്',
-	'mobile-frontend-language-footer' => '{{SITENAME}} മറ്റ് ഭാഷകളിലും ലഭ്യമാണ്.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} മറ്റ് ഭാഷകളിലും ലഭ്യമാണ്.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'ഭാഷ തിരയുക',
 	'mobile-frontend-language-site-nomatches' => 'സാമ്യമുള്ള ഭാഷകൾ കണ്ടെത്താനായില്ല',
 	'mobile-frontend-username' => 'ഉപയോക്തൃനാമം:',
@@ -6023,7 +6075,8 @@ $messages['ml'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'ഈ ലേഖനം വായിക്കാനുള്ള',
 );
 
-/** Mongolian (монгол) */
+/** Mongolian (монгол)
+ */
 $messages['mn'] = array(
 	'mobile-frontend-search-submit' => 'Явах',
 	'mobile-frontend-home-button' => 'Нүүр',
@@ -6031,11 +6084,12 @@ $messages['mn'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Өмнөх хэсэг руу буцах',
 	'mobile-frontend-show-button' => 'Үзүүлэх',
 	'mobile-frontend-hide-button' => 'Нуух',
-	'mobile-frontend-regular-site' => 'Энэ хуудсыг ердийн Википедиа дээр үзэх',
+	'mobile-frontend-regular-site' => 'Энэ хуудсыг ердийн Википедиа дээр үзэх', # Fuzzy
 	'mobile-frontend-featured-article' => 'Өнөөдрийн онцлох өгүүлэл',
 );
 
-/** Moldavian (молдовеняскэ) */
+/** Moldavian (молдовеняскэ)
+ */
 $messages['mo'] = array(
 	'mobile-frontend-search-submit' => 'Ду-те',
 	'mobile-frontend-random-button' => 'Аляториу',
@@ -6061,7 +6115,7 @@ $messages['mr'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'एक विभाग मागे जा',
 	'mobile-frontend-show-button' => 'दाखवा',
 	'mobile-frontend-hide-button' => 'लपवा',
-	'mobile-frontend-regular-site' => 'हे पृष्ठ सामान्य {{SITENAME}}मधे पाहा',
+	'mobile-frontend-regular-site' => 'हे पृष्ठ सामान्य {{SITENAME}}मधे पाहा', # Fuzzy
 	'mobile-frontend-wml-continue' => 'सुरु ठेवा ...',
 	'mobile-frontend-wml-back' => 'माघारी',
 	'mobile-frontend-view' => 'लघु-दृश्य',
@@ -6083,8 +6137,8 @@ $messages['mr'] = array(
 	'mobile-frontend-news-items' => 'बातम्यांमध्ये',
 	'mobile-frontend-leave-feedback-notice' => 'तुमचा प्रतिसाद मोबाईल संस्थळावरील तुमचा अनुभव सुधारण्याच्या दृष्टीने आम्हाला मदतकारक सिद्ध होतो.आपला प्रतिसाद आपल्या ब्राऊजर व्हर्शन आणि ऑपरेटींग सिस्टीम  आणि आपल्या सदस्य नावा सोबत  संबधीत पानावरील नोंद कुणीही वाचू शकेल अशा जाहीर स्वरूपाची असेल हे लक्षात घ्या.&quot;$1&quot;. .शक्यतो विषयनावाची ओळ  माहितीपूर्ण स्वरूपात देण्याचा प्रयत्न करा जसे कि ,"Formatting issues with wide tables".
 आपला प्रतिसाद आमच्या वापरण्याच्या अटींनी बाध्य असेल.',
-	'mobile-frontend-leave-feedback-subject' => 'विषय',
-	'mobile-frontend-leave-feedback-message' => 'संदेश',
+	'mobile-frontend-leave-feedback-subject' => 'विषय', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'संदेश', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'प्रतिक्रिया द्या',
 	'mobile-frontend-leave-feedback-link-text' => 'मोबाइल फ्रंटएंड एक्सटेंनशन प्रतिक्रिया',
 	'mobile-frontend-leave-feedback' => 'मोबाइल साइट  प्रतिसाद',
@@ -6092,11 +6146,11 @@ $messages['mr'] = array(
 	'mobile-frontend-leave-feedback-general-section-header' => 'साधारण',
 	'mobile-frontend-leave-feedback-page-title' => 'आपल्या मोबाइल साइट अनुभवा बद्दल  प्रतिक्रिया नोंदवा.आपल्या प्रतिक्रीया भविष्यातील सुधारणात मदतकारक ठरते.',
 	'mobile-frontend-leave-feedback-thanks' => 'आपल्या प्रतिक्रियेबद्दल आभार !',
-	'mobile-frontend-language' => 'भाषा',
+	'mobile-frontend-language' => 'भाषा', # Fuzzy
 	'mobile-frontend-username' => 'सदस्य नाव:',
 	'mobile-frontend-password' => 'परवलीचा शब्द',
 	'mobile-frontend-login' => 'प्रवेश करा',
-	'mobile-frontend-placeholder' => 'आपला  हवा असलेला शोध येथे टंकलिखित करा ...',
+	'mobile-frontend-placeholder' => 'आपला  हवा असलेला शोध येथे टंकलिखित करा ...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'ही सुचना पुसा',
 	'mobile-frontend-clear-search' => 'स्पष्ट',
 	'mobile-frontend-privacy-link-text' => 'एकान्त',
@@ -6127,6 +6181,9 @@ $messages['ms'] = array(
 	'mobile-frontend-home-button' => 'Laman Utama',
 	'mobile-frontend-logged-out' => 'Belum log masuk',
 	'mobile-frontend-logged-in' => 'Log masuk sebagai $1',
+	'mobile-frontend-sign-in-heading' => 'Log masuk',
+	'mobile-frontend-sign-in-why' => 'Jika anda memegang akaun di {{SITENAME}}, anda boleh log masuk di bawah.',
+	'mobile-frontend-sign-in-error-heading' => 'Alamak!',
 	'mobile-frontend-settings-description' => 'Mudahkan penggunaan dengan tetapan yang khusus untuk kegunaan peranti mudah alih.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Simpan tetapan',
@@ -6188,6 +6245,7 @@ $messages['ms'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Terima kasih atas maklum balas anda!',
 	'mobile-frontend-leave-feedback-post-error' => 'Terdapat masalah dalam memproses pesanan anda. Sila cuba semula sebentar lagi.',
 	'mobile-frontend-language' => 'Bahasa:',
+	'mobile-frontend-language-article-heading' => 'Baca dalam bahasa lain',
 	'mobile-frontend-language-header' => 'Rencana ini disediakan dalam $1 bahasa',
 	'mobile-frontend-language-footer' => 'Perhatian: Rencana ini mungkin tidak tersedia dalam bahasa keutamaan anda. Anda boleh melihat bahasa-bahasa mana yang disokong oleh {{SITENAME}} dengan mengklik di sini.',
 	'mobile-frontend-language-site-choose' => 'Bahasa carian',
@@ -6210,8 +6268,12 @@ $messages['ms'] = array(
 	'mobile-frontend-footer-contact' => 'Hubungi',
 	'mobile-frontend-unknown-option' => 'Pilihan "$1" tidak dikenali.',
 	'mobile-frontend-search-noresults' => 'Tiada tajuk rencana yang sepadan dengan carian anda. Ubah carian anda, atau tekan butang carian papan kekunci untuk mencari di dalam rencana.',
+	'mobile-frontend-main-menu-button-tooltip' => 'Buka menu utama',
+	'mobile-frontend-main-menu-page-title' => 'Pandu arah tapak',
 	'mobile-frontend-main-menu-featured' => 'Sorotan',
 	'mobile-frontend-main-menu-nearby' => 'Berdekatan',
+	'mobile-frontend-main-menu-login' => 'Log masuk',
+	'mobile-frontend-main-menu-logout' => 'Log keluar',
 	'mobile-frontend-main-menu-settings' => 'Tetapan',
 	'mobile-frontend-main-menu-settings-heading' => 'Tetapan tapak mudah alih',
 	'mobile-frontend-settings-site-header' => 'Bahasa-bahasa {{SITENAME}}',
@@ -6223,6 +6285,8 @@ $messages['ms'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Baca rencana ini dalam',
 	'mobile-frontend-meta-data-issues-header' => 'Perbaiki rencana ini',
 	'mobile-frontend-meta-data-issues' => 'Rencana ini ada masalah',
+	'mobile-frontend-ajax-page-loading' => '$1 sedang dimuatkan',
+	'mobile-frontend-ajax-page-error' => 'Maaf, ralat telah berlaku. Sila cuba segar semula tetingkap pelayar anda.',
 );
 
 /** Maltese (Malti)
@@ -6277,7 +6341,7 @@ $messages['mt'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema teknika',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Ġenerali',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Ikkummenta fuq l-artiklu',
-	'mobile-frontend-leave-feedback-email-body' => 'Jekk jogħġbok ikteb l-indirizz elettroniku tiegħek fuq din il-linja.',
+	'mobile-frontend-leave-feedback-email-body' => 'Jekk jogħġbok ikteb l-indirizz elettroniku tiegħek fuq din il-linja.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problem teknika',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Rispons ġenerali',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Dwari, persuna, jew kumpanija li nirrappreżenta',
@@ -6295,7 +6359,7 @@ $messages['mt'] = array(
 	'mobile-frontend-leave-feedback-post-error' => "Kien hemm żball fl-ipproċessar tal-messaġġ tiegħek. Jekk jogħġbok erġa' pprova.",
 	'mobile-frontend-language' => 'Lingwa:',
 	'mobile-frontend-language-header' => "Dan l-artiklu huwa disponibbli f'$1 {{PLURAL:$1|lingwa|lingwi}}",
-	'mobile-frontend-language-footer' => "{{SITENAME}} hija disponibbli f'lingwi oħrajn.",
+	'mobile-frontend-language-footer' => "{{SITENAME}} hija disponibbli f'lingwi oħrajn.", # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Fittex lingwa',
 	'mobile-frontend-language-site-nomatches' => 'L-ebda lingwa ma tikkorisspondi',
 	'mobile-frontend-username' => 'Isem tal-utent:',
@@ -6329,7 +6393,8 @@ $messages['mt'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Aqra dan l-artiklu bil-',
 );
 
-/** Burmese (မြန်မာဘာသာ) */
+/** Burmese (မြန်မာဘာသာ)
+ */
 $messages['my'] = array(
 	'mobile-frontend-search-submit' => 'သွား',
 	'mobile-frontend-home-button' => 'ပင်မ',
@@ -6337,7 +6402,7 @@ $messages['my'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'အပိုင်းတစ်ခု ခုန်ကျော်ရန်',
 	'mobile-frontend-show-button' => 'ပြ',
 	'mobile-frontend-hide-button' => 'ဝှက်',
-	'mobile-frontend-regular-site' => 'ဤစာမျက်နှာကို ပုံမှန် ဝီကီပီးဒီးယား စာမျက်နှာတွင် ကြည့်ရန်',
+	'mobile-frontend-regular-site' => 'ဤစာမျက်နှာကို ပုံမှန် ဝီကီပီးဒီးယား စာမျက်နှာတွင် ကြည့်ရန်', # Fuzzy
 	'mobile-frontend-featured-article' => 'ယနေ့အထူးဆောင်းပါး',
 );
 
@@ -6413,7 +6478,7 @@ $messages['nb'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Det oppsto en feil under behandlingen av meldingen din. Vennligst prøv igjen senere.',
 	'mobile-frontend-language' => 'Språk:',
 	'mobile-frontend-language-header' => 'Artikkelen er tilgjengelig på {{PLURAL:$1|ett språk|$1 språk}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} finnes tilgjengelig på andre språk.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} finnes tilgjengelig på andre språk.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Søk etter språk',
 	'mobile-frontend-language-site-nomatches' => 'Fant ingen passende språk',
 	'mobile-frontend-username' => 'Brukernavn:',
@@ -6492,7 +6557,7 @@ $messages['ne'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'एक खण्ड पछाडि जाने',
 	'mobile-frontend-show-button' => 'देखाउने',
 	'mobile-frontend-hide-button' => 'लुकाउने',
-	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित {{SITENAME}}मा हेर्ने',
+	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित {{SITENAME}}मा हेर्ने', # Fuzzy
 	'mobile-frontend-featured-article' => 'आजको जोडदिएको लेख',
 	'mobile-frontend-username' => 'प्रयोगकर्ता नाम:',
 );
@@ -6578,6 +6643,7 @@ $messages['nl'] = array(
 Probeer het later nog een keer.',
 	'mobile-frontend-language' => 'Taal:',
 	'mobile-frontend-language-article-heading' => 'In een andere taal lezen',
+	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-header' => 'Deze pagina is beschikbaar in {{PLURAL:$1|één taal|$1 talen}}',
 	'mobile-frontend-language-footer' => 'Deze pagina is mogelijk niet beschikbaar in uw voorkeurstaal. U kunt hier klikken om alle taken die {{SITENAME}} ondersteunt te bekijken.',
 	'mobile-frontend-language-site-choose' => 'Taal zoeken',
@@ -6635,7 +6701,7 @@ $messages['nl-informal'] = array(
 	'mobile-frontend-leave-feedback-notice' => 'Jouw terugkoppeling helpt ons om je ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (ook je gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alsjeblieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op je terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
 	'mobile-frontend-leave-feedback-warning' => 'Neem geen persoonlijke gegevens op in je opmerkingen, tenzij je akkoord gaat met het openbaar maken ervan.',
 	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling over de mobiele site',
-	'mobile-frontend-leave-feedback-email-body' => 'Schrijf je e-mail boven deze regel.',
+	'mobile-frontend-leave-feedback-email-body' => 'Schrijf je e-mail boven deze regel.', # Fuzzy
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Voer hier je opmerking in',
 	'mobile-frontend-leave-feedback-page-title' => 'Geef ons terugkoppeling over je ervaring met de mobiele site',
 	'mobile-frontend-leave-feedback-thanks' => 'Bedankt voor je terugkoppeling!',
@@ -6739,13 +6805,13 @@ $messages['oc'] = array(
 	'mobile-frontend-back-to-top-of-section' => "Tornar d'una seccion",
 	'mobile-frontend-show-button' => 'Afichar',
 	'mobile-frontend-hide-button' => 'Amagar',
-	'mobile-frontend-regular-site' => 'Afichar aquesta pagina sus Wikipèdia classica',
+	'mobile-frontend-regular-site' => 'Afichar aquesta pagina sus Wikipèdia classica', # Fuzzy
 	'mobile-frontend-opt-in-yes-button' => 'òc',
 	'mobile-frontend-opt-in-no-button' => 'non',
 	'mobile-frontend-opt-out-yes-button' => 'òc',
 	'mobile-frontend-opt-out-no-button' => 'non',
 	'mobile-frontend-featured-article' => 'Lutz sus...',
-	'mobile-frontend-leave-feedback-message' => 'Messatge',
+	'mobile-frontend-leave-feedback-message' => 'Messatge', # Fuzzy
 );
 
 /** Oriya (ଓଡ଼ିଆ)
@@ -6797,7 +6863,7 @@ $messages['or'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'ଯାନ୍ତ୍ରିକ ତ୍ରୁଟି',
 	'mobile-frontend-leave-feedback-general-section-header' => 'ସାଧାରଣ',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'ଲେଖା ମତାମତ',
-	'mobile-frontend-leave-feedback-email-body' => 'ଦୟାକରି ଆପଣଙ୍କ ଇମେଲଟିକୁ ଏହି ଲାଇନ ଉପରେ ଲେଖନ୍ତୁ ।',
+	'mobile-frontend-leave-feedback-email-body' => 'ଦୟାକରି ଆପଣଙ୍କ ଇମେଲଟିକୁ ଏହି ଲାଇନ ଉପରେ ଲେଖନ୍ତୁ ।', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'ଯାନ୍ତ୍ରିକ ତ୍ରୁଟି',
 	'mobile-frontend-leave-feedback-general-link-text' => 'ସାଧାରଣ ମତାମତ',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'ମେସେଜ ବିଷୟ',
@@ -6814,7 +6880,7 @@ $messages['or'] = array(
 	'mobile-frontend-password' => 'ପାସୱାର୍ଡ଼',
 	'mobile-frontend-login' => 'ଲଗଇନ',
 	'mobile-frontend-logout' => 'ଲଗଆଉଟ',
-	'mobile-frontend-placeholder' => 'ଖୋଜିବାକୁ ଯାହା ଚାହାଁନ୍ତି ଏଠାରେ ଲେଖନ୍ତୁ...',
+	'mobile-frontend-placeholder' => 'ଖୋଜିବାକୁ ଯାହା ଚାହାଁନ୍ତି ଏଠାରେ ଲେଖନ୍ତୁ...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'ସୂଚନାଟିକୁ ହଟାଇଦିଅନ୍ତୁ',
 	'mobile-frontend-clear-search' => 'ଖାଲି କରିଦିଅନ୍ତୁ',
 	'mobile-frontend-privacy-link-text' => 'ଗୁମରନିତି',
@@ -6875,18 +6941,20 @@ $messages['os'] = array(
 	'mobile-frontend-footer-contact' => 'Контакт',
 );
 
-/** Punjabi (ਪੰਜਾਬੀ) */
+/** Punjabi (ਪੰਜਾਬੀ)
+ */
 $messages['pa'] = array(
 	'mobile-frontend-search-submit' => 'ਜਾਓ',
 	'mobile-frontend-home-button' => 'ਘਰ',
 	'mobile-frontend-back-to-top-of-section' => 'A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ',
 	'mobile-frontend-show-button' => 'ਵੇਖਾਓ',
 	'mobile-frontend-hide-button' => 'ਓਹਲੇ',
-	'mobile-frontend-regular-site' => 'ਇਹ ਸਫ਼ਾ ਪੂਰੇ ਵਿਕਿਪੀਡਿਆ ਉੱਤੇ ਵੇਖੋ',
+	'mobile-frontend-regular-site' => 'ਇਹ ਸਫ਼ਾ ਪੂਰੇ ਵਿਕਿਪੀਡਿਆ ਉੱਤੇ ਵੇਖੋ', # Fuzzy
 	'mobile-frontend-featured-article' => 'ਅੱਜ ਦੇ ਖਾਸ ਲੇਖ',
 );
 
-/** Papiamento (Papiamentu) */
+/** Papiamento (Papiamentu)
+ */
 $messages['pap'] = array(
 	'mobile-frontend-search-submit' => 'Buska',
 	'mobile-frontend-home-button' => 'Página Prinsipal',
@@ -6894,7 +6962,7 @@ $messages['pap'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Bai un sekshon patras',
 	'mobile-frontend-show-button' => 'Mustra',
 	'mobile-frontend-hide-button' => 'Skonde',
-	'mobile-frontend-regular-site' => 'Mira e página aki riba un base regular',
+	'mobile-frontend-regular-site' => 'Mira e página aki riba un base regular', # Fuzzy
 	'mobile-frontend-featured-article' => 'E Artíkulo Estelar Di Awe',
 );
 
@@ -6907,8 +6975,8 @@ $messages['pdc'] = array(
 	'mobile-frontend-show-button' => 'Zeig',
 	'mobile-frontend-opt-out-yes-button' => 'Ya',
 	'mobile-frontend-opt-out-no-button' => 'Nee',
-	'mobile-frontend-leave-feedback-message' => 'Melding',
-	'mobile-frontend-language' => 'Schprooch',
+	'mobile-frontend-leave-feedback-message' => 'Melding', # Fuzzy
+	'mobile-frontend-language' => 'Schprooch', # Fuzzy
 );
 
 /** Pälzisch (Pälzisch)
@@ -6925,7 +6993,7 @@ $messages['pfl'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'Ja',
 	'mobile-frontend-opt-out-no-button' => 'Nä',
 	'mobile-frontend-leave-feedback-message' => 'Nochrischd:',
-	'mobile-frontend-language' => 'Schbrooch',
+	'mobile-frontend-language' => 'Schbrooch', # Fuzzy
 	'mobile-frontend-about-link-text' => 'Iwa',
 	'mobile-frontend-footer-less' => 'wenischa',
 );
@@ -6991,7 +7059,7 @@ $messages['pl'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problem techniczny',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Ogólne',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Uwagi do artykułu',
-	'mobile-frontend-leave-feedback-email-body' => 'Opisz problem napotkany na {{GRAMMAR:MS.lp|{{SITENAME}}}}} nad tą linią. Zaznaczamy, że nie możemy odpowiedzieć na wszystkie otrzymane wiadomości.',
+	'mobile-frontend-leave-feedback-email-body' => 'Opisz problem napotkany na {{GRAMMAR:MS.lp|{{SITENAME}}}}} nad tą linią. Zaznaczamy, że nie możemy odpowiedzieć na wszystkie otrzymane wiadomości.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problem techniczny',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Ogólne opinie',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Dotyczące mnie, osoby lub firmy którą reprezentuję',
@@ -7010,7 +7078,7 @@ $messages['pl'] = array(
 	'mobile-frontend-language' => 'Język:',
 	'mobile-frontend-language-header' => 'Ten artykuł jest dostępny w $1 {{PLURAL:$1|języku|językach}}',
 	'mobile-frontend-language-footer' => '
-{{SITENAME}}: witryna jest dostępna w innych językach.',
+{{SITENAME}}: witryna jest dostępna w innych językach.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Szukaj język',
 	'mobile-frontend-language-site-nomatches' => 'Nie ma pasujących języków',
 	'mobile-frontend-username' => 'Nazwa użytkownika:',
@@ -7030,7 +7098,7 @@ $messages['pl'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Warunki użytkowania</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-unknown-option' => 'Nieznana opcja "$1".',
-	'mobile-frontend-search-noresults' => 'Żaden tytuł artykułu nie pasuje do Twojego wyszukiwania. Zmień je lub wciśnij przycisk szukania aby szukać wewnątrz artykułów.',
+	'mobile-frontend-search-noresults' => 'Żaden tytuł artykułu nie pasuje do Twojego wyszukiwania. Zmień je lub wciśnij przycisk szukania aby szukać wewnątrz artykułów.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Wyróżnione',
 	'mobile-frontend-main-menu-nearby' => 'W pobliżu',
 	'mobile-frontend-main-menu-settings' => 'Ustawienia',
@@ -7041,7 +7109,7 @@ $messages['pl'] = array(
 	'mobile-frontend-page-menu-contents' => 'spis treści',
 	'mobile-frontend-page-menu-history' => 'Historia',
 	'mobile-frontend-page-menu-contents-heading' => 'Spis treści',
-	'mobile-frontend-page-menu-language-heading' => 'Przeczytaj artykuł po',
+	'mobile-frontend-page-menu-language-heading' => 'Przeczytaj artykuł po', # Fuzzy
 );
 
 /** Piedmontese (Piemontèis)
@@ -7097,7 +7165,7 @@ $messages['pms'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema técnich',
 	'mobile-frontend-leave-feedback-general-section-header' => 'General',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => "Valutassion ëd j'artìcoj",
-	'mobile-frontend-leave-feedback-email-body' => "Për piasì, ch'a scriva sò mëssagi dzora a sta linia-sì.",
+	'mobile-frontend-leave-feedback-email-body' => "Për piasì, ch'a scriva sò mëssagi dzora a sta linia-sì.", # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problema técnich',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Opinion general',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => "Quant a mi, na përson-a o n'asienda che mi i rapresento",
@@ -7115,7 +7183,7 @@ $messages['pms'] = array(
 	'mobile-frontend-leave-feedback-post-error' => "A-i é staie n'eror ëd tratament ëd sò mëssagi. Për piasì, ch'a preuva torna pì tard.",
 	'mobile-frontend-language' => 'Lenga:',
 	'mobile-frontend-language-header' => "Sta vos a l'é disponìbil an $1 {{PLURAL:$1|lenga|lenghe}}",
-	'mobile-frontend-language-footer' => "{{SITENAME}} a l'é disponìbil an d'àutre lenghe.",
+	'mobile-frontend-language-footer' => "{{SITENAME}} a l'é disponìbil an d'àutre lenghe.", # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Sërché la lenga',
 	'mobile-frontend-language-site-nomatches' => 'Pa gnun-e lenghe corispondente',
 	'mobile-frontend-username' => 'Stranòm:',
@@ -7160,7 +7228,7 @@ $messages['pnb'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'اک سیکشن پچھے چلو',
 	'mobile-frontend-show-button' => 'وکھاؤ',
 	'mobile-frontend-hide-button' => 'لکاؤ',
-	'mobile-frontend-regular-site' => 'ایس صفے نوں ریگولر {{ساغیٹناں}} تے ویکھو',
+	'mobile-frontend-regular-site' => 'ایس صفے نوں ریگولر {{ساغیٹناں}} تے ویکھو', # Fuzzy
 	'mobile-frontend-wml-continue' => 'جاری رکھو',
 	'mobile-frontend-wml-back' => 'پچھے نوں۔۔۔۔۔۔۔۔۔۔۔',
 	'mobile-frontend-view' => 'ٹردی مورت',
@@ -7178,15 +7246,15 @@ $messages['pnb'] = array(
 	'mobile-frontend-news-items' => 'دساں چ',
 	'mobile-frontend-leave-feedback-notice' => 'تواڈا فیڈبیک ساڈی مدد کردا تواڈی موبائیل سائٹ ایکسپیرینس نوں ودیا کرن چ۔
 ایہ عام لوکاں ل‏ی سامنے رکھیا جاۓ گا (تواڈے ناں ، براؤزر ورین تے اوپریٹنگ سسٹم) صفہ &quot;$1&quot تے۔ مہربانی کرکے اک جانکاری لین لکھو کسے ٹاپک تے۔ تواڈا فیڈبیک ای ساڈے ورتن دی شرط اے۔',
-	'mobile-frontend-leave-feedback-subject' => 'آرٹیکل',
-	'mobile-frontend-leave-feedback-message' => 'سنیعہ',
+	'mobile-frontend-leave-feedback-subject' => 'آرٹیکل', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'سنیعہ', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'مشورہ دیو',
 	'mobile-frontend-leave-feedback-link-text' => 'موبائل توں آئی ایکسٹنشن صلاع',
 	'mobile-frontend-leave-feedback' => 'موبائل تھاں صلاع',
 	'mobile-frontend-leave-feedback-title' => 'سانوں فیڈبیک دیو اپنے موبائل سائیٹ تجربے بارے۔',
 	'mobile-frontend-leave-feedback-page-title' => 'سانوں فیڈبیک دیو اپنے موبائل سائیٹ تجربے بارے۔',
 	'mobile-frontend-leave-feedback-thanks' => 'تواڈی صلاع دا شکریہ',
-	'mobile-frontend-language' => 'بولی',
+	'mobile-frontend-language' => 'بولی', # Fuzzy
 	'mobile-frontend-username' => 'ورتن والہ:',
 	'mobile-frontend-password' => 'کنجی:',
 	'mobile-frontend-login' => 'لاگ ان ہو جاو',
@@ -7305,7 +7373,7 @@ $messages['pt'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problema técnico',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Geral',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Comentários ao artigo',
-	'mobile-frontend-leave-feedback-email-body' => 'Escreva a sua mensagem acima desta linha, por favor.',
+	'mobile-frontend-leave-feedback-email-body' => 'Escreva a sua mensagem acima desta linha, por favor.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problema técnico',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Comentários gerais',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Sobre mim, uma pessoa, ou uma empresa que represento',
@@ -7323,7 +7391,7 @@ $messages['pt'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Ocorreu um erro indeterminado ao processar a sua mensagem. Tente novamente mais tarde, por favor.',
 	'mobile-frontend-language' => 'Língua:',
 	'mobile-frontend-language-header' => 'Este artigo está disponível em $1 {{PLURAL:$1|língua|línguas}}',
-	'mobile-frontend-language-footer' => 'A {{SITENAME}} está disponível noutras línguas.',
+	'mobile-frontend-language-footer' => 'A {{SITENAME}} está disponível noutras línguas.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Pesquisar língua',
 	'mobile-frontend-language-site-nomatches' => 'Não há línguas correspondentes',
 	'mobile-frontend-username' => 'Nome de utilizador:',
@@ -7358,10 +7426,10 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (português do Brasil)
- * @author 555
  * @author Giro720
  * @author MetalBrasil
  * @author Rafael Vargas
+ * @author 555
  */
 $messages['pt-br'] = array(
 	'mobile-frontend-desc' => 'Interface para dispositivos móveis',
@@ -7400,7 +7468,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-username' => 'Nome de usuário:',
 	'mobile-frontend-password' => 'Senha:',
 	'mobile-frontend-login' => 'Autenticar-se',
-	'mobile-frontend-placeholder' => 'Digite sua pesquisa aqui...',
+	'mobile-frontend-placeholder' => 'Digite sua pesquisa aqui...', # Fuzzy
 );
 
 /** Romansh (rumantsch)
@@ -7414,15 +7482,15 @@ $messages['rm'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Siglir enavos in chapitel',
 	'mobile-frontend-show-button' => 'Mussar',
 	'mobile-frontend-hide-button' => 'Zuppentar',
-	'mobile-frontend-regular-site' => 'Visitar la pagina regulara da {{SITENAME}}',
+	'mobile-frontend-regular-site' => 'Visitar la pagina regulara da {{SITENAME}}', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Cuntinuar…',
 	'mobile-frontend-wml-back' => 'Enavos…',
 	'mobile-frontend-view' => 'Versiun mobila',
 	'mobile-frontend-opt-in-yes-button' => 'gea',
 	'mobile-frontend-opt-in-no-button' => 'na',
 	'mobile-frontend-featured-article' => 'Artitgels dal di',
-	'mobile-frontend-leave-feedback-subject' => 'Object',
-	'mobile-frontend-leave-feedback-message' => 'Messadi',
+	'mobile-frontend-leave-feedback-subject' => 'Object', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Messadi', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'Trametter il resun',
 );
 
@@ -7599,7 +7667,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Grazie, pu feedback tune!',
 	'mobile-frontend-language' => 'Lènghe:',
 	'mobile-frontend-language-header' => "Sta vôsce jè disponibbele jndr'à $1 {{PLURAL:$1|lènghe|lènghe}}",
-	'mobile-frontend-language-footer' => "{{SITENAME}} jè disponibbele jndr'à otre lènghe.",
+	'mobile-frontend-language-footer' => "{{SITENAME}} jè disponibbele jndr'à otre lènghe.", # Fuzzy
 	'mobile-frontend-language-site-choose' => "Cirche 'a lènghe",
 	'mobile-frontend-username' => 'Nome utende:',
 	'mobile-frontend-password' => 'Passuord:',
@@ -7688,7 +7756,7 @@ $messages['ru'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Техническая проблема',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Основное',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Оценка статьи',
-	'mobile-frontend-leave-feedback-email-body' => 'Пожалуйста, укажите свой e-mail над этой чертой.',
+	'mobile-frontend-leave-feedback-email-body' => 'Пожалуйста, укажите свой e-mail над этой чертой.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Техническая проблема',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Общая обратная связь',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'В связи с информацией обо мне, или о человеке или компании, которых я представляю',
@@ -7707,7 +7775,7 @@ $messages['ru'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'При обработке вашего сообщения произошла ошибка. Пожалуйста, попробуйте снова позже.',
 	'mobile-frontend-language' => 'Язык:',
 	'mobile-frontend-language-header' => 'Эта статья существует на $1 {{PLURAL:$1|языке|языках|языках}}',
-	'mobile-frontend-language-footer' => 'Проект «{{SITENAME}}» доступен на других языках.',
+	'mobile-frontend-language-footer' => 'Проект «{{SITENAME}}» доступен на других языках.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Поиск языка',
 	'mobile-frontend-language-site-nomatches' => 'Похожего языка не нашлось',
 	'mobile-frontend-username' => 'Имя участника:',
@@ -7793,7 +7861,7 @@ $messages['rue'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Технічный проблем',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Обще',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Одозва на статю',
-	'mobile-frontend-leave-feedback-email-body' => 'Просиме, жебы сьте свій імейл написали высше того рядка.',
+	'mobile-frontend-leave-feedback-email-body' => 'Просиме, жебы сьте свій імейл написали высше того рядка.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Технічный проблем',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Общій погляд',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Дотуляюче ся мене, персоны або компанію, котру заступую',
@@ -7811,7 +7879,7 @@ $messages['rue'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Під час спрацованя вашого повідомлїня дішло к хыбі. Попробукте то знова кус пізнїше.',
 	'mobile-frontend-language' => 'Язык:',
 	'mobile-frontend-language-header' => 'Статя доступна в $1 {{PLURAL:$1|языцї|языках}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} є доступна в далшых языках.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} є доступна в далшых языках.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Гляданя языка',
 	'mobile-frontend-language-site-nomatches' => 'Жадны одповідны языкы',
 	'mobile-frontend-username' => 'Імя хоснователя:',
@@ -7898,7 +7966,7 @@ $messages['sa'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'तान्त्रिकसमस्या',
 	'mobile-frontend-leave-feedback-general-section-header' => 'सामान्यम्',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'लेख-प्रतिस्पन्दः',
-	'mobile-frontend-leave-feedback-email-body' => 'अस्याः पङ्क्तेः उपरि भवतः ईपत्रसङ्केतः लिख्यताम् ।',
+	'mobile-frontend-leave-feedback-email-body' => 'अस्याः पङ्क्तेः उपरि भवतः ईपत्रसङ्केतः लिख्यताम् ।', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'तान्त्रिकसमस्या',
 	'mobile-frontend-leave-feedback-general-link-text' => 'सामान्यप्रतिस्पन्दः',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'मद्विषये, व्यक्तिरूपेण, संस्थायाः प्रतिनिधिरूपेण वा',
@@ -7916,7 +7984,7 @@ $messages['sa'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'भवतः सन्दॆशस्य प्रापणे दोषः जातः । पुनः प्रयतताम् ।',
 	'mobile-frontend-language' => 'भाषा :',
 	'mobile-frontend-language-header' => 'अयं लेखः $1 {{PLURAL:$1|lभाषा|भाषाः}} इत्यत्र उपलभ्यते',
-	'mobile-frontend-language-footer' => '{{SITENAME}} इदम् अन्यासु भाषासु उपलभ्यते ।',
+	'mobile-frontend-language-footer' => '{{SITENAME}} इदम् अन्यासु भाषासु उपलभ्यते ।', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'भाषायाः अन्वेषणम्',
 	'mobile-frontend-language-site-nomatches' => 'सदृशी भाषा न प्राप्ता',
 	'mobile-frontend-username' => 'योजकनाम:',
@@ -7961,7 +8029,7 @@ $messages['sah'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Биир салаанан кэнники бар',
 	'mobile-frontend-show-button' => 'Көрдөр',
 	'mobile-frontend-hide-button' => 'Кистээ',
-	'mobile-frontend-regular-site' => 'Сирэйи көннөрү {{SITENAME}}ҕэ көр',
+	'mobile-frontend-regular-site' => 'Сирэйи көннөрү {{SITENAME}}ҕэ көр', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Салгыы...',
 	'mobile-frontend-wml-back' => 'Төнүн...',
 	'mobile-frontend-view' => 'Мобил барыла',
@@ -7978,19 +8046,19 @@ $messages['sah'] = array(
 	'mobile-frontend-featured-article' => 'Бүгүҥҥү талыы ыстатыйа',
 	'mobile-frontend-news-items' => 'Сонуннар',
 	'mobile-frontend-leave-feedback-notice' => 'Мобил ситим-сир туһунан суруйдаххына кини тупсарыгар көмөлөһүөҥ. Суруйбутуҥ дьоҥҥо манна &quot;$1&quot; көстүө (аатыҥ-суолуҥ, барузерыҥ барыла, операционнай систиэмэҥ). Бука диэн, чопчулуу сатаа, холобур «вопросы форматирования широких таблиц». Суруйууҥ туттуу сиэригэр сөп түбэһиэхтээх.',
-	'mobile-frontend-leave-feedback-subject' => 'Сурук аата:',
-	'mobile-frontend-leave-feedback-message' => 'Сурук',
+	'mobile-frontend-leave-feedback-subject' => 'Сурук аата:', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Сурук', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'Ыыт',
 	'mobile-frontend-leave-feedback-link-text' => 'Мобил интерфейс туһунан санаалар',
 	'mobile-frontend-leave-feedback' => 'Санааны этии',
 	'mobile-frontend-leave-feedback-title' => 'Мобил интерфейс туһунан суруйуу',
 	'mobile-frontend-leave-feedback-page-title' => 'Мобил интерфейс туһунан суруйуу',
 	'mobile-frontend-leave-feedback-thanks' => 'Санааҕын эппиккэр махтал!',
-	'mobile-frontend-language' => 'Омук тыла',
+	'mobile-frontend-language' => 'Омук тыла', # Fuzzy
 	'mobile-frontend-username' => 'Кытааччы аата:',
 	'mobile-frontend-password' => 'Киирии тыла:',
 	'mobile-frontend-login' => 'Киир',
-	'mobile-frontend-placeholder' => 'Көрдөбүл устуруоката...',
+	'mobile-frontend-placeholder' => 'Көрдөбүл устуруоката...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'бу биллэриини кистээ',
 	'mobile-frontend-clear-search' => 'Сот',
 );
@@ -8007,7 +8075,7 @@ $messages['scn'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Vai â ccuminzata dû paràgrufu',
 	'mobile-frontend-show-button' => 'Ammustra',
 	'mobile-frontend-hide-button' => 'Ammuccia',
-	'mobile-frontend-empty-homepage' => 'Sta pàggina havi a siri cunfigurata. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Pi sapìrinni cchiossai</a>',
+	'mobile-frontend-empty-homepage' => 'Sta pàggina havi a siri cunfigurata. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Pi sapìrinni cchiossai</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Disattivari la virsioni mòbbili',
 	'mobile-frontend-wml-continue' => 'Camina...',
 	'mobile-frontend-wml-back' => 'Narreri',
@@ -8057,7 +8125,7 @@ $messages['scn'] = array(
 	'mobile-frontend-username' => 'Utenti:',
 	'mobile-frontend-password' => 'Parola chiavi:',
 	'mobile-frontend-login' => 'Trasi',
-	'mobile-frontend-placeholder' => 'Dìggita la to circata ccà...',
+	'mobile-frontend-placeholder' => 'Dìggita la to circata ccà...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'Riggetta sta nutificazzioni',
 	'mobile-frontend-clear-search' => 'Scancella',
 	'mobile-frontend-privacy-link-text' => 'Cunfidinzialitati',
@@ -8071,7 +8139,8 @@ $messages['scn'] = array(
 	'mobile-frontend-unknown-option' => 'Opzioni "$1" nun arricanusciuta',
 );
 
-/** Serbo-Croatian (srpskohrvatski / српскохрватски) */
+/** Serbo-Croatian (srpskohrvatski / српскохрватски)
+ */
 $messages['sh'] = array(
 	'mobile-frontend-search-submit' => 'Idi',
 	'mobile-frontend-home-button' => 'Početna',
@@ -8079,17 +8148,18 @@ $messages['sh'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Skoči nazad za jednu sekciju',
 	'mobile-frontend-show-button' => 'Pokaži',
 	'mobile-frontend-hide-button' => 'Sakrij',
-	'mobile-frontend-regular-site' => 'Pogledaj ovu stranicu na običnoj Wikipediji',
+	'mobile-frontend-regular-site' => 'Pogledaj ovu stranicu na običnoj Wikipediji', # Fuzzy
 	'mobile-frontend-featured-article' => 'Odabrani članak',
 );
 
-/** Tachelhit (Tašlḥiyt/ⵜⴰⵛⵍⵃⵉⵜ) */
+/** Tachelhit (Tašlḥiyt/ⵜⴰⵛⵍⵃⵉⵜ)
+ */
 $messages['shi'] = array(
 	'mobile-frontend-home-button' => 'Asbrk',
 	'mobile-frontend-back-to-top-of-section' => 'Urrid s yan wayyaw',
 	'mobile-frontend-show-button' => 'Mel',
 	'mobile-frontend-hide-button' => 'Ḥbu',
-	'mobile-frontend-regular-site' => 'Ml tasna yad ɣ wikipidya tamqrant',
+	'mobile-frontend-regular-site' => 'Ml tasna yad ɣ wikipidya tamqrant', # Fuzzy
 	'mobile-frontend-featured-article' => 'Isisfiwn f ...',
 );
 
@@ -8155,7 +8225,7 @@ $messages['si'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'ස්තුතියි, ඔබේ ප්‍රතිචාරයට!',
 	'mobile-frontend-leave-feedback-post-error' => 'ඔබේ පණිවුඩය ක්‍රියානනය කිරීමේදී දෝෂයක් හට ගැනුණි. කරුණාකර පසුව නැවත උත්සහ කරන්න.',
 	'mobile-frontend-language' => 'භාෂාව:',
-	'mobile-frontend-language-footer' => '{{SITENAME}} වෙනත් භාෂාවලින්ද ලබා ගත හැක.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} වෙනත් භාෂාවලින්ද ලබා ගත හැක.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'භාෂාව සොයන්න',
 	'mobile-frontend-language-site-nomatches' => 'ගැළපෙන භාෂා නොමැත',
 	'mobile-frontend-username' => 'පරිශීලක නාමය:',
@@ -8205,7 +8275,7 @@ $messages['sk'] = array(
 	'mobile-frontend-close-section' => 'Zatvoriť túto sekciu',
 	'mobile-frontend-show-button' => 'Zobraziť',
 	'mobile-frontend-hide-button' => 'Skryť',
-	'mobile-frontend-empty-homepage' => 'Túto domovskú stránku treba nastaviť. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Podrobnosti sa dozviete tu</a>',
+	'mobile-frontend-empty-homepage' => 'Túto domovskú stránku treba nastaviť. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Podrobnosti sa dozviete tu</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Klasické zobrazenie',
 	'mobile-frontend-wml-continue' => 'Pokračovať...',
 	'mobile-frontend-wml-back' => 'Späť...',
@@ -8240,7 +8310,7 @@ $messages['sk'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technický problém',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Všeobecné',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Hodnotenie článku',
-	'mobile-frontend-leave-feedback-email-body' => 'Prosím, napíšte svoj email nad tento riadok.',
+	'mobile-frontend-leave-feedback-email-body' => 'Prosím, napíšte svoj email nad tento riadok.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Technický problém',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Všeobecný komentár',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Týka sa mňa, osoby alebo spoločnosti, ktorú zastupujem',
@@ -8258,14 +8328,14 @@ $messages['sk'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Vyskytla sa chyba počas spracovania vašej správy. Prosím, skúste to neskôr znova.',
 	'mobile-frontend-language' => 'Jazyk:',
 	'mobile-frontend-language-header' => 'Tento článok je dostupný v $1 {{PLURAL:$1|jazyku|jazykoch}}',
-	'mobile-frontend-language-footer' => '[[Special:MobileOptions|Nevidíte svoj jazyk? Pozrite si podrobnosti]].',
+	'mobile-frontend-language-footer' => '[[Special:MobileOptions|Nevidíte svoj jazyk? Pozrite si podrobnosti]].', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Hľadať jazyk',
 	'mobile-frontend-language-site-nomatches' => 'Žiadne zodpovedajúce jazyky',
 	'mobile-frontend-username' => 'Používateľské meno:',
 	'mobile-frontend-password' => 'Heslo:',
 	'mobile-frontend-login' => 'Prihlásiť sa',
 	'mobile-frontend-logout' => 'Odhlásiť sa',
-	'mobile-frontend-placeholder' => 'Sem napíšte hľadaný výraz...',
+	'mobile-frontend-placeholder' => 'Sem napíšte hľadaný výraz...', # Fuzzy
 	'mobile-frontend-search-help' => 'Napíšte hľadané slová hore. Zodpovedajúci článok sa objaví tu.',
 	'mobile-frontend-dismiss-notification' => 'zavrieť toto oznámenie',
 	'mobile-frontend-clear-search' => 'Vyčistiť',
@@ -8341,7 +8411,7 @@ $messages['sl'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tehnična težava',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Splošno',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Povratna informacija o članku',
-	'mobile-frontend-leave-feedback-email-body' => 'Prosimo, napišite svoje e-poštno sporočilo nad to vrstico.',
+	'mobile-frontend-leave-feedback-email-body' => 'Prosimo, napišite svoje e-poštno sporočilo nad to vrstico.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tehnična težava',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Splošna povratna informacija',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'V zvezi z mano, osebo ali podjetjem, ki ga zastopam',
@@ -8398,7 +8468,7 @@ $messages['sq'] = array(
 	'mobile-frontend-show-button' => 'Shfaq',
 	'mobile-frontend-hide-button' => 'Fshih',
 	'mobile-frontend-empty-homepage' => 'Kjo ballinë ka nevojë që të konfigurohet. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage"> Udhëzimet në atë se si ta mundësoni këtë faqe të lëvizhshme</a>',
-	'mobile-frontend-regular-site' => 'Shiko këtë faqe në versionin e rregullt të {{SITENAME}}',
+	'mobile-frontend-regular-site' => 'Shiko këtë faqe në versionin e rregullt të {{SITENAME}}', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Vazhdo...',
 	'mobile-frontend-wml-back' => 'Prapa ...',
 	'mobile-frontend-view' => 'Për celular',
@@ -8423,8 +8493,8 @@ $messages['sq'] = array(
 	'mobile-frontend-news-items' => 'Në lajme',
 	'mobile-frontend-leave-feedback-notice' => 'Përshtypja juaj na ndihmon për të përmirësur përvojën e versionit për celular. Do të postohet publikisht (së bashku me emrin tuaj të përdoruesit, versionin e shfletuesit dhe sistemin operativ) në faqen &quot;$1&quot;. Ju lutemi provoni të zgjidhni një linjë subjekti informativ, p.sh. "Formatimi i çështjeve me tabela të gjera". Përshtypja juaj është subjekt i kushteve tona të përdorimit.',
 	'mobile-frontend-leave-feedback-warning' => 'Derisa ju të pajtoheni që të bëni publik informacionin tuaj, ju lutemi mos e përfshini informacionin personal në komentet tuaja.',
-	'mobile-frontend-leave-feedback-subject' => 'Subjekti:',
-	'mobile-frontend-leave-feedback-message' => 'Mesazhi',
+	'mobile-frontend-leave-feedback-subject' => 'Subjekti:', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Mesazhi', # Fuzzy
 	'mobile-frontend-leave-feedback-submit' => 'Paraqit përshtypjet',
 	'mobile-frontend-leave-feedback-link-text' => 'Shtesë përshtypjeje MobileFronted',
 	'mobile-frontend-leave-feedback' => 'Përshtypja për versionin e celularit',
@@ -8432,7 +8502,7 @@ $messages['sq'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problemi teknik',
 	'mobile-frontend-leave-feedback-general-section-header' => 'E përgjithshme',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Reagimi për artikull',
-	'mobile-frontend-leave-feedback-email-body' => 'Shkruani e-mailin tuaj mbi këtë rresht.',
+	'mobile-frontend-leave-feedback-email-body' => 'Shkruani e-mailin tuaj mbi këtë rresht.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Problemi teknik',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Reagimi i përgjithshëm',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Në lidhje me mua, një person, ose një ndërmarrje unë përfaqësoj',
@@ -8448,16 +8518,16 @@ $messages['sq'] = array(
 	'mobile-frontend-feedback-edit-summary' => '$1 - postuar automatikisht duke përdorur [[Special:MobileFeedback|veglën për reagim mobil]]',
 	'mobile-frontend-leave-feedback-thanks' => 'Faleminderit për përshtypjet tuaja!',
 	'mobile-frontend-leave-feedback-post-error' => 'Ndodhi një gabim në përpunimin e porosisë suaj. Ju lutemi provoni më vonë.',
-	'mobile-frontend-language' => 'Gjuha',
+	'mobile-frontend-language' => 'Gjuha', # Fuzzy
 	'mobile-frontend-language-header' => 'Ky artikull është në dispozicion në $1 {{PLURAL:$1|gjuhën|gjuhët}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} është në dispozicion në gjuhët e tjera.',
+	'mobile-frontend-language-footer' => '{{SITENAME}} është në dispozicion në gjuhët e tjera.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Kërkoni gjuhën',
 	'mobile-frontend-language-site-nomatches' => 'Nuk pati gjuhë të përputhshme',
 	'mobile-frontend-username' => 'Emri i përdoruesit:',
 	'mobile-frontend-password' => 'Fjalëkalimi:',
 	'mobile-frontend-login' => 'Hyni',
 	'mobile-frontend-logout' => 'Dil',
-	'mobile-frontend-placeholder' => 'Shkruani kërkimin tuaj këtu...',
+	'mobile-frontend-placeholder' => 'Shkruani kërkimin tuaj këtu...', # Fuzzy
 	'mobile-frontend-search-help' => 'Shkruani termin e kërkimit më sipër dhe titujt e artikujve të përputhshëm do të paraqiten këtu.',
 	'mobile-frontend-dismiss-notification' => 'largoni këtë lajmërim',
 	'mobile-frontend-clear-search' => 'Fshije',
@@ -8535,7 +8605,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Технички проблем',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Опште',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Оцењивање чланка',
-	'mobile-frontend-leave-feedback-email-body' => 'Напишите поруку изнад овог реда.',
+	'mobile-frontend-leave-feedback-email-body' => 'Напишите поруку изнад овог реда.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Технички проблем',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Општа повратна информација',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'У моје име, у име особе или фирме коју заступам',
@@ -8554,7 +8624,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Дошло је до грешке при обради поруке. Молимо, покушајте касније.',
 	'mobile-frontend-language' => 'Језик:',
 	'mobile-frontend-language-header' => 'Овај чланак је доступан на $1 {{PLURAL:$1|језику|језика|језика}}',
-	'mobile-frontend-language-footer' => 'Пројекат „{{SITENAME}}“ је доступан на другим језицима.',
+	'mobile-frontend-language-footer' => 'Пројекат „{{SITENAME}}“ је доступан на другим језицима.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Претрага језика',
 	'mobile-frontend-language-site-nomatches' => 'Нема језика који одговарају захтеву',
 	'mobile-frontend-username' => 'Корисничко име:',
@@ -8586,7 +8656,8 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Прочитајте чланак на',
 );
 
-/** Serbian (Latin script) (srpski (latinica)‎) */
+/** Serbian (Latin script) (srpski (latinica)‎)
+ */
 $messages['sr-el'] = array(
 	'mobile-frontend-desc' => 'Korisnički deo za mobilne uređaje',
 	'mobile-frontend-search-submit' => 'Idi',
@@ -8650,8 +8721,8 @@ $messages['sr-el'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Hvala vam na povratnoj informaciji.',
 	'mobile-frontend-leave-feedback-post-error' => 'Došlo je do greške pri obradi poruke. Molimo, pokušajte kasnije.',
 	'mobile-frontend-language' => 'Jezik:',
-	'mobile-frontend-language-header' => 'Ovaj članak je dostupan na $1 {{PLURAL:$1|jeziku|jezika|jezika}}',
-	'mobile-frontend-language-footer' => 'Projekat „{{SITENAME}}“ je dostupan na drugim jezicima.',
+	'mobile-frontend-language-header' => 'Ovaj članak je dostupan na $1 {{PLURAL:$1|jeziku|jezika|jezika}}', # Fuzzy
+	'mobile-frontend-language-footer' => 'Projekat „{{SITENAME}}“ je dostupan na drugim jezicima.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Pretraga jezika',
 	'mobile-frontend-language-site-nomatches' => 'Nema jezika koji odgovaraju zahtevu',
 	'mobile-frontend-username' => 'Korisničko ime:',
@@ -8683,7 +8754,8 @@ $messages['sr-el'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Pročitajte članak na',
 );
 
-/** Sundanese (Basa Sunda) */
+/** Sundanese (Basa Sunda)
+ */
 $messages['su'] = array(
 	'mobile-frontend-search-submit' => 'Jung',
 	'mobile-frontend-home-button' => 'Tepas',
@@ -8691,7 +8763,7 @@ $messages['su'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Balik ka Bagian Saméméhna',
 	'mobile-frontend-show-button' => 'Témbongkeun',
 	'mobile-frontend-hide-button' => 'Sumputkeun',
-	'mobile-frontend-regular-site' => 'Pidangkeun ieu kaca dina Wikipédia biasa',
+	'mobile-frontend-regular-site' => 'Pidangkeun ieu kaca dina Wikipédia biasa', # Fuzzy
 	'mobile-frontend-featured-article' => 'Artikel Petingan Poé Ieu',
 );
 
@@ -8841,7 +8913,7 @@ $messages['sw'] = array(
 	'mobile-frontend-leave-feedback-message' => 'Ujumbe:',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Jumla',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Maoni ya makala',
-	'mobile-frontend-leave-feedback-email-body' => 'Tafadhali andika anwani ya barua pepe juu ya laini hii.',
+	'mobile-frontend-leave-feedback-email-body' => 'Tafadhali andika anwani ya barua pepe juu ya laini hii.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Shida ya kimitambo',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Maoni ya ujumla',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Kunihusu mimi, mtu au kampuni ninayowakilisha',
@@ -8883,7 +8955,8 @@ $messages['sw'] = array(
 	'mobile-frontend-page-menu-language-heading' => 'Soma makala haya',
 );
 
-/** Silesian (ślůnski) */
+/** Silesian (ślůnski)
+ */
 $messages['szl'] = array(
 	'mobile-frontend-home-button' => 'Přodńo zajta',
 );
@@ -8910,7 +8983,7 @@ $messages['ta'] = array(
 	'mobile-frontend-close-section' => 'இப்பகுதியை மூடுக',
 	'mobile-frontend-show-button' => 'காட்டு',
 	'mobile-frontend-hide-button' => 'மறை',
-	'mobile-frontend-empty-homepage' => 'இந்த முகப்பு பக்கம் கைபேசி  தளத்திற்கேற்றார்போல் அமைக்கப்படவேண்டும். <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">விவரங்களுக்கு பார்க்க</a>',
+	'mobile-frontend-empty-homepage' => 'இந்த முகப்பு பக்கம் கைபேசி  தளத்திற்கேற்றார்போல் அமைக்கப்படவேண்டும். <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">விவரங்களுக்கு பார்க்க</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'இப்பக்கத்தை வழக்கமான {{SITENAME}} தளத்தில் காண',
 	'mobile-frontend-wml-continue' => 'தொடர்க...',
 	'mobile-frontend-wml-back' => 'பின்னால்...',
@@ -8943,7 +9016,7 @@ $messages['ta'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'தொழில்நுட்பக் கோளாறு / பின்னூட்டம்',
 	'mobile-frontend-leave-feedback-general-section-header' => 'பொது',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'கட்டுரைக்கான கருத்து',
-	'mobile-frontend-leave-feedback-email-body' => 'அருள்கூர்ந்து இந்த வரிக்கு மேல் உங்கள் மின்னஞ்சலை எழுதவும்.',
+	'mobile-frontend-leave-feedback-email-body' => 'அருள்கூர்ந்து இந்த வரிக்கு மேல் உங்கள் மின்னஞ்சலை எழுதவும்.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'தொழில்நுட்பக் கோளாறு',
 	'mobile-frontend-leave-feedback-general-link-text' => 'பொதுவான கருத்து',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'என்னையோ, ஒரு நபரையோ அல்லது நான் பிரதிநிதியாக இருக்கும் நிறுவனம் தொடர்பாக',
@@ -8961,7 +9034,7 @@ $messages['ta'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'தங்கள் தகவலைச் செயல்படுத்துவதில் ஒரு பிழை ஏற்பட்டுள்ளது. மீண்டும் முயற்சிக்கவும்.',
 	'mobile-frontend-language' => 'மொழி:',
 	'mobile-frontend-language-header' => 'இக்கட்டுரை $1 {{PLURAL:$1|மொழியில்|மொழிகளில்}} உள்ளது',
-	'mobile-frontend-language-footer' => 'ஏனைய மொழிகளில் {{SITENAME}} உள்ளது.',
+	'mobile-frontend-language-footer' => 'ஏனைய மொழிகளில் {{SITENAME}} உள்ளது.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'மொழியை தேடு',
 	'mobile-frontend-language-site-nomatches' => 'ஒத்துப்போகும் மொழிகள் இல்லை',
 	'mobile-frontend-username' => 'பயனர் பெயர்:',
@@ -9005,7 +9078,7 @@ $messages['te'] = array(
 	'mobile-frontend-close-section' => 'ఈ విభాగాన్ని మూసివేయుము',
 	'mobile-frontend-show-button' => 'చూపించు',
 	'mobile-frontend-hide-button' => 'దాచు',
-	'mobile-frontend-regular-site' => 'ఈ పేజీని మామూలు {{SITENAME}}లో చూడండి',
+	'mobile-frontend-regular-site' => 'ఈ పేజీని మామూలు {{SITENAME}}లో చూడండి', # Fuzzy
 	'mobile-frontend-wml-continue' => 'కొనసాగించు ...',
 	'mobile-frontend-wml-back' => 'వెనుకకు ...',
 	'mobile-frontend-view' => 'మొబైల్ వీక్షణ',
@@ -9027,7 +9100,7 @@ $messages['te'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'సాంకేతిక సమస్య',
 	'mobile-frontend-leave-feedback-general-section-header' => 'సాధారణం',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'వ్యాసంపై ప్రతిస్పందన',
-	'mobile-frontend-leave-feedback-email-body' => 'ఈ పంక్తిపైన మీ ఈమెయిల్‌ను రాయుము',
+	'mobile-frontend-leave-feedback-email-body' => 'ఈ పంక్తిపైన మీ ఈమెయిల్‌ను రాయుము', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'సాంకేతిక సమస్య',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'అనివార్య తప్పిదమునందు',
 	'mobile-frontend-leave-feedback-article-other-link-text' => 'ఇతర లోపము కొరకై',
@@ -9046,7 +9119,7 @@ $messages['te'] = array(
 	'mobile-frontend-username' => 'వాడుకరి పేరు:',
 	'mobile-frontend-password' => 'సంకేతపదం:',
 	'mobile-frontend-login' => 'ప్రవేశించండి',
-	'mobile-frontend-placeholder' => 'మీ శోధనపదమును ఇక్కడ రాయుము',
+	'mobile-frontend-placeholder' => 'మీ శోధనపదమును ఇక్కడ రాయుము', # Fuzzy
 	'mobile-frontend-search-help' => 'పైన శోధనపదమును రాసినచో, సంబంధిత సంచికలు ఇక్కడ కనిపించును',
 	'mobile-frontend-dismiss-notification' => 'ఈ చాటింపును తొలగించు',
 	'mobile-frontend-clear-search' => 'తుడిచివేయి',
@@ -9079,7 +9152,7 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Бозгашт Ба Қисмати A',
 	'mobile-frontend-show-button' => 'Намоиш',
 	'mobile-frontend-hide-button' => 'Нуҳуфтан',
-	'mobile-frontend-regular-site' => 'Намоиши ин саҳифа дар Википедиаи маъмулӣ',
+	'mobile-frontend-regular-site' => 'Намоиши ин саҳифа дар Википедиаи маъмулӣ', # Fuzzy
 	'mobile-frontend-view-desktop' => 'Компютер',
 	'mobile-frontend-view-mobile' => 'Мобил',
 	'mobile-frontend-off' => 'Хомӯш',
@@ -9090,7 +9163,8 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Шароити Истифода</a>',
 );
 
-/** Tajik (Latin script) (tojikī) */
+/** Tajik (Latin script) (tojikī)
+ */
 $messages['tg-latn'] = array(
 	'mobile-frontend-search-submit' => 'Birav',
 	'mobile-frontend-home-button' => 'Xona',
@@ -9111,15 +9185,16 @@ $messages['th'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'กลับไปที่หัวข้อ',
 	'mobile-frontend-show-button' => 'แสดง',
 	'mobile-frontend-hide-button' => 'ซ่อน',
-	'mobile-frontend-regular-site' => 'ดูหน้านี้ในวิกิพีเดียรุ่นปกติ',
+	'mobile-frontend-regular-site' => 'ดูหน้านี้ในวิกิพีเดียรุ่นปกติ', # Fuzzy
 	'mobile-frontend-view' => 'รุ่นโมบายล์',
 	'mobile-frontend-featured-article' => 'บทความคัดสรรวันนี้',
 	'mobile-frontend-news-items' => 'เรื่องจากข่าว',
-	'mobile-frontend-leave-feedback-message' => 'ข้อความ',
-	'mobile-frontend-language' => 'ภาษา',
+	'mobile-frontend-leave-feedback-message' => 'ข้อความ', # Fuzzy
+	'mobile-frontend-language' => 'ภาษา', # Fuzzy
 );
 
-/** Turkmen (Türkmençe) */
+/** Turkmen (Türkmençe)
+ */
 $messages['tk'] = array(
 	'mobile-frontend-search-submit' => 'Git',
 	'mobile-frontend-show-button' => 'Görkez',
@@ -9177,7 +9252,7 @@ $messages['tl'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Suliraning teknikal',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Pangkalahatan',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Tugon sa artikulo',
-	'mobile-frontend-leave-feedback-email-body' => 'Pakisulat ang e-liham mo sa ibabaw ng guhit na ito.',
+	'mobile-frontend-leave-feedback-email-body' => 'Pakisulat ang e-liham mo sa ibabaw ng guhit na ito.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Suliraning teknikal',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Pangkalahatang katugunan',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Tungkol sa akin, isang tao, o isang kumpanyang kinakatawan ko',
@@ -9196,7 +9271,7 @@ $messages['tl'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Nagkaroon ng kamalian sa pagsasagawa ng mensahe mo. Pakisubukan uli mamaya.',
 	'mobile-frontend-language' => 'Wika:',
 	'mobile-frontend-language-header' => 'Ang artikulong ito ay makukuhang nasa $1 {{PLURAL:$1|wika|mga wika}}',
-	'mobile-frontend-language-footer' => 'Ang {{SITENAME}} ay makukuha sa iba pang mga wika.',
+	'mobile-frontend-language-footer' => 'Ang {{SITENAME}} ay makukuha sa iba pang mga wika.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Maghanap ng wika',
 	'mobile-frontend-language-site-nomatches' => 'Walang tumutugmang mga wika',
 	'mobile-frontend-username' => 'Pangalan ng tagagamit:',
@@ -9248,7 +9323,8 @@ $messages['tly'] = array(
 	'mobile-frontend-opt-out-no-button' => 'Не',
 );
 
-/** Tok Pisin (Tok Pisin) */
+/** Tok Pisin (Tok Pisin)
+ */
 $messages['tpi'] = array(
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-home-button' => 'Fran pes',
@@ -9277,7 +9353,7 @@ $messages['tr'] = array(
 	'mobile-frontend-close-section' => 'Bu bölümü kapat',
 	'mobile-frontend-show-button' => 'Göster',
 	'mobile-frontend-hide-button' => 'Gizle',
-	'mobile-frontend-empty-homepage' => 'Bu ana sayfa yapılandırılmalıdır. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Devamını buradan okuyun</a>.',
+	'mobile-frontend-empty-homepage' => 'Bu ana sayfa yapılandırılmalıdır. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Devamını buradan okuyun</a>.', # Fuzzy
 	'mobile-frontend-regular-site' => 'Masaüstü görünümü',
 	'mobile-frontend-wml-continue' => 'Devamı...',
 	'mobile-frontend-wml-back' => 'Geri...',
@@ -9316,7 +9392,7 @@ $messages['tr'] = array(
 	'mobile-frontend-password' => 'Şifre:',
 	'mobile-frontend-login' => 'Oturum aç',
 	'mobile-frontend-logout' => 'Oturumu kapat',
-	'mobile-frontend-placeholder' => 'Buraya arayacağınız kelimeleri yazınız...',
+	'mobile-frontend-placeholder' => 'Buraya arayacağınız kelimeleri yazınız...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'bildirimi kapat',
 	'mobile-frontend-clear-search' => 'Temizle',
 	'mobile-frontend-privacy-link-text' => 'Gizlilik',
@@ -9330,6 +9406,13 @@ $messages['tr'] = array(
 	'mobile-frontend-main-menu-settings' => 'Ayarlar',
 );
 
+/** Turoyo (Ṫuroyo)
+ * @author Ariyo
+ */
+$messages['tru'] = array(
+	'mobile-frontend-language' => 'Leşono', # Fuzzy
+);
+
 /** Tatar (Cyrillic script) (татарча)
  * @author Ильнар
  */
@@ -9341,12 +9424,23 @@ $messages['tt-cyrl'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Бер бүлеккә артка',
 	'mobile-frontend-show-button' => 'Күрсәтү',
 	'mobile-frontend-hide-button' => 'Яшерү',
-	'mobile-frontend-regular-site' => 'Сәхифәне гади {{SITENAME}} сәхифәсендә карау',
+	'mobile-frontend-regular-site' => 'Сәхифәне гади {{SITENAME}} сәхифәсендә карау', # Fuzzy
 	'mobile-frontend-view' => 'Мобиль юрама',
 	'mobile-frontend-featured-article' => 'Көннең сайланган мәкаләсе',
 );
 
-/** Uyghur (Arabic script) (ئۇيغۇرچە) */
+/** Tati (Tati)
+ * @author Erdemaslancan
+ */
+$messages['ttt'] = array(
+	'mobile-frontend-search-submit' => 'Buşu',
+	'mobile-frontend-home-button' => 'Keye',
+	'mobile-frontend-opt-in-yes-button' => 'De',
+	'mobile-frontend-opt-in-no-button' => 'Ne',
+);
+
+/** Uyghur (Arabic script) (ئۇيغۇرچە)
+ */
 $messages['ug-arab'] = array(
 	'mobile-frontend-search-submit' => 'يۆتكەل',
 	'mobile-frontend-home-button' => 'باش بەت',
@@ -9354,7 +9448,7 @@ $messages['ug-arab'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'كەينىگە بىر ئابزاس داجى',
 	'mobile-frontend-show-button' => 'كۆرسەت',
 	'mobile-frontend-hide-button' => 'يوشۇر',
-	'mobile-frontend-regular-site' => 'بۇ بەتنى ئەسلى {{SITENAME}} دا كۆرسەت',
+	'mobile-frontend-regular-site' => 'بۇ بەتنى ئەسلى {{SITENAME}} دا كۆرسەت', # Fuzzy
 	'mobile-frontend-featured-article' => 'بۈگۈنكى ئالاھىدە ماقالە',
 );
 
@@ -9382,7 +9476,7 @@ $messages['uk'] = array(
 	'mobile-frontend-close-section' => 'Закрити цей розділ',
 	'mobile-frontend-show-button' => 'Показати',
 	'mobile-frontend-hide-button' => 'Сховати',
-	'mobile-frontend-empty-homepage' => 'Ця домашня сторінка потребує налаштування. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Тут можна прочитати про це докладніше</a>',
+	'mobile-frontend-empty-homepage' => 'Ця домашня сторінка потребує налаштування. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Тут можна прочитати про це докладніше</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Стандартний вигляд сторінки',
 	'mobile-frontend-wml-continue' => 'Далі...',
 	'mobile-frontend-wml-back' => 'Назад...',
@@ -9396,7 +9490,7 @@ $messages['uk'] = array(
 	'mobile-frontend-opt-out-message' => 'Ви хочете облишити бета-тестування мобільного інтерфейсу?',
 	'mobile-frontend-opt-out-yes-button' => 'так',
 	'mobile-frontend-opt-out-no-button' => 'ні',
-	'mobile-frontend-opt-out-explain' => 'Це дозволить вам залишити тест',
+	'mobile-frontend-opt-out-explain' => 'Це дозволить вам залишити тест', # Fuzzy
 	'mobile-frontend-images-status' => 'Зображення',
 	'mobile-frontend-disable-images' => 'Вимкнути зображення на мобільному сайті',
 	'mobile-frontend-enable-images' => 'Увімкнути зображення на мобільному сайті',
@@ -9414,7 +9508,7 @@ $messages['uk'] = array(
 	'mobile-frontend-leave-feedback' => 'Залишити відгук',
 	'mobile-frontend-leave-feedback-title' => 'Залиште для нас власний відгук про мобільний інтерфейс',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Загальні',
-	'mobile-frontend-leave-feedback-email-body' => 'Будь ласка, напишіть свою адресу електронної пошти, вище цієї лінії.',
+	'mobile-frontend-leave-feedback-email-body' => 'Будь ласка, напишіть свою адресу електронної пошти, вище цієї лінії.', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Технічна проблема',
 	'mobile-frontend-leave-feedback-general-link-text' => "Загальний зворотній зв'язок",
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Тема повідомлення',
@@ -9432,7 +9526,7 @@ $messages['uk'] = array(
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Увійти',
 	'mobile-frontend-logout' => 'Вийти',
-	'mobile-frontend-placeholder' => 'Введіть пошуковий запит тут...',
+	'mobile-frontend-placeholder' => 'Введіть пошуковий запит тут...', # Fuzzy
 	'mobile-frontend-search-help' => 'Введіть вище термін, що шукаєте, і тут будуть показані заголовки статей, що співпадають.',
 	'mobile-frontend-clear-search' => 'Очистити',
 	'mobile-frontend-privacy-link-text' => 'Конфіденційність',
@@ -9468,7 +9562,7 @@ $messages['ur'] = array(
 	'mobile-frontend-close-section' => 'اس سیکشن میں بند',
 	'mobile-frontend-show-button' => 'دکھاؤ',
 	'mobile-frontend-hide-button' => 'چُھپاؤ',
-	'mobile-frontend-regular-site' => 'یہ صفحہ اصل ویکیپیڈیا پر ملاحظہ کیجئے',
+	'mobile-frontend-regular-site' => 'یہ صفحہ اصل ویکیپیڈیا پر ملاحظہ کیجئے', # Fuzzy
 	'mobile-frontend-view' => 'موبائل دیکھیں',
 	'mobile-frontend-view-desktop' => 'ڈیسک ٹاپ',
 	'mobile-frontend-view-mobile' => 'موبائل',
@@ -9508,14 +9602,15 @@ $messages['uz'] = array(
 	'mobile-frontend-view' => 'Mobil versiya',
 );
 
-/** vèneto (vèneto) */
+/** vèneto (vèneto)
+ */
 $messages['vec'] = array(
 	'mobile-frontend-search-submit' => 'Và',
 	'mobile-frontend-home-button' => 'Inissio',
 	'mobile-frontend-random-button' => 'A caso',
 	'mobile-frontend-show-button' => 'Mostra',
 	'mobile-frontend-hide-button' => 'Scondi',
-	'mobile-frontend-regular-site' => 'Varda sta pagina su la {{SITENAME}} normale',
+	'mobile-frontend-regular-site' => 'Varda sta pagina su la {{SITENAME}} normale', # Fuzzy
 	'mobile-frontend-featured-article' => 'Vetrina',
 );
 
@@ -9535,9 +9630,9 @@ $messages['vep'] = array(
 	'mobile-frontend-opt-out-yes-button' => 'Ka',
 	'mobile-frontend-opt-out-no-button' => 'Ei',
 	'mobile-frontend-news-items' => 'Uzištusiš',
-	'mobile-frontend-leave-feedback-subject' => 'Tem',
-	'mobile-frontend-leave-feedback-message' => 'Tedotuz',
-	'mobile-frontend-language' => 'Kel’',
+	'mobile-frontend-leave-feedback-subject' => 'Tem', # Fuzzy
+	'mobile-frontend-leave-feedback-message' => 'Tedotuz', # Fuzzy
+	'mobile-frontend-language' => 'Kel’', # Fuzzy
 	'mobile-frontend-password' => 'Peitsana:',
 );
 
@@ -9666,7 +9761,8 @@ $messages['vo'] = array(
 	'mobile-frontend-language' => 'Pük:',
 );
 
-/** Võro (Võro) */
+/** Võro (Võro)
+ */
 $messages['vro'] = array(
 	'mobile-frontend-search-submit' => 'Mineq',
 	'mobile-frontend-home-button' => 'Pääleht',
@@ -9674,21 +9770,23 @@ $messages['vro'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Mineq tagasi	 jakko A',
 	'mobile-frontend-show-button' => 'Näütäq',
 	'mobile-frontend-hide-button' => 'Käkiq',
-	'mobile-frontend-regular-site' => 'Näütäq seod lehte hariligun Vikipeediän',
+	'mobile-frontend-regular-site' => 'Näütäq seod lehte hariligun Vikipeediän', # Fuzzy
 	'mobile-frontend-featured-article' => 'Täämbädse päävä artikli',
 );
 
-/** Wolof (Wolof) */
+/** Wolof (Wolof)
+ */
 $messages['wo'] = array(
 	'mobile-frontend-search-submit' => 'Ayca',
 	'mobile-frontend-home-button' => ' xët wu njëkk',
 	'mobile-frontend-show-button' => 'Wone',
 	'mobile-frontend-hide-button' => 'Nëbb',
-	'mobile-frontend-regular-site' => 'Wone xët wi ci {{SITENAME}} wees baaxoo',
+	'mobile-frontend-regular-site' => 'Wone xët wi ci {{SITENAME}} wees baaxoo', # Fuzzy
 	'mobile-frontend-featured-article' => 'Jukkib bés bi',
 );
 
-/** Kalmyk (хальмг) */
+/** Kalmyk (хальмг)
+ */
 $messages['xal'] = array(
 	'mobile-frontend-search-submit' => 'Ор',
 	'mobile-frontend-home-button' => 'Герт',
@@ -9696,11 +9794,12 @@ $messages['xal'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Хүвәр хәрү',
 	'mobile-frontend-show-button' => 'Үзүлх',
 	'mobile-frontend-hide-button' => 'Бултулх',
-	'mobile-frontend-regular-site' => 'Кирин Бикипедин халх хәләх',
+	'mobile-frontend-regular-site' => 'Кирин Бикипедин халх хәләх', # Fuzzy
 	'mobile-frontend-featured-article' => 'Өдрә суңһгдсн халх',
 );
 
-/** Mingrelian (მარგალური) */
+/** Mingrelian (მარგალური)
+ */
 $messages['xmf'] = array(
 	'mobile-frontend-show-button' => 'ძირაფა',
 	'mobile-frontend-hide-button' => 'ტყობინაფა',
@@ -9808,7 +9907,7 @@ $messages['yo'] = array(
 	'mobile-frontend-random-button' => 'Ojúewé àrìnnàkò',
 	'mobile-frontend-show-button' => 'Fihàn',
 	'mobile-frontend-hide-button' => 'Bòmọ́lẹ̀',
-	'mobile-frontend-language' => 'Èdè',
+	'mobile-frontend-language' => 'Èdè', # Fuzzy
 	'mobile-frontend-username' => 'Orúkọ oníṣe:',
 );
 
@@ -9819,7 +9918,7 @@ $messages['yue'] = array(
 	'mobile-frontend-back-to-top-of-section' => '番去上一章',
 	'mobile-frontend-show-button' => '打開',
 	'mobile-frontend-hide-button' => '收埋',
-	'mobile-frontend-regular-site' => '喺正常嘅{{SITENAME}}睇呢版',
+	'mobile-frontend-regular-site' => '喺正常嘅{{SITENAME}}睇呢版', # Fuzzy
 	'mobile-frontend-view' => '流動版',
 	'mobile-frontend-disable-images' => '喺手機版唔睇圖',
 );
@@ -9889,7 +9988,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => '技术问题',
 	'mobile-frontend-leave-feedback-general-section-header' => '普通',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => '条目反馈',
-	'mobile-frontend-leave-feedback-email-body' => '请在本行上面输入你的电子邮件。',
+	'mobile-frontend-leave-feedback-email-body' => '请在本行上面输入你的电子邮件。', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => '技术问题',
 	'mobile-frontend-leave-feedback-general-link-text' => '普通反馈',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => '关于我，我代表的人或我代表的公司',
@@ -9908,7 +10007,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-leave-feedback-post-error' => '处理你的信息时出错。请稍候重试。',
 	'mobile-frontend-language' => '语言：',
 	'mobile-frontend-language-header' => '本条目的$1版',
-	'mobile-frontend-language-footer' => '{{SITENAME}}也有其他语言版本。',
+	'mobile-frontend-language-footer' => '{{SITENAME}}也有其他语言版本。', # Fuzzy
 	'mobile-frontend-language-site-choose' => '搜索语言',
 	'mobile-frontend-language-site-nomatches' => '没有匹配的语言',
 	'mobile-frontend-username' => '用户名：',
@@ -10000,7 +10099,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => '技術問題',
 	'mobile-frontend-leave-feedback-general-section-header' => '一般',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => '條目意見',
-	'mobile-frontend-leave-feedback-email-body' => '請在這條線上填上您的電子郵件，。',
+	'mobile-frontend-leave-feedback-email-body' => '請在這條線上填上您的電子郵件，。', # Fuzzy
 	'mobile-frontend-leave-feedback-technical-link-text' => '技術問題',
 	'mobile-frontend-leave-feedback-general-link-text' => '一般意見',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => '我代表一個人或一家公司',
@@ -10019,7 +10118,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-leave-feedback-post-error' => '在處理的過程中出錯。請稍後再試。',
 	'mobile-frontend-language' => '語言:',
 	'mobile-frontend-language-header' => '本條目在$1個語言提供',
-	'mobile-frontend-language-footer' => '{{SITENAME}}的其他語言版本。',
+	'mobile-frontend-language-footer' => '{{SITENAME}}的其他語言版本。', # Fuzzy
 	'mobile-frontend-language-site-choose' => '搜索語言',
 	'mobile-frontend-language-site-nomatches' => '沒有匹配的語言',
 	'mobile-frontend-username' => '用戶名：',
@@ -10068,4 +10167,3 @@ $messages['zh-hk'] = array(
 	'mobile-frontend-view' => '流動瀏覽',
 	'mobile-frontend-disable-images' => '在流動版停用圖像',
 );
-
