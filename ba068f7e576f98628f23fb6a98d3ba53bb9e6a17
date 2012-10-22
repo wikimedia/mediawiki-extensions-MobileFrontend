@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//8ec\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-22T22:02:13Z",
+      "side": 1,
+      "message": "should probably just remove these instead of commenting out\nwe can always refer to history to get these back if we ever want to.",
+      "revId": "ba068f7e576f98628f23fb6a98d3ba53bb9e6a17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
