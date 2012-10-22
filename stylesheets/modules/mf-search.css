@@ -67,7 +67,12 @@ input.search.searching {
 .full-screen-search #mw-mf-header {
   z-index: 2;
   color: white;
-  background-color: #fafafa;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -ms-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
+  background-image: linear-gradient(#fafafa, #f3f3f3);
 }
 .full-screen-search #results,
 .full-screen-search #mw-mf-searchForm.notEmpty .clearlink,
