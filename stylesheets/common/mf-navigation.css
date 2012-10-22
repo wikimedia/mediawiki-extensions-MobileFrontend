@@ -70,6 +70,7 @@ input[type=submit].languageSelector {
   background-image: /* @embed */ url(images/menu/main.png);
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
+  -moz-background-size: 24px 30px;
   -o-background-size: 24px 30px;
   -webkit-background-size: 24px 30px;
   background-size: 24px 30px;
@@ -170,6 +171,7 @@ input[type=submit].languageSelector {
   background-repeat: no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
+  -moz-background-size: 24px 24px;
   -o-background-size: 24px 24px;
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
@@ -295,6 +297,7 @@ html.overlay li:hover {
 
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
+  -moz-background-size: 98px 98px;
   -o-background-size: 98px 98px;
   -webkit-background-size: 98px 98px;
   background-size: 98px 98px;
@@ -309,6 +312,7 @@ html.overlay li:hover {
   background-position: -78px center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
+  -moz-background-size: auto 64px;
   -o-background-size: auto 64px;
   -webkit-background-size: auto 64px;
   background-size: auto 64px;
@@ -374,6 +378,7 @@ button.escapeOverlay {
   text-indent: -999px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
+  -moz-background-size: auto 30px;
   -o-background-size: auto 30px;
   -webkit-background-size: auto 30px;
   background-size: auto 30px;
