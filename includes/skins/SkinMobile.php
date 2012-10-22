@@ -420,9 +420,7 @@ HTML;
 
 class SkinMobileTemplate extends BaseTemplate {
 	public function renderArticleSkin() {
-		if ( $this->data['isBetaGroupMember'] ) {
-			$this->navigationStart();
-		}
+		$this->navigationStart();
 		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<?php $this->html( 'notice' ) ?>
@@ -569,9 +567,11 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
+			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<li class='icon6'>
 				<?php $this->html( 'logInOut' ) ?>
 			</li>
+			<?php } ?>
 		</ul>
 		</div>
 		</div>
