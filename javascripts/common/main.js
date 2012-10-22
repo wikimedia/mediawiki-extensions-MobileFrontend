@@ -10,7 +10,7 @@ if ( document.addEventListener ) {
 		domLoaded = true;
 		_mwLogEvent( 'DOMContentLoaded' );
 		mw.mobileFrontend.init();
-	} );
+	}, false );
 }
 
 window.onload = function() {
