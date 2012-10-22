@@ -1,3 +1,8 @@
 body.live input.search {
 	margin-top: 0 !important;
 }
+
+input.searchSubmit {
+	padding-top: 0;
+	padding-bottom: 0;
+}
