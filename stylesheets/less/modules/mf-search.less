@@ -14,11 +14,15 @@ html.jsSearch {
 	}
 }
 
+@inputThirdHeight: round( @searchBoxHeight / 3 ) - 1;
+
 input.searchSubmit {
 	position: absolute;
 	top: @searchMarginTop + 1px;
 	right: 0;
-	height: @searchBoxHeight - ( @searchBorderHeight * 2 ) - 2px;
+	padding-top: @inputThirdHeight;
+	padding-bottom: @inputThirdHeight;
+	font-size: @inputThirdHeight;
 }
 
 input.search {
