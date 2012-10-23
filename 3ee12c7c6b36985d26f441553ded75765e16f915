@@ -16,6 +16,24 @@
       "revId": "3ee12c7c6b36985d26f441553ded75765e16f915",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//7j8\u003d",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-23T21:10:16Z",
+      "side": 1,
+      "message": "Ah good catch, my error log settings must need tweaking. This should use \u0027set\u0027 rather than \u0027setRef\u0027 indeed.",
+      "parentUuid": "AAABFX//7kQ\u003d",
+      "revId": "3ee12c7c6b36985d26f441553ded75765e16f915",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
