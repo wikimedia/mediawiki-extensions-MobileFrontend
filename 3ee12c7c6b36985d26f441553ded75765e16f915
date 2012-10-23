@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//7kQ\u003d",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-23T21:08:36Z",
+      "side": 1,
+      "message": "this is causing errors in my locla machine\n: Strict Standards: Only variables should be passed by reference in /Users/jrobson/Sites/w/extensions/MobileFrontend/includes/skins/SkinMobileBase.php on line 100",
+      "revId": "3ee12c7c6b36985d26f441553ded75765e16f915",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
