@@ -445,6 +445,19 @@ body {
     font-size: 0.8em;
   }
 }
+@media all and (min-width: 700px) {
+  .navigationEnabled .beta #mw-mf-page-left {
+    width: 20%;
+    display: block;
+    right: 80%;
+  }
+  .navigationEnabled .beta #mw-mf-page-center {
+    left: 20%;
+    right: 0;
+    width: 80%;
+    overflow: auto;
+  }
+}
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
   overflow-y: auto;
 }

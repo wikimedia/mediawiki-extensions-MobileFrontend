@@ -426,6 +426,22 @@ body {
 	}
 }
 
+@media all and (min-width: 700px) {
+	.navigationEnabled .beta {
+		#mw-mf-page-left {
+			width: 20%;
+			display: block;
+			right: 80%;
+		}
+		#mw-mf-page-center {
+			left: 20%;
+			right: 0;
+			width: 80%;
+			overflow: auto;
+		}
+	}
+}
+
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
 	overflow-y: auto;
 }
