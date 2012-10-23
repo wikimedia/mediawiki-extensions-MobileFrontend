@@ -1,5 +1,5 @@
 html {
-  font-size: 100%;
+  font-size: 90%;
   /* default browser size is 16px (12pt - our @baseFontSize) */
 
 }
@@ -26,28 +26,28 @@ h3 button,
 h4 button,
 h5 button,
 h6 button {
-  height: 24pt;
+  height: 22pt;
 }
 p {
   margin-bottom: 8pt;
 }
 h1 {
   font-size: 1.833em;
-  line-height: 24pt;
+  line-height: 22pt;
   color: black;
 }
 h2 {
   font-size: 1.5em;
   /* 18pt */
 
-  line-height: 24pt;
+  line-height: 22pt;
 }
 h3 {
   font-size: 1.1666666666666665em;
   /* 14pt */
 
-  line-height: 24pt;
-  font-style: italic;
+  line-height: 22pt;
+  font-weight: bold;
   margin-bottom: 8pt;
 }
 h4 {
