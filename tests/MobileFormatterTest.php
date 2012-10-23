@@ -25,6 +25,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$summarySection = '<div id="content_0" class="content_block openSection"></div>';
+		$anchor = '<a id="anchor_1" href="#section_1" class="section_anchors back_to_top">&#8593;Jump back a section</a>';
+
 		return array(
 			// down with infoboxes
 			array(
@@ -53,7 +55,8 @@ Foobar!</div></div></div>',
  	 </h2>' . $longLine,
 				$summarySection.
 				'<div class="section"><h2 class="section_heading" id="section_1"><span id="Forty-niners">Forty-niners</span></h2><div class="content_block" id="content_1">'
-					. $longLine . '</div></div>',
+					. $longLine . '</div>'
+					. $anchor . '</div>',
 				$enableSections
 			),
 			// Bug 36670
@@ -62,7 +65,9 @@ Foobar!</div></div></div>',
 					. $longLine,
 				$summarySection.
 				'<div class="section"><h2 class="section_heading" id="section_1"><span id="History"><span id="Overview"></span>History</span></h2><div class="content_block" id="content_1">'
-					. $longLine . '</div></div>',
+					. $longLine . '</div>'
+					. $anchor
+					. '</div>',
 				$enableSections
 			),
 		);
