@@ -63,9 +63,7 @@ $autoloadClasses = array (
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
-	if ( !isset( $wgAutoloadClasses[$className] ) ) {
-		$wgAutoloadClasses[$className] = "$cwd/includes/$classFilename.php";
-	}
+	$wgAutoloadClasses[$className] = "$cwd/includes/$classFilename.php";
 }
 
 $wgExtensionFunctions[] = 'efMobileFrontend_Setup';
