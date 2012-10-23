@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//7zo\u003d",
+        "filename": "includes/HtmlFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-10-23T18:07:39Z",
+      "side": 1,
+      "message": "Can we avoid extra loops by making it array( \u0027*\u0027 \u003d\u003e array( \u0027cellspacing\u0027, \u0027align\u0027, ... )?",
+      "revId": "8ee688cefc4c8a7b4f5f361f719b4c15e3e0a098",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
