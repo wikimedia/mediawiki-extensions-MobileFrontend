@@ -144,9 +144,14 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
 
-		$returnToTitle =  $this->getRequest()->getText( 'returnto' );
-		if ( $returnToTitle ) {
-			$rtnUrl = Title::newFromText( $returnToTitle )->getLocalURL();
+		$returnTo = $this->getRequest()->getText( 'returnto' );
+		if ( $returnTo !== '' ) {
+			$returnToTitle = Title::newFromText( $returnTo );
+			if ( $returnToTitle ) {
+				$rtnUrl = $returnToTitle->getLocalURL();
+			} else {
+				$rtnUrl = Title::newMainPage()->getLocalUrl();
+			}
 		} else {
 			$rtnUrl = Title::newMainPage()->getLocalUrl();
 		}
