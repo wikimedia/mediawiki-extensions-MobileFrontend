@@ -69,6 +69,9 @@ sup {
 #content_wrapper .section h3:first-child {
   margin-top: 0;
 }
+#content_wrapper .section:last-child {
+  border-bottom: none;
+}
 #content_wrapper .thumb {
   border: 1px solid #cccccc;
   -webkit-border-radius: 5px;
@@ -82,7 +85,7 @@ input.search {
   font-size: 1em;
 }
 #footer {
-  margin-top: 5px;
+  margin-top: 14pt;
 }
 @media all and (max-width: 280px) {
   body {

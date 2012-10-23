@@ -70,6 +70,9 @@ sup {
 		h3:first-child {
 			margin-top: 0;
 		}
+		&:last-child {
+			border-bottom: none;
+		}
 	}
 
 	.thumb {
@@ -88,7 +91,7 @@ input.search {
 }
 
 #footer {
-	margin-top: 5px;
+	margin-top: @headingMarginTop;
 }
 
 @media all and (max-width: 280px) {
