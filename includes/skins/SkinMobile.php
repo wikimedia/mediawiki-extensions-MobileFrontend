@@ -444,9 +444,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	</div>
 		<?php $this->footer() ?>
 		<?php
-		if ( $this->data['isBetaGroupMember'] ) {
 			$this->navigationEnd();
-		}
 	}
 
 	public function renderOverlaySkin() {
