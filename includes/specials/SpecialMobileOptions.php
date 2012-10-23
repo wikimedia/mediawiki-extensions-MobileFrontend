@@ -176,8 +176,14 @@ HTML;
 		$context->setDisableImagesCookie( $imagesDisabled );
 		$context->setOptInOutCookie( $inBeta ? '1' : '' );
 		$context->setBetaGroupMember( $inBeta );
-		$url = $this->getTitle()->getFullURL( 'success' );
-		$context->getOutput()->redirect( $request->getText( 'returnto' ) );
+
+		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
+		if ( $returnToTitle ) {
+			$url = $returnToTitle->getFullURL();
+		} else {
+			$url = $this->getTitle()->getFullURL( 'success' );
+		}
+		$context->getOutput()->redirect( $url );
 	}
 
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
