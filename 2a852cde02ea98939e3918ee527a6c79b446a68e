@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//7zA\u003d",
+        "filename": "includes/HtmlFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-10-23T18:12:41Z",
+      "side": 1,
+      "message": "align is already cleaned up by Sanitizer",
+      "revId": "2a852cde02ea98939e3918ee527a6c79b446a68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//7y8\u003d",
+        "filename": "includes/HtmlFormatter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-10-23T18:12:41Z",
+      "side": 1,
+      "message": "style is not related to HTML5 validation in any way, and the breakage would be HUGE",
+      "revId": "2a852cde02ea98939e3918ee527a6c79b446a68e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
