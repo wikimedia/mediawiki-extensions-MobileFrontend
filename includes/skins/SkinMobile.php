@@ -202,7 +202,7 @@ mediawiki.hidpi' ), 'scripts', true, true );
 				'alt' => "{$footerSitename}"
 			) );
 		} else {
-			$license = Html::element( 'div', array( 'class' => 'license' ),
+			$license = Html::element( 'span', array( 'class' => 'license' ),
 				"{$footerSitename}"
 			);
 		}
@@ -520,6 +520,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				echo $this->renderArticleSkin();
 			}
 		?>
+
 		<?php $this->html( 'bcHack' ) ?>
 		<?php $this->html( 'bottomScripts' ) ?>
 	</body>
