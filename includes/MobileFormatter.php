@@ -195,6 +195,18 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
+	 * generates a back top link for a given section number
+	 * @param number The number corresponding to the section heading
+	 * @return string
+	 */
+	private function backToTopLink( $headingNumber ) {
+		return Html::rawElement( 'a',
+				array( 'id' => 'anchor_' . $headingNumber,
+					'href' => '#section_' . $headingNumber,
+					'class' => 'section_anchors back_to_top' ),
+				'&#8593;' . $this->msg( 'mobile-frontend-back-to-top-of-section' ) );
+	}
+	/**
 	 * Callback for headingTransform()
 	 * @param array $matches
 	 * @return string
@@ -207,14 +219,9 @@ class MobileFormatter extends HtmlFormatter {
 
 		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
 
-		$backToTop = $this->msg( 'mobile-frontend-back-to-top-of-section' );
 		$this->headings++;
 		// Back to top link
-		$backToTop = Html::rawElement( 'a',
-				array( 'id' => 'anchor_' . intval( $this->headings - 1 ),
-					'href' => '#section_' . intval( $this->headings - 1 ),
-					'class' => 'section_anchors back_to_top' ),
-				'&#8593;' . $backToTop );
+		$backToTop = $this->backToTopLink( intval( $this->headings - 1 ) );
 
 		// generate the HTML we are going to inject
 		if ( $this->headings === 1 ) {
@@ -327,6 +334,7 @@ class MobileFormatter extends HtmlFormatter {
 		// if we had any, make sure to close the whole thing!
 		if ( $this->headings > 0 ) {
 			$s .= '</div>' // <div class="content_block">
+				. $this->backToTopLink( intval( $this->headings ) )
 				. "\n</div>"; // <div class="section">
 		}
 		wfProfileOut( __METHOD__ );
