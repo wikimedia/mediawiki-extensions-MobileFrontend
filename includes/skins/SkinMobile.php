@@ -440,7 +440,9 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
 			<?php $this->html( 'languageSelection' ) ?>
-		</div>
+		<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
+			</div>
+		<?php } ?>
 	</div>
 		<?php $this->footer() ?>
 		<?php
