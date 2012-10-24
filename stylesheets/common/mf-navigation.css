@@ -461,3 +461,28 @@ body {
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
   overflow-y: auto;
 }
+/* Page actions */
+.hasSecondaryNav #mw-mf-searchForm {
+  padding-right: 50px;
+}
+.hasSecondaryNav #mw-mf-menu-page {
+  width: 30px;
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  bottom: 0;
+}
+.hasSecondaryNav #mw-mf-menu-page a {
+  height: 30px;
+  width: 30px;
+}
+.hasSecondaryNav #mw-mf-menu-page a.watch-this-article {
+  top: 0;
+  right: 0;
+  position: relative;
+  display: block;
+  background-position: 8px 4px;
+}
+.hasSecondaryNav #mw-mf-menu-page a.watch-this-article.watched {
+  background-position: -22px 4px;
+}
