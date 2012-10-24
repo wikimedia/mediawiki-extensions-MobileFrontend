@@ -461,7 +461,3 @@ body {
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
   overflow-y: auto;
 }
-.navigationEnabled #mw-mf-ribbon.supportsPositionFixed.navigationEnabled #mw-mf-header {
-  left: 80%;
-  right: -80%;
-}
