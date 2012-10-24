@@ -55,9 +55,24 @@ MobileFrontend.navigation = (function( $ ) {
 		return $( '#mw-mf-menu-page' )[ 0 ];
 	}
 
+	function enableEditing( title ) {
+		$( '#mw-mf-edit-page-link' ).remove();
+		if ( title &&
+				title.indexOf( ':' ) === -1 && // FIXME: hack
+				M.setting( 'action' ) !== 'edit' ) {
+			$( '<a id="mw-mf-edit-page-link">' ).text( 'edit' ).attr( 'href',
+				M.setting( 'pageUrl' ).replace( '$1', title + '?action=edit' ) ).
+				prependTo( '#content_wrapper' );
+		}
+	}
+
 	function init() {
 		if ( M.setting( 'beta' ) ) {
 			enableArticleActions();
+
+			$( window ).bind( 'mw-mf-page-loaded', function( ev, curPage ) {
+				enableEditing( curPage.title );
+			} );
 		}
 
 		var headerHeight = $( '#mw-mf-header' ).height(),
