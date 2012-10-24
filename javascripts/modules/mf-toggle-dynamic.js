@@ -65,7 +65,9 @@ var T = ( function() {
 			$this.find( 'a' ).on( 'click', function( ev ) {
 				ev.preventDefault();
 			} );
-			$( '<button>' ).text( showLabel ).prependTo( this );
+			$( '<button>' ).text( showLabel ).click( function( ev ) {
+				ev.preventDefault();
+				} ).prependTo( this );
 			$this.on( 'click', openSectionHandler );
 		} );
 		// disable links
@@ -95,6 +97,7 @@ var T = ( function() {
 	return {
 		wm_reveal_for_hash: wm_reveal_for_hash,
 		wm_toggle_section: wm_toggle_section,
+		enableToggling: enableToggling,
 		init: init
 	};
 

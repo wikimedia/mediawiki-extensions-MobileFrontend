@@ -58,11 +58,28 @@
 }
 
 #editform {
+	textarea.section_heading {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		line-height: normal;
+	}
+
 	textarea,
 	input.mw-summary {
 		.box-sizing( border-box );
 		width: 100%;
 		border: solid 1px #ccc;
+	}
+	
+	.content_block,
+	.section_heading {
+		input {
+			border: none;
+			margin: 0;
+			font-size: 1em;
+			position: relative;
+			width: 60%; //iphone has width of 100% by default - leave space for buttons
+		}
 	}
 
 	// temporary whilst save is the only button shown on edit page

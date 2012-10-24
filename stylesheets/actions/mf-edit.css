@@ -57,6 +57,11 @@
   display: inline;
   margin-right: 8px;
 }
+#editform textarea.section_heading {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: normal;
+}
 #editform textarea,
 #editform input.mw-summary {
   -moz-box-sizing: border-box;
@@ -65,6 +70,14 @@
   box-sizing: border-box;
   width: 100%;
   border: solid 1px #ccc;
+}
+#editform .content_block input,
+#editform .section_heading input {
+  border: none;
+  margin: 0;
+  font-size: 1em;
+  position: relative;
+  width: 60%;
 }
 #editform #wpSave {
   display: block;
