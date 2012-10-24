@@ -1,3 +1,14 @@
+.jsEnabled.page-loading.actionEdit #content_wrapper {
+  height: 48px;
+  padding-left: 48px;
+  line-height: 48px;
+  background-image: url(../modules/images/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.jsEnabled.page-loading.actionEdit #content_wrapper #content {
+  display: none;
+}
 #mw-anon-edit-warning {
   background: none;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
@@ -22,6 +33,14 @@
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+.loader {
+  height: 48px;
+  padding-left: 48px;
+  line-height: 48px;
+  background-image: url(../modules/images/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 .templatesUsed,
 #editpage-copywarn {

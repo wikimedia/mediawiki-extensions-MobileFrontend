@@ -1,5 +1,24 @@
 @import "../mf-mixins.less";
 
+.ajaxLoader() {
+	height: 48px;
+	padding-left: 48px;
+	line-height: 48px;
+	background-image: url(../modules/images/ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.jsEnabled.page-loading.actionEdit {
+	#content_wrapper {
+		.ajaxLoader();
+
+		#content {
+			display: none;
+		}
+	}
+}
+
 #mw-anon-edit-warning {
 	background: none;
 	.background-size( auto 50px );
@@ -16,6 +35,10 @@
 	width: 100%;
 	color: black;
 	.box-sizing( border-box );
+}
+
+.loader {
+	.ajaxLoader();
 }
 
 .templatesUsed,

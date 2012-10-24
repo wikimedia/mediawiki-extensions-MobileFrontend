@@ -143,6 +143,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-random.js',
+		'javascripts/actions/mf-edit.js', // FIXME: only serve when action=edit
 		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,

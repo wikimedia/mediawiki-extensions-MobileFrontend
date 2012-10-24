@@ -477,6 +477,9 @@ class SkinMobileTemplate extends BaseTemplate {
 		if ( $this->data['renderLeftMenu'] ) {
 			$htmlClass .= 'navigationEnabled navigationFullScreen';
 		}
+		if ( $this->data['action'] == 'edit' ) {
+			$htmlClass .= ' actionEdit';
+		}
 		$this->set( 'htmlClasses', trim( $htmlClass ) );
 
 		?><!doctype html>
@@ -592,6 +595,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'mobile-frontend-ajax-random-yes' => wfMessage( 'mobile-frontend-ajax-random-yes' )->text(),
 				'mobile-frontend-ajax-random-retry' => wfMessage( 'mobile-frontend-ajax-random-retry' )->text(),
 				'mobile-frontend-ajax-page-loading' => wfMessage( 'mobile-frontend-ajax-page-loading' )->text(),
+				'mobile-frontend-page-saving' => wfMessage('mobile-frontend-page-saving' )->text(),
 				'mobile-frontend-ajax-page-error' => wfMessage( 'mobile-frontend-ajax-page-error' )->text(),
 				'mobile-frontend-meta-data-issues' => wfMessage( 'mobile-frontend-meta-data-issues' )->text(),
 				'mobile-frontend-meta-data-issues-header' => wfMessage( 'mobile-frontend-meta-data-issues-header' )->text(),
