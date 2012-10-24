@@ -198,8 +198,11 @@ class MobileContext extends ContextSource {
 		$action = $this->getAction();
 		$req = $this->getRequest();
 		$isDiff = $req->getText( 'diff' );
+		if ( $action === 'edit' && !$this->isBetaGroupMember() ) {
+			return false;
+		}
 
-		if ( $action === 'edit' || $action === 'history' || $isDiff ) {
+		if ( $action === 'history' || $isDiff ) {
 			return false;
 		}
 

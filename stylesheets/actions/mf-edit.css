@@ -1,0 +1,53 @@
+#mw-anon-edit-warning {
+  background: none;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 50px auto;
+  -o-background-size: auto 50px auto;
+  -webkit-background-size: auto 50px auto;
+  background-size: auto 50px auto;
+  background-position: 10px center;
+  border: solid 1px #aaa;
+  padding: 15px;
+  font-size: 1em;
+  padding-left: 60px;
+  margin-bottom: 8px;
+  line-height: 20px;
+  background-image: url(../modules/images/warning.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 100%;
+  color: black;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.templatesUsed,
+#editpage-copywarn {
+  margin-top: 8px;
+  font-size: 0.75em;
+  font-style: italic;
+}
+.templatesUsed .mw-templatesUsedExplanation,
+#editpage-copywarn .mw-templatesUsedExplanation {
+  font-weight: bold;
+}
+.templatesUsed li,
+#editpage-copywarn li {
+  display: inline;
+  margin-right: 8px;
+}
+#editform textarea,
+#editform input.mw-summary {
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: solid 1px #ccc;
+}
+#editform #wpSave {
+  display: block;
+  margin-bottom: 10px;
+}

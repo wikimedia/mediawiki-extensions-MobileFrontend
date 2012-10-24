@@ -10,6 +10,13 @@
 	box-shadow: @horizontalOffset @verticalOffset @blurRadius @spreadDistance @color;
 }
 
+.box-sizing( @value ) {
+	-moz-box-sizing: @value;
+	-o-box-sizing: @value;
+	-webkit-box-sizing: @value;
+	box-sizing: @value;
+}
+
 .background-size( @width: auto, @height: auto ) {
 	/* use -webkit prefix for older android browsers eg. nexus 1 */
 	-moz-background-size: @width @height;
