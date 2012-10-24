@@ -138,7 +138,7 @@ $wgResourceModules['mobile'] = array(
 );
 
 $wgResourceModules['mobile.beta.jquery'] = array(
-	'styles' => array( 'stylesheets/modules/mf-watchlist.css', 'stylesheets/common/mf-nav-ribbon.css' ),
+	'styles' => array( 'stylesheets/modules/mf-watchlist.css' ),
 	'scripts' => array(
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-toggle-dynamic.js',

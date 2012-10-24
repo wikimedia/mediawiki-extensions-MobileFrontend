@@ -435,11 +435,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->searchBox() ?>
 	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
 			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
-			<div id="mw-mf-ribbon" class="jsonly">
-				<div id="content_ribbon" class="content_block">
-				</div>
-				<h2 id="section_ribbon" class="section_heading">ribbon</h2>
-			</div>
 			<div id="content">
 			<?php } ?>
 			<?php $this->html( 'firstHeading' ) ?>

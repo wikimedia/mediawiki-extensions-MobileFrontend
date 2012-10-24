@@ -86,7 +86,7 @@ var T = ( function() {
 				sectionData = article.data;
 				enableToggling( $( '#content' ) );
 				if ( !footerInitialised ) {
-					enableToggling( $( '#footer,#mw-mf-ribbon' ) );
+					enableToggling( $( '#footer' ) );
 					footerInitialised = true;
 				}
 				_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
