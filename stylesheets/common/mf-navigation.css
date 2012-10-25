@@ -491,13 +491,3 @@ body {
   height: 30px;
   width: 30px;
 }
-.hasSecondaryNav #mw-mf-menu-page a.watch-this-article {
-  top: 0;
-  right: 0;
-  position: relative;
-  display: block;
-  background-position: 8px 4px;
-}
-.hasSecondaryNav #mw-mf-menu-page a.watch-this-article.watched {
-  background-position: -22px 4px;
-}

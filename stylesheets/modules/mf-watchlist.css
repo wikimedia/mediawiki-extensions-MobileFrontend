@@ -23,3 +23,13 @@ a.watch-this-article.watched {
 .suggestions-result a.watch-this-article {
   right: 12px;
 }
+#mw-mf-menu-page a.watch-this-article {
+  top: 0;
+  right: 0;
+  position: relative;
+  display: block;
+  background-position: 8px 4px;
+}
+#mw-mf-menu-page a.watch-this-article.watched {
+  background-position: -22px 4px;
+}
