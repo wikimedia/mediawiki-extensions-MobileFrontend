@@ -516,10 +516,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				echo $this->renderArticleSkin();
 			}
 		?>
-	<!--[if gt IE 7]><!-->
 		<?php $this->html( 'bcHack' ) ?>
 		<?php $this->html( 'bottomScripts' ) ?>
-	<!--><![endif]-->
 	</body>
 	</html><?php
 	}
