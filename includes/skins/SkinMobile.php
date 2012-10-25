@@ -198,11 +198,11 @@ mediawiki.hidpi' ), 'scripts', true, true );
 			$license = Html::element( 'img', array(
 				'src' => $wgMFCustomLogos['copyright'],
 				'class' => 'license',
-				'alt' => "{$footerSitename} ®"
+				'alt' => "{$footerSitename}"
 			) );
 		} else {
 			$license = Html::element( 'div', array( 'class' => 'license' ),
-				"{$footerSitename} ™"
+				"{$footerSitename}"
 			);
 		}
 		$tpl->set( 'license', $license );
