@@ -1,7 +1,8 @@
 /*global document, window, mw, navigator, jQuery */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-(function( M,  $ ) {
-M.languages = (function() {
+( function( M,  $ ) {
+
+var m = ( function() {
 	var createOverlay = M.navigation.createOverlay;
 
 	function countAvailableLanguages() {
@@ -40,14 +41,15 @@ M.languages = (function() {
 
 		$( '<li />' ).addClass( 'mw-mf-overlay-header' ).
 			text( $( '#mw-mf-language-section .content_block p' ).text() ).appendTo( ul );
-		$languages.each( function(i, el) {
+		$languages.each( function() {
+			var $this = $( this );
 			li = $( '<li />' ).appendTo( ul )[0];
-			a = $( '<a />' ).attr( 'href', $( el ).attr( 'href' ) ).text( $( el ).text() ).appendTo( li );
+			a = $( '<a />' ).attr( 'href', $this.attr( 'href' ) ).text( $this.text() ).appendTo( li );
 		} );
 		footer = $( '<li />' ).addClass( 'mw-mf-overlay-footer' ).
 			html( M.message( 'mobile-frontend-language-footer' ) ).appendTo( ul );
 		$a = $( 'a', footer );
-		href = $( '#mw-mf-universal-language' ).attr( 'href' )
+		href = $( '#mw-mf-universal-language' ).attr( 'href' );
 		$a.attr( 'href', href );
 		overlay = createOverlay( search, ul, { hash: '#mw-mf-overlay-language' } );
 		$( overlay ).find( '.search' ).on( 'keyup', function() {
@@ -64,18 +66,18 @@ M.languages = (function() {
 					on( 'click', createLanguagePage ).insertBefore( $a );
 		}
 		$a.hide();
-	}
 
-	if( typeof $ !== 'undefined' ) {
-		init();
 		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
 			if ( curPage.hash === '#mw-mf-overlay-language' ) {
 				createLanguagePage();
 			}
 		} );
 	}
+
 	return {
 		init: init
 	};
-}());
-}( mw.mobileFrontend, jQuery ));
+}() );
+
+M.registerModule( 'languages', m );
+}( mw.mobileFrontend, jQuery ) );
