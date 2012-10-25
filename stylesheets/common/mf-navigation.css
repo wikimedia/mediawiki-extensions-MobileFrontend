@@ -457,6 +457,13 @@ body {
     width: 80%;
     overflow: auto;
   }
+  .navigationFullScreen .beta #mw-mf-page-left {
+    width: 100%;
+    right: 0%;
+  }
+  .navigationFullScreen .beta #mw-mf-page-center {
+    display: none;
+  }
 }
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
   overflow-y: auto;
