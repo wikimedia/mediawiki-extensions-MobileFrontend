@@ -362,6 +362,10 @@ html.overlay li:hover {
   margin: 0;
   padding-bottom: 0;
 }
+.overlay .header input.search {
+  margin-top: 0;
+  margin-right: 20px;
+}
 #mw-mf-overlay .header.mw-mf-locked {
   padding-left: 22px;
 }
