@@ -30,7 +30,7 @@ MobileFrontend.navigation = (function( $ ) {
 		M.history.pushState( options.hash || '#mw-mf-overlay' );
 		showOverlay();
 		$( overlay ).empty();
-		$( '<div class="header">' ).click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
+		$( '<div class="header">' ).appendTo( '#' + mfePrefix + 'overlay' );
 		$( '<button id="close"></button>' ).text( message( 'collapse-section' ) ).
 			addClass( 'escapeOverlay' ).
 			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
@@ -44,6 +44,7 @@ MobileFrontend.navigation = (function( $ ) {
 			$( '#mw-mf-overlay .header' ).addClass( 'mw-mf-locked' );
 			$( '#mw-mf-overlay #close' ).remove();
 		}
+		return overlay;
 	}
 
 	function enableArticleActions() {
