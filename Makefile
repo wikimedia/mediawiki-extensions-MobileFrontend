@@ -8,6 +8,7 @@ less:
 	lessc stylesheets/less/common/mf-hacks.less > stylesheets/common/mf-hacks.css
 	lessc stylesheets/less/common/mf-navigation.less > stylesheets/common/mf-navigation.css
 	lessc stylesheets/less/modules/mf-cleanuptemplates.less > stylesheets/modules/mf-cleanuptemplates.css
+	lessc stylesheets/less/modules/mf-banner.less > stylesheets/modules/mf-banner.css
 	lessc stylesheets/less/modules/mf-toggle.less > stylesheets/modules/mf-toggle.css
 	lessc stylesheets/less/modules/mf-search.less > stylesheets/modules/mf-search.css
 	lessc stylesheets/less/common/mf-typography.less > stylesheets/common/mf-typography.css
