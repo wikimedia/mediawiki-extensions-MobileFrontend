@@ -92,7 +92,9 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 
 		u( search ).bind( 'focus', function() {
-			u( document.documentElement ).removeClass( 'navigationEnabled' );
+			if ( !M.setting( 'beta' ) || $( window ).width() < 700 ) {
+				u( document.documentElement ).removeClass( 'navigationEnabled' );
+			}
 		} );
 	}
 	init();
