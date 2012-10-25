@@ -464,6 +464,9 @@ body {
   .navigationFullScreen .beta #mw-mf-page-center {
     display: none;
   }
+  .beta.full-screen-search #mw-mf-page-left {
+    display: block !important;
+  }
 }
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
   overflow-y: auto;
