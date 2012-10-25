@@ -52,10 +52,12 @@ input.search:focus {
 input.search.searching {
   background-color: #eee;
 }
+.hasSecondaryNav .full-screen-search #mw-mf-searchForm,
 #mw-mf-searchForm {
   padding: 0 20px 0 40px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
+.hasSecondaryNav .full-screen-search #mw-mf-searchForm .clearlink,
 #mw-mf-searchForm .clearlink {
   top: 9px;
   right: 8px;

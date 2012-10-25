@@ -473,6 +473,12 @@ body {
 
 .hasSecondaryNav {
 
+	.full-screen-search {
+		#mw-mf-menu-page {
+			display: none;
+		}
+	}
+
 	#mw-mf-searchForm {
 		padding-right: @searchBarPaddingRight + @secondaryNavWidth;
 	}
@@ -480,7 +486,7 @@ body {
 	#mw-mf-menu-page {
 		width: @secondaryNavWidth;
 		position: absolute;
-		right: @contentMarginRight - 5px;
+		right: @contentMarginRight - 4px;
 		top: @searchMarginTop - @searchBorderHeight;
 		bottom: 0;
 

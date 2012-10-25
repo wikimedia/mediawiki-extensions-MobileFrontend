@@ -1,35 +1,31 @@
-#mw-mf-search {
-  padding-right: 24px;
-  /* right but width of mw-mf-searchForm a.watch-this-article */
-
-}
 a.watch-this-article {
-  background-image: url(images/watchlist.png);
+  background-image: url(images/watch.png);
+  background-position: right center;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 22px;
+  -o-background-size: auto 22px;
+  -webkit-background-size: auto 22px;
   background-size: auto 22px;
   position: absolute;
-  right: 8px;
-  top: 10px;
-  width: 22px;
-  height: 24px;
+  top: 0;
+  right: 0;
   text-indent: -9999px;
   background-repeat: no-repeat;
 }
 a.watch-this-article.watched {
-  background-position: -28px 0px;
+  background-image: url(images/watched.png);
 }
 .full-screen-search #mw-mf-searchForm a.watch-this-article {
   display: none;
 }
 .suggestions-result a.watch-this-article {
-  right: 12px;
+  right: 23px;
+  top: 12px;
+  height: 24px;
+  width: 24px;
 }
 #mw-mf-menu-page a.watch-this-article {
-  top: 0;
-  right: 0;
   position: relative;
   display: block;
-  background-position: 8px 4px;
-}
-#mw-mf-menu-page a.watch-this-article.watched {
-  background-position: -22px 4px;
 }

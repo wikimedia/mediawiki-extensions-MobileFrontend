@@ -477,13 +477,16 @@ body {
   overflow-y: auto;
 }
 /* Page actions */
+.hasSecondaryNav .full-screen-search #mw-mf-menu-page {
+  display: none;
+}
 .hasSecondaryNav #mw-mf-searchForm {
   padding-right: 50px;
 }
 .hasSecondaryNav #mw-mf-menu-page {
   width: 30px;
   position: absolute;
-  right: 18px;
+  right: 19px;
   top: 8px;
   bottom: 0;
 }
