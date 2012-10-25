@@ -27,13 +27,22 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	display: none;
 }
 
-.togglingEnabled .section_heading button {
-	display: inline-block;
-	background: none;
-	background-repeat: no-repeat;
-	background-position: right center;
-	-webkit-background-size: auto 9px;
-	background-size: auto 9px;
+.togglingEnabled .section_heading {
+
+	&#section_0 {
+		button {
+			background-position: right bottom;
+		}
+	}
+
+	button {
+		display: inline-block;
+		background: none;
+		background-repeat: no-repeat;
+		background-position: right center;
+		-webkit-background-size: auto 9px;
+		background-size: auto 9px;
+	}
 }
 
 .togglingEnabled .section_heading.openSection button {
