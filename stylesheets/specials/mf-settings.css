@@ -38,7 +38,7 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
   text-align: right;
 }
 form.mw-mf-settings ul li #mw-mf-settings-save {
-  width: 50%;
+  min-width: 50%;
   text-align: center;
   display: block;
 }
