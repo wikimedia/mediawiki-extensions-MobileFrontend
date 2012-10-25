@@ -183,7 +183,7 @@ HTML;
 		} else {
 			$url = $this->getTitle()->getFullURL( 'success' );
 		}
-		$context->getOutput()->redirect( $url );
+		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
 	}
 
 	public static function getURL( $option, Title $returnTo = null, $fullUrl = false ) {
