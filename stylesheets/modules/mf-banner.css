@@ -1,0 +1,58 @@
+/* ZERO-RATED BANNERS
+moved from beta_common.css in
+Change-Id: Ia25126d950ee87cbc76f2e91d679cdd27405ee51
+*/
+.mw-mf-banner {
+  position: relative;
+  width: 100%;
+  z-index: 99;
+  background: #F4A83D;
+  display: block;
+  border-bottom: 1px solid #D6800C;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  color: #735005;
+  font-family: Tahoma, sans-serif;
+}
+.mw-mf-banner .mw-mf-message,
+.mw-mf-banner button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.android.mw-mf-banner {
+  display: none;
+}
+html.android .android.mw-mf-banner {
+  display: block;
+}
+.mw-mf-banner a {
+  text-decoration: underline;
+  color: #735005;
+}
+.mw-mf-banner button.notify-close {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  background-color: #FAD163;
+  margin-right: 0;
+  border: 2px solid #735005;
+}
+.mw-mf-banner p {
+  line-height: normal;
+}
+.mw-mf-banner .mw-mf-message {
+  margin: 0;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+.mw-mf-banner.mw-mf-banner-undismissable {
+  color: #ffffff;
+  background-color: red;
+}
+.mw-mf-banner.mw-mf-banner-undismissable a {
+  text-decoration: underline;
+  color: #ffffff;
+}
