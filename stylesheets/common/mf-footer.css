@@ -17,7 +17,8 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
   -o-box-shadow: none;
   box-shadow: none;
 }
-#footer .section_heading {
+body.beta #footer h2,
+body.live #footer .section_heading {
   height: 24px;
   display: block;
   margin: 0;
@@ -67,7 +68,7 @@ html[dir="ltr"] #footer .settings .left:after {
   float: left;
   margin-right: 4px;
 }
-#footer .toggleCopyright,
+body.live #footer .toggleCopyright,
 #footer .license {
   font-weight: bold;
   font-size: 1em;
@@ -93,15 +94,13 @@ this is so that toggling can scroll it into view
   transition: none;
   margin-top: 0;
 }
-#footer .content_block {
-  font-size: 0.7em;
-}
 #footer .notice .terms {
   float: left;
 }
 #section_footer button {
   height: 22px;
 }
+body.beta #footer div,
 #content_footer {
   font-size: 0.9em;
   clear: both;
@@ -120,13 +119,13 @@ this is so that toggling can scroll it into view
 .beta #footer .links li {
   width: 33%;
 }
-.togglingEnabled #footer .more,
-.togglingEnabled #footer .openSection .less {
+body.live .togglingEnabled #footer .more,
+body.live .togglingEnabled #footer .openSection .less {
   display: block;
 }
-#footer .more,
-#footer .less,
-#footer .openSection .more {
+body.live #footer .more,
+body.live #footer .less,
+body.live #footer .openSection .more {
   display: none;
 }
 .page-loading #content_footer {

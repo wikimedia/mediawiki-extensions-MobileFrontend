@@ -19,7 +19,8 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 	box-shadow: none;
 }
 
-#footer .section_heading {
+body.beta #footer h2,
+body.live #footer .section_heading {
 	height: 24px;
 	display: block;
 	margin: 0;
@@ -77,7 +78,7 @@ html[dir="ltr"] #footer .settings .left:after {
 	margin-right: 4px;
 }
 
-#footer .toggleCopyright,
+body.live #footer .toggleCopyright,
 #footer .license {
 	font-weight: bold;
 	font-size: 1em;
@@ -107,10 +108,6 @@ this is so that toggling can scroll it into view
 	margin-top: 0;
 }
 
-#footer .content_block {
-	font-size: 0.7em;
-}
-
 #footer .notice .terms {
 	float: left;
 }
@@ -119,8 +116,9 @@ this is so that toggling can scroll it into view
 	height: 22px;
 }
 
+body.beta #footer div,
 #content_footer {
-	font-size: 0.9em;
+	font-size: @baseFontSize * 0.9;
 	clear: both;
 }
 
@@ -141,6 +139,7 @@ this is so that toggling can scroll it into view
 	width: 33%;
 }
 
+body.live {
 .togglingEnabled #footer .more,
 .togglingEnabled #footer .openSection .less {
 	display: block;
@@ -150,6 +149,7 @@ this is so that toggling can scroll it into view
 #footer .less,
 #footer .openSection .more {
 	display: none;
+}
 }
 
 .page-loading #content_footer {

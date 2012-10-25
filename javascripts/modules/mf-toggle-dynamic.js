@@ -6,7 +6,6 @@ var T = ( function() {
 	var inBeta = $( 'body' ).hasClass( 'beta' ),
 		message = M.message,
 		sectionData = {},
-		footerInitialised = false,
 		showLabel = message( 'expand-section' ),
 		hideLabel = message( 'collapse-section' );
 
@@ -85,10 +84,6 @@ var T = ( function() {
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
 				sectionData = article.data;
 				enableToggling( $( '#content' ) );
-				if ( !footerInitialised ) {
-					enableToggling( $( '#footer' ) );
-					footerInitialised = true;
-				}
 				_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
 			} );
 			M.history.loadPage( pageTitle, false );
