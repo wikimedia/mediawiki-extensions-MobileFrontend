@@ -132,6 +132,7 @@ input[type=submit].languageSelector {
 }
 .navigationEnabled #mw-mf-page-center {
   left: 80%;
+  overflow-x: hidden;
 }
 .navigationEnabled.navigationFullScreen #mw-mf-page-left {
   width: 100%;
