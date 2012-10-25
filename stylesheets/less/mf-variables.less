@@ -1,7 +1,11 @@
 @searchBoxMarginLeft: 40px;
+@searchBarPaddingLeft: 40px;
+@searchBarPaddingRight: 20px;
+@searchBarPaddingRightBeta: @searchBarPaddingLeft;
 @searchBoxColor: #fafafa;
 @headerHeight: 46px;
 @searchBoxHeight: @headerHeight - 16;
+@searchBorderHeight: 1px;
 @contentMarginRight: 23px;
 @contentMarginLeft: @contentMarginRight;
 @blueBase : #3366BB;
@@ -16,3 +20,6 @@
 @baseFontSize: 1em;
 @headingMarginTop: 14pt;
 @headingMarginBottom: 9pt;
+
+// calculated values
+@searchMarginTop: ( ( @headerHeight - @searchBoxHeight ) / 2 ) + @searchBorderHeight;

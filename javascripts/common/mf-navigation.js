@@ -46,7 +46,20 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 	}
 
+	function enableArticleActions() {
+		$( '<div id="mw-mf-menu-page">' ).appendTo( '#mw-mf-header' );
+		$( 'html' ).addClass( 'hasSecondaryNav' );
+	}
+
+	function getPageMenu() {
+		return $( '#mw-mf-menu-page' )[ 0 ];
+	}
+
 	function init() {
+		if ( M.setting( 'beta' ) ) {
+			enableArticleActions();
+		}
+
 		var headerHeight = $( '#mw-mf-header' ).height(),
 			id = mfePrefix + 'overlay';
 		// work out when the header is out of view
@@ -100,6 +113,7 @@ MobileFrontend.navigation = (function( $ ) {
 	return {
 		closeOverlay: closeOverlay,
 		createOverlay: createOverlay,
+		getPageMenu: getPageMenu,
 		getOverlay: getOverlay,
 		showOverlay: showOverlay
 	};

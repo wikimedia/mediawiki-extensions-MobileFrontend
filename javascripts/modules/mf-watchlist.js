@@ -97,7 +97,7 @@ var w = ( function() {
 
 	function init( container, title ) {
 		var pageTitle = M.setting( 'title' );
-		container = container || $( '#content_ribbon' )[ 0 ];
+		container = container || M.navigation.getPageMenu();
 		title = title || pageTitle;
 		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
 			initWatchList( container, article.title );

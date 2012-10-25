@@ -445,3 +445,38 @@ body {
 .supportsPositionFixed.navigationEnabled #mw-mf-viewport {
 	overflow-y: auto;
 }
+
+/* Page actions */
+@secondaryNavWidth: @searchBoxHeight;
+
+.hasSecondaryNav {
+
+	#mw-mf-searchForm {
+		padding-right: @searchBarPaddingRight + @secondaryNavWidth;
+	}
+
+	#mw-mf-menu-page {
+		width: @secondaryNavWidth;
+		position: absolute;
+		right: @contentMarginRight - 5px;
+		top: @searchMarginTop - @searchBorderHeight;
+		bottom: 0;
+
+		a {
+			height: @secondaryNavWidth;
+			width: @secondaryNavWidth;
+		}
+
+		a.watch-this-article {
+			top: 0;
+			right: 0;
+			position: relative;
+			display: block;
+			background-position: 8px 4px;
+
+			&.watched {
+				background-position: -22px 4px;
+			}
+		}
+	}
+}
