@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABOn///88\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "ws",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABOn///9U\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "move these into a generic wgResourceModule",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABOn///9M\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "ws",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABOn///9I\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "ws",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABOn///9E\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "ws",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABOn///9A\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "ws",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABOn///9Q\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "move these into hierarchy above ( where  a.login and a.logout are )",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABOn///9g\u003d",
+        "filename": "stylesheets/specials/watchlist.css",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-25T19:34:45Z",
+      "side": 1,
+      "message": "ws",
+      "revId": "e3a87e1cd1f17a5db7aa32fe433b7e02002307c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
