@@ -62,6 +62,10 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	display: none;
 }
 
+.content_block {
+	width: 100%; // bug 41401 - without this content doesn't always take up whole width
+}
+
 .togglingEnabled .content_block {
 	position: relative;
 	overflow: hidden;
@@ -125,3 +129,4 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	clear: both;
 	border-bottom: solid 1px #E2E3E4;
 }
+
