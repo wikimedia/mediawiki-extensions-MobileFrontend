@@ -1,0 +1,27 @@
+#mw-mf-search {
+	padding-right: 24px; /* right but width of mw-mf-searchForm a.watch-this-article */
+}
+
+a.watch-this-article {
+	background-image: url(images/watchlist.png);
+	background-size: auto 22px;
+	position: absolute;
+	right: 8px;
+	top: 10px;
+	width: 22px;
+	height: 24px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+}
+
+a.watch-this-article.watched {
+	background-position: -28px 0px;
+}
+
+.full-screen-search #mw-mf-searchForm a.watch-this-article {
+	display: none;
+}
+
+.suggestions-result a.watch-this-article {
+	right: 12px;
+}
