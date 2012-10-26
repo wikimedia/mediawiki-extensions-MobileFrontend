@@ -28,16 +28,21 @@ M.history = ( function() {
 	}
 	if ( $ ) {
 
+		function makeStubPage( title, summary ) {
+			var $content = $( '#content' );
+			$content.empty();
+			$( '<h1 id="section_0" class="section_heading openSection">' ).text( title ).appendTo( $content );
+			$( '<div id="content_0" class="content_block openSection loading">' ).
+				text( summary ).appendTo( $content );
+		}
+
 		loadPage = function( pageTitle, constructPage ) {
 			var $content = $( '#content' ), $section;
 			currentTitle = pageTitle;
 			if ( constructPage ) {
-				$content.empty();
-				$( '<h1 id="section_0" class="section_heading openSection">' ).text( pageTitle ).appendTo( $content );
-				$( '<div id="content_0" class="content_block openSection loading">' ).
-					text( M.message( 'mobile-frontend-ajax-page-loading', pageTitle ) ).appendTo( $content );
+				makeStubPage( pageTitle, M.message( 'mobile-frontend-ajax-page-loading', pageTitle ) );
 			}
-			$.ajax( {
+			return $.ajax( {
 				url: apiUrl, dataType: 'json',
 				data: {
 					action: 'mobileview', format: 'json',
@@ -97,7 +102,7 @@ M.history = ( function() {
 		if ( window.history && window.history.pushState && inBeta ) {
 			navigateToPage = function( title ) {
 				_mwStart = +new Date; // reset logger
-				loadPage( title, true );
+				return loadPage( title, true );
 				window.history.pushState( { title: title }, title, URL_TEMPLATE.replace( '$1', title ) + window.location.search );
 			};
 			// deal with initial pop so that we can record the initial page
@@ -131,6 +136,7 @@ M.history = ( function() {
 
 	return {
 		loadPage: loadPage,
+		makeStubPage: makeStubPage,
 		navigateToPage: navigateToPage,
 		replaceHash: function( newHash ) {
 			var hashChanged = newHash !== window.location.hash;
