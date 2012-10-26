@@ -691,14 +691,24 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php
 		// @todo: make license icon and text dynamic
 		?>
+	<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 	<h2 class="section_heading" id="section_footer">
+	<?php } else { ?>
+	<h2>
+	<?php } ?>
 		<?php $this->html( 'license' ) ?>
+		<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 		<span class="toggleCopyright">
 			<span class="more"><?php $this->msg( 'mobile-frontend-footer-more' ) ?></span><span class="less"><?php
 			$this->msg( 'mobile-frontend-footer-less' ) ?></span>
 		</span>
+		<?php } ?>
 	</h2>
+	<?php if ( !$this->data['isBetaGroupMember'] ) { ?>
 	<div class="content_block" id="content_footer">
+	<?php } else { ?>
+	<div>
+	<?php } ?>
 		<ul class="settings">
 			<li>
 				<span class="left separator"><a id="mw-mf-display-toggle" href="<?php $this->text( 'viewNormalSiteURL' ) ?>"><?php
