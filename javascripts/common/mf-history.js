@@ -112,7 +112,7 @@ M.history = ( function() {
 
 			$( window ).bind( 'popstate', function( ev ) {
 				var state = ev.originalEvent.state;
-				if ( firstRun ) {
+				if ( !firstRun ) {
 					firstRun = true;
 				} else if ( state ) {
 					loadPage( state.title, true );
