@@ -102,9 +102,11 @@ M.history = ( function() {
 
 		if ( window.history && window.history.pushState && inBeta ) {
 			navigateToPage = function( title ) {
+				var page;
 				_mwStart = +new Date; // reset logger
-				return loadPage( title, true );
+				page = loadPage( title, true );
 				window.history.pushState( { title: title }, title, URL_TEMPLATE.replace( '$1', title ) + window.location.search );
+				return page;
 			};
 			// deal with initial pop so that we can record the initial page
 			window.history.replaceState( { title: currentTitle }, currentTitle,
