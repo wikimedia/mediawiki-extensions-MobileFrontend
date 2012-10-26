@@ -3,7 +3,8 @@
 ( function( M, $ ) {
 
 var m = ( function() {
-	var $editArea = $( 'form#editform textarea' ).hide();
+	var $editArea = $( 'form#editform textarea' ).hide(),
+		$editSummary = $( '#wpSummary' );
 
 	function makeSection( sectionId ) {
 		var $section = $( '<div class="section">' ).insertBefore( $editArea ),
@@ -76,6 +77,7 @@ var m = ( function() {
 			$loader.show();
 			var val = concatTextAreas();
 			$editArea.val( val );
+			$editSummary.val( $editSummary.val() + ' [Via Mobile]' );
 		} );
 
 		mw.mobileFrontend.getModule( 'toggle' ).enableToggling(); // FIXME: adds dependency to toggle module
