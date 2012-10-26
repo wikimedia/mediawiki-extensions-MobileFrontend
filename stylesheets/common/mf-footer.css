@@ -11,99 +11,25 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
   /* cancel any floating in the content */
 
 }
-.navigationEnabled #footer {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-}
-body.beta #footer h2,
-body.live #footer .section_heading {
+#footer h2 {
   height: 24px;
   display: block;
   margin: 0;
   font-size: 1em;
 }
-#footer ul {
-  text-align: center;
-  width: 100%;
-  padding: 0;
-  list-style: none;
-  margin: 0;
+#footer div {
+  font-size: 0.9em;
+  clear: both;
 }
-#footer ul li {
-  line-height: 1.4;
-}
-#footer .settings .left,
-#footer .settings .right {
-  width: 48%;
-  display: inline-block;
-  box-sizing: border-box;
-}
-#footer .settings .left {
-  text-align: right;
-  padding-right: 2px;
-}
-#footer .settings .right {
-  text-align: left;
-  padding-left: 2px;
-}
-html[dir="rtl"] #footer .settings li:first-child .left:before,
-html[dir="ltr"] #footer .settings li:first-child .left:after {
-  content: " | ";
-  visibility: visible;
-}
-html[dir="rtl"] #footer .settings .left:before,
-html[dir="ltr"] #footer .settings .left:after {
-  content: " | ";
-  visibility: hidden;
+#footer .license {
+  float: left;
+  margin-right: 4px;
 }
 #footer img.license {
   margin-top: 3px;
   /* (22px line height - 16px height) / 2) */
 
   height: 16px;
-}
-#footer .license {
-  float: left;
-  margin-right: 4px;
-}
-body.live #footer .toggleCopyright,
-#footer .license {
-  font-weight: bold;
-  font-size: 1em;
-  line-height: 22px;
-}
-#footer .toggleCopyright {
-  float: right;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-#section_footer {
-  color: #333;
-}
-/* 
-disable animations in footer
-this is so that toggling can scroll it into view
-*/
-.togglingEnabled #footer .content_block {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
-  margin-top: 0;
-}
-#footer .notice .terms {
-  float: left;
-}
-#section_footer button {
-  height: 22px;
-}
-body.beta #footer div,
-#content_footer {
-  font-size: 0.9em;
-  clear: both;
 }
 #footer .links {
   text-align: center;
@@ -115,9 +41,61 @@ body.beta #footer div,
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  line-height: 1.4;
 }
-.beta #footer .links li {
+#footer ul {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+#footer ul.settings .left,
+#footer ul.settings .right {
+  width: 48%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+#footer ul.settings .left {
+  text-align: right;
+  padding-right: 2px;
+}
+#footer ul.settings .right {
+  text-align: left;
+  padding-left: 2px;
+}
+#footer .notice .terms {
+  float: left;
+}
+#footer .license {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 22px;
+}
+html[dir="rtl"] #footer .settings li:first-child .left:before,
+html[dir="ltr"] #footer .settings li:first-child .left:after {
+  content: " | ";
+  visibility: visible;
+}
+html[dir="rtl"] #footer .settings .left:before,
+html[dir="ltr"] #footer .settings .left:after {
+  content: " | ";
+  visibility: hidden;
+}
+body.beta #footer .links li {
   width: 33%;
+}
+body.live #section_footer button {
+  height: 22px;
+}
+body.live #footer .toggleCopyright {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 22px;
+  float: right;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 body.live .togglingEnabled #footer .more,
 body.live .togglingEnabled #footer .openSection .less {
@@ -127,9 +105,6 @@ body.live #footer .more,
 body.live #footer .less,
 body.live #footer .openSection .more {
   display: none;
-}
-.page-loading #content_footer {
-  max-height: none;
 }
 @media all and (min-width: 330px) {
   #footer .content_block {
