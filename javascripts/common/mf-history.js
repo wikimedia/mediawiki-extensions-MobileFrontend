@@ -94,6 +94,9 @@ M.history = ( function() {
 						$( '#content_0' ).removeClass( 'loading' ).
 							text( M.message( 'mobile-frontend-ajax-page-error', pageTitle ) ).
 							addClass( 'ajaxError' ); // reset loader
+						$( '<button>' ).text( M.message( 'mobile-frontend-ajax-random-retry' ) ).click( function() {
+							loadPage( pageTitle, constructPage );
+						} ).appendTo( '#content_0' );
 					}
 				} );
 		};
