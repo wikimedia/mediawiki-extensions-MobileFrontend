@@ -1768,6 +1768,11 @@ $messages['de'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Einstellungen speichern',
 	'mobile-frontend-random-button' => 'Zufall',
+	'mobile-frontend-ajax-random-heading' => 'Lokalisiere Wissen …',
+	'mobile-frontend-ajax-random-quote' => 'Intellektuelles Wachstum sollte mit der Geburt anfangen und nur mit dem Tod aufhören',
+	'mobile-frontend-ajax-random-question' => 'Diesen Artikel lesen?',
+	'mobile-frontend-ajax-random-yes' => 'Ja',
+	'mobile-frontend-ajax-random-retry' => 'Erneut versuchen',
 	'mobile-frontend-back-to-top-of-section' => 'Einen Abschnitt zurück springen',
 	'mobile-frontend-close-section' => 'Diesen Abschnitt schließen',
 	'mobile-frontend-show-button' => 'Anzeigen',
@@ -1867,6 +1872,7 @@ $messages['de'] = array(
 	'mobile-frontend-meta-data-issues-header' => 'Diesen Artikel verbessern',
 	'mobile-frontend-meta-data-issues' => 'Mit diesem Artikel gibt es Probleme',
 	'mobile-frontend-ajax-page-loading' => 'Lade $1',
+	'mobile-frontend-page-saving' => 'Speichere $1',
 	'mobile-frontend-ajax-page-error' => 'Hoppla! Irgend etwas ist schief gelaufen. Bitte versuche, dein Browserfenster zu aktualisieren.',
 );
 
@@ -2371,6 +2377,11 @@ $messages['es'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Guardar configuración',
 	'mobile-frontend-random-button' => 'Aleatorio',
+	'mobile-frontend-ajax-random-heading' => 'Localizando la información...',
+	'mobile-frontend-ajax-random-quote' => 'El crecimiento intelectual debería comenzar con el nacimiento y solo debería finalizar con la muerte.',
+	'mobile-frontend-ajax-random-question' => '¿Leer este artículo?',
+	'mobile-frontend-ajax-random-yes' => 'Sí',
+	'mobile-frontend-ajax-random-retry' => 'Reintentar',
 	'mobile-frontend-back-to-top-of-section' => 'Ir atrás una sección',
 	'mobile-frontend-close-section' => 'Cerrar esta sección',
 	'mobile-frontend-show-button' => 'Mostrar',
@@ -2469,6 +2480,7 @@ $messages['es'] = array(
 	'mobile-frontend-meta-data-issues-header' => 'Mejorar este artículo',
 	'mobile-frontend-meta-data-issues' => 'Este artículo tiene problemas',
 	'mobile-frontend-ajax-page-loading' => 'Cargando $1',
+	'mobile-frontend-page-saving' => 'Guardando $1',
 	'mobile-frontend-ajax-page-error' => '¡Vaya! Hubo un problema. Intenta recargar la ventana del navegador.',
 );
 
@@ -4385,6 +4397,9 @@ $messages['is'] = array(
 	'mobile-frontend-home-button' => 'Forsíða',
 	'mobile-frontend-logged-out' => 'Ekki innskráð(ur)',
 	'mobile-frontend-logged-in' => 'Skráður inn sem $1',
+	'mobile-frontend-sign-in-heading' => 'Innskrá',
+	'mobile-frontend-sign-in-why' => 'Ef þú átt {{SITENAME}} aðgang, þá getur þú skráð þig inn hér fyrir neðan.',
+	'mobile-frontend-sign-in-error-heading' => 'Úps',
 	'mobile-frontend-settings-beta' => 'Prufuútgáfa',
 	'mobile-frontend-save-settings' => 'Vista stillingar',
 	'mobile-frontend-random-button' => 'Handahófsvalið',
@@ -4411,6 +4426,7 @@ $messages['is'] = array(
 	'mobile-frontend-disable-images' => 'Fela myndir á farsímasíðunni',
 	'mobile-frontend-enable-images' => 'Sýna myndir á farsímasíðunni',
 	'mobile-frontend-toggle-images' => 'Myndir $1 / $2',
+	'mobile-frontend-missing-image' => 'Mynd',
 	'mobile-frontend-off' => 'AF',
 	'mobile-frontend-on' => 'Á',
 	'mobile-frontend-footer-contributors' => 'Grein eftir <a href="$1">notendur</a> eins og þig',
@@ -4427,7 +4443,7 @@ $messages['is'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tæknileg villa',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Almennt',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Svörun um grein',
-	'mobile-frontend-leave-feedback-email-body' => 'Vinsamlegast skrifaðu tölvupóstfangið þitt fyrir ofan þessa línu.', # Fuzzy
+	'mobile-frontend-leave-feedback-email-body' => 'Vinsamlegast lýstu vandamálinu á {{SITENAME}} fyrir ofan þessara línu. Athugaðu að við getum ekki svarað öllum skilaboðum sem við fáum.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tæknileg villa',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Almenn svörun',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Varðandi mig, persónu eða fyrirtæki sem ég er fulltrúi fyrir',
@@ -4444,6 +4460,7 @@ $messages['is'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Takk fyrir svörunina!',
 	'mobile-frontend-leave-feedback-post-error' => 'Mistókst að bæta við svörun þinni. Vinsamlegast reyndu aftur síðar.',
 	'mobile-frontend-language' => 'Tungumál:',
+	'mobile-frontend-language-article-heading' => 'Lesa á öðru tungumáli',
 	'mobile-frontend-language-header' => 'Þessi grein er aðgengileg á $1 {{PLURAL:$1|tungumál|tungumálum}}.',
 	'mobile-frontend-language-footer' => '{{SITENAME}} er aðgengilegt á öðrum tungumálum.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Leita að tungumáli',
@@ -4466,8 +4483,11 @@ $messages['is'] = array(
 	'mobile-frontend-footer-contact' => 'Hafa samband',
 	'mobile-frontend-unknown-option' => 'Óþekktur möguleiki "$1".',
 	'mobile-frontend-search-noresults' => 'Engin grein með þessum titli fannst. Breyttu leitarorðinu , eða ýttu á leitartakkann á lyklaborðinu til þess að leita inní greinum.',
+	'mobile-frontend-main-menu-button-tooltip' => 'Opna aðalvalmynd',
 	'mobile-frontend-main-menu-featured' => 'Gæða',
 	'mobile-frontend-main-menu-nearby' => 'Nálægt',
+	'mobile-frontend-main-menu-login' => 'Innskrá',
+	'mobile-frontend-main-menu-logout' => 'Útskrá',
 	'mobile-frontend-main-menu-settings' => 'Stillingar',
 	'mobile-frontend-main-menu-settings-heading' => 'Stillingar farsímaútgáfunnar',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} tungumál',
@@ -4476,6 +4496,9 @@ $messages['is'] = array(
 	'mobile-frontend-page-menu-contents' => 'efnisyfirlit',
 	'mobile-frontend-page-menu-contents-heading' => 'Efnisyfirlit',
 	'mobile-frontend-page-menu-language-heading' => 'Lesa þessa grein á',
+	'mobile-frontend-meta-data-issues-header' => 'Bæta þessa grein',
+	'mobile-frontend-ajax-page-loading' => 'Hleð $1',
+	'mobile-frontend-ajax-page-error' => 'Úps! Eitthvað fór úrskeiðis. Vinsamlegast endurhladdu síðunni.',
 );
 
 /** Italian (italiano)
@@ -7089,6 +7112,7 @@ $messages['pfl'] = array(
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author Derbeth
  * @author Lazowik
  * @author Leinad
  * @author Mikołka
@@ -7113,7 +7137,7 @@ $messages['pl'] = array(
 	'mobile-frontend-close-section' => 'Zamknij tę sekcję',
 	'mobile-frontend-show-button' => 'Pokaż',
 	'mobile-frontend-hide-button' => 'Ukryj',
-	'mobile-frontend-empty-homepage' => 'Ta strona wymaga skonfigurowania. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Przeczytaj więcej jak odblokować tą stronę</a>',
+	'mobile-frontend-empty-homepage' => 'Ta strona wymaga skonfigurowania. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Przeczytaj więcej, jak odblokować tę stronę</a>',
 	'mobile-frontend-regular-site' => 'Wersja dla urządzeń stacjonarnych',
 	'mobile-frontend-wml-continue' => 'Dalej ...',
 	'mobile-frontend-wml-back' => 'Wstecz ...',
@@ -7600,6 +7624,11 @@ $messages['ro'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Salvează setările',
 	'mobile-frontend-random-button' => 'Aleatoriu',
+	'mobile-frontend-ajax-random-heading' => 'Se localizează informațiile...',
+	'mobile-frontend-ajax-random-quote' => 'Dezvoltarea intelectuală ar trebui să înceapă la naștere și să se termine doar la moarte',
+	'mobile-frontend-ajax-random-question' => 'Citiți acest articol?',
+	'mobile-frontend-ajax-random-yes' => 'Da',
+	'mobile-frontend-ajax-random-retry' => 'Încercă din nou',
 	'mobile-frontend-back-to-top-of-section' => 'Salt la începutul secțiunii',
 	'mobile-frontend-close-section' => 'Închide această secțiune',
 	'mobile-frontend-show-button' => 'Arată',
@@ -7698,6 +7727,7 @@ $messages['ro'] = array(
 	'mobile-frontend-meta-data-issues-header' => 'Îmbunătățiți acest articol',
 	'mobile-frontend-meta-data-issues' => 'Acest articol are anumite probleme',
 	'mobile-frontend-ajax-page-loading' => 'Se încarcă $1',
+	'mobile-frontend-page-saving' => 'Se salvează $1',
 	'mobile-frontend-ajax-page-error' => 'Hopa! Ceva nu a funcționat bine. Încercați să reîmprospătați fereastra navigatorului dv.',
 );
 
