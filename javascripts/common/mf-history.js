@@ -34,6 +34,7 @@ M.history = ( function() {
 			$( '<h1 id="section_0" class="section_heading openSection">' ).text( title ).appendTo( $content );
 			$( '<div id="content_0" class="content_block openSection loading">' ).
 				text( summary ).appendTo( $content );
+			return $content;
 		}
 
 		loadPage = function( pageTitle, constructPage ) {

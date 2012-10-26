@@ -57,6 +57,10 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function init() {
+		$( '#mw-mf-menu-main a' ).click( function( ev ) {
+			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
+		} );
+
 		if ( M.setting( 'beta' ) ) {
 			enableArticleActions();
 		}
@@ -88,9 +92,6 @@ MobileFrontend.navigation = (function( $ ) {
 			} else {
 				u( doc ).removeClass( 'navigationEnabled' );
 			}
-			$( '#mw-mf-menu-main a' ).click( function( ev ) {
-				toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
-			} );
 		}
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
 			toggleNavigation();

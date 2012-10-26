@@ -30,6 +30,15 @@ $messages['en'] = array (
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Save settings',
 	'mobile-frontend-random-button' => 'Random',
+
+	/* related to random widget */
+	'mobile-frontend-ajax-random-heading' => 'Locating knowledge...',
+	'mobile-frontend-ajax-random-quote' => 'Intellectual growth should commence at birth and cease only at death',
+	'mobile-frontend-ajax-random-quote-author' => 'Albert Einstein',
+	'mobile-frontend-ajax-random-question' => 'Read this article?',
+	'mobile-frontend-ajax-random-yes' => 'Yes',
+	'mobile-frontend-ajax-random-retry' => 'Try again',
+
 	'mobile-frontend-back-to-top-of-section' => 'Jump back a section',
 	'mobile-frontend-close-section' => 'Close this section',
 	'mobile-frontend-show-button' => 'Show',
@@ -173,6 +182,12 @@ This buttons takes the user to the home page.',
 	'mobile-frontend-random-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
 
 This buttons takes the user to a random page.',
+	'mobile-frontend-ajax-random-heading' => 'Message to show whilst locating a random article via ajax request',
+	'mobile-frontend-ajax-random-quote' => 'Inspirational quote related to learning',
+	'mobile-frontend-ajax-random-quote-author' => 'Author of the quote chosen',
+	'mobile-frontend-ajax-random-question' => 'Prompt that goes alongside the title of the article asking if the user wants to read',
+	'mobile-frontend-ajax-random-yes' => 'Answer to question when they do want to read',
+	'mobile-frontend-ajax-random-retry' => 'Answer to question when they would like to try again',
 	'mobile-frontend-back-to-top-of-section' => 'This is a link that appears at the end of a page section.',
 	'mobile-frontend-close-section' => 'This link allows you to close a page section.',
 	'mobile-frontend-show-button' => '{{Identical|Show}}',

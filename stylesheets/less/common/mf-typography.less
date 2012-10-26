@@ -107,3 +107,30 @@ input.search {
 		margin: 0 12px;
 	}
 }
+
+blockquote {
+	quotes:"\201C" "\201D";
+	padding-left: 10px;
+	padding-bottom: 30px;
+	padding-right: 0;
+	margin-top: 20px;
+	margin-right: 0;
+	position: relative;
+	width: 90%;
+
+	&:before {
+		content: open-quote;
+		font-size: @baseFontSize * 3;
+		font-weight: bold;
+	}
+
+	&:after{
+		font-size: @baseFontSize * 3;
+		content: close-quote;
+		font-weight: bold;
+		float: right;
+		position: absolute;
+		right: -10px;
+		bottom: 0;
+	}
+}
