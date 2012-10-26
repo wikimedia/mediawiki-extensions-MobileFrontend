@@ -1,0 +1,50 @@
+@import "../mf-mixins.less";
+
+#mw-anon-edit-warning {
+	background: none;
+	.background-size( auto 50px );
+	background-position: 10px center;
+	border: solid 1px #aaa;
+	padding: 15px;
+	font-size: 1em;
+	padding-left: 60px;
+	margin-bottom: 8px;
+	line-height: 20px;
+	background-image: url(../modules/images/warning.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 100%;
+	color: black;
+	.box-sizing( border-box );
+}
+
+.templatesUsed,
+#editpage-copywarn {
+	margin-top: 8px;
+	font-size: @baseFontSize * 0.75;
+	font-style: italic;
+
+	.mw-templatesUsedExplanation {
+		font-weight: bold;
+	}
+
+	li {
+		display: inline;
+		margin-right: 8px;
+	}
+}
+
+#editform {
+	textarea,
+	input.mw-summary {
+		.box-sizing( border-box );
+		width: 100%;
+		border: solid 1px #ccc;
+	}
+
+	// temporary whilst save is the only button shown on edit page
+	#wpSave {
+		display: block;
+		margin-bottom: 10px;
+	}
+}

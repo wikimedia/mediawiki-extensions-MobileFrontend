@@ -170,6 +170,7 @@ $wgResourceModules['mobile.production-only'] = array(
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-cleanuptemplates.css';
+$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/actions/mf-edit.css'; // FIXME: only serve me when action=edit
 
 $wgResourceModules['mobile.filePage'] = array(
 	'styles' => array( 'stylesheets/specials/filepage.css' ),
