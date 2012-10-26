@@ -23,6 +23,7 @@ class SkinMobile extends SkinMobileBase {
 
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$tpl->set( 'isOverlay', ( $userLogin ) ); // quick hack
+		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
@@ -614,6 +615,7 @@ class SkinMobileTemplate extends BaseTemplate {
 					'mobile-frontend-language-site-nomatches' )->text(),
 			),
 			'settings' => array(
+				'action' => $this->data['action'],
 				'scriptPath' => $wgScriptPath,
 				'shim' => $this->data['shim'],
 				'pageUrl' => $wgArticlePath,
@@ -634,9 +636,10 @@ class SkinMobileTemplate extends BaseTemplate {
 			)->text();
 			$firstHeading = '';
 		} else {
+			$editMode = $this->data['action'] == 'edit';
 			if ( $this->data['isOverlay'] ) {
 				$headingOptions = array( 'class' => 'header' );
-			} elseif ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] && !$this->data['isMainPage'] ) {
+			} elseif ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] && !$this->data['isMainPage'] && !$editMode ) {
 				$headingOptions = array( 'id' => 'section_0', 'class' => 'section_heading openSection' );
 			} else {
 				$headingOptions = array( 'id' => 'firstHeading' );

@@ -64,6 +64,7 @@ sup {
   font-size: 0.75em;
 }
 #content_wrapper {
+  position: relative;
   margin: 0 23px 0 23px;
 }
 #content_wrapper .section h3:first-child {
