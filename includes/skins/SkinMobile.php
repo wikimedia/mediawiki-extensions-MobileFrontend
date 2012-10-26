@@ -442,9 +442,9 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php $this->html( 'bodytext' ) ?>
 			<?php $this->html( 'languageSelection' ) ?>
 		<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
-			</div>
+			</div><!-- close #content -->
 		<?php } ?>
-	</div>
+	</div><!-- close #content_wrapper -->
 		<?php $this->footer() ?>
 		<?php
 			$this->navigationEnd();
@@ -568,8 +568,8 @@ class SkinMobileTemplate extends BaseTemplate {
 	public function navigationEnd() {
 		//close #mw-mf-page-center then viewport;
 		?>
-		</div>
-		</div>
+		</div><!-- close #mw-mf-page-center -->
+		</div><!-- close #mw-mf-viewport -->
 		<?php
 	}
 
@@ -743,8 +743,8 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php $this->html( 'aboutLink' ) ?></li><li>
 			<?php $this->html( 'disclaimerLink' ) ?></li>
 		</ul>
-	</div>
-	</div>
+	</div><!-- close footer.div / #content_footer -->
+	</div><!-- close #footer -->
 	<?php
 	}
 }
