@@ -79,7 +79,7 @@ var m = ( function() {
 			$el.val( val ).appendTo( $section.find( '.content_block' ) );
 		}
 
-		$loader = $( '<div class="loader">' ).text( M.message( 'mobile-frontend-page-saving', M.setting( 'title' ) ) ).
+		$loader = $( '<div class="loader">' ).text( M.message( 'mobile-frontend-page-saving', M.getConfig( 'title' ) ) ).
 			hide().insertBefore( '#content_0' );
 		$( 'form#editform' ).on( 'submit', function() {
 			$( '#content_0' ).hide();

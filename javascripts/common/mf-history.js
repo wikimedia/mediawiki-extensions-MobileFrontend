@@ -7,10 +7,10 @@ M.history = ( function() {
 		firstRun,
 		loadPage = function() {},
 		$ = M.jQuery,
-		inBeta = M.setting( 'beta' ),
-		currentTitle = M.setting( 'title' ),
-		apiUrl = M.setting( 'scriptPath' ) + '/api.php',
-		URL_TEMPLATE = mw.mobileFrontend.setting( 'pageUrl' ),
+		inBeta = M.getConfig( 'beta', false ),
+		currentTitle = M.getConfig( 'title', '' ),
+		apiUrl = M.getConfig( 'scriptPath', '' ) + '/api.php',
+		URL_TEMPLATE = M.getConfig( 'pageUrl', '' ),
 		navigateToPage = function( title ) {
 			window.location.href = URL_TEMPLATE.replace( '$1', title );
 		};
@@ -112,6 +112,7 @@ M.history = ( function() {
 			navigateToPage = function( title ) {
 				var page;
 				_mwStart = +new Date; // reset logger
+				M.setConfig( 'title', title );
 				page = loadPage( title, true );
 				window.history.pushState( { title: title }, title, getArticleUrl( title ) );
 				return page;

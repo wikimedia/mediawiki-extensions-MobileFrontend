@@ -4,6 +4,7 @@
 var MobileFrontend = M;
 var settings = ( function() {
 	var u = MobileFrontend.utils,
+		s = M.getConfig,
 		message = MobileFrontend.message,
 		supportsLocalStorage;
 
@@ -108,10 +109,10 @@ var settings = ( function() {
 
 	function desktopViewClick() {
 		// get mf_mobileFormat cookie info
-		var formatCookieName = MobileFrontend.setting( 'useFormatCookieName' ),
-			formatCookieDuration = MobileFrontend.setting( 'useFormatCookieDuration' ),
-			cookiePath = MobileFrontend.setting( 'useFormatCookiePath' ),
-			formatCookieDomain = MobileFrontend.setting( 'useFormatCookieDomain' ),
+		var formatCookieName = s( 'useFormatCookieName' ),
+			formatCookieDuration = s( 'useFormatCookieDuration' ),
+			cookiePath = s( 'useFormatCookiePath' ),
+			formatCookieDomain = s( 'useFormatCookieDomain' ),
 			stopMobileRedirectCookieName, stopMobileRedirectCookieDuration, stopMobileRedirectCookieDomain,
 			hookOptions;
 
@@ -121,10 +122,10 @@ var settings = ( function() {
 		writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
 
 		// get stopMobileRedirect cookie info
-		stopMobileRedirectCookieName = MobileFrontend.setting( 'stopMobileRedirectCookieName' );
-		stopMobileRedirectCookieDuration = MobileFrontend.setting( 'stopMobileRedirectCookieDuration' );
-		stopMobileRedirectCookieDomain = MobileFrontend.setting( 'stopMobileRedirectCookieDomain' );
-		hookOptions = MobileFrontend.setting( 'hookOptions' );
+		stopMobileRedirectCookieName = s( 'stopMobileRedirectCookieName' );
+		stopMobileRedirectCookieDuration = s( 'stopMobileRedirectCookieDuration' );
+		stopMobileRedirectCookieDomain = s( 'stopMobileRedirectCookieDomain' );
+		hookOptions = s( 'hookOptions' );
 		// convert from seconds to days
 		stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
 

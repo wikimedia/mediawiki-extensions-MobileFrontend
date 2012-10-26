@@ -3,18 +3,18 @@
 ( function( M ) {
 var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
-		urlTemplate = M.setting( 'pageUrl' ),
+		urlTemplate = M.getConfig( 'pageUrl', '' ),
 		numResults = 15, term, mfePrefix = M.prefix,
 		message = M.message,
 		search = document.getElementById(  mfePrefix + 'search' ),
 		oldValue,
 		$ = M.jQuery,
-		blankImg = M.setting( 'shim' ),
+		blankImg = M.getConfig( 'shim', '' ),
 		clearSearch = document.getElementById( 'clearsearch' ),
 		focusBlurTimeout,
 		u = M.utils;
 
-	apiUrl = M.setting( 'scriptPath' ) + apiUrl;
+	apiUrl = M.getConfig( 'scriptPath', '' ) + apiUrl;
 
 	function removeResults( ev, silently ) {
 		if ( !silently ) {

@@ -60,9 +60,9 @@ MobileFrontend.navigation = (function( $ ) {
 		$( '#mw-mf-edit-page-link' ).remove();
 		if ( title &&
 				title.indexOf( ':' ) === -1 && // FIXME: hack
-				M.setting( 'action' ) !== 'edit' ) {
+				M.getConfig( 'action' ) !== 'edit' ) {
 			$( '<a id="mw-mf-edit-page-link">' ).text( 'edit' ).attr( 'href',
-				M.setting( 'pageUrl' ).replace( '$1', title + '?action=edit' ) ).
+				M.getConfig( 'pageUrl' ).replace( '$1', title + '?action=edit' ) ).
 				prependTo( '#content_wrapper' );
 		}
 	}
@@ -72,7 +72,7 @@ MobileFrontend.navigation = (function( $ ) {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
 
-		if ( M.setting( 'beta' ) ) {
+		if ( M.getConfig( 'beta' ) ) {
 			enableArticleActions();
 
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, curPage ) {
@@ -119,7 +119,7 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 
 		u( search ).bind( 'focus', function() {
-			if ( !M.setting( 'beta' ) || $( window ).width() < 700 ) {
+			if ( !M.getConfig( 'beta' ) || $( window ).width() < 700 ) {
 				u( document.documentElement ).removeClass( 'navigationEnabled' );
 			}
 		} );

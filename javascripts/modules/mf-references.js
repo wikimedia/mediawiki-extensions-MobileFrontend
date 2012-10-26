@@ -2,7 +2,7 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 ( function( M, $ ) {
 var references = ( function() {
-		var inBeta = M.setting( 'beta' ),
+		var inBeta = M.getConfig( 'beta', false ),
 			popup = M.navigation.popup;
 
 		function collect() {
