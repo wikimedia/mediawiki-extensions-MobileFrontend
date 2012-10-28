@@ -1921,11 +1921,11 @@ $messages['diq'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Saza star ke',
 	'mobile-frontend-random-button' => 'Pelaya ke raştamê',
-	'mobile-frontend-ajax-random-heading' => 'Melumat vinayış...',
-	'mobile-frontend-ajax-random-quote' => 'Etellektuel gırdbiyayış alaydayen ra serokneyeno hetana merg rameno',
-	'mobile-frontend-ajax-random-question' => 'Na wesiqa wa bıwaniyo?',
-	'mobile-frontend-ajax-random-yes' => 'E',
-	'mobile-frontend-ajax-random-retry' => 'Fına bıcerbne',
+	'mobile-frontend-ajax-random-heading' => 'Melumat vênayış...',
+	'mobile-frontend-ajax-random-quote' => 'Gırdbiyayışo fıkri gani biyayış ra dest pê kero u tenya merdış de vındeno',
+	'mobile-frontend-ajax-random-question' => 'Nê meqaley bıwanê?',
+	'mobile-frontend-ajax-random-yes' => 'Heya',
+	'mobile-frontend-ajax-random-retry' => 'Fına bıcerebne',
 	'mobile-frontend-back-to-top-of-section' => 'Yew cay ser çek',
 	'mobile-frontend-close-section' => 'Nê leti racnê',
 	'mobile-frontend-show-button' => 'Bımocne',
@@ -1990,7 +1990,7 @@ $messages['diq'] = array(
 	'mobile-frontend-language-site-nomatches' => 'Na zıwan hewl niya',
 	'mobile-frontend-username' => 'Namey karberi:',
 	'mobile-frontend-password' => 'Parola:',
-	'mobile-frontend-login' => 'Ronıştış akerê',
+	'mobile-frontend-login' => 'Qeyd be',
 	'mobile-frontend-logout' => 'Bıvciyê',
 	'mobile-frontend-placeholder' => '{{SITENAME}} dı cıgeyrê',
 	'mobile-frontend-search-help' => 'Babeta cı geyrayışi terim u wesiqeyo hewl bo se odo itad bıaso.',
@@ -2025,7 +2025,7 @@ $messages['diq'] = array(
 	'mobile-frontend-meta-data-issues-header' => 'Na wesiqer vıraşten de',
 	'mobile-frontend-meta-data-issues' => 'Mersela ena wesiqer',
 	'mobile-frontend-ajax-page-loading' => '$1 bar beno',
-	'mobile-frontend-page-saving' => '$1 beno qeyd',
+	'mobile-frontend-page-saving' => '$1 qeyd beno',
 	'mobile-frontend-ajax-page-error' => 'Wey! Tayê çi ters şi. Şıma ra reca ma awa ke pençereyê cıgeyrayoğê xo newe ra bıcerebnên.',
 );
 
@@ -3896,6 +3896,11 @@ $messages['hsb'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Nastajenja składować',
 	'mobile-frontend-random-button' => 'Připadny',
+	'mobile-frontend-ajax-random-heading' => 'Wěda so pyta...',
+	'mobile-frontend-ajax-random-quote' => 'Intelektualny róst měł so z narodom započeć a ze smjerću přestać',
+	'mobile-frontend-ajax-random-question' => 'Tutón nastawk čitać?',
+	'mobile-frontend-ajax-random-yes' => 'Haj',
+	'mobile-frontend-ajax-random-retry' => 'Hišće raz spytać',
 	'mobile-frontend-back-to-top-of-section' => 'Wotrězk wróćo skočić',
 	'mobile-frontend-close-section' => 'Tutón wotrězk začinić',
 	'mobile-frontend-show-button' => 'Pokazać',
@@ -3995,6 +4000,7 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-meta-data-issues-header' => 'Tutón nastawk polěpšić',
 	'mobile-frontend-meta-data-issues' => 'Nastawk ma problemy',
 	'mobile-frontend-ajax-page-loading' => '$1 so začituje',
+	'mobile-frontend-page-saving' => '$1 so składuje',
 	'mobile-frontend-ajax-page-error' => 'Hopla! Něšto je so nimokuliło. Prošu spytaj wokno swojeho wobhladowaka aktualizować.',
 );
 
@@ -4527,6 +4533,9 @@ $messages['it'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Salva impostazioni',
 	'mobile-frontend-random-button' => 'Una pagina a caso',
+	'mobile-frontend-ajax-random-heading' => 'Individuazione delle conoscenze...',
+	'mobile-frontend-ajax-random-quote' => 'La crescita intellettuale dovrebbe iniziare alla nascita e cessare solo alla morte',
+	'mobile-frontend-ajax-random-question' => 'Vuoi leggere questa voce?',
 	'mobile-frontend-ajax-random-yes' => 'Sì',
 	'mobile-frontend-ajax-random-retry' => 'Riprova',
 	'mobile-frontend-back-to-top-of-section' => 'Vai a inizio sezione',
@@ -5806,7 +5815,7 @@ $messages['ltg'] = array(
 	'mobile-frontend-hide-button' => 'Nūglobuot',
 );
 
-/** Lushai (Mizo ţawng)
+/** Mizo (Mizo ţawng)
  * @author RMizo
  */
 $messages['lus'] = array(
@@ -5985,6 +5994,7 @@ $messages['mk'] = array(
 	'mobile-frontend-random-button' => 'Случајна',
 	'mobile-frontend-ajax-random-heading' => 'Го пронаоѓам знаењето...',
 	'mobile-frontend-ajax-random-quote' => 'Интелектуалниот развој треба да почне од самото раѓање и завршува дури кога ќе умреме',
+	'mobile-frontend-ajax-random-quote-author' => 'Алберт Ајнштајн',
 	'mobile-frontend-ajax-random-question' => 'Сакате да ја прочитате статијава?',
 	'mobile-frontend-ajax-random-yes' => 'Да',
 	'mobile-frontend-ajax-random-retry' => 'Обиди се пак',
@@ -6323,6 +6333,11 @@ $messages['ms'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Simpan tetapan',
 	'mobile-frontend-random-button' => 'Rawak',
+	'mobile-frontend-ajax-random-heading' => 'Mencari pengetahuan...',
+	'mobile-frontend-ajax-random-quote' => 'Pertumbuhan intelek seharusnya bermula pada saat lahir, dan berhenti pada saat ajal sahaja.',
+	'mobile-frontend-ajax-random-question' => 'Baca rencana ini?',
+	'mobile-frontend-ajax-random-yes' => 'Ya',
+	'mobile-frontend-ajax-random-retry' => 'Cuba lagi',
 	'mobile-frontend-back-to-top-of-section' => 'Undur Satu Bahagian',
 	'mobile-frontend-close-section' => 'Tutup bahagian ini',
 	'mobile-frontend-show-button' => 'Tunjukkan',
@@ -6421,6 +6436,7 @@ $messages['ms'] = array(
 	'mobile-frontend-meta-data-issues-header' => 'Perbaiki rencana ini',
 	'mobile-frontend-meta-data-issues' => 'Rencana ini ada masalah',
 	'mobile-frontend-ajax-page-loading' => '$1 sedang dimuatkan',
+	'mobile-frontend-page-saving' => 'Menyimpan $1',
 	'mobile-frontend-ajax-page-error' => 'Maaf, ralat telah berlaku. Sila cuba segar semula tetingkap pelayar anda.',
 );
 
@@ -6719,6 +6735,9 @@ $messages['nl'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Instellingen opslaan',
 	'mobile-frontend-random-button' => 'Willekeurig',
+	'mobile-frontend-ajax-random-question' => 'Deze pagina lezen?',
+	'mobile-frontend-ajax-random-yes' => 'Ja',
+	'mobile-frontend-ajax-random-retry' => 'Opnieuw proberen',
 	'mobile-frontend-back-to-top-of-section' => 'Een kopje terugspringen',
 	'mobile-frontend-close-section' => 'Deze paragraaf sluiten',
 	'mobile-frontend-show-button' => 'Weergeven',
@@ -6818,6 +6837,7 @@ Probeer het later nog een keer.',
 	'mobile-frontend-meta-data-issues-header' => 'Verbeter deze pagina',
 	'mobile-frontend-meta-data-issues' => 'Er zijn verbeterpunten voor deze pagina',
 	'mobile-frontend-ajax-page-loading' => 'Bezig met laden van $1',
+	'mobile-frontend-page-saving' => 'Bezig met het opslaan van $1',
 	'mobile-frontend-ajax-page-error' => 'Er is iets misgegaan. Vernieuw de huidige pagina in uw browser.',
 );
 
