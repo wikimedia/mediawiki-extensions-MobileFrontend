@@ -76,7 +76,11 @@ MobileFrontend.navigation = (function( $ ) {
 			enableArticleActions();
 
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, curPage ) {
-				enableEditing( curPage.title );
+				M.getToken( 'edit', function( data ) {
+					if( data.tokens && !data.warnings ) { // then user is logged in
+						enableEditing( curPage.title );
+					}
+				} );
 			} );
 		}
 
