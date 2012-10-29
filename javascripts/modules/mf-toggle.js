@@ -102,7 +102,7 @@ var toggle = ( function() {
 				u( a ).text( message( 'mobile-frontend-close-section' ) );
 				u( a ).bind( 'click', openSectionHandler );
 			}
-			u( heading ).bind( 'click', openSectionHandler );
+			u( heading ).bind( 'mousedown', openSectionHandler );
 		}
 		
 		function checkHash() {
