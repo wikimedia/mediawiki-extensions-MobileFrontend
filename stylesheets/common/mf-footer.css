@@ -85,10 +85,10 @@ html[dir="ltr"] #footer .settings .left:after {
 body.beta #footer .links li {
   width: 33%;
 }
-body.live #section_footer button {
+body #section_footer button {
   height: 22px;
 }
-body.live #footer .toggleCopyright {
+body #footer .toggleCopyright {
   font-weight: bold;
   font-size: 1em;
   line-height: 22px;
@@ -97,13 +97,13 @@ body.live #footer .toggleCopyright {
   padding: 0;
   position: relative;
 }
-body.live .togglingEnabled #footer .more,
-body.live .togglingEnabled #footer .openSection .less {
+body .togglingEnabled #footer .more,
+body .togglingEnabled #footer .openSection .less {
   display: block;
 }
-body.live #footer .more,
-body.live #footer .less,
-body.live #footer .openSection .more {
+body #footer .more,
+body #footer .less,
+body #footer .openSection .more {
   display: none;
 }
 @media all and (min-width: 330px) {
