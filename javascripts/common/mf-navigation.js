@@ -86,14 +86,6 @@ MobileFrontend.navigation = (function( $ ) {
 
 		var headerHeight = $( '#mw-mf-header' ).height(),
 			id = mfePrefix + 'overlay';
-		// work out when the header is out of view
-		$( window ).bind( 'scroll', function() {
-			if ( document.body.scrollTop > headerHeight ) {
-				$( 'html' ).addClass( 'readingMode' );
-			} else {
-				$( 'html' ).removeClass( 'readingMode' );
-			}
-		} );
 		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
 			if ( curPage.hash === '#' || curPage.hash === '' ) {
 				closeOverlay();
