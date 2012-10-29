@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABs3///9Q\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T17:34:07Z",
+      "side": 1,
+      "message": "this should be array( \u0027returnto\u0027 \u003d\u003e $this... ) - otherwise you get an extra \u0027\u003d\u0027 in the query string",
+      "revId": "7388edcfcb34139dd939c845896152581213f7d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
