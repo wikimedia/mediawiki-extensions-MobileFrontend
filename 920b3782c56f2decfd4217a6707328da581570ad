@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABuX///3M\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T22:00:45Z",
+      "side": 1,
+      "message": "This results in errors - I believe this should be:\n$( \u0027\u003cbutton\u003e\u0027 ).text( M.message( \u0027mobile-frontend-aj\nax-random-retry\u0027 ) ).click( function() {\n\n(Note the closing paren for text())",
+      "revId": "920b3782c56f2decfd4217a6707328da581570ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
