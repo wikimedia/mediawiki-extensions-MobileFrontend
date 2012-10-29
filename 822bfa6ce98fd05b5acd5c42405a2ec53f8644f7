@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAABuH////0\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-29T20:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABtn///+0\u003d",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABtn////I\u003d",
         "filename": "includes/skins/SkinMobileBase.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2012-10-29T20:20:23Z",
       "side": 1,
       "message": "Causes following warning:\nStrict Standards: Only variables should be passed by reference in /mnt/hgfs/wikimedia_git/extensions/MobileFrontend/includes/skins/SkinMobileBase.php on line 100",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABuH////w\u003d",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-29T20:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABtn////I\u003d",
       "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAABuH////s\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-29T20:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABt3////o\u003d",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABt3////s\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 3
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "AAABuH////c\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-29T20:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABt3////s\u003d",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABt3////8\u003d",
         "filename": "stylesheets/specials/watchlist.css",
         "patchSetId": 3
@@ -81,6 +153,24 @@
       "writtenOn": "2012-10-29T20:20:23Z",
       "side": 1,
       "message": "excessive whitespace",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABuH////Y\u003d",
+        "filename": "stylesheets/specials/watchlist.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-10-29T20:57:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABt3////8\u003d",
       "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
