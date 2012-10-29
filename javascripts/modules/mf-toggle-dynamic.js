@@ -12,12 +12,14 @@ var T = ( function() {
 	function wm_toggle_section( section_id ) {
 		var id = 'section_' + section_id, content_id = 'content_' + section_id,
 			closed, sectionInfo = sectionData[ section_id ],
+			$container,
 			$section = $( '#' + id ), $button = $section.find( 'button' ), $content = $( '#' + content_id ),
 			selector = '#' + content_id + ',#' + id + ',#anchor_' + section_id + ',#' + id + ' button'; // FIXME: shouldn't have to toggle class on button
 
 		if ( sectionInfo && $content.length === 0 ) {
-			$( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
+			$container = $( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
 			$( window ).trigger( 'mw-mf-section-rendered', [ $( content_id )[ 0 ] ] );
+			M.history.hijackLinks( $container );
 		}
 
 		$( selector ).toggleClass( 'openSection' );

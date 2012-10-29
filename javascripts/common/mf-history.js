@@ -15,8 +15,9 @@ M.history = ( function() {
 			window.location.href = URL_TEMPLATE.replace( '$1', title );
 		};
 
-	function hijackLinks() {
-		$( '#content a' ).on( 'click', function( ev ) {
+	function hijackLinks( container ) {
+		container = container || document.getElementById( 'content' );
+		$( container ).find( 'a' ).on( 'click', function( ev ) {
 			var title = $( this ).attr( 'title' ),
 				namespaced = title && title.indexOf( ':' ) > -1,
 				nofollow = $( this ).hasClass( 'new,external' );
@@ -138,6 +139,7 @@ M.history = ( function() {
 	}
 
 	return {
+		hijackLinks: hijackLinks,
 		loadPage: loadPage,
 		makeStubPage: makeStubPage,
 		navigateToPage: navigateToPage,
