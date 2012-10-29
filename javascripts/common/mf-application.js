@@ -11,7 +11,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 }
 mw.mobileFrontend = (function() {
 	var utilities, modules = [],
-		scrollY, tokenQuery,
+		scrollY, tokenQuery = {},
 		moduleNamespace = {},
 		doc = document.documentElement;
 
@@ -251,15 +251,15 @@ mw.mobileFrontend = (function() {
 
 	function getToken( tokenType, callback ) {
 		var data;
-		if( tokenQuery ) {
-			tokenQuery.done( callback );
+		if( tokenQuery[ tokenType ] ) {
+			tokenQuery[ tokenType ].done( callback );
 		} else {
 			data = {
 				format: 'json',
 				action: 'tokens',
 				type: tokenType
 			};
-			tokenQuery = jQuery.ajax( {
+			tokenQuery[ tokenType ] = jQuery.ajax( {
 				url: getApiUrl(),
 				dataType: 'json',
 				data: data
