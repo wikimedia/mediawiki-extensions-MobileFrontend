@@ -6,6 +6,7 @@ less:
 	lessc stylesheets/less/common/mf-common.less > stylesheets/common/mf-common.css
 	lessc stylesheets/less/common/mf-footer.less > stylesheets/common/mf-footer.css
 	lessc stylesheets/less/common/mf-hacks.less > stylesheets/common/mf-hacks.css
+	lessc stylesheets/less/common/mf-enwp.less > stylesheets/common/mf-enwp.css
 	lessc stylesheets/less/common/mf-navigation.less > stylesheets/common/mf-navigation.css
 	lessc stylesheets/less/modules/mf-cleanuptemplates.less > stylesheets/modules/mf-cleanuptemplates.css
 	lessc stylesheets/less/modules/mf-banner.less > stylesheets/modules/mf-banner.css
