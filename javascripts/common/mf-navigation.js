@@ -77,7 +77,8 @@ MobileFrontend.navigation = (function( $ ) {
 
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, curPage ) {
 				M.getToken( 'edit', function( data ) {
-					if( data.tokens && !data.warnings ) { // then user is logged in
+					if( data.tokens && !data.warnings &&
+							data.tokens.edittoken !== '+\\' ) { // then user is logged in
 						enableEditing( curPage.title );
 					}
 				} );
