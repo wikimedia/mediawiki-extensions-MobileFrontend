@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABtn///+0\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T20:20:23Z",
+      "side": 1,
+      "message": "excessive whitespace",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABtn////I\u003d",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T20:20:23Z",
+      "side": 1,
+      "message": "Causes following warning:\nStrict Standards: Only variables should be passed by reference in /mnt/hgfs/wikimedia_git/extensions/MobileFrontend/includes/skins/SkinMobileBase.php on line 100",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABt3////o\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T20:20:23Z",
+      "side": 1,
+      "message": "Please cleanup whitespace here (and elsewhere in the file)",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABt3////s\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T20:20:23Z",
+      "side": 1,
+      "message": "Notice: Undefined variable: usePage in /mnt/hgfs/wikimedia_git/extensions/MobileFrontend/includes/specials/SpecialMobileWatchlist.php on line 94",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABt3////8\u003d",
+        "filename": "stylesheets/specials/watchlist.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T20:20:23Z",
+      "side": 1,
+      "message": "excessive whitespace",
+      "revId": "822bfa6ce98fd05b5acd5c42405a2ec53f8644f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
