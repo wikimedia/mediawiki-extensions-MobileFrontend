@@ -1,0 +1,128 @@
+.mobile #coordinates {
+	display: none; /* TODO: style for mobile */
+}
+
+.dablink {
+	margin-bottom: 10px;
+}
+
+table.navbox td.navbox-group {
+	background: #ddddff;
+	width: 25%;
+	padding: 3px;
+}
+
+table.navbox th.navbox-title {
+	background: #ccccff;
+	padding: 5px;
+}
+
+table.navbox td.navbox-abovebelow {
+	padding: 3px;
+}
+
+table.navbox td.navbox-group + td {
+	padding: 3px;
+}
+
+table.navbox td,
+table.navbox th {
+	padding: 0;
+}
+
+table.navbox table {
+	margin-bottom: 0;
+}
+
+table.infobox {
+	background: #f9f9f9;
+}
+
+table.infobox caption {
+	display: block;
+}
+
+table.infobox th,
+table.infobox td {
+	border: 0;
+}
+
+@media all and (max-width: 500px) {
+/* styling for warning boxes (see bug 36674)*/
+	.mobile td.mbox-image div {
+		width: 100% !important;
+		box-sizing: border-box;
+	}
+
+	.mobile .mbox-text div {
+		text-align: center !important;
+	}
+	.mobile th.mbox-text,
+	.mobile td.mbox-text,
+	.mobile td.mbox-image {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		text-align: center !important;
+	}
+
+	.mobile table.ambox-content {
+		border-left: 1px solid #AAA;
+		box-sizing: border-box;
+		border-bottom: 10px solid #F28500;
+	}
+}
+
+.navbox .hlist dd,
+.navbox .hlist dt,
+.navbox .hlist li {
+	white-space: pre-wrap !important;
+	word-break: break-word;
+}
+
+/* force portals to use a one column layout on mobile */
+.mobile .portal-column-left-wide,
+.mobile .portal-column-left,
+.mobile .portal-column-right,
+.mobile .portal-column-right-narrow {
+	float: none;
+	width: 100%;
+}
+
+.collapsible td {
+	width: auto !important;
+}
+
+table.navbox {
+	font-size: 0.9em;
+	width: 100% !important;
+}
+
+table.navbox div {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+table.navbox div a,
+table.navbox span {
+	white-space: pre-wrap !important;
+}
+
+table.infobox {
+	text-align: center !important;
+}
+
+table.infobox td,
+table.infobox th {
+	border: 1px solid #cccccc;
+}
+
+/* bug 34878 */
+.reflist,
+.references-column-width,
+.references-column-count-2 {
+	-moz-column-count: auto !important;
+	-webkit-column-count: auto !important;
+	column-count: auto !important;
+	-webkit-column-width: auto !important;
+}

@@ -6,22 +6,6 @@ IMPORTANT: do not use selectors containing attribute notation e.g. [style] [cols
 	as they are known to damage the ios app
 */
 
-.navbox .hlist dd,
-.navbox .hlist dt,
-.navbox .hlist li {
-	white-space: pre-wrap !important;
-	word-break: break-word;
-}
-
-/* force portals to use a one column layout on mobile */
-.mobile .portal-column-left-wide,
-.mobile .portal-column-left,
-.mobile .portal-column-right,
-.mobile .portal-column-right-narrow {
-	float: none;
-	width: 100%;
-}
-
 table {
 	border-spacing: 0 !important;
 	border-collapse: collapse !important;
@@ -37,10 +21,6 @@ table {
 	box-sizing: border-box;
 }
 
-.collapsible td {
-	width: auto !important;
-}
-
 table.gallery .thumb {
 	border: 0;
 	padding: 0 !important;
@@ -54,33 +34,9 @@ table.geography td {
 	margin-right: 0 !important;
 }
 
-table.navbox {
-	font-size: 0.9em;
-	width: 100% !important;
-}
-
-table.navbox div {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-
 table.gallery .gallerybox {
 	width: auto !important;
 	margin-bottom: -16px;
-}
-
-table.navbox div a,
-table.navbox span {
-	white-space: pre-wrap !important;
-}
-
-table.infobox {
-	text-align: center !important;
-}
-
-table.infobox td,
-table.infobox th {
-	border: 1px solid #cccccc;
 }
 
 .thumb .thumbinner {
@@ -109,16 +65,6 @@ img.tex,
 
 .thumb .noresize img {
 	max-width: none !important;
-}
-
-/* bug 34878 */
-.reflist,
-.references-column-width,
-.references-column-count-2 {
-	-moz-column-count: auto !important;
-	-webkit-column-count: auto !important;
-	column-count: auto !important;
-	-webkit-column-width: auto !important;
 }
 
 .thumb .thumbinner > div {
