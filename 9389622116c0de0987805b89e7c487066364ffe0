@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABs3///7g\u003d",
+        "filename": "javascripts/modules/mf-cleanuptemplates.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-10-29T17:54:08Z",
+      "side": 1,
+      "message": "plz remove excess ws",
+      "revId": "9389622116c0de0987805b89e7c487066364ffe0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
