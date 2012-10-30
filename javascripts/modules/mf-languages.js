@@ -58,10 +58,12 @@ var m = ( function() {
 	}
 
 	function init() {
-		var $a = $( '#mw-mf-language-section' );
+		var $a = $( '#mw-mf-language-section' ),
+			$h2 = $a.find( 'h2' );
 
 		if( countAvailableLanguages() > 1 ) {
-			$( '<button>' ).text( $a.find( 'h2' ).text() ).
+			$h2.find( 'button' ).remove();
+			$( '<button>' ).text( $h2.text() ).
 				addClass( 'languageSelector' ).
 					on( 'click', createLanguagePage ).insertBefore( $a );
 		}
