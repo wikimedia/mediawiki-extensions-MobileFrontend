@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAB03///9M\u003d",
+        "filename": "stylesheets/common/mf-enwp.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-30T17:38:26Z",
+      "side": 1,
+      "message": "I think you did this manually - you want column-width not column-count\n\nyou\u0027ll need to get setup with less to generate stylesheets\n\nhttps://gerrit.wikimedia.org/r/gitweb?\n\np\u003dmediawiki/extensions/MobileFrontend.git;a\u003dblob;f\u003dREADME;h\u003d37877cebe155af80a0fc0bd24775a53fe6383cd1;hb\u003dHEAD#l13",
+      "revId": "afbad6cb3e58b74f22ec7c771725a141371ab6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB03////o\u003d",
+        "filename": "stylesheets/less/common/mf-enwp.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-30T17:38:26Z",
+      "side": 1,
+      "message": "Most people won\u0027t know that column-width sets a hint. Please add a link to https://developer.mozilla.org/en-US/docs/CSS/column-width to make it clear that this is not an optimal.\n\nIs there any reason you went with 35em? I\u0027d suggest the value should optimise for maybe 80% of the average tablet display. The current value of 35em seems plucked out of thin air.",
+      "revId": "afbad6cb3e58b74f22ec7c771725a141371ab6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
