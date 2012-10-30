@@ -82,9 +82,15 @@ var m = ( function() {
 
 		mw.mobileFrontend.getModule( 'toggle' ).enableToggling(); // FIXME: adds dependency to toggle module
 	}
-	return {
-		init: init
-	};
+
+	// only register if we found an edit area
+	if ( $editArea[ 0 ] ) {
+		return {
+			init: init
+		};
+	} else {
+		return {};
+	}
 
 } () );
 
