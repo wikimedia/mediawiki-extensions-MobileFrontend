@@ -178,22 +178,6 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		);
 
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
-		if ( $context->imagesDisabled() ) {
-			$on = Linker::link( $imagesSwitchTitle,
-				$this->msg( 'mobile-frontend-on' )->escaped(),
-				array( 'id' => 'imagetoggle' ),
-				array( 'returnto' => $title->getPrefixedText() )
-			);
-			$off = $this->msg( 'mobile-frontend-off' )->escaped();
-		} else {
-			$on = $this->msg( 'mobile-frontend-on' )->escaped();
-			$off = Linker::link( $imagesSwitchTitle,
-				$this->msg( 'mobile-frontend-off' )->escaped(),
-				array( 'id' => 'imagetoggle' ),
-				array( 'returnto' => $title->getPrefixedText() )
-			);
-		}
-		$tpl->set( 'imagesToggle', $this->msg( 'mobile-frontend-toggle-images' )->rawParams( $on, $off )->escaped() );
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
 			$license = Html::element( 'img', array(

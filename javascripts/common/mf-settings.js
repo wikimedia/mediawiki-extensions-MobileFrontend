@@ -5,8 +5,7 @@ var MobileFrontend = M;
 var settings = ( function() {
 	var u = MobileFrontend.utils,
 		message = MobileFrontend.message,
-		supportsLocalStorage,
-		mobileTokenCookieName = 'mobiletoken';
+		supportsLocalStorage;
 
 	// using feature detection used by http://diveintohtml5.info/storage.html
 	try {
@@ -80,30 +79,6 @@ var settings = ( function() {
 		return rtn;
 	}
 
-	function addCSRFToken( link, name, value ) {
-		return updateQueryStringParameter( link, name, value );
-	}
-
-	function readMobileToken() {
-		return readCookie( mobileTokenCookieName );
-	}
-
-	function updateMobileToken( responseXml ) {
-		var mobileviewElements = responseXml.getElementsByTagName( 'mobileview' ),
-			imagetoggle, mobileToken;
-		if ( mobileviewElements[0] ) {
-			mobileToken = mobileviewElements[0].getAttribute( 'mobiletoken' );
-		}
-		imagetoggle = document.getElementById( 'imagetoggle' );
-		if ( mobileToken ) {
-			writeCookie( mobileTokenCookieName, mobileToken, 1 );
-			if( imagetoggle && imagetoggle.getAttribute( 'href' ) ) {
-				imagetoggle.setAttribute( 'href',
-					addCSRFToken( imagetoggle.href, 'mobiletoken', mobileToken ) );
-			}
-		}
-	}
-
 	function enhanceCheckboxes() {
 	u( document.body ).addClass( 'mw-mf-checkboxes' );
 		var inputs = document.getElementsByTagName( 'input' ), i, el, special;
@@ -160,18 +135,6 @@ var settings = ( function() {
 	}
 
 	function init() {
-		var mobileToken = readMobileToken(), imagetoggle, apiUrl = '/api.php',
-			url;
-
-		if ( !mobileToken ) {
-			apiUrl = MobileFrontend.setting( 'scriptPath' ) + apiUrl;
-			url = apiUrl + '?action=mobileview&page=mobiletoken&format=xml';
-			u.ajax( { url: url,
-				success: function( xml ) {
-					updateMobileToken( xml );
-				}
-				} );
-		}
 		enhanceCheckboxes();
 		u( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
 	}

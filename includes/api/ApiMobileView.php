@@ -26,15 +26,6 @@ class ApiMobileView extends ApiBase {
 		$textElement = $this->getMain()->getPrinter()->getFormat() == 'XML' ? '*' : 'text';
 		$params = $this->extractRequestParams();
 
-		if ( $params['page'] == 'mobiletoken' ) {
-			$result = $this->getResult();
-			$result->addValue( null, $this->getModuleName(),
-				array( 'mobiletoken' => MobileContext::singleton()->getMobileToken() )
-			);
-			wfProfileOut( __METHOD__ );
-			return;
-		}
-
 		$prop = array_flip( $params['prop'] );
 		$sectionProp = array_flip( $params['sectionprop'] );
 		$this->followRedirects = $params['redirect'] == 'yes';
