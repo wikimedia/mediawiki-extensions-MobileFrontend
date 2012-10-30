@@ -275,7 +275,7 @@ html.overlay button.escapeOverlay {
 html.overlay #footer {
   display: none !important;
 }
-html.overlay li {
+html.overlay ul.content li {
   color: #666;
   border: none;
   position: relative;
@@ -284,22 +284,25 @@ html.overlay li {
   padding: 12px 40px;
   font-size: 0.9em;
 }
-html.overlay li a {
+html.overlay ul.content li a {
   display: block;
   text-decoration: none;
   color: #666;
 }
-html.overlay li a:active,
-html.overlay li a:hover,
-html.overlay li a:visited {
+html.overlay ul.content li a:active,
+html.overlay ul.content li a:hover,
+html.overlay ul.content li a:visited {
   text-decoration: none;
   color: #666;
 }
-html.overlay li:hover {
+html.overlay ul.content li:hover {
   background-color: #ACD1E9;
 }
 .overlay #mw-mf-overlay {
   display: block;
+}
+#mw-mf-overlay div.content {
+  margin: 14pt 23px 0 23px;
 }
 #mw-mf-overlay .alert {
   padding: 8px;
