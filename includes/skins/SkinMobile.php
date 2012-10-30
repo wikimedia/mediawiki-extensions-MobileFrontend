@@ -177,6 +177,7 @@ mediawiki.hidpi' ), 'scripts', true, true );
 				getLocalUrl( 'returnto=' . $this->getTitle()->getPrefixedText() )
 		);
 
+		$tpl->set( 'authenticated', $this->getUser()->isLoggedIn() );
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 		if ( $context->imagesDisabled() ) {
 			$on = Linker::link( $imagesSwitchTitle,
@@ -619,6 +620,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			),
 			'settings' => array(
 				'action' => $this->data['action'],
+				'authenticated' => $this->data['authenticated'],
 				'scriptPath' => $wgScriptPath,
 				'shim' => $this->data['shim'],
 				'pageUrl' => $wgArticlePath,

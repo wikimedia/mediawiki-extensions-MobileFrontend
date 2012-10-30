@@ -249,9 +249,15 @@ mw.mobileFrontend = (function() {
 		return setting( 'scriptPath' ) + '/api.php';
 	}
 
+	function isLoggedIn() {
+		return setting( 'authenticated' );
+	}
+
 	function getToken( tokenType, callback ) {
 		var data;
-		if( tokenQuery[ tokenType ] ) {
+		if ( !isLoggedIn() ) {
+			callback( {} ); // return no token
+		} else if ( tokenQuery[ tokenType ] ) {
 			tokenQuery[ tokenType ].done( callback );
 		} else {
 			data = {
