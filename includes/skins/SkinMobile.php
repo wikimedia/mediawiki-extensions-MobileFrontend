@@ -303,9 +303,11 @@ mediawiki.hidpi' ), 'scripts', true, true );
 						urlencode( $languageUrlHref );
 				}
 			}
-			$output .= Html::openElement( 'li' ) . Html::element( 'a',
-				array( 'href' => $languageUrlHref ),
-				$languageUrlLanguage ) . Html::closeElement( 'li' );
+			if ( $languageUrl['lang'] != $wgLanguageCode ) {
+				$output .= Html::openElement( 'li' ) . Html::element( 'a',
+					array( 'href' => $languageUrlHref ),
+					$languageUrlLanguage ) . Html::closeElement( 'li' );
+			}
 		}
 		$output .= Html::closeElement( 'ul' );
 		$msg = wfMessage( 'mobile-frontend-language-header', count( $languageUrls ) - 1 )->text();
