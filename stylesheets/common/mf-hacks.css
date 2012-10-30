@@ -1,5 +1,5 @@
 /* the following definitions exist to deal with certain inline styles
-present in wikitext
+present in wikitext.
 This file should not need to exist
 IMPORTANT: do not use selectors containing attribute notation e.g. [style] [colspan]
 	as they are known to damage the ios app
