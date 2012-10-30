@@ -4,6 +4,13 @@ This file should not need to exist
 IMPORTANT: do not use selectors containing attribute notation e.g. [style] [colspan]
         as they are known to damage the ios app
 */
+pre.mw-code,
+pre.mw-js,
+pre.source-css {
+  font-family: monospace;
+  border: solid 1px #CCC;
+  padding: 1em;
+}
 .mobile #coordinates {
   display: none;
   /* TODO: style for mobile */

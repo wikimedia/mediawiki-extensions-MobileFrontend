@@ -5,6 +5,17 @@ IMPORTANT: do not use selectors containing attribute notation e.g. [style] [cols
         as they are known to damage the ios app
 */
 
+
+pre {
+	&.mw-code,
+	&.mw-js,
+	&.source-css {
+		font-family: monospace;
+		border: solid 1px #CCC;
+		padding: 1em;
+	}
+}
+
 .mobile #coordinates {
 	display: none; /* TODO: style for mobile */
 }
