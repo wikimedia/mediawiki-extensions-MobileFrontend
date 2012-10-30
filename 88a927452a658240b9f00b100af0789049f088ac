@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAB2H///4Q\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-30T22:47:29Z",
+      "side": 1,
+      "message": "Lets move this to mf-enwp.css/less ?\nI\u0027m guessing that would be a better place?",
+      "revId": "88a927452a658240b9f00b100af0789049f088ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB2X////4\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-30T22:47:29Z",
+      "side": 1,
+      "message": "In less you can actually combine this with the above definition:\n\nli.gallerybox div.thumb {\ntext-align: center;\nborder: 1px solid #ccc;\nbackground-color: #f9f9f9;\nmargin: 2px;\n\n\timg {\n\tdisplay: block;\n\tmargin: 0 auto;\n\t}\n}",
+      "revId": "88a927452a658240b9f00b100af0789049f088ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

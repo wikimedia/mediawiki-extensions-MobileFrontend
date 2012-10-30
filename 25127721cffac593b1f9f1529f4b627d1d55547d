@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAB2H///3k\u003d",
+        "filename": "stylesheets/common/mf-hacks.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-10-30T22:47:29Z",
+      "side": 0,
+      "message": "How do div.gallery .thumbs appear in the mobile site? Are we sure they don\u0027t set widths or padding properties in inline styles?",
+      "revId": "25127721cffac593b1f9f1529f4b627d1d55547d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
