@@ -13,22 +13,10 @@ table {
 	width: 100% !important;
 }
 
-table.gallery .thumb {
-	border: 0;
-	padding: 0 !important;
-	width: auto !important;
-	margin: 0 auto;
-}
-
 table.geography td {
 	text-align: left !important;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
-}
-
-table.gallery .gallerybox {
-	width: auto !important;
-	margin-bottom: -16px;
 }
 
 .thumb .thumbinner {
@@ -63,4 +51,24 @@ img.tex,
 	float: none !important;
 	width: auto !important;
 	clear: both !important;
+}
+
+/* Galleries */
+/* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
+
+ul.gallery {
+	width: 100% !important;
+	max-width: 100% !important;
+
+	li.gallerybox {
+		width: auto !important;
+
+		> div {
+			width: auto !important;
+
+			> div.thumb {
+				width: auto !important;
+			}
+		}
+	}
 }
