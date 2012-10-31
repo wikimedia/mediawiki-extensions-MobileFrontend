@@ -76,6 +76,9 @@ input.search.searching {
   cursor: pointer;
   position: absolute;
 }
+body.beta #mw-mf-searchForm {
+  padding-right: 50px;
+}
 #results {
   display: none;
   width: 100%;
