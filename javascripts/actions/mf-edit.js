@@ -20,10 +20,16 @@ var m = ( function() {
 	}
 
 	function concatTextAreas() {
-		var newVal = [];
-		$( 'form#editform .segment' ).each( function() {
+		var newVal = [],
+			$segments = $( 'form#editform .segment' ),
+			last = $segments.length - 1;
+
+		$segments.each( function( i ) {
 			newVal.push( $( this ).val() );
-			if ( this.nodeName === 'INPUT' ) {
+
+			if ( i === last ) {
+				return;
+			} else if ( this.nodeName === 'INPUT' ) {
 				newVal.push( '\n' );
 			} else {
 				newVal.push( '\n\n' );
@@ -47,7 +53,7 @@ var m = ( function() {
 				headingLocation = $section.find( '.content_block' );
 				val = val.split( '\n' );
 				heading = val[ 0 ];
-				val = val[ 1 ];
+				val = val.slice( 1 ).join( '\n' );
 				$el = $( '<input class="segment">' ).
 					val( heading );
 				if ( heading.indexOf( '====' ) > -1 ) {
@@ -65,7 +71,12 @@ var m = ( function() {
 				} ).appendTo( headingLocation )
 			}
 
-			$( '<textarea class="segment">' ).val( val ).appendTo( $section.find( '.content_block' ) );
+			if ( val ) {
+				$el = $( '<textarea class="segment">' );
+			} else { // a heading for followed by 2 new lines - ensure the blank line is kept
+				$el = $( '<input class="segment">' );
+			}
+			$el.val( val ).appendTo( $section.find( '.content_block' ) );
 		}
 
 		$loader = $( '<div class="loader">' ).text( M.message( 'mobile-frontend-page-saving', M.setting( 'title' ) ) ).
