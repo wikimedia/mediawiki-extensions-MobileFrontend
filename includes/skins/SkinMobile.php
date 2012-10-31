@@ -305,7 +305,10 @@ mediawiki.hidpi' ), 'scripts', true, true );
 			}
 			if ( $languageUrl['lang'] != $wgLanguageCode ) {
 				$output .= Html::openElement( 'li' ) . Html::element( 'a',
-					array( 'href' => $languageUrlHref ),
+					array( 'href' => $languageUrlHref,
+						'lang' => $languageUrl['lang'],
+						'hreflang' => $languageUrl['lang']
+					),
 					$languageUrlLanguage ) . Html::closeElement( 'li' );
 			}
 		}
