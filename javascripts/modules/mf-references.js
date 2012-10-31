@@ -1,9 +1,7 @@
 /*global document, window, mw, jQuery, navigator */
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
-( function( M ) {
-var references;
-if( M.jQuery ) {
-	references = ( function( $ ) {
+( function( M, $ ) {
+var references = ( function() {
 		var calculatePosition = function() {},
 			inBeta = M.setting( 'beta' ),
 			supportsPositionFixed = M.supportsPositionFixed;
@@ -54,7 +52,7 @@ if( M.jQuery ) {
 			}
 			el.ontouchstart = cancelBubble;
 			close = function() {
-				if( !$( '#mf-references' ).is( ':visible' ) ) {
+				if ( !$( '#mf-references' ).is( ':visible' ) ) {
 					return;
 				}
 				var top;
@@ -67,12 +65,12 @@ if( M.jQuery ) {
 			function clickReference( ev ) {
 				var top, oh;
 				href = $( this ).attr( 'href' );
-				data = href && href.charAt(0) === '#' ?
+				data = href && href.charAt( 0 ) === '#' ?
 					references[ href.substr( 1, href.length ) ] : null;
 
-				if( !$( '#mf-references' ).is( ':visible' ) || lastLink !== href) {
+				if ( !$( '#mf-references' ).is( ':visible' ) || lastLink !== href ) {
 					lastLink = href;
-					if( data ) {
+					if ( data ) {
 						html = '<h3>' + $( this ).text() + '</h3>' + data.html;
 					} else {
 						html = $( '<a />' ).text( $(this).text() ).
@@ -95,12 +93,11 @@ if( M.jQuery ) {
 				click( clickReference ).each( function() {
 					el.ontouchstart = cancelBubble;
 				} );
-			if( firstRun ) {
+			if ( firstRun ) {
 				$( window ).scroll( function() {
 					close();
 				} );
-				$( document.body ).bind( 'click', close );
-				$( document.body ).bind( 'touchstart', function() {
+				$( document.body ).bind( 'click', close ).bind( 'touchstart', function() {
 					$( '#mf-references' ).hide();
 				} );
 			}
@@ -121,8 +118,8 @@ if( M.jQuery ) {
 			init: init,
 			setupReferences: setupReferences
 		};
-	}(jQuery));
+	}() );
 
 	M.registerModule( 'references', references );
-}
-}( mw.mobileFrontend ));
+
+}( mw.mobileFrontend, jQuery ) );
