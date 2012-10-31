@@ -57,7 +57,7 @@ window.MobileFrontendTests = {
 			'	</div>',
 			'	</div>',
 			'<div id="mfe-test-classes" class="test hello-world goodbye camelCase">for testing classes</div>',
-			'</div>'
+			'</div>',
 		].join( "" ) ).appendTo( "#qunit-fixture" );
 	},
 	triggerEvent: function ( el, eventName ) {
