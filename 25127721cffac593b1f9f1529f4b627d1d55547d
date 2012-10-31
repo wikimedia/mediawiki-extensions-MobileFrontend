@@ -16,6 +16,24 @@
       "revId": "25127721cffac593b1f9f1529f4b627d1d55547d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB5X////0\u003d",
+        "filename": "stylesheets/common/mf-hacks.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2012-10-31T09:05:25Z",
+      "side": 0,
+      "message": "Well there is no simple answer to this. so here goes:\n\nThis is inline li, which needs to be layed out as a grid. Therefore you will need a defined fixed width, because the content (gallerytext) can be wider than the image.\n\nSo you can remove the width from:\nli.gallerybox \u003e div\nand \nli.gallerybox \u003e div \u003e div.thumb\nbut probably not from\nli.gallerybox itself.\n\nI have tested the first two !importants live and they do not seem to break rendering when set, so I will add them to the PS later today.\n\nThe other inline property that galleries set are:\nthe li.gallerybox \u003e div \u003e div.thumb \u003e div, which sets alignment margins for the image to make sure it is positioned centered, regardless of aspect ratio of the image. For this I see no alternative, since it uses a margin that is dependent on the width and aspect ratio of the thumbnail image.",
+      "parentUuid": "AAAB2H///3k\u003d",
+      "revId": "25127721cffac593b1f9f1529f4b627d1d55547d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

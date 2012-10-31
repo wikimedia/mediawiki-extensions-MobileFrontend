@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAB5X////w\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2012-10-31T09:05:25Z",
+      "side": 1,
+      "message": "No, because this is part of the core stylesheets, it\u0027s not enwp specific.",
+      "parentUuid": "AAAB2H///4Q\u003d",
+      "revId": "88a927452a658240b9f00b100af0789049f088ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAB2X////4\u003d",
         "filename": "stylesheets/less/common/mf-common.less",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-10-30T22:47:29Z",
       "side": 1,
       "message": "In less you can actually combine this with the above definition:\n\nli.gallerybox div.thumb {\ntext-align: center;\nborder: 1px solid #ccc;\nbackground-color: #f9f9f9;\nmargin: 2px;\n\n\timg {\n\tdisplay: block;\n\tmargin: 0 auto;\n\t}\n}",
+      "revId": "88a927452a658240b9f00b100af0789049f088ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB5X////s\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2012-10-31T09:05:25Z",
+      "side": 1,
+      "message": "I don\u0027t feel comfortable making this deviate too much from the core stylesheet. As a matter of fact, I think we should start to think about how we should split off this kind of styling from the main common/shared.css into smaller fragments, so that we can include this straight with RL.",
+      "parentUuid": "AAAB2X////4\u003d",
       "revId": "88a927452a658240b9f00b100af0789049f088ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
