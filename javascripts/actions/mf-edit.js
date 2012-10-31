@@ -93,7 +93,7 @@ var m = ( function() {
 	}
 
 	function init() {
-		var $editArea = $( 'form#editform textarea' );
+		var $editArea = $( 'form#editform textarea' ).hide();
 		// only register if we found an edit area
 		if ( $editArea[ 0 ] ) {
 			splitTextArea( $editArea );
