@@ -2,8 +2,6 @@
 
 class ExtMobileFrontend extends ContextSource {
 
-	protected $wsLoginToken = '';
-	protected $wsLoginFormAction = '';
 	protected $zeroRatedBanner;
 
 	public function __construct( IContextSource $context ) {
@@ -254,18 +252,6 @@ class ExtMobileFrontend extends ContextSource {
 
 		$this->disableCaching();
 		$this->sendXDeviceVaryHeader();
-
-		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			$this->wsLoginToken = $request->getSessionData( 'wsLoginToken' );
-			$q = array( 'action' => 'submitlogin', 'type' => 'login' );
-			$returnToVal = $request->getVal( 'returnto' );
-
-			if ( $returnToVal ) {
-				$q['returnto'] = $returnToVal;
-			}
-
-			$this->wsLoginFormAction = $this->getTitle()->getLocalURL( $q );
-		}
 
 		wfProfileOut( __METHOD__ );
 		return true;
