@@ -373,3 +373,13 @@ $wgMFLogEvents = false;
  * If not, old method of loading will be used for all scripts.
  */
 $wgMFEnableResourceLoader = true;
+
+/**
+ * Whether to append ™ to the sitename in page footer, or
+ * ® to the sitename for alt text in footer if using a custom copyright logo.
+ *
+ * Defaults off to avoid being confusing.
+ *
+ * You can also edit the 'mobile-frontend-footer-sitename' message directly.
+ */
+$wgMFTrademarkSitename = false;
