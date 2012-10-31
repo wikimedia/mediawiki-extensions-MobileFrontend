@@ -46,7 +46,7 @@ test("clicking hash links", function() {
 
 test("clicking a heading toggles it", function() {
 	var visibilityStart = $("#content_2").hasClass("openSection");
-	MFET.triggerEvent($("#section_2")[0], "click");
+	MFET.triggerEvent($("#section_2")[0], 'mousedown' );
 	strictEqual(visibilityStart, false, "check content is hidden at start");
 	strictEqual($("#content_2").hasClass("openSection"), true, "check content is shown on a toggle");
 });
