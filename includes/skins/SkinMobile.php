@@ -8,7 +8,7 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents;
+			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents, $wgMFTrademarkSitename;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -181,14 +181,24 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
+			if ( $wgMFTrademarkSitename ) {
+				$suffix = ' ®';
+			} else {
+				$suffix = '';
+			}
 			$license = Html::element( 'img', array(
 				'src' => $wgMFCustomLogos['copyright'],
 				'class' => 'license',
-				'alt' => "{$footerSitename}"
+				'alt' => "{$footerSitename}" . $suffix
 			) );
 		} else {
+			if ( $wgMFTrademarkSitename ) {
+				$suffix = ' ™';
+			} else {
+				$suffix = '';
+			}
 			$license = Html::element( 'span', array( 'class' => 'license' ),
-				"{$footerSitename}"
+				"{$footerSitename}" . $suffix
 			);
 		}
 		$tpl->set( 'license', $license );
