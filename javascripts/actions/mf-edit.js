@@ -3,10 +3,7 @@
 ( function( M, $ ) {
 
 var m = ( function() {
-	var $editArea = $( 'form#editform textarea' ).hide(),
-		$editSummary = $( '#wpSummary' );
-
-	function makeSection( sectionId ) {
+	function makeSection( $editArea, sectionId ) {
 		var $section = $( '<div class="section">' ).insertBefore( $editArea ),
 			$heading = $( '<h2 class="section_heading">' ).attr( 'id', 'section_edit' + sectionId ),
 			$content = $( '<div class="content_block">' );
@@ -22,13 +19,27 @@ var m = ( function() {
 		return $section;
 	}
 
-	function init() {
+	function concatTextAreas() {
+		var newVal = [];
+		$( 'form#editform .segment' ).each( function() {
+			newVal.push( $( this ).val() );
+			if ( this.nodeName === 'INPUT' ) {
+				newVal.push( '\n' );
+			} else {
+				newVal.push( '\n\n' );
+			}
+		} );
+		return newVal.join( '' );
+	}
+
+	function splitTextArea( $editArea ) {
 		var wikitext = $editArea.val(),
+			$editSummary = $( '#wpSummary' ),
 			$loader,
 			parts = wikitext.split( '\n\n' ),
 			headingLocation, section_id = 0,
 			i, val, heading, $el,
-			$section = makeSection( section_id );
+			$section = makeSection( $editArea, section_id );
 
 		for ( i = 0; i < parts.length; i++ ) {
 			val = parts[ i ];
@@ -45,7 +56,7 @@ var m = ( function() {
 					$el.addClass( 'h3' );
 				} else if ( heading.indexOf( '==' ) > -1 ) {
 					section_id += 1;
-					$section = makeSection( section_id );
+					$section = makeSection( $editArea, section_id );
 					headingLocation = $section.find( '.section_heading' );
 					$el.addClass( 'h2' );
 				}
@@ -55,19 +66,6 @@ var m = ( function() {
 			}
 
 			$( '<textarea class="segment">' ).val( val ).appendTo( $section.find( '.content_block' ) );
-		}
-
-		function concatTextAreas() {
-			var newVal = [];
-			$( 'form#editform .segment' ).each( function() {
-				newVal.push( $( this ).val() );
-				if ( this.nodeName === 'INPUT' ) {
-					newVal.push( '\n' );
-				} else {
-					newVal.push( '\n\n' );
-				}
-			} );
-			return newVal.join( '' );
 		}
 
 		$loader = $( '<div class="loader">' ).text( M.message( 'mobile-frontend-page-saving', M.setting( 'title' ) ) ).
@@ -83,14 +81,18 @@ var m = ( function() {
 		mw.mobileFrontend.getModule( 'toggle' ).enableToggling(); // FIXME: adds dependency to toggle module
 	}
 
-	// only register if we found an edit area
-	if ( $editArea[ 0 ] ) {
-		return {
-			init: init
-		};
-	} else {
-		return {};
+	function init() {
+		var $editArea = $( 'form#editform textarea' );
+		// only register if we found an edit area
+		if ( $editArea[ 0 ] ) {
+			splitTextArea( $editArea );
+		}
 	}
+
+	return {
+		concatTextAreas: concatTextAreas,
+		init: init
+	};
 
 } () );
 
