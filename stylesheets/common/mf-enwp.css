@@ -1,3 +1,9 @@
+/* the following definitions exist to deal with certain inline styles present in wikitext
+and MediaWiki:Common.css definitions that are specific to English Wikipedia (and those who copied from en.wp).
+This file should not need to exist
+IMPORTANT: do not use selectors containing attribute notation e.g. [style] [colspan]
+        as they are known to damage the ios app
+*/
 .mobile #coordinates {
   display: none;
   /* TODO: style for mobile */
@@ -97,12 +103,12 @@ table.infobox td,
 table.infobox th {
   border: 1px solid #cccccc;
 }
-/* bug 34878 */
-.reflist,
-.references-column-width,
-.references-column-count-2 {
-  -moz-column-count: auto !important;
-  -webkit-column-count: auto !important;
-  column-count: auto !important;
-  -webkit-column-width: auto !important;
+/* bug 34878: Set an optimal width for a column.
+ * Makes sure that on small screens column-count is only honored if column-width hint is not violated.
+ * https://developer.mozilla.org/en-US/docs/CSS/column-width
+ */
+.references-column-count {
+  -moz-column-width: 35em;
+  -webkit-column-width: 35em;
+  column-width: 35em;
 }
