@@ -29,19 +29,6 @@ if( M.jQuery ) {
 			};
 			$( document ).scroll( calculatePosition );
 		}
-		function getOptions( options ) {
-			var hashtest;
-			options = options || {};
-			if( !options.animationSpeed ) {
-				hashtest = window.location.hash.substr(1).match(/refspeed:([0-9]*)/);
-				options.animationSpeed = hashtest ? parseInt( hashtest[1], 10 ) : 500;
-			}
-			if( !options.animation ) {
-				hashtest = window.location.hash.substr(1).match(/refanimation:([a-z]*)/);
-				options.animation = hashtest ? hashtest[1] : null;
-			}
-			return options;
-		}
 
 		function getReferenceTop() {
 			// http://bugs.jquery.com/ticket/6724
@@ -52,17 +39,11 @@ if( M.jQuery ) {
 		/*
 		init
 			options:
-				animation: <string>
-					Define the animation that should run on clicking a reference
-					Possible values: 'none', 'fade', 'slide'
-				animationSpeed: <integer>
-					The time in milliseconds the open reference animation should take
 				onClickReference: <function>
 					Define a handler that is run upon clicking a reference
 		*/
 		function setupReferences( container, firstRun, options ) {
 			var el, close, lastLink, data, html, href, references = collect();
-			options = getOptions( options );
 			container = container || $( '#content' )[ 0 ];
 			firstRun = firstRun === undefined ? true : firstRun;
 			$( '#mf-references' ).remove();
@@ -78,22 +59,7 @@ if( M.jQuery ) {
 				}
 				var top;
 				lastLink = null;
-				if( options.animation === 'none' ) {
-					$( '#mf-references' ).hide();
-				} else if( options.animation === 'fade' ) {
-					$( '#mf-references' ).fadeOut( options.animationSpeed );
-				} else {
-					top = getReferenceTop();
-					if( !supportsPositionFixed() ) {
-						$( '#mf-references' ).show().animate( { top: top }, { duration: options.animationSpeed,
-								complete: function() {
-									$( '#mf-references' ).hide();
-								}
-							} );
-					} else {
-						$( '#mf-references' ).slideUp();
-					}
-				}
+				$( '#mf-references' ).hide();
 			};
 			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
 			$( '.mw-cite-backlink a' ).click( close );
@@ -115,24 +81,11 @@ if( M.jQuery ) {
 					$( '#mf-references div' ).html( html );
 					$( '#mf-references div sup a' ).click( clickReference );
 					calculatePosition();
-					if( options.animation === 'none' ) {
-						$( '#mf-references' ).show();
-					} else if( options.animation === 'fade' ){
-						$( '#mf-references' ).fadeIn( options.animationSpeed );
-					} else {
-						if( !supportsPositionFixed() ) {
-							top = getReferenceTop();
-							oh = $( '#mf-references' ).outerHeight();
-							$( '#mf-references' ).show().css( { 'top': top } ).
-								animate( { top: top - oh }, options.animationSpeed );
-						} else {
-							$( '#mf-references' ).slideDown();
-						}
-					}
+					$( '#mf-references' ).show();
 				} else {
 					close();
 				}
-				if( options.onClickReference ) {
+				if ( options && options.onClickReference ) {
 					options.onClickReference( ev );
 				}
 				ev.preventDefault();
