@@ -24,9 +24,9 @@ var w = ( function() {
 
 	function createWatchListButton( container, title, isWatchedArticle ) {
 		var watchBtn, prevent;
+		$( container ).find( '.watch-this-article' ).remove();
 
-		watchBtn = $( container ).find( '.watch-this-article' )[ 0 ] ||
-			$( '<a class="watch-this-article">' ).appendTo( container )[ 0 ];
+		watchBtn = $( '<a class="watch-this-article">' ).appendTo( container )[ 0 ];
 
 		if( isWatchedArticle ) {
 			$( watchBtn ).addClass( 'watched' );
