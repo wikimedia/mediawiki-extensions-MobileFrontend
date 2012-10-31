@@ -4,6 +4,7 @@ var mwMobileFrontendConfig = {
 		hideText: "hide"
 	},
 	settings: {
+		authenticated: true,
 		scriptPath: "/"
 	}
 };
