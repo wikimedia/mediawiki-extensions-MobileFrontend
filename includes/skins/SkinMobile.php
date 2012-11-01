@@ -174,7 +174,7 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		);
 		$tpl->set( 'settingsUrl',
 			SpecialPage::getTitleFor( 'MobileOptions' )->
-				getLocalUrl( 'returnto=' . $this->getTitle()->getPrefixedText() )
+				getLocalUrl( array( 'returnto' => $this->getTitle()->getPrefixedText() ) )
 		);
 
 		$tpl->set( 'authenticated', $this->getUser()->isLoggedIn() );
