@@ -31,6 +31,15 @@ h6 button {
 p {
   margin-bottom: 8pt;
 }
+ol ol,
+ul ol,
+ol ul,
+ul ul {
+  margin-left: 1em;
+}
+dl {
+  margin-left: 1em;
+}
 h1 {
   font-size: 1.833em;
   line-height: 22pt;
