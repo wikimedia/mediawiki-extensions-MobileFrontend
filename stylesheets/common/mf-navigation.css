@@ -357,6 +357,7 @@ html.overlay ul.content li:hover {
 }
 .overlay .header {
   line-height: 46px;
+  text-align: center;
   border-bottom: solid 1px #CCC;
   padding: 0;
   padding-left: 40px;
