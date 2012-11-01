@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACDn////I\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-11-01T21:53:17Z",
+      "side": 1,
+      "message": "There\u0027s \u0027isSpecialPage\u0027 already - is there a difference?",
+      "revId": "a9b132c07c176347044ade2263fe9a0ad44b1430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
