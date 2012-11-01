@@ -660,6 +660,11 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	private function searchBox() {
+		if ( $this->data['isBetaGroupMember'] ) {
+			$placeholder = wfMessage( 'mobile-frontend-placeholder-beta' )->text();
+		} else {
+			$placeholder = wfMessage( 'mobile-frontend-placeholder' )->text();
+		}
 		?>
 	<div id="mw-mf-header">
 		<?php
@@ -679,7 +684,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<div id="mw-mf-sq" class="divclearable">
 				<input type="search" name="search" id="mw-mf-search" size="22" value="<?php $this->text( 'searchField' )
 					?>" autocomplete="off" maxlength="1024" class="search"
-					placeholder="<?php $this->msg( 'mobile-frontend-placeholder' ) ?>"
+					placeholder="<?php echo $placeholder ?>"
 					/>
 				<img src="<?php $this->text( 'shim' ) ?>" alt="<?php
 					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="mw-mf-clearsearch" title="<?php
