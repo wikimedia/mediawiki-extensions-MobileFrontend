@@ -484,9 +484,6 @@ body {
 .hasSecondaryNav .full-screen-search #mw-mf-menu-page {
   display: none;
 }
-.hasSecondaryNav #mw-mf-searchForm {
-  padding-right: 50px;
-}
 .hasSecondaryNav #mw-mf-menu-page {
   width: 30px;
   position: absolute;
