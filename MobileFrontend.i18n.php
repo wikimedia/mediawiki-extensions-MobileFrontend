@@ -145,6 +145,11 @@ $messages['en'] = array (
 	'mobile-frontend-ajax-page-loading' => 'Loading $1',
 	'mobile-frontend-page-saving' => 'Saving $1',
 	'mobile-frontend-ajax-page-error' => 'Whoops! Something went wrong there. Please try refreshing your browser window.',
+
+	// watchlist
+	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
+	'mobile-frontend-watchlist-removed' => 'Removed $1 from your watchlist',
+	'mobile-frontend-watchlist-view' => 'View your watchlist',
 );
 
 /** Message documentation (Message documentation)
@@ -288,6 +293,9 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-ajax-page-loading' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript',
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved',
 	'mobile-frontend-ajax-page-error' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript and it fails',
+	'mobile-frontend-watchlist-add' => 'Notification message when you add an article to your watchlist, $1 is the title of the article',
+	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist, $1 is the title of the article',
+	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
 );
 
 /** Achinese (Acèh)

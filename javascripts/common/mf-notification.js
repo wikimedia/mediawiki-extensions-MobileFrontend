@@ -20,8 +20,10 @@
 			return $( '#mf-references' ).is( ':visible' );
 		}
 
-		function show( html ) {
-			$( '#mf-references div' ).html( html );
+		function show( html, classes ) {
+			$( '#mf-references div' ).removeAttr( 'class' ).
+				addClass( classes ).
+				html( html );
 			calculatePosition();
 			return $( '#mf-references' ).show();
 		}
