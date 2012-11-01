@@ -16,6 +16,24 @@
       "revId": "a9b132c07c176347044ade2263fe9a0ad44b1430",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACDn///+o\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-01T21:55:04Z",
+      "side": 1,
+      "message": "I figured in future we may have different namespaces we want to push into overlays and maybe don\u0027t want to put all special pages into overlays so kept the two separate for the time being.",
+      "parentUuid": "AAACDn////I\u003d",
+      "revId": "a9b132c07c176347044ade2263fe9a0ad44b1430",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
