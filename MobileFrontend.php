@@ -182,7 +182,7 @@ $wgResourceModules['mobile.filePage'] = array(
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
 );
-$wgResourceModules['mobile.references'] = array(
+$wgResourceModules['mobile.production-jquery'] = array(
 	'styles' => array( 'stylesheets/modules/mf-references.css' ),
 	'scripts' => array(
 		'javascripts/common/mf-navigation.js',
