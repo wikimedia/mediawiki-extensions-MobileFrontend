@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACEH///+M\u003d",
+        "filename": "stylesheets/less/common/mf-typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-01T23:45:44Z",
+      "side": 1,
+      "message": "shouldn\u0027t \u003cdd\u003e have a margin-left of 1em relative to \u003cdt\u003e? and \u003cdt\u003e should probably be emphasized, i guess?",
+      "revId": "da53026e1ce47ce0c645be41b6be950a7789fd39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
