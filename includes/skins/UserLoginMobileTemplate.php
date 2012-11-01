@@ -10,7 +10,7 @@ class UserLoginMobileTemplate extends QuickTemplate {
 	 * Does not call the parent's constructor to prevent overwriting
 	 * $this->data and $this->translatorobject since we're essentially
 	 * just hijacking the login form here.
-	 * @param object The original template object to overwrite
+	 * @param QuickTemplate $template: The original template object to overwrite
 	 */
 	public function __construct( $template ) {
 		$this->copyObjectProperties( $template );
@@ -107,7 +107,7 @@ class UserLoginMobileTemplate extends QuickTemplate {
 
 	/**
 	 * Copy public properties of one object to this one
-	 * @param object The object whose properties should be copied
+	 * @param object $obj: The object whose properties should be copied
 	 */
 	protected function copyObjectProperties( $obj ) {
 		foreach( get_object_vars( $obj ) as $prop => $value ) {
