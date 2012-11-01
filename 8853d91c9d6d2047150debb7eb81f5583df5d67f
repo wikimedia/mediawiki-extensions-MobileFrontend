@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACEH///+g\u003d",
+        "filename": "stylesheets/less/common/mf-footer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-01T23:21:10Z",
+      "side": 0,
+      "message": "what about removing other references to .more/.less?",
+      "revId": "8853d91c9d6d2047150debb7eb81f5583df5d67f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
