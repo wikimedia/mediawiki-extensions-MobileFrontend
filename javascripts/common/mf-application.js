@@ -257,7 +257,7 @@ mw.mobileFrontend = (function() {
 		var data;
 		if ( !isLoggedIn() ) {
 			callback( {} ); // return no token
-		} else if ( tokenQuery[ tokenType ] ) {
+		} else if ( tokenQuery.hasOwnProperty( tokenType ) ) {
 			tokenQuery[ tokenType ].done( callback );
 		} else {
 			data = {
