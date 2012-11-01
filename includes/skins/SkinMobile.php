@@ -67,7 +67,7 @@ class SkinMobile extends SkinMobileBase {
 			$scripts[] = 'mobile.production-only';
 		}
 		$styles[] = "mobile.device.{$device['css_file_name']}";
-		$styles[] = 'mobile.references';
+		$styles[] = 'mobile.production-jquery';
 		$styleLinks = array( $this->resourceLoaderLink( $styles, 'styles' ) );
 		$isFilePage = $title->getNamespace() == NS_FILE;
 		if ( $isFilePage ) {
@@ -80,7 +80,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->setRef( 'wgAppleTouchIcon', $wgAppleTouchIcon );
 
 		if ( $device['supports_jquery'] ) {
-			$scripts[] = 'mobile.references';
+			$scripts[] = 'mobile.production-jquery';
 		}
 		$scriptLinks = array();
 		if ( $device['supports_jquery'] ) {
