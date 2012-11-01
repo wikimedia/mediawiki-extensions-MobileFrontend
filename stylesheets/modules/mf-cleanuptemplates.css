@@ -1,26 +1,20 @@
-button.mw-mf-cleanup {
-  background: none;
-  -webkit-background-size: auto 50px;
-  background-size: auto 50px;
-  background-position: 10px center;
-  border: solid 1px #aaa;
-  padding: 15px;
-  font-size: 1em;
-  padding-left: 50px;
-  margin-bottom: 8px;
-  margin-left: 0;
-  /* undo default styling */
-
-  line-height: 20px;
-  background-image: url(images/warning.png);
+a.mw-mf-cleanup {
+  display: block;
+  padding: 10px 15px 10px 34px;
+  background-image: url(images/issues-blue.png);
   background-repeat: no-repeat;
-  cursor: pointer;
-  /* if on desktop */
+  margin-bottom: 4px;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  width: 100%;
-  color: black;
+  -moz-background-size: 24px 24px;
+  -o-background-size: 24px 24px;
+  -webkit-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: 5px center;
 }
-button.mw-mf-cleanup:hover {
-  opacity: 0.2;
-  border-left-width: 2px;
+a.mw-mf-cleanup:hover {
+  background-image: url(images/issues-gray.png);
+  text-decoration: none;
+  color: #565656;
+  background-color: #f0f0f0;
 }
