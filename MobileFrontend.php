@@ -186,6 +186,7 @@ $wgResourceModules['mobile.references'] = array(
 	'styles' => array( 'stylesheets/modules/mf-references.css' ),
 	'scripts' => array(
 		'javascripts/common/mf-navigation.js',
+		'javascripts/common/mf-notification.js',
 		'javascripts/modules/mf-references.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
