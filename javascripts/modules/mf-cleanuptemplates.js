@@ -10,7 +10,7 @@ var module = (function() {
 			$container = $( '<div>' );
 
 		$metadata.each( function() {
-			if ( $( this ).children( 'table.ambox' ).length === 0 ) {
+			if ( $( this ).find( 'table.ambox' ).length === 0 ) {
 				$container.append( $( this ).clone() );
 			}
 		} );
