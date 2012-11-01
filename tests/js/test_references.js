@@ -17,8 +17,8 @@ module("MobileFrontend references.js", {
 test("Standard", function() {
 	R.setupReferences( $( '#mfe-test-references' )[ 0 ] );
 	$("#mfe-test-references sup a").trigger("click");
-	strictEqual($("#mf-references div h3").text(), "[1]");
-	strictEqual($("#mf-references div a").text(), "test reference");
+	strictEqual( $( '#mf-notification div h3' ).text(), '[1]' );
+	strictEqual( $( '#mf-notification div a' ).text(), 'test reference' );
 });
 
 test("Bug 36192", function() {
