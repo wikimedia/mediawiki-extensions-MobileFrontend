@@ -267,8 +267,10 @@ html.overlay {
 		display: none !important;
 	}
 
-	li {
-		.overlayListItem();
+	ul.content {
+		li {
+			.overlayListItem();
+		}
 	}
 }
 
@@ -277,6 +279,10 @@ html.overlay {
 }
 
 #mw-mf-overlay {
+	div.content {
+		margin: @headingMarginTop @contentMarginRight 0 @contentMarginLeft;
+	}
+
 	.alert {
 		padding: @overlayAlertPadding;
 		padding-left: ( 80px + @overlayAlertPadding );

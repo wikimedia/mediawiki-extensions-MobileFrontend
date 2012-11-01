@@ -22,7 +22,7 @@ class SkinMobile extends SkinMobileBase {
 		$inBeta = $context->isBetaGroupMember();
 
 		$userLogin = $title->isSpecial( 'Userlogin' );
-		$tpl->set( 'isOverlay', ( $userLogin ) ); // quick hack
+		$tpl->set( 'isOverlay', $specialPage );
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
@@ -453,7 +453,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<div id="mw-mf-overlay">
 			<?php $this->html( 'firstHeading' ) ?>
 				<a class="escapeOverlay" href="<?php $this->text( 'returnto' ) ?>">close</a>
-				<div class="content">
+				<div id="content_wrapper" class="content mw-mf-special">
 					<?php $this->html( 'bodytext' ) ?>
 				</div>
 			</div>
