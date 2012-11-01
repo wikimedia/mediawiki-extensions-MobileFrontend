@@ -301,6 +301,7 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		}
 		$context = MobileContext::singleton();
 
+		$printed = 0;
 		$output = Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) );
 		foreach ( $languageUrls as $languageUrl ) {
 			$languageUrlHref = $languageUrl['href'];
@@ -314,6 +315,7 @@ mediawiki.hidpi' ), 'scripts', true, true );
 				}
 			}
 			if ( $languageUrl['lang'] != $wgLanguageCode ) {
+				$printed += 1;
 				$output .= Html::openElement( 'li' ) . Html::element( 'a',
 					array( 'href' => $languageUrlHref,
 						'lang' => $languageUrl['lang'],
@@ -335,7 +337,7 @@ mediawiki.hidpi' ), 'scripts', true, true );
 			</div>
 HTML;
 		wfProfileOut( __METHOD__ );
-		return $output;
+		return $printed > 0 ? $output : '';
 	}
 
 
