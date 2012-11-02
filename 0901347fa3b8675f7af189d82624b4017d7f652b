@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACI3////0\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-02T23:42:59Z",
+      "side": 1,
+      "message": "This seems inconsistent with the associated qqq (in that \u0027Issues\u0027 is not really a \u0027call to action\u0027)",
+      "revId": "0901347fa3b8675f7af189d82624b4017d7f652b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACI3////k\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-02T23:42:59Z",
+      "side": 1,
+      "message": "this message does not exit in i18n file",
+      "revId": "0901347fa3b8675f7af189d82624b4017d7f652b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
