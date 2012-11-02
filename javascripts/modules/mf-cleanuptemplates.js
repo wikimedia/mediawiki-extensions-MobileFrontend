@@ -18,6 +18,8 @@ var module = (function() {
 			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), clones );
 		} ).text( M.message( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
+
+		$( window ).on( 'mw-mf-page-loaded', init );
 	}
 
 	return {
