@@ -18,7 +18,7 @@ less:
 
 remotes:
 	curl -Lo javascripts/externals/eventlog.js \
-			"http://bits.wikimedia.org/static-1.20wmf12/extensions/E3Experiments/lib/event/eventlog.js"
+			"http://bits.wikimedia.org/en.wikipedia.org/load.php?modules=ext.Experiments.eventlog"
 
 phpunit:
 	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml
