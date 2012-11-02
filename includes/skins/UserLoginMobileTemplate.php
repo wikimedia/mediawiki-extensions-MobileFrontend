@@ -31,13 +31,14 @@ class UserLoginMobileTemplate extends QuickTemplate {
 
 		if ( $message ) {
 			$heading = '';
+			$class = 'alert';
 			if ( $messageType == 'error' ) {
 				$heading = wfMessage( 'mobile-frontend-sign-in-error-heading' )->text();
-				$class = 'error alert';
+				$class .= ' error';
 			}
 
 			$msgBox .= Html::openElement( 'div', array( 'class' => $class ) );
-			$msgBox .= Html::rawElement( 'h2', array(), $heading );
+			$msgBox .= ( $heading ) ? Html::rawElement( 'h2', array(), $heading ) : '';
 			$msgBox .= $message;
 			$msgBox .= Html::closeElement( 'div' );
 		}
