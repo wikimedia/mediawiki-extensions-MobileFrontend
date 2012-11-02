@@ -506,9 +506,6 @@ body {
   left: 0;
   right: 0;
   background-color: #E4E4E4;
-  -webkit-box-shadow: 0 -20px 10px -16px #aaaaaa;
-  -moz-box-shadow: 0 -20px 10px -16px #aaaaaa;
-  -o-box-shadow: 0 -20px 10px -16px #aaaaaa;
   box-shadow: 0 -20px 10px -16px #aaaaaa;
   word-break: break-word;
   line-height: 1.4em;
@@ -534,6 +531,10 @@ body {
   background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
   margin: 0;
   background-position: right center;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 12px;
+  -o-background-size: auto 12px;
   -webkit-background-size: auto 12px;
   background-size: auto 12px;
   cursor: pointer;
