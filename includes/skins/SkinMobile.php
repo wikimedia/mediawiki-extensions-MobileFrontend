@@ -583,6 +583,9 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
+				'mobile-frontend-watchlist-add' => wfMessage( 'mobile-frontend-watchlist-add' )->text(),
+				'mobile-frontend-watchlist-removed' => wfMessage( 'mobile-frontend-watchlist-removed' )->text(),
+				'mobile-frontend-watchlist-view' => wfMessage( 'mobile-frontend-watchlist-view' )->text(),
 				'mobile-frontend-ajax-random-heading' => wfMessage( 'mobile-frontend-ajax-random-heading' )->text(),
 				'mobile-frontend-ajax-random-quote' => wfMessage( 'mobile-frontend-ajax-random-quote' )->text(),
 				'mobile-frontend-ajax-random-quote-author' => wfMessage( 'mobile-frontend-ajax-random-quote-author' )->text(),

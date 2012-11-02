@@ -9,17 +9,26 @@ var w = ( function() {
 		var data = {
 			format: 'json', action: 'watch',
 			title: title, token: token
-		};
+		}, msg = M.message( 'mobile-frontend-watchlist-add', M.setting( 'title' ) ),
+			popupClass = 'watch-action';
 
 		if( unwatchflag ) {
 			data.unwatch = true;
+			msg = M.message( 'mobile-frontend-watchlist-removed', M.setting( 'title' ) );
+		} else {
+			popupClass += ' watched';
+		}
+
+		function report() {
+			M.navigation.popup.show( msg, popupClass );
 		}
 
 		$.ajax( {
 			type: 'post', dataType: 'json',
 			url:  M.getApiUrl(),
 			data: data
-		} ).done( callback ).fail( errback );
+		} ).done( callback ).fail( errback ).
+			done( report );
 	}
 
 	function createWatchListButton( container, title, isWatchedArticle ) {
