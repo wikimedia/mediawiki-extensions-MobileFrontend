@@ -497,10 +497,6 @@ body {
 }
 /* Notifications */
 #mf-notification {
-  -webkit-transition: bottom 0.1s ease-in-out;
-  -moz-transition: bottom 0.1s ease-in-out;
-  -o-transition: bottom 0.1s ease-in-out;
-  transition: bottom 0.1s ease-in-out;
   position: fixed;
   bottom: 0;
   left: 0;
