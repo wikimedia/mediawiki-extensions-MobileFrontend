@@ -16,6 +16,24 @@
       "revId": "da53026e1ce47ce0c645be41b6be950a7789fd39",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACIn///+0\u003d",
+        "filename": "stylesheets/less/common/mf-typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-02T23:07:33Z",
+      "side": 1,
+      "message": "out of scope.\nThe original bug was that replies on talk pages that are rendered as dd\u0027s do not have an indent. This is a separate discussion.",
+      "parentUuid": "AAACEH///+M\u003d",
+      "revId": "da53026e1ce47ce0c645be41b6be950a7789fd39",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
