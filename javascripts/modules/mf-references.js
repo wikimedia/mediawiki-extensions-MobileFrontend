@@ -2,9 +2,8 @@
 /*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 ( function( M, $ ) {
 var references = ( function() {
-		var calculatePosition = function() {},
-			inBeta = M.setting( 'beta' ),
-			supportsPositionFixed = M.supportsPositionFixed;
+		var inBeta = M.setting( 'beta' ),
+			popup = M.navigation.popup;
 
 		function collect() {
 			var references = {};
@@ -16,51 +15,33 @@ var references = ( function() {
 			return references;
 		}
 
-		if( !supportsPositionFixed() ) {
-			calculatePosition = function() {
-				var h = $( '#mf-references' ).outerHeight();
-				$( '#mf-references' ).css( {
-					top:  ( window.innerHeight + window.pageYOffset ) - h,
-					bottom: 'auto',
-					position: 'absolute'
-				} );
-			};
-			$( document ).scroll( calculatePosition );
-		}
-
 		/*
 		init
 			options:
 				onClickReference: <function>
 					Define a handler that is run upon clicking a reference
 		*/
-		function setupReferences( container, firstRun, options ) {
-			var el, close, lastLink, data, html, href, references = collect();
+		function setupReferences( container, options ) {
+			var lastLink, data, html, href, references = collect();
 			container = container || $( '#content' )[ 0 ];
-			firstRun = firstRun === undefined ? true : firstRun;
-			$( '#mf-references' ).remove();
-			el = $( '<div id="mf-references"><div></div></div>' ).hide().
-				appendTo( document.body )[ 0 ];
 			function cancelBubble( ev ) {
 				ev.stopPropagation();
 			}
-			el.ontouchstart = cancelBubble;
-			close = function() {
-				if ( !$( '#mf-references' ).is( ':visible' ) ) {
-					return;
-				}
+
+			function close() {
 				lastLink = null;
-				$( '#mf-references' ).hide();
-			};
-			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
+				popup.close();
+			}
 			$( '.mw-cite-backlink a' ).click( close );
 
 			function clickReference( ev ) {
+				var $popup;
+
 				href = $( this ).attr( 'href' );
 				data = href && href.charAt( 0 ) === '#' ?
 					references[ href.substr( 1, href.length ) ] : null;
 
-				if ( !$( '#mf-references' ).is( ':visible' ) || lastLink !== href ) {
+				if ( !popup.isVisible() || lastLink !== href ) {
 					lastLink = href;
 					if ( data ) {
 						html = '<h3>' + $( this ).text() + '</h3>' + data.html;
@@ -68,10 +49,8 @@ var references = ( function() {
 						html = $( '<a />' ).text( $(this).text() ).
 							attr( 'href', href ).appendTo( '<div />' ).parent().html();
 					}
-					$( '#mf-references div' ).html( html );
-					$( '#mf-references div sup a' ).click( clickReference );
-					calculatePosition();
-					$( '#mf-references' ).show();
+					$popup = popup.show( html );
+					$popup.find( 'div sup a' ).click( clickReference );
 				} else {
 					close();
 				}
@@ -83,16 +62,8 @@ var references = ( function() {
 			}
 			$( 'sup a', container ).unbind( 'click' ).
 				click( clickReference ).each( function() {
-					el.ontouchstart = cancelBubble;
+					this.ontouchstart = cancelBubble;
 				} );
-			if ( firstRun ) {
-				$( window ).scroll( function() {
-					close();
-				} );
-				$( document.body ).bind( 'click', close ).bind( 'touchstart', function() {
-					$( '#mf-references' ).hide();
-				} );
-			}
 		}
 
 		function init() {
