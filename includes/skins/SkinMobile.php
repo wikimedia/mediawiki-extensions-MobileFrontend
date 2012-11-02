@@ -161,9 +161,6 @@ mediawiki.hidpi' ), 'scripts', true, true );
 			array( 'returnto' => $this->getTitle()->getPrefixedText(), 'feedbacksource' => 'MobileFrontend' )
 		);
 		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
-		$imagesSwitchTitle = SpecialPage::getTitleFor( 'MobileOptions',
-			$context->imagesDisabled() ? 'EnableImages' : 'DisableImages'
-		);
 		$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
 			Html::element(
 				'a',
@@ -299,7 +296,6 @@ mediawiki.hidpi' ), 'scripts', true, true );
 			wfProfileOut( __METHOD__ );
 			return '';
 		}
-		$context = MobileContext::singleton();
 
 		$output = Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) );
 		foreach ( $languageUrls as $languageUrl ) {
@@ -513,9 +509,9 @@ class SkinMobileTemplate extends BaseTemplate {
 	<body class="<?php $this->text( 'bodyClasses' ) ?>">
 		<?php
 			if ( $this->data['isOverlay'] ) {
-				echo $this->renderOverlaySkin();
+				$this->renderOverlaySkin();
 			} else {
-				echo $this->renderArticleSkin();
+				$this->renderArticleSkin();
 			}
 		?>
 
@@ -572,7 +568,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function prepareData() {
-		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgLang, $wgArticlePath;
+		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgArticlePath;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );

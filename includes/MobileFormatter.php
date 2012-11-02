@@ -140,7 +140,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Setter for $this->defaultItemsToRemove
-	 * @param array Indexed array of HTML elements to be stripped during mobile formatting
+	 * @param array $defaultItemsToRemove: Indexed array of HTML elements to be stripped during mobile formatting
 	 * @throws MWException
 	 * @return array
 	 */
@@ -198,7 +198,7 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * generates a back top link for a given section number
-	 * @param number The number corresponding to the section heading
+	 * @param int $headingNumber: The number corresponding to the section heading
 	 * @return string
 	 */
 	private function backToTopLink( $headingNumber ) {
