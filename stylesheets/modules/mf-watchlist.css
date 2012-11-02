@@ -30,13 +30,13 @@ a.watch-this-article.watched {
   display: block;
 }
 /* notification */
-#mf-references div.watch-action {
+#mf-notification div.watch-action {
   background-image: url(images/watch.png);
   padding-left: 40px;
   background-repeat: no-repeat;
   background-position: 8px center;
   background-size: 24px 24px;
 }
-#mf-references div.watch-action.watched {
+#mf-notification div.watch-action.watched {
   background-image: url(images/watched.png);
 }

@@ -3,7 +3,7 @@ REFERENCES
 moved from beta_common.css
 Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 */
-#mf-references {
+#mf-notification {
 	-webkit-transition: bottom 0.1s ease-in-out;
 	-moz-transition: bottom 0.1s ease-in-out;
 	-o-transition: bottom 0.1s ease-in-out;
@@ -23,16 +23,16 @@ Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 	z-index: 3;
 }
 
-#mf-references div {
+#mf-notification div {
 	position: relative;
 	padding: 22px 38px 22px 22px;  /* 38px is 22px padding + close button icon 16px */
 }
 
-#mf-references .mw-cite-backlink {
+#mf-notification .mw-cite-backlink {
 	display: none;
 }
 
-#mf-references button {
+#mf-notification button {
 	top: 22px;
 	right: 22px; /* padding of #content_wrapper */
 	width: 16px;
@@ -49,15 +49,15 @@ Change-Id: I48b03d0b2de13ae34b22f4831d1b80aa1f446b4e
 	border: none;
 }
 
-#mf-references h3 {
+#mf-notification h3 {
 	margin: 0;
 	padding-right: 4px;
 	line-height: 1em;
 	display: inline;
 }
 
-#mf-references a:visited,
-#mf-references a {
+#mf-notification a:visited,
+#mf-notification a {
 	color: #3354C0;
 }
 

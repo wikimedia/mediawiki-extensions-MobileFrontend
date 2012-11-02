@@ -6,8 +6,8 @@
 
 		if ( !M.supportsPositionFixed() ) {
 			calculatePosition = function() {
-				var h = $( '#mf-references' ).outerHeight();
-				$( '#mf-references' ).css( {
+				var h = $( '#mf-notification' ).outerHeight();
+				$( '#mf-notification' ).css( {
 					top:  ( window.innerHeight + window.pageYOffset ) - h,
 					bottom: 'auto',
 					position: 'absolute'
@@ -17,26 +17,26 @@
 		}
 
 		function isVisible() {
-			return $( '#mf-references' ).is( ':visible' );
+			return $( '#mf-notification' ).is( ':visible' );
 		}
 
 		function show( html, classes ) {
-			$( '#mf-references div' ).removeAttr( 'class' ).
+			$( '#mf-notification div' ).removeAttr( 'class' ).
 				addClass( classes ).
 				html( html );
 			calculatePosition();
-			return $( '#mf-references' ).show();
+			return $( '#mf-notification' ).show();
 		}
 
 		function close() {
-			if ( !$( '#mf-references' ).is( ':visible' ) ) {
+			if ( !$( '#mf-notification' ).is( ':visible' ) ) {
 				return;
 			}
-			$( '#mf-references' ).hide();
+			$( '#mf-notification' ).hide();
 		}
 
 		function init( firstRun ) {
-			var el = $( '<div id="mf-references"><div></div></div>' ).hide().
+			var el = $( '<div id="mf-notification"><div></div></div>' ).hide().
 				appendTo( document.body )[ 0 ];
 
 			firstRun = firstRun === undefined ? true : firstRun;
@@ -45,7 +45,7 @@
 				ev.stopPropagation();
 			}
 			el.ontouchstart = cancelBubble;
-			$( '<button>close</button>' ).click( close ).appendTo( '#mf-references' );
+			$( '<button>close</button>' ).click( close ).appendTo( '#mf-notification' );
 
 			if ( firstRun ) {
 				$( window ).scroll( function() {
@@ -53,7 +53,7 @@
 				} );
 
 				$( document.body ).bind( 'click', close ).bind( 'touchstart', function() {
-					$( '#mf-references' ).hide();
+					$( '#mf-notification' ).hide();
 				} );
 			}
 		}
