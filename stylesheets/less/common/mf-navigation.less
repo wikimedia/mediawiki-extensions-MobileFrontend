@@ -498,3 +498,62 @@ body {
 		}
 	}
 }
+
+/* Notifications */
+#mf-notification {
+	-webkit-transition: bottom 0.1s ease-in-out;
+	-moz-transition: bottom 0.1s ease-in-out;
+	-o-transition: bottom 0.1s ease-in-out;
+	transition: bottom 0.1s ease-in-out;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #E4E4E4;
+	-webkit-box-shadow: 0 -20px 10px -16px #aaa;
+	-moz-box-shadow: 0 -20px 10px -16px #aaa;
+	-o-box-shadow: 0 -20px 10px -16px #aaa;
+	box-shadow: 0 -20px 10px -16px #aaa;
+	word-break: break-word;
+	line-height: 1.4em;
+	font-size: 0.8em;
+	z-index: 3;
+}
+
+#mf-notification div {
+	position: relative;
+	padding: 22px 38px 22px 22px;  /* 38px is 22px padding + close button icon 16px */
+}
+
+#mf-notification .mw-cite-backlink {
+	display: none;
+}
+
+#mf-notification button {
+	top: 22px;
+	right: 22px; /* padding of #content_wrapper */
+	width: 16px;
+	height: 12px;
+	background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
+	margin: 0;
+	background-position: right center;
+	-webkit-background-size: auto 12px;
+	background-size: auto 12px;
+	cursor: pointer;
+	position: absolute;
+	text-indent: -999px;
+	overflow: hidden;
+	border: none;
+}
+
+#mf-notification h3 {
+	margin: 0;
+	padding-right: 4px;
+	line-height: 1em;
+	display: inline;
+}
+
+#mf-notification a:visited,
+#mf-notification a {
+	color: #3354C0;
+}
