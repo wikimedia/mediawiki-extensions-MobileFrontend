@@ -28,12 +28,6 @@ var references = ( function() {
 			$( document ).scroll( calculatePosition );
 		}
 
-		function getReferenceTop() {
-			// http://bugs.jquery.com/ticket/6724
-			var winHeight = window.innerHeight || $( window ).height();
-			return winHeight + $( window ).scrollTop();
-		}
-
 		/*
 		init
 			options:
@@ -55,7 +49,6 @@ var references = ( function() {
 				if ( !$( '#mf-references' ).is( ':visible' ) ) {
 					return;
 				}
-				var top;
 				lastLink = null;
 				$( '#mf-references' ).hide();
 			};
@@ -63,7 +56,6 @@ var references = ( function() {
 			$( '.mw-cite-backlink a' ).click( close );
 
 			function clickReference( ev ) {
-				var top, oh;
 				href = $( this ).attr( 'href' );
 				data = href && href.charAt( 0 ) === '#' ?
 					references[ href.substr( 1, href.length ) ] : null;
