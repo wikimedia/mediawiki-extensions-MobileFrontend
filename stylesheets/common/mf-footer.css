@@ -88,24 +88,6 @@ body.beta #footer .links li {
 body #section_footer button {
   height: 22px;
 }
-body #footer .toggleCopyright {
-  font-weight: bold;
-  font-size: 1em;
-  line-height: 22px;
-  float: right;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-body .togglingEnabled #footer .more,
-body .togglingEnabled #footer .openSection .less {
-  display: block;
-}
-body #footer .more,
-body #footer .less,
-body #footer .openSection .more {
-  display: none;
-}
 @media all and (min-width: 330px) {
   #footer .content_block {
     font-size: 0.9em;

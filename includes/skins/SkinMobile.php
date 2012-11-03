@@ -704,10 +704,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 	<h2 class="section_heading" id="section_footer">
 		<?php $this->html( 'license' ) ?>
-		<span class="toggleCopyright">
-			<span class="more"><?php $this->msg( 'mobile-frontend-footer-more' ) ?></span><span class="less"><?php
-			$this->msg( 'mobile-frontend-footer-less' ) ?></span>
-		</span>
 	</h2>
 	<div class="content_block" id="content_footer">
 		<ul class="settings">
