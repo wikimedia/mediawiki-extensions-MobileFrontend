@@ -224,7 +224,7 @@ var opensearch = ( function() {
 		u( search ).bind( 'click', onFocusHandler );
 	}
 
-	function init() {
+	function initSearch() {
 		enhanceElements();
 		if( document.activeElement && document.activeElement.id === 'search' ) {
 			onfocus();
@@ -242,6 +242,12 @@ var opensearch = ( function() {
 				removeResults( ev, true );
 			}
 		} );
+	}
+
+	function init() {
+		if ( document.getElementById( 'results' ) && document.getElementById( 'search' ) ) {
+			initSearch();
+		}
 	}
 
 	return {
