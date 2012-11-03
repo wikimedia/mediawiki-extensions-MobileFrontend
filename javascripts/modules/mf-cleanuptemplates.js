@@ -7,15 +7,16 @@ var module = (function() {
 
 	function init() {
 		var $metadata = $( '#content_0 table.ambox' ),
-			clones = [];
+			$container = $( '<div>' );
 
 		$metadata.each( function() {
 			if ( $( this ).children( 'table.ambox' ).length === 0 ) {
-				clones.push( this );
+				$container.append( $( this ).clone() );
 			}
 		} );
-		$( '<button class="mw-mf-cleanup">' ).click( function() {
-			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), clones );
+
+		$( '<a class="mw-mf-cleanup">' ).click( function() {
+			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), $container[ 0 ] );
 		} ).text( M.message( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
 
