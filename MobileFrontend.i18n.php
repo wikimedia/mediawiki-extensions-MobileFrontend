@@ -737,11 +737,16 @@ $messages['ast'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Guardar la configuración',
 	'mobile-frontend-random-button' => 'Al debalu',
+	'mobile-frontend-ajax-random-heading' => 'Llocalizando el conocimientu...',
+	'mobile-frontend-ajax-random-quote' => 'El crecimientu intelectual tendría de comenzar col nacimientu y acabar sólo cola muerte',
+	'mobile-frontend-ajax-random-question' => '¿Lleer esti artículu?',
+	'mobile-frontend-ajax-random-yes' => 'Sí',
+	'mobile-frontend-ajax-random-retry' => 'Volver a intentalo',
 	'mobile-frontend-back-to-top-of-section' => 'Tornar atrás una seición',
 	'mobile-frontend-close-section' => 'Zarrar esta sección',
 	'mobile-frontend-show-button' => 'Amosar',
 	'mobile-frontend-hide-button' => 'Anubrir',
-	'mobile-frontend-empty-homepage' => 'Esta páxina d\'aniciu ta por configurar. <a href="https://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrucciones p\'activar esti sitiu pa móvil</a>',
+	'mobile-frontend-empty-homepage' => 'Esta páxina d\'aniciu ta por configurar. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrucciones p\'activar esti sitiu pa móvil</a>',
 	'mobile-frontend-regular-site' => "Vista d'escritoriu",
 	'mobile-frontend-wml-continue' => 'Continuar...',
 	'mobile-frontend-wml-back' => 'Volver...',
@@ -749,11 +754,11 @@ $messages['ast'] = array(
 	'mobile-frontend-view-desktop' => 'Escritoriu',
 	'mobile-frontend-view-mobile' => 'Móvil',
 	'mobile-frontend-opt-in-message' => '¿Quies probar la versión beta pa móvil?',
-	'mobile-frontend-opt-in-yes-button' => 'sí',
+	'mobile-frontend-opt-in-yes-button' => 'Sí',
 	'mobile-frontend-opt-in-no-button' => 'non',
 	'mobile-frontend-opt-in-explain' => "Al xunite a la versión beta tendrás accesu a carauterístiques esperimentales, pero col riesgu d'atopar fallos y problemes.",
 	'mobile-frontend-opt-out-message' => '¿Quies dexar la versión beta pa móvil?',
-	'mobile-frontend-opt-out-yes-button' => 'sí',
+	'mobile-frontend-opt-out-yes-button' => 'Sí',
 	'mobile-frontend-opt-out-no-button' => 'non',
 	'mobile-frontend-opt-out-explain' => 'Al dexar la beta pa móviles, desactivarás toles carauterístiques esperimentales y tornarás a la interfaz para móvil clásica.',
 	'mobile-frontend-images-status' => 'Imaxes',
@@ -804,13 +809,12 @@ $messages['ast'] = array(
 	'mobile-frontend-login' => 'Entrar',
 	'mobile-frontend-logout' => 'Colar',
 	'mobile-frontend-placeholder' => 'Guetar en {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Gueta en {{SITENAME}} (Beta)',
 	'mobile-frontend-search-help' => "Escribi arriba'l términu a guetar y los títulos de los artículos que casen apaecerán equí.",
 	'mobile-frontend-dismiss-notification' => 'anubrir esta notificación',
 	'mobile-frontend-clear-search' => 'Llimpiar',
 	'mobile-frontend-privacy-link-text' => 'Intimidá',
 	'mobile-frontend-about-link-text' => 'Tocante a',
-	'mobile-frontend-footer-more' => 'más',
-	'mobile-frontend-footer-less' => 'menos',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Conteníu disponible baxo llicencia <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Condiciones d\'usu</a>',
@@ -832,10 +836,14 @@ $messages['ast'] = array(
 	'mobile-frontend-page-menu-history' => 'Historial',
 	'mobile-frontend-page-menu-contents-heading' => 'Conteníu',
 	'mobile-frontend-page-menu-language-heading' => 'Lleer esti artículu en',
-	'mobile-frontend-meta-data-issues-header' => 'Ameyorar esti artículu',
-	'mobile-frontend-meta-data-issues' => 'Esti artículu tien problemes',
+	'mobile-frontend-meta-data-issues-header' => 'Incidencies',
+	'mobile-frontend-meta-data-issues' => 'Esti artículu tien dellos problemes',
 	'mobile-frontend-ajax-page-loading' => 'Cargando $1',
+	'mobile-frontend-page-saving' => 'Guardando $1',
 	'mobile-frontend-ajax-page-error' => '¡Coime! Daqué nun funcionó. Prueba a recargar la ventana del navegador.',
+	'mobile-frontend-watchlist-add' => "S'amestó $1 a la to llista de siguimientu",
+	'mobile-frontend-watchlist-removed' => 'Se desanició $1 de la to llista de siguimientu',
+	'mobile-frontend-watchlist-view' => 'Ver la to llista de siguimientu',
 );
 
 /** Azerbaijani (azərbaycanca)
@@ -1173,15 +1181,17 @@ $messages['bn'] = array(
 	'mobile-frontend-home-button' => 'প্রধান পাতা',
 	'mobile-frontend-logged-out' => 'লগইন করা হয়নি',
 	'mobile-frontend-logged-in' => '$1 লগইন আছেন',
+	'mobile-frontend-sign-in-heading' => 'প্রবেশ',
 	'mobile-frontend-settings-description' => 'মোবাইল থেকে সহজে ব্যবহার করার জন্য মোবাইলের উপযোগী পছন্দসমূহ নির্ধারন করুন।',
 	'mobile-frontend-settings-beta' => 'বেটা সংস্করণ',
 	'mobile-frontend-save-settings' => 'সেটিংস সংরক্ষণ',
 	'mobile-frontend-random-button' => 'অজানা পাতা',
+	'mobile-frontend-ajax-random-yes' => 'হ্যাঁ',
 	'mobile-frontend-back-to-top-of-section' => 'অনুচ্ছেদে ফিরে যাও',
 	'mobile-frontend-close-section' => 'বন্ধ করুন',
 	'mobile-frontend-show-button' => 'দেখাও',
 	'mobile-frontend-hide-button' => 'আড়াল করো',
-	'mobile-frontend-empty-homepage' => 'এই হোমপেজটি কনফিগার করা প্রয়োজন। <a href="https://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">বিস্তারিত দেখুন</a>', # Fuzzy
+	'mobile-frontend-empty-homepage' => 'এই হোমপেজটি কনফিগার করা প্রয়োজন। <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">বিস্তারিত দেখুন</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'ডেক্সটপ সংস্করণ',
 	'mobile-frontend-wml-continue' => 'অব্যাহত ...',
 	'mobile-frontend-wml-back' => 'পিছনে ...',
@@ -1245,8 +1255,6 @@ $messages['bn'] = array(
 	'mobile-frontend-clear-search' => 'পরিস্কার',
 	'mobile-frontend-privacy-link-text' => 'গোপনীয়তা',
 	'mobile-frontend-about-link-text' => 'পরিচিতি',
-	'mobile-frontend-footer-more' => 'আরও',
-	'mobile-frontend-footer-less' => 'কম',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'তথ্য প্রকাশিত হয়েছে <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> লাইসেন্সের অধিনে',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">ব্যবহারের নীতিমালা</a>',
@@ -1254,6 +1262,8 @@ $messages['bn'] = array(
 	'mobile-frontend-unknown-option' => 'অজানা অপশন "$1"।',
 	'mobile-frontend-main-menu-featured' => 'নির্বাচিত',
 	'mobile-frontend-main-menu-nearby' => 'কাছাকাছি',
+	'mobile-frontend-main-menu-login' => 'প্রবেশ',
+	'mobile-frontend-main-menu-logout' => 'প্রস্থান',
 	'mobile-frontend-main-menu-settings' => 'সেটিং',
 	'mobile-frontend-main-menu-settings-heading' => 'মোবাইল সাইট সেটিং',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ভাষাসমূহ',
@@ -2042,11 +2052,14 @@ $messages['diq'] = array(
 	'mobile-frontend-page-menu-history' => 'Tarix',
 	'mobile-frontend-page-menu-contents-heading' => 'miyandene',
 	'mobile-frontend-page-menu-language-heading' => 'Nê meqaley bıwane',
-	'mobile-frontend-meta-data-issues-header' => 'Na wesiqer vıraşten de', # Fuzzy
-	'mobile-frontend-meta-data-issues' => 'Mersela ena wesiqer', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Merseli',
+	'mobile-frontend-meta-data-issues' => 'Na wesiqa de tay merseli estê.',
 	'mobile-frontend-ajax-page-loading' => '$1 bar beno',
 	'mobile-frontend-page-saving' => '$1 qeyd beno',
 	'mobile-frontend-ajax-page-error' => 'Wey! Tayê çi ters şi. Şıma ra reca ma awa ke pençereyê cıgeyrayoğê xo newe ra bıcerebnên.',
+	'mobile-frontend-watchlist-add' => '$1 bi tewr de listay serykerdışan de şıma',
+	'mobile-frontend-watchlist-removed' => 'Listay serykerdış da şıma ra $1 wedariya.',
+	'mobile-frontend-watchlist-view' => 'Listay serykerdışan de xo bıvin',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -5314,11 +5327,14 @@ $messages['ko'] = array(
 	'mobile-frontend-page-menu-history' => '역사',
 	'mobile-frontend-page-menu-contents-heading' => '목차',
 	'mobile-frontend-page-menu-language-heading' => '이 문서 읽기',
-	'mobile-frontend-meta-data-issues-header' => '이 문서 개선하기', # Fuzzy
-	'mobile-frontend-meta-data-issues' => '이 문서에 문제가 있습니다', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => '문제',
+	'mobile-frontend-meta-data-issues' => '이 문서에 어떤 문제가 있습니다',
 	'mobile-frontend-ajax-page-loading' => '$1 불러오는 중',
 	'mobile-frontend-page-saving' => '$1 저장 중',
 	'mobile-frontend-ajax-page-error' => '이런! 뭔가가 잘못됐습니다. 브라우저 창을 새로 고쳐보세요.',
+	'mobile-frontend-watchlist-add' => '내 주시문서 목록에 $1 문서를 추가했습니다',
+	'mobile-frontend-watchlist-removed' => '내 주시문서 목록에서 $1 문서를 제거했습니다',
+	'mobile-frontend-watchlist-view' => '내 주시문서 목록 보기',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -6582,11 +6598,14 @@ $messages['ms'] = array(
 	'mobile-frontend-page-menu-history' => 'Sejarah',
 	'mobile-frontend-page-menu-contents-heading' => 'Kandungan',
 	'mobile-frontend-page-menu-language-heading' => 'Baca rencana ini dalam',
-	'mobile-frontend-meta-data-issues-header' => 'Perbaiki rencana ini', # Fuzzy
-	'mobile-frontend-meta-data-issues' => 'Rencana ini ada masalah', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Isu',
+	'mobile-frontend-meta-data-issues' => 'Rencana ini ada beberapa isu',
 	'mobile-frontend-ajax-page-loading' => '$1 sedang dimuatkan',
 	'mobile-frontend-page-saving' => 'Menyimpan $1',
 	'mobile-frontend-ajax-page-error' => 'Maaf, ralat telah berlaku. Sila cuba segar semula tetingkap pelayar anda.',
+	'mobile-frontend-watchlist-add' => '$1 ditambahkan dalam senarai pantau anda',
+	'mobile-frontend-watchlist-removed' => '$1 digugurkan dari senarai pantau anda',
+	'mobile-frontend-watchlist-view' => 'Lihat senarai pantau anda',
 );
 
 /** Maltese (Malti)
@@ -6955,6 +6974,7 @@ Probeer het later nog een keer.',
 	'mobile-frontend-login' => 'Aanmelden',
 	'mobile-frontend-logout' => 'Afmelden',
 	'mobile-frontend-placeholder' => '{{SITENAME}} doorzoeken',
+	'mobile-frontend-placeholder-beta' => '{{SITENAME}} doorzoeken (Beta)',
 	'mobile-frontend-search-help' => 'Voer de trefwoorden hierboven in. Zoekresultaten worden hier weergegeven.',
 	'mobile-frontend-dismiss-notification' => 'deze melding verwijderen',
 	'mobile-frontend-clear-search' => 'Wissen',
@@ -6986,6 +7006,7 @@ Probeer het later nog een keer.',
 	'mobile-frontend-ajax-page-loading' => 'Bezig met laden van $1',
 	'mobile-frontend-page-saving' => 'Bezig met het opslaan van $1',
 	'mobile-frontend-ajax-page-error' => 'Er is iets misgegaan. Vernieuw de huidige pagina in uw browser.',
+	'mobile-frontend-watchlist-view' => 'Uw volglijst bekijken',
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -7128,6 +7149,8 @@ $messages['or'] = array(
 	'mobile-frontend-logged-in' => '$1 ଭାବେ ଲଗଇନ ହେଲା',
 	'mobile-frontend-save-settings' => 'ସଜାଣି ସାଇତିବେ',
 	'mobile-frontend-random-button' => 'ଯାହିତାହି',
+	'mobile-frontend-ajax-random-yes' => 'ହଁ',
+	'mobile-frontend-ajax-random-retry' => 'ପୁଣି ଥରେ ଚେଷ୍ଟା କରନ୍ତୁ',
 	'mobile-frontend-back-to-top-of-section' => 'ଏକ ଭାଗକୁ ଡେଇଁଯିବେ',
 	'mobile-frontend-show-button' => 'ଦେଖାଇବେ',
 	'mobile-frontend-hide-button' => 'ଲୁଚାନ୍ତୁ',
@@ -7186,8 +7209,6 @@ $messages['or'] = array(
 	'mobile-frontend-clear-search' => 'ଖାଲି କରିଦିଅନ୍ତୁ',
 	'mobile-frontend-privacy-link-text' => 'ଗୁମରନିତି',
 	'mobile-frontend-about-link-text' => 'ବିଷୟରେ',
-	'mobile-frontend-footer-more' => 'ଅଧିକ',
-	'mobile-frontend-footer-less' => 'କମ',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-contact' => 'ଯୋଗାଯୋଗ',
 	'mobile-frontend-main-menu-featured' => 'ବିଶେଷ',
@@ -7904,7 +7925,7 @@ $messages['ro'] = array(
 	'mobile-frontend-main-menu-featured' => 'De calitate',
 	'mobile-frontend-main-menu-nearby' => 'În apropiere',
 	'mobile-frontend-main-menu-login' => 'Autentificare',
-	'mobile-frontend-main-menu-logout' => 'Închide sesiunea',
+	'mobile-frontend-main-menu-logout' => 'Închidere sesiune',
 	'mobile-frontend-main-menu-settings' => 'Setări',
 	'mobile-frontend-main-menu-settings-heading' => 'Setări site mobil',
 	'mobile-frontend-settings-site-header' => 'Limbile pentru {{SITENAME}}',
@@ -7914,11 +7935,14 @@ $messages['ro'] = array(
 	'mobile-frontend-page-menu-history' => 'Istoric',
 	'mobile-frontend-page-menu-contents-heading' => 'Cuprins',
 	'mobile-frontend-page-menu-language-heading' => 'Citiți acest articol în',
-	'mobile-frontend-meta-data-issues-header' => 'Îmbunătățiți acest articol', # Fuzzy
-	'mobile-frontend-meta-data-issues' => 'Acest articol are anumite probleme', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Probleme',
+	'mobile-frontend-meta-data-issues' => 'Acest articol are anumite probleme',
 	'mobile-frontend-ajax-page-loading' => 'Se încarcă $1',
 	'mobile-frontend-page-saving' => 'Se salvează $1',
 	'mobile-frontend-ajax-page-error' => 'Hopa! Ceva nu a funcționat bine. Încercați să reîmprospătați fereastra navigatorului dv.',
+	'mobile-frontend-watchlist-add' => '$1 a fost adăugată listei dumneavoastră de pagini urmărite',
+	'mobile-frontend-watchlist-removed' => '$1 a fost eliminată din lista dumneavoastră de pagini urmărite',
+	'mobile-frontend-watchlist-view' => 'Vezi lista de pagini urmărite',
 );
 
 /** tarandíne (tarandíne)
@@ -10066,6 +10090,7 @@ $messages['vi'] = array(
 	'mobile-frontend-login' => 'Đăng nhập',
 	'mobile-frontend-logout' => 'Đăng xuất',
 	'mobile-frontend-placeholder' => 'Tìm kiếm {{SITENAME}}…',
+	'mobile-frontend-placeholder-beta' => 'Tìm kiếm {{SITENAME}} (Beta)',
 	'mobile-frontend-search-help' => 'Nhập từ khóa tìm kiếm ở trên để xem các bài trùng tên ở đây.',
 	'mobile-frontend-dismiss-notification' => 'bỏ qua thông báo này',
 	'mobile-frontend-clear-search' => 'Tẩy trống',
@@ -10092,11 +10117,14 @@ $messages['vi'] = array(
 	'mobile-frontend-page-menu-history' => 'Lịch sử',
 	'mobile-frontend-page-menu-contents-heading' => 'Mục lục',
 	'mobile-frontend-page-menu-language-heading' => 'Đọc bài này trong',
-	'mobile-frontend-meta-data-issues-header' => 'Cải tiến bài viết này', # Fuzzy
-	'mobile-frontend-meta-data-issues' => 'Bài viết này có vấn đề', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Các vấn đề',
+	'mobile-frontend-meta-data-issues' => 'Bài viết này có một số vấn đề',
 	'mobile-frontend-ajax-page-loading' => 'Đang tải $1',
 	'mobile-frontend-page-saving' => 'Đang lưu $1',
 	'mobile-frontend-ajax-page-error' => 'Ôi! Có gì đó bị trục trặc rồi. Hãy thử làm tươi cửa sổ trình duyệt.',
+	'mobile-frontend-watchlist-add' => 'Đã thêm $1 vào danh sách theo dõi của bạn',
+	'mobile-frontend-watchlist-removed' => 'Đã dời $1 khỏi danh sách theo dõi của bạn',
+	'mobile-frontend-watchlist-view' => 'Xem danh sách theo dõi của bạn',
 );
 
 /** Volapük (Volapük)
