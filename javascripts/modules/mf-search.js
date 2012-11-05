@@ -245,7 +245,7 @@ var opensearch = ( function() {
 	}
 
 	function init() {
-		if ( document.getElementById( 'results' ) && document.getElementById( 'search' ) ) {
+		if ( document.getElementById( 'results' ) && document.getElementById( 'mw-mf-search' ) ) {
 			initSearch();
 		}
 	}
