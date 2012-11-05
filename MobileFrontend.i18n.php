@@ -3085,13 +3085,14 @@ $messages['fr'] = array(
 	'mobile-frontend-page-menu-history' => 'Historique',
 	'mobile-frontend-page-menu-contents-heading' => 'Contenus',
 	'mobile-frontend-page-menu-language-heading' => 'Lire cet article en',
-	'mobile-frontend-meta-data-issues-header' => 'Améliorer cet article', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Problèmes',
 	'mobile-frontend-meta-data-issues' => 'Cet article a quelques problèmes',
 	'mobile-frontend-ajax-page-loading' => 'Chargement de $1',
 	'mobile-frontend-page-saving' => 'Enregistrement de $1',
 	'mobile-frontend-ajax-page-error' => "Oups! Quelque chose s'est mal passé. Veuillez essayer de rafraîchir la fenêtre de votre navigateur.",
 	'mobile-frontend-watchlist-add' => '$1 ajouté à votre liste de suivi',
 	'mobile-frontend-watchlist-removed' => '$1 retiré de votre liste de suivi',
+	'mobile-frontend-watchlist-view' => 'Afficher votre liste de surveillance',
 );
 
 /** Franco-Provençal (arpetan)
@@ -5467,6 +5468,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-home-button' => 'Houpsigg',
 	'mobile-frontend-logged-out' => 'Nit enjelogg',
 	'mobile-frontend-logged-in' => 'Bes als $1 enjelogg.',
+	'mobile-frontend-sign-in-heading' => 'Enlogge',
 	'mobile-frontend-settings-description' => 'Met heh dä Enschtällonge kanns De Dinge Zohjang för Mobiljerääte för Ding Bedörfniße paraat maache.',
 	'mobile-frontend-settings-beta' => 'Betta',
 	'mobile-frontend-save-settings' => 'Enschtellunge faßhallde',
@@ -5475,7 +5477,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-close-section' => 'Donn dä Afschnet heh aan et Ängk bränge',
 	'mobile-frontend-show-button' => 'Zeisch!',
 	'mobile-frontend-hide-button' => 'Vershteishe!',
-	'mobile-frontend-empty-homepage' => 'He di Aanfangssigg moß noch <a href="https://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">enjereschdt wääde</a>.', # Fuzzy
+	'mobile-frontend-empty-homepage' => 'He di Aanfangssigg moß noch <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">enjereschdt wääde</a>.', # Fuzzy
 	'mobile-frontend-regular-site' => 'jangk op de nomaale Belscherrem',
 	'mobile-frontend-wml-continue' => 'Wiggermaache&nbsp;...',
 	'mobile-frontend-wml-back' => 'Retuur&nbsp;...',
@@ -5546,8 +5548,6 @@ Versöhg_et schpääder noch ens.',
 	'mobile-frontend-clear-search' => 'Läddesch maache',
 	'mobile-frontend-privacy-link-text' => 'Prevaatheit',
 	'mobile-frontend-about-link-text' => 'Övver',
-	'mobile-frontend-footer-more' => 'mieh',
-	'mobile-frontend-footer-less' => 'winnijer',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Ze han onger dä Lizänz <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Bedengonge_för_der_Jebruch?useformat=mobile">Bedengonge för der Jebruch</a>',
@@ -5556,6 +5556,8 @@ Versöhg_et schpääder noch ens.',
 	'mobile-frontend-search-noresults' => 'Kein Tittel vun enem Atikel deiht op dat paße, wat De söhks. Don jät angersch söhke udder nemm dä Knopp zom Söhke onger Dinge Taßte, un söhk der_met em Täx vun de Atikelle.',
 	'mobile-frontend-main-menu-featured' => 'Äxzälänt',
 	'mobile-frontend-main-menu-nearby' => 'En de Nöh',
+	'mobile-frontend-main-menu-login' => 'Enlogge',
+	'mobile-frontend-main-menu-logout' => 'Ußlogge',
 	'mobile-frontend-main-menu-settings' => 'Enschtällonge',
 	'mobile-frontend-main-menu-settings-heading' => 'Enschtällonge för Mobiljerääte',
 	'mobile-frontend-settings-site-header' => 'Schprooche {{GRAMMAR:vun+Dative|{{SITENAME}}}}',
@@ -5565,6 +5567,7 @@ Versöhg_et schpääder noch ens.',
 	'mobile-frontend-page-menu-history' => 'Versione',
 	'mobile-frontend-page-menu-contents-heading' => 'Enhallde',
 	'mobile-frontend-page-menu-language-heading' => 'Donn heh dä Atikel lässe op',
+	'mobile-frontend-meta-data-issues-header' => 'Aanjelääjeheite',
 );
 
 /** Kurdish (Kurdî) */
