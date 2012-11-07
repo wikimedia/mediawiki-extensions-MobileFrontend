@@ -1108,11 +1108,14 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-page-menu-history' => 'Гісторыя',
 	'mobile-frontend-page-menu-contents-heading' => 'Зьмест',
 	'mobile-frontend-page-menu-language-heading' => 'Артыкул на іншых мовах',
-	'mobile-frontend-meta-data-issues-header' => 'Палепшыце гэты артыкул', # Fuzzy
-	'mobile-frontend-meta-data-issues' => 'Гэты артыкул мае хібы', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Хібы',
+	'mobile-frontend-meta-data-issues' => 'Гэты артыкул мае хібы',
 	'mobile-frontend-ajax-page-loading' => 'Загрузка артыкула «$1»',
 	'mobile-frontend-page-saving' => 'Захоўваем «$1»',
 	'mobile-frontend-ajax-page-error' => 'Ой! Штосьці ня так. Паспрабуйце абнавіць акно браўзэра.',
+	'mobile-frontend-watchlist-add' => 'Артыкул «$1» дададзены ў сьпіс назіраньня',
+	'mobile-frontend-watchlist-removed' => 'Артыкул «$1» выдалены са сьпісу назіраньня',
+	'mobile-frontend-watchlist-view' => 'Праглядзець сьпіс назіраньня',
 );
 
 /** Bulgarian (български)
@@ -5439,6 +5442,7 @@ $messages['krc'] = array(
 	'mobile-frontend-login' => 'Кир',
 	'mobile-frontend-logout' => 'Чыгъыў',
 	'mobile-frontend-placeholder' => '{{SITENAME}}да изле',
+	'mobile-frontend-placeholder-beta' => '{{SITENAME}}да (Бета) изле',
 	'mobile-frontend-search-help' => 'Башыракъда изленнген терминни джаз эм былайда аннга келишген статья атла кёрюннюкдюле.',
 	'mobile-frontend-dismiss-notification' => 'бу билдириуню джашыр',
 	'mobile-frontend-clear-search' => 'Кетер',
@@ -5470,6 +5474,9 @@ $messages['krc'] = array(
 	'mobile-frontend-ajax-page-loading' => '$1 джюклене турады',
 	'mobile-frontend-page-saving' => '$1 сакълана турады',
 	'mobile-frontend-ajax-page-error' => 'Джарсыў! Не эсе да терс болду. Браўзеринги джангыртыб кёр.',
+	'mobile-frontend-watchlist-add' => '«$1» бетни кёзде тургъан тизменге къош',
+	'mobile-frontend-watchlist-removed' => '«$1» бетни кёзде тургъан тизменгден кетер',
+	'mobile-frontend-watchlist-view' => 'Кёзде тургъан тизменге кёч',
 );
 
 /** Colognian (Ripoarisch)
@@ -6919,6 +6926,8 @@ $messages['nl'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Instellingen opslaan',
 	'mobile-frontend-random-button' => 'Willekeurig',
+	'mobile-frontend-ajax-random-heading' => 'Bezig met het laden van de pagina...',
+	'mobile-frontend-ajax-random-quote' => 'Intellectuele groei moet beginnen bij de geboorte en pas eindigen bij de dood',
 	'mobile-frontend-ajax-random-question' => 'Deze pagina lezen?',
 	'mobile-frontend-ajax-random-yes' => 'Ja',
 	'mobile-frontend-ajax-random-retry' => 'Opnieuw proberen',
@@ -7017,12 +7026,14 @@ Probeer het later nog een keer.',
 	'mobile-frontend-page-menu-history' => 'Geschiedenis',
 	'mobile-frontend-page-menu-contents-heading' => 'Inhoud',
 	'mobile-frontend-page-menu-language-heading' => 'Deze pagina lezen in',
-	'mobile-frontend-meta-data-issues-header' => 'Verbeter deze pagina', # Fuzzy
-	'mobile-frontend-meta-data-issues' => 'Er zijn verbeterpunten voor deze pagina', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Verbeterpunten',
+	'mobile-frontend-meta-data-issues' => 'Er zijn verbeterpunten voor deze pagina',
 	'mobile-frontend-ajax-page-loading' => 'Bezig met laden van $1',
 	'mobile-frontend-page-saving' => 'Bezig met het opslaan van $1',
 	'mobile-frontend-ajax-page-error' => 'Er is iets misgegaan. Vernieuw de huidige pagina in uw browser.',
-	'mobile-frontend-watchlist-view' => 'Uw volglijst bekijken',
+	'mobile-frontend-watchlist-add' => '$1 is toegevoegd aan uw volglijst',
+	'mobile-frontend-watchlist-removed' => '$1 is verwijderd van uw volglijst',
+	'mobile-frontend-watchlist-view' => 'Volglijst bekijken',
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
