@@ -46,13 +46,6 @@ table.gallery .gallerytext {
   margin-top: -12px;
   text-align: center;
 }
-table td,
-table th {
-  padding: 3px;
-}
-table th {
-  word-break: normal;
-}
 .mwm-message.mwm-notice {
   background: #FFFFFF;
   font-size: 1.1em;
@@ -81,6 +74,13 @@ table {
   overflow-x: auto;
   word-break: normal;
   display: block;
+}
+table td,
+table th {
+  padding: 3px;
+}
+table th {
+  word-break: normal;
 }
 table table {
   border: 0;
