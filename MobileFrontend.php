@@ -153,11 +153,13 @@ $wgResourceModules['mobile'] = array(
 $wgResourceModules['mobile.beta.jquery'] = array(
 	'styles' => array( 'stylesheets/modules/mf-watchlist.css',
 		'stylesheets/modules/mf-random.css',
+		'stylesheets/modules/mf-tables.css',
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-random.js',
+		'javascripts/modules/mf-tables.js',
 		'javascripts/actions/mf-edit.js', // FIXME: only serve when action=edit
 		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
 	'raw' => true,

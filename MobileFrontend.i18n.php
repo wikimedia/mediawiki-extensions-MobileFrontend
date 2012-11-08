@@ -163,6 +163,9 @@ $messages['en'] = array (
 	'mobile-frontend-diffview-anonymous' => 'Anonymous user',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} added',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} removed',
+
+	// tables
+	'mobile-frontend-table' => 'Table $1',
 );
 
 /** Message documentation (Message documentation)
@@ -328,6 +331,8 @@ Don't translate the special page name",
 	'mobile-frontend-diffview-anonymous' => 'Label to indicate anonymous user in common mobile diff/change view.',
 	'mobile-frontend-diffview-bytesadded' => 'Edit byte-changed counter for common mobile diff/change view when change adds bytes. $1 is byte count; may use PLURAL.',
 	'mobile-frontend-diffview-bytesremoved' => 'Edit byte-changed counter for common mobile diff/change view when change removes bytes. $1 is byte count; may use PLURAL.',
+
+	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. $1 is a unique table number for the article',
 );
 
 /** Achinese (Acèh)

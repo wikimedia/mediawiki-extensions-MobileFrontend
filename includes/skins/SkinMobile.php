@@ -606,6 +606,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			'mobile-frontend-hide-button',
 			'mobile-frontend-overlay-escape',
 			'mobile-frontend-ajax-random-suggestions',
+			'mobile-frontend-table',
 		);
 		foreach ( $messages as $msg ) {
 			$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
