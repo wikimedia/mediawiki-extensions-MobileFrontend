@@ -215,8 +215,8 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-toggle-images' => '*$1 is {{msg-mw|Mobile-frontend-off}}
 *$2 is {{msg-mw|Mobile-frontend-on}}',
 	'mobile-frontend-missing-image' => 'When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image',
-	'mobile-frontend-off' => 'Refers to images - means that they are not shown. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
-	'mobile-frontend-on' => 'Refers to images - means that they are shown. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
+	'mobile-frontend-off' => 'On settings page signals that a feature will be turned off. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
+	'mobile-frontend-on' => 'On settings page signals that a feature will be turned on. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
 	'mobile-frontend-featured-article' => 'The title that will appear before the element with the mf-tfa selector.',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
 	'mobile-frontend-leave-feedback-notice' => 'Parameters:
