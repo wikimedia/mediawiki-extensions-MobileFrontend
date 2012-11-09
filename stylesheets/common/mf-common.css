@@ -232,6 +232,10 @@ b {
 ul {
   list-style: square inside;
 }
+ul.hlist li {
+  display: inline;
+  margin-right: 8px;
+}
 ol {
   list-style: decimal inside;
 }
