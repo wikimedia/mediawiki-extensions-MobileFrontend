@@ -2060,8 +2060,8 @@ $messages['diq'] = array(
 	'mobile-frontend-ajax-page-loading' => '$1 bar beno',
 	'mobile-frontend-page-saving' => '$1 qeyd beno',
 	'mobile-frontend-ajax-page-error' => 'Wey! Tayê çi ters şi. Şıma ra reca ma awa ke pençereyê cıgeyrayoğê xo newe ra bıcerebnên.',
-	'mobile-frontend-watchlist-add' => '$1 bi zerreyê listay serykerdışan de şıma',
-	'mobile-frontend-watchlist-removed' => 'Lista şımaya serykerdışi ra $1 wedariye.',
+	'mobile-frontend-watchlist-add' => '$1 bi zerreyê lista seyrkerdışê şıma',
+	'mobile-frontend-watchlist-removed' => 'Lista şımaya serykerdışi ra $1 wedariya.',
 	'mobile-frontend-watchlist-view' => 'Lista serykerdışê xo bıvêne',
 );
 
@@ -3345,6 +3345,8 @@ $messages['gd'] = array(
  */
 $messages['gl'] = array(
 	'mobile-frontend-desc' => 'Interface para dispositivos móbiles',
+	'mobile.css' => '/* O CSS que se coloque aquí afectará a quen use o sitio móbil */',
+	'mobile.js' => '/* O JavaScript que se coloque aquí afectará a quen use o sitio móbil */',
 	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-home-button' => 'Portada',
 	'mobile-frontend-logged-out' => 'Non accedeu ao sistema',
@@ -6376,6 +6378,7 @@ $messages['ml'] = array(
 	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-logout' => 'ലോഗൗട്ട്',
 	'mobile-frontend-placeholder' => '{{SITENAME}} സംരംഭത്തിൽ തിരയുക',
+	'mobile-frontend-placeholder-beta' => '{{SITENAME}} (ബീറ്റ) സംരംഭത്തിൽ തിരയുക',
 	'mobile-frontend-search-help' => 'തിരയാനുള്ള പദം മുകളിൽ നൽകുക, ചേർച്ചയുള്ള ലേഖനങ്ങളുടെ തലക്കെട്ടുകൾ ഇവിടെ വരും.',
 	'mobile-frontend-dismiss-notification' => 'ഈ അറിയിപ്പ് ഒഴിവാക്കുക',
 	'mobile-frontend-clear-search' => 'ശൂന്യമാക്കുക',
@@ -6402,11 +6405,14 @@ $messages['ml'] = array(
 	'mobile-frontend-page-menu-history' => 'നാൾവഴി',
 	'mobile-frontend-page-menu-contents-heading' => 'ഉള്ളടക്കം',
 	'mobile-frontend-page-menu-language-heading' => 'ഈ ലേഖനം വായിക്കാനുള്ള',
-	'mobile-frontend-meta-data-issues-header' => 'ഈ ലേഖനം മെച്ചപ്പെടുത്തുക', # Fuzzy
-	'mobile-frontend-meta-data-issues' => 'ഈ ലേഖനത്തിൽ ചില പ്രശ്നങ്ങളുണ്ട്', # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'പ്രശ്നങ്ങൾ',
+	'mobile-frontend-meta-data-issues' => 'ഈ ലേഖനത്തിൽ ചില പ്രശ്നങ്ങളുണ്ട്',
 	'mobile-frontend-ajax-page-loading' => '$1 ശേഖരിക്കുന്നു',
 	'mobile-frontend-page-saving' => '$1 സേവ് ചെയ്യുന്നു',
 	'mobile-frontend-ajax-page-error' => 'അയ്യോ! എന്തോ കുഴപ്പമുണ്ടായിരിക്കുന്നു. ദയവായി താങ്കളുടെ ബ്രൗസർ ജാലകം പുതുക്കി ശ്രമിക്കുക.',
+	'mobile-frontend-watchlist-add' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിലേയ്ക്ക് ചേർത്തു',
+	'mobile-frontend-watchlist-removed' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിൽ നിന്ന് നീക്കി',
+	'mobile-frontend-watchlist-view' => 'താങ്കൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടിക കാണുക',
 );
 
 /** Mongolian (монгол)
@@ -9828,6 +9834,16 @@ $messages['ttt'] = array(
 	'mobile-frontend-opt-in-no-button' => 'Ne',
 );
 
+/** Central Atlas Tamazight (ⵜⴰⵎⴰⵣⵉⵖⵜ)
+ * @author Tifinaghes
+ */
+$messages['tzm'] = array(
+	'mobile-frontend-images-status' => 'ⵜⵉⵡⵍⴰⴼⵉⵏ',
+	'mobile-frontend-toggle-images' => 'ⵜⵉⵡⵍⴰⴼⵉⵏ $1 / $2',
+	'mobile-frontend-missing-image' => 'ⵜⴰⵡⵍⴰⴼⵜ',
+	'mobile-frontend-leave-feedback-message' => 'ⵜⴰⴱⵔⴰⵜ:',
+);
+
 /** Uyghur (Arabic script) (ئۇيغۇرچە)
  */
 $messages['ug-arab'] = array(
@@ -10229,7 +10245,7 @@ $messages['yi'] = array(
 	'mobile-frontend-close-section' => 'פארמאכן דעם אפטייל',
 	'mobile-frontend-show-button' => 'ווײַזן',
 	'mobile-frontend-hide-button' => 'באַהאַלטן',
-	'mobile-frontend-empty-homepage' => 'דעם היימבלאט דארף מען קאנפיגורירן . <a href="https://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">אנווייזן ווי צו שאפן דאס וועבזייטל מאבייל־אקטיווירט.</a>',
+	'mobile-frontend-empty-homepage' => 'דעם היימבלאט דארף מען קאנפיגורירן . <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">אנווייזן ווי צו שאפן דאס וועבזייטל מאבייל־אקטיווירט.</a>',
 	'mobile-frontend-regular-site' => 'נארמאַלער קאמפיוטער באַקוק',
 	'mobile-frontend-wml-continue' => 'ווײַטער …',
 	'mobile-frontend-wml-back' => 'צוריק ...',
@@ -10271,6 +10287,7 @@ $messages['yi'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'ייש"כ פאר אייער פידבעק!',
 	'mobile-frontend-leave-feedback-post-error' => 'עס האט פאסירט א פעלער ביים פראצעסירן אייער מעלדונג. ביטע פרובירט נאכאמאל שפעטער.',
 	'mobile-frontend-language' => 'שפּראַך:',
+	'mobile-frontend-language-article-heading' => 'לייענען אין אן אנדער שפראך',
 	'mobile-frontend-language-header' => 'דער ארטיקל איז פאראן אין $1 {{PLURAL:$1|שפראך|שפראכן}}',
 	'mobile-frontend-language-site-choose' => 'זוך שפראך',
 	'mobile-frontend-language-site-nomatches' => 'קיין צוגעפאסטע שפראכן',
@@ -10284,13 +10301,14 @@ $messages['yi'] = array(
 	'mobile-frontend-clear-search' => 'רייניקן',
 	'mobile-frontend-privacy-link-text' => 'פריוואטקייט',
 	'mobile-frontend-about-link-text' => 'וועגן',
-	'mobile-frontend-footer-more' => 'מער',
-	'mobile-frontend-footer-less' => 'ווינציגער',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">ניצבאדינגונגען</a>',
 	'mobile-frontend-footer-contact' => 'קאנטאקט',
 	'mobile-frontend-unknown-option' => 'אומבאקאנטע אפציע "$1".',
+	'mobile-frontend-main-menu-featured' => 'רעקאמנדירט',
 	'mobile-frontend-main-menu-nearby' => 'דערבײַ',
+	'mobile-frontend-main-menu-login' => 'אַרײַנלאָגירן',
+	'mobile-frontend-main-menu-logout' => 'אַרויסלאגירן',
 	'mobile-frontend-main-menu-settings' => 'איינשטעלונגען',
 	'mobile-frontend-main-menu-settings-heading' => 'מאביילן איינשטעלונגען',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} שפראכן',
@@ -10300,8 +10318,14 @@ $messages['yi'] = array(
 	'mobile-frontend-page-menu-history' => 'היסטאריע',
 	'mobile-frontend-page-menu-contents-heading' => 'אינהאַלט',
 	'mobile-frontend-page-menu-language-heading' => 'לייענט דעם ארטיקל אין',
-	'mobile-frontend-meta-data-issues-header' => 'פֿארבעסערן דעם ארטיקל',
-	'mobile-frontend-meta-data-issues' => 'דער ארטיקל האט פראגעס',
+	'mobile-frontend-meta-data-issues-header' => 'פראגעס',
+	'mobile-frontend-meta-data-issues' => 'דער ארטיקל האט עטלעכע פֿראגעס',
+	'mobile-frontend-ajax-page-loading' => 'לאָדן $1',
+	'mobile-frontend-page-saving' => 'אויפֿהיטן $1',
+	'mobile-frontend-ajax-page-error' => 'אוי־וויי! עפעס איז געשען דא. זייט אזוי גוט פרובירט דערפרישן אייער בלעטער פענסטער.',
+	'mobile-frontend-watchlist-add' => 'צוגעלייגט $1 צו אייער אויפפאסונג ליסטע',
+	'mobile-frontend-watchlist-removed' => 'אראפגענומען $1 פון אייער אויפפאסונג ליסטע',
+	'mobile-frontend-watchlist-view' => 'באקוקן אייער אויפפאסונג ליסטע',
 );
 
 /** Yoruba (Yorùbá)
