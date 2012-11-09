@@ -7,16 +7,9 @@ IMPORTANT: do not use selectors containing attribute notation e.g. [style] [cols
 table {
   border-spacing: 0 !important;
   border-collapse: collapse !important;
-  border: 1px solid #cccccc;
-  padding: 3px;
-  margin-bottom: 15px;
   float: none !important;
   margin-left: 0 !important;
   width: 100% !important;
-  -o-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 table.gallery .thumb {
   border: 0;
