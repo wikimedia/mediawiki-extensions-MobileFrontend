@@ -143,20 +143,34 @@ mw.mobileFrontend = (function() {
 		return getConfig( 'authenticated', false );
 	}
 
-	function getToken( tokenType, callback ) {
-		var data;
+	function getOrigin() {
+		return window.location.protocol + '//' + window.location.hostname;
+	}
+
+	function getToken( tokenType, callback, endpoint ) {
+		var data, url;
+		if ( !tokenQuery[ endpoint ] ) {
+			tokenQuery[ endpoint ] = {};
+		}
 		if ( !isLoggedIn() ) {
 			callback( {} ); // return no token
 		} else if ( tokenQuery.hasOwnProperty( tokenType ) ) {
-			tokenQuery[ tokenType ].done( callback );
+			tokenQuery[ endpoint ][ tokenType ].done( callback );
 		} else {
 			data = {
 				format: 'json',
 				action: 'tokens',
 				type: tokenType
 			};
-			tokenQuery[ tokenType ] = u.ajax( {
-				url: getApiUrl(),
+			if ( endpoint ) {
+				data.origin = getOrigin();
+			}
+			url = endpoint || getApiUrl();
+			tokenQuery[ endpoint ][ tokenType ] = jQuery.ajax( {
+				url: url,
+				xhrFields: {
+					'withCredentials': true
+				},
 				dataType: 'json',
 				data: data
 			} ).done( callback );
@@ -168,7 +182,9 @@ mw.mobileFrontend = (function() {
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getApiUrl: getApiUrl,
 		getModule: getModule,
+		getOrigin: getOrigin,
 		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
+		isLoggedIn: isLoggedIn,
 		message: message,
 		prefix: 'mw-mf-',
 		registerModule: registerModule,
