@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAAC5n///8o\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-09T11:26:55Z",
+      "side": 1,
+      "message": "Mobile doesn\u0027t need to support IE and FF2 so these rules are unnecessary.",
+      "revId": "a7bf5354e51590d6d075c19e4fb20f0f5d80df60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAC5n///8k\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-09T11:26:55Z",
+      "side": 1,
+      "message": "I\u0027m not convinced this will be needed",
+      "revId": "a7bf5354e51590d6d075c19e4fb20f0f5d80df60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAC5n///8g\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-09T11:26:55Z",
+      "side": 1,
+      "message": "this is an IE hack - which is not needed here either.",
+      "revId": "a7bf5354e51590d6d075c19e4fb20f0f5d80df60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAACDH///+I\u003d",
         "filename": "stylesheets/less/common/mf-common.less",
         "patchSetId": 4
@@ -13,6 +64,23 @@
       "writtenOn": "2012-11-01T20:23:38Z",
       "side": 1,
       "message": "I still think this should be organised via nesting making full use of less - as if ul.gallery ever changes or goes away it makes it clearer which rules needs to be fixed or removed.\n\nI wouldn\u0027t worry about trying to keep consistent with MediaWiki:Common.css - personally I think MediaWiki:Mobile.css should be included on the deskop site (should probably open a bug for that) as MediaWiki:Common.css and MediaWiki:Mobile.css should be strictly used to style content and we should try to organise our styling rules better.\n\nThis would mean there would be no need for these rules to be copied in MediaWiki:Common.css",
+      "revId": "a7bf5354e51590d6d075c19e4fb20f0f5d80df60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAC5n///8Y\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-09T11:26:55Z",
+      "side": 1,
+      "message": "why 94%?",
       "revId": "a7bf5354e51590d6d075c19e4fb20f0f5d80df60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
