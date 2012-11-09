@@ -8,7 +8,7 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents, $wgMFTrademarkSitename;
+			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -16,6 +16,7 @@ class SkinMobile extends SkinMobileBase {
 		$title = $this->getTitle();
 		$tpl->set( 'articleTitle', $title->getPrefixedText() );
 		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
+		$tpl->set( 'ajaxLoader', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/modules/images/ajax-loader.gif' );
 		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
@@ -25,6 +26,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'isOverlay', $specialPage );
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
+		$tpl->set( 'photo-upload-endpoint', $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '' );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
@@ -586,6 +588,15 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
+				// FIXME: clean this up so that this is generated from an array of keys to avoid wfMessage repetition
+				'mobile-frontend-photo-upload-error' => wfMessage( 'mobile-frontend-photo-upload-error' )->text(),
+				'mobile-frontend-photo-upload-progress' => wfMessage( 'mobile-frontend-photo-upload-progress' )->text(),
+				'mobile-frontend-photo-caption-placeholder' => wfMessage( 'mobile-frontend-photo-caption-placeholder' )->text(),
+				'mobile-frontend-image-loading' => wfMessage( 'mobile-frontend-image-loading' )->text(),
+				'mobile-frontend-image-uploading' => wfMessage( 'mobile-frontend-image-uploading' )->text(),
+				'mobile-frontend-image-saving-to-article' => wfMessage( 'mobile-frontend-image-saving-to-article' )->text(),
+				'mobile-frontend-photo-upload' => wfMessage( 'mobile-frontend-photo-upload' )->text(),
+				'mobile-frontend-saving-exit-page' => wfMessage( 'mobile-frontend-saving-exit-page' )->text(),
 				'mobile-frontend-watchlist-add' => wfMessage( 'mobile-frontend-watchlist-add' )->text(),
 				'mobile-frontend-watchlist-removed' => wfMessage( 'mobile-frontend-watchlist-removed' )->text(),
 				'mobile-frontend-watchlist-view' => wfMessage( 'mobile-frontend-watchlist-view' )->text(),
@@ -622,8 +633,10 @@ class SkinMobileTemplate extends BaseTemplate {
 			'settings' => array(
 				'action' => $this->data['action'],
 				'authenticated' => $this->data['authenticated'],
+				'photo-upload-endpoint' => $this->data['photo-upload-endpoint'],
 				'scriptPath' => $wgScriptPath,
 				'shim' => $this->data['shim'],
+				'ajaxLoader' => $this->data['ajaxLoader'],
 				'pageUrl' => $wgArticlePath,
 				'beta' => $inBeta,
 				'title' => $this->data['articleTitle'],

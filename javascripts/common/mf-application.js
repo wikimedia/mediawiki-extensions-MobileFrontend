@@ -279,6 +279,7 @@ mw.mobileFrontend = (function() {
 		getApiUrl: getApiUrl,
 		getModule: getModule,
 		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
+		isLoggedIn: isLoggedIn,
 		message: message,
 		prefix: 'mw-mf-',
 		registerModule: registerModule,

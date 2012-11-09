@@ -1,0 +1,62 @@
+#content_wrapper .thumb.photouploader {
+  padding: 8px;
+}
+#content_wrapper .thumb.photouploader .errormsg,
+#content_wrapper .thumb.photouploader .msg {
+  display: none;
+}
+#content_wrapper .thumb.photouploader.uploading .msg {
+  display: block;
+}
+#content_wrapper .thumb.photouploader.error .errormsg {
+  color: #cc0000;
+  display: block;
+  margin-bottom: 8px;
+}
+#content_wrapper .thumb.photouploader img {
+  max-width: 100%;
+}
+#content_wrapper .thumb.photouploader .camera {
+  position: relative;
+  text-align: left;
+  /* override text-align center - chrome not clickable */
+
+}
+#content_wrapper .thumb.photouploader .camera form {
+  position: relative;
+  height: 24px;
+  width: 100%;
+  background: url(images/5-content-new-picture.png) no-repeat;
+  background-size: auto 24px;
+  background-position: left top;
+}
+#content_wrapper .thumb.photouploader .camera form input.photoupload {
+  opacity: 0;
+  /* hide default */
+
+  z-index: 2;
+  width: 100%;
+}
+#content_wrapper .thumb.photouploader .camera form p {
+  position: absolute;
+  left: 48px;
+  bottom: 0;
+  margin-bottom: 0;
+}
+#content_wrapper .thumb.photouploader .editArea input {
+  display: block;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 2em;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#content_wrapper .thumb.photouploader .editArea button {
+  width: 48%;
+}
+#content_wrapper .thumb.photouploader .editArea button.green {
+  float: right;
+}

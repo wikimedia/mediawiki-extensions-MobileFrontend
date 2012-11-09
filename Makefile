@@ -13,6 +13,7 @@ less:
 	lessc stylesheets/less/modules/mf-toggle.less > stylesheets/modules/mf-toggle.css
 	lessc stylesheets/less/modules/mf-search.less > stylesheets/modules/mf-search.css
 	lessc stylesheets/less/modules/mf-watchlist.less > stylesheets/modules/mf-watchlist.css
+	lessc stylesheets/less/modules/mf-photo.less > stylesheets/modules/mf-photo.css
 	lessc stylesheets/less/common/mf-typography.less > stylesheets/common/mf-typography.css
 	lessc stylesheets/less/actions/mf-edit.less > stylesheets/actions/mf-edit.css
 

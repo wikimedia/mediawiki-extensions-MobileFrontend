@@ -149,6 +149,18 @@ $messages['en'] = array (
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
 	'mobile-frontend-watchlist-removed' => 'Removed $1 from your watchlist',
 	'mobile-frontend-watchlist-view' => 'View your watchlist',
+
+	// confirm exit
+	'mobile-frontend-saving-exit-page' => 'Your contribution is still saving. If you leave your contributions will be lost. Are you sure you want to exit?',
+
+	// photo uploads
+	'mobile-frontend-photo-upload' => 'Add the first photo to this article',
+	'mobile-frontend-photo-upload-progress' => 'Uploading your image to this article',
+	'mobile-frontend-photo-caption-placeholder' => 'Add a caption for this image',
+	'mobile-frontend-image-loading' => 'Loading image',
+	'mobile-frontend-image-uploading' => 'Uploading image',
+	'mobile-frontend-photo-upload-error' => 'An error occurred whilst uploading the image. Please try another.',
+	'mobile-frontend-image-saving-to-article' => 'Saving image to article',
 );
 
 /** Message documentation (Message documentation)
@@ -302,6 +314,16 @@ Don't translate the special page name",
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
+	'mobile-frontend-saving-exit-page' => 'When a user makes an edit in the page which is happening in the background
+and then tries to leave the page this message is shown to check that they are happy that they will lose their changes.
+They can either exit the page and lose them or stay on the page until they are complete',
+	'mobile-frontend-photo-upload' => 'This appears on articles which have no photos and is a call to action to add the first image',
+	'mobile-frontend-photo-upload-progress' => 'Progress message displayed whilst an upload occurs',
+	'mobile-frontend-photo-caption-placeholder' => 'Placeholder text prompting user to add a caption to a photo',
+	'mobile-frontend-image-loading' => 'Text that displays while an image is loading',
+	'mobile-frontend-image-uploading' => 'Text that displays whilst an image is being uploaded',
+	'mobile-frontend-photo-upload-error' => 'Text that displays when a photo fails to upload',
+	'mobile-frontend-image-saving-to-article' => 'Text that displays whilst the wikitext to display an image is being prepended to an article',
 );
 
 /** Achinese (Acèh)
