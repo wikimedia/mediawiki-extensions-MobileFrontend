@@ -424,9 +424,7 @@ class ExtMobileFrontend extends ContextSource {
 
 		wfProfileIn( __METHOD__ . '-getText' );
 		$formatter->setIsMainPage( $this->getTitle()->isMainPage() );
-		$device = $context->getDevice();
 		if ( $context->getContentFormat() == 'HTML'
-			&& $device['supports_javascript'] === true
 			&& $this->getRequest()->getText( 'search' ) == '' )
 		{
 			$formatter->enableExpandableSections();
