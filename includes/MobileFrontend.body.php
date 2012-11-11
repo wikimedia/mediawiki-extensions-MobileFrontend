@@ -441,7 +441,9 @@ class ExtMobileFrontend extends ContextSource {
 			header( 'Content-Disposition: attachment; filename="data.js";' );
 			$json_data = array();
 			$json_data['title'] = htmlspecialchars ( $this->getTitle()->getText() );
-			$json_data['html'] = $contentHtml;
+			# Deprecation warning: not localiseable because we know that it is being used only on enwiki
+			$json_data['html'] = '<div style="border: 3px solid red; width: 100%;">Please upgrade your Wikipedia app, this version will stop working on December 11, 2012.</div>'
+					. $contentHtml;
 
 			$json = FormatJson::encode( $json_data );
 
