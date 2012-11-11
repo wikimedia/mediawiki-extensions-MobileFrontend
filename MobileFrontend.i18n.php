@@ -4744,6 +4744,7 @@ $messages['ja'] = array(
 	'mobile-frontend-save-settings' => '設定を保存',
 	'mobile-frontend-random-button' => 'おまかせ表示',
 	'mobile-frontend-ajax-random-quote-author' => 'アルベルト・アインシュタイン',
+	'mobile-frontend-ajax-random-question' => 'この記事を読みますか?',
 	'mobile-frontend-ajax-random-yes' => 'はい',
 	'mobile-frontend-ajax-random-retry' => 'もう一度お試しください',
 	'mobile-frontend-back-to-top-of-section' => '節の先頭に戻る',
@@ -5684,7 +5685,7 @@ $messages['lb'] = array(
 	'mobile-frontend-close-section' => 'Dësen Abschnitt zoumaachen',
 	'mobile-frontend-show-button' => 'Weisen',
 	'mobile-frontend-hide-button' => 'Verstoppen',
-	'mobile-frontend-empty-homepage' => 'Dës Homepage muss konfiguréiert ginn. <a href="https://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruktioune fir ze wësse wéi een dëse mobile Site aktivéiert</a>',
+	'mobile-frontend-empty-homepage' => 'Dës Homepage muss konfiguréiert ginn. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruktioune fir ze wësse wéi een dëse mobile Site aktivéiert</a>',
 	'mobile-frontend-regular-site' => 'Desktop-Vue',
 	'mobile-frontend-wml-continue' => 'Weider ...',
 	'mobile-frontend-wml-back' => 'Zréck ...',
@@ -5750,8 +5751,6 @@ $messages['lb'] = array(
 	'mobile-frontend-clear-search' => 'Eidel maachen',
 	'mobile-frontend-privacy-link-text' => 'Dateschutz',
 	'mobile-frontend-about-link-text' => 'Iwwer',
-	'mobile-frontend-footer-more' => 'méi',
-	'mobile-frontend-footer-less' => 'manner',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Benotzungsbedingungen</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
@@ -5759,6 +5758,8 @@ $messages['lb'] = array(
 	'mobile-frontend-search-noresults' => "Keen Artikel gouf beim siche fonnt. Ännert d'Critèren oder dréckt de Sichknäppchen op Ärer Tastatur fir bannen an den Artikelen ze sichen.",
 	'mobile-frontend-main-menu-featured' => 'Bemierkenswäert',
 	'mobile-frontend-main-menu-nearby' => 'Nobäi',
+	'mobile-frontend-main-menu-login' => 'Aloggen',
+	'mobile-frontend-main-menu-logout' => 'Ausloggen',
 	'mobile-frontend-main-menu-settings' => 'Astellungen',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobil-Astellungen fir de Site',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}-Sproochen',
@@ -5768,8 +5769,12 @@ $messages['lb'] = array(
 	'mobile-frontend-page-menu-history' => 'Versiounen',
 	'mobile-frontend-page-menu-contents-heading' => 'Inhalter',
 	'mobile-frontend-page-menu-language-heading' => 'Liest dësen Artikel op',
-	'mobile-frontend-meta-data-issues-header' => 'Dësen Artikel verbesseren',
-	'mobile-frontend-meta-data-issues' => 'Dësen Artikel huet Problemer',
+	'mobile-frontend-meta-data-issues-header' => 'Problemer',
+	'mobile-frontend-meta-data-issues' => 'Dësen Artikel huet e puer Problemer',
+	'mobile-frontend-ajax-page-loading' => '$1 lueden',
+	'mobile-frontend-page-saving' => '$1 späicheren',
+	'mobile-frontend-watchlist-add' => '$1 gouf op Är Iwwerwaachungslëscht derbäigesat',
+	'mobile-frontend-watchlist-view' => 'Är Iwwerwaachungslëscht weisen',
 );
 
 /** Lezghian (лезги)
@@ -9838,10 +9843,19 @@ $messages['ttt'] = array(
  * @author Tifinaghes
  */
 $messages['tzm'] = array(
+	'mobile-frontend-home-button' => 'ⴰⵙⵏⵓⴱⴳ',
+	'mobile-frontend-save-settings' => 'ⵣⵎⵎⴻⵎ ⵉⵎⵙⴳⵉⴷⴷⴰ',
+	'mobile-frontend-ajax-random-yes' => 'ⵢⵢⵉⵀ',
+	'mobile-frontend-view-mobile' => 'ⴰⵎⴰⴼⵓⵙ (Mobile)',
+	'mobile-frontend-opt-out-yes-button' => 'ⵢⵢⵉⵀ',
+	'mobile-frontend-opt-out-no-button' => 'ⵓⵀ ⵓ',
 	'mobile-frontend-images-status' => 'ⵜⵉⵡⵍⴰⴼⵉⵏ',
 	'mobile-frontend-toggle-images' => 'ⵜⵉⵡⵍⴰⴼⵉⵏ $1 / $2',
 	'mobile-frontend-missing-image' => 'ⵜⴰⵡⵍⴰⴼⵜ',
+	'mobile-frontend-news-items' => 'ⴷⵉ ⵉⵏⵖⵎⵉⵙⵏ',
 	'mobile-frontend-leave-feedback-message' => 'ⵜⴰⴱⵔⴰⵜ:',
+	'mobile-frontend-language' => 'ⵜⵓⵜⵍⴰⵢⵜ:',
+	'mobile-frontend-page-menu-history' => 'ⴰⵎⵣⵔⵓⵢ',
 );
 
 /** Uyghur (Arabic script) (ئۇيغۇرچە)
