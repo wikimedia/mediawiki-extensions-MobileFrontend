@@ -384,3 +384,9 @@ $wgMFEnableResourceLoader = true;
  * You can also edit the 'mobile-frontend-footer-sitename' message directly.
  */
 $wgMFTrademarkSitename = false;
+
+/**
+ * Name of the class used for mobile device detection, must be inherited from
+ * IDeviceDetector.
+ */
+$wgDeviceDetectionClass = 'DeviceDetection';
