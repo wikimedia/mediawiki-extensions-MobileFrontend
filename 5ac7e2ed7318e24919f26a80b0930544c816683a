@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH///Jo\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-11-15T17:26:46Z",
+      "side": 1,
+      "message": "is this line really needed, especially since $variant is not declared?",
+      "revId": "5ac7e2ed7318e24919f26a80b0930544c816683a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
