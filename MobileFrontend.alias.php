@@ -41,6 +41,13 @@ $specialPageAliases['hi'] = array(
 	'MobileOptions' => array( 'मोबाइल_विकल्प' ),
 );
 
+/** Italian (italiano) */
+$specialPageAliases['it'] = array(
+	'MobileFrontend' => array( 'InterfacciaMobile' ),
+	'MobileFeedback' => array( 'FeedbackMobile' ),
+	'MobileOptions' => array( 'OpzioniMobile' ),
+);
+
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
 	'MobileFrontend' => array( '모바일프론트엔드' ),

@@ -1783,9 +1783,11 @@ $messages['da'] = array(
  * @author Geitost
  * @author Kghbln
  * @author Metalhead64
+ * @author Umherirrender
  */
 $messages['de'] = array(
 	'mobile-frontend-desc' => 'Ermöglicht die für mobile Endgeräte optimierte Darstellung von Seiten',
+	'mobile.css' => '/* Das folgende CSS wird für alle Nutzer der Mobilen Version geladen. */',
 	'mobile-frontend-search-submit' => 'Los',
 	'mobile-frontend-home-button' => 'Start',
 	'mobile-frontend-logged-out' => 'Nicht angemeldet',
@@ -1824,7 +1826,6 @@ $messages['de'] = array(
 	'mobile-frontend-images-status' => 'Bilder',
 	'mobile-frontend-disable-images' => 'Bilder in der mobilen Ansicht deaktivieren',
 	'mobile-frontend-enable-images' => 'Bilder in der mobilen Ansicht aktivieren',
-	'mobile-frontend-toggle-images' => 'Bilder $1 / $2',
 	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'AN',
