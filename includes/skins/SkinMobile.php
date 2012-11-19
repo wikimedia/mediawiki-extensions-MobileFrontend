@@ -570,6 +570,34 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php
 	}
 
+	public function addMessages( $config ) {
+		$messages = array(
+			'mobile-frontend-language-site-choose',
+			'mobile-frontend-language-site-nomatches',
+			'mobile-frontend-close-section',
+			'mobile-frontend-search-help',
+			'mobile-frontend-search-noresults',
+			'mobile-frontend-watchlist-add',
+			'mobile-frontend-watchlist-removed',
+			'mobile-frontend-watchlist-view',
+			'mobile-frontend-ajax-random-heading',
+			'mobile-frontend-ajax-random-quote',
+			'mobile-frontend-ajax-random-quote-author',
+			'mobile-frontend-ajax-random-question',
+			'mobile-frontend-ajax-random-yes',
+			'mobile-frontend-ajax-random-retry',
+			'mobile-frontend-ajax-page-loading',
+			'mobile-frontend-page-saving',
+			'mobile-frontend-ajax-page-error',
+			'mobile-frontend-meta-data-issues',
+			'mobile-frontend-meta-data-issues-header',
+		);
+		foreach ( $messages as $msg ) {
+			$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
+		}
+		return $config;
+	}
+
 	public function prepareData() {
 		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgArticlePath;
 
@@ -586,38 +614,16 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
-				'mobile-frontend-watchlist-add' => wfMessage( 'mobile-frontend-watchlist-add' )->text(),
-				'mobile-frontend-watchlist-removed' => wfMessage( 'mobile-frontend-watchlist-removed' )->text(),
-				'mobile-frontend-watchlist-view' => wfMessage( 'mobile-frontend-watchlist-view' )->text(),
-				'mobile-frontend-ajax-random-heading' => wfMessage( 'mobile-frontend-ajax-random-heading' )->text(),
-				'mobile-frontend-ajax-random-quote' => wfMessage( 'mobile-frontend-ajax-random-quote' )->text(),
-				'mobile-frontend-ajax-random-quote-author' => wfMessage( 'mobile-frontend-ajax-random-quote-author' )->text(),
-				'mobile-frontend-ajax-random-question' => wfMessage( 'mobile-frontend-ajax-random-question' )->text(),
-				'mobile-frontend-ajax-random-yes' => wfMessage( 'mobile-frontend-ajax-random-yes' )->text(),
-				'mobile-frontend-ajax-random-retry' => wfMessage( 'mobile-frontend-ajax-random-retry' )->text(),
-				'mobile-frontend-ajax-page-loading' => wfMessage( 'mobile-frontend-ajax-page-loading' )->text(),
-				'mobile-frontend-page-saving' => wfMessage('mobile-frontend-page-saving' )->text(),
-				'mobile-frontend-ajax-page-error' => wfMessage( 'mobile-frontend-ajax-page-error' )->text(),
-				'mobile-frontend-meta-data-issues' => wfMessage( 'mobile-frontend-meta-data-issues' )->text(),
-				'mobile-frontend-meta-data-issues-header' => wfMessage( 'mobile-frontend-meta-data-issues-header' )->text(),
 				'expand-section' => wfMessage( 'mobile-frontend-show-button' )->text(),
 				'collapse-section' => wfMessage( 'mobile-frontend-hide-button' )->text(),
 				'remove-results' => wfMessage( 'mobile-frontend-wml-back' )->text(), //@todo: use a separate message
-				'mobile-frontend-search-noresults' => wfMessage(
-					'mobile-frontend-search-noresults' )->text(),
-				'mobile-frontend-search-help' => wfMessage( 'mobile-frontend-search-help' )->text(),
 				'contents-heading' => wfMessage( 'mobile-frontend-page-menu-contents-heading' )->text(),
 				'language-heading' => wfMessage( 'mobile-frontend-page-menu-language-heading' )->text(),
-				'mobile-frontend-close-section' => wfMessage( 'mobile-frontend-close-section' )->text(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
 					array(
 						'href' => SpecialPage::getTitleFor( 'MobileOptions/Language' )->getLocalUrl(),
 					),
 					wfMessage( 'mobile-frontend-language-footer' ) ),
-				'mobile-frontend-language-site-choose' => wfMessage(
-					'mobile-frontend-language-site-choose' )->text(),
-				'mobile-frontend-language-site-nomatches' => wfMessage(
-					'mobile-frontend-language-site-nomatches' )->text(),
 			),
 			'settings' => array(
 				'action' => $this->data['action'],
@@ -637,6 +643,9 @@ class SkinMobileTemplate extends BaseTemplate {
 				'hookOptions' => $hookOptions,
 			),
 		);
+
+		$jsconfig = $this->addMessages( $jsconfig );
+
 		if ( $this->data['isMainPage'] ) {
 			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage'
 			)->text();
