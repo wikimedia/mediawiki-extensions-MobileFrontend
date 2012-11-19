@@ -10,7 +10,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 	};
 }
 mw.mobileFrontend = (function() {
-	var utilities, modules = [],
+	var u, modules = [],
 		scrollY, tokenQuery = {},
 		moduleNamespace = {},
 		doc = document.documentElement;
@@ -69,7 +69,7 @@ mw.mobileFrontend = (function() {
 				}
 			}
 		}
-		utilities( document.documentElement ).removeClass( 'page-loading' );
+		u( document.documentElement ).removeClass( 'page-loading' );
 		if ( typeof jQuery !== 'undefined' ) {
 			$( window ).trigger( 'mw-mf-ready' );
 		}
@@ -94,7 +94,7 @@ mw.mobileFrontend = (function() {
 		}
 
 		if( supportsPositionFixed() ) {
-			utilities( doc ).addClass( 'supportsPositionFixed' );
+			u( doc ).addClass( 'supportsPositionFixed' );
 		}
 
 		// when rotating to landscape stop page zooming on ios
@@ -111,10 +111,10 @@ mw.mobileFrontend = (function() {
 					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
 				}, false );
 			} else if( ua.match(/Android 4\.0\.2/) ){
-				utilities( doc ).addClass( 'android4-0-2' );
+				u( doc ).addClass( 'android4-0-2' );
 			}
 			if ( android ) {
-				utilities( doc ).addClass( 'android' );
+				u( doc ).addClass( 'android' );
 			}
 		}
 		fixBrowserBugs();
@@ -122,7 +122,7 @@ mw.mobileFrontend = (function() {
 		initModules();
 	}
 
-	utilities = typeof jQuery !== 'undefined' ? jQuery : jQueryShim;
+	u = typeof jQuery !== 'undefined' ? jQuery : jQueryShim;
 
 	function setting( name ) {
 		return mwMobileFrontendConfig.settings[name] || '';
@@ -167,7 +167,7 @@ mw.mobileFrontend = (function() {
 		registerModule: registerModule,
 		setting: setting,
 		supportsPositionFixed: supportsPositionFixed,
-		utils: utilities
+		utils: u
 	};
 
 }());
