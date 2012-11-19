@@ -1892,8 +1892,6 @@ $messages['de'] = array(
 	'mobile-frontend-page-menu-contents' => 'Inhalte',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-page-menu-history' => 'Versionsgeschichte',
-	'mobile-frontend-page-menu-contents-heading' => 'Inhalte',
-	'mobile-frontend-page-menu-language-heading' => 'Diesen Artikel lesen auf',
 	'mobile-frontend-meta-data-issues-header' => 'Probleme',
 	'mobile-frontend-meta-data-issues' => 'Mit diesem Artikel gibt es einige Probleme',
 	'mobile-frontend-ajax-page-loading' => 'Lade $1',
@@ -2171,8 +2169,6 @@ Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-page-menu-contents' => 'wopśimjeśe',
 	'mobile-frontend-page-menu-history' => 'Historija',
-	'mobile-frontend-page-menu-contents-heading' => 'Wopśimjeśe',
-	'mobile-frontend-page-menu-language-heading' => 'Toś ten nastawk cytaś w',
 	'mobile-frontend-meta-data-issues-header' => 'Problemy',
 	'mobile-frontend-meta-data-issues' => 'Toś ten nastawk ma problemy',
 	'mobile-frontend-ajax-page-loading' => '$1 se zacytujo',
@@ -3833,8 +3829,6 @@ $messages['he'] = array(
 	'mobile-frontend-main-menu-contact' => 'יצירת קשר',
 	'mobile-frontend-page-menu-contents' => 'תוכן עניינים',
 	'mobile-frontend-page-menu-history' => 'היסטוריה',
-	'mobile-frontend-page-menu-contents-heading' => 'תוכן עניינים',
-	'mobile-frontend-page-menu-language-heading' => 'הערך הזה בשפות אחרות',
 	'mobile-frontend-meta-data-issues-header' => 'בעיות',
 	'mobile-frontend-meta-data-issues' => 'בערך הזה יש בעיות',
 	'mobile-frontend-ajax-page-loading' => 'טעינת הדף $1',
@@ -5052,8 +5046,6 @@ $messages['ka'] = array(
 	'mobile-frontend-main-menu-contact' => 'კონტაქტი',
 	'mobile-frontend-page-menu-contents' => 'შინაარსი',
 	'mobile-frontend-page-menu-history' => 'ისტორია',
-	'mobile-frontend-page-menu-contents-heading' => 'შინაარსი',
-	'mobile-frontend-page-menu-language-heading' => 'ამ სტატიის წაკითხვა',
 );
 
 /** Адыгэбзэ (Адыгэбзэ)
@@ -5769,8 +5761,6 @@ $messages['lb'] = array(
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-page-menu-contents' => 'Inhalter',
 	'mobile-frontend-page-menu-history' => 'Versiounen',
-	'mobile-frontend-page-menu-contents-heading' => 'Inhalter',
-	'mobile-frontend-page-menu-language-heading' => 'Liest dësen Artikel op',
 	'mobile-frontend-meta-data-issues-header' => 'Problemer',
 	'mobile-frontend-meta-data-issues' => 'Dësen Artikel huet e puer Problemer',
 	'mobile-frontend-ajax-page-loading' => '$1 lueden',
@@ -7156,8 +7146,6 @@ $messages['nn'] = array(
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-page-menu-contents' => 'innhald',
 	'mobile-frontend-page-menu-history' => 'Historikk',
-	'mobile-frontend-page-menu-contents-heading' => 'Innhald',
-	'mobile-frontend-page-menu-language-heading' => 'Les artikkelen på',
 	'mobile-frontend-meta-data-issues-header' => 'Betra artikkelen', # Fuzzy
 	'mobile-frontend-meta-data-issues' => 'Denne artikkelen har vanskar', # Fuzzy
 );
@@ -8182,8 +8170,6 @@ $messages['ru'] = array(
 	'mobile-frontend-main-menu-contact' => 'Контактная информация',
 	'mobile-frontend-page-menu-contents' => 'содержание',
 	'mobile-frontend-page-menu-history' => 'История',
-	'mobile-frontend-page-menu-contents-heading' => 'Содержание',
-	'mobile-frontend-page-menu-language-heading' => 'Эта статья на других языках',
 );
 
 /** Rusyn (русиньскый)
@@ -9274,8 +9260,6 @@ $messages['sv'] = array(
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-page-menu-contents' => 'innehåll',
 	'mobile-frontend-page-menu-history' => 'Historik',
-	'mobile-frontend-page-menu-contents-heading' => 'Innehåll',
-	'mobile-frontend-page-menu-language-heading' => 'Läs artikeln på',
 	'mobile-frontend-meta-data-issues-header' => 'Problem',
 	'mobile-frontend-meta-data-issues' => 'Denna artikel har några problem',
 	'mobile-frontend-ajax-page-loading' => 'Laddar $1',
@@ -9970,8 +9954,6 @@ $messages['uk'] = array(
 	'mobile-frontend-main-menu-contact' => 'Контакт',
 	'mobile-frontend-page-menu-contents' => 'зміст',
 	'mobile-frontend-page-menu-history' => 'Історія',
-	'mobile-frontend-page-menu-contents-heading' => 'Зміст',
-	'mobile-frontend-page-menu-language-heading' => 'Ця стаття іншими мовами',
 );
 
 /** Urdu (اردو)
@@ -10499,8 +10481,6 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-main-menu-contact' => '联系',
 	'mobile-frontend-page-menu-contents' => '目录',
 	'mobile-frontend-page-menu-history' => '历史',
-	'mobile-frontend-page-menu-contents-heading' => '目录',
-	'mobile-frontend-page-menu-language-heading' => '阅读本条目的其他语言版本',
 	'mobile-frontend-meta-data-issues-header' => '存在的问题',
 	'mobile-frontend-meta-data-issues' => '本条目有问题',
 	'mobile-frontend-ajax-page-loading' => '正在载入$1',
