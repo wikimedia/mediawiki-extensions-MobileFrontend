@@ -148,7 +148,7 @@ mw.mobileFrontend = (function() {
 				action: 'tokens',
 				type: tokenType
 			};
-			tokenQuery[ tokenType ] = jQuery.ajax( {
+			tokenQuery[ tokenType ] = u.ajax( {
 				url: getApiUrl(),
 				dataType: 'json',
 				data: data
