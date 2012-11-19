@@ -22,16 +22,15 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 	}
 
 	protected function renderFeedbackHtml() {
-		global $wgMFFeedbackLinks;
+		global $wgMFFeedbackLinks, $wgMFDisplayNonTechnicalFeedback;
 		/** Section header text **/
 		$technicalProblemSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-technical-problem-section-header' )->escaped();
-		$generalSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-general-section-header' )->escaped();
-		$articleFeedbackSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-article-feedback-section-header' )->escaped();
 
 		wfRunHooks( 'MobileFrontendOverrideFeedbackLinks', array(
 			$this->getRequest()->getText( 'feedbacksource', '' ),
 			$this->getRequest()->getText( 'returnto', '' ),
 			) );
+
 		/** Links **/
 		$allowedLinks = array(
 			'Technical',
@@ -61,10 +60,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 
 		/** Link text **/
 		$feedbackTechnicalLinkText = ( $useFeedbackForm ) ? '' : $this->msg( 'mobile-frontend-leave-feedback-technical-link-text' )->escaped();
-		$feedbackGeneralLinkText = $this->msg( 'mobile-frontend-leave-feedback-general-link-text' )->escaped();
-		$feedbackArticlePersonalLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-personal-link-text' )->escaped();
-		$feedbackArticleFactualLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-factual-link-text' )->escaped();
-		$feedbackArticleOtherLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-other-link-text' )->escaped();
+
 		$warning = $this->msg( 'mobile-frontend-leave-feedback-warning' );
 
 		$html = <<<HTML
@@ -98,31 +94,39 @@ HTML;
 			$this->getOutput()->addHtml( $html );
 		}
 
-		$html = <<<HTML
-		</div>
-		<h2 class="section_heading" id="section_2">{$generalSectionHeader}</h2>
-		<div class="content_block" id="content_2">
-			<ul>
-				<li><a href="{$feedbackGeneralLink}">{$feedbackGeneralLinkText}</a></li>
-			</ul>
-		</div>
-		<h2 class="section_heading" id="section_3">{$articleFeedbackSectionHeader}</h2>
-		<div class="content_block" id="content_3">
-			<ul>
-				<li>
-					<a href="{$feedbackArticlePersonalLink}">{$feedbackArticlePersonalLinkText}</a>
-				</li>
-				<li>
-					<a href="{$feedbackArticleFactualLink}">{$feedbackArticleFactualLinkText}</a>
-				</li>
-				<li>
-					<a href="{$feedbackArticleOtherLink}">{$feedbackArticleOtherLinkText}</a>
-				</li>
-			</ul>
-		</div>
-		</div>
-HTML;
+		$html = "</div>";
+		if ( $wgMFDisplayNonTechnicalFeedback ) {
+			$generalSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-general-section-header' )->escaped();
+			$articleFeedbackSectionHeader = $this->msg( 'mobile-frontend-leave-feedback-article-feedback-section-header' )->escaped();
+			$feedbackGeneralLinkText = $this->msg( 'mobile-frontend-leave-feedback-general-link-text' )->escaped();
+			$feedbackArticlePersonalLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-personal-link-text' )->escaped();
+			$feedbackArticleFactualLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-factual-link-text' )->escaped();
+			$feedbackArticleOtherLinkText = $this->msg( 'mobile-frontend-leave-feedback-article-other-link-text' )->escaped();
 
+			$html .= <<<HTML
+			<h2 class="section_heading" id="section_2">{$generalSectionHeader}</h2>
+			<div class="content_block" id="content_2">
+				<ul>
+					<li><a href="{$feedbackGeneralLink}">{$feedbackGeneralLinkText}</a></li>
+				</ul>
+			</div>
+			<h2 class="section_heading" id="section_3">{$articleFeedbackSectionHeader}</h2>
+			<div class="content_block" id="content_3">
+				<ul>
+					<li>
+						<a href="{$feedbackArticlePersonalLink}">{$feedbackArticlePersonalLinkText}</a>
+					</li>
+					<li>
+						<a href="{$feedbackArticleFactualLink}">{$feedbackArticleFactualLinkText}</a>
+					</li>
+					<li>
+						<a href="{$feedbackArticleOtherLink}">{$feedbackArticleOtherLinkText}</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+HTML;
+		}
 		$this->getOutput()->addHtml( $html );
 	}
 

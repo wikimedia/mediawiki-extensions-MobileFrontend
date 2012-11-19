@@ -297,6 +297,12 @@ $wgExtMobileFrontend = null;
 $wgMFFeedbackFallbackURL = '#';
 
 /**
+ * Whether or not to display sections other than 'Technical feedback' on feedback page
+ * @param bool
+ */
+$wgMFDisplayNonTechnicalFeedback = false;
+
+/**
  * Set properties in ExtMobileFrontend to arbitrary values
  * CAUTION: this should not be used in production environments
  *
