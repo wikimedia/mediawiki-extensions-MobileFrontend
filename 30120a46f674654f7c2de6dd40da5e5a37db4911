@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH//9K4\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-11-19T13:17:06Z",
+      "side": 1,
+      "message": "This is too technical. Users shouldn\u0027t need to know what overlay is in our terminology.",
+      "revId": "30120a46f674654f7c2de6dd40da5e5a37db4911",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
