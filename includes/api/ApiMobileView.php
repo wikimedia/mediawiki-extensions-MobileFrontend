@@ -40,7 +40,7 @@ class ApiMobileView extends ApiBase {
 			$this->file = wfFindFile( $title );
 		}
 		if ( !$title->exists() && !$this->file ) {
-			$this->dieUsageMsg( array( 'missingtitle', $params['page'] ) );
+			$this->dieUsageMsg( array( 'notanarticle', $params['page'] ) );
 		}
 		$this->mainPage = $title->isMainPage();
 		if ( $this->mainPage && $this->noHeadings ) {
@@ -279,15 +279,6 @@ class ApiMobileView extends ApiBase {
 
 	public function getDescription() {
 		return 'Returns data needed for mobile views';
-	}
-
-	public function getPossibleErrors() {
-		return array_merge( parent::getPossibleErrors(),
-			array(
-				array( 'missingtitle' ),
-				array( 'invalidtitle' ),
-			)
-		);
 	}
 
 	public function getExamples() {
