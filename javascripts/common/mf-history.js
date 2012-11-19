@@ -133,7 +133,7 @@ M.history = ( function() {
 
 	// ensures the history change event fires on initial load
 	function initialise( hash ) {
-		if ( !initialised && hash !== '#_' && typeof $ !== 'undefined' ) {
+		if ( !initialised && hash !== '#_' && $ ) {
 			initialised = true;
 			$( window ).bind( 'mw-mf-ready', function() {
 				$( window ).trigger( 'mw-mf-history-change', [ { hash: hash } ] );
