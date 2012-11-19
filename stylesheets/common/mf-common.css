@@ -182,8 +182,19 @@ table.floatright {
   margin: 8px 0 8px -3px;
 }
 /* TODO: move into MediaWiki:Common.css ? */
-.mobile div.searchresult {
+.mobile .searchresults ul.mw-search-results .mw-search-result-heading {
+  font-weight: bold;
+}
+.mobile .searchresults ul.mw-search-results .mw-search-result-data {
+  font-size: 0.7em;
+  font-style: italic;
+  color: #535353;
+  margin-left: 12px;
+}
+.mobile .searchresults ul.mw-search-results div.searchresult {
+  font-size: 0.9em;
   width: 100%;
+  margin-left: 12px;
 }
 @media all and (max-width: 500px) {
   .mobile div.tleft,
