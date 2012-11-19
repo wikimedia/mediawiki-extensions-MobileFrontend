@@ -37,7 +37,7 @@ var opensearch = ( function() {
 			rrd.setAttribute( 'id', 'remove-results' );
 			u( rrd ).addClass( 'escapeOverlay' );
 			u( rrd ).bind( 'click',  removeResults );
-			u( rrd ).text( message( 'remove-results' ) );
+			u( rrd ).text( message( 'mobile-frontend-overlay-escape' ) );
 			header.insertBefore( rrd, header.firstChild );
 		}
 	}
