@@ -7,8 +7,8 @@ var T = ( function() {
 		message = M.message,
 		sectionData = {},
 		footerInitialised = false,
-		showLabel = message( 'expand-section' ),
-		hideLabel = message( 'collapse-section' );
+		showLabel = message( 'mobile-frontend-show-button' ),
+		hideLabel = message( 'mobile-frontend-hide-button' );
 
 	function wm_toggle_section( section_id ) {
 		var id = 'section_' + section_id, content_id = 'content_' + section_id,

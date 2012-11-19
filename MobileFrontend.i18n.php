@@ -135,8 +135,6 @@ $messages['en'] = array (
 	'mobile-frontend-page-menu-contents' => 'contents',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-page-menu-history' => 'History',
-	'mobile-frontend-page-menu-contents-heading' => 'Contents',
-	'mobile-frontend-page-menu-language-heading' => 'Read this article in',
 	'mobile-frontend-meta-data-issues-header' => 'Issues',
 	'mobile-frontend-meta-data-issues' => 'This article has some issues',
 
@@ -287,8 +285,6 @@ Don't translate the special page name",
 
 {{optional}}',
 	'mobile-frontend-page-menu-history' => 'history link text in secondary menu',
-	'mobile-frontend-page-menu-contents-heading' => 'Table of contents overlay heading',
-	'mobile-frontend-page-menu-language-heading' => 'Language overlay heading',
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates', # Fuzzy
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}', # Fuzzy
 	'mobile-frontend-ajax-page-loading' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript',
