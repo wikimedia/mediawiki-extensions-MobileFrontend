@@ -33,6 +33,7 @@ var m = ( function() {
 			if ( !data.error && data.query && data.query.random ) {
 				curPage = data.query.random[ 0 ];
 				$( 'h1' ).text( curPage.title );
+				mwMobileFrontendConfig.settings.title = curPage.title;
 				makeButtons();
 				$el.removeClass( 'loading' );
 			}
