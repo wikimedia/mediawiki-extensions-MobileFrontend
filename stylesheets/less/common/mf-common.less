@@ -94,21 +94,21 @@ table {
 	overflow-x: auto;
 	word-break: normal;
 	display: block;
+
+	table {
+		border: 0;
+		margin-bottom: 0;
+
+		td,
+		th {
+			border: 0;
+			padding: 0;
+		}
+	}
 }
 
 tbody {
 	display: inline-block;
-}
-
-table table {
-	border: 0;
-	margin-bottom: 0;
-}
-
-table table td,
-table table th {
-	border: 0;
-	padding: 0;
 }
 
 table.toc {
