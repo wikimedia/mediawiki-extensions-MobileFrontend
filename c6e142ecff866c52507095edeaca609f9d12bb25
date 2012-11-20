@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH//7xc\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-20T23:02:39Z",
+      "side": 1,
+      "message": "extra WS",
+      "revId": "c6e142ecff866c52507095edeaca609f9d12bb25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7yc\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-20T23:02:39Z",
+      "side": 1,
+      "message": "qqq messages for these?",
+      "revId": "c6e142ecff866c52507095edeaca609f9d12bb25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7yE\u003d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-20T23:02:39Z",
+      "side": 1,
+      "message": "please list and document the class properties",
+      "revId": "c6e142ecff866c52507095edeaca609f9d12bb25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7yA\u003d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-20T23:02:39Z",
+      "side": 1,
+      "message": "extra WS",
+      "revId": "c6e142ecff866c52507095edeaca609f9d12bb25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7xQ\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-20T23:02:39Z",
+      "side": 1,
+      "message": "please list and document class properties",
+      "revId": "c6e142ecff866c52507095edeaca609f9d12bb25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7xY\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-20T23:02:39Z",
+      "side": 1,
+      "message": "excess WS",
+      "revId": "c6e142ecff866c52507095edeaca609f9d12bb25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7wc\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-20T23:02:39Z",
+      "side": 1,
+      "message": "excess WS",
+      "revId": "c6e142ecff866c52507095edeaca609f9d12bb25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
