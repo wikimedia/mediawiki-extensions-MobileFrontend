@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH//7Ok\u003d",
+        "filename": "javascripts/modules/mf-random.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-11-21T17:40:46Z",
+      "side": 1,
+      "message": "Needs to be localised",
+      "revId": "6a2f47b8fc2820615c2e43c9ace3ee357e684907",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
