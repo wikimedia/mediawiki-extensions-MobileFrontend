@@ -369,6 +369,10 @@ html.overlay ul.content li:hover {
   margin-top: 0;
   margin-right: 20px;
 }
+.overlay .header h1,
+.overlay .header h2 {
+  padding-left: 40px;
+}
 #mw-mf-overlay .header.mw-mf-locked {
   padding-left: 22px;
 }
