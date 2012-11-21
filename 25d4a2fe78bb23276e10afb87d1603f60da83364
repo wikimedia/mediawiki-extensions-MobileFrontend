@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH//7lA\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2012-11-21T06:38:34Z",
+      "side": 1,
+      "message": "The convention you set in this file is to prefix function names with a verb and to separate getters from setters. You\u0027re better off doing that than having jQuery-style function overloading.\n\nIf you find that verbose and Java-y, why not ditch the getter / setter interface altogether and just query / set the mwMobileFrontendConfig object directly? It isn\u0027t closed over anyhow, so you\u0027re not protecting it from modification this way.",
+      "revId": "25d4a2fe78bb23276e10afb87d1603f60da83364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7k8\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2012-11-21T06:38:34Z",
+      "side": 1,
+      "message": "mw.config.get() returns null, which seems a better choice: not all settings are going to be strings, so returning an empty string as the default value is a bit strange.",
+      "revId": "25d4a2fe78bb23276e10afb87d1603f60da83364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7k4\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2012-11-21T06:38:34Z",
+      "side": 1,
+      "message": "Ought to be:\n\nM.setConfig( \u0027title\u0027, title );\n\nIMO.",
+      "revId": "25d4a2fe78bb23276e10afb87d1603f60da83364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
