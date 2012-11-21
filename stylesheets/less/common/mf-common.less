@@ -1,4 +1,4 @@
-@import "../mf-variables.less";
+@import "../mf-mixins.less";
 
 .mw-mf-image-replacement {
 	font-style: italic;
@@ -35,22 +35,11 @@ a.external {
 	position: relative;
 }
 
-table.toc h2 {
-	border: 0;
-	padding: 0;
-	margin-top: 5px;
-}
-
 table.gallery th,
 table.gallery td {
 	display: block;
 	border: 0;
 	border-bottom: 1px solid #cccccc;
-}
-
-table.gallery {
-	background: #f9f9f9;
-	border-bottom: 0;
 }
 
 table.gallery .gallerytext {
@@ -85,6 +74,11 @@ table {
 	overflow-x: auto;
 	word-break: normal;
 	display: block;
+	.box-sizing( border-box );
+
+	tbody {
+		display: inline-block;
+	}
 
 	td,
 	th {
@@ -93,6 +87,17 @@ table {
 
 	th {
 		word-break: normal;
+	}
+
+	&.gallery {
+		background: #f9f9f9;
+		border-bottom: 0;
+	}
+
+	&.wikitable {
+		th {
+			background: #f3f3f3;
+		}
 	}
 
 	table {
@@ -105,22 +110,6 @@ table {
 			padding: 0;
 		}
 	}
-}
-
-tbody {
-	display: inline-block;
-}
-
-table.toc {
-	background: #f9f9f9;
-}
-
-table.wikitable th {
-	background: #f3f3f3;
-}
-
-table.admin {
-	width: 300px;
 }
 
 p,

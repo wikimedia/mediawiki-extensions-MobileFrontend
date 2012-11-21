@@ -27,20 +27,11 @@ a.external {
   vertical-align: middle;
   position: relative;
 }
-table.toc h2 {
-  border: 0;
-  padding: 0;
-  margin-top: 5px;
-}
 table.gallery th,
 table.gallery td {
   display: block;
   border: 0;
   border-bottom: 1px solid #cccccc;
-}
-table.gallery {
-  background: #f9f9f9;
-  border-bottom: 0;
 }
 table.gallery .gallerytext {
   margin-top: -12px;
@@ -74,6 +65,10 @@ table {
   overflow-x: auto;
   word-break: normal;
   display: block;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 table td,
 table th {
@@ -81,6 +76,13 @@ table th {
 }
 table th {
   word-break: normal;
+}
+table.gallery {
+  background: #f9f9f9;
+  border-bottom: 0;
+}
+table.wikitable th {
+  background: #f3f3f3;
 }
 table table {
   border: 0;
@@ -93,15 +95,6 @@ table table th {
 }
 tbody {
   display: inline-block;
-}
-table.toc {
-  background: #f9f9f9;
-}
-table.wikitable th {
-  background: #f3f3f3;
-}
-table.admin {
-  width: 300px;
 }
 p,
 li,
