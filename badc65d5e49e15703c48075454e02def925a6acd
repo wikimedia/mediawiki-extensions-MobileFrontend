@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZX///rg\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-21T23:44:34Z",
+      "side": 1,
+      "message": "derp.",
+      "revId": "badc65d5e49e15703c48075454e02def925a6acd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
