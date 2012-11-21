@@ -15,6 +15,10 @@ M.history = ( function() {
 			window.location.href = URL_TEMPLATE.replace( '$1', title );
 		};
 
+	function getArticleUrl( title ) {
+		return URL_TEMPLATE.replace( '$1', title ) + window.location.search;
+	}
+
 	function hijackLinks( container ) {
 		container = container || document.getElementById( 'content' );
 		$( container ).find( 'a' ).on( 'click', function( ev ) {
@@ -109,7 +113,7 @@ M.history = ( function() {
 				var page;
 				_mwStart = +new Date; // reset logger
 				page = loadPage( title, true );
-				window.history.pushState( { title: title }, title, URL_TEMPLATE.replace( '$1', title ) + window.location.search );
+				window.history.pushState( { title: title }, title, getArticleUrl( title ) );
 				return page;
 			};
 			// deal with initial pop so that we can record the initial page
@@ -143,6 +147,7 @@ M.history = ( function() {
 
 	return {
 		hijackLinks: hijackLinks,
+		getArticleUrl: getArticleUrl,
 		loadPage: loadPage,
 		makeStubPage: makeStubPage,
 		navigateToPage: navigateToPage,
