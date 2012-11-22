@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZX///oE\u003d",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-11-22T00:41:59Z",
+      "side": 1,
+      "message": "(1) should be spacey",
+      "revId": "0278c16c3e3208652221d03fe71c735e51037eb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
