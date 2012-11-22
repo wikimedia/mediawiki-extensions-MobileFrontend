@@ -80,3 +80,10 @@ $specialPageAliases['nl'] = array(
 	'MobileFeedback' => array( 'MobieleTerugkoppeling' ),
 	'MobileOptions' => array( 'MobieleVoorkeuren' ),
 );
+
+/** Sicilian (sicilianu) */
+$specialPageAliases['scn'] = array(
+	'MobileFrontend' => array( 'InterfacciaMobile' ),
+	'MobileFeedback' => array( 'FeedbackMobile' ),
+	'MobileOptions' => array( 'OpzioniMobile' ),
+);
