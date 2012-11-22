@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADZX///ls\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-22T03:56:49Z",
+      "side": 1,
+      "message": "true. I guess it also conflicts with message\n\nI wanted to avoid direct manipulation of mwMobileFrontendConfig to leave us free to tweak it. Currently it is set in inline JavaScript and we may want to retrieve it in ajax or determine it from the HTML itself e\ng. the title could be from the h1 text and beta from body has class beta.\n\n\nsetSetting may make more sense.",
+      "parentUuid": "AAADZH//7lA\u003d",
+      "revId": "25d4a2fe78bb23276e10afb87d1603f60da83364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADZH//7k8\u003d",
         "filename": "javascripts/common/mf-application.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAADZX///l0\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-22T03:56:49Z",
+      "side": 1,
+      "message": "agreed",
+      "parentUuid": "AAADZH//7k8\u003d",
+      "revId": "25d4a2fe78bb23276e10afb87d1603f60da83364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADZH//7k4\u003d",
         "filename": "javascripts/common/mf-history.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2012-11-21T06:38:34Z",
       "side": 1,
       "message": "Ought to be:\n\nM.setConfig( \u0027title\u0027, title );\n\nIMO.",
+      "revId": "25d4a2fe78bb23276e10afb87d1603f60da83364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZX///lw\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-22T03:56:49Z",
+      "side": 1,
+      "message": "configuration also includes messages at the moment would this not potentially be confusing?",
+      "parentUuid": "AAADZH//7k4\u003d",
       "revId": "25d4a2fe78bb23276e10afb87d1603f60da83364",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
