@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZX///Co\u003d",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-23T06:47:35Z",
+      "side": 1,
+      "message": "theoretically L49 and 50 should take care of this... does this mean L49 and 50 are broken?",
+      "revId": "6d348e2022959f1744e07f330193af655b8cdc98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
