@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZX///Dc\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-23T06:38:12Z",
+      "side": 1,
+      "message": "actually now you are refactoring we might as well cache the title in toggleWatch",
+      "revId": "adca83ca7446f05f8f74dd9490d6af2b787f2c26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
