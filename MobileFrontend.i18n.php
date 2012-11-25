@@ -5002,7 +5002,7 @@ $messages['ka'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'ტექნიკური პრობლემა',
 	'mobile-frontend-leave-feedback-general-section-header' => 'მთავარი',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'სტატიის შეფასება',
-	'mobile-frontend-leave-feedback-email-body' => 'გთხოვთ თქვენი ელ.ფოსტა მიუთითეთ ამ ხაზის ზევით.', # Fuzzy
+	'mobile-frontend-leave-feedback-email-body' => 'გთხოვთ, აღწეროთ გაუმართაობა, რომელსაც თქვენ განიცდით საიტზე „{{SITENAME}}“ ამ ხაზის ზემოთ. სამწუხაროდ ჩვენ არ შეგვიძლია ვუპასუხოთ ყველა კითხვას.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'ტექნიკური პრობლემა',
 	'mobile-frontend-leave-feedback-general-link-text' => 'მთავარი შეფასება',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'ფაქტიური შეცდომის შესახებ',
@@ -5019,7 +5019,7 @@ $messages['ka'] = array(
 	'mobile-frontend-language' => 'ენა:',
 	'mobile-frontend-language-article-heading' => 'სხვა ენაზე წაკითხვა',
 	'mobile-frontend-language-header' => 'ეს სტატია ხელმისაწვდომია $1-ში {{PLURAL:$1|ენაზე|ენებზე}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} ხელმისაწვდომია სხვა ენებზეც.', # Fuzzy
+	'mobile-frontend-language-footer' => 'შენიშვნა: ამ სტატიის ჩაწერა თქვენთვის საჭირო ენაზე შეუძლებელია. თქვენ შეგიძიათ იხილოთ რომელი ენების მხარდაჭერა აქვს {{SITENAME}}-ს აქ დაჭერით.',
 	'mobile-frontend-language-site-choose' => 'ენის ძიება',
 	'mobile-frontend-language-site-nomatches' => 'მსგავსი ენა ვერ მოიძებნა',
 	'mobile-frontend-username' => 'მომხმარებელი:',
@@ -5027,6 +5027,7 @@ $messages['ka'] = array(
 	'mobile-frontend-login' => 'შესვლა',
 	'mobile-frontend-logout' => 'გასვლა',
 	'mobile-frontend-placeholder' => 'ძიება {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'ძიება {{SITENAME}} (ბეტა)',
 	'mobile-frontend-dismiss-notification' => 'ამ შეტყობინების დამალვა',
 	'mobile-frontend-clear-search' => 'გასუფთავება',
 	'mobile-frontend-privacy-link-text' => 'უსაფრთხოება',
@@ -5036,6 +5037,8 @@ $messages['ka'] = array(
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">გამოყენების წესები</a>',
 	'mobile-frontend-footer-contact' => 'კონტაქტი',
 	'mobile-frontend-unknown-option' => 'ამოუცნობი ვარიანტი "$1".',
+	'mobile-frontend-main-menu-button-tooltip' => 'მთავარი მენიუს გახსნა',
+	'mobile-frontend-main-menu-page-title' => 'საიტის ნავიგაცია',
 	'mobile-frontend-main-menu-featured' => 'რჩეული',
 	'mobile-frontend-main-menu-nearby' => 'სიახლოვეს',
 	'mobile-frontend-main-menu-login' => 'შესვლა',
@@ -5046,6 +5049,11 @@ $messages['ka'] = array(
 	'mobile-frontend-main-menu-contact' => 'კონტაქტი',
 	'mobile-frontend-page-menu-contents' => 'შინაარსი',
 	'mobile-frontend-page-menu-history' => 'ისტორია',
+	'mobile-frontend-meta-data-issues-header' => 'პრობლემა',
+	'mobile-frontend-meta-data-issues' => 'სტატიას აქვს რაღაც პრობლემა',
+	'mobile-frontend-ajax-page-loading' => 'იტვირთება $1',
+	'mobile-frontend-page-saving' => 'ინახება $1',
+	'mobile-frontend-watchlist-view' => 'თქვენი კონტროლის სიის ხილვა',
 );
 
 /** Адыгэбзэ (Адыгэбзэ)
@@ -9904,10 +9912,13 @@ $messages['uk'] = array(
 	'mobile-frontend-logged-out' => 'Ви не ввійшли до системи',
 	'mobile-frontend-logged-in' => 'Увійти в систему як $1',
 	'mobile-frontend-sign-in-heading' => 'Увійти',
+	'mobile-frontend-sign-in-why' => 'Якщо у вас уже є акаунт у {{GRAMMAR:genitive|{{SITENAME}}}}, то можете представитись нижче.',
 	'mobile-frontend-settings-description' => 'Налаштуйте мобільну версію якнайзручніше.',
 	'mobile-frontend-settings-beta' => 'Бета-версія',
 	'mobile-frontend-save-settings' => 'Зберегти налаштування',
 	'mobile-frontend-random-button' => 'Випадкова',
+	'mobile-frontend-ajax-random-yes' => 'Так',
+	'mobile-frontend-ajax-random-retry' => 'Спробуйте ще раз',
 	'mobile-frontend-back-to-top-of-section' => 'Повернутися на розділ назад',
 	'mobile-frontend-close-section' => 'Закрити цей розділ',
 	'mobile-frontend-show-button' => 'Показати',
@@ -9982,6 +9993,11 @@ $messages['uk'] = array(
 	'mobile-frontend-main-menu-contact' => 'Контакт',
 	'mobile-frontend-page-menu-contents' => 'зміст',
 	'mobile-frontend-page-menu-history' => 'Історія',
+	'mobile-frontend-ajax-page-loading' => 'Завантаження $1',
+	'mobile-frontend-page-saving' => 'Збереження $1',
+	'mobile-frontend-watchlist-add' => 'Додано $1 у ваш список спостереження',
+	'mobile-frontend-watchlist-removed' => 'Вилучено $1 з Вашого списку спостереження',
+	'mobile-frontend-watchlist-view' => 'Переглянути список спостереження',
 );
 
 /** Urdu (اردو)
