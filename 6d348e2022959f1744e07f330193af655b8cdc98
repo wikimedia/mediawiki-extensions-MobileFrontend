@@ -16,6 +16,24 @@
       "revId": "6d348e2022959f1744e07f330193af655b8cdc98",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADaH///qI\u003d",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-26T22:58:11Z",
+      "side": 1,
+      "message": "replaceHash() seems to be broken, window.history.replaceState() never causes a hashchange event to be fired (same goes for pushState()). See https://developer.mozilla.org/en-US/docs/DOM/Manipulating_the_browser_history#The_pushState%28%29.C2.A0method\n\nEdit: I\u0027m also not sure why we would want to clear existing hash with \"#_\".",
+      "parentUuid": "AAADZX///Co\u003d",
+      "revId": "6d348e2022959f1744e07f330193af655b8cdc98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
