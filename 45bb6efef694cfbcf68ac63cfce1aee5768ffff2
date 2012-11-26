@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADaH///50\u003d",
+        "filename": "stylesheets/less/common/mf-typography.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-26T18:43:29Z",
+      "side": 0,
+      "message": "why... introduced in If40b34fb37754f2882362f4ca27c5e5b4512481e as edit link wasn\u0027t showing correctly. Have you verified edit link is not effected?",
+      "revId": "45bb6efef694cfbcf68ac63cfce1aee5768ffff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
