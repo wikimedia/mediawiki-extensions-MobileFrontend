@@ -16,6 +16,24 @@
       "revId": "45bb6efef694cfbcf68ac63cfce1aee5768ffff2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADaH///38\u003d",
+        "filename": "stylesheets/less/common/mf-typography.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-11-26T18:54:47Z",
+      "side": 0,
+      "message": "I have to remove this to get the watchlist and diff views laid out as expected; otherwise absolution positioning fails and we have the diff view\u0027s user info div overlapping the diff instead of appearing at the bottom of the screen; we get giant margins on the watchlist view.\n\nHave not verified anything about the edit link since I\u0027m not sure what the addition of position:relative is actually meant to do, so I don\u0027t know what to verify.",
+      "parentUuid": "AAADaH///50\u003d",
+      "revId": "45bb6efef694cfbcf68ac63cfce1aee5768ffff2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
