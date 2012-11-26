@@ -361,8 +361,7 @@ class DeviceDetection implements IDeviceDetector {
 			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 				$deviceName = 'operamobile';
 			}
-		} elseif ( preg_match( '/MSIE 9.0/', $userAgent ) ||
-				preg_match( '/MSIE 8.0/', $userAgent ) ) {
+		} elseif ( preg_match( '/MSIE (8|9|1\d)\.|IEMobile\/1\d/', $userAgent ) ) {
 			$deviceName = 'ie';
 		} elseif( preg_match( '/MSIE/', $userAgent ) ) {
 			$deviceName = 'html';
@@ -402,8 +401,7 @@ class DeviceDetection implements IDeviceDetector {
 			$deviceName = 'kindle';
 		} elseif ( preg_match( '/Kindle\/2.0/', $userAgent ) ) {
 			$deviceName = 'kindle2';
-		} elseif ( preg_match( '/Firefox/', $userAgent )  ||
-			preg_match( '/Maemo Browser/', $userAgent ) ) {
+		} elseif ( preg_match( '/Firefox|Maemo Browser|Fennec/', $userAgent ) ) {
 			$deviceName = 'capable';
 		} elseif ( preg_match( '/NetFront/', $userAgent ) ) {
 			$deviceName = 'netfront';
