@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADaH///nc\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-11-26T21:17:26Z",
+      "side": 1,
+      "message": "$wgMFPhotoUploadEndpoint is never defined in MobileFrontend.php; if register_globals is on it could be forced, it\u0027s also undocumented.",
+      "revId": "359a5d7fc57c7d12f71a606e3c3c471192917a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADaH///nY\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-11-26T21:17:26Z",
+      "side": 1,
+      "message": "If there\u0027s nothing set, it should probably be configured to upload to the local wiki\u0027s API endpoint...",
+      "revId": "359a5d7fc57c7d12f71a606e3c3c471192917a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADaH///mk\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-11-26T21:17:26Z",
+      "side": 1,
+      "message": "Doesn\u0027t appear to work on short articles that have no split sections... I had to pad a stub article by a few thousand bytes to end up with a #content_0.",
+      "revId": "359a5d7fc57c7d12f71a606e3c3c471192917a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
