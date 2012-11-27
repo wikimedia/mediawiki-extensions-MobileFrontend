@@ -207,7 +207,7 @@ $wgResourceModules['mobile.desktop'] = array(
 	'dependencies' => array( 'jquery.cookie' ),
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
+	'targets' => 'desktop',
 );
 
 /**
