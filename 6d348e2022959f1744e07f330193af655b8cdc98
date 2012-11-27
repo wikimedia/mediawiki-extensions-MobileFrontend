@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADaH///Rc\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-27T08:48:52Z",
+      "side": 1,
+      "message": "The problem with this is that the address bar doesn\u0027t change - in beta create a page Foo that links to Bar\nClick the link to Bar in page Foo and the address bar should change to be http://localhost/w/index.php/Bar but with this change it no longer does that.",
+      "revId": "6d348e2022959f1744e07f330193af655b8cdc98",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADZX///Co\u003d",
         "filename": "javascripts/modules/mf-toggle-dynamic.js",
         "patchSetId": 2
