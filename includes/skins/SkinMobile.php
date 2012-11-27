@@ -594,6 +594,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			'mobile-frontend-meta-data-issues-header',
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
+			'mobile-frontend-overlay-escape',
 		);
 		foreach ( $messages as $msg ) {
 			$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
@@ -617,7 +618,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
-				'remove-results' => wfMessage( 'mobile-frontend-wml-back' )->text(), //@todo: use a separate message
 				'mobile-frontend-language-footer' => Html::element( 'a',
 					array(
 						'href' => SpecialPage::getTitleFor( 'MobileOptions/Language' )->getLocalUrl(),
