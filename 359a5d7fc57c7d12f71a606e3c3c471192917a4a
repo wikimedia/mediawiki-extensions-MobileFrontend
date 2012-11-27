@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAADaH///U4\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-27T03:48:58Z",
+      "side": 1,
+      "message": "It\u0027s set to \u0027\u0027 which is the same as say use the current host.\nIt\u0027s actually better this way as it reduces problems due to running off different subdomains? (e.g. an en.m.wikipedia.org without cors enabled couldn\u0027t access en.wikipedia.org if it was set as the endpoint.",
+      "parentUuid": "AAADaH///nY\u003d",
+      "revId": "359a5d7fc57c7d12f71a606e3c3c471192917a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADaH///mk\u003d",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 6
@@ -47,6 +65,24 @@
       "writtenOn": "2012-11-26T21:17:26Z",
       "side": 1,
       "message": "Doesn\u0027t appear to work on short articles that have no split sections... I had to pad a stub article by a few thousand bytes to end up with a #content_0.",
+      "revId": "359a5d7fc57c7d12f71a606e3c3c471192917a4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADaH///U8\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-27T03:48:58Z",
+      "side": 1,
+      "message": "Correct. This is a separate bug. Toggling is also broken. See https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d41406\n\nShould be dealt with in another patchset by time I\u0027m back :)",
+      "parentUuid": "AAADaH///mk\u003d",
       "revId": "359a5d7fc57c7d12f71a606e3c3c471192917a4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
