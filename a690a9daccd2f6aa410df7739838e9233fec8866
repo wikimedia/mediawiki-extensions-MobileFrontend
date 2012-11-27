@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADaX///tg\u003d",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-27T21:32:47Z",
+      "side": 1,
+      "message": "This will not work for subsections because they are not in the DOM when the page is loaded (they are added dynamically), so you can\u0027t search for subsection\u0027s heading. Example: http://en.m.wikipedia.org/wiki/California#Climate",
+      "revId": "a690a9daccd2f6aa410df7739838e9233fec8866",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
