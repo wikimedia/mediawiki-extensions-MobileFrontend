@@ -16,6 +16,24 @@
       "revId": "a690a9daccd2f6aa410df7739838e9233fec8866",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX///30\u003d",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-28T06:56:32Z",
+      "side": 1,
+      "message": "We can get round this by adding subheadings to the dom in the initial page load (then pull in the rest of the content on a section expansion). Thoughts?",
+      "parentUuid": "AAADaX///tg\u003d",
+      "revId": "a690a9daccd2f6aa410df7739838e9233fec8866",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
