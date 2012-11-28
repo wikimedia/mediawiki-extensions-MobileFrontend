@@ -1,5 +1,3 @@
-/*global document, window, mw, navigator, mwMobileFrontendConfig, jQuery */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true, sub:true */
 /* some polyfill */
 if( typeof Array.prototype.forEach === 'undefined' ) {
 	Array.prototype.forEach = function( callback ) {

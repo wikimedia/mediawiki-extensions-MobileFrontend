@@ -33,7 +33,20 @@ NEVER use [http://www.w3.org/TR/CSS2/selector.html#attribute-selectors attribute
 
 === Javascript ===
 Javascript can be found in the javascript folder. Any javascript committed to the core must pass the [https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
-A pre-commit hook is provided in the scripts directory to assist with adhering to javascript code standards
+
+==== JSHint ====
+Install JSHint
+<code>
+	npm install jshint -g
+</code>
+
+==== Pre-commit hook ====
+A pre-commit hook is provided in the scripts directory to assist with adhering to javascript code standards as well as running code through jshint. Install like so:
+<code>
+	ln -s $PWD/scripts/pre-commit .git/hooks/pre-commit
+	chmod +x scripts/pre-commit
+</code>
+It will run every time you run git commit
 
 === HTML ===
 HTML should validate via http://validator.w3.org/ - note at the current time do not worry about markup introduced via wikitext.

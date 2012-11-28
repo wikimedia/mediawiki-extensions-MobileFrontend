@@ -1,5 +1,3 @@
-/*global mw, $, document, window */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 ( function( M, $ ) {
 
 var T = ( function() {

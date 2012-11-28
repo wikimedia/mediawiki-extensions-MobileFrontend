@@ -1,0 +1,15 @@
+{
+	"globals": {
+		"_mwStart": true,
+		"_mwLogEvent": true,
+		"ActiveXObject": true,
+		"jQuery": true,
+		"mw": true,
+		"mwMobileFrontendConfig": true
+	},
+
+	"browser": true,
+	"undef" : true,
+	"unused": true,
+	"supernew": true
+}

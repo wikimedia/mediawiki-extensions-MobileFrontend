@@ -1,5 +1,3 @@
-/*global document, window, mw, navigator, clearTimeout, setTimeout */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true */
 ( function( M ) {
 var m = ( function() {
 	var $ = M.jQuery;

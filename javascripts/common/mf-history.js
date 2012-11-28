@@ -1,5 +1,3 @@
-/*global mw, document, window, _mwStart */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true, nomen: true */
 ( function( M ) {
 
 M.history = ( function() {

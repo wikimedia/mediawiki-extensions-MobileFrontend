@@ -1,5 +1,9 @@
 .PHONY: less
 
+jshint:
+	jshint javascripts/actions/* javascripts/common/* javascripts/desktop/* \
+		javascripts/modules/* javascripts/specials/* --config .jshintrc
+
 less:
 	lessc stylesheets/less/specials/mf-settings.less > stylesheets/specials/mf-settings.css
 	lessc stylesheets/less/specials/mf-login.less > stylesheets/specials/mf-login.css
@@ -28,4 +32,4 @@ phpunit:
 qunit:
 	open http://localhost/w/index.php/Special:JavaScriptTest/qunit?filter=MobileFrontend
 
-tests: phpunit qunit
+tests: jshint phpunit qunit

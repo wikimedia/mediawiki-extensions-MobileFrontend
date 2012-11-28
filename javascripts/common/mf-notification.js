@@ -1,5 +1,3 @@
-/*global mw, window, document, jQuery */
-/*jslint sloppy: true, white:true, maxerr: 50, indent: 4, plusplus: true*/
 ( function( M, $ ) {
 	M.navigation.popup = ( function() {
 		var calculatePosition = function() {};
