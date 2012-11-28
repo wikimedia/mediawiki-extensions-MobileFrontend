@@ -3,7 +3,8 @@
 M.history = ( function() {
 	var initialised = false,
 		firstRun,
-		loadPage = function() {},
+		makeStubPage,
+		loadPage,
 		$ = M.jQuery,
 		inBeta = M.getConfig( 'beta', false ),
 		currentTitle = M.getConfig( 'title', '' ),
@@ -31,14 +32,14 @@ M.history = ( function() {
 	}
 	if ( $ ) {
 
-		function makeStubPage( title, summary ) {
+		makeStubPage = function( title, summary ) {
 			var $content = $( '#content' );
 			$content.empty();
 			$( '<h1 id="section_0" class="section_heading openSection">' ).text( title ).appendTo( $content );
 			$( '<div id="content_0" class="content_block openSection loading">' ).
 				text( summary ).appendTo( $content );
 			return $content;
-		}
+		};
 
 		loadPage = function( pageTitle, constructPage ) {
 			var $content = $( '#content' ), $section;
@@ -109,7 +110,7 @@ M.history = ( function() {
 					}
 				} );
 		};
-		$( window ).bind( 'mw-mf-page-loaded', function( ev ) {
+		$( window ).bind( 'mw-mf-page-loaded', function() {
 			hijackLinks();
 		} );
 

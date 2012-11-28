@@ -4,6 +4,7 @@
 		"_mwLogEvent": true,
 		"ActiveXObject": true,
 		"jQuery": true,
+		"jQueryShim": true,
 		"mw": true,
 		"mwMobileFrontendConfig": true
 	},

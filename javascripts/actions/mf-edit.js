@@ -64,9 +64,7 @@ var m = ( function() {
 					headingLocation = $section.find( '.section_heading' );
 					$el.addClass( 'h2' );
 				}
-				$el.on( 'click', function( ev ) {
-					ev.stopPropagation();
-				} ).appendTo( headingLocation )
+				$el.on( 'click', false ).appendTo( headingLocation );
 			}
 
 			if ( val ) {

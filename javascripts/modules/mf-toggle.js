@@ -10,7 +10,7 @@ var toggle = ( function() {
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ), id,
 			hash, d,
-			bb = b.getElementsByTagName( 'button' )[0], i, s, e, closed, reset = [];
+			bb = b.getElementsByTagName( 'button' )[0], i, e, closed, reset = [];
 		if( u( b ).hasClass( 'openSection' ) ) {
 			u( b ).removeClass( 'openSection' );
 			u( bb ).text( showLabel );
@@ -58,9 +58,8 @@ var toggle = ( function() {
 
 	function init() {
 		u( document.documentElement ).addClass( 'togglingEnabled' );
-		var i, a, heading, h2, btns = [], buttons, apiUrl = '/api.php',
-			sectionHeadings = [], content, firstHeadings,
-			inBeta = u( document.body ).hasClass( 'beta' );
+		var i, a, heading, h2,
+			sectionHeadings = [], content, firstHeadings;
 
 		content = document.getElementById( 'content_wrapper' );
 		h2 = document.getElementsByTagName( 'H2' );

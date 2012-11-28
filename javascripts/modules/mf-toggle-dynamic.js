@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 
 var T = ( function() {
-	var inBeta = $( 'body' ).hasClass( 'beta' ),
+	var
 		message = M.message,
 		sectionData = {},
 		anchorSection,
@@ -82,8 +82,7 @@ var T = ( function() {
 	}
 
 	function init() {
-		var sections = [], pageTitle = $( 'h1' ).text(),
-			len;
+		var pageTitle = $( 'h1' ).text();
 
 		if ( !$( '#content_wrapper' ).hasClass( 'mw-mf-special' ) ) {
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {

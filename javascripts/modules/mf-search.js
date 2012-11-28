@@ -7,8 +7,6 @@ var opensearch = ( function() {
 		search = document.getElementById(  mfePrefix + 'search' ),
 		oldValue,
 		$ = M.jQuery,
-		blankImg = M.getConfig( 'shim', '' ),
-		clearSearch = document.getElementById( 'clearsearch' ),
 		focusBlurTimeout,
 		u = M.utils;
 
@@ -45,8 +43,8 @@ var opensearch = ( function() {
 	// this function allows us to delay them
 	function waitForFocusBlur( ev, handler ) {
 		var ua = navigator.userAgent;
-		if( ua.match(/Android 2\./)
-			|| ua.match(/Opera Mini/) ) { // timeouts do not fire on focused input in android 2 OR opera mini
+		if( ua.match(/Android 2\./) ||
+			ua.match(/Opera Mini/) ) { // timeouts do not fire on focused input in android 2 OR opera mini
 			handler( ev );
 		} else {
 			window.clearTimeout( focusBlurTimeout );
@@ -87,6 +85,12 @@ var opensearch = ( function() {
 			msg + '</li></div>';
 	}
 
+	function clickSearchResult( ev ) {
+		M.history.navigateToPage( this.getAttribute( 'title' ) );
+		ev.preventDefault();
+		removeResults( ev );
+	}
+
 	function writeResults( sections ) {
 		var results = document.getElementById( 'results' ), suggestions, i,
 			term, search,
@@ -117,11 +121,7 @@ var opensearch = ( function() {
 				link.className = 'search-result-item';
 				label = document.createTextNode( section.label );
 				link.appendChild( label );
-				u( link ).bind( 'click', function( ev ) {
-					M.history.navigateToPage( this.getAttribute( 'title' ) );
-					ev.preventDefault();
-					removeResults( ev );
-				} );
+				u( link ).bind( 'click', clickSearchResult );
 				suggestionsResult.appendChild( link );
 
 				if ( $ ) {
