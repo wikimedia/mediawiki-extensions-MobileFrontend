@@ -9,12 +9,13 @@ var w = ( function() {
 		var data = {
 			format: 'json', action: 'watch',
 			title: title, token: token
-		}, msg = M.message( 'mobile-frontend-watchlist-add', M.setting( 'title' ) ),
+		}, title = M.getConfig( 'title' ),
+			msg = M.message( 'mobile-frontend-watchlist-add', title ),
 			popupClass = 'watch-action';
 
 		if( unwatchflag ) {
 			data.unwatch = true;
-			msg = M.message( 'mobile-frontend-watchlist-removed', M.setting( 'title' ) );
+			msg = M.message( 'mobile-frontend-watchlist-removed', title );
 		} else {
 			popupClass += ' watched';
 		}
@@ -105,7 +106,7 @@ var w = ( function() {
 	}
 
 	function init( container, title ) {
-		var pageTitle = M.setting( 'title' );
+		var pageTitle = M.getConfig( 'title' );
 		container = container || M.navigation.getPageMenu();
 		title = title || pageTitle;
 		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {

@@ -241,16 +241,25 @@ mw.mobileFrontend = (function() {
 		xmlHttp.send();
 	};
 
-	function setting( name ) {
-		return mwMobileFrontendConfig.settings[name] || '';
+	function getConfig( name, defaultValue ) {
+		if ( mwMobileFrontendConfig.settings[ name ] !== undefined ) {
+			return mwMobileFrontendConfig.settings[ name ];
+		} else if ( defaultValue !== undefined ) {
+			return defaultValue;
+		}
+		return null;
+	}
+
+	function setConfig( name, value ) {
+		mwMobileFrontendConfig.settings[ name ] = value;
 	}
 
 	function getApiUrl() {
-		return setting( 'scriptPath' ) + '/api.php';
+		return getConfig( 'scriptPath', '' ) + '/api.php';
 	}
 
 	function isLoggedIn() {
-		return setting( 'authenticated' );
+		return getConfig( 'authenticated', false );
 	}
 
 	function getToken( tokenType, callback ) {
@@ -282,7 +291,8 @@ mw.mobileFrontend = (function() {
 		message: message,
 		prefix: 'mw-mf-',
 		registerModule: registerModule,
-		setting: setting,
+		getConfig: getConfig,
+		setConfig: setConfig,
 		supportsPositionFixed: supportsPositionFixed,
 		utils: utilities
 	};
