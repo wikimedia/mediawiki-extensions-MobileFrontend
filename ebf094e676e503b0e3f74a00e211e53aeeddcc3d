@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//+5k\u003d",
+        "filename": "javascripts/actions/mf-edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-28T22:46:36Z",
+      "side": 1,
+      "message": "If you\u0027re okay with also stopping immediate propagation and preventing default, you could use the jQuery shorthand \".click( false );\" which will attach an internally cached function that returns false, which does e.stopImmediatePropagation and e.preventDefault.",
+      "revId": "ebf094e676e503b0e3f74a00e211e53aeeddcc3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//+5g\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-28T22:46:36Z",
+      "side": 1,
+      "message": "Could use $.noop, which is a generic cache for an empty function. Don\u0027t use $.noop if you expect to add properties to this though (e.g. makeStubPage.ajax \u003d .. );",
+      "revId": "ebf094e676e503b0e3f74a00e211e53aeeddcc3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//+5c\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-28T22:46:36Z",
+      "side": 1,
+      "message": "On second thought, why is this being assigned an empty function? In the previous version of this code it didn\u0027t fallback to an empty function either. If you just want to declare the variable and assign a value later, then do that. \"makeSubPage, \", no assignment required. That also saves a redundant function from being instantiated but never used.",
+      "revId": "ebf094e676e503b0e3f74a00e211e53aeeddcc3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
