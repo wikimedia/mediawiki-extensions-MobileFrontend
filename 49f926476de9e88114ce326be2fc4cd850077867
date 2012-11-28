@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//+6Q\u003d",
+        "filename": ".jshintrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-28T22:41:09Z",
+      "side": 1,
+      "message": "Don\u0027t use mw global.",
+      "revId": "49f926476de9e88114ce326be2fc4cd850077867",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//+6M\u003d",
+        "filename": ".jshintrc",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-28T22:41:09Z",
+      "side": 1,
+      "message": "Instead of navigator/window, set option \"browser\": true instead of listing these manually. That\u0027ll also include \"location\" for example.",
+      "revId": "49f926476de9e88114ce326be2fc4cd850077867",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//+6E\u003d",
+        "filename": "README",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-28T22:41:09Z",
+      "side": 1,
+      "message": "Sudo should not be needed here. In fact, some versions of npm even explicitly refuse to run as sudo.\n\nIf this is needed, it is likely because you\u0027re on OSX and the /usr/local was created manually by a script you ran in the past as sudo and incorrectly restricted it to root with 755.\n\nFix the permissions on that directory to be owned by your user group (For Mac OS X, this is usually chrgrp staff, and chmod 775)",
+      "revId": "49f926476de9e88114ce326be2fc4cd850077867",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
