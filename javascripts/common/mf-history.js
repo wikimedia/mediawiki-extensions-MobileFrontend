@@ -54,11 +54,12 @@ M.history = ( function() {
 					action: 'mobileview', format: 'json',
 					page: pageTitle,
 					redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
-					sectionprop: 'level|line', sections: 'all' }
+					sectionprop: 'level|line|anchor', sections: 'all' }
 				} ).done( function( resp ) {
 					var i, secs, s, sectionNum = 0, level, text,
 						$tmpContainer = $( '<div>' ),
-						sectionData = {};
+						sectionData = {},
+						anchorSection = {};
 					if ( resp && resp.mobileview && resp.mobileview.sections ) {
 						secs = resp.mobileview.sections;
 						for( i = 0; i < secs.length; i++ ) {
@@ -71,17 +72,21 @@ M.history = ( function() {
 							if ( level === '2' ) {
 								sectionNum = sectionNum + 1;
 								sectionData[ sectionNum ] = { html: text };
+								// add self as a parent so that we unfold it when needed
+								anchorSection[ s.anchor ] = sectionNum;
+								anchorSection[ 'section_' + sectionNum ] = sectionNum;
 								if ( constructPage ) {
 									$section = $( '<div class="section">' ).appendTo( $content );
 									// TODO: link these so they are clickable
 									$( '<h2 class="section_heading">' ).attr( 'id', 'section_' + sectionNum ).
-										data( 'section', sectionNum ).
 										text( s.line ).appendTo( $section );
 								}
 							} else if ( level ) {
 								$tmpContainer.html( text );
-								$tmpContainer.prepend( $( '<h' + level + '>' ).text( s.line ) );
+								$tmpContainer.prepend( $( '<h' + level + '>' ).attr( 'id', s.anchor ).text( s.line ) );
 								sectionData[ sectionNum ].html += $tmpContainer.html();
+								// we need to know the parent of subsection to unfold the proper section
+								anchorSection[ s.anchor ] = sectionNum;
 							}
 							if( s.hasOwnProperty( 'references' ) ) {
 								sectionData[ sectionNum ].references = true;
@@ -89,7 +94,9 @@ M.history = ( function() {
 									html( sectionData[ sectionNum ].html ).insertAfter( '#section_' + sectionNum );
 							}
 						}
-						$( window ).trigger( 'mw-mf-page-loaded', [ { title: pageTitle, data: sectionData } ] );
+						$( window ).trigger( 'mw-mf-page-loaded', [ {
+							title: pageTitle, data: sectionData, anchorSection: anchorSection
+						} ] );
 						$( '#content_0' ).removeClass( 'loading' ); // reset loader
 					}
 				} ).fail( function() { // resort to non-javascript mode
@@ -118,8 +125,7 @@ M.history = ( function() {
 				return page;
 			};
 			// deal with initial pop so that we can record the initial page
-			window.history.replaceState( { title: currentTitle }, currentTitle,
-					URL_TEMPLATE.replace( '$1', currentTitle ) + window.location.search );
+			window.history.replaceState( { title: currentTitle }, currentTitle );
 
 			$( window ).bind( 'popstate', function( ev ) {
 				var state = ev.originalEvent.state;
@@ -153,11 +159,15 @@ M.history = ( function() {
 		makeStubPage: makeStubPage,
 		navigateToPage: navigateToPage,
 		replaceHash: function( newHash ) {
-			var hashChanged = newHash !== window.location.hash;
+			var hashChanged = newHash !== window.location.hash,
+				id = newHash.slice( 1 ),
+				hashNode = document.getElementById( id );
 			if ( window.history && window.history.replaceState && hashChanged ) {
 				window.history.replaceState( { title: currentTitle, hash: true }, currentTitle, newHash );
-			} else if ( hashChanged ){
+			} else if ( hashChanged && hashNode ){
+				hashNode.removeAttribute( 'id' );
 				window.location.hash = newHash;
+				hashNode.setAttribute( 'id', id );
 			}
 			initialise( newHash );
 		},

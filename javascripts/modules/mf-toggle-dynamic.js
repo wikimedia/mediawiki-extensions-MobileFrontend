@@ -6,11 +6,12 @@ var T = ( function() {
 	var inBeta = $( 'body' ).hasClass( 'beta' ),
 		message = M.message,
 		sectionData = {},
+		anchorSection,
 		footerInitialised = false,
 		showLabel = message( 'mobile-frontend-show-button' ),
 		hideLabel = message( 'mobile-frontend-hide-button' );
 
-	function wm_toggle_section( section_id ) {
+	function wm_toggle_section( section_id, keepHash ) {
 		var id = 'section_' + section_id, content_id = 'content_' + section_id,
 			closed, sectionInfo = sectionData[ section_id ],
 			$container,
@@ -28,23 +29,24 @@ var T = ( function() {
 		$button.text( closed ? showLabel : hideLabel );
 
 		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
-		$section.removeAttr( 'id' );
-		M.history.replaceHash( closed ? '#' + id : '#_' );
-		$section.attr( 'id', id );
+		if ( !keepHash ) {
+			M.history.replaceHash( closed ? '#' + id : '#_' );
+		}
 	}
 
-	function wm_reveal_for_hash( hash ) {
-		wm_toggle_section( $( hash ).data( 'section' ) );
+	function wm_reveal_for_hash( hash, keepHash ) {
+		wm_toggle_section( anchorSection[ hash.slice( 1 ) ], keepHash );
 	}
 
 	function checkHash() {
-		var hash = window.location.hash;
-		if( hash ) {
-			if ( hash.indexOf( '#' ) === 0 ) {
-				wm_reveal_for_hash( hash );
+		var hash = window.location.hash, el;
+		if ( hash ) {
+			wm_reveal_for_hash( hash, true );
+			// force scroll if not scrolled (e.g. after subsection is loaded)
+			el = $( hash );
+			if ( el.length ) {
+				el[ 0 ].scrollIntoView( true );
 			}
-			M.history.replaceHash( '#_' ); // clear existing hash for case of jump to top
-			M.history.replaceHash( hash );
 		}
 	}
 
@@ -62,7 +64,6 @@ var T = ( function() {
 			if ( $this.parents( '.section' ).length === 1 ) {
 				$( '#anchor_' +  section ).
 					text( message( 'mobile-frontend-close-section' ) ).
-					data( 'section', section ).
 					on( 'click', openSectionHandler );
 			}
 			// disable default behaviour of the link in the heading
@@ -79,7 +80,6 @@ var T = ( function() {
 			ev.preventDefault();
 		} );
 
-		checkHash();
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
 
@@ -89,11 +89,13 @@ var T = ( function() {
 		if ( !$( '#content_wrapper' ).hasClass( 'mw-mf-special' ) ) {
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
 				sectionData = article.data;
+				anchorSection = article.anchorSection;
 				enableToggling( $( '#content' ) );
 				if ( !footerInitialised ) {
 					enableToggling( $( '#footer' ) );
 					footerInitialised = true;
 				}
+				checkHash();
 				_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
 			} );
 			M.history.loadPage( pageTitle, false );
