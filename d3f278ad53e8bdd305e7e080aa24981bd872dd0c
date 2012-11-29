@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//+zg\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-29T00:29:33Z",
+      "side": 1,
+      "message": "The first argument to resourceLoaderLink() can be a single string, no need for an array. I\u0027m also wondering what other arguments mean and why $forceRaw is true for some scripts and false in this case.",
+      "revId": "d3f278ad53e8bdd305e7e080aa24981bd872dd0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
