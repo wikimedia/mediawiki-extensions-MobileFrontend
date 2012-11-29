@@ -84,13 +84,17 @@ var T = ( function() {
 	}
 
 	function init() {
-		var sections = [], pageTitle = $( 'h1' ).text();
+		var sections = [], pageTitle = $( 'h1' ).text(),
+			len;
 
 		if ( !$( '#content_wrapper' ).hasClass( 'mw-mf-special' ) ) {
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
 				sectionData = article.data;
+
 				anchorSection = article.anchorSection;
-				enableToggling( $( '#content' ) );
+				if ( $( '#content .section_heading' ).length > 1 ) {
+					enableToggling( $( '#content' ) );
+				}
 				if ( !footerInitialised ) {
 					enableToggling( $( '#footer' ) );
 					footerInitialised = true;
