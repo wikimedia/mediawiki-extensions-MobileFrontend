@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//+No\u003d",
+        "filename": "scripts/pre-commit",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-29T19:58:59Z",
+      "side": 1,
+      "message": "It should be \"jshint.\" I know, I\u0027m nitpicky.",
+      "revId": "c385a1e1c91f0bb0229520731bbb7c9addc64285",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
