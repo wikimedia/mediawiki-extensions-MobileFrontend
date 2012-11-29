@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "AAADbX//9rs\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-29T23:40:01Z",
+      "side": 1,
+      "message": "This is never used.",
+      "revId": "919e4c64ff4986840197306f1455e90b69fc86a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADbX//9s4\u003d",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 10
@@ -47,6 +64,23 @@
       "writtenOn": "2012-11-29T23:23:15Z",
       "side": 1,
       "message": "Avoid class names like \"red\" and \"green\"; use names that describe semantically what it\u0027s for and let the style worry about the color.",
+      "revId": "919e4c64ff4986840197306f1455e90b69fc86a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//9rY\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-29T23:40:01Z",
+      "side": 1,
+      "message": "There\u0027s something wrong here, I suppose it might be wrong in other places too. init() is trigerred with mw-mf-page-loaded event, but that event sends only one argument (an object that contains page title and section data, see mf-history.js). Harmless since the second argument is not used anyway, but messy.",
       "revId": "919e4c64ff4986840197306f1455e90b69fc86a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
