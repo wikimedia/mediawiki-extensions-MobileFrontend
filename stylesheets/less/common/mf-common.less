@@ -35,16 +35,42 @@ a.external {
 	position: relative;
 }
 
-table.gallery th,
-table.gallery td {
+/* Galleries */
+/* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
+ul.gallery {
+	list-style: none;
+	margin: 2px;
+	padding: 2px;
 	display: block;
-	border: 0;
-	border-bottom: 1px solid #cccccc;
-}
 
-table.gallery .gallerytext {
-	margin-top: -12px;
-	text-align: center;
+	li.gallerycaption {
+		font-weight: bold;
+		text-align: center;
+		display: block;
+		word-wrap: break-word;
+	}
+
+	li.gallerybox {
+		display: inline-block;
+
+		div.thumb {
+			text-align: center;
+			border: 1px solid #ccc;
+			background-color: #f9f9f9;
+			margin: 2px;
+
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		div.gallerytext {
+			overflow: hidden;
+			padding: 2px 4px;
+			word-wrap: break-word;
+		}
+	}
 }
 
 .mwm-message.mwm-notice {
@@ -87,11 +113,6 @@ table {
 
 	th {
 		word-break: normal;
-	}
-
-	&.gallery {
-		background: #f9f9f9;
-		border-bottom: 0;
 	}
 
 	&.wikitable {
