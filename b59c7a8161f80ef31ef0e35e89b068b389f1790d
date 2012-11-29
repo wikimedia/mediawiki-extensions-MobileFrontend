@@ -16,6 +16,24 @@
       "revId": "b59c7a8161f80ef31ef0e35e89b068b389f1790d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//97U\u003d",
+        "filename": "README",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-29T21:35:11Z",
+      "side": 1,
+      "message": "Regardless of the answer, we should leave it like so without the sudo..\n\nAt least this informs you to run with sudo if you need to meaning the path to installation is clear.",
+      "parentUuid": "AAADbX//970\u003d",
+      "revId": "b59c7a8161f80ef31ef0e35e89b068b389f1790d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
