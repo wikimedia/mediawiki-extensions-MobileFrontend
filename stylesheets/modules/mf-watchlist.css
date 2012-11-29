@@ -13,6 +13,9 @@ a.watch-this-article {
   text-indent: -9999px;
   background-repeat: no-repeat;
 }
+a.watch-this-article.waiting {
+  background-image: url(images/ajax-loader.gif);
+}
 a.watch-this-article.watched {
   background-image: url(images/watched.png);
 }
