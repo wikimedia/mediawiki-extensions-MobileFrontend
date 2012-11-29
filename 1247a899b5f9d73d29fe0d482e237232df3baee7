@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//90I\u003d",
+        "filename": "javascripts/specials/filepage.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-29T22:23:15Z",
+      "side": 1,
+      "message": "That variable is used 91 lines later, should be declared closer to the code that uses it. I\u0027m not against declaring it inside the for() but I don\u0027t know if it\u0027s OK with our coding style. Another option is making a closure down there.",
+      "revId": "1247a899b5f9d73d29fe0d482e237232df3baee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
