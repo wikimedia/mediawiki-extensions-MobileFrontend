@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//970\u003d",
+        "filename": "README",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-11-29T21:33:25Z",
+      "side": 1,
+      "message": "Krinkle, it does not work without sudo on Ubuntu, it says:\n\nnpm ERR! Error: EACCES, mkdir \u0027/usr/lib/node_modules\u0027\n...\nnpm ERR! Please try running this command again as root/Administrator.\n\nIs it my system? It\u0027s a fresh Ubuntu 12.10 with node and npm installed from Chris Lea\u0027s ppa.",
+      "revId": "b59c7a8161f80ef31ef0e35e89b068b389f1790d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
