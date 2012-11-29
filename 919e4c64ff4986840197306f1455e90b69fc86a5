@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//9s8\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-11-29T23:23:15Z",
+      "side": 1,
+      "message": "Does this need localization, or should we leave it?\n\nCould also fail if the article title is very long, in which case we\u0027d have to crop it.",
+      "revId": "919e4c64ff4986840197306f1455e90b69fc86a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//9s4\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-11-29T23:23:15Z",
+      "side": 1,
+      "message": "Should probably be localized.",
+      "revId": "919e4c64ff4986840197306f1455e90b69fc86a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//9sw\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-11-29T23:23:15Z",
+      "side": 1,
+      "message": "Avoid class names like \"red\" and \"green\"; use names that describe semantically what it\u0027s for and let the style worry about the color.",
+      "revId": "919e4c64ff4986840197306f1455e90b69fc86a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
