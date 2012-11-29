@@ -1,0 +1,108 @@
+#mw-mf-watchlist {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+#mw-mf-watchlist .mw-mf-watchlist-selector {
+  text-align: center;
+  padding: 8px 0px;
+  background-color: #f0f0f0;
+}
+#mw-mf-watchlist .mw-mf-watchlist-selector li {
+  display: inline-block;
+  border: solid 1px #444;
+  padding: 0px 8px;
+  margin: 0;
+  color: #808080;
+  background-color: white;
+}
+#mw-mf-watchlist .mw-mf-watchlist-selector li.selected {
+  color: white;
+  background-color: #808080;
+}
+#mw-mf-watchlist .mw-mf-watchlist-selector li a {
+  color: inherit;
+}
+ul.mw-mf-watchlist-results {
+  background-color: white;
+  list-style: none;
+}
+ul.mw-mf-watchlist-results li {
+  padding: 8px 28px 8px 28px;
+  border-top: solid 1px #c0c0c0;
+  position: relative;
+  color: #808080;
+  background-image: /* @embed */ url(images/drilldown.png);
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 20px 20px;
+  -o-background-size: 20px 20px;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+ul.mw-mf-watchlist-results li.date {
+  background: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #f0f0f0;
+}
+ul.mw-mf-watchlist-results li div {
+  font-size: 80%;
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+ul.mw-mf-watchlist-results li .mw-mf-user {
+  width: 75%;
+  /* shorten to make room for time */
+
+}
+ul.mw-mf-watchlist-results li .mw-mf-user .mw-mf-ip {
+  color: white;
+  background: red;
+  padding: 0px 6px;
+}
+ul.mw-mf-watchlist-results li .mw-mf-title {
+  color: #202020;
+  font-size: 100%;
+}
+ul.mw-mf-watchlist-results li .mw-mf-time {
+  position: absolute;
+  top: 3em;
+  right: 28px;
+}
+#mw-mf-diffview .mw-mf-bytesadded {
+  color: green;
+}
+#mw-mf-diffview .mw-mf-bytesremoved {
+  color: red;
+}
+#mw-mf-diffview ins {
+  color: green;
+  text-decoration: none;
+}
+#mw-mf-diffview del {
+  color: #444;
+  text-decoration: strikethrough;
+}
+#mw-mf-diffview #mw-mf-diffarea {
+  padding: 1em;
+}
+#mw-mf-diffview #mw-mf-diff-info {
+  padding-bottom: 1em;
+}
+#mw-mf-diffview #mw-mf-diff-comment {
+  padding-bottom: 1em;
+}
+#mw-mf-diffview #mw-mf-userinfo {
+  position: relative;
+  height: 5em;
+  padding: 1em;
+  background-color: #f0f0f0;
+  border-top: solid 1px #c0c0c0;
+}

@@ -95,7 +95,9 @@ HTML;
 		$tpl->set( 'viewNormalSiteURL', $url );
 		$tpl->set( 'mainPageUrl', Title::newMainPage()->getLocalUrl() );
 		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
+		$tpl->set( 'watchlistUrl', SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl() );
 		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
+		$tpl->set( 'loggedin', $this->getUser()->isLoggedIn() );
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;

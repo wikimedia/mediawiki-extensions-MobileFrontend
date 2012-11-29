@@ -48,9 +48,11 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'api/ApiParseExtender',
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
+	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
+	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
 
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
@@ -77,6 +79,7 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
+$wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
@@ -200,6 +203,12 @@ $wgResourceModules['mobile.production-jquery'] = array(
 		'javascripts/common/mf-notification.js',
 		'javascripts/modules/mf-references.js' ),
 	'raw' => true,
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
+);
+$wgResourceModules['mobile.watchlist'] = array(
+	'styles' => array( 'stylesheets/specials/watchlist.css' ),
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
