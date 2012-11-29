@@ -16,6 +16,24 @@
       "revId": "1247a899b5f9d73d29fe0d482e237232df3baee7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//9v8\u003d",
+        "filename": "javascripts/specials/filepage.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2012-11-29T22:46:25Z",
+      "side": 1,
+      "message": "Declaring it in the for as in: for (var id in chunks) is fine.",
+      "parentUuid": "AAADbX//90I\u003d",
+      "revId": "1247a899b5f9d73d29fe0d482e237232df3baee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
