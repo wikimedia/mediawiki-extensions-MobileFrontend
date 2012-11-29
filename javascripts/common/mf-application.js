@@ -10,7 +10,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 	};
 }
 mw.mobileFrontend = (function() {
-	var utilities, modules = [],
+	var u, modules = [],
 		scrollY, tokenQuery = {},
 		moduleNamespace = {},
 		doc = document.documentElement;
@@ -69,7 +69,7 @@ mw.mobileFrontend = (function() {
 				}
 			}
 		}
-		utilities( document.documentElement ).removeClass( 'page-loading' );
+		u( document.documentElement ).removeClass( 'page-loading' );
 		if ( typeof jQuery !== 'undefined' ) {
 			$( window ).trigger( 'mw-mf-ready' );
 		}
@@ -94,7 +94,7 @@ mw.mobileFrontend = (function() {
 		}
 
 		if( supportsPositionFixed() ) {
-			utilities( doc ).addClass( 'supportsPositionFixed' );
+			u( doc ).addClass( 'supportsPositionFixed' );
 		}
 
 		// when rotating to landscape stop page zooming on ios
@@ -111,10 +111,10 @@ mw.mobileFrontend = (function() {
 					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
 				}, false );
 			} else if( ua.match(/Android 4\.0\.2/) ){
-				utilities( doc ).addClass( 'android4-0-2' );
+				u( doc ).addClass( 'android4-0-2' );
 			}
 			if ( android ) {
-				utilities( doc ).addClass( 'android' );
+				u( doc ).addClass( 'android' );
 			}
 		}
 		fixBrowserBugs();
@@ -122,124 +122,7 @@ mw.mobileFrontend = (function() {
 		initModules();
 	}
 
-	utilities = typeof jQuery !== 'undefined' ? jQuery : function ( el ) {
-		if ( typeof el === 'string' ) {
-			if ( document.querySelectorAll ) {
-				return [].slice.call( document.querySelectorAll( el ) );
-			}
-		} else if ( !el ) {
-			el = document.createElement( 'div' );
-		}
-
-		function inArray( array, str ) {
-			var i;
-			if ( array.indexOf ) {
-				return array.indexOf( str ) > -1;
-			} else {
-				for ( i = 0; i < array.length; i++ ) {
-					if ( str === array[i] ) {
-						return true;
-					}
-				}
-				return false;
-			}
-		}
-
-		function hasClass( name ) {
-			var classNames = el.className.split( ' ' );
-			return inArray( classNames, name );
-		}
-
-		function addClass( name ) {
-			var className = el.className,
-				classNames = className.split( ' ' );
-			classNames.push( name ); // TODO: only push if unique
-			el.className = classNames.join( ' ' );
-		}
-
-		function removeClass( name ) {
-			var className = el.className,
-				classNames = className.split( ' ' ),
-				newClasses = [], i;
-			for ( i = 0; i < classNames.length; i++ ) {
-				if ( classNames[i] !== name ) {
-					newClasses.push( classNames[i] );
-				}
-			}
-			el.className = newClasses.join( ' ' );
-		}
-
-		function bind( type, handler ) {
-			el.addEventListener( type, handler, false );
-		}
-
-		function remove() {
-			el.parentNode.removeChild( el );
-		}
-
-		function getChildText( el ) {
-			var child, value = '', i;
-			for ( i = 0; i < el.childNodes.length; i++ ) {
-				child = el.childNodes[i];
-				if ( child.nodeType !== 8 ) { // ignore comment node
-					value += utilities( child ).text();
-				}
-			}
-			return value;
-		}
-
-		function text( str ) {
-			var i, label;
-			if ( str ) {
-				label = document.createTextNode( str );
-				el.appendChild( label );
-			} else {
-				if ( el.nodeType === 3 ) { // TEXT_NODE
-					return el.nodeValue;
-				} else if ( typeof el.textContent === 'string' ) {
-					return el.textContent; // standards compliant
-				} else if ( typeof el.innerText === 'string' ) {
-					return el.innerText;
-				} else {
-					return getChildText( el );
-				}
-			}
-		}
-
-		return {
-			addClass: addClass,
-			bind: bind,
-			hasClass: hasClass,
-			remove: remove,
-			removeClass: removeClass,
-			text: text
-		};
-	};
-	utilities.ajax = utilities.ajax || function( options ) {
-		var xmlHttp, url;
-		if ( window.XMLHttpRequest ) {
-			xmlHttp = new XMLHttpRequest();
-		} else {
-			xmlHttp = new ActiveXObject( 'Microsoft.XMLHTTP' );
-		}
-		if( xmlHttp.overrideMimeType ) { // non standard
-			xmlHttp.overrideMimeType( 'text/xml' );
-		}
-		xmlHttp.onreadystatechange = function() {
-			var resp;
-			if ( xmlHttp.readyState === 4 && xmlHttp.status === 200 ) {
-				if ( options && options.dataType === 'json' ) {
-					resp = xmlHttp.responseText;
-					resp = resp && typeof JSON !== 'undefined' ? JSON.parse( resp ) : resp;
-				} else {
-					resp = xmlHttp.responseXML;
-				}
-				options.success( resp );
-			}
-		};
-		xmlHttp.open( 'GET', options.url, true );
-		xmlHttp.send();
-	};
+	u = typeof jQuery !== 'undefined' ? jQuery : jQueryShim;
 
 	function getConfig( name, defaultValue ) {
 		if ( mwMobileFrontendConfig.settings[ name ] !== undefined ) {
@@ -274,7 +157,7 @@ mw.mobileFrontend = (function() {
 				action: 'tokens',
 				type: tokenType
 			};
-			tokenQuery[ tokenType ] = jQuery.ajax( {
+			tokenQuery[ tokenType ] = u.ajax( {
 				url: getApiUrl(),
 				dataType: 'json',
 				data: data
@@ -294,7 +177,7 @@ mw.mobileFrontend = (function() {
 		getConfig: getConfig,
 		setConfig: setConfig,
 		supportsPositionFixed: supportsPositionFixed,
-		utils: utilities
+		utils: u
 	};
 
 }());

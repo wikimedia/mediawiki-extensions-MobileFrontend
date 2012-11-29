@@ -106,6 +106,8 @@ class SkinMobile extends SkinMobileBase {
 mediawiki.hidpi' ), 'scripts', true, true );
 				}
 			}
+		} else {
+			$scriptLinks[] = $this->resourceLoaderLink( array( 'mobile.jqueryshim' ), 'scripts', false );
 		}
 		$scriptLinks[] = $this->resourceLoaderLink( $scripts, 'scripts' );
 		if ( $isFilePage ) {

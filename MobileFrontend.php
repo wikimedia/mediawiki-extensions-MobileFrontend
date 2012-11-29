@@ -118,6 +118,15 @@ $wgResourceModules['mobile.head'] = array(
 	'targets' => 'mobile',
 );
 
+$wgResourceModules['mobile.jqueryshim'] = array(
+	'styles' => array(),
+	'scripts' => array( 'javascripts/common/jquery-shim.js' ),
+	'raw' => true,
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
+);
+
 $wgResourceModules['mobile'] = array(
 	'styles' => array( 'stylesheets/common/reset.css', 'stylesheets/common/mf-common.css', 'stylesheets/common/mf-footer.css',
 		'stylesheets/common/mf-typography.css', 'stylesheets/common/mf-navigation.css',
