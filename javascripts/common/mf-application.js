@@ -86,9 +86,9 @@ mw.mobileFrontend = (function() {
 			h2;
 
 		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
-			h2 = document.createElement( 'h2' );
-			h2.innerHTML = message( 'empty-homepage' );
-			mainPage.appendChild( h2 );
+			h = document.createElement( 'h1' );
+			h.innerHTML = message( 'empty-homepage' );
+			mainPage.appendChild( h );
 		}
 
 		if( supportsPositionFixed() ) {
