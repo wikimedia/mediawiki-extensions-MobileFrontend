@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//8mI\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-11-30T23:54:44Z",
+      "side": 1,
+      "message": "can you achieve the same thing using methods provided in mediawiki.Uri.js?",
+      "revId": "536e939a94adbbba48f1cf3a39cb22f6573df8ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
