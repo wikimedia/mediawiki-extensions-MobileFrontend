@@ -31,6 +31,55 @@ M.history = ( function() {
 			}
 		} );
 	}
+
+	function renderPage( pageTitle, resp, constructPage ) {
+		var i, secs, s, sectionNum = 0, level, text,
+			$content = $( '#content' ),
+			$section,
+			$tmpContainer = $( '<div>' ),
+			sectionData = {},
+			anchorSection = {};
+		if ( resp && resp.mobileview && resp.mobileview.sections ) {
+			secs = resp.mobileview.sections;
+			for( i = 0; i < secs.length; i++ ) {
+				s = secs[ i ];
+				level = s.level;
+				text = s.text || '';
+				if ( constructPage && i === 0 ) { // do lead
+					$( '#content_0' ).html( text );
+				}
+				if ( level === '2' ) {
+					sectionNum = sectionNum + 1;
+					sectionData[ sectionNum ] = { html: text };
+					// add self as a parent so that we unfold it when needed
+					anchorSection[ s.anchor ] = sectionNum;
+					anchorSection[ 'section_' + sectionNum ] = sectionNum;
+					if ( constructPage ) {
+						$section = $( '<div class="section">' ).appendTo( $content );
+						// TODO: link these so they are clickable
+						$( '<h2 class="section_heading">' ).attr( 'id', 'section_' + sectionNum ).
+							html( s.line ).appendTo( $section );
+					}
+				} else if ( level ) {
+					$tmpContainer.html( text );
+					$tmpContainer.prepend( $( '<h' + level + '>' ).attr( 'id', s.anchor ).html( s.line ) );
+					sectionData[ sectionNum ].html += $tmpContainer.html();
+					// we need to know the parent of subsection to unfold the proper section
+					anchorSection[ s.anchor ] = sectionNum;
+				}
+				if( s.hasOwnProperty( 'references' ) ) {
+					sectionData[ sectionNum ].references = true;
+					$( '<div class="content_block">' ).attr( 'id', 'content_' + sectionNum ).
+						html( sectionData[ sectionNum ].html ).insertAfter( '#section_' + sectionNum );
+				}
+			}
+			$( window ).trigger( 'mw-mf-page-loaded', [ {
+				title: pageTitle, data: sectionData, anchorSection: anchorSection
+			} ] );
+			$( '#content_0' ).removeClass( 'loading' ); // reset loader
+		}
+	}
+
 	if ( $ ) {
 
 		makeStubPage = function( title, summary ) {
@@ -43,7 +92,6 @@ M.history = ( function() {
 		};
 
 		loadPage = function( pageTitle, constructPage ) {
-			var $content = $( '#content' ), $section;
 			currentTitle = pageTitle;
 			if ( constructPage ) {
 				makeStubPage( pageTitle, M.message( 'mobile-frontend-ajax-page-loading', pageTitle ) );
@@ -56,48 +104,10 @@ M.history = ( function() {
 					redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
 					sectionprop: 'level|line|anchor', sections: 'all' }
 				} ).done( function( resp ) {
-					var i, secs, s, sectionNum = 0, level, text,
-						$tmpContainer = $( '<div>' ),
-						sectionData = {},
-						anchorSection = {};
-					if ( resp && resp.mobileview && resp.mobileview.sections ) {
-						secs = resp.mobileview.sections;
-						for( i = 0; i < secs.length; i++ ) {
-							s = secs[ i ];
-							level = s.level;
-							text = s.text || '';
-							if ( constructPage && i === 0 ) { // do lead
-								$( '#content_0' ).html( text );
-							}
-							if ( level === '2' ) {
-								sectionNum = sectionNum + 1;
-								sectionData[ sectionNum ] = { html: text };
-								// add self as a parent so that we unfold it when needed
-								anchorSection[ s.anchor ] = sectionNum;
-								anchorSection[ 'section_' + sectionNum ] = sectionNum;
-								if ( constructPage ) {
-									$section = $( '<div class="section">' ).appendTo( $content );
-									// TODO: link these so they are clickable
-									$( '<h2 class="section_heading">' ).attr( 'id', 'section_' + sectionNum ).
-										html( s.line ).appendTo( $section );
-								}
-							} else if ( level ) {
-								$tmpContainer.html( text );
-								$tmpContainer.prepend( $( '<h' + level + '>' ).attr( 'id', s.anchor ).html( s.line ) );
-								sectionData[ sectionNum ].html += $tmpContainer.html();
-								// we need to know the parent of subsection to unfold the proper section
-								anchorSection[ s.anchor ] = sectionNum;
-							}
-							if( s.hasOwnProperty( 'references' ) ) {
-								sectionData[ sectionNum ].references = true;
-								$( '<div class="content_block">' ).attr( 'id', 'content_' + sectionNum ).
-									html( sectionData[ sectionNum ].html ).insertAfter( '#section_' + sectionNum );
-							}
-						}
-						$( window ).trigger( 'mw-mf-page-loaded', [ {
-							title: pageTitle, data: sectionData, anchorSection: anchorSection
-						} ] );
-						$( '#content_0' ).removeClass( 'loading' ); // reset loader
+					if ( resp.error ) {
+						window.location.href = URL_TEMPLATE.replace( '$1', pageTitle );
+					} else {
+						renderPage( pageTitle, resp, constructPage );
 					}
 				} ).fail( function() { // resort to non-javascript mode
 					$( 'html' ).addClass( 'togglingEnabled' );
