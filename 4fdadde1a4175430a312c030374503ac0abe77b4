@@ -16,6 +16,24 @@
       "revId": "4fdadde1a4175430a312c030374503ac0abe77b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//9lY\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-30T01:19:15Z",
+      "side": 1,
+      "message": "confused... endPoint should be \"http://commons.wikimedia.org\" or \"\"\n\norigin is the current wiki.\n\nplease explain what you mean here.\nNote this will only work if endpoint is CORS enabled to accept posts from origin.\n\nProbably best to test on test.wikipedia.org or similar.",
+      "parentUuid": "AAADbX//9nk\u003d",
+      "revId": "4fdadde1a4175430a312c030374503ac0abe77b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
