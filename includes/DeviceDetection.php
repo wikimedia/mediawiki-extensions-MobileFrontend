@@ -361,7 +361,7 @@ class DeviceDetection implements IDeviceDetector {
 			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 				$deviceName = 'operamobile';
 			}
-		} elseif ( preg_match( '/MSIE (8|9|1\d)\.|IEMobile\/1\d/', $userAgent ) ) {
+		} elseif ( preg_match( '/MSIE (8|9|1\d)\./', $userAgent ) ) {
 			$deviceName = 'ie';
 		} elseif( preg_match( '/MSIE/', $userAgent ) ) {
 			$deviceName = 'html';
