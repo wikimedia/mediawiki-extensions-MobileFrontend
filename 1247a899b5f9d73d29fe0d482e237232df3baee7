@@ -34,6 +34,24 @@
       "revId": "1247a899b5f9d73d29fe0d482e237232df3baee7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//9d4\u003d",
+        "filename": "javascripts/specials/filepage.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-30T07:46:32Z",
+      "side": 1,
+      "message": "Not if you want to pass jshint.onevar.\n\nAnyhow, I\u0027d recommend putting all functions together instead of defining them mixed between other statements and expressions. They are hoisted anyway.\n\nlike:\n\n function () {}\n function () {}\n function () {}\n function () {}\n\n var id, chunks, initial;\n\n chunks \u003d ..;\n for (id in .. ) {\n }\n\n..",
+      "parentUuid": "AAADbX//9v8\u003d",
+      "revId": "1247a899b5f9d73d29fe0d482e237232df3baee7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
