@@ -372,18 +372,18 @@ html.overlay ul.content li:hover {
   margin-top: 0;
   margin-right: 20px;
 }
-.overlay .header h1,
-.overlay .header h2 {
-  padding-left: 40px;
-}
-#mw-mf-overlay .header.mw-mf-locked {
-  padding-left: 22px;
-}
 .overlay .header h2 {
   margin: 0;
   padding: 0;
   line-height: 46px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.overlay .header h1,
+.overlay .header h2 {
+  margin: 0 0 0 -40px;
+}
+#mw-mf-overlay .header.mw-mf-locked {
+  padding-left: 22px;
 }
 .overlay ul {
   text-align: left;
