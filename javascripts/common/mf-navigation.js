@@ -61,7 +61,7 @@ MobileFrontend.navigation = (function( $ ) {
 				M.getConfig( 'action' ) !== 'edit' ) {
 			$( '<a id="mw-mf-edit-page-link">' ).text( 'edit' ).attr( 'href',
 				M.getConfig( 'pageUrl' ).replace( '$1', title + '?action=edit' ) ).
-				prependTo( '#content_wrapper' );
+				prependTo( '#content' );
 		}
 	}
 
