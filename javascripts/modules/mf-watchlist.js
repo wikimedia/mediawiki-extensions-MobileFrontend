@@ -42,7 +42,7 @@ var w = ( function() {
 
 		function enable() {
 			prevent = false;
-			$( watchBtn ).removeClass( 'disabled' );
+			$( watchBtn ).removeClass( 'disabled waiting' );
 		}
 
 		function success() {
@@ -59,7 +59,7 @@ var w = ( function() {
 				ev.preventDefault();
 			}
 			prevent = true;
-			$( watchBtn ).addClass( 'disabled' );
+			$( watchBtn ).addClass( 'disabled waiting' );
 			toggleWatch( title, lastToken, $( watchBtn ).hasClass( 'watched' ),
 				success, enable );
 		} );
