@@ -11,6 +11,7 @@ mw.mobileFrontend = (function() {
 	var u, modules = [],
 		scrollY, tokenQuery = {},
 		moduleNamespace = {},
+		$ = jQuery,
 		doc = document.documentElement;
 
 	function message( name, arg1 ) {
@@ -34,7 +35,7 @@ mw.mobileFrontend = (function() {
 			// Android 3+
 			/Android [3-9]/
 		];
-		supportedAgents.forEach( function( item, i ) {
+		supportedAgents.forEach( function( item ) {
 			if( agent.match( item ) ) {
 				support = true;
 			}
@@ -81,9 +82,8 @@ mw.mobileFrontend = (function() {
 
 	// TODO: separate main menu navigation code into separate module
 	function init() {
-		var languageSelection, contentEl = document.getElementById( 'content' ),
-			mainPage = document.getElementById( 'mainpage' ),
-			h2;
+		var mainPage = document.getElementById( 'mainpage' ),
+			h;
 
 		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
 			h = document.createElement( 'h1' );

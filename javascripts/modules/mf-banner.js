@@ -7,12 +7,13 @@ var m = ( function() {
 			settings = M.getModule( 'settings' ),
 			saveUserSetting = settings.saveUserSetting,
 			getUserSetting = settings.getUserSetting,
+			visibility,
 			dismissNotification = banner.getElementsByTagName( 'button' )[ 0 ];
 
 		if ( dismissNotification ) {
-			zeroRatedBannerVisibility = getUserSetting( cookieNameZeroVisibility );
+			visibility = getUserSetting( cookieNameZeroVisibility );
 
-			if ( zeroRatedBannerVisibility === 'off' ) {
+			if ( visibility === 'off' ) {
 				banner.style.display = 'none';
 			}
 

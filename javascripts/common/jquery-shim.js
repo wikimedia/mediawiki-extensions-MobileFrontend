@@ -2,6 +2,8 @@
 ( function() {
 
 window.$ = window.jQueryShim = function ( el ) {
+	var u = this;
+
 	if ( typeof el === 'string' ) {
 		if ( document.querySelectorAll ) {
 			return [].slice.call( document.querySelectorAll( el ) );
@@ -63,14 +65,14 @@ window.$ = window.jQueryShim = function ( el ) {
 		for ( i = 0; i < el.childNodes.length; i++ ) {
 			child = el.childNodes[i];
 			if ( child.nodeType !== 8 ) { // ignore comment node
-				value += utilities( child ).text();
+				value += u( child ).text();
 			}
 		}
 		return value;
 	}
 
 	function text( str ) {
-		var i, label;
+		var label;
 		if ( str ) {
 			el.innerHTML = '';
 			label = document.createTextNode( str );
@@ -99,8 +101,8 @@ window.$ = window.jQueryShim = function ( el ) {
 	};
 };
 
-jQueryShim.ajax = function( options ) {
-	var xmlHttp, url;
+window.jQueryShim.ajax = function( options ) {
+	var xmlHttp;
 	if ( window.XMLHttpRequest ) {
 		xmlHttp = new XMLHttpRequest();
 	} else {

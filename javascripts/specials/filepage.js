@@ -53,17 +53,18 @@ var chunks = {
 };
 
 function makeToggle(thisId) {
-	return function(event) {
-		for (id in chunks) {
-			if (chunks.hasOwnProperty(id)) {
-				var selectors = chunks[id], act;
-				if (id === thisId) {
+	return function() {
+		var id, i;
+		for ( id in chunks ) {
+			if ( chunks.hasOwnProperty( id ) ) {
+				var selectors = chunks[ id ], act;
+				if ( id === thisId ) {
 					act = show;
 				} else {
 					act = hide;
 				}
-				for (var i = 0; i < selectors.length; i++) {
-					act(selectors[i]);
+				for ( i = 0; i < selectors.length; i++ ) {
+					act( selectors[ i ] );
 				}
 			}
 		}
@@ -88,12 +89,6 @@ function addToggle(id) {
 	}
 }
 
-for (id in chunks) {
-	if (chunks.hasOwnProperty(id)) {
-		addToggle(id);
-	}
-}
-
 function stopClickThrough() {
 	var file = document.getElementById('file');
 	if ( file ) {
@@ -106,15 +101,24 @@ function stopClickThrough() {
 	}
 }
 
-stopClickThrough();
-
-var initial = 'file';
-if (window.location.hash) {
-	var section = window.location.hash.substr(1);
-	if (section in chunks) {
-		initial = section;
+function init() {
+	var id, initial = 'file', section;
+	for ( id in chunks ) {
+		if ( chunks.hasOwnProperty( id ) ) {
+			addToggle( id );
+		}
 	}
+
+	stopClickThrough();
+
+	if ( window.location.hash ) {
+		section = window.location.hash.substr( 1 );
+		if ( section in chunks ) {
+			initial = section;
+		}
+	}
+	makeToggle( initial )();
 }
-makeToggle(initial)();
+init();
 
 })();

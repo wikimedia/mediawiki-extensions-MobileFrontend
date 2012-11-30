@@ -3,12 +3,11 @@ var MobileFrontend = M;
 var settings = ( function() {
 	var u = MobileFrontend.utils,
 		s = M.getConfig,
-		message = MobileFrontend.message,
 		supportsLocalStorage;
 
 	// using feature detection used by http://diveintohtml5.info/storage.html
 	try {
-		supportsLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null;
+		supportsLocalStorage = 'localStorage' in window && window.localStorage !== null;
 	} catch ( e ) {
 		supportsLocalStorage = false;
 	}
@@ -62,20 +61,8 @@ var settings = ( function() {
 				( useCookieFallback ? writeCookie( name, value, 1 ) : false );
 	}
 
-	function getUserSetting( name, value ) {
+	function getUserSetting( name ) {
 		return supportsLocalStorage ? localStorage.getItem( name ) : readCookie( name );
-	}
-
-	function updateQueryStringParameter( a, k, v ) {
-		var re = new RegExp( "([?|&])" + k + "=.*?(&|$)", "i" ),
-			rtn,
-			separator = a.indexOf( '?' ) !== -1 ? "&" : "?";
-		if ( a.match( re ) ) {
-			rtn = a.replace( re, '$1' + k + "=" + v + '$2' );
-		} else {
-			rtn = a + separator + k + "=" + v;
-		}
-		return rtn;
 	}
 
 	function enhanceCheckboxes() {

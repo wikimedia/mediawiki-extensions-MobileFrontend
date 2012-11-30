@@ -66,7 +66,7 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function init() {
-		$( '#mw-mf-menu-main a' ).click( function( ev ) {
+		$( '#mw-mf-menu-main a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
 
@@ -83,8 +83,7 @@ MobileFrontend.navigation = (function( $ ) {
 			} );
 		}
 
-		var headerHeight = $( '#mw-mf-header' ).height(),
-			id = mfePrefix + 'overlay';
+		var id = mfePrefix + 'overlay';
 		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
 			if ( curPage.hash === '#' || curPage.hash === '' ) {
 				closeOverlay();
