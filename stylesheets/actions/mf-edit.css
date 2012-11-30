@@ -64,6 +64,7 @@
 }
 #editform textarea,
 #editform input.mw-summary {
+  font-size: 1em;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
