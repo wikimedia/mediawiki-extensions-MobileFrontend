@@ -3,7 +3,7 @@
 var module = (function() {
 	var nav = M.getModule( 'navigation' );
 
-	function init() {
+	function run() {
 		var $metadata = $( '#content_0 table.ambox' ),
 			$container = $( '<div>' );
 
@@ -17,12 +17,15 @@ var module = (function() {
 			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), $container[ 0 ] );
 		} ).text( M.message( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
+	}
 
-		$( window ).on( 'mw-mf-page-loaded', init );
+	function init() {
+		$( window ).on( 'mw-mf-page-loaded', run );
 	}
 
 	return {
-		init: init
+		init: init,
+		run: run
 	};
 }() );
 
