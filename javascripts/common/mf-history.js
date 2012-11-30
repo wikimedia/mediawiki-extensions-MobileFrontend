@@ -14,6 +14,7 @@ M.history = ( function() {
 		};
 
 	function getArticleUrl( title ) {
+		title = title.replace( / /gi, '_' );
 		return URL_TEMPLATE.replace( '$1', title ) + window.location.search;
 	}
 
