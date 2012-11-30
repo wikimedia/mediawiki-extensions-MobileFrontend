@@ -18,6 +18,7 @@ less:
 	lessc stylesheets/less/modules/mf-search.less > stylesheets/modules/mf-search.css
 	lessc stylesheets/less/modules/mf-watchlist.less > stylesheets/modules/mf-watchlist.css
 	lessc stylesheets/less/modules/mf-random.less > stylesheets/modules/mf-random.css
+	lessc stylesheets/less/modules/mf-tables.less > stylesheets/modules/mf-tables.css
 	lessc stylesheets/less/common/mf-typography.less > stylesheets/common/mf-typography.css
 	lessc stylesheets/less/actions/mf-edit.less > stylesheets/actions/mf-edit.css
 	lessc stylesheets/less/specials/watchlist.less > stylesheets/specials/watchlist.css

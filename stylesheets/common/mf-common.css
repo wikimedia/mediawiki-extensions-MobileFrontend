@@ -77,7 +77,7 @@ ul.gallery li.gallerybox div.gallerytext {
   text-align: center;
   border: 1px solid gray;
 }
-table {
+#content table {
   /* following 5 rules are needed for scrolling */
 
   overflow: auto;
@@ -87,6 +87,8 @@ table {
   overflow-x: auto;
   word-break: normal;
   display: block;
+}
+table {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
