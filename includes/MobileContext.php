@@ -91,7 +91,7 @@ class MobileContext extends ContextSource {
 
 	public function imagesDisabled() {
 		if ( is_null( $this->disableImages ) ) {
-			$this->disableImages = $this->getRequest()->getCookie( 'disableImages' );
+			$this->disableImages = (bool)$this->getRequest()->getCookie( 'disableImages' );
 		}
 
 		return $this->disableImages;

@@ -24,6 +24,7 @@ class SkinMobile extends SkinMobileBase {
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$tpl->set( 'isOverlay', $specialPage && !$title->isSpecial( 'MobileMenu' ) );
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
+		$tpl->set( 'imagesDisabled', $context->imagesDisabled() );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
@@ -642,6 +643,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'scriptPath' => $wgScriptPath,
 				'shim' => $this->data['shim'],
 				'pageUrl' => $wgArticlePath,
+				'imagesDisabled' => $this->data['imagesDisabled'],
 				'beta' => $inBeta,
 				'title' => $this->data['articleTitle'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
