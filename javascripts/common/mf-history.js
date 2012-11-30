@@ -77,11 +77,11 @@ M.history = ( function() {
 									$section = $( '<div class="section">' ).appendTo( $content );
 									// TODO: link these so they are clickable
 									$( '<h2 class="section_heading">' ).attr( 'id', 'section_' + sectionNum ).
-										text( s.line ).appendTo( $section );
+										html( s.line ).appendTo( $section );
 								}
 							} else if ( level ) {
 								$tmpContainer.html( text );
-								$tmpContainer.prepend( $( '<h' + level + '>' ).attr( 'id', s.anchor ).text( s.line ) );
+								$tmpContainer.prepend( $( '<h' + level + '>' ).attr( 'id', s.anchor ).html( s.line ) );
 								sectionData[ sectionNum ].html += $tmpContainer.html();
 								// we need to know the parent of subsection to unfold the proper section
 								anchorSection[ s.anchor ] = sectionNum;
