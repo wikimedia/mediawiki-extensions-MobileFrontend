@@ -82,26 +82,29 @@ var T = ( function() {
 	}
 
 	function init() {
-		var pageTitle = $( 'h1' ).text();
+		var pageTitle = $( 'h1' ).text(),
+			specialPage = $( '#content_wrapper' ).hasClass( 'mw-mf-special' );
 
-		if ( !$( '#content_wrapper' ).hasClass( 'mw-mf-special' ) ) {
-			$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
-				sectionData = article.data;
+		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
+			sectionData = article.data;
 
-				anchorSection = article.anchorSection;
-				if ( $( '#content .section_heading' ).length > 1 ) {
-					enableToggling( $( '#content' ) );
-				}
-				if ( !footerInitialised ) {
-					enableToggling( $( '#footer' ) );
-					footerInitialised = true;
-				}
-				checkHash();
-				_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
-			} );
+			anchorSection = article.anchorSection;
+			if ( $( '#content .section_heading' ).length > 1 ) {
+				enableToggling( $( '#content' ) );
+			}
+			if ( !footerInitialised ) {
+				enableToggling( $( '#footer' ) );
+				footerInitialised = true;
+			}
+			checkHash();
+			_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
+		} );
+
+		if ( !specialPage ) {
 			M.history.loadPage( pageTitle, false );
 		} else {
 			enableToggling();
+			footerInitialised = true;
 		}
 	}
 
