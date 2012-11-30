@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADbX//9Mk\u003d",
+        "filename": ".jshintrc",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-30T18:45:50Z",
+      "side": 1,
+      "message": "mediaWiki doesn\u0027t exist in MobileFrontend currently. We use mw. This might change in future but that is the state for now. We should discuss this on a bug if this is going to be problematic but let\u0027s not bikeshed on integrating jshint on this basis.",
+      "parentUuid": "AAADbX//9dw\u003d",
+      "revId": "9a266e0b3ed006b3bc77085498b20d21859da9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADbX//9ds\u003d",
         "filename": ".jshintrc",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2012-11-30T07:51:26Z",
       "side": 1,
       "message": "This tolerates global \"$\" which we don\u0027t in MediaWiki (because of user scripts). Always use global jQuery and preferably a local reference to it (which may be named $).\n\nSo use globals.jQuery instead of the jshint option \"jquery\".",
+      "revId": "9a266e0b3ed006b3bc77085498b20d21859da9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//9Mg\u003d",
+        "filename": ".jshintrc",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-30T18:45:50Z",
+      "side": 1,
+      "message": "Agreed and done in patch set 5",
+      "parentUuid": "AAADbX//9ds\u003d",
       "revId": "9a266e0b3ed006b3bc77085498b20d21859da9ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
