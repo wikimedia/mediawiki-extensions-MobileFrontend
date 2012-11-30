@@ -9,7 +9,7 @@ var w = ( function() {
 		var data = {
 			format: 'json', action: 'watch',
 			title: title, token: token
-		}, title = M.getConfig( 'title' ),
+		},
 			msg = M.message( 'mobile-frontend-watchlist-add', title ),
 			popupClass = 'watch-action';
 
