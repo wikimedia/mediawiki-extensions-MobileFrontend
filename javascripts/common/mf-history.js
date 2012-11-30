@@ -54,7 +54,7 @@ M.history = ( function() {
 					action: 'mobileview', format: 'json',
 					page: pageTitle,
 					redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
-					noimages: mw.mobileFrontend.setting( 'imagesDisabled' ) ? 1 : undefined,
+					noimages: M.getConfig( 'imagesDisabled' ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor', sections: 'all' }
 				} ).done( function( resp ) {
 					var i, secs, s, sectionNum = 0, level, text,
