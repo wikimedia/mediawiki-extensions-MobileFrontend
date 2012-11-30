@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//9eg\u003d",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-11-30T06:56:32Z",
+      "side": 1,
+      "message": "don\u0027t think you meant to do that",
+      "revId": "ce4219f2a56d56b9ab66b1ed34c885eb9c349842",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
