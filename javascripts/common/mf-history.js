@@ -117,11 +117,11 @@ M.history = ( function() {
 		} );
 
 		if ( window.history && window.history.pushState && inBeta ) {
-			navigateToPage = function( title ) {
+			navigateToPage = function( title, constructPage ) {
 				var page;
 				_mwStart = +new Date; // reset logger
 				M.setConfig( 'title', title );
-				page = loadPage( title, true );
+				page = loadPage( title, typeof constructPage === 'undefined' ? true : constructPage );
 				window.history.pushState( { title: title }, title, getArticleUrl( title ) );
 				return page;
 			};
