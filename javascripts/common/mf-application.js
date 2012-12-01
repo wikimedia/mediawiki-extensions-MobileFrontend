@@ -82,13 +82,10 @@ mw.mobileFrontend = (function() {
 
 	// TODO: separate main menu navigation code into separate module
 	function init() {
-		var mainPage = document.getElementById( 'mainpage' ),
-			h;
+		var mainPage = document.getElementById( 'mainpage' );
 
-		if( mainPage && mainPage.childNodes.length === 0 && message( 'empty-homepage' ) ) {
-			h = document.createElement( 'h1' );
-			h.innerHTML = message( 'empty-homepage' );
-			mainPage.appendChild( h );
+		if ( $ && mainPage ) {
+			$( window ).trigger( 'mw-mf-homepage-loaded' );
 		}
 
 		if( supportsPositionFixed() ) {

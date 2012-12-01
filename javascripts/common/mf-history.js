@@ -94,6 +94,10 @@ M.history = ( function() {
 				}
 			}
 			updateUILinks( pageTitle );
+
+			if ( resp.mobileview.hasOwnProperty( 'mainpage' ) ) {
+				$( window ).trigger( 'mw-mf-homepage-loaded' );
+			}
 			$( window ).trigger( 'mw-mf-page-loaded', [ {
 				title: pageTitle, data: sectionData, anchorSection: anchorSection
 			} ] );
