@@ -329,7 +329,6 @@ Don't translate the special page name",
 	'mobile-frontend-diffview-anonymous' => 'Label to indicate anonymous user in common mobile diff/change view.',
 	'mobile-frontend-diffview-bytesadded' => 'Edit byte-changed counter for common mobile diff/change view when change adds bytes. $1 is byte count; may use PLURAL.',
 	'mobile-frontend-diffview-bytesremoved' => 'Edit byte-changed counter for common mobile diff/change view when change removes bytes. $1 is byte count; may use PLURAL.',
-
 	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. $1 is a unique table number for the article',
 );
 
@@ -1862,6 +1861,7 @@ $messages['de'] = array(
 	'mobile-frontend-ajax-random-question' => 'Diesen Artikel lesen?',
 	'mobile-frontend-ajax-random-yes' => 'Ja',
 	'mobile-frontend-ajax-random-retry' => 'Erneut versuchen',
+	'mobile-frontend-ajax-random-suggestions' => 'Andere Vorschläge:',
 	'mobile-frontend-back-to-top-of-section' => 'Einen Abschnitt zurück springen',
 	'mobile-frontend-close-section' => 'Diesen Abschnitt schließen',
 	'mobile-frontend-show-button' => 'Anzeigen',
@@ -1975,6 +1975,7 @@ $messages['de'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Anonymer Benutzer',
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Ein Byte|$1 Byte}} hinzugefügt',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Ein Byte|$1 Byte}} entfernt',
+	'mobile-frontend-table' => 'Tabelle $1',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -2027,6 +2028,7 @@ $messages['diq'] = array(
 	'mobile-frontend-ajax-random-question' => 'Nê meqaley bıwane?',
 	'mobile-frontend-ajax-random-yes' => 'Heya',
 	'mobile-frontend-ajax-random-retry' => 'Fına bıcerebne',
+	'mobile-frontend-ajax-random-suggestions' => 'Weseynayışê bini:',
 	'mobile-frontend-back-to-top-of-section' => 'Yew cay ser çek',
 	'mobile-frontend-close-section' => 'Nê leti racnê',
 	'mobile-frontend-show-button' => 'Bımocne',
@@ -2112,6 +2114,7 @@ $messages['diq'] = array(
 	'mobile-frontend-main-menu-nearby' => 'Nezdıra',
 	'mobile-frontend-main-menu-login' => 'Cı kewe',
 	'mobile-frontend-main-menu-logout' => 'Bıveciye',
+	'mobile-frontend-main-menu-watchlist' => 'Lista seyri',
 	'mobile-frontend-main-menu-settings' => 'Sazi',
 	'mobile-frontend-main-menu-settings-heading' => 'Sazê mobil sita',
 	'mobile-frontend-settings-site-header' => 'Zıwanê {{SITENAME}}',
@@ -2128,6 +2131,18 @@ $messages['diq'] = array(
 	'mobile-frontend-watchlist-add' => '$1 bi zerreyê lista seyrkerdışê şıma',
 	'mobile-frontend-watchlist-removed' => 'Lista şımaya serykerdışi ra $1 wedariya.',
 	'mobile-frontend-watchlist-view' => 'Lista serykerdışê xo bıvêne',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
+	'mobile-frontend-watchlist-filter-all' => 'Pêro',
+	'mobile-frontend-watchlist-filter-articles' => 'Wesiqey',
+	'mobile-frontend-watchlist-filter-talk' => 'Werênayış',
+	'mobile-frontend-watchlist-filter-other' => 'Zewmi',
+	'mobile-frontend-diffview-title' => 'Vurnayışê $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|vurnayiş|vurnayişi}}',
+	'mobile-frontend-diffview-anonymous' => 'Karbero anonim',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bayt|bayti}} debiyay de',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bayt|bayti}} wedariyay',
+	'mobile-frontend-table' => 'Tabloye $1',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -2494,6 +2509,7 @@ $messages['es'] = array(
 	'mobile-frontend-ajax-random-question' => '¿Leer este artículo?',
 	'mobile-frontend-ajax-random-yes' => 'Sí',
 	'mobile-frontend-ajax-random-retry' => 'Reintentar',
+	'mobile-frontend-ajax-random-suggestions' => 'Otras sugerencias:',
 	'mobile-frontend-back-to-top-of-section' => 'Ir atrás una sección',
 	'mobile-frontend-close-section' => 'Cerrar esta sección',
 	'mobile-frontend-show-button' => 'Mostrar',
@@ -2579,6 +2595,7 @@ $messages['es'] = array(
 	'mobile-frontend-main-menu-nearby' => 'Cercano',
 	'mobile-frontend-main-menu-login' => 'Iniciar sesión',
 	'mobile-frontend-main-menu-logout' => 'Cerrar la sesión',
+	'mobile-frontend-main-menu-watchlist' => 'Lista de seguimiento',
 	'mobile-frontend-main-menu-settings' => 'Configuración',
 	'mobile-frontend-main-menu-settings-heading' => 'Configuración de sitio móvil',
 	'mobile-frontend-settings-site-header' => 'Idiomas de {{SITENAME}}',
@@ -2594,6 +2611,18 @@ $messages['es'] = array(
 	'mobile-frontend-watchlist-add' => 'Se ha añadido el artículo $1 a tu lista de seguimiento',
 	'mobile-frontend-watchlist-removed' => 'Se ha eliminado el artículo $1 de tu lista de seguimiento',
 	'mobile-frontend-watchlist-view' => 'Ver tu lista de seguimiento',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'sin resumen de edición',
+	'mobile-frontend-watchlist-filter-all' => 'Todas',
+	'mobile-frontend-watchlist-filter-articles' => 'Artículos',
+	'mobile-frontend-watchlist-filter-talk' => 'Hablar',
+	'mobile-frontend-watchlist-filter-other' => 'Otras',
+	'mobile-frontend-diffview-title' => 'Cambios en $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edición|ediciones}}',
+	'mobile-frontend-diffview-anonymous' => 'Usuario anónimo',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte añadido|bytes añadidos}}',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte eliminado|bytes eliminados}}',
+	'mobile-frontend-table' => 'Tabla $1',
 );
 
 /** Estonian (eesti)
@@ -3427,6 +3456,7 @@ $messages['gl'] = array(
 	'mobile-frontend-ajax-random-question' => 'Quere ler este artigo?',
 	'mobile-frontend-ajax-random-yes' => 'Si',
 	'mobile-frontend-ajax-random-retry' => 'Intentalo de novo',
+	'mobile-frontend-ajax-random-suggestions' => 'Outras suxestións:',
 	'mobile-frontend-back-to-top-of-section' => 'Volver ao comezo da sección',
 	'mobile-frontend-close-section' => 'Pechar esta sección',
 	'mobile-frontend-show-button' => 'Mostrar',
@@ -3539,6 +3569,7 @@ $messages['gl'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Usuario anónimo',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte engadido|bytes engadidos}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte eliminado|bytes eliminados}}',
+	'mobile-frontend-table' => 'Táboa $1',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -3817,6 +3848,7 @@ $messages['he'] = array(
 	'mobile-frontend-ajax-random-question' => 'לקרוא את הערך הזה?',
 	'mobile-frontend-ajax-random-yes' => 'כן',
 	'mobile-frontend-ajax-random-retry' => 'לנסות שוב',
+	'mobile-frontend-ajax-random-suggestions' => 'הצעות אחרות:',
 	'mobile-frontend-back-to-top-of-section' => 'חזרה לקטע הקודם',
 	'mobile-frontend-close-section' => 'לסגור את החלק הזה',
 	'mobile-frontend-show-button' => 'הצגה',
@@ -3902,6 +3934,7 @@ $messages['he'] = array(
 	'mobile-frontend-main-menu-nearby' => 'בסביבה',
 	'mobile-frontend-main-menu-login' => 'כניסה לחשבון',
 	'mobile-frontend-main-menu-logout' => 'יציאה מהחשבון',
+	'mobile-frontend-main-menu-watchlist' => 'רשימת מעקב',
 	'mobile-frontend-main-menu-settings' => 'הגדרות',
 	'mobile-frontend-main-menu-settings-heading' => 'הגדרות האתר למכשירים ניידים',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} – שפות',
@@ -3917,6 +3950,17 @@ $messages['he'] = array(
 	'mobile-frontend-watchlist-add' => 'הדף $1 נוסף לרשימת המעקב שלך',
 	'mobile-frontend-watchlist-removed' => 'הדף $1 הוסר מרשימת המעקב שלך',
 	'mobile-frontend-watchlist-view' => 'הצגת רשימת המעקב שלך',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'אין תקציר עריכה',
+	'mobile-frontend-watchlist-filter-all' => 'הכול',
+	'mobile-frontend-watchlist-filter-articles' => 'ערכים',
+	'mobile-frontend-watchlist-filter-talk' => 'שיחה',
+	'mobile-frontend-watchlist-filter-other' => 'אחר',
+	'mobile-frontend-diffview-title' => 'לשנות ל{{GRAMMAR:תחילית|$1}}',
+	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|עריכה אחד|$1 עריכות}}',
+	'mobile-frontend-diffview-anonymous' => 'משתמש אלמוני',
+	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|נוסף בית אחד|נוספו $1 בתים}}',
+	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|הוסר בית אחד|הוסרו $1 בתים}}',
 );
 
 /** Hindi (हिन्दी)
@@ -4829,6 +4873,7 @@ $messages['ja'] = array(
 	'mobile-frontend-ajax-random-question' => 'この記事を読みますか?',
 	'mobile-frontend-ajax-random-yes' => 'はい',
 	'mobile-frontend-ajax-random-retry' => 'もう一度お試しください',
+	'mobile-frontend-ajax-random-suggestions' => '他のおまかせ表示:',
 	'mobile-frontend-back-to-top-of-section' => '節の先頭に戻る',
 	'mobile-frontend-close-section' => 'この節を閉じる',
 	'mobile-frontend-show-button' => '表示',
@@ -5375,6 +5420,7 @@ $messages['ko'] = array(
 	'mobile-frontend-ajax-random-question' => '이 문서를 읽을까요?',
 	'mobile-frontend-ajax-random-yes' => '예',
 	'mobile-frontend-ajax-random-retry' => '다시 시도하세요',
+	'mobile-frontend-ajax-random-suggestions' => '다른 제안:',
 	'mobile-frontend-back-to-top-of-section' => '문단 처음으로',
 	'mobile-frontend-close-section' => '이 문단 닫기',
 	'mobile-frontend-show-button' => '보이기',
@@ -5775,6 +5821,7 @@ $messages['kv'] = array(
 );
 
 /** Cornish (kernowek)
+ * @author Kernoweger
  * @author Kw-Moon
  * @author Nrowe
  */
@@ -5786,6 +5833,7 @@ $messages['kw'] = array(
 	'mobile-frontend-show-button' => 'Diskwedhes',
 	'mobile-frontend-hide-button' => 'Kudha',
 	'mobile-frontend-regular-site' => 'Gwel desktop',
+	'mobile-frontend-view' => 'Gwel pellgowsel',
 	'mobile-frontend-featured-article' => 'Erthygel diskwedhys an jydh',
 );
 
@@ -6318,6 +6366,7 @@ $messages['mk'] = array(
 	'mobile-frontend-ajax-random-question' => 'Сакате да ја прочитате статијава?',
 	'mobile-frontend-ajax-random-yes' => 'Да',
 	'mobile-frontend-ajax-random-retry' => 'Обиди се пак',
+	'mobile-frontend-ajax-random-suggestions' => 'Други предлози:',
 	'mobile-frontend-back-to-top-of-section' => 'Оди на претх. заглавие',
 	'mobile-frontend-close-section' => 'Затвори го поднасловот',
 	'mobile-frontend-show-button' => 'Прикажи',
@@ -6404,6 +6453,7 @@ $messages['mk'] = array(
 	'mobile-frontend-main-menu-nearby' => 'Околни',
 	'mobile-frontend-main-menu-login' => 'Најава',
 	'mobile-frontend-main-menu-logout' => 'Одјава',
+	'mobile-frontend-main-menu-watchlist' => 'Набљудувања',
 	'mobile-frontend-main-menu-settings' => 'Нагодувања',
 	'mobile-frontend-main-menu-settings-heading' => 'Поставки на мобилната околина',
 	'mobile-frontend-settings-site-header' => 'Јазици на {{SITENAME}}',
@@ -6419,6 +6469,18 @@ $messages['mk'] = array(
 	'mobile-frontend-watchlist-add' => 'Додадена „$1“ во набљудуваните',
 	'mobile-frontend-watchlist-removed' => 'Отстранета $1 од набљудуваните',
 	'mobile-frontend-watchlist-view' => 'Погл. вашиот список на набљудувања',
+	'mobile-frontend-changeslist-ip' => 'IP-адреса',
+	'mobile-frontend-changeslist-nocomment' => 'нема опис на уредувањето',
+	'mobile-frontend-watchlist-filter-all' => 'Сите',
+	'mobile-frontend-watchlist-filter-articles' => 'Статии',
+	'mobile-frontend-watchlist-filter-talk' => 'Разговор',
+	'mobile-frontend-watchlist-filter-other' => 'Други',
+	'mobile-frontend-diffview-title' => 'Промени на $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|уредување|уредувања}}',
+	'mobile-frontend-diffview-anonymous' => 'Анонимен корисник',
+	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Додаден $1 бајт|Додадени $1 бајти}}',
+	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Одземен $1 бајт|Одземени $1 бајти}}',
+	'mobile-frontend-table' => 'Табела $1',
 );
 
 /** Malayalam (മലയാളം)
@@ -7069,6 +7131,7 @@ $messages['nl'] = array(
 	'mobile-frontend-ajax-random-question' => 'Deze pagina lezen?',
 	'mobile-frontend-ajax-random-yes' => 'Ja',
 	'mobile-frontend-ajax-random-retry' => 'Opnieuw proberen',
+	'mobile-frontend-ajax-random-suggestions' => 'Andere suggesties:',
 	'mobile-frontend-back-to-top-of-section' => 'Een kopje terugspringen',
 	'mobile-frontend-close-section' => 'Deze paragraaf sluiten',
 	'mobile-frontend-show-button' => 'Weergeven',
@@ -7091,7 +7154,6 @@ $messages['nl'] = array(
 	'mobile-frontend-images-status' => 'Afbeeldingen',
 	'mobile-frontend-disable-images' => 'Afbeeldingen op de mobiele site uitschakelen',
 	'mobile-frontend-enable-images' => 'Afbeeldingen op de mobiele site inschakelen',
-	'mobile-frontend-toggle-images' => 'Afbeeldingen $1 / $2',
 	'mobile-frontend-missing-image' => 'Afbeelding',
 	'mobile-frontend-off' => 'UIT',
 	'mobile-frontend-on' => 'AAN',
@@ -7136,6 +7198,7 @@ Probeer het later nog een keer.',
 	'mobile-frontend-password' => 'Wachtwoord:',
 	'mobile-frontend-login' => 'Aanmelden',
 	'mobile-frontend-logout' => 'Afmelden',
+	'mobile-frontend-overlay-escape' => 'Terug',
 	'mobile-frontend-placeholder' => '{{SITENAME}} doorzoeken',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} doorzoeken (Beta)',
 	'mobile-frontend-search-help' => 'Voer de trefwoorden hierboven in. Zoekresultaten worden hier weergegeven.',
@@ -7155,6 +7218,7 @@ Probeer het later nog een keer.',
 	'mobile-frontend-main-menu-nearby' => 'In de buurt',
 	'mobile-frontend-main-menu-login' => 'Aanmelden',
 	'mobile-frontend-main-menu-logout' => 'Afmelden',
+	'mobile-frontend-main-menu-watchlist' => 'Volglijst',
 	'mobile-frontend-main-menu-settings' => 'Instellingen',
 	'mobile-frontend-main-menu-settings-heading' => 'Voorkeuren mobiel',
 	'mobile-frontend-settings-site-header' => 'Talen voor {{SITENAME}}',
@@ -7162,8 +7226,6 @@ Probeer het later nog een keer.',
 	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-page-menu-contents' => 'inhoud',
 	'mobile-frontend-page-menu-history' => 'Geschiedenis',
-	'mobile-frontend-page-menu-contents-heading' => 'Inhoud',
-	'mobile-frontend-page-menu-language-heading' => 'Deze pagina lezen in',
 	'mobile-frontend-meta-data-issues-header' => 'Verbeterpunten',
 	'mobile-frontend-meta-data-issues' => 'Er zijn verbeterpunten voor deze pagina',
 	'mobile-frontend-ajax-page-loading' => 'Bezig met laden van $1',
@@ -7172,6 +7234,18 @@ Probeer het later nog een keer.',
 	'mobile-frontend-watchlist-add' => '$1 is toegevoegd aan uw volglijst',
 	'mobile-frontend-watchlist-removed' => '$1 is verwijderd van uw volglijst',
 	'mobile-frontend-watchlist-view' => 'Volglijst bekijken',
+	'mobile-frontend-changeslist-ip' => 'IP-adres',
+	'mobile-frontend-changeslist-nocomment' => 'geen bewerkingssamenvatting',
+	'mobile-frontend-watchlist-filter-all' => 'Alle',
+	'mobile-frontend-watchlist-filter-articles' => "Pagina's",
+	'mobile-frontend-watchlist-filter-talk' => 'Overleg',
+	'mobile-frontend-watchlist-filter-other' => 'Overige',
+	'mobile-frontend-diffview-title' => 'Wijziging aan $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|bewerking|bewerkingen}}',
+	'mobile-frontend-diffview-anonymous' => 'Anonieme gebruiker',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} toegevoegd',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} verwijderd',
+	'mobile-frontend-table' => 'Tabel $1',
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -8038,6 +8112,7 @@ $messages['ro'] = array(
 	'mobile-frontend-ajax-random-question' => 'Citiți acest articol?',
 	'mobile-frontend-ajax-random-yes' => 'Da',
 	'mobile-frontend-ajax-random-retry' => 'Încercă din nou',
+	'mobile-frontend-ajax-random-suggestions' => 'Alte sugestii:',
 	'mobile-frontend-back-to-top-of-section' => 'Salt la începutul secțiunii',
 	'mobile-frontend-close-section' => 'Închide această secțiune',
 	'mobile-frontend-show-button' => 'Arată',
@@ -8123,6 +8198,7 @@ $messages['ro'] = array(
 	'mobile-frontend-main-menu-nearby' => 'În apropiere',
 	'mobile-frontend-main-menu-login' => 'Autentificare',
 	'mobile-frontend-main-menu-logout' => 'Închidere sesiune',
+	'mobile-frontend-main-menu-watchlist' => 'Pagini urmărite',
 	'mobile-frontend-main-menu-settings' => 'Setări',
 	'mobile-frontend-main-menu-settings-heading' => 'Setări site mobil',
 	'mobile-frontend-settings-site-header' => 'Limbile pentru {{SITENAME}}',
@@ -8138,6 +8214,18 @@ $messages['ro'] = array(
 	'mobile-frontend-watchlist-add' => '$1 a fost adăugată listei dumneavoastră de pagini urmărite',
 	'mobile-frontend-watchlist-removed' => '$1 a fost eliminată din lista dumneavoastră de pagini urmărite',
 	'mobile-frontend-watchlist-view' => 'Vezi lista de pagini urmărite',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'fără descrierea modificării',
+	'mobile-frontend-watchlist-filter-all' => 'Toate',
+	'mobile-frontend-watchlist-filter-articles' => 'Articole',
+	'mobile-frontend-watchlist-filter-talk' => 'Discuție',
+	'mobile-frontend-watchlist-filter-other' => 'Altele',
+	'mobile-frontend-diffview-title' => 'Modificare la $1',
+	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|o modificare|$1 modificări|$1 de modificări}}',
+	'mobile-frontend-diffview-anonymous' => 'Utilizator anonim',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet adăugat|octeți adăugați|de octeți adăugați}}',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet șters|octeți șterși|de octeți șterși}}',
+	'mobile-frontend-table' => 'Tabelul $1',
 );
 
 /** tarandíne (tarandíne)
@@ -10251,6 +10339,7 @@ $messages['vi'] = array(
 	'mobile-frontend-ajax-random-question' => 'Có muốn đọc bài này?',
 	'mobile-frontend-ajax-random-yes' => 'Có',
 	'mobile-frontend-ajax-random-retry' => 'Thử lại',
+	'mobile-frontend-ajax-random-suggestions' => 'Gợi ý khác:',
 	'mobile-frontend-back-to-top-of-section' => 'Nhảy về đầu phần',
 	'mobile-frontend-close-section' => 'Đóng phần này',
 	'mobile-frontend-show-button' => 'Hiện',
@@ -10364,6 +10453,7 @@ $messages['vi'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Người dùng vô danh',
 	'mobile-frontend-diffview-bytesadded' => 'thêm $1 byte',
 	'mobile-frontend-diffview-bytesremoved' => 'bớt $1 byte',
+	'mobile-frontend-table' => 'Bảng $1',
 );
 
 /** Volapük (Volapük)
