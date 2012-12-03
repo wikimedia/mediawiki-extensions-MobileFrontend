@@ -205,7 +205,7 @@ class MobileFormatter extends HtmlFormatter {
 		return Html::rawElement( 'a',
 				array( 'id' => 'anchor_' . $headingNumber,
 					'href' => '#section_' . $headingNumber,
-					'class' => 'section_anchors back_to_top' ),
+					'class' => 'section_anchors' ),
 				'&#8593;' . $this->msg( 'mobile-frontend-back-to-top-of-section' ) );
 	}
 	/**

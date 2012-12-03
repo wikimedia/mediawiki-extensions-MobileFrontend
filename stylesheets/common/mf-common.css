@@ -144,11 +144,6 @@ a.new:visited,
 a.new:hover {
   color: red;
 }
-a.back_to_top,
-a.back_to_top:visited {
-  margin-top: 7px;
-  color: blue;
-}
 #contentSub {
   margin-bottom: 10px;
 }

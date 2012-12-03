@@ -25,7 +25,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$summarySection = '<div id="content_0" class="content_block openSection"></div>';
-		$anchor = '<a id="anchor_1" href="#section_1" class="section_anchors back_to_top">&#8593;Jump back a section</a>';
+		$anchor = '<a id="anchor_1" href="#section_1" class="section_anchors">&#8593;Jump back a section</a>';
 
 		return array(
 			// down with infoboxes

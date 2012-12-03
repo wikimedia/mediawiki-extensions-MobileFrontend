@@ -57,11 +57,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	opacity: 1;
 }
 
-.beta .section_anchors,
-.togglingEnabled .section_anchors {
-	display: none;
-}
-
 .content_block {
 	width: 100%; // bug 41401 - without this content doesn't always take up whole width
 }
@@ -77,9 +72,17 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	border-bottom: none;
 }
 
-.togglingEnabled .openSection.section_anchors {
-	display: block;
-	margin-bottom: 5px;
+.togglingEnabled {
+	a.section_anchors {
+		display: none;
+		&.openSection {
+			display: block;
+		}
+
+		margin-bottom: 5px;
+		margin-top: 7px;
+		color: blue;
+	}
 }
 
 .togglingEnabled .openSection.content_block {
@@ -115,15 +118,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 
 .togglingEnabled .openSection.content_block {
 	display: block;
-}
-
-.section_anchors a {
-	display: block;
-}
-
-.section_anchor {
-	height: 1px;
-	width: 1px;
 }
 
 #content_wrapper .section {
