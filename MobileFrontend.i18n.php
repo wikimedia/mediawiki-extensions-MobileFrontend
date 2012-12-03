@@ -344,7 +344,6 @@ Don't translate the special page name",
 	'mobile-frontend-diffview-bytesadded' => 'Edit byte-changed counter for common mobile diff/change view when change adds bytes. $1 is byte count; may use PLURAL.',
 	'mobile-frontend-diffview-bytesremoved' => 'Edit byte-changed counter for common mobile diff/change view when change removes bytes. $1 is byte count; may use PLURAL.',
 	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. $1 is a unique table number for the article',
-
 	'mobile-frontend-saving-exit-page' => 'When a user makes an edit in the page which is happening in the background
 and then tries to leave the page this message is shown to check that they are happy that they will lose their changes.
 They can either exit the page and lose them or stay on the page until they are complete',
@@ -3117,6 +3116,7 @@ $messages['fr'] = array(
 	'mobile-frontend-ajax-random-question' => 'Lire cet article?',
 	'mobile-frontend-ajax-random-yes' => 'Oui',
 	'mobile-frontend-ajax-random-retry' => 'Essayez de nouveau',
+	'mobile-frontend-ajax-random-suggestions' => 'Autres suggestions:',
 	'mobile-frontend-back-to-top-of-section' => "Revenir d'une section",
 	'mobile-frontend-close-section' => 'Fermer cette section',
 	'mobile-frontend-show-button' => 'Afficher',
@@ -3202,6 +3202,7 @@ $messages['fr'] = array(
 	'mobile-frontend-main-menu-nearby' => 'À proximité',
 	'mobile-frontend-main-menu-login' => 'Connectez-vous',
 	'mobile-frontend-main-menu-logout' => 'Se déconnecter',
+	'mobile-frontend-main-menu-watchlist' => 'Liste de suivi',
 	'mobile-frontend-main-menu-settings' => 'Configuration',
 	'mobile-frontend-main-menu-settings-heading' => 'Paramètres pour site mobile',
 	'mobile-frontend-settings-site-header' => 'Langues de {{SITENAME}}',
@@ -3217,6 +3218,18 @@ $messages['fr'] = array(
 	'mobile-frontend-watchlist-add' => '$1 ajouté à votre liste de suivi',
 	'mobile-frontend-watchlist-removed' => '$1 retiré de votre liste de suivi',
 	'mobile-frontend-watchlist-view' => 'Afficher votre liste de surveillance',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'aucun résumé de modification',
+	'mobile-frontend-watchlist-filter-all' => 'Tous',
+	'mobile-frontend-watchlist-filter-articles' => 'Articles',
+	'mobile-frontend-watchlist-filter-talk' => 'Discussion',
+	'mobile-frontend-watchlist-filter-other' => 'Autres',
+	'mobile-frontend-diffview-title' => 'Modifier en $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|modification|modifications}}',
+	'mobile-frontend-diffview-anonymous' => 'Utilisateur anonyme',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet supprimé|octets supprimés}}',
+	'mobile-frontend-table' => 'Tableau $1',
 );
 
 /** Franco-Provençal (arpetan)
@@ -4760,6 +4773,7 @@ $messages['it'] = array(
 	'mobile-frontend-ajax-random-question' => 'Vuoi leggere questa voce?',
 	'mobile-frontend-ajax-random-yes' => 'Sì',
 	'mobile-frontend-ajax-random-retry' => 'Riprova',
+	'mobile-frontend-ajax-random-suggestions' => 'Altri suggerimenti:',
 	'mobile-frontend-back-to-top-of-section' => 'Vai a inizio sezione',
 	'mobile-frontend-close-section' => 'Chiudi questa sezione',
 	'mobile-frontend-show-button' => 'Mostra',
@@ -4872,6 +4886,7 @@ $messages['it'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Utente anonimo',
 	'mobile-frontend-diffview-bytesadded' => '$1 byte {{PLURAL:$1|aggiunto|aggiunti}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 byte {{PLURAL:$1|rimosso|rimossi}}',
+	'mobile-frontend-table' => 'Tabella $1',
 );
 
 /** Japanese (日本語)
@@ -5562,6 +5577,7 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-anonymous' => '익명 사용자',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|바이트}} 추가함',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거함',
+	'mobile-frontend-table' => '테이블 $1',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -10243,8 +10259,10 @@ $messages['uk'] = array(
 	'mobile-frontend-main-menu-nearby' => 'Поблизу',
 	'mobile-frontend-main-menu-login' => 'Увійти',
 	'mobile-frontend-main-menu-logout' => 'Вийти',
+	'mobile-frontend-main-menu-watchlist' => 'Список спостереження',
 	'mobile-frontend-main-menu-settings' => 'Налаштування',
 	'mobile-frontend-main-menu-settings-heading' => 'Налаштування мобільної версії сайту',
+	'mobile-frontend-settings-site-header' => 'Мови проекту {{SITENAME}}',
 	'mobile-frontend-main-menu-contact' => 'Контакт',
 	'mobile-frontend-page-menu-contents' => 'зміст',
 	'mobile-frontend-page-menu-history' => 'Історія',
@@ -10253,6 +10271,18 @@ $messages['uk'] = array(
 	'mobile-frontend-watchlist-add' => 'Додано $1 у ваш список спостереження',
 	'mobile-frontend-watchlist-removed' => 'Вилучено $1 з Вашого списку спостереження',
 	'mobile-frontend-watchlist-view' => 'Переглянути список спостереження',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'нема опису редагування',
+	'mobile-frontend-watchlist-filter-all' => 'Усі',
+	'mobile-frontend-watchlist-filter-articles' => 'Статті',
+	'mobile-frontend-watchlist-filter-talk' => 'Обговорення',
+	'mobile-frontend-watchlist-filter-other' => 'Інші',
+	'mobile-frontend-diffview-title' => 'Змінити на $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|редагування|редагування|редагувань}}',
+	'mobile-frontend-diffview-anonymous' => 'Анонімний користувач',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт|байти|байтів}} додано',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байти|байтів}} вилучено',
+	'mobile-frontend-table' => 'Таблиця $1',
 );
 
 /** Urdu (اردو)
