@@ -44,10 +44,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 .openSection button {
   opacity: 1;
 }
-.beta .section_anchors,
-.togglingEnabled .section_anchors {
-  display: none;
-}
 .content_block {
   width: 100%;
 }
@@ -62,9 +58,14 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 .togglingEnabled .content_block:last-child {
   border-bottom: none;
 }
-.togglingEnabled .openSection.section_anchors {
-  display: block;
+.togglingEnabled a.section_anchors {
+  display: none;
   margin-bottom: 5px;
+  margin-top: 7px;
+  color: blue;
+}
+.togglingEnabled a.section_anchors.openSection {
+  display: block;
 }
 .togglingEnabled .openSection.content_block {
   -webkit-tap-highlight-color: normal;
@@ -98,13 +99,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 .togglingEnabled .openSection.content_block {
   display: block;
-}
-.section_anchors a {
-  display: block;
-}
-.section_anchor {
-  height: 1px;
-  width: 1px;
 }
 #content_wrapper .section {
   clear: both;
