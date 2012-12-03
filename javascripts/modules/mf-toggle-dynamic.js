@@ -100,7 +100,7 @@ var T = ( function() {
 			_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
 		} );
 
-		if ( !specialPage ) {
+		if ( !specialPage && !$( '#editform' )[ 0 ] ) {
 			M.history.loadPage( pageTitle, false );
 		} else {
 			enableToggling();
