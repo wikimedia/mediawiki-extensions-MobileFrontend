@@ -134,7 +134,9 @@ M.history = ( function() {
 					sectionprop: 'level|line|anchor', sections: 'all' }
 				} ).done( function( resp ) {
 					if ( resp.error ) {
-						window.location.href = URL_TEMPLATE.replace( '$1', pageTitle );
+						if ( resp.error.code !== 'missingtitle'  ) {
+							window.location.href = URL_TEMPLATE.replace( '$1', pageTitle );
+						}
 					} else {
 						renderPage( pageTitle, resp, constructPage );
 					}
