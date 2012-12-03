@@ -154,8 +154,10 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'styles' => array( 'stylesheets/modules/mf-watchlist.css',
 		'stylesheets/modules/mf-random.css',
 		'stylesheets/modules/mf-tables.css',
+		'stylesheets/modules/mf-photo.css'
 	),
 	'scripts' => array(
+		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-random.js',
@@ -233,6 +235,13 @@ $wgResourceModules['mobile.desktop'] = array(
 /**
  * Begin configuration variables
  */
+
+/**
+ * An api to which any photos should be uploaded
+ * e.g. $wgMFPhotoUploadEndpoint = 'http://commons.wikimedia.org/w/api.php';
+ * Defaults to the current wiki
+ */
+$wgMFPhotoUploadEndpoint = '';
 
 /**
  * Path to the logo used in the mobile view

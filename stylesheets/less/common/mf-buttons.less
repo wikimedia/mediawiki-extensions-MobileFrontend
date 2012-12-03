@@ -35,4 +35,49 @@ input[type=submit] {
 	&.languageSelector {
 		margin-top: @headingMarginTop;
 	}
+
+	&.cancel {
+		border: 1px #ba0101 solid;
+		.text-with-shadow( white );
+		.vertical-gradient( #e42929, @redBase );
+
+		&:hover {
+			.vertical-gradient( #ef3838, #e82b2b );
+		}
+
+		&:active {
+			.vertical-gradient( #a70000, #a70000 );
+		}
+
+		&:disabled,
+		&:disabled.hover,
+		&.disabled,
+		&.disabled:hover {
+			@disabledColor: lighten( desaturate( #ef3838, 10% ),10% );
+			color: white;
+			.vertical-gradient( @disabledColor,@disabledColor );
+			border-color: darken( @disabledColor, 5% )	;
+		}
+	}
+
+	&.confirm {
+		border: 1px #0f9b3b solid;
+		.text-with-shadow( white );
+		.vertical-gradient( #00974b, @greenBase );
+
+		&:hover {
+			.vertical-gradient(#10a65b, #119750);
+		}
+
+		&:active {
+			.vertical-gradient(#007236, #007236);
+		}
+
+		&:disabled, &:disabled.hover, &.disabled, &.disabled:hover{
+			@disabledColor: lighten(desaturate(#10a65b,25%),5%);
+			color:white;
+			.vertical-gradient(@disabledColor,@disabledColor);
+			border-color: darken(@disabledColor,5%);
+		}
+	}
 }

@@ -1,0 +1,76 @@
+@import "../mf-mixins.less";
+
+#content_wrapper .thumb.photouploader {
+	padding: 8px;
+
+	.errormsg,
+	.msg {
+		display: none;
+	}
+
+	&.uploading {
+		.msg {
+			display: block;
+		}
+	}
+
+	&.error {
+		.errormsg {
+			color: @redBase;
+			display: block;
+			margin-bottom: 8px;
+		}
+	}
+
+	img {
+		max-width: 100%; // FIXME: this is not consistent with the default thumbnail size
+	}
+
+	.camera {
+		position: relative;
+		text-align: left; /* override text-align center - chrome not clickable */
+
+		form {
+			position: relative;
+			height: 24px;
+			width: 100%;
+			background: url(images/5-content-new-picture.png) no-repeat;
+			background-size: auto 24px;
+			background-position: left top;
+
+			input {
+				&.photoupload {
+					opacity: 0; /* hide default */
+					z-index: 2;
+					width: 100%;
+				}
+			}
+
+			p {
+				position: absolute;
+				left: 48px;
+				bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.editArea {
+		input {
+			display: block;
+			width: 100%;
+			.box-sizing( border-box );
+			height: 2em;
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+
+		button {
+			width: 48%;
+		}
+
+		button.green {
+			float: right;
+		}
+	}
+}

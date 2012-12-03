@@ -8,7 +8,7 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate( OutputPage $out ) {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents, $wgMFTrademarkSitename;
+			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate( $out );
@@ -16,6 +16,7 @@ class SkinMobile extends SkinMobileBase {
 		$title = $this->getTitle();
 		$tpl->set( 'articleTitle', $title->getPrefixedText() );
 		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
+		$tpl->set( 'ajaxLoader', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/modules/images/ajax-loader.gif' );
 		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
@@ -26,6 +27,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'imagesDisabled', $context->imagesDisabled() );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
+		$tpl->set( 'photo-upload-endpoint', $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '' );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
@@ -608,6 +610,15 @@ class SkinMobileTemplate extends BaseTemplate {
 			'mobile-frontend-overlay-escape',
 			'mobile-frontend-ajax-random-suggestions',
 			'mobile-frontend-table',
+			'mobile-frontend-photo-upload-error',
+			'mobile-frontend-photo-upload-progress',
+			'mobile-frontend-photo-caption-placeholder',
+			'mobile-frontend-image-loading',
+			'mobile-frontend-image-uploading',
+			'mobile-frontend-image-saving-to-article',
+			'mobile-frontend-photo-upload',
+			'mobile-frontend-photo-article-edit-comment',
+			'mobile-frontend-photo-upload-comment',
 		);
 		foreach ( $messages as $msg ) {
 			$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
@@ -631,6 +642,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		$jsconfig = array(
 			'messages' => array(
+				'mobile-frontend-photo-license' => wfMessage( 'mobile-frontend-photo-license' )->parse(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
 					array(
 						'href' => SpecialPage::getTitleFor( 'MobileOptions/Language' )->getLocalUrl(),
@@ -640,8 +652,10 @@ class SkinMobileTemplate extends BaseTemplate {
 			'settings' => array(
 				'action' => $this->data['action'],
 				'authenticated' => $this->data['authenticated'],
+				'photo-upload-endpoint' => $this->data['photo-upload-endpoint'],
 				'scriptPath' => $wgScriptPath,
 				'shim' => $this->data['shim'],
+				'ajaxLoader' => $this->data['ajaxLoader'],
 				'pageUrl' => $wgArticlePath,
 				'imagesDisabled' => $this->data['imagesDisabled'],
 				'beta' => $inBeta,

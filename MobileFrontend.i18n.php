@@ -166,6 +166,20 @@ $messages['en'] = array (
 
 	// tables
 	'mobile-frontend-table' => 'Table $1',
+	// confirm exit
+	'mobile-frontend-saving-exit-page' => 'Your contribution is still saving. If you leave your contributions will be lost. Are you sure you want to exit?',
+
+	// photo uploads
+	'mobile-frontend-photo-upload' => 'Add the first photo to this article',
+	'mobile-frontend-photo-article-edit-comment' => 'Added photo for use on article',
+	'mobile-frontend-photo-upload-comment' => 'Added photo to article',
+	'mobile-frontend-photo-upload-progress' => 'Uploading your image to this article',
+	'mobile-frontend-photo-caption-placeholder' => 'Add a caption for this image',
+	'mobile-frontend-image-loading' => 'Loading image',
+	'mobile-frontend-image-uploading' => 'Uploading image',
+	'mobile-frontend-photo-upload-error' => 'An error occurred whilst uploading the image. Please try another.',
+	'mobile-frontend-image-saving-to-article' => 'Saving image to article',
+	'mobile-frontend-photo-license' => 'Note: All photos you publish will be published under a [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC by SA license]',
 );
 
 /** Message documentation (Message documentation)
@@ -330,6 +344,20 @@ Don't translate the special page name",
 	'mobile-frontend-diffview-bytesadded' => 'Edit byte-changed counter for common mobile diff/change view when change adds bytes. $1 is byte count; may use PLURAL.',
 	'mobile-frontend-diffview-bytesremoved' => 'Edit byte-changed counter for common mobile diff/change view when change removes bytes. $1 is byte count; may use PLURAL.',
 	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. $1 is a unique table number for the article',
+
+	'mobile-frontend-saving-exit-page' => 'When a user makes an edit in the page which is happening in the background
+and then tries to leave the page this message is shown to check that they are happy that they will lose their changes.
+They can either exit the page and lose them or stay on the page until they are complete',
+	'mobile-frontend-photo-upload' => 'This appears on articles which have no photos and is a call to action to add the first image',
+	'mobile-frontend-photo-article-edit-comment' => 'Comment associated with edit to page that inserts the image wikitext',
+	'mobile-frontend-photo-upload-comment' => 'Comment associated with the upload of a photo',
+	'mobile-frontend-photo-upload-progress' => 'Progress message displayed whilst an upload occurs',
+	'mobile-frontend-photo-caption-placeholder' => 'Placeholder text prompting user to add a caption to a photo',
+	'mobile-frontend-image-loading' => 'Text that displays while an image is loading',
+	'mobile-frontend-image-uploading' => 'Text that displays whilst an image is being uploaded',
+	'mobile-frontend-photo-upload-error' => 'Text that displays when a photo fails to upload',
+	'mobile-frontend-image-saving-to-article' => 'Text that displays whilst the wikitext to display an image is being prepended to an article',
+	'mobile-frontend-photo-license' => 'Text notifying user of license that image will be published under. Please also update link if possible.',
 );
 
 /** Achinese (Acèh)
