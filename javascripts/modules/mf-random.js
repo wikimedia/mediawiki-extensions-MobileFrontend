@@ -42,7 +42,7 @@ var m = ( function() {
 		} ).done( function( data ) {
 			if ( !data.error && data.query && data.query.random ) {
 				curPage = data.query.random[ 0 ];
-				M.history.loadPage( curPage.title, true );
+				M.history.navigateToPage( curPage.title, true );
 				mwMobileFrontendConfig.settings.title = curPage.title;
 				makeHeader( data.query.random.slice( 1 ) );
 				$el.removeClass( 'loading' );
