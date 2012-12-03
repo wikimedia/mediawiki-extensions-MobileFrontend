@@ -2,6 +2,7 @@
 moved from beta_common.css in
 Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 */
+@import "../mf-mixins.less";
 
 .section_heading button {
 	display: none; /* for non-js browsers */
@@ -89,12 +90,17 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 	-webkit-tap-highlight-color: normal; /* fix for Bug 36196 */
 	&.loading,
 	&.ajaxError {
+		.box-sizing( border-box );
 		min-height: 48px;
-		padding-left: 48px;
-		line-height: 48px;
+		padding-top: 48px;
+		line-height: 2em;
 		background-image: url(images/ajax-loader.gif);
 		background-repeat: no-repeat;
 		background-position: left top;
+
+		button {
+			display: block;
+		}
 	}
 
 	&.loading {

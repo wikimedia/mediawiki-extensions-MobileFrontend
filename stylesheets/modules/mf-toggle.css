@@ -74,12 +74,20 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 .togglingEnabled .openSection.content_block.loading,
 .togglingEnabled .openSection.content_block.ajaxError {
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 48px;
-  padding-left: 48px;
+  padding-top: 48px;
   line-height: 48px;
   background-image: url(images/ajax-loader.gif);
   background-repeat: no-repeat;
   background-position: left top;
+}
+.togglingEnabled .openSection.content_block.loading button,
+.togglingEnabled .openSection.content_block.ajaxError button {
+  display: block;
 }
 .togglingEnabled .openSection.content_block.loading {
   background-image: url(images/ajax-loader.gif);
