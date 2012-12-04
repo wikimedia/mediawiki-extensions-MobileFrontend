@@ -1,4 +1,4 @@
-(function ($, MFEB, MFET) {
+( function ( $, MFEB ) {
 module("MobileFrontend settings.js: cookies");
 
 test("read and write cookies", function() {
@@ -25,4 +25,4 @@ test("remove cookie via write", function() {
 	strictEqual(cookieVal, null, "Cookie deleted");
 });
 
-}( jQuery, mw.mobileFrontend.getModule( 'settings' ), MobileFrontendTests, mw.mobileFrontend ) );
+}( jQuery, mw.mobileFrontend.getModule( 'settings' ) ) );

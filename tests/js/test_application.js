@@ -1,10 +1,13 @@
-(function ($, MFE, MFET) {
+( function ( $, MFE ) {
 module("MobileFrontend application.js: utils", {
 	setup: function() {
-		MFET.createFixtures();
 		var section = '<div class="t_section_heading"></div>';
 		$('<div id="mfetest">' + section + '<div id="t_section_1">' + section + '</div>').
 			appendTo('#qunit-fixture');
+		$( '<div id="mfe-test-classes" class="test hello-world goodbye camelCase">for testing classes</div>' ).appendTo( document.body );
+	},
+	teardown: function() {
+		$( '#mfe-test-classes' ).remove();
 	}
 });
 
@@ -48,13 +51,6 @@ test("removeClass", function() {
 	strictEqual($(el).hasClass("bar"), false);
 });
 
-module("MobileFrontend application.js: logo click", {
-	setup: function() {
-		MFET.createFixtures();
-		MFE.init();
-	}
-});
-
 module("MobileFrontend application.js: history", {
 	setup: function() {
 		window.location.hash = "#hash1";
@@ -67,4 +63,4 @@ test("history.replaceHash", function() {
 	strictEqual(window.location.hash, "#hash3", "the hash was set for the first time");
 });
 
-}(jQuery, mw.mobileFrontend, MobileFrontendTests));
+}( jQuery, mw.mobileFrontend ) );

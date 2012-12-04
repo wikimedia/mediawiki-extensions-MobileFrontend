@@ -6,7 +6,11 @@
 		"jQuery": true,
 		"jQueryShim": true,
 		"mw": true,
-		"mwMobileFrontendConfig": true
+		"mwMobileFrontendConfig": true,
+
+		"module": true,
+		"strictEqual": true,
+		"test": true
 	},
 
 	"browser": true,
