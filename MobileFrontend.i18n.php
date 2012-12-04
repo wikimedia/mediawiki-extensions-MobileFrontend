@@ -2003,6 +2003,17 @@ $messages['de'] = array(
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Ein Byte|$1 Byte}} hinzugefügt',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Ein Byte|$1 Byte}} entfernt',
 	'mobile-frontend-table' => 'Tabelle $1',
+	'mobile-frontend-saving-exit-page' => 'Dein Beitrag wird noch gespeichert. Beim Verlassen gehen deine Beiträge verloren. Willst du wirklich abbrechen?',
+	'mobile-frontend-photo-upload' => 'Das erste Foto zum Artikel hinzufügen',
+	'mobile-frontend-photo-article-edit-comment' => 'Foto zur Verwendung im Artikel hinzugefügt',
+	'mobile-frontend-photo-upload-comment' => 'Foto zum Artikel hinzugefügt',
+	'mobile-frontend-photo-upload-progress' => 'Lade Bild zu diesem Artikel hoch',
+	'mobile-frontend-photo-caption-placeholder' => 'Füge eine Beschreibung für dieses Bild hinzu',
+	'mobile-frontend-image-loading' => 'Lade Bild',
+	'mobile-frontend-image-uploading' => 'Lade Bild hoch',
+	'mobile-frontend-photo-upload-error' => 'Beim Hochladen des Bildes ist ein Fehler aufgetreten. Bitte versuche ein anderes.',
+	'mobile-frontend-image-saving-to-article' => 'Speichere Bild in den Artikel',
+	'mobile-frontend-photo-license' => 'Hinweis: Alle Fotos werden unter einer [//de.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported Creative-Commons-Namensnennungslizenz unter gleichen Bedingungen] veröffentlicht.',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -2170,6 +2181,15 @@ $messages['diq'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bayt|bayti}} debiyay de',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bayt|bayti}} wedariyay',
 	'mobile-frontend-table' => 'Tabloye $1',
+	'mobile-frontend-photo-upload' => 'Ena wesiqa rê resimê sıfteyêni de ke de',
+	'mobile-frontend-photo-article-edit-comment' => 'Qandê karyayışê wesiqa resim de biya',
+	'mobile-frontend-photo-upload-comment' => 'Resim de biya wesiqa',
+	'mobile-frontend-photo-upload-progress' => 'Ena wesiqe de resimê şıma yo beno bar',
+	'mobile-frontend-photo-caption-placeholder' => 'Qandê ena resim yew bınnot de ke',
+	'mobile-frontend-image-loading' => 'Resimo waneyêno',
+	'mobile-frontend-image-uploading' => 'Resimo beno bar',
+	'mobile-frontend-image-saving-to-article' => 'Wesiqa de resimo beno qeyd',
+	'mobile-frontend-photo-license' => 'Not: Fotrafê şıma hesrayışê pêro [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Lisans da CC by SA] bındı hesreyayo',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -2650,6 +2670,17 @@ $messages['es'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte añadido|bytes añadidos}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte eliminado|bytes eliminados}}',
 	'mobile-frontend-table' => 'Tabla $1',
+	'mobile-frontend-saving-exit-page' => 'Su contribución está todavía guardándose. Si abandonas tus contribuciones, se perderán. ¿Estás seguro que deseas salir?',
+	'mobile-frontend-photo-upload' => 'Añadir la primera foto a este artículo',
+	'mobile-frontend-photo-article-edit-comment' => 'Se ha añadido una foto para su uso en el artículo',
+	'mobile-frontend-photo-upload-comment' => 'Se ha añadido una foto al artículo',
+	'mobile-frontend-photo-upload-progress' => 'Subiendo tu imagen a este artículo',
+	'mobile-frontend-photo-caption-placeholder' => 'Añadir un título a esta imagen',
+	'mobile-frontend-image-loading' => 'Cargando la imagen',
+	'mobile-frontend-image-uploading' => 'Subiendo la imagen',
+	'mobile-frontend-photo-upload-error' => 'Se produjo un error mientras se cargaba la imagen. Inténtalo otra vez.',
+	'mobile-frontend-image-saving-to-article' => 'Guardando imagen en el artículo',
+	'mobile-frontend-photo-license' => 'Nota: Todas las fotos que publicas tendrán una [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licencia CC by SA]',
 );
 
 /** Estonian (eesti)
@@ -3230,6 +3261,17 @@ $messages['fr'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet supprimé|octets supprimés}}',
 	'mobile-frontend-table' => 'Tableau $1',
+	'mobile-frontend-saving-exit-page' => "Votre contribution est en train d'être enregistrée. Si vous quittez, vos contributions seront perdues. Êtes-vous sûr de vouloir sortir?",
+	'mobile-frontend-photo-upload' => 'Ajouter la première photo à cet article',
+	'mobile-frontend-photo-article-edit-comment' => "Photo ajoutée pour être utilisée dans l'article",
+	'mobile-frontend-photo-upload-comment' => "Photo ajoutée à l'article",
+	'mobile-frontend-photo-upload-progress' => 'Télécharger votre image dans cet article',
+	'mobile-frontend-photo-caption-placeholder' => 'Ajouter une légende pour cette image',
+	'mobile-frontend-image-loading' => "Chargement de l'image",
+	'mobile-frontend-image-uploading' => "Téléchargement de l'image",
+	'mobile-frontend-photo-upload-error' => "Une erreur s'est produite pendant le téléchargement de l'image. Veuillez réessayer.",
+	'mobile-frontend-image-saving-to-article' => "Enregistrement de l'image dans l'article",
+	'mobile-frontend-photo-license' => 'Remarque: Toutes les photos que vous publiez le seront sous une [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licence CC par SA]',
 );
 
 /** Franco-Provençal (arpetan)
@@ -3611,6 +3653,17 @@ $messages['gl'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte engadido|bytes engadidos}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte eliminado|bytes eliminados}}',
 	'mobile-frontend-table' => 'Táboa $1',
+	'mobile-frontend-saving-exit-page' => 'A súa achega está gardándose. Se marcha, as súas contribucións hanse perder. Está seguro de querer saír?',
+	'mobile-frontend-photo-upload' => 'Engadir a primeira fotografía a este artigo',
+	'mobile-frontend-photo-article-edit-comment' => 'Engadiuse unha fotografía para o seu uso no artigo',
+	'mobile-frontend-photo-upload-comment' => 'Engadiuse unha fotografía ao artigo',
+	'mobile-frontend-photo-upload-progress' => 'Cargando a súa imaxe neste artigo',
+	'mobile-frontend-photo-caption-placeholder' => 'Engadir un pé de foto para esta imaxe',
+	'mobile-frontend-image-loading' => 'Cargando a imaxe',
+	'mobile-frontend-image-uploading' => 'Subindo a imaxe',
+	'mobile-frontend-photo-upload-error' => 'Houbo un erro ao cargar a imaxe. Inténteo de novo.',
+	'mobile-frontend-image-saving-to-article' => 'Gardando a imaxe no artigo',
+	'mobile-frontend-photo-license' => 'Nota: Todas as fotografías que publique quedarán baixo a [//gl.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0 licenza CC by SA]',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -4002,6 +4055,18 @@ $messages['he'] = array(
 	'mobile-frontend-diffview-anonymous' => 'משתמש אלמוני',
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|נוסף בית אחד|נוספו $1 בתים}}',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|הוסר בית אחד|הוסרו $1 בתים}}',
+	'mobile-frontend-table' => 'טבלה $1',
+	'mobile-frontend-saving-exit-page' => 'תרומתך עדיין נשמרת. אם היישום ייסגר עכשיו, תרומתך תלך לאיבוד. באם ברצונך באמת לצאת?',
+	'mobile-frontend-photo-upload' => 'להוסיף את התמונה הראשונה לערך הזה',
+	'mobile-frontend-photo-article-edit-comment' => 'נוספה תמונה לשימוש בערך הזה',
+	'mobile-frontend-photo-upload-comment' => 'נוספה תמונה לערך',
+	'mobile-frontend-photo-upload-progress' => 'העלאת התמונה שלך לערך',
+	'mobile-frontend-photo-caption-placeholder' => 'הוספת כיתוב לתמונה הזאת',
+	'mobile-frontend-image-loading' => 'טעינת תמונה',
+	'mobile-frontend-image-uploading' => 'מתבצעת העלאת תמונה',
+	'mobile-frontend-photo-upload-error' => 'אירעה שגיאה בעת העלאת התמונה. נא לנסות תמונה אחרת.',
+	'mobile-frontend-image-saving-to-article' => 'שמירת התמונה לערך',
+	'mobile-frontend-photo-license' => 'הערה: כל התמונות שמוּעלות ממך מתפרסמות לפי תנאי [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License רישיון CC by SA]',
 );
 
 /** Hindi (हिन्दी)
@@ -4887,6 +4952,16 @@ $messages['it'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 byte {{PLURAL:$1|aggiunto|aggiunti}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 byte {{PLURAL:$1|rimosso|rimossi}}',
 	'mobile-frontend-table' => 'Tabella $1',
+	'mobile-frontend-photo-upload' => 'Aggiungi la prima foto a questa voce',
+	'mobile-frontend-photo-article-edit-comment' => 'Aggiungi una foto a questa voce',
+	'mobile-frontend-photo-upload-comment' => 'Aggiungi questa foto ad una voce',
+	'mobile-frontend-photo-upload-progress' => 'Caricamento immagine a questa voce',
+	'mobile-frontend-photo-caption-placeholder' => "Aggiungi una didascalia all'immagine",
+	'mobile-frontend-image-loading' => 'Caricamento immagine',
+	'mobile-frontend-image-uploading' => 'Caricamento immagine',
+	'mobile-frontend-photo-upload-error' => "Si verificato un errore durante il caricamento dell'immagine. Si prega di riprovare.",
+	'mobile-frontend-image-saving-to-article' => 'Salvataggio immagine su voce',
+	'mobile-frontend-photo-license' => 'Nota: tutte le foto pubblicate saranno rilasciate con [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licenza CC by SA]',
 );
 
 /** Japanese (日本語)
@@ -5030,6 +5105,13 @@ $messages['ja'] = array(
 	'mobile-frontend-diffview-anonymous' => '匿名利用者',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|バイト}}追加',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|バイト}}除去',
+	'mobile-frontend-saving-exit-page' => '編集内容をまだ保存中です。このまま終了すると編集内容が失われます。本当に終了しますか?',
+	'mobile-frontend-photo-article-edit-comment' => '記事で使用する写真を追加しました',
+	'mobile-frontend-photo-upload-comment' => '記事に写真を追加しました',
+	'mobile-frontend-photo-upload-progress' => 'この記事に画像をアップロード中',
+	'mobile-frontend-image-loading' => '画像を読み込み中',
+	'mobile-frontend-image-uploading' => '画像をアップロード中',
+	'mobile-frontend-image-saving-to-article' => '記事に画像を保存中',
 );
 
 /** Javanese (Basa Jawa)
@@ -5577,7 +5659,7 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-anonymous' => '익명 사용자',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|바이트}} 추가함',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거함',
-	'mobile-frontend-table' => '테이블 $1',
+	'mobile-frontend-table' => '표 $1',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -6525,6 +6607,17 @@ $messages['mk'] = array(
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Додаден $1 бајт|Додадени $1 бајти}}',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Одземен $1 бајт|Одземени $1 бајти}}',
 	'mobile-frontend-table' => 'Табела $1',
+	'mobile-frontend-saving-exit-page' => 'Вашите придонеси сè уште се зачувуваат. Доколку напуштите, ќе ги изгубите придонесите. Дали сте сигурни дека сакате да излезете?',
+	'mobile-frontend-photo-upload' => 'Стави ја првата слика во статијата',
+	'mobile-frontend-photo-article-edit-comment' => 'Ставена слика за употреба во статија',
+	'mobile-frontend-photo-upload-comment' => 'Ставена слика во статија',
+	'mobile-frontend-photo-upload-progress' => 'Подигни ја сликава во статијата',
+	'mobile-frontend-photo-caption-placeholder' => 'Ставете опис на сликата',
+	'mobile-frontend-image-loading' => 'Ја вчитувам сликата...',
+	'mobile-frontend-image-uploading' => 'Ја подигам сликата',
+	'mobile-frontend-photo-upload-error' => 'Се појави грешка при подигањето на сликата. Обидете се со друга.',
+	'mobile-frontend-image-saving-to-article' => 'Ја зачувувам сликата на статијата',
+	'mobile-frontend-photo-license' => 'Напомена: Сите слики што ги подигате ќе бидат објавени под лиценцата [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC-by-SA]',
 );
 
 /** Malayalam (മലയാളം)
@@ -6549,6 +6642,7 @@ $messages['ml'] = array(
 	'mobile-frontend-ajax-random-question' => 'ഈ ലേഖനം വായിക്കുന്നോ?',
 	'mobile-frontend-ajax-random-yes' => 'അതെ',
 	'mobile-frontend-ajax-random-retry' => 'വീണ്ടും ശ്രമിക്കുക',
+	'mobile-frontend-ajax-random-suggestions' => 'മറ്റു നിർദ്ദേശങ്ങൾ:',
 	'mobile-frontend-back-to-top-of-section' => 'ഒരു ഉപഖണ്ഡം പുറകിലേയ്ക്ക് പോവുക',
 	'mobile-frontend-close-section' => 'ഈ ഭാഗം അടയ്ക്കുക',
 	'mobile-frontend-show-button' => 'പ്രദർശിപ്പിക്കുക',
@@ -6615,6 +6709,7 @@ $messages['ml'] = array(
 	'mobile-frontend-password' => 'രഹസ്യവാക്ക്:',
 	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-logout' => 'ലോഗൗട്ട്',
+	'mobile-frontend-overlay-escape' => 'പഴയ താളിലേയ്ക്ക് മടങ്ങുക',
 	'mobile-frontend-placeholder' => '{{SITENAME}} സംരംഭത്തിൽ തിരയുക',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} (ബീറ്റ) സംരംഭത്തിൽ തിരയുക',
 	'mobile-frontend-search-help' => 'തിരയാനുള്ള പദം മുകളിൽ നൽകുക, ചേർച്ചയുള്ള ലേഖനങ്ങളുടെ തലക്കെട്ടുകൾ ഇവിടെ വരും.',
@@ -6634,6 +6729,7 @@ $messages['ml'] = array(
 	'mobile-frontend-main-menu-nearby' => 'സമീപസ്ഥം',
 	'mobile-frontend-main-menu-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-main-menu-logout' => 'ലോഗൗട്ട്',
+	'mobile-frontend-main-menu-watchlist' => 'ശ്രദ്ധിക്കുന്നവ',
 	'mobile-frontend-main-menu-settings' => 'സജ്ജീകരണങ്ങൾ',
 	'mobile-frontend-main-menu-settings-heading' => 'മൊബൈൽ സൈറ്റ് സജ്ജീകരണങ്ങൾ',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ലഭ്യമായ ഭാഷകൾ',
@@ -6641,8 +6737,6 @@ $messages['ml'] = array(
 	'mobile-frontend-main-menu-contact' => 'സമ്പർക്കം',
 	'mobile-frontend-page-menu-contents' => 'ഉള്ളടക്കം',
 	'mobile-frontend-page-menu-history' => 'നാൾവഴി',
-	'mobile-frontend-page-menu-contents-heading' => 'ഉള്ളടക്കം',
-	'mobile-frontend-page-menu-language-heading' => 'ഈ ലേഖനം വായിക്കാനുള്ള',
 	'mobile-frontend-meta-data-issues-header' => 'പ്രശ്നങ്ങൾ',
 	'mobile-frontend-meta-data-issues' => 'ഈ ലേഖനത്തിൽ ചില പ്രശ്നങ്ങളുണ്ട്',
 	'mobile-frontend-ajax-page-loading' => '$1 ശേഖരിക്കുന്നു',
@@ -6651,6 +6745,29 @@ $messages['ml'] = array(
 	'mobile-frontend-watchlist-add' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിലേയ്ക്ക് ചേർത്തു',
 	'mobile-frontend-watchlist-removed' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിൽ നിന്ന് നീക്കി',
 	'mobile-frontend-watchlist-view' => 'താങ്കൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടിക കാണുക',
+	'mobile-frontend-changeslist-ip' => 'ഐ.പി.',
+	'mobile-frontend-changeslist-nocomment' => 'തിരുത്തലിനു സംഗ്രഹമില്ല',
+	'mobile-frontend-watchlist-filter-all' => 'എല്ലാം',
+	'mobile-frontend-watchlist-filter-articles' => 'ലേഖനങ്ങൾ',
+	'mobile-frontend-watchlist-filter-talk' => 'സംവാദം',
+	'mobile-frontend-watchlist-filter-other' => 'മറ്റുള്ളവ',
+	'mobile-frontend-diffview-title' => '$1 എന്ന താളിലെ മാറ്റങ്ങൾ',
+	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|ഒരു തിരുത്തൽ|$1 തിരുത്തലുകൾ}}',
+	'mobile-frontend-diffview-anonymous' => 'അജ്ഞാത ഉപയോക്താവ്',
+	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|ഒരു ബൈറ്റ്|$1 ബൈറ്റുകൾ}} കൂട്ടിച്ചേർത്തിരിക്കുന്നു',
+	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|ഒരു ബൈറ്റ്|$1 ബൈറ്റുകൾ}} നീക്കംചെയ്തിരിക്കുന്നു',
+	'mobile-frontend-table' => 'പട്ടിക $1',
+	'mobile-frontend-saving-exit-page' => 'താങ്കളുടെ സംഭാവന ഇപ്പോഴും സേ‌വ് ചെയ്തുകൊണ്ടിരിക്കുന്നു. താങ്കൾ ഇപ്പോൾ പോവുകയാണെങ്കിൽ, താങ്കളുടെ സേവനങ്ങൾ നഷ്ടപ്പെടുന്നതാണ്. പുറത്തുകടക്കണമെന്ന് താങ്കൾക്കുറപ്പാണോ?',
+	'mobile-frontend-photo-upload' => 'ഈ ലേഖനത്തിലേയ്ക്ക് ആദ്യ ചിത്രം ചേർക്കുക',
+	'mobile-frontend-photo-article-edit-comment' => 'ലേഖനത്തിൽ ഉപയോഗിക്കാനായി ചിത്രം ചേർത്തു',
+	'mobile-frontend-photo-upload-comment' => 'ലേഖനത്തിൽ ചിത്രം ചേർത്തു',
+	'mobile-frontend-photo-upload-progress' => 'താങ്കൾ നൽകിയ ചിത്രം ഈ ലേഖനത്തിലേയ്ക്ക് അപ്‌ലോഡ് ചെയ്യുന്നു',
+	'mobile-frontend-photo-caption-placeholder' => 'ഈ ചിത്രത്തിന് ഒരു അടിക്കുറിപ്പ് ചേർക്കുക',
+	'mobile-frontend-image-loading' => 'ചിത്രം എടുക്കുന്നു',
+	'mobile-frontend-image-uploading' => 'ചിത്രം അപ്‌ലോഡ് ചെയ്യുന്നു',
+	'mobile-frontend-photo-upload-error' => 'ചിത്രം അപ്‌ലോഡ് ചെയ്തുകൊണ്ടിരിക്കെ ഒരു പിഴവുണ്ടായി. ദയവായി മറ്റൊന്ന് പരീക്ഷിക്കുക.',
+	'mobile-frontend-image-saving-to-article' => 'ചിത്രം ലേഖനത്തിൽ സേവ് ചെയ്യുന്നു',
+	'mobile-frontend-photo-license' => 'കുറിപ്പ്: താങ്കൾ പ്രസിദ്ധീകരിക്കുന്ന എല്ലാ ചിത്രങ്ങളും [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License സി.സി. ബൈ എസ്.എ. അനുവാദപത്രം] പ്രകാരമാകും പ്രസിദ്ധീകരിക്കുക',
 );
 
 /** Mongolian (монгол)
@@ -8270,6 +8387,17 @@ $messages['ro'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet adăugat|octeți adăugați|de octeți adăugați}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet șters|octeți șterși|de octeți șterși}}',
 	'mobile-frontend-table' => 'Tabelul $1',
+	'mobile-frontend-saving-exit-page' => 'Contribuția dumneavoastră încă se salvează. Dacă ieșiți, contribuțiile dumneavoastră se vor pierde. Sunteți sigur că doriți să ieșiți?',
+	'mobile-frontend-photo-upload' => 'Adaugă prima fotografie pentru acest articol',
+	'mobile-frontend-photo-article-edit-comment' => 'Fotografie adăugată pentru a fi utilizată în articol',
+	'mobile-frontend-photo-upload-comment' => 'Fotografie adăugată în articol',
+	'mobile-frontend-photo-upload-progress' => 'Se încarcă imaginea dumneavoastră la acest articol',
+	'mobile-frontend-photo-caption-placeholder' => 'Adăugați o descriere pentru această imagine',
+	'mobile-frontend-image-loading' => 'Se încarcă afișarea imaginii',
+	'mobile-frontend-image-uploading' => 'Se încarcă imaginea',
+	'mobile-frontend-photo-upload-error' => 'A apărut o eroare în timpul încărcării acestei imagini. Încercați altă imagine.',
+	'mobile-frontend-image-saving-to-article' => 'Se salvează imaginea la articol',
+	'mobile-frontend-photo-license' => 'Notă: Toate fotografiile pe care le publicați vor fi eliberate sub o licență [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC by SA]',
 );
 
 /** tarandíne (tarandíne)
