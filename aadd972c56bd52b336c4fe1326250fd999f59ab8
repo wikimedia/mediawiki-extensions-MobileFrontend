@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//6PY\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-04T22:21:51Z",
+      "side": 1,
+      "message": "please remove whitespace",
+      "revId": "aadd972c56bd52b336c4fe1326250fd999f59ab8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
