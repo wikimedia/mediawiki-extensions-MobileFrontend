@@ -170,11 +170,14 @@ class ExtMobileFrontend extends ContextSource {
 	 * SkinTemplateOutputPageBeforeExec hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinTemplateOutputPageBeforeExec
 	 *
+	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
+	 *
 	 * @param $obj Article
 	 * @param $tpl QuickTemplate
 	 * @return bool
 	 */
 	public function addMobileFooter( &$obj, &$tpl ) {
+		global $wgMobileUrlTemplate;
 		wfProfileIn( __METHOD__ );
 
 		$title = $obj->getTitle();
@@ -182,7 +185,12 @@ class ExtMobileFrontend extends ContextSource {
 
 		if ( ! $isSpecial ) {
 			$footerlinks = $tpl->data['footerlinks'];
-			$mobileViewUrl = $this->getRequest()->appendQuery( 'mobileaction=toggle_view_mobile' );
+			/**
+			 * Adds query string to force mobile view if we're not using $wgMobileUrlTemplate
+			 * This is to preserve pretty/canonical links for a happy cache where possible (eg WMF cluster)
+			 */
+			$queryString =  strlen( $wgMobileUrlTemplate ) ? '' : 'mobileaction=toggle_view_mobile';
+			$mobileViewUrl = $title->getFullURL( $queryString );
 
 			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( wfExpandUrl( $mobileViewUrl ) );
 			$link = Html::element( 'a',
