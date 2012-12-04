@@ -266,6 +266,7 @@ html.overlay {
 		display: none !important;
 	}
 
+	div.languageOverlay ul,
 	ul.content {
 		li {
 			.overlayListItem();
@@ -352,7 +353,6 @@ html.overlay {
 	position: relative;
 	opacity: 1;
 	padding: 0;
-	padding-bottom: 20px;
 	cursor: pointer;
 	margin: 0;
 	list-style: none;
@@ -396,18 +396,22 @@ body {
 	min-height: 100%;
 }
 
-#mw-mf-overlay li.mw-mf-overlay-footer,
-#mw-mf-overlay li.mw-mf-overlay-header {
+#mw-mf-overlay .mw-mf-overlay-footer,
+#mw-mf-overlay .mw-mf-overlay-header {
 	padding-top: 4px;
 	padding-bottom: 4px;
+	padding-left: @searchBoxMarginLeft;
+	margin: 0;
 	font-size: 0.8em;
+	color: #666;
+	border-bottom: solid 1px #eee;
 }
 
-#mw-mf-overlay li.mw-mf-overlay-footer a {
+#mw-mf-overlay .mw-mf-overlay-footer a {
 	color: #002BB8;
 }
 
-#mw-mf-overlay li.mw-mf-overlay-header {
+#mw-mf-overlay .mw-mf-overlay-header {
 	background-color: #F1F1F1;
 }
 

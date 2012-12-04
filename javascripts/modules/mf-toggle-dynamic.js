@@ -83,7 +83,7 @@ var T = ( function() {
 	}
 
 	function init() {
-		var pageTitle = $( 'h1' ).text(),
+		var pageTitle = M.getConfig('title'),
 			specialPage = $( '#content_wrapper' ).hasClass( 'mw-mf-special' );
 
 		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {

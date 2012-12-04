@@ -38,13 +38,14 @@ class SkinMobile extends SkinMobileBase {
 		} else {
 			$tpl->set( 'title', $out->getPageTitle() );
 		}
+		$tpl->set( 'variant', $title->getPageLanguage()->getPreferredVariant() );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		$tpl->set( 'articleClass', $title->isMainPage() || $specialPage ? 'mw-mf-special' : '' );
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
-		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) );
+		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) + 1 );
 		$tpl->set( 'siteLanguageLink', SpecialPage::getTitleFor( 'MobileOptions', 'Language' )->getLocalUrl() );
 		// @todo FIXME: Unused local variable?
 		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
@@ -298,20 +299,43 @@ mediawiki.hidpi' ), 'scripts', true, true );
 	}
 
 	public function buildLanguageSelection() {
-		global $wgLanguageCode;
 		wfProfileIn( __METHOD__ );
 		$supportedLanguages = array();
 		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['supported_languages'] ) ) {
 			$supportedLanguages = $this->hookOptions['supported_languages'];
 		}
 		$languageUrls = $this->getLanguageUrls();
-		if ( count( $languageUrls ) <= 1 ) {
+		$languageVariantUrls = $this->getLanguageVariantUrls();
+		if ( empty( $languageUrls ) && count( $languageVariantUrls ) <= 1 ) {
 			wfProfileOut( __METHOD__ );
 			return '';
 		}
 
-		$printed = 0;
-		$output = Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) );
+		// language variants list
+		if ( count( $languageVariantUrls ) > 1 ) {
+			$msgLanguageVariants = wfMessage( 'mobile-frontend-language-variant-header' )->text();
+			$languageVariants = '<p id="mw-mf-language-variant-header">' . $msgLanguageVariants . '</p>';
+			$languageVariants .= Html::openElement( 'ul', array( 'id' => 'mw-mf-language-variant-selection' ) );
+
+			foreach ( $languageVariantUrls as $languageVariantUrl ) {
+				$languageVariants .= Html::openElement( 'li' ) . Html::element( 'a',
+					array( 'href' => $languageVariantUrl['href'],
+						'lang' => $languageVariantUrl['lang'],
+						'hreflang' => $languageVariantUrl['lang']
+					),
+					$languageVariantUrl['text'] ) . Html::closeElement( 'li' );
+				}
+
+			$languageVariants .= Html::closeElement( 'ul' );
+		} else {
+			$languageVariants = '';
+		}
+
+		// languages list
+		$msgLanguages = wfMessage( 'mobile-frontend-language-header', count( $languageUrls ) )->text();
+		$languages = '<p id="mw-mf-language-header">' . $msgLanguages . '</p>';
+		$languages .= Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) );
+
 		foreach ( $languageUrls as $languageUrl ) {
 			$languageUrlHref = $languageUrl['href'];
 			$languageUrlLanguage = $languageUrl['language'];
@@ -323,30 +347,28 @@ mediawiki.hidpi' ), 'scripts', true, true );
 						urlencode( $languageUrlHref );
 				}
 			}
-			if ( $languageUrl['lang'] != $wgLanguageCode ) {
-				$printed += 1;
-				$output .= Html::openElement( 'li' ) . Html::element( 'a',
-					array( 'href' => $languageUrlHref,
-						'lang' => $languageUrl['lang'],
-						'hreflang' => $languageUrl['lang']
-					),
-					$languageUrlLanguage ) . Html::closeElement( 'li' );
-			}
+			$languages .= Html::openElement( 'li' ) . Html::element( 'a',
+				array( 'href' => $languageUrlHref,
+					'lang' => $languageUrl['lang'],
+					'hreflang' => $languageUrl['lang']
+				),
+				$languageUrlLanguage ) . Html::closeElement( 'li' );
 		}
-		$output .= Html::closeElement( 'ul' );
-		$msg = wfMessage( 'mobile-frontend-language-header', count( $languageUrls ) - 1 )->text();
+
+		$languages .= Html::closeElement( 'ul' );
+
 		$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
 		$output = <<<HTML
 			<div class="section" id="mw-mf-language-section">
 				<h2 id="section_language" class="section_heading">{$heading}</h2>
 				<div id="content_language" class="content_block">
-					<p>{$msg}</p>
-					{$output}
+					{$languageVariants}
+					{$languages}
 				</div>
 			</div>
 HTML;
 		wfProfileOut( __METHOD__ );
-		return $printed > 0 ? $output : '';
+		return $output;
 	}
 
 
@@ -356,16 +378,7 @@ HTML;
 		wfProfileIn( __METHOD__ );
 		$context = MobileContext::singleton();
 		$languageUrls = array();
-
-		$langCode = $this->getLanguage()->getHtmlCode();
 		$out = $this->getOutput();
-		$languageUrls[] = array(
-			'href' => $this->getRequest()->getFullRequestURL(),
-			'text' => $out->getHTMLTitle(),
-			'language' => $wgContLang->fetchLanguageName( $langCode ),
-			'class' => 'interwiki-' . $langCode,
-			'lang' => $langCode,
-		);
 
 		foreach ( $out->getLanguageLinks() as $l ) {
 			$tmp = explode( ':', $l, 2 );
@@ -389,6 +402,47 @@ HTML;
 		wfProfileOut( __METHOD__ );
 
 		return $languageUrls;
+	}
+
+	public function getLanguageVariantUrls() {
+		global $wgDisableLangConversion;
+
+		wfProfileIn( __METHOD__ );
+		$languageVariantUrls = array();
+		$context = MobileContext::singleton();
+		$title = $this->getRelevantTitle();
+		$user = $this->getUser();
+		$userCanRead = $title->quickUserCan( 'read', $user );
+
+		if ( $userCanRead && !$wgDisableLangConversion ) {
+			$pageLang = $title->getPageLanguage();
+			// Gets list of language variants
+			$variants = $pageLang->getVariants();
+			// Checks that language conversion is enabled and variants exist
+			// And if it is not in the special namespace
+			if ( count( $variants ) > 1 ) {
+				// Loops over each variant
+				foreach ( $variants as $code ) {
+					// Gets variant name from language code
+					$varname = $pageLang->getVariantname( $code );
+					// Checks if the variant is marked as disabled
+					if ( $varname == 'disable' ) {
+						// Skips this variant
+						continue;
+					}
+					// Appends variant link
+					$languageVariantUrls[] = (array(
+						'text' => $varname,
+						'href' => $title->getLocalURL( array( 'variant' => $code ) ),
+						'lang' => $code
+					));
+				}
+			}
+		}
+
+		wfProfileOut( __METHOD__ );
+
+		return $languageVariantUrls;
 	}
 
 	/**
@@ -652,6 +706,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'imagesDisabled' => $this->data['imagesDisabled'],
 				'beta' => $inBeta,
 				'title' => $this->data['articleTitle'],
+				'variant' => $this->data['variant'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
 				'useFormatCookieDuration' => $this->data['useFormatCookieDuration'],
 				'useFormatCookieDomain' => $this->data['useFormatCookieDomain'],

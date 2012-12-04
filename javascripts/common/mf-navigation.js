@@ -37,7 +37,6 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 		$( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
 		$( overlay ).append( contents );
-		$( contents ).addClass( 'content' );
 		if( options.locked ) { // locked overlays cannot be escaped.
 			$( '#mw-mf-overlay .header' ).addClass( 'mw-mf-locked' );
 			$( '#mw-mf-overlay #close' ).remove();

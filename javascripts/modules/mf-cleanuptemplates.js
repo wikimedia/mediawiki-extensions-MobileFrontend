@@ -5,7 +5,7 @@ var module = (function() {
 
 	function run() {
 		var $metadata = $( '#content_0 table.ambox' ),
-			$container = $( '<div>' );
+			$container = $( '<div class="content">' );
 
 		$metadata.each( function() {
 			if ( $( this ).find( 'table.ambox' ).length === 0 ) {

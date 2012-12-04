@@ -7,47 +7,44 @@ var m = ( function() {
 		return $( '#mw-mf-language-selection a' ).length;
 	}
 
-	function filterList( list, val ) {
-		var $choice, matches = 0, i,
-			$choices = $( 'li', list ),
-			totalchoices = $choices.length;
+	function filterLists( lists, val ) {
+		var matches = 0, $choices = $( 'li', lists );
 
-		for( i = 1; i < totalchoices - 1; i++ ) { // ignore header and footer
-			$choice = $choices.eq( i );
+		$choices.each( function() {
+			var $choice = $( this );
 			if ( $choice.text().toLowerCase().indexOf( val ) > -1 ) {
 				matches += 1;
 				$choice.show();
-			} else if( i > 0 ) { // don't hide header
+			} else {
 				$choice.hide();
 			}
-		}
+		} );
 
-		// reveal / hide the no results message which is the last item in the list..
-		if( matches === 0 ) {
-			$choices.eq( totalchoices - 1 ).show();
-		} else {
-			$choices.eq( totalchoices - 1 ).hide();
-		}
+		return matches;
 	}
 
 	function createLanguagePage() {
-		var ul = $( '<ul />' )[0], li, a, footer, overlay,
-			search = $( '<input type="search" class="search" id="mw-mf-language-search" >' ).
-				attr( 'placeholder', M.message( 'mobile-frontend-language-site-choose' ) ),
-			$languages = $( '#mw-mf-language-selection a' );
+		var $wrapper = $( '<div class="languageOverlay">' ), $footer, overlay, $lists,
+			$search = $( '<input type="search" class="search" id="mw-mf-language-search" >' ).
+				attr( 'placeholder', M.message( 'mobile-frontend-language-site-choose' ) );
 
-		$( '<li />' ).addClass( 'mw-mf-overlay-header' ).
-			text( $( '#mw-mf-language-section .content_block p' ).text() ).appendTo( ul );
-		$languages.each( function() {
-			var $this = $( this );
-			li = $( '<li />' ).appendTo( ul )[0];
-			a = $( '<a />' ).attr( 'href', $this.attr( 'href' ) ).text( $this.text() ).appendTo( li );
-		} );
-		footer = $( '<li />' ).addClass( 'mw-mf-overlay-footer' ).
-			html( M.message( 'mobile-frontend-language-footer' ) ).appendTo( ul );
-		overlay = createOverlay( search, ul, { hash: '#mw-mf-overlay-language' } );
+		$( '#mw-mf-language-variant-header' ).addClass( 'mw-mf-overlay-header' ).appendTo( $wrapper );
+		$( '#mw-mf-language-variant-selection' ).appendTo( $wrapper );
+		$( '#mw-mf-language-header' ).addClass( 'mw-mf-overlay-header' ).appendTo( $wrapper );
+		$( '#mw-mf-language-selection' ).appendTo( $wrapper );
+
+		$footer = $( '<p>' ).addClass( 'mw-mf-overlay-footer' ).
+			html( M.message( 'mobile-frontend-language-footer' ) ).hide().appendTo( $wrapper );
+
+		overlay = createOverlay( $search, $wrapper, { hash: '#mw-mf-overlay-language' } );
+		$lists = $( overlay ).find( 'ul' );
 		$( overlay ).find( '.search' ).on( 'keyup', function() {
-			filterList( $( overlay ).find( 'ul.content' ), this.value.toLowerCase() );
+			var matches = filterLists( $lists, this.value.toLowerCase() );
+			if ( matches > 0 ) {
+				$footer.hide();
+			} else {
+				$footer.show();
+			}
 		} );
 	}
 

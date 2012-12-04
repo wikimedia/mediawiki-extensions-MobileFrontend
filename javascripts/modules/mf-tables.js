@@ -10,7 +10,7 @@ var module = (function() {
 			var $t = $( this ),
 				$block, tableNo = i + 1,
 				sectionNo, tableId,
-				$container = $( '<div>' );
+				$container = $( '<div class="content">' );
 
 			if ( $( this ).parents( 'table' ).length === 0 ) {
 				$block = $( this ).parents( '.content_block' );

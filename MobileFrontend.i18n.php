@@ -95,6 +95,7 @@ $messages['en'] = array (
 	'mobile-frontend-language-article-heading' => 'Read in another language',
 	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-header' => 'This page is available in $1 {{PLURAL:$1|language|languages}}',
+	'mobile-frontend-language-variant-header' => 'Choose {{#language:{{CONTENTLANG}}}} variant',
 	'mobile-frontend-language-footer' => 'Note: This page may not be written in your preferred language. You can see which languages {{SITENAME}} supports by clicking here.',
 	'mobile-frontend-language-site-choose' => 'Search language',
 	'mobile-frontend-language-site-nomatches' => 'No matching languages',
@@ -275,6 +276,7 @@ Don't translate the special page name",
 	'mobile-frontend-current-language' => '{{optional}}',
 	'mobile-frontend-language-header' => 'Header at top of language selection overlay describing number of languages that it is possible to read the article in
 * $1 - number of languages',
+'mobile-frontend-language-variant-header' => 'Header at top of language selection overlay prompting a user to select variant of the current language',
 	'mobile-frontend-language-footer' => 'Footer at bottom of language selection overlay. This informs a user that if they cannot see a certain language in the list that there are other language versions of the current site that can be viewed by clicking on this link.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Header for overlay when click on language on settings page',
 	'mobile-frontend-language-site-nomatches' => 'Text for when no languages match the search',
