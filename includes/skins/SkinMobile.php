@@ -436,13 +436,13 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'notice' ) ?>
 		<?php $this->searchBox() ?>
 	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
-			<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
+			<?php if ( !$this->data['isSpecialPage'] ) { ?>
 			<div id="content">
 			<?php } ?>
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
 			<?php $this->html( 'languageSelection' ) ?>
-		<?php if ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] ) { ?>
+		<?php if ( !$this->data['isSpecialPage'] ) { ?>
 			</div><!-- close #content -->
 		<?php } ?>
 	</div><!-- close #content_wrapper -->
