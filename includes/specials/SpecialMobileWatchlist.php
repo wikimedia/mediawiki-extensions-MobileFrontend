@@ -161,8 +161,13 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$revId = $row->rc_this_oldid;
 
-		$diffTitle = Title::makeTitle( NS_SPECIAL, 'MobileDiff/' . $revId ); // @fixme this seems lame
-		$diffLink = $diffTitle->getLocalUrl();
+		if ( $revId ) {
+			$diffTitle = Title::makeTitle( NS_SPECIAL, 'MobileDiff/' . $revId ); // @fixme this seems lame
+			$diffLink = $diffTitle->getLocalUrl();
+		} else {
+			// hack -- use full log entry display
+			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalUrl();
+		}
 
 		if ( $userId == 0 ) {
 			$usernameChunk = Html::element( 'span',
