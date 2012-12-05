@@ -94,7 +94,9 @@ module = ( function() {
 				data: formData
 			} ).done( function( data ) {
 				if ( data && data.upload ) {
-					saveWikiText( data.upload, caption, token );
+					M.getToken( 'edit', function( tokenData ) {
+						saveWikiText( data.upload, caption, tokenData.tokens.edittoken );
+					} );
 				} else {
 					// do error
 					$container.removeClass( 'uploading' );

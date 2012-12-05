@@ -9,7 +9,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 }
 mw.mobileFrontend = (function() {
 	var u, modules = [],
-		scrollY, tokenQuery = {},
+		scrollY, tokenCache = {},
 		moduleNamespace = {},
 		$ = jQuery,
 		doc = document.documentElement;
@@ -146,13 +146,13 @@ mw.mobileFrontend = (function() {
 
 	function getToken( tokenType, callback, endpoint ) {
 		var data, url;
-		if ( !tokenQuery[ endpoint ] ) {
-			tokenQuery[ endpoint ] = {};
+		if ( !tokenCache[ endpoint ] ) {
+			tokenCache[ endpoint ] = {};
 		}
 		if ( !isLoggedIn() ) {
 			callback( {} ); // return no token
-		} else if ( tokenQuery.hasOwnProperty( tokenType ) ) {
-			tokenQuery[ endpoint ][ tokenType ].done( callback );
+		} else if ( tokenCache.hasOwnProperty( tokenType ) ) {
+			tokenCache[ endpoint ][ tokenType ].done( callback );
 		} else {
 			data = {
 				format: 'json',
@@ -163,7 +163,7 @@ mw.mobileFrontend = (function() {
 				data.origin = getOrigin();
 			}
 			url = endpoint || getApiUrl();
-			tokenQuery[ endpoint ][ tokenType ] = jQuery.ajax( {
+			tokenCache[ endpoint ][ tokenType ] = jQuery.ajax( {
 				url: url,
 				xhrFields: {
 					'withCredentials': true
