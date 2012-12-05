@@ -14,7 +14,10 @@
 	},
 
 	"browser": true,
+	"curly": true,
 	"eqeqeq": true,
+	"forin": false,
+	"trailing": true,
 	"undef" : true,
 	"unused": true,
 	"supernew": true
