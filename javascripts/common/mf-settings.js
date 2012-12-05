@@ -23,7 +23,7 @@ var settings = ( function() {
 		}
 
 		if ( typeof path === 'undefined' ) {
-			path = "/";
+			path = '/';
 		}
 
 		cookie = name + '=' + value + expires + '; path=' + path;

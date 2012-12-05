@@ -83,7 +83,7 @@ module = ( function() {
 
 			$.ajax( {
 				// ios seems to ignore the cache parameter so sending r parameter
-				url: api + '?action=upload&format=json&r=' + Math.random() + "&origin=" + M.getOrigin(),
+				url: api + '?action=upload&format=json&r=' + Math.random() + '&origin=' + M.getOrigin(),
 				type: 'post',
 				xhrFields: {
 					'withCredentials': true
