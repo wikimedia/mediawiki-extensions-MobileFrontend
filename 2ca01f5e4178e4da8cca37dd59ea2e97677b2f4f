@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//5Wg\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-05T17:49:32Z",
+      "side": 1,
+      "message": "this is not necessary as we\u0027re already in global scope here.",
+      "revId": "2ca01f5e4178e4da8cca37dd59ea2e97677b2f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
