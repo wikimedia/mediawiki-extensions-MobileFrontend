@@ -33,6 +33,24 @@
       "revId": "2ca01f5e4178e4da8cca37dd59ea2e97677b2f4f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//5RI\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-05T18:52:03Z",
+      "side": 1,
+      "message": "Brion is right. We use efMobileFrontend_Setup() in the same file for deferred setup - you could probably piggy-back off of that.",
+      "parentUuid": "AAADbX//5Rk\u003d",
+      "revId": "2ca01f5e4178e4da8cca37dd59ea2e97677b2f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
