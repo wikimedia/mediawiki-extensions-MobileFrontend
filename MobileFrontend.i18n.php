@@ -1068,6 +1068,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-ajax-random-question' => 'Чытацьме гэты артыкул?',
 	'mobile-frontend-ajax-random-yes' => 'Так',
 	'mobile-frontend-ajax-random-retry' => 'Паспрабуйце зноў',
+	'mobile-frontend-ajax-random-suggestions' => 'Іншыя варыянты:',
 	'mobile-frontend-back-to-top-of-section' => 'Вярнуцца да папярэдняй сэкцыі',
 	'mobile-frontend-close-section' => 'Зачыніць гэты разьдзел',
 	'mobile-frontend-show-button' => 'Паказаць',
@@ -1153,6 +1154,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-main-menu-nearby' => 'Паблізу',
 	'mobile-frontend-main-menu-login' => 'Увайсьці',
 	'mobile-frontend-main-menu-logout' => 'Выйсьці',
+	'mobile-frontend-main-menu-watchlist' => 'Сьпіс назіраньня',
 	'mobile-frontend-main-menu-settings' => 'Налады',
 	'mobile-frontend-main-menu-settings-heading' => 'Налады мабільнага сайту',
 	'mobile-frontend-settings-site-header' => 'Мовы {{GRAMMAR:родны|{{SITENAME}}}}',
@@ -1168,6 +1170,29 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-watchlist-add' => 'Артыкул «$1» дададзены ў сьпіс назіраньня',
 	'mobile-frontend-watchlist-removed' => 'Артыкул «$1» выдалены са сьпісу назіраньня',
 	'mobile-frontend-watchlist-view' => 'Праглядзець сьпіс назіраньня',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'няма апісаньня зьменаў',
+	'mobile-frontend-watchlist-filter-all' => 'Усе',
+	'mobile-frontend-watchlist-filter-articles' => 'Артыкулы',
+	'mobile-frontend-watchlist-filter-talk' => 'Абмеркаваньні',
+	'mobile-frontend-watchlist-filter-other' => 'Іншыя',
+	'mobile-frontend-diffview-title' => 'Зьмена ў «$1»',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|зьмена|зьмены|зьменаў}}',
+	'mobile-frontend-diffview-anonymous' => 'Ананімны ўдзельнік',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|байт дададзены|байты дададзена|байтаў дададзена}}',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт выдалены|байты выдалена|байтаў выдалена}}',
+	'mobile-frontend-table' => 'Табліца $1',
+	'mobile-frontend-saving-exit-page' => 'Ваш унёсак яшчэ захохоўваецца. Калі вы сыйдзеце, зьмены будуць згубленыя. Вы ўпэўненыя, што хочаце выйсьці?',
+	'mobile-frontend-photo-upload' => 'Дадайце першую выяву ў гэты артыкул',
+	'mobile-frontend-photo-article-edit-comment' => 'Дададзеная выява для выкарыстаньня ў артыкуле',
+	'mobile-frontend-photo-upload-comment' => 'Дададзеная выява ў артыкул',
+	'mobile-frontend-photo-upload-progress' => 'Загружаем вашую выяву ў гэты артыкул',
+	'mobile-frontend-photo-caption-placeholder' => 'Дадайце подпіс да гэтай выявы',
+	'mobile-frontend-image-loading' => 'Загрузка выявы',
+	'mobile-frontend-image-uploading' => 'Запампоўка выявы',
+	'mobile-frontend-photo-upload-error' => 'Пры запампоўцы выявы адбылася памылка. Паспрабуйце іншую.',
+	'mobile-frontend-image-saving-to-article' => 'Захаваньне выявы ў артыкул',
+	'mobile-frontend-photo-license' => 'Увага: усе здымкі, што вы публікуеце, пубудць даступныя на ўмовах ліцэнзіі [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA].',
 );
 
 /** Bulgarian (български)
@@ -5341,6 +5366,16 @@ $messages['kbd-cyrl'] = array(
 	'mobile-frontend-featured-article' => 'Нобэ и статья хэхар',
 );
 
+/** Khowar (کھوار)
+ * @author Rachitrali
+ */
+$messages['khw'] = array(
+	'mobile-frontend-main-menu-watchlist' => 'مہ زیرنظرفہرست',
+	'mobile-frontend-watchlist-filter-all' => 'سف',
+	'mobile-frontend-watchlist-filter-articles' => 'آرٹیکل',
+	'mobile-frontend-diffview-anonymous' => 'نوژان ممبار',
+);
+
 /** Kirmanjki (Kırmancki)
  */
 $messages['kiu'] = array(
@@ -5660,6 +5695,17 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|바이트}} 추가함',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거함',
 	'mobile-frontend-table' => '표 $1',
+	'mobile-frontend-saving-exit-page' => '기여한 내용을 아직 저장하고 있습니다. 만일 떠나면 기여한 내용을 잃게 됩니다. 정말 끝내시겠습니까?',
+	'mobile-frontend-photo-upload' => '이 문서에 첫 번째 사진 추가',
+	'mobile-frontend-photo-article-edit-comment' => '문서에 사용할 사진을 추가했습니다',
+	'mobile-frontend-photo-upload-comment' => '문서에 사진을 추가했습니다',
+	'mobile-frontend-photo-upload-progress' => '이 문서에 그림 올리는 중',
+	'mobile-frontend-photo-caption-placeholder' => '이 그림에 설명 추가',
+	'mobile-frontend-image-loading' => '그림을 불러오는 중',
+	'mobile-frontend-image-uploading' => '그림을 올리는 중',
+	'mobile-frontend-photo-upload-error' => '그림을 올리는 동안 오류가 발생했습니다. 다른 그림을 올리세요.',
+	'mobile-frontend-image-saving-to-article' => '문서에 그림 저장 중',
+	'mobile-frontend-photo-license' => '참고: 게시하는 모든 그림은 [//ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC 저작자표시 동일조건변경허락 라이선스]로 배포됩니다.',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -10640,6 +10686,17 @@ $messages['vi'] = array(
 	'mobile-frontend-diffview-bytesadded' => 'thêm $1 byte',
 	'mobile-frontend-diffview-bytesremoved' => 'bớt $1 byte',
 	'mobile-frontend-table' => 'Bảng $1',
+	'mobile-frontend-saving-exit-page' => 'Các đóng góp của bạn còn đang được lưu giữ. Nếu bạn bỏ đi, các đóng góp này sẽ bị mất. Bạn có chắc muốn thoát?',
+	'mobile-frontend-photo-upload' => 'Thêm hình đầu tiên vào bài này',
+	'mobile-frontend-photo-article-edit-comment' => 'Đã thêm hình để sử dụng trong bài',
+	'mobile-frontend-photo-upload-comment' => 'Đã thêm hình vào bài',
+	'mobile-frontend-photo-upload-progress' => 'Đang tải hình của bạn lên bài này',
+	'mobile-frontend-photo-caption-placeholder' => 'Thêm lời chú hình này',
+	'mobile-frontend-image-loading' => 'Đang tải hình',
+	'mobile-frontend-image-uploading' => 'Đang tải lên hình',
+	'mobile-frontend-photo-upload-error' => 'Đã xảy ra lỗi khi tải lên hình. Hãy thử hình khác.',
+	'mobile-frontend-image-saving-to-article' => 'Đang lưu hình vào bài',
+	'mobile-frontend-photo-license' => 'Lưu ý: Tất cả các hình ảnh mà bạn xuất bản sẽ được phát hành theo [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi giấy phép CC BY-SA].',
 );
 
 /** Volapük (Volapük)
