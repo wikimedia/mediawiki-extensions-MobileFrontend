@@ -16,6 +16,23 @@
       "revId": "2ca01f5e4178e4da8cca37dd59ea2e97677b2f4f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//5Rk\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-12-05T18:45:56Z",
+      "side": 1,
+      "message": "This won\u0027t work reliably because $wgMFEnableResourceLoader hasn\u0027t been set yet.",
+      "revId": "2ca01f5e4178e4da8cca37dd59ea2e97677b2f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
