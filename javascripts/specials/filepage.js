@@ -81,7 +81,7 @@ function addToggle(id) {
 					href = item.href,
 					hashPos = href.search('#'),
 					hash = href.substr(hashPos + 1);
-				if (hash == id) {
+				if ( hash === id ) {
 					items[i].onclick = makeToggle(id);
 				}
 			}
