@@ -85,9 +85,15 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend;
+	global $wgExtMobileFrontend, $wgMFEnableResourceLoader, $wgResourceModules;
+
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 	$wgExtMobileFrontend->attachHooks();
+
+	// in absence of ResourceLoader add additional styles
+	if ( !$wgMFEnableResourceLoader ) {
+		$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/specials/watchlist.css';
+	}
 }
 
 // Unit tests
