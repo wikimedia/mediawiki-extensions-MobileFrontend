@@ -16,8 +16,8 @@ function select(selector) {
 }
 
 function setDisplay(selector, display) {
-	var nodes = select(selector);
-	for (var i = 0; i < nodes.length; i++) {
+	var nodes = select( selector ), i;
+	for ( i = 0; i < nodes.length; i++ ) {
 		nodes[i].style.display = display;
 	}
 }
@@ -54,10 +54,10 @@ var chunks = {
 
 function makeToggle(thisId) {
 	return function() {
-		var id, i;
+		var id, i, selectors, act;
 		for ( id in chunks ) {
 			if ( chunks.hasOwnProperty( id ) ) {
-				var selectors = chunks[ id ], act;
+				selectors = chunks[ id ];
 				if ( id === thisId ) {
 					act = show;
 				} else {
@@ -72,15 +72,16 @@ function makeToggle(thisId) {
 }
 
 function addToggle(id) {
-	var filetoc = document.getElementById('filetoc');
+	var filetoc = document.getElementById( 'filetoc' ), item,
+		href, hashPos, hash, items, i;
 	if ( filetoc ) {
-		var items = filetoc.getElementsByTagName('a');
+		items = filetoc.getElementsByTagName( 'a' );
 		if ( items ) {
-			for (var i = 0; i < items.length; i++) {
-				var item = items[i],
-					href = item.href,
-					hashPos = href.search('#'),
-					hash = href.substr(hashPos + 1);
+			for ( i = 0; i < items.length; i++ ) {
+				item = items[i];
+				href = item.href;
+				hashPos = href.search( '#' );
+				hash = href.substr( hashPos + 1 );
 				if ( hash === id ) {
 					items[i].onclick = makeToggle(id);
 				}
@@ -90,9 +91,10 @@ function addToggle(id) {
 }
 
 function stopClickThrough() {
-	var file = document.getElementById('file');
+	var file = document.getElementById( 'file' ),
+		links;
 	if ( file ) {
-		var links = file.getElementsByTagName('a');
+		links = file.getElementsByTagName( 'a' );
 		if (links.length) {
 			links[0].onclick = function() {
 				return false;

@@ -66,6 +66,9 @@ MobileFrontend.navigation = (function( $ ) {
 	}
 
 	function init() {
+		var id = mfePrefix + 'overlay',
+			search = document.getElementById(  mfePrefix + 'search' );
+
 		$( '#mw-mf-menu-main a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
@@ -83,7 +86,6 @@ MobileFrontend.navigation = (function( $ ) {
 			} );
 		}
 
-		var id = mfePrefix + 'overlay';
 		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
 			if ( curPage.hash === '#' || curPage.hash === '' ) {
 				closeOverlay();
@@ -92,7 +94,6 @@ MobileFrontend.navigation = (function( $ ) {
 		if ( !document.getElementById( id ) ) {
 			$( '<div>' ).attr( 'id', id ).appendTo( document.body );
 		}
-		var search = document.getElementById(  mfePrefix + 'search' );
 
 		function toggleNavigation() {
 			var doc = document.documentElement;

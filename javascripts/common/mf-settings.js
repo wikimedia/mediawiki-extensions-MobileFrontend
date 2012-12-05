@@ -1,7 +1,7 @@
 ( function( M ) {
-var MobileFrontend = M;
+
 var settings = ( function() {
-	var u = MobileFrontend.utils,
+	var u = M.utils,
 		s = M.getConfig,
 		supportsLocalStorage;
 

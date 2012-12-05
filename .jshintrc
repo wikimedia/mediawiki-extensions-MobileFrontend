@@ -17,6 +17,7 @@
 	"curly": true,
 	"eqeqeq": true,
 	"forin": false,
+	"onevar": true,
 	"trailing": true,
 	"undef" : true,
 	"unused": true,

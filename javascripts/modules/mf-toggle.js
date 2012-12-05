@@ -1,9 +1,9 @@
 ( function( M ) {
-var MobileFrontend = M;
+
 var toggle = ( function() {
 
-	var u = MobileFrontend.utils,
-		message = MobileFrontend.message,
+	var u = M.utils,
+		message = M.message,
 		showLabel = message( 'mobile-frontend-show-button' ),
 		hideLabel = message( 'mobile-frontend-hide-button' );
 
@@ -35,7 +35,7 @@ var toggle = ( function() {
 		e.removeAttribute( 'id' );
 		hash = closed ? '#_' : '#' + id;
 		if ( hash !== '#section_nav' ) {
-			MobileFrontend.history.replaceHash( hash );
+			M.history.replaceHash( hash );
 		}
 		e.setAttribute( 'id', id );
 	}
@@ -108,8 +108,8 @@ var toggle = ( function() {
 				wm_reveal_for_hash( hash );
 			}
 			if( hash ) {
-				MobileFrontend.history.replaceHash( '#_' ); // clear existing hash for case of jump to top
-				MobileFrontend.history.replaceHash( hash );
+				M.history.replaceHash( '#_' ); // clear existing hash for case of jump to top
+				M.history.replaceHash( hash );
 			}
 		}
 		checkHash();
@@ -127,6 +127,6 @@ var toggle = ( function() {
 
 }());
 
-MobileFrontend.registerModule( 'toggle', toggle );
+M.registerModule( 'toggle', toggle );
 
 }( mw.mobileFrontend ));
