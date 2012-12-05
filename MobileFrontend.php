@@ -170,7 +170,8 @@ $wgResourceModules['mobile.startup'] = array(
 		'javascripts/common/mf-history.js',
 		'javascripts/common/mf-settings.js',
 		'javascripts/modules/mf-search.js',
-		'javascripts/modules/mf-banner.js'
+		'javascripts/modules/mf-banner.js',
+		'javascripts/modules/mf-stop-mobile-redirect.js',
 	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
@@ -262,6 +263,7 @@ $wgResourceModules['mobile.special.settings'] = array(
 		'stylesheets/specials/mf-settings.css',
 	),
 	'scripts' => array(
+		'javascripts/specials/mobileoptions.js',
 	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
