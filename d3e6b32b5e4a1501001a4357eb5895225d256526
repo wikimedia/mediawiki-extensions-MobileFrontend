@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADbX//5Vk\u003d",
+        "filename": ".jshintrc",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-12-05T18:04:18Z",
+      "side": 1,
+      "message": "There is no comment syntax in JSON. If you really must, use new lines to separate logically grouped properties.\n\nDepending on the jshint wrapper, this will result in a null pointer exception or it simply ignores the .jshintrc file.",
+      "revId": "d3e6b32b5e4a1501001a4357eb5895225d256526",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADbX//6Hg\u003d",
         "filename": "tests/js/test_references.js",
         "patchSetId": 2
