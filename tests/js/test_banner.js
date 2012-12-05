@@ -1,4 +1,4 @@
-(function ($, MFEB, MFET, settings) {
+( function ( $, MFEB, settings ) {
 var BANNER_COOKIE_NAME = "zero-rated-banner";
 module("MobileFrontend banner.js: notifications", {
 	setup: function() {
@@ -27,4 +27,4 @@ test("MobileFrontend banner.js: dismiss notification", function() {
 	strictEqual($("#zero-rated-banner").is(":visible"), false, "banner should now be hidden");
 	strictEqual(cookieEnd, "off", "banner now set for dismissal");
 });
-}( jQuery, mw.mobileFrontend.getModule( 'banner' ), MobileFrontendTests, mw.mobileFrontend.getModule( 'settings' ) ) );
+}( jQuery, mw.mobileFrontend.getModule( 'banner' ), mw.mobileFrontend.getModule( 'settings' ) ) );

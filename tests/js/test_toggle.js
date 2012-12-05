@@ -1,12 +1,25 @@
-( function ( $, MFE, MFET, toggle ) {
+( function ( $, MFE, toggle ) {
+
+var $container;
+function makeSections() {
+	$container = $( '<div id="content_wrapper">' ).appendTo( document.body );
+	$( '<h2 class="section_heading" id="section_1"><span id="First_Section">First Section</span></h2>' ).appendTo( $container );
+	$( '<div class="content_block" id="content_1"><p>Text</p></div>' ).appendTo( $container );
+	$( '<div id="anchor_1" class="section_anchors" style="display:none"><a href="#section_1" class="back_to_top">&#8593;Jump back a section</a></div>' ).appendTo( $container );
+
+	$( '<h2 class="section_heading" id="section_2">' ).appendTo( $container );
+	$( '<div class="content_block" id="content_2">' ).appendTo( $container );
+	return $container;
+}
 module("MobileFrontend toggle.js: wm_toggle_section", {
 	setup: function() {
-		MFET.createFixtures();
+		$container = makeSections();
 		toggle.init();
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
 		window.location.hash = "#";
+		$container.remove();
 	}
 });
 
@@ -38,7 +51,7 @@ test("wm_reveal_for_hash", function() {
 });
 
 test("clicking hash links", function() {
-	MFET.triggerEvent($("[href=#First_Section_2]")[0], "click");
+	$( '[href=#First_Section_2]' ).trigger( 'click' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content is visible on a toggle");
 	strictEqual($("#anchor_1").hasClass("openSection"), true, "check anchor is visible on toggle");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section marked as open");
@@ -46,20 +59,22 @@ test("clicking hash links", function() {
 
 test("clicking a heading toggles it", function() {
 	var visibilityStart = $("#content_2").hasClass("openSection");
-	MFET.triggerEvent($("#section_2")[0], 'mousedown' );
+	$( '#section_2' ).trigger( 'mousedown' );
 	strictEqual(visibilityStart, false, "check content is hidden at start");
 	strictEqual($("#content_2").hasClass("openSection"), true, "check content is shown on a toggle");
 });
 
 module("MobileFrontend toggle.js (beta): closing sections", {
 	setup: function() {
-		MFET.createFixtures();
 		$("body").addClass('beta');
+		$container = makeSections();
+
 		toggle.init();
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
 		$("body").removeClass('beta');
+		$container.remove();
 	}
 });
 
@@ -74,4 +89,4 @@ test("close a section", function() {
 	strictEqual(endVisibility, false, "clicking has hidden section content");
 });
 
-}( jQuery, mw.mobileFrontend, MobileFrontendTests, mw.mobileFrontend.getModule( 'toggle' ) ) );
+}( jQuery, mw.mobileFrontend, mw.mobileFrontend.getModule( 'toggle' ) ) );
