@@ -230,7 +230,7 @@ ul {
   list-style: square inside;
 }
 ul.hlist li {
-  display: inline;
+  display: inline-block;
   margin-right: 8px;
 }
 ol {
