@@ -14,6 +14,7 @@
 table.user-login {
   border: none;
   display: table;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 table.user-login tbody {
   display: table-row-group;
@@ -34,6 +35,8 @@ table.user-login input {
 }
 table.user-login input.loginPassword,
 table.user-login input.loginText {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.25em;
   box-sizing: border-box;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -45,4 +48,7 @@ table.user-login a.mw-mf-create-account {
   text-align: center;
   margin-top: 20px;
   display: block;
+}
+table.user-login #wpLoginAttempt {
+  font-size: 1.3em;
 }

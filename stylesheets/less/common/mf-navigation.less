@@ -291,16 +291,6 @@ html.overlay {
 		margin-bottom: @overlayAlertPadding;
 		min-height: 64px;
 
-		&.info {
-			padding-left: ( @InfoBoxWLogoSize + @overlayAlertPadding );
-			background-image: url(images/W.png);
-			padding-top: @InfoBoxWLogoSize / 4;
-			padding-bottom: @overlayAlertPadding;
-			font-size: 1.2em;
-			background-position: left center; /* no border */
-			.background-size( @InfoBoxWLogoSize, @InfoBoxWLogoSize );
-		}
-
 		&.tip {
 			border: solid @overlayBorderWidth @overlayAlertTipColor;
 			&.tip-watchlist {

@@ -404,22 +404,6 @@ html.overlay ul.content li:hover {
   margin-bottom: 8px;
   min-height: 64px;
 }
-#mw-mf-overlay .alert.info {
-  padding-left: 106px;
-  background-image: url(images/W.png);
-  padding-top: 24.5px;
-  padding-bottom: 8px;
-  font-size: 1.2em;
-  background-position: left center;
-  /* no border */
-
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: 98px 98px;
-  -o-background-size: 98px 98px;
-  -webkit-background-size: 98px 98px;
-  background-size: 98px 98px;
-}
 #mw-mf-overlay .alert.tip {
   border: solid 2px #000000;
 }

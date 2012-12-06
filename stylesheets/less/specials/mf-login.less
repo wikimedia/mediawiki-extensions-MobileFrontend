@@ -26,6 +26,7 @@
 table.user-login {
 	border: none;
 	display: table;
+	font-family: @fontFamily;
 
 	tbody {
 		display: table-row-group;
@@ -50,6 +51,8 @@ table.user-login {
 
 	input.loginPassword,
 	input.loginText {
+		font-family: @fontFamily;
+		font-size: @baseFontSize * 1.25;
 		box-sizing: border-box;
 		.border-radius(0);
 		width: 100%;
@@ -60,5 +63,9 @@ table.user-login {
 		text-align: center;
 		margin-top: 20px;
 		display: block;
+	}
+
+	#wpLoginAttempt {
+		font-size: @baseFontSize * 1.3;
 	}
 }
