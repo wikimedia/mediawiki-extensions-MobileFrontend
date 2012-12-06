@@ -21,6 +21,7 @@ class ExtMobileFrontend extends ContextSource {
 		$wgHooks['ResourceLoaderRegisterModules'][] = array( &$this, 'resourceLoaderRegisterModules' );
 		$wgHooks['ResourceLoaderGetConfigVars'][] = array( &$this, 'resourceLoaderGetConfigVars' );
 		$wgHooks['UserLoginForm'][] = array( &$this, 'renderLogin' );
+		$wgHooks['UserCreateForm'][] = array( &$this, 'renderAccountCreate' );
 		$wgHooks['SpecialPage_initList'][] = array( &$this, 'onSpecialPage_initList' );
 	}
 
@@ -320,6 +321,22 @@ class ExtMobileFrontend extends ContextSource {
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
 			$template = new UserLoginMobileTemplate( $template );
+		}
+		wfProfileOut( __METHOD__ );
+		return true;
+	}
+
+	/**
+	 * Invocation of hook UserCreateForm
+	 * @param object Account creation form template object
+	 * @return bool
+	 */
+	public function renderAccountCreate( &$template ) {
+		wfProfileIn( __METHOD__ );
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ) {
+			// to be used when we actually have account creation designs to manipulate the form
+			//$template = new UserAccountCreateMobileTemplate( $template );
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
