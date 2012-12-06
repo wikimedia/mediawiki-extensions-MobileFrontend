@@ -7811,6 +7811,7 @@ $messages['pfl'] = array(
  * @author Przemub
  * @author Rzuwig
  * @author Sp5uhe
+ * @author WTM
  * @author Woytecr
  */
 $messages['pl'] = array(
@@ -7845,7 +7846,6 @@ $messages['pl'] = array(
 	'mobile-frontend-images-status' => 'Obrazki',
 	'mobile-frontend-disable-images' => 'Wyłącz wyświetlanie grafik w wersji mobilnej',
 	'mobile-frontend-enable-images' => 'Włącz wyświetlanie grafik w wersji mobilnej',
-	'mobile-frontend-toggle-images' => 'Obrazki $1 / $2',
 	'mobile-frontend-off' => 'wyłączone',
 	'mobile-frontend-on' => 'włączone',
 	'mobile-frontend-footer-contributors' => 'Artykuł napisany przez <a href="$1">autorów</a> takich jak Ty',
@@ -7879,6 +7879,7 @@ $messages['pl'] = array(
 	'mobile-frontend-leave-feedback-thanks' => 'Dziękujemy za przesłaną opinię!',
 	'mobile-frontend-leave-feedback-post-error' => 'Wystąpił błąd podczas przetwarzania Twojej wiadomości. Spróbuj później.',
 	'mobile-frontend-language' => 'Język:',
+	'mobile-frontend-language-article-heading' => 'Przeczytaj w innym języku',
 	'mobile-frontend-language-header' => 'Ten artykuł jest dostępny w $1 {{PLURAL:$1|języku|językach}}',
 	'mobile-frontend-language-footer' => '
 {{SITENAME}}: witryna jest dostępna w innych językach.', # Fuzzy
@@ -7894,8 +7895,6 @@ $messages['pl'] = array(
 	'mobile-frontend-clear-search' => 'Wyczyść',
 	'mobile-frontend-privacy-link-text' => 'Polityka prywatności',
 	'mobile-frontend-about-link-text' => 'O aplikacji',
-	'mobile-frontend-footer-more' => 'więcej',
-	'mobile-frontend-footer-less' => 'mniej',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Treść udostępniona na licencji <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Warunki użytkowania</a>',
@@ -7911,8 +7910,6 @@ $messages['pl'] = array(
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-page-menu-contents' => 'spis treści',
 	'mobile-frontend-page-menu-history' => 'Historia',
-	'mobile-frontend-page-menu-contents-heading' => 'Spis treści',
-	'mobile-frontend-page-menu-language-heading' => 'Przeczytaj artykuł po', # Fuzzy
 );
 
 /** Piedmontese (Piemontèis)
@@ -9638,6 +9635,7 @@ $messages['sv'] = array(
 	'mobile-frontend-ajax-random-question' => 'Läs denna artikel?',
 	'mobile-frontend-ajax-random-yes' => 'Ja',
 	'mobile-frontend-ajax-random-retry' => 'Försök igen',
+	'mobile-frontend-ajax-random-suggestions' => 'Andra förslag:',
 	'mobile-frontend-back-to-top-of-section' => 'Hoppa ett avsnitt bakåt',
 	'mobile-frontend-close-section' => 'Stäng detta avsnitt',
 	'mobile-frontend-show-button' => 'Visa',
@@ -9703,7 +9701,9 @@ $messages['sv'] = array(
 	'mobile-frontend-password' => 'Lösenord:',
 	'mobile-frontend-login' => 'Logga in',
 	'mobile-frontend-logout' => 'Logga ut',
+	'mobile-frontend-overlay-escape' => 'Gå tillbaka',
 	'mobile-frontend-placeholder' => 'Sök på {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Sök i {{SITENAME}} (Beta)',
 	'mobile-frontend-search-help' => 'Skriv sökterm ovanför och matchande artikelnamn kommer att synas här.',
 	'mobile-frontend-dismiss-notification' => 'avfärda detta meddelande',
 	'mobile-frontend-clear-search' => 'Rensa',
@@ -9721,6 +9721,7 @@ $messages['sv'] = array(
 	'mobile-frontend-main-menu-nearby' => 'I närheten',
 	'mobile-frontend-main-menu-login' => 'Logga in',
 	'mobile-frontend-main-menu-logout' => 'Logga ut',
+	'mobile-frontend-main-menu-watchlist' => 'Bevakningslista',
 	'mobile-frontend-main-menu-settings' => 'Inställningar',
 	'mobile-frontend-main-menu-settings-heading' => 'Inställningar för mobilsidan',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} språk',
@@ -9733,6 +9734,32 @@ $messages['sv'] = array(
 	'mobile-frontend-ajax-page-loading' => 'Laddar $1',
 	'mobile-frontend-page-saving' => 'Sparar $1',
 	'mobile-frontend-ajax-page-error' => 'Hoppsan! Något gick fel där. Försök uppdatera webbläsaren.',
+	'mobile-frontend-watchlist-add' => 'Lade till $1 till din bevakningslista',
+	'mobile-frontend-watchlist-removed' => 'Tog bort $1 från din bevakningslista',
+	'mobile-frontend-watchlist-view' => 'Visa din bevakningslista',
+	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-nocomment' => 'ingen redigeringssammanfattning',
+	'mobile-frontend-watchlist-filter-all' => 'Alla',
+	'mobile-frontend-watchlist-filter-articles' => 'Artiklar',
+	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
+	'mobile-frontend-watchlist-filter-other' => 'Andra',
+	'mobile-frontend-diffview-title' => 'Ändra till $1',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|redigering|redigeringar}}',
+	'mobile-frontend-diffview-anonymous' => 'Anonym användare',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte}} lades till',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|}} togs bort',
+	'mobile-frontend-table' => 'Tabell $1',
+	'mobile-frontend-saving-exit-page' => 'Ditt bidrag sparas fortfarande. Om du lämnar din bidrag kommer de förloras. Är du säker på att du vill avsluta?',
+	'mobile-frontend-photo-upload' => 'Lägg till det första fotot i denna artikel',
+	'mobile-frontend-photo-article-edit-comment' => 'Lade till foto för användning på en artikel',
+	'mobile-frontend-photo-upload-comment' => 'Lade till foto på artikel',
+	'mobile-frontend-photo-upload-progress' => 'Laddar upp din bild till denna artikel',
+	'mobile-frontend-photo-caption-placeholder' => 'Lägg till en bildtext för denna bild',
+	'mobile-frontend-image-loading' => 'Läser in bild',
+	'mobile-frontend-image-uploading' => 'Laddar upp bild',
+	'mobile-frontend-photo-upload-error' => 'Ett fel uppstod när bilden skulle överföras. Var god prova en annan.',
+	'mobile-frontend-image-saving-to-article' => 'Spara bilden till artikeln',
+	'mobile-frontend-photo-license' => 'OBS: Alla foton du publicerar kommer att publiceras under licensen [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC by SA]',
 );
 
 /** Swahili (Kiswahili)
