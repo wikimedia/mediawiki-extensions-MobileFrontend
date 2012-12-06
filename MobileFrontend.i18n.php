@@ -106,7 +106,6 @@ $messages['en'] = array (
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Sign in',
-	'mobile-frontend-logout' => 'Log out',
 	// Search
 	'mobile-frontend-overlay-escape' => 'Go back',
 	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
@@ -290,7 +289,6 @@ Don't translate the special page name",
 {{Identical|Password}}',
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
 {{Identical|Log in}}',
-	'mobile-frontend-logout' => 'Button text for logout in settings page of mobile user interface',
 	'mobile-frontend-overlay-escape' => 'Text for the button to the left of search / an overlay that when clicked exits the overlay to the previous screen',
 	'mobile-frontend-placeholder' => 'Phrase used to prompt user to use search interface for mobile full screen search',
 	'mobile-frontend-search-help' => 'Help text that appears under search results when the search is focused',
