@@ -21,9 +21,6 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login' ) );
 
-		$loginHead = Html::rawElement( 'div', array( 'class' => 'alert info' ),
-			wfMessage( 'mobile-frontend-sign-in-why' )->text() );
-
 		if ( $message ) {
 			$heading = '';
 			$class = 'alert';
@@ -97,7 +94,7 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 			Html::input( 'wpLoginToken', $token, 'hidden' ) .
 			Html::closeElement( 'form' ) .
 			Html::closeElement( 'div' );
-		$login .= $loginHead . $msgBox . $form;
+		$login .= $msgBox . $form;
 		$login .= Html::closeElement( 'div' );
 		echo $login;
 	}
