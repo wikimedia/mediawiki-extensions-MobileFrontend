@@ -2,6 +2,7 @@
 
 class MobileContext extends ContextSource {
 	protected $betaGroupMember;
+	protected $alphaGroupMember;
 	protected $contentFormat = '';
 	protected $useFormatCookieName;
 	protected $disableImages;
@@ -153,6 +154,20 @@ class MobileContext extends ContextSource {
 		}
 
 		return true;
+	}
+
+	public function isAlphaGroupMember() {
+		if ( is_null( $this->alphaGroupMember ) ) {
+			$this->checkUserStatus();
+			if ( $this->getMobileAction() == 'alpha' ) {
+				$this->setAlphaGroupMember( true );
+			}
+		}
+		return $this->alphaGroupMember;
+	}
+
+	public function setAlphaGroupMember( $value ) {
+		$this->alphaGroupMember = $value;
 	}
 
 	public function isBetaGroupMember() {
@@ -342,9 +357,16 @@ class MobileContext extends ContextSource {
 		wfProfileIn( __METHOD__ );
 
 		$optInCookie = $this->getOptInOutCookie();
+		$alpha = $this->getAlphaOptInOutCookie();
 		if ( !empty( $optInCookie ) &&
 			$optInCookie == 1 ) {
 			$this->betaGroupMember = true;
+		}
+		if ( !empty( $alpha ) &&
+			$alpha == 1 ) {
+			$this->setAlphaGroupMember( true );
+		} else {
+			$this->setAlphaGroupMember( false );
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -369,6 +391,36 @@ class MobileContext extends ContextSource {
 		$wgCookiePrefix = $tempWgCookiePrefix;
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	/**
+	 * @param $value bool
+	 * @return bool
+	 */
+	public function setAlphaOptInOutCookie( $value, $disabled = false ) {
+		wfProfileIn( __METHOD__ );
+		// track opt ins
+		if ( $value ) {
+			wfIncrStats( 'mobile.alpha.opt_in_cookie_set' );
+		}
+		// track opt outs
+		if ( $disabled ) {
+			wfIncrStats( 'mobie.alpha.opt_in_cookie_unset' );
+		}
+		$cookieDomain = $this->getBaseDomain();
+		$this->getRequest()->response()->setcookie( 'mf_alpha', $value ? '1' : '', 0, '', $cookieDomain );
+		wfProfileOut( __METHOD__ );
+		return true;
+	}
+
+	/**
+	 * @return Mixed
+	 */
+	private function getAlphaOptInOutCookie() {
+		wfProfileIn( __METHOD__ );
+		$optInCookie = $this->getRequest()->getCookie( 'mf_alpha', '' );
+		wfProfileOut( __METHOD__ );
+		return $optInCookie;
 	}
 
 	/**
