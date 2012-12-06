@@ -11,7 +11,7 @@ mw.mobileFrontend = (function() {
 	var u, modules = [],
 		scrollY, tokenCache = {},
 		moduleNamespace = {},
-		$ = jQuery,
+		$ = typeof jQuery === 'undefined' ? false : jQuery,
 		doc = document.documentElement;
 
 	function message( name, arg1 ) {
