@@ -258,28 +258,6 @@ class ExtMobileFrontend extends ContextSource {
 		return true;
 	}
 
-	/**
-	 * Special-case processing for pages
-	 * @param MobileFormatter $mf
-	 */
-	protected  function doSpecialCases( MobileFormatter $mf ) {
-		wfProfileIn( __METHOD__ );
-		if ( $this->getTitle()->isSpecial( 'Userlogin' ) ) {
-			$userlogin = $mf->getDoc()->getElementById( 'userloginForm' );
-
-			if ( $userlogin && get_class( $userlogin ) === 'DOMElement' ) {
-				// make sure the 'form' element is not getting removed by the formatter
-				$itemsToRemove = $mf->getDefaultItemsToRemove();
-				$itemsToUnRemove = array_keys( $itemsToRemove, 'form' );
-				foreach ( $itemsToUnRemove as $item ) {
-					unset( $itemsToRemove[ $item ] );
-				}
-				$mf->setDefaultItemsToRemove( array_values( $itemsToRemove ) );
-			}
-		}
-		wfProfileOut( __METHOD__ );
-	}
-
 	public static function parseContentFormat( $format ) {
 		if ( $format === 'wml' ) {
 			return 'WML';
@@ -406,12 +384,6 @@ class ExtMobileFrontend extends ContextSource {
 			$this->zeroRatedBanner = $doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
 		}
 		wfProfileOut( __METHOD__ . '-zero' );
-
-		$contentHtml = $this->doSpecialCases( $formatter );
-		if ( $contentHtml ) {
-			wfProfileOut( __METHOD__ );
-			return $contentHtml;
-		}
 
 		if ( $context->getContentTransformations() ) {
 			wfProfileIn( __METHOD__ . '-filter' );
