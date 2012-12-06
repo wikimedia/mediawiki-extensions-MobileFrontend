@@ -3,7 +3,8 @@
 @InfoBoxWLogoSize: 98px;
 @overlayAlertTipColor: black;
 @overlayAlertSuccessColor: green;
-@overlayAlertErrorColor: red;
+@overlayAlertErrorBorderColor: #D00;
+@overlayAlertErrorBackgroundColor: #FAE1E1;
 @overlayAlertPadding: 8px;
 @overlayBorderWidth: 2px;
 
@@ -284,34 +285,28 @@ html.overlay {
 
 	.alert {
 		padding: @overlayAlertPadding;
-		padding-left: ( 80px + @overlayAlertPadding );
 		margin: 0 @searchBoxMarginLeft 0 @searchBoxMarginLeft;
 		background-repeat: no-repeat;
 		background-position: @overlayAlertPadding center;
 		margin-bottom: @overlayAlertPadding;
 		min-height: 64px;
-
-		&.tip {
-			border: solid @overlayBorderWidth @overlayAlertTipColor;
-			&.tip-watchlist {
-				/* TODO: swap out for better images */
-				background-image: url(../modules/images/watchlist.png);
-				background-position: -78px center;
-				.background-size( auto, 64px );
-			}
-		}
+		font-size: @baseFontSize * 1.3;
 
 		&.success {
+			padding-left: ( 80px + @overlayAlertPadding );
 			border: solid @overlayBorderWidth @overlayAlertSuccessColor;
 			background-image: url(images/success.png);
 		}
 
 		&.error {
-			border: solid @overlayBorderWidth @overlayAlertErrorColor;
-			background-image: url(images/fail.png);
+			border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
+			background-color: @overlayAlertErrorBackgroundColor;
 		}
 
 		h2 {
+			font-family: @fontFamily;
+			font-size: 100%;
+			font-weight: bold;
 			margin: 0 0 8px 0;
 		}
 	}

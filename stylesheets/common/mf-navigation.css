@@ -397,37 +397,26 @@ html.overlay ul.content li:hover {
 }
 #mw-mf-overlay .alert {
   padding: 8px;
-  padding-left: 88px;
   margin: 0 40px 0 40px;
   background-repeat: no-repeat;
   background-position: 8px center;
   margin-bottom: 8px;
   min-height: 64px;
-}
-#mw-mf-overlay .alert.tip {
-  border: solid 2px #000000;
-}
-#mw-mf-overlay .alert.tip.tip-watchlist {
-  /* TODO: swap out for better images */
-
-  background-image: url(../modules/images/watchlist.png);
-  background-position: -78px center;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: auto 64px;
-  -o-background-size: auto 64px;
-  -webkit-background-size: auto 64px;
-  background-size: auto 64px;
+  font-size: 1.3em;
 }
 #mw-mf-overlay .alert.success {
+  padding-left: 88px;
   border: solid 2px #008000;
   background-image: url(images/success.png);
 }
 #mw-mf-overlay .alert.error {
-  border: solid 2px #ff0000;
-  background-image: url(images/fail.png);
+  border: solid 2px #dd0000;
+  background-color: #fae1e1;
 }
 #mw-mf-overlay .alert h2 {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 100%;
+  font-weight: bold;
   margin: 0 0 8px 0;
 }
 .overlay .header {
