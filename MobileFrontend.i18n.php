@@ -98,6 +98,8 @@ $messages['en'] = array (
 	'mobile-frontend-language-site-nomatches' => 'No matching languages',
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
+	'mobile-frontend-username-placeholder' => 'Username',
+	'mobile-frontend-password-placeholder' => 'Password',
 	'mobile-frontend-login' => 'Sign in',
 	// Search
 	'mobile-frontend-overlay-escape' => 'Go back',
@@ -276,6 +278,8 @@ Don't translate the special page name",
 {{Identical|Username}}',
 	'mobile-frontend-password' => 'Field label for entry of password in Wikimedia mobile user interface.
 {{Identical|Password}}',
+	'mobile-frontend-username-placeholder' => 'placeholder text for username input box',
+	'mobile-frontend-password-placeholder' => 'placeholder text for password input box',
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
 {{Identical|Log in}}',
 	'mobile-frontend-overlay-escape' => 'Text for the button to the left of search / an overlay that when clicked exits the overlay to the previous screen',

@@ -54,6 +54,7 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 			Html::openElement( 'td' ) .
 			Html::input( 'wpName', $username, 'text',
 				array( 'class' => 'loginText',
+					'placeholder' => wfMessage( 'mobile-frontend-username-placeholder' )->text(),
 					'id' => 'wpName1',
 					'tabindex' => '1',
 					'size' => '20',
@@ -72,6 +73,7 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 				array( 'class' => 'mw-input' ) ) .
 			Html::input( 'wpPassword', null, 'password',
 				array( 'class' => 'loginPassword',
+					'placeholder' => wfMessage( 'mobile-frontend-password-placeholder' )->text(),
 					'id' => 'wpPassword1',
 					'tabindex' => '2',
 					'size' => '20' ) ) .
