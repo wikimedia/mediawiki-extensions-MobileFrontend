@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//3BI\u003d",
+        "filename": "includes/skins/SkinMobileWML.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-07T22:22:37Z",
+      "side": 1,
+      "message": "minor.. but if i was being really picky I\u0027d say that this whitespace fix is unrelated to the commit so shouldn\u0027t be in the patchset..",
+      "revId": "7882dfe98102f28e57b6d2e11110636eba2853f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
