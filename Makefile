@@ -25,6 +25,7 @@ less:
 	lessc stylesheets/less/modules/mf-photo.less > stylesheets/modules/mf-photo.css
 	lessc stylesheets/less/common/mf-typography.less > stylesheets/common/mf-typography.css
 	lessc stylesheets/less/actions/mf-edit.less > stylesheets/actions/mf-edit.css
+	lessc stylesheets/less/actions/mf-history.less > stylesheets/actions/mf-history.css
 	lessc stylesheets/less/specials/watchlist.less > stylesheets/specials/watchlist.css
 
 remotes:

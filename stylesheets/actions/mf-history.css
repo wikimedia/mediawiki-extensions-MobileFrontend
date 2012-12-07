@@ -1,0 +1,10 @@
+#mw-history-search select.mw-month-selector,
+#mw-history-search label {
+  display: block;
+}
+#mw-history-search ul#pagehistory {
+  margin-top: 20px;
+}
+.mw-history-legend {
+  font-size: 0.8em;
+}

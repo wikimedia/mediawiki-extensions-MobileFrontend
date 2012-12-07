@@ -196,6 +196,7 @@ $wgResourceModules['mobile.production-only'] = array(
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/actions/mf-edit.css'; // FIXME: only serve me when action=edit
+$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/actions/mf-history.css'; // FIXME: only serve me when action=edit
 
 $wgResourceModules['mobile.alpha'] = array(
 	'styles' => array(

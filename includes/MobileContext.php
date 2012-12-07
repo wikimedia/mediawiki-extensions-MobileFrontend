@@ -212,12 +212,14 @@ class MobileContext extends ContextSource {
 		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
 		$req = $this->getRequest();
+		$stableMode = !$this->isBetaGroupMember();
 		$isDiff = $req->getText( 'diff' );
-		if ( $action === 'edit' && !$this->isBetaGroupMember() ) {
+		if ( ( $action === 'edit' && $stableMode ) ||
+			 ( $action === 'history' && $stableMode ) ) {
 			return false;
 		}
 
-		if ( $action === 'history' || $isDiff ) {
+		if ( $isDiff ) {
 			return false;
 		}
 
