@@ -39,12 +39,6 @@ abstract class SkinMobileBase extends SkinTemplate {
 HTML;
 	}
 
-	public function initPage( OutputPage $out ) {
-		wfProfileIn( __METHOD__ );
-		parent::initPage( $out );
-		wfProfileOut( __METHOD__ );
-	}
-
 	public function outputPage( OutputPage $out = null ) {
 		global $wgMFNoindexPages;
 		wfProfileIn( __METHOD__ );
@@ -62,7 +56,7 @@ HTML;
 		$html = $this->extMobileFrontend->DOMParse( $out, true /* remove sections if beta */ );
 		if ( $html !== false ) {
 			wfProfileIn( __METHOD__  . '-tpl' );
-			$tpl = $this->prepareTemplate( $out );
+			$tpl = $this->prepareTemplate();
 			$tpl->set( 'bodytext', $html );
 			$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
 			$notice = '';
@@ -74,9 +68,8 @@ HTML;
 		wfProfileOut( __METHOD__ );
 	}
 
-	protected function prepareTemplate( OutputPage $out ) {
+	protected function prepareTemplate() {
 		wfProfileIn( __METHOD__ );
-		$this->setContext( $out );
 		$lang = $this->getLanguage();
 
 		$tpl = $this->setupTemplate( $this->template );

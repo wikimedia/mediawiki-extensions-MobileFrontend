@@ -6,12 +6,12 @@ class SkinMobile extends SkinMobileBase {
 	public $template = 'SkinMobileTemplate';
 	private $resourceLoader;
 
-	protected function prepareTemplate( OutputPage $out ) {
+	protected function prepareTemplate() {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
 			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint;
 
 		wfProfileIn( __METHOD__ );
-		$tpl = parent::prepareTemplate( $out );
+		$tpl = parent::prepareTemplate();
 		$out = $this->getOutput();
 		$title = $this->getTitle();
 		$tpl->set( 'articleTitle', $title->getPrefixedText() );
