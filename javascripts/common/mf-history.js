@@ -16,12 +16,12 @@ M.history = ( function() {
 
 	function updateQueryStringParameter( url, parameter, value ) {
 		var re = new RegExp( '([?|&])' + parameter + '=.*?(&|$)', 'i' ), rtn,
-			separator = url.indexOf( '?' ) !== -1 ? "&" : "?";
+			separator = url.indexOf( '?' ) !== -1 ? '&' : '?';
 
 		if ( url.match( re ) ) {
 			rtn = url.replace( re, '$1' + parameter + '=' + value + '$2' );
 		} else {
-			rtn = url + separator + parameter + "=" + value;
+			rtn = url + separator + parameter + '=' + value;
 		}
 		return rtn;
 	}

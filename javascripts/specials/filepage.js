@@ -11,7 +11,7 @@ function select(selector) {
 	} else if (selector.substr(0, 1) === '.') {
 		return document.getElementsByClassName(selector.substr(1));
 	} else {
-		throw new Error("Unrecognized selector " + selector);
+		throw new Error( 'Unrecognized selector ' + selector );
 	}
 }
 
