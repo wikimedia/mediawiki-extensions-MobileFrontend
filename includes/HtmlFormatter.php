@@ -382,10 +382,6 @@ class HtmlFormatter {
 			$removals['TAG'][] = "img";
 			$removals['TAG'][] = "audio";
 			$removals['TAG'][] = "video";
-			$removals['CLASS'][] = "thumb tright";
-			$removals['CLASS'][] = "thumb tleft";
-			$removals['CLASS'][] = "thumbcaption";
-			$removals['CLASS'][] = "gallery";
 		}
 
 		wfProfileOut( __METHOD__ );
