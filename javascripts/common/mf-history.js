@@ -27,10 +27,17 @@ M.history = ( function() {
 	}
 
 	function updateUILinks( title ) {
+		// FIXME: make this more generic
 		title = encodeURIComponent( title );
 		$( '#mw-mf-menu-main a' ).each( function() {
 			var href = $( this ).attr( 'href' );
 			$( this ).attr( 'href', updateQueryStringParameter( href, 'returnto', title ) );
+		} );
+		$( '#content_footer .notice a' ).each( function() {
+			var href = $( this ).attr( 'href' );
+			if ( href.indexOf( 'action=history' ) > -1 ) {
+				$( this ).attr( 'href', updateQueryStringParameter( href, 'title', title ) );
+			}
 		} );
 	}
 
