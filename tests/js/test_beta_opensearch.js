@@ -1,8 +1,12 @@
-(function ($, MFEOS, MFET, MFE) {
-module("beta_opensearch.js - test highlight", {
+(function ( $, MFE, MFEOS ) {
+module( 'MobileFrontend: mf-search.js - test highlight', {
 	setup: function() {
-		MFET.createFixtures();
+		$( '<form id="mw-mf-searchForm"><input id="mw-mf-search"></form>' ).appendTo( document.body );
+		$( '<div id="results">' ).appendTo( document.body );
 		MFEOS.init();
+	},
+	teardown: function() {
+		$( '#mw-mf-searchForm, #results' ).remove();
 	}
 });
 
@@ -17,7 +21,7 @@ test("writeResults with highlighted text (case differs)", function() {
 		{ label: "Hello kitty", value: "/HelloKitty" }
 	];
 	$("#mw-mf-search").val("el");
-	MFET.triggerEvent($("#mw-mf-search")[0], "keyup");
+	$( '#mw-mf-search' ).trigger( 'keyup' );
 	MFEOS.writeResults(results);
 	var pageLink = $("#results .suggestions-result a.search-result-item")[0];
 	var pageLink2 = $("#results .suggestions-result a.search-result-item")[1];
@@ -32,7 +36,7 @@ test("writeResults with highlighted text (case differs)", function() {
 		{ label: "Hello kitty", value: "/HelloKitty" }
 	];
 	$("#mw-mf-search").val("hel");
-	MFET.triggerEvent($("#mw-mf-search")[0], "keyup");
+	$( '#mw-mf-search' ).trigger( 'keyup' );
 	MFEOS.writeResults(results);
 	var pageLink = $("#results .suggestions-result a.search-result-item")[0];
 	strictEqual($(pageLink).html(), "<strong>Hel</strong>lo world", "check the highlight is correct");
@@ -44,7 +48,7 @@ test("writeResults with highlighted text (special character &amp;)", function() 
 		{ label: "Belle & the Beast", value: "/B2" }
 	];
 	$("#mw-mf-search").val("Belle & S");
-	MFET.triggerEvent($("#mw-mf-search")[0], "keyup");
+	$( '#mw-mf-search' ).trigger( 'keyup' );
 	MFEOS.writeResults(results);
 	var pageLink = $("#results .suggestions-result a.search-result-item")[0];
 	strictEqual($(pageLink).html(), "<strong>Belle &amp; S</strong>ebastian", "check the highlight is correct");
@@ -55,7 +59,7 @@ test("writeResults with highlighted text (special character ?)", function() {
 		{ label: "Title with ? in it", value: "/B1" }
 	];
 	$("#mw-mf-search").val("with ?");
-	MFET.triggerEvent($("#mw-mf-search")[0], "keyup");
+	$( '#mw-mf-search' ).trigger( 'keyup' );
 	MFEOS.writeResults(results);
 	var pageLink = $("#results .suggestions-result a.search-result-item")[0];
 	strictEqual($(pageLink).html(), "Title <strong>with ?</strong> in it", "check the highlight is correct");
@@ -66,10 +70,10 @@ test("writeResults with highlighted text (safe)", function() {
 		{ label: "<script>alert('FAIL')</script> should be safe", value: "/B1" }
 	];
 	$("#mw-mf-search").val("<script>alert('FAIL'");
-	MFET.triggerEvent($("#mw-mf-search")[0], "keyup");
+	$( '#mw-mf-search' ).trigger( 'keyup' );
 	MFEOS.writeResults(results);
 	var pageLink = $("#results .suggestions-result a.search-result-item")[0];
 	strictEqual($(pageLink).html(),
 		"<strong>&lt;script&gt;alert('FAIL'</strong>)&lt;/script&gt; should be safe", "check the highlight is correct");
 });
-}( jQuery, mw.mobileFrontend.getModule( 'opensearch' ), window.MobileFrontendTests, mw.mobileFrontend ) );
+}( jQuery, mw.mobileFrontend, mw.mobileFrontend.getModule( 'opensearch' ) ) );
