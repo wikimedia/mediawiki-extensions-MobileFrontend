@@ -747,7 +747,6 @@ $messages['as'] = array(
 	'mobile-frontend-username' => 'সদস্যনাম:',
 	'mobile-frontend-password' => 'গুপ্তশব্দ:',
 	'mobile-frontend-login' => 'প্ৰৱেশ',
-	'mobile-frontend-logout' => 'প্ৰস্থান',
 	'mobile-frontend-placeholder' => 'সন্ধান কৰক {{SITENAME}}',
 	'mobile-frontend-search-help' => 'অনুসন্ধান বিষয় ওপৰত টাইপ কৰক আৰু মিলা প্ৰবন্ধ শিৰোনামবোৰ ইয়াত দেখা পাব।',
 	'mobile-frontend-dismiss-notification' => 'এই জাননী বাতিল কৰক',
@@ -1131,7 +1130,6 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-username' => 'Імя ўдзельніка:',
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Увайсьці',
-	'mobile-frontend-logout' => 'Выйсьці',
 	'mobile-frontend-overlay-escape' => 'Вярнуцца',
 	'mobile-frontend-placeholder' => 'Шукайце ў {{GRAMMAR:месны|{{SITENAME}}}}',
 	'mobile-frontend-placeholder-beta' => 'Шукайце ў {{GRAMMAR:месны|{{SITENAME}}}} (бэта)',
@@ -1976,7 +1974,6 @@ $messages['de'] = array(
 	'mobile-frontend-username' => 'Benutzername:',
 	'mobile-frontend-password' => 'Passwort:',
 	'mobile-frontend-login' => 'Anmelden',
-	'mobile-frontend-logout' => 'Abmelden',
 	'mobile-frontend-overlay-escape' => 'Zurück',
 	'mobile-frontend-placeholder' => '{{SITENAME}} durchsuchen',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} durchsuchen (Beta)',
@@ -2154,7 +2151,6 @@ $messages['diq'] = array(
 	'mobile-frontend-username' => 'Namey karberi:',
 	'mobile-frontend-password' => 'Parola:',
 	'mobile-frontend-login' => 'Qeyd be',
-	'mobile-frontend-logout' => 'Bıvciyê',
 	'mobile-frontend-overlay-escape' => 'Peyser şo',
 	'mobile-frontend-placeholder' => '{{SITENAME}} dı cıgeyrê',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} de cı geyre (Beta)',
@@ -2644,7 +2640,6 @@ $messages['es'] = array(
 	'mobile-frontend-username' => 'Nombre de usuario:',
 	'mobile-frontend-password' => 'Contraseña:',
 	'mobile-frontend-login' => 'Iniciar sesión',
-	'mobile-frontend-logout' => 'Cerrar la sesión',
 	'mobile-frontend-overlay-escape' => 'Atrás',
 	'mobile-frontend-placeholder' => 'Buscar en {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Búsqueda en {{SITENAME}} (Beta)',
@@ -3235,7 +3230,6 @@ $messages['fr'] = array(
 	'mobile-frontend-username' => 'Nom d’utilisateur :',
 	'mobile-frontend-password' => 'Mot de passe :',
 	'mobile-frontend-login' => 'Se connecter',
-	'mobile-frontend-logout' => 'Déconnexion',
 	'mobile-frontend-overlay-escape' => 'Retour en arrière',
 	'mobile-frontend-placeholder' => 'Rechercher sur {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Rechercher {{SITENAME}} (Beta)',
@@ -3627,7 +3621,6 @@ $messages['gl'] = array(
 	'mobile-frontend-username' => 'Nome de usuario:',
 	'mobile-frontend-password' => 'Contrasinal:',
 	'mobile-frontend-login' => 'Rexistro',
-	'mobile-frontend-logout' => 'Saír',
 	'mobile-frontend-overlay-escape' => 'Volver',
 	'mobile-frontend-placeholder' => 'Procurar en {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Procurar en {{SITENAME}} (Beta)',
@@ -4030,7 +4023,6 @@ $messages['he'] = array(
 	'mobile-frontend-username' => 'שם משתמש:',
 	'mobile-frontend-password' => 'ססמה:',
 	'mobile-frontend-login' => 'כניסה',
-	'mobile-frontend-logout' => 'יציאה מהחשבון',
 	'mobile-frontend-overlay-escape' => 'לחזור',
 	'mobile-frontend-placeholder' => 'חיפוש באתר {{SITENAME}}...',
 	'mobile-frontend-placeholder-beta' => 'חיפוש באתר {{SITENAME}} (בטא)',
@@ -4926,7 +4918,6 @@ $messages['it'] = array(
 	'mobile-frontend-username' => 'Nome utente:',
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-login' => 'Entra',
-	'mobile-frontend-logout' => 'Esci',
 	'mobile-frontend-overlay-escape' => 'Indietro',
 	'mobile-frontend-placeholder' => "Cerca all'interno di {{SITENAME}}",
 	'mobile-frontend-placeholder-beta' => 'Ricerca su {{SITENAME}} (Beta)',
@@ -5080,7 +5071,6 @@ $messages['ja'] = array(
 	'mobile-frontend-username' => '利用者名:',
 	'mobile-frontend-password' => 'パスワード:',
 	'mobile-frontend-login' => 'ログイン',
-	'mobile-frontend-logout' => 'ログアウト',
 	'mobile-frontend-overlay-escape' => '戻る',
 	'mobile-frontend-placeholder' => '{{SITENAME}}内を検索',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}}内を検索 (ベータ版)',
@@ -5364,6 +5354,14 @@ $messages['kbd-cyrl'] = array(
 	'mobile-frontend-featured-article' => 'Нобэ и статья хэхар',
 );
 
+/** Kongo (Kongo)
+ * @author Dfoy
+ */
+$messages['kg'] = array(
+	'mobile-frontend-placeholder' => 'Sosila munu na {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Sosila munu na {{SITENAME}} (Beta)',
+);
+
 /** Khowar (کھوار)
  * @author Rachitrali
  */
@@ -5644,7 +5642,6 @@ $messages['ko'] = array(
 	'mobile-frontend-username' => '사용자 이름:',
 	'mobile-frontend-password' => '비밀번호:',
 	'mobile-frontend-login' => '로그인',
-	'mobile-frontend-logout' => '로그아웃',
 	'mobile-frontend-overlay-escape' => '돌아가기',
 	'mobile-frontend-placeholder' => '{{SITENAME}} 찾기',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} 찾기 (베타)',
@@ -6264,6 +6261,14 @@ $messages['lmo'] = array(
 	'mobile-frontend-featured-article' => 'Vedrína',
 );
 
+/** Lingala (lingála)
+ * @author Dfoy
+ */
+$messages['ln'] = array(
+	'mobile-frontend-placeholder' => 'Luka na {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Luka na {{SITENAME}} (Beta)',
+);
+
 /** Lithuanian (lietuvių)
  * @author Eitvys200
  * @author Vogone
@@ -6602,7 +6607,6 @@ $messages['mk'] = array(
 	'mobile-frontend-username' => 'Корисничко име:',
 	'mobile-frontend-password' => 'Лозинка:',
 	'mobile-frontend-login' => 'Најава',
-	'mobile-frontend-logout' => 'Одјава',
 	'mobile-frontend-overlay-escape' => 'Назад',
 	'mobile-frontend-placeholder' => 'Пребарајте ја {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Пребарување на {{SITENAME}} (бета)',
@@ -6752,7 +6756,6 @@ $messages['ml'] = array(
 	'mobile-frontend-username' => 'ഉപയോക്തൃനാമം:',
 	'mobile-frontend-password' => 'രഹസ്യവാക്ക്:',
 	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
-	'mobile-frontend-logout' => 'ലോഗൗട്ട്',
 	'mobile-frontend-overlay-escape' => 'പഴയ താളിലേയ്ക്ക് മടങ്ങുക',
 	'mobile-frontend-placeholder' => '{{SITENAME}} സംരംഭത്തിൽ തിരയുക',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} (ബീറ്റ) സംരംഭത്തിൽ തിരയുക',
@@ -7402,7 +7405,6 @@ Probeer het later nog een keer.',
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wachtwoord:',
 	'mobile-frontend-login' => 'Aanmelden',
-	'mobile-frontend-logout' => 'Afmelden',
 	'mobile-frontend-overlay-escape' => 'Terug',
 	'mobile-frontend-placeholder' => '{{SITENAME}} doorzoeken',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} doorzoeken (Beta)',
@@ -7886,7 +7888,6 @@ $messages['pl'] = array(
 	'mobile-frontend-username' => 'Nazwa użytkownika:',
 	'mobile-frontend-password' => 'Hasło:',
 	'mobile-frontend-login' => 'Zaloguj się',
-	'mobile-frontend-logout' => 'Wyloguj się',
 	'mobile-frontend-placeholder' => '{{SITENAME}} - Znajdź',
 	'mobile-frontend-search-help' => 'Wpisz poszukiwaną frazę powyżej, pasujące tytuły artykułów pojawią się tutaj.',
 	'mobile-frontend-dismiss-notification' => 'odrzuć to powiadomienie',
@@ -8379,7 +8380,6 @@ $messages['ro'] = array(
 	'mobile-frontend-username' => 'Nume de utilizator:',
 	'mobile-frontend-password' => 'Parolă:',
 	'mobile-frontend-login' => 'Autentificare',
-	'mobile-frontend-logout' => 'Închide sesiunea',
 	'mobile-frontend-overlay-escape' => 'Înapoi',
 	'mobile-frontend-placeholder' => 'Căutare în {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Căutare în {{SITENAME}} (beta)',
@@ -9698,7 +9698,6 @@ $messages['sv'] = array(
 	'mobile-frontend-username' => 'Användarnamn:',
 	'mobile-frontend-password' => 'Lösenord:',
 	'mobile-frontend-login' => 'Logga in',
-	'mobile-frontend-logout' => 'Logga ut',
 	'mobile-frontend-overlay-escape' => 'Gå tillbaka',
 	'mobile-frontend-placeholder' => 'Sök på {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Sök i {{SITENAME}} (Beta)',
@@ -10439,7 +10438,6 @@ $messages['uk'] = array(
 	'mobile-frontend-username' => "Ім'я користувача:",
 	'mobile-frontend-password' => 'Пароль:',
 	'mobile-frontend-login' => 'Увійти',
-	'mobile-frontend-logout' => 'Вийти',
 	'mobile-frontend-overlay-escape' => 'Повернутися',
 	'mobile-frontend-placeholder' => 'Шукати у {{GRAMMAR:genitive|{{SITENAME}}}}',
 	'mobile-frontend-placeholder-beta' => 'Пошук у {{GRAMMAR:genitive|{{SITENAME}}}} (бэта)',
@@ -10662,7 +10660,6 @@ $messages['vi'] = array(
 	'mobile-frontend-username' => 'Tên người dùng:',
 	'mobile-frontend-password' => 'Mật khẩu:',
 	'mobile-frontend-login' => 'Đăng nhập',
-	'mobile-frontend-logout' => 'Đăng xuất',
 	'mobile-frontend-overlay-escape' => 'Quay lại',
 	'mobile-frontend-placeholder' => 'Tìm kiếm {{SITENAME}}…',
 	'mobile-frontend-placeholder-beta' => 'Tìm kiếm {{SITENAME}} (Beta)',
