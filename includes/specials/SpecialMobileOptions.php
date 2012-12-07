@@ -7,11 +7,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	private $returnToTitle;
 	private $subpage;
 	private $options = array(
-		'BetaOptIn' => array( 'get' => 'betaOptInGet', 'post' => 'betaOptInPost' ),
-		'BetaOptOut' => array( 'get' => 'betaOptOutGet', 'post' => 'betaOptOutPost' ),
 		'Language' => array( 'get' => 'chooseLanguage' ),
-		'EnableImages' => array( 'get' => 'enableImages' ),
-		'DisableImages' => array( 'get' => 'disableImages' )
 	);
 
 	public function __construct() {
@@ -20,7 +16,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 
 	public function execute( $par = '' ) {
 		$context = MobileContext::singleton();
-		$out = $this->getOutput();
 
 		$this->returnToTitle = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
 		if ( !$this->returnToTitle ) {
@@ -30,27 +25,23 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		$this->setHeaders();
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
-		if( $par == '' ) {
+		if ( isset( $this->options[$par] ) ) {
+			$this->subpage = $par;
+			$option = $this->options[$par];
+
+			if ( $this->getRequest()->wasPosted() && isset( $option['post'] ) ) {
+				$func = $option['post'];
+			} else {
+				$func = $option['get'];
+			}
+			$this->$func();
+		} else {
 			if ( $this->getRequest()->wasPosted() ) {
 				$this->submitSettingsForm();
 			} else {
 				$this->getSettingsForm();
 			}
-			return;
-		} elseif ( !isset( $this->options[$par] ) ) {
-			$out->showErrorPage( 'error', 'mobile-frontend-unknown-option', array( $par ) );
-			return;
 		}
-
-		$this->subpage = $par;
-		$option = $this->options[$par];
-
-		if ( $this->getRequest()->wasPosted() && isset( $option['post'] ) ) {
-			$func = $option['post'];
-		} else {
-			$func = $option['get'];
-		}
-		$this->$func();
 	}
 
 	private function getSettingsForm() {
@@ -197,97 +188,5 @@ HTML;
 		} else {
 			return $t->getLocalURL( $params );
 		}
-	}
-
-	private function showEnquiryForm( $headingMsg, $textMsg, $yesButtonMsg, $noButtonMsg ) {
-		$out = $this->getOutput();
-		$out->setPageTitle( $this->msg( $headingMsg ) );
-
-		$out->addHTML( '
-			<p>' . $this->msg( $textMsg )->parse() . '</p>
-			<div id="disableButtons">'
-				. Html::openElement( 'form',
-					array(
-							'method' => 'POST',
-							'action' => $this->getTitle( $this->subpage )->getLocalURL(),
-						)
-					)
-				. Html::element( 'input',
-					array(
-						'name' => 'returnto',
-						'type' => 'hidden',
-						'value' => $this->returnToTitle->getFullText(),
-					)
-				)
-				. Html::element( 'button',
-					array(
-							'id' => 'disableButton',
-							'type' => 'submit',
-						),
-					$this->msg( $yesButtonMsg )->text()
-					)
-				. Html::closeElement( 'form' )
-				. Html::openElement( 'form',
-					array(
-							'method' => 'GET',
-							'action' => $this->returnToTitle->getLocalURL(),
-						)
-					)
-				. Html::element( 'button',
-					array(
-							'id' => 'backButton',
-							'type' => 'submit',
-						),
-					$this->msg( $noButtonMsg )->text()
-					)
-				. Html::closeElement( 'form' )
-			. '</div>'
-		);
-	}
-
-	private function doReturnTo() {
-		$params = array();
-		$params['t'] = md5( time() ); // this is a hack to get around the 304 response and local browser cache
-		$this->getOutput()->sendCacheControl(); // cache should already be private
-		$this->getRequest()->response()->header( 'Location: '
-			. MobileContext::singleton()->getMobileUrl( wfExpandUrl( $this->returnToTitle->getFullURL( $params ) ) ) );
-		exit;
-	}
-
-	private function betaOptInGet() {
-		$this->showEnquiryForm(
-			'mobile-frontend-opt-in-message',
-			'mobile-frontend-opt-in-explain',
-			'mobile-frontend-opt-in-yes-button',
-			'mobile-frontend-opt-in-no-button'
-		);
-	}
-
-	private function betaOptInPost() {
-		MobileContext::singleton()->setOptInOutCookie( true );
-		$this->doReturnTo();
-	}
-
-	private function betaOptOutGet() {
-		$this->showEnquiryForm(
-			'mobile-frontend-opt-out-message',
-			'mobile-frontend-opt-out-explain',
-			'mobile-frontend-opt-out-yes-button',
-			'mobile-frontend-opt-out-no-button'
-		);
-	}
-
-	private function betaOptOutPost() {
-		MobileContext::singleton()->setOptInOutCookie( false );
-		$this->doReturnTo();
-	}
-
-	private function enableImages( $enable = true ) {
-		MobileContext::singleton()->setDisableImagesCookie( !$enable );
-		$this->doReturnTo();
-	}
-
-	private function disableImages() {
-		$this->enableImages( false );
 	}
 }

@@ -51,14 +51,7 @@ $messages['en'] = array (
 	'mobile-frontend-view' => 'Mobile view',
 	'mobile-frontend-view-desktop' => 'Desktop',
 	'mobile-frontend-view-mobile' => 'Mobile',
-	'mobile-frontend-opt-in-message' => 'Join the mobile beta?',
-	'mobile-frontend-opt-in-yes-button' => 'Yes',
-	'mobile-frontend-opt-in-no-button' => 'No',
 	'mobile-frontend-opt-in-explain' => 'By joining the beta, you will get access to experimental features, at the risk of encountering bugs and issues.',
-	'mobile-frontend-opt-out-message' => 'Leave the mobile beta?',
-	'mobile-frontend-opt-out-yes-button' => 'Yes',
-	'mobile-frontend-opt-out-no-button' => 'No',
-	'mobile-frontend-opt-out-explain' => 'By leaving the mobile beta, you will disable all experimental features and return to the classic mobile experience.',
 	'mobile-frontend-images-status' => 'Images',
 	'mobile-frontend-disable-images' => 'Disable images on mobile site',
 	'mobile-frontend-enable-images' => 'Enable images on mobile site',
@@ -119,7 +112,6 @@ $messages['en'] = array (
 	'mobile-frontend-footer-license' => 'Content available under <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Terms of Use</a>',
 	'mobile-frontend-footer-contact' => 'Contact',
-	'mobile-frontend-unknown-option' => 'Unrecognised option "$1".',
 	'mobile-frontend-search-noresults' => 'No article titles match your search. Change your search, or press the keyboard search button to search inside articles.',
 
 	// Site navigation menu

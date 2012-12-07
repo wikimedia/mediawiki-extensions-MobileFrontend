@@ -233,20 +233,7 @@ class ExtMobileFrontend extends ContextSource {
 	protected function beforePageDisplay( $out ) {
 		wfProfileIn( __METHOD__ );
 
-		$request = $this->getRequest();
 		$context = MobileContext::singleton();
-		$mobileAction = $context->getMobileAction();
-
-		$bcRedirects = array(
-			'opt_in_mobile_site' => 'BetaOptIn',
-			'opt_out_mobile_site' => 'BetaOptOut',
-		);
-		if ( isset( $bcRedirects[$mobileAction] ) ) {
-			$location = SpecialMobileOptions::getUrl( $bcRedirects[$mobileAction], null, true );
-			$request->response()->header( 'Location: ' . wfExpandUrl( $location ) );
-			return false;
-		}
-
 		$context->checkUserLoggedIn();
 
 		$this->setDefaultLogo();
