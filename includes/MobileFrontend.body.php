@@ -13,9 +13,8 @@ class ExtMobileFrontend extends ContextSource {
 	public function attachHooks() {
 		global $wgHooks;
 		$wgHooks['RequestContextCreateSkin'][] = array( &$this, 'requestContextCreateSkin' );
-		$wgHooks['BeforePageRedirect'][] = array( &$this, 'beforePageRedirect' );
 		$wgHooks['SkinTemplateOutputPageBeforeExec'][] = array( &$this, 'addMobileFooter' );
-		$wgHooks['TestCanonicalRedirect'][] = array( &$this, 'testCanonicalRedirect' );
+		$wgHooks['BeforePageRedirect'][] = array( &$this, 'beforePageRedirect' );
 		$wgHooks['ResourceLoaderTestModules'][] = array( &$this, 'addTestModules' );
 		$wgHooks['GetCacheVaryCookies'][] = array( &$this, 'getCacheVaryCookies' );
 		$wgHooks['ResourceLoaderRegisterModules'][] = array( &$this, 'resourceLoaderRegisterModules' );
@@ -114,60 +113,6 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * TestCanonicalRedirect hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/TestCanonicalRedirect
-	 *
-	 * @param $request WebRequest
-	 * @param $title Title
-	 * @param $output OutputPage
-	 * @return bool
-	 * @throws HttpError
-	 */
-	public function testCanonicalRedirect( $request, $title, $output ) {
-		global $wgUsePathInfo;
-		$context = MobileContext::singleton();
-		if ( !$context->shouldDisplayMobileView() ) {
-			return true; // Let the redirect happen
-		} else {
-			if ( $title->getNamespace() == NS_SPECIAL ) {
-				list( $name, $subpage ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
-				if ( $name ) {
-					$title = SpecialPage::getTitleFor( $name, $subpage );
-				}
-			}
-			$targetUrl = wfExpandUrl( $title->getFullURL(), PROTO_CURRENT );
-			// Redirect to canonical url, make it a 301 to allow caching
-			if ( $targetUrl == $request->getFullRequestURL() ) {
-				$message = "Redirect loop detected!\n\n" .
-					"This means the wiki got confused about what page was " .
-					"requested; this sometimes happens when moving a wiki " .
-					"to a new server or changing the server configuration.\n\n";
-
-				if ( $wgUsePathInfo ) {
-					$message .= "The wiki is trying to interpret the page " .
-						"title from the URL path portion (PATH_INFO), which " .
-						"sometimes fails depending on the web server. Try " .
-						"setting \"\$wgUsePathInfo = false;\" in your " .
-						"LocalSettings.php, or check that \$wgArticlePath " .
-						"is correct.";
-				} else {
-					$message .= "Your web server was detected as possibly not " .
-						"supporting URL path components (PATH_INFO) correctly; " .
-						"check your LocalSettings.php for a customized " .
-						"\$wgArticlePath setting and/or toggle \$wgUsePathInfo " .
-						"to true.";
-				}
-				throw new HttpError( 500, $message );
-			} else {
-				$targetUrl = $context->getMobileUrl( $targetUrl );
-				$output->setSquidMaxage( 1200 );
-				$output->redirect( $targetUrl, '301' );
-			}
-			return false; // Prevent the redirect from occurring
-		}
-	}
-
-	/**
 	 * SkinTemplateOutputPageBeforeExec hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinTemplateOutputPageBeforeExec
 	 *
@@ -226,10 +171,7 @@ class ExtMobileFrontend extends ContextSource {
 			return true;
 		}
 
-		if ( $out->getTitle()->isSpecial( 'Randompage' ) ||
-				$out->getTitle()->isSpecial( 'Search' ) ) {
-			$redirect = $context->getMobileUrl( $redirect );
-		}
+		$redirect = $context->getMobileUrl( $redirect );
 
 		wfProfileOut( __METHOD__ );
 		return true;
