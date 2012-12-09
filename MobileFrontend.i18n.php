@@ -142,7 +142,7 @@ $messages['en'] = array (
 	'mobile-frontend-watchlist-removed' => 'Removed $1 from your watchlist',
 	'mobile-frontend-watchlist-view' => 'View your watchlist',
 
-	'mobile-frontend-changeslist-ip' => 'IP',
+	'mobile-frontend-changeslist-ip' => 'Anonymous user',
 	'mobile-frontend-changeslist-nocomment' => 'no edit summary',
 	'mobile-frontend-watchlist-filter-all' => 'All',
 	'mobile-frontend-watchlist-filter-articles' => 'Articles',
