@@ -168,7 +168,7 @@ $messages['en'] = array (
 	'mobile-frontend-photo-caption-placeholder' => 'Add a caption for this image',
 	'mobile-frontend-image-loading' => 'Loading image',
 	'mobile-frontend-image-uploading' => 'Uploading image',
-	'mobile-frontend-photo-upload-error' => 'An error occurred whilst uploading the image. Please try another.',
+	'mobile-frontend-photo-upload-error' => 'An error occurred whilst uploading the image. Please try another image.',
 	'mobile-frontend-image-saving-to-article' => 'Saving image to article',
 	'mobile-frontend-photo-license' => 'Note: All photos you publish will be published under a [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC by SA license]',
 );
