@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//02M\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-10T23:35:06Z",
+      "side": 1,
+      "message": "You should use setAlphaGroupMember() to set this rather than setting it directly here.\n\nAlso, it would be nice to set the alphaGroupMember \u003d false in the opposite state to prevent more processing when calling isAlphaGroupMember() later.",
+      "revId": "5885f89246cf0475d38d9f05aa2c79bf9002badf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//00Q\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 402,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-10T23:35:06Z",
+      "side": 1,
+      "message": "we should also collect stats about alph opt-outs. (note if $value \u003d\u003d\u003d \u0027\u0027, this will not run)",
+      "revId": "5885f89246cf0475d38d9f05aa2c79bf9002badf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//00c\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-10T23:35:06Z",
+      "side": 1,
+      "message": "I know we handle the optin cookie similarly but mangling the global variables like this seems like playing with fire to me. I dont know why it was originally done this way - it scares me. You can override the defaults in the WebResponse::setcookie() - here\u0027s it\u0027s method signature: setcookie ($name, $value, $expire\u003d0, $prefix\u003dnull, $domain\u003dnull, $forceSecure\u003dnull)",
+      "revId": "5885f89246cf0475d38d9f05aa2c79bf9002badf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//01U\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-10T23:35:06Z",
+      "side": 1,
+      "message": "It might be prudent to give the cookie name something more unique (eg mobileAlpha or something). Also, you might consider:\ngetCookie( \u0027alpha\u0027, \u0027\u0027, \u0027\u0027 ) (to make sure the default is an empty string for consistency)",
+      "revId": "5885f89246cf0475d38d9f05aa2c79bf9002badf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//00Y\u003d",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-10T23:35:06Z",
+      "side": 1,
+      "message": "according to the story card, this should only happen if a user is logged in: \u0027Given I have opted into the mobile Beta and I have logged in\u0027",
+      "revId": "5885f89246cf0475d38d9f05aa2c79bf9002badf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
