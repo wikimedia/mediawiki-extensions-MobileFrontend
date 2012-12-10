@@ -34,6 +34,23 @@
       "revId": "8a7da5841916a2c2e0fb1078f1a1808f36cc4ef4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//09g\u003d",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-10T21:24:42Z",
+      "side": 1,
+      "message": "It would be nice for the error message to indicate that this is a 404",
+      "revId": "8a7da5841916a2c2e0fb1078f1a1808f36cc4ef4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
