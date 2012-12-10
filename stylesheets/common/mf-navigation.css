@@ -244,12 +244,6 @@ input[type=submit].confirm.disabled:hover {
   padding: 0;
   padding-bottom: 12px;
 }
-#mw-mf-universal-language {
-  font-size: 0.8em;
-  margin-left: 14px;
-  /* margin-left of #mw-mf-menu-main li a + 4px on left of icon background-position */
-
-}
 #mw-mf-page-left,
 #mw-mf-menu-main,
 #mw-mf-menu-main li {

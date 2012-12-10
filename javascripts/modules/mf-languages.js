@@ -31,8 +31,7 @@ var m = ( function() {
 	}
 
 	function createLanguagePage() {
-		var ul = $( '<ul />' )[0], li, a, $a, href, footer,
-			overlay,
+		var ul = $( '<ul />' )[0], li, a, footer, overlay,
 			search = $( '<input type="search" class="search" id="mw-mf-language-search" >' ).
 				attr( 'placeholder', M.message( 'mobile-frontend-language-site-choose' ) ),
 			$languages = $( '#mw-mf-language-selection a' );
@@ -46,9 +45,6 @@ var m = ( function() {
 		} );
 		footer = $( '<li />' ).addClass( 'mw-mf-overlay-footer' ).
 			html( M.message( 'mobile-frontend-language-footer' ) ).appendTo( ul );
-		$a = $( 'a', footer );
-		href = $( '#mw-mf-universal-language' ).attr( 'href' );
-		$a.attr( 'href', href );
 		overlay = createOverlay( search, ul, { hash: '#mw-mf-overlay-language' } );
 		$( overlay ).find( '.search' ).on( 'keyup', function() {
 			filterList( $( overlay ).find( 'ul.content' ), this.value.toLowerCase() );
