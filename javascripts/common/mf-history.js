@@ -138,26 +138,27 @@ M.history = ( function() {
 					page: pageTitle,
 					redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
 					noimages: M.getConfig( 'imagesDisabled' ) ? 1 : undefined,
-					sectionprop: 'level|line|anchor', sections: 'all' }
-				} ).done( function( resp ) {
-					if ( resp.error ) {
-						if ( resp.error.code !== 'missingtitle'  ) {
-							window.location.href = URL_TEMPLATE.replace( '$1', pageTitle );
-						}
-					} else {
-						renderPage( pageTitle, resp, constructPage );
+					sectionprop: 'level|line|anchor', sections: 'all'
+				}
+			} ).done( function( resp ) {
+				if ( resp.error ) {
+					if ( resp.error.code !== 'missingtitle'  ) {
+						window.location.href = URL_TEMPLATE.replace( '$1', pageTitle );
 					}
-				} ).fail( function() { // resort to non-javascript mode
-					$( 'html' ).addClass( 'togglingEnabled' );
-					if ( constructPage ) { // when not constructing page there will be links to fall back to
-						$( '#content_0' ).removeClass( 'loading' ).
-							text( M.message( 'mobile-frontend-ajax-page-error', pageTitle ) ).
-							addClass( 'ajaxError' ); // reset loader
-						$( '<button>' ).text( M.message( 'mobile-frontend-ajax-random-retry' ) ).click( function() {
-							loadPage( pageTitle, constructPage );
-						} ).appendTo( '#content_0' );
-					}
-				} );
+				} else {
+					renderPage( pageTitle, resp, constructPage );
+				}
+			} ).fail( function() { // resort to non-javascript mode
+				$( 'html' ).addClass( 'togglingEnabled' );
+				if ( constructPage ) { // when not constructing page there will be links to fall back to
+					$( '#content_0' ).removeClass( 'loading' ).
+						text( M.message( 'mobile-frontend-ajax-page-error', pageTitle ) ).
+						addClass( 'ajaxError' ); // reset loader
+					$( '<button>' ).text( M.message( 'mobile-frontend-ajax-random-retry' ) ).click( function() {
+						loadPage( pageTitle, constructPage );
+					} ).appendTo( '#content_0' );
+				}
+			} );
 		};
 		$( window ).bind( 'mw-mf-page-loaded', function() {
 			hijackLinks();
