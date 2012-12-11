@@ -12,6 +12,13 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 		$messageType = $this->data['messagetype'];
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 
+		$query = array(
+			'type' => 'signup',
+		);
+		$signupLink = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
+			wfMessage( 'mobile-frontend-main-menu-account-create' )->text(),
+			array( 'class'=> 'mw-mf-create-account' ), $query );
+
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login' ) );
 
 		$loginHead = Html::rawElement( 'div', array( 'class' => 'alert info' ),
@@ -82,6 +89,7 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 			Html::input( 'wpLoginAttempt', wfMessage( 'mobile-frontend-login' )->text(), 'submit',
 				array( 'id' => 'wpLoginAttempt',
 					'tabindex' => '3' ) ) .
+			$signupLink .
 			Html::closeElement( 'td' ) .
 			Html::closeElement( 'tr' ) .
 			Html::closeElement( 'tbody' ) .

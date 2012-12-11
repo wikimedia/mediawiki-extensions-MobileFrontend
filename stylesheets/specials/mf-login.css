@@ -41,3 +41,8 @@ table.user-login input.loginText {
   width: 100%;
   padding: 1em 3em 1em 0.4em;
 }
+table.user-login a.mw-mf-create-account {
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+}
