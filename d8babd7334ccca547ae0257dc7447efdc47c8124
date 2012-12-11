@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//0oE\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-11T01:04:39Z",
+      "side": 1,
+      "message": "\"Specify\" not needed",
+      "revId": "d8babd7334ccca547ae0257dc7447efdc47c8124",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
