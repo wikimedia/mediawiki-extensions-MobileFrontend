@@ -676,7 +676,11 @@ class SkinMobileTemplate extends BaseTemplate {
 		if ( $this->data['isMainPage'] ) {
 			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage'
 			)->text();
-			$firstHeading = '';
+			if ( $user && $user->isLoggedIn() ) {
+				$firstHeading = Html::rawElement( 'h1', array(), wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() );
+			} else {
+				$firstHeading = '';
+			}
 		} else {
 			$editMode = $this->data['action'] == 'edit';
 			if ( $this->data['isOverlay'] ) {
