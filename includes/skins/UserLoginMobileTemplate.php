@@ -2,19 +2,7 @@
 /**
  * Provides a custom login form for mobile devices
  */
-class UserLoginMobileTemplate extends QuickTemplate {
-
-	/**
-	 * Overload the parent constructor
-	 *
-	 * Does not call the parent's constructor to prevent overwriting
-	 * $this->data and $this->translatorobject since we're essentially
-	 * just hijacking the login form here.
-	 * @param QuickTemplate $template: The original template object to overwrite
-	 */
-	public function __construct( $template ) {
-		$this->copyObjectProperties( $template );
-	}
+class UserLoginMobileTemplate extends OverloadTemplate {
 
 	public function execute() {
 		$action = $this->data['action'];
@@ -104,15 +92,5 @@ class UserLoginMobileTemplate extends QuickTemplate {
 		$login .= $loginHead . $msgBox . $form;
 		$login .= Html::closeElement( 'div' );
 		echo $login;
-	}
-
-	/**
-	 * Copy public properties of one object to this one
-	 * @param object $obj: The object whose properties should be copied
-	 */
-	protected function copyObjectProperties( $obj ) {
-		foreach( get_object_vars( $obj ) as $prop => $value ) {
-			$this->$prop = $value;
-		}
 	}
 }

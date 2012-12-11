@@ -59,7 +59,9 @@ $autoloadClasses = array (
 	'SkinMobileBase' => 'skins/SkinMobileBase',
 	'SkinMobileWML' => 'skins/SkinMobileWML',
 	'SkinMobileTemplateWML' => 'skins/SkinMobileTemplateWML',
+	'OverloadTemplate' => 'skins/OverloadTemplate',
 	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
+	'UserAccountCreateMobileTemplate' => 'skins/UserAccountCreateMobileTemplate',
 
 	'MFCompatCheck' => 'MFCompatCheck',
 );
