@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//zeo\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-11T23:45:44Z",
+      "side": 1,
+      "message": "Design attached to story card has this text as \u0027Create account\u0027",
+      "revId": "56279bf3342240fe74067137814957c0bdd4cc9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
