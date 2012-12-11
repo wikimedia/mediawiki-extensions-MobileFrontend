@@ -3,7 +3,7 @@
 var module = (function() {
 	var nav = M.getModule( 'navigation' );
 
-	function init( ev, container ) {
+	function initTables( ev, container ) {
 		var $tables = container ? $( container ).find( 'table' ) : $( 'table' );
 
 		$tables.each( function( i ) {
@@ -27,11 +27,11 @@ var module = (function() {
 		} );
 	}
 
-	$( window ).on( 'mw-mf-page-loaded', init ).
-		on( 'mw-mf-section-rendered', init );
+	$( window ).on( 'mw-mf-section-rendered', function( ev, container ) {
+			initTables( ev, container );
+		} );
 
 	return {
-		init: init
 	};
 }() );
 

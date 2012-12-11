@@ -18,7 +18,7 @@ var T = ( function() {
 
 		if ( sectionInfo && $content.length === 0 ) {
 			$container = $( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
-			$( window ).trigger( 'mw-mf-section-rendered', [ $( content_id )[ 0 ] ] );
+			$( window ).trigger( 'mw-mf-section-rendered', [ $( '#' + content_id )[ 0 ] ] );
 			M.history.hijackLinks( $container );
 		}
 
