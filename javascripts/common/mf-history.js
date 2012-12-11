@@ -48,8 +48,10 @@ M.history = ( function() {
 	}
 
 	function getArticleUrl( title ) {
+		var search = window.location.search;
+		search = updateQueryStringParameter( search, 'welcome', false );
 		title = title.replace( / /gi, '_' );
-		return URL_TEMPLATE.replace( '$1', title ) + window.location.search;
+		return URL_TEMPLATE.replace( '$1', title ) + search;
 	}
 
 	function hijackLinks( container ) {

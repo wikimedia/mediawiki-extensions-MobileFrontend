@@ -23,7 +23,8 @@
 				addClass( classes ).
 				html( html );
 			calculatePosition();
-			return $( '#mf-notification' ).show();
+			return $( '#mf-notification' ).removeAttr( 'class' ).
+				addClass( classes ).show();
 		}
 
 		function close() {
@@ -33,9 +34,19 @@
 			$( '#mf-notification' ).hide();
 		}
 
+		function notifyAuthenticatedUser() {
+			if ( window.location.search.indexOf( 'welcome=yes' ) > -1 ) {
+				show( M.message( 'mobile-frontend-logged-in-toast-notification' ), 'toast' );
+			}
+		}
+
 		function init( firstRun ) {
 			var el = $( '<div id="mf-notification"><div></div></div>' ).hide().
 				appendTo( document.body )[ 0 ];
+
+			if ( M.getConfig( 'beta' ) ) {
+				notifyAuthenticatedUser();
+			}
 
 			firstRun = firstRun === undefined ? true : firstRun;
 

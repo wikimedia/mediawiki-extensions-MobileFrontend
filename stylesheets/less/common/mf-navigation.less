@@ -7,6 +7,7 @@
 @overlayAlertErrorBackgroundColor: #FAE1E1;
 @overlayAlertPadding: 8px;
 @overlayBorderWidth: 2px;
+@toastNotificationColor: #373737;
 
 #mw-mf-header form,
 #mw-mf-sq {
@@ -498,6 +499,26 @@ body {
 	line-height: 1.4em;
 	font-size: 0.8em;
 	z-index: 3;
+
+	&.toast {
+		padding: 0;
+		font-size: @baseFontSize * 0.8;
+		background-color: @toastNotificationColor;
+		color: white;
+		margin: 0 auto 20px auto;
+		max-width: 80%;
+		text-align: center;
+		.border-radius( 1px );
+		.boxshadow( 0, 0, 1px, 3px, @toastNotificationColor );
+
+		button {
+			display: none;
+		}
+
+		div {
+			padding: 0.8em 1.4em;
+		}
+	}
 
 	div {
 		position: relative;

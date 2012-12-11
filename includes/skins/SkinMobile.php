@@ -17,6 +17,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'articleTitle', $title->getPrefixedText() );
 		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
 		$tpl->set( 'ajaxLoader', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/modules/images/ajax-loader.gif' );
+		$tpl->set( 'user', $this->getUser() );
 		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
@@ -425,6 +426,7 @@ HTML;
 				$query
 			);
 		} else {
+			$query[ 'returntoquery' ] = 'welcome=yes';
 			$link = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
 				wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
 				array( 'class' => 'login' ),
@@ -662,8 +664,14 @@ class SkinMobileTemplate extends BaseTemplate {
 				'hookOptions' => $hookOptions,
 			),
 		);
+		$user = $this->data['user'];
 
 		$jsconfig = $this->addMessages( $jsconfig );
+
+		if ( $user ) {
+			$jsconfig['messages']['mobile-frontend-logged-in-toast-notification'] =
+				wfMessage( 'mobile-frontend-logged-in-toast-notification', $user->getName() )->parse();
+		}
 
 		if ( $this->data['isMainPage'] ) {
 			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage'

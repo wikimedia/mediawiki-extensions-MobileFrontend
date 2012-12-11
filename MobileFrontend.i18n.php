@@ -18,7 +18,7 @@ $messages['en'] = array (
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-home-button' => 'Home',
 	'mobile-frontend-logged-out' => 'Not logged in',
-	'mobile-frontend-logged-in' => 'Logged in as $1',
+	'mobile-frontend-logged-in-toast-notification' => 'Logged in as $1.',
 
 	/** log-in page **/
 	'mobile-frontend-sign-in-heading' => 'Sign in',
@@ -207,7 +207,7 @@ $messages['qqq'] = array(
 
 This buttons takes the user to the home page.',
 	'mobile-frontend-logged-out' => 'Message telling user they are not logged in on settings page',
-	'mobile-frontend-logged-in' => 'Message telling user that they are logged in on settings page
+	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
 *$1 - username',
 	'mobile-frontend-sign-in-heading' => 'Header for login page',
 	'mobile-frontend-sign-in-why' => 'Short summary before login page explaining why someone should bother signing in',
