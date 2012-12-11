@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//0s8\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 0,
+      "message": "I\u0027m a bit worried about adjusting styling in this way. Remove this this could potentially effect existing lists in overlays - e.g. cleanup templates and tables )",
+      "revId": "afa52de63f4dfc40b8267158d19397b1250482ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//0ts\u003d",
+        "filename": "stylesheets/modules/mf-toggle.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 0,
+      "message": "is this a related change? I\u0027m a bit confused... I think you need to do a rebase.",
+      "revId": "afa52de63f4dfc40b8267158d19397b1250482ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//0to\u003d",
+        "filename": "stylesheets/modules/mf-toggle.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 0,
+      "message": "is this a related change? I\u0027m a bit confused...",
+      "revId": "afa52de63f4dfc40b8267158d19397b1250482ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

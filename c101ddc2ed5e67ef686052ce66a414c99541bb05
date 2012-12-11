@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//0so\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 1,
+      "message": "why null when everything above is false?",
+      "revId": "c101ddc2ed5e67ef686052ce66a414c99541bb05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//0sk\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 1,
+      "message": "I think you need to add a trailing \u0027,\u0027 will help with nicer future diffs...",
+      "revId": "c101ddc2ed5e67ef686052ce66a414c99541bb05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//0s4\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 1,
+      "message": "not clear why you are adding 1 here... I seem to remember various changes to this line. I smell a bug.",
+      "revId": "c101ddc2ed5e67ef686052ce66a414c99541bb05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//0ss\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 1,
+      "message": "bit worried this may bring back bug 41458\n    \n    Change-Id: I18a347bdc09c55d2b596940ab8df68351a533b9f",
+      "revId": "c101ddc2ed5e67ef686052ce66a414c99541bb05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//0sg\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-11T00:38:32Z",
+      "side": 1,
+      "message": "$user not defined\n\nNotice: Undefined variable: user in /Users/jrobson/Sites/w/extensions/MobileFrontend/includes/skins/SkinMobile.php on line 406\n\nAlso what if user is not logged in?",
+      "revId": "c101ddc2ed5e67ef686052ce66a414c99541bb05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
