@@ -33,6 +33,9 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 			$msgBox .= ( $heading ) ? Html::rawElement( 'h2', array(), $heading ) : '';
 			$msgBox .= $message;
 			$msgBox .= Html::closeElement( 'div' );
+		} else {
+			$msgBox = Html::rawElement( 'div', array(
+				'class' => 'watermark' ) );
 		}
 
 		$form = Html::openElement( 'div', array( 'id' => 'userloginForm' ) ) .

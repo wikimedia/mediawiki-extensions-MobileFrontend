@@ -7,6 +7,15 @@
 .specialPage.overlay #mw-mf-overlay .header h1 {
   padding-left: 0.4em;
 }
+#mw-mf-login .watermark {
+  background-position: center center;
+  height: 90px;
+  width: 100%;
+  background-image: url(images/W.png);
+  background-repeat: no-repeat;
+  text-indent: -999px;
+  overflow: hidden;
+}
 #userloginForm {
   margin-left: 40px;
   margin-right: 40px;
