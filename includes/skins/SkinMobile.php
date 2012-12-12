@@ -494,23 +494,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
 		<?php $this->html( 'touchIcon' ) ?>
 		<script type="text/javascript">
-			var _mwStart = +new Date;
-			window._evq = window._evq || [];
-			if ( typeof console === 'undefined' ) {
-				console = { log: function() {} };
-			}
-			if( typeof mw === 'undefined' ) {
-				mw = {};
-			}
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
-			function _mwLogEvent( data, additionalInformation ) {
-				var timestamp = + new Date;
-				var ev = { event_id: 'mobile', delta: timestamp - _mwStart, data: data, beta: mwMobileFrontendConfig.settings.beta,
-					host: window.location.hostname,
-					session: _mwStart, page: mwMobileFrontendConfig.settings.title, info: additionalInformation || '' };
-				_evq.push( ev );
-				console.log( typeof JSON === 'undefined' ? ev : JSON.stringify( ev ) );
-			}
 		</script>
 		<?php $this->html( 'preambleScript' ) ?>
 		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >

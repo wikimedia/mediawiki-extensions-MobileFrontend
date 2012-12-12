@@ -3,6 +3,8 @@
 		"_mwStart": true,
 		"_mwLogEvent": true,
 		"ActiveXObject": true,
+		"console": true,
+		"_evq": true,
 		"jQuery": true,
 		"jQueryShim": true,
 		"mw": true,
