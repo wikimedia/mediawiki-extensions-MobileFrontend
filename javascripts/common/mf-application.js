@@ -80,6 +80,12 @@ mw.mobileFrontend = (function() {
 		window.scrollTo( 0, 1 );
 	}
 
+	function triggerPageReadyHook( pageTitle, sectionData, anchorSection ) {
+		$( window ).trigger( 'mw-mf-page-loaded', [ {
+			title: pageTitle, data: sectionData, anchorSection: anchorSection
+		} ] );
+	}
+
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var mainPage = document.getElementById( 'mainpage' );
@@ -115,6 +121,10 @@ mw.mobileFrontend = (function() {
 		fixBrowserBugs();
 
 		initModules();
+		// FIXME: kill with fire when dynamic sections are in stable
+		if ( !getConfig( 'beta' ) ) {
+			triggerPageReadyHook( getConfig( 'title' ) );
+		}
 	}
 
 	u = typeof jQuery !== 'undefined' ? jQuery : jQueryShim;
@@ -188,6 +198,7 @@ mw.mobileFrontend = (function() {
 		getConfig: getConfig,
 		setConfig: setConfig,
 		supportsPositionFixed: supportsPositionFixed,
+		triggerPageReadyHook: triggerPageReadyHook,
 		utils: u
 	};
 

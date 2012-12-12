@@ -118,9 +118,7 @@ M.history = ( function() {
 			if ( resp.mobileview.hasOwnProperty( 'mainpage' ) ) {
 				$( window ).trigger( 'mw-mf-homepage-loaded' );
 			}
-			$( window ).trigger( 'mw-mf-page-loaded', [ {
-				title: pageTitle, data: sectionData, anchorSection: anchorSection
-			} ] );
+			M.triggerPageReadyHook( pageTitle, sectionData, anchorSection );
 			$( '#content_0' ).removeClass( 'loading' ); // reset loader
 		}
 	}

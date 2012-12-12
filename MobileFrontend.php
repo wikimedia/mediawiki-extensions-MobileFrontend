@@ -147,6 +147,7 @@ $wgResourceModules['mobile'] = array(
 		'stylesheets/specials/mf-login.css',
 		'stylesheets/modules/mf-toggle.css',
 		'stylesheets/common/mf-hacks.css',
+		'stylesheets/modules/mf-cleanuptemplates.css',
 		'stylesheets/common/mf-enwp.css' ),
 	'scripts' => array( 'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
@@ -165,7 +166,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'stylesheets/modules/mf-photo.css'
 	),
 	'scripts' => array(
-		'javascripts/modules/mf-cleanuptemplates.js',
+		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/actions/mf-edit.js', // FIXME: only serve when action=edit
 		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
@@ -194,7 +195,6 @@ $wgResourceModules['mobile.production-only'] = array(
 
 $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
-$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-cleanuptemplates.css';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/actions/mf-edit.css'; // FIXME: only serve me when action=edit
 
 $wgResourceModules['mobile.alpha'] = array(
@@ -222,10 +222,14 @@ $wgResourceModules['mobile.filePage'] = array(
 	'targets' => 'mobile',
 );
 $wgResourceModules['mobile.production-jquery'] = array(
-	'styles' => array( 'stylesheets/modules/mf-references.css' ),
+	'styles' => array(
+		'stylesheets/modules/mf-references.css',
+		'stylesheets/modules/mf-cleanuptemplates.css',
+	),
 	'scripts' => array(
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
+		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-references.js' ),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
