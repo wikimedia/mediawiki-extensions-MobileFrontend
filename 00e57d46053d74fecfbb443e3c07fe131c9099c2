@@ -34,6 +34,24 @@
       "revId": "00e57d46053d74fecfbb443e3c07fe131c9099c2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//zTo\u003d",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T02:23:33Z",
+      "side": 1,
+      "message": "Can\u0027t we just check against the current value of alpha?\n\nIf I switch alpha to ON and submit and isAlphaGroupMember() then I didn\u0027t switch\nIf I switch alpha to OFF and submit and isAlphaGroupMember() is false then I didn\u0027t switch\nIf I switch alpha to OFF and submit and isAlphaGroupMember() is true then I did opt out",
+      "parentUuid": "AAADbX//zYE\u003d",
+      "revId": "00e57d46053d74fecfbb443e3c07fe131c9099c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
