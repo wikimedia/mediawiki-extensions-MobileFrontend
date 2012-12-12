@@ -445,10 +445,6 @@ html.overlay ul.content li:hover {
   line-height: 46px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-.overlay .header h1,
-.overlay .header h2 {
-  margin: 0 0 0 -40px;
-}
 #mw-mf-overlay .header.mw-mf-locked {
   padding-left: 22px;
 }
