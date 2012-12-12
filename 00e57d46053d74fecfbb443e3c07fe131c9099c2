@@ -16,6 +16,24 @@
       "revId": "00e57d46053d74fecfbb443e3c07fe131c9099c2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//zYE\u003d",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-12T01:02:38Z",
+      "side": 1,
+      "message": "This is intended to track explicit opt outs. If we just look for alphaEnabled \u003d false, that could either be an opt out or someone changing some other setting.",
+      "parentUuid": "AAADbX//zaY\u003d",
+      "revId": "00e57d46053d74fecfbb443e3c07fe131c9099c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
