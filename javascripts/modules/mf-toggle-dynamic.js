@@ -53,8 +53,9 @@ var T = ( function() {
 		$( 'html' ).addClass( 'togglingEnabled' );
 
 		function openSectionHandler() {
-			_mwLogEvent( 'SectionToggled', this.id );
-			wm_toggle_section( $( this ).attr( 'id' ).split( '_' )[ 1 ] );
+			var id = $( this ).attr( 'id' );
+			_mwLogEvent( 'SectionToggled', id );
+			wm_toggle_section( id.split( '_' )[ 1 ] );
 		}
 
 		$headings.each( function() {
