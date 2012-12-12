@@ -20,7 +20,6 @@ a.mw-mf-cleanup {
 /* styling for warning boxes (see bug 36674)*/
 td.mbox-image div {
 	width: 100% !important;
-	box-sizing: border-box;
 }
 
 .mbox-text div {
@@ -32,12 +31,19 @@ td.mbox-text,
 td.mbox-image {
 	display: block;
 	width: 100%;
-	box-sizing: border-box;
+	.box-sizing( border-box );
 	text-align: center !important;
+}
+
+td.mbox-image div,
+th.mbox-text,
+td.mbox-text,
+td.mbox-image,
+table.ambox-content {
+	.box-sizing( border-box );
 }
 
 table.ambox-content {
 	border-left: 1px solid #AAA;
-	box-sizing: border-box;
 	border-bottom: 10px solid #F28500;
 }

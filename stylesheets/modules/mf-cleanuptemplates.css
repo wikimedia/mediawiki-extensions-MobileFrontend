@@ -19,23 +19,34 @@ a.mw-mf-cleanup:hover {
   background-color: #f0f0f0;
 }
 /* styling for warning boxes (see bug 36674)*/
-.mobile td.mbox-image div {
+td.mbox-image div {
   width: 100% !important;
-  box-sizing: border-box;
 }
-.mobile .mbox-text div {
+.mbox-text div {
   text-align: center !important;
 }
-.mobile th.mbox-text,
-.mobile td.mbox-text,
-.mobile td.mbox-image {
+th.mbox-text,
+td.mbox-text,
+td.mbox-image {
   display: block;
   width: 100%;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center !important;
 }
-.mobile table.ambox-content {
-  border-left: 1px solid #AAA;
+td.mbox-image div,
+th.mbox-text,
+td.mbox-text,
+td.mbox-image,
+table.ambox-content {
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+table.ambox-content {
+  border-left: 1px solid #AAA;
   border-bottom: 10px solid #F28500;
 }
