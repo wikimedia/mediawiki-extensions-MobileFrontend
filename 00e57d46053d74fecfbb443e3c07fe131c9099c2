@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//zaY\u003d",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:38:30Z",
+      "side": 1,
+      "message": "This code is confusing and I think needs more of a comment.\n\nIt seems this is purely for tracking?\n\nIt seems weird we have to resort to a hidden input \u0027alphaPreviouslyEnabled\u0027 - can we just not check for the existence of alphaEnabled set to false ?",
+      "revId": "00e57d46053d74fecfbb443e3c07fe131c9099c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
