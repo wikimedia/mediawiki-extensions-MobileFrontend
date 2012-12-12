@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//zZA\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:53:36Z",
+      "side": 0,
+      "message": "I think this is harmless - but I think the original intention was to add some space between the bottom of a list contained in an overlay (I can\u0027t see any cases where this exists so should be fine)",
+      "revId": "bcf38a82eefc3182c617111865efe2ccc5f36a8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//zZs\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 415,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:53:36Z",
+      "side": 0,
+      "message": "not clear from commit message why you needed to make all these rules specific...",
+      "revId": "bcf38a82eefc3182c617111865efe2ccc5f36a8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

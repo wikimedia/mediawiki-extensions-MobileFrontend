@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//z+I\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:53:36Z",
+      "side": 1,
+      "message": "still not sure why this is null",
+      "revId": "5af8941898901c2f0d69e79f78d96da5fd414f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//z+A\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:53:36Z",
+      "side": 1,
+      "message": "add a trailing comma",
+      "revId": "5af8941898901c2f0d69e79f78d96da5fd414f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//zZc\u003d",
+        "filename": "javascripts/modules/mf-languages.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:53:36Z",
+      "side": 1,
+      "message": "please can you add to commit message your motivation to using nav element?",
+      "revId": "5af8941898901c2f0d69e79f78d96da5fd414f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//z+o\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:53:36Z",
+      "side": 1,
+      "message": "Not so keen on this..\nmf-navigation.js adds the class content to every parent content element.\n\nPlease do something like\n\nul#mw-mf-language-selection\nul.content {\n\nli {\n.overlayListItem();\n}\n\n}",
+      "revId": "5af8941898901c2f0d69e79f78d96da5fd414f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//z+c\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-12T00:53:36Z",
+      "side": 1,
+      "message": "use @baseFontSize * 0.9",
+      "revId": "5af8941898901c2f0d69e79f78d96da5fd414f4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
