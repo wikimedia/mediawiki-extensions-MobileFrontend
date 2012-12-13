@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//yYE\u003d",
+        "filename": "javascripts/common/main.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-13T00:23:36Z",
+      "side": 1,
+      "message": "Maybe let\u0027s stick either to `auth` or `authenticated`. I prefer the latter unless we really need to save a few bytes.",
+      "revId": "a2cfb6d0782faa6f1a9e4ac259c427faedbe988b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
