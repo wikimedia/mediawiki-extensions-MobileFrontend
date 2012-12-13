@@ -411,7 +411,7 @@ HTML;
 
 	private function getLogInOutLink() {
 		wfProfileIn( __METHOD__ );
-		$query = array( 'returnto' => $this->getTitle()->getPrefixedText() );
+		$query = array();
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
 			unset( $returntoquery['title'] );
@@ -423,7 +423,7 @@ HTML;
 			$link = Linker::link( SpecialPage::getTitleFor( 'UserLogout' ),
 				wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
 				array( 'class' => 'logout' ),
-				$query
+				array( 'returnto' => $this->getTitle()->getPrefixedText() )
 			);
 		} else {
 			$query[ 'returntoquery' ] = 'welcome=yes';

@@ -37,7 +37,9 @@ M.history = ( function() {
 		title = encodeURIComponent( title );
 		$( '#mw-mf-menu-main a' ).each( function() {
 			var href = $( this ).attr( 'href' );
-			$( this ).attr( 'href', updateQueryStringParameter( href, 'returnto', title ) );
+			if ( href.indexOf( 'returnto=' ) > -1 ) {
+				$( this ).attr( 'href', updateQueryStringParameter( href, 'returnto', title ) );
+			}
 		} );
 		$( '#content_footer .notice a' ).each( function() {
 			var href = $( this ).attr( 'href' );
