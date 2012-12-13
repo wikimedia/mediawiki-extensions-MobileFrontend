@@ -4,6 +4,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	function execute( $par ) {
 		$user = $this->getUser();
 		$output = $this->getOutput();
+		$view = $this->getRequest()->getVal( 'watchlistview', 'a-z' );
+		$recentChangesView = ( $view === 'feed' ) ? true : false;
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
@@ -20,17 +22,18 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			Html::openElement( 'div', array( 'id' => 'mw-mf-watchlist' ) )
 		);
 
-		$this->showHeader();
-
-		$res = $this->doQuery();
-		$this->showResults( $res );
+		if ( $recentChangesView ) {
+			$this->showRecentChangesHeader();
+			$res = $this->doFeedQuery();
+			$this->showFeedResults( $res );
+		}
 
 		$output->addHtml(
 			Html::closeElement( 'div' )
 		);
 	}
 
-	function showHeader() {
+	function showRecentChangesHeader() {
 		$filters = array(
 			'all' => 'mobile-frontend-watchlist-filter-all',
 			'articles' => 'mobile-frontend-watchlist-filter-articles',
@@ -49,7 +52,12 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				$itemAttrs['class'] = 'selected';
 			}
 			$linkAttrs = array(
-				'href' => $this->getTitle()->getLocalUrl( array( 'filter' => $filter ) )
+				'href' => $this->getTitle()->getLocalUrl(
+					array(
+						'filter' => $filter,
+						'watchlistview' => 'feed',
+					)
+				)
 			);
 			$output->addHtml(
 				Html::openElement( 'li', $itemAttrs ) .
@@ -63,7 +71,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		);
 	}
 
-	function doQuery() {
+	function doFeedQuery() {
 		$user = $this->getUser();
 		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
 
@@ -125,7 +133,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		return $res;
 	}
 
-	function showResults( $res ) {
+	function showFeedResults( $res ) {
 		$this->seenTitles = array();
 
 		$this->today = $this->day( wfTimestamp() );
@@ -134,7 +142,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output = $this->getOutput();
 		$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
 		foreach( $res as $row ) {
-			$this->showResultRow( $row );
+			$this->showFeedResultRow( $row );
 		}
 		$output->addHtml( '</ul>' );
 	}
@@ -143,7 +151,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		return $this->getLang()->date( $ts, true );
 	}
 
-	function showResultRow( $row ) {
+	function showFeedResultRow( $row ) {
 		$output = $this->getOutput();
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
