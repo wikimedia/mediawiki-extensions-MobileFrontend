@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADdH///68\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-13T22:53:21Z",
+      "side": 1,
+      "message": "Needs to be escaped or parsed.",
+      "revId": "dca9c6437ed783c32e74260589409d1f246f4bdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
