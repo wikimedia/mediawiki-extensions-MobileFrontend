@@ -575,6 +575,25 @@ body {
   font-size: 0.8em;
   z-index: 3;
 }
+#mf-notification.toast {
+  padding: 0;
+  font-size: 0.8em;
+  background-color: #373737;
+  color: white;
+  margin: 0 auto 20px auto;
+  max-width: 80%;
+  text-align: center;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  box-shadow: 0 0 1px 3px #373737;
+}
+#mf-notification.toast button {
+  display: none;
+}
+#mf-notification.toast div {
+  padding: 0.8em 1.4em;
+}
 #mf-notification div {
   position: relative;
   padding: 22px 38px 22px 22px;

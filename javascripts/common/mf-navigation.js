@@ -122,6 +122,7 @@ MobileFrontend.navigation = (function( $ ) {
 			}
 		} );
 	}
+
 	init();
 
 	return {
