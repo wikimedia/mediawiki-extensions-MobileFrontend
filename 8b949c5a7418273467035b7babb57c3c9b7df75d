@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADdH///4w\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-13T23:14:14Z",
+      "side": 1,
+      "message": "Will this list only contain pages, or also for example files, or Wikidata items?",
+      "revId": "8b949c5a7418273467035b7babb57c3c9b7df75d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADdH///8M\u003d",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 1
