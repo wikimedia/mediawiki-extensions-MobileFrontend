@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADdH///8M\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2012-12-13T22:42:42Z",
+      "side": 1,
+      "message": "Probably best to do this as something that SpecialMobileWatchlist can shove into the OutputPage object, and we retrieve it from there.\n\nCould quickly do it by just setting a custom property:\n[in watchlist]$this-\u003egetOutput()-\u003emobileHtmlHeader \u003d $this-\u003egetHeader();\n...\n[in skin]$tpl-\u003eset(\u0027htmlHeader\u0027, $this-\u003emobileHtmlHeader);\n\nor something. Custom property means no need to modify code, but it feels a bit icky. ;)",
+      "revId": "8b949c5a7418273467035b7babb57c3c9b7df75d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
