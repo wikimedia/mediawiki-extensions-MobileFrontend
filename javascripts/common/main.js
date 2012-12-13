@@ -1,5 +1,24 @@
 document.documentElement.className += ' jsEnabled page-loading';
 
+var _mwStart = +new Date;
+window._evq = window._evq || [];
+if ( typeof console === 'undefined' ) {
+	console = { log: function() {} };
+}
+if( typeof mw === 'undefined' ) {
+	mw = {};
+}
+
+function _mwLogEvent( data, additionalInformation ) {
+	var timestamp = + new Date, ev;
+	ev = { event_id: 'mobile', delta: timestamp - _mwStart, data: data, beta: mwMobileFrontendConfig.settings.beta,
+		host: window.location.hostname,
+		session: _mwStart, page: mwMobileFrontendConfig.settings.title, info: additionalInformation || '' };
+	_evq.push( ev );
+	console.log( typeof JSON === 'undefined' ? ev : JSON.stringify( ev ) );
+}
+
+
 ( function() {
 var domLoaded;
 
