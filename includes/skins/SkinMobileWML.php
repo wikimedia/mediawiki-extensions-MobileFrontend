@@ -5,9 +5,10 @@ class SkinMobileWML extends SkinMobileBase {
 	public $stylename = 'SkinMobileWML';
 	public $template = 'SkinMobileTemplateWML';
 
-	protected function prepareTemplate( OutputPage $out ) {
+	protected function prepareTemplate() {
+		$out = $this->getOutput();
 		$out->getRequest()->response()->header( 'Content-Type: text/vnd.wap.wml' );
-		return parent::prepareTemplate( $out );
+		return parent::prepareTemplate();
 	}
 }
 
