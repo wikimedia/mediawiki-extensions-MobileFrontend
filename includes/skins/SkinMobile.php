@@ -45,6 +45,12 @@ class SkinMobile extends SkinMobileBase {
 		}
 		$tpl->set( 'variant', $title->getPageLanguage()->getPreferredVariant() );
 
+		if ( isset( $out->mobileHtmlHeader ) ) {
+			$tpl->set( 'htmlHeader', $out->mobileHtmlHeader );
+		} else {
+			$tpl->set( 'htmlHeader', '' );
+		}
+
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		$tpl->set( 'articleClass', $title->isMainPage() || $specialPage ? 'mw-mf-special' : '' );
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
@@ -601,7 +607,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php } ?>
 			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
 				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
-				class="button"><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
+				><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
 			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<li class='icon4'>
 				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"
@@ -740,6 +746,8 @@ class SkinMobileTemplate extends BaseTemplate {
 			} else {
 				$firstHeading = '';
 			}
+		} else if ( $this->data['htmlHeader'] ) {
+			$firstHeading = $this->data['htmlHeader'];
 		} else {
 			$editMode = $this->data['action'] == 'edit';
 			if ( $this->data['isOverlay'] ) {

@@ -8,6 +8,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$recentChangesView = ( $view === 'feed' ) ? true : false;
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
+		$output->mobileHtmlHeader = $this->getWatchlistHeader();
 
 		if( $user->isAnon() ) {
 			// No watchlist for you.
@@ -34,6 +35,44 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 			Html::closeElement( 'div' )
 		);
+	}
+
+	protected function getWatchlistHeader() {
+		$cur = $this->getRequest()->getVal( 'watchlistview', 'a-z' );
+		$sp = SpecialPage::getTitleFor( 'Watchlist' );
+		$attrsList = array(
+			'class' => 'button mw-mf-watchlist-view-selector'
+		);
+		$attrsFeed = array(
+			'class' => 'button mw-mf-watchlist-view-selector'
+		);
+		if ( $cur == 'feed' ) {
+			$attrsFeed[ 'class' ] .= ' active';
+		} else {
+			$attrsList[ 'class' ] .= ' active';
+		}
+
+		$html =
+			Html::openElement( 'div',
+				array(
+					'class' => 'mw-mf-watchlist-views header' )
+				) .
+			Linker::link( $sp,
+				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
+				$attrsList,
+				array(
+					'watchlistview' => 'a-z'
+				)
+			) .
+			Linker::link( $sp,
+				wfMessage( 'mobile-frontend-watchlist-feed' )->text(),
+				$attrsFeed,
+				array(
+					'watchlistview' => 'feed'
+				)
+			) .
+			Html::closeElement( 'div' );
+		return $html;
 	}
 
 	function showRecentChangesHeader() {
