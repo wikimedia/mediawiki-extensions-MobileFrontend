@@ -21,11 +21,13 @@ class SkinMobile extends SkinMobileBase {
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
+		$inAlpha = $context->isAlphaGroupMember();
 
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$tpl->set( 'isOverlay', $specialPage && !$title->isSpecial( 'MobileMenu' ) );
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'imagesDisabled', $context->imagesDisabled() );
+		$tpl->set( 'isAlphaGroupMember', $inAlpha );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
 		$tpl->set( 'photo-upload-endpoint', $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '' );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
@@ -69,6 +71,12 @@ class SkinMobile extends SkinMobileBase {
 			$styles[] = 'mobile.production-only';
 			$scripts[] = 'mobile.production-only';
 		}
+
+		if ( $inAlpha ) {
+			$scripts[] = 'mobile.alpha';
+			$styles[] = 'mobile.alpha';
+		}
+
 		$styles[] = "mobile.device.{$device['css_file_name']}";
 		$styles[] = 'mobile.production-jquery';
 		$styleLinks = array( $this->resourceLoaderLink( $styles, 'styles' ) );
@@ -698,7 +706,9 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	private function searchBox() {
-		if ( $this->data['isBetaGroupMember'] ) {
+		if ( $this->data['isAlphaGroupMember'] ) {
+			$placeholder = wfMessage( 'mobile-frontend-placeholder-alpha' )->text();
+		} else if ( $this->data['isBetaGroupMember'] ) {
 			$placeholder = wfMessage( 'mobile-frontend-placeholder-beta' )->text();
 		} else {
 			$placeholder = wfMessage( 'mobile-frontend-placeholder' )->text();

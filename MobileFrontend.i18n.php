@@ -28,6 +28,8 @@ $messages['en'] = array (
 
 	'mobile-frontend-settings-description' => 'Customize your experience on your mobile device with these mobile specific site settings.',
 	'mobile-frontend-settings-beta' => 'Beta',
+	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons Here be dragons] mode',
+	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features but with more danger of bugs.',
 	'mobile-frontend-save-settings' => 'Save settings',
 	'mobile-frontend-random-button' => 'Random',
 
@@ -105,6 +107,7 @@ $messages['en'] = array (
 	'mobile-frontend-overlay-escape' => 'Go back',
 	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Search {{SITENAME}} (Beta)',
+	'mobile-frontend-placeholder-alpha' => 'Search {{SITENAME}} (Dragon Mode)',
 	'mobile-frontend-search-help' => 'Type search term above and matching page titles will appear here.',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-clear-search' => 'Clear',
@@ -210,6 +213,8 @@ This buttons takes the user to the home page.',
 	'mobile-frontend-sign-in-why' => 'Short summary before login page explaining why someone should bother signing in',
 	'mobile-frontend-settings-description' => 'Text at top of the settings page explaining its purpose',
 	'mobile-frontend-settings-beta' => 'Text for beta on settings page',
+	'mobile-frontend-settings-alpha' => 'Heading for alpha mode on settings page. This is a highly experimental mode where there might be bugs',
+	'mobile-frontend-settings-alpha-description' => 'Disclaimer about dangers and excitement that come with being in an alpha mode',
 	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions',
 	'mobile-frontend-random-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
 
@@ -284,6 +289,8 @@ Don't translate the special page name",
 {{Identical|Log in}}',
 	'mobile-frontend-overlay-escape' => 'Text for the button to the left of search / an overlay that when clicked exits the overlay to the previous screen',
 	'mobile-frontend-placeholder' => 'Phrase used to prompt user to use search interface for mobile full screen search',
+	'mobile-frontend-placeholder-beta' => 'Phrase used to prompt user to use search interface for mobile full screen search with identifier that you are in beta mode',
+	'mobile-frontend-placeholder-alpha' => 'Phrase used to prompt user to use search interface for mobile full screen search with identifier that you are in experimental mode',
 	'mobile-frontend-search-help' => 'Help text that appears under search results when the search is focused', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'Phrase used to dismiss the top banner notification',
 	'mobile-frontend-clear-search' => 'Tooltip for clear button that appears when you type into search box',

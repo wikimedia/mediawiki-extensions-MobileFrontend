@@ -57,8 +57,11 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			);
 		}
 
+		$betaEnabled = $context->isBetaGroupMember();
+		$alphaEnabled = $context->isAlphaGroupMember();
+
 		$imagesChecked = $context->imagesDisabled() ? '' : 'checked'; // images are off when disabled
-		$imagesBeta = $context->isBetaGroupMember() ? 'checked' : '';
+		$imagesBeta = $betaEnabled ? 'checked' : '';
 		$disableMsg = $this->msg( 'mobile-frontend-images-status' )->parse();
 		$betaEnableMsg = $this->msg( 'mobile-frontend-settings-beta' )->parse();
 		$betaDescriptionMsg = $this->msg( 'mobile-frontend-opt-in-explain' )->parse();
@@ -74,6 +77,43 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		$token = Html::hidden( 'token', $context->getMobileToken() );
 		$returnto = Html::hidden( 'returnto', $this->returnToTitle->getFullText() );
 
+		$alphaEnableMsg = wfMessage( 'mobile-frontend-settings-alpha' )->parse();
+		$alphaChecked = $alphaEnabled ? 'checked' : '';
+		$alphaDescriptionMsg = wfMessage( 'mobile-frontend-settings-alpha-description' )->text();
+
+		$betaSetting = <<<HTML
+		<li>
+			{$betaEnableMsg}
+			<div class="mw-mf-checkbox-css3">
+				<input type="checkbox" name="enableBeta"
+				{$imagesBeta}>{$onoff}
+			</div>
+		</li>
+		<li class="mw-mf-settings-description">
+				{$betaDescriptionMsg}
+		</li>
+HTML;
+		$alphaSetting = '';
+		if ( $betaEnabled ) {
+
+			if ( $alphaEnabled ) {
+				$betaSetting = '<input type="hidden" name="enableBeta" value="checked">';
+			}
+
+			$alphaSetting .= <<<HTML
+			<li>
+				{$alphaEnableMsg}
+				<div class="mw-mf-checkbox-css3">
+					<input type="checkbox" name="enableAlpha"
+					{$alphaChecked}>{$onoff}
+				</div>
+			</li>
+			<li class="mw-mf-settings-description">
+					{$alphaDescriptionMsg}
+			</li>
+HTML;
+		}
+
 		$html .= <<<HTML
 	<p>
 		{$aboutMessage}
@@ -86,16 +126,8 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				{$imagesChecked}>{$onoff}
 			</span>
 		</li>
-		<li>
-			{$betaEnableMsg}
-			<div class="mw-mf-checkbox-css3">
-				<input type="checkbox" name="enableBeta"
-				{$imagesBeta}>{$onoff}
-			</div>
-		</li>
-		<li class="mw-mf-settings-description">
-				{$betaDescriptionMsg}
-		</li>
+		{$betaSetting}
+		{$alphaSetting}
 		<li>
 			<input type="submit" id="mw-mf-settings-save" value="{$saveSettings}">
 		</li>
@@ -163,10 +195,19 @@ HTML;
 			//return; // Display something here?
 		}
 		$inBeta = $request->getBool( 'enableBeta' );
+		$inAlpha = $request->getBool( 'enableAlpha' );
+		// determine whether or not alpha was disabled
+		if ( $context->isAlphaGroupMember() && !$inAlpha ) {
+			$alphaDisabled = true;
+		} else {
+			$alphaDisabled = false;
+		}
 		$imagesDisabled = !$request->getBool( 'enableImages' );
 		$context->setDisableImagesCookie( $imagesDisabled );
 		$context->setOptInOutCookie( $inBeta ? '1' : '' );
 		$context->setBetaGroupMember( $inBeta );
+		$context->setAlphaOptInOutCookie( $inAlpha ? '1' : '', $alphaDisabled );
+		$context->setAlphaGroupMember( $inAlpha );
 
 		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
 		if ( $returnToTitle ) {

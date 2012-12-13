@@ -165,11 +165,8 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'stylesheets/modules/mf-photo.css'
 	),
 	'scripts' => array(
-		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
-		'javascripts/modules/mf-random.js',
-		'javascripts/modules/mf-tables.js',
 		'javascripts/actions/mf-edit.js', // FIXME: only serve when action=edit
 		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
 	'raw' => true,
@@ -199,6 +196,22 @@ $wgResourceModules['mobile.beta'] = $wgResourceModules['mobile'];
 
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/modules/mf-cleanuptemplates.css';
 $wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/actions/mf-edit.css'; // FIXME: only serve me when action=edit
+
+$wgResourceModules['mobile.alpha'] = array(
+	'styles' => array(
+		'stylesheets/modules/mf-random.css',
+		'stylesheets/modules/mf-tables.css',
+		'stylesheets/modules/mf-photo.css',
+	),
+	'scripts' => array(
+		'javascripts/modules/mf-photo.js',
+		'javascripts/modules/mf-random.js',
+		'javascripts/modules/mf-tables.js' ),
+	'raw' => true,
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
+);
 
 $wgResourceModules['mobile.filePage'] = array(
 	'styles' => array( 'stylesheets/specials/filepage.css' ),
