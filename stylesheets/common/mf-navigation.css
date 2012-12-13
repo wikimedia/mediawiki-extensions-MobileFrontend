@@ -431,7 +431,7 @@ html.overlay ul.content li:hover {
   border-bottom: solid 1px #CCC;
   padding: 0;
   color: #666;
-  height: 46px;
+  min-height: 46px;
   margin: 0;
   padding-bottom: 0;
 }
