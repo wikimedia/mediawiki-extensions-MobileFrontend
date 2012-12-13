@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADdH///+A\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-13T22:11:25Z",
+      "side": 1,
+      "message": "Email -\u003e E-mail",
+      "revId": "e54422c86bb25d320aa83836c08b01033da4f80d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADdH///98\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-13T22:11:25Z",
+      "side": 1,
+      "message": "Email -\u003e E-mail",
+      "revId": "e54422c86bb25d320aa83836c08b01033da4f80d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
