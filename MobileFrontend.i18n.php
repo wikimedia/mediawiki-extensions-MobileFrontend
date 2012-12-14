@@ -106,6 +106,13 @@ $messages['en'] = array (
 	'mobile-frontend-username-placeholder' => 'Username',
 	'mobile-frontend-password-placeholder' => 'Password',
 	'mobile-frontend-login' => 'Sign in',
+	'mobile-frontend-last-modified-date' => 'Last modified on $1, at $2',
+	'mobile-frontend-last-modified-seconds' => 'Last modified {{PLURAL:$1|$1 second|$1 seconds}} ago',
+	'mobile-frontend-last-modified-minutes' => 'Last modified {{PLURAL:$1|$1 minute|$1 minutes}} ago',
+	'mobile-frontend-last-modified-hours' => 'Last modified {{PLURAL:$1|$1 hour|$1 hours}} ago',
+	'mobile-frontend-last-modified-days' => 'Last modified {{PLURAL:$1|$1 day|$1 days}} ago',
+	'mobile-frontend-last-modified-months' => 'Last modified {{PLURAL:$1|$1 month|$1 months}} ago',
+	'mobile-frontend-last-modified-years' => 'Last modified {{PLURAL:$1|$1 year|$1 years}} ago',
 	// account creation
 	'mobile-frontend-account-create-submit' => 'Sign up',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirm password',
@@ -418,6 +425,15 @@ They can either exit the page and lose them or stay on the page until they are c
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in Special:RecentChanges, see also {{msg-mw|tag-mobile_edit-description}}',
 	'tag-mobile_edit-description' => 'Change tag description e.g. in Special:Tags, see also {{msg-mw|tag-mobile_edit}}',
 	'mobile-frontend-drawer-cancel' => 'Not visible but the text label for the cancel button inside a navigation overlay',
+	'mobile-frontend-last-modified-date' => 'Text that displays the date the page was last modified. Parameters:
+* $1 - date
+* $2 - time',
+	'mobile-frontend-last-modified-seconds' => 'Text displayed on page to show how long ago the page was updated in seconds.',
+	'mobile-frontend-last-modified-minutes' => 'Text displayed on page to show how long ago the page was updated in minutes.',
+	'mobile-frontend-last-modified-hours' => 'Text displayed on page to show how long ago the page was updated in hours.',
+	'mobile-frontend-last-modified-days' => 'Text displayed on page to show how long ago the page was updated in days.',
+	'mobile-frontend-last-modified-months' => 'Text displayed on page to show how long ago the page was updated in months.',
+	'mobile-frontend-last-modified-years' => 'Text displayed on page to show how long ago the page was updated in years.',
 );
 
 /** Achinese (Acèh)

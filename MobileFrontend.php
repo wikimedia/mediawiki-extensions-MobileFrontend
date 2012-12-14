@@ -180,18 +180,30 @@ $wgResourceModules['mobile.startup'] = array(
 );
 
 $wgResourceModules['mobile.beta.jquery'] = array(
-	'dependencies' => array( 'mobile.production-jquery' ),
+	'dependencies' => array( 'mobile.production-jquery', 'mediawiki.jqueryMsg' ),
 	'styles' => array(
 		'stylesheets/modules/mf-watchlist.css',
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-toggle-dynamic.js',
-		'javascripts/modules/mf-watchlist.js', 'javascripts/modules/mf-languages.js' ),
+		'javascripts/modules/mf-watchlist.js',
+		'javascripts/modules/mf-languages.js',
+		'javascripts/modules/mf-last-modified.js',
+	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
 	'position' => 'bottom',
+	'messages' => array(
+		'mobile-frontend-last-modified-seconds',
+		'mobile-frontend-last-modified-hours',
+		'mobile-frontend-last-modified-minutes',
+		'mobile-frontend-last-modified-hours',
+		'mobile-frontend-last-modified-days',
+		'mobile-frontend-last-modified-months',
+		'mobile-frontend-last-modified-years',
+	),
 );
 
 $wgResourceModules['mobile.production-only'] = array(

@@ -170,6 +170,9 @@ table.floatright {
   position: relative;
   border-bottom: solid 1px #CCC;
 }
+#mw-mf-last-modified {
+  margin-top: 1em;
+}
 #disableButtons {
   text-align: center;
 }

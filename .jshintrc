@@ -12,6 +12,7 @@
 
 		"module": true,
 		"strictEqual": true,
+		"deepEqual": true,
 		"test": true
 	},
 

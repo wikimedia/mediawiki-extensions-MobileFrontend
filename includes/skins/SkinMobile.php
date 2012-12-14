@@ -14,15 +14,23 @@ class SkinMobile extends SkinMobileBase {
 		$tpl = parent::prepareTemplate();
 		$out = $this->getOutput();
 		$title = $this->getTitle();
+		$user = $this->getUser();
 		$tpl->set( 'title', $title );
 		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
 		$tpl->set( 'ajaxLoader', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/modules/images/ajax-loader.gif' );
-		$tpl->set( 'user', $this->getUser() );
+		$tpl->set( 'user', $user );
 		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
+
+		$timestamp = Revision::getTimestampFromId( $this->getTitle(), $this->getRevisionId() );
+		$tpl->set( 'timestamp', wfTimestamp( TS_UNIX, $timestamp ) );
+		$tpl->set( 'lastModified', $this->msg( 'mobile-frontend-last-modified-date',
+			$this->getLanguage()->userDate( $timestamp, $user ),
+			$this->getLanguage()->userTime( $timestamp, $user )
+		) );
 
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$tpl->set( 'isOverlay', $specialPage && !$title->isSpecial( 'MobileMenu' ) );
@@ -134,7 +142,7 @@ class SkinMobile extends SkinMobileBase {
 			SpecialPage::getTitleFor( 'DonateImage' )->getLocalUrl()
 		);
 
-		$tpl->set( 'authenticated', $this->getUser()->isLoggedIn() );
+		$tpl->set( 'authenticated', $user->isLoggedIn() );
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
@@ -569,6 +577,11 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
 			<?php $this->html( 'languageSelection' ) ?>
+			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
+			<p id="mw-mf-last-modified" data-timestamp="<?php $this->text( 'timestamp' ) ?>">
+				<?php $this->text( 'lastModified' ) ?>
+			</p>
+			<?php } ?>
 		<?php if ( !$this->data['isSpecialPage'] ) { ?>
 			</div><!-- close #content -->
 		<?php } ?>
