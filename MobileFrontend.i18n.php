@@ -107,11 +107,8 @@ $messages['en'] = array (
 	'mobile-frontend-login' => 'Sign in',
 	// account creation
 	'mobile-frontend-account-create-submit' => 'Sign up',
-	'mobile-frontend-password-confirm' => 'Confirm password:',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirm password',
-	'mobile-frontend-account-create-email' => 'E-mail address (optional):',
 	'mobile-frontend-account-create-email-placeholder' => 'E-mail address (optional)',
-	'mobile-frontend-account-create-captcha' => 'Enter security text:',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Enter security text',
 	// Search
 	'mobile-frontend-overlay-escape' => 'Go back',
@@ -302,11 +299,8 @@ Don't translate the special page name",
 
 	// account creation
 	'mobile-frontend-account-create-submit' => 'Text in account creation submit button',
-	'mobile-frontend-password-confirm' => 'Label for confirm password field',
 	'mobile-frontend-password-confirm-placeholder' => 'Placeholder for confirm password field',
-	'mobile-frontend-account-create-email' => 'Label for email address field',
 	'mobile-frontend-account-create-email-placeholder' => 'Placeholder for email address field',
-	'mobile-frontend-account-create-captcha' => 'Label for captcha field',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Placeholder for captcha input field',
 
 	'mobile-frontend-overlay-escape' => 'Text for the button to the left of search / an overlay that when clicked exits the overlay to the previous screen',
