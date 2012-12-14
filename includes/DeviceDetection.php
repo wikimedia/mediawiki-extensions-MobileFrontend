@@ -140,7 +140,7 @@ class DeviceDetection implements IDeviceDetector {
 			),
 			'ie' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'default',
+				'css_file_name' => 'ie',
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => false,
