@@ -60,3 +60,48 @@ table.user-login a.mw-mf-create-account {
 table.user-login #wpLoginAttempt {
   font-size: 1.3em;
 }
+/* sign up form */
+form#userlogin2 input {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  padding: 8px;
+  border: none;
+  border-bottom: solid 1px #E1E1E1;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form#userlogin2 div.wpInputs,
+form#userlogin2 div.wpCaptcha {
+  border: solid 1px #E1E1E1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+form#userlogin2 div.wpInputs input:last-child,
+form#userlogin2 div.wpCaptcha input:last-child {
+  border-bottom: none;
+}
+form#userlogin2 div.wpCaptcha {
+  margin: 12px 0;
+}
+form#userlogin2 div.wpCaptcha input {
+  border-bottom: none;
+}
+form#userlogin2 div.wpCaptcha img.wpCaptcha {
+  display: block;
+  margin: auto;
+}
+form#userlogin2 #wpCreateaccount {
+  text-align: center;
+  padding-top: 8px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 1em;
+}

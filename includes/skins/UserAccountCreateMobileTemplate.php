@@ -34,23 +34,17 @@ class UserAccountCreateMobileTemplate extends OverloadTemplate {
 				'class' => 'watermark' ) );
 		}
 
-		$form = Html::openElement( 'div', array( 'id' => 'userlogin' ) ) .
+		$form =
 			Html::openElement( 'form',
 				array( 'name' => 'userlogin2',
 					'method' => 'post',
 					'action' => $action,
 					'id' => 'userlogin2' ) ) .
-			Html::openElement( 'table' ) .
-			Html::openElement( 'tbody' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpName1' ), wfMessage( 'mobile-frontend-username' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td' ) .
+			Html::openElement( 'div',
+				array(
+					'class' => 'wpInputs'
+				)
+			) .
 			Html::input( 'wpName', $username, 'text',
 				array( 'class' => 'loginText',
 					'placeholder' => wfMessage( 'mobile-frontend-username-placeholder' )->text(),
@@ -58,80 +52,32 @@ class UserAccountCreateMobileTemplate extends OverloadTemplate {
 					'tabindex' => '1',
 					'size' => '20',
 					'required' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpPassword1' ), wfMessage( 'mobile-frontend-password' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-input' ) ) .
 			Html::input( 'wpPassword', null, 'password',
 				array( 'class' => 'loginPassword',
 					'placeholder' => wfMessage( 'mobile-frontend-password-placeholder' )->text(),
 					'id' => 'wpPassword2',
 					'tabindex' => '2',
 					'size' => '20' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpRetype' ), wfMessage( 'mobile-frontend-password-confirm' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-input' ) ) .
 			Html::input( 'wpRetype', null, 'password',
 				array( 'class' => 'loginPassword',
 					'placeholder' => wfMessage( 'mobile-frontend-password-confirm-placeholder' )->text(),
 					'id' => 'wpRetype',
 					'tabindex' => '3',
 					'size' => '20' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpEmail' ), wfMessage( 'mobile-frontend-account-create-email' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-input' ) ) .
 			Html::input( 'wpEmail', null, 'email',
 				array( 'class' => 'loginText',
 					'placeholder' => wfMessage( 'mobile-frontend-account-create-email-placeholder' )->text(),
 					'id' => 'wpEmail',
 					'tabindex' => '4',
 					'size' => '20' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::element( 'td' ) .
-			Html::closeElement( 'tr' ) .
+			Html::closeElement( 'div' ) .
 			$captcha .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-submit' ) ) .
 			Html::input( 'wpCreateaccount', wfMessage( 'mobile-frontend-account-create-submit' )->text(), 'submit',
 				array( 'id' => 'wpCreateaccount',
 					'tabindex' => '6' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::closeElement( 'tbody' ) .
-			Html::closeElement( 'table' ) .
 			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpCreateaccountToken', $token, 'hidden' ) .
-			Html::closeElement( 'form' ) .
-			Html::closeElement( 'div' );
+			Html::closeElement( 'form' );
 		$accountCreation .= $msgBox . $form;
 		$accountCreation .= Html::closeElement( 'div' );
 		echo $accountCreation;
@@ -174,23 +120,15 @@ class UserAccountCreateMobileTemplate extends OverloadTemplate {
 		$captchaSrc = SpecialPage::getTitleFor( 'Captcha', 'image' )->getLocalUrl( array( 'wpCaptchaId' => $captchaId ) );
 
 		// captcha output html
-		$captchaHtml =	Html::openElement( 'tr' ) .
-			Html::element( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpCaptchaWord' ), wfMessage( 'mobile-frontend-account-create-captcha' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td' ) .
-			Html::element( 'img', array( 'src' => $captchaSrc	) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td' ) .
+		$captchaHtml =
+			Html::openElement( 'div',
+				array( 'class' => 'wpCaptcha' ) ) .
+			Html::element( 'img',
+				array(
+					'src' => $captchaSrc,
+					'class' => 'wpCaptcha',
+				)
+			) .
 			Html::input( 'wpCaptchaWord', null, 'text',
 				array(
 					'placeholder' => wfMessage( 'mobile-frontend-account-create-captcha-placeholder' )->text(),
@@ -201,9 +139,8 @@ class UserAccountCreateMobileTemplate extends OverloadTemplate {
 					'autocapitalize' => 'off',
 				)
 			) .
-			Html::input( 'wpCaptchaId', $captchaId, 'hidden', array( 'id' => 'wpCaptchaId' ) );
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' );
+			Html::input( 'wpCaptchaId', $captchaId, 'hidden', array( 'id' => 'wpCaptchaId' ) ) .
+			Html::closeElement( 'div' );
 		return $captchaHtml;
 	}
 }
