@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADeX///+4\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-14T20:32:50Z",
+      "side": 1,
+      "message": "We don\u0027t seem to have any strict code convention around this that I could find looking quickly through the style guide for MW, but looking quickly through the code, this can be confusing. I recommend switching this to $recentChangesView \u003d ( $view \u003d\u003d \u0027feed\u0027 ), or with a more explicit ternary, $recentChangesView \u003d ( $view \u003d\u003d \u0027feed\u0027 ) ? true : false. Otherwise it looks confusingly like assignment. Readability is everything!\n\nAlso, I think that \u003d\u003d\u003d is generally preferable to \u003d\u003d unless you need the flexibility of \u003d\u003d.",
+      "revId": "556b04b0c1ecbb8565c85fd731ffaf74271e24db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
