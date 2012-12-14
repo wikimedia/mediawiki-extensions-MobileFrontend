@@ -365,6 +365,7 @@ html.overlay button.escapeOverlay {
 html.overlay #footer {
   display: none !important;
 }
+html.overlay div.languageOverlay ul li,
 html.overlay ul.content li {
   color: #666;
   border: none;
@@ -374,17 +375,22 @@ html.overlay ul.content li {
   padding: 12px 40px;
   font-size: 0.9em;
 }
+html.overlay div.languageOverlay ul li a,
 html.overlay ul.content li a {
   display: block;
   text-decoration: none;
   color: #666;
 }
+html.overlay div.languageOverlay ul li a:active,
 html.overlay ul.content li a:active,
+html.overlay div.languageOverlay ul li a:hover,
 html.overlay ul.content li a:hover,
+html.overlay div.languageOverlay ul li a:visited,
 html.overlay ul.content li a:visited {
   text-decoration: none;
   color: #666;
 }
+html.overlay div.languageOverlay ul li:hover,
 html.overlay ul.content li:hover {
   background-color: #ACD1E9;
 }
@@ -455,7 +461,6 @@ html.overlay ul.content li:hover {
   position: relative;
   opacity: 1;
   padding: 0;
-  padding-bottom: 20px;
   cursor: pointer;
   margin: 0;
   list-style: none;
@@ -497,16 +502,20 @@ body {
 #mw-mf-page-center {
   min-height: 100%;
 }
-#mw-mf-overlay li.mw-mf-overlay-footer,
-#mw-mf-overlay li.mw-mf-overlay-header {
+#mw-mf-overlay .mw-mf-overlay-footer,
+#mw-mf-overlay .mw-mf-overlay-header {
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 40px;
+  margin: 0;
   font-size: 0.8em;
+  color: #666;
+  border-bottom: solid 1px #eee;
 }
-#mw-mf-overlay li.mw-mf-overlay-footer a {
+#mw-mf-overlay .mw-mf-overlay-footer a {
   color: #002BB8;
 }
-#mw-mf-overlay li.mw-mf-overlay-header {
+#mw-mf-overlay .mw-mf-overlay-header {
   background-color: #F1F1F1;
 }
 .supportsPositionFixed #mw-mf-page-center {

@@ -146,6 +146,7 @@ M.history = ( function() {
 				data: {
 					action: 'mobileview', format: 'json',
 					page: pageTitle,
+					variant: M.getConfig( 'variant' ),
 					redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
 					noimages: M.getConfig( 'imagesDisabled' ) ? 1 : undefined,
 					sectionprop: 'level|line|anchor', sections: 'all'

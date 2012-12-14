@@ -6,7 +6,7 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 3;
 
-	private $followRedirects, $noHeadings, $mainPage, $noTransform;
+	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant;
 	/**
 	 * @var File
 	 */
@@ -28,6 +28,7 @@ class ApiMobileView extends ApiBase {
 
 		$prop = array_flip( $params['prop'] );
 		$sectionProp = array_flip( $params['sectionprop'] );
+		$this->variant = $params['variant'];
 		$this->followRedirects = $params['redirect'] == 'yes';
 		$this->noHeadings = $params['noheadings'];
 		$this->noTransform = $params['notransform'];
@@ -136,7 +137,8 @@ class ApiMobileView extends ApiBase {
 		}
 		$latest = $wp->getLatest();
 		if ( $this->file ) {
-			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages, $latest, $this->noTransform, $this->file->getSha1() );
+			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages,
+				$latest, $this->noTransform, $this->file->getSha1(), $this->variant );
 			$cacheExpiry = 3600;
 		} else {
 			$parserOptions = $wp->makeParserOptions( $this );
@@ -252,6 +254,10 @@ class ApiMobileView extends ApiBase {
 				ApiBase::PARAM_ISMULTI => true,
 				ApiBase::PARAM_DFLT => 'toclevel|line',
 			),
+			'variant' => array(
+				ApiBase::PARAM_TYPE => 'string',
+				ApiBase::PARAM_DFLT => false,
+			),
 			'noimages' => false,
 			'noheadings' => false,
 			'notransform' => false,
@@ -271,6 +277,7 @@ class ApiMobileView extends ApiBase {
 				' normalizedtitle - normalized page title',
 			),
 			'sectionprop' => 'What information about sections to get',
+			'variant' => "Convert content into this language variant",
 			'noimages' => 'Return HTML without images',
 			'noheadings' => "Don't include headings in output",
 			'notransform' => "Don't transform HTML into mobile-specific version",
