@@ -336,7 +336,7 @@ class ExtMobileFrontend extends ContextSource {
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
 			// to be used when we actually have account creation designs to manipulate the form
-			//$template = new UserAccountCreateMobileTemplate( $template );
+			$template = new UserAccountCreateMobileTemplate( $template );
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
