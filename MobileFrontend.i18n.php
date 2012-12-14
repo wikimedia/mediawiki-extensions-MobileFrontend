@@ -22,6 +22,7 @@ $messages['en'] = array (
 	'mobile-frontend-logged-in-toast-notification' => 'Logged in as $1.',
 
 	/** log-in page **/
+	'mobile-frontend-sign-up-heading' => 'Sign up',
 	'mobile-frontend-sign-in-heading' => 'Sign in',
 	'mobile-frontend-sign-in-why' => 'If you have a {{SITENAME}} account, you may sign in below.',
 	'mobile-frontend-sign-in-error-heading' => 'Whoops',
@@ -217,6 +218,7 @@ This buttons takes the user to the home page.',
 	'mobile-frontend-logged-in-homepage-notification' => 'Heading at top of homepage telling user they are logged in',
 	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
 *$1 - username',
+	'mobile-frontend-sign-up-heading' => 'Header for sign up page',
 	'mobile-frontend-sign-in-heading' => 'Header for login page',
 	'mobile-frontend-sign-in-why' => 'Short summary before login page explaining why someone should bother signing in',
 	'mobile-frontend-settings-description' => 'Text at top of the settings page explaining its purpose',

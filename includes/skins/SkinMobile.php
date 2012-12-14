@@ -35,7 +35,11 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		if ( $userLogin ) {
-			$tpl->set( 'title', wfMessage( 'mobile-frontend-sign-in-heading' )->text() );
+			if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
+				$tpl->set( 'title', wfMessage( 'mobile-frontend-sign-up-heading' )->text() );
+			} else {
+				$tpl->set( 'title', wfMessage( 'mobile-frontend-sign-in-heading' )->text() );
+			}
 		} else {
 			$tpl->set( 'title', $out->getPageTitle() );
 		}
