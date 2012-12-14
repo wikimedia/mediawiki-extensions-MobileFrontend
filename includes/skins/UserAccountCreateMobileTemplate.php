@@ -1,6 +1,6 @@
 <?php
 /**
- * Provides a custom login form for mobile devices
+ * Provides a custom account creation form for mobile devices
  */
 class UserAccountCreateMobileTemplate extends OverloadTemplate {
 
