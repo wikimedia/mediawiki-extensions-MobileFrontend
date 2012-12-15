@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADfn///9o\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-15T00:11:09Z",
+      "side": 1,
+      "message": "Agreed. Currently though the UI only exposes a mixed list when you append query string parameter filter\u003dall - let\u0027s focus on this in another iteration.",
+      "parentUuid": "AAADfn////Q\u003d",
+      "revId": "02e2149b8a0faf936da722a227dce64c7dbebb81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn////M\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAADfn///9s\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-15T00:11:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADfn////M\u003d",
+      "revId": "02e2149b8a0faf936da722a227dce64c7dbebb81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn////I\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2012-12-14T23:52:14Z",
       "side": 1,
       "message": "Seems arbitrary.",
+      "revId": "02e2149b8a0faf936da722a227dce64c7dbebb81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn///9k\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-15T00:11:09Z",
+      "side": 1,
+      "message": "copied from Brion\u0027s code blindly :/",
+      "parentUuid": "AAADfn////I\u003d",
       "revId": "02e2149b8a0faf936da722a227dce64c7dbebb81",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
