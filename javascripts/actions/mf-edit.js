@@ -1,6 +1,8 @@
 ( function( M, $ ) {
 
 var m = ( function() {
+	var $pre = $( '<pre>' ).hide().appendTo( $( '#content_wrapper' ) ), minHeight = 80;
+
 	function makeSection( $editArea, sectionId ) {
 		var $section = $( '<div class="section">' ).insertBefore( $editArea ),
 			$heading = $( '<h2 class="section_heading">' ).attr( 'id', 'section_edit' + sectionId ),
@@ -34,6 +36,24 @@ var m = ( function() {
 			}
 		} );
 		return newVal.join( '' );
+	}
+
+	function setTextAreaHeight( $textarea ) {
+		var h = $pre.text( $textarea.val() ).height();
+		h = h > minHeight ? h : minHeight;
+		$textarea.css( 'height', h );
+	}
+
+	function makeMagicalExpanding( $textarea ) {
+		$textarea.on( 'focus', function() {
+			setTextAreaHeight( $( this ) );
+			} ).on( 'keyup', function( ev ) {
+			// change size if return key or backspace
+			// FIXME: also do this on paste / delete all action
+			if ( ev.keyCode && ev.keyCode === 13 || ev.keyCode === 8 ) {
+				setTextAreaHeight( $( this ) );
+			}
+		} );
 	}
 
 	function splitTextArea( $editArea ) {
@@ -73,6 +93,10 @@ var m = ( function() {
 				$el = $( '<input class="segment">' );
 			}
 			$el.val( val ).appendTo( $section.find( '.content_block' ) );
+
+			if ( val ) {
+				makeMagicalExpanding( $el );
+			}
 		}
 
 		$loader = $( '<div class="loader">' ).text( M.message( 'mobile-frontend-page-saving', M.getConfig( 'title' ) ) ).
