@@ -294,6 +294,9 @@ input[type=submit].confirm.disabled:hover {
 #mw-mf-menu-main li.icon5 a {
   background-image: url(images/menu/lowres/settings.png);
 }
+#mw-mf-menu-main li.iconImage a {
+  background-image: url(images/100px-globe.png);
+}
 #mw-mf-menu-main li.icon6 a.logout {
   background-image: url(images/menu/lowres/logout.png);
 }

@@ -136,6 +136,7 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-logout' => 'Log out',
 	'mobile-frontend-main-menu-watchlist' => 'Watchlist',
 	'mobile-frontend-main-menu-settings' => 'Settings',
+	'mobile-frontend-donate-image' => 'Donate image',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below',
@@ -150,6 +151,14 @@ $messages['en'] = array (
 	'mobile-frontend-ajax-page-loading' => 'Loading $1',
 	'mobile-frontend-page-saving' => 'Saving $1',
 	'mobile-frontend-ajax-page-error' => 'Whoops! Something went wrong there. Please try refreshing your browser window.',
+
+	// image donation
+	'mobile-frontend-photo-upload-generic' => 'Donate an image',
+	'mobile-frontend-donate-image-title' => 'Donate an image',
+	'mobile-frontend-donate-image-summary' => 'Photos bring pages on {{SITENAME}} to life.
+There are many pages which have no photos due to a severe lack of freely licensed photos.
+Help bring these pages to life by donating your images that you are willing to give away and could be of use to the wider {{SITENAME}} editing community.',
+	'mobile-frontend-donate-image-heading' => 'Your recent contributions',
 
 	// watchlist
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
@@ -340,6 +349,10 @@ Don't translate the special page name",
 	'mobile-frontend-ajax-page-loading' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript',
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved',
 	'mobile-frontend-ajax-page-error' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript and it fails',
+	'mobile-frontend-photo-upload-generic' => 'Label on donate interface on Special:DonateImage',
+	'mobile-frontend-donate-image-title' => 'Title for Special:DonateImage',
+	'mobile-frontend-donate-image-summary' => 'Explanation of purpose of page and importance of participation.',
+	'mobile-frontend-donate-image-heading' => 'heading for a list of recent contributions',
 	'mobile-frontend-watchlist-add' => 'Notification message when you add an article to your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist

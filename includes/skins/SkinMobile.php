@@ -192,6 +192,9 @@ mediawiki.hidpi' ), 'scripts', true, true );
 			SpecialPage::getTitleFor( 'MobileOptions' )->
 				getLocalUrl( array( 'returnto' => $this->getTitle()->getPrefixedText() ) )
 		);
+		$tpl->set( 'donateImageUrl',
+			SpecialPage::getTitleFor( 'DonateImage' )->getLocalUrl()
+		);
 
 		$tpl->set( 'authenticated', $this->getUser()->isLoggedIn() );
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
@@ -616,6 +619,14 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
+			<?php if ( $this->data['isAlphaGroupMember'] && $data['user'] && $data['user']->isAllowed( 'upload' ) ) { ?>
+				<li class='iconImage'>
+					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
+						title="<?php $this->msg( 'mobile-frontend-donate-image' ) ?>">
+					<?php $this->msg( 'mobile-frontend-donate-image' ) ?>
+					</a>
+				</li>
+			<?php } ?>
 			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<li class='icon6'>
 				<?php $this->html( 'logInOut' ) ?>
@@ -671,6 +682,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			'mobile-frontend-photo-upload',
 			'mobile-frontend-photo-article-edit-comment',
 			'mobile-frontend-photo-upload-comment',
+			'mobile-frontend-photo-upload-generic',
 		);
 		foreach ( $messages as $msg ) {
 			$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
@@ -692,6 +704,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$hookOptions = isset( $this->data['hookOptions']['toggle_view_desktop'] ) ? 'toggle_view_desktop' : '';
 
 		$inBeta = $this->data['isBetaGroupMember'];
+		$user = $this->data['user'];
 		$jsconfig = array(
 			'messages' => array(
 				'mobile-frontend-photo-license' => wfMessage( 'mobile-frontend-photo-license' )->parse(),
@@ -721,9 +734,9 @@ class SkinMobileTemplate extends BaseTemplate {
 				'stopMobileRedirectCookieDuration' => $this->data['stopMobileRedirectCookieDuration'],
 				'stopMobileRedirectCookieDomain' => $this->data['stopMobileRedirectCookieDomain'],
 				'hookOptions' => $hookOptions,
+				'username' => $user->getName(),
 			),
 		);
-		$user = $this->data['user'];
 
 		$jsconfig = $this->addMessages( $jsconfig );
 

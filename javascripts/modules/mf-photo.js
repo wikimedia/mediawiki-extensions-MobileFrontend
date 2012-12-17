@@ -37,7 +37,7 @@ module = ( function() {
 		reader.readAsDataURL( file );
 	}
 
-	function save( filename, caption, $container ) {
+	function save( filename, caption, $container, saveWikiTextFlag ) {
 		var $img = $container.find( 'img' ),
 			src = $img.attr( 'src' ),
 			$form = $container.find( 'form' ),
@@ -47,9 +47,8 @@ module = ( function() {
 		formData.append( 'file', $form.find( 'input[type=file]' )[ 0 ].files[ 0 ] );
 		dirty = true;
 
-		function saveWikiText( image, caption, token ) {
-			var name = image.filename || image.warnings.duplicate[ '0' ];
-			$.ajax( {
+		function saveWikiText( name, caption, token ) {
+			return $.ajax( {
 				url: M.getApiUrl(),
 				type: 'POST',
 				data: {
@@ -59,15 +58,6 @@ module = ( function() {
 					token: token,
 					comment: M.message( 'mobile-frontend-photo-upload-comment' ) + ' [Via Mobile]',
 					prependtext: '[[File:' + name + '|thumbnail|' + caption + ']]\n\n'
-				},
-				success: function() {
-					if ( image.imageinfo ) {
-						$img.attr( 'src', image.imageinfo.url );
-					} else {
-						$img.attr( 'src', src );
-					}
-					$container.removeClass( 'uploading' ).removeClass( 'error' );
-					dirty = false;
 				}
 			} );
 		}
@@ -93,9 +83,26 @@ module = ( function() {
 				processData: false,
 				data: formData
 			} ).done( function( data ) {
+				var d, name;
+
 				if ( data && data.upload ) {
+					name = data.upload.filename || data.upload.warnings.duplicate[ '0' ];
 					M.getToken( 'edit', function( tokenData ) {
-						saveWikiText( data.upload, caption, tokenData.tokens.edittoken );
+						if ( saveWikiTextFlag ) {
+							d = saveWikiText( name, caption, tokenData.tokens.edittoken );
+						} else {
+							d = $.Deferred();
+							d.resolve();
+						}
+						d.done( function( image ) {
+							if ( image && image.imageinfo ) {
+								$img.attr( 'src', image.imageinfo.url );
+							} else {
+								$img.attr( 'src', src );
+							}
+							$container.removeClass( 'uploading' ).removeClass( 'error' );
+							dirty = false;
+						} );
 					} );
 				} else {
 					// do error
@@ -118,13 +125,15 @@ module = ( function() {
 		}, endPoint );
 	}
 
-	function addPhotoUploader( container ) {
+	function addPhotoUploader( container, saveWikiTextFlag, msg ) {
+		msg = msg || 'mobile-frontend-photo-upload';
+
 		var $container = $( '<div class="thumb photouploader">' ).prependTo( container ),
 			$editArea, $form, $img, $file, $license,
 			template = '<div class="camera">' +
 				'<div class="errormsg">' + M.message( 'mobile-frontend-photo-upload-error' ) + '</div>' +
 				'<form>' +
-				'<p>' + M.message( 'mobile-frontend-photo-upload' ) + '</p>' +
+				'<p>' + M.message( msg ) + '</p>' +
 				'<input class="photoupload" name="file" type="file">' +
 				'</form>' +
 				'</div>';
@@ -178,7 +187,7 @@ module = ( function() {
 						filename = generateFileName( file ),
 						caption = $container.find( 'input[type=text]' ).val();
 
-					save( filename, caption, $container );
+					save( filename, caption, $container, saveWikiTextFlag );
 					$container.find( '.editArea input,button,.license' ).hide();
 					focusFilePicker();
 
@@ -193,11 +202,15 @@ module = ( function() {
 		if ( $( lead ).find( '.thumb img' ).length === 0 && supported && !M.getConfig( 'imagesDisabled', false ) &&
 			// webkit only for time being
 			window.navigator.userAgent.indexOf( 'WebKit' ) > -1 ) {
-			addPhotoUploader( lead );
+			addPhotoUploader( lead, true );
 		}
 	}
 
 	$( window ).on( 'mw-mf-page-loaded', init );
+	return {
+		addPhotoUploader: addPhotoUploader,
+		isSupported: supported
+	};
 }() );
 
 M.registerModule( 'photos', module );
