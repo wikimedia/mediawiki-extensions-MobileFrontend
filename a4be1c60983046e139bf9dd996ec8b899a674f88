@@ -16,6 +16,24 @@
       "revId": "a4be1c60983046e139bf9dd996ec8b899a674f88",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+2c\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-17T20:29:41Z",
+      "side": 1,
+      "message": "I used the word page but dropped the All as with filters this can be confusing and the button labels need to be short!",
+      "parentUuid": "AAADfn///kk\u003d",
+      "revId": "a4be1c60983046e139bf9dd996ec8b899a674f88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
