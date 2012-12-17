@@ -1,6 +1,7 @@
 @import "../mf-mixins.less";
 
 /* reuses https://github.com/wikimedia/agora */
+a.button,
 button,
 input[type=submit] {
 	display: inline-block;
@@ -81,3 +82,40 @@ input[type=submit] {
 		}
 	}
 }
+
+@buttonVerticalMargin: 8px;
+@buttonVerticalPadding: ( @headerHeight / 2 ) - ( @buttonVerticalMargin * 2 );
+#mw-mf-overlay {
+	.header {
+		a.button {
+			font-size: @baseFontSize * 0.7; /* header is small */
+			margin-top: @buttonVerticalMargin;
+			margin-bottom: @buttonVerticalMargin;
+			.border-radius( 0 );
+			padding-top: @buttonVerticalPadding;
+			padding-bottom: @buttonVerticalPadding;
+			text-decoration: none;
+			border: none;
+			text-shadow: none;
+			.vertical-gradient( rgb(142,144,147), rgb(142,144,147) );
+			color: white;
+
+			&.active,
+			&:active {
+				.vertical-gradient( white, white );
+				color: rgb(81,183,226);
+			}
+		}
+	}
+}
+
+@media all and (min-width: 500px) {
+	#mw-mf-overlay {
+		.header {
+			a.button {
+				font-size: @baseFontSize;
+			}
+		}
+	}
+}
+

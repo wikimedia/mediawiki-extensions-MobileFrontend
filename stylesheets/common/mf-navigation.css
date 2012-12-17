@@ -1,4 +1,5 @@
 /* reuses https://github.com/wikimedia/agora */
+a.button,
 button,
 input[type=submit] {
   display: inline-block;
@@ -19,6 +20,7 @@ input[type=submit] {
   background-image: -webkit-linear-gradient(top, #3670c8, #3366bb);
   background-image: linear-gradient(#3670c8, #3366bb);
 }
+a.button:hover,
 button:hover,
 input[type=submit]:hover {
   background-color: #3f77d7;
@@ -28,6 +30,7 @@ input[type=submit]:hover {
   background-image: -webkit-linear-gradient(top, #4c84da, #3f77d7);
   background-image: linear-gradient(#4c84da, #3f77d7);
 }
+a.button:active,
 button:active,
 input[type=submit]:active {
   background-color: #2a549c;
@@ -37,12 +40,16 @@ input[type=submit]:active {
   background-image: -webkit-linear-gradient(top, #2d5ea9, #2a549c);
   background-image: linear-gradient(#2d5ea9, #2a549c);
 }
+a.button:disabled,
 button:disabled,
 input[type=submit]:disabled,
+a.button:disabled.hover,
 button:disabled.hover,
 input[type=submit]:disabled.hover,
+a.button.disabled,
 button.disabled,
 input[type=submit].disabled,
+a.button.disabled:hover,
 button.disabled:hover,
 input[type=submit].disabled:hover {
   color: white;
@@ -55,10 +62,12 @@ input[type=submit].disabled:hover {
   background-image: linear-gradient(#7297d7, #7297d7);
   border-color: #5e89d1;
 }
+a.button.languageSelector,
 button.languageSelector,
 input[type=submit].languageSelector {
   margin-top: 14pt;
 }
+a.button.cancel,
 button.cancel,
 input[type=submit].cancel {
   border: 1px #ba0101 solid;
@@ -71,6 +80,7 @@ input[type=submit].cancel {
   background-image: -webkit-linear-gradient(top, #e42929, #cc0000);
   background-image: linear-gradient(#e42929, #cc0000);
 }
+a.button.cancel:hover,
 button.cancel:hover,
 input[type=submit].cancel:hover {
   background-color: #e82b2b;
@@ -80,6 +90,7 @@ input[type=submit].cancel:hover {
   background-image: -webkit-linear-gradient(top, #ef3838, #e82b2b);
   background-image: linear-gradient(#ef3838, #e82b2b);
 }
+a.button.cancel:active,
 button.cancel:active,
 input[type=submit].cancel:active {
   background-color: #a70000;
@@ -89,12 +100,16 @@ input[type=submit].cancel:active {
   background-image: -webkit-linear-gradient(top, #a70000, #a70000);
   background-image: linear-gradient(#a70000, #a70000);
 }
+a.button.cancel:disabled,
 button.cancel:disabled,
 input[type=submit].cancel:disabled,
+a.button.cancel:disabled.hover,
 button.cancel:disabled.hover,
 input[type=submit].cancel:disabled.hover,
+a.button.cancel.disabled,
 button.cancel.disabled,
 input[type=submit].cancel.disabled,
+a.button.cancel.disabled:hover,
 button.cancel.disabled:hover,
 input[type=submit].cancel.disabled:hover {
   color: white;
@@ -106,6 +121,7 @@ input[type=submit].cancel.disabled:hover {
   background-image: linear-gradient(#eb6f6f, #eb6f6f);
   border-color: #e75959;
 }
+a.button.confirm,
 button.confirm,
 input[type=submit].confirm {
   border: 1px #0f9b3b solid;
@@ -118,6 +134,7 @@ input[type=submit].confirm {
   background-image: -webkit-linear-gradient(top, #00974b, #008740);
   background-image: linear-gradient(#00974b, #008740);
 }
+a.button.confirm:hover,
 button.confirm:hover,
 input[type=submit].confirm:hover {
   background-color: #119750;
@@ -127,6 +144,7 @@ input[type=submit].confirm:hover {
   background-image: -webkit-linear-gradient(top, #10a65b, #119750);
   background-image: linear-gradient(#10a65b, #119750);
 }
+a.button.confirm:active,
 button.confirm:active,
 input[type=submit].confirm:active {
   background-color: #007236;
@@ -136,12 +154,16 @@ input[type=submit].confirm:active {
   background-image: -webkit-linear-gradient(top, #007236, #007236);
   background-image: linear-gradient(#007236, #007236);
 }
+a.button.confirm:disabled,
 button.confirm:disabled,
 input[type=submit].confirm:disabled,
+a.button.confirm:disabled.hover,
 button.confirm:disabled.hover,
 input[type=submit].confirm:disabled.hover,
+a.button.confirm.disabled,
 button.confirm.disabled,
 input[type=submit].confirm.disabled,
+a.button.confirm.disabled:hover,
 button.confirm.disabled:hover,
 input[type=submit].confirm.disabled:hover {
   color: white;
@@ -152,6 +174,43 @@ input[type=submit].confirm.disabled:hover {
   background-image: -webkit-linear-gradient(top, #2ca368, #2ca368);
   background-image: linear-gradient(#2ca368, #2ca368);
   border-color: #278f5b;
+}
+#mw-mf-overlay .header a.button {
+  font-size: 0.7em;
+  /* header is small */
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-decoration: none;
+  border: none;
+  text-shadow: none;
+  background-color: #8e9093;
+  background-image: -moz-linear-gradient(top, #8e9093, #8e9093);
+  background-image: -ms-linear-gradient(top, #8e9093, #8e9093);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8e9093), color-stop(100%, #8e9093));
+  background-image: -webkit-linear-gradient(top, #8e9093, #8e9093);
+  background-image: linear-gradient(#8e9093, #8e9093);
+  color: white;
+}
+#mw-mf-overlay .header a.button.active,
+#mw-mf-overlay .header a.button:active {
+  background-color: #ffffff;
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(#ffffff, #ffffff);
+  color: #51b7e2;
+}
+@media all and (min-width: 500px) {
+  #mw-mf-overlay .header a.button {
+    font-size: 1em;
+  }
 }
 #mw-mf-header form,
 #mw-mf-sq {
