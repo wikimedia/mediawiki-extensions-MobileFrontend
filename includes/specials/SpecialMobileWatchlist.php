@@ -14,8 +14,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			return parent::execute( $par );
 		}
 
-		$this->filter = $this->getRequest()->getVal( 'filter', 'all' );
-
 		$output->addModules( 'mobile.watchlist' );
 
 		$output->addHtml(
@@ -23,9 +21,14 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		);
 
 		if ( $recentChangesView ) {
+			$this->filter = $this->getRequest()->getVal( 'filter', 'all' );
 			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
 			$this->showFeedResults( $res );
+		} else {
+			$this->filter = $this->getRequest()->getVal( 'filter', 'articles' );
+			$res = $this->doListQuery();
+			$this->showListResults( $res );
 		}
 
 		$output->addHtml(
@@ -133,6 +136,42 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		return $res;
 	}
 
+	function doListQuery() {
+		$user = $this->getUser();
+		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
+
+		# Possible where conditions
+		$conds = array(
+			'wl_user' => $user->getId()
+		);
+		$tables = array( 'watchlist' );
+		$fields = array( $dbr->tableName( 'watchlist' ) . '.*' );
+		$options = array( 'ORDER BY' => 'wl_namespace, wl_title' );
+
+		$limitWatchlist = 100; // hack
+		if( $limitWatchlist ) {
+			$options['LIMIT'] = $limitWatchlist;
+		}
+
+		switch( $this->filter ) {
+		case 'all':
+			break;
+		case 'articles':
+			$conds['wl_namespace'] = 0;
+			break;
+		case 'talk':
+			$conds['wl_namespace'] = 1;
+			break;
+		case 'other':
+			$conds['wl_namespace'] = array(2, 4);
+			break;
+		}
+
+		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options );
+
+		return $res;
+	}
+
 	function showFeedResults( $res ) {
 		$this->seenTitles = array();
 
@@ -143,6 +182,15 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
 		foreach( $res as $row ) {
 			$this->showFeedResultRow( $row );
+		}
+		$output->addHtml( '</ul>' );
+	}
+
+	function showListResults( $res ) {
+		$output = $this->getOutput();
+		$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
+		foreach( $res as $row ) {
+			$this->showListResultRow( $row );
 		}
 		$output->addHtml( '</ul>' );
 	}
@@ -214,6 +262,21 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			Html::closeElement( 'div' ) .
 			Html::element( 'div', array( 'class' => 'mw-mf-comment' ), $comment ) .
 			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $relativeTime ) .
+			Html::closeElement( 'a' ) .
+			'</li>'
+		);
+	}
+
+	function showListResultRow( $row ) {
+		$output = $this->getOutput();
+
+		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
+		$titleText = $title->getPrefixedText();
+
+		$output->addHtml(
+			'<li>' .
+			Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
+			Html::element( 'div', array( 'class' => 'mw-mf-title' ), $titleText ).
 			Html::closeElement( 'a' ) .
 			'</li>'
 		);
