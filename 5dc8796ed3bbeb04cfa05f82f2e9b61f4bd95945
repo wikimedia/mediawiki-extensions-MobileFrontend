@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADfn//+dY\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-18T01:56:41Z",
+      "side": 1,
+      "message": "Can we use \u0027lastmodifiedat\u0027 here which says \"This page was last modified on XXX at XXX\"?",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+dQ\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 532,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-18T01:56:41Z",
+      "side": 1,
+      "message": "Should be text()",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
