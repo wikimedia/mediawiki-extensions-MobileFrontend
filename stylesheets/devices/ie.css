@@ -1,7 +1,6 @@
 /* TD cannot be turned into display block on Windows Phone 7.5
 This hack hides the TD with the icon in it so that the more important
 text is readable */
-cleanup templates
 .mbox-image {
 	display: none !important;
 }
