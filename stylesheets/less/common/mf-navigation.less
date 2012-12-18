@@ -393,15 +393,23 @@ body {
 	min-height: 100%;
 }
 
-#mw-mf-overlay .mw-mf-overlay-footer,
-#mw-mf-overlay .mw-mf-overlay-header {
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-left: @searchBoxMarginLeft;
-	margin: 0;
-	font-size: 0.8em;
-	color: #666;
-	border-bottom: solid 1px #eee;
+#mw-mf-overlay {
+	.header,
+	.mw-mf-overlay-footer,
+	.mw-mf-overlay-header {
+		padding-left: @searchBoxMarginLeft;
+	}
+
+	.mw-mf-overlay-footer,
+	.mw-mf-overlay-header {
+		padding-top: 4px;
+		padding-bottom: 4px;
+
+		margin: 0;
+		font-size: 0.8em;
+		color: #666;
+		border-bottom: solid 1px #eee;
+	}
 }
 
 #mw-mf-overlay .mw-mf-overlay-footer a {

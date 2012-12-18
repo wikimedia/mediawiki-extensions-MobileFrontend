@@ -557,11 +557,15 @@ body {
 #mw-mf-page-center {
   min-height: 100%;
 }
+#mw-mf-overlay .header,
+#mw-mf-overlay .mw-mf-overlay-footer,
+#mw-mf-overlay .mw-mf-overlay-header {
+  padding-left: 40px;
+}
 #mw-mf-overlay .mw-mf-overlay-footer,
 #mw-mf-overlay .mw-mf-overlay-header {
   padding-top: 4px;
   padding-bottom: 4px;
-  padding-left: 40px;
   margin: 0;
   font-size: 0.8em;
   color: #666;
