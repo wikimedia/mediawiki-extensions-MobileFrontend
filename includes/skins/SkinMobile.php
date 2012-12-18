@@ -105,16 +105,19 @@ class SkinMobile extends SkinMobileBase {
 		if ( $device['supports_jquery'] ) {
 			$scripts[] = 'mobile.production-jquery';
 		}
+
+		// setup destinations for scripts at top and scripts at bottom
+		$headLinks = array();
 		$scriptLinks = array();
 		if ( $device['supports_jquery'] ) {
 			global $wgMFEnableResourceLoader;
 			if ( $inBeta && $wgMFEnableResourceLoader ) {
 				// Initialize ResourceLoader, targeted to mobile...
-				$scriptLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
+				$headLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
 				$modules = $this->getOutput()->getModules( true );
 				if ( $modules ) {
 					// Load ResourceLoader modules
-					$scriptLinks[] = Html::inlineScript(
+					$headLinks[] = Html::inlineScript(
 						ResourceLoader::makeLoaderConditionalScript(
 							Xml::encodeJsCall( 'mw.loader.load', array( $modules ) )
 						)
@@ -140,7 +143,6 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		$bottomScripts = implode( "\n", $scriptLinks );
 		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
 
-		$headLinks = array();
 		$headLinks[] = $this->resourceLoaderLink( array( '' => 'mobile.head' ), 'scripts' );
 		$preamble = implode( "\n", $headLinks );
 		$tpl->set( 'preambleScript', $device['supports_javascript'] ? $preamble : '' );

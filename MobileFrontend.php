@@ -242,6 +242,7 @@ $wgResourceModules['mobile.watchlist'] = array(
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
+	'position' => 'top',
 );
 
 $wgResourceModules['mobile.site'] = array(
