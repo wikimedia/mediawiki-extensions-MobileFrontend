@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "AAADfn//+Xc\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-18T08:55:35Z",
+      "side": 1,
+      "message": "I think this should use Timestamp::getHumanTimestamp so that we don\u0027t get implementations of this in various places. There are some i18n issues to this type of functionality that make this harder than it seems at first glance.\n\nAs it is being used in JS here, Timestamp::getHumanTimestamp should probably be ported to our core JS.",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn//+dU\u003d",
         "filename": "MobileFrontend.php",
         "patchSetId": 2
