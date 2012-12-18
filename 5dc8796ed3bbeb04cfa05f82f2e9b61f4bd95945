@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "AAADfn//+dU\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-18T01:58:54Z",
+      "side": 1,
+      "message": "add \u0027position\u0027: \u0027bottom\u0027,",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn//+dQ\u003d",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 2
@@ -30,6 +47,91 @@
       "writtenOn": "2012-12-18T01:56:41Z",
       "side": 1,
       "message": "Should be text()",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+d4\u003d",
+        "filename": "javascripts/modules/mf-last-modified.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-18T01:58:54Z",
+      "side": 1,
+      "message": "whitespace before first element and afterward last arrays:\nie. [ \u0027seconds not [\u0027seconds\n\n:-S sorry!",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+d0\u003d",
+        "filename": "javascripts/modules/mf-last-modified.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-18T01:58:54Z",
+      "side": 1,
+      "message": "same as above",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+dw\u003d",
+        "filename": "javascripts/modules/mf-last-modified.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-18T01:58:54Z",
+      "side": 1,
+      "message": "[ i + 1 ]",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+dk\u003d",
+        "filename": "javascripts/modules/mf-last-modified.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-18T01:58:54Z",
+      "side": 1,
+      "message": "If you see my note on L193 - I think you should be able to force this to load at bottom and not have to resort to adding a fixme... (top by default)",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+eA\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-18T01:58:54Z",
+      "side": 1,
+      "message": "just a note - I feel like we are becoming too dependent on id selectors and should probably rethink a lot of them...",
       "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
