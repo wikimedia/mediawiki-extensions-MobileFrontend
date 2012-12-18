@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH///wc\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-18T20:14:38Z",
+      "side": 1,
+      "message": "Don\u0027t use an arbitrary cut off. Either put each sentence on its own line, or everything on one line. For translators, it\u0027s nicer to put each sentence on a new line. Whenever you make changes to the English message later on, the diff is much easier to read.",
+      "revId": "7d50e0dfef0631f0dcda4b919712c00080f13e19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
