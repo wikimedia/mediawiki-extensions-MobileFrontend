@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgH///ws\u003d",
+        "filename": ".jshintrc",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-18T22:22:34Z",
+      "side": 1,
+      "message": "I\u0027ll have a look at this, but let\u0027s leave it as is here and make another changeset.",
+      "parentUuid": "AAADgH///1U\u003d",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgH///yY\u003d",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgH///wg\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-18T22:22:34Z",
+      "side": 1,
+      "message": "I wanted to make it shorter because of more limited space on mobile devices. What others think? Anyway, this will probably change sooner or later with the whole nav redesign.\n\nThe story (https://mingle.corp.wikimedia.org/projects/mobile/cards/144) says \"e.g. Last edited\", so it\u0027s also short.",
+      "parentUuid": "AAADfn//+dY\u003d",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn//+Xc\u003d",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 2
@@ -64,6 +100,24 @@
       "writtenOn": "2012-12-18T08:55:35Z",
       "side": 1,
       "message": "I think this should use Timestamp::getHumanTimestamp so that we don\u0027t get implementations of this in various places. There are some i18n issues to this type of functionality that make this harder than it seems at first glance.\n\nAs it is being used in JS here, Timestamp::getHumanTimestamp should probably be ported to our core JS.",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH///wY\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-18T22:22:34Z",
+      "side": 1,
+      "message": "But is it ported already? Still, we\u0027ll probably have to use our own message() function, not mw.msg() because MaxSem said this\nhttps://gerrit.wikimedia.org/r/#/c/39162/ will not get merged soon enough, so I\u0027d leave it as it is just to get it merged sooner and we can change it later.",
+      "parentUuid": "AAADfn//+Xc\u003d",
       "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgH///wI\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-18T22:22:34Z",
+      "side": 1,
+      "message": "It doesn\u0027t seem to change anything... And why watchlist has position: top?",
+      "parentUuid": "AAADfn//+dU\u003d",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn//+cw\u003d",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 2
@@ -98,6 +170,24 @@
       "writtenOn": "2012-12-18T02:04:30Z",
       "side": 1,
       "message": "The story also says this should be in the footer\n\"In the footer I will see human-readable text telling me when the article was last edited\"\n\nIt should replace \n\"Page by contributors like you\" but link to same place",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH///vo\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-18T22:22:34Z",
+      "side": 1,
+      "message": "I don\u0027t see anything about replacing \"Page by contributors like you\" at https://mingle.corp.wikimedia.org/projects/mobile/cards/144\n\nIt also states that \"The footer doesn’t seem to be the best place for it.\"\nI talked to Maryana about this and we decided to put it temporarily at the end of the page while it awaits the nav redesign.",
+      "parentUuid": "AAADfn//+cw\u003d",
       "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -132,6 +222,24 @@
       "writtenOn": "2012-12-18T01:58:54Z",
       "side": 1,
       "message": "whitespace before first element and afterward last arrays:\nie. [ \u0027seconds not [\u0027seconds\n\n:-S sorry!",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH///iE\u003d",
+        "filename": "javascripts/modules/mf-last-modified.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-18T22:22:34Z",
+      "side": 1,
+      "message": "Are you sure about this? It\u0027s not consistent with the coding style MediaWiki has:\nhttps://gerrit.wikimedia.org/r/gitweb?p\u003dmediawiki/core.git;a\u003dblob;f\u003dresources/mediawiki/mediawiki.js;h\u003db0abc9e6f608742d2cc0794b3e990b71f72ec631;hb\u003dc2d117b379ef588e8380dfd5f2b93a5a32fc22f5#l670",
+      "parentUuid": "AAADfn//+d4\u003d",
       "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -218,6 +326,24 @@
       "writtenOn": "2012-12-18T01:58:54Z",
       "side": 1,
       "message": "just a note - I feel like we are becoming too dependent on id selectors and should probably rethink a lot of them...",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH///iA\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-18T22:22:34Z",
+      "side": 1,
+      "message": "You mean we should have standard classes? I think this could be an exception, being a kind of one of its kind element.",
+      "parentUuid": "AAADfn//+eA\u003d",
       "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
