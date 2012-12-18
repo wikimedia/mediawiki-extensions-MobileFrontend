@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "AAADfn//+cw\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-18T02:04:30Z",
+      "side": 1,
+      "message": "The story also says this should be in the footer\n\"In the footer I will see human-readable text telling me when the article was last edited\"\n\nIt should replace \n\"Page by contributors like you\" but link to same place",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn//+dQ\u003d",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 2
