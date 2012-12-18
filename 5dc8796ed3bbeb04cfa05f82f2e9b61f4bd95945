@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "AAADgH///yY\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-18T19:36:39Z",
+      "side": 1,
+      "message": "It would also be good to mention the dependency on https://gerrit.wikimedia.org/r/#/c/39162/1 in the commit message",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn//+dY\u003d",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 2
