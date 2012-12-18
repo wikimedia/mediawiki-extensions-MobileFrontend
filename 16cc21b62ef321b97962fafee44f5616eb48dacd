@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADfn//+WY\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-18T09:12:34Z",
+      "side": 1,
+      "message": "Title Case -\u003e Donate image",
+      "revId": "16cc21b62ef321b97962fafee44f5616eb48dacd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+WU\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-18T09:12:34Z",
+      "side": 1,
+      "message": "I\u0027d not use the word \"naked\" here.",
+      "revId": "16cc21b62ef321b97962fafee44f5616eb48dacd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
