@@ -267,7 +267,7 @@ input[type=submit].confirm.disabled:hover {
   -o-background-size: 24px 24px;
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
-  background-position: 0px 10px;
+  background-position: left 10px;
   margin-left: 10px;
   border-bottom: 1px inset #3e3e3e;
 }
