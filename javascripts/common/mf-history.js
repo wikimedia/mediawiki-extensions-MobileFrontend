@@ -179,11 +179,11 @@ M.history = ( function() {
 				_mwStart = +new Date; // reset logger
 				M.setConfig( 'title', title );
 				page = loadPage( title, typeof constructPage === 'undefined' ? true : constructPage );
-				window.history.pushState( { title: title }, title, getArticleUrl( title ) );
+				window.history.pushState( { title: title, hash: true }, title, getArticleUrl( title ) );
 				return page;
 			};
 			// deal with initial pop so that we can record the initial page
-			window.history.replaceState( { title: currentTitle }, currentTitle );
+			window.history.replaceState( { title: currentTitle, hash: true }, currentTitle );
 
 			$( window ).bind( 'popstate', function( ev ) {
 				var state = ev.originalEvent.state;
