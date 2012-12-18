@@ -594,6 +594,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function navigationStart() {
+		$user = $this->data['user'];
 		?>
 		<div id="mw-mf-viewport">
 		<div id="mw-mf-page-left">
@@ -627,7 +628,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
-			<?php if ( $this->data['isAlphaGroupMember'] && $data['user'] && $data['user']->isAllowed( 'upload' ) ) { ?>
+			<?php if ( $this->data['isAlphaGroupMember'] && $user && $user->isAllowed( 'upload' ) ) { ?>
 				<li class='iconImage'>
 					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
 						title="<?php $this->msg( 'mobile-frontend-donate-image' ) ?>">
