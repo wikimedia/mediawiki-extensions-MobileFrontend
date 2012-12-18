@@ -48,6 +48,7 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'api/ApiParseExtender',
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
+	'SpecialDonateImage' => 'specials/SpecialDonateImage',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
@@ -81,6 +82,7 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
+$wgSpecialPages['DonateImage'] = 'SpecialDonateImage';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
@@ -171,6 +173,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
+	'position' => 'bottom',
 );
 
 $wgResourceModules['mobile.beta.jquery.eventlog'] = array(
@@ -204,7 +207,9 @@ $wgResourceModules['mobile.alpha'] = array(
 	'scripts' => array(
 		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-random.js',
-		'javascripts/modules/mf-tables.js' ),
+		'javascripts/modules/mf-tables.js',
+		'javascripts/modules/mf-user-gallery.js',
+	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
