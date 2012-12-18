@@ -124,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "AAADfn//+XE\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-18T22:27:29Z",
+      "side": 1,
+      "message": "Niklas just made me aware of I9f9ca62f. That should probably be a dependency for this.",
+      "parentUuid": "AAADfn//+Xc\u003d",
+      "revId": "5dc8796ed3bbeb04cfa05f82f2e9b61f4bd95945",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADfn//+dU\u003d",
         "filename": "MobileFrontend.php",
         "patchSetId": 2
