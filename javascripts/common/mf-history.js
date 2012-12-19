@@ -222,7 +222,7 @@ M.history = ( function() {
 				hashNode = document.getElementById( id );
 			if ( supportsHistoryApi && hashChanged ) {
 				window.history.replaceState( { title: currentTitle, hash: true }, currentTitle, newHash );
-			} else if ( hashChanged && hashNode ){
+			} else if ( hashChanged && hashNode ) {
 				hashNode.removeAttribute( 'id' );
 				window.location.hash = newHash;
 				hashNode.setAttribute( 'id', id );
