@@ -292,19 +292,6 @@ class ExtMobileFrontend extends ContextSource {
 		return true;
 	}
 
-	public function getDom( $html ) {
-		wfProfileIn( __METHOD__ );
-		libxml_use_internal_errors( true );
-		$dom = new DOMDocument();
-		$dom->loadHTML( $html );
-		libxml_use_internal_errors( false );
-		$dom->preserveWhiteSpace = false;
-		$dom->strictErrorChecking = false;
-		$dom->encoding = 'UTF-8';
-		wfProfileOut( __METHOD__ );
-		return $dom;
-	}
-
 	/**
 	 * @param OutputPage $out
 	 * @return string

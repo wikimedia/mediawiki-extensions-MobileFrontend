@@ -467,15 +467,10 @@ HTML;
 	 */
 	private function getRobotsPolicy() {
 		wfProfileIn( __METHOD__ );
-		libxml_use_internal_errors( true );
-		$dom = $this->extMobileFrontend->getDom( $this->getOutput()->getHeadLinks() );
-		$xpath = new DOMXpath( $dom );
-		foreach ( $xpath->query( '//meta[@name="robots"]' ) as $tag ) {
-			wfProfileOut( __METHOD__ );
-			return $dom->saveXML( $tag );
-		}
+		$links = $this->getOutput()->getHeadLinksArray();
+		$robots = $links['meta-robots'];
 		wfProfileOut( __METHOD__ );
-		return '';
+		return $robots;
 	}
 
 	private function getLogInOutLink() {
