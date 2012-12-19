@@ -36,6 +36,6 @@ phpunit:
 	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml
 
 qunit:
-	open http://localhost/w/index.php/Special:JavaScriptTest/qunit?filter=MobileFrontend
+	@tests/qunit.sh
 
 tests: jshint phpunit qunit
