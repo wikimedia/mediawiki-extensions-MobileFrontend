@@ -13,7 +13,12 @@ $( function() {
 } );
 
 module = ( function() {
-	var supported = typeof FileReader !== 'undefined' && M.isLoggedIn() && typeof FormData !== 'undefined',
+	var
+		supported = M.isLoggedIn() &&
+			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined' &&
+			!M.getConfig( 'imagesDisabled', false ) &&
+			// webkit only for time being
+			window.navigator.userAgent.indexOf( 'WebKit' ) > -1,
 		endPoint = M.getConfig( 'photo-upload-endpoint' ),
 		spinnerImg = M.getConfig( 'ajaxLoader' );
 
@@ -197,18 +202,20 @@ module = ( function() {
 				} ).appendTo( $editArea );
 	}
 
+	function articleNeedsPhoto( $container ) {
+		return $container.find( '#content_0 .thumb img' ).length === 0;
+	}
+
 	function init() {
-		var lead = $( '#content_0' )[ 0 ];
-		if ( $( lead ).find( '.thumb img' ).length === 0 && supported && !M.getConfig( 'imagesDisabled', false ) &&
-			// webkit only for time being
-			window.navigator.userAgent.indexOf( 'WebKit' ) > -1 ) {
-			addPhotoUploader( lead, true );
+		if ( supported && articleNeedsPhoto( $( '#content' ) ) ) {
+			addPhotoUploader( $( '#content_0' ), true );
 		}
 	}
 
 	$( window ).on( 'mw-mf-page-loaded', init );
 	return {
 		addPhotoUploader: addPhotoUploader,
+		articleNeedsPhoto: articleNeedsPhoto,
 		isSupported: supported
 	};
 }() );
