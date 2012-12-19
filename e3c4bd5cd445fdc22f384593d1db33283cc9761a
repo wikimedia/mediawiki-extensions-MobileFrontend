@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH///Fk\u003d",
+        "filename": "scripts/pre-commit",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-19T18:00:20Z",
+      "side": 1,
+      "message": "Don\u0027t you want to run this when js changes in javascripts folder as well as tests?",
+      "revId": "e3c4bd5cd445fdc22f384593d1db33283cc9761a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH///Fo\u003d",
+        "filename": "tests/qunit.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-19T18:00:20Z",
+      "side": 1,
+      "message": "the path can be different - for example mine is http://$HOST/w/index.php/Special:JavaScriptTest/qunit?fil\nter\u003dMobileFrontend\n\nmaybe instead of using $MEDIAWIKI_HOST call it $MEDIAWIKI_PATH ?",
+      "revId": "e3c4bd5cd445fdc22f384593d1db33283cc9761a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
