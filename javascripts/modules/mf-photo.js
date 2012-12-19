@@ -1,6 +1,7 @@
 ( function( M,  $ ) {
 
 var dirty, module;
+
 $( function() {
 
 	function confirmExit() {
@@ -130,10 +131,10 @@ module = ( function() {
 		}, endPoint );
 	}
 
-	function addPhotoUploader( container, saveWikiTextFlag, msg ) {
+	function addPhotoUploader( $container, saveWikiTextFlag, msg ) {
 		msg = msg || 'mobile-frontend-photo-upload';
-
-		var $container = $( '<div class="thumb photouploader">' ).prependTo( container ),
+		$container = $( '<div class="thumb photouploader">' ).prependTo( $container );
+		var
 			$editArea, $form, $img, $file, $license,
 			template = '<div class="camera">' +
 				'<div class="errormsg">' + M.message( 'mobile-frontend-photo-upload-error' ) + '</div>' +
@@ -203,7 +204,7 @@ module = ( function() {
 	}
 
 	function articleNeedsPhoto( $container ) {
-		return $container.find( '#content_0 .thumb img' ).length === 0;
+		return $container.find( '#content_0 .thumb img, .navbox, .infobox' ).length === 0;
 	}
 
 	function init() {

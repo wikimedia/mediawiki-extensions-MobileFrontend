@@ -423,6 +423,7 @@ class ExtMobileFrontend extends ContextSource {
 				'javascripts/actions/mf-edit.js', 'tests/js/test_mf-edit.js',
 				'javascripts/common/mf-navigation.js',
 				'javascripts/common/mf-notification.js',
+				'javascripts/modules/mf-photo.js', 'tests/js/test_mf-photo.js',
 				'javascripts/modules/mf-references.js', 'tests/js/test_references.js',
 				'javascripts/modules/mf-watchlist.js', 'tests/js/test_mf-watchlist.js' ),
 				'dependencies' => array( ),
