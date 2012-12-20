@@ -39,6 +39,7 @@ module = ( function() {
 
 	function save( filename, caption, $container, saveWikiTextFlag ) {
 		var $img = $container.find( 'img' ),
+			$a = $container.find( 'a' ),
 			src = $img.attr( 'src' ),
 			$form = $container.find( 'form' ),
 			formData = new FormData();
@@ -64,8 +65,10 @@ module = ( function() {
 
 		function displayPhoto( image ) {
 			if ( image && image.imageinfo ) {
+				$a.attr( 'href', image.imageinfo.descriptionurl );
 				$img.attr( 'src', image.imageinfo.url );
 			} else {
+				$a.attr( 'href', '#' );
 				$img.attr( 'src', src );
 			}
 			$container.removeClass( 'uploading' ).removeClass( 'error' );
@@ -133,6 +136,7 @@ module = ( function() {
 
 		var $container = $( '<div class="thumb photouploader">' ).prependTo( container ),
 			$editArea, $form, $img, $file, $license,
+			$a,
 			template = '<div class="camera">' +
 				'<div class="errormsg">' + M.message( 'mobile-frontend-photo-upload-error' ) + '</div>' +
 				'<form>' +
@@ -166,10 +170,11 @@ module = ( function() {
 				text( M.message( 'mobile-frontend-photo-upload-progress' ) ).
 				appendTo( $editArea );
 
+			$a = $( '<a>' ).appendTo( $editArea );
 			$img = $( '<img>' ).
 				attr( 'alt', M.message( 'mobile-frontend-image-loading' ) ).
 				attr( 'src', spinnerImg ).
-				appendTo( $editArea );
+				appendTo( $a );
 
 			$( '<input type="text">' ).
 				attr( 'placeholder', M.message( 'mobile-frontend-photo-caption-placeholder' ) ).
