@@ -62,6 +62,16 @@ module = ( function() {
 			} );
 		}
 
+		function displayPhoto( image ) {
+			if ( image && image.imageinfo ) {
+				$img.attr( 'src', image.imageinfo.url );
+			} else {
+				$img.attr( 'src', src );
+			}
+			$container.removeClass( 'uploading' ).removeClass( 'error' );
+			dirty = false;
+		}
+
 		function savePhoto( caption, token ) {
 			var api = endPoint || M.getApiUrl();
 			formData.append( 'token', token );
@@ -87,23 +97,16 @@ module = ( function() {
 
 				if ( data && data.upload ) {
 					name = data.upload.filename || data.upload.warnings.duplicate[ '0' ];
-					M.getToken( 'edit', function( tokenData ) {
-						if ( saveWikiTextFlag ) {
+					if ( saveWikiTextFlag ) {
+						M.getToken( 'edit', function( tokenData ) {
 							d = saveWikiText( name, caption, tokenData.tokens.edittoken );
-						} else {
-							d = $.Deferred();
-							d.resolve();
-						}
-						d.done( function( image ) {
-							if ( image && image.imageinfo ) {
-								$img.attr( 'src', image.imageinfo.url );
-							} else {
-								$img.attr( 'src', src );
-							}
-							$container.removeClass( 'uploading' ).removeClass( 'error' );
-							dirty = false;
+							d.done( function() {
+								displayPhoto( data.upload );
+							} );
 						} );
-					} );
+					} else {
+						displayPhoto( data.upload );
+					}
 				} else {
 					// do error
 					$container.removeClass( 'uploading' );
