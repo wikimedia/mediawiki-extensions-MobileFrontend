@@ -150,8 +150,13 @@ $wgResourceModules['mobile'] = array(
 		'stylesheets/modules/mf-toggle.css',
 		'stylesheets/common/mf-hacks.css',
 		'stylesheets/modules/mf-cleanuptemplates.css',
-		'stylesheets/common/mf-enwp.css' ),
-	'scripts' => array( 'javascripts/common/mf-application.js',
+		'stylesheets/common/mf-enwp.css'
+	),
+	'scripts' => array(
+		'javascripts/externals/underscore.js',
+		'javascripts/externals/backbone.js',
+		'javascripts/externals/hogan.js',
+		'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
 		'javascripts/common/mf-settings.js', 'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-banner.js' ),

@@ -20,6 +20,73 @@ M.history = ( function() {
 			window.location.href = URL_TEMPLATE.replace( '$1', title );
 		};
 
+	// ***
+
+	var Page = Backbone.Model.extend( {
+		sync: function(method, model, options) {
+			var data;
+			return $.ajax( {
+				url: apiUrl,
+				dataType: 'json',
+				data: {
+					action: 'mobileview', format: 'json',
+					page: model.get( 'title' ),
+					variant: M.getConfig( 'variant' ),
+					redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
+					noimages: M.getConfig( 'imagesDisabled' ) ? 1 : undefined,
+					sectionprop: 'level|line|anchor', sections: 'all'
+				}
+			} ).done( function( resp, status, xhr ) {
+				if ( resp.error ) {
+					model.trigger( 'error', resp.error );
+				} else {
+					data = {
+						mainSection: resp.mobileview.sections[0],
+						sections: resp.mobileview.sections.slice(1)
+					};
+					options.success( data, status, xhr );
+				}
+			} ).fail( function() { // resort to non-javascript mode
+				// TODO
+			} );
+		}
+	} );
+
+	var PageView = Backbone.View.extend( {
+		el: '#content',
+
+		template: Hogan.compile(
+			'<h1 id="section_0" class="section_heading openSection">' +
+				'<button>Show</button>' +
+				'{{title}}' +
+			'</h1>' +
+			'<div id="content_0" class="content_block openSection">' +
+				'{{{mainSection.text}}}' +
+			'</div>' +
+			'{{#sections}}' +
+			'<div class="section">' +
+				'<h2 class="section_heading" id="section_{{id}}">{{line}}</h2>' +
+				'<a class="section_anchors" id="anchor_{{id}}">close</a>'	+
+			'</div>' +
+			'{{/sections}}'
+		),
+
+		initialize: function() {
+			this.model.on( 'change', this.render, this );
+		},
+
+		render: function() {
+			console.log(this.model.toJSON());
+			this.$el.html( this.template.render( this.model.toJSON() ) );
+		}
+	} );
+
+	var page = new Page( { title: 'San Francisco' } );
+	var pageView = new PageView( { model: page } );
+	page.fetch();
+
+	// ***
+
 	function updateQueryStringParameter( url, parameter, value ) {
 		var re = new RegExp( '([?|&])' + parameter + '=.*?(&|$)', 'i' ), rtn,
 			separator = url.indexOf( '?' ) !== -1 ? '&' : '?';
@@ -69,6 +136,7 @@ M.history = ( function() {
 		} );
 	}
 
+	/*
 	// FIXME: use template engine this is not maintainable
 	function renderPage( pageTitle, resp, constructPage ) {
 		var i, secs, s, sectionNum = 0, level, text,
@@ -199,6 +267,7 @@ M.history = ( function() {
 			} );
 		}
 	}
+*/
 
 	// ensures the history change event fires on initial load
 	function initialise( hash ) {
