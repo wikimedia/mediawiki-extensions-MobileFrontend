@@ -1,7 +1,8 @@
 ( function( M,  $ ) {
 
 var dirty, module,
-	NS_MAIN = 0, NS_TALK = 1; // FIXME: make global
+	NS_MAIN = 0, NS_TALK = 1, // FIXME: make global
+	THUMBNAIL_SIZE_PX = 300;
 
 $( function() {
 
@@ -46,6 +47,17 @@ module = ( function() {
 		reader.readAsDataURL( file );
 	}
 
+	// FIXME: Kill the need for this horrible function by giving me a nicer API
+	function getImageFromQueryResult( pages ) {
+		var key, result;
+		for ( key in pages ) {
+			if ( pages.hasOwnProperty( key ) ) {
+				result = pages[ key ];
+			}
+		}
+		return result;
+	}
+
 	function showSpinner( $container ) {
 		// set spinner
 		$container.find( 'img' ).attr( 'src', spinnerImg );
@@ -54,7 +66,6 @@ module = ( function() {
 	function save( filename, caption, $container, saveWikiTextFlag ) {
 		var $img = $container.find( 'img' ),
 			$a = $container.find( 'a' ),
-			src = $img.attr( 'src' ),
 			$form = $container.find( 'form' ),
 			formData = new FormData();
 		formData.append( 'filename', filename );
@@ -77,14 +88,32 @@ module = ( function() {
 			} );
 		}
 
-		function displayPhoto( image ) {
-			if ( image && image.imageinfo ) {
-				$a.attr( 'href', image.imageinfo.descriptionurl );
-				$img.attr( 'src', image.imageinfo.url );
-			} else {
-				$a.attr( 'href', '#' );
-				$img.attr( 'src', src );
-			}
+		// FIXME: Kill the need to make yet another request for the thumbnail by giving me a nicer API..
+		// this should be a synchronous function that takes imageinfo as an argument
+		function displayPhoto( filename ) {
+			var api = endPoint || M.getApiUrl();
+			$.ajax( {
+				url: api,
+				dataType: 'json',
+				data: {
+					action: 'query',
+					prop: 'imageinfo',
+					iiprop: 'url',
+					iiurlwidth: THUMBNAIL_SIZE_PX,
+					titles: 'File:' + filename,
+					format: 'json'
+				}
+			} ).done( function( data ) {
+				var pages = data.query && data.query.pages ? data.query.pages : {},
+					image = getImageFromQueryResult( pages ),
+					info = image ? image.imageinfo[ 0 ] : false;
+
+				if ( info ) {
+					$a.attr( 'href', info.descriptionurl );
+					$img.attr( 'src', info.thumburl );
+				}
+			} );
+
 			$container.removeClass( 'uploading' ).removeClass( 'error' );
 			dirty = false;
 		}
@@ -94,7 +123,6 @@ module = ( function() {
 			formData.append( 'token', token );
 			formData.append( 'text', '== {{int:filedesc}} ==\n' + caption +'\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}' );
 
-			// set spinner
 			showSpinner( $container );
 			$container.addClass( 'uploading' );
 
@@ -113,16 +141,17 @@ module = ( function() {
 				var d, name;
 
 				if ( data && data.upload ) {
+
 					name = data.upload.filename || data.upload.warnings.duplicate[ '0' ];
 					if ( saveWikiTextFlag ) {
 						M.getToken( 'edit', function( tokenData ) {
 							d = saveWikiText( name, caption, tokenData.tokens.edittoken );
 							d.done( function() {
-								displayPhoto( data.upload );
+								displayPhoto( name );
 							} );
 						} );
 					} else {
-						displayPhoto( data.upload );
+						displayPhoto( name );
 					}
 				} else {
 					// do error
