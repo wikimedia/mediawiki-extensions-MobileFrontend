@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgH//+Dk\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-20T18:16:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADgH//+p8\u003d",
+      "revId": "47d8c34871645f6fb0505af25555a55b4187b3a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgH//+po\u003d",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-12-20T01:44:34Z",
       "side": 1,
       "message": "I\u0027m not sure how this helps in testing it. How can DOM-related code be reliably tested?",
+      "revId": "47d8c34871645f6fb0505af25555a55b4187b3a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//+Dg\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 204,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-20T18:16:53Z",
+      "side": 1,
+      "message": "See qunit tests...",
+      "parentUuid": "AAADgH//+po\u003d",
       "revId": "47d8c34871645f6fb0505af25555a55b4187b3a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
