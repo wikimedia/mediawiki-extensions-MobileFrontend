@@ -33,6 +33,24 @@
       "revId": "31fe4b93d7d61c34bbf9c59bf0df6f0974ba2404",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//+DA\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-20T18:22:14Z",
+      "side": 1,
+      "message": "That seems to be how mediawiki does it...\nIt makes wgNamespaceNumber available",
+      "parentUuid": "AAADgH//+pE\u003d",
+      "revId": "31fe4b93d7d61c34bbf9c59bf0df6f0974ba2404",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
