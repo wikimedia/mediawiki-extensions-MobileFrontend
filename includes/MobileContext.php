@@ -27,6 +27,7 @@ class MobileContext extends ContextSource {
 	private $forceMobileView = false;
 	private $forceLeftMenu = false;
 	private $contentTransformations = true;
+	private $mobileView = null;
 
 	private static $instance = null;
 
@@ -209,6 +210,17 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function shouldDisplayMobileView() {
+		if ( !is_null( $this->mobileView ) ) {
+			return $this->mobileView;
+		}
+		$this->mobileView = $this->shouldDisplayMobileViewInternal();
+		return $this->mobileView;
+	}
+
+	/**
+	 * @return bool Value for shouldDisplayMobileView()
+	 */
+	private function shouldDisplayMobileViewInternal() {
 		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
 		$req = $this->getRequest();
