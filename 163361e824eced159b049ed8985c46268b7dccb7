@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgH//+Ck\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-20T18:20:09Z",
+      "side": 1,
+      "message": "I know, but why? Why don\u0027t we just stick to jQuery objects?",
+      "parentUuid": "AAADgH//+DM\u003d",
+      "revId": "163361e824eced159b049ed8985c46268b7dccb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgH//+pY\u003d",
         "filename": "tests/js/test_mf-photo.js",
         "patchSetId": 1
