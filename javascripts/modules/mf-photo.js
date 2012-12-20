@@ -65,7 +65,7 @@ module = ( function() {
 		function savePhoto( caption, token ) {
 			var api = endPoint || M.getApiUrl();
 			formData.append( 'token', token );
-			formData.append( 'text', '== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}' );
+			formData.append( 'text', '== {{int:filedesc}} ==\n' + caption +'\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}' );
 
 			// set spinner
 			$img.attr( 'src', spinnerImg );
