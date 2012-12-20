@@ -51,6 +51,24 @@
       "revId": "31fe4b93d7d61c34bbf9c59bf0df6f0974ba2404",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//+BI\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-20T18:33:55Z",
+      "side": 1,
+      "message": "I\u0027m not sure if I understand. What I meant was that we should have something like `( ns \u003d\u003d\u003d NS_MAIN || ns \u003d\u003d\u003d NS_TALK )` and NS_MAIN and NS_TALK defined somewhere (or better, grabbed from MediaWiki).\n\nAlternatively, we could convert those numbers to strings with meaningful names for the purpose of JS code (so ns could equal \u0027NS_MAIN\u0027 or \u0027NS_TALK\u0027 or \u0027NS_something\u0027...).",
+      "parentUuid": "AAADgH//+DA\u003d",
+      "revId": "31fe4b93d7d61c34bbf9c59bf0df6f0974ba2404",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
