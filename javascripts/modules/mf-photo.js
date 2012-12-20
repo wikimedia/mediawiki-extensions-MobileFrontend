@@ -60,7 +60,7 @@ module = ( function() {
 
 	function showSpinner( $container ) {
 		// set spinner
-		$container.find( 'img' ).attr( 'src', spinnerImg );
+		$container.find( 'img' ).attr( 'src', spinnerImg ).css( 'width', '' );
 	}
 
 	function save( filename, caption, $container, saveWikiTextFlag ) {
@@ -201,7 +201,9 @@ module = ( function() {
 				showSpinner( $container );
 
 				getDataUrl( file, function( url ) {
-					$img.attr( 'src', url ); // FIXME: use thumbnail instead
+					$img.attr( 'src', url ).
+						// FIXME: I dream of a world where !important is unnecessary
+						attr( 'style', 'width: ' + THUMBNAIL_SIZE_PX + 'px !important' );
 				} );
 				$container.find( '.editArea' ).show();
 				$container.find( '.camera' ).hide();
