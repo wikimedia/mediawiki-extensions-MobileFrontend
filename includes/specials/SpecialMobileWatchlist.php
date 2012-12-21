@@ -212,26 +212,46 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	function showFeedResults( $res ) {
-		$this->seenTitles = array();
-
-		$this->today = $this->day( wfTimestamp() );
-		$this->seenDays = array( $this->today => true );
-
-		$output = $this->getOutput();
-		$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
-		foreach( $res as $row ) {
-			$this->showFeedResultRow( $row );
-		}
-		$output->addHtml( '</ul>' );
+		$this->showResults( $res, true );
 	}
 
 	function showListResults( $res ) {
-		$output = $this->getOutput();
-		$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
-		foreach( $res as $row ) {
-			$this->showListResultRow( $row );
+		$this->showResults( $res, false );
+	}
+
+	function showResults( $res, $feed ) {
+		$empty = $res->numRows() === 0;
+		$this->seenTitles = array();
+
+		if ( $feed ) {
+			$this->today = $this->day( wfTimestamp() );
+			$this->seenDays = array( $this->today => true );
 		}
-		$output->addHtml( '</ul>' );
+
+		$output = $this->getOutput();
+
+		if ( $empty ) {
+			$msg = $feed ? 'mobile-frontend-watchlist-feed-empty' : 'mobile-frontend-watchlist-a-z-empty';
+			$output->addHtml(
+				'<p class="empty">' .
+					wfMessage( $msg )->parse() .
+				'</p>'
+			);
+		} else {
+			$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
+
+			if ( $feed ) {
+				foreach( $res as $row ) {
+					$this->showFeedResultRow( $row );
+				}
+			} else {
+				foreach( $res as $row ) {
+					$this->showListResultRow( $row );
+				}
+			}
+
+			$output->addHtml( '</ul>' );
+		}
 	}
 
 	private function day( $ts ) {
