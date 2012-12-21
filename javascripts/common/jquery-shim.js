@@ -1,7 +1,7 @@
 /* A shim for jQuery which provides basic functionality */
 ( function() {
 
-window.$ = window.jQueryShim = function ( el ) {
+window.jQueryShim = function ( el ) {
 	var u = this;
 
 	if ( typeof el === 'string' ) {
