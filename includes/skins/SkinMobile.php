@@ -769,7 +769,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			if ( $this->data['isOverlay'] ) {
 				$headingOptions = array( 'class' => 'header' );
 			} elseif ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] && !$this->data['isMainPage'] && !$editMode ) {
-				$headingOptions = array( 'id' => 'section_0', 'class' => 'section_heading openSection' );
+				$headingOptions = array( 'id' => 'section_0' );
 			} else {
 				$headingOptions = array( 'id' => 'firstHeading' );
 			}
