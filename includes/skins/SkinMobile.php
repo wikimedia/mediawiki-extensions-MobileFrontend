@@ -14,7 +14,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl = parent::prepareTemplate();
 		$out = $this->getOutput();
 		$title = $this->getTitle();
-		$tpl->set( 'articleTitle', $title->getPrefixedText() );
+		$tpl->set( 'title', $title );
 		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
 		$tpl->set( 'ajaxLoader', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/modules/images/ajax-loader.gif' );
 		$tpl->set( 'user', $this->getUser() );
@@ -36,12 +36,12 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
 		if ( $userLogin ) {
 			if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
-				$tpl->set( 'title', wfMessage( 'mobile-frontend-sign-up-heading' )->text() );
+				$tpl->set( 'firstHeading', wfMessage( 'mobile-frontend-sign-up-heading' )->text() );
 			} else {
-				$tpl->set( 'title', wfMessage( 'mobile-frontend-sign-in-heading' )->text() );
+				$tpl->set( 'firstHeading', wfMessage( 'mobile-frontend-sign-in-heading' )->text() );
 			}
 		} else {
-			$tpl->set( 'title', $out->getPageTitle() );
+			$tpl->set( 'firstHeading', $out->getPageTitle() );
 		}
 		$tpl->set( 'variant', $title->getPageLanguage()->getPreferredVariant() );
 
@@ -745,6 +745,7 @@ class SkinMobileTemplate extends BaseTemplate {
 
 		$inBeta = $this->data['isBetaGroupMember'];
 		$user = $this->data['user'];
+		$title = $this->data['title'];
 		// FIXME: this should all be done in prepareTemplate - getting extremely messy
 		$jsconfig = array(
 			'messages' => array(
@@ -766,7 +767,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'imagesDisabled' => $this->data['imagesDisabled'],
 				'beta' => $inBeta,
 				'namespace' => $this->data['namespace'],
-				'title' => $this->data['articleTitle'],
+				'title' => $title->getPrefixedText(),
 				'variant' => $this->data['variant'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
 				'useFormatCookieDuration' => $this->data['useFormatCookieDuration'],
@@ -777,6 +778,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'stopMobileRedirectCookieDomain' => $this->data['stopMobileRedirectCookieDomain'],
 				'hookOptions' => $hookOptions,
 				'username' => $user->getName(),
+				'can_edit' => $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN,
 			),
 		);
 
@@ -807,7 +809,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				$headingOptions = array( 'id' => 'firstHeading' );
 			}
 			$firstHeading = Html::rawElement( 'h1', $headingOptions,
-				$this->data['title']
+				$this->data['firstHeading']
 			);
 		}
 		$this->set( 'jsConfig', FormatJSON::encode( $jsconfig ) );

@@ -56,8 +56,9 @@ MobileFrontend.navigation = (function( $ ) {
 	function enableEditing( title ) {
 		$( '#mw-mf-edit-page-link' ).remove();
 		if ( title &&
-				title.indexOf( ':' ) === -1 && // FIXME: hack
-				M.getConfig( 'action' ) !== 'edit' ) {
+			M.getConfig( 'authenticated' ) && // FIXME: currently only shown for users
+			M.getConfig( 'can_edit' ) && // user is allowed to edit
+			M.getConfig( 'action' ) !== 'edit' ) {
 			$( '<a id="mw-mf-edit-page-link">' ).text( 'edit' ).attr( 'href',
 				M.getConfig( 'pageUrl' ).replace( '$1', title + '?action=edit' ) ).
 				prependTo( '#content' );
@@ -76,12 +77,7 @@ MobileFrontend.navigation = (function( $ ) {
 			enableArticleActions();
 
 			$( window ).bind( 'mw-mf-page-loaded', function( ev, curPage ) {
-				M.getToken( 'edit', function( data ) {
-					if( data.tokens && !data.warnings &&
-							data.tokens.edittoken !== '+\\' ) { // then user is logged in
-						enableEditing( curPage.title );
-					}
-				} );
+				enableEditing( curPage.title );
 			} );
 		}
 
