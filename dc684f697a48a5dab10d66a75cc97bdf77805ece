@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH//8/k\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-21T19:22:22Z",
+      "side": 1,
+      "message": "I\u0027d prefer to keep the naming consistent, so NS_MAIN and NS_TALK. If you want (if it\u0027s necessary) we could add a prefix, e.g. MW_NS_MAIN, MW_NS_TALK.\n\nIf it stays like that others will have to figure out that NS_MAIN \u003d MW_ARTICLE_NAMESPACE...",
+      "revId": "dc684f697a48a5dab10d66a75cc97bdf77805ece",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
