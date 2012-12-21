@@ -81,9 +81,11 @@ mw.mobileFrontend = (function() {
 	}
 
 	function triggerPageReadyHook( pageTitle, sectionData, anchorSection ) {
-		$( window ).trigger( 'mw-mf-page-loaded', [ {
-			title: pageTitle, data: sectionData, anchorSection: anchorSection
-		} ] );
+		if ( $ ) {
+			$( window ).trigger( 'mw-mf-page-loaded', [ {
+				title: pageTitle, data: sectionData, anchorSection: anchorSection
+			} ] );
+		}
 	}
 
 	// TODO: separate main menu navigation code into separate module
