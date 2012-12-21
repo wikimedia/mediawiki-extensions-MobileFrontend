@@ -10,6 +10,7 @@ jshint: jshinttests
 less:
 	lessc stylesheets/less/specials/mf-settings.less > stylesheets/specials/mf-settings.css
 	lessc stylesheets/less/specials/mf-login.less > stylesheets/specials/mf-login.css
+	lessc stylesheets/less/specials/mf-search.less > stylesheets/specials/mf-search.css
 	lessc stylesheets/less/common/mf-common.less > stylesheets/common/mf-common.css
 	lessc stylesheets/less/common/mf-footer.less > stylesheets/common/mf-footer.css
 	lessc stylesheets/less/common/mf-hacks.less > stylesheets/common/mf-hacks.css
