@@ -238,6 +238,7 @@ M.history = ( function() {
 			}
 			initialise( hash );
 		},
+		supportsHistoryApi: supportsHistoryApi,
 		updateQueryStringParameter: updateQueryStringParameter
 	};
 }() );
