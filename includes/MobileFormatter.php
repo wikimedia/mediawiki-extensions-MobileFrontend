@@ -16,6 +16,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected $expandableSections = false;
 	protected $removeSections = false;
 	protected $mainPage = false;
+	protected $backToTopLink = true;
 
 	private $headings = 0;
 
@@ -90,6 +91,13 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	public function enableExpandableSections( $flag = true ) {
 		$this->expandableSections = $flag;
+	}
+
+	/**
+	 * @todo: kill with fire when dynamic sections in production
+	 */
+	public function disableBackToTop() {
+		$this->backToTopLink = false;
 	}
 
 	public function enableRemovableSections( $flag = true ) {
@@ -223,7 +231,11 @@ class MobileFormatter extends HtmlFormatter {
 
 		$this->headings++;
 		// Back to top link
-		$backToTop = $this->backToTopLink( intval( $this->headings - 1 ) );
+		if ( $this->backToTopLink ) {
+			$backToTop = $this->backToTopLink( intval( $this->headings - 1 ) );
+		} else {
+			$backToTop = '';
+		}
 
 		// generate the HTML we are going to inject
 		if ( $this->headings === 1 ) {
@@ -335,8 +347,13 @@ class MobileFormatter extends HtmlFormatter {
 
 		// if we had any, make sure to close the whole thing!
 		if ( $this->headings > 0 ) {
+			if ( $this->backToTopLink ) {
+				$bt = $this->backToTopLink( intval( $this->headings ) );
+			} else {
+				$bt = '';
+			}
 			$s .= '</div>' // <div class="content_block">
-				. $this->backToTopLink( intval( $this->headings ) )
+				. $bt
 				. "\n</div>"; // <div class="section">
 		}
 		wfProfileOut( __METHOD__ );

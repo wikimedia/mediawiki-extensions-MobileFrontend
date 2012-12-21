@@ -14,7 +14,7 @@ var T = ( function() {
 			closed, sectionInfo = sectionData[ section_id ],
 			$container,
 			$section = $( '#' + id ), $button = $section.find( 'button' ), $content = $( '#' + content_id ),
-			selector = '#' + content_id + ',#' + id + ',#anchor_' + section_id + ',#' + id + ' button'; // FIXME: shouldn't have to toggle class on button
+			selector = '#' + content_id + ',#' + id + ',#' + id + ' button'; // FIXME: shouldn't have to toggle class on button
 
 		if ( sectionInfo && $content.length === 0 ) {
 			$container = $( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
@@ -58,12 +58,7 @@ var T = ( function() {
 		}
 
 		$headings.each( function() {
-			var $this = $( this ), section = $this.attr( 'id' ).split( '_' )[ 1 ];
-			if ( $this.parents( '.section' ).length === 1 ) {
-				$( '#anchor_' +  section ).
-					text( message( 'mobile-frontend-close-section' ) ).
-					on( 'click', openSectionHandler );
-			}
+			var $this = $( this );
 			// disable default behaviour of the link in the heading
 			$this.find( 'a' ).on( 'click', function( ev ) {
 				ev.preventDefault();

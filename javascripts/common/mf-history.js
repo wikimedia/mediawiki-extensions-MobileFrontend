@@ -97,8 +97,6 @@ M.history = ( function() {
 						// TODO: link these so they are clickable
 						$( '<h2 class="section_heading">' ).attr( 'id', 'section_' + sectionNum ).
 							html( s.line ).appendTo( $section );
-						$( '<a class="section_anchors">' ).attr( 'id', 'anchor_' +  sectionNum ).
-							text( M.message( 'mobile-frontend-close-section' ) ).appendTo( $section );
 					}
 				} else if ( level ) {
 					$tmpContainer.html( text );
