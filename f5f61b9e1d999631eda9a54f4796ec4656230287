@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH//84M\u003d",
+        "filename": "features/support/pages/mobile_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-21T21:51:43Z",
+      "side": 1,
+      "message": "This will make the test run on production Wikipedia, right? Ideally we\u0027d like to run tests on the local dev machine.",
+      "revId": "f5f61b9e1d999631eda9a54f4796ec4656230287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
