@@ -109,7 +109,9 @@ var m = ( function() {
 			$editSummary.val( $editSummary.val() + ' [Via Mobile]' );
 		} );
 
-		mw.mobileFrontend.getModule( 'toggle' ).enableToggling(); // FIXME: adds dependency to toggle module
+		$( window ).trigger( 'mw-mf-page-loaded', [
+			{ title: M.getConfig( 'title' ) }
+		] );
 	}
 
 	function init() {

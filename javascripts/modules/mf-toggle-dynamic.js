@@ -87,7 +87,7 @@ var T = ( function() {
 			specialPage = $( '#content_wrapper' ).hasClass( 'mw-mf-special' );
 
 		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
-			sectionData = article.data;
+			sectionData = article.data || {};
 
 			anchorSection = article.anchorSection;
 			if ( $( '#content .section_heading' ).length > 1 ) {
