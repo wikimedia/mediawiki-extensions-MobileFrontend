@@ -1,3 +1,9 @@
+/*
+Triggers:
+* mw-mf-search-results
+	Context: Runs after rendering all search results
+	Arguments: <DomElement(ul), article title>
+*/
 ( function( M ) {
 var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
@@ -123,16 +129,16 @@ var opensearch = ( function() {
 				link.appendChild( label );
 				u( link ).bind( 'click', clickSearchResult );
 				suggestionsResult.appendChild( link );
-
-				if ( $ ) {
-					$( window ).trigger( 'mw-mf-search-result', [ suggestionsResult, section.label ] );
-				}
 				suggestions.appendChild( suggestionsResult );
 				// TODO: simplify the highlighting code to not use htmlEntities
 				// highlight matched term
 				escapedTerm = escapeJsString( term );
 				link.innerHTML = link.innerHTML.replace( new RegExp( '(' + escapedTerm + ')' , 'ig'),
 					'<strong>$1</strong>' );
+			}
+
+			if ( $ ) {
+				$( window ).trigger( 'mw-mf-search-results', [ suggestions ] );
 			}
 		}
 	}
