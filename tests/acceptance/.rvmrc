@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+RUBY_VER="ruby-1.9.3-p362"
+
+if ! rvm list | grep "$RUBY_VER" > /dev/null; then
+  rvm install $RUBY_VER
+fi
+
+rvm use $RUBY_VER@MobileFrontend --create

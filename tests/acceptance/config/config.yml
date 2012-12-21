@@ -1,0 +1,51 @@
+mediawiki_username: uploadwizardtest
+
+android:
+  name: android
+  platform: Linux
+  version: 4
+
+chrome:
+  name: chrome
+  platform: Linux
+  version:
+
+firefox:
+  name: firefox
+  platform: Linux
+  version: 16
+
+internet_explorer_6:
+  name: internet_explorer
+  platform: Windows 2003
+  version: 6
+
+internet_explorer_7:
+  name: internet_explorer
+  platform: Windows 2003
+  version: 7
+
+internet_explorer_8:
+  name: internet_explorer
+  platform: Windows 2003
+  version: 8
+
+internet_explorer_9:
+  name: internet_explorer
+  platform: Windows 2008
+  version: 9
+
+internet_explorer_10:
+  name: internet_explorer
+  platform: Windows 2012
+  version: 10
+
+ipad:
+  name: ipad
+  platform: Mac 10.8
+  version: 6
+
+iphone:
+  name: iphone
+  platform: Mac 10.8
+  version: 6
