@@ -16,6 +16,24 @@
       "revId": "f5f61b9e1d999631eda9a54f4796ec4656230287",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//81w\u003d",
+        "filename": "features/support/pages/mobile_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2012-12-21T22:45:53Z",
+      "side": 1,
+      "message": "Yes, this would run the test at en.wikipedia. We can change the \"base_url\" to \"local\", that will run it on a local machine. I do not have MobileFrontend installed in my virtual machine (I am new to MediaWiki, still figuring how things work) so I can not test if the change works at the moment.",
+      "parentUuid": "AAADgH//84M\u003d",
+      "revId": "f5f61b9e1d999631eda9a54f4796ec4656230287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
