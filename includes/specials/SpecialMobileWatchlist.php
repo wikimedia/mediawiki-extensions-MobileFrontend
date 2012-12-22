@@ -12,7 +12,10 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		if( $user->isAnon() ) {
 			// No watchlist for you.
-			return parent::execute( $par );
+			$output->addHtml( Html::openElement( 'div', array( 'class' => 'content' ) ) );
+			parent::execute( $par );
+			$output->addHtml( Html::closeElement( 'div' ) );
+			return;
 		}
 
 		$output->addModules( 'mobile.watchlist' );
@@ -20,7 +23,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 			Html::openElement( 'div',
 				array(
-					'class' => 'content',
 					'id' => 'mw-mf-watchlist',
 				)
 			)
@@ -238,7 +240,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		if ( $empty ) {
 			$msg = $feed ? 'mobile-frontend-watchlist-feed-empty' : 'mobile-frontend-watchlist-a-z-empty';
 			$output->addHtml(
-				'<p class="empty">' .
+				'<p class="content empty">' .
 					wfMessage( $msg )->parse() .
 				'</p>'
 			);
@@ -275,8 +277,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$this->seenTitles[$titleText] = true;
 
 		$comment = $row->rc_comment;
-		$userId = $row->rc_user;
-		$username = $row->rc_user_text;
 		$timestamp = $row->rc_timestamp;
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$revId = $row->rc_this_oldid;
@@ -289,13 +289,12 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalUrl();
 		}
 
-		if ( $userId == 0 ) {
-			$usernameChunk = Html::element( 'span',
-				array( 'class' => 'mw-mf-ip' ),
-				$this->msg( 'mobile-frontend-changeslist-ip' )->plain()
-			);
+		if ( $row->rc_user == 0 ) {
+			$username = $this->msg( 'mobile-frontend-changeslist-ip' )->plain();
+			$usernameClass = 'mw-mf-user mw-mf-anon';
 		} else {
-			$usernameChunk = htmlspecialchars( $username );
+			$username = htmlspecialchars( $row->rc_user_text );
+			$usernameClass = 'mw-mf-user';
 		}
 
 		if ( $comment === '' ) {
@@ -306,26 +305,13 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$comment = Sanitizer::stripAllTags( $comment );
 		}
 
-		$day = $this->day( $ts );
-		if ( $day === $this->today ) {
-			$relativeTime = $ts->getHumanTimestamp();
-		} else {
-			$relativeTime = $this->getLang()->time( $ts, true );
-		}
-		if ( !isset( $this->seenDays[$day] ) ) {
-			$this->showDateRow( $ts );
-			$this->seenDays[$day] = true;
-		}
-
 		$output->addHtml(
 			'<li>' .
 			Html::openElement( 'a', array( 'href' => $diffLink ) ) .
-			Html::element( 'div', array( 'class' => 'mw-mf-title' ), $titleText ).
-			Html::openElement( 'div', array( 'class' => 'mw-mf-user' ) ).
-				$usernameChunk .
-			Html::closeElement( 'div' ) .
-			Html::element( 'div', array( 'class' => 'mw-mf-comment' ), $comment ) .
-			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $relativeTime ) .
+			Html::element( 'h2', null, $titleText ).
+			Html::element( 'div', array( 'class' => $usernameClass ), $username ).
+			Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
+			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $ts->getHumanTimestamp() ) .
 			Html::closeElement( 'a' ) .
 			'</li>'
 		);
@@ -340,19 +326,9 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 			'<li>' .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
-			Html::element( 'div', array( 'class' => 'mw-mf-title' ), $titleText ).
+			Html::element( 'h2', null, $titleText ).
 			Html::closeElement( 'a' ) .
 			'</li>'
-		);
-	}
-
-	function showDateRow( $ts ) {
-		$this->getOutput()->addHtml(
-			Html::element(
-				'li',
-				array( 'class' => 'date' ),
-				$this->day( $ts )
-			)
 		);
 	}
 

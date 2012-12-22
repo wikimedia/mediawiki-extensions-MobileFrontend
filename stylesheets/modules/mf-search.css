@@ -87,11 +87,11 @@ body.beta #mw-mf-searchForm {
   z-index: 2;
   color: white;
   background-color: #f3f3f3;
-  background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: -ms-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f3f3f3));
-  background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
-  background-image: linear-gradient(#fafafa, #f3f3f3);
+  background-image: -moz-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
+  background-image: -ms-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
+  background-image: linear-gradient(#fafafa 0, #f3f3f3 100%);
 }
 .full-screen-search #results,
 .full-screen-search #mw-mf-searchForm.notEmpty .clearlink,

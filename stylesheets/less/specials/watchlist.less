@@ -1,5 +1,16 @@
 @import "../mf-mixins.less";
 
+.watchlistHeading() {
+	font: inherit;
+	margin: 0;
+	font-weight: bold;
+	color: #404040;
+
+	a {
+		color: inherit;
+	}
+}
+
 #mw-mf-watchlist {
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -13,99 +24,110 @@
 	}
 
 	.mw-mf-watchlist-selector {
-		text-align: center;
-		padding: 8px 0px;
-		background-color: #f0f0f0;
+		border-bottom: 1px solid #e2e2e2;
 
 		li {
+			text-align: center;
 			display: inline-block;
-			border: solid 1px #444;
-			padding: 0px 8px;
-			margin: 0;
-			color: #808080;
-			background-color: white;
+			border-left: 1px solid #e2e2e2;
+			width: 25%;
+			margin: 0 0 0 -1px;
 
-			&.selected {
-				color: white;
-				background-color: #808080;
+			&.selected a {
+				font-weight: bold;
+				border-bottom-color: #3366bb;
 			}
 
 			a {
-				color: inherit;
+				display: block;
+				color: #58595b;
+				padding: 5px 0 0;
+				margin: 0 1px 0 0;
+				border-bottom: 3px solid transparent;
 			}
 		}
 	}
 }
 
 #mw-mf-overlay ul.mw-mf-watchlist-results {
-	background-color: white;
 	list-style: none;
 
-	@paddingVertical: 8px;
-	@thumbHeight: 80px;
+	@thumbWidth: 70px;
+	@thumbSpace: @thumbWidth + 15px;
+	@ragWidth: 8px;
+
 	li {
-		padding: @paddingVertical 28px @paddingVertical (@thumbHeight + 8px);
-		border-top: solid 1px #c0c0c0;
-		position: relative;
+		border-bottom: solid 1px #e2e2e2;
 		color: #808080;
-		background-image: /* @embed */url(images/drilldown.png);
-		.background-size( 20px, 20px );
-		background-repeat: no-repeat;
-		background-position: right center;
-		height: @thumbHeight - @paddingVertical * 2;
+		line-height: 1;
 
 		.listThumb {
-			background-repeat: no-repeat;
-			.background-size( auto @thumbHeight );
-			background-position: center center;
 			position: absolute;
-			top: 0;
-			left: 0;
-			width: @thumbHeight;
-			bottom: 0;
+			background-repeat: no-repeat;
+			background-position: center center;
+			width: @thumbWidth;
+			height: 100%;
+			margin: 0 0 0 -@thumbSpace;
 		}
 
-		&.date {
-			background: none;
-			padding-top: 0;
-			padding-bottom: 0;
-			background-color: #f0f0f0;
+		.listThumbH {
+			.background-size(auto, 100%);
 		}
 
-		div {
-			font-size: 80%;
+		.listThumbV {
+			.background-size(100%, auto);
+		}
+
+		a {
+			display: block;
+			position: relative;
+			padding: 0 @contentMarginRight 15px (@thumbSpace - @ragWidth);
+			margin: -1px 0;
+			border-left: @ragWidth solid transparent;
+			/* FIXME: remove if we reset text-decoration in common styles */
+			text-decoration: none;
+		}
+
+		a:active {
+			border-left-color: #3366bb;
+			.background-alpha(232, 232, 233, .5);
+		}
+
+		div, p {
+			font-size: .9em;
+			margin: 0;
+			color: #999b9e;
+		}
+
+		p {
 			white-space: nowrap;
-			-webkit-text-overflow: ellipsis;
 			text-overflow: ellipsis;
+			-webkit-text-overflow: ellipsis;
 			overflow: hidden;
 		}
 
-		.mw-mf-user {
-			width: 75%; /* shorten to make room for time */
-
-			.mw-mf-ip {
-				color: white;
-				background: red;
-				padding: 0px 6px;
-			}
-		}
-
-		.mw-mf-title {
-			color: #202020;
-			font-size: 100%;
+		h2 {
+			.watchlistHeading();
+			padding: 20px 0 0;
 		}
 
 		.mw-mf-time {
-			position: absolute;
-			top: 3em;
-			right: 28px;
+			color: #c6c6c6;
+			font-size: .6em;
+			text-transform: uppercase;
+		}
+
+		.mw-mf-user {
+			margin: .5em 0 0;
 		}
 	}
 }
 
 #mw-mf-diffview {
+	@userInfoHeight: 3em;
+
 	h2 {
-		margin: 0;
+		.watchlistHeading();
 	}
 
 	.mw-mf-bytesadded {
@@ -113,7 +135,7 @@
 	}
 
 	.mw-mf-bytesremoved {
-		color: red;
+		color: #b24242;
 	}
 
 	ins,
@@ -132,21 +154,21 @@
 
 	.mw-mf-diff-date {
 		font-size: 0.5em;
-		color: #C6C6C6;
+		color: #c6c6c6;
 	}
 
 	ins {
-		color: green;
+		color: #008a46;
 		text-decoration: none;
 	}
 
 	del {
-		color: red;
+		color: #b24242;
 		text-decoration: strikethrough;
 	}
 
 	#mw-mf-diffarea {
-		padding: 1em;
+		padding: 1em 1em (2 * @userInfoHeight + 1em);
 	}
 
 	#mw-mf-diff-info {
@@ -163,7 +185,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		height: 5em;
+		height: @userInfoHeight;
 		padding: 1em;
 		background-color: #f0f0f0;
 		border-top: solid 1px #c0c0c0;
@@ -180,21 +202,20 @@
 			width: 0;
 		}
 
-		.mw-mf-user,
-		.mw-mf-anon {
-			padding-left: 20px;
-			line-height: 14px;
-			background-position: left center;
-			.background-size( 16px, 16px );
-			background-repeat: no-repeat;
-		}
-
 		.mw-mf-user {
-			background-image: url(images/user.png);
-		}
-
-		.mw-mf-anon {
-			background-image: url(images/user-ip.png);
+			line-height: 14px;
 		}
 	}
+}
+
+.mw-mf-user {
+	padding: 1px 0 0 20px;
+	color: #565656 !important;
+	background: url(images/user.png) 0 -2px no-repeat;
+	.background-size(16px, 16px);
+}
+
+.mw-mf-anon {
+	color: #b24242;
+	background-image: url(images/user-anon.png);
 }

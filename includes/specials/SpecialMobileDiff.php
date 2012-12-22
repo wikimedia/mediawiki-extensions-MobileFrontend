@@ -140,7 +140,7 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 			$ipAddr = $this->rev->getUserText();
 			$userPage = Title::makeTitle( NS_USER, $ipAddr );
 			$output->addHtml(
-				'<div class="mw-mf-anon">' .
+				'<div class="mw-mf-user mw-mf-anon">' .
 					$this->msg( 'mobile-frontend-diffview-anonymous' )->escaped() .
 				'</div>' .
 				'<div>' .

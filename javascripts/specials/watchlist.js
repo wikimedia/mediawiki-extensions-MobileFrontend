@@ -12,7 +12,7 @@
 	}
 
 	function init( M ) {
-		var titles = [], $items = $( '#mw-mf-watchlist li .mw-mf-title' );
+		var titles = [], $items = $( '#mw-mf-watchlist li h2' );
 
 		$items.each( function() {
 			if ( titles.length < 50 ) { // FIXME: limit to first 50 for time being
@@ -27,7 +27,7 @@
 				action: 'query',
 				format: 'json',
 				prop: 'pageimages',
-				pithumbsize: 120, // ask for slightly bigger to increase likelihood of covering 100px by 100px space
+				pithumbsize: 180, // ask for a big enough thumbnail for Modified view
 				titles: titles.join( '|' )
 			}
 		} ).done( function( r ) {
@@ -36,9 +36,10 @@
 			$items.each( function() {
 				var $el = $( this ), page = pages[ $el.text() ];
 				if ( page && page.thumbnail ) {
-					$( '<div class="listThumb">' ).css( {
-						'background-image': 'url(' + page.thumbnail.source + ')'
-					} ).prependTo( $el.parents( 'li' ) );
+					$( '<div class="listThumb">' ).
+						css( 'background-image', 'url(' + page.thumbnail.source + ')' ).
+						addClass( page.thumbnail.width > page.thumbnail.height ? 'listThumbH' : 'listThumbV' ).
+						prependTo( $el.parents( 'a' ) );
 				}
 			} );
 		} );
