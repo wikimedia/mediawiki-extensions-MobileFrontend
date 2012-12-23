@@ -10,9 +10,11 @@ $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
-	'MobileFrontend' => array( 'MobileFrontend' ),
 	'MobileFeedback' => array( 'MobileFeedback' ),
 	'MobileOptions' => array( 'MobileOptions' ),
+	'DonateImage' => array( 'DonateImage' ),
+	'MobileDiff' => array( 'MobileDiff' ),
+	'MobileMenu' => array( 'MobileMenu' ),
 );
 
 /** Arabic (العربية) */
