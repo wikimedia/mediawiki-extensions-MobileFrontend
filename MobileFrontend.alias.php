@@ -19,14 +19,12 @@ $specialPageAliases['en'] = array(
 
 /** Arabic (العربية) */
 $specialPageAliases['ar'] = array(
-	'MobileFrontend' => array( 'واجهة_المحمول' ),
 	'MobileFeedback' => array( 'تعليقات_المحمول' ),
 	'MobileOptions' => array( 'خيارات_المحمول' ),
 );
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
-	'MobileFrontend' => array( 'Mobile_Ansicht' ),
 	'MobileFeedback' => array( 'Mobile_Rückmeldung' ),
 	'MobileOptions' => array( 'Mobile_Optionen' ),
 );
@@ -45,14 +43,12 @@ $specialPageAliases['hi'] = array(
 
 /** Italian (italiano) */
 $specialPageAliases['it'] = array(
-	'MobileFrontend' => array( 'InterfacciaMobile' ),
 	'MobileFeedback' => array( 'FeedbackMobile' ),
 	'MobileOptions' => array( 'OpzioniMobile' ),
 );
 
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
-	'MobileFrontend' => array( '모바일프론트엔드' ),
 	'MobileFeedback' => array( '모바일피드백' ),
 	'MobileOptions' => array( '모바일설정' ),
 );
@@ -64,28 +60,24 @@ $specialPageAliases['lb'] = array(
 
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
-	'MobileFrontend' => array( 'МобиленПосредник' ),
 	'MobileFeedback' => array( 'МислењеМобилен' ),
 	'MobileOptions' => array( 'МобилниПоставки' ),
 );
 
 /** Malayalam (മലയാളം) */
 $specialPageAliases['ml'] = array(
-	'MobileFrontend' => array( 'മൊബൈൽസമ്പർക്കം' ),
 	'MobileFeedback' => array( 'മൊബൈൽപ്രതികരണം' ),
 	'MobileOptions' => array( 'മൊബൈൽഐച്ഛികങ്ങൾ' ),
 );
 
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
-	'MobileFrontend' => array( 'MobieleVoorkant' ),
 	'MobileFeedback' => array( 'MobieleTerugkoppeling' ),
 	'MobileOptions' => array( 'MobieleVoorkeuren' ),
 );
 
 /** Sicilian (sicilianu) */
 $specialPageAliases['scn'] = array(
-	'MobileFrontend' => array( 'InterfacciaMobile' ),
 	'MobileFeedback' => array( 'FeedbackMobile' ),
 	'MobileOptions' => array( 'OpzioniMobile' ),
 );
