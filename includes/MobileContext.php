@@ -101,12 +101,32 @@ class MobileContext extends ContextSource {
 
 	public function isMobileDevice() {
 		$xDevice = $this->getXDevice();
+		$amf = $this->getAMF();
 
-		if ( empty( $xDevice ) ) {
+		if ( empty( $xDevice ) && !$amf ) {
 			return false;
 		}
 
 		return true;
+	}
+
+	/**
+	 * Check for mobile device when using Apache Mobile Filter (AMF)
+	 *
+	 * IF AMF is enabled, make sure we use it to detect mobile devices.
+	 * Tablets are currently served desktop site.
+	 *
+	 * AMF docs: http://wiki.apachemobilefilter.org/
+	 *
+	 * @return bool
+	 */
+	public function getAMF() {
+		if ( isset( $_SERVER['AMF_DEVICE_IS_MOBILE'] ) && 
+			$_SERVER['AMF_DEVICE_IS_MOBILE'] === "true" &&
+			$_SERVER['AMF_DEVICE_IS_TABLET'] === "false" ) {
+				return true;
+		}
+		return false;
 	}
 
 	/**
