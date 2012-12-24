@@ -16,6 +16,108 @@
       "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//7Mw\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-24T16:34:18Z",
+      "side": 1,
+      "message": "This text needs to be seriously rewritten. So far, it suggests something instagramish. It needs to say something like \"are you here? if so, add your coordinates!\"",
+      "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//7M0\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-24T16:34:18Z",
+      "side": 1,
+      "message": "Must be controlled by a setting which should be disabled by default as we don\u0027t have (or need) GeoData on many WMF wikis, not to mention third-party users.",
+      "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//7NI\u003d",
+        "filename": "javascripts/modules/mf-addgeo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-24T16:34:18Z",
+      "side": 1,
+      "message": "{{coord}} is not guaranteed to be in the last section. Furthermore, as more and more infoboxes add coordinates, they are getting more and more common in the 0th section.",
+      "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//7Mk\u003d",
+        "filename": "javascripts/modules/mf-addgeo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-24T16:34:18Z",
+      "side": 1,
+      "message": "Also, I suggest to only display this on pages with \u003cspan id\u003d\"coordinates\" class\u003d\"metadata coord-missing\"\u003e which is added by {{coord missing}} and remove that template in process.",
+      "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//7NU\u003d",
+        "filename": "javascripts/modules/mf-addgeo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-24T16:34:18Z",
+      "side": 1,
+      "message": "You\u0027re adding both {{#coordinates}} and {{coord}}. The latter,  either does not exist, or works differently, or also adds coordinates depending on wiki while the former should look like {{#coordinates:primary|lat|lon}}.",
+      "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//7NA\u003d",
+        "filename": "javascripts/modules/mf-addgeo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-24T16:34:18Z",
+      "side": 1,
+      "message": "I suggest to drop [Via Mobile] as we\u0027re going to do it differently when we resolve https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d43305",
+      "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
