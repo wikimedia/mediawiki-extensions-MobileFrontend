@@ -197,6 +197,10 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-upload-error' => 'An error occurred whilst uploading the image. Please try another image.',
 	'mobile-frontend-image-saving-to-article' => 'Saving image to page',
 	'mobile-frontend-photo-license' => 'Note: All photos you publish will be published under a [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 license]',
+
+	// Change tags
+	'tag-mobile_edit' => 'Mobile edit',
+	'tag-mobile_edit-description' => 'Edit made from mobile site',
 );
 
 /** Message documentation (Message documentation)
@@ -394,6 +398,8 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-upload-error' => 'Text that displays when a photo fails to upload',
 	'mobile-frontend-image-saving-to-article' => 'Text that displays whilst the wikitext to display an image is being prepended to an article',
 	'mobile-frontend-photo-license' => 'Text notifying user of license that image will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license.',
+	'tag-mobile_edit' => 'Short change tag name that appears e.g. in Special:RecentChanges, see also {{msg-mw|tag-mobile_edit-description}}',
+	'tag-mobile_edit-description' => 'Change tag description e.g. in Special:Tags, see also {{msg-mw|tag-mobile_edit}}',
 );
 
 /** Achinese (Acèh)

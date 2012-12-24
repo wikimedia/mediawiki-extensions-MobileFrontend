@@ -20,6 +20,8 @@ class ExtMobileFrontend extends ContextSource {
 		$wgHooks['UserLoginForm'][] = array( &$this, 'renderLogin' );
 		$wgHooks['UserCreateForm'][] = array( &$this, 'renderAccountCreate' );
 		$wgHooks['SpecialPage_initList'][] = array( &$this, 'onSpecialPage_initList' );
+		$wgHooks['ListDefinedTags'][] = array( &$this, 'listDefinedTags' );
+		$wgHooks['RecentChange_save'][] = array( &$this, 'recentChange_save' );
 	}
 
 	/**
@@ -466,6 +468,38 @@ class ExtMobileFrontend extends ContextSource {
 		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
 			// Replace the standard watchlist view with our custom one
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
+		}
+		return true;
+	}
+
+	/**
+	 * ListDefinedTags hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
+	 * @param $tags
+	 *
+	 * @return bool
+	 */
+	public function listDefinedTags( &$tags ) {
+		$tags[] = 'mobile edit';
+		return true;
+	}
+
+	/**
+	 * RecentChange_save hook handler that tags mobile changes
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
+	 * @param RecentChange $rc
+	 *
+	 * @return bool
+	 */
+	public function recentChange_save( RecentChange $rc ) {
+		$context = MobileContext::singleton();
+		$logType = $rc->getAttribute( 'rc_log_type' );
+		// Only log edits and uploads
+		if ( $context->shouldDisplayMobileView() && ( $logType === 'upload' || is_null( $logType ) ) ) {
+			$rcId = $rc->getAttribute( 'rc_id' );
+			$revId = $rc->getAttribute( 'rc_this_oldid' );
+			$logId = $rc->getAttribute( 'rc_logid' );
+			ChangeTags::addTags( 'mobile edit', $rcId, $revId, $logId );
 		}
 		return true;
 	}

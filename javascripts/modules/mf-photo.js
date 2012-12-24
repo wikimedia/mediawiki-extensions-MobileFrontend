@@ -52,7 +52,7 @@ module = ( function() {
 			$form = $container.find( 'form' ),
 			formData = new FormData();
 		formData.append( 'filename', filename );
-		formData.append( 'comment', M.message( 'mobile-frontend-photo-article-edit-comment' ) + ' [Via Mobile]' );
+		formData.append( 'comment', M.message( 'mobile-frontend-photo-article-edit-comment' ) );
 		formData.append( 'file', $form.find( 'input[type=file]' )[ 0 ].files[ 0 ] );
 		dirty = true;
 
@@ -65,7 +65,7 @@ module = ( function() {
 					action: 'edit',
 					title: M.getConfig( 'title' ),
 					token: token,
-					comment: M.message( 'mobile-frontend-photo-upload-comment' ) + ' [Via Mobile]',
+					comment: M.message( 'mobile-frontend-photo-upload-comment' ),
 					prependtext: '[[File:' + name + '|thumbnail|' + caption + ']]\n\n'
 				}
 			} );

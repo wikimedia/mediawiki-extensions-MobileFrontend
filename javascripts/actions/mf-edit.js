@@ -58,7 +58,6 @@ var m = ( function() {
 
 	function splitTextArea( $editArea ) {
 		var wikitext = $editArea.val(),
-			$editSummary = $( '#wpSummary' ),
 			$loader,
 			parts = wikitext.split( '\n\n' ),
 			headingLocation, section_id = 0,
@@ -106,7 +105,6 @@ var m = ( function() {
 			$loader.show();
 			var val = concatTextAreas();
 			$editArea.val( val );
-			$editSummary.val( $editSummary.val() + ' [Via Mobile]' );
 		} );
 
 		$( window ).trigger( 'mw-mf-page-loaded', [
