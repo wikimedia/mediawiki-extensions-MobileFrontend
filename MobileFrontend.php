@@ -182,6 +182,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'dependencies' => array( 'mobile.production-jquery', 'mediawiki.jqueryMsg' ),
 	'styles' => array(
 		'stylesheets/modules/mf-watchlist.css',
+		'stylesheets/modules/mf-photo.css',
 	),
 	'scripts' => array(
 		'javascripts/common/mf-history-jquery.js',
@@ -190,6 +191,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'javascripts/modules/mf-watchlist.js',
 		'javascripts/modules/mf-languages.js',
 		'javascripts/modules/mf-last-modified.js',
+		'javascripts/modules/mf-photo.js',
 	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
@@ -305,10 +307,8 @@ $wgResourceModules['mobile.alpha'] = array(
 	'styles' => array(
 		'stylesheets/modules/mf-random.css',
 		'stylesheets/modules/mf-tables.css',
-		'stylesheets/modules/mf-photo.css',
 	),
 	'scripts' => array(
-		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-random.js',
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-user-gallery.js',
