@@ -171,6 +171,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
 	'mobile-frontend-watchlist-removed' => 'Removed $1 from your watchlist',
 	'mobile-frontend-watchlist-view' => 'View your watchlist',
+	'mobile-frontend-watchlist-more' => 'more',
 	'mobile-frontend-watchlist-cta' => 'Please login or sign up to watch this page.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Login',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Sign up',
@@ -461,8 +462,8 @@ See also:
 {{Identical|Login}}',
 	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page
 {{Identical|Sign up}}',
-	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist
-{{Identical|All}}',
+	'mobile-frontend-watchlist-more' => 'Label for link that shows more pages of the watchlist a-z view',
+	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes',
 	'mobile-frontend-watchlist-a-z-empty' => 'Message to show when watchlist a-z list is empty',
 	'mobile-frontend-watchlist-feed-empty' => 'Message to show when watchlist feed is empty',
