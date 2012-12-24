@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH//7M8\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-12-24T16:25:14Z",
+      "side": 1,
+      "message": "Please use page instead of article.",
+      "revId": "c46f56a909ae4b7fd5e7c9698f3a2c1032a06383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
