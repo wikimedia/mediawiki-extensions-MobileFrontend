@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH//7JY\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-24T19:14:42Z",
+      "side": 1,
+      "message": "Not only it\u0027s not categorizable, but this category has a lot of subcategories which breaks this check.",
+      "revId": "26b4145fec7c31ccd94f12af5931d2d4d29a2703",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
