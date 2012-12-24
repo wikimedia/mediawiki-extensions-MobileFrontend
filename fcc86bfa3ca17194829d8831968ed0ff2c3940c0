@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH//7MU\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-24T17:34:14Z",
+      "side": 1,
+      "message": "add FIXME note?\nShould we also fall back to mw.msg if this and jQueryMsg are available?",
+      "revId": "fcc86bfa3ca17194829d8831968ed0ff2c3940c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
