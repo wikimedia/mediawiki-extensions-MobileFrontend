@@ -47,21 +47,6 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @group Broken
-	 */
-	public function testSetPropertiesFromArray() {
-		global $wgExtMobileFrontend;
-		$props = array(
-			'xDevice' => 'android',
-			'blargh' => 'bananas',
-		);
-		$wgExtMobileFrontend->setPropertiesFromArray( $props );
-		$this->assertEquals( $wgExtMobileFrontend->getXDevice(), 'android' );
-		// ensure 'balrgh' didnt get set since it was not a pre-defined property
-		$this->assertFalse( property_exists( $wgExtMobileFrontend, 'blargh' ) );
-	}
-
-	/**
 	 * @outputBuffering enabled
 	 */
 	/*public function testCookie() {

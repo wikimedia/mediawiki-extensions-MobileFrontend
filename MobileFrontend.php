@@ -363,17 +363,6 @@ $wgMFFeedbackFallbackURL = '#';
 $wgMFDisplayNonTechnicalFeedback = false;
 
 /**
- * Set properties in ExtMobileFrontend to arbitrary values
- * CAUTION: this should not be used in production environments
- *
- * This array can consist of key => value pairs, mapping to
- * '<property_name>' => <property_value>
- * Any properties you try to set that do not exist in ExtMobileFrontend will
- * be ignored.
- */
-$wgMFConfigProperties = array();
-
-/**
  * Make the classes, tags and ids stripped from page content configurable.
  * Each item will be stripped from the page.
  * See $itemsToRemove for more information.
