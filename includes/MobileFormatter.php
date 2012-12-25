@@ -156,7 +156,7 @@ class MobileFormatter extends HtmlFormatter {
 			case 'HTML':
 				if ( $this->expandableSections && !$this->mainPage && strlen( $html ) > 4000 ) {
 					$html = $this->headingTransform( $html );
-					if ( $this->removeSections && MobileContext::singleton()->isBetaGroupMember() ) {
+					if ( $this->removeSections ) {
 						$temp = new HtmlFormatter( $html ); // hack hack hack
 						$doc = $temp->getDoc();
 

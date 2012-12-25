@@ -323,7 +323,7 @@ class ExtMobileFrontend extends ContextSource {
 		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $this->getTitle(),
 			$context->getContentFormat(), $wmlContext
 		);
-		$formatter->enableRemovableSections( $removeSections );
+		$formatter->enableRemovableSections( $removeSections && $context->isBetaGroupMember() );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
