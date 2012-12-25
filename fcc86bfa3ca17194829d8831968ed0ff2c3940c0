@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgH//7DU\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-25T01:04:43Z",
+      "side": 1,
+      "message": "OK, I found it:\nhttp://www.mediawiki.org/wiki/Help:Magic_words#Localisation\nI don\u0027t see an easy solution (I see no point in reimplementing all the language specific versions). We either leave it as it is knowing that it won\u0027t show proper forms in some languages (it\u0027s beta anyway) or wait until https://gerrit.wikimedia.org/r/#/c/39162/ gets merged to the core (and I don\u0027t see it coming anytime soon, nobody has reviewed it yet).",
+      "parentUuid": "AAADgH//7D0\u003d",
+      "revId": "fcc86bfa3ca17194829d8831968ed0ff2c3940c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgH//7MU\u003d",
         "filename": "javascripts/common/mf-application.js",
         "patchSetId": 3
