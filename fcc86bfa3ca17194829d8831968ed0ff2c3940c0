@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgH//7D0\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-25T00:44:17Z",
+      "side": 1,
+      "message": "How does it work? Is there one more option inside {}? What quantity is it for, 2? Any link to docs?",
+      "parentUuid": "AAADgH//7Fc\u003d",
+      "revId": "fcc86bfa3ca17194829d8831968ed0ff2c3940c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgH//7MU\u003d",
         "filename": "javascripts/common/mf-application.js",
         "patchSetId": 3
