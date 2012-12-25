@@ -263,7 +263,7 @@ class ExtMobileFrontend extends ContextSource {
 
 	/**
 	 * Invocation of hook UserLoginForm
-	 * @param object Login form template object
+	 * @param QuickTemplate $template Login form template object
 	 * @return bool
 	 */
 	public function renderLogin( &$template ) {
@@ -278,7 +278,7 @@ class ExtMobileFrontend extends ContextSource {
 
 	/**
 	 * Invocation of hook UserCreateForm
-	 * @param object Account creation form template object
+	 * @param QuickTemplate $template Account creation form template object
 	 * @return bool
 	 */
 	public function renderAccountCreate( &$template ) {
@@ -307,6 +307,8 @@ class ExtMobileFrontend extends ContextSource {
 
 	/**
 	 * @param OutputPage $out
+	 * @param boolean $removeSections
+	 *
 	 * @return string
 	 */
 	public function DOMParse( OutputPage $out, $removeSections ) {
@@ -453,8 +455,15 @@ class ExtMobileFrontend extends ContextSource {
 		return true;
 	}
 
+	/**
+	 * ResourceLoaderGetConfigVars hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
+	 *
+	 * @param array $vars
+	 * @return boolean
+	 */
 	public function resourceLoaderGetConfigVars( &$vars ) {
-		global $wgMFStopRedirectCookieHost, $wgCookiePath;
+		global $wgCookiePath;
 		$vars['wgCookiePath'] = $wgCookiePath;
 		$vars['wgMFStopRedirectCookieHost'] = MobileContext::singleton()->getStopMobileRedirectCookieDomain();
 		return true;
