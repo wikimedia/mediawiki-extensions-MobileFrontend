@@ -707,7 +707,7 @@ class MobileContext extends ContextSource {
 	 * 		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlQuery( &$parsedUrl ) {
-		if ( strpos( $parsedUrl['query'], 'useformat' ) !== false ) {
+		if ( isset( $parsedUrl['query'] ) && strpos( $parsedUrl['query'], 'useformat' ) !== false ) {
 			$query = wfCgiToArray( html_entity_decode( $parsedUrl['query'] ) );
 			unset( $query['useformat'] );
 			$parsedUrl['query'] = wfArrayToCgi( $query );
