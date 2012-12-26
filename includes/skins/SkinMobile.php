@@ -535,7 +535,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<div id="mw-mf-overlay">
 			<?php $this->html( 'firstHeading' ) ?>
-				<a class="escapeOverlay" href="<?php $this->text( 'returnto' ) ?>">close</a>
 				<div id="content_wrapper" class="content mw-mf-special">
 					<?php $this->html( 'bodytext' ) ?>
 				</div>
