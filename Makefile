@@ -28,10 +28,6 @@ less:
 	lessc stylesheets/less/actions/mf-history.less > stylesheets/actions/mf-history.css
 	lessc stylesheets/less/specials/watchlist.less > stylesheets/specials/watchlist.css
 
-remotes:
-	curl -Lo javascripts/externals/eventlog.js \
-			"http://bits.wikimedia.org/en.wikipedia.org/load.php?modules=ext.Experiments.eventlog"
-
 phpunit:
 	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml
 

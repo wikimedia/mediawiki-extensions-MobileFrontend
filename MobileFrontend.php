@@ -176,14 +176,6 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'position' => 'bottom',
 );
 
-$wgResourceModules['mobile.beta.jquery.eventlog'] = array(
-	'scripts' => array( 'javascripts/externals/eventlog.js' ),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-);
-
 $wgResourceModules['mobile.production-only'] = array(
 	'styles' => array( 'stylesheets/modules/mf-toggle.css' ),
 	'scripts' => array( 'javascripts/modules/mf-toggle.js' ),

@@ -440,6 +440,8 @@ class ExtMobileFrontend extends ContextSource {
 	 * @return bool
 	 */
 	public function resourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+		global $wgAutoloadClasses, $wgMFLogEvents;
+
 		$detector = new DeviceDetection();
 		foreach ( $detector->getCssFiles() as $file ) {
 			$resourceLoader->register( "mobile.device.$file",
@@ -447,6 +449,18 @@ class ExtMobileFrontend extends ContextSource {
 					'styles' => array( "stylesheets/devices/{$file}.css" ),
 					'localBasePath' => dirname( __DIR__ ),
 					'remoteExtPath' => 'MobileFrontend',
+				)
+			);
+		}
+
+		if ( $wgMFLogEvents &&  isset( $wgAutoloadClasses['ResourceLoaderSchemaModule'] ) ) {
+			// See: http://meta.wikimedia.org/wiki/Schema:MobileBetaWatchlist
+			$resourceLoader->register( "schema.MobileBetaWatchlist",
+				array(
+					'class' => 'ResourceLoaderSchemaModule',
+					'schema' => 'MobileBetaWatchlist',
+					'revision' => 4921083,
+					'position' => 'bottom',
 				)
 			);
 		}
