@@ -1,9 +1,6 @@
 .specialPage.overlay body {
   background-color: #ffffff;
 }
-.specialPage.overlay #mw-mf-overlay .header {
-  background-color: #393939;
-}
 .specialPage.overlay #mw-mf-overlay .header h1 {
   padding-left: 0.4em;
 }
