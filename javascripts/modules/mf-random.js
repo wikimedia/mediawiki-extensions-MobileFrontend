@@ -62,7 +62,7 @@ var m = ( function() {
 	}
 
 	return {
-		init: init
+		init: M.history.supportsHistoryApi ? init : $.noop
 	};
 }() );
 
