@@ -144,9 +144,12 @@ $wgResourceModules['mobile'] = array(
 	'styles' => array( 'stylesheets/common/reset.css', 'stylesheets/common/mf-common.css', 'stylesheets/common/mf-footer.css',
 		'stylesheets/common/mf-typography.css', 'stylesheets/common/mf-navigation.css',
 		'stylesheets/modules/mf-search.css',
-		'stylesheets/specials/contact-us.css', 'stylesheets/modules/mf-banner.css',
+		'stylesheets/modules/mf-banner.css',
+		// FIXME: load all specials via RL when available
+		'stylesheets/specials/contact-us.css',
 		'stylesheets/specials/mf-settings.css',
 		'stylesheets/specials/mf-login.css',
+		'stylesheets/specials/mf-search.css',
 		'stylesheets/modules/mf-toggle.css',
 		'stylesheets/common/mf-hacks.css',
 		'stylesheets/modules/mf-cleanuptemplates.css',
