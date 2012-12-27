@@ -565,6 +565,9 @@ body {
 #mw-mf-overlay .mw-mf-overlay-header {
   padding-left: 40px;
 }
+#mw-mf-overlay .header {
+  margin-left: -40px;
+}
 #mw-mf-overlay .mw-mf-overlay-footer,
 #mw-mf-overlay .mw-mf-overlay-header {
   padding-top: 4px;
