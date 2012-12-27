@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//+us\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 721,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-27T01:53:00Z",
+      "side": 1,
+      "message": "did you mean mobile-frontend-watchlist-cta? mobile-frontend-watchlist-login does not exist! also, why use the parse() method?",
+      "revId": "3b8ad76843c1ef58260e5d66818cf6fa9f908a73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
