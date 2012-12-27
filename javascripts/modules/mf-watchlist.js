@@ -9,7 +9,7 @@ var w = ( function() {
 			title: title, token: token
 		},
 			msg = M.message( 'mobile-frontend-watchlist-add', title ),
-			popupClass = 'watch-action';
+			popupClass = 'watch-action toast';
 
 		if( unwatchflag ) {
 			data.unwatch = true;
