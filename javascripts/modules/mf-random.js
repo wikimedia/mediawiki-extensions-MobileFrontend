@@ -16,7 +16,7 @@ var m = ( function() {
 
 		function openSuggestion( ev ) {
 			ev.preventDefault();
-			M.history.loadPage( $( this ).text(), true );
+			M.history.navigateToPage( $( this ).text(), true );
 			makeHeader( articles );
 		}
 
