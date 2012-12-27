@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//+wY\u003d",
+        "filename": "javascripts/common/main.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-27T01:27:12Z",
+      "side": 0,
+      "message": "Shouldn\u0027t this get replaced with something instead of just being removed? What about L57 in mf-toggle-dynamic.js?",
+      "revId": "4c7f60b97c12ec8c3950eaf323e494b9892cc82e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
