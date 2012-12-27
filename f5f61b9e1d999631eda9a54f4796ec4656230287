@@ -34,6 +34,24 @@
       "revId": "f5f61b9e1d999631eda9a54f4796ec4656230287",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//+kM\u003d",
+        "filename": "features/support/pages/mobile_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2012-12-27T13:54:23Z",
+      "side": 1,
+      "message": "After more thought, this test should run on Jenkins, so this should be either test, test2 or ever better labs machine. Developer should make the change locally to make the test run on localhost, but when committed it should run on Jenkins.",
+      "parentUuid": "AAADgH//84M\u003d",
+      "revId": "f5f61b9e1d999631eda9a54f4796ec4656230287",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
