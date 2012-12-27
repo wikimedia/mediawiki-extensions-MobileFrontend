@@ -1,6 +1,8 @@
 ( function( M,  $ ) {
 
-var dirty, module;
+var dirty, module,
+	NS_MAIN = 0, NS_TALK = 1; // FIXME: make global
+
 $( function() {
 
 	function confirmExit() {
@@ -14,9 +16,11 @@ $( function() {
 
 module = ( function() {
 	var
+		ns = M.getConfig( 'namespace' ), // FIXME: use wgNamespaceNumber ?,
 		supported = M.isLoggedIn() &&
 			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined' &&
 			!M.getConfig( 'imagesDisabled', false ) &&
+			( ns === NS_MAIN || ns === NS_TALK ) && // limit to talk and article namespaces
 			// webkit only for time being
 			window.navigator.userAgent.indexOf( 'WebKit' ) > -1,
 		endPoint = M.getConfig( 'photo-upload-endpoint' ),
@@ -130,10 +134,10 @@ module = ( function() {
 		}, endPoint );
 	}
 
-	function addPhotoUploader( container, saveWikiTextFlag, msg ) {
+	function addPhotoUploader( $container, saveWikiTextFlag, msg ) {
 		msg = msg || 'mobile-frontend-photo-upload';
-
-		var $container = $( '<div class="thumb photouploader">' ).prependTo( container ),
+		$container = $( '<div class="thumb photouploader">' ).prependTo( $container );
+		var
 			$editArea, $form, $img, $file, $license,
 			template = '<div class="camera">' +
 				'<div class="errormsg">' + M.message( 'mobile-frontend-photo-upload-error' ) + '</div>' +
@@ -203,7 +207,7 @@ module = ( function() {
 	}
 
 	function articleNeedsPhoto( $container ) {
-		return $container.find( '#content_0 .thumb img' ).length === 0;
+		return $container.find( '#content_0 .thumb img, .navbox, .infobox' ).length === 0;
 	}
 
 	function init() {

@@ -92,7 +92,9 @@ class SkinMobile extends SkinMobileBase {
 		$styles[] = "mobile.device.{$device['css_file_name']}";
 		$styles[] = 'mobile.production-jquery';
 		$styleLinks = array( $this->resourceLoaderLink( $styles, 'styles' ) );
-		$isFilePage = $title->getNamespace() == NS_FILE;
+		$namespace = $title->getNamespace();
+		$tpl->set( 'namespace', $namespace );
+		$isFilePage = $namespace == NS_FILE;
 		if ( $isFilePage ) {
 			$styleLinks[] = $this->resourceLoaderLink( 'mobile.filePage', 'styles' );
 		}
@@ -709,6 +711,7 @@ class SkinMobileTemplate extends BaseTemplate {
 
 		$inBeta = $this->data['isBetaGroupMember'];
 		$user = $this->data['user'];
+		// FIXME: this should all be done in prepareTemplate - getting extremely messy
 		$jsconfig = array(
 			'messages' => array(
 				'mobile-frontend-photo-license' => wfMessage( 'mobile-frontend-photo-license' )->parse(),
@@ -728,6 +731,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'pageUrl' => $wgArticlePath,
 				'imagesDisabled' => $this->data['imagesDisabled'],
 				'beta' => $inBeta,
+				'namespace' => $this->data['namespace'],
 				'title' => $this->data['articleTitle'],
 				'variant' => $this->data['variant'],
 				'useFormatCookieName' => $this->data['useFormatCookieName'],
