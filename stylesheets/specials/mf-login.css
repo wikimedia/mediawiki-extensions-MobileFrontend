@@ -45,6 +45,9 @@ table.user-login input.loginPassword,
 table.user-login input.loginText {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1.25em;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
