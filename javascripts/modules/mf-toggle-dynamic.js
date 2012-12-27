@@ -54,7 +54,6 @@ var T = ( function() {
 
 		function openSectionHandler() {
 			var id = $( this ).attr( 'id' );
-			_mwLogEvent( 'SectionToggled', id );
 			wm_toggle_section( id.split( '_' )[ 1 ] );
 		}
 
@@ -98,7 +97,6 @@ var T = ( function() {
 				footerInitialised = true;
 			}
 			checkHash();
-			_mwLogEvent( 'TogglingReady', $( '.section_heading' ).length );
 		} );
 
 		if ( !specialPage && !$( '#editform' )[ 0 ] ) {

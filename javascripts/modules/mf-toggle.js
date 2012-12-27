@@ -79,7 +79,6 @@ var toggle = ( function() {
 		}
 
 		function openSectionHandler() {
-			_mwLogEvent( 'SectionToggled', this.id );
 			var sectionName = this.id ? this.id.split( '_' )[1] : -1;
 			if( sectionName !== -1 ) {
 				wm_toggle_section( sectionName );
@@ -116,7 +115,6 @@ var toggle = ( function() {
 		for ( a = content.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
 			u( a[i] ).bind( 'click', checkHash );
 		}
-		_mwLogEvent( 'TogglingReady', sectionHeadings.length );
 	}
 
 	return {
