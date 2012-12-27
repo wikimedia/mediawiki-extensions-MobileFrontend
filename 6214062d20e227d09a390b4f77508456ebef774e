@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//+wI\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-27T01:34:01Z",
+      "side": 1,
+      "message": "Why is the status variable initialized with {}? Why don\u0027t we get rid of it?",
+      "revId": "6214062d20e227d09a390b4f77508456ebef774e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
