@@ -65,42 +65,65 @@ var w = ( function() {
 		} );
 	}
 
-	function checkWatchStatus( title, callback ) {
+	function checkWatchStatus( titles, callback ) {
 		$.ajax( {
 			url:  M.getApiUrl(), dataType: 'json',
 			data: {
-				action: 'query', titles: title, format: 'json',
+				action: 'query', format: 'json',
+				titles: titles.join( '|' ),
 				prop: 'info', inprop: 'watched'
 			}
 		} ).done( function( data ) {
 				var pages = data.query.pages,
-					status, i;
+					notEmpty = !pages[ '-1' ], statuses = {}, page, i;
 				for( i in pages ) {
 					if( pages.hasOwnProperty( i ) ) {
-						status = pages[ i ].hasOwnProperty( 'watched' );
+						page = pages[ i ];
+						statuses[ page.title ] = page.hasOwnProperty( 'watched' );
 					}
 				}
-				if( !pages['-1'] ) {
-					callback( status );
+				if( notEmpty ) {
+					callback( statuses );
 				}
 		} );
 	}
 
-	function initWatchList( container, title ) {
+	function initWatchListIcon( container, title ) {
 		M.getToken( 'watch', function( data ) {
 			if( data.tokens && !data.warnings ) { // then user is logged in
 				lastToken = data.tokens.watchtoken;
-				checkWatchStatus( title, function( status ) {
-					createWatchListButton( container, title, status );
+				checkWatchStatus( [ title ], function( status ) {
+					createWatchListButton( container, title, status[ title ] );
+				} );
+			}
+		} );
+	}
+
+	// FIXME: avoid if statement repetition with initWatchListIcon
+	function initWatchListIconList( container ) {
+		var $items = $( container ).find( 'li' ), titles = [];
+		$items.each( function() {
+			titles.push( $( this ).attr( 'title' ) );
+		} );
+
+		M.getToken( 'watch', function( data ) {
+			if( data.tokens && !data.warnings ) {
+				lastToken = data.tokens.watchtoken;
+
+				checkWatchStatus( titles, function( status ) {
+					$( container ).find( 'li' ).each( function() {
+						var title = $( this ).attr( 'title' );
+						createWatchListButton( this, title, status[ title ] );
+					} );
 				} );
 			}
 		} );
 	}
 
 	function upgradeSearch() {
-		$( window ).bind( 'mw-mf-search-result', function( ev, container, title ) {
-			initWatchList( container, title );
-			} );
+		$( window ).on( 'mw-mf-search-results', function( ev, ul ) {
+			initWatchListIconList( ul );
+		} );
 	}
 
 	function init( container, title ) {
@@ -108,7 +131,7 @@ var w = ( function() {
 		container = container || M.navigation.getPageMenu();
 		title = title || pageTitle;
 		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
-			initWatchList( container, article.title );
+			initWatchListIcon( container, article.title );
 		} );
 
 		upgradeSearch();
@@ -116,7 +139,8 @@ var w = ( function() {
 
 	return {
 		init: init,
-		initWatchList: initWatchList
+		initWatchListIcon: initWatchListIcon,
+		initWatchListIconList: initWatchListIconList
 	};
 }());
 
