@@ -182,6 +182,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-diffview-anonymous' => 'Anonymous user',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} added',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} removed',
+	'mobile-frontend-diffview-explained' => 'The following lines were added (+) and removed (-):',
 
 	// tables
 	'mobile-frontend-table' => 'Table $1',
@@ -389,6 +390,7 @@ Don't translate the special page name",
 	'mobile-frontend-diffview-anonymous' => 'Label to indicate anonymous user in common mobile diff/change view.',
 	'mobile-frontend-diffview-bytesadded' => 'Edit byte-changed counter for common mobile diff/change view when change adds bytes. $1 is byte count; may use PLURAL.',
 	'mobile-frontend-diffview-bytesremoved' => 'Edit byte-changed counter for common mobile diff/change view when change removes bytes. $1 is byte count; may use PLURAL.',
+	'mobile-frontend-diffview-explained' => 'Explains the diff view importantly signaling that a "+" symbol means added and a "-" symbol means removed',
 	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. $1 is a unique table number for the article',
 	'mobile-frontend-saving-exit-page' => 'When a user makes an edit in the page which is happening in the background
 and then tries to leave the page this message is shown to check that they are happy that they will lose their changes.
