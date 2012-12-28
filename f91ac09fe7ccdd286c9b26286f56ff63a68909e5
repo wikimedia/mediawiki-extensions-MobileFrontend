@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//9jY\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T19:19:50Z",
+      "side": 1,
+      "message": "It should not be a list. This is just a message, \u003cp\u003e should be used instead.",
+      "revId": "f91ac09fe7ccdd286c9b26286f56ff63a68909e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//9jU\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T19:19:50Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "f91ac09fe7ccdd286c9b26286f56ff63a68909e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
