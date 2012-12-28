@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//9mk\u003d",
+        "filename": "javascripts/specials/watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T17:51:42Z",
+      "side": 1,
+      "message": "Why is the thumbnail not an \u003cimg\u003e tag? It\u0027s not page layout, it\u0027s page content.",
+      "revId": "783806a608324aeed55995bfdd0359b30aad0f9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//9mw\u003d",
+        "filename": "javascripts/specials/watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T17:51:42Z",
+      "side": 1,
+      "message": "Why is this initialized differently than other modules? Why not using registerModule()?",
+      "revId": "783806a608324aeed55995bfdd0359b30aad0f9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//9mo\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T17:51:42Z",
+      "side": 1,
+      "message": "Why is the thumbnail not an \u003cimg\u003e tag? It\u0027s not page layout, it\u0027s page content.",
+      "revId": "783806a608324aeed55995bfdd0359b30aad0f9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
