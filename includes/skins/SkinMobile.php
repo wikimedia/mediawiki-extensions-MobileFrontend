@@ -476,27 +476,42 @@ HTML;
 	}
 
 	private function getLogInOutLink() {
+		global $wgMFForceSecureLogin;
 		wfProfileIn( __METHOD__ );
+		$context = MobileContext::singleton();
 		$query = array();
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
 			unset( $returntoquery['title'] );
 			unset( $returntoquery['returnto'] );
 			unset( $returntoquery['returntoquery'] );
-			$query['returntoquery'] = wfArrayToCGI( $returntoquery );
 		}
 		if ( $this->getUser()->isLoggedIn() ) {
-			$link = Linker::link( SpecialPage::getTitleFor( 'UserLogout' ),
+			$query[ 'returnto' ] = $this->getTitle()->getPrefixedText();
+			if ( !empty( $returntoquery ) ) {
+				$query[ 'returntoquery' ] = wfArrayToCGI( $returntoquery );
+			}
+			$url = SpecialPage::getTitleFor( 'UserLogout' )->getFullURL( $query );
+			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
+			$link = Linker::makeExternalLink(
+				$url,
 				wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
-				array( 'class' => 'logout' ),
-				array( 'returnto' => $this->getTitle()->getPrefixedText() )
+				true,
+				'',
+				array( 'class' => 'logout' )
 			);
 		} else {
-			$query[ 'returntoquery' ] = 'welcome=yes';
-			$link = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
+			 // note returnto is not set for mobile (per product spec)
+			$returntoquery[ 'welcome' ] = 'yes';
+			$query[ 'returntoquery' ] = wfArrayToCGI( $returntoquery );
+			$url = SpecialPage::getTitleFor( 'UserLogin' )->getFullURL( $query );
+			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
+			$link = Linker::makeExternalLink(
+				$url,
 				wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
-				array( 'class' => 'login' ),
-				$query
+				true,
+				'',
+				array( 'class' => 'login' )
 			);
 		}
 		wfProfileOut( __METHOD__ );
