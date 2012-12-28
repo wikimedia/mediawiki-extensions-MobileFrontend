@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//9Y4\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T21:25:35Z",
+      "side": 1,
+      "message": "Why isn\u0027t this foreach inside the if? This way we won\u0027t need two separate ifs.",
+      "revId": "5c24a447c78f0b36c6a9c1ddedbfd6978b606452",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//9YE\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T21:25:35Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "5c24a447c78f0b36c6a9c1ddedbfd6978b606452",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
