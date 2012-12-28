@@ -22,6 +22,7 @@ class ExtMobileFrontend extends ContextSource {
 		$wgHooks['SpecialPage_initList'][] = array( &$this, 'onSpecialPage_initList' );
 		$wgHooks['ListDefinedTags'][] = array( &$this, 'listDefinedTags' );
 		$wgHooks['RecentChange_save'][] = array( &$this, 'recentChange_save' );
+		$wgHooks['SpecialPageBeforeExecute'][] = array( &$this, 'onSpecialPageBeforeExecute' );
 	}
 
 	/**
@@ -502,6 +503,44 @@ class ExtMobileFrontend extends ContextSource {
 			$logId = $rc->getAttribute( 'rc_logid' );
 			ChangeTags::addTags( 'mobile edit', $rcId, $revId, $logId );
 		}
+	}
+
+	/**
+	 * Invocation of hook SpecialPageBeforeExecute
+	 *
+	 * We use this hook to ensure that login/account creation pages
+	 * are redirected to HTTPS if they are not accessed via HTTPS and
+	 * $wgMFForceSecureLogin == true.
+	 *
+	 * @param $special SpecialPage
+	 * @param $subpage string
+	 */
+	public function onSpecialPageBeforeExecute( $special, $subpage ) {
+		global $wgMFForceSecureLogin, $wgServer;
+		if ( $special->getName() != 'Userlogin' ) {
+			// no further processing necessary
+			return true;
+		}
+
+		// make sure we're on https if we're supposed to be and currently aren't.
+		// most of this is lifted from https redirect code in SpecialUserlogin::execute()
+		// also, checking for 'https' in $wgServer is a little funky, but this is what
+		// is done on the WMF cluster (see config in CommonSettings.php)
+		if (  strpos( $wgServer, 'https' ) === false && $wgMFForceSecureLogin ) {
+			// get the https url and redirect
+			$request = $this->getContext()->getRequest();
+			$query = array(
+				'returnto' => $request->getVal( 'returnto', '' ),
+				'returntoquery' => $request->getVal( 'returntoquery', '' ),
+				'wpStickHTTPS' => true, // is this actually necessary?
+			);
+			$url = MobileContext::singleton()->getMobileUrl(
+				$special->getFullTitle()->getFullURL( $query ),
+				true
+			);
+			$this->getOutput()->redirect( $url );
+		}
+
 		return true;
 	}
 }
