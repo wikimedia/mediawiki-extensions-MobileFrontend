@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADgX//9lM\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-28T18:30:55Z",
+      "side": 1,
+      "message": "I think we could make this message more general, not watchlist specific.",
+      "revId": "9f4b76c95f1dabf189f6a4c4d1281c5a43c95315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX///78\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 1
