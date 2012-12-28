@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//9HU\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2012-12-28T22:16:33Z",
+      "side": 1,
+      "message": "Disagree. Context can be really important in translations. Despite being a nice idea generic translations rarely ever work in practice from my experience.\n\nIt also allows more flexibility if we want to change the label to say \"see more items in watchlist\"\n\nAlso it\u0027s possible http://en.wikipedia.org/wiki/You_ain\u0027t_gonna_need_it",
+      "parentUuid": "AAADgX//9lM\u003d",
+      "revId": "9f4b76c95f1dabf189f6a4c4d1281c5a43c95315",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX///78\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 1
