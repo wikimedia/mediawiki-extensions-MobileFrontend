@@ -139,6 +139,24 @@
       "revId": "07b0e5d0da097c310fef5b7a9b8b38307f70cde6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//9sI\u003d",
+        "filename": "config/config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2012-12-28T15:40:30Z",
+      "side": 1,
+      "message": "A good solution could be\n\nlocal: http://127.0.0.1/wiki/\nlocal_8080: http://127.0.0.1:8080/wiki/\n\nor something similar. If environment variable is used to determine which base URL to use, that could be done in the page itself.\n\nI will create a solution at https://gerrit.wikimedia.org/r/#/c/39773/",
+      "parentUuid": "AAADgH//8/I\u003d",
+      "revId": "07b0e5d0da097c310fef5b7a9b8b38307f70cde6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
