@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//9CQ\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 720,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-29T00:33:47Z",
+      "side": 1,
+      "message": "why use parse() here? Parser calls are expensive and should be avoided unless necessary. text() is probably best - other options can be found here: http://www.mediawiki.org/wiki/WfMessage#Format",
+      "revId": "1bf8ecead0dcba190a9707d6d51db8cd3c176423",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
