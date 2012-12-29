@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//9B0\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-29T00:43:46Z",
+      "side": 1,
+      "message": "dont need parse here",
+      "revId": "c5c46c5a479e143765f5e385f617873665b49897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//9Bw\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-29T00:43:46Z",
+      "side": 1,
+      "message": "don\u0027t use parse",
+      "revId": "c5c46c5a479e143765f5e385f617873665b49897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//9Bs\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2012-12-29T00:43:46Z",
+      "side": 1,
+      "message": "These methods are essentially the same. Do we need both?",
+      "revId": "c5c46c5a479e143765f5e385f617873665b49897",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
