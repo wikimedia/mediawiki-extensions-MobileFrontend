@@ -164,8 +164,9 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 		$historyLink = '';
 		if ( !$title->isSpecialPage() ) {
-				$historyKey = 'mobile-frontend-footer-contributors';
-				$historyLink = $this->msg( $historyKey, htmlspecialchars( $link ) )->text();
+				$historyKey = 'mobile-frontend-footer-contributors-text';
+				// FIXME: this creates a link with class external - it should be local
+				$historyLink = wfMessage( $historyKey, htmlspecialchars( $link ) )->parse();
 		}
 
 		$tpl->set( 'historyLink', $historyLink );
@@ -753,8 +754,8 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 
 		if ( $this->data['isMainPage'] ) {
-			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage'
-			)->text();
+			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage-text'
+			)->parse();
 			if ( $user && $user->isLoggedIn() ) {
 				$firstHeading = Html::rawElement( 'h1', array(), wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() );
 			} else {
@@ -840,8 +841,8 @@ class SkinMobileTemplate extends BaseTemplate {
 			</li>
 			<li class="notice">
 				<?php $this->html( 'historyLink' ) ?><br>
-				<?php $this->msgHtml( 'mobile-frontend-footer-license' ) ?>
-				<span>| <?php $this->msgHtml( 'mobile-frontend-terms-use' ) ?></span>
+				<?php echo wfMessage( 'mobile-frontend-footer-license-text' )->parse() ?>
+				<span>| <?php echo wfMessage( 'mobile-frontend-terms-use-text' )->parse() ?></span>
 			</li>
 		</ul>
 		<ul class="links">
