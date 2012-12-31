@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//7FQ\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-31T21:45:50Z",
+      "side": 1,
+      "message": "Why isn\u0027t this a single if (first condition \u0026\u0026 second condition)?",
+      "revId": "8dcee823f630b579d70810b8ae4e9f647ebefcb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//7FA\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-31T21:45:50Z",
+      "side": 1,
+      "message": "Why do we even check this? The function returns false by default anyway. Maybe just add a comment?",
+      "revId": "8dcee823f630b579d70810b8ae4e9f647ebefcb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
