@@ -5,9 +5,7 @@ class ExtMobileFrontend extends ContextSource {
 	protected $zeroRatedBanner;
 
 	public function __construct( IContextSource $context ) {
-		global $wgMFConfigProperties;
 		$this->setContext( $context );
-		$this->setPropertiesFromArray( $wgMFConfigProperties );
 	}
 
 	public function attachHooks() {
@@ -50,23 +48,6 @@ class ExtMobileFrontend extends ContextSource {
 
 		$skin = SkinMobile::factory( $this );
 		return false;
-	}
-
-	/**
-	 * Set object properties based on an associative array
-	 * @param $properties array
-	 */
-	public function setPropertiesFromArray( array $properties ) {
-		foreach ( $properties as $prop => $val ) {
-			if ( property_exists( $this, $prop ) ) {
-				$reflectionProperty = new ReflectionProperty( 'ExtMobileFrontend', $prop );
-				if ( $reflectionProperty->isStatic() ) {
-					self::$ { $prop } = $val;
-				} else {
-					$this->$prop = $val;
-				}
-			}
-		}
 	}
 
 	/**
