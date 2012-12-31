@@ -46,6 +46,11 @@ module = ( function() {
 		reader.readAsDataURL( file );
 	}
 
+	function showSpinner( $container ) {
+		// set spinner
+		$container.find( 'img' ).attr( 'src', spinnerImg );
+	}
+
 	function save( filename, caption, $container, saveWikiTextFlag ) {
 		var $img = $container.find( 'img' ),
 			$a = $container.find( 'a' ),
@@ -90,7 +95,7 @@ module = ( function() {
 			formData.append( 'text', '== {{int:filedesc}} ==\n' + caption +'\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}' );
 
 			// set spinner
-			$img.attr( 'src', spinnerImg );
+			showSpinner( $container );
 			$container.addClass( 'uploading' );
 
 			$.ajax( {
@@ -164,7 +169,7 @@ module = ( function() {
 
 			$file.on( 'change', function() {
 				var file = this.files[ 0 ];
-				$img.attr( 'src', spinnerImg );
+				showSpinner( $container );
 
 				getDataUrl( file, function( url ) {
 					$img.attr( 'src', url ); // FIXME: use thumbnail instead
@@ -182,7 +187,6 @@ module = ( function() {
 			$a = $( '<a>' ).appendTo( $editArea );
 			$img = $( '<img>' ).
 				attr( 'alt', M.message( 'mobile-frontend-image-loading' ) ).
-				attr( 'src', spinnerImg ).
 				appendTo( $a );
 
 			$( '<input type="text">' ).
