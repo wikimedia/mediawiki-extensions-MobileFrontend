@@ -167,6 +167,8 @@ Help bring these pages to life by donating your images that you are willing to g
 
 	'mobile-frontend-watchlist-a-z' => 'Watched pages',
 	'mobile-frontend-watchlist-feed' => 'Pages with changes',
+	'mobile-frontend-watchlist-a-z-empty' => 'You are currently not watching any pages',
+	'mobile-frontend-watchlist-feed-empty' => 'There are no pages with recent changes',
 
 	'mobile-frontend-changeslist-ip' => 'Anonymous user',
 	'mobile-frontend-changeslist-nocomment' => 'no edit summary',
@@ -374,6 +376,8 @@ Don't translate the special page name",
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes',
 	'mobile-frontend-changeslist-ip' => 'Label used in mobile watchlist/history/recentchanges overview for IP (non-logged-in) edits.',
+	'mobile-frontend-watchlist-a-z-empty' => 'Message to show when watchlist a-z list is empty',
+	'mobile-frontend-watchlist-feed-empty' => 'Message to show when watchlist feed is empty',
 	'mobile-frontend-changeslist-nocomment' => 'Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.',
 	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages',
 	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: article pages only',
