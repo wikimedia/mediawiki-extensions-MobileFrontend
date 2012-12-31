@@ -104,8 +104,12 @@
 }
 
 #mw-mf-diffview {
+	h2 {
+		margin: 0;
+	}
+
 	.mw-mf-bytesadded {
-		color: green;
+		color: #008a46;
 	}
 
 	.mw-mf-bytesremoved {
@@ -116,6 +120,19 @@
 	del {
 		display: block;
 		padding-left: 8px;
+	}
+
+	#mw-mf-userinfo .mw-mf-roles,
+	.mw-mf-diff-date,
+	.mw-mf-bytesremoved,
+	.mw-mf-bytesadded {
+		font-size: 0.7em;
+		text-transform: uppercase;
+	}
+
+	.mw-mf-diff-date {
+		font-size: 0.5em;
+		color: #C6C6C6;
 	}
 
 	ins {
@@ -142,10 +159,42 @@
 	}
 
 	#mw-mf-userinfo {
-		position: relative;
+		position: fixed; // FIXME: fallback needed for browsers that do not support position fixed?
+		bottom: 0;
+		left: 0;
+		right: 0;
 		height: 5em;
 		padding: 1em;
 		background-color: #f0f0f0;
 		border-top: solid 1px #c0c0c0;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -9px;
+			left: 20px;
+			border-width: 0px 10px 10px;
+			border-style: solid;
+			border-color: #f0f0f0 transparent;
+			display: block;
+			width: 0;
+		}
+
+		.mw-mf-user,
+		.mw-mf-anon {
+			padding-left: 20px;
+			line-height: 14px;
+			background-position: left center;
+			.background-size( 16px, 16px );
+			background-repeat: no-repeat;
+		}
+
+		.mw-mf-user {
+			background-image: url(images/user.png);
+		}
+
+		.mw-mf-anon {
+			background-image: url(images/user-ip.png);
+		}
 	}
 }

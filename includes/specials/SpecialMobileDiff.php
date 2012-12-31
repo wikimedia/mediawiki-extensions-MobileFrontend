@@ -39,6 +39,8 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 	}
 
 	function showHeader() {
+		$title = $this->targetTitle;
+
 		if ( $this->prevRev ) {
 			$bytesChanged = $this->rev->getSize() - $this->prevRev->getSize();
 		} else {
@@ -56,6 +58,14 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$this->getOutput()->addHtml(
 			Html::openElement( 'div', array( 'id' => 'mw-mf-diff-info' ) ) .
+				Html::openElement( 'h2', array() ) .
+				Html::element( 'a',
+					array(
+						'href' => $title->getLocalURL(),
+					),
+					$title->getPrefixedText()
+				).
+				Html::closeElement( 'h2' ) .
 				Html::element( 'span', array( 'class' => $sizeClass ), $this->msg( $changeMsg, $bytesChanged )->text() ) .
 				', ' .
 				Html::element( 'span', array( 'class' => 'mw-mf-diff-date' ), $ts->getHumanTimestamp() ) .
@@ -116,10 +126,10 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 			$user = User::newFromId( $userId );
 			$edits = $user->getEditCount();
 			$output->addHtml(
-				'<div>' .
+				'<div class="mw-mf-user">' .
 					Linker::link( $user->getUserPage(), htmlspecialchars( $user->getName() ) ) .
 				'</div>' .
-				'<div>' .
+				'<div class="mw-mf-roles">' .
 					$this->listGroups( $user ) .
 				'</div>' .
 				'<div>' .
@@ -130,7 +140,7 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 			$ipAddr = $this->rev->getUserText();
 			$userPage = Title::makeTitle( NS_USER, $ipAddr );
 			$output->addHtml(
-				'<div>' .
+				'<div class="mw-mf-anon">' .
 					$this->msg( 'mobile-frontend-diffview-anonymous' )->escaped() .
 				'</div>' .
 				'<div>' .
