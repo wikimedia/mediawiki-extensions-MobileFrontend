@@ -236,6 +236,7 @@ $wgResourceModules['mobile.production-jquery'] = array(
 );
 $wgResourceModules['mobile.watchlist'] = array(
 	'styles' => array( 'stylesheets/specials/watchlist.css' ),
+	'scripts' => array( 'javascripts/specials/watchlist.js' ),
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',

@@ -36,8 +36,10 @@ ul.mw-mf-watchlist-results {
 	background-color: white;
 	list-style: none;
 
+	@paddingVertical: 8px;
+	@thumbHeight: 80px;
 	li {
-		padding: 8px 28px 8px 28px;
+		padding: @paddingVertical 28px @paddingVertical (@thumbHeight + 8px);
 		border-top: solid 1px #c0c0c0;
 		position: relative;
 		color: #808080;
@@ -45,6 +47,18 @@ ul.mw-mf-watchlist-results {
 		.background-size( 20px, 20px );
 		background-repeat: no-repeat;
 		background-position: right center;
+		height: @thumbHeight - @paddingVertical * 2;
+
+		.listThumb {
+			background-repeat: no-repeat;
+			.background-size( auto @thumbHeight );
+			background-position: center center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: @thumbHeight;
+			bottom: 0;
+		}
 
 		&.date {
 			background: none;

@@ -30,7 +30,7 @@ ul.mw-mf-watchlist-results {
   list-style: none;
 }
 ul.mw-mf-watchlist-results li {
-  padding: 8px 28px 8px 28px;
+  padding: 8px 28px 8px 88px;
   border-top: solid 1px #c0c0c0;
   position: relative;
   color: #808080;
@@ -43,6 +43,22 @@ ul.mw-mf-watchlist-results li {
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: right center;
+  height: 64px;
+}
+ul.mw-mf-watchlist-results li .listThumb {
+  background-repeat: no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 80px auto;
+  -o-background-size: auto 80px auto;
+  -webkit-background-size: auto 80px auto;
+  background-size: auto 80px auto;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  bottom: 0;
 }
 ul.mw-mf-watchlist-results li.date {
   background: none;
