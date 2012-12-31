@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//7ig\u003d",
+        "filename": "javascripts/common/mf-settings.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-31T20:43:09Z",
+      "side": 1,
+      "message": "Why? Is it again problems with order of loading files when using RL?",
+      "revId": "397f8b70e43e052615351ee6d55ede3932927872",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//7ik\u003d",
+        "filename": "javascripts/modules/mf-banner.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-31T20:43:09Z",
+      "side": 1,
+      "message": "If I was picky I\u0027d say this is not related to the commit ;)",
+      "revId": "397f8b70e43e052615351ee6d55ede3932927872",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//7io\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-31T20:43:09Z",
+      "side": 1,
+      "message": "I don\u0027t like this code, but there\u0027s no quick fix for that now. We need to modularize our code and this is a prime example why. Business logic mixed with presentation even in a single line: \"click( queueWatchAction ).appendTo( $drawer )\".",
+      "revId": "397f8b70e43e052615351ee6d55ede3932927872",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
