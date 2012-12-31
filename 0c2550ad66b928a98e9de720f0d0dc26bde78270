@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//7Dc\u003d",
+        "filename": "tests/acceptance/.rvmrc",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-31T22:30:53Z",
+      "side": 1,
+      "message": "This should go at the end (after installing Ruby).",
+      "revId": "0c2550ad66b928a98e9de720f0d0dc26bde78270",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//7Dg\u003d",
+        "filename": "tests/acceptance/config/config.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2012-12-31T22:30:53Z",
+      "side": 1,
+      "message": "Why do we have it if it\u0027s not used in https://gerrit.wikimedia.org/r/#/c/39773/4/tests/acceptance/features/support/pages/mobile_page.rb any more?",
+      "revId": "0c2550ad66b928a98e9de720f0d0dc26bde78270",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
