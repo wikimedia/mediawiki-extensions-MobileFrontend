@@ -85,9 +85,22 @@ MobileFrontend.navigation = (function( $ ) {
 			} );
 		}
 
+		function openNavigation() {
+			M.history.pushState( '#mw-mf-page-left' );
+			$( 'html' ).addClass( 'navigationEnabled' );
+		}
+
+		function closeNavigation() {
+			M.history.pushState( '#' );
+			$( 'html' ).removeClass( 'navigationEnabled' );
+		}
+
 		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
-			if ( curPage.hash === '#' || curPage.hash === '' ) {
+			if ( curPage.hash === '#' || curPage.hash === '' || curPage.hash === '#_' ) {
 				closeOverlay();
+				closeNavigation();
+			} else if ( curPage.hash === '#mw-mf-page-left' ) {
+				toggleNavigation();
 			}
 		} );
 		if ( !document.getElementById( id ) ) {
@@ -95,11 +108,11 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 
 		function toggleNavigation() {
-			var doc = document.documentElement;
-			if( !u( doc ).hasClass( 'navigationEnabled' ) ) {
-				u( doc ).addClass( 'navigationEnabled' );
+			var $html = $( 'html' );
+			if( !$html.hasClass( 'navigationEnabled' ) ) {
+				openNavigation();
 			} else {
-				u( doc ).removeClass( 'navigationEnabled' );
+				closeNavigation();
 			}
 		}
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
@@ -109,6 +122,7 @@ MobileFrontend.navigation = (function( $ ) {
 		} );
 
 		if( window.location.hash === '#mw-mf-page-left' ) {
+			openNavigation();
 			u( document.body ).addClass( 'noTransitions' );
 			window.setTimeout( function() {
 				u( document.body ).removeClass( 'noTransitions' );
