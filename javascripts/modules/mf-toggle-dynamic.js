@@ -18,7 +18,11 @@ var T = ( function() {
 
 		if ( sectionInfo && $content.length === 0 ) {
 			$container = $( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
-			$( window ).trigger( 'mw-mf-section-rendered', [ $( '#' + content_id )[ 0 ] ] );
+			$( window ).trigger( 'mw-mf-section-rendered', [ $container ] );
+			// FIXME: this should live in the hidpi module when dynamic sections is promoted from beta
+			if ( $container.hidpi ) {
+				$container.hidpi();
+			}
 			M.history.hijackLinks( $container );
 		}
 
