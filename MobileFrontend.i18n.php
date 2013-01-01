@@ -375,9 +375,9 @@ Don't translate the special page name",
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes',
-	'mobile-frontend-changeslist-ip' => 'Label used in mobile watchlist/history/recentchanges overview for IP (non-logged-in) edits.',
 	'mobile-frontend-watchlist-a-z-empty' => 'Message to show when watchlist a-z list is empty',
 	'mobile-frontend-watchlist-feed-empty' => 'Message to show when watchlist feed is empty',
+	'mobile-frontend-changeslist-ip' => 'Label used in mobile watchlist/history/recentchanges overview for IP (non-logged-in) edits.',
 	'mobile-frontend-changeslist-nocomment' => 'Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.',
 	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages',
 	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: article pages only',
@@ -1092,8 +1092,6 @@ $messages['azb'] = array(
 	'mobile-frontend-privacy-link-text' => 'اؤزل‌لیک',
 	'mobile-frontend-about-link-text' => 'گؤره',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'یازیلار <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> ایجازه‌سی ایله ال‌ده‌دیرلر',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">ایشلتمک شرطلری</a>',
 	'mobile-frontend-footer-contact' => 'علاقه قورماق',
 	'mobile-frontend-search-noresults' => 'سیزین آختاریشینیزا بیرنتیجه تاپیلمادی. آختاریشینیزی دَییشدیرین، یوخسا یازیلارین ایچینده آختارماق اوچون کیبورد آختاریش دویمه‌سینی وورون.',
 	'mobile-frontend-main-menu-button-tooltip' => 'آنامِنونو آچ',
@@ -1333,7 +1331,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-close-section' => 'Зачыніць гэты разьдзел',
 	'mobile-frontend-show-button' => 'Паказаць',
 	'mobile-frontend-hide-button' => 'Схаваць',
-	'mobile-frontend-empty-homepage' => 'Трэба наладзіць галоўную старонку. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Даведайцеся болей пра наладку мабільнай вэрсіі</a>',
+	'mobile-frontend-empty-homepage-text' => 'Трэба наладзіць галоўную старонку. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Даведайцеся болей пра наладку мабільнай вэрсіі</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Поўная вэрсія',
 	'mobile-frontend-wml-continue' => 'Далей …',
 	'mobile-frontend-wml-back' => 'Вярнуцца …',
@@ -1347,7 +1345,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-missing-image' => 'Выява',
 	'mobile-frontend-off' => 'ВЫКЛ',
 	'mobile-frontend-on' => 'УКЛ',
-	'mobile-frontend-footer-contributors' => 'Старонка, створаная такімі ж як вы <a href="$1">ўдзельнікамі</a>',
+	'mobile-frontend-footer-contributors-text' => 'Старонка, створаная такімі ж як вы <a href="$1">ўдзельнікамі</a>', # Fuzzy
 	'mobile-frontend-featured-article' => 'Сёньняшні абраны артыкул',
 	'mobile-frontend-news-items' => 'Навіны',
 	'mobile-frontend-leave-feedback-notice' => 'Ваш водгук дапаможа нам палепшыць карыстаньне мабільнай вэрсіяй. Ён будзе апублікаваны публічна (разам з Вашым імем карыстальніка, вэрсіяй браўзэра і апэрацыйнай сыстэмай) на старонцы &quot;$1&quot;. Калі ласка, паспрабуйце выбраць інфармацыйную назву, напрыклад «Праблемы фарматаваньня шырокіх табліцаў». Ваш водгук павінен адпавядаць нашым умовам выкарыстаньня.',
@@ -1396,8 +1394,6 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-privacy-link-text' => 'Прыватнасьць',
 	'mobile-frontend-about-link-text' => 'Пра сайт',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Зьмест даступны на ўмовах ліцэнзіі <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Умовы_выкарыстаньня?useformat=mobile">Умовы выкарыстаньня</a>',
 	'mobile-frontend-footer-contact' => 'Кантакты',
 	'mobile-frontend-search-noresults' => 'Артыкулы, чые загалоўкі пасуюць вашаму запыту, ня знойдзеныя. Зьмяніце запыт, або націсьніце на клявіятуры кнопку пошуку, каб шукаць у зьмесьце артыкулаў.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Адкрыць галоўнае мэню',
@@ -1880,11 +1876,16 @@ $messages['ce'] = array(
 
 /** Sorani Kurdish (کوردی)
  * @author Asoxor
+ * @author Calak
  */
 $messages['ckb'] = array(
 	'mobile-frontend-search-submit' => 'بڕۆ',
 	'mobile-frontend-home-button' => 'ماڵەوە',
+	'mobile-frontend-logged-in-homepage-notification' => 'بەخێربێیت، $1!',
+	'mobile-frontend-sign-in-error-heading' => 'وەی!',
+	'mobile-frontend-settings-beta' => 'بێتا',
 	'mobile-frontend-random-button' => 'بە ھەڵکەوت',
+	'mobile-frontend-ajax-random-yes' => 'بەڵێ',
 	'mobile-frontend-back-to-top-of-section' => 'بپەڕێوە بۆ بە بەشی پێشوو',
 	'mobile-frontend-show-button' => 'نیشانیبدە',
 	'mobile-frontend-hide-button' => 'بیشارەوە',
@@ -1892,17 +1893,42 @@ $messages['ckb'] = array(
 	'mobile-frontend-wml-continue' => 'درێژەی پێبدە ...',
 	'mobile-frontend-wml-back' => 'بگەڕێوە ...',
 	'mobile-frontend-view' => 'بینینەوەی مۆبایلی',
-	'mobile-frontend-opt-in-yes-button' => 'بەڵێ',
-	'mobile-frontend-opt-in-no-button' => 'نە',
-	'mobile-frontend-opt-out-yes-button' => 'بەڵێ',
-	'mobile-frontend-opt-out-no-button' => 'نە',
+	'mobile-frontend-images-status' => 'وێنەکان',
 	'mobile-frontend-disable-images' => 'ڕێگە مەدە بە وێنەکان لەسەر سایتی مۆبایل',
 	'mobile-frontend-enable-images' => 'ڕێگە بدە بە وێنەکان لەسەر سایتی مۆبایل',
+	'mobile-frontend-missing-image' => 'وێنە',
 	'mobile-frontend-featured-article' => 'وتاری ھەڵبژاردەی ئەمڕۆ',
 	'mobile-frontend-news-items' => 'لە ھەواڵەکاندا',
 	'mobile-frontend-leave-feedback-subject' => 'بابەت', # Fuzzy
 	'mobile-frontend-leave-feedback-message' => 'پەیام', # Fuzzy
+	'mobile-frontend-leave-feedback-general-section-header' => 'گشتی',
+	'mobile-frontend-leave-feedback-special-title' => 'پەیوەندی بگرە لەگەڵ ئێمە',
 	'mobile-frontend-language' => 'زمان', # Fuzzy
+	'mobile-frontend-username' => 'ناوی بەکارھێنەر:',
+	'mobile-frontend-password' => 'تێپەڕوشە:',
+	'mobile-frontend-username-placeholder' => 'ناوی بەکارھێنەر',
+	'mobile-frontend-password-placeholder' => 'تێپەڕوشە',
+	'mobile-frontend-account-create-email-placeholder' => 'ناونیشانی ئیمەیل (دڵخوازانە)',
+	'mobile-frontend-overlay-escape' => 'بگەڕێوە',
+	'mobile-frontend-about-link-text' => 'سەبارەت',
+	'mobile-frontend-footer-contact' => 'پەیوەندی',
+	'mobile-frontend-main-menu-featured' => 'تایبەتمەندییەکان',
+	'mobile-frontend-main-menu-nearby' => 'لەم نزیکانەدا',
+	'mobile-frontend-main-menu-login' => 'بچۆ ژوورەوە',
+	'mobile-frontend-main-menu-logout' => 'بچۆ دەرەوە',
+	'mobile-frontend-main-menu-watchlist' => 'پێرستی چاودێری',
+	'mobile-frontend-page-menu-contents' => 'ناوەرۆکەکان',
+	'mobile-frontend-page-menu-history' => 'مێژوو',
+	'mobile-frontend-ajax-page-loading' => 'بارکردنی $1',
+	'mobile-frontend-page-saving' => 'پاشەکەوتی $1',
+	'mobile-frontend-changeslist-nocomment' => 'بەبێ کورتەی دەستکاری',
+	'mobile-frontend-watchlist-filter-all' => 'ھەموو',
+	'mobile-frontend-watchlist-filter-articles' => 'وتارەکان',
+	'mobile-frontend-watchlist-filter-talk' => 'لێدوان',
+	'mobile-frontend-watchlist-filter-other' => 'دیکە',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|دەستکاری}}',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|بایت}} زیاد کرا',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|بایت}} سڕایەوە',
 );
 
 /** Corsican (corsu)
@@ -1939,7 +1965,7 @@ $messages['cs'] = array(
 	'mobile-frontend-close-section' => 'Zavřít tuto sekci',
 	'mobile-frontend-show-button' => 'Zobrazit',
 	'mobile-frontend-hide-button' => 'Skrýt',
-	'mobile-frontend-empty-homepage' => 'Tuto domácí stránku je potřeba nakonfigurovat. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrukce, jak zprovoznit mobilní přístup k tomuto projektu</a>',
+	'mobile-frontend-empty-homepage-text' => 'Tuto domácí stránku je potřeba nakonfigurovat. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrukce, jak zprovoznit mobilní přístup k tomuto projektu</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Klasické zobrazení',
 	'mobile-frontend-wml-continue' => 'Pokračovat …',
 	'mobile-frontend-wml-back' => 'Zpět …',
@@ -1953,7 +1979,7 @@ $messages['cs'] = array(
 	'mobile-frontend-missing-image' => 'Obrázek',
 	'mobile-frontend-off' => 'VYP',
 	'mobile-frontend-on' => 'ZAP',
-	'mobile-frontend-footer-contributors' => 'Článek od <a href="$1">přispěvatelů</a> jako vy', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Článek od <a href="$1">přispěvatelů</a> jako vy', # Fuzzy
 	'mobile-frontend-featured-article' => 'Článek dne',
 	'mobile-frontend-news-items' => 'Aktuality',
 	'mobile-frontend-leave-feedback-notice' => 'Váš komentář bude spolu s vaším uživatelským jménem, verzí prohlížeče a operačním systémem zveřejněn na stránce „$1“',
@@ -2005,8 +2031,6 @@ $messages['cs'] = array(
 	'mobile-frontend-privacy-link-text' => 'Ochrana soukromí',
 	'mobile-frontend-about-link-text' => 'O aplikaci',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Obsah je dostupný pod <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Podm%C3%ADnky_u%C5%BEit%C3%AD?useformat=mobile">Podmínky užití</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Vašemu hledání neodpovídají žádné názvy článků. Změňte zadání nebo stiskněte tlačítko hledání pro hledání v článcích.', # Fuzzy
 	'mobile-frontend-main-menu-page-title' => 'Navigace po webu',
@@ -2199,7 +2223,7 @@ $messages['de'] = array(
 	'mobile-frontend-close-section' => 'Diesen Abschnitt schließen',
 	'mobile-frontend-show-button' => 'Anzeigen',
 	'mobile-frontend-hide-button' => 'Ausblenden',
-	'mobile-frontend-empty-homepage' => 'Diese Homepage muss konfiguriert werden. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Anleitungen, wie man die mobile Website aktivieren kann</a>',
+	'mobile-frontend-empty-homepage-text' => 'Diese Homepage muss konfiguriert werden. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Anleitungen, wie man die mobile Website aktivieren kann]',
 	'mobile-frontend-regular-site' => 'Klassische Ansicht',
 	'mobile-frontend-wml-continue' => 'Weiter …',
 	'mobile-frontend-wml-back' => 'Zurück …',
@@ -2213,7 +2237,7 @@ $messages['de'] = array(
 	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'AN',
-	'mobile-frontend-footer-contributors' => 'Seite von <a href="$1">Mitwirkenden</a> wie dir',
+	'mobile-frontend-footer-contributors-text' => 'Seite von [$1 Mitwirkenden] wie dir',
 	'mobile-frontend-featured-article' => 'Artikel des Tages',
 	'mobile-frontend-news-items' => 'In den Nachrichten',
 	'mobile-frontend-leave-feedback-notice' => 'Deine Rückmeldung hilft uns dabei, die mobile Ansicht weiter zu verbessern. Sie wird öffentlich auf der Seite &quot;$1&quot; angezeigt. Dabei werden dein Benutzername, die Version des von dir genutzten Browsers sowie das von dir genutzte Betriebssystem angegeben. Bitte wähle einen informativen und aussagekräftigen Betreff, wie bswp. „Probleme bei der Anzeige von Tabellen“. Deine Rückmeldung unterliegt dabei unseren Nutzungsbedingungen.',
@@ -2269,8 +2293,8 @@ $messages['de'] = array(
 	'mobile-frontend-privacy-link-text' => 'Datenschutz',
 	'mobile-frontend-about-link-text' => 'Über',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Die Inhalte sind verfügbar unter der Lizenz <a href="//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Nutzungsbedingungen</a>',
+	'mobile-frontend-footer-license-text' => 'Der Inhalt ist verfügbar unter der [//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC-BY-SA-3.0-Lizenz]',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/de?useformat=mobile Nutzungsbedingungen]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Kein Seitentitel entspricht deiner Suche. Ändere deine Suche oder drücke die Suchschaltfläche deiner Tastatur, um die Suche auf den Inhalt der Seiten auszuweiten.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Hauptmenü öffnen',
@@ -2306,6 +2330,8 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du bereit bist, einige Bilder 
 	'mobile-frontend-watchlist-view' => 'Deine Beobachtungsliste ansehen',
 	'mobile-frontend-watchlist-a-z' => 'Beobachtete Seiten',
 	'mobile-frontend-watchlist-feed' => 'Seiten mit Änderungen',
+	'mobile-frontend-watchlist-a-z-empty' => 'Du beobachtest derzeit keine Seiten',
+	'mobile-frontend-watchlist-feed-empty' => 'Es gibt keine Seiten mit kürzlich durchgeführten Änderungen',
 	'mobile-frontend-changeslist-ip' => 'Anonymer Benutzer',
 	'mobile-frontend-changeslist-nocomment' => 'keine Bearbeitungszusammenfassung',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
@@ -2390,7 +2416,7 @@ $messages['diq'] = array(
 	'mobile-frontend-close-section' => 'Nê leti racnê',
 	'mobile-frontend-show-button' => 'Bımocne',
 	'mobile-frontend-hide-button' => 'Bınımne',
-	'mobile-frontend-empty-homepage' => 'Ena keyepela timarkerdışi nêbiya. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">ena mobil sita buwanê</a>',
+	'mobile-frontend-empty-homepage-text' => 'Ena keyepela timarkerdışi nêbiya. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">ena mobil sita buwanê</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Verqaydê serêmasi',
 	'mobile-frontend-wml-continue' => 'Peyniya cı...',
 	'mobile-frontend-wml-back' => 'Peyser...',
@@ -2404,7 +2430,7 @@ $messages['diq'] = array(
 	'mobile-frontend-missing-image' => 'Resım',
 	'mobile-frontend-off' => 'RACNE',
 	'mobile-frontend-on' => 'AKE',
-	'mobile-frontend-footer-contributors' => 'ena wesiqe weştê  <a href="$1">İştırakkari</a> şi', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'ena wesiqe weştê  <a href="$1">İştırakkari</a> şi', # Fuzzy
 	'mobile-frontend-featured-article' => 'Meqaleyê Ewroyênê Weçinıtey',
 	'mobile-frontend-news-items' => 'Xeberi',
 	'mobile-frontend-leave-feedback-notice' => 'Peyd rıştışe şıma mare tewr zaf rındi.ena pela do &quot;$1&quot;.  (name de karberi ra, wastekar...) tepya şari re erz bo. Şıma ra reca vatışe xo xet da "eni tabloy formule keri" sera mare fına peyd bırşe u bewni re şarte karkerdışi.',
@@ -2454,8 +2480,6 @@ $messages['diq'] = array(
 	'mobile-frontend-privacy-link-text' => 'Nımıtış',
 	'mobile-frontend-about-link-text' => 'Heqa cı de',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Zerrey enay <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> dero',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Şertê karkerdışi</a>',
 	'mobile-frontend-footer-contact' => 'İrtıbat',
 	'mobile-frontend-search-noresults' => 'Sernameyo ke şımayê geyrenê wesiqeyo do wuni çıniyo. Cı geyreyışê xo bıvurnê yana zerrey wesiqer de cıgeyrayışi re klawye ra butona cıgeyrayışi pıploğne.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Menuyê bıngehi ake',
@@ -2496,10 +2520,10 @@ $messages['diq'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bayt|bayti}} wedariyay',
 	'mobile-frontend-table' => 'Tabloye $1',
 	'mobile-frontend-photo-upload' => 'Ena wesiqa rê resimê sıfteyêni de ke de', # Fuzzy
-	'mobile-frontend-photo-article-edit-comment' => 'Qandê karyayışê wesiqa resim de biya', # Fuzzy
-	'mobile-frontend-photo-upload-comment' => 'Resim de biya wesiqa', # Fuzzy
+	'mobile-frontend-photo-article-edit-comment' => 'Seba gurenayışi resım bi be pele',
+	'mobile-frontend-photo-upload-comment' => 'Resım bi be pele',
 	'mobile-frontend-photo-upload-progress' => 'Ena wesiqe de resimê şıma yo beno bar', # Fuzzy
-	'mobile-frontend-photo-caption-placeholder' => 'Qandê ena resim yew bınnot de ke',
+	'mobile-frontend-photo-caption-placeholder' => 'Seba nê resımi yew sernote cı ke',
 	'mobile-frontend-image-loading' => 'Barkerdışê resımi',
 	'mobile-frontend-image-uploading' => 'Resım bar beno',
 	'mobile-frontend-image-saving-to-article' => 'Pele de qeydkerdışê resımi',
@@ -3114,7 +3138,7 @@ $messages['et'] = array(
 	'mobile-frontend-close-section' => 'Sule see alaosa',
 	'mobile-frontend-show-button' => 'Näita',
 	'mobile-frontend-hide-button' => 'Peida',
-	'mobile-frontend-empty-homepage' => 'See koduleht vajab häälestamist. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Juhised mobiilisaidi ülesseadmiseks</a>',
+	'mobile-frontend-empty-homepage-text' => 'See koduleht vajab häälestamist. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Juhised mobiilisaidi ülesseadmiseks</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Tavavaade',
 	'mobile-frontend-wml-continue' => 'Jätka...',
 	'mobile-frontend-wml-back' => 'Tagasi...',
@@ -3128,7 +3152,7 @@ $messages['et'] = array(
 	'mobile-frontend-missing-image' => 'Pilt',
 	'mobile-frontend-off' => 'VÄLJAS',
 	'mobile-frontend-on' => 'SEES',
-	'mobile-frontend-footer-contributors' => 'Sinusuguste <a href="$1">kaastööliste</a> kirjutatud lehekülg',
+	'mobile-frontend-footer-contributors-text' => 'Sinusuguste <a href="$1">kaastööliste</a> kirjutatud lehekülg', # Fuzzy
 	'mobile-frontend-featured-article' => 'Päevaartikkel',
 	'mobile-frontend-news-items' => 'Päevakajaline',
 	'mobile-frontend-leave-feedback-warning' => 'Kui sa pole nõus oma andmete avalikustamisega, siis palun ära lisa kommentaaridele isiklikke andmeid.',
@@ -3175,8 +3199,6 @@ $messages['et'] = array(
 	'mobile-frontend-clear-search' => 'Tühjenda',
 	'mobile-frontend-privacy-link-text' => 'Privaatsus',
 	'mobile-frontend-about-link-text' => 'Tiitelandmed',
-	'mobile-frontend-footer-license' => 'Sisu on saadaval litsentsi <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> all.',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Kasutustingimused</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Otsitavale vastavad leheküljepealkirjad puuduvad. Vaheta otsisõna või vajuta sõrmistiku otsinuppu, et otsida lehekülgedelt.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Ava peamenüü',
@@ -3441,7 +3463,7 @@ $messages['fi'] = array(
 	'mobile-frontend-close-section' => 'Sulje tämä osio',
 	'mobile-frontend-show-button' => 'Näytä',
 	'mobile-frontend-hide-button' => 'Piilota',
-	'mobile-frontend-empty-homepage' => 'Tälle kotisivulle täytyy tehdä määrityksiä. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Ohjeita mobiilisivuston käyttöönotosta</a>',
+	'mobile-frontend-empty-homepage-text' => 'Tälle kotisivulle täytyy tehdä määrityksiä. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Ohjeita mobiilisivuston käyttöönotosta</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Työpöytänäkymä',
 	'mobile-frontend-wml-continue' => 'Jatka...',
 	'mobile-frontend-wml-back' => 'Takaisin...',
@@ -3455,7 +3477,7 @@ $messages['fi'] = array(
 	'mobile-frontend-missing-image' => 'Kuva',
 	'mobile-frontend-off' => 'pois',
 	'mobile-frontend-on' => 'päällä',
-	'mobile-frontend-footer-contributors' => 'Artikkelin kirjoittaneet sinun kaltaisesi <a href="$1">muokkaajat</a>.',
+	'mobile-frontend-footer-contributors-text' => 'Artikkelin kirjoittaneet sinun kaltaisesi <a href="$1">muokkaajat</a>.', # Fuzzy
 	'mobile-frontend-featured-article' => 'Suositeltu artikkeli',
 	'mobile-frontend-news-items' => 'Uutisissa',
 	'mobile-frontend-leave-feedback-notice' => 'Palautteesi auttaa meitä kehittämään mobiilisivuston käyttökokemusta. Se tulee julkiseksi (käyttäjänimesi, selainversiosi ja käyttöjärjestelmäsi lisäksi) sivulle &quot;$1&quot;. Yritä valita mahdollisimman kuvaava otsikkorivi, esim. "Muotoiluongelmat leveiden taulukoiden kanssa". Palautteesi tulee noudattaa käyttöehtojamme.',
@@ -3511,8 +3533,6 @@ $messages['fi'] = array(
 	'mobile-frontend-privacy-link-text' => 'Yksityisyys',
 	'mobile-frontend-about-link-text' => 'Tietoja',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Sisältö on saatavissa lisenssillä <a href="//fi.m.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use/fi?useformat=mobile">Käyttöehdot</a>',
 	'mobile-frontend-footer-contact' => 'Yhteystiedot',
 	'mobile-frontend-search-noresults' => 'Hakuasi vastavaa artikkelin nimeä ei löytynyt. Muuta hakua tai käytä näppäimistön hakupainiketta etsiäksesi artikkelien sisältä.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Avaa päävalikko',
@@ -3607,6 +3627,7 @@ $messages['fo'] = array(
  * @author Davidtsm
  * @author Gomoko
  * @author Hashar
+ * @author Lucky
  * @author Sherbrooke
  * @author Tititou36
  * @author Tpt
@@ -3640,7 +3661,7 @@ $messages['fr'] = array(
 	'mobile-frontend-close-section' => 'Fermer cette section',
 	'mobile-frontend-show-button' => 'Afficher',
 	'mobile-frontend-hide-button' => 'Masquer',
-	'mobile-frontend-empty-homepage' => 'Cette page d\'accueil doit être configurée. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Comment activer ce site pour appareils mobiles</a>',
+	'mobile-frontend-empty-homepage-text' => 'Cette page d\'accueil doit être configurée. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Comment activer ce site pour appareils mobiles</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Désactiver la version mobile',
 	'mobile-frontend-wml-continue' => 'Continuer…',
 	'mobile-frontend-wml-back' => 'Retour…',
@@ -3654,7 +3675,7 @@ $messages['fr'] = array(
 	'mobile-frontend-missing-image' => 'Image',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-footer-contributors' => 'Page par <a href="$1">des contributeurs</a> comme vous',
+	'mobile-frontend-footer-contributors-text' => 'Page par <a href="$1">des contributeurs</a> comme vous', # Fuzzy
 	'mobile-frontend-featured-article' => 'Lumière sur...',
 	'mobile-frontend-news-items' => 'Actualités',
 	'mobile-frontend-leave-feedback-notice' => "Votre avis nous aidera à améliorer votre expérience du site mobile. Il sera publié publiquement (avec votre nom d'utilisateur, la version de votre navigateur et votre système d'exploitation) sur la page&quot;\$1&quot;. Merci d'essayer de choisir une ligne de sujet parlante, par ex. \"Problèmes de formatage avec les tableaux larges\". Votre avis est soumis à nos conditions d'utilisation.",
@@ -3710,8 +3731,6 @@ $messages['fr'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidentialité',
 	'mobile-frontend-about-link-text' => 'À propos',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contenu disponible sous <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Conditions d\'utilisation</a>',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => "Aucun titre de page ne correspond à votre recherche. Modifiez-la, ou appuyez sur le bouton de recherche du clavier pour chercher à l'intérieur des pages.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Ouvrir le menu principal',
@@ -3745,6 +3764,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-watchlist-view' => 'Afficher votre liste de surveillance',
 	'mobile-frontend-watchlist-a-z' => 'Pages vues',
 	'mobile-frontend-watchlist-feed' => 'Pages avec changements',
+	'mobile-frontend-watchlist-a-z-empty' => 'Vous ne consultez actuellement aucune page',
 	'mobile-frontend-changeslist-ip' => 'Utilisateur anonyme',
 	'mobile-frontend-changeslist-nocomment' => 'aucun résumé de modification',
 	'mobile-frontend-watchlist-filter-all' => 'Tous',
@@ -3768,6 +3788,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-photo-upload-error' => "Une erreur s'est produite pendant le téléchargement de l'image. Veuillez essayer une autre image.",
 	'mobile-frontend-image-saving-to-article' => "Enregistrement de l'image dans la page",
 	'mobile-frontend-photo-license' => 'Remarque: Toutes les photos que vous publiez le seront sous une [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licence CC BY-SA 3.0]',
+	'tag-mobile_edit-description' => 'Modification effectuée depuis la version mobile',
 );
 
 /** Franco-Provençal (arpetan)
@@ -3808,7 +3829,7 @@ $messages['frp'] = array(
 	'mobile-frontend-missing-image' => 'Émâge',
 	'mobile-frontend-off' => 'NAN',
 	'mobile-frontend-on' => 'OUÈ',
-	'mobile-frontend-footer-contributors' => 'Pâge per <a href="$1">contributors</a> coment vos',
+	'mobile-frontend-footer-contributors-text' => 'Pâge per <a href="$1">contributors</a> coment vos', # Fuzzy
 	'mobile-frontend-featured-article' => 'Lumiére dessus...',
 	'mobile-frontend-news-items' => 'Dens les novèles',
 	'mobile-frontend-leave-feedback-notice' => 'Voutron avis nos édierat a mèlyorar voutra èxpèrience du seto mobilo. Serat postâ publicament (avouéc voutron nom d’usanciér, la vèrsion de voutron navigator et pués voutron sistèmo d’èxplouètacion) sur la pâge « $1 ». Volyéd tâchiér de chouèsir una legne de sujèt parlenta, per ègz. « Problèmos de formatâjo avouéc les trâbles lârges ». Voutron avis est somês a noutres condicions d’usâjo.',
@@ -3859,8 +3880,6 @@ $messages['frp'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidencialitât',
 	'mobile-frontend-about-link-text' => 'A propôs',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contegnu disponiblo desot <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Condicions d’usâjo</a>',
 	'mobile-frontend-footer-contact' => 'Contacte',
 	'mobile-frontend-main-menu-button-tooltip' => 'Uvrir lo menu principâl',
 	'mobile-frontend-main-menu-page-title' => 'Navigacion du seto',
@@ -3942,8 +3961,8 @@ $messages['frr'] = array(
 	'mobile-frontend-close-section' => 'Detdiar sektsjuun sacht maage',
 	'mobile-frontend-show-button' => 'Wise',
 	'mobile-frontend-hide-button' => 'Fersteeg',
-	'mobile-frontend-empty-homepage' => 'Detdiar homepage skal noch iinracht wurd.
-<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Lees widjer, hü det gongt.</a>',
+	'mobile-frontend-empty-homepage-text' => 'Detdiar homepage skal noch iinracht wurd.
+[//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Lees widjer hü det gongt]',
 	'mobile-frontend-regular-site' => 'Normool uunsicht',
 	'mobile-frontend-wml-continue' => 'Widjer ...',
 	'mobile-frontend-wml-back' => 'Turag ...',
@@ -3957,7 +3976,7 @@ $messages['frr'] = array(
 	'mobile-frontend-missing-image' => 'Bil',
 	'mobile-frontend-off' => 'ÜTJ',
 	'mobile-frontend-on' => 'UUN',
-	'mobile-frontend-footer-contributors' => 'Sidj faan <a href="$1">brükern</a> üs di',
+	'mobile-frontend-footer-contributors-text' => 'Sidj faan [$1 brükern] liküs di',
 	'mobile-frontend-featured-article' => 'Artiikel faan a muun',
 	'mobile-frontend-news-items' => 'Uun a noorachten',
 	'mobile-frontend-leave-feedback-notice' => 'Dan komentaar helept üs, det mobiil uunsicht tu ferbeedrin. Hi woort üüb det sidj &quot;$1&quot; uunwiset. Diarbi woort uk dan brükernööm, dan browser an din bedrifsüsteem uunwiset. För ales wat dü skrafst, tääl üüs brüker-reegeln.',
@@ -4013,8 +4032,8 @@ $messages['frr'] = array(
 	'mobile-frontend-privacy-link-text' => 'Dootenseekerhaid',
 	'mobile-frontend-about-link-text' => 'Auer',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Detdiar stäänt oner det lisens<a href="//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Brüker-reegeln</a>',
+	'mobile-frontend-footer-license-text' => 'Stäänt oner det lisens [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Brüker reegeln]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => "So'n sidj jaft at ei. Sjük en ööder sidj of trak üüb di sjük-knoop faan din tastatuur, am det wurd uk banen uun en sidj tu sjüken.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Hoodütjwool eeben maage',
@@ -4047,6 +4066,8 @@ $messages['frr'] = array(
 	'mobile-frontend-watchlist-view' => "Wat ik uun't uug behual wal",
 	'mobile-frontend-watchlist-a-z' => "Uun't uug behual",
 	'mobile-frontend-watchlist-feed' => 'Feranert sidjen',
+	'mobile-frontend-watchlist-a-z-empty' => 'Uun uugenblak lukest dü nian sidjen uun.',
+	'mobile-frontend-watchlist-feed-empty' => 'Diar san nian sidjen uun a leetst tidj feranert wurden.',
 	'mobile-frontend-changeslist-ip' => 'Anonüüm brüker',
 	'mobile-frontend-changeslist-nocomment' => 'nian tuupfaadang',
 	'mobile-frontend-watchlist-filter-all' => 'Aaltumaal',
@@ -4070,6 +4091,8 @@ $messages['frr'] = array(
 	'mobile-frontend-photo-upload-error' => "Bi't huuchsjüüren faan det bil as wat skiaf gingen. Fersjük det mä en ööder bil.",
 	'mobile-frontend-image-saving-to-article' => 'Seekre det bil üüb det sidj ...',
 	'mobile-frontend-photo-license' => "Paase üüb: A bilen wurd oner det lisens  [//de.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported CC-BY-SA-3.0-Lizenz] uun't näät steld.",
+	'tag-mobile_edit' => 'Mobiil feranerang',
+	'tag-mobile_edit-description' => 'Faan en mobiil wääbsidj feranert',
 );
 
 /** Friulian (furlan)
@@ -4814,7 +4837,7 @@ $messages['hr'] = array(
 	'mobile-frontend-close-section' => 'Zatvori odlomak',
 	'mobile-frontend-show-button' => 'Prikaži',
 	'mobile-frontend-hide-button' => 'Sakrij',
-	'mobile-frontend-empty-homepage' => 'Ovu stranicu potrebno je konfigurirati. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Upute kako omogućiti mobilnu inačicu ovih web stranica</a>',
+	'mobile-frontend-empty-homepage-text' => 'Ovu stranicu potrebno je konfigurirati. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Upute kako omogućiti mobilnu inačicu ovih web stranica</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Prikaz stranice kao na osobnom računalu',
 	'mobile-frontend-wml-continue' => 'Nastavi...',
 	'mobile-frontend-wml-back' => 'Natrag...',
@@ -4828,7 +4851,7 @@ $messages['hr'] = array(
 	'mobile-frontend-missing-image' => 'Slika',
 	'mobile-frontend-off' => 'isključeno',
 	'mobile-frontend-on' => 'uključeno',
-	'mobile-frontend-footer-contributors' => 'Ovu stranicu su pisali <a href="$1">suradnici</a> poput Vas',
+	'mobile-frontend-footer-contributors-text' => 'Ovu stranicu su pisali <a href="$1">suradnici</a> poput Vas', # Fuzzy
 	'mobile-frontend-featured-article' => 'Današnji izabrani članak',
 	'mobile-frontend-news-items' => 'U vijestima',
 	'mobile-frontend-leave-feedback-notice' => 'Povratna informacija pomaže nam poboljšati sučelje. Bit će objavljena javno (s Vašim suradničkim imenom, inačicom internetskog preglednika i operacijskog sustava) na stranici &quot;$1&quot;. Molimo izaberite informativan predmet poruke, npr. "Oblikovanje širokih tablica". Vaša poruka podliježe uvjetima uporabe ovih stranica.',
@@ -4884,8 +4907,6 @@ $messages['hr'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privatnost',
 	'mobile-frontend-about-link-text' => 'O nama',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Sadržaj je dostupan pod <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> licencijom.',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Uvjeti uporabe</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Nema članka koji odgovara upitu. Promijenite traženi izraz, ili pritisnite gumb za pretraživanje sadržaja članaka.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Otvori glavni izbornik',
@@ -5128,7 +5149,7 @@ $messages['hu'] = array(
 	'mobile-frontend-missing-image' => 'Kép',
 	'mobile-frontend-off' => 'ki',
 	'mobile-frontend-on' => 'be',
-	'mobile-frontend-footer-contributors' => 'Egy szócikk ugyanolyan <a href="$1">szerkesztőktől</a>, mint te.', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Egy szócikk ugyanolyan <a href="$1">szerkesztőktől</a>, mint te.', # Fuzzy
 	'mobile-frontend-featured-article' => 'A nap kiemelt szócikke',
 	'mobile-frontend-news-items' => 'Hírek',
 	'mobile-frontend-leave-feedback-subject' => 'Tárgy:',
@@ -5175,8 +5196,6 @@ $messages['hu'] = array(
 	'mobile-frontend-privacy-link-text' => 'Adatvédelem',
 	'mobile-frontend-about-link-text' => 'Rólunk',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'A tartalomra <a href="//hu.m.wikipedia.org/wiki/Wikipédia:CC-BY-SA-3.0?useformat=mobile">CC BY-SA 3.0</a> licenc vonatkozik',
-	'mobile-frontend-terms-use' => '<a href="//hu.m.wikipedia.org/wiki/Wikip%C3%A9dia:Felhaszn%C3%A1l%C3%A1si_felt%C3%A9telek?useformat=mobile">Felhasználási feltételek</a>',
 	'mobile-frontend-footer-contact' => 'Kapcsolatfelvétel',
 	'mobile-frontend-search-noresults' => 'Nincs találat a keresésedre. Változtasd meg a keresőszavakat, vagy nyomd meg a keresés gombot, hogy a szócikkeken belül is keress.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Főmenü megnyitása',
@@ -5691,7 +5710,7 @@ $messages['it'] = array(
 	'mobile-frontend-close-section' => 'Chiudi questa sezione',
 	'mobile-frontend-show-button' => 'Mostra',
 	'mobile-frontend-hide-button' => 'Nascondi',
-	'mobile-frontend-empty-homepage' => 'Questa pagina principale deve essere configurata. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruzioni su come abilitare questo sito per dispositivi mobili</a>',
+	'mobile-frontend-empty-homepage-text' => 'Questa pagina principale deve essere configurata. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruzioni su come abilitare questo sito per dispositivi mobili</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Vista desktop',
 	'mobile-frontend-wml-continue' => 'Continua ...',
 	'mobile-frontend-wml-back' => 'Indietro ...',
@@ -5705,7 +5724,7 @@ $messages['it'] = array(
 	'mobile-frontend-missing-image' => 'Immagine',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-footer-contributors' => 'Pagina scritta da <a href="$1">contributori</a> come te',
+	'mobile-frontend-footer-contributors-text' => 'Pagina scritta da <a href="$1">contributori</a> come te', # Fuzzy
 	'mobile-frontend-featured-article' => 'Vetrina',
 	'mobile-frontend-news-items' => 'Novità',
 	'mobile-frontend-leave-feedback-notice' => 'I tuoi commenti ci aiutano a migliorare la tua soddisfazione del sito per dispositivi mobili. Sarà pubblicata (insieme al tuo nome utente, versione del browser e sistema operativo) alla pagina "$1". Per favore, scegli un oggetto descrittivo (ad esempio, "Problemi di formattazione con tabelle larghe"). Il tuo commento è soggetto alle condizioni d\'uso.',
@@ -5759,8 +5778,6 @@ $messages['it'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-about-link-text' => 'Informazioni',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contenuti disponibili secondo la licenza <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Condizioni d\'uso</a>',
 	'mobile-frontend-footer-contact' => 'Contatti',
 	'mobile-frontend-search-noresults' => 'Nessuna pagina ha un titolo che corrisponde alla tua ricerca. Modifica la tua ricerca, oppure premi il pulsante della tastiera "Cerca" per la ricerca nel testo delle pagine.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Apri il menu principale',
@@ -5850,7 +5867,7 @@ $messages['ja'] = array(
 	'mobile-frontend-close-section' => 'この節を閉じる',
 	'mobile-frontend-show-button' => '表示',
 	'mobile-frontend-hide-button' => '非表示',
-	'mobile-frontend-empty-homepage' => 'このホームページには設定が必要です。<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">このサイトの携帯機器版を有効にする手順はこちら</a>',
+	'mobile-frontend-empty-homepage-text' => 'このホームページには設定が必要です。[//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage このサイトの携帯機器版を有効にする手順はこちら]',
 	'mobile-frontend-regular-site' => 'デスクトップビュー',
 	'mobile-frontend-wml-continue' => '続行...',
 	'mobile-frontend-wml-back' => '戻る...',
@@ -5864,7 +5881,7 @@ $messages['ja'] = array(
 	'mobile-frontend-missing-image' => '画像',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-footer-contributors' => 'あなたのような<a href="$1">投稿者</a>が執筆したページ',
+	'mobile-frontend-footer-contributors-text' => 'あなたのような[$1 投稿者]が執筆したページ',
 	'mobile-frontend-featured-article' => '今日の秀逸な記事',
 	'mobile-frontend-news-items' => '新着情報',
 	'mobile-frontend-leave-feedback-notice' => 'フィードバックは携帯機器ウェブサイトの使用感を向上させる助けになります。フィードバックは (利用者名、ブラウザーのバージョン、オペレーティングシステムとともに) &quot;$1&quot;のページで公開されます。「幅の広い表の書式の問題」のように、情報量が多い表題名を付けるようにしてください。フィードバックは利用規約の対象です。',
@@ -5919,8 +5936,8 @@ $messages['ja'] = array(
 	'mobile-frontend-privacy-link-text' => 'プライバシー',
 	'mobile-frontend-about-link-text' => 'このサイトについて',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'コンテンツは<a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>で提供されています',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">利用規約</a>',
+	'mobile-frontend-footer-license-text' => 'コンテンツは[//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]で提供されています',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ja?useformat=mobile 利用規約]',
 	'mobile-frontend-footer-contact' => '連絡先',
 	'mobile-frontend-search-noresults' => '検索語句に該当する項目名はありませんでした。別の語句をお試しください。また、キーボードの検索ボタンを押すと、ページ内検索を行うこともできます。',
 	'mobile-frontend-main-menu-button-tooltip' => 'メインメニューを開く',
@@ -5948,6 +5965,8 @@ $messages['ja'] = array(
 	'mobile-frontend-watchlist-removed' => '$1 をウォッチリストから除去しました',
 	'mobile-frontend-watchlist-view' => 'ウォッチリストを表示',
 	'mobile-frontend-watchlist-a-z' => 'ウォッチしているページ',
+	'mobile-frontend-watchlist-a-z-empty' => '現在ウォッチしているページはありません',
+	'mobile-frontend-watchlist-feed-empty' => '最近更新されたページはありません',
 	'mobile-frontend-changeslist-ip' => '匿名利用者',
 	'mobile-frontend-changeslist-nocomment' => '編集の要約なし',
 	'mobile-frontend-watchlist-filter-all' => 'すべて',
@@ -6332,7 +6351,7 @@ $messages['km'] = array(
 	'mobile-frontend-missing-image' => 'រូបភាព',
 	'mobile-frontend-off' => 'បិទ',
 	'mobile-frontend-on' => 'បើក',
-	'mobile-frontend-footer-contributors' => 'ទំព័រ​ដោយ <a href="$1">អ្នក​ចូលរួម</a> ដូច​ជា​អ្នក',
+	'mobile-frontend-footer-contributors-text' => 'ទំព័រ​ដោយ <a href="$1">អ្នក​ចូលរួម</a> ដូច​ជា​អ្នក', # Fuzzy
 	'mobile-frontend-featured-article' => 'អត្ថបទពិសេសសំរាប់ថ្ងៃនេះ',
 	'mobile-frontend-news-items' => 'នៅក្នុងសារព័ត៌មាន',
 	'mobile-frontend-leave-feedback-notice' => 'មតិយោបល់របស់អ្នកនឹងជួយយើងខ្ញុំក្នុងការកែលំអវិបសាយសំរាប់ឧបករណ៍ចល័តរបស់យើងអោយកាន់តែប្រសើរឡើង។ មតិរបស់អ្នក (ព្រមជាមួយនឹងអត្តនាម វើសិនរបស់ឧបករណ៍រាវរក និងប្រព័ន្ធប្រតិបត្តិ) នឹងត្រូវបានផ្សព្វផ្សាយជាសាធារណៈនៅលើទំព័រ &quot;$1&quot;។ សូមជ្រើសរើសពាក្យដែលមានព័ត៌មានគ្រប់គ្រាន់​សំរាប់ដាក់ជាចំណងជើង។ ឧទាហរណ៍ "បញ្ហាទំរង់របស់តារាងធំៗ"។ មតិយោបល់របស់អ្នកនឹងត្រូវបានប្រើទៅតាមលក្ខខណ្ឌនៃការប្រើប្រាស់របស់យើងខ្ញុំ។',
@@ -6493,7 +6512,7 @@ $messages['ko'] = array(
 	'mobile-frontend-close-section' => '이 문단 닫기',
 	'mobile-frontend-show-button' => '보이기',
 	'mobile-frontend-hide-button' => '숨기기',
-	'mobile-frontend-empty-homepage' => '이 홈페이지는 재구성해야 합니다. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">이 사이트를 모바일로 활성화하는 방법에 대한 지침</a>',
+	'mobile-frontend-empty-homepage-text' => '이 홈페이지는 재구성해야 합니다. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage 이 사이트를 모바일로 활성화하는 방법에 대한 지침]',
 	'mobile-frontend-regular-site' => '데스크톱 버전',
 	'mobile-frontend-wml-continue' => '계속...',
 	'mobile-frontend-wml-back' => '뒤로...',
@@ -6507,7 +6526,7 @@ $messages['ko'] = array(
 	'mobile-frontend-missing-image' => '그림',
 	'mobile-frontend-off' => '끄기',
 	'mobile-frontend-on' => '켜기',
-	'mobile-frontend-footer-contributors' => '이 문서는 여러분과 같은 <a href="$1">사용자</a>가 기여하였습니다',
+	'mobile-frontend-footer-contributors-text' => '여러분과 같은 [$1 사용자]가 기여한 문서입니다',
 	'mobile-frontend-featured-article' => '오늘의 알찬 글',
 	'mobile-frontend-news-items' => '새로 들어온 소식',
 	'mobile-frontend-leave-feedback-notice' => '당신의 피드백이 모바일 사이트를 개선하는 데 도움이 됩니다. 피드백은 당신의 사용자 이름, 브라우저 버전과 운영 체제 정보와 함께 &quot;$1&quot; 문서에 공개적으로 게시될 것입니다. 제목에 도움이 되는 정보를 입력해주세요. 예를 들면 "넓은 표에 관한 문제"라고 쓸 수 있습니다. 당신의 피드백은 이용 규약의 적용을 받습니다.',
@@ -6564,8 +6583,7 @@ $messages['ko'] = array(
 	'mobile-frontend-privacy-link-text' => '개인정보 정책',
 	'mobile-frontend-about-link-text' => '소개',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => '모든 문서는 <a href="//ko.m.wikipedia.org/w/index.php?title=%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License&mobileaction=toggle_view_mobile">크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0</a>에 따라 사용할 수 있습니다.',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">이용 약관</a>',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile 이용 약관]',
 	'mobile-frontend-footer-contact' => '연락하기',
 	'mobile-frontend-search-noresults' => '찾기 결과와 일치하는 문서를 찾지 못했습니다. 검색어을 바꾸거나, 키보드의 찾기 단추를 누르면 본문 내용을 검색합니다.',
 	'mobile-frontend-main-menu-button-tooltip' => '주 메뉴 열기',
@@ -6600,6 +6618,8 @@ $messages['ko'] = array(
 	'mobile-frontend-watchlist-view' => '내 주시문서 목록 보기',
 	'mobile-frontend-watchlist-a-z' => '주시한 문서',
 	'mobile-frontend-watchlist-feed' => '바뀐 문서',
+	'mobile-frontend-watchlist-a-z-empty' => '현재 어떠한 문서도 주시하지 않았습니다',
+	'mobile-frontend-watchlist-feed-empty' => '최근 바뀐 문서가 없습니다',
 	'mobile-frontend-changeslist-ip' => '익명 사용자',
 	'mobile-frontend-changeslist-nocomment' => '편집 요약 없음',
 	'mobile-frontend-watchlist-filter-all' => '모두',
@@ -6623,6 +6643,8 @@ $messages['ko'] = array(
 	'mobile-frontend-photo-upload-error' => '그림을 올리는 동안 오류가 발생했습니다. 다른 그림을 올리세요.',
 	'mobile-frontend-image-saving-to-article' => '문서에 그림 저장 중',
 	'mobile-frontend-photo-license' => '참고: 게시하는 모든 그림은 [//ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 라이선스]로 배포됩니다',
+	'tag-mobile_edit' => '모바일 편집',
+	'tag-mobile_edit-description' => '모바일 사이트에서 편집',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -6774,7 +6796,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-close-section' => 'Donn dä Afschnet heh aan et Ängk bränge',
 	'mobile-frontend-show-button' => 'Zeisch!',
 	'mobile-frontend-hide-button' => 'Verschteische!',
-	'mobile-frontend-empty-homepage' => 'He di Aanfangssigg moß noch <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">enjereschdt wääde</a>.', # Fuzzy
+	'mobile-frontend-empty-homepage-text' => 'He di Aanfangssigg moß noch <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">enjereschdt wääde</a>.', # Fuzzy
 	'mobile-frontend-regular-site' => 'jangk op de nomaale Belscherrem',
 	'mobile-frontend-wml-continue' => 'Wiggermaache&nbsp;...',
 	'mobile-frontend-wml-back' => 'Retuur&nbsp;...',
@@ -6788,7 +6810,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-missing-image' => 'Beld',
 	'mobile-frontend-off' => 'Uß',
 	'mobile-frontend-on' => 'Aan',
-	'mobile-frontend-footer-contributors' => 'Enne Atikel vun <a href="$1">Metmaachere</a> wi Do eine bes.', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Enne Atikel vun <a href="$1">Metmaachere</a> wi Do eine bes.', # Fuzzy
 	'mobile-frontend-featured-article' => 'Der Atikel vum Daach',
 	'mobile-frontend-news-items' => 'En de Präß',
 	'mobile-frontend-leave-feedback-notice' => 'Ding Röckmälunge helfe met, dat De met de Mobiljeräte besser heh bedeent wees.
@@ -6842,8 +6864,6 @@ Versöhg_et schpääder noch ens.',
 	'mobile-frontend-privacy-link-text' => 'Prevaatheit',
 	'mobile-frontend-about-link-text' => 'Övver',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Ze han onger dä Lizänz <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Bedengonge_för_der_Jebruch?useformat=mobile">Bedengonge för der Jebruch</a>',
 	'mobile-frontend-footer-contact' => 'Kumtak',
 	'mobile-frontend-search-noresults' => 'Kein Tittel vun enem Atikel deiht op dat paße, wat De söhks. Don jät angersch söhke udder nemm dä Knopp zom Söhke onger Dinge Taßte, un söhk der_met em Täx vun de Atikelle.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Äxzälänt',
@@ -6967,7 +6987,7 @@ $messages['lb'] = array(
 	'mobile-frontend-close-section' => 'Dësen Abschnitt zoumaachen',
 	'mobile-frontend-show-button' => 'Weisen',
 	'mobile-frontend-hide-button' => 'Verstoppen',
-	'mobile-frontend-empty-homepage' => 'Dës Homepage muss konfiguréiert ginn. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruktioune fir ze wësse wéi een dëse mobile Site aktivéiert</a>',
+	'mobile-frontend-empty-homepage-text' => 'Dës Homepage muss konfiguréiert ginn. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruktioune fir ze wësse wéi een dëse mobile Site aktivéiert</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Desktop-Vue',
 	'mobile-frontend-wml-continue' => 'Weider ...',
 	'mobile-frontend-wml-back' => 'Zréck ...',
@@ -6981,7 +7001,7 @@ $messages['lb'] = array(
 	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'UN',
-	'mobile-frontend-footer-contributors' => 'Artikel vu <a href="$1">Mataarbechter</a> wéi Dir', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Artikel vu <a href="$1">Mataarbechter</a> wéi Dir', # Fuzzy
 	'mobile-frontend-featured-article' => 'Den Artikel vum Dag',
 	'mobile-frontend-news-items' => 'An den Neiegkeeten',
 	'mobile-frontend-leave-feedback-notice' => 'Äre Feedback hëlleft eis déi mobil Versioun vun eisem Site ze verbesseren. E gëtt ëffentlech op der Säit &quot;$1&quot; gewisen (zesumme mat Ärem Benotzernumm, der Versioun vun Ärem Browser a Betriibssystem). Versicht w.e.g. fir de Sujet vun Ärem Feedback informativ ze formuléieren, z. Bsp. "Formatéierungsproblemer bäi breeden Tabellen". Äre Feedback ënnerléit eisen allgemenge Conditiounen.',
@@ -7030,7 +7050,6 @@ $messages['lb'] = array(
 	'mobile-frontend-privacy-link-text' => 'Dateschutz',
 	'mobile-frontend-about-link-text' => 'Iwwer',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Nutzungsbedingungen?useformat=mobile">Benotzungsbedingungen</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => "Keen Artikel gouf beim siche fonnt. Ännert d'Critèren oder dréckt de Sichknäppchen op Ärer Tastatur fir bannen an den Artikelen ze sichen.", # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Bemierkenswäert',
@@ -7484,7 +7503,7 @@ $messages['mk'] = array(
 	'mobile-frontend-close-section' => 'Затвори го поднасловот',
 	'mobile-frontend-show-button' => 'Прикажи',
 	'mobile-frontend-hide-button' => 'Скриј',
-	'mobile-frontend-empty-homepage' => 'Оваа домашна страница треба да се намести. Погл. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Напатствија за вклучување на мобилната верзија</a>',
+	'mobile-frontend-empty-homepage-text' => 'Оваа домашна страница треба да се намести. Погл. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Напатствија за вклучување на мобилната верзија</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Обичен изглед',
 	'mobile-frontend-wml-continue' => 'Продолжи ...',
 	'mobile-frontend-wml-back' => 'Назад ...',
@@ -7498,7 +7517,7 @@ $messages['mk'] = array(
 	'mobile-frontend-missing-image' => 'Слика',
 	'mobile-frontend-off' => 'ИСКЛ',
 	'mobile-frontend-on' => 'ВКЛЧ',
-	'mobile-frontend-footer-contributors' => 'Сстраницата ја напишаа <a href="$1">учесници</a> како вас',
+	'mobile-frontend-footer-contributors-text' => 'Сстраницата ја напишаа <a href="$1">учесници</a> како вас', # Fuzzy
 	'mobile-frontend-featured-article' => 'Избрана статија за денес',
 	'mobile-frontend-news-items' => 'Вести',
 	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ни помага да ја подобриме мобилната верзија. Мислењето ќе биде објавено јавно (заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем) на страницата „$1“. Одберете информативен наслов, како на пр. „Проблем со форматирање на широките табели“. Искажаното мислење подлежи на условите на употреба.',
@@ -7555,8 +7574,6 @@ $messages['mk'] = array(
 	'mobile-frontend-privacy-link-text' => 'Приватност',
 	'mobile-frontend-about-link-text' => 'За програмот',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Содржините се достапни под лиценцата <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Услови_на_употреба?useformat=mobile">Услови на употреба</a>',
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Нема наслови што одговараат на бараното. Изменете го она што го барате или пребарувајте по текстот на самите страници.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Отвори го главното мени',
@@ -7614,6 +7631,8 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-upload-error' => 'Се појави грешка при подигањето на сликата. Обидете се со друга слика.',
 	'mobile-frontend-image-saving-to-article' => 'Ја зачувувам сликата на страницата',
 	'mobile-frontend-photo-license' => 'Напомена: Сите слики што ги подигате ќе бидат објавени под лиценцата [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License BY-SA 3.0]',
+	'tag-mobile_edit' => 'Мобилно уредување',
+	'tag-mobile_edit-description' => 'Уредување извршено од мобилната варијанта на викито',
 );
 
 /** Malayalam (മലയാളം)
@@ -8063,7 +8082,7 @@ $messages['mt'] = array(
 	'mobile-frontend-close-section' => 'Agħlaq din is-sezzjoni',
 	'mobile-frontend-show-button' => 'Uri',
 	'mobile-frontend-hide-button' => 'Aħbi',
-	'mobile-frontend-empty-homepage' => 'Din il-paġna prinċipali għandha bżonn tiġi konfigurata. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Struzzjonijiet fuq kif tippermetti dan is-sit għall-mowbajl</a>',
+	'mobile-frontend-empty-homepage-text' => 'Din il-paġna prinċipali għandha bżonn tiġi konfigurata. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Struzzjonijiet fuq kif tippermetti dan is-sit għall-mowbajl</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Verżjoni għad-desktop',
 	'mobile-frontend-wml-continue' => 'Kompli...',
 	'mobile-frontend-wml-back' => 'Lura...',
@@ -8077,7 +8096,7 @@ $messages['mt'] = array(
 	'mobile-frontend-missing-image' => 'Stampa',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-footer-contributors' => 'Paġna minn <a href="$1">kontributuri</a> bħalek',
+	'mobile-frontend-footer-contributors-text' => 'Paġna minn <a href="$1">kontributuri</a> bħalek', # Fuzzy
 	'mobile-frontend-featured-article' => 'Vetrina',
 	'mobile-frontend-news-items' => 'Fl-aħbarijiet',
 	'mobile-frontend-leave-feedback-notice' => 'Il-kummenti tiegħek jgħinuna ntejbu l-esperjenza għas-sit għall-mowbajl. Dan se jiġi ppubblikat (flimkien mal-isem tal-utent, il-verżjoni tal-browżer u s-sistema operattiva) fuq il-paġna "$1". Jekk jogħġbok prova għażel suġġett informattiv (per eżempju, "Problemi fl-ifformattjar b\'tabelli wiesgħa"). Ir-rispons tiegħek huwa suġġett għat-terminu ta\' użu.',
@@ -8130,8 +8149,6 @@ $messages['mt'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privatezza',
 	'mobile-frontend-about-link-text' => 'Dwar',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Kontenut disponibbli taħt il-liċenzja <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Termini ta\' użu</a>',
 	'mobile-frontend-footer-contact' => 'Kuntatt',
 	'mobile-frontend-search-noresults' => 'L-ebda titlu ta\' paġna ma kkorrisponda mat-tfittxija tiegħek. Biddel it-tfittxija tiegħek, jew agħfas il-buttuna tat-tastiera "Fittex" sabiex tfittex fi ħdan it-test tal-paġni.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Iftaħ il-menu prinċipali',
@@ -8529,7 +8546,7 @@ $messages['nl-informal'] = array(
 	'mobile-frontend-sign-in-why' => 'Als je een gebruiker hebt op {{SITENAME}}, dan kan hieronder aanmelden.',
 	'mobile-frontend-settings-description' => 'Pas je gebruikerservaring op je mobiele apparaat aan via deze instellingen.',
 	'mobile-frontend-opt-in-explain' => 'Als je meedoet met testen, krijg je toegang tot experimentele functionaliteit, met het risico op fouten en problemen.',
-	'mobile-frontend-footer-contributors' => 'Pagina door <a href="$1">gebruikers</a> zoals jij',
+	'mobile-frontend-footer-contributors-text' => 'Pagina door <a href="$1">gebruikers</a> zoals jij', # Fuzzy
 	'mobile-frontend-leave-feedback-notice' => 'Jouw terugkoppeling helpt ons om je ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (ook je gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alsjeblieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op je terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
 	'mobile-frontend-leave-feedback-warning' => 'Neem geen persoonlijke gegevens op in je opmerkingen, tenzij je akkoord gaat met het openbaar maken ervan.',
 	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling over de mobiele site',
@@ -8572,7 +8589,7 @@ $messages['nn'] = array(
 	'mobile-frontend-close-section' => 'Lat att bolken',
 	'mobile-frontend-show-button' => 'Vis',
 	'mobile-frontend-hide-button' => 'Gøym',
-	'mobile-frontend-empty-homepage' => 'Denne heimesida lyt stillast inn. <a href="https://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruksjonar for korleis ein slår på mobilnettstaden</a>',
+	'mobile-frontend-empty-homepage-text' => 'Denne heimesida lyt stillast inn. <a href="https://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruksjonar for korleis ein slår på mobilnettstaden</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Stasjonærvising',
 	'mobile-frontend-wml-continue' => 'Haldt fram...',
 	'mobile-frontend-wml-back' => 'Attende...',
@@ -8586,7 +8603,7 @@ $messages['nn'] = array(
 	'mobile-frontend-missing-image' => 'Bilete',
 	'mobile-frontend-off' => 'AV',
 	'mobile-frontend-on' => 'PÅ',
-	'mobile-frontend-footer-contributors' => 'Side av <a href="$1">bidragsytarar</a> som deg',
+	'mobile-frontend-footer-contributors-text' => 'Side av <a href="$1">bidragsytarar</a> som deg', # Fuzzy
 	'mobile-frontend-featured-article' => 'Dagens artikkel',
 	'mobile-frontend-news-items' => 'Nyhende',
 	'mobile-frontend-leave-feedback-notice' => 'Attendemeldinga di hjelper oss med å betra brukaropplevinga di på mobilnettstaden. Ho vil publiserast (i lag med brukarnamnet ditt, nettlesarversjon og operativsystem) til sida &laquo;$1&raquo;. Gjer vel å velja ein informativ emnetekst, t.d. «Formateringsvanskar med breie tabellar». For attendemeldinga di gjeld bruksvilkåra våre.',
@@ -8632,8 +8649,6 @@ $messages['nn'] = array(
 	'mobile-frontend-privacy-link-text' => 'Personvern',
 	'mobile-frontend-about-link-text' => 'Om',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Innhaldet er tilgjengeleg under <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Bruksvilkår</a>',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Ingen artikkeltitlar passar med søket ditt. Endra søket ditt eller trykk på søkjeknappen på tastaturet for å søkja i artikkeltekstane.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Opna hovudmenyen',
@@ -9100,7 +9115,7 @@ $messages['pms'] = array(
 	'mobile-frontend-close-section' => 'Sara sta session-sì',
 	'mobile-frontend-show-button' => 'Mosta',
 	'mobile-frontend-hide-button' => 'Stërma',
-	'mobile-frontend-empty-homepage' => 'Costa pàgina d\'intrada a dev esse configurà. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Istrussion ëd com abilité ës sit për ij sacociàbij</a>',
+	'mobile-frontend-empty-homepage-text' => "Costa pàgina d'intrada a dev esse configurà. <a [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Istrussion ëd com abilité ës sit për ij sacociàbij]",
 	'mobile-frontend-regular-site' => 'Visualisassion da ordinator',
 	'mobile-frontend-wml-continue' => 'Andé anans ...',
 	'mobile-frontend-wml-back' => 'André ...',
@@ -9114,7 +9129,7 @@ $messages['pms'] = array(
 	'mobile-frontend-missing-image' => 'Figura',
 	'mobile-frontend-off' => 'Dëstiss',
 	'mobile-frontend-on' => 'Anvisch',
-	'mobile-frontend-footer-contributors' => 'Pagina da <a href="$1">dij contributor</a> com chiel',
+	'mobile-frontend-footer-contributors-text' => 'Pagina da [$1 contributor] com chiel',
 	'mobile-frontend-featured-article' => 'Artìcol dël dì',
 	'mobile-frontend-news-items' => 'Ant le Neuve',
 	'mobile-frontend-leave-feedback-notice' => "Soa opinion an giuta a amelioré soa esperiensa dël sit për ij sacociàbij. A sarà publicà (ansema a sò stranòm, la version ëd sò navigador e sò sistema operativ) a la pàgina «$1». Për piasì ch'a preuva a buté un resumé anformativ, për esempi «Problema ëd formatassion con le tàule gròsse». Soa opinion a resta sota nòstre condission d'utilisassion.",
@@ -9170,8 +9185,8 @@ $messages['pms'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidensialità',
 	'mobile-frontend-about-link-text' => 'A propòsit',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contnù disponìbil sota <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Condission d\'Usagi</a>',
+	'mobile-frontend-footer-license-text' => 'Contnù disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
+	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termo d'Usagi]",
 	'mobile-frontend-footer-contact' => 'Contat',
 	'mobile-frontend-search-noresults' => "A-i é gnun-a pagina ch'a corëspond a soa arserca. Ch'a modìfica soa arserca, o sch'a gnaca ël boton d'arserca dla tastadura për serché andrinta a le pagine.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Deurb ël menù prinsipal',
@@ -9206,6 +9221,8 @@ Giuta a porté ste pagine an vita donand toe figure ch'it veule dé via e ch'a p
 	'mobile-frontend-watchlist-view' => 'Varda toa lista ëd lòn da tnì sot euj',
 	'mobile-frontend-watchlist-a-z' => 'Pàgine da tnì sot-euj',
 	'mobile-frontend-watchlist-feed' => 'Pàgine con cambi',
+	'mobile-frontend-watchlist-a-z-empty' => "Al moment it të stas pa tenend d'euj gnun-e pagine",
+	'mobile-frontend-watchlist-feed-empty' => 'A-i son pa dle pagine con cambi recent',
 	'mobile-frontend-changeslist-ip' => 'Utent anònim',
 	'mobile-frontend-changeslist-nocomment' => 'gnun resumé ëd modìfica',
 	'mobile-frontend-watchlist-filter-all' => 'Tùit',
@@ -9541,7 +9558,7 @@ $messages['ro'] = array(
 	'mobile-frontend-close-section' => 'Închide această secțiune',
 	'mobile-frontend-show-button' => 'Arată',
 	'mobile-frontend-hide-button' => 'Ascunde',
-	'mobile-frontend-empty-homepage' => 'Această pagină principală trebuie configurată. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrucțiuni despre cum se activează acest site mobil</a>',
+	'mobile-frontend-empty-homepage-text' => 'Această pagină principală trebuie configurată. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instrucțiuni despre cum se activează acest site mobil]',
 	'mobile-frontend-regular-site' => 'Vizualizare ca pe desktop',
 	'mobile-frontend-wml-continue' => 'Continuare...',
 	'mobile-frontend-wml-back' => 'Înapoi...',
@@ -9555,7 +9572,7 @@ $messages['ro'] = array(
 	'mobile-frontend-missing-image' => 'Imagine',
 	'mobile-frontend-off' => 'OPRIT',
 	'mobile-frontend-on' => 'PORNIT',
-	'mobile-frontend-footer-contributors' => 'Pagină redactată de <a href="$1">contribuitori</a> ca dumneavoastră',
+	'mobile-frontend-footer-contributors-text' => 'Pagină redactată de [$1 contribuitori] ca dumneavoastră',
 	'mobile-frontend-featured-article' => 'Articolul de calitate al zilei',
 	'mobile-frontend-news-items' => 'Știri',
 	'mobile-frontend-leave-feedback-notice' => 'Părerea dumneavoastră ne va ajuta să îmbunătățim navigarea pe site-ul mobil. Aceasta va fi făcută publică (împreună cu numele dumneavoastră de utilizator, versiunea browserului și sistemul de operare) pe pagina „$1”. Încercați să alegeți un titlu informativ; ex.: „Probleme cu formatarea tabelelor late”. Comentariile dumnevoastră sunt supuse condițiilor noastre de utilizare.',
@@ -9611,8 +9628,8 @@ $messages['ro'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidențialitate',
 	'mobile-frontend-about-link-text' => 'Despre',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Conținut disponibil sub licența <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Termeni de utilizare</a>',
+	'mobile-frontend-footer-license-text' => 'Conținut disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termeni de utilizare]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'Niciun titlu de pagină nu corespunde căutării dumneavoastră. Căutați altceva sau apăsați butonul de căutare de pe tastatură pentru a căuta în interiorul paginilor.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Deschide meniul principal',
@@ -9647,6 +9664,8 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-watchlist-view' => 'Vezi lista de pagini urmărite',
 	'mobile-frontend-watchlist-a-z' => 'Pagini urmărite',
 	'mobile-frontend-watchlist-feed' => 'Pagini cu modificări',
+	'mobile-frontend-watchlist-a-z-empty' => 'În prezent nu urmăriți nicio pagină',
+	'mobile-frontend-watchlist-feed-empty' => 'Nu există pagini cu schimbări recente',
 	'mobile-frontend-changeslist-ip' => 'Utilizator anonim',
 	'mobile-frontend-changeslist-nocomment' => 'fără descrierea modificării',
 	'mobile-frontend-watchlist-filter-all' => 'Toate',
@@ -9670,6 +9689,8 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-photo-upload-error' => 'A apărut o eroare în timpul încărcării acestei imagini. Încercați altă imagine.',
 	'mobile-frontend-image-saving-to-article' => 'Se salvează imaginea în pagină',
 	'mobile-frontend-photo-license' => 'Notă: Toate fotografiile pe care le publicați vor fi eliberate sub o licență [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0]',
+	'tag-mobile_edit' => 'Modificare mobilă',
+	'tag-mobile_edit-description' => 'Modificare efectuată de pe site-ul mobil',
 );
 
 /** tarandíne (tarandíne)
@@ -9744,7 +9765,6 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-clear-search' => 'Pulizze',
 	'mobile-frontend-about-link-text' => 'Sus a',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Termine de l\'Ause</a>',
 	'mobile-frontend-footer-contact' => 'Condatte',
 	'mobile-frontend-main-menu-featured' => 'Dettagliate',
 	'mobile-frontend-main-menu-nearby' => 'Vicine a',
@@ -9813,7 +9833,7 @@ $messages['ru'] = array(
 	'mobile-frontend-close-section' => 'Закрыть этот раздел',
 	'mobile-frontend-show-button' => 'Показать',
 	'mobile-frontend-hide-button' => 'Скрыть',
-	'mobile-frontend-empty-homepage' => 'Эта заглавная страница нуждается в настройке. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Инструкции по организации мобильной версии сайта</a>',
+	'mobile-frontend-empty-homepage-text' => 'Эта заглавная страница нуждается в настройке. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Инструкции по организации мобильной версии сайта</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Обычная версия',
 	'mobile-frontend-wml-continue' => 'Далее ...',
 	'mobile-frontend-wml-back' => 'Назад ...',
@@ -9827,7 +9847,7 @@ $messages['ru'] = array(
 	'mobile-frontend-missing-image' => 'Изображение',
 	'mobile-frontend-off' => 'ВЫКЛ',
 	'mobile-frontend-on' => 'ВКЛ',
-	'mobile-frontend-footer-contributors' => 'Эта страница написана <a href="$1">волонтёрами</a>, похожими на вас',
+	'mobile-frontend-footer-contributors-text' => 'Эта страница написана <a href="$1">волонтёрами</a>, похожими на вас', # Fuzzy
 	'mobile-frontend-featured-article' => 'Избранная статья дня',
 	'mobile-frontend-news-items' => 'Новости',
 	'mobile-frontend-leave-feedback-notice' => 'Ваш отзыв поможет нам улучшить использование мобильного сайта. Он будет опубликован публично (вместе с вашим именем пользователя, версией браузера и операционной системы) на странице &quot;$1&quot;. Пожалуйста, попробуйте выбрать информативную сюжетную линию, например «вопросы форматирования широких таблиц». Ваш отзыв должен соответствовать условиям использования.',
@@ -9884,8 +9904,6 @@ $messages['ru'] = array(
 	'mobile-frontend-privacy-link-text' => 'Конфиденциальность',
 	'mobile-frontend-about-link-text' => 'Описание',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Содержание доступно по лицензии <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Условия использования</a>',
 	'mobile-frontend-footer-contact' => 'Контактная информация',
 	'mobile-frontend-search-noresults' => 'Нет страниц, названия которых соответствуют вашему запросу. Измените свой запрос, или нажмите на клавиатуре кнопку для поиска внутри страниц.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Открыть главное меню',
@@ -10310,6 +10328,7 @@ $messages['si'] = array(
 	'mobile-frontend-logged-in-toast-notification' => '$1 ලෙස ප්‍රවිෂ්ට වී.',
 	'mobile-frontend-sign-up-heading' => 'ලියාපදිංචි වන්න',
 	'mobile-frontend-sign-in-heading' => 'පිවිසෙන්න',
+	'mobile-frontend-sign-in-why' => 'ඔබ සතුව {{SITENAME}} ගිණුමක් ඇත, ඔබ පහතින් පිවිසිය යුතු වේ.',
 	'mobile-frontend-sign-in-error-heading' => 'අයියෝ',
 	'mobile-frontend-settings-beta' => 'බීටා',
 	'mobile-frontend-save-settings' => 'සැකසුම් සුරකින්න',
@@ -10336,7 +10355,7 @@ $messages['si'] = array(
 	'mobile-frontend-missing-image' => 'පිංතූරය',
 	'mobile-frontend-off' => 'අක්‍රිය',
 	'mobile-frontend-on' => 'සක්‍රිය',
-	'mobile-frontend-footer-contributors' => 'පිටුව ඔබ වැනි <a href="$1">දායකයන්</a> ගෙනි',
+	'mobile-frontend-footer-contributors-text' => 'පිටුව ඔබ වැනි <a href="$1">දායකයන්</a> ගෙනි', # Fuzzy
 	'mobile-frontend-featured-article' => 'අද විශේෂාංග ලිපිය',
 	'mobile-frontend-news-items' => 'පුවත් වලින්',
 	'mobile-frontend-leave-feedback-subject' => 'විෂයය:',
@@ -10379,13 +10398,12 @@ $messages['si'] = array(
 	'mobile-frontend-overlay-escape' => 'ආපසු යන්න',
 	'mobile-frontend-placeholder' => '{{SITENAME}} ගවේෂණය කරන්න',
 	'mobile-frontend-placeholder-beta' => 'සොයන්න {{SITENAME}} (බීටා)',
+	'mobile-frontend-placeholder-alpha' => '{{SITENAME}} සොයන්න (මකරාගේ ක්‍රමය)',
 	'mobile-frontend-dismiss-notification' => 'මෙම නිවේදනය නොසලකන්න',
 	'mobile-frontend-clear-search' => 'හිස් කරන්න',
 	'mobile-frontend-privacy-link-text' => 'පුද්ගලිකත්වය',
 	'mobile-frontend-about-link-text' => 'පිළිබඳ',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'අන්තර්ගතය <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a> යටතේ ලබා ගත හැක',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">භාවිතයේ කොන්දේසි</a>',
 	'mobile-frontend-footer-contact' => 'සම්බන්ධ කරන්න',
 	'mobile-frontend-main-menu-button-tooltip' => 'ප්‍රධාන මෙනුව විවෘත කරන්න',
 	'mobile-frontend-main-menu-page-title' => 'අඩවි යාන්ත්‍රණය',
@@ -10432,6 +10450,8 @@ $messages['si'] = array(
 	'mobile-frontend-image-loading' => 'පින්තූරය පූරණය කරමින්',
 	'mobile-frontend-image-uploading' => 'පින්තූරය උඩුගත කරමින්',
 	'mobile-frontend-image-saving-to-article' => 'පින්තූරය පිටුව වෙත සුරක්ෂිත කරමින්',
+	'tag-mobile_edit' => 'ජංගම සංස්කරණය',
+	'tag-mobile_edit-description' => 'ජංගම අඩවියෙන් සංස්කරණය සිදු කරන ලදී',
 );
 
 /** Slovak (slovenčina)
@@ -11227,7 +11247,7 @@ $messages['ta'] = array(
 	'mobile-frontend-close-section' => 'இப்பகுதியை மூடுக',
 	'mobile-frontend-show-button' => 'காட்டு',
 	'mobile-frontend-hide-button' => 'மறை',
-	'mobile-frontend-empty-homepage' => 'இந்த முகப்பு பக்கம் கைபேசி  தளத்திற்கேற்றார்போல் அமைக்கப்படவேண்டும். <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">விவரங்களுக்கு பார்க்க</a>', # Fuzzy
+	'mobile-frontend-empty-homepage-text' => 'இந்த முகப்பு பக்கம் கைபேசி  தளத்திற்கேற்றார்போல் அமைக்கப்படவேண்டும். <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">விவரங்களுக்கு பார்க்க</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'இப்பக்கத்தை வழக்கமான {{SITENAME}} தளத்தில் காண',
 	'mobile-frontend-wml-continue' => 'தொடர்க...',
 	'mobile-frontend-wml-back' => 'பின்னால்...',
@@ -11240,7 +11260,7 @@ $messages['ta'] = array(
 	'mobile-frontend-missing-image' => 'படம்',
 	'mobile-frontend-off' => 'அணை',
 	'mobile-frontend-on' => 'இயங்குகிறது',
-	'mobile-frontend-footer-contributors' => 'உங்களைப் போன்ற <a href="$1">பங்களிப்பாளர்களின்</a> கட்டுரை', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'உங்களைப் போன்ற <a href="$1">பங்களிப்பாளர்களின்</a> கட்டுரை', # Fuzzy
 	'mobile-frontend-featured-article' => 'முதற்பக்கக் கட்டுரைகள்',
 	'mobile-frontend-news-items' => 'செய்திகளில்',
 	'mobile-frontend-leave-feedback-notice' => 'உங்கள் கருத்துக்கள் எங்களை கைபேசி தளத்தை மேம்படுத்த உதவும். உங்கள் பயனர் பெயர், உலாவி பதிப்பு, இயங்குதளம் போன்ற விவரங்களோடு கருத்துக்கள் அனைவராலும் பார்க்கக் கூடிய "$1" பக்கத்தில் இடம்பெறும்; உங்கள் கருத்துக்களுக்கு முறையாக தலைப்பிடுங்கள், உதா. "பக்க வடிவத்தில் அகலமான அட்டவணைகள் தெரிகின்றன". உங்கள் கருத்துக்கள் எங்களது பயன்பாட்டு விதிமுறைகளுக்கு உட்பட்டது.',
@@ -11831,7 +11851,7 @@ $messages['uk'] = array(
 	'mobile-frontend-close-section' => 'Закрити цей розділ',
 	'mobile-frontend-show-button' => 'Показати',
 	'mobile-frontend-hide-button' => 'Сховати',
-	'mobile-frontend-empty-homepage' => 'Увага! Ця домашня сторінка потребує налаштування. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Тут можна прочитати про це докладніше</a>',
+	'mobile-frontend-empty-homepage-text' => 'Увага! Ця домашня сторінка потребує налаштування. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Тут можна прочитати про це докладніше</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Стандартний вигляд сторінки',
 	'mobile-frontend-wml-continue' => 'Далі...',
 	'mobile-frontend-wml-back' => 'Назад...',
@@ -11845,7 +11865,7 @@ $messages['uk'] = array(
 	'mobile-frontend-missing-image' => 'Зображення',
 	'mobile-frontend-off' => 'ВИМК',
 	'mobile-frontend-on' => 'ВМК',
-	'mobile-frontend-footer-contributors' => 'Статтю створено такими ж як Ви <a href="$1">користувачами</a>',
+	'mobile-frontend-footer-contributors-text' => 'Статтю створено такими ж як Ви <a href="$1">користувачами</a>', # Fuzzy
 	'mobile-frontend-featured-article' => 'Вибрана стаття',
 	'mobile-frontend-news-items' => 'У новинах',
 	'mobile-frontend-leave-feedback-notice' => 'Ваш відгук допоможе нам покращити користування мобільним сайтом. Він буде розміщений публічно (разом з іменем користувача, версією браузера та операційної системи) на сторінці &quot;$1&quot;. Будь ласка, оберіть інформативний рядок, наприклад, "Проблеми форматування широких таблиць". Висловлюйтесь у відповідності до наших умов використання.',
@@ -11902,8 +11922,6 @@ $messages['uk'] = array(
 	'mobile-frontend-privacy-link-text' => 'Конфіденційність',
 	'mobile-frontend-about-link-text' => 'Про',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Вміст доступний під ліцензією <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Умови використання</a>',
 	'mobile-frontend-footer-contact' => "Зв'язок",
 	'mobile-frontend-search-noresults' => 'Немає заголовків сторінок, які відповідають критеріям пошуку. Змініть параметри пошуку, або натисніть кнопку пошуку, щоб знайти всередині сторінок.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Відкрити головне меню',
@@ -12081,7 +12099,7 @@ $messages['vi'] = array(
 	'mobile-frontend-close-section' => 'Đóng phần này',
 	'mobile-frontend-show-button' => 'Hiện',
 	'mobile-frontend-hide-button' => 'Ẩn',
-	'mobile-frontend-empty-homepage' => 'Trang chủ này cần được thiết lập. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway?uselang=vi#Mobile_homepage">Hướng dẫn kích hoạt chế độ di động cho trang này</a>.',
+	'mobile-frontend-empty-homepage-text' => 'Trang chủ này cần được thiết lập. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway?uselang=vi#Mobile_homepage">Hướng dẫn kích hoạt chế độ di động cho trang này].',
 	'mobile-frontend-regular-site' => 'Bản dành cho máy tính để bàn',
 	'mobile-frontend-wml-continue' => 'Tiếp tục…',
 	'mobile-frontend-wml-back' => 'Quay lại…',
@@ -12095,7 +12113,7 @@ $messages['vi'] = array(
 	'mobile-frontend-missing-image' => 'Hình',
 	'mobile-frontend-off' => 'TẮT',
 	'mobile-frontend-on' => 'BẬT',
-	'mobile-frontend-footer-contributors' => 'Trang do <a href="$1">những người giống bạn</a> đóng góp',
+	'mobile-frontend-footer-contributors-text' => 'Trang do [$1 những người giống bạn] đóng góp',
 	'mobile-frontend-featured-article' => 'Bài viết chọn lọc',
 	'mobile-frontend-news-items' => 'Tin tức',
 	'mobile-frontend-leave-feedback-notice' => 'Phản hồi giúp chúng tôi cải tiến các trang di động. Những cảm nghĩ của bạn sẽ được đăng công khai vào trang “$1”, cùng với tên người dùng, phiên bản trình duyệt, và hệ điều hành của bạn. Xin vui lòng chọn một tiêu đề có ý nghĩa, thí dụ “Vấn đề hiển thị bảng rộng”. Phản hồi của bạn sẽ được xử lý theo các điều khoản sử dụng.',
@@ -12152,8 +12170,6 @@ $messages['vi'] = array(
 	'mobile-frontend-privacy-link-text' => 'Riêng tư',
 	'mobile-frontend-about-link-text' => 'Giới thiệu',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Nội dung có sẵn theo <a href="//vi.m.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Điều_khoản_Sử_dụng?useformat=mobile&uselang=vi">Các Điều khoản Sử dụng</a>',
 	'mobile-frontend-footer-contact' => 'Liên lạc',
 	'mobile-frontend-search-noresults' => 'Không tìm thấy trang trùng tên. Hãy thay đổi truy vấn hoặc bấm phím tìm kiếm để tìm kiếm trong trang.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Mở trình đơn chính',
@@ -12438,7 +12454,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-close-section' => '关闭本章节',
 	'mobile-frontend-show-button' => '展开',
 	'mobile-frontend-hide-button' => '隐藏',
-	'mobile-frontend-empty-homepage' => '此首页需要设置。<a href="//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">了解如何启动此站的移动版本</a>',
+	'mobile-frontend-empty-homepage-text' => '此首页需要设置。<a href="//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">了解如何启动此站的移动版本</a>', # Fuzzy
 	'mobile-frontend-regular-site' => '桌面版视图',
 	'mobile-frontend-wml-continue' => '继续...',
 	'mobile-frontend-wml-back' => '返回...',
@@ -12452,7 +12468,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-missing-image' => '图像',
 	'mobile-frontend-off' => '关',
 	'mobile-frontend-on' => '开',
-	'mobile-frontend-footer-contributors' => '条目由同你一样的<a href="$1">贡献者</a>编辑', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => '条目由同你一样的<a href="$1">贡献者</a>编辑', # Fuzzy
 	'mobile-frontend-featured-article' => '特色条目',
 	'mobile-frontend-news-items' => '新闻动态',
 	'mobile-frontend-leave-feedback-notice' => '你的反馈将帮助我们改进你的移动版网站体验。它们（附有你的用户名、浏览器版本和操作系统信息）会被公开发布在“$1”页面。请使用实用的主题，如“宽表格式问题”。你的反馈必须符合我们的使用条款。',
@@ -12509,8 +12525,6 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-privacy-link-text' => '隐私',
 	'mobile-frontend-about-link-text' => '关于',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => '内容采用<a href="//zh.m.wikipedia.org/wiki/Wikipedia:CC-BY-SA-3.0协议文本?useformat=mobile">CC BY-SA 3.0</a>授权',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">使用条款</a>',
 	'mobile-frontend-footer-contact' => '联系',
 	'mobile-frontend-search-noresults' => '无条目标题匹配你的搜索。请更换关键词，或按键盘搜索键在条目中搜索。', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => '打开主菜单',
@@ -12607,7 +12621,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-close-section' => '關閉本章節',
 	'mobile-frontend-show-button' => '顯示',
 	'mobile-frontend-hide-button' => '隱藏',
-	'mobile-frontend-empty-homepage' => '本首頁需要設置。<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">如何設置本站的手機版</a>',
+	'mobile-frontend-empty-homepage-text' => '本首頁需要設置。<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">如何設置本站的手機版</a>', # Fuzzy
 	'mobile-frontend-regular-site' => '桌面版',
 	'mobile-frontend-wml-continue' => '繼續...',
 	'mobile-frontend-wml-back' => '返回...',
@@ -12621,7 +12635,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-missing-image' => '圖片',
 	'mobile-frontend-off' => '關',
 	'mobile-frontend-on' => '開',
-	'mobile-frontend-footer-contributors' => '頁面由和您一樣的<a href="$1">貢獻者</a>編寫',
+	'mobile-frontend-footer-contributors-text' => '頁面由和您一樣的<a href="$1">貢獻者</a>編寫', # Fuzzy
 	'mobile-frontend-featured-article' => '特色條目',
 	'mobile-frontend-news-items' => '新聞動態',
 	'mobile-frontend-leave-feedback-notice' => '您的意見將幫助我們改善你的手機版網頁體驗。它們（附有您的用戶名稱、 瀏覽器版本和操作系統）將公開張貼到頁面「$1」。請選擇內容豐富的標題，例如「寬表格格式有問題」。您的反饋遵守我們的使用條款。',
@@ -12678,8 +12692,6 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-privacy-link-text' => '隱私',
 	'mobile-frontend-about-link-text' => '關於',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => '內容在<a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>協議下提供',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">使用條款</a>',
 	'mobile-frontend-footer-contact' => '聯繫',
 	'mobile-frontend-search-noresults' => '沒有頁面標題匹配您的搜尋字詞。更改您的搜索，或按鍵盤搜尋鍵進行全文搜索。',
 	'mobile-frontend-main-menu-button-tooltip' => '開啟主目錄',
