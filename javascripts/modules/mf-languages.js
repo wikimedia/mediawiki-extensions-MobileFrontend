@@ -48,7 +48,7 @@ var m = ( function() {
 		} );
 	}
 
-	function init() {
+	function initButton() {
 		var $a = $( '#mw-mf-language-section' ),
 			$h2 = $a.find( 'h2' );
 
@@ -59,11 +59,15 @@ var m = ( function() {
 					on( 'click', createLanguagePage ).insertBefore( $a );
 		}
 		$a.hide();
+	}
 
+	function init() {
 		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
 			if ( curPage.hash === '#mw-mf-overlay-language' ) {
 				createLanguagePage();
 			}
+		} ).on( 'mw-mf-languages-loaded', function() {
+			initButton();
 		} );
 	}
 
