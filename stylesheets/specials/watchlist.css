@@ -96,8 +96,11 @@
   top: 3em;
   right: 28px;
 }
+#mw-mf-diffview h2 {
+  margin: 0;
+}
 #mw-mf-diffview .mw-mf-bytesadded {
-  color: green;
+  color: #008a46;
 }
 #mw-mf-diffview .mw-mf-bytesremoved {
   color: red;
@@ -106,6 +109,17 @@
 #mw-mf-diffview del {
   display: block;
   padding-left: 8px;
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-roles,
+#mw-mf-diffview .mw-mf-diff-date,
+#mw-mf-diffview .mw-mf-bytesremoved,
+#mw-mf-diffview .mw-mf-bytesadded {
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+#mw-mf-diffview .mw-mf-diff-date {
+  font-size: 0.5em;
+  color: #C6C6C6;
 }
 #mw-mf-diffview ins {
   color: green;
@@ -126,9 +140,42 @@
   font-style: italic;
 }
 #mw-mf-diffview #mw-mf-userinfo {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 5em;
   padding: 1em;
   background-color: #f0f0f0;
   border-top: solid 1px #c0c0c0;
+}
+#mw-mf-diffview #mw-mf-userinfo::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  border-width: 0px 10px 10px;
+  border-style: solid;
+  border-color: #f0f0f0 transparent;
+  display: block;
+  width: 0;
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-user,
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-anon {
+  padding-left: 20px;
+  line-height: 14px;
+  background-position: left center;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 16px 16px;
+  -o-background-size: 16px 16px;
+  -webkit-background-size: 16px 16px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-user {
+  background-image: url(images/user.png);
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-anon {
+  background-image: url(images/user-ip.png);
 }

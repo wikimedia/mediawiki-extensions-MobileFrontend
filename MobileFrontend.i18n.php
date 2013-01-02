@@ -177,7 +177,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-filter-talk' => 'Talk',
 	'mobile-frontend-watchlist-filter-other' => 'Other',
 
-	'mobile-frontend-diffview-title' => 'Change to $1',
+	'mobile-frontend-diffview-title' => 'Changes',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edit|edits}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonymous user',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} added',
@@ -384,7 +384,7 @@ Don't translate the special page name",
 	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: article pages only',
 	'mobile-frontend-watchlist-filter-talk' => 'Label on filter selector for mobile watchlist: talk pages',
 	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or article)',
-	'mobile-frontend-diffview-title' => 'Header for common mobile diff/change view. "Change" is a noun and refers to the shown diff/change. Parameters:
+	'mobile-frontend-diffview-title' => 'Header for common mobile diff/change view. Takes an optional parameter (for backwards compatibility):
 * $1 is page title.',
 	'mobile-frontend-diffview-editcount' => 'Edit count of user in common mobile diff/change view. $1 is the count, may use PLURAL.',
 	'mobile-frontend-diffview-anonymous' => 'Label to indicate anonymous user in common mobile diff/change view.',
