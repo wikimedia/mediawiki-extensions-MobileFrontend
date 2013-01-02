@@ -196,6 +196,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//6QA\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-02T18:28:13Z",
+      "side": 1,
+      "message": "This would mean that all the text content (articles, most pages) would also be displayed without any margins, and that\u0027s not what we want. We could add another wrapper just for those pages, but why not just remove the #content_wrapper from the HTML of non-text pages instead?\n\nI just didn\u0027t want this changeset to get too big, but I can try to do it here if you want to.",
+      "parentUuid": "AAADgX//66E\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//7yU\u003d",
         "filename": "stylesheets/less/specials/watchlist.less",
         "patchSetId": 2
@@ -243,6 +261,24 @@
       "side": 1,
       "message": "seeing it on iPhone, safari and chrome...",
       "parentUuid": "AAADgX//7mg\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//6P8\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-02T18:28:13Z",
+      "side": 1,
+      "message": "Browser cache refreshed?",
+      "parentUuid": "AAADgX//654\u003d",
       "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -349,6 +385,24 @@
       "side": 1,
       "message": "we already include a reset.css .... maybe we need a different one?",
       "parentUuid": "AAADgX//7mM\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//6PU\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-02T18:28:13Z",
+      "side": 1,
+      "message": "I think we should zero the margins and paddings, remove text-decoration from \u003ca\u003e and any styling of \u003cul\u003e there. I\u0027ll prepare a separate changeset later.",
+      "parentUuid": "AAADgX//66I\u003d",
       "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
