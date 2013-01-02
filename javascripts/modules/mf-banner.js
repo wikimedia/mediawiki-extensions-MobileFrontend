@@ -4,7 +4,7 @@ var m = ( function() {
 
 	function initBanner( banner ) {
 		var cookieNameZeroVisibility = banner.getAttribute( 'id' ),
-			settings = M.getModule( 'settings' ),
+			settings = M.settings,
 			saveUserSetting = settings.saveUserSetting,
 			getUserSetting = settings.getUserSetting,
 			visibility,
