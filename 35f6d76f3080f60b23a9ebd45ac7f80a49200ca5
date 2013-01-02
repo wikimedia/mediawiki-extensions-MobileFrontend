@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//6KY\u003d",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T19:18:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADgX//6Sk\u003d",
+      "revId": "35f6d76f3080f60b23a9ebd45ac7f80a49200ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//6Sg\u003d",
         "filename": "javascripts/modules/mf-watchlist.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//6K0\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T19:18:48Z",
+      "side": 1,
+      "message": "I suppose automatic escaping will be useful.",
+      "parentUuid": "AAADgX//6Sg\u003d",
+      "revId": "35f6d76f3080f60b23a9ebd45ac7f80a49200ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//6SY\u003d",
         "filename": "stylesheets/less/mf-variables.less",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-01-02T17:09:11Z",
       "side": 1,
       "message": "Just out of interest... What are these \"less\" files for?",
+      "revId": "35f6d76f3080f60b23a9ebd45ac7f80a49200ca5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//6K4\u003d",
+        "filename": "stylesheets/less/mf-variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T19:18:48Z",
+      "side": 1,
+      "message": "Tidier and more programmatic css:\n\nsee http://lesscss.org/",
+      "parentUuid": "AAADgX//6SY\u003d",
       "revId": "35f6d76f3080f60b23a9ebd45ac7f80a49200ca5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
