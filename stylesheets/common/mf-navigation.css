@@ -500,6 +500,7 @@ html.overlay ul.content li:hover {
 .overlay .header input.search {
   margin-top: 0;
   margin-right: 20px;
+  margin-left: 40px;
 }
 .overlay .header h2 {
   margin: 0;
