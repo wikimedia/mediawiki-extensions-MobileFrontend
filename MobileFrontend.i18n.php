@@ -164,6 +164,9 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
 	'mobile-frontend-watchlist-removed' => 'Removed $1 from your watchlist',
 	'mobile-frontend-watchlist-view' => 'View your watchlist',
+	'mobile-frontend-watchlist-cta' => 'Please login or sign up to watch this page.',
+	'mobile-frontend-watchlist-cta-button-login' => 'Login',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Sign up',
 
 	'mobile-frontend-watchlist-a-z' => 'Watched pages',
 	'mobile-frontend-watchlist-feed' => 'Pages with changes',
@@ -204,6 +207,9 @@ Help bring these pages to life by donating your images that you are willing to g
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
 	'tag-mobile_edit-description' => 'Edit made from mobile site',
+
+	// navigation drawer
+	'mobile-frontend-drawer-cancel' => 'Cancel',
 );
 
 /** Message documentation (Message documentation)
@@ -374,6 +380,10 @@ Don't translate the special page name",
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
+	'mobile-frontend-watchlist-cta' => 'Appears above the login form when you click watchlist icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in javascript.',
+	'mobile-frontend-watchlist-cta-button-login' => 'A link with label to login page',
+	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page',
+
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes',
 	'mobile-frontend-watchlist-a-z-empty' => 'Message to show when watchlist a-z list is empty',
@@ -407,6 +417,7 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-license' => 'Text notifying user of license that image will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in Special:RecentChanges, see also {{msg-mw|tag-mobile_edit-description}}',
 	'tag-mobile_edit-description' => 'Change tag description e.g. in Special:Tags, see also {{msg-mw|tag-mobile_edit}}',
+	'mobile-frontend-drawer-cancel' => 'Not visible but the text label for the cancel button inside a navigation overlay',
 );
 
 /** Achinese (Acèh)

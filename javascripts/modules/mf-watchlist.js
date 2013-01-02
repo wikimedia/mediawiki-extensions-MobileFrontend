@@ -1,7 +1,8 @@
 (function( M, $ ) {
 
 var w = ( function() {
-	var lastToken;
+	var lastToken, nav = M.navigation,
+		POST_LOGIN_ACTION_KEY = 'mobile.postaction';
 
 	function toggleWatch( title, token, unwatchflag, callback, errback ) {
 		var data = {
@@ -30,11 +31,15 @@ var w = ( function() {
 			done( report );
 	}
 
-	function createWatchListButton( container, title, isWatchedArticle ) {
-		var watchBtn, prevent;
+	function createButton( container ) {
 		$( container ).find( '.watch-this-article' ).remove();
+		return $( '<a class="watch-this-article">' ).appendTo( container )[ 0 ];
+	}
 
-		watchBtn = $( '<a class="watch-this-article">' ).appendTo( container )[ 0 ];
+	function createWatchListButton( container, title, isWatchedArticle ) {
+		var prevent,
+			val,
+			watchBtn = createButton( container );
 
 		if( isWatchedArticle ) {
 			$( watchBtn ).addClass( 'watched' );
@@ -54,15 +59,26 @@ var w = ( function() {
 			enable();
 		}
 
+		function toggleWatchStatus( unwatch ) {
+			toggleWatch( title, lastToken, unwatch, success, enable );
+		}
+
 		$( watchBtn ).click( function( ev ) {
 			if( prevent ) {
 				ev.preventDefault();
 			}
 			prevent = true;
 			$( watchBtn ).addClass( 'disabled waiting' );
-			toggleWatch( title, lastToken, $( watchBtn ).hasClass( 'watched' ),
-				success, enable );
+			toggleWatchStatus( $( watchBtn ).hasClass( 'watched' ) );
 		} );
+
+		// check if user just logged in and if so trigger save to watchlist action
+		val = M.settings.getUserSetting( POST_LOGIN_ACTION_KEY );
+		if ( val === 'watch' && window.location.search.indexOf( 'article_action=watch' ) > -1 && !isWatchedArticle ) {
+			$( watchBtn ).addClass( 'disabled waiting' );
+			toggleWatchStatus( false );
+			M.settings.saveUserSetting( POST_LOGIN_ACTION_KEY, '' ); // reset it
+		}
 	}
 
 	function checkWatchStatus( titles, callback ) {
@@ -89,12 +105,39 @@ var w = ( function() {
 	}
 
 	function initWatchListIcon( container, title ) {
+		function queueWatchAction() {
+			M.settings.saveUserSetting( POST_LOGIN_ACTION_KEY, 'watch' );
+		}
+
 		M.getToken( 'watch', function( data ) {
 			if( data.tokens && !data.warnings ) { // then user is logged in
 				lastToken = data.tokens.watchtoken;
 				checkWatchStatus( [ title ], function( status ) {
 					createWatchListButton( container, title, status[ title ] );
 				} );
+			} else {
+				$( createButton( container ) ).click( function() {
+					var $drawer = nav.showDrawer(), $a,
+						href = M.history.getArticleUrl( 'Special:UserLogin' ),
+						updateQs = M.history.updateQueryStringParameter;
+
+					$( '<p>' ).html( M.message( 'mobile-frontend-watchlist-cta' ) ).appendTo( $drawer );
+					$a = $( '<a> ').text( M.message( 'mobile-frontend-watchlist-cta-button-login' ) ).
+						addClass( 'button' ).
+						click( queueWatchAction ).appendTo( $drawer );
+					href = updateQs( href, 'returnto', M.getConfig( 'title' ) );
+					href = updateQs( href, 'returntoquery', 'article_action%3Dwatch' );
+					$a.attr( 'href', href );
+
+					// do signup url
+					href = updateQs( href, 'type', 'signup' );
+					$( '<a>' ).text( M.message( 'mobile-frontend-watchlist-cta-button-signup' ) ).
+						attr( 'href', href ).
+						addClass( 'signup' ).
+						click( queueWatchAction ).appendTo( $drawer );
+				} );
+				// clear user setting
+				M.settings.saveUserSetting( POST_LOGIN_ACTION_KEY, '' );
 			}
 		} );
 	}
