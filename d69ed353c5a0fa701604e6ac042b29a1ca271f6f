@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//6bs\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-02T13:16:05Z",
+      "side": 1,
+      "message": "This string has very few characters, but the UI should facilitate some three times the width in English. Together with great documentation for translators, I\u0027m sure this can work.",
+      "parentUuid": "AAADgX//7yc\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//7yY\u003d",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 2
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "Same.",
       "parentUuid": "AAADgX//7yY\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//6bo\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-02T13:16:05Z",
+      "side": 1,
+      "message": "Same as my comment above. UI should facilitate a string up to 175% or so of the width in English.",
+      "parentUuid": "AAADgX//7ms\u003d",
       "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
