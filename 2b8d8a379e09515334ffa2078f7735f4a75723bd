@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//6M0\u003d",
+        "filename": "javascripts/common/mf-settings.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-02T18:46:31Z",
+      "side": 1,
+      "message": "Why the newline?",
+      "revId": "2b8d8a379e09515334ffa2078f7735f4a75723bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//6Ms\u003d",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-02T18:46:31Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "2b8d8a379e09515334ffa2078f7735f4a75723bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
