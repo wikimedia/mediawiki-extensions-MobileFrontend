@@ -180,7 +180,7 @@ $wgResourceModules['mobile.startup'] = array(
 );
 
 $wgResourceModules['mobile.beta.jquery'] = array(
-	'dependencies' => array( 'mobile.startup' ),
+	'dependencies' => array( 'mobile.production-jquery' ),
 	'styles' => array(
 		'stylesheets/modules/mf-watchlist.css',
 	),
