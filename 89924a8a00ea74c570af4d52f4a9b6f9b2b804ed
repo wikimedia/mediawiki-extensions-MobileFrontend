@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//6Ik\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-02T19:47:18Z",
+      "side": 1,
+      "message": "\u003d\u003d will cause a mysql syntax error. should just be single \u003d. Also, swap the order of the wl_title and wl_namespace to avoid filesort. MySQL\u0027s \u0027explain\u0027 command is your friend :)",
+      "revId": "89924a8a00ea74c570af4d52f4a9b6f9b2b804ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
