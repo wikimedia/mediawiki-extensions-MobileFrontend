@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//5+Y\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-02T21:25:09Z",
+      "side": 1,
+      "message": "I assume its visible in screen readers? It would be okay to use a core cancel button message key for this, instead of a new key here.",
+      "parentUuid": "AAADgX//5+8\u003d",
+      "revId": "a90faa4f89ec235ff182c1925d47cc17b8c229d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//5+4\u003d",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 4
