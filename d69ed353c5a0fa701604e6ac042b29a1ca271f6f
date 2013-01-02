@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//650\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T12:00:08Z",
+      "side": 1,
+      "message": "that\u0027s fine I\u0027d just like an i18n perspective",
+      "parentUuid": "AAADgX//7mw\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//7yY\u003d",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 2
@@ -124,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//66E\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T12:00:08Z",
+      "side": 1,
+      "message": "I\u0027m saying fix that problem at the source. at very least alter rule for content wrapper so it has no margin rather than introducing hacks :)",
+      "parentUuid": "AAADgX//7mk\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//7yU\u003d",
         "filename": "stylesheets/less/specials/watchlist.less",
         "patchSetId": 2
@@ -153,6 +189,24 @@
       "side": 1,
       "message": "Wow, that\u0027s weird, I tested on Android and iPhone and everything was OK. What browser/version is that?",
       "parentUuid": "AAADgX//7yU\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//654\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T12:00:08Z",
+      "side": 1,
+      "message": "seeing it on iPhone, safari and chrome...",
+      "parentUuid": "AAADgX//7mg\u003d",
       "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -194,6 +248,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//66A\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T12:00:08Z",
+      "side": 1,
+      "message": "see above reply",
+      "parentUuid": "AAADgX//7mU\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//7yo\u003d",
         "filename": "stylesheets/less/specials/watchlist.less",
         "patchSetId": 2
@@ -229,6 +301,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//66I\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T12:00:08Z",
+      "side": 1,
+      "message": "we already include a reset.css .... maybe we need a different one?",
+      "parentUuid": "AAADgX//7mM\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//7yg\u003d",
         "filename": "stylesheets/less/specials/watchlist.less",
         "patchSetId": 2
@@ -258,6 +348,24 @@
       "side": 1,
       "message": "Uh, that\u0027s so weird, it worked for me. Anyway, maybe we should give up on the spaces in .less altogether to make it less confusing?",
       "parentUuid": "AAADgX//7yg\u003d",
+      "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//658\u003d",
+        "filename": "stylesheets/less/specials/watchlist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-02T12:00:08Z",
+      "side": 1,
+      "message": "they\u0027ve never been enforced in css/less i just prefer them for my own benefit",
+      "parentUuid": "AAADgX//7mI\u003d",
       "revId": "d69ed353c5a0fa701604e6ac042b29a1ca271f6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
