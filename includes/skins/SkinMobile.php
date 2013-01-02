@@ -8,7 +8,7 @@ class SkinMobile extends SkinMobileBase {
 
 	protected function prepareTemplate() {
 		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
-			   $wgMFCustomLogos, $wgVersion, $wgMFLogEvents, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint;
+			   $wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate();
@@ -65,89 +65,16 @@ class SkinMobile extends SkinMobileBase {
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device['supports_jquery'] );
-		$styles = array();
-		$scripts = array();
-		if ( $inBeta ) {
-			$styles[] = 'mobile.beta';
-			$scripts[] = 'mobile.beta';
-			if( $device['supports_jquery'] ) {
-				$styles[] = 'mobile.beta.jquery';
-				$scripts[] = 'mobile.beta.jquery';
-				if ( $wgMFLogEvents ) {
-					$scripts[] = 'mobile.beta.jquery.eventlog';
-				}
-			}
-		} else {
-			$styles[] = 'mobile';
-			$scripts[] = 'mobile';
-			$styles[] = 'mobile.production-only';
-			$scripts[] = 'mobile.production-only';
-		}
 
-		if ( $inAlpha ) {
-			$scripts[] = 'mobile.alpha';
-			$styles[] = 'mobile.alpha';
-		}
-
-		$styles[] = "mobile.device.{$device['css_file_name']}";
-		$styles[] = 'mobile.production-jquery';
-		$styleLinks = array( $this->resourceLoaderLink( $styles, 'styles' ) );
 		$namespace = $title->getNamespace();
 		$tpl->set( 'namespace', $namespace );
-		$isFilePage = $namespace == NS_FILE;
-		if ( $isFilePage ) {
-			$styleLinks[] = $this->resourceLoaderLink( 'mobile.filePage', 'styles' );
-		}
-		$styleLinks[] = $this->resourceLoaderLink( array( 'mobile.site' ), 'styles', false );
-		$tpl->set( 'cssLinks', implode( "\n", $styleLinks ) );
+
 		wfProfileOut( __METHOD__ . '-modules' );
 
 		$tpl->setRef( 'wgAppleTouchIcon', $wgAppleTouchIcon );
 
-		if ( $device['supports_jquery'] ) {
-			$scripts[] = 'mobile.production-jquery';
-		}
-
-		// setup destinations for scripts at top and scripts at bottom
-		$headLinks = array();
-		$scriptLinks = array();
-		if ( $device['supports_jquery'] ) {
-			global $wgMFEnableResourceLoader;
-			if ( $inBeta && $wgMFEnableResourceLoader ) {
-				// Initialize ResourceLoader, targeted to mobile...
-				$headLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
-				$modules = $this->getOutput()->getModules( true );
-				if ( $modules ) {
-					// Load ResourceLoader modules
-					$headLinks[] = Html::inlineScript(
-						ResourceLoader::makeLoaderConditionalScript(
-							Xml::encodeJsCall( 'mw.loader.load', array( $modules ) )
-						)
-					);
-				}
-			} else {
-				// Not beta or RL mode disabled; use old method of loading jquery.
-				$scriptLinks[] = $this->resourceLoaderLink( 'jquery', 'scripts', true, true );
-				global $wgResponsiveImages;
-				if ( $wgResponsiveImages ) {
-					$scriptLinks[] = $this->resourceLoaderLink( array( 'jquery.hidpi', '
-mediawiki.hidpi' ), 'scripts', true, true );
-				}
-			}
-		} else {
-			$scriptLinks[] = $this->resourceLoaderLink( array( 'mobile.jqueryshim' ), 'scripts', false );
-		}
-		$scriptLinks[] = $this->resourceLoaderLink( $scripts, 'scripts' );
-		if ( $isFilePage ) {
-			$scriptLinks[] = $this->resourceLoaderLink( 'mobile.filePage', 'scripts' );
-		}
-		$scriptLinks[] = $this->resourceLoaderLink( array( 'mobile.site' ), 'scripts', false );
-		$bottomScripts = implode( "\n", $scriptLinks );
-		$tpl->set( 'bottomScripts', $device['supports_javascript'] ? $bottomScripts : '' );
-
-		$headLinks[] = $this->resourceLoaderLink( array( '' => 'mobile.head' ), 'scripts' );
-		$preamble = implode( "\n", $headLinks );
-		$tpl->set( 'preambleScript', $device['supports_javascript'] ? $preamble : '' );
+		// setup destinations for styles/scripts at top and at bottom
+		$tpl = $this->attachResources( $title, $tpl, $device );
 
 		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
 		$tpl->set( 'stopMobileRedirectCookieDuration', $context->getUseFormatCookieDuration() );
@@ -241,6 +168,114 @@ mediawiki.hidpi' ), 'scripts', true, true );
 		}
 
 		wfProfileOut( __METHOD__ );
+		return $tpl;
+	}
+
+	protected function attachResources( $title, $tpl, $device ) {
+		global $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages;
+
+		$context = MobileContext::singleton();
+		$inBeta = $context->isBetaGroupMember();
+		$inAlpha = $context->isAlphaGroupMember();
+		$rlSupport = $inBeta && $wgMFEnableResourceLoader;
+		$jsEnabled = $device['supports_javascript'];
+		$jQueryEnabled = $device['supports_jquery'];
+		$isFilePage = $title->getNamespace() == NS_FILE;
+		$action = $context->getRequest()->getText( 'action' );
+		$out = $this->getOutput();
+
+		$moduleNames = array( 'mobile.startup', 'mobile.site' );
+		$headModuleNames = array( 'mobile.head', 'mobile.styles' );
+		$headLinks = array();
+
+		if ( $jQueryEnabled ) {
+			if ( $rlSupport ) {
+				// Initialize ResourceLoader, targeted to mobile...
+				$headLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
+				$modules = $out->getModules( true );
+
+				if ( $modules ) {
+					// Load ResourceLoader modules
+					$headLinks[] = Html::inlineScript(
+						ResourceLoader::makeLoaderConditionalScript(
+							Xml::encodeJsCall( 'mw.loader.load', array( $modules ) )
+						)
+					);
+				}
+			} else {
+				// Not beta or RL mode disabled; use old method of loading jquery.
+				$headModuleNames[] = 'jquery';
+				if ( $wgResponsiveImages ) {
+					$moduleNames[] = 'jquery.hidpi';
+					$moduleNames[] = 'mediawiki.hidpi';
+				}
+			}
+		} else {
+			$headModuleNames[] = 'mobile.jqueryshim';
+		}
+
+		// jQuery only
+		if ( $jQueryEnabled ) {
+			$moduleNames[] = 'mobile.production-jquery';
+		}
+
+		// specific to beta/alpha
+		if ( $inBeta ) {
+
+			if ( $jQueryEnabled ) {
+				$moduleNames[] = 'mobile.beta.jquery';
+
+				if ( $wgMFLogEvents ) {
+					$moduleNames[] = 'mobile.beta.jquery.eventlog';
+				}
+
+				if ( $inAlpha ) {
+					$moduleNames[] = 'mobile.alpha';
+				}
+			}
+		} else {
+			$moduleNames[] = 'mobile.production-only';
+		}
+
+		// specific to current context
+		// FIXME: need more generic+tidy way of doing this rather than having a module per page
+		if ( $isFilePage ) {
+			$moduleNames[] = 'mobile.filePage';
+		} else if ( $title->isSpecial( 'Userlogin' ) ) {
+			$moduleNames[] = 'mobile.special.login';
+		} else if ( $title->isSpecial( 'MobileFeedback' ) ) {
+			$moduleNames[] = 'mobile.special.feedback';
+		} else if ( $title->isSpecial( 'MobileOptions' ) ) {
+			$moduleNames[] = 'mobile.special.settings';
+		} else if ( $title->isSpecial( 'Search' ) ) {
+			$moduleNames[] = 'mobile.special.search';
+		}
+
+		if ( $action === 'edit' ) {
+			$moduleNames[] = 'mobile.action.edit';
+		} else if ( $action === 'history' ) {
+			$moduleNames[] = 'mobile.action.history';
+		}
+		$moduleNames[] = "mobile.device.{$device['css_file_name']}";
+
+		// attach
+		if ( $jsEnabled ) {
+			$headLinks[] = $this->resourceLoaderLink( $headModuleNames, 'scripts' );
+		}
+		$headLinks[] = $this->resourceLoaderLink( $headModuleNames, 'styles' );
+
+		if ( $jQueryEnabled && $rlSupport ) {
+			$bottomScripts = Html::inlineScript(
+				ResourceLoader::makeLoaderConditionalScript(
+					Xml::encodeJsCall( 'mw.loader.load', array( $moduleNames ) )
+				)
+			);
+		} else {
+			$bottomScripts = $this->resourceLoaderLink( $moduleNames, 'scripts' );
+			$headLinks[] = $this->resourceLoaderLink( $moduleNames, 'styles' );
+		}
+		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
+		$tpl->set( 'bottomScripts', $bottomScripts );
 		return $tpl;
 	}
 
@@ -566,13 +601,12 @@ class SkinMobileTemplate extends BaseTemplate {
 		<title><?php $this->text( 'pagetitle' ) ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<?php $this->html( 'robots' ) ?>
-		<?php $this->html( 'cssLinks' ) ?>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
 		<?php $this->html( 'touchIcon' ) ?>
 		<script type="text/javascript">
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
 		</script>
-		<?php $this->html( 'preambleScript' ) ?>
+		<?php $this->html( 'preamble' ) ?>
 		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
 	</head>
 	<body class="<?php $this->text( 'bodyClasses' ) ?>">
