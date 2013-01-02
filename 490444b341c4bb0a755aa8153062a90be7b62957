@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADgX//6jM\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-02T08:51:04Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this makes it clearer. Why not just \"Changes\"?",
+      "revId": "490444b341c4bb0a755aa8153062a90be7b62957",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//7Vk\u003d",
         "filename": "stylesheets/less/specials/watchlist.less",
         "patchSetId": 1
