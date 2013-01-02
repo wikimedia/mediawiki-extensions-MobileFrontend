@@ -62,6 +62,9 @@ $specialPageAliases['lb'] = array(
 $specialPageAliases['mk'] = array(
 	'MobileFeedback' => array( 'МислењеМобилен' ),
 	'MobileOptions' => array( 'МобилниПоставки' ),
+	'DonateImage' => array( 'ПодариСлика' ),
+	'MobileDiff' => array( 'МобилнаРазлика' ),
+	'MobileMenu' => array( 'МобилноМени' ),
 );
 
 /** Malayalam (മലയാളം) */
@@ -74,6 +77,9 @@ $specialPageAliases['ml'] = array(
 $specialPageAliases['nl'] = array(
 	'MobileFeedback' => array( 'MobieleTerugkoppeling' ),
 	'MobileOptions' => array( 'MobieleVoorkeuren' ),
+	'DonateImage' => array( 'AfbeeldingDoneren' ),
+	'MobileDiff' => array( 'MobielVerschillen' ),
+	'MobileMenu' => array( 'MobielMenu' ),
 );
 
 /** Sicilian (sicilianu) */
