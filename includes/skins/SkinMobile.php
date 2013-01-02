@@ -271,7 +271,7 @@ class SkinMobile extends SkinMobileBase {
 				)
 			);
 		} else {
-			$bottomScripts = $this->resourceLoaderLink( $moduleNames, 'scripts' );
+			$bottomScripts = $jsEnabled ? $this->resourceLoaderLink( $moduleNames, 'scripts' ) : '';
 			$headLinks[] = $this->resourceLoaderLink( $moduleNames, 'styles' );
 		}
 		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
