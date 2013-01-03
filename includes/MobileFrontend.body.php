@@ -503,6 +503,7 @@ class ExtMobileFrontend extends ContextSource {
 			$logId = $rc->getAttribute( 'rc_logid' );
 			ChangeTags::addTags( 'mobile edit', $rcId, $revId, $logId );
 		}
+		return true;
 	}
 
 	/**
