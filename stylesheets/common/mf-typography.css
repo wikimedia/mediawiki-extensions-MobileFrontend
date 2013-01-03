@@ -74,6 +74,8 @@ sup {
 }
 #content_wrapper {
   position: relative;
+}
+#content_wrapper .content {
   margin: 0 23px 0 23px;
 }
 #content_wrapper .section h3:first-child {

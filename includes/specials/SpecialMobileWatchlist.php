@@ -18,7 +18,12 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addModules( 'mobile.watchlist' );
 
 		$output->addHtml(
-			Html::openElement( 'div', array( 'id' => 'mw-mf-watchlist' ) )
+			Html::openElement( 'div',
+				array(
+					'class' => 'content',
+					'id' => 'mw-mf-watchlist',
+				)
+			)
 		);
 
 		if ( $recentChangesView ) {

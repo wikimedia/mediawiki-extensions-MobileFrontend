@@ -564,7 +564,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->searchBox() ?>
 	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
 			<?php if ( !$this->data['isSpecialPage'] ) { ?>
-			<div id="content">
+			<div id="content" class="content">
 			<?php } ?>
 			<?php $this->html( 'firstHeading' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
@@ -583,7 +583,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<div id="mw-mf-overlay">
 			<?php $this->html( 'firstHeading' ) ?>
-				<div id="content_wrapper" class="content mw-mf-special">
+				<div id="content_wrapper" class="mw-mf-special">
 					<?php $this->html( 'bodytext' ) ?>
 				</div>
 			</div>

@@ -64,6 +64,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 		$warning = $this->msg( 'mobile-frontend-leave-feedback-warning' );
 
 		$html = <<<HTML
+		<div class="content">
 		{$warning}
 		<div class='feedback'>
 		<h2 class="section_heading" id="section_1">{$technicalProblemSectionHeader}</h2>
@@ -127,6 +128,7 @@ HTML;
 			</div>
 HTML;
 		}
+		$html .= "</div>"; // close .content
 		$this->getOutput()->addHtml( $html );
 	}
 

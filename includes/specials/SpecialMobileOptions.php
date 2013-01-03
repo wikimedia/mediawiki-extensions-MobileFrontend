@@ -71,7 +71,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			$this->msg( 'mobile-frontend-off' )->escaped() .'</span>';
 		$action = $this->getTitle()->getLocalURL();
 		$html = Html::openElement( 'form',
-			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
+			array( 'class' => 'mw-mf-settings content', 'method' => 'POST', 'action' => $action )
 		);
 		$aboutMessage = $this->msg( 'mobile-frontend-settings-description' )->parse();
 		$token = Html::hidden( 'token', $context->getMobileToken() );

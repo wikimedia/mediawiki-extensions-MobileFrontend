@@ -460,8 +460,10 @@ html.overlay ul.content li:hover {
   display: block;
 }
 #mw-mf-overlay div.content {
-  margin: 14pt 23px 0 23px;
   padding-bottom: 20px;
+}
+#mw-mf-overlay .content {
+  margin-top: 14pt;
 }
 #mw-mf-overlay .alert {
   padding: 8px;
