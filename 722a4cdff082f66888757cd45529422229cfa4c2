@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//5vk\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-03T02:01:56Z",
+      "side": 1,
+      "message": "i would prefer that bottomScripts-related actions do not even take place if js is not enabled - no point in running those operations as well. same thing for headmodules, but that seems less egregious to me.",
+      "revId": "722a4cdff082f66888757cd45529422229cfa4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
