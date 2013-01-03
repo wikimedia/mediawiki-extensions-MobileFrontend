@@ -59,7 +59,7 @@
 #mw-mf-header {
 	z-index: 2;
 	color: black;
-	.vertical-gradient( @searchBoxColor, darken( @searchBoxColor, 2.75% ) );
+	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
 	border-bottom: 1px solid #e2e2e2;
 }
 
@@ -504,6 +504,50 @@ body {
 			height: @secondaryNavWidth;
 			width: @secondaryNavWidth;
 		}
+	}
+}
+
+/* Drawer */
+#mw-mf-drawer {
+	background-color: @searchBoxColorTo;
+	.boxshadow( 0, 3px, 8px, 0, rgba(50,50,50, 0.35) );
+	position: absolute;
+	top: @headerHeight + 1px; // add border
+	left: 0;
+	right: 0;
+	min-height: 100px;
+	z-index: 3;
+	border-bottom: 1px solid #C9C9C9;
+	padding-bottom: 32px;
+	padding-top: 8px;
+
+	div {
+		padding-left: 12px;
+		padding-right: 12px;
+		text-align: center;
+	}
+
+	a.close {
+		position: absolute;
+		bottom: 8px;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		text-indent: -999px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-image: url(../modules/images/hide.png);
+	}
+
+	a.button {
+		display: block;
+		margin: 8px @searchBarPaddingRightBeta 8px @searchBarPaddingRightBeta;
+	}
+
+	a.signup {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		display: block;
 	}
 }
 

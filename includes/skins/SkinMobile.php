@@ -738,6 +738,10 @@ class SkinMobileTemplate extends BaseTemplate {
 			'mobile-frontend-photo-article-edit-comment',
 			'mobile-frontend-photo-upload-comment',
 			'mobile-frontend-photo-upload-generic',
+			'mobile-frontend-watchlist-cta',
+			'mobile-frontend-watchlist-cta-button-signup',
+			'mobile-frontend-watchlist-cta-button-login',
+			'mobile-frontend-drawer-cancel',
 		);
 		foreach ( $messages as $msg ) {
 			$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();

@@ -25,7 +25,7 @@ M.history = ( function() {
 			separator = url.indexOf( '?' ) !== -1 ? '&' : '?';
 
 		if ( url.match( re ) ) {
-			rtn = url.replace( re, '$1' + parameter + '=' + value + '$2' );
+			rtn = url.replace( re, '$1' + parameter + '=' + encodeURIComponent( value ) + '$2' );
 		} else {
 			rtn = url + separator + parameter + '=' + value;
 		}

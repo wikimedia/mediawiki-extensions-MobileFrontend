@@ -22,4 +22,9 @@ test( 'updateQueryStringParameter 3', function() {
 	strictEqual( val1, '/w/Foo?y=4&x=10' );
 } );
 
+test( 'updateQueryStringParameter 4', function() {
+	var val1 = M.history.updateQueryStringParameter( '/w/Foo?x=4', 'x', 'y=10' );
+	strictEqual( val1, '/w/Foo?x=y%3D10' );
+} );
+
 } )( mw.mobileFrontend );

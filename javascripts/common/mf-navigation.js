@@ -3,6 +3,7 @@ MobileFrontend.navigation = (function( $ ) {
 	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
 		lastScrollTopPosition = 0,
 		M = MobileFrontend,
+		$drawer,
 		message = MobileFrontend.message;
 
 	function getOverlay() {
@@ -65,10 +66,24 @@ MobileFrontend.navigation = (function( $ ) {
 		}
 	}
 
+	function showDrawer() {
+		$drawer.show();
+		return $drawer.find( 'div' ).empty();
+	}
+
+	function makeDrawer() {
+		$drawer = $( '<div id="mw-mf-drawer">' ).hide().appendTo( '#mw-mf-page-center' );
+		$( '<div>' ).appendTo( $drawer );
+		$( '<a class="close">' ).text( M.message( 'mobile-frontend-drawer-cancel' ) ).on( 'click', function() {
+			$drawer.hide();
+			} ).appendTo( $drawer );
+	}
+
 	function init() {
 		var id = mfePrefix + 'overlay',
 			search = document.getElementById(  mfePrefix + 'search' );
 
+		makeDrawer();
 		$( '#mw-mf-menu-main a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
@@ -139,6 +154,7 @@ MobileFrontend.navigation = (function( $ ) {
 		createOverlay: createOverlay,
 		getPageMenu: getPageMenu,
 		getOverlay: getOverlay,
+		showDrawer: showDrawer,
 		showOverlay: showOverlay
 	};
 }( jQuery ));
