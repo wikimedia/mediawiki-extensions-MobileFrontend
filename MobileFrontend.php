@@ -553,4 +553,4 @@ $wgDeviceDetectionClass = 'DeviceDetection';
  * Will force login-related links to use https if set to true, otherwise
  * login-related links will use whatever protocol is in use by the user
  */
-$wgMFForceSecureLogin = true;
+$wgMFForceSecureLogin = false;

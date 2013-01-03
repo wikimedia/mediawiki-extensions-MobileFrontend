@@ -517,7 +517,7 @@ class ExtMobileFrontend extends ContextSource {
 	 * @param $subpage string
 	 */
 	public function onSpecialPageBeforeExecute( $special, $subpage ) {
-		global $wgMFForceSecureLogin, $wgServer;
+		global $wgMFForceSecureLogin;
 		if ( $special->getName() != 'Userlogin' ) {
 			// no further processing necessary
 			return true;
@@ -527,7 +527,7 @@ class ExtMobileFrontend extends ContextSource {
 		// most of this is lifted from https redirect code in SpecialUserlogin::execute()
 		// also, checking for 'https' in $wgServer is a little funky, but this is what
 		// is done on the WMF cluster (see config in CommonSettings.php)
-		if (  strpos( $wgServer, 'https' ) === false && $wgMFForceSecureLogin ) {
+		if ( $wgMFForceSecureLogin && WebRequest::detectProtocol() != 'https' ) {
 			// get the https url and redirect
 			$request = $this->getContext()->getRequest();
 			$query = array(
