@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//5E0\u003d",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-03T23:17:40Z",
+      "side": 1,
+      "message": "i\u0027m not sure how this works on the cluster, but it will not work in other environments that do ssl termination before hitting apache. maybe we should make a MobileContenxt method to detect https-ness",
+      "revId": "6fdf99dc33557c315c108e45b0be598f4f5b106c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
