@@ -189,6 +189,8 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-filter-other' => 'Other',
 	'mobile-frontend-watchlist-modified' => 'Modified $1',
 
+	'mobile-frontend-diffview-404-title' => 'Bad revision',
+	'mobile-frontend-diffview-404-desc' => 'The id for the revision you requested does not exist',
 	'mobile-frontend-diffview-title' => 'Changes',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edit|edits}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonymous user',
@@ -487,6 +489,8 @@ See also:
 	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or article)',
 	'mobile-frontend-watchlist-modified' => 'Text saying how long ago a page in watchlist was updated.
 * $1 - output of {{msg-mw|ago}} (e.g. "15 days ago", "7 hours ago").',
+	'mobile-frontend-diffview-404-title' => 'Heading on 404 page when bad revision id parameter is passed',
+	'mobile-frontend-diffview-404-desc' => 'Text for 404 page when bad revision id parameter is passed',
 	'mobile-frontend-diffview-title' => 'Header for common mobile diff/change view. Takes an optional parameter (for backwards compatibility):
 * $1 is page title.',
 	'mobile-frontend-diffview-editcount' => 'Edit count of user in common mobile diff/change view. $1 is the count, may use PLURAL.',

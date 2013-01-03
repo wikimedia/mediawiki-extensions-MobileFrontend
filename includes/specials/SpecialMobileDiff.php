@@ -1,18 +1,28 @@
 <?php
 
 class SpecialMobileDiff extends UnlistedSpecialPage {
+	private $revId;
+	/** @var Revision */
+	private $rev;
+	/** @var Revision */
+	private $prevRev;
+	/** @var Title */
+	private $targetTitle;
 
 	public function __construct() {
 		parent::__construct( 'MobileDiff' );
 	}
 
 	function execute( $par ) {
-		$user = $this->getUser();
 		$output = $this->getOutput();
 
-		// @fixme validate
 		$this->revId = intval( $par );
-		$this->rev = Revision::newFromId( $this->revId );
+		$rev = Revision::newFromId( $this->revId );
+		$this->rev = $rev;
+		if ( !$rev ) {
+			return wfHttpError( 404, wfMessage( 'mobile-frontend-diffview-404-title' )->escaped(),
+				wfMessage( 'mobile-frontend-diffview-404-desc' )->escaped() );
+		}
 		$this->prevRev = $this->rev->getPrevious();
 		$this->targetTitle = $this->rev->getTitle();
 
@@ -20,22 +30,15 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 
 		$output->addModules( 'mobile.watchlist' );
 
-		$output->addHtml(
-			Html::openElement( 'div', array( 'id' => 'mw-mf-diffview' ) ) .
-			Html::openElement( 'div', array( 'id' => 'mw-mf-diffarea' ) )
-		);
+		$output->addHtml( '<div id="mw-mf-diffview"><div id="mw-mf-diffarea">' );
 
 		$this->showHeader();
 		$this->showDiff();
-		$output->addHtml(
-			Html::closeElement( 'div' )
-		);
+		$output->addHtml( '</div>' );
 
 		$this->showFooter();
 
-		$output->addHtml(
-			Html::closeElement( 'div' )
-		);
+		$output->addHtml( '</div>' );
 	}
 
 	function showHeader() {
@@ -133,7 +136,7 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 					$this->listGroups( $user ) .
 				'</div>' .
 				'<div>' .
-					$this->msg( 'mobile-frontend-diffview-editcount', $this->getLang()->formatNum( $edits ) )->escaped() .
+					$this->msg( 'mobile-frontend-diffview-editcount', $this->getLanguage()->formatNum( $edits ) )->escaped() .
 				'</div>'
 			);
 		} else {
@@ -154,7 +157,7 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 		);
 	}
 
-	function listGroups( $user ) {
+	function listGroups( User $user ) {
 		# Get groups to which the user belongs
 		$userGroups = $user->getGroups();
 		$userMembers = array();
