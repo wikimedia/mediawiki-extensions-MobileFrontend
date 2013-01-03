@@ -439,7 +439,7 @@ class ExtMobileFrontend extends ContextSource {
 					'class' => 'ResourceLoaderSchemaModule',
 					'schema' => 'MobileBetaWatchlist',
 					'revision' => 4921083,
-					'position' => 'bottom',
+					'targets' => 'mobile',
 				)
 			);
 		}

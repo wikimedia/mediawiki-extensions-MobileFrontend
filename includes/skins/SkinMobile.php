@@ -180,7 +180,7 @@ class SkinMobile extends SkinMobileBase {
 	}
 
 	protected function attachResources( $title, $tpl, $device ) {
-		global $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages;
+		global $wgAutoloadClasses, $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages;
 
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
@@ -233,8 +233,8 @@ class SkinMobile extends SkinMobileBase {
 			if ( $jQueryEnabled ) {
 				$moduleNames[] = 'mobile.beta.jquery';
 
-				if ( $wgMFLogEvents ) {
-					$moduleNames[] = 'mobile.beta.jquery.eventlog';
+				if ( $wgMFLogEvents &&  isset( $wgAutoloadClasses['ResourceLoaderSchemaModule'] ) ) {
+					array_push( $headModuleNames,  'ext.eventLogging', 'schema.MobileBetaWatchlist' );
 				}
 
 				if ( $inAlpha ) {
