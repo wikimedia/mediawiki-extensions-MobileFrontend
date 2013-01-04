@@ -854,4 +854,18 @@ class MobileContext extends ContextSource {
 			$this->toggleView( 'mobile' );
 		}
 	}
+
+	/**
+	 * Determine whether or not a given URL is local
+	 *
+	 * @param string $target
+	 *	A URL, generally one that a user might get redirected to
+	 * @return bool
+	 */
+	public static function isLocalUrl( $url ) {
+		global $wgServer;
+		$parsedTarget = wfParseUrl( $url );
+		$parsedServer = wfParseUrl( $wgServer );
+		return  $parsedTarget['host'] === $parsedServer['host'];
+	}
 }

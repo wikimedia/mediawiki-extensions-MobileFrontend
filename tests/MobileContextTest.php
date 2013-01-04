@@ -330,4 +330,10 @@ class MobileContextTest extends MediaWikiTestCase {
 		$wgMFStopRedirectCookieHost = 'foo.bar.baz';
 		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), 'foo.bar.baz' );
 	}
+
+	public function testIsLocalUrl() {
+		global $wgServer;
+		$this->assertTrue( MobileContext::isLocalUrl( $wgServer ) );
+		$this->assertFalse( MobileContext::isLocalUrl( 'http://www.google.com' ) );
+	}
 }
