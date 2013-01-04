@@ -46,6 +46,16 @@ interface IDeviceProperties {
 	 * @return bool
 	 */
 	function disableZoom();
+
+	/**
+	 * @return bool
+	 */
+	function isMobileDevice();
+
+	/**
+	 * @return string
+	 */
+	function moduleName();
 }
 
 interface IDeviceDetector {
@@ -58,54 +68,145 @@ interface IDeviceDetector {
 
 	/**
 	 * @param $deviceName
+	 * @param $userAgent
+	 *
 	 * @return IDeviceProperties
 	 */
-	function getDeviceProperties( $deviceName );
+	function getDeviceProperties( $deviceName, $userAgent );
 
 	/**
-	 * @param $userAgent string
-	 * @param $acceptHeader string
-	 * @return string
+	 * @return array
 	 */
-	function detectDeviceName( $userAgent, $acceptHeader = '' );
+	function getCssFiles();
 }
 
 /**
  * MediaWiki's default IDeviceProperties implementation
  */
 final class DeviceProperties implements IDeviceProperties {
-	private $device;
+	private $device,
+		$userAgent,
+		$isMobile = null;
 
-	public function __construct( array $deviceCapabilities ) {
+	public function __construct( array $deviceCapabilities, $userAgent ) {
 		$this->device = $deviceCapabilities;
+		$this->userAgent = $userAgent;
 	}
 
 	/**
 	 * @return string
 	 */
-	function format() {
+	public function format() {
 		return $this->device['view_format'];
 	}
 
 	/**
 	 * @return bool
 	 */
-	function supportsJavaScript() {
+	public function supportsJavaScript() {
 		return $this->device['supports_javascript'];
 	}
 
 	/**
 	 * @return bool
 	 */
-	function supportsJQuery() {
+	public function supportsJQuery() {
 		return $this->device['supports_jquery'];
 	}
 
 	/**
 	 * @return bool
 	 */
-	function disableZoom() {
+	public function disableZoom() {
 		return $this->device['disable_zoom'];
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function isMobileDevice() {
+		if ( is_null( $this->isMobile ) ) {
+			$this->isMobile = $this->detectMobileDevice();
+		}
+		return $this->isMobile;
+	}
+
+	/**
+	 * @return bool
+	 */
+	private function detectMobileDevice() {
+		wfProfileIn( __METHOD__ );
+
+		$patterns = array(
+			'mobi',
+			'phone',
+			'android',
+			'ipod',
+			'webos',
+			'palm',
+			'opera.m',
+			'semc-browser',
+			'playstation',
+			'nintendo',
+			'blackberry',
+			'bada',
+			'meego',
+			'vodafone',
+			'docomo',
+			'samsung',
+			'alcatel',
+			'motor',
+			'huawei',
+			'audiovox',
+			'philips',
+			'mot-',
+			'cdm-',
+			'sagem-',
+			'htc[-_]',
+			'ngm_',
+			'mmp/',
+			'up.browser',
+			'symbian',
+			'midp',
+			'kindle',
+			'softbank',
+			'sec-',
+			'240x240',
+			'240x320',
+			'320x320',
+			'ericsson',
+			'panasonic',
+			'hiptop',
+			'portalmmm',
+			'kddi-',
+			'benq',
+			'compal-',
+			'sanyo',
+			'sharp',
+			'teleca',
+			'mitsu',
+			'sendo',
+		);
+		$patternsStart = array(
+			'lg-',
+			'sie-',
+			'nec-',
+			'lge-',
+			'sgh-',
+			'pg-',
+		);
+		$regex = '/^(' . implode( '|', $patternsStart ) . ')|(' . implode( '|', $patterns ) . ')/i';
+		$isMobile = preg_match( $regex, $this->userAgent );
+
+		wfProfileOut( __METHOD__ );
+		return $isMobile;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function moduleName() {
+		return "mobile.device.{$this->device['css_file_name']}";
 	}
 }
 
@@ -288,42 +389,24 @@ class DeviceDetection implements IDeviceDetector {
 	}
 
 	/**
-	 * @deprecated: Deprecated, will be removed once detectDeviceProperties() will be deployed everywhere on WMF
-	 * @param $userAgent
-	 * @param string $acceptHeader
-	 * @return array
-	 */
-	public function detectDevice( $userAgent, $acceptHeader = '' ) {
-		$formatName = $this->detectFormatName( $userAgent, $acceptHeader );
-		return $this->getDevice( $formatName );
-	}
-
-	/**
 	 * @param $userAgent
 	 * @param string $acceptHeader
 	 * @return IDeviceProperties
 	 */
 	public function detectDeviceProperties( $userAgent, $acceptHeader = '' ) {
 		$deviceName = $this->detectDeviceName( $userAgent, $acceptHeader );
-		return $this->getDeviceProperties( $deviceName );
-	}
-
-	/**
-	 * @deprecated: Deprecated, will be removed once detectDeviceProperties() will be deployed everywhere on WMF
-	 * @param $formatName
-	 * @return array
-	 */
-	public function getDevice( $formatName ) {
-		return ( isset( self::$formats[$formatName] ) ) ? self::$formats[$formatName] : array();
+		return $this->getDeviceProperties( $deviceName, $userAgent );
 	}
 
 	/**
 	 * @param $deviceName
+	 * @param $userAgent
+	 *
 	 * @return IDeviceProperties
 	 */
-	public function getDeviceProperties( $deviceName ) {
+	public function getDeviceProperties( $deviceName, $userAgent ) {
 		if ( isset( self::$formats[$deviceName] ) ) {
-			return new DeviceProperties( self::$formats[$deviceName] );
+			return new DeviceProperties( self::$formats[$deviceName], $userAgent );
 		} else {
 			return new DeviceProperties( array(
 				'view_format' => 'html',
@@ -331,18 +414,8 @@ class DeviceDetection implements IDeviceDetector {
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => true,
-			) );
+			), $userAgent );
 		}
-	}
-
-	/**
-	 * @deprecated: Renamed to detectDeviceName()
-	 * @param $userAgent string
-	 * @param $acceptHeader string
-	 * @return string
-	 */
-	public function detectFormatName( $userAgent, $acceptHeader = '' ) {
-		return $this->detectDeviceName( $userAgent, $acceptHeader );
 	}
 
 	/**

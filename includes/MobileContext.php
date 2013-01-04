@@ -12,6 +12,7 @@ class MobileContext extends ContextSource {
 	 * @var string xDevice header information
 	 */
 	private $xDevice;
+	/** @var IDeviceProperties */
 	private $device;
 
 	/**
@@ -51,7 +52,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Gets the current device description
-	 * @return array
+	 * @return IDeviceProperties
 	 */
 	public function getDevice() {
 		wfProfileIn( __METHOD__ );
@@ -59,19 +60,19 @@ class MobileContext extends ContextSource {
 			wfProfileOut( __METHOD__ );
 			return $this->device;
 		}
-		$detector = new DeviceDetection();
+		$detector = DeviceDetection::factory();
 		$request = $this->getRequest();
 
 		$xDevice = $this->getXDevice();
+		$userAgent = $request->getHeader( 'User-agent' );
 		if ( $xDevice ) {
 			$formatName = $xDevice;
+			$this->device = $detector->getDeviceProperties( $formatName, $userAgent );
 		} else {
-			$userAgent = $request->getHeader( 'User-agent' );
 			$acceptHeader = $request->getHeader( 'Accept' );
 			$acceptHeader = $acceptHeader === false ? '' : $acceptHeader;
-			$formatName = $detector->detectFormatName( $userAgent, $acceptHeader );
+			$this->device = $detector->detectDeviceProperties( $userAgent, $acceptHeader );
 		}
-		$this->device = $detector->getDevice( $formatName );
 
 		wfProfileOut( __METHOD__ );
 		return $this->device;
@@ -86,7 +87,7 @@ class MobileContext extends ContextSource {
 		}
 		// honor useformat=mobile-wap if it's set, otherwise determine by device
 		$device = $this->getDevice();
-		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : $device['view_format'];
+		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : $device->format();
 		$this->contentFormat = ExtMobileFrontend::parseContentFormat( $viewFormat );
 		return $this->contentFormat;
 	}

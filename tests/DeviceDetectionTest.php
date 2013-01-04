@@ -10,7 +10,7 @@
 	 */
  	public function testFormatName( $format, $userAgent ) {
 		$detector = new DeviceDetection();
-		$this->assertEquals( $format, $detector->detectFormatName( $userAgent ) );
+		$this->assertEquals( $format, $detector->detectDeviceName( $userAgent ) );
 	}
 
 	public function provideTestFormatName() {
@@ -53,9 +53,9 @@
 	 */
 	public function testDeviceCapabilities( $format, $js, $jquery ) {
 		$detector = new DeviceDetection();
-		$device = $detector->getDevice( $format );
-		$this->assertEquals( $device['supports_javascript'], $js );
-		$this->assertEquals( $device['supports_jquery'], $jquery );
+		$device = $detector->getDeviceProperties( $format, '' );
+		$this->assertEquals( $device->supportsJavaScript(), $js );
+		$this->assertEquals( $device->supportsJQuery(), $jquery );
 	}
 
 	public function provideTestDeviceCapabilities() {

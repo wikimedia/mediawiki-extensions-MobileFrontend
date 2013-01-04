@@ -41,7 +41,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'photo-upload-endpoint', $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '' );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
-		$tpl->set( 'viewport-scaleable', $device['disable_zoom'] ? 'no' : 'yes' );
+		$tpl->set( 'viewport-scaleable', $device->disableZoom() ? 'no' : 'yes' );
 		if ( $userLogin ) {
 			if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
 				$tpl->set( 'firstHeading', wfMessage( 'mobile-frontend-sign-up-heading' )->text() );
@@ -72,7 +72,7 @@ class SkinMobile extends SkinMobileBase {
 			"{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png";
 
 		wfProfileIn( __METHOD__ . '-modules' );
-		$tpl->set( 'supports_jquery', $device['supports_jquery'] );
+		$tpl->set( 'supports_jquery', $device->supportsJQuery() );
 
 		$namespace = $title->getNamespace();
 		$tpl->set( 'namespace', $namespace );
@@ -179,15 +179,15 @@ class SkinMobile extends SkinMobileBase {
 		return $tpl;
 	}
 
-	protected function attachResources( $title, $tpl, $device ) {
+	protected function attachResources( $title, $tpl, IDeviceProperties $device ) {
 		global $wgAutoloadClasses, $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages;
 
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
 		$rlSupport = $inBeta && $wgMFEnableResourceLoader;
-		$jsEnabled = $device['supports_javascript'];
-		$jQueryEnabled = $device['supports_jquery'];
+		$jsEnabled = $device->supportsJavaScript();
+		$jQueryEnabled = $device->supportsJQuery();
 		$isFilePage = $title->getNamespace() == NS_FILE;
 		$action = $context->getRequest()->getText( 'action' );
 		$out = $this->getOutput();
@@ -271,7 +271,7 @@ class SkinMobile extends SkinMobileBase {
 		} else if ( $action === 'history' ) {
 			$moduleNames[] = 'mobile.action.history';
 		}
-		$moduleNames[] = "mobile.device.{$device['css_file_name']}";
+		$moduleNames[] = $device->moduleName();
 
 		// attach
 		if ( $jsEnabled ) {

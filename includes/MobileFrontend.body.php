@@ -422,7 +422,7 @@ class ExtMobileFrontend extends ContextSource {
 	public function resourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
 		global $wgAutoloadClasses, $wgMFLogEvents;
 
-		$detector = new DeviceDetection();
+		$detector = DeviceDetection::factory();
 		foreach ( $detector->getCssFiles() as $file ) {
 			$resourceLoader->register( "mobile.device.$file",
 				array(
