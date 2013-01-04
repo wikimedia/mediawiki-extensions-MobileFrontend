@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//4Y4\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-04T17:29:39Z",
+      "side": 1,
+      "message": "For consistency with desktop - I ran this change past Maryana.",
+      "parentUuid": "AAADgX//5wQ\u003d",
+      "revId": "c391c24ebe3a5e32b40bc2ba5c09608c7978b6ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//5wU\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2013-01-03T01:53:57Z",
       "side": 1,
       "message": "this will result in a filesort",
+      "revId": "c391c24ebe3a5e32b40bc2ba5c09608c7978b6ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4YQ\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-04T17:29:39Z",
+      "side": 1,
+      "message": "Heh, funny MySQL bug: AND wl_namespace \u003d \u00270\u0027 results in filesort, while AND wl_namespace \u003d 0 doesn\u0027t. And wl_namespace IN (\u00270\u0027, \u00271\u0027, \u00272\u0027) doesn\u0027t either.",
+      "parentUuid": "AAADgX//5wU\u003d",
       "revId": "c391c24ebe3a5e32b40bc2ba5c09608c7978b6ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
