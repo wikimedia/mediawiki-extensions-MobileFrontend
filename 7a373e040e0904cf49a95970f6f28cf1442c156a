@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//4Os\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-04T19:34:34Z",
+      "side": 1,
+      "message": "I knew I was going to be bashed for this, but Settings page is also a page and you can\u0027t add it to your watchlist... Should I say non-special pages? That also doesn\u0027t sound right ;)",
+      "parentUuid": "AAADgX//4Pg\u003d",
+      "revId": "7a373e040e0904cf49a95970f6f28cf1442c156a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//4TI\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 4
