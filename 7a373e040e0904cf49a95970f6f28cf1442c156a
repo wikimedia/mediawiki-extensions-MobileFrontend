@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//4OA\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-04T19:54:12Z",
+      "side": 1,
+      "message": "We have the (I agree not that accessible concept) of \u0027content pages\u0027, although that also doesn\u0027t cover exactly what you say.\n\nMy position is that we don\u0027t have to be exactly 100% accurate all the time, especially not if being accurate will most likely confuse users instead of enlighten them. It\u0027s okay if there is some fuzzyness. In this case, yes, there may be pages in MediaWiki that you cannot watch, but you can watch the majority, which is why we use \"page\" because it\u0027s both brief as well as covering 99% of what it actually is.",
+      "parentUuid": "AAADgX//4Os\u003d",
+      "revId": "7a373e040e0904cf49a95970f6f28cf1442c156a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//4TI\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 4
