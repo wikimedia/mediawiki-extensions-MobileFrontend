@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//4go\u003d",
+        "filename": "tests/acceptance/config/config.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "MEDIAWIKI_URL environment variable is used instead of base_url. See https://gerrit.wikimedia.org/r/#/c/39771/3/tests/acceptance/config/config.yml and https://gerrit.wikimedia.org/r/#/c/39773/4..3/tests/acceptance/features/support/pages/mobile_page.rb",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4gc\u003d",
+        "filename": "tests/acceptance/features/mobilemanagewatchlist.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "There is no need for the file name to contain \"mobile\", since all tests in this repository are mobile. I suggest manage_watchlist.feature for file name.",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4gM\u003d",
+        "filename": "tests/acceptance/features/mobilemanagewatchlist.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "I prefer when \"and\" steps are indented more than given/when/then steps, but that is optional.",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4iY\u003d",
+        "filename": "tests/acceptance/features/mobilemanagewatchlist.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "Github app complains: \"No newline at end of file\".",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4gY\u003d",
+        "filename": "tests/acceptance/features/step_definitions/mobilemanagewatchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "There is no need for the file name to contain \"mobile\", since all tests in this repository are mobile. I suggest manage_watchlist_steps.rb for file name.",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4gI\u003d",
+        "filename": "tests/acceptance/features/step_definitions/mobilemanagewatchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "\"end\" line (line 6) should be indented the same as \"given\" line (line 1).",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4gU\u003d",
+        "filename": "tests/acceptance/features/support/pages/mobile_beta_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "There is no need for the file name to contain \"mobile\", since all tests in this repository are mobile. I suggest beta_page.rb for file name.",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4fc\u003d",
+        "filename": "tests/acceptance/features/support/pages/mobile_beta_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "You have forgot to copy features/support/modules/url_module.rb. This line causes \"uninitialized constant MobileBetaPage::URLModule (NameError)\" error message.",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4gA\u003d",
+        "filename": "tests/acceptance/features/support/pages/mobile_beta_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "MEDIAWIKI_URL environment variable is used instead of base_url. See https://gerrit.wikimedia.org/r/#/c/39771/3/tests/acceptance/config/config.yml and https://gerrit.wikimedia.org/r/#/c/39773/4..3/tests/acceptance/features/support/pages/mobile_page.rb",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4fs\u003d",
+        "filename": "tests/acceptance/features/support/pages/mobile_login_success_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "Until this class has more than just one link, I would merge it with LoginPage. Is there a reason for a new class?",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4gg\u003d",
+        "filename": "tests/acceptance/features/support/pages/mobile_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-01-04T14:45:03Z",
+      "side": 1,
+      "message": "MEDIAWIKI_URL environment variable is used instead of base_url. See https://gerrit.wikimedia.org/r/#/c/39771/3/tests/acceptance/config/config.yml and https://gerrit.wikimedia.org/r/#/c/39773/4..3/tests/acceptance/features/support/pages/mobile_page.rb",
+      "revId": "661248f578d1c91577baf8098b3260d18c3adab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
