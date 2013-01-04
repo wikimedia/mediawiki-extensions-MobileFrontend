@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//39g\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-04T22:23:34Z",
+      "side": 1,
+      "message": "if you\u0027re not always expecting this param, it is better practice to set it to a default value, eg:\nshowEmptyList( $feed, $assumeAccount \u003d false ) {\n\nAlso, please document this method.",
+      "revId": "2aed6b270aab3c0c8d8c821f7e22e7eb3984432c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//39c\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 260,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-04T22:23:34Z",
+      "side": 1,
+      "message": "this should probably be wfMessage( $msg )-\u003eescaped() to sanitize html output",
+      "revId": "2aed6b270aab3c0c8d8c821f7e22e7eb3984432c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//39Q\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-04T22:23:34Z",
+      "side": 1,
+      "message": "use escaped() for html output",
+      "revId": "2aed6b270aab3c0c8d8c821f7e22e7eb3984432c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
