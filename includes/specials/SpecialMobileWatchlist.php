@@ -271,12 +271,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output = $this->getOutput();
 
 		if ( $empty ) {
-			$msg = $feed ? 'mobile-frontend-watchlist-feed-empty' : 'mobile-frontend-watchlist-a-z-empty';
-			$output->addHtml(
-				'<p class="content empty">' .
-					wfMessage( $msg )->parse() .
-				'</p>'
-			);
+			$this->showEmptyList( $feed );
 		} else {
 			$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
 
@@ -319,6 +314,28 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				);
 			}
 		}
+	}
+
+	function showEmptyList( $feed ) {
+		global $wgExtensionAssetsPath;
+		$output = $this->getOutput();
+		$msg = $feed ? 'mobile-frontend-watchlist-feed-empty' : 'mobile-frontend-watchlist-a-z-empty';
+		$dir = $this->getLanguage()->isRTL() ? 'rtl' : 'ltr';
+		$output->addHtml(
+				Html::openElement( 'div', array( 'class' => 'info' ) ) .
+				Html::element( 'p', null, wfMessage( $msg )->plain() ) .
+				Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain() ) .
+				Html::element( 'img', array(
+					'src' => $wgExtensionAssetsPath . "/MobileFrontend/images/emptywatchlist-$dir.png",
+					'alt' => wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
+					)
+				) .
+				Html::element( 'a',
+					array( 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ),
+					wfMessage( 'mobile-frontend-watchlist-back-home' )->plain()
+				) .
+				Html::closeElement( 'div' )
+		);
 	}
 
 	private function day( $ts ) {

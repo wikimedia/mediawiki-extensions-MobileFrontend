@@ -178,7 +178,10 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-a-z' => 'All',
 	'mobile-frontend-watchlist-feed' => 'Modified',
 	'mobile-frontend-watchlist-a-z-empty' => 'You are currently not watching any pages',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Click the star at the top of the page',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Watch a page you have found interesting by clicking the star icon at the top of the screen. This will allow you to bookmark pages of interest as well as see when they have changed.',
 	'mobile-frontend-watchlist-feed-empty' => 'There are no pages with recent changes',
+	'mobile-frontend-watchlist-back-home' => 'Back home',
 
 	'mobile-frontend-changeslist-ip' => 'Anonymous user',
 	'mobile-frontend-changeslist-nocomment' => 'no edit summary',
@@ -479,7 +482,10 @@ See also:
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes.
 {{Identical|Modified}}',
 	'mobile-frontend-watchlist-a-z-empty' => 'Message to show when watchlist a-z list is empty',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Alt text for image explaining how to watch articles',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Message to accompany image',
 	'mobile-frontend-watchlist-feed-empty' => 'Message to show when watchlist feed is empty',
+	'mobile-frontend-watchlist-back-home' => 'Label for button that takes you back to main page from empty watchlist',
 	'mobile-frontend-changeslist-ip' => 'Label used in mobile watchlist/history/recentchanges overview for IP (non-logged-in) edits.',
 	'mobile-frontend-changeslist-nocomment' => 'Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.',
 	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages',
