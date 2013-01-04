@@ -240,7 +240,7 @@ Help bring these pages to life by donating your images that you are willing to g
  * @author Yekrats
  */
 $messages['qqq'] = array(
-	'mobile-frontend-desc' => '{{desc}}',
+	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=http://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
 *{{msg-mw|Mobile.js}} (optional)
 *{{msg-mw|Mobile.css}} (optional)',
@@ -336,6 +336,70 @@ Don't translate the special page name",
 	'mobile-frontend-password-placeholder' => 'placeholder text for password input box',
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
 {{Identical|Log in}}',
+	'mobile-frontend-last-modified-date' => 'Text that displays the date the page was last modified. Parameters:
+* $1 - date
+* $2 - time
+See also:
+* {{msg-mw|Mobile-frontend-last-modified-seconds}}
+* {{msg-mw|Mobile-frontend-last-modified-minutes}}
+* {{msg-mw|Mobile-frontend-last-modified-hours}}
+* {{msg-mw|Mobile-frontend-last-modified-days}}
+* {{msg-mw|Mobile-frontend-last-modified-months}}
+* {{msg-mw|Mobile-frontend-last-modified-years}}',
+	'mobile-frontend-last-modified-seconds' => 'Text displayed on page to show how long ago the page was updated in seconds.
+
+See also:
+* {{msg-mw|Mobile-frontend-last-modified-minutes}}
+* {{msg-mw|Mobile-frontend-last-modified-hours}}
+* {{msg-mw|Mobile-frontend-last-modified-days}}
+* {{msg-mw|Mobile-frontend-last-modified-months}}
+* {{msg-mw|Mobile-frontend-last-modified-years}}
+* {{msg-mw|Mobile-frontend-last-modified-date}}',
+	'mobile-frontend-last-modified-minutes' => 'Text displayed on page to show how long ago the page was updated in minutes.
+
+See also:
+* {{msg-mw|Mobile-frontend-last-modified-seconds}}
+* {{msg-mw|Mobile-frontend-last-modified-hours}}
+* {{msg-mw|Mobile-frontend-last-modified-days}}
+* {{msg-mw|Mobile-frontend-last-modified-months}}
+* {{msg-mw|Mobile-frontend-last-modified-years}}
+* {{msg-mw|Mobile-frontend-last-modified-date}}',
+	'mobile-frontend-last-modified-hours' => 'Text displayed on page to show how long ago the page was updated in hours.
+
+See also:
+* {{msg-mw|Mobile-frontend-last-modified-seconds}}
+* {{msg-mw|Mobile-frontend-last-modified-minutes}}
+* {{msg-mw|Mobile-frontend-last-modified-days}}
+* {{msg-mw|Mobile-frontend-last-modified-months}}
+* {{msg-mw|Mobile-frontend-last-modified-years}}
+* {{msg-mw|Mobile-frontend-last-modified-date}}',
+	'mobile-frontend-last-modified-days' => 'Text displayed on page to show how long ago the page was updated in days.
+
+See also:
+* {{msg-mw|Mobile-frontend-last-modified-seconds}}
+* {{msg-mw|Mobile-frontend-last-modified-minutes}}
+* {{msg-mw|Mobile-frontend-last-modified-hours}}
+* {{msg-mw|Mobile-frontend-last-modified-months}}
+* {{msg-mw|Mobile-frontend-last-modified-years}}
+* {{msg-mw|Mobile-frontend-last-modified-date}}',
+	'mobile-frontend-last-modified-months' => 'Text displayed on page to show how long ago the page was updated in months.
+
+See also:
+* {{msg-mw|Mobile-frontend-last-modified-seconds}}
+* {{msg-mw|Mobile-frontend-last-modified-minutes}}
+* {{msg-mw|Mobile-frontend-last-modified-hours}}
+* {{msg-mw|Mobile-frontend-last-modified-days}}
+* {{msg-mw|Mobile-frontend-last-modified-years}}
+* {{msg-mw|Mobile-frontend-last-modified-date}}',
+	'mobile-frontend-last-modified-years' => 'Text displayed on page to show how long ago the page was updated in years.
+
+See also:
+* {{msg-mw|Mobile-frontend-last-modified-seconds}}
+* {{msg-mw|Mobile-frontend-last-modified-minutes}}
+* {{msg-mw|Mobile-frontend-last-modified-hours}}
+* {{msg-mw|Mobile-frontend-last-modified-days}}
+* {{msg-mw|Mobile-frontend-last-modified-months}}
+* {{msg-mw|Mobile-frontend-last-modified-date}}',
 	'mobile-frontend-account-create-submit' => 'Text in account creation submit button',
 	'mobile-frontend-password-confirm-placeholder' => 'Placeholder for confirm password field',
 	'mobile-frontend-account-create-email-placeholder' => 'Placeholder for email address field',
@@ -388,9 +452,10 @@ Don't translate the special page name",
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
 	'mobile-frontend-watchlist-cta' => 'Appears above the login form when you click watchlist icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in javascript.',
-	'mobile-frontend-watchlist-cta-button-login' => 'A link with label to login page',
-	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page',
-
+	'mobile-frontend-watchlist-cta-button-login' => 'A link with label to login page
+{{Identical|Login}}',
+	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page
+{{Identical|Sign up}}',
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes',
 	'mobile-frontend-watchlist-a-z-empty' => 'Message to show when watchlist a-z list is empty',
@@ -424,16 +489,8 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-license' => 'Text notifying user of license that image will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in Special:RecentChanges, see also {{msg-mw|tag-mobile_edit-description}}',
 	'tag-mobile_edit-description' => 'Change tag description e.g. in Special:Tags, see also {{msg-mw|tag-mobile_edit}}',
-	'mobile-frontend-drawer-cancel' => 'Not visible but the text label for the cancel button inside a navigation overlay',
-	'mobile-frontend-last-modified-date' => 'Text that displays the date the page was last modified. Parameters:
-* $1 - date
-* $2 - time',
-	'mobile-frontend-last-modified-seconds' => 'Text displayed on page to show how long ago the page was updated in seconds.',
-	'mobile-frontend-last-modified-minutes' => 'Text displayed on page to show how long ago the page was updated in minutes.',
-	'mobile-frontend-last-modified-hours' => 'Text displayed on page to show how long ago the page was updated in hours.',
-	'mobile-frontend-last-modified-days' => 'Text displayed on page to show how long ago the page was updated in days.',
-	'mobile-frontend-last-modified-months' => 'Text displayed on page to show how long ago the page was updated in months.',
-	'mobile-frontend-last-modified-years' => 'Text displayed on page to show how long ago the page was updated in years.',
+	'mobile-frontend-drawer-cancel' => 'Not visible but the text label for the cancel button inside a navigation overlay
+{{Identical|Cancel}}',
 );
 
 /** Achinese (Acèh)
@@ -2133,6 +2190,7 @@ $messages['cy'] = array(
 );
 
 /** Danish (dansk)
+ * @author Christian List
  * @author Hylle
  * @author Kaare
  * @author Lokal Profil
@@ -2143,37 +2201,48 @@ $messages['da'] = array(
 	'mobile-frontend-desc' => 'Mobil grænseflade',
 	'mobile-frontend-search-submit' => 'Gå til',
 	'mobile-frontend-home-button' => 'Hjem',
-	'mobile-frontend-logged-out' => 'Ikke logget ind',
-	'mobile-frontend-logged-in' => 'Logget ind som $1',
+	'mobile-frontend-logged-out' => 'Ikke logget på',
+	'mobile-frontend-logged-in-homepage-notification' => 'Velkommen, $1!',
+	'mobile-frontend-logged-in-toast-notification' => 'Logget på som $1.',
+	'mobile-frontend-sign-up-heading' => 'Opret en konto',
+	'mobile-frontend-sign-in-heading' => 'Log på',
+	'mobile-frontend-sign-in-why' => 'Hvis du har en {{SITENAME}} konto, kan du logge på nedenfor.',
+	'mobile-frontend-sign-in-error-heading' => 'Ups!',
+	'mobile-frontend-settings-description' => 'Tilpas din oplevelse på din mobile enhed med disse mobilspecifikke indstillinger.',
 	'mobile-frontend-settings-beta' => 'Beta',
+	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons Her findes drager] tilstand',
+	'mobile-frontend-settings-alpha-description' => 'Gå til farlige og uudforskede mobile områder. Få endnu flere eksperimentelle funktioner, men med større risiko for fejl.',
 	'mobile-frontend-save-settings' => 'Gem indstillinger',
 	'mobile-frontend-random-button' => 'Tilfældig',
+	'mobile-frontend-ajax-random-heading' => 'Søger efter viden...',
+	'mobile-frontend-ajax-random-quote' => 'Intellektuel vækst bør påbegyndes ved fødslen og kun ophøre ved døden',
+	'mobile-frontend-ajax-random-question' => 'Læs denne side?',
+	'mobile-frontend-ajax-random-yes' => 'Ja',
+	'mobile-frontend-ajax-random-retry' => 'Prøv igen',
+	'mobile-frontend-ajax-random-suggestions' => 'Andre forslag:',
 	'mobile-frontend-back-to-top-of-section' => 'Til toppen af afsnittet',
 	'mobile-frontend-close-section' => 'Luk denne sektion',
 	'mobile-frontend-show-button' => 'Vis',
 	'mobile-frontend-hide-button' => 'Skjul',
+	'mobile-frontend-empty-homepage-text' => 'Denne hjemmeside skal konfigureres. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instruktioner om, hvordan du får dette mobile websted aktiveret]',
 	'mobile-frontend-regular-site' => 'Skrivebordsvisning',
 	'mobile-frontend-wml-continue' => 'Fortsæt ...',
 	'mobile-frontend-wml-back' => 'Tilbage ...',
-	'mobile-frontend-view' => 'Mobil visning',
+	'mobile-frontend-view' => 'Mobilvisning',
+	'mobile-frontend-view-desktop' => 'Skrivebord',
 	'mobile-frontend-view-mobile' => 'Mobil',
-	'mobile-frontend-opt-in-message' => 'Deltag i mobil betaen?',
-	'mobile-frontend-opt-in-yes-button' => 'ja',
-	'mobile-frontend-opt-in-no-button' => 'nej',
 	'mobile-frontend-opt-in-explain' => 'Ved at deltage i betaen, får du adgang til eksperimentale funktioner, med risiko for at støde på fejl og problemer.',
-	'mobile-frontend-opt-out-message' => 'Folad den mobile beta?',
-	'mobile-frontend-opt-out-yes-button' => 'ja',
-	'mobile-frontend-opt-out-no-button' => 'nej',
-	'mobile-frontend-opt-out-explain' => 'Ved at forlade den mobile betatest, bliver alle eksperimentelle funktioner deaktiveret og du vender tilbage til den klassiske mobile oplevelse.',
 	'mobile-frontend-images-status' => 'Billeder',
 	'mobile-frontend-disable-images' => 'Slå billeder til på den mobile hjemmeside',
 	'mobile-frontend-enable-images' => 'Slå billeder fra på den mobile hjemmeside',
-	'mobile-frontend-toggle-images' => 'Billeder $1 / $2',
+	'mobile-frontend-missing-image' => 'Billede',
 	'mobile-frontend-off' => 'FRA',
 	'mobile-frontend-on' => 'TIL',
+	'mobile-frontend-footer-contributors-text' => 'Side af [$1 bidragydere] som dig',
 	'mobile-frontend-featured-article' => 'Dagens artikel',
 	'mobile-frontend-news-items' => 'Aktuelle begivenheder',
 	'mobile-frontend-leave-feedback-notice' => 'Dine tilbagemeldinger hjælper os med at forbedre dine oplevelser med den mobile hjemmeside. De vil blive gjort offentligt tilgængelige (sammen med dit brugernavn, din browserversion og dit operativsystem) på siden &quot;$1&quot;. Forsøg venligst at vælge et meddelsomt emne som f. eks. "Formateringsproblem med brede tabeller". Dine tilbagemeldinger er genstand for vores brugsbetingelser.',
+	'mobile-frontend-leave-feedback-warning' => 'Medmindre du er enig i at få dine oplysninger offentliggjort, venligst undlad personlige oplysninger i dine kommentarer.',
 	'mobile-frontend-leave-feedback-subject' => 'Emne:',
 	'mobile-frontend-leave-feedback-message' => 'Besked:',
 	'mobile-frontend-leave-feedback-submit' => 'Send kommentar',
@@ -2181,8 +2250,15 @@ $messages['da'] = array(
 	'mobile-frontend-leave-feedback' => 'Giv feedback',
 	'mobile-frontend-leave-feedback-title' => 'Giv os tilbagemeldinger om din oplevelse af den mobile grænseflade',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknisk problem',
+	'mobile-frontend-leave-feedback-general-section-header' => 'Generelt',
+	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Artikel feedback',
 	'mobile-frontend-leave-feedback-email-body' => 'Beskriv det problem, du oplever med {{SITENAME}} over denne linje. Bemærk at vi ikke kan besvare alle meddelelser, vi modtager.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Teknisk problem',
+	'mobile-frontend-leave-feedback-general-link-text' => 'Generel feedback',
+	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Om mig, en person eller et selskab jeg repræsenterer',
+	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Vedrørende en faktuel fejl',
+	'mobile-frontend-leave-feedback-article-other-link-text' => 'Vedrørende et andet problem',
+	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Emne',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Indtast din kommentar her',
 	'mobile-frontend-leave-feedback-page-title' => 'Giv os tilbagemeldinger om din oplevelse af den mobile grænseflade',
 	'mobile-frontend-leave-feedback-special-title' => 'Kontakt os',
@@ -2190,30 +2266,66 @@ $messages['da'] = array(
 	'mobile-frontend-feedback-no-subject-field' => 'Indtast venligst et emne',
 	'mobile-frontend-feedback-no-message' => 'Indtast venligst en besked her',
 	'mobile-frontend-leave-feedback-thanks' => 'Tak for dine tilbagemeldinger!',
+	'mobile-frontend-leave-feedback-post-error' => 'Der opstod en fejl under behandling af din meddelelse. Prøv igen senere.',
 	'mobile-frontend-language' => 'Sprog:',
+	'mobile-frontend-language-article-heading' => 'Læs på et andet sprog',
+	'mobile-frontend-language-header' => 'Denne side er tilgængelig på $1 {{PLURAL:$1|sprog}}',
+	'mobile-frontend-language-variant-header' => 'Vælg {{#language:{{CONTENTLANG}}}} variant',
+	'mobile-frontend-language-footer' => 'Bemærk: Denne side er måske ikke skrevet på dit foretrukne sprog. Du kan se hvilke sprog {{SITENAME}} understøtter ved at klikke her.',
 	'mobile-frontend-language-site-choose' => 'Søgesprog',
+	'mobile-frontend-language-site-nomatches' => 'Ingen matchende sprog',
 	'mobile-frontend-username' => 'Brugernavn:',
 	'mobile-frontend-password' => 'Adgangskode:',
-	'mobile-frontend-login' => 'Log ind',
-	'mobile-frontend-logout' => 'Log ud',
+	'mobile-frontend-username-placeholder' => 'Brugernavn',
+	'mobile-frontend-password-placeholder' => 'Adgangskode',
+	'mobile-frontend-login' => 'Log på',
+	'mobile-frontend-last-modified-date' => 'Senest ændret $1 kl. $2',
+	'mobile-frontend-last-modified-seconds' => 'Senest ændret for {{PLURAL:$1|$1 sekund|$1 sekunder}} siden',
+	'mobile-frontend-last-modified-minutes' => 'Senest ændret for {{PLURAL:$1|$1 minut|$1 minutter}} siden',
+	'mobile-frontend-last-modified-hours' => 'Senest ændret for {{PLURAL:$1|$1 time|$1 timer}} siden',
+	'mobile-frontend-last-modified-days' => 'Senest ændret for {{PLURAL:$1|$1 dag|$1 dage}} siden',
+	'mobile-frontend-last-modified-months' => 'Senest ændret for {{PLURAL:$1|$1 måned|$1 måneder}} siden',
+	'mobile-frontend-last-modified-years' => 'Senest ændret for {{PLURAL:$1|$1 år}} siden',
+	'mobile-frontend-account-create-submit' => 'Opret en konto',
+	'mobile-frontend-password-confirm-placeholder' => 'Bekræft adgangskode',
+	'mobile-frontend-account-create-email-placeholder' => 'E-mailadresse (valgfrit)',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Angiv sikkerhedstekst',
+	'mobile-frontend-overlay-escape' => 'Gå tilbage',
 	'mobile-frontend-placeholder' => 'Søg på {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Søg i {{SITENAME}} (Beta)',
+	'mobile-frontend-placeholder-alpha' => 'Søg i {{SITENAME}} (Dragetilstand)',
+	'mobile-frontend-search-help' => 'Skriv søgeordet ovenfor og matchende sidetitler vises her.',
 	'mobile-frontend-dismiss-notification' => 'fjern denne besked',
 	'mobile-frontend-clear-search' => 'Ryd',
+	'mobile-frontend-privacy-link-text' => 'Fortrolighed',
 	'mobile-frontend-about-link-text' => 'Om',
-	'mobile-frontend-footer-more' => 'mere',
-	'mobile-frontend-footer-less' => 'mindre',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license-text' => 'Indholdet er tilgængeligt under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
-	'mobile-frontend-unknown-option' => 'Ukendt indstilling "$1".',
+	'mobile-frontend-search-noresults' => 'Ingen sidetitler svarer til din søgning. Ændre søgningen, eller tryk på søgeknappen på tastaturet for at søge inde i sider.',
+	'mobile-frontend-main-menu-button-tooltip' => 'Åbn hovedmenuen',
+	'mobile-frontend-main-menu-page-title' => 'Navigering',
 	'mobile-frontend-main-menu-featured' => 'Fremhævet',
 	'mobile-frontend-main-menu-nearby' => 'I nærheden',
+	'mobile-frontend-main-menu-login' => 'Log på',
+	'mobile-frontend-main-menu-logout' => 'Log af',
+	'mobile-frontend-main-menu-watchlist' => 'Overvågningsliste',
 	'mobile-frontend-main-menu-settings' => 'Indstillinger',
+	'mobile-frontend-donate-image' => 'Doner billede',
+	'mobile-frontend-main-menu-settings-heading' => 'Indstillinger for mobilside',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} sprog',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} er tilgængelig i $1 {{PLURAL:$1|sprog|sprog}}. Alle tilgængelige version vises nedenfor',
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
+	'mobile-frontend-main-menu-account-create' => 'Opret konto',
 	'mobile-frontend-page-menu-contents' => 'indhold',
 	'mobile-frontend-page-menu-history' => 'Historik',
-	'mobile-frontend-page-menu-contents-heading' => 'Indhold',
-	'mobile-frontend-page-menu-language-heading' => 'Læs artiklen på',
+	'mobile-frontend-meta-data-issues-header' => 'Problemer',
+	'mobile-frontend-meta-data-issues' => 'Denne side har nogle problemer',
+	'mobile-frontend-ajax-page-loading' => 'Indlæser $1',
+	'mobile-frontend-page-saving' => 'Gemmer $1',
+	'mobile-frontend-ajax-page-error' => 'Ups! Noget gik galt der. Prøv at opdatere dit browservindue.',
+	'mobile-frontend-photo-upload-generic' => 'Doner et billede',
+	'mobile-frontend-donate-image-title' => 'Doner et billede',
 );
 
 /** German (Deutsch)
@@ -2308,6 +2420,13 @@ $messages['de'] = array(
 	'mobile-frontend-username-placeholder' => 'Benutzername',
 	'mobile-frontend-password-placeholder' => 'Passwort',
 	'mobile-frontend-login' => 'Anmelden',
+	'mobile-frontend-last-modified-date' => 'Zuletzt geändert am $1 um $2',
+	'mobile-frontend-last-modified-seconds' => 'Zuletzt geändert vor {{PLURAL:$1|einer Sekunde|$1 Sekunden}}',
+	'mobile-frontend-last-modified-minutes' => 'Zuletzt geändert vor {{PLURAL:$1|einer Minute|$1 Minuten}}',
+	'mobile-frontend-last-modified-hours' => 'Zuletzt geändert vor {{PLURAL:$1|einer Stunde|$1 Stunden}}',
+	'mobile-frontend-last-modified-days' => 'Zuletzt geändert vor {{PLURAL:$1|einem Tag|$1 Tagen}}',
+	'mobile-frontend-last-modified-months' => 'Zuletzt geändert vor {{PLURAL:$1|einem Monat|$1 Monaten}}',
+	'mobile-frontend-last-modified-years' => 'Zuletzt geändert vor {{PLURAL:$1|einem Jahr|$1 Jahren}}',
 	'mobile-frontend-account-create-submit' => 'Registrieren',
 	'mobile-frontend-password-confirm-placeholder' => 'Passwort bestätigen',
 	'mobile-frontend-account-create-email-placeholder' => 'E-Mail-Adresse (optional)',
@@ -2357,6 +2476,9 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du bereit bist, einige Bilder 
 	'mobile-frontend-watchlist-add' => '$1 wurde zu deiner Beobachtungsliste hinzugefügt',
 	'mobile-frontend-watchlist-removed' => '$1 wurde von deiner Beobachtungsliste entfernt',
 	'mobile-frontend-watchlist-view' => 'Deine Beobachtungsliste ansehen',
+	'mobile-frontend-watchlist-cta' => 'Bitte melde dich an oder registriere dich, um diese Seite anzusehen.',
+	'mobile-frontend-watchlist-cta-button-login' => 'Anmelden',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Registrieren',
 	'mobile-frontend-watchlist-a-z' => 'Beobachtete Seiten',
 	'mobile-frontend-watchlist-feed' => 'Seiten mit Änderungen',
 	'mobile-frontend-watchlist-a-z-empty' => 'Du beobachtest derzeit keine Seiten',
@@ -2367,11 +2489,12 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du bereit bist, einige Bilder 
 	'mobile-frontend-watchlist-filter-articles' => 'Artikel',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andere',
-	'mobile-frontend-diffview-title' => 'Änderung an $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Änderungen',
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|Eine Bearbeitung|$1 Bearbeitungen}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonymer Benutzer',
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Ein Byte|$1 Byte}} hinzugefügt',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Ein Byte|$1 Byte}} entfernt',
+	'mobile-frontend-diffview-explained' => 'Die folgenden Zeilen wurden hinzugefügt (+) und entfernt (−):',
 	'mobile-frontend-table' => 'Tabelle $1',
 	'mobile-frontend-saving-exit-page' => 'Dein Beitrag wird noch gespeichert. Beim Verlassen gehen deine Beiträge verloren. Willst du wirklich abbrechen?',
 	'mobile-frontend-photo-upload' => 'Das erste Foto zur Seite hinzufügen',
@@ -2386,6 +2509,7 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du bereit bist, einige Bilder 
 	'mobile-frontend-photo-license' => 'Hinweis: Alle Fotos werden unter einer [//de.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported CC-BY-SA-3.0-Lizenz] veröffentlicht.',
 	'tag-mobile_edit' => 'Mobile Bearbeitung',
 	'tag-mobile_edit-description' => 'Bearbeitet von der mobilen Website',
+	'mobile-frontend-drawer-cancel' => 'Abbrechen',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -2548,15 +2672,15 @@ $messages['diq'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bayt|bayti}} debiyay de',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bayt|bayti}} wedariyay',
 	'mobile-frontend-table' => 'Tabloye $1',
-	'mobile-frontend-photo-upload' => 'Ena wesiqa rê resimê sıfteyêni de ke de', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Resımê sıfteyıni na pele ke',
 	'mobile-frontend-photo-article-edit-comment' => 'Seba gurenayışi resım bi be pele',
 	'mobile-frontend-photo-upload-comment' => 'Resım bi be pele',
-	'mobile-frontend-photo-upload-progress' => 'Ena wesiqe de resimê şıma yo beno bar', # Fuzzy
+	'mobile-frontend-photo-upload-progress' => 'Resımê şımayo na pele de bar beno',
 	'mobile-frontend-photo-caption-placeholder' => 'Seba nê resımi yew sernote cı ke',
 	'mobile-frontend-image-loading' => 'Barkerdışê resımi',
 	'mobile-frontend-image-uploading' => 'Resım bar beno',
 	'mobile-frontend-image-saving-to-article' => 'Pele de qeydkerdışê resımi',
-	'mobile-frontend-photo-license' => 'Not: Fotrafê şıma hesrayışê pêro [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Lisans da CC by SA] bındı hesreyayo', # Fuzzy
+	'mobile-frontend-photo-license' => 'Note: Resımê ke şıma pêro weşanenê bınê [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 lisans]i de weşaniyenê.',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -3746,6 +3870,13 @@ $messages['fr'] = array(
 	'mobile-frontend-username-placeholder' => "Nom d'utilisateur",
 	'mobile-frontend-password-placeholder' => 'Mot de passe',
 	'mobile-frontend-login' => 'Se connecter',
+	'mobile-frontend-last-modified-date' => 'Dernière modification le $1, à $2',
+	'mobile-frontend-last-modified-seconds' => 'Dernière modification il y a {{PLURAL:$1|$1 seconde|$1 secondes}}',
+	'mobile-frontend-last-modified-minutes' => 'Dernière modification il y a {{PLURAL:$1|$1 minute|$1 minutes}}',
+	'mobile-frontend-last-modified-hours' => 'Dernière modification il y a {{PLURAL:$1|$1 heure|$1 heures}}',
+	'mobile-frontend-last-modified-days' => 'Dernière modification il y a {{PLURAL:$1|$1 jour|$1 jours}}',
+	'mobile-frontend-last-modified-months' => 'Dernière modification il y a {{PLURAL:$1|$1 mois}}',
+	'mobile-frontend-last-modified-years' => 'Dernière modification il y a {{PLURAL:$1|$1 an|$1 ans}}',
 	'mobile-frontend-account-create-submit' => 'Inscrivez-vous',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmez le mot de passe',
 	'mobile-frontend-account-create-email-placeholder' => 'Adresse de courriel (facultative)',
@@ -3793,6 +3924,9 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-watchlist-add' => '$1 ajouté à votre liste de suivi',
 	'mobile-frontend-watchlist-removed' => '$1 retiré de votre liste de suivi',
 	'mobile-frontend-watchlist-view' => 'Afficher votre liste de surveillance',
+	'mobile-frontend-watchlist-cta' => 'Veuillez vous connecter ou vous inscrire pour voir cette page.',
+	'mobile-frontend-watchlist-cta-button-login' => 'Connectez-vous',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Inscrivez-vous',
 	'mobile-frontend-watchlist-a-z' => 'Pages vues',
 	'mobile-frontend-watchlist-feed' => 'Pages avec changements',
 	'mobile-frontend-watchlist-a-z-empty' => 'Vous ne consultez actuellement aucune page',
@@ -3803,11 +3937,12 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-watchlist-filter-articles' => 'Articles',
 	'mobile-frontend-watchlist-filter-talk' => 'Discussion',
 	'mobile-frontend-watchlist-filter-other' => 'Autres',
-	'mobile-frontend-diffview-title' => 'Modifier en $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Modifications',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|modification|modifications}}',
 	'mobile-frontend-diffview-anonymous' => 'Utilisateur anonyme',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet supprimé|octets supprimés}}',
+	'mobile-frontend-diffview-explained' => 'Les lignes suivantes ont été ajoutées (+) et supprimées (-):',
 	'mobile-frontend-table' => 'Tableau $1',
 	'mobile-frontend-saving-exit-page' => "Votre contribution est en train d'être enregistrée. Si vous quittez, vos contributions seront perdues. Êtes-vous sûr de vouloir sortir?",
 	'mobile-frontend-photo-upload' => 'Ajouter la première photo à cette page',
@@ -3822,6 +3957,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-photo-license' => 'Remarque: Toutes les photos que vous publiez le seront sous une [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licence CC BY-SA 3.0]',
 	'tag-mobile_edit' => 'Modification par mobile',
 	'tag-mobile_edit-description' => 'Modification effectuée depuis la version mobile',
+	'mobile-frontend-drawer-cancel' => 'Annuler',
 );
 
 /** Franco-Provençal (arpetan)
@@ -4208,7 +4344,7 @@ $messages['gl'] = array(
 	'mobile-frontend-close-section' => 'Pechar esta sección',
 	'mobile-frontend-show-button' => 'Mostrar',
 	'mobile-frontend-hide-button' => 'Agochar',
-	'mobile-frontend-empty-homepage' => 'Cómpre configurar a páxina de inicio. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instrucións para activar o sitio móbil</a>',
+	'mobile-frontend-empty-homepage-text' => 'Cómpre configurar a páxina de inicio. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instrucións para activar o sitio móbil]',
 	'mobile-frontend-regular-site' => 'Vista normal',
 	'mobile-frontend-wml-continue' => 'Continuar...',
 	'mobile-frontend-wml-back' => 'Volver...',
@@ -4222,7 +4358,7 @@ $messages['gl'] = array(
 	'mobile-frontend-missing-image' => 'Imaxe',
 	'mobile-frontend-off' => 'DESACTIVADAS',
 	'mobile-frontend-on' => 'ACTIVADAS',
-	'mobile-frontend-footer-contributors' => 'Páxina realizada por <a href="$1">colaboradores</a> coma vostede',
+	'mobile-frontend-footer-contributors-text' => 'Páxina realizada por [$1 colaboradores] coma vostede',
 	'mobile-frontend-featured-article' => 'Artigo destacado',
 	'mobile-frontend-news-items' => 'Actualidade',
 	'mobile-frontend-leave-feedback-notice' => 'Os seus comentarios axúdannos a mellorar a súa experiencia na versión móbil. Faremos os comentarios públicos (xunto ao seu nome de usuario, versión do navegador e sistema operativo) na páxina &quot;$1&quot;. Intente elixir unha liña de asunto informativa; por exemplo, "Problemas de formato co largo das táboas". Os seus comentarios están suxeitos aos nosos termos de uso.',
@@ -4278,8 +4414,6 @@ $messages['gl'] = array(
 	'mobile-frontend-privacy-link-text' => 'Protección de datos',
 	'mobile-frontend-about-link-text' => 'Acerca de',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Os contidos están dispoñibles baixo a licenza <a href="//gl.m.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_Use/gl?useformat=mobile">Termos de uso</a>',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'Non hai ningún título que coincida coa súa procura. Probe con outras palabras ou prema no botón de procuras do teclado para pescudar dentro das páxinas.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Abrir o menú principal',
@@ -4320,7 +4454,7 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-watchlist-filter-articles' => 'Artigos',
 	'mobile-frontend-watchlist-filter-talk' => 'Conversa',
 	'mobile-frontend-watchlist-filter-other' => 'Outras',
-	'mobile-frontend-diffview-title' => 'Cambios feitos en "$1"',
+	'mobile-frontend-diffview-title' => 'Cambios',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edición|edicións}}',
 	'mobile-frontend-diffview-anonymous' => 'Usuario anónimo',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte engadido|bytes engadidos}}',
@@ -4337,6 +4471,7 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-photo-upload-error' => 'Houbo un erro ao cargar a imaxe. Inténteo con outra imaxe.',
 	'mobile-frontend-image-saving-to-article' => 'Gardando a imaxe na páxina',
 	'mobile-frontend-photo-license' => 'Nota: Todas as fotografías que publique quedarán baixo a [//gl.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0 licenza CC BY-SA 3.0]',
+	'mobile-frontend-drawer-cancel' => 'Cancelar',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -5957,6 +6092,13 @@ $messages['ja'] = array(
 	'mobile-frontend-username-placeholder' => '利用者名',
 	'mobile-frontend-password-placeholder' => 'パスワード',
 	'mobile-frontend-login' => 'ログイン',
+	'mobile-frontend-last-modified-date' => '最終更新日時 $1 $2',
+	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|$1秒}}前に最終更新',
+	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|$1分}}前に最終更新',
+	'mobile-frontend-last-modified-hours' => '{{PLURAL:$1|$1時間}}前に最終更新',
+	'mobile-frontend-last-modified-days' => '{{PLURAL:$1|$1日}}前に最終更新',
+	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1か月}}前に最終更新',
+	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|$1年}}前に最終更新',
 	'mobile-frontend-account-create-submit' => '利用者登録',
 	'mobile-frontend-password-confirm-placeholder' => 'パスワード再入力',
 	'mobile-frontend-account-create-email-placeholder' => 'メールアドレス (省略可能)',
@@ -5997,6 +6139,9 @@ $messages['ja'] = array(
 	'mobile-frontend-watchlist-add' => '$1 をウォッチリストに追加しました',
 	'mobile-frontend-watchlist-removed' => '$1 をウォッチリストから除去しました',
 	'mobile-frontend-watchlist-view' => 'ウォッチリストを表示',
+	'mobile-frontend-watchlist-cta' => 'このページをウォッチするにはログインまたは利用者登録をしてください。',
+	'mobile-frontend-watchlist-cta-button-login' => 'ログイン',
+	'mobile-frontend-watchlist-cta-button-signup' => '利用者登録',
 	'mobile-frontend-watchlist-a-z' => 'ウォッチしているページ',
 	'mobile-frontend-watchlist-a-z-empty' => '現在ウォッチしているページはありません',
 	'mobile-frontend-watchlist-feed-empty' => '最近更新されたページはありません',
@@ -6006,11 +6151,13 @@ $messages['ja'] = array(
 	'mobile-frontend-watchlist-filter-articles' => '記事',
 	'mobile-frontend-watchlist-filter-talk' => 'トーク',
 	'mobile-frontend-watchlist-filter-other' => 'その他',
-	'mobile-frontend-diffview-title' => '$1 の差分', # Fuzzy
+	'mobile-frontend-diffview-title' => '差分',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|回編集}}',
 	'mobile-frontend-diffview-anonymous' => '匿名利用者',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|バイト}}追加',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|バイト}}除去',
+	'mobile-frontend-diffview-explained' => '「+」は追加された行、「-」は除去された行を示しています:',
+	'mobile-frontend-table' => '表 $1',
 	'mobile-frontend-saving-exit-page' => '編集内容をまだ保存中です。このまま終了すると編集内容が失われます。本当に終了しますか?',
 	'mobile-frontend-photo-article-edit-comment' => 'ページで使用する写真を追加しました',
 	'mobile-frontend-photo-upload-comment' => 'ページに写真を追加しました',
@@ -6019,6 +6166,7 @@ $messages['ja'] = array(
 	'mobile-frontend-image-uploading' => '画像をアップロード中',
 	'mobile-frontend-photo-upload-error' => '画像をアップロードする際にエラーが発生しました。別の画像を試してください。',
 	'mobile-frontend-image-saving-to-article' => 'ページに画像を保存中',
+	'mobile-frontend-drawer-cancel' => 'キャンセル',
 );
 
 /** Javanese (Basa Jawa)
@@ -6520,6 +6668,8 @@ $messages['kn'] = array(
  */
 $messages['ko'] = array(
 	'mobile-frontend-desc' => '모바일 프론트엔드',
+	'mobile.css' => '/* 이 CSS 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */',
+	'mobile.js' => '/* 이 자바스크립트 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */',
 	'mobile-frontend-search-submit' => '가기',
 	'mobile-frontend-home-button' => '대문',
 	'mobile-frontend-logged-out' => '로그인하지 않음',
@@ -6537,6 +6687,7 @@ $messages['ko'] = array(
 	'mobile-frontend-random-button' => '임의 문서',
 	'mobile-frontend-ajax-random-heading' => '지식 찾기...',
 	'mobile-frontend-ajax-random-quote' => '지적 성장은 출생할 때만 시작하고 죽을 때만 중단해야 합니다',
+	'mobile-frontend-ajax-random-quote-author' => '알베르트 아인슈타인',
 	'mobile-frontend-ajax-random-question' => '이 문서를 읽을까요?',
 	'mobile-frontend-ajax-random-yes' => '예',
 	'mobile-frontend-ajax-random-retry' => '다시 시도하세요',
@@ -6602,6 +6753,13 @@ $messages['ko'] = array(
 	'mobile-frontend-username-placeholder' => '사용자 이름',
 	'mobile-frontend-password-placeholder' => '비밀번호',
 	'mobile-frontend-login' => '로그인',
+	'mobile-frontend-last-modified-date' => '$1 $2에 마지막으로 수정함',
+	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|$1초}} 전에 마지막으로 수정함',
+	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|$1분}} 전에 마지막으로 수정함',
+	'mobile-frontend-last-modified-hours' => '{{PLURAL:$1|$1시간}} 전에 마지막으로 수정함',
+	'mobile-frontend-last-modified-days' => '{{PLURAL:$1|$1일}} 전에 마지막으로 수정함',
+	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1월}} 전에 마지막으로 수정함',
+	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|$1년}} 전에 마지막으로 수정함',
 	'mobile-frontend-account-create-submit' => '가입하기',
 	'mobile-frontend-password-confirm-placeholder' => '비밀번호 확인',
 	'mobile-frontend-account-create-email-placeholder' => '이메일 주소 (선택 사항)',
@@ -6650,6 +6808,9 @@ $messages['ko'] = array(
 	'mobile-frontend-watchlist-add' => '내 주시문서 목록에 $1 문서를 추가했습니다',
 	'mobile-frontend-watchlist-removed' => '내 주시문서 목록에서 $1 문서를 제거했습니다',
 	'mobile-frontend-watchlist-view' => '내 주시문서 목록 보기',
+	'mobile-frontend-watchlist-cta' => '이 문서를 보려면 로그인하거나 가입하세요.',
+	'mobile-frontend-watchlist-cta-button-login' => '로그인',
+	'mobile-frontend-watchlist-cta-button-signup' => '가입하기',
 	'mobile-frontend-watchlist-a-z' => '주시한 문서',
 	'mobile-frontend-watchlist-feed' => '바뀐 문서',
 	'mobile-frontend-watchlist-a-z-empty' => '현재 어떠한 문서도 주시하지 않았습니다',
@@ -6660,11 +6821,12 @@ $messages['ko'] = array(
 	'mobile-frontend-watchlist-filter-articles' => '문서',
 	'mobile-frontend-watchlist-filter-talk' => '토론',
 	'mobile-frontend-watchlist-filter-other' => '기타',
-	'mobile-frontend-diffview-title' => '$1의 바뀜', # Fuzzy
+	'mobile-frontend-diffview-title' => '바뀜',
 	'mobile-frontend-diffview-editcount' => '편집 $1회',
 	'mobile-frontend-diffview-anonymous' => '익명 사용자',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|바이트}} 추가함',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거함',
+	'mobile-frontend-diffview-explained' => '다음 줄이 추가(+)되고 제거(-)되었습니다.',
 	'mobile-frontend-table' => '표 $1',
 	'mobile-frontend-saving-exit-page' => '기여한 내용을 아직 저장하고 있습니다. 만일 떠나면 기여한 내용을 잃게 됩니다. 정말 끝내시겠습니까?',
 	'mobile-frontend-photo-upload' => '이 문서에 첫 번째 사진 추가',
@@ -6679,6 +6841,7 @@ $messages['ko'] = array(
 	'mobile-frontend-photo-license' => '참고: 게시하는 모든 그림은 [//ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 라이선스]로 배포됩니다',
 	'tag-mobile_edit' => '모바일 편집',
 	'tag-mobile_edit-description' => '모바일 사이트에서 편집',
+	'mobile-frontend-drawer-cancel' => '취소',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -7652,11 +7815,12 @@ $messages['mk'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Статии',
 	'mobile-frontend-watchlist-filter-talk' => 'Разговор',
 	'mobile-frontend-watchlist-filter-other' => 'Други',
-	'mobile-frontend-diffview-title' => 'Промени на $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Промени',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|уредување|уредувања}}',
 	'mobile-frontend-diffview-anonymous' => 'Анонимен корисник',
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Додаден $1 бајт|Додадени $1 бајти}}',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Одземен $1 бајт|Одземени $1 бајти}}',
+	'mobile-frontend-diffview-explained' => 'Следниве редови се додадени (+) и отстранети (-):',
 	'mobile-frontend-table' => 'Табела $1',
 	'mobile-frontend-saving-exit-page' => 'Вашите придонеси сè уште се зачувуваат. Доколку напуштите, ќе ги изгубите придонесите. Дали сте сигурни дека сакате да излезете?',
 	'mobile-frontend-photo-upload' => 'Стави ја првата слика во страницава',
@@ -7704,7 +7868,7 @@ $messages['ml'] = array(
 	'mobile-frontend-close-section' => 'ഈ ഭാഗം അടയ്ക്കുക',
 	'mobile-frontend-show-button' => 'പ്രദർശിപ്പിക്കുക',
 	'mobile-frontend-hide-button' => 'മറയ്ക്കുക',
-	'mobile-frontend-empty-homepage' => 'ഈ പ്രധാന താൾ ക്രമീകരിക്കേണ്ടതുണ്ട്. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">ഈ സൈറ്റ് എപ്രകാരം മൊബൈൽ സജ്ജമാക്കാമെന്ന് കാണുക</a>',
+	'mobile-frontend-empty-homepage-text' => 'ഈ പ്രധാന താൾ ക്രമീകരിക്കേണ്ടതുണ്ട്. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instructions ഈ സൈറ്റ് എപ്രകാരം മൊബൈൽ സജ്ജമാക്കാമെന്ന് കാണുക]',
 	'mobile-frontend-regular-site' => 'ഡെസ്ക്ടോപ്പ് രൂപം',
 	'mobile-frontend-wml-continue' => 'തുടരുക...',
 	'mobile-frontend-wml-back' => 'പിന്നിലേക്ക് ...',
@@ -7718,7 +7882,7 @@ $messages['ml'] = array(
 	'mobile-frontend-missing-image' => 'ചിത്രം',
 	'mobile-frontend-off' => 'വേണ്ട',
 	'mobile-frontend-on' => 'വേണം',
-	'mobile-frontend-footer-contributors' => 'താങ്കളെപ്പോലെയുള്ള <a href="$1">സന്നദ്ധ സംഭാവകരാണ്</a> താൾ എഴുതിയത്',
+	'mobile-frontend-footer-contributors-text' => 'താങ്കളെപ്പോലെയുള്ള [$1 സന്നദ്ധ സംഭാവകരാണ്] താൾ എഴുതിയത്',
 	'mobile-frontend-featured-article' => 'ഇന്നത്തെ സമഗ്ര ലേഖനം',
 	'mobile-frontend-news-items' => 'വാർത്തയിൽ',
 	'mobile-frontend-leave-feedback-notice' => 'മൊബൈൽ സൈറ്റ് അനുഭവം മെച്ചപ്പെടുത്താൻ താങ്കളുടെ അഭിപ്രായം ഞങ്ങളെ സഹായിക്കുന്നതാണ്. അത് &quot;$1&quot; താളിൽ പരസ്യമായി (താങ്കളുടെ ഉപയോക്തൃനാമത്തോടും, ബ്രൗസർ വേർഷനോടും ഓപ്പറേറ്റിങ് സിസ്റ്റത്തിനോടും കൂടി) ലഭ്യമായിരിക്കും. ദയവായി തലക്കെട്ട് കുറിപ്പായി വിവരദായകമായ ഒരു വരി നൽകുക, ഉദാ: "പട്ടിക പ്രദർശിപ്പിക്കുന്നതിലെ പ്രശ്നങ്ങൾ".
@@ -7761,6 +7925,13 @@ $messages['ml'] = array(
 	'mobile-frontend-username-placeholder' => 'ഉപയോക്തൃനാമം',
 	'mobile-frontend-password-placeholder' => 'രഹസ്യവാക്ക്',
 	'mobile-frontend-login' => 'പ്രവേശിക്കുക',
+	'mobile-frontend-last-modified-date' => 'അവസാനം പുതുക്കപ്പെട്ടത് $1, $2',
+	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|ഒരു സെക്കൻഡ്|$1 സെക്കൻഡ്}} മുമ്പാണ് അവസാനം പുതുക്കിയത്',
+	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|ഒരു മിനിറ്റ്|$1 മിനിറ്റ്}} മുമ്പാണ് അവസാനം പുതുക്കിയത്',
+	'mobile-frontend-last-modified-hours' => '{{PLURAL:$1|ഒരു മണിക്കൂർ|$1 മണിക്കൂർ}} മുമ്പാണ് അവസാനം പുതുക്കിയത്',
+	'mobile-frontend-last-modified-days' => '{{PLURAL:$1|ഒരു ദിവസം|$1 ദിവസം}} മുമ്പാണ് അവസാനം പുതുക്കിയത്',
+	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|ഒരു മാസം|$1 മാസം}} മുമ്പാണ് അവസാനം പുതുക്കിയത്',
+	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|ഒരു വർഷം|$1 വർഷം}} മുമ്പാണ് അവസാനം പുതുക്കിയത്',
 	'mobile-frontend-account-create-submit' => 'അംഗത്വമെടുക്കുക',
 	'mobile-frontend-password-confirm-placeholder' => 'രഹസ്യവാക്ക് സ്ഥിരീകരിക്കുക',
 	'mobile-frontend-account-create-email-placeholder' => 'ഇമെയിൽ വിലാസം (ഐച്ഛികം)',
@@ -7775,8 +7946,8 @@ $messages['ml'] = array(
 	'mobile-frontend-privacy-link-text' => 'സ്വകാര്യത',
 	'mobile-frontend-about-link-text' => 'വിവരണം',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'ഉള്ളടക്കം <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">സി.സി. ബൈ-എസ്.എ. 3.0</a> പ്രകാരം ലഭ്യം',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">ഉപയോഗനിബന്ധനകൾ</a>',
+	'mobile-frontend-footer-license-text' => 'ഉള്ളടക്കം [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile സി.സി. ബൈ-എസ്.എ. 3.0] പ്രകാരം ലഭ്യം',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile ഉപയോഗനിബന്ധനകൾ]',
 	'mobile-frontend-footer-contact' => 'സമ്പർക്കം',
 	'mobile-frontend-search-noresults' => 'താങ്കൾ തിരഞ്ഞതുമായി സാമ്യമുള്ള താളുകൾ ഒന്നുമില്ല. ദയവായി മാറ്റി തിരയുക, അല്ലെങ്കിൽ കീബോർഡ് തിരച്ചിൽ ബട്ടൺ ഉപയോഗിച്ച് താളുകൾക്കുള്ളിൽ തിരയുക.',
 	'mobile-frontend-main-menu-button-tooltip' => 'പ്രധാന മെനു തുറക്കുക',
@@ -7817,7 +7988,7 @@ $messages['ml'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'ലേഖനങ്ങൾ',
 	'mobile-frontend-watchlist-filter-talk' => 'സംവാദം',
 	'mobile-frontend-watchlist-filter-other' => 'മറ്റുള്ളവ',
-	'mobile-frontend-diffview-title' => '$1 എന്ന താളിലെ മാറ്റങ്ങൾ',
+	'mobile-frontend-diffview-title' => '$1 എന്ന താളിലെ മാറ്റങ്ങൾ', # Fuzzy
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|ഒരു തിരുത്തൽ|$1 തിരുത്തലുകൾ}}',
 	'mobile-frontend-diffview-anonymous' => 'അജ്ഞാത ഉപയോക്താവ്',
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|ഒരു ബൈറ്റ്|$1 ബൈറ്റുകൾ}} കൂട്ടിച്ചേർത്തിരിക്കുന്നു',
@@ -7963,7 +8134,7 @@ $messages['ms'] = array(
 	'mobile-frontend-close-section' => 'Tutup bahagian ini',
 	'mobile-frontend-show-button' => 'Tunjukkan',
 	'mobile-frontend-hide-button' => 'Sorokkan',
-	'mobile-frontend-empty-homepage' => 'Halaman utama ini perlu dikonfigurasikan. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Panduan menghidupkan ciri mudah alih</a>',
+	'mobile-frontend-empty-homepage-text' => 'Halaman utama ini perlu dikonfigurasikan. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Panduan menghidupkan ciri mudah alih</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Paparan desktop',
 	'mobile-frontend-wml-continue' => 'Teruskan ...',
 	'mobile-frontend-wml-back' => 'Kembali ...',
@@ -7977,7 +8148,7 @@ $messages['ms'] = array(
 	'mobile-frontend-missing-image' => 'Imej',
 	'mobile-frontend-off' => 'TUTUP',
 	'mobile-frontend-on' => 'BUKA',
-	'mobile-frontend-footer-contributors' => 'Halaman oleh <a href="$1">para penyumbang</a> seperti anda',
+	'mobile-frontend-footer-contributors-text' => 'Halaman oleh <a href="$1">para penyumbang</a> seperti anda', # Fuzzy
 	'mobile-frontend-featured-article' => 'Rencana Pilihan',
 	'mobile-frontend-news-items' => 'Dalam Berita',
 	'mobile-frontend-leave-feedback-notice' => 'Maklum balas anda membantu kami untuk meningkatkan pengalaman anda ketika melayari tapak mudah alih. Ia akan disiarkan secara umum (dengan nama pengguna, versi pelayar dan sistem pengendalian) pada laman &quot;$1&quot;. Sila cuba memilih baris subjek yang informatif, cth. "Masalah ketika memformatkan jadual yang lebar". Maklum balas anda tertakluk kepada terma-terma penggunaan kami.',
@@ -8033,8 +8204,6 @@ $messages['ms'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privasi',
 	'mobile-frontend-about-link-text' => 'Perihal',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Kandungan disediakan di bawah <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Syarat-Syarat Penggunaan</a>',
 	'mobile-frontend-footer-contact' => 'Hubungi',
 	'mobile-frontend-search-noresults' => 'Tiada tajuk halaman yang sepadan dengan carian anda. Ubah carian anda, atau tekan butang carian papan kekunci untuk mencari di dalam halaman.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Buka menu utama',
@@ -8067,6 +8236,7 @@ Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar
 	'mobile-frontend-watchlist-add' => '$1 ditambahkan dalam senarai pantau anda',
 	'mobile-frontend-watchlist-removed' => '$1 digugurkan dari senarai pantau anda',
 	'mobile-frontend-watchlist-view' => 'Lihat senarai pantau anda',
+	'mobile-frontend-watchlist-cta-button-login' => 'Log masuk',
 	'mobile-frontend-watchlist-a-z' => 'Halaman yang dipantau',
 	'mobile-frontend-watchlist-feed' => 'Halaman yang disunting',
 	'mobile-frontend-changeslist-ip' => 'Pengguna awanama',
@@ -8075,7 +8245,7 @@ Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar
 	'mobile-frontend-watchlist-filter-articles' => 'Rencana',
 	'mobile-frontend-watchlist-filter-talk' => 'Perbualan',
 	'mobile-frontend-watchlist-filter-other' => 'Lain-lain',
-	'mobile-frontend-diffview-title' => 'Tukar kepada $1',
+	'mobile-frontend-diffview-title' => 'Perubahan',
 	'mobile-frontend-diffview-editcount' => '$1 suntingan',
 	'mobile-frontend-diffview-anonymous' => 'Pengguna awanama',
 	'mobile-frontend-diffview-bytesadded' => '$1 bait ditambah',
@@ -8092,6 +8262,9 @@ Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar
 	'mobile-frontend-photo-upload-error' => 'Ralat berlaku apabila memuat naik halaman. Sila cuba satu lagi halaman.',
 	'mobile-frontend-image-saving-to-article' => 'Imej sedang disimpan pada halaman',
 	'mobile-frontend-photo-license' => 'Perhatian: Semua gambar foto yang anda siarkan akan disiarkan di bawah [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License lesen CC BY-SA 3.0]',
+	'tag-mobile_edit' => 'Suntingan mobil',
+	'tag-mobile_edit-description' => 'Suntingan dari tapak mobil',
+	'mobile-frontend-drawer-cancel' => 'Batalkan',
 );
 
 /** Maltese (Malti)
@@ -9209,6 +9382,13 @@ $messages['pms'] = array(
 	'mobile-frontend-username-placeholder' => 'Stranòm',
 	'mobile-frontend-password-placeholder' => 'Ciav',
 	'mobile-frontend-login' => 'Intra',
+	'mobile-frontend-last-modified-date' => 'Ultima modìfica ai $1, a $2',
+	'mobile-frontend-last-modified-seconds' => 'Ultima modìfica {{PLURAL:$1|$1 second}} fà',
+	'mobile-frontend-last-modified-minutes' => 'Ultima modìfica {{PLURAL:$1|$1 minuta|$1 minute}} fà',
+	'mobile-frontend-last-modified-hours' => 'Ultima modìfica {{PLURAL:$1|$1 ora|$1 ore}} fà',
+	'mobile-frontend-last-modified-days' => 'Ultima modìfica {{PLURAL:$1|$1 di}} fà',
+	'mobile-frontend-last-modified-months' => 'Ultima modìfica {{PLURAL:$1|$1 mèis}} fà',
+	'mobile-frontend-last-modified-years' => 'Ultima modìfica {{PLURAL:$1|$1 ann|$1 agn}} fà',
 	'mobile-frontend-account-create-submit' => "Ch'as anscriva",
 	'mobile-frontend-password-confirm-placeholder' => 'Confirma ciav',
 	'mobile-frontend-account-create-email-placeholder' => 'Adrëssa e-mail (opsional)',
@@ -9257,6 +9437,9 @@ Giuta a porté ste pagine an vita donand toe figure ch'it veule dé via e ch'a p
 	'mobile-frontend-watchlist-add' => 'Giontà $1 a toa lista ëd lòn da tnì sot euj',
 	'mobile-frontend-watchlist-removed' => 'Gavà $1 da toa lista ëd lòn da tnì sot euj',
 	'mobile-frontend-watchlist-view' => 'Varda toa lista ëd lòn da tnì sot euj',
+	'mobile-frontend-watchlist-cta' => "Për piasì intra o registr-te për ten-e d'euj sta pagina.",
+	'mobile-frontend-watchlist-cta-button-login' => 'Intré ant ël sistema',
+	'mobile-frontend-watchlist-cta-button-signup' => "Ch'as anscriva",
 	'mobile-frontend-watchlist-a-z' => 'Pàgine da tnì sot-euj',
 	'mobile-frontend-watchlist-feed' => 'Pàgine con cambi',
 	'mobile-frontend-watchlist-a-z-empty' => "Al moment it të stas pa tenend d'euj gnun-e pagine",
@@ -9267,11 +9450,12 @@ Giuta a porté ste pagine an vita donand toe figure ch'it veule dé via e ch'a p
 	'mobile-frontend-watchlist-filter-articles' => 'Artìcoj',
 	'mobile-frontend-watchlist-filter-talk' => 'Ciaciarade',
 	'mobile-frontend-watchlist-filter-other' => 'Àutr',
-	'mobile-frontend-diffview-title' => 'Cambi aq $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Cambi',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|modìfica|modìfiche}}',
 	'mobile-frontend-diffview-anonymous' => 'Utent anònim',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} giontà',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} gavà',
+	'mobile-frontend-diffview-explained' => 'Le linie sota a son stàite giontà (+) e gavà (-):',
 	'mobile-frontend-table' => 'Tabela $1',
 	'mobile-frontend-saving-exit-page' => "Toa contribussion a l'é anco' da salvé. S'it seurte toa contribussion a sarà përdùa. It ses-to sigur ëd vorèj seurte?",
 	'mobile-frontend-photo-upload' => 'Gionta la prima fòto a sta pagina',
@@ -9286,6 +9470,7 @@ Giuta a porté ste pagine an vita donand toe figure ch'it veule dé via e ch'a p
 	'mobile-frontend-photo-license' => "NòtA: Tute le fòto ch'it pùbliche a saran publicà sota na [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licensa CC BY-SA 3.0]",
 	'tag-mobile_edit' => 'Modìfica për sacociàbil',
 	'tag-mobile_edit-description' => 'Modìfica fàita da un sit për sacociàbil',
+	'mobile-frontend-drawer-cancel' => 'Scancela',
 );
 
 /** Western Punjabi (پنجابی)
@@ -9652,6 +9837,13 @@ $messages['ro'] = array(
 	'mobile-frontend-username-placeholder' => 'Nume de utilizator',
 	'mobile-frontend-password-placeholder' => 'Parolă',
 	'mobile-frontend-login' => 'Autentificare',
+	'mobile-frontend-last-modified-date' => 'Ultima modificare pe $1, la $2',
+	'mobile-frontend-last-modified-seconds' => 'Ultima modificare acum {{PLURAL:$1|o secundă|$1 secunde|$1 de secunde}}',
+	'mobile-frontend-last-modified-minutes' => 'Ultima modificare acum {{PLURAL:$1|un minut|$1 minute|$1 de minute}}',
+	'mobile-frontend-last-modified-hours' => 'Ultima modificare acum {{PLURAL:$1|o oră|$1 ore|$1 de ore}}',
+	'mobile-frontend-last-modified-days' => 'Ultima modificare acum {{PLURAL:$1|o zi|$1 zile|$1 de zile}}',
+	'mobile-frontend-last-modified-months' => 'Ultima modificare acum {{PLURAL:$1|o lună|$1 luni|$1 de luni}}',
+	'mobile-frontend-last-modified-years' => 'Ultima modificare acum {{PLURAL:$1|un an|$1 ani|$1 de ani}}',
 	'mobile-frontend-account-create-submit' => 'Înregistrare',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmați parola',
 	'mobile-frontend-account-create-email-placeholder' => 'Adresă de e-mail (opțională)',
@@ -9700,6 +9892,9 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-watchlist-add' => '$1 a fost adăugată listei dumneavoastră de pagini urmărite',
 	'mobile-frontend-watchlist-removed' => '$1 a fost eliminată din lista dumneavoastră de pagini urmărite',
 	'mobile-frontend-watchlist-view' => 'Vezi lista de pagini urmărite',
+	'mobile-frontend-watchlist-cta' => 'Vă rugăm să vă autentificați sau să vă înregistrați pentru a urmări această pagină.',
+	'mobile-frontend-watchlist-cta-button-login' => 'Autentificare',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Înregistrare',
 	'mobile-frontend-watchlist-a-z' => 'Pagini urmărite',
 	'mobile-frontend-watchlist-feed' => 'Pagini cu modificări',
 	'mobile-frontend-watchlist-a-z-empty' => 'În prezent nu urmăriți nicio pagină',
@@ -9710,11 +9905,12 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-watchlist-filter-articles' => 'Articole',
 	'mobile-frontend-watchlist-filter-talk' => 'Discuție',
 	'mobile-frontend-watchlist-filter-other' => 'Altele',
-	'mobile-frontend-diffview-title' => 'Modificare la $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Modificări',
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|o modificare|$1 modificări|$1 de modificări}}',
 	'mobile-frontend-diffview-anonymous' => 'Utilizator anonim',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet adăugat|octeți adăugați|de octeți adăugați}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet șters|octeți șterși|de octeți șterși}}',
+	'mobile-frontend-diffview-explained' => 'Următoarele rânduri au fost adăugate (+) și șterse (-):',
 	'mobile-frontend-table' => 'Tabelul $1',
 	'mobile-frontend-saving-exit-page' => 'Contribuția dumneavoastră încă se salvează. Dacă ieșiți, contribuțiile dumneavoastră se vor pierde. Sunteți sigur că doriți să ieșiți?',
 	'mobile-frontend-photo-upload' => 'Adaugă prima fotografie pentru această pagină',
@@ -9729,6 +9925,7 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-photo-license' => 'Notă: Toate fotografiile pe care le publicați vor fi eliberate sub o licență [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0]',
 	'tag-mobile_edit' => 'Modificare mobilă',
 	'tag-mobile_edit-description' => 'Modificare efectuată de pe site-ul mobil',
+	'mobile-frontend-drawer-cancel' => 'Revocare',
 );
 
 /** tarandíne (tarandíne)
@@ -9801,6 +9998,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-placeholder' => 'Cirche {{SITENAME}}',
 	'mobile-frontend-dismiss-notification' => 'live sta notificazione',
 	'mobile-frontend-clear-search' => 'Pulizze',
+	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-about-link-text' => 'Sus a',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-contact' => 'Condatte',
@@ -9819,9 +10017,15 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-photo-upload-generic' => "Riale 'n'immaggine",
 	'mobile-frontend-donate-image-title' => "Riale 'n'immaggine",
 	'mobile-frontend-watchlist-filter-all' => 'Tutte',
+	'mobile-frontend-watchlist-filter-articles' => 'Vôsce',
+	'mobile-frontend-watchlist-filter-talk' => "'Ngazzamende",
 	'mobile-frontend-watchlist-filter-other' => 'Otre',
-	'mobile-frontend-diffview-title' => 'Cange a $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Cangiaminde',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|cangiamende|cangiaminde}}',
 	'mobile-frontend-diffview-anonymous' => 'Utende anonime',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte}} aggiunde',
+	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte}} luate',
+	'mobile-frontend-table' => 'Tabbelle $1',
 	'mobile-frontend-photo-caption-placeholder' => "Aggiunge 'na testate pe st'immaggine",
 	'mobile-frontend-image-loading' => "Stoche a scareche 'n'immaggine",
 	'mobile-frontend-image-uploading' => "Stoche a careche 'n'immaggine",
@@ -10607,6 +10811,9 @@ $messages['sl'] = array(
 	'mobile-frontend-search-submit' => 'Pojdi',
 	'mobile-frontend-home-button' => 'Domov',
 	'mobile-frontend-logged-out' => 'Niste prijavljeni',
+	'mobile-frontend-logged-in-homepage-notification' => '$1, dobrodošli!',
+	'mobile-frontend-logged-in-toast-notification' => 'Prijavljeni ste kot $1.',
+	'mobile-frontend-sign-up-heading' => 'Registracija',
 	'mobile-frontend-sign-in-heading' => 'Prijava',
 	'mobile-frontend-sign-in-why' => 'Če imate račun na {{GRAMMAR:mestnik|{{SITENAME}}}}, se lahko prijavite spodaj.',
 	'mobile-frontend-sign-in-error-heading' => 'Ups',
@@ -10622,7 +10829,7 @@ $messages['sl'] = array(
 	'mobile-frontend-close-section' => 'Zapri razdelek',
 	'mobile-frontend-show-button' => 'pokaži',
 	'mobile-frontend-hide-button' => 'skrij',
-	'mobile-frontend-empty-homepage' => 'Domačo stran morate konfigurirati. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Navodila, kako stran omogočiti na mobilnih napravah</a>',
+	'mobile-frontend-empty-homepage-text' => 'Domačo stran morate konfigurirati. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Navodila, kako stran omogočiti na mobilnih napravah]',
 	'mobile-frontend-regular-site' => 'Pogled namizja',
 	'mobile-frontend-wml-continue' => 'Nadaljuj ...',
 	'mobile-frontend-wml-back' => 'Nazaj ...',
@@ -10636,7 +10843,7 @@ $messages['sl'] = array(
 	'mobile-frontend-missing-image' => 'Slika',
 	'mobile-frontend-off' => 'IZKL',
 	'mobile-frontend-on' => 'VKL',
-	'mobile-frontend-footer-contributors' => 'Stran <a href="$1">sodelavcev</a>, kot ste vi',
+	'mobile-frontend-footer-contributors-text' => 'Stran [$1 sodelavcev], kot ste vi',
 	'mobile-frontend-featured-article' => 'Današnji izbrani članek',
 	'mobile-frontend-news-items' => 'V novicah',
 	'mobile-frontend-leave-feedback-notice' => 'Vaše povratne informacije nam pomagajo izboljšati izkušnjo z mobilno stranjo. Objavljene bodo javno (skupaj z vašim uporabniškim imenom, različico brskalnika in operacijskim sistemom) na strani »$1«. Prosimo, da poskusite izbrati informativno zadevo, npr. »Težave pri oblikovanju širokih tabel«. Vaša povratna informacija je predmet naših pogojev uporabe.',
@@ -10668,7 +10875,14 @@ $messages['sl'] = array(
 	'mobile-frontend-language-article-heading' => 'Preberite v drugem jeziku',
 	'mobile-frontend-username' => 'Uporabniško ime:',
 	'mobile-frontend-password' => 'Geslo:',
+	'mobile-frontend-username-placeholder' => 'Uporabniško ime',
+	'mobile-frontend-password-placeholder' => 'Geslo',
 	'mobile-frontend-login' => 'Prijava',
+	'mobile-frontend-last-modified-date' => 'Zadnja sprememba: $1 ob $2',
+	'mobile-frontend-account-create-submit' => 'Registracija',
+	'mobile-frontend-password-confirm-placeholder' => 'Potrditev gesla',
+	'mobile-frontend-account-create-email-placeholder' => 'E-poštni naslov (neobvezno)',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Vnesite varnostno besedilo',
 	'mobile-frontend-overlay-escape' => 'Pojdi nazaj',
 	'mobile-frontend-placeholder' => 'Iščite po {{GRAMMAR:mestnik|{{SITENAME}}}}',
 	'mobile-frontend-dismiss-notification' => 'skrij obvestilo',
@@ -10676,8 +10890,6 @@ $messages['sl'] = array(
 	'mobile-frontend-privacy-link-text' => 'Zasebnost',
 	'mobile-frontend-about-link-text' => 'O programu',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Vsebina je dostopna pod <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Pogoji uporabe</a>',
 	'mobile-frontend-footer-contact' => 'Stik',
 	'mobile-frontend-main-menu-login' => 'Prijava',
 	'mobile-frontend-main-menu-logout' => 'Odjava',
@@ -10688,6 +10900,20 @@ $messages['sl'] = array(
 	'mobile-frontend-page-menu-history' => 'zgodovina',
 	'mobile-frontend-ajax-page-loading' => 'Nalaganje $1',
 	'mobile-frontend-page-saving' => 'Shranjevanje $1',
+	'mobile-frontend-watchlist-cta-button-login' => 'Prijava',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Registracija',
+	'mobile-frontend-watchlist-filter-all' => 'Vse',
+	'mobile-frontend-watchlist-filter-articles' => 'Članki',
+	'mobile-frontend-watchlist-filter-talk' => 'Pogovor',
+	'mobile-frontend-watchlist-filter-other' => 'Drugo',
+	'mobile-frontend-diffview-title' => 'Spremembe',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|urejanje|urejanji|urejanja|urejanj}}',
+	'mobile-frontend-diffview-anonymous' => 'Brezimni uporabnik',
+	'mobile-frontend-image-loading' => 'Prenašanje slike',
+	'mobile-frontend-image-uploading' => 'Nalaganje slike',
+	'tag-mobile_edit' => 'Mobilno urejanje',
+	'tag-mobile_edit-description' => 'Urejanje z mobilne spletne strani',
+	'mobile-frontend-drawer-cancel' => 'Prekliči',
 );
 
 /** Albanian (shqip)
@@ -11042,7 +11268,7 @@ $messages['sv'] = array(
 	'mobile-frontend-close-section' => 'Stäng detta avsnitt',
 	'mobile-frontend-show-button' => 'Visa',
 	'mobile-frontend-hide-button' => 'Göm',
-	'mobile-frontend-empty-homepage' => 'Denna hemsida måste konfigureras. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruktioner om hur du får denna mobila webbplats aktiverad</a>',
+	'mobile-frontend-empty-homepage-text' => 'Denna hemsida måste konfigureras. [http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instruktioner om hur du får denna mobila webbplats aktiverad]',
 	'mobile-frontend-regular-site' => 'Skrivbordsvy',
 	'mobile-frontend-wml-continue' => 'Fortsätt ...',
 	'mobile-frontend-wml-back' => 'Tillbaka ...',
@@ -11056,7 +11282,7 @@ $messages['sv'] = array(
 	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'AV',
 	'mobile-frontend-on' => 'PÅ',
-	'mobile-frontend-footer-contributors' => 'Sida av <a href="$1">bidragsgivare</a> som dig',
+	'mobile-frontend-footer-contributors-text' => 'Sida av [$1 bidragsgivare] som dig',
 	'mobile-frontend-featured-article' => 'Dagens utvalda artikel',
 	'mobile-frontend-news-items' => 'I nyheterna',
 	'mobile-frontend-leave-feedback-notice' => 'Din feedback hjälper oss att förbättra din upplevelse på den mobila webbplatsen. Den kommer att publiceras offentligt (tillsammans med ditt användarnamn, webbläsarversion och operativsystem) på sidan "$1". Försök att välja en informativ ämnesrad, t.ex. "formateringsproblem med breda tabeller". Din feedback är föremål för våra Användarvillkor.',
@@ -11112,8 +11338,8 @@ $messages['sv'] = array(
 	'mobile-frontend-privacy-link-text' => 'Sekretess',
 	'mobile-frontend-about-link-text' => 'Om',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Innehåll som finns tillgängligt under <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0</a>',
-	'mobile-frontend-terms-use' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Villkor för användning</a>',
+	'mobile-frontend-footer-license-text' => 'Innehåll som finns tillgängligt under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Användarvillkor]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Inga sidor matchar din sökning. Ändra sökningen eller tryck på tangentbordets sökknapp för att söka inuti sidor.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Öppna huvudmenyn',
@@ -11148,17 +11374,20 @@ Hjälp till att ge liv i dessa sidor genom att donera dina bilder som du är vil
 	'mobile-frontend-watchlist-view' => 'Visa din bevakningslista',
 	'mobile-frontend-watchlist-a-z' => 'Bevakade sidor',
 	'mobile-frontend-watchlist-feed' => 'Sidor med ändringar',
+	'mobile-frontend-watchlist-a-z-empty' => 'Du bevakar för tillfället inte några sidor',
+	'mobile-frontend-watchlist-feed-empty' => 'Det finns inga sidor med senaste ändringar',
 	'mobile-frontend-changeslist-ip' => 'Anonym användare',
 	'mobile-frontend-changeslist-nocomment' => 'ingen redigeringssammanfattning',
 	'mobile-frontend-watchlist-filter-all' => 'Alla',
 	'mobile-frontend-watchlist-filter-articles' => 'Artiklar',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andra',
-	'mobile-frontend-diffview-title' => 'Ändra till $1',
+	'mobile-frontend-diffview-title' => 'Ändringar',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|redigering|redigeringar}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonym användare',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte}} lades till',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|}} togs bort',
+	'mobile-frontend-diffview-explained' => 'Följande rader har lagts till (+) och tagits bort (-):',
 	'mobile-frontend-table' => 'Tabell $1',
 	'mobile-frontend-saving-exit-page' => 'Ditt bidrag sparas fortfarande. Om du lämnar din bidrag kommer de förloras. Är du säker på att du vill avsluta?',
 	'mobile-frontend-photo-upload' => 'Lägg till det första fotot på denna sida',
@@ -11171,6 +11400,8 @@ Hjälp till att ge liv i dessa sidor genom att donera dina bilder som du är vil
 	'mobile-frontend-photo-upload-error' => 'Ett fel uppstod när bilden skulle överföras. Var god prova en annan bild.',
 	'mobile-frontend-image-saving-to-article' => 'Spara bilden till sidan',
 	'mobile-frontend-photo-license' => 'OBS: Alla foton du publicerar kommer att publiceras under licensen [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0]',
+	'tag-mobile_edit' => 'Mobilredigering',
+	'tag-mobile_edit-description' => 'Redigering gjordes från mobilsidan',
 );
 
 /** Swahili (Kiswahili)
@@ -12194,6 +12425,13 @@ $messages['vi'] = array(
 	'mobile-frontend-username-placeholder' => 'Tên người dùng',
 	'mobile-frontend-password-placeholder' => 'Mật khẩu',
 	'mobile-frontend-login' => 'Đăng nhập',
+	'mobile-frontend-last-modified-date' => 'Sửa đổi lần cuối lúc $2 vào $1',
+	'mobile-frontend-last-modified-seconds' => 'Sửa đổi lần cuối cách đây $1 giây',
+	'mobile-frontend-last-modified-minutes' => 'Sửa đổi lần cuối cách đây $1 phút',
+	'mobile-frontend-last-modified-hours' => 'Sửa đổi lần cuối cách đây $1 giờ',
+	'mobile-frontend-last-modified-days' => 'Sửa đổi lần cuối cách đây $1 ngày',
+	'mobile-frontend-last-modified-months' => 'Sửa đổi lần cuối cách đây $1 tháng',
+	'mobile-frontend-last-modified-years' => 'Sửa đổi lần cuối cách đây $1 năm',
 	'mobile-frontend-account-create-submit' => 'Mở tài khoản',
 	'mobile-frontend-password-confirm-placeholder' => 'Xác nhận mật khẩu',
 	'mobile-frontend-account-create-email-placeholder' => 'Địa chỉ thư điện tử (tùy chọn)',
@@ -12242,6 +12480,9 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-watchlist-add' => 'Đã thêm $1 vào danh sách theo dõi của bạn',
 	'mobile-frontend-watchlist-removed' => 'Đã dời $1 khỏi danh sách theo dõi của bạn',
 	'mobile-frontend-watchlist-view' => 'Xem danh sách theo dõi của bạn',
+	'mobile-frontend-watchlist-cta' => 'Xin hãy đăng nhập hay mở tài khoản để theo dõi trang này.',
+	'mobile-frontend-watchlist-cta-button-login' => 'Đăng nhập',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Mở tài khoản',
 	'mobile-frontend-watchlist-a-z' => 'Các trang theo dõi',
 	'mobile-frontend-watchlist-feed' => 'Các trang được thay đổi',
 	'mobile-frontend-watchlist-a-z-empty' => 'Bạn hiện không theo dõi trang nào',
@@ -12252,11 +12493,12 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-watchlist-filter-articles' => 'Bài viết',
 	'mobile-frontend-watchlist-filter-talk' => 'Thảo luận',
 	'mobile-frontend-watchlist-filter-other' => 'Khác',
-	'mobile-frontend-diffview-title' => 'Thay đổi tại $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Các thay đổi',
 	'mobile-frontend-diffview-editcount' => '$1 lần sửa đổi',
 	'mobile-frontend-diffview-anonymous' => 'Người dùng vô danh',
 	'mobile-frontend-diffview-bytesadded' => 'thêm $1 byte',
 	'mobile-frontend-diffview-bytesremoved' => 'bớt $1 byte',
+	'mobile-frontend-diffview-explained' => 'Các dòng sau đã được thêm (+) và xóa (-):',
 	'mobile-frontend-table' => 'Bảng $1',
 	'mobile-frontend-saving-exit-page' => 'Các đóng góp của bạn còn đang được lưu giữ. Nếu bạn bỏ đi, các đóng góp này sẽ bị mất. Bạn có chắc muốn thoát?',
 	'mobile-frontend-photo-upload' => 'Thêm hình đầu tiên vào trang này',
@@ -12271,6 +12513,7 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-photo-license' => 'Lưu ý: Tất cả các hình ảnh mà bạn xuất bản sẽ được phát hành theo [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi giấy phép CC BY-SA 3.0].',
 	'tag-mobile_edit' => 'Sửa đổi di động',
 	'tag-mobile_edit-description' => 'Trang được sửa đổi dùng trang di động',
+	'mobile-frontend-drawer-cancel' => 'Hủy bỏ',
 );
 
 /** Volapük (Volapük)
@@ -12665,7 +12908,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-close-section' => '關閉本章節',
 	'mobile-frontend-show-button' => '顯示',
 	'mobile-frontend-hide-button' => '隱藏',
-	'mobile-frontend-empty-homepage-text' => '本首頁需要設置。<a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">如何設置本站的手機版</a>', # Fuzzy
+	'mobile-frontend-empty-homepage-text' => '本首頁需要設置。[//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instructions 如何設置本站的手機版]',
 	'mobile-frontend-regular-site' => '桌面版',
 	'mobile-frontend-wml-continue' => '繼續...',
 	'mobile-frontend-wml-back' => '返回...',
@@ -12679,7 +12922,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-missing-image' => '圖片',
 	'mobile-frontend-off' => '關',
 	'mobile-frontend-on' => '開',
-	'mobile-frontend-footer-contributors-text' => '頁面由和您一樣的<a href="$1">貢獻者</a>編寫', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => '頁面由和您一樣的[$1 貢獻者]編寫',
 	'mobile-frontend-featured-article' => '特色條目',
 	'mobile-frontend-news-items' => '新聞動態',
 	'mobile-frontend-leave-feedback-notice' => '您的意見將幫助我們改善你的手機版網頁體驗。它們（附有您的用戶名稱、 瀏覽器版本和操作系統）將公開張貼到頁面「$1」。請選擇內容豐富的標題，例如「寬表格格式有問題」。您的反饋遵守我們的使用條款。',
@@ -12722,6 +12965,13 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-username-placeholder' => '用戶名',
 	'mobile-frontend-password-placeholder' => '密碼',
 	'mobile-frontend-login' => '登入',
+	'mobile-frontend-last-modified-date' => '最後修訂於$1$2',
+	'mobile-frontend-last-modified-seconds' => '最後修訂於$1秒前',
+	'mobile-frontend-last-modified-minutes' => '最後修訂於$1分鐘前',
+	'mobile-frontend-last-modified-hours' => '最後修訂於$1小時前',
+	'mobile-frontend-last-modified-days' => '最後修訂於$1天前',
+	'mobile-frontend-last-modified-months' => '最後修訂於$1小時前',
+	'mobile-frontend-last-modified-years' => '最後修訂於$1年前',
 	'mobile-frontend-account-create-submit' => '註冊',
 	'mobile-frontend-password-confirm-placeholder' => '確認密碼',
 	'mobile-frontend-account-create-email-placeholder' => '電郵地址（可選）',
@@ -12736,6 +12986,8 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-privacy-link-text' => '隱私',
 	'mobile-frontend-about-link-text' => '關於',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license-text' => '內容在[//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]協議下提供',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile 使用條款]',
 	'mobile-frontend-footer-contact' => '聯繫',
 	'mobile-frontend-search-noresults' => '沒有頁面標題匹配您的搜尋字詞。更改您的搜索，或按鍵盤搜尋鍵進行全文搜索。',
 	'mobile-frontend-main-menu-button-tooltip' => '開啟主目錄',
@@ -12768,19 +13020,25 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-watchlist-add' => '已添加$1到您的監視列表',
 	'mobile-frontend-watchlist-removed' => '已從您的監視列表移除$1',
 	'mobile-frontend-watchlist-view' => '查看您的監視列表',
+	'mobile-frontend-watchlist-cta' => '請登入或註冊以監視此頁。',
+	'mobile-frontend-watchlist-cta-button-login' => '登入',
+	'mobile-frontend-watchlist-cta-button-signup' => '註冊',
 	'mobile-frontend-watchlist-a-z' => '已監視的頁面',
 	'mobile-frontend-watchlist-feed' => '有更改的頁面',
+	'mobile-frontend-watchlist-a-z-empty' => '目前沒有在監視任何頁面',
+	'mobile-frontend-watchlist-feed-empty' => '頁面最近沒有修改',
 	'mobile-frontend-changeslist-ip' => '匿名用戶',
 	'mobile-frontend-changeslist-nocomment' => '沒有編輯摘要',
 	'mobile-frontend-watchlist-filter-all' => '全部',
 	'mobile-frontend-watchlist-filter-articles' => '條目',
 	'mobile-frontend-watchlist-filter-talk' => '討論',
 	'mobile-frontend-watchlist-filter-other' => '其他',
-	'mobile-frontend-diffview-title' => '$1的修改', # Fuzzy
+	'mobile-frontend-diffview-title' => '修改',
 	'mobile-frontend-diffview-editcount' => '$1次編輯',
 	'mobile-frontend-diffview-anonymous' => '匿名用戶',
 	'mobile-frontend-diffview-bytesadded' => '已增加$1位元組',
 	'mobile-frontend-diffview-bytesremoved' => '已移除$1位元組',
+	'mobile-frontend-diffview-explained' => '以下行被添加（+）和刪除（-）：',
 	'mobile-frontend-table' => '表$1',
 	'mobile-frontend-saving-exit-page' => '正在保存您的貢獻。如果離開的話，你的貢獻將會丟失。你真的要離開嗎？',
 	'mobile-frontend-photo-upload' => '為本頁添加第一張照片',
@@ -12793,6 +13051,9 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-photo-upload-error' => '上傳圖片時發生錯誤。請嘗試其他圖片。',
 	'mobile-frontend-image-saving-to-article' => '正在保存圖片到頁面',
 	'mobile-frontend-photo-license' => '注意：您發佈的所有照片將以[//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0授權]發佈',
+	'tag-mobile_edit' => '手機編輯',
+	'tag-mobile_edit-description' => '從手機版所作的編輯',
+	'mobile-frontend-drawer-cancel' => '取消',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
