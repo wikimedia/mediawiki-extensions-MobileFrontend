@@ -169,7 +169,6 @@ $wgResourceModules['mobile.startup'] = array(
 		'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
 		'javascripts/common/mf-settings.js',
-		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-banner.js',
 		'javascripts/modules/mf-stop-mobile-redirect.js',
 	),
@@ -186,6 +185,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-toggle-dynamic.js',
+		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-watchlist.js',
 		'javascripts/modules/mf-languages.js',
 		'javascripts/modules/mf-last-modified.js',
@@ -209,7 +209,10 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 $wgResourceModules['mobile.production-only'] = array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array( 'stylesheets/modules/mf-toggle.css' ),
-	'scripts' => array( 'javascripts/modules/mf-toggle.js' ),
+	'scripts' => array(
+		'javascripts/modules/mf-toggle.js',
+		'javascripts/modules/mf-search.js',
+	),
 	'raw' => true,
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'MobileFrontend',
