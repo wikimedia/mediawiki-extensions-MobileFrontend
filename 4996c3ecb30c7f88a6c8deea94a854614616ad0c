@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//4UE\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-04T18:35:28Z",
+      "side": 1,
+      "message": "What MySQL bug exactly? Please provide a link to a bug report or describe.",
+      "revId": "4996c3ecb30c7f88a6c8deea94a854614616ad0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
