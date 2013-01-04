@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//4Pg\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-04T19:23:51Z",
+      "side": 1,
+      "message": "Please don\u0027t use \"article pages\". Put a dollar in the Friday Drinks Fund please, every time you use such a concept in user facing functionality. It\u0027s a page. A page! :).",
+      "parentUuid": "AAADgX//4Ss\u003d",
+      "revId": "7a373e040e0904cf49a95970f6f28cf1442c156a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//4TI\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 4
