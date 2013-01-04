@@ -12,6 +12,7 @@
   background-image: url(images/W.png);
   background-repeat: no-repeat;
 }
+#mw-mf-accountcreate,
 #userloginForm {
   margin-left: 40px;
   margin-right: 40px;
