@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//4gE\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-04T14:36:16Z",
+      "side": 1,
+      "message": "Avoid references to screen layout and positions. See https://www.mediawiki.org/wiki/I18n#Avoid_references_to_screen_layout_and_positions for details.\n\nThis message can probably do without \"right\" and be rephrased to something like \"Click the start at the top of the page\", right? Same for message below this one.",
+      "revId": "ddd38ec1c2fbb631ae8c64d01159e622e1e8b24c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4f4\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-04T14:36:16Z",
+      "side": 1,
+      "message": "What\u0027s an \"interesting page\"? A random page? (If so, please document as such.)",
+      "revId": "ddd38ec1c2fbb631ae8c64d01159e622e1e8b24c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
