@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//4Ss\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-04T18:51:33Z",
+      "side": 1,
+      "message": "This message doesn\u0027t help much. Alt messages usually serve two purposes:\n- to be read by screen readers\n- to be shown when images are disabled\n\nA message that says \"click the star\" when there\u0027s no star (we\u0027re not on article page) is confusing. Maybe it should simply say something like \"An image showing where the star icon is on article pages.\" Or maybe just make this image a background in CSS.",
+      "revId": "7a373e040e0904cf49a95970f6f28cf1442c156a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4TI\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-04T18:51:33Z",
+      "side": 1,
+      "message": "If it\u0027s in stylesheets dir, it shouldn\u0027t be an \u003cimg\u003e. Maybe we should create another directory for such things? Or maybe this should be a background in CSS instead?",
+      "revId": "7a373e040e0904cf49a95970f6f28cf1442c156a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
