@@ -257,6 +257,8 @@ class SkinMobile extends SkinMobileBase {
 			$moduleNames[] = 'mobile.special.settings';
 		} else if ( $title->isSpecial( 'Search' ) ) {
 			$moduleNames[] = 'mobile.special.search';
+		} else if ( $title->isSpecial( 'Watchlist' ) || $title->isSpecial( 'MobileDiff' ) ) {
+			$moduleNames[] = 'mobile.watchlist';
 		}
 
 		if ( $action === 'edit' ) {

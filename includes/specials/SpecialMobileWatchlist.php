@@ -15,8 +15,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			return parent::execute( $par );
 		}
 
-		$output->addModules( 'mobile.watchlist' );
-
 		$output->addHtml(
 			Html::openElement( 'div',
 				array(
