@@ -1,4 +1,4 @@
-class MobilePage
+class HomePage
   include PageObject
 
   def self.url
