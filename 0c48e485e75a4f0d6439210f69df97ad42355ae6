@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//4SE\u003d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-04T19:03:08Z",
+      "side": 1,
+      "message": "I would just make it return 404 instead of this comment...",
+      "revId": "0c48e485e75a4f0d6439210f69df97ad42355ae6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
