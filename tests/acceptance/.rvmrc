@@ -7,3 +7,7 @@ if ! rvm list | grep "$RUBY_VER" > /dev/null; then
 fi
 
 rvm use $RUBY_VER@MobileFrontend --create
+
+bundle install
+
+export MEDIAWIKI_URL=http://en.m.wikipedia.org/wiki/
