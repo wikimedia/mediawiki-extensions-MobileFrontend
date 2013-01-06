@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//3iE\u003d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-06T15:37:28Z",
+      "side": 1,
+      "message": "i\u0027m not sure I understand why the above is removed.. maybe we should stop removing this too?",
+      "revId": "d59c5e9f6d06af59067773143aca3b967be9fba1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
