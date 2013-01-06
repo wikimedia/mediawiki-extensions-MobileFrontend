@@ -26,27 +26,21 @@ class MobileFormatter extends HtmlFormatter {
 	protected $wmlContext;
 
 	private $defaultItemsToRemove = array(
-		'div.messagebox',
-		'div.editsection',
 		'div.infobox',
 		'table.toc',
-		'#catlinks',
 		'div.stub',
 		'#search', // remove search form element from Special:Search
 		'#wpDiff', // on action=edit diff button currently does not work in mobile
 		'#wpPreview', // on action=edit preview button currently does not work in mobile
 		'div.sister-project',
-		'script',
 		'div.magnify',
 		'.editsection',
 		'span.t',
 		'sup[style*="help"]',
 		'.portal',
 		'#protected-icon',
-		'.printfooter',
 		'.boilerplate',
-		'#id-articulo-destacado',
-		'#top',
+		'#id-articulo-destacado', // FA star on eswiki, @todo: remove class="metadata topicon" instead
 		'.hiddenStructure',
 		'.noprint',
 		'.medialist',
