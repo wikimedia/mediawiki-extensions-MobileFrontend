@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//2D4\u003d",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 530,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-07T23:01:34Z",
+      "side": 1,
+      "message": "should be: WebRequest::detectProtocol() !\u003d \u0027https\u0027",
+      "revId": "28cbcc72bdade2e95350db28df2441ae0e606921",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
