@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//2t8\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 189,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-07T15:23:22Z",
+      "side": 0,
+      "message": "you need this as a where condition.",
+      "revId": "408ebfde8a8f1a79808abc074de4c3c62604f9c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
