@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgX//2BQ\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-07T23:37:26Z",
+      "side": 1,
+      "message": "OK, maybe I shouldn\u0027t have done it in this changeset. I\u0027m all for splitting code into multiple lines, when it actually improves readability. Else it just makes the code longer, resulting in less code being shown on a single screen/page.",
+      "parentUuid": "AAADgX//2lU\u003d",
+      "revId": "467e9d0e2b6c50b01ce4fdf5576248678096f40c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//2lM\u003d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 3
@@ -47,6 +65,24 @@
       "writtenOn": "2013-01-07T17:14:43Z",
       "side": 1,
       "message": "incorrect sql statement - can\u0027t quite work out where it\u0027s going wrong though right now",
+      "revId": "467e9d0e2b6c50b01ce4fdf5576248678096f40c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//2BU\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-07T23:37:26Z",
+      "side": 1,
+      "message": "Why is it incorrect? Are you getting any errors? If yes, then what? Maybe I\u0027ll be able to reproduce this.",
+      "parentUuid": "AAADgX//2lM\u003d",
       "revId": "467e9d0e2b6c50b01ce4fdf5576248678096f40c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
