@@ -16,6 +16,24 @@
       "revId": "d59c5e9f6d06af59067773143aca3b967be9fba1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//3L8\u003d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-07T02:15:38Z",
+      "side": 1,
+      "message": "div.editsection is removed because there\u0027s already .editsection below.",
+      "parentUuid": "AAADgX//3iE\u003d",
+      "revId": "d59c5e9f6d06af59067773143aca3b967be9fba1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
