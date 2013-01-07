@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//2kI\u003d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-07T17:46:19Z",
+      "side": 1,
+      "message": "Something \u003d 404 page\nI believe strongly about this even though this is not currently \"what mediawiki does\". On mobile every byte counts and I don\u0027t want us to wastefully transfer content over a wire when a 404 will do.",
+      "revId": "d0784e6b2c8453462492f3ba0a0154d0d335b73c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
