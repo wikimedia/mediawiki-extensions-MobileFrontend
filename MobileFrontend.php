@@ -184,6 +184,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'stylesheets/modules/mf-watchlist.css',
 	),
 	'scripts' => array(
+		'javascripts/common/mf-history-jquery.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-watchlist.js',
