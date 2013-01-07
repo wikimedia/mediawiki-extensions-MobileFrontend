@@ -59,6 +59,7 @@ var m = ( function() {
 	function splitTextArea( $editArea ) {
 		var wikitext = $editArea.val(),
 			$loader,
+			newPage = wikitext === '',
 			parts = wikitext.split( '\n\n' ),
 			headingLocation, section_id = 0,
 			i, val, heading, $el,
@@ -86,7 +87,7 @@ var m = ( function() {
 				$el.on( 'click', false ).appendTo( headingLocation );
 			}
 
-			if ( val ) {
+			if ( val || newPage ) {
 				$el = $( '<textarea class="segment">' );
 			} else { // a heading for followed by 2 new lines - ensure the blank line is kept
 				$el = $( '<input class="segment">' );
