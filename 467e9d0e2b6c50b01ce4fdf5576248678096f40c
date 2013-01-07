@@ -2,6 +2,74 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADgX//2lY\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-07T17:14:43Z",
+      "side": 1,
+      "message": "please don\u0027t collapse.\nHave a cleaner diff by simply removing the line \u0027class\u0027\u003d\u003e\u0027content\u0027",
+      "revId": "467e9d0e2b6c50b01ce4fdf5576248678096f40c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//2lU\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-07T17:14:43Z",
+      "side": 1,
+      "message": "same as L23 why change - it\u0027s unrelated and confuses a reader of the diff",
+      "revId": "467e9d0e2b6c50b01ce4fdf5576248678096f40c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//2lM\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-07T17:14:43Z",
+      "side": 1,
+      "message": "incorrect sql statement - can\u0027t quite work out where it\u0027s going wrong though right now",
+      "revId": "467e9d0e2b6c50b01ce4fdf5576248678096f40c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//2lg\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-07T17:14:43Z",
+      "side": 1,
+      "message": "please remove this class to be consistent with the h2 outputted by the feed",
+      "revId": "467e9d0e2b6c50b01ce4fdf5576248678096f40c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgX//2u4\u003d",
         "filename": "stylesheets/less/specials/watchlist.less",
         "patchSetId": 3
