@@ -16,6 +16,24 @@
       "revId": "d0784e6b2c8453462492f3ba0a0154d0d335b73c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn///gE\u003d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-08T20:56:00Z",
+      "side": 1,
+      "message": "I agree.",
+      "parentUuid": "AAADgX//2kI\u003d",
+      "revId": "d0784e6b2c8453462492f3ba0a0154d0d335b73c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
