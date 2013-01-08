@@ -6,7 +6,7 @@ input[type=submit] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  padding: 1em 1.5em 1em;
+  padding: 1em 1.25em 1em;
   line-height: 1;
   text-align: center;
   cursor: pointer;
@@ -198,9 +198,9 @@ input[type=submit].confirm.disabled:hover {
   /* fixes button alignment when active button is bold */
 
   line-height: 1.1em;
+  white-space: nowrap;
 }
-#mw-mf-overlay .header a.button.active,
-#mw-mf-overlay .header a.button:active {
+#mw-mf-overlay .header a.button.active {
   background: #c8cacb;
   font-weight: bold;
 }
