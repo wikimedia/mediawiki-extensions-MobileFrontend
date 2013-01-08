@@ -652,7 +652,8 @@ class MobileContext extends ContextSource {
 		$this->updateMobileUrlHost( $parsedUrl );
 		$this->updateMobileUrlQueryString( $parsedUrl );
 		if ( $forceHttps ) {
-			$parsedUrl[ 'scheme' ] = 'https';
+			$parsedUrl['scheme'] = 'https';
+			$parsedUrl['delimiter'] = '://';
 		}
 
 		$assembleUrl = wfAssembleUrl( $parsedUrl );
