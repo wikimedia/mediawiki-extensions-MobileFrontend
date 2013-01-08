@@ -67,7 +67,7 @@ var opensearch = ( function() {
 			item = items[i];
 			section = {
 				label: item,
-				value: urlTemplate.replace( '$1', item )
+				value: urlTemplate.replace( '$1', M.prettyEncodeTitle( item ) )
 			};
 			sections.push( section );
 		}

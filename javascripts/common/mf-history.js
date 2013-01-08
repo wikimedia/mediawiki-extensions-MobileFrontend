@@ -13,7 +13,7 @@ M.history = ( function() {
 		currentTitle = M.getConfig( 'title', '' ),
 		URL_TEMPLATE = M.getConfig( 'pageUrl', '' ),
 		navigateToPage = function( title ) {
-			window.location.href = URL_TEMPLATE.replace( '$1', title );
+			window.location.href = URL_TEMPLATE.replace( '$1', M.prettyEncodeTitle( title ) );
 		};
 
 	function updateQueryStringParameter( url, parameter, value ) {
@@ -31,8 +31,7 @@ M.history = ( function() {
 	function getArticleUrl( title ) {
 		var search = window.location.search;
 		search = updateQueryStringParameter( search, 'welcome', false );
-		title = title.replace( / /gi, '_' );
-		return URL_TEMPLATE.replace( '$1', title ) + search;
+		return URL_TEMPLATE.replace( '$1', M.prettyEncodeTitle( title ) ) + search;
 	}
 
 	// ensures the history change event fires on initial load
