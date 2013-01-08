@@ -312,6 +312,7 @@ $wgResourceModules['mobile.alpha'] = array(
 		'javascripts/modules/mf-random.js',
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-user-gallery.js',
+		'javascripts/modules/mf-inline-style-scrubber.js',
 	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
