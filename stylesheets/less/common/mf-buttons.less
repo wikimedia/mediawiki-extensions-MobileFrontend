@@ -6,7 +6,7 @@ button,
 input[type=submit] {
 	display: inline-block;
 	.border-radius( 3px );
-	padding: ( @baseFontSize ) ( @baseFontSize * 1.5 ) ( @baseFontSize );
+	padding: ( @baseFontSize ) ( @baseFontSize * 1.25 ) ( @baseFontSize );
 	line-height: 1;
 	text-align: center;
 	cursor: pointer;
@@ -102,9 +102,9 @@ input[type=submit] {
 			border-right: none;
 			/* fixes button alignment when active button is bold */
 			line-height: 1.1em;
+			white-space: nowrap;
 
-			&.active,
-			&:active {
+			&.active {
 				background: #c8cacb;
 				font-weight: bold;
 			}
