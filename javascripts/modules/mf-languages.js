@@ -39,6 +39,9 @@ var m = ( function() {
 
 		overlay = createOverlay( $search, $wrapper, { hash: '#mw-mf-overlay-language' } );
 		$lists = $( overlay ).find( 'ul' );
+		$lists.find( 'a' ).on( 'click', function() {
+			M.emit( 'language-select', $( this ).attr( 'lang' ) );
+		} );
 		$( overlay ).find( '.search' ).on( 'keyup', function() {
 			var matches = filterLists( $lists, this.value.toLowerCase() );
 			if ( matches > 0 ) {

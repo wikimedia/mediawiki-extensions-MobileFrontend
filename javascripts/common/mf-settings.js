@@ -68,6 +68,7 @@ M.settings = ( function() {
 		readCookie: readCookie,
 		removeCookie: removeCookie,
 		saveUserSetting: saveUserSetting,
+		supportsLocalStorage: supportsLocalStorage,
 		writeCookie: writeCookie
 	};
 }());
