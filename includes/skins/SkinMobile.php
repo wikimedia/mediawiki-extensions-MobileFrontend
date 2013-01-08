@@ -722,54 +722,27 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php
 	}
 
+	// @fixme: This code exists whilst MobileFrontend is not fully ResourceLoader (RL) integrated
+	// It provides messages for the mobile site when RL is not available
 	public function addMessages( $config ) {
-		$messages = array(
-			'mobile-frontend-language-site-choose',
-			'mobile-frontend-language-site-nomatches',
-			'mobile-frontend-close-section',
-			'mobile-frontend-search-help',
-			'mobile-frontend-search-noresults',
-			'mobile-frontend-watchlist-add',
-			'mobile-frontend-watchlist-removed',
-			'mobile-frontend-watchlist-view',
-			'mobile-frontend-ajax-random-heading',
-			'mobile-frontend-ajax-random-quote',
-			'mobile-frontend-ajax-random-quote-author',
-			'mobile-frontend-ajax-random-question',
-			'mobile-frontend-ajax-random-yes',
-			'mobile-frontend-ajax-random-retry',
-			'mobile-frontend-ajax-page-loading',
-			'mobile-frontend-page-saving',
-			'mobile-frontend-ajax-page-error',
-			'mobile-frontend-meta-data-issues',
-			'mobile-frontend-meta-data-issues-header',
-			'mobile-frontend-show-button',
-			'mobile-frontend-hide-button',
-			'mobile-frontend-overlay-escape',
-			'mobile-frontend-ajax-random-suggestions',
-			'mobile-frontend-table',
-			'mobile-frontend-photo-upload-error',
-			'mobile-frontend-photo-upload-progress',
-			'mobile-frontend-photo-caption-placeholder',
-			'mobile-frontend-image-loading',
-			'mobile-frontend-image-uploading',
-			'mobile-frontend-image-saving-to-article',
-			'mobile-frontend-photo-upload',
-			'mobile-frontend-photo-upload-comment',
-			'mobile-frontend-photo-upload-generic',
-			'mobile-frontend-watchlist-cta',
-			'mobile-frontend-watchlist-cta-button-signup',
-			'mobile-frontend-watchlist-cta-button-login',
-			'mobile-frontend-drawer-cancel',
+		global $wgResourceModules;
+		$modules = array(
+			'mobile.production-only',
+			'mobile.production-jquery',
+			'mobile.action.edit',
 		);
-		foreach ( $messages as $msg ) {
-			$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
+		foreach( $modules as $name ) {
+			if ( isset( $wgResourceModules[$name]["messages"] ) ) {
+				foreach( $wgResourceModules[$name]["messages"] as $msg ) {
+					$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
+				}
+			}
 		}
 		return $config;
 	}
 
 	public function prepareData() {
-		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgArticlePath;
+		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgArticlePath, $wgMFEnableResourceLoader;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
@@ -787,6 +760,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$title = $this->data['title'];
 		// FIXME: this should all be done in prepareTemplate - getting extremely messy
 		$jsconfig = array(
+			// FIXME: these messages require parsing before being sent to mobile - the parsing should probably be done in javascript
 			'messages' => array(
 				'mobile-frontend-photo-license' => wfMessage( 'mobile-frontend-photo-license' )->parse(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
@@ -821,7 +795,9 @@ class SkinMobileTemplate extends BaseTemplate {
 			),
 		);
 
-		$jsconfig = $this->addMessages( $jsconfig );
+		if ( ! ( $wgMFEnableResourceLoader && $this->data['supports_jquery'] ) ) {
+			$jsconfig = $this->addMessages( $jsconfig );
+		}
 
 		if ( $user->isLoggedIn() ) {
 			$jsconfig['messages']['mobile-frontend-logged-in-toast-notification'] =
@@ -829,6 +805,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 
 		if ( $this->data['isMainPage'] ) {
+			// FIXME: move parsing into javascript
 			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage-text'
 			)->parse();
 			if ( $user->isLoggedIn() ) {

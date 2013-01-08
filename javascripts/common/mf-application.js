@@ -15,9 +15,17 @@ mw.mobileFrontend = (function() {
 		doc = document.documentElement;
 
 	function message( name, arg1 ) {
-		var msg = mwMobileFrontendConfig.messages[name] || '';
-		if ( arg1 ) {
-			msg = msg.replace( '$1', arg1 );
+		var msg;
+		msg = mwMobileFrontendConfig.messages[ name ];
+		if ( msg ) {
+			if ( arg1 ) {
+				msg = msg.replace( '$1', arg1 );
+			}
+		} else if ( mw.msg ) {
+				msg = mw.msg( name, arg1 );
+		} else {
+			// no need for translation user should never see this
+			throw 'bad key given: ' + name;
 		}
 		return msg;
 	}
