@@ -186,6 +186,10 @@ mw.mobileFrontend = (function() {
 		}
 	}
 
+	function prettyEncodeTitle( title ) {
+		return encodeURIComponent( title.replace( / /g, '_' ) ).replace( /%3A/g, ':' ).replace( /%2F/g, '/' );
+	}
+
 	return {
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
@@ -201,6 +205,7 @@ mw.mobileFrontend = (function() {
 		setConfig: setConfig,
 		supportsPositionFixed: supportsPositionFixed,
 		triggerPageReadyHook: triggerPageReadyHook,
+		prettyEncodeTitle: prettyEncodeTitle,
 		utils: u
 	};
 
