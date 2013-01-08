@@ -710,6 +710,11 @@ body {
 #mf-notification.toast button {
   display: none;
 }
+#mf-notification.toast.locked button {
+  display: block;
+  top: 0.8em;
+  right: 1.4em;
+}
 #mf-notification.toast div {
   padding: 0.8em 1.4em;
 }
