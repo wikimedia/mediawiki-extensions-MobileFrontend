@@ -88,32 +88,36 @@ input[type=submit] {
 #mw-mf-overlay {
 	.header {
 		a.button {
-			font-size: @baseFontSize * 0.7; /* header is small */
+			font-size: @baseFontSize;
 			margin-top: @buttonVerticalMargin;
 			margin-bottom: @buttonVerticalMargin;
 			.border-radius( 0 );
 			padding-top: @buttonVerticalPadding;
 			padding-bottom: @buttonVerticalPadding;
 			text-decoration: none;
-			border: none;
 			text-shadow: none;
-			.vertical-gradient( rgb(142,144,147), rgb(142,144,147) );
-			color: white;
+			.vertical-gradient(#fff, #e9e9ea, 45%, 100%);
+			color: #58595b;
+			border: 1px solid #9ea0a3;
+			border-right: none;
+			/* fixes button alignment when active button is bold */
+			line-height: 1.1em;
 
 			&.active,
 			&:active {
-				.vertical-gradient( white, white );
-				color: rgb(81,183,226);
+				background: #c8cacb;
+				font-weight: bold;
 			}
-		}
-	}
-}
 
-@media all and (min-width: 500px) {
-	#mw-mf-overlay {
-		.header {
-			a.button {
-				font-size: @baseFontSize;
+			&:first-child {
+				border-top-left-radius: 3px;
+				border-bottom-left-radius: 3px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+				border-right: 1px solid #9ea0a3;
 			}
 		}
 	}

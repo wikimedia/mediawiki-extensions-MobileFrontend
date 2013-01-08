@@ -175,8 +175,8 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-cta-button-login' => 'Login',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Sign up',
 
-	'mobile-frontend-watchlist-a-z' => 'Watched pages',
-	'mobile-frontend-watchlist-feed' => 'Pages with changes',
+	'mobile-frontend-watchlist-a-z' => 'All',
+	'mobile-frontend-watchlist-feed' => 'Modified',
 	'mobile-frontend-watchlist-a-z-empty' => 'You are currently not watching any pages',
 	'mobile-frontend-watchlist-feed-empty' => 'There are no pages with recent changes',
 

@@ -10,100 +10,117 @@
   background: none;
 }
 #mw-mf-watchlist .mw-mf-watchlist-selector {
-  text-align: center;
-  padding: 8px 0px;
-  background-color: #f0f0f0;
+  border-bottom: 1px solid #e2e2e2;
 }
 #mw-mf-watchlist .mw-mf-watchlist-selector li {
+  text-align: center;
   display: inline-block;
-  border: solid 1px #444;
-  padding: 0px 8px;
-  margin: 0;
-  color: #808080;
-  background-color: white;
+  border-left: 1px solid #e2e2e2;
+  width: 25%;
+  margin: 0 0 0 -1px;
 }
-#mw-mf-watchlist .mw-mf-watchlist-selector li.selected {
-  color: white;
-  background-color: #808080;
+#mw-mf-watchlist .mw-mf-watchlist-selector li.selected a {
+  font-weight: bold;
+  border-bottom-color: #3366bb;
 }
 #mw-mf-watchlist .mw-mf-watchlist-selector li a {
-  color: inherit;
+  display: block;
+  color: #58595b;
+  padding: 5px 0 0;
+  margin: 0 1px 0 0;
+  border-bottom: 3px solid transparent;
 }
 #mw-mf-overlay ul.mw-mf-watchlist-results {
-  background-color: white;
   list-style: none;
 }
 #mw-mf-overlay ul.mw-mf-watchlist-results li {
-  padding: 8px 28px 8px 88px;
-  border-top: solid 1px #c0c0c0;
-  position: relative;
+  border-bottom: solid 1px #e2e2e2;
   color: #808080;
-  background-image: /* @embed */ url(images/drilldown.png);
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: 20px 20px;
-  -o-background-size: 20px 20px;
-  -webkit-background-size: 20px 20px;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: right center;
-  height: 64px;
+  line-height: 1;
 }
 #mw-mf-overlay ul.mw-mf-watchlist-results li .listThumb {
+  position: absolute;
   background-repeat: no-repeat;
+  background-position: center center;
+  width: 70px;
+  height: 100%;
+  margin: 0 0 0 -85px;
+}
+#mw-mf-overlay ul.mw-mf-watchlist-results li .listThumbH {
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto 80px auto;
-  -o-background-size: auto 80px auto;
-  -webkit-background-size: auto 80px auto;
-  background-size: auto 80px auto;
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80px;
-  bottom: 0;
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
 }
-#mw-mf-overlay ul.mw-mf-watchlist-results li.date {
-  background: none;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: #f0f0f0;
+#mw-mf-overlay ul.mw-mf-watchlist-results li .listThumbV {
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
 }
-#mw-mf-overlay ul.mw-mf-watchlist-results li div {
-  font-size: 80%;
+#mw-mf-overlay ul.mw-mf-watchlist-results li a {
+  display: block;
+  position: relative;
+  padding: 0 23px 15px 77px;
+  margin: -1px 0;
+  border-left: 8px solid transparent;
+  /* FIXME: remove if we reset text-decoration in common styles */
+
+  text-decoration: none;
+}
+#mw-mf-overlay ul.mw-mf-watchlist-results li a:active {
+  border-left-color: #3366bb;
+  background: #e8e8e9;
+  background: rgba(232, 232, 233, 0.5);
+}
+#mw-mf-overlay ul.mw-mf-watchlist-results li div,
+#mw-mf-overlay ul.mw-mf-watchlist-results li p {
+  font-size: .9em;
+  margin: 0;
+  color: #999b9e;
+}
+#mw-mf-overlay ul.mw-mf-watchlist-results li p {
   white-space: nowrap;
-  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
   overflow: hidden;
 }
-#mw-mf-overlay ul.mw-mf-watchlist-results li .mw-mf-user {
-  width: 75%;
-  /* shorten to make room for time */
-
+#mw-mf-overlay ul.mw-mf-watchlist-results li h2 {
+  font: inherit;
+  margin: 0;
+  font-weight: bold;
+  color: #404040;
+  padding: 20px 0 0;
 }
-#mw-mf-overlay ul.mw-mf-watchlist-results li .mw-mf-user .mw-mf-ip {
-  color: white;
-  background: red;
-  padding: 0px 6px;
-}
-#mw-mf-overlay ul.mw-mf-watchlist-results li .mw-mf-title {
-  color: #202020;
-  font-size: 100%;
+#mw-mf-overlay ul.mw-mf-watchlist-results li h2 a {
+  color: inherit;
 }
 #mw-mf-overlay ul.mw-mf-watchlist-results li .mw-mf-time {
-  position: absolute;
-  top: 3em;
-  right: 28px;
+  color: #c6c6c6;
+  font-size: .6em;
+  text-transform: uppercase;
+}
+#mw-mf-overlay ul.mw-mf-watchlist-results li .mw-mf-user {
+  margin: .5em 0 0;
 }
 #mw-mf-diffview h2 {
+  font: inherit;
   margin: 0;
+  font-weight: bold;
+  color: #404040;
+}
+#mw-mf-diffview h2 a {
+  color: inherit;
 }
 #mw-mf-diffview .mw-mf-bytesadded {
   color: #008a46;
 }
 #mw-mf-diffview .mw-mf-bytesremoved {
-  color: red;
+  color: #b24242;
 }
 #mw-mf-diffview ins,
 #mw-mf-diffview del {
@@ -119,18 +136,18 @@
 }
 #mw-mf-diffview .mw-mf-diff-date {
   font-size: 0.5em;
-  color: #C6C6C6;
+  color: #c6c6c6;
 }
 #mw-mf-diffview ins {
-  color: green;
+  color: #008a46;
   text-decoration: none;
 }
 #mw-mf-diffview del {
-  color: red;
+  color: #b24242;
   text-decoration: strikethrough;
 }
 #mw-mf-diffview #mw-mf-diffarea {
-  padding: 1em;
+  padding: 1em 1em 7em;
 }
 #mw-mf-diffview #mw-mf-diff-info {
   padding-bottom: 1em;
@@ -144,7 +161,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 5em;
+  height: 3em;
   padding: 1em;
   background-color: #f0f0f0;
   border-top: solid 1px #c0c0c0;
@@ -160,22 +177,21 @@
   display: block;
   width: 0;
 }
-#mw-mf-diffview #mw-mf-userinfo .mw-mf-user,
-#mw-mf-diffview #mw-mf-userinfo .mw-mf-anon {
-  padding-left: 20px;
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-user {
   line-height: 14px;
-  background-position: left center;
+}
+.mw-mf-user {
+  padding: 1px 0 0 20px;
+  color: #565656 !important;
+  background: url(images/user.png) 0 -2px no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -moz-background-size: 16px 16px;
   -o-background-size: 16px 16px;
   -webkit-background-size: 16px 16px;
   background-size: 16px 16px;
-  background-repeat: no-repeat;
 }
-#mw-mf-diffview #mw-mf-userinfo .mw-mf-user {
-  background-image: url(images/user.png);
-}
-#mw-mf-diffview #mw-mf-userinfo .mw-mf-anon {
-  background-image: url(images/user-ip.png);
+.mw-mf-anon {
+  color: #b24242;
+  background-image: url(images/user-anon.png);
 }
