@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn///qI\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-08T20:24:20Z",
+      "side": 1,
+      "message": "Should be removed?",
+      "revId": "318f888430f7c27f66bdc4a90dc0133183bfe2cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn///qM\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-08T20:24:20Z",
+      "side": 1,
+      "message": "I don\u0027t like the double negation, !nofollow makes it hard to understand what it means.",
+      "revId": "318f888430f7c27f66bdc4a90dc0133183bfe2cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn///pw\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-08T20:24:20Z",
+      "side": 1,
+      "message": "Maybe move the `if` outside?\n\nif ( inBeta ) {\n    $( window ).bind( \u0027mw-mf-page-loaded\u0027, hijackLinks );\n}",
+      "revId": "318f888430f7c27f66bdc4a90dc0133183bfe2cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
