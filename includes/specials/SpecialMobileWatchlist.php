@@ -197,10 +197,25 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$conds = array(
 			'wl_user' => $user->getId()
 		);
-
-		$tables = array( 'watchlist' );
-		$fields = array( $dbr->tableName( 'watchlist' ) . '.*' );
-		$options = array( 'ORDER BY' => 'wl_namespace, wl_title' );
+		$tables = array( 'watchlist', 'page', 'revision' );
+		$fields = array(
+			$dbr->tableName( 'watchlist' ) . '.*',
+			// get the timestamp of the last change only
+			'MAX(' . $dbr->tableName( 'revision' ) . '.rev_timestamp) AS rev_timestamp'
+		);
+		$joinConds = array(
+			'page' => array( 'JOIN', array(
+				'wl_namespace = page_namespace',
+				'wl_title = page_title'
+			)	),
+			'revision' => array( 'JOIN', array(
+				'page_id = rev_page'
+			) )
+		);
+		$options = array(
+			'GROUP BY' => 'wl_namespace, wl_title',
+			'ORDER BY' => 'wl_namespace, wl_title'
+		);
 
 		$options['LIMIT'] = self::LIMIT + 1; // add one to decide whether to show the more button
 
@@ -224,7 +239,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$conds[] = "wl_namespace > $ns OR (wl_namespace = $ns AND wl_title >= $titleQuoted)";
 		}
 
-		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options );
+		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $joinConds );
 
 		return $res;
 	}
@@ -361,11 +376,14 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
 		$titleText = $title->getPrefixedText();
+		$ts = new MWTimestamp( $row->rev_timestamp );
+		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->escaped();
 
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
 			Html::element( 'h2', null, $titleText ).
+			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $lastModified ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' )
 		);

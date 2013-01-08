@@ -187,6 +187,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-filter-articles' => 'Articles',
 	'mobile-frontend-watchlist-filter-talk' => 'Talk',
 	'mobile-frontend-watchlist-filter-other' => 'Other',
+	'mobile-frontend-watchlist-modified' => 'Modified $1',
 
 	'mobile-frontend-diffview-title' => 'Changes',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edit|edits}}',
@@ -510,6 +511,8 @@ They can either exit the page and lose them or stay on the page until they are c
 	'tag-mobile_edit-description' => 'Change tag description e.g. in Special:Tags, see also {{msg-mw|tag-mobile_edit}}',
 	'mobile-frontend-drawer-cancel' => 'Not visible but the text label for the cancel button inside a navigation overlay
 {{Identical|Cancel}}',
+	'mobile-frontend-watchlist-modified' => 'Text saying how long ago a page in watchlist was updated.
+* $1 - output of {{msg-mw|ago}} (e.g. "15 days ago", "7 hours ago").',
 );
 
 /** Achinese (Acèh)

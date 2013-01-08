@@ -24,9 +24,10 @@ a.watch-this-article.watched {
 }
 li a.watch-this-article {
   right: 23px;
-  top: 12px;
+  top: 50%;
   height: 24px;
   width: 24px;
+  margin: -12px 0 0;
 }
 #mw-mf-menu-page a.watch-this-article {
   position: relative;

@@ -1,9 +1,11 @@
 @import "../mf-mixins.less";
 
+@watchThisArticleSize: 22px;
+
 a.watch-this-article {
 	background-image: url(images/watch.png);
 	background-position: right center;
-	.background-size( auto, 22px );
+	.background-size( auto, @watchThisArticleSize );
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -25,9 +27,10 @@ a.watch-this-article {
 
 li a.watch-this-article {
 	right: @contentMarginRight;
-	top: @searchResultPaddingVertical;
+	top: 50%;
 	height: @searchResultPaddingVertical * 2;
 	width: @searchResultPaddingVertical * 2;
+	margin: -(@watchThisArticleSize / 2 + 1) 0 0;
 }
 
 #mw-mf-menu-page {
