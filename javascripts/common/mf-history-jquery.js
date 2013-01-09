@@ -151,6 +151,7 @@
 			var page;
 			_mwStart = +new Date; // reset logger
 			M.setConfig( 'title', title );
+			document.title = mw.message( 'pagetitle', title ).parse();
 			page = loadPage( title, typeof constructPage === 'undefined' ? true : constructPage );
 			window.history.pushState( { title: title, hash: true }, title, getArticleUrl( title ) );
 			return page;
