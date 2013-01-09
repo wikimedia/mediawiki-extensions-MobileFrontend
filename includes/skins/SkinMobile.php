@@ -200,6 +200,11 @@ class SkinMobile extends SkinMobileBase {
 			if ( $rlSupport ) {
 				// Initialize ResourceLoader, targeted to mobile...
 				$headLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
+				$headLinks[] = Html::inlineScript(
+					ResourceLoader::makeLoaderConditionalScript(
+						ResourceLoader::makeConfigSetScript( $out->getJSVars() )
+					)
+				);
 				$modules = $out->getModules( true );
 
 				if ( $modules ) {
