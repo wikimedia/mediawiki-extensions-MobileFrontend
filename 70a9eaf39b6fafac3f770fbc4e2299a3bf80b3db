@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn//+b0\u003d",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-09T19:16:44Z",
+      "side": 1,
+      "message": "So we\u0027re not restricting this to beta anymore? Anyway, it can still be simpler:\n\n$( window ).bind( \u0027mw-mf-page-loaded\u0027, hijackLinks );\n\nNo need for an additional closure here.",
+      "revId": "70a9eaf39b6fafac3f770fbc4e2299a3bf80b3db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
