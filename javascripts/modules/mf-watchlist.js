@@ -4,6 +4,20 @@ var w = ( function() {
 	var lastToken, nav = M.navigation,
 		POST_LOGIN_ACTION_KEY = 'mobile.postaction';
 
+	function logWatchEvent( eventType ) {
+		var types = [ 'watchlist', 'unwatchlist', 'anonCTA' ],
+			data = {
+				articleID: mw.config.get( 'wgArticleId' ),
+				anon: mw.config.get( 'wgUserName' ) === null,
+				action: types[ eventType ],
+				editCount: -1, // FIXME: pass a real edit count
+				token: lastToken || '+\\', // +\\ for anon
+				userId: mw.config.get( 'wgUserId' ) || undefined
+			};
+
+		M.log( 'MobileBetaWatchlist', data );
+	}
+
 	function toggleWatch( title, token, unwatchflag, callback, errback ) {
 		var data = {
 			format: 'json', action: 'watch',
@@ -50,10 +64,12 @@ var w = ( function() {
 			$( watchBtn ).removeClass( 'disabled waiting' );
 		}
 
-		function success() {
-			if( !$( watchBtn ).hasClass( 'watched' ) ) {
+		function success( data ) {
+			if ( data.watch.hasOwnProperty( 'watched' ) ) {
+				logWatchEvent( 0 );
 				$( watchBtn ).addClass( 'watched' );
 			} else {
+				logWatchEvent( 1 );
 				$( watchBtn ).removeClass( 'watched' );
 			}
 			enable();
@@ -120,6 +136,9 @@ var w = ( function() {
 					var $drawer = nav.showDrawer(), $a,
 						href = M.history.getArticleUrl( 'Special:UserLogin' ),
 						updateQs = M.history.updateQueryStringParameter;
+
+					// log if enabled
+					logWatchEvent( 2 );
 
 					$( '<p>' ).html( M.message( 'mobile-frontend-watchlist-cta' ) ).appendTo( $drawer );
 					$a = $( '<a> ').text( M.message( 'mobile-frontend-watchlist-cta-button-login' ) ).
