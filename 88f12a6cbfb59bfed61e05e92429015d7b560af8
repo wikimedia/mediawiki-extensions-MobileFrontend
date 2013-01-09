@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn//+CA\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-01-09T23:55:13Z",
+      "side": 1,
+      "message": "This could potentially be done server-side too, similar to how account creation logging now works in EventLogging master.",
+      "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
