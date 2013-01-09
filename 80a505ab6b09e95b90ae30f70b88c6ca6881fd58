@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn//+cQ\u003d",
+        "filename": "javascripts/actions/mf-edit-translate.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-09T19:12:48Z",
+      "side": 1,
+      "message": "Trailing ws",
+      "revId": "80a505ab6b09e95b90ae30f70b88c6ca6881fd58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
