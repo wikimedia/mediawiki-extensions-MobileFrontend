@@ -693,12 +693,14 @@ body {
   z-index: 3;
 }
 #mf-notification.toast {
+  left: 10%;
+  right: 10%;
   padding: 0;
   font-size: 0.8em;
   background-color: #373737;
   color: white;
   margin: 0 auto 20px auto;
-  max-width: 80%;
+  width: 80%;
   text-align: center;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;

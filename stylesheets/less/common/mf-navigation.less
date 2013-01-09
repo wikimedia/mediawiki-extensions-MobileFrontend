@@ -565,12 +565,14 @@ body {
 	z-index: 3;
 
 	&.toast {
+		left: 10%;
+		right: 10%;
 		padding: 0;
 		font-size: @baseFontSize * 0.8;
 		background-color: @toastNotificationColor;
 		color: white;
 		margin: 0 auto 20px auto;
-		max-width: 80%;
+		width: 80%;
 		text-align: center;
 		.border-radius( 1px );
 		.boxshadow( 0, 0, 1px, 3px, @toastNotificationColor );
