@@ -750,7 +750,6 @@ class SkinMobileTemplate extends BaseTemplate {
 			'mobile-frontend-image-uploading',
 			'mobile-frontend-image-saving-to-article',
 			'mobile-frontend-photo-upload',
-			'mobile-frontend-photo-article-edit-comment',
 			'mobile-frontend-photo-upload-comment',
 			'mobile-frontend-photo-upload-generic',
 			'mobile-frontend-watchlist-cta',

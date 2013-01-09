@@ -206,6 +206,9 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'mobile-frontend-last-modified-days',
 		'mobile-frontend-last-modified-months',
 		'mobile-frontend-last-modified-years',
+		// mf-photo.js
+		'mobile-frontend-photo-article-edit-comment',
+		'mobile-frontend-photo-article-donate-comment',
 	),
 );
 
