@@ -21,7 +21,6 @@ module = ( function() {
 		supported = M.isLoggedIn() &&
 			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined' &&
 			!M.getConfig( 'imagesDisabled', false ) &&
-			( ns === NS_MAIN || ns === NS_TALK ) && // limit to talk and article namespaces
 			// webkit only for time being
 			window.navigator.userAgent.indexOf( 'WebKit' ) > -1,
 		endPoint = M.getConfig( 'photo-upload-endpoint' ),
@@ -254,7 +253,9 @@ module = ( function() {
 	}
 
 	function init() {
-		if ( supported && articleNeedsPhoto( $( '#content' ) ) ) {
+		// limit to talk and article namespaces
+		var validNamespace = ( ns === NS_MAIN || ns === NS_TALK );
+		if ( supported && articleNeedsPhoto( $( '#content' ) ) && validNamespace ) {
 			addPhotoUploader( $( '#content_0' ), true );
 		}
 	}
