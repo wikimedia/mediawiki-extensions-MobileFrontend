@@ -37,8 +37,8 @@
 		$( container ).find( 'a' ).on( 'click', function( ev ) {
 			var title = $( this ).attr( 'title' ),
 				namespaced = title && title.indexOf( ':' ) > -1,
-				nofollow = $( this ).hasClass( 'new,external' );
-			if ( !nofollow && title && !namespaced ) {
+				canHijack = !$( this ).is( '.new,.external,.image' );
+			if ( canHijack && title && !namespaced ) {
 				navigateToPage( title );
 				ev.preventDefault();
 			}
