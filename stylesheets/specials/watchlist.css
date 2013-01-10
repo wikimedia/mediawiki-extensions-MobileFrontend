@@ -5,6 +5,13 @@
   -o-user-select: none;
   user-select: none;
 }
+#mw-mf-watchlist a.button {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 #mw-mf-watchlist p.empty {
   text-align: center;
   background: none;

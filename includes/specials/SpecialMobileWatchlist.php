@@ -1,10 +1,22 @@
 <?php
 
 class SpecialMobileWatchlist extends SpecialWatchlist {
+	const LIMIT = 50;
+
+	private $filter,
+		$seenTitles,
+		$seenDays,
+		$today;
+
+	/** @var Title */
+	private $fromPageTitle;
+
 	function execute( $par ) {
 		$user = $this->getUser();
 		$output = $this->getOutput();
-		$view = $this->getRequest()->getVal( 'watchlistview', 'a-z' );
+		$req = $this->getRequest();
+		$view = $req->getVal( 'watchlistview', 'a-z' );
+		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 		$recentChangesView = ( $view === 'feed' ) ? true : false;
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
@@ -140,10 +152,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			),
 		);
 		$options = array( 'ORDER BY' => 'rc_timestamp DESC' );
-		$limitWatchlist = 100; // hack
-		if( $limitWatchlist ) {
-			$options['LIMIT'] = $limitWatchlist;
-		}
+		$options['LIMIT'] = self::LIMIT;
 
 		$rollbacker = $user->isAllowed('rollback');
 		if ( $rollbacker ) {
@@ -188,27 +197,31 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$conds = array(
 			'wl_user' => $user->getId()
 		);
+
 		$tables = array( 'watchlist' );
 		$fields = array( $dbr->tableName( 'watchlist' ) . '.*' );
 		$options = array( 'ORDER BY' => 'wl_namespace, wl_title' );
 
-		$limitWatchlist = 100; // hack
-		if( $limitWatchlist ) {
-			$options['LIMIT'] = $limitWatchlist;
-		}
+		$options['LIMIT'] = self::LIMIT + 1; // add one to decide whether to show the more button
 
 		switch( $this->filter ) {
 		case 'all':
 			break;
 		case 'articles':
-			$conds['wl_namespace'] = 0;
+			$conds[] = 'wl_namespace = 0'; // Has to be unquoted or MySQL will filesort
 			break;
 		case 'talk':
-			$conds['wl_namespace'] = 1;
+			$conds[] = 'wl_namespace = 1';
 			break;
 		case 'other':
 			$conds['wl_namespace'] = array(2, 4);
 			break;
+		}
+
+		if ( $this->fromPageTitle ) {
+			$ns = $this->fromPageTitle->getNamespace();
+			$titleQuoted = $dbr->addQuotes( $this->fromPageTitle->getDBkey() );
+			$conds[] = "wl_namespace > $ns OR (wl_namespace = $ns AND wl_title >= $titleQuoted)";
 		}
 
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options );
@@ -224,7 +237,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$this->showResults( $res, false );
 	}
 
-	function showResults( $res, $feed ) {
+	function showResults( ResultWrapper $res, $feed ) {
 		$empty = $res->numRows() === 0;
 		$this->seenTitles = array();
 
@@ -245,22 +258,49 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		} else {
 			$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
 
+			$lookahead = 1;
+			$fromTitle = false;
+
 			if ( $feed ) {
 				foreach( $res as $row ) {
 					$this->showFeedResultRow( $row );
 				}
 			} else {
 				foreach( $res as $row ) {
-					$this->showListResultRow( $row );
+					if ( $lookahead <= self::LIMIT ) {
+						$this->showListResultRow( $row );
+					} else {
+						$fromTitle = Title::makeTitle( $row->wl_namespace, $row->wl_title );
+					}
+					$lookahead++;
 				}
 			}
 
 			$output->addHtml( '</ul>' );
+
+			if ( $fromTitle !== false ) {
+				$output->addHtml(
+					Html::openElement( 'a',
+						array(
+							'href' => SpecialPage::getTitleFor( 'Watchlist' )->
+								getLocalUrl(
+									array(
+										'from' => $fromTitle->getPrefixedText(),
+										'filter' => $this->filter,
+									)
+								),
+							'class' => 'more button',
+						)
+					) .
+					wfMessage( 'mobile-frontend-watchlist-more' )->escaped() .
+					Html::closeElement( 'a' )
+				);
+			}
 		}
 	}
 
 	private function day( $ts ) {
-		return $this->getLang()->date( $ts, true );
+		return $this->getLanguage()->date( $ts, true );
 	}
 
 	function showFeedResultRow( $row ) {
@@ -275,7 +315,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$this->seenTitles[$titleText] = true;
 
 		$comment = $row->rc_comment;
-		$timestamp = $row->rc_timestamp;
+		$userId = $row->rc_user;
+		$username = $row->rc_user_text;
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$revId = $row->rc_this_oldid;
 
