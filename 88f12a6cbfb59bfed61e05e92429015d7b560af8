@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADgn//9SI\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-10T18:40:24Z",
+      "side": 1,
+      "message": "\u0026\u0026 mw.eventLog.logEvent is probably superfluous but I forgot it can be disable - so done",
+      "parentUuid": "AAADgn//90g\u003d",
+      "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgn//+CA\u003d",
         "filename": "javascripts/modules/mf-watchlist.js",
         "patchSetId": 1
