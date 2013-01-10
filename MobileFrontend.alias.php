@@ -51,6 +51,9 @@ $specialPageAliases['it'] = array(
 $specialPageAliases['ko'] = array(
 	'MobileFeedback' => array( '모바일피드백' ),
 	'MobileOptions' => array( '모바일설정' ),
+	'DonateImage' => array( '그림기부' ),
+	'MobileDiff' => array( '모바일차이점' ),
+	'MobileMenu' => array( '모바일메뉴' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */

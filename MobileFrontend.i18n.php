@@ -252,7 +252,8 @@ $messages['qqq'] = array(
 {{Identical|Go}}',
 	'mobile-frontend-home-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
 
-This buttons takes the user to the home page.',
+This buttons takes the user to the home page.
+{{Identical|Home}}',
 	'mobile-frontend-logged-out' => 'Message telling user they are not logged in on settings page',
 	'mobile-frontend-logged-in-homepage-notification' => 'Heading at top of homepage telling user they are logged in',
 	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
@@ -287,8 +288,10 @@ This buttons takes the user to a random page.',
 	'mobile-frontend-view' => 'This is a link that appears at the bottom of a desktop view wiki page near {{msg-mw|privacy}} and {{msg-mw|disclaimers}}. Clicking it takes the user to a mobile view of the page.',
 	'mobile-frontend-view-desktop' => 'This is a link that appears at the bottom of the mobile page. Clicking it takes the user to the desktop page. It appears near the message {{msg-mw|Mobile-frontend-view-mobile}} and should be worded similarly.',
 	'mobile-frontend-view-mobile' => 'This appears at the bottom of the mobile page, meaning that the current view is mobile. It appears near the message {{msg-mw|Mobile-frontend-view-desktop}} and should be worded similarly.',
-	'mobile-frontend-images-status' => 'On settings page label for turning on/off images',
-	'mobile-frontend-missing-image' => 'When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image',
+	'mobile-frontend-images-status' => 'On settings page label for turning on/off images.
+{{Identical|Images}}',
+	'mobile-frontend-missing-image' => 'When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image.
+{{Identical|Image}}',
 	'mobile-frontend-off' => 'On settings page signals that a feature will be turned off. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
 	'mobile-frontend-on' => 'On settings page signals that a feature will be turned on. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
 	'mobile-frontend-footer-contributors-text' => 'Link to history page',
@@ -425,7 +428,8 @@ See also:
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
 	'mobile-frontend-main-menu-button-tooltip' => 'Tooltip for menu button',
 	'mobile-frontend-main-menu-page-title' => 'Title for Special:MobileMenu - shown to user in title bar of browser window',
-	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu',
+	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu
+{{Identical|Featured}}',
 	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu',
 	'mobile-frontend-main-menu-login' => 'Text for log in link in main menu',
 	'mobile-frontend-main-menu-logout' => 'Text for logout link in main menu',
@@ -457,12 +461,12 @@ See also:
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
+	'mobile-frontend-watchlist-more' => 'Label for link that shows more pages of the watchlist a-z view',
 	'mobile-frontend-watchlist-cta' => 'Appears above the login form when you click watchlist icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in javascript.',
 	'mobile-frontend-watchlist-cta-button-login' => 'A link with label to login page
 {{Identical|Login}}',
 	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page
 {{Identical|Sign up}}',
-	'mobile-frontend-watchlist-more' => 'Label for link that shows more pages of the watchlist a-z view',
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes',
 	'mobile-frontend-watchlist-a-z-empty' => 'Message to show when watchlist a-z list is empty',
@@ -2546,6 +2550,7 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du bereit bist, einige Bilder 
 	'mobile-frontend-watchlist-add' => '$1 wurde zu deiner Beobachtungsliste hinzugefügt',
 	'mobile-frontend-watchlist-removed' => '$1 wurde von deiner Beobachtungsliste entfernt',
 	'mobile-frontend-watchlist-view' => 'Deine Beobachtungsliste ansehen',
+	'mobile-frontend-watchlist-more' => 'mehr',
 	'mobile-frontend-watchlist-cta' => 'Bitte melde dich an oder registriere dich, um diese Seite anzusehen.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Anmelden',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Registrieren',
@@ -2641,7 +2646,7 @@ $messages['diq'] = array(
 	'mobile-frontend-hide-button' => 'Bınımne',
 	'mobile-frontend-empty-homepage-text' => 'Ena keyepela timarkerdışi nêbiya. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">ena mobil sita buwanê</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Verqaydê serêmasi',
-	'mobile-frontend-wml-continue' => 'Peyniya cı...',
+	'mobile-frontend-wml-continue' => 'Dewamê cı...',
 	'mobile-frontend-wml-back' => 'Peyser...',
 	'mobile-frontend-view' => 'Mobil asayış',
 	'mobile-frontend-view-desktop' => 'Serê xonça',
@@ -8156,17 +8161,20 @@ $messages['ml'] = array(
 	'mobile-frontend-watchlist-add' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിലേയ്ക്ക് ചേർത്തു',
 	'mobile-frontend-watchlist-removed' => '$1 താങ്കൾ ശ്രദ്ധിക്കുന്ന താളുകളുടെ പട്ടികയിൽ നിന്ന് നീക്കി',
 	'mobile-frontend-watchlist-view' => 'താങ്കൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടിക കാണുക',
+	'mobile-frontend-watchlist-cta' => 'ഈ താൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടികയിലേക്ക് ചേർക്കാൻ ലോഗിൻ ചെയ്യുക അല്ലെങ്കിൽ അംഗത്വമെടുക്കുക.',
 	'mobile-frontend-watchlist-cta-button-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-watchlist-cta-button-signup' => 'അംഗത്വമെടുക്കുക',
-	'mobile-frontend-watchlist-a-z' => 'ശ്രദ്ധിക്കുന്ന താളുകൾ', # Fuzzy
-	'mobile-frontend-watchlist-feed' => 'മാറ്റങ്ങളുണ്ടായ താളുകൾ', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'എല്ലാം',
+	'mobile-frontend-watchlist-feed' => 'പുതുക്കപ്പെട്ടവ',
+	'mobile-frontend-watchlist-a-z-empty' => 'താങ്കളിപ്പോൾ താളുകളൊന്നും ശ്രദ്ധിക്കുന്നില്ല',
+	'mobile-frontend-watchlist-feed-empty' => 'സമീപകാലത്ത് മാറ്റങ്ങളുണ്ടായ താളുകളൊന്നുമില്ല',
 	'mobile-frontend-changeslist-ip' => 'അജ്ഞാത ഉപയോക്താവ്',
 	'mobile-frontend-changeslist-nocomment' => 'തിരുത്തലിനു സംഗ്രഹമില്ല',
 	'mobile-frontend-watchlist-filter-all' => 'എല്ലാം',
 	'mobile-frontend-watchlist-filter-articles' => 'ലേഖനങ്ങൾ',
 	'mobile-frontend-watchlist-filter-talk' => 'സംവാദം',
 	'mobile-frontend-watchlist-filter-other' => 'മറ്റുള്ളവ',
-	'mobile-frontend-diffview-title' => '$1 എന്ന താളിലെ മാറ്റങ്ങൾ', # Fuzzy
+	'mobile-frontend-diffview-title' => 'മാറ്റങ്ങൾ',
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|ഒരു തിരുത്തൽ|$1 തിരുത്തലുകൾ}}',
 	'mobile-frontend-diffview-anonymous' => 'അജ്ഞാത ഉപയോക്താവ്',
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|ഒരു ബൈറ്റ്|$1 ബൈറ്റുകൾ}} കൂട്ടിച്ചേർത്തിരിക്കുന്നു',
@@ -13217,11 +13225,12 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-watchlist-add' => '已添加$1到您的監視列表',
 	'mobile-frontend-watchlist-removed' => '已從您的監視列表移除$1',
 	'mobile-frontend-watchlist-view' => '查看您的監視列表',
+	'mobile-frontend-watchlist-more' => '更多',
 	'mobile-frontend-watchlist-cta' => '請登入或註冊以監視此頁。',
 	'mobile-frontend-watchlist-cta-button-login' => '登入',
 	'mobile-frontend-watchlist-cta-button-signup' => '註冊',
-	'mobile-frontend-watchlist-a-z' => '已監視的頁面', # Fuzzy
-	'mobile-frontend-watchlist-feed' => '有更改的頁面', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => '所有',
+	'mobile-frontend-watchlist-feed' => '曾修改',
 	'mobile-frontend-watchlist-a-z-empty' => '目前沒有在監視任何頁面',
 	'mobile-frontend-watchlist-feed-empty' => '頁面最近沒有修改',
 	'mobile-frontend-changeslist-ip' => '匿名用戶',
