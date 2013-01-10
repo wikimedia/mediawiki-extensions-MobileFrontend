@@ -251,7 +251,7 @@ module = ( function() {
 	}
 
 	function articleNeedsPhoto( $container ) {
-		return $container.find( '#content_0 .thumb img, .navbox, .infobox' ).length === 0;
+		return $container.find( '#content_0 .thumb img, #content_0 .navbox, #content_0 .infobox' ).length === 0;
 	}
 
 	function init() {
