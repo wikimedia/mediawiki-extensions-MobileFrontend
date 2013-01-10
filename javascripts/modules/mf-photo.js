@@ -19,6 +19,7 @@ module = ( function() {
 	var
 		ns = M.getConfig( 'namespace' ), // FIXME: use wgNamespaceNumber ?,
 		supported = M.isLoggedIn() &&
+			!mw.util.getParamValue( 'action' ) &&
 			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined' &&
 			!M.getConfig( 'imagesDisabled', false ) &&
 			( ns === NS_MAIN || ns === NS_TALK ) && // limit to talk and article namespaces
