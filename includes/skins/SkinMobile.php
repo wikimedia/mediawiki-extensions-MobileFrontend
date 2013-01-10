@@ -689,7 +689,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
-			<?php if ( $this->data['isAlphaGroupMember'] && $user && $user->isAllowed( 'upload' ) ) { ?>
+			<?php if ( $this->data['isAlphaGroupMember'] && $user->isAllowed( 'upload' ) ) { ?>
 				<li class='iconImage'>
 					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
 						title="<?php $this->msg( 'mobile-frontend-donate-image' ) ?>">
@@ -778,6 +778,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$hookOptions = isset( $this->data['hookOptions']['toggle_view_desktop'] ) ? 'toggle_view_desktop' : '';
 
 		$inBeta = $this->data['isBetaGroupMember'];
+		/** @var $user User */
 		$user = $this->data['user'];
 		$title = $this->data['title'];
 		// FIXME: this should all be done in prepareTemplate - getting extremely messy
@@ -811,14 +812,14 @@ class SkinMobileTemplate extends BaseTemplate {
 				'stopMobileRedirectCookieDuration' => $this->data['stopMobileRedirectCookieDuration'],
 				'stopMobileRedirectCookieDomain' => $this->data['stopMobileRedirectCookieDomain'],
 				'hookOptions' => $hookOptions,
-				'username' => $user->getName(),
+				'username' => $user->isAnon() ? '' : $user->getName(),
 				'can_edit' => $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN,
 			),
 		);
 
 		$jsconfig = $this->addMessages( $jsconfig );
 
-		if ( $user ) {
+		if ( $user->isLoggedIn() ) {
 			$jsconfig['messages']['mobile-frontend-logged-in-toast-notification'] =
 				wfMessage( 'mobile-frontend-logged-in-toast-notification', $user->getName() )->parse();
 		}
@@ -826,7 +827,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		if ( $this->data['isMainPage'] ) {
 			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage-text'
 			)->parse();
-			if ( $user && $user->isLoggedIn() ) {
+			if ( $user->isLoggedIn() ) {
 				$firstHeading = Html::rawElement( 'h1', array(), wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() );
 			} else {
 				$firstHeading = '';
