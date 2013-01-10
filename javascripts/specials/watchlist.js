@@ -15,9 +15,7 @@
 		var titles = [], $items = $( '#mw-mf-watchlist li h2' );
 
 		$items.each( function() {
-			if ( titles.length < 50 ) { // FIXME: limit to first 50 for time being
-				titles.push( $( this ).text() );
-			}
+			titles.push( $( this ).text() );
 		} );
 
 		$.ajax( {
