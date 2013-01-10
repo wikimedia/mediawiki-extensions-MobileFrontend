@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADgn//90g\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-01-10T05:40:48Z",
+      "side": 1,
+      "message": "mw.eventLog is undefined so this causes a JS error (unless $wgMFLogEvents  is set so that SkinMobile.php loads it), so this needs an additional test\n\n    if ( getConfig( \u0027beta\u0027 ) \u0026\u0026 mw.eventLog \u0026\u0026 mw.eventLog.logEvent ) {",
+      "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADgn//+CA\u003d",
         "filename": "javascripts/modules/mf-watchlist.js",
         "patchSetId": 1
@@ -67,6 +84,40 @@
       "side": 1,
       "message": "These also require javascript and I\u0027d rather all code was in the one place.",
       "parentUuid": "AAADgn//+A0\u003d",
+      "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn//90A\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-01-10T05:40:48Z",
+      "side": 1,
+      "message": "FWIW I have \u0027wgUserId available.\nInstead of setting this to a dummy value, only set data.userId if mw.config.get( \u0027wgUserId\u0027 ) !\u003d\u003d null",
+      "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn//9zs\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-01-10T05:40:48Z",
+      "side": 1,
+      "message": "This fails on my test wiki because I don\u0027t have wgUserName defined, probably because I set $wgLegacyJavaScriptGlobals \u003d false.  ResourceLoader encourages you to use mw.config.get() for this reason.  Better to test and set like resources/mediawiki/mediawiki.user.js,\n\n  anon:  mw.config.get( \u0027wgUserName\u0027 ) \u003d\u003d\u003d null,",
       "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
