@@ -52,6 +52,24 @@
       "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn//+Ak\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-10T00:29:37Z",
+      "side": 1,
+      "message": "These also require javascript and I\u0027d rather all code was in the one place.",
+      "parentUuid": "AAADgn//+A0\u003d",
+      "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
