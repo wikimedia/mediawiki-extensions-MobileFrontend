@@ -16,6 +16,24 @@
       "revId": "cadafbe5f89e9b692f2ec435848408d8d25b226f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn//9QQ\u003d",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-10T18:16:29Z",
+      "side": 1,
+      "message": "yes - if we should not be displaying mobile view, there\u0027s no point in letting processing continue. otherwise, this hook invocation will also impact the desktop site.",
+      "parentUuid": "AAADgn//9Rk\u003d",
+      "revId": "cadafbe5f89e9b692f2ec435848408d8d25b226f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
