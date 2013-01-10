@@ -305,7 +305,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$output->addHtml(
 			'<li>' .
-			Html::openElement( 'a', array( 'href' => $diffLink ) ) .
+			Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) ) .
 			Html::element( 'h2', null, $titleText ).
 			Html::element( 'div', array( 'class' => $usernameClass ), $username ).
 			Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
@@ -322,11 +322,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$titleText = $title->getPrefixedText();
 
 		$output->addHtml(
-			'<li>' .
-			Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
+			Html::openElement( 'li', array( 'title' => $titleText ) ) .
+			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
 			Html::element( 'h2', null, $titleText ).
 			Html::closeElement( 'a' ) .
-			'</li>'
+			Html::closeElement( 'li' )
 		);
 	}
 

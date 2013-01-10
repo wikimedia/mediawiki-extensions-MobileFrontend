@@ -37,6 +37,7 @@
   border-bottom: solid 1px #e2e2e2;
   color: #808080;
   line-height: 1;
+  position: relative;
 }
 #mw-mf-overlay ul.mw-mf-watchlist-results li .listThumb {
   position: absolute;
@@ -62,7 +63,7 @@
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
 }
-#mw-mf-overlay ul.mw-mf-watchlist-results li a {
+#mw-mf-overlay ul.mw-mf-watchlist-results li a.title {
   display: block;
   position: relative;
   padding: 0 23px 15px 77px;
@@ -94,7 +95,7 @@
   margin: 0;
   font-weight: bold;
   color: #404040;
-  padding: 20px 0 0;
+  padding: 20px 24px 0 0;
 }
 #mw-mf-overlay ul.mw-mf-watchlist-results li h2 a {
   color: inherit;

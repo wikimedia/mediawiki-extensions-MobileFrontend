@@ -60,6 +60,7 @@
 		border-bottom: solid 1px #e2e2e2;
 		color: #808080;
 		line-height: 1;
+		position: relative;
 
 		.listThumb {
 			position: absolute;
@@ -78,7 +79,7 @@
 			.background-size(100%, auto);
 		}
 
-		a {
+		a.title {
 			display: block;
 			position: relative;
 			padding: 0 @contentMarginRight 15px (@thumbSpace - @ragWidth);
@@ -108,7 +109,7 @@
 
 		h2 {
 			.watchlistHeading();
-			padding: 20px 0 0;
+			padding: 20px 24px 0 0;
 		}
 
 		.mw-mf-time {
