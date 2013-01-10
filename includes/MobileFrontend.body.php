@@ -511,14 +511,16 @@ class ExtMobileFrontend extends ContextSource {
 	 *
 	 * We use this hook to ensure that login/account creation pages
 	 * are redirected to HTTPS if they are not accessed via HTTPS and
-	 * $wgMFForceSecureLogin == true.
+	 * $wgMFForceSecureLogin == true - but only when using the
+	 * mobile site.
 	 *
 	 * @param $special SpecialPage
 	 * @param $subpage string
 	 */
 	public function onSpecialPageBeforeExecute( $special, $subpage ) {
 		global $wgMFForceSecureLogin;
-		if ( $special->getName() != 'Userlogin' ) {
+		$mobileContext = MobileContext::singleton();
+		if ( $special->getName() != 'Userlogin' || !$mobileContext->shouldDisplayMobileView() ) {
 			// no further processing necessary
 			return true;
 		}
@@ -535,7 +537,7 @@ class ExtMobileFrontend extends ContextSource {
 				'returntoquery' => $request->getVal( 'returntoquery', '' ),
 				'wpStickHTTPS' => true, // is this actually necessary?
 			);
-			$url = MobileContext::singleton()->getMobileUrl(
+			$url = $mobileContext->getMobileUrl(
 				$special->getFullTitle()->getFullURL( $query ),
 				true
 			);
