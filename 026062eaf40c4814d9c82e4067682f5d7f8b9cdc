@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn//99M\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 501,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-10T01:22:03Z",
+      "side": 1,
+      "message": "please make it clearer that this takes a parameter $1 and what format it is - not sure if someone would be familiar with the output of {{msg-mw|ago}}",
+      "revId": "026062eaf40c4814d9c82e4067682f5d7f8b9cdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
