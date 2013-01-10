@@ -16,6 +16,24 @@
       "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgn//+A8\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-10T00:21:13Z",
+      "side": 1,
+      "message": "All functionality relies on javascript thus actually easy to do in javascript - also I\u0027m not sure how you\u0027d log the anonCTA on server side accurately!",
+      "parentUuid": "AAADgn//+CA\u003d",
+      "revId": "88f12a6cbfb59bfed61e05e92429015d7b560af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
