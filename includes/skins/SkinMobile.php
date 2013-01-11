@@ -117,6 +117,9 @@ class SkinMobile extends SkinMobileBase {
 			array( 'returnto' => $this->getTitle()->getPrefixedText(), 'feedbacksource' => 'MobileFrontend' )
 		);
 		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
+		$nearbyURL = SpecialPage::getTitleFor( 'Nearby' )->getLocalURL();
+		$tpl->set( 'nearbyURL', $nearbyURL );
+
 		$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
 			Html::element(
 				'a',
@@ -243,7 +246,8 @@ class SkinMobile extends SkinMobileBase {
 	}
 
 	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
-		global $wgAutoloadClasses, $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages;
+		global $wgAutoloadClasses, $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages,
+			$wgMFNearby;
 
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
@@ -813,6 +817,14 @@ class SkinMobileTemplate extends BaseTemplate {
 					<?php $this->msg( 'mobile-frontend-donate-image' ) ?>
 					</a>
 				</li>
+			<?php } ?>
+			<?php if ( $this->data['isAlphaGroupMember'] ) { ?>
+			<li class='iconImage'>
+				<a href="<?php $this->text( 'nearbyURL' ) ?>"
+					title="<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>">
+				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
+				</a>
+			</li>
 			<?php } ?>
 			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<li class='icon6'>

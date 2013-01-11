@@ -158,6 +158,16 @@ $messages['en'] = array (
 	'mobile-frontend-page-saving' => 'Saving $1',
 	'mobile-frontend-ajax-page-error' => 'Whoops! Something went wrong there. Please try refreshing your browser window.',
 
+	// nearby
+	'mobile-frontend-nearby-title' => 'Nearby',
+	'mobile-frontend-nearby-loading' => 'Loading topics near your current location',
+	'mobile-frontend-nearby-requirements' => 'This page requires both javascript and a location aware browser.',
+	'mobile-frontend-nearby-distance-report' => '$1km from your current location',
+	'mobile-frontend-nearby-lookup-error' => 'Unable to find you. Trying again..',
+	'mobile-frontend-nearby-noresults' => 'You are in the middle of nowhere and we couldn\'t find any articles. Why not write one?',
+	'mobile-frontend-nearby-refresh' => 'We found a more accurate location for you. Click here to refresh the list of nearby pages',
+	'mobile-frontend-nearby-error' => 'An unexpected error occurred whilst trying to find pages nearby',
+
 	// image donation
 	'mobile-frontend-photo-upload-generic' => 'Donate an image',
 	'mobile-frontend-donate-image-title' => 'Donate an image',
@@ -461,6 +471,14 @@ See also:
 	'mobile-frontend-ajax-page-loading' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript',
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved',
 	'mobile-frontend-ajax-page-error' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript and it fails',
+	'mobile-frontend-nearby-title' => 'Title of Special:Nearby',
+	'mobile-frontend-nearby-loading' => 'Informative message telling user that their location is being looked up',
+	'mobile-frontend-nearby-requirements' => 'Message shown to users who have no javascript or a browser that is not capable',
+	'mobile-frontend-nearby-distance-report' => 'Distance to current location',
+	'mobile-frontend-nearby-lookup-error' => 'Error message that shows in toast notification when location was lost',
+	'mobile-frontend-nearby-noresults' => 'Message shown when nothing is nearby',
+	'mobile-frontend-nearby-refresh' => 'Text of toast notification message shown when user moved and the list can be refreshed.',
+	'mobile-frontend-nearby-error' => 'Text of generic error message when querying geodata api',
 	'mobile-frontend-photo-upload-generic' => 'Label on donate interface on Special:DonateImage',
 	'mobile-frontend-donate-image-title' => 'Title for Special:DonateImage',
 	'mobile-frontend-donate-image-summary' => 'Explanation of purpose of page and importance of participation.',

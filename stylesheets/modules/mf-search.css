@@ -121,7 +121,7 @@ body.beta #mw-mf-searchForm {
   position: relative;
   opacity: 1;
 }
-.full-screen-search ul.suggestions-results {
+ul.suggestions-results {
   padding: 0;
   position: relative;
   padding-bottom: 20px;
@@ -130,7 +130,7 @@ body.beta #mw-mf-searchForm {
   background-color: white;
   list-style: none;
 }
-.full-screen-search ul.suggestions-results li.suggestions-result {
+ul.suggestions-results li.suggestions-result {
   color: #666;
   border: none;
   position: relative;
@@ -139,18 +139,18 @@ body.beta #mw-mf-searchForm {
   padding: 12px 40px;
   font-size: 0.9em;
 }
-.full-screen-search ul.suggestions-results li.suggestions-result a {
+ul.suggestions-results li.suggestions-result a {
   display: block;
   text-decoration: none;
   color: #666;
 }
-.full-screen-search ul.suggestions-results li.suggestions-result a:active,
-.full-screen-search ul.suggestions-results li.suggestions-result a:hover,
-.full-screen-search ul.suggestions-results li.suggestions-result a:visited {
+ul.suggestions-results li.suggestions-result a:active,
+ul.suggestions-results li.suggestions-result a:hover,
+ul.suggestions-results li.suggestions-result a:visited {
   text-decoration: none;
   color: #666;
 }
-.full-screen-search ul.suggestions-results li.suggestions-result:hover {
+ul.suggestions-results li.suggestions-result:hover {
   background-color: #ACD1E9;
 }
 /* samsung galaxy s gt-19000 */

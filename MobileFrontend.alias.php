@@ -15,6 +15,7 @@ $specialPageAliases['en'] = array(
 	'DonateImage' => array( 'DonateImage' ),
 	'MobileDiff' => array( 'MobileDiff' ),
 	'MobileMenu' => array( 'MobileMenu' ),
+	'Nearby' => array( 'Nearby' ),
 );
 
 /** Arabic (العربية) */

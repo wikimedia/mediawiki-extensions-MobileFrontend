@@ -33,7 +33,6 @@ $wgExtensionMessagesFiles['MobileFrontend'] = "$cwd/MobileFrontend.i18n.php";
 $wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.php";
 
 // autoload extension classes
-
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'MobileFrontendSiteModule' => 'MobileFrontend.body',
@@ -54,6 +53,7 @@ $autoloadClasses = array (
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
+	'SpecialNearby' => 'specials/SpecialNearby',
 
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
@@ -89,7 +89,8 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend, $wgMFEnableResourceLoader, $wgResourceModules, $wgMFSpecialModuleStubs;
+	global $wgExtMobileFrontend, $wgMFEnableResourceLoader, $wgResourceModules, $wgMFSpecialModuleStubs,
+		$wgMFNearby, $wgSpecialPages;
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 	$wgExtMobileFrontend->attachHooks();
@@ -99,6 +100,9 @@ function efMobileFrontend_Setup() {
 		$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/specials/watchlist.css';
 	}
 
+	if ( $wgMFNearby ) {
+		$wgSpecialPages['Nearby'] = 'SpecialNearby';
+	}
 	/**
 	 * dynamically load mobile special page resources
 	 *
@@ -348,6 +352,15 @@ $wgResourceModules['mobile.alpha'] = array(
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-upload-comment',
 		'mobile-frontend-photo-upload-generic',
+
+		// FIXME: move to $wgMFSpecialModuleStubs (for mf-nearby.js)
+		'mobile-frontend-nearby-error',
+		'mobile-frontend-nearby-refresh',
+		'mobile-frontend-nearby-title',
+		'mobile-frontend-nearby-loading',
+		'mobile-frontend-nearby-distance-report',
+		'mobile-frontend-nearby-lookup-error',
+		'mobile-frontend-nearby-noresults',
 	),
 	'styles' => array(
 		'stylesheets/modules/mf-random.css',
@@ -416,6 +429,10 @@ $wgMFSpecialModuleStubs = array(
 	'mobilediff' => array( 'alias' => 'watchlist' ),
 	'mobilefeedback' => array( 'css' => true ),
 	'mobileoptions' => array( 'css' => true, 'js' => true ),
+	'nearby' => array( 'js' => true,
+		'messages' => array(
+		),
+	),
 	'search' => array( 'css' => true ),
 	'watchlist' => array( 'css' => true, 'js' => true ),
 	'userlogin' => array( 'css' => true ),
@@ -611,3 +628,10 @@ $wgDeviceDetectionClass = 'DeviceDetection';
  * login-related links will use whatever protocol is in use by the user
  */
 $wgMFForceSecureLogin = false;
+
+/**
+ * Whether geodata related functionality should be enabled
+ *
+ * Defaults to false.
+ */
+$wgMFNearby = false;
