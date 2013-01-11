@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADg3///Oo\u003d",
+        "filename": "javascripts/actions/mf-edit-translate.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-11T11:16:58Z",
+      "side": 1,
+      "message": "Is there a reason to add this plain and not escaped? (I may be wrong here, and it may well be that it\u0027s escaped later.)",
+      "revId": "a17e2f32f8a4a16f74a9ca7c5a3c3d793d14aadd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
