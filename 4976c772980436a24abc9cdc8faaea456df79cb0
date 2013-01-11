@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAADhH///3A\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-11T23:54:33Z",
+      "side": 1,
+      "message": "We call these things pages everywhere. Would be nice if mobile front end did the same. It\u0027s supposed to be a generic MediaWiki extension, right? That should be reflected in the use of messaging. Not every wiki has articles in their main namespace. All wikis have pages in their main namespace.",
+      "parentUuid": "AAADhH///3U\u003d",
+      "revId": "4976c772980436a24abc9cdc8faaea456df79cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADhH///40\u003d",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 3
