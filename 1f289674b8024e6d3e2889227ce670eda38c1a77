@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADg3///Xw\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-01-11T06:19:13Z",
+      "side": 1,
+      "message": "This happens to work (EventLogging validation ignores the undefined field is and does not log it) but I still think it\u0027s clearer to separately test for it and only add data.userId to the event structure if it has something you want to log.",
+      "revId": "1f289674b8024e6d3e2889227ce670eda38c1a77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
