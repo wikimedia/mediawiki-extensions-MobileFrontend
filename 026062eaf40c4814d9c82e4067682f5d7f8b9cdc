@@ -16,6 +16,24 @@
       "revId": "026062eaf40c4814d9c82e4067682f5d7f8b9cdc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADg3///Ow\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 501,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-11T11:13:08Z",
+      "side": 1,
+      "message": "There\u0027s some real i18n awkwardness in this area. It looks like we may have dodged the bullet so far. Explaining it properly will help people understand it better. You do need to indeed identify that $1 is substituted by \u0027ago\u0027.",
+      "parentUuid": "AAADgn//99M\u003d",
+      "revId": "026062eaf40c4814d9c82e4067682f5d7f8b9cdc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
