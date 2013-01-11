@@ -1,7 +1,7 @@
 <?php
 
 class SpecialMobileWatchlist extends SpecialWatchlist {
-	const LIMIT = 50;
+	const LIMIT = 50; // pageimages api limits the number of results to 50
 
 	private $filter,
 		$seenTitles,
