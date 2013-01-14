@@ -71,6 +71,7 @@ mw.mobileFrontend = (function() {
 		u( document.documentElement ).removeClass( 'page-loading' );
 		if ( typeof jQuery !== 'undefined' ) {
 			$( window ).trigger( 'mw-mf-ready' );
+			$.toJSON = typeof JSON !== 'undefined' ? JSON.stringify : $.noop; // FIXME: mediawiki provides jquery-json.js which some modules expect
 		}
 	}
 
@@ -190,6 +191,13 @@ mw.mobileFrontend = (function() {
 		return encodeURIComponent( title.replace( / /g, '_' ) ).replace( /%3A/g, ':' ).replace( /%2F/g, '/' );
 	}
 
+	// FIXME: sandbox from mf-application.js
+	function log( schemaName, data ) {
+		if ( getConfig( 'beta' ) && mw.eventLog ) {
+			mw.eventLog.logEvent( schemaName, data );
+		}
+	}
+
 	return {
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
@@ -198,6 +206,7 @@ mw.mobileFrontend = (function() {
 		getOrigin: getOrigin,
 		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
 		isLoggedIn: isLoggedIn,
+		log: log,
 		message: message,
 		prefix: 'mw-mf-',
 		registerModule: registerModule,
