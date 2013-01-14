@@ -17,7 +17,7 @@
 
 	function updateUILinks( title ) {
 		// FIXME: make this more generic
-		title = encodeURIComponent( title );
+		title = M.prettyEncodeTitle( title );
 		$( '#mw-mf-menu-main a' ).each( function() {
 			var href = $( this ).attr( 'href' );
 			if ( href.indexOf( 'returnto=' ) > -1 ) {
