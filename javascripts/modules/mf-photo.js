@@ -19,6 +19,7 @@ module = ( function() {
 	var
 		ns = M.getConfig( 'namespace' ), // FIXME: use wgNamespaceNumber ?,
 		supported = M.isLoggedIn() &&
+			!mw.util.getParamValue( 'action' ) &&
 			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined' &&
 			!M.getConfig( 'imagesDisabled', false ) &&
 			( ns === NS_MAIN || ns === NS_TALK ) && // limit to talk and article namespaces
@@ -250,7 +251,7 @@ module = ( function() {
 	}
 
 	function articleNeedsPhoto( $container ) {
-		return $container.find( '#content_0 .thumb img, .navbox, .infobox' ).length === 0;
+		return $container.find( '#content_0 .thumb img, #content_0 .navbox, #content_0 .infobox' ).length === 0;
 	}
 
 	function init() {
