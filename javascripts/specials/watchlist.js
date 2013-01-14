@@ -17,6 +17,9 @@
 		$items.each( function() {
 			titles.push( $( this ).text() );
 		} );
+		$( window ).on( 'mw-mf-ready', function() {
+			$( window ).trigger( 'mw-mf-watchlist', [ $( '#mw-mf-watchlist ul.mw-mf-watchlist-results' ) ] );
+		} );
 
 		$.ajax( {
 			url: M.getApiUrl(),

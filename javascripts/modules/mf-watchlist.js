@@ -163,8 +163,8 @@ var w = ( function() {
 		} );
 	}
 
-	function upgradeSearch() {
-		$( window ).on( 'mw-mf-search-results', function( ev, ul ) {
+	function upgradeUI() {
+		$( window ).on( 'mw-mf-search-results mw-mf-watchlist', function( ev, ul ) {
 			initWatchListIconList( ul );
 		} );
 	}
@@ -177,7 +177,7 @@ var w = ( function() {
 			initWatchListIcon( container, article.title );
 		} );
 
-		upgradeSearch();
+		upgradeUI();
 	}
 
 	return {
