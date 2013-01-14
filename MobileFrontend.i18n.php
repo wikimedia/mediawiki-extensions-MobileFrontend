@@ -203,6 +203,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	// photo uploads
 	'mobile-frontend-photo-upload' => 'Add the first photo to this page',
 	'mobile-frontend-photo-article-edit-comment' => 'Added photo for use on page',
+	'mobile-frontend-photo-article-donate-comment' => 'Donated image from mobile',
 	'mobile-frontend-photo-upload-comment' => 'Added photo to page',
 	'mobile-frontend-photo-upload-progress' => 'Uploading your image to this page',
 	'mobile-frontend-photo-caption-placeholder' => 'Add a caption for this image',
@@ -495,6 +496,7 @@ and then tries to leave the page this message is shown to check that they are ha
 They can either exit the page and lose them or stay on the page until they are complete',
 	'mobile-frontend-photo-upload' => 'This appears on articles which have no photos and is a call to action to add the first image',
 	'mobile-frontend-photo-article-edit-comment' => 'Comment associated with edit to page that inserts the image wikitext',
+	'mobile-frontend-photo-article-donate-comment' => 'Edit summary associated with donating an image from mobile',
 	'mobile-frontend-photo-upload-comment' => 'Comment associated with the upload of a photo',
 	'mobile-frontend-photo-upload-progress' => 'Progress message displayed whilst an upload occurs',
 	'mobile-frontend-photo-caption-placeholder' => 'Placeholder text prompting user to add a caption to a photo',

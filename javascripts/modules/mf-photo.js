@@ -68,9 +68,10 @@ module = ( function() {
 		var $img = $container.find( 'img' ),
 			$a = $container.find( 'a' ),
 			$form = $container.find( 'form' ),
+			editSummaryMsg = saveWikiTextFlag ? 'mobile-frontend-photo-article-edit-comment' : 'mobile-frontend-photo-article-donate-comment',
 			formData = new FormData();
 		formData.append( 'filename', filename );
-		formData.append( 'comment', M.message( 'mobile-frontend-photo-article-edit-comment' ) );
+		formData.append( 'comment', mw.message( editSummaryMsg ).plain() );
 		formData.append( 'file', $form.find( 'input[type=file]' )[ 0 ].files[ 0 ] );
 		dirty = true;
 
