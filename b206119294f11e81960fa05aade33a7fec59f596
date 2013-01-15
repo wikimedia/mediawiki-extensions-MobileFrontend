@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//9TI\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 720,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T19:11:48Z",
+      "side": 1,
+      "message": "I\u0027d add a comment saying that this is used only when RL is not used.",
+      "revId": "b206119294f11e81960fa05aade33a7fec59f596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9Ro\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 754,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T19:11:48Z",
+      "side": 1,
+      "message": "Why do we add those two messages here?",
+      "revId": "b206119294f11e81960fa05aade33a7fec59f596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9TA\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 789,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T19:11:48Z",
+      "side": 1,
+      "message": "Maybe a similar comment here, although here it\u0027s more obvious.",
+      "revId": "b206119294f11e81960fa05aade33a7fec59f596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9Rg\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 800,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T19:11:48Z",
+      "side": 1,
+      "message": "Can we do something about this one too?",
+      "revId": "b206119294f11e81960fa05aade33a7fec59f596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9So\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T19:11:48Z",
+      "side": 1,
+      "message": "mw.msg() is a shorter version of this and I saw it used in other places in the core code.\nhttp://www.mediawiki.org/wiki/Manual:Messages_API#Using_messages_in_JavaScript",
+      "revId": "b206119294f11e81960fa05aade33a7fec59f596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9Sk\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T19:11:48Z",
+      "side": 1,
+      "message": "This should never happen, right? Maybe we should add some kind of logging here so that we know if something is broken?",
+      "revId": "b206119294f11e81960fa05aade33a7fec59f596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
