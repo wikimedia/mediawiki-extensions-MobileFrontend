@@ -300,7 +300,8 @@ class ExtMobileFrontend extends ContextSource {
 			$formatter->disableBackToTop();
 		}
 
-		$formatter->enableRemovableSections( $removeSections && $context->isBetaGroupMember() );
+		$isFilePage = $this->getTitle()->getNamespace() === NS_FILE;
+		$formatter->enableRemovableSections( $removeSections && $context->isBetaGroupMember() && !$isFilePage );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
@@ -318,7 +319,7 @@ class ExtMobileFrontend extends ContextSource {
 
 		if ( $context->getContentTransformations() ) {
 			wfProfileIn( __METHOD__ . '-filter' );
-			if ( $this->getTitle()->getNamespace() !== NS_FILE ) {
+			if ( !$isFilePage ) {
 				$formatter->removeImages( $context->imagesDisabled() );
 			}
 			$formatter->whitelistIds( 'zero-language-search' );
