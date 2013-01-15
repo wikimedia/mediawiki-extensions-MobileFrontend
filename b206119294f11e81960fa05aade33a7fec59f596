@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "AAADhH//9Qs\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 792,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-15T19:17:38Z",
+      "side": 1,
+      "message": "to me, this is clearer with:\nif ( $wgMFEnableResourceLoader \u0026\u0026 $this-\u003edata[\u0027supports_jquery\u0027]; ) {\nrather than assigning the bool to a var first.\n\nassigning bools to vars like this in PHP gets confusing, quickly (particularly when you start adding negations, etc). keeping that stuff wrapped in an if() makes it clearer what your intention is and keeps the code more readable. this is not something in MW coding conventions, but it is unusual to see the approach you\u0027ve taken here elsewhere in the codebase - presumably because the coding convnetions for MW really boils down to keeping code readable.",
+      "revId": "b206119294f11e81960fa05aade33a7fec59f596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADhH//9Rg\u003d",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 1
