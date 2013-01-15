@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//89s\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 355,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-15T21:44:01Z",
+      "side": 1,
+      "message": "Iteration in startup code... Can it be moved to the ResourceLoaderRegisterModules hook handler?",
+      "revId": "929c12dcfdf935a415b5ca721b65287d1d3515bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
