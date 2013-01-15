@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//9UU\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-15T18:28:21Z",
+      "side": 1,
+      "message": "this looks ok, but i am not excited about this approach. it\u0027s an opaque way of defining resource modules - sacrificing readability for convenience. if you really want to do this, please document what\u0027s happening here/what\u0027s exacted better so i don\u0027t have to sit and read the processing code every time i a) review new modules b) am in the position where i want to add one :)",
+      "revId": "83b759f25203ee1f652b71d6189815780090ae27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9Tw\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-15T18:28:21Z",
+      "side": 1,
+      "message": "this method has gotten out of control. 100 lines is usually a sign that there is WAY too much going on in here, and it because increasingly difficult to read, understand, and test. i would prefer if this kind of stuff were broken out into separate methods, perhaps controlled by this attachResources() method. i don\u0027t want to block on this, however - we can always refactor later - but i figured i ought to flag this as a concern.",
+      "revId": "83b759f25203ee1f652b71d6189815780090ae27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
