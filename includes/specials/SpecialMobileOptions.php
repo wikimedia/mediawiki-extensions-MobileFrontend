@@ -170,10 +170,12 @@ HTML;
 
 		if ( $selector && $count > 1 ) {
 			$selector = <<<HTML
+			<div class="content">
 			<p>{$this->msg( 'mobile-frontend-settings-site-description', $count )->parse()}</p>
 			<ul id='mw-mf-language-list'>
 				{$selector}
 			</ul>
+			</div>
 HTML;
 		}
 		wfProfileOut( __METHOD__ );
