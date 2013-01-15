@@ -199,6 +199,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	'targets' => 'mobile',
 	'position' => 'bottom',
 	'messages' => array(
+		'pagetitle',
 		'mobile-frontend-last-modified-seconds',
 		'mobile-frontend-last-modified-hours',
 		'mobile-frontend-last-modified-minutes',
