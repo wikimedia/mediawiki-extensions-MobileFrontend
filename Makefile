@@ -8,9 +8,9 @@ jshint: jshinttests
 		javascripts/modules/* javascripts/specials/* --config .jshintrc
 
 less:
-	lessc stylesheets/less/specials/mf-settings.less > stylesheets/specials/mf-settings.css
-	lessc stylesheets/less/specials/mf-login.less > stylesheets/specials/mf-login.css
-	lessc stylesheets/less/specials/mf-search.less > stylesheets/specials/mf-search.css
+	lessc stylesheets/less/specials/mobileoptions.less > stylesheets/specials/mobileoptions.css
+	lessc stylesheets/less/specials/userlogin.less > stylesheets/specials/userlogin.css
+	lessc stylesheets/less/specials/search.less > stylesheets/specials/search.css
 	lessc stylesheets/less/common/mf-common.less > stylesheets/common/mf-common.css
 	lessc stylesheets/less/common/mf-footer.less > stylesheets/common/mf-footer.css
 	lessc stylesheets/less/common/mf-hacks.less > stylesheets/common/mf-hacks.css

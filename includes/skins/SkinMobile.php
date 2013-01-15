@@ -233,6 +233,7 @@ class SkinMobile extends SkinMobileBase {
 		}
 
 		// specific to beta/alpha
+		// FIXME: separate into separate function
 		if ( $inBeta ) {
 
 			if ( $jQueryEnabled ) {
@@ -250,21 +251,10 @@ class SkinMobile extends SkinMobileBase {
 			$moduleNames[] = 'mobile.production-only';
 		}
 
-		// specific to current context
-		// FIXME: need more generic+tidy way of doing this rather than having a module per page
-		if ( $isFilePage ) {
-			$moduleNames[] = 'mobile.filePage';
-		} else if ( $title->isSpecial( 'Userlogin' ) ) {
-			$moduleNames[] = 'mobile.special.login';
-		} else if ( $title->isSpecial( 'MobileFeedback' ) ) {
-			$moduleNames[] = 'mobile.special.feedback';
-		} else if ( $title->isSpecial( 'MobileOptions' ) ) {
-			$moduleNames[] = 'mobile.special.settings';
-		} else if ( $title->isSpecial( 'Search' ) ) {
-			$moduleNames[] = 'mobile.special.search';
-		} else if ( $title->isSpecial( 'Watchlist' ) || $title->isSpecial( 'MobileDiff' ) ) {
-			$moduleNames[] = 'mobile.watchlist';
-		}
+		$contextModules = $this->attachAdditionalPageResources( $title, $context );
+
+		$headModuleNames = array_merge( $headModuleNames, $contextModules['top'] );
+		$moduleNames = array_merge( $moduleNames, $contextModules['bottom'] );
 
 		if ( $action === 'edit' ) {
 			$moduleNames[] = 'mobile.action.edit';
@@ -292,6 +282,56 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
 		$tpl->set( 'bottomScripts', $bottomScripts );
 		return $tpl;
+	}
+
+	/**
+	 * @param Title $title
+	 * @param MobileContext $context
+	 *
+	 * @return array
+	 */
+	protected function attachAdditionalPageResources( Title $title, MobileContext $context ) {
+
+		$isFilePage = $title->getNamespace() == NS_FILE;
+		$action = $context->getRequest()->getText( 'action' );
+		$isSpecialPage = $title->isSpecialPage();
+
+		$moduleNames = array();
+		$headModuleNames = array();
+
+		// specific to current context
+		if ( $isFilePage ) {
+			$moduleNames[] = 'mobile.file.scripts';
+			$headModuleNames[] = 'mobile.file.styles';
+		}
+
+		if ( $isSpecialPage ) {
+			$id = explode( '/', strtolower( $title->getText() ) );
+			$id = $id[0];
+			$specialStyleModuleName = 'mobile.' . $id . '.styles';
+			$specialScriptModuleName = 'mobile.' . $id . '.scripts';
+
+			$resourceModuleNames = $this->getResourceLoader()->getModuleNames();
+
+			if ( in_array( $specialStyleModuleName, $resourceModuleNames ) ) {
+				$headModuleNames[] = $specialStyleModuleName;
+			}
+
+			if ( in_array( $specialScriptModuleName, $resourceModuleNames ) ) {
+				$moduleNames[] = $specialScriptModuleName;
+			}
+		}
+
+		if ( $action === 'edit' ) {
+			$moduleNames[] = 'mobile.action.edit';
+		} else if ( $action === 'history' ) {
+			$moduleNames[] = 'mobile.action.history';
+		}
+
+		return array(
+			'top' => $headModuleNames,
+			'bottom' => $moduleNames,
+		);
 	}
 
 	/**

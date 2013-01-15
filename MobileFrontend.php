@@ -122,6 +122,29 @@ function efExtMobileFrontendUnitTests( &$files ) {
 $localBasePath = dirname( __FILE__ );
 $remoteExtPath = 'MobileFrontend';
 
+// Filepages
+$wgResourceModules['mobile.file.styles'] = array(
+	'dependencies' => array( 'mobile.startup' ),
+	'styles' => array(
+		'stylesheets/file/filepage.css',
+	),
+	'raw' => true,
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
+);
+
+$wgResourceModules['mobile.file.scripts'] = array(
+	'dependencies' => array( 'mobile.startup' ),
+	'scripts' => array(
+		'javascripts/file/filepage.js'
+	),
+	'raw' => true,
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
+);
+
 $wgResourceModules['mobile.head'] = array(
 	'styles' => array(),
 	'scripts' => array( 'javascripts/common/main.js' ),
@@ -253,59 +276,6 @@ $wgResourceModules['mobile.action.history'] = array(
 	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.special.login'] = array(
-	'dependencies' => array( 'mobile.startup' ),
-	'styles' => array(
-		'stylesheets/specials/mf-login.css',
-	),
-	'scripts' => array(
-	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-);
-
-$wgResourceModules['mobile.special.feedback'] = array(
-	'dependencies' => array( 'mobile.startup' ),
-	'styles' => array(
-		'stylesheets/specials/contact-us.css',
-	),
-	'scripts' => array(
-	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-);
-
-$wgResourceModules['mobile.special.settings'] = array(
-	'dependencies' => array( 'mobile.startup' ),
-	'styles' => array(
-		'stylesheets/specials/mf-settings.css',
-	),
-	'scripts' => array(
-		'javascripts/specials/mobileoptions.js',
-	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-);
-
-$wgResourceModules['mobile.special.search'] = array(
-	'dependencies' => array( 'mobile.startup' ),
-	'styles' => array(
-		'stylesheets/specials/mf-search.css',
-	),
-	'scripts' => array(
-	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-);
-
 $wgResourceModules['mobile.alpha'] = array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
@@ -324,15 +294,6 @@ $wgResourceModules['mobile.alpha'] = array(
 	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.filePage'] = array(
-	'dependencies' => array( 'mobile.startup' ),
-	'styles' => array( 'stylesheets/specials/filepage.css' ),
-	'scripts' => array( 'javascripts/specials/filepage.js' ),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-);
 $wgResourceModules['mobile.production-jquery'] = array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
@@ -349,14 +310,6 @@ $wgResourceModules['mobile.production-jquery'] = array(
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
 );
-$wgResourceModules['mobile.watchlist'] = array(
-	'styles' => array( 'stylesheets/specials/watchlist.css' ),
-	'scripts' => array( 'javascripts/specials/watchlist.js' ),
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
-	'position' => 'top',
-);
 
 $wgResourceModules['mobile.site'] = array(
 	'dependencies' => array( 'mobile.startup' ),
@@ -371,6 +324,22 @@ $wgResourceModules['mobile.desktop'] = array(
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'desktop',
+);
+
+/**
+  * Stubs for mobile SpecialPage resource modules
+  *
+  * The modules themselves get generated dynamically later
+  * during the invocation of the ResourceLoaderRegisterModules hook.
+  * @see ExtMobileFrontend::registerMobileSpecialPageModules()
+  */
+$wgMFSpecialModuleStubs = array(
+	'mobilediff' => array( 'alias' => 'watchlist' ),
+	'mobilefeedback' => array( 'css' => true ),
+	'mobileoptions' => array( 'css' => true, 'js' => true ),
+	'search' => array( 'css' => true ),
+	'watchlist' => array( 'css' => true, 'js' => true ),
+	'userlogin' => array( 'css' => true ),
 );
 
 /**
