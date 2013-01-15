@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//9ow\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-15T10:15:26Z",
+      "side": 1,
+      "message": "Make it \"topics\" then...",
+      "revId": "c42d5daa35f1b50c2447b13f3b2f8516efce6497",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
