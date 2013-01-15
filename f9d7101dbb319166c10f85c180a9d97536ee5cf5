@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//9Tg\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-15T18:50:53Z",
+      "side": 1,
+      "message": "this is kinda opaque. i\u0027d really like to see these kinds of conditionals moved to a separate method so all you\u0027d have to do here is $isOverlay \u003d $this-\u003eisOverlay() or something. this method is already overly cluttered. let\u0027s not keep going down that path. also, please document what\u0027s happening here - it is not obvious - at least, it is not obvious why.",
+      "revId": "f9d7101dbb319166c10f85c180a9d97536ee5cf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9TY\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-15T18:50:53Z",
+      "side": 1,
+      "message": "same thing goes here. i really want to see this skin be less of a black box - it is getting harder to review this stuff, and it is making the code more rigid and brittle.",
+      "revId": "f9d7101dbb319166c10f85c180a9d97536ee5cf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9TM\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-15T18:50:53Z",
+      "side": 1,
+      "message": "what does this do/is this used for? i can\u0027t see it being used anywhere",
+      "revId": "f9d7101dbb319166c10f85c180a9d97536ee5cf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//9TE\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-15T18:50:53Z",
+      "side": 1,
+      "message": "why not just put it in SkinMobile to begin with? this is going to get forgotten and duplicated elsewhere someday.",
+      "revId": "f9d7101dbb319166c10f85c180a9d97536ee5cf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
