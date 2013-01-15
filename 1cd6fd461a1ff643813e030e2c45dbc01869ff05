@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//8yY\u003d",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T23:36:02Z",
+      "side": 1,
+      "message": "Why not camelCase?",
+      "revId": "1cd6fd461a1ff643813e030e2c45dbc01869ff05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
