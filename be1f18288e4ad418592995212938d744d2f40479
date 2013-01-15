@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//9PI\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-15T19:47:42Z",
+      "side": 1,
+      "message": "Let\u0027s not use uppercase here, it\u0027s not a constant.",
+      "revId": "be1f18288e4ad418592995212938d744d2f40479",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
