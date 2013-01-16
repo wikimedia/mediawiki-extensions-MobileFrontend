@@ -208,6 +208,7 @@ $wgResourceModules['mobile.startup'] = array(
 		'javascripts/common/mf-settings.js',
 		'javascripts/modules/mf-banner.js',
 		'javascripts/modules/mf-stop-mobile-redirect.js',
+		'javascripts/external/hogan.js',
 	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,

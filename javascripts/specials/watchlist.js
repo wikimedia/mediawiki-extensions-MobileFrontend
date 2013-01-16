@@ -1,53 +1,100 @@
-( function( $ ) {
+jQuery(function() {
+( function( $, M ) {
 
-	// FIXME: Kill the need for this horrible function by giving me a nicer API
-	function getPagesFromQueryResult( result ) {
-		var key, pages = {}, allPages = result.query.pages;
-		for ( key in allPages ) {
-			if ( allPages.hasOwnProperty( key ) ) {
-				pages[ allPages[ key ].title ] = allPages[ key ];
+	// this goes elsewhere - common
+
+	$.ajaxSetup( {
+		url: M.getApiUrl(),
+		dataType: 'json',
+		data: {
+			format: 'json'
+		}
+	} );
+
+	M.api = function( options ) {
+		var data = options.data, key, value;
+		if ( data ) {
+			for ( key in data ) {
+				if ( typeof data[key] === 'boolean' && data[key] === false )
+					delete data[key];
+				} else if ( data[key] instanceof Array ) {
+					data[key] = data[key].join( '|' );
+				}
 			}
 		}
-		return pages;
-	}
+		return $.ajax( options );
+	};
 
-	function init( M ) {
-		var titles = [], $items = $( '#mw-mf-watchlist li h2' );
+	function ViewBase() {}
+	ViewBase.prototype.$ = function( query ) {
+		return this.$el.find( query );
+	};
 
-		$items.each( function() {
-			titles.push( $( this ).text() );
-		} );
-		$( window ).on( 'mw-mf-ready', function() {
-			$( window ).trigger( 'mw-mf-watchlist', [ $( '#mw-mf-watchlist ul.mw-mf-watchlist-results' ) ] );
-		} );
+	M.view = function( prototype ) {
+		function View( el ) {
+			this.$el = $( el );
+		}
+		View.prototype = new ViewBase();
+		$.extend( View.prototype, prototype );
+		return View;
+	};
 
-		$.ajax( {
-			url: M.getApiUrl(),
-			dataType: 'json',
+	M.template = function( template ) {
+		return Hogan.compile( template );
+	};
+
+	// watchlist
+
+	var THUMBNAIL_SIZE = 120;
+	var WATCHLIST_ITEM = '#mw-mf-watchlist li';
+
+	var WatchlistItem = M.view( {
+		thumbnailTpl: M.template(
+			'<div class="listThumb {{class}}" style="background: url({{source}})">'
+		),
+
+		title: function() {
+			return this.$( 'h2' ).text();
+		},
+
+		addThumbnail: function( thumbnail ) {
+			thumbnail.class = thumbnail.width > thumbnail.height ? 'listThumbH' : 'listThumbV';
+			$( this.thumbnailTpl.render( thumbnail ) ).prependTo( this.$( 'a' ) );
+		}
+	} );
+
+	function getThumbnails( titles, callback ) {
+		M.api( {
 			data: {
 				action: 'query',
-				format: 'json',
 				prop: 'pageimages',
-				pithumbsize: 180, // ask for a big enough thumbnail for Modified view
-				titles: titles.join( '|' )
+				pithumbsize: THUMBNAIL_SIZE,
+				titles: titles
 			}
-		} ).done( function( r ) {
-			var pages = getPagesFromQueryResult( r );
+		} ).done( function( res ) {
+			callback( res.query.pages );
+		} );
+	}
 
-			$items.each( function() {
-				var $el = $( this ), page = pages[ $el.text() ];
-				if ( page && page.thumbnail ) {
-					$( '<div class="listThumb">' ).
-						css( 'background-image', 'url(' + page.thumbnail.source + ')' ).
-						addClass( page.thumbnail.width > page.thumbnail.height ? 'listThumbH' : 'listThumbV' ).
-						prependTo( $el.parents( 'a' ) );
+	function init() {
+		var items = {}, titles = [];
+
+		$( WATCHLIST_ITEM ).each( function() {
+			var item = new WatchlistItem( this ), title = item.title();
+			items[title] = item;
+			titles.push( title );
+		} );
+
+		getThumbnails( titles, function( images ) {
+			$.each( images, function( k, image ) {
+				if ( image.thumbnail ) {
+					items[image.title].addThumbnail( image.thumbnail );
 				}
 			} );
 		} );
 	}
 
-	$( document ).ready( function() {
-		init( mw.mobileFrontend );
-	} );
+	$( init );
 
-} )( jQuery );
+} )( jQuery, mw.mobileFrontend );
+});
