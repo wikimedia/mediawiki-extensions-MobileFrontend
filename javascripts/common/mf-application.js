@@ -157,6 +157,18 @@ mw.mobileFrontend = (function() {
 		return getConfig( 'scriptPath', '' ) + '/api.php';
 	}
 
+	// FIXME: Kill the need for this horrible function by giving me a nicer API
+	function getPageArrayFromApiResponse( response ) {
+		var key, results = [], pages = response.query.pages;
+
+		for ( key in pages ) {
+			if ( pages.hasOwnProperty( key ) ) {
+				results.push( pages[ key ] );
+			}
+		}
+		return results;
+	}
+
 	function isLoggedIn() {
 		return getConfig( 'authenticated', false );
 	}
@@ -212,6 +224,7 @@ mw.mobileFrontend = (function() {
 		getApiUrl: getApiUrl,
 		getModule: getModule,
 		getOrigin: getOrigin,
+		getPageArrayFromApiResponse: getPageArrayFromApiResponse,
 		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
 		isLoggedIn: isLoggedIn,
 		log: log,

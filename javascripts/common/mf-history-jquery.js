@@ -7,6 +7,8 @@
 		currentTitle = M.getConfig( 'title', '' ),
 		navigateToPage,
 		loadPage,
+		loadLanguages,
+		languagesTemplate,
 		apiUrl = M.getConfig( 'scriptPath', '' ) + '/api.php',
 		ua = window.navigator.userAgent,
 		supportsHistoryApi = window.history && window.history.pushState && window.history.replaceState && inBeta &&
@@ -14,6 +16,10 @@
 			!( ua.match( /Series60/ ) && ua.match( /WebKit/ ) ) &&
 			// bug 41605 disable for Android 4.x phones that are not Chrome
 			!( ua.match( /Android 4\./ ) && ua.match( /WebKit/ ) && !ua.match( /Chrome/ ) );
+
+	function gatherTemplates() {
+		languagesTemplate = $( '#mw-mf-language-section' ).clone();
+	}
 
 	function updateUILinks( title ) {
 		// FIXME: make this more generic
@@ -43,6 +49,22 @@
 				ev.preventDefault();
 			}
 		} );
+	}
+
+	// FIXME: use a template engine this is not maintainable
+	function renderLanguages( langlinks ) {
+		$( languagesTemplate ).insertAfter( $( '.section' ).last() );
+		var $list = $( '#mw-mf-language-selection' ).empty(), $item, i, lang;
+
+		$( '#mw-mf-language-header' ).text( mw.message( 'mobile-frontend-language-header', langlinks.length ) );
+		for ( i = 0 ; i < langlinks.length; i++ ) {
+			lang = langlinks[i];
+			$item = $( '<li>' ).appendTo( $list );
+			// FIXME: show label as language name rather than code
+			$( '<a>' ).attr( 'href', lang.url ).
+				attr( 'lang', lang.lang ).text( lang.lang ).appendTo( $item );
+		}
+		$( window ).trigger( 'mw-mf-languages-loaded' );
 	}
 
 	// FIXME: use template engine this is not maintainable
@@ -97,6 +119,26 @@
 		}
 	}
 
+	loadLanguages = function( title ) {
+		$( '#mw-mf-language-section' ).remove();
+		$.ajax( {
+			url: apiUrl,
+			dataType: 'json',
+			data: {
+				action: 'query',
+				prop: 'langlinks',
+				format: 'json',
+				llurl: true,
+				titles: title
+			}
+		} ).done( function( resp ) {
+			var pages = M.getPageArrayFromApiResponse( resp ),
+				langlinks = pages[0] ? pages[0].langlinks : [];
+
+			renderLanguages( langlinks );
+		} );
+	};
+
 	makeStubPage = function( title, summary ) {
 		var $content = $( '#content' );
 		$content.empty();
@@ -128,6 +170,7 @@
 				}
 			} else {
 				renderPage( pageTitle, resp, constructPage );
+				loadLanguages( pageTitle );
 			}
 		} ).fail( function() { // resort to non-javascript mode
 			$( 'html' ).addClass( 'togglingEnabled' );
@@ -173,6 +216,7 @@
 		} );
 	}
 
+	gatherTemplates();
 	M.history.makeStubPage = makeStubPage;
 	M.history.hijackLinks = hijackLinks;
 	M.history.loadPage = loadPage;
