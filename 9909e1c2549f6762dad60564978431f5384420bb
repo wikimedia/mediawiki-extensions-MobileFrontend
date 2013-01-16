@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADhH//8GM\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-16T19:00:29Z",
+      "side": 1,
+      "message": "oohh good point.",
+      "parentUuid": "AAADhH//8Yk\u003d",
+      "revId": "9909e1c2549f6762dad60564978431f5384420bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADhH//8Yg\u003d",
         "filename": "javascripts/modules/mf-user-gallery.js",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAADhH//8GQ\u003d",
+        "filename": "javascripts/modules/mf-user-gallery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-16T19:00:29Z",
+      "side": 1,
+      "message": "My preference has always been to chain for readability but I am open to doing it this way... juliusz what are your thoughts.",
+      "parentUuid": "AAADhH//8Yg\u003d",
+      "revId": "9909e1c2549f6762dad60564978431f5384420bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADhH//8Yc\u003d",
         "filename": "javascripts/modules/mf-user-gallery.js",
         "patchSetId": 4
@@ -47,6 +83,24 @@
       "writtenOn": "2013-01-16T11:16:08Z",
       "side": 1,
       "message": "forEach is ES5; use $.each",
+      "revId": "9909e1c2549f6762dad60564978431f5384420bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//8GU\u003d",
+        "filename": "javascripts/modules/mf-user-gallery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-16T19:00:29Z",
+      "side": 1,
+      "message": "We have a shim in mf-application.js so forEach is available to all browsers :)",
+      "parentUuid": "AAADhH//8Yc\u003d",
       "revId": "9909e1c2549f6762dad60564978431f5384420bb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
