@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//7o0\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-16T23:29:08Z",
+      "side": 1,
+      "message": "This function always return the same object it receives, no point in doing so.",
+      "revId": "1c4d96cf8a403858df33320925c9e2ccc16745b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//7os\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-16T23:29:08Z",
+      "side": 1,
+      "message": "Ugh, this is ugly. Can you make the special page set a skin or MobileContext property instead. E.g.\n\nclass SpecialFoo {\n...\nMobileContext::singleton()-\u003esetVar( \u0027mobileArticleSkin\u0027, true );\n....\n\nclass SkinMobile {\n...\n\nif ( MobileContext::singleton()-\u003egetVar( \u0027mobileArticleSkin\u0027 ) {\n....",
+      "revId": "1c4d96cf8a403858df33320925c9e2ccc16745b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//7oo\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-16T23:29:08Z",
+      "side": 1,
+      "message": "See my comment in SkinMobile.",
+      "revId": "1c4d96cf8a403858df33320925c9e2ccc16745b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//7oU\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-16T23:29:08Z",
+      "side": 1,
+      "message": "Worth a comment that we\u0027re 100% sure that it\u0027s a SkinMobile at this point.",
+      "revId": "1c4d96cf8a403858df33320925c9e2ccc16745b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
