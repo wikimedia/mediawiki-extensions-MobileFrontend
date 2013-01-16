@@ -9,26 +9,34 @@ var m = ( function() {
 			url: corsUrl || M.getApiUrl(),
 			data: {
 				action: 'query',
-				list: 'allimages',
+				generator: 'allimages',
 				format: 'json',
-				aisort: 'timestamp',
-				aidir: 'descending',
-				aiuser: M.getConfig( 'username' ),
-				ailimit: 10,
+				gaisort: 'timestamp',
+				gaidir: 'descending',
+				gaiuser: M.getConfig( 'username' ),
+				gailimit: 10,
+				prop: 'imageinfo',
 				origin: corsUrl ? M.getOrigin() : undefined,
-				aiprop: 'url'
+				iiprop: 'url',
+				iiurlwidth: 200
 			},
 			xhrFields: {
 				'withCredentials': true
 			}
-		} ).done( function( data ) {
-			var imgs, $li;
-			if ( data.query && data.query.allimages ) {
-				imgs = data.query.allimages;
-				imgs.forEach( function( img ) {
+		} ).done( function( resp ) {
+			var $li;
+			if ( resp.query && resp.query.pages ) {
+				$.each( resp.query.pages, function () {
+					var $a, img, page = this;
+					img = page.imageinfo[0];
 					$li = $( '<li class="thumb">' ).appendTo( $container );
-					// FIXME: add the thumbnail rather than the image name.
-					$( '<a>' ).attr( 'href', img.descriptionurl ).text( img.name ).appendTo( $li );
+					$a = $( '<a>' ).attr( 'href', img.descriptionurl ).appendTo( $li );
+					if ( img.thumburl ) {
+						$( '<img>' ).attr( 'src', img.thumburl ).
+							attr( 'alt', img.name ).appendTo( $a );
+					} else {
+						$a.text( img.name );
+					}
 				} );
 			}
 		} );
