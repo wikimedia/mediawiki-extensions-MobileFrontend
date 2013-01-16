@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//7wk\u003d",
+        "filename": "javascripts/modules/mf-user-gallery.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-16T21:32:56Z",
+      "side": 1,
+      "message": "Does it do anything?",
+      "revId": "a0a9267e61903af1421063ce2e38ecbeeb90cd04",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
