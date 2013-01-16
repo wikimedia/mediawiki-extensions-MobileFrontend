@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//7oI\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-16T23:32:39Z",
+      "side": 1,
+      "message": "Doesn\u0027t appear to be used.",
+      "revId": "c2e87db694281b9f7737e6d4d1349dd8a5f25785",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//7n8\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-16T23:32:39Z",
+      "side": 1,
+      "message": "Double-escaping.",
+      "revId": "c2e87db694281b9f7737e6d4d1349dd8a5f25785",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//7n4\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-16T23:32:39Z",
+      "side": 1,
+      "message": "Double-escaping.",
+      "revId": "c2e87db694281b9f7737e6d4d1349dd8a5f25785",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
