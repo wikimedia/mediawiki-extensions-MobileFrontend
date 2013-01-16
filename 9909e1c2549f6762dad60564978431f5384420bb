@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//8Yk\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-16T11:16:08Z",
+      "side": 1,
+      "message": "If you have jQuery enabled, you can replace this with:\n\n    return $.map(pages, function (v) { return v; });",
+      "revId": "9909e1c2549f6762dad60564978431f5384420bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//8Yg\u003d",
+        "filename": "javascripts/modules/mf-user-gallery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-16T11:16:08Z",
+      "side": 1,
+      "message": "Just because you _can_ chain deferred methods into a single expression doesn\u0027t mean you _should_ :) I\u0027d flatten this out a bit for readbility.",
+      "revId": "9909e1c2549f6762dad60564978431f5384420bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhH//8Yc\u003d",
+        "filename": "javascripts/modules/mf-user-gallery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-16T11:16:08Z",
+      "side": 1,
+      "message": "forEach is ES5; use $.each",
+      "revId": "9909e1c2549f6762dad60564978431f5384420bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
