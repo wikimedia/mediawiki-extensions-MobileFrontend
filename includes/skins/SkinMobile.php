@@ -175,7 +175,7 @@ class SkinMobile extends SkinMobileBase {
 	 * Stores in QuickTemplate prebodytext, postbodytext, htmlHeader keys
 	 * @param QuickTemplate
 	 */
-	function prepareTemplatePageContent( $tpl ) {
+	function prepareTemplatePageContent( QuickTemplate $tpl ) {
 		$ctx = MobileContext::singleton();
 		$title = $this->getTitle();
 		$isSpecialPage = $title->isSpecialPage();
@@ -242,7 +242,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'htmlHeader', $htmlHeader );
 	}
 
-	protected function attachResources( $title, $tpl, IDeviceProperties $device ) {
+	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
 		global $wgAutoloadClasses, $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages;
 
 		$context = MobileContext::singleton();
@@ -251,7 +251,6 @@ class SkinMobile extends SkinMobileBase {
 		$rlSupport = $inBeta && $wgMFEnableResourceLoader;
 		$jsEnabled = $device->supportsJavaScript();
 		$jQueryEnabled = $device->supportsJQuery();
-		$isFilePage = $title->getNamespace() == NS_FILE;
 		$action = $context->getRequest()->getText( 'action' );
 		$out = $this->getOutput();
 
@@ -579,7 +578,6 @@ HTML;
 
 		wfProfileIn( __METHOD__ );
 		$languageVariantUrls = array();
-		$context = MobileContext::singleton();
 		$title = $this->getRelevantTitle();
 		$user = $this->getUser();
 		$userCanRead = $title->quickUserCan( 'read', $user );
@@ -773,6 +771,7 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function navigationStart() {
+		/** @var $user User */
 		$user = $this->data['user'];
 		?>
 		<div id="mw-mf-viewport">
@@ -870,6 +869,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$inBeta = $this->data['isBetaGroupMember'];
 		/** @var $user User */
 		$user = $this->data['user'];
+		/** @var $title Title */
 		$title = $this->data['title'];
 		// FIXME: this should all be done in prepareTemplate - getting extremely messy
 		$jsconfig = array(
