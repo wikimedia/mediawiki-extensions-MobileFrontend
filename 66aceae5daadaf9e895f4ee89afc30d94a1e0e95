@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//8Fk\u003d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-16T18:16:30Z",
+      "side": 1,
+      "message": "This can use $this-\u003emsg() instead of wfMessage, as SpecialPage defines msg(). Can possibly be updated in two more places in this file. Also spotted in other special files touched in this change set.",
+      "revId": "66aceae5daadaf9e895f4ee89afc30d94a1e0e95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
