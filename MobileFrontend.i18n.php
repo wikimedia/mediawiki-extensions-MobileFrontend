@@ -100,7 +100,6 @@ $messages['en'] = array (
 	'mobile-frontend-language-variant-header' => 'Choose {{#language:{{CONTENTLANG}}}} variant',
 	'mobile-frontend-language-footer' => 'Note: This page may not be written in your preferred language. You can see which languages {{SITENAME}} supports by clicking here.',
 	'mobile-frontend-language-site-choose' => 'Search language',
-	'mobile-frontend-language-site-nomatches' => 'No matching languages',
 	'mobile-frontend-username' => 'Username:',
 	'mobile-frontend-password' => 'Password:',
 	'mobile-frontend-username-placeholder' => 'Username',

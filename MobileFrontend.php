@@ -230,14 +230,41 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'mobile-frontend-last-modified-days',
 		'mobile-frontend-last-modified-months',
 		'mobile-frontend-last-modified-years',
+
 		// mf-photo.js
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
+
+		// for mf-languages.js
+		'mobile-frontend-language-site-choose',
+
+		// mf-watchlist.js
+		'mobile-frontend-watchlist-add',
+		'mobile-frontend-watchlist-removed',
+		'mobile-frontend-watchlist-cta',
+		'mobile-frontend-watchlist-cta-button-signup',
+		'mobile-frontend-watchlist-cta-button-login',
+
+		// mf-history-jquery.js
+		'mobile-frontend-ajax-page-loading',
+		'mobile-frontend-ajax-page-error',
 	),
 );
 
 $wgResourceModules['mobile.production-only'] = array(
 	'dependencies' => array( 'mobile.startup' ),
+	'messages' => array(
+		// for mf-toggle.js
+		'mobile-frontend-close-section',
+		// for mf-toggle-dynamic.js and mf-toggle.js
+		'mobile-frontend-show-button',
+		'mobile-frontend-hide-button',
+
+		// for mf-search.js
+		'mobile-frontend-search-help',
+		'mobile-frontend-search-noresults',
+		'mobile-frontend-overlay-escape',
+	),
 	'styles' => array( 'stylesheets/modules/mf-toggle.css' ),
 	'scripts' => array(
 		'javascripts/modules/mf-toggle.js',
@@ -251,6 +278,10 @@ $wgResourceModules['mobile.production-only'] = array(
 
 $wgResourceModules['mobile.action.edit'] = array(
 	'dependencies' => array( 'mobile.startup' ),
+	'messages' => array(
+		// mf-edit.js
+		'mobile-frontend-page-saving',
+	),
 	'styles' => array(
 		'stylesheets/actions/mf-edit.css',
 	),
@@ -278,6 +309,31 @@ $wgResourceModules['mobile.action.history'] = array(
 
 $wgResourceModules['mobile.alpha'] = array(
 	'dependencies' => array( 'mobile.startup' ),
+	'messages' => array(
+		// for mf-random.js
+		'mobile-frontend-ajax-random-heading',
+		'mobile-frontend-ajax-random-quote',
+		'mobile-frontend-ajax-random-quote-author',
+		'mobile-frontend-ajax-random-question',
+		'mobile-frontend-ajax-random-yes',
+		'mobile-frontend-ajax-random-retry',
+		'mobile-frontend-ajax-random-suggestions',
+
+		// for mf-table.js
+		'mobile-frontend-table',
+
+		// for mf-photo.js
+		'mobile-frontend-photo-upload-error',
+		'mobile-frontend-photo-upload-progress',
+		'mobile-frontend-photo-caption-placeholder',
+		'mobile-frontend-image-loading',
+		'mobile-frontend-image-uploading',
+		'mobile-frontend-image-saving-to-article',
+		'mobile-frontend-photo-upload',
+		'mobile-frontend-photo-article-edit-comment',
+		'mobile-frontend-photo-upload-comment',
+		'mobile-frontend-photo-upload-generic',
+	),
 	'styles' => array(
 		'stylesheets/modules/mf-random.css',
 		'stylesheets/modules/mf-tables.css',
@@ -309,6 +365,14 @@ $wgResourceModules['mobile.production-jquery'] = array(
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
+	'messages' => array(
+		// mf-cleanuptemplates.js
+		'mobile-frontend-meta-data-issues',
+		'mobile-frontend-meta-data-issues-header',
+
+		// mf-notification.js
+		'mobile-frontend-drawer-cancel',
+	)
 );
 
 $wgResourceModules['mobile.site'] = array(
