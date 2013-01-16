@@ -192,6 +192,8 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'javascripts/modules/mf-languages.js',
 		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-photo.js',
+		'javascripts/external/underscore.js',
+		'javascripts/external/backbone.js',
 	),
 	'raw' => true,
 	'localBasePath' => $localBasePath,
