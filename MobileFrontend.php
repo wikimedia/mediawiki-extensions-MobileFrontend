@@ -165,7 +165,7 @@ $wgResourceModules['mobile.jqueryshim'] = array(
 
 $wgResourceModules['mobile.styles'] = array(
 	'styles' => array(
-		'stylesheets/common/reset.css',
+		'stylesheets/externals/reset.css',
 		'stylesheets/common/mf-common.css',
 		'stylesheets/common/mf-footer.css',
 		'stylesheets/common/mf-typography.css',
