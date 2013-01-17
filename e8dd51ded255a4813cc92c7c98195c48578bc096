@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//7a0\u003d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-17T07:30:21Z",
+      "side": 1,
+      "message": "trailing ws",
+      "revId": "e8dd51ded255a4813cc92c7c98195c48578bc096",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
