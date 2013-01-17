@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//6rw\u003d",
+        "filename": "tests/acceptance/features/support/pages/beta_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-17T19:52:25Z",
+      "side": 1,
+      "message": "Not needed?",
+      "revId": "f822056988bd268a0c3e9148e3d3320256e2b4d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
