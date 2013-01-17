@@ -835,7 +835,8 @@ class SkinMobileTemplate extends BaseTemplate {
 			),
 		);
 
-		if ( ! ( $wgMFEnableResourceLoader && $this->data['supports_jquery'] ) ) {
+		$jQuerySupport = $this->data['supports_jquery'];
+		if ( !$inBeta || !$wgMFEnableResourceLoader || !$jQuerySupport ) {
 			$jsconfig = $this->addMessages( $jsconfig );
 		}
 
