@@ -89,7 +89,7 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend, $wgMFEnableResourceLoader, $wgResourceModules;
+	global $wgExtMobileFrontend, $wgMFEnableResourceLoader, $wgResourceModules, $wgMFSpecialModuleStubs;
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 	$wgExtMobileFrontend->attachHooks();
@@ -98,6 +98,20 @@ function efMobileFrontend_Setup() {
 	if ( !$wgMFEnableResourceLoader ) {
 		$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/specials/watchlist.css';
 	}
+
+	/**
+	 * dynamically load mobile special page resources
+	 *
+	 * It would be preferable to load these in the invocation of the ResourceLoaderRegisterModules hook,
+	 * however there is an issue (still being diagnosed) that is preventing $resourceLoader->register()
+	 * from loading modules at the bottom of a page. Also, we need at least some of these modules
+	 * to be loaded in the production version of MobileFrontend, which does not currently fully support
+	 * ResourceLoader - so the way the modules get included in the skin does not play nicely with the hook
+	 * (since the hook runs after the modules need to be loaded in the skin).
+	 * @see ExtMobileFrontend::generateMobileSpecialPageModules()
+	 */
+	$specialModules = ExtMobileFrontend::generateMobileSpecialPageModules( $wgMFSpecialModuleStubs );
+	$wgResourceModules = array_merge( $wgResourceModules, $specialModules );
 }
 
 // Unit tests

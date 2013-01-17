@@ -354,7 +354,7 @@ class SkinMobile extends SkinMobileBase {
 	 * @return array
 	 */
 	protected function attachAdditionalPageResources( Title $title, MobileContext $context ) {
-
+		global $wgResourceModules;
 		$isFilePage = $title->getNamespace() == NS_FILE;
 		$action = $context->getRequest()->getText( 'action' );
 		$isSpecialPage = $title->isSpecialPage();
@@ -374,13 +374,11 @@ class SkinMobile extends SkinMobileBase {
 			$specialStyleModuleName = 'mobile.' . $id . '.styles';
 			$specialScriptModuleName = 'mobile.' . $id . '.scripts';
 
-			$resourceModuleNames = $this->getResourceLoader()->getModuleNames();
-
-			if ( in_array( $specialStyleModuleName, $resourceModuleNames ) ) {
+			if ( isset( $wgResourceModules[ $specialStyleModuleName ] ) ) {
 				$headModuleNames[] = $specialStyleModuleName;
 			}
 
-			if ( in_array( $specialScriptModuleName, $resourceModuleNames ) ) {
+			if ( isset( $wgResourceModules[ $specialScriptModuleName ] ) ) {
 				$moduleNames[] = $specialScriptModuleName;
 			}
 		}
