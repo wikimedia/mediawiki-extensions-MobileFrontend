@@ -384,7 +384,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
 		$titleText = $title->getPrefixedText();
 		$ts = new MWTimestamp( $row->rev_timestamp );
-		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->escaped();
+		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
 
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
