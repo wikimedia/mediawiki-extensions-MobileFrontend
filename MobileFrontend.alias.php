@@ -27,6 +27,7 @@ $specialPageAliases['ar'] = array(
 $specialPageAliases['de'] = array(
 	'MobileFeedback' => array( 'Mobile_Rückmeldung' ),
 	'MobileOptions' => array( 'Mobile_Optionen' ),
+	'DonateImage' => array( 'Bild_spenden' ),
 );
 
 /** Estonian (eesti) */
