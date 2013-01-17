@@ -19,21 +19,27 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
 		$tpl->set( 'ajaxLoader', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/modules/images/ajax-loader.gif' );
 		$tpl->set( 'user', $user );
+		$tpl->set( 'menuButton', $this->getMenuButton() );
 		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
+
 		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
 
-		$timestamp = Revision::getTimestampFromId( $this->getTitle(), $this->getRevisionId() );
-		$tpl->set( 'timestamp', wfTimestamp( TS_UNIX, $timestamp ) );
-		$tpl->set( 'lastModified', $this->msg( 'mobile-frontend-last-modified-date',
-			$this->getLanguage()->userDate( $timestamp, $user ),
-			$this->getLanguage()->userTime( $timestamp, $user )
-		) );
+		/**
+		 * force all non-special pages to render in article skin
+		 * 
+		 * NB not all special pages are overlays, so
+		 * $context->setOverlay( $specialPage ) will not work!
+		 * @TODO does setOverlay really belong in MobileContext?
+		 *	probably not. ~awjr
+		 */
+		if ( !$specialPage ) {
+			$context->setOverlay( false );
+		}
 
-		$userLogin = $title->isSpecial( 'Userlogin' );
-		$tpl->set( 'isOverlay', $specialPage && !$title->isSpecial( 'MobileMenu' ) );
+		$tpl->set( 'isOverlay',  $context->isOverlay() );
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'imagesDisabled', $context->imagesDisabled() );
 		$tpl->set( 'isAlphaGroupMember', $inAlpha );
@@ -42,22 +48,9 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device->disableZoom() ? 'no' : 'yes' );
-		if ( $userLogin ) {
-			if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
-				$tpl->set( 'firstHeading', wfMessage( 'mobile-frontend-sign-up-heading' )->text() );
-			} else {
-				$tpl->set( 'firstHeading', wfMessage( 'mobile-frontend-sign-in-heading' )->text() );
-			}
-		} else {
-			$tpl->set( 'firstHeading', $out->getPageTitle() );
-		}
 		$tpl->set( 'variant', $title->getPageLanguage()->getPreferredVariant() );
 
-		if ( isset( $out->mobileHtmlHeader ) ) {
-			$tpl->set( 'htmlHeader', $out->mobileHtmlHeader );
-		} else {
-			$tpl->set( 'htmlHeader', '' );
-		}
+		$this->prepareTemplatePageContent( $tpl );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		$tpl->set( 'articleClass', $title->isMainPage() || $specialPage ? 'mw-mf-special' : '' );
@@ -92,8 +85,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'useFormatCookiePath', $wgCookiePath );
 		$tpl->set( 'useFormatCookieDomain', $_SERVER['HTTP_HOST'] );
 		$tpl->set( 'isSpecialPage', $title->isSpecialPage() );
-
-		$tpl->set( 'languageSelection', $this->buildLanguageSelection() );
 
 		// footer
 		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
@@ -177,6 +168,78 @@ class SkinMobile extends SkinMobileBase {
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;
+	}
+
+	/**
+	 * Prepares the header and the content of a page
+	 * Stores in QuickTemplate prebodytext, postbodytext, htmlHeader keys
+	 * @param QuickTemplate
+	 */
+	function prepareTemplatePageContent( $tpl ) {
+		$ctx = MobileContext::singleton();
+		$title = $this->getTitle();
+		$isSpecialPage = $title->isSpecialPage();
+		$isMainPage = $title->isMainPage();
+		$isOverlay = $ctx->isOverlay();
+		$user = $this->getUser();
+		$userLogin = $title->isSpecial( 'Userlogin' );
+		$out = $this->getOutput();
+		$inBeta = MobileContext::singleton()->isBetaGroupMember();
+
+		if ( $isSpecialPage && !$isOverlay ) {
+			$pageHeading = '';
+		} else if ( $userLogin ) {
+			if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
+				$pageHeading = wfMessage( 'mobile-frontend-sign-up-heading' )->parse();
+			} else {
+				$pageHeading = wfMessage( 'mobile-frontend-sign-in-heading' )->parse();
+			}
+		} else {
+			$pageHeading = $out->getPageTitle();
+		}
+
+		$preBodyText = '';
+		$postBodyText = '';
+		if ( !$isSpecialPage ) {
+			$headingOptions = array();
+			if ( $isMainPage ) {
+				$pageHeading = $user->isLoggedIn() ?
+					wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() : '';
+			} else {
+				$headingOptions = array( 'id' => 'section_0' );
+			}
+			// prepend heading to articles
+			if ( $pageHeading ) {
+				$preBodyText = Html::rawElement( 'h1', $headingOptions, $pageHeading );
+			}
+
+			$timestamp = Revision::getTimestampFromId( $this->getTitle(), $this->getRevisionId() );
+			$lastModified = wfMessage( 'mobile-frontend-last-modified-date',
+				$this->getLanguage()->userDate( $timestamp, $user ),
+				$this->getLanguage()->userTime( $timestamp, $user )
+			)->parse();
+			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
+			$postBodyText = $this->buildLanguageSelection();
+			if ( $inBeta ) {
+				$postBodyText .= "<p id=\"mw-mf-last-modified\" data-timestamp=\"$timestamp\">$lastModified</p>";
+			}
+		}
+
+		if ( isset( $out->mobileHtmlHeader ) ) {
+			$htmlHeader = $out->mobileHtmlHeader;
+		} else {
+			if ( $isOverlay ) {
+				$htmlHeader = Html::rawElement( 'h1', array( 'class' => 'header' ),
+					$pageHeading
+				);
+			} else {
+				$htmlHeader = '';
+			}
+		}
+
+		$tpl->set( 'prebodytext', $preBodyText );
+		$tpl->set( 'postbodytext', $postBodyText );
+		$tpl->set( 'htmlHeader', $htmlHeader );
 	}
 
 	protected function attachResources( $title, $tpl, IDeviceProperties $device ) {
@@ -608,6 +671,15 @@ HTML;
 		wfProfileOut( __METHOD__ );
 		return $link;
 	}
+
+	public function getMenuButton() {
+		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
+		return Html::element( 'a', array(
+				'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' )->text(),
+				'href' => $url,
+				'id'=> 'mw-mf-main-menu-button',
+			) );
+	}
 }
 
 class SkinMobileTemplate extends BaseTemplate {
@@ -616,38 +688,41 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<?php $this->html( 'notice' ) ?>
-		<?php $this->searchBox() ?>
+		<?php $this->renderArticleHeader() ?>
 	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
-			<?php if ( !$this->data['isSpecialPage'] ) { ?>
 			<div id="content" class="content">
-			<?php } ?>
-			<?php $this->html( 'firstHeading' ) ?>
+			<?php $this->html( 'prebodytext' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
-			<?php $this->html( 'languageSelection' ) ?>
-			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
-			<p id="mw-mf-last-modified" data-timestamp="<?php $this->text( 'timestamp' ) ?>">
-				<?php $this->text( 'lastModified' ) ?>
-			</p>
-			<?php } ?>
-		<?php if ( !$this->data['isSpecialPage'] ) { ?>
+			<?php $this->html( 'postbodytext' ) ?>
 			</div><!-- close #content -->
-		<?php } ?>
 	</div><!-- close #content_wrapper -->
 		<?php $this->footer() ?>
 		<?php
 			$this->navigationEnd();
 	}
 
+	public function renderArticleHeader() {
+		if ( $this->data['htmlHeader'] ) {
+			echo $this->data['htmlHeader'];
+		} else {
+			$this->searchBox();
+		}
+	}
+
 	public function renderOverlaySkin() {
 		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<div id="mw-mf-overlay">
-			<?php $this->html( 'firstHeading' ) ?>
+			<?php $this->renderOverlayHeader() ?>
 				<div id="content_wrapper" class="mw-mf-special">
 					<?php $this->html( 'bodytext' ) ?>
 				</div>
 			</div>
 		<?php
+	}
+
+	public function renderOverlayHeader() {
+		echo $this->data['htmlHeader'];
 	}
 
 	public function execute() {
@@ -849,28 +924,9 @@ class SkinMobileTemplate extends BaseTemplate {
 			// FIXME: move parsing into javascript
 			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage-text'
 			)->parse();
-			if ( $user->isLoggedIn() ) {
-				$firstHeading = Html::rawElement( 'h1', array(), wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() );
-			} else {
-				$firstHeading = '';
-			}
-		} else if ( $this->data['htmlHeader'] ) {
-			$firstHeading = $this->data['htmlHeader'];
-		} else {
-			$editMode = $this->data['action'] == 'edit';
-			if ( $this->data['isOverlay'] ) {
-				$headingOptions = array( 'class' => 'header' );
-			} elseif ( $this->data['isBetaGroupMember'] && !$this->data['isSpecialPage'] && !$this->data['isMainPage'] && !$editMode ) {
-				$headingOptions = array( 'id' => 'section_0' );
-			} else {
-				$headingOptions = array( 'id' => 'firstHeading' );
-			}
-			$firstHeading = Html::rawElement( 'h1', $headingOptions,
-				$this->data['firstHeading']
-			);
 		}
+
 		$this->set( 'jsConfig', FormatJSON::encode( $jsconfig ) );
-		$this->set( 'firstHeading', $firstHeading );
 		$this->set( 'wgMobileFrontendLogo', $wgMobileFrontendLogo );
 
 		wfProfileOut( __METHOD__ );
@@ -886,18 +942,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 		?>
 	<div id="mw-mf-header">
-		<?php
-		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
-			echo Html::openElement( 'a', array(
-				'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' )->text(),
-				'href' => $url, 'id'=> 'mw-mf-main-menu-button'
-			) );
-		?>
-				<img alt="menu"
-				src="<?php $this->text( 'shim' ) ?>">
-		<?php
-			echo Html::closeElement( 'a' );
-		?>
+		<?php $this->html( 'menuButton' ) ?>
 			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
 			<input type="hidden" value="Special:Search" name="title" />
 			<div id="mw-mf-sq" class="divclearable">

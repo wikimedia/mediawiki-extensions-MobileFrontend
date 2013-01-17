@@ -12,6 +12,9 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	private $fromPageTitle;
 
 	function execute( $par ) {
+		$ctx = MobileContext::singleton();
+		$ctx->setOverlay( false );
+
 		$user = $this->getUser();
 		$output = $this->getOutput();
 		$req = $this->getRequest();
@@ -69,11 +72,15 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$attrsList[ 'class' ] .= ' active';
 		}
 
+		// FIXME: this assumes the skin returns is mobile compatible
+		$mobileSkin = $this->getContext()->getSkin();
+
 		$html =
 			Html::openElement( 'div',
 				array(
 					'class' => 'mw-mf-watchlist-views header' )
 				) .
+			$mobileSkin->getMenuButton() .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
 				$attrsList,

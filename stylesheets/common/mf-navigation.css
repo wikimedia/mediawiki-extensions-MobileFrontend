@@ -175,7 +175,7 @@ input[type=submit].confirm.disabled:hover {
   background-image: linear-gradient(#2ca368 0, #2ca368 100%);
   border-color: #278f5b;
 }
-#mw-mf-overlay .header a.button {
+.header a.button {
   font-size: 1em;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -200,15 +200,15 @@ input[type=submit].confirm.disabled:hover {
   line-height: 1.1em;
   white-space: nowrap;
 }
-#mw-mf-overlay .header a.button.active {
+.header a.button.active {
   background: #c8cacb;
   font-weight: bold;
 }
-#mw-mf-overlay .header a.button:first-child {
+.header a.button:first-child {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-#mw-mf-overlay .header a.button:last-child {
+.header a.button:last-child {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-right: 1px solid #9ea0a3;
@@ -257,8 +257,7 @@ input[type=submit].confirm.disabled:hover {
   z-index: 3;
   min-height: 100%;
 }
-.overlay .header,
-#mw-mf-overlay .header,
+.header,
 #mw-mf-header {
   z-index: 2;
   color: black;
@@ -490,21 +489,23 @@ html.overlay ul.content li:hover {
   font-weight: bold;
   margin: 0 0 8px 0;
 }
+#mw-mf-page-center .header,
 .overlay .header {
   line-height: 46px;
   text-align: center;
   border-bottom: solid 1px #CCC;
   padding: 0;
-  color: #666;
   min-height: 46px;
   margin: 0;
   padding-bottom: 0;
 }
+#mw-mf-page-center .header input.search,
 .overlay .header input.search {
   margin-top: 0;
   margin-right: 20px;
   margin-left: 40px;
 }
+#mw-mf-page-center .header h2,
 .overlay .header h2 {
   margin: 0;
   padding: 0;

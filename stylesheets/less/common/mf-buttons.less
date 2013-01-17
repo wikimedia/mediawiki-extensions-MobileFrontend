@@ -85,41 +85,39 @@ input[type=submit] {
 
 @buttonVerticalMargin: 8px;
 @buttonVerticalPadding: ( @headerHeight / 2 ) - ( @buttonVerticalMargin * 2 );
-#mw-mf-overlay {
-	.header {
-		a.button {
-			font-size: @baseFontSize;
-			margin-top: @buttonVerticalMargin;
-			margin-bottom: @buttonVerticalMargin;
-			.border-radius( 0 );
-			padding-top: @buttonVerticalPadding;
-			padding-bottom: @buttonVerticalPadding;
-			text-decoration: none;
-			text-shadow: none;
-			.vertical-gradient(#fff, #e9e9ea, 45%, 100%);
-			color: #58595b;
-			border: 1px solid #9ea0a3;
-			border-right: none;
-			/* fixes button alignment when active button is bold */
-			line-height: 1.1em;
-			white-space: nowrap;
 
-			&.active {
-				background: #c8cacb;
-				font-weight: bold;
-			}
+.header {
+	a.button {
+		font-size: @baseFontSize;
+		margin-top: @buttonVerticalMargin;
+		margin-bottom: @buttonVerticalMargin;
+		.border-radius( 0 );
+		padding-top: @buttonVerticalPadding;
+		padding-bottom: @buttonVerticalPadding;
+		text-decoration: none;
+		text-shadow: none;
+		.vertical-gradient(#fff, #e9e9ea, 45%, 100%);
+		color: #58595b;
+		border: 1px solid #9ea0a3;
+		border-right: none;
+		/* fixes button alignment when active button is bold */
+		line-height: 1.1em;
+		white-space: nowrap;
 
-			&:first-child {
-				border-top-left-radius: 3px;
-				border-bottom-left-radius: 3px;
-			}
+		&.active {
+			background: #c8cacb;
+			font-weight: bold;
+		}
 
-			&:last-child {
-				border-top-right-radius: 3px;
-				border-bottom-right-radius: 3px;
-				border-right: 1px solid #9ea0a3;
-			}
+		&:first-child {
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+
+		&:last-child {
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-right: 1px solid #9ea0a3;
 		}
 	}
 }
-
