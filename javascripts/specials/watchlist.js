@@ -1,4 +1,4 @@
-( function( $ ) {
+( function( $, M ) {
 
 	// FIXME: Kill the need for this horrible function by giving me a nicer API
 	function getPagesFromQueryResult( result ) {
@@ -11,7 +11,7 @@
 		return pages;
 	}
 
-	function init( M ) {
+	function initWatchlist() {
 		var titles = [], $items = $( '#mw-mf-watchlist li h2' );
 
 		$items.each( function() {
@@ -46,8 +46,14 @@
 		} );
 	}
 
+	function init() {
+		if ( $( '#mw-mf-watchlist' ).length > 0 ) {
+			initWatchlist();
+		}
+	}
+
 	$( document ).ready( function() {
-		init( mw.mobileFrontend );
+		init();
 	} );
 
-} )( jQuery );
+} )( jQuery, mw.mobileFrontend );
