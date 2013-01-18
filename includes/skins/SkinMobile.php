@@ -369,8 +369,8 @@ class SkinMobile extends SkinMobileBase {
 		}
 
 		if ( $isSpecialPage ) {
-			$id = explode( '/', strtolower( $title->getText() ) );
-			$id = $id[0];
+			list( $name, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+			$id = strtolower( $name );
 			$specialStyleModuleName = 'mobile.' . $id . '.styles';
 			$specialScriptModuleName = 'mobile.' . $id . '.scripts';
 
