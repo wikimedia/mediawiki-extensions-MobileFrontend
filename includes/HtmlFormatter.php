@@ -180,6 +180,7 @@ class HtmlFormatter {
 			}
 		}
 
+		/** @var $domElement DOMElement */
 		foreach ( $domElemsToReplace as $domElement ) {
 			$alt = $domElement->getAttribute( 'alt' );
 			if ( $alt === '' ) {
@@ -209,6 +210,7 @@ class HtmlFormatter {
 		foreach ( $removals['CLASS'] as $classToRemove ) {
 			$elements = $xpath->query( '//*[@class="' . $classToRemove . '"]' );
 
+			/** @var $element DOMElement */
 			foreach ( $elements as $element ) {
 				if ( $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
 					$element->parentNode->removeChild( $element );
@@ -224,6 +226,7 @@ class HtmlFormatter {
 				'//' . $parts[0] . '[@class="' . $parts[1] . '"]'
 			);
 
+			/** @var $element DOMElement */
 			foreach ( $elements as $element ) {
 				if ( $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
 					$element->parentNode->removeChild( $element );
@@ -234,6 +237,7 @@ class HtmlFormatter {
 		// Handle red links with action equal to edit
 		if ( $this->flattenRedLinks ) {
 			$redLinks = $xpath->query( '//a[@class="new"]' );
+			/** @var $redLink DOMElement */
 			foreach ( $redLinks as $redLink ) {
 				// PHP Bug #36795 — Inappropriate "unterminated entity reference"
 				$spanNode = $doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );

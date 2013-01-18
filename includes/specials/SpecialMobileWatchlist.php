@@ -354,8 +354,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$this->seenTitles[$titleText] = true;
 
 		$comment = $row->rc_comment;
-		$userId = $row->rc_user;
-		$username = $row->rc_user_text;
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$revId = $row->rc_this_oldid;
 
@@ -386,7 +384,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 			'<li>' .
 			Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) ) .
-			Html::element( 'h2', null, $titleText ).
+			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => $usernameClass ), $username ).
 			Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
 			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $ts->getHumanTimestamp() ) .
@@ -406,7 +404,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
-			Html::element( 'h2', null, $titleText ).
+			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $lastModified ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' )

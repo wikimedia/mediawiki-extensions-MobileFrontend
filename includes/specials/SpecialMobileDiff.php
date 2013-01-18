@@ -20,8 +20,9 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 		$rev = Revision::newFromId( $this->revId );
 		$this->rev = $rev;
 		if ( !$rev ) {
-			return wfHttpError( 404, wfMessage( 'mobile-frontend-diffview-404-title' )->escaped(),
-				wfMessage( 'mobile-frontend-diffview-404-desc' )->escaped() );
+			wfHttpError( 404, $this->msg( 'mobile-frontend-diffview-404-title' )->text(),
+				$this->msg( 'mobile-frontend-diffview-404-desc' )->text() );
+			return;
 		}
 		$this->prevRev = $this->rev->getPrevious();
 		$this->targetTitle = $this->rev->getTitle();
@@ -103,7 +104,8 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 		$xpath = new DOMXpath( $doc );
 		$els = $xpath->query( "//td[@class='diff-deletedline'] | //td[@class='diff-addedline'] | //del | //ins" );
 		$out .= Html::element( 'div', array( 'class' => 'heading' ),
-			wfMessage( 'mobile-frontend-diffview-explained' )->plain() );
+			$this->msg( 'mobile-frontend-diffview-explained' )->plain() );
+		/** @var $el DOMElement */
 		foreach( $els as $el ) {
 			$name = $el->nodeName;
 			$class = $el->getAttribute( 'class' );

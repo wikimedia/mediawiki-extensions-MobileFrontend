@@ -68,6 +68,9 @@ HTML;
 		wfProfileOut( __METHOD__ );
 	}
 
+	/**
+	 * @return QuickTemplate
+	 */
 	protected function prepareTemplate() {
 		wfProfileIn( __METHOD__ );
 		$lang = $this->getLanguage();

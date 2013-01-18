@@ -567,6 +567,7 @@ class ExtMobileFrontend extends ContextSource {
 	 *
 	 * @param $special SpecialPage
 	 * @param $subpage string
+	 * @return bool
 	 */
 	public function onSpecialPageBeforeExecute( $special, $subpage ) {
 		global $wgMFForceSecureLogin;

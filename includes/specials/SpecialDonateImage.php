@@ -11,7 +11,6 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 		$output->htmlClass = 'galleryPage';
 		$output->setPageTitle( wfMessage( 'mobile-frontend-donate-image-title' )->text() );
 
-		$context = MobileContext::singleton();
 		$html =
 			Html::openElement( 'div', array( 'class' => 'content' ) ) .
 			Html::element( 'p',
