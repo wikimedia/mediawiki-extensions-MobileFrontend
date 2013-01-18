@@ -27,6 +27,17 @@ a.external {
   vertical-align: middle;
   position: relative;
 }
+.info {
+  margin: 4em;
+  color: #707070;
+}
+.info img {
+  width: 100%;
+  max-width: 600px;
+}
+.info .button {
+  margin: 2em 0 0;
+}
 /* Galleries */
 /* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
 ul.gallery {
