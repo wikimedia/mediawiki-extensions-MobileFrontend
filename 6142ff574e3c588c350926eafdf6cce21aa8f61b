@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//468\u003d",
+        "filename": "stylesheets/less/common/mf-common.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-18T23:15:00Z",
+      "side": 1,
+      "message": "ws fix up needed\nalso adding a max-width for tablets to 600px",
+      "revId": "6142ff574e3c588c350926eafdf6cce21aa8f61b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
