@@ -28,6 +28,8 @@ $specialPageAliases['de'] = array(
 	'MobileFeedback' => array( 'Mobile_Rückmeldung' ),
 	'MobileOptions' => array( 'Mobile_Optionen' ),
 	'DonateImage' => array( 'Bild_spenden' ),
+	'MobileDiff' => array( 'Mobiler_Unterschied' ),
+	'MobileMenu' => array( 'Mobiles_Menü' ),
 );
 
 /** Estonian (eesti) */
