@@ -4067,7 +4067,10 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-watchlist-a-z' => 'Tous',
 	'mobile-frontend-watchlist-feed' => 'Modifiés',
 	'mobile-frontend-watchlist-a-z-empty' => 'Vous ne consultez actuellement aucune page',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Cliquez sur l’étoile en haut de la page',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Suivez une page que vous avez trouvé intéressante en cliquant sur l’icône de l’étoile en haut de l’écran. Cela vous permettra de mettre en favori les pages intéressantes et de voir quand elles sont modifiées.',
 	'mobile-frontend-watchlist-feed-empty' => 'Il n’y a pas de pages avec les modifications récentes',
+	'mobile-frontend-watchlist-back-home' => 'Retour à l’accueil',
 	'mobile-frontend-changeslist-ip' => 'Utilisateur anonyme',
 	'mobile-frontend-changeslist-nocomment' => 'aucun résumé de modification',
 	'mobile-frontend-watchlist-filter-all' => 'Tous',
@@ -4614,7 +4617,9 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-watchlist-a-z' => 'Todas',
 	'mobile-frontend-watchlist-feed' => 'Modificadas',
 	'mobile-frontend-watchlist-a-z-empty' => 'Non está vixiando ningunha páxina nestes intres',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Prema na estrela da parte superior da páxina',
 	'mobile-frontend-watchlist-feed-empty' => 'Non hai páxinas con cambios recentes',
+	'mobile-frontend-watchlist-back-home' => 'Volver ao inicio',
 	'mobile-frontend-changeslist-ip' => 'Usuario anónimo',
 	'mobile-frontend-changeslist-nocomment' => 'sen resumo de edición',
 	'mobile-frontend-watchlist-filter-all' => 'Todas',
@@ -6242,6 +6247,7 @@ $messages['it'] = array(
 	'mobile-frontend-watchlist-a-z' => 'Tutte',
 	'mobile-frontend-watchlist-feed' => 'Modificate',
 	'mobile-frontend-watchlist-a-z-empty' => 'Attualmente non stai osservando alcuna pagina',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Fai clic sulla stella in alto nella pagina',
 	'mobile-frontend-watchlist-feed-empty' => 'Non ci sono pagine con modifiche recenti',
 	'mobile-frontend-changeslist-ip' => 'Utente anonimo',
 	'mobile-frontend-changeslist-nocomment' => 'nessun oggetto della modifica',
@@ -9065,6 +9071,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-watchlist-feed' => 'Gewijzigd',
 	'mobile-frontend-watchlist-a-z-empty' => "U bekijkt momenteel niet alle pagina 's",
 	'mobile-frontend-watchlist-feed-empty' => "Er zijn geen pagina's met recente wijzigingen",
+	'mobile-frontend-watchlist-back-home' => 'Terug naar startpagina',
 	'mobile-frontend-changeslist-ip' => 'Anonieme gebruiker',
 	'mobile-frontend-changeslist-nocomment' => 'geen bewerkingssamenvatting',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
@@ -9257,6 +9264,7 @@ $messages['nn'] = array(
 
 /** Occitan (occitan)
  * @author Boulaur
+ * @author Cedric31
  */
 $messages['oc'] = array(
 	'mobile-frontend-search-submit' => 'Consultar',
@@ -9266,12 +9274,11 @@ $messages['oc'] = array(
 	'mobile-frontend-show-button' => 'Afichar',
 	'mobile-frontend-hide-button' => 'Amagar',
 	'mobile-frontend-regular-site' => 'Afichar aquesta pagina sus Wikipèdia classica', # Fuzzy
-	'mobile-frontend-opt-in-yes-button' => 'òc',
-	'mobile-frontend-opt-in-no-button' => 'non',
-	'mobile-frontend-opt-out-yes-button' => 'òc',
-	'mobile-frontend-opt-out-no-button' => 'non',
 	'mobile-frontend-featured-article' => 'Lutz sus...',
 	'mobile-frontend-leave-feedback-message' => 'Messatge', # Fuzzy
+	'mobile-frontend-watchlist-more' => 'mai',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Clicatz sus l’estela amont de la pagina',
+	'mobile-frontend-watchlist-back-home' => 'Retorn a l’acuèlh',
 );
 
 /** Oriya (ଓଡ଼ିଆ)
@@ -11781,12 +11788,18 @@ $messages['sv'] = array(
 	'mobile-frontend-language-variant-header' => 'Välj varianten {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-footer' => 'Notera: Denna sida är kanske inte skriven på ditt önskade språk. Du kan se vilka språk {{SITENAME}} stöder genom att klicka här.',
 	'mobile-frontend-language-site-choose' => 'Sök språk',
-	'mobile-frontend-language-site-nomatches' => 'Inga matchande språk',
 	'mobile-frontend-username' => 'Användarnamn:',
 	'mobile-frontend-password' => 'Lösenord:',
 	'mobile-frontend-username-placeholder' => 'Användarnamn',
 	'mobile-frontend-password-placeholder' => 'Lösenord',
 	'mobile-frontend-login' => 'Logga in',
+	'mobile-frontend-last-modified-date' => 'Senast redigerad den $1, kl $2',
+	'mobile-frontend-last-modified-seconds' => 'Senast redigerad {{PLURAL:$1|$1 sekund|$1 sekunder}} sedan',
+	'mobile-frontend-last-modified-minutes' => 'Senast redigerad {{PLURAL:$1|$1 minut|$1 minuter}} sedan',
+	'mobile-frontend-last-modified-hours' => 'Senast redigerad {{PLURAL:$1|$1 timme|$1 timmar}} sedan',
+	'mobile-frontend-last-modified-days' => 'Senast redigerad {{PLURAL:$1|$1 dag|$1 dagar}} sedan',
+	'mobile-frontend-last-modified-months' => 'Senast redigerad {{PLURAL:$1|$1 månad|$1 månader}} sedan',
+	'mobile-frontend-last-modified-years' => 'Senast redigerad {{PLURAL:$1|$1 år}} sedan',
 	'mobile-frontend-account-create-submit' => 'Registrera dig',
 	'mobile-frontend-password-confirm-placeholder' => 'Bekräfta lösenord',
 	'mobile-frontend-account-create-email-placeholder' => 'E-postadress (valfritt)',
@@ -11835,16 +11848,24 @@ Hjälp till att ge liv i dessa sidor genom att donera dina bilder som du är vil
 	'mobile-frontend-watchlist-add' => 'Lade till $1 till din bevakningslista',
 	'mobile-frontend-watchlist-removed' => 'Tog bort $1 från din bevakningslista',
 	'mobile-frontend-watchlist-view' => 'Visa din bevakningslista',
-	'mobile-frontend-watchlist-a-z' => 'Bevakade sidor', # Fuzzy
-	'mobile-frontend-watchlist-feed' => 'Sidor med ändringar', # Fuzzy
+	'mobile-frontend-watchlist-more' => 'mer',
+	'mobile-frontend-watchlist-cta' => 'Var god logga in eller registrera dig för att titta på denna sida.',
+	'mobile-frontend-watchlist-cta-button-login' => 'Logga in',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Registrera dig',
+	'mobile-frontend-watchlist-a-z' => 'Alla',
+	'mobile-frontend-watchlist-feed' => 'Ändrade',
 	'mobile-frontend-watchlist-a-z-empty' => 'Du bevakar för tillfället inte några sidor',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klicka på stjärnan längst upp på sidan',
 	'mobile-frontend-watchlist-feed-empty' => 'Det finns inga sidor med senaste ändringar',
+	'mobile-frontend-watchlist-back-home' => 'Tillbaka hem',
 	'mobile-frontend-changeslist-ip' => 'Anonym användare',
 	'mobile-frontend-changeslist-nocomment' => 'ingen redigeringssammanfattning',
 	'mobile-frontend-watchlist-filter-all' => 'Alla',
 	'mobile-frontend-watchlist-filter-articles' => 'Artiklar',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Andra',
+	'mobile-frontend-watchlist-modified' => 'Redigerades för $1',
+	'mobile-frontend-diffview-404-title' => 'Dålig version',
 	'mobile-frontend-diffview-title' => 'Ändringar',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|redigering|redigeringar}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonym användare',
@@ -11855,6 +11876,7 @@ Hjälp till att ge liv i dessa sidor genom att donera dina bilder som du är vil
 	'mobile-frontend-saving-exit-page' => 'Ditt bidrag sparas fortfarande. Om du lämnar din bidrag kommer de förloras. Är du säker på att du vill avsluta?',
 	'mobile-frontend-photo-upload' => 'Lägg till det första fotot på denna sida',
 	'mobile-frontend-photo-article-edit-comment' => 'Lade till foto för användning på sidan',
+	'mobile-frontend-photo-article-donate-comment' => 'Donerad bild från mobiltelefon',
 	'mobile-frontend-photo-upload-comment' => 'Lade till foto på sidan',
 	'mobile-frontend-photo-upload-progress' => 'Laddar upp din bild till denna sida',
 	'mobile-frontend-photo-caption-placeholder' => 'Lägg till en bildtext för denna bild',
@@ -11865,6 +11887,7 @@ Hjälp till att ge liv i dessa sidor genom att donera dina bilder som du är vil
 	'mobile-frontend-photo-license' => 'OBS: Alla foton du publicerar kommer att publiceras under licensen [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0]',
 	'tag-mobile_edit' => 'Mobilredigering',
 	'tag-mobile_edit-description' => 'Redigering gjordes från mobilsidan',
+	'mobile-frontend-drawer-cancel' => 'Avbryt',
 );
 
 /** Swahili (Kiswahili)
@@ -12906,6 +12929,7 @@ $messages['vec'] = array(
 	'mobile-frontend-watchlist-a-z' => 'Tute',
 	'mobile-frontend-watchlist-feed' => 'Canbiae',
 	'mobile-frontend-watchlist-a-z-empty' => "No te si drio tegner d'ocio gnanca na pàjina",
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Struca so ła steła in sima a ła pàjina',
 	'mobile-frontend-watchlist-feed-empty' => 'No ghe xe pàjine có canbiamenti resenti',
 	'mobile-frontend-changeslist-ip' => 'Utente anonemo',
 	'mobile-frontend-changeslist-nocomment' => 'nisun ogeto de ła modifega',
@@ -12927,7 +12951,10 @@ $messages['vec'] = array(
 	'mobile-frontend-photo-upload' => 'Xonta ła prima someja a sta pàjina',
 	'mobile-frontend-photo-article-edit-comment' => 'Xonta na someja a sta pàjina',
 	'mobile-frontend-photo-upload-comment' => 'Xonta sta someja a na pàjina',
+	'mobile-frontend-photo-upload-progress' => 'Cargamento imaxene so sta pàjina',
 	'mobile-frontend-photo-caption-placeholder' => "Xonta na didascałia a l'imaxene",
+	'mobile-frontend-image-loading' => 'Cargamento imaxene',
+	'mobile-frontend-image-uploading' => 'Cargamento imaxene',
 	'mobile-frontend-photo-upload-error' => "S'a verifegà un eror durante el cargamento de l'imaxene. Se prega de ripróvar có n'altra imaxene.",
 	'mobile-frontend-image-saving-to-article' => 'Salvatajo imaxene so pàjina',
 	'mobile-frontend-photo-license' => 'Nota: tute łe someje publicae łe sarà rełasae có [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licensa CC BY-SA 3.0]',
