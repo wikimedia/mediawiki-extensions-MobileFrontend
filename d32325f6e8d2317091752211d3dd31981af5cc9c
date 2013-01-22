@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//2RU\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-22T19:06:31Z",
+      "side": 1,
+      "message": "There should be a space between the value and \"km.\" Also, I imagine we\u0027ll want to display miles for some users, but I\u0027m not sure how to approach that.",
+      "revId": "d32325f6e8d2317091752211d3dd31981af5cc9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
