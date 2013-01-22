@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//2QM\u003d",
+        "filename": "javascripts/common/mf-notification.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-22T19:10:58Z",
+      "side": 1,
+      "message": "What does \"locked\" mean? When do we use it?",
+      "revId": "cdf393d6639a276eb2546df8a0dc9233eb7e52fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
