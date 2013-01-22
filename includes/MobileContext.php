@@ -379,33 +379,6 @@ class MobileContext extends ContextSource {
 		return $useFormatFromCookie;
 	}
 
-	/**
-	 * @return bool
-	 */
-	public function checkUserLoggedIn() {
-		global $wgCookieDomain, $wgCookiePrefix;
-		wfProfileIn( __METHOD__ );
-		$tempWgCookieDomain = $wgCookieDomain;
-		$wgCookieDomain = $this->getBaseDomain();
-		$tempWgCookiePrefix = $wgCookiePrefix;
-		$wgCookiePrefix = '';
-
-		$request = $this->getRequest();
-		if ( $this->getUser()->isLoggedIn() ) {
-			$request->response()->setcookie( 'mfsecure', '1', 0, '' );
-		} else {
-			$mfSecure = $request->getCookie( 'mfsecure', '' );
-			if ( $mfSecure && $mfSecure == '1' ) {
-				$request->response()->setcookie( 'mfsecure', '', 0, '' );
-			}
-		}
-
-		$wgCookieDomain = $tempWgCookieDomain;
-		$wgCookiePrefix = $tempWgCookiePrefix;
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
 	public function checkUserStatus() {
 		wfProfileIn( __METHOD__ );
 
