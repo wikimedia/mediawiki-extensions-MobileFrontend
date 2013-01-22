@@ -41,16 +41,6 @@ And /^the article watchlist icon is selected$/ do
   end
 end
 
-When /^I search for the same article and select the watchlist icon again$/ do
-  on(HomePage) do |page|
-    page.search_box_element.should be_true
-    page.search_box="san francisco chronicle"
-    @browser.send_keys :enter
-    page.text.should include "San Francisco Chronicle"
-    page.watch_link_element.when_present.click
-  end
-end
-
 Then /^I receive notification that the article has been removed from the watchlist$/ do
   on(HomePage) do |page|
     page.watch_note_removed_element.exists?

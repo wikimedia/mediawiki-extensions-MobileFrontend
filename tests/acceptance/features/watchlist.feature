@@ -10,6 +10,6 @@ Feature: Manage Watchlist
       And the article watchlist icon is selected
 
   Scenario: Remove an article from the watchlist
-    When I search for the same article and select the watchlist icon again
+    When I search for an article and select the watchlist icon
     Then I receive notification that the article has been removed from the watchlist
       And the article no longer has the watchlist icon selected
