@@ -16,6 +16,24 @@
       "revId": "cdf393d6639a276eb2546df8a0dc9233eb7e52fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADhn///80\u003d",
+        "filename": "javascripts/common/mf-notification.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-22T22:25:42Z",
+      "side": 1,
+      "message": "Normally toast messages disappear when you scroll however a toast message with the locked class only disappears when the user clicks the close button in it.\n\nWe should aim to make this clearer by abstracting notifications into a model where this is a property.",
+      "parentUuid": "AAADhH//2QM\u003d",
+      "revId": "cdf393d6639a276eb2546df8a0dc9233eb7e52fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
