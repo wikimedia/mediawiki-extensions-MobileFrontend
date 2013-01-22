@@ -22,6 +22,7 @@ end
 When /^I search for an article and select the watchlist icon$/ do
   on(HomePage) do |page|
     page.search_box="san francisco chronicle"
+    page.search_result_element.when_present
     @browser.send_keys :enter
     page.text.should include "San Francisco Chronicle"
     page.watch_link_element.when_present.click
