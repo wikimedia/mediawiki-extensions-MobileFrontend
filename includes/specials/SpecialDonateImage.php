@@ -11,18 +11,16 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 
 		$ctx->setOverlay( false );
 		$mobileSkin = $ctx->getSkin();
-		if ( method_exists( $mobileSkin, 'setHtmlHeader' ) ) {
-			$mobileSkin->setHtmlHeader( $this->getHeader( $mobileSkin ) );
-		}
+		$mobileSkin->setHtmlHeader( $this->getHeader() );
 
 		$this->setHeaders();
 		$output = $this->getOutput();
 		$output->htmlClass = 'galleryPage';
-		$output->setPageTitle( wfMessage( 'mobile-frontend-donate-image-title' )->text() );
+		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
 		if( $user->isAnon() ) {
 			$html = Html::openElement( 'div', array( 'class' => 'alert error' ) ) .
-				wfMessage( 'mobile-frontend-donate-image-anon' )->parse() .
+				$this->msg( 'mobile-frontend-donate-image-anon' )->parse() .
 				Html::closeElement( 'div' );
 		} else {
 			$html = Html::element( 'ul', array( 'class' => 'mobileUserGallery' ) );
@@ -30,12 +28,13 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 		$output->addHTML( $html );
 	}
 
-	public function getHeader( $mobileSkin ) {
+	public function getHeader() {
+		$mobileSkin = $this->getContext()->getSkin();
 
 		return Html::openElement( 'div', array( 'class' => 'header' ) ) .
 			$mobileSkin->getMenuButton() .
 			Html::element( 'h1', array(),
-				wfMessage( 'mobile-frontend-donate-image-page-title' )->plain() ) .
+				$this->msg( 'mobile-frontend-donate-image-page-title' )->plain() ) .
 			Html::closeElement( 'div' );
 	}
 }
