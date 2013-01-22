@@ -171,9 +171,6 @@ class ExtMobileFrontend extends ContextSource {
 	protected function beforePageDisplay( $out ) {
 		wfProfileIn( __METHOD__ );
 
-		$context = MobileContext::singleton();
-		$context->checkUserLoggedIn();
-
 		$this->setDefaultLogo();
 
 		$this->disableCaching();
