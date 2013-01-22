@@ -28,6 +28,7 @@ less:
 	lessc stylesheets/less/actions/mf-edit.less > stylesheets/actions/mf-edit.css
 	lessc stylesheets/less/actions/mf-history.less > stylesheets/actions/mf-history.css
 	lessc stylesheets/less/specials/watchlist.less > stylesheets/specials/watchlist.css
+	lessc stylesheets/less/specials/donateimage.less > stylesheets/specials/donateimage.css
 
 phpunit:
 	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml

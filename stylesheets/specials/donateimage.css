@@ -1,0 +1,20 @@
+.ctaUploadPhoto {
+  padding: 8px;
+  background-color: #F3F3F3;
+  border-bottom: 1px solid #E2E2E2;
+}
+ul.mobileUserGallery {
+  list-style: none;
+}
+ul.mobileUserGallery li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ul.mobileUserGallery li img {
+  max-width: 100%;
+  max-height: auto;
+}
+ul.mobileUserGallery li p {
+  color: #565656;
+  line-height: 1.2;
+}
