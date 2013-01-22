@@ -53,7 +53,10 @@ class SkinMobile extends SkinMobileBase {
 		$this->prepareTemplatePageContent( $tpl );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
-		$tpl->set( 'articleClass', $title->isMainPage() || $specialPage ? 'mw-mf-special' : '' );
+		if ( $title->isMainPage() || $specialPage ) {
+			$this->addArticleClass( 'mw-mf-special' );
+		}
+		$tpl->set( 'articleClass', $this->getArticleClassString() );
 		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );

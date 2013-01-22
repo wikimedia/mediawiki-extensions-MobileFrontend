@@ -84,6 +84,9 @@ sup {
 #content_wrapper .content {
   margin: 14pt 23px 0 23px;
 }
+#content_wrapper.noMargins .content {
+  margin: 0;
+}
 #content_wrapper .section h3:first-child {
   margin-top: 0;
 }

@@ -10,6 +10,9 @@ abstract class SkinMobileBase extends SkinTemplate {
 	/** @var string html representing the header of the skin */
 	private $mobileHtmlHeader = null;
 
+	/** @var array of classes that should be present on the content_wrapper */
+	private $articleClassNames = array();
+
 	/**
 	 * Provides alternative html for the header
 	 * @return string html
@@ -24,6 +27,20 @@ abstract class SkinMobileBase extends SkinTemplate {
 	 */
 	public function setHtmlHeader( $html ) {
 		$this->mobileHtmlHeader = $html;
+	}
+
+	/**
+	 * @param string $className: valid class name
+	 */
+	public function addArticleClass( $className ) {
+		$this->articleClassNames[ $className ] = true;
+	}
+
+	/**
+	 * @return string representing the class attribute of element
+	 */
+	public function getArticleClassString() {
+		return implode( ' ', array_keys( $this->articleClassNames ) );
 	}
 
 	public static function factory( ExtMobileFrontend $extMobileFrontend ) {
