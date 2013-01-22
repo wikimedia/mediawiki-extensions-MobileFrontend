@@ -362,6 +362,9 @@ input[type=submit].confirm.disabled:hover {
 #mw-mf-menu-main li.icon6 a.login {
   background-image: url(images/menu/lowres/login.png);
 }
+#mw-mf-menu-main li.iconUpload a {
+  background-image: url(images/menu/upload.png);
+}
 .jsEnabled #mw-mf-menu-main li.icon a {
   background-image: /* @embed */ url(images/menu/home.png);
 }

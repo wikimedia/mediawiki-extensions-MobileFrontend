@@ -792,6 +792,14 @@ class SkinMobileTemplate extends BaseTemplate {
 				</a>
 			</li>
 			<?php } ?>
+			<?php if ( $this->data['isBetaGroupMember'] && $user->isAllowed( 'upload' ) ) { ?>
+				<li class='iconUpload'>
+					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
+						title="<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>">
+					<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>
+					</a>
+				</li>
+			<?php } ?>
 			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
 				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
 				><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
@@ -809,14 +817,6 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
-			<?php if ( $this->data['isAlphaGroupMember'] && $user->isAllowed( 'upload' ) ) { ?>
-				<li class='iconImage'>
-					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
-						title="<?php $this->msg( 'mobile-frontend-donate-image' ) ?>">
-					<?php $this->msg( 'mobile-frontend-donate-image' ) ?>
-					</a>
-				</li>
-			<?php } ?>
 			<?php if ( $this->data['isAlphaGroupMember'] ) { ?>
 			<li class='iconImage'>
 				<a href="<?php $this->text( 'nearbyURL' ) ?>"
