@@ -133,7 +133,8 @@
 			}
 		} ).done( function( resp ) {
 			var pages = M.getPageArrayFromApiResponse( resp ),
-				langlinks = pages[0] ? pages[0].langlinks : [];
+				// FIXME: "|| []" wouldn't be needed if API was more consistent
+				langlinks = pages[0] ? pages[0].langlinks || [] : [];
 
 			renderLanguages( langlinks );
 		} );
