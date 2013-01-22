@@ -155,7 +155,10 @@ class ExtMobileFrontend extends ContextSource {
 			return true;
 		}
 
-		$redirect = $context->getMobileUrl( $redirect );
+		// Bug 43123: force mobile URLs only for local redirects
+		if ( MobileContext::isLocalTarget( $redirect ) ) {
+			$redirect = $context->getMobileUrl( $redirect );
+		}
 
 		wfProfileOut( __METHOD__ );
 		return true;
