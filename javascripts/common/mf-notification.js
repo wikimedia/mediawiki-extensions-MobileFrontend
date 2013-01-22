@@ -27,11 +27,13 @@
 				addClass( classes ).show();
 		}
 
-		function close() {
-			if ( !$( '#mf-notification' ).is( ':visible' ) ) {
+		function close( forceClose ) {
+			var $notification = $( '#mf-notification' );
+			if ( !$notification.is( ':visible' ) ) {
 				return;
+			} else if ( !$notification.hasClass( 'locked' ) || forceClose ) {
+				$( '#mf-notification' ).hide();
 			}
-			$( '#mf-notification' ).hide();
 		}
 
 		function notifyAuthenticatedUser() {
@@ -54,15 +56,18 @@
 				ev.stopPropagation();
 			}
 			el.ontouchstart = cancelBubble;
-			$( '<button>close</button>' ).click( close ).appendTo( '#mf-notification' );
+			$( '<button>' ).click( function( ev ) {
+				ev.stopPropagation();
+				close( true );
+			} ).appendTo( '#mf-notification' );
 
 			if ( firstRun ) {
 				$( window ).scroll( function() {
 					close();
 				} );
 
-				$( document.body ).bind( 'click', close ).bind( 'touchstart', function() {
-					$( '#mf-notification' ).hide();
+				$( document.body ).bind( 'click touchstart', function() {
+					close();
 				} );
 			}
 		}
