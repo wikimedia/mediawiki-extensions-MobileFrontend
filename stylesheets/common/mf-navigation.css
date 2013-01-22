@@ -465,7 +465,7 @@ html.overlay ul.content li:hover {
 #mw-mf-overlay .content {
   margin-top: 14pt;
 }
-#mw-mf-overlay .alert {
+.alert {
   padding: 8px;
   margin: 0 40px 0 40px;
   background-repeat: no-repeat;
@@ -474,16 +474,16 @@ html.overlay ul.content li:hover {
   min-height: 64px;
   font-size: 1.3em;
 }
-#mw-mf-overlay .alert.success {
+.alert.success {
   padding-left: 88px;
   border: solid 2px #008000;
   background-image: url(images/success.png);
 }
-#mw-mf-overlay .alert.error {
+.alert.error {
   border: solid 2px #dd0000;
   background-color: #fae1e1;
 }
-#mw-mf-overlay .alert h2 {
+.alert h2 {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 100%;
   font-weight: bold;

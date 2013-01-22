@@ -290,33 +290,33 @@ html.overlay {
 	.content {
 		margin-top: @headingMarginTop;
 	}
+}
 
-	.alert {
-		padding: @overlayAlertPadding;
-		margin: 0 @searchBoxMarginLeft 0 @searchBoxMarginLeft;
-		background-repeat: no-repeat;
-		background-position: @overlayAlertPadding center;
-		margin-bottom: @overlayAlertPadding;
-		min-height: 64px;
-		font-size: @baseFontSize * 1.3;
+.alert {
+	padding: @overlayAlertPadding;
+	margin: 0 @searchBoxMarginLeft 0 @searchBoxMarginLeft;
+	background-repeat: no-repeat;
+	background-position: @overlayAlertPadding center;
+	margin-bottom: @overlayAlertPadding;
+	min-height: 64px;
+	font-size: @baseFontSize * 1.3;
 
-		&.success {
-			padding-left: ( 80px + @overlayAlertPadding );
-			border: solid @overlayBorderWidth @overlayAlertSuccessColor;
-			background-image: url(images/success.png);
-		}
+	&.success {
+		padding-left: ( 80px + @overlayAlertPadding );
+		border: solid @overlayBorderWidth @overlayAlertSuccessColor;
+		background-image: url(images/success.png);
+	}
 
-		&.error {
-			border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
-			background-color: @overlayAlertErrorBackgroundColor;
-		}
+	&.error {
+		border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
+		background-color: @overlayAlertErrorBackgroundColor;
+	}
 
-		h2 {
-			font-family: @fontFamily;
-			font-size: 100%;
-			font-weight: bold;
-			margin: 0 0 8px 0;
-		}
+	h2 {
+		font-family: @fontFamily;
+		font-size: 100%;
+		font-weight: bold;
+		margin: 0 0 8px 0;
 	}
 }
 
