@@ -1,8 +1,7 @@
 (function( M, $ ) {
 
 var w = ( function() {
-	var lastToken, nav = M.navigation,
-		POST_LOGIN_ACTION_KEY = 'mobile.postaction';
+	var lastToken, nav = M.navigation;
 
 	function logWatchEvent( eventType ) {
 		var types = [ 'watchlist', 'unwatchlist', 'anonCTA' ],
@@ -88,13 +87,6 @@ var w = ( function() {
 			toggleWatchStatus( $( watchBtn ).hasClass( 'watched' ) );
 		} );
 
-		// check if user just logged in and if so trigger save to watchlist action
-		val = M.settings.getUserSetting( POST_LOGIN_ACTION_KEY );
-		if ( val === 'watch' && window.location.search.indexOf( 'article_action=watch' ) > -1 && !isWatchedArticle ) {
-			$( watchBtn ).addClass( 'disabled waiting' );
-			toggleWatchStatus( false );
-			M.settings.saveUserSetting( POST_LOGIN_ACTION_KEY, '' ); // reset it
-		}
 	}
 
 	function checkWatchStatus( titles, callback ) {
@@ -121,9 +113,6 @@ var w = ( function() {
 	}
 
 	function initWatchListIcon( container, title ) {
-		function queueWatchAction() {
-			M.settings.saveUserSetting( POST_LOGIN_ACTION_KEY, 'watch' );
-		}
 
 		M.getToken( 'watch', function( data ) {
 			if( data.tokens && !data.warnings ) { // then user is logged in
@@ -143,7 +132,7 @@ var w = ( function() {
 					$( '<p>' ).html( M.message( 'mobile-frontend-watchlist-cta' ) ).appendTo( $drawer );
 					$a = $( '<a> ').text( M.message( 'mobile-frontend-watchlist-cta-button-login' ) ).
 						addClass( 'button' ).
-						click( queueWatchAction ).appendTo( $drawer );
+						appendTo( $drawer );
 					href = updateQs( href, 'returnto', M.getConfig( 'title' ) );
 					href = updateQs( href, 'returntoquery', 'article_action%3Dwatch' );
 					$a.attr( 'href', href );
@@ -153,10 +142,8 @@ var w = ( function() {
 					$( '<a>' ).text( M.message( 'mobile-frontend-watchlist-cta-button-signup' ) ).
 						attr( 'href', href ).
 						addClass( 'signup' ).
-						click( queueWatchAction ).appendTo( $drawer );
+						appendTo( $drawer );
 				} );
-				// clear user setting
-				M.settings.saveUserSetting( POST_LOGIN_ACTION_KEY, '' );
 			}
 		} );
 	}
