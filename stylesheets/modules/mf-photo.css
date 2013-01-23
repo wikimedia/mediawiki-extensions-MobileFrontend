@@ -1,62 +1,57 @@
-#content_wrapper .thumb.photouploader {
-  padding: 8px;
-}
-#content_wrapper .thumb.photouploader .errormsg,
-#content_wrapper .thumb.photouploader .msg {
-  display: none;
-}
-#content_wrapper .thumb.photouploader.uploading .msg {
-  display: block;
-}
-#content_wrapper .thumb.photouploader.error .errormsg {
-  color: #cc0000;
-  display: block;
-  margin-bottom: 8px;
-}
-#content_wrapper .thumb.photouploader img {
-  max-width: 100%;
-}
-#content_wrapper .thumb.photouploader .camera {
+.button.photo {
   position: relative;
+  display: table;
+  padding: 0;
+  margin: 0 auto;
   text-align: left;
   /* override text-align center - chrome not clickable */
 
 }
-#content_wrapper .thumb.photouploader .camera form {
-  position: relative;
-  height: 24px;
-  width: 100%;
-  background: url(images/5-content-new-picture.png) no-repeat;
-  background-size: auto 24px;
-  background-position: left top;
+.button.photo input,
+.button.photo div {
+  cursor: pointer;
 }
-#content_wrapper .thumb.photouploader .camera form input.photoupload {
+.button.photo input {
+  position: absolute;
   opacity: 0;
-  /* hide default */
-
+  top: 0;
   z-index: 2;
   width: 100%;
+  height: 100%;
 }
-#content_wrapper .thumb.photouploader .camera form p {
-  position: absolute;
-  left: 48px;
-  bottom: 0;
-  margin-bottom: 0;
+.button.photo div {
+  padding: 0.8em 10px 0.8em 44px;
+  background: url(images/camera.png) no-repeat 10px 50%;
+  background-size: 24px auto;
 }
-#content_wrapper .thumb.photouploader .editArea input {
-  display: block;
+#content .button.photo {
   width: 100%;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 2em;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
-#content_wrapper .thumb.photouploader .editArea button {
-  width: 48%;
+.photoPreview img {
+  height: 100px;
 }
-#content_wrapper .thumb.photouploader .editArea button.green {
-  float: right;
+.photoPreview .loading {
+  background-position: 0 50%;
+  padding: 0 0 0 48px;
+  margin: 0;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 32px;
+  -o-background-size: auto 32px;
+  -webkit-background-size: auto 32px;
+  background-size: auto 32px;
+  line-height: 100px;
+}
+.photoPreview .license {
+  background: url('images/cc-by-sa.png') no-repeat;
+  padding: 20px 0 0;
+  margin: 1em 0;
+  color: #707070;
+  font-size: .75em;
+  line-height: 150%;
+}
+.photoPreview textarea {
+  width: 100%;
+  height: 5em;
 }

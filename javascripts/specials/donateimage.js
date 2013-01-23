@@ -1,6 +1,10 @@
-( function( M,  $ ) {
+( function( M, $ ) {
 
-var api = M.require( 'api' ), m = ( function() {
+var api = M.require( 'api' ),
+	photo = M.require( 'photo' ),
+	m;
+
+m = ( function() {
 	var IMAGE_WIDTH = 320;
 
 	function extractDescription( text ) {
@@ -94,17 +98,25 @@ var api = M.require( 'api' ), m = ( function() {
 	}
 
 	function init() {
-		var photo = M.getModule( 'photos' ),
-			$container = $( '<div class="ctaUploadPhoto">' ).prependTo( '#content_wrapper' ),
+		var $container = $( '<div class="ctaUploadPhoto">' ).prependTo( '#content_wrapper' ),
 			username = M.getConfig( 'username' );
 
-		if ( photo ) {
-			if ( photo.isSupported ) {
-				photo.addPhotoUploader( $container, false, 'mobile-frontend-photo-upload-generic' );
-			}
-			if ( username ) {
-				showGallery( $( '.mobileUserGallery' ), username );
-			}
+		if ( photo.isSupported() ) {
+			new photo.PhotoUploader( {
+				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
+				pageTitle: mw.config.get( 'wgTitle' ),
+				// FIXME: set different message if user has no prior contributions
+				successMessage: mw.msg( 'mobile-frontend-photo-upload-success-generic' )
+			} ).
+				prependTo( $container ).
+				on( 'success', function( data ) {
+					// FIXME: use templates please
+					var $li = $( '<li><img src="' + data.url + '">' ).prependTo( 'ul.mobileUserGallery' );
+					$( '<p>' ).text( data.description ).appendTo( $li );
+				} );
+		}
+		if ( username ) {
+			showGallery( $( '.mobileUserGallery' ), username );
 		}
 	}
 	init();

@@ -19,9 +19,7 @@
 		}
 
 		function show( html, classes ) {
-			$( '#mf-notification div' ).removeAttr( 'class' ).
-				addClass( classes ).
-				html( html );
+			$( '#mf-notification div' ).html( html );
 			calculatePosition();
 			return $( '#mf-notification' ).removeAttr( 'class' ).
 				addClass( classes ).show();

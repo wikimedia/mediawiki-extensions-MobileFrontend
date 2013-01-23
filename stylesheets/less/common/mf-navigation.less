@@ -569,15 +569,27 @@ body {
 /* Notifications */
 #mf-notification {
 	position: fixed;
-	bottom: 0;
+	/* -2px to avoid a weird glitch in some browsers where the popup moves
+	 * slightly when scrolling */
+	bottom: -2px;
 	left: 0;
 	right: 0;
 	background-color: #E4E4E4;
-	.boxshadow( 0, -20px, 10px, -16px, #aaa );
+	.boxshadow( 0, -2px, 8px, 0, rgba(50, 50, 50, 0.35) );
 	word-break: break-word;
-	line-height: 1.4em;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	z-index: 3;
+
+	&.noButton button {
+		display: none;
+	}
+
+	&.loading {
+		background-position: @contentMarginLeft 50%;
+		background-repeat: no-repeat;
+		.background-size( 32px, auto );
+		padding: 0 0 0 @contentMarginLeft + 30px;
+	}
 
 	&.toast {
 		left: 10%;
@@ -596,6 +608,14 @@ body {
 			display: none;
 		}
 
+		&.error {
+			background-image: url(images/error.png);
+			background-position: 16px 50%;
+			background-repeat: no-repeat;
+			padding-left: 5%;
+			width: 75%;
+		}
+
 		&.locked button {
 			display: block;
 			top: 0.8em;
@@ -609,7 +629,7 @@ body {
 
 	div {
 		position: relative;
-		padding: 22px 38px 22px 22px;  /* 38px is 22px padding + close button icon 16px */
+		padding: 16px 38px 18px 22px;  /* 38px is 22px padding + close button icon 16px */
 	}
 
 	.mw-cite-backlink {

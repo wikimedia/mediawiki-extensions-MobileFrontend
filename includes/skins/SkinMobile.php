@@ -947,7 +947,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		$jsconfig = array(
 			// FIXME: these messages require parsing before being sent to mobile - the parsing should probably be done in javascript
 			'messages' => array(
-				'mobile-frontend-photo-license' => wfMessage( 'mobile-frontend-photo-license' )->parse(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
 					array(
 						'href' => SpecialPage::getTitleFor( 'MobileOptions', 'Language' )->getLocalUrl(),

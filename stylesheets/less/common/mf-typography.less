@@ -78,12 +78,13 @@ sup {
 	font-size: ( 3 * @baseFontSize / 4 );
 }
 
+
+.content {
+	margin: @headingMarginTop @contentMarginRight 0 @contentMarginLeft;
+}
+
 #content_wrapper {
 	position: relative;
-
-	.content {
-		margin: @headingMarginTop @contentMarginRight 0 @contentMarginLeft;
-	}
 
 	&.noMargins {
 		> .content {
