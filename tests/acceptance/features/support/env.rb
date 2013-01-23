@@ -22,7 +22,13 @@ def environment
   end
 end
 def local_browser
-  Watir::Browser.new :firefox
+  if ENV['BROWSER_LABEL']
+    browser_label = ENV['BROWSER_LABEL'].to_sym
+  else
+    browser_label = :firefox
+  end
+
+  Watir::Browser.new browser_label
 end
 def sauce_api(json, saucelabs_username, saucelabs_key)
   %x{curl -H 'Content-Type:text/json' -s -X PUT -d '#{json}' http://#{saucelabs_username}:#{saucelabs_key}@saucelabs.com/rest/v1/#{saucelabs_username}/jobs/#{$session_id}}
