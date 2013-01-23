@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH///Co\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-23T21:54:51Z",
+      "side": 1,
+      "message": "tokenCache[ endpoint ].hasOwnProperty( tokenType );\nwatch for example can be a property (https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/watch)",
+      "revId": "13be4a7e163c20b0da7e9d63d896593f5970259b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH///Ck\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 272,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-23T21:54:51Z",
+      "side": 1,
+      "message": "we could possibly make use of mw.api\n\nalso for readability can we define the api function above the getToken function?",
+      "revId": "13be4a7e163c20b0da7e9d63d896593f5970259b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH///Cc\u003d",
+        "filename": "tests/js/test_application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-23T21:54:51Z",
+      "side": 1,
+      "message": "!",
+      "revId": "13be4a7e163c20b0da7e9d63d896593f5970259b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
