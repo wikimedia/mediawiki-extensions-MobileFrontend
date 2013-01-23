@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//+uM\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-23T23:12:13Z",
+      "side": 1,
+      "message": "Can\u0027t you use our default \"log in or register to perform action\" message here? See MessagesEn.php for exact wording.\n\nQqq is missing.",
+      "revId": "30491b7813706ce50adc454af66a20f63d851eb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//+t4\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-23T23:12:13Z",
+      "side": 1,
+      "message": "setPageTitle also takes a Message, so no need to specify the (default) output processing text(). You can use $this-\u003emsg(), too, I think. Also below (twice).",
+      "revId": "30491b7813706ce50adc454af66a20f63d851eb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
