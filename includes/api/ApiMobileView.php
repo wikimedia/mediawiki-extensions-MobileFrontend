@@ -121,7 +121,7 @@ class ApiMobileView extends ApiBase {
 	}
 
 	private function getData( Title $title, $noImages ) {
-		global $wgMemc, $wgUseTidy;
+		global $wgMemc, $wgUseTidy, $wgMFMinCachedPageSize;
 
 		wfProfileIn( __METHOD__ );
 		$wp = WikiPage::factory( $title );
@@ -153,12 +153,14 @@ class ApiMobileView extends ApiBase {
 		if ( $this->file ) {
 			$html = $this->getFilePage( $title );
 		} else {
+			wfProfileIn( __METHOD__ . '-parserOutput' );
 			$parserOutput = $wp->getParserOutput( $parserOptions );
 			if ( !$parserOutput ) {
 				throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
 			}
 			$html = $parserOutput->getText();
 			$cacheExpiry = $parserOutput->getCacheExpiry();
+			wfProfileOut( __METHOD__ . '-parserOutput' );
 		}
 
 		wfProfileIn( __METHOD__ . '-MobileFormatter' );
@@ -207,19 +209,25 @@ class ApiMobileView extends ApiBase {
 			}
 			wfProfileOut( __METHOD__ . '-sections' );
 		}
-		// store for the same time as original parser output
-		$wgMemc->set( $key, $data, $cacheExpiry );
+		// Don't store small pages to decrease cache size requirements
+		if ( strlen( $html ) >= $wgMFMinCachedPageSize ) {
+			// store for the same time as original parser output
+			$wgMemc->set( $key, $data, $cacheExpiry );
+		}
 		wfProfileOut( __METHOD__ );
 		return $data;
 	}
 
 	private function getFilePage( Title $title ) {
 		//HACK: HACK: HACK:
+		wfProfileIn( __METHOD__ );
 		$page = new ImagePage( $title );
 		$page->setContext( $this->getContext() );
 		$page->view();
 		global $wgOut;
-		return $wgOut->getHTML();
+		$html = $wgOut->getHTML();
+		wfProfileOut( __METHOD__ );
+		return $html;
 	}
 
 	public function getAllowedParams() {

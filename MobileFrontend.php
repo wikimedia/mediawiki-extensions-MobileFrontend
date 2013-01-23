@@ -635,3 +635,9 @@ $wgMFForceSecureLogin = false;
  * Defaults to false.
  */
 $wgMFNearby = false;
+
+/**
+ * Pages with smaller parsed HTML size are not cached
+ * Set to 0 to cache everything or to some large value to disable caching completely
+ */
+$wgMFMinCachedPageSize = 64 * 1024;
