@@ -7,6 +7,7 @@ class UserAccountCreateMobileTemplate extends OverloadTemplate {
 	public function execute() {
 		$action = $this->data['action'];
 		$token = $this->data['token'];
+		$watchArticle = ( isset( $this->data['watch'] ) ) ? $this->data['watch'] : '';
 		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];
@@ -77,6 +78,7 @@ class UserAccountCreateMobileTemplate extends OverloadTemplate {
 					'tabindex' => '6' ) ) .
 			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpCreateaccountToken', $token, 'hidden' ) .
+			Html::input( 'watch', $watchArticle, 'hidden' ) .
 			Html::closeElement( 'form' );
 		$accountCreation .= $msgBox . $form;
 		$accountCreation .= Html::closeElement( 'div' );
