@@ -12,7 +12,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 mw.mobileFrontend = (function() {
 	var u, modules = [],
-		scrollY, tokenCache = {},
+		scrollY,
 		moduleNamespace = {},
 		_modules = {}, // FIXME: remove _ when registerModule() and getModule() are gone
 		$ = typeof jQuery === 'undefined' ? false : jQuery,
@@ -189,6 +189,10 @@ mw.mobileFrontend = (function() {
 		mwMobileFrontendConfig.settings[ name ] = value;
 	}
 
+	// FIXME: remove when we use api module everywhere
+	/**
+	 * @deprecated
+	 */
 	function getApiUrl() {
 		return getConfig( 'scriptPath', '' ) + '/api.php';
 	}
@@ -213,36 +217,6 @@ mw.mobileFrontend = (function() {
 		return window.location.protocol + '//' + window.location.hostname;
 	}
 
-	function getToken( tokenType, callback, endpoint ) {
-		var data, url;
-		if ( !tokenCache[ endpoint ] ) {
-			tokenCache[ endpoint ] = {};
-		}
-		if ( !isLoggedIn() ) {
-			callback( {} ); // return no token
-		} else if ( tokenCache.hasOwnProperty( tokenType ) ) {
-			tokenCache[ endpoint ][ tokenType ].done( callback );
-		} else {
-			data = {
-				format: 'json',
-				action: 'tokens',
-				type: tokenType
-			};
-			if ( endpoint ) {
-				data.origin = getOrigin();
-			}
-			url = endpoint || getApiUrl();
-			tokenCache[ endpoint ][ tokenType ] = jQuery.ajax( {
-				url: url,
-				xhrFields: {
-					'withCredentials': true
-				},
-				dataType: 'json',
-				data: data
-			} ).done( callback );
-		}
-	}
-
 	function prettyEncodeTitle( title ) {
 		return encodeURIComponent( title.replace( / /g, '_' ) ).replace( /%3A/g, ':' ).replace( /%2F/g, '/' );
 	}
@@ -261,7 +235,6 @@ mw.mobileFrontend = (function() {
 		getModule: getModule,
 		getOrigin: getOrigin,
 		getPageArrayFromApiResponse: getPageArrayFromApiResponse,
-		getToken: typeof jQuery  !== 'undefined' ? getToken : false,
 		isLoggedIn: isLoggedIn,
 		log: log,
 		message: message,

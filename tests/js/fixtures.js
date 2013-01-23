@@ -5,7 +5,6 @@ var mwMobileFrontendConfig = {
 	},
 	settings: {
 		authenticated: true,
-		scriptPath: "/"
 	}
 };
 

@@ -14,7 +14,9 @@
 		"strictEqual": true,
 		"deepEqual": true,
 		"throws": true,
-		"test": true
+		"test": true,
+		"ok": true,
+		"sinon": true
 	},
 
 	"browser": true,

@@ -1,6 +1,6 @@
 (function( M, $ ) {
 
-var w = ( function() {
+var api = M.require( 'api' ), w = ( function() {
 	var lastToken, nav = M.navigation;
 
 	function logWatchEvent( eventType ) {
@@ -114,7 +114,7 @@ var w = ( function() {
 
 	function initWatchListIcon( container, title ) {
 
-		M.getToken( 'watch', function( data ) {
+		api.getToken( 'watch', function( data ) {
 			if( data.tokens && !data.warnings ) { // then user is logged in
 				lastToken = data.tokens.watchtoken;
 				checkWatchStatus( [ title ], function( status ) {
@@ -155,7 +155,7 @@ var w = ( function() {
 			titles.push( $( this ).attr( 'title' ) );
 		} );
 
-		M.getToken( 'watch', function( data ) {
+		api.getToken( 'watch', function( data ) {
 			if( data.tokens && !data.warnings ) {
 				lastToken = data.tokens.watchtoken;
 

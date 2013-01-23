@@ -1,6 +1,7 @@
 ( function( M,  $ ) {
 
-var dirty, module,
+var api = M.require( 'api' ),
+	dirty, module,
 	NS_MAIN = 0, NS_TALK = 1, // FIXME: make global
 	THUMBNAIL_SIZE_PX = 300;
 
@@ -145,7 +146,7 @@ module = ( function() {
 
 					name = data.upload.filename || data.upload.warnings.duplicate[ '0' ];
 					if ( saveWikiTextFlag ) {
-						M.getToken( 'edit', function( tokenData ) {
+						api.getToken( 'edit', function( tokenData ) {
 							d = saveWikiText( name, caption, tokenData.tokens.edittoken );
 							d.done( function() {
 								displayPhoto( name );
@@ -169,7 +170,7 @@ module = ( function() {
 			} );
 		}
 
-		M.getToken( 'edit', function( data ) {
+		api.getToken( 'edit', function( data ) {
 			var token = data.tokens.edittoken;
 			savePhoto( caption, token );
 		}, endPoint );

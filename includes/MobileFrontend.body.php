@@ -397,10 +397,13 @@ class ExtMobileFrontend extends ContextSource {
 			'messages' => array(
 				'mobile-frontend-search-noresults',
 			),
-			'scripts' => array( 'tests/js/fixtures.js', 'javascripts/common/mf-application.js',
+			'scripts' => array(
+				'tests/externals/sinon.js',
+				'tests/js/fixtures.js', 'javascripts/common/mf-application.js',
 				'javascripts/common/jquery-shim.js', 'tests/js/test_jQueryShim.js',
 				'javascripts/common/mf-history.js', 'tests/js/test_mf-history.js',
 				'tests/js/test_application.js',
+				'javascripts/common/mf-api.js', 'tests/js/test_mf-api.js',
 				'javascripts/modules/mf-search.js', 'tests/js/test_beta_opensearch.js',
 				'javascripts/common/mf-settings.js', 'tests/js/test_settings.js',
 				'javascripts/modules/mf-banner.js', 'tests/js/test_banner.js',
