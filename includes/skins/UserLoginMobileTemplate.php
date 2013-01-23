@@ -7,11 +7,13 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 	public function execute() {
 		$action = $this->data['action'];
 		$token = $this->data['token'];
+		$watchArticle = ( isset( $this->data['watch'] ) ) ? $this->data['watch'] : '';
 		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 
+		// @TODO make sure this also includes returnto and returntoquery from the request
 		$query = array(
 			'type' => 'signup',
 		);
@@ -97,6 +99,7 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 			Html::closeElement( 'tbody' ) .
 			Html::closeElement( 'table' ) .
 			Html::input( 'wpLoginToken', $token, 'hidden' ) .
+			Html::input( 'watch', $watchArticle, 'hidden' ) .
 			Html::closeElement( 'form' ) .
 			Html::closeElement( 'div' );
 		$login .= $msgBox . $form;
