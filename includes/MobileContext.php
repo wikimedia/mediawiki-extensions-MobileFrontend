@@ -420,7 +420,9 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * @param $value bool
+	 * @param bool $value
+	 * @param bool $disabled
+	 *
 	 * @return bool
 	 */
 	public function setAlphaOptInOutCookie( $value, $disabled = false ) {
@@ -871,8 +873,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Determine whether or not a given URL is local
 	 *
-	 * @param string $target
-	 *	A URL, generally one that a user might get redirected to
+	 * @param string $url: URL to check against
 	 * @return bool
 	 */
 	public static function isLocalUrl( $url ) {

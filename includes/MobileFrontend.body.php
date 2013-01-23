@@ -278,11 +278,10 @@ class ExtMobileFrontend extends ContextSource {
 
 	/**
 	 * @param OutputPage $out
-	 * @param boolean $removeSections
 	 *
 	 * @return string
 	 */
-	public function DOMParse( OutputPage $out, $removeSections ) {
+	public function DOMParse( OutputPage $out ) {
 		wfProfileIn( __METHOD__ );
 
 		if ( !$this->beforePageDisplay( $out ) ) {
@@ -301,7 +300,7 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		$isFilePage = $this->getTitle()->getNamespace() === NS_FILE;
-		$formatter->enableRemovableSections( $removeSections && $context->isBetaGroupMember() && !$isFilePage );
+		$formatter->enableRemovableSections( $context->isBetaGroupMember() && !$isFilePage );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 

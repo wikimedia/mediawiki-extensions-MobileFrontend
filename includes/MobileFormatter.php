@@ -36,7 +36,6 @@ class MobileFormatter extends HtmlFormatter {
 		'div.magnify',
 		'.editsection',
 		'span.t',
-		'sup[style*="help"]',
 		'.portal',
 		'#protected-icon',
 		'.boilerplate',
