@@ -7,12 +7,42 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 		}
 	};
 }
+
+// FIXME: make this an object with a constructor to facilitate testing
+// (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 mw.mobileFrontend = (function() {
 	var u, modules = [],
 		scrollY, tokenCache = {},
 		moduleNamespace = {},
+		_modules = {}, // FIXME: remove _ when registerModule() and getModule() are gone
 		$ = typeof jQuery === 'undefined' ? false : jQuery,
 		doc = document.documentElement;
+
+	/**
+	 * Require (import) a module previously defined using define().
+	 *
+	 * @param {string} id Required module id.
+	 * @return {Object} Required module, can be any JavaScript object.
+	 */
+	function require( id ) {
+		if ( !_modules[ id ] ) {
+			throw new Error( 'Module not found: ' + id );
+		}
+		return _modules[ id ];
+	}
+
+	/**
+	 * Define a module which can be later required (imported) using require().
+	 *
+	 * @param {string} id Defined module id.
+	 * @param {Object} obj Defined module body, can be any JavaScript object.
+	 */
+	function define( id, obj ) {
+		if ( _modules[ id ] ) {
+			throw new Error( 'Module already exists: ' + id );
+		}
+		_modules[ id ] = obj;
+	}
 
 	function message( name, arg1 ) {
 		var msg;
@@ -51,6 +81,7 @@ mw.mobileFrontend = (function() {
 		return support;
 	}
 
+	// FIXME: deprecate and remove in favor of define()
 	function registerModule( moduleName, module ) {
 		modules.push( moduleName );
 		if ( module ) {
@@ -60,10 +91,14 @@ mw.mobileFrontend = (function() {
 		}
 	}
 
+	// FIXME: deprecate and remove in favor of require()
 	function getModule( name ) {
 		return moduleNamespace[ name ] || mw.mobileFrontend[ name ];
 	}
 
+	/**
+	 * @deprecated
+	 */
 	function initModules() {
 		var module, i;
 		for( i = 0; i < modules.length; i++ ) {
@@ -131,6 +166,7 @@ mw.mobileFrontend = (function() {
 		}
 		fixBrowserBugs();
 
+		// FIXME: deprecate and remove (modules should init themselves)
 		initModules();
 		// FIXME: kill with fire when dynamic sections are in stable
 		if ( !getConfig( 'beta' ) ) {
@@ -236,7 +272,9 @@ mw.mobileFrontend = (function() {
 		supportsPositionFixed: supportsPositionFixed,
 		triggerPageReadyHook: triggerPageReadyHook,
 		prettyEncodeTitle: prettyEncodeTitle,
-		utils: u
+		utils: u,
+		require: require,
+		define: define
 	};
 
 }());
