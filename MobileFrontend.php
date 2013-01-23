@@ -352,15 +352,6 @@ $wgResourceModules['mobile.alpha'] = array(
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-upload-comment',
 		'mobile-frontend-photo-upload-generic',
-
-		// FIXME: move to $wgMFSpecialModuleStubs (for mf-nearby.js)
-		'mobile-frontend-nearby-error',
-		'mobile-frontend-nearby-refresh',
-		'mobile-frontend-nearby-title',
-		'mobile-frontend-nearby-loading',
-		'mobile-frontend-nearby-distance-report',
-		'mobile-frontend-nearby-lookup-error',
-		'mobile-frontend-nearby-noresults',
 	),
 	'styles' => array(
 		'stylesheets/modules/mf-random.css',
@@ -431,6 +422,13 @@ $wgMFSpecialModuleStubs = array(
 	'mobileoptions' => array( 'css' => true, 'js' => true ),
 	'nearby' => array( 'js' => true,
 		'messages' => array(
+			'mobile-frontend-nearby-error',
+			'mobile-frontend-nearby-refresh',
+			'mobile-frontend-nearby-title',
+			'mobile-frontend-nearby-loading',
+			'mobile-frontend-nearby-distance-report',
+			'mobile-frontend-nearby-lookup-error',
+			'mobile-frontend-nearby-noresults',
 		),
 	),
 	'search' => array( 'css' => true ),

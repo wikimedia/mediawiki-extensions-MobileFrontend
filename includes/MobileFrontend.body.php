@@ -474,6 +474,10 @@ class ExtMobileFrontend extends ContextSource {
 				'targets' => 'mobile',
 			);
 
+			if ( isset( $moduleMakeup[ 'messages' ] ) ) {
+				$module[ 'messages' ] = $moduleMakeup[ 'messages' ];
+			}
+
 			// allow special pages to use the same stylesheets / scripts as other special pages
 			if ( isset( $moduleMakeup[ 'alias' ] ) ) {
 				$resourceName = $moduleMakeup[ 'alias' ];
