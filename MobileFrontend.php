@@ -449,6 +449,7 @@ $wgMFSpecialModuleStubs = array(
 		'css' => true,
 		'messages' => array(
 			'mobile-frontend-donate-image-summary',
+			'mobile-frontend-listed-image-no-description',
 		)
 	),
 );

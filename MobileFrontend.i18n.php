@@ -177,6 +177,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-donate-image-heading' => 'Your recent contributions',
 	'mobile-frontend-donate-image-page-title' => 'Upload',
 	'mobile-frontend-donate-image-anon' => 'A [[Special:UserLogin|user account]] is required to view the uploads page',
+	'mobile-frontend-listed-image-no-description' => 'No description',
 
 	// watchlist
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
@@ -336,6 +337,7 @@ Author of the quote chosen',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Placeholder for the "subject" field in the feedback form, which regards the subject of the message being submitted',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Placeholder for the "message" field in the feedback form, which regards the feedback the user is submitting',
 	'mobile-frontend-leave-feedback-page-title' => 'Special page title',
+	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
 	'mobile-frontend-feedback-page' => '{{optional}}',
 	'mobile-frontend-leave-feedback-special-title' => 'Title of special page containing the feedback form',
 	'mobile-frontend-feedback-no-subject' => 'Used for section heading on the feedback page if user entered no subject',
