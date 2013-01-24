@@ -31,6 +31,7 @@ $specialPageAliases['de'] = array(
 	'DonateImage' => array( 'Bild_spenden' ),
 	'MobileDiff' => array( 'Mobiler_Unterschied' ),
 	'MobileMenu' => array( 'Mobiles_Menü' ),
+	'Nearby' => array( 'In_der_Nähe' ),
 );
 
 /** Estonian (eesti) */
