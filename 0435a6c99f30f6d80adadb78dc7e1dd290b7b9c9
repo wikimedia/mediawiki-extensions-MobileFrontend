@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//+d8\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-01-24T08:10:18Z",
+      "side": 1,
+      "message": "javascript -\u003e JavaScript fixed with I5f4e2548",
+      "revId": "0435a6c99f30f6d80adadb78dc7e1dd290b7b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//+d4\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-01-24T08:10:18Z",
+      "side": 1,
+      "message": "PLURAL needed. A lot of languages have multiple plural forms.",
+      "revId": "0435a6c99f30f6d80adadb78dc7e1dd290b7b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//+d0\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-01-24T08:10:18Z",
+      "side": 1,
+      "message": ". or ... at end of the sentence?",
+      "revId": "0435a6c99f30f6d80adadb78dc7e1dd290b7b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
