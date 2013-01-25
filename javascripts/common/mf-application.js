@@ -11,7 +11,10 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 ( function( M, $ ) {
-	var
+	var EventEmitter = M.require( 'eventemitter' ),
+		// FIXME: when mobileFrontend is an object with a constructor,
+		// just inherit from EventEmitter instead
+		eventEmitter = new EventEmitter(),
 		scrollY;
 
 	/**
@@ -23,6 +26,20 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 	 */
 	function template( templateBody ) {
 		return Hogan.compile( templateBody );
+	}
+
+	/**
+	 * See EventEmitter#on.
+	 */
+	function on(/* event, callback */ ) {
+		return eventEmitter.on.apply( eventEmitter, arguments );
+	}
+
+	/**
+	 * See EventEmitter#emit.
+	 */
+	function emit(/* event, arg1, arg2, ... */ ) {
+		return eventEmitter.emit.apply( eventEmitter, arguments );
 	}
 
 	/**
@@ -60,18 +77,19 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 	}
 
 	function triggerPageReadyHook( pageTitle, sectionData, anchorSection ) {
-		$( window ).trigger( 'mw-mf-page-loaded', [ {
+		emit( 'page-loaded', {
 			title: pageTitle, data: sectionData, anchorSection: anchorSection
-		} ] );
+		} );
 	}
 
 	// TODO: separate main menu navigation code into separate module
 	function init() {
+		// FIXME: use wgIsMainPage
 		var mainPage = document.getElementById( 'mainpage' ),
 			$doc = $( 'html' );
 
 		if ( mainPage ) {
-			$( window ).trigger( 'mw-mf-homepage-loaded' );
+			emit( 'homepage-loaded' );
 		}
 
 		$doc.removeClass( 'page-loading' );
@@ -157,6 +175,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 
 	$.extend( M, {
 		init: init,
+		emit: emit,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getApiUrl: getApiUrl,
 		getOrigin: getOrigin,
@@ -164,6 +183,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 		isLoggedIn: isLoggedIn,
 		log: log,
 		message: message,
+		on: on,
 		prefix: 'mw-mf-',
 		getConfig: getConfig,
 		setConfig: setConfig,

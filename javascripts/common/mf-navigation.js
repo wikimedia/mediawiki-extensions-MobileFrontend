@@ -91,7 +91,7 @@ var m = ( function( $ ) {
 		if ( M.getConfig( 'beta' ) ) {
 			enableArticleActions();
 
-			$( window ).bind( 'mw-mf-page-loaded', function( ev, curPage ) {
+			M.on( 'page-loaded', function( curPage ) {
 				enableEditing( curPage.title );
 			} );
 		}
@@ -106,7 +106,7 @@ var m = ( function( $ ) {
 			$( 'html' ).removeClass( 'navigationEnabled' );
 		}
 
-		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
+		M.on( 'history-change', function( curPage ) {
 			if ( curPage.hash === '#' || curPage.hash === '' || curPage.hash === '#_' ) {
 				closeOverlay();
 				closeNavigation();

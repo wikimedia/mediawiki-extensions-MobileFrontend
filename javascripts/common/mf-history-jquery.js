@@ -1,4 +1,5 @@
 ( function( M, $ ) {
+
 	var inBeta = M.getConfig( 'beta', false ),
 		firstRun,
 		makeStubPage,
@@ -64,7 +65,7 @@
 			$( '<a>' ).attr( 'href', lang.url ).
 				attr( 'lang', lang.lang ).text( lang.lang ).appendTo( $item );
 		}
-		$( window ).trigger( 'mw-mf-languages-loaded' );
+		M.emit( 'languages-loaded' );
 	}
 
 	// FIXME: use template engine this is not maintainable
@@ -112,7 +113,7 @@
 			updateUILinks( pageTitle );
 
 			if ( resp.mobileview.hasOwnProperty( 'mainpage' ) ) {
-				$( window ).trigger( 'mw-mf-homepage-loaded' );
+				M.emit( 'homepage-loaded' );
 			}
 			M.triggerPageReadyHook( pageTitle, sectionData, anchorSection );
 			$( '#content_0' ).removeClass( 'loading' ); // reset loader
@@ -186,7 +187,7 @@
 		} );
 	};
 
-	$( window ).bind( 'mw-mf-page-loaded', function() {
+	M.on( 'page-loaded', function() {
 		hijackLinks();
 	} );
 
@@ -209,8 +210,7 @@
 			} else if ( state ) {
 				loadPage( state.title, true );
 				if ( state.hash ) {
-					$( window ).trigger( 'mw-mf-history-change',
-						[ { hash: window.location.hash } ] );
+					M.emit( 'history-change', { hash: window.location.hash } );
 				}
 			}
 		} );

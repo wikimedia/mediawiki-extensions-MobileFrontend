@@ -38,8 +38,8 @@ M.history = ( function() {
 	function initialise( hash ) {
 		if ( !initialised && hash !== '#_' && $ ) {
 			initialised = true;
-			$( window ).bind( 'mw-mf-ready', function() {
-				$( window ).trigger( 'mw-mf-history-change', [ { hash: hash } ] );
+			M.on( 'ready', function() {
+				M.emit( 'history-change', { hash: hash } );
 			} );
 		}
 	}

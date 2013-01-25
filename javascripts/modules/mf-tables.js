@@ -51,10 +51,10 @@ var module = (function() {
 		} );
 	}
 
-	$( window ).on( 'mw-mf-page-loaded',
+	M.on( 'page-loaded',
 		function() {
 			initTables( $( '#content_0' ) );
-		} ).on( 'mw-mf-section-rendered', function( ev, container ) {
+		} ).on( 'section-rendered', function( ev, container ) {
 			initTables( ev, container );
 		} );
 

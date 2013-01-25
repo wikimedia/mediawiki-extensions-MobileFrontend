@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
-	var oop = M.require( 'oop' );
+	var oop = M.require( 'oop' ),
+		EventEmitter = M.require( 'eventemitter' );
 
 	/**
 	 * An abstraction over a jQuery element. Should be extended using extend().
@@ -66,6 +67,8 @@
 		this.initialize( options );
 	}
 
+	View.prototype = new EventEmitter();
+
 	/**
 	 * Function called after the view is constructed. Can be redefined in
 	 * objects that extend View.
@@ -83,34 +86,6 @@
 		if ( this.template ) {
 			this.$el.html( this.template.render( data ) );
 		}
-	};
-
-	// FIXME: move it to some other object and use as a mixin with $.extend()
-	/**
-	 * Bind a callback to the event.
-	 *
-	 * @param {string} event Event name.
-	 * @param {Function} callback Callback to be bound.
-	 */
-	View.prototype.on = function( event, callback ) {
-		$( this ).on( event, function() {
-			var args = Array.prototype.slice.call( arguments, 1 );
-			callback.apply( callback, args );
-		} );
-		return this;
-	};
-
-	// FIXME: move it to some other object and use as a mixin with $.extend()
-	/**
-	 * Emit an event. This causes all bound callbacks to be run.
-	 *
-	 * @param {string} event Event name.
-	 * @param {*} [arguments] Optional arguments to be passed to callbacks.
-	 */
-	View.prototype.emit = function( event /* , arg1, arg2, ... */ ) {
-		var args = Array.prototype.slice.call( arguments, 1 );
-		$( this ).trigger( event, args );
-		return this;
 	};
 
 	/**

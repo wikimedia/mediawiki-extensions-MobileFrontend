@@ -219,6 +219,7 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
+		'javascripts/common/eventemitter.js',
 		'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
 		'javascripts/common/mf-settings.js',

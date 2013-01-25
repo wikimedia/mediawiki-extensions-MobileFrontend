@@ -1,4 +1,4 @@
-( function( $ ) {
+( function( M, $ ) {
 
 	// removes all inline styles from html output
 	// see http://www.mediawiki.org/wiki/Deprecating_inline_styles
@@ -7,13 +7,13 @@
 			$container.find( '[style]' ).removeAttr( 'style' );
 		}
 
-		$( window ).on( 'mw-mf-section-rendered', function( ev, $container ) {
+		M.on( 'section-rendered', function( ev, $container ) {
 			scrub( $container );
-		} ).on( 'mw-mf-page-loaded', function() {
+		} ).on( 'page-loaded', function() {
 			scrub( $( '#content_0' ) );
 		} );
 		scrub( $( '#content' ) );
 
 	} );
 
-} ( jQuery ) );
+} ( mw.mobileFrontend, jQuery ) );

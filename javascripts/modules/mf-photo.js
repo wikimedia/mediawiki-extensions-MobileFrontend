@@ -335,7 +335,7 @@
 	}
 
 	if ( isSupported() ) {
-		$( window ).on( 'mw-mf-page-loaded', initialize );
+		M.on( 'page-loaded', initialize );
 	}
 
 	M.define( 'photo', {

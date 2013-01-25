@@ -3,6 +3,7 @@
 var api = M.require( 'api' ), w = ( function() {
 	var lastToken, nav = M.require( 'navigation' ), popup = M.require( 'notifications' );
 
+	// FIXME: this should live in a separate module and make use of MobileFrontend events
 	function logWatchEvent( eventType ) {
 		var types = [ 'watchlist', 'unwatchlist', 'anonCTA' ],
 			data = {
@@ -169,7 +170,7 @@ var api = M.require( 'api' ), w = ( function() {
 	}
 
 	function upgradeUI() {
-		$( window ).on( 'mw-mf-search-results mw-mf-watchlist', function( ev, ul ) {
+		M.on( 'search-results watchlist-ready', function( ul ) {
 			initWatchListIconList( ul );
 		} );
 	}
@@ -178,7 +179,7 @@ var api = M.require( 'api' ), w = ( function() {
 		var pageTitle = M.getConfig( 'title' );
 		container = container || nav.getPageMenu();
 		title = title || pageTitle;
-		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
+		M.on( 'page-loaded', function( article ) {
 			initWatchListIcon( container, article.title );
 		} );
 

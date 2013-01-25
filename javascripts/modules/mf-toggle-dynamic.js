@@ -18,7 +18,7 @@ var T = ( function() {
 
 		if ( sectionInfo && $content.length === 0 ) {
 			$container = $( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
-			$( window ).trigger( 'mw-mf-section-rendered', [ $container ] );
+			M.emit( 'section-rendered', $container );
 			// FIXME: this should live in the hidpi module when dynamic sections is promoted from beta
 			if ( $container.hidpi ) {
 				$container.hidpi();
@@ -80,7 +80,7 @@ var T = ( function() {
 		var pageTitle = M.getConfig('title'),
 			specialPage = $( '#content_wrapper' ).hasClass( 'mw-mf-special' );
 
-		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
+		M.on( 'page-loaded', function( article ) {
 			sectionData = article.data || {};
 
 			anchorSection = article.anchorSection;

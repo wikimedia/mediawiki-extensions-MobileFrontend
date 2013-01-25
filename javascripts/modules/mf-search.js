@@ -138,7 +138,7 @@ var opensearch = ( function() {
 			}
 
 			if ( $ ) {
-				$( window ).trigger( 'mw-mf-search-results', [ suggestions ] );
+				M.emit( 'search-results', suggestions );
 			}
 		}
 	}

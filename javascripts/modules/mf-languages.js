@@ -63,11 +63,11 @@ var m = ( function() {
 	}
 
 	function init() {
-		$( window ).bind( 'mw-mf-history-change', function( ev, curPage ) {
+		M.on( 'history-change', function( curPage ) {
 			if ( curPage.hash === '#mw-mf-overlay-language' ) {
 				createLanguagePage();
 			}
-		} ).on( 'mw-mf-languages-loaded', function() {
+		} ).on( 'languages-loaded', function() {
 			initButton();
 		} );
 	}

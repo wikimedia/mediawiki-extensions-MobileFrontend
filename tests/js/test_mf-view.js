@@ -74,11 +74,4 @@ test( 'View.extend, initialize function', function() {
 	ok( spy.calledOnce, 'invoke initialize' );
 } );
 
-test( 'View#on', function() {
-	var view = new View(), spy = sinon.spy();
-	view.on( 'testEvent', spy );
-	view.emit( 'testEvent', 'first', 2 );
-	ok( spy.calledWith( 'first', 2 ), 'run callback when event runs' );
-} );
-
 }( mw.mobileFrontend, jQuery ) );

@@ -108,9 +108,7 @@ var m = ( function() {
 			$editArea.val( val );
 		} );
 
-		$( window ).trigger( 'mw-mf-page-loaded', [
-			{ title: M.getConfig( 'title' ) }
-		] );
+		M.emit( 'page-loaded', { title: M.getConfig( 'title' ) } );
 	}
 
 	function init() {
