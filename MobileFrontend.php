@@ -36,6 +36,7 @@ $wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.ph
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'MobileFrontendSiteModule' => 'MobileFrontend.body',
+	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlFormatter' => 'HtmlFormatter',
@@ -81,6 +82,18 @@ $wgHooks['APIAfterExecute'][] = 'ApiParseExtender::onAPIAfterExecute';
 $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescription';
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
+
+$wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::requestContextCreateSkin';
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'MobileFrontendHooks::addMobileFooter';
+$wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::beforePageRedirect';
+$wgHooks['ResourceLoaderTestModules'][] = 'MobileFrontendHooks::addTestModules';
+$wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::getCacheVaryCookies';
+$wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::resourceLoaderRegisterModules';
+$wgHooks['ResourceLoaderGetConfigVars'][] = 'MobileFrontendHooks::resourceLoaderGetConfigVars';
+$wgHooks['SpecialPage_initList'][] = 'MobileFrontendHooks::onSpecialPage_initList';
+$wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::listDefinedTags';
+$wgHooks['RecentChange_save'][] = 'MobileFrontendHooks::recentChange_save';
+$wgHooks['SpecialPageBeforeExecute'][] = 'MobileFrontendHooks::onSpecialPageBeforeExecute';
 
 $wgSpecialPages['DonateImage'] = 'SpecialDonateImage';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
