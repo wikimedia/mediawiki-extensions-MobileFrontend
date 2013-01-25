@@ -141,12 +141,7 @@ class ExtMobileFrontend extends ContextSource {
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
 			$template = new UserLoginMobileTemplate( $template );
-
-			// set template data if we are coming from a watchlist addition request
-			if ( $this->getRequest()->getVal( 'returntoquery' ) == 'article_action=watch' &&
-				!is_null( $this->getRequest()->getVal( 'returnto' ) ) ) {
-				$template->set( 'watch', $this->getRequest()->getVal( 'returnto' ) );
-			}
+			$this->prepareLoginWatchData( $template );
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -161,11 +156,23 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileIn( __METHOD__ );
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
-			// to be used when we actually have account creation designs to manipulate the form
 			$template = new UserAccountCreateMobileTemplate( $template );
+			$this->prepareLoginWatchData( $template );
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	/**
+	 * Prepare template data if an anon is attempting to log in after watching an article
+	 *
+	 * @param QuickTemplate $template
+	 */
+	private function prepareLoginWatchData( $template ) {
+		if ( $this->getRequest()->getVal( 'returntoquery' ) == 'article_action=watch' &&
+			!is_null( $this->getRequest()->getVal( 'returnto' ) ) ) {
+			$template->set( 'watch', $this->getRequest()->getVal( 'returnto' ) );
+		}
 	}
 
 	/**
