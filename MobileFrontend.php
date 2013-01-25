@@ -253,6 +253,15 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		// mf-photo.js
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
+		'mobile-frontend-photo-upload-error',
+		'mobile-frontend-photo-upload-progress',
+		'mobile-frontend-photo-caption-placeholder',
+		'mobile-frontend-image-loading',
+		'mobile-frontend-image-uploading',
+		'mobile-frontend-image-saving-to-article',
+		'mobile-frontend-photo-upload',
+		'mobile-frontend-photo-upload-comment',
+		'mobile-frontend-photo-upload-generic',
 
 		// for mf-languages.js
 		'mobile-frontend-language-site-choose',
@@ -340,18 +349,6 @@ $wgResourceModules['mobile.alpha'] = array(
 
 		// for mf-table.js
 		'mobile-frontend-table',
-
-		// for mf-photo.js
-		'mobile-frontend-photo-upload-error',
-		'mobile-frontend-photo-upload-progress',
-		'mobile-frontend-photo-caption-placeholder',
-		'mobile-frontend-image-loading',
-		'mobile-frontend-image-uploading',
-		'mobile-frontend-image-saving-to-article',
-		'mobile-frontend-photo-upload',
-		'mobile-frontend-photo-article-edit-comment',
-		'mobile-frontend-photo-upload-comment',
-		'mobile-frontend-photo-upload-generic',
 	),
 	'styles' => array(
 		'stylesheets/modules/mf-random.css',
