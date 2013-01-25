@@ -13,7 +13,10 @@
 		"module": true,
 		"strictEqual": true,
 		"deepEqual": true,
-		"test": true
+		"throws": true,
+		"test": true,
+		"ok": true,
+		"sinon": true
 	},
 
 	"browser": true,

@@ -376,6 +376,7 @@ $wgResourceModules['mobile.production-jquery'] = array(
 		'stylesheets/modules/mf-cleanuptemplates.css',
 	),
 	'scripts' => array(
+		'javascripts/common/mf-api.js',
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
