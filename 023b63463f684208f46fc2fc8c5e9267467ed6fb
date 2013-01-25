@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//9bQ\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-25T00:17:17Z",
+      "side": 1,
+      "message": "API can perfectly return you more than one page if you use the proper ways to retrieve page text, i.e. prop\u003drevisions",
+      "revId": "023b63463f684208f46fc2fc8c5e9267467ed6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//9bY\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-01-25T00:17:17Z",
+      "side": 1,
+      "message": "This is Commons-specific",
+      "revId": "023b63463f684208f46fc2fc8c5e9267467ed6fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
