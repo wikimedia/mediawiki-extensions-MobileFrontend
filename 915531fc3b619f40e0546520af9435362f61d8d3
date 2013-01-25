@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//9Gw\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-25T10:28:05Z",
+      "side": 1,
+      "message": "setPageTitle() takes a message, so -\u003etext() is not needed. You can use $this-\u003emsg() here instead of wfMessage().",
+      "revId": "915531fc3b619f40e0546520af9435362f61d8d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//9G0\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-25T10:28:05Z",
+      "side": 1,
+      "message": "You can use $this-\u003emsg() here instead of wfMessage().",
+      "revId": "915531fc3b619f40e0546520af9435362f61d8d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//9Gs\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-25T10:28:05Z",
+      "side": 1,
+      "message": "You can use $this-\u003emsg() here instead of wfMessage().",
+      "revId": "915531fc3b619f40e0546520af9435362f61d8d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
