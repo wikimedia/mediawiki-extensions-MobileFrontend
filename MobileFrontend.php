@@ -83,16 +83,16 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
-$wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::requestContextCreateSkin';
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'MobileFrontendHooks::addMobileFooter';
-$wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::beforePageRedirect';
-$wgHooks['ResourceLoaderTestModules'][] = 'MobileFrontendHooks::addTestModules';
-$wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::getCacheVaryCookies';
-$wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::resourceLoaderRegisterModules';
-$wgHooks['ResourceLoaderGetConfigVars'][] = 'MobileFrontendHooks::resourceLoaderGetConfigVars';
+$wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::onRequestContextCreateSkin';
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec';
+$wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::onBeforePageRedirect';
+$wgHooks['ResourceLoaderTestModules'][] = 'MobileFrontendHooks::onResourceLoaderTestModules';
+$wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::onGetCacheVaryCookies';
+$wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::onResourceLoaderRegisterModules';
+$wgHooks['ResourceLoaderGetConfigVars'][] = 'MobileFrontendHooks::onResourceLoaderGetConfigVars';
 $wgHooks['SpecialPage_initList'][] = 'MobileFrontendHooks::onSpecialPage_initList';
-$wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::listDefinedTags';
-$wgHooks['RecentChange_save'][] = 'MobileFrontendHooks::recentChange_save';
+$wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::onListDefinedTags';
+$wgHooks['RecentChange_save'][] = 'MobileFrontendHooks::onRecentChange_save';
 $wgHooks['SpecialPageBeforeExecute'][] = 'MobileFrontendHooks::onSpecialPageBeforeExecute';
 
 $wgSpecialPages['DonateImage'] = 'SpecialDonateImage';

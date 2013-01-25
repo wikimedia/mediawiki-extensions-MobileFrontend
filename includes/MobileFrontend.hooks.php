@@ -1,6 +1,11 @@
 <?php
 /**
  * Hook handlers for MobileFrontend extension
+ *
+ * Hook handler method names should be in the form of:
+ *	on<HookName>()
+ * For intance, the hook handler for the 'RequestContextCreateSkin' would be called:
+ *	onRequestContextCreateSkin()
  */
 
 class MobileFrontendHooks {
@@ -13,7 +18,7 @@ class MobileFrontendHooks {
 	 * @param $skin Skin
 	 * @return bool
 	 */
-	public static function requestContextCreateSkin( $context, &$skin ) {
+	public static function onRequestContextCreateSkin( $context, &$skin ) {
 		global $wgMFEnableDesktopResources, $wgExtMobileFrontend;
 
 		// check whether or not the user has requested to toggle their view
@@ -43,7 +48,7 @@ class MobileFrontendHooks {
 	 * @param $tpl QuickTemplate
 	 * @return bool
 	 */
-	public static function addMobileFooter( &$obj, &$tpl ) {
+	public static function onSkinTemplateOutputPageBeforeExec( &$obj, &$tpl ) {
 		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
 		wfProfileIn( __METHOD__ );
 
@@ -82,7 +87,7 @@ class MobileFrontendHooks {
 	 * @param $code
 	 * @return bool
 	 */
-	public static function beforePageRedirect( $out, &$redirect, &$code ) {
+	public static function onBeforePageRedirect( $out, &$redirect, &$code ) {
 		wfProfileIn( __METHOD__ );
 
 		$context = MobileContext::singleton();
@@ -109,7 +114,7 @@ class MobileFrontendHooks {
 	 * @param ResourceLoader $resourceLoader
 	 * @return bool
 	 */
-	public static function addTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
+	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
 			'messages' => array(
 				'mobile-frontend-search-noresults',
@@ -148,7 +153,7 @@ class MobileFrontendHooks {
 	 * @param $cookies array
 	 * @return bool
 	 */
-	public static function getCacheVaryCookies( $out, &$cookies ) {
+	public static function onGetCacheVaryCookies( $out, &$cookies ) {
 		$cookies[] = 'mf_useformat';
 		return true;
 	}
@@ -160,7 +165,7 @@ class MobileFrontendHooks {
 	 * @param ResourceLoader $resourceLoader
 	 * @return bool
 	 */
-	public static function resourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
 		global $wgAutoloadClasses, $wgMFLogEvents;
 
 		$detector = DeviceDetection::factory();
@@ -196,7 +201,7 @@ class MobileFrontendHooks {
 	 * @param array $vars
 	 * @return boolean
 	 */
-	public static function resourceLoaderGetConfigVars( &$vars ) {
+	public static function onResourceLoaderGetConfigVars( &$vars ) {
 		global $wgCookiePath;
 		$vars['wgCookiePath'] = $wgCookiePath;
 		$vars['wgMFStopRedirectCookieHost'] = MobileContext::singleton()->getStopMobileRedirectCookieDomain();
@@ -224,7 +229,7 @@ class MobileFrontendHooks {
 	 *
 	 * @return bool
 	 */
-	public static function listDefinedTags( &$tags ) {
+	public static function onListDefinedTags( &$tags ) {
 		$tags[] = 'mobile edit';
 		return true;
 	}
@@ -236,7 +241,7 @@ class MobileFrontendHooks {
 	 *
 	 * @return bool
 	 */
-	public static function recentChange_save( RecentChange $rc ) {
+	public static function onRecentChange_save( RecentChange $rc ) {
 		$context = MobileContext::singleton();
 		$logType = $rc->getAttribute( 'rc_log_type' );
 		// Only log edits and uploads
