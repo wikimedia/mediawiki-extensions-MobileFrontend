@@ -781,6 +781,8 @@ class SkinMobileTemplate extends BaseTemplate {
 
 	public function navigationStart() {
 		/** @var $user User */
+		global $wgMFNearby;
+
 		$user = $this->data['user'];
 		?>
 		<div id="mw-mf-viewport">
@@ -823,7 +825,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
-			<?php if ( $this->data['isAlphaGroupMember'] ) { ?>
+			<?php if ( $this->data['isAlphaGroupMember'] && $wgMFNearby ) { ?>
 			<li class='iconImage'>
 				<a href="<?php $this->text( 'nearbyURL' ) ?>"
 					title="<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>">
