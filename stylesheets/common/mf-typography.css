@@ -17,7 +17,6 @@ h4,
 h5,
 h6 {
   font-family: "Georgia", serif;
-  margin-top: 14pt;
   margin-bottom: 9pt;
 }
 h1 button,
@@ -27,6 +26,13 @@ h4 button,
 h5 button,
 h6 button {
   height: 22pt;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 14pt;
 }
 p {
   margin-bottom: 8pt;
@@ -76,7 +82,7 @@ sup {
   position: relative;
 }
 #content_wrapper .content {
-  margin: 0 23px 0 23px;
+  margin: 14pt 23px 0 23px;
 }
 #content_wrapper .section h3:first-child {
   margin-top: 0;
@@ -89,8 +95,10 @@ sup {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   background: #f9f9f9;
-  margin: 15px 0 15px 0;
   text-align: center;
+}
+#content .thumb {
+  margin: 15px 0 15px 0;
 }
 input.search {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;

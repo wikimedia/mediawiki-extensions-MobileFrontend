@@ -357,7 +357,6 @@ $wgResourceModules['mobile.alpha'] = array(
 	'scripts' => array(
 		'javascripts/modules/mf-random.js',
 		'javascripts/modules/mf-tables.js',
-		'javascripts/modules/mf-user-gallery.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
 	),
 	'raw' => true,
@@ -432,6 +431,12 @@ $wgMFSpecialModuleStubs = array(
 	'search' => array( 'css' => true ),
 	'watchlist' => array( 'css' => true, 'js' => true ),
 	'userlogin' => array( 'css' => true ),
+	'donateimage' => array( 'js' => true,
+		'css' => true,
+		'messages' => array(
+			'mobile-frontend-donate-image-summary',
+		)
+	),
 );
 
 /**

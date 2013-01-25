@@ -16,11 +16,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Georgia", serif;
-	margin-top: @headingMarginTop;
 	margin-bottom: 9pt;
 	button {
 		height: @headingLineHeight;
 	}
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top: @headingMarginTop;
 }
 
 p {
@@ -79,7 +82,7 @@ sup {
 	position: relative;
 
 	.content {
-		margin: 0 @contentMarginRight 0 @contentMarginLeft;
+		margin: @headingMarginTop @contentMarginRight 0 @contentMarginLeft;
 	}
 
 	.section {
@@ -96,8 +99,13 @@ sup {
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		background: #f9f9f9;
-		margin: 15px 0 15px 0;
 		text-align: center;
+	}
+}
+
+#content {
+	.thumb {
+		margin: 15px 0 15px 0;
 	}
 }
 

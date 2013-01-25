@@ -269,6 +269,12 @@ input[type=submit].confirm.disabled:hover {
   background-image: linear-gradient(#fafafa 0, #f3f3f3 100%);
   border-bottom: 1px solid #e2e2e2;
 }
+.header h1,
+#mw-mf-header h1 {
+  color: #000000;
+  line-height: 46px;
+  margin: 0;
+}
 #mw-mf-page-left {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.2em;
@@ -491,6 +497,9 @@ html.overlay ul.content li:hover {
   font-size: 100%;
   font-weight: bold;
   margin: 0 0 8px 0;
+}
+#content_wrapper .alert {
+  margin: 0;
 }
 #mw-mf-page-center .header,
 .overlay .header {
