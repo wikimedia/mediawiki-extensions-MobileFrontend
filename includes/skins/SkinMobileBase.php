@@ -7,6 +7,25 @@ abstract class SkinMobileBase extends SkinTemplate {
 	protected $extMobileFrontend;
 	protected $hookOptions;
 
+	/** @var string html representing the header of the skin */
+	private $mobileHtmlHeader = null;
+
+	/**
+	 * Provides alternative html for the header
+	 * @return string html
+	 */
+	public function getHtmlHeader() {
+		return $this->mobileHtmlHeader;
+	}
+
+	/**
+	 * Provides alternative html for the header
+	 * @param string html
+	 */
+	public function setHtmlHeader( $html ) {
+		$this->mobileHtmlHeader = $html;
+	}
+
 	public static function factory( ExtMobileFrontend $extMobileFrontend ) {
 		if ( MobileContext::singleton()->getContentFormat() == 'HTML' ) {
 			$skinClass = 'SkinMobile';

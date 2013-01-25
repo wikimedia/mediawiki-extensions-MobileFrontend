@@ -14,6 +14,9 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	function execute( $par ) {
 		$ctx = MobileContext::singleton();
 		$ctx->setOverlay( false );
+		// assumes mobile skin
+		$mobileSkin = $ctx->getSkin();
+		$mobileSkin->setHtmlHeader( $this->getWatchlistHeader() );
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
@@ -23,7 +26,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$recentChangesView = ( $view === 'feed' ) ? true : false;
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
-		$output->mobileHtmlHeader = $this->getWatchlistHeader();
 
 		if( $user->isAnon() ) {
 			// No watchlist for you.
@@ -58,6 +60,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	protected function getWatchlistHeader() {
+		$mobileSkin = $this->getContext()->getSkin();
 		$cur = $this->getRequest()->getVal( 'watchlistview', 'a-z' );
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
 		$attrsList = array(
@@ -71,9 +74,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		} else {
 			$attrsList[ 'class' ] .= ' active';
 		}
-
-		// FIXME: this assumes the skin returns is mobile compatible
-		$mobileSkin = $this->getContext()->getSkin();
 
 		$html =
 			Html::openElement( 'div',

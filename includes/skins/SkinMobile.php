@@ -228,9 +228,8 @@ class SkinMobile extends SkinMobileBase {
 			}
 		}
 
-		if ( isset( $out->mobileHtmlHeader ) ) {
-			$htmlHeader = $out->mobileHtmlHeader;
-		} else {
+		$htmlHeader = $this->getHtmlHeader();
+		if ( is_null( $htmlHeader ) ) {
 			if ( $isOverlay ) {
 				$htmlHeader = Html::rawElement( 'h1', array( 'class' => 'header' ),
 					$pageHeading
