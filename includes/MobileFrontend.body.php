@@ -255,6 +255,12 @@ class ExtMobileFrontend extends ContextSource {
 		$context = MobileContext::singleton();
 		if ( $context->shouldDisplayMobileView() ) {
 			$template = new UserLoginMobileTemplate( $template );
+
+			// set template data if we are coming from a watchlist addition request
+			if ( $this->getRequest()->getVal( 'returntoquery' ) == 'article_action=watch' &&
+				!is_null( $this->getRequest()->getVal( 'returnto' ) ) ) {
+				$template->set( 'watch', $this->getRequest()->getVal( 'returnto' ) );
+			}
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
