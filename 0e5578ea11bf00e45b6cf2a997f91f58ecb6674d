@@ -16,6 +16,24 @@
       "revId": "0e5578ea11bf00e45b6cf2a997f91f58ecb6674d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//8Mg\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-25T23:45:51Z",
+      "side": 1,
+      "message": "1) no the first section might not be the description 2) it\u0027s wikimedia commons only see FIXME 3) If file description contains a \u003d\u003d we only take the first bit of it (this is optimized for images where file summary is plain text).\n\nThis is a first pass and we can iteratively improve.",
+      "parentUuid": "AAADiH//8Qw\u003d",
+      "revId": "0e5578ea11bf00e45b6cf2a997f91f58ecb6674d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
