@@ -99,7 +99,7 @@ var m = ( function() {
 			}
 		}
 
-		$loader = $( '<div class="loader">' ).text( M.message( 'mobile-frontend-page-saving', M.getConfig( 'title' ) ) ).
+		$loader = $( '<div class="loading">' ).text( M.message( 'mobile-frontend-page-saving', M.getConfig( 'title' ) ) ).
 			hide().insertBefore( '#content_0' );
 		$( 'form#editform' ).on( 'submit', function() {
 			$( '#content_0' ).hide();

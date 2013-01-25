@@ -85,9 +85,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 .togglingEnabled .openSection.content_block.ajaxError button {
   display: block;
 }
-.togglingEnabled .openSection.content_block.loading {
-  background-image: url(images/ajax-loader.gif);
-}
 .togglingEnabled .openSection.content_block.ajaxError {
   background-image: url(images/warning.png);
 }
