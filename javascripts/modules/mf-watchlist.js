@@ -51,7 +51,6 @@ var w = ( function() {
 
 	function createWatchListButton( container, title, isWatchedArticle ) {
 		var prevent,
-			val,
 			watchBtn = createButton( container );
 
 		if( isWatchedArticle ) {
