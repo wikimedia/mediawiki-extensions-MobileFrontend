@@ -323,4 +323,38 @@ class MobileFrontendHooks {
 		}
 		return true;
 	}
+
+	/*
+	 * UserLoginForm hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserLoginForm
+	 *
+	 * @param QuickTemplate $template Login form template object
+	 * @return bool
+	 */
+	public static function onUserLoginForm( &$template ) {
+		wfProfileIn( __METHOD__ );
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ) {
+			$template = new UserLoginMobileTemplate( $template );
+		}
+		wfProfileOut( __METHOD__ );
+		return true;
+	}
+
+	/**
+	 * UserCreateForm hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserCreateForm
+	 *
+	 * @param QuickTemplate $template Account creation form template object
+	 * @return bool
+	 */
+	public static function onUserCreateForm( &$template ) {
+		wfProfileIn( __METHOD__ );
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ) {
+			$template = new UserAccountCreateMobileTemplate( $template );
+		}
+		wfProfileOut( __METHOD__ );
+		return true;
+	}
 }

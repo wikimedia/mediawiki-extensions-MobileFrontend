@@ -61,7 +61,7 @@ $autoloadClasses = array (
 	'SkinMobileBase' => 'skins/SkinMobileBase',
 	'SkinMobileWML' => 'skins/SkinMobileWML',
 	'SkinMobileTemplateWML' => 'skins/SkinMobileTemplateWML',
-	'OverloadTemplate' => 'skins/OverloadTemplate',
+	'UserLoginAndCreateTemplate' => 'skins/UserLoginAndCreateTemplate',
 	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
 	'UserAccountCreateMobileTemplate' => 'skins/UserAccountCreateMobileTemplate',
 
@@ -95,6 +95,8 @@ $wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::onListDefinedTags';
 $wgHooks['RecentChange_save'][] = 'MobileFrontendHooks::onRecentChange_save';
 $wgHooks['SpecialPageBeforeExecute'][] = 'MobileFrontendHooks::onSpecialPageBeforeExecute';
 $wgHooks['UserLoginComplete'][] = 'MobileFrontendHooks::onUserLoginComplete';
+$wgHooks['UserLoginForm'][] = 'MobileFrontendHooks::onUserLoginForm';
+$wgHooks['UserCreateForm'][] = 'MobileFrontendHooks::onUserCreateForm';
 
 $wgSpecialPages['DonateImage'] = 'SpecialDonateImage';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
@@ -107,7 +109,6 @@ function efMobileFrontend_Setup() {
 		$wgMFNearby, $wgSpecialPages;
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
-	$wgExtMobileFrontend->attachHooks();
 
 	// in absence of ResourceLoader add additional styles
 	if ( !$wgMFEnableResourceLoader ) {

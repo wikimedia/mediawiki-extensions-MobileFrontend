@@ -2,12 +2,12 @@
 /**
  * Provides a custom account creation form for mobile devices
  */
-class UserAccountCreateMobileTemplate extends OverloadTemplate {
+class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 
 	public function execute() {
 		$action = $this->data['action'];
 		$token = $this->data['token'];
-		$watchArticle = ( isset( $this->data['watch'] ) ) ? $this->data['watch'] : '';
+		$watchArticle = $this->getArticleTitleToWatch();
 		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];

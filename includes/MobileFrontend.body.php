@@ -9,18 +9,6 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * Attach hooks for MobileFrontend
-	 * @TODO move remaining hook hander definitions after all changests merged from
-	 *	https://gerrit.wikimedia.org/r/#/q/status:open+project:mediawiki/extensions/MobileFrontend+branch:master+topic:bug/43909,n,z
-	 *
-	 */
-	public function attachHooks() {
-		global $wgHooks;
-		$wgHooks['UserLoginForm'][] = array( &$this, 'renderLogin' );
-		$wgHooks['UserCreateForm'][] = array( &$this, 'renderAccountCreate' );
-	}
-
-	/**
 	 * @return string
 	 */
 	public function getZeroRatedBanner() {
@@ -129,50 +117,6 @@ class ExtMobileFrontend extends ContextSource {
 		$out->addVaryHeader( 'X-Images' );
 		wfProfileOut( __METHOD__ );
 		return true;
-	}
-
-	/**
-	 * Invocation of hook UserLoginForm
-	 * @param QuickTemplate $template Login form template object
-	 * @return bool
-	 */
-	public function renderLogin( &$template ) {
-		wfProfileIn( __METHOD__ );
-		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() ) {
-			$template = new UserLoginMobileTemplate( $template );
-			$this->prepareLoginWatchData( $template );
-		}
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
-	/**
-	 * Invocation of hook UserCreateForm
-	 * @param QuickTemplate $template Account creation form template object
-	 * @return bool
-	 */
-	public function renderAccountCreate( &$template ) {
-		wfProfileIn( __METHOD__ );
-		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() ) {
-			$template = new UserAccountCreateMobileTemplate( $template );
-			$this->prepareLoginWatchData( $template );
-		}
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
-	/**
-	 * Prepare template data if an anon is attempting to log in after watching an article
-	 *
-	 * @param QuickTemplate $template
-	 */
-	private function prepareLoginWatchData( $template ) {
-		if ( $this->getRequest()->getVal( 'returntoquery' ) == 'article_action=watch' &&
-			!is_null( $this->getRequest()->getVal( 'returnto' ) ) ) {
-			$template->set( 'watch', $this->getRequest()->getVal( 'returnto' ) );
-		}
 	}
 
 	/**
