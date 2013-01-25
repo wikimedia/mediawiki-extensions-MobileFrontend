@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADiH//9Gk\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-01-25T10:28:43Z",
+      "side": 1,
+      "message": "Was merged.",
+      "revId": "915531fc3b619f40e0546520af9435362f61d8d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//9Gw\u003d",
         "filename": "includes/specials/SpecialDonateImage.php",
         "patchSetId": 1
