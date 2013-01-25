@@ -695,7 +695,10 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php $this->html( 'postbodytext' ) ?>
 			</div><!-- close #content -->
 	</div><!-- close #content_wrapper -->
-		<?php $this->footer() ?>
+		<?php
+		if ( !$this->data[ 'isSpecialPage' ] ) {
+			$this->footer();
+		} ?>
 		<?php
 			$this->navigationEnd();
 	}
