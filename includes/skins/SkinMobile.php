@@ -895,7 +895,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'mobile-frontend-photo-license' => wfMessage( 'mobile-frontend-photo-license' )->parse(),
 				'mobile-frontend-language-footer' => Html::element( 'a',
 					array(
-						'href' => SpecialPage::getTitleFor( 'MobileOptions/Language' )->getLocalUrl(),
+						'href' => SpecialPage::getTitleFor( 'MobileOptions', 'Language' )->getLocalUrl(),
 					),
 					wfMessage( 'mobile-frontend-language-footer' ) ),
 			),
