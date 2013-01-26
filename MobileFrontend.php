@@ -94,6 +94,7 @@ $wgHooks['SpecialPage_initList'][] = 'MobileFrontendHooks::onSpecialPage_initLis
 $wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::onListDefinedTags';
 $wgHooks['RecentChange_save'][] = 'MobileFrontendHooks::onRecentChange_save';
 $wgHooks['SpecialPageBeforeExecute'][] = 'MobileFrontendHooks::onSpecialPageBeforeExecute';
+$wgHooks['UserLoginComplete'][] = 'MobileFrontendHooks::onUserLoginComplete';
 
 $wgSpecialPages['DonateImage'] = 'SpecialDonateImage';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';

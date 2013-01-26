@@ -295,4 +295,32 @@ class MobileFrontendHooks {
 
 		return true;
 	}
+
+	/**
+	 * UserLoginComplete hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserLoginComplete
+	 *
+	 * Used here to handle watchlist actions made by anons to be handled after
+	 * login or account creation.
+	 *
+	 * @param User $currentUser
+	 * @param string $injected_html
+	 * @return bool
+	 */
+	public static function onUserLoginComplete( &$currentUser, &$injected_html ) {
+		$context = MobileContext::singleton();
+		if ( !$context->shouldDisplayMobileView() ) {
+			return true;
+		}
+
+		// If 'watch' is set from the login form, watch the requested article
+		$watch = $context->getRequest()->getVal( 'watch' );
+		if ( !is_null( $watch ) ) {
+			$title = Title::newFromText( $watch );
+			if ( !is_null( $title ) ) {
+				WatchAction::doWatch( $title, $currentUser );
+			}
+		}
+		return true;
+	}
 }
