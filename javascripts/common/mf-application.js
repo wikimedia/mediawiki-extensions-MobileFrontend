@@ -44,6 +44,17 @@ mw.mobileFrontend = (function() {
 		_modules[ id ] = obj;
 	}
 
+	/**
+	 * Wraps our template engine of choice (currently Hogan).
+	 *
+	 * @param {string} templateBody Template body.
+	 * @return {Object} Template object which has a render() function that
+	 * accepts template data object as its argument.
+	 */
+	function template( templateBody ) {
+		return Hogan.compile( templateBody );
+	}
+
 	function message( name, arg1 ) {
 		var msg;
 		msg = mwMobileFrontendConfig.messages[ name ];
@@ -247,7 +258,8 @@ mw.mobileFrontend = (function() {
 		prettyEncodeTitle: prettyEncodeTitle,
 		utils: u,
 		require: require,
-		define: define
+		define: define,
+		template: template
 	};
 
 }());

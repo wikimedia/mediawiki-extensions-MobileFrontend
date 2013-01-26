@@ -361,7 +361,9 @@ $wgResourceModules['mobile.production-jquery'] = $wgMFMobileResourceBoilerplate 
 		'stylesheets/modules/mf-cleanuptemplates.css',
 	),
 	'scripts' => array(
+		'javascripts/externals/hogan.js',
 		'javascripts/common/mf-api.js',
+		'javascripts/common/mf-view.js',
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
