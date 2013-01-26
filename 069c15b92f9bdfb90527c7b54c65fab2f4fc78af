@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//8Jc\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 646,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-26T00:25:00Z",
+      "side": 1,
+      "message": "please follow the rough global naming conventions we have. $wgMFAlwaysMobile, perhaps.",
+      "revId": "069c15b92f9bdfb90527c7b54c65fab2f4fc78af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//8Jg\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-26T00:25:00Z",
+      "side": 1,
+      "message": "Please do this in shouldDisplaymobileViewInternal() instead such that it sets $this-\u003emobileView",
+      "revId": "069c15b92f9bdfb90527c7b54c65fab2f4fc78af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
