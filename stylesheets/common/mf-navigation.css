@@ -498,7 +498,7 @@ html.overlay ul.content li:hover {
   font-weight: bold;
   margin: 0 0 8px 0;
 }
-#content_wrapper .alert {
+#content .alert {
   margin: 0;
 }
 #mw-mf-page-center .header,
