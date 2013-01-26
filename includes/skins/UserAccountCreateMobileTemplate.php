@@ -4,10 +4,14 @@
  */
 class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 
+	/**
+	 * @TODO refactor this into parent template
+	 */
 	public function execute() {
 		$action = $this->data['action'];
 		$token = $this->data['token'];
 		$watchArticle = $this->getArticleTitleToWatch();
+		$stickHTTPS = ( $this->doStickHTTPS() ) ? Html::input( 'wpStickHTTPS', 'true', 'hidden' ) : '';
 		$username = ( strlen( $this->data['name'] ) ) ? $this->data['name'] : null;
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];
@@ -79,6 +83,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpCreateaccountToken', $token, 'hidden' ) .
 			Html::input( 'watch', $watchArticle, 'hidden' ) .
+			$stickHTTPS .
 			Html::closeElement( 'form' );
 		$accountCreation .= $msgBox . $form;
 		$accountCreation .= Html::closeElement( 'div' );

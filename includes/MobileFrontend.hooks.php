@@ -284,7 +284,6 @@ class MobileFrontendHooks {
 			$query = array(
 				'returnto' => $request->getVal( 'returnto', '' ),
 				'returntoquery' => $request->getVal( 'returntoquery', '' ),
-				'wpStickHTTPS' => true, // is this actually necessary?
 			);
 			$url = $mobileContext->getMobileUrl(
 				$special->getFullTitle()->getFullURL( $query ),

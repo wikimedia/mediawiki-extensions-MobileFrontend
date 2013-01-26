@@ -51,4 +51,22 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		}
 		return $ret;
 	}
+
+	/**
+	 * Determine whether or not we should attempt to 'stick https'
+	 *
+	 * If wpStickHTTPS is set as a value in login requests, when a user
+	 * is logged in to HTTPS and if they attempt to view a page on http,
+	 * they will be automatically redirected to HTTPS.
+	 * @see https://gerrit.wikimedia.org/r/#/c/24026/
+	 * @return bool
+	 */
+	protected function doStickHTTPS() {
+		global $wgMFForceSecureLogin;
+		$request = $this->getRequestContext()->getRequest();
+		if ( $wgMFForceSecureLogin && $request->detectProtocol() === 'https' ) {
+			return true;
+		}
+		return false;
+	}
 }
