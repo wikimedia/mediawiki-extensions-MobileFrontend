@@ -164,7 +164,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-requirements' => 'This page requires both JavaScript and a location aware browser.',
 	'mobile-frontend-nearby-distance-report' => '$1km from your current location',
 	'mobile-frontend-nearby-lookup-error' => 'Unable to find you. Trying again..',
-	'mobile-frontend-nearby-noresults' => 'You are in the middle of nowhere and we couldn\'t find any articles. Why not write one?',
+	'mobile-frontend-nearby-noresults' => 'You are in the middle of nowhere and we couldn\'t find any topics. Why not write one?',
 	'mobile-frontend-nearby-refresh' => 'We found a more accurate location for you. Click here to refresh the list of nearby pages',
 	'mobile-frontend-nearby-error' => 'An unexpected error occurred whilst trying to find pages nearby',
 
