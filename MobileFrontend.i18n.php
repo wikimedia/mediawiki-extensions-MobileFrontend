@@ -1715,14 +1715,6 @@ $messages['bg'] = array(
 	'mobile-frontend-drawer-cancel' => 'Отказване',
 );
 
-/** bh (भोजपुरी)
- */
-$messages['bh'] = array(
-	'mobile-frontend-home-button' => 'गृह',
-	'mobile-frontend-back-to-top-of-section' => 'एक खण्ड पिछे जाईं',
-	'mobile-frontend-featured-article' => 'आज के महत्वपुर्ण लेख',
-);
-
 /** Bengali (বাংলা)
  * @author Bellayet
  * @author Nasir8891
