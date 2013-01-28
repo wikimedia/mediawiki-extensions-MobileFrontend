@@ -89,6 +89,7 @@ $specialPageAliases['nl'] = array(
 	'DonateImage' => array( 'AfbeeldingDoneren' ),
 	'MobileDiff' => array( 'MobielVerschillen' ),
 	'MobileMenu' => array( 'MobielMenu' ),
+	'Nearby' => array( 'InDeBuurt' ),
 );
 
 /** Sicilian (sicilianu) */
