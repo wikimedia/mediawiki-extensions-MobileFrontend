@@ -16,6 +16,24 @@
       "revId": "e09add3d16c750481a36222a4453a12613411f41",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//6Ks\u003d",
+        "filename": "stylesheets/less/modules/mf-toggle.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-28T19:23:40Z",
+      "side": 0,
+      "message": "The .loading rule in mf-common.css provides the background image. Up above the positioning is set and other minor tweaks.",
+      "parentUuid": "AAADiH//6Lo\u003d",
+      "revId": "e09add3d16c750481a36222a4453a12613411f41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
