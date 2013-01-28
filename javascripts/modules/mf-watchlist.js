@@ -59,7 +59,7 @@ var api = M.require( 'api' ), w = ( function() {
 
 		function enable() {
 			prevent = false;
-			$( watchBtn ).removeClass( 'disabled waiting' );
+			$( watchBtn ).removeClass( 'disabled loading' );
 		}
 
 		function success( data ) {
@@ -82,7 +82,7 @@ var api = M.require( 'api' ), w = ( function() {
 				ev.preventDefault();
 			}
 			prevent = true;
-			$( watchBtn ).addClass( 'disabled waiting' );
+			$( watchBtn ).addClass( 'disabled loading' );
 			toggleWatchStatus( $( watchBtn ).hasClass( 'watched' ) );
 		} );
 

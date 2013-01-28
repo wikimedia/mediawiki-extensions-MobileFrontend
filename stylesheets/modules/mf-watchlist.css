@@ -13,11 +13,13 @@ a.watch-this-article {
   text-indent: -9999px;
   background-repeat: no-repeat;
 }
-a.watch-this-article.waiting {
-  background-image: url(images/ajax-loader.gif);
-}
 a.watch-this-article.watched {
   background-image: url(images/watched.png);
+}
+a.watch-this-article.loading {
+  background-image: url(../common/images/ajax-loader.gif);
+  background-position: right center;
+  min-height: auto;
 }
 .full-screen-search #mw-mf-searchForm a.watch-this-article {
   display: none;
