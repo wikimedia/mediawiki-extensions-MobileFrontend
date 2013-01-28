@@ -298,7 +298,7 @@ class MobileFormatter extends HtmlFormatter {
 		unset( $defaultQuery['seg'] );
 		unset( $defaultQuery['useformat'] );
 
-		$qs = wfArrayToCGI( $defaultQuery );
+		$qs = wfArrayToCgi( $defaultQuery );
 		$delimiter = ( !empty( $qs ) ) ? '?' : '';
 		$basePageParts = wfParseUrl( $this->wmlContext->getCurrentUrl() );
 		$basePage = $basePageParts['scheme'] . $basePageParts['delimiter'] . $basePageParts['host'] . $basePageParts['path'] . $delimiter . $qs;
