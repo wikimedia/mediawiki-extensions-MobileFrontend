@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//6Cg\u003d",
+        "filename": "javascripts/common/mf-view.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-28T20:47:52Z",
+      "side": 1,
+      "message": "please replace spaces with tabs",
+      "revId": "d15101aaf4abb6231b8736cac14b60c576f50f70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//6CQ\u003d",
+        "filename": "javascripts/common/mf-view.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-28T20:47:52Z",
+      "side": 1,
+      "message": "Why not let template just be a string?",
+      "revId": "d15101aaf4abb6231b8736cac14b60c576f50f70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
