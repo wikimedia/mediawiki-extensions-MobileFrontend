@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//5mI\u003d",
+        "filename": "javascripts/common/mf-view.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-28T22:59:55Z",
+      "side": 1,
+      "message": "Whoops!",
+      "parentUuid": "AAADiH//6Cg\u003d",
+      "revId": "d15101aaf4abb6231b8736cac14b60c576f50f70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//6CQ\u003d",
         "filename": "javascripts/common/mf-view.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-01-28T20:47:52Z",
       "side": 1,
       "message": "Why not let template just be a string?",
+      "revId": "d15101aaf4abb6231b8736cac14b60c576f50f70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//5l0\u003d",
+        "filename": "javascripts/common/mf-view.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-28T22:59:55Z",
+      "side": 1,
+      "message": "I guess I wanted to make it more decoupled, but now I think you\u0027re right, it just makes us repeat ourselves each time. Will change.",
+      "parentUuid": "AAADiH//6CQ\u003d",
       "revId": "d15101aaf4abb6231b8736cac14b60c576f50f70",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
