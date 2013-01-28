@@ -17,9 +17,11 @@ GEM
     json (1.7.6)
     multi_json (1.5.0)
     net-http-persistent (2.8)
-    page-object (0.8.3)
+    page-object (0.8.4)
+      page_navigation (>= 0.3)
       selenium-webdriver (>= 2.29.0)
       watir-webdriver (>= 0.6.2)
+    page_navigation (0.4)
     parallel (0.6.1)
     parallel_tests (0.9.3)
       parallel
@@ -35,7 +37,7 @@ GEM
     syntax (1.0.0)
     watir-webdriver (0.6.2)
       selenium-webdriver (>= 2.18.0)
-    websocket (1.0.6)
+    websocket (1.0.7)
 
 PLATFORMS
   ruby
