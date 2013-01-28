@@ -31,13 +31,10 @@ var toggle = ( function() {
 		}
 		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
 		id = 'section_' + section_id;
-		e = document.getElementById( id );
-		e.removeAttribute( 'id' );
 		hash = closed ? '#_' : '#' + id;
 		if ( hash !== '#section_nav' ) {
 			M.history.replaceHash( hash );
 		}
-		e.setAttribute( 'id', id );
 	}
 
 	function wm_reveal_for_hash( hash ) {
