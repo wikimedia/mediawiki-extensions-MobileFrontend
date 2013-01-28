@@ -645,7 +645,7 @@ HTML;
 		if ( $this->getUser()->isLoggedIn() ) {
 			$query[ 'returnto' ] = $this->getTitle()->getPrefixedText();
 			if ( !empty( $returntoquery ) ) {
-				$query[ 'returntoquery' ] = wfArrayToCGI( $returntoquery );
+				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
 			$url = SpecialPage::getTitleFor( 'UserLogout' )->getFullURL( $query );
 			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
@@ -659,7 +659,7 @@ HTML;
 		} else {
 			 // note returnto is not set for mobile (per product spec)
 			$returntoquery[ 'welcome' ] = 'yes';
-			$query[ 'returntoquery' ] = wfArrayToCGI( $returntoquery );
+			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = SpecialPage::getTitleFor( 'UserLogin' )->getFullURL( $query );
 			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
 			$link = Linker::makeExternalLink(
