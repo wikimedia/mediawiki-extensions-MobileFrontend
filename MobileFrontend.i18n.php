@@ -169,6 +169,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-error' => 'An unexpected error occurred whilst trying to find pages nearby',
 
 	// image donation
+	'mobile-frontend-donate-image-login' => 'Sign in to view your uploads',
 	'mobile-frontend-photo-upload-generic' => 'Donate an image',
 	'mobile-frontend-donate-image-title' => 'Donate an image',
 	'mobile-frontend-donate-image-summary' => 'Photos bring pages on {{SITENAME}} to life.
@@ -488,6 +489,7 @@ See also:
 	'mobile-frontend-nearby-error' => 'Text of generic error message when querying geodata api',
 	'mobile-frontend-photo-upload-generic' => 'Label on donate interface on Special:DonateImage.
 {{Identical|Donate an image}}',
+	'mobile-frontend-donate-image-login' => 'Title for Special:UserLogin when being redirected to Special:DonateImage',
 	'mobile-frontend-donate-image-title' => 'Title for Special:DonateImage.
 {{Identical|Donate an image}}',
 	'mobile-frontend-donate-image-summary' => 'Explanation of purpose of page and importance of participation.',
