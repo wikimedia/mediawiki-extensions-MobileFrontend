@@ -264,6 +264,10 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'mobile-frontend-last-modified-months',
 		'mobile-frontend-last-modified-years',
 
+		// for mf-toggle-dynamic.js
+		'mobile-frontend-show-button',
+		'mobile-frontend-hide-button',
+
 		// mf-photo.js
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
@@ -290,6 +294,11 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		// mf-history-jquery.js
 		'mobile-frontend-ajax-page-loading',
 		'mobile-frontend-ajax-page-error',
+
+		// for mf-search.js
+		'mobile-frontend-search-help',
+		'mobile-frontend-search-noresults',
+		'mobile-frontend-overlay-escape',
 	),
 );
 
@@ -298,7 +307,6 @@ $wgResourceModules['mobile.production-only'] = array(
 	'messages' => array(
 		// for mf-toggle.js
 		'mobile-frontend-close-section',
-		// for mf-toggle-dynamic.js and mf-toggle.js
 		'mobile-frontend-show-button',
 		'mobile-frontend-hide-button',
 
