@@ -48,6 +48,8 @@ $autoloadClasses = array (
 	'ApiParseExtender' => 'api/ApiParseExtender',
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
+	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
+
 	'SpecialDonateImage' => 'specials/SpecialDonateImage',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
@@ -148,6 +150,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 	$files[] = "$dir/DeviceDetectionTest.php";
 	$files[] = "$dir/HtmlFormatterTest.php";
 	$files[] = "$dir/MobileFormatterTest.php";
+	$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
 	return true;
 }
 
@@ -221,6 +224,16 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 	),
 );
 
+$wgResourceModules['mobile.beta.dependencies'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array( 'mobile.startup' ),
+	'messages' => array(
+		// mf-photo.js
+		'mobile-frontend-photo-license' => array( 'parse' ),
+	),
+	'localBasePath' => $localBasePath,
+	'class' => 'MFResourceLoaderModule',
+);
+
 $wgResourceModules['mobile.beta.jquery'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.production-jquery', 'mediawiki.jqueryMsg' ),
 	'styles' => array(
@@ -253,7 +266,6 @@ $wgResourceModules['mobile.beta.jquery'] = $wgMFMobileResourceBoilerplate + arra
 		'mobile-frontend-hide-button',
 
 		// mf-photo.js
-		'mobile-frontend-photo-license',
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
 		'mobile-frontend-photo-upload-error',
@@ -272,6 +284,7 @@ $wgResourceModules['mobile.beta.jquery'] = $wgMFMobileResourceBoilerplate + arra
 
 		// for mf-languages.js
 		'mobile-frontend-language-site-choose',
+		'mobile-frontend-language-footer',
 
 		// mf-watchlist.js
 		'mobile-frontend-watchlist-add',

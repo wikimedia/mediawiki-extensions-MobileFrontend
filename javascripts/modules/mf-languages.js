@@ -33,8 +33,9 @@ var m = ( function() {
 		$( '#mw-mf-language-header' ).addClass( 'mw-mf-overlay-header' ).appendTo( $wrapper );
 		$( '#mw-mf-language-selection' ).appendTo( $wrapper );
 
-		$footer = $( '<p>' ).addClass( 'mw-mf-overlay-footer' ).
-			html( M.message( 'mobile-frontend-language-footer' ) ).hide().appendTo( $wrapper );
+		$footer = $( '<p>' ).addClass( 'mw-mf-overlay-footer' ).hide().appendTo( $wrapper );
+		$( '<a>' ).attr( 'href', M.history.getArticleUrl( 'Special:MobileOptions/Language' ) ).
+			text( mw.msg( 'mobile-frontend-language-footer' ) ).appendTo( $footer );
 
 		overlay = createOverlay( $search, $wrapper, { hash: '#mw-mf-overlay-language' } );
 		$lists = $( overlay ).find( 'ul' );
