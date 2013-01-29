@@ -58,11 +58,10 @@ class SkinMobile extends SkinMobileBase {
 			$this->addArticleClass( 'mw-mf-special' );
 		}
 		$tpl->set( 'articleClass', $this->getArticleClassString() );
-		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
 		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) + 1 );
-		$tpl->set( 'siteLanguageLink', SpecialPage::getTitleFor( 'MobileOptions', 'Language' )->getLocalUrl() );
+
 		// @todo FIXME: Unused local variable?
 		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
 			$wgMFCustomLogos['copyright'] :
@@ -91,54 +90,9 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'isSpecialPage', $title->isSpecialPage() );
 
 		// footer
-		$link = $context->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
-		$historyLink = '';
-		if ( !$title->isSpecialPage() ) {
-				$historyKey = 'mobile-frontend-footer-contributors-text';
-				// FIXME: this creates a link with class external - it should be local
-				$historyLink = wfMessage( $historyKey, htmlspecialchars( $link ) )->parse();
-		}
-
-		$tpl->set( 'historyLink', $historyLink );
 		$tpl->set( 'copyright', $this->getCopyright() );
-		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
-		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
-		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
-
-		$returnTo = $this->getRequest()->getText( 'returnto' );
-		if ( $returnTo !== '' ) {
-			$returnToTitle = Title::newFromText( $returnTo );
-			if ( $returnToTitle ) {
-				$rtnUrl = $returnToTitle->getLocalURL();
-			} else {
-				$rtnUrl = Title::newMainPage()->getLocalUrl();
-			}
-		} else {
-			$rtnUrl = Title::newMainPage()->getLocalUrl();
-		}
-		$tpl->set( 'returnto', $rtnUrl );
-		$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
-			array( 'returnto' => $this->getTitle()->getPrefixedText(), 'feedbacksource' => 'MobileFrontend' )
-		);
-		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
-		$nearbyURL = SpecialPage::getTitleFor( 'Nearby' )->getLocalURL();
-		$tpl->set( 'nearbyURL', $nearbyURL );
-
-		$tpl->set( 'feedbackLink', $wgLanguageCode == 'en' ?
-			Html::element(
-				'a',
-				array( 'href' => $leaveFeedbackURL ),
-				$this->msg( 'mobile-frontend-leave-feedback' )->text()
-			)
-			: ''
-		);
-		$tpl->set( 'settingsUrl',
-			SpecialPage::getTitleFor( 'MobileOptions' )->
-				getLocalUrl( array( 'returnto' => $this->getTitle()->getPrefixedText() ) )
-		);
 
 		$tpl->set( 'authenticated', $user->isLoggedIn() );
-		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
 			if ( $wgMFTrademarkSitename ) {
@@ -180,6 +134,11 @@ class SkinMobile extends SkinMobileBase {
 	 * @param QuickTemplate
 	 */
 	public function prepareTemplateLinks( QuickTemplate $tpl ) {
+		$title = $this->getTitle();
+		$req = $this->getRequest();
+		$ctx = MobileContext::singleton();
+		$returnToTitle = $title->getPrefixedText();
+
 		$donateTitle = SpecialPage::getTitleFor( 'DonateImage' );
 		if ( $this->getUser()->isLoggedIn() ) {
 			$donateUrl = $donateTitle->getLocalUrl();
@@ -187,8 +146,34 @@ class SkinMobile extends SkinMobileBase {
 			$donateUrl = static::getLoginUrl( array( 'returnto' => $donateTitle ) );
 		}
 
+		$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
+			array( 'returnto' => $returnToTitle, 'feedbacksource' => 'MobileFrontend' )
+		);
+
+		// urls that do not vary on authentication status
+		if ( !$title->isSpecialPage() ) {
+			$historyUrl = $ctx->getMobileUrl( wfExpandUrl( $req->appendQuery( 'action=history' ) ) );
+			$historyKey = 'mobile-frontend-footer-contributors-text';
+			// FIXME: this creates a link with class external - it should be local
+			$historyLink = wfMessage( $historyKey, htmlspecialchars( $historyUrl ) )->parse();
+		} else {
+			$historyLink = '';
+		}
+		$nearbyUrl = SpecialPage::getTitleFor( 'Nearby' )->getLocalURL();
+		$settingsUrl = SpecialPage::getTitleFor( 'MobileOptions' )->
+			getLocalUrl( array( 'returnto' => $returnToTitle ) );
+
 		// set urls
+		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'donateImageUrl', $donateUrl );
+		$tpl->set( 'historyLink', $historyLink );
+		$tpl->set( 'nearbyURL', $nearbyUrl );
+		$tpl->set( 'settingsUrl', $settingsUrl );
+		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
+		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
+		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
+		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
+		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 	}
 
 	/**
