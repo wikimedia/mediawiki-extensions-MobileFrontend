@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//45g\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "\"needs to be translated\", in my opinion.\n\nOr replace the \u0027g\u0027 with an apostrophe:\n\nThis page needs some translatin\u0027!",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//45c\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "\"$1 and $2 are the source and target languages, respectively.\"",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//45Y\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 566,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "message prompt",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//45o\u003d",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "There are functions for this already in mw.util, if I recall correctly. If you\u0027re loading the standard js bits, you should use whatever\u0027s defined in there. If not, check to make sure that your implementation is identical.",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//46M\u003d",
+        "filename": "javascripts/modules/mf-translator.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "Small style preference; disregard if unhelpful: \n\nI like to use .on( \u0027click\u0027, function () { .. universally, even when a shortcut exists for the event type ( i.e., $.fn.jquery ). I use the shortcut only for triggering events. I think it\u0027s tidier that way.",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//46E\u003d",
+        "filename": "javascripts/modules/mf-translator.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "Why do you need || 0 if you only include values greater than 5 in line 44 above?",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//46A\u003d",
+        "filename": "javascripts/modules/mf-translator.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "!\u003d\u003d makes the intent clearer.",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//458\u003d",
+        "filename": "javascripts/modules/mf-translator.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "If you start replacing these with $.each( .. ) you could ostensibly get rid of your polyfills.",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//454\u003d",
+        "filename": "javascripts/modules/mf-translator.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "Clearer: drop the else clause and just make it a \u0027return false\u0027.",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//450\u003d",
+        "filename": "javascripts/modules/mf-translator.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-29T18:46:47Z",
+      "side": 1,
+      "message": "jQuery sugar:\n\n    $( window ).on( {\n        \u0027language-select\u0027: function( ev, language ) {\n            profileLanguage( language );\n        },\n        \u0027mw-mf-page-loading\u0027: function() {\n            M.navigation.popup.close( true );\n        },\n        \u0027mw-mf-languages-loaded\u0027: function() {\n            initPage();\n        }\n    } );",
+      "revId": "9be321df1f858be10ec48082b4966aa808d7e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
