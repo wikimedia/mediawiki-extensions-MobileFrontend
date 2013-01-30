@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//4gM\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-30T00:03:43Z",
+      "side": 1,
+      "message": "maybe this should live elsewhere? It relates to the article after all..?",
+      "revId": "6acfb38b67212faf319f9cbfb7608e36c8afac71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//4fs\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-30T00:03:43Z",
+      "side": 1,
+      "message": "Ceci n\u0027est pas une \u0027button\u0027. (c\u0027est un \u0027form\u0027)",
+      "revId": "6acfb38b67212faf319f9cbfb7608e36c8afac71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//4gI\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-30T00:03:43Z",
+      "side": 1,
+      "message": "Being english I don\u0027t like z\u0027s :P why not just init?",
+      "revId": "6acfb38b67212faf319f9cbfb7608e36c8afac71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
