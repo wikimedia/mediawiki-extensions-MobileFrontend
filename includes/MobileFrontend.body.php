@@ -290,14 +290,12 @@ class ExtMobileFrontend extends ContextSource {
 	 *	Formatted and mergable with $wgResourceModules
 	 */
 	public static function generateMobileSpecialPageModules( $specialModuleStubs ) {
+		global $wgMFMobileResourceBoilerplate;
+
 		$modules = array();
 		foreach( $specialModuleStubs as $moduleName => $moduleMakeup ) {
-			$module = array(
+			$module = $wgMFMobileResourceBoilerplate + array(
 				'dependencies' => array( 'mobile.startup' ),
-				'raw' => true,
-				'localBasePath' => dirname( __DIR__ ),
-				'remoteExtPath' => 'MobileFrontend',
-				'targets' => 'mobile',
 			);
 
 			if ( isset( $moduleMakeup[ 'messages' ] ) ) {
