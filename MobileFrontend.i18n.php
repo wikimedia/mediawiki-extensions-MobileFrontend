@@ -2588,7 +2588,7 @@ $messages['de'] = array(
 	'mobile-frontend-ajax-page-error' => 'Hoppla! Irgend etwas ist schief gelaufen. Bitte versuche, dein Browserfenster zu aktualisieren.',
 	'mobile-frontend-nearby-title' => 'In der Nähe',
 	'mobile-frontend-nearby-loading' => 'Themen laden, die in deiner Nähe liegen',
-	'mobile-frontend-nearby-requirements' => 'Diese Seite benötigt JavaScript und einen standortfähigen Browser.',
+	'mobile-frontend-nearby-requirements' => 'Diese Seite benötigt JavaScript und einen standortbewussten Browser.',
 	'mobile-frontend-nearby-distance-report' => '$1 km von deinem aktuellen Standort',
 	'mobile-frontend-nearby-lookup-error' => 'Du konntest nicht gefunden werden. Bitte versuche es erneut.',
 	'mobile-frontend-nearby-noresults' => 'Wir konnten leider keine Themen finden. Warum nicht selber eins verfassen?',
@@ -4589,7 +4589,7 @@ $messages['gl'] = array(
 	'mobile-frontend-nearby-requirements' => 'Esta páxina necesita JavaScript e un navegador que indique a súa localización.',
 	'mobile-frontend-nearby-distance-report' => 'A $1km da súa localización actual',
 	'mobile-frontend-nearby-lookup-error' => 'Non puidemos determinar a súa localización. Intentándoo de novo...',
-	'mobile-frontend-nearby-noresults' => 'Está no medio de ningures e non puidemos atopar ningún artigo. Por que non escribe un?', # Fuzzy
+	'mobile-frontend-nearby-noresults' => 'Está no medio de ningures e non puidemos atopar ningún tema. Por que non escribe un?',
 	'mobile-frontend-nearby-refresh' => 'Atopamos unha localización máis axeitada para vostede. Prema aquí para recargar a lista de páxinas próximas',
 	'mobile-frontend-nearby-error' => 'Houbo un erro inesperado ao intentar atopar páxinas próximas',
 	'mobile-frontend-photo-upload-generic' => 'Doar unha imaxe',
@@ -4600,6 +4600,7 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-donate-image-heading' => 'As súas achegas recentes',
 	'mobile-frontend-donate-image-page-title' => 'Cargar',
 	'mobile-frontend-donate-image-anon' => 'Cómpre ter unha [[Special:UserLogin|conta de usuario]] para acceder á páxina de cargas',
+	'mobile-frontend-listed-image-no-description' => 'Sen descrición',
 	'mobile-frontend-watchlist-add' => '"$1" engadiuse á súa lista de vixilancia',
 	'mobile-frontend-watchlist-removed' => '"$1" eliminouse da súa lista de vixilancia',
 	'mobile-frontend-watchlist-view' => 'Ver a súa lista de vixilancia',
@@ -8904,6 +8905,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-donate-image-heading' => 'Uw recente bijdragen',
 	'mobile-frontend-donate-image-page-title' => 'Uploaden',
 	'mobile-frontend-donate-image-anon' => 'U moet een [[Special:UserLogin|gebruiker]] hebben om de pagina voor uploaden te bekijken',
+	'mobile-frontend-listed-image-no-description' => 'Geen beschrijving',
 	'mobile-frontend-watchlist-add' => '$1 is toegevoegd aan uw volglijst',
 	'mobile-frontend-watchlist-removed' => '$1 is verwijderd van uw volglijst',
 	'mobile-frontend-watchlist-view' => 'Volglijst bekijken',
@@ -12521,6 +12523,7 @@ $messages['uz'] = array(
 );
 
 /** vèneto (vèneto)
+ * @author Frigotoni
  * @author GatoSelvadego
  */
 $messages['vec'] = array(
@@ -12701,6 +12704,7 @@ Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca es
 	'mobile-frontend-saving-exit-page' => 'El to canbiamento el xe ncora da salvar. Se te ve fora i to contributi i ndarà persi. Sito seguro de vołer ndar fora?',
 	'mobile-frontend-photo-upload' => 'Xonta ła prima someja a sta pàjina',
 	'mobile-frontend-photo-article-edit-comment' => 'Xonta na someja a sta pàjina',
+	'mobile-frontend-photo-article-donate-comment' => 'Imaxine donà da tełefonin',
 	'mobile-frontend-photo-upload-comment' => 'Xonta sta someja a na pàjina',
 	'mobile-frontend-photo-upload-progress' => 'Cargamento imaxene so sta pàjina',
 	'mobile-frontend-photo-caption-placeholder' => "Xonta na didascałia a l'imaxene",
@@ -12709,6 +12713,7 @@ Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca es
 	'mobile-frontend-photo-upload-error' => "S'a verifegà un eror durante el cargamento de l'imaxene. Se prega de ripróvar có n'altra imaxene.",
 	'mobile-frontend-image-saving-to-article' => 'Salvatajo imaxene so pàjina',
 	'mobile-frontend-photo-license' => 'Nota: tute łe someje publicae łe sarà rełasae có [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licensa CC BY-SA 3.0]',
+	'tag-mobile_edit' => 'Canbiamento da tełefonin',
 	'tag-mobile_edit-description' => "Modifega fata dal sito pa' dispoxitivi mobiłi",
 	'mobile-frontend-drawer-cancel' => 'Anuła',
 );
