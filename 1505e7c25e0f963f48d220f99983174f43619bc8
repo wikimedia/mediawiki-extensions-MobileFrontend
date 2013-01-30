@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//4XE\u003d",
+        "filename": "javascripts/common/mw-templates.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-01-30T02:01:54Z",
+      "side": 1,
+      "message": "To match the RL class on the server side, should probably be namespaced under mw.mf or something like that.",
+      "revId": "1505e7c25e0f963f48d220f99983174f43619bc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//4XM\u003d",
+        "filename": "javascripts/common/mw-templates.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-01-30T02:01:54Z",
+      "side": 1,
+      "message": "This falls back to value  \u0027undefined\u0027 which can have unexpected side effects. Probably want to handle that differently.",
+      "revId": "1505e7c25e0f963f48d220f99983174f43619bc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
