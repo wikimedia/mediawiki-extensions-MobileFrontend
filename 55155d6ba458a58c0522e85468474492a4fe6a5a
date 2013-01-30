@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//3Qg\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-30T22:13:28Z",
+      "side": 1,
+      "message": "you can simplify this with $knownUser \u003d $this-\u003egetUser()-\u003eisLoggedIn(); since you\u0027re not otherwise using $user anywhere. similarly, you could just use that line as the conditional on line 187 - there\u0027s not much benefit here to assigning the value to a variable first.",
+      "revId": "55155d6ba458a58c0522e85468474492a4fe6a5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//3Q8\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-30T22:13:28Z",
+      "side": 1,
+      "message": "This is very useful!\n\nYou should first check if the user is already on HTPS - if so, you don\u0027t need to do the extra URL processing and can just use the local URL. The URL transformation isn\u0027t too expensive, but no sense doing it if it\u0027s not necessary. you can check for https with WebRequest::detectProtocol() (returns \u0027http\u0027 or \u0027https\u0027).\n\nAlso, you might consider making this a static method as this functionality is used elsewhere outside of the skin (there\u0027s at least one hook handler that could use this). Also, there are other places in this Skin that should make use of this method once it\u0027s done, so we\u0027re uniformly handling login link generation.",
+      "revId": "55155d6ba458a58c0522e85468474492a4fe6a5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//3Qo\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-30T22:13:28Z",
+      "side": 1,
+      "message": "if you\u0027re removing the permission check here, it should be added and handled on the special page.",
+      "revId": "55155d6ba458a58c0522e85468474492a4fe6a5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
