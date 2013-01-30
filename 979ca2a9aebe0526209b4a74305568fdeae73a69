@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//3tI\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 544,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-01-30T18:51:26Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be:\n@var ExtMobileFrontend $wgExtMobileFrontend",
+      "revId": "979ca2a9aebe0526209b4a74305568fdeae73a69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
