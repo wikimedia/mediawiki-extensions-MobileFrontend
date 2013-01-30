@@ -541,6 +541,9 @@ $wgMFFeedbackLinks = array(
 	'ArticleOther' => '', // Regarding another problem
 );
 
+/**
+ * @var ExtMobileFrontend $wgExtMobileFrontend
+ */
 $wgExtMobileFrontend = null;
 
 /**

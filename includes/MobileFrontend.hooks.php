@@ -22,13 +22,13 @@ class MobileFrontendHooks {
 		global $wgMFEnableDesktopResources, $wgExtMobileFrontend;
 
 		// check whether or not the user has requested to toggle their view
-		$context = MobileContext::singleton();
-		$context->checkToggleView();
+		$mobileContext = MobileContext::singleton();
+		$mobileContext->checkToggleView();
 
-		if ( !$context->shouldDisplayMobileView() ) {
+		if ( !$mobileContext->shouldDisplayMobileView() ) {
 			// add any necessary resources for desktop view, if enabled
 			if ( $wgMFEnableDesktopResources ) {
-				$out = $wgExtMobileFrontend->getOutput();
+				$out = $context->getOutput();
 				$out->addModules( 'mobile.desktop' );
 			}
 			return true;
@@ -49,7 +49,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSkinTemplateOutputPageBeforeExec( &$obj, &$tpl ) {
-		global $wgMobileUrlTemplate, $wgExtMobileFrontend;
+		global $wgMobileUrlTemplate;
 		wfProfileIn( __METHOD__ );
 
 		$title = $obj->getTitle();
@@ -67,7 +67,7 @@ class MobileFrontendHooks {
 			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( wfExpandUrl( $mobileViewUrl ) );
 			$link = Html::element( 'a',
 				array( 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ),
-				$wgExtMobileFrontend->msg( 'mobile-frontend-view' )->text()
+				wfMessage( 'mobile-frontend-view' )->text()
 			);
 			$tpl->set( 'mobileview', $link );
 			$footerlinks['places'][] = 'mobileview';
@@ -266,8 +266,8 @@ class MobileFrontendHooks {
 	 * @param $subpage string
 	 * @return bool
 	 */
-	public static function onSpecialPageBeforeExecute( $special, $subpage ) {
-		global $wgMFForceSecureLogin, $wgExtMobileFrontend;
+	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
+		global $wgMFForceSecureLogin;
 		$mobileContext = MobileContext::singleton();
 		if ( $special->getName() != 'Userlogin' || !$mobileContext->shouldDisplayMobileView() ) {
 			// no further processing necessary
@@ -280,7 +280,7 @@ class MobileFrontendHooks {
 		// is done on the WMF cluster (see config in CommonSettings.php)
 		if ( $wgMFForceSecureLogin && WebRequest::detectProtocol() != 'https' ) {
 			// get the https url and redirect
-			$request = $wgExtMobileFrontend->getContext()->getRequest();
+			$request = $special->getContext()->getRequest();
 			$query = array(
 				'returnto' => $request->getVal( 'returnto', '' ),
 				'returntoquery' => $request->getVal( 'returntoquery', '' ),
@@ -289,7 +289,7 @@ class MobileFrontendHooks {
 				$special->getFullTitle()->getFullURL( $query ),
 				true
 			);
-			$wgExtMobileFrontend->getOutput()->redirect( $url );
+			$special->getContext()->getOutput()->redirect( $url );
 		}
 
 		return true;
