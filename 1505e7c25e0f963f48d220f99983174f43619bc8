@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADiH//4RM\u003d",
+        "filename": "includes/modules/MobileFrontendResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-30T08:39:57Z",
+      "side": 1,
+      "message": "file_get_contents returns false if it fails to read the file, so you can simply omit the file_exists check (which costs you another system call), and simply check if $content \u003d\u003d\u003d false.\n\nI was _going_ to suggest that, but then I noticed that includes/resourceloader/ResourceLoaderFileModule.php in core does it as well, presumably for good reason. I guess it\u0027s because ResourceLoader wants to make sure that only the informative error is outputted rather than also the warning from the failed file_exists_check, but I\u0027m not sure.\n\nI\u0027m writing this comment out of my own curiosity in the hope that Krinkle or Trevor can explain. It\u0027s not something you have to fix or anything.",
+      "revId": "1505e7c25e0f963f48d220f99983174f43619bc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//4RY\u003d",
+        "filename": "includes/modules/MobileFrontendResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-01-30T08:39:57Z",
+      "side": 1,
+      "message": "proper",
+      "revId": "1505e7c25e0f963f48d220f99983174f43619bc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//4XE\u003d",
         "filename": "javascripts/common/mw-templates.js",
         "patchSetId": 1
