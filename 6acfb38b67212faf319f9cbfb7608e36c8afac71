@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//4bs\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-30T00:16:11Z",
+      "side": 1,
+      "message": "I also thought about this. We can create something like a page object (maybe also inheriting from View) with such methods as hasLeadPhoto() or belongsToNamespace(), etc. in future.",
+      "parentUuid": "AAADiH//4gM\u003d",
+      "revId": "6acfb38b67212faf319f9cbfb7608e36c8afac71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//4fk\u003d",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 2
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//4dI\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-30T00:16:11Z",
+      "side": 1,
+      "message": "Maybe I should just make it a \"div\" then? It\u0027s not being used as a form actually.\n\nMy French is very poor, but beware, I can start doing code review in Spanish or Polish ;)",
+      "parentUuid": "AAADiH//4fs\u003d",
+      "revId": "6acfb38b67212faf319f9cbfb7608e36c8afac71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//4gI\u003d",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 2
@@ -64,6 +100,24 @@
       "writtenOn": "2013-01-30T00:03:43Z",
       "side": 1,
       "message": "Being english I don\u0027t like z\u0027s :P why not just init?",
+      "revId": "6acfb38b67212faf319f9cbfb7608e36c8afac71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//4e4\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-30T00:16:11Z",
+      "side": 1,
+      "message": "I used this in View and there I took it from Backbone, so I named it like this here for consistency. Do you want me to change it?\n\nYou already had to get used to \"license\" instead of \"licence\" and probably many other anyway ;)",
+      "parentUuid": "AAADiH//4gI\u003d",
       "revId": "6acfb38b67212faf319f9cbfb7608e36c8afac71",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
