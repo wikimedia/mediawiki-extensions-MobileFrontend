@@ -792,7 +792,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>"
 				title="<?php $this->msg( 'mobile-frontend-home-button' ) ?>">
 				<?php $this->msg( 'mobile-frontend-home-button' ) ?></a></li>
-			<?php if ( $this->data['isBetaGroupMember'] && $this->data['loggedin'] ) { ?>
+			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<li class='icon-watchlist'>
 				<a href="<?php $this->text( 'watchlistUrl' ) ?>"
 					title="<?php $this->msg( 'mobile-frontend-main-menu-watchlist' ) ?>">
