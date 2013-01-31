@@ -10,9 +10,6 @@
 
 class MobileFrontendHooks {
 
-	/** @var bool */
-	public static $specialPageInitialized = false;
-
 	/**
 	 * RequestContextCreateSkin hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
@@ -274,7 +271,6 @@ class MobileFrontendHooks {
 		$mobileContext = MobileContext::singleton();
 		if ( $special->getName() != 'Userlogin' || !$mobileContext->shouldDisplayMobileView() ) {
 			// no further processing necessary
-			self::$specialPageInitialized = true;
 			return true;
 		}
 
@@ -296,7 +292,6 @@ class MobileFrontendHooks {
 			$wgExtMobileFrontend->getOutput()->redirect( $url );
 		}
 
-		self::$specialPageInitialized = true;
 		return true;
 	}
 

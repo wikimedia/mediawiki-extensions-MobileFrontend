@@ -203,14 +203,7 @@ class MobileContext extends ContextSource {
 				$this->setAlphaGroupMember( true );
 			}
 		}
-		$title = $this->getTitle();
-		// HACK:HACK:HACK: Special:Nearby works only in alpha ATM, but we need to demo it
-		// Kill this ASAP
-		return $this->alphaGroupMember
-			|| ( $title->getNamespace() == NS_SPECIAL
-				&& MobileFrontendHooks::$specialPageInitialized
-				&& $title->isSpecial( 'Nearby' )
-			);
+		return $this->alphaGroupMember;
 	}
 
 	public function setAlphaGroupMember( $value ) {
@@ -220,7 +213,7 @@ class MobileContext extends ContextSource {
 	public function isBetaGroupMember() {
 		if ( is_null( $this->betaGroupMember ) ) {
 			$this->checkUserStatus();
-			if ( $this->getMobileAction() == 'beta' || $this->isAlphaGroupMember() ) {
+			if ( $this->getMobileAction() == 'beta' ) {
 				$this->setBetaGroupMember( true );
 			}
 		}
