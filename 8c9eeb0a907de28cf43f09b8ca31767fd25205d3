@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//2mo\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-31T20:36:30Z",
+      "side": 1,
+      "message": "don\u0027t do this - wait for https://gerrit.wikimedia.org/r/#/c/46885/",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//2mQ\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-31T20:36:30Z",
+      "side": 1,
+      "message": "fix this now using mw.config.get(\u0027wgNamespaceIds\u0027)",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//2nE\u003d",
+        "filename": "stylesheets/less/common/mf-buttons.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-31T20:36:30Z",
+      "side": 1,
+      "message": "use .cancel\nwe already know it is a button from the .button class or button tag.",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//2nQ\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 572,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-31T20:36:30Z",
+      "side": 1,
+      "message": "which browsers? put this in the device specific stylesheets.",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//2nc\u003d",
+        "filename": "stylesheets/less/common/mf-typography.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-01-31T20:36:30Z",
+      "side": 1,
+      "message": "scares me? are you sure this has no side effects?",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
