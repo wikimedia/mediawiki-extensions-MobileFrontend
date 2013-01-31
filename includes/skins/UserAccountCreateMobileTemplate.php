@@ -15,6 +15,8 @@ class UserAccountCreateMobileTemplate extends OverloadTemplate {
 		// handle captcha
 		$captcha = $this->handleCaptcha( $this->data['header'] );
 
+		MobileContext::singleton()->getSkin()->addArticleClass( 'noMargins' );
+
 		$accountCreation = Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate' ) );
 
 		// @TODO refactor this into base class

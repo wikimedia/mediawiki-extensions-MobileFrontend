@@ -13,6 +13,8 @@ class UserLoginMobileTemplate extends OverloadTemplate {
 		$messageType = $this->data['messagetype'];
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 
+		MobileContext::singleton()->getSkin()->addArticleClass( 'noMargins' );
+
 		// @TODO make sure this also includes returnto and returntoquery from the request
 		$query = array(
 			'type' => 'signup',

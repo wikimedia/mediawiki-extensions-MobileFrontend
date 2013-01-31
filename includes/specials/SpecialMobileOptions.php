@@ -71,7 +71,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			$this->msg( 'mobile-frontend-off' )->escaped() .'</span>';
 		$action = $this->getTitle()->getLocalURL();
 		$html = Html::openElement( 'form',
-			array( 'class' => 'mw-mf-settings content', 'method' => 'POST', 'action' => $action )
+			array( 'class' => 'mw-mf-settings', 'method' => 'POST', 'action' => $action )
 		);
 		$aboutMessage = $this->msg( 'mobile-frontend-settings-description' )->parse();
 		$token = Html::hidden( 'token', $context->getMobileToken() );
@@ -170,12 +170,10 @@ HTML;
 
 		if ( $selector && $count > 1 ) {
 			$selector = <<<HTML
-			<div class="content">
 			<p>{$this->msg( 'mobile-frontend-settings-site-description', $count )->parse()}</p>
 			<ul id='mw-mf-language-list'>
 				{$selector}
 			</ul>
-			</div>
 HTML;
 		}
 		wfProfileOut( __METHOD__ );

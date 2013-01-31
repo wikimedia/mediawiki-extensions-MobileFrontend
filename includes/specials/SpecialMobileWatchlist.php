@@ -29,19 +29,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		if( $user->isAnon() ) {
 			// No watchlist for you.
-			$output->addHtml( Html::openElement( 'div', array( 'class' => 'content' ) ) );
 			parent::execute( $par );
-			$output->addHtml( Html::closeElement( 'div' ) );
 			return;
+		} else {
+			$mobileSkin->addArticleClass( 'noMargins watchlist' );
 		}
-
-		$output->addHtml(
-			Html::openElement( 'div',
-				array(
-					'id' => 'mw-mf-watchlist',
-				)
-			)
-		);
 
 		if ( $recentChangesView ) {
 			$this->filter = $this->getRequest()->getVal( 'filter', 'all' );
@@ -53,10 +45,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$res = $this->doListQuery();
 			$this->showListResults( $res );
 		}
-
-		$output->addHtml(
-			Html::closeElement( 'div' )
-		);
 	}
 
 	protected function getWatchlistHeader() {
