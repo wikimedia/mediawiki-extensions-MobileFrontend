@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//2bk\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-31T21:06:34Z",
+      "side": 1,
+      "message": "I\u0027d be reluctant to block this changeset because of that. We can change that as soon as #46885 gets merged.",
+      "parentUuid": "AAADiH//2mo\u003d",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//2mQ\u003d",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 4
@@ -70,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//2bI\u003d",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 572,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-31T21:06:34Z",
+      "side": 1,
+      "message": "It\u0027s not device specific, it\u0027s not even web engine specific. It happens on Chrome for Android but not on Android browser for example and they both use Webkit. It doesn\u0027t make anything look worse on browsers that don\u0027t have this glitch.\n\nThis would require very fine-grained browser detection, I think it\u0027s not worth it.",
+      "parentUuid": "AAADiH//2nQ\u003d",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//2nc\u003d",
         "filename": "stylesheets/less/common/mf-typography.less",
         "patchSetId": 4
@@ -81,6 +117,24 @@
       "writtenOn": "2013-01-31T20:36:30Z",
       "side": 1,
       "message": "scares me? are you sure this has no side effects?",
+      "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//2bY\u003d",
+        "filename": "stylesheets/less/common/mf-typography.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-31T21:06:34Z",
+      "side": 1,
+      "message": "We\u0027ll be fine ;)",
+      "parentUuid": "AAADiH//2nc\u003d",
       "revId": "8c9eeb0a907de28cf43f09b8ca31767fd25205d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
