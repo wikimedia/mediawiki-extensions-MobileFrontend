@@ -155,48 +155,42 @@ function efExtMobileFrontendUnitTests( &$files ) {
 $localBasePath = dirname( __FILE__ );
 $remoteExtPath = 'MobileFrontend';
 
+/**
+ * A boilerplate containing common properties for all RL modules served to mobile site
+ */
+$wgMFMobileResourceBoilerplate = array(
+	'raw' => true,
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
+);
+
 // Filepages
-$wgResourceModules['mobile.file.styles'] = array(
+$wgResourceModules['mobile.file.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
 		'stylesheets/file/filepage.css',
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.file.scripts'] = array(
+$wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'scripts' => array(
 		'javascripts/file/filepage.js'
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.head'] = array(
+$wgResourceModules['mobile.head'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(),
 	'scripts' => array( 'javascripts/common/main.js' ),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.jqueryshim'] = array(
+$wgResourceModules['mobile.jqueryshim'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(),
 	'scripts' => array( 'javascripts/common/jquery-shim.js' ),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.styles'] = array(
+$wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/externals/reset.css',
 		'stylesheets/common/mf-common.css',
@@ -212,13 +206,9 @@ $wgResourceModules['mobile.styles'] = array(
 	),
 	'scripts' => array(
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.startup'] = array(
+$wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 	),
 	'scripts' => array(
@@ -228,13 +218,9 @@ $wgResourceModules['mobile.startup'] = array(
 		'javascripts/modules/mf-banner.js',
 		'javascripts/modules/mf-stop-mobile-redirect.js',
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.beta.jquery'] = array(
+$wgResourceModules['mobile.beta.jquery'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.production-jquery', 'mediawiki.jqueryMsg' ),
 	'styles' => array(
 		'stylesheets/modules/mf-watchlist.css',
@@ -249,10 +235,6 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-photo.js',
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 	'position' => 'bottom',
 	'messages' => array(
 		'pagetitle',
@@ -303,7 +285,7 @@ $wgResourceModules['mobile.beta.jquery'] = array(
 	),
 );
 
-$wgResourceModules['mobile.production-only'] = array(
+$wgResourceModules['mobile.production-only'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'messages' => array(
 		// for mf-toggle.js
@@ -321,13 +303,9 @@ $wgResourceModules['mobile.production-only'] = array(
 		'javascripts/modules/mf-toggle.js',
 		'javascripts/modules/mf-search.js',
 	),
-	'raw' => true,
-	'localBasePath' => dirname( __FILE__ ),
-	'remoteExtPath' => 'MobileFrontend',
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.action.edit'] = array(
+$wgResourceModules['mobile.action.edit'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'messages' => array(
 		// mf-edit.js
@@ -339,26 +317,18 @@ $wgResourceModules['mobile.action.edit'] = array(
 	'scripts' => array(
 		'javascripts/actions/mf-edit.js',
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.action.history'] = array(
+$wgResourceModules['mobile.action.history'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
 	),
 	'scripts' => array(
 		'stylesheets/actions/mf-history.css',
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.alpha'] = array(
+$wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'messages' => array(
 		// for mf-random.js
@@ -382,13 +352,9 @@ $wgResourceModules['mobile.alpha'] = array(
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
 	),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
 );
 
-$wgResourceModules['mobile.production-jquery'] = array(
+$wgResourceModules['mobile.production-jquery'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
 		'stylesheets/modules/mf-references.css',
@@ -399,11 +365,8 @@ $wgResourceModules['mobile.production-jquery'] = array(
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
-		'javascripts/modules/mf-references.js' ),
-	'raw' => true,
-	'localBasePath' => $localBasePath,
-	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
+		'javascripts/modules/mf-references.js'
+	),
 	'messages' => array(
 		// mf-cleanuptemplates.js
 		'mobile-frontend-meta-data-issues',
