@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADiH//2b0\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-31T21:01:18Z",
+      "side": 1,
+      "message": "So if this one required parsing, shouldn\u0027t it also have \u003d\u003e array( \u0027parse\u0027 )?",
+      "revId": "312ea76483536bf365157706346ce1e046ac4710",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//2cs\u003d",
+        "filename": "includes/modules/MFResourceLoaderFileModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-31T21:01:18Z",
+      "side": 1,
+      "message": "\"Index\" is a synonym of \"key\" when it comes to arrays. Use something like $key \u003d\u003e $value.",
+      "revId": "312ea76483536bf365157706346ce1e046ac4710",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//3Fw\u003d",
         "filename": "tests/modules/MFResourceLoaderFileModuleTest.php",
         "patchSetId": 1
@@ -13,6 +47,24 @@
       "writtenOn": "2013-01-31T04:23:14Z",
       "side": 1,
       "message": "The same variable is being assigned twice. Seems a bit odd.",
+      "revId": "312ea76483536bf365157706346ce1e046ac4710",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//2c4\u003d",
+        "filename": "tests/modules/MFResourceLoaderFileModuleTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-01-31T21:01:18Z",
+      "side": 1,
+      "message": "I agree, use two different names.\nhttp://programmers.stackexchange.com/a/115521\nhttp://stackoverflow.com/a/9089975/365238",
+      "parentUuid": "AAADiH//3Fw\u003d",
       "revId": "312ea76483536bf365157706346ce1e046ac4710",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
