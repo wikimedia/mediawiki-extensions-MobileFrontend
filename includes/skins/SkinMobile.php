@@ -770,8 +770,10 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<div id="mw-mf-overlay">
 			<?php $this->renderOverlayHeader() ?>
-				<div id="content_wrapper" class="mw-mf-special">
+				<div id="content_wrapper" class="<?php $this->html( 'articleClass' ); ?>">
+					<div class="content">
 					<?php $this->html( 'bodytext' ) ?>
+					</div>
 				</div>
 			</div>
 		<?php
