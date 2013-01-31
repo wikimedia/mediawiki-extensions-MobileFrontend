@@ -51,6 +51,7 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'variant', $title->getPageLanguage()->getPreferredVariant() );
 
 		$this->prepareTemplatePageContent( $tpl );
+		$this->prepareTemplateLinks( $tpl );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 		if ( $title->isMainPage() || $specialPage ) {
@@ -135,9 +136,6 @@ class SkinMobile extends SkinMobileBase {
 			SpecialPage::getTitleFor( 'MobileOptions' )->
 				getLocalUrl( array( 'returnto' => $this->getTitle()->getPrefixedText() ) )
 		);
-		$tpl->set( 'donateImageUrl',
-			SpecialPage::getTitleFor( 'DonateImage' )->getLocalUrl()
-		);
 
 		$tpl->set( 'authenticated', $user->isLoggedIn() );
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
@@ -176,6 +174,40 @@ class SkinMobile extends SkinMobileBase {
 		return $tpl;
 	}
 
+
+	/**
+	 * Prepares urls and links used by the page
+	 * @param QuickTemplate
+	 */
+	public function prepareTemplateLinks( QuickTemplate $tpl ) {
+		$donateTitle = SpecialPage::getTitleFor( 'DonateImage' );
+		if ( $this->getUser()->isLoggedIn() ) {
+			$donateUrl = $donateTitle->getLocalUrl();
+		} else {
+			$donateUrl = static::getLoginUrl( array( 'returnto' => $donateTitle ) );
+		}
+
+		// set urls
+		$tpl->set( 'donateImageUrl', $donateUrl );
+	}
+
+	/**
+	 * Prepares a url to the Special:UserLogin with query parameters,
+	 * taking into account $wgMFForceSecureLogin
+	 * @param array $query
+	 * @return string
+	 */
+	public static function getLoginUrl( $query ) {
+		global $wgMFForceSecureLogin;
+
+		if ( WebRequest::detectProtocol() != 'https' && $wgMFForceSecureLogin ) {
+			$ctx = MobileContext::singleton();
+			$loginUrl = SpecialPage::getTitleFor( 'UserLogin' )->getFullURL( $query );
+			return $ctx->getMobileUrl( $loginUrl, $wgMFForceSecureLogin );
+		}
+		return SpecialPage::getTitleFor( 'UserLogin' )->getLocalURL( $query );
+	}
+
 	/**
 	 * Prepares the header and the content of a page
 	 * Stores in QuickTemplate prebodytext, postbodytext, htmlHeader keys
@@ -195,11 +227,7 @@ class SkinMobile extends SkinMobileBase {
 		if ( $isSpecialPage && !$isOverlay ) {
 			$pageHeading = '';
 		} else if ( $userLogin ) {
-			if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
-				$pageHeading = wfMessage( 'mobile-frontend-sign-up-heading' )->parse();
-			} else {
-				$pageHeading = wfMessage( 'mobile-frontend-sign-in-heading' )->parse();
-			}
+			$pageHeading = $this->getLoginPageHeading();
 		} else {
 			$pageHeading = $out->getPageTitle();
 		}
@@ -245,6 +273,29 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'prebodytext', $preBodyText );
 		$tpl->set( 'postbodytext', $postBodyText );
 		$tpl->set( 'htmlHeader', $htmlHeader );
+	}
+
+	/**
+	 * Determines what the heading of the login page should be based on the context
+	 * @return string
+	 */
+	protected function getLoginPageHeading() {
+		$req = $this->getRequest();
+		if ( $req->getVal( 'returnto' ) ) {
+			$title = Title::newFromText( $req->getVal( 'returnto' ) );
+			list( $returnto, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+		} else {
+			$returnto = '';
+		}
+
+		if ( $req->getVal( 'type' ) == 'signup' ) {
+			$key = 'mobile-frontend-sign-up-heading';
+		} else if ( $returnto == 'DonateImage' ) {
+			$key = 'mobile-frontend-donate-image-login';
+		} else {
+			$key = 'mobile-frontend-sign-in-heading';
+		}
+		return wfMessage( $key )->plain();
 	}
 
 	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
@@ -800,7 +851,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ( $this->data['isBetaGroupMember'] && $user->isAllowed( 'upload' ) ) { ?>
+			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 				<li class='iconUpload'>
 					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
 						title="<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>">

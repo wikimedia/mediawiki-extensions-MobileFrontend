@@ -18,6 +18,7 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 		$output->htmlClass = 'galleryPage';
 		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
+		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
 		if( $user->isAnon() ) {
 			$html = Html::openElement( 'div', array( 'class' => 'alert error' ) ) .
 				$this->msg( 'mobile-frontend-donate-image-anon' )->parse() .
