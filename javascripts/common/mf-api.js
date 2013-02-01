@@ -1,7 +1,9 @@
 ( function( M, $ ) {
 
-	var tokenCache = {};
+	var oop = M.require( 'oop' ), api;
 
+	// TODO: this might be dangerous and cause conflicts with other code
+	// should we move it to Api#ajax?
 	$.ajaxSetup( {
 		url: M.getApiUrl(),
 		dataType: 'json',
@@ -9,6 +11,11 @@
 			format: 'json'
 		}
 	} );
+
+	function Api() {
+		this.xhrs = [];
+		this.tokenCache = {};
+	}
 
 	/**
 	 * A wrapper for $.ajax() to be used when calling server APIs.
@@ -30,8 +37,8 @@
 	 * @param {Object} options Parameters passed to $.ajax()
 	 * @return {jQuery.Deferred} Object returned by $.ajax()
 	 */
-	function ajax( data, options ) {
-		var key;
+	Api.prototype.ajax = function( data, options ) {
+		var key, xhr;
 		options = $.extend( {}, options );
 
 		for ( key in data ) {
@@ -43,8 +50,10 @@
 		}
 		options.data = data;
 
-		return $.ajax( options );
-	}
+		xhr = $.ajax( options );
+		this.xhrs.push( xhr );
+		return xhr;
+	};
 
 	/**
 	 * A wrapper for $.ajax() to be used when calling server APIs.
@@ -54,10 +63,10 @@
 	 * @param {Object} options Parameters passed to $.ajax()
 	 * @return {jQuery.Deferred} Object returned by $.ajax()
 	 */
-	function get( data, options ) {
+	Api.prototype.get = function( data, options ) {
 		options = $.extend( {}, options, { type: 'GET' } );
-		return ajax( data, options );
-	}
+		return this.ajax( data, options );
+	};
 
 	/**
 	 * A wrapper for $.ajax() to be used when calling server APIs.
@@ -67,20 +76,29 @@
 	 * @param {Object} options Parameters passed to $.ajax()
 	 * @return {jQuery.Deferred} Object returned by $.ajax()
 	 */
-	function post( data, options ) {
+	Api.prototype.post = function( data, options ) {
 		options = $.extend( {}, options, { type: 'POST' } );
-		return ajax( data, options );
-	}
+		return this.ajax( data, options );
+	};
 
-	function getToken( tokenType, callback, endpoint ) {
+	/**
+	 * Abort all unfinished requests issued by this Api object.
+	 */
+	Api.prototype.abort = function() {
+		this.xhrs.forEach( function( xhr ) {
+			xhr.abort();
+		} );
+	};
+
+	Api.prototype.getToken = function( tokenType, callback, endpoint ) {
 		var data;
-		if ( !tokenCache[ endpoint ] ) {
-			tokenCache[ endpoint ] = {};
+		if ( !this.tokenCache[ endpoint ] ) {
+			this.tokenCache[ endpoint ] = {};
 		}
 		if ( !M.isLoggedIn() ) {
 			callback( {} ); // return no token
-		} else if ( tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
-			tokenCache[ endpoint ][ tokenType ].done( callback );
+		} else if ( this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
+			this.tokenCache[ endpoint ][ tokenType ].done( callback );
 		} else {
 			data = {
 				action: 'tokens',
@@ -89,18 +107,18 @@
 			if ( endpoint ) {
 				data.origin = M.getOrigin();
 			}
-			tokenCache[ endpoint ][ tokenType ] = ajax( data, {
+			this.tokenCache[ endpoint ][ tokenType ] = this.ajax( data, {
 				url: endpoint || M.getApiUrl(),
 				xhrFields: { 'withCredentials': true }
 			} ).done( callback );
 		}
-	}
+	};
 
-	M.define( 'api', {
-		ajax: ajax,
-		get: get,
-		post: post,
-		getToken: getToken
-	} );
+	Api.extend = oop.extend;
+
+	api = new Api();
+	api.Api = Api;
+
+	M.define( 'api', api );
 
 }( mw.mobileFrontend, jQuery ) );
