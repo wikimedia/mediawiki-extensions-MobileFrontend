@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//2SM\u003d",
+        "filename": "javascripts/common/mf-view.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-02-01T01:30:27Z",
+      "side": 1,
+      "message": "When options contains an \u0027el\u0027 property, \u0027this.$el\u0027 in the constructed object",
+      "revId": "388b58c5f0ca77a95b2aebd8deb291fd3685c4a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
