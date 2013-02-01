@@ -122,17 +122,7 @@
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' )
 		},
 
-		template: (
-			'<div class="content photoPreview">' +
-				'<p class="loading">{{loadingMessage}}</p>' +
-				'<textarea name="description" placeholder="{{descriptionPlaceholder}}"></textarea>' +
-				'<div class="license">{{{license}}}</div>' +
-			'</div>' +
-			'<div class="buttonBar">' +
-				'<button class="cancel">{{cancelButton}}</button>' +
-				'<button class="submit" disabled>{{submitButton}}</button>' +
-			'</div>'
-		),
+		template: M.template.get( 'photoUploadPreview' ),
 
 		initialize: function() {
 			var self = this,
@@ -170,16 +160,7 @@
 	} );
 
 	LeadPhoto = View.extend( {
-		template: (
-			'<div class="thumb tright">' +
-				'<div class="thumbinner" style="width:222px;">' +
-					'<a href="{{pageUrl}}" class="image">' +
-						'<img alt="{{caption}}" src="{{url}}" class="thumbimage">' +
-					'</a>' +
-					'<div class="thumbcaption">{{caption}}</div>' +
-				'</div>' +
-			'</div>'
-		),
+		template: M.template.get( 'leadPhoto' ),
 
 		animate: function() {
 			this.$el.hide().slideDown();
@@ -275,12 +256,7 @@
 	 * @event PhotoUploader#error
 	 */
 	PhotoUploader = View.extend( {
-		template: (
-			'<div class="button photo">' +
-				'<div>{{buttonCaption}}</div>' +
-				'<input name="file" type="file">' +
-			'</div>'
-		),
+		template: M.template.get( 'photoUploader' ),
 
 		initialize: function( options ) {
 			var self = this, $input = this.$( 'input' ), preview;
