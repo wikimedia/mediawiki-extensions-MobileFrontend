@@ -1,76 +1,62 @@
 @import "../mf-mixins.less";
 
-#content_wrapper .thumb.photouploader {
-	padding: 8px;
+.button.photo {
+	position: relative;display: table;
+	padding: 0;
+	margin: 0 auto;
+	text-align: left; /* override text-align center - chrome not clickable */
 
-	.errormsg,
-	.msg {
-		display: none;
+	input, div {
+		cursor: pointer;
 	}
 
-	&.uploading {
-		.msg {
-			display: block;
-		}
+	input {
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
 	}
 
-	&.error {
-		.errormsg {
-			color: @redBase;
-			display: block;
-			margin-bottom: 8px;
-		}
+	div {
+		padding: .8*@baseFontSize 10px .8*@baseFontSize 44px;
+		background: url(images/camera.png) no-repeat 10px 50%;
+		background-size: 24px auto;
 	}
+}
+
+#content .button.photo {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.photoPreview {
+	@height: 100px;
 
 	img {
-		max-width: 100%; // FIXME: this is not consistent with the default thumbnail size
+		height: @height;
 	}
 
-	.camera {
-		position: relative;
-		text-align: left; /* override text-align center - chrome not clickable */
-
-		form {
-			position: relative;
-			height: 24px;
-			width: 100%;
-			background: url(images/5-content-new-picture.png) no-repeat;
-			background-size: auto 24px;
-			background-position: left top;
-
-			input {
-				&.photoupload {
-					opacity: 0; /* hide default */
-					z-index: 2;
-					width: 100%;
-				}
-			}
-
-			p {
-				position: absolute;
-				left: 48px;
-				bottom: 0;
-				margin-bottom: 0;
-			}
-		}
+	.loading {
+		background-position: 0 50%;
+		padding: 0 0 0 48px;
+		margin: 0;
+		.background-size( auto, 32px );
+		line-height: @height;
 	}
 
-	.editArea {
-		input {
-			display: block;
-			width: 100%;
-			.box-sizing( border-box );
-			height: 2em;
-			margin-top: 8px;
-			margin-bottom: 8px;
-		}
+	.license {
+		background: url('images/cc-by-sa.png') no-repeat;
+		padding: 20px 0 0;
+		margin: 1em 0;
+		color: #707070;
+		font-size: .75em;
+		line-height: 150%;
+	}
 
-		button {
-			width: 48%;
-		}
-
-		button.green {
-			float: right;
-		}
+	textarea {
+		width: 100%;
+		height: 5em;
 	}
 }

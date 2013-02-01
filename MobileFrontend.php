@@ -212,6 +212,7 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 	),
 	'scripts' => array(
+		'javascripts/externals/hogan.js',
 		'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
 		'javascripts/common/mf-settings.js',
@@ -252,17 +253,22 @@ $wgResourceModules['mobile.beta.jquery'] = $wgMFMobileResourceBoilerplate + arra
 		'mobile-frontend-hide-button',
 
 		// mf-photo.js
+		'mobile-frontend-photo-license',
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
 		'mobile-frontend-photo-upload-error',
-		'mobile-frontend-photo-upload-progress',
+		'mobile-frontend-photo-upload-success-article',
 		'mobile-frontend-photo-caption-placeholder',
 		'mobile-frontend-image-loading',
 		'mobile-frontend-image-uploading',
-		'mobile-frontend-image-saving-to-article',
 		'mobile-frontend-photo-upload',
 		'mobile-frontend-photo-upload-comment',
+		'mobile-frontend-photo-submit',
+		'mobile-frontend-photo-cancel',
+
+		// donateimage.js
 		'mobile-frontend-photo-upload-generic',
+		'mobile-frontend-photo-upload-success-generic',
 
 		// for mf-languages.js
 		'mobile-frontend-language-site-choose',
@@ -361,7 +367,9 @@ $wgResourceModules['mobile.production-jquery'] = $wgMFMobileResourceBoilerplate 
 		'stylesheets/modules/mf-cleanuptemplates.css',
 	),
 	'scripts' => array(
+		'javascripts/externals/hogan.js',
 		'javascripts/common/mf-api.js',
+		'javascripts/common/mf-view.js',
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',

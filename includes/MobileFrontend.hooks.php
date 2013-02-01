@@ -121,11 +121,13 @@ class MobileFrontendHooks {
 			),
 			'scripts' => array(
 				'tests/externals/sinon.js',
+				'javascripts/externals/hogan.js',
 				'tests/js/fixtures.js', 'javascripts/common/mf-application.js',
 				'javascripts/common/jquery-shim.js', 'tests/js/test_jQueryShim.js',
 				'javascripts/common/mf-history.js', 'tests/js/test_mf-history.js',
 				'tests/js/test_application.js',
 				'javascripts/common/mf-api.js', 'tests/js/test_mf-api.js',
+				'javascripts/common/mf-view.js', 'tests/js/test_mf-view.js',
 				'javascripts/modules/mf-search.js', 'tests/js/test_beta_opensearch.js',
 				'javascripts/common/mf-settings.js', 'tests/js/test_settings.js',
 				'javascripts/modules/mf-banner.js', 'tests/js/test_banner.js',

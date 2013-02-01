@@ -78,11 +78,11 @@ sub,
 sup {
   font-size: 0.75em;
 }
+.content {
+  margin: 14pt 23px 0 23px;
+}
 #content_wrapper {
   position: relative;
-}
-#content_wrapper .content {
-  margin: 14pt 23px 0 23px;
 }
 #content_wrapper.noMargins > .content {
   margin: 0;

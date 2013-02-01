@@ -1,5 +1,5 @@
 /* reuses https://github.com/wikimedia/agora */
-a.button,
+.button,
 button,
 input[type=submit] {
   display: inline-block;
@@ -20,7 +20,7 @@ input[type=submit] {
   background-image: -webkit-linear-gradient(top, #3670c8 0, #3366bb 100%);
   background-image: linear-gradient(#3670c8 0, #3366bb 100%);
 }
-a.button:hover,
+.button:hover,
 button:hover,
 input[type=submit]:hover {
   background-color: #3f77d7;
@@ -30,7 +30,7 @@ input[type=submit]:hover {
   background-image: -webkit-linear-gradient(top, #4c84da 0, #3f77d7 100%);
   background-image: linear-gradient(#4c84da 0, #3f77d7 100%);
 }
-a.button:active,
+.button:active,
 button:active,
 input[type=submit]:active {
   background-color: #2a549c;
@@ -40,16 +40,16 @@ input[type=submit]:active {
   background-image: -webkit-linear-gradient(top, #2d5ea9 0, #2a549c 100%);
   background-image: linear-gradient(#2d5ea9 0, #2a549c 100%);
 }
-a.button:disabled,
+.button:disabled,
 button:disabled,
 input[type=submit]:disabled,
-a.button:disabled.hover,
+.button:disabled.hover,
 button:disabled.hover,
 input[type=submit]:disabled.hover,
-a.button.disabled,
+.button.disabled,
 button.disabled,
 input[type=submit].disabled,
-a.button.disabled:hover,
+.button.disabled:hover,
 button.disabled:hover,
 input[type=submit].disabled:hover {
   color: white;
@@ -62,118 +62,16 @@ input[type=submit].disabled:hover {
   background-image: linear-gradient(#7297d7 0, #7297d7 100%);
   border-color: #5e89d1;
 }
-a.button.languageSelector,
+.button.languageSelector,
 button.languageSelector,
 input[type=submit].languageSelector {
   margin-top: 14pt;
 }
-a.button.cancel,
+.button.cancel,
 button.cancel,
 input[type=submit].cancel {
-  border: 1px #ba0101 solid;
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #cc0000;
-  background-image: -moz-linear-gradient(top, #e42929 0, #cc0000 100%);
-  background-image: -ms-linear-gradient(top, #e42929 0, #cc0000 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e42929), color-stop(100%, #cc0000));
-  background-image: -webkit-linear-gradient(top, #e42929 0, #cc0000 100%);
-  background-image: linear-gradient(#e42929 0, #cc0000 100%);
-}
-a.button.cancel:hover,
-button.cancel:hover,
-input[type=submit].cancel:hover {
-  background-color: #e82b2b;
-  background-image: -moz-linear-gradient(top, #ef3838 0, #e82b2b 100%);
-  background-image: -ms-linear-gradient(top, #ef3838 0, #e82b2b 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ef3838), color-stop(100%, #e82b2b));
-  background-image: -webkit-linear-gradient(top, #ef3838 0, #e82b2b 100%);
-  background-image: linear-gradient(#ef3838 0, #e82b2b 100%);
-}
-a.button.cancel:active,
-button.cancel:active,
-input[type=submit].cancel:active {
-  background-color: #a70000;
-  background-image: -moz-linear-gradient(top, #a70000 0, #a70000 100%);
-  background-image: -ms-linear-gradient(top, #a70000 0, #a70000 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a70000), color-stop(100%, #a70000));
-  background-image: -webkit-linear-gradient(top, #a70000 0, #a70000 100%);
-  background-image: linear-gradient(#a70000 0, #a70000 100%);
-}
-a.button.cancel:disabled,
-button.cancel:disabled,
-input[type=submit].cancel:disabled,
-a.button.cancel:disabled.hover,
-button.cancel:disabled.hover,
-input[type=submit].cancel:disabled.hover,
-a.button.cancel.disabled,
-button.cancel.disabled,
-input[type=submit].cancel.disabled,
-a.button.cancel.disabled:hover,
-button.cancel.disabled:hover,
-input[type=submit].cancel.disabled:hover {
-  color: white;
-  background-color: #eb6f6f;
-  background-image: -moz-linear-gradient(top, #eb6f6f 0, #eb6f6f 100%);
-  background-image: -ms-linear-gradient(top, #eb6f6f 0, #eb6f6f 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eb6f6f), color-stop(100%, #eb6f6f));
-  background-image: -webkit-linear-gradient(top, #eb6f6f 0, #eb6f6f 100%);
-  background-image: linear-gradient(#eb6f6f 0, #eb6f6f 100%);
-  border-color: #e75959;
-}
-a.button.confirm,
-button.confirm,
-input[type=submit].confirm {
-  border: 1px #0f9b3b solid;
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #008740;
-  background-image: -moz-linear-gradient(top, #00974b 0, #008740 100%);
-  background-image: -ms-linear-gradient(top, #00974b 0, #008740 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00974b), color-stop(100%, #008740));
-  background-image: -webkit-linear-gradient(top, #00974b 0, #008740 100%);
-  background-image: linear-gradient(#00974b 0, #008740 100%);
-}
-a.button.confirm:hover,
-button.confirm:hover,
-input[type=submit].confirm:hover {
-  background-color: #119750;
-  background-image: -moz-linear-gradient(top, #10a65b 0, #119750 100%);
-  background-image: -ms-linear-gradient(top, #10a65b 0, #119750 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #10a65b), color-stop(100%, #119750));
-  background-image: -webkit-linear-gradient(top, #10a65b 0, #119750 100%);
-  background-image: linear-gradient(#10a65b 0, #119750 100%);
-}
-a.button.confirm:active,
-button.confirm:active,
-input[type=submit].confirm:active {
-  background-color: #007236;
-  background-image: -moz-linear-gradient(top, #007236 0, #007236 100%);
-  background-image: -ms-linear-gradient(top, #007236 0, #007236 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #007236), color-stop(100%, #007236));
-  background-image: -webkit-linear-gradient(top, #007236 0, #007236 100%);
-  background-image: linear-gradient(#007236 0, #007236 100%);
-}
-a.button.confirm:disabled,
-button.confirm:disabled,
-input[type=submit].confirm:disabled,
-a.button.confirm:disabled.hover,
-button.confirm:disabled.hover,
-input[type=submit].confirm:disabled.hover,
-a.button.confirm.disabled,
-button.confirm.disabled,
-input[type=submit].confirm.disabled,
-a.button.confirm.disabled:hover,
-button.confirm.disabled:hover,
-input[type=submit].confirm.disabled:hover {
-  color: white;
-  background-color: #2ca368;
-  background-image: -moz-linear-gradient(top, #2ca368 0, #2ca368 100%);
-  background-image: -ms-linear-gradient(top, #2ca368 0, #2ca368 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ca368), color-stop(100%, #2ca368));
-  background-image: -webkit-linear-gradient(top, #2ca368 0, #2ca368 100%);
-  background-image: linear-gradient(#2ca368 0, #2ca368 100%);
-  border-color: #278f5b;
+  background: #999;
+  border: 1px #777 solid;
 }
 .header a.button {
   font-size: 1em;
@@ -695,15 +593,31 @@ body {
 /* Notifications */
 #mf-notification {
   position: fixed;
-  bottom: 0;
+  /* -2px to avoid a weird glitch in some browsers where the popup moves
+	 * slightly when scrolling */
+
+  bottom: -2px;
   left: 0;
   right: 0;
   background-color: #E4E4E4;
-  box-shadow: 0 -20px 10px -16px #aaaaaa;
+  box-shadow: 0 -2px 8px 0 rgba(50, 50, 50, 0.35);
   word-break: break-word;
-  line-height: 1.4em;
-  font-size: 0.8em;
+  font-size: 0.9em;
   z-index: 3;
+}
+#mf-notification.noButton button {
+  display: none;
+}
+#mf-notification.loading {
+  background-position: 23px 50%;
+  background-repeat: no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 32px auto;
+  -o-background-size: 32px auto;
+  -webkit-background-size: 32px auto;
+  background-size: 32px auto;
+  padding: 0 0 0 53px;
 }
 #mf-notification.toast {
   left: 10%;
@@ -723,6 +637,13 @@ body {
 #mf-notification.toast button {
   display: none;
 }
+#mf-notification.toast.error {
+  background-image: url(images/error.png);
+  background-position: 16px 50%;
+  background-repeat: no-repeat;
+  padding-left: 5%;
+  width: 75%;
+}
 #mf-notification.toast.locked button {
   display: block;
   top: 0.8em;
@@ -733,7 +654,7 @@ body {
 }
 #mf-notification div {
   position: relative;
-  padding: 22px 38px 22px 22px;
+  padding: 16px 38px 18px 22px;
   /* 38px is 22px padding + close button icon 16px */
 
 }

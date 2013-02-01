@@ -7,6 +7,7 @@
 		"_evq": true,
 		"jQuery": true,
 		"jQueryShim": true,
+		"Hogan": true,
 		"mw": true,
 		"mwMobileFrontendConfig": true,
 
