@@ -92,6 +92,12 @@ $specialPageAliases['nl'] = array(
 	'Nearby' => array( 'InDeBuurt' ),
 );
 
+/** Polish (polski) */
+$specialPageAliases['pl'] = array(
+	'DonateImage' => array( 'Prześlij_zdjęcie' ),
+	'Nearby' => array( 'W_pobliżu' ),
+);
+
 /** Sicilian (sicilianu) */
 $specialPageAliases['scn'] = array(
 	'MobileFeedback' => array( 'FeedbackMobile' ),
