@@ -23,7 +23,7 @@ var api = M.require( 'api' ), m = ( function() {
 		data = {
 			action: 'query',
 			titles: titles,
-			origin: M.getOrigin(),
+			origin: corsUrl ? M.getOrigin() : undefined,
 			prop: 'revisions',
 			rvprop: 'content'
 		};
