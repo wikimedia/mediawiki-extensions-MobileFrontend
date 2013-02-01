@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//2SU\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-01T00:31:56Z",
+      "side": 1,
+      "message": "Use View! ;)",
+      "revId": "33d4ba6bb0a8a788ee0dbac7bfedf4c6c17ab0ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
