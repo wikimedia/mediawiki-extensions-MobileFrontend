@@ -969,11 +969,6 @@ class SkinMobileTemplate extends BaseTemplate {
 			$jsconfig = $this->addMessages( $jsconfig );
 		}
 
-		if ( $user->isLoggedIn() ) {
-			$jsconfig['messages']['mobile-frontend-logged-in-toast-notification'] =
-				wfMessage( 'mobile-frontend-logged-in-toast-notification', $user->getName() )->parse();
-		}
-
 		if ( $this->data['isMainPage'] ) {
 			// FIXME: move parsing into javascript
 			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage-text'
