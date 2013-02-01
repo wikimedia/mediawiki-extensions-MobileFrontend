@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//2Ow\u003d",
+        "filename": "includes/modules/MFResourceLoaderFileModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-01T03:19:38Z",
+      "side": 1,
+      "message": "Why are you assigning $key to a new variable and then not using $key anywhere? Sorry for not catching that in my previous review.",
+      "revId": "09e6eb2fef4faa1353dcbf77639c50557ab25bd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
