@@ -108,10 +108,10 @@
 				'<p class="loading">{{loadingMessage}}</p>' +
 				'<textarea name="description" placeholder="{{descriptionPlaceholder}}"></textarea>' +
 				'<div class="license">{{{license}}}</div>' +
-				'<div class="buttonBar">' +
-					'<button class="cancel">{{cancelButton}}</button>' +
-					'<button class="submit" disabled>{{submitButton}}</button>' +
-				'</div>' +
+			'</div>' +
+			'<div class="buttonBar">' +
+				'<button class="cancel">{{cancelButton}}</button>' +
+				'<button class="submit" disabled>{{submitButton}}</button>' +
 			'</div>'
 		),
 

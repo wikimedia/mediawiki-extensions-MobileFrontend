@@ -28,20 +28,17 @@
   width: 100%;
   margin-bottom: 10px;
 }
+.photoPreview {
+  padding-bottom: 70px !important;
+}
 .photoPreview img {
-  height: 100px;
+  height: 90px;
 }
 .photoPreview .loading {
   background-position: 0 50%;
   padding: 0 0 0 48px;
   margin: 0;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: auto 32px;
-  -o-background-size: auto 32px;
-  -webkit-background-size: auto 32px;
-  background-size: auto 32px;
-  line-height: 100px;
+  line-height: 90px;
 }
 .photoPreview .license {
   background: url('images/cc-by-sa.png') no-repeat;
@@ -53,5 +50,10 @@
 }
 .photoPreview textarea {
   width: 100%;
-  height: 5em;
+  height: 6em;
+}
+.photoPreview textarea::-webkit-input-placeholder,
+.photoPreview textarea::-moz-placeholder {
+  text-align: center;
+  line-height: 6em;
 }

@@ -32,7 +32,9 @@
 }
 
 .photoPreview {
-	@height: 100px;
+	@height: 90px;
+
+	padding-bottom: 70px !important;
 
 	img {
 		height: @height;
@@ -42,7 +44,6 @@
 		background-position: 0 50%;
 		padding: 0 0 0 48px;
 		margin: 0;
-		.background-size( auto, 32px );
 		line-height: @height;
 	}
 
@@ -57,6 +58,11 @@
 
 	textarea {
 		width: 100%;
-		height: 5em;
+		height: 6em;
+
+		&::-webkit-input-placeholder, &::-moz-placeholder {
+			text-align: center;
+			line-height: 6em;
+		}
 	}
 }
