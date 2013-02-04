@@ -100,7 +100,7 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 
 		// haaaacccckkkkk
 		$doc = new DOMDocument();
-		$doc->loadHtml( $diff );
+		$doc->loadHtml( '<?xml encoding="utf-8">' . $diff );
 		$xpath = new DOMXpath( $doc );
 		$els = $xpath->query( "//td[@class='diff-deletedline'] | //td[@class='diff-addedline'] | //del | //ins" );
 		$out .= Html::element( 'div', array( 'class' => 'heading' ),
