@@ -16,6 +16,24 @@
       "revId": "5cf29efdd097ceb5d885b98237cbf93d27ae570e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//z4I\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 927,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-04T23:00:49Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/47104/1 hasn\u0027t been merged yet.",
+      "parentUuid": "AAADiH//0Ig\u003d",
+      "revId": "5cf29efdd097ceb5d885b98237cbf93d27ae570e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
