@@ -112,11 +112,6 @@ function efMobileFrontend_Setup() {
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 
-	// in absence of ResourceLoader add additional styles
-	if ( !$wgMFEnableResourceLoader ) {
-		$wgResourceModules['mobile.beta']['styles'][] = 'stylesheets/specials/watchlist.css';
-	}
-
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
 	}
@@ -147,6 +142,7 @@ function efExtMobileFrontendUnitTests( &$files ) {
 	$files[] = "$dir/ApiParseExtenderTest.php";
 	$files[] = "$dir/MobileContextTest.php";
 	$files[] = "$dir/MobileFrontendTest.php";
+	$files[] = "$dir/SkinMobileTest.php";
 	$files[] = "$dir/DeviceDetectionTest.php";
 	$files[] = "$dir/HtmlFormatterTest.php";
 	$files[] = "$dir/MobileFormatterTest.php";
@@ -174,6 +170,7 @@ $wgResourceModules['mobile.file.styles'] = $wgMFMobileResourceBoilerplate + arra
 	'styles' => array(
 		'stylesheets/file/filepage.css',
 	),
+	'mobileTargets' => array(),
 );
 
 $wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + array(
@@ -181,16 +178,14 @@ $wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + arr
 	'scripts' => array(
 		'javascripts/file/filepage.js'
 	),
+	'mobileTargets' => array(),
 );
 
 $wgResourceModules['mobile.head'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(),
 	'scripts' => array( 'javascripts/common/main.js' ),
-);
-
-$wgResourceModules['mobile.jqueryshim'] = $wgMFMobileResourceBoilerplate + array(
-	'styles' => array(),
-	'scripts' => array( 'javascripts/common/jquery-shim.js' ),
+	'position' => 'top',
+	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
 $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
@@ -209,6 +204,8 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 	),
 	'scripts' => array(
 	),
+	'position' => 'top',
+	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
 $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
@@ -222,20 +219,29 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-banner.js',
 		'javascripts/modules/mf-stop-mobile-redirect.js',
 	),
+	'position' => 'top',
+	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
 $wgResourceModules['mobile.beta.dependencies'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array( 'mobile.startup' ),
+	'dependencies' => array(
+		'mobile.stable',
+	),
 	'messages' => array(
 		// mf-photo.js
 		'mobile-frontend-photo-license' => array( 'parse' ),
 	),
 	'localBasePath' => $localBasePath,
 	'class' => 'MFResourceLoaderModule',
+	'mobileTargets' => array( 'beta', 'alpha' ),
 );
 
-$wgResourceModules['mobile.beta.jquery'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array( 'mobile.production-jquery', 'mediawiki.jqueryMsg' ),
+$wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.stable',
+		'mobile.beta.dependencies',
+		'mediawiki.jqueryMsg',
+	),
 	'styles' => array(
 		'stylesheets/modules/mf-watchlist.css',
 		'stylesheets/modules/mf-photo.css',
@@ -302,9 +308,10 @@ $wgResourceModules['mobile.beta.jquery'] = $wgMFMobileResourceBoilerplate + arra
 		'mobile-frontend-search-noresults',
 		'mobile-frontend-overlay-escape',
 	),
+	'mobileTargets' => array( 'beta', 'alpha' ),
 );
 
-$wgResourceModules['mobile.production-only'] = $wgMFMobileResourceBoilerplate + array(
+$wgResourceModules['mobile.stable-only'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'messages' => array(
 		// for mf-toggle.js
@@ -322,6 +329,7 @@ $wgResourceModules['mobile.production-only'] = $wgMFMobileResourceBoilerplate + 
 		'javascripts/modules/mf-toggle.js',
 		'javascripts/modules/mf-search.js',
 	),
+	'mobileTargets' => array( 'stable' ),
 );
 
 $wgResourceModules['mobile.action.edit'] = $wgMFMobileResourceBoilerplate + array(
@@ -336,6 +344,7 @@ $wgResourceModules['mobile.action.edit'] = $wgMFMobileResourceBoilerplate + arra
 	'scripts' => array(
 		'javascripts/actions/mf-edit.js',
 	),
+	'mobileTargets' => array(),
 );
 
 $wgResourceModules['mobile.action.history'] = $wgMFMobileResourceBoilerplate + array(
@@ -345,6 +354,7 @@ $wgResourceModules['mobile.action.history'] = $wgMFMobileResourceBoilerplate + a
 	'scripts' => array(
 		'stylesheets/actions/mf-history.css',
 	),
+	'mobileTargets' => array(),
 );
 
 $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
@@ -371,9 +381,10 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
 	),
+	'mobileTargets' => array( 'alpha' ),
 );
 
-$wgResourceModules['mobile.production-jquery'] = $wgMFMobileResourceBoilerplate + array(
+$wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
 		'stylesheets/modules/mf-references.css',
@@ -397,13 +408,15 @@ $wgResourceModules['mobile.production-jquery'] = $wgMFMobileResourceBoilerplate 
 		// mf-notification.js
 		'mobile-frontend-drawer-cancel',
 		'mobile-frontend-logged-in-toast-notification',
-	)
+	),
+	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
 $wgResourceModules['mobile.site'] = array(
 	'dependencies' => array( 'mobile.startup' ),
 	'class' => 'MobileFrontendSiteModule',
 	'targets' => 'mobile',
+	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
 // Resources to be loaded on desktop version of site

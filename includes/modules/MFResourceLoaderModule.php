@@ -7,6 +7,7 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	protected $parsedMessages = array();
 	protected $messages = array();
 	protected $localBasePath;
+	protected $targets = array( 'mobile' );
 
 	/**
 	 * Registers core modules and runs registration hooks.

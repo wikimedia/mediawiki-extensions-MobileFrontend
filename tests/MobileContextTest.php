@@ -336,4 +336,18 @@ class MobileContextTest extends MediaWikiTestCase {
 		$this->assertTrue( MobileContext::isLocalUrl( $wgServer ) );
 		$this->assertFalse( MobileContext::isLocalUrl( 'http://www.google.com' ) );
 	}
+
+	public function testDisableIncompatibleJs() {
+		global $wgUseSiteJs, $wgAllowUserJs;
+		$wgUseSiteJsOrig = $wgUseSiteJs;
+		$wgAllowUserJsOrig = $wgAllowUserJs;
+		$wgUseSiteJs = true;
+		$wgAllowUserJs = true;
+		$disablsIncompatibleJs = $this->getMethod( 'disableIncompatibleJs' );
+		$disablsIncompatibleJs->invoke( MobileContext::singleton() );
+		$this->assertFalse( $wgAllowUserJs );
+		$this->assertFalse( $wgUseSiteJs );
+		$wgUseSiteJs = $wgUseSiteJsOrig;
+		$wgAllowUserJs = $wgAllowUserJsOrig;
+	}
 }
