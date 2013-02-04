@@ -44,5 +44,5 @@ var m = ( function() {
 		initBanner: initBanner
 	};
 }());
-M.registerModule( 'banner', m );
+M.define( 'banner', m );
 }( mw.mobileFrontend ));

@@ -1,10 +1,10 @@
-(function( MobileFrontend ) {
-MobileFrontend.navigation = (function( $ ) {
-	var u = MobileFrontend.utils, mfePrefix = MobileFrontend.prefix,
+(function( M ) {
+
+var m = ( function( $ ) {
+	var u = M.utils, mfePrefix = M.prefix,
 		lastScrollTopPosition = 0,
-		M = MobileFrontend,
 		$drawer,
-		message = MobileFrontend.message;
+		message = M.message;
 
 	function getOverlay() {
 		return document.getElementById( 'mw-mf-overlay' );
@@ -13,7 +13,7 @@ MobileFrontend.navigation = (function( $ ) {
 	function closeOverlay( ) {
 		$( 'html' ).removeClass( 'overlay' );
 		window.scrollTo( document.body.scrollLeft, lastScrollTopPosition );
-		MobileFrontend.history.replaceHash( '#' );
+		M.history.replaceHash( '#' );
 	}
 
 	function showOverlay() {
@@ -158,4 +158,7 @@ MobileFrontend.navigation = (function( $ ) {
 		showOverlay: showOverlay
 	};
 }( jQuery ));
+
+M.define( 'navigation', m );
+
 }( mw.mobileFrontend ));

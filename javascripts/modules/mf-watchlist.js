@@ -1,7 +1,7 @@
 (function( M, $ ) {
 
 var api = M.require( 'api' ), w = ( function() {
-	var lastToken, nav = M.navigation;
+	var lastToken, nav = M.require( 'navigation' ), popup = M.require( 'notifications' );
 
 	function logWatchEvent( eventType ) {
 		var types = [ 'watchlist', 'unwatchlist', 'anonCTA' ],
@@ -33,7 +33,7 @@ var api = M.require( 'api' ), w = ( function() {
 		}
 
 		function report() {
-			M.navigation.popup.show( msg, popupClass );
+			popup.show( msg, popupClass );
 		}
 
 		$.ajax( {
@@ -176,7 +176,7 @@ var api = M.require( 'api' ), w = ( function() {
 
 	function init( container, title ) {
 		var pageTitle = M.getConfig( 'title' );
-		container = container || M.navigation.getPageMenu();
+		container = container || nav.getPageMenu();
 		title = title || pageTitle;
 		$( window ).bind( 'mw-mf-page-loaded', function( ev, article ) {
 			initWatchListIcon( container, article.title );
@@ -192,6 +192,6 @@ var api = M.require( 'api' ), w = ( function() {
 	};
 }());
 
-M.registerModule( 'watchlist', w );
+M.define( 'watchlist', w );
 
 }( mw.mobileFrontend, jQuery ));

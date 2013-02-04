@@ -16,4 +16,4 @@ test("Standard", function() {
 	strictEqual( $( '#mf-notification div a' ).text(), 'test reference' );
 });
 
-} )( jQuery, mw.mobileFrontend.getModule( 'references' ) );
+} )( jQuery, mw.mobileFrontend.require( 'references' ) );

@@ -48,6 +48,6 @@ var m = ( function() {
 	};
 }() );
 
-M.registerModule( 'desktop-redirect', m );
+M.define( 'desktop-redirect', m );
 
 }( mw.mobileFrontend ) );

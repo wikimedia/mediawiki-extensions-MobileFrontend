@@ -2,6 +2,8 @@
 
 	var View = M.require( 'view' ),
 		api = M.require( 'api' ),
+		nav = M.require( 'navigation' ),
+		popup = M.require( 'notifications' ),
 		$page = $( '#content' ),
 		endpoint = M.getConfig( 'photo-upload-endpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
@@ -233,17 +235,17 @@
 
 				preview.
 					on( 'cancel', function() {
-						M.navigation.closeOverlay();
+						nav.closeOverlay();
 					} ).
 					on( 'submit', function() {
 						var description = preview.getDescription();
 
 						self.emit( 'start' );
-						M.navigation.closeOverlay();
-						M.navigation.popup.show( mw.msg( 'mobile-frontend-image-uploading' ), 'locked noButton loading' ).
+						nav.closeOverlay();
+						popup.show( mw.msg( 'mobile-frontend-image-uploading' ), 'locked noButton loading' ).
 							find( 'a' ).on( 'click', function() {
 								// TODO: abort requests (next commit)
-								M.navigation.popup.close( true );
+								popup.close( true );
 							} );
 
 						save( {
@@ -252,15 +254,15 @@
 							insertInPage: options.insertInPage,
 							pageTitle: options.pageTitle
 						}, function( fileName ) {
-							M.navigation.popup.close();
+							popup.close();
 
 							if ( !fileName ) {
-								M.navigation.popup.show( mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
+								popup.show( mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
 								self.emit( 'error' );
 								return;
 							}
 
-							M.navigation.popup.show( options.successMessage, 'toast ' );
+							popup.show( options.successMessage, 'toast ' );
 
 							self.emit( 'success', {
 								fileName: fileName,
@@ -278,7 +280,8 @@
 					var fileReader = new FileReader();
 					preview = new PhotoUploaderPreview();
 					// FIXME: replace if we make overlay an object (and inherit from it?)
-					M.navigation.createOverlay( null, preview.$el );
+
+					nav.createOverlay( null, preview.$el );
 					// skip the URL bar if possible
 					window.scrollTo( 0, 1 );
 

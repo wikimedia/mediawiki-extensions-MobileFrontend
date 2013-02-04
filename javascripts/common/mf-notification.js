@@ -1,5 +1,6 @@
 ( function( M, $ ) {
-	M.navigation.popup = ( function() {
+
+	var m = ( function() {
 		var calculatePosition = function() {};
 
 		if ( !M.supportsPositionFixed() ) {
@@ -81,5 +82,7 @@
 		};
 
 	}() );
+
+	M.define( 'notifications', m );
 
 }( mw.mobileFrontend, jQuery ) );

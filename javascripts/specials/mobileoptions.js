@@ -42,6 +42,6 @@ var m = ( function() {
 	};
 }() );
 
-M.registerModule( 'mobileoptions', m );
+M.define( 'mobileoptions', m );
 
 }( mw.mobileFrontend ) );

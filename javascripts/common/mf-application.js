@@ -11,10 +11,9 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 mw.mobileFrontend = (function() {
-	var u, modules = [],
+	var u,
 		scrollY,
-		moduleNamespace = {},
-		_modules = {}, // FIXME: remove _ when registerModule() and getModule() are gone
+		modules = {},
 		$ = typeof jQuery === 'undefined' ? false : jQuery,
 		doc = document.documentElement;
 
@@ -25,10 +24,10 @@ mw.mobileFrontend = (function() {
 	 * @return {Object} Required module, can be any JavaScript object.
 	 */
 	function require( id ) {
-		if ( !_modules[ id ] ) {
+		if ( !modules[ id ] ) {
 			throw new Error( 'Module not found: ' + id );
 		}
-		return _modules[ id ];
+		return modules[ id ];
 	}
 
 	/**
@@ -38,10 +37,14 @@ mw.mobileFrontend = (function() {
 	 * @param {Object} obj Defined module body, can be any JavaScript object.
 	 */
 	function define( id, obj ) {
-		if ( _modules[ id ] ) {
+		if ( modules[ id ] ) {
 			throw new Error( 'Module already exists: ' + id );
 		}
-		_modules[ id ] = obj;
+		modules[ id ] = obj;
+		// FIXME: modules should not self initialise
+		if ( obj.init && getConfig( 'initOnDefine', true ) ) {
+			obj.init();
+		}
 	}
 
 	/**
@@ -92,43 +95,6 @@ mw.mobileFrontend = (function() {
 		return support;
 	}
 
-	// FIXME: deprecate and remove in favor of define()
-	function registerModule( moduleName, module ) {
-		modules.push( moduleName );
-		if ( module ) {
-			moduleNamespace[ moduleName ] = module;
-		} else { // for backwards compatibility
-			moduleNamespace[ moduleName ] = mw.mobileFrontend[ moduleName ];
-		}
-	}
-
-	// FIXME: deprecate and remove in favor of require()
-	function getModule( name ) {
-		return moduleNamespace[ name ] || mw.mobileFrontend[ name ];
-	}
-
-	/**
-	 * @deprecated
-	 */
-	function initModules() {
-		var module, i;
-		for( i = 0; i < modules.length; i++ ) {
-			module = getModule( modules[ i ] );
-			if( module && module.init ) {
-				try {
-					module.init();
-				} catch( e ) {
-					// module failed to load for some reason
-				}
-			}
-		}
-		u( document.documentElement ).removeClass( 'page-loading' );
-		if ( typeof jQuery !== 'undefined' ) {
-			$( window ).trigger( 'mw-mf-ready' );
-			$.toJSON = typeof JSON !== 'undefined' ? JSON.stringify : $.noop; // FIXME: mediawiki provides jquery-json.js which some modules expect
-		}
-	}
-
 	// Try to scroll and hide URL bar
 	scrollY = window.scrollY || 0;
 	if( !window.location.hash && scrollY < 10 ) {
@@ -176,9 +142,8 @@ mw.mobileFrontend = (function() {
 			}
 		}
 		fixBrowserBugs();
+		u( document.documentElement ).removeClass( 'page-loading' );
 
-		// FIXME: deprecate and remove (modules should init themselves)
-		initModules();
 		// FIXME: kill with fire when dynamic sections are in stable
 		if ( !getConfig( 'beta' ) ) {
 			triggerPageReadyHook( getConfig( 'title' ) );
@@ -243,14 +208,12 @@ mw.mobileFrontend = (function() {
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getApiUrl: getApiUrl,
-		getModule: getModule,
 		getOrigin: getOrigin,
 		getPageArrayFromApiResponse: getPageArrayFromApiResponse,
 		isLoggedIn: isLoggedIn,
 		log: log,
 		message: message,
 		prefix: 'mw-mf-',
-		registerModule: registerModule,
 		getConfig: getConfig,
 		setConfig: setConfig,
 		supportsPositionFixed: supportsPositionFixed,

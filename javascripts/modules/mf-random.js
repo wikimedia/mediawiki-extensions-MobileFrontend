@@ -66,6 +66,6 @@ var m = ( function() {
 	};
 }() );
 
-M.registerModule( 'random-dynamic', m );
+M.define( 'random-dynamic', m );
 
 } )( mw.mobileFrontend, jQuery );

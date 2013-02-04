@@ -4,7 +4,7 @@ var module = (function() {
 	var STEP_SIZE = 150;
 
 	function initTables( ev, container ) {
-		var nav = M.getModule( 'navigation' ),
+		var nav = M.require( 'navigation' ),
 			$tables = container ? $( container ).find( 'table' ) : $( 'table' );
 
 		$tables.each( function( i ) {
@@ -62,6 +62,6 @@ var module = (function() {
 	};
 }() );
 
-M.registerModule( 'tables', module );
+M.define( 'tables', module );
 
 }( mw.mobileFrontend, jQuery ));

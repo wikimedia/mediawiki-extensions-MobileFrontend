@@ -13,4 +13,4 @@ test( 'timeAgo()', function() {
   deepEqual( m.timeAgo( 102000000 ), { value: 3, unit: 'years' } );
 } );
 
-} )( mw.mobileFrontend.getModule( 'last-modified' ) );
+} )( mw.mobileFrontend.require( 'last-modified' ) );

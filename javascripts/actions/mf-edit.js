@@ -128,6 +128,6 @@ var m = ( function() {
 
 } () );
 
-M.registerModule( 'edit', m );
+M.define( 'edit', m );
 }( mw.mobileFrontend, jQuery ) );
 

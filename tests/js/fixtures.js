@@ -5,7 +5,7 @@ var mwMobileFrontendConfig = {
 	},
 	settings: {
 		authenticated: true,
+		initOnDefine: false
 	}
 };
-
 function _mwLogEvent() {}

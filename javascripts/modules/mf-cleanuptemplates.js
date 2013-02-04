@@ -1,7 +1,7 @@
 ( function( M,  $ ) {
 
 var module = (function() {
-	var nav = M.getModule( 'navigation' );
+	var nav = M.require( 'navigation' );
 
 	function run() {
 		var $metadata = $( '#content_0 table.ambox' ),
@@ -29,6 +29,6 @@ var module = (function() {
 	};
 }() );
 
-M.registerModule( 'cleanuptemplates', module );
+M.define( 'cleanuptemplates', module );
 
 }( mw.mobileFrontend, jQuery ));

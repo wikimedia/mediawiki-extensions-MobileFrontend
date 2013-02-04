@@ -1,7 +1,7 @@
 ( function( M,  $ ) {
 
 var m = ( function() {
-	var createOverlay = M.navigation.createOverlay;
+	var createOverlay = M.require( 'navigation' ).createOverlay;
 
 	function countAvailableLanguages() {
 		return $( '#mw-mf-language-selection a' ).length;
@@ -76,5 +76,5 @@ var m = ( function() {
 	};
 }() );
 
-M.registerModule( 'languages', m );
+M.define( 'languages', m );
 }( mw.mobileFrontend, jQuery ) );
