@@ -3696,6 +3696,8 @@ $messages['eu'] = array(
 	'mobile-frontend-main-menu-contact' => 'Kontaktatu',
 	'mobile-frontend-page-menu-contents' => 'Edukiak',
 	'mobile-frontend-page-menu-history' => 'Historia',
+	'mobile-frontend-photo-submit' => 'Bidali',
+	'mobile-frontend-photo-cancel' => 'Utzi',
 );
 
 /** Extremaduran (estremeñu)
@@ -4211,15 +4213,19 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-diffview-explained' => 'Les lignes suivantes ont été ajoutées (+) et supprimées (-):',
 	'mobile-frontend-table' => 'Tableau $1',
 	'mobile-frontend-saving-exit-page' => "Votre contribution est en train d'être enregistrée. Si vous quittez, vos contributions seront perdues. Êtes-vous sûr de vouloir sortir?",
-	'mobile-frontend-photo-upload' => 'Ajouter la première photo à cette page', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Ajouter une image à cet article',
 	'mobile-frontend-photo-article-edit-comment' => 'Photo ajoutée pour être utilisée sur la page',
 	'mobile-frontend-photo-article-donate-comment' => 'Don d’image à partir d’un appareil mobile',
 	'mobile-frontend-photo-upload-comment' => 'Photo ajoutée à la page',
-	'mobile-frontend-photo-caption-placeholder' => 'Ajouter une légende pour cette image', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Ajouter une description (obligatoire)',
 	'mobile-frontend-image-loading' => "Chargement de l'image",
-	'mobile-frontend-image-uploading' => "Téléchargement de l'image", # Fuzzy
-	'mobile-frontend-photo-upload-error' => "Une erreur s'est produite pendant le téléchargement de l'image. Veuillez essayer une autre image.", # Fuzzy
-	'mobile-frontend-photo-license' => 'Remarque: Toutes les photos que vous publiez le seront sous une [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licence CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-image-uploading' => 'Téléchargement de l\'image, veuillez patienter. <a href="#">Annuler</a> si cela prend trop de temps.',
+	'mobile-frontend-photo-upload-error' => "Une erreur s'est produite, veuillez réessayer.",
+	'mobile-frontend-photo-upload-success-article' => 'Bravo! Votre image est maintenant en ligne sur cette page.',
+	'mobile-frontend-photo-upload-success-generic' => 'Bravo! Merci pour votre contribution.',
+	'mobile-frontend-photo-license' => 'En cliquant sur "Soumettre", vous acceptez nos <a href="//wikimediafoundation.org/wiki/Terms_of_use">conditions d’utilisation</a> et la mise à disposition de votre photo sous la <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">licence Creative Common Attribution-ShareAlike 3.0</a>.',
+	'mobile-frontend-photo-submit' => 'Soumettre',
+	'mobile-frontend-photo-cancel' => 'Annuler',
 	'tag-mobile_edit' => 'Modification par mobile',
 	'tag-mobile_edit-description' => 'Modification effectuée depuis la version mobile',
 	'mobile-frontend-drawer-cancel' => 'Annuler',
@@ -6350,14 +6356,16 @@ $messages['it'] = array(
 	'mobile-frontend-diffview-explained' => 'Le righe seguenti sono stati aggiunte (+) e rimosse (-):',
 	'mobile-frontend-table' => 'Tabella $1',
 	'mobile-frontend-saving-exit-page' => 'La tua modifica è ancora da salvare. Se esci i tuoi contributi andranno persi. Sei sicuro di voler uscire?',
-	'mobile-frontend-photo-upload' => 'Aggiungi la prima foto a questa pagina', # Fuzzy
+	'mobile-frontend-photo-upload' => "Aggiungi un'immagine a questa voce",
 	'mobile-frontend-photo-article-edit-comment' => 'Aggiungi una foto a questa pagina',
 	'mobile-frontend-photo-upload-comment' => 'Aggiungi questa foto ad una pagina',
-	'mobile-frontend-photo-caption-placeholder' => "Aggiungi una didascalia all'immagine", # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Aggiungi una descrizione (obbligatoria)',
 	'mobile-frontend-image-loading' => 'Caricamento immagine',
 	'mobile-frontend-image-uploading' => 'Caricamento immagine', # Fuzzy
-	'mobile-frontend-photo-upload-error' => "Si verificato un errore durante il caricamento dell'immagine. Si prega di riprovare con un'altra immagine.", # Fuzzy
+	'mobile-frontend-photo-upload-error' => 'Errore, prova ancora.',
 	'mobile-frontend-photo-license' => 'Nota: tutte le foto pubblicate saranno rilasciate con [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licenza CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-photo-submit' => 'Invia',
+	'mobile-frontend-photo-cancel' => 'Annulla',
 	'tag-mobile_edit-description' => 'Modifica apportata dal sito per dispositivi mobili',
 	'mobile-frontend-drawer-cancel' => 'Annulla',
 );
@@ -7235,15 +7243,19 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-explained' => '다음 줄이 추가(+)되고 제거(-)되었습니다.',
 	'mobile-frontend-table' => '표 $1',
 	'mobile-frontend-saving-exit-page' => '기여한 내용을 아직 저장하고 있습니다. 만일 떠나면 기여한 내용을 잃게 됩니다. 정말 끝내시겠습니까?',
-	'mobile-frontend-photo-upload' => '이 문서에 첫 번째 사진 추가', # Fuzzy
+	'mobile-frontend-photo-upload' => '이 문서에 그림 추가',
 	'mobile-frontend-photo-article-edit-comment' => '문서에 사용할 사진을 추가했습니다',
 	'mobile-frontend-photo-article-donate-comment' => '모바일에서 그림을 기부함',
 	'mobile-frontend-photo-upload-comment' => '문서에 사진을 추가했습니다',
-	'mobile-frontend-photo-caption-placeholder' => '이 그림에 설명 추가', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => '설명 추가 (필수)',
 	'mobile-frontend-image-loading' => '그림을 불러오는 중',
-	'mobile-frontend-image-uploading' => '그림을 올리는 중', # Fuzzy
-	'mobile-frontend-photo-upload-error' => '그림을 올리는 동안 오류가 발생했습니다. 다른 그림을 올리세요.', # Fuzzy
-	'mobile-frontend-photo-license' => '참고: 게시하는 모든 그림은 [//ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 라이선스]로 배포됩니다', # Fuzzy
+	'mobile-frontend-image-uploading' => '그림을 올리는 중입니다, 잠시 기다려주세요. 시간이 오래 걸리면 <a href="#">취소</a>하세요.',
+	'mobile-frontend-photo-upload-error' => '오류가 발생했습니다, 다시 시도하세요.',
+	'mobile-frontend-photo-upload-success-article' => '성공했습니다! 그림은 지금 이 문서에 있습니다.',
+	'mobile-frontend-photo-upload-success-generic' => '성공했습니다! 기여해주셔서 감사합니다.',
+	'mobile-frontend-photo-license' => '"제출"을 클릭하면 <a href="//wikimediafoundation.org/wiki/Terms_of_use">이용 약관</a>에 동의하고 <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0 라이선스</a>에 따라 사진을 공개하는 데 동의합니다.',
+	'mobile-frontend-photo-submit' => '제출',
+	'mobile-frontend-photo-cancel' => '취소',
 	'tag-mobile_edit' => '모바일 편집',
 	'tag-mobile_edit-description' => '모바일 사이트에서 편집',
 	'mobile-frontend-drawer-cancel' => '취소',
@@ -7557,17 +7569,23 @@ $messages['lb'] = array(
 	'mobile-frontend-home-button' => 'Haaptsäit',
 	'mobile-frontend-logged-out' => 'Net ageloggt',
 	'mobile-frontend-logged-in-homepage-notification' => 'Wëllkomm $1!',
+	'mobile-frontend-logged-in-toast-notification' => 'Als $1 ageloggt.',
+	'mobile-frontend-sign-up-heading' => 'Schreift Iech an',
+	'mobile-frontend-sign-in-heading' => 'Umellen',
+	'mobile-frontend-sign-in-error-heading' => 'Ups',
 	'mobile-frontend-settings-description' => 'Personaliséiert Är Erfarung op Ärem mobilen Apparat mat dëse spezifesche mobilen Astellungen.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Astellunge späicheren',
 	'mobile-frontend-random-button' => 'Zoufall',
 	'mobile-frontend-ajax-random-question' => 'Dës Säit liesen?',
 	'mobile-frontend-ajax-random-yes' => 'Jo',
+	'mobile-frontend-ajax-random-retry' => 'Probéiert nach emol',
+	'mobile-frontend-ajax-random-suggestions' => 'Aner Virschléi:',
 	'mobile-frontend-back-to-top-of-section' => 'En Abschnitt zrécksprangen',
 	'mobile-frontend-close-section' => 'Dësen Abschnitt zoumaachen',
 	'mobile-frontend-show-button' => 'Weisen',
 	'mobile-frontend-hide-button' => 'Verstoppen',
-	'mobile-frontend-empty-homepage-text' => 'Dës Homepage muss konfiguréiert ginn. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruktioune fir ze wësse wéi een dëse mobile Site aktivéiert</a>', # Fuzzy
+	'mobile-frontend-empty-homepage-text' => 'Dës Homepage muss konfiguréiert ginn. [http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruktioune fir ze wësse wéi een dëse mobile Site aktivéiert]',
 	'mobile-frontend-regular-site' => 'Desktop-Vue',
 	'mobile-frontend-wml-continue' => 'Weider ...',
 	'mobile-frontend-wml-back' => 'Zréck ...',
@@ -7581,7 +7599,7 @@ $messages['lb'] = array(
 	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'AUS',
 	'mobile-frontend-on' => 'UN',
-	'mobile-frontend-footer-contributors-text' => 'Artikel vu <a href="$1">Mataarbechter</a> wéi Dir', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Artikel vu(n) [$1 Mataarbechter] wéi Dir',
 	'mobile-frontend-featured-article' => 'Den Artikel vum Dag',
 	'mobile-frontend-news-items' => 'An den Neiegkeeten',
 	'mobile-frontend-leave-feedback-notice' => 'Äre Feedback hëlleft eis déi mobil Versioun vun eisem Site ze verbesseren. E gëtt ëffentlech op der Säit &quot;$1&quot; gewisen (zesumme mat Ärem Benotzernumm, der Versioun vun Ärem Browser a Betriibssystem). Versicht w.e.g. fir de Sujet vun Ärem Feedback informativ ze formuléieren, z. Bsp. "Formatéierungsproblemer bäi breeden Tabellen". Äre Feedback ënnerléit eisen allgemenge Conditiounen.',
@@ -7612,31 +7630,34 @@ $messages['lb'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Et gouf e Feeler beim Verschaffe vun Ärem Message. Probéiert et w.e.g. spéider nach eng Kéier.',
 	'mobile-frontend-language' => 'Sprooch:',
 	'mobile-frontend-language-article-heading' => 'An enger anerer Sprooch liesen',
-	'mobile-frontend-language-header' => 'Dësen Artikel ass {{PLURAL:$1|an enger Sprooch| a(n) $1 Sproochen}} disponibel', # Fuzzy
-	'mobile-frontend-language-footer' => 'Informatioun: Et ka sinn datt dësen Artikel net an Ärer Sprooch geschriwwen ass. Dir kënnt déi Sprooche gesinn déi vu(n) {{SITENAME}} ënnerstëtzt ginn, wann Dir hei klickt.', # Fuzzy
+	'mobile-frontend-language-header' => 'Dës Säit ass {{PLURAL:$1|an enger Sprooch| a(n) $1 Sproochen}} disponibel',
+	'mobile-frontend-language-footer' => 'Informatioun: Et ka sinn datt dës Säit net an Ärer Sprooch geschriwwen ass. Dir kënnt déi Sprooche gesinn déi vu(n) {{SITENAME}} ënnerstëtzt ginn, wann Dir hei klickt.',
 	'mobile-frontend-language-site-choose' => 'Sprooch sichen',
 	'mobile-frontend-username' => 'Benotzernumm:',
 	'mobile-frontend-password' => 'Passwuert:',
 	'mobile-frontend-username-placeholder' => 'Benotzernumm',
 	'mobile-frontend-password-placeholder' => 'Passwuert',
 	'mobile-frontend-login' => 'Aloggen',
+	'mobile-frontend-account-create-submit' => 'Schreift Iech an',
 	'mobile-frontend-password-confirm-placeholder' => 'Passwuert confirméieren',
 	'mobile-frontend-overlay-escape' => 'Zréck goen',
 	'mobile-frontend-placeholder' => 'Op {{SITENAME}} sichen',
-	'mobile-frontend-search-help' => "Gitt de' Wuert wat Dir sicht hei driwwer an an déi passend Artikele ginn dann hei gewisen.", # Fuzzy
+	'mobile-frontend-search-help' => "Gitt d'Wuert wat Dir sicht hei driwwer an an déi passend Säitentitele ginn dann hei gewisen.",
 	'mobile-frontend-dismiss-notification' => 'dës Noriicht zoumaachen',
 	'mobile-frontend-clear-search' => 'Eidel maachen',
 	'mobile-frontend-privacy-link-text' => 'Dateschutz',
 	'mobile-frontend-about-link-text' => 'Iwwer',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-contact' => 'Kontakt',
-	'mobile-frontend-search-noresults' => "Keen Artikel gouf beim siche fonnt. Ännert d'Critèren oder dréckt de Sichknäppchen op Ärer Tastatur fir bannen an den Artikelen ze sichen.", # Fuzzy
+	'mobile-frontend-search-noresults' => "Keng Säit gouf beim siche fonnt. Ännert d'Critèren oder dréckt de Sichknäppchen op Ärer Tastatur fir bannen an de Säiten ze sichen.",
+	'mobile-frontend-main-menu-button-tooltip' => 'Haaptmenü opmaachen',
 	'mobile-frontend-main-menu-featured' => 'Bemierkenswäert',
 	'mobile-frontend-main-menu-nearby' => 'Nobäi',
 	'mobile-frontend-main-menu-login' => 'Aloggen',
 	'mobile-frontend-main-menu-logout' => 'Ausloggen',
 	'mobile-frontend-main-menu-watchlist' => 'Iwwerwaachungslëscht',
 	'mobile-frontend-main-menu-settings' => 'Astellungen',
+	'mobile-frontend-main-menu-upload' => 'Eroplueden',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobil-Astellungen fir de Site',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}-Sproochen',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} ass {{PLURAL:$1|an enger Sprooch|a(n) $1 Sproochen}} disponibel. Alle Ddsponibel Versioune stinn hei drënner',
@@ -7647,22 +7668,39 @@ $messages['lb'] = array(
 	'mobile-frontend-meta-data-issues' => 'Dës Säit huet e puer Problemer',
 	'mobile-frontend-ajax-page-loading' => '$1 lueden',
 	'mobile-frontend-page-saving' => '$1 späicheren',
+	'mobile-frontend-nearby-title' => 'Nobäi',
 	'mobile-frontend-photo-upload-generic' => 'E Bild spenden',
 	'mobile-frontend-donate-image-title' => 'E Bild spenden',
+	'mobile-frontend-donate-image-page-title' => 'Eroplueden',
+	'mobile-frontend-listed-image-no-description' => 'Keng Beschreiwung',
 	'mobile-frontend-watchlist-add' => '$1 gouf op Är Iwwerwaachungslëscht derbäigesat',
 	'mobile-frontend-watchlist-view' => 'Är Iwwerwaachungslëscht weisen',
-	'mobile-frontend-watchlist-a-z' => 'Iwwerwaachte Säiten', # Fuzzy
-	'mobile-frontend-watchlist-feed' => 'Säite mat Ännerungen', # Fuzzy
+	'mobile-frontend-watchlist-more' => 'méi',
+	'mobile-frontend-watchlist-cta-button-login' => 'Aloggen',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Mellt Iech un',
+	'mobile-frontend-watchlist-a-z' => 'All',
+	'mobile-frontend-watchlist-feed' => 'Geännert',
+	'mobile-frontend-watchlist-a-z-empty' => 'Dir iwwerwaacht elo keng Säiten',
 	'mobile-frontend-changeslist-ip' => 'Anonyme Benotzer',
+	'mobile-frontend-changeslist-nocomment' => 'kee Resumé vun der Ännerung',
 	'mobile-frontend-watchlist-filter-all' => 'All',
 	'mobile-frontend-watchlist-filter-articles' => 'Artikelen',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussioun',
+	'mobile-frontend-watchlist-filter-other' => 'Anerer',
+	'mobile-frontend-diffview-404-title' => 'Schlecht Versioun',
+	'mobile-frontend-diffview-title' => 'Ännerungen',
 	'mobile-frontend-diffview-anonymous' => 'Anonyme Benotzer',
-	'mobile-frontend-photo-upload' => 'Setzt déi éischt Foto op dës Säit',
+	'mobile-frontend-table' => 'Tabell $1',
+	'mobile-frontend-photo-upload' => 'Setzt eng Foto an dësen Artikel',
 	'mobile-frontend-photo-upload-comment' => "Foto op d'Säit derbäigesat",
+	'mobile-frontend-photo-caption-placeholder' => 'Setzt eng Beschreiwung derbäi (obligatoresch)',
 	'mobile-frontend-image-loading' => 'Bild gëtt gelueden',
-	'mobile-frontend-image-uploading' => 'Bild gëtt eropgelueden',
-	'mobile-frontend-image-saving-to-article' => "D'Bild gëtt op der Säit gespäichert",
+	'mobile-frontend-image-uploading' => 'Bild gëtt eropgelueden, waart w.e.g. <a href="#">Ofbrieche</a> wann et ze laang dauert.',
+	'mobile-frontend-photo-upload-error' => 'Feeler, probéiert nach eng Kéier.',
+	'mobile-frontend-photo-cancel' => 'Ofbriechen',
+	'tag-mobile_edit' => 'Mobil Ännerung',
+	'tag-mobile_edit-description' => 'Ännerung déi vun engem mobile Site gemaach gouf',
+	'mobile-frontend-drawer-cancel' => 'Ofbriechen',
 );
 
 /** Lezghian (лезги)
@@ -10455,15 +10493,19 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-diffview-explained' => 'Următoarele rânduri au fost adăugate (+) și șterse (-):',
 	'mobile-frontend-table' => 'Tabelul $1',
 	'mobile-frontend-saving-exit-page' => 'Contribuția dumneavoastră încă se salvează. Dacă ieșiți, contribuțiile dumneavoastră se vor pierde. Sunteți sigur că doriți să ieșiți?',
-	'mobile-frontend-photo-upload' => 'Adaugă prima fotografie pentru această pagină', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Adăugați o imagine pentru acest articol',
 	'mobile-frontend-photo-article-edit-comment' => 'Fotografie adăugată pentru a fi utilizată în pagină',
 	'mobile-frontend-photo-article-donate-comment' => 'A donat imaginea de pe un dispozitiv mobil',
 	'mobile-frontend-photo-upload-comment' => 'Fotografie adăugată în pagină',
-	'mobile-frontend-photo-caption-placeholder' => 'Adăugați o descriere pentru această imagine', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Adăugați o descriere (obligatoriu)',
 	'mobile-frontend-image-loading' => 'Se încarcă afișarea imaginii',
-	'mobile-frontend-image-uploading' => 'Se încarcă imaginea', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'A apărut o eroare în timpul încărcării acestei imagini. Încercați altă imagine.', # Fuzzy
-	'mobile-frontend-photo-license' => 'Notă: Toate fotografiile pe care le publicați vor fi eliberate sub o licență [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-image-uploading' => 'Vă rugăm să așteptați, imaginea se încarcă. <a href="#">Revocați</a> dacă durează prea mult.',
+	'mobile-frontend-photo-upload-error' => 'Eroare; reîncercați.',
+	'mobile-frontend-photo-upload-success-article' => 'Succes! Imaginea dumneavoastră este acum afișată pe această pagină.',
+	'mobile-frontend-photo-upload-success-generic' => 'Succes! Mulțumim pentru contribuție.',
+	'mobile-frontend-photo-license' => 'Apăsând pe „Trimite” sunteți de acord cu <a href="//wikimediafoundation.org/wiki/Terms_of_use">Termenii noștri de utilizare</a> și sunteți de acord ca fotografia dumneavoastră să fie eliberată sub licența <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Atribuire și distribuire în condiții identice 3.0</a>.',
+	'mobile-frontend-photo-submit' => 'Trimite',
+	'mobile-frontend-photo-cancel' => 'Revocare',
 	'tag-mobile_edit' => 'Modificare mobilă',
 	'tag-mobile_edit-description' => 'Modificare efectuată de pe site-ul mobil',
 	'mobile-frontend-drawer-cancel' => 'Revocare',
@@ -13063,6 +13105,7 @@ $messages['vi'] = array(
 	'mobile-frontend-nearby-noresults' => 'Bạn đang ở vùng xa xôi hẻo lánh, nên chúng tôi không tìm thấy đề tài nào. Hãy viết đề tài mới!',
 	'mobile-frontend-nearby-refresh' => 'Chúng tôi đã chỉnh lại vị trí của bạn. Nhấn chuột vào đây để tải lại danh sách các trang kề bên.',
 	'mobile-frontend-nearby-error' => 'Xuất hiện lỗi bất ngờ khi tìm kiếm trang kề bên',
+	'mobile-frontend-donate-image-login' => 'Đăng nhập để xem các tập tin bạn đã tải lên',
 	'mobile-frontend-photo-upload-generic' => 'Đóng góp một hình ảnh',
 	'mobile-frontend-donate-image-title' => 'Đóng góp một hình ảnh',
 	'mobile-frontend-donate-image-summary' => 'Các hình ảnh làm cho {{SITENAME}} thú vị hơn.
@@ -13103,15 +13146,19 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-diffview-explained' => 'Các dòng sau đã được thêm (+) và xóa (-):',
 	'mobile-frontend-table' => 'Bảng $1',
 	'mobile-frontend-saving-exit-page' => 'Các đóng góp của bạn còn đang được lưu giữ. Nếu bạn bỏ đi, các đóng góp này sẽ bị mất. Bạn có chắc muốn thoát?',
-	'mobile-frontend-photo-upload' => 'Thêm hình đầu tiên vào trang này', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Thêm hình vào bài này',
 	'mobile-frontend-photo-article-edit-comment' => 'Đã thêm hình để sử dụng trong trang',
 	'mobile-frontend-photo-article-donate-comment' => 'Đã đóng góp hình ảnh từ thiết bị di động',
 	'mobile-frontend-photo-upload-comment' => 'Đã thêm hình vào trang',
-	'mobile-frontend-photo-caption-placeholder' => 'Thêm lời chú hình này', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Thêm miêu tả (bắt buộc)',
 	'mobile-frontend-image-loading' => 'Đang tải hình',
-	'mobile-frontend-image-uploading' => 'Đang tải lên hình', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'Đã xảy ra lỗi khi tải lên hình. Hãy thử hình khác.', # Fuzzy
-	'mobile-frontend-photo-license' => 'Lưu ý: Tất cả các hình ảnh mà bạn xuất bản sẽ được phát hành theo [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi giấy phép CC BY-SA 3.0].', # Fuzzy
+	'mobile-frontend-image-uploading' => 'Đang tải lên hình; xin vui lòng chờ. Hãy <a href="#">hủy bỏ</a> nếu việc tải lên mất nhiều thì giờ quá.',
+	'mobile-frontend-photo-upload-error' => 'Đã xuất hiện lỗi; hãy thử lại.',
+	'mobile-frontend-photo-upload-success-article' => 'Xong rồi, trang này hiện có hình ảnh của bạn.',
+	'mobile-frontend-photo-upload-success-generic' => 'Xong rồi, cám ơn bạn đã đóng góp.',
+	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận <a href="//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi">các Điều khoản Sử dụng</a>, và bạn đồng ý phát hành hình ảnh của mình theo <a href="//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi">Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0</a>.',
+	'mobile-frontend-photo-submit' => 'Tải lên',
+	'mobile-frontend-photo-cancel' => 'Hủy bỏ',
 	'tag-mobile_edit' => 'Sửa đổi di động',
 	'tag-mobile_edit-description' => 'Trang được sửa đổi dùng trang di động',
 	'mobile-frontend-drawer-cancel' => 'Hủy bỏ',
@@ -13297,6 +13344,7 @@ $messages['yue'] = array(
  * @author Simon Shek
  * @author Xiaomingyan
  * @author Yfdyh000
+ * @author 乌拉跨氪
  */
 $messages['zh-hans'] = array(
 	'mobile-frontend-desc' => '移动前端',
@@ -13435,6 +13483,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-nearby-noresults' => '你位于一个偏僻的地方，我们找不到任何主题。为什么不写一个呢？',
 	'mobile-frontend-nearby-refresh' => '我们为您找到一个更准确位置。若要刷新附近的页面列表，请点击此处',
 	'mobile-frontend-nearby-error' => '试图找到附近的页面时发生意外错误',
+	'mobile-frontend-donate-image-login' => '登录查看您上传的图像',
 	'mobile-frontend-photo-upload-generic' => '捐献一个图片',
 	'mobile-frontend-donate-image-title' => '捐献一个图片',
 	'mobile-frontend-donate-image-summary' => '照片给{{SITENAME}}上的页面带来了生命。
@@ -13455,12 +13504,17 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-watchlist-feed' => '已修改',
 	'mobile-frontend-watchlist-a-z-empty' => '您目前没有监视任何页面',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => '点击页面顶部的星星',
+	'mobile-frontend-watchlist-a-z-empty-howto' => '点击页面顶部的星号可将该页面加入监视列表中，以便于及时查看到该条目出现的更改。',
+	'mobile-frontend-watchlist-back-home' => '返回首页',
 	'mobile-frontend-changeslist-ip' => '匿名用户',
 	'mobile-frontend-changeslist-nocomment' => '无编辑摘要',
 	'mobile-frontend-watchlist-filter-all' => '全部',
 	'mobile-frontend-watchlist-filter-articles' => '条目',
 	'mobile-frontend-watchlist-filter-talk' => '讨论',
 	'mobile-frontend-watchlist-filter-other' => '其他',
+	'mobile-frontend-watchlist-modified' => '$1前修改',
+	'mobile-frontend-diffview-404-title' => '损坏的版本',
+	'mobile-frontend-diffview-404-desc' => '您请求的版本ID不存在',
 	'mobile-frontend-diffview-title' => '修改$1', # Fuzzy
 	'mobile-frontend-diffview-editcount' => '$1次{{PLURAL:$1|编辑|编辑}}',
 	'mobile-frontend-diffview-anonymous' => '匿名用户',
@@ -13468,14 +13522,19 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1字节已移除',
 	'mobile-frontend-table' => '表$1',
 	'mobile-frontend-saving-exit-page' => '正在保存您的贡献。如果离开的话，你的贡献将会丢失。你真的要离开吗？',
-	'mobile-frontend-photo-upload' => '为本页添加第一张照片', # Fuzzy
+	'mobile-frontend-photo-upload' => '为本段添加第一张图像',
 	'mobile-frontend-photo-article-edit-comment' => '添加照片以用于页面',
+	'mobile-frontend-photo-article-donate-comment' => '从手机捐献图像',
 	'mobile-frontend-photo-upload-comment' => '添加照片到页面',
-	'mobile-frontend-photo-caption-placeholder' => '为本图像添加说明文字', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => '为本图像添加说明文字（必需）',
 	'mobile-frontend-image-loading' => '正在载入图像',
-	'mobile-frontend-image-uploading' => '正在上传图像', # Fuzzy
-	'mobile-frontend-photo-upload-error' => '上传图像时发生了错误。请尝试其它图像。', # Fuzzy
-	'mobile-frontend-photo-license' => '注意：你发表的所有照片将在[//zh.wikipedia.org/wiki/Wikipedia:CC-BY-SA-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC CC BY-SA 3.0协议]下释出。', # Fuzzy
+	'mobile-frontend-image-uploading' => '正在上传图像，请稍候。如长时间未完成，请<a href="#">取消</a>。',
+	'mobile-frontend-photo-upload-error' => '上传失败，请重试。',
+	'mobile-frontend-photo-upload-success-article' => '完成！您的图像已被添加到页面中。',
+	'mobile-frontend-photo-upload-success-generic' => '完成！感谢您的贡献。',
+	'mobile-frontend-photo-license' => '点击“提交”意味着您同意我们的<a href="//wikimediafoundation.org/wiki/Terms_of_use">使用条款</a>，并同意在<a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">CC BY-SA 3.0协议</a>下释出您的照片。',
+	'mobile-frontend-photo-submit' => '提交',
+	'mobile-frontend-photo-cancel' => '取消',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
