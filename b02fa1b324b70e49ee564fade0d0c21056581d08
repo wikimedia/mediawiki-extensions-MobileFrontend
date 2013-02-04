@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//0TM\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-04T17:57:41Z",
+      "side": 1,
+      "message": "So we\u0027d need to specify this for each module? I\u0027d make it a more global setting.",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//0S4\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-04T17:57:41Z",
+      "side": 1,
+      "message": "Rather than overriding the function, I\u0027d set $this-\u003etargets to array( \u0027mobile\u0027 ):\n\n\tprotected $targets \u003d array( \u0027mobile\u0027 );",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//0Sw\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-04T17:57:41Z",
+      "side": 1,
+      "message": "I\u0027m not sure if the extension should be hardcoded. Maybe we should just use the full file name? But I\u0027m not sure on this one, maybe someone else has some comments.",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//0Sk\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-04T17:57:41Z",
+      "side": 1,
+      "message": "Not sure about that, wouldn\u0027t we want mobile.startup to also be of class MFResourceLoaderModule?",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//0Sc\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-04T17:57:41Z",
+      "side": 1,
+      "message": "Docs missing!",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
