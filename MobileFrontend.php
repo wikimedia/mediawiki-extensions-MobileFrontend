@@ -183,7 +183,10 @@ $wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + arr
 
 $wgResourceModules['mobile.head'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(),
-	'scripts' => array( 'javascripts/common/main.js' ),
+	'scripts' => array(
+		'javascripts/common/main.js',
+		'javascripts/common/modules.js',
+	),
 	'position' => 'top',
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );

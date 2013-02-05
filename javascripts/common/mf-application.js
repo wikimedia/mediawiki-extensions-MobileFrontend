@@ -10,40 +10,9 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
-mw.mobileFrontend = ( function( $ ) {
+( function( M, $ ) {
 	var
-		scrollY,
-		modules = {};
-
-	/**
-	 * Require (import) a module previously defined using define().
-	 *
-	 * @param {string} id Required module id.
-	 * @return {Object} Required module, can be any JavaScript object.
-	 */
-	function require( id ) {
-		if ( !modules[ id ] ) {
-			throw new Error( 'Module not found: ' + id );
-		}
-		return modules[ id ];
-	}
-
-	/**
-	 * Define a module which can be later required (imported) using require().
-	 *
-	 * @param {string} id Defined module id.
-	 * @param {Object} obj Defined module body, can be any JavaScript object.
-	 */
-	function define( id, obj ) {
-		if ( modules[ id ] ) {
-			throw new Error( 'Module already exists: ' + id );
-		}
-		modules[ id ] = obj;
-		// FIXME: modules should not self initialise
-		if ( obj.init && getConfig( 'initOnDefine', true ) ) {
-			obj.init();
-		}
-	}
+		scrollY;
 
 	/**
 	 * Wraps our template engine of choice (currently Hogan).
@@ -185,7 +154,8 @@ mw.mobileFrontend = ( function( $ ) {
 	}
 
 	$( init );
-	return {
+
+	$.extend( M, {
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getApiUrl: getApiUrl,
@@ -201,9 +171,7 @@ mw.mobileFrontend = ( function( $ ) {
 		triggerPageReadyHook: triggerPageReadyHook,
 		prettyEncodeTitle: prettyEncodeTitle,
 		utils: $, // FIXME: deprecate
-		require: require,
-		define: define,
 		template: template
-	};
+	} );
 
-}( jQuery ) );
+}( mw.mobileFrontend, jQuery ) );

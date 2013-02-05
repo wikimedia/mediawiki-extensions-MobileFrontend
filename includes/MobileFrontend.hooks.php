@@ -122,6 +122,7 @@ class MobileFrontendHooks {
 			'scripts' => array(
 				'tests/externals/sinon.js',
 				'javascripts/externals/hogan.js',
+				'javascripts/common/modules.js',
 				'tests/js/fixtures.js', 'javascripts/common/mf-application.js',
 				'javascripts/common/mf-history.js', 'tests/js/test_mf-history.js',
 				'tests/js/test_application.js',
