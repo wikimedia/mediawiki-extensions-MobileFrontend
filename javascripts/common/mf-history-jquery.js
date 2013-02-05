@@ -26,7 +26,7 @@
 		title = M.prettyEncodeTitle( title );
 		$( '#mw-mf-menu-main a' ).each( function() {
 			var href = $( this ).attr( 'href' );
-			if ( href.indexOf( 'returnto=' ) > -1 ) {
+			if ( href.indexOf( 'returnto=' ) > -1 && !$( this ).hasClass( 'noHijack' ) ) {
 				$( this ).attr( 'href', updateQueryStringParameter( href, 'returnto', title ) );
 			}
 		} );

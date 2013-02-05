@@ -841,6 +841,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 				<li class='iconUpload'>
 					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
+						class="noHijack"
 						title="<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>">
 					<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>
 					</a>
