@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//zBY\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-05T19:55:26Z",
+      "side": 1,
+      "message": "$wgAutoloadClasses, $wgMFLogEvents, $wgResponsiveImages and $wgMFNearby are now unused.",
+      "revId": "3bdb3e24a4ab1c7f1f8566d5143430837f774694",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//zBc\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-05T19:55:26Z",
+      "side": 1,
+      "message": "$wgMFEnableResourceLoader is now unused.",
+      "revId": "3bdb3e24a4ab1c7f1f8566d5143430837f774694",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
