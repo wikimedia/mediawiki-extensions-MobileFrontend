@@ -51,6 +51,24 @@
       "revId": "3bdb3e24a4ab1c7f1f8566d5143430837f774694",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//zAI\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-05T20:06:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADiH//zBc\u003d",
+      "revId": "3bdb3e24a4ab1c7f1f8566d5143430837f774694",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
