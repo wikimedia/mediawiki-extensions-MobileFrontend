@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//y7Q\u003d",
+        "filename": "javascripts/common/mf-view.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-05T21:02:47Z",
+      "side": 1,
+      "message": "?related change?",
+      "revId": "f2c0e9e4538d9ff6e730c069ab9df74e27ca689a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
