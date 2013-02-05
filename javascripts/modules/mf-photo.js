@@ -302,7 +302,7 @@
 		photoUploader = new PhotoUploader( {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
-			pageTitle: mw.config.get( 'wgTitle' ),
+			pageTitle: M.getConfig( 'title' ),
 			successMessage: mw.msg( 'mobile-frontend-photo-upload-success-article' )
 		} ).
 			insertAfter( $page.find( 'h1' ) ).
