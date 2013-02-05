@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//zzo\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-05T01:16:34Z",
+      "side": 1,
+      "message": "RESOLVED LATER (until we have more of these modules)",
+      "parentUuid": "AAADiH//0TM\u003d",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//0S4\u003d",
         "filename": "includes/modules/MFResourceLoaderModule.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-04T17:57:41Z",
       "side": 1,
       "message": "Rather than overriding the function, I\u0027d set $this-\u003etargets to array( \u0027mobile\u0027 ):\n\n\tprotected $targets \u003d array( \u0027mobile\u0027 );",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//zzk\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-05T01:16:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADiH//0S4\u003d",
       "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//zt4\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-05T01:16:34Z",
+      "side": 1,
+      "message": "RESOLVED LATER ......?",
+      "parentUuid": "AAADiH//0Sw\u003d",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//0Sk\u003d",
         "filename": "includes/modules/MFResourceLoaderModule.php",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//zqE\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-05T01:16:34Z",
+      "side": 1,
+      "message": "discussed. this is needed to ensure mw.mobileFrontend is available.",
+      "parentUuid": "AAADiH//0Sk\u003d",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//0Sc\u003d",
         "filename": "javascripts/common/mf-application.js",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2013-02-04T17:57:41Z",
       "side": 1,
       "message": "Docs missing!",
+      "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//zqA\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-05T01:16:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADiH//0Sc\u003d",
       "revId": "b02fa1b324b70e49ee564fade0d0c21056581d08",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
