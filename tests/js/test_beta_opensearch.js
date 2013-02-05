@@ -76,4 +76,4 @@ test("writeResults with highlighted text (safe)", function() {
 	strictEqual($(pageLink).html(),
 		"<strong>&lt;script&gt;alert('FAIL'</strong>)&lt;/script&gt; should be safe", "check the highlight is correct");
 });
-}( jQuery, mw.mobileFrontend, mw.mobileFrontend.getModule( 'opensearch' ) ) );
+}( jQuery, mw.mobileFrontend, mw.mobileFrontend.require( 'opensearch' ) ) );

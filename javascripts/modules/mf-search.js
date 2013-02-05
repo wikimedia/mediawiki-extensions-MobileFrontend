@@ -265,7 +265,7 @@ var opensearch = ( function() {
 }());
 
 if ( typeof JSON !== 'undefined' ) {
-	M.registerModule( 'opensearch', opensearch );
+	M.define( 'opensearch', opensearch );
 }
 
 }( mw.mobileFrontend ));

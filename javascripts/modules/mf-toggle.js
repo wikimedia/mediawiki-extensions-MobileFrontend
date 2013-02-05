@@ -122,6 +122,6 @@ var toggle = ( function() {
 
 }());
 
-M.registerModule( 'toggle', toggle );
+M.define( 'toggle', toggle );
 
 }( mw.mobileFrontend ));

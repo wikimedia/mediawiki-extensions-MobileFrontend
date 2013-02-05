@@ -2,6 +2,7 @@
 
 ( function() {
 	var supported = !!navigator.geolocation,
+		popup = M.require( 'notifications' ),
 		cachedPages;
 
 	function render( $content, pages ) {
@@ -43,11 +44,11 @@
 				if ( !cachedPages ) {
 					render( $content, pages );
 				} else {
-					$popup = M.navigation.popup.show(
+					$popup = popup.show(
 						mw.message( 'mobile-frontend-nearby-refresh' ).plain(), 'toast locked' );
 					$popup.click( function() {
 						render( $content, pages );
-						M.navigation.popup.close( true );
+						popup.close( true );
 					} );
 				}
 
@@ -72,7 +73,7 @@
 			findResults( lat, lng );
 		},
 		function() {
-			M.navigation.popup.show( mw.message( 'mobile-frontend-nearby-lookup-error' ).plain(), 'toast' );
+			popup.show( mw.message( 'mobile-frontend-nearby-lookup-error' ).plain(), 'toast' );
 		},
 		{
 			enableHighAccuracy: true

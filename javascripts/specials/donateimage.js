@@ -1,5 +1,4 @@
 ( function( M, $ ) {
-
 var api = M.require( 'api' ),
 	photo = M.require( 'photo' ),
 	m;
@@ -119,7 +118,6 @@ m = ( function() {
 			showGallery( $( '.mobileUserGallery' ), username );
 		}
 	}
-	init();
 
 	return {
 		extractDescription: extractDescription,

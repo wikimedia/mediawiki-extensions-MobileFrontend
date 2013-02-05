@@ -28,6 +28,6 @@ var module = ( function() {
 	};
 }() );
 
-M.registerModule( 'last-modified', module );
+M.define( 'last-modified', module );
 
 }( mw.mobileFrontend, jQuery ) );

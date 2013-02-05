@@ -89,4 +89,4 @@ test("close a section", function() {
 	strictEqual(endVisibility, false, "clicking has hidden section content");
 });
 
-}( jQuery, mw.mobileFrontend, mw.mobileFrontend.getModule( 'toggle' ) ) );
+}( jQuery, mw.mobileFrontend, mw.mobileFrontend.require( 'toggle' ) ) );

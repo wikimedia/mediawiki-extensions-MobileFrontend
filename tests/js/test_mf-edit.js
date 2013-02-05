@@ -40,4 +40,4 @@ test( 'concatTextAreas headings 3', function() {
 } );
 
 
-} )( jQuery, mw.mobileFrontend.getModule( 'edit' ) );
+} )( jQuery, mw.mobileFrontend.require( 'edit' ) );

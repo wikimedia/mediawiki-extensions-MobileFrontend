@@ -27,4 +27,4 @@ test("MobileFrontend banner.js: dismiss notification", function() {
 	strictEqual($("#zero-rated-banner").is(":visible"), false, "banner should now be hidden");
 	strictEqual(cookieEnd, "off", "banner now set for dismissal");
 });
-}( jQuery, mw.mobileFrontend.getModule( 'banner' ), mw.mobileFrontend.settings ) );
+}( jQuery, mw.mobileFrontend.require( 'banner' ), mw.mobileFrontend.settings ) );

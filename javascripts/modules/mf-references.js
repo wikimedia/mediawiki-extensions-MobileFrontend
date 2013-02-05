@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 var references = ( function() {
 		var inBeta = M.getConfig( 'beta', false ),
-			popup = M.navigation.popup;
+			popup = M.require( 'notifications' );
 
 		function collect() {
 			var references = {};
@@ -81,6 +81,6 @@ var references = ( function() {
 		};
 	}() );
 
-	M.registerModule( 'references', references );
+	M.define( 'references', references );
 
 }( mw.mobileFrontend, jQuery ) );

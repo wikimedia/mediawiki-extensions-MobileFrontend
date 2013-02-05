@@ -115,6 +115,6 @@ var T = ( function() {
 
 }() );
 
-M.registerModule( 'toggle', T );
+M.define( 'toggle-dynamic', T );
 
 }( mw.mobileFrontend, jQuery ) );
