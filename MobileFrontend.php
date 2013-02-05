@@ -382,6 +382,7 @@ $wgResourceModules['mobile.production-jquery'] = $wgMFMobileResourceBoilerplate 
 
 		// mf-notification.js
 		'mobile-frontend-drawer-cancel',
+		'mobile-frontend-logged-in-toast-notification',
 	)
 );
 

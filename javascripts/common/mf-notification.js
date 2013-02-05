@@ -35,8 +35,11 @@
 		}
 
 		function notifyAuthenticatedUser() {
+			var msg = mw.message( 'mobile-frontend-logged-in-toast-notification',
+				mw.config.get( 'wgUserName' ) ).plain();
+
 			if ( window.location.search.indexOf( 'welcome=yes' ) > -1 ) {
-				show( M.message( 'mobile-frontend-logged-in-toast-notification' ), 'toast' );
+				show( msg, 'toast' );
 			}
 		}
 
