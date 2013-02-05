@@ -279,6 +279,8 @@
 					preview = new PhotoUploaderPreview();
 					// FIXME: replace if we make overlay an object (and inherit from it?)
 					M.navigation.createOverlay( null, preview.$el );
+					// skip the URL bar if possible
+					window.scrollTo( 0, 1 );
 
 					fileReader.readAsDataURL( $input[0].files[0] );
 					fileReader.onload = showPreview;
