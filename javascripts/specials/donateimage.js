@@ -1,10 +1,48 @@
 ( function( M, $ ) {
 var api = M.require( 'api' ),
 	photo = M.require( 'photo' ),
+	popup = M.require( 'notifications' ),
+	View = M.require( 'view' ),
 	m;
 
 m = ( function() {
-	var IMAGE_WIDTH = 320;
+	var IMAGE_WIDTH = 320,
+		UserGallery = View.extend( {
+			initialize: function( options ) {
+				this.$placeholder = options.$placeholder;
+			},
+			isEmpty: function() {
+				return this.$( 'li' ).length === 0;
+			},
+			removePlaceholder: function() {
+				this.$placeholder.remove(); // remove placeholder text in case of first upload
+			},
+			templateItem: M.template(
+				'<li><a href="{{descriptionUrl}}" alt="{{description}}"><img src="{{url}}" width="{{width}}"></a><p>{{description}}</p></li>'
+			),
+			addPhoto: function( photoData, notify ) {
+				var msgKey, $li;
+				if ( this.isEmpty() ) {
+					this.removePlaceholder();
+					msgKey = 'mobile-frontend-donate-photo-first-upload-success';
+				} else {
+					msgKey = 'mobile-frontend-donate-photo-upload-success';
+				}
+				$li = $( this.templateItem.render( photoData ) ).
+					prependTo( this.$el );
+				if ( notify ) {
+					$li.hide().slideDown();
+					popup.show( mw.msg( msgKey ), 'toast' );
+				}
+			}
+		} ),
+		userGallery;
+
+	function getImageDataFromPage( page ) {
+		var img = page.imageinfo[0];
+		return { url: img.thumburl, fileName: img.name, title: page.title,
+			descriptionUrl: img.descriptionurl };
+	}
 
 	function extractDescription( text ) {
 		var index, summary = '';
@@ -15,13 +53,11 @@ m = ( function() {
 		}
 		return summary;
 	}
-	function addDescriptions( $container ) {
+	function appendDescriptions( imageData, callback ) {
 		var corsUrl = M.getConfig( 'photo-upload-endpoint' ), options,
-			data, titles = [], descriptions = {};
-
-		$container.find( 'p' ).each( function() {
-			titles.push( $( this ).data( 'title' ) );
-		} );
+			data, titles = $.map( imageData, function( i ) {
+				return i.title;
+			} );
 
 		data = {
 			action: 'query',
@@ -39,19 +75,16 @@ m = ( function() {
 				return v;
 			} );
 			$( pages ).each( function() {
-				descriptions[ this.title ] = extractDescription( this.revisions[0]['*'] );
+				imageData[ this.title ].description = extractDescription( this.revisions[0]['*'] ) ||
+					mw.msg( 'mobile-frontend-listed-image-no-description' );
 			} );
-
-			$container.find( 'p' ).each( function() {
-				var title = $( this ).data( 'title' ), summary = descriptions[ title ];
-				$( this ).removeClass( 'loading' ).
-					text( summary || mw.msg( 'mobile-frontend-listed-image-no-description' ) );
-			} );
+			callback( imageData );
 		} );
 	}
 
-	function showGallery( $container, username ) {
+	function showGallery( username ) {
 		var corsUrl = M.getConfig( 'photo-upload-endpoint' );
+		// FIXME: use api module
 		$.ajax( {
 			url: corsUrl || M.getApiUrl(),
 			data: {
@@ -71,52 +104,52 @@ m = ( function() {
 				'withCredentials': true
 			}
 		} ).done( function( resp ) {
-			var $li, pages = [];
+			var pages = [], data = {};
+
 			if ( resp.query && resp.query.pages ) {
 				pages = resp.query.pages;
 				$.each( pages, function () {
-					var $a, img, page = this;
-					img = page.imageinfo[0];
-					$li = $( '<li>' ).prependTo( $container );
-					$a = $( '<a>' ).attr( 'href', img.descriptionurl ).appendTo( $li );
-					if ( img.thumburl ) {
-						$( '<img>' ).attr( 'src', img.thumburl ).
-							attr( 'alt', img.name ).appendTo( $a );
-					} else {
-						$a.text( img.name );
-					}
-					$( '<p class="loading">' ).data( 'title', page.title ).appendTo( $li );
+					data[ this.title ] = getImageDataFromPage( this );
 				} );
-				addDescriptions( $container );
+				appendDescriptions( data, function( imageData ) {
+					$.each( imageData, function() {
+						userGallery.addPhoto( this );
+					} );
+				} );
 			}
 
 			if ( pages.length === 0 ) {
-				$( '<p>' ).text( mw.msg( 'mobile-frontend-donate-image-summary' ) ).insertBefore( $container );
+				$( '<p>' ).text( mw.msg( 'mobile-frontend-donate-image-summary' ) ).
+					insertBefore( userGallery.$el );
 			}
 		} );
 	}
 
 	function init() {
-		var $container = $( '<div class="ctaUploadPhoto">' ).prependTo( '#content_wrapper' ),
+		var $container,
 			username = M.getConfig( 'username' );
 
+		userGallery = new UserGallery( {
+			el: 'ul.mobileUserGallery',
+			// FIXME: should be possible to do this more elegantly
+			$placeholder: $( '#content p' ).eq( 0 )
+		} );
+
 		if ( photo.isSupported() ) {
+			$container = $( '<div class="ctaUploadPhoto">' ).prependTo( '#content_wrapper' );
+
 			new photo.PhotoUploader( {
 				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
-				pageTitle: mw.config.get( 'wgTitle' ),
-				// FIXME: set different message if user has no prior contributions
-				successMessage: mw.msg( 'mobile-frontend-photo-upload-success-generic' )
+				pageTitle: mw.config.get( 'wgTitle' )
 			} ).
 				prependTo( $container ).
-				on( 'success', function( data ) {
-					// FIXME: use templates please
-					var $li = $( '<li><img src="' + data.url + '">' ).prependTo( 'ul.mobileUserGallery' );
-					$( '<p>' ).text( data.description ).appendTo( $li );
-					$li.hide().slideDown();
+				on( 'success', function( image ) {
+					image.width = IMAGE_WIDTH;
+					userGallery.addPhoto( image, true );
 				} );
 		}
 		if ( username ) {
-			showGallery( $( '.mobileUserGallery' ), username );
+			showGallery( username );
 		}
 	}
 

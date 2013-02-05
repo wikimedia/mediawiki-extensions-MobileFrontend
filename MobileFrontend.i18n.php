@@ -179,6 +179,8 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-donate-image-page-title' => 'Upload',
 	'mobile-frontend-donate-image-anon' => 'A [[Special:UserLogin|user account]] is required to view the uploads page',
 	'mobile-frontend-listed-image-no-description' => 'No description',
+	'mobile-frontend-donate-photo-upload-success' => 'Success! Your image can now be used on {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Success! Thanks for your first contribution!',
 
 	// watchlist
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
@@ -229,7 +231,6 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-image-uploading' => 'Uploading image, please wait. <a href="#">Cancel</a> if this is taking too long.',
 	'mobile-frontend-photo-upload-error' => 'Error, try again.',
 	'mobile-frontend-photo-upload-success-article' => 'Success! Your image is now live on this page.',
-	'mobile-frontend-photo-upload-success-generic' => 'Success! Thank you for contributing.',
 	'mobile-frontend-photo-license' => 'By clicking "Submit", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your photo under the [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Common Attribution-ShareAlike 3.0 License].',
 	'mobile-frontend-photo-submit' => 'Submit',
 	'mobile-frontend-photo-cancel' => 'Cancel',
@@ -500,6 +501,8 @@ See also:
 {{Identical|Upload}}',
 	'mobile-frontend-donate-image-anon' => 'Message shown to user who visits the donate image page without a user account',
 	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
+	'mobile-frontend-donate-photo-upload-success' => 'On upload page - notification shown after a successful upload',
+	'mobile-frontend-donate-photo-first-upload-success' => 'On upload page - notification shown after a successful upload when it is the first upload by that user',
 	'mobile-frontend-watchlist-add' => 'Notification message when you add an article to your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist
@@ -552,7 +555,6 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-image-uploading' => 'Text that displays whilst an image is being uploaded',
 	'mobile-frontend-photo-upload-error' => 'Text that displays when a photo fails to upload',
 	'mobile-frontend-photo-upload-success-article' => 'Text that displays when a photo has been successfully added to a page.',
-	'mobile-frontend-photo-upload-success-generic' => 'Text that displays when a photo has been successfully uploaded.',
 	'mobile-frontend-photo-license' => 'Text notifying user of license that image will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license.',
 	'mobile-frontend-photo-submit' => 'Caption for the submit button on the photo uplaod form.
 {{Identical|Submit}}',
