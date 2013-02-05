@@ -372,6 +372,18 @@ html.overlay ul.content li:hover {
 #mw-mf-overlay .content {
   margin-top: 14pt;
 }
+#mw-mf-overlay .buttonBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  background: #f3f3f3;
+  text-align: center;
+}
+#mw-mf-overlay .buttonBar button {
+  margin: 0 5px;
+}
 .alert {
   padding: 8px;
   margin: 0 40px 0 40px;

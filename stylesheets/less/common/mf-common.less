@@ -9,8 +9,24 @@
 	display: inline-block;
 }
 
+/* FIXME: make our own customized rest CSS and move it there */
+input, textarea, button {
+	font-size: 100%;
+	font-family: inherit;
+}
+
 input {
 	word-break: normal;
+}
+
+textarea {
+	padding: 5px 0 5px 5px;
+}
+
+input:not([type=submit]), textarea {
+	background: #fff;
+	border: 1px solid #ccc;
+	.boxshadow( inset, 0, 0, 4px, #ddd );
 }
 
 button.disabled {
