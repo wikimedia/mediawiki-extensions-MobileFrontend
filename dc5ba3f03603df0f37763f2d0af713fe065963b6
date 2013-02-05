@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//zq8\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-05T01:08:45Z",
+      "side": 1,
+      "message": "This is a global variable, right? Why not put it inside our config?",
+      "revId": "dc5ba3f03603df0f37763f2d0af713fe065963b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//zrA\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-05T01:08:45Z",
+      "side": 1,
+      "message": "I figured out what I don\u0027t like about it ;)\nI think it just doesn\u0027t belong to the module system. Think \"include\" from C/C++, \"import\" from Python, \"require\" from Ruby, they don\u0027t ever run any init function. I\u0027d say let\u0027s use it now but let\u0027s add a FIXME. I think we can handle it by firing proper events. What do you think?",
+      "revId": "dc5ba3f03603df0f37763f2d0af713fe065963b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//zs4\u003d",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-05T01:08:45Z",
+      "side": 1,
+      "message": "Why not \"toggle-dynamic\"?",
+      "revId": "dc5ba3f03603df0f37763f2d0af713fe065963b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
