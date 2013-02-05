@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//zt8\u003d",
+        "filename": "javascripts/common/mf-notification.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-05T00:48:47Z",
+      "side": 1,
+      "message": "you should check if the user is actually logged in rather than checking for the existence of a query string param in the URL",
+      "revId": "9cb1c2facfd7ecabe431b63278c2a848163ab61d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
