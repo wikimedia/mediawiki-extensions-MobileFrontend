@@ -34,6 +34,24 @@
       "revId": "9cb1c2facfd7ecabe431b63278c2a848163ab61d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//zsc\u003d",
+        "filename": "javascripts/common/mf-notification.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-05T00:56:31Z",
+      "side": 1,
+      "message": "I guess this is actually better than the previous behavior, which was to show an empty toast notification if the user was logged in, so sure :p",
+      "parentUuid": "AAADiH//zs0\u003d",
+      "revId": "9cb1c2facfd7ecabe431b63278c2a848163ab61d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
