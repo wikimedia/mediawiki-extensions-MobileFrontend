@@ -69,6 +69,10 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 					'class' => 'mw-mf-watchlist-views header' )
 				) .
 			$mobileSkin->getMenuButton() .
+			Html::openElement( 'div',
+				array(
+					'class' => 'mw-mf-view-filters' )
+				) .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
 				$attrsList,
@@ -83,6 +87,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 					'watchlistview' => 'feed'
 				)
 			) .
+			Html::closeElement( 'div' ) .
 			Html::closeElement( 'div' );
 		return $html;
 	}
