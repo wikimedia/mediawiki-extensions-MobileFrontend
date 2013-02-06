@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3///9Y\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-06T19:09:19Z",
+      "side": 1,
+      "message": "Does this call do anything useful? From reading this function\u0027s source, the whole point of it is its return value.",
+      "revId": "823c157c55de9838e9b003b36ead35fc8bf98f5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///9o\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-06T19:09:19Z",
+      "side": 1,
+      "message": "Per IRC discussion, please use ../../MobileFrontend.php here",
+      "revId": "823c157c55de9838e9b003b36ead35fc8bf98f5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
