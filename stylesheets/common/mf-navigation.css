@@ -492,8 +492,8 @@ body {
 #mw-mf-overlay .mw-mf-overlay-header {
   padding-left: 40px;
 }
-#mw-mf-overlay .header {
-  margin-left: -40px;
+#mw-mf-overlay h1.header {
+  padding-left: 0;
 }
 #mw-mf-overlay .mw-mf-overlay-footer,
 #mw-mf-overlay .mw-mf-overlay-header {
