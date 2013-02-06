@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//ypg\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 933,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-06T00:04:41Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/47104/1 is already merged, can we remove the empty array? ;)",
+      "revId": "323dfb8d58340b922f2fb797331c238810ec569a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
