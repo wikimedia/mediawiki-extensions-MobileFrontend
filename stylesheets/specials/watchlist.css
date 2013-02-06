@@ -161,6 +161,7 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
   padding: 1em 1em 7em;
 }
 #mw-mf-diffview #mw-mf-diff-info {
+  line-height: 1em;
   padding-bottom: 1em;
 }
 #mw-mf-diffview #mw-mf-diff-comment {
