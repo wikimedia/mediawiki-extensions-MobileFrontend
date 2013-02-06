@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADi3///9c\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-06T19:15:15Z",
+      "side": 1,
+      "message": "does this really no longer need the boilerplate?",
+      "revId": "14d62fe0203731b367f99c49db42738ecb1b66ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//yos\u003d",
         "filename": "javascripts/common/mf-application.js",
         "patchSetId": 3
