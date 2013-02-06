@@ -180,6 +180,17 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
 #mw-mf-diffview #mw-mf-userinfo::before {
   content: "";
   position: absolute;
+  top: -10px;
+  left: 19px;
+  border-width: 0px 11px 10px;
+  border-style: solid;
+  border-color: #c0c0c0 transparent;
+  display: block;
+  width: 0;
+}
+#mw-mf-diffview #mw-mf-userinfo::after {
+  content: "";
+  position: absolute;
   top: -9px;
   left: 20px;
   border-width: 0px 10px 10px;
