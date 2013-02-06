@@ -47,7 +47,7 @@
 	}
 
 	function init() {
-		if ( $( '#mw-mf-watchlist' ).length > 0 ) {
+		if ( $( '#mw-mf-watchlist' ).length > 0 && M.getConfig( 'alpha' ) ) {
 			initWatchlist();
 		}
 	}
