@@ -341,6 +341,7 @@ class SkinMobile extends SkinMobileBase {
 		if ( $inBeta ) {
 
 			if ( $jQueryEnabled ) {
+				$headModuleNames[] = 'mobile.beta.dependencies';
 				$moduleNames[] = 'mobile.beta.jquery';
 
 				if ( $wgMFLogEvents &&  isset( $wgAutoloadClasses['ResourceLoaderSchemaModule'] ) ) {
@@ -936,13 +937,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$title = $this->data['title'];
 		// FIXME: this should all be done in prepareTemplate - getting extremely messy
 		$jsconfig = array(
-			// FIXME: these messages require parsing before being sent to mobile - the parsing should probably be done in javascript
 			'messages' => array(
-				'mobile-frontend-language-footer' => Html::element( 'a',
-					array(
-						'href' => SpecialPage::getTitleFor( 'MobileOptions', 'Language' )->getLocalUrl(),
-					),
-					wfMessage( 'mobile-frontend-language-footer' ) ),
 			),
 			'settings' => array(
 				'action' => $this->data['action'],
