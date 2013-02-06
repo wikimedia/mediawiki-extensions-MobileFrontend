@@ -161,7 +161,7 @@ body.alpha ul.mw-mf-watchlist-results li a.title {
   text-decoration: strikethrough;
 }
 #mw-mf-diffview #mw-mf-diffarea {
-  padding: 1em 1em 7em;
+  padding: 1em 1em 11em;
 }
 #mw-mf-diffview #mw-mf-diff-info {
   line-height: 1em;
@@ -173,7 +173,7 @@ body.alpha ul.mw-mf-watchlist-results li a.title {
 }
 #mw-mf-diffview #mw-mf-userinfo {
   position: relative;
-  height: 3em;
+  height: 5em;
   padding: 1em;
   background-color: #f0f0f0;
   border-top: solid 1px #c0c0c0;
@@ -202,6 +202,21 @@ body.alpha ul.mw-mf-watchlist-results li a.title {
 }
 #mw-mf-diffview #mw-mf-userinfo .mw-mf-user {
   line-height: 14px;
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-edit-count {
+  display: inline-block;
+  text-align: center;
+  margin-top: 1.2em;
+  color: #333;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  line-height: 1;
+  /* the edit count number */
+
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-edit-count div {
+  font-size: 1.85em;
+  color: #888;
 }
 .supportsPositionFixed #mw-mf-diffview #mw-mf-userinfo {
   position: fixed;

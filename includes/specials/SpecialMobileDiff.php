@@ -141,8 +141,8 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 				'<div class="mw-mf-roles">' .
 					$this->listGroups( $user ) .
 				'</div>' .
-				'<div>' .
-					$this->msg( 'mobile-frontend-diffview-editcount', $this->getLanguage()->formatNum( $edits ) )->escaped() .
+				'<div class="mw-mf-edit-count">' .
+					$this->msg( 'mobile-frontend-diffview-editcount', '<div>' . $this->getLanguage()->formatNum( $edits ) . '</div>' )->parse() .
 				'</div>'
 			);
 		} else {
