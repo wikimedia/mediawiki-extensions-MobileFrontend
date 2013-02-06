@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//ylo\u003d",
+        "filename": "javascripts/common/main.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T00:53:18Z",
+      "side": 1,
+      "message": "True. Will do.",
+      "parentUuid": "AAADiH//ync\u003d",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//ynQ\u003d",
         "filename": "javascripts/common/main.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-06T00:47:59Z",
       "side": 1,
       "message": "Maybe just:\n\njQuery( function( $ ) {\n    $( \u0027html\u0027 ).removeClass( \u0027page-loading\u0027 );\n} );\n\nBut I\u0027m actually wondering if we need this file at all, maybe just move it to init() in mf-application.js?",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//yls\u003d",
+        "filename": "javascripts/common/main.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T00:53:18Z",
+      "side": 1,
+      "message": "moving to mf-application.js sounds like a good idea.",
+      "parentUuid": "AAADiH//ynQ\u003d",
       "revId": "6dd649d990f502606b250b6d41f71d008e949881",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAADiH//ylw\u003d",
+        "filename": "javascripts/modules/mf-cleanuptemplates.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T00:53:18Z",
+      "side": 1,
+      "message": "Well.. previously mobileFrontend intialised itself on window.onload / domContentLoaded - now it initialises itself as soon as it loads.\n\nSo the module now needs to initialise itself straight away\n\nSee\nhttps://gerrit.wikimedia.org/r/#/c/47546/3/javascripts/common/mf-application.js",
+      "parentUuid": "AAADiH//ynI\u003d",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//ym8\u003d",
         "filename": "tests/SkinMobileTest.php",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2013-02-06T00:47:59Z",
       "side": 1,
       "message": "I disagree.",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//yl0\u003d",
+        "filename": "tests/SkinMobileTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T00:53:18Z",
+      "side": 1,
+      "message": "That i should be positioned on the bottom..? :D",
+      "parentUuid": "AAADiH//ym8\u003d",
       "revId": "6dd649d990f502606b250b6d41f71d008e949881",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
