@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//ync\u003d",
+        "filename": "javascripts/common/main.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-06T00:47:59Z",
+      "side": 1,
+      "message": "This is not needed anymore. If we rely on RL, mw must be present.",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//ynQ\u003d",
+        "filename": "javascripts/common/main.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-06T00:47:59Z",
+      "side": 1,
+      "message": "Maybe just:\n\njQuery( function( $ ) {\n    $( \u0027html\u0027 ).removeClass( \u0027page-loading\u0027 );\n} );\n\nBut I\u0027m actually wondering if we need this file at all, maybe just move it to init() in mf-application.js?",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//ynI\u003d",
+        "filename": "javascripts/modules/mf-cleanuptemplates.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-06T00:47:59Z",
+      "side": 1,
+      "message": "Why do we need that? Isn\u0027t page-loaded run even when no dynamic loading is used?",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//ym8\u003d",
+        "filename": "tests/SkinMobileTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-06T00:47:59Z",
+      "side": 1,
+      "message": "I disagree.",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
