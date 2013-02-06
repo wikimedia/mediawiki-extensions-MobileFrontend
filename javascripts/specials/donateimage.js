@@ -112,6 +112,7 @@ m = ( function() {
 					// FIXME: use templates please
 					var $li = $( '<li><img src="' + data.url + '">' ).prependTo( 'ul.mobileUserGallery' );
 					$( '<p>' ).text( data.description ).appendTo( $li );
+					$li.hide().slideDown();
 				} );
 		}
 		if ( username ) {
