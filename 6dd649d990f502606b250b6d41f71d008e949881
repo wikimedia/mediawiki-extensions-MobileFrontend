@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAADi3////I\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-06T19:06:53Z",
+      "side": 1,
+      "message": "can we get rid of $device-\u003esupportsJavaScript() - shouldn\u0027t $device-\u003esupportsJQuery() be sufficient here?",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///+w\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-06T19:06:53Z",
+      "side": 1,
+      "message": "if stable is not going to be supporting JS, does it make sense to be the default for modules that do not have mobileTargets defined? it very well might be, but i am concerned this might not be defensive enough.",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//ync\u003d",
         "filename": "javascripts/common/main.js",
         "patchSetId": 3
