@@ -3975,6 +3975,7 @@ Auta herättämään nämä sivut eloon lahjoittamalla kuviasi, joita olet valmi
 	'mobile-frontend-watchlist-add' => '$1 on lisätty tarkkailulistallesi',
 	'mobile-frontend-watchlist-removed' => '$1 on poistettu tarkkailulistaltasi',
 	'mobile-frontend-watchlist-view' => 'Näytä tarkkailulista',
+	'mobile-frontend-watchlist-more' => 'lisää',
 	'mobile-frontend-watchlist-a-z' => 'Kaikki',
 	'mobile-frontend-watchlist-feed' => 'Muokatut sivut', # Fuzzy
 	'mobile-frontend-changeslist-ip' => 'Rekisteröitymätön käyttäjä',
@@ -3990,14 +3991,19 @@ Auta herättämään nämä sivut eloon lahjoittamalla kuviasi, joita olet valmi
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|tavu|tavua}} poistettu',
 	'mobile-frontend-table' => 'Taulukko $1',
 	'mobile-frontend-saving-exit-page' => 'Muutoksiasi tallennetaan yhä. Jos poistut nyt, muutoksesi eivät tallennu. Haluatko varmasti poistua?',
-	'mobile-frontend-photo-upload' => 'Lisää ensimmäinen kuva tälle sivulle', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Lisää kuva tälle sivulle',
 	'mobile-frontend-photo-article-edit-comment' => 'Lisäsi kuvan sivulla käytettäväksi',
 	'mobile-frontend-photo-upload-comment' => 'Lisäsi kuvan sivulle',
-	'mobile-frontend-photo-caption-placeholder' => 'Lisää kuvateksti tälle kuvalle', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Lisää kuvaus (vaaditaan)',
 	'mobile-frontend-image-loading' => 'Ladataan kuvaa',
-	'mobile-frontend-image-uploading' => 'Lähetetään kuvaa', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'Kuvan lähettäminen epäonnistui. Kokeile toista kuvaa.', # Fuzzy
+	'mobile-frontend-image-uploading' => 'Lähetetään kuvaa. Odota. <a href="#">Peruuta</a>, jos tämä kestää liian kauan.',
+	'mobile-frontend-photo-upload-error' => 'Virhe. Yritä uudelleen.',
 	'mobile-frontend-photo-license' => 'Kaikki kuvasi julkaistaan [//fi.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot CC-BY-SA 3.0 -lisenssillä].', # Fuzzy
+	'mobile-frontend-photo-submit' => 'Lähetä',
+	'mobile-frontend-photo-cancel' => 'Peruuta',
+	'tag-mobile_edit' => 'Mobiilimuutos',
+	'tag-mobile_edit-description' => 'Muutos, joka on tehty mobiilisivustolta',
+	'mobile-frontend-drawer-cancel' => 'Peruuta',
 );
 
 /** Faroese (føroyskt)
@@ -6325,6 +6331,7 @@ $messages['it'] = array(
 	'mobile-frontend-nearby-noresults' => 'Sei in mezzo al nulla e siamo riusciti a trovare nessun argomento. Perché non ne scrivi uno?',
 	'mobile-frontend-nearby-refresh' => "Abbiamo trovato una posizione più precisa. Clicca qui per aggiornare l'elenco delle pagine nelle tue vicinanze",
 	'mobile-frontend-nearby-error' => 'Si è verificato un errore imprevisto durante il tentativo di trovare le pagine nelle tue vicinanze',
+	'mobile-frontend-donate-image-login' => 'Accedi per vedere i file che hai caricato',
 	'mobile-frontend-photo-upload-generic' => "Dona un'immagine",
 	'mobile-frontend-donate-image-title' => "Dona un'immagine",
 	'mobile-frontend-donate-image-heading' => 'I tuoi contributi recenti',
@@ -6365,7 +6372,7 @@ $messages['it'] = array(
 	'mobile-frontend-photo-upload-comment' => 'Aggiungi questa foto ad una pagina',
 	'mobile-frontend-photo-caption-placeholder' => 'Aggiungi una descrizione (obbligatoria)',
 	'mobile-frontend-image-loading' => 'Caricamento immagine',
-	'mobile-frontend-image-uploading' => 'Caricamento immagine', # Fuzzy
+	'mobile-frontend-image-uploading' => 'Caricamento immagine, attendi. <a href="#">Annulla</a> se impiega troppo tempo.',
 	'mobile-frontend-photo-upload-error' => 'Errore, prova ancora.',
 	'mobile-frontend-photo-license' => 'Nota: tutte le foto pubblicate saranno rilasciate con [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licenza CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-photo-submit' => 'Invia',
