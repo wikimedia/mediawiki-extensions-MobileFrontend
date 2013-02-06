@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3///po\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T22:41:54Z",
+      "side": 1,
+      "message": "I guess so yes. Ideally I\u0027d like to remove supportsJquery function altogether as it is now redundant. I\u0027d prefer to do this in a separate patchset and simply test for supportsJavascript",
+      "parentUuid": "AAADi3////I\u003d",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3///+w\u003d",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-06T19:06:53Z",
       "side": 1,
       "message": "if stable is not going to be supporting JS, does it make sense to be the default for modules that do not have mobileTargets defined? it very well might be, but i am concerned this might not be defensive enough.",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///pc\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T22:41:54Z",
+      "side": 1,
+      "message": "I talked to Ori about this. It makes sense to define as empty array by default and not make any assumptions. Will fix.",
+      "parentUuid": "AAADi3///+w\u003d",
       "revId": "6dd649d990f502606b250b6d41f71d008e949881",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -153,6 +189,24 @@
       "side": 1,
       "message": "Why don\u0027t we just fire page-load event after mobileFrontend is initialized?",
       "parentUuid": "AAADiH//ylw\u003d",
+      "revId": "6dd649d990f502606b250b6d41f71d008e949881",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///ps\u003d",
+        "filename": "javascripts/modules/mf-cleanuptemplates.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T22:41:54Z",
+      "side": 1,
+      "message": "Because mf-application.js will get run and thus run this trigger before anything else has been binded....",
+      "parentUuid": "AAADiH//ylc\u003d",
       "revId": "6dd649d990f502606b250b6d41f71d008e949881",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
