@@ -190,10 +190,7 @@ ul.mw-mf-watchlist-results {
 	}
 
 	#mw-mf-userinfo {
-		position: fixed; // FIXME: fallback needed for browsers that do not support position fixed?
-		bottom: 0;
-		left: 0;
-		right: 0;
+		position: relative;
 		height: @userInfoHeight;
 		padding: 1em;
 		background-color: #f0f0f0;
@@ -213,6 +210,17 @@ ul.mw-mf-watchlist-results {
 
 		.mw-mf-user {
 			line-height: 14px;
+		}
+	}
+}
+
+.supportsPositionFixed {
+	#mw-mf-diffview {
+		#mw-mf-userinfo {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
 		}
 	}
 }

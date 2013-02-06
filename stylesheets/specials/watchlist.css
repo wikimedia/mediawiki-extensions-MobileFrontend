@@ -168,10 +168,7 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
   font-style: italic;
 }
 #mw-mf-diffview #mw-mf-userinfo {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   height: 3em;
   padding: 1em;
   background-color: #f0f0f0;
@@ -190,6 +187,12 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
 }
 #mw-mf-diffview #mw-mf-userinfo .mw-mf-user {
   line-height: 14px;
+}
+.supportsPositionFixed #mw-mf-diffview #mw-mf-userinfo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .mw-mf-user {
   padding: 1px 0 0 20px;
