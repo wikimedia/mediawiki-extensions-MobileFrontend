@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3///u8\u003d",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T20:35:35Z",
+      "side": 1,
+      "message": "correct. It doesn\u0027t use localTemplatePath, remoteExtPath and we know it targets mobile as that\u0027s what the class MFResourceLoaderModule does...",
+      "parentUuid": "AAADi3///9c\u003d",
+      "revId": "14d62fe0203731b367f99c49db42738ecb1b66ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADiH//yos\u003d",
         "filename": "javascripts/common/mf-application.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-06T00:15:30Z",
       "side": 1,
       "message": "Retrieve compiled template.\n\n@return {Hogan.Template}",
+      "revId": "14d62fe0203731b367f99c49db42738ecb1b66ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///u4\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-06T20:35:35Z",
+      "side": 1,
+      "message": "Will do. Need to update compile too I guess?",
+      "parentUuid": "AAADiH//yos\u003d",
       "revId": "14d62fe0203731b367f99c49db42738ecb1b66ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
