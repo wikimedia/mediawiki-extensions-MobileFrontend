@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3///q8\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 555,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-06T22:25:23Z",
+      "side": 0,
+      "message": "should you get rid of the actual message as well?",
+      "revId": "ab150fd27e03d584384639e4ffb8324ad15686f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
