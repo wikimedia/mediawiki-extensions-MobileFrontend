@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//yos\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-06T00:15:30Z",
+      "side": 1,
+      "message": "Retrieve compiled template.\n\n@return {Hogan.Template}",
+      "revId": "14d62fe0203731b367f99c49db42738ecb1b66ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//yog\u003d",
+        "filename": "tests/js/fixtures-templates.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-06T00:15:30Z",
+      "side": 1,
+      "message": "I\u0027m not sure I like it but I guess it\u0027s ok for now. I have an idea how we can rely on RL modules for the tests themselves.",
+      "revId": "14d62fe0203731b367f99c49db42738ecb1b66ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
