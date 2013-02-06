@@ -283,11 +283,10 @@ class MobileFrontendHooks {
 		// is done on the WMF cluster (see config in CommonSettings.php)
 		if ( $wgMFForceSecureLogin && WebRequest::detectProtocol() != 'https' ) {
 			// get the https url and redirect
-			$request = $special->getContext()->getRequest();
-			$query = array(
-				'returnto' => $request->getVal( 'returnto', '' ),
-				'returntoquery' => $request->getVal( 'returntoquery', '' ),
-			);
+			$query = $special->getContext()->getRequest()->getQueryValues();
+			if ( isset( $query['title'] ) )  {
+				unset( $query['title'] );
+			}
 			$url = $mobileContext->getMobileUrl(
 				$special->getFullTitle()->getFullURL( $query ),
 				true
