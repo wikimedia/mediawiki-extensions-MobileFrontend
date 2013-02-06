@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3///p8\u003d",
+        "filename": "includes/modules/MFResourceLoaderModule.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-06T22:37:43Z",
+      "side": 1,
+      "message": "what happens if $this-\u003elocalBasePath is not $IP/extensions/MobileFrontend?",
+      "revId": "214e7c778ee63464b00d6aa558238d20b21d3a77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
