@@ -130,11 +130,27 @@ body.alpha ul.mw-mf-watchlist-results li a.title {
 #mw-mf-diffview h2 a {
   color: inherit;
 }
+#mw-mf-diffview .mw-mf-bytesremoved,
+#mw-mf-diffview .mw-mf-bytesadded {
+  padding-left: 1.5em;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 1em 1em;
+  -o-background-size: 1em 1em;
+  -webkit-background-size: 1em 1em;
+  background-size: 1em 1em;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 1em;
+}
 #mw-mf-diffview .mw-mf-bytesadded {
   color: #008a46;
+  background-image: url(images/positive.png);
 }
 #mw-mf-diffview .mw-mf-bytesremoved {
   color: #b24242;
+  background-image: url(images/negative.png);
 }
 #mw-mf-diffview ins,
 #mw-mf-diffview del {

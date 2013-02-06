@@ -149,12 +149,24 @@ body.alpha {
 		.watchlistHeading();
 	}
 
+	.mw-mf-bytesremoved,
+	.mw-mf-bytesadded {
+		padding-left: 1.5em;
+		.background-size( 1em, 1em );
+		background-position: left center;
+		background-repeat: no-repeat;
+		display: inline-block;
+		line-height: 1em;
+	}
+
 	.mw-mf-bytesadded {
 		color: #008a46;
+		background-image: url(images/positive.png);
 	}
 
 	.mw-mf-bytesremoved {
 		color: #b24242;
+		background-image: url(images/negative.png);
 	}
 
 	ins,
