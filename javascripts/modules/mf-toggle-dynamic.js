@@ -72,10 +72,6 @@ var T = ( function() {
 				} ).prependTo( this );
 			$this.on( 'click', openSectionHandler );
 		} );
-		// disable links
-		$( 'h2 a' ).on( 'click', function( ev ) {
-			ev.preventDefault();
-		} );
 
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
