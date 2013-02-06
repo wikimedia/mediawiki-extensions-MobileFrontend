@@ -1,13 +1,13 @@
 ( function( M, $ ) {
 
 	var View = M.require( 'view' ),
-		api = M.require( 'api' ),
+		Api = M.require( 'api' ).Api,
 		nav = M.require( 'navigation' ),
 		popup = M.require( 'notifications' ),
 		$page = $( '#content' ),
 		endpoint = M.getConfig( 'photo-upload-endpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
-		PhotoUploaderPreview, LeadPhoto, PhotoUploader;
+		PhotoApi, PhotoUploaderPreview, LeadPhoto, PhotoUploader;
 
 	function needsPhoto( $container ) {
 		return $container.find( '#content_0' ).find( '.thumb img, .navbox, .infobox' ).length === 0;
@@ -39,62 +39,66 @@
 		return name + '.' + extension;
 	}
 
-	function updatePage( options, callback ) {
-		api.getToken( 'edit', function( tokenData ) {
-			api.post( {
-				action: 'edit',
-				title: options.pageTitle,
-				token: tokenData.tokens.edittoken,
-				comment: mw.msg( 'mobile-frontend-photo-upload-comment' ),
-				prependtext: '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n'
-			} ).done( callback );
-		} );
-	}
-
-	function save( options, callback ) {
-		options.editSummaryMessage = options.insertInPage ?
-			'mobile-frontend-photo-article-edit-comment' :
-			'mobile-frontend-photo-article-donate-comment';
-
-		api.getToken( 'edit', function( tokenData ) {
-			var formData = new FormData();
-			options.fileName = generateFileName( options.file, options.pageTitle );
-
-			formData.append( 'filename', options.fileName );
-			formData.append( 'comment', mw.msg( options.editSummaryMessage ) );
-			formData.append( 'file', options.file );
-			formData.append( 'token', tokenData.tokens.edittoken );
-			formData.append( 'text',
-				'== {{int:filedesc}} ==\n' + options.description +
-				'\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}'
-			);
-
-			api.post( formData, {
-				// iOS seems to ignore the cache parameter so sending r parameter
-				// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
-				url: apiUrl + '?action=upload&format=json&useformat=mobile&r=' + Math.random() + '&origin=' + M.getOrigin(),
-				xhrFields: { 'withCredentials': true },
-				cache: false,
-				contentType: false,
-				processData: false
-			} ).done( function( data ) {
-				if ( !data || !data.upload ) {
-					// FIXME: use event logging to log errors
-					callback( null );
-					return;
-				}
-				options.fileName = data.upload.filename || data.upload.warnings.duplicate['0'];
-				if ( options.insertInPage ) {
-					updatePage( options, function() {
-						// FIXME: check for errors here too?
-						callback( options.fileName );
-					} );
-				} else {
-					callback( options.fileName );
-				}
+	PhotoApi = Api.extend( {
+		updatePage: function( options, callback ) {
+			var self = this;
+			self.getToken( 'edit', function( tokenData ) {
+				self.post( {
+					action: 'edit',
+					title: options.pageTitle,
+					token: tokenData.tokens.edittoken,
+					comment: mw.msg( 'mobile-frontend-photo-upload-comment' ),
+					prependtext: '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n'
+				} ).done( callback );
 			} );
-		}, endpoint );
-	}
+		},
+
+		save: function( options, callback ) {
+			var self = this;
+			options.editSummaryMessage = options.insertInPage ?
+				'mobile-frontend-photo-article-edit-comment' :
+				'mobile-frontend-photo-article-donate-comment';
+
+			self.getToken( 'edit', function( tokenData ) {
+				var formData = new FormData();
+				options.fileName = generateFileName( options.file, options.pageTitle );
+
+				formData.append( 'filename', options.fileName );
+				formData.append( 'comment', mw.msg( options.editSummaryMessage ) );
+				formData.append( 'file', options.file );
+				formData.append( 'token', tokenData.tokens.edittoken );
+				formData.append( 'text',
+					'== {{int:filedesc}} ==\n' + options.description +
+					'\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}'
+				);
+
+				self.post( formData, {
+					// iOS seems to ignore the cache parameter so sending r parameter
+					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
+					url: apiUrl + '?action=upload&format=json&useformat=mobile&r=' + Math.random() + '&origin=' + M.getOrigin(),
+					xhrFields: { 'withCredentials': true },
+					cache: false,
+					contentType: false,
+					processData: false
+				} ).done( function( data ) {
+					if ( !data || !data.upload ) {
+						// FIXME: use event logging to log errors
+						callback( null );
+						return;
+					}
+					options.fileName = data.upload.filename || data.upload.warnings.duplicate['0'];
+					if ( options.insertInPage ) {
+						self.updatePage( options, function() {
+							// FIXME: check for errors here too?
+							callback( options.fileName );
+						} );
+					} else {
+						callback( options.fileName );
+					}
+				} );
+			}, endpoint );
+		}
+	} );
 
 	PhotoUploaderPreview = View.extend( {
 		defaults: {
@@ -225,7 +229,7 @@
 		),
 
 		initialize: function( options ) {
-			var self = this, $input = this.$( 'input' ), preview;
+			var self = this, api = new PhotoApi(), $input = this.$( 'input' ), preview;
 
 			this.$input = $input;
 
@@ -244,11 +248,11 @@
 						nav.closeOverlay();
 						popup.show( mw.msg( 'mobile-frontend-image-uploading' ), 'locked noButton loading' ).
 							find( 'a' ).on( 'click', function() {
-								// TODO: abort requests (next commit)
+								api.abort();
 								popup.close( true );
 							} );
 
-						save( {
+						api.save( {
 							file: $input[0].files[0],
 							description: description,
 							insertInPage: options.insertInPage,
