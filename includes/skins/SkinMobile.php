@@ -770,8 +770,12 @@ class SkinMobileTemplate extends BaseTemplate {
 
 	public function execute() {
 		$this->prepareData();
-		$this->data['isBetaGroupMember'] ? $this->set( 'bodyClasses', 'mobile beta' ) :
-			$this->set( 'bodyClasses', 'mobile live' );
+		if ( $this->data['isAlphaGroupMember'] ) {
+			$this->set( 'bodyClasses', 'mobile alpha' );
+		} else {
+			$this->data['isBetaGroupMember'] ? $this->set( 'bodyClasses', 'mobile beta' ) :
+				$this->set( 'bodyClasses', 'mobile live' );
+		}
 
 		$htmlClass = '';
 		if ( $this->data['isOverlay'] ) {
@@ -925,6 +929,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		$hookOptions = isset( $this->data['hookOptions']['toggle_view_desktop'] ) ? 'toggle_view_desktop' : '';
 
 		$inBeta = $this->data['isBetaGroupMember'];
+		$inAlpha = $this->data['isAlphaGroupMember'];
 		/** @var $user User */
 		$user = $this->data['user'];
 		/** @var $title Title */
@@ -948,6 +953,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'ajaxLoader' => $this->data['ajaxLoader'],
 				'pageUrl' => $wgArticlePath,
 				'imagesDisabled' => $this->data['imagesDisabled'],
+				'alpha' => $inAlpha,
 				'beta' => $inBeta,
 				'namespace' => $this->data['namespace'],
 				'title' => $title->getPrefixedText(),

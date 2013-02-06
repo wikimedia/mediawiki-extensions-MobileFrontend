@@ -54,12 +54,12 @@
 	}
 }
 
+@thumbWidth: 70px;
+@thumbSpace: @thumbWidth + 15px;
+@ragWidth: 8px;
+
 ul.mw-mf-watchlist-results {
 	list-style: none;
-
-	@thumbWidth: 70px;
-	@thumbSpace: @thumbWidth + 15px;
-	@ragWidth: 8px;
 
 	li {
 		border-bottom: solid 1px #e2e2e2;
@@ -87,7 +87,7 @@ ul.mw-mf-watchlist-results {
 		a.title {
 			display: block;
 			position: relative;
-			padding: 0 @contentMarginRight 15px (@thumbSpace - @ragWidth);
+			padding: 0 @contentMarginRight 15px @contentMarginLeft;
 			margin: -1px 0;
 			border-left: @ragWidth solid transparent;
 			/* FIXME: remove if we reset text-decoration in common styles */
@@ -116,7 +116,7 @@ ul.mw-mf-watchlist-results {
 
 		h2 {
 			.watchlistHeading();
-			padding: 20px 24px 0 0;
+			padding: 20px 0 0 0;
 		}
 
 		.mw-mf-time {
@@ -128,6 +128,16 @@ ul.mw-mf-watchlist-results {
 
 		.mw-mf-user {
 			margin: .5em 0 0;
+		}
+	}
+}
+
+body.alpha {
+	ul.mw-mf-watchlist-results {
+		li {
+			a.title {
+				padding-left: (@thumbSpace - @ragWidth);
+			}
 		}
 	}
 }
