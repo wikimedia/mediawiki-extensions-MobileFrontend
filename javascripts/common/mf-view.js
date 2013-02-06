@@ -1,5 +1,7 @@
 ( function( M, $ ) {
 
+	var oop = M.require( 'oop' );
+
 	/**
 	 * An abstraction over a jQuery element. Should be extended using extend().
 	 *
@@ -51,6 +53,13 @@
 			this.$el = $( options.el );
 		} else {
 			this.$el = $( '<div>' );
+		}
+
+		// TODO: if template compilation is too slow, don't compile them on a
+		// per object basis, but don't worry about it now (maybe add cache to
+		// M.template())
+		if ( typeof this.template === 'string' ) {
+			this.template = M.template( this.template );
 		}
 
 		this.render( options );
@@ -132,27 +141,7 @@
 		};
 	} );
 
-	function extend( prototype ) {
-		var Parent = this;
-		function Child() {
-			return Parent.apply( this, arguments );
-		}
-		function Surrogate() {}
-		Surrogate.prototype = Parent.prototype;
-		Child.prototype = new Surrogate;
-
-		// compile the template here if it's a string so it doesn't get recompiled
-		// for each instance (one template object for the whole prototype)
-		if ( typeof prototype.template === 'string' ) {
-			prototype.template = M.template( prototype.template );
-		}
-
-		$.extend( Child.prototype, prototype );
-		Child.extend = extend;
-		return Child;
-	}
-
-	View.extend = extend;
+	View.extend = oop.extend;
 
 	M.define( 'view', View );
 

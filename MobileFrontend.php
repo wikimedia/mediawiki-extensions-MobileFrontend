@@ -368,6 +368,7 @@ $wgResourceModules['mobile.production-jquery'] = $wgMFMobileResourceBoilerplate 
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
+		'javascripts/common/mf-oop.js',
 		'javascripts/common/mf-api.js',
 		'javascripts/common/mf-view.js',
 		'javascripts/common/mf-navigation.js',

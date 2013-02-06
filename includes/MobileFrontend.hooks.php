@@ -126,6 +126,7 @@ class MobileFrontendHooks {
 				'javascripts/common/jquery-shim.js', 'tests/js/test_jQueryShim.js',
 				'javascripts/common/mf-history.js', 'tests/js/test_mf-history.js',
 				'tests/js/test_application.js',
+				'javascripts/common/mf-oop.js', 'tests/js/test_mf-oop.js',
 				'javascripts/common/mf-api.js', 'tests/js/test_mf-api.js',
 				'javascripts/common/mf-view.js', 'tests/js/test_mf-view.js',
 				'javascripts/modules/mf-search.js', 'tests/js/test_beta_opensearch.js',
