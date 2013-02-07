@@ -458,7 +458,10 @@ $wgMFSpecialModuleStubs = array(
 		'messages' => array(
 			'mobile-frontend-donate-image-summary',
 			'mobile-frontend-listed-image-no-description',
-		)
+		),
+		'dependencies' => array(
+			'mobile.beta',
+		),
 	),
 );
 

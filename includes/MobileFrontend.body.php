@@ -238,9 +238,13 @@ class ExtMobileFrontend extends ContextSource {
 
 		$modules = array();
 		foreach( $specialModuleStubs as $moduleName => $moduleMakeup ) {
-			$module = $wgMFMobileResourceBoilerplate + array(
-				'dependencies' => array( 'mobile.startup' ),
-			);
+			$module = $wgMFMobileResourceBoilerplate;
+
+			if ( isset( $moduleMakeup[ 'dependencies' ] ) ) {
+				$module[ 'dependencies' ] = $moduleMakeup[ 'dependencies' ];
+			} else {
+				$module[ 'dependencies' ] = array( 'mobile.startup' );
+			}
 
 			if ( isset( $moduleMakeup[ 'messages' ] ) ) {
 				$module[ 'messages' ] = $moduleMakeup[ 'messages' ];
