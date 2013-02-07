@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3///gY\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T00:33:37Z",
+      "side": 1,
+      "message": "This makes no sense now, because it\u0027s thrown when there\u0027s now mw.msg (which should never happen). mw.msg probably already throws something when message doesn\u0027t exist?",
+      "revId": "f47dc81ce48cb18c439a4783e13e6ff64205e87c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///f4\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T00:33:37Z",
+      "side": 1,
+      "message": "Are you sure this will work fine? Previously this was run on DOM ready and now it will run before most modules are loaded. Plus it will removeClass( \u0027page-loading\u0027 ) before everything is actually loaded.",
+      "revId": "f47dc81ce48cb18c439a4783e13e6ff64205e87c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
