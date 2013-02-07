@@ -1,33 +1,49 @@
 ( function ( M, $ ) {
 
-var Api = M.require( 'api' ).Api, api, xhrs;
+var Api = M.require( 'api' ).Api;
 
-module( 'MobileFrontend api' );
+module( 'MobileFrontend api', {
+	setup: function() {
+		var self = this;
+		this.xhr = sinon.useFakeXMLHttpRequest();
+		this.xhr.onCreate = function( xhr ) {
+			xhr.upload = sinon.extend( {}, sinon.EventTarget );
+			self.lastXhr = xhr;
+		};
+	},
+	teardown: function() {
+		this.xhr.restore();
+	}
+} );
 
 test( '$.ajaxSetup()', function() {
-	var xhr = sinon.useFakeXMLHttpRequest(), request;
-	xhr.onCreate = function( xhr ) {
-		request = xhr;
-	};
 	$.ajax( {
 		data: { test: 'test' }
 	} );
-	strictEqual( request.url.indexOf( M.getApiUrl() ), 0, 'set default API URL' );
-	xhr.restore();
+	strictEqual( this.lastXhr.url.indexOf( M.getApiUrl() ), 0, 'set default API URL' );
 } );
 
 test( 'default instance', function() {
 	ok( M.require( 'api' ) instanceof Api, 'return default instance' );
 } );
 
+test( 'progress event', function() {
+	var spy = sinon.spy(),
+		api = new Api();
+	api.post().on( 'progress', spy );
+	this.lastXhr.upload.dispatchEvent( { type: 'progress' } );
+	ok( spy.calledWith( { type: 'progress' } ), 'forward progress event from xhr' );
+} );
+
+
 module( 'MobileFrontend api.Api', {
 	setup: function() {
-		api = new Api();
-		xhrs = [];
+		var requests = this.requests = [];
+		this.api = new Api();
 		sinon.stub( $, 'ajax', function() {
-			var xhr = { abort: sinon.spy() };
-			xhrs.push( xhr );
-			return xhr;
+			var request = { abort: sinon.spy() };
+			requests.push( request );
+			return request;
 		} );
 	},
 	teardown: function() {
@@ -36,14 +52,14 @@ module( 'MobileFrontend api.Api', {
 } );
 
 test( '#ajax', function() {
-	api.ajax( {
+	this.api.ajax( {
 		falseBool: false,
 		trueBool: true,
 		list: [ 'one', 2, 'three' ],
 		normal: 'test'
 	} );
 	ok(
-		$.ajax.calledWith( {
+		$.ajax.calledWithMatch( {
 		data: {
 			trueBool: true,
 			list: 'one|2|three',
@@ -55,21 +71,21 @@ test( '#ajax', function() {
 } );
 
 test( '#get', function() {
-	api.get( { a: 1 } );
-	ok( $.ajax.calledWith( { type: 'GET', data: { a: 1 } } ), 'call with type: GET' );
+	this.api.get( { a: 1 } );
+	ok( $.ajax.calledWithMatch( { type: 'GET', data: { a: 1 } } ), 'call with type: GET' );
 } );
 
 test( '#post', function() {
-	api.post( { a: 1 } );
-	ok( $.ajax.calledWith( { type: 'POST', data: { a: 1 } } ), 'call with type: POST' );
+	this.api.post( { a: 1 } );
+	ok( $.ajax.calledWithMatch( { type: 'POST', data: { a: 1 } } ), 'call with type: POST' );
 } );
 
 test( '#abort', function() {
-	api.get( { a: 1 } );
-	api.post( { b: 2 } );
-	api.abort();
-	xhrs.forEach( function( xhr, i ) {
-		ok( xhr.abort.calledOnce, 'abort request number ' + i );
+	this.api.get( { a: 1 } );
+	this.api.post( { b: 2 } );
+	this.api.abort();
+	this.requests.forEach( function( request, i ) {
+		ok( request.abort.calledOnce, 'abort request number ' + i );
 	} );
 } );
 

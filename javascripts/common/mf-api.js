@@ -1,6 +1,8 @@
 ( function( M, $ ) {
 
-	var oop = M.require( 'oop' ), api;
+	var oop = M.require( 'oop' ),
+		EventEmitter = M.require( 'eventemitter' ),
+		api;
 
 	// TODO: this might be dangerous and cause conflicts with other code
 	// should we move it to Api#ajax?
@@ -13,7 +15,7 @@
 	} );
 
 	function Api() {
-		this.xhrs = [];
+		this.requests = [];
 		this.tokenCache = {};
 	}
 
@@ -38,7 +40,7 @@
 	 * @return {jQuery.Deferred} Object returned by $.ajax()
 	 */
 	Api.prototype.ajax = function( data, options ) {
-		var key, xhr;
+		var key, request;
 		options = $.extend( {}, options );
 
 		for ( key in data ) {
@@ -49,10 +51,22 @@
 			}
 		}
 		options.data = data;
+		options.xhr = function() {
+			var xhr = $.ajaxSettings.xhr();
+			if ( xhr.upload ) {
+				// need to bind this event before we open the connection (see note at
+				// https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+				xhr.upload.addEventListener( 'progress', function( ev ) {
+					request.emit( 'progress', ev );
+				} );
+			}
+			return xhr;
+		};
 
-		xhr = $.ajax( options );
-		this.xhrs.push( xhr );
-		return xhr;
+		request = $.ajax( options );
+		$.extend( request, EventEmitter.prototype );
+		this.requests.push( request );
+		return request;
 	};
 
 	/**
@@ -85,8 +99,8 @@
 	 * Abort all unfinished requests issued by this Api object.
 	 */
 	Api.prototype.abort = function() {
-		this.xhrs.forEach( function( xhr ) {
-			xhr.abort();
+		this.requests.forEach( function( request ) {
+			request.abort();
 		} );
 	};
 
