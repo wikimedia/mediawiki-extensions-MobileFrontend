@@ -303,7 +303,6 @@ class SkinMobile extends SkinMobileBase {
 					ResourceLoader::makeConfigSetScript( $out->getJSVars() )
 				)
 			);
-			$headLinks[] = $this->resourceLoaderLink( $moduleNames['top'], 'scripts', $target='mobile' );
 
 			// bottom scripts
 			$out->addModules( $moduleNames['bottom'] );

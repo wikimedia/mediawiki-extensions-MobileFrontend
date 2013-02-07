@@ -209,6 +209,9 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 );
 
 $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.head',
+	),
 	'styles' => array(
 	),
 	'scripts' => array(
