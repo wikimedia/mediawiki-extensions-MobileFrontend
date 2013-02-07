@@ -222,7 +222,7 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-banner.js',
 		'javascripts/modules/mf-stop-mobile-redirect.js',
 	),
-	'position' => 'top',
+	'position' => 'bottom',
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
