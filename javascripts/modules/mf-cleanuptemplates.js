@@ -20,6 +20,7 @@ var module = (function() {
 	}
 
 	function init() {
+		run();
 		$( window ).on( 'mw-mf-page-loaded', run );
 	}
 

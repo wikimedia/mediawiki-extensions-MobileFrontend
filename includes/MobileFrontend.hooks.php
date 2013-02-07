@@ -123,7 +123,6 @@ class MobileFrontendHooks {
 				'tests/externals/sinon.js',
 				'javascripts/externals/hogan.js',
 				'tests/js/fixtures.js', 'javascripts/common/mf-application.js',
-				'javascripts/common/jquery-shim.js', 'tests/js/test_jQueryShim.js',
 				'javascripts/common/mf-history.js', 'tests/js/test_mf-history.js',
 				'tests/js/test_application.js',
 				'javascripts/common/mf-oop.js', 'tests/js/test_mf-oop.js',

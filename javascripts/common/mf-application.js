@@ -10,12 +10,10 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
-mw.mobileFrontend = (function() {
-	var u,
+mw.mobileFrontend = ( function( $ ) {
+	var
 		scrollY,
-		modules = {},
-		$ = typeof jQuery === 'undefined' ? false : jQuery,
-		doc = document.documentElement;
+		modules = {};
 
 	/**
 	 * Require (import) a module previously defined using define().
@@ -58,20 +56,11 @@ mw.mobileFrontend = (function() {
 		return Hogan.compile( templateBody );
 	}
 
+	/**
+	 * @deprecated
+	 */
 	function message( name, arg1 ) {
-		var msg;
-		msg = mwMobileFrontendConfig.messages[ name ];
-		if ( msg ) {
-			if ( arg1 ) {
-				msg = msg.replace( '$1', arg1 );
-			}
-		} else if ( mw.msg ) {
-				msg = mw.msg( name, arg1 );
-		} else {
-			// no need for translation user should never see this
-			throw 'bad key given: ' + name;
-		}
-		return msg;
+		return mw.msg( name, arg1 );
 	}
 
 	// TODO: only apply to places that need it
@@ -102,23 +91,23 @@ mw.mobileFrontend = (function() {
 	}
 
 	function triggerPageReadyHook( pageTitle, sectionData, anchorSection ) {
-		if ( $ ) {
-			$( window ).trigger( 'mw-mf-page-loaded', [ {
-				title: pageTitle, data: sectionData, anchorSection: anchorSection
-			} ] );
-		}
+		$( window ).trigger( 'mw-mf-page-loaded', [ {
+			title: pageTitle, data: sectionData, anchorSection: anchorSection
+		} ] );
 	}
 
 	// TODO: separate main menu navigation code into separate module
 	function init() {
-		var mainPage = document.getElementById( 'mainpage' );
+		var mainPage = document.getElementById( 'mainpage' ),
+			$doc = $( 'html' );
 
-		if ( $ && mainPage ) {
+		if ( mainPage ) {
 			$( window ).trigger( 'mw-mf-homepage-loaded' );
 		}
 
+		$doc.removeClass( 'page-loading' );
 		if( supportsPositionFixed() ) {
-			u( doc ).addClass( 'supportsPositionFixed' );
+			$doc.addClass( 'supportsPositionFixed' );
 		}
 
 		// when rotating to landscape stop page zooming on ios
@@ -126,7 +115,6 @@ mw.mobileFrontend = (function() {
 		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/
 			var viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' ),
-				doc = document.documentElement,
 				ua = navigator.userAgent,
 				android = ua.match( /Android/ );
 			if( viewportmeta && ua.match( /iPhone|iPad/i )  ) {
@@ -135,22 +123,14 @@ mw.mobileFrontend = (function() {
 					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
 				}, false );
 			} else if( ua.match(/Android 4\.0\.2/) ){
-				u( doc ).addClass( 'android4-0-2' );
+				$doc.addClass( 'android4-0-2' );
 			}
 			if ( android ) {
-				u( doc ).addClass( 'android' );
+				$doc.addClass( 'android' );
 			}
 		}
 		fixBrowserBugs();
-		u( document.documentElement ).removeClass( 'page-loading' );
-
-		// FIXME: kill with fire when dynamic sections are in stable
-		if ( !getConfig( 'beta' ) ) {
-			triggerPageReadyHook( getConfig( 'title' ) );
-		}
 	}
-
-	u = typeof jQuery !== 'undefined' ? jQuery : jQueryShim;
 
 	function getConfig( name, defaultValue ) {
 		if ( mwMobileFrontendConfig.settings[ name ] !== undefined ) {
@@ -204,6 +184,7 @@ mw.mobileFrontend = (function() {
 		}
 	}
 
+	$( init );
 	return {
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
@@ -219,10 +200,10 @@ mw.mobileFrontend = (function() {
 		supportsPositionFixed: supportsPositionFixed,
 		triggerPageReadyHook: triggerPageReadyHook,
 		prettyEncodeTitle: prettyEncodeTitle,
-		utils: u,
+		utils: $, // FIXME: deprecate
 		require: require,
 		define: define,
 		template: template
 	};
 
-}());
+}( jQuery ) );

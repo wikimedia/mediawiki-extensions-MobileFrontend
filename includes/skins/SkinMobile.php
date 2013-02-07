@@ -284,80 +284,85 @@ class SkinMobile extends SkinMobileBase {
 	}
 
 	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
-		global $wgAutoloadClasses, $wgMFLogEvents, $wgMFEnableResourceLoader, $wgResponsiveImages,
-			$wgMFNearby;
+		global $wgMFEnableResourceLoader,
+			$wgResourceModules;
 
-		$context = MobileContext::singleton();
-		$inBeta = $context->isBetaGroupMember();
-		$inAlpha = $context->isAlphaGroupMember();
-		$rlSupport = $inBeta && $wgMFEnableResourceLoader;
-		$jsEnabled = $device->supportsJavaScript();
-		$jQueryEnabled = $device->supportsJQuery();
-		$action = $context->getRequest()->getText( 'action' );
+		// TODO: deprecate supportsjQuery usage in favour of supportsJavascript
+		$rlSupport = $wgMFEnableResourceLoader && $device->supportsJQuery();
 		$out = $this->getOutput();
 
-		$moduleNames = array( 'mobile.startup', 'mobile.site' );
-		$headModuleNames = array( 'mobile.head', 'mobile.styles' );
 		$headLinks = array();
+		$moduleNames = $this->getEnabledModules( $wgResourceModules, $title, $device );
 
-		if ( $jQueryEnabled ) {
-			if ( $rlSupport ) {
-				// Initialize ResourceLoader, targeted to mobile...
-				$headLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
-				$headLinks[] = Html::inlineScript(
-					ResourceLoader::makeLoaderConditionalScript(
-						ResourceLoader::makeConfigSetScript( $out->getJSVars() )
-					)
-				);
-				$modules = $out->getModules( true );
+		// attach modules
+		if ( $rlSupport ) {
+			// Initialize ResourceLoader, targeted to mobile...
+			$headLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
+			$headLinks[] = Html::inlineScript(
+				ResourceLoader::makeLoaderConditionalScript(
+					ResourceLoader::makeConfigSetScript( $out->getJSVars() )
+				)
+			);
+			$headLinks[] = $this->resourceLoaderLink( $moduleNames['top'], 'scripts', $target='mobile' );
 
-				if ( $modules ) {
-					// Load ResourceLoader modules
-					$headLinks[] = Html::inlineScript(
-						ResourceLoader::makeLoaderConditionalScript(
-							Xml::encodeJsCall( 'mw.loader.load', array( $modules ) )
-						)
-					);
-				}
+			// bottom scripts
+			$out->addModules( $moduleNames['bottom'] );
+			$bottomScripts = $out->getBottomScripts();
+		} else {
+			$headLinks[] = $this->resourceLoaderLink( $moduleNames['bottom'], 'styles' );
+			$bottomScripts = '';
+		}
+		$headLinks[] = $this->resourceLoaderLink( $moduleNames['top'], 'styles', $target='mobile' );
+
+		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
+		$tpl->set( 'bottomScripts', $bottomScripts );
+		return $tpl;
+	}
+
+	/**
+	 * Gathers potential javascript modules to load
+	 * @param array $modules
+	 * @param Title $title
+	 * @param DeviceProperties $device
+	 *
+	 * @return array
+	 */
+	public function getEnabledModules( $modules, $title, $device ) {
+		$context = MobileContext::singleton();
+		$action = $context->getRequest()->getText( 'action' );
+		$inBeta = $context->isBetaGroupMember();
+		$inAlpha = $context->isAlphaGroupMember();
+
+		$headModuleNames = array();
+		$moduleNames = array();
+
+		// gather modules
+		foreach( $modules as $moduleName => $module ) {
+			if ( isset( $module['mobileTargets'] ) ) {
+				$targets = $module['mobileTargets'];
 			} else {
-				// Not beta or RL mode disabled; use old method of loading jquery.
-				$headModuleNames[] = 'jquery';
-				if ( $wgResponsiveImages ) {
-					$moduleNames[] = 'jquery.hidpi';
-					$moduleNames[] = 'mediawiki.hidpi';
-				}
+				$targets = array(); // by default assume none - modules might want to add themselves programmatically.
 			}
-		} else {
-			$headModuleNames[] = 'mobile.jqueryshim';
-		}
-
-		// jQuery only
-		if ( $jQueryEnabled ) {
-			$moduleNames[] = 'mobile.production-jquery';
-		}
-
-		// specific to beta/alpha
-		// FIXME: separate into separate function
-		if ( $inBeta ) {
-
-			if ( $jQueryEnabled ) {
-				$headModuleNames[] = 'mobile.beta.dependencies';
-				$moduleNames[] = 'mobile.beta.jquery';
-
-				if ( $wgMFLogEvents &&  isset( $wgAutoloadClasses['ResourceLoaderSchemaModule'] ) ) {
-					array_push( $headModuleNames,  'ext.eventLogging', 'schema.MobileBetaWatchlist' );
-				}
-
-				if ( $inAlpha ) {
-					$moduleNames[] = 'mobile.alpha';
-				}
+			if ( isset( $module['position'] ) ) {
+				$pos = $module['position'];
+			} else {
+				$pos = 'bottom';
 			}
-		} else {
-			$moduleNames[] = 'mobile.production-only';
-		}
 
+			$stableModule = !$inBeta && !$inAlpha && in_array( 'stable', $targets );
+			$betaModule = $inBeta && !$inAlpha && in_array( 'beta', $targets );
+			$alphaModule = $inAlpha && in_array( 'alpha', $targets );
+			$enabledModule = $stableModule || $betaModule || $alphaModule;
+
+			if ( $enabledModule ) {
+					if ( $pos == 'top' ) {
+						$headModuleNames[] = $moduleName;
+					} else {
+						$moduleNames[] = $moduleName;
+					}
+			}
+		}
 		$contextModules = $this->attachAdditionalPageResources( $title, $context );
-
 		$headModuleNames = array_merge( $headModuleNames, $contextModules['top'] );
 		$moduleNames = array_merge( $moduleNames, $contextModules['bottom'] );
 
@@ -366,27 +371,12 @@ class SkinMobile extends SkinMobileBase {
 		} else if ( $action === 'history' ) {
 			$moduleNames[] = 'mobile.action.history';
 		}
-		$moduleNames[] = $device->moduleName();
+		$headModuleNames[] = $device->moduleName();
 
-		// attach
-		if ( $jsEnabled ) {
-			$headLinks[] = $this->resourceLoaderLink( $headModuleNames, 'scripts' );
-		}
-		$headLinks[] = $this->resourceLoaderLink( $headModuleNames, 'styles' );
-
-		if ( $jQueryEnabled && $rlSupport ) {
-			$bottomScripts = Html::inlineScript(
-				ResourceLoader::makeLoaderConditionalScript(
-					Xml::encodeJsCall( 'mw.loader.load', array( $moduleNames ) )
-				)
-			);
-		} else {
-			$bottomScripts = $jsEnabled ? $this->resourceLoaderLink( $moduleNames, 'scripts' ) : '';
-			$headLinks[] = $this->resourceLoaderLink( $moduleNames, 'styles' );
-		}
-		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
-		$tpl->set( 'bottomScripts', $bottomScripts );
-		return $tpl;
+		return array(
+			'top' => $headModuleNames,
+			'bottom' => $moduleNames,
+		);
 	}
 
 	/**
@@ -447,6 +437,7 @@ class SkinMobile extends SkinMobileBase {
 		return $this->resourceLoader;
 	}
 
+	/* FIXME: deprecate (requires core changes to support target)*/
 	protected function resourceLoaderLink( $moduleNames, $type, $useVersion = true, $forceRaw = false, $target = false ) {
 		if ( $type == 'scripts' ) {
 			$only = ResourceLoaderModule::TYPE_SCRIPTS;
@@ -897,27 +888,8 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php
 	}
 
-	// @fixme: This code exists whilst MobileFrontend is not fully ResourceLoader (RL) integrated
-	// It provides messages for the mobile site when RL is not available
-	public function addMessages( $config ) {
-		global $wgResourceModules;
-		$modules = array(
-			'mobile.production-only',
-			'mobile.production-jquery',
-			'mobile.action.edit',
-		);
-		foreach( $modules as $name ) {
-			if ( isset( $wgResourceModules[$name]["messages"] ) ) {
-				foreach( $wgResourceModules[$name]["messages"] as $msg ) {
-					$config[ 'messages' ][ $msg ] = wfMessage( $msg )->text();
-				}
-			}
-		}
-		return $config;
-	}
-
 	public function prepareData() {
-		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgArticlePath, $wgMFEnableResourceLoader;
+		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgArticlePath;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
@@ -937,8 +909,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		$title = $this->data['title'];
 		// FIXME: this should all be done in prepareTemplate - getting extremely messy
 		$jsconfig = array(
-			'messages' => array(
-			),
 			'settings' => array(
 				'action' => $this->data['action'],
 				'authenticated' => $this->data['authenticated'],
@@ -965,11 +935,6 @@ class SkinMobileTemplate extends BaseTemplate {
 				'can_edit' => $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN,
 			),
 		);
-
-		$jQuerySupport = $this->data['supports_jquery'];
-		if ( !$inBeta || !$wgMFEnableResourceLoader || !$jQuerySupport ) {
-			$jsconfig = $this->addMessages( $jsconfig );
-		}
 
 		if ( $this->data['isMainPage'] ) {
 			// FIXME: move parsing into javascript
