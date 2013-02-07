@@ -41,7 +41,6 @@ class MobileFormatter extends HtmlFormatter {
 		'.boilerplate',
 		'#id-articulo-destacado', // FA star on eswiki, @todo: remove class="metadata topicon" instead
 		'.hiddenStructure',
-		'.noprint',
 		'.medialist',
 		'.mw-search-createlink',
 		'#ogg_player_1',
