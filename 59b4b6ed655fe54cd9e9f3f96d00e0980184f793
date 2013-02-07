@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3///bg\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T02:20:18Z",
+      "side": 1,
+      "message": "Ignore it. It seems we have ways around this, although http://www.mediawiki.org/wiki/Localisation#Avoid_.7B.7BSITENAME.7D.7D_in_messages describes it as pure evil.",
+      "parentUuid": "AAADi3///hg\u003d",
+      "revId": "59b4b6ed655fe54cd9e9f3f96d00e0980184f793",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3///hw\u003d",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 2
