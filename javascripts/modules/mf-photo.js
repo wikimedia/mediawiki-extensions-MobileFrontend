@@ -81,19 +81,23 @@
 					contentType: false,
 					processData: false
 				} ).done( function( data ) {
+					var descriptionUrl = '';
 					if ( !data || !data.upload ) {
 						// FIXME: use event logging to log errors
 						callback( null );
 						return;
 					}
 					options.fileName = data.upload.filename || data.upload.warnings.duplicate['0'];
+					if ( data.upload.imageinfo ) {
+						descriptionUrl = data.upload.imageinfo.descriptionurl;
+					}
 					if ( options.insertInPage ) {
 						self.updatePage( options, function() {
 							// FIXME: check for errors here too?
-							callback( options.fileName );
+							callback( options.fileName, descriptionUrl );
 						} );
 					} else {
-						callback( options.fileName );
+						callback( options.fileName, descriptionUrl );
 					}
 				} );
 			}, endpoint );
@@ -257,7 +261,7 @@
 							description: description,
 							insertInPage: options.insertInPage,
 							pageTitle: options.pageTitle
-						}, function( fileName ) {
+						}, function( fileName, descriptionUrl ) {
 							popup.close();
 
 							if ( !fileName ) {
@@ -271,6 +275,7 @@
 							self.emit( 'success', {
 								fileName: fileName,
 								description: description,
+								descriptionUrl: descriptionUrl,
 								url: dataUrl
 							} );
 						} );
