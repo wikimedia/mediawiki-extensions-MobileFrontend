@@ -55,6 +55,7 @@
 		} else {
 			this.$el = $( '<div>' );
 		}
+		this.$el.addClass( this.className );
 
 		// TODO: if template compilation is too slow, don't compile them on a
 		// per object basis, but don't worry about it now (maybe add cache to

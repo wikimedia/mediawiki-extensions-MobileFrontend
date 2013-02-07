@@ -60,6 +60,17 @@ a.external {
   background-repeat: no-repeat;
   background-position: center;
 }
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  border: 1px solid #9ea0a3;
+  box-shadow: inset 0 0 4px #bbbbbb;
+}
+.progress-bar .value {
+  width: 0;
+  height: 100%;
+  background: #3366bb;
+}
 /* Galleries */
 /* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
 ul.gallery {

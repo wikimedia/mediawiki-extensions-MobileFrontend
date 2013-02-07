@@ -2,12 +2,14 @@
 
 	var View = M.require( 'view' ),
 		Api = M.require( 'api' ).Api,
+		EventEmitter = M.require( 'eventemitter' ),
+		ProgressBar = M.require( 'widgets/progress-bar' ),
 		nav = M.require( 'navigation' ),
 		popup = M.require( 'notifications' ),
 		$page = $( '#content' ),
 		endpoint = M.getConfig( 'photo-upload-endpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
-		PhotoApi, PhotoUploaderPreview, LeadPhoto, PhotoUploader;
+		PhotoApi, PhotoUploaderPreview, LeadPhoto, PhotoUploadProgress, PhotoUploader;
 
 	function needsPhoto( $container ) {
 		return $container.find( '#content_0' ).find( '.thumb img, .navbox, .infobox' ).length === 0;
@@ -80,6 +82,10 @@
 					cache: false,
 					contentType: false,
 					processData: false
+				} ).on( 'progress', function( ev ) {
+					if ( ev.lengthComputable ) {
+						self.emit( 'progress', ev.loaded / ev.total );
+					}
 				} ).done( function( data ) {
 					var descriptionUrl = '';
 					if ( !data || !data.upload ) {
@@ -104,6 +110,8 @@
 			}, endpoint );
 		}
 	} );
+
+	$.extend( PhotoApi.prototype, EventEmitter.prototype );
 
 	PhotoUploaderPreview = View.extend( {
 		defaults: {
@@ -178,6 +186,47 @@
 		}
 	} );
 
+	PhotoUploadProgress = View.extend( {
+		defaults: {
+			waitMessage: mw.msg( 'mobile-frontend-image-uploading-wait' ),
+			cancelMessage: mw.msg( 'mobile-frontend-image-uploading-cancel' ),
+			messageInterval: 10000
+		},
+
+		template: (
+			'<p class="wait">{{waitMessage}}</p>' +
+			'<p class="cancel">{{{cancelMessage}}}</p>'
+		),
+
+		initialize: function( options ) {
+			var self = this, longMessage = false;
+
+			this.$( 'a' ).on( 'click', function() {
+				popup.close( true );
+				self.emit( 'cancel' );
+				return false;
+			} );
+
+			setInterval( function() {
+				if ( longMessage ) {
+					self.$( '.wait' ).text( mw.msg( 'mobile-frontend-image-uploading-wait' ) );
+				} else {
+					self.$( '.wait' ).text( mw.msg( 'mobile-frontend-image-uploading-long' ) );
+				}
+				longMessage = !longMessage;
+			}, options.messageInterval );
+		},
+
+		setValue: function( value ) {
+			// only add progress bar if we're getting progress events
+			if ( !this.progressBar ) {
+				this.progressBar = new ProgressBar();
+				this.progressBar.appendTo( this.$el );
+			}
+			this.progressBar.setValue( value );
+		}
+	} );
+
 	/**
 	 * PhotoUploader is a component for uploading images to the wiki.
 	 *
@@ -234,7 +283,7 @@
 		),
 
 		initialize: function( options ) {
-			var self = this, api = new PhotoApi(), $input = this.$( 'input' ), preview;
+			var self = this, $input = this.$( 'input' ), preview;
 
 			this.$input = $input;
 
@@ -249,15 +298,16 @@
 						nav.closeOverlay();
 					} ).
 					on( 'submit', function() {
-						var description = preview.getDescription();
+						var description = preview.getDescription(),
+							api = new PhotoApi(),
+							progressPopup = new PhotoUploadProgress();
 
 						self.emit( 'start' );
 						nav.closeOverlay();
-						popup.show( mw.msg( 'mobile-frontend-image-uploading' ), 'locked noButton loading' ).
-							find( 'a' ).on( 'click', function() {
-								api.abort();
-								popup.close( true );
-							} );
+						popup.show( progressPopup.$el, 'locked noButton loading' );
+						progressPopup.on( 'cancel', function() {
+							api.abort();
+						} );
 
 						api.save( {
 							file: $input[0].files[0],
@@ -279,6 +329,10 @@
 								descriptionUrl: descriptionUrl,
 								url: dataUrl
 							} );
+						} );
+
+						api.on( 'progress', function( value ) {
+							progressPopup.setValue( value );
 						} );
 					} );
 			}
@@ -342,7 +396,8 @@
 		isSupported: isSupported,
 		PhotoUploader: PhotoUploader,
 		// just for testing
-		needsPhoto: needsPhoto
+		_needsPhoto: needsPhoto,
+		_PhotoUploadProgress: PhotoUploadProgress
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

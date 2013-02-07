@@ -651,10 +651,10 @@ body {
   top: 0.8em;
   right: 1.4em;
 }
-#mf-notification.toast div {
+#mf-notification.toast > div {
   padding: 0.8em 1.4em;
 }
-#mf-notification div {
+#mf-notification > div {
   position: relative;
   padding: 16px 38px 18px 22px;
   /* 38px is 22px padding + close button icon 16px */
@@ -694,4 +694,11 @@ body {
 #mf-notification a:visited,
 #mf-notification a {
   color: #3354C0;
+}
+#mf-notification p {
+  line-height: 1.2;
+  margin: 0 0 .5em;
+}
+#mf-notification .progress-bar {
+  margin: .9em 0 0;
 }

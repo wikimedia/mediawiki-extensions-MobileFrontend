@@ -130,6 +130,7 @@ class MobileFrontendHooks {
 				'javascripts/common/mf-oop.js', 'tests/js/test_mf-oop.js',
 				'javascripts/common/mf-api.js', 'tests/js/test_mf-api.js',
 				'javascripts/common/mf-view.js', 'tests/js/test_mf-view.js',
+				'javascripts/widgets/progress-bar.js', 'tests/js/widgets/test_progress-bar.js',
 				'javascripts/modules/mf-search.js', 'tests/js/test_beta_opensearch.js',
 				'javascripts/common/mf-settings.js', 'tests/js/test_settings.js',
 				'javascripts/modules/mf-banner.js', 'tests/js/test_banner.js',

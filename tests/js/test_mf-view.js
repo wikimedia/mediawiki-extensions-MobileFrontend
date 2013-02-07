@@ -47,6 +47,7 @@ test( 'View.extend, with el property', function() {
 test( 'View.extend, with defined template', function() {
 	var ChildView, view;
 	ChildView = View.extend( {
+		className: 'my-class',
 		template: '<h1>{{title}}</h1><p>{{content}}</p>',
 		title: function() {
 			return this.$( 'h1' ).text();
@@ -58,6 +59,7 @@ test( 'View.extend, with defined template', function() {
 
 	view = new ChildView( { title: 'Test', content: 'Some content' } );
 	strictEqual( view.$el[0].tagName.toUpperCase(), 'DIV', 'wrap template in <div>' );
+	strictEqual( view.$el.attr( 'class' ), 'my-class', 'set class for $el' );
 	strictEqual( view.title(), 'Test', 'fill template with data from options' );
 	strictEqual( view.content(), 'Some content', 'fill template with data from options' );
 } );

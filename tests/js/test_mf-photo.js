@@ -10,13 +10,41 @@ var photo = M.require( 'photo' ),
 		[ $( '<div><div id="content_0"><div class="thumb"><img></div></div></div>' ), false ] // lead section with thumbnail
 	];
 
-module( 'MobileFrontend photo', {} );
+module( 'MobileFrontend photo', {
+	setup: function() {
+		this.clock = sinon.useFakeTimers();
+	},
+	tearDown: function () {
+		this.clock.restore();
+	}
+} );
 
 test( '#needsPhoto', function() {
 	var i;
 	for ( i = 0; i < articles.length; i++ ) {
-		strictEqual( photo.needsPhoto( articles[ i ][ 0 ] ), articles[ i ][ 1 ], 'article ' + i );
+		strictEqual( photo._needsPhoto( articles[ i ][ 0 ] ), articles[ i ][ 1 ], 'article ' + i );
 	}
+} );
+
+test( 'PhotoUploadProgress', function() {
+	var progressPopup = new photo._PhotoUploadProgress();
+	strictEqual(
+		progressPopup.$( '.wait' ).text(),
+		'<mobile-frontend-image-uploading-wait>',
+		'set initial wait message'
+	);
+	this.clock.tick( 11000 );
+	strictEqual(
+		progressPopup.$( '.wait' ).text(),
+		'<mobile-frontend-image-uploading-long>',
+		'set secondary wait message'
+	);
+	this.clock.tick( 11000 );
+	strictEqual(
+		progressPopup.$( '.wait' ).text(),
+		'<mobile-frontend-image-uploading-wait>',
+		'set initial wait message again'
+	);
 } );
 
 }( jQuery, mw.mobileFrontend ) );
