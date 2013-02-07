@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//+z4\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T18:01:54Z",
+      "side": 1,
+      "message": "No longer used? We use array() instead (or just leave the mobileTargets unset), right?",
+      "revId": "3b06cb38347ccc300f988fadfe3a0cb44dbd116c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//+0E\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T18:01:54Z",
+      "side": 1,
+      "message": "No longer used?",
+      "revId": "3b06cb38347ccc300f988fadfe3a0cb44dbd116c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//+zw\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T18:01:54Z",
+      "side": 1,
+      "message": "?",
+      "revId": "3b06cb38347ccc300f988fadfe3a0cb44dbd116c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//+0Q\u003d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 637,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T18:01:54Z",
+      "side": 1,
+      "message": "Why not $this-\u003edisableIncompatibleJs()?",
+      "revId": "3b06cb38347ccc300f988fadfe3a0cb44dbd116c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//+2M\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T18:01:54Z",
+      "side": 1,
+      "message": "Can be merged with the previous if.",
+      "revId": "3b06cb38347ccc300f988fadfe3a0cb44dbd116c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//+1A\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T18:01:54Z",
+      "side": 1,
+      "message": "My comment from patchset 5:\nThis makes no sense now, because it\u0027s thrown when there\u0027s no mw.msg (which should never happen). mw.msg probably already throws something when message doesn\u0027t exist?\n\nI would simply do return mw.msg( name, arg1 ); and deprecate this method.",
+      "revId": "3b06cb38347ccc300f988fadfe3a0cb44dbd116c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
