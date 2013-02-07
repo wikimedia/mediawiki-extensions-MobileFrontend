@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3///hg\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T00:07:39Z",
+      "side": 1,
+      "message": "Do not use SITENAME. This will translate awkwardly in Polish and, I\u0027m sure, many other languages (basically any language with noun declension).",
+      "revId": "59b4b6ed655fe54cd9e9f3f96d00e0980184f793",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///hw\u003d",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T00:07:39Z",
+      "side": 1,
+      "message": "Let\u0027s just remove the successMessage property and show the popup manually in L322.",
+      "revId": "59b4b6ed655fe54cd9e9f3f96d00e0980184f793",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3///hk\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-07T00:07:39Z",
+      "side": 1,
+      "message": "I\u0027d rather use the View abstraction here to make the code more understandable without analysing DOM manipulations, e.g.\n\nvar UserGallery \u003d View.extend( {\n  isEmpty: function() {},\n  removePlaceholder: function() {},\n  addPhoto: function( url ) {}\n} );\n\nvar userGallery \u003d new UserGallery( { el: \u0027ul.mobileUserGallery\u0027 } );\n\nand then:\n\nuserGallery.removePlaceholder();\nuserGallery.addPhoto( data.url );\n\netc.",
+      "revId": "59b4b6ed655fe54cd9e9f3f96d00e0980184f793",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
