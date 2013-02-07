@@ -50,7 +50,7 @@ class ApiMobileView extends ApiBase {
 		}
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
-				array( 'normalizedtitle' => $title->getPrefixedText() )
+				array( 'normalizedtitle' => $title->getPageLanguage()->convert( $title->getPrefixedText() ) )
 			);
 		}
 		$data = $this->getData( $title, $params['noimages'] );
@@ -186,6 +186,9 @@ class ApiMobileView extends ApiBase {
 			wfProfileIn( __METHOD__ . '-sections' );
 			$data = array();
 			$data['sections'] = $parserOutput->getSections();
+			for ( $i = 0; $i < count( $data['sections'] ); $i++ ) {
+				$data['sections'][$i]['line'] = $title->getPageLanguage()->convert( $data['sections'][$i]['line'] );
+			}
 			$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
 			if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
 				wfDebug( __METHOD__ . "(): mismatching number of sections from parser and split. oldid=$latest\n" );
