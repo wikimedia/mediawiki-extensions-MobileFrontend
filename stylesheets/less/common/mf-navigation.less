@@ -14,20 +14,28 @@
 	height: @headerHeight;
 }
 
+#mw-mf-menu-page,
 #mw-mf-main-menu-button {
 	display: inline-block;
 	height: @headerHeight;
 	width: @searchBoxMarginLeft;
+	position: absolute;
+	top: 0;
+}
+
+#mw-mf-main-menu-button {
 	background-image: url(images/menu/lowres/main.png);
 	.background-size( 24px, 30px );
 	overflow: hidden;
-	position: absolute;
-	top: 0;
 	background-repeat: no-repeat;
 	z-index: 2;
 	left: 0;
 	border-radius: 5px 5px 5px;
 	background-position: center center;
+}
+
+#mw-mf-menu-page {
+	right: 8px;
 }
 
 .jsEnabled {
@@ -243,10 +251,6 @@
 body.navigationEnabled {
 	height: 100%;
 	overflow: hidden;
-}
-
-.clearlink {
-	right: 8px;
 }
 
 #mw-mf-overlay {
@@ -513,26 +517,9 @@ body {
 }
 
 /* Page actions */
-
-.hasSecondaryNav {
-
-	.full-screen-search {
-		#mw-mf-menu-page {
-			display: none;
-		}
-	}
-
+.full-screen-search {
 	#mw-mf-menu-page {
-		width: @secondaryNavWidth;
-		position: absolute;
-		right: @contentMarginRight - 4px;
-		top: @searchMarginTop - @searchBorderHeight;
-		bottom: 0;
-
-		a {
-			height: @secondaryNavWidth;
-			width: @secondaryNavWidth;
-		}
+		display: none;
 	}
 }
 
@@ -570,7 +557,7 @@ body {
 
 	a.button {
 		display: block;
-		margin: 8px @searchBarPaddingRightBeta 8px @searchBarPaddingRightBeta;
+		margin: 8px @searchBarPaddingLeft 8px @searchBarPaddingRight;
 	}
 
 	a.signup {

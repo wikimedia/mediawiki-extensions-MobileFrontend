@@ -4,7 +4,7 @@
 
 a.watch-this-article {
 	background-image: url(images/watch.png);
-	background-position: right center;
+	background-position: center center;
 	.background-size( auto, @watchThisArticleSize );
 	position: absolute;
 	top: 0;
@@ -18,7 +18,6 @@ a.watch-this-article {
 
 	&.loading {
 		background-image: @ajaxLoadingImage;
-		background-position: right center;
 		min-height: auto;
 	}
 }
@@ -37,8 +36,11 @@ li a.watch-this-article {
 
 #mw-mf-menu-page {
 	a.watch-this-article {
-		position: relative;
-		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
 	}
 }
 

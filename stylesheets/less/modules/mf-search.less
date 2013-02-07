@@ -16,8 +16,8 @@ html.jsSearch {
 
 input.searchSubmit {
 	position: absolute;
-	top: @searchMarginTop + 1px;
-	right: 0;
+	top: @searchMarginTop;
+	right: -@searchBarPaddingRight + 4px;
 	padding-top: @inputThirdHeight;
 	padding-bottom: @inputThirdHeight;
 	font-size: @inputThirdHeight;
@@ -56,14 +56,20 @@ input.search {
 	}
 }
 
-.hasSecondaryNav .full-screen-search #mw-mf-searchForm,
+.full-screen-search {
+
+	#mw-mf-searchForm {
+		padding-right: @contentMarginRight;
+	}
+}
+
 #mw-mf-searchForm {
-		padding: 0 @ribbonclosedwidth 0 @searchBoxMarginLeft;
+		padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
 	.clearlink {
 		top: @searchMarginTop;
-		right: 8px;
+		right: 7px;
 		width: 24px;
 		height: @searchBoxHeight;
 		background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
@@ -73,12 +79,6 @@ input.search {
 		.background-size( auto, 12px );
 		cursor: pointer;
 		position: absolute;
-	}
-}
-
-body.beta {
-	#mw-mf-searchForm {
-		padding-right: @searchBarPaddingRight + @secondaryNavWidth;
 	}
 }
 

@@ -63,4 +63,4 @@ test( 'initWatchListIconList', function() {
 	strictEqual( $container.find( '.watch-this-article.watched' ).length, 1, 'One article is watched' );
 } );
 
-}( jQuery, mw.mobileFrontend, mw.mobileFrontend.require( 'watchlist' ) ) );
+}( jQuery, mw.mobileFrontend, mw.mobileFrontend.require( 'watchstar' ) ) );

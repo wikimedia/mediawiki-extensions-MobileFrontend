@@ -179,6 +179,10 @@ var api = M.require( 'api' ), w = ( function() {
 		var pageTitle = M.getConfig( 'title' );
 		container = container || nav.getPageMenu();
 		title = title || pageTitle;
+		// initialise on current page
+		initWatchListIcon( container, title );
+
+		// bind to future page loads
 		M.on( 'page-loaded', function( article ) {
 			initWatchListIcon( container, article.title );
 		} );
@@ -193,6 +197,6 @@ var api = M.require( 'api' ), w = ( function() {
 	};
 }());
 
-M.define( 'watchlist', w );
+M.define( 'watchstar', w );
 
 }( mw.mobileFrontend, jQuery ));
