@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9rA\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2013-02-08T14:40:44Z",
+      "side": 1,
+      "message": "$title-\u003egetPageLanguage()-\u003econvert()",
+      "revId": "214416435e1089c83938f5a9409e83eafe8ef651",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9q4\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2013-02-08T14:40:44Z",
+      "side": 1,
+      "message": "$title-\u003egetPageLanguage()-\u003econvert()",
+      "revId": "214416435e1089c83938f5a9409e83eafe8ef651",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
