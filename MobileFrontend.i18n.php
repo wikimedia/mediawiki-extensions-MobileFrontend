@@ -236,6 +236,8 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-license' => 'By clicking "Submit", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your photo under the [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Commons Attribution-ShareAlike 3.0 License].',
 	'mobile-frontend-photo-submit' => 'Submit',
 	'mobile-frontend-photo-cancel' => 'Cancel',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 upload|$1 uploads}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -511,6 +513,8 @@ See also:
 	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
 	'mobile-frontend-donate-photo-upload-success' => 'On upload page - notification shown after a successful upload',
 	'mobile-frontend-donate-photo-first-upload-success' => 'On upload page - notification shown after a successful upload when it is the first upload by that user',
+	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded. Parameter is number of images.',
+	'mobile-frontend-photo-upload-user-count-over-limit' => 'Displayed in place of mobile-frontend-photo-upload-user-count when user has uploaded more than 500 images.',
 	'mobile-frontend-watchlist-add' => 'Notification message when you add an article to your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist

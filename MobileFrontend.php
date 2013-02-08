@@ -479,6 +479,13 @@ $wgMFSpecialModuleStubs = array(
 $wgMFPhotoUploadEndpoint = '';
 
 /**
+ * The wiki id/dbname for where photos are uploaded, if photos are uploaded to
+ * a wiki other than the local wiki (eg commonswiki).
+ * @var string
+ */
+$wgMFPhotoUploadWiki = null;
+
+/**
  * Path to the logo used in the mobile view
  *
  * Should be 22px tall at most
