@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9O0\u003d",
+        "filename": "javascripts/actions/mf-edit.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T23:13:17Z",
+      "side": 1,
+      "message": "i know i\u0027ve said this before, but as much as this would be nice to fix, fixes like this make diffs hard to follow",
+      "revId": "22e537a2a05d3f6d5fad5f2725a422687b4aa702",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9Og\u003d",
+        "filename": "javascripts/common/main.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T23:13:17Z",
+      "side": 1,
+      "message": "we don\u0027t use this anywhere now",
+      "revId": "22e537a2a05d3f6d5fad5f2725a422687b4aa702",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9PA\u003d",
+        "filename": "javascripts/modules/mf-search.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T23:13:17Z",
+      "side": 1,
+      "message": "mmm..",
+      "revId": "22e537a2a05d3f6d5fad5f2725a422687b4aa702",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9PM\u003d",
+        "filename": "javascripts/specials/watchlist.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T23:13:17Z",
+      "side": 1,
+      "message": "i noticed in another patchset this selector was wrong. Not sure if we should wait for that to be merged first or vice versa..",
+      "revId": "22e537a2a05d3f6d5fad5f2725a422687b4aa702",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
