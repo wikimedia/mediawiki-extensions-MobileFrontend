@@ -18,8 +18,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
-		$skin = $ctx->getSkin();
-		$skin->setHtmlHeader( $this->getWatchlistHeader() ); // FIXME: assumes mobile skin = bad
+		$this->getOutput()->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
@@ -106,6 +105,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				array(
 					'class' => 'mw-mf-watchlist-views header' )
 				) .
+			SkinMobile::getMenuButton() .
 			Html::openElement( 'div',
 				array(
 					'class' => 'mw-mf-view-filters' )
