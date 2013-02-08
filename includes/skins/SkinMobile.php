@@ -16,8 +16,6 @@ class SkinMobile extends SkinMobileBase {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$tpl->set( 'title', $title );
-		$tpl->set( 'shim', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/blank.gif' ); // defines a shim
-		$tpl->set( 'ajaxLoader', $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/modules/images/ajax-loader.gif' );
 		$tpl->set( 'user', $user );
 		$tpl->set( 'menuButton', $this->getMenuButton() );
 		$specialPage = $title->isSpecialPage();
@@ -913,8 +911,6 @@ class SkinMobileTemplate extends BaseTemplate {
 				'authenticated' => $this->data['authenticated'],
 				'photo-upload-endpoint' => $this->data['photo-upload-endpoint'],
 				'scriptPath' => $wgScriptPath,
-				'shim' => $this->data['shim'],
-				'ajaxLoader' => $this->data['ajaxLoader'],
 				'pageUrl' => $wgArticlePath,
 				'imagesDisabled' => $this->data['imagesDisabled'],
 				'alpha' => $inAlpha,
@@ -965,9 +961,6 @@ class SkinMobileTemplate extends BaseTemplate {
 					?>" autocomplete="off" maxlength="1024" class="search"
 					placeholder="<?php echo $placeholder ?>"
 					/>
-				<img src="<?php $this->text( 'shim' ) ?>" alt="<?php
-					$this->msg( 'mobile-frontend-clear-search' ) ?>" class="clearlink" id="mw-mf-clearsearch" title="<?php
-					$this->msg( 'mobile-frontend-clear-search' ) ?>"/>
 				<input class='searchSubmit' type="submit" value="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</div>
 		</form>
