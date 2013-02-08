@@ -239,6 +239,8 @@
 
 			function showPreview( ev ) {
 				var dataUrl = ev.target.result;
+				// add mimetype if not present (some browsers need it, e.g. Android browser)
+				dataUrl = dataUrl.replace( /^data:base64/, 'data:image/jpeg;base64' );
 				preview.setImage( dataUrl );
 
 				preview.
