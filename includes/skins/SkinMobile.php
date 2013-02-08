@@ -7,7 +7,7 @@ class SkinMobile extends SkinMobileBase {
 	private $resourceLoader;
 
 	protected function prepareTemplate() {
-		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath, $wgLanguageCode,
+		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath,
 			   $wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint;
 
 		wfProfileIn( __METHOD__ );
@@ -61,11 +61,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'hookOptions', $this->hookOptions );
 		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) + 1 );
-
-		// @todo FIXME: Unused local variable?
-		$copyrightLogo = is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ?
-			$wgMFCustomLogos['copyright'] :
-			"{$wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-{$wgLanguageCode}.png";
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device->supportsJQuery() );
@@ -321,11 +316,11 @@ class SkinMobile extends SkinMobileBase {
 	 * Gathers potential javascript modules to load
 	 * @param array $modules
 	 * @param Title $title
-	 * @param DeviceProperties $device
+	 * @param IDeviceProperties $device
 	 *
 	 * @return array
 	 */
-	public function getEnabledModules( $modules, $title, $device ) {
+	public function getEnabledModules( array $modules, Title $title, IDeviceProperties $device ) {
 		$context = MobileContext::singleton();
 		$action = $context->getRequest()->getText( 'action' );
 		$inBeta = $context->isBetaGroupMember();
@@ -812,10 +807,8 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function navigationStart() {
-		/** @var $user User */
 		global $wgMFNearby;
 
-		$user = $this->data['user'];
 		?>
 		<div id="mw-mf-viewport">
 		<div id="mw-mf-page-left">
