@@ -179,7 +179,7 @@ mw.mobileFrontend = ( function( $ ) {
 
 	// FIXME: sandbox from mf-application.js
 	function log( schemaName, data ) {
-		if ( getConfig( 'beta' ) && mw.eventLog ) {
+		if ( mw.eventLog ) {
 			mw.eventLog.logEvent( schemaName, data );
 		}
 	}
