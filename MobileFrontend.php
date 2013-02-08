@@ -107,7 +107,7 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend, $wgMFEnableResourceLoader, $wgResourceModules, $wgMFSpecialModuleStubs,
+	global $wgExtMobileFrontend, $wgResourceModules, $wgMFSpecialModuleStubs,
 		$wgMFNearby, $wgSpecialPages;
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
@@ -637,13 +637,6 @@ $wgMFEnableDesktopResources = false;
  * Defaults to false.
  */
 $wgMFLogEvents = false;
-
-
-/**
- * Whether to use ResourceLoader, filtered to mobile target.
- * If not, old method of loading will be used for all scripts.
- */
-$wgMFEnableResourceLoader = true;
 
 /**
  * Whether to append ™ to the sitename in page footer, or

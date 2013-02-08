@@ -284,11 +284,10 @@ class SkinMobile extends SkinMobileBase {
 	}
 
 	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
-		global $wgMFEnableResourceLoader,
-			$wgResourceModules;
+		global $wgResourceModules;
 
 		// TODO: deprecate supportsjQuery usage in favour of supportsJavascript
-		$rlSupport = $wgMFEnableResourceLoader && $device->supportsJQuery();
+		$rlSupport = $device->supportsJQuery();
 		$out = $this->getOutput();
 
 		$headLinks = array();
