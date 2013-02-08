@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9Gc\u003d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-08T22:01:07Z",
+      "side": 1,
+      "message": "this feels like it\u0027s in the wrong place to me. wouldn\u0027t this make more sense to put in efMobileFrontend_Setup()? what is the advantage to doing it here?",
+      "revId": "fc698c5f858b1efb0b5ed147aa682b4e48aa6102",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
