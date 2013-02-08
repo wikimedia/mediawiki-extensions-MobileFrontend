@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3//9bE\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T18:43:13Z",
+      "side": 1,
+      "message": "I agree. This should look better though when I resolve https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d44264. The constructor will simply accept an argument called mobileStub or something like that and mix it into MobileFrontend properties.\n\nDo you have any suggestions how this could be changed in the meanwhile?",
+      "parentUuid": "AAADi3//9fA\u003d",
+      "revId": "91c160672120437f80fbb2ba559aa023e05733f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//9fk\u003d",
         "filename": "javascripts/common/modules.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-08T18:24:19Z",
       "side": 1,
       "message": "why the _ prefix ?",
+      "revId": "91c160672120437f80fbb2ba559aa023e05733f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9ck\u003d",
+        "filename": "javascripts/common/modules.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T18:43:13Z",
+      "side": 1,
+      "message": "To make it clear that this is not a public API and shouldn\u0027t be accessed directly.",
+      "parentUuid": "AAADi3//9fk\u003d",
       "revId": "91c160672120437f80fbb2ba559aa023e05733f3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
