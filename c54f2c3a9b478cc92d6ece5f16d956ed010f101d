@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9gI\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-08T18:18:22Z",
+      "side": 1,
+      "message": "w/s",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9gM\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-08T18:18:22Z",
+      "side": 1,
+      "message": "w/s",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9gA\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-08T18:18:22Z",
+      "side": 1,
+      "message": "Now you\u0027re allowing people to shoot themselves on foot, potentially loading HUGE result sets. Recommend a hard set limit of 500",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9gc\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-08T18:18:22Z",
+      "side": 1,
+      "message": "Still needs some generalization. I think the approach with another config setting would be the sanest.",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9gE\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-08T18:18:22Z",
+      "side": 1,
+      "message": "Should be uppercase",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
