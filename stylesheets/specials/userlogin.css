@@ -110,3 +110,13 @@ form#userlogin2 #wpCreateaccount {
   padding-bottom: 12px;
   font-size: 1em;
 }
+#mw-returnto {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  text-align: center;
+}

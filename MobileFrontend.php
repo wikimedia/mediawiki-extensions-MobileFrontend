@@ -456,6 +456,8 @@ $wgMFSpecialModuleStubs = array(
 	'search' => array( 'css' => true ),
 	'watchlist' => array( 'css' => true, 'js' => true ),
 	'userlogin' => array( 'css' => true ),
+	// FIXME: temporary hack to get round CentralNotice logout screen
+	'userlogout' => array( 'alias' => 'userlogin' ),
 	'donateimage' => array( 'js' => true,
 		'css' => true,
 		'messages' => array(
