@@ -169,7 +169,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgAutoloadClasses, $wgMFLogEvents;
+		global $wgAutoloadClasses, $wgMFLogEvents, $wgResourceModules;
 
 		$detector = DeviceDetection::factory();
 		foreach ( $detector->getCssFiles() as $file ) {
@@ -182,16 +182,9 @@ class MobileFrontendHooks {
 			);
 		}
 
-		if ( $wgMFLogEvents &&  isset( $wgAutoloadClasses['ResourceLoaderSchemaModule'] ) ) {
-			// See: http://meta.wikimedia.org/wiki/Schema:MobileBetaWatchlist
-			$resourceLoader->register( "schema.MobileBetaWatchlist",
-				array(
-					'class' => 'ResourceLoaderSchemaModule',
-					'schema' => 'MobileBetaWatchlist',
-					'revision' => 4921083,
-					'targets' => 'mobile',
-				)
-			);
+		// disable event logging module on mobile
+		if ( !$wgMFLogEvents && isset( $wgResourceModules['ext.eventLogging'] ) ) {
+			$wgResourceModules['ext.eventLogging']['targets'] = array( 'desktop' );
 		}
 
 		return true;

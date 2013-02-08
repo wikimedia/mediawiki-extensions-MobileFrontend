@@ -148,7 +148,7 @@ if( typeof Array.prototype.forEach === 'undefined' ) {
 
 	// FIXME: sandbox from mf-application.js
 	function log( schemaName, data ) {
-		if ( getConfig( 'beta' ) && mw.eventLog ) {
+		if ( mw.eventLog ) {
 			mw.eventLog.logEvent( schemaName, data );
 		}
 	}
