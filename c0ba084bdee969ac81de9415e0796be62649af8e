@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9Uw\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T19:58:36Z",
+      "side": 1,
+      "message": "Engilsh -\u003e English",
+      "revId": "c0ba084bdee969ac81de9415e0796be62649af8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9U0\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T19:58:36Z",
+      "side": 1,
+      "message": "extra tab after false",
+      "revId": "c0ba084bdee969ac81de9415e0796be62649af8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
