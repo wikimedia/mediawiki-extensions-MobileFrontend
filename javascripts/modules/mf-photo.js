@@ -88,6 +88,7 @@
 						return;
 					}
 					options.fileName = data.upload.filename || data.upload.warnings.duplicate['0'];
+					// FIXME: API doesn't return this information on duplicate images...
 					if ( data.upload.imageinfo ) {
 						descriptionUrl = data.upload.imageinfo.descriptionurl;
 					}
@@ -324,7 +325,7 @@
 			on( 'success', function( data ) {
 				new LeadPhoto( {
 					url: data.url,
-					pageUrl: mw.util.wikiGetlink( 'File:' + data.fileName ),
+					pageUrl: data.descriptionUrl,
 					caption: data.description
 				} ).prependTo( '#content_0' ).animate();
 			} ).
