@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3//9a8\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-08T18:43:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9gI\u003d",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//9gM\u003d",
         "filename": "includes/specials/SpecialDonateImage.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-08T18:18:22Z",
       "side": 1,
       "message": "w/s",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9bA\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-08T18:43:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9gM\u003d",
       "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3//9bI\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-08T18:43:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9gA\u003d",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//9gc\u003d",
         "filename": "includes/specials/SpecialDonateImage.php",
         "patchSetId": 3
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3//9bQ\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-08T18:43:11Z",
+      "side": 1,
+      "message": "I\u0027ll fix this in a later changeset",
+      "parentUuid": "AAADi3//9gc\u003d",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//9gE\u003d",
         "filename": "includes/specials/SpecialDonateImage.php",
         "patchSetId": 3
@@ -81,6 +153,24 @@
       "writtenOn": "2013-02-08T18:18:22Z",
       "side": 1,
       "message": "Should be uppercase",
+      "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9bM\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-08T18:43:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9gE\u003d",
       "revId": "c54f2c3a9b478cc92d6ece5f16d956ed010f101d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
