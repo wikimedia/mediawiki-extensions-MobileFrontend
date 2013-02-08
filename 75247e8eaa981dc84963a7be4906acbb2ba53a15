@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9AU\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T23:43:37Z",
+      "side": 1,
+      "message": "Maybe $.map instead?",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9A4\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T23:43:37Z",
+      "side": 1,
+      "message": "appendDescriptions() uses api.ajax().",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9BY\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T23:43:37Z",
+      "side": 1,
+      "message": "This (and other things) should go inside if ( username ) to avoid adding this when someone is not logged in. Alternatively, you could do if ( !username ) { return; } early on.\n\nAlso, I\u0027d probably make ctaUploadPhoto a part os UserGallery itself, but not insisting on this.",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9BU\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T23:43:37Z",
+      "side": 1,
+      "message": "el: \u0027ul.mobileUserGallery\u0027 is enough (but both can be used).",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9BA\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T23:43:37Z",
+      "side": 1,
+      "message": "I don\u0027t like it but I don\u0027t want to be too picky. This doesn\u0027t belong to the gallery itself.",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9A8\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-08T23:43:37Z",
+      "side": 1,
+      "message": "I\u0027m not sure if passing this first argument is necessary. You can use userGallery.$el instead.",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
