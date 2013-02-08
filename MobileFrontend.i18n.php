@@ -6779,27 +6779,54 @@ $messages['ka'] = array(
 	'mobile-frontend-donate-image-title' => 'სურათის შეწირვა',
 	'mobile-frontend-donate-image-heading' => 'თქვენი ბოლო ცლილებები',
 	'mobile-frontend-donate-image-page-title' => 'ატვირთვა',
+	'mobile-frontend-donate-image-anon' => 'ატვირთვების გვერდის სანახავად საჭიროა [[Special:UserLogin|მომხმარებლის ანგარიში]]',
+	'mobile-frontend-listed-image-no-description' => 'არ არის აღწერა',
+	'mobile-frontend-watchlist-add' => '$1 დაემატა თქვენი კონტროლის სიაში',
+	'mobile-frontend-watchlist-removed' => '$1 წაიშალა თქვენი კონტროლის სიიდან',
 	'mobile-frontend-watchlist-view' => 'თქვენი კონტროლის სიის ხილვა',
 	'mobile-frontend-watchlist-more' => 'მეტი',
 	'mobile-frontend-watchlist-cta' => 'გთხოვთ, შედით ან დარეგისტრირდით, რათა იხილოთ ეს გვერდი.',
 	'mobile-frontend-watchlist-cta-button-login' => 'შესვლა',
 	'mobile-frontend-watchlist-cta-button-signup' => 'დარეგისტრირდით',
-	'mobile-frontend-watchlist-a-z' => 'კონტროლირებადი გვერდები', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'ყველა',
 	'mobile-frontend-watchlist-feed' => 'შეცვლილია',
+	'mobile-frontend-watchlist-a-z-empty' => 'ამჟამად თქვენ არ ადევნებთ თვალს არცერთ გვერდს',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'დააჭირეთ გვერდის ზედა ნაწილში განთავსებულ ვარსკვლავს',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'შესაძლებელია თქვენთვის საინტერესო გვერდისათვის თვალის დევნება. ამისათვის საჭიროა ეკრანის ზედა ნაწილში ვარსკვლავის სიმბოლოზე დაწკაპუნება. ეს საშუალებას მოგცემთ თვალი ადევნოთ თქვენთვის სასურველი გვერდების ცვლილებებს.',
+	'mobile-frontend-watchlist-feed-empty' => 'გვერდები ბოლო ცვლილებებით არ არის',
+	'mobile-frontend-watchlist-back-home' => 'უკან დაბრუნება',
 	'mobile-frontend-changeslist-ip' => 'ანონიმური მომხმარებელი',
+	'mobile-frontend-changeslist-nocomment' => 'არ არის რედაქტირების რეზიუმე',
 	'mobile-frontend-watchlist-filter-all' => 'ყველა',
 	'mobile-frontend-watchlist-filter-articles' => 'სტატია',
 	'mobile-frontend-watchlist-filter-talk' => 'განხილვა',
 	'mobile-frontend-watchlist-filter-other' => 'სხვა',
+	'mobile-frontend-watchlist-modified' => 'შეცვლილი $1',
+	'mobile-frontend-diffview-404-title' => 'ცუდი ვერსია',
+	'mobile-frontend-diffview-404-desc' => 'ვერსიები თქვენი მოთხოვნილი იდენტიფიკატორით არ არსებობს',
 	'mobile-frontend-diffview-title' => 'ცვლილებები',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|რედაქტირება|რედაქტირება}}',
 	'mobile-frontend-diffview-anonymous' => 'ანონიმური მომხმარებელი',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|ბაიტი|ბაიტი}} დაემატა',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|ბაიტი|ბაიტი}} წაიშალა',
+	'mobile-frontend-diffview-explained' => 'შემდეგი ხაზები იქნა დამატებული (+) და წაშლილი (-):',
+	'mobile-frontend-table' => 'ცხრილი $1',
+	'mobile-frontend-saving-exit-page' => 'თქვენი შესწორება ჯერ კიდევ ინახება. თუ თქვენ დატოვებთ გვერდს, თქვენი ცვლილებები დაიკარგება. დარწმუნებული ხართ, რომ გსურთ გასვლა?',
+	'mobile-frontend-photo-upload' => 'ამ სტატიაში სურათის დამატება',
+	'mobile-frontend-photo-article-edit-comment' => 'გვერდზე გამოსაყენებლად დაემატა სურათი',
+	'mobile-frontend-photo-article-donate-comment' => 'შემოწირა სურათი მობილური მოწყობილობიდან',
+	'mobile-frontend-photo-upload-comment' => 'გვერდზე დაემატა ფოტო',
+	'mobile-frontend-photo-caption-placeholder' => 'აღწერის დამატება (სავალდებულოა)',
+	'mobile-frontend-image-loading' => 'სურათი იტვირთება',
+	'mobile-frontend-image-uploading' => 'სურათი იტვირთება, გთხოვთ მოიცადეთ. <a href="#">გააუქმეთ</a> თუ ეს დიდხანს გაგრძელდება.',
 	'mobile-frontend-photo-upload-error' => 'შეცდომა, კიდევ სცადეთ.',
+	'mobile-frontend-photo-upload-success-article' => 'წარმატებით აიტვირთა! თქვენი სურათი ახლა უკვე განთავსებულია ამ გვერდზე.',
+	'mobile-frontend-photo-upload-success-generic' => 'წარმატებით აიტვირთა! გმადლობთ თქვენი წვლილისათვის.',
+	'mobile-frontend-photo-license' => '"მიღებაზე" დაწკაპუნებით, თქვენ ეთანხმებით ჩვენი [//wikimediafoundation.org/wiki/Terms_of_use გამოყენების წესებს] და თანახმა ხართ თქვენი ფოტოს გადაცემაზე [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Common Attribution-ShareAlike 3.0 ლიცენზიით].',
 	'mobile-frontend-photo-submit' => 'მიღება',
 	'mobile-frontend-photo-cancel' => 'გაუქმება',
 	'tag-mobile_edit' => 'რედაქტირება მობილურით',
+	'tag-mobile_edit-description' => 'რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან',
 	'mobile-frontend-drawer-cancel' => 'გაუქმება',
 );
 
@@ -12577,6 +12604,7 @@ $messages['ug-arab'] = array(
  * @author Olvin
  * @author Sodmy
  * @author Steve.rusyn
+ * @author WTM
  * @author Тест
  */
 $messages['uk'] = array(
@@ -12676,6 +12704,8 @@ $messages['uk'] = array(
 	'mobile-frontend-privacy-link-text' => 'Конфіденційність',
 	'mobile-frontend-about-link-text' => 'Про',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license-text' => 'Вміст доступний під ліцензією [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile?uselang=uk CC BY-SA 3.0]',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile&uselang=uk Умови використання]',
 	'mobile-frontend-footer-contact' => "Зв'язок",
 	'mobile-frontend-search-noresults' => 'Немає заголовків сторінок, які відповідають критеріям пошуку. Змініть параметри пошуку, або натисніть кнопку пошуку, щоб знайти всередині сторінок.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Відкрити головне меню',
@@ -12686,6 +12716,7 @@ $messages['uk'] = array(
 	'mobile-frontend-main-menu-logout' => 'Вийти',
 	'mobile-frontend-main-menu-watchlist' => 'Список спостереження',
 	'mobile-frontend-main-menu-settings' => 'Налаштування',
+	'mobile-frontend-main-menu-upload' => 'Завантажити',
 	'mobile-frontend-main-menu-settings-heading' => 'Налаштування мобільної версії сайту',
 	'mobile-frontend-settings-site-header' => 'Мови проекту {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} доступний на {{PLURAL:$1|мові|мовах}}. Всі доступні версії перелічені нижче',
@@ -12719,16 +12750,14 @@ $messages['uk'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|байт|байти|байтів}} вилучено',
 	'mobile-frontend-table' => 'Таблиця $1',
 	'mobile-frontend-saving-exit-page' => 'Ваш внесок збережений. Якщо Ви залишите сторінку, Ваш внесок буде втрачено. Ви впевнені что бажаєте вийти?',
-	'mobile-frontend-photo-upload' => 'Додати перше фото на цю сторінку',
+	'mobile-frontend-photo-upload' => 'Додати перше фото на цю сторінку', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Додані фотографії для використання на сторінці.',
 	'mobile-frontend-photo-upload-comment' => 'Додати фото на сторінку',
-	'mobile-frontend-photo-upload-progress' => 'Завантаження Ваших зображень до цієї сторінки',
-	'mobile-frontend-photo-caption-placeholder' => 'Додати назву до цього зображення',
+	'mobile-frontend-photo-caption-placeholder' => 'Додати назву до цього зображення', # Fuzzy
 	'mobile-frontend-image-loading' => 'Завантаження зображень',
-	'mobile-frontend-image-uploading' => 'Завантаження зображення',
-	'mobile-frontend-photo-upload-error' => 'Сталася помилка під час завантаження зображення. Будь ласка, спробуйте інше зображення.',
-	'mobile-frontend-image-saving-to-article' => 'Збереження зображення до сторінки',
-	'mobile-frontend-photo-license' => 'Примітка: Всі фотографії, які Ви опублікували, буде опубліковано за згодою на [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Ліцензія CC BY-SA 3.0]',
+	'mobile-frontend-image-uploading' => 'Завантаження зображення', # Fuzzy
+	'mobile-frontend-photo-upload-error' => 'Сталася помилка під час завантаження зображення. Будь ласка, спробуйте інше зображення.', # Fuzzy
+	'mobile-frontend-photo-license' => 'Примітка: Всі фотографії, які Ви опублікували, буде опубліковано за згодою на [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Ліцензія CC BY-SA 3.0]', # Fuzzy
 );
 
 /** Urdu (اردو)
