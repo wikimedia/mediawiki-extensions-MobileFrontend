@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9fA\u003d",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T18:24:19Z",
+      "side": 1,
+      "message": "these 3 lines seems hacky...",
+      "revId": "91c160672120437f80fbb2ba559aa023e05733f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//9fk\u003d",
+        "filename": "javascripts/common/modules.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-08T18:24:19Z",
+      "side": 1,
+      "message": "why the _ prefix ?",
+      "revId": "91c160672120437f80fbb2ba559aa023e05733f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
