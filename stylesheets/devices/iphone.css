@@ -1,3 +1,8 @@
+html {
+	/* prevent font scaling in landscape in Safari */
+	-webkit-text-size-adjust: none;
+}
+
 #ogg_player_1 {
 	display: none;
 }
