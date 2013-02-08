@@ -11,14 +11,11 @@
 		return pages;
 	}
 
-	function initWatchlist() {
-		var titles = [], $items = $( '#mw-mf-watchlist li h2' );
+	function initWatchlistThumbnails() {
+		var titles = [], $items = $( 'ul.mw-mf-watchlist-results li h2' );
 
 		$items.each( function() {
 			titles.push( $( this ).text() );
-		} );
-		M.on( 'ready', function() {
-			M.emit( 'watchlist-ready', $( '#mw-mf-watchlist ul.mw-mf-watchlist-results' ) );
 		} );
 
 		$.ajax( {
@@ -47,9 +44,10 @@
 	}
 
 	function init() {
-		if ( $( '#mw-mf-watchlist' ).length > 0 && M.getConfig( 'alpha' ) ) {
-			initWatchlist();
+		if ( $( 'ul.mw-mf-watchlist-results li' ).length > 0 && M.getConfig( 'alpha' ) ) {
+			initWatchlistThumbnails();
 		}
+		M.emit( 'watchlist-ready', $( 'ul.mw-mf-watchlist-results' ) );
 	}
 
 	$( document ).ready( function() {
