@@ -304,7 +304,7 @@
 		// FIXME: make some general function for that (or a page object with a method)
 		var namespaceIds = mw.config.get( 'wgNamespaceIds' ),
 			namespace = mw.config.get( 'wgNamespaceNumber' ),
-			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.talk ),
+			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user ),
 			photoUploader;
 
 		if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $( '#content' ) ) ) {
