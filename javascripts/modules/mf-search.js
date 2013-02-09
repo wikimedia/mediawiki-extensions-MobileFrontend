@@ -5,6 +5,8 @@ Triggers:
 	Arguments: <DomElement(ul), article title>
 */
 ( function( M ) {
+
+// FIXME: replace u usage with $
 var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		urlTemplate = M.getConfig( 'pageUrl', '' ),
@@ -207,10 +209,11 @@ var opensearch = ( function() {
 	}
 
 	function initClearSearch() {
-		var clearSearch = document.getElementById(  mfePrefix + 'clearsearch' ),
+		var $clearSearch,
 			results = document.getElementById( 'results' ),
 			search = document.getElementById( mfePrefix + 'search' );
 
+		$clearSearch = $( '<a class="clearlink">' ).appendTo( '#mw-mf-sq' );
 		function clearSearchBox( event ) {
 			// clicking clear on some browsers triggers blur event on search
 			// when search value empty string hides results
@@ -224,7 +227,7 @@ var opensearch = ( function() {
 		function onFocusHandler() {
 			search.select();
 		}
-		u( clearSearch ).bind( 'mousedown', clearSearchBox );
+		$clearSearch.on( 'mousedown', clearSearchBox );
 		u( search ).bind( 'click', onFocusHandler );
 	}
 
