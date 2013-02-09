@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3//898\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-09T00:04:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9AU\u003d",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//9A4\u003d",
         "filename": "javascripts/specials/donateimage.js",
         "patchSetId": 4
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3//89U\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-09T00:04:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9BY\u003d",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//9BU\u003d",
         "filename": "javascripts/specials/donateimage.js",
         "patchSetId": 4
@@ -64,6 +100,24 @@
       "writtenOn": "2013-02-08T23:43:37Z",
       "side": 1,
       "message": "el: \u0027ul.mobileUserGallery\u0027 is enough (but both can be used).",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//89Y\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-09T00:04:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9BU\u003d",
       "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "AAADi3//89k\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-09T00:04:55Z",
+      "side": 1,
+      "message": "added a FIXME",
+      "parentUuid": "AAADi3//9BA\u003d",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//9A8\u003d",
         "filename": "javascripts/specials/donateimage.js",
         "patchSetId": 4
@@ -98,6 +170,24 @@
       "writtenOn": "2013-02-08T23:43:37Z",
       "side": 1,
       "message": "I\u0027m not sure if passing this first argument is necessary. You can use userGallery.$el instead.",
+      "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//89s\u003d",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-09T00:04:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAADi3//9A8\u003d",
       "revId": "75247e8eaa981dc84963a7be4906acbb2ba53a15",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
