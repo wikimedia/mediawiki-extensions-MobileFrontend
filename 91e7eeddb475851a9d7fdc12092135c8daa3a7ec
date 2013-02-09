@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//88U\u003d",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-09T00:12:05Z",
+      "side": 1,
+      "message": "this should be fine for us for now, but \u0027static\u0027 would be safer than \u0027self\u0027",
+      "revId": "91e7eeddb475851a9d7fdc12092135c8daa3a7ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
