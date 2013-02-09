@@ -273,8 +273,6 @@
 								return;
 							}
 
-							popup.show( options.successMessage, 'toast ' );
-
 							self.emit( 'success', {
 								fileName: fileName,
 								description: description,
@@ -317,14 +315,14 @@
 		photoUploader = new PhotoUploader( {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
-			pageTitle: M.getConfig( 'title' ),
-			successMessage: mw.msg( 'mobile-frontend-photo-upload-success-article' )
+			pageTitle: M.getConfig( 'title' )
 		} ).
 			insertAfter( $page.find( 'h1' ) ).
 			on( 'start', function() {
 				photoUploader.remove();
 			} ).
 			on( 'success', function( data ) {
+				popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
 				new LeadPhoto( {
 					url: data.url,
 					pageUrl: data.descriptionUrl,

@@ -290,10 +290,6 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-photo-submit',
 		'mobile-frontend-photo-cancel',
 
-		// donateimage.js
-		'mobile-frontend-photo-upload-generic',
-		'mobile-frontend-photo-upload-success-generic',
-
 		// for mf-languages.js
 		'mobile-frontend-language-site-choose',
 		'mobile-frontend-language-footer',
@@ -464,6 +460,9 @@ $wgMFSpecialModuleStubs = array(
 	'donateimage' => array( 'js' => true,
 		'css' => true,
 		'messages' => array(
+			'mobile-frontend-photo-upload-generic',
+			'mobile-frontend-donate-photo-upload-success',
+			'mobile-frontend-donate-photo-first-upload-success',
 			'mobile-frontend-donate-image-summary',
 			'mobile-frontend-listed-image-no-description',
 		),
