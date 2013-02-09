@@ -783,9 +783,12 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'robots' ) ?>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
 		<?php $this->html( 'touchIcon' ) ?>
+		<?php if ( $this->data['supports_jquery'] ) { ?>
 		<script type="text/javascript">
 			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
+			document.documentElement.className += ' jsEnabled page-loading';
 		</script>
+		<?php } ?>
 		<?php $this->html( 'preamble' ) ?>
 		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
 	</head>
