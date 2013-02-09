@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//8zs\u003d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2013-02-09T03:19:29Z",
+      "side": 1,
+      "message": "So is this $wgContLang still used somewhere?",
+      "revId": "9244d008ed621351eb4dcb474d4190357520718c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
