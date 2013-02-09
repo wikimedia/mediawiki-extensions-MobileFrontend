@@ -2744,6 +2744,8 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du Bilder spendest, die von de
 	'mobile-frontend-donate-image-page-title' => 'Hochladen',
 	'mobile-frontend-donate-image-anon' => 'Um die hochgeladenen Dateien anzusehen, wird ein [[Special:UserLogin|Benutzerkonto]] benötigt',
 	'mobile-frontend-listed-image-no-description' => 'Keine Beschreibung',
+	'mobile-frontend-donate-photo-upload-success' => 'Erfolgreich! Dein Bild kann jetzt auf {{SITENAME}} verwendet werden!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Erfolgreich! Vielen Dank für deinen ersten Beitrag!',
 	'mobile-frontend-watchlist-add' => '$1 wurde zu deiner Beobachtungsliste hinzugefügt',
 	'mobile-frontend-watchlist-removed' => '$1 wurde von deiner Beobachtungsliste entfernt',
 	'mobile-frontend-watchlist-view' => 'Deine Beobachtungsliste ansehen',
@@ -2784,7 +2786,6 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du Bilder spendest, die von de
 	'mobile-frontend-image-uploading' => 'Lade Bild hoch. Bitte warten. Du kannst den Vorgang <a href="#">abbrechen</a>, falls er zu lange dauert.',
 	'mobile-frontend-photo-upload-error' => 'Fehler. Bitte erneut versuchen.',
 	'mobile-frontend-photo-upload-success-article' => 'Erfolgreich! Dein Bild ist jetzt auf dieser Seite.',
-	'mobile-frontend-photo-upload-success-generic' => 'Erfolgreich! Vielen Dank für deinen Beitrag.',
 	'mobile-frontend-photo-license' => 'Durch Klicken auf „Übertragen“ stimmst du unseren [//wikimediafoundation.org/wiki/Terms_of_Use/de Nutzungsbedingungen] und der Veröffentlichung deines Fotos unter der [//de.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported Creative-Commons-Attribution-ShareAlike-3.0-Lizenz] zu.',
 	'mobile-frontend-photo-submit' => 'Übertragen',
 	'mobile-frontend-photo-cancel' => 'Abbrechen',
@@ -3721,6 +3722,7 @@ $messages['ext'] = array(
  * @author Huji
  * @author Leyth
  * @author Mjbmr
+ * @author Pouyana
  * @author Reza1615
  * @author Rmashhadi
  * @author ZxxZxxZ
@@ -3739,7 +3741,11 @@ $messages['fa'] = array(
 	'mobile-frontend-settings-beta' => 'بتا',
 	'mobile-frontend-save-settings' => 'ذخیرهٔ تنظیمات',
 	'mobile-frontend-random-button' => 'تصادفی',
+	'mobile-frontend-ajax-random-heading' => 'در حال یافتن دانش...',
+	'mobile-frontend-ajax-random-question' => 'این صفحه را خوانده‌اید؟',
 	'mobile-frontend-ajax-random-yes' => 'بله',
+	'mobile-frontend-ajax-random-retry' => 'دوباره سعی کن',
+	'mobile-frontend-ajax-random-suggestions' => 'پیشنهادات دیگر:',
 	'mobile-frontend-back-to-top-of-section' => 'بازگشت به بخش قبلی',
 	'mobile-frontend-close-section' => 'این بخش را ببندید',
 	'mobile-frontend-show-button' => 'نمایش',
@@ -3799,7 +3805,10 @@ $messages['fa'] = array(
 	'mobile-frontend-username-placeholder' => 'نام کاربری',
 	'mobile-frontend-password-placeholder' => 'گذرواژه',
 	'mobile-frontend-login' => 'ورود',
+	'mobile-frontend-account-create-submit' => 'ثبت نام',
 	'mobile-frontend-password-confirm-placeholder' => 'تأیید گذرواژه',
+	'mobile-frontend-account-create-email-placeholder' => 'آدرس ایمیل (اختیاری)',
+	'mobile-frontend-account-create-captcha-placeholder' => 'متن امنیت را وارد کنید',
 	'mobile-frontend-overlay-escape' => 'بازگشت به عقب',
 	'mobile-frontend-placeholder' => 'جستجوی {{SITENAME}}',
 	'mobile-frontend-search-help' => 'در بالا عبارت مورد نظر را جستجو کنید و نتایج بدست آمده را با عنوان مورد نظرتان تطبیق دهید.', # Fuzzy
@@ -3818,16 +3827,21 @@ $messages['fa'] = array(
 	'mobile-frontend-main-menu-logout' => 'خروج از سامانه',
 	'mobile-frontend-main-menu-watchlist' => 'فهرست پی‌گیری‌ها',
 	'mobile-frontend-main-menu-settings' => 'تنظیمات',
+	'mobile-frontend-main-menu-upload' => 'بارگذاری',
 	'mobile-frontend-main-menu-settings-heading' => 'تنظیمات وب‌گاه تلفن همراه',
 	'mobile-frontend-settings-site-header' => 'زبان‌های {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} در $1 {{PLURAL:$1|زبان|زبان}} موجود است. تمام نسخه‌ها در زیر فهرست شده‌اند.',
 	'mobile-frontend-main-menu-contact' => 'تماس',
+	'mobile-frontend-main-menu-account-create' => 'ایجاد حساب کاربری',
 	'mobile-frontend-page-menu-contents' => 'محتویات',
 	'mobile-frontend-page-menu-history' => 'تاریخچه',
 	'mobile-frontend-meta-data-issues-header' => 'بهسازی این مقاله', # Fuzzy
 	'mobile-frontend-meta-data-issues' => 'این مقاله مشکل دارد', # Fuzzy
 	'mobile-frontend-ajax-page-loading' => 'بارگیری $1',
+	'mobile-frontend-page-saving' => 'ذخیره $1',
 	'mobile-frontend-ajax-page-error' => 'یک مشکل به وجود آمده‌است. مرورگر خود را رفرش نمائید.',
+	'mobile-frontend-nearby-title' => 'در نزدیکی',
+	'mobile-frontend-photo-upload-generic' => 'اهدای یک تصویر',
 	'mobile-frontend-changeslist-nocomment' => 'بدون خلاصه ویرایش',
 	'mobile-frontend-watchlist-filter-all' => 'همه',
 	'mobile-frontend-watchlist-filter-articles' => 'مقاله‌ها',
@@ -3836,7 +3850,7 @@ $messages['fa'] = array(
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|ویرایش}}',
 	'mobile-frontend-photo-upload-comment' => 'تصویر به صفحه افزوده شد',
 	'mobile-frontend-image-loading' => 'در حال بار شدن تصویر',
-	'mobile-frontend-image-uploading' => 'در حال بارگذاری تصویر',
+	'mobile-frontend-image-uploading' => 'در حال بارگذاری تصویر', # Fuzzy
 );
 
 /** Finnish (suomi)
@@ -4230,7 +4244,6 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-image-uploading' => 'Téléchargement de l\'image, veuillez patienter. <a href="#">Annuler</a> si cela prend trop de temps.',
 	'mobile-frontend-photo-upload-error' => "Une erreur s'est produite, veuillez réessayer.",
 	'mobile-frontend-photo-upload-success-article' => 'Bravo! Votre image est maintenant en ligne sur cette page.',
-	'mobile-frontend-photo-upload-success-generic' => 'Bravo! Merci pour votre contribution.',
 	'mobile-frontend-photo-license' => 'En cliquant sur "Soumettre", vous acceptez nos [//wikimediafoundation.org/wiki/Terms_of_use conditions d’utilisation] et la mise à disposition de votre photo sous la [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licence Creative Common Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Soumettre',
 	'mobile-frontend-photo-cancel' => 'Annuler',
@@ -4565,7 +4578,6 @@ $messages['frr'] = array(
 	'mobile-frontend-image-uploading' => 'Sjüür bil huuch, ... wees so gud an teew. Dü könst det <a href="#">ufbreeg</a>, wan\'t tu loong düüret.',
 	'mobile-frontend-photo-upload-error' => 'Diar as wat skiaf gingen. Fersjük det man noch ans nei.',
 	'mobile-frontend-photo-upload-success-article' => 'Klaar! Din bil as nü üüb det sidj tu sen.',
-	'mobile-frontend-photo-upload-success-generic' => 'Klaar! Föl soonk för dan bidrach.',
 	'mobile-frontend-photo-license' => "Wan dü det bil huuchsjüürst, stemest dü a [//wikimediafoundation.org/wiki/Terms_of_use brükerreegeln] tu an dat din bil oner det lisens [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Common Attribution-ShareAlike 3.0] uun't näät steld woort.",
 	'mobile-frontend-photo-submit' => 'Auerdreeg',
 	'mobile-frontend-photo-cancel' => 'Ufbreeg',
@@ -4769,6 +4781,8 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-donate-image-page-title' => 'Cargar',
 	'mobile-frontend-donate-image-anon' => 'Cómpre ter unha [[Special:UserLogin|conta de usuario]] para acceder á páxina de cargas',
 	'mobile-frontend-listed-image-no-description' => 'Sen descrición',
+	'mobile-frontend-donate-photo-upload-success' => 'Correcto! Pode usar a súa imaxe en {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Correcto! Grazas pola súa primeira contribución!',
 	'mobile-frontend-watchlist-add' => '"$1" engadiuse á súa lista de vixilancia',
 	'mobile-frontend-watchlist-removed' => '"$1" eliminouse da súa lista de vixilancia',
 	'mobile-frontend-watchlist-view' => 'Ver a súa lista de vixilancia',
@@ -4809,7 +4823,6 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-image-uploading' => 'Subindo a imaxe, agarde. <a href="#">Cancele</a> o proceso se leva demasiado tempo.',
 	'mobile-frontend-photo-upload-error' => 'Houbo un erro. Inténteo de novo.',
 	'mobile-frontend-photo-upload-success-article' => 'Correcto! A súa imaxe está agora nesta páxina.',
-	'mobile-frontend-photo-upload-success-generic' => 'Correcto! Grazas por contribuír.',
 	'mobile-frontend-photo-license' => 'Ao premer no botón "Enviar", acepta os nosos [//wikimediafoundation.org/wiki/Terms_of_Use/gl termos de uso] e acepta liberar a súa fotografía baixo a [//gl.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0 licenza CC BY-SA 3.0].',
 	'mobile-frontend-photo-submit' => 'Enviar',
 	'mobile-frontend-photo-cancel' => 'Cancelar',
@@ -6524,6 +6537,8 @@ $messages['ja'] = array(
 	'mobile-frontend-donate-image-page-title' => 'アップロード',
 	'mobile-frontend-donate-image-anon' => 'アップロードページを閲覧するには[[Special:UserLogin|利用者アカウント]]が必要です',
 	'mobile-frontend-listed-image-no-description' => '説明なし',
+	'mobile-frontend-donate-photo-upload-success' => '完了しました! 画像は{{SITENAME}}上で使用できるようになりました!',
+	'mobile-frontend-donate-photo-first-upload-success' => '完了しました! 初めてのアップロードありがとうございます!',
 	'mobile-frontend-watchlist-add' => '$1 をウォッチリストに追加しました',
 	'mobile-frontend-watchlist-removed' => '$1 をウォッチリストから除去しました',
 	'mobile-frontend-watchlist-view' => 'ウォッチリストを表示',
@@ -6562,7 +6577,6 @@ $messages['ja'] = array(
 	'mobile-frontend-image-uploading' => '画像をアップロード中です。お待ちください。時間がかかりすぎる場合は<a href="#">キャンセル</a>してください。',
 	'mobile-frontend-photo-upload-error' => 'エラーです。もう一度試してください。',
 	'mobile-frontend-photo-upload-success-article' => '完了しました! 画像をこのページに追加しました。',
-	'mobile-frontend-photo-upload-success-generic' => '完了しました! 投稿ありがとうございます。',
 	'mobile-frontend-photo-submit' => '送信',
 	'mobile-frontend-photo-cancel' => 'キャンセル',
 	'tag-mobile_edit' => '携帯機器での編集',
@@ -6823,7 +6837,6 @@ $messages['ka'] = array(
 	'mobile-frontend-image-uploading' => 'სურათი იტვირთება, გთხოვთ მოიცადეთ. <a href="#">გააუქმეთ</a> თუ ეს დიდხანს გაგრძელდება.',
 	'mobile-frontend-photo-upload-error' => 'შეცდომა, კიდევ სცადეთ.',
 	'mobile-frontend-photo-upload-success-article' => 'წარმატებით აიტვირთა! თქვენი სურათი ახლა უკვე განთავსებულია ამ გვერდზე.',
-	'mobile-frontend-photo-upload-success-generic' => 'წარმატებით აიტვირთა! გმადლობთ თქვენი წვლილისათვის.',
 	'mobile-frontend-photo-license' => '"მიღებაზე" დაწკაპუნებით, თქვენ ეთანხმებით ჩვენი [//wikimediafoundation.org/wiki/Terms_of_use გამოყენების წესებს] და თანახმა ხართ თქვენი ფოტოს გადაცემაზე [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Common Attribution-ShareAlike 3.0 ლიცენზიით].',
 	'mobile-frontend-photo-submit' => 'მიღება',
 	'mobile-frontend-photo-cancel' => 'გაუქმება',
@@ -7290,7 +7303,6 @@ $messages['ko'] = array(
 	'mobile-frontend-image-uploading' => '그림을 올리는 중입니다, 잠시 기다려주세요. 시간이 오래 걸리면 <a href="#">취소</a>하세요.',
 	'mobile-frontend-photo-upload-error' => '오류가 발생했습니다, 다시 시도하세요.',
 	'mobile-frontend-photo-upload-success-article' => '성공했습니다! 그림은 지금 이 문서에 있습니다.',
-	'mobile-frontend-photo-upload-success-generic' => '성공했습니다! 기여해주셔서 감사합니다.',
 	'mobile-frontend-photo-license' => '"제출"을 클릭하면 [//wikimediafoundation.org/wiki/Terms_of_use 이용 약관]에 동의하고 [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License 크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0 라이선스]에 따라 사진을 공개하는 데 동의합니다.',
 	'mobile-frontend-photo-submit' => '제출',
 	'mobile-frontend-photo-cancel' => '취소',
@@ -8233,6 +8245,8 @@ $messages['mk'] = array(
 	'mobile-frontend-donate-image-page-title' => 'Подигање',
 	'mobile-frontend-donate-image-anon' => 'За да ја гледате страницата за подигања ќе ви треба [[Special:UserLogin|корисничка сметка]]',
 	'mobile-frontend-listed-image-no-description' => 'Нема опис',
+	'mobile-frontend-donate-photo-upload-success' => 'Успешно! Вашата слика сега може да се користи на {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Успешно! Благодариме за вашиот прв придонес!',
 	'mobile-frontend-watchlist-add' => 'Додадена „$1“ во набљудуваните',
 	'mobile-frontend-watchlist-removed' => 'Отстранета $1 од набљудуваните',
 	'mobile-frontend-watchlist-view' => 'Погл. вашиот список на набљудувања',
@@ -8273,7 +8287,6 @@ $messages['mk'] = array(
 	'mobile-frontend-image-uploading' => 'Ја подигам сликата. Почекајте. <a href="#">Откажете</a> ако трае предолго.',
 	'mobile-frontend-photo-upload-error' => 'Грешка. Обидете се повторно.',
 	'mobile-frontend-photo-upload-success-article' => 'Успеа! Вашата слика сега поставена на страницата.',
-	'mobile-frontend-photo-upload-success-generic' => 'Успеа! Ви благодариме за придонесот.',
 	'mobile-frontend-photo-license' => 'Стискајќи на „Поднеси“, се согласувате на [//wikimediafoundation.org/wiki/Terms_of_use/mk Условите на употреба] и се согласувате да ја објавите сликата под лиценцата [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Криејтив комонс Наведи извор-Сподели од исти услови 3.0].',
 	'mobile-frontend-photo-submit' => 'Поднеси',
 	'mobile-frontend-photo-cancel' => 'Откажи',
@@ -9206,6 +9219,8 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-image-uploading' => 'Bezig met het uploaden van de afbeelding', # Fuzzy
 	'mobile-frontend-photo-upload-error' => 'Er is een fout opgetreden tijdens het uploaden van de afbeelding. Probeer het opnieuw met een andere afbeelding.', # Fuzzy
 	'mobile-frontend-photo-license' => 'Let op: alle afbeeldingen die up uploadt, worden gepubliceerd onder de [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0-licentie]', # Fuzzy
+	'mobile-frontend-photo-submit' => 'Opslaan',
+	'mobile-frontend-photo-cancel' => 'Annuleren',
 	'tag-mobile_edit' => 'Bwerking via mobiel',
 	'tag-mobile_edit-description' => 'Bewerking gemaakt via mobiele site',
 	'mobile-frontend-drawer-cancel' => 'Annuleren',
@@ -9664,7 +9679,6 @@ $messages['or'] = array(
 	'mobile-frontend-image-uploading' => 'ଛବି ଅପଲୋଡ ହେଉଛି, ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ । ଯଦି ଏହା ବହୁତ ସମୟ ନେଉଛି ତାହେଲେ <a href="#">Cancel</a> କରନ୍ତୁ',
 	'mobile-frontend-photo-upload-error' => 'ଅସୁବିଧା ହେଲା, ଦୟାକରି ଆଉଥରେ ଚେଷ୍ଟା କରନ୍ତୁ ।',
 	'mobile-frontend-photo-upload-success-article' => 'ସଫଳ ! ଆପଣଙ୍କ ଛବିଟି ପୃଷ୍ଠାଟିରେ ଆସିଗଲା ।',
-	'mobile-frontend-photo-upload-success-generic' => 'ସଫଳ ! ଆପଣଙ୍କ ଅବଦାନ ପାଇଁ ଧନ୍ୟବାଦ ।',
 	'mobile-frontend-photo-license' => '"ପଇଠ"ରେ କ୍ଲିକ କରିବା ଦ୍ଵାରା ଅପଣ ଆମର [//wikimediafoundation.org/wiki/Terms_of_use ବ୍ୟବହାର କରିବା ନିୟମ] ସହ ରାଜି ହେଉଛନ୍ତି ଏବଂ ଆପଣଙ୍କ ଛବିଟିକୁ [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License କ୍ରିଏଟିଭି କମନ ଆଟ୍ରିବ୍ୟୁସନ-ସେଆରଆଲାଇକ ୩.0 ଲାଇସେନ୍ସ] ଅନ୍ତର୍ଗତ ରଖି ଛାଡୁଛନ୍ତି ।',
 	'mobile-frontend-photo-submit' => 'ପଇଠ',
 	'mobile-frontend-photo-cancel' => 'ବାତିଲ',
@@ -10554,7 +10568,6 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-image-uploading' => 'Vă rugăm să așteptați, imaginea se încarcă. <a href="#">Revocați</a> dacă durează prea mult.',
 	'mobile-frontend-photo-upload-error' => 'Eroare; reîncercați.',
 	'mobile-frontend-photo-upload-success-article' => 'Succes! Imaginea dumneavoastră este acum afișată pe această pagină.',
-	'mobile-frontend-photo-upload-success-generic' => 'Succes! Mulțumim pentru contribuție.',
 	'mobile-frontend-photo-license' => 'Apăsând pe „Trimite” sunteți de acord cu [//wikimediafoundation.org/wiki/Terms_of_use Termenii noștri de utilizare] și sunteți de acord ca fotografia dumneavoastră să fie eliberată sub licența [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Commons Atribuire și distribuire în condiții identice 3.0].',
 	'mobile-frontend-photo-submit' => 'Trimite',
 	'mobile-frontend-photo-cancel' => 'Revocare',
@@ -10883,7 +10896,6 @@ $messages['ru'] = array(
 	'mobile-frontend-image-uploading' => 'Загрузка изображения', # Fuzzy
 	'mobile-frontend-photo-upload-error' => 'Произошла ошибка во время загрузки изображения. Пожалуйста, попробуйте другое изображение.', # Fuzzy
 	'mobile-frontend-photo-upload-success-article' => 'Загрузка удалась! Теперь ваше изображение размещено на этой странице.',
-	'mobile-frontend-photo-upload-success-generic' => 'Загрузка удалась! Спасибо за ваш вклад.',
 	'mobile-frontend-photo-license' => 'Примечание: Все публикуемые вами фотографии будут опубликованы под [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License лицензией CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-photo-submit' => 'Отправить',
 	'mobile-frontend-photo-cancel' => 'Отмена',
@@ -12999,7 +13011,6 @@ Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca es
 	'mobile-frontend-image-uploading' => 'Cargamento imaxene, speta. <a href="#">Anuła</a> se xe drio metarghe masa tenpo.',
 	'mobile-frontend-photo-upload-error' => 'Eror, proa oncora.',
 	'mobile-frontend-photo-upload-success-article' => 'Fato! Ła to imaxene ła xe deso inte ła pàjina.',
-	'mobile-frontend-photo-upload-success-generic' => "Fato! Grasie pa'l to contributo.",
 	'mobile-frontend-photo-license' => 'Strucando "Manda", te dixi de esar d\'acordo có i nostri [//wikimediafoundation.org/wiki/Terms_of_use Termini d\'Uxo] e te rełasi łe to someje có ła [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licensa Creative Common Atribusion-Condividi al steso modo 3.0]',
 	'mobile-frontend-photo-submit' => 'Manda',
 	'mobile-frontend-photo-cancel' => 'Anuła',
@@ -13219,7 +13230,6 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-image-uploading' => 'Đang tải lên hình; xin vui lòng chờ. Hãy <a href="#">hủy bỏ</a> nếu việc tải lên mất nhiều thì giờ quá.',
 	'mobile-frontend-photo-upload-error' => 'Đã xuất hiện lỗi; hãy thử lại.',
 	'mobile-frontend-photo-upload-success-article' => 'Xong rồi, trang này hiện có hình ảnh của bạn.',
-	'mobile-frontend-photo-upload-success-generic' => 'Xong rồi, cám ơn bạn đã đóng góp.',
 	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
 	'mobile-frontend-photo-submit' => 'Tải lên',
 	'mobile-frontend-photo-cancel' => 'Hủy bỏ',
@@ -13397,6 +13407,7 @@ $messages['yue'] = array(
  * @author Anakmalaysia
  * @author Bencmq
  * @author Dimension
+ * @author Hydra
  * @author Hzy980512
  * @author Kuailong
  * @author Liangent
@@ -13429,7 +13440,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-random-button' => '随机',
 	'mobile-frontend-ajax-random-heading' => '知识定位...',
 	'mobile-frontend-ajax-random-quote' => '一个人智力的增长应该从出生开始直到死亡',
-	'mobile-frontend-ajax-random-question' => '要阅读这篇条目吗？', # Fuzzy
+	'mobile-frontend-ajax-random-question' => '要阅读这篇页面吗？',
 	'mobile-frontend-ajax-random-yes' => '是',
 	'mobile-frontend-ajax-random-retry' => '再试试',
 	'mobile-frontend-ajax-random-suggestions' => '其他建议：',
@@ -13484,9 +13495,9 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-leave-feedback-post-error' => '处理你的信息时出错。请稍候重试。',
 	'mobile-frontend-language' => '语言：',
 	'mobile-frontend-language-article-heading' => '阅读其他语言',
-	'mobile-frontend-language-header' => '本条目有$1种语言可用', # Fuzzy
+	'mobile-frontend-language-header' => '此页面有$1{{PLURAL:$1|种语言|种语言}}可阅读',
 	'mobile-frontend-language-variant-header' => '选择{{#language:{{CONTENTLANG}}}}转换版本',
-	'mobile-frontend-language-footer' => '注意：本条目可能没有使用你的母语书写。你可以点击这里浏览其它语言的{{SITENAME}}。', # Fuzzy
+	'mobile-frontend-language-footer' => '注意：此页面可能没有使用你的母语书写。你可以点击这里浏览其它语言的{{SITENAME}}。',
 	'mobile-frontend-language-site-choose' => '搜索语言',
 	'mobile-frontend-username' => '用户名：',
 	'mobile-frontend-password' => '密码：',
@@ -13535,7 +13546,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-page-menu-contents' => '目录',
 	'mobile-frontend-page-menu-history' => '历史',
 	'mobile-frontend-meta-data-issues-header' => '存在的问题',
-	'mobile-frontend-meta-data-issues' => '本条目有问题', # Fuzzy
+	'mobile-frontend-meta-data-issues' => '此页面有问题',
 	'mobile-frontend-ajax-page-loading' => '正在载入$1',
 	'mobile-frontend-page-saving' => '正在保存$1',
 	'mobile-frontend-ajax-page-error' => '呃！出错了。请尝试刷新你的浏览器窗口。',
@@ -13579,7 +13590,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-watchlist-modified' => '$1前修改',
 	'mobile-frontend-diffview-404-title' => '损坏的版本',
 	'mobile-frontend-diffview-404-desc' => '您请求的版本ID不存在',
-	'mobile-frontend-diffview-title' => '修改$1', # Fuzzy
+	'mobile-frontend-diffview-title' => '修改',
 	'mobile-frontend-diffview-editcount' => '$1次{{PLURAL:$1|编辑|编辑}}',
 	'mobile-frontend-diffview-anonymous' => '匿名用户',
 	'mobile-frontend-diffview-bytesadded' => '$1字节已增加',
@@ -13595,7 +13606,6 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-image-uploading' => '正在上传图像，请稍候。如长时间未完成，请<a href="#">取消</a>。',
 	'mobile-frontend-photo-upload-error' => '上传失败，请重试。',
 	'mobile-frontend-photo-upload-success-article' => '完成！您的图像已被添加到页面中。',
-	'mobile-frontend-photo-upload-success-generic' => '完成！感谢您的贡献。',
 	'mobile-frontend-photo-license' => '点击“提交”意味着您同意我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意在[//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0协议]下释出您的照片。',
 	'mobile-frontend-photo-submit' => '提交',
 	'mobile-frontend-photo-cancel' => '取消',
