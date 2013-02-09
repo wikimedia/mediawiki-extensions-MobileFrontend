@@ -1,6 +1,6 @@
 a.watch-this-article {
   background-image: url(images/watch.png);
-  background-position: right center;
+  background-position: center center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -moz-background-size: auto 22px;
@@ -18,7 +18,6 @@ a.watch-this-article.watched {
 }
 a.watch-this-article.loading {
   background-image: url(../common/images/ajax-loader.gif);
-  background-position: right center;
   min-height: auto;
 }
 .full-screen-search #mw-mf-searchForm a.watch-this-article {
@@ -32,8 +31,11 @@ li a.watch-this-article {
   margin: -12px 0 0;
 }
 #mw-mf-menu-page a.watch-this-article {
-  position: relative;
-  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 /* notification */
 #mf-notification div.watch-action {

@@ -250,14 +250,12 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		'mediawiki.jqueryMsg',
 	),
 	'styles' => array(
-		'stylesheets/modules/mf-watchlist.css',
 		'stylesheets/modules/mf-photo.css',
 	),
 	'scripts' => array(
 		'javascripts/common/mf-history-jquery.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-search.js',
-		'javascripts/modules/mf-watchlist.js',
 		'javascripts/modules/mf-languages.js',
 		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-photo.js',
@@ -294,13 +292,6 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		// for mf-languages.js
 		'mobile-frontend-language-site-choose',
 		'mobile-frontend-language-footer',
-
-		// mf-watchlist.js
-		'mobile-frontend-watchlist-add',
-		'mobile-frontend-watchlist-removed',
-		'mobile-frontend-watchlist-cta',
-		'mobile-frontend-watchlist-cta-button-signup',
-		'mobile-frontend-watchlist-cta-button-login',
 
 		// mf-history-jquery.js
 		'mobile-frontend-ajax-page-loading',
@@ -392,6 +383,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/modules/mf-references.css',
 		'stylesheets/modules/mf-cleanuptemplates.css',
+		'stylesheets/modules/mf-watchlist.css',
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
@@ -401,6 +393,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
+		'javascripts/modules/mf-watchlist.js',
 		'javascripts/modules/mf-references.js'
 	),
 	'messages' => array(
@@ -411,6 +404,13 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		// mf-notification.js
 		'mobile-frontend-drawer-cancel',
 		'mobile-frontend-logged-in-toast-notification',
+
+		// mf-watchlist.js
+		'mobile-frontend-watchlist-add',
+		'mobile-frontend-watchlist-removed',
+		'mobile-frontend-watchlist-cta',
+		'mobile-frontend-watchlist-cta-button-signup',
+		'mobile-frontend-watchlist-cta-button-login',
 	),
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );

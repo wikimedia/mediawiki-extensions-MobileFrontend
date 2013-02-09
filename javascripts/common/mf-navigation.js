@@ -47,7 +47,6 @@ var m = ( function( $ ) {
 
 	function enableArticleActions() {
 		$( '<div id="mw-mf-menu-page">' ).appendTo( '#mw-mf-header' );
-		$( 'html' ).addClass( 'hasSecondaryNav' );
 	}
 
 	function getPageMenu() {
@@ -88,8 +87,9 @@ var m = ( function( $ ) {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
 
+		enableArticleActions();
+
 		if ( M.getConfig( 'beta' ) ) {
-			enableArticleActions();
 
 			M.on( 'page-loaded', function( curPage ) {
 				enableEditing( curPage.title );

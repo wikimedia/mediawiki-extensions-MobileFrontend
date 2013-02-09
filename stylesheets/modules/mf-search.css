@@ -9,8 +9,8 @@ html.jsSearch input.searchSubmit {
 }
 input.searchSubmit {
   position: absolute;
-  top: 10px;
-  right: 0;
+  top: 9px;
+  right: -44px;
   padding-top: 9px;
   padding-bottom: 9px;
   font-size: 9px;
@@ -52,15 +52,16 @@ input.search:focus {
 input.search.searching {
   background-color: #eee;
 }
-.hasSecondaryNav .full-screen-search #mw-mf-searchForm,
+.full-screen-search #mw-mf-searchForm {
+  padding-right: 23px;
+}
 #mw-mf-searchForm {
-  padding: 0 20px 0 40px;
+  padding: 0 48px 0 40px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-.hasSecondaryNav .full-screen-search #mw-mf-searchForm .clearlink,
 #mw-mf-searchForm .clearlink {
   top: 9px;
-  right: 8px;
+  right: 7px;
   width: 24px;
   height: 30px;
   background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
@@ -75,9 +76,6 @@ input.search.searching {
   background-size: auto 12px;
   cursor: pointer;
   position: absolute;
-}
-body.beta #mw-mf-searchForm {
-  padding-right: 50px;
 }
 #results {
   display: none;

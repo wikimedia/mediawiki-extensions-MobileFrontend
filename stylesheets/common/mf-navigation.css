@@ -116,10 +116,15 @@ input[type=submit].cancel {
 #mw-mf-sq {
   height: 46px;
 }
+#mw-mf-menu-page,
 #mw-mf-main-menu-button {
   display: inline-block;
   height: 46px;
   width: 40px;
+  position: absolute;
+  top: 0;
+}
+#mw-mf-main-menu-button {
   background-image: url(images/menu/lowres/main.png);
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
@@ -128,13 +133,14 @@ input[type=submit].cancel {
   -webkit-background-size: 24px 30px;
   background-size: 24px 30px;
   overflow: hidden;
-  position: absolute;
-  top: 0;
   background-repeat: no-repeat;
   z-index: 2;
   left: 0;
   border-radius: 5px 5px 5px;
   background-position: center center;
+}
+#mw-mf-menu-page {
+  right: 8px;
 }
 .jsEnabled #mw-mf-main-menu-button {
   background-image: /* @embed */ url(images/menu/main.png);
@@ -419,7 +425,7 @@ html.overlay ul.content li:hover {
 #mw-mf-page-center .header input.search,
 .overlay .header input.search {
   margin-top: 0;
-  margin-right: 20px;
+  margin-right: 48px;
   margin-left: 40px;
 }
 #mw-mf-page-center .header h2,
@@ -544,19 +550,8 @@ body {
   overflow-y: auto;
 }
 /* Page actions */
-.hasSecondaryNav .full-screen-search #mw-mf-menu-page {
+.full-screen-search #mw-mf-menu-page {
   display: none;
-}
-.hasSecondaryNav #mw-mf-menu-page {
-  width: 30px;
-  position: absolute;
-  right: 19px;
-  top: 8px;
-  bottom: 0;
-}
-.hasSecondaryNav #mw-mf-menu-page a {
-  height: 30px;
-  width: 30px;
 }
 /* Drawer */
 #mw-mf-drawer {
@@ -590,7 +585,7 @@ body {
 }
 #mw-mf-drawer a.button {
   display: block;
-  margin: 8px 40px 8px 40px;
+  margin: 8px 40px 8px 48px;
 }
 #mw-mf-drawer a.signup {
   padding-top: 8px;
