@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//8+A\u003d",
+        "filename": "javascripts/modules/mf-watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-09T00:04:50Z",
+      "side": 1,
+      "message": "I\u0027m not sure what this introduces.",
+      "revId": "5372add2fd3ed960bdfb57645a0e2de4849c708e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
