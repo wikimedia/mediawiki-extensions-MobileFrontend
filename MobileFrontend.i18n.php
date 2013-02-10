@@ -9170,6 +9170,7 @@ Probeer het later nog een keer.',
 	'mobile-frontend-nearby-noresults' => 'U bent in het midden van nergens en we konden geen onderwerpen vinden. Waarom schrijft u er niet over?',
 	'mobile-frontend-nearby-refresh' => "We hebben uw locatie preciezer kunnen bepalen. Klik hier om de lijst met nabijgelegen pagina's te vernieuwen",
 	'mobile-frontend-nearby-error' => 'Er is een onverwachte fout opgetreden tijdens het zoeken naar nabijgelegen onderwerpen',
+	'mobile-frontend-donate-image-login' => 'Meld u aan om uw uploads te bekijken',
 	'mobile-frontend-photo-upload-generic' => 'Afbeelding uploaden',
 	'mobile-frontend-donate-image-title' => 'Afbeelding uploaden',
 	'mobile-frontend-donate-image-summary' => "Afbeeldingen brengen {{SITENAME}} tot leven.
@@ -9179,6 +9180,8 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-donate-image-page-title' => 'Uploaden',
 	'mobile-frontend-donate-image-anon' => 'U moet een [[Special:UserLogin|gebruiker]] hebben om de pagina voor uploaden te bekijken',
 	'mobile-frontend-listed-image-no-description' => 'Geen beschrijving',
+	'mobile-frontend-donate-photo-upload-success' => 'Uw afbeelding kan nu gebruikt worden op {{SITENAME}}.',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Bedankt voor uw eerste bijdrage!',
 	'mobile-frontend-watchlist-add' => '$1 is toegevoegd aan uw volglijst',
 	'mobile-frontend-watchlist-removed' => '$1 is verwijderd van uw volglijst',
 	'mobile-frontend-watchlist-view' => 'Volglijst bekijken',
@@ -9210,15 +9213,16 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-diffview-explained' => 'De volgende regels zijn toegevoegd (+) en verwijderd (-):',
 	'mobile-frontend-table' => 'Tabel $1',
 	'mobile-frontend-saving-exit-page' => 'Uw bijdrage wordt opgeslagen. Als u deze pagina verlaat, gaat uw bijdrage verloren. Weet u zeker dat u deze pagina wilt verlaten?',
-	'mobile-frontend-photo-upload' => 'Voeg de eerste afbeelding toe aan deze pagina', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Voeg een afbeelding toe aan deze pagina',
 	'mobile-frontend-photo-article-edit-comment' => 'De afbeelding voor gebruik op de pagina is toegevoegd',
 	'mobile-frontend-photo-article-donate-comment' => 'Mobiele upload',
 	'mobile-frontend-photo-upload-comment' => 'De afbeelding is toegevoegd aan de pagina',
-	'mobile-frontend-photo-caption-placeholder' => 'Voeg een bijschrift toe voor deze afbeelding', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Voeg een beschrijving toe (verplicht)',
 	'mobile-frontend-image-loading' => 'Bezig met het laden van de afbeelding',
-	'mobile-frontend-image-uploading' => 'Bezig met het uploaden van de afbeelding', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'Er is een fout opgetreden tijdens het uploaden van de afbeelding. Probeer het opnieuw met een andere afbeelding.', # Fuzzy
-	'mobile-frontend-photo-license' => 'Let op: alle afbeeldingen die up uploadt, worden gepubliceerd onder de [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0-licentie]', # Fuzzy
+	'mobile-frontend-image-uploading' => 'Bezig met het uploaden van de afbeelding. U kunt <a href="#">annuleren</a> als dit te lang duurt.',
+	'mobile-frontend-photo-upload-error' => 'Er is een fout opgetreden. Probeer het opnieuw.',
+	'mobile-frontend-photo-upload-success-article' => 'Uw afbeelding is nu zichtbaar op deze pagina.',
+	'mobile-frontend-photo-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//http://creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0 Unported3.0 License].',
 	'mobile-frontend-photo-submit' => 'Opslaan',
 	'mobile-frontend-photo-cancel' => 'Annuleren',
 	'tag-mobile_edit' => 'Bwerking via mobiel',
@@ -10528,6 +10532,8 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-donate-image-page-title' => 'Încărcare',
 	'mobile-frontend-donate-image-anon' => 'Un [[Special:UserLogin|cont de utilizator]] este necesar pentru a vizualiza pagina cu încărcări',
 	'mobile-frontend-listed-image-no-description' => 'Fără descriere',
+	'mobile-frontend-donate-photo-upload-success' => 'Succes! Imaginea dumneavoastră poate fi acum folosită pe {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Succes! Vă mulțumim pentru prima dumneavoastră contribuție!',
 	'mobile-frontend-watchlist-add' => '$1 a fost adăugată listei dumneavoastră de pagini urmărite',
 	'mobile-frontend-watchlist-removed' => '$1 a fost eliminată din lista dumneavoastră de pagini urmărite',
 	'mobile-frontend-watchlist-view' => 'Vezi lista de pagini urmărite',
@@ -13568,6 +13574,8 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-donate-image-page-title' => '上传',
 	'mobile-frontend-donate-image-anon' => '查看上传页面需要一个[[Special:UserLogin|用户帐号]]',
 	'mobile-frontend-listed-image-no-description' => '没有说明',
+	'mobile-frontend-donate-photo-upload-success' => '成功！您的图像现在可以在 {{SITENAME}} 上使用！',
+	'mobile-frontend-donate-photo-first-upload-success' => '成功！感谢您第一次的贡献！',
 	'mobile-frontend-watchlist-add' => '已增加$1到你的监视列表',
 	'mobile-frontend-watchlist-removed' => '已从你的监视列表中移除$1',
 	'mobile-frontend-watchlist-view' => '查看你的监视列表',
@@ -13580,6 +13588,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-watchlist-a-z-empty' => '您目前没有监视任何页面',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => '点击页面顶部的星星',
 	'mobile-frontend-watchlist-a-z-empty-howto' => '点击页面顶部的星号可将该页面加入监视列表中，以便于及时查看到该条目出现的更改。',
+	'mobile-frontend-watchlist-feed-empty' => '没有最近修改的页面',
 	'mobile-frontend-watchlist-back-home' => '返回首页',
 	'mobile-frontend-changeslist-ip' => '匿名用户',
 	'mobile-frontend-changeslist-nocomment' => '无编辑摘要',
@@ -13595,6 +13604,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-diffview-anonymous' => '匿名用户',
 	'mobile-frontend-diffview-bytesadded' => '$1字节已增加',
 	'mobile-frontend-diffview-bytesremoved' => '$1字节已移除',
+	'mobile-frontend-diffview-explained' => '以下行添加（+），并删除（-）：',
 	'mobile-frontend-table' => '表$1',
 	'mobile-frontend-saving-exit-page' => '正在保存您的贡献。如果离开的话，你的贡献将会丢失。你真的要离开吗？',
 	'mobile-frontend-photo-upload' => '为本段添加第一张图像',
@@ -13609,6 +13619,9 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-license' => '点击“提交”意味着您同意我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意在[//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0协议]下释出您的照片。',
 	'mobile-frontend-photo-submit' => '提交',
 	'mobile-frontend-photo-cancel' => '取消',
+	'tag-mobile_edit' => '手机编辑',
+	'tag-mobile_edit-description' => '从网站移动版的编辑',
+	'mobile-frontend-drawer-cancel' => '取消',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
