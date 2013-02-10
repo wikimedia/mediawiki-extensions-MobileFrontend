@@ -66,8 +66,6 @@ $autoloadClasses = array (
 	'UserLoginAndCreateTemplate' => 'skins/UserLoginAndCreateTemplate',
 	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
 	'UserAccountCreateMobileTemplate' => 'skins/UserAccountCreateMobileTemplate',
-
-	'MFCompatCheck' => 'MFCompatCheck',
 );
 
 foreach ( $autoloadClasses as $className => $classFilename ) {
