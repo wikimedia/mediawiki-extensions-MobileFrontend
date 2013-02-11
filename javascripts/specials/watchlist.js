@@ -1,4 +1,5 @@
 ( function( $, M ) {
+	var star = M.require( 'watchstar' );
 
 	// FIXME: Kill the need for this horrible function by giving me a nicer API
 	function getPagesFromQueryResult( result ) {
@@ -47,7 +48,7 @@
 		if ( $( 'ul.mw-mf-watchlist-results li' ).length > 0 && M.getConfig( 'alpha' ) ) {
 			initWatchlistThumbnails();
 		}
-		M.emit( 'watchlist-ready', $( 'ul.mw-mf-watchlist-results' ) );
+		star.initWatchListIconList( $( 'ul.mw-mf-watchlist-results' ), true );
 	}
 
 	$( document ).ready( function() {
