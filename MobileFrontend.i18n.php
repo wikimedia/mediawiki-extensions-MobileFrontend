@@ -363,7 +363,8 @@ Don't translate the special page name",
 {{Identical|Username}}',
 	'mobile-frontend-password' => 'Field label for entry of password in Wikimedia mobile user interface.
 {{Identical|Password}}',
-	'mobile-frontend-username-placeholder' => 'placeholder text for username input box',
+	'mobile-frontend-username-placeholder' => 'placeholder text for username input box.
+{{Identical|Username}}',
 	'mobile-frontend-password-placeholder' => 'placeholder text for password input box',
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
 {{Identical|Log in}}',
@@ -1939,7 +1940,11 @@ $messages['br'] = array(
 	'mobile-frontend-username' => 'Anv implijer :',
 	'mobile-frontend-password' => 'Ger-tremen :',
 	'mobile-frontend-login' => 'Kevreañ',
+	'mobile-frontend-account-create-submit' => 'En em enskrivañ',
+	'mobile-frontend-password-confirm-placeholder' => 'Kadarnaat ar ger-tremen',
+	'mobile-frontend-overlay-escape' => 'Distreiñ',
 	'mobile-frontend-placeholder' => 'Klask e {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Klask {{SITENAME}} (Beta)',
 	'mobile-frontend-dismiss-notification' => 'disteuler ar gemennadenn-mañ',
 	'mobile-frontend-clear-search' => 'Riñsañ',
 	'mobile-frontend-privacy-link-text' => 'Prevezded',
@@ -1948,13 +1953,30 @@ $messages['br'] = array(
 	'mobile-frontend-footer-contact' => 'Darempred',
 	'mobile-frontend-main-menu-featured' => 'War wel',
 	'mobile-frontend-main-menu-nearby' => 'Nepell',
+	'mobile-frontend-main-menu-watchlist' => 'Roll evezhiañ',
 	'mobile-frontend-main-menu-settings' => 'Arventennoù',
+	'mobile-frontend-main-menu-upload' => 'Enporzhiañ',
 	'mobile-frontend-main-menu-settings-heading' => "Arventennoù al lec'hienn evit ar pellgomzerioù hezoug",
 	'mobile-frontend-settings-site-header' => 'Yezhoù {{SITENAME}}',
 	'mobile-frontend-main-menu-contact' => 'Darempred',
+	'mobile-frontend-main-menu-account-create' => 'Krouiñ ur gont',
 	'mobile-frontend-page-menu-contents' => 'Danvez',
 	'mobile-frontend-page-menu-history' => 'Istor',
 	'mobile-frontend-meta-data-issues' => "Kudennoù 'zo gant ar pennad-mañ", # Fuzzy
+	'mobile-frontend-photo-upload-generic' => 'Reiñ ur skeudenn',
+	'mobile-frontend-donate-image-title' => 'Reiñ ur skeudenn',
+	'mobile-frontend-donate-image-page-title' => 'Enporzhiañ',
+	'mobile-frontend-watchlist-more' => "muioc'h",
+	'mobile-frontend-watchlist-cta-button-login' => 'Kevreañ',
+	'mobile-frontend-watchlist-cta-button-signup' => 'En em enskrivañ',
+	'mobile-frontend-watchlist-a-z' => 'An holl',
+	'mobile-frontend-watchlist-feed' => 'Kemmet',
+	'mobile-frontend-watchlist-filter-all' => 'An holl',
+	'mobile-frontend-watchlist-filter-articles' => 'Pennadoù',
+	'mobile-frontend-watchlist-filter-talk' => 'Kaozeal',
+	'mobile-frontend-watchlist-filter-other' => 'All',
+	'mobile-frontend-photo-submit' => 'Kas',
+	'mobile-frontend-photo-cancel' => 'Nullañ',
 );
 
 /** Bosnian (bosanski)
@@ -3477,6 +3499,7 @@ $messages['es'] = array(
 	'mobile-frontend-username-placeholder' => 'Nombre de usuario',
 	'mobile-frontend-password-placeholder' => 'Contraseña',
 	'mobile-frontend-login' => 'Iniciar sesión',
+	'mobile-frontend-last-modified-date' => 'Última modificación el $1, a las $2',
 	'mobile-frontend-account-create-submit' => 'Registrarse',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmar contraseña',
 	'mobile-frontend-account-create-email-placeholder' => 'Dirección de correo electrónico (opcional)',
@@ -4016,10 +4039,10 @@ Auta herättämään nämä sivut eloon lahjoittamalla kuviasi, joita olet valmi
 	'mobile-frontend-photo-upload-error' => 'Virhe. Yritä uudelleen.',
 	'mobile-frontend-photo-license' => 'Kaikki kuvasi julkaistaan [//fi.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot CC-BY-SA 3.0 -lisenssillä].', # Fuzzy
 	'mobile-frontend-photo-submit' => 'Lähetä',
-	'mobile-frontend-photo-cancel' => 'Peruuta',
+	'mobile-frontend-photo-cancel' => 'Peru',
 	'tag-mobile_edit' => 'Mobiilimuutos',
 	'tag-mobile_edit-description' => 'Muutos, joka on tehty mobiilisivustolta',
-	'mobile-frontend-drawer-cancel' => 'Peruuta',
+	'mobile-frontend-drawer-cancel' => 'Peru',
 );
 
 /** Faroese (føroyskt)
@@ -4204,6 +4227,8 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-donate-image-page-title' => 'Télécharger',
 	'mobile-frontend-donate-image-anon' => 'Un [[Special:UserLogin|compte utilisateur]] est nécessaire pour voir la page des téléchargements',
 	'mobile-frontend-listed-image-no-description' => 'Aucune description',
+	'mobile-frontend-donate-photo-upload-success' => 'Bravo! Votre image peut maintenant être utilisée sur {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Bravo! Merci pour votre première contribution!',
 	'mobile-frontend-watchlist-add' => '$1 ajouté à votre liste de suivi',
 	'mobile-frontend-watchlist-removed' => '$1 retiré de votre liste de suivi',
 	'mobile-frontend-watchlist-view' => 'Afficher votre liste de surveillance',
@@ -5054,6 +5079,7 @@ $messages['haw'] = array(
  * @author Amire80
  * @author Deror avi
  * @author Inkbug
+ * @author Ypnypn
  */
 $messages['he'] = array(
 	'mobile-frontend-desc' => 'תצוגה עבור מכשירים ניידים',
@@ -5183,10 +5209,12 @@ $messages['he'] = array(
 	'mobile-frontend-page-saving' => 'שמירת $1',
 	'mobile-frontend-ajax-page-error' => 'אוי! משהו השתבש כאן. נא לנסות לרענן את חלון הדפדפן שלך.',
 	'mobile-frontend-nearby-title' => 'בסביבה',
+	'mobile-frontend-nearby-lookup-error' => 'אין אפשרות למצוא אותך. מנסה שוב...',
 	'mobile-frontend-photo-upload-generic' => 'תרומת תמונה',
 	'mobile-frontend-donate-image-title' => 'תרומת תמונה',
 	'mobile-frontend-donate-image-summary' => 'תמונות מחיות את {{SITENAME}}. יש הרבה דפים שאין בהם תמונות בגלל מחסור בתמונות חופשיות. עזרו להחיות את הדפים האלה באמצעות תרומה של תמונות שאתם מוכנים לתרום ושיכולות להיות שימושיות לקהילת {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'התרומות האחרונות שלך',
+	'mobile-frontend-donate-image-page-title' => 'העלאה',
 	'mobile-frontend-watchlist-add' => 'הדף $1 נוסף לרשימת המעקב שלך',
 	'mobile-frontend-watchlist-removed' => 'הדף $1 הוסר מרשימת המעקב שלך',
 	'mobile-frontend-watchlist-view' => 'הצגת רשימת המעקב שלך',
@@ -5220,6 +5248,7 @@ $messages['he'] = array(
 	'mobile-frontend-image-uploading' => 'מתבצעת העלאת תמונה', # Fuzzy
 	'mobile-frontend-photo-upload-error' => 'אירעה שגיאה בעת העלאת התמונה. נא לנסות תמונה אחרת.', # Fuzzy
 	'mobile-frontend-photo-license' => 'הערה: כל התמונות שמוּעלות ממך מתפרסמות לפי תנאי [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License רישיון CC by SA 3.0]', # Fuzzy
+	'mobile-frontend-photo-cancel' => 'בטל',
 	'tag-mobile_edit' => 'עריכה ממכשיר נייד',
 	'tag-mobile_edit-description' => 'העריכה נעשתה מהאתר למכשירים ניידים',
 	'mobile-frontend-drawer-cancel' => 'ביטול',
@@ -7039,6 +7068,15 @@ $messages['km'] = array(
 	'mobile-frontend-meta-data-issues' => 'អត្ថបទ​នេះ​មាន​បញ្ហា​មួយ​ចំនួន', # Fuzzy
 	'mobile-frontend-ajax-page-loading' => 'កំពុង​ផ្ទុក $1',
 	'mobile-frontend-page-saving' => 'កំពុង​រក្សា​ទុក $1',
+	'mobile-frontend-nearby-title' => 'ជិតខាង',
+	'mobile-frontend-nearby-loading' => 'ផ្ទុក​ប្រធាន​បទ​ដែល​នៅ​ទីតាំង​បច្ចុប្បន្ន​របស់​អ្នក',
+	'mobile-frontend-nearby-distance-report' => '$1km ពី​ទីតាំង​បច្ចុប្បន្ន​របស់​អ្នក',
+	'mobile-frontend-nearby-lookup-error' => 'មិន​អាច​រក​អ្នក​ឃើញ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត..',
+	'mobile-frontend-donate-image-login' => 'ចូល​ដើម្បី​មើល​ការ​ផ្ទុក​របស់​អ្នក',
+	'mobile-frontend-photo-upload-generic' => 'បរិច្ចាគ​រូបភាព',
+	'mobile-frontend-donate-image-title' => 'បរិច្ចាក​រូបភាព',
+	'mobile-frontend-donate-image-page-title' => 'ផ្ទុក',
+	'mobile-frontend-listed-image-no-description' => 'គ្មាន​ការ​ពណ៌នា',
 	'mobile-frontend-watchlist-add' => 'បន្ថែម $1 ទៅ​បញ្ជី​មើល​របស់​អ្នក',
 	'mobile-frontend-watchlist-removed' => 'បាន​យក $1 ចេញ​ពី​បញ្ជី​មើល​របស់​អ្នក',
 	'mobile-frontend-watchlist-view' => 'មើល​បញ្ជី​មើល​របស់​អ្នក',
@@ -7048,13 +7086,20 @@ $messages['km'] = array(
 	'mobile-frontend-watchlist-cta-button-signup' => 'ចុះ​ឈ្មោះ',
 	'mobile-frontend-watchlist-a-z' => 'ទំព័រ​ដែល​តាមដាន', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'ទំព័រ​ដែល​មាន​ការ​ផ្លាស់ប្ដូរ', # Fuzzy
+	'mobile-frontend-watchlist-a-z-empty' => 'អ្នក​បច្ចុប្បន្ន​មិន​កំពុង​មើល​ទំព័រ​ណា​មួយ​ទេ',
+	'mobile-frontend-watchlist-back-home' => 'ត្រឡប់​ទៅ​ដើម',
 	'mobile-frontend-changeslist-ip' => 'អ្នក​ប្រើ​អនាមិក',
+	'mobile-frontend-changeslist-nocomment' => 'គ្មាន​ការ​សង្ខេប​កែ​សម្រួល',
 	'mobile-frontend-watchlist-filter-all' => 'ទាំងអស់',
 	'mobile-frontend-watchlist-filter-articles' => 'អត្ថបទ',
 	'mobile-frontend-watchlist-filter-talk' => 'ការ​ពិភាក្សា',
 	'mobile-frontend-watchlist-filter-other' => 'ផ្សេង​ទៀត',
-	'mobile-frontend-diffview-title' => 'ផ្លាស់ប្ដូរ​ទៅ $1', # Fuzzy
+	'mobile-frontend-watchlist-modified' => 'បាន​កែប្រែ​នៅ $1 មុន',
+	'mobile-frontend-diffview-404-title' => 'ការ​កែប្រែ​មិន​ល្អ',
+	'mobile-frontend-diffview-title' => 'ផ្លាស់ប្ដូរ',
 	'mobile-frontend-diffview-anonymous' => 'អ្នក​ប្រើ​អនាមិក',
+	'mobile-frontend-diffview-bytesremoved' => 'យក $1 {{PLURAL:$1|byte|bytes}} ចេញ',
+	'mobile-frontend-diffview-explained' => 'បន្ទាត់​ខាងក្រោម​ត្រូវ​បាន​បន្ថែម (+) និង​យក​ចេញ (-)៖',
 	'mobile-frontend-table' => 'តារាង $1',
 	'mobile-frontend-photo-upload' => 'បន្ថែម​រូបភាព​ដំបូង​ទៅ​ទំព័រ​នេះ', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'បាន​បន្ថែម​រូបថត​សម្រាប់​ប្រើ​លើ​ទំព័រ',
@@ -7063,6 +7108,11 @@ $messages['km'] = array(
 	'mobile-frontend-image-loading' => 'កំពុង​ផ្ទុក​រូបភាព',
 	'mobile-frontend-image-uploading' => 'មាន​កំហុស​កើត​ឡើង ខណៈ​ពេល​ផ្ទុក​រូបភាព​នេះ​ឡើង', # Fuzzy
 	'mobile-frontend-photo-upload-error' => 'មាន​កំហុស​កើត​ឡើង ខណៈ​កំពុង​ផ្ទុក​រូបភាព ។ សូម​សាកល្បង​រូបភាព​ផ្សេង​ទៀត ។', # Fuzzy
+	'mobile-frontend-photo-submit' => 'ដាក់​ស្នើ',
+	'mobile-frontend-photo-cancel' => 'បោះបង់',
+	'tag-mobile_edit' => 'កែ​សម្រួល​តាម​ទូរស័ព្ទ',
+	'tag-mobile_edit-description' => 'ការ​កែ​សម្រួល​បាន​ធ្វើ​ពី​តំបន់​បណ្ដាញ​សម្រាប់​ទូរស័ព្ទ',
+	'mobile-frontend-drawer-cancel' => 'បោះបង់',
 );
 
 /** Kannada (ಕನ್ನಡ)
@@ -7263,6 +7313,8 @@ $messages['ko'] = array(
 	'mobile-frontend-donate-image-page-title' => '올리기',
 	'mobile-frontend-donate-image-anon' => '올리기 문서를 보려면 [[Special:UserLogin|사용자 계정]]이 필요합니다',
 	'mobile-frontend-listed-image-no-description' => '설명 없음',
+	'mobile-frontend-donate-photo-upload-success' => '성공했습니다! 그림은 이제 {{SITENAME}}에 사용할 수 있습니다!',
+	'mobile-frontend-donate-photo-first-upload-success' => '성공했습니다! 첫 기여를 해주셔서 감사합니다!',
 	'mobile-frontend-watchlist-add' => '내 주시문서 목록에 $1 문서를 추가했습니다',
 	'mobile-frontend-watchlist-removed' => '내 주시문서 목록에서 $1 문서를 제거했습니다',
 	'mobile-frontend-watchlist-view' => '내 주시문서 목록 보기',
@@ -10853,6 +10905,7 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-noresults' => 'Вы находитесь в центре неизвестности, и нам не удалось найти никаких подходящих тем. Почему бы вам не написать что-либо?',
 	'mobile-frontend-nearby-refresh' => 'Мы определили ваше местоположение точнее. Нажмите здесь, чтобы обновить список ближайших страниц',
 	'mobile-frontend-nearby-error' => 'Произошла неожиданная ошибка при попытке найти страницы, связанные с вашим местоположением',
+	'mobile-frontend-donate-image-login' => 'Войти для просмотра ваших заливок',
 	'mobile-frontend-photo-upload-generic' => 'Пожертвовать изображение',
 	'mobile-frontend-donate-image-title' => 'Пожертвовать изображение',
 	'mobile-frontend-donate-image-summary' => 'Фотографии оживляют страницы проекта {{SITENAME}}.
@@ -10862,6 +10915,8 @@ $messages['ru'] = array(
 	'mobile-frontend-donate-image-page-title' => 'Загрузить',
 	'mobile-frontend-donate-image-anon' => 'Для просмотра страницы закачек требуется [[Special:UserLogin|учетная запись пользователя]]',
 	'mobile-frontend-listed-image-no-description' => 'Нет описания',
+	'mobile-frontend-donate-photo-upload-success' => 'Получилось! Ваше изображние может быть использован на сайте {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Получилось! Спасибо за ваш вклад!',
 	'mobile-frontend-watchlist-add' => '$1 добавлена в ваш список наблюдения',
 	'mobile-frontend-watchlist-removed' => '$1 удалена из вашего списка наблюдения',
 	'mobile-frontend-watchlist-view' => 'Просмотреть свой список наблюдения',
@@ -10893,14 +10948,14 @@ $messages['ru'] = array(
 	'mobile-frontend-diffview-explained' => 'Следующие строки были добавлены (+) и удалены (-):',
 	'mobile-frontend-table' => 'Таблица $1',
 	'mobile-frontend-saving-exit-page' => 'Ваша правка всё ещё сохраняется. Если вы покинете страницу, ваши изменения будут потеряны. Вы уверены, что хотите уйти?',
-	'mobile-frontend-photo-upload' => 'Добавить первую фотографию на эту страницу', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Добавить на эту страницу изображение',
 	'mobile-frontend-photo-article-edit-comment' => 'Добавлена фотография для использования на странице',
 	'mobile-frontend-photo-article-donate-comment' => 'Пожертвовал изображение с мобильного устройства',
 	'mobile-frontend-photo-upload-comment' => 'Добавлена фотография на страницу',
-	'mobile-frontend-photo-caption-placeholder' => 'Добавить описание для данного изображения', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Добавить описание (обязательно)',
 	'mobile-frontend-image-loading' => 'Изображение загружается',
-	'mobile-frontend-image-uploading' => 'Загрузка изображения', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'Произошла ошибка во время загрузки изображения. Пожалуйста, попробуйте другое изображение.', # Fuzzy
+	'mobile-frontend-image-uploading' => 'Загрузка изображения, подождите пожалуйста. <a href="#">Отмена</a>, если это занимает слишком много времени.',
+	'mobile-frontend-photo-upload-error' => 'Ошибка, попробуйте заново.',
 	'mobile-frontend-photo-upload-success-article' => 'Загрузка удалась! Теперь ваше изображение размещено на этой странице.',
 	'mobile-frontend-photo-license' => 'Примечание: Все публикуемые вами фотографии будут опубликованы под [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License лицензией CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-photo-submit' => 'Отправить',
@@ -13306,15 +13361,22 @@ $messages['yi'] = array(
 	'mobile-frontend-search-submit' => 'גיי',
 	'mobile-frontend-home-button' => 'היימבלאַט',
 	'mobile-frontend-logged-out' => 'נישט ארײַנלאגירט',
+	'mobile-frontend-logged-in-homepage-notification' => 'ברוך הבא, $1!',
+	'mobile-frontend-logged-in-toast-notification' => 'ארײַנלאגירט ווי $1.',
+	'mobile-frontend-sign-up-heading' => 'פֿארשרייבן זיך',
+	'mobile-frontend-sign-in-heading' => 'איינשרייבונג',
 	'mobile-frontend-settings-description' => 'פאַסט צו אײַער מאבייל דערפֿאַרונג מיט די ספעציפישע אײַנשטעלונגען פאר מאבייל אפאראטן.',
 	'mobile-frontend-settings-beta' => 'בעטע',
 	'mobile-frontend-save-settings' => 'אויפהיטן אײַנשטעלונגען',
 	'mobile-frontend-random-button' => 'צופֿעליג',
+	'mobile-frontend-ajax-random-question' => 'געליינטט דעם בלאט?',
+	'mobile-frontend-ajax-random-yes' => 'יאָ',
+	'mobile-frontend-ajax-random-retry' => 'פרובירט נאכאמאל',
 	'mobile-frontend-back-to-top-of-section' => 'צוריקשפרינגען אַן אָפטייל',
 	'mobile-frontend-close-section' => 'פארמאכן דעם אפטייל',
 	'mobile-frontend-show-button' => 'ווײַזן',
 	'mobile-frontend-hide-button' => 'באַהאַלטן',
-	'mobile-frontend-empty-homepage-text' => 'דעם היימבלאט דארף מען קאנפיגורירן . <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">אנווייזן ווי צו שאפן דאס וועבזייטל מאבייל־אקטיווירט.</a>', # Fuzzy
+	'mobile-frontend-empty-homepage-text' => 'דעם היימבלאט דארף מען קאנפיגורירן. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage אנווייזן ווי צו שאפן דאס וועבזייטל מאבייל־אקטיווירט]',
 	'mobile-frontend-regular-site' => 'נארמאַלער קאמפיוטער באַקוק',
 	'mobile-frontend-wml-continue' => 'ווײַטער …',
 	'mobile-frontend-wml-back' => 'צוריק ...',
@@ -13326,7 +13388,7 @@ $messages['yi'] = array(
 	'mobile-frontend-enable-images' => 'אקטיווירן בילדער פאר מאביילן',
 	'mobile-frontend-off' => 'אויס',
 	'mobile-frontend-on' => 'אקטיוויזירט',
-	'mobile-frontend-footer-contributors-text' => 'ארטיקל פון <a href="$1">בײַשטײַערער</a> ווי איר', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'בלאט פון [$1 בײַשטײַערער] ווי איר',
 	'mobile-frontend-featured-article' => 'דער הײַנטיקער רעקאמענדירטער אַרטיקל',
 	'mobile-frontend-news-items' => 'אין די נײַעס',
 	'mobile-frontend-leave-feedback-subject' => 'טעמע:',
@@ -13350,13 +13412,13 @@ $messages['yi'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'עס האט פאסירט א פעלער ביים פראצעסירן אייער מעלדונג. ביטע פרובירט נאכאמאל שפעטער.',
 	'mobile-frontend-language' => 'שפּראַך:',
 	'mobile-frontend-language-article-heading' => 'לייענען אין אן אנדער שפראך',
-	'mobile-frontend-language-header' => 'דער ארטיקל איז פאראן אין $1 {{PLURAL:$1|שפראך|שפראכן}}', # Fuzzy
+	'mobile-frontend-language-header' => 'דער בלאט איז פאראן אין $1 {{PLURAL:$1|שפראך|שפראכן}}',
 	'mobile-frontend-language-site-choose' => 'זוך שפראך',
 	'mobile-frontend-username' => 'באַניצער נאָמען:',
 	'mobile-frontend-password' => 'פאסווארט:',
 	'mobile-frontend-login' => 'אַרײַנלאגירן',
 	'mobile-frontend-placeholder' => 'זוכן {{SITENAME}}',
-	'mobile-frontend-search-help' => 'קלאפט ארײַן זוכווארט אויבן. צוגעפאסטע ארטיקל קעפלעך וועט מען ווײַזן דא.', # Fuzzy
+	'mobile-frontend-search-help' => 'קלאפט ארײַן זוכווארט אויבן. צוגעפאסטע בלאט קעפלעך וועט מען ווײַזן דא.',
 	'mobile-frontend-dismiss-notification' => 'באהאלטן דעם קאמוניקאט',
 	'mobile-frontend-clear-search' => 'רייניקן',
 	'mobile-frontend-privacy-link-text' => 'פריוואטקייט',
@@ -13375,13 +13437,17 @@ $messages['yi'] = array(
 	'mobile-frontend-page-menu-contents' => 'אינהאַלט',
 	'mobile-frontend-page-menu-history' => 'היסטאריע',
 	'mobile-frontend-meta-data-issues-header' => 'פראגעס',
-	'mobile-frontend-meta-data-issues' => 'דער ארטיקל האט עטלעכע פֿראגעס', # Fuzzy
+	'mobile-frontend-meta-data-issues' => 'דער בלאט האט עטלעכע פֿראגעס',
 	'mobile-frontend-ajax-page-loading' => 'לאָדן $1',
 	'mobile-frontend-page-saving' => 'אויפֿהיטן $1',
 	'mobile-frontend-ajax-page-error' => 'אוי־וויי! עפעס איז געשען דא. זייט אזוי גוט פרובירט דערפרישן אייער בלעטער פענסטער.',
 	'mobile-frontend-watchlist-add' => 'צוגעלייגט $1 צו אייער אויפפאסונג ליסטע',
 	'mobile-frontend-watchlist-removed' => 'אראפגענומען $1 פון אייער אויפפאסונג ליסטע',
 	'mobile-frontend-watchlist-view' => 'באקוקן אייער אויפפאסונג ליסטע',
+	'mobile-frontend-photo-caption-placeholder' => 'צולייגן א באשרייבונג (באדארפט)',
+	'mobile-frontend-photo-upload-error' => 'פֿעלער, פרובירט נאכאמאל.',
+	'mobile-frontend-photo-cancel' => 'אַנולירן',
+	'mobile-frontend-drawer-cancel' => 'אַנולירן',
 );
 
 /** Yoruba (Yorùbá)
