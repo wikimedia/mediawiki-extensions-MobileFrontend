@@ -1,12 +1,14 @@
 <?php
 
 class SpecialMobileWatchlist extends SpecialWatchlist {
-	const LIMIT = 50; // pageimages api limits the number of results to 50
+	const LIMIT = 50; // Performance-safe value with PageImages
+	const THUMB_SIZE = 150;
 
 	private $filter,
 		$seenTitles,
 		$seenDays,
-		$today;
+		$today,
+		$usePageImages;
 
 	/** @var Title */
 	private $fromPageTitle;
@@ -14,6 +16,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	function execute( $par ) {
 		$ctx = MobileContext::singleton();
 		$ctx->setOverlay( false );
+		$this->usePageImages = $ctx->isBetaGroupMember() && defined( 'PAGE_IMAGES_INSTALLED' );
 		// assumes mobile skin
 		$mobileSkin = $ctx->getSkin();
 		$mobileSkin->setHtmlHeader( $this->getWatchlistHeader() );
@@ -45,6 +48,28 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$res = $this->doListQuery();
 			$this->showListResults( $res );
 		}
+	}
+
+	/**
+	 * Add thumbs to a query, if installed and other preconditions are met
+	 *
+	 * @param array $tables
+	 * @param array $fields
+	 * @param array $join_conds
+	 */
+	protected function doPageImages( array &$tables, array &$fields, array &$join_conds ) {
+		if ( !$this->usePageImages ) {
+			return;
+		}
+		$tables[] = 'page_props';
+		$fields[] = 'pp_value';
+		$join_conds['page_props'] = array(
+			'LEFT JOIN',
+			array(
+				'pp_page=page_id',
+				'pp_propname' => 'page_image',
+			),
+		);
 	}
 
 	protected function getWatchlistHeader() {
@@ -157,11 +182,13 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$rollbacker = $user->isAllowed('rollback');
 		if ( $rollbacker ) {
 			$tables[] = 'page';
-			$join_conds['page'] = array('LEFT JOIN','rc_cur_id=page_id');
+			$join_conds['page'] = array( 'LEFT JOIN', 'rc_cur_id=page_id' );
 			if ( $rollbacker ) {
 				$fields[] = 'page_latest';
 			}
 		}
+
+		$this->doPageImages( $tables, $fields, $join_conds );
 
 		switch( $this->filter ) {
 		case 'all':
@@ -217,6 +244,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			'ORDER BY' => 'wl_namespace, wl_title'
 		);
 
+		$this->doPageImages( $tables, $fields, $joinConds );
+
 		$options['LIMIT'] = self::LIMIT + 1; // add one to decide whether to show the more button
 
 		switch( $this->filter ) {
@@ -244,11 +273,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		return $res;
 	}
 
-	function showFeedResults( $res ) {
+	function showFeedResults( ResultWrapper $res ) {
 		$this->showResults( $res, true );
 	}
 
-	function showListResults( $res ) {
+	function showListResults( ResultWrapper $res ) {
 		$this->showResults( $res, false );
 	}
 
@@ -394,9 +423,26 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$ts = new MWTimestamp( $row->rev_timestamp );
 		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
 
+		$thumbHtml = '';
+		if ( $this->usePageImages && !is_null( $row->pp_value ) ) {
+			$file = wfFindFile( $row->pp_value );
+			if ( $file ) {
+				$thumb = $file->transform( array( 'width' => self::THUMB_SIZE, 'height' => self::THUMB_SIZE ) );
+				if ( $thumb ) {
+					$thumbHtml = Html::element( 'div',
+						array(
+							'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' ),
+							'style' => 'background-image: url("' . wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
+						)
+					);
+				}
+			}
+		}
+
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
+			$thumbHtml .
 			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $lastModified ) .
 			Html::closeElement( 'a' ) .

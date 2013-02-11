@@ -364,7 +364,6 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	'scripts' => array(
 		'javascripts/modules/mf-random.js',
 		'javascripts/modules/mf-tables.js',
-		'javascripts/modules/mf-inline-style-scrubber.js',
 	),
 	'mobileTargets' => array( 'alpha' ),
 );
@@ -446,7 +445,7 @@ $wgMFSpecialModuleStubs = array(
 		),
 	),
 	'search' => array( 'css' => true ),
-	'watchlist' => array( 'css' => true, 'js' => true,
+	'watchlist' => array( 'css' => true, 'js' => false,
 		'dependencies' => array( 'mobile.stable' ),
 	),
 	'userlogin' => array( 'css' => true ),
