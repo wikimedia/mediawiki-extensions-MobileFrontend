@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//7wM\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-11T08:25:17Z",
+      "side": 1,
+      "message": "A number is the start of a sentence. \"Upload[s]\" should be \"upload[s]\". Same thing below.",
+      "revId": "b93bf290d5aa65e47fb85cccb2e129b44985213f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//7wA\u003d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-11T08:25:17Z",
+      "side": 1,
+      "message": "This should also support plural (probably does, but we prefer explicit plural so translators are immediately aware of it). So:\n\n $1+ {{PLURAL:$1|upload|uploads}}",
+      "revId": "b93bf290d5aa65e47fb85cccb2e129b44985213f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//7v8\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-11T08:25:17Z",
+      "side": 1,
+      "message": "Please use @todo with optional FIXME here. That allows IDEs and PHPDoc to identify todo items, too.",
+      "revId": "b93bf290d5aa65e47fb85cccb2e129b44985213f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//7v4\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-11T08:25:17Z",
+      "side": 1,
+      "message": "Should this strict compare? \u003d\u003d\u003d 0.",
+      "revId": "b93bf290d5aa65e47fb85cccb2e129b44985213f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//7v0\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-11T08:25:17Z",
+      "side": 1,
+      "message": "Should this strict compare? \u003d\u003d\u003d 0.",
+      "revId": "b93bf290d5aa65e47fb85cccb2e129b44985213f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADi3//7vw\u003d",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-11T08:25:17Z",
+      "side": 1,
+      "message": "Explicitely refer to  SpecialDonateImage::$uploadCountThreshold?",
+      "revId": "b93bf290d5aa65e47fb85cccb2e129b44985213f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
