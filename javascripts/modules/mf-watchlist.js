@@ -75,7 +75,9 @@ var api = M.require( 'api' ), w = ( function() {
 		}
 
 		function toggleWatchStatus( unwatch ) {
-			toggleWatch( title, lastToken, unwatch, success, enable );
+			api.getToken( 'watch', function( data ) {
+				toggleWatch( title, data.tokens.watchtoken, unwatch, success, enable );
+			} );
 		}
 
 		$( watchBtn ).click( function( ev ) {
@@ -195,7 +197,9 @@ var api = M.require( 'api' ), w = ( function() {
 		container = container || nav.getPageMenu();
 		title = title || pageTitle;
 		// initialise on current page
-		initWatchListIcon( container, title );
+		if ( container ) {
+			initWatchListIcon( container, title );
+		}
 
 		// bind to future page loads
 		M.on( 'page-loaded', function( article ) {
