@@ -1,13 +1,3 @@
-/* some polyfill */
-if( typeof Array.prototype.forEach === 'undefined' ) {
-	Array.prototype.forEach = function( callback ) {
-		var i;
-		for( i = 0; i < this.length; i++ ) {
-			callback( this[ i ], i );
-		}
-	};
-}
-
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 ( function( M, $ ) {

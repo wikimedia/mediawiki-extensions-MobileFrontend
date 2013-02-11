@@ -181,16 +181,6 @@ $wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + arr
 	'mobileTargets' => array(),
 );
 
-$wgResourceModules['mobile.head'] = $wgMFMobileResourceBoilerplate + array(
-	'styles' => array(),
-	'scripts' => array(
-		'javascripts/common/main.js',
-		'javascripts/common/modules.js',
-	),
-	'position' => 'top',
-	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
-);
-
 $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/externals/reset.css',
@@ -212,12 +202,11 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 );
 
 $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array(
-		'mobile.head',
-	),
 	'styles' => array(
 	),
 	'scripts' => array(
+		'javascripts/common/polyfills.js',
+		'javascripts/common/modules.js',
 		'javascripts/externals/hogan.js',
 		'javascripts/common/eventemitter.js',
 		'javascripts/common/mf-application.js',
