@@ -19,9 +19,11 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	protected function setUp() {
+		global $wgMFAutodetectMobileView;
 		parent::setUp();
 		$context = new DerivativeContext( RequestContext::getMain() );
 		$context->setRequest( new FauxRequest() );
+		$wgMFAutodetectMobileView = false;
 		MobileContext::singleton()->setContext( $context );
 	}
 
@@ -139,26 +141,6 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( true, 'mobile' ),
 			array( true, 'mobile-wap' ),
 			array( true, '' ),
-		);
-	}
-
-	/**
-	 * @dataProvider isMobileDeviceProvider
-	 */
-	public function testIsMobileDevice( $isDevice, $msg, $xDevice = null ) {
-		$testMethod = ( $isDevice ) ? 'assertTrue' : 'assertFalse';
-
-		if ( !is_null( $xDevice ) ) {
-			MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
-		}
-
-		$this->$testMethod( MobileContext::singleton()->isMobileDevice(), $msg );
-	}
-
-	public function isMobileDeviceProvider() {
-		return array(
-			array( false, 'Nothing set' ),
-			array( true, 'HTTP_X_DEVICE = webkit', 'webkit' ),
 		);
 	}
 

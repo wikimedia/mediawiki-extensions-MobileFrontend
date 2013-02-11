@@ -103,14 +103,11 @@ class MobileContext extends ContextSource {
 	}
 
 	public function isMobileDevice() {
-		$xDevice = $this->getXDevice();
-		$amf = $this->getAMF();
+		global $wgMFAutodetectMobileView;
 
-		if ( empty( $xDevice ) && !$amf ) {
-			return false;
-		}
-
-		return true;
+		return $this->getXDevice()
+			|| $this->getAMF()
+			|| ( $wgMFAutodetectMobileView && $this->getDevice()->isMobileDevice() );
 	}
 
 	/**
