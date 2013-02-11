@@ -815,6 +815,9 @@ class SkinMobileTemplate extends BaseTemplate {
 			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>"
 				title="<?php $this->msg( 'mobile-frontend-home-button' ) ?>">
 				<?php $this->msg( 'mobile-frontend-home-button' ) ?></a></li>
+			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
+				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
+				><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
 			<?php if ( $this->data['supports_jquery'] ) { ?>
 			<li class='icon-watchlist'>
 				<a href="<?php $this->text( 'watchlistUrl' ) ?>"
@@ -832,9 +835,6 @@ class SkinMobileTemplate extends BaseTemplate {
 					</a>
 				</li>
 			<?php } ?>
-			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
-				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
-				><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
 			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
 			<li class='icon4'>
 				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"
