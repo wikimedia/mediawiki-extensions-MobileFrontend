@@ -40,11 +40,10 @@ class SkinMobileTest extends MediaWikiTestCase {
 			array(
 				$this->modules,
 				'Test',
-				$device,
 				false,
 				false,
 				array(
-					'top' => array( 'mobile.device.webkit' ),
+					'top' => array(),
 					'bottom' => array( 'juliusz', 'max' ),
 				),
 			),
@@ -53,11 +52,10 @@ class SkinMobileTest extends MediaWikiTestCase {
 			array(
 				$this->modules,
 				'Test',
-				$device,
 				true,
 				false,
 				array(
-					'top' => array( 'brion', 'mobile.device.webkit' ),
+					'top' => array( 'brion' ),
 					'bottom' => array( 'arthur', 'juliusz' ),
 				),
 			),
@@ -66,11 +64,10 @@ class SkinMobileTest extends MediaWikiTestCase {
 			array(
 				$this->modules,
 				'Test',
-				$device,
 				true,
 				true,
 				array(
-					'top' => array( 'brion', 'mobile.device.webkit' ),
+					'top' => array( 'brion' ),
 					'bottom' => array( 'jon' ),
 				),
 			),
@@ -82,13 +79,13 @@ class SkinMobileTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider providerGetEnabledModules
 	 */
-	public function testGetEnabledModules( $modules, $title, $device, $inBeta, $inAlpha, $expected ) {
+	public function testGetEnabledModules( $modules, $title, $inBeta, $inAlpha, $expected ) {
 		$ctx = MobileContext::singleton();
 		$ctx->setBetaGroupMember( $inBeta );
 		$ctx->setAlphaGroupMember( $inAlpha );
 
 		$skin = new SkinMobile( new ExtMobileFrontend( $ctx ) );
-		$enabled = $skin->getEnabledModules( $modules, Title::newFromText( $title ), $device );
+		$enabled = $skin->getEnabledModules( $modules, Title::newFromText( $title ) );
 
 		$this->assertEquals( $enabled, $expected );
 	}
