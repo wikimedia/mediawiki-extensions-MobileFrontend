@@ -284,7 +284,7 @@ class SkinMobile extends SkinMobileBase {
 		$out = $this->getOutput();
 
 		$headLinks = array();
-		$moduleNames = $this->getEnabledModules( $wgResourceModules, $title, $device );
+		$moduleNames = $this->getEnabledModules( $wgResourceModules, $title );
 
 		// attach modules
 		if ( $rlSupport ) {
@@ -304,6 +304,8 @@ class SkinMobile extends SkinMobileBase {
 			$bottomScripts = '';
 		}
 		$headLinks[] = $this->resourceLoaderLink( $moduleNames['top'], 'styles', $target='mobile' );
+		// add device specific css file - add separately to avoid cache fragmentation
+		$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
 
 		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
 		$tpl->set( 'bottomScripts', $bottomScripts );
@@ -314,11 +316,10 @@ class SkinMobile extends SkinMobileBase {
 	 * Gathers potential javascript modules to load
 	 * @param array $modules
 	 * @param Title $title
-	 * @param IDeviceProperties $device
 	 *
 	 * @return array
 	 */
-	public function getEnabledModules( array $modules, Title $title, IDeviceProperties $device ) {
+	public function getEnabledModules( array $modules, Title $title ) {
 		$context = MobileContext::singleton();
 		$action = $context->getRequest()->getText( 'action' );
 		$inBeta = $context->isBetaGroupMember();
@@ -362,7 +363,6 @@ class SkinMobile extends SkinMobileBase {
 		} else if ( $action === 'history' ) {
 			$moduleNames[] = 'mobile.action.history';
 		}
-		$headModuleNames[] = $device->moduleName();
 
 		return array(
 			'top' => $headModuleNames,
