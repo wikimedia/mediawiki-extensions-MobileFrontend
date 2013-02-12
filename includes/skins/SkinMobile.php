@@ -298,7 +298,17 @@ class SkinMobile extends SkinMobileBase {
 
 			// bottom scripts
 			$out->addModules( $moduleNames['bottom'] );
-			$bottomScripts = $out->getBottomScripts();
+			// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
+			if ( in_array( 'mobile.action.edit', $moduleNames['bottom'] ) ) {
+				$bottomScripts = Html::inlineScript(
+					'mw.loader.implement("mediawiki.action.edit", [],{},{});' .
+					'mw.toolbar = { addButton: function(){}, init: function(){} };'
+				);
+			} else {
+				$bottomScripts = '';
+			}
+
+			$bottomScripts .= $out->getBottomScripts();
 		} else {
 			$headLinks[] = $this->resourceLoaderLink( $moduleNames['bottom'], 'styles' );
 			$bottomScripts = '';
