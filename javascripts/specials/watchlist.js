@@ -48,7 +48,10 @@
 		if ( $( 'ul.mw-mf-watchlist-results li' ).length > 0 && M.getConfig( 'alpha' ) ) {
 			initWatchlistThumbnails();
 		}
-		star.initWatchListIconList( $( 'ul.mw-mf-watchlist-results' ), true );
+		// FIXME: find more elegant way to not show watchlist stars on recent changes
+		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
+			star.initWatchListIconList( $( 'ul.mw-mf-watchlist-results' ), true );
+		}
 	}
 
 	$( document ).ready( function() {
