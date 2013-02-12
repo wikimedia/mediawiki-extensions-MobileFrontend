@@ -69,4 +69,40 @@
 			array( 'html', false, false ),
 		);
 	}
+
+	/**
+	 * @dataProvider provideTestModuleName
+	 */
+	public function testModuleName( $format, $moduleName ) {
+		$detector = new DeviceDetection();
+		$device = $detector->getDeviceProperties( $format, '' );
+		$this->assertEquals( $device->moduleName(), $moduleName );
+	}
+
+	public function provideTestModuleName() {
+		return array(
+			array( 'webkit', '' ),
+			array( 'android', '' ),
+			array( 'iphone2', '' ),
+			array( 'palm_pre', '' ),
+			array( 'html', 'mobile.device.default' ),
+			array( 'capable', 'mobile.device.default' ),
+			array( 'ie', 'mobile.device.ie' ),
+			array( 'iphone', 'mobile.device.iphone' ),
+			array( 'native_iphone', 'mobile.device.default' ),
+			array( 'kindle', 'mobile.device.kindle' ),
+			array( 'kindle2', 'mobile.device.kindle' ),
+			array( 'blackberry', 'mobile.device.blackberry' ),
+			array( 'blackberry-lt5', 'mobile.device.blackberry' ),
+			array( 'netfront', 'mobile.device.simple' ),
+			array( 'wap2', 'mobile.device.simple' ),
+			array( 'psp', 'mobile.device.psp' ),
+			array( 'ps3', 'mobile.device.simple' ),
+			array( 'wii', 'mobile.device.wii' ),
+			array( 'operamini', 'mobile.device.operamini' ),
+			array( 'operamobile', 'mobile.device.operamobile' ),
+			array( 'nokia', 'mobile.device.nokia' ),
+			array( 'wml', '' )
+		);
+	}
 }

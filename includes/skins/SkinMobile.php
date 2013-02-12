@@ -305,7 +305,9 @@ class SkinMobile extends SkinMobileBase {
 		}
 		$headLinks[] = $this->resourceLoaderLink( $moduleNames['top'], 'styles', $target='mobile' );
 		// add device specific css file - add separately to avoid cache fragmentation
-		$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
+		if ( $device->moduleName() ) {
+			$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
+		}
 
 		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
 		$tpl->set( 'bottomScripts', $bottomScripts );

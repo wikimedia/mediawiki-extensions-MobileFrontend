@@ -206,7 +206,12 @@ final class DeviceProperties implements IDeviceProperties {
 	 * @return string
 	 */
 	public function moduleName() {
-		return "mobile.device.{$this->device['css_file_name']}";
+		if ( isset( $this->device['css_file_name'] ) &&
+				$this->device['css_file_name'] ) {
+			return "mobile.device.{$this->device['css_file_name']}";
+		} else {
+			return '';
+		}
 	}
 }
 
@@ -234,7 +239,7 @@ class DeviceDetection implements IDeviceDetector {
 			),
 			'webkit' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'webkit',
+				'css_file_name' => '',
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => false,
@@ -248,7 +253,7 @@ class DeviceDetection implements IDeviceDetector {
 			),
 			'android' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'android',
+				'css_file_name' => '',
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => false,
@@ -262,7 +267,7 @@ class DeviceDetection implements IDeviceDetector {
 			),
 			'iphone2' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'iphone2',
+				'css_file_name' => '',
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => true,
@@ -276,7 +281,7 @@ class DeviceDetection implements IDeviceDetector {
 			),
 			'palm_pre' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'palm_pre',
+				'css_file_name' => '',
 				'supports_javascript' => true,
 				'supports_jquery' => false,
 				'disable_zoom' => true,
@@ -367,7 +372,7 @@ class DeviceDetection implements IDeviceDetector {
 			),
 			'wml' => array (
 				'view_format' => 'wml',
-				'css_file_name' => null,
+				'css_file_name' => '',
 				'supports_javascript' => false,
 				'supports_jquery' => false,
 				'disable_zoom' => true,
