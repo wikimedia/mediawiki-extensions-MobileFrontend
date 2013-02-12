@@ -475,7 +475,7 @@ class SkinMobile extends SkinMobileBase {
 			$this->getLanguage()->getCode(),
 			$this->getSkinName(),
 			null, // so far all the modules we use are user-agnostic
-			$useVersion ? $version : null,
+			null,
 			ResourceLoader::inDebugMode(),
 			$only,
 			false,
