@@ -23,6 +23,15 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		$query = array(
 			'type' => 'signup',
 		);
+		// Security: $action is already filtered by SpecialUserLogin
+		$actionQuery = wfCgiToArray( $action );
+		if ( isset( $actionQuery['returnto'] ) ) {
+			$query['returnto'] = $actionQuery['returnto'];
+		}
+		if ( isset( $actionQuery['returntoquery'] ) ) {
+			$query['returntoquery'] = $actionQuery['returntoquery'];
+		}
+
 		$signupLink = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
 			wfMessage( 'mobile-frontend-main-menu-account-create' )->text(),
 			array( 'class'=> 'mw-mf-create-account' ), $query );
