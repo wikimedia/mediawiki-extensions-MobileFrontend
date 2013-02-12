@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//6ro\u003d",
+        "filename": "tests/MobileContextTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-12T00:11:40Z",
+      "side": 1,
+      "message": "Same as above.",
+      "revId": "35e1f73929bf4d3ee976e1065e31ada32e30a221",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
