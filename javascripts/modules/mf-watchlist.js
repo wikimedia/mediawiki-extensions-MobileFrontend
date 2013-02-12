@@ -10,7 +10,8 @@ var api = M.require( 'api' ), w = ( function() {
 				articleID: mw.config.get( 'wgArticleId' ),
 				anon: mw.config.get( 'wgUserName' ) === null,
 				action: types[ eventType ],
-				editCount: -1, // FIXME: pass a real edit count
+				isStable: M.getConfig( 'alpha' ) ? 'alpha' :
+					( M.getConfig( 'beta' ) ? 'beta' : 'stable' ),
 				token: lastToken || '+\\', // +\\ for anon
 				userId: mw.config.get( 'wgUserId' ) || undefined
 			};
