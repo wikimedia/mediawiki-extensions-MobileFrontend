@@ -47,6 +47,11 @@
   display: inline;
   margin-right: 8px;
 }
+#editform textarea,
+#editform input {
+  border: none;
+  box-shadow: none;
+}
 #editform textarea.section_heading {
   margin-bottom: 0;
   padding-bottom: 0;
