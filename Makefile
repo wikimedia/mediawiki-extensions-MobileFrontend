@@ -4,8 +4,7 @@ jshinttests:
 	jshint tests/js/*
 
 jshint: jshinttests
-	jshint javascripts/actions/* javascripts/common/* javascripts/desktop/* \
-		javascripts/modules/* javascripts/specials/* --config .jshintrc
+	jshint javascripts/* --config .jshintrc
 
 less:
 	lessc stylesheets/less/specials/mobileoptions.less > stylesheets/specials/mobileoptions.css
