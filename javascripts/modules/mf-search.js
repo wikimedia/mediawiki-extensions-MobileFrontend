@@ -140,7 +140,7 @@ var opensearch = ( function() {
 			}
 
 			if ( $ ) {
-				M.emit( 'search-results', suggestions );
+				M.emit( 'search-results', $( suggestions ) );
 			}
 		}
 	}

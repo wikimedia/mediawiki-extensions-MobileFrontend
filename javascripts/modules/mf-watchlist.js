@@ -148,30 +148,45 @@ var api = M.require( 'api' ), w = ( function() {
 		} );
 	}
 
+	/**
+	 * Init a list of watch list icons where each li element has a title
+	 * attribute pointing to the name of the article
+	 *
+	 * @param {jQuery object} %container: An element wrapped in jQuery
+	 * @param {boolean} allPagesAreWatched: When set avoids
+	 *   ajax lookup and assumes all title's are currently watched
+	 */
 	// FIXME: avoid if statement repetition with initWatchListIcon
-	function initWatchListIconList( container ) {
-		var $items = $( container ).find( 'li' ), titles = [];
+	function initWatchListIconList( $container, allPagesAreWatched ) {
+		var $items = $container.find( 'li' ), titles = [];
 		$items.each( function() {
 			titles.push( $( this ).attr( 'title' ) );
 		} );
 
-		api.getToken( 'watch', function( data ) {
-			if( data.tokens && !data.warnings ) {
-				lastToken = data.tokens.watchtoken;
+		if ( allPagesAreWatched ) {
+			$container.find( 'li' ).each( function() {
+				var title = $( this ).attr( 'title' );
+				createWatchListButton( this, title, true );
+			} );
+		} else {
+			api.getToken( 'watch', function( data ) {
+				if( data.tokens && !data.warnings ) {
+					lastToken = data.tokens.watchtoken;
 
-				checkWatchStatus( titles, function( status ) {
-					$( container ).find( 'li' ).each( function() {
-						var title = $( this ).attr( 'title' );
-						createWatchListButton( this, title, status[ title ] );
+					checkWatchStatus( titles, function( status ) {
+						$container.find( 'li' ).each( function() {
+							var title = $( this ).attr( 'title' );
+							createWatchListButton( this, title, status[ title ] );
+						} );
 					} );
-				} );
-			}
-		} );
+				}
+			} );
+		}
 	}
 
 	function upgradeUI() {
-		M.on( 'search-results watchlist-ready', function( ul ) {
-			initWatchListIconList( ul );
+		M.on( 'search-results', function( $ul ) {
+			initWatchListIconList( $ul );
 		} );
 	}
 

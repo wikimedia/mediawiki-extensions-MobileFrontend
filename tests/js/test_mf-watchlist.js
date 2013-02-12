@@ -58,7 +58,7 @@ test( 'init unwatched article', function() {
 
 test( 'initWatchListIconList', function() {
 	var $container = $( '<ul><li title="Popeye"><li title="Spongebob"></ul>' );
-	W.initWatchListIconList( $container, 'Popeye' );
+	W.initWatchListIconList( $container );
 	strictEqual( $container.find( '.watch-this-article' ).length, 2, '2 buttons created' );
 	strictEqual( $container.find( '.watch-this-article.watched' ).length, 1, 'One article is watched' );
 } );
