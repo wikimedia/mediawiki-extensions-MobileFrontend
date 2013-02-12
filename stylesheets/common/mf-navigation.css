@@ -40,6 +40,11 @@ input[type=submit]:active {
   background-image: -webkit-linear-gradient(top, #2d5ea9 0, #2a549c 100%);
   background-image: linear-gradient(#2d5ea9 0, #2a549c 100%);
 }
+.button:visited,
+button:visited,
+input[type=submit]:visited {
+  color: #fff;
+}
 .button:disabled,
 button:disabled,
 input[type=submit]:disabled,
