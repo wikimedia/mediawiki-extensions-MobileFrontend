@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlQEHeoY",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-13T20:52:46Z",
+      "side": 1,
+      "message": "This should be done as an update to the template",
+      "revId": "e5660acab9783bbc36e3f51ea322870a58e18ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
