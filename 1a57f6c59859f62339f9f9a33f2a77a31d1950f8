@@ -16,6 +16,24 @@
       "revId": "1a57f6c59859f62339f9f9a33f2a77a31d1950f8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlXDYTu4",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-02-13T06:37:13Z",
+      "side": 1,
+      "message": "If anything, put the implementation before the implement() call, but not after. That\u0027s asking for trouble.",
+      "parentUuid": "DlbDNljM",
+      "revId": "1a57f6c59859f62339f9f9a33f2a77a31d1950f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
