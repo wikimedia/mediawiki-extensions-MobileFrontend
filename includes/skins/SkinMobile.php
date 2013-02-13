@@ -259,8 +259,7 @@ class SkinMobile extends SkinMobileBase {
 	 */
 	protected function getLoginPageHeading() {
 		$req = $this->getRequest();
-		if ( $req->getVal( 'returnto' ) ) {
-			$title = Title::newFromText( $req->getVal( 'returnto' ) );
+		if ( $req->getVal( 'returnto' ) && ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) ) ) {
 			list( $returnto, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 		} else {
 			$returnto = '';
