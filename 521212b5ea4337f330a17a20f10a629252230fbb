@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlUcdkgo",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-13T23:32:27Z",
+      "side": 1,
+      "message": "Should be const",
+      "revId": "521212b5ea4337f330a17a20f10a629252230fbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
