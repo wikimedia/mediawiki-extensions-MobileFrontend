@@ -51,6 +51,9 @@
 			}
 		}
 		options.data = data;
+
+		// FIXME: uncomment when https://bugzilla.wikimedia.org/show_bug.cgi?id=44921 is resolved
+		/*
 		options.xhr = function() {
 			var xhr = $.ajaxSettings.xhr();
 			if ( xhr.upload ) {
@@ -62,6 +65,7 @@
 			}
 			return xhr;
 		};
+		*/
 
 		request = $.ajax( options );
 		$.extend( request, EventEmitter.prototype );

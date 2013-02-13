@@ -27,6 +27,8 @@ test( 'default instance', function() {
 	ok( M.require( 'api' ) instanceof Api, 'return default instance' );
 } );
 
+// FIXME: uncomment when https://bugzilla.wikimedia.org/show_bug.cgi?id=44921 is resolved
+/*
 test( 'progress event', function() {
 	var spy = sinon.spy(),
 		api = new Api();
@@ -34,6 +36,7 @@ test( 'progress event', function() {
 	this.lastXhr.upload.dispatchEvent( { type: 'progress' } );
 	ok( spy.calledWith( { type: 'progress' } ), 'forward progress event from xhr' );
 } );
+*/
 
 
 module( 'MobileFrontend api.Api', {
