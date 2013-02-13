@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlcdXQgA",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-13T22:37:19Z",
+      "side": 1,
+      "message": "what if it\u0027s a string or some other object?",
+      "revId": "cb92286c3f04634bb8ba4d34f1e9ac3cf7867458",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
