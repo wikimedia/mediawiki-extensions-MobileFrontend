@@ -6753,6 +6753,7 @@ $messages['ka'] = array(
 	'mobile-frontend-settings-beta' => 'ბეტა',
 	'mobile-frontend-save-settings' => 'პარამეტრების შენახვა',
 	'mobile-frontend-random-button' => 'შემთხვევითი',
+	'mobile-frontend-ajax-random-heading' => 'ცოდნის ძიება...',
 	'mobile-frontend-ajax-random-question' => 'ამ გვერდის კითხვა?',
 	'mobile-frontend-ajax-random-yes' => 'დიახ',
 	'mobile-frontend-ajax-random-retry' => 'კიდევ სცადეთ',
@@ -6899,7 +6900,8 @@ $messages['ka'] = array(
 	'mobile-frontend-photo-upload-comment' => 'გვერდზე დაემატა ფოტო',
 	'mobile-frontend-photo-caption-placeholder' => 'აღწერის დამატება (სავალდებულოა)',
 	'mobile-frontend-image-loading' => 'სურათი იტვირთება',
-	'mobile-frontend-image-uploading-wait' => 'სურათი იტვირთება, გთხოვთ მოიცადეთ.', # Fuzzy
+	'mobile-frontend-image-uploading-wait' => 'სურათი იტვირთება, გთხოვთ მოიცადეთ. <a href="#">გააუქმეთ</a> თუ ეს დიდხანს გაგრძელდება.',
+	'mobile-frontend-image-uploading-cancel' => '<a href="#">გააუქმეთ</a> თუ ეს დიდხანს გაგრძელდება.',
 	'mobile-frontend-photo-upload-error' => 'შეცდომა, კიდევ სცადეთ.',
 	'mobile-frontend-photo-upload-success-article' => 'წარმატებით აიტვირთა! თქვენი სურათი ახლა უკვე განთავსებულია ამ გვერდზე.',
 	'mobile-frontend-photo-license' => '"მიღებაზე" დაწკაპუნებით, თქვენ ეთანხმებით ჩვენი [//wikimediafoundation.org/wiki/Terms_of_use გამოყენების წესებს] და თანახმა ხართ თქვენი ფოტოს გადაცემაზე [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Common Attribution-ShareAlike 3.0 ლიცენზიით].',
