@@ -125,6 +125,7 @@ class MobileFrontendHooks {
 				'javascripts/common/modules.js',
 				'javascripts/common/eventemitter.js', 'tests/js/test_eventemitter.js',
 				'tests/js/fixtures.js', 'javascripts/common/mf-application.js',
+				'tests/js/fixtures-templates.js',
 				'javascripts/common/mf-history.js', 'tests/js/test_mf-history.js',
 				'tests/js/test_application.js',
 				'javascripts/common/mf-oop.js', 'tests/js/test_mf-oop.js',

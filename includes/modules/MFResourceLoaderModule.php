@@ -6,19 +6,67 @@
 class MFResourceLoaderModule extends ResourceLoaderModule {
 	protected $parsedMessages = array();
 	protected $messages = array();
+	protected $templates = array();
 	protected $localBasePath;
 	protected $targets = array( 'mobile' );
+	/** String: The local path to where templates are located, see __construct() */
+	protected $localTemplateBasePath = '';
 
 	/**
 	 * Registers core modules and runs registration hooks.
 	 */
 	public function __construct( $options ) {
+		if ( isset( $options[ 'localTemplateBasePath' ] ) ) {
+			$this->localTemplateBasePath = $options[ 'localTemplateBasePath' ];
+		}
 		if ( isset( $options[ 'messages' ] ) ) {
 			$this->processMessages( $options[ 'messages'] );
 		}
 		if ( isset( $options[ 'localBasePath' ] ) ) {
 			$this->localBasePath = $options[ 'localBasePath' ];
 		}
+		if ( isset( $options[ 'templates' ] ) ) {
+			$this->templates = $options['templates'];
+		}
+	}
+
+	/**
+	 * Returns the templates named by the modules
+	 * Each template has a corresponding html file in includes/templates/
+	 *
+	 */
+	function getTemplateNames() {
+		return $this->templates;
+	}
+
+	/**
+	 * @param $name string: name of template
+	 * @return string
+	 */
+	protected function getLocalTemplatePath( $name ) {
+		return "{$this->localTemplateBasePath}/$name.html";
+	}
+
+	/**
+	 * Takes named templates by the module and adds them to the JavaScript output
+	 *
+	 * @return string: JavaScript
+	 */
+	function getTemplateScript() {
+		$js = '';
+		$templates = $this->getTemplateNames();
+
+		foreach( $templates as $templateName ) {
+			$localPath = $this->getLocalTemplatePath( $templateName );
+			if ( file_exists( $localPath ) ) {
+				$content = file_get_contents( $localPath );
+				$js .= Xml::encodeJsCall( 'mw.mobileFrontend.template.add', array( $templateName, $content ) );
+			} else {
+				$msg = __METHOD__.": template file not found: \"$localPath\"";
+				throw new MWException( $msg );
+			}
+		}
+		return $js;
 	}
 
 	/**
@@ -69,7 +117,7 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	 * @return String: JavaScript code for $context
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
-		return $this->addParsedMessages();
+		return $this->addParsedMessages() . $this->getTemplateScript();
 	}
 
 	/**

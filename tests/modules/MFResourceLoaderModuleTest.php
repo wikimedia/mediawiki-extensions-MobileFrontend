@@ -20,6 +20,12 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 				'mobile-frontend-photo-license' => array( 'unknown' ),
 			),
 		),
+
+		'templateModule' => array(
+			'templates' => array(
+				'template', 'template2',
+			)
+		)
 	);
 	// providers
 	public function providerGetMessages() {
@@ -66,6 +72,32 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 		);
 	}
 
+	public function providerGetTemplateNames() {
+		return array(
+			array(
+				$this->modules[0], array(),
+			),
+			array(
+				$this->modules['templateModule'], array( 'template', 'template2' ),
+			)
+		);
+	}
+
+	public function providerGetTemplateScript() {
+		$module = $this->modules['templateModule'];
+		$module['localTemplateBasePath'] = dirname( __FILE__ ) . '/../templates';
+		return array(
+			array(
+				$this->modules[0], ''
+			),
+			array(
+				$module,
+				'mw.mobileFrontend.template.add("template", "hello\n");' . "\n" .
+				'mw.mobileFrontend.template.add("template2", "goodbye\n");' . "\n"
+			)
+		);
+	}
+
 	// tests
 
 	/**
@@ -86,5 +118,25 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 		$msgs = $rl->getMessages();
 
 		$this->assertEquals( $msgs, $expectedMessages );
+	}
+
+	/**
+	 * @dataProvider providerGetTemplateNames
+	 */
+	public function testGetTemplateNames( $module, $expected ) {
+		$rl = new MFResourceLoaderModule( $module );
+		$names = $rl->getTemplateNames();
+
+		$this->assertEquals( $names, $expected );
+	}
+
+	/**
+	 * @dataProvider providerGetTemplateScript
+	 */
+	public function testGetTemplateScript( $module, $expected ) {
+		$rl = new MFResourceLoaderModule( $module );
+		$js = $rl->getTemplateScript();
+
+		$this->assertEquals( $js, $expected );
 	}
 }

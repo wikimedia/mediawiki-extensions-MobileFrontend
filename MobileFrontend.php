@@ -219,15 +219,18 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
-$wgResourceModules['mobile.beta.dependencies'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array(
-		'mobile.stable',
-	),
+$wgResourceModules['mobile.beta.dependencies'] = array(
 	'messages' => array(
 		// mf-photo.js
 		'mobile-frontend-photo-license' => array( 'parse' ),
 	),
 	'localBasePath' => $localBasePath,
+	'localTemplateBasePath' => $localBasePath . '/templates',
+	'templates' => array(
+		'leadPhoto',
+		'photoUploader',
+		'photoUploadPreview',
+	),
 	'class' => 'MFResourceLoaderModule',
 	'mobileTargets' => array( 'beta', 'alpha' ),
 );

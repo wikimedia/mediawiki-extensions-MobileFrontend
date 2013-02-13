@@ -14,10 +14,10 @@
 	 * template property, this.$el will be filled with rendered template (with
 	 * options parameter used as template data).
 	 *
-	 * template property can be a string which will be passed to M.template()
+	 * template property can be a string which will be passed to M.template.compile()
 	 * or an object that has a render() function which accepts an object with
 	 * template data as its argument (similarly to an object created by
-	 * M.template()).
+	 * M.template.compile()).
 	 *
 	 * You can also define a defaults property which should be an object
 	 * containing default values for the template (if they're not present in
@@ -36,7 +36,7 @@
 	 *
 	 * View = M.require( 'view' );
 	 * Section = View.extend( {
-	 *     template: M.template( '<h2>{{title}}</h2><p>{{text}}</p>' ),
+	 *     template: M.template.compile( '<h2>{{title}}</h2><p>{{text}}</p>' ),
 	 *     // ...
 	 * } );
 	 *
@@ -59,9 +59,9 @@
 
 		// TODO: if template compilation is too slow, don't compile them on a
 		// per object basis, but don't worry about it now (maybe add cache to
-		// M.template())
+		// M.template.compile())
 		if ( typeof this.template === 'string' ) {
-			this.template = M.template( this.template );
+			this.template = M.template.compile( this.template );
 		}
 
 		this.render( options );

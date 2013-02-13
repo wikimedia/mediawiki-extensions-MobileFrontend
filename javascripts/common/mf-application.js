@@ -5,18 +5,9 @@
 		// FIXME: when mobileFrontend is an object with a constructor,
 		// just inherit from EventEmitter instead
 		eventEmitter = new EventEmitter(),
+		template,
+		templates = {},
 		scrollY;
-
-	/**
-	 * Wraps our template engine of choice (currently Hogan).
-	 *
-	 * @param {string} templateBody Template body.
-	 * @return {Object} Template object which has a render() function that
-	 * accepts template data object as its argument.
-	 */
-	function template( templateBody ) {
-		return Hogan.compile( templateBody );
-	}
 
 	/**
 	 * See EventEmitter#on.
@@ -31,6 +22,41 @@
 	function emit(/* event, arg1, arg2, ... */ ) {
 		return eventEmitter.emit.apply( eventEmitter, arguments );
 	}
+
+	template = {
+		/**
+		 * Define template using html. Compiles newly added templates
+		 *
+		 * @param {string} name: Name of template to add
+		 * @param {string} markup: Associated markup (html)
+		 */
+		add: function( name, markup ) {
+			templates[ name ] = this.compile( markup );
+		},
+		/**
+		 * Retrieve defined template
+		 *
+		 * @param {string} name: Name of template to be retrieved
+		 * @return {Hogan.Template}
+		 * accepts template data object as its argument.
+		 */
+		get: function( name ) {
+			if ( !templates[ name ] ) {
+				throw new Error( 'Template not found: ' + name );
+			}
+			return templates[ name ];
+		},
+		/**
+		 * Wraps our template engine of choice (currently Hogan).
+		 *
+		 * @param {string} templateBody Template body.
+		 * @return {Hogan.Template}
+		 * accepts template data object as its argument.
+		 */
+		compile: function( templateBody ) {
+			return Hogan.compile( templateBody );
+		}
+	};
 
 	/**
 	 * @deprecated

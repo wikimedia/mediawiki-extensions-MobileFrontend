@@ -17,7 +17,7 @@ m = ( function() {
 			removePlaceholder: function() {
 				this.$placeholder.remove(); // remove placeholder text in case of first upload
 			},
-			templateItem: M.template(
+			templateItem: M.template.compile(
 				'<li><a href="{{descriptionUrl}}" alt="{{description}}"><img src="{{url}}" width="{{width}}"></a><p>{{description}}</p></li>'
 			),
 			addPhoto: function( photoData, notify ) {
