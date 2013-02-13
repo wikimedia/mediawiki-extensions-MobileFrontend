@@ -130,6 +130,7 @@
 				prop: 'langlinks',
 				format: 'json',
 				llurl: true,
+				llimit: 'max',
 				titles: title
 			}
 		} ).done( function( resp ) {
