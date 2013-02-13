@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlSGMtn8",
+        "filename": "tests/acceptance/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-13T19:38:04Z",
+      "side": 1,
+      "message": "I am not a big fan of leaving todo comments in the code. If they are necessary, please add #todo at the start of the comment so it is easier to find later.",
+      "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DleGcbr4",
+        "filename": "tests/acceptance/features/watchlist.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-13T19:38:04Z",
+      "side": 1,
+      "message": "This scenario should be separated into two scenarios. The first one should check if user is prompted to log in. The second checks what happens when the user logs in.",
+      "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlcGhcvw",
+        "filename": "tests/acceptance/features/watchlist.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-13T19:38:04Z",
+      "side": 1,
+      "message": "\"And When\" is a Cucumber code smell to me. It usually means that the scenario should be split in two smaller ones.",
+      "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
