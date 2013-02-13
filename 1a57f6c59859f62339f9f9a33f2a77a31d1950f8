@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlbDNljM",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-02-13T06:35:34Z",
+      "side": 1,
+      "message": "This can lead to a race condition where code will still fail.\n\nmw.loader.implement triggers callbacks that wait for this module as their dependency (e.g. a top module).\n\nimplement, as the name suggets, implement a module. This is just ridiculous.\n\nThe second argument to mw.loader.implement is a javascript function that contains the script body of the module.\n\nSo please put it inside there instead of afterwards.\n\n mw.loader.implement(name, function () {\n   mw.toolbar \u003d ...;\n }, {}, {} );",
+      "revId": "1a57f6c59859f62339f9f9a33f2a77a31d1950f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
