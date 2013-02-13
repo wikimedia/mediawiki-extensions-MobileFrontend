@@ -270,7 +270,7 @@ class MobileContext extends ContextSource {
 			return false;
 		}
 
-		$title = $this->getTitle()->getText();
+		$title = $this->getTitle() ? $this->getTitle()->getText() : false;
 		// Can't use Title::isSpecial() due to infinite recursion
 		if ( $title && $title == SpecialPage::getTitleFor( 'JavaScriptTest', 'qunit' )->getText() ) {
 			return false;
