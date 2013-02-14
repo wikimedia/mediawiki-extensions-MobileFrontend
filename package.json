@@ -1,0 +1,7 @@
+{
+	"name": "MobileFrontend-dependencies",
+	"description": "Node.js dependencies used in MobileFrontend",
+	"dependencies": {
+		"autoless": "*"
+	}
+}
