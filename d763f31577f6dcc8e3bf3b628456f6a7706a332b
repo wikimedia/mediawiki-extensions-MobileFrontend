@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlZbSjf4",
+        "filename": "tests/acceptance/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-14T15:09:16Z",
+      "side": 1,
+      "message": "This should be split into two steps.",
+      "revId": "d763f31577f6dcc8e3bf3b628456f6a7706a332b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlXbPIVg",
+        "filename": "tests/acceptance/features/support/pages/login_page.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-14T15:09:16Z",
+      "side": 1,
+      "message": "Element label is not descriptive. I suggest renaming \"signup_wl\" to something like \"signup_watchlist\".",
+      "revId": "d763f31577f6dcc8e3bf3b628456f6a7706a332b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlVbcJQ8",
+        "filename": "tests/acceptance/features/watchlist.feature",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-14T15:09:16Z",
+      "side": 1,
+      "message": "This does the same check as the previous scenario, making it redundant here.",
+      "revId": "d763f31577f6dcc8e3bf3b628456f6a7706a332b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
