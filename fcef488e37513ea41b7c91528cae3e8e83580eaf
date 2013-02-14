@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "DlbaJCSc",
+        "filename": "tests/acceptance/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-14T14:32:55Z",
+      "side": 1,
+      "message": "This step does more than it\u0027s name says. Instead of just clicking the watchlist icon, it also searches for the article.\n\nI would suggest adding another step:\n\nwhen I am at san francisco chronicle page\n\nor\n\nwhen I search for san francisco chronicle\nand I select the first result",
+      "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlZZ-LRI",
+        "filename": "tests/acceptance/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-14T14:32:55Z",
+      "side": 1,
+      "message": "This should also be two steps, something like:\n\nwhen I click sign in\nthen sign in page should open",
+      "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DlSGMtn8",
         "filename": "tests/acceptance/features/step_definitions/watchlist_steps.rb",
         "patchSetId": 1
@@ -13,6 +47,40 @@
       "writtenOn": "2013-02-13T19:38:04Z",
       "side": 1,
       "message": "I am not a big fan of leaving todo comments in the code. If they are necessary, please add #todo at the start of the comment so it is easier to find later.",
+      "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlXZ8wRw",
+        "filename": "tests/acceptance/features/step_definitions/watchlist_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-14T14:32:55Z",
+      "side": 1,
+      "message": "This should be fixed, but not in this commit, since it is not related to the rest of the things in the commit (commit message is: \"adding watchlist behavoir when logged out\")\n\n\"page.watch_link_element\" returns a ruby object representing the link, and it will always be true. The fix should be something like:\n\npage.watch_list_element.should exist\n\nor\n\npage.watch_list_element.should_not exist",
+      "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlVZ5xSo",
+        "filename": "tests/acceptance/features/support/pages/login_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-02-14T14:32:55Z",
+      "side": 1,
+      "message": "I do not like \"login_wl\" as a label, it does not say what the page element is.",
       "revId": "fcef488e37513ea41b7c91528cae3e8e83580eaf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
