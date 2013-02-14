@@ -73,6 +73,14 @@ test( '#ajax', function() {
 	);
 } );
 
+test( '#ajax, with FormData', function() {
+	var data = new FormData();
+	// add a property that should not disappear
+	data.testBool = false;
+	this.api.ajax( data );
+	strictEqual( $.ajax.args[0][0].data.testBool, false, 'use unmodified FormData' );
+} );
+
 test( '#get', function() {
 	this.api.get( { a: 1 } );
 	ok( $.ajax.calledWithMatch( { type: 'GET', data: { a: 1 } } ), 'call with type: GET' );

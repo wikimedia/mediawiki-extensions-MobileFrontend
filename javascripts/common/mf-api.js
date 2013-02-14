@@ -43,11 +43,16 @@
 		var key, request;
 		options = $.extend( {}, options );
 
-		for ( key in data ) {
-			if ( data[key] === false ) {
-				delete data[key];
-			} else if ( data[key] instanceof Array ) {
-				data[key] = data[key].join( '|' );
+		if (
+			typeof data !== 'string' &&
+			( typeof FormData === 'undefined' || !( data instanceof FormData ) )
+		) {
+			for ( key in data ) {
+				if ( data[key] === false ) {
+					delete data[key];
+				} else if ( $.isArray( data[key] ) ) {
+					data[key] = data[key].join( '|' );
+				}
 			}
 		}
 		options.data = data;
