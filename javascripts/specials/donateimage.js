@@ -147,6 +147,10 @@ m = ( function() {
 					image.width = IMAGE_WIDTH;
 					userGallery.addPhoto( image, true );
 				} );
+			// put user upload stats in correct spot
+			if ( $( '.mobileUserUploadCount' ).length ) {
+				$( '.mobileUserUploadCount' ).prependTo( $container );
+			}
 		}
 		if ( username ) {
 			showGallery( username );
