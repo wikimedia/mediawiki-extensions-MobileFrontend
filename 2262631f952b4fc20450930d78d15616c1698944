@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlfkLAo4",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-14T19:11:00Z",
+      "side": 1,
+      "message": "In worst case, it will return a dataset of 255*500 \u003d 127500 bytes - maybe, use a shorter field to reduce the network load?",
+      "revId": "2262631f952b4fc20450930d78d15616c1698944",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
