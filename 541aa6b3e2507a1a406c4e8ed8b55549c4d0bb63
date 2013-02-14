@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dlfk4op4",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-14T19:04:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DlUIfwLQ",
+      "revId": "541aa6b3e2507a1a406c4e8ed8b55549c4d0bb63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DlYIlqA4",
         "filename": "includes/specials/SpecialDonateImage.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "DldnMxr8",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-14T19:04:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DlYIlqA4",
+      "revId": "541aa6b3e2507a1a406c4e8ed8b55549c4d0bb63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DlSIctL0",
         "filename": "includes/specials/SpecialDonateImage.php",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2013-02-14T09:22:47Z",
       "side": 1,
       "message": "Since you have a getter here, isn\u0027t it easier to just make this return 500? Saves a constant.",
+      "revId": "541aa6b3e2507a1a406c4e8ed8b55549c4d0bb63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlfnXgkg",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-14T19:04:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DlSIctL0",
       "revId": "541aa6b3e2507a1a406c4e8ed8b55549c4d0bb63",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
