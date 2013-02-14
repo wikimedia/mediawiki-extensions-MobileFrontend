@@ -22,6 +22,23 @@
 		return matches;
 	}
 
+	function sortList( $list ) {
+		var langMap = M.settings.getUserSetting( 'langMap' ), $items;
+
+		langMap = langMap ? $.parseJSON( langMap ) : {};
+		$items = $list.find( 'li' ).sort( function( a, b ) {
+			var x = langMap[ $( a ).find( 'a' ).attr( 'lang' ) ] || 0,
+				y = langMap[ $( b ).find( 'a' ).attr( 'lang' ) ] || 0;
+			return x < y;
+		} ).each( function() {
+			var lang = $( this ).find( 'a' ).attr( 'lang' );
+			if ( langMap[ lang ] ) {
+				$( this ).addClass( 'preferred' );
+			}
+		} );
+		return $list.empty().append( $items );
+	}
+
 	function createLanguagePage() {
 		var $wrapper = $( '<div class="languageOverlay">' ), $footer, overlay, $lists,
 			$search = $( '<input type="search" class="search" id="mw-mf-language-search" >' ).
@@ -30,7 +47,7 @@
 		$( '#mw-mf-language-variant-header' ).addClass( 'mw-mf-overlay-header' ).appendTo( $wrapper );
 		$( '#mw-mf-language-variant-selection' ).appendTo( $wrapper );
 		$( '#mw-mf-language-header' ).addClass( 'mw-mf-overlay-header' ).appendTo( $wrapper );
-		$( '#mw-mf-language-selection' ).appendTo( $wrapper );
+		sortList( $( '#mw-mf-language-selection' ) ).appendTo( $wrapper );
 
 		$footer = $( '<p>' ).addClass( 'mw-mf-overlay-footer' ).hide().appendTo( $wrapper );
 		$( '<a>' ).attr( 'href', M.history.getArticleUrl( 'Special:MobileOptions/Language' ) ).

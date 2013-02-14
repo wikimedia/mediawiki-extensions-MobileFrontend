@@ -352,6 +352,10 @@ html.overlay div.languageOverlay ul li:hover,
 html.overlay ul.content li:hover {
   background-color: #ACD1E9;
 }
+html.overlay div.languageOverlay ul li.preferred,
+html.overlay ul.content li.preferred {
+  font-weight: bold;
+}
 .overlay #mw-mf-overlay {
   display: block;
 }
