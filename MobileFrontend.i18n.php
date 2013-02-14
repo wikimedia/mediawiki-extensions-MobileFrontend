@@ -319,7 +319,8 @@ Author of the quote chosen',
 	'mobile-frontend-view' => 'This is a link that appears at the bottom of a desktop view wiki page near {{msg-mw|privacy}} and {{msg-mw|disclaimers}}. Clicking it takes the user to a mobile view of the page.',
 	'mobile-frontend-view-desktop' => 'This is a link that appears at the bottom of the mobile page. Clicking it takes the user to the desktop page. It appears near the message {{msg-mw|Mobile-frontend-view-mobile}} and should be worded similarly.
 {{Identical|Desktop}}',
-	'mobile-frontend-view-mobile' => 'This appears at the bottom of the mobile page, meaning that the current view is mobile. It appears near the message {{msg-mw|Mobile-frontend-view-desktop}} and should be worded similarly.',
+	'mobile-frontend-view-mobile' => 'This appears at the bottom of the mobile page, meaning that the current view is mobile. It appears near the message {{msg-mw|Mobile-frontend-view-desktop}} and should be worded similarly.
+{{Identical|Mobile}}',
 	'mobile-frontend-images-status' => 'On settings page label for turning on/off images.
 {{Identical|Images}}',
 	'mobile-frontend-missing-image' => 'When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image.
@@ -453,7 +454,8 @@ See also:
 	'mobile-frontend-search-help' => 'Help text that appears under search results when the search is focused',
 	'mobile-frontend-dismiss-notification' => 'Phrase used to dismiss the top banner notification',
 	'mobile-frontend-clear-search' => 'Tooltip for clear button that appears when you type into search box',
-	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible',
+	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
+{{Identical|Privacy}}',
 	'mobile-frontend-about-link-text' => 'Custom version of "About {{Sitename}}" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible',
 	'mobile-frontend-footer-sitename' => 'Name of site',
 	'mobile-frontend-footer-license-text' => 'License shown in footer',
@@ -6860,6 +6862,8 @@ $messages['ka'] = array(
 	'mobile-frontend-ajax-page-loading' => 'იტვირთება $1',
 	'mobile-frontend-page-saving' => 'ინახება $1',
 	'mobile-frontend-nearby-title' => 'ახლოს',
+	'mobile-frontend-nearby-distance-report' => '$1 კმ თქვენი მიმდინარე მდებარეობიდან',
+	'mobile-frontend-nearby-lookup-error' => 'თქვენი მდებარეობის დადგენა ვერ ხერხდება. კიდევ სცადეთ..',
 	'mobile-frontend-donate-image-login' => 'შედით სისტემაში რათა იხილოთ თქვენი ატვირთვები',
 	'mobile-frontend-photo-upload-generic' => 'სურათის შეწირვა',
 	'mobile-frontend-donate-image-title' => 'სურათის შეწირვა',
@@ -10615,7 +10619,7 @@ $messages['ro'] = array(
 	'mobile-frontend-main-menu-featured' => 'De calitate',
 	'mobile-frontend-main-menu-nearby' => 'În apropiere',
 	'mobile-frontend-main-menu-login' => 'Autentificare',
-	'mobile-frontend-main-menu-logout' => 'Închidere sesiune',
+	'mobile-frontend-main-menu-logout' => 'Închide sesiunea',
 	'mobile-frontend-main-menu-watchlist' => 'Pagini urmărite',
 	'mobile-frontend-main-menu-settings' => 'Setări',
 	'mobile-frontend-main-menu-upload' => 'Încarcă',
@@ -12750,6 +12754,7 @@ $messages['ug-arab'] = array(
  * @author Sodmy
  * @author Steve.rusyn
  * @author WTM
+ * @author Ата
  * @author Тест
  */
 $messages['uk'] = array(
@@ -12779,7 +12784,7 @@ $messages['uk'] = array(
 	'mobile-frontend-close-section' => 'Закрити цей розділ',
 	'mobile-frontend-show-button' => 'Показати',
 	'mobile-frontend-hide-button' => 'Сховати',
-	'mobile-frontend-empty-homepage-text' => 'Увага! Ця домашня сторінка потребує налаштування. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Тут можна прочитати про це докладніше</a>', # Fuzzy
+	'mobile-frontend-empty-homepage-text' => 'Ця домашня сторінка потребує налаштування. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Тут можна прочитати про це докладніше]',
 	'mobile-frontend-regular-site' => 'Стандартний вигляд сторінки',
 	'mobile-frontend-wml-continue' => 'Далі...',
 	'mobile-frontend-wml-back' => 'Назад...',
@@ -12793,7 +12798,7 @@ $messages['uk'] = array(
 	'mobile-frontend-missing-image' => 'Зображення',
 	'mobile-frontend-off' => 'ВИМК',
 	'mobile-frontend-on' => 'ВМК',
-	'mobile-frontend-footer-contributors-text' => 'Статтю створено такими ж як Ви <a href="$1">користувачами</a>', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Сторінку створено такими ж [$1 користувачами], як Ви',
 	'mobile-frontend-featured-article' => 'Вибрана стаття',
 	'mobile-frontend-news-items' => 'У новинах',
 	'mobile-frontend-leave-feedback-notice' => 'Ваш відгук допоможе нам покращити користування мобільним сайтом. Він буде розміщений публічно (разом з іменем користувача, версією браузера та операційної системи) на сторінці &quot;$1&quot;. Будь ласка, оберіть інформативний рядок, наприклад, "Проблеми форматування широких таблиць". Висловлюйтесь у відповідності до наших умов використання.',
@@ -12835,6 +12840,7 @@ $messages['uk'] = array(
 	'mobile-frontend-username-placeholder' => 'Ім`я користувача',
 	'mobile-frontend-password-placeholder' => 'Пароль',
 	'mobile-frontend-login' => 'Увійти',
+	'mobile-frontend-last-modified-date' => 'Останні зміни: $1, $2',
 	'mobile-frontend-account-create-submit' => 'Зареєструватися',
 	'mobile-frontend-password-confirm-placeholder' => 'Підтвердження пароля:',
 	'mobile-frontend-account-create-email-placeholder' => 'E-mail адреса (за бажанням)',
@@ -13321,6 +13327,8 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-donate-image-page-title' => 'Tải lên',
 	'mobile-frontend-donate-image-anon' => 'Cần có [[Special:UserLogin|tài khoản người dùng]] để xem trang tải lên.',
 	'mobile-frontend-listed-image-no-description' => 'Không miêu tả',
+	'mobile-frontend-donate-photo-upload-success' => 'Thành công! Bây giờ bạn có thể sử dụng hình ảnh của bạn trên {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Thành công! Cám ơn bạn đã đóng góp lần đầu tiên!',
 	'mobile-frontend-watchlist-add' => 'Đã thêm $1 vào danh sách theo dõi của bạn',
 	'mobile-frontend-watchlist-removed' => 'Đã dời $1 khỏi danh sách theo dõi của bạn',
 	'mobile-frontend-watchlist-view' => 'Xem danh sách theo dõi của bạn',
@@ -13358,7 +13366,9 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-photo-upload-comment' => 'Đã thêm hình vào trang',
 	'mobile-frontend-photo-caption-placeholder' => 'Thêm miêu tả (bắt buộc)',
 	'mobile-frontend-image-loading' => 'Đang tải hình',
-	'mobile-frontend-image-uploading-wait' => 'Đang tải lên hình; xin vui lòng chờ.', # Fuzzy
+	'mobile-frontend-image-uploading-wait' => 'Đang tải lên hình; xin vui lòng chờ.',
+	'mobile-frontend-image-uploading-long' => 'Vẫn đang còn tải lên hình! Cám ơn sự kiên nhẫn của bạn.',
+	'mobile-frontend-image-uploading-cancel' => 'Hãy <a href="#">hủy bỏ</a> nếu việc tải lên mất nhiều thì giờ quá.',
 	'mobile-frontend-photo-upload-error' => 'Đã xuất hiện lỗi; hãy thử lại.',
 	'mobile-frontend-photo-upload-success-article' => 'Xong rồi, trang này hiện có hình ảnh của bạn.',
 	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
