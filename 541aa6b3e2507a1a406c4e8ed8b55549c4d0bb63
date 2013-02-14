@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlUIfwLQ",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 517,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-14T09:22:47Z",
+      "side": 1,
+      "message": "Advising to make this less ambiguous by just saysing it\u0027s \"500+\": [..] than the limit of 500. Parameters: $1 is 500.\n\nI think that also allows you to remove the plural, as this number is very unlikely to change changed, or when it is, the message can simply be marked as outdated for translations.\n\nThe message would become:\n\n 500+ uploads\n\nSounds like the simplest solution to me that is actually still true.",
+      "revId": "541aa6b3e2507a1a406c4e8ed8b55549c4d0bb63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlYIlqA4",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-14T09:22:47Z",
+      "side": 1,
+      "message": "Spacing around $uploadCount missing.",
+      "revId": "541aa6b3e2507a1a406c4e8ed8b55549c4d0bb63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlSIctL0",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-14T09:22:47Z",
+      "side": 1,
+      "message": "Since you have a getter here, isn\u0027t it easier to just make this return 500? Saves a constant.",
+      "revId": "541aa6b3e2507a1a406c4e8ed8b55549c4d0bb63",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
