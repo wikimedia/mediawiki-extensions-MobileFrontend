@@ -24,7 +24,7 @@
   background: url(images/camera.png) no-repeat 10px 50%;
   background-size: 24px auto;
 }
-#content .button.photo {
+#content > .button.photo {
   width: 100%;
   margin-bottom: 10px;
 }
