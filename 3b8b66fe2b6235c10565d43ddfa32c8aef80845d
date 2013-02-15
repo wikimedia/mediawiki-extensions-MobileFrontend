@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlcqJgiY",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-15T01:09:10Z",
+      "side": 1,
+      "message": "explanation of this var would be nice",
+      "revId": "3b8b66fe2b6235c10565d43ddfa32c8aef80845d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlYp8mh0",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-15T01:09:10Z",
+      "side": 1,
+      "message": "the comment in the doPageImages() method says it\u0027s only supposed to happen in alpha, but this is only checking for beta. which is it?",
+      "revId": "3b8b66fe2b6235c10565d43ddfa32c8aef80845d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dlap-VhE",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-15T01:09:10Z",
+      "side": 1,
+      "message": "this method appears to not actually care what mode we\u0027re in.",
+      "revId": "3b8b66fe2b6235c10565d43ddfa32c8aef80845d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlYrG2ko",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 435,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-15T01:09:10Z",
+      "side": 1,
+      "message": "shouldn\u0027t need PROTO_CURRENT as it\u0027s default",
+      "revId": "3b8b66fe2b6235c10565d43ddfa32c8aef80845d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
