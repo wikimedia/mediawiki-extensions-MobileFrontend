@@ -78,7 +78,7 @@ Javascript: Before commiting anything please ensure that you run [[Special:JavaS
 PHP: PHP tests can be run the normal way. See [[http://www.mediawiki.org/wiki/Manual:PHP_unit_testing/Writing_unit_tests_for_extensions]] for explanations on how to exclusively run php unit tests for the MobileFrontend extension.
 
 ==== Selenium tests ====
-To run the Selenium tests you will have to install Ruby (for the exact version see tests/acceptance/.rvmrc), the latest version of RubyGems and Firefox.
+To run the Selenium tests you will have to install Ruby (for the exact version see tests/acceptance/.rvmrc), the latest versions of RubyGems and Firefox.
 
 The easiest way to install Ruby on *nix is RVM (https://rvm.io/) and on Windows RubyInstaller (http://rubyinstaller.org/).
 
