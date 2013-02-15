@@ -681,3 +681,8 @@ $wgMFMinCachedPageSize = 64 * 1024;
  * people receiving cached versions of pages intended for someone else's devices.
  */
 $wgMFAutodetectMobileView = false;
+
+/**
+ * (wiki)text to append to photo description during photo upload.
+ */
+$wgMFPhotoUploadAppendToDesc = '';

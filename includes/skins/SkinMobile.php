@@ -892,7 +892,11 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function prepareData() {
-		global $wgExtensionAssetsPath, $wgScriptPath, $wgMobileFrontendLogo, $wgArticlePath;
+		global $wgExtensionAssetsPath,
+			$wgScriptPath,
+			$wgMobileFrontendLogo,
+			$wgArticlePath,
+			$wgMFPhotoUploadAppendToDesc;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
@@ -934,6 +938,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				'hookOptions' => $hookOptions,
 				'username' => $user->isAnon() ? '' : $user->getName(),
 				'can_edit' => $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN,
+				'photoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
 			),
 		);
 
