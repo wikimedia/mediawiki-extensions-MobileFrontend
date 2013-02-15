@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlWp4TvA",
+        "filename": "javascripts/modules/mf-languages.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-15T01:59:07Z",
+      "side": 1,
+      "message": "Why is there an array passed as an argument instead of a single value?",
+      "revId": "1e0e3d5efb15961a0cf11473874c9f91f92e90ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
