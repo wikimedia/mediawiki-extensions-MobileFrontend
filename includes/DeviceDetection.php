@@ -164,7 +164,7 @@ final class DeviceProperties implements IDeviceProperties {
 			'sagem-',
 			'htc[-_]',
 			'ngm_',
-			'mmp/',
+			'mmp\/',
 			'up.browser',
 			'symbian',
 			'midp',
@@ -196,7 +196,7 @@ final class DeviceProperties implements IDeviceProperties {
 			'pg-',
 		);
 		$regex = '/^(' . implode( '|', $patternsStart ) . ')|(' . implode( '|', $patterns ) . ')/i';
-		$isMobile = preg_match( $regex, $this->userAgent );
+		$isMobile = (bool)preg_match( $regex, $this->userAgent );
 
 		wfProfileOut( __METHOD__ );
 		return $isMobile;

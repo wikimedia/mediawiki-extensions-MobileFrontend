@@ -674,3 +674,10 @@ $wgMFNearby = false;
  * Set to 0 to cache everything or to some large value to disable caching completely
  */
 $wgMFMinCachedPageSize = 64 * 1024;
+
+/**
+ * Set this to true to automatically show mobile view depending on people's user-agent.
+ * WARNING: Make sure that your caching infrastructure is configured appropriately, to avoid
+ * people receiving cached versions of pages intended for someone else's devices.
+ */
+$wgMFAutodetectMobileView = false;
