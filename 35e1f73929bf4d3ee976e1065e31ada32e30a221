@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "DlSoH5oY",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-15T01:16:13Z",
+      "side": 1,
+      "message": "this looks not quite correct. it ignores if we have x-device when $wgMFAutodetectMobileView \u003d\u003d false. is that on purpose?",
+      "revId": "35e1f73929bf4d3ee976e1065e31ada32e30a221",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAADi3//6ro\u003d",
         "filename": "tests/MobileContextTest.php",
         "patchSetId": 1
