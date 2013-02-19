@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dl.O47XU",
+        "filename": "scripts/less.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-19T20:50:54Z",
+      "side": 1,
+      "message": "i\u0027m not very familiar with npm and how it installs stuff, but it seems to install things into the current working directory. i guess this is why you added node_modules to the gitignore, but i wonder if this is actually desirable behavior - would it make more senes for npm to install things to a different (standard?) location?",
+      "revId": "deddb7b326eb639a8d4cf944c7b4db7f6dfd3d61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
