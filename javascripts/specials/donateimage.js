@@ -140,7 +140,8 @@ m = ( function() {
 
 			new photo.PhotoUploader( {
 				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
-				pageTitle: mw.config.get( 'wgTitle' )
+				pageTitle: mw.config.get( 'wgTitle' ),
+				funnel: 'uploads'
 			} ).
 				prependTo( $container ).
 				on( 'success', function( image ) {

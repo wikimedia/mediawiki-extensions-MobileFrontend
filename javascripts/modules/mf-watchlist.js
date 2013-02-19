@@ -7,6 +7,7 @@ var api = M.require( 'api' ), w = ( function() {
 	function logWatchEvent( eventType ) {
 		var types = [ 'watchlist', 'unwatchlist', 'anonCTA' ],
 			data = {
+				// FIXME: this gives wrong results when page loaded dynamically
 				articleID: mw.config.get( 'wgArticleId' ),
 				anon: mw.config.get( 'wgUserName' ) === null,
 				action: types[ eventType ],

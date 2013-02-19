@@ -30,6 +30,23 @@
 		);
 	}
 
+	function getLog( funnel ) {
+		return function( data ) {
+			// FIXME: remove this check if we get rid of dynamic loading
+			if ( mw.config.get( 'wgTitle' ) === M.getConfig( 'title' ) ) {
+				data.pageId = mw.config.get( 'wgArticleId' );
+			}
+
+			M.log( 'MobileWebUploads', $.extend( {
+				token: M.getSessionId(),
+				funnel: funnel,
+				isEditable: M.getConfig( 'can_edit' ),
+				mobileMode: M.getConfig( 'alpha' ) ? 'alpha' : ( M.getConfig( 'beta' ) ? 'beta' : 'stable' ),
+				userAgent: window.navigator.userAgent
+			}, data ) );
+		};
+	}
+
 	function generateFileName( file, pageTitle ) {
 		// FIXME: deal with long and invalid names
 		var name = 'Lead_Photo_For_' + pageTitle.replace( / /g, '_' ) + Math.random(),
@@ -55,8 +72,9 @@
 			} );
 		},
 
-		save: function( options, callback ) {
-			var self = this;
+		save: function( options ) {
+			var self = this, result = $.Deferred();
+
 			options.editSummaryMessage = options.insertInPage ?
 				'mobile-frontend-photo-article-edit-comment' :
 				'mobile-frontend-photo-article-donate-comment';
@@ -89,8 +107,8 @@
 				} ).done( function( data ) {
 					var descriptionUrl = '';
 					if ( !data || !data.upload ) {
-						// FIXME: use event logging to log errors
-						callback( null );
+						// error uploading image
+						result.reject( data.error ? data.error.info : '' );
 						return;
 					}
 					options.fileName = data.upload.filename || data.upload.warnings.duplicate['0'];
@@ -99,15 +117,24 @@
 						descriptionUrl = data.upload.imageinfo.descriptionurl;
 					}
 					if ( options.insertInPage ) {
-						self.updatePage( options, function() {
-							// FIXME: check for errors here too?
-							callback( options.fileName, descriptionUrl );
+						self.updatePage( options, function( data ) {
+							if ( !data || data.error ) {
+								// error updating page's wikitext
+								result.reject( data.error.info );
+							} else {
+								result.resolve( options.fileName, descriptionUrl );
+							}
 						} );
 					} else {
-						callback( options.fileName, descriptionUrl );
+						result.resolve( options.fileName, descriptionUrl );
 					}
+				} ).fail( function( xhr, status, error ) {
+					// error on the server side
+					result.reject( status + ': ' + error );
 				} );
 			}, endpoint );
+
+			return result;
 		}
 	} );
 
@@ -263,6 +290,7 @@
 			var self = this, $input = this.$( 'input' );
 
 			this.options = options;
+			this.log = getLog( options.funnel );
 
 			$input.
 				// accept must be set via attr otherwise cannot use camera on Android
@@ -275,11 +303,14 @@
 					// clear so that change event is fired again when user selects the same file
 					$input.val( '' );
 
+					self.log( { action: 'preview' } );
 					preview.
 						on( 'cancel', function() {
+							self.log( { action: 'previewCancel' } );
 							nav.closeOverlay();
 						} ).
 						on( 'submit', function() {
+							self.log( { action: 'previewSubmit' } );
 							self._submit();
 						} );
 
@@ -308,6 +339,7 @@
 			nav.closeOverlay();
 			popup.show( progressPopup.$el, 'locked noButton loading' );
 			progressPopup.on( 'cancel', function() {
+				self.log( { action: 'cancel' } );
 				api.abort();
 			} );
 
@@ -316,21 +348,19 @@
 				description: description,
 				insertInPage: this.options.insertInPage,
 				pageTitle: this.options.pageTitle
-			}, function( fileName, descriptionUrl ) {
+			} ).done( function( fileName, descriptionUrl ) {
 				popup.close();
-
-				if ( !fileName ) {
-					popup.show( mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
-					self.emit( 'error' );
-					return;
-				}
-
+				self.log( { action: 'success' } );
 				self.emit( 'success', {
 					fileName: fileName,
 					description: description,
 					descriptionUrl: descriptionUrl,
 					url: self.preview.imageUrl
 				} );
+			} ).fail( function( err ) {
+				popup.show( mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
+				self.log( { action: 'error', errorText: err } );
+				self.emit( 'error' );
 			} );
 
 			api.on( 'progress', function( value ) {
@@ -353,7 +383,8 @@
 		photoUploader = new PhotoUploader( {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
-			pageTitle: M.getConfig( 'title' )
+			pageTitle: M.getConfig( 'title' ),
+			funnel: 'article'
 		} ).
 			insertAfter( $page.find( 'h1' ) ).
 			on( 'start', function() {
