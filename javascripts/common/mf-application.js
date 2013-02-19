@@ -187,6 +187,32 @@
 		}
 	}
 
+	/**
+	 * Retrieve and, if not present, generate a random session ID
+	 * (32 alphanumeric characters).
+	 *
+	 * @return {string}
+	 */
+	function getSessionId() {
+		var sessionId;
+		if ( typeof localStorage === 'undefined' ) {
+			return null;
+		}
+		sessionId = localStorage.getItem( 'sessionId' );
+
+		if ( !sessionId ) {
+			// FIXME: use mw.user.generateRandomSessionId when we can,
+			// as of now mediawiki.user has no mobile target (yay, targets in RL!)
+			sessionId = '';
+			while ( sessionId.length < 32 ) {
+				// http://stackoverflow.com/a/8084248/365238
+				sessionId += Math.random().toString(36).slice(2, 32 + 2 - sessionId.length);
+			}
+			localStorage.setItem( 'sessionId', sessionId );
+		}
+		return sessionId;
+	}
+
 	$( init );
 
 	$.extend( M, {
@@ -196,6 +222,7 @@
 		getApiUrl: getApiUrl,
 		getOrigin: getOrigin,
 		getPageArrayFromApiResponse: getPageArrayFromApiResponse,
+		getSessionId: getSessionId,
 		isLoggedIn: isLoggedIn,
 		log: log,
 		message: message,

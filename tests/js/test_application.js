@@ -42,4 +42,14 @@ test( 'require()', function() {
 	strictEqual( MFE.require( 'testModule2' ), 'test module 2' );
 } );
 
+
+module( 'MobileFrontend common functions' );
+
+test( '#getSessionId', function() {
+	var sessionId = MFE.getSessionId();
+	strictEqual( typeof sessionId, 'string', 'session ID is a string' );
+	strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
+	strictEqual( MFE.getSessionId(), sessionId, 'session ID is not regenerated if present' );
+} );
+
 }( jQuery, mw.mobileFrontend ) );
