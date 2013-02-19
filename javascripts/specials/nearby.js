@@ -25,7 +25,7 @@
 	}
 
 	function findResults( lat, lng ) {
-		var $content = $( '#mw-mf-nearby' ), range = 1000;
+		var $content = $( '#mw-mf-nearby' ), range = 10000;
 		$.ajax( {
 			dataType: 'json',
 			url: M.getApiUrl(),
