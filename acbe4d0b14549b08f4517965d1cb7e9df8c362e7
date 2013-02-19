@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dl.PMbb8",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 688,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-19T20:20:42Z",
+      "side": 1,
+      "message": "Those global settings always scare me in MW. Maybe we could use a less general name? $wgMFPhotoUploadCategoryTemplate?",
+      "revId": "acbe4d0b14549b08f4517965d1cb7e9df8c362e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dl2OPXXc",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 895,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-19T20:20:42Z",
+      "side": 1,
+      "message": "Probably should be a space.",
+      "revId": "acbe4d0b14549b08f4517965d1cb7e9df8c362e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dl0OMYYA",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 896,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-19T20:20:42Z",
+      "side": 1,
+      "message": "One tab less?",
+      "revId": "acbe4d0b14549b08f4517965d1cb7e9df8c362e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlyPqdRE",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 941,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-19T20:20:42Z",
+      "side": 1,
+      "message": "Last time I talked with Jon, we agreed on using camelCase everywhere but CSS (which seems to be what mediawiki core is doing). I hope I\u0027ll have some time soon to write down all those things.",
+      "revId": "acbe4d0b14549b08f4517965d1cb7e9df8c362e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
