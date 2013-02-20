@@ -16,6 +16,24 @@
       "revId": "a63111a88afb608f6451e867a78c5eb63b1d8127",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DmE1FrRY",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-20T22:10:16Z",
+      "side": 1,
+      "message": "It\u0027s reliable in stable (we don\u0027t load pages dynamically there). But I think I know how to fix that for now, will upload a new patchset in a moment.",
+      "parentUuid": "DmCp5Pyw",
+      "revId": "a63111a88afb608f6451e867a78c5eb63b1d8127",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
