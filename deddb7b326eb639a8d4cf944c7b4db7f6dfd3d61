@@ -16,6 +16,24 @@
       "revId": "deddb7b326eb639a8d4cf944c7b4db7f6dfd3d61",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dl6P3gNE",
+        "filename": "scripts/less.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-20T19:28:12Z",
+      "side": 1,
+      "message": "That would require sudo on most Linux machines.\n\nI\u0027m usually against installing things globally if I don\u0027t have to. If we install everything that our project needs locally in the working directory then if someone wants to remove everything at some point (for some reason), they just remove the directory and their OS doesn\u0027t get cluttered with lots of things they don\u0027t need. I saw this practice in other projects too.\n\nAlso, if I work on more than one project on the same machine, installing lots of things globally might lead to some conflicts at some point (maybe not very likely in this case, but I prefer to be safe).",
+      "parentUuid": "Dl.O47XU",
+      "revId": "deddb7b326eb639a8d4cf944c7b4db7f6dfd3d61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
