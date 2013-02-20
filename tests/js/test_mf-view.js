@@ -21,7 +21,8 @@ test( 'View, jQuery proxy functions', function() {
 		'before',
 		'insertAfter',
 		'insertBefore',
-		'remove'
+		'remove',
+		'detach'
 	].forEach( function( prop ) {
 		var stub = sinon.stub( view.$el, prop );
 		view[prop]( 'test', 1 );

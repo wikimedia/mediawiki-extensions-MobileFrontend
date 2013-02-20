@@ -388,7 +388,7 @@
 		} ).
 			insertAfter( $page.find( 'h1' ) ).
 			on( 'start', function() {
-				photoUploader.remove();
+				photoUploader.detach();
 			} ).
 			on( 'success', function( data ) {
 				popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );

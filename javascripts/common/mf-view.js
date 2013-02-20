@@ -109,7 +109,8 @@
 		'before',
 		'insertAfter',
 		'insertBefore',
-		'remove'
+		'remove',
+		'detach'
 	].forEach( function( prop ) {
 		View.prototype[prop] = function() {
 			this.$el[prop].apply( this.$el, arguments );
