@@ -153,7 +153,8 @@
 			return this.$description.val();
 		},
 
-		setImage: function( url ) {
+		setImageUrl: function( url ) {
+			this.imageUrl = url;
 			this.$( '.loading' ).remove();
 			$( '<img>' ).attr( 'src', url ).prependTo( this.$( '.photoPreview' ) );
 		}
@@ -259,75 +260,82 @@
 		template: M.template.get( 'photoUploader' ),
 
 		initialize: function( options ) {
-			var self = this, $input = this.$( 'input' ), preview;
+			var self = this, $input = this.$( 'input' );
 
-			this.$input = $input;
-
-			function showPreview( ev ) {
-				var dataUrl = ev.target.result;
-				// add mimetype if not present (some browsers need it, e.g. Android browser)
-				dataUrl = dataUrl.replace( /^data:base64/, 'data:image/jpeg;base64' );
-				preview.setImage( dataUrl );
-
-				preview.
-					on( 'cancel', function() {
-						nav.closeOverlay();
-					} ).
-					on( 'submit', function() {
-						var description = preview.getDescription(),
-							api = new PhotoApi(),
-							progressPopup = new PhotoUploadProgress();
-
-						self.emit( 'start' );
-						nav.closeOverlay();
-						popup.show( progressPopup.$el, 'locked noButton loading' );
-						progressPopup.on( 'cancel', function() {
-							api.abort();
-						} );
-
-						api.save( {
-							file: $input[0].files[0],
-							description: description,
-							insertInPage: options.insertInPage,
-							pageTitle: options.pageTitle
-						}, function( fileName, descriptionUrl ) {
-							popup.close();
-
-							if ( !fileName ) {
-								popup.show( mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
-								self.emit( 'error' );
-								return;
-							}
-
-							self.emit( 'success', {
-								fileName: fileName,
-								description: description,
-								descriptionUrl: descriptionUrl,
-								url: dataUrl
-							} );
-						} );
-
-						api.on( 'progress', function( value ) {
-							progressPopup.setValue( value );
-						} );
-					} );
-			}
+			this.options = options;
 
 			$input.
 				// accept must be set via attr otherwise cannot use camera on Android
 				attr( 'accept', 'image/*;' ).
 				on( 'change', function() {
-					var fileReader = new FileReader();
-					preview = new PhotoUploaderPreview();
-					// FIXME: replace if we make overlay an object (and inherit from it?)
+					var preview = self.preview = new PhotoUploaderPreview(),
+						fileReader = new FileReader();
 
+					self.file = $input[0].files[0];
+					// clear so that change event is fired again when user selects the same file
+					$input.val( '' );
+
+					preview.
+						on( 'cancel', function() {
+							nav.closeOverlay();
+						} ).
+						on( 'submit', function() {
+							self._submit();
+						} );
+
+					// FIXME: replace if we make overlay an object (and inherit from it?)
 					nav.createOverlay( null, preview.$el );
 					// skip the URL bar if possible
 					window.scrollTo( 0, 1 );
 
-					fileReader.readAsDataURL( $input[0].files[0] );
-					fileReader.onload = showPreview;
+					fileReader.readAsDataURL( self.file );
+					fileReader.onload = function() {
+						var dataUrl = fileReader.result;
+						// add mimetype if not present (some browsers need it, e.g. Android browser)
+						dataUrl = dataUrl.replace( /^data:base64/, 'data:image/jpeg;base64' );
+						preview.setImageUrl( dataUrl );
+					};
 				} );
+		},
+
+		_submit: function() {
+			var self = this,
+				description = this.preview.getDescription(),
+				api = new PhotoApi(),
+				progressPopup = new PhotoUploadProgress();
+
+			this.emit( 'start' );
+			nav.closeOverlay();
+			popup.show( progressPopup.$el, 'locked noButton loading' );
+			progressPopup.on( 'cancel', function() {
+				api.abort();
+			} );
+
+			api.save( {
+				file: this.file,
+				description: description,
+				insertInPage: this.options.insertInPage,
+				pageTitle: this.options.pageTitle
+			}, function( fileName, descriptionUrl ) {
+				popup.close();
+
+				if ( !fileName ) {
+					popup.show( mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
+					self.emit( 'error' );
+					return;
+				}
+
+				self.emit( 'success', {
+					fileName: fileName,
+					description: description,
+					descriptionUrl: descriptionUrl,
+					url: self.preview.imageUrl
+				} );
+			} );
+
+			api.on( 'progress', function( value ) {
+				progressPopup.setValue( value );
+			} );
 		}
 	} );
 
