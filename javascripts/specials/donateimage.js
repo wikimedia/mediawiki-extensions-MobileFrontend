@@ -136,22 +136,18 @@ m = ( function() {
 		} );
 
 		if ( photo.isSupported() ) {
-			$container = $( '<div class="ctaUploadPhoto">' ).prependTo( '#content_wrapper' );
+			$container = $( '.ctaUploadPhoto' );
 
 			new photo.PhotoUploader( {
 				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
 				pageTitle: mw.config.get( 'wgTitle' ),
 				funnel: 'uploads'
 			} ).
-				prependTo( $container ).
+				appendTo( $container ).
 				on( 'success', function( image ) {
 					image.width = IMAGE_WIDTH;
 					userGallery.addPhoto( image, true );
 				} );
-			// put user upload stats in correct spot
-			if ( $( '.mobileUserUploadCount' ).length ) {
-				$( '.mobileUserUploadCount' ).prependTo( $container );
-			}
 		}
 		if ( username ) {
 			showGallery( username );

@@ -25,11 +25,12 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 				$this->msg( 'mobile-frontend-donate-image-anon' )->parse() .
 				'</div>';
 		} else {
+			$mobileSkin->addArticleClass( 'noMargins' );
 			$uploadCount = $this->getUserUploadCount( $user->getName() );
 			$html = '';
 			if ( $uploadCount !== false ) {
 				$threshold = $this->getUploadCountThreshold();
-				$html .= '<div class="mobileUserUploadCount">';
+				$html .= '<div class="ctaUploadPhoto">';
 				if ( $uploadCount > $threshold ) {
 					$msg = $this->msg(
 						'mobile-frontend-photo-upload-user-count-over-limit'

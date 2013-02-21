@@ -285,6 +285,7 @@
 	 */
 	PhotoUploader = View.extend( {
 		template: M.template.get( 'photoUploader' ),
+		className: 'button photo',
 
 		initialize: function( options ) {
 			var self = this, $input = this.$( 'input' );
