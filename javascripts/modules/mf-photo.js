@@ -279,6 +279,7 @@
 	 * @fires PhotoUploader#start
 	 * @fires PhotoUploader#success
 	 * @fires PhotoUploader#error
+	 * @fires PhotoUploader#cancel
 	 */
 	/**
 	 * Triggered when image upload starts.
@@ -299,6 +300,11 @@
 	 * Triggered when image upload fails.
 	 *
 	 * @event PhotoUploader#error
+	 */
+	/**
+	 * Triggered when image upload is cancelled.
+	 *
+	 * @event PhotoUploader#cancel
 	 */
 	PhotoUploader = View.extend( {
 		template: M.template.get( 'photoUploader' ),
@@ -357,8 +363,9 @@
 			nav.closeOverlay();
 			popup.show( progressPopup.$el, 'locked noButton loading' );
 			progressPopup.on( 'cancel', function() {
-				self.log( { action: 'cancel' } );
 				api.abort();
+				self.log( { action: 'cancel' } );
+				self.emit( 'cancel' );
 			} );
 
 			api.save( {
@@ -418,7 +425,7 @@
 					caption: data.description
 				} ).insertAfter( $pageHeading ).animate();
 			} ).
-			on( 'error', function() {
+			on( 'error cancel', function() {
 				photoUploader.insertAfter( $pageHeading );
 			} );
 	}
