@@ -18,9 +18,7 @@
 	function isSupported() {
 		// FIXME: create a module for browser detection stuff
 		var browserSupported = (
-			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined' &&
-			// webkit only for time being
-			window.navigator.userAgent.indexOf( 'WebKit' ) > -1
+			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined'
 		);
 
 		return (
@@ -83,6 +81,14 @@
 				var formData = new FormData();
 				options.fileName = generateFileName( options.file, options.pageTitle );
 
+				formData.append( 'action', 'upload' );
+				formData.append( 'format', 'json' );
+				// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
+				formData.append( 'useformat', 'mobile' );
+				// add origin only when doing CORS
+				if ( endpoint ) {
+					formData.append( 'origin', M.getOrigin() );
+				}
 				formData.append( 'filename', options.fileName );
 				formData.append( 'comment', mw.msg( options.editSummaryMessage ) );
 				formData.append( 'file', options.file );
@@ -94,8 +100,7 @@
 
 				self.post( formData, {
 					// iOS seems to ignore the cache parameter so sending r parameter
-					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
-					url: apiUrl + '?action=upload&format=json&useformat=mobile&r=' + Math.random() + '&origin=' + M.getOrigin(),
+					url: apiUrl + '?r=' + Math.random(),
 					xhrFields: { 'withCredentials': true },
 					cache: false,
 					contentType: false,
@@ -160,7 +165,9 @@
 			// make license links open in separate tabs
 			this.$( '.license a' ).attr( 'target', '_blank' );
 
-			$description.on( 'keyup', function() {
+			// use input event too, Firefox doesn't fire keyup on many devices:
+			// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
+			$description.on( 'keyup input', function() {
 				if ( $description.val() ) {
 					$submitButton.removeAttr( 'disabled' );
 				} else {
