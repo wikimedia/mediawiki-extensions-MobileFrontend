@@ -543,7 +543,8 @@ See also:
 	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages',
 	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: article pages only',
 	'mobile-frontend-watchlist-filter-talk' => 'Label on filter selector for mobile watchlist: talk pages',
-	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or article)',
+	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or article).
+{{Identical|Other}}',
 	'mobile-frontend-watchlist-modified' => 'Text saying how long ago a page in watchlist was updated.
 * $1 - output of {{msg-mw|ago}} (e.g. "15 days ago", "7 hours ago").',
 	'mobile-frontend-diffview-404-title' => 'Heading on 404 page when bad revision id parameter is passed',
@@ -1250,11 +1251,15 @@ $messages['ast'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Artículos',
 	'mobile-frontend-watchlist-filter-talk' => 'Alderique',
 	'mobile-frontend-watchlist-filter-other' => 'Otres',
+	'mobile-frontend-watchlist-modified' => 'Camudose $1',
+	'mobile-frontend-diffview-404-title' => 'Revisión incorreuta',
+	'mobile-frontend-diffview-404-desc' => 'La id de la revisión solicitada nun esiste',
 	'mobile-frontend-diffview-title' => 'Cambios',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edición|ediciones}}',
 	'mobile-frontend-diffview-anonymous' => 'Usuariu anónimu',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte amestáu|bytes amestaos}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte desaniciáu|bytes desaniciaos}}',
+	'mobile-frontend-diffview-explained' => "S'amestaron (+) y desaniciaron (-) les siguientes llinies:",
 	'mobile-frontend-table' => 'Tabla $1',
 	'mobile-frontend-saving-exit-page' => 'La to collaboración ta guardandose entá. Si coles se perderán les tos collaboraciones. ¿Seguro que quies colar?',
 	'mobile-frontend-photo-upload' => 'Amestar una foto a esti artículu',
@@ -1263,11 +1268,16 @@ $messages['ast'] = array(
 	'mobile-frontend-photo-upload-comment' => 'Foto amestada a la páxina',
 	'mobile-frontend-photo-caption-placeholder' => 'Amestar una descripción (requerío)',
 	'mobile-frontend-image-loading' => 'Cargando la imaxe',
-	'mobile-frontend-image-uploading-wait' => 'Xubiendo la imaxe, espere por favor.', # Fuzzy
+	'mobile-frontend-image-uploading-wait' => 'Xubiendo la imaxe, espere por favor.',
+	'mobile-frontend-image-uploading-long' => '¡Inda ta xubiendo la imaxe! Gracies pola paciencia.',
+	'mobile-frontend-image-uploading-cancel' => '<a href="#">Encaboxar</a> si ta tardando demasiao.',
 	'mobile-frontend-photo-upload-error' => 'Error, vuelva a probar.',
+	'mobile-frontend-photo-upload-success-article' => '¡Correuto! La so imaxe yá ye visible nesta páxina.',
 	'mobile-frontend-photo-license' => 'Al calcar "Unviar", ta aceutando les [//wikimediafoundation.org/wiki/Terms_of_use Condiciones d\'usu] y ta d\'alcuerdu con distribuir la foto baxo la [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Llicencia Creative Commons Reconocimientu-CompartirIgual 3.0].',
 	'mobile-frontend-photo-submit' => 'Unviar',
 	'mobile-frontend-photo-cancel' => 'Encaboxar',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 xuba|$1 xubes}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '+500 xubes',
 	'tag-mobile_edit' => 'Edición de móvil',
 	'tag-mobile_edit-description' => "Edición fecha dende'l sitiu pa móviles",
 	'mobile-frontend-drawer-cancel' => 'Encaboxar',
@@ -8945,6 +8955,8 @@ $messages['ms'] = array(
 	'mobile-frontend-nearby-distance-report' => '$1km dari kedudukan anda sekarang',
 	'mobile-frontend-nearby-lookup-error' => 'Tidak dapat mencari anda. Sedang mencuba lagi…',
 	'mobile-frontend-nearby-noresults' => 'Entah di mana anda berada, kami tak dapat cari apa-apa topik. Apa kata anda tulis topik sendiri?',
+	'mobile-frontend-nearby-refresh' => 'Kami telah menjumpai lokasi yang lebih tepat untuk anda. Klik di sini untuk memuat semula senarai halaman-halaman yang berdekatan.',
+	'mobile-frontend-nearby-error' => 'Berlakunya ralat di luar jangkaan ketika cuba mencari halaman berdekatan',
 	'mobile-frontend-donate-image-login' => 'Log masuk untuk melihat muatan naik anda',
 	'mobile-frontend-photo-upload-generic' => 'Dermakan gambar',
 	'mobile-frontend-donate-image-title' => 'Dermakan gambar',
@@ -8968,6 +8980,7 @@ Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar
 	'mobile-frontend-watchlist-feed' => 'Diubah',
 	'mobile-frontend-watchlist-a-z-empty' => 'Anda tidak mengawasi sebarang halaman sekarang',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik pada bintang di atas halaman',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Pantau halaman yang anda dapati menarik dengan mengklik ikon bintang di atas skrin. Ini akan membolehkan anda untuk mem-bookmark halaman yang menarik minat anda serta mengikuti perkembangan terbarunya.',
 	'mobile-frontend-watchlist-feed-empty' => 'Tidak terdapat halaman dengan perubahan terkini',
 	'mobile-frontend-watchlist-back-home' => 'Kembali ke halaman utama',
 	'mobile-frontend-changeslist-ip' => 'Pengguna awanama',
@@ -13408,6 +13421,7 @@ $messages['vep'] = array(
 
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
+ * @author Tranletuhan
  * @author පසිඳු කාවින්ද
  */
 $messages['vi'] = array(
@@ -13606,6 +13620,8 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
 	'mobile-frontend-photo-submit' => 'Tải lên',
 	'mobile-frontend-photo-cancel' => 'Hủy bỏ',
+	'mobile-frontend-photo-upload-user-count' => '$1 tải lên',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ tải lên',
 	'tag-mobile_edit' => 'Sửa đổi di động',
 	'tag-mobile_edit-description' => 'Trang được sửa đổi dùng trang di động',
 	'mobile-frontend-drawer-cancel' => 'Hủy bỏ',
