@@ -30,7 +30,7 @@ less:
 	lessc stylesheets/less/specials/donateimage.less > stylesheets/specials/donateimage.css
 
 phpunit:
-	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml
+	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend
 
 qunit:
 	@tests/qunit.sh
