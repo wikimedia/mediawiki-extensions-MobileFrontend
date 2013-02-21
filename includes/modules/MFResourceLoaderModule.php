@@ -4,6 +4,7 @@
  * Allows basic parsing of messages without arguments
  */
 class MFResourceLoaderModule extends ResourceLoaderModule {
+	protected $dependencies = array();
 	protected $parsedMessages = array();
 	protected $messages = array();
 	protected $templates = array();
@@ -16,18 +17,36 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	 * Registers core modules and runs registration hooks.
 	 */
 	public function __construct( $options ) {
-		if ( isset( $options[ 'localTemplateBasePath' ] ) ) {
-			$this->localTemplateBasePath = $options[ 'localTemplateBasePath' ];
+		foreach ( $options as $member => $option ) {
+			switch ( $member ) {
+				case 'localTemplateBasePath':
+				case 'localBasePath':
+					$this->{$member} = (string) $option;
+					break;
+				case 'templates':
+				case 'dependencies':
+					$this->{$member} = (array) $option;
+					break;
+				case 'messages':
+					$this->processMessages( $option );
+					break;
+			}
 		}
-		if ( isset( $options[ 'messages' ] ) ) {
-			$this->processMessages( $options[ 'messages'] );
+
+		// MFResourceLoaderModule must depend on mobile.startup because
+		// mobile.startup contains code responsible for compiling templates
+		if ( !in_array( 'mobile.startup', $this->dependencies ) ) {
+			$this->dependencies[] = 'mobile.startup';
 		}
-		if ( isset( $options[ 'localBasePath' ] ) ) {
-			$this->localBasePath = $options[ 'localBasePath' ];
-		}
-		if ( isset( $options[ 'templates' ] ) ) {
-			$this->templates = $options['templates'];
-		}
+	}
+
+	/**
+	 * Gets list of names of modules this module depends on.
+	 *
+	 * @return Array: List of module names
+	 */
+	public function getDependencies() {
+		return $this->dependencies;
 	}
 
 	/**
