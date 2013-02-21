@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnC94Ke8",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-02-21T23:09:13Z",
+      "side": 0,
+      "message": "Does the origin have to be on the query string for the OPTIONS preflight? Or did we get rid of that?",
+      "revId": "ab1564a5c26897fd13f85f5fb621b7fd89225c8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
