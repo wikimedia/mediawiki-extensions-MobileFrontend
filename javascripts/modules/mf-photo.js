@@ -78,8 +78,10 @@
 				'mobile-frontend-photo-article-donate-comment';
 
 			self.getToken( 'edit', function( tokenData ) {
-				var formData = new FormData();
+				var formData = new FormData(), descTextToAppend;
 				options.fileName = generateFileName( options.file, options.pageTitle );
+				descTextToAppend = M.getConfig( 'photoUploadAppendToDesc' );
+				descTextToAppend = ( descTextToAppend.length ) ? '\n\n' + descTextToAppend : '';
 
 				formData.append( 'action', 'upload' );
 				formData.append( 'format', 'json' );
@@ -95,6 +97,7 @@
 				formData.append( 'token', tokenData.tokens.edittoken );
 				formData.append( 'text',
 					'== {{int:filedesc}} ==\n' + options.description +
+					descTextToAppend +
 					'\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}'
 				);
 
