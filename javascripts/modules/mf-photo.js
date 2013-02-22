@@ -134,8 +134,10 @@
 						result.resolve( options.fileName, descriptionUrl );
 					}
 				} ).fail( function( xhr, status, error ) {
-					// error on the server side
-					result.reject( status + ': ' + error );
+					// error on the server side (abort happens when user cancels the upload)
+					if ( status !== 'abort' ) {
+						result.reject( status + ': ' + error );
+					}
 				} );
 			}, endpoint );
 
