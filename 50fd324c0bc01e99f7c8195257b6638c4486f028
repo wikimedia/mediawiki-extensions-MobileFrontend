@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnHre4Ws",
+        "filename": "Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-22T00:48:22Z",
+      "side": 1,
+      "message": "this assumes a lot about someone\u0027s set up - it would be nice if it respected MW_INSTALL_PATH, but that\u0027s irrelevant to this particular commit.",
+      "revId": "50fd324c0bc01e99f7c8195257b6638c4486f028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
