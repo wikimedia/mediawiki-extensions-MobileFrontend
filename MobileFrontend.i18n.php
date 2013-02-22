@@ -169,7 +169,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-error' => 'An unexpected error occurred whilst trying to find pages nearby',
 
 	// image donation
-	'mobile-frontend-donate-image-login' => 'Sign in to view your uploads',
+	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Donate an image',
 	'mobile-frontend-donate-image-title' => 'Donate an image',
 	'mobile-frontend-donate-image-summary' => 'Photos bring pages on {{SITENAME}} to life.
@@ -190,6 +190,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-cta' => 'Please login or sign up to watch this page.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Login',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Sign up',
+	'mobile-frontend-watch-login' => 'You must be logged in to watch pages.',
 
 	'mobile-frontend-watchlist-a-z' => 'All',
 	'mobile-frontend-watchlist-feed' => 'Modified',

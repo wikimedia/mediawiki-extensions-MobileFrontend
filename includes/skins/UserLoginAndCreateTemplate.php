@@ -69,4 +69,22 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		}
 		return false;
 	}
+
+	protected function getHeadMsg() {
+		$req = $this->getRequestContext()->getRequest();
+		if ( $req->getVal( 'returnto' ) && ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) ) ) {
+			list( $returnto, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
+		} else {
+			$returnto = '';
+		}
+		$returntoQuery = $req->getVal( 'returntoquery' );
+		if ( $returnto == 'DonateImage' ) {
+			$key = 'mobile-frontend-donate-image-login';
+		} elseif ( strstr( $returntoQuery, 'article_action=watch' ) ) {
+			$key = 'mobile-frontend-watch-login';
+		} else {
+			return '';
+		}
+		return wfMessage( $key )->plain();
+	}
 }
