@@ -8728,6 +8728,7 @@ $messages['ml'] = array(
 	'mobile-frontend-photo-license' => '"സമർപ്പിക്കുക" എന്നത് ഞെക്കുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_Use/ml ഉപയോഗനിബന്ധനകൾ] പാലിക്കാമെന്നും, താങ്കളെടുത്ത ചിത്രം  [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License ക്രിയേറ്റീവ് കോമൺസ് ആട്രിബ്യൂഷൻ-ഷെയർ‌എലൈക് 3.0 അനുവാദപത്രം] പ്രകാം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും സമ്മതിക്കുന്നുണ്ട്.',
 	'mobile-frontend-photo-submit' => 'സമർപ്പിക്കുക',
 	'mobile-frontend-photo-cancel' => 'റദ്ദാക്കുക',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|ഒരു അപ്‌ലോഡ്|$1 അപ്‌ലോഡുകൾ}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ അപ്‌ലോഡുകൾ',
 	'tag-mobile_edit' => 'മൊബൈൽ സൈറ്റ്',
 	'tag-mobile_edit-description' => 'മൊബൈൽ സൈറ്റ് വഴി വരുത്തിയ തിരുത്തുകൾ',
