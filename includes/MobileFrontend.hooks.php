@@ -189,49 +189,48 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
-		$testModules['qunit']['ext.mobilefrontend.tests'] = array(
-			'messages' => array(
-				'mobile-frontend-search-noresults',
-			),
+		global $wgResourceModules, $wgResourceLoaderDebug;
+
+		// run RL in debug mode so that we get real line numbers on errors and
+		// so that sinon.js is loaded within global context
+		$wgResourceLoaderDebug = true;
+
+		$testModuleBoilerplate = array(
+			'localBasePath' => dirname( __DIR__ ),
+			'remoteExtPath' => 'MobileFrontend',
+			'targets' => array( 'mobile' ),
+		);
+
+		// additional frameworks and fixtures we use in tests
+		// FIXME: Find a way to make this load before sibling dependencies without resorting to 0. prefix
+		$testModules['qunit']['0.mobile.tests.base'] = $testModuleBoilerplate + array(
 			'scripts' => array(
 				'tests/externals/sinon.js',
-				'javascripts/externals/hogan.js',
-				'javascripts/common/modules.js',
-				'javascripts/common/eventemitter.js', 'tests/js/test_eventemitter.js',
-				'tests/js/fixtures.js', 'javascripts/common/mf-application.js',
-				'tests/js/fixtures-templates.js',
-				'javascripts/common/mf-history.js', 'tests/js/test_mf-history.js',
-				'tests/js/test_application.js',
-				'javascripts/common/mf-oop.js', 'tests/js/test_mf-oop.js',
-				'javascripts/common/mf-api.js', 'tests/js/test_mf-api.js',
-				'javascripts/common/mf-view.js', 'tests/js/test_mf-view.js',
-				'javascripts/widgets/progress-bar.js', 'tests/js/widgets/test_progress-bar.js',
-				'javascripts/modules/mf-search.js', 'tests/js/test_beta_opensearch.js',
-				'javascripts/common/mf-settings.js', 'tests/js/test_settings.js',
-				'javascripts/modules/mf-toggle.js', 'tests/js/test_toggle.js',
-				'javascripts/modules/mf-toggle-dynamic.js',
-				'javascripts/actions/mf-edit.js', 'tests/js/test_mf-edit.js',
-				'javascripts/common/mf-navigation.js',
-				'tests/js/common/mf-navigation.js',
-				'javascripts/common/mf-notification.js',
-
-				// special mobilediff
-				'javascripts/externals/jsdiff.js',
-				'javascripts/specials/mobilediff.js', 'tests/js/specials/mobilediff.js',
-
-				'javascripts/modules/mf-photo.js', 'tests/js/test_mf-photo.js',
-				'javascripts/modules/mf-references.js', 'tests/js/test_references.js',
-				'javascripts/modules/mf-watchstar.js', 'tests/js/test_mf-watchstar.js',
-				'javascripts/modules/mf-last-modified.js', 'tests/js/test_mf-last-modified.js',
-				'javascripts/views/page.js', 'tests/js/views/page.js',
-
-				'javascripts/widgets/carousel.js', 'tests/js/widgets/carousel.js',
-				'javascripts/specials/uploads.js', 'tests/js/specials/uploads.js',
-				),
-				'dependencies' => array( ),
-				'localBasePath' => dirname( dirname( __FILE__ ) ),
-				'remoteExtPath' => 'MobileFrontend',
+				'tests/javascripts/fixtures.js',
+			),
 		);
+
+		// find test files for every RL module
+		foreach ( $wgResourceModules as $key => $module ) {
+			if ( substr( $key, 0, 7 ) === 'mobile.' && isset( $module['scripts'] ) ) {
+				$testFiles = array();
+				foreach ( $module['scripts'] as $script ) {
+					$testFile = 'tests/' . dirname( $script ) . '/test_' . basename( $script );
+					// if a test file exists for a given JS file, add it
+					if ( file_exists( $testModuleBoilerplate['localBasePath'] . '/' . $testFile ) ) {
+						$testFiles[] = $testFile;
+					}
+				}
+				// if test files exist for given module, create a corresponding test module
+				if ( !empty( $testFiles ) ) {
+					$testModules['qunit']["$key.tests"] = $testModuleBoilerplate + array(
+						'dependencies' => array( '0.mobile.tests.base', $key ),
+						'scripts' => $testFiles,
+					);
+				}
+			}
+		}
+
 		return true;
 	}
 

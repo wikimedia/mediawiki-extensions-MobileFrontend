@@ -2,19 +2,20 @@
 
 QUnit.module( 'MobileFrontend: mf-navigation.js' );
 
-QUnit.test( 'Simple overlay', 2, function() {
+QUnit.test( 'Simple overlay', 1, function() {
 	var overlay = new nav.Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
 	overlay.show();
 	strictEqual( overlay.$el[0].parentNode, document.body, 'In DOM' );
-	strictEqual( overlay.$el.html(), '<h2>Title</h2>/Text' );
+	overlay.hide();
 } );
 
-QUnit.test( 'HTML overlay', 1, function() {
+QUnit.test( 'HTML overlay', 2, function() {
 	var overlay = new nav.Overlay( {
-		heading: '<div>Awesome: <input></div>',
+		heading: '<div id="test">Awesome: <input></div>',
 		content: '<div class="content">YO</div>'
 	} );
-	strictEqual( overlay.$el.html(), '<div>Awesome: <input></div>/<div class="content">YO</div>' );
+	strictEqual( overlay.$el.find( '#test' ).html(), 'Awesome: <input>' );
+	strictEqual( overlay.$el.find( '.content' ).text(), 'YO' );
 } );
 
 QUnit.test( 'Close overlay', 1, function() {
@@ -41,6 +42,7 @@ QUnit.test( 'Stacked overlays', 6, function() {
 	strictEqual( overlayTwo.$el[0].parentNode, null, 'No longer in DOM' );
 	strictEqual( overlay.$el[0].parentNode, document.body, 'Still in DOM' );
 	strictEqual( $( 'html' ).hasClass( 'overlay' ), true, 'Still in overlay mode' );
+	overlay.hide();
 } );
 
 

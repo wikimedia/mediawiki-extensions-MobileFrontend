@@ -45,21 +45,18 @@ QUnit.test( '#needsPhoto', function() {
 
 QUnit.test( 'PhotoUploadProgress', 3, function() {
 	var progressPopup = new photo._PhotoUploadProgress();
-	strictEqual(
-		progressPopup.$( '.wait' ).text(),
-		'<mobile-frontend-image-uploading-wait>',
+	ok(
+		progressPopup.$( '.wait' ).text().match( /wait/ ),
 		'set initial wait message'
 	);
 	this.clock.tick( 11000 );
-	strictEqual(
-		progressPopup.$( '.wait' ).text(),
-		'<mobile-frontend-image-uploading-long>',
+	ok(
+		progressPopup.$( '.wait' ).text().match( /still/ ),
 		'set secondary wait message'
 	);
 	this.clock.tick( 11000 );
-	strictEqual(
-		progressPopup.$( '.wait' ).text(),
-		'<mobile-frontend-image-uploading-wait>',
+	ok(
+		progressPopup.$( '.wait' ).text().match( /wait/ ),
 		'set initial wait message again'
 	);
 } );

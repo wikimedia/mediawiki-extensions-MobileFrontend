@@ -1,1 +1,4 @@
 Deny from all
+<FilesMatch "\.js$">
+	Allow from all
+</FilesMatch>

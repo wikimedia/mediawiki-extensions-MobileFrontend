@@ -1,7 +1,7 @@
 .PHONY: less
 
 jshinttests:
-	jshint tests/js/* --config .jshintrc
+	jshint tests/javascripts/* --config .jshintrc
 
 jshint: jshinttests
 	jshint javascripts/* --config .jshintrc
@@ -16,7 +16,7 @@ phpunit:
 	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend
 
 qunit:
-	@tests/qunit.sh
+	@scripts/qunit.sh
 
 tests: jshint phpunit qunit
 
