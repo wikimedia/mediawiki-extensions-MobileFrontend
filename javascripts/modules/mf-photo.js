@@ -417,7 +417,12 @@
 	}
 
 	if ( isSupported() ) {
-		M.on( 'page-loaded', initialize );
+		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
+		if ( M.getConfig( 'beta' ) ) {
+			M.on( 'page-loaded', initialize );
+		} else {
+			$( initialize );
+		}
 	}
 
 	M.define( 'photo', {
