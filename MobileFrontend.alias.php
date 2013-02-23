@@ -103,3 +103,13 @@ $specialPageAliases['scn'] = array(
 	'MobileFeedback' => array( 'FeedbackMobile' ),
 	'MobileOptions' => array( 'OpzioniMobile' ),
 );
+
+/** Simplified Chinese (中文（简体）‎) */
+$specialPageAliases['zh-hans'] = array(
+	'MobileFeedback' => array( '移动版反馈' ),
+	'MobileOptions' => array( '移动版选项' ),
+	'DonateImage' => array( '捐赠图像' ),
+	'MobileDiff' => array( '移动版差异' ),
+	'MobileMenu' => array( '移动版菜单' ),
+	'Nearby' => array( '附近' ),
+);
