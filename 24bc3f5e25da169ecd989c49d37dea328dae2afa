@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnQ5J72A",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-23T01:01:45Z",
+      "side": 1,
+      "message": "I\u0027m wondering if $headMsg couldn\u0027t just be a type of $message. And we could show the watermark always.",
+      "revId": "24bc3f5e25da169ecd989c49d37dea328dae2afa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dnc5714g",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-23T01:01:45Z",
+      "side": 1,
+      "message": "Same as in UserAccountCreateMobileTemplate.php.",
+      "revId": "24bc3f5e25da169ecd989c49d37dea328dae2afa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
