@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dna4Pe.E",
+        "filename": "includes/skins/UserAccountCreateMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-23T02:12:38Z",
+      "side": 1,
+      "message": "The mockups are different for where $headMsg and $message go - plus $message is essentially always treated as an error (it\u0027s something that comes back from the form post). I thought about combining these, but the more I thought about, the less sense it made.",
+      "parentUuid": "DnQ5J72A",
+      "revId": "24bc3f5e25da169ecd989c49d37dea328dae2afa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dnc5714g",
         "filename": "includes/skins/UserLoginMobileTemplate.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-23T01:01:45Z",
       "side": 1,
       "message": "Same as in UserAccountCreateMobileTemplate.php.",
+      "revId": "24bc3f5e25da169ecd989c49d37dea328dae2afa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DnY4Uv-Q",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-02-23T02:12:38Z",
+      "side": 1,
+      "message": "Same",
+      "parentUuid": "Dnc5714g",
       "revId": "24bc3f5e25da169ecd989c49d37dea328dae2afa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
