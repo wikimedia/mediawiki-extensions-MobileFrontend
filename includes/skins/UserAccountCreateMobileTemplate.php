@@ -18,12 +18,17 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 		// handle captcha
 		$captcha = $this->handleCaptcha( $this->data['header'] );
+		$headMsg = $this->getHeadMsg();
 
 		MobileContext::singleton()->getSkin()->addArticleClass( 'noMargins' );
 
 		$accountCreation = Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate' ) );
 
 		// @TODO refactor this into base class
+		if ( $headMsg ) {
+			$msgBox .= Html::Element( 'div', array( 'class' => 'headmsg' ), $headMsg );
+		}
+
 		if ( $message ) {
 			$heading = '';
 			$class = 'alert';
@@ -37,7 +42,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			$msgBox .= $message;
 			$msgBox .= Html::closeElement( 'div' );
 		} else {
-			$msgBox = Html::rawElement( 'div', array(
+			$msgBox .= Html::rawElement( 'div', array(
 				'class' => 'watermark' ) );
 		}
 

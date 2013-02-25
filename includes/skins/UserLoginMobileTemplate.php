@@ -16,6 +16,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		$message = $this->data['message'];
 		$messageType = $this->data['messagetype'];
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
+		$headMsg = $this->getHeadMsg();
 
 		MobileContext::singleton()->getSkin()->addArticleClass( 'noMargins' );
 
@@ -38,6 +39,10 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 
 		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login' ) );
 
+		if ( $headMsg ) {
+			$msgBox .= Html::Element( 'div', array( 'class' => 'headmsg' ), $headMsg );
+		}
+
 		if ( $message ) {
 			$heading = '';
 			$class = 'alert';
@@ -51,7 +56,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			$msgBox .= $message;
 			$msgBox .= Html::closeElement( 'div' );
 		} else {
-			$msgBox = Html::rawElement( 'div', array(
+			$msgBox .= Html::rawElement( 'div', array(
 				'class' => 'watermark' ) );
 		}
 

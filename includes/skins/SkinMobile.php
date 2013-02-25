@@ -258,17 +258,8 @@ class SkinMobile extends SkinMobileBase {
 	 * @return string
 	 */
 	protected function getLoginPageHeading() {
-		$req = $this->getRequest();
-		if ( $req->getVal( 'returnto' ) && ( $title = Title::newFromText( $req->getVal( 'returnto' ) ) ) ) {
-			list( $returnto, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
-		} else {
-			$returnto = '';
-		}
-
-		if ( $req->getVal( 'type' ) == 'signup' ) {
+		if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
 			$key = 'mobile-frontend-sign-up-heading';
-		} else if ( $returnto == 'DonateImage' ) {
-			$key = 'mobile-frontend-donate-image-login';
 		} else {
 			$key = 'mobile-frontend-sign-in-heading';
 		}

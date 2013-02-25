@@ -12,6 +12,19 @@
   background-image: url(images/W.png);
   background-repeat: no-repeat;
 }
+#mw-mf-login .headmsg,
+#mw-mf-accountcreate .headmsg {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  color: #252525;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+#mw-mf-login .headmsg {
+  margin-left: 40px;
+  margin-right: 40px;
+}
 #mw-mf-accountcreate,
 #userloginForm {
   margin-left: 40px;
