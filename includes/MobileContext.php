@@ -27,7 +27,7 @@ class MobileContext extends ContextSource {
 
 	private $forceMobileView = false;
 	/** @var boolean whether to render as an overlay skin or an article skin */
-	private $isOverlay = true;
+	private $isOverlay = false;
 	private $forceLeftMenu = false;
 	private $contentTransformations = true;
 	private $mobileView = null;

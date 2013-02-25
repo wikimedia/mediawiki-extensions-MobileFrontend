@@ -25,11 +25,6 @@
   margin-left: 40px;
   margin-right: 40px;
 }
-#mw-mf-accountcreate,
-#userloginForm {
-  margin-left: 40px;
-  margin-right: 40px;
-}
 #mw-mf-accountcreate .alert {
   margin-left: 0;
   margin-right: 0;
@@ -124,6 +119,8 @@ form#userlogin2 #wpCreateaccount {
   font-size: 1em;
 }
 #mw-returnto {
+  padding-top: 2em;
+  height: 100%;
   z-index: 2;
   position: absolute;
   top: 0;

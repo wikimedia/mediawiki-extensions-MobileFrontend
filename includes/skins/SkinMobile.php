@@ -713,11 +713,15 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'notice' ) ?>
 		<?php $this->renderArticleHeader() ?>
 	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
+		<?php if ( !$this->data[ 'isSpecialPage' ] ) { ?>
 			<div id="content" class="content">
+		<?php } ?>
 			<?php $this->html( 'prebodytext' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
 			<?php $this->html( 'postbodytext' ) ?>
+		<?php if ( !$this->data[ 'isSpecialPage' ] ) { ?>
 			</div><!-- close #content -->
+		<?php } ?>
 	</div><!-- close #content_wrapper -->
 		<?php
 		if ( !$this->data[ 'isSpecialPage' ] ) {
@@ -741,9 +745,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<div id="mw-mf-overlay">
 			<?php $this->renderOverlayHeader() ?>
 				<div id="content_wrapper" class="<?php $this->html( 'articleClass' ); ?>">
-					<div class="content">
 					<?php $this->html( 'bodytext' ) ?>
-					</div>
 				</div>
 			</div>
 		<?php

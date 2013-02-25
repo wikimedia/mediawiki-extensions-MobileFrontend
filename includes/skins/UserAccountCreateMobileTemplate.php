@@ -20,9 +20,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		$captcha = $this->handleCaptcha( $this->data['header'] );
 		$headMsg = $this->getHeadMsg();
 
-		MobileContext::singleton()->getSkin()->addArticleClass( 'noMargins' );
-
-		$accountCreation = Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate' ) );
+		$accountCreation = Html::openElement( 'div', array( 'id' => 'mw-mf-accountcreate', 'class' => 'content' ) );
 
 		// @TODO refactor this into base class
 		if ( $headMsg ) {

@@ -25,7 +25,6 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 				$this->msg( 'mobile-frontend-donate-image-anon' )->parse() .
 				'</div>';
 		} else {
-			$mobileSkin->addArticleClass( 'noMargins' );
 			$uploadCount = $this->getUserUploadCount( $user->getName() );
 			$html = '';
 			if ( $uploadCount !== false ) {

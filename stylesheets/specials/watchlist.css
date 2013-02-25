@@ -1,36 +1,18 @@
-#content_wrapper.watchlist {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-#content_wrapper.watchlist a.button {
-  width: 100%;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-#content_wrapper.watchlist p.empty {
-  text-align: center;
-  background: none;
-}
-#content_wrapper.watchlist .mw-mf-watchlist-selector {
+.mw-mf-watchlist-selector {
   border-bottom: 1px solid #e2e2e2;
 }
-#content_wrapper.watchlist .mw-mf-watchlist-selector li {
+.mw-mf-watchlist-selector li {
   text-align: center;
   display: inline-block;
   border-left: 1px solid #e2e2e2;
   width: 25%;
   margin: 0 0 0 -1px;
 }
-#content_wrapper.watchlist .mw-mf-watchlist-selector li.selected a {
+.mw-mf-watchlist-selector li.selected a {
   font-weight: bold;
   border-bottom-color: #3366bb;
 }
-#content_wrapper.watchlist .mw-mf-watchlist-selector li a {
+.mw-mf-watchlist-selector li a {
   display: block;
   color: #58595b;
   padding: 5px 0 0;
