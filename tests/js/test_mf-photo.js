@@ -2,12 +2,26 @@
 
 var photo = M.require( 'photo' ),
 	articles = [
-		[ $( '<div><div id="content_0"></div></div>' ), true ], // blank content_0 section
-		[ $( '<div><div id="content_1"><table class="infobox"></div>' ), true ], // infobox
-		[ $( '<div><div id="content_0"><table class="infobox"></div></div>' ), false ], // infobox
-		[ $( '<div><div id="content_1"><table class="navbox"></div></div>' ), true ], // nav box
-		[ $( '<div><div id="content_0"><table class="navbox"></div></div>' ), false ], // nav box
-		[ $( '<div><div id="content_0"><div class="thumb"><img></div></div></div>' ), false ] // lead section with thumbnail
+		// blank #content_0
+		[ $( '<div><div id="content_0"></div></div>' ), true ],
+		// infobox in #content_1
+		[ $( '<div><div id="content_0"></div><div id="content_1"><table class="infobox"></div>' ), true ],
+		// infobox in #content_0
+		[ $( '<div><div id="content_0"><table class="infobox"></div></div>' ), false ],
+		// navbox in #content_1
+		[ $( '<div><div id="content_0"></div><div id="content_1"><table class="navbox"></div></div>' ), true ],
+		// navbox in #content_0
+		[ $( '<div><div id="content_0"><table class="navbox"></div></div>' ), false ],
+		// thumbnail in #content_0
+		[ $( '<div><div id="content_0"><div class="thumb"><img></div></div></div>' ), false ],
+		// no #content_0 and no thumbnail, infobox or navbox
+		[ $( '<div><p></p><div>' ), true ],
+		// no #content_0 and a thumbnail
+		[ $( '<div><div class="thumb"><img></div><div>' ), false ],
+		// no #content_0 and an infobox
+		[ $( '<div><table class="infobox"><div>' ), false ],
+		// no #content_0 and a navbox
+		[ $( '<div><table class="navbox"><div>' ), false ]
 	];
 
 module( 'MobileFrontend photo', {

@@ -6,13 +6,18 @@
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		nav = M.require( 'navigation' ),
 		popup = M.require( 'notifications' ),
-		$page = $( '#content' ),
 		endpoint = M.getConfig( 'photo-upload-endpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
 		PhotoApi, PhotoUploaderPreview, LeadPhoto, PhotoUploadProgress, PhotoUploader;
 
 	function needsPhoto( $container ) {
-		return $container.find( '#content_0' ).find( '.thumb img, .navbox, .infobox' ).length === 0;
+		var $content_0 = $container.find( '#content_0' );
+		// workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
+		if ( $content_0.length ) {
+			$container = $content_0;
+		}
+
+		return $container.find( '.thumb img, .navbox, .infobox' ).length === 0;
 	}
 
 	function isSupported() {
@@ -387,9 +392,11 @@
 		var namespaceIds = mw.config.get( 'wgNamespaceIds' ),
 			namespace = mw.config.get( 'wgNamespaceNumber' ),
 			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user ),
+			$page = $( '#content' ),
+			$pageHeading = $page.find( 'h1' ),
 			photoUploader;
 
-		if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $( '#content' ) ) ) {
+		if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $page ) ) {
 			return;
 		}
 
@@ -399,7 +406,7 @@
 			pageTitle: M.getConfig( 'title' ),
 			funnel: 'article'
 		} ).
-			insertAfter( $page.find( 'h1' ) ).
+			insertAfter( $pageHeading ).
 			on( 'start', function() {
 				photoUploader.remove();
 			} ).
@@ -409,10 +416,10 @@
 					url: data.url,
 					pageUrl: data.descriptionUrl,
 					caption: data.description
-				} ).prependTo( '#content_0' ).animate();
+				} ).insertAfter( $pageHeading ).animate();
 			} ).
 			on( 'error', function() {
-				photoUploader.insertAfter( $page.find( 'h1' ) );
+				photoUploader.insertAfter( $pageHeading );
 			} );
 	}
 
