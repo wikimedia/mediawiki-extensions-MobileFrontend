@@ -1,3 +1,5 @@
+@import "../mf-variables.less";
+
 .ctaUploadPhoto {
 	padding: 8px;
 	background-color: #F3F3F3;
@@ -13,7 +15,7 @@
 ul.mobileUserGallery {
 	// FIXME: this shouldn't be needed with reset.css
 	list-style: none;
-	margin: 20px 0;
+	margin: 20px @contentMarginRight 0 @contentMarginLeft;
 
 	li {
 		text-align: center;

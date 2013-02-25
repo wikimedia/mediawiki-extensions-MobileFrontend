@@ -10,7 +10,7 @@
 }
 ul.mobileUserGallery {
   list-style: none;
-  margin: 20px 0;
+  margin: 20px 23px 0 23px;
 }
 ul.mobileUserGallery li {
   text-align: center;
