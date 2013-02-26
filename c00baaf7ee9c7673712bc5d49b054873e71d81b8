@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnZM5fj8",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-26T20:20:23Z",
+      "side": 1,
+      "message": "for future reference use !\u003d\u003d rather than !\u003d as this will consider type - this is a good habit to get into",
+      "revId": "c00baaf7ee9c7673712bc5d49b054873e71d81b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
