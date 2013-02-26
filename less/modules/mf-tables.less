@@ -10,6 +10,7 @@
 	table.expando {
 		position: relative;
 		overflow: hidden;
+		padding-bottom: 30px;
 
 		tbody {
 			margin-top: 30px;
@@ -40,6 +41,13 @@
 
 			tr.expandoVertical {
 				bottom: 0;
+
+				&.expanded {
+					td {
+						-webkit-transform: rotate(180deg);
+						transform: rotate(180deg);
+					}
+				}
 
 				td {
 					text-indent: -999px;
