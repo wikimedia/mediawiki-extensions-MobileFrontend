@@ -217,7 +217,7 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
-$wgResourceModules['mobile.beta.dependencies'] = array(
+$wgResourceModules['mobile.stable.dependencies'] = array(
 	'messages' => array(
 		// mf-photo.js
 		'mobile-frontend-photo-license' => array( 'parse' ),
@@ -230,17 +230,13 @@ $wgResourceModules['mobile.beta.dependencies'] = array(
 		'photoUploadPreview',
 	),
 	'class' => 'MFResourceLoaderModule',
-	'mobileTargets' => array( 'beta', 'alpha' ),
+	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
 $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.stable',
-		'mobile.beta.dependencies',
 		'mediawiki.jqueryMsg',
-	),
-	'styles' => array(
-		'stylesheets/modules/mf-photo.css',
 	),
 	'scripts' => array(
 		'javascripts/common/mf-history-jquery.js',
@@ -248,7 +244,6 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-languages.js',
 		'javascripts/modules/mf-last-modified.js',
-		'javascripts/modules/mf-photo.js',
 	),
 	'position' => 'bottom',
 	'messages' => array(
@@ -265,21 +260,6 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		// for mf-toggle-dynamic.js
 		'mobile-frontend-show-button',
 		'mobile-frontend-hide-button',
-
-		// mf-photo.js
-		'mobile-frontend-photo-article-edit-comment',
-		'mobile-frontend-photo-article-donate-comment',
-		'mobile-frontend-photo-upload-error',
-		'mobile-frontend-photo-upload-success-article',
-		'mobile-frontend-photo-caption-placeholder',
-		'mobile-frontend-image-loading',
-		'mobile-frontend-image-uploading-wait',
-		'mobile-frontend-image-uploading-long',
-		'mobile-frontend-image-uploading-cancel',
-		'mobile-frontend-photo-upload',
-		'mobile-frontend-photo-upload-comment',
-		'mobile-frontend-photo-submit',
-		'mobile-frontend-photo-cancel',
 
 		// for mf-languages.js
 		'mobile-frontend-language-site-choose',
@@ -370,11 +350,16 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 );
 
 $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array( 'mobile.startup' ),
+	'dependencies' => array(
+		'mobile.startup',
+		'mobile.stable.dependencies',
+		'mediawiki.util',
+	),
 	'styles' => array(
 		'stylesheets/modules/mf-references.css',
 		'stylesheets/modules/mf-cleanuptemplates.css',
 		'stylesheets/modules/mf-watchlist.css',
+		'stylesheets/modules/mf-photo.css',
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
@@ -386,6 +371,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-watchlist.js',
+		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-references.js'
 	),
 	'messages' => array(
@@ -403,6 +389,21 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-watchlist-cta',
 		'mobile-frontend-watchlist-cta-button-signup',
 		'mobile-frontend-watchlist-cta-button-login',
+
+		// mf-photo.js
+		'mobile-frontend-photo-article-edit-comment',
+		'mobile-frontend-photo-article-donate-comment',
+		'mobile-frontend-photo-upload-error',
+		'mobile-frontend-photo-upload-success-article',
+		'mobile-frontend-photo-caption-placeholder',
+		'mobile-frontend-image-loading',
+		'mobile-frontend-image-uploading-wait',
+		'mobile-frontend-image-uploading-long',
+		'mobile-frontend-image-uploading-cancel',
+		'mobile-frontend-photo-upload',
+		'mobile-frontend-photo-upload-comment',
+		'mobile-frontend-photo-submit',
+		'mobile-frontend-photo-cancel',
 	),
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
