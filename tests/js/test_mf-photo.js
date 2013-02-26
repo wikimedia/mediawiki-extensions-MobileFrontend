@@ -21,7 +21,9 @@ var photo = M.require( 'photo' ),
 		// no #content_0 and an infobox
 		[ $( '<div><table class="infobox"><div>' ), false ],
 		// no #content_0 and a navbox
-		[ $( '<div><table class="navbox"><div>' ), false ]
+		[ $( '<div><table class="navbox"><div>' ), false ],
+		// no #content_0, image not in .thumb (happens on main pages)
+		[ $( '<div><img><div>' ), false ]
 	];
 
 module( 'MobileFrontend photo', {

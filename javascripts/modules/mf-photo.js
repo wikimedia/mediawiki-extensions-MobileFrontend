@@ -17,7 +17,7 @@
 			$container = $content_0;
 		}
 
-		return $container.find( '.thumb img, .navbox, .infobox' ).length === 0;
+		return $container.find( 'img, .navbox, .infobox' ).length === 0;
 	}
 
 	function isSupported() {
@@ -432,7 +432,7 @@
 			} );
 	}
 
-	if ( isSupported() ) {
+	if ( isSupported() && M.getConfig( 'can_edit' ) ) {
 		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
 		if ( M.getConfig( 'beta' ) ) {
 			M.on( 'page-loaded', initialize );
