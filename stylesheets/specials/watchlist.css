@@ -118,7 +118,8 @@ ul.mw-mf-watchlist-results li .mw-mf-time {
 ul.mw-mf-watchlist-results li .mw-mf-user {
   margin: .5em 0 0;
 }
-body.beta ul.mw-mf-watchlist-results li a.title {
+.beta ul.mw-mf-watchlist-results li a.title,
+.alpha ul.mw-mf-watchlist-results li a.title {
   padding-left: 77px;
 }
 #mw-mf-diffview h2 {
