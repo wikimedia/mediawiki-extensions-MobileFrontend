@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-RUBY_VER="ruby-1.9.3-p385"
+RUBY_VER="ruby-2.0.0-p0"
 
 if ! rvm list | grep "$RUBY_VER" > /dev/null; then
   rvm install $RUBY_VER
