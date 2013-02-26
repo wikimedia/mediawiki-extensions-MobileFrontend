@@ -56,17 +56,28 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	 * @param array $tables
 	 * @param array $fields
 	 * @param array $join_conds
+	 * @param $baseTable
+	 *
+	 * @return void
 	 */
-	protected function doPageImages( array &$tables, array &$fields, array &$join_conds ) {
+	protected function doPageImages( array &$tables, array &$fields, array &$join_conds, $baseTable ) {
 		if ( !$this->usePageImages ) {
 			return;
+		}
+		if ( $baseTable === 'page' ) {
+			if ( !in_array( 'page', $tables ) ) {
+				$tables[] = 'page';
+			}
+			$idField = 'page_id';
+		} else { // recentchanges
+			$idField = 'rc_cur_id';
 		}
 		$tables[] = 'page_props';
 		$fields[] = 'pp_value';
 		$join_conds['page_props'] = array(
 			'LEFT JOIN',
 			array(
-				'pp_page=page_id',
+				"pp_page=$idField",
 				'pp_propname' => 'page_image',
 			),
 		);
@@ -188,7 +199,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			}
 		}
 
-		$this->doPageImages( $tables, $fields, $join_conds );
+		$this->doPageImages( $tables, $fields, $join_conds, 'recentchanges' );
 
 		switch( $this->filter ) {
 		case 'all':
@@ -244,7 +255,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			'ORDER BY' => 'wl_namespace, wl_title'
 		);
 
-		$this->doPageImages( $tables, $fields, $joinConds );
+		$this->doPageImages( $tables, $fields, $joinConds, 'page' );
 
 		$options['LIMIT'] = self::LIMIT + 1; // add one to decide whether to show the more button
 
@@ -364,7 +375,25 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		return $this->getLanguage()->date( $ts, true );
 	}
 
-	function showFeedResultRow( $row ) {
+	private function renderThumb( $row ) {
+		if ( $this->usePageImages && !is_null( $row->pp_value ) ) {
+			$file = wfFindFile( $row->pp_value );
+			if ( $file ) {
+				$thumb = $file->transform( array( 'width' => self::THUMB_SIZE, 'height' => self::THUMB_SIZE ) );
+				if ( $thumb ) {
+					return Html::element( 'div',
+						array(
+							'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' ),
+							'style' => 'background-image: url("' . wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
+						)
+					);
+				}
+			}
+		}
+		return '';
+	}
+
+	private function showFeedResultRow( $row ) {
 		$output = $this->getOutput();
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
@@ -406,6 +435,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 			'<li>' .
 			Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) ) .
+			$this->renderThumb( $row ) .
 			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => $usernameClass ), $username ).
 			Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
@@ -415,7 +445,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		);
 	}
 
-	function showListResultRow( $row ) {
+	private function showListResultRow( $row ) {
 		$output = $this->getOutput();
 
 		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
@@ -423,26 +453,10 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$ts = new MWTimestamp( $row->rev_timestamp );
 		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
 
-		$thumbHtml = '';
-		if ( $this->usePageImages && !is_null( $row->pp_value ) ) {
-			$file = wfFindFile( $row->pp_value );
-			if ( $file ) {
-				$thumb = $file->transform( array( 'width' => self::THUMB_SIZE, 'height' => self::THUMB_SIZE ) );
-				if ( $thumb ) {
-					$thumbHtml = Html::element( 'div',
-						array(
-							'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' ),
-							'style' => 'background-image: url("' . wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
-						)
-					);
-				}
-			}
-		}
-
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
-			$thumbHtml .
+			$this->renderThumb( $row ) .
 			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $lastModified ) .
 			Html::closeElement( 'a' ) .
