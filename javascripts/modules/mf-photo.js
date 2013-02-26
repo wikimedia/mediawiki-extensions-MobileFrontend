@@ -23,7 +23,9 @@
 	function isSupported() {
 		// FIXME: create a module for browser detection stuff
 		var browserSupported = (
-			typeof FileReader !== 'undefined' && typeof FormData !== 'undefined'
+			typeof FileReader !== 'undefined' &&
+			typeof FormData !== 'undefined' &&
+			($('<input type="file"/>').prop('type') === 'file') // Firefox OS 1.0 turns <input type="file"> into <input type="text">
 		);
 
 		return (
