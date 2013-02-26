@@ -92,8 +92,6 @@
 
 				formData.append( 'action', 'upload' );
 				formData.append( 'format', 'json' );
-				// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
-				formData.append( 'useformat', 'mobile' );
 				// add origin only when doing CORS
 				if ( endpoint ) {
 					formData.append( 'origin', M.getOrigin() );
@@ -110,7 +108,8 @@
 
 				self.post( formData, {
 					// iOS seems to ignore the cache parameter so sending r parameter
-					url: apiUrl + '?r=' + Math.random(),
+					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
+					url: apiUrl + '?useformat=mobile&r=' + Math.random(),
 					xhrFields: { 'withCredentials': true },
 					cache: false,
 					contentType: false,
