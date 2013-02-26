@@ -71,7 +71,7 @@
 					action: 'edit',
 					title: options.pageTitle,
 					token: tokenData.tokens.edittoken,
-					comment: mw.msg( 'mobile-frontend-photo-upload-comment' ),
+					summary: mw.msg( 'mobile-frontend-photo-upload-comment' ),
 					prependtext: '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n'
 				} ).done( callback );
 			} );
