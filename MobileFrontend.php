@@ -432,7 +432,10 @@ $wgResourceModules['mobile.desktop'] = array(
   * @see ExtMobileFrontend::registerMobileSpecialPageModules()
   */
 $wgMFSpecialModuleStubs = array(
-	'mobilediff' => array( 'alias' => 'watchlist' ),
+	'mobilediff' => array(
+		'alias' => 'watchlist',
+		'dependencies' => array( 'mobile.stable' ),
+	),
 	'mobilefeedback' => array( 'css' => true ),
 	'mobileoptions' => array( 'css' => true, 'js' => true ),
 	'nearby' => array( 'js' => true,
