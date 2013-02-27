@@ -1,6 +1,7 @@
 ( function( M,  $ ) {
 var m = ( function() {
-	var randomPageReq;
+	var randomPageReq,
+		isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) ===  mw.config.get( 'wgNamespaceIds' ).special;
 
 	function makeHeader( articles ) {
 		var $list, $c;
@@ -62,7 +63,7 @@ var m = ( function() {
 	}
 
 	return {
-		init: M.history.supportsHistoryApi ? init : $.noop
+		init: M.history.supportsHistoryApi && !isSpecialPage ? init : $.noop
 	};
 }() );
 
