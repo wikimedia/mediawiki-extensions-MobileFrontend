@@ -113,3 +113,13 @@ $specialPageAliases['zh-hans'] = array(
 	'MobileMenu' => array( '移动版菜单' ),
 	'Nearby' => array( '附近' ),
 );
+
+/** Traditional Chinese (中文（繁體）‎) */
+$specialPageAliases['zh-hant'] = array(
+	'MobileFeedback' => array( '手機版意見' ),
+	'MobileOptions' => array( '手機版選項' ),
+	'DonateImage' => array( '捐贈圖像' ),
+	'MobileDiff' => array( '手機版差異' ),
+	'MobileMenu' => array( '手機版選單' ),
+	'Nearby' => array( '附近' ),
+);
