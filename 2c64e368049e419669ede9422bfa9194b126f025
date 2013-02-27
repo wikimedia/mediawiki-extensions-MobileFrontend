@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnQiQsUg",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-27T20:09:11Z",
+      "side": 1,
+      "message": "Why this change?",
+      "revId": "2c64e368049e419669ede9422bfa9194b126f025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DnWiqhXQ",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-27T20:09:11Z",
+      "side": 1,
+      "message": "Why not move this to the line where you declare the var?",
+      "revId": "2c64e368049e419669ede9422bfa9194b126f025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
