@@ -84,7 +84,7 @@
 				'mobile-frontend-photo-article-edit-comment' :
 				'mobile-frontend-photo-article-donate-comment';
 
-			self.getToken( 'edit', function( tokenData ) {
+			function doUpload( token ) {
 				var formData = new FormData(), descTextToAppend;
 				options.fileName = generateFileName( options.file, options.pageTitle );
 				descTextToAppend = M.getConfig( 'photoUploadAppendToDesc' );
@@ -101,7 +101,7 @@
 				formData.append( 'filename', options.fileName );
 				formData.append( 'comment', mw.msg( options.editSummaryMessage ) );
 				formData.append( 'file', options.file );
-				formData.append( 'token', tokenData.tokens.edittoken );
+				formData.append( 'token', token );
 				formData.append( 'text',
 					'== {{int:filedesc}} ==\n' + options.description +
 					descTextToAppend +
@@ -149,6 +149,19 @@
 						result.reject( status + ': ' + error );
 					}
 				} );
+			}
+			self.getToken( 'edit', function( tokenData ) {
+				var token;
+				if ( tokenData && tokenData.tokens ) {
+					token = tokenData.tokens.edittoken;
+					if ( token && token !== '+\\' ) { // ensure not anonymous..
+						doUpload( token );
+					} else {
+						result.reject( 'Anonymous or absent token' );
+					}
+				} else {
+					result.reject( 'Missing token' );
+				}
 			}, endpoint );
 
 			return result;
