@@ -115,7 +115,7 @@ $messages['en'] = array (
 	// account creation
 	'mobile-frontend-account-create-submit' => 'Sign up',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirm password',
-	'mobile-frontend-account-create-email-placeholder' => 'E-mail address (optional)',
+	'mobile-frontend-account-create-email-placeholder' => 'Email address (optional)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Enter security text',
 	// Search
 	'mobile-frontend-overlay-escape' => 'Go back',
