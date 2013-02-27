@@ -80,4 +80,14 @@ end
 
 Then /^Login page opens$/ do
   @browser.url.should match /Special:UserLogin/
+  @browser.url.should_not match /&type=signup/
+end
+
+When /^I click Sign up$/ do
+  on(HomePage).sign_up
+end
+
+Then /^Sign up page opens$/ do
+  @browser.url.should match /Special:UserLogin/
+  @browser.url.should match /&type=signup/
 end
