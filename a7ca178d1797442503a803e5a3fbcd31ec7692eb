@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnWh4RfA",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-27T20:40:49Z",
+      "side": 1,
+      "message": "Why would anyone get anonymous token? Session expired? Maybe a different message for this case?",
+      "revId": "a7ca178d1797442503a803e5a3fbcd31ec7692eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DnUh1ifY",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-27T20:40:49Z",
+      "side": 1,
+      "message": "\"Missing token\" instead?",
+      "revId": "a7ca178d1797442503a803e5a3fbcd31ec7692eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
