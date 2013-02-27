@@ -1,4 +1,4 @@
-( function( M ) {
+( function( M, $ ) {
 
 var toggle = ( function() {
 
@@ -90,11 +90,7 @@ var toggle = ( function() {
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
 			heading.insertBefore( createButton(), heading.firstChild );
-			a = document.getElementById( 'anchor_' + heading.id.split( '_' )[ 1 ] );
-			if( a ) {
-				u( a ).text( message( 'mobile-frontend-close-section' ) );
-				u( a ).bind( 'click', openSectionHandler );
-			}
+			$( '#anchor_' + heading.id.split( '_' )[ 1 ] ).remove();
 			u( heading ).bind( 'mousedown', openSectionHandler );
 		}
 		
@@ -124,4 +120,4 @@ var toggle = ( function() {
 
 M.define( 'toggle', toggle );
 
-}( mw.mobileFrontend ));
+}( mw.mobileFrontend, jQuery ) );

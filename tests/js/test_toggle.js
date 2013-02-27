@@ -27,13 +27,11 @@ test("wm_toggle_section", function() {
 	strictEqual($("#section_1").hasClass("openSection"), true, "openSection class present");
 	toggle.wm_toggle_section( '1' );
 	strictEqual($("#content_1").hasClass("openSection"), false, "check content is closed on a toggle");
-	strictEqual($("#anchor_1").hasClass("openSection"), false, "check anchor is closed on toggle");
 	strictEqual($("#section_1").hasClass("openSection"), false, "check section is closed");
 	
 	// perform second toggle
 	toggle.wm_toggle_section( '1' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content reopened");
-	strictEqual($("#anchor_1").hasClass("openSection"), true, "check anchor reopened");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section has reopened");
 });
 
@@ -46,14 +44,12 @@ test("clicking a hash link to reveal an already open section", function() {
 test("wm_reveal_for_hash", function() {
 	toggle.wm_reveal_for_hash( '#First_Section_2' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content is visible on a toggle");
-	strictEqual($("#anchor_1").hasClass("openSection"), true, "check anchor is visible on toggle");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section is marked as open");
 });
 
 test("clicking hash links", function() {
 	$( '[href=#First_Section_2]' ).trigger( 'click' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content is visible on a toggle");
-	strictEqual($("#anchor_1").hasClass("openSection"), true, "check anchor is visible on toggle");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section marked as open");
 });
 
@@ -79,14 +75,7 @@ module("MobileFrontend toggle.js (beta): closing sections", {
 });
 
 test("close a section", function() {
-	var startVisibility = $("#content_1").hasClass("openSection"), endVisibility,
-		closeLink = $("#anchor_1")[0];
-
-	$(closeLink).trigger("click");
-	endVisibility = $("#content_1").hasClass("openSection");
-	strictEqual($(closeLink).text(), MFE.message("mobile-frontend-close-section"), "text has been updated");
-	strictEqual(startVisibility, true, "it is open at start");
-	strictEqual(endVisibility, false, "clicking has hidden section content");
+	strictEqual( $( '#anchor_1' ).length, 0, 'check anchor is no longer present' );
 });
 
 }( jQuery, mw.mobileFrontend, mw.mobileFrontend.require( 'toggle' ) ) );
