@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnejnleU",
+        "filename": "stylesheets/less/specials/mobileoptions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-27T20:14:07Z",
+      "side": 1,
+      "message": "I would rather remove text-transform: lowercase; from .checkboxBtn() and change i18n (currently the strings are uppercase and we use css to make them lowercase, which just seems like doing things backwards),",
+      "revId": "aaf0ee34e32d7ce8f047c1465a6c552056521698",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
