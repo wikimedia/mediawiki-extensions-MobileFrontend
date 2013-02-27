@@ -18,7 +18,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$ctx = MobileContext::singleton();
 		$ctx->setOverlay( false );
-		$this->usePageImages = $ctx->isBetaGroupMember() && defined( 'PAGE_IMAGES_INSTALLED' );
+		$this->usePageImages = $ctx->isBetaGroupMember() && !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
 		// assumes mobile skin
 		$mobileSkin = $ctx->getSkin();
 		$mobileSkin->setHtmlHeader( $this->getWatchlistHeader() );
