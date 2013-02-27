@@ -16,6 +16,24 @@
       "revId": "aaf0ee34e32d7ce8f047c1465a6c552056521698",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DnegK9Xk",
+        "filename": "stylesheets/less/specials/mobileoptions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-27T20:32:48Z",
+      "side": 1,
+      "message": "As discussed i18n files should not introduce any sort of casing - they can differ.",
+      "parentUuid": "DnejnleU",
+      "revId": "aaf0ee34e32d7ce8f047c1465a6c552056521698",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
