@@ -2382,14 +2382,18 @@ $messages['cs'] = array(
 	'mobile-frontend-nearby-noresults' => 'Jste uprostřed ničeho a žádná témata jsme nedokázali najít. Proč o nějakém nenapsat?',
 	'mobile-frontend-nearby-refresh' => 'Upřesnili jsme vaši polohu. Kliknutím sem můžete aktualizovat seznam blízkých stránek',
 	'mobile-frontend-nearby-error' => 'Při hledání blízkých stránek došlo k neočekávané chybě',
-	'mobile-frontend-donate-image-login' => 'Přihlaste se, abyste mohli vidět své načtené soubory', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'Abyste mohli vidět své soubory, musíte se přihlásit.',
 	'mobile-frontend-photo-upload-generic' => 'Darujte obrázek',
 	'mobile-frontend-donate-image-title' => 'Darujte obrázek',
+	'mobile-frontend-listed-image-no-description' => 'Bez popisu',
+	'mobile-frontend-watchlist-add' => 'Stránka $1 přidána mezi sledované',
+	'mobile-frontend-watchlist-removed' => 'Stránka $1 odebrána ze sledovaných',
 	'mobile-frontend-watchlist-view' => 'Zobrazit seznam sledovaných stránek',
 	'mobile-frontend-watchlist-more' => 'další',
 	'mobile-frontend-watchlist-cta' => 'Pokud chcete sledovat tuto stránku, musíte se přihlásit nebo zaregistrovat.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Přihlásit se',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Zaregistrovat se',
+	'mobile-frontend-watch-login' => 'Abyste mohli sledovat stránky, musíte se přihlásit.',
 	'mobile-frontend-watchlist-a-z' => 'Vše',
 	'mobile-frontend-watchlist-feed' => 'Změněné',
 	'mobile-frontend-watchlist-a-z-empty' => 'V současné době žádné stránky nesledujete',
@@ -2403,11 +2407,28 @@ $messages['cs'] = array(
 	'mobile-frontend-watchlist-filter-talk' => 'Diskuse',
 	'mobile-frontend-watchlist-filter-other' => 'Jiné',
 	'mobile-frontend-watchlist-modified' => 'Změněno $1',
+	'mobile-frontend-diffview-404-title' => 'Chybná revize',
+	'mobile-frontend-diffview-404-desc' => 'Požadované ID revize neexistuje',
 	'mobile-frontend-diffview-title' => 'Změny',
+	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|editace|editace|editací}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonymní uživatel',
+	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Přidán $1 bajt|Přidány $1 bajty|Přidáno $1 bajtů}}',
+	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Odebrán $1 bajt|Odebrány $1 bajty|Odebráno $1 bajtů}}',
+	'mobile-frontend-diffview-explained' => 'Následující řádky byly přidány (+) a odebrány (-):',
 	'mobile-frontend-table' => 'Tabulka $1',
+	'mobile-frontend-saving-exit-page' => 'Váš příspěvek se stále ukládá. Pokud odejdete, budou vaše příspěvky ztraceny. Určitě chcete odejít?',
+	'mobile-frontend-photo-caption-placeholder' => 'Přidejte popis (povinné)',
+	'mobile-frontend-image-loading' => 'Načítá se obrázek',
+	'mobile-frontend-image-uploading-long' => 'Obrázek se stále načítá! Děkujeme za trpělivost.',
+	'mobile-frontend-image-uploading-cancel' => '<a href="#">Zrušit</a>, pokud to trvá příliš dlouho.',
+	'mobile-frontend-photo-upload-error' => 'Chyba, zkuste to znovu.',
+	'mobile-frontend-photo-upload-success-article' => 'Úspěch! Váš obrázek se nyní zobrazuje na této stránce.',
+	'mobile-frontend-photo-cancel' => 'Storno',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 načtený soubor|$1 načtené soubory|$1 načtených souborů}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ načtených souborů',
 	'tag-mobile_edit' => 'Mobilní editace',
 	'tag-mobile_edit-description' => 'Editace provedená ze stránek pro mobily',
+	'mobile-frontend-drawer-cancel' => 'Storno',
 );
 
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
@@ -4857,6 +4878,7 @@ $messages['ga'] = array(
 );
 
 /** Scottish Gaelic (Gàidhlig)
+ * @author Akerbeltz
  */
 $messages['gd'] = array(
 	'mobile-frontend-search-submit' => 'Rach',
@@ -4865,7 +4887,7 @@ $messages['gd'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Leum earrann air ais',
 	'mobile-frontend-show-button' => 'Seall',
 	'mobile-frontend-hide-button' => 'Falaich',
-	'mobile-frontend-regular-site' => 'Seall an duilleag seo air an Uicipeid àbhaisteach', # Fuzzy
+	'mobile-frontend-regular-site' => 'Sealladh desktop',
 	'mobile-frontend-featured-article' => 'Artaigil taghta an-diugh',
 );
 
@@ -8741,7 +8763,7 @@ $messages['ml'] = array(
 	'mobile-frontend-nearby-noresults' => 'താങ്കൾ ശൂന്യതയുടെ മദ്ധ്യത്തിലാണോ? ഞങ്ങൾക്ക് വിഷങ്ങളൊന്നും കണ്ടെത്താനായില്ല. എന്തുകൊണ്ടൊരെണ്ണം എഴുതിക്കൂടാ?',
 	'mobile-frontend-nearby-refresh' => 'താങ്കളുടെ കൂടുതൽ കൃത്യമായ സ്ഥാനം ഞങ്ങൾക്ക് കണ്ടെത്താനായി. താങ്കളുടെ സമീപസ്ഥമായ താളുകൾ പുതുക്കാനായി ഇവിടെ ഞെക്കുക',
 	'mobile-frontend-nearby-error' => 'താങ്കളുടെ സമീപസ്ഥമായ താളുകൾ കണ്ടുപിടിക്കുന്നതിനിടെ ഒരപ്രതീക്ഷിത പിഴവുണ്ടായി',
-	'mobile-frontend-donate-image-login' => 'താങ്കൾ അപ്‌ലോഡ് ചെയ്തവ കാണാൻ പ്രവേശിക്കുക', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'താങ്കൾ അപ്‌ലോഡ് ചെയ്തവ കാണണമെങ്കിൽ പ്രവേശിച്ചിരിക്കണം.',
 	'mobile-frontend-photo-upload-generic' => 'ഒരു ചിത്രം സംഭാവന ചെയ്യുക',
 	'mobile-frontend-donate-image-title' => 'ഒരു ചിത്രം സംഭാവന ചെയ്യുക',
 	'mobile-frontend-donate-image-summary' => 'ചിത്രങ്ങൾ {{SITENAME}} താളുകൾ ജീവസ്സുറ്റതാക്കുന്നു.
@@ -8760,6 +8782,7 @@ $messages['ml'] = array(
 	'mobile-frontend-watchlist-cta' => 'ഈ താൾ ശ്രദ്ധിക്കുന്നവയുടെ പട്ടികയിലേക്ക് ചേർക്കാൻ ലോഗിൻ ചെയ്യുക അല്ലെങ്കിൽ അംഗത്വമെടുക്കുക.',
 	'mobile-frontend-watchlist-cta-button-login' => 'പ്രവേശിക്കുക',
 	'mobile-frontend-watchlist-cta-button-signup' => 'അംഗത്വമെടുക്കുക',
+	'mobile-frontend-watch-login' => 'ശ്രദ്ധിക്കുന്ന താളുകൾ കാണണമെങ്കിൽ താങ്കൾ പ്രവേശിച്ചിരിക്കണം.',
 	'mobile-frontend-watchlist-a-z' => 'എല്ലാം',
 	'mobile-frontend-watchlist-feed' => 'പുതുക്കപ്പെട്ടവ',
 	'mobile-frontend-watchlist-a-z-empty' => 'താങ്കളിപ്പോൾ താളുകളൊന്നും ശ്രദ്ധിക്കുന്നില്ല',
@@ -11921,7 +11944,7 @@ $messages['sl'] = array(
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|urejanje|urejanji|urejanja|urejanj}}',
 	'mobile-frontend-diffview-anonymous' => 'Brezimni uporabnik',
 	'mobile-frontend-image-loading' => 'Prenašanje slike',
-	'mobile-frontend-image-uploading-wait' => 'Nalaganje slike, prosimo počakajte.', # Fuzzy
+	'mobile-frontend-image-uploading-wait' => 'Nalaganje slike; prosimo, počakajte.',
 	'mobile-frontend-photo-upload-error' => 'Napaka, poskusite znova.',
 	'mobile-frontend-photo-submit' => 'Potrdi',
 	'mobile-frontend-photo-cancel' => 'Prekliči',
@@ -13108,7 +13131,7 @@ $messages['uk'] = array(
 	'mobile-frontend-language-site-choose' => 'Пошук мови',
 	'mobile-frontend-username' => "Ім'я користувача:",
 	'mobile-frontend-password' => 'Пароль:',
-	'mobile-frontend-username-placeholder' => 'Ім`я користувача',
+	'mobile-frontend-username-placeholder' => "Ім'я користувача",
 	'mobile-frontend-password-placeholder' => 'Пароль',
 	'mobile-frontend-login' => 'Увійти',
 	'mobile-frontend-last-modified-date' => 'Останні зміни: $1, $2',
@@ -13165,7 +13188,7 @@ $messages['uk'] = array(
 	'mobile-frontend-nearby-noresults' => 'Ви знаходитесь в центрі невідомості і нам не вдалося знайти ніяких тем. Чому б не написати щось?',
 	'mobile-frontend-nearby-refresh' => 'Ми визначити Ваше місцеположення точніше. Натисніть тут, щоб оновити список найближчих сторінок',
 	'mobile-frontend-nearby-error' => "Сталася неочікувана помилка при спробі знайти сторінки, пов'язані з Вашим місцеперебуванням",
-	'mobile-frontend-donate-image-login' => 'Вхід для перегляду своїх завантажень',
+	'mobile-frontend-donate-image-login' => 'Вхід для перегляду своїх завантажень', # Fuzzy
 	'mobile-frontend-photo-upload-generic' => 'Пожертвувати зображення',
 	'mobile-frontend-donate-image-title' => 'Пожертвувати зображення',
 	'mobile-frontend-donate-image-summary' => 'Фотографії роблять сторінки проекту {{SITENAME}} живими.
