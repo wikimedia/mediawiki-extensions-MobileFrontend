@@ -41,6 +41,7 @@ form.mw-mf-settings ul li #mw-mf-settings-save {
   min-width: 50%;
   text-align: center;
   display: block;
+  text-transform: none;
 }
 form.mw-mf-settings ul li #mw-mf-settings-save:hover {
   text-decoration: none;
