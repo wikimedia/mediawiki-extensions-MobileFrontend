@@ -127,7 +127,8 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 		$output = $this->getOutput();
 
 		$output->addHtml(
-			Html::openElement( 'div', array( 'id' => 'mw-mf-userinfo' ) )
+			Html::openElement( 'div', array( 'id' => 'mw-mf-userinfo',
+				'class' => 'position-fixed' ) )
 		);
 
 		$userId = $this->rev->getUser();

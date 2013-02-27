@@ -199,8 +199,9 @@ input[type=submit].cancel {
   width: 80%;
   right: 20%;
 }
+.navigationEnabled .position-fixed,
 .navigationEnabled #mw-mf-page-center {
-  left: 80%;
+  left: 80% !important;
   overflow-x: hidden;
 }
 .navigationEnabled.navigationFullScreen #mw-mf-page-left {
@@ -529,14 +530,18 @@ body {
   }
 }
 @media all and (min-width: 700px) {
+  .navigationEnabled .alpha #mw-mf-page-left,
   .navigationEnabled .beta #mw-mf-page-left {
     width: 20%;
     display: block;
     right: 80%;
   }
+  .navigationEnabled .alpha .position-fixed,
+  .navigationEnabled .beta .position-fixed,
+  .navigationEnabled .alpha #mw-mf-page-center,
   .navigationEnabled .beta #mw-mf-page-center {
-    left: 20%;
-    right: 0;
+    left: 20% !important;
+    right: 0 !important;
     width: 80%;
     overflow: auto;
   }
