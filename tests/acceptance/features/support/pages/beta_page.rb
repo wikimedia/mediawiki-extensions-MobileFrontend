@@ -6,7 +6,7 @@ class BetaPage
     if ENV['MEDIAWIKI_URL']
       base_url = ENV['MEDIAWIKI_URL']
     else
-      base_url = 'http://127.0.0.1:80/'
+      base_url = 'http://127.0.0.1:80/wiki/'
     end
     "#{base_url}Special:MobileOptions/BetaOptIn"
   end
