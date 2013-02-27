@@ -45,6 +45,7 @@
 			M.log( 'MobileWebUploads', $.extend( {
 				token: M.getSessionId(),
 				funnel: funnel,
+				username: mw.config.get( 'wgUserName' ),
 				isEditable: M.getConfig( 'can_edit' ),
 				mobileMode: M.getConfig( 'alpha' ) ? 'alpha' : ( M.getConfig( 'beta' ) ? 'beta' : 'stable' ),
 				userAgent: window.navigator.userAgent

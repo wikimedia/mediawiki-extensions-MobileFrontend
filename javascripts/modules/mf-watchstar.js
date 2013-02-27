@@ -14,7 +14,7 @@ var api = M.require( 'api' ), w = ( function() {
 				isStable: M.getConfig( 'alpha' ) ? 'alpha' :
 					( M.getConfig( 'beta' ) ? 'beta' : 'stable' ),
 				token: lastToken || '+\\', // +\\ for anon
-				userId: mw.config.get( 'wgUserId' ) || undefined
+				username: mw.config.get( 'wgUserName' ) || ''
 			};
 
 		M.log( 'MobileBetaWatchlist', data );
