@@ -14,6 +14,7 @@ class HomePage
 
   a(:mainmenu_button, id: 'mw-mf-main-menu-button')
   a(:login_button, class: 'external login')
+  a(:login, text: 'Login')
   a(:search_result, class: 'search-result-item')
   text_field(:search_box, id: 'mw-mf-search')
   div(:menupage, id: 'mw-mf-menu-page')
