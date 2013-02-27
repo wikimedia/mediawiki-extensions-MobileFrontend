@@ -445,6 +445,9 @@ $wgMFSpecialModuleStubs = array(
 			'mobile-frontend-nearby-lookup-error',
 			'mobile-frontend-nearby-noresults',
 		),
+		'dependencies' => array(
+			'mobile.stable',
+		),
 	),
 	'search' => array( 'css' => true ),
 	'watchlist' => array( 'css' => true, 'js' => false,
