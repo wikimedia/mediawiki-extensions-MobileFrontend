@@ -9,10 +9,6 @@ Given /^I am not logged in$/ do
   on(HomePage).login_button_element.should exist
 end
 
-Given /^I am at San Francisco Chronicle article$/ do
-  visit SanFranciscoChroniclePage
-end
-
 When /^Select the watchlist icon$/ do
   on(HomePage).watch_link_element.when_present.click
 end
@@ -76,4 +72,12 @@ Then /^the article no longer has the watchlist icon selected$/ do
   on(HomePage) do |page|
     page.watch_link_element.should be_true
   end
+end
+
+When /^I click Login$/ do
+  on(HomePage).login
+end
+
+Then /^Login page opens$/ do
+  @browser.url.should match /Special:UserLogin/
 end

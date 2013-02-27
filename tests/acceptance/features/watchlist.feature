@@ -3,11 +3,16 @@ Feature: Manage Watchlist
   Background:
     Given I am in beta mode
 
-  Scenario: Watchlist behavior when not logged in
+  Scenario: I receive notification that I need to log in to use the watchlist functionality
       And I am not logged in
-      And I am at San Francisco Chronicle article
     When Select the watchlist icon
     Then I receive notification that I need to log in to use the watchlist functionality
+
+  Scenario: Login link leads to login page
+      And I am not logged in
+    When Select the watchlist icon
+      And I click Login
+    Then Login page opens
 
   Scenario: Add an article to the watchlist
     And I am logged into the mobile website
