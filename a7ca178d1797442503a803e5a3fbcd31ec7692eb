@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DnX..vPw",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-27T22:43:02Z",
+      "side": 1,
+      "message": "It\u0027s a rare case but I wanted to capture it. e.g. Logged out in different browser tab.",
+      "parentUuid": "DnWh4RfA",
+      "revId": "a7ca178d1797442503a803e5a3fbcd31ec7692eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DnUh1ifY",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-02-27T20:40:49Z",
       "side": 1,
       "message": "\"Missing token\" instead?",
+      "revId": "a7ca178d1797442503a803e5a3fbcd31ec7692eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DnR8.qIg",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-02-27T22:43:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DnUh1ifY",
       "revId": "a7ca178d1797442503a803e5a3fbcd31ec7692eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
