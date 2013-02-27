@@ -17,7 +17,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		wfProfileIn( __METHOD__ );
 
 		$ctx = MobileContext::singleton();
-		$ctx->setOverlay( false );
 		$this->usePageImages = $ctx->isBetaGroupMember() && !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
 		// assumes mobile skin
 		$mobileSkin = $ctx->getSkin();
@@ -91,7 +90,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	protected function getWatchlistHeader() {
-		$mobileSkin = $this->getContext()->getSkin();
 		$cur = $this->getRequest()->getVal( 'watchlistview', 'a-z' );
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
 		$attrsList = array(
@@ -111,7 +109,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				array(
 					'class' => 'mw-mf-watchlist-views header' )
 				) .
-			$mobileSkin->getMenuButton() .
 			Html::openElement( 'div',
 				array(
 					'class' => 'mw-mf-view-filters' )

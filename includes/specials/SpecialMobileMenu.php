@@ -12,9 +12,6 @@ class SpecialMobileMenu extends UnlistedSpecialPage {
 		// add navigationEnabled class
 		$context->setForceLeftMenu( true );
 
-		// override isOverlay property
-		$context->setOverlay( false );
-
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
 	}

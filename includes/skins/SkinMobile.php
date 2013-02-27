@@ -25,19 +25,6 @@ class SkinMobile extends SkinMobileBase {
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
 
-		/**
-		 * force all non-special pages to render in article skin
-		 * 
-		 * NB not all special pages are overlays, so
-		 * $context->setOverlay( $specialPage ) will not work!
-		 * @TODO does setOverlay really belong in MobileContext?
-		 *	probably not. ~awjr
-		 */
-		if ( !$specialPage ) {
-			$context->setOverlay( false );
-		}
-
-		$tpl->set( 'isOverlay',  $context->isOverlay() );
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'imagesDisabled', $context->imagesDisabled() );
 		$tpl->set( 'isAlphaGroupMember', $inAlpha );
@@ -188,23 +175,19 @@ class SkinMobile extends SkinMobileBase {
 
 	/**
 	 * Prepares the header and the content of a page
-	 * Stores in QuickTemplate prebodytext, postbodytext, htmlHeader keys
+	 * Stores in QuickTemplate prebodytext, postbodytext keys
 	 * @param QuickTemplate
 	 */
 	function prepareTemplatePageContent( QuickTemplate $tpl ) {
-		$ctx = MobileContext::singleton();
 		$title = $this->getTitle();
 		$isSpecialPage = $title->isSpecialPage();
 		$isMainPage = $title->isMainPage();
-		$isOverlay = $ctx->isOverlay();
 		$user = $this->getUser();
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$out = $this->getOutput();
 		$inBeta = MobileContext::singleton()->isBetaGroupMember();
 
-		if ( $isSpecialPage && !$isOverlay ) {
-			$pageHeading = '';
-		} else if ( $userLogin ) {
+		if ( $userLogin ) {
 			$pageHeading = $this->getLoginPageHeading();
 		} else {
 			$pageHeading = $out->getPageTitle();
@@ -238,14 +221,8 @@ class SkinMobile extends SkinMobileBase {
 		}
 
 		$htmlHeader = $this->getHtmlHeader();
-		if ( is_null( $htmlHeader ) ) {
-			if ( $isOverlay ) {
-				$htmlHeader = Html::rawElement( 'h1', array( 'class' => 'header' ),
-					$pageHeading
-				);
-			} else {
-				$htmlHeader = '';
-			}
+		if ( !$htmlHeader && $isSpecialPage ) {
+			$htmlHeader = Html::element( 'h1', array( 'class' => 'header' ), $pageHeading );
 		}
 
 		$tpl->set( 'prebodytext', $preBodyText );
@@ -733,26 +710,11 @@ class SkinMobileTemplate extends BaseTemplate {
 
 	public function renderArticleHeader() {
 		if ( $this->data['htmlHeader'] ) {
+			$this->html( 'menuButton' );
 			echo $this->data['htmlHeader'];
 		} else {
 			$this->searchBox();
 		}
-	}
-
-	public function renderOverlaySkin() {
-		?>
-		<?php $this->html( 'zeroRatedBanner' ) ?>
-		<div id="mw-mf-overlay">
-			<?php $this->renderOverlayHeader() ?>
-				<div id="content_wrapper" class="<?php $this->html( 'articleClass' ); ?>">
-					<?php $this->html( 'bodytext' ) ?>
-				</div>
-			</div>
-		<?php
-	}
-
-	public function renderOverlayHeader() {
-		echo $this->data['htmlHeader'];
 	}
 
 	public function execute() {
@@ -765,14 +727,11 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 
 		$htmlClass = '';
-		if ( $this->data['isOverlay'] ) {
-			$htmlClass .= ' overlay';
-			if ( $this->data[ 'isSpecialPage' ] ) {
-				$htmlClass .= ' specialPage';
-			}
+		if ( $this->data[ 'isSpecialPage' ] ) {
+			$htmlClass .= ' specialPage';
 		}
 		if ( $this->data['renderLeftMenu'] ) {
-			$htmlClass .= 'navigationEnabled navigationFullScreen';
+			$htmlClass .= ' navigationEnabled navigationFullScreen';
 		}
 		if ( $this->data['action'] == 'edit' ) {
 			$htmlClass .= ' actionEdit';
@@ -797,14 +756,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
 	</head>
 	<body class="<?php $this->text( 'bodyClasses' ) ?>">
-		<?php
-			if ( $this->data['isOverlay'] ) {
-				$this->renderOverlaySkin();
-			} else {
-				$this->renderArticleSkin();
-			}
-		?>
-
+		<?php $this->renderArticleSkin(); ?>
 		<?php $this->html( 'bcHack' ) ?>
 		<?php $this->html( 'bottomScripts' ) ?>
 	</body>
