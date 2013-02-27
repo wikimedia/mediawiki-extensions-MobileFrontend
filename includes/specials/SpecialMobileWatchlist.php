@@ -14,6 +14,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	private $fromPageTitle;
 
 	function execute( $par ) {
+		wfProfileIn( __METHOD__ );
+
 		$ctx = MobileContext::singleton();
 		$ctx->setOverlay( false );
 		$this->usePageImages = $ctx->isBetaGroupMember() && defined( 'PAGE_IMAGES_INSTALLED' );
@@ -33,6 +35,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		if( $user->isAnon() ) {
 			// No watchlist for you.
 			parent::execute( $par );
+			wfProfileOut( __METHOD__ );
 			return;
 		} else {
 			$mobileSkin->addArticleClass( 'noMargins watchlist' );
@@ -48,6 +51,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$res = $this->doListQuery();
 			$this->showListResults( $res );
 		}
+
+		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -167,6 +172,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	function doFeedQuery() {
+		wfProfileIn( __METHOD__ );
+
 		$user = $this->getUser();
 		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
 
@@ -222,12 +229,17 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $options, '' );
 		wfRunHooks('SpecialWatchlistQuery', array(&$conds,&$tables,&$join_conds,&$fields) );
 
+		wfProfileIn( __METHOD__ . '-query' );
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $join_conds );
+		wfProfileOut( __METHOD__ . '-query' );
 
+		wfProfileOut( __METHOD__ );
 		return $res;
 	}
 
 	function doListQuery() {
+		wfProfileIn( __METHOD__ );
+
 		$user = $this->getUser();
 		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
 
@@ -279,8 +291,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$conds[] = "wl_namespace > $ns OR (wl_namespace = $ns AND wl_title >= $titleQuoted)";
 		}
 
+		wfProfileIn( __METHOD__ . '-query' );
 		$res = $dbr->select( $tables, $fields, $conds, __METHOD__, $options, $joinConds );
+		wfProfileOut( __METHOD__ . '-query' );
 
+		wfProfileOut( __METHOD__ );
 		return $res;
 	}
 
@@ -293,6 +308,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	function showResults( ResultWrapper $res, $feed ) {
+		wfProfileIn( __METHOD__ );
+
 		$empty = $res->numRows() === 0;
 		$this->seenTitles = array();
 
@@ -347,6 +364,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				);
 			}
 		}
+
+		wfProfileOut( __METHOD__ );
 	}
 
 	function showEmptyList( $feed ) {
@@ -376,6 +395,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	private function renderThumb( $row ) {
+		wfProfileIn( __METHOD__ );
+
 		if ( $this->usePageImages && !is_null( $row->pp_value ) ) {
 			$file = wfFindFile( $row->pp_value );
 			if ( $file ) {
@@ -390,10 +411,14 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				}
 			}
 		}
+
+		wfProfileOut( __METHOD__ );
 		return '';
 	}
 
 	private function showFeedResultRow( $row ) {
+		wfProfileIn( __METHOD__ );
+
 		$output = $this->getOutput();
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
@@ -443,11 +468,14 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			Html::closeElement( 'a' ) .
 			'</li>'
 		);
+
+		wfProfileOut( __METHOD__ );
 	}
 
 	private function showListResultRow( $row ) {
-		$output = $this->getOutput();
+		wfProfileIn( __METHOD__ );
 
+		$output = $this->getOutput();
 		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
 		$titleText = $title->getPrefixedText();
 		$ts = new MWTimestamp( $row->rev_timestamp );
@@ -462,6 +490,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' )
 		);
+
+		wfProfileOut( __METHOD__ );
 	}
 
 }
