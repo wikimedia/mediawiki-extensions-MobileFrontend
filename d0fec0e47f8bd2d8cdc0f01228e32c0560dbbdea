@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnajSvf0",
+        "filename": "javascripts/modules/mf-random.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-27T20:16:25Z",
+      "side": 1,
+      "message": "-1 is a magic number, please use mw.config.get(\u0027wgNamespaceIds\u0027).",
+      "revId": "d0fec0e47f8bd2d8cdc0f01228e32c0560dbbdea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
