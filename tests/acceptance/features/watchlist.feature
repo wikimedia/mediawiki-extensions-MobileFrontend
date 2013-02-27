@@ -14,6 +14,12 @@ Feature: Manage Watchlist
       And I click Login
     Then Login page opens
 
+  Scenario: Sign up link leads to Sign up page
+      And I am not logged in
+    When Select the watchlist icon
+      And I click Sign up
+    Then Sign up page opens
+
   Scenario: Add an article to the watchlist
     And I am logged into the mobile website
     When I search for an article and select the watchlist icon
