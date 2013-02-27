@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnUjZCR4",
+        "filename": "javascripts/modules/mf-inline-style-scrubber.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-27T20:17:59Z",
+      "side": 1,
+      "message": "Magic number, use mw.config.get(\u0027wgNamespaceIds\u0027). Plus, should we use \u003e for this? Why wouldn\u0027t we scrub on media pages?",
+      "revId": "c8d22b5641138b6fa4781868e6f9604ebb753e73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
