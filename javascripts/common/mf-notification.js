@@ -23,6 +23,7 @@
 			$( '#mf-notification div' ).html( html );
 			calculatePosition();
 			return $( '#mf-notification' ).removeAttr( 'class' ).
+				addClass( 'position-fixed-element' ).
 				addClass( classes ).show();
 		}
 
@@ -45,7 +46,9 @@
 		}
 
 		function init( firstRun ) {
+			// FIXME: turn into view with template
 			var el = $( '<div id="mf-notification"><div></div></div>' ).hide().
+				addClass( 'position-fixed-element' ).
 				appendTo( document.body )[ 0 ];
 
 			if ( M.getConfig( 'beta' ) ) {
