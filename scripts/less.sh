@@ -4,7 +4,7 @@ if command -v npm > /dev/null ; then
     echo "Installing autoless..."
     npm install autoless
   fi
-  node_modules/.bin/autoless $1 stylesheets/less/ stylesheets/
+  node_modules/.bin/autoless $1 less/ stylesheets/
 else
   echo "You need to install Node.JS to compile LESS files!"
   echo "See http://nodejs.org/"
