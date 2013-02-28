@@ -110,7 +110,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ( $this->data['supports_jquery'] && $this->data['isBetaGroupMember'] ) { ?>
+			<?php if ( $this->data['supports_jquery'] ) { ?>
 			<li class='icon-uploads'>
 					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
 						class="noHijack"
