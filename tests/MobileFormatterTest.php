@@ -28,11 +28,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$anchor = '<a id="anchor_1" href="#section_1" class="section_anchors">&#8593;Jump back a section</a>';
 
 		return array(
-			// down with infoboxes
-			array(
-				'<div class="infobox">Insanity!</div>',
-				'',
-			),
 			// remove magnifying glass
 			array(
 				'<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Foo.jpg" class="image">
