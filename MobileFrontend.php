@@ -359,7 +359,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/modules/mf-references.css',
 		'stylesheets/modules/mf-cleanuptemplates.css',
-		'stylesheets/modules/mf-watchlist.css',
+		'stylesheets/modules/mf-watchstar.css',
 		'stylesheets/modules/mf-photo.css',
 	),
 	'scripts' => array(
@@ -371,7 +371,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
-		'javascripts/modules/mf-watchlist.js',
+		'javascripts/modules/mf-watchstar.js',
 		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-references.js'
 	),
@@ -384,7 +384,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-drawer-cancel',
 		'mobile-frontend-logged-in-toast-notification',
 
-		// mf-watchlist.js
+		// mf-watchstar.js
 		'mobile-frontend-watchlist-add',
 		'mobile-frontend-watchlist-removed',
 		'mobile-frontend-watchlist-cta',
