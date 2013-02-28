@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dn8Mztqk",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-28T22:25:43Z",
+      "side": 1,
+      "message": "Maybe a constant called MIN_CACHE_EXPIRY or something similar?",
+      "revId": "83e4d11318eeb76c7f5a5c2c2261d5f345c0aaf8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
