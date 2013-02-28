@@ -18,8 +18,6 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		$msgBox = ''; // placeholder for displaying any login-related system messages (eg errors)
 		$headMsg = $this->getHeadMsg();
 
-		MobileContext::singleton()->getSkin()->addArticleClass( 'noMargins' );
-
 		// @TODO make sure this also includes returnto and returntoquery from the request
 		$query = array(
 			'type' => 'signup',
@@ -37,7 +35,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			wfMessage( 'mobile-frontend-main-menu-account-create' )->text(),
 			array( 'class'=> 'mw-mf-create-account' ), $query );
 
-		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login' ) );
+		$login = Html::openElement( 'div', array( 'id' => 'mw-mf-login', 'class' => 'content' ) );
 
 		if ( $headMsg ) {
 			$msgBox .= Html::Element( 'div', array( 'class' => 'headmsg' ), $headMsg );
@@ -60,7 +58,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 				'class' => 'watermark' ) );
 		}
 
-		$form = Html::openElement( 'div', array( 'id' => 'userloginForm' ) ) .
+		$form = Html::openElement( 'div', array() ) .
 			Html::openElement( 'form',
 				array( 'name' => 'userlogin',
 					'method' => 'post',

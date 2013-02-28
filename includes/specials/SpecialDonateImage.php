@@ -10,9 +10,7 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 		$ctx = MobileContext::singleton();
 		$user = $this->getUser();
 
-		$ctx->setOverlay( false );
 		$mobileSkin = $ctx->getSkin();
-		$mobileSkin->setHtmlHeader( $this->getHeader() );
 
 		$this->setHeaders();
 		$output = $this->getOutput();
@@ -25,7 +23,6 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 				$this->msg( 'mobile-frontend-donate-image-anon' )->parse() .
 				'</div>';
 		} else {
-			$mobileSkin->addArticleClass( 'noMargins' );
 			$uploadCount = $this->getUserUploadCount( $user->getName() );
 			$html = '';
 			if ( $uploadCount !== false ) {
@@ -46,16 +43,6 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 			$html .= '<ul class="mobileUserGallery"></ul>';
 		}
 		$output->addHTML( $html );
-	}
-
-	public function getHeader() {
-		$mobileSkin = $this->getContext()->getSkin();
-
-		return '<div class="header">' .
-			$mobileSkin->getMenuButton() .
-			Html::element( 'h1', array(),
-				$this->msg( 'mobile-frontend-donate-image-page-title' )->text() ) .
-			'</div>';
 	}
 
 	/**

@@ -14,10 +14,6 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 	}
 
 	function execute( $par ) {
-		$ctx = MobileContext::singleton();
-		$mobileSkin = $ctx->getSkin();
-		$mobileSkin->addArticleClass( 'noMargins' );
-
 		$output = $this->getOutput();
 
 		$this->revId = intval( $par );

@@ -26,8 +26,6 @@ class MobileContext extends ContextSource {
 	protected $mobileAction;
 
 	private $forceMobileView = false;
-	/** @var boolean whether to render as an overlay skin or an article skin */
-	private $isOverlay = true;
 	private $forceLeftMenu = false;
 	private $contentTransformations = true;
 	private $mobileView = null;
@@ -138,22 +136,6 @@ class MobileContext extends ContextSource {
 
 	public function setForceLeftMenu( $value ) {
 		$this->forceLeftMenu = $value;
-	}
-
-	/**
-	 * Tell the skin to render in overlay or article mode
-	 * @param boolean
-	 */
-	public function setOverlay( $value ) {
-		$this->isOverlay = $value;
-	}
-
-	/**
-	 * Decides whether the page should render in the article skin or an overlay skin
-	 * @return boolean
-	 */
-	public function isOverlay() {
-		return $this->isOverlay;
 	}
 
 	/**

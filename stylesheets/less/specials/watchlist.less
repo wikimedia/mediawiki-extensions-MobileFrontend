@@ -11,45 +11,27 @@
 	}
 }
 
-#content_wrapper.watchlist {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
+.mw-mf-watchlist-selector {
+	border-bottom: 1px solid #e2e2e2;
 
-	a.button {
-		width: 100%;
-		.box-sizing( border-box );
-	}
-
-	p.empty {
+	li {
 		text-align: center;
-		background: none;
-	}
+		display: inline-block;
+		border-left: 1px solid #e2e2e2;
+		width: 25%;
+		margin: 0 0 0 -1px;
 
-	.mw-mf-watchlist-selector {
-		border-bottom: 1px solid #e2e2e2;
+		&.selected a {
+			font-weight: bold;
+			border-bottom-color: #3366bb;
+		}
 
-		li {
-			text-align: center;
-			display: inline-block;
-			border-left: 1px solid #e2e2e2;
-			width: 25%;
-			margin: 0 0 0 -1px;
-
-			&.selected a {
-				font-weight: bold;
-				border-bottom-color: #3366bb;
-			}
-
-			a {
-				display: block;
-				color: #58595b;
-				padding: 5px 0 0;
-				margin: 0 1px 0 0;
-				border-bottom: 3px solid transparent;
-			}
+		a {
+			display: block;
+			color: #58595b;
+			padding: 5px 0 0;
+			margin: 0 1px 0 0;
+			border-bottom: 3px solid transparent;
 		}
 	}
 }

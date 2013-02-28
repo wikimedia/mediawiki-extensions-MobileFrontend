@@ -8,6 +8,7 @@ class SpecialMobileFeedback extends UnlistedSpecialPage {
 	public function execute( $par = '' ) {
 		$this->setHeaders();
 		$this->getOutput()->setPageTitle( $this->msg( 'mobile-frontend-leave-feedback-special-title' )->text() );
+		$this->getOutput()->addHtml( Html::openElement( 'div', array( 'class' => 'content' ) ) );
 		$context = MobileContext::singleton();
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
