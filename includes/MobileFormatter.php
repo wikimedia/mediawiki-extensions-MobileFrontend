@@ -26,7 +26,6 @@ class MobileFormatter extends HtmlFormatter {
 	protected $wmlContext;
 
 	private $defaultItemsToRemove = array(
-		'div.infobox',
 		'table.toc',
 		'div.stub',
 		'#search', // remove search form element from Special:Search
