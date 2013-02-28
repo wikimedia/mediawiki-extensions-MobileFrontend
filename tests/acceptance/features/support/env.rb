@@ -28,7 +28,13 @@ def local_browser
     browser_label = :firefox
   end
 
-  Watir::Browser.new browser_label
+  browser = Watir::Browser.new browser_label
+  # we can set cookies only for current domain
+  # see http://code.google.com/p/selenium/issues/detail?id=1953
+  browser.goto HomePage.url
+  # set a cookie forcing mobile mode
+  browser.cookies.add 'mf_mobileFormat', 'true'
+  browser
 end
 def sauce_api(json, saucelabs_username, saucelabs_key)
   %x{curl -H 'Content-Type:text/json' -s -X PUT -d '#{json}' http://#{saucelabs_username}:#{saucelabs_key}@saucelabs.com/rest/v1/#{saucelabs_username}/jobs/#{$session_id}}
