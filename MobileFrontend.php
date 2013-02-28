@@ -343,6 +343,7 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'stylesheets/modules/mf-tables.css',
 	),
 	'scripts' => array(
+		'javascripts/modules/mf-inline-style-scrubber.js',
 		'javascripts/modules/mf-random.js',
 		'javascripts/modules/mf-tables.js',
 	),
