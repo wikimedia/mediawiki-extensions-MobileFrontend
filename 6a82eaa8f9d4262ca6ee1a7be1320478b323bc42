@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dn0MMZkI",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-28T23:45:03Z",
+      "side": 1,
+      "message": "I\u0027d rather reduce the number of properties that M has. I understand that you don\u0027t want dynamicPageLoadsEnabled to always equal isAlpha. Maybe a separate config property then? Or something defined in mf-history.js instead?",
+      "revId": "6a82eaa8f9d4262ca6ee1a7be1320478b323bc42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dn8MfNmg",
+        "filename": "javascripts/common/mf-history.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-28T23:45:03Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem right. You\u0027d have to change the name to supportsHistoryApiAndDynamicPageLoadsEnabled ;) In other words, supporting history api doesn\u0027t depend on dynamicPageLoadsEnabled.",
+      "revId": "6a82eaa8f9d4262ca6ee1a7be1320478b323bc42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
