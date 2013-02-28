@@ -1,5 +1,5 @@
 Given /^I am on the home page$/ do
-  visit(HomePage).text.should include "Today's featured article"
+  visit(HomePage).main_page_element.should exist
 end
 
 When /^I type (.+)$/ do |search_term|
