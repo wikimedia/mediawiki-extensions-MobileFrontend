@@ -119,7 +119,12 @@
 }
 .alpha #mw-mf-diffview ins,
 .alpha #mw-mf-diffview del {
+  padding-left: 0;
   color: black;
+}
+.alpha #mw-mf-diffview ins::before,
+.alpha #mw-mf-diffview del::before {
+  content: "";
 }
 .alpha #mw-mf-diffview ins {
   background-color: #ddffdd;
@@ -127,6 +132,11 @@
 .alpha #mw-mf-diffview del {
   background-color: #ffdddd;
   text-decoration: none;
+}
+.alpha #mw-mf-diffview .prettyDiff ins,
+.alpha #mw-mf-diffview .prettyDiff del,
+.alpha #mw-mf-diffview .prettyDiff span {
+  display: inline;
 }
 .supportsPositionFixed #mw-mf-diffview #mw-mf-userinfo {
   position: fixed;

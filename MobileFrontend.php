@@ -515,6 +515,17 @@ $wgResourceModules['mobile.mobilediff.styles'] = $wgMFMobileSpecialPageResourceB
 		'stylesheets/specials/mobilediff.css',
 	),
 );
+
+$wgResourceModules['mobile.mobilediff.scripts'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.startup',
+	),
+	'scripts' => array(
+		'javascripts/externals/jsdiff.js',
+		'javascripts/specials/mobilediff.js',
+	),
+);
+
 // FIXME: temporary hack to get round CentralAuth logout screen
 $wgResourceModules['mobile.userlogout.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'scripts' => array(
