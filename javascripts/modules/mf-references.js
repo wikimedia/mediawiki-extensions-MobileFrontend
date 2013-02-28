@@ -66,11 +66,11 @@ var references = ( function() {
 
 		function init() {
 			if ( inBeta ) {
-				M.on( 'page-loaded', function() {
-					setupReferences( $( '#content' )[ 0 ] );
-				} ).on( 'section-rendered', function( ev, container ) {
-					setupReferences( container );
-				} );
+				M.
+					on( 'page-loaded', function() {
+						setupReferences( $( '#content' )[ 0 ] );
+					} ).
+					on( 'section-rendered', setupReferences );
 			} else {
 				setupReferences.apply( this, arguments );
 			}

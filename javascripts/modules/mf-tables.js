@@ -1,9 +1,9 @@
 ( function( M,  $ ) {
 
-var module = (function() {
+( function() {
 	var STEP_SIZE = 150;
 
-	function initTables( ev, container ) {
+	function initTables( container ) {
 		var nav = M.require( 'navigation' ),
 			$tables = container ? $( container ).find( 'table' ) : $( 'table' );
 
@@ -51,17 +51,11 @@ var module = (function() {
 		} );
 	}
 
-	M.on( 'page-loaded',
-		function() {
+	M.
+		on( 'page-loaded', function() {
 			initTables( $( '#content_0' ) );
-		} ).on( 'section-rendered', function( ev, container ) {
-			initTables( ev, container );
-		} );
-
-	return {
-	};
+		} ).
+		on( 'section-rendered', initTables );
 }() );
-
-M.define( 'tables', module );
 
 }( mw.mobileFrontend, jQuery ));
