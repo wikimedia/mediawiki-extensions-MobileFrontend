@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 var references = ( function() {
-		var inBeta = M.getConfig( 'beta', false ),
+		var
 			popup = M.require( 'notifications' );
 
 		function collect() {
@@ -65,12 +65,10 @@ var references = ( function() {
 		}
 
 		function init() {
-			if ( inBeta ) {
-				M.
-					on( 'page-loaded', function() {
-						setupReferences( $( '#content' )[ 0 ] );
-					} ).
-					on( 'section-rendered', setupReferences );
+			if ( M.history.isDynamicPageLoadEnabled ) {
+				M.on( 'page-loaded', function() {
+					setupReferences( $( '#content' )[ 0 ] );
+				} ).on( 'section-rendered', setupReferences );
 			} else {
 				setupReferences.apply( this, arguments );
 			}

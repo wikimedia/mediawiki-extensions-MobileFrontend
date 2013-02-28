@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var inBeta = M.getConfig( 'beta', false ),
+	var
 		firstRun,
 		makeStubPage,
 		updateQueryStringParameter = M.history.updateQueryStringParameter,
@@ -10,13 +10,7 @@
 		loadPage,
 		loadLanguages,
 		languagesTemplate,
-		apiUrl = M.getConfig( 'scriptPath', '' ) + '/api.php',
-		ua = window.navigator.userAgent,
-		supportsHistoryApi = window.history && window.history.pushState && window.history.replaceState && inBeta &&
-			// bug 41407 - certain S60 devices crash when you use pushState
-			!( ua.match( /Series60/ ) && ua.match( /WebKit/ ) ) &&
-			// bug 41605 disable for Android 4.x phones that are not Chrome
-			!( ua.match( /Android 4\./ ) && ua.match( /WebKit/ ) && !ua.match( /Chrome/ ) );
+		apiUrl = M.getConfig( 'scriptPath', '' ) + '/api.php';
 
 	function gatherTemplates() {
 		languagesTemplate = $( '#mw-mf-language-section' ).clone();
@@ -192,7 +186,7 @@
 		hijackLinks();
 	} );
 
-	if ( supportsHistoryApi ) {
+	if ( M.history.isDynamicPageLoadEnabled ) {
 		navigateToPage = function( title, constructPage ) {
 			var page;
 			M.setConfig( 'title', title );

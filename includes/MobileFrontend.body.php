@@ -133,7 +133,7 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		$isFilePage = $this->getTitle()->getNamespace() === NS_FILE;
-		$formatter->enableRemovableSections( $context->isBetaGroupMember() && !$isFilePage );
+		$formatter->enableRemovableSections( $context->isAlphaGroupMember() && !$isFilePage );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 

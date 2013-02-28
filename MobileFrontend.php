@@ -239,9 +239,6 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile.stable',
 	),
 	'scripts' => array(
-		'javascripts/common/mf-history-jquery.js',
-		'javascripts/modules/mf-toggle-dynamic.js',
-		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-languages.js',
 	),
 	'position' => 'bottom',
@@ -260,34 +257,23 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		// mf-history-jquery.js
 		'mobile-frontend-ajax-page-loading',
 		'mobile-frontend-ajax-page-error',
-
-		// for mf-search.js
-		'mobile-frontend-search-help',
-		'mobile-frontend-search-noresults',
-		'mobile-frontend-overlay-escape',
 	),
 	'mobileTargets' => array( 'beta', 'alpha' ),
 );
 
-$wgResourceModules['mobile.stable-only'] = $wgMFMobileResourceBoilerplate + array(
+$wgResourceModules['mobile.toggling'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'messages' => array(
 		// for mf-toggle.js
 		'mobile-frontend-close-section',
 		'mobile-frontend-show-button',
 		'mobile-frontend-hide-button',
-
-		// for mf-search.js
-		'mobile-frontend-search-help',
-		'mobile-frontend-search-noresults',
-		'mobile-frontend-overlay-escape',
 	),
-	'styles' => array( 'stylesheets/modules/mf-toggle.css' ),
+	'styles' => array(),
 	'scripts' => array(
 		'javascripts/modules/mf-toggle.js',
-		'javascripts/modules/mf-search.js',
 	),
-	'mobileTargets' => array( 'stable' ),
+	'mobileTargets' => array( 'stable', 'beta' ),
 );
 
 $wgResourceModules['mobile.action.edit'] = $wgMFMobileResourceBoilerplate + array(
@@ -336,9 +322,11 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-inline-style-scrubber.js',
+		'javascripts/common/mf-history-jquery.js',
 		'javascripts/modules/mf-random.js',
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-translator.js',
+		'javascripts/modules/mf-toggle-dynamic.js',
 	),
 	'mobileTargets' => array( 'alpha' ),
 );
@@ -368,6 +356,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-watchstar.js',
 		'javascripts/modules/mf-photo.js',
+		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-references.js'
 	),
 	'messages' => array(
@@ -409,6 +398,11 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-photo-upload-comment',
 		'mobile-frontend-photo-submit',
 		'mobile-frontend-photo-cancel',
+
+		// for mf-search.js
+		'mobile-frontend-search-help',
+		'mobile-frontend-search-noresults',
+		'mobile-frontend-overlay-escape',
 	),
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
