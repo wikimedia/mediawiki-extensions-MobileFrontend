@@ -223,6 +223,17 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
   font-size: 1.85em;
   color: #888;
 }
+.alpha #mw-mf-diffview ins,
+.alpha #mw-mf-diffview del {
+  color: black;
+}
+.alpha #mw-mf-diffview ins {
+  background-color: #ddffdd;
+}
+.alpha #mw-mf-diffview del {
+  background-color: #ffdddd;
+  text-decoration: none;
+}
 .supportsPositionFixed #mw-mf-diffview #mw-mf-userinfo {
   position: fixed;
   bottom: 0;
