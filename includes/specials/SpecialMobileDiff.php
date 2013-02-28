@@ -102,17 +102,17 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 		$doc = new DOMDocument();
 		$doc->loadHtml( '<?xml encoding="utf-8">' . $diff );
 		$xpath = new DOMXpath( $doc );
-		$els = $xpath->query( "//td[@class='diff-deletedline'] | //td[@class='diff-addedline'] | //del | //ins" );
+		$els = $xpath->query( "//td[@class='diff-deletedline'] | //td[@class='diff-addedline']" );
 		$out .= Html::element( 'div', array( 'class' => 'heading' ),
 			$this->msg( 'mobile-frontend-diffview-explained' )->plain() );
 		/** @var $el DOMElement */
 		foreach( $els as $el ) {
 			$name = $el->nodeName;
 			$class = $el->getAttribute( 'class' );
-			if ( $name === 'del' || $class === 'diff-deletedline' ) {
-				$out .= Html::element( 'del', array(), '- ' . $el->nodeValue );
+			if ( $class === 'diff-deletedline' ) {
+				$out .= Html::element( 'del', array(), $el->nodeValue );
 			} else {
-				$out .= Html::element( 'ins', array(), '+ ' . $el->nodeValue );
+				$out .= Html::element( 'ins', array(), $el->nodeValue );
 			}
 		}
 

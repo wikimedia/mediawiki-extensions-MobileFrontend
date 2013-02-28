@@ -140,6 +140,12 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
   display: block;
   padding-left: 8px;
 }
+#mw-mf-diffview ins::before {
+  content: "+ ";
+}
+#mw-mf-diffview del::before {
+  content: "- ";
+}
 #mw-mf-diffview #mw-mf-userinfo .mw-mf-roles,
 #mw-mf-diffview .mw-mf-diff-date,
 #mw-mf-diffview .mw-mf-bytesremoved,
