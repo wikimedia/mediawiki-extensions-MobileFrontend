@@ -25,10 +25,12 @@ a.watch-this-article.loading {
 }
 li a.watch-this-article {
   right: 23px;
-  top: 50%;
-  height: 24px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
   width: 24px;
-  margin: -12px 0 0;
+  background-position: center center;
+  margin: 0;
 }
 #mw-mf-menu-page a.watch-this-article {
   position: absolute;
