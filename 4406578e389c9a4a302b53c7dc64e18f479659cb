@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DnZ9ReGM",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-28T00:07:25Z",
+      "side": 1,
+      "message": "It seems so, this is only used with normal text-only heading.",
+      "parentUuid": "DnQgtUf4",
+      "revId": "4406578e389c9a4a302b53c7dc64e18f479659cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DnSgoDe8",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "DnX9OvMI",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 759,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-28T00:07:25Z",
+      "side": 1,
+      "message": "Thanks.",
+      "parentUuid": "DnSgoDe8",
+      "revId": "4406578e389c9a4a302b53c7dc64e18f479659cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dnag8-S0",
         "filename": "stylesheets/less/common/mf-navigation.less",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2013-02-27T20:30:38Z",
       "side": 1,
       "message": "why 9..? Also  not clear why z-index introduced here at all.. (I only know it\u0027s because of diff page because you told me :) - please remove altogether I have a better way to fix this.",
+      "revId": "4406578e389c9a4a302b53c7dc64e18f479659cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DnV-EIBA",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-28T00:07:25Z",
+      "side": 1,
+      "message": "Please tell, I\u0027d rather make it work from the beginning, without it, it looks broken.",
+      "parentUuid": "Dnag8-S0",
       "revId": "4406578e389c9a4a302b53c7dc64e18f479659cb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
