@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dn2NXYlg",
+        "filename": "javascripts/modules/mf-inline-style-scrubber.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-02-28T23:09:12Z",
+      "side": 1,
+      "message": "Sorry, I didn\u0027t notice this earlier. ev is no longer passed in events, so you should just do M.on( \u0027section-rendered\u0027, scrub)",
+      "revId": "a4f70febd8b072c3acbb4aa3514f6e9bc353dd4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
