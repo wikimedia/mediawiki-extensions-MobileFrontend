@@ -2,4 +2,4 @@
 
 # remove .lessignore file after git rebase to let autoless know that it can
 # compile .less files
-rm stylesheets/less/.lessignore
+rm less/.lessignore
