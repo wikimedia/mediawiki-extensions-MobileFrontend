@@ -93,7 +93,13 @@ var api = M.require( 'api' ), w = ( function() {
 
 	}
 
-	function checkWatchStatus( titles, callback ) {
+	/**
+	 * Checks whether a list of article titles are being watched by the current user via ajax request to server
+	 *
+	 * @param {Array} titles: A list of titles to check the watchlist status of
+	 * @param {Function} callback: A callback that is passed a json of mappings from title to booleans describing whether page is watched
+	 */
+	function asyncCheckWatchStatus( titles, callback ) {
 		$.ajax( {
 			url:  M.getApiUrl(), dataType: 'json',
 			data: {
@@ -114,6 +120,24 @@ var api = M.require( 'api' ), w = ( function() {
 					callback( statuses );
 				}
 		} );
+	}
+
+	/**
+	 * Checks whether a list of article titles are being watched by the current user
+	 * Checks a local cache before making a query to server
+	 *
+	 * @param {Array} titles: A list of titles to check the watchlist status of
+	 * @param {Function} callback: A callback that is passed a json of mappings from title to booleans describing whether page is watched
+	 */
+	function checkWatchStatus( titles, callback ) {
+		var cache = mw.config.get( 'wgWatchedPageCache' ) || {};
+		// check local cache in case where only one title is passed
+		// FIXME: allow this to work for more than one title
+		if ( titles.length === 1 && typeof cache[ titles[ 0 ] ] !== 'undefined' ) {
+			callback( cache );
+		} else {
+			asyncCheckWatchStatus( titles, callback );
+		}
 	}
 
 	function initWatchListIcon( container, title ) {

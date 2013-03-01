@@ -10,6 +10,27 @@
 
 class MobileFrontendHooks {
 
+
+	/**
+	 * MakeGlobalVariablesScript hook handler
+	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
+	 * Adds various mobile specific config variables
+	 *
+	 * @param array &$vars
+	 * @param OutputPage $out
+	 * @return boolean
+	 */
+	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
+		$title = $out->getTitle();
+		$user = $out->getUser();
+		if ( !$user->isAnon() ) {
+			$vars[ 'wgWatchedPageCache' ] = array(
+				$title->getText() => $user->isWatched( $title ),
+			);
+		}
+		return true;
+	}
+
 	/**
 	 * RequestContextCreateSkin hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
