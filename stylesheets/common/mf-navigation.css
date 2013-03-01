@@ -255,56 +255,38 @@ input[type=submit].cancel {
   border-left: solid 12px #252525;
   border-right: solid 1px black;
 }
-#mw-mf-menu-main li.icon a {
+#mw-mf-menu-main li.icon-home a {
   background-image: url(images/menu/lowres/home.png);
 }
-#mw-mf-menu-main li.icon2 a {
+#mw-mf-menu-main li.icon-random a {
   background-image: url(images/menu/lowres/random.png);
 }
-#mw-mf-menu-main li.icon3 a {
-  background-image: url(images/menu/lowres/nearby.png);
-}
-#mw-mf-menu-main li.icon4 a {
-  background-image: url(images/menu/lowres/contact.png);
-}
-#mw-mf-menu-main li.icon5 a {
+#mw-mf-menu-main li.icon-settings a {
   background-image: url(images/menu/lowres/settings.png);
 }
-#mw-mf-menu-main li.iconImage a {
-  background-image: url(images/100px-globe.png);
+#mw-mf-menu-main li.icon-loginout a {
+  background-image: /* @embed */ url(images/menu/lowres/loginout.png);
 }
-#mw-mf-menu-main li.icon6 a.logout {
-  background-image: url(images/menu/lowres/logout.png);
-}
-#mw-mf-menu-main li.icon6 a.login {
-  background-image: url(images/menu/lowres/login.png);
-}
-#mw-mf-menu-main li.iconUpload a {
-  background-image: url(images/menu/upload.png);
-}
-.jsEnabled #mw-mf-menu-main li.icon a {
+.jsEnabled #mw-mf-menu-main li.icon-home a {
   background-image: /* @embed */ url(images/menu/home.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon2 a {
+.jsEnabled #mw-mf-menu-main li.icon-random a {
   background-image: /* @embed */ url(images/menu/random.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon3 a {
+.jsEnabled #mw-mf-menu-main li.icon-watchlist a {
+  background-image: /* @embed */ url(images/menu/watchlist.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon-uploads a {
+  background-image: /* @embed */ url(images/menu/uploads.png);
+}
+.jsEnabled #mw-mf-menu-main li.icon-nearby a {
   background-image: /* @embed */ url(images/menu/nearby.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon4 a {
-  background-image: /* @embed */ url(images/menu/contact.png);
-}
-.jsEnabled #mw-mf-menu-main li.icon5 a {
+.jsEnabled #mw-mf-menu-main li.icon-settings a {
   background-image: /* @embed */ url(images/menu/settings.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon6 a.logout {
-  background-image: /* @embed */ url(images/menu/logout.png);
-}
-.jsEnabled #mw-mf-menu-main li.icon6 a.login {
-  background-image: /* @embed */ url(images/menu/login.png);
-}
-#mw-mf-menu-main li.icon-watchlist a {
-  background-image: /* @embed */ url(images/menu/watchlist.png);
+.jsEnabled #mw-mf-menu-main li.icon-loginout a {
+  background-image: /* @embed */ url(images/menu/loginout.png);
 }
 #mw-mf-menu-main li.disabled {
   opacity: 0.2;
