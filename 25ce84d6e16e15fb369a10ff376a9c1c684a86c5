@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoCtrSYg",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-01T22:54:44Z",
+      "side": 1,
+      "message": "Is this still used somewhere?",
+      "revId": "25ce84d6e16e15fb369a10ff376a9c1c684a86c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
