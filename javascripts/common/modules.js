@@ -26,7 +26,7 @@ mw.mobileFrontend = {
 		}
 		this._modules[ id ] = obj;
 		// FIXME: modules should not self initialise
-		if ( obj.init && mwMobileFrontendConfig.settings.initOnDefine !== false ) {
+		if ( obj.init && mw.config.get( 'wgInitOnDefine', true ) ) {
 			obj.init();
 		}
 	}

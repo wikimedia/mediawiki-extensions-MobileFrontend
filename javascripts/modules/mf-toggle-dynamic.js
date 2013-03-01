@@ -77,7 +77,7 @@ var T = ( function() {
 	}
 
 	function init() {
-		var pageTitle = M.getConfig('title'),
+		var pageTitle = mw.config.get( 'wgTitle'),
 			specialPage = $( '#content_wrapper' ).hasClass( 'mw-mf-special' );
 
 		M.on( 'page-loaded', function( article ) {

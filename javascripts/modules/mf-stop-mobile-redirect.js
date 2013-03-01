@@ -1,53 +1,26 @@
 /*
 FIXME: please document purpose of this
-Seems to only run when hookOptions is set on SkinMobile class with a key toggle_view_desktop also set
 */
 
-( function( M ) {
+( function( M, $ ) {
 
-var m = ( function() {
 	var
-		u = M.utils,
-		s = M.getConfig,
 		writeCookie = M.settings.writeCookie;
 
 	function desktopViewClick() {
 		// get mf_mobileFormat cookie info
-		var formatCookieName = s( 'useFormatCookieName' ),
-			formatCookieDuration = s( 'useFormatCookieDuration' ),
-			cookiePath = s( 'useFormatCookiePath' ),
-			formatCookieDomain = s( 'useFormatCookieDomain' ),
-			stopMobileRedirectCookieName, stopMobileRedirectCookieDuration, stopMobileRedirectCookieDomain,
-			hookOptions;
+		var useFormatCookie = mw.config.get( 'wgUseFormatCookie' ),
+			redirectCookie = mw.config.get( 'wgStopMobileRedirectCookie' );
 
-		// convert from seconds to days
-		formatCookieDuration = formatCookieDuration / ( 24 * 60 * 60 );
 		// expire the mf_mobileFormat cookie
-		writeCookie( formatCookieName, '', formatCookieDuration, cookiePath, formatCookieDomain );
+		writeCookie( useFormatCookie.name, '', useFormatCookie.duration,
+			useFormatCookie.path, useFormatCookie.domain );
 
-		// get stopMobileRedirect cookie info
-		stopMobileRedirectCookieName = s( 'stopMobileRedirectCookieName' );
-		stopMobileRedirectCookieDuration = s( 'stopMobileRedirectCookieDuration' );
-		stopMobileRedirectCookieDomain = s( 'stopMobileRedirectCookieDomain' );
-		hookOptions = s( 'hookOptions' );
-		// convert from seconds to days
-		stopMobileRedirectCookieDuration = stopMobileRedirectCookieDuration / ( 24 * 60 *60 );
-
-		if ( hookOptions !== 'toggle_view_desktop' ) {
-			// set the stopMobileRedirect cookie
-			writeCookie( stopMobileRedirectCookieName, 'true', stopMobileRedirectCookieDuration, cookiePath, stopMobileRedirectCookieDomain );
-		}
+		// set the stopMobileRedirect cookie
+		writeCookie( redirectCookie.name, 'true', redirectCookie.duration,
+			redirectCookie.path, redirectCookie.domain );
 	}
 
-	function init() {
-		u( document.getElementById( 'mw-mf-display-toggle' ) ).bind( 'click', desktopViewClick );
-	}
+	$( '#mw-mf-display-toggle' ).on( 'click', desktopViewClick );
 
-	return {
-		init: init
-	};
-}() );
-
-M.define( 'desktop-redirect', m );
-
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

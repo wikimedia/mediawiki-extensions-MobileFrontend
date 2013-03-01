@@ -9,7 +9,6 @@ Triggers:
 // FIXME: replace u usage with $
 var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
-		urlTemplate = M.getConfig( 'pageUrl', '' ),
 		numResults = 15, term, mfePrefix = M.prefix,
 		message = M.message,
 		search = document.getElementById(  mfePrefix + 'search' ),
@@ -18,7 +17,7 @@ var opensearch = ( function() {
 		focusBlurTimeout,
 		u = M.utils;
 
-	apiUrl = M.getConfig( 'scriptPath', '' ) + apiUrl;
+	apiUrl = M.getApiUrl();
 
 	function removeResults( ev, silently ) {
 		if ( !silently ) {
@@ -69,7 +68,7 @@ var opensearch = ( function() {
 			item = items[i];
 			section = {
 				label: item,
-				value: urlTemplate.replace( '$1', M.prettyEncodeTitle( item ) )
+				value: M.history.getArticleUrl( item )
 			};
 			sections.push( section );
 		}

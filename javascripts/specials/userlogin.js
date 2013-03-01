@@ -9,7 +9,7 @@
 	function error() {
 		M.log( 'MobileWebCentralAuthError', {
 			token: M.getSessionId(),
-			mobileMode: M.getConfig( 'alpha' ) ? 'alpha' : ( M.getConfig( 'beta' ) ? 'beta' : 'stable' ),
+			mobileMode: mw.config.get( 'wgMFMode' ),
 			userAgent: window.navigator.userAgent,
 			error: 'commonsImageError'
 		} );

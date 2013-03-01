@@ -1,7 +1,7 @@
 ( function( M, $ ) {
-
 	var m = ( function() {
-		var calculatePosition = function() {};
+		var calculatePosition = function() {},
+			inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
 
 		if ( !M.supportsPositionFixed() ) {
 			calculatePosition = function() {
@@ -51,7 +51,7 @@
 				addClass( 'position-fixed-element' ).
 				appendTo( document.body )[ 0 ];
 
-			if ( M.getConfig( 'beta' ) ) {
+			if ( inBeta ) {
 				notifyAuthenticatedUser();
 			}
 

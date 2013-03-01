@@ -1,11 +1,3 @@
-var mwMobileFrontendConfig = {
-	messages: {
-		showText: "show",
-		hideText: "hide"
-	},
-	settings: {
-		authenticated: true,
-		initOnDefine: false
-	}
-};
+mw.config.set( 'wgInitOnDefine', false );
+mw.config.set( 'wgUserName', 'EvilPanda' );
 function _mwLogEvent() {}

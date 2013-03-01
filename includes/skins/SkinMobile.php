@@ -7,7 +7,7 @@ class SkinMobile extends SkinMobileBase {
 	private $resourceLoader;
 
 	protected function prepareTemplate() {
-		global $wgAppleTouchIcon, $wgCookiePath, $wgExtensionAssetsPath,
+		global $wgAppleTouchIcon, $wgExtensionAssetsPath,
 			   $wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint;
 
 		wfProfileIn( __METHOD__ );
@@ -26,14 +26,11 @@ class SkinMobile extends SkinMobileBase {
 		$inAlpha = $context->isAlphaGroupMember();
 
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
-		$tpl->set( 'imagesDisabled', $context->imagesDisabled() );
 		$tpl->set( 'isAlphaGroupMember', $inAlpha );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
-		$tpl->set( 'photo-upload-endpoint', $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '' );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 		$tpl->set( 'viewport-scaleable', $device->disableZoom() ? 'no' : 'yes' );
-		$tpl->set( 'variant', $title->getPageLanguage()->getPreferredVariant() );
 
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );
@@ -44,14 +41,10 @@ class SkinMobile extends SkinMobileBase {
 		}
 		$tpl->set( 'articleClass', $this->getArticleClassString() );
 		$tpl->set( 'robots', $this->getRobotsPolicy() );
-		$tpl->set( 'hookOptions', $this->hookOptions );
 		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) + 1 );
 
 		wfProfileIn( __METHOD__ . '-modules' );
 		$tpl->set( 'supports_jquery', $device->supportsJQuery() );
-
-		$namespace = $title->getNamespace();
-		$tpl->set( 'namespace', $namespace );
 
 		wfProfileOut( __METHOD__ . '-modules' );
 
@@ -60,19 +53,11 @@ class SkinMobile extends SkinMobileBase {
 		// setup destinations for styles/scripts at top and at bottom
 		$tpl = $this->attachResources( $title, $tpl, $device );
 
-		$tpl->set( 'stopMobileRedirectCookieName', 'stopMobileRedirect' );
-		$tpl->set( 'stopMobileRedirectCookieDuration', $context->getUseFormatCookieDuration() );
-		$tpl->set( 'stopMobileRedirectCookieDomain', $context->getStopMobileRedirectCookieDomain() );
-		$tpl->set( 'useFormatCookieName', $context->getUseFormatCookieName() );
-		$tpl->set( 'useFormatCookieDuration', -1 );
-		$tpl->set( 'useFormatCookiePath', $wgCookiePath );
-		$tpl->set( 'useFormatCookieDomain', $_SERVER['HTTP_HOST'] );
 		$tpl->set( 'isSpecialPage', $title->isSpecialPage() );
 
 		// footer
 		$tpl->set( 'copyright', $this->getCopyright() );
 
-		$tpl->set( 'authenticated', $user->isLoggedIn() );
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
 			if ( $wgMFTrademarkSitename ) {
@@ -762,7 +747,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'touchIcon' ) ?>
 		<?php if ( $this->data['supports_jquery'] ) { ?>
 		<script type="text/javascript">
-			var mwMobileFrontendConfig = <?php $this->html( 'jsConfig' ) ?>;
 			document.documentElement.className += ' jsEnabled page-loading';
 		</script>
 		<?php } ?>
@@ -844,10 +828,7 @@ class SkinMobileTemplate extends BaseTemplate {
 
 	public function prepareData() {
 		global $wgExtensionAssetsPath,
-			$wgScriptPath,
-			$wgMobileFrontendLogo,
-			$wgArticlePath,
-			$wgMFPhotoUploadAppendToDesc;
+			$wgMobileFrontendLogo;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
@@ -857,49 +838,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			$link = '';
 		}
 		$this->set( 'touchIcon', $link );
-		$hookOptions = isset( $this->data['hookOptions']['toggle_view_desktop'] ) ? 'toggle_view_desktop' : '';
 
-		$inBeta = $this->data['isBetaGroupMember'];
-		$inAlpha = $this->data['isAlphaGroupMember'];
-		/** @var $user User */
-		$user = $this->data['user'];
-		/** @var $title Title */
-		$title = $this->data['title'];
-		// FIXME: this should all be done in prepareTemplate - getting extremely messy
-		$jsconfig = array(
-			'settings' => array(
-				'action' => $this->data['action'],
-				'authenticated' => $this->data['authenticated'],
-				'photo-upload-endpoint' => $this->data['photo-upload-endpoint'],
-				'scriptPath' => $wgScriptPath,
-				'pageUrl' => $wgArticlePath,
-				'imagesDisabled' => $this->data['imagesDisabled'],
-				'alpha' => $inAlpha,
-				'beta' => $inBeta,
-				'namespace' => $this->data['namespace'],
-				'title' => $title->getPrefixedText(),
-				'variant' => $this->data['variant'],
-				'useFormatCookieName' => $this->data['useFormatCookieName'],
-				'useFormatCookieDuration' => $this->data['useFormatCookieDuration'],
-				'useFormatCookieDomain' => $this->data['useFormatCookieDomain'],
-				'useFormatCookiePath' => $this->data['useFormatCookiePath'],
-				'stopMobileRedirectCookieName' => $this->data['stopMobileRedirectCookieName'],
-				'stopMobileRedirectCookieDuration' => $this->data['stopMobileRedirectCookieDuration'],
-				'stopMobileRedirectCookieDomain' => $this->data['stopMobileRedirectCookieDomain'],
-				'hookOptions' => $hookOptions,
-				'username' => $user->isAnon() ? '' : $user->getName(),
-				'can_edit' => $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN,
-				'photoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
-			),
-		);
-
-		if ( $this->data['isMainPage'] ) {
-			// FIXME: move parsing into javascript
-			$jsconfig['messages']['empty-homepage'] = wfMessage( 'mobile-frontend-empty-homepage-text'
-			)->parse();
-		}
-
-		$this->set( 'jsConfig', FormatJSON::encode( $jsconfig ) );
 		$this->set( 'wgMobileFrontendLogo', $wgMobileFrontendLogo );
 
 		wfProfileOut( __METHOD__ );

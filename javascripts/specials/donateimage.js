@@ -7,6 +7,7 @@ var api = M.require( 'api' ),
 
 m = ( function() {
 	var IMAGE_WIDTH = 320,
+		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 		UserGallery = View.extend( {
 			initialize: function( options ) {
 				this.$placeholder = options.$placeholder;
@@ -58,7 +59,7 @@ m = ( function() {
 		return summary;
 	}
 	function appendDescriptions( imageData, callback ) {
-		var corsUrl = M.getConfig( 'photo-upload-endpoint' ), options,
+		var options,
 			data, titles = $.map( imageData, function( i ) {
 				return i.title;
 			} );
@@ -87,7 +88,6 @@ m = ( function() {
 	}
 
 	function showGallery( username ) {
-		var corsUrl = M.getConfig( 'photo-upload-endpoint' );
 		// FIXME: use api module
 		$.ajax( {
 			url: corsUrl || M.getApiUrl(),
@@ -141,7 +141,7 @@ m = ( function() {
 
 	function init() {
 		var $container,
-			username = M.getConfig( 'username' );
+			username = mw.config.get( 'wgUserName' );
 
 		userGallery = new UserGallery( {
 			el: 'ul.mobileUserGallery',

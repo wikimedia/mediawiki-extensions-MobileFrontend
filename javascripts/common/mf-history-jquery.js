@@ -5,12 +5,12 @@
 		makeStubPage,
 		updateQueryStringParameter = M.history.updateQueryStringParameter,
 		getArticleUrl = M.history.getArticleUrl,
-		currentTitle = M.getConfig( 'title', '' ),
+		currentTitle = mw.config.get( 'wgTitle', '' ),
 		navigateToPage,
 		loadPage,
 		loadLanguages,
 		languagesTemplate,
-		apiUrl = M.getConfig( 'scriptPath', '' ) + '/api.php';
+		apiUrl = M.getApiUrl();
 
 	function gatherTemplates() {
 		languagesTemplate = $( '#mw-mf-language-section' ).clone();
@@ -155,9 +155,9 @@
 			data: {
 				action: 'mobileview', format: 'json',
 				page: pageTitle,
-				variant: M.getConfig( 'variant' ),
+				variant: mw.config.get( 'wgPreferredVariant' ),
 				redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
-				noimages: M.getConfig( 'imagesDisabled' ) ? 1 : undefined,
+				noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 				sectionprop: 'level|line|anchor', sections: 'all'
 			}
 		} ).done( function( resp ) {
@@ -189,7 +189,8 @@
 	if ( M.history.isDynamicPageLoadEnabled ) {
 		navigateToPage = function( title, constructPage ) {
 			var page;
-			M.setConfig( 'title', title );
+			mw.config.set( 'wgTitle', title );
+			mw.config.set( 'wgArticleId', -1 ); // FIXME: no longer valid
 			document.title = mw.message( 'pagetitle', title ).parse();
 			page = loadPage( title, typeof constructPage === 'undefined' ? true : constructPage );
 			window.history.pushState( { title: title, hash: true }, title, getArticleUrl( title ) );

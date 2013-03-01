@@ -21,6 +21,9 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
+		global $wgMFPhotoUploadEndpoint, $wgCookiePath, $wgPhotoUploadAppendToDesc;
+
+		$context = MobileContext::singleton();
 		$title = $out->getTitle();
 		$user = $out->getUser();
 		if ( !$user->isAnon() ) {
@@ -28,6 +31,33 @@ class MobileFrontendHooks {
 				$title->getText() => $user->isWatched( $title ),
 			);
 		}
+		$vars[ 'wgMFPhotoUploadEndpoint' ] = $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '';
+		// cookie specific
+		$vars[ 'wgUseFormatCookie' ] = array(
+			'name' => $context->getUseFormatCookieName(),
+			'duration' => -1, // in days
+			'path' => $wgCookiePath,
+			'domain' => $_SERVER['HTTP_HOST'],
+		);
+		$vars[ 'wgStopMobileRedirectCookie' ] = array(
+			'name' => 'stopMobileRedirect',
+			'duration' => $context->getUseFormatCookieDuration() / ( 24 * 60 * 60 ), // in days
+			'domain' => $context->getStopMobileRedirectCookieDomain(),
+			'path' => $wgCookiePath,
+		);
+		$vars[ 'wgPhotoUploadAppendToDesc' ] = $wgPhotoUploadAppendToDesc;
+		$vars[ 'wgImagesDisabled' ] = $context->imagesDisabled();
+
+		if ( $context->isAlphaGroupMember() ) {
+			$env = 'alpha';
+		} else if ( $context->isBetaGroupMember() ) {
+			$env = 'beta';
+		} else {
+			$env = 'stable';
+		}
+		$vars[ 'wgMFMode' ] = $env;
+		$vars[ 'wgIsPageEditable' ] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
+		$vars[ 'wgPreferredVariant' ] = $title->getPageLanguage()->getPreferredVariant();
 		return true;
 	}
 

@@ -135,25 +135,12 @@
 		fixBrowserBugs();
 	}
 
-	function getConfig( name, defaultValue ) {
-		if ( mwMobileFrontendConfig.settings[ name ] !== undefined ) {
-			return mwMobileFrontendConfig.settings[ name ];
-		} else if ( defaultValue !== undefined ) {
-			return defaultValue;
-		}
-		return null;
-	}
-
-	function setConfig( name, value ) {
-		mwMobileFrontendConfig.settings[ name ] = value;
-	}
-
 	// FIXME: remove when we use api module everywhere
 	/**
 	 * @deprecated
 	 */
 	function getApiUrl() {
-		return getConfig( 'scriptPath', '' ) + '/api.php';
+		return mw.config.get( 'wgScriptPath', '' ) + '/api.php';
 	}
 
 	// FIXME: Kill the need for this horrible function by giving me a nicer API
@@ -169,7 +156,7 @@
 	}
 
 	function isLoggedIn() {
-		return getConfig( 'authenticated', false );
+		return mw.config.get( 'wgUserName' ) ? true : false;
 	}
 
 	function getOrigin() {
@@ -228,8 +215,6 @@
 		message: message,
 		on: on,
 		prefix: 'mw-mf-',
-		getConfig: getConfig,
-		setConfig: setConfig,
 		supportsPositionFixed: supportsPositionFixed,
 		triggerPageReadyHook: triggerPageReadyHook,
 		prettyEncodeTitle: prettyEncodeTitle,

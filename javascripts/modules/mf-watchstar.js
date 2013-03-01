@@ -11,8 +11,7 @@ var api = M.require( 'api' ), w = ( function() {
 				articleID: mw.config.get( 'wgArticleId' ),
 				anon: mw.config.get( 'wgUserName' ) === null,
 				action: types[ eventType ],
-				isStable: M.getConfig( 'alpha' ) ? 'alpha' :
-					( M.getConfig( 'beta' ) ? 'beta' : 'stable' ),
+				isStable: mw.config.get( 'wgMFMode' ),
 				token: lastToken || '+\\', // +\\ for anon
 				username: mw.config.get( 'wgUserName' ) || ''
 			};
@@ -161,7 +160,7 @@ var api = M.require( 'api' ), w = ( function() {
 					$a = $( '<a> ').text( M.message( 'mobile-frontend-watchlist-cta-button-login' ) ).
 						addClass( 'button' ).
 						appendTo( $drawer );
-					href = updateQs( href, 'returnto', M.getConfig( 'title' ) );
+					href = updateQs( href, 'returnto', mw.config.get( 'wgTitle' ) );
 					href = updateQs( href, 'returntoquery', 'article_action%3Dwatch' );
 					$a.attr( 'href', href );
 
@@ -219,7 +218,7 @@ var api = M.require( 'api' ), w = ( function() {
 	}
 
 	function init( container, title ) {
-		var pageTitle = M.getConfig( 'title' );
+		var pageTitle = mw.config.get( 'wgTitle' );
 		container = container || nav.getPageMenu();
 		title = title || pageTitle;
 		// initialise on current page

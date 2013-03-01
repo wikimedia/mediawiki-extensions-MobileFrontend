@@ -4,6 +4,7 @@ var m = ( function( $ ) {
 	var u = M.utils, mfePrefix = M.prefix,
 		lastScrollTopPosition = 0,
 		$drawer,
+		inBeta = mw.config.get( 'wgMFMode' ) === 'beta',
 		message = M.message;
 
 	function getOverlay() {
@@ -56,11 +57,11 @@ var m = ( function( $ ) {
 	function enableEditing( title ) {
 		$( '#mw-mf-edit-page-link' ).remove();
 		if ( title &&
-			M.getConfig( 'authenticated' ) && // FIXME: currently only shown for users
-			M.getConfig( 'can_edit' ) && // user is allowed to edit
-			M.getConfig( 'action' ) !== 'edit' ) {
+			mw.config.get( 'wgUserName' ) && // FIXME: currently only shown for users
+			mw.config.get( 'wgIsPageEditable' ) && // user is allowed to edit
+			mw.util.getParamValue( 'action' ) !== 'edit' ) {
 			$( '<a id="mw-mf-edit-page-link">' ).text( 'edit' ).attr( 'href',
-				M.getConfig( 'pageUrl' ).replace( '$1', title + '?action=edit' ) ).
+				M.history.getArticleUrl( title, { action: 'edit' } ) ).
 				prependTo( '#content' );
 		}
 	}
@@ -142,7 +143,7 @@ var m = ( function( $ ) {
 		}
 
 		u( search ).bind( 'focus', function() {
-			if ( !M.getConfig( 'beta' ) || $( window ).width() < 700 ) {
+			if ( !inBeta || $( window ).width() < 700 ) {
 				u( document.documentElement ).removeClass( 'navigationEnabled' );
 			}
 		} );

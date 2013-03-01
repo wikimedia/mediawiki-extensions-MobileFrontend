@@ -99,7 +99,8 @@ var m = ( function() {
 			}
 		}
 
-		$loader = $( '<div class="loading">' ).text( M.message( 'mobile-frontend-page-saving', M.getConfig( 'title' ) ) ).
+		$loader = $( '<div class="loading">' ).text( M.message( 'mobile-frontend-page-saving',
+			mw.config.get( 'wgTitle' ) ) ).
 			hide().insertBefore( '#content_0' );
 		$( 'form#editform' ).on( 'submit', function() {
 			$( '#content_0' ).hide();
@@ -108,7 +109,7 @@ var m = ( function() {
 			$editArea.val( val );
 		} );
 
-		M.emit( 'page-loaded', { title: M.getConfig( 'title' ) } );
+		M.emit( 'page-loaded', { title: mw.config.get( 'wgTitle' ) } );
 	}
 
 	function init() {

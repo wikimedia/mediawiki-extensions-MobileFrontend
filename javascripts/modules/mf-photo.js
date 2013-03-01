@@ -6,7 +6,7 @@
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		nav = M.require( 'navigation' ),
 		popup = M.require( 'notifications' ),
-		endpoint = M.getConfig( 'photo-upload-endpoint' ),
+		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
 		PhotoApi, PhotoUploaderPreview, LeadPhoto, PhotoUploadProgress, PhotoUploader;
 
@@ -31,14 +31,13 @@
 		return (
 			M.isLoggedIn() &&
 			browserSupported &&
-			!M.getConfig( 'imagesDisabled', false )
+			!mw.config.get( 'wgImagesDisabled', false )
 		);
 	}
 
 	function getLog( funnel ) {
 		return function( data ) {
-			// FIXME: remove this check if we get rid of dynamic loading
-			if ( mw.config.get( 'wgTitle' ) === M.getConfig( 'title' ) ) {
+			if ( mw.config.get( 'wgArticleId', -1 ) !== -1 ) {
 				data.pageId = mw.config.get( 'wgArticleId' );
 			}
 
@@ -46,8 +45,8 @@
 				token: M.getSessionId(),
 				funnel: funnel,
 				username: mw.config.get( 'wgUserName' ),
-				isEditable: M.getConfig( 'can_edit' ),
-				mobileMode: M.getConfig( 'alpha' ) ? 'alpha' : ( M.getConfig( 'beta' ) ? 'beta' : 'stable' ),
+				isEditable: mw.config.get( 'wgIsPageEditable' ),
+				mobileMode: mw.config.get( 'wgMFMode' ),
 				userAgent: window.navigator.userAgent
 			}, data ) );
 		};
@@ -88,7 +87,7 @@
 			function doUpload( token ) {
 				var formData = new FormData(), descTextToAppend;
 				options.fileName = generateFileName( options.file, options.pageTitle );
-				descTextToAppend = M.getConfig( 'photoUploadAppendToDesc' );
+				descTextToAppend = mw.config.get( 'wgPhotoUploadAppendToDesc' );
 				descTextToAppend = ( descTextToAppend.length ) ? '\n\n' + descTextToAppend : '';
 
 				formData.append( 'action', 'upload' );
@@ -425,7 +424,7 @@
 		photoUploader = new PhotoUploader( {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
-			pageTitle: M.getConfig( 'title' ),
+			pageTitle: mw.config.get( 'wgTitle' ),
 			funnel: 'article'
 		} ).
 			insertAfter( $pageHeading ).
@@ -445,7 +444,7 @@
 			} );
 	}
 
-	if ( isSupported() && M.getConfig( 'can_edit' ) ) {
+	if ( isSupported() && mw.config.get( 'wgIsPageEditable' ) ) {
 		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
 		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', initialize );

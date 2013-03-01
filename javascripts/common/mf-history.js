@@ -8,13 +8,13 @@ M.history = ( function() {
 			!( ua.match( /Series60/ ) && ua.match( /WebKit/ ) ) &&
 			// bug 41605 disable for Android 4.x phones that are not Chrome
 			!( ua.match( /Android 4\./ ) && ua.match( /WebKit/ ) && !ua.match( /Chrome/ ) ),
-		isDynamicPageLoadEnabled = M.getConfig( 'alpha', false ) && supportsHistoryApi,
-		currentTitle = M.getConfig( 'title', '' ),
-		URL_TEMPLATE = M.getConfig( 'pageUrl', '' ),
-		navigateToPage = function( title ) {
-			window.location.href = URL_TEMPLATE.replace( '$1', M.prettyEncodeTitle( title ) );
-		};
+		isDynamicPageLoadEnabled = mw.config.get( 'wgMFMode' ) === 'alpha' && supportsHistoryApi,
+		currentTitle = mw.config.get( 'wgTitle' );
 
+	/**
+	 * FIXME: replace with jQuery.param()
+	 * @deprecated
+	 */
 	function updateQueryStringParameter( url, parameter, value ) {
 		var re = new RegExp( '([?|&])' + parameter + '=.*?(&|$)', 'i' ), rtn,
 			separator = url.indexOf( '?' ) !== -1 ? '&' : '?';
@@ -27,10 +27,24 @@ M.history = ( function() {
 		return rtn;
 	}
 
-	function getArticleUrl( title ) {
-		var search = window.location.search;
-		search = updateQueryStringParameter( search, 'welcome', false );
-		return URL_TEMPLATE.replace( '$1', M.prettyEncodeTitle( title ) ) + search;
+	/**
+	 * Generate a URL for a given page title.
+	 *
+	 * @param {string} title Title of the page to generate link for.
+	 * @param {Object} params A mapping of query parameter names to values,
+	 * e.g. { action: 'edit' }.
+	 * @return {string}
+	 */
+	function getArticleUrl( title, params ) {
+		var url = mw.config.get( 'wgArticlePath' ).replace( '$1', M.prettyEncodeTitle( title ) );
+		if ( !$.isEmptyObject( params ) ) {
+			url += '?' + $.param( params );
+		}
+		return url;
+	}
+
+	function navigateToPage( title ) {
+		window.location.href = getArticleUrl( title );
 	}
 
 	// ensures the history change event fires on initial load

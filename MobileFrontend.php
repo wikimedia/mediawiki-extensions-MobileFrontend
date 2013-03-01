@@ -207,6 +207,8 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 
 $wgResourceModules['mobile.stable.dependencies'] = array(
 	'messages' => array(
+		// mf-homepage.js
+		'mobile-frontend-empty-homepage-text' => array( 'parse' ),
 		// mf-photo.js
 		'mobile-frontend-photo-license' => array( 'parse' ),
 	),
