@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dn8buJCM",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-01T00:18:09Z",
+      "side": 1,
+      "message": "I would not run this code for anonymous users.",
+      "revId": "5ca75f661ac9052c60b4193cc0160476945e16dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
