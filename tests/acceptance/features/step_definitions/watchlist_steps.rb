@@ -34,10 +34,6 @@ Given /^I am logged into the mobile website$/ do
   on(LoginPage) do |page|
     page.login_with(@mediawiki_username, @mediawiki_password)
   end
-  on(LoginSuccessPage) do |page|
-    page.text.should include "signed in"
-    page.returntomain_link
-  end
 end
 
 When /^I search for an article and select the watchlist icon$/ do
