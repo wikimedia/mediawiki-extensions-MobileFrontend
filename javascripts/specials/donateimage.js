@@ -40,8 +40,12 @@ m = ( function() {
 
 	function getImageDataFromPage( page ) {
 		var img = page.imageinfo[0];
-		return { url: img.thumburl, fileName: img.name, title: page.title,
-			descriptionUrl: img.descriptionurl };
+		return {
+			url: img.thumburl,
+			title: page.title,
+			timestamp: img.timestamp,
+			descriptionUrl: img.descriptionurl
+		};
 	}
 
 	function extractDescription( text ) {
@@ -97,7 +101,8 @@ m = ( function() {
 				gailimit: 10,
 				prop: 'imageinfo',
 				origin: corsUrl ? M.getOrigin() : undefined,
-				iiprop: 'url',
+				// FIXME: have to request timestamp since api returns a json rather than an array thus we need a way to sort
+				iiprop: 'url|timestamp',
 				iiurlwidth: IMAGE_WIDTH
 			},
 			xhrFields: {
@@ -112,7 +117,15 @@ m = ( function() {
 					data[ this.title ] = getImageDataFromPage( this );
 				} );
 				appendDescriptions( data, function( imageData ) {
+					var fileArray = [];
+					// FIXME: API work around - in an ideal world imageData would be an array
 					$.each( imageData, function() {
+						fileArray.push( this );
+					} );
+					fileArray = fileArray.sort( function( a, b ) {
+						return a.timestamp > b.timestamp ? 1 : -1;
+					} );
+					$.each( fileArray, function() {
 						userGallery.addPhoto( this );
 					} );
 				} );
