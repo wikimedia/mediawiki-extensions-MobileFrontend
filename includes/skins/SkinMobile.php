@@ -263,6 +263,13 @@ class SkinMobile extends SkinMobileBase {
 				)
 			);
 
+			// Load modules that have marked themselves for loading at the top
+			$headLinks[] = Html::inlineScript(
+				ResourceLoader::makeLoaderConditionalScript(
+					Xml::encodeJsCall( 'mw.loader.load', array( $moduleNames['top'] ) )
+				)
+			);
+
 			// bottom scripts
 			$out->addModules( $moduleNames['bottom'] );
 			// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
@@ -286,7 +293,15 @@ class SkinMobile extends SkinMobileBase {
 			$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
 		}
 
-		$tpl->set( 'preamble', implode( "\n", $headLinks ) );
+		$headHtml = implode( "\n", $headLinks );
+		/*
+			FIXME: I'm not too keen on adding getHeadItems here
+			it allows anything to add javascript/css without checking
+			if it works on mobile. For instance CentralNotice extension adds a remote geolookupip script
+		*/
+		$headHtml .= $out->getHeadItems();
+
+		$tpl->set( 'preamble', $headHtml );
 		$tpl->set( 'bottomScripts', $bottomScripts );
 		return $tpl;
 	}
