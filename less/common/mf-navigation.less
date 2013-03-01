@@ -158,81 +158,53 @@
 	border-right: solid 1px black;
 }
 
+// low-res icons for old phones that don't support background-size
 #mw-mf-menu-main li {
-	&.icon a {
+	&.icon-home a {
 		background-image: url(images/menu/lowres/home.png);
 	}
 
-	&.icon2 a {
+	&.icon-random a {
 		background-image: url(images/menu/lowres/random.png);
 	}
 
-	&.icon3 a {
-		background-image: url(images/menu/lowres/nearby.png);
-	}
-
-	&.icon4 a {
-		background-image: url(images/menu/lowres/contact.png);
-	}
-
-	&.icon5 a {
+	&.icon-settings a {
 		background-image: url(images/menu/lowres/settings.png);
 	}
 
-	&.iconImage a {
-		background-image: url(images/100px-globe.png); // FIXME: use different image
-	}
-
-	&.icon6 {
-		a.logout {
-			background-image: url(images/menu/lowres/logout.png);
-		}
-
-		a.login {
-			background-image: url(images/menu/lowres/login.png);
-		}
-	}
-
-	&.iconUpload a {
-		background-image: url(images/menu/upload.png);
+	&.icon-loginout a {
+		background-image: /* @embed */url(images/menu/lowres/loginout.png);
 	}
 }
 
 .jsEnabled #mw-mf-menu-main li {
-
-	&.icon a {
+	&.icon-home a {
 		background-image: /* @embed */url(images/menu/home.png);
 	}
 
-	&.icon2 a {
+	&.icon-random a {
 		background-image: /* @embed */url(images/menu/random.png);
 	}
 
-	&.icon3 a {
+	&.icon-watchlist a {
+		background-image: /* @embed */url(images/menu/watchlist.png);
+	}
+
+	&.icon-uploads a {
+		background-image: /* @embed */url(images/menu/uploads.png);
+	}
+
+	&.icon-nearby a {
 		background-image: /* @embed */url(images/menu/nearby.png);
 	}
 
-	&.icon4 a {
-		background-image: /* @embed */url(images/menu/contact.png);
-	}
-
-	&.icon5 a {
+	&.icon-settings a {
 		background-image: /* @embed */url(images/menu/settings.png);
 	}
 
-	&.icon6 {
-		a.logout {
-			background-image: /* @embed */url(images/menu/logout.png);
-		}
-
-		a.login {
-			background-image: /* @embed */url(images/menu/login.png);
-		}
+	&.icon-loginout a {
+		background-image: /* @embed */url(images/menu/loginout.png);
 	}
-}
-
-#mw-mf-menu-main li.icon-watchlist a {
-	background-image: /* @embed */url(images/menu/watchlist.png);
 }
 
 #mw-mf-menu-main li.disabled {

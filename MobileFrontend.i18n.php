@@ -142,7 +142,7 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-logout' => 'Log out',
 	'mobile-frontend-main-menu-watchlist' => 'Watchlist',
 	'mobile-frontend-main-menu-settings' => 'Settings',
-	'mobile-frontend-main-menu-upload' => 'Upload',
+	'mobile-frontend-main-menu-upload' => 'Uploads',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below',
@@ -477,7 +477,7 @@ See also:
 	'mobile-frontend-main-menu-watchlist' => 'Text for watchlist link in main menu.
 {{Identical|My watchlist}}',
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
-	'mobile-frontend-main-menu-upload' => 'Upload link text in main menu.
+	'mobile-frontend-main-menu-upload' => 'Uploads link text in main menu.
 {{Identical|Upload}}',
 	'mobile-frontend-main-menu-settings-heading' => 'Heading for Special:MobileOptions page',
 	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non javascript users',

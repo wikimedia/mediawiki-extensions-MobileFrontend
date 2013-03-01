@@ -771,12 +771,20 @@ class SkinMobileTemplate extends BaseTemplate {
 		<div id="mw-mf-page-left">
 		<div id='mw-mf-content-left'>
 		<ul id="mw-mf-menu-main">
-			<li class='icon'><a href="<?php $this->text( 'mainPageUrl' ) ?>"
+			<li class="icon-home"><a href="<?php $this->text( 'mainPageUrl' ) ?>"
 				title="<?php $this->msg( 'mobile-frontend-home-button' ) ?>">
 				<?php $this->msg( 'mobile-frontend-home-button' ) ?></a></li>
-			<li class='icon2'><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
+			<li class="icon-random"><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
 				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
 				><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
+			<?php if ( $this->data['supports_jquery'] && $this->data['isAlphaGroupMember'] && $wgMFNearby ) { ?>
+			<li class='icon-nearby'>
+				<a href="<?php $this->text( 'nearbyURL' ) ?>"
+					title="<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>">
+				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
+				</a>
+			</li>
+			<?php } ?>
 			<?php if ( $this->data['supports_jquery'] ) { ?>
 			<li class='icon-watchlist'>
 				<a href="<?php $this->text( 'watchlistUrl' ) ?>"
@@ -785,8 +793,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
-				<li class='iconUpload'>
+			<?php if ( $this->data['supports_jquery'] && $this->data['isBetaGroupMember'] ) { ?>
+			<li class='icon-uploads'>
 					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
 						class="noHijack"
 						title="<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>">
@@ -794,30 +802,14 @@ class SkinMobileTemplate extends BaseTemplate {
 					</a>
 				</li>
 			<?php } ?>
-			<?php if ( $this->data['isBetaGroupMember'] ) { ?>
-			<li class='icon4'>
-				<a href="<?php $this->text( 'leaveFeedbackURL' ) ?>"
-					title="<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>">
-				<?php $this->msg( 'mobile-frontend-main-menu-contact' ) ?>
-				</a>
-			</li>
-			<?php } ?>
-			<li class='icon5'>
+			<li class='icon-settings'>
 				<a href="<?php $this->text( 'settingsUrl' ) ?>"
 					title="<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
-			<?php if ( $this->data['isAlphaGroupMember'] && $wgMFNearby ) { ?>
-			<li class='iconImage'>
-				<a href="<?php $this->text( 'nearbyURL' ) ?>"
-					title="<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>">
-				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
-				</a>
-			</li>
-			<?php } ?>
 			<?php if ( $this->data['supports_jquery'] ) { ?>
-			<li class='icon6'>
+			<li class='icon-loginout'>
 				<?php $this->html( 'logInOut' ) ?>
 			</li>
 			<?php } ?>
