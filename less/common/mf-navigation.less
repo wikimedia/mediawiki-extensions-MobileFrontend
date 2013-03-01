@@ -102,12 +102,13 @@
 
 	&.navigationFullScreen {
 		#mw-mf-page-left {
-			width: 100%;
-			right: 0;
+			// !important needed to override rules set by @media min-width: 700px
+			width: 100% !important;
+			right: 0 !important;
 		}
 
 		#mw-mf-page-center {
-			left: 100%;
+			display: none;
 		}
 	}
 }
@@ -492,16 +493,6 @@ body {
 			right: 0 !important;
 			width: 80%;
 			overflow: auto;
-		}
-	}
-
-	.navigationFullScreen .beta {
-		#mw-mf-page-left {
-			width: 100%;
-			right: 0%;
-		}
-		#mw-mf-page-center {
-			display: none;
 		}
 	}
 

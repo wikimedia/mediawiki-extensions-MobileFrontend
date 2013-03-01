@@ -205,11 +205,11 @@ input[type=submit].cancel {
   overflow-x: hidden;
 }
 .navigationEnabled.navigationFullScreen #mw-mf-page-left {
-  width: 100%;
-  right: 0;
+  width: 100% !important;
+  right: 0 !important;
 }
 .navigationEnabled.navigationFullScreen #mw-mf-page-center {
-  left: 100%;
+  display: none;
 }
 .navigationEnabled #mw-mf-page-left {
   display: block;
@@ -544,13 +544,6 @@ body {
     right: 0 !important;
     width: 80%;
     overflow: auto;
-  }
-  .navigationFullScreen .beta #mw-mf-page-left {
-    width: 100%;
-    right: 0%;
-  }
-  .navigationFullScreen .beta #mw-mf-page-center {
-    display: none;
   }
   .beta.full-screen-search #mw-mf-page-left {
     display: block !important;
