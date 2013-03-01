@@ -374,21 +374,20 @@ html.overlay ul.content li:hover {
   margin: 0 5px;
 }
 .alert {
-  padding: 8px;
-  margin: 0 40px 0 40px;
+  padding: 0.5em 1em;
   background-repeat: no-repeat;
-  background-position: 8px center;
-  margin-bottom: 8px;
+  background-position: 0.5em 1em center;
+  margin-bottom: 1em;
   min-height: 64px;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 .alert.success {
-  padding-left: 88px;
-  border: solid 2px #008000;
+  padding-left: 80px;
+  border: solid 1px #008000;
   background-image: url(images/success.png);
 }
 .alert.error {
-  border: solid 2px #dd0000;
+  border: solid 1px #dd0000;
   background-color: #fae1e1;
 }
 .alert h2 {

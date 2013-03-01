@@ -21,10 +21,6 @@
   padding: 0.5em 1em;
   margin: 1em 0;
 }
-#mw-mf-login .headmsg {
-  margin-left: 40px;
-  margin-right: 40px;
-}
 #mw-mf-accountcreate .alert {
   margin-left: 0;
   margin-right: 0;
@@ -54,14 +50,16 @@ table.user-login input {
 table.user-login input.loginPassword,
 table.user-login input.loginText {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.25em;
+  font-size: 0.9em;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  border: 1px solid #C9C9C9;
+  box-shadow: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   width: 100%;
   padding: 1em 3em 1em 0.4em;
 }
@@ -70,11 +68,9 @@ table.user-login a.mw-mf-create-account {
   margin-top: 20px;
   display: block;
 }
-table.user-login #wpLoginAttempt {
-  font-size: 1.3em;
-}
 /* sign up form */
 form#userlogin2 input {
+  box-shadow: none;
   display: block;
   width: 100%;
   padding: 0;
