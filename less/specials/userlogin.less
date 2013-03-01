@@ -37,11 +37,6 @@
 	}
 }
 
-#mw-mf-login .headmsg {
-	margin-left: @searchBoxMarginLeft;
-	margin-right: @searchBoxMarginLeft;
-}
-
 #mw-mf-accountcreate {
 	.alert {
 		margin-left: 0;
@@ -78,9 +73,11 @@ table.user-login {
 	input.loginPassword,
 	input.loginText {
 		font-family: @fontFamily;
-		font-size: @baseFontSize * 1.25;
+		font-size: @baseFontSize * 0.9;
 		.box-sizing(border-box);
-		.border-radius(0);
+		border: 1px solid #C9C9C9;
+		box-shadow: none;
+		.border-radius(5px);
 		width: 100%;
 		padding: ( @inputFontSize/2 ) ( @inputFontSize * 1.5 ) ( @inputFontSize/2 ) ( @overlayHeadingIndent );
 	}
@@ -90,16 +87,13 @@ table.user-login {
 		margin-top: 20px;
 		display: block;
 	}
-
-	#wpLoginAttempt {
-		font-size: @baseFontSize * 1.3;
-	}
 }
 
 /* sign up form */
 form#userlogin2 {
 
 	input {
+		box-shadow: none;
 		display: block;
 		width: 100%;
 		padding: 0;

@@ -5,8 +5,8 @@
 @overlayAlertSuccessColor: green;
 @overlayAlertErrorBorderColor: #D00;
 @overlayAlertErrorBackgroundColor: #FAE1E1;
-@overlayAlertPadding: 8px;
-@overlayBorderWidth: 2px;
+@overlayAlertPadding: 0.5em 1em;
+@overlayBorderWidth: 1px;
 @toastNotificationColor: #373737;
 
 #mw-mf-header form,
@@ -319,12 +319,11 @@ html.overlay {
 
 .alert {
 	padding: @overlayAlertPadding;
-	margin: 0 @searchBoxMarginLeft 0 @searchBoxMarginLeft;
 	background-repeat: no-repeat;
 	background-position: @overlayAlertPadding center;
-	margin-bottom: @overlayAlertPadding;
+	margin-bottom: 1em;
 	min-height: 64px;
-	font-size: @baseFontSize * 1.3;
+	font-size: @baseFontSize;
 
 	&.success {
 		padding-left: ( 80px + @overlayAlertPadding );
