@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dn4bRTFY",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-01T00:21:34Z",
+      "side": 1,
+      "message": "Should this comment be changed too?",
+      "revId": "e08b7b7331492a4872acbc992ef50e297fa06a87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
