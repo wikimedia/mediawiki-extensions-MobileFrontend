@@ -21,7 +21,7 @@
 }
 .button.photo div {
   padding: 0.8em 10px 0.8em 44px;
-  background: url(images/camera.png) no-repeat 10px 50%;
+  background: url(images/camera.png) no-repeat 10px 45%;
   background-size: 24px auto;
 }
 #content > .button.photo {
