@@ -10,11 +10,11 @@
 			}
 		}
 
-		M.on( 'section-rendered', function( ev, $container ) {
-			scrub( $container );
-		} ).on( 'page-loaded', function() {
-			scrub( $( '#content_0' ) );
-		} );
+		M.
+			on( 'section-rendered', scrub ).
+			on( 'page-loaded', function() {
+				scrub( $( '#content_0' ) );
+			} );
 		scrub( $( '#content' ) );
 
 	} );
