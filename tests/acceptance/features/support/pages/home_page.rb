@@ -32,4 +32,5 @@ class HomePage
   a(:disclaimer_link, text: 'Disclaimers')
   form(:search_form, id: 'mw-mf-searchForm')
   a(:sign_up, text: 'Sign up')
+  div(:main_page, id: 'mainpage')
 end
