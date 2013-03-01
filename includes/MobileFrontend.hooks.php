@@ -142,7 +142,7 @@ class MobileFrontendHooks {
 				'javascripts/common/mf-notification.js',
 				'javascripts/modules/mf-photo.js', 'tests/js/test_mf-photo.js',
 				'javascripts/modules/mf-references.js', 'tests/js/test_references.js',
-				'javascripts/modules/mf-watchlist.js', 'tests/js/test_mf-watchlist.js',
+				'javascripts/modules/mf-watchstar.js', 'tests/js/test_mf-watchstar.js',
 				'javascripts/modules/mf-last-modified.js', 'tests/js/test_mf-last-modified.js' ),
 				'dependencies' => array( ),
 				'localBasePath' => dirname( dirname( __FILE__ ) ),
