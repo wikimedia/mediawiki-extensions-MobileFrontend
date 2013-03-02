@@ -6800,7 +6800,7 @@ $messages['ja'] = array(
 	'mobile-frontend-main-menu-logout' => 'ログアウト',
 	'mobile-frontend-main-menu-watchlist' => 'ウォッチリスト',
 	'mobile-frontend-main-menu-settings' => '設定',
-	'mobile-frontend-main-menu-upload' => 'アップロード', # Fuzzy
+	'mobile-frontend-main-menu-upload' => 'アップロード',
 	'mobile-frontend-main-menu-settings-heading' => '携帯機器版サイトの設定',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}の言語',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}は $1 {{PLURAL:$1|言語}}で利用できます。利用できるすべての言語版を以下に列挙します',
@@ -9407,6 +9407,7 @@ $messages['ne'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Akoopal
  * @author AvatarTeam
  * @author Patio
  * @author Rvlieshout
@@ -9612,7 +9613,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-photo-cancel' => 'Annuleren',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 upload|$1 uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
-	'tag-mobile_edit' => 'Bwerking via mobiel',
+	'tag-mobile_edit' => 'Bewerking via mobiel',
 	'tag-mobile_edit-description' => 'Bewerking gemaakt via mobiele site',
 	'mobile-frontend-drawer-cancel' => 'Annuleren',
 );
@@ -10894,7 +10895,7 @@ $messages['ro'] = array(
 	'mobile-frontend-main-menu-logout' => 'Închide sesiunea',
 	'mobile-frontend-main-menu-watchlist' => 'Pagini urmărite',
 	'mobile-frontend-main-menu-settings' => 'Setări',
-	'mobile-frontend-main-menu-upload' => 'Încarcă', # Fuzzy
+	'mobile-frontend-main-menu-upload' => 'Încărcări',
 	'mobile-frontend-main-menu-settings-heading' => 'Setări site mobil',
 	'mobile-frontend-settings-site-header' => 'Limbile pentru {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} este un proiect disponibil {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}. Toate versiunile disponibile sunt enumerate mai jos',
@@ -14248,7 +14249,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-main-menu-logout' => '登出',
 	'mobile-frontend-main-menu-watchlist' => '監視列表',
 	'mobile-frontend-main-menu-settings' => '設定',
-	'mobile-frontend-main-menu-upload' => '上傳', # Fuzzy
+	'mobile-frontend-main-menu-upload' => '上傳',
 	'mobile-frontend-main-menu-settings-heading' => '手機版網頁設定',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}的語言版本',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}有$1種語言版本。下面列出所有版本',
