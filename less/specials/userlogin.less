@@ -150,3 +150,16 @@ form#userlogin2 {
 	background-color: white;
 	text-align: center;
 }
+
+// FIXME: temporary hack to make sure we log into Commons
+.jsEnabled #mw-returnto {
+	text-indent: -9999px;
+	background-image: url(../common/images/ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 30%;
+
+	&.loaded {
+		text-indent: 0;
+		background: #fff;
+	}
+}

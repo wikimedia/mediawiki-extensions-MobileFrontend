@@ -126,3 +126,13 @@ form#userlogin2 #wpCreateaccount {
   background-color: white;
   text-align: center;
 }
+.jsEnabled #mw-returnto {
+  text-indent: -9999px;
+  background-image: url(../common/images/ajax-loader.gif);
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+}
+.jsEnabled #mw-returnto.loaded {
+  text-indent: 0;
+  background: #fff;
+}
