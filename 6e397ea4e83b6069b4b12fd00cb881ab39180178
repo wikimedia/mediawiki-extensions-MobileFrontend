@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoGxUBCA",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 731,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-04T18:53:12Z",
+      "side": 1,
+      "message": "So we\u0027re never showing banners on special pages?\nAlso, what\u0027s the guideline, when should we use Html::element and when just a raw string?",
+      "revId": "6e397ea4e83b6069b4b12fd00cb881ab39180178",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
