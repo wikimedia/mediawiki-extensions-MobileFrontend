@@ -51,6 +51,24 @@
       "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoH1JEGA",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-04T22:08:24Z",
+      "side": 1,
+      "message": "Potentially on desktop. Max is there any chance this could be run in a desktop environment and/or no device is set?",
+      "parentUuid": "DoMxpkPs",
+      "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
