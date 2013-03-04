@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoF8cRL4",
+        "filename": "javascripts/modules/mf-languages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-04T20:39:58Z",
+      "side": 1,
+      "message": "Why do we create a copy of the list instead of modifying it in place? And if we do want to do that, then I would separate somehow the whole data sorting and HTML rendering.",
+      "revId": "4aa50d8744ac7e7b73465035e411991f00abc9fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoP95mPo",
+        "filename": "stylesheets/less/common/mf-navigation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-04T20:39:58Z",
+      "side": 1,
+      "message": "I think bold is enough, but feel free to consult with Vibha or Munaf.",
+      "revId": "4aa50d8744ac7e7b73465035e411991f00abc9fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
