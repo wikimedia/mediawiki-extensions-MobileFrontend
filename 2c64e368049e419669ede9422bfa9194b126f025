@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "DoP9cOO8",
+        "filename": "includes/specials/SpecialDonateImage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-04T19:39:29Z",
+      "side": 1,
+      "message": "Hmm... probably best to use $this-\u003elang()-\u003eformatNum() on the number and then -\u003erawParams()... or else turn the message into an HTML message and put then \u003cspan\u003e in the message (ugh).",
+      "parentUuid": "Dnd8jcFg",
+      "revId": "2c64e368049e419669ede9422bfa9194b126f025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DnWiqhXQ",
         "filename": "javascripts/specials/donateimage.js",
         "patchSetId": 1
