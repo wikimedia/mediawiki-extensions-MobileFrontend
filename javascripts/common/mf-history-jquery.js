@@ -9,12 +9,9 @@
 		navigateToPage,
 		loadPage,
 		loadLanguages,
-		languagesTemplate,
-		apiUrl = M.getApiUrl();
-
-	function gatherTemplates() {
-		languagesTemplate = $( '#mw-mf-language-section' ).clone();
-	}
+		apiUrl = M.getApiUrl(),
+		api = M.require( 'api' ),
+		languageCache;
 
 	function updateUILinks( title ) {
 		// FIXME: make this more generic
@@ -33,6 +30,24 @@
 		} );
 	}
 
+	function gatherLanguages() {
+		if ( !languageCache ) {
+			languageCache = api.get( {
+				action: 'query',
+				meta: 'siteinfo',
+				siprop: 'languages',
+				format: 'json'
+			} ).then( function( data ) {
+				var languages = {};
+				data.query.languages.forEach( function( item ) {
+					languages[ item.code ] = item[ '*' ];
+				} );
+				return languages;
+			} );
+		}
+		return languageCache;
+	}
+
 	function hijackLinks( container ) {
 		container = container || document.getElementById( 'content' );
 		$( container ).find( 'a' ).on( 'click', function( ev ) {
@@ -46,20 +61,22 @@
 		} );
 	}
 
-	// FIXME: use a template engine this is not maintainable
 	function renderLanguages( langlinks ) {
-		$( languagesTemplate ).insertAfter( $( '.section' ).last() );
-		var $list = $( '#mw-mf-language-selection' ).empty(), $item, i, lang;
+		gatherLanguages().done( function( languages ) {
+			langlinks.forEach( function( item, i ) {
+				langlinks[ i ].langname = languages[ item.lang ];
+			} );
+			var template = M.template.get( 'languageSection' ),
+				data = {
+					langlinks: langlinks,
+					heading: mw.msg( 'mobile-frontend-language-article-heading' ),
+					description: mw.msg( 'mobile-frontend-language-header', langlinks.length )
+				},
+				html = template.render( data );
 
-		$( '#mw-mf-language-header' ).text( mw.message( 'mobile-frontend-language-header', langlinks.length ) );
-		for ( i = 0 ; i < langlinks.length; i++ ) {
-			lang = langlinks[i];
-			$item = $( '<li>' ).appendTo( $list );
-			// FIXME: show label as language name rather than code
-			$( '<a>' ).attr( 'href', lang.url ).
-				attr( 'lang', lang.lang ).text( lang.lang ).appendTo( $item );
-		}
-		M.emit( 'languages-loaded' );
+			$( html ).insertAfter( $( '.section' ).last() );
+			M.emit( 'languages-loaded' );
+		} );
 	}
 
 	// FIXME: use template engine this is not maintainable
@@ -212,7 +229,6 @@
 		} );
 	}
 
-	gatherTemplates();
 	M.history.makeStubPage = makeStubPage;
 	M.history.hijackLinks = hijackLinks;
 	M.history.loadPage = loadPage;

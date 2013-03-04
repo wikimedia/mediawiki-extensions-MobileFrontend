@@ -229,9 +229,20 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
+$wgResourceModules['mobile.beta.templates'] = array(
+	'localBasePath' => $localBasePath,
+	'localTemplateBasePath' => $localBasePath . '/templates',
+	'templates' => array(
+		'languageSection',
+	),
+	'class' => 'MFResourceLoaderModule',
+	'mobileTargets' => array( 'beta', 'alpha' ),
+);
+
 $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.stable',
+		'mobile.beta.templates',
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-languages.js',
@@ -252,6 +263,7 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		// mf-history-jquery.js
 		'mobile-frontend-ajax-page-loading',
 		'mobile-frontend-ajax-page-error',
+		'mobile-frontend-language-article-heading',
 	),
 	'mobileTargets' => array( 'beta', 'alpha' ),
 );
@@ -299,7 +311,7 @@ $wgResourceModules['mobile.action.history'] = $wgMFMobileResourceBoilerplate + a
 );
 
 $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array( 'mobile.startup' ),
+	'dependencies' => array( 'mobile.stable' ),
 	'messages' => array(
 		// for mf-random.js
 		'mobile-frontend-ajax-random-heading',
