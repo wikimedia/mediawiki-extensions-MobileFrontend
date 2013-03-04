@@ -215,9 +215,8 @@ class SkinMobile extends SkinMobileBase {
 			)->parse();
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
 			$postBodyText = $this->buildLanguageSelection();
-			if ( $inBeta ) {
-				$postBodyText .= "<p id=\"mw-mf-last-modified\" data-timestamp=\"$timestamp\">$lastModified</p>";
-			}
+			// add last modified timestamp
+			$postBodyText .= "<p id=\"mw-mf-last-modified\" data-timestamp=\"$timestamp\">$lastModified</p>";
 		}
 
 		$htmlHeader = $this->getHtmlHeader();
