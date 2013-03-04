@@ -1,6 +1,5 @@
 ( function( M,  $ ) {
 
-var m = ( function() {
 	var createOverlay = M.require( 'navigation' ).createOverlay;
 
 	function countAvailableLanguages() {
@@ -56,7 +55,7 @@ var m = ( function() {
 		var $a = $( '#mw-mf-language-section' ),
 			$h2 = $a.find( 'h2' );
 
-		if( countAvailableLanguages() > 1 ) {
+		if ( countAvailableLanguages() > 0 ) { // assume the current language is not present
 			$h2.find( 'button' ).remove();
 			$( '<button>' ).text( $h2.text() ).
 				addClass( 'languageSelector' ).
@@ -65,7 +64,9 @@ var m = ( function() {
 		$a.hide();
 	}
 
-	function init() {
+	if ( !M.history.isDynamicPageLoadEnabled ) {
+		initButton();
+	} else {
 		M.on( 'history-change', function( curPage ) {
 			if ( curPage.hash === '#mw-mf-overlay-language' ) {
 				createLanguagePage();
@@ -75,10 +76,4 @@ var m = ( function() {
 		} );
 	}
 
-	return {
-		init: init
-	};
-}() );
-
-M.define( 'languages', m );
 }( mw.mobileFrontend, jQuery ) );
