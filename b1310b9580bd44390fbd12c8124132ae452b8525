@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoCxlnB8",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-04T18:50:24Z",
+      "side": 1,
+      "message": "I think docs are usually written using full sentences, starting with a capital letter. Also, I\u0027m not sure about the word unique. Device ID is actually the same for dozens (or more) different user agents.",
+      "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoMxpkPs",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-04T18:50:24Z",
+      "side": 1,
+      "message": "When is it unknown?",
+      "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
