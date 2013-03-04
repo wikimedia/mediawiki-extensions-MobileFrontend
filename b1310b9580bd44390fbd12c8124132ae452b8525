@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DoKxaDEw",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-04T18:52:35Z",
+      "side": 1,
+      "message": "How about?:\n\nAccess the name for the device group",
+      "parentUuid": "DoCxlnB8",
+      "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DoMxpkPs",
         "filename": "includes/DeviceDetection.php",
         "patchSetId": 1
