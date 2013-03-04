@@ -63,7 +63,7 @@ var T = ( function() {
 
 		$headings.each( function() {
 			var $this = $( this );
-			// disable default behaviour of the link in the heading
+			// disable default behavior of the link in the heading
 			$this.find( 'a' ).on( 'click', function( ev ) {
 				ev.preventDefault();
 			} );
