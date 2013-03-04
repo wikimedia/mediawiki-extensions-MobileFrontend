@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoF.z5Ew",
+        "filename": "javascripts/specials/userlogin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-04T19:23:24Z",
+      "side": 1,
+      "message": "would selecting against href be more future proof? Or should we ensure all images have loaded in case we want to use other projects in future?",
+      "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoL96MHM",
+        "filename": "javascripts/specials/userlogin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-04T19:23:24Z",
+      "side": 1,
+      "message": "Should we add an error state? I\u0027m not sure if this might happen - maybe if the connection dies during downloading?",
+      "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoH.sqO8",
+        "filename": "less/specials/userlogin.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-04T19:23:24Z",
+      "side": 1,
+      "message": "I know it\u0027s an edge case.. but in case people without javascript/on the basic site do login - they will see an infinite load. We should make use of .jsEnabled to be more future proof or add the loading class in js (see below comment)",
+      "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoJ.pbOE",
+        "filename": "less/specials/userlogin.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-04T19:23:24Z",
+      "side": 1,
+      "message": "Above 3 lines shouldn\u0027t be needed if you reuse the loading class!",
+      "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
