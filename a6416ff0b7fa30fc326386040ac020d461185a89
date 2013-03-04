@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoMIeN1w",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-04T21:03:29Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this is necessary. Maybe just strip .icon- from class names and use the class name instead? Or generate a proper class name from the argument.",
+      "revId": "a6416ff0b7fa30fc326386040ac020d461185a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
