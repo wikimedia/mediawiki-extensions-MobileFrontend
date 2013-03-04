@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DoL8o8DY",
+        "filename": "javascripts/specials/userlogin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-04T19:49:57Z",
+      "side": 1,
+      "message": "The href has a token in it so you may not be able to easily select on the full value. Prefix maybe.",
+      "parentUuid": "DoF.z5Ew",
+      "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DoL96MHM",
         "filename": "javascripts/specials/userlogin.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-03-04T19:23:24Z",
       "side": 1,
       "message": "Should we add an error state? I\u0027m not sure if this might happen - maybe if the connection dies during downloading?",
+      "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoB80fJA",
+        "filename": "javascripts/specials/userlogin.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-04T19:49:57Z",
+      "side": 1,
+      "message": "Definitely check for \u0027error\u0027 event as well. Network error or something could indeed cause it to fail.",
+      "parentUuid": "DoL96MHM",
       "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
