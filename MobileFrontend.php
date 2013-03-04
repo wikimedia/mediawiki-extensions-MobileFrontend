@@ -237,26 +237,17 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.stable',
-		'mediawiki.jqueryMsg',
 	),
 	'scripts' => array(
 		'javascripts/common/mf-history-jquery.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-languages.js',
-		'javascripts/modules/mf-last-modified.js',
 	),
 	'position' => 'bottom',
 	'messages' => array(
 		'pagetitle',
 		'mobile-frontend-language-header',
-		'mobile-frontend-last-modified-seconds',
-		'mobile-frontend-last-modified-hours',
-		'mobile-frontend-last-modified-minutes',
-		'mobile-frontend-last-modified-hours',
-		'mobile-frontend-last-modified-days',
-		'mobile-frontend-last-modified-months',
-		'mobile-frontend-last-modified-years',
 
 		// for mf-toggle-dynamic.js
 		'mobile-frontend-show-button',
@@ -354,6 +345,7 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 
 $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
+		'mediawiki.jqueryMsg',
 		'mobile.startup',
 		'mobile.stable.dependencies',
 		'mediawiki.util',
@@ -373,6 +365,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
+		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-watchstar.js',
 		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mf-references.js'
@@ -381,6 +374,15 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		// mf-cleanuptemplates.js
 		'mobile-frontend-meta-data-issues',
 		'mobile-frontend-meta-data-issues-header',
+
+		// mf-last-modified.js
+		'mobile-frontend-last-modified-seconds',
+		'mobile-frontend-last-modified-hours',
+		'mobile-frontend-last-modified-minutes',
+		'mobile-frontend-last-modified-hours',
+		'mobile-frontend-last-modified-days',
+		'mobile-frontend-last-modified-months',
+		'mobile-frontend-last-modified-years',
 
 		// mf-notification.js
 		'mobile-frontend-drawer-cancel',
