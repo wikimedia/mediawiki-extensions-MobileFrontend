@@ -133,6 +133,7 @@ m = ( function() {
 
 			if ( pages.length === 0 ) {
 				$( '<p>' ).text( mw.msg( 'mobile-frontend-donate-image-summary' ) ).
+					addClass( 'content' ).
 					insertBefore( userGallery.$el );
 			}
 		} );
