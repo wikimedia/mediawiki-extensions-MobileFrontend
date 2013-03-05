@@ -114,19 +114,6 @@ function efMobileFrontend_Setup() {
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
 	}
-	/**
-	 * dynamically load mobile special page resources
-	 *
-	 * It would be preferable to load these in the invocation of the ResourceLoaderRegisterModules hook,
-	 * however there is an issue (still being diagnosed) that is preventing $resourceLoader->register()
-	 * from loading modules at the bottom of a page. Also, we need at least some of these modules
-	 * to be loaded in the production version of MobileFrontend, which does not currently fully support
-	 * ResourceLoader - so the way the modules get included in the skin does not play nicely with the hook
-	 * (since the hook runs after the modules need to be loaded in the skin).
-	 * @see ExtMobileFrontend::generateMobileSpecialPageModules()
-	 */
-	$specialModules = ExtMobileFrontend::generateMobileSpecialPageModules( $wgMFSpecialModuleStubs );
-	$wgResourceModules = array_merge( $wgResourceModules, $specialModules );
 }
 
 // Unit tests
@@ -424,52 +411,102 @@ $wgResourceModules['mobile.desktop'] = array(
 );
 
 /**
-  * Stubs for mobile SpecialPage resource modules
-  *
-  * The modules themselves get generated dynamically later
-  * during the invocation of the ResourceLoaderRegisterModules hook.
-  * @see ExtMobileFrontend::registerMobileSpecialPageModules()
-  */
-$wgMFSpecialModuleStubs = array(
-	'mobilediff' => array(
-		'alias' => 'watchlist',
-		'dependencies' => array( 'mobile.stable' ),
+ * A boilerplate containing common properties for all RL modules served to mobile site special pages
+ */
+$wgMFMobileSpecialPageResourceBoilerplate = array(
+	'dependencies' => array( 'mobile.stable' ),
+	'localBasePath' => $localBasePath,
+	'remoteExtPath' => $remoteExtPath,
+	'targets' => 'mobile',
+	'mobileTargets' => array(),
+);
+/**
+	* Special page modules
+	*
+	* Note: Use correct names to ensure modules load on pages
+	* Name must be the name of the special page lowercased prefixed by 'mobile.'
+	* suffixed by '.styles' or '.scripts'
+	*/
+$wgResourceModules['mobile.mobilefeedback.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/mobilefeedback.css',
 	),
-	'mobilefeedback' => array( 'css' => true ),
-	'mobileoptions' => array( 'css' => true, 'js' => true ),
-	'nearby' => array( 'js' => true,
-		'messages' => array(
-			'mobile-frontend-nearby-error',
-			'mobile-frontend-nearby-refresh',
-			'mobile-frontend-nearby-title',
-			'mobile-frontend-nearby-loading',
-			'mobile-frontend-nearby-distance-report',
-			'mobile-frontend-nearby-lookup-error',
-			'mobile-frontend-nearby-noresults',
-		),
-		'dependencies' => array(
-			'mobile.stable',
-		),
+);
+$wgResourceModules['mobile.mobileoptions.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/mobileoptions.css',
 	),
-	'search' => array( 'css' => true ),
-	'watchlist' => array( 'css' => true, 'js' => false,
-		'dependencies' => array( 'mobile.stable' ),
+);
+$wgResourceModules['mobile.mobileoptions.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'scripts' => array(
+		'javascripts/specials/mobileoptions.js',
 	),
-	'userlogin' => array( 'css' => true, 'js' => true ),
-	// FIXME: temporary hack to get round CentralNotice logout screen
-	'userlogout' => array( 'alias' => 'userlogin' ),
-	'donateimage' => array( 'js' => true,
-		'css' => true,
-		'messages' => array(
-			'mobile-frontend-photo-upload-generic',
-			'mobile-frontend-donate-photo-upload-success',
-			'mobile-frontend-donate-photo-first-upload-success',
-			'mobile-frontend-donate-image-summary',
-			'mobile-frontend-listed-image-no-description',
-		),
-		'dependencies' => array(
-			'mobile.beta',
-		),
+);
+$wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'messages' => array(
+		'mobile-frontend-nearby-error',
+		'mobile-frontend-nearby-refresh',
+		'mobile-frontend-nearby-title',
+		'mobile-frontend-nearby-loading',
+		'mobile-frontend-nearby-distance-report',
+		'mobile-frontend-nearby-lookup-error',
+		'mobile-frontend-nearby-noresults',
+	),
+	'scripts' => array(
+		'javascripts/specials/nearby.js',
+	),
+);
+$wgResourceModules['mobile.search.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/search.css',
+	),
+);
+$wgResourceModules['mobile.watchlist.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/watchlist.css',
+	),
+);
+$wgResourceModules['mobile.userlogin.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/userlogin.css',
+	),
+);
+$wgResourceModules['mobile.userlogin.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'scripts' => array(
+		'javascripts/specials/userlogin.js',
+	),
+);
+$wgResourceModules['mobile.donateimage.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'messages' => array(
+		'mobile-frontend-photo-upload-generic',
+		'mobile-frontend-donate-photo-upload-success',
+		'mobile-frontend-donate-photo-first-upload-success',
+		'mobile-frontend-donate-image-summary',
+		'mobile-frontend-listed-image-no-description',
+	),
+	'scripts' => array(
+		'javascripts/specials/donateimage.js',
+	),
+);
+$wgResourceModules['mobile.donateimage.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/donateimage.css',
+	),
+);
+$wgResourceModules['mobile.mobilediff.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/watchlist.css',
+	),
+);
+// FIXME: temporary hack to get round CentralNotice logout screen
+$wgResourceModules['mobile.userlogout.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'scripts' => array(
+		'javascripts/specials/userlogin.js',
+	),
+);
+$wgResourceModules['mobile.userlogout.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/userlogin.css',
 	),
 );
 
