@@ -234,7 +234,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Cancel</a> if this is taking too long.',
 	'mobile-frontend-photo-upload-error' => 'Error, try again.',
 	'mobile-frontend-photo-upload-success-article' => 'Success! Your image is now live on this page.',
-	'mobile-frontend-photo-license' => 'By clicking "Submit", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your photo under the [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Commons Attribution-ShareAlike 3.0 License].',
+	'mobile-frontend-photo-license' => 'By clicking "Submit", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your photo under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
 	'mobile-frontend-photo-submit' => 'Submit',
 	'mobile-frontend-photo-cancel' => 'Cancel',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 upload|$1 uploads}}',
