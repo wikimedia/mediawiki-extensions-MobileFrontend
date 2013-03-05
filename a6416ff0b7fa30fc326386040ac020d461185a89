@@ -16,6 +16,24 @@
       "revId": "a6416ff0b7fa30fc326386040ac020d461185a89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoH0wMOg",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-05T00:23:26Z",
+      "side": 1,
+      "message": "I wanted to avoid disabling things that should not be disabled. This might be premature optimisation.... ? otherwise it seems like I should just call $( \u0027 #mw-mf-menu-main li.icon-uploads\u0027 ).remove() directly in mf-photo.js?",
+      "parentUuid": "DoMIeN1w",
+      "revId": "a6416ff0b7fa30fc326386040ac020d461185a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
