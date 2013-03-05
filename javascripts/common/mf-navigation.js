@@ -4,8 +4,7 @@ var m = ( function( $ ) {
 	var u = M.utils, mfePrefix = M.prefix,
 		lastScrollTopPosition = 0,
 		$drawer,
-		inBeta = mw.config.get( 'wgMFMode' ) === 'beta',
-		message = M.message;
+		inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
 
 	function getOverlay() {
 		return document.getElementById( 'mw-mf-overlay' );
@@ -31,23 +30,16 @@ var m = ( function( $ ) {
 		showOverlay();
 		$( overlay ).empty();
 		$( '<div class="header">' ).appendTo( '#' + mfePrefix + 'overlay' );
-		$( '<button id="close"></button>' ).text( message( 'collapse-section' ) ).
+		$( '<button id="close"></button>' ).text( mw.msg( 'mobile-frontend-overlay-escape' ) ).
 			addClass( 'escapeOverlay' ).
-			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay' );
+			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay .header' );
 		if( typeof heading === 'string' ) {
 			heading = $( '<h2 />' ).text( heading );
 		}
 		$( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
 		$( overlay ).append( contents );
-		if( options.locked ) { // locked overlays cannot be escaped.
-			$( '#mw-mf-overlay .header' ).addClass( 'mw-mf-locked' );
-			$( '#mw-mf-overlay #close' ).remove();
-		}
-		return overlay;
-	}
 
-	function enableArticleActions() {
-		$( '<div id="mw-mf-menu-page">' ).appendTo( '#mw-mf-header' );
+		return overlay;
 	}
 
 	function getPageMenu() {
@@ -74,7 +66,7 @@ var m = ( function( $ ) {
 	function makeDrawer() {
 		$drawer = $( '<div id="mw-mf-drawer">' ).hide().appendTo( '#mw-mf-page-center' );
 		$( '<div>' ).appendTo( $drawer );
-		$( '<a class="close">' ).text( M.message( 'mobile-frontend-drawer-cancel' ) ).on( 'click', function() {
+		$( '<a class="close">' ).text( mw.msg( 'mobile-frontend-drawer-cancel' ) ).on( 'click', function() {
 			$drawer.hide();
 			} ).appendTo( $drawer );
 	}
@@ -87,8 +79,6 @@ var m = ( function( $ ) {
 		$( '#mw-mf-menu-main a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
-
-		enableArticleActions();
 
 		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', function( curPage ) {

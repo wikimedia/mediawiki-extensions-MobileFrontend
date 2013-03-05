@@ -14,28 +14,22 @@
 	height: @headerHeight;
 }
 
-#mw-mf-menu-page,
-#mw-mf-main-menu-button {
-	display: inline-block;
+#mw-mf-menu-page {
 	height: @headerHeight;
-	width: @searchBoxMarginLeft;
+	width: @searchBarPaddingRight;
 	position: absolute;
 	top: 0;
+	right: 0;
 }
 
 #mw-mf-main-menu-button {
+	position: absolute;
+	height: @headerHeight;
+	width: @searchBarPaddingLeft;
 	background-image: url(images/menu/lowres/main.png);
 	.background-size( 24px, 30px );
-	overflow: hidden;
 	background-repeat: no-repeat;
-	z-index: 2;
-	left: 0;
-	border-radius: 5px 5px 5px;
 	background-position: center center;
-}
-
-#mw-mf-menu-page {
-	right: 8px;
 }
 
 .jsEnabled {
@@ -62,9 +56,7 @@
 	min-height: 100%;
 }
 
-.header,
-#mw-mf-header {
-	z-index: 2;
+#mw-mf-header, #mw-mf-overlay .header {
 	color: black;
 	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
 	border-bottom: 1px solid #e2e2e2;
@@ -235,8 +227,7 @@ body.navigationEnabled {
 	display: inline;
 }
 
-a.escapeOverlay,
-button.escapeOverlay {
+.escapeOverlay {
 	display: none;
 }
 
@@ -330,12 +321,9 @@ html.overlay {
 .overlay .header {
 	line-height: @headerHeight;
 	text-align: center;
-	border-bottom: solid 1px #CCC;
 	padding: 0;
 	min-height: @headerHeight;
 	margin: 0;
-	padding-bottom: 0;
-	padding-right: 8px;
 
 	input.search {
 		margin-top: 0;
@@ -347,10 +335,6 @@ html.overlay {
 		line-height: @headerHeight;
 		font-family: @fontFamily;
 	}
-}
-
-#mw-mf-overlay .header.mw-mf-locked {
-	padding-left: 22px;
 }
 
 .overlay ul {
@@ -369,21 +353,17 @@ html.overlay {
 
 a.escapeOverlay,
 button.escapeOverlay {
-	cursor: pointer;
 	position: absolute;
+	cursor: pointer;
 	border: none;
 	height: @headerHeight;
-	width: @searchBoxMarginLeft;
-	border-radius: 5px;
-	top: 0;
-	left: 0;
+	width: @searchBarPaddingLeft;
 	background: none;
 	background-image: url(images/arrow-left-2.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-indent: -999px;
 	.background-size( auto, @searchBoxHeight );
-	z-index: 2;
 }
 
 html.navigationEnabled {
@@ -406,20 +386,9 @@ body {
 }
 
 #mw-mf-overlay {
-	.header,
 	.mw-mf-overlay-footer,
 	.mw-mf-overlay-header {
-		padding-left: @searchBoxMarginLeft;
-	}
-
-	h1.header {
-		padding-left: 0;
-	}
-
-	.mw-mf-overlay-footer,
-	.mw-mf-overlay-header {
-		padding-top: 4px;
-		padding-bottom: 4px;
+		padding: 4px 8px 4px @searchBarPaddingLeft;
 
 		margin: 0;
 		font-size: 0.8em;
