@@ -1,6 +1,6 @@
 ( function ( M, $ ) {
 
-var Api = M.require( 'api' ).Api;
+var Api = M.require( 'api' ).Api, stub;
 
 module( 'MobileFrontend api', {
 	setup: function() {
@@ -97,6 +97,77 @@ test( '#abort', function() {
 	this.api.abort();
 	this.requests.forEach( function( request, i ) {
 		ok( request.abort.calledOnce, 'abort request number ' + i );
+	} );
+} );
+
+module( 'MobileFrontend api.getToken', {
+	setup: function() {
+		var params, corsParams, corsData,
+			editDeferred = $.Deferred().resolve( { tokens: { 'edittoken': '123' } } ),
+			uploadAnonDeferred = $.Deferred().resolve( { tokens: { 'uploadtoken': '+\\' } } ),
+			corsDeferred = $.Deferred().resolve( { tokens: { 'watchtoken': 'zyx' } } ),
+			warningDeferred = $.Deferred().resolve( { warning: 'you passed a bad watch token' } );
+
+		this.api = new Api();
+		stub = sinon.stub( this.api , 'ajax' );
+		params = {
+			url: M.getApiUrl(),
+			xhrFields: { withCredentials: true }
+		};
+		corsData = { action: 'tokens', type: 'watch',
+			origin: M.getOrigin()
+		};
+		corsParams = {
+			url: 'http://commons.wikimedia.org/w/api.php',
+			xhrFields: { withCredentials: true }
+		};
+
+		stub.withArgs( { action: 'tokens', type: 'rainbows' }, params ).returns( warningDeferred );
+		stub.withArgs( { action: 'tokens', type: 'edit' }, params ).returns( editDeferred );
+		stub.withArgs( { action: 'tokens', type: 'upload' }, params ).returns( uploadAnonDeferred );
+		stub.withArgs( corsData, corsParams ).returns( corsDeferred );
+	},
+	teardown: function() {
+		stub.restore();
+	}
+} );
+
+test( '#getToken - successful edit token', function() {
+	this.api.getToken( 'edit' ).done( function( token ) {
+		strictEqual( token, '123', 'Got token' );
+	} );
+} );
+
+test( '#getToken - load from cache', function() {
+	this.api.getToken( 'edit' );
+	this.api.getToken( 'edit' ).done( function( token ) { // this comes via cache
+		strictEqual( token, '123', 'Test for bad token name' );
+	} );
+
+	strictEqual( stub.getCall( 1 ), null, 'Ajax stub was only called once' );
+} );
+
+test( '#getToken - cors edit token', function() {
+	this.api.getToken( 'watch', 'http://commons.wikimedia.org/w/api.php' ).done( function( token ) {
+		strictEqual( token, 'zyx', 'Correctly passed via cors' );
+	} );
+} );
+
+test( '#getToken - default to edit', function() {
+	this.api.getToken().done( function( token ) {
+		strictEqual( token, '123', 'We get an edit token by default (most common)' );
+	} );
+} );
+
+test( '#getToken - get anon token', function() {
+	this.api.getToken( 'upload' ).fail( function( msg ) {
+		strictEqual( msg, 'Anonymous token.', 'No token given - user must be anon' );
+	} );
+} );
+
+test( '#getToken - bad type of token', function() {
+	this.api.getToken( 'rainbows' ).fail( function( msg ) {
+		strictEqual( msg, 'Bad token name.', 'Test for bad token name' );
 	} );
 } );
 

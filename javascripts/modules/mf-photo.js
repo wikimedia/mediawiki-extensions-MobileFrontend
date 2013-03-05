@@ -66,11 +66,11 @@
 	PhotoApi = Api.extend( {
 		updatePage: function( options, callback ) {
 			var self = this;
-			self.getToken( 'edit', function( tokenData ) {
+			self.getToken().done( function( token ) {
 				self.post( {
 					action: 'edit',
 					title: options.pageTitle,
-					token: tokenData.tokens.edittoken,
+					token: token,
 					summary: mw.msg( 'mobile-frontend-photo-upload-comment' ),
 					prependtext: '[[File:' + options.fileName + '|thumbnail|' + options.description + ']]\n\n'
 				} ).done( callback );
@@ -149,19 +149,11 @@
 					}
 				} );
 			}
-			self.getToken( 'edit', function( tokenData ) {
-				var token;
-				if ( tokenData && tokenData.tokens ) {
-					token = tokenData.tokens.edittoken;
-					if ( token && token !== '+\\' ) { // ensure not anonymous..
-						doUpload( token );
-					} else {
-						result.reject( 'Anonymous or absent token' );
-					}
-				} else {
-					result.reject( 'Missing token' );
-				}
-			}, endpoint );
+			self.getToken( 'edit', endpoint ).done( function( token ) {
+				doUpload( token );
+			} ).fail( function( err ) {
+				result.reject( err );
+			} );
 
 			return result;
 		}

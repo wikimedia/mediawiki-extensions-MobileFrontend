@@ -113,15 +113,26 @@
 		} );
 	};
 
-	Api.prototype.getToken = function( tokenType, callback, endpoint ) {
-		var data;
+	/**
+	 * Retrieves a token for a given endpoint
+	 *
+	 * @param {String} tokenType: Name of the type of token needed e.g. edit, upload - defaults to edit
+	 * @param {String} endpoint: Optional alternative host to query via CORS
+	 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed
+	 *   the token string, false if the user is anon or undefined where not available or a warning is set
+	 */
+	Api.prototype.getToken = function( tokenType, endpoint ) {
+		var data, d = $.Deferred();
+
+		tokenType = tokenType || 'edit';
+
 		if ( !this.tokenCache[ endpoint ] ) {
 			this.tokenCache[ endpoint ] = {};
 		}
 		if ( !M.isLoggedIn() ) {
-			callback( {} ); // return no token
+			return d.reject( 'Token requested when not logged in.' );
 		} else if ( this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
-			this.tokenCache[ endpoint ][ tokenType ].done( callback );
+			return this.tokenCache[ endpoint ][ tokenType ];
 		} else {
 			data = {
 				action: 'tokens',
@@ -130,10 +141,24 @@
 			if ( endpoint ) {
 				data.origin = M.getOrigin();
 			}
-			this.tokenCache[ endpoint ][ tokenType ] = this.ajax( data, {
-				url: endpoint || M.getApiUrl(),
-				xhrFields: { 'withCredentials': true }
-			} ).done( callback );
+			this.ajax( data, {
+					url: endpoint || M.getApiUrl(),
+					xhrFields: { withCredentials: true }
+				} ).then( function( tokenData ) {
+					var token;
+					if ( tokenData && tokenData.tokens && !tokenData.warnings ) {
+						token = tokenData.tokens[ tokenType + 'token' ];
+						if ( token && token !== '+\\' ) {
+							d.resolve( token );
+						} else {
+							d.reject( 'Anonymous token.' );
+						}
+					} else {
+						d.reject( 'Bad token name.' );
+					}
+				} );
+			this.tokenCache[ endpoint ][ tokenType ] = d;
+			return d;
 		}
 	};
 

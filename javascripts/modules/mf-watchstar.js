@@ -76,8 +76,8 @@ var api = M.require( 'api' ), w = ( function() {
 		}
 
 		function toggleWatchStatus( unwatch ) {
-			api.getToken( 'watch', function( data ) {
-				toggleWatch( title, data.tokens.watchtoken, unwatch, success, enable );
+			api.getToken( 'watch' ).done( function( token ) {
+				toggleWatch( title, token, unwatch, success, enable );
 			} );
 		}
 
@@ -142,24 +142,22 @@ var api = M.require( 'api' ), w = ( function() {
 	function initWatchListIcon( container, title ) {
 		var drawer = new nav.CtaDrawer( { content: mw.msg( 'mobile-frontend-watchlist-cta' ) } );
 
-		api.getToken( 'watch', function( data ) {
-			if( data.tokens && !data.warnings ) { // then user is logged in
-				lastToken = data.tokens.watchtoken;
-				checkWatchStatus( [ title ], function( status ) {
-					createWatchListButton( container, title, status[ title ] );
-				} );
-			} else {
-				$( createButton( container ) ).click( function( ev ) {
-					if ( !drawer.isVisible() ) {
-						// log if enabled
-						logWatchEvent( 2 );
-						drawer.show();
-					} else {
-						drawer.hide();
-					}
-					ev.stopPropagation();
-				} );
-			}
+		api.getToken( 'watch' ).done( function( token ) {
+			lastToken = token;
+			checkWatchStatus( [ title ], function( status ) {
+				createWatchListButton( container, title, status[ title ] );
+			} );
+		} ).fail( function() {
+			$( createButton( container ) ).click( function( ev ) {
+				if ( !drawer.isVisible() ) {
+					// log if enabled
+					logWatchEvent( 2 );
+					drawer.show();
+				} else {
+					drawer.hide();
+				}
+				ev.stopPropagation();
+			} );
 		} );
 	}
 
@@ -184,17 +182,15 @@ var api = M.require( 'api' ), w = ( function() {
 				createWatchListButton( this, title, true );
 			} );
 		} else {
-			api.getToken( 'watch', function( data ) {
-				if( data.tokens && !data.warnings ) {
-					lastToken = data.tokens.watchtoken;
+			api.getToken( 'watch' ).done( function( token ) {
+				lastToken = token;
 
-					checkWatchStatus( titles, function( status ) {
-						$container.find( 'li' ).each( function() {
-							var title = $( this ).attr( 'title' );
-							createWatchListButton( this, title, status[ title ] );
-						} );
+				checkWatchStatus( titles, function( status ) {
+					$container.find( 'li' ).each( function() {
+						var title = $( this ).attr( 'title' );
+						createWatchListButton( this, title, status[ title ] );
 					} );
-				}
+				} );
 			} );
 		}
 	}
