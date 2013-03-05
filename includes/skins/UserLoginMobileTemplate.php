@@ -61,20 +61,12 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 		$form = Html::openElement( 'div', array() ) .
 			Html::openElement( 'form',
 				array( 'name' => 'userlogin',
+					'class' => 'user-login',
 					'method' => 'post',
 					'action' => $action ) ) .
-			Html::openElement( 'table',
-				array( 'class' => 'user-login' ) ) .
-			Html::openElement( 'tbody' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpName1' ), wfMessage( 'mobile-frontend-username' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td' ) .
+			Html::openElement( 'div', array(
+				'class' => 'wpInputs',
+			) ) .
 			Html::input( 'wpName', $username, 'text',
 				array( 'class' => 'loginText',
 					'placeholder' => wfMessage( 'mobile-frontend-username-placeholder' )->text(),
@@ -82,40 +74,17 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 					'tabindex' => '1',
 					'size' => '20',
 					'required' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-label' ) ) .
-			Html::element( 'label',
-				array( 'for' => 'wpPassword1' ), wfMessage( 'mobile-frontend-password' )->text() ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-input' ) ) .
 			Html::input( 'wpPassword', null, 'password',
 				array( 'class' => 'loginPassword',
 					'placeholder' => wfMessage( 'mobile-frontend-password-placeholder' )->text(),
 					'id' => 'wpPassword1',
 					'tabindex' => '2',
 					'size' => '20' ) ) .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::element( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::openElement( 'tr' ) .
-			Html::openElement( 'td',
-				array( 'class' => 'mw-submit' ) ) .
+			Html::closeElement( 'div' ) .
 			Html::input( 'wpLoginAttempt', wfMessage( 'mobile-frontend-login' )->text(), 'submit',
 				array( 'id' => 'wpLoginAttempt',
 					'tabindex' => '3' ) ) .
 			$signupLink .
-			Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) .
-			Html::closeElement( 'tbody' ) .
-			Html::closeElement( 'table' ) .
 			Html::input( 'wpLoginToken', $token, 'hidden' ) .
 			Html::input( 'watch', $watchArticle, 'hidden' ) .
 			$stickHTTPS .

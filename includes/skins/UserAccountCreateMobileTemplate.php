@@ -48,6 +48,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 			Html::openElement( 'form',
 				array( 'name' => 'userlogin2',
 					'method' => 'post',
+					'class' => 'user-login',
 					'action' => $action,
 					'id' => 'userlogin2' ) ) .
 			Html::openElement( 'div',
