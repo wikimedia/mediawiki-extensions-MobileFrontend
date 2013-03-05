@@ -247,6 +247,24 @@
       "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoD03CAA",
+        "filename": "less/specials/userlogin.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-05T00:37:45Z",
+      "side": 1,
+      "message": "Yes, but userlogin.js is not. I will add .jsEnabled, but keep those CSS rules here.",
+      "parentUuid": "DoH2qcBs",
+      "revId": "449d5b7c216dca7c875c66d52c193fbff8e5f1ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
