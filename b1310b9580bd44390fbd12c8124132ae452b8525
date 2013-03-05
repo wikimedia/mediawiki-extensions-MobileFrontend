@@ -37,6 +37,23 @@
     },
     {
       "key": {
+        "uuid": "DoP3SANA",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-05T00:10:58Z",
+      "side": 1,
+      "message": "s/access/Returns/",
+      "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DoMxpkPs",
         "filename": "includes/DeviceDetection.php",
         "patchSetId": 1
@@ -66,6 +83,41 @@
       "side": 1,
       "message": "Potentially on desktop. Max is there any chance this could be run in a desktop environment and/or no device is set?",
       "parentUuid": "DoMxpkPs",
+      "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoJ3YlO8",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-05T00:10:58Z",
+      "side": 1,
+      "message": "Device type for desktop makes no sense, e.g. we don\u0027t want to trust \u0027desktop/webkit\u0027 or whatever - suggest simply \u0027desktop\u0027. Also, getDeviceProperties() already makes sure that this element is always set.",
+      "parentUuid": "DoH1JEGA",
+      "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoD3JSCc",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-05T00:10:58Z",
+      "side": 1,
+      "message": "Suggest \u0027unknown\u0027 instead of passing whatever the crap might come from headers.",
       "revId": "b1310b9580bd44390fbd12c8124132ae452b8525",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
