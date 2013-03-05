@@ -408,12 +408,11 @@ html.overlay ul.content li:hover {
   min-height: 46px;
   margin: 0;
   padding-bottom: 0;
+  padding-right: 8px;
 }
 #mw-mf-page-center .header input.search,
 .overlay .header input.search {
   margin-top: 0;
-  margin-right: 48px;
-  margin-left: 40px;
 }
 #mw-mf-page-center .header h2,
 .overlay .header h2 {
