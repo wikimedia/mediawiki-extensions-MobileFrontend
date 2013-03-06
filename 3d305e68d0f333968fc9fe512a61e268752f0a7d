@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoArTzdU",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 905,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-06T19:39:49Z",
+      "side": 1,
+      "message": "should we just remove the search-box class altogether.. don\u0027t think we\u0027re using this?",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoKrS4f0",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-06T19:39:49Z",
+      "side": 1,
+      "message": "just use \u003cbutton id\u003d\"close\"\u003e",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoMrPJVY",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-06T19:39:49Z",
+      "side": 1,
+      "message": "lets deprecate use of mfePrefix...",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoMrV5bY",
+        "filename": "less/mf-variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-06T19:39:49Z",
+      "side": 1,
+      "message": "This change moves the watchlist icon out of line with the the margins of the content.\n\nDrawing a straight line from the right side of the watchlist icon in the header should line up with the section toggles and text content. It currently doesn\u0027t because of this change...",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
