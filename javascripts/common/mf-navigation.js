@@ -89,11 +89,12 @@ var m = ( function( $ ) {
 
 		enableArticleActions();
 
-		if ( M.getConfig( 'beta' ) ) {
-
+		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', function( curPage ) {
 				enableEditing( curPage.title );
 			} );
+		} else {
+			enableEditing( mw.config.get( 'wgTitle' ) );
 		}
 
 		function openNavigation() {
