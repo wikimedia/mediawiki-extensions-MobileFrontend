@@ -7,10 +7,17 @@
 #mw-mf-login .watermark,
 #mw-mf-accountcreate .watermark {
   background-position: center center;
-  height: 90px;
+  height: 72px;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 72px;
+  -o-background-size: auto 72px;
+  -webkit-background-size: auto 72px;
+  background-size: auto 72px;
   width: 100%;
   background-image: url(images/W.png);
   background-repeat: no-repeat;
+  margin-bottom: 14pt;
 }
 #mw-mf-login .headmsg,
 #mw-mf-accountcreate .headmsg {
@@ -25,57 +32,19 @@
   margin-left: 0;
   margin-right: 0;
 }
-table.user-login {
-  border: none;
-  display: table;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-table.user-login tbody {
-  display: table-row-group;
-}
-table.user-login tr {
-  display: table-row;
-}
-table.user-login tr td {
-  border: none;
-}
-table.user-login .mw-label {
-  display: none;
-}
-table.user-login td,
-table.user-login tr,
-table.user-login input {
-  width: 100%;
-}
-table.user-login input.loginPassword,
-table.user-login input.loginText {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 0.9em;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 1px solid #C9C9C9;
-  box-shadow: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  width: 100%;
-  padding: 1em 3em 1em 0.4em;
-}
-table.user-login a.mw-mf-create-account {
-  text-align: center;
-  margin-top: 20px;
-  display: block;
-}
 /* sign up form */
-form#userlogin2 input {
+form.user-login {
+  padding-bottom: 12px;
+}
+form.user-login input {
+  -webkit-appearance: none;
   box-shadow: none;
   display: block;
   width: 100%;
-  padding: 0;
   text-align: left;
-  padding: 8px;
+  text-shadow: none;
+  padding: 1em 0.5em;
+  font-size: 1em;
   border: none;
   border-bottom: solid 1px #E1E1E1;
   -moz-box-sizing: border-box;
@@ -83,36 +52,41 @@ form#userlogin2 input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-form#userlogin2 div.wpInputs,
-form#userlogin2 div.wpCaptcha {
+form.user-login div.wpInputs,
+form.user-login div.wpCaptcha {
   border: solid 1px #E1E1E1;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-form#userlogin2 div.wpInputs input:last-child,
-form#userlogin2 div.wpCaptcha input:last-child {
+form.user-login div.wpInputs input:last-child,
+form.user-login div.wpCaptcha input:last-child {
   border-bottom: none;
 }
-form#userlogin2 div.wpCaptcha {
-  margin: 12px 0;
-}
-form#userlogin2 div.wpCaptcha input {
+form.user-login div.wpCaptcha input {
   border-bottom: none;
 }
-form#userlogin2 div.wpCaptcha img.wpCaptcha {
+form.user-login div.wpCaptcha img.wpCaptcha {
   display: block;
   margin: auto;
 }
-form#userlogin2 #wpCreateaccount {
+form.user-login div.wpCaptcha,
+form.user-login #wpLoginAttempt {
+  margin: 12px 0;
+}
+form.user-login #wpLoginAttempt,
+form.user-login #wpCreateaccount {
   text-align: center;
   padding-top: 8px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
   padding-top: 12px;
   padding-bottom: 12px;
+  margin-bottom: 12px;
   font-size: 1em;
+}
+form.user-login .mw-mf-create-account {
+  padding-top: 12px;
+  display: block;
+  text-align: center;
 }
 #mw-returnto {
   padding-top: 2em;

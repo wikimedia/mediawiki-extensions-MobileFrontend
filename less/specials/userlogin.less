@@ -21,10 +21,12 @@
 #mw-mf-accountcreate {
 	.watermark {
 		background-position: center center;
-		height: 90px;
+		height: 72px;
+		.background-size( auto, 72px );
 		width: 100%;
 		background-image: url(images/W.png);
 		background-repeat: no-repeat;
+		margin-bottom: @headingMarginTop;
 	}
 
 	.headmsg {
@@ -44,61 +46,19 @@
 	}
 }
 
-table.user-login {
-	border: none;
-	display: table;
-	font-family: @fontFamily;
-
-	tbody {
-		display: table-row-group;
-	}
-
-	tr {
-		display: table-row;
-		td {
-			border: none;
-		}
-	}
-
-	.mw-label {
-		display: none;
-	}
-
-	td,
-	tr,
-	input {
-		width: 100%;
-	}
-
-	input.loginPassword,
-	input.loginText {
-		font-family: @fontFamily;
-		font-size: @baseFontSize * 0.9;
-		.box-sizing(border-box);
-		border: 1px solid #C9C9C9;
-		box-shadow: none;
-		.border-radius(5px);
-		width: 100%;
-		padding: ( @inputFontSize/2 ) ( @inputFontSize * 1.5 ) ( @inputFontSize/2 ) ( @overlayHeadingIndent );
-	}
-
-	a.mw-mf-create-account {
-		text-align: center;
-		margin-top: 20px;
-		display: block;
-	}
-}
-
 /* sign up form */
-form#userlogin2 {
+form.user-login {
+	padding-bottom: 12px;
 
 	input {
+		-webkit-appearance: none;
 		box-shadow: none;
 		display: block;
 		width: 100%;
-		padding: 0;
 		text-align: left;
-		padding: 8px;
+		text-shadow: none;
+		padding: 1em 0.5em;
+		font-size: @baseFontSize;
 		border: none;
 		border-bottom: solid 1px #E1E1E1;
 		.box-sizing( border-box );
@@ -115,7 +75,6 @@ form#userlogin2 {
 	}
 
 	div.wpCaptcha {
-		margin: 12px 0;
 
 		input {
 			border-bottom: none;
@@ -127,13 +86,25 @@ form#userlogin2 {
 		}
 	}
 
+	div.wpCaptcha,
+	#wpLoginAttempt {
+		margin: 12px 0;
+	}
+
+	#wpLoginAttempt,
 	#wpCreateaccount {
 		text-align: center;
 		padding-top: 8px;
-		.border-radius( 0 );
 		padding-top: 12px;
 		padding-bottom: 12px;
+		margin-bottom: 12px;
 		font-size: @baseFontSize;
+	}
+
+	.mw-mf-create-account {
+		padding-top: 12px;
+		display: block;
+		text-align: center;
 	}
 }
 

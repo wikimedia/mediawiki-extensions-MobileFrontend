@@ -23,7 +23,6 @@ input:not([type=submit]),
 textarea {
   background: #fff;
   border: 1px solid #ccc;
-  box-shadow: inset 0 0 4px #dddddd;
 }
 button.disabled {
   opacity: 0.2;
