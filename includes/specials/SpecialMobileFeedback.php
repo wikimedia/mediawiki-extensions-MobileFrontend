@@ -1,6 +1,6 @@
 <?php
 
-class SpecialMobileFeedback extends UnlistedSpecialPage {
+class SpecialMobileFeedback extends UnlistedSpecialMobilePage {
 	public function __construct() {
 		parent::__construct( 'MobileFeedback' );
 	}

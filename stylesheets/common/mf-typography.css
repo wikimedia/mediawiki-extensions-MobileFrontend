@@ -81,6 +81,9 @@ sup {
 .content {
   margin: 14pt 23px 0 23px;
 }
+.noMargins > .content {
+  margin: 0;
+}
 #content_wrapper {
   position: relative;
 }

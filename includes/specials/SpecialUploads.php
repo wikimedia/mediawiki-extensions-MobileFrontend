@@ -1,6 +1,6 @@
 <?php
 
-class SpecialUploads extends UnlistedSpecialPage {
+class SpecialUploads extends UnlistedSpecialMobilePage {
 
 	public function __construct() {
 		parent::__construct( 'Uploads' );

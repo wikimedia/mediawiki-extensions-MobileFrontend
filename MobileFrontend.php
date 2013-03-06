@@ -57,6 +57,7 @@ $autoloadClasses = array (
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
 	'SpecialNearby' => 'specials/SpecialNearby',
+	'UnlistedSpecialMobilePage' => 'specials/UnlistedSpecialMobilePage',
 
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
