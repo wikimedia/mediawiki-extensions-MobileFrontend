@@ -447,7 +447,7 @@
 
 	if ( isSupported() && M.getConfig( 'can_edit' ) ) {
 		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
-		if ( M.getConfig( 'beta' ) ) {
+		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', initialize );
 		} else {
 			$( initialize );
