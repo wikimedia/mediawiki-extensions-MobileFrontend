@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoFft-Y0",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-06T22:13:29Z",
+      "side": 1,
+      "message": "Something wrong here.",
+      "revId": "e9be0af90a16fa7a17ca90ab3b2d7141fcb600af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
