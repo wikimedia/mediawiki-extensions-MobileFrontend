@@ -210,58 +210,6 @@ class ExtMobileFrontend extends ContextSource {
 		}
 		wfProfileOut( __METHOD__ );
 	}
-
-	/**
-	 * Prepares module definitions for mobile SpecialPages
-	 *
-	 * @param array $specialModuleStubs
-	 * 	the key is the name of the special page you want to target (lowercased)
-	 * 	the value of the array is an array with 3 recognised keys:
-	 * 		- alias: names another key in $specialModuleStubs that this special page shares resources for
-	 * 		- css: boolean that identifies there is a corresponding stylesheet for this module in stylesheets/specials/<modulename>.css where modulename is the key (special page name lowercased)
-	 * 		- js: boolean that identifies there is a corresponding javascript file for this module in javascripts/specials/<modulename>.css  where modulename is the key
-	 * @return array
-	 *	Formatted and mergable with $wgResourceModules
-	 */
-	public static function generateMobileSpecialPageModules( $specialModuleStubs ) {
-		global $wgMFMobileResourceBoilerplate;
-
-		$modules = array();
-		foreach( $specialModuleStubs as $moduleName => $moduleMakeup ) {
-			$module = $wgMFMobileResourceBoilerplate;
-
-			if ( isset( $moduleMakeup[ 'dependencies' ] ) ) {
-				$module[ 'dependencies' ] = $moduleMakeup[ 'dependencies' ];
-			} else {
-				$module[ 'dependencies' ] = array( 'mobile.startup' );
-			}
-
-			if ( isset( $moduleMakeup[ 'messages' ] ) ) {
-				$module[ 'messages' ] = $moduleMakeup[ 'messages' ];
-			}
-
-			// allow special pages to use the same stylesheets / scripts as other special pages
-			if ( isset( $moduleMakeup[ 'alias' ] ) ) {
-				$resourceName = $moduleMakeup[ 'alias' ];
-				$moduleMakeup = $specialModuleStubs[ $resourceName ];
-			} else {
-				$resourceName = $moduleName;
-			}
-
-			if ( isset( $moduleMakeup[ 'js' ] ) ) {
-				$id = 'mobile.' . $moduleName . '.scripts';
-				$modules[$id] = $module;
-				$modules[$id]['scripts'] = array( "javascripts/specials/$resourceName.js" );
-			}
-
-			if ( isset( $moduleMakeup[ 'css' ] ) ) {
-				$id = 'mobile.' . $moduleName . '.styles';
-				$modules[$id] = $module;
-				$modules[$id][ 'styles' ] = array( "stylesheets/specials/$resourceName.css" );
-			}
-		}
-		return $modules;
-	}
 }
 
 class MobileFrontendSiteModule extends ResourceLoaderSiteModule {
