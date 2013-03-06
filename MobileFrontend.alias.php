@@ -104,6 +104,16 @@ $specialPageAliases['scn'] = array(
 	'MobileOptions' => array( 'OpzioniMobile' ),
 );
 
+/** Vietnamese (Tiếng Việt) */
+$specialPageAliases['vi'] = array(
+	'MobileFeedback' => array( 'Phản_hồi_di_động' ),
+	'MobileOptions' => array( 'Tùy_chọn_di_động' ),
+	'DonateImage' => array( 'Đóng_góp_hình_ảnh', 'Đóng_góp_hình', 'Đóng_góp_ảnh' ),
+	'MobileDiff' => array( 'So_sánh_di_động' ),
+	'MobileMenu' => array( 'Trình_đơn_di_động' ),
+	'Nearby' => array( 'Kề_bên' ),
+);
+
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'MobileFeedback' => array( '移动版反馈' ),
