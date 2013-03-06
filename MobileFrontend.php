@@ -414,11 +414,16 @@ $wgResourceModules['mobile.desktop'] = array(
  * A boilerplate containing common properties for all RL modules served to mobile site special pages
  */
 $wgMFMobileSpecialPageResourceBoilerplate = array(
-	'dependencies' => array( 'mobile.stable' ),
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
 	'mobileTargets' => array(),
+);
+/**
+ * A boilerplate for RL script modules
+*/
+$wgMFMobileSpecialPageResourceScriptBoilerplate = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'dependencies' => array( 'mobile.stable' ),
 );
 /**
 	* Special page modules
@@ -437,12 +442,12 @@ $wgResourceModules['mobile.mobileoptions.styles'] = $wgMFMobileSpecialPageResour
 		'stylesheets/specials/mobileoptions.css',
 	),
 );
-$wgResourceModules['mobile.mobileoptions.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+$wgResourceModules['mobile.mobileoptions.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'scripts' => array(
 		'javascripts/specials/mobileoptions.js',
 	),
 );
-$wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+$wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'messages' => array(
 		'mobile-frontend-nearby-error',
 		'mobile-frontend-nearby-refresh',
@@ -461,6 +466,11 @@ $wgResourceModules['mobile.search.styles'] = $wgMFMobileSpecialPageResourceBoile
 		'stylesheets/specials/search.css',
 	),
 );
+$wgResourceModules['mobile.watchlist.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+	'scripts' => array(
+		'javascripts/specials/watchlist.js',
+	),
+);
 $wgResourceModules['mobile.watchlist.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/specials/watchlist.css',
@@ -471,12 +481,12 @@ $wgResourceModules['mobile.userlogin.styles'] = $wgMFMobileSpecialPageResourceBo
 		'stylesheets/specials/userlogin.css',
 	),
 );
-$wgResourceModules['mobile.userlogin.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+$wgResourceModules['mobile.userlogin.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'scripts' => array(
 		'javascripts/specials/userlogin.js',
 	),
 );
-$wgResourceModules['mobile.donateimage.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+$wgResourceModules['mobile.donateimage.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'messages' => array(
 		'mobile-frontend-photo-upload-generic',
 		'mobile-frontend-donate-photo-upload-success',
@@ -499,7 +509,7 @@ $wgResourceModules['mobile.mobilediff.styles'] = $wgMFMobileSpecialPageResourceB
 	),
 );
 // FIXME: temporary hack to get round CentralNotice logout screen
-$wgResourceModules['mobile.userlogout.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+$wgResourceModules['mobile.userlogout.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'scripts' => array(
 		'javascripts/specials/userlogin.js',
 	),
