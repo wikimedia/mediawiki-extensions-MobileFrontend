@@ -1,10 +1,59 @@
 (function( M ) {
 
 var m = ( function( $ ) {
-	var u = M.utils, mfePrefix = M.prefix,
+	var View = M.require( 'view' ),
+		u = M.utils, mfePrefix = M.prefix,
 		lastScrollTopPosition = 0,
-		$drawer,
-		inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
+		inBeta = mw.config.get( 'wgMFMode' ) === 'beta',
+		Drawer, CtaDrawer;
+
+	Drawer = View.extend( {
+		defaults: {
+			cancelMessage: M.message( 'mobile-frontend-drawer-cancel' )
+		},
+		className: 'drawer position-fixed-element',
+
+		initialize: function() {
+			var self = this;
+			this.$( '.close' ).click( function( ev ) {
+				ev.preventDefault();
+				self.hide();
+			} );
+			$( window ).on( 'scroll click', function() {
+				self.hide();
+			} );
+		},
+
+		show: function() {
+			this.appendTo( '#mw-mf-page-center' );
+		},
+
+		hide: function() {
+			this.detach();
+		},
+
+		isVisible: function() {
+			return this.$el.is( ':visible' );
+		}
+	} );
+
+	CtaDrawer = Drawer.extend( {
+		defaults: {
+			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
+			loginUrl: M.history.getArticleUrl( 'Special:UserLogin', {
+				returnto: mw.config.get( 'wgTitle' ),
+				returntoquery: 'article_action=watch'
+			} ),
+			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
+			signupUrl: M.history.getArticleUrl( 'Special:UserLogin', {
+				returnto: mw.config.get( 'wgTitle' ),
+				returntoquery: 'article_action=watch',
+				type: 'signup'
+			} ),
+			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
+		},
+		template: M.template.get( 'ctaDrawer' )
+	} );
 
 	function getOverlay() {
 		return document.getElementById( 'mw-mf-overlay' );
@@ -58,24 +107,10 @@ var m = ( function( $ ) {
 		}
 	}
 
-	function showDrawer() {
-		$drawer.show();
-		return $drawer.find( 'div' ).empty();
-	}
-
-	function makeDrawer() {
-		$drawer = $( '<div id="mw-mf-drawer">' ).hide().appendTo( '#mw-mf-page-center' );
-		$( '<div>' ).appendTo( $drawer );
-		$( '<a class="close">' ).text( mw.msg( 'mobile-frontend-drawer-cancel' ) ).on( 'click', function() {
-			$drawer.hide();
-			} ).appendTo( $drawer );
-	}
-
 	function init() {
 		var id = mfePrefix + 'overlay',
 			search = document.getElementById(  mfePrefix + 'search' );
 
-		makeDrawer();
 		$( '#mw-mf-menu-main a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
@@ -121,7 +156,6 @@ var m = ( function( $ ) {
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
 			toggleNavigation();
 			ev.preventDefault();
-			ev.stopPropagation();
 		} );
 
 		if( window.location.hash === '#mw-mf-page-left' ) {
@@ -142,11 +176,11 @@ var m = ( function( $ ) {
 	init();
 
 	return {
+		CtaDrawer: CtaDrawer,
 		closeOverlay: closeOverlay,
 		createOverlay: createOverlay,
 		getPageMenu: getPageMenu,
 		getOverlay: getOverlay,
-		showDrawer: showDrawer,
 		showOverlay: showOverlay
 	};
 }( jQuery ));
