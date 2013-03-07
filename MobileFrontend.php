@@ -178,13 +178,11 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 		'stylesheets/modules/mf-banner.css',
 		'stylesheets/modules/mf-toggle.css',
 		'stylesheets/common/mf-hacks.css',
-		'stylesheets/modules/mf-cleanuptemplates.css',
 		'stylesheets/common/mf-enwp.css'
 	),
-	'scripts' => array(
-	),
 	'position' => 'top',
-	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
+	// expects to be added manually
+	'mobileTargets' => array(),
 );
 
 $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
@@ -276,6 +274,7 @@ $wgResourceModules['mobile.action.edit'] = $wgMFMobileResourceBoilerplate + arra
 		'javascripts/actions/mf-edit.js',
 	),
 	'mobileTargets' => array(),
+	'group' => 'mobile.action',
 );
 
 $wgResourceModules['mobile.action.history'] = $wgMFMobileResourceBoilerplate + array(
@@ -286,6 +285,7 @@ $wgResourceModules['mobile.action.history'] = $wgMFMobileResourceBoilerplate + a
 		'stylesheets/actions/mf-history.css',
 	),
 	'mobileTargets' => array(),
+	'group' => 'mobile.action',
 );
 
 $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
@@ -418,6 +418,7 @@ $wgMFMobileSpecialPageResourceBoilerplate = array(
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
 	'mobileTargets' => array(),
+	'group' => 'mobile.special',
 );
 /**
  * A boilerplate for RL script modules

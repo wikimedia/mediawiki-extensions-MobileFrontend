@@ -248,9 +248,11 @@ class SkinMobile extends SkinMobileBase {
 		// TODO: deprecate supportsjQuery usage in favour of supportsJavascript
 		$rlSupport = $device->supportsJQuery();
 		$out = $this->getOutput();
+		$context = MobileContext::singleton();
 
 		$headLinks = array();
 		$moduleNames = $this->getEnabledModules( $wgResourceModules, $title );
+		$contextModules = $this->attachAdditionalPageResources( $title, $context );
 
 		// attach modules
 		if ( $rlSupport ) {
@@ -271,6 +273,7 @@ class SkinMobile extends SkinMobileBase {
 
 			// bottom scripts
 			$out->addModules( $moduleNames['bottom'] );
+			$out->addModules( $contextModules['bottom'] );
 			// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
 			if ( in_array( 'mobile.action.edit', $moduleNames['bottom'] ) ) {
 				$bottomScripts = Html::inlineScript(
@@ -283,10 +286,13 @@ class SkinMobile extends SkinMobileBase {
 
 			$bottomScripts .= $out->getBottomScripts();
 		} else {
-			$headLinks[] = $this->resourceLoaderLink( $moduleNames['bottom'], 'styles' );
 			$bottomScripts = '';
 		}
-		$headLinks[] = $this->resourceLoaderLink( $moduleNames['top'], 'styles', $target='mobile' );
+		// attach styles
+		$headLinks[] = $this->resourceLoaderLink( array( 'mobile.styles' ), 'styles', $target='mobile' );
+		if ( count( $contextModules['top'] > 0 ) ) {
+			$headLinks[] = $this->resourceLoaderLink( $contextModules['top'], 'styles', $target='mobile' );
+		}
 		// add device specific css file - add separately to avoid cache fragmentation
 		if ( $device->moduleName() ) {
 			$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
@@ -314,7 +320,6 @@ class SkinMobile extends SkinMobileBase {
 	 */
 	public function getEnabledModules( array $modules, Title $title ) {
 		$context = MobileContext::singleton();
-		$action = $context->getRequest()->getText( 'action' );
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
 
@@ -346,15 +351,6 @@ class SkinMobile extends SkinMobileBase {
 						$moduleNames[] = $moduleName;
 					}
 			}
-		}
-		$contextModules = $this->attachAdditionalPageResources( $title, $context );
-		$headModuleNames = array_merge( $headModuleNames, $contextModules['top'] );
-		$moduleNames = array_merge( $moduleNames, $contextModules['bottom'] );
-
-		if ( $action === 'edit' ) {
-			$moduleNames[] = 'mobile.action.edit';
-		} else if ( $action === 'history' ) {
-			$moduleNames[] = 'mobile.action.history';
 		}
 
 		return array(
