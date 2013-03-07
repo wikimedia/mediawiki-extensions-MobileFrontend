@@ -332,4 +332,75 @@ class MobileContextTest extends MediaWikiTestCase {
 		$wgUseSiteJs = $wgUseSiteJsOrig;
 		$wgAllowUserJs = $wgAllowUserJsOrig;
 	}
+
+	/**
+	 * @dataProvider addAnalyticsLogItemProvider
+	 */
+	public function testAddAnalyticsLogItem( $key, $val ) {
+		$context = MobileContext::singleton();
+		$context->addAnalyticsLogItem( $key, $val );
+		$logItems = $context->getAnalyticsLogItems();
+		$trimmedKey = trim( $key );
+		$trimmedVal = trim( $val );
+		$this->assertTrue( isset( $logItems[$trimmedKey] ) );
+		$this->assertEquals( $logItems[$trimmedKey], $trimmedVal );
+	}
+
+	public function addAnalyticsLogItemProvider() {
+		return array(
+			array( 'mf-m', 'a' ),
+			array( ' mf-m', 'b ' ),
+		);
+	}
+
+	/**
+	 * @dataProvider getXAnalyticsHeaderProvider
+	 */
+	public function testGetXAnalyticsHeader( $logItems, $expectedHeader ){
+		$context = MobileContext::singleton();
+		foreach( $logItems as $key => $val ) {
+			$context->addAnalyticsLogItem( $key, $val );
+		}
+		$this->assertEquals( $context->getXAnalyticsHeader(), $expectedHeader );
+	}
+
+	public function getXAnalyticsHeaderProvider() {
+		return array(
+			array(
+				array( 'mf-m' => 'a', 'zero' => '502-13' ),
+				'X-Analytics: mf-m=a;zero=502-13',
+			),
+			// check key/val trimming
+			array(
+				array( '  foo' => '  bar  ', 'baz' => ' blat ' ),
+				'X-Analytics: foo=bar;baz=blat'
+			),
+			// check urlencoding key/val pairs
+			array(
+				array( 'foo' => 'bar baz', 'blat' => '$blammo' ),
+				'X-Analytics: foo=bar+baz;blat=%24blammo'
+			),
+		);
+	}
+
+	/**
+	 * @dataProvider addAnalyticsLogItemFromXAnalyticsProvider
+	 */
+	public function testAddAnalyticsLogItemFromXAnalytics( $analyticsItem, $key, $val ){
+			$context = MobileContext::singleton();
+			$context->addAnalyticsLogItemFromXanalytics( $analyticsItem );
+			$logItems = $context->getAnalyticsLogItems();
+			$this->assertTrue( isset( $logItems[$key] ) );
+			$this->assertEquals( $logItems[$key], $val );
+	}
+
+	public function addAnalyticsLogItemFromXAnalyticsProvider() {
+		return array(
+			array( 'mf-m=a', 'mf-m', 'a' ),
+			// check key/val trimming
+			array( ' mf-m=a ', 'mf-m', 'a' ),
+			// check urldecode
+			array( 'foo=bar+%24blat', 'foo', 'bar $blat' ),
+		);
+	}
 }
