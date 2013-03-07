@@ -139,6 +139,24 @@
       "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoAEyy10",
+        "filename": "less/mf-variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 420
+      },
+      "writtenOn": "2013-03-07T22:29:50Z",
+      "side": 1,
+      "message": "I\u0027ve always found the chrome to be the most prominent part of the interface, and the asymmetry here is very noticeable and looks sloppy / buggy to an unknowing user. I\u0027d prefer to make the area even on both sides of the search bar.",
+      "parentUuid": "DoOGdZ1U",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
