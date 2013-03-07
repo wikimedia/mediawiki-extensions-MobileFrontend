@@ -168,18 +168,24 @@ $wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + arr
 	'mobileTargets' => array(),
 );
 
+$wgResourceModules['mobile.styles.page'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array( 'mobile.startup' ),
+	'styles' => array(
+		'stylesheets/common/mf-footer.css',
+		'stylesheets/common/mf-hacks.css',
+		'stylesheets/common/mf-enwp.css'
+	),
+	'mobileTargets' => array(),
+);
+
 $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/externals/reset.css',
 		'stylesheets/common/mf-common.css',
-		'stylesheets/common/mf-footer.css',
+		'stylesheets/common/ui.css',
 		'stylesheets/common/mf-typography.css',
+		// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
 		'stylesheets/common/mf-navigation.css',
-		'stylesheets/modules/mf-search.css',
-		'stylesheets/modules/mf-banner.css',
-		'stylesheets/modules/mf-toggle.css',
-		'stylesheets/common/mf-hacks.css',
-		'stylesheets/common/mf-enwp.css'
 	),
 	'position' => 'top',
 	// expects to be added manually
@@ -322,18 +328,26 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	'mobileTargets' => array( 'alpha' ),
 );
 
+$wgResourceModules['mobile.stable.styles'] = $wgMFMobileResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/modules/mf-search.css',
+		'stylesheets/modules/mf-banner.css',
+		'stylesheets/modules/mf-toggle.css',
+		'stylesheets/modules/mf-references.css',
+		'stylesheets/modules/mf-cleanuptemplates.css',
+		'stylesheets/modules/mf-watchstar.css',
+		'stylesheets/modules/mf-photo.css',
+	),
+	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
+);
+
 $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mediawiki.jqueryMsg',
 		'mobile.startup',
 		'mobile.stable.dependencies',
 		'mediawiki.util',
-	),
-	'styles' => array(
-		'stylesheets/modules/mf-references.css',
-		'stylesheets/modules/mf-cleanuptemplates.css',
-		'stylesheets/modules/mf-watchstar.css',
-		'stylesheets/modules/mf-photo.css',
+		'mobile.stable.styles',
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
@@ -440,6 +454,11 @@ $wgMFMobileSpecialPageResourceScriptBoilerplate = $wgMFMobileSpecialPageResource
 	* Name must be the name of the special page lowercased prefixed by 'mobile.'
 	* suffixed by '.styles' or '.scripts'
 	*/
+$wgResourceModules['mobile.mobilemenu.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/mobilemenu.css',
+	),
+);
 $wgResourceModules['mobile.mobilefeedback.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/specials/mobilefeedback.css',

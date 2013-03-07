@@ -1,0 +1,110 @@
+@import "../mf-mixins.less";
+@import "mf-buttons.less";
+@import 'mainmenu.less';
+
+/* Header */
+#mw-mf-header form,
+#mw-mf-sq {
+	height: @headerHeight;
+}
+
+.header,
+#mw-mf-header {
+	z-index: 2;
+	color: black;
+	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
+	border-bottom: 1px solid #e2e2e2;
+	line-height: @headerHeight;
+	text-align: center;
+	padding: 0;
+	min-height: @headerHeight;
+	margin: 0;
+
+	h1 {
+		color: @chromeHeadingColor;
+		line-height: @headerHeight;
+		margin: 0;
+	}
+}
+
+/* Menu buttons */
+#mw-mf-menu-page,
+#mw-mf-main-menu-button {
+	display: inline-block; //?
+	height: @headerHeight;
+	width: @searchBarPaddingLeft;
+	position: absolute;
+	top: 0;
+}
+
+/* hamburger */
+#mw-mf-main-menu-button {
+	background-image: url(images/menu/lowres/main.png);
+	.background-size( 24px, 30px );
+	overflow: hidden;
+	background-repeat: no-repeat;
+	z-index: 2;
+	left: 0;
+	border-radius: 5px 5px 5px;
+	background-position: center center;
+	&:active {
+		background-color: darken( @searchBoxColor, 0.4% );
+	}
+}
+
+/* Search */
+input.search {
+	-webkit-appearance: none;
+	line-height: normal;
+	background: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	.border-radius( 3px );
+	margin-top: 0;
+	width: 99%;
+	border: @searchBorderHeight solid #c9c9c9;
+	outline: none;
+	padding: 0 0 0 2px;
+	width: 100%;
+	height: @searchBoxHeight;
+	vertical-align: middle; /* don't use line height here as placeholder on ripple positions incorrectly */
+	background-color: white; /* remove fennec default background */
+	&::-webkit-search-cancel-button {
+		-webkit-appearance: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+input.searchSubmit {
+	@inputThirdHeight: round( @searchBoxHeight / 3 ) - 1;
+
+	position: absolute;
+	top: @searchMarginTop;
+	right: -@searchBarPaddingRight + 4px;
+	padding-top: @inputThirdHeight;
+	padding-bottom: @inputThirdHeight;
+	font-size: @inputThirdHeight;
+}
+
+.jsEnabled {
+	input.searchSubmit {
+		display: none;
+	}
+}
+
+.search-box {
+	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/* samsung galaxy s gt-19000 */
+@media all and ( max-width:240px ) {
+	#mw-mf-search {
+		font-size: 0.8em;
+		padding-left: 0;
+	}
+}
