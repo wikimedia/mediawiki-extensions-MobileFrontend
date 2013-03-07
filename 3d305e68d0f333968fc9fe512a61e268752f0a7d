@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DoEE0U6o",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 905,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-07T22:01:45Z",
+      "side": 1,
+      "message": "Well, we are now, please see mf-search.less.",
+      "parentUuid": "DoArTzdU",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DoKrS4f0",
         "filename": "javascripts/common/mf-navigation.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-03-06T19:39:49Z",
       "side": 1,
       "message": "just use \u003cbutton id\u003d\"close\"\u003e",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoOFFZxg",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-07T22:01:45Z",
+      "side": 1,
+      "message": "Why? We don\u0027t want any text in there? Is it valid HTML? I don\u0027t know how much accessibility matters on mobile (are there screenreaders for smartphones)?",
+      "parentUuid": "DoKrS4f0",
       "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "DoAFXK8o",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-07T22:01:45Z",
+      "side": 1,
+      "message": "I totally agree, but let\u0027s do it in a separate commit.",
+      "parentUuid": "DoMrPJVY",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DoMrV5bY",
         "filename": "less/mf-variables.less",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-03-06T19:39:49Z",
       "side": 1,
       "message": "This change moves the watchlist icon out of line with the the margins of the content.\n\nDrawing a straight line from the right side of the watchlist icon in the header should line up with the section toggles and text content. It currently doesn\u0027t because of this change...",
+      "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoOGdZ1U",
+        "filename": "less/mf-variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-07T22:01:45Z",
+      "side": 1,
+      "message": "I always viewed it differently. The star icon was never symmetrical to the hamburger before and now it is. It seems like a more important choice, you always see the hamburger and star together, but you almost never see section toggles and the star together because the first section is long enough.",
+      "parentUuid": "DoMrV5bY",
       "revId": "3d305e68d0f333968fc9fe512a61e268752f0a7d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
