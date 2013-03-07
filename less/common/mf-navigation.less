@@ -1,4 +1,4 @@
-@import "mf-buttons.less";
+@import "../mf-mixins.less";
 
 @InfoBoxWLogoSize: 98px;
 @overlayAlertTipColor: black;
@@ -9,37 +9,14 @@
 @overlayBorderWidth: 1px;
 @toastNotificationColor: #373737;
 
-#mw-mf-header form,
-#mw-mf-sq {
-	height: @headerHeight;
-}
-
 #mw-mf-menu-page {
-	height: @headerHeight;
-	width: @searchBarPaddingRight;
-	position: absolute;
-	top: 0;
 	right: 0;
-}
-
-#mw-mf-main-menu-button {
-	position: absolute;
-	height: @headerHeight;
-	width: @searchBarPaddingLeft;
-	background-image: url(images/menu/lowres/main.png);
-	.background-size( 24px, 30px );
-	background-repeat: no-repeat;
-	background-position: center center;
 }
 
 .jsEnabled {
 	#mw-mf-main-menu-button {
 		background-image: /* @embed */ url(images/menu/main.png);
 	}
-}
-
-#mw-mf-main-menu-button:active {
-	background-color: darken( @searchBoxColor, 0.4% );
 }
 
 #mw-mf-viewport {
@@ -56,117 +33,18 @@
 	min-height: 100%;
 }
 
-#mw-mf-header, #mw-mf-overlay .header {
-	color: black;
-	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
-	border-bottom: 1px solid #e2e2e2;
-
-	h1 {
-		color: @chromeHeadingColor;
-		line-height: @headerHeight;
-		margin: 0;
-	}
-}
-
-#mw-mf-page-left {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.2em;
-	bottom: 0;
-	top: 0;
-	margin-right: 0;
-	position: absolute;
-	border-right: solid 1px #AAA;
-	display: none;
-}
-
 .navigationEnabled {
 
 	#mw-mf-page-left {
 		width: 80%;
 		right: 20%;
+		display: block;
 	}
 
 	.position-fixed,
 	#mw-mf-page-center {
 		left: 80% !important;
 		overflow-x: hidden; // prevent horizontal scroll on chrome
-	}
-
-	&.navigationFullScreen {
-		#mw-mf-page-left {
-			// !important needed to override rules set by @media min-width: 700px
-			width: 100% !important;
-			right: 0 !important;
-		}
-
-		#mw-mf-page-center {
-			display: none;
-		}
-	}
-}
-
-.navigationEnabled #mw-mf-page-left {
-	display: block;
-}
-
-#mw-mf-menu-main {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	padding-bottom: 12px;
-}
-
-#mw-mf-page-left,
-#mw-mf-menu-main,
-#mw-mf-menu-main li {
-	background-color: #4E4E4E;
-}
-
-#mw-mf-menu-main li {
-	text-shadow: 0 1px 0 black;
-	border-bottom: 1px inset #717171;
-	font-weight: normal;
-}
-
-#mw-mf-menu-main li a {
-	color: white;
-	display: block;
-	padding: 12px;
-	padding-left: 32px;
-	line-height: 22px;
-	background-repeat: no-repeat;
-	.background-size(24px, 24px);
-	background-position: left 10px;
-	margin-left: 10px;
-	border-bottom: 1px inset #3e3e3e;
-}
-
-#mw-mf-menu-main li a:hover {
-	text-decoration: none;
-}
-
-#mw-mf-content-left {
-	height: 100%;
-	border-left: solid 12px #252525;
-	border-right: solid 1px black;
-}
-
-// low-res icons for old phones that don't support background-size
-#mw-mf-menu-main li {
-	&.icon-home a {
-		background-image: url(images/menu/lowres/home.png);
-	}
-
-	&.icon-random a {
-		background-image: url(images/menu/lowres/random.png);
-	}
-
-	&.icon-settings a {
-		background-image: url(images/menu/lowres/settings.png);
-	}
-
-	&.icon-loginout a {
-		background-image: /* @embed */url(images/menu/lowres/loginout.png);
 	}
 }
 
@@ -198,16 +76,6 @@
 	&.icon-loginout a {
 		background-image: /* @embed */url(images/menu/loginout.png);
 	}
-}
-
-#mw-mf-menu-main li.disabled {
-	opacity: 0.2;
-}
-
-#mw-mf-menu-main li:hover {
-	background-color: #5C5C5C;
-	border-left: solid 12px #3366BB;
-	margin-left: -12px;
 }
 
 body.navigationEnabled {
@@ -319,11 +187,6 @@ html.overlay {
 
 #mw-mf-page-center .header,
 .overlay .header {
-	line-height: @headerHeight;
-	text-align: center;
-	padding: 0;
-	min-height: @headerHeight;
-	margin: 0;
 
 	input.search {
 		margin-top: 0;
@@ -410,38 +273,9 @@ body {
 }
 
 @media all and (max-width: 240px) {
-	#mw-mf-search {
-		padding-left: 0;
-	}
-
 	#mw-mf-menu-main li {
 		background-position: 0 0;
 		font-size: 0.8em;
-	}
-}
-
-@media all and (min-width: 700px) {
-	.navigationEnabled .alpha,
-	.navigationEnabled .beta {
-		#mw-mf-page-left {
-			width: 20%;
-			display: block;
-			right: 80%;
-		}
-
-		.position-fixed,
-		#mw-mf-page-center {
-			left: 20% !important;
-			right: 0 !important;
-			width: 80%;
-			overflow: auto;
-		}
-	}
-
-	.beta.full-screen-search {
-		#mw-mf-page-left {
-			display: block !important;
-		}
 	}
 }
 
