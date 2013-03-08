@@ -9,7 +9,7 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 input.searchSubmit {
   position: absolute;
   top: 9px;
-  right: -44px;
+  right: -36px;
   padding-top: 9px;
   padding-bottom: 9px;
   font-size: 9px;
@@ -51,16 +51,16 @@ input.search:focus {
 input.search.searching {
   background-color: #eee;
 }
-.full-screen-search #mw-mf-searchForm {
-  padding-right: 23px;
+.full-screen-search .search-box {
+  padding-right: 8px;
 }
-#mw-mf-searchForm {
-  padding: 0 48px 0 40px;
+.search-box {
+  padding: 0 40px 0 40px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-#mw-mf-searchForm .clearlink {
+.search-box .clearlink {
   top: 9px;
-  right: 7px;
+  right: 10px;
   width: 24px;
   height: 30px;
   background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
@@ -91,7 +91,7 @@ input.search.searching {
   background-image: linear-gradient(#fafafa 0, #f3f3f3 100%);
 }
 .full-screen-search #results,
-.full-screen-search #mw-mf-searchForm.notEmpty .clearlink,
+.full-screen-search .search-box.notEmpty .clearlink,
 .full-screen-search button.escapeOverlay {
   display: block;
 }

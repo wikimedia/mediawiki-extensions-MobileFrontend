@@ -704,12 +704,14 @@ class SkinMobileTemplate extends BaseTemplate {
 	}
 
 	public function renderArticleHeader() {
+		echo '<div id="mw-mf-header">';
 		if ( $this->data['htmlHeader'] ) {
 			$this->html( 'menuButton' );
 			echo $this->data['htmlHeader'];
 		} else {
 			$this->searchBox();
 		}
+		echo '</div>';
 	}
 
 	public function execute() {
@@ -849,9 +851,8 @@ class SkinMobileTemplate extends BaseTemplate {
 			$placeholder = wfMessage( 'mobile-frontend-placeholder' )->text();
 		}
 		?>
-	<div id="mw-mf-header">
 		<?php $this->html( 'menuButton' ) ?>
-			<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search_bar" method="get">
+		<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search-box" method="get">
 			<input type="hidden" value="Special:Search" name="title" />
 			<div id="mw-mf-sq" class="divclearable">
 				<input type="search" name="search" id="mw-mf-search" size="22" value="<?php $this->text( 'searchField' )
@@ -861,9 +862,8 @@ class SkinMobileTemplate extends BaseTemplate {
 				<input class='searchSubmit' type="submit" value="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</div>
 		</form>
-	</div>
-	<div id="results"></div>
-	<?php
+		<div id="mw-mf-menu-page"></div>
+		<?php
 	}
 
 	private function footer() {

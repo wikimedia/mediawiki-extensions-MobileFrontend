@@ -4,16 +4,15 @@ Triggers:
 	Context: Runs after rendering all search results
 	Arguments: <DomElement(ul), article title>
 */
-( function( M ) {
+( function( M, $ ) {
 
-// FIXME: replace u usage with $
+// FIXME: rewrite using jQuery, overlays and possibly Views
 var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term, mfePrefix = M.prefix,
 		message = M.message,
 		search = document.getElementById(  mfePrefix + 'search' ),
 		oldValue,
-		$ = M.jQuery,
 		focusBlurTimeout,
 		u = M.utils;
 
@@ -230,6 +229,7 @@ var opensearch = ( function() {
 	}
 
 	function initSearch() {
+		$( '<div id="results">' ).insertAfter( '#mw-mf-header' );
 		enhanceElements();
 		if( document.activeElement && document.activeElement.id === 'search' ) {
 			onfocus();
@@ -250,7 +250,7 @@ var opensearch = ( function() {
 	}
 
 	function init() {
-		if ( document.getElementById( 'results' ) && document.getElementById( 'mw-mf-search' ) ) {
+		if ( document.getElementById( 'mw-mf-search' ) ) {
 			initSearch();
 		}
 	}
@@ -269,4 +269,4 @@ if ( typeof JSON !== 'undefined' ) {
 	M.define( 'opensearch', opensearch );
 }
 
-}( mw.mobileFrontend ));
+}( mw.mobileFrontend, jQuery ));

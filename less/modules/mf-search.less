@@ -56,19 +56,18 @@ input.search {
 }
 
 .full-screen-search {
-
-	#mw-mf-searchForm {
-		padding-right: @contentMarginRight;
+	.search-box {
+		padding-right: 8px;
 	}
 }
 
-#mw-mf-searchForm {
-		padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
+.search-box {
+	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
 	.clearlink {
 		top: @searchMarginTop;
-		right: 7px;
+		right: 10px;
 		width: 24px;
 		height: @searchBoxHeight;
 		background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
@@ -95,7 +94,7 @@ input.search {
 	}
 
 	#results,
-	#mw-mf-searchForm.notEmpty .clearlink,
+	.search-box.notEmpty .clearlink,
 	button.escapeOverlay {
 		display: block;
 	}

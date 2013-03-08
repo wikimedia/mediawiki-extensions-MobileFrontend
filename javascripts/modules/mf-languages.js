@@ -41,8 +41,11 @@
 
 	function createLanguagePage() {
 		var $wrapper = $( '<div class="languageOverlay">' ), $footer, overlay, $lists,
-			$search = $( '<input type="search" class="search" id="mw-mf-language-search" >' ).
-				attr( 'placeholder', M.message( 'mobile-frontend-language-site-choose' ) );
+			$search = $( '<div class="search-box">' );
+
+		$( '<input type="search" class="search">' ).
+			attr( 'placeholder', M.message( 'mobile-frontend-language-site-choose' ) ).
+			appendTo( $search );
 
 		$( '#mw-mf-language-variant-header' ).addClass( 'mw-mf-overlay-header' ).appendTo( $wrapper );
 		$( '#mw-mf-language-variant-selection' ).appendTo( $wrapper );
