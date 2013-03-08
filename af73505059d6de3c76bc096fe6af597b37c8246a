@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DpXF-ABM",
+        "filename": "less/mf-variables.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 420
+      },
+      "writtenOn": "2013-03-08T18:58:08Z",
+      "side": 1,
+      "message": "We should keep consistent with CSS terminology in our variable names. Padding is inside the element, margin is outside. I think these 3 variables refer to margin.",
+      "revId": "af73505059d6de3c76bc096fe6af597b37c8246a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
