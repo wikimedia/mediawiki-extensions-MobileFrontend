@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DpR31c4A",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-03-08T00:23:21Z",
+      "side": 1,
+      "message": "Don\u0027t use empty() for anything. It does too much and masks too many errors. In this situation count() seems appropriate.\n\nhttps://www.mediawiki.org/wiki/CC/PHP#Pitfalls",
+      "revId": "5ec6378b2370c8669f125c20aebfbb933a896767",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
