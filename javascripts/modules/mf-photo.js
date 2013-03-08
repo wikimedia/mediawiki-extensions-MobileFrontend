@@ -88,7 +88,7 @@
 				var formData = new FormData(), descTextToAppend;
 				options.fileName = generateFileName( options.file, options.pageTitle );
 				descTextToAppend = mw.config.get( 'wgPhotoUploadAppendToDesc' );
-				descTextToAppend = ( descTextToAppend.length ) ? '\n\n' + descTextToAppend : '';
+				descTextToAppend = descTextToAppend ? '\n\n' + descTextToAppend : '';
 
 				formData.append( 'action', 'upload' );
 				formData.append( 'format', 'json' );
