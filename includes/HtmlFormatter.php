@@ -354,7 +354,7 @@ class HtmlFormatter {
 			$type = 'TAG';
 			$rawName = $selector;
 		} else {
-			wfDebug( __METHOD__ . ": unrecognised selector '$selector'\n" );
+			wfDebug( __METHOD__ . ": unrecognized selector '$selector'\n" );
 			return false;
 		}
 
