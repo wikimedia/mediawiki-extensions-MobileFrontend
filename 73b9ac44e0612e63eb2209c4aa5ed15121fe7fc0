@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DpYY2EOU",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-03-08T15:44:53Z",
+      "side": 1,
+      "message": "Would \"1 upload\" change to \"2 upload\" here, or would the whole message be reparsed on a change of $1?",
+      "revId": "73b9ac44e0612e63eb2209c4aa5ed15121fe7fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpcYjuKk",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 585,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-03-08T15:44:53Z",
+      "side": 1,
+      "message": "Typo: programmatically",
+      "revId": "73b9ac44e0612e63eb2209c4aa5ed15121fe7fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
