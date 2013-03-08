@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DpfEaMHo",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:49:48Z",
+      "side": 1,
+      "message": "Maybe add a comment like \"mf-m\u003db is MobileFrontend mode \u003d beta\"?",
+      "revId": "e8d7f166bb12bb90cd42db0b89c4f7724b85317c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
