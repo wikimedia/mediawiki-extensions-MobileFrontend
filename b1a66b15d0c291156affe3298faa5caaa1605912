@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DpcB-IGI",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T01:46:07Z",
+      "side": 1,
+      "message": "My question for this line from previous patchset persists. Feel free to merge when addressed and others don\u0027t see other problems.",
+      "revId": "b1a66b15d0c291156affe3298faa5caaa1605912",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
