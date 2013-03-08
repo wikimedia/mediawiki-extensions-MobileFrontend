@@ -16,6 +16,24 @@
       "revId": "ae3066f98e975a867d2bf4b31fd44078a05448b4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dpayr64k",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-08T20:57:10Z",
+      "side": 1,
+      "message": "No. This gets ALL languages and caches them. So when a hijacked link is clicked the first time it gets ALL languages and all page languages (loadLanguages), second time it skips getting all languages and runs loadLanguages.",
+      "parentUuid": "DpRHEfPY",
+      "revId": "ae3066f98e975a867d2bf4b31fd44078a05448b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
