@@ -511,7 +511,7 @@ $wgResourceModules['mobile.mobilediff.styles'] = $wgMFMobileSpecialPageResourceB
 		'stylesheets/specials/watchlist.css',
 	),
 );
-// FIXME: temporary hack to get round CentralNotice logout screen
+// FIXME: temporary hack to get round CentralAuth logout screen
 $wgResourceModules['mobile.userlogout.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'scripts' => array(
 		'javascripts/specials/userlogin.js',
