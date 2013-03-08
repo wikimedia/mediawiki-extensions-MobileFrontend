@@ -512,6 +512,7 @@ $wgResourceModules['mobile.donateimage.styles'] = $wgMFMobileSpecialPageResource
 $wgResourceModules['mobile.mobilediff.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/specials/watchlist.css',
+		'stylesheets/specials/mobilediff.css',
 	),
 );
 // FIXME: temporary hack to get round CentralAuth logout screen

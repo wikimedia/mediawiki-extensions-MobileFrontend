@@ -1,16 +1,5 @@
 @import "../mf-mixins.less";
 
-.watchlistHeading() {
-	font: inherit;
-	margin: 0;
-	font-weight: bold;
-	color: #404040;
-
-	a {
-		color: inherit;
-	}
-}
-
 .mw-mf-watchlist-selector {
 	border-bottom: 1px solid #e2e2e2;
 
@@ -97,7 +86,7 @@ ul.mw-mf-watchlist-results {
 		}
 
 		h2 {
-			.watchlistHeading();
+			.watchlist-heading();
 			// 22px is the width of the watchlist star, +2px for additional padding
 			padding: 20px 24px 0 0;
 		}
@@ -119,166 +108,6 @@ ul.mw-mf-watchlist-results.a-to-z {
 	li {
 		a.title {
 			padding-left: (@thumbSpace - @ragWidth);
-		}
-	}
-}
-
-#mw-mf-diffview {
-	@userInfoHeight: 5em;
-
-	h2 {
-		.watchlistHeading();
-	}
-
-	.mw-mf-bytesremoved,
-	.mw-mf-bytesadded {
-		padding-left: 1.5em;
-		.background-size( 1em, 1em );
-		background-position: left center;
-		background-repeat: no-repeat;
-		display: inline-block;
-		line-height: 1em;
-	}
-
-	.mw-mf-bytesadded {
-		color: #008a46;
-		background-image: url(images/positive.png);
-	}
-
-	.mw-mf-bytesremoved {
-		color: #b24242;
-		background-image: url(images/negative.png);
-	}
-
-	ins,
-	del {
-		display: block;
-		padding-left: 8px;
-	}
-
-	ins::before {
-		content: "+ ";
-	}
-
-	del::before {
-		content: "- ";
-	}
-
-	#mw-mf-userinfo .mw-mf-roles,
-	.mw-mf-diff-date,
-	.mw-mf-bytesremoved,
-	.mw-mf-bytesadded {
-		font-size: 0.7em;
-		text-transform: uppercase;
-	}
-
-	.mw-mf-diff-date {
-		font-size: 0.5em;
-		color: #c6c6c6;
-	}
-
-	ins {
-		color: #008a46;
-		text-decoration: none;
-	}
-
-	del {
-		color: #b24242;
-		text-decoration: strikethrough;
-	}
-
-	#mw-mf-diffarea {
-		padding: 1em 1em (2 * @userInfoHeight + 1em);
-	}
-
-	#mw-mf-diff-info {
-		line-height: 1em;
-		padding-bottom: 1em;
-	}
-
-	#mw-mf-diff-comment {
-		padding-bottom: 1em;
-		font-style: italic;
-	}
-
-	#mw-mf-userinfo {
-		position: relative;
-		height: @userInfoHeight;
-		padding: 1em;
-		background-color: #f0f0f0;
-		border-top: solid 1px #c0c0c0;
-
-		&::before {
-			content: "";
-			position: absolute;
-			top: -10px;
-			left: 19px;
-			border-width: 0px 11px 10px;
-			border-style: solid;
-			border-color: #c0c0c0 transparent;
-			display: block;
-			width: 0;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			top: -9px;
-			left: 20px;
-			border-width: 0px 10px 10px;
-			border-style: solid;
-			border-color: #f0f0f0 transparent;
-			display: block;
-			width: 0;
-		}
-
-		.mw-mf-user {
-			line-height: 14px;
-		}
-
-		.mw-mf-edit-count {
-			display: inline-block;
-			text-align: center;
-			margin-top: 1.2em;
-			color: #333;
-			font-size: 0.7em;
-			text-transform: uppercase;
-			line-height: 1;
-
-			/* the edit count number */
-			div {
-				font-size: 1.85em;
-				color: #888;
-			}
-		}
-	}
-}
-
-.alpha {
-	#mw-mf-diffview {
-		ins,
-		del {
-			color: black;
-		}
-
-		ins {
-			background-color: #ddffdd;
-		}
-
-		del {
-			background-color: #ffdddd;
-			text-decoration: none;
-		}
-	}
-}
-
-.supportsPositionFixed {
-	#mw-mf-diffview {
-		#mw-mf-userinfo {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			right: 0;
 		}
 	}
 }

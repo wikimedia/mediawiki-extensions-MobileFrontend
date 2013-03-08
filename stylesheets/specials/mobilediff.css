@@ -1,0 +1,136 @@
+#mw-mf-diffview h2 {
+  font: inherit;
+  margin: 0;
+  font-weight: bold;
+  color: #404040;
+}
+#mw-mf-diffview h2 a {
+  color: inherit;
+}
+#mw-mf-diffview .mw-mf-bytesremoved,
+#mw-mf-diffview .mw-mf-bytesadded {
+  padding-left: 1.5em;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 1em 1em;
+  -o-background-size: 1em 1em;
+  -webkit-background-size: 1em 1em;
+  background-size: 1em 1em;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 1em;
+}
+#mw-mf-diffview .mw-mf-bytesadded {
+  color: #008a46;
+  background-image: url(images/positive.png);
+}
+#mw-mf-diffview .mw-mf-bytesremoved {
+  color: #b24242;
+  background-image: url(images/negative.png);
+}
+#mw-mf-diffview ins,
+#mw-mf-diffview del {
+  display: block;
+  padding-left: 8px;
+}
+#mw-mf-diffview ins::before {
+  content: "+ ";
+}
+#mw-mf-diffview del::before {
+  content: "- ";
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-roles,
+#mw-mf-diffview .mw-mf-diff-date,
+#mw-mf-diffview .mw-mf-bytesremoved,
+#mw-mf-diffview .mw-mf-bytesadded {
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+#mw-mf-diffview .mw-mf-diff-date {
+  font-size: 0.5em;
+  color: #c6c6c6;
+}
+#mw-mf-diffview ins {
+  color: #008a46;
+  text-decoration: none;
+}
+#mw-mf-diffview del {
+  color: #b24242;
+  text-decoration: strikethrough;
+}
+#mw-mf-diffview #mw-mf-diffarea {
+  padding: 1em 1em 11em;
+}
+#mw-mf-diffview #mw-mf-diff-info {
+  line-height: 1em;
+  padding-bottom: 1em;
+}
+#mw-mf-diffview #mw-mf-diff-comment {
+  padding-bottom: 1em;
+  font-style: italic;
+}
+#mw-mf-diffview #mw-mf-userinfo {
+  position: relative;
+  height: 5em;
+  padding: 1em;
+  background-color: #f0f0f0;
+  border-top: solid 1px #c0c0c0;
+}
+#mw-mf-diffview #mw-mf-userinfo::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 19px;
+  border-width: 0px 11px 10px;
+  border-style: solid;
+  border-color: #c0c0c0 transparent;
+  display: block;
+  width: 0;
+}
+#mw-mf-diffview #mw-mf-userinfo::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  border-width: 0px 10px 10px;
+  border-style: solid;
+  border-color: #f0f0f0 transparent;
+  display: block;
+  width: 0;
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-user {
+  line-height: 14px;
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-edit-count {
+  display: inline-block;
+  text-align: center;
+  margin-top: 1.2em;
+  color: #333;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  line-height: 1;
+  /* the edit count number */
+
+}
+#mw-mf-diffview #mw-mf-userinfo .mw-mf-edit-count div {
+  font-size: 1.85em;
+  color: #888;
+}
+.alpha #mw-mf-diffview ins,
+.alpha #mw-mf-diffview del {
+  color: black;
+}
+.alpha #mw-mf-diffview ins {
+  background-color: #ddffdd;
+}
+.alpha #mw-mf-diffview del {
+  background-color: #ffdddd;
+  text-decoration: none;
+}
+.supportsPositionFixed #mw-mf-diffview #mw-mf-userinfo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
