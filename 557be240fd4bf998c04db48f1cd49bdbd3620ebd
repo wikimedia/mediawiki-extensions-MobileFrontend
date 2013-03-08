@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DpWN0Fs8",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-08T15:08:13Z",
+      "side": 1,
+      "message": "We can move the css for the go button into ui.css",
+      "parentUuid": "Dpf0fZ2c",
+      "revId": "557be240fd4bf998c04db48f1cd49bdbd3620ebd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DpcAKwCE",
         "filename": "less/common/mf-navigation.less",
         "patchSetId": 1
