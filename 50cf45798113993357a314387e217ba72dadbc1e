@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DpSyP23c",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T20:09:01Z",
+      "side": 1,
+      "message": "Instead of doing this, change descTextToAppend.length in the next line to descTextToAppend (and remove parens).",
+      "revId": "50cf45798113993357a314387e217ba72dadbc1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
