@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "DpXHYYO4",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:29:46Z",
+      "side": 1,
+      "message": "Rename to \"remove\"?",
+      "revId": "a6416ff0b7fa30fc326386040ac020d461185a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DoMIeN1w",
         "filename": "javascripts/common/mf-navigation.js",
         "patchSetId": 3
@@ -31,6 +48,41 @@
       "side": 1,
       "message": "I wanted to avoid disabling things that should not be disabled. This might be premature optimisation.... ? otherwise it seems like I should just call $( \u0027 #mw-mf-menu-main li.icon-uploads\u0027 ).remove() directly in mf-photo.js?",
       "parentUuid": "DoMIeN1w",
+      "revId": "a6416ff0b7fa30fc326386040ac020d461185a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpVFOhMI",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:29:46Z",
+      "side": 1,
+      "message": "I wouldn\u0027t call it directly, thin wrappers are good. But I wouldn\u0027t also try to defend ourselves from ourselves, after all only we will be using this function ;)",
+      "parentUuid": "DoH0wMOg",
+      "revId": "a6416ff0b7fa30fc326386040ac020d461185a89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpRHyPG8",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:29:46Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this actually go to donateimage.js? Because that\u0027s what it\u0027s disabling.",
       "revId": "a6416ff0b7fa30fc326386040ac020d461185a89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
