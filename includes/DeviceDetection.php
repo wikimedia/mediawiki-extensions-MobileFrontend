@@ -225,14 +225,14 @@ class DeviceDetection implements IDeviceDetector {
 	private static $formats = array (
 			'html' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'default',
+				'css_file_name' => '',
 				'supports_javascript' => false,
 				'supports_jquery' => false,
 				'disable_zoom' => true,
 			),
 			'capable' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'default',
+				'css_file_name' => '',
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => true,
@@ -274,7 +274,7 @@ class DeviceDetection implements IDeviceDetector {
 			),
 			'native_iphone' => array (
 				'view_format' => 'html',
-				'css_file_name' => 'default',
+				'css_file_name' => '',
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => false,
@@ -415,7 +415,7 @@ class DeviceDetection implements IDeviceDetector {
 		} else {
 			return new DeviceProperties( array(
 				'view_format' => 'html',
-				'css_file_name' => 'default',
+				'css_file_name' => '',
 				'supports_javascript' => true,
 				'supports_jquery' => true,
 				'disable_zoom' => true,
