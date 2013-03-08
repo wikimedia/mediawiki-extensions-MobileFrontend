@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dpewkk7Y",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:57:51Z",
+      "side": 1,
+      "message": "I\u0027m not sure about name \"d\", maybe \"result\"? Your call.",
+      "revId": "9181c0bd0fad06c8f1f8f2dd06e72fcb58e58b41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpWwQg08",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:57:51Z",
+      "side": 1,
+      "message": "Shouldn\u0027t be d.reject()?",
+      "revId": "9181c0bd0fad06c8f1f8f2dd06e72fcb58e58b41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpUwwJ.g",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:57:51Z",
+      "side": 1,
+      "message": "Shouldn\u0027t be d.resolve( this.tokenCache[ endpoint ][ tokenType ] )?",
+      "revId": "9181c0bd0fad06c8f1f8f2dd06e72fcb58e58b41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpWw5Y9U",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:57:51Z",
+      "side": 1,
+      "message": "This looks weird. Why do we reassign a different Deferred here?",
+      "revId": "9181c0bd0fad06c8f1f8f2dd06e72fcb58e58b41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpYw2L.U",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:57:51Z",
+      "side": 1,
+      "message": "I\u0027d do d.resolve( token );",
+      "revId": "9181c0bd0fad06c8f1f8f2dd06e72fcb58e58b41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpexNc3Q",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:57:51Z",
+      "side": 1,
+      "message": "d.reject();",
+      "revId": "9181c0bd0fad06c8f1f8f2dd06e72fcb58e58b41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DpQxT-xc",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:57:51Z",
+      "side": 1,
+      "message": "d.reject();",
+      "revId": "9181c0bd0fad06c8f1f8f2dd06e72fcb58e58b41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
