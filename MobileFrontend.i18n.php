@@ -298,7 +298,8 @@ This buttons takes the user to the home page.
 	'mobile-frontend-settings-beta' => 'Text for beta on settings page',
 	'mobile-frontend-settings-alpha' => 'Heading for alpha mode on settings page. This is a highly experimental mode where there might be bugs',
 	'mobile-frontend-settings-alpha-description' => 'Disclaimer about dangers and excitement that come with being in an alpha mode',
-	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions',
+	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions.
+{{Identical|Save settings}}',
 	'mobile-frontend-random-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
 
 This buttons takes the user to a random page.',
@@ -1936,6 +1937,7 @@ $messages['bn'] = array(
 );
 
 /** Breton (brezhoneg)
+ * @author Fohanno
  * @author Fulup
  * @author Y-M D
  */
@@ -1944,10 +1946,13 @@ $messages['br'] = array(
 	'mobile-frontend-search-submit' => 'Mont',
 	'mobile-frontend-home-button' => 'Degemer',
 	'mobile-frontend-logged-out' => "N'oc'h ket kevreet",
+	'mobile-frontend-logged-in-homepage-notification' => 'Degemer mat, $1 !',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Enrollañ an arventennoù',
 	'mobile-frontend-random-button' => 'Dargouezhek',
 	'mobile-frontend-ajax-random-question' => 'Lenn ar bajenn-mañ ?',
+	'mobile-frontend-ajax-random-yes' => 'Oui',
+	'mobile-frontend-ajax-random-retry' => 'Esaeit en-dro',
 	'mobile-frontend-back-to-top-of-section' => 'Lammat ur rann war-gil',
 	'mobile-frontend-close-section' => 'Serriñ ar rann-mañ',
 	'mobile-frontend-show-button' => 'Diskouez',
@@ -1992,13 +1997,17 @@ $messages['br'] = array(
 	'mobile-frontend-feedback-no-message' => 'Merkit ur gemennadenn amañ',
 	'mobile-frontend-leave-feedback-thanks' => 'Trugarez da vezañ roet ho soñj.',
 	'mobile-frontend-language' => 'Yezh :',
+	'mobile-frontend-language-article-heading' => 'Lenn en ur yezh all',
 	'mobile-frontend-language-header' => 'Ar pennad-mañ zo anezhañ e {{PLURAL:$1|yezh|yezh}}', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Klask ar yezh',
 	'mobile-frontend-username' => 'Anv implijer :',
 	'mobile-frontend-password' => 'Ger-tremen :',
+	'mobile-frontend-username-placeholder' => 'Anv implijer',
+	'mobile-frontend-password-placeholder' => 'Ger-tremen',
 	'mobile-frontend-login' => 'Kevreañ',
 	'mobile-frontend-account-create-submit' => 'En em enskrivañ',
 	'mobile-frontend-password-confirm-placeholder' => 'Kadarnaat ar ger-tremen',
+	'mobile-frontend-account-create-email-placeholder' => "Chomlec'h postel (direizh)",
 	'mobile-frontend-overlay-escape' => 'Distreiñ',
 	'mobile-frontend-placeholder' => 'Klask e {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Klask {{SITENAME}} (Beta)',
@@ -2008,8 +2017,11 @@ $messages['br'] = array(
 	'mobile-frontend-about-link-text' => 'Diwar-benn',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-contact' => 'Darempred',
+	'mobile-frontend-main-menu-button-tooltip' => 'Digeriñ al lañser pennañ',
 	'mobile-frontend-main-menu-featured' => 'War wel',
 	'mobile-frontend-main-menu-nearby' => 'Nepell',
+	'mobile-frontend-main-menu-login' => 'Kevreañ',
+	'mobile-frontend-main-menu-logout' => 'Digevreañ',
 	'mobile-frontend-main-menu-watchlist' => 'Roll evezhiañ',
 	'mobile-frontend-main-menu-settings' => 'Arventennoù',
 	'mobile-frontend-main-menu-upload' => 'Enporzhiañ', # Fuzzy
@@ -2019,7 +2031,12 @@ $messages['br'] = array(
 	'mobile-frontend-main-menu-account-create' => 'Krouiñ ur gont',
 	'mobile-frontend-page-menu-contents' => 'Danvez',
 	'mobile-frontend-page-menu-history' => 'Istor',
-	'mobile-frontend-meta-data-issues' => "Kudennoù 'zo gant ar pennad-mañ", # Fuzzy
+	'mobile-frontend-meta-data-issues-header' => 'Kudennoù',
+	'mobile-frontend-meta-data-issues' => 'Kudennoù zo gant ar bajenn-mañ',
+	'mobile-frontend-ajax-page-loading' => 'O kargañ $1',
+	'mobile-frontend-page-saving' => "Oc'h enrollañ $1",
+	'mobile-frontend-nearby-title' => 'Nepell',
+	'mobile-frontend-nearby-distance-report' => "$1 km diouzh al lec'h m'emaoc'h",
 	'mobile-frontend-photo-upload-generic' => 'Reiñ ur skeudenn',
 	'mobile-frontend-donate-image-title' => 'Reiñ ur skeudenn',
 	'mobile-frontend-donate-image-page-title' => 'Enporzhiañ',
@@ -2033,7 +2050,10 @@ $messages['br'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Pennadoù',
 	'mobile-frontend-watchlist-filter-talk' => 'Kaozeal',
 	'mobile-frontend-watchlist-filter-other' => 'All',
+	'mobile-frontend-watchlist-modified' => '$1 kemmet',
 	'mobile-frontend-diffview-title' => 'Kemmoù',
+	'mobile-frontend-table' => 'Taolenn $1',
+	'mobile-frontend-image-loading' => 'O kargañ ur skeudenn',
 	'mobile-frontend-photo-submit' => 'Kas',
 	'mobile-frontend-photo-cancel' => 'Nullañ',
 	'mobile-frontend-drawer-cancel' => 'Nullañ',
@@ -6132,11 +6152,14 @@ $messages['hu'] = array(
 );
 
 /** Armenian (Հայերեն)
+ * @author Vadgt
  */
 $messages['hy'] = array(
 	'mobile-frontend-home-button' => 'Դեպի տուն',
+	'mobile-frontend-save-settings' => 'Պահպանել կարգավորումները',
 	'mobile-frontend-random-button' => 'Պատահական',
 	'mobile-frontend-back-to-top-of-section' => 'Վերադառնալ մեկ բաժին առաջ',
+	'mobile-frontend-view-mobile' => 'Հեռախոս',
 	'mobile-frontend-featured-article' => 'Օրվա ընտրված հոդվածը',
 );
 
@@ -13835,7 +13858,7 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-image-uploading-cancel' => 'Hãy <a href="#">hủy bỏ</a> nếu việc tải lên mất nhiều thì giờ quá.',
 	'mobile-frontend-photo-upload-error' => 'Đã xuất hiện lỗi; hãy thử lại.',
 	'mobile-frontend-photo-upload-success-article' => 'Xong rồi, trang này hiện có hình ảnh của bạn.',
-	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//vi.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].', # Fuzzy
+	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
 	'mobile-frontend-photo-submit' => 'Tải lên',
 	'mobile-frontend-photo-cancel' => 'Hủy bỏ',
 	'mobile-frontend-photo-upload-user-count' => '$1 tải lên',
