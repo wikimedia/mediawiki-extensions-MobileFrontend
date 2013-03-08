@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DpRHEfPY",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-08T19:36:31Z",
+      "side": 1,
+      "message": "What will happen if someone loads a new page dynamically (in alpha). Won\u0027t this contain languages for the previous page? I wouldn\u0027t cache the API response anyway, I think caching the rendered languages template would be better.",
+      "revId": "ae3066f98e975a867d2bf4b31fd44078a05448b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
