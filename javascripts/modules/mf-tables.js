@@ -3,9 +3,9 @@
 ( function() {
 	var STEP_SIZE = 150;
 
-	function initTables( container ) {
+	function initTables( $container ) {
 		var nav = M.require( 'navigation' ),
-			$tables = container ? $( container ).find( 'table' ) : $( 'table' );
+			$tables = $container ? $container.find( 'table' ) : $( 'table' );
 
 		$tables.each( function( i ) {
 			var $t = $( this ),
@@ -15,7 +15,7 @@
 				colspan, $tr, maxHeight, $td,
 				$container = $( '<div class="tableContent">' );
 
-			if ( $t.parents( 'table' ).length === 0 && $tc.length > 1 ) {
+			if ( $t.parents( 'table' ).length === 0 && $tc.length > 0 ) {
 				$block = $t.parents( '.content_block' );
 				if ( $block ) {
 					$t.addClass( 'expando' ).css( { height: STEP_SIZE } );
@@ -34,16 +34,14 @@
 
 					// make the vertical expando
 					$tr = $( '<tr class="expandoVertical">' ).appendTo( $tc );
-					$( '<td>' ).text( 'more' ).attr( 'colspan', colspan ).appendTo( $tr );
+					$( '<td>&nbsp;</td>' ).attr( 'colspan', colspan ).appendTo( $tr );
 					$tr.on( 'click', function() {
-						var oldHeight = $t.height(),
-							newHeight = oldHeight + STEP_SIZE;
-						if ( newHeight < maxHeight ) {
-							$t.height( newHeight );
-						} else {
-							$t.css( 'height', '' );
-							$tr.remove();
-						}
+						var height,
+							expand = $tr.hasClass( 'expanded' ) ? true : false;
+						height = expand ? STEP_SIZE : '';
+						$t.css( 'height', height );
+						$tr.toggleClass( 'expanded' );
+						window.scrollTo( 0, $tr.offset().top );
 					} );
 
 				}
