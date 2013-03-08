@@ -12,12 +12,28 @@ var module = ( function() {
 		return { value: Math.round( timestampDelta / limits[i] ), unit: units[i] };
 	}
 
+	/**
+	 * Initialisation function for last modified module.
+	 *
+	 * Enhances #mw-mf-last-modified element
+	 * to show a human friendly date in seconds, minutes, hours, days
+	 * months or years
+	 *
+	 */
 	function init() {
 		var $lastModified = $( '#mw-mf-last-modified' ),
+			keys = {
+				seconds: 'mobile-frontend-last-modified-seconds',
+				minutes: 'mobile-frontend-last-modified-minutes',
+				hours: 'mobile-frontend-last-modified-hours',
+				days: 'mobile-frontend-last-modified-days',
+				months: 'mobile-frontend-last-modified-months',
+				years: 'mobile-frontend-last-modified-years'
+			},
 			pageTimestamp = parseInt( $lastModified.data( 'timestamp' ), 10 ),
 			currentTimestamp = Math.round( new Date().getTime() / 1000 ),
 			delta = timeAgo( currentTimestamp - pageTimestamp ),
-			message = mw.msg( 'mobile-frontend-last-modified-' + delta.unit, delta.value );
+			message = mw.msg( keys[ delta.unit ], delta.value );
 
 		$lastModified.text( message );
 	}
