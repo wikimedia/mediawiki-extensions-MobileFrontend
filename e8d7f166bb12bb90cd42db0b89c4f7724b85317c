@@ -16,6 +16,24 @@
       "revId": "e8d7f166bb12bb90cd42db0b89c4f7724b85317c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dp4GSfp0",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-09T17:58:05Z",
+      "side": 1,
+      "message": "I don\u0027t like adding this to checkUserStatus - the function name suggests it is idempotent but it is not.\n\nAlso agree with Juliusz, but I wonder if addAnalyticsLogItem should do some validation to help document possible headers better.",
+      "parentUuid": "DpfEaMHo",
+      "revId": "e8d7f166bb12bb90cd42db0b89c4f7724b85317c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
