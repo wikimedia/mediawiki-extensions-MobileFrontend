@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dp.EzQsI",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 459,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-09T18:46:03Z",
+      "side": 1,
+      "message": "We should probably call this bottomDrawer - I worry drawer is not descriptive enough.",
+      "revId": "2f9f64a6491f765a07f185dea57cf0feb165db27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
