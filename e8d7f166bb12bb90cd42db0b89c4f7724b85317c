@@ -34,6 +34,24 @@
       "revId": "e8d7f166bb12bb90cd42db0b89c4f7724b85317c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dp8TRdFU",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-10T10:26:05Z",
+      "side": 1,
+      "message": "I\u0027m not sure validation really makes sense for this - I feel like it will make this rather clunky - particularly if the primary motivation is for documentation. I could make it possible to whitelist log item keys from configuration, where we can add some documentation about what they are, possible values, etc. addAnaltyicsLogItem() could then check the given key against the whitelist. But what if we provided a link to a wiki page in a comment where possible log item keys and values were documented instead?\n\nJon, I\u0027m not clear on what the problem is in regards to doing this in checkUserStatus (or why lack of indempotence has anything to do with it). Since this is where we set whether or not a user is in beta or alpha, it seems to me like the most sensible place to log this information. Can you explain a bit more and perhaps suggest an alternative?",
+      "parentUuid": "Dp4GSfp0",
+      "revId": "e8d7f166bb12bb90cd42db0b89c4f7724b85317c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
