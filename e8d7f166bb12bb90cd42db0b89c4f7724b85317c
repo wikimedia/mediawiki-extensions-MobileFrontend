@@ -52,6 +52,24 @@
       "revId": "e8d7f166bb12bb90cd42db0b89c4f7724b85317c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dp-DSJls",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-11T16:50:01Z",
+      "side": 1,
+      "message": "I guess my problem is actually with the code setup isAlphaGroupMember is quite a complicated method - you\u0027d expect it to simply be a lookup but it also sets a property on MobileContext.\n\ncheckUserStatus gets called every time a call to isAlphaGroupMember or isBetaGroupMember gets called which seems wrong and now we are now adding an analytics log item to that call as well. We call isAlphaGroupMember and isBetaGroupMember all over the place - it should be a cheap function.\n\nI\u0027d prefer if in SkinMobile.php (or some other entry point) We simply ran $context-\u003elogMobileMode() which calls isAlphaGroupMember / isBetaGroupMember and adds the header...",
+      "parentUuid": "Dp8TRdFU",
+      "revId": "e8d7f166bb12bb90cd42db0b89c4f7724b85317c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
