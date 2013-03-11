@@ -448,7 +448,7 @@
 		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
 		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', initialize );
-		} else {
+		} else if ( !mw.config.get( 'wgIsMainPage' ) ) {
 			$( initialize );
 		}
 	}
