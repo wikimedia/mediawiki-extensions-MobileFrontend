@@ -16,6 +16,24 @@
       "revId": "2f9f64a6491f765a07f185dea57cf0feb165db27",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dp7Ax-lo",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 459,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-11T17:40:05Z",
+      "side": 1,
+      "message": "Class names should not be tied to the presentation.\nhttp://www.w3.org/QA/Tips/goodclassnames\nhttp://programmers.stackexchange.com/questions/157219/using-context-based-css-class-names\nhttp://stackoverflow.com/questions/6222731/should-css-class-names-like-floatleft-that-directly-describe-the-attached-styl\nhttp://www.devlounge.net/column/avoid-using-generic-css-classes\nhttp://css-tricks.com/semantic-class-names/",
+      "parentUuid": "Dp.EzQsI",
+      "revId": "2f9f64a6491f765a07f185dea57cf0feb165db27",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
