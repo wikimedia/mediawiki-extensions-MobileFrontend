@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqC95GSw",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 923,
+      "author": {
+        "id": 76
+      },
+      "writtenOn": "2013-03-12T21:29:10Z",
+      "side": 1,
+      "message": "This needs to URI encode both the key and the value, rather than rely on all programmers knowing the format, separator, etc.",
+      "revId": "ad5854a1f2db1dddd3efa4b16f96f2464744f55f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
