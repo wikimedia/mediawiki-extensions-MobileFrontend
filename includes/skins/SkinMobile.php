@@ -239,6 +239,16 @@ class SkinMobile extends SkinMobileBase {
 		$moduleNames = $this->getEnabledModules( $wgResourceModules, $title );
 		$contextModules = $this->attachAdditionalPageResources( $title, $context );
 
+		// attach styles
+		$headLinks[] = $this->resourceLoaderLink( array( 'mobile.styles' ), 'styles', $target='mobile' );
+		if ( count( $contextModules['top'] > 0 ) ) {
+			$headLinks[] = $this->resourceLoaderLink( $contextModules['top'], 'styles', $target='mobile' );
+		}
+		// add device specific css file - add separately to avoid cache fragmentation
+		if ( $device->moduleName() ) {
+			$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
+		}
+
 		// attach modules
 		if ( $rlSupport ) {
 			// Initialize ResourceLoader, targeted to mobile...
@@ -272,15 +282,6 @@ class SkinMobile extends SkinMobileBase {
 			$bottomScripts .= $out->getBottomScripts();
 		} else {
 			$bottomScripts = '';
-		}
-		// attach styles
-		$headLinks[] = $this->resourceLoaderLink( array( 'mobile.styles' ), 'styles', $target='mobile' );
-		if ( count( $contextModules['top'] > 0 ) ) {
-			$headLinks[] = $this->resourceLoaderLink( $contextModules['top'], 'styles', $target='mobile' );
-		}
-		// add device specific css file - add separately to avoid cache fragmentation
-		if ( $device->moduleName() ) {
-			$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
 		}
 
 		$headHtml = implode( "\n", $headLinks );
