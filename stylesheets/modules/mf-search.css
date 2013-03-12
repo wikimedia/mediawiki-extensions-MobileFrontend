@@ -3,9 +3,50 @@
 moved from beta_common.css in
 Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 */
+.jsEnabled input.searchSubmit {
+  display: none;
+}
+input.searchSubmit {
+  position: absolute;
+  top: 9px;
+  right: -36px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: 9px;
+}
 input.search {
+  -webkit-appearance: none;
+  line-height: normal;
+  background: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-top: 0;
+  width: 99%;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 9px;
+  height: 30px;
+  vertical-align: middle;
+  /* don't use line height here as placeholder on ripple positions incorrectly */
+
+  background-color: white;
+  /* remove fennec default background */
+
+  padding-left: 2px;
   /* visual indication that search is happening */
 
+}
+input.search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+input.search:focus {
+  outline: none;
 }
 input.search.searching {
   background-color: #eee;
@@ -13,7 +54,11 @@ input.search.searching {
 .full-screen-search .search-box {
   padding-right: 8px;
 }
-#mw-mf-searchForm .clearlink {
+.search-box {
+  padding: 0 40px 0 40px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.search-box .clearlink {
   top: 9px;
   right: 10px;
   width: 24px;
@@ -104,4 +149,10 @@ ul.suggestions-results li.suggestions-result a:visited {
 }
 ul.suggestions-results li.suggestions-result:hover {
   background-color: #ACD1E9;
+}
+/* samsung galaxy s gt-19000 */
+@media all and (max-width: 240px) {
+  #mw-mf-search {
+    font-size: 0.8em;
+  }
 }

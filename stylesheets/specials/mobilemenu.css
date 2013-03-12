@@ -1,8 +1,0 @@
-.navigationFullScreen #mw-mf-page-left {
-  width: 100% !important;
-  right: 0 !important;
-  display: block !important;
-}
-.navigationFullScreen #mw-mf-page-center {
-  display: none;
-}
