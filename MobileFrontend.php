@@ -346,6 +346,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-watchstar.js',
 		'javascripts/modules/mf-photo.js',
+		'javascripts/modules/mainmenutweaks.js',
 		'javascripts/modules/mf-search.js',
 		'javascripts/modules/mf-references.js'
 	),

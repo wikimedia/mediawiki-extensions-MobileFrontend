@@ -29,7 +29,6 @@
 		);
 
 		return (
-			M.isLoggedIn() &&
 			browserSupported &&
 			!mw.config.get( 'wgImagesDisabled', false )
 		);
@@ -445,7 +444,7 @@
 			} );
 	}
 
-	if ( isSupported() && mw.config.get( 'wgIsPageEditable' ) ) {
+	if ( isSupported() && M.isLoggedIn() && mw.config.get( 'wgIsPageEditable' ) ) {
 		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
 		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', initialize );
