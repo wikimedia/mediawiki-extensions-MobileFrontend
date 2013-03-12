@@ -434,6 +434,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-photo-ownership-bullet-one',
 		'mobile-frontend-photo-ownership-bullet-two',
 		'mobile-frontend-photo-ownership-bullet-three',
+		'mobile-frontend-photo-upload-cta',
 
 		// for mf-search.js
 		'mobile-frontend-search-help',

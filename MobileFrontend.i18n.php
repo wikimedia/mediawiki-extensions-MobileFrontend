@@ -246,6 +246,8 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-cancel' => 'Cancel',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
+	'mobile-frontend-photo-upload-cta' => 'Please login or sign up to add an image.',
+	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -598,6 +600,8 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-cancel' => 'Caption for the cancel button on the photo upload form.
 {{Identical|Cancel}}',
 	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded. Parameter is number of images. Wrap the number in a span tag to allow the number to be incremented programatically',
+	'mobile-frontend-photo-upload-cta' => 'Appears in a notification when user clicks photo upload button (see {{msg-mw|mobile-frontend-photo-upload}}) when not logged in.',
+	'mobile-frontend-photo-upload-login' => 'Message for [[Special:UserLogin]] when being redirected back to add an image to a page',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Displayed in place of mobile-frontend-photo-upload-user-count when user has uploaded more than 500 images.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 

@@ -64,11 +64,20 @@
 			this.template = M.template.compile( this.template );
 		}
 
+		this.preRender( options );
 		this.render( options );
 		this.initialize( options );
 	}
 
 	View.prototype = new EventEmitter();
+
+	/**
+	 * Function called before the view is constructed. Can be redefined in
+	 * objects that extend View.
+	 *
+	 * @param {Object} options Object passed to the constructor.
+	 */
+	View.prototype.preRender = function() {};
 
 	/**
 	 * Function called after the view is constructed. Can be redefined in

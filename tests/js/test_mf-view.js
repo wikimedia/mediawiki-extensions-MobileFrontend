@@ -65,7 +65,20 @@ test( 'View.extend, with defined template', function() {
 	strictEqual( view.content(), 'Some content', 'fill template with data from options' );
 } );
 
-test( 'View.extend, initialize function', function() {
+QUnit.test( 'View#preRender', 1, function() {
+	var ChildView, view;
+	ChildView = View.extend( {
+		template: '<p>{{something}}</p>',
+		preRender: function( options ) {
+			options.something = 'hello';
+		}
+	} );
+
+	view = new ChildView();
+	strictEqual( view.$el.html(), '<p>hello</p>', 'manipulate template data' );
+} );
+
+QUnit.test( 'View#initialize', 1, function() {
 	var ChildView, view, spy = sinon.spy();
 	ChildView = View.extend( {
 		initialize: function() {
