@@ -436,7 +436,7 @@ button.escapeOverlay {
   height: 46px;
   width: 40px;
   background: none;
-  background-image: url(images/arrow-left-2.png);
+  background-image: url(images/arrow-left.png);
   background-repeat: no-repeat;
   background-position: center center;
   text-indent: -999px;
@@ -446,6 +446,11 @@ button.escapeOverlay {
   -o-background-size: auto 30px;
   -webkit-background-size: auto 30px;
   background-size: auto 30px;
+}
+html[dir="rtl"] a.escapeOverlay,
+html[dir="rtl"] button.escapeOverlay {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 html.navigationEnabled body,
 html.navigationEnabled #mw-mf-viewport,

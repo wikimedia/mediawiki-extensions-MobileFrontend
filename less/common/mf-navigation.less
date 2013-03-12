@@ -359,11 +359,18 @@ button.escapeOverlay {
 	height: @headerHeight;
 	width: @searchBarPaddingLeft;
 	background: none;
-	background-image: url(images/arrow-left-2.png);
+	background-image: url(images/arrow-left.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 	text-indent: -999px;
 	.background-size( auto, @searchBoxHeight );
+}
+
+html[dir="rtl"] {
+	a.escapeOverlay,
+	button.escapeOverlay {
+		.transform( rotate(180deg) );
+	}
 }
 
 html.navigationEnabled {
