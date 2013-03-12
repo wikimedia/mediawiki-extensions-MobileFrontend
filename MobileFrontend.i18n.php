@@ -2577,6 +2577,7 @@ $messages['cy'] = array(
 
 /** Danish (dansk)
  * @author Christian List
+ * @author Fnielsen
  * @author Hylle
  * @author Jan Friberg
  * @author Kaare
@@ -2725,6 +2726,7 @@ $messages['da'] = array(
 Der er mange sider, som ingen fotos har på grund af en alvorlig mangel på frit licenserede billeder.
 Hjælp med at bringe disse sider til live, ved at donere de billeder du er villig til at give væk, og som kunne være til nytte for det bredere {{SITENAME}} samfund.',
 	'mobile-frontend-donate-image-heading' => 'Dine seneste bidrag',
+	'mobile-frontend-listed-image-no-description' => 'Ingen beskrivelse',
 	'mobile-frontend-watchlist-add' => 'Tilføjet $1 til din overvågningsliste',
 	'mobile-frontend-watchlist-removed' => 'Fjernet $1 fra din overvågningsliste',
 	'mobile-frontend-watchlist-view' => 'Se din overvågningsliste',
@@ -2741,6 +2743,7 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'mobile-frontend-watchlist-filter-articles' => 'Artikler',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Øvrige',
+	'mobile-frontend-watchlist-modified' => 'Ændret $1',
 	'mobile-frontend-diffview-title' => 'Ændringer',
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|én redigering|$1 redigeringer}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonym bruger',
@@ -9764,7 +9767,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
 	'mobile-frontend-photo-upload-error' => 'Er is een fout opgetreden. Probeer het opnieuw.',
 	'mobile-frontend-photo-upload-success-article' => 'Uw afbeelding is nu zichtbaar op deze pagina.',
-	'mobile-frontend-photo-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//http://creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0 Unported3.0 License].', # Fuzzy
+	'mobile-frontend-photo-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0].',
 	'mobile-frontend-photo-submit' => 'Opslaan',
 	'mobile-frontend-photo-cancel' => 'Annuleren',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 upload|$1 uploads}}',
