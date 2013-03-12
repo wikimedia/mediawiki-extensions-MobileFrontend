@@ -124,6 +124,9 @@ var m = ( function( $ ) {
 			ev.stopPropagation();
 		} );
 
+		// close navigation if content tapped
+		$( '#mw-mf-page-center' ).on( 'touchend', closeNavigation );
+
 		if( window.location.hash === '#mw-mf-page-left' ) {
 			openNavigation();
 			u( document.body ).addClass( 'noTransitions' );
