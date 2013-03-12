@@ -514,59 +514,42 @@ body {
 .full-screen-search #mw-mf-menu-page {
   display: none;
 }
-/* Drawer */
-#mw-mf-drawer {
-  background-color: #f3f3f3;
-  box-shadow: 0 3px 8px 0 rgba(50, 50, 50, 0.35);
-  position: absolute;
-  top: 47px;
-  left: 0;
-  right: 0;
-  min-height: 100px;
-  z-index: 3;
-  border-bottom: 1px solid #C9C9C9;
-  padding-bottom: 32px;
-  padding-top: 8px;
-}
-#mw-mf-drawer div {
-  padding-left: 12px;
-  padding-right: 12px;
+.drawer {
   text-align: center;
+  padding: 0 0 1em;
 }
-#mw-mf-drawer a.close {
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  text-indent: -999px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(../modules/images/hide.png);
-}
-#mw-mf-drawer a.button {
+.drawer a.close {
+  padding: 0 0 1.2em;
   display: block;
-  margin: 8px 40px 8px 40px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 100%;
+  height: 16px;
+  background: url(../modules/images/show.png) 50% 8px no-repeat;
 }
-#mw-mf-drawer a.signup {
-  padding-top: 8px;
-  padding-bottom: 8px;
+.drawer a.button {
+  display: block;
+  margin: 1em 40px 1em 40px;
+}
+.drawer a.signup {
   display: block;
 }
 /* Notifications */
-#mf-notification {
+#mf-notification,
+.drawer {
   position: fixed;
   /* -2px to avoid a weird glitch in some browsers where the popup moves
 	 * slightly when scrolling */
 
   bottom: -2px;
-  left: 0;
-  right: 0;
-  background-color: #E4E4E4;
-  box-shadow: 0 -2px 8px 0 rgba(50, 50, 50, 0.35);
+  width: 100%;
+  background-color: #f3f3f3;
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
   word-break: break-word;
-  font-size: 0.9em;
   z-index: 3;
+}
+#mf-notification {
+  font-size: 0.9em;
 }
 #mf-notification.noButton button {
   display: none;

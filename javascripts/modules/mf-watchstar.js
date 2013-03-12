@@ -140,6 +140,7 @@ var api = M.require( 'api' ), w = ( function() {
 	}
 
 	function initWatchListIcon( container, title ) {
+		var drawer = new nav.CtaDrawer( { content: mw.msg( 'mobile-frontend-watchlist-cta' ) } );
 
 		api.getToken( 'watch', function( data ) {
 			if( data.tokens && !data.warnings ) { // then user is logged in
@@ -148,28 +149,15 @@ var api = M.require( 'api' ), w = ( function() {
 					createWatchListButton( container, title, status[ title ] );
 				} );
 			} else {
-				$( createButton( container ) ).click( function() {
-					var $drawer = nav.showDrawer(), $a,
-						href = M.history.getArticleUrl( 'Special:UserLogin' ),
-						updateQs = M.history.updateQueryStringParameter;
-
-					// log if enabled
-					logWatchEvent( 2 );
-
-					$( '<p>' ).html( M.message( 'mobile-frontend-watchlist-cta' ) ).appendTo( $drawer );
-					$a = $( '<a> ').text( M.message( 'mobile-frontend-watchlist-cta-button-login' ) ).
-						addClass( 'button' ).
-						appendTo( $drawer );
-					href = updateQs( href, 'returnto', mw.config.get( 'wgTitle' ) );
-					href = updateQs( href, 'returntoquery', 'article_action%3Dwatch' );
-					$a.attr( 'href', href );
-
-					// do signup url
-					href = updateQs( href, 'type', 'signup' );
-					$( '<a>' ).text( M.message( 'mobile-frontend-watchlist-cta-button-signup' ) ).
-						attr( 'href', href ).
-						addClass( 'signup' ).
-						appendTo( $drawer );
+				$( createButton( container ) ).click( function( ev ) {
+					if ( !drawer.isVisible() ) {
+						// log if enabled
+						logWatchEvent( 2 );
+						drawer.show();
+					} else {
+						drawer.hide();
+					}
+					ev.stopPropagation();
 				} );
 			}
 		} );

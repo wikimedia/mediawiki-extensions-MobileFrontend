@@ -216,6 +216,7 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 		'leadPhoto',
 		'photoUploader',
 		'photoUploadPreview',
+		'ctaDrawer'
 	),
 	'class' => 'MFResourceLoaderModule',
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
