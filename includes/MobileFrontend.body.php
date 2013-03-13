@@ -195,7 +195,7 @@ class ExtMobileFrontend extends ContextSource {
 		global $wgMobileFrontendLogo, $wgExtensionAssetsPath, $wgMFCustomLogos;
 		wfProfileIn( __METHOD__ );
 		if ( $wgMobileFrontendLogo === false ) {
-			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/stylesheets/common/images/mw.png';
+			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/images/mw.png';
 		}
 
 		if ( MobileContext::singleton()->isBetaGroupMember() ) {
