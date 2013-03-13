@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqEStTzA",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-13T03:30:26Z",
+      "side": 1,
+      "message": "I still don\u0027t understand why we wouldn\u0027t use reject() here. Using false for anonymous token and undefined for an error seems to be very risky. Also, using reject() (and fail()) is a common pattern, I don\u0027t see why we wouldn\u0027t like to follow it.",
+      "revId": "2acb7a814788fbb78325aeba7684505f953d729b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqCRlux8",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-13T03:30:26Z",
+      "side": 1,
+      "message": "This could also be reject(). That\u0027s why I would use just one Deferred object which you create in line 125 instead of reassigning a new object returned by this.ajax().\n\nThen, you could use reject() with a parameter explaining the error:\n\n  d.reject( \u0027Token requested when not logged in.\u0027 );\n  d.reject( \u0027Anonymous token.\u0027 );",
+      "revId": "2acb7a814788fbb78325aeba7684505f953d729b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
