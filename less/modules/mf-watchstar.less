@@ -22,6 +22,14 @@ a.watch-this-article {
 	}
 }
 
+.alpha .watch-this-article {
+	.transition( transform, .5s );
+
+	&.watched {
+		.transform( rotate(72deg) );
+	}
+}
+
 .full-screen-search #mw-mf-searchForm a.watch-this-article {
 	display: none;
 }
