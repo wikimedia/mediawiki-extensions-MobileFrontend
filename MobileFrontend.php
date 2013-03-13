@@ -50,7 +50,7 @@ $autoloadClasses = array (
 
 	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
 
-	'SpecialDonateImage' => 'specials/SpecialDonateImage',
+	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
@@ -99,7 +99,7 @@ $wgHooks['UserLoginComplete'][] = 'MobileFrontendHooks::onUserLoginComplete';
 $wgHooks['UserLoginForm'][] = 'MobileFrontendHooks::onUserLoginForm';
 $wgHooks['UserCreateForm'][] = 'MobileFrontendHooks::onUserCreateForm';
 
-$wgSpecialPages['DonateImage'] = 'SpecialDonateImage';
+$wgSpecialPages['Uploads'] = 'SpecialUploads';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
@@ -491,7 +491,7 @@ $wgResourceModules['mobile.userlogin.scripts'] = $wgMFMobileSpecialPageResourceS
 		'javascripts/specials/userlogin.js',
 	),
 );
-$wgResourceModules['mobile.donateimage.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+$wgResourceModules['mobile.uploads.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'messages' => array(
 		'mobile-frontend-photo-upload-generic',
 		'mobile-frontend-donate-photo-upload-success',
@@ -501,12 +501,12 @@ $wgResourceModules['mobile.donateimage.scripts'] = $wgMFMobileSpecialPageResourc
 		'mobile-frontend-photo-upload-user-count',
 	),
 	'scripts' => array(
-		'javascripts/specials/donateimage.js',
+		'javascripts/specials/uploads.js',
 	),
 );
-$wgResourceModules['mobile.donateimage.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+$wgResourceModules['mobile.uploads.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
 	'styles' => array(
-		'stylesheets/specials/donateimage.css',
+		'stylesheets/specials/uploads.css',
 	),
 );
 $wgResourceModules['mobile.mobilediff.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(

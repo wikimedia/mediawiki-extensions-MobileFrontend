@@ -78,7 +78,7 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 			$returnto = '';
 		}
 		$returntoQuery = $req->getVal( 'returntoquery' );
-		if ( $returnto == 'DonateImage' ) {
+		if ( $returnto == 'Uploads' ) {
 			$key = 'mobile-frontend-donate-image-login';
 		} elseif ( strstr( $returntoQuery, 'article_action=watch' ) ) {
 			$key = 'mobile-frontend-watch-login';
