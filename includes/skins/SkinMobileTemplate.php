@@ -89,7 +89,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 		<div id="mw-mf-viewport">
 		<div id="mw-mf-page-left">
-		<div id='mw-mf-content-left'>
 		<ul id="mw-mf-menu-main">
 			<li class="icon-home"><a href="<?php $this->text( 'mainPageUrl' ) ?>"
 				title="<?php $this->msg( 'mobile-frontend-home-button' ) ?>">
@@ -134,7 +133,6 @@ class SkinMobileTemplate extends BaseTemplate {
 			</li>
 			<?php } ?>
 		</ul>
-		</div>
 		</div>
 		<div id='mw-mf-page-center'>
 		<?php
