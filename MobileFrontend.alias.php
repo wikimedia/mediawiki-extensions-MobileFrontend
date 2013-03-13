@@ -40,6 +40,11 @@ $specialPageAliases['et'] = array(
 	'MobileOptions' => array( 'Mobiili_suvandid' ),
 );
 
+/** Hebrew (עברית) */
+$specialPageAliases['he'] = array(
+	'Nearby' => array( 'קרוב' ),
+);
+
 /** Hindi (हिन्दी) */
 $specialPageAliases['hi'] = array(
 	'MobileFeedback' => array( 'मोबाइल_प्रतिक्रिया' ),
