@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqPBCHRI",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-13T17:13:51Z",
+      "side": 1,
+      "message": "why the extra tab?",
+      "revId": "d0f8ca4f02ed1ca41c66168645e9e14c6c48684f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqHBP7TU",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-13T17:13:51Z",
+      "side": 1,
+      "message": "why not set this to the html? (\u0027\u0027 when not present) - will keep SkinMobileTemplate.php cleaner..",
+      "revId": "d0f8ca4f02ed1ca41c66168645e9e14c6c48684f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
