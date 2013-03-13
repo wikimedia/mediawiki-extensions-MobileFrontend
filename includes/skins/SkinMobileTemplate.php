@@ -6,7 +6,9 @@ class SkinMobileTemplate extends BaseTemplate {
 		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
 		<?php $this->html( 'notice' ) ?>
-		<div id="siteNotice"></div>
+		<?php if ( $this->data[ 'enableSiteNotice' ] ) { ?>
+			<div id="siteNotice"></div>
+		<?php } ?>
 		<?php $this->renderArticleHeader() ?>
 	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
 		<?php if ( !$this->data[ 'isSpecialPage' ] ) { ?>

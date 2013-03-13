@@ -742,3 +742,9 @@ $wgMFAutodetectMobileView = false;
  * (wiki)text to append to photo description during photo upload.
  */
 $wgMFPhotoUploadAppendToDesc = '';
+
+/**
+ * Whether or not to display site notices
+ * @var bool
+ */
+$wgMFEnableSiteNotice = false;
