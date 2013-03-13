@@ -237,7 +237,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-license' => 'By clicking "Submit", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your photo under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
 	'mobile-frontend-photo-submit' => 'Submit',
 	'mobile-frontend-photo-cancel' => 'Cancel',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 upload|$1 uploads}}',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
 
 	// Change tags
@@ -583,7 +583,7 @@ They can either exit the page and lose them or stay on the page until they are c
 {{Identical|Submit}}',
 	'mobile-frontend-photo-cancel' => 'Caption for the cancel button on the photo upload form.
 {{Identical|Cancel}}',
-	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded. Parameter is number of images.',
+	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded. Parameter is number of images. Wrap the number in a span tag to allow the number to be incremented programatically',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Displayed in place of mobile-frontend-photo-upload-user-count when user has uploaded more than 500 images.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 

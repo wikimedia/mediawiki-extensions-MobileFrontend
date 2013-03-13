@@ -497,6 +497,7 @@ $wgResourceModules['mobile.donateimage.scripts'] = $wgMFMobileSpecialPageResourc
 		'mobile-frontend-donate-photo-first-upload-success',
 		'mobile-frontend-donate-image-summary',
 		'mobile-frontend-listed-image-no-description',
+		'mobile-frontend-photo-upload-user-count',
 	),
 	'scripts' => array(
 		'javascripts/specials/donateimage.js',

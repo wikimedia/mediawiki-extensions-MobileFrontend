@@ -35,9 +35,9 @@ class SpecialDonateImage extends UnlistedSpecialPage {
 				} else {
 					$msg = $this->msg(
 						'mobile-frontend-photo-upload-user-count'
-					)->numParams( $uploadCount )->text();
+					)->numParams( $uploadCount )->parse();
 				}
-				$html .= Html::element( 'h2', array(), $msg );
+				$html .= Html::openElement( 'h2', array() ) . $msg . Html::closeElement( 'h2' );
 				$html .= '</div>';
 			}
 			$html .= '<ul class="mobileUserGallery"></ul>';
