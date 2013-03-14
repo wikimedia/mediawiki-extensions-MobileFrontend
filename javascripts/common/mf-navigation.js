@@ -159,7 +159,11 @@ var m = ( function( $ ) {
 		} );
 
 		// close navigation if content tapped
-		$( '#mw-mf-page-center' ).on( 'touchend', closeNavigation );
+		$( '#mw-mf-page-center' ).on( 'touchend', function() {
+			if ( $( 'html' ).hasClass( 'navigationEnabled' ) ) {
+				closeNavigation();
+			}
+		} );
 
 		if( window.location.hash === '#mw-mf-page-left' ) {
 			openNavigation();
