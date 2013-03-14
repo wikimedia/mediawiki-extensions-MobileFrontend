@@ -63,4 +63,47 @@ test( 'PhotoUploadProgress', function() {
 	);
 } );
 
+test( 'generateFileName', function() {
+	var date = new Date( 2010, 9, 15, 12, 51 ),
+		name = photo.generateFileName( 'Jon eating bacon next to an armadillo', '.jpg', date );
+	strictEqual( name, 'Jon eating bacon next to an armadillo 2010-10-15 12-51.jpg',
+		'Check file name is description with appended date' );
+} );
+
+test( 'generateFileName test padding', function() {
+	var date = new Date( 2013, 2, 1, 12, 51 ), // note 0 = january
+		name = photo.generateFileName( 'Tomasz eating bacon next to a dinosaur', '.jpg', date );
+	strictEqual( name, 'Tomasz eating bacon next to a dinosaur 2013-03-01 12-51.jpg',
+		'Check file name is description with appended date and numbers were padded' );
+} );
+
+test( 'generateFileName long line', function() {
+	var i,
+		longDescription = '',
+		date = new Date( 2013, 2, 1, 12, 51 ), name;
+
+	for ( i = 0; i < 240; i++ ) {
+		longDescription += 'a';
+	}
+	name = photo.generateFileName( longDescription, '.jpg', date );
+	strictEqual( name.length, 240, 'Check file name was shortened to the minimum length' );
+	strictEqual( name.substr( 233, 7 ), '-51.jpg', 'ends with date' );
+} );
+
+test( 'generateFileName with new lines', function() {
+	var
+		description = 'One\nTwo\nThree',
+		date = new Date( 2013, 2, 1, 12, 51 ), name;
+
+	name = photo.generateFileName( description, '.jpg', date );
+	strictEqual( name, 'One-Two-Three 2013-03-01 12-51.jpg', 'New lines converted' );
+} );
+
+test( 'trimUtf8String', function() {
+	strictEqual( photo.trimUtf8String( 'Just a string', 20 ), 'Just a string', 'ascii string fits' );
+	strictEqual( photo.trimUtf8String( 'Just a string', 10 ), 'Just a str', 'ascii string truncated' );
+	strictEqual( photo.trimUtf8String( 'Júst á stríng', 10 ), 'Júst á s', 'latin1 string truncated' );
+	strictEqual( photo.trimUtf8String( 'こんにちは', 10 ), 'こんに', 'CJK string truncated' );
+} );
+
 }( jQuery, mw.mobileFrontend ) );

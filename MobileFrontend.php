@@ -379,6 +379,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
 		'mobile-frontend-photo-upload-error',
+		'mobile-frontend-photo-upload-error-filename',
 		'mobile-frontend-photo-upload-success-article',
 		'mobile-frontend-photo-caption-placeholder',
 		'mobile-frontend-image-loading',
