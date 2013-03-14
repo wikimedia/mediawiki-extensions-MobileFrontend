@@ -238,6 +238,7 @@
 			cancelButton: mw.msg( 'mobile-frontend-photo-cancel' ),
 			submitButton: mw.msg( 'mobile-frontend-photo-submit' ),
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
+			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),
 			ownerStatement: mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ) )
 		},
 
@@ -275,8 +276,22 @@
 		},
 
 		setImageUrl: function( url ) {
+			var msg = mw.msg( 'mobile-frontend-photo-ownership',
+				mw.config.get( 'wgUserName' ) ),
+				data = {
+					bulletPoints: [
+						{ text: mw.msg( 'mobile-frontend-photo-ownership-bullet-one' ) },
+						{ text: mw.msg( 'mobile-frontend-photo-ownership-bullet-two' ) },
+						{ text: mw.msg( 'mobile-frontend-photo-ownership-bullet-three' ) }
+					],
+					closeText: mw.msg( 'mobile-frontend-photo-ownership-confirm' ),
+					leadText: msg
+				};
 			this.imageUrl = url;
 			this.$( '.loading' ).remove();
+			this.$( 'a.help' ).on( 'click', function() {
+					nav.createOverlay( '',  $( M.template.get( 'photoCopyrightDialog' ).render( data ) ) );
+				} );
 			$( '<img>' ).attr( 'src', url ).prependTo( this.$( '.photoPreview' ) );
 		}
 	} );
