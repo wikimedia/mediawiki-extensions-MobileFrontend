@@ -229,6 +229,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-upload-comment' => 'Added photo to page',
 	'mobile-frontend-photo-caption-placeholder' => 'Add a description (required)',
 	'mobile-frontend-image-loading' => 'Loading image',
+	'mobile-frontend-photo-ownership' => 'I, $1 created this image.',
 	'mobile-frontend-image-uploading-wait' => 'Uploading image, please wait.',
 	'mobile-frontend-image-uploading-long' => 'Image still uploading! Thanks for your patience.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Cancel</a> if this is taking too long.',
@@ -497,6 +498,7 @@ See also:
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
 	'mobile-frontend-ajax-page-loading' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript',
+	'mobile-frontend-photo-ownership' => 'A statement saying the user created the image where $1 is the username',
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved',
 	'mobile-frontend-ajax-page-error' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript and it fails',
 	'mobile-frontend-nearby-title' => 'Title of Special:Nearby.

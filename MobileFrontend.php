@@ -375,6 +375,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-watchlist-cta-button-login',
 
 		// mf-photo.js
+		'mobile-frontend-photo-ownership',
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
 		'mobile-frontend-photo-upload-error',
