@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqFGdCLc",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 937,
+      "author": {
+        "id": 76
+      },
+      "writtenOn": "2013-03-14T17:57:14Z",
+      "side": 1,
+      "message": "I should have thought of this last time, sorry. Since we\u0027re encoding keys and values on the way out, we need to decode both on the way in to prevent double-encoding. Before decoding, I think we should strip whitespace from both sides, as headers of this style do not consider it semantically meaningful, and it\u0027s nice to Do It The Same Way Everywhere.",
+      "revId": "9c75bdae3a4c11fb6aeb8fa03e686fd22798e047",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqPGhvPs",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 76
+      },
+      "writtenOn": "2013-03-14T17:57:14Z",
+      "side": 1,
+      "message": "Other semi-separated header fields (namely, Cookies) considers whitespace after the sep to not be semantically meaningful (so, not part of the next key). Since we\u0027re encoding keys and values (and decoding both on the way in to prevent double-encoding), it seems correct to strip whitespace at pair boundaries.",
+      "revId": "9c75bdae3a4c11fb6aeb8fa03e686fd22798e047",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
