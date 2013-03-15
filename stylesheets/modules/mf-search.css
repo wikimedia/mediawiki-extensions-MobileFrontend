@@ -35,6 +35,9 @@ input.search.searching {
   display: none;
   width: 100%;
 }
+#remove-results {
+  display: none;
+}
 .full-screen-search #mw-mf-header {
   z-index: 2;
   color: white;
@@ -47,7 +50,7 @@ input.search.searching {
 }
 .full-screen-search #results,
 .full-screen-search .search-box.notEmpty .clearlink,
-.full-screen-search button.escapeOverlay {
+.full-screen-search #remove-results {
   display: block;
 }
 .full-screen-search #mw-mf-page-left,

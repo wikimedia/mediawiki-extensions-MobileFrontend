@@ -1,11 +1,16 @@
 ( function( M,  $ ) {
 
 var module = (function() {
-	var nav = M.require( 'navigation' );
+	var nav = M.require( 'navigation' ),
+		Overlay = nav.Overlay,
+		CleanupOverlay = Overlay.extend( {
+			template: M.template.get( 'overlays/cleanup' )
+		} );
 
 	function run() {
 		var $metadata = $( '#content_0 table.ambox' ),
-			$container = $( '<div class="content">' );
+			overlay,
+			$container = $( '<div>' );
 
 		$metadata.each( function() {
 			if ( $( this ).find( 'table.ambox' ).length === 0 ) {
@@ -13,8 +18,13 @@ var module = (function() {
 			}
 		} );
 
+		overlay = new CleanupOverlay( {
+			heading: M.message( 'mobile-frontend-meta-data-issues-header' ),
+			content: $container.html()
+		} );
+
 		$( '<a class="mw-mf-cleanup">' ).click( function() {
-			nav.createOverlay( M.message( 'mobile-frontend-meta-data-issues-header' ), $container[ 0 ] );
+			overlay.show();
 		} ).text( M.message( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
 	}

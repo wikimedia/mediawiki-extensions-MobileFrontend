@@ -220,8 +220,10 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 	'localBasePath' => $localBasePath,
 	'localTemplateBasePath' => $localBasePath . '/templates',
 	'templates' => array(
-		'photoCopyrightDialog',
 		'leadPhoto',
+		'overlay',
+		'overlays/cleanup',
+		'overlays/photoCopyrightDialog',
 		'photoUploader',
 		'photoUploadPreview',
 		'ctaDrawer'
@@ -230,11 +232,12 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
-$wgResourceModules['mobile.beta.templates'] = array(
+$wgResourceModules['mobile.beta.plumbing'] = array(
 	'localBasePath' => $localBasePath,
 	'localTemplateBasePath' => $localBasePath . '/templates',
 	'templates' => array(
 		'languageSection',
+		'overlays/languages',
 	),
 	'class' => 'MFResourceLoaderModule',
 	'mobileTargets' => array( 'beta', 'alpha' ),
@@ -243,7 +246,7 @@ $wgResourceModules['mobile.beta.templates'] = array(
 $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.stable',
-		'mobile.beta.templates',
+		'mobile.beta.plumbing',
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-languages.js',

@@ -53,30 +53,31 @@ body.navigationEnabled {
   height: 100%;
   overflow: hidden;
 }
-#mw-mf-overlay {
-  display: none;
-}
-#mw-mf-overlay li {
-  text-align: left;
-}
-#mw-mf-overlay .mw-mf-overlay-footer a {
-  display: inline;
-}
-.escapeOverlay {
-  display: none;
+html.overlay .mw-mf-overlay {
+  display: block;
 }
 html.overlay #mw-mf-viewport {
   display: none;
 }
-html.overlay a.escapeOverlay,
-html.overlay button.escapeOverlay {
-  display: block;
-}
 html.overlay #footer {
   display: none !important;
 }
-html.overlay div.languageOverlay ul li,
-html.overlay ul.content li {
+.mw-mf-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 4;
+}
+.mw-mf-overlay a.escapeOverlay,
+.mw-mf-overlay button.escapeOverlay {
+  display: block;
+}
+.mw-mf-overlay div.languageOverlay ul li,
+.mw-mf-overlay ul.content li {
   color: #666;
   border: none;
   position: relative;
@@ -85,43 +86,46 @@ html.overlay ul.content li {
   padding: 12px 40px;
   font-size: 0.9em;
 }
-html.overlay div.languageOverlay ul li a,
-html.overlay ul.content li a {
+.mw-mf-overlay div.languageOverlay ul li a,
+.mw-mf-overlay ul.content li a {
   display: block;
   text-decoration: none;
   color: #666;
 }
-html.overlay div.languageOverlay ul li a:active,
-html.overlay ul.content li a:active,
-html.overlay div.languageOverlay ul li a:hover,
-html.overlay ul.content li a:hover,
-html.overlay div.languageOverlay ul li a:visited,
-html.overlay ul.content li a:visited {
+.mw-mf-overlay div.languageOverlay ul li a:active,
+.mw-mf-overlay ul.content li a:active,
+.mw-mf-overlay div.languageOverlay ul li a:hover,
+.mw-mf-overlay ul.content li a:hover,
+.mw-mf-overlay div.languageOverlay ul li a:visited,
+.mw-mf-overlay ul.content li a:visited {
   text-decoration: none;
   color: #666;
 }
-html.overlay div.languageOverlay ul li:hover,
-html.overlay ul.content li:hover {
+.mw-mf-overlay div.languageOverlay ul li:hover,
+.mw-mf-overlay ul.content li:hover {
   background-color: #ACD1E9;
 }
-html.overlay div.languageOverlay ul li.preferred,
-html.overlay ul.content li.preferred {
+.mw-mf-overlay div.languageOverlay ul li.preferred,
+.mw-mf-overlay ul.content li.preferred {
   font-weight: bold;
 }
-.overlay #mw-mf-overlay {
-  display: block;
+.mw-mf-overlay .mw-mf-overlay-header {
+  background-color: #F1F1F1;
 }
-#mw-mf-overlay div.content {
+.mw-mf-overlay li {
+  text-align: left;
+}
+.mw-mf-overlay div.content {
   padding-bottom: 20px;
 }
-#mw-mf-overlay .content {
+.mw-mf-overlay .content {
   margin-top: 14pt;
 }
-#mw-mf-overlay .content .close {
+.mw-mf-overlay .content .cancel {
   display: block;
   margin: auto;
 }
-#mw-mf-overlay .buttonBar {
+.mw-mf-overlay .buttonBar {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -130,8 +134,20 @@ html.overlay ul.content li.preferred {
   background: #f3f3f3;
   text-align: center;
 }
-#mw-mf-overlay .buttonBar button {
+.mw-mf-overlay .buttonBar button {
   margin: 0 5px;
+}
+.mw-mf-overlay .mw-mf-overlay-footer,
+.mw-mf-overlay .mw-mf-overlay-header {
+  padding: 4px 8px 4px 40px;
+  margin: 0;
+  font-size: 0.8em;
+  color: #666;
+  border-bottom: solid 1px #eee;
+}
+.mw-mf-overlay .mw-mf-overlay-footer a {
+  display: inline;
+  color: #002BB8;
 }
 .alert {
   padding: 0.5em 1em;
@@ -224,20 +240,6 @@ body {
 #mw-mf-page-left,
 #mw-mf-page-center {
   min-height: 100%;
-}
-#mw-mf-overlay .mw-mf-overlay-footer,
-#mw-mf-overlay .mw-mf-overlay-header {
-  padding: 4px 8px 4px 40px;
-  margin: 0;
-  font-size: 0.8em;
-  color: #666;
-  border-bottom: solid 1px #eee;
-}
-#mw-mf-overlay .mw-mf-overlay-footer a {
-  color: #002BB8;
-}
-#mw-mf-overlay .mw-mf-overlay-header {
-  background-color: #F1F1F1;
 }
 .supportsPositionFixed #mw-mf-page-center {
   min-height: none !important;
