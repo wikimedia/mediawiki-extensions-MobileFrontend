@@ -146,7 +146,6 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below',
-	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-main-menu-account-create' => 'Create account',
 	'mobile-frontend-page-menu-contents' => 'contents',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',

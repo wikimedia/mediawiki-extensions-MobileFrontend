@@ -115,10 +115,6 @@ class SkinMobile extends SkinMobileBase {
 			$donateUrl = static::getLoginUrl( array( 'returnto' => $donateTitle ) );
 		}
 
-		$leaveFeedbackURL = SpecialPage::getTitleFor( 'MobileFeedback' )->getLocalURL(
-			array( 'returnto' => $returnToTitle, 'feedbacksource' => 'MobileFrontend' )
-		);
-
 		// urls that do not vary on authentication status
 		if ( !$title->isSpecialPage() ) {
 			$historyUrl = $ctx->getMobileUrl( wfExpandUrl( $req->appendQuery( 'action=history' ) ) );
@@ -138,7 +134,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'historyLink', $historyLink );
 		$tpl->set( 'nearbyURL', $nearbyUrl );
 		$tpl->set( 'settingsUrl', $settingsUrl );
-		$tpl->set( 'leaveFeedbackURL', $leaveFeedbackURL );
 		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
 		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
