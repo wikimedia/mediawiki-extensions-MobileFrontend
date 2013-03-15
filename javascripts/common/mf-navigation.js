@@ -3,8 +3,9 @@
 var m = ( function( $ ) {
 	var View = M.require( 'view' ),
 		u = M.utils, mfePrefix = M.prefix,
-		lastScrollTopPosition = 0,
 		inBeta = mw.config.get( 'wgMFMode' ) === 'beta',
+		Overlay,
+		OverlayManager,
 		Drawer, CtaDrawer;
 
 	Drawer = View.extend( {
@@ -55,43 +56,73 @@ var m = ( function( $ ) {
 		template: M.template.get( 'ctaDrawer' )
 	} );
 
-	function getOverlay() {
-		return document.getElementById( 'mw-mf-overlay' );
-	}
+	OverlayManager = function() {};
 
-	function closeOverlay( ) {
-		$( 'html' ).removeClass( 'overlay' );
-		window.scrollTo( document.body.scrollLeft, lastScrollTopPosition );
-		M.history.replaceHash( '#' );
-	}
+	OverlayManager.prototype = {
+		stack: [],
+		getTopOverlay: function() {
+			return this.stack[ this.stack.length - 1 ];
+		},
+		pop: function() {
+			var overlay = this.stack.pop(); // assume the overlay being escaped is the topmost one
+			// Make sure all open overlays are closed before returning to article
+			if ( this.stack.length === 0 ) {
+				$( 'html' ).removeClass( 'overlay' );
+				// return to last known scroll position
+				window.scrollTo( document.body.scrollLeft, overlay.scrollTop );
+				return true;
+			} else {
+				this.getTopOverlay().show();
+				return false;
+			}
+		},
+		push: function( overlay ) {
+			// hide the current open overlay
+			var top = this.getTopOverlay();
+			if ( top ) {
+				top.hide();
+			}
 
-	function showOverlay() {
-		lastScrollTopPosition = document.body.scrollTop;
-		$( 'html' ).addClass( 'overlay' );
-		window.scrollTo( 0, 0 ); // scroll right to top
-		$( 'html' ).removeClass( 'navigationEnabled' );
-	}
+			this.stack.push( overlay );
+			$( 'html' ).addClass( 'overlay' ).
+				removeClass( 'navigationEnabled' );
 
-	// FIXME: redo using view
-	function createOverlay( heading, contents, options ) {
-		options = options || {};
-		var overlay = document.getElementById( mfePrefix + 'overlay' );
-		M.history.pushState( options.hash || '#mw-mf-overlay' );
-		showOverlay();
-		$( overlay ).empty();
-		$( '<div class="header">' ).appendTo( '#' + mfePrefix + 'overlay' );
-		$( '<button id="close"></button>' ).text( mw.msg( 'mobile-frontend-overlay-escape' ) ).
-			addClass( 'escapeOverlay' ).
-			click( closeOverlay ).appendTo( '#' + mfePrefix + 'overlay .header' );
-		if( typeof heading === 'string' ) {
-			heading = $( '<h2 />' ).text( heading );
+			// skip the URL bar if possible
+			window.scrollTo( 0, 1 );
 		}
-		$( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
-		$( overlay ).append( contents );
-		$( overlay ).find( '.close' ).click( closeOverlay );
+	};
 
-		return overlay;
-	}
+	Overlay = View.extend( {
+		defaults: {
+			heading: '',
+			content: '',
+			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' )
+		},
+		template: M.template.get( 'overlay' ),
+		className: 'mw-mf-overlay',
+		initialize: function() {
+			var self = this;
+			this.$( '.close' ).click( function( ev ) {
+				ev.preventDefault();
+				self.close();
+			} );
+		},
+		open: function() {
+			this.$el.appendTo( 'body' );
+			this.scrollTop = document.body.scrollTop;
+			M.emit( 'overlay-opened', this );
+		},
+		close: function() {
+			this.detach();
+			M.emit( 'overlay-closed', this );
+		},
+		hide: function() {
+			this.$el.hide();
+		},
+		show: function() {
+			this.$el.show();
+		}
+	} );
 
 	function getPageMenu() {
 		return $( '#mw-mf-menu-page' )[ 0 ];
@@ -110,7 +141,7 @@ var m = ( function( $ ) {
 	}
 
 	function init() {
-		var id = mfePrefix + 'overlay',
+		var manager,
 			search = document.getElementById(  mfePrefix + 'search' );
 
 		$( '#mw-mf-menu-main a' ).click( function() {
@@ -126,25 +157,12 @@ var m = ( function( $ ) {
 		}
 
 		function openNavigation() {
-			M.history.pushState( '#mw-mf-page-left' );
 			$( 'html' ).addClass( 'navigationEnabled' );
 		}
 
 		function closeNavigation() {
 			M.history.pushState( '#' );
 			$( 'html' ).removeClass( 'navigationEnabled' );
-		}
-
-		M.on( 'history-change', function( curPage ) {
-			if ( curPage.hash === '#' || curPage.hash === '' || curPage.hash === '#_' ) {
-				closeOverlay();
-				closeNavigation();
-			} else if ( curPage.hash === '#mw-mf-page-left' ) {
-				toggleNavigation();
-			}
-		} );
-		if ( !document.getElementById( id ) ) {
-			$( '<div>' ).attr( 'id', id ).appendTo( document.body );
 		}
 
 		function toggleNavigation() {
@@ -180,17 +198,23 @@ var m = ( function( $ ) {
 				u( document.documentElement ).removeClass( 'navigationEnabled' );
 			}
 		} );
+
+		// events
+		manager = new OverlayManager();
+		M.on( 'overlay-opened', function( overlay ) {
+			manager.push( overlay );
+		} );
+		M.on( 'overlay-closed', function() {
+			manager.pop();
+		} );
 	}
 
 	init();
 
 	return {
 		CtaDrawer: CtaDrawer,
-		closeOverlay: closeOverlay,
-		createOverlay: createOverlay,
-		getPageMenu: getPageMenu,
-		getOverlay: getOverlay,
-		showOverlay: showOverlay
+		Overlay: Overlay,
+		getPageMenu: getPageMenu
 	};
 }( jQuery ));
 

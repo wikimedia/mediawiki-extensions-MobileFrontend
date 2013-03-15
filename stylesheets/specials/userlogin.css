@@ -1,7 +1,7 @@
 .specialPage.overlay body {
   background-color: #ffffff;
 }
-.specialPage.overlay #mw-mf-overlay .header h1 {
+.specialPage.overlay .mw-mf-overlay .header h1 {
   padding-left: 0.4em;
 }
 #mw-mf-login .watermark,

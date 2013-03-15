@@ -29,7 +29,11 @@
 
 					$tr = $( '<tr class="overlayZoomer">' ).prependTo( $tc );
 					$( '<td>' ).attr( 'colspan', colspan ).click( function() {
-						nav.createOverlay( $( this ).text(), $container[ 0 ] );
+						var overlay = new nav.Overlay( {
+							heading: '<h2>' + $( this ).text() + '</h2>',
+							content: $( '<div>').append( $container ).html()
+						} );
+						overlay.show();
 					} ).text( M.message( 'mobile-frontend-table', tableId ) ).appendTo( $tr );
 
 					// make the vertical expando

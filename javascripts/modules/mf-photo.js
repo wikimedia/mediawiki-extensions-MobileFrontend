@@ -5,6 +5,7 @@
 		EventEmitter = M.require( 'eventemitter' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		nav = M.require( 'navigation' ),
+		Overlay = nav.Overlay,
 		popup = M.require( 'notifications' ),
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
@@ -246,13 +247,19 @@
 
 		initialize: function() {
 			var self = this,
-				$description = this.$( 'textarea' ),
-				$submitButton = this.$( 'button.submit' );
+				$overlay, $description, $submitButton;
+
+			this.overlay = new Overlay( {
+				content: $( '<div>' ).html( this.$el ).html()
+			} );
+			$overlay = this.overlay.$el;
+
+			$description = $overlay.find( 'textarea' );
+			$submitButton = $overlay.find( 'button.submit' );
 			this.$description = $description;
 
 			// make license links open in separate tabs
-			this.$( '.license a' ).attr( 'target', '_blank' );
-
+			$overlay.find( '.license a' ).attr( 'target', '_blank' );
 			// use input event too, Firefox doesn't fire keyup on many devices:
 			// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
 			$description.on( 'keyup input', function() {
@@ -266,7 +273,7 @@
 			$submitButton.on( 'click', function() {
 				self.emit( 'submit' );
 			} );
-			this.$( 'button.cancel' ).on( 'click', function() {
+			$overlay.find( 'button.cancel' ).on( 'click', function() {
 				self.emit( 'cancel' );
 			} );
 		},
@@ -288,11 +295,15 @@
 					leadText: msg
 				};
 			this.imageUrl = url;
-			this.$( '.loading' ).remove();
-			this.$( 'a.help' ).on( 'click', function() {
-					nav.createOverlay( '',  $( M.template.get( 'photoCopyrightDialog' ).render( data ) ) );
+			this.overlay.$( '.loading' ).remove();
+			this.overlay.$( 'a.help' ).on( 'click', function( ev ) {
+				ev.preventDefault(); // avoid setting #
+				var overlay = new Overlay( {
+					content: M.template.get( 'photoCopyrightDialog' ).render( data )
 				} );
-			$( '<img>' ).attr( 'src', url ).prependTo( this.$( '.photoPreview' ) );
+				overlay.open();
+			} );
+			$( '<img>' ).attr( 'src', url ).prependTo( this.overlay.$( '.photoPreview' ) );
 		}
 	} );
 
@@ -423,15 +434,14 @@
 					preview.
 						on( 'cancel', function() {
 							self.log( { action: 'previewCancel' } );
-							nav.closeOverlay();
+							preview.overlay.close();
 						} ).
 						on( 'submit', function() {
 							self.log( { action: 'previewSubmit' } );
 							self._submit();
 						} );
 
-					// FIXME: replace if we make overlay an object (and inherit from it?)
-					nav.createOverlay( null, preview.$el );
+					preview.overlay.open();
 					// skip the URL bar if possible
 					window.scrollTo( 0, 1 );
 
@@ -452,7 +462,7 @@
 				progressPopup = new PhotoUploadProgress();
 
 			this.emit( 'start' );
-			nav.closeOverlay();
+			this.preview.overlay.close();
 			popup.show( progressPopup.$el, 'locked noButton loading' );
 			progressPopup.on( 'cancel', function() {
 				api.abort();
