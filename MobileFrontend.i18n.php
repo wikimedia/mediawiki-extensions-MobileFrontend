@@ -253,6 +253,11 @@ Help bring these pages to life by donating your images that you are willing to g
 
 	// navigation drawer
 	'mobile-frontend-drawer-cancel' => 'Cancel',
+
+	// talk page overlay
+	'mobile-frontend-talk-explained' => 'The following conversations are currently active',
+	'mobile-frontend-talk-explained-empty' => 'There are no conversations about this page.',
+	'mobile-frontend-talk-overlay-header' => 'Talk',
 );
 
 /** Message documentation (Message documentation)
@@ -606,6 +611,11 @@ See also:
 	'tag-mobile_edit-description' => 'Change tag description e.g. in [[Special:Tags]], see also {{msg-mw|tag-mobile_edit}}',
 	'mobile-frontend-drawer-cancel' => 'Not visible, but the text label for the cancel button inside a navigation overlay
 {{Identical|Cancel}}',
+	'mobile-frontend-handshake-title' => 'Title for the page redirecting the user to the login form.',
+	'mobile-frontend-handshake-wait' => 'Text asking the user to wait while he is redirected to the login form.',
+	'mobile-frontend-talk-explained' => 'Explains that the user is seeing talk page headings',
+	'mobile-frontend-talk-explained-empty' => 'Explains why the list is empty.',
+	'mobile-frontend-talk-overlay-header' => 'Heading for talk overlay',
 );
 
 /** Achinese (Acèh)

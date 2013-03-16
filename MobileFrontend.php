@@ -320,8 +320,22 @@ $wgResourceModules['mobile.action.history'] = $wgMFMobileResourceBoilerplate + a
 	'group' => 'mobile.action',
 );
 
+$wgResourceModules['mobile.alpha.plumbing'] = array(
+	'localBasePath' => $localBasePath,
+	'localTemplateBasePath' => $localBasePath . '/templates',
+	'templates' => array(
+		'overlays/talk',
+		'talkSection',
+	),
+	'class' => 'MFResourceLoaderModule',
+	'mobileTargets' => array( 'alpha' ),
+);
+
 $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array( 'mobile.stable' ),
+	'dependencies' => array(
+		'mobile.alpha.plumbing',
+		'mobile.stable',
+	),
 	'messages' => array(
 		// for mf-random.js
 		'mobile-frontend-ajax-random-heading',
@@ -334,10 +348,16 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 
 		// for mf-table.js
 		'mobile-frontend-table',
+
+		// for talk.js
+		'mobile-frontend-talk-explained',
+		'mobile-frontend-talk-explained-empty',
+		'mobile-frontend-talk-overlay-header',
 	),
 	'styles' => array(
 		'stylesheets/modules/mf-random.css',
 		'stylesheets/modules/mf-tables.css',
+		'stylesheets/modules/talk.css',
 	),
 	'scripts' => array(
 		'javascripts/common/application-alpha.js',
@@ -348,6 +368,7 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-translator.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
+		'javascripts/modules/talk.js',
 	),
 	'mobileTargets' => array( 'alpha' ),
 );

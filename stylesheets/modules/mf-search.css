@@ -85,7 +85,7 @@ ul.suggestions-results {
   background-color: white;
   list-style: none;
 }
-ul.suggestions-results li.suggestions-result {
+ul.suggestions-results li {
   color: #666;
   border: none;
   position: relative;
@@ -94,17 +94,17 @@ ul.suggestions-results li.suggestions-result {
   padding: 12px 40px;
   font-size: 0.9em;
 }
-ul.suggestions-results li.suggestions-result a {
+ul.suggestions-results li a {
   display: block;
   text-decoration: none;
   color: #666;
 }
-ul.suggestions-results li.suggestions-result a:active,
-ul.suggestions-results li.suggestions-result a:hover,
-ul.suggestions-results li.suggestions-result a:visited {
+ul.suggestions-results li a:active,
+ul.suggestions-results li a:hover,
+ul.suggestions-results li a:visited {
   text-decoration: none;
   color: #666;
 }
-ul.suggestions-results li.suggestions-result:hover {
+ul.suggestions-results li:hover {
   background-color: #ACD1E9;
 }
