@@ -224,6 +224,7 @@ class MobileFrontendHooks {
 				'javascripts/modules/mf-references.js', 'tests/js/test_references.js',
 				'javascripts/modules/mf-watchstar.js', 'tests/js/test_mf-watchstar.js',
 				'javascripts/modules/mf-last-modified.js', 'tests/js/test_mf-last-modified.js',
+				'javascripts/views/page.js', 'tests/js/views/page.js',
 
 				'javascripts/specials/uploads.js', 'tests/js/specials/uploads.js',
 				),

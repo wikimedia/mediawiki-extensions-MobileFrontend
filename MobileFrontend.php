@@ -341,6 +341,7 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	),
 	'scripts' => array(
 		'javascripts/common/application-alpha.js',
+		'javascripts/views/page.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
 		'javascripts/common/mf-history-jquery.js',
 		'javascripts/modules/mf-random.js',
