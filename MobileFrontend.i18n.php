@@ -2469,7 +2469,7 @@ $messages['cs'] = array(
 	'mobile-frontend-photo-upload-error' => 'Chyba, zkuste to znovu.',
 	'mobile-frontend-photo-upload-success-article' => 'Úspěch! Váš obrázek se nyní zobrazuje na této stránce.',
 	'mobile-frontend-photo-cancel' => 'Storno',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 načtený soubor|$1 načtené soubory|$1 načtených souborů}}',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 načtený soubor|$1 načtené soubory|$1 načtených souborů}}', # Fuzzy
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ načtených souborů',
 	'tag-mobile_edit' => 'Mobilní editace',
 	'tag-mobile_edit-description' => 'Editace provedená ze stránek pro mobily',
@@ -6797,7 +6797,7 @@ $messages['it'] = array(
 	'mobile-frontend-main-menu-logout' => 'Esci',
 	'mobile-frontend-main-menu-watchlist' => 'Osservati speciali',
 	'mobile-frontend-main-menu-settings' => 'Impostazioni',
-	'mobile-frontend-main-menu-upload' => 'Carica', # Fuzzy
+	'mobile-frontend-main-menu-upload' => 'Caricamenti',
 	'mobile-frontend-main-menu-settings-heading' => 'Impostazioni del sito per cellulari',
 	'mobile-frontend-settings-site-header' => 'Lingue {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} è disponibile in $1 {{PLURAL:$1|lingua|lingue}}. Tutte le versioni disponibili sono elencate di seguito',
@@ -8817,6 +8817,7 @@ $messages['mk'] = array(
 /** Malayalam (മലയാളം)
  * @author Akhilan
  * @author Praveenp
+ * @author Santhosh.thottingal
  * @author Vssun
  */
 $messages['ml'] = array(
@@ -9011,10 +9012,10 @@ $messages['ml'] = array(
 	'mobile-frontend-image-uploading-cancel' => 'ഇതിനു വളരെ കാലതാമസമുണ്ടെങ്കിൽ <a href="#">റദ്ദാക്കുക</a>.',
 	'mobile-frontend-photo-upload-error' => 'പിഴവുണ്ടായി, വീണ്ടും ശ്രമിക്കുക.',
 	'mobile-frontend-photo-upload-success-article' => 'വിജയകരം! താങ്കളുടെ ചിത്രം ഇനി ഈ താളിൽ കാണാവുന്നതാണ്.',
-	'mobile-frontend-photo-license' => '"സമർപ്പിക്കുക" എന്നത് ഞെക്കുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_Use/ml ഉപയോഗനിബന്ധനകൾ] പാലിക്കാമെന്നും, താങ്കളെടുത്ത ചിത്രം  [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License ക്രിയേറ്റീവ് കോമൺസ് ആട്രിബ്യൂഷൻ-ഷെയർ‌എലൈക് 3.0 അനുവാദപത്രം] പ്രകാം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും സമ്മതിക്കുന്നുണ്ട്.',
+	'mobile-frontend-photo-license' => '"സമർപ്പിക്കുക" എന്നത് ഞെക്കുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_Use/ml ഉപയോഗനിബന്ധനകൾ] പാലിക്കാമെന്നും, താങ്കളെടുത്ത ചിത്രം  [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License ക്രിയേറ്റീവ് കോമൺസ് ആട്രിബ്യൂഷൻ-ഷെയർ‌എലൈക് 3.0 അനുവാദപത്രം] പ്രകാം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും സമ്മതിക്കുന്നുണ്ട്.', # Fuzzy
 	'mobile-frontend-photo-submit' => 'സമർപ്പിക്കുക',
 	'mobile-frontend-photo-cancel' => 'റദ്ദാക്കുക',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|ഒരു അപ്‌ലോഡ്|$1 അപ്‌ലോഡുകൾ}}',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>ഒരു</span> അപ്‌ലോഡ്|<span>$1</span> അപ്‌ലോഡുകൾ}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ അപ്‌ലോഡുകൾ',
 	'tag-mobile_edit' => 'മൊബൈൽ സൈറ്റ്',
 	'tag-mobile_edit-description' => 'മൊബൈൽ സൈറ്റ് വഴി വരുത്തിയ തിരുത്തുകൾ',

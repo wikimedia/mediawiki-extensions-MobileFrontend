@@ -70,6 +70,7 @@ $specialPageAliases['ko'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'MobileOptions' => array( 'Mobil_Optiounen' ),
+	'Nearby' => array( 'Nobäi' ),
 );
 
 /** Macedonian (македонски) */
