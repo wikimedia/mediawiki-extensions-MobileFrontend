@@ -2584,6 +2584,7 @@ $messages['cy'] = array(
 /** Danish (dansk)
  * @author Christian List
  * @author Fnielsen
+ * @author HenrikKbh
  * @author Hylle
  * @author Jan Friberg
  * @author Kaare
@@ -2726,23 +2727,34 @@ $messages['da'] = array(
 	'mobile-frontend-nearby-distance-report' => '$1km fra din aktuelle placering',
 	'mobile-frontend-nearby-lookup-error' => 'Kunne ikke finde dig. Prøver igen...',
 	'mobile-frontend-nearby-noresults' => 'Du er midt i ingenting og vi kunne ikke finde nogen emner. Hvorfor ikke skrive en?',
+	'mobile-frontend-nearby-refresh' => 'Vi fandt en mere nøjagtig placering for dig. Klik her for at opdatere listen over nærliggende sider',
+	'mobile-frontend-nearby-error' => 'Der opstod en uventet fejl mens der blev forsøgt at finde sider i nærheden',
+	'mobile-frontend-donate-image-login' => 'Du skal være logget for at se dine uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Doner et billede',
 	'mobile-frontend-donate-image-title' => 'Doner et billede',
 	'mobile-frontend-donate-image-summary' => 'Fotos sætter liv på siden {{SITENAME}}.
 Der er mange sider, som ingen fotos har på grund af en alvorlig mangel på frit licenserede billeder.
 Hjælp med at bringe disse sider til live, ved at donere de billeder du er villig til at give væk, og som kunne være til nytte for det bredere {{SITENAME}} samfund.',
 	'mobile-frontend-donate-image-heading' => 'Dine seneste bidrag',
+	'mobile-frontend-donate-image-anon' => 'En [[Special: UserLogin|user konto]] er påkrævet for at få vist uploadsiden', # Fuzzy
 	'mobile-frontend-listed-image-no-description' => 'Ingen beskrivelse',
+	'mobile-frontend-donate-photo-upload-success' => 'Succes! Dit billede kan nu bruges på {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Succes! Tak for dit første bidrag!',
 	'mobile-frontend-watchlist-add' => 'Tilføjet $1 til din overvågningsliste',
 	'mobile-frontend-watchlist-removed' => 'Fjernet $1 fra din overvågningsliste',
 	'mobile-frontend-watchlist-view' => 'Se din overvågningsliste',
+	'mobile-frontend-watchlist-more' => 'mere',
 	'mobile-frontend-watchlist-cta' => 'Log på, eller tilmeld dig, for at se denne side.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Log på',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Tilmeld dig',
+	'mobile-frontend-watch-login' => 'Du skal være logget ind for at kunne se sider.',
 	'mobile-frontend-watchlist-a-z' => 'Alle',
 	'mobile-frontend-watchlist-feed' => 'Ændrede',
 	'mobile-frontend-watchlist-a-z-empty' => 'Du overvåger i øjeblikket ikke nogen sider',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik på stjernen  øverst på siden',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Se en side du finder interessant ved at klikke på stjerneikonet i toppen af skærmen. Dette vil tillade at du kan bogmærke interessante sider og se, når de bliver ændret.',
 	'mobile-frontend-watchlist-feed-empty' => 'Der er ingen sider med seneste ændringer',
+	'mobile-frontend-watchlist-back-home' => 'Hjem',
 	'mobile-frontend-changeslist-ip' => 'Anonym bruger',
 	'mobile-frontend-changeslist-nocomment' => 'ingen ændringskommentar',
 	'mobile-frontend-watchlist-filter-all' => 'Alle',
@@ -2750,6 +2762,8 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'mobile-frontend-watchlist-filter-talk' => 'Diskussion',
 	'mobile-frontend-watchlist-filter-other' => 'Øvrige',
 	'mobile-frontend-watchlist-modified' => 'Ændret $1',
+	'mobile-frontend-diffview-404-title' => 'Dårlig version',
+	'mobile-frontend-diffview-404-desc' => "Id'et for den ønskede revision findes ikke",
 	'mobile-frontend-diffview-title' => 'Ændringer',
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|én redigering|$1 redigeringer}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonym bruger',
@@ -2765,6 +2779,7 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'mobile-frontend-photo-caption-placeholder' => 'Tilføj en billedtekst til dette billede', # Fuzzy
 	'mobile-frontend-image-loading' => 'Indlæser billede',
 	'mobile-frontend-image-uploading-wait' => 'Uploader billede', # Fuzzy
+	'mobile-frontend-image-uploading-long' => 'Billedet er ved at blive uploadet! Tak for din tålmodighed.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Afbryd</a>, hvis det tager for lang tid.',
 	'mobile-frontend-photo-upload-error' => 'Der opstod en fejl, mens billedet uploadede. Prøv et andet billede.', # Fuzzy
 	'mobile-frontend-photo-upload-success-article' => 'Succes! Dit billede er nu live på denne side.',
@@ -6073,7 +6088,7 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-photo-license' => 'Hdyž kliknješ na "Wotpósłać" zwoliš do našich [//wikimediafoundation.org/wiki/Terms_of_use wužiwarskich wuměnjenjow] a přizwoliš swoje foto pod licencu  [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0] wozjewić.',
 	'mobile-frontend-photo-submit' => 'Wotpósłać',
 	'mobile-frontend-photo-cancel' => 'Přetorhnyć',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 nahraće|$1 nahraći|$1 nahraća|$1 nahraćow}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> nahraće|<span>$1</span> nahraći|<span>$1</span> nahraća|<span>$1</span> nahraćow}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ nahratych datajow',
 	'tag-mobile_edit' => 'Mobilna změna',
 	'tag-mobile_edit-description' => 'Z mobilneho sydła změnjeny',
