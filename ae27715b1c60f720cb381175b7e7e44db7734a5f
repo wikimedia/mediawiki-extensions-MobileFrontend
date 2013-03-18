@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqAUnOM4",
+        "filename": "javascripts/specials/donateimage.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2013-03-18T18:33:27Z",
+      "side": 1,
+      "message": "Should probably be case insensitive. Also it matches descriptions in places like https://commons.wikimedia.org/wiki/File:Okra_flower_(Abelmoschus_esculentus).jpeg, which have wikitext (in this case a link, with a pipe char) inside the description field wrong? \n\nmatch is actually [\"|Description\u003dFlower of [[:en:Okra|\", \"Flower of [[:en:Okra\"] and hence summary will be set to a truncated version of description",
+      "revId": "ae27715b1c60f720cb381175b7e7e44db7734a5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
