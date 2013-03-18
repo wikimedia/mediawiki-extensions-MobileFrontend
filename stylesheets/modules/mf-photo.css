@@ -42,7 +42,8 @@
 }
 .photoPreview .license {
   background: url('images/cc-by-sa.png') no-repeat;
-  padding: 20px 0 0;
+  background-size: auto 22px;
+  padding: 26px 0 0;
   margin: 1em 0;
   color: #707070;
   font-size: .75em;
