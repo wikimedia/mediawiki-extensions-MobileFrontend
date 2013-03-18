@@ -1,4 +1,4 @@
-( function ( $, MFE, toggle ) {
+( function ( $, toggle ) {
 
 var $container;
 function makeSections() {
@@ -28,7 +28,7 @@ test("wm_toggle_section", function() {
 	toggle.wm_toggle_section( '1' );
 	strictEqual($("#content_1").hasClass("openSection"), false, "check content is closed on a toggle");
 	strictEqual($("#section_1").hasClass("openSection"), false, "check section is closed");
-	
+
 	// perform second toggle
 	toggle.wm_toggle_section( '1' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content reopened");
@@ -78,4 +78,4 @@ test("close a section", function() {
 	strictEqual( $( '#anchor_1' ).length, 0, 'check anchor is no longer present' );
 });
 
-}( jQuery, mw.mobileFrontend, mw.mobileFrontend.require( 'toggle' ) ) );
+}( jQuery, mw.mobileFrontend.require( 'toggle' ) ) );

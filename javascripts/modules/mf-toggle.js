@@ -86,7 +86,7 @@ var toggle = ( function() {
 			$( '#anchor_' + heading.id.split( '_' )[ 1 ] ).remove();
 			u( heading ).bind( 'mousedown', openSectionHandler );
 		}
-		
+
 		function checkHash() {
 			var hash = window.location.hash;
 			if ( hash.indexOf( '#' ) === 0 ) {
