@@ -30,7 +30,7 @@ GEM
     page_navigation (0.7)
       data_magic (>= 0.14)
     parallel (0.6.2)
-    parallel_tests (0.10.0)
+    parallel_tests (0.10.1)
       parallel
     rake (10.0.3)
     rspec-expectations (2.13.0)
