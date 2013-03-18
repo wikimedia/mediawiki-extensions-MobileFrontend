@@ -17,7 +17,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		wfProfileIn( __METHOD__ );
 
 		$ctx = MobileContext::singleton();
-		$this->usePageImages = $ctx->isBetaGroupMember() && !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
+		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
 		// assumes mobile skin
 		$mobileSkin = $ctx->getSkin();
 		$mobileSkin->setHtmlHeader( $this->getWatchlistHeader() );
@@ -205,8 +205,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			}
 		}
 
-		$this->doPageImages( $tables, $fields, $join_conds, 'recentchanges' );
-
 		switch( $this->filter ) {
 		case 'all':
 			// no-op
@@ -322,7 +320,13 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		if ( $empty ) {
 			$this->showEmptyList( $feed );
 		} else {
-			$output->addHtml( '<ul class="mw-mf-watchlist-results">' );
+			$output->addHtml(
+				Html::openElement( 'ul',
+					array(
+						'class' => $feed ? 'mw-mf-watchlist-results' : 'mw-mf-watchlist-results a-to-z',
+					)
+				)
+			);
 
 			$lookahead = 1;
 			$fromTitle = false;
@@ -459,7 +463,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 			'<li>' .
 			Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) ) .
-			$this->renderThumb( $row ) .
 			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => $usernameClass ), $username ).
 			Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
