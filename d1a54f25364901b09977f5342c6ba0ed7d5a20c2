@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqZnz2wk",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T20:22:44Z",
+      "side": 1,
+      "message": "Should have a full stop (period) at the end?",
+      "revId": "d1a54f25364901b09977f5342c6ba0ed7d5a20c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqVneo2s",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T20:22:44Z",
+      "side": 1,
+      "message": "Maybe we should stick to the photo- prefix? I think it\u0027s more widespread.",
+      "revId": "d1a54f25364901b09977f5342c6ba0ed7d5a20c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqRnBC4M",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T20:22:44Z",
+      "side": 1,
+      "message": "I\u0027d put it in defaults and the template itself and then just remove the loading class.",
+      "revId": "d1a54f25364901b09977f5342c6ba0ed7d5a20c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqdlc8.8",
+        "filename": "less/modules/mf-photo.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T20:22:44Z",
+      "side": 1,
+      "message": "margin: 0 8px 8px 0; saves us a few bytes (in this case 18, even more if we do it more often).",
+      "revId": "d1a54f25364901b09977f5342c6ba0ed7d5a20c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
