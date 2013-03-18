@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqDCqvNQ",
+        "filename": "tests/js/test_application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-18T18:55:39Z",
+      "side": 1,
+      "message": "Any reason to use Q[\"throws\"] instead of Q.throws? Seems... funky.",
+      "revId": "a9ca174fdfd01629c14b0c946b8f5436a3ce9cfc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
