@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqR-uy.4",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 638,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T23:20:55Z",
+      "side": 1,
+      "message": "Doesn\u0027t this break caching? Shouldn\u0027t we do it in JS?",
+      "revId": "0e0ab1802ec0d66c1938c883167dd7a70c952f38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
