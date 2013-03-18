@@ -3,6 +3,7 @@
 		"console": true,
 		"jQuery": true,
 		"Hogan": true,
+		"QUnit": true,
 		"mw": true,
 		"mwMobileFrontendConfig": true,
 

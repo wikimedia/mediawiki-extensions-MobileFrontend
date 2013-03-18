@@ -1,4 +1,4 @@
-( function ( $, MFE ) {
+( function ( $, MFE, Q ) {
 
 module("MobileFrontend application.js: history", {
 	setup: function() {
@@ -21,7 +21,7 @@ module( 'MobileFrontend modules' );
 
 test( 'define()', function() {
 	MFE.define( 'testModule1', 'test module 1' );
-	throws(
+	Q.throws(
 		function() {
 			MFE.define( 'testModule1', 'again' );
 		},
@@ -31,7 +31,7 @@ test( 'define()', function() {
 } );
 
 test( 'require()', function() {
-	throws(
+	Q.throws(
 		function() {
 			MFE.require( 'dummy' );
 		},
@@ -52,4 +52,4 @@ test( '#getSessionId', function() {
 	strictEqual( MFE.getSessionId(), sessionId, 'session ID is not regenerated if present' );
 } );
 
-}( jQuery, mw.mobileFrontend ) );
+}( jQuery, mw.mobileFrontend, QUnit ) );

@@ -1,4 +1,4 @@
-( function ( $, M, W ) {
+( function ( $, W ) {
 
 var _ajax;
 module( 'MobileFrontend mf-watchlist.js', {
@@ -63,4 +63,4 @@ test( 'initWatchListIconList', function() {
 	strictEqual( $container.find( '.watch-this-article.watched' ).length, 1, 'One article is watched' );
 } );
 
-}( jQuery, mw.mobileFrontend, mw.mobileFrontend.require( 'watchstar' ) ) );
+}( jQuery, mw.mobileFrontend.require( 'watchstar' ) ) );

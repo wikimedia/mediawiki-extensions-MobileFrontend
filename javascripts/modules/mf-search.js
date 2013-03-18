@@ -18,7 +18,7 @@ var opensearch = ( function() {
 
 	apiUrl = M.getApiUrl();
 
-	function removeResults( ev, silently ) {
+	function removeResults( silently ) {
 		if ( !silently ) {
 			M.history.replaceHash( '#' );
 		}
@@ -37,9 +37,9 @@ var opensearch = ( function() {
 		if ( !rrd ) {
 			rrd = document.createElement( 'button' );
 			rrd.setAttribute( 'id', 'remove-results' );
-			u( rrd ).addClass( 'escapeOverlay' );
-			u( rrd ).bind( 'click',  removeResults );
-			u( rrd ).text( message( 'mobile-frontend-overlay-escape' ) );
+			$( rrd ).addClass( 'escapeOverlay' ).on( 'click',  function() {
+				removeResults();
+			} ).text( message( 'mobile-frontend-overlay-escape' ) );
 			header.insertBefore( rrd, header.firstChild );
 		}
 	}
@@ -94,7 +94,7 @@ var opensearch = ( function() {
 	function clickSearchResult( ev ) {
 		M.history.navigateToPage( this.getAttribute( 'title' ) );
 		ev.preventDefault();
-		removeResults( ev );
+		removeResults();
 	}
 
 	function writeResults( sections ) {
@@ -244,7 +244,7 @@ var opensearch = ( function() {
 			if ( curPage.hash === '#mw-mf-search' ) {
 				onfocus();
 			} else {
-				removeResults( ev, true );
+				removeResults( true );
 			}
 		} );
 	}

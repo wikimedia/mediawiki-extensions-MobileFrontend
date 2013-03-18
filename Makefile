@@ -1,7 +1,7 @@
 .PHONY: less
 
 jshinttests:
-	jshint tests/js/*
+	jshint tests/js/* --config .jshintrc
 
 jshint: jshinttests
 	jshint javascripts/* --config .jshintrc

@@ -7,7 +7,7 @@ var m = ( function() {
 		var $section = $( '<div class="section">' ).insertBefore( $editArea ),
 			$heading = $( '<h2 class="section_heading">' ).attr( 'id', 'section_edit' + sectionId ),
 			$content = $( '<div class="content_block">' );
-		
+
 		if ( sectionId > 0 ) {
 			$section.append( $heading );
 			$content.attr( { 'id': 'content_edit' + sectionId } );
