@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqdwQYa0",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-18T21:56:31Z",
+      "side": 1,
+      "message": "This fails for SVG images (image/svg+xml -\u003e \u0027svg+xml\u0027 instead of expected \u0027svg\u0027), but that\u0027s probably a rare thing for now.",
+      "revId": "a0c7074d516316cce01636b0602202f71364a0e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
