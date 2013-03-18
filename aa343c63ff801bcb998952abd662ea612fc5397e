@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqflSFxI",
+        "filename": "less/modules/mf-photo.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-18T20:00:41Z",
+      "side": 1,
+      "message": "use .background-size mixin",
+      "revId": "aa343c63ff801bcb998952abd662ea612fc5397e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
