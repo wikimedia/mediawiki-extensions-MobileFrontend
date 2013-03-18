@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqIVgKBI",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2013-03-18T18:24:02Z",
+      "side": 1,
+      "message": "I\u0027ll note that if we use full 240 bytes for title, we\u0027ll probably run into problems generating thumbnails (see https://commons.wikimedia.org/wiki/Commons:MAXTHUMB#Maximum_size_for_thumbnails second paragraph). Lower the limit, perhaps?",
+      "revId": "60af4dc7cb71703558df89db7ba0ba1d2ef64cf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
