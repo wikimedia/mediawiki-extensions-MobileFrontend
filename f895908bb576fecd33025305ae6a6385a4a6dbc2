@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqblbP-M",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T20:33:13Z",
+      "side": 1,
+      "message": "Same photo vs. image doubt. I know image describes it better, but I prefer consistency.",
+      "revId": "f895908bb576fecd33025305ae6a6385a4a6dbc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqVlxw3U",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T20:33:13Z",
+      "side": 1,
+      "message": "That\u0027s the problem with onevar, it looks like data is an argument of mw.msg().",
+      "revId": "f895908bb576fecd33025305ae6a6385a4a6dbc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqRlrS4g",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T20:33:13Z",
+      "side": 1,
+      "message": "Please, move all of this to the template. Keep the code as short and simple as possible and do not mix the UI logic with content. If we really want to hide this message until the image is loaded (but do we?) it can be done by manipulating CSS classes.\n\nAlso, href is a mandatory attribute of \u003ca\u003e (the mouse cursor is wrong without it).",
+      "revId": "f895908bb576fecd33025305ae6a6385a4a6dbc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
