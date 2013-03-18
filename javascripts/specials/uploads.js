@@ -164,7 +164,7 @@ m = ( function() {
 					userGallery.addPhoto( image, true );
 					if ( $counter[ 0 ] ) {
 						newCount = parseInt( $counter.text(), 10 ) + 1;
-						$counter.parent().text( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) );
+						$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) );
 					}
 				} );
 		}
