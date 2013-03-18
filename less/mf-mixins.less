@@ -81,3 +81,16 @@
 	-webkit-transform: @transform;
 	transform: @transform;
 }
+
+.transition( @property: all, @duration: .2s, @timingFunction: ease ) {
+	// avoid Webkit bugs
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: translate3d(0,0,0);
+
+	-webkit-transition-property: ~`"@{property}" === "transform" ? "-webkit-@{property}" : "@{property}"`;
+	transition-property: @property;
+	-webkit-transition-duration: @duration;
+	transition-duration: @duration;
+	-webkit-transition-timing-function: @timingFunction;
+	transition-timing-function: @timingFunction;
+}

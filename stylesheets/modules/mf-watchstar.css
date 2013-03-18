@@ -20,6 +20,20 @@ a.watch-this-article.loading {
   background-image: url(../common/images/ajax-loader.gif);
   min-height: auto;
 }
+.alpha .watch-this-article {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: translate3d(0, 0, 0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.alpha .watch-this-article.watched {
+  -webkit-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
 .full-screen-search #mw-mf-searchForm a.watch-this-article {
   display: none;
 }
