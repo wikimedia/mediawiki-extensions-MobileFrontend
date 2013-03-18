@@ -175,7 +175,8 @@
 			license: mw.msg( 'mobile-frontend-photo-license' ),
 			cancelButton: mw.msg( 'mobile-frontend-photo-cancel' ),
 			submitButton: mw.msg( 'mobile-frontend-photo-submit' ),
-			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' )
+			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
+			ownerStatement: mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ) )
 		},
 
 		template: M.template.get( 'photoUploadPreview' ),
