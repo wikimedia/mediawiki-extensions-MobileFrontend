@@ -36,7 +36,7 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 }
 #footer .links li {
   display: inline-block;
-  width: 25%;
+  width: 33%;
   font-size: 0.9em;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -81,9 +81,6 @@ html[dir="rtl"] #footer .settings .left:before,
 html[dir="ltr"] #footer .settings .left:after {
   content: " | ";
   visibility: hidden;
-}
-body.beta #footer .links li {
-  width: 33%;
 }
 body #section_footer button {
   height: 22px;
