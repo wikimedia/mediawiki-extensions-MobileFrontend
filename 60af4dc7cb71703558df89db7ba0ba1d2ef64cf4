@@ -16,6 +16,41 @@
       "revId": "60af4dc7cb71703558df89db7ba0ba1d2ef64cf4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqFBYkC8",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-18T18:52:13Z",
+      "side": 1,
+      "message": "I think Aaron put in a fix for that, where very long filenames have their thumbs auto-renamed to be shorter... should double-check that. :)",
+      "parentUuid": "DqIVgKBI",
+      "revId": "60af4dc7cb71703558df89db7ba0ba1d2ef64cf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqHBdlB0",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-18T18:52:13Z",
+      "side": 1,
+      "message": "You should get jpg for photos, but screen shots or images saved from a web browser may be png or gif... check the mime type on the File object if it\u0027s available, maybe?",
+      "revId": "60af4dc7cb71703558df89db7ba0ba1d2ef64cf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
