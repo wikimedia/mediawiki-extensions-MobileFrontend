@@ -635,8 +635,8 @@ HTML;
 			unset( $returntoquery['returnto'] );
 			unset( $returntoquery['returntoquery'] );
 		}
+		$query[ 'returnto' ] = $this->getTitle()->getPrefixedText();
 		if ( $this->getUser()->isLoggedIn() ) {
-			$query[ 'returnto' ] = $this->getTitle()->getPrefixedText();
 			if ( !empty( $returntoquery ) ) {
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
