@@ -34,6 +34,24 @@
       "revId": "a0c7074d516316cce01636b0602202f71364a0e9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqdzDgQg",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-18T22:02:18Z",
+      "side": 1,
+      "message": "That\u0027s fine by me, I won\u0027t -1 for this. :)",
+      "parentUuid": "DqXxrVSA",
+      "revId": "a0c7074d516316cce01636b0602202f71364a0e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
