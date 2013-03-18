@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqRmqa3M",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T21:00:59Z",
+      "side": 1,
+      "message": "We need to add fail() callback here to log errors.",
+      "revId": "1830176598f14801d107be36741f42fdd52a21fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqTmnL6w",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T21:00:59Z",
+      "side": 1,
+      "message": "This is no longer needed?",
+      "revId": "1830176598f14801d107be36741f42fdd52a21fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqbmzP.g",
+        "filename": "javascripts/modules/mf-watchstar.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-18T21:00:59Z",
+      "side": 1,
+      "message": "This should be in fail() callback too I guess.",
+      "revId": "1830176598f14801d107be36741f42fdd52a21fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
