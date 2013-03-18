@@ -196,10 +196,10 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php
 		// @todo: make license icon and text dynamic
 		?>
-	<h2 class="section_heading" id="section_footer">
+	<h2 id="section_footer">
 		<?php $this->html( 'license' ) ?>
 	</h2>
-	<div class="content_block" id="content_footer">
+	<div id="content_footer">
 		<ul class="settings">
 			<li>
 				<span class="left separator"><a id="mw-mf-display-toggle" href="<?php $this->text( 'viewNormalSiteURL' ) ?>"><?php
