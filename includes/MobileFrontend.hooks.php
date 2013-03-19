@@ -196,7 +196,7 @@ class MobileFrontendHooks {
 				'javascripts/modules/mf-watchstar.js', 'tests/js/test_mf-watchstar.js',
 				'javascripts/modules/mf-last-modified.js', 'tests/js/test_mf-last-modified.js',
 
-				'javascripts/specials/donateimage.js', 'tests/js/specials/donateimage.js',
+				'javascripts/specials/uploads.js', 'tests/js/specials/uploads.js',
 				),
 				'dependencies' => array( ),
 				'localBasePath' => dirname( dirname( __FILE__ ) ),

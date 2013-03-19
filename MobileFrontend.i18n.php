@@ -170,12 +170,11 @@ $messages['en'] = array (
 	// image donation
 	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Donate an image',
-	'mobile-frontend-donate-image-title' => 'Donate an image',
+	'mobile-frontend-donate-image-title' => 'Uploads',
 	'mobile-frontend-donate-image-summary' => 'Photos bring pages on {{SITENAME}} to life.
 There are many pages which have no photos due to a severe lack of freely licensed photos.
 Help bring these pages to life by donating your images that you are willing to give away and could be of use to the wider {{SITENAME}} editing community.',
 	'mobile-frontend-donate-image-heading' => 'Your recent contributions',
-	'mobile-frontend-donate-image-page-title' => 'Upload',
 	'mobile-frontend-donate-image-anon' => 'A [[Special:UserLogin|user account]] is required to view the uploads page',
 	'mobile-frontend-listed-image-no-description' => 'No description',
 	'mobile-frontend-donate-photo-upload-success' => 'Success! Your image can now be used on {{SITENAME}}!',
@@ -509,14 +508,14 @@ See also:
 	'mobile-frontend-nearby-noresults' => 'Message shown when nothing is nearby',
 	'mobile-frontend-nearby-refresh' => 'Text of toast notification message shown when user moved and the list can be refreshed.',
 	'mobile-frontend-nearby-error' => 'Text of generic error message when querying geodata api',
-	'mobile-frontend-donate-image-login' => 'Title for [[Special:UserLogin]] when being redirected to Special:DonateImage',
-	'mobile-frontend-photo-upload-generic' => 'Label on donate interface on Special:DonateImage.
+	'mobile-frontend-donate-image-login' => 'Title for [[Special:UserLogin]] when being redirected to Special:Uploads',
+	'mobile-frontend-photo-upload-generic' => 'Label on donate interface on Special:Uploads.
 {{Identical|Donate an image}}',
-	'mobile-frontend-donate-image-title' => 'Title for Special:DonateImage.
+	'mobile-frontend-donate-image-title' => 'Title for Special:Uploads.
 {{Identical|Donate an image}}',
 	'mobile-frontend-donate-image-summary' => 'Explanation of purpose of page and importance of participation.',
 	'mobile-frontend-donate-image-heading' => 'heading for a list of recent contributions',
-	'mobile-frontend-donate-image-page-title' => 'Heading for the Special:DonateImage page.
+	'mobile-frontend-donate-image-page-title' => 'Heading for the Special:Uploads page.
 {{Identical|Upload}}',
 	'mobile-frontend-donate-image-anon' => 'Message shown to user who visits the donate image page without a user account',
 	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',

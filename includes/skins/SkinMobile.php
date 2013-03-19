@@ -108,7 +108,7 @@ class SkinMobile extends SkinMobileBase {
 		$ctx = MobileContext::singleton();
 		$returnToTitle = $title->getPrefixedText();
 
-		$donateTitle = SpecialPage::getTitleFor( 'DonateImage' );
+		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
 		if ( $this->getUser()->isLoggedIn() ) {
 			$donateUrl = $donateTitle->getLocalUrl();
 		} else {

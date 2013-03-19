@@ -1,9 +1,9 @@
 <?php
 
-class SpecialDonateImage extends UnlistedSpecialPage {
+class SpecialUploads extends UnlistedSpecialPage {
 
 	public function __construct() {
-		parent::__construct( 'DonateImage' );
+		parent::__construct( 'Uploads' );
 	}
 
 	public function execute( $par = '' ) {
