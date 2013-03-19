@@ -483,7 +483,6 @@ See also:
 	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non javascript users',
 	'mobile-frontend-settings-site-description' => 'Shown on Special:MobileOptions
 *$1 - the number of other language versions for this wiki',
-	'mobile-frontend-main-menu-contact' => 'Contact link text in main menu',
 	'mobile-frontend-main-menu-account-create' => 'Account creation link in main menu.
 {{Identical|Create account}}',
 	'mobile-frontend-page-menu-contents' => 'table of contents link text in secondary menu.
@@ -496,7 +495,6 @@ See also:
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
 	'mobile-frontend-ajax-page-loading' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript',
-	'mobile-frontend-photo-ownership' => 'A statement saying the user created the image where $1 is the username',
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved',
 	'mobile-frontend-ajax-page-error' => 'Text that accompanies an ajax loader when you dynamically load an article via javascript and it fails',
 	'mobile-frontend-nearby-title' => 'Title of Special:Nearby.
@@ -512,11 +510,9 @@ See also:
 	'mobile-frontend-photo-upload-generic' => 'Label on donate interface on Special:Uploads.
 {{Identical|Donate an image}}',
 	'mobile-frontend-donate-image-title' => 'Title for Special:Uploads.
-{{Identical|Donate an image}}',
+{{Identical|Upload}}',
 	'mobile-frontend-donate-image-summary' => 'Explanation of purpose of page and importance of participation.',
 	'mobile-frontend-donate-image-heading' => 'heading for a list of recent contributions',
-	'mobile-frontend-donate-image-page-title' => 'Heading for the Special:Uploads page.
-{{Identical|Upload}}',
 	'mobile-frontend-donate-image-anon' => 'Message shown to user who visits the donate image page without a user account',
 	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
 	'mobile-frontend-donate-photo-upload-success' => 'On upload page - notification shown after a successful upload',
@@ -573,6 +569,7 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-upload-comment' => 'Comment associated with the upload of a photo',
 	'mobile-frontend-photo-caption-placeholder' => 'Placeholder text prompting user to add a mandatory caption to a photo',
 	'mobile-frontend-image-loading' => 'Text that displays while an image is loading',
+	'mobile-frontend-photo-ownership' => 'A statement saying the user created the image where $1 is the username',
 	'mobile-frontend-image-uploading-wait' => 'Text that displays whilst an image is being uploaded',
 	'mobile-frontend-image-uploading-long' => 'Text that displays whilst an image is taking long to upload',
 	'mobile-frontend-image-uploading-cancel' => 'Text saying that user can cancel the image upload. Word "cancel" should be a link.',
@@ -876,7 +873,6 @@ $messages['ar'] = array(
 	'mobile-frontend-main-menu-upload' => 'المرفوعات',
 	'mobile-frontend-main-menu-settings-heading' => 'إعدادات موقع الجوال',
 	'mobile-frontend-settings-site-header' => 'لغات {{SITENAME}}',
-	'mobile-frontend-main-menu-contact' => 'اتصال',
 	'mobile-frontend-main-menu-account-create' => 'أنشئ حسابا',
 	'mobile-frontend-page-menu-contents' => 'محتويات',
 	'mobile-frontend-page-menu-history' => 'التاريخ',
@@ -892,9 +888,8 @@ $messages['ar'] = array(
 	'mobile-frontend-nearby-lookup-error' => 'لم نتمكن من تحديد موقعك. إعادة المحاولة...',
 	'mobile-frontend-nearby-noresults' => 'لا وجود لأية مقالات عن أماكن حولك. لماذا لا تكتب واحدة؟',
 	'mobile-frontend-photo-upload-generic' => 'تبرع بصورة',
-	'mobile-frontend-donate-image-title' => 'تبرع بصورة',
+	'mobile-frontend-donate-image-title' => 'تبرع بصورة', # Fuzzy
 	'mobile-frontend-donate-image-heading' => 'مساهماتك الأخيرة',
-	'mobile-frontend-donate-image-page-title' => 'ارفع',
 	'mobile-frontend-listed-image-no-description' => 'لا يوجد وصف',
 	'mobile-frontend-donate-photo-upload-success' => 'نجحت! يمكن الآن أن تُشَاهد صورتك على {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'نجحت! شكرا على مساهمتك الأولى!',
@@ -2410,7 +2405,6 @@ $messages['cs'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Nastavení mobilní verze',
 	'mobile-frontend-settings-site-header' => 'Jazyky {{grammar:2sg|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} existuje v $1 {{PLURAL:$1|jazyce|jazycích}}. Níže jsou uvedeny všechny dostupné verze',
-	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-main-menu-account-create' => 'Vytvořit účet',
 	'mobile-frontend-page-menu-contents' => 'obsah',
 	'mobile-frontend-page-menu-history' => 'Historie',
@@ -2429,7 +2423,7 @@ $messages['cs'] = array(
 	'mobile-frontend-nearby-error' => 'Při hledání blízkých stránek došlo k neočekávané chybě',
 	'mobile-frontend-donate-image-login' => 'Abyste mohli vidět své soubory, musíte se přihlásit.',
 	'mobile-frontend-photo-upload-generic' => 'Darujte obrázek',
-	'mobile-frontend-donate-image-title' => 'Darujte obrázek',
+	'mobile-frontend-donate-image-title' => 'Darujte obrázek', # Fuzzy
 	'mobile-frontend-listed-image-no-description' => 'Bez popisu',
 	'mobile-frontend-watchlist-add' => 'Stránka $1 přidána mezi sledované',
 	'mobile-frontend-watchlist-removed' => 'Stránka $1 odebrána ze sledovaných',
@@ -2712,7 +2706,6 @@ $messages['da'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Indstillinger for mobilside',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} sprog',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} er tilgængelig på $1 {{PLURAL:$1|sprog}}. Alle tilgængelige versioner vises nedenfor',
-	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-main-menu-account-create' => 'Opret konto',
 	'mobile-frontend-page-menu-contents' => 'indhold',
 	'mobile-frontend-page-menu-history' => 'Historik',
@@ -2726,17 +2719,17 @@ $messages['da'] = array(
 	'mobile-frontend-nearby-requirements' => 'Denne side kræver JavaScript og en browser der kan finde din placering.',
 	'mobile-frontend-nearby-distance-report' => '$1km fra din aktuelle placering',
 	'mobile-frontend-nearby-lookup-error' => 'Kunne ikke finde dig. Prøver igen...',
-	'mobile-frontend-nearby-noresults' => 'Du er midt i ingenting og vi kunne ikke finde nogen emner. Hvorfor ikke skrive en?',
+	'mobile-frontend-nearby-noresults' => 'Du er midt i ingenting og vi kunne ikke finde nogen emner. Hvorfor ikke skrive et?',
 	'mobile-frontend-nearby-refresh' => 'Vi fandt en mere nøjagtig placering for dig. Klik her for at opdatere listen over nærliggende sider',
 	'mobile-frontend-nearby-error' => 'Der opstod en uventet fejl mens der blev forsøgt at finde sider i nærheden',
-	'mobile-frontend-donate-image-login' => 'Du skal være logget for at se dine uploads.',
+	'mobile-frontend-donate-image-login' => 'Du skal være logget på for at se dine uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Doner et billede',
-	'mobile-frontend-donate-image-title' => 'Doner et billede',
+	'mobile-frontend-donate-image-title' => 'Doner et billede', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'Fotos sætter liv på siden {{SITENAME}}.
 Der er mange sider, som ingen fotos har på grund af en alvorlig mangel på frit licenserede billeder.
 Hjælp med at bringe disse sider til live, ved at donere de billeder du er villig til at give væk, og som kunne være til nytte for det bredere {{SITENAME}} samfund.',
 	'mobile-frontend-donate-image-heading' => 'Dine seneste bidrag',
-	'mobile-frontend-donate-image-anon' => 'En [[Special: UserLogin|user konto]] er påkrævet for at få vist uploadsiden', # Fuzzy
+	'mobile-frontend-donate-image-anon' => 'En [[Special:UserLogin|brugerkonto]] er påkrævet for at få vist uploadsiden',
 	'mobile-frontend-listed-image-no-description' => 'Ingen beskrivelse',
 	'mobile-frontend-donate-photo-upload-success' => 'Succes! Dit billede kan nu bruges på {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Succes! Tak for dit første bidrag!',
@@ -2751,8 +2744,8 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'mobile-frontend-watchlist-a-z' => 'Alle',
 	'mobile-frontend-watchlist-feed' => 'Ændrede',
 	'mobile-frontend-watchlist-a-z-empty' => 'Du overvåger i øjeblikket ikke nogen sider',
-	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik på stjernen  øverst på siden',
-	'mobile-frontend-watchlist-a-z-empty-howto' => 'Se en side du finder interessant ved at klikke på stjerneikonet i toppen af skærmen. Dette vil tillade at du kan bogmærke interessante sider og se, når de bliver ændret.',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik på stjernen øverst på siden',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Overvåg en side du finder interessant ved at klikke på stjerneikonet i toppen af skærmen. Dette vil gøre at du kan sætte bogmærke ved interessante sider, og se når de bliver ændret.',
 	'mobile-frontend-watchlist-feed-empty' => 'Der er ingen sider med seneste ændringer',
 	'mobile-frontend-watchlist-back-home' => 'Hjem',
 	'mobile-frontend-changeslist-ip' => 'Anonym bruger',
@@ -2763,7 +2756,7 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'mobile-frontend-watchlist-filter-other' => 'Øvrige',
 	'mobile-frontend-watchlist-modified' => 'Ændret $1',
 	'mobile-frontend-diffview-404-title' => 'Dårlig version',
-	'mobile-frontend-diffview-404-desc' => "Id'et for den ønskede revision findes ikke",
+	'mobile-frontend-diffview-404-desc' => 'Versionen med det ønskede id findes ikke',
 	'mobile-frontend-diffview-title' => 'Ændringer',
 	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|én redigering|$1 redigeringer}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonym bruger',
@@ -2772,21 +2765,22 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'mobile-frontend-diffview-explained' => 'Følgende linjer blev tilføjet (+) og fjernet (-):',
 	'mobile-frontend-table' => 'Tabel $1',
 	'mobile-frontend-saving-exit-page' => 'Dit bidrag bliver stadig gemt. Hvis du afslutter går dit bidrag tabt. Er du sikker på, du vil afslutte?',
-	'mobile-frontend-photo-upload' => 'Tilføj det første fotografi til denne side', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Tilføj et billede til denne side',
 	'mobile-frontend-photo-article-edit-comment' => 'Tilføjet foto til brug på siden',
-	'mobile-frontend-photo-article-donate-comment' => 'Giv billede fra mobil',
+	'mobile-frontend-photo-article-donate-comment' => 'Doner billede fra mobil',
 	'mobile-frontend-photo-upload-comment' => 'Tilføjet foto til siden',
-	'mobile-frontend-photo-caption-placeholder' => 'Tilføj en billedtekst til dette billede', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Tilføj en beskrivelse (påkrævet)',
 	'mobile-frontend-image-loading' => 'Indlæser billede',
-	'mobile-frontend-image-uploading-wait' => 'Uploader billede', # Fuzzy
+	'mobile-frontend-photo-ownership' => 'Jeg, $1, oprettede dette billede.',
+	'mobile-frontend-image-uploading-wait' => 'Uploader billede. Vent venligst.',
 	'mobile-frontend-image-uploading-long' => 'Billedet er ved at blive uploadet! Tak for din tålmodighed.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Afbryd</a>, hvis det tager for lang tid.',
-	'mobile-frontend-photo-upload-error' => 'Der opstod en fejl, mens billedet uploadede. Prøv et andet billede.', # Fuzzy
+	'mobile-frontend-photo-upload-error' => 'Fejl, prøv igen.',
 	'mobile-frontend-photo-upload-success-article' => 'Succes! Dit billede er nu live på denne side.',
-	'mobile-frontend-photo-license' => 'Bemærk: Alle billeder, du udgiver vil blive offentliggjort under en [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 licens]', # Fuzzy
+	'mobile-frontend-photo-license' => 'Ved at trykke på "Submit" accepterer du [//wikimediafoundation.org/wiki/Terms_of_use vilkår for anvendelse] og accepterer at alle billeder, du udgiver vil blive offentliggjort under en [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 licens]',
 	'mobile-frontend-photo-submit' => 'Send',
 	'mobile-frontend-photo-cancel' => 'Afbryd',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 upload |$1 uploads}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
 	'tag-mobile_edit' => 'Mobilredigering',
 	'tag-mobile_edit-description' => 'Redigering udført fra mobilsiden',
@@ -2921,7 +2915,6 @@ $messages['de'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Einstellungen zur mobilen Ansicht',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Sprachen',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} steht in {{PLURAL:$1|einer Sprache|$1 Sprachen}} zur Verfügung. Alle verfügbaren Sprachversionen sind unten aufgeführt.',
-	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-main-menu-account-create' => 'Benutzerkonto erstellen',
 	'mobile-frontend-page-menu-contents' => 'Inhalte',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
@@ -2941,12 +2934,11 @@ $messages['de'] = array(
 	'mobile-frontend-nearby-error' => 'Beim Auffinden von Seiten in der Nähe ist ein unerwarteter Fehler aufgetreten.',
 	'mobile-frontend-donate-image-login' => 'Du musst angemeldet sein, um deine hochgeladenen Dateien anzusehen.',
 	'mobile-frontend-photo-upload-generic' => 'Ein Bild spenden',
-	'mobile-frontend-donate-image-title' => 'Ein Bild spenden',
+	'mobile-frontend-donate-image-title' => 'Hochgeladene Dateien',
 	'mobile-frontend-donate-image-summary' => 'Fotos bringen die Seiten von {{SITENAME}} zum Leben.
 Es gibt viele Seiten, die durch den Mangel an frei lizenzierten Fotos unbebildert sind.
 Hilf mit, Leben in diese Seiten zu bringen, indem du Bilder spendest, die von der großen {{SITENAME}}-Gemeinschaft verwendet werden können.',
 	'mobile-frontend-donate-image-heading' => 'Deine letzten Beiträge',
-	'mobile-frontend-donate-image-page-title' => 'Hochladen',
 	'mobile-frontend-donate-image-anon' => 'Um die hochgeladenen Dateien anzusehen, wird ein [[Special:UserLogin|Benutzerkonto]] benötigt',
 	'mobile-frontend-listed-image-no-description' => 'Keine Beschreibung',
 	'mobile-frontend-donate-photo-upload-success' => 'Erfolgreich! Dein Bild kann jetzt auf {{SITENAME}} verwendet werden!',
@@ -2989,6 +2981,7 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du Bilder spendest, die von de
 	'mobile-frontend-photo-upload-comment' => 'Foto zur Seite hinzugefügt',
 	'mobile-frontend-photo-caption-placeholder' => 'Füge eine Beschreibung hinzu (erforderlich)',
 	'mobile-frontend-image-loading' => 'Lade Bild',
+	'mobile-frontend-photo-ownership' => 'Ich, $1, habe dieses Bild erstellt.',
 	'mobile-frontend-image-uploading-wait' => 'Lade Bild hoch. Bitte warten.',
 	'mobile-frontend-image-uploading-long' => 'Bild wird hochgeladen! Danke für deine Geduld.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Brich ab</a>, falls es zu lange dauert.',
@@ -4553,7 +4546,6 @@ $messages['fr'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Paramètres pour site mobile',
 	'mobile-frontend-settings-site-header' => 'Langues de {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} est disponible en $1 {{PLURAL:$1|langue|langues}}. Toutes les versions disponibles sont listées ci-dessous',
-	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-main-menu-account-create' => 'Créer un compte',
 	'mobile-frontend-page-menu-contents' => 'contenus',
 	'mobile-frontend-page-menu-history' => 'Historique',
@@ -4572,11 +4564,10 @@ $messages['fr'] = array(
 	'mobile-frontend-nearby-error' => 'Une erreur inattendue s’est produite lors de la tentative de recherche de pages à proximité',
 	'mobile-frontend-donate-image-login' => 'Vous devez être connecté pour voir vos téléchargements.',
 	'mobile-frontend-photo-upload-generic' => 'Donner une image',
-	'mobile-frontend-donate-image-title' => 'Donner une image',
+	'mobile-frontend-donate-image-title' => 'Téléchargements',
 	'mobile-frontend-donate-image-summary' => "Les photos font vivre les pages sur {{SITENAME}}.
 Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important de photos libres de droits. Aidez à faire vivre ces pages en donnant vos photos dont vous voulez vous débarrasser et qui pourraient être en aide à la large communauté des éditeurs de {{SITENAME}}.",
 	'mobile-frontend-donate-image-heading' => 'Vos dernières contributions',
-	'mobile-frontend-donate-image-page-title' => 'Télécharger',
 	'mobile-frontend-donate-image-anon' => 'Un [[Special:UserLogin|compte utilisateur]] est nécessaire pour voir la page des téléchargements',
 	'mobile-frontend-listed-image-no-description' => 'Aucune description',
 	'mobile-frontend-donate-photo-upload-success' => 'Bravo! Votre image peut maintenant être utilisée sur {{SITENAME}}!',
@@ -4619,6 +4610,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-photo-upload-comment' => 'Photo ajoutée à la page',
 	'mobile-frontend-photo-caption-placeholder' => 'Ajouter une description (obligatoire)',
 	'mobile-frontend-image-loading' => "Chargement de l'image",
+	'mobile-frontend-photo-ownership' => 'Moi, $1, ai créé cette image.',
 	'mobile-frontend-image-uploading-wait' => "Téléchargement de l'image, veuillez patienter.",
 	'mobile-frontend-image-uploading-long' => 'L’image est en cours de téléchargement! Merci pour votre patience.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Annuler</a> si cela dure trop longtemps.',
@@ -4627,7 +4619,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-photo-license' => 'En cliquant sur "Soumettre", vous acceptez nos [//wikimediafoundation.org/wiki/Terms_of_use conditions d’utilisation] et la mise à disposition de votre photo sous la [//creativecommons.org/licenses/by-sa/3.0/ licence Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Soumettre',
 	'mobile-frontend-photo-cancel' => 'Annuler',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 téléchargement|$1 téléchargements}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> téléchargement|<span>$1</span> téléchargements}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ téléchargements',
 	'tag-mobile_edit' => 'Modification par mobile',
 	'tag-mobile_edit-description' => 'Modification effectuée depuis la version mobile',
@@ -5144,7 +5136,6 @@ $messages['gl'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Configuracións da versión móbil do sitio',
 	'mobile-frontend-settings-site-header' => 'Lingua de {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} está dispoñible en $1 {{PLURAL:$1|lingua|linguas}}. Todas as versións dispoñibles aparecen a continuación',
-	'mobile-frontend-main-menu-contact' => 'Contacto',
 	'mobile-frontend-main-menu-account-create' => 'Crear unha conta',
 	'mobile-frontend-page-menu-contents' => 'contidos',
 	'mobile-frontend-page-menu-history' => 'Historial',
@@ -5163,12 +5154,11 @@ $messages['gl'] = array(
 	'mobile-frontend-nearby-error' => 'Houbo un erro inesperado ao intentar atopar páxinas próximas',
 	'mobile-frontend-donate-image-login' => 'Debe acceder ao sistema para ollar as súas cargas.',
 	'mobile-frontend-photo-upload-generic' => 'Doar unha imaxe',
-	'mobile-frontend-donate-image-title' => 'Doar unha imaxe',
+	'mobile-frontend-donate-image-title' => 'Doar unha imaxe', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'As fotografías dan vida ás páxinas de {{SITENAME}}.
 Hai moitas páxinas que non teñen imaxes debido a unha enorme falta de fotografías con licenzas libres.
 Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de utilidade para a gran comunidade de editores de {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'As súas achegas recentes',
-	'mobile-frontend-donate-image-page-title' => 'Cargar',
 	'mobile-frontend-donate-image-anon' => 'Cómpre ter unha [[Special:UserLogin|conta de usuario]] para acceder á páxina de cargas',
 	'mobile-frontend-listed-image-no-description' => 'Sen descrición',
 	'mobile-frontend-donate-photo-upload-success' => 'Correcto! Pode usar a súa imaxe en {{SITENAME}}!',
@@ -5219,7 +5209,7 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-photo-license' => 'Ao premer no botón "Enviar", acepta os nosos [//wikimediafoundation.org/wiki/Terms_of_Use/gl termos de uso] e acepta liberar a súa fotografía baixo a [//creativecommons.org/licenses/by-sa/3.0/deed.gl licenza Creative Commons recoñecemento compartir igual 3.0].',
 	'mobile-frontend-photo-submit' => 'Enviar',
 	'mobile-frontend-photo-cancel' => 'Cancelar',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 carga|$1 cargas}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> carga|<span>$1</span> cargas}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '+500 cargas',
 	'tag-mobile_edit' => 'Edición desde un dispositivo móbil',
 	'tag-mobile_edit-description' => 'Edición feita desde o sitio móbil',
@@ -5570,7 +5560,6 @@ $messages['he'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'הגדרות האתר למכשירים ניידים',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} – שפות',
 	'mobile-frontend-settings-site-description' => 'אתר {{SITENAME}} זמין {{PLURAL:$1|רק בשפה אחת|ב־$1 שפות}}. כל השפות הזמינות רשומות להלן',
-	'mobile-frontend-main-menu-contact' => 'יצירת קשר',
 	'mobile-frontend-main-menu-account-create' => 'יצירת חשבון',
 	'mobile-frontend-page-menu-contents' => 'תוכן עניינים',
 	'mobile-frontend-page-menu-history' => 'היסטוריה',
@@ -5589,10 +5578,9 @@ $messages['he'] = array(
 	'mobile-frontend-nearby-error' => 'אירעה שגיאה בלתיֶ־צפויה בזמן ניסיון למצוא דפים בסביבה',
 	'mobile-frontend-donate-image-login' => 'יש להיכנס לחשבון כדי לראות את ההעלאות שלך.',
 	'mobile-frontend-photo-upload-generic' => 'תרומת תמונה',
-	'mobile-frontend-donate-image-title' => 'תרומת תמונה',
+	'mobile-frontend-donate-image-title' => 'תרומת תמונה', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'תמונות מחיות את {{SITENAME}}. יש הרבה דפים שאין בהם תמונות בגלל מחסור בתמונות חופשיות. עזרו להחיות את הדפים האלה באמצעות תרומה של תמונות שאתם מוכנים לתרום ושיכולות להיות שימושיות לקהילת {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'התרומות האחרונות שלך',
-	'mobile-frontend-donate-image-page-title' => 'העלאה',
 	'mobile-frontend-donate-image-anon' => 'דרוש [[Special:UserLogin|חשבון משתמש]] כדי לראות את דף ההעלאות',
 	'mobile-frontend-listed-image-no-description' => 'אין תיאור',
 	'mobile-frontend-donate-photo-upload-success' => 'יש! עכשיו אפשר להשתמש בתמונה שלך ב{{GRAMMAR:תחילית|{{SITENAME}}}}',
@@ -5992,6 +5980,13 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-username-placeholder' => 'Wužiwarske mjeno',
 	'mobile-frontend-password-placeholder' => 'Hesło',
 	'mobile-frontend-login' => 'Přizjewić',
+	'mobile-frontend-last-modified-date' => 'Posledni raz $1 $2 změnjeny',
+	'mobile-frontend-last-modified-seconds' => 'Před {{PLURAL:$1|$1 sekundu|$1 sekundomaj|$1 sekundami}} posledni raz změnjeny',
+	'mobile-frontend-last-modified-minutes' => 'Před {{PLURAL:$1|$1 mjeńšinu|$1 mjeńšinomaj|$1 mjeńšinami}} posledni raz změnjeny',
+	'mobile-frontend-last-modified-hours' => 'Před {{PLURAL:$1|$1 hodźinu|$1 hodźinomaj|$1 hodźinami}} posledni raz změnjeny',
+	'mobile-frontend-last-modified-days' => 'Před {{PLURAL:$1|$1 dnjom|$1 dnjomaj|$1 dnjemi}} posledni raz změnjeny',
+	'mobile-frontend-last-modified-months' => 'Před {{PLURAL:$1|$1 měsacom|$1 měsacomaj|$1 měsacami}} posledni raz změnjeny',
+	'mobile-frontend-last-modified-years' => 'Před {{PLURAL:$1|$1 lětom|$1 lětomaj|$1 lětami}} posledni raz změnjeny',
 	'mobile-frontend-account-create-submit' => 'Registrować',
 	'mobile-frontend-password-confirm-placeholder' => 'Hesło wobkrućić',
 	'mobile-frontend-account-create-email-placeholder' => 'E-mejlowa adresa (opcionalny)',
@@ -6022,7 +6017,6 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja',
 	'mobile-frontend-settings-site-header' => 'Rěče {{GRAMMAR:genitiw|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} steji w $1 {{PLURAL:$1|rěči|rěči|rěčach|rěčach}} k dispoziciji. Wšě k dispoziciji stejace wersije su deleka nalistowane:',
-	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-main-menu-account-create' => 'Konto załožić',
 	'mobile-frontend-page-menu-contents' => 'wobsah',
 	'mobile-frontend-page-menu-history' => 'Stawizny',
@@ -6032,13 +6026,17 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-page-saving' => '$1 so składuje',
 	'mobile-frontend-ajax-page-error' => 'Hopla! Něšto je so nimokuliło. Prošu spytaj wokno swojeho wobhladowaka aktualizować.',
 	'mobile-frontend-nearby-title' => 'W bliskosći',
+	'mobile-frontend-nearby-loading' => 'Temy začitać, kotrež su w bliskosći twojeho městna',
+	'mobile-frontend-nearby-requirements' => 'Tuta strona wužada sej JavaScript a wobhladowak, kotryž móže stejnišćo zwěsćić',
 	'mobile-frontend-nearby-distance-report' => '$1 km wot twojeho aktualneho stejnišća',
 	'mobile-frontend-nearby-lookup-error' => 'Njeje móžno će namakać. Spytaj hišće raz.',
+	'mobile-frontend-nearby-noresults' => 'Sy wosrjedź ničejeho kraja a njemóžachmy  žane temy namakać. Čehodla tajku njepisaš?',
+	'mobile-frontend-nearby-refresh' => 'Smy dokładniše stejnišćo za tebje namakali. Klikń tu, zo by lisćinu ze stronami w bliskosći aktualizował',
+	'mobile-frontend-nearby-error' => 'Při pytanju stronow w twojej bliskosći je zmylk wustupił',
 	'mobile-frontend-donate-image-login' => 'Dyrbiš přizjewjeny być, zo by swoje nahraća widźał.',
 	'mobile-frontend-photo-upload-generic' => 'Wobraz darić',
-	'mobile-frontend-donate-image-title' => 'Wobraz darić',
+	'mobile-frontend-donate-image-title' => 'Nahraća',
 	'mobile-frontend-donate-image-heading' => 'Twoje najnowše přinoški',
-	'mobile-frontend-donate-image-page-title' => 'Nahrać',
 	'mobile-frontend-donate-image-anon' => 'Trjebaš [[Special:UserLogin|wužiwarske konto]], zo by sej stronu nahraćow wobhladał',
 	'mobile-frontend-listed-image-no-description' => 'Žane wopisanje',
 	'mobile-frontend-donate-photo-upload-success' => 'Wuspěch! Twój wobraz hodźi so nětko na {{GRAMMAR:lokatiw|{{SITENAME}}}} wužiwać!',
@@ -6080,6 +6078,7 @@ Prošu spytajće pozdźišo hišće raz.',
 	'mobile-frontend-photo-upload-comment' => 'Foto stronje přidate',
 	'mobile-frontend-photo-caption-placeholder' => 'Wopisanje přidać (trěbne)',
 	'mobile-frontend-image-loading' => 'Wobraz so začituje',
+	'mobile-frontend-photo-ownership' => 'Ja, $1, sym tutón wobraz wutworił.',
 	'mobile-frontend-image-uploading-wait' => 'Wobraz so nahrawa, prošu čakaj.',
 	'mobile-frontend-image-uploading-long' => 'Wobraz so hišće nahrawa! Dźakujemy so za twoju sćerpliwosć.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Přetorhń</a>, jeli to předołho traje.',
@@ -6816,7 +6815,6 @@ $messages['it'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Impostazioni del sito per cellulari',
 	'mobile-frontend-settings-site-header' => 'Lingue {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} è disponibile in $1 {{PLURAL:$1|lingua|lingue}}. Tutte le versioni disponibili sono elencate di seguito',
-	'mobile-frontend-main-menu-contact' => 'Contatto',
 	'mobile-frontend-main-menu-account-create' => 'Registrati',
 	'mobile-frontend-page-menu-contents' => 'contenuti',
 	'mobile-frontend-page-menu-history' => 'Cronologia',
@@ -6835,9 +6833,8 @@ $messages['it'] = array(
 	'mobile-frontend-nearby-error' => 'Si è verificato un errore imprevisto durante il tentativo di trovare le pagine nelle tue vicinanze',
 	'mobile-frontend-donate-image-login' => "Devi aver effettuato l'accesso per vedere i file che hai caricato.",
 	'mobile-frontend-photo-upload-generic' => "Dona un'immagine",
-	'mobile-frontend-donate-image-title' => "Dona un'immagine",
+	'mobile-frontend-donate-image-title' => "Dona un'immagine", # Fuzzy
 	'mobile-frontend-donate-image-heading' => 'I tuoi contributi recenti',
-	'mobile-frontend-donate-image-page-title' => 'Carica',
 	'mobile-frontend-donate-image-anon' => "Per visualizzare la pagina di caricamento è necessario un'[[Special:UserLogin|utenza]]",
 	'mobile-frontend-listed-image-no-description' => 'Nessuna descrizione',
 	'mobile-frontend-watchlist-add' => 'Aggiunto $1 ai tuoi osservati speciali',
@@ -7010,7 +7007,6 @@ $messages['ja'] = array(
 	'mobile-frontend-main-menu-settings-heading' => '携帯機器版サイトの設定',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}の言語',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}は $1 {{PLURAL:$1|言語}}で利用できます。利用できるすべての言語版を以下に列挙します',
-	'mobile-frontend-main-menu-contact' => '連絡先',
 	'mobile-frontend-main-menu-account-create' => 'アカウント作成',
 	'mobile-frontend-page-menu-contents' => '目次',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
@@ -7025,8 +7021,8 @@ $messages['ja'] = array(
 	'mobile-frontend-nearby-distance-report' => '現在地から $1 km',
 	'mobile-frontend-nearby-error' => '付近のページを検索する際に予期しないエラーが発生しました',
 	'mobile-frontend-donate-image-login' => '自分のアップロード一覧を表示するにはログインしてください。',
+	'mobile-frontend-donate-image-title' => 'アップロード',
 	'mobile-frontend-donate-image-heading' => '最近の投稿記録',
-	'mobile-frontend-donate-image-page-title' => 'アップロード',
 	'mobile-frontend-donate-image-anon' => 'アップロードページを閲覧するには[[Special:UserLogin|利用者アカウント]]が必要です',
 	'mobile-frontend-listed-image-no-description' => '説明なし',
 	'mobile-frontend-donate-photo-upload-success' => '完了しました! 画像は{{SITENAME}}上で使用できるようになりました!',
@@ -8747,7 +8743,6 @@ $messages['mk'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Поставки на мобилната околина',
 	'mobile-frontend-settings-site-header' => 'Јазици на {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} се нуди на $1 {{PLURAL:$1|јазик|јазици}}. Сите расположиви верзии се наведени подолу',
-	'mobile-frontend-main-menu-contact' => 'Контакт',
 	'mobile-frontend-main-menu-account-create' => 'Направи сметка',
 	'mobile-frontend-page-menu-contents' => 'содржина',
 	'mobile-frontend-page-menu-history' => 'Историја',
@@ -8766,12 +8761,11 @@ $messages['mk'] = array(
 	'mobile-frontend-nearby-error' => 'Се јави неочекувана грешка при обидот да најдам страници во близина',
 	'mobile-frontend-donate-image-login' => 'Мора да сте најавени за да ги видите вашите подигања',
 	'mobile-frontend-photo-upload-generic' => 'Дарувајте слика',
-	'mobile-frontend-donate-image-title' => 'Дарувајте слика',
+	'mobile-frontend-donate-image-title' => 'Дарувајте слика', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'Сликите ги оживуваат страниците на {{SITENAME}}.
 Имаме многу страници без слики поради огромен недостиг на слободно-лиценцирани слики.
 Помогнете ни да ги оживееме страниците - дарувајте ваши слики што би биле од полза за поширокото уредништво на {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'Ваши скорешни придонеси',
-	'mobile-frontend-donate-image-page-title' => 'Подигање',
 	'mobile-frontend-donate-image-anon' => 'За да ја гледате страницата за подигања ќе ви треба [[Special:UserLogin|корисничка сметка]]',
 	'mobile-frontend-listed-image-no-description' => 'Нема опис',
 	'mobile-frontend-donate-photo-upload-success' => 'Успешно! Вашата слика сега може да се користи на {{SITENAME}}!',
@@ -8814,6 +8808,7 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-upload-comment' => 'Ставена слика во страница',
 	'mobile-frontend-photo-caption-placeholder' => 'Ставете опис (задолжително)',
 	'mobile-frontend-image-loading' => 'Ја вчитувам сликата...',
+	'mobile-frontend-photo-ownership' => 'Јас, $1 ја направив сликава.',
 	'mobile-frontend-image-uploading-wait' => 'Ја подигам сликата. Почекајте.',
 	'mobile-frontend-image-uploading-long' => 'Сликата сè уште се подига! Ви благодариме за трпението.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Откажете</a> ако ова трае предолго.',
@@ -8822,7 +8817,7 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-license' => 'Стискајќи на „Поднеси“, се согласувате на [//wikimediafoundation.org/wiki/Terms_of_use/mk Условите на употреба] и се согласувате да ја објавите сликата под лиценцата [//creativecommons.org/licenses/by-sa/3.0/deed.mk Криејтив комонс НаведиИзвор-СподелиПодИстиУслови 3.0].',
 	'mobile-frontend-photo-submit' => 'Поднеси',
 	'mobile-frontend-photo-cancel' => 'Откажи',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 подигање|$1 подигања}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> подигање|<span>$1</span> подигања}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ подигања',
 	'tag-mobile_edit' => 'Мобилно уредување',
 	'tag-mobile_edit-description' => 'Уредување извршено од мобилната варијанта на викито',
@@ -8955,7 +8950,6 @@ $messages['ml'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'മൊബൈൽ സൈറ്റ് സജ്ജീകരണങ്ങൾ',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ലഭ്യമായ ഭാഷകൾ',
 	'mobile-frontend-settings-site-description' => '{{PLURAL:$1|ഒരു ഭാഷയിൽ|$1 ഭാഷകളിൽ}} {{SITENAME}} ലഭ്യമാണ്. എല്ലാ പതിപ്പുകളും താഴെക്കൊടുത്തിരിക്കുന്നു.',
-	'mobile-frontend-main-menu-contact' => 'സമ്പർക്കം',
 	'mobile-frontend-main-menu-account-create' => 'അംഗത്വമെടുക്കുക',
 	'mobile-frontend-page-menu-contents' => 'ഉള്ളടക്കം',
 	'mobile-frontend-page-menu-history' => 'നാൾവഴി',
@@ -8974,12 +8968,11 @@ $messages['ml'] = array(
 	'mobile-frontend-nearby-error' => 'താങ്കളുടെ സമീപസ്ഥമായ താളുകൾ കണ്ടുപിടിക്കുന്നതിനിടെ ഒരപ്രതീക്ഷിത പിഴവുണ്ടായി',
 	'mobile-frontend-donate-image-login' => 'താങ്കൾ അപ്‌ലോഡ് ചെയ്തവ കാണണമെങ്കിൽ പ്രവേശിച്ചിരിക്കണം.',
 	'mobile-frontend-photo-upload-generic' => 'ഒരു ചിത്രം സംഭാവന ചെയ്യുക',
-	'mobile-frontend-donate-image-title' => 'ഒരു ചിത്രം സംഭാവന ചെയ്യുക',
+	'mobile-frontend-donate-image-title' => 'ഒരു ചിത്രം സംഭാവന ചെയ്യുക', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'ചിത്രങ്ങൾ {{SITENAME}} താളുകൾ ജീവസ്സുറ്റതാക്കുന്നു.
 സ്വതന്ത്രമായ അനുമതിയില്ലാത്ത ചിത്രങ്ങളുടെ കുറവൊന്നുകൊണ്ടുമാത്രം നിരവധി താളുകൾ ഒരൊറ്റ ചിത്രവുമില്ലാതെയുണ്ട്.
 ഈ താളുകൾക്കായി താങ്കൾക്ക് ചിത്രങ്ങൾ സംഭാവന ചെയ്യാവുന്നതാണ്, അവ വിശാലമായ {{SITENAME}} തിരുത്തൽ സമൂഹം ഫലപ്രദമായി ഉപയോഗിച്ചുകൊള്ളും.',
 	'mobile-frontend-donate-image-heading' => 'താങ്കളുടെ സമീപകാല സംഭാവനകൾ',
-	'mobile-frontend-donate-image-page-title' => 'അപ്‌ലോഡ്',
 	'mobile-frontend-donate-image-anon' => 'അപ്‌ലോഡുകളുടെ താൾ കാണാനായി ഒരു [[Special:UserLogin|ഉപയോക്തൃ അംഗത്വം]] ആവശ്യമാണ്',
 	'mobile-frontend-listed-image-no-description' => 'വിവരണമൊന്നുമില്ല',
 	'mobile-frontend-donate-photo-upload-success' => 'വിജയകരം! താങ്കളെടുത്ത ചിത്രം {{SITENAME}} സംരംഭത്തിൽ ഇനി ഉപയോഗിക്കാം!',
@@ -9616,6 +9609,7 @@ $messages['ne'] = array(
 /** Dutch (Nederlands)
  * @author Akoopal
  * @author AvatarTeam
+ * @author Konovalov
  * @author Patio
  * @author Rvlieshout
  * @author SPQRobin
@@ -9743,7 +9737,6 @@ Probeer het later nog een keer.',
 	'mobile-frontend-main-menu-settings-heading' => 'Voorkeuren mobiel',
 	'mobile-frontend-settings-site-header' => 'Talen voor {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is beschikbaar in {{PLURAL:$1|één taal|$1 talen}}. Alle beschikbare versies staan hieronder',
-	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-main-menu-account-create' => 'Registreren',
 	'mobile-frontend-page-menu-contents' => 'inhoud',
 	'mobile-frontend-page-menu-history' => 'Geschiedenis',
@@ -9762,12 +9755,11 @@ Probeer het later nog een keer.',
 	'mobile-frontend-nearby-error' => 'Er is een onverwachte fout opgetreden tijdens het zoeken naar nabijgelegen onderwerpen',
 	'mobile-frontend-donate-image-login' => 'U moet aangemeld zijn om uw uploads te bekijken.',
 	'mobile-frontend-photo-upload-generic' => 'Afbeelding uploaden',
-	'mobile-frontend-donate-image-title' => 'Afbeelding uploaden',
+	'mobile-frontend-donate-image-title' => 'Afbeelding uploaden', # Fuzzy
 	'mobile-frontend-donate-image-summary' => "Afbeeldingen brengen {{SITENAME}} tot leven.
 Er zijn veel pagina's zonder afbeeldingen vanwege een groot tekort aan afbeeldingen met een vrije licentie.
 Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt weggeven en die de {{SITENAME}}gemeenschap kan gebruiken.",
 	'mobile-frontend-donate-image-heading' => 'Uw recente bijdragen',
-	'mobile-frontend-donate-image-page-title' => 'Uploaden',
 	'mobile-frontend-donate-image-anon' => 'U moet een [[Special:UserLogin|gebruiker]] hebben om de pagina voor uploaden te bekijken',
 	'mobile-frontend-listed-image-no-description' => 'Geen beschrijving',
 	'mobile-frontend-donate-photo-upload-success' => 'Uw afbeelding kan nu gebruikt worden op {{SITENAME}}.',
@@ -9810,6 +9802,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-photo-upload-comment' => 'De afbeelding is toegevoegd aan de pagina',
 	'mobile-frontend-photo-caption-placeholder' => 'Voeg een beschrijving toe (verplicht)',
 	'mobile-frontend-image-loading' => 'Bezig met het laden van de afbeelding',
+	'mobile-frontend-photo-ownership' => 'Ik, $1 heb deze afbeelding gemaakt.',
 	'mobile-frontend-image-uploading-wait' => 'Bezig met het uploaden van de afbeelding.',
 	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Dank u wel voor uw geduld.',
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
@@ -11119,7 +11112,6 @@ $messages['ro'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Setări site mobil',
 	'mobile-frontend-settings-site-header' => 'Limbile pentru {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} este un proiect disponibil {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}. Toate versiunile disponibile sunt enumerate mai jos',
-	'mobile-frontend-main-menu-contact' => 'Contact',
 	'mobile-frontend-main-menu-account-create' => 'Creează cont',
 	'mobile-frontend-page-menu-contents' => 'cuprins',
 	'mobile-frontend-page-menu-history' => 'Istoric',
@@ -11138,12 +11130,11 @@ $messages['ro'] = array(
 	'mobile-frontend-nearby-error' => 'O eroare neașteptată a apărut în timpul căutării de pagini din apropiere',
 	'mobile-frontend-donate-image-login' => 'Trebuie să vă autentificați pentru a vă vizualiza încărcările.',
 	'mobile-frontend-photo-upload-generic' => 'Donează o imagine',
-	'mobile-frontend-donate-image-title' => 'Donează o imagine',
+	'mobile-frontend-donate-image-title' => 'Donează o imagine', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'Fotografiile dau viață proiectului {{SITENAME}}.
 Foarte multe pagini nu sunt ilustrate din cauza lipsei acute de imagini cu licență liberă.
 Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care doriți să le dați mai departe și care ar putea fi în folosul editorial al comunității de la {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'Contribuțiile dumneavoastră recente',
-	'mobile-frontend-donate-image-page-title' => 'Încărcare',
 	'mobile-frontend-donate-image-anon' => 'Un [[Special:UserLogin|cont de utilizator]] este necesar pentru a vizualiza pagina cu încărcări',
 	'mobile-frontend-listed-image-no-description' => 'Fără descriere',
 	'mobile-frontend-donate-photo-upload-success' => 'Succes! Imaginea dumneavoastră poate fi acum folosită pe {{SITENAME}}!',
@@ -11289,13 +11280,11 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-main-menu-upload' => 'Carecaminde',
 	'mobile-frontend-main-menu-settings-heading' => "'Mbostaziune d'u site mobbile",
 	'mobile-frontend-settings-site-header' => 'Lènghe de {{SITENAME}}',
-	'mobile-frontend-main-menu-contact' => 'Condatte',
 	'mobile-frontend-main-menu-account-create' => "Ccreje 'nu cunde utende",
 	'mobile-frontend-page-menu-contents' => 'condenute',
 	'mobile-frontend-page-menu-history' => 'Cunde',
 	'mobile-frontend-photo-upload-generic' => "Riale 'n'immaggine",
-	'mobile-frontend-donate-image-title' => "Riale 'n'immaggine",
-	'mobile-frontend-donate-image-page-title' => 'Careche',
+	'mobile-frontend-donate-image-title' => 'Carecaminde',
 	'mobile-frontend-watchlist-more' => 'de cchiù',
 	'mobile-frontend-watchlist-cta-button-login' => 'Tràse',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Reggistrate',
@@ -11306,6 +11295,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Vôsce',
 	'mobile-frontend-watchlist-filter-talk' => "'Ngazzamende",
 	'mobile-frontend-watchlist-filter-other' => 'Otre',
+	'mobile-frontend-diffview-404-title' => 'Revisione brutte',
 	'mobile-frontend-diffview-title' => 'Cangiaminde',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|cangiamende|cangiaminde}}',
 	'mobile-frontend-diffview-anonymous' => 'Utende anonime',
@@ -11456,11 +11446,10 @@ $messages['ru'] = array(
 	'mobile-frontend-main-menu-logout' => 'Выйти',
 	'mobile-frontend-main-menu-watchlist' => 'Список наблюдения',
 	'mobile-frontend-main-menu-settings' => 'Настройки',
-	'mobile-frontend-main-menu-upload' => 'Загрузить',
+	'mobile-frontend-main-menu-upload' => 'Загрузить', # Fuzzy
 	'mobile-frontend-main-menu-settings-heading' => 'Настройки мобильной версии сайта',
 	'mobile-frontend-settings-site-header' => 'Языки проекта «{{SITENAME}}»',
 	'mobile-frontend-settings-site-description' => 'Проект «{{SITENAME}}» доступен на $1 {{PLURAL:$1|языке|языках|языках}}. Ниже перечислены все доступные версии',
-	'mobile-frontend-main-menu-contact' => 'Контактная информация',
 	'mobile-frontend-main-menu-account-create' => 'Создать учётную запись',
 	'mobile-frontend-page-menu-contents' => 'содержание',
 	'mobile-frontend-page-menu-history' => 'История',
@@ -11477,14 +11466,13 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-noresults' => 'Вы находитесь в центре неизвестности, и нам не удалось найти никаких подходящих тем. Почему бы вам не написать что-либо?',
 	'mobile-frontend-nearby-refresh' => 'Мы определили ваше местоположение точнее. Нажмите здесь, чтобы обновить список ближайших страниц',
 	'mobile-frontend-nearby-error' => 'Произошла неожиданная ошибка при попытке найти страницы, связанные с вашим местоположением',
-	'mobile-frontend-donate-image-login' => 'Войти для просмотра ваших заливок',
+	'mobile-frontend-donate-image-login' => 'Войти для просмотра ваших заливок', # Fuzzy
 	'mobile-frontend-photo-upload-generic' => 'Пожертвовать изображение',
-	'mobile-frontend-donate-image-title' => 'Пожертвовать изображение',
+	'mobile-frontend-donate-image-title' => 'Пожертвовать изображение', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'Фотографии оживляют страницы проекта {{SITENAME}}.
 Здесь много страниц, которые не содержат иллюстраций по причине острой нехватки фотографий со свободными лицензиями.
 Помогите оживить эти страницы, пожертвовав свои изображения, которыми вы готовы поделиться для того, чтобы сообщество редакторов проекта {{SITENAME}} могло ими воспользоваться.',
 	'mobile-frontend-donate-image-heading' => 'Ваши последние правки',
-	'mobile-frontend-donate-image-page-title' => 'Загрузить',
 	'mobile-frontend-donate-image-anon' => 'Для просмотра страницы закачек требуется [[Special:UserLogin|учетная запись пользователя]]',
 	'mobile-frontend-listed-image-no-description' => 'Нет описания',
 	'mobile-frontend-donate-photo-upload-success' => 'Получилось! Ваше изображние может быть использован на сайте {{SITENAME}}!',
@@ -11533,7 +11521,7 @@ $messages['ru'] = array(
 	'mobile-frontend-photo-submit' => 'Отправить',
 	'mobile-frontend-photo-cancel' => 'Отмена',
 	'tag-mobile_edit' => 'Правка с моб. устройства',
-	'tag-mobile_edit-description' => 'Правки, сделанные через мобильнвую версию сайта',
+	'tag-mobile_edit-description' => 'Правки, сделанные через мобильную версию сайта',
 	'mobile-frontend-drawer-cancel' => 'Отмена',
 );
 
@@ -12267,6 +12255,7 @@ $messages['sq'] = array(
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Nikola Smolenski
  * @author Rancher
+ * @author Милан Јелисавчић
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -12343,9 +12332,9 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-main-menu-nearby' => 'Околина',
 	'mobile-frontend-main-menu-settings' => 'Подешавања',
 	'mobile-frontend-main-menu-settings-heading' => 'Подешавања мобилног сајта',
-	'mobile-frontend-main-menu-contact' => 'Контакт',
 	'mobile-frontend-page-menu-contents' => 'садржај',
 	'mobile-frontend-page-menu-history' => 'Историја',
+	'mobile-frontend-donate-image-title' => 'Отпремања',
 );
 
 /** Serbian (Latin script) (srpski (latinica)‎)
@@ -13396,7 +13385,6 @@ $messages['uk'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Налаштування мобільної версії сайту',
 	'mobile-frontend-settings-site-header' => 'Мови проекту {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} доступний на {{PLURAL:$1|мові|мовах}}. Всі доступні версії перелічені нижче',
-	'mobile-frontend-main-menu-contact' => 'Контакт',
 	'mobile-frontend-main-menu-account-create' => 'Створити обліковий запис',
 	'mobile-frontend-page-menu-contents' => 'зміст',
 	'mobile-frontend-page-menu-history' => 'Історія',
@@ -13415,12 +13403,11 @@ $messages['uk'] = array(
 	'mobile-frontend-nearby-error' => "Сталася неочікувана помилка при спробі знайти сторінки, пов'язані з Вашим місцеперебуванням",
 	'mobile-frontend-donate-image-login' => 'Ви повинні увійти в систему, щоб побачити свої завантаження.',
 	'mobile-frontend-photo-upload-generic' => 'Пожертвувати зображення',
-	'mobile-frontend-donate-image-title' => 'Пожертвувати зображення',
+	'mobile-frontend-donate-image-title' => 'Пожертвувати зображення', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'Фотографії роблять сторінки проекту {{SITENAME}} живими.
 Багато сторінок не мають фотографій через гостру недостачу зображень під вільними ліцензіями.
 Допоможіть оживити ці сторінки, завантаживши свої зображення, якими Ви хочете поділитись і які могтимуть використовуватись усією спільнотою дописувачів проекту {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'Ваш недавній внесок',
-	'mobile-frontend-donate-image-page-title' => 'Завантажити',
 	'mobile-frontend-donate-image-anon' => 'Для перегляду сторінки завантажень треба мати [[Special:UserLogin|обліковий запис користувача]]',
 	'mobile-frontend-listed-image-no-description' => 'Немає опису',
 	'mobile-frontend-donate-photo-upload-success' => 'Успішно! Тепер Ваше зображення можна використовувати на сайті {{SITENAME}}!',
@@ -13868,7 +13855,6 @@ $messages['vi'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Tùy chọn di động',
 	'mobile-frontend-settings-site-header' => 'Ngôn ngữ {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} có sẵn trong $1 ngôn ngữ. Tất cả các phiên bản có sẵn ở dưới:',
-	'mobile-frontend-main-menu-contact' => 'Liên lạc',
 	'mobile-frontend-main-menu-account-create' => 'Mở tài khoản',
 	'mobile-frontend-page-menu-contents' => 'mục lục',
 	'mobile-frontend-page-menu-history' => 'Lịch sử',
@@ -13887,12 +13873,11 @@ $messages['vi'] = array(
 	'mobile-frontend-nearby-error' => 'Xuất hiện lỗi bất ngờ khi tìm kiếm trang kề bên',
 	'mobile-frontend-donate-image-login' => 'Bạn phải đăng nhập để xem các tập tin bạn đã tải lên.',
 	'mobile-frontend-photo-upload-generic' => 'Đóng góp một hình ảnh',
-	'mobile-frontend-donate-image-title' => 'Đóng góp một hình ảnh',
+	'mobile-frontend-donate-image-title' => 'Đóng góp một hình ảnh', # Fuzzy
 	'mobile-frontend-donate-image-summary' => 'Các hình ảnh làm cho {{SITENAME}} thú vị hơn.
 Hiện nay rất nhiều trang thiếu hình ảnh vì không có đủ hình ảnh được phát hành theo giấy phép tự do.
 Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng góp những hình ảnh của bạn mà bạn cảm thấy có thể giúp ích cộng đồng biên tập {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'Đóng góp của bạn gần đây',
-	'mobile-frontend-donate-image-page-title' => 'Tải lên',
 	'mobile-frontend-donate-image-anon' => 'Cần có [[Special:UserLogin|tài khoản người dùng]] để xem trang tải lên.',
 	'mobile-frontend-listed-image-no-description' => 'Không miêu tả',
 	'mobile-frontend-donate-photo-upload-success' => 'Thành công! Bây giờ bạn có thể sử dụng hình ảnh của bạn trên {{SITENAME}}!',
@@ -14475,7 +14460,6 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-main-menu-settings-heading' => '手機版網頁設定',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}的語言版本',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}有$1種語言版本。下面列出所有版本',
-	'mobile-frontend-main-menu-contact' => '聯繫',
 	'mobile-frontend-main-menu-account-create' => '建立帳號',
 	'mobile-frontend-page-menu-contents' => '目錄',
 	'mobile-frontend-page-menu-history' => '歷史',
@@ -14494,12 +14478,11 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-nearby-error' => '試圖尋找附近頁面時出現錯誤',
 	'mobile-frontend-donate-image-login' => '您必須登入以查看您的上傳。',
 	'mobile-frontend-photo-upload-generic' => '捐出圖片',
-	'mobile-frontend-donate-image-title' => '捐出圖片',
+	'mobile-frontend-donate-image-title' => '上載',
 	'mobile-frontend-donate-image-summary' => '照片為{{SITENAME}}頁面添加色彩。
 因沒有自由版權的照片，很多頁面都是沒有照片的。
 捐贈您的照片，使這些頁更精彩。亦讓{{SITENAME}}編輯社群使用您的照片。',
 	'mobile-frontend-donate-image-heading' => '您最近的貢獻',
-	'mobile-frontend-donate-image-page-title' => '上傳',
 	'mobile-frontend-donate-image-anon' => '必須先註冊成[[Special:UserLogin|用戶]]，才能查看上傳頁面',
 	'mobile-frontend-listed-image-no-description' => '沒有說明',
 	'mobile-frontend-donate-photo-upload-success' => '成功！您的圖像現在可以在{{SITENAME}} 上使用！',
@@ -14542,6 +14525,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-photo-upload-comment' => '已添加照片到頁面上',
 	'mobile-frontend-photo-caption-placeholder' => '添加描述 （必填）',
 	'mobile-frontend-image-loading' => '正在載入圖片',
+	'mobile-frontend-photo-ownership' => '我$1建立此圖像。',
 	'mobile-frontend-image-uploading-wait' => '正在上傳圖片，請稍候。',
 	'mobile-frontend-image-uploading-long' => '圖像仍在上傳中！感謝您耐心等候。',
 	'mobile-frontend-image-uploading-cancel' => '若耗時過長，可<a href="#">取消</a>。',
