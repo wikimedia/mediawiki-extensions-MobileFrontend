@@ -240,7 +240,7 @@ class SkinMobile extends SkinMobileBase {
 
 		// attach styles
 		$headLinks[] = $this->resourceLoaderLink( array( 'mobile.styles' ), 'styles', $target='mobile' );
-		if ( count( $contextModules['top'] > 0 ) ) {
+		if ( count( $contextModules['top'] ) > 0 ) {
 			$headLinks[] = $this->resourceLoaderLink( $contextModules['top'], 'styles', $target='mobile' );
 		}
 		// add device specific css file - add separately to avoid cache fragmentation
