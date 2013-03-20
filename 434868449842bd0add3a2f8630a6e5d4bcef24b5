@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqdjSpNA",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-20T16:25:18Z",
+      "side": 1,
+      "message": "This will only replace the first ESC character in the string; you need to use a regex with the /g option if there might be multiples... why isn\u0027t this just in the regex on the next line?",
+      "revId": "434868449842bd0add3a2f8630a6e5d4bcef24b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
