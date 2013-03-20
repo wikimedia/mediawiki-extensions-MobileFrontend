@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqSVoWR4",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "Could we do something not to split every overlay into two template files?",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqWVOUcM",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "This method seems unnecessary. Why do we iterate over all the overlays instead of just hiding the latest one in push() just before pushing the new one?",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqeXSYdA",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "Why don\u0027t we use Overlay\u0027s hide() and show() instead of operating on $el?",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqSXJOSc",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "If we assume it\u0027s always the topmost one, then let\u0027s remove the overlay argument. It can only introduce nasty bugs (removing topmost overlay but scrolling back to the provided overlay\u0027s scrollTop).",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqUVRzV8",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "I\u0027d name it hide() for consistency with Drawer (or rename Drawer\u0027s hide() to close()).",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqaXVSbc",
+        "filename": "javascripts/modules/mf-cleanuptemplates.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "Hm, I was thinking about nested templates too, but I think that requires more planning. I\u0027d rather opt for a little bit of HTML duplication in templates right now instead of splitting it into two templates and manually invoking M.template.get.render. At least until we come up with an elegant solution to nested templates.\n\nTo use different templates for different overlays you could subclass Overlay:\n\nvar CleanupOverlay \u003d Overlay.extend( { template: M.template.get( \u0027overlays/cleanup\u0027 ) } );\n\noverlay \u003d new CleanupOverlay( ... );",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqUXiLaU",
+        "filename": "javascripts/modules/mf-languages.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "Now I see how calling parent\u0027s initialize would help here. I have to work on it.",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqcXmPbM",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-20T09:22:12Z",
+      "side": 1,
+      "message": "Probably making PhotoUploaderPreview a subclass of Overlay would be nicer, but I can see how it is difficult without nested templates. We can change that later.",
+      "revId": "32ff9ad338f94de2ab31b514f0fc1b02a1e0fc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
