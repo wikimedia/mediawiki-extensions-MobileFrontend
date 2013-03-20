@@ -3,10 +3,6 @@ html {
 	-webkit-text-size-adjust: none;
 }
 
-#ogg_player_1 {
-	display: none;
-}
-
 #mw-mf-search {
 	line-height: normal; /* placeholder displays incorrectly on iphones */
 }
