@@ -157,6 +157,15 @@ $wgMFMobileResourceBoilerplate = array(
 	'targets' => 'mobile',
 );
 
+/**
+ * A boilerplate for the MFResourceLoaderModule that supports templates
+ */
+$wgMFMobileResourceTemplateBoilerplate = array(
+	'localBasePath' => $localBasePath,
+	'localTemplateBasePath' => $localBasePath . '/templates',
+	'class' => 'MFResourceLoaderModule',
+);
+
 // Filepages
 $wgResourceModules['mobile.file.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
@@ -573,7 +582,17 @@ $wgResourceModules['mobile.userlogin.scripts'] = $wgMFMobileSpecialPageResourceB
 	),
 	'position' => 'top',
 );
-$wgResourceModules['mobile.uploads.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+
+// Special:Uploads
+$wgResourceModules['mobile.uploads.plumbing'] = $wgMFMobileResourceTemplateBoilerplate + array(
+	'templates' => array(
+		'specials/uploads/carousel',
+	),
+);
+$wgResourceModules['mobile.uploads.scripts'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.uploads.plumbing',
+	),
 	'messages' => array(
 		'mobile-frontend-photo-upload-generic',
 		'mobile-frontend-donate-photo-upload-success',
@@ -581,8 +600,12 @@ $wgResourceModules['mobile.uploads.scripts'] = $wgMFMobileSpecialPageResourceScr
 		'mobile-frontend-donate-image-summary',
 		'mobile-frontend-listed-image-no-description',
 		'mobile-frontend-photo-upload-user-count',
+		'mobile-frontend-first-upload-wizard-page-1',
+		'mobile-frontend-first-upload-wizard-page-2',
+		'mobile-frontend-first-upload-wizard-page-3',
 	),
 	'scripts' => array(
+		'javascripts/widgets/carousel.js',
 		'javascripts/specials/uploads.js',
 	),
 );

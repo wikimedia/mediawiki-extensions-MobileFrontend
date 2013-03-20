@@ -226,6 +226,7 @@ class MobileFrontendHooks {
 				'javascripts/modules/mf-last-modified.js', 'tests/js/test_mf-last-modified.js',
 				'javascripts/views/page.js', 'tests/js/views/page.js',
 
+				'javascripts/widgets/carousel.js', 'tests/js/widgets/carousel.js',
 				'javascripts/specials/uploads.js', 'tests/js/specials/uploads.js',
 				),
 				'dependencies' => array( ),

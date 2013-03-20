@@ -1,5 +1,9 @@
 @import "mf-variables.less";
 
+.background( @imageOrColor, @repeat: no-repeat, @position: center center ) {
+	background: @imageOrColor @position @repeat;
+}
+
 .watchlist-heading() {
 	font: inherit;
 	margin: 0;
