@@ -20,6 +20,8 @@ $messages['en'] = array (
 	'mobile-frontend-logged-out' => 'Not logged in',
 	'mobile-frontend-logged-in-homepage-notification' => 'Welcome, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Logged in as $1.',
+	'mobile-frontend-handshake-title' => 'Redirecting...',
+	'mobile-frontend-handshake-wait' => 'Please wait while we redirect you to the login form.',
 
 	/** log-in page **/
 	'mobile-frontend-sign-up-heading' => 'Sign up',
@@ -602,6 +604,8 @@ See also:
 	'tag-mobile_edit-description' => 'Change tag description e.g. in [[Special:Tags]], see also {{msg-mw|tag-mobile_edit}}',
 	'mobile-frontend-drawer-cancel' => 'Not visible, but the text label for the cancel button inside a navigation overlay
 {{Identical|Cancel}}',
+	'mobile-frontend-handshake-title' => 'Title for the page redirecting the user to the login form.',
+	'mobile-frontend-handshake-wait' => 'Text asking the user to wait while he is redirected to the login form.',
 );
 
 /** Achinese (Acèh)

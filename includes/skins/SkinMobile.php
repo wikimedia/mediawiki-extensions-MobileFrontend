@@ -260,7 +260,7 @@ class SkinMobile extends SkinMobileBase {
 			// Load modules that have marked themselves for loading at the top
 			$headLinks[] = Html::inlineScript(
 				ResourceLoader::makeLoaderConditionalScript(
-					Xml::encodeJsCall( 'mw.loader.load', array( $moduleNames['top'] ) )
+					Xml::encodeJsCall( 'mw.loader.load', array( array_merge( $moduleNames['top'], $contextModules['top'] ) ) )
 				)
 			);
 
@@ -375,7 +375,12 @@ class SkinMobile extends SkinMobileBase {
 			}
 
 			if ( isset( $wgResourceModules[ $specialScriptModuleName ] ) ) {
-				$moduleNames[] = $specialScriptModuleName;
+				$module = $wgResourceModules[ $specialScriptModuleName ];
+				if ( isset( $module['position'] ) && $module['position'] === 'top' ) {
+					$headModuleNames[] = $specialScriptModuleName;
+				} else {
+					$moduleNames[] = $specialScriptModuleName;
+				}
 			}
 		} else {
 			$headModuleNames[] = 'mobile.styles.page';

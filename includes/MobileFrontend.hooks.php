@@ -21,7 +21,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
-		global $wgMFPhotoUploadEndpoint, $wgCookiePath, $wgPhotoUploadAppendToDesc;
+		global $wgMFPhotoUploadEndpoint, $wgCookiePath, $wgPhotoUploadAppendToDesc, $wgMFLoginHandshakeUrl;
 
 		$context = MobileContext::singleton();
 		$title = $out->getTitle();
@@ -58,6 +58,11 @@ class MobileFrontendHooks {
 		$vars[ 'wgMFMode' ] = $env;
 		$vars[ 'wgIsPageEditable' ] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
 		$vars[ 'wgPreferredVariant' ] = $title->getPageLanguage()->getPreferredVariant();
+
+		if ( $wgMFLoginHandshakeUrl ) {
+			$vars[ 'wgMFLoginHandshakeUrl' ] = $wgMFLoginHandshakeUrl;
+		}
+
 		return true;
 	}
 
