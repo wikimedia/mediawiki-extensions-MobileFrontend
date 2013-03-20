@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DqpgxlVs",
+        "filename": "javascripts/startup/device-detection.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-20T23:53:48Z",
+      "side": 1,
+      "message": "\u0027Opera/9.80 (J2ME/MIDP; Opera Mini/9 (Compatible; MSIE:9.0; iPhone; BlackBerry9700; A\nppleWebKit/24.746; U; en) Presto/2.5.25 Version/10.54\u0027\n\nThere may be other edge cases.. but this is one I was aware of .. eek!\n\nThis particular one says iPhone despite being a J2Me device. oooh the fun of user agents :D",
+      "parentUuid": "Dqng-4bE",
+      "revId": "75b9f5aac08ce400b14161080fad5fa52f973c0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqthNzXQ",
         "filename": "javascripts/startup/device-detection.js",
         "patchSetId": 1
