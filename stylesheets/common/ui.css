@@ -267,9 +267,6 @@ input.search {
   -webkit-appearance: none;
   line-height: normal;
   background: none;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -286,6 +283,10 @@ input.search {
   background-color: white;
   /* remove fennec default background */
 
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 input.search::-webkit-search-cancel-button {
   -webkit-appearance: none;
