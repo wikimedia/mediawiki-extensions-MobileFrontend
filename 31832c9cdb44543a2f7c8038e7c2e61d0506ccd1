@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DqsGIeOs",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 751,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-21T18:47:16Z",
+      "side": 1,
+      "message": "I agree with Jon here, one redirect is already a poor UX but multiple would be horrid. Let\u0027s go with the single for now and plan to replace it with mystery improvements to CentralAuth...",
+      "parentUuid": "DqiH1tIA",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqjjfKdU",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -102,6 +120,24 @@
       "side": 1,
       "message": "Either try accessing it in javascript OR pass a query string parameter in the redirect that names the project to redirect back to.\n\nsomething like\n\nvar redirects \u003d {\nenwiki: \u0027wikipedia.org\u0027,\nfrwiki: \u0027fr.wikipedia.org\u0027\n}\nif ( redirects[ qs[project] ] ) {\ndocument.location \u003d redirects[ qs[project] ];\n}",
       "parentUuid": "Dqv5kOSU",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DquFiXEE",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-03-21T18:47:16Z",
+      "side": 1,
+      "message": "If I\u0027m reading the code correctly, the referer variable is only used on Special:Userlogin and the handshake special page... since both are special pages they won\u0027t be cached.\n\nBut, I would recommend checking that we\u0027re *on* one of those two pages before outputting a referer, or all kinds of things might get cached into other output....\n\nActually, it appears that \u0027document.referrer\u0027 is available to JS, so maybe just use that?",
+      "parentUuid": "DqoE5ID8",
       "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
