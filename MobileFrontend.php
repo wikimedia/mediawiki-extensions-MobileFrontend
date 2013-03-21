@@ -98,6 +98,7 @@ $wgHooks['SpecialPageBeforeExecute'][] = 'MobileFrontendHooks::onSpecialPageBefo
 $wgHooks['UserLoginComplete'][] = 'MobileFrontendHooks::onUserLoginComplete';
 $wgHooks['UserLoginForm'][] = 'MobileFrontendHooks::onUserLoginForm';
 $wgHooks['UserCreateForm'][] = 'MobileFrontendHooks::onUserCreateForm';
+$wgHooks['BeforePageDisplay'][] = 'MobileFrontendHooks::onBeforePageDisplay';
 
 $wgSpecialPages['Uploads'] = 'SpecialUploads';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
@@ -752,3 +753,13 @@ $wgMFPhotoUploadAppendToDesc = '';
  * @var bool
  */
 $wgMFEnableSiteNotice = false;
+
+/**
+ * Whether or not to enable the use of the X-Analytics HTTP response header
+ *
+ * This header is used for analytics purposes.
+ * @see http://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
+ * @var bool
+ */
+$wgMFEnableXAnalyticsLogging = false;
+

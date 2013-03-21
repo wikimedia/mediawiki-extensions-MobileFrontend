@@ -85,6 +85,23 @@ class MobileFrontendHooks {
 			return true;
 		}
 
+		// Handle any X-Analytics header values in the request by adding them
+		// as log items. X-Analytics header values are serialized key=value
+		// pairs, separated by ';', used for analytics purposes.
+		if ( $xanalytics = $mobileContext->getRequest()->getHeader( 'X-Analytics' ) ) {
+			$xanalytics_arr = explode( ';', $xanalytics );
+			if ( count( $xanalytics_arr ) > 1 ) {
+				foreach ( $xanalytics_arr as $xanalytics_item ) {
+					$mobileContext->addAnalyticsLogItemFromXAnalytics( $xanalytics_item );
+				}
+			} else {
+				$mobileContext->addAnalyticsLogItemFromXAnalytics( $xanalytics );
+			}
+		}
+
+		// log whether user is using alpha/beta/stable
+		$mobileContext->logMobileMode();
+
 		$skin = SkinMobile::factory( $wgExtMobileFrontend );
 		return false;
 	}
@@ -407,5 +424,33 @@ class MobileFrontendHooks {
 		}
 		wfProfileOut( __METHOD__ );
 		return true;
+	}
+
+	/**
+	 * BeforePageDisplay hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
+	 *
+	 * @param OutputPage $out
+	 * @param Skin $sk
+	 * @return bool
+	 */
+	public static function onBeforePageDisplay( &$out, &$sk ) {
+			global $wgMFEnableXAnalyticsLogging;
+			wfProfileIn( __METHOD__ );
+
+			if ( !$wgMFEnableXAnalyticsLogging ) {
+				return true;
+			}
+
+			// Set X-Analytics HTTP response header if necessary
+			$context = MobileContext::singleton();
+			$analyticsHeader = $context->getXAnalyticsHeader();
+			if ( $analyticsHeader ) {
+				$resp = $out->getRequest()->response();
+				$resp->header( $analyticsHeader );
+			}
+
+			wfProfileOut( __METHOD__ );
+			return true;
 	}
 }

@@ -9,6 +9,12 @@ class MobileContext extends ContextSource {
 	protected $useFormat;
 
 	/**
+	 * Key/value pairs of things to add to X-Analytics response header for anlytics
+	 * @var array
+	 */
+	protected $analyticsLogItems = array();
+
+	/**
 	 * @var string xDevice header information
 	 */
 	private $xDevice;
@@ -881,5 +887,68 @@ class MobileContext extends ContextSource {
 		global $wgUseSiteJs, $wgAllowUserJs;
 		$wgUseSiteJs = false;
 		$wgAllowUserJs = false;
+	}
+
+	/**
+	 * Add key/value pairs for analytics purposes to $this->analyticsLogItems
+	 * @param string $key
+	 * @param string $val
+	 */
+	public function addAnalyticsLogItem( $key, $val ) {
+		$key = trim( $key );
+		$val = trim( $val );
+		$this->analyticsLogItems[$key] = $val;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getAnalyticsLogItems() {
+		return $this->analyticsLogItems;
+	}
+
+	/**
+	 * Get HTTP header string for X-Analytics
+	 *
+	 * This is made up of key/vaule pairs and is used for analytics
+	 * purposes.
+	 *
+	 * @return string|bool
+	 */
+	public function getXAnalyticsHeader() {
+		$logItems = $this->getAnalyticsLogItems();
+		if ( count( $logItems ) ) {
+			$xanalytics_items = array();
+			foreach ( $logItems as $key => $val ) {
+				$xanalytics_items[] = urlencode( $key ) . "=" . urlencode( $val );
+			}
+			$headerValue = implode( ';', $xanalytics_items );
+			return "X-Analytics: $headerValue";
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * Take a key/val pair in string format and add it to $this->analyticsLogItems
+	 *
+	 * @param string $xanalytics_item: In the format key=value
+	 */
+	public function addAnalyticsLogItemFromXAnalytics( $xanalytics_item ) {
+		list( $key, $val ) = explode( '=', $xanalytics_item );
+		$this->addAnalyticsLogItem( urldecode( $key ), urldecode( $val ));
+	}
+
+	/**
+	 * Adds analytics log items if the user is in alpha or beta mode
+	 *
+	 * Invoked from MobileFrontendHooks::onRequestContextCreateSkin()
+	 */
+	public function logMobileMode() {
+		if ( $this->isAlphaGroupMember() ) {
+			$this->addAnalyticsLogItem( 'mf-m', 'a' );
+		} elseif ( $this->isBetaGroupMember() ) {
+			$this->addAnalyticsLogItem( 'mf-m', 'b' );
+		}
 	}
 }
