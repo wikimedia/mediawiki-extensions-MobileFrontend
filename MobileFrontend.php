@@ -338,6 +338,7 @@ $wgResourceModules['mobile.stable.styles'] = $wgMFMobileResourceBoilerplate + ar
 		'stylesheets/modules/mf-watchstar.css',
 		'stylesheets/modules/mf-photo.css',
 	),
+	'position' => 'top',
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
