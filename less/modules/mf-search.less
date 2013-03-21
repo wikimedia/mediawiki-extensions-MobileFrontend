@@ -5,41 +5,7 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 */
 @import "../mf-mixins.less";
 
-.jsEnabled {
-	input.searchSubmit {
-		display: none;
-	}
-}
-
-@inputThirdHeight: round( @searchBoxHeight / 3 ) - 1;
-
-input.searchSubmit {
-	position: absolute;
-	top: @searchMarginTop;
-	right: -@searchBarPaddingRight + 4px;
-	padding-top: @inputThirdHeight;
-	padding-bottom: @inputThirdHeight;
-	font-size: @inputThirdHeight;
-}
-
 input.search {
-	-webkit-appearance: none;
-	.border-radius( 3px );
-	border: @searchBorderHeight solid #c9c9c9;
-	outline: none;
-	padding: 0 0 0 5px;
-	width: 100%;
-	margin-top: @searchMarginTop;
-	height: @searchBoxHeight;
-	vertical-align: middle; /* don't use line height here as placeholder on ripple positions incorrectly */
-	background-color: white; /* remove fennec default background */
-	&::-webkit-search-cancel-button {
-		-webkit-appearance: none;
-	}
-
-	&:focus {
-		outline: none;
-	}
 
 	/* visual indication that search is happening */
 	&.searching {
@@ -53,9 +19,7 @@ input.search {
 	}
 }
 
-.search-box {
-	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+#mw-mf-searchForm {
 
 	.clearlink {
 		top: @searchMarginTop;
@@ -132,9 +96,3 @@ ul.suggestions-results {
 	}
 }
 
-/* samsung galaxy s gt-19000 */
-@media all and ( max-width:240px ) {
-	#mw-mf-search {
-		font-size: 0.8em;
-	}
-}

@@ -378,6 +378,8 @@ class SkinMobile extends SkinMobileBase {
 			if ( isset( $wgResourceModules[ $specialScriptModuleName ] ) ) {
 				$moduleNames[] = $specialScriptModuleName;
 			}
+		} else {
+			$headModuleNames[] = 'mobile.styles.page';
 		}
 
 		if ( $action === 'edit' ) {
