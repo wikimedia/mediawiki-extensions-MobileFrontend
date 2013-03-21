@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DqiH1tIA",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 751,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-21T18:32:54Z",
+      "side": 1,
+      "message": "Let\u0027s not complicate the solution by introducing more handshaking. It\u0027s a workaround and currently it allows us to achieve our goal of uploading to commons.\n\nI would want a more long term solution then improving this hack.",
+      "parentUuid": "Dqn5xCd0",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqjjfKdU",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -66,6 +84,41 @@
       "side": 1,
       "message": "cant you find the referer in JS?",
       "parentUuid": "Dqh5GzcM",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqoE5ID8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-21T18:32:54Z",
+      "side": 1,
+      "message": "Either try accessing it in javascript OR pass a query string parameter in the redirect that names the project to redirect back to.\n\nsomething like\n\nvar redirects \u003d {\nenwiki: \u0027wikipedia.org\u0027,\nfrwiki: \u0027fr.wikipedia.org\u0027\n}\nif ( redirects[ qs[project] ] ) {\ndocument.location \u003d redirects[ qs[project] ];\n}",
+      "parentUuid": "Dqv5kOSU",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqsE2OFA",
+        "filename": "javascripts/specials/loginhandshake.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-21T18:32:54Z",
+      "side": 1,
+      "message": "instead of using referrer you could pass a querystring project\u003denwiki and redirect to the project that refers to?",
       "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
