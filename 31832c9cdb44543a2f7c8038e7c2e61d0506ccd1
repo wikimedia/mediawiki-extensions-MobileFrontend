@@ -16,6 +16,24 @@
       "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqh5GzcM",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-21T15:15:44Z",
+      "side": 1,
+      "message": "You mean the wgHttpReferer? It seems that the config is set using inline JS, not a separate resource loader asset, so the answer would seem to be yes. How could we work around this?",
+      "parentUuid": "DqjjfKdU",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
