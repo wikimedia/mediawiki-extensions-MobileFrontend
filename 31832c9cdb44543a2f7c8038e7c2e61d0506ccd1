@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "Dqn5xCd0",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 751,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-21T16:50:38Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be an array of possible handshake URLs? In one limitted usecase, we only need this for commons, but this should be able to support all WMF domains.",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqjjfKdU",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -31,6 +48,24 @@
       "side": 1,
       "message": "You mean the wgHttpReferer? It seems that the config is set using inline JS, not a separate resource loader asset, so the answer would seem to be yes. How could we work around this?",
       "parentUuid": "DqjjfKdU",
+      "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqv5kOSU",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-21T16:50:38Z",
+      "side": 1,
+      "message": "cant you find the referer in JS?",
+      "parentUuid": "Dqh5GzcM",
       "revId": "31832c9cdb44543a2f7c8038e7c2e61d0506ccd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
