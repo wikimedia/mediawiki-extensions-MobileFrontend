@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqjLBgIM",
+        "filename": "includes/specials/UnlistedSpecialMobilePage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-21T23:43:59Z",
+      "side": 1,
+      "message": "Instead of renaming execute() for every special page, just call clearPageMargins() from constructor.",
+      "revId": "fcf500243dc8a9d9f3b45a99078cb977cdb0f126",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
