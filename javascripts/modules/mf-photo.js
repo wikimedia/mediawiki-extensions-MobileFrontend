@@ -51,15 +51,75 @@
 		};
 	}
 
-	function generateFileName( file, pageTitle ) {
-		// FIXME: deal with long and invalid names
-		var name = 'Lead_Photo_For_' + pageTitle.replace( / /g, '_' ) + Math.random(),
-			extension;
+	// Originally written by Brion for WikiLovesMonuments app
+	function trimUtf8String( str, allowedLength ) {
+		// Count UTF-8 bytes to see where we need to crop long names.
+		var bytes = 0, chars = 0, codeUnit, len, i;
 
-		name = name.replace( String.fromCharCode( 27 ), '-' );
-		name = name.replace( /[\x7f\.\[#<>\[\]\|\{\}\/:]/g, '-' );
-		extension = file.name.slice( file.name.lastIndexOf( '.' ) + 1 );
-		return name + '.' + extension;
+		for ( i = 0; i < str.length; i++ ) {
+			// JavaScript strings are UTF-16.
+			codeUnit = str.charCodeAt( i );
+
+			// http://en.wikipedia.org/wiki/UTF-8#Description
+			if ( codeUnit < 0x80 ) {
+				len = 1;
+			} else if ( codeUnit < 0x800 ) {
+				len = 2;
+			} else if ( codeUnit >= 0xd800 && codeUnit < 0xe000 ) {
+				// http://en.wikipedia.org/wiki/UTF-16#Description
+				// Code point is one half of a surrogate pair.
+				// This and its partner combine to form a single 4 byte character in UTF-8.
+				len = 4;
+			} else {
+				len = 3;
+			}
+
+			if ( bytes + len <= allowedLength ) {
+				bytes += len;
+				chars++;
+				if ( len === 4 ) {
+					// Skip over second half of surrogate pair as a unit.
+					chars++;
+					i++;
+				}
+			} else {
+				// Ran out of bytes.
+				return str.substr( 0, chars );
+			}
+		}
+
+		// We fit!
+		return str;
+	}
+
+	/**
+	 * Generates a file name from a description and a date
+	 * Removes illegal characters
+	 * Respects maximum file name length (240 bytes)
+	 *
+	 * @param {String} description: Data to be preprocessed and added to options
+	 * @param {String} suffix: An optional file extension e.g. '.jpg' or '.gif'
+	 * @param {Date} date: An optional date (defaults to current date)
+	 * @return {String} a legal filename
+	 */
+	function generateFileName( description, fileSuffix, date ) {
+		var allowedLength = 240, // 240 bytes maximum enforced by MediaWiki
+			delimiter = '-', name, suffix;
+
+		fileSuffix = fileSuffix || '.jpg';
+		date = date || new Date();
+		name = description.replace( /[\x1B\n\x7f\.\[#<>\[\]\|\{\}\/:]/g, delimiter );
+
+		function pad( number ) {
+			return number < 9 ? '0' + number : number;
+		}
+
+		suffix = ' ' + date.getFullYear() + delimiter +
+			pad( date.getMonth() + 1 ) + delimiter + pad( date.getDate() ) + ' ' +
+			pad( date.getHours() ) + delimiter + pad( date.getMinutes() ) + fileSuffix;
+
+		allowedLength = allowedLength - suffix.length;
+		return trimUtf8String( name, allowedLength ) + suffix;
 	}
 
 	PhotoApi = Api.extend( {
@@ -84,10 +144,12 @@
 				'mobile-frontend-photo-article-donate-comment';
 
 			function doUpload( token ) {
-				var formData = new FormData(), descTextToAppend;
-				options.fileName = generateFileName( options.file, options.pageTitle );
+				var formData = new FormData(), descTextToAppend,
+					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 );
+
 				descTextToAppend = mw.config.get( 'wgPhotoUploadAppendToDesc' );
 				descTextToAppend = descTextToAppend ? '\n\n' + descTextToAppend : '';
+				options.fileName = generateFileName( options.description, '.' + ext );
 
 				formData.append( 'action', 'upload' );
 				formData.append( 'format', 'json' );
@@ -118,13 +180,22 @@
 						self.emit( 'progress', ev.loaded / ev.total );
 					}
 				} ).done( function( data ) {
-					var descriptionUrl = '';
+					var descriptionUrl = '',
+						warnings = data.upload ? data.upload.warnings : false;
 					if ( !data || !data.upload ) {
 						// error uploading image
 						result.reject( data.error ? data.error.info : '' );
 						return;
 					}
-					options.fileName = data.upload.filename || data.upload.warnings.duplicate['0'];
+					options.fileName = data.upload.filename;
+					if ( warnings ) {
+						if ( warnings.duplicate ) {
+							options.fileName = warnings.duplicate[ '0' ];
+						} else if ( warnings.exists ) {
+							return result.reject( 'Filename exists',
+								mw.msg( 'mobile-frontend-photo-upload-error-filename' ) );
+						}
+					}
 					// FIXME: API doesn't return this information on duplicate images...
 					if ( data.upload.imageinfo ) {
 						descriptionUrl = data.upload.imageinfo.descriptionurl;
@@ -388,8 +459,8 @@
 					descriptionUrl: descriptionUrl,
 					url: self.preview.imageUrl
 				} );
-			} ).fail( function( err ) {
-				popup.show( mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
+			} ).fail( function( err, msg ) {
+				popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
 				self.log( { action: 'error', errorText: err } );
 				self.emit( 'error' );
 			} );
@@ -446,8 +517,10 @@
 	}
 
 	M.define( 'photo', {
+		generateFileName: generateFileName,
 		isSupported: isSupported,
 		PhotoUploader: PhotoUploader,
+		trimUtf8String: trimUtf8String,
 		// just for testing
 		_needsPhoto: needsPhoto,
 		_PhotoUploadProgress: PhotoUploadProgress

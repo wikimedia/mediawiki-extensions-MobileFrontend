@@ -232,6 +232,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-image-uploading-long' => 'Image still uploading! Thanks for your patience.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Cancel</a> if this is taking too long.',
 	'mobile-frontend-photo-upload-error' => 'Error, try again.',
+	'mobile-frontend-photo-upload-error-filename' => 'Error, please provide a more descriptive summary.',
 	'mobile-frontend-photo-upload-success-article' => 'Success! Your image is now live on this page.',
 	'mobile-frontend-photo-license' => 'By clicking "Submit", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your photo under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
 	'mobile-frontend-photo-submit' => 'Submit',
@@ -574,6 +575,7 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-image-uploading-long' => 'Text that displays whilst an image is taking long to upload',
 	'mobile-frontend-image-uploading-cancel' => 'Text saying that user can cancel the image upload. Word "cancel" should be a link.',
 	'mobile-frontend-photo-upload-error' => 'Text that displays when a photo fails to upload',
+	'mobile-frontend-photo-upload-error-filename' => 'Text that displays when a photo fails to upload due to filename',
 	'mobile-frontend-photo-upload-success-article' => 'Text that displays when a photo has been successfully added to a page.',
 	'mobile-frontend-photo-license' => 'Text notifying user of license that image will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license.',
 	'mobile-frontend-photo-submit' => 'Caption for the submit button on the photo uplaod form.
