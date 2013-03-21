@@ -86,6 +86,31 @@
 		return support;
 	}
 
+	// http://stackoverflow.com/a/12621264/365238
+	function supports3dTransforms() {
+		var el = $( 'p' )[0], has3d, t,
+			transforms = {
+				'webkitTransform': '-webkit-transform',
+				//'OTransform': '-o-transform',
+				//'msTransform': '-ms-transform',
+				'transform': 'transform'
+			};
+
+		// Add it to the body to get the computed style
+		document.body.insertBefore(el, null);
+
+		for ( t in transforms ) {
+			if ( el.style[t] !== undefined ) {
+				el.style[t] = 'translate3d(1px,1px,1px)';
+				has3d = window.getComputedStyle( el ).getPropertyValue( transforms[t] );
+			}
+		}
+
+		document.body.removeChild(el);
+
+		return ( has3d !== undefined && has3d.length > 0 && has3d !== "none" );
+	}
+
 	// Try to scroll and hide URL bar
 	scrollY = window.scrollY || 0;
 	if( !window.location.hash && scrollY < 10 ) {
@@ -111,6 +136,9 @@
 		$doc.removeClass( 'page-loading' );
 		if( supportsPositionFixed() ) {
 			$doc.addClass( 'supportsPositionFixed' );
+		}
+		if ( supports3dTransforms() ) {
+			$doc.addClass( 'transforms' );
 		}
 
 		// when rotating to landscape stop page zooming on ios

@@ -22,17 +22,18 @@
 		function show( html, classes ) {
 			$( '#mf-notification div' ).html( html );
 			calculatePosition();
-			return $( '#mf-notification' ).removeAttr( 'class' ).
-				addClass( 'position-fixed-element' ).
-				addClass( classes ).show();
+			return $( '#mf-notification' ).
+				removeAttr( 'class' ).
+				addClass( classes ).
+				addClass( 'position-fixed visible' );
 		}
 
 		function close( forceClose ) {
 			var $notification = $( '#mf-notification' );
-			if ( !$notification.is( ':visible' ) ) {
+			if ( !$notification.hasClass( 'visible' ) ) {
 				return;
 			} else if ( !$notification.hasClass( 'locked' ) || forceClose ) {
-				$( '#mf-notification' ).hide();
+				$( '#mf-notification' ).removeClass( 'visible' );
 			}
 		}
 
@@ -47,8 +48,7 @@
 
 		function init( firstRun ) {
 			// FIXME: turn into view with template
-			var el = $( '<div id="mf-notification"><div></div></div>' ).hide().
-				addClass( 'position-fixed-element' ).
+			var el = $( '<div id="mf-notification"><div></div></div>' ).
 				appendTo( document.body )[ 0 ];
 
 			if ( inBeta ) {

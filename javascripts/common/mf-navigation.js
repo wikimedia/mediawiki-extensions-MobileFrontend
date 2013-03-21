@@ -23,18 +23,19 @@ var m = ( function( $ ) {
 			$( window ).on( 'scroll click', function() {
 				self.hide();
 			} );
-		},
-
-		show: function() {
 			this.appendTo( '#mw-mf-page-center' );
 		},
 
+		show: function() {
+			this.$el.addClass( 'visible' );
+		},
+
 		hide: function() {
-			this.detach();
+			this.$el.removeClass( 'visible' );
 		},
 
 		isVisible: function() {
-			return this.$el.is( ':visible' );
+			return this.$el.hasClass( 'visible' );
 		}
 	} );
 
