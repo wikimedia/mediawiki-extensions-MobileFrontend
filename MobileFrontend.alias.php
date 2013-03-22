@@ -28,9 +28,19 @@ $specialPageAliases['ar'] = array(
 $specialPageAliases['de'] = array(
 	'MobileFeedback' => array( 'Mobile_Rückmeldung' ),
 	'MobileOptions' => array( 'Mobile_Optionen' ),
+	'Uploads' => array( 'Hochgeladene_Dateien' ),
 	'MobileDiff' => array( 'Mobiler_Unterschied' ),
 	'MobileMenu' => array( 'Mobiles_Menü' ),
 	'Nearby' => array( 'In_der_Nähe' ),
+);
+
+/** Esperanto (Esperanto) */
+$specialPageAliases['eo'] = array(
+	'MobileFeedback' => array( 'Prisondo_de_poŝaparato' ),
+	'MobileOptions' => array( 'Opcioj_pri_poŝaparato' ),
+	'Uploads' => array( 'Alŝutoj' ),
+	'MobileMenu' => array( 'Menuo_por_poŝaparato' ),
+	'Nearby' => array( 'Apude' ),
 );
 
 /** Estonian (eesti) */
