@@ -169,21 +169,6 @@ class ExtMobileFrontend extends ContextSource {
 		$contentHtml = $formatter->getText();
 		wfProfileOut( __METHOD__ . '-getText' );
 
-		if ( $this->getRequest()->getText( 'format' ) === 'json' ) {
-			# There used to be an antiquated API
-			# @todo: Remove in March 2013
-			wfProfileIn( __METHOD__ . '-json' );
-			wfDebugLog( 'json-hack', $this->getRequest()->getHeader( 'User-Agent' ) . "\n" );
-			$this->getRequest()->response()->header( 'HTTP/1.1 404 Not Found' );
-			$t = SpecialPage::getTitleFor( 'ApiSandbox' );
-			$url = htmlentities( $t->getFullURL() );
-			# Was used only on English Wikipedia, so assuming that ApiSandbox is present
-			echo "<html><head><title>Not Found</title></head><body><h1>HTTP 404 Not Found</h1>This API has been deprecated.
-			Use <a href='$url#action=mobileview'>our normal API</a>.</body></html>";
-			$contentHtml = false;
-			wfProfileOut( __METHOD__ . '-json' );
-		}
-
 		wfProfileOut( __METHOD__ );
 		return $contentHtml;
 	}
