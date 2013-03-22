@@ -56,22 +56,21 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider provideTestDeviceCapabilities
 	 */
-	public function testDeviceCapabilities( $format, $js, $jquery ) {
+	public function testDeviceCapabilities( $format, $jquery ) {
 		$detector = new DeviceDetection();
 		$device = $detector->getDeviceProperties( $format, '' );
-		$this->assertEquals( $device->supportsJavaScript(), $js );
 		$this->assertEquals( $device->supportsJQuery(), $jquery );
 	}
 
 	public function provideTestDeviceCapabilities() {
 		return array(
-			array( 'webkit', true, true ),
-			array( 'capable', true, true ),
-			array( 'ie', true, true ),
-			array( 'nokia', true, false ),
-			array( 'blackberry', true, false ),
-			array( 'blackberry-lt5', false, false ),
-			array( 'html', false, false ),
+			array( 'webkit', true ),
+			array( 'capable', true ),
+			array( 'ie', true ),
+			array( 'nokia', false ),
+			array( 'blackberry', false ),
+			array( 'blackberry-lt5', false ),
+			array( 'html', false ),
 		);
 	}
 
