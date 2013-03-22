@@ -226,6 +226,7 @@ input[type=submit].cancel {
   padding: 0;
   min-height: 46px;
   margin: 0;
+  overflow: hidden;
 }
 .header h1,
 #mw-mf-header h1 {
