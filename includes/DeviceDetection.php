@@ -271,12 +271,6 @@ class DeviceDetection implements IDeviceDetector {
 			'supports_jquery' => false,
 			'disable_zoom' => true,
 		),
-		'native_iphone' => array (
-			'view_format' => 'html',
-			'css_file_name' => '',
-			'supports_jquery' => true,
-			'disable_zoom' => false,
-		),
 		'netfront' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'simple',
@@ -422,7 +416,7 @@ class DeviceDetection implements IDeviceDetector {
 			if ( strpos( $userAgent, 'Opera' ) !== false ) {
 				$deviceName = 'operamini';
 			} else {
-				$deviceName = 'native_iphone';
+				$deviceName = 'capable';
 			}
 		} elseif ( preg_match( '/WebKit/', $userAgent ) ) {
 			if ( preg_match( '/Series60/', $userAgent ) ) {
