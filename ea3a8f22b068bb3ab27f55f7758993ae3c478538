@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqgIHS4Y",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 799,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-22T20:35:58Z",
+      "side": 1,
+      "message": "I think this is a little misleading, since you\u0027re only varying styles by X-Device, not other resources.",
+      "revId": "ea3a8f22b068bb3ab27f55f7758993ae3c478538",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dql-fXNM",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-22T20:35:58Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be the inverse? That is, if ( $wgMFVaryResources \u003d\u003d\u003d true ), then the following should happen.",
+      "revId": "ea3a8f22b068bb3ab27f55f7758993ae3c478538",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
