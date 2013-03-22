@@ -16,6 +16,24 @@
       "revId": "a9d28a360305fe3389546cff6418fe3df9c44ff9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqrgFbhQ",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-22T21:37:37Z",
+      "side": 1,
+      "message": "No, \u0027iphone\u0027 means specifically \u0027iPhone Safari\u0027 and nothing else, per regex above.",
+      "parentUuid": "DqhWbAxc",
+      "revId": "a9d28a360305fe3389546cff6418fe3df9c44ff9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
