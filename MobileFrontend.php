@@ -220,6 +220,7 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 	'localBasePath' => $localBasePath,
 	'localTemplateBasePath' => $localBasePath . '/templates',
 	'templates' => array(
+		'photoCopyrightDialog',
 		'leadPhoto',
 		'photoUploader',
 		'photoUploadPreview',
@@ -405,6 +406,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 
 		// mf-photo.js
 		'mobile-frontend-photo-ownership',
+		'mobile-frontend-photo-ownership-help',
 		'mobile-frontend-photo-article-edit-comment',
 		'mobile-frontend-photo-article-donate-comment',
 		'mobile-frontend-photo-upload-error',
@@ -419,6 +421,10 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-photo-upload-comment',
 		'mobile-frontend-photo-submit',
 		'mobile-frontend-photo-cancel',
+		'mobile-frontend-photo-ownership-confirm',
+		'mobile-frontend-photo-ownership-bullet-one',
+		'mobile-frontend-photo-ownership-bullet-two',
+		'mobile-frontend-photo-ownership-bullet-three',
 
 		// for mf-search.js
 		'mobile-frontend-search-help',

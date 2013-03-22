@@ -72,6 +72,7 @@ var m = ( function( $ ) {
 		$( 'html' ).removeClass( 'navigationEnabled' );
 	}
 
+	// FIXME: redo using view
 	function createOverlay( heading, contents, options ) {
 		options = options || {};
 		var overlay = document.getElementById( mfePrefix + 'overlay' );
@@ -87,6 +88,7 @@ var m = ( function( $ ) {
 		}
 		$( heading ).appendTo( '#' + mfePrefix + 'overlay .header' );
 		$( overlay ).append( contents );
+		$( overlay ).find( '.close' ).click( closeOverlay );
 
 		return overlay;
 	}

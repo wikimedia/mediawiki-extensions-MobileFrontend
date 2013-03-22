@@ -31,6 +31,9 @@
 .photoPreview {
   padding-bottom: 70px !important;
 }
+.photoPreview .help {
+  display: block;
+}
 .photoPreview img {
   height: 90px;
   float: left;

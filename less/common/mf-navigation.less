@@ -135,6 +135,11 @@ html.overlay {
 
 	.content {
 		margin-top: @headingMarginTop;
+
+		.close {
+			display: block;
+			margin: auto;
+		}
 	}
 
 	.buttonBar {
@@ -212,6 +217,11 @@ html.overlay {
 	cursor: pointer;
 	margin: 0;
 	list-style: none;
+
+	&.informative {
+		list-style: inside square;
+		margin-bottom: 8px;
+	}
 }
 
 a.escapeOverlay,
