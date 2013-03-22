@@ -16,6 +16,24 @@
       "revId": "597ab60e0e1fa8fb6f275102a2a26b7112ca41c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqsKE8xA",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-22T20:28:53Z",
+      "side": 1,
+      "message": "I made a change to allow a single h1 in the lead section.\n\nNote I don\u0027t think we should be encouraging multiple h1s in a page.\n\nMultiple h1s are just wrong in my opinion.",
+      "parentUuid": "Dqn-koBA",
+      "revId": "597ab60e0e1fa8fb6f275102a2a26b7112ca41c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
