@@ -175,6 +175,8 @@ var m = ( function( $ ) {
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
 			toggleNavigation();
 			ev.preventDefault();
+		} ).on( 'touchend', function( ev ) {
+			ev.stopPropagation();
 		} );
 
 		// close navigation if content tapped
