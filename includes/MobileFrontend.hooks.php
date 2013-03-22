@@ -207,6 +207,7 @@ class MobileFrontendHooks {
 				'javascripts/modules/mf-toggle-dynamic.js',
 				'javascripts/actions/mf-edit.js', 'tests/js/test_mf-edit.js',
 				'javascripts/common/mf-navigation.js',
+				'tests/js/common/mf-navigation.js',
 				'javascripts/common/mf-notification.js',
 				'javascripts/modules/mf-photo.js', 'tests/js/test_mf-photo.js',
 				'javascripts/modules/mf-references.js', 'tests/js/test_references.js',

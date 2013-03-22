@@ -40,6 +40,11 @@ input.search {
 	width: 100%;
 }
 
+// FIXME: This becomes redundant when search is rewritten as an overlay
+#remove-results {
+	display: none;
+}
+
 .full-screen-search {
 
 	#mw-mf-header {
@@ -50,7 +55,7 @@ input.search {
 
 	#results,
 	.search-box.notEmpty .clearlink,
-	button.escapeOverlay {
+	#remove-results {
 		display: block;
 	}
 
