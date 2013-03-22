@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqjV.R60",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 420
+      },
+      "writtenOn": "2013-03-22T21:28:50Z",
+      "side": 1,
+      "message": "Padding, or margin?",
+      "revId": "d83f7cb078c60cc8ab4753c95c4d5d879b98a608",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqrVCV2o",
+        "filename": "stylesheets/common/mf-navigation.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 420
+      },
+      "writtenOn": "2013-03-22T21:28:50Z",
+      "side": 1,
+      "message": "!important makes puppies cry. Is there any other way?",
+      "revId": "d83f7cb078c60cc8ab4753c95c4d5d879b98a608",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

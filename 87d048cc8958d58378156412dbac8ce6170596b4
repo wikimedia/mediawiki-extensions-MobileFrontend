@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqnV0v84",
+        "filename": "less/common/mf-common.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 420
+      },
+      "writtenOn": "2013-03-22T21:28:50Z",
+      "side": 0,
+      "message": "Yeah, this is a hack for IE6/7.\n\nhttp://nicolasgallagher.com/micro-clearfix-hack/",
+      "revId": "87d048cc8958d58378156412dbac8ce6170596b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
