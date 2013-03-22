@@ -298,8 +298,19 @@ class MobileContext extends ContextSource {
 
 	public function getXDevice() {
 		if ( is_null( $this->xDevice ) ) {
-			$this->xDevice = $this->getRequest()->getHeader( 'X-Device' );
-			$this->xDevice = $this->xDevice === false ? '' : $this->xDevice;
+			$request = $this->getRequest();
+			$xDevice = $request->getHeader( 'X-Device' );
+
+			global $wgMFVaryResources;
+			if ( $wgMFVaryResources ) {
+				if ( $xDevice ) {
+					$xWap = $request->getHeader( 'X-WAP' );
+					if ( $xWap === 'yes' && $xDevice !== 'wap' ) {
+						wfDebugLog( 'mobile', "Unexpected combination of headers: X-Device = $xDevice, X-WAP = $xWap" );
+					}
+				}
+			}
+			$this->xDevice = $xDevice === false ? '' : $xDevice;
 		}
 
 		return $this->xDevice;

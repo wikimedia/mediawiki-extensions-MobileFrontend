@@ -208,7 +208,9 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getXDeviceProvider
 	 */
-	public function testGetXDevice( $xDevice = null ) {
+	public function testGetXDevice( $xDevice ) {
+		global $wgMFVaryResources;
+		$wgMFVaryResources = false;
 		if ( is_null( $xDevice ) ) {
 			MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
 			$assert = $xDevice;
@@ -222,6 +224,25 @@ class MobileContextTest extends MediaWikiTestCase {
 		return array(
 			array( 'webkit' ),
 			array( null ),
+		);
+	}
+
+	/**
+	 * @dataProvider getXDeviceInVaryModeProvider
+	 */
+	public function testGetXDeviceInVaryMode( $xDevice, $xWap, $expected ) {
+		global $wgMFVaryResources;
+		$wgMFVaryResources = true;
+		MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
+		MobileContext::singleton()->getRequest()->setHeader( 'X-WAP', $xWap );
+		$this->assertEquals( $expected, MobileContext::singleton()->getXDevice() );
+	}
+
+	public function getXDeviceInVaryModeProvider() {
+		return array(
+			array( 'webkit', 'no', 'capable' ),
+			array( 'capable', 'no', 'capable' ),
+			array( 'wap', 'yes', 'wap' ),
 		);
 	}
 

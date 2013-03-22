@@ -46,6 +46,11 @@ interface IDeviceProperties {
 	 * @return string
 	 */
 	function moduleName();
+
+	/**
+	 * @return string
+	 */
+	function cssFileName();
 }
 
 interface IDeviceDetector {
@@ -185,6 +190,18 @@ final class DeviceProperties implements IDeviceProperties {
 		if ( isset( $this->device['css_file_name'] ) &&
 				$this->device['css_file_name'] ) {
 			return "mobile.device.{$this->device['css_file_name']}";
+		} else {
+			return '';
+		}
+	}
+
+	/**
+	 * @return string
+	 */
+	public function cssFileName() {
+		if ( isset( $this->device['css_file_name'] ) &&
+			$this->device['css_file_name'] ) {
+			return "{$this->device['css_file_name']}.css";
 		} else {
 			return '';
 		}

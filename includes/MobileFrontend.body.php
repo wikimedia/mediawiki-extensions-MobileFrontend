@@ -48,7 +48,7 @@ class ExtMobileFrontend extends ContextSource {
 		$this->setDefaultLogo();
 
 		$this->disableCaching();
-		$this->sendXDeviceVaryHeader();
+		$this->sendHeaders();
 
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -93,15 +93,23 @@ class ExtMobileFrontend extends ContextSource {
 		return true;
 	}
 
-	private function sendXDeviceVaryHeader() {
+	private function sendHeaders() {
+		global $wgMFVaryResources;
+
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$xDevice = MobileContext::singleton()->getXDevice();
-		if ( $xDevice !== '' ) {
-			$this->getRequest()->response()->header( "X-Device: {$xDevice}" );
+		$request = $this->getRequest();
+		$xWap = $request->getHeader( 'X-WAP' );
+		if ( $xDevice !== '' && !$wgMFVaryResources ) {
+			$request->response()->header( "X-Device: {$xDevice}" );
 			$out->addVaryHeader( 'X-Device' );
+		} elseif ( $xWap ) {
+			$out->addVaryHeader( 'X-WAP' );
+			$request->response()->header( "X-WAP: $xWap" );
 		}
 		$out->addVaryHeader( 'Cookie' );
+		// @todo: these should be set by Zero
 		$out->addVaryHeader( 'X-Carrier' );
 		$out->addVaryHeader( 'X-Subdomain' );
 		$out->addVaryHeader( 'X-Images' );
@@ -206,4 +214,24 @@ class MobileFrontendSiteModule extends ResourceLoaderSiteModule {
 	public function isRaw() {
 		return true;
 	}
+}
+
+class MobileFrontendDeviceDetectModule extends ResourceLoaderFileModule {
+	public function getStyles( ResourceLoaderContext $context ) {
+		$response = $context->getRequest()->response();
+		$response->header( 'Vary: Accept-Encoding,X-Device' );
+		$mobileContext = MobileContext::singleton();
+		$xDevice = $mobileContext->getXDevice();
+		// @todo: Autodetection for third parties?
+		if ( $xDevice ) {
+			$response->header( "X-Device: $xDevice" );
+			$device = $mobileContext->getDevice();
+			$file = "stylesheets/devices/{$device->cssFileName()}";
+			if ( $file ) {
+				$this->styles[] = $file;
+			}
+		}
+		return parent::getStyles( $context );
+	}
+
 }
