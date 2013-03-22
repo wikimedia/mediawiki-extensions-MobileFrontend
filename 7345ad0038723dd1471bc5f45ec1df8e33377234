@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqn-HwJk",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-22T15:13:43Z",
+      "side": 1,
+      "message": "I don\u0027t understand why it\u0027s moved here. So we want to run it even if M.history.isDynamicPageLoadEnabled is false?",
+      "revId": "7345ad0038723dd1471bc5f45ec1df8e33377234",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqr-MeL4",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-22T15:13:43Z",
+      "side": 1,
+      "message": "So firstRun is true for every run but the first one...?",
+      "revId": "7345ad0038723dd1471bc5f45ec1df8e33377234",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
