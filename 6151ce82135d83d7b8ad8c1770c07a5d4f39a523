@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqv.AsE4",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-22T15:05:23Z",
+      "side": 1,
+      "message": "Having open/show and close/hide for an overlay is utterly confusing. Why don\u0027t we just have show and hide? That is, show appends the overlay to body, and hide detaches it? Why do we wan\u0027t to have more than one overlay attached to body?",
+      "revId": "6151ce82135d83d7b8ad8c1770c07a5d4f39a523",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqt9-7GE",
+        "filename": "javascripts/modules/mf-languages.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-22T15:05:23Z",
+      "side": 1,
+      "message": "We could probably move all the remaining code of this function to overlay\u0027s initialize.",
+      "revId": "6151ce82135d83d7b8ad8c1770c07a5d4f39a523",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
