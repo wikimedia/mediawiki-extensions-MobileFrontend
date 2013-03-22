@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqn-koBA",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-22T16:56:43Z",
+      "side": 1,
+      "message": "This is not a safe assumption: some pages  might have a different level sections as top level.",
+      "revId": "597ab60e0e1fa8fb6f275102a2a26b7112ca41c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
