@@ -33,13 +33,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		if( $user->isAnon() ) {
 			// No watchlist for you.
-			$output->addHtml( Html::openElement( 'div', array( 'class' => 'content' ) ) );
 			parent::execute( $par );
-			$output->addHtml( Html::closeElement( 'div' ) );
 			wfProfileOut( __METHOD__ );
 			return;
 		} else {
-			$mobileSkin->addArticleClass( 'noMargins watchlist' );
+			$mobileSkin->addArticleClass( 'noMargins' );
 		}
 
 		if ( $recentChangesView ) {

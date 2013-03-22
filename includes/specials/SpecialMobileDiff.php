@@ -1,6 +1,6 @@
 <?php
 
-class SpecialMobileDiff extends UnlistedSpecialPage {
+class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 	private $revId;
 	/** @var Revision */
 	private $rev;

@@ -11,15 +11,11 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php } ?>
 		<?php $this->renderArticleHeader() ?>
 	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
-		<?php if ( !$this->data[ 'isSpecialPage' ] ) { ?>
 			<div id="content" class="content">
-		<?php } ?>
 			<?php $this->html( 'prebodytext' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
 			<?php $this->html( 'postbodytext' ) ?>
-		<?php if ( !$this->data[ 'isSpecialPage' ] ) { ?>
 			</div><!-- close #content -->
-		<?php } ?>
 	</div><!-- close #content_wrapper -->
 		<?php
 		if ( !$this->data[ 'isSpecialPage' ] ) {
