@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqhgB.gc",
+        "filename": "javascripts/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-03-22T21:51:30Z",
+      "side": 1,
+      "message": "function OverlayManager() {};",
+      "revId": "a594e17b2cf5952a339293e0bb29053b5ff83310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqlhJsl8",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-03-22T21:51:30Z",
+      "side": 1,
+      "message": "This is a bit tricky..",
+      "revId": "a594e17b2cf5952a339293e0bb29053b5ff83310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqvhNJnQ",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-03-22T21:51:30Z",
+      "side": 1,
+      "message": "Be consistent with the capitalization of hex color codes.",
+      "revId": "a594e17b2cf5952a339293e0bb29053b5ff83310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqng5FtU",
+        "filename": "tests/js/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-03-22T21:51:30Z",
+      "side": 1,
+      "message": "QUnit.module( \u0027MobileFrontend: mf-navigation.js\u0027, QUnit.newMwEnvironment() );",
+      "revId": "a594e17b2cf5952a339293e0bb29053b5ff83310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqtgjgqk",
+        "filename": "tests/js/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-03-22T21:51:30Z",
+      "side": 1,
+      "message": "* Pass the number of expects to test()\n* Have the callback function which contains the assertions accept an \u0027assert\u0027 param (QUnit will pass it), and use it to access assert methods:\n\n    test( \u0027Simple overlay\u0027, 2, function ( assert ) {\n        var overlay \u003d new nav.Overlay( { heading: \u0027\u003ch2\u003eTitle\u003c/h2\u003e\u0027, content: \u0027Text\u0027 } );\n        overlay.show();\n        assert.strictEqual( overlay.$el[0].parentNode, document.body, \u0027In DOM\u0027 );\n        strictEqual( overlay.$el.html(), \u0027\u003ch2\u003eTitle\u003c/h2\u003e/Text\u0027 );\n    }\n\nSee Gerrit change I214b3d4da, in which Krinkle proposes making the number of expects a required parameter.",
+      "revId": "a594e17b2cf5952a339293e0bb29053b5ff83310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqjgznvc",
+        "filename": "tests/js/common/mf-navigation.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-03-22T21:51:30Z",
+      "side": 1,
+      "message": "I\u0027m not familiar with the specific way you load modules in MFE, but wouldn\u0027t it be better to simply:\n\n    mw.loader.using( \u0027navigation\u0027, function ( nav ) {\n    } );",
+      "revId": "a594e17b2cf5952a339293e0bb29053b5ff83310",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
