@@ -209,6 +209,11 @@ class MobileFrontendHooks {
 				'javascripts/common/mf-navigation.js',
 				'tests/js/common/mf-navigation.js',
 				'javascripts/common/mf-notification.js',
+
+				// special mobilediff
+				'javascripts/externals/jsdiff.js',
+				'javascripts/specials/mobilediff.js', 'tests/js/specials/mobilediff.js',
+
 				'javascripts/modules/mf-photo.js', 'tests/js/test_mf-photo.js',
 				'javascripts/modules/mf-references.js', 'tests/js/test_references.js',
 				'javascripts/modules/mf-watchstar.js', 'tests/js/test_mf-watchstar.js',

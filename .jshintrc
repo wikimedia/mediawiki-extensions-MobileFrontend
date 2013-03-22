@@ -2,6 +2,7 @@
 	"globals": {
 		"console": true,
 		"jQuery": true,
+		"JsDiff": true,
 		"Hogan": true,
 		"QUnit": true,
 		"mw": true,

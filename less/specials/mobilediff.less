@@ -138,7 +138,11 @@
 	#mw-mf-diffview {
 		ins,
 		del {
+			padding-left: 0;
 			color: black;
+			&::before {
+				content: ""
+			}
 		}
 
 		ins {
@@ -148,6 +152,12 @@
 		del {
 			background-color: #ffdddd;
 			text-decoration: none;
+		}
+
+		.prettyDiff {
+			ins, del, span {
+				display: inline;
+			}
 		}
 	}
 }
