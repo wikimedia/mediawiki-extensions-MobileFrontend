@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqp9xdOA",
+        "filename": "javascripts/modules/mf-languages.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-22T18:55:30Z",
+      "side": 1,
+      "message": "Sorry for that, I commented the previous version forgetting that we can\u0027t call parent constructors yet ;) Thanks for the FIXME.",
+      "revId": "aaeaa4514d2cb19d72724ff7a1f48457dabd7e32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dql973Ls",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-22T18:55:30Z",
+      "side": 1,
+      "message": "I really don\u0027t think a variable named \"msg\" should exist in the entire module\u0027s scope, but let\u0027s leave it as it is now.",
+      "revId": "aaeaa4514d2cb19d72724ff7a1f48457dabd7e32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqv9IsI0",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-22T18:55:30Z",
+      "side": 1,
+      "message": "Probably doesn\u0027t have to be recreated on every a.help click, but let\u0027s leave it as it is for now.",
+      "revId": "aaeaa4514d2cb19d72724ff7a1f48457dabd7e32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
