@@ -1,4 +1,4 @@
-.mw-mf-overlay .tableContent > table {
+#mw-mf-overlay .tableContent > table {
   box-shadow: -4px 10px 10px -1px #aaaaaa;
 }
 #content table.expando {
