@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqm6M8IA",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-03-23T13:31:02Z",
+      "side": 1,
+      "message": "We use \"image\" in the core product, because it\u0027s more generic than photo. If you\u0027re also encouraging the upload of \"images\" (could be a screenshot, a diagram, ...), then I would encourage using \"image\" instead of \"photo\". Following this suggestion, might impact the working of the below message, too.",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
