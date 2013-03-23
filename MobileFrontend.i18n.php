@@ -31,7 +31,7 @@ $messages['en'] = array (
 	'mobile-frontend-settings-description' => 'Customize your experience on your mobile device with these mobile specific site settings.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons Here be dragons] mode',
-	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features but with more danger of bugs.',
+	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.',
 	'mobile-frontend-save-settings' => 'Save settings',
 	'mobile-frontend-random-button' => 'Random',
 
@@ -600,7 +600,7 @@ They can either exit the page and lose them or stay on the page until they are c
 See also:
 * {{msg-mw|tag-mobile_edit-description}}',
 	'tag-mobile_edit-description' => 'Change tag description e.g. in [[Special:Tags]], see also {{msg-mw|tag-mobile_edit}}',
-	'mobile-frontend-drawer-cancel' => 'Not visible but the text label for the cancel button inside a navigation overlay
+	'mobile-frontend-drawer-cancel' => 'Not visible, but the text label for the cancel button inside a navigation overlay
 {{Identical|Cancel}}',
 );
 
@@ -4814,7 +4814,7 @@ $messages['frr'] = array(
 	'mobile-frontend-settings-description' => 'Paase dan mobiil aperoot mä jodiar iinstelangen uun.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-settings-alpha' => '[//de.wikipedia.org/wiki/Hic_sunt_dracones „Hic sunt dracones“]-Modus',
-	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features but with more danger of bugs.',
+	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.',
 	'mobile-frontend-save-settings' => 'Iinstelangen seekre',
 	'mobile-frontend-random-button' => 'Tufaal',
 	'mobile-frontend-ajax-random-heading' => 'Weden lokalisiare ...',
