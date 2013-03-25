@@ -85,8 +85,10 @@ $specialPageAliases['lb'] = array(
 $specialPageAliases['mk'] = array(
 	'MobileFeedback' => array( 'МислењеМобилен' ),
 	'MobileOptions' => array( 'МобилниПоставки' ),
+	'Uploads' => array( 'Подигања' ),
 	'MobileDiff' => array( 'МобилнаРазлика' ),
 	'MobileMenu' => array( 'МобилноМени' ),
+	'Nearby' => array( 'ВоБлизина' ),
 );
 
 /** Malayalam (മലയാളം) */
@@ -128,6 +130,7 @@ $specialPageAliases['vi'] = array(
 $specialPageAliases['zh-hans'] = array(
 	'MobileFeedback' => array( '移动版反馈' ),
 	'MobileOptions' => array( '移动版选项' ),
+	'Uploads' => array( '上传' ),
 	'MobileDiff' => array( '移动版差异' ),
 	'MobileMenu' => array( '移动版菜单' ),
 	'Nearby' => array( '附近' ),
