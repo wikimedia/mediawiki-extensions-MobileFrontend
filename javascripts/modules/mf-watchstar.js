@@ -1,7 +1,8 @@
 (function( M, $ ) {
 
 var api = M.require( 'api' ), w = ( function() {
-	var lastToken, nav = M.require( 'navigation' ), popup = M.require( 'notifications' );
+	var lastToken, nav = M.require( 'navigation' ), popup = M.require( 'notifications' ),
+		drawer = new nav.CtaDrawer( { content: mw.msg( 'mobile-frontend-watchlist-cta' ) } );
 
 	// FIXME: this should live in a separate module and make use of MobileFrontend events
 	function logWatchEvent( eventType ) {
@@ -140,7 +141,6 @@ var api = M.require( 'api' ), w = ( function() {
 	}
 
 	function initWatchListIcon( container, title ) {
-		var drawer = new nav.CtaDrawer( { content: mw.msg( 'mobile-frontend-watchlist-cta' ) } );
 
 		api.getToken( 'watch' ).done( function( token ) {
 			lastToken = token;
