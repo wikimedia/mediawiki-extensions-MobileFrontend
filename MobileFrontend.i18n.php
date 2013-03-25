@@ -295,6 +295,8 @@ This buttons takes the user to the home page.
 	'mobile-frontend-logged-in-homepage-notification' => 'Heading at top of homepage telling user they are logged in',
 	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
 *$1 - username',
+	'mobile-frontend-handshake-title' => 'Title for the page redirecting the user to the login form.',
+	'mobile-frontend-handshake-wait' => 'Text asking the user to wait while he is redirected to the login form.',
 	'mobile-frontend-sign-up-heading' => 'Header for sign up page.
 {{Identical|Sign up}}',
 	'mobile-frontend-sign-in-heading' => 'Header for login page.
@@ -604,8 +606,6 @@ See also:
 	'tag-mobile_edit-description' => 'Change tag description e.g. in [[Special:Tags]], see also {{msg-mw|tag-mobile_edit}}',
 	'mobile-frontend-drawer-cancel' => 'Not visible, but the text label for the cancel button inside a navigation overlay
 {{Identical|Cancel}}',
-	'mobile-frontend-handshake-title' => 'Title for the page redirecting the user to the login form.',
-	'mobile-frontend-handshake-wait' => 'Text asking the user to wait while he is redirected to the login form.',
 );
 
 /** Achinese (Acèh)
@@ -1732,7 +1732,6 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Налады мабільнага сайту',
 	'mobile-frontend-settings-site-header' => 'Мовы {{GRAMMAR:родны|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => 'Праект «{{SITENAME}}» даступны на $1 {{PLURAL:$1|мове|мовах}}. Ніжэй выкладзеныя ўсе даступныя вэрсіі.',
-	'mobile-frontend-main-menu-contact' => 'Кантакты',
 	'mobile-frontend-main-menu-account-create' => 'Стварыць рахунак',
 	'mobile-frontend-page-menu-contents' => 'зьмест',
 	'mobile-frontend-page-menu-history' => 'Гісторыя',
@@ -1751,10 +1750,9 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-nearby-error' => 'У часе пошуку блізкіх старонак адбылася нечаканая памылка',
 	'mobile-frontend-donate-image-login' => 'Увайдзіце, каб праглядзець вашыя запампоўкі.',
 	'mobile-frontend-photo-upload-generic' => 'Ахвяраваць выяву',
-	'mobile-frontend-donate-image-title' => 'Ахвяраваньне выявы',
+	'mobile-frontend-donate-image-title' => 'Загрузкі',
 	'mobile-frontend-donate-image-summary' => 'Фатаграфіі ствараюць душу старонак {{GRAMMAR:родны|{{SITENAME}}}}. Як шмат старонак без фатаздымкаў толькі з-за таго, што крытычна не хапае фатаздымкаў з вольнымі ліцэнзіямі. Дапамажыце гэтым старонкам набыць сваю душу, ахвяраваўшы вашыя здымкі — загрузіўшы фота, яно трапляе ў рукі буйной супольнасьці рэдактараў {{GRAMMAR:родны|{{SITENAME}}}}.',
 	'mobile-frontend-donate-image-heading' => 'Ваш нядаўні ўнёсак',
-	'mobile-frontend-donate-image-page-title' => 'Запампоўка',
 	'mobile-frontend-listed-image-no-description' => 'Без апісаньня',
 	'mobile-frontend-watchlist-add' => '$1 дададзена ў сьпіс назіраньня',
 	'mobile-frontend-watchlist-removed' => '$1 выдалена са сьпісу назіраньня',
@@ -2828,6 +2826,8 @@ $messages['de'] = array(
 	'mobile-frontend-logged-out' => 'Nicht angemeldet',
 	'mobile-frontend-logged-in-homepage-notification' => 'Willkommen, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Angemeldet als $1.',
+	'mobile-frontend-handshake-title' => 'Weiterleitung …',
+	'mobile-frontend-handshake-wait' => 'Bitte warten, bis wir dich auf das Anmeldeformular weitergeleitet haben.',
 	'mobile-frontend-sign-up-heading' => 'Registrieren',
 	'mobile-frontend-sign-in-heading' => 'Registrieren',
 	'mobile-frontend-sign-in-why' => 'Falls du ein {{SITENAME}}-Benutzerkonto hast, kannst du dich unten anmelden.',
@@ -3058,6 +3058,7 @@ $messages['de-formal'] = array(
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Gorizon
  * @author Mirzali
  */
 $messages['diq'] = array(
@@ -3139,6 +3140,7 @@ $messages['diq'] = array(
 	'mobile-frontend-username-placeholder' => 'Nameyê karberi',
 	'mobile-frontend-password-placeholder' => 'Parola',
 	'mobile-frontend-login' => 'Qeyd be',
+	'mobile-frontend-account-create-submit' => 'Qeyd be',
 	'mobile-frontend-overlay-escape' => 'Peyser şo',
 	'mobile-frontend-placeholder' => '{{SITENAME}} de cıgeyre',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} de cı geyre (Beta)',
@@ -3158,11 +3160,10 @@ $messages['diq'] = array(
 	'mobile-frontend-main-menu-logout' => 'Bıveciye',
 	'mobile-frontend-main-menu-watchlist' => 'Lista seyri',
 	'mobile-frontend-main-menu-settings' => 'Eyari',
+	'mobile-frontend-main-menu-upload' => 'Barkerdışi',
 	'mobile-frontend-main-menu-settings-heading' => 'Eyarê sita mobile',
 	'mobile-frontend-settings-site-header' => 'Zıwanê {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} de $1 {{PLURAL:$1|zıwan mewcudo|zıwani mewcudê}}. Versiyonê cıyê bini lista cêrêne de estê.',
-	'mobile-frontend-main-menu-contact' => '
-İrtıbat',
 	'mobile-frontend-main-menu-account-create' => 'Hesab vıraze',
 	'mobile-frontend-page-menu-contents' => 'tedeestey',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
@@ -3172,10 +3173,14 @@ $messages['diq'] = array(
 	'mobile-frontend-ajax-page-loading' => '$1 bar beno',
 	'mobile-frontend-page-saving' => '$1 qeyd beno',
 	'mobile-frontend-ajax-page-error' => 'Wey! Tayê çi ters şi. Şıma ra reca ma awa ke pençereyê cıgeyrayoğê xo newe ra bıcerebnên.',
+	'mobile-frontend-donate-image-title' => 'Barkerdışi',
 	'mobile-frontend-watchlist-add' => '$1 bi zerreyê lista seyrkerdışê şıma',
 	'mobile-frontend-watchlist-removed' => 'Lista şımaya serykerdışi ra $1 wedariya.',
 	'mobile-frontend-watchlist-view' => 'Lista serykerdışê xo bıvêne',
-	'mobile-frontend-changeslist-ip' => 'IP', # Fuzzy
+	'mobile-frontend-watchlist-cta-button-login' => 'Cıkewtış',
+	'mobile-frontend-watchlist-cta-button-signup' => 'Qeyd bı',
+	'mobile-frontend-watchlist-a-z' => 'Pêro',
+	'mobile-frontend-changeslist-ip' => 'Karbero anonim',
 	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
 	'mobile-frontend-watchlist-filter-all' => 'Pêro',
 	'mobile-frontend-watchlist-filter-articles' => 'Wesiqey',
@@ -3195,6 +3200,8 @@ $messages['diq'] = array(
 	'mobile-frontend-image-uploading-wait' => 'Resım bar beno, kerem ke sero bıvınde.',
 	'mobile-frontend-photo-license' => 'Note: Resımê ke şıma pêro weşanenê bınê [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 lisans]i de weşaniyenê.', # Fuzzy
 	'mobile-frontend-photo-cancel' => 'Bıtexelne',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> barkerdış|<span>$1</span> barkerdışi}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ barkerdışi',
 	'mobile-frontend-drawer-cancel' => 'Bıtexelne',
 );
 
@@ -3313,7 +3320,6 @@ Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja',
 	'mobile-frontend-settings-site-header' => 'Rěcy {{GRAMMAR:genitiw|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} stoj w $1 {{PLURAL:$1|rěcy|rěcoma|rěcach|rěcach}} k dispoziciji. Wšykne k dispoziciji stojece wersije su dołojce nalicone:',
-	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-main-menu-account-create' => 'Konto załožyś',
 	'mobile-frontend-page-menu-contents' => 'wopśimjeśe',
 	'mobile-frontend-page-menu-history' => 'Historija',
@@ -3327,9 +3333,8 @@ Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-nearby-lookup-error' => 'Njejo móžno śi namakaś. Wopytaj hyšći raz.',
 	'mobile-frontend-donate-image-login' => 'Musyš pśizjawjony byś, aby swóje nagraśa wiźeł.',
 	'mobile-frontend-photo-upload-generic' => 'Wobraz pósćiś',
-	'mobile-frontend-donate-image-title' => 'Wobraz pósćiś',
+	'mobile-frontend-donate-image-title' => 'Nagraśa',
 	'mobile-frontend-donate-image-heading' => 'Twóje nejnowše pśinoski',
-	'mobile-frontend-donate-image-page-title' => 'Nagraś',
 	'mobile-frontend-donate-image-anon' => 'Trjebaš [[Special:UserLogin|wužywarske konto]], aby se bok nagraśow woglědał',
 	'mobile-frontend-listed-image-no-description' => 'Žedne wopisanje',
 	'mobile-frontend-donate-photo-upload-success' => 'Wuspěch! Twój wobraz dajo se něnto na {{GRAMMAR:lokatiw|{{SITENAME}}}} wužywaś!',
@@ -3379,7 +3384,7 @@ Pšosym wopytaj pózdźej hyšći raz.',
 	'mobile-frontend-photo-license' => 'Gaž kliknjoš na "Wótpósłaś" zwólijoš do našych [//wikimediafoundation.org/wiki/Terms_of_use wužywarskich wuměnjenjow] a pśizwólijoš swóje foto pód licencu  [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0] wózjawiś.',
 	'mobile-frontend-photo-submit' => 'Wótpósłaś',
 	'mobile-frontend-photo-cancel' => 'Pśetergnuś',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|1 nagraśe|$1 nagraśi|$1 nagraśa|$1 nagraśow}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> nagraśe|<span<$1</span> nagraśi|<span>$1</span> nagraśa|<span>$1</span> nagraśow}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ nagratych datajow',
 	'tag-mobile_edit' => 'Mobilna změna',
 	'tag-mobile_edit-description' => 'Z mobilnego sedła změnjony',
@@ -3999,19 +4004,19 @@ $messages['et'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Mobiilisaidi eelistused',
 	'mobile-frontend-settings-site-header' => '{{GRAMMAR:genitive|{{SITENAME}}}} keeled',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} on saadaval {{PLURAL:$1|ühes keeles|$1 keeles}}. Kõik saadaolevad versioonid on loetletud allpool.',
-	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-main-menu-account-create' => 'Loo konto',
 	'mobile-frontend-page-menu-contents' => 'sisu',
 	'mobile-frontend-page-menu-history' => 'Ajalugu',
 	'mobile-frontend-meta-data-issues-header' => 'Probleemid',
 	'mobile-frontend-meta-data-issues' => 'Selle leheküljega on probleeme',
 	'mobile-frontend-page-saving' => 'Lehekülje "$1" salvestamine',
+	'mobile-frontend-nearby-title' => 'Lähedal',
+	'mobile-frontend-nearby-loading' => 'Laaditakse sinu lähiümbrusega seotud teemasid',
 	'mobile-frontend-nearby-distance-report' => '$1km sinu praegusest asukohast',
 	'mobile-frontend-donate-image-login' => 'Pead olema sisse loginud, et näha oma üleslaaditud faile.',
 	'mobile-frontend-photo-upload-generic' => 'Kingi pilt',
-	'mobile-frontend-donate-image-title' => 'Kingi pilt',
+	'mobile-frontend-donate-image-title' => 'Üleslaadimised',
 	'mobile-frontend-donate-image-heading' => 'Sinu viimased muudatused',
-	'mobile-frontend-donate-image-page-title' => 'Üleslaadimine',
 	'mobile-frontend-donate-image-anon' => 'Üleslaadimiste lehekülje vaatamiseks on vaja [[Special:UserLogin|kasutajakontot]].',
 	'mobile-frontend-listed-image-no-description' => 'Kirjeldus puudub',
 	'mobile-frontend-watchlist-add' => '"$1" on sinu jälgimisloendisse lisatud.',
@@ -4034,15 +4039,21 @@ $messages['et'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Artiklid',
 	'mobile-frontend-watchlist-filter-talk' => 'Arutelu',
 	'mobile-frontend-watchlist-filter-other' => 'Muu',
+	'mobile-frontend-diffview-404-title' => 'Vigane redaktsioon',
 	'mobile-frontend-diffview-title' => 'Muudatused',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|muudatus|muudatust}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonüümne kasutaja',
 	'mobile-frontend-diffview-bytesadded' => 'Lisatud $1 {{PLURAL:$1|bait|baiti}}',
 	'mobile-frontend-diffview-bytesremoved' => 'Eemaldatud $1 {{PLURAL:$1|bait|baiti}}',
 	'mobile-frontend-diffview-explained' => 'Lisati (+) ja eemaldati (-) järgmised read:',
+	'mobile-frontend-photo-upload' => 'Lisa selle artikli juurde pilt',
+	'mobile-frontend-photo-caption-placeholder' => 'Lisa kirjeldus (nõutav)',
+	'mobile-frontend-photo-ownership' => 'Mina, $1, tegin selle pildi.',
 	'mobile-frontend-photo-upload-error' => 'Tõrge. Proovi uuesti.',
+	'mobile-frontend-photo-license' => 'Kui klõpsad "{{int:Mobile-frontend-photo-submit}}", nõustud meie [//wikimediafoundation.org/wiki/Terms_of_use kasutustingimustega] ja oma foto avaldamisega Creative Commonsi litsentsi "[//creativecommons.org/licenses/by-sa/3.0/deed.et Autorile viitamine + jagamine samadel tingimustel 3.0]" all.',
+	'mobile-frontend-photo-submit' => 'Saada',
 	'mobile-frontend-photo-cancel' => 'Loobu',
-	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|Üks üleslaadimine|$1 üleslaadimist}}', # Fuzzy
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>Üks</span> üleslaadimine|<span>$1</span> üleslaadimist}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Üle 500 üleslaadimise',
 	'tag-mobile_edit' => 'Mobiilimuudatus',
 	'tag-mobile_edit-description' => 'Mobiilisaidil tehtud muudatus',
@@ -4259,6 +4270,7 @@ $messages['fa'] = array(
  * @author Nedergard
  * @author Nike
  * @author Olli
+ * @author Silvonen
  * @author Stryn
  * @author VezonThunder
  */
@@ -4409,6 +4421,7 @@ Auta herättämään nämä sivut eloon lahjoittamalla kuviasi, joita olet valmi
 	'mobile-frontend-photo-upload-comment' => 'Lisäsi kuvan sivulle',
 	'mobile-frontend-photo-caption-placeholder' => 'Lisää kuvaus (vaaditaan)',
 	'mobile-frontend-image-loading' => 'Ladataan kuvaa',
+	'mobile-frontend-photo-ownership-help' => 'Mitä tämä tarkoittaa?',
 	'mobile-frontend-image-uploading-wait' => 'Lähetetään kuvaa. Odota.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Peruuta</a>, jos tämä kestää liian kauan.',
 	'mobile-frontend-photo-upload-error' => 'Virhe. Yritä uudelleen.',
@@ -4452,6 +4465,7 @@ $messages['fo'] = array(
  * @author Gomoko
  * @author Hashar
  * @author Lucky
+ * @author Peter17
  * @author Sherbrooke
  * @author Tititou36
  * @author Tpt
@@ -4465,6 +4479,8 @@ $messages['fr'] = array(
 	'mobile-frontend-logged-out' => 'Non connecté(e)',
 	'mobile-frontend-logged-in-homepage-notification' => 'Bienvenue, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Connecté en tant que $1.',
+	'mobile-frontend-handshake-title' => 'Redirection...',
+	'mobile-frontend-handshake-wait' => 'Veuillez patienter pendant que nous vous redirigeons vers le formulaire de connexion.',
 	'mobile-frontend-sign-up-heading' => 'Inscrivez-vous',
 	'mobile-frontend-sign-in-heading' => 'Connexion',
 	'mobile-frontend-sign-in-why' => 'Si vous avez un compte sur {{SITENAME}}, vous pouvez vous connecter ci-dessous.',
@@ -7223,13 +7239,18 @@ $messages['ka'] = array(
 	'mobile-frontend-sign-in-heading' => 'რეგისტრაცია',
 	'mobile-frontend-sign-in-why' => 'თუ თქვენ გაქვთ ანგარიში საიტზე {{SITENAME}}, თქვენ შეგიძლიათ შეხვიდეთ.',
 	'mobile-frontend-sign-in-error-heading' => 'ვაი',
+	'mobile-frontend-settings-description' => 'გამოიყენეთ მობილური ვერსიის ეს სპეციალური პარამეტრები, რათა უფრო კომფორტული გახდეს საიტის გამოყენება თქვენი მობილური მოწყობილობით.',
 	'mobile-frontend-settings-beta' => 'ბეტა',
+	'mobile-frontend-settings-alpha' => 'რეჟიმი „[//ka.wikipedia.org/wiki/Hic_sunt_dracones აქ ბინადრობენ დრაკონები]“',
+	'mobile-frontend-settings-alpha-description' => 'შედით საშიშ და გამოუკვლეველ მობილურ ტერიტორიაზე. მიიღეთ უფრო მეტი ექსპერიმენტის საშუალება და შეცდომების წარმოქმნის დიდი საშიშროება.',
 	'mobile-frontend-save-settings' => 'პარამეტრების შენახვა',
 	'mobile-frontend-random-button' => 'შემთხვევითი',
 	'mobile-frontend-ajax-random-heading' => 'ცოდნის ძიება...',
+	'mobile-frontend-ajax-random-quote' => 'ინტელექტუალური ზრდა უნდა დაიწყოს დაბადებისთანავე და შეწყდეს მხოლოდ სიკვდილთან ერთად',
 	'mobile-frontend-ajax-random-question' => 'ამ გვერდის კითხვა?',
 	'mobile-frontend-ajax-random-yes' => 'დიახ',
 	'mobile-frontend-ajax-random-retry' => 'კიდევ სცადეთ',
+	'mobile-frontend-ajax-random-suggestions' => 'სხვა წინადადებები:',
 	'mobile-frontend-back-to-top-of-section' => 'დაბრუნება უკან',
 	'mobile-frontend-close-section' => 'ამ სექციის დახურვა',
 	'mobile-frontend-show-button' => 'აჩვენე',
@@ -7252,6 +7273,7 @@ $messages['ka'] = array(
 	'mobile-frontend-featured-article' => 'დღის რჩეული სტატია',
 	'mobile-frontend-news-items' => 'სიახლეებში',
 	'mobile-frontend-leave-feedback-notice' => 'თქვენი გამოხმაურება ჩვენ დაგვეხმარება მობილური საიტის გამოყენების გაუმჯობესებაში. ის გამოქვეყნდება საჯაროდ (თქვენი მომხმარებლის სახელთან, ბრაუზერის ვერსიასა და ოპერაციულ სისტემასთან ერთად) გვერდზე &quot;$1&quot;. გთხოვთ, შეეცადეთ აირჩიოთ ინფორმატიული სიუჟეტური ხაზი, მაგალითად „განიერი ცხრილების ფორმატირების საკითხები“. თქვენი გამოხმაურება უნდა იყოს გამოყენების პირობების შესაბამისი.',
+	'mobile-frontend-leave-feedback-warning' => 'გთხოვთ, საკუთარ კომენტარებში არ მიუთითოთ პირადი ინფორმაცია, თუ არ გსურთ მისი გამოქვეყნება.',
 	'mobile-frontend-leave-feedback-subject' => 'თემა:',
 	'mobile-frontend-leave-feedback-message' => 'შეტყობინება:',
 	'mobile-frontend-leave-feedback-submit' => 'შეფასების გაგზავნა',
@@ -7264,6 +7286,7 @@ $messages['ka'] = array(
 	'mobile-frontend-leave-feedback-email-body' => 'გთხოვთ, აღწეროთ გაუმართაობა, რომელსაც თქვენ განიცდით საიტზე „{{SITENAME}}“ ამ ხაზის ზემოთ. სამწუხაროდ ჩვენ არ შეგვიძლია ვუპასუხოთ ყველა კითხვას.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'ტექნიკური პრობლემა',
 	'mobile-frontend-leave-feedback-general-link-text' => 'მთავარი შეფასება',
+	'mobile-frontend-leave-feedback-article-personal-link-text' => 'ინფორმაცია ჩემ შესახებ, ადამიანის ან კომპანიის შესახებ რომელსაც მე წარმოვადგენ',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'ფაქტიური შეცდომის შესახებ',
 	'mobile-frontend-leave-feedback-article-other-link-text' => 'სხვა პრობლემის შესახებ',
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'შეტყობინების თემა',
@@ -7275,6 +7298,7 @@ $messages['ka'] = array(
 	'mobile-frontend-feedback-no-message' => 'გთხოვთ, შეტყობინება აქ შეიყვანოთ',
 	'mobile-frontend-feedback-edit-summary' => '$1 - ავტომატურად ნარჩუნდება [[Special:MobileFeedback|უკუკავშირი]]',
 	'mobile-frontend-leave-feedback-thanks' => 'გმადლობთ თქვენი შეფასებისთვის',
+	'mobile-frontend-leave-feedback-post-error' => 'თქვენი შეტყობინების დამუშავებისას მოხდა შეცდომა. გთხოვთ, კვლავ სცადოთ მოგვიანებით.',
 	'mobile-frontend-language' => 'ენა:',
 	'mobile-frontend-language-article-heading' => 'სხვა ენაზე წაკითხვა',
 	'mobile-frontend-language-header' => 'ეს გვერდი ხელმისაწვდომია $1 {{PLURAL:$1|ენაზე|ენაზე}}',
@@ -7300,6 +7324,8 @@ $messages['ka'] = array(
 	'mobile-frontend-overlay-escape' => 'უკან',
 	'mobile-frontend-placeholder' => 'ძიება {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'ძიება {{SITENAME}} (ბეტა)',
+	'mobile-frontend-placeholder-alpha' => 'ძიება {{SITENAME}} (დრაკონის რეჟიმი)',
+	'mobile-frontend-search-help' => 'ზევით შეიყვანეთ ძიების პირობები და აქ გამოჩნდება შესაბამისი გვერდების სათაურები.',
 	'mobile-frontend-dismiss-notification' => 'ამ შეტყობინების დამალვა',
 	'mobile-frontend-clear-search' => 'გასუფთავება',
 	'mobile-frontend-privacy-link-text' => 'უსაფრთხოება',
@@ -7307,7 +7333,9 @@ $messages['ka'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license-text' => '
 შიგთავსი ხელმისაწვდომია [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] ლიცენზიით',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ka?useformat=mobile გამოყენების პირობები]',
 	'mobile-frontend-footer-contact' => 'კონტაქტი',
+	'mobile-frontend-search-noresults' => 'არ არის გვერდები, რომელთა სახელებიც შეესაბამება თქვენ მოთხოვნას. შეცვალეთ თქვენი მოთხოვნა ან კლავიატურაზე დააჭირეთ გვერდის შეგნით საძიებო ღილაკს.',
 	'mobile-frontend-main-menu-button-tooltip' => 'მთავარი მენიუს გახსნა',
 	'mobile-frontend-main-menu-page-title' => 'საიტის ნავიგაცია',
 	'mobile-frontend-main-menu-featured' => 'რჩეული',
@@ -7316,10 +7344,10 @@ $messages['ka'] = array(
 	'mobile-frontend-main-menu-logout' => 'გასვლა',
 	'mobile-frontend-main-menu-watchlist' => 'კონტროლის სია',
 	'mobile-frontend-main-menu-settings' => 'პარამეტრები',
-	'mobile-frontend-main-menu-upload' => 'ატვირთვა',
+	'mobile-frontend-main-menu-upload' => 'ატვირთვები',
 	'mobile-frontend-main-menu-settings-heading' => 'საიტის მობილური ვერსიის პარამეტრები',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ენები',
-	'mobile-frontend-main-menu-contact' => 'კონტაქტი',
+	'mobile-frontend-settings-site-description' => 'პროექტი {{SITENAME}} ხელმისაწვდომია $1 {{PLURAL:$1|ენაზე|ენაზე}}. ქვემოთ მოცემულია ყველა ხელმისაწვდომი ვერსია',
 	'mobile-frontend-main-menu-account-create' => 'ანგარიშის შექმნა',
 	'mobile-frontend-page-menu-contents' => 'შინაარსი',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
@@ -7328,16 +7356,26 @@ $messages['ka'] = array(
 	'mobile-frontend-meta-data-issues' => 'გვერდს აქვს რაღაც პრობლემა',
 	'mobile-frontend-ajax-page-loading' => 'იტვირთება $1',
 	'mobile-frontend-page-saving' => 'ინახება $1',
+	'mobile-frontend-ajax-page-error' => 'ვაი! რაღაც არ გამოვიდა. გთხოვთ, სცადეთ ბრაუზერის ფანჯრის განახლება.',
 	'mobile-frontend-nearby-title' => 'ახლოს',
+	'mobile-frontend-nearby-loading' => 'ინფორმაციის ჩატვირთვა იმის შესახებ, რაც თქვენ ადგილსამყოფელთან ახლოს მდებარეობს',
+	'mobile-frontend-nearby-requirements' => 'ეს გვერდი მოითხოვს, რომ ჩართული იყოს JavaScript  და ბრაუზერმა შეძლოს ინფორმაციის მიღება ადგილმდებარეობის შესახებ.',
 	'mobile-frontend-nearby-distance-report' => '$1 კმ თქვენი მიმდინარე მდებარეობიდან',
 	'mobile-frontend-nearby-lookup-error' => 'თქვენი მდებარეობის დადგენა ვერ ხერხდება. კიდევ სცადეთ..',
-	'mobile-frontend-donate-image-login' => 'შედით სისტემაში რათა იხილოთ თქვენი ატვირთვები',
+	'mobile-frontend-nearby-noresults' => 'თქვენ იმყოფებით გაურკვევლობის ცენტრში და ჩვენ ვერ შევძელით შესაბამისი თემების მოძიება. იქნებ დაწეროთ ერთი მათგანი?',
+	'mobile-frontend-nearby-refresh' => 'ჩვენ ზუსტად განვსაზღვრეთ თქვენი ადგილმდებარეობა. დააჭირეთ აქ, რათა განაახლოთ უახლოესი გვერდების სია',
+	'mobile-frontend-nearby-error' => 'გვერდების ძიებისას მოხდა მოულოდნელი შეცდომა, რაც დაკავშირებულია თქვენ ადგილმდებარეობასთან',
+	'mobile-frontend-donate-image-login' => 'თქვენ უნდა შეხვიდეთ სისტემაში რათა იხილოთ თქვენი ატვირთვები.',
 	'mobile-frontend-photo-upload-generic' => 'სურათის შეწირვა',
-	'mobile-frontend-donate-image-title' => 'სურათის შეწირვა',
+	'mobile-frontend-donate-image-title' => 'ატვირთვები',
+	'mobile-frontend-donate-image-summary' => 'ფოტოები აცოცხლებენ გვერდებს პროექტში {{SITENAME}}.
+აქ ბევრი გვერდია, რომელიც არ შეიცავს ილუსტრაციას, რაც გამოწვეულია თავისუფალი ლიცენზიის მქონე ფოტოების სიმცირით.
+დაგვეხმარეთ ამ გვერდების გაცოცხლებაში, შემოგვწირეთ თქვენი სურათები, რომლებზეც თანახმა ხართ გაუზიაროთ ყველას, რათა რედაქტორთა საზოგადოებამ პროექტიდან {{SITENAME}} შეძლოს მათი გამოყენება.',
 	'mobile-frontend-donate-image-heading' => 'თქვენი ბოლო ცლილებები',
-	'mobile-frontend-donate-image-page-title' => 'ატვირთვა',
 	'mobile-frontend-donate-image-anon' => 'ატვირთვების გვერდის სანახავად საჭიროა [[Special:UserLogin|მომხმარებლის ანგარიში]]',
 	'mobile-frontend-listed-image-no-description' => 'არ არის აღწერა',
+	'mobile-frontend-donate-photo-upload-success' => 'გამოვიდა! ახლა თქვენი სურათი შეიძლება გამოყენებულ იქნას საიტზე {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'გამოვიდა! გმადლობთ თქვენი წვილისათვის!',
 	'mobile-frontend-watchlist-add' => '$1 დაემატა თქვენი კონტროლის სიაში',
 	'mobile-frontend-watchlist-removed' => '$1 წაიშალა თქვენი კონტროლის სიიდან',
 	'mobile-frontend-watchlist-view' => 'თქვენი კონტროლის სიის ხილვა',
@@ -7345,6 +7383,7 @@ $messages['ka'] = array(
 	'mobile-frontend-watchlist-cta' => 'გთხოვთ, შედით ან დარეგისტრირდით, რათა იხილოთ ეს გვერდი.',
 	'mobile-frontend-watchlist-cta-button-login' => 'შესვლა',
 	'mobile-frontend-watchlist-cta-button-signup' => 'დარეგისტრირდით',
+	'mobile-frontend-watch-login' => 'ამ გვერდების სანახავად თქვენ უნდა შეხვიდეთ სისტემაში.',
 	'mobile-frontend-watchlist-a-z' => 'ყველა',
 	'mobile-frontend-watchlist-feed' => 'შეცვლილია',
 	'mobile-frontend-watchlist-a-z-empty' => 'ამჟამად თქვენ არ ადევნებთ თვალს არცერთ გვერდს',
@@ -7375,13 +7414,23 @@ $messages['ka'] = array(
 	'mobile-frontend-photo-upload-comment' => 'გვერდზე დაემატა ფოტო',
 	'mobile-frontend-photo-caption-placeholder' => 'აღწერის დამატება (სავალდებულოა)',
 	'mobile-frontend-image-loading' => 'სურათი იტვირთება',
+	'mobile-frontend-photo-ownership' => 'მე, მომხმარებელმა $1, შევქმენი ეს სურათი.',
+	'mobile-frontend-photo-ownership-help' => 'ეს რას ნიშნავს?',
+	'mobile-frontend-photo-ownership-confirm' => 'არის!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'ჩვენ შეგვიძლია მივიღოთ მხოლოდ თქვენ მიერ შექმნილი ნამუშევრები. გთხოვთ, არ ატვირთოთ სადმე ინტერნეტში მოძებნილი სურათები.',
+	'mobile-frontend-photo-ownership-bullet-two' => 'საავტორო უფლებებით დაცული ან უადგილო სურათები წაიშლება.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'თქვენი ატვირთული ფაილები განთავსებულია თავისუფალი ლიცენზიით და მათი გამოყენება ყველას შეუძლია.',
 	'mobile-frontend-image-uploading-wait' => 'სურათი იტვირთება, გთხოვთ მოიცადეთ. <a href="#">გააუქმეთ</a> თუ ეს დიდხანს გაგრძელდება.',
+	'mobile-frontend-image-uploading-long' => 'სურათი ჯერ ისევ იტვირთება! გმადლობთ მოთმინებისათვის.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">გააუქმეთ</a> თუ ეს დიდხანს გაგრძელდება.',
 	'mobile-frontend-photo-upload-error' => 'შეცდომა, კიდევ სცადეთ.',
+	'mobile-frontend-photo-upload-error-filename' => 'შეცდომა. გთხოვთ მიუთითოთ უფრო აღწერადი რეზიუმე.',
 	'mobile-frontend-photo-upload-success-article' => 'წარმატებით აიტვირთა! თქვენი სურათი ახლა უკვე განთავსებულია ამ გვერდზე.',
-	'mobile-frontend-photo-license' => '"მიღებაზე" დაწკაპუნებით, თქვენ ეთანხმებით ჩვენი [//wikimediafoundation.org/wiki/Terms_of_use გამოყენების წესებს] და თანახმა ხართ თქვენი ფოტოს გადაცემაზე [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Creative Common Attribution-ShareAlike 3.0 ლიცენზიით].',
+	'mobile-frontend-photo-license' => '"მიღებაზე" დაწკაპუნებით, თქვენ ეთანხმებით ჩვენი [//wikimediafoundation.org/wiki/Terms_of_use გამოყენების წესებს] და თანახმა ხართ თქვენი ფოტოს გადაცემაზე [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 ლიცენზიით].',
 	'mobile-frontend-photo-submit' => 'მიღება',
 	'mobile-frontend-photo-cancel' => 'გაუქმება',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> ატვირთვა|<span>$1</span> ატვირთვა}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ ატვირთვა',
 	'tag-mobile_edit' => 'რედაქტირება მობილურით',
 	'tag-mobile_edit-description' => 'რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან',
 	'mobile-frontend-drawer-cancel' => 'გაუქმება',
@@ -9213,6 +9262,11 @@ $messages['ml'] = array(
 	'mobile-frontend-photo-caption-placeholder' => 'വിവരണം ചേർക്കുക (ആവശ്യമാണ്)',
 	'mobile-frontend-image-loading' => 'ചിത്രം എടുക്കുന്നു',
 	'mobile-frontend-photo-ownership' => 'ഈ ചിത്രം സൃഷ്ടിച്ചത് $1 എന്ന ഞാനാണ്.',
+	'mobile-frontend-photo-ownership-help' => 'എന്താണിതിനർത്ഥം?',
+	'mobile-frontend-photo-ownership-confirm' => 'കിട്ടിപ്പോയ്!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'താങ്കൾ സ്വയമെടുത്ത ചിത്രങ്ങൾ മാത്രമേ ഞങ്ങൾക്ക് സ്വീകരിക്കാനാവൂ. ദയവായി ഇന്റർനെറ്റിൽ മറ്റെവിടെയെങ്കിലും താങ്കൾ കണ്ടെത്തിയ ചിത്രങ്ങൾ അപ്‌ലോഡ് ചെയ്യാതിരിക്കുക.',
+	'mobile-frontend-photo-ownership-bullet-two' => 'പകർപ്പവകാശസംരക്ഷിതമോ അനുയോജ്യമല്ലാത്തവയോ ആയ ചിത്രങ്ങൾ നീക്കം ചെയ്യപ്പെടുന്നതാണ്.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'താങ്കളുടെ അപ്‌ലോഡുകൾ ആർക്കും സ്വതന്ത്രമായി ഉപയോഗിക്കാവുന്ന വിധത്തിലുള്ള ഒരു സ്വതന്ത്ര ഉപയോഗാനുമതിയിൽ പ്രസിദ്ധീകരിക്കുന്നതാണ്.',
 	'mobile-frontend-image-uploading-wait' => 'ചിത്രം അപ്‌ലോഡ് ചെയ്യുന്നു, ദയവായി കാത്തിരിക്കുക.',
 	'mobile-frontend-image-uploading-long' => 'ചിത്രം ഇപ്പോഴും അപ്‌ലോഡ് ചെയ്യുകയാണ്! താങ്കളുടെ ക്ഷമയ്ക്ക് നന്ദി.',
 	'mobile-frontend-image-uploading-cancel' => 'ഇതിനു വളരെ കാലതാമസമുണ്ടെങ്കിൽ <a href="#">റദ്ദാക്കുക</a>.',
@@ -10877,7 +10931,7 @@ $messages['pms'] = array(
 	'mobile-frontend-about-link-text' => 'A propòsit',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license-text' => 'Contnù disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
-	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termo d'Usagi]",
+	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condission d'utilisassion]",
 	'mobile-frontend-footer-contact' => 'Contat',
 	'mobile-frontend-search-noresults' => "A-i é gnun-a pàgina ch'a corëspond a soa arserca. Ch'a modìfica soa arserca, o ch'a gnaca ël boton d'arserca dla tastadura për serché andrinta a le pàgine.",
 	'mobile-frontend-main-menu-button-tooltip' => 'Duverté lë mnù prinsipal',
@@ -10891,7 +10945,6 @@ $messages['pms'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Regolassion dël sit për ij sacociàbij',
 	'mobile-frontend-settings-site-header' => 'Lenghe ëd {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => "{{SITENAME}} a l'é disponìbil an $1 {{PLURAL:$1|lenga|lenghe}}. Tute le version disponìbij a son listà sì-sota",
-	'mobile-frontend-main-menu-contact' => 'Contat',
 	'mobile-frontend-main-menu-account-create' => 'Creé un cont',
 	'mobile-frontend-page-menu-contents' => 'contnù',
 	'mobile-frontend-page-menu-history' => 'Stòria',
@@ -10901,7 +10954,7 @@ $messages['pms'] = array(
 	'mobile-frontend-page-saving' => 'Salvé $1',
 	'mobile-frontend-ajax-page-error' => "Contacc! Quaicòs a l'é andàit mal ambelessì. Për piasì, ch'a preuva a rinfrësché la fnestra ëd sò navigador.",
 	'mobile-frontend-photo-upload-generic' => 'Doné na figura',
-	'mobile-frontend-donate-image-title' => 'Doné na figura',
+	'mobile-frontend-donate-image-title' => 'Doné na figura', # Fuzzy
 	'mobile-frontend-donate-image-summary' => "Le fòto a fan vive le pàgine dzora a {{SITENAME}}.
 A-i son tante pàgine che a l'han gnun-e fòto për na greva mancansa ëd fòto con licensa lìbera.
 Ch'a giuta a fé vive coste pàgine donand soe figure dont a veul dësbarassesse e ch'a podrìo esse dovrà da la gròssa comunità d'editor ëd {{SITENAME}}.",
@@ -10915,8 +10968,8 @@ Ch'a giuta a fé vive coste pàgine donand soe figure dont a veul dësbarassesse
 	'mobile-frontend-watchlist-cta-button-signup' => "Ch'as anscriva",
 	'mobile-frontend-watchlist-a-z' => 'Tùit',
 	'mobile-frontend-watchlist-feed' => 'Modificà',
-	'mobile-frontend-watchlist-a-z-empty' => "Al moment it të stas pa tenend d'euj gnun-e pagine",
-	'mobile-frontend-watchlist-feed-empty' => 'A-i son pa dle pagine con cambi recent',
+	'mobile-frontend-watchlist-a-z-empty' => "Al moment a ten d'euj gnun-e pàgine",
+	'mobile-frontend-watchlist-feed-empty' => "A-i son pa ëd pàgine con j'ùltime modìfiche",
 	'mobile-frontend-changeslist-ip' => 'Utent anònim',
 	'mobile-frontend-changeslist-nocomment' => 'gnun resumé ëd modìfica',
 	'mobile-frontend-watchlist-filter-all' => 'Tùit',
@@ -13934,6 +13987,7 @@ $messages['vep'] = array(
 );
 
 /** Vietnamese (Tiếng Việt)
+ * @author Cheers!
  * @author Minh Nguyen
  * @author Tranletuhan
  * @author පසිඳු කාවින්ද
@@ -14078,7 +14132,7 @@ $messages['vi'] = array(
 	'mobile-frontend-nearby-error' => 'Xuất hiện lỗi bất ngờ khi tìm kiếm trang kề bên',
 	'mobile-frontend-donate-image-login' => 'Bạn phải đăng nhập để xem các tập tin bạn đã tải lên.',
 	'mobile-frontend-photo-upload-generic' => 'Đóng góp một hình ảnh',
-	'mobile-frontend-donate-image-title' => 'Đóng góp một hình ảnh', # Fuzzy
+	'mobile-frontend-donate-image-title' => 'Tập tin tải lên',
 	'mobile-frontend-donate-image-summary' => 'Các hình ảnh làm cho {{SITENAME}} thú vị hơn.
 Hiện nay rất nhiều trang thiếu hình ảnh vì không có đủ hình ảnh được phát hành theo giấy phép tự do.
 Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng góp những hình ảnh của bạn mà bạn cảm thấy có thể giúp ích cộng đồng biên tập {{SITENAME}}.',
@@ -14125,10 +14179,17 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-photo-upload-comment' => 'Đã thêm hình vào trang',
 	'mobile-frontend-photo-caption-placeholder' => 'Thêm miêu tả (bắt buộc)',
 	'mobile-frontend-image-loading' => 'Đang tải hình',
+	'mobile-frontend-photo-ownership' => 'Tôi, $1, tạo ra hình ảnh này.',
+	'mobile-frontend-photo-ownership-help' => 'Điều này có nghĩa là gì?',
+	'mobile-frontend-photo-ownership-confirm' => 'Được rồi!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Chúng tôi chỉ có thể chấp nhận các hình ảnh do chính bạn chụp. Xin vui lòng không tải lên hình ảnh bạn tìm thấy một nơi nào đó khác trên Internet.',
+	'mobile-frontend-photo-ownership-bullet-two' => 'Hình ảnh có bản quyền hoặc không phù hợp sẽ bị xóa.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Các tập tin tải lên của bạn được phát hành theo một giấy phép tự do và bất kỳ ai cũng có thể sử dụng nó cho mục đích miễn phí.',
 	'mobile-frontend-image-uploading-wait' => 'Đang tải lên hình; xin vui lòng chờ.',
 	'mobile-frontend-image-uploading-long' => 'Vẫn đang còn tải lên hình! Cám ơn sự kiên nhẫn của bạn.',
 	'mobile-frontend-image-uploading-cancel' => 'Hãy <a href="#">hủy bỏ</a> nếu việc tải lên mất nhiều thì giờ quá.',
 	'mobile-frontend-photo-upload-error' => 'Đã xuất hiện lỗi; hãy thử lại.',
+	'mobile-frontend-photo-upload-error-filename' => 'Lỗi: Xin vui lòng tóm tắt một cách rõ hơn.',
 	'mobile-frontend-photo-upload-success-article' => 'Xong rồi, trang này hiện có hình ảnh của bạn.',
 	'mobile-frontend-photo-license' => 'Với việc bấm “Tải lên”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng], và bạn đồng ý phát hành hình ảnh của mình theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
 	'mobile-frontend-photo-submit' => 'Tải lên',
@@ -14450,11 +14511,10 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-main-menu-logout' => '退出',
 	'mobile-frontend-main-menu-watchlist' => '监视列表',
 	'mobile-frontend-main-menu-settings' => '设置',
-	'mobile-frontend-main-menu-upload' => '上传',
+	'mobile-frontend-main-menu-upload' => '上传', # Fuzzy
 	'mobile-frontend-main-menu-settings-heading' => '移动版网站设置',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}的语言',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}有$1种语言。下面列出所有的语言。',
-	'mobile-frontend-main-menu-contact' => '联系',
 	'mobile-frontend-main-menu-account-create' => '创建帐号',
 	'mobile-frontend-page-menu-contents' => '目录',
 	'mobile-frontend-page-menu-history' => '历史',
@@ -14473,12 +14533,11 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-nearby-error' => '试图找到附近的页面时发生意外错误',
 	'mobile-frontend-donate-image-login' => '登录查看您上传的图像', # Fuzzy
 	'mobile-frontend-photo-upload-generic' => '捐献一个图片',
-	'mobile-frontend-donate-image-title' => '捐献一个图片',
+	'mobile-frontend-donate-image-title' => '捐献一个图片', # Fuzzy
 	'mobile-frontend-donate-image-summary' => '照片给{{SITENAME}}上的页面带来了生命。
 由于严重缺乏自由版权的照片，而导致很多页面没有图片。
 你捐献的图片可以使页面鲜活起来，同时也可以让{{SITENAME}}编辑社群更广泛的使用你的照片。',
 	'mobile-frontend-donate-image-heading' => '你最近的贡献',
-	'mobile-frontend-donate-image-page-title' => '上传',
 	'mobile-frontend-donate-image-anon' => '查看上传页面需要一个[[Special:UserLogin|用户帐号]]',
 	'mobile-frontend-listed-image-no-description' => '没有说明',
 	'mobile-frontend-donate-photo-upload-success' => '成功！您的图像现在可以在 {{SITENAME}} 上使用！',
@@ -14520,12 +14579,15 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-upload-comment' => '添加照片到页面',
 	'mobile-frontend-photo-caption-placeholder' => '为本图像添加说明文字（必需）',
 	'mobile-frontend-image-loading' => '正在载入图像',
+	'mobile-frontend-photo-ownership-help' => '这是什么意思？',
+	'mobile-frontend-photo-ownership-bullet-two' => '受版权保护及不合适的图像将被删除。',
 	'mobile-frontend-image-uploading-wait' => '正在上传图像，请稍候。',
 	'mobile-frontend-image-uploading-long' => '图像仍在上传中!感谢您耐心等待。',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">取消</a>，如耗时过长。',
 	'mobile-frontend-photo-upload-error' => '上传失败，请重试。',
+	'mobile-frontend-photo-upload-error-filename' => '错误，请提供一个更具描述性的摘要。',
 	'mobile-frontend-photo-upload-success-article' => '完成！您的图像已被添加到页面中。',
-	'mobile-frontend-photo-license' => '点击“提交”意味着您同意我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意在[//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0协议]下释出您的照片。',
+	'mobile-frontend-photo-license' => '点击“提交”意味着您同意我们的[//wikimediafoundation.org/wiki/Terms_of_use 使用条款]，并同意在[//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0协议]下释出您的照片。', # Fuzzy
 	'mobile-frontend-photo-submit' => '提交',
 	'mobile-frontend-photo-cancel' => '取消',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+上传',
