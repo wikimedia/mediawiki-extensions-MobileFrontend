@@ -152,7 +152,7 @@ var m = ( function( $ ) {
 			M.on( 'page-loaded', function( curPage ) {
 				enableEditing( curPage.title );
 			} );
-		} else {
+		} else if ( inBeta ) { // note alpha is caught by above if statement
 			enableEditing( mw.config.get( 'wgTitle' ) );
 		}
 
