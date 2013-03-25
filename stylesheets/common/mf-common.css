@@ -38,7 +38,6 @@ a.external {
 }
 .divclearable {
   display: block;
-  zoom: 1;
   vertical-align: middle;
   position: relative;
 }

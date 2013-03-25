@@ -152,7 +152,7 @@ html.overlay #footer {
 .alert {
   padding: 0.5em 1em;
   background-repeat: no-repeat;
-  background-position: 0.5em 1em center;
+  background-position: 1em center;
   margin-bottom: 1em;
   min-height: 64px;
   font-size: 1em;
@@ -242,7 +242,7 @@ body {
   min-height: 100%;
 }
 .supportsPositionFixed #mw-mf-page-center {
-  min-height: none !important;
+  min-height: auto !important;
 }
 @media all and (max-width: 240px) {
   #mw-mf-menu-main li {
@@ -288,7 +288,7 @@ body {
   width: 100%;
   background-color: #f3f3f3;
   box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
-  word-break: break-word;
+  word-wrap: break-word;
   z-index: 3;
 }
 #mf-notification {
