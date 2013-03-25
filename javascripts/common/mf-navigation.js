@@ -5,7 +5,6 @@ var m = ( function( $ ) {
 		u = M.utils, mfePrefix = M.prefix,
 		inBeta = mw.config.get( 'wgMFMode' ) === 'beta',
 		Overlay,
-		OverlayManager,
 		Drawer, CtaDrawer;
 
 	Drawer = View.extend( {
@@ -57,70 +56,45 @@ var m = ( function( $ ) {
 		template: M.template.get( 'ctaDrawer' )
 	} );
 
-	OverlayManager = function() {};
-
-	OverlayManager.prototype = {
-		stack: [],
-		getTopOverlay: function() {
-			return this.stack[ this.stack.length - 1 ];
-		},
-		pop: function() {
-			var overlay = this.stack.pop(); // assume the overlay being escaped is the topmost one
-			// Make sure all open overlays are closed before returning to article
-			if ( this.stack.length === 0 ) {
-				$( 'html' ).removeClass( 'overlay' );
-				// return to last known scroll position
-				window.scrollTo( document.body.scrollLeft, overlay.scrollTop );
-				return true;
-			} else {
-				this.getTopOverlay().show();
-				return false;
-			}
-		},
-		push: function( overlay ) {
-			// hide the current open overlay
-			var top = this.getTopOverlay();
-			if ( top ) {
-				top.hide();
-			}
-
-			this.stack.push( overlay );
-			$( 'html' ).addClass( 'overlay' ).
-				removeClass( 'navigationEnabled' );
-
-			// skip the URL bar if possible
-			window.scrollTo( 0, 1 );
-		}
-	};
-
 	Overlay = View.extend( {
 		defaults: {
 			heading: '',
 			content: '',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' )
 		},
+		parent: null,
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
-		initialize: function() {
+		initialize: function( options ) {
 			var self = this;
+			this.parent = options.parent;
 			this.isOpened = false;
 			this.$( '.cancel' ).click( function( ev ) {
 				ev.preventDefault();
 				self.hide();
-				self.isOpened = false;
-				M.emit( 'overlay-closed' );
 			} );
 		},
 		show: function() {
+			if ( this.parent ) {
+				this.parent.hide();
+			}
 			this.$el.appendTo( 'body' );
 			this.scrollTop = document.body.scrollTop;
-			if ( !this.isOpened ) {
-				this.isOpened = true;
-				M.emit( 'overlay-opened', this );
-			}
+			$( 'html' ).addClass( 'overlay' ).
+				removeClass( 'navigationEnabled' );
+
+			// skip the URL bar if possible
+			window.scrollTo( 0, 1 );
 		},
 		hide: function() {
 			this.$el.detach();
+			if ( !this.parent ) {
+				$( 'html' ).removeClass( 'overlay' );
+				// return to last known scroll position
+				window.scrollTo( document.body.scrollLeft, this.scrollTop );
+			} else {
+				this.parent.show();
+			}
 		}
 	} );
 
@@ -141,7 +115,7 @@ var m = ( function( $ ) {
 	}
 
 	function init() {
-		var manager,
+		var
 			search = document.getElementById(  mfePrefix + 'search' );
 
 		$( '#mw-mf-menu-main a' ).click( function() {
@@ -199,15 +173,6 @@ var m = ( function( $ ) {
 			if ( !inBeta || $( window ).width() < 700 ) {
 				u( document.documentElement ).removeClass( 'navigationEnabled' );
 			}
-		} );
-
-		// events
-		manager = new OverlayManager();
-		M.on( 'overlay-opened', function( overlay ) {
-			manager.push( overlay );
-		} );
-		M.on( 'overlay-closed', function() {
-			manager.pop();
 		} );
 	}
 

@@ -26,7 +26,8 @@ test( 'Close overlay', function() {
 
 test( 'Stacked overlays', function() {
 	var overlay = new nav.Overlay( { heading: 'Overlay 1', content: 'Text' } ),
-		overlayTwo = new nav.Overlay( { heading: 'Overlay 2', content: 'Text <button class="cancel">cancel</button>' } );
+		overlayTwo = new nav.Overlay( { heading: 'Overlay 2', content: 'Text <button class="cancel">cancel</button>',
+			parent: overlay } );
 	overlay.show();
 	overlayTwo.show();
 	strictEqual( $( 'html' ).hasClass( 'overlay' ), true, 'In overlay mode' );

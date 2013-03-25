@@ -296,11 +296,14 @@
 		},
 
 		setImageUrl: function( url ) {
+			var self = this;
 			this.imageUrl = url;
 			this.overlay.$( '.loading' ).remove();
 			this.overlay.$( 'a.help' ).on( 'click', function( ev ) {
 				ev.preventDefault(); // avoid setting #
-				var overlay = new CopyrightOverlay();
+				var overlay = new CopyrightOverlay( {
+					parent: self.overlay
+				} );
 				overlay.show();
 			} );
 			$( '<img>' ).attr( 'src', url ).prependTo( this.overlay.$( '.photoPreview' ) );
@@ -461,7 +464,7 @@
 				progressPopup = new PhotoUploadProgress();
 
 			this.emit( 'start' );
-			this.preview.overlay.close();
+			this.preview.overlay.hide();
 			popup.show( progressPopup.$el, 'locked noButton loading' );
 			progressPopup.on( 'cancel', function() {
 				api.abort();
