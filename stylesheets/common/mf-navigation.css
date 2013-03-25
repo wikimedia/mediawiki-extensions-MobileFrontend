@@ -290,6 +290,30 @@ body {
   box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
   word-wrap: break-word;
   z-index: 3;
+  display: none;
+}
+#mf-notification.visible,
+.drawer.visible {
+  display: block;
+}
+.transforms .alpha #mf-notification,
+.transforms .alpha .drawer {
+  display: block;
+  bottom: -100px;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.transforms .alpha #mf-notification.visible,
+.transforms .alpha .drawer.visible {
+  opacity: 1;
+  -webkit-transform: translate3d(0, -98px, 0);
+  transform: translate3d(0, -98px, 0);
 }
 #mf-notification {
   font-size: 0.9em;
