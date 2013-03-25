@@ -58,6 +58,7 @@ $autoloadClasses = array (
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
 	'SpecialNearby' => 'specials/SpecialNearby',
 	'UnlistedSpecialMobilePage' => 'specials/UnlistedSpecialMobilePage',
+	'SpecialLoginHandshake' => 'specials/SpecialLoginHandshake',
 
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
@@ -109,12 +110,16 @@ $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
 	global $wgExtMobileFrontend, $wgResourceModules, $wgMFSpecialModuleStubs,
-		$wgMFNearby, $wgSpecialPages;
+		$wgMFNearby, $wgSpecialPages, $wgMFLoginHandshakeUrl;
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
+	}
+
+	if ( $wgMFLoginHandshakeUrl ) {
+		$wgSpecialPages['LoginHandshake'] = 'SpecialLoginHandshake';
 	}
 }
 
@@ -531,10 +536,11 @@ $wgResourceModules['mobile.userlogin.styles'] = $wgMFMobileSpecialPageResourceBo
 		'stylesheets/specials/userlogin.css',
 	),
 );
-$wgResourceModules['mobile.userlogin.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+$wgResourceModules['mobile.userlogin.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
 	'scripts' => array(
 		'javascripts/specials/userlogin.js',
 	),
+	'position' => 'top',
 );
 $wgResourceModules['mobile.uploads.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 	'messages' => array(
@@ -581,6 +587,15 @@ $wgResourceModules['mobile.userlogout.styles'] = $wgMFMobileSpecialPageResourceB
 	'styles' => array(
 		'stylesheets/specials/userlogin.css',
 	),
+);
+$wgResourceModules['mobile.loginhandshake.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'dependencies' => array(
+		'jquery.cookie',
+	),
+	'scripts' => array(
+		'javascripts/specials/loginhandshake.js',
+	),
+	'position' => 'top',
 );
 
 /**
@@ -783,6 +798,13 @@ $wgMFForceSecureLogin = false;
  * Defaults to false.
  */
 $wgMFNearby = false;
+
+/**
+ * Whether the login form should redirect to another URL on the first login attempt.
+ *
+ * Defaults to false.
+ */
+$wgMFLoginHandshakeUrl = false;
 
 /**
  * Pages with smaller parsed HTML size are not cached
