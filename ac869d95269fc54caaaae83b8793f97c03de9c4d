@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "DqpBU.iA",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-25T20:00:47Z",
+      "side": 1,
+      "message": "Correct. I want to use it for dynamic sections.",
+      "parentUuid": "DqpD4ekg",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqlDJgiU",
         "filename": "javascripts/views/page.js",
         "patchSetId": 10
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "DqhBByl0",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-25T20:00:47Z",
+      "side": 1,
+      "message": "ahh yeh I thought I was protecting against options being {} but I now realise defaults sets it.\n\nChecking against { sections: false } seems a little stupid i guess?",
+      "parentUuid": "DqlDJgiU",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqjDt7o8",
         "filename": "javascripts/views/page.js",
         "patchSetId": 10
@@ -64,6 +100,24 @@
       "writtenOn": "2013-03-25T19:58:21Z",
       "side": 1,
       "message": "Why do we have both sectionData and this.sections? Aren\u0027t they the same thing? Am I missing something?",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqnAwRgE",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-25T20:00:47Z",
+      "side": 1,
+      "message": "The idea was to allow easy look of of sections. This might not be the best way of doing it (see getSubSection and getSubSections)",
+      "parentUuid": "DqjDt7o8",
       "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
