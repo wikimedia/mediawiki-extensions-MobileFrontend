@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqhC0as4",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:29:02Z",
+      "side": 1,
+      "message": "So this loads not only in alpha?",
+      "revId": "2223e52c27f26151a9e12fe27e4866907d00bbde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqpDAei8",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:29:02Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "2223e52c27f26151a9e12fe27e4866907d00bbde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqnD1pn8",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:29:02Z",
+      "side": 1,
+      "message": "Double space.",
+      "revId": "2223e52c27f26151a9e12fe27e4866907d00bbde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqtDP0lU",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:29:02Z",
+      "side": 1,
+      "message": "Why is this required? The overlay seems to be covering it anyway.",
+      "revId": "2223e52c27f26151a9e12fe27e4866907d00bbde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqnDcxg8",
+        "filename": "less/modules/mf-search.less",
+        "patchSetId": 11
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:29:02Z",
+      "side": 1,
+      "message": "Seems to be unnecessary to leave that if we apply those rules to all li tags.",
+      "revId": "2223e52c27f26151a9e12fe27e4866907d00bbde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
