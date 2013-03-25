@@ -161,7 +161,7 @@
 				var formData = new FormData(), descTextToAppend,
 					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 );
 
-				descTextToAppend = mw.config.get( 'wgPhotoUploadAppendToDesc' );
+				descTextToAppend = mw.config.get( 'wgMFPhotoUploadAppendToDesc' );
 				descTextToAppend = descTextToAppend ? '\n\n' + descTextToAppend : '';
 				options.fileName = generateFileName( options.description, '.' + ext );
 
