@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqvBcVn0",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:58:21Z",
+      "side": 1,
+      "message": "I\u0027m not sure why we\u0027d like to make it a View. It\u0027s basically converting { heading: \u0027...\u0027, content: \u0027...\u0027, id: \u0027... } into { heading: \u0027...\u0027, content: \u0027...\u0027, id: \u0027... } with a few methods that don\u0027t do anything anyway.",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqpD4ekg",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:58:21Z",
+      "side": 1,
+      "message": "I\u0027m not sure why this is a View either... Is this some transitional version and we plan to use templates later?",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqlDJgiU",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:58:21Z",
+      "side": 1,
+      "message": "This is always true. An empty array always evaluates to true.\nThis check is unnecessary anyway, the loop will simply execute 0 times if the array is empty.",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqjDt7o8",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:58:21Z",
+      "side": 1,
+      "message": "Why do we have both sectionData and this.sections? Aren\u0027t they the same thing? Am I missing something?",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqjCWTvA",
+        "filename": "tests/js/views/page.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T19:58:21Z",
+      "side": 1,
+      "message": "Please prefix the test file with test_. It\u0027s easier to distinguish them in editors.",
+      "revId": "ac869d95269fc54caaaae83b8793f97c03de9c4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
