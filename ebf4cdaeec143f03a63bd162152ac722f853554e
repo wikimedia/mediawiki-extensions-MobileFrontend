@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqrDe3mg",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-25T18:38:38Z",
+      "side": 1,
+      "message": "I\u0027m sorry but I\u0027m not sure what that code is doing. When we press back button for the first time it does nothing, and when we press it more times it loads the page if state contains title? Why? I assume this is for dynamic page loading, but why the firstRun check?",
+      "revId": "ebf4cdaeec143f03a63bd162152ac722f853554e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
