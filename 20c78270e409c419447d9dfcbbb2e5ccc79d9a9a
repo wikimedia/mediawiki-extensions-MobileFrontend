@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DqjSnGxA",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-26T17:06:23Z",
+      "side": 1,
+      "message": "I do plan on working on this. I\u0027ve currently only exposed Page to avoid other modules using Section.",
+      "parentUuid": "DqnG6hb8",
+      "revId": "20c78270e409c419447d9dfcbbb2e5ccc79d9a9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqjG0Dc8",
         "filename": "javascripts/views/page.js",
         "patchSetId": 12
@@ -30,6 +48,24 @@
       "writtenOn": "2013-03-26T15:06:06Z",
       "side": 1,
       "message": "OK, so we don\u0027t want to store it only in an object because we want to persist the order? Still, you can just do:\n\nthis._sectionLookup[ section.id ] \u003d section;\n\nand then in getSubSection():\n\nreturn this._sectionLookup[ id ];\n\nObjects are stored by reference, so there\u0027s no memory penalty.",
+      "revId": "20c78270e409c419447d9dfcbbb2e5ccc79d9a9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqpS2Jzw",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-26T17:06:23Z",
+      "side": 1,
+      "message": "This is what I was doing before but you found that confusing. How can I make this less confusing?",
+      "parentUuid": "DqjG0Dc8",
       "revId": "20c78270e409c419447d9dfcbbb2e5ccc79d9a9a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
