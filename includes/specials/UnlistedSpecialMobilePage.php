@@ -10,6 +10,8 @@ class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 		$ctx = MobileContext::singleton();
 		// assumes mobile skin
 		$mobileSkin = $ctx->getSkin();
-		$mobileSkin->addArticleClass( 'noMargins' );
+		if ( $ctx->shouldDisplayMobileView() ) {
+			$mobileSkin->addArticleClass( 'noMargins' );
+		} // FIXME: do redirect ? Make page work on desktop?
 	}
 }
