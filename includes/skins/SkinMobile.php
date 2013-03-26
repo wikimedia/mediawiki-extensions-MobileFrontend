@@ -268,7 +268,7 @@ class SkinMobile extends SkinMobileBase {
 			$out->addModules( $moduleNames['bottom'] );
 			$out->addModules( $contextModules['bottom'] );
 			// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
-			if ( in_array( 'mobile.action.edit', $moduleNames['bottom'] ) ) {
+			if ( in_array( 'mobile.action.edit', $contextModules['bottom'] ) ) {
 				$bottomScripts = Html::inlineScript(
 					'mw.loader.implement("mediawiki.action.edit", [],{},{});' .
 					'mw.toolbar = { addButton: function(){}, init: function(){} };'
