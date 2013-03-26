@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqlF3QZ8",
+        "filename": "less/specials/mobilemenu.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-26T11:16:02Z",
+      "side": 1,
+      "message": "Maybe @embed those too? Or old phones get confused by embedded images?\n\nAlso, this works but it seems to me that it relies on the order of loading of CSS files which is shaky. Both CSS rules (this one and the one for hi-res images) are equally strong, so the second one overwrites the first one. If the order of loading CSS changes, the old phones will get hi-res icons.",
+      "revId": "8c69d9cb65f40d4e18a59bfe31422272277e4a6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
