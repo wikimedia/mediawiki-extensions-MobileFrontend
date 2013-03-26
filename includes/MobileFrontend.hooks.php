@@ -21,7 +21,8 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
-		global $wgMFPhotoUploadEndpoint, $wgCookiePath, $wgPhotoUploadAppendToDesc, $wgMFLoginHandshakeUrl;
+		global $wgMFPhotoUploadEndpoint, $wgCookiePath,
+			$wgMFPhotoUploadAppendToDesc, $wgMFLoginHandshakeUrl;
 
 		$context = MobileContext::singleton();
 		$title = $out->getTitle();
@@ -45,7 +46,7 @@ class MobileFrontendHooks {
 			'domain' => $context->getStopMobileRedirectCookieDomain(),
 			'path' => $wgCookiePath,
 		);
-		$vars[ 'wgPhotoUploadAppendToDesc' ] = $wgPhotoUploadAppendToDesc;
+		$vars[ 'wgMFPhotoUploadAppendToDesc' ] = $wgMFPhotoUploadAppendToDesc;
 		$vars[ 'wgImagesDisabled' ] = $context->imagesDisabled();
 
 		if ( $context->isAlphaGroupMember() ) {
