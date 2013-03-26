@@ -9,63 +9,94 @@
 	position: absolute;
 	border-right: solid 1px #AAA;
 	display: none; /* JS only */
+}
 
-	#mw-mf-content-left {
-		height: 100%;
-		border-left: solid 12px #252525;
-		border-right: solid 1px black;
-	}
+#mw-mf-content-left {
+	height: 100%;
+	border-left: solid 12px #252525;
+	border-right: solid 1px black;
+}
 
-	#mw-mf-menu-main {
-		background-color: @mainMenuBackgroundColor;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		height: 100%;
-		border-left: solid 12px #252525;
-		border-right: solid 1px black;
+#mw-mf-menu-main {
+	background-color: @mainMenuBackgroundColor;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	border-left: solid 12px #252525;
+	border-right: solid 1px black;
 
-		li {
-			text-shadow: 0 1px 0 black;
-			border-bottom: 1px solid #717171;
-			font-weight: normal;
+	li {
+		text-shadow: 0 1px 0 black;
+		border-bottom: 1px solid #717171;
+		font-weight: normal;
+		&:hover {
+			background-color: #5C5C5C;
+			border-left: solid 12px #3366BB;
+			margin-left: -12px;
+		}
+
+		a {
+			color: white;
+			display: block;
+			padding: 13px 10px 11px 42px;
+			line-height: 22px;
+			background-repeat: no-repeat;
+			.background-size(24px, 24px);
+			background-position: 10px 50%;
+			border-bottom: 1px solid #3e3e3e;
 			&:hover {
-				background-color: #5C5C5C;
-				border-left: solid 12px #3366BB;
-				margin-left: -12px;
-			}
-
-			a {
-				color: white;
-				display: block;
-				padding: 13px 10px 11px 42px;
-				line-height: 22px;
-				background-repeat: no-repeat;
-				.background-size(24px, 24px);
-				background-position: 10px 50%;
-				border-bottom: 1px solid #3e3e3e;
-				&:hover {
-					text-decoration: none;
-				}
-			}
-
-			// low-res icons for old phones that don't support background-size
-			&.icon-home a {
-				background-image: url(images/menu/lowres/home.png);
-			}
-
-			&.icon-random a {
-				background-image: url(images/menu/lowres/random.png);
-			}
-
-			&.icon-settings a {
-				background-image: url(images/menu/lowres/settings.png);
-			}
-
-			&.icon-loginout a {
-				background-image: /* @embed */url(images/menu/lowres/loginout.png);
+				text-decoration: none;
 			}
 		}
+
+		// low-res icons for old phones that don't support background-size
+		&.icon-home a {
+			background-image: url(images/menu/lowres/home.png);
+		}
+
+		&.icon-random a {
+			background-image: url(images/menu/lowres/random.png);
+		}
+
+		&.icon-settings a {
+			background-image: url(images/menu/lowres/settings.png);
+		}
+
+		&.icon-loginout a {
+			background-image: /* @embed */url(images/menu/lowres/loginout.png);
+		}
+	}
+}
+
+// hi-res menu icons
+.jsEnabled #mw-mf-menu-main li {
+	&.icon-home a {
+		background-image: /* @embed */url(images/menu/home.png);
+	}
+
+	&.icon-random a {
+		background-image: /* @embed */url(images/menu/random.png);
+	}
+
+	&.icon-watchlist a {
+		background-image: /* @embed */url(images/menu/watchlist.png);
+	}
+
+	&.icon-uploads a {
+		background-image: /* @embed */url(images/menu/uploads.png);
+	}
+
+	&.icon-nearby a {
+		background-image: /* @embed */url(images/menu/nearby.png);
+	}
+
+	&.icon-settings a {
+		background-image: /* @embed */url(images/menu/settings.png);
+	}
+
+	&.icon-loginout a {
+		background-image: /* @embed */url(images/menu/loginout.png);
 	}
 }
 
