@@ -93,7 +93,6 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 			array( 'capable', '' ),
 			array( 'ie', 'mobile.device.ie' ),
 			array( 'iphone', 'mobile.device.iphone' ),
-			array( 'native_iphone', '' ),
 			array( 'kindle', 'mobile.device.kindle' ),
 			array( 'kindle2', 'mobile.device.kindle' ),
 			array( 'blackberry', 'mobile.device.blackberry' ),
