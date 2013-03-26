@@ -70,6 +70,7 @@ $specialPageAliases['it'] = array(
 $specialPageAliases['ko'] = array(
 	'MobileFeedback' => array( '모바일피드백' ),
 	'MobileOptions' => array( '모바일설정' ),
+	'Uploads' => array( '올린파일' ),
 	'MobileDiff' => array( '모바일차이점' ),
 	'MobileMenu' => array( '모바일메뉴' ),
 	'Nearby' => array( '근처' ),
