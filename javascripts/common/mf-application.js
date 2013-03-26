@@ -88,7 +88,7 @@
 
 	// http://stackoverflow.com/a/12621264/365238
 	function supports3dTransforms() {
-		var el = $( 'p' )[0], has3d, t,
+		var el = document.createElement( 'p' ), has3d, t,
 			transforms = {
 				'webkitTransform': '-webkit-transform',
 				//'OTransform': '-o-transform',
