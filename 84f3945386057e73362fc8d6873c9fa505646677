@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqr82qeQ",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-26T01:35:13Z",
+      "side": 1,
+      "message": "unrelated patchset change.",
+      "revId": "84f3945386057e73362fc8d6873c9fa505646677",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dql8zzfU",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-26T01:35:13Z",
+      "side": 1,
+      "message": "This should have a return on an else statement - we don\u0027t want to run the code below right?",
+      "revId": "84f3945386057e73362fc8d6873c9fa505646677",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
