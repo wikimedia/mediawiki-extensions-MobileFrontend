@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DqjEkDbE",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-26T11:09:18Z",
+      "side": 1,
+      "message": "Well, it\u0027s not a change for me. And I still think that creating commits like \"remove two newlines\" is a waste of time. I refrain from changes like that in big complex commits, but here it\u0027s easy to notice that it\u0027s just formatting.",
+      "parentUuid": "Dqr82qeQ",
+      "revId": "84f3945386057e73362fc8d6873c9fa505646677",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dql8zzfU",
         "filename": "javascripts/modules/mf-photo.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-03-26T01:35:13Z",
       "side": 1,
       "message": "This should have a return on an else statement - we don\u0027t want to run the code below right?",
+      "revId": "84f3945386057e73362fc8d6873c9fa505646677",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqvE2leU",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-26T11:09:18Z",
+      "side": 1,
+      "message": "I thought about that. We can also run the code below, it simply won\u0027t do anything in this case. But maybe it\u0027s clearer with a return, I\u0027ll add it.",
+      "parentUuid": "Dql8zzfU",
       "revId": "84f3945386057e73362fc8d6873c9fa505646677",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
