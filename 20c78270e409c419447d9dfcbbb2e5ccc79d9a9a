@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqnG6hb8",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-26T15:06:06Z",
+      "side": 1,
+      "message": "So both Section and Page will use templates in future? I guess I\u0027d still not make Section a View now. I mean, it\u0027s easy to change later and right now just confuses potential code reader as to what a View actually is and what it should be used for.\nWe can leave it if you plan on working on dynamic loading very soon.",
+      "revId": "20c78270e409c419447d9dfcbbb2e5ccc79d9a9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqjG0Dc8",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-26T15:06:06Z",
+      "side": 1,
+      "message": "OK, so we don\u0027t want to store it only in an object because we want to persist the order? Still, you can just do:\n\nthis._sectionLookup[ section.id ] \u003d section;\n\nand then in getSubSection():\n\nreturn this._sectionLookup[ id ];\n\nObjects are stored by reference, so there\u0027s no memory penalty.",
+      "revId": "20c78270e409c419447d9dfcbbb2e5ccc79d9a9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
