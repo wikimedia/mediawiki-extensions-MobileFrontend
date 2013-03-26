@@ -10,3 +10,24 @@
 		display: none;
 	}
 }
+
+#mw-mf-menu-main {
+	li {
+		// low-res icons for old phones that don't support background-size
+		&.icon-home a {
+			background-image: url(images/menu/lowres/home.png);
+		}
+
+		&.icon-random a {
+			background-image: url(images/menu/lowres/random.png);
+		}
+
+		&.icon-settings a {
+			background-image: url(images/menu/lowres/settings.png);
+		}
+
+		&.icon-loginout a {
+			background-image: url(images/menu/lowres/loginout.png);
+		}
+	}
+}
