@@ -280,6 +280,6 @@ i {
 .jsonly {
   display: none;
 }
-.jsEnabled .jsonly {
+.client-js .jsonly {
   display: block;
 }

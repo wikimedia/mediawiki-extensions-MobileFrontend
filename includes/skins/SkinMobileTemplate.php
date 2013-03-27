@@ -67,7 +67,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'touchIcon' ) ?>
 		<?php if ( $this->data['supports_jquery'] ) { ?>
 		<script type="text/javascript">
-			document.documentElement.className += ' jsEnabled page-loading';
+			document.documentElement.className += ' client-js page-loading';
 		</script>
 		<?php } ?>
 		<?php $this->html( 'preamble' ) ?>
