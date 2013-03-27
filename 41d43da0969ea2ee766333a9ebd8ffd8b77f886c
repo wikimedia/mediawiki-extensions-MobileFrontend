@@ -16,6 +16,143 @@
       "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqjYyuxA",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "Yeah, we are inconsistent. I think we should use \"image\" although the word we use in the code is \"photo.\"",
+      "parentUuid": "Dqm6M8IA",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqrYmy88",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "Instead of this, just let the View create the element itself, and later do\n\ncarousel.insertBefore( \u0027.ctaUploadPhoto\u0027 );",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqtYjP78",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "Even if we were doing it this way, I\u0027d not use [ 0 ], let jQuery take care of it. But this is not relevant here, considering the previous comment.",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqnYwMwE",
+        "filename": "javascripts/widgets/carousel.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "Add\n\nclassName: \u0027upload-first-time-user\u0027,\n\n(so that it works together with what I commented on in uploads.js).",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqpYtx6o",
+        "filename": "javascripts/widgets/carousel.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "page and totalPages should be created in initialize() instead. Else they will be shared across all the instances of Carousel!",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqnYJEzE",
+        "filename": "less/specials/uploads.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "Should be:\n\nGeorgia, serif;",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqpYGJyE",
+        "filename": "templates/specials/uploads/carousel.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "Seems weird to have a list of empty items. Maybe put consecutive numbers? Although it\u0027s not real content, so it\u0027s not a big thing.",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqjYbm4A",
+        "filename": "tests/js/fixtures-templates.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T15:17:29Z",
+      "side": 1,
+      "message": "I still think fixtures-templates.js should not exist. You\u0027re not testing the real Carousel ;) But this is not a change we can do in this commit.",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
