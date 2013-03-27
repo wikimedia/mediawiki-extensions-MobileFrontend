@@ -69,6 +69,24 @@
       "revId": "ea3a8f22b068bb3ab27f55f7758993ae3c478538",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqoglo7I",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-27T23:31:21Z",
+      "side": 1,
+      "message": "Ah - I see. This seems like the wrong place to do this though. In fact, this whole method should go through some refactoring as it does a lot more than the name implies. It would be nice if you could invoke this method below in MobileFrontendDeviceDetectModule::getStyles(), and do the $wgMFVaryResources check before invoking this method.",
+      "parentUuid": "Dqvdxnnc",
+      "revId": "ea3a8f22b068bb3ab27f55f7758993ae3c478538",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
