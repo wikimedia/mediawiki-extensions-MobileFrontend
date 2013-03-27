@@ -117,7 +117,7 @@ var m = ( function( $ ) {
 
 	function init() {
 		var
-			search = document.getElementById(  mfePrefix + 'search' );
+			search = document.getElementById(  'searchInput' );
 
 		$( '#mw-mf-menu-main a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open

@@ -3,6 +3,6 @@ html {
 	-webkit-text-size-adjust: none;
 }
 
-#mw-mf-search {
+#searchInput {
 	line-height: normal; /* placeholder displays incorrectly on iphones */
 }
