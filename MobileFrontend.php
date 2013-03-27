@@ -478,13 +478,20 @@ $wgMFMobileSpecialPageResourceScriptBoilerplate = $wgMFMobileSpecialPageResource
 	'dependencies' => array( 'mobile.stable' ),
 );
 /**
+ * A boilerplate for RL style modules for special pages
+*/
+$wgMFMobileSpecialPageResourceStyleBoilerplate = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	// ensure special css is always loaded after mobile.styles for cascading purposes (keep jgonera happy)
+	'dependencies' => array( 'mobile.styles' ),
+);
+/**
 	* Special page modules
 	*
 	* Note: Use correct names to ensure modules load on pages
 	* Name must be the name of the special page lowercased prefixed by 'mobile.'
 	* suffixed by '.styles' or '.scripts'
 	*/
-$wgResourceModules['mobile.mobilemenu.styles'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+$wgResourceModules['mobile.mobilemenu.styles'] = $wgMFMobileSpecialPageResourceStyleBoilerplate + array(
 	'styles' => array(
 		'stylesheets/specials/mobilemenu.css',
 	),

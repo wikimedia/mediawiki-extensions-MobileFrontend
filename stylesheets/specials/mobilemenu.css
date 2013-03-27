@@ -6,3 +6,15 @@
 .navigationFullScreen #mw-mf-page-center {
   display: none;
 }
+#mw-mf-menu-main li.icon-home a {
+  background-image: url(images/menu/lowres/home.png);
+}
+#mw-mf-menu-main li.icon-random a {
+  background-image: url(images/menu/lowres/random.png);
+}
+#mw-mf-menu-main li.icon-settings a {
+  background-image: url(images/menu/lowres/settings.png);
+}
+#mw-mf-menu-main li.icon-loginout a {
+  background-image: url(images/menu/lowres/loginout.png);
+}

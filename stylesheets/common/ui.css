@@ -174,36 +174,24 @@ input[type=submit].cancel {
   text-decoration: none;
 }
 #mw-mf-menu-main li.icon-home a {
-  background-image: url(images/menu/lowres/home.png);
-}
-#mw-mf-menu-main li.icon-random a {
-  background-image: url(images/menu/lowres/random.png);
-}
-#mw-mf-menu-main li.icon-settings a {
-  background-image: url(images/menu/lowres/settings.png);
-}
-#mw-mf-menu-main li.icon-loginout a {
-  background-image: /* @embed */ url(images/menu/lowres/loginout.png);
-}
-.jsEnabled #mw-mf-menu-main li.icon-home a {
   background-image: /* @embed */ url(images/menu/home.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon-random a {
+#mw-mf-menu-main li.icon-random a {
   background-image: /* @embed */ url(images/menu/random.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon-watchlist a {
+#mw-mf-menu-main li.icon-watchlist a {
   background-image: /* @embed */ url(images/menu/watchlist.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon-uploads a {
+#mw-mf-menu-main li.icon-uploads a {
   background-image: /* @embed */ url(images/menu/uploads.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon-nearby a {
+#mw-mf-menu-main li.icon-nearby a {
   background-image: /* @embed */ url(images/menu/nearby.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon-settings a {
+#mw-mf-menu-main li.icon-settings a {
   background-image: /* @embed */ url(images/menu/settings.png);
 }
-.jsEnabled #mw-mf-menu-main li.icon-loginout a {
+#mw-mf-menu-main li.icon-loginout a {
   background-image: /* @embed */ url(images/menu/loginout.png);
 }
 @media all and (min-width: 700px) {
