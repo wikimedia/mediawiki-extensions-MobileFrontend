@@ -69,6 +69,24 @@
       "revId": "20c78270e409c419447d9dfcbbb2e5ccc79d9a9a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqnaUs.A",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-27T14:41:05Z",
+      "side": 1,
+      "message": "I\u0027m sorry then. I think the previous version with a comment explaining that the object is for fast look-ups and the array for preserving order is OK.",
+      "parentUuid": "DqpS2Jzw",
+      "revId": "20c78270e409c419447d9dfcbbb2e5ccc79d9a9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
