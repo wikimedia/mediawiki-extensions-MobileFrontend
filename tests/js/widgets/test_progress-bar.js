@@ -2,12 +2,12 @@
 
 	var ProgressBar = M.require( 'widgets/progress-bar' );
 
-	module( 'MobileFrontend ProgressBar' );
+	QUnit.module( 'MobileFrontend ProgressBar' );
 
-	test( '#setValue', function() {
+	QUnit.test( '#setValue', 1, function() {
 		var progressBar = new ProgressBar();
 		progressBar.setValue( 0.35 );
 		strictEqual( progressBar.$( '.value' ).css( 'width' ), '35%', 'set width to reflect value' );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

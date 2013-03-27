@@ -26,7 +26,7 @@ var photo = M.require( 'photo' ),
 		[ $( '<div><img><div>' ), false ]
 	];
 
-module( 'MobileFrontend photo', {
+QUnit.module( 'MobileFrontend photo', {
 	setup: function() {
 		this.clock = sinon.useFakeTimers();
 	},
@@ -35,14 +35,15 @@ module( 'MobileFrontend photo', {
 	}
 } );
 
-test( '#needsPhoto', function() {
+QUnit.test( '#needsPhoto', function() {
+	QUnit.expect( articles.length );
 	var i;
 	for ( i = 0; i < articles.length; i++ ) {
 		strictEqual( photo._needsPhoto( articles[ i ][ 0 ] ), articles[ i ][ 1 ], 'article ' + i );
 	}
 } );
 
-test( 'PhotoUploadProgress', function() {
+QUnit.test( 'PhotoUploadProgress', 3, function() {
 	var progressPopup = new photo._PhotoUploadProgress();
 	strictEqual(
 		progressPopup.$( '.wait' ).text(),
@@ -63,21 +64,21 @@ test( 'PhotoUploadProgress', function() {
 	);
 } );
 
-test( 'generateFileName', function() {
+QUnit.test( 'generateFileName', 1, function() {
 	var date = new Date( 2010, 9, 15, 12, 51 ),
 		name = photo.generateFileName( 'Jon eating bacon next to an armadillo', '.jpg', date );
 	strictEqual( name, 'Jon eating bacon next to an armadillo 2010-10-15 12-51.jpg',
 		'Check file name is description with appended date' );
 } );
 
-test( 'generateFileName test padding', function() {
+QUnit.test( 'generateFileName test padding', 1, function() {
 	var date = new Date( 2013, 2, 1, 12, 51 ), // note 0 = january
 		name = photo.generateFileName( 'Tomasz eating bacon next to a dinosaur', '.jpg', date );
 	strictEqual( name, 'Tomasz eating bacon next to a dinosaur 2013-03-01 12-51.jpg',
 		'Check file name is description with appended date and numbers were padded' );
 } );
 
-test( 'generateFileName long line', function() {
+QUnit.test( 'generateFileName long line', 2, function() {
 	var i,
 		longDescription = '',
 		date = new Date( 2013, 2, 1, 12, 51 ), name;
@@ -90,7 +91,7 @@ test( 'generateFileName long line', function() {
 	strictEqual( name.substr( 233, 7 ), '-51.jpg', 'ends with date' );
 } );
 
-test( 'generateFileName with new lines', function() {
+QUnit.test( 'generateFileName with new lines', 1, function() {
 	var
 		description = 'One\nTwo\nThree',
 		date = new Date( 2013, 2, 1, 12, 51 ), name;
@@ -99,11 +100,11 @@ test( 'generateFileName with new lines', function() {
 	strictEqual( name, 'One-Two-Three 2013-03-01 12-51.jpg', 'New lines converted' );
 } );
 
-test( 'trimUtf8String', function() {
+QUnit.test( 'trimUtf8String', 4, function() {
 	strictEqual( photo.trimUtf8String( 'Just a string', 20 ), 'Just a string', 'ascii string fits' );
 	strictEqual( photo.trimUtf8String( 'Just a string', 10 ), 'Just a str', 'ascii string truncated' );
 	strictEqual( photo.trimUtf8String( 'Júst á stríng', 10 ), 'Júst á s', 'latin1 string truncated' );
 	strictEqual( photo.trimUtf8String( 'こんにちは', 10 ), 'こんに', 'CJK string truncated' );
 } );
 
-}( jQuery, mw.mobileFrontend ) );
+}( jQuery, mw.mobileFrontend) );

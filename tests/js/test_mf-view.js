@@ -1,16 +1,16 @@
-( function( M, $ ) {
+( function( M, $) {
 
 var View = M.require( 'view' );
 
-module( 'MobileFrontend view' );
+QUnit.module( 'MobileFrontend view' );
 
-test( 'View', function() {
+QUnit.test( 'View', 2, function() {
 	var view = new View( { el: 'body' } );
 	ok( view.$el instanceof $, 'assign jQuery object to $el' );
 	strictEqual( view.$el[0].tagName.toUpperCase(), 'BODY', 'assign proper jQuery object to $el' );
 } );
 
-test( 'View, jQuery proxy functions', function() {
+QUnit.test( 'View, jQuery proxy functions', 10, function() {
 	var view = new View( { el: 'body' } );
 	[
 		'append',
@@ -31,7 +31,7 @@ test( 'View, jQuery proxy functions', function() {
 	} );
 } );
 
-test( 'View.extend, with el property', function() {
+QUnit.test( 'View.extend, with el property', 1, function() {
 	var ChildView, $testEl, view;
 	ChildView = View.extend( {
 		firstHeading: function() {
@@ -45,7 +45,7 @@ test( 'View.extend, with el property', function() {
 	$testEl.remove();
 } );
 
-test( 'View.extend, with defined template', function() {
+QUnit.test( 'View.extend, with defined template', 4, function() {
 	var ChildView, view;
 	ChildView = View.extend( {
 		className: 'my-class',
@@ -90,4 +90,4 @@ QUnit.test( 'View#initialize', 1, function() {
 	ok( spy.calledOnce, 'invoke initialize' );
 } );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery) );

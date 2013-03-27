@@ -1,7 +1,7 @@
 ( function ( MFEB ) {
-module("MobileFrontend settings.js: cookies");
+QUnit.module( 'MobileFrontend settings.js: cookies' );
 
-test("read and write cookies", function() {
+QUnit.test( 'read and write cookies', 1, function() {
 	var cookie_name = 'test_cookies_module', cookieVal;
 	MFEB.writeCookie(cookie_name, "yes", 400);
 	cookieVal = MFEB.readCookie( cookie_name );
@@ -9,7 +9,7 @@ test("read and write cookies", function() {
 		"Are you running off localhost?");
 });
 
-test("read and write cookies with spaces", function() {
+QUnit.test( 'read and write cookies with spaces', 1, function() {
 	var cookie_name = 'test_cookies_module', cookieVal;
 	MFEB.writeCookie(cookie_name, "     yes this has spaces    ", 400);
 	MFEB.writeCookie(cookie_name + "2", "     yes this has spaces    ", 400);
@@ -18,7 +18,7 @@ test("read and write cookies with spaces", function() {
 		"spaces are kept and trailing whitespace is removed");
 });
 
-test("remove cookie via write", function() {
+QUnit.test( 'remove cookie via write', 1, function() {
 	var cookie_name = 'test_cookies_module', cookieVal;
 	MFEB.writeCookie(cookie_name, "", -1);
 	cookieVal = MFEB.readCookie( cookie_name );

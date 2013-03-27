@@ -2,9 +2,9 @@
 
 var m = M.require( 'diff' );
 
-module( 'MobileFrontend: mobilediff.js', {} );
+QUnit.module( 'MobileFrontend: mobilediff.js' );
 
-test( 'makePrettyDiff', function() {
+QUnit.test( 'makePrettyDiff', function() {
 	var testCases = [
 		[ $( '<div><del>foo</del></div>' ), '<del>foo</del><br>' ],
 		[
@@ -25,6 +25,7 @@ test( 'makePrettyDiff', function() {
 		]
 	];
 
+	QUnit.expect( testCases.length );
 	$.each( testCases, function( i, test ) {
 		strictEqual( m.makePrettyDiff( test[0] ).html(), test[1], 'Test case ' + i );
 	} );

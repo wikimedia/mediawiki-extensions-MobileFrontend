@@ -8,11 +8,8 @@
 		"mw": true,
 		"mwMobileFrontendConfig": true,
 
-		"module": true,
 		"strictEqual": true,
 		"deepEqual": true,
-		"throws": true,
-		"test": true,
 		"ok": true,
 		"sinon": true
 	},

@@ -1,8 +1,8 @@
-( function ( M, $ ) {
+( function ( M, $) {
 
 var Api = M.require( 'api' ).Api, stub;
 
-module( 'MobileFrontend api', {
+QUnit.module( 'MobileFrontend api', {
 	setup: function() {
 		var self = this;
 		this.xhr = sinon.useFakeXMLHttpRequest();
@@ -16,20 +16,20 @@ module( 'MobileFrontend api', {
 	}
 } );
 
-test( '$.ajaxSetup()', function() {
+QUnit.test( '$.ajaxSetup()', 1, function() {
 	$.ajax( {
 		data: { test: 'test' }
 	} );
 	strictEqual( this.lastXhr.url.indexOf( M.getApiUrl() ), 0, 'set default API URL' );
 } );
 
-test( 'default instance', function() {
+QUnit.test( 'default instance', 1, function() {
 	ok( M.require( 'api' ) instanceof Api, 'return default instance' );
 } );
 
 // FIXME: uncomment when https://bugzilla.wikimedia.org/show_bug.cgi?id=44921 is resolved
 /*
-test( 'progress event', function() {
+QUnit.test( 'progress event', 1, function() {
 	var spy = sinon.spy(),
 		api = new Api();
 	api.post().on( 'progress', spy );
@@ -39,7 +39,7 @@ test( 'progress event', function() {
 */
 
 
-module( 'MobileFrontend api.Api', {
+QUnit.module( 'MobileFrontend api.Api', {
 	setup: function() {
 		var requests = this.requests = [];
 		this.api = new Api();
@@ -54,7 +54,7 @@ module( 'MobileFrontend api.Api', {
 	}
 } );
 
-test( '#ajax', function() {
+QUnit.test( '#ajax', 1, function() {
 	this.api.ajax( {
 		falseBool: false,
 		trueBool: true,
@@ -73,7 +73,7 @@ test( '#ajax', function() {
 	);
 } );
 
-test( '#ajax, with FormData', function() {
+QUnit.test( '#ajax, with FormData', 1, function() {
 	var data = new FormData();
 	// add a property that should not disappear
 	data.testBool = false;
@@ -81,17 +81,17 @@ test( '#ajax, with FormData', function() {
 	strictEqual( $.ajax.args[0][0].data.testBool, false, 'use unmodified FormData' );
 } );
 
-test( '#get', function() {
+QUnit.test( '#get', 1, function() {
 	this.api.get( { a: 1 } );
 	ok( $.ajax.calledWithMatch( { type: 'GET', data: { a: 1 } } ), 'call with type: GET' );
 } );
 
-test( '#post', function() {
+QUnit.test( '#post', 1, function() {
 	this.api.post( { a: 1 } );
 	ok( $.ajax.calledWithMatch( { type: 'POST', data: { a: 1 } } ), 'call with type: POST' );
 } );
 
-test( '#abort', function() {
+QUnit.test( '#abort', 2, function() {
 	this.api.get( { a: 1 } );
 	this.api.post( { b: 2 } );
 	this.api.abort();
@@ -100,7 +100,7 @@ test( '#abort', function() {
 	} );
 } );
 
-module( 'MobileFrontend api.getToken', {
+QUnit.module( 'MobileFrontend api.getToken', {
 	setup: function() {
 		var params, corsParams, corsData,
 			editDeferred = $.Deferred().resolve( { tokens: { 'edittoken': '123' } } ),
@@ -132,13 +132,13 @@ module( 'MobileFrontend api.getToken', {
 	}
 } );
 
-test( '#getToken - successful edit token', function() {
+QUnit.test( '#getToken - successful edit token', 1, function() {
 	this.api.getToken( 'edit' ).done( function( token ) {
 		strictEqual( token, '123', 'Got token' );
 	} );
 } );
 
-test( '#getToken - load from cache', function() {
+QUnit.test( '#getToken - load from cache', 2, function() {
 	this.api.getToken( 'edit' );
 	this.api.getToken( 'edit' ).done( function( token ) { // this comes via cache
 		strictEqual( token, '123', 'Test for bad token name' );
@@ -147,28 +147,28 @@ test( '#getToken - load from cache', function() {
 	strictEqual( stub.getCall( 1 ), null, 'Ajax stub was only called once' );
 } );
 
-test( '#getToken - cors edit token', function() {
+QUnit.test( '#getToken - cors edit token', 1, function() {
 	this.api.getToken( 'watch', 'http://commons.wikimedia.org/w/api.php' ).done( function( token ) {
 		strictEqual( token, 'zyx', 'Correctly passed via cors' );
 	} );
 } );
 
-test( '#getToken - default to edit', function() {
+QUnit.test( '#getToken - default to edit', 1, function() {
 	this.api.getToken().done( function( token ) {
 		strictEqual( token, '123', 'We get an edit token by default (most common)' );
 	} );
 } );
 
-test( '#getToken - get anon token', function() {
+QUnit.test( '#getToken - get anon token', 1, function() {
 	this.api.getToken( 'upload' ).fail( function( msg ) {
 		strictEqual( msg, 'Anonymous token.', 'No token given - user must be anon' );
 	} );
 } );
 
-test( '#getToken - bad type of token', function() {
+QUnit.test( '#getToken - bad type of token', 1, function() {
 	this.api.getToken( 'rainbows' ).fail( function( msg ) {
 		strictEqual( msg, 'Bad token name.', 'Test for bad token name' );
 	} );
 } );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend, jQuery) );

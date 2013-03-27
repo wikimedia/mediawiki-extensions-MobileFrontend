@@ -1,5 +1,5 @@
 (function ( $, MFE, MFEOS ) {
-module( 'MobileFrontend: mf-search.js - test highlight', {
+QUnit.module( 'MobileFrontend: mf-search.js - test highlight', {
 	setup: function() {
 		$( '<form id="mw-mf-searchForm"><input id="mw-mf-search"></form>' ).appendTo( document.body );
 		$( '<div id="results">' ).appendTo( document.body );
@@ -10,12 +10,12 @@ module( 'MobileFrontend: mf-search.js - test highlight', {
 	}
 });
 
-test("no results", function() {
+QUnit.test( 'no results', 1, function() {
 	MFEOS.writeResults([]);
 	strictEqual($("#results").text(), MFE.message( 'mobile-frontend-search-noresults' ) );
 });
 
-test("writeResults with highlighted text (case differs)", function() {
+QUnit.test( 'writeResults with highlighted text (case differs)', 3, function() {
 	var results = [
 		{ label: "Hello world", value: "/HelloWorld" },
 		{ label: "Hello kitty", value: "/HelloKitty" }
@@ -30,7 +30,7 @@ test("writeResults with highlighted text (case differs)", function() {
 	strictEqual($(pageLink2).html(), "H<strong>el</strong>lo kitty", "check the highlight is correct");
 });
 
-test("writeResults with highlighted text (case differs)", function() {
+QUnit.test( 'writeResults with highlighted text (case differs)', 1, function() {
 	var results = [
 		{ label: "Hello world", value: "/HelloWorld" },
 		{ label: "Hello kitty", value: "/HelloKitty" }
@@ -42,7 +42,7 @@ test("writeResults with highlighted text (case differs)", function() {
 	strictEqual($(pageLink).html(), "<strong>Hel</strong>lo world", "check the highlight is correct");
 });
 
-test("writeResults with highlighted text (special character &amp;)", function() {
+QUnit.test( 'writeResults with highlighted text (special character &amp;)', 1, function() {
 	var results = [
 		{ label: "Belle & Sebastian", value: "/B1" },
 		{ label: "Belle & the Beast", value: "/B2" }
@@ -54,7 +54,7 @@ test("writeResults with highlighted text (special character &amp;)", function() 
 	strictEqual($(pageLink).html(), "<strong>Belle &amp; S</strong>ebastian", "check the highlight is correct");
 });
 
-test("writeResults with highlighted text (special character ?)", function() {
+QUnit.test( 'writeResults with highlighted text (special character ?)', 1, function() {
 	var results = [
 		{ label: "Title with ? in it", value: "/B1" }
 	], pageLink;
@@ -65,7 +65,7 @@ test("writeResults with highlighted text (special character ?)", function() {
 	strictEqual($(pageLink).html(), "Title <strong>with ?</strong> in it", "check the highlight is correct");
 });
 
-test("writeResults with highlighted text (safe)", function() {
+QUnit.test( 'writeResults with highlighted text (safe)', 1, function() {
 	var results = [
 		{ label: "<script>alert('FAIL')</script> should be safe", value: "/B1" }
 	], pageLink;

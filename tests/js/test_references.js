@@ -1,6 +1,6 @@
 ( function( $, R ) {
 
-module("MobileFrontend references.js", {
+QUnit.module("MobileFrontend references.js", {
 	setup: function() {
 		$('<div id="mfe-test-references"><sup><a href="#ref-foo">[1]</a></sup></div><ol class="references"><li id="ref-foo"><a>test reference</a></li></ol>').appendTo('#qunit-fixture');
 	},
@@ -9,7 +9,7 @@ module("MobileFrontend references.js", {
 	}
 });
 
-test("Standard", function() {
+QUnit.test( 'Standard', 2, function() {
 	R.setupReferences( $( '#mfe-test-references' )[ 0 ] );
 	$("#mfe-test-references sup a").trigger("click");
 	strictEqual( $( '#mf-notification div h3' ).text(), '[1]' );
