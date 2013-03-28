@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dqi4Nfz4",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-28T17:39:26Z",
+      "side": 1,
+      "message": "I\u0027m thinking of renaming it completely, to something like VarianceMode. Thoughts?",
+      "parentUuid": "Dqi4kn8Y",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dqk48c98",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "Dqm4al3k",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-28T17:39:26Z",
+      "side": 1,
+      "message": "if ( $wgMFVaryResources ) also needs to know X-Device.",
+      "parentUuid": "Dqk48c98",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dqo4ba34",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-03-28T17:36:28Z",
       "side": 1,
       "message": "this should be done at the top of the method",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqg4Qu1U",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-28T17:39:26Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "Dqo4ba34",
       "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
