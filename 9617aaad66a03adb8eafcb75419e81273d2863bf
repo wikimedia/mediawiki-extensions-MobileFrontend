@@ -160,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "DqmldsR0",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:46:46Z",
+      "side": 1,
+      "message": "oh also, varnish will need to know the value of X-Device here in order to vary on it",
+      "parentUuid": "DqoklpbI",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqkkGrSA",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 2
