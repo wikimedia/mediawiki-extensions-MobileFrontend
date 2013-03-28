@@ -41,19 +41,20 @@ var m = ( function( $ ) {
 	CtaDrawer = Drawer.extend( {
 		defaults: {
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
-			loginUrl: M.history.getArticleUrl( 'Special:UserLogin', {
-				returnto: mw.config.get( 'wgTitle' ),
-				returntoquery: 'article_action=watch'
-			} ),
 			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
-			signupUrl: M.history.getArticleUrl( 'Special:UserLogin', {
-				returnto: mw.config.get( 'wgTitle' ),
-				returntoquery: 'article_action=watch',
-				type: 'signup'
-			} ),
 			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
 		},
-		template: M.template.get( 'ctaDrawer' )
+		template: M.template.get( 'ctaDrawer' ),
+
+		preRender: function( options ) {
+			var params = {
+				returnto: mw.config.get( 'wgTitle' ),
+				returntoquery: options.returnToQuery
+			};
+
+			options.loginUrl = M.history.getArticleUrl( 'Special:UserLogin', params );
+			options.signupUrl = M.history.getArticleUrl( 'Special:UserLogin', $.extend( params, { type: 'signup' } ) );
+		}
 	} );
 
 	Overlay = View.extend( {

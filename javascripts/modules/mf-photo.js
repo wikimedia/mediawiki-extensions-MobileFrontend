@@ -42,10 +42,7 @@
 			($('<input type="file"/>').prop('type') === 'file') // Firefox OS 1.0 turns <input type="file"> into <input type="text">
 		);
 
-		return (
-			browserSupported &&
-			!mw.config.get( 'wgImagesDisabled', false )
-		);
+		return browserSupported && !mw.config.get( 'wgImagesDisabled', false );
 	}
 
 	function getLog( funnel ) {
@@ -417,10 +414,28 @@
 		className: 'button photo',
 
 		initialize: function( options ) {
-			var self = this, $input = this.$( 'input' );
+			var self = this, $input = this.$( 'input' ), ctaDrawer;
 
 			this.options = options;
 			this.log = getLog( options.funnel );
+
+			// show CTA instead if not logged in
+			if ( !M.isLoggedIn() ) {
+				ctaDrawer = new nav.CtaDrawer( {
+					content: mw.msg( 'mobile-frontend-photo-upload-cta' ),
+					returnToQuery: 'article_action=photo-upload'
+				} );
+				this.$el.click( function( ev ) {
+					if ( !ctaDrawer.isVisible() ) {
+						ctaDrawer.show();
+					} else {
+						ctaDrawer.hide();
+					}
+					ev.preventDefault();
+					ev.stopPropagation();
+				} );
+				return;
+			}
 
 			$input.
 				// accept must be set via attr otherwise cannot use camera on Android
@@ -534,7 +549,7 @@
 			} );
 	}
 
-	if ( isSupported() && M.isLoggedIn() && mw.config.get( 'wgIsPageEditable' ) ) {
+	if ( isSupported() && mw.config.get( 'wgIsPageEditable' ) ) {
 		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
 		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', initialize );
