@@ -34,6 +34,24 @@
       "revId": "f74b61ce2647b868dce9d67a3860009291d6ebf4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqskznfQ",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:44:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "Dqk4VU0c",
+      "revId": "f74b61ce2647b868dce9d67a3860009291d6ebf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

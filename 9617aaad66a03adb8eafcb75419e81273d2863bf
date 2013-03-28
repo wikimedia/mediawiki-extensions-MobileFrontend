@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "Dqmkk0bE",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:44:41Z",
+      "side": 1,
+      "message": "oh yeah, good point :p",
+      "parentUuid": "Dqm4al3k",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dqo4ba34",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
@@ -101,6 +119,58 @@
       "side": 1,
       "message": "See above.",
       "parentUuid": "Dqo4ba34",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqik3ueM",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:44:41Z",
+      "side": 1,
+      "message": "i don\u0027t see how this relates. MW PHP standards says global vars should be defined at the top of a function.",
+      "parentUuid": "Dqg4Qu1U",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqoklpbI",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:44:41Z",
+      "side": 1,
+      "message": "It would be nice if we could still output X-Device in the response headers for easier debugging.",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqkkGrSA",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:44:41Z",
+      "side": 1,
+      "message": "this should be removed.",
       "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
