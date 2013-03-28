@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqugaHxM",
+        "filename": "tests/js/common/mf-navigation.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-03-28T00:25:28Z",
+      "side": 1,
+      "message": "btw, this second argument {} is redundant.",
+      "revId": "f342ffbfdf85d17b530cc44a9dca07e8b7db15f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
