@@ -6,7 +6,7 @@
 	try {
 		// redirect to Commons Special:LoginHandshake if it's the first visit
 		if (
-			'localStorage' in window && window.localStorage !== null &&
+			loginHandshakeUrl && 'localStorage' in window && window.localStorage !== null &&
 			!localStorage.getItem( 'loginHandshaked' )
 		) {
 			if ( document.referrer !== loginHandshakeUrl ) {
