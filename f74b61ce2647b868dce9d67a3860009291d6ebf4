@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqo4yiw4",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:35:05Z",
+      "side": 0,
+      "message": "Why is the check for rlsupport removed?",
+      "revId": "f74b61ce2647b868dce9d67a3860009291d6ebf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqi4kn8Y",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 853,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:35:05Z",
+      "side": 1,
+      "message": "Mention that enabling this will disable X-Device variance for everything else.",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dqk48c98",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-03-28T17:35:05Z",
+      "side": 1,
+      "message": "do this in an else block after if ( $wgMFVaryResources )",
+      "revId": "9617aaad66a03adb8eafcb75419e81273d2863bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
