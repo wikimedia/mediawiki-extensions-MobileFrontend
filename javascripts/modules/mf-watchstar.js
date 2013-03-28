@@ -1,14 +1,21 @@
 (function( M, $ ) {
 
 var api = M.require( 'api' ), w = ( function() {
-	var lastToken, nav = M.require( 'navigation' ), popup = M.require( 'notifications' ),
+	var nav = M.require( 'navigation' ), popup = M.require( 'notifications' ),
 		drawer = new nav.CtaDrawer( {
 			content: mw.msg( 'mobile-frontend-watchlist-cta' ),
 			returnToQuery: 'article_action=watch'
 		} );
 
 	// FIXME: this should live in a separate module and make use of MobileFrontend events
-	function logWatchEvent( eventType ) {
+	/**
+	 * Checks whether a list of article titles are being watched by the current user
+	 * Checks a local cache before making a query to server
+	 *
+	 * @param {Integer} eventType: 0=watched article, 1=stopped watching article, 2=clicked star as anonymous user
+	 * @param {String} token: Token returned from getToken, optional when eventType is 2
+	 */
+	function logWatchEvent( eventType, token ) {
 		var types = [ 'watchlist', 'unwatchlist', 'anonCTA' ],
 			data = {
 				// FIXME: this gives wrong results when page loaded dynamically
@@ -16,7 +23,7 @@ var api = M.require( 'api' ), w = ( function() {
 				anon: mw.config.get( 'wgUserName' ) === null,
 				action: types[ eventType ],
 				isStable: mw.config.get( 'wgMFMode' ),
-				token: lastToken || '+\\', // +\\ for anon
+				token: eventType === 2 ? '+\\' : token, // +\\ for anon
 				username: mw.config.get( 'wgUserName' ) || ''
 			};
 
@@ -55,6 +62,13 @@ var api = M.require( 'api' ), w = ( function() {
 		return $( '<a class="watch-this-article">' ).appendTo( container )[ 0 ];
 	}
 
+	/**
+	 * Creates a watchlist button
+	 *
+	 * @param {jQuery} container: Element in which to create a watch star
+	 * @param {String} title: The title to be watched
+	 * @param {Boolean} isWatchedArticle: Whether the article is currently watched by the user or not
+	 */
 	function createWatchListButton( container, title, isWatchedArticle ) {
 		var prevent,
 			watchBtn = createButton( container );
@@ -68,12 +82,12 @@ var api = M.require( 'api' ), w = ( function() {
 			$( watchBtn ).removeClass( 'disabled loading' );
 		}
 
-		function success( data ) {
+		function success( data, token ) {
 			if ( data.watch.hasOwnProperty( 'watched' ) ) {
-				logWatchEvent( 0 );
+				logWatchEvent( 0, token );
 				$( watchBtn ).addClass( 'watched' );
 			} else {
-				logWatchEvent( 1 );
+				logWatchEvent( 1, token );
 				$( watchBtn ).removeClass( 'watched' );
 			}
 			enable();
@@ -81,7 +95,10 @@ var api = M.require( 'api' ), w = ( function() {
 
 		function toggleWatchStatus( unwatch ) {
 			api.getToken( 'watch' ).done( function( token ) {
-				toggleWatch( title, token, unwatch, success, enable );
+				toggleWatch( title, token, unwatch,
+					function( data ) {
+						success( data, token );
+					}, enable );
 			} );
 		}
 
@@ -143,13 +160,18 @@ var api = M.require( 'api' ), w = ( function() {
 		}
 	}
 
+	/**
+	 * Creates a watch star OR a drawer to encourage user to register / login
+	 *
+	 * @param {jQuery} container: A jQuery container to create a watch list button
+	 * @param {String} title: The name of the article to watch
+	 */
 	function initWatchListIcon( container, title ) {
-		api.getToken( 'watch' ).done( function( token ) {
-			lastToken = token;
+		if ( M.isLoggedIn() ) {
 			checkWatchStatus( [ title ], function( status ) {
 				createWatchListButton( container, title, status[ title ] );
 			} );
-		} ).fail( function() {
+		} else {
 			$( createButton( container ) ).click( function( ev ) {
 				if ( !drawer.isVisible() ) {
 					// log if enabled
@@ -160,7 +182,7 @@ var api = M.require( 'api' ), w = ( function() {
 				}
 				ev.stopPropagation();
 			} );
-		} );
+		}
 	}
 
 	/**
@@ -184,14 +206,10 @@ var api = M.require( 'api' ), w = ( function() {
 				createWatchListButton( this, title, true );
 			} );
 		} else {
-			api.getToken( 'watch' ).done( function( token ) {
-				lastToken = token;
-
-				checkWatchStatus( titles, function( status ) {
-					$container.find( 'li' ).each( function() {
-						var title = $( this ).attr( 'title' );
-						createWatchListButton( this, title, status[ title ] );
-					} );
+			checkWatchStatus( titles, function( status ) {
+				$container.find( 'li' ).each( function() {
+					var title = $( this ).attr( 'title' );
+					createWatchListButton( this, title, status[ title ] );
 				} );
 			} );
 		}
