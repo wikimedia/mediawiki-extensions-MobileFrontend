@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "DqqiGZ2Y",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "Talked to maryana - she says we should use the word photo. She\u0027s going to add her comments but she believes the word photo encourages people to not reuse images from the web that have copyright protection.",
+      "parentUuid": "DqjYyuxA",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqrYmy88",
         "filename": "javascripts/specials/uploads.js",
         "patchSetId": 4
@@ -66,6 +84,24 @@
       "writtenOn": "2013-03-27T15:17:29Z",
       "side": 1,
       "message": "Instead of this, just let the View create the element itself, and later do\n\ncarousel.insertBefore( \u0027.ctaUploadPhoto\u0027 );",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqojTY18",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DqrYmy88",
       "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -89,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "DqqjYp3k",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DqtYjP78",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqnYwMwE",
         "filename": "javascripts/widgets/carousel.js",
         "patchSetId": 4
@@ -100,6 +154,24 @@
       "writtenOn": "2013-03-27T15:17:29Z",
       "side": 1,
       "message": "Add\n\nclassName: \u0027upload-first-time-user\u0027,\n\n(so that it works together with what I commented on in uploads.js).",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqgjIs6Y",
+        "filename": "javascripts/widgets/carousel.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "Nope. Just removed it. Seems I\u0027m not using it anymore anyhow.",
+      "parentUuid": "DqnYwMwE",
       "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -123,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "DqmjSj1o",
+        "filename": "javascripts/widgets/carousel.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "Done (don\u0027t think there should be any side effects.)",
+      "parentUuid": "DqpYtx6o",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqnYJEzE",
         "filename": "less/specials/uploads.less",
         "patchSetId": 4
@@ -134,6 +224,24 @@
       "writtenOn": "2013-03-27T15:17:29Z",
       "side": 1,
       "message": "Should be:\n\nGeorgia, serif;",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqijFd48",
+        "filename": "less/specials/uploads.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "Made it @fontFamilyCarousel",
+      "parentUuid": "DqnYJEzE",
       "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -157,6 +265,24 @@
     },
     {
       "key": {
+        "uuid": "DqsjBW4Q",
+        "filename": "templates/specials/uploads/carousel.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "I put an id in",
+      "parentUuid": "DqpYGJyE",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqjYbm4A",
         "filename": "tests/js/fixtures-templates.js",
         "patchSetId": 4
@@ -168,6 +294,24 @@
       "writtenOn": "2013-03-27T15:17:29Z",
       "side": 1,
       "message": "I still think fixtures-templates.js should not exist. You\u0027re not testing the real Carousel ;) But this is not a change we can do in this commit.",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqkiiKwE",
+        "filename": "tests/js/fixtures-templates.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-28T00:15:12Z",
+      "side": 1,
+      "message": "RESOLVED LATER",
+      "parentUuid": "DqjYbm4A",
       "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
