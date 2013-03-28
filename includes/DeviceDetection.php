@@ -253,12 +253,6 @@ class DeviceDetection implements IDeviceDetector {
 			'supports_jquery' => true,
 			'disable_zoom' => false,
 		),
-		'iphone2' => array (
-			'view_format' => 'html',
-			'css_file_name' => '',
-			'supports_jquery' => true,
-			'disable_zoom' => true,
-		),
 		'kindle' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'kindle',
@@ -407,11 +401,7 @@ class DeviceDetection implements IDeviceDetector {
 		} elseif ( preg_match( '/iPad.* Safari/', $userAgent ) ) {
 			$deviceName = 'iphone';
 		} elseif ( preg_match( '/iPhone.* Safari/', $userAgent ) ) {
-			if ( strpos( $userAgent, 'iPhone OS 2' ) !== false ) {
-				$deviceName = 'iphone2';
-			} else {
-				$deviceName = 'iphone';
-			}
+			$deviceName = 'iphone';
 		} elseif ( preg_match( '/iPhone/', $userAgent ) ) {
 			if ( strpos( $userAgent, 'Opera' ) !== false ) {
 				$deviceName = 'operamini';
