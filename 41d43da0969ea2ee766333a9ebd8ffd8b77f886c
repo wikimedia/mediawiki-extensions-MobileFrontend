@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "Dqqg5h6I",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 455
+      },
+      "writtenOn": "2013-03-28T00:12:59Z",
+      "side": 1,
+      "message": "We\u0027re actually not encouraging the uploading of \"images,\" because screenshots, diagrams, lolcat macros, etc. tend to be non-free works that users found elsewhere. \"Photo\" has a stronger ownership/original work connotation, and it\u0027s also just a more common call to action (most image-sharing sites use \"photo\"). Since the messages in this tutorial are directed at new users who have never uploaded to Commons, I\u0027d feel more comfortable going with the most well-recognized and unambiguous word here, even if it slightly breaks the consistency with the other upload CTAs that we\u0027re using. Experienced Commons users will already know that they can upload non-photos, but they\u0027ll never see this tutorial :)",
+      "parentUuid": "Dqm6M8IA",
+      "revId": "41d43da0969ea2ee766333a9ebd8ffd8b77f886c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqrYmy88",
         "filename": "javascripts/specials/uploads.js",
         "patchSetId": 4
