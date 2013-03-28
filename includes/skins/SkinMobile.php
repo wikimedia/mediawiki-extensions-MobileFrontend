@@ -31,7 +31,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'isBetaGroupMember', $inBeta );
 		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
-		$tpl->set( 'viewport-scaleable', $device->disableZoom() ? 'no' : 'yes' );
 
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );

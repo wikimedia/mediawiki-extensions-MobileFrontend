@@ -40,11 +40,6 @@ interface IDeviceProperties {
 	/**
 	 * @return bool
 	 */
-	function disableZoom();
-
-	/**
-	 * @return bool
-	 */
 	function isMobileDevice();
 
 	/**
@@ -100,13 +95,6 @@ final class DeviceProperties implements IDeviceProperties {
 	 */
 	public function supportsJQuery() {
 		return $this->device['supports_jquery'];
-	}
-
-	/**
-	 * @return bool
-	 */
-	public function disableZoom() {
-		return $this->device['disable_zoom'];
 	}
 
 	/**

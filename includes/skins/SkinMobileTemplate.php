@@ -63,7 +63,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<title><?php $this->text( 'pagetitle' ) ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<?php $this->html( 'robots' ) ?>
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=<?php $this->text( 'viewport-scaleable' ) ?>">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
 		<?php $this->html( 'touchIcon' ) ?>
 		<?php if ( $this->data['supports_jquery'] ) { ?>
 		<script type="text/javascript">
