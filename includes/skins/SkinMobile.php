@@ -170,6 +170,7 @@ class SkinMobile extends SkinMobileBase {
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$out = $this->getOutput();
 		$inBeta = MobileContext::singleton()->isBetaGroupMember();
+		$inAlpha = MobileContext::singleton()->isAlphaGroupMember();
 
 		if ( $userLogin ) {
 			$pageHeading = $this->getLoginPageHeading();
@@ -190,6 +191,15 @@ class SkinMobile extends SkinMobileBase {
 			// prepend heading to articles
 			if ( $pageHeading ) {
 				$preBodyText = Html::rawElement( 'h1', $headingOptions, $pageHeading );
+				// talk page link for logged in alpha users
+				if ( $inAlpha && $user->isLoggedIn() ) {
+					$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' ); // FIXME: make this the number of sections on the talk page
+					if ( $title->getNamespace() !== NS_TALK ) {
+						$preBodyText .= Html::element( 'a',
+							array( 'href' => $title->getTalkPage()->getFullUrl(), 'id' => 'talk' ),
+							$talkLabel );
+					}
+				}
 			}
 
 			$timestamp = Revision::getTimestampFromId( $this->getTitle(), $this->getRevisionId() );

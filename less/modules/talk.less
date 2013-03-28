@@ -1,0 +1,33 @@
+@import "../mf-mixins.less";
+@speechBubbleSize: 30px;
+@speechBubbleTailSize: @speechBubbleSize * 0.7;
+@speechBubbleColor: #C91F2C;
+
+.alpha {
+	// FIXME: probably want to use consistent styling for non-javascript users. Move into common.css?
+	#talk {
+		right: @contentMarginRight;
+		z-index: 5;
+		position: fixed;
+		bottom: 0;
+		padding: 0 ( @speechBubbleSize / 2 );
+		height: @speechBubbleSize;
+		line-height: @speechBubbleSize;
+		margin:( @speechBubbleSize / 4 ) 0 @speechBubbleSize;
+		text-align: center;
+		color: white;
+		display: inline-block;
+		background: @speechBubbleColor;
+		font-size: @speechBubbleSize / 2;
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: -@speechBubbleTailSize * 2/3;
+			right: 0;
+			border-width: 0 0 @speechBubbleTailSize @speechBubbleTailSize;
+			border-style: solid;
+			border-color: transparent @speechBubbleColor;
+		}
+	}
+}
