@@ -315,7 +315,8 @@ This buttons takes the user to the home page.
 	'mobile-frontend-sign-in-error-heading' => 'Heading for when an error occurred. You can translate "Error" instead.',
 	'mobile-frontend-settings-description' => 'Text at top of the settings page explaining its purpose',
 	'mobile-frontend-settings-beta' => 'Text for beta on settings page',
-	'mobile-frontend-settings-alpha' => 'Heading for alpha mode on settings page. This is a highly experimental mode where there might be bugs',
+	'mobile-frontend-settings-alpha' => '<!--[[File:Mobile Contributions Quarterly Review 3 2013.pdf|page=32|thumb|The message in action]]-->
+Heading for alpha mode on settings page ([//commons.wikimedia.org/w/index.php?title=File%3AMobile_Contributions_Quarterly_Review_3_2013.pdf&page=32 screenshot]). This is a highly experimental mode where there might be bugs.',
 	'mobile-frontend-settings-alpha-description' => 'Disclaimer about dangers and excitement that come with being in an alpha mode',
 	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions.
 {{Identical|Save settings}}',
@@ -567,7 +568,8 @@ See also:
 	'mobile-frontend-watchlist-filter-all' => 'Label on filter selector for mobile watchlist: all pages.
 {{Identical|All}}',
 	'mobile-frontend-watchlist-filter-articles' => 'Label on filter selector for mobile watchlist: all pages: article pages only',
-	'mobile-frontend-watchlist-filter-talk' => 'Label on filter selector for mobile watchlist: talk pages',
+	'mobile-frontend-watchlist-filter-talk' => 'Label on filter selector for mobile watchlist: talk pages.
+{{Identical|Talk}}',
 	'mobile-frontend-watchlist-filter-other' => 'Label on filter selector for mobile watchlist: other pages (not talk or article).
 {{Identical|Other}}',
 	'mobile-frontend-watchlist-modified' => 'Text saying how long ago a page in watchlist was updated.
@@ -611,9 +613,9 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-cancel' => 'Caption for the cancel button on the photo upload form.
 {{Identical|Cancel}}',
 	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded. Parameter is number of images. Wrap the number in a span tag to allow the number to be incremented programatically',
+	'mobile-frontend-photo-upload-user-count-over-limit' => 'Displayed in place of mobile-frontend-photo-upload-user-count when user has uploaded more than 500 images.',
 	'mobile-frontend-photo-upload-cta' => 'Appears in a notification when user clicks photo upload button (see {{msg-mw|mobile-frontend-photo-upload}}) when not logged in.',
 	'mobile-frontend-photo-upload-login' => 'Message for [[Special:UserLogin]] when being redirected back to add an image to a page',
-	'mobile-frontend-photo-upload-user-count-over-limit' => 'Displayed in place of mobile-frontend-photo-upload-user-count when user has uploaded more than 500 images.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:
@@ -621,11 +623,10 @@ See also:
 	'tag-mobile_edit-description' => 'Change tag description e.g. in [[Special:Tags]], see also {{msg-mw|tag-mobile_edit}}',
 	'mobile-frontend-drawer-cancel' => 'Not visible, but the text label for the cancel button inside a navigation overlay
 {{Identical|Cancel}}',
-	'mobile-frontend-handshake-title' => 'Title for the page redirecting the user to the login form.',
-	'mobile-frontend-handshake-wait' => 'Text asking the user to wait while he is redirected to the login form.',
 	'mobile-frontend-talk-explained' => 'Explains that the user is seeing talk page headings',
 	'mobile-frontend-talk-explained-empty' => 'Explains why the list is empty.',
-	'mobile-frontend-talk-overlay-header' => 'Heading for talk overlay',
+	'mobile-frontend-talk-overlay-header' => 'Heading for talk overlay.
+{{Identical|Talk}}',
 );
 
 /** Achinese (Acèh)
@@ -650,9 +651,19 @@ $messages['af'] = array(
 	'mobile-frontend-search-submit' => 'Soek',
 	'mobile-frontend-home-button' => 'Tuisblad',
 	'mobile-frontend-logged-out' => 'Nie aangemeld nie',
+	'mobile-frontend-logged-in-homepage-notification' => 'Welkom, $1!',
+	'mobile-frontend-logged-in-toast-notification' => 'Aangemeld as $1.',
+	'mobile-frontend-handshake-title' => 'Besig met aanstuur...',
+	'mobile-frontend-sign-up-heading' => 'Registreer',
+	'mobile-frontend-sign-in-heading' => 'Meld aan',
+	'mobile-frontend-sign-in-error-heading' => 'Fout',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Stoor voorkeure',
 	'mobile-frontend-random-button' => 'Lukrake blad',
+	'mobile-frontend-ajax-random-question' => 'Lees die bladsy?',
+	'mobile-frontend-ajax-random-yes' => 'Ja',
+	'mobile-frontend-ajax-random-retry' => 'Probeer weer',
+	'mobile-frontend-ajax-random-suggestions' => 'Ander voorstelle:',
 	'mobile-frontend-back-to-top-of-section' => 'Spring een opskrif terug',
 	'mobile-frontend-close-section' => 'Sluit hierdie paragraaf',
 	'mobile-frontend-show-button' => 'Wys',
@@ -665,6 +676,7 @@ $messages['af'] = array(
 	'mobile-frontend-images-status' => 'Beelde',
 	'mobile-frontend-disable-images' => 'Skakel beelde af',
 	'mobile-frontend-enable-images' => 'Skakel beelde aan',
+	'mobile-frontend-missing-image' => 'Beeld',
 	'mobile-frontend-off' => 'AF',
 	'mobile-frontend-on' => 'AAN',
 	'mobile-frontend-footer-contributors-text' => 'Bladsye deur [$1 gebruikers] soos u',
@@ -679,7 +691,7 @@ $messages['af'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Tegniese probleem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Algemeen',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Bladsybeoordeling',
-	'mobile-frontend-leave-feedback-email-body' => 'Skryf u e-pos bokant die reël.', # Fuzzy
+	'mobile-frontend-leave-feedback-email-body' => 'Beskryf bokant die reël wat se probleem u met {{SITENAME}} ervaar. Neem kennis dat ons nie op elke boodskap kan antwoord nie.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'Tegniese probleem',
 	'mobile-frontend-leave-feedback-general-link-text' => 'Algemene terugvoer',
 	'mobile-frontend-leave-feedback-article-personal-link-text' => "Met betrekking tot my, 'n persoon of 'n maatskappy wat ek verteenwoordig",
@@ -687,18 +699,22 @@ $messages['af'] = array(
 	'mobile-frontend-leave-feedback-article-other-link-text' => "Met betrekking tot 'n ander probleem",
 	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Onderwerp',
 	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Voer u opmerking hier in',
-	'mobile-frontend-leave-feedback-page-title' => 'Gee terugvoer oor u mobiele ervaringe',
+	'mobile-frontend-leave-feedback-page-title' => 'Terugvoer oor mobiele webwerf',
 	'mobile-frontend-leave-feedback-special-title' => 'Kontak ons',
 	'mobile-frontend-feedback-no-subject' => '(geen onderwerp)',
 	'mobile-frontend-feedback-no-subject-field' => "Verskaf asseblief 'n onderwerp.",
 	'mobile-frontend-feedback-no-message' => 'Voeg boodskap hier in',
 	'mobile-frontend-leave-feedback-thanks' => 'Dankie vir u terugvoer!',
 	'mobile-frontend-language' => 'Taal:',
+	'mobile-frontend-language-article-heading' => "Lees in 'n ander taal",
 	'mobile-frontend-language-header' => "Hierdie bladsy is in {{PLURAL:$1|'n taal|$1 tale}} beskikbaar", # Fuzzy
 	'mobile-frontend-language-footer' => '{{SITENAME}} is in ander tale beskikbaar.', # Fuzzy
 	'mobile-frontend-username' => 'Gebruikersnaam:',
 	'mobile-frontend-password' => 'Wagwoord',
+	'mobile-frontend-username-placeholder' => 'Gebruikersnaam',
+	'mobile-frontend-password-placeholder' => 'Wagwoord',
 	'mobile-frontend-login' => 'Teken in',
+	'mobile-frontend-overlay-escape' => 'Gaan terug',
 	'mobile-frontend-placeholder' => 'Deursoek {{SITENAME}}',
 	'mobile-frontend-privacy-link-text' => 'Privaatheid',
 	'mobile-frontend-about-link-text' => 'Aangaande',
@@ -706,7 +722,6 @@ $messages['af'] = array(
 	'mobile-frontend-footer-contact' => 'Kontak',
 	'mobile-frontend-main-menu-featured' => 'Uitgelig',
 	'mobile-frontend-main-menu-settings' => 'Voorkeure',
-	'mobile-frontend-main-menu-contact' => 'Kontak',
 	'mobile-frontend-page-menu-history' => 'Geskiedenis',
 );
 
@@ -2637,6 +2652,8 @@ $messages['da'] = array(
 	'mobile-frontend-logged-out' => 'Ikke logget på',
 	'mobile-frontend-logged-in-homepage-notification' => 'Velkommen, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Logget på som $1.',
+	'mobile-frontend-handshake-title' => 'Omdirigerer...',
+	'mobile-frontend-handshake-wait' => 'Vent venligst, mens vi omdirigerer dig til login-formularen.',
 	'mobile-frontend-sign-up-heading' => 'Opret en konto',
 	'mobile-frontend-sign-in-heading' => 'Log på',
 	'mobile-frontend-sign-in-why' => 'Hvis du har en {{SITENAME}} konto, kan du logge på nedenfor.',
@@ -2767,7 +2784,7 @@ $messages['da'] = array(
 	'mobile-frontend-nearby-error' => 'Der opstod en uventet fejl mens der blev forsøgt at finde sider i nærheden',
 	'mobile-frontend-donate-image-login' => 'Du skal være logget på for at se dine uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Doner et billede',
-	'mobile-frontend-donate-image-title' => 'Doner et billede', # Fuzzy
+	'mobile-frontend-donate-image-title' => 'Filoplægning',
 	'mobile-frontend-donate-image-summary' => 'Fotos sætter liv på siden {{SITENAME}}.
 Der er mange sider, som ingen fotos har på grund af en alvorlig mangel på frit licenserede billeder.
 Hjælp med at bringe disse sider til live, ved at donere de billeder du er villig til at give væk, og som kunne være til nytte for det bredere {{SITENAME}} samfund.',
@@ -2815,10 +2832,16 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'mobile-frontend-photo-caption-placeholder' => 'Tilføj en beskrivelse (påkrævet)',
 	'mobile-frontend-image-loading' => 'Indlæser billede',
 	'mobile-frontend-photo-ownership' => 'Jeg, $1, oprettede dette billede.',
+	'mobile-frontend-photo-ownership-help' => 'Hvad betyder dette?',
+	'mobile-frontend-photo-ownership-confirm' => 'Forstået!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Vi kan kun acceptere billeder, du selv har taget. Vær venlig ikke at lægge billeder op, du har fundet et andet sted på Internettet.', # Fuzzy
+	'mobile-frontend-photo-ownership-bullet-two' => 'Billeder, der er beskyttet af ophavsret eller upassende, vil blive fjernet.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'De filer, du lægger op, bliver udgivet under en fri licens og kan genbruges gratis af enhver.',
 	'mobile-frontend-image-uploading-wait' => 'Uploader billede. Vent venligst.',
 	'mobile-frontend-image-uploading-long' => 'Billedet er ved at blive uploadet! Tak for din tålmodighed.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Afbryd</a>, hvis det tager for lang tid.',
 	'mobile-frontend-photo-upload-error' => 'Fejl, prøv igen.',
+	'mobile-frontend-photo-upload-error-filename' => 'Fejl, vær venlig at angive en mere fyldestgørende beskrivelse.',
 	'mobile-frontend-photo-upload-success-article' => 'Succes! Dit billede er nu live på denne side.',
 	'mobile-frontend-photo-license' => 'Ved at trykke på "Submit" accepterer du [//wikimediafoundation.org/wiki/Terms_of_use vilkår for anvendelse] og accepterer at alle billeder, du udgiver vil blive offentliggjort under en [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 licens]',
 	'mobile-frontend-photo-submit' => 'Send',
@@ -2828,6 +2851,9 @@ Hjælp med at bringe disse sider til live, ved at donere de billeder du er villi
 	'tag-mobile_edit' => 'Mobilredigering',
 	'tag-mobile_edit-description' => 'Redigering udført fra mobilsiden',
 	'mobile-frontend-drawer-cancel' => 'Annuller',
+	'mobile-frontend-talk-explained' => 'De følgende diskussioner er aktive.',
+	'mobile-frontend-talk-explained-empty' => 'Der er ikke nogen diskussioner om denne side.',
+	'mobile-frontend-talk-overlay-header' => 'Diskussion',
 );
 
 /** German (Deutsch)
@@ -3029,7 +3055,7 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du Bilder spendest, die von de
 	'mobile-frontend-photo-ownership' => 'Ich, $1, habe dieses Bild erstellt.',
 	'mobile-frontend-photo-ownership-help' => 'Was heißt das?',
 	'mobile-frontend-photo-ownership-confirm' => 'Verstanden!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'Wir akzeptieren nur Bilder, die du selber aufgenommen hast. Lade bitte keine Bilder hoch, die du irgendwo im Internet gefunden hast.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Wir akzeptieren nur Bilder, die du selber aufgenommen hast. Lade bitte keine Bilder hoch, die du irgendwo im Internet gefunden hast.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'Urheberrechtlich geschützte und unangemessene Bilder werden entfernt.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'Deine hochgeladenen Dateien werden unter einer freien Lizenz veröffentlicht und können von jedem kostenlos weiterverwendet werden.',
 	'mobile-frontend-image-uploading-wait' => 'Lade Bild hoch. Bitte warten.',
@@ -3043,9 +3069,14 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du Bilder spendest, die von de
 	'mobile-frontend-photo-cancel' => 'Abbrechen',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>Eine</span> hochgeladene Datei|<span>$1</span> hochgeladene Dateien}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ hochgeladene Dateien',
+	'mobile-frontend-photo-upload-cta' => 'Bitte melde dich an oder registriere dich, um ein Bild hinzuzufügen.',
+	'mobile-frontend-photo-upload-login' => 'Du musst angemeldet sein, um ein Bild hinzuzufügen.',
 	'tag-mobile_edit' => 'Mobile Bearbeitung',
 	'tag-mobile_edit-description' => 'Bearbeitet von der mobilen Website',
 	'mobile-frontend-drawer-cancel' => 'Abbrechen',
+	'mobile-frontend-talk-explained' => 'Die folgenden Diskussionen sind derzeit aktiv',
+	'mobile-frontend-talk-explained-empty' => 'Zu dieser Seite gibt es keine Diskussionen.',
+	'mobile-frontend-talk-overlay-header' => 'Diskussion',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4680,7 +4711,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-photo-ownership' => 'Moi, $1, ai créé cette image.',
 	'mobile-frontend-photo-ownership-help' => 'Qu’est-ce que cela signifie ?',
 	'mobile-frontend-photo-ownership-confirm' => 'C’est bon !',
-	'mobile-frontend-photo-ownership-bullet-one' => 'Nous ne pouvons accepter que des images prises par vous-même. Merci de ne pas télécharger des images que vous avez trouvées ailleurs sur l’Internet.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Nous ne pouvons accepter que des images prises par vous-même. Merci de ne pas télécharger des images que vous avez trouvées ailleurs sur l’Internet.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'Les images sous droit d’auteur et non appropriées seront supprimées.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'Vos téléchargements sont mis à disposition sous une licence libre et peuvent être réutilisés par n’importe qui gratuitement.',
 	'mobile-frontend-image-uploading-wait' => "Téléchargement de l'image, veuillez patienter.",
@@ -4694,9 +4725,14 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-photo-cancel' => 'Annuler',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> téléchargement|<span>$1</span> téléchargements}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ téléchargements',
+	'mobile-frontend-photo-upload-cta' => 'Veuillez vous connecter ou vous inscrire pour ajouter une image.',
+	'mobile-frontend-photo-upload-login' => 'Vous devez être connecté pour ajouter une image.',
 	'tag-mobile_edit' => 'Modification par mobile',
 	'tag-mobile_edit-description' => 'Modification effectuée depuis la version mobile',
 	'mobile-frontend-drawer-cancel' => 'Annuler',
+	'mobile-frontend-talk-explained' => 'Les conversations suivantes sont actives en ce moment',
+	'mobile-frontend-talk-explained-empty' => 'Il n’y a pas de conversations sur cette page.',
+	'mobile-frontend-talk-overlay-header' => 'Discussion',
 );
 
 /** Franco-Provençal (arpetan)
@@ -5096,6 +5132,8 @@ $messages['gl'] = array(
 	'mobile-frontend-logged-out' => 'Non accedeu ao sistema',
 	'mobile-frontend-logged-in-homepage-notification' => 'Reciba a nosa benvida, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Accedeu ao sistema como $1.',
+	'mobile-frontend-handshake-title' => 'Redirixindo...',
+	'mobile-frontend-handshake-wait' => 'Agarde mentres actúa a redirección ata o formulario de rexistro.',
 	'mobile-frontend-sign-up-heading' => 'Crear unha conta',
 	'mobile-frontend-sign-in-heading' => 'Acceder',
 	'mobile-frontend-sign-in-why' => 'Se ten unha conta en {{SITENAME}}, pode acceder a continuación.',
@@ -5276,7 +5314,7 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-photo-ownership' => 'Eu, $1, creei esta imaxe.',
 	'mobile-frontend-photo-ownership-help' => 'Que significa isto?',
 	'mobile-frontend-photo-ownership-confirm' => 'Xa entendín!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'Unicamente podemos aceptar imaxes que fixese vostede. Por favor, non cargue imaxes que atopou na internet.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Unicamente podemos aceptar imaxes que fixese vostede. Por favor, non cargue imaxes que atopou na internet.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'As imaxes con dereitos de autoría ou que sexan inadecuades han ser borradas.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'As súas cargas libéranse baixo unha licenza libre e calquera pode reutilizalas libremente.',
 	'mobile-frontend-image-uploading-wait' => 'Subindo a imaxe, agarde.',
@@ -5290,9 +5328,14 @@ Axude a darlles vida a estas páxinas achegando aquelas imaxes que poidan ser de
 	'mobile-frontend-photo-cancel' => 'Cancelar',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> carga|<span>$1</span> cargas}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '+500 cargas',
+	'mobile-frontend-photo-upload-cta' => 'Acceda ao sistema ou cree unha conta para engadir unha imaxe.',
+	'mobile-frontend-photo-upload-login' => 'Debe acceder ao sistema para engadir unha imaxe.',
 	'tag-mobile_edit' => 'Edición desde un dispositivo móbil',
 	'tag-mobile_edit-description' => 'Edición feita desde o sitio móbil',
 	'mobile-frontend-drawer-cancel' => 'Cancelar',
+	'mobile-frontend-talk-explained' => 'As seguintes conversas están activas nestes intres',
+	'mobile-frontend-talk-explained-empty' => 'Non hai conversas sobre esta páxina.',
+	'mobile-frontend-talk-overlay-header' => 'Conversa',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -6433,7 +6476,7 @@ $messages['id'] = array(
 	'mobile-frontend-missing-image' => 'Gambar',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-footer-contributors-text' => 'Artikel oleh <a href="$1">kontributor</a> seperti Anda', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Artikel oleh [$1 kontributor] seperti Anda',
 	'mobile-frontend-featured-article' => 'Artikel Pilihan Hari Ini',
 	'mobile-frontend-news-items' => 'Peristiwa Terkini',
 	'mobile-frontend-leave-feedback-notice' => 'Umpan balik Anda membantu kami meningkatkan pengalaman situs seluler Anda. Hal ini akan dipublikasi (bersama nama pengguna, versi peramban web, dan sistem operasi Anda) ke halaman &quot;$1&quot;. Silakan coba memilik baris subjek yang inofatif, contohnya "Masalah pemformatan dengan tabel yang lebar." Umpan balik Anda tuduk pada syarat penggunaan kami.',
@@ -6501,7 +6544,6 @@ $messages['id'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Pengaturan situs telepon genggam',
 	'mobile-frontend-settings-site-header' => 'Bahasa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} tersedia dalam $1 {{PLURAL:$1|bahasa|bahasa}}. Semua versi yang tersedia disebutkan di bawah',
-	'mobile-frontend-main-menu-contact' => 'Kontak',
 	'mobile-frontend-main-menu-account-create' => 'Buat akun',
 	'mobile-frontend-page-menu-contents' => 'isi',
 	'mobile-frontend-page-menu-history' => 'Versi terdahulu',
@@ -6511,7 +6553,7 @@ $messages['id'] = array(
 	'mobile-frontend-page-saving' => 'Menyimpan $1',
 	'mobile-frontend-ajax-page-error' => 'Ups! Ada yang tidak beres. Coba muat ulang jendela peramban Anda.',
 	'mobile-frontend-photo-upload-generic' => 'Sumbang gambar',
-	'mobile-frontend-donate-image-title' => 'Sumbang gambar',
+	'mobile-frontend-donate-image-title' => 'Sumbang gambar', # Fuzzy
 	'mobile-frontend-donate-image-heading' => 'Kontribusi terkini Anda',
 	'mobile-frontend-watchlist-a-z' => 'Halaman yang dipantau', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Halaman dengan perubahan', # Fuzzy
@@ -7155,9 +7197,13 @@ $messages['ja'] = array(
 	'mobile-frontend-photo-cancel' => 'キャンセル',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|アップロード <span>$1</span> 件}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'アップロード 500+ 件',
+	'mobile-frontend-photo-upload-cta' => '画像を追加するにはログインまたは利用者登録をしてください。',
+	'mobile-frontend-photo-upload-login' => '画像を追加するにはログインしてください。',
 	'tag-mobile_edit' => '携帯機器での編集',
 	'tag-mobile_edit-description' => '携帯機器版サイトでの編集',
 	'mobile-frontend-drawer-cancel' => 'キャンセル',
+	'mobile-frontend-talk-explained-empty' => 'このページについての会話はありません。',
+	'mobile-frontend-talk-overlay-header' => 'トーク',
 );
 
 /** Javanese (Basa Jawa)
@@ -7441,7 +7487,7 @@ $messages['ka'] = array(
 	'mobile-frontend-photo-ownership' => 'მე, მომხმარებელმა $1, შევქმენი ეს სურათი.',
 	'mobile-frontend-photo-ownership-help' => 'ეს რას ნიშნავს?',
 	'mobile-frontend-photo-ownership-confirm' => 'არის!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'ჩვენ შეგვიძლია მივიღოთ მხოლოდ თქვენ მიერ შექმნილი ნამუშევრები. გთხოვთ, არ ატვირთოთ სადმე ინტერნეტში მოძებნილი სურათები.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'ჩვენ შეგვიძლია მივიღოთ მხოლოდ თქვენ მიერ შექმნილი ნამუშევრები. გთხოვთ, არ ატვირთოთ სადმე ინტერნეტში მოძებნილი სურათები.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'საავტორო უფლებებით დაცული ან უადგილო სურათები წაიშლება.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'თქვენი ატვირთული ფაილები განთავსებულია თავისუფალი ლიცენზიით და მათი გამოყენება ყველას შეუძლია.',
 	'mobile-frontend-image-uploading-wait' => 'სურათი იტვირთება, გთხოვთ მოიცადეთ. <a href="#">გააუქმეთ</a> თუ ეს დიდხანს გაგრძელდება.',
@@ -7458,6 +7504,7 @@ $messages['ka'] = array(
 	'tag-mobile_edit' => 'რედაქტირება მობილურით',
 	'tag-mobile_edit-description' => 'რედაქტირება შესრულებულია საიტის მობილური ვერსიიდან',
 	'mobile-frontend-drawer-cancel' => 'გაუქმება',
+	'mobile-frontend-talk-overlay-header' => 'განხილვა',
 );
 
 /** Адыгэбзэ (Адыгэбзэ)
@@ -8083,7 +8130,7 @@ $messages['ko'] = array(
 	'mobile-frontend-photo-ownership' => '나, $1(이)가 이 그림을 만들었습니다.',
 	'mobile-frontend-photo-ownership-help' => '이게 무슨 의미입니까?',
 	'mobile-frontend-photo-ownership-confirm' => '알았습니다!',
-	'mobile-frontend-photo-ownership-bullet-one' => '자신이 찍은 그림만 올릴 수 있습니다. 인터넷의 다른 곳에서 찾은 그림을 올리지 마세요.',
+	'mobile-frontend-photo-ownership-bullet-one' => '자신이 찍은 그림만 올릴 수 있습니다. 인터넷의 다른 곳에서 찾은 그림을 올리지 마세요.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => '저작권이 있고 적절하지 않은 그림은 삭제됩니다.',
 	'mobile-frontend-photo-ownership-bullet-three' => '올리는 그림은 자유 라이선스에 따라 공개하고 누구나 자유롭게 활용할 수 있습니다.',
 	'mobile-frontend-image-uploading-wait' => '그림을 올리는 중입니다, 기다려 주세요.',
@@ -8097,9 +8144,14 @@ $messages['ko'] = array(
 	'mobile-frontend-photo-cancel' => '취소',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|올리기 <span>1</span>개|올리기 <span>$1</span>개}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '올리기 500개 초과',
+	'mobile-frontend-photo-upload-cta' => '그림을 추가하려면 로그인하거나 가입하세요.',
+	'mobile-frontend-photo-upload-login' => '그림을 추가하려면 로그인해야 합니다.',
 	'tag-mobile_edit' => '모바일 편집',
 	'tag-mobile_edit-description' => '모바일 사이트에서 편집',
 	'mobile-frontend-drawer-cancel' => '취소',
+	'mobile-frontend-talk-explained' => '다음 토론은 현재 활동하고 있습니다',
+	'mobile-frontend-talk-explained-empty' => '이 문서에 대한 토론이 없습니다.',
+	'mobile-frontend-talk-overlay-header' => '토론',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -9079,7 +9131,7 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-ownership' => 'Јас, $1 ја направив сликава.',
 	'mobile-frontend-photo-ownership-help' => 'Што значи ова?',
 	'mobile-frontend-photo-ownership-confirm' => 'Јасно!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'Прифаќаме само слики што сте ги направиле вие лично. Не подигајте слики најдени некаде на интернет.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Прифаќаме само слики што сте ги направиле вие лично. Не подигајте слики најдени некаде на интернет.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'Сликите под авторски права и оние со непристојна содржина ќе бидат отстранети.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'Вашите подигања се објавуваат под слободна лиценца, што значи дека секој ќе може да ги користи и преработува бесплатно.',
 	'mobile-frontend-image-uploading-wait' => 'Ја подигам сликата. Почекајте.',
@@ -9093,9 +9145,14 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-cancel' => 'Откажи',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> подигање|<span>$1</span> подигања}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ подигања',
+	'mobile-frontend-photo-upload-cta' => 'Најавете се или регистрирајте се за да можете да ставате слики.',
+	'mobile-frontend-photo-upload-login' => 'Мора да сте најавени за да ставате слики.',
 	'tag-mobile_edit' => 'Мобилно уредување',
 	'tag-mobile_edit-description' => 'Уредување извршено од мобилната варијанта на викито',
 	'mobile-frontend-drawer-cancel' => 'Откажи',
+	'mobile-frontend-talk-explained' => 'Моментално се активни следниве разговори',
+	'mobile-frontend-talk-explained-empty' => 'Нема разговори за страницава.',
+	'mobile-frontend-talk-overlay-header' => 'Разговор',
 );
 
 /** Malayalam (മലയാളം)
@@ -9118,7 +9175,7 @@ $messages['ml'] = array(
 	'mobile-frontend-settings-description' => 'മൊബൈലിനായുള്ള ഈ സൈറ്റ് സജ്ജീകരണങ്ങൾ ഉപയോഗിച്ച് താങ്കളുടെ മൊബൈൽ ഉപകരണങ്ങളിലെ അനുഭവം മെച്ചപ്പെടുത്തുക.',
 	'mobile-frontend-settings-beta' => 'ബീറ്റ',
 	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons വ്യാളീ തലം]',
-	'mobile-frontend-settings-alpha-description' => 'അപകടകരവും പരീക്ഷിക്കാത്തതുമായ മൊബൈൽ മേഖലയിലേയ്ക്ക് കടക്കുക. കൂടുതൽ പരീക്ഷണാടിസ്ഥാനത്തിലുള്ള സവിശേഷതകൾ ഉപയോഗിക്കുക പക്ഷേ അപകടകരമായ ബഗുകൾ ഉണ്ടായേക്കാം.',
+	'mobile-frontend-settings-alpha-description' => 'അപകടകരവും പരീക്ഷിക്കാത്തതുമായ മൊബൈൽ മേഖലയിലേയ്ക്ക് കടക്കുക. കൂടുതൽ പരീക്ഷണാടിസ്ഥാനത്തിലുള്ള സവിശേഷതകൾ ഉപയോഗിക്കുക, പക്ഷേ അപകടകരമായ ബഗുകൾ ഉണ്ടായേക്കാം.',
 	'mobile-frontend-save-settings' => 'സജ്ജീകരണങ്ങൾ സേവ് ചെയ്യുക',
 	'mobile-frontend-random-button' => 'ക്രമരഹിതം',
 	'mobile-frontend-ajax-random-heading' => 'വിജ്ഞാനം കണ്ടെത്തുന്നു...',
@@ -9292,7 +9349,7 @@ $messages['ml'] = array(
 	'mobile-frontend-photo-ownership' => 'ഈ ചിത്രം സൃഷ്ടിച്ചത് $1 എന്ന ഞാനാണ്.',
 	'mobile-frontend-photo-ownership-help' => 'എന്താണിതിനർത്ഥം?',
 	'mobile-frontend-photo-ownership-confirm' => 'കിട്ടിപ്പോയ്!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'താങ്കൾ സ്വയമെടുത്ത ചിത്രങ്ങൾ മാത്രമേ ഞങ്ങൾക്ക് സ്വീകരിക്കാനാവൂ. ദയവായി ഇന്റർനെറ്റിൽ മറ്റെവിടെയെങ്കിലും താങ്കൾ കണ്ടെത്തിയ ചിത്രങ്ങൾ അപ്‌ലോഡ് ചെയ്യാതിരിക്കുക.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'താങ്കൾ സ്വയമെടുത്ത ചിത്രങ്ങൾ മാത്രമേ ഞങ്ങൾക്ക് സ്വീകരിക്കാനാവൂ. ദയവായി ഇന്റർനെറ്റിൽ മറ്റെവിടെയെങ്കിലും താങ്കൾ കണ്ടെത്തിയ ചിത്രങ്ങൾ അപ്‌ലോഡ് ചെയ്യാതിരിക്കുക.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'പകർപ്പവകാശസംരക്ഷിതമോ അനുയോജ്യമല്ലാത്തവയോ ആയ ചിത്രങ്ങൾ നീക്കം ചെയ്യപ്പെടുന്നതാണ്.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'താങ്കളുടെ അപ്‌ലോഡുകൾ ആർക്കും സ്വതന്ത്രമായി ഉപയോഗിക്കാവുന്ന വിധത്തിലുള്ള ഒരു സ്വതന്ത്ര ഉപയോഗാനുമതിയിൽ പ്രസിദ്ധീകരിക്കുന്നതാണ്.',
 	'mobile-frontend-image-uploading-wait' => 'ചിത്രം അപ്‌ലോഡ് ചെയ്യുന്നു, ദയവായി കാത്തിരിക്കുക.',
@@ -9309,6 +9366,8 @@ $messages['ml'] = array(
 	'tag-mobile_edit' => 'മൊബൈൽ സൈറ്റ്',
 	'tag-mobile_edit-description' => 'മൊബൈൽ സൈറ്റ് വഴി വരുത്തിയ തിരുത്തുകൾ',
 	'mobile-frontend-drawer-cancel' => 'റദ്ദാക്കുക',
+	'mobile-frontend-talk-explained-empty' => 'ഈ താളിനെക്കുറിച്ചു് സംവാദം നിലവിലില്ല',
+	'mobile-frontend-talk-overlay-header' => 'സംവാദം',
 );
 
 /** Mongolian (монгол)
@@ -9839,6 +9898,33 @@ $messages['nb'] = array(
 	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-page-menu-contents' => 'innhold',
 	'mobile-frontend-page-menu-history' => 'Historikk',
+);
+
+/** Low German (Plattdüütsch)
+ * @author Joachim Mos
+ */
+$messages['nds'] = array(
+	'mobile-frontend-search-submit' => 'Los',
+	'mobile-frontend-home-button' => 'Startsied',
+	'mobile-frontend-ajax-random-yes' => 'Jo',
+	'mobile-frontend-show-button' => 'Wiesen',
+	'mobile-frontend-images-status' => 'Biller',
+	'mobile-frontend-missing-image' => 'Bild',
+	'mobile-frontend-language' => 'Spraak:',
+	'mobile-frontend-username' => 'Brukernaam:',
+	'mobile-frontend-password' => 'Passwoord:',
+	'mobile-frontend-username-placeholder' => 'Brukernaam',
+	'mobile-frontend-password-placeholder' => 'Passwoord',
+	'mobile-frontend-login' => 'Anmellen',
+	'mobile-frontend-page-menu-contents' => 'Inholt',
+	'mobile-frontend-listed-image-no-description' => 'Keen Beschrieven',
+	'mobile-frontend-watchlist-a-z' => 'All',
+	'mobile-frontend-watchlist-filter-all' => 'All',
+	'mobile-frontend-watchlist-filter-talk' => 'Diskuschoon',
+	'mobile-frontend-watchlist-filter-other' => 'Annere',
+	'mobile-frontend-photo-submit' => 'Afschicken',
+	'mobile-frontend-photo-cancel' => 'Afbreken',
+	'mobile-frontend-drawer-cancel' => 'Afbreken',
 );
 
 /** Nedersaksies (Nedersaksies)
@@ -11462,7 +11548,7 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-photo-ownership' => 'Eu, $1, am creat această imagine.',
 	'mobile-frontend-photo-ownership-help' => 'Ce înseamnă acest lucru?',
 	'mobile-frontend-photo-ownership-confirm' => 'Am înțeles!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'Putem accepta doar imagini pe care dumneavoastră le-ați realizat. Vă rugăm să nu încărcați imagini pe care le-ați găsit altundeva pe internet.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Putem accepta doar imagini pe care dumneavoastră le-ați realizat. Vă rugăm să nu încărcați imagini pe care le-ați găsit altundeva pe internet.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'Imaginile inadecvate sau cu drepturi de autor vor fi șterse.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'Fișierele pe care le încărcați sunt eliberate sub o licență liberă și pot fi refolosite gratuit de oricine.',
 	'mobile-frontend-image-uploading-wait' => 'Vă rugăm să așteptați, imaginea se încarcă.',
@@ -11476,9 +11562,14 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-photo-cancel' => 'Revocare',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> încărcare|<span>$1</span> încărcări<span>$1</span> de încărcări}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ încărcări',
+	'mobile-frontend-photo-upload-cta' => 'Vă rugăm să vă autentificați sau să vă înregistrați pentru a adăuga o imagine.',
+	'mobile-frontend-photo-upload-login' => 'Trebuie să fiți autentificat pentru a adăuga o imagine.',
 	'tag-mobile_edit' => 'Modificare mobilă',
 	'tag-mobile_edit-description' => 'Modificare efectuată de pe site-ul mobil',
 	'mobile-frontend-drawer-cancel' => 'Revocare',
+	'mobile-frontend-talk-explained' => 'Următoarele conversații sunt active în prezent',
+	'mobile-frontend-talk-explained-empty' => 'Nu există conversații vizavi de această pagină.',
+	'mobile-frontend-talk-overlay-header' => 'Discuție',
 );
 
 /** tarandíne (tarandíne)
@@ -14219,7 +14310,7 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-photo-ownership' => 'Tôi, $1, tạo ra hình ảnh này.',
 	'mobile-frontend-photo-ownership-help' => 'Điều này có nghĩa là gì?',
 	'mobile-frontend-photo-ownership-confirm' => 'Được rồi!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'Chúng tôi chỉ có thể chấp nhận các hình ảnh do chính bạn chụp. Xin vui lòng không tải lên hình ảnh bạn tìm thấy một nơi nào đó khác trên Internet.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Chúng tôi chỉ có thể chấp nhận các hình ảnh do chính bạn chụp. Xin vui lòng không tải lên hình ảnh bạn tìm thấy một nơi nào đó khác trên Internet.', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => 'Hình ảnh có bản quyền hoặc không phù hợp sẽ bị xóa.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'Các tập tin tải lên của bạn được phát hành theo một giấy phép tự do và bất kỳ ai cũng có thể sử dụng nó cho mục đích miễn phí.',
 	'mobile-frontend-image-uploading-wait' => 'Đang tải lên hình; xin vui lòng chờ.',
@@ -14236,6 +14327,9 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'tag-mobile_edit' => 'Sửa đổi di động',
 	'tag-mobile_edit-description' => 'Trang được sửa đổi dùng trang di động',
 	'mobile-frontend-drawer-cancel' => 'Hủy bỏ',
+	'mobile-frontend-talk-explained' => 'Các cuộc thảo luận sau đây đang tiếp diễn',
+	'mobile-frontend-talk-explained-empty' => 'Không có không có cuộc thảo luận nào về trang này.',
+	'mobile-frontend-talk-overlay-header' => 'Thảo luận',
 );
 
 /** Volapük (Volapük)
@@ -14439,6 +14533,8 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-logged-out' => '未登录',
 	'mobile-frontend-logged-in-homepage-notification' => '欢迎，$1！',
 	'mobile-frontend-logged-in-toast-notification' => '以$1登录。',
+	'mobile-frontend-handshake-title' => '正在重定向...',
+	'mobile-frontend-handshake-wait' => '请稍候，我们将您重定向到登录页面',
 	'mobile-frontend-sign-up-heading' => '注册',
 	'mobile-frontend-sign-in-heading' => '登录',
 	'mobile-frontend-sign-in-why' => '如果你有一个{{SITENAME}}的帐号，你可以在下面登录。',
@@ -14548,7 +14644,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-main-menu-logout' => '退出',
 	'mobile-frontend-main-menu-watchlist' => '监视列表',
 	'mobile-frontend-main-menu-settings' => '设置',
-	'mobile-frontend-main-menu-upload' => '上传', # Fuzzy
+	'mobile-frontend-main-menu-upload' => '上传',
 	'mobile-frontend-main-menu-settings-heading' => '移动版网站设置',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}的语言',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}有$1种语言。下面列出所有的语言。',
@@ -14568,9 +14664,9 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-nearby-noresults' => '你位于一个偏僻的地方，我们找不到任何主题。为什么不写一个呢？',
 	'mobile-frontend-nearby-refresh' => '我们为您找到一个更准确位置。若要刷新附近的页面列表，请点击此处',
 	'mobile-frontend-nearby-error' => '试图找到附近的页面时发生意外错误',
-	'mobile-frontend-donate-image-login' => '登录查看您上传的图像', # Fuzzy
+	'mobile-frontend-donate-image-login' => '您必须登录查看您上传的图像',
 	'mobile-frontend-photo-upload-generic' => '捐献一个图片',
-	'mobile-frontend-donate-image-title' => '捐献一个图片', # Fuzzy
+	'mobile-frontend-donate-image-title' => '上传',
 	'mobile-frontend-donate-image-summary' => '照片给{{SITENAME}}上的页面带来了生命。
 由于严重缺乏自由版权的照片，而导致很多页面没有图片。
 你捐献的图片可以使页面鲜活起来，同时也可以让{{SITENAME}}编辑社群更广泛的使用你的照片。',
@@ -14586,6 +14682,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-watchlist-cta' => '请登录或注册以监视此页。',
 	'mobile-frontend-watchlist-cta-button-login' => '登录',
 	'mobile-frontend-watchlist-cta-button-signup' => '注册',
+	'mobile-frontend-watch-login' => '您必须登录才能监视页面。',
 	'mobile-frontend-watchlist-a-z' => '全部',
 	'mobile-frontend-watchlist-feed' => '已修改',
 	'mobile-frontend-watchlist-a-z-empty' => '您目前没有监视任何页面',
@@ -14616,7 +14713,9 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-upload-comment' => '添加照片到页面',
 	'mobile-frontend-photo-caption-placeholder' => '为本图像添加说明文字（必需）',
 	'mobile-frontend-image-loading' => '正在载入图像',
+	'mobile-frontend-photo-ownership' => '我，$1，建立此图像。',
 	'mobile-frontend-photo-ownership-help' => '这是什么意思？',
+	'mobile-frontend-photo-ownership-confirm' => '明白！',
 	'mobile-frontend-photo-ownership-bullet-two' => '受版权保护及不合适的图像将被删除。',
 	'mobile-frontend-image-uploading-wait' => '正在上传图像，请稍候。',
 	'mobile-frontend-image-uploading-long' => '图像仍在上传中!感谢您耐心等待。',
@@ -14628,9 +14727,12 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-submit' => '提交',
 	'mobile-frontend-photo-cancel' => '取消',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+上传',
+	'mobile-frontend-photo-upload-cta' => '请登录或注册以添加图像',
+	'mobile-frontend-photo-upload-login' => '您必须登录才能添加图像。',
 	'tag-mobile_edit' => '手机编辑',
 	'tag-mobile_edit-description' => '从网站移动版的编辑',
 	'mobile-frontend-drawer-cancel' => '取消',
+	'mobile-frontend-talk-overlay-header' => '讨论',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
@@ -14834,7 +14936,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-photo-ownership' => '我$1建立此圖像。',
 	'mobile-frontend-photo-ownership-help' => '這是什麼意思？',
 	'mobile-frontend-photo-ownership-confirm' => '明白！',
-	'mobile-frontend-photo-ownership-bullet-one' => '我們只接受您自己拍攝的圖像。請不要上載在網上其他地方找到的圖像。',
+	'mobile-frontend-photo-ownership-bullet-one' => '我們只接受您自己拍攝的圖像。請不要上載在網上其他地方找到的圖像。', # Fuzzy
 	'mobile-frontend-photo-ownership-bullet-two' => '受版權保護的和不適當的圖像將被刪除。',
 	'mobile-frontend-photo-ownership-bullet-three' => '您上載的檔案會以自由版權下發佈，並允許任何人免費使用。',
 	'mobile-frontend-image-uploading-wait' => '正在上傳圖片，請稍候。',
@@ -14848,9 +14950,14 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-photo-cancel' => '取消',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span>個上載|<span>$1</span>個上載}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+上載',
+	'mobile-frontend-photo-upload-cta' => '請登入或註冊來添加圖像。',
+	'mobile-frontend-photo-upload-login' => '您必須登入來添加圖像。',
 	'tag-mobile_edit' => '手機編輯',
 	'tag-mobile_edit-description' => '從手機版所作的編輯',
 	'mobile-frontend-drawer-cancel' => '取消',
+	'mobile-frontend-talk-explained' => '以下是目前活躍的討論',
+	'mobile-frontend-talk-explained-empty' => '沒有任何有關此頁的討論。',
+	'mobile-frontend-talk-overlay-header' => '討論',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
