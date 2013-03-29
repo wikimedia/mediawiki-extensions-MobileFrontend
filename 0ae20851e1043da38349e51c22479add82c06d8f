@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DrJmVHzM",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-29T21:22:04Z",
+      "side": 1,
+      "message": "Please please please let\u0027s not try to emulate the worst of Java and have a zillion of 10-line files.",
+      "parentUuid": "DrPYVQJo",
+      "revId": "0ae20851e1043da38349e51c22479add82c06d8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrJY7rOg",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2013-03-29T20:44:57Z",
       "side": 1,
       "message": "Don\u0027t do this, instead provide localBasePath and remoteExtPath in the module definition.\n\nIf you must, then fix this to also provide a remote path as third argument to the constructor.",
+      "revId": "0ae20851e1043da38349e51c22479add82c06d8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrLnSW88",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-29T21:22:04Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "DrJY7rOg",
       "revId": "0ae20851e1043da38349e51c22479add82c06d8f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "DrPkL840",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-29T21:22:04Z",
+      "side": 1,
+      "message": "When there\u0027s no device-specific CSS for that device (commited a nicer code here).",
+      "parentUuid": "DrNYahHo",
+      "revId": "0ae20851e1043da38349e51c22479add82c06d8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrBYw-P8",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 4
@@ -64,6 +118,24 @@
       "writtenOn": "2013-03-29T20:44:57Z",
       "side": 1,
       "message": "What\u0027s wrong with specifying the file in question in the module options array in MobileFrontend.php?",
+      "revId": "0ae20851e1043da38349e51c22479add82c06d8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrHn4Q3k",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-29T21:22:04Z",
+      "side": 1,
+      "message": "Because its _dynamic_.",
+      "parentUuid": "DrBYw-P8",
       "revId": "0ae20851e1043da38349e51c22479add82c06d8f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
