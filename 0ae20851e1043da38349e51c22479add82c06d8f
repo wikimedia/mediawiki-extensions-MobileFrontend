@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DrDl7q70",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-03-29T21:33:15Z",
+      "side": 1,
+      "message": "Max but this file is huge and in my opinion huge files are far worst than small ones. Just because it is 10 lines now doesn\u0027t mean it will always be that way.\n\nCurrently MobileFrontend is a mess as it is - it\u0027s very hard to move around the php code without resulting to grep.",
+      "parentUuid": "DrJmVHzM",
+      "revId": "0ae20851e1043da38349e51c22479add82c06d8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrJY7rOg",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 4
