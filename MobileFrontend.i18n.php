@@ -181,6 +181,9 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-listed-image-no-description' => 'No description',
 	'mobile-frontend-donate-photo-upload-success' => 'Success! Your image can now be used on {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Success! Thanks for your first contribution!',
+	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} needs your photos to bring its pages to life!',
+	'mobile-frontend-first-upload-wizard-page-2' => 'Please only donate photos that you took yourself.',
+	'mobile-frontend-first-upload-wizard-page-3' => 'Your donated photos can be shared, reused, and remixed by millions.',
 
 	// watchlist
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
@@ -232,7 +235,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-ownership' => 'I, $1, created this image.',
 	'mobile-frontend-photo-ownership-help' => 'What does this mean?',
 	'mobile-frontend-photo-ownership-confirm' => 'Got it!',
-	'mobile-frontend-photo-ownership-bullet-one' => 'We can only accept images that you took yourself. Please do not upload images you found somewhere else on the Internet.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'We can only accept photos that you took yourself. Please do not upload images you found somewhere else on the Internet.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'Copyrighted and inappropriate images will be removed.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'Your uploads are released under a free license and can be reused by anyone for free.',
 	'mobile-frontend-image-uploading-wait' => 'Uploading image, please wait.',
@@ -534,6 +537,9 @@ See also:
 	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
 	'mobile-frontend-donate-photo-upload-success' => 'On upload page - notification shown after a successful upload',
 	'mobile-frontend-donate-photo-first-upload-success' => 'On upload page - notification shown after a successful upload when it is the first upload by that user',
+	'mobile-frontend-first-upload-wizard-page-1' => 'Message shown to users who have never uploaded a photo to commons. Explain why photos are important.',
+	'mobile-frontend-first-upload-wizard-page-2' => 'Explains important of the photos being owned by the person uploading them.',
+	'mobile-frontend-first-upload-wizard-page-3' => 'Explains implications of uploading a photo.',
 	'mobile-frontend-watchlist-add' => 'Notification message when you add an article to your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist

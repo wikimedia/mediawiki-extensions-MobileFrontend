@@ -1,3 +1,67 @@
+/* carousel css */
+.carousel {
+  position: relative;
+  background-color: #E7E7E7;
+  box-shadow: 0px 3px 3px #AAA;
+}
+.carousel button {
+  padding: 0;
+  visibility: hidden;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 23px;
+  bottom: 14px;
+  background: url(images/uploads/chevron_left.png) center center no-repeat;
+  background-size: auto 20px;
+}
+.carousel button.prev {
+  left: 4px;
+}
+.carousel button.next {
+  right: 4px;
+  background-image: url(images/uploads/chevron_right.png);
+}
+.carousel button.active {
+  visibility: visible;
+}
+.carousel .page {
+  padding: 112px 27px 0 27px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.3;
+  font-family: Georgia, serif;
+  background-size: auto 80px;
+  background-repeat: no-repeat;
+  background-position: center 24px;
+  min-height: 70px;
+}
+.carousel .page.page-1 {
+  background-image: url(images/uploads/SplashScreen1.png);
+}
+.carousel .page.page-2 {
+  background-image: url(images/uploads/SplashScreen2.png);
+}
+.carousel .page.page-3 {
+  background-image: url(images/uploads/SplashScreen3.png);
+}
+.carousel ul {
+  padding: 4px 0 24px 0;
+  text-align: center;
+}
+.carousel ul li {
+  display: inline-block;
+  text-indent: -999px;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  background: url(images/uploads/Indicator_default.png) center center no-repeat;
+}
+.carousel ul li.active {
+  background-image: url(images/uploads/Indicator_active.png);
+}
 .ctaUploadPhoto {
   padding: 8px;
   background-color: #F3F3F3;

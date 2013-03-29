@@ -3,6 +3,8 @@ var api = M.require( 'api' ),
 	photo = M.require( 'photo' ),
 	popup = M.require( 'notifications' ),
 	View = M.require( 'view' ),
+	Carousel = M.require( 'widgets/carousel' ),
+	carousel,
 	m;
 
 m = ( function() {
@@ -132,9 +134,18 @@ m = ( function() {
 			}
 
 			if ( pages.length === 0 ) {
-				$( '<p>' ).text( mw.msg( 'mobile-frontend-donate-image-summary' ) ).
-					addClass( 'content' ).
-					insertBefore( userGallery.$el );
+				$( '.ctaUploadPhoto h2' ).hide(); // hide the count if 0 uploads have been made
+				carousel = new Carousel( {
+					pages: [
+						{ text: mw.msg( 'mobile-frontend-first-upload-wizard-page-1' ), className: 'page-1', id: 1 },
+						{ text: mw.msg( 'mobile-frontend-first-upload-wizard-page-2' ), className: 'page-2', id: 2 },
+						{ text: mw.msg( 'mobile-frontend-first-upload-wizard-page-3' ), className: 'page-3', id: 3 }
+					]
+				} );
+				carousel.insertBefore( '.ctaUploadPhoto' );
+				$( function() {
+					window.scrollTo( 0, $( '#mw-mf-header' ).offset().top );
+				} );
 			}
 		} );
 	}
@@ -159,12 +170,15 @@ m = ( function() {
 			} ).
 				appendTo( $container ).
 				on( 'success', function( image ) {
-					var $counter = $container.find( 'h2 span' ), newCount;
+					var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount;
 					image.width = IMAGE_WIDTH;
 					userGallery.addPhoto( image, true );
 					if ( $counter[ 0 ] ) {
 						newCount = parseInt( $counter.text(), 10 ) + 1;
 						$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) );
+					}
+					if ( carousel ) {
+						carousel.remove();
 					}
 				} );
 		}

@@ -1,0 +1,14 @@
+<div class="carousel">
+	<button class='prev'></button>
+	{{#pages}}
+	<div class="page {{className}}">
+		{{text}}
+	</div>
+	{{/pages}}
+	<ul>
+	{{#pages}}
+		<li>{{id}}</li>
+	{{/pages}}
+	</ul>
+	<button class='next'></button>
+</div>
