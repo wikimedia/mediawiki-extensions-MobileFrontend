@@ -3,11 +3,15 @@
 	function makePrettyDiff( $diff ) {
 		var $diffclone = $diff.clone();
 
-		if ( $diff.children( 'ins' ).length === 0 ) { // if just a delete do nothing
+		// simple case where just an insert or just a delete
+		if ( $diff.children( 'ins' ).length === 0 || $diff.children( 'del' ).length === 0 ) {
 			$diff.empty().addClass( 'prettyDiff' );
-			$diffclone.find( 'del' ).each( function() {
-				$( this ).clone().appendTo( $diff );
-				$( '<br>' ).appendTo( $diff );
+			$diffclone.find( 'del,ins' ).each( function() {
+				$el = $( this ).clone();
+				if ( $el.text() ) { // don't add empty elements
+					$el.appendTo( $diff );
+					$( '<br>' ).appendTo( $diff );
+				}
 			} );
 			return $diff;
 		} else if ( $diff.children().length > 1 ) { // if there is only one line it is not a complicated diff

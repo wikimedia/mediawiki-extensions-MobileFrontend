@@ -21,7 +21,12 @@ QUnit.test( 'makePrettyDiff', function() {
 		],
 		[
 			$( '<div id="mw-mf-minidiff"><del></del><del>== Fliberty gibbit ==</del><del>Foobar!</del></div>' ),
-			'<del></del><br><del>== Fliberty gibbit ==</del><br><del>Foobar!</del><br>'
+			'<del>== Fliberty gibbit ==</del><br><del>Foobar!</del><br>'
+		],
+		[
+			// no deletions
+			$( '<div id="mw-mf-minidiff"><ins></ins><ins>French duo Daft Punk weren\'t named in the initial announcement, but added the festival to a list of shows on its official Vevo page on March 27. &lt;ref&gt;{{cite news| url= http://www.3news.co.nz/Daft-Punk-website-shows-Coachella-date/tabid/418/articleID/292127/Default.aspx|work=3 News NZ |title= Daft Punk website shows Coachella date| date=March 28, 2013}}&lt;/ref&gt;</ins></div></div>' ),
+			'<ins>French duo Daft Punk weren\'t named in the initial announcement, but added the festival to a list of shows on its official Vevo page on March 27. &lt;ref&gt;{{cite news| url= http://www.3news.co.nz/Daft-Punk-website-shows-Coachella-date/tabid/418/articleID/292127/Default.aspx|work=3 News NZ |title= Daft Punk website shows Coachella date| date=March 28, 2013}}&lt;/ref&gt;</ins><br>'
 		]
 	];
 
