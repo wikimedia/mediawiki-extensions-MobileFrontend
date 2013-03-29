@@ -1,6 +1,6 @@
 ( function ( $, MFEB, settings ) {
 var BANNER_COOKIE_NAME = "zero-rated-banner";
-module("MobileFrontend banner.js: notifications", {
+QUnit.module("MobileFrontend banner.js: notifications", {
 	setup: function() {
 		localStorage.clear();
 		settings.removeCookie(BANNER_COOKIE_NAME);
@@ -12,7 +12,7 @@ module("MobileFrontend banner.js: notifications", {
 	}
 });
 
-test("MobileFrontend banner.js: dismiss notification", function() {
+QUnit.test( 'MobileFrontend banner.js: dismiss notification', 5, function() {
 	var cookieStart, cookieEnd;
 	MFEB.init();
 	cookieStart = settings.getUserSetting( BANNER_COOKIE_NAME );
@@ -27,4 +27,4 @@ test("MobileFrontend banner.js: dismiss notification", function() {
 	strictEqual($("#zero-rated-banner").is(":visible"), false, "banner should now be hidden");
 	strictEqual(cookieEnd, "off", "banner now set for dismissal");
 });
-}( jQuery, mw.mobileFrontend.require( 'banner' ), mw.mobileFrontend.settings ) );
+}( jQuery, mw.mobileFrontend.require( 'banner' ), mw.mobileFrontend.settings) );

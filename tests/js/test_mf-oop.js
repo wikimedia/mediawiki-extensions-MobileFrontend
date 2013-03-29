@@ -2,9 +2,9 @@
 
 var oop = M.require( 'oop' );
 
-module( 'MobileFrontend oop' );
+QUnit.module( 'MobileFrontend oop' );
 
-test( '#extend', function() {
+QUnit.test( '#extend', 4, function() {
 	var Child, child;
 
 	function Parent() {}

@@ -1,15 +1,15 @@
 ( function( nav, $ ) {
 
-module( 'MobileFrontend: mf-navigation.js', {} );
+QUnit.module( 'MobileFrontend: mf-navigation.js' );
 
-test( 'Simple overlay', function() {
+QUnit.test( 'Simple overlay', 2, function() {
 	var overlay = new nav.Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
 	overlay.show();
 	strictEqual( overlay.$el[0].parentNode, document.body, 'In DOM' );
 	strictEqual( overlay.$el.html(), '<h2>Title</h2>/Text' );
 } );
 
-test( 'HTML overlay', function() {
+QUnit.test( 'HTML overlay', 1, function() {
 	var overlay = new nav.Overlay( {
 		heading: '<div>Awesome: <input></div>',
 		content: '<div class="content">YO</div>'
@@ -17,14 +17,14 @@ test( 'HTML overlay', function() {
 	strictEqual( overlay.$el.html(), '<div>Awesome: <input></div>/<div class="content">YO</div>' );
 } );
 
-test( 'Close overlay', function() {
+QUnit.test( 'Close overlay', 1, function() {
 	var overlay = new nav.Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
 	overlay.show();
 	overlay.hide();
 	strictEqual( overlay.$el[0].parentNode, null, 'No longer in DOM' );
 } );
 
-test( 'Stacked overlays', function() {
+QUnit.test( 'Stacked overlays', 6, function() {
 	var overlay = new nav.Overlay( { heading: 'Overlay 1', content: 'Text' } ),
 		overlayTwo = new nav.Overlay( { heading: 'Overlay 2', content: 'Text <button class="cancel">cancel</button>',
 			parent: overlay } );

@@ -1,6 +1,6 @@
-( function ( $, MFE, Q ) {
+( function ( $, MFE ) {
 
-module("MobileFrontend application.js: history", {
+QUnit.module("MobileFrontend application.js: history", {
 	setup: function() {
 		window.location.hash = "#hash1";
 		window.location.hash = "#hash2";
@@ -11,17 +11,17 @@ module("MobileFrontend application.js: history", {
 	}
 });
 
-test("history.replaceHash", function() {
+QUnit.test( 'history.replaceHash', 1, function() {
 	MFE.history.replaceHash("#hash3");
 	strictEqual(window.location.hash, "#hash3", "the hash was set for the first time");
 });
 
 
-module( 'MobileFrontend modules' );
+QUnit.module( 'MobileFrontend modules' );
 
-test( 'define()', function() {
+QUnit.test( 'define()', 1, function() {
 	MFE.define( 'testModule1', 'test module 1' );
-	Q.throws(
+	QUnit.throws(
 		function() {
 			MFE.define( 'testModule1', 'again' );
 		},
@@ -30,8 +30,8 @@ test( 'define()', function() {
 	);
 } );
 
-test( 'require()', function() {
-	Q.throws(
+QUnit.test( 'require()', 2, function() {
+	QUnit.throws(
 		function() {
 			MFE.require( 'dummy' );
 		},
@@ -43,13 +43,13 @@ test( 'require()', function() {
 } );
 
 
-module( 'MobileFrontend common functions' );
+QUnit.module( 'MobileFrontend common functions' );
 
-test( '#getSessionId', function() {
+QUnit.test( '#getSessionId', 3, function() {
 	var sessionId = MFE.getSessionId();
 	strictEqual( typeof sessionId, 'string', 'session ID is a string' );
 	strictEqual( sessionId.length, 32, 'session ID is 32 chars long' );
 	strictEqual( MFE.getSessionId(), sessionId, 'session ID is not regenerated if present' );
 } );
 
-}( jQuery, mw.mobileFrontend, QUnit ) );
+}( jQuery, mw.mobileFrontend ) );

@@ -1,8 +1,8 @@
 ( function( m ) {
 
-module( 'MobileFrontend: mf-last-modified' );
+QUnit.module( 'MobileFrontend: mf-last-modified' );
 
-test( 'timeAgo()', function() {
+QUnit.test( 'timeAgo()', 8, function() {
   deepEqual( m.timeAgo( 40 ), { value: 40, unit: 'seconds' } );
   deepEqual( m.timeAgo( 149 ), { value: 2, unit: 'minutes' } );
   deepEqual( m.timeAgo( 150 ), { value: 3, unit: 'minutes' } );
