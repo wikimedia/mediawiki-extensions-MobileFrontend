@@ -26,6 +26,7 @@
       - android
       - ipad
       - iphone
+      - firefox
 
 ## bundle exec
 
