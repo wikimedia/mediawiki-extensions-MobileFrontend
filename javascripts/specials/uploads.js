@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-var api = M.require( 'api' ),
+var
 	photo = M.require( 'photo' ),
 	popup = M.require( 'notifications' ),
 	View = M.require( 'view' ),
@@ -41,52 +41,29 @@ m = ( function() {
 		} ),
 		userGallery;
 
+	/**
+	 * Returns a description based on the file name using
+	 * a regular expression that strips the file type suffix,
+	 * namespace prefix and any
+	 * date suffix in format YYYY-MM-DD HH-MM
+	 * @param {string} title Title of file
+	 * @return {string} Description for file
+	 */
+	function getDescription( title ) {
+		title = title.replace( /\.[^\. ]+$/, '' ); // replace filename suffix
+		// strip namespace: prefix and date suffix from remainder
+		return title.replace( /^[^:]*:/, '').replace( / \d{4}-\d{2}-\d{2} \d{2}-\d{2}$/, '' );
+	}
+
 	function getImageDataFromPage( page ) {
 		var img = page.imageinfo[0];
 		return {
 			url: img.thumburl,
 			title: page.title,
 			timestamp: img.timestamp,
+			description: getDescription( page.title ),
 			descriptionUrl: img.descriptionurl
 		};
-	}
-
-	function extractDescription( text ) {
-		var index, summary = '';
-		// FIXME: assumes wikimedia commons - this should be customisable
-		index = text.indexOf( '== {{int:filedesc}} ==' );
-		if ( index > - 1 ) {
-			summary = $.trim( text.substr( index ).split( '==' )[ 2 ] );
-		}
-		return summary;
-	}
-	function appendDescriptions( imageData, callback ) {
-		var options,
-			data, titles = $.map( imageData, function( i ) {
-				return i.title;
-			} );
-
-		data = {
-			action: 'query',
-			titles: titles,
-			origin: corsUrl ? M.getOrigin() : undefined,
-			prop: 'revisions',
-			rvprop: 'content'
-		};
-
-		if ( corsUrl ) {
-			options = { url: corsUrl };
-		}
-		api.ajax( data, options ).done( function( resp ) {
-			var pages = $.map( resp.query.pages, function ( v ) {
-				return v;
-			} );
-			$( pages ).each( function() {
-				imageData[ this.title ].description = extractDescription( this.revisions[0]['*'] ) ||
-					mw.msg( 'mobile-frontend-listed-image-no-description' );
-			} );
-			callback( imageData );
-		} );
 	}
 
 	function showGallery( username ) {
@@ -111,25 +88,19 @@ m = ( function() {
 				'withCredentials': true
 			}
 		} ).done( function( resp ) {
-			var pages = [], data = {};
+			var pages = [];
 
 			if ( resp.query && resp.query.pages ) {
 				pages = resp.query.pages;
-				$.each( pages, function () {
-					data[ this.title ] = getImageDataFromPage( this );
+				pages = $.map( pages, function ( p ) {
+					return getImageDataFromPage( p );
 				} );
-				appendDescriptions( data, function( imageData ) {
-					var fileArray = [];
-					// FIXME: API work around - in an ideal world imageData would be an array
-					$.each( imageData, function() {
-						fileArray.push( this );
-					} );
-					fileArray = fileArray.sort( function( a, b ) {
-						return a.timestamp > b.timestamp ? 1 : -1;
-					} );
-					$.each( fileArray, function() {
-						userGallery.addPhoto( this );
-					} );
+				// FIXME: API work around - in an ideal world imageData would be an array
+				pages = pages.sort( function( a, b ) {
+					return a.timestamp > b.timestamp ? 1 : -1;
+				} );
+				$.each( pages, function() {
+					userGallery.addPhoto( this );
 				} );
 			}
 
@@ -188,7 +159,7 @@ m = ( function() {
 	}
 
 	return {
-		extractDescription: extractDescription,
+		getDescription: getDescription,
 		init: init
 	};
 }() );
