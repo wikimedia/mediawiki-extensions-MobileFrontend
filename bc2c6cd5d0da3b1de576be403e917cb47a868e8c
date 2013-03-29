@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqhSERdU",
+        "filename": "javascripts/widgets/carousel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-29T13:58:46Z",
+      "side": 1,
+      "message": "As per my previous comment, I think this one should also be created in initialize().",
+      "revId": "bc2c6cd5d0da3b1de576be403e917cb47a868e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqjSJSe0",
+        "filename": "less/mf-variables.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-03-29T13:58:46Z",
+      "side": 1,
+      "message": "I think we could use a more general variable name. We use this for titles and headings too. But that can be changed later.",
+      "revId": "bc2c6cd5d0da3b1de576be403e917cb47a868e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
