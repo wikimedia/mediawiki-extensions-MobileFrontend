@@ -4,11 +4,9 @@ class SkinMobile extends SkinMobileBase {
 	public $skinname = 'mobile';
 	public $stylename = 'mobile';
 	public $template = 'SkinMobileTemplate';
-	private $resourceLoader;
 
 	protected function prepareTemplate() {
-		global $wgAppleTouchIcon, $wgExtensionAssetsPath,
-			$wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename, $wgMFPhotoUploadEndpoint,
+		global $wgAppleTouchIcon, $wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename,
 			$wgMFEnableSiteNotice;
 
 		wfProfileIn( __METHOD__ );
@@ -168,7 +166,6 @@ class SkinMobile extends SkinMobileBase {
 		$user = $this->getUser();
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$out = $this->getOutput();
-		$inBeta = MobileContext::singleton()->isBetaGroupMember();
 		$inAlpha = MobileContext::singleton()->isAlphaGroupMember();
 
 		if ( $userLogin ) {
@@ -243,7 +240,6 @@ class SkinMobile extends SkinMobileBase {
 		$out->setTarget( 'mobile' );
 		$context = MobileContext::singleton();
 
-		$headLinks = array();
 		$moduleNames = $this->getEnabledModules( $wgResourceModules, $title );
 		$contextModules = $this->attachAdditionalPageResources( $title, $context );
 
