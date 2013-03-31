@@ -1,6 +1,7 @@
 ( function( M,  $ ) {
 var m = ( function() {
 	var randomPageReq,
+		nav = M.require( 'navigation' ),
 		isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) ===  mw.config.get( 'wgNamespaceIds' ).special;
 
 	function makeHeader( articles ) {
@@ -54,7 +55,7 @@ var m = ( function() {
 		// prevent the random button closing the navigation menu and make it work via ajax
 		$( '#randomButton' ).unbind( 'click' ).click( function( ev ) {
 			if ( $( window ).width() < 700 ) {
-				$( 'html' ).removeClass( 'navigationEnabled' );
+				nav.getMenu().close();
 			}
 			ev.preventDefault();
 			getRandomArticle();

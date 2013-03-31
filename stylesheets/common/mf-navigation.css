@@ -18,19 +18,15 @@
   z-index: 3;
   min-height: 100%;
 }
-.navigationEnabled #mw-mf-page-left {
+body.navigation-enabled #mw-mf-page-left {
   width: 80%;
   right: 20%;
   display: block;
 }
-.navigationEnabled .position-fixed,
-.navigationEnabled #mw-mf-page-center {
+body.navigation-enabled .position-fixed,
+body.navigation-enabled #mw-mf-page-center {
   left: 80% !important;
   overflow-x: hidden;
-}
-body.navigationEnabled {
-  height: 100%;
-  overflow: hidden;
 }
 html.overlay .mw-mf-overlay {
   display: block;
@@ -206,9 +202,9 @@ html[dir="rtl"] button.escapeOverlay {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-html.navigationEnabled body,
-html.navigationEnabled #mw-mf-viewport,
-html.navigationEnabled #mw-mf-page-center {
+body.navigation-enabled,
+body.navigation-enabled #mw-mf-viewport,
+body.navigation-enabled #mw-mf-page-center {
   overflow: hidden;
   height: 100%;
 }
@@ -229,7 +225,7 @@ body {
     font-size: 0.8em;
   }
 }
-.supportsPositionFixed.navigationEnabled #mw-mf-viewport {
+.supportsPositionFixed body.navigation-enabled #mw-mf-viewport {
   overflow-y: auto;
 }
 /* Page actions */

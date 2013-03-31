@@ -108,7 +108,7 @@
 			emit( 'homepage-loaded' );
 		}
 
-		$doc.removeClass( 'page-loading' );
+		$doc.removeClass( 'page-loading' ); // FIXME: Kill with fire. This is here for historic reasons in case old HTML is cached
 		if( supportsPositionFixed() ) {
 			$doc.addClass( 'supportsPositionFixed' );
 		}

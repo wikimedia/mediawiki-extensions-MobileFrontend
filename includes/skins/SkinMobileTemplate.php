@@ -10,7 +10,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<div id="siteNotice"></div>
 		<?php } ?>
 		<?php $this->renderArticleHeader() ?>
-	<div class='show <?php $this->html( 'articleClass' ); ?>' id='content_wrapper'>
+	<div class='show' id='content_wrapper'>
 			<div id="content" class="content">
 			<?php $this->html( 'prebodytext' ) ?>
 			<?php $this->html( 'bodytext' ) ?>
@@ -38,43 +38,10 @@ class SkinMobileTemplate extends BaseTemplate {
 
 	public function execute() {
 		$this->prepareData();
-		if ( $this->data['isAlphaGroupMember'] ) {
-			$this->set( 'bodyClasses', 'mobile alpha' );
-		} else {
-			$this->data['isBetaGroupMember'] ? $this->set( 'bodyClasses', 'mobile beta' ) :
-				$this->set( 'bodyClasses', 'mobile live' );
-		}
-
-		$htmlClass = '';
-		if ( $this->data[ 'isSpecialPage' ] ) {
-			$htmlClass .= ' specialPage';
-		}
-		if ( $this->data['renderLeftMenu'] ) {
-			$htmlClass .= ' navigationEnabled navigationFullScreen';
-		}
-		if ( $this->data['action'] == 'edit' ) {
-			$htmlClass .= ' actionEdit';
-		}
-		$this->set( 'htmlClasses', trim( $htmlClass ) );
-
-		?><!doctype html>
-	<html lang="<?php $this->text('code') ?>" dir="<?php $this->html( 'dir' ) ?>" class="<?php $this->text( 'htmlClasses' )  ?>">
-	<head>
-		<title><?php $this->text( 'pagetitle' ) ?></title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<?php $this->html( 'robots' ) ?>
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
-		<?php $this->html( 'touchIcon' ) ?>
-		<script type="text/javascript">
-			document.documentElement.className += ' client-js page-loading';
-		</script>
-		<?php $this->html( 'preamble' ) ?>
-		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
-	</head>
-	<body class="<?php $this->text( 'bodyClasses' ) ?>">
-		<?php $this->renderArticleSkin(); ?>
-		<?php $this->html( 'bcHack' ) ?>
-		<?php $this->html( 'bottomScripts' ) ?>
+		$this->html( 'headelement' );
+		$this->renderArticleSkin();
+		$this->html( 'bcHack' );
+		$this->html( 'bottomScripts' ) ?>
 	</body>
 	</html><?php
 	}
@@ -142,13 +109,6 @@ class SkinMobileTemplate extends BaseTemplate {
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
-		if ( $this->data['wgAppleTouchIcon'] !== false ) {
-			$link = Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $this->data['wgAppleTouchIcon'] ) );
-		} else {
-			$link = '';
-		}
-		$this->set( 'touchIcon', $link );
-
 		$this->set( 'wgMobileFrontendLogo', $wgMobileFrontendLogo );
 
 		wfProfileOut( __METHOD__ );

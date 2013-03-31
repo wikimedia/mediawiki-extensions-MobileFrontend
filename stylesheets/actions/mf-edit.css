@@ -1,10 +1,10 @@
-.client-js.page-loading.actionEdit #content_wrapper {
+.client-js.page-loading .action-edit #content_wrapper {
   background-image: url(../common/images/ajax-loader.gif);
   min-height: 48px;
   background-repeat: no-repeat;
   background-position: center center;
 }
-.client-js.page-loading.actionEdit #content_wrapper #content {
+.client-js.page-loading .action-edit #content_wrapper #content {
   display: none;
 }
 #mw-anon-edit-warning {

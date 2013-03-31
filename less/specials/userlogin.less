@@ -1,16 +1,15 @@
 @import "../mf-variables.less";
 @import "../mf-mixins.less";
 
-.specialPage.overlay {
+.overlay {
 
-	body {
+	body.mw-mf-special {
 		background-color: @overlayContentBackground;
-	}
-
-	.mw-mf-overlay {
-		.header {
-			h1 {
-				padding-left: @overlayHeadingIndent;
+		.mw-mf-overlay {
+			.header {
+				h1 {
+					padding-left: @overlayHeadingIndent;
+				}
 			}
 		}
 	}

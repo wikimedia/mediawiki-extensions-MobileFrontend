@@ -18,9 +18,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
-		// assumes mobile skin
-		$mobileSkin = $ctx->getSkin();
-		$mobileSkin->setHtmlHeader( $this->getWatchlistHeader() );
+		$skin = $ctx->getSkin();
+		$skin->setHtmlHeader( $this->getWatchlistHeader() ); // FIXME: assumes mobile skin = bad
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
@@ -37,7 +36,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			wfProfileOut( __METHOD__ );
 			return;
 		} else {
-			$mobileSkin->addArticleClass( 'noMargins' );
+			$output->setProperty( 'bodyClassName', 'no-margins' );
 		}
 
 		if ( $recentChangesView ) {

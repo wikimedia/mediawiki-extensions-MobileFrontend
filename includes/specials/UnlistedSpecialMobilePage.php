@@ -8,10 +8,6 @@ class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 
 	public function clearPageMargins() {
 		$ctx = MobileContext::singleton();
-		// assumes mobile skin
-		$mobileSkin = $ctx->getSkin();
-		if ( $ctx->shouldDisplayMobileView() ) {
-			$mobileSkin->addArticleClass( 'noMargins' );
-		} // FIXME: do redirect ? Make page work on desktop?
+		$this->getOutput()->setProperty( 'bodyClassName', 'no-margins' );
 	}
 }

@@ -10,8 +10,8 @@ abstract class SkinMobileBase extends SkinTemplate {
 	/** @var string html representing the header of the skin */
 	private $mobileHtmlHeader = null;
 
-	/** @var array of classes that should be present on the content_wrapper */
-	private $articleClassNames = array();
+	/** @var array of classes that should be present on the body tag */
+	private $pageClassNames = array();
 
 	/**
 	 * Provides alternative html for the header
@@ -30,17 +30,36 @@ abstract class SkinMobileBase extends SkinTemplate {
 	}
 
 	/**
-	 * @param string $className: valid class name
+	 * This will be called by OutputPage::headElement when it is creating the
+	 * "<body>" tag, - adds output property bodyClassName to the existing classes
+	 * @param $out OutputPage
+	 * @param $bodyAttrs Array
 	 */
-	public function addArticleClass( $className ) {
-		$this->articleClassNames[ $className ] = true;
+	public function addToBodyAttributes( $out, &$bodyAttrs ) {
+		// does nothing by default
+		$classes = $out->getProperty( 'bodyClassName' );
+		$bodyAttrs[ 'class' ] .= ' ' . $classes;
 	}
 
 	/**
-	 * @return string representing the class attribute of element
+	 * @param string $className: valid class name
 	 */
-	public function getArticleClassString() {
-		return implode( ' ', array_keys( $this->articleClassNames ) );
+	private function addPageClass( $className ) {
+		$this->pageClassNames[ $className ] = true;
+	}
+
+	/**
+	 * Takes a title and returns classes to apply to the body tag
+	 * @param $title Title
+	 * @return String
+	 */
+	public function getPageClasses( $title ) {
+		if ( $title->isMainPage() || $title->isSpecialPage() ) {
+			$className = 'mw-mf-special ';
+		} else {
+			$className = '';
+		}
+		return $className . implode( ' ', array_keys( $this->pageClassNames ) );
 	}
 
 	public static function factory( ExtMobileFrontend $extMobileFrontend ) {
@@ -55,6 +74,15 @@ abstract class SkinMobileBase extends SkinTemplate {
 	public function __construct( ExtMobileFrontend $extMobileFrontend ) {
 		$this->setContext( $extMobileFrontend );
 		$this->extMobileFrontend = $extMobileFrontend;
+		$ctx = MobileContext::singleton();
+		$this->addPageClass( 'mobile' );
+		if ( $ctx->isAlphaGroupMember() ) {
+			$this->addPageClass( 'alpha' );
+		} else if ( $ctx->isBetaGroupMember() ) {
+			$this->addPageClass( 'beta' );
+		} else {
+			$this->addPageClass( 'stable' );
+		}
 	}
 
 	public function outputPage( OutputPage $out = null ) {
@@ -75,6 +103,7 @@ abstract class SkinMobileBase extends SkinTemplate {
 		if ( $html !== false ) {
 			wfProfileIn( __METHOD__  . '-tpl' );
 			$tpl = $this->prepareTemplate();
+			$tpl->set( 'headelement', $out->headElement( $this ) );
 			$tpl->set( 'bodytext', $html );
 			$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
 			$notice = '';
@@ -95,8 +124,6 @@ abstract class SkinMobileBase extends SkinTemplate {
 
 		$tpl = $this->setupTemplate( $this->template );
 		$tpl->setRef( 'skin', $this );
-		$tpl->set( 'code', $lang->getHtmlCode() );
-		$tpl->set( 'dir', $lang->getDir() );
 		$tpl->set( 'scriptUrl', wfScript() );
 
 		$url = MobileContext::singleton()->getDesktopUrl( wfExpandUrl(

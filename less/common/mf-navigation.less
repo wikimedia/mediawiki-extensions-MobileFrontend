@@ -34,7 +34,7 @@
 	min-height: 100%;
 }
 
-.navigationEnabled {
+body.navigation-enabled {
 
 	#mw-mf-page-left {
 		width: 80%;
@@ -47,11 +47,6 @@
 		left: 80% !important;
 		overflow-x: hidden; // prevent horizontal scroll on chrome
 	}
-}
-
-body.navigationEnabled {
-	height: 100%;
-	overflow: hidden;
 }
 
 html.overlay {
@@ -235,8 +230,8 @@ html[dir="rtl"] {
 	}
 }
 
-html.navigationEnabled {
-	body,
+body.navigation-enabled {
+	&,
 	#mw-mf-viewport,
 	#mw-mf-page-center {
 		overflow: hidden;
@@ -265,8 +260,12 @@ body {
 	}
 }
 
-.supportsPositionFixed.navigationEnabled #mw-mf-viewport {
-	overflow-y: auto;
+.supportsPositionFixed {
+	body.navigation-enabled {
+		#mw-mf-viewport {
+			overflow-y: auto;
+		}
+	}
 }
 
 /* Page actions */

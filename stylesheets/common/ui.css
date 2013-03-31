@@ -195,16 +195,16 @@ input[type=submit].cancel {
   background-image: /* @embed */ url(images/menu/loginout.png);
 }
 @media all and (min-width: 700px) {
-  .navigationEnabled .alpha #mw-mf-page-left,
-  .navigationEnabled .beta #mw-mf-page-left {
+  body.navigation-enabled.alpha #mw-mf-page-left,
+  body.navigation-enabled.beta #mw-mf-page-left {
     width: 20%;
     display: block;
     right: 80%;
   }
-  .navigationEnabled .alpha .position-fixed,
-  .navigationEnabled .beta .position-fixed,
-  .navigationEnabled .alpha #mw-mf-page-center,
-  .navigationEnabled .beta #mw-mf-page-center {
+  body.navigation-enabled.alpha .position-fixed,
+  body.navigation-enabled.beta .position-fixed,
+  body.navigation-enabled.alpha #mw-mf-page-center,
+  body.navigation-enabled.beta #mw-mf-page-center {
     left: 20% !important;
     right: 0 !important;
     width: 80%;

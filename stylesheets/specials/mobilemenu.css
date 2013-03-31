@@ -1,9 +1,9 @@
-.navigationFullScreen #mw-mf-page-left {
+body.navigation-full-screen #mw-mf-page-left {
   width: 100% !important;
   right: 0 !important;
   display: block !important;
 }
-.navigationFullScreen #mw-mf-page-center {
+body.navigation-full-screen #mw-mf-page-center {
   display: none;
 }
 #mw-mf-menu-main li.icon-home a {

@@ -2,6 +2,7 @@
 
 var m = ( function( $ ) {
 	var View = M.require( 'view' ),
+		menu,
 		u = M.utils, mfePrefix = M.prefix,
 		inBeta = mw.config.get( 'wgMFMode' ) === 'beta',
 		Overlay,
@@ -81,8 +82,8 @@ var m = ( function( $ ) {
 			}
 			this.$el.appendTo( 'body' );
 			this.scrollTop = document.body.scrollTop;
-			$( 'html' ).addClass( 'overlay' ).
-				removeClass( 'navigationEnabled' );
+			$( 'html' ).addClass( 'overlay' );
+			$( 'body' ).removeClass( 'navigation-enabled' );
 
 			// skip the URL bar if possible
 			window.scrollTo( 0, 1 );
@@ -132,17 +133,20 @@ var m = ( function( $ ) {
 		}
 
 		function openNavigation() {
-			$( 'html' ).addClass( 'navigationEnabled' );
+			$( 'body' ).addClass( 'navigation-enabled' );
 		}
 
 		function closeNavigation() {
 			M.history.pushState( '#' );
-			$( 'html' ).removeClass( 'navigationEnabled' );
+			$( 'body' ).removeClass( 'navigation-enabled' );
+		}
+
+		function isOpen() {
+			return $( 'body' ).hasClass( 'navigation-enabled' );
 		}
 
 		function toggleNavigation() {
-			var $html = $( 'html' );
-			if( !$html.hasClass( 'navigationEnabled' ) ) {
+			if( !isOpen() ) {
 				openNavigation();
 			} else {
 				closeNavigation();
@@ -157,7 +161,7 @@ var m = ( function( $ ) {
 
 		// close navigation if content tapped
 		$( '#mw-mf-page-center' ).on( 'touchend', function() {
-			if ( $( 'html' ).hasClass( 'navigationEnabled' ) ) {
+			if ( isOpen() ) {
 				closeNavigation();
 			}
 		} );
@@ -172,17 +176,22 @@ var m = ( function( $ ) {
 
 		u( search ).bind( 'focus', function() {
 			if ( !inBeta || $( window ).width() < 700 ) {
-				u( document.documentElement ).removeClass( 'navigationEnabled' );
+				closeNavigation();
 			}
 		} );
+		return {
+			close: closeNavigation,
+			open: openNavigation
+		};
 	}
 
-	init();
+	menu = init();
 
 	return {
 		CtaDrawer: CtaDrawer,
 		Overlay: Overlay,
-		getPageMenu: getPageMenu
+		getPageMenu: getPageMenu,
+		getMenu: menu
 	};
 }( jQuery ));
 

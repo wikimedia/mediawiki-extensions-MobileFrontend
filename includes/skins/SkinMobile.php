@@ -27,25 +27,34 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'isAlphaGroupMember', $inAlpha );
 		$tpl->set( 'isBetaGroupMember', $inBeta );
-		$tpl->set( 'renderLeftMenu', $context->getForceLeftMenu() );
+
+		// add head items
+		if ( $wgAppleTouchIcon !== false ) {
+			$out->addHeadItem( 'touchicon',
+				Html::element( 'link', array( 'rel' => 'apple-touch-icon', 'href' => $wgAppleTouchIcon ) )
+			);
+		}
+		$out->addHeadItem( 'canonical',
+			Html::element( 'link', array( 'href' => $title->getCanonicalURL() ) )
+		);
+		$out->addHeadItem( 'viewport',
+			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes' ) )
+		);
+		$out->addHeadItem( 'loadingscript', Html::inlineScript(
+			"document.documentElement.className += ' page-loading';"
+		) );
+
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
-		if ( $title->isMainPage() || $specialPage ) {
-			$this->addArticleClass( 'mw-mf-special' );
-		}
-		$tpl->set( 'articleClass', $this->getArticleClassString() );
-		$tpl->set( 'robots', $this->getRobotsPolicy() );
 		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) + 1 );
 
 		wfProfileIn( __METHOD__ . '-modules' );
 
 		wfProfileOut( __METHOD__ . '-modules' );
-
-		$tpl->setRef( 'wgAppleTouchIcon', $wgAppleTouchIcon );
 
 		// setup destinations for styles/scripts at top and at bottom
 		$tpl = $this->attachResources( $title, $tpl, $device );
@@ -125,7 +134,6 @@ class SkinMobile extends SkinMobileBase {
 			getLocalUrl( array( 'returnto' => $returnToTitle ) );
 
 		// set urls
-		$tpl->set( 'canonicalUrl', $title->getCanonicalURL() );
 		$tpl->set( 'donateImageUrl', $donateUrl );
 		$tpl->set( 'historyLink', $historyLink );
 		$tpl->set( 'nearbyURL', $nearbyUrl );
@@ -274,18 +282,10 @@ class SkinMobile extends SkinMobileBase {
 		} else {
 			$bottomScripts = '';
 		}
+		$bottomScripts .= Html::inlineScript(
+			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
+		);
 
-		$headHtml = $out->getHeadLinks( null, true );
-		$headHtml .= $out->buildCssLinks();
-		$headHtml .= $out->getHeadScripts();
-		/*
-			FIXME: I'm not too keen on adding getHeadItems here
-			it allows anything to add javascript/css without checking
-			if it works on mobile. For instance CentralNotice extension adds a remote geolookupip script
-		*/
-		$headHtml .= $out->getHeadItems();
-
-		$tpl->set( 'preamble', $headHtml );
 		$tpl->set( 'bottomScripts', $bottomScripts );
 		return $tpl;
 	}
@@ -537,18 +537,6 @@ HTML;
 		wfProfileOut( __METHOD__ );
 
 		return $languageVariantUrls;
-	}
-
-	/**
-	 * Extracts <meta name="robots"> from head items that we don't need
-	 * @return string
-	 */
-	private function getRobotsPolicy() {
-		wfProfileIn( __METHOD__ );
-		$links = $this->getOutput()->getHeadLinksArray();
-		$robots = $links['meta-robots'];
-		wfProfileOut( __METHOD__ );
-		return $robots;
 	}
 
 	private function getLogInOutLink() {
