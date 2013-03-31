@@ -240,6 +240,7 @@ class SkinMobile extends SkinMobileBase {
 
 		$rlSupport = $device->supportsJQuery();
 		$out = $this->getOutput();
+		$out->setTarget( 'mobile' );
 		$context = MobileContext::singleton();
 
 		$headLinks = array();
@@ -247,35 +248,21 @@ class SkinMobile extends SkinMobileBase {
 		$contextModules = $this->attachAdditionalPageResources( $title, $context );
 
 		// attach styles
-		$headLinks[] = $this->resourceLoaderLink( array( 'mobile.styles' ), 'styles', $target='mobile' );
+		$out->addModuleStyles( 'mobile.styles' );
 		if ( count( $contextModules['top'] ) > 0 ) {
-			$headLinks[] = $this->resourceLoaderLink( $contextModules['top'], 'styles', $target='mobile' );
+			$out->addModuleStyles( $contextModules['top'] );
 		}
 		// add device specific css file - add separately to avoid cache fragmentation
 		if ( $device->moduleName() ) {
-			$headLinks[] = $this->resourceLoaderLink( $device->moduleName(), 'styles', $target='mobile' );
+			$out->addModuleStyles( $device->moduleName() );
 		}
 
 		// attach modules
 		if ( $rlSupport ) {
-			// Initialize ResourceLoader, targeted to mobile...
-			$headLinks[] = $this->resourceLoaderLink( 'startup', 'scripts', true, true, 'mobile' );
-			$headLinks[] = Html::inlineScript(
-				ResourceLoader::makeLoaderConditionalScript(
-					ResourceLoader::makeConfigSetScript( $out->getJSVars() )
-				)
-			);
-
-			// Load modules that have marked themselves for loading at the top
-			$headLinks[] = Html::inlineScript(
-				ResourceLoader::makeLoaderConditionalScript(
-					Xml::encodeJsCall( 'mw.loader.load', array( array_merge( $moduleNames['top'], $contextModules['top'] ) ) )
-				)
-			);
-
-			// bottom scripts
+			$out->addModules( $moduleNames['top'] );
 			$out->addModules( $moduleNames['bottom'] );
 			$out->addModules( $contextModules['bottom'] );
+
 			// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
 			if ( in_array( 'mobile.action.edit', $contextModules['bottom'] ) ) {
 				$bottomScripts = Html::inlineScript(
@@ -291,7 +278,9 @@ class SkinMobile extends SkinMobileBase {
 			$bottomScripts = '';
 		}
 
-		$headHtml = implode( "\n", $headLinks );
+		$headHtml = $out->getHeadLinks( null, true );
+		$headHtml .= $out->buildCssLinks();
+		$headHtml .= $out->getHeadScripts();
 		/*
 			FIXME: I'm not too keen on adding getHeadItems here
 			it allows anything to add javascript/css without checking
@@ -405,80 +394,6 @@ class SkinMobile extends SkinMobileBase {
 			'top' => $headModuleNames,
 			'bottom' => $moduleNames,
 		);
-	}
-
-	/**
-	 * @return ResourceLoader
-	 */
-	protected function getResourceLoader() {
-		if ( !$this->resourceLoader ) {
-			$this->resourceLoader = new ResourceLoader();
-		}
-		return $this->resourceLoader;
-	}
-
-	/* FIXME: deprecate (requires core changes to support target)*/
-	protected function resourceLoaderLink( $moduleNames, $type, $useVersion = true, $forceRaw = false, $target = false ) {
-		if ( $type == 'scripts' ) {
-			$only = ResourceLoaderModule::TYPE_SCRIPTS;
-		} elseif ( $type == 'styles' ) {
-			$only = ResourceLoaderModule::TYPE_STYLES;
-		} else {
-			throw new MWException( __METHOD__ . "(): undefined link type '$type'" );
-		}
-		wfProfileIn( __METHOD__ );
-		$out = $this->getOutput();
-		$moduleNames = array_flip( (array)$moduleNames );
-		$resourceLoader = $this->getResourceLoader();
-		$query = ResourceLoader::makeLoaderQuery(
-			array(), // modules; not determined yet
-			$this->getLanguage()->getCode(),
-			$this->getSkinName(),
-			null, // so far all the modules we use are user-agnostic
-			null, // version; not determined yet
-			ResourceLoader::inDebugMode()
-		);
-		$context = new ResourceLoaderContext( $resourceLoader, new FauxRequest( $query ) );
-		$version = 0;
-		foreach ( array_keys( $moduleNames ) as $name ) {
-			$module = $resourceLoader->getModule( $name );
-			# Check that we're allowed to include this module on this page
-			if ( !$module
-				|| ( $module->getOrigin() > $out->getAllowedModules( ResourceLoaderModule::TYPE_SCRIPTS )
-					&& $type == 'scripts' )
-				|| ( $module->getOrigin() > $out->getAllowedModules( ResourceLoaderModule::TYPE_STYLES )
-					&& $type == 'styles' )
-			)
-			{
-				unset( $moduleNames[$name] );
-				continue;
-			}
-			if ( $useVersion ) {
-				$version = max( $version, $module->getModifiedTime( $context ) );
-			}
-		}
-		$url = ResourceLoader::makeLoaderURL(
-			array_keys( $moduleNames ),
-			$this->getLanguage()->getCode(),
-			$this->getSkinName(),
-			null, // so far all the modules we use are user-agnostic
-			null,
-			ResourceLoader::inDebugMode(),
-			$only,
-			false,
-			false,
-			$forceRaw ? array( 'raw' => 'true' ) : array()
-		);
-		if ( $target !== false ) {
-			$url .= '&target=' . urlencode( $target );
-		}
-		if ( $type == 'scripts' ) {
-			$link = Html::linkedScript( $url );
-		} else {
-			$link = Html::linkedStyle( $url );
-		}
-		wfProfileOut( __METHOD__ );
-		return $link;
 	}
 
 	public function buildLanguageSelection() {
