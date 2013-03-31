@@ -22,6 +22,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
+		$output->addModuleStyles( 'mobile.watchlist.styles' );
+		$output->addModules( 'mobile.watchlist.scripts' );
 		$req = $this->getRequest();
 		$view = $req->getVal( 'watchlistview', 'a-z' );
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );

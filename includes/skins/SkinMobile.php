@@ -365,25 +365,7 @@ class SkinMobile extends SkinMobileBase {
 			$styles[] = 'mobile.file.styles';
 		}
 
-		if ( $isSpecialPage ) {
-			list( $name, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
-			$id = strtolower( $name );
-			$specialStyleModuleName = 'mobile.' . $id . '.styles';
-			$specialScriptModuleName = 'mobile.' . $id . '.scripts';
-
-			if ( isset( $wgResourceModules[ $specialStyleModuleName ] ) ) {
-				$styles[] = $specialStyleModuleName;
-			}
-
-			if ( isset( $wgResourceModules[ $specialScriptModuleName ] ) ) {
-				$module = $wgResourceModules[ $specialScriptModuleName ];
-				if ( isset( $module['position'] ) && $module['position'] === 'top' ) {
-					$headModuleNames[] = $specialScriptModuleName;
-				} else {
-					$moduleNames[] = $specialScriptModuleName;
-				}
-			}
-		} else {
+		if ( !$isSpecialPage ) {
 			$styles[] = 'mobile.styles.page';
 		}
 
