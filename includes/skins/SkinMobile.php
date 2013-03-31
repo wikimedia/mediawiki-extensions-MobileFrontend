@@ -242,144 +242,85 @@ class SkinMobile extends SkinMobileBase {
 	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
 		global $wgResourceModules, $wgMFVaryResources;
 
-		$rlSupport = $device->supportsJQuery();
 		$out = $this->getOutput();
 		$out->setTarget( 'mobile' );
-		$context = MobileContext::singleton();
 
-		$moduleNames = $this->getEnabledModules( $wgResourceModules, $title );
-		$contextModules = $this->attachAdditionalPageResources( $title, $context );
-
-		// attach styles
 		$out->addModuleStyles( 'mobile.styles' );
-		if ( count( $contextModules['styles'] ) > 0 ) {
-			$out->addModuleStyles( $contextModules['styles'] );
-		}
+		$this->enableModules();
 
-		if ( count( $contextModules['top'] ) > 0 ) {
-			$out->addModules( $contextModules['top'] );
-		}
-
-		// add device specific CSS separately to avoid cache fragmentation
+		// add device specific css file - add separately to avoid cache fragmentation
 		if ( $wgMFVaryResources ) {
 			$out->addModuleStyles( 'mobile.device.detect' );
 		} elseif ( $device->moduleName() ) {
 			$out->addModuleStyles( $device->moduleName() );
 		}
 
-		// attach modules
-		if ( $rlSupport || $wgMFVaryResources ) {
-			$out->addModules( $moduleNames['top'] );
-			$out->addModules( $moduleNames['bottom'] );
-			$out->addModules( $contextModules['bottom'] );
-
-			// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
-			if ( in_array( 'mobile.action.edit', $contextModules['bottom'] ) ) {
-				$bottomScripts = Html::inlineScript(
-					'if(typeof(mw) != "undefined") { mw.loader.implement("mediawiki.action.edit", [],{},{});' .
-					'mw.toolbar = { addButton: function(){}, init: function(){} }; }'
-				);
-			} else {
-				$bottomScripts = '';
-			}
-
-			$bottomScripts .= $this->bottomScripts();
+		// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
+		if ( in_array( 'mobile.action.edit', $out->getModules() ) ) {
+			$bottomScripts = Html::inlineScript(
+				'mw.loader.implement("mediawiki.action.edit", [],{},{});' .
+				'mw.toolbar = { addButton: function(){}, init: function(){} };'
+			);
 		} else {
-			$bottomScripts = '';
+			 $bottomScripts = '';
 		}
 		$bottomScripts .= Html::inlineScript(
 			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
 		);
+		$bottomScripts .= $out->getBottomScripts();
 
 		$tpl->set( 'bottomScripts', $bottomScripts );
 		return $tpl;
 	}
 
 	/**
-	 * Gathers potential javascript modules to load
+	 * Enables RL modules for page
 	 * @param array $modules
 	 * @param Title $title
 	 *
-	 * @return array
 	 */
-	public function getEnabledModules( array $modules, Title $title ) {
+	public function enableModules() {
+		global $wgResourceModules;
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
+		$out = $this->getOutput();
+		$title = $this->getTitle();
 
-		$headModuleNames = array();
-		$moduleNames = array();
-
-		// gather modules
-		foreach( $modules as $moduleName => $module ) {
-			if ( isset( $module['mobileTargets'] ) ) {
-				$targets = $module['mobileTargets'];
-			} else {
-				$targets = array(); // by default assume none - modules might want to add themselves programmatically.
-			}
-			if ( isset( $module['position'] ) ) {
-				$pos = $module['position'];
-			} else {
-				$pos = 'bottom';
-			}
-
-			$stableModule = !$inBeta && !$inAlpha && in_array( 'stable', $targets );
-			$betaModule = $inBeta && !$inAlpha && in_array( 'beta', $targets );
-			$alphaModule = $inAlpha && in_array( 'alpha', $targets );
-			$enabledModule = $stableModule || $betaModule || $alphaModule;
-
-			if ( $enabledModule ) {
-					if ( $pos == 'top' ) {
-						$headModuleNames[] = $moduleName;
-					} else {
-						$moduleNames[] = $moduleName;
-					}
-			}
+		$out->addModules( 'mobile.stable' );
+		$mode = 'stable';
+		if ( $inBeta ) {
+			$out->addModules( 'mobile.beta' );
+			$mode = 'beta';
 		}
+		if ( $inAlpha ) {
+			$out->addModules( 'mobile.alpha' );
+			$mode = 'alpha';
+		} else {
+			$out->addModules( 'mobile.toggling' );
+		}
+		wfRunHooks( 'EnableMobileModules', array( $out, $mode ) );
 
-		return array(
-			'top' => $headModuleNames,
-			'bottom' => $moduleNames,
-		);
-	}
-
-	/**
-	 * @param Title $title
-	 * @param MobileContext $context
-	 *
-	 * @return array
-	 */
-	protected function attachAdditionalPageResources( Title $title, MobileContext $context ) {
-		global $wgResourceModules;
+		// modules based on context
 		$isFilePage = $title->getNamespace() == NS_FILE;
 		$action = $context->getRequest()->getText( 'action' );
 		$isSpecialPage = $title->isSpecialPage();
 
-		$moduleNames = array();
-		$headModuleNames = array();
-		$styles = array();
-
 		// specific to current context
 		if ( $isFilePage ) {
-			$moduleNames[] = 'mobile.file.scripts';
-			$styles[] = 'mobile.file.styles';
+			$out->addModules( 'mobile.file.scripts' );
+			$out->addModuleStyles( 'mobile.file.styles' );
 		}
 
 		if ( !$isSpecialPage ) {
-			$styles[] = 'mobile.styles.page';
+			$out->addModuleStyles( 'mobile.styles.page' );
 		}
 
 		if ( $action === 'edit' ) {
-			$moduleNames[] = 'mobile.action.edit';
+			$out->addModules( 'mobile.action.edit' );
 		} else if ( $action === 'history' ) {
-			$moduleNames[] = 'mobile.action.history';
+			$out->addModules( 'mobile.action.history' );
 		}
-
-		return array(
-			'top' => $headModuleNames,
-			'bottom' => $moduleNames,
-			'styles' => $styles,
-		);
 	}
 
 	public function buildLanguageSelection() {
