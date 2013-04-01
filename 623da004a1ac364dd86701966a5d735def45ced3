@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrEsaRRU",
+        "filename": "includes/specials/UnlistedSpecialMobilePage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-01T13:43:12Z",
+      "side": 1,
+      "message": "I\u0027m just wondering if $name shouldn\u0027t be set as object\u0027s attribute. It\u0027s weird to pass a variable like that between the same object\u0027s methods. Why would anyone run addModules() with a name different than the given special page\u0027s name? Should it even be public?",
+      "revId": "623da004a1ac364dd86701966a5d735def45ced3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
