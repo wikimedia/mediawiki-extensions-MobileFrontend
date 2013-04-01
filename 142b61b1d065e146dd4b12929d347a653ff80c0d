@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrFZi6ds",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T21:57:15Z",
+      "side": 0,
+      "message": "is there something else managing this now? it appears the policy is still getitng added by something - does RL handle this automagically now that we\u0027re using it a little more normally?",
+      "revId": "142b61b1d065e146dd4b12929d347a653ff80c0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrPZ2laI",
+        "filename": "includes/specials/SpecialMobileMenu.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T21:57:15Z",
+      "side": 1,
+      "message": "im a bit hung up on this - are you using $context-\u003eshouldDisplayMobileView() as a way of deciding whether or not addPageClass() will be available to you? this seems like a not-necessarily-safe way to do this. you could instead double check that the object in $mobileSkin is the appropriate class, and/or check for the existence of addPageClass() (and do the same elsewhere in the special pages)",
+      "revId": "cdb21cc977f35e4bcb997765c7ea6491e140de20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrLZwHaY",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T21:57:15Z",
+      "side": 1,
+      "message": "You check elsewhere if shouldDisplayMobileView() before doing something like this. I don\u0027t necessarily think that\u0027s the right approach, but we should at least be consistent :)",
+      "revId": "cdb21cc977f35e4bcb997765c7ea6491e140de20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
