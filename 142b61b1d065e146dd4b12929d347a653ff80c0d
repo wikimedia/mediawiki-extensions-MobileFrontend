@@ -16,6 +16,24 @@
       "revId": "142b61b1d065e146dd4b12929d347a653ff80c0d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrBaGsWg",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-01T23:18:25Z",
+      "side": 0,
+      "message": "Yes\nSee OutputPage.php getHeadLinksArray\n$tags[\u0027meta-robots\u0027]\n\nThis is now called by headElement (calls getHeadLinks which calls getHeadLinkArray)",
+      "parentUuid": "DrFZi6ds",
+      "revId": "142b61b1d065e146dd4b12929d347a653ff80c0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
