@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrBPYA3g",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-01T20:49:45Z",
+      "side": 1,
+      "message": "OMG XSS",
+      "revId": "88904b278f4aceaeff09748a5091d0e8eafd128f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
