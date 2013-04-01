@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrJNxc.A",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 894,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T21:23:30Z",
+      "side": 1,
+      "message": "this should be left to false by default. we can turn this on in config.",
+      "revId": "9ef536049c2bde90140c7742e5fd148543507336",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
