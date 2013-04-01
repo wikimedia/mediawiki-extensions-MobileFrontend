@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "DrLarPYo",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-01T22:46:17Z",
+      "side": 1,
+      "message": "SkinMobileBase never calls this though and class SkinMobileWML extends SkinMobileBase\n\nHow is this different from if ( $rlSupport ) { ?\n\nAs said before though - this becomes redundant when the startup script blacklists the bad phones. This is just a temporary stopgap.",
+      "parentUuid": "DrKCT81k",
+      "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrEudZWE",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 6
