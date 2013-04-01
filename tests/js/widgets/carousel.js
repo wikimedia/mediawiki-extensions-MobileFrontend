@@ -2,9 +2,9 @@
 
 	var Carousel = M.require( 'widgets/carousel' );
 
-	module( 'MobileFrontend Carousel' );
+	QUnit.module( 'MobileFrontend Carousel' );
 
-	test( '#next', function() {
+	QUnit.test( '#next', 5, function() {
 		var c = new Carousel();
 		strictEqual( c.totalPages, 3, 'There are 3 pages in the carousel' );
 		strictEqual( c.page, 0, 'Initialises to page 0' );
@@ -16,7 +16,7 @@
 		strictEqual( c.page, 2, 'Still page 2 (no more pages)' );
 	} );
 
-	test( '#prev', function() {
+	QUnit.test( '#prev', 4, function() {
 		var c = new Carousel();
 		strictEqual( c.page, 0, 'Initialises to page 0' );
 		c.previous();
@@ -27,7 +27,7 @@
 		strictEqual( c.page, 0, 'Back on page 0' );
 	} );
 
-	test( '#showCurrentPage', function() {
+	QUnit.test( '#showCurrentPage', 3, function() {
 		var c = new Carousel();
 		strictEqual( c.page, 0, 'Initialises to page 0' );
 		c.next();
