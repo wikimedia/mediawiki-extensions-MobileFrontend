@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DrOCwC-Y",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T19:47:07Z",
+      "side": 1,
+      "message": "Yeah - the \u0027+\u0027 operator will do the union between the two arrays, but when keys are present in both arrays, it will preserve the values from the left-most array:\nhttp://www.php.net/manual/en/language.operators.array.php\n\nThis makes doing overrides with the \u0027+\u0027 operator difficult/unexpected, but I believe that was intentional in the choice for this pattern.",
+      "parentUuid": "DrEvEhWE",
+      "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrGuWIU0",
         "filename": "MobileFrontend.php",
         "patchSetId": 6
@@ -66,6 +84,23 @@
       "side": 1,
       "message": "see above comment",
       "parentUuid": "DrGuWIU0",
+      "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrKCT81k",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T19:47:07Z",
+      "side": 1,
+      "message": "The way we are removing cache variance by X-Device is such that we only vary on WAP or non-WAP. This, I think, is incompatible with what you\u0027re doing here, which is modifying output depending on jQuery support.",
       "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
