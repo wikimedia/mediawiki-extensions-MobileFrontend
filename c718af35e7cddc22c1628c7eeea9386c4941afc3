@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DrL0x4Fo",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-01T17:42:28Z",
+      "side": 1,
+      "message": "that\u0027s now how the + operator works.",
+      "parentUuid": "DrEvEhWE",
+      "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrGuWIU0",
         "filename": "MobileFrontend.php",
         "patchSetId": 6
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "DrJ05hD8",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-01T17:42:28Z",
+      "side": 1,
+      "message": "see above comment",
+      "parentUuid": "DrGuWIU0",
+      "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrEudZWE",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 6
@@ -47,6 +83,24 @@
       "writtenOn": "2013-04-01T13:55:46Z",
       "side": 1,
       "message": "Unnecessary space?",
+      "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrD1GMMQ",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-01T17:42:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DrEudZWE",
       "revId": "c718af35e7cddc22c1628c7eeea9386c4941afc3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
