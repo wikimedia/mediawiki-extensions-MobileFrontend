@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DrKAiEwM",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-01T20:11:55Z",
+      "side": 1,
+      "message": "Not quite doable: ResourceLoader doesn\u0027t use OutputPage while OutputPage::addVaryHeader() is unavoidable for UI requests as other extensions might want to play with Vary, too.",
+      "parentUuid": "DrODeyzo",
+      "revId": "4cb3cb43020ac750c197f4817c2a0ba96ae192a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DrEAEX8I",
         "filename": "includes/MobileFrontend.body.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2013-04-01T19:32:04Z",
       "side": 1,
       "message": "shouldn\u0027t $out-\u003eaddVaryHeader() be used here? There may be other things this resource needs to vary on that would get overwritten by this.\n\nAlso, maybe we should only add Vary: X-Device if the $xDevice is actually present- should this logic be moved into the if( $xDevice ) block?\n\nFurther, shouldn\u0027t this be checking $wgMFVaryResources before varying the resource on X-Device?",
+      "revId": "4cb3cb43020ac750c197f4817c2a0ba96ae192a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrAB65.4",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-01T20:11:55Z",
+      "side": 1,
+      "message": "See above, load.php doesn\u0027t use OutputPage.\n\nA check for $wgMFVaryResources is not needed because this module is only used when this variable is set to true.",
+      "parentUuid": "DrEAEX8I",
       "revId": "4cb3cb43020ac750c197f4817c2a0ba96ae192a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
