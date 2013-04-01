@@ -57,24 +57,6 @@ abstract class SkinMobileBase extends SkinTemplate {
 		$this->extMobileFrontend = $extMobileFrontend;
 	}
 
-	/**
-	 * createDismissableBanner
-	 *
-	 * @param $id string: unique identification string for banner to distinguish it from other banners
-	 * @param $content string: html string to put in banner
-	 * @param $classNames string: additional classes that can be added to the banner. In particular used to target certain devices (e.g. android)
-	 * @param $bannerStyle string: additional styling for banner
-	 * @return string
-	 */
-	public function createDismissableBanner( $id, $content="", $classNames="", $bannerStyle="" ) {
-		return <<<HTML
-			<div class="mw-mf-banner {$classNames}" id="mw-mf-banner-{$id}"
-				style="{$bannerStyle}">
-			{$content}
-			</div>
-HTML;
-	}
-
 	public function outputPage( OutputPage $out = null ) {
 		global $wgMFNoindexPages;
 		wfProfileIn( __METHOD__ );
