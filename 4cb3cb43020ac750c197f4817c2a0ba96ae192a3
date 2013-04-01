@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrODeyzo",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T19:32:04Z",
+      "side": 1,
+      "message": "Since we need to send X-Device / Vary:X-Device in the response header for the resources that need Vary: X-Device as well as right here, perhaps this should be refactored into a function that can be called once here, and once in MobileFrontendDeviceDetectModule::getStyles().",
+      "revId": "4cb3cb43020ac750c197f4817c2a0ba96ae192a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrEAEX8I",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-01T19:32:04Z",
+      "side": 1,
+      "message": "shouldn\u0027t $out-\u003eaddVaryHeader() be used here? There may be other things this resource needs to vary on that would get overwritten by this.\n\nAlso, maybe we should only add Vary: X-Device if the $xDevice is actually present- should this logic be moved into the if( $xDevice ) block?\n\nFurther, shouldn\u0027t this be checking $wgMFVaryResources before varying the resource on X-Device?",
+      "revId": "4cb3cb43020ac750c197f4817c2a0ba96ae192a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
