@@ -592,6 +592,7 @@ $wgResourceModules['mobile.uploads.plumbing'] = $wgMFMobileResourceTemplateBoile
 $wgResourceModules['mobile.uploads.scripts'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.uploads.plumbing',
+		'mobile.stable',
 	),
 	'messages' => array(
 		'mobile-frontend-photo-upload-generic',
