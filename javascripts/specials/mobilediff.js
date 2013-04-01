@@ -7,7 +7,7 @@
 		if ( $diff.children( 'ins' ).length === 0 || $diff.children( 'del' ).length === 0 ) {
 			$diff.empty().addClass( 'prettyDiff' );
 			$diffclone.find( 'del,ins' ).each( function() {
-				$el = $( this ).clone();
+				var $el = $( this ).clone();
 				if ( $el.text() ) { // don't add empty elements
 					$el.appendTo( $diff );
 					$( '<br>' ).appendTo( $diff );
