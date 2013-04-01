@@ -3,7 +3,7 @@
 ( function() {
 	var STEP_SIZE = 150;
 
-	function initTables( $container ) {
+	function collapseTables( $container ) {
 		var nav = M.require( 'navigation' ),
 			$tables = $container ? $container.find( 'table' ) : $( 'table' );
 
@@ -51,6 +51,12 @@
 				}
 			}
 		} );
+	}
+
+	function initTables( $container ) {
+		if ( !mw.config.get( 'wgIsMainPage' ) ) {
+			collapseTables( $container );
+		}
 	}
 
 	M.

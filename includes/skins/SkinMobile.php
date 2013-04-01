@@ -294,6 +294,14 @@ class SkinMobile extends SkinMobileBase {
 			$out->addModuleStyles( 'mobile.styles.page' );
 		}
 
+		if ( $title->isMainPage() ) {
+			if ( $context->isAlphaGroupMember() ) {
+				$out->addModuleStyles( 'mobile.mainpage.styles' );
+			} else {
+				$out->addModules( 'mobile.mainpage.scripts' );
+			}
+		}
+
 		if ( $action === 'edit' ) {
 			$out->addModules( 'mobile.action.edit' );
 		} else if ( $action === 'history' ) {

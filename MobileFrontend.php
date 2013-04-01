@@ -168,6 +168,35 @@ $wgMFMobileResourceTemplateBoilerplate = array(
 	'class' => 'MFResourceLoaderModule',
 );
 
+// main page
+$wgResourceModules['mobile.mainpage.styles'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array( 'mobile.startup' ),
+	'styles' => array(
+		'stylesheets/mainpage/mainpage.css',
+	),
+	'group' => 'other',
+);
+
+$wgResourceModules['mobile.mainpage.dependencies'] = array(
+	'messages' => array(
+		// mf-homepage.js
+		'mobile-frontend-empty-homepage-text' => array( 'parse' ),
+	),
+	'class' => 'MFResourceLoaderModule',
+	'group' => 'other',
+);
+
+$wgResourceModules['mobile.mainpage.scripts'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.startup',
+		'mobile.mainpage.dependencies',
+	),
+	'scripts' => array(
+		'javascripts/modules/mf-homepage.js',
+	),
+	'group' => 'other',
+);
+
 // Filepages
 $wgResourceModules['mobile.file.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
@@ -222,8 +251,6 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 
 $wgResourceModules['mobile.stable.dependencies'] = array(
 	'messages' => array(
-		// mf-homepage.js
-		'mobile-frontend-empty-homepage-text' => array( 'parse' ),
 		// mf-photo.js
 		'mobile-frontend-photo-license' => array( 'parse' ),
 	),
@@ -400,7 +427,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/mf-view.js',
 		'javascripts/widgets/progress-bar.js',
 		'javascripts/common/mf-navigation.js',
-		'javascripts/common/mf-notification.js', 'javascripts/modules/mf-homepage.js',
+		'javascripts/common/mf-notification.js',
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-watchstar.js',
