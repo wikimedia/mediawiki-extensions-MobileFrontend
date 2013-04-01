@@ -307,7 +307,7 @@ input.searchSubmit {
   padding-bottom: 9px;
   font-size: 9px;
 }
-.jsEnabled input.searchSubmit {
+.client-js input.searchSubmit {
   display: none;
 }
 .search-box {

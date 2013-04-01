@@ -1,7 +1,7 @@
 #mw-mf-menu-page {
   right: 0;
 }
-.jsEnabled #mw-mf-main-menu-button {
+.client-js #mw-mf-main-menu-button {
   background-image: /* @embed */ url(images/menu/main.png);
 }
 #mw-mf-viewport {
