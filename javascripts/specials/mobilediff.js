@@ -27,7 +27,7 @@
 						$add = $add.next();
 					}
 
-					diffChars = JsDiff.diffChars( $del.text(), $add.text() );
+					diffChars = JsDiff.diffWords( $del.text(), $add.text() );
 					diffChars.forEach( function( change ) {
 						var tag;
 						if ( change.added ) {

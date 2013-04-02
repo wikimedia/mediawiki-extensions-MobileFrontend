@@ -17,7 +17,7 @@ QUnit.test( 'makePrettyDiff', function() {
 		],
 		[
 			$( '<div id="mw-mf-minidiff"><del>A total of 40 consulates-generals and 24 honorary consulates have offices in the San Francisco Bay Area.</del><ins>A total of 41 consulates-generals and 24 honorary consulates have offices in the San Francisco Bay Area.</ins></div>' ),
-			'<span>A total of 4</span><ins>1</ins><del>0</del><span> consulates-generals and 24 honorary consulates have offices in the San Francisco Bay Area.</span><br>'
+			'<span>A total of </span><ins>41</ins><del>40</del><span> consulates-generals and 24 honorary consulates have offices in the San Francisco Bay Area.</span><br>'
 		],
 		[
 			$( '<div id="mw-mf-minidiff"><del></del><del>== Fliberty gibbit ==</del><del>Foobar!</del></div>' ),
