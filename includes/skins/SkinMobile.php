@@ -278,7 +278,7 @@ class SkinMobile extends SkinMobileBase {
 				$bottomScripts = '';
 			}
 
-			$bottomScripts .= $out->getBottomScripts();
+			$bottomScripts .= $this->bottomScripts();
 		} else {
 			$bottomScripts = '';
 		}
