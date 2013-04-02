@@ -252,9 +252,14 @@ class SkinMobile extends SkinMobileBase {
 
 		// attach styles
 		$out->addModuleStyles( 'mobile.styles' );
-		if ( count( $contextModules['top'] ) > 0 ) {
-			$out->addModuleStyles( $contextModules['top'] );
+		if ( count( $contextModules['styles'] ) > 0 ) {
+			$out->addModuleStyles( $contextModules['styles'] );
 		}
+
+		if ( count( $contextModules['top'] ) > 0 ) {
+			$out->addModules( $contextModules['top'] );
+		}
+
 		// add device specific CSS separately to avoid cache fragmentation
 		if ( $wgMFVaryResources ) {
 			$out->addModuleStyles( 'mobile.device.detect' );
@@ -352,11 +357,12 @@ class SkinMobile extends SkinMobileBase {
 
 		$moduleNames = array();
 		$headModuleNames = array();
+		$styles = array();
 
 		// specific to current context
 		if ( $isFilePage ) {
 			$moduleNames[] = 'mobile.file.scripts';
-			$headModuleNames[] = 'mobile.file.styles';
+			$styles[] = 'mobile.file.styles';
 		}
 
 		if ( $isSpecialPage ) {
@@ -366,7 +372,7 @@ class SkinMobile extends SkinMobileBase {
 			$specialScriptModuleName = 'mobile.' . $id . '.scripts';
 
 			if ( isset( $wgResourceModules[ $specialStyleModuleName ] ) ) {
-				$headModuleNames[] = $specialStyleModuleName;
+				$styles[] = $specialStyleModuleName;
 			}
 
 			if ( isset( $wgResourceModules[ $specialScriptModuleName ] ) ) {
@@ -378,7 +384,7 @@ class SkinMobile extends SkinMobileBase {
 				}
 			}
 		} else {
-			$headModuleNames[] = 'mobile.styles.page';
+			$styles[] = 'mobile.styles.page';
 		}
 
 		if ( $action === 'edit' ) {
@@ -390,6 +396,7 @@ class SkinMobile extends SkinMobileBase {
 		return array(
 			'top' => $headModuleNames,
 			'bottom' => $moduleNames,
+			'styles' => $styles,
 		);
 	}
 
