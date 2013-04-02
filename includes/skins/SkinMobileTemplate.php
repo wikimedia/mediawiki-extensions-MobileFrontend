@@ -65,11 +65,9 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->html( 'robots' ) ?>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
 		<?php $this->html( 'touchIcon' ) ?>
-		<?php if ( $this->data['supports_jquery'] ) { ?>
 		<script type="text/javascript">
 			document.documentElement.className += ' client-js page-loading';
 		</script>
-		<?php } ?>
 		<?php $this->html( 'preamble' ) ?>
 		<link rel="canonical" href="<?php $this->html( 'canonicalUrl' ) ?>" >
 	</head>
@@ -94,7 +92,7 @@ class SkinMobileTemplate extends BaseTemplate {
 			<li class="icon-random"><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
 				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
 				><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
-			<?php if ( $this->data['supports_jquery'] && $this->data['isAlphaGroupMember'] && $wgMFNearby ) { ?>
+			<?php if ( $this->data['isAlphaGroupMember'] && $wgMFNearby ) { ?>
 			<li class='icon-nearby'>
 				<a href="<?php $this->text( 'nearbyURL' ) ?>"
 					title="<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>">
@@ -102,15 +100,12 @@ class SkinMobileTemplate extends BaseTemplate {
 				</a>
 			</li>
 			<?php } ?>
-			<?php if ( $this->data['supports_jquery'] ) { ?>
 			<li class='icon-watchlist'>
 				<a href="<?php $this->text( 'watchlistUrl' ) ?>"
 					title="<?php $this->msg( 'mobile-frontend-main-menu-watchlist' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-watchlist' ) ?>
 				</a>
 			</li>
-			<?php } ?>
-			<?php if ( $this->data['supports_jquery'] ) { ?>
 			<li class='icon-uploads'>
 					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
 						class="noHijack"
@@ -118,18 +113,15 @@ class SkinMobileTemplate extends BaseTemplate {
 					<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>
 					</a>
 				</li>
-			<?php } ?>
 			<li class='icon-settings'>
 				<a href="<?php $this->text( 'settingsUrl' ) ?>"
 					title="<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>">
 				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
 				</a>
 			</li>
-			<?php if ( $this->data['supports_jquery'] ) { ?>
 			<li class='icon-loginout'>
 				<?php $this->html( 'logInOut' ) ?>
 			</li>
-			<?php } ?>
 		</ul>
 		</div>
 		<div id='mw-mf-page-center'>

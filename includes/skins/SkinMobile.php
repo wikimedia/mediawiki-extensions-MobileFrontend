@@ -42,7 +42,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) + 1 );
 
 		wfProfileIn( __METHOD__ . '-modules' );
-		$tpl->set( 'supports_jquery', $device->supportsJQuery() );
 
 		wfProfileOut( __METHOD__ . '-modules' );
 
@@ -233,7 +232,7 @@ class SkinMobile extends SkinMobileBase {
 	}
 
 	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
-		global $wgResourceModules;
+		global $wgResourceModules, $wgMFVaryResources;
 
 		$rlSupport = $device->supportsJQuery();
 		$out = $this->getOutput();
@@ -248,13 +247,15 @@ class SkinMobile extends SkinMobileBase {
 		if ( count( $contextModules['top'] ) > 0 ) {
 			$out->addModuleStyles( $contextModules['top'] );
 		}
-		// add device specific css file - add separately to avoid cache fragmentation
-		if ( $device->moduleName() ) {
+		// add device specific CSS separately to avoid cache fragmentation
+		if ( $wgMFVaryResources ) {
+			$out->addModuleStyles( 'mobile.device.detect' );
+		} elseif ( $device->moduleName() ) {
 			$out->addModuleStyles( $device->moduleName() );
 		}
 
 		// attach modules
-		if ( $rlSupport ) {
+		if ( $rlSupport || $wgMFVaryResources ) {
 			$out->addModules( $moduleNames['top'] );
 			$out->addModules( $moduleNames['bottom'] );
 			$out->addModules( $contextModules['bottom'] );
@@ -262,8 +263,8 @@ class SkinMobile extends SkinMobileBase {
 			// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
 			if ( in_array( 'mobile.action.edit', $contextModules['bottom'] ) ) {
 				$bottomScripts = Html::inlineScript(
-					'mw.loader.implement("mediawiki.action.edit", [],{},{});' .
-					'mw.toolbar = { addButton: function(){}, init: function(){} };'
+					'if(typeof(mw) != "undefined") { mw.loader.implement("mediawiki.action.edit", [],{},{});' .
+					'mw.toolbar = { addButton: function(){}, init: function(){} }; }'
 				);
 			} else {
 				$bottomScripts = '';

@@ -35,6 +35,7 @@ $wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.ph
 // autoload extension classes
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
+	'MobileFrontendDeviceDetectModule' => 'MobileFrontend.body',
 	'MobileFrontendSiteModule' => 'MobileFrontend.body',
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
@@ -653,6 +654,10 @@ $wgResourceModules['mobile.loginhandshake.scripts'] = $wgMFMobileSpecialPageReso
 	'position' => 'top',
 );
 
+$wgResourceModules['mobile.device.detect'] = $wgMFMobileResourceBoilerplate + array(
+	'class' => 'MobileFrontendDeviceDetectModule',
+);
+
 /**
  * Begin configuration variables
  */
@@ -894,3 +899,9 @@ $wgMFEnableSiteNotice = false;
  */
 $wgMFEnableXAnalyticsLogging = false;
 
+
+/**
+ * If set to true, mobile skin's resources are varied by X-Device.
+ * Otherwise, page HTML will be varied on it.
+ */
+$wgMFVaryResources = false;
