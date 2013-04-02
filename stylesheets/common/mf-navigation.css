@@ -2,7 +2,8 @@
   right: 0;
 }
 .client-js #mw-mf-main-menu-button {
-  background-image: /* @embed */ url(images/menu/main.png);
+  /* @embed */
+  background-image: url(images/menu/main.png);
 }
 #mw-mf-viewport {
   width: 100%;
