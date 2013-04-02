@@ -240,7 +240,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function getXDeviceInVaryModeProvider() {
 		return array(
-			array( 'webkit', 'no', 'capable' ),
+			array( 'webkit', 'no', 'webkit' ),
 			array( 'capable', 'no', 'capable' ),
 			array( 'wap', 'yes', 'wap' ),
 		);

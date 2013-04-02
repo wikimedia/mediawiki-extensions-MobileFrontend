@@ -96,8 +96,8 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 			),
 			array(
 				$module,
-				'mw.mobileFrontend.template.add("template", "hello\n");' . "\n" .
-				'mw.mobileFrontend.template.add("template2", "goodbye\n");' . "\n"
+				'mw.mobileFrontend.template.add("template","hello\n");' . 
+					'mw.mobileFrontend.template.add("template2","goodbye\n");'
 			)
 		);
 	}
