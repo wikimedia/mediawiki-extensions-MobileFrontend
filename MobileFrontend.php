@@ -36,7 +36,6 @@ $wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.ph
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
 	'MobileFrontendDeviceDetectModule' => 'MobileFrontend.body',
-	'MobileFrontendSiteModule' => 'MobileFrontend.body',
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
 	'DeviceDetection' => 'DeviceDetection',
@@ -50,6 +49,7 @@ $autoloadClasses = array (
 	'ApiQueryExtracts' => 'api/ApiQueryExtracts',
 
 	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
+	'MobileSiteModule' => 'modules/MobileSiteModule',
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
@@ -479,8 +479,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 
 $wgResourceModules['mobile.site'] = array(
 	'dependencies' => array( 'mobile.startup' ),
-	'class' => 'MobileFrontendSiteModule',
-	'targets' => 'mobile',
+	'class' => 'MobileSiteModule',
 	'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 );
 
@@ -794,14 +793,6 @@ $wgMFExtendOpenSearchXml = false;
  * to mix mobile and non-mobile pages in its search results, creating confusion.
  */
 $wgMFNoindexPages = true;
-
-/**
- * Which pages should be included in mobile.site
- */
-$wgMobileSiteResourceLoaderModule = array(
-	'MediaWiki:Mobile.css' => array( 'type' => 'style' ),
-	'MediaWiki:Mobile.js' => array( 'type' => 'script' ),
-);
 
 /**
  * Set the domain of the stopMobileRedirect cookie
