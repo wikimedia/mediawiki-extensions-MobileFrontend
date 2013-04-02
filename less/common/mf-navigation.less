@@ -104,6 +104,7 @@ html.overlay {
 	.content {
 		margin-top: @headingMarginTop;
 
+		.confirm,
 		.cancel {
 			display: block;
 			margin: auto;
@@ -204,8 +205,13 @@ html.overlay {
 	list-style: none;
 
 	&.informative {
-		list-style: inside square;
-		margin-bottom: 8px;
+		margin-left: 16px;
+		list-style: outside square;
+		margin-bottom: 16px;
+
+		li {
+			margin-bottom: 8px;
+		}
 	}
 }
 

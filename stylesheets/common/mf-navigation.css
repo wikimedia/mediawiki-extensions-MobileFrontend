@@ -97,6 +97,7 @@ html.overlay #footer {
 .mw-mf-overlay .content {
   margin-top: 14pt;
 }
+.mw-mf-overlay .content .confirm,
 .mw-mf-overlay .content .cancel {
   display: block;
   margin: auto;
@@ -176,7 +177,11 @@ html.overlay #footer {
   list-style: none;
 }
 .overlay ul.informative {
-  list-style: inside square;
+  margin-left: 16px;
+  list-style: outside square;
+  margin-bottom: 16px;
+}
+.overlay ul.informative li {
   margin-bottom: 8px;
 }
 a.escapeOverlay,
