@@ -236,6 +236,7 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 	'localBasePath' => $localBasePath,
 	'localTemplateBasePath' => $localBasePath . '/templates',
 	'templates' => array(
+		'wikitext/commons-upload',
 		'leadPhoto',
 		'overlay',
 		'overlays/cleanup',

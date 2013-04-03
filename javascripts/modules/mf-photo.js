@@ -155,11 +155,9 @@
 				'mobile-frontend-photo-article-donate-comment';
 
 			function doUpload( token ) {
-				var formData = new FormData(), descTextToAppend,
+				var formData = new FormData(),
 					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 );
 
-				descTextToAppend = mw.config.get( 'wgMFPhotoUploadAppendToDesc' );
-				descTextToAppend = descTextToAppend ? '\n\n' + descTextToAppend : '';
 				options.fileName = generateFileName( options.description, '.' + ext );
 
 				formData.append( 'action', 'upload' );
@@ -172,10 +170,12 @@
 				formData.append( 'comment', mw.msg( options.editSummaryMessage ) );
 				formData.append( 'file', options.file );
 				formData.append( 'token', token );
-				formData.append( 'text',
-					'== {{int:filedesc}} ==\n' + options.description +
-					descTextToAppend +
-					'\n\n== {{int:license-header}} ==\n{{self|cc-by-sa-3.0}}'
+				formData.append( 'text', M.template.get( 'wikitext/commons-upload' ).
+					render( {
+						suffix: mw.config.get( 'wgMFPhotoUploadAppendToDesc' ),
+						text: options.description,
+						username: mw.config.get( 'wgUserName' )
+					} )
 				);
 
 				self.post( formData, {
