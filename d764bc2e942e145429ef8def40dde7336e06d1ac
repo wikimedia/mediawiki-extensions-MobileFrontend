@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrZXmRLI",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-04-03T23:31:48Z",
+      "side": 1,
+      "message": "Calling OutputPage::addJsVars from somewhere in SkinMobile has the same effect (in that both MakeGlobalVariablesScript and OutputPage::addJsVars add it to the page output, not to the startup module).\n\nBut doing it from within Skin means that you:\n* Don\u0027t add it to other skins\u0027 output\n* Don\u0027t need to get the context (maybe)",
+      "revId": "d764bc2e942e145429ef8def40dde7336e06d1ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
