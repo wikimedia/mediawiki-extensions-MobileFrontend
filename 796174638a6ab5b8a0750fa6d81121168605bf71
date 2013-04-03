@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrdXsvJU",
+        "filename": "javascripts/modules/mf-watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-04-03T23:29:01Z",
+      "side": 1,
+      "message": "I just came by and noticed this leads to inconsistent control flow. This should execute callback asynchronously consistently even if it already has a value, so that consuming code consistently yields after calling checkWatchStatus();\n\ne.g. setTimeout( function () { callback( cache ); ]);\n\nSee also https://twitter.com/izs/status/319128058156163072 http://blog.ometer.com/2011/07/24/callbacks-synchronous-and-asynchronous/",
+      "revId": "796174638a6ab5b8a0750fa6d81121168605bf71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
