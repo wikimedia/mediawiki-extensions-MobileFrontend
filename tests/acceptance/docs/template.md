@@ -67,6 +67,20 @@
       - master
       - debug
 
+## Site
+
+- ID: SITE
+  - Display Name: Site
+  - Type: Select a string among many
+  - UI Mode: Dropdown list (no inline help, but more compact UI)
+  - Options
+    - Display Name: (name)
+    - Value: (name)
+
+    - name:
+      - en.m.wikipedia.beta.wmflabs.org
+      - en.m.wikipedia.org
+
 ## Jelly-based transformation
 
 - Property
@@ -152,7 +166,7 @@
           <command>
     export BROWSER_LABEL=${BROWSER_LABEL}
     export ENVIRONMENT=cloudbees
-    export MEDIAWIKI_URL=http://en.m.wikipedia.org/wiki/
+    export MEDIAWIKI_URL=http://${SITE}/wiki/
 
     curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
     RUBY_VERSION=2.0.0-p0 \
