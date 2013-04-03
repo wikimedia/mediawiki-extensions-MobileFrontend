@@ -226,6 +226,9 @@ class MobileContext extends ContextSource {
 			return $this->mobileView;
 		}
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
+		if ( $this->mobileView ) {
+			wfRunHooks( 'EnterMobileMode', array( $this ) );
+		}
 		return $this->mobileView;
 	}
 
