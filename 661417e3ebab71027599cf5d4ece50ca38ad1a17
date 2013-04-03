@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrHPyjJo",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 522,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-03T17:51:18Z",
+      "side": 1,
+      "message": "Use .first() ?\nhttp://jsperf.com/jquery-first-vs-first-vs-eq-0-vs-0/3#bs-results",
+      "revId": "661417e3ebab71027599cf5d4ece50ca38ad1a17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
