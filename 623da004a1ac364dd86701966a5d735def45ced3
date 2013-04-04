@@ -16,6 +16,23 @@
       "revId": "623da004a1ac364dd86701966a5d735def45ced3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dre8uvUM",
+        "filename": "includes/specials/UnlistedSpecialMobilePage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-04T20:41:02Z",
+      "side": 1,
+      "message": "Please make it protected.",
+      "revId": "623da004a1ac364dd86701966a5d735def45ced3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
