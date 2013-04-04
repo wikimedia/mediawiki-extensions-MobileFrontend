@@ -11,7 +11,7 @@ var opensearch = ( function() {
 	var apiUrl = '/api.php', timer = -1, typingDelay = 500,
 		numResults = 15, term, mfePrefix = M.prefix,
 		message = M.message,
-		search = document.getElementById(  mfePrefix + 'search' ),
+		search = document.getElementById(  'searchInput' ),
 		oldValue,
 		focusBlurTimeout,
 		u = M.utils;
@@ -102,7 +102,7 @@ var opensearch = ( function() {
 			term, search,
 			section, escapedTerm, suggestionsResult, link, label;
 
-		search = document.getElementById(  mfePrefix + 'search' );
+		search = document.getElementById( 'searchInput' );
 		term = htmlEntities( search.value );
 
 		if ( !sections || sections.length < 1 ) {
@@ -208,7 +208,7 @@ var opensearch = ( function() {
 	function initClearSearch() {
 		var $clearSearch,
 			results = document.getElementById( 'results' ),
-			search = document.getElementById( mfePrefix + 'search' );
+			search = document.getElementById( 'searchInput' );
 
 		$clearSearch = $( '<a class="clearlink">' ).appendTo( '#mw-mf-sq' );
 		function clearSearchBox( event ) {
@@ -250,7 +250,7 @@ var opensearch = ( function() {
 	}
 
 	function init() {
-		if ( document.getElementById( 'mw-mf-search' ) ) {
+		if ( document.getElementById( 'searchInput' ) ) {
 			initSearch();
 		}
 	}
