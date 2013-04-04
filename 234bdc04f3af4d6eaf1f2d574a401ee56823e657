@@ -16,6 +16,24 @@
       "revId": "234bdc04f3af4d6eaf1f2d574a401ee56823e657",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Drf7xlWo",
+        "filename": "templates/wikitext/commons-upload.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-04-04T16:41:58Z",
+      "side": 1,
+      "message": "The templating system in MF\u0027s ResourceLoader extension appends an .html extension to whatever name you pass:\n\n\tprotected function getLocalTemplatePath( $name ) {\n\t\treturn \"{$this-\u003elocalTemplateBasePath}/$name.html\";\n\t}\n\nNot really ideal, but it shouldn\u0027t harm anything here.",
+      "parentUuid": "Drf4K9dI",
+      "revId": "234bdc04f3af4d6eaf1f2d574a401ee56823e657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
