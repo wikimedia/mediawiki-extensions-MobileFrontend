@@ -265,7 +265,10 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-talk-overlay-header' => 'Talk',
 );
 
-/** Message documentation (Message documentation)
+/** Message documentation (This is the name of the message documentation language code (qqq). Follow the rules of your languages and use small first letter if it doesn't capitalize language names always.
+
+It might be easier to translate it as "translation guidelines" or "translation help".
+{{Identical|Message documentation}})
  * @author Amire80
  * @author Asmen
  * @author Base
@@ -3607,6 +3610,7 @@ $messages['en-gb'] = array(
  * @author ArnoLagrange
  * @author Karika
  * @author Objectivesea
+ * @author Remux
  * @author Yekrats
  */
 $messages['eo'] = array(
@@ -3616,6 +3620,8 @@ $messages['eo'] = array(
 	'mobile-frontend-logged-out' => 'Ne ensalutita',
 	'mobile-frontend-logged-in-homepage-notification' => 'Bonvenon, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Elsalutita kiel $1',
+	'mobile-frontend-handshake-title' => 'Redirektante....',
+	'mobile-frontend-handshake-wait' => 'Bonvole atendu dum ni redirektas vin al ensalutilo.',
 	'mobile-frontend-sign-up-heading' => 'Registriĝi',
 	'mobile-frontend-sign-in-heading' => 'Ensaluti',
 	'mobile-frontend-sign-in-why' => 'Se vi havas konton de {{SITENAME}}, vi povas ensaluti sube.',
@@ -3623,6 +3629,7 @@ $messages['eo'] = array(
 	'mobile-frontend-settings-description' => 'Fari propran etoson en via portebla ilo kun ĉi tiuj agordoj',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons Reĝimo Jen Drakoj]',
+	'mobile-frontend-settings-alpha-description' => 'Eniru al danĝera kaj ne-esplorata portebla teritorio. Havu eĉ pli da funkcioj eksperimentaj, sed kun pli ebleco de cimoj.',
 	'mobile-frontend-save-settings' => 'Konservi preferojn',
 	'mobile-frontend-random-button' => 'Hazarde',
 	'mobile-frontend-ajax-random-quote' => 'Intelekta kresko komencu je naskiĝo kaj ĉesu nur ĉe morto',
@@ -3634,7 +3641,7 @@ $messages['eo'] = array(
 	'mobile-frontend-close-section' => 'Fermi ĉi tiun sekcion',
 	'mobile-frontend-show-button' => 'Montri',
 	'mobile-frontend-hide-button' => 'Kaŝi',
-	'mobile-frontend-empty-homepage-text' => 'Ĉi tiu hejmpaĝo estu konfigurita. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Kiel ŝalti la porteblan version de la retejo</a>', # Fuzzy
+	'mobile-frontend-empty-homepage-text' => 'Ĉi tiu ĉefpaĝo bezonas esti konfigurata. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instrukcioj por scii kiel ŝalti la porteblan version de la retejo]',
 	'mobile-frontend-regular-site' => 'Malŝalti la version mobilan',
 	'mobile-frontend-wml-continue' => 'Kontinui …',
 	'mobile-frontend-wml-back' => 'Retroiri ...',
@@ -3648,7 +3655,7 @@ $messages['eo'] = array(
 	'mobile-frontend-missing-image' => 'Bildo',
 	'mobile-frontend-off' => 'NEVIDEBLAJ',
 	'mobile-frontend-on' => 'VIDEBLAJ',
-	'mobile-frontend-footer-contributors-text' => 'Artikolo fare de <a href="$1">kontribuantoj</a> kiel vi', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Artikolo fare de [$1 kontribuantoj] kiel vi',
 	'mobile-frontend-featured-article' => 'Artikolo prezentita hodiaŭ',
 	'mobile-frontend-news-items' => 'Aktuale',
 	'mobile-frontend-leave-feedback-notice' => 'Viaj komentoj helpas nin plibonigi la poŝtelefona fasado. Ĝi estos afiŝitaj publike, kune kun via salutnomo, retumila versio, kaj operaciumo al la paĝo &quot;$1&quot;. Bonvolu elekti informeca temo-linio, ekz-e "Problemoj formati vastajn tabelojn". Viaj opinioj estas regataj laŭ nia regularo pri uzado.',
@@ -3680,7 +3687,7 @@ $messages['eo'] = array(
 	'mobile-frontend-leave-feedback-post-error' => 'Estis eraro traktante vian mesaĝon. Bonvolu provi denove pli poste.',
 	'mobile-frontend-language' => 'Lingvo:',
 	'mobile-frontend-language-article-heading' => 'Legi en alia lingvo',
-	'mobile-frontend-language-header' => 'Ĉi tiu artikolo disponas per $1 {{PLURAL:$1|lingvo|lingvoj}}', # Fuzzy
+	'mobile-frontend-language-header' => 'Ĉi tiu paĝo disponas en $1 {{PLURAL:$1|lingvo|lingvoj}}',
 	'mobile-frontend-language-variant-header' => 'Elekti variaĵon de {{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-language-footer' => 'Notu: Ĉi tiu paĝo eble ne estas skribita en via prefera lingvo. Vi povas vidi kiujn lingvojn {{SITENAME}} subtenas klakante ĉi tie.',
 	'mobile-frontend-language-site-choose' => 'Traserĉi lingvon',
@@ -3690,6 +3697,12 @@ $messages['eo'] = array(
 	'mobile-frontend-password-placeholder' => 'Pasvorto',
 	'mobile-frontend-login' => 'Ensaluti',
 	'mobile-frontend-last-modified-date' => 'Laste modifita je $1, $2',
+	'mobile-frontend-last-modified-seconds' => 'Lasta modifo {{PLURAL:$1|$1 sekundo|$1 sekundoj}} antaŭe',
+	'mobile-frontend-last-modified-minutes' => 'Lasta modifo {{PLURAL:$1|$1 minuto|$1 minutoj}} antaŭe',
+	'mobile-frontend-last-modified-hours' => 'Lasta modifo {{PLURAL:$1|$1 horo|$1 horoj}} antaŭe',
+	'mobile-frontend-last-modified-days' => 'Lasta modifo {{PLURAL:$1|$1 tago|$1 tagoj}} antaŭe',
+	'mobile-frontend-last-modified-months' => 'Lasta modifo {{PLURAL:$1|$1 monato|$1 monatoj}} antaŭe',
+	'mobile-frontend-last-modified-years' => 'Lasta modifo {{PLURAL:$1|$1 jaro|$1 jaroj}} antaŭe',
 	'mobile-frontend-account-create-submit' => 'Registriĝi',
 	'mobile-frontend-password-confirm-placeholder' => 'Konfirmu pasvorton',
 	'mobile-frontend-account-create-email-placeholder' => 'Retpoŝtadreso (nedeviga)',
@@ -3698,7 +3711,7 @@ $messages['eo'] = array(
 	'mobile-frontend-placeholder' => 'Traserĉi {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Traserĉi {{SITENAME}} (Beta)',
 	'mobile-frontend-placeholder-alpha' => 'Traserĉi {{SITENAME}} (Reĝimo Dragon)',
-	'mobile-frontend-search-help' => 'Tajpi serĉmendon supren kaj kongruaj artikolo-titoloj aperos ĉi tie.', # Fuzzy
+	'mobile-frontend-search-help' => 'Tajpi serĉmendon supren kaj kongruaj paĝo-titoloj aperos ĉi tie.',
 	'mobile-frontend-dismiss-notification' => 'Forigi ĉi tiun not-rubandon',
 	'mobile-frontend-clear-search' => 'Nuligi',
 	'mobile-frontend-privacy-link-text' => 'Privateco',
@@ -3707,7 +3720,7 @@ $messages['eo'] = array(
 	'mobile-frontend-footer-license-text' => 'Enhavo disponeblas per <a href="//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">permesilo CC BY-SA 3.0</a>',
 	'mobile-frontend-terms-use-text' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Kondiĉoj pri Uzado</a>',
 	'mobile-frontend-footer-contact' => 'Kontaktigi',
-	'mobile-frontend-search-noresults' => 'Neniuj artikoloj kongruas vian mendon. Ŝanĝu vian mendon, aŭ klaki la butonon de klavara serĉado por traserĉi ene de artikoloj.', # Fuzzy
+	'mobile-frontend-search-noresults' => 'Neniu paĝo kongruas kun via serĉado. Ŝanĝu vian mendon, aŭ klaki la butonon de klavara serĉado por traserĉi ene de paĝoj.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Malfermi ĉefmenuon',
 	'mobile-frontend-main-menu-page-title' => 'Navigado de retejo',
 	'mobile-frontend-main-menu-featured' => 'Elstara',
@@ -3716,11 +3729,10 @@ $messages['eo'] = array(
 	'mobile-frontend-main-menu-logout' => 'Elsaluti',
 	'mobile-frontend-main-menu-watchlist' => 'Atentaro',
 	'mobile-frontend-main-menu-settings' => 'Agordoj',
-	'mobile-frontend-main-menu-upload' => 'Alŝuti',
+	'mobile-frontend-main-menu-upload' => 'Alŝutoj',
 	'mobile-frontend-main-menu-settings-heading' => 'Agordoj por portebla versio',
 	'mobile-frontend-settings-site-header' => 'Lingvoj por {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} disponas en $1 {{PLURAL:$1|lingvo|lingvoj}}. Jen ĉiuj disponaj versioj',
-	'mobile-frontend-main-menu-contact' => 'Kontaktigi',
 	'mobile-frontend-main-menu-account-create' => 'Krei konton',
 	'mobile-frontend-page-menu-contents' => 'enhavo',
 	'mobile-frontend-page-menu-history' => 'Historio:',
@@ -3729,35 +3741,40 @@ $messages['eo'] = array(
 	'mobile-frontend-ajax-page-loading' => 'Ŝargante $1',
 	'mobile-frontend-page-saving' => 'Konservante $1',
 	'mobile-frontend-photo-upload-generic' => 'Doni bildon',
-	'mobile-frontend-donate-image-title' => 'Doni bildon',
+	'mobile-frontend-donate-image-title' => 'Alŝutoj',
 	'mobile-frontend-watchlist-add' => 'Aldonis $1 al via atentaro',
 	'mobile-frontend-watchlist-removed' => 'Forigis $1 el via atentaro',
 	'mobile-frontend-watchlist-view' => 'Rigardi vian atentaron',
 	'mobile-frontend-watchlist-more' => 'pli',
 	'mobile-frontend-watchlist-cta-button-login' => 'Ensaluti',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Registriĝi',
-	'mobile-frontend-watchlist-a-z' => 'Atentataj paĝoj', # Fuzzy
-	'mobile-frontend-watchlist-feed' => 'Paĝoj kun ŝanĝoj', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Ĉio',
+	'mobile-frontend-watchlist-feed' => 'Modifite',
 	'mobile-frontend-changeslist-ip' => 'Anonimulo',
 	'mobile-frontend-changeslist-nocomment' => 'Sen resumo de redakto',
 	'mobile-frontend-watchlist-filter-all' => 'Ĉiuj',
 	'mobile-frontend-watchlist-filter-articles' => 'Artikoloj',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskuto',
 	'mobile-frontend-watchlist-filter-other' => 'Alia',
-	'mobile-frontend-diffview-title' => 'Ŝanĝi al $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Ŝanĝoj',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|redakto|redaktoj}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonimulo',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bitokon|bitokojn}} aldonis',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bitokon|bitokojn}} forigis',
 	'mobile-frontend-table' => 'Tabelo $1',
 	'mobile-frontend-saving-exit-page' => 'Via kontribuo ankoraŭ konservadas. Se vi forlasus, via kontribuo perdiĝus. Ĉu vi certas ke vi volas foriri?',
-	'mobile-frontend-photo-upload' => 'Aldoni la unuan foton al ĉi tiu paĝo', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Aldoni bildon al ĉi tiu artikolo',
 	'mobile-frontend-photo-article-edit-comment' => 'Aldonis foton por uzi en paĝo',
 	'mobile-frontend-photo-upload-comment' => 'Aldonis foton al paĝo',
-	'mobile-frontend-photo-caption-placeholder' => 'Aldoni apudskribon por ĉi tiu bildo', # Fuzzy
+	'mobile-frontend-photo-caption-placeholder' => 'Aldoni priskribo (bezonate)',
 	'mobile-frontend-image-loading' => 'Ŝargante bildon',
-	'mobile-frontend-image-uploading' => 'Alŝutante bildon', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'Eraro okazis alŝutante la bildon. Bonvolu provi alian bildon.', # Fuzzy
+	'mobile-frontend-image-uploading-wait' => 'Alŝutante bildon, bonvolu atendi',
+	'mobile-frontend-image-uploading-long' => 'Bildo ankoraŭ alŝutanta! Dankon pro via pacienco.',
+	'mobile-frontend-photo-upload-error' => 'Eraro, provu denove',
+	'mobile-frontend-photo-cancel' => 'Nuligi',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> alŝuto|<span>$1</span> alŝutoj}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ alŝutoj',
+	'tag-mobile_edit-description' => 'Modifo farita ekde portebla retejo',
 	'mobile-frontend-drawer-cancel' => 'Nuligi',
 );
 
@@ -6387,12 +6404,14 @@ $messages['hy'] = array(
 
 /** Interlingua (interlingua)
  * @author McDutchie
+ * @author Remux
  */
 $messages['ia'] = array(
 	'mobile-frontend-desc' => 'Interfacie pro apparatos mobile',
 	'mobile-frontend-search-submit' => 'Va',
 	'mobile-frontend-home-button' => 'Initio',
 	'mobile-frontend-logged-out' => 'Non identificate',
+	'mobile-frontend-logged-in-homepage-notification' => 'Benvenite, $1!',
 	'mobile-frontend-settings-description' => 'Personalisa tu experientia sur tu apparato mobile con iste configurationes de sito mobile.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Confirmar configurationes',
@@ -6414,7 +6433,7 @@ $messages['ia'] = array(
 	'mobile-frontend-enable-images' => 'Activar imagines in sito mobile',
 	'mobile-frontend-off' => 'INACTIVE',
 	'mobile-frontend-on' => 'ACTIVE',
-	'mobile-frontend-footer-contributors-text' => 'Articulo per <a href="$1">contributores</a> como tu', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'Articulo per [$1 contributores] como tu',
 	'mobile-frontend-featured-article' => 'Le articulo del die',
 	'mobile-frontend-news-items' => 'Actualitates',
 	'mobile-frontend-leave-feedback-notice' => 'Tu commentario nos adjuta a meliorar tu experientia del sito mobile. Illo essera publicate in le pagina "$1", con tu nomine de usator, version de navigator e systema de operation. Per favor tenta eliger un linea de subjecto informative, p.ex. "Problema con le formatation de tabellas large". Le evalutation que tu invia es subjecte a nostre conditiones de uso.',
@@ -6466,7 +6485,6 @@ $messages['ia'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Configuration de sito mobile',
 	'mobile-frontend-settings-site-header' => 'Linguas de {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} es disponibile in $1 {{PLURAL:$1|lingua|linguas}}. Tote le versiones disponibile es listate hic infra.',
-	'mobile-frontend-main-menu-contact' => 'Contacto',
 	'mobile-frontend-page-menu-contents' => 'contento',
 	'mobile-frontend-page-menu-history' => 'Historia',
 );
