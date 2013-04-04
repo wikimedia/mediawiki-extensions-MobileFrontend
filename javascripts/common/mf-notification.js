@@ -77,7 +77,7 @@
 			}
 		}
 
-		init();
+		$( init );
 		return {
 			close: close,
 			isVisible: isVisible,
