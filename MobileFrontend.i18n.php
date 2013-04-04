@@ -237,7 +237,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-ownership-confirm' => 'Got it!',
 	'mobile-frontend-photo-ownership-bullet-one' => 'We can only accept photos that you took yourself. Please do not upload images you found somewhere else on the Internet.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'Copyrighted and inappropriate images will be removed.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'Your uploads are released under a free license and can be reused by anyone for free.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Your uploads are released under a license that allows anyone to reuse them for free.',
 	'mobile-frontend-image-uploading-wait' => 'Uploading image, please wait.',
 	'mobile-frontend-image-uploading-long' => 'Image still uploading! Thanks for your patience.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Cancel</a> if this is taking too long.',
