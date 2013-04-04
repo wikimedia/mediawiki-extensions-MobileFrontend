@@ -84,19 +84,26 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider updateDesktopUrlHostProvider
 	 */
 	public function testUpdateDesktopUrlHost( $mobile, $desktop ) {
-		$this->markTestSkipped('PHP parse_url() does not play nice with Unicode in URL');
 		global $wgMobileUrlTemplate;
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
 		$parsedUrl = wfParseUrl( $mobile );
-		$updateMobileUrlHost->invokeArgs( MobileContext::singleton(), array( &$parsedUrl ) );
+		$updateMobileUrlHost->invokeArgs(
+			MobileContext::singleton(),
+			array( &$parsedUrl ) );
 		$this->assertEquals( $desktop, wfAssembleUrl( $parsedUrl ) );
 	}
 
 	public function updateDesktopUrlHostProvider() {
 		return array(
-			array( 'http://en.m.wikipedia.org/wiki/Gustavus_Airport', 'http://en.wikipedia.org/wiki/Gustavus_Airport' ),
-			array( 'http://bm.m.wikipedia.org/wiki/Nyɛ_fɔlɔ', 'http://bm.wikipedia.org/wiki/Nyɛ_fɔlɔ' ),
+			array( 
+				'http://en.m.wikipedia.org/wiki/Gustavus_Airport',
+				'http://en.wikipedia.org/wiki/Gustavus_Airport'
+			),
+			array(
+				'http://bm.m.wikipedia.org/wiki/' . urlencode( 'Nyɛ_fɔlɔ' ),
+				'http://bm.wikipedia.org/wiki/' . urlencode( 'Nyɛ_fɔlɔ' )
+			),
 		);
 	}
 
