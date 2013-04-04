@@ -71,7 +71,7 @@ var m = ( function( $ ) {
 			var self = this;
 			this.parent = options.parent;
 			this.isOpened = false;
-			this.$( '.cancel' ).click( function( ev ) {
+			this.$( '.cancel,.confirm' ).click( function( ev ) {
 				ev.preventDefault();
 				self.hide();
 			} );
