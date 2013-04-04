@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Drf4K9dI",
+        "filename": "templates/wikitext/commons-upload.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-04T14:55:10Z",
+      "side": 1,
+      "message": "Why does this file has the HTML extension while it contains anything but HTML?",
+      "revId": "234bdc04f3af4d6eaf1f2d574a401ee56823e657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
