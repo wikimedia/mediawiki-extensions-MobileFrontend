@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dr5NWXMw",
+        "filename": "includes/specials/UnlistedSpecialMobilePage.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-04T21:58:26Z",
+      "side": 1,
+      "message": "It is possible for $this-\u003emName to be an empty string. You should either protect for this by forcing UnlistedSpecialMobilePage objects to alawys have a name (do this in the constructor), or otherwise protect for it somehow in this method.",
+      "revId": "30bfb0d27da0d5a6de1767f8ca8f366601b1a07b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
