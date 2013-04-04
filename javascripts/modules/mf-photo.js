@@ -519,7 +519,7 @@
 			namespace = mw.config.get( 'wgNamespaceNumber' ),
 			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user ),
 			$page = $( '#content' ),
-			$pageHeading = $page.find( 'h1' ),
+			$pageHeading = $page.find( 'h1' ).first(),
 			photoUploader;
 
 		if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $page ) ) {
