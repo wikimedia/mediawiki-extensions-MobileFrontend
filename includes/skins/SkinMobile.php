@@ -16,7 +16,7 @@ class SkinMobile extends SkinMobileBase {
 		$user = $this->getUser();
 		$tpl->set( 'title', $title );
 		$tpl->set( 'user', $user );
-		$tpl->set( 'menuButton', $this->getMenuButton() );
+		$tpl->set( 'menuButton', self::getMenuButton() );
 		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 
@@ -216,7 +216,7 @@ class SkinMobile extends SkinMobileBase {
 			$postBodyText .= "<p id=\"mw-mf-last-modified\" data-timestamp=\"$timestamp\">$lastModified</p>";
 		}
 
-		$htmlHeader = $this->getHtmlHeader();
+		$htmlHeader = $this->getOutput()->getProperty( 'mobile.htmlHeader' );
 		if ( !$htmlHeader && $isSpecialPage ) {
 			$htmlHeader = Html::element( 'h1', array( 'class' => 'header' ), $pageHeading );
 		}
@@ -589,7 +589,7 @@ HTML;
 		return $link;
 	}
 
-	public function getMenuButton() {
+	public static function getMenuButton() {
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
 		return Html::element( 'a', array(
 				'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' )->text(),
