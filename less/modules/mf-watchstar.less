@@ -1,20 +1,6 @@
 @import "../mf-mixins.less";
 
-@watchThisArticleSize: 22px;
-
 a.watch-this-article {
-	background-image: url(images/watch.png);
-	background-position: center center;
-	.background-size( auto, @watchThisArticleSize );
-	position: absolute;
-	top: 0;
-	right: 0;
-	text-indent: -9999px;
-	background-repeat: no-repeat;
-
-	&.watched {
-		background-image: url(images/watched.png);
-	}
 
 	&.loading {
 		background-image: @ajaxLoadingImage;
@@ -45,12 +31,9 @@ li a.watch-this-article {
 }
 
 #mw-mf-menu-page {
-	a.watch-this-article {
-		position: absolute;
+	li a.watch-this-article {
 		right: 0;
-		top: 0;
-		left: 0;
-		bottom: 0;
+		width: @searchBarPaddingLeft;
 	}
 }
 

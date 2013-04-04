@@ -1,5 +1,36 @@
 #mw-mf-menu-page {
   right: 0;
+  list-style: none;
+}
+#mw-mf-menu-page li.watch-this-article,
+#mw-mf-menu-page li.watch-this-article a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+li.watch-this-article,
+a.watch-this-article {
+  background-image: url(images/watch.png);
+  background-position: center center;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 22px;
+  -o-background-size: auto 22px;
+  -webkit-background-size: auto 22px;
+  background-size: auto 22px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+}
+li.watch-this-article#ca-watch,
+a.watch-this-article#ca-watch,
+li.watch-this-article.watched,
+a.watch-this-article.watched {
+  background-image: url(images/watched.png);
 }
 .client-js #mw-mf-main-menu-button {
   /* @embed */

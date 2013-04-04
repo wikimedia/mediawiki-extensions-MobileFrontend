@@ -9,9 +9,37 @@
 @overlayAlertPadding: 0.5em @overlayAlertPaddingHorizontal;
 @overlayBorderWidth: 1px;
 @toastNotificationColor: #373737;
+@watchThisArticleSize: 22px;
 
 #mw-mf-menu-page {
 	right: 0;
+	list-style: none;
+
+	li.watch-this-article,
+	li.watch-this-article a {
+		position: absolute;
+		right: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+	}
+}
+
+li.watch-this-article,
+a.watch-this-article { // FIXME: Make the page watch star appear to non-javascript users so this css rule is used on non-js devices
+	background-image: url(images/watch.png);
+	background-position: center center;
+	.background-size( auto, @watchThisArticleSize );
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+
+	&#ca-watch,
+	&.watched {
+		background-image: url(images/watched.png);
+	}
 }
 
 .client-js {

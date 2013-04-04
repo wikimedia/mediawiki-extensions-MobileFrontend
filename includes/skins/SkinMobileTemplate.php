@@ -134,7 +134,7 @@ class SkinMobileTemplate extends BaseTemplate {
 				<input class='searchSubmit' type="submit" value="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 			</div>
 		</form>
-		<div id="mw-mf-menu-page"></div>
+		<ul id="mw-mf-menu-page"></ul>
 		<?php
 	}
 

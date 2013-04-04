@@ -223,7 +223,7 @@ var api = M.require( 'api' ), w = ( function() {
 
 	function init( container, title ) {
 		var pageTitle = mw.config.get( 'wgTitle' );
-		container = container || nav.getPageMenu();
+		container = container || $( '<li>' ).appendTo( nav.getPageMenu() )[ 0 ];
 		title = title || pageTitle;
 		// initialise on current page
 		if ( container ) {
