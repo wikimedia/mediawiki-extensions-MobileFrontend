@@ -219,7 +219,6 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/mf-application.js',
 		'javascripts/common/mf-history.js',
 		'javascripts/common/mf-settings.js',
-		'javascripts/modules/mf-banner.js',
 		'javascripts/modules/mf-stop-mobile-redirect.js',
 	),
 	'position' => 'bottom',
@@ -387,7 +386,6 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 $wgResourceModules['mobile.stable.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/modules/mf-search.css',
-		'stylesheets/modules/mf-banner.css',
 		'stylesheets/modules/mf-toggle.css',
 		'stylesheets/modules/mf-references.css',
 		'stylesheets/modules/mf-cleanuptemplates.css',
