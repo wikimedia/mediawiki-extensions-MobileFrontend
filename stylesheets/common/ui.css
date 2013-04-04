@@ -217,9 +217,6 @@ input[type=submit].cancel {
     width: 80%;
     overflow: auto;
   }
-  .beta.full-screen-search #mw-mf-page-left {
-    display: block !important;
-  }
 }
 /* Header */
 #mw-mf-header form,
