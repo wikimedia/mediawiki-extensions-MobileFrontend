@@ -10,5 +10,5 @@ end
 desc 'Run all Cucumber features in parallel.'
 task :parallel do
   processes = FileList['./features/*.feature'].size
-  `parallel_cucumber features/ -n #{processes} --test-options '--profile ci'`
+  `bundle exec parallel_cucumber features/ -n #{processes} --test-options '--profile ci'`
 end
