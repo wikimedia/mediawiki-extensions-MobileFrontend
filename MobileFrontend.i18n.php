@@ -347,8 +347,17 @@ Author of the quote chosen',
 {{Identical|Desktop}}',
 	'mobile-frontend-view-mobile' => 'This appears at the bottom of the mobile page, meaning that the current view is mobile. It appears near the message {{msg-mw|Mobile-frontend-view-desktop}} and should be worded similarly.
 {{Identical|Mobile}}',
+	'mobile-frontend-opt-in-explain' => 'Used as description for the "Beta" in [[Special:MobileOptions]], if the beta is not enabled.',
 	'mobile-frontend-images-status' => 'On settings page label for turning on/off images.
 {{Identical|Images}}',
+	'mobile-frontend-disable-images' => 'Unused at this time.
+
+See also:
+* {{msg-mw|Mobile-frontend-enable-images}}',
+	'mobile-frontend-enable-images' => 'Unused at this time.
+
+See also:
+* {{msg-mw|Mobile-frontend-disable-images}}',
 	'mobile-frontend-missing-image' => 'When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image.
 {{Identical|Image}}',
 	'mobile-frontend-off' => 'On settings page signals that a feature will be turned off. Appears in {{msg-mw|Mobile-frontend-toggle-images}}.',
@@ -358,9 +367,10 @@ Author of the quote chosen',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
 	'mobile-frontend-leave-feedback-notice' => 'Parameters:
 * "$1" is a link  to the page where the feedback will be posted.',
+	'mobile-frontend-leave-feedback-warning' => 'Used as warning in [[Special:MobileFeedback]].',
 	'mobile-frontend-leave-feedback-subject' => '{{Identical|Subject}}',
 	'mobile-frontend-leave-feedback-message' => '{{Identical|Message}}',
-	'mobile-frontend-leave-feedback-submit' => 'Enter your feedback and submit',
+	'mobile-frontend-leave-feedback-submit' => 'Used as label for the Submit button in [[Special:MobileFeedback]].',
 	'mobile-frontend-leave-feedback-title' => '{{doc-special|MobileFeedback|unlisted=1}}',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Section header text for technical feedback portion of feedback form',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Section header text for general feedback portion of feedback form
@@ -4798,7 +4808,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-photo-ownership-confirm' => 'C’est bon !',
 	'mobile-frontend-photo-ownership-bullet-one' => 'Nous ne pouvons accepter que les photos prises par vous-même. Merci de ne pas importer des images que vous avez trouvé ailleurs sur l’Internet.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'Les images sous droit d’auteur et non appropriées seront supprimées.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'Vos téléchargements sont mis à disposition sous une licence libre et peuvent être réutilisés par n’importe qui gratuitement.', # Fuzzy
+	'mobile-frontend-photo-ownership-bullet-three' => 'Vos importations sont mis à disposition sous une licence qui permet à quiconque de les réutiliser gratuitement.',
 	'mobile-frontend-image-uploading-wait' => "Téléchargement de l'image, veuillez patienter.",
 	'mobile-frontend-image-uploading-long' => 'L’image est en cours de téléchargement! Merci pour votre patience.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Annuler</a> si cela dure trop longtemps.',
@@ -14669,7 +14679,7 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-photo-ownership-confirm' => 'Được rồi!',
 	'mobile-frontend-photo-ownership-bullet-one' => 'Chúng tôi chỉ có thể chấp nhận các hình ảnh do chính bạn chụp. Xin vui lòng không tải lên hình ảnh bạn tìm thấy một nơi nào đó khác trên Internet.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'Hình ảnh có bản quyền hoặc không phù hợp sẽ bị xóa.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'Các tập tin tải lên của bạn được phát hành theo một giấy phép tự do và bất kỳ ai cũng có thể sử dụng nó cho mục đích miễn phí.', # Fuzzy
+	'mobile-frontend-photo-ownership-bullet-three' => 'Các tập tin tải lên của bạn được phát hành theo một giấy phép cho phép bất kỳ ai cũng sử dụng nó miễn phí.',
 	'mobile-frontend-image-uploading-wait' => 'Đang tải lên hình; xin vui lòng chờ.',
 	'mobile-frontend-image-uploading-long' => 'Vẫn đang còn tải lên hình! Cám ơn sự kiên nhẫn của bạn.',
 	'mobile-frontend-image-uploading-cancel' => 'Hãy <a href="#">hủy bỏ</a> nếu việc tải lên mất nhiều thì giờ quá.',
