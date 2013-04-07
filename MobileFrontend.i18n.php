@@ -265,10 +265,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-talk-overlay-header' => 'Talk',
 );
 
-/** Message documentation (This is the name of the message documentation language code (qqq). Follow the rules of your languages and use small first letter if it doesn't capitalize language names always.
-
-It might be easier to translate it as "translation guidelines" or "translation help".
-{{Identical|Message documentation}})
+/** Message documentation (Message documentation)
  * @author Amire80
  * @author Asmen
  * @author Base
@@ -371,6 +368,8 @@ See also:
 	'mobile-frontend-leave-feedback-subject' => '{{Identical|Subject}}',
 	'mobile-frontend-leave-feedback-message' => '{{Identical|Message}}',
 	'mobile-frontend-leave-feedback-submit' => 'Used as label for the Submit button in [[Special:MobileFeedback]].',
+	'mobile-frontend-leave-feedback-link-text' => 'Unused at this time.',
+	'mobile-frontend-leave-feedback' => 'Unused at this time.',
 	'mobile-frontend-leave-feedback-title' => '{{doc-special|MobileFeedback|unlisted=1}}',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Section header text for technical feedback portion of feedback form',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Section header text for general feedback portion of feedback form
@@ -388,11 +387,25 @@ See also:
 	'mobile-frontend-feedback-page' => '{{optional}}',
 	'mobile-frontend-leave-feedback-special-title' => 'Title of special page containing the feedback form',
 	'mobile-frontend-feedback-no-subject' => 'Used for section heading on the feedback page if user entered no subject',
-	'mobile-frontend-feedback-no-message' => 'Error message on feedback form',
+	'mobile-frontend-feedback-no-subject-field' => 'Error message on feedback form in [[Special:MobileFeedback]].
+
+See also:
+* {{msg-mw|Mobile-frontend-feedback-no-message}}',
+	'mobile-frontend-feedback-no-message' => 'Error message on feedback form in [[Special:MobileFeedback]].
+
+See also:
+* {{msg-mw|Mobile-frontend-feedback-no-subject-field}}',
 	'mobile-frontend-feedback-edit-summary' => '{{doc-important|Do not translate the special page name "<code>Special:MobileFeedback</code>".}}
 Edit summary. Parameters:
 * $1 - feedback subject',
-	'mobile-frontend-leave-feedback-post-error' => 'Message displayed to user when there is an internal error processing form submission',
+	'mobile-frontend-leave-feedback-thanks' => 'Used as success message in [[Special:MobileFeedback]].
+
+See also:
+* {{msg-mw|Mobile-frontend-leave-feedback-post-error}}',
+	'mobile-frontend-leave-feedback-post-error' => 'Message displayed to user in [[Special:MobileFeedback]], when there is an internal error processing form submission.
+
+See also:
+* {{msg-mw|Mobile-frontend-leave-feedback-thanks}}',
 	'mobile-frontend-language' => '{{Identical|Language}}',
 	'mobile-frontend-language-article-heading' => 'A heading within the article the content of which lists the other languages available for this article: translate the message considering the list to have an undetermined number of items.',
 	'mobile-frontend-current-language' => '{{optional}}',
@@ -541,7 +554,10 @@ See also:
 	'mobile-frontend-nearby-noresults' => 'Message shown when nothing is nearby',
 	'mobile-frontend-nearby-refresh' => 'Text of toast notification message shown when user moved and the list can be refreshed.',
 	'mobile-frontend-nearby-error' => 'Text of generic error message when querying geodata api',
-	'mobile-frontend-donate-image-login' => 'Title for [[Special:UserLogin]] when being redirected to Special:Uploads',
+	'mobile-frontend-donate-image-login' => 'Title for [[Special:UserLogin]] when being redirected to [[Special:Uploads]].
+
+Used when the user is not logged in.
+{{Related|Mobile-frontend-login}}',
 	'mobile-frontend-photo-upload-generic' => 'Label on donate interface on Special:Uploads.',
 	'mobile-frontend-donate-image-title' => '{{doc-special|Uploads|unlisted=1}}
 {{Identical|Upload}}',
@@ -566,6 +582,10 @@ See also:
 {{Identical|Login}}',
 	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page
 {{Identical|Sign up}}',
+	'mobile-frontend-watch-login' => 'Title for [[Special:UserLogin]].
+
+Used when the user is not logged in.
+{{Related|Mobile-frontend-login}}',
 	'mobile-frontend-watchlist-a-z' => 'Label for a button that takes you to an A-Z list of all items in your watchlist.
 {{Identical|All}}',
 	'mobile-frontend-watchlist-feed' => 'Label for a button that takes you to a list of articles you watch that have changes.
@@ -628,7 +648,10 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded. Parameter is number of images. Wrap the number in a span tag to allow the number to be incremented programatically',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Displayed in place of mobile-frontend-photo-upload-user-count when user has uploaded more than 500 images.',
 	'mobile-frontend-photo-upload-cta' => 'Appears in a notification when user clicks photo upload button (see {{msg-mw|mobile-frontend-photo-upload}}) when not logged in.',
-	'mobile-frontend-photo-upload-login' => 'Message for [[Special:UserLogin]] when being redirected back to add an image to a page',
+	'mobile-frontend-photo-upload-login' => 'Message for [[Special:UserLogin]] when being redirected back to add an image to a page.
+
+Used when the user is not logged in.
+{{Related|Mobile-frontend-login}}',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:
@@ -4978,6 +5001,8 @@ $messages['frr'] = array(
 	'mobile-frontend-logged-out' => 'Ei uunmeldet',
 	'mobile-frontend-logged-in-homepage-notification' => 'Welkimen, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Uunmeldet üs $1',
+	'mobile-frontend-handshake-title' => 'Widjerfeerang ...',
+	'mobile-frontend-handshake-wait' => 'Wees so gud an teew üüb det formulaar tu uunmeldin.',
 	'mobile-frontend-sign-up-heading' => 'Skriiw di iin',
 	'mobile-frontend-sign-in-heading' => 'Skriiw di iin',
 	'mobile-frontend-sign-in-why' => 'Wan dü en {{SITENAME}}-brükerkonto heest, könst dü di oner uunmelde.',
@@ -5093,7 +5118,7 @@ $messages['frr'] = array(
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} jaft at uun {{PLURAL:$1|ian spriak|$1 spriaken}}. A spriaken san oner apfeerd.',
 	'mobile-frontend-main-menu-account-create' => 'Brükerkonto iinracht',
 	'mobile-frontend-page-menu-contents' => 'Wat diar uun stäänt',
-	'mobile-frontend-page-menu-history' => 'histoore',
+	'mobile-frontend-page-menu-history' => 'Ferluup',
 	'mobile-frontend-meta-data-issues-header' => 'Komer',
 	'mobile-frontend-meta-data-issues' => 'Mä detdiar sidj stemet wat ei.',
 	'mobile-frontend-ajax-page-loading' => 'Loose $1',
@@ -5116,11 +5141,14 @@ $messages['frr'] = array(
 	'mobile-frontend-listed-image-no-description' => 'Nian beskriiwang',
 	'mobile-frontend-donate-photo-upload-success' => 'Klaar! Din bil koon nü brükt wurd üüb {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Klaar! Föl soonk för dan iarst bidrach!',
+	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} brükt din bil, am labener tu wurden.',
+	'mobile-frontend-first-upload-wizard-page-2' => 'Wees so gud an du diar bluas bilen tu, diar dü salew apnimen heest.',
+	'mobile-frontend-first-upload-wizard-page-3' => 'Din bilen kön faan miljuunen skaft an widjerbrükt wurd.',
 	'mobile-frontend-watchlist-add' => "$1 woort uun't uug behäälen.",
 	'mobile-frontend-watchlist-removed' => "$1 woort ei muar uun't uug behäälen.",
 	'mobile-frontend-watchlist-view' => "Wat ik uun't uug behual wal",
 	'mobile-frontend-watchlist-more' => 'muar',
-	'mobile-frontend-watchlist-cta' => 'Wess so gud an melde di uun of skriiw di iin, am det sidj uuntulukin.',
+	'mobile-frontend-watchlist-cta' => 'Wees so gud an melde di uun of skriiw di iin, am det sidj uuntulukin.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Uunmelde',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Skriiw di iin',
 	'mobile-frontend-watch-login' => "Dü skel di uunmelde, am sidjen uun't uug tu behualen.",
@@ -5155,19 +5183,30 @@ $messages['frr'] = array(
 	'mobile-frontend-photo-caption-placeholder' => 'Saat en beskriiwang för det bil diartu (nuadag)',
 	'mobile-frontend-image-loading' => 'Loose det bil ...',
 	'mobile-frontend-photo-ownership' => 'Ik, $1 haa detdiar bil maaget.',
+	'mobile-frontend-photo-ownership-help' => 'Wat menst dü?',
+	'mobile-frontend-photo-ownership-confirm' => 'Ik witj, wat dü menst.',
+	'mobile-frontend-photo-ownership-bullet-one' => "Wi kön bluas bilen uunnem, diar dü salew apnimen heest. Sjüür nian bilen huuch, diar dü irgenthuar uun't wääb fünjen heest!",
+	'mobile-frontend-photo-ownership-bullet-two' => 'Bilen, huar ööder lidj rochten üüb haa of fülk bilen wurd stregen.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Din huuchsjüürd bilen stun oner en lisens, dat arken jo amsunst brük mut.',
 	'mobile-frontend-image-uploading-wait' => 'Sjüür bil huuch, ... wees so gud an teew.',
 	'mobile-frontend-image-uploading-long' => 'Bil woort huuchsjüürd! Föl soonk, dat dü dülag beest.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Breeg uf</a>, wan\'t tu loong düüret.',
 	'mobile-frontend-photo-upload-error' => 'Diar as wat skiaf gingen. Fersjük det man noch ans nei.',
+	'mobile-frontend-photo-upload-error-filename' => 'Det wiar niks. Wees so gud an beskriiw det beeder.',
 	'mobile-frontend-photo-upload-success-article' => 'Klaar! Din bil as nü üüb det sidj tu sen.',
 	'mobile-frontend-photo-license' => "Wan dü det bil huuchsjüürst, stemest dü a [//wikimediafoundation.org/wiki/Terms_of_use brükerreegeln] tu an dat din bil oner det lisens [//creativecommons.org/licenses/by-sa/3.0/ Creative Common Attribution-ShareAlike 3.0] uun't näät steld woort.",
 	'mobile-frontend-photo-submit' => 'Auerdreeg',
 	'mobile-frontend-photo-cancel' => 'Ufbreeg',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> huuchsjüürd bil|<span>$1</span> huuchsjüürd bilen}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'muar üs 500 huuchsjüürd bilen',
+	'mobile-frontend-photo-upload-cta' => 'Wees so gud an melde di uun of skriiw di iin, am det bil huuch tu sjüüren.',
+	'mobile-frontend-photo-upload-login' => 'Dü skel di uunmelde, am bilen huuch tu sjüüren.',
 	'tag-mobile_edit' => 'Mobiil feranerang',
 	'tag-mobile_edit-description' => 'Faan en mobiil wääbsidj feranert',
 	'mobile-frontend-drawer-cancel' => 'Ufbreeg',
+	'mobile-frontend-talk-explained' => 'Jodiar diskusjuunen san uun uugenblak aktiif.',
+	'mobile-frontend-talk-explained-empty' => 'Tu detdiar sidj jaft at nian diskusjuunen.',
+	'mobile-frontend-talk-overlay-header' => 'Diskusjuun',
 );
 
 /** Friulian (furlan)
@@ -6977,6 +7016,7 @@ $messages['is'] = array(
 /** Italian (italiano)
  * @author Aushulz
  * @author Beta16
+ * @author Gloria sah
  * @author Nemo bis
  * @author Raoli
  * @author Ximo17
@@ -7120,6 +7160,10 @@ $messages['it'] = array(
 	'mobile-frontend-donate-image-heading' => 'I tuoi contributi recenti',
 	'mobile-frontend-donate-image-anon' => "Per visualizzare la pagina di caricamento è necessario un'[[Special:UserLogin|utenza]]",
 	'mobile-frontend-listed-image-no-description' => 'Nessuna descrizione',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Fatto! Grazie per il tuo primo contributo!',
+	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} ha bisogno di foto per portare le sue pagine alla vita!',
+	'mobile-frontend-first-upload-wizard-page-2' => 'Per favore, dona solamente foto che hai scattato tu stesso.',
+	'mobile-frontend-first-upload-wizard-page-3' => 'Le foto che doni possono essere condivise, riutilizzate e modificate da milioni di persone.',
 	'mobile-frontend-watchlist-add' => 'Aggiunto $1 ai tuoi osservati speciali',
 	'mobile-frontend-watchlist-removed' => 'Rimosso $1 dai tuoi osservati speciali',
 	'mobile-frontend-watchlist-view' => 'Vedi i tuoi osservati speciali',
@@ -7154,6 +7198,8 @@ $messages['it'] = array(
 	'mobile-frontend-photo-upload-comment' => 'Aggiungi questa foto ad una pagina',
 	'mobile-frontend-photo-caption-placeholder' => 'Aggiungi una descrizione (obbligatoria)',
 	'mobile-frontend-image-loading' => 'Caricamento immagine',
+	'mobile-frontend-photo-ownership' => 'Io, $1, ho creato questa immagine.',
+	'mobile-frontend-photo-ownership-help' => 'Che cosa significa questo?',
 	'mobile-frontend-image-uploading-wait' => 'Caricamento immagine, attendi.',
 	'mobile-frontend-photo-upload-error' => 'Errore, prova ancora.',
 	'mobile-frontend-photo-license' => 'Cliccando sul pulsante "Invia", accetti le nostre [//wikimediafoundation.org/wiki/Terms_of_use/it condizioni d\'uso] e accetti di rilasciare la tua foto sotto la licenza [//creativecommons.org/licenses/by-sa/3.0/deed.it Creative Commons Attribuzione-Condividi allo stesso modo 3.0].',
@@ -7163,6 +7209,7 @@ $messages['it'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ caricamenti',
 	'tag-mobile_edit-description' => 'Modifica apportata dal sito per dispositivi mobili',
 	'mobile-frontend-drawer-cancel' => 'Annulla',
+	'mobile-frontend-talk-overlay-header' => 'discussioni',
 );
 
 /** Japanese (日本語)
