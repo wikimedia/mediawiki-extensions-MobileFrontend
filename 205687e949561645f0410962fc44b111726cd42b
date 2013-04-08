@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dt2togbs",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-08T19:25:28Z",
+      "side": 1,
+      "message": "I\u0027m going remove this line as I\u0027m picky.",
+      "revId": "205687e949561645f0410962fc44b111726cd42b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
