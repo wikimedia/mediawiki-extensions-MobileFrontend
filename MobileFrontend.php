@@ -881,6 +881,11 @@ $wgMFMinCachedPageSize = 64 * 1024;
 $wgMFAutodetectMobileView = false;
 
 /**
+ * Whether or not to show the upload CTA to logged out users.
+ */
+$wgMFEnablePhotoUploadCTA = false;
+
+/**
  * (wiki)text to append to photo description during photo upload.
  */
 $wgMFPhotoUploadAppendToDesc = '';

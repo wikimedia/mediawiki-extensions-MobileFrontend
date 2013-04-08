@@ -286,9 +286,10 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgCookiePath;
+		global $wgCookiePath, $wgMFEnablePhotoUploadCTA;
 		$vars['wgCookiePath'] = $wgCookiePath;
 		$vars['wgMFStopRedirectCookieHost'] = MobileContext::singleton()->getStopMobileRedirectCookieDomain();
+		$vars['wgMFEnablePhotoUploadCTA'] = $wgMFEnablePhotoUploadCTA;
 		return true;
 	}
 
