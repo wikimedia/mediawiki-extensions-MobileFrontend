@@ -34,6 +34,24 @@
       "revId": "4118e5098004059e45bb527890ccaa3f48f72bec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dtk8P0Tg",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-08T18:42:41Z",
+      "side": 1,
+      "message": "I know what you mean. It\u0027s just that the PhotoUploader is the button itself. I had an idea of rewriting this so that you can bind a click event to PhotoUploader which overrides default click behavior. It seems like a cleaner solution and makes PhotoUploader independent of CTA and M.isLoggedIn().",
+      "parentUuid": "Dto9pOfw",
+      "revId": "4118e5098004059e45bb527890ccaa3f48f72bec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
