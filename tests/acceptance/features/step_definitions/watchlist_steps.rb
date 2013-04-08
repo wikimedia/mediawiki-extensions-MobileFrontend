@@ -41,7 +41,7 @@ When /^I search for an article and select the watchlist icon$/ do
     page.search_box="san francisco chronicle"
     page.search_result_element.when_present
     page.search_form_element.submit
-    @browser.url.should match /San_Francisco_Chronicle/
+    @browser.url.should match Regexp.escape('San_Francisco_Chronicle')
     page.text.should include "San Francisco Chronicle"
     page.watch_link_element.when_present.click
   end
@@ -75,8 +75,8 @@ When /^I click Login$/ do
 end
 
 Then /^Login page opens$/ do
-  @browser.url.should match /Special:UserLogin/
-  @browser.url.should_not match /&type=signup/
+  @browser.url.should match Regexp.escape('Special:UserLogin')
+  @browser.url.should_not match Regexp.escape('&type=signup')
 end
 
 When /^I click Sign up$/ do
@@ -84,6 +84,6 @@ When /^I click Sign up$/ do
 end
 
 Then /^Sign up page opens$/ do
-  @browser.url.should match /Special:UserLogin/
-  @browser.url.should match /&type=signup/
+  @browser.url.should match Regexp.escape('Special:UserLogin')
+  @browser.url.should match Regexp.escape('&type=signup')
 end
