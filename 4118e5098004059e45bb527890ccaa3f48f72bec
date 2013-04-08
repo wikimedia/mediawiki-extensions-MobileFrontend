@@ -16,6 +16,24 @@
       "revId": "4118e5098004059e45bb527890ccaa3f48f72bec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dto9pOfw",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-08T18:24:41Z",
+      "side": 1,
+      "message": "this was meant as a short term fix so I did the simplest thing possible. That said something smells wrong with this code.. I was surprised to see we create the photo upload button regardless of login state. I feel like the CTA should be created outside the photo uploader....\n\ne.g.\n$btn \u003d createPhotoUploadButton()\nif ( !M.isLoggedIn() ) {\n $btn.on(\u0027click\u0027, createCTA );\n}",
+      "parentUuid": "Dto.f.f8",
+      "revId": "4118e5098004059e45bb527890ccaa3f48f72bec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
