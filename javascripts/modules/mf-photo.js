@@ -549,7 +549,10 @@
 			} );
 	}
 
-	if ( isSupported() && mw.config.get( 'wgIsPageEditable' ) ) {
+	if (
+		isSupported() && mw.config.get( 'wgIsPageEditable' ) &&
+		( M.isLoggedIn() || mw.config.get( 'wgMFEnablePhotoUploadCTA' ) )
+	) {
 		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
 		if ( M.history.isDynamicPageLoadEnabled ) {
 			M.on( 'page-loaded', initialize );
