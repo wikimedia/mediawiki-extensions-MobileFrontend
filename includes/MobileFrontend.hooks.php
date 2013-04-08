@@ -356,6 +356,10 @@ class MobileFrontendHooks {
 		if ( $special->getName() != 'Userlogin' || !$mobileContext->shouldDisplayMobileView() ) {
 			// no further processing necessary
 			return true;
+		} else {
+			$out = $special->getContext()->getOutput();
+			$out->addModules( 'mobile.userlogin.scripts' );
+			$out->addModuleStyles( 'mobile.userlogin.styles' );
 		}
 
 		// make sure we're on https if we're supposed to be and currently aren't.
