@@ -205,17 +205,6 @@ class ExtMobileFrontend extends ContextSource {
 	}
 }
 
-class MobileFrontendSiteModule extends ResourceLoaderSiteModule {
-	protected function getPages( ResourceLoaderContext $context ) {
-		global $wgMobileSiteResourceLoaderModule;
-		return $wgMobileSiteResourceLoaderModule;
-	}
-
-	public function isRaw() {
-		return true;
-	}
-}
-
 class MobileFrontendDeviceDetectModule extends ResourceLoaderFileModule {
 	public function getStyles( ResourceLoaderContext $context ) {
 		$response = $context->getRequest()->response();
