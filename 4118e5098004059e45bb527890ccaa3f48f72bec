@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dto.f.f8",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 429,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-08T18:14:58Z",
+      "side": 1,
+      "message": "This just doesn\u0027t seem right, running all that code and hiding the button. I\u0027d rather add \"\u0026\u0026 (M.isLoggedIn() || mw.config.get( \u0027wgMFEnablePhotoUploadCTA\u0027 )\" to line 557.",
+      "revId": "4118e5098004059e45bb527890ccaa3f48f72bec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
