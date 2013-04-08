@@ -105,7 +105,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				array(
 					'class' => 'mw-mf-watchlist-views header' )
 				) .
-			SkinMobile::getMenuButton() .
 			Html::openElement( 'div',
 				array(
 					'class' => 'mw-mf-view-filters' )
