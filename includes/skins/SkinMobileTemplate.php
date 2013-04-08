@@ -127,7 +127,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search-box" method="get">
 			<input type="hidden" value="Special:Search" name="title" />
 			<div id="mw-mf-sq" class="divclearable">
-				<input type="search" name="search" id="mw-mf-search" size="22" value="<?php $this->text( 'searchField' )
+				<input type="search" name="search" id="searchInput" size="22" value="<?php $this->text( 'searchField' )
 					?>" autocomplete="off" maxlength="1024" class="search"
 					placeholder="<?php echo $placeholder ?>"
 					/>
