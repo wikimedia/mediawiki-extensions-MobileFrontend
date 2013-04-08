@@ -7200,6 +7200,8 @@ $messages['it'] = array(
 	'mobile-frontend-image-loading' => 'Caricamento immagine',
 	'mobile-frontend-photo-ownership' => 'Io, $1, ho creato questa immagine.',
 	'mobile-frontend-photo-ownership-help' => 'Che cosa significa questo?',
+	'mobile-frontend-photo-ownership-bullet-two' => 'Immagini protette da copyright o inappropriate saranno rimosse.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'I file che hai caricato sono rilasciati con una licenza che permette a chiunque di riutilizzarli liberamente.',
 	'mobile-frontend-image-uploading-wait' => 'Caricamento immagine, attendi.',
 	'mobile-frontend-photo-upload-error' => 'Errore, prova ancora.',
 	'mobile-frontend-photo-license' => 'Cliccando sul pulsante "Invia", accetti le nostre [//wikimediafoundation.org/wiki/Terms_of_use/it condizioni d\'uso] e accetti di rilasciare la tua foto sotto la licenza [//creativecommons.org/licenses/by-sa/3.0/deed.it Creative Commons Attribuzione-Condividi allo stesso modo 3.0].',
@@ -7207,8 +7209,11 @@ $messages['it'] = array(
 	'mobile-frontend-photo-cancel' => 'Annulla',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> caricamento|<span>$1</span> caricamenti}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ caricamenti',
+	'mobile-frontend-photo-upload-login' => "È necessario effettuare l'accesso per aggiungere un'immagine.",
 	'tag-mobile_edit-description' => 'Modifica apportata dal sito per dispositivi mobili',
 	'mobile-frontend-drawer-cancel' => 'Annulla',
+	'mobile-frontend-talk-explained' => 'Le seguenti conversazioni sono attualmente attive',
+	'mobile-frontend-talk-explained-empty' => 'Non ci sono conversazioni su questa pagina.',
 	'mobile-frontend-talk-overlay-header' => 'discussioni',
 );
 
@@ -10408,7 +10413,7 @@ $messages['nl'] = array(
 	'mobile-frontend-footer-contributors-text' => 'Pagina door [$1 gebruikers] zoals u',
 	'mobile-frontend-featured-article' => 'Uitgelicht',
 	'mobile-frontend-news-items' => 'In het nieuws',
-	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling helpt ons uw ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (als ook uw gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alstublieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op uw terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
+	'mobile-frontend-leave-feedback-notice' => 'Uw terugkoppeling helpt ons uw ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (als ook uw gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op uw terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
 	'mobile-frontend-leave-feedback-warning' => 'Neem geen persoonlijke gegevens op in uw opmerkingen, tenzij u akkoord gaat met het openbaar maken ervan.',
 	'mobile-frontend-leave-feedback-subject' => 'Onderwerp:',
 	'mobile-frontend-leave-feedback-message' => 'Bericht:',
@@ -10551,6 +10556,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-image-loading' => 'Bezig met het laden van de afbeelding',
 	'mobile-frontend-photo-ownership' => 'Ik, $1 heb deze afbeelding gemaakt.',
 	'mobile-frontend-photo-ownership-help' => 'Wat betekent dit?',
+	'mobile-frontend-photo-ownership-confirm' => 'Begrepen!',
 	'mobile-frontend-image-uploading-wait' => 'Bezig met het uploaden van de afbeelding.',
 	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Dank u wel voor uw geduld.',
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
@@ -10564,6 +10570,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'tag-mobile_edit' => 'Bewerking via mobiel',
 	'tag-mobile_edit-description' => 'Bewerking gemaakt via mobiele site',
 	'mobile-frontend-drawer-cancel' => 'Annuleren',
+	'mobile-frontend-talk-overlay-header' => 'Overleg',
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -10575,7 +10582,7 @@ $messages['nl-informal'] = array(
 	'mobile-frontend-settings-description' => 'Pas je gebruikerservaring op je mobiele apparaat aan via deze instellingen.',
 	'mobile-frontend-opt-in-explain' => 'Als je meedoet met testen, krijg je toegang tot experimentele functionaliteit, met het risico op fouten en problemen.',
 	'mobile-frontend-footer-contributors-text' => 'Pagina door <a href="$1">gebruikers</a> zoals jij', # Fuzzy
-	'mobile-frontend-leave-feedback-notice' => 'Jouw terugkoppeling helpt ons om je ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (ook je gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies alsjeblieft een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op je terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
+	'mobile-frontend-leave-feedback-notice' => 'Jouw terugkoppeling helpt ons om je ervaring op de mobiele site te verbeteren. Deze terugkoppeling is openbaar (ook je gebruikersnaam, browserversie en besturingssysteem) op de pagina &quot;$1&quot;. Kies een informatieve onderwerpregel, bijvoorbeeld "Opmaakproblemen met brede tabellen". Op je terugkoppeling zijn onze gebruiksvoorwaarden van toepassing.',
 	'mobile-frontend-leave-feedback-warning' => 'Neem geen persoonlijke gegevens op in je opmerkingen, tenzij je akkoord gaat met het openbaar maken ervan.',
 	'mobile-frontend-leave-feedback-title' => 'Terugkoppeling over de mobiele site',
 	'mobile-frontend-leave-feedback-email-body' => 'Beschrijf boven deze regel het probleem dat je ervaart met {{SITENAME}}. Dank je wel voor je terugkoppeling. Helaas kunnen we niet alle reacties beantwoorden.',
@@ -11145,6 +11152,7 @@ $messages['pfl'] = array(
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author Chrumps
  * @author Derbeth
  * @author Lazowik
  * @author Leinad
@@ -11271,7 +11279,6 @@ $messages['pl'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Ustawienia witryny dla telefonów komórkowych',
 	'mobile-frontend-settings-site-header' => 'Języki {{GRAMMAR:D.lp|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => 'Projekt {{SITENAME}} jest dostępny w $1 {{PLURAL:$1|języku|językach}}. Wszystkie dostępne wersje są wymienione poniżej.',
-	'mobile-frontend-main-menu-contact' => 'Kontakt',
 	'mobile-frontend-main-menu-account-create' => 'Załóż nowe konto',
 	'mobile-frontend-page-menu-contents' => 'spis treści',
 	'mobile-frontend-page-menu-history' => 'Historia',
@@ -11308,8 +11315,8 @@ $messages['pl'] = array(
 	'mobile-frontend-photo-upload-comment' => 'Dodano nowe zdjęcie na stronie',
 	'mobile-frontend-photo-caption-placeholder' => 'Dodaj podpis do tej grafiki', # Fuzzy
 	'mobile-frontend-image-loading' => 'Ładowanie grafiki...',
-	'mobile-frontend-image-uploading-wait' => 'Przesyłanie grafiki...', # Fuzzy
-	'mobile-frontend-photo-upload-error' => 'Wystąpił błąd podczas przesyłania obrazu. Spróbuj z innym obrazem.', # Fuzzy
+	'mobile-frontend-image-uploading-wait' => 'Przesyłanie grafiki, proszę czekać.',
+	'mobile-frontend-photo-upload-error' => 'Wystąpił błąd, spróbuj jeszcze raz.',
 	'mobile-frontend-photo-license' => 'Uwaga: Wszystkie zdjęcia, które publikujesz zostaną opublikowane na zasadach licencji [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0]', # Fuzzy
 	'tag-mobile_edit' => 'z urządzenia mobilnego',
 	'tag-mobile_edit-description' => 'Edycja dokonana z urządzenia mobilnego',
@@ -11671,6 +11678,7 @@ $messages['pt'] = array(
  * @author Giro720
  * @author MetalBrasil
  * @author Rafael Vargas
+ * @author Tuliouel
  * @author 555
  */
 $messages['pt-br'] = array(
@@ -11704,6 +11712,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-password' => 'Senha:',
 	'mobile-frontend-login' => 'Autenticar-se',
 	'mobile-frontend-placeholder' => 'Digite sua pesquisa aqui...', # Fuzzy
+	'mobile-frontend-nearby-title' => 'Redondezas',
 );
 
 /** Quechua (Runa Simi)
@@ -15137,7 +15146,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-ownership-confirm' => '明白！',
 	'mobile-frontend-photo-ownership-bullet-one' => '我们只接受你自己拍摄的照片。请不要上传您在因特网上的其他地方发现的图片。',
 	'mobile-frontend-photo-ownership-bullet-two' => '受版权保护及不合适的图像将被删除。',
-	'mobile-frontend-photo-ownership-bullet-three' => '你上传的将发布在一个自由许可证下，将可以被任何人自由的重用。', # Fuzzy
+	'mobile-frontend-photo-ownership-bullet-three' => '您上传的内容将以以一个允许任何人免费重用的版权协议发布。',
 	'mobile-frontend-image-uploading-wait' => '正在上传图像，请稍候。',
 	'mobile-frontend-image-uploading-long' => '图像仍在上传中!感谢您耐心等待。',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">取消</a>，如耗时过长。',
