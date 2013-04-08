@@ -85,6 +85,7 @@ When /^I click Sign up$/ do
 end
 
 Then /^Sign up page opens$/ do
+  Watir::Wait.until { @browser.url.match(Regexp.escape('Special:UserLogin')) }
   @browser.url.should match Regexp.escape('Special:UserLogin')
   @browser.url.should match Regexp.escape('&type=signup')
 end
