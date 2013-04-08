@@ -2,19 +2,16 @@
 
 var T = ( function() {
 	var
-		message = M.message,
 		sectionData = {},
 		anchorSection,
-		footerInitialised = false,
-		showLabel = message( 'mobile-frontend-show-button' ),
-		hideLabel = message( 'mobile-frontend-hide-button' );
+		footerInitialised = false;
 
 	function wm_toggle_section( section_id, keepHash ) {
 		var id = 'section_' + section_id, content_id = 'content_' + section_id,
 			closed, sectionInfo = sectionData[ section_id ],
 			$container,
-			$section = $( '#' + id ), $button = $section.find( 'button' ), $content = $( '#' + content_id ),
-			selector = '#' + content_id + ',#' + id + ',#' + id + ' button'; // FIXME: shouldn't have to toggle class on button
+			$section = $( '#' + id ), $content = $( '#' + content_id ),
+			selector = '#' + content_id + ',#' + id;
 
 		if ( sectionInfo && $content.length === 0 ) {
 			$container = $( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
@@ -28,7 +25,6 @@ var T = ( function() {
 
 		$( selector ).toggleClass( 'openSection' );
 		closed = $section.hasClass( 'openSection' );
-		$button.text( closed ? showLabel : hideLabel );
 
 		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
 		if ( !keepHash ) {
@@ -67,9 +63,6 @@ var T = ( function() {
 			$this.find( 'a' ).on( 'click', function( ev ) {
 				ev.preventDefault();
 			} );
-			$( '<button>' ).text( showLabel ).click( function( ev ) {
-				ev.preventDefault();
-				} ).prependTo( this );
 			$this.on( 'click', openSectionHandler );
 		} );
 

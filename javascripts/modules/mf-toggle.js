@@ -2,23 +2,18 @@
 
 var toggle = ( function() {
 
-	var u = M.utils,
-		message = M.message,
-		showLabel = message( 'mobile-frontend-show-button' ),
-		hideLabel = message( 'mobile-frontend-hide-button' );
+	var u = M.utils;
 
 	function wm_toggle_section( section_id ) {
 		var b = document.getElementById( 'section_' + section_id ), id,
 			hash, d,
-			bb = b.getElementsByTagName( 'button' )[0], i, e, closed, reset = [];
+			i, e, closed, reset = [];
 		if( u( b ).hasClass( 'openSection' ) ) {
 			u( b ).removeClass( 'openSection' );
-			u( bb ).text( showLabel );
 			closed = true;
 		} else {
 			reset.push( b );
 			u( b ).addClass( 'openSection' );
-			u( bb ).text( hideLabel );
 		}
 		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
 			e = document.getElementById( d[i] + section_id );
@@ -74,15 +69,9 @@ var toggle = ( function() {
 				wm_toggle_section( sectionName );
 			}
 		}
-		function createButton() {
-			var btn = document.createElement( 'button' );
-			u( btn ).text( showLabel );
-			return btn;
-		}
 
 		for( i = 0; i < sectionHeadings.length; i++ ) {
 			heading = sectionHeadings[i];
-			heading.insertBefore( createButton(), heading.firstChild );
 			$( '#anchor_' + heading.id.split( '_' )[ 1 ] ).remove();
 			u( heading ).bind( 'mousedown', openSectionHandler );
 		}

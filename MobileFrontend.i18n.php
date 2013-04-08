@@ -48,8 +48,6 @@ $messages['en'] = array (
 
 	'mobile-frontend-back-to-top-of-section' => 'Jump back a section',
 	'mobile-frontend-close-section' => 'Close this section',
-	'mobile-frontend-show-button' => 'Show',
-	'mobile-frontend-hide-button' => 'Hide',
 	'mobile-frontend-empty-homepage-text' => 'This homepage needs to be configured. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instructions on how to get this site mobile enabled]',
 	'mobile-frontend-regular-site' => 'Desktop view',
 	'mobile-frontend-wml-continue' => 'Continue...',

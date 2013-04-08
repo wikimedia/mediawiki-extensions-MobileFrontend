@@ -2,46 +2,26 @@
 moved from beta_common.css in
 Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 */
-.section_heading button {
-  display: none;
-  /* for non-js browsers */
-
-  overflow: hidden;
-  width: 27px;
-  border: none;
-  text-indent: -999px;
-  float: right;
-  opacity: 0.5;
-  cursor: pointer;
-}
 .page-loading .section {
   opacity: 0.2;
 }
 .page-loading.togglingEnabled .section {
   opacity: 1;
 }
-.page-loading.togglingEnabled .section_heading button {
-  display: none;
-}
-.togglingEnabled .section_heading#section_0 button {
-  background-position: right bottom;
-}
-.togglingEnabled .section_heading button {
-  display: inline-block;
-  background: none;
-  background-repeat: no-repeat;
+.togglingEnabled .section_heading {
+  background-image: url(images/show.png);
   background-position: right center;
+  background-repeat: no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 9px;
+  -o-background-size: auto 9px;
   -webkit-background-size: auto 9px;
   background-size: auto 9px;
+  cursor: pointer;
 }
-.togglingEnabled .section_heading.openSection button {
+.togglingEnabled .section_heading.openSection {
   background-image: url(images/hide.png);
-}
-.togglingEnabled .section_heading button {
-  background-image: url(images/show.png);
-}
-.openSection button {
-  opacity: 1;
 }
 .content_block {
   width: 100%;
