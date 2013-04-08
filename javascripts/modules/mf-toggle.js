@@ -2,94 +2,39 @@
 
 var toggle = ( function() {
 
-	var u = M.utils;
-
 	function wm_toggle_section( section_id ) {
-		var b = document.getElementById( 'section_' + section_id ), id,
-			hash, d,
-			i, e, closed, reset = [];
-		if( u( b ).hasClass( 'openSection' ) ) {
-			u( b ).removeClass( 'openSection' );
-			closed = true;
-		} else {
-			reset.push( b );
-			u( b ).addClass( 'openSection' );
-		}
-		for ( i = 0, d = ['content_','anchor_']; i<=1; i++ ) {
-			e = document.getElementById( d[i] + section_id );
-			if ( e && u( e ).hasClass( 'openSection' ) ) {
-				u( e ).removeClass( 'openSection' );
-			} else if( e ) {
-				reset.push( e );
-				u( e ).addClass( 'openSection' );
-			}
-		}
-		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
-		id = 'section_' + section_id;
-		hash = closed ? '#_' : '#' + id;
-		if ( hash !== '#section_nav' ) {
-			M.history.replaceHash( hash );
-		}
+		$( '#section_' + section_id + ',#content_' + section_id ).toggleClass( 'openSection' );
 	}
 
 	function wm_reveal_for_hash( hash ) {
-		var targetel = document.getElementById( hash.substr(1) ),
-			p, section_idx;
-		if ( targetel ) {
-			p = targetel;
-			while ( p && !u(p).hasClass( 'content_block' ) &&
-				!u(p).hasClass( 'section_heading' ) ) {
-				p = p.parentNode;
-			}
-			if ( p && ! u( p ).hasClass( 'openSection' ) ) {
-				section_idx = p.id.split( '_' )[1];
-				wm_toggle_section( section_idx );
-			}
+		var $target = $( hash ),
+			$p = $target.closest( '.content_block, .section_heading' ).eq( 0 );
+
+		if ( $p.length > 0 && !$p.hasClass( 'openSection' ) ) {
+			wm_toggle_section( $p.attr( 'id' ).split( '_' )[1] );
 		}
 	}
 
 	function init() {
-		u( document.documentElement ).addClass( 'togglingEnabled' );
-		var i, a, heading, h2,
-			sectionHeadings = [], content;
-
-		content = document.getElementById( 'content_wrapper' );
-		h2 = document.getElementsByTagName( 'H2' );
-
-		for( i = 0; i < h2.length; i++) {
-			heading = h2[i];
-			if( u( heading ).hasClass( 'section_heading') ) {
-				sectionHeadings.push( heading );
-			}
-		}
-
 		function openSectionHandler() {
 			var sectionName = this.id ? this.id.split( '_' )[1] : -1;
-			if( sectionName !== -1 ) {
+			if ( sectionName !== -1 ) {
 				wm_toggle_section( sectionName );
 			}
 		}
 
-		for( i = 0; i < sectionHeadings.length; i++ ) {
-			heading = sectionHeadings[i];
-			$( '#anchor_' + heading.id.split( '_' )[ 1 ] ).remove();
-			u( heading ).bind( 'mousedown', openSectionHandler );
-		}
+		$( 'html' ).addClass( 'togglingEnabled' );
+		$( '.section_heading' ).on( 'mousedown', openSectionHandler );
+		$( '.section_anchors' ).remove();
 
 		function checkHash() {
 			var hash = window.location.hash;
 			if ( hash.indexOf( '#' ) === 0 ) {
 				wm_reveal_for_hash( hash );
 			}
-			if( hash ) {
-				M.history.replaceHash( '#_' ); // clear existing hash for case of jump to top
-				M.history.replaceHash( hash );
-			}
 		}
 		checkHash();
-		for ( a = content.getElementsByTagName( 'a' ), i = 0; i < a.length; i++ ) {
-			u( a[i] ).bind( 'click', checkHash );
-		}
+		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
 
 	return {
