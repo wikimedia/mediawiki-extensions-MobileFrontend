@@ -1,8 +1,5 @@
 Feature: Manage Watchlist
 
-  Background:
-    Given I am in beta mode
-
   Scenario: I receive notification that I need to log in to use the watchlist functionality
       And I am not logged in
     When Select the watchlist icon
