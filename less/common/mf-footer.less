@@ -15,36 +15,24 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 		height: 24px;
 		display: block;
 		margin: 0;
-		font-size: 1em;
+		font-weight: bold;
+		font-size: @baseFontSize;
+		line-height: 22px;
+
+		img {
+			margin-top: 3px; /* (22px line height - 16px height) / 2) */
+			height: 16px;
+		}
+
+		ul, span {
+			float: left;
+			margin-right: 4px;
+		}
 	}
 
 	div {
 		font-size: @baseFontSize * 0.9;
 		clear: both;
-	}
-
-	.license {
-		float: left;
-		margin-right: 4px;
-	}
-
-	img.license {
-		margin-top: 3px; /* (22px line height - 16px height) / 2) */
-		height: 16px;
-	}
-
-	.links {
-		text-align: center;
-
-		li {
-			display: inline-block;
-			width: 33%;
-			font-size: 0.9em;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			overflow: hidden;
-			line-height: 1.4;
-		}
 	}
 
 	ul {
@@ -54,7 +42,19 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 		list-style: none;
 		margin: 0;
 
-		&.settings {
+		&.footer-places {
+			li {
+				display: inline-block;
+				width: 33%;
+				font-size: 0.9em;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+				line-height: 1.4;
+			}
+		}
+
+		&.footer-notice {
 			.left,
 			.right {
 				width: 48%;
@@ -74,25 +74,36 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 		}
 	}
 
-	.notice .terms {
+	.footer-notice .terms {
 		float: left;
-	}
-
-	.license {
-		font-weight: bold;
-		font-size: @baseFontSize;
-		line-height: 22px;
 	}
 }
 
-html[dir="rtl"] #footer .settings li:first-child .left:before,
-html[dir="ltr"] #footer .settings li:first-child .left:after {
+/* FIXME: Desktop specific style - move out of css served to mobile */
+.skin-minerva {
+	#footer {
+		ul.footer-places {
+			li {
+				width: 25%;
+			}
+		}
+	}
+}
+
+.mw-mf-special {
+	#footer {
+		display: none;
+	}
+}
+
+html[dir="rtl"] #footer .footer-notice li:first-child .left:before,
+html[dir="ltr"] #footer .footer-notice li:first-child .left:after {
 	content: " | ";
 	visibility: visible;
 }
 
-html[dir="rtl"] #footer .settings .left:before,
-html[dir="ltr"] #footer .settings .left:after {
+html[dir="rtl"] #footer .footer-notice .left:before,
+html[dir="ltr"] #footer .footer-notice .left:after {
 	content: " | ";
 	visibility: hidden;
 }
@@ -108,13 +119,13 @@ body {
 		font-size: 0.9em;
 	}
 
-	#footer .links li {
+	#footer ul.footer-places li {
 		font-size: 1.1em;
 	}
 }
 
 @media all and (min-width: 500px) {
-	#footer .links li {
+	#footer ul.footer-places li {
 		font-size: 1.2em;
 	}
 }

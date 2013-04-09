@@ -15,33 +15,24 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
   height: 24px;
   display: block;
   margin: 0;
+  font-weight: bold;
   font-size: 1em;
+  line-height: 22px;
 }
-#footer div {
-  font-size: 0.9em;
-  clear: both;
-}
-#footer .license {
-  float: left;
-  margin-right: 4px;
-}
-#footer img.license {
+#footer h2 img {
   margin-top: 3px;
   /* (22px line height - 16px height) / 2) */
 
   height: 16px;
 }
-#footer .links {
-  text-align: center;
+#footer h2 ul,
+#footer h2 span {
+  float: left;
+  margin-right: 4px;
 }
-#footer .links li {
-  display: inline-block;
-  width: 33%;
+#footer div {
   font-size: 0.9em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: 1.4;
+  clear: both;
 }
 #footer ul {
   text-align: center;
@@ -50,35 +41,46 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
   list-style: none;
   margin: 0;
 }
-#footer ul.settings .left,
-#footer ul.settings .right {
+#footer ul.footer-places li {
+  display: inline-block;
+  width: 33%;
+  font-size: 0.9em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.4;
+}
+#footer ul.footer-notice .left,
+#footer ul.footer-notice .right {
   width: 48%;
   display: inline-block;
   box-sizing: border-box;
 }
-#footer ul.settings .left {
+#footer ul.footer-notice .left {
   text-align: right;
   padding-right: 2px;
 }
-#footer ul.settings .right {
+#footer ul.footer-notice .right {
   text-align: left;
   padding-left: 2px;
 }
-#footer .notice .terms {
+#footer .footer-notice .terms {
   float: left;
 }
-#footer .license {
-  font-weight: bold;
-  font-size: 1em;
-  line-height: 22px;
+/* FIXME: Desktop specific style - move out of css served to mobile */
+.skin-minerva #footer ul.footer-places li {
+  width: 25%;
 }
-html[dir="rtl"] #footer .settings li:first-child .left:before,
-html[dir="ltr"] #footer .settings li:first-child .left:after {
+.mw-mf-special #footer {
+  display: none;
+}
+html[dir="rtl"] #footer .footer-notice li:first-child .left:before,
+html[dir="ltr"] #footer .footer-notice li:first-child .left:after {
   content: " | ";
   visibility: visible;
 }
-html[dir="rtl"] #footer .settings .left:before,
-html[dir="ltr"] #footer .settings .left:after {
+html[dir="rtl"] #footer .footer-notice .left:before,
+html[dir="ltr"] #footer .footer-notice .left:after {
   content: " | ";
   visibility: hidden;
 }
@@ -89,12 +91,12 @@ body #section_footer button {
   #footer .content_block {
     font-size: 0.9em;
   }
-  #footer .links li {
+  #footer ul.footer-places li {
     font-size: 1.1em;
   }
 }
 @media all and (min-width: 500px) {
-  #footer .links li {
+  #footer ul.footer-places li {
     font-size: 1.2em;
   }
 }
