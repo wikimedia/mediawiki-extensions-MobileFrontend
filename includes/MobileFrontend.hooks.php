@@ -255,16 +255,15 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgAutoloadClasses, $wgMFLogEvents, $wgResourceModules;
+		global $wgMFMobileResourceBoilerplate, $wgMFLogEvents, $wgResourceModules;
 
 		$detector = DeviceDetection::factory();
 		foreach ( $detector->getCssFiles() as $file ) {
 			$resourceLoader->register( "mobile.device.$file",
-				array(
-					'styles' => array( "stylesheets/devices/{$file}.css" ),
-					'localBasePath' => dirname( __DIR__ ),
-					'remoteExtPath' => 'MobileFrontend',
-				)
+				$wgMFMobileResourceBoilerplate +
+					array(
+						'styles' => array( "stylesheets/devices/{$file}.css" ),
+					)
 			);
 		}
 
