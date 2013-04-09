@@ -109,7 +109,7 @@ abstract class SkinMobileBase extends SkinTemplate {
 
 		$tpl = $this->setupTemplate( $this->template );
 		$tpl->setRef( 'skin', $this );
-		$tpl->set( 'scriptUrl', wfScript() );
+		$tpl->set( 'wgScript', wfScript() );
 
 		$url = MobileContext::singleton()->getDesktopUrl( wfExpandUrl(
 			$this->getRequest()->appendQuery( 'mobileaction=toggle_view_desktop' )

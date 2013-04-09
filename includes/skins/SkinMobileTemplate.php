@@ -124,7 +124,7 @@ class SkinMobileTemplate extends BaseTemplate {
 		}
 		?>
 		<?php $this->html( 'menuButton' ) ?>
-		<form id="mw-mf-searchForm" action="<?php $this->text( 'scriptUrl' ) ?>" class="search-box" method="get">
+		<form id="mw-mf-searchForm" action="<?php $this->text( 'wgScript' ) ?>" class="search-box" method="get">
 			<input type="hidden" value="Special:Search" name="title" />
 			<div id="mw-mf-sq" class="divclearable">
 				<input type="search" name="search" id="searchInput" size="22" value="<?php $this->text( 'searchField' )

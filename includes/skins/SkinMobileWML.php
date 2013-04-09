@@ -28,7 +28,7 @@ class SkinMobileTemplateWML extends BaseTemplate {
 		</template>
 		<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />
 			<do type="accept" label="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
-				<go href="<?php $this->text( 'scriptUrl' ) ?>?title=Special%3ASearch&amp;search=<?php $this->text( 'searchField' ) ?>"></go></do>
+				<go href="<?php $this->text( 'wgScript' ) ?>?title=Special%3ASearch&amp;search=<?php $this->text( 'searchField' ) ?>"></go></do>
 		</p>
 		<?php $this->html( 'bodytext' ) ?>
 	</wml>
