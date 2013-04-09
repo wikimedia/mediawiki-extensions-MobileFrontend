@@ -235,6 +235,8 @@ $wgResourceModules['mobile.stable.dependencies'] = array(
 		'overlay',
 		'overlays/cleanup',
 		'overlays/photoCopyrightDialog',
+		'overlays/search/search',
+		'overlays/search/results',
 		'photoUploader',
 		'photoUploadPreview',
 		'ctaDrawer'
@@ -404,7 +406,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-watchstar.js',
 		'javascripts/modules/mf-photo.js',
 		'javascripts/modules/mainmenutweaks.js',
-		'javascripts/modules/mf-search.js',
+		'javascripts/modules/search-2.js',
 		'javascripts/modules/mf-references.js'
 	),
 	'messages' => array(
@@ -455,7 +457,7 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-photo-ownership-bullet-three',
 		'mobile-frontend-photo-upload-cta',
 
-		// for mf-search.js
+		// for search.js
 		'mobile-frontend-search-help',
 		'mobile-frontend-search-noresults',
 		'mobile-frontend-overlay-escape',
