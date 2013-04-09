@@ -515,7 +515,7 @@ See also:
 	'mobile-frontend-main-menu-page-title' => '{{doc-special|MobileMenu|unlisted=1}}',
 	'mobile-frontend-main-menu-featured' => 'Featured link text in main menu
 {{Identical|Featured}}',
-	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu.
+	'mobile-frontend-main-menu-nearby' => 'Nearby link text in main menu. Clicking this will show links to content about nearby topics, based on GPS coordinates.
 {{Identical|Nearby}}',
 	'mobile-frontend-main-menu-login' => 'Text for log in link in main menu.
 {{Identical|Log in}}',
@@ -9703,6 +9703,8 @@ $messages['ms'] = array(
 	'mobile-frontend-logged-out' => 'Belum log masuk',
 	'mobile-frontend-logged-in-homepage-notification' => 'Selamat datang, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Log masuk sebagai $1.',
+	'mobile-frontend-handshake-title' => 'Melencong...',
+	'mobile-frontend-handshake-wait' => 'Sila tunggu sementara kami menghalakan anda semula ke borang log masuk.',
 	'mobile-frontend-sign-up-heading' => 'Daftar diri',
 	'mobile-frontend-sign-in-heading' => 'Log masuk',
 	'mobile-frontend-sign-in-why' => 'Jika anda memegang akaun di {{SITENAME}}, anda boleh log masuk di bawah.',
@@ -9815,7 +9817,6 @@ $messages['ms'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'Tetapan tapak mudah alih',
 	'mobile-frontend-settings-site-header' => 'Bahasa-bahasa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} terdapat dalam $1 bahasa. Berikut adalah semua versi yang ada',
-	'mobile-frontend-main-menu-contact' => 'Hubungi',
 	'mobile-frontend-main-menu-account-create' => 'Buka akaun',
 	'mobile-frontend-page-menu-contents' => 'kandungan',
 	'mobile-frontend-page-menu-history' => 'Sejarah',
@@ -9834,16 +9835,17 @@ $messages['ms'] = array(
 	'mobile-frontend-nearby-error' => 'Berlakunya ralat di luar jangkaan ketika cuba mencari halaman berdekatan',
 	'mobile-frontend-donate-image-login' => 'Anda mesti log masuk untuk melihat muatan naik anda.',
 	'mobile-frontend-photo-upload-generic' => 'Dermakan gambar',
-	'mobile-frontend-donate-image-title' => 'Dermakan gambar',
+	'mobile-frontend-donate-image-title' => 'Muat naikan',
 	'mobile-frontend-donate-image-summary' => 'Gambar-gambar menghidupkan halaman-halaman {{SITENAME}}.
 Terdapat banyak halaman yang ketiadaan gambar disebabkan ketandusan gambar yang berlesen bebas.
 Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar yang sudi anda berikan dan mungkin berguna kepada seluruh komuniti penyunting {{SITENAME}}.',
 	'mobile-frontend-donate-image-heading' => 'Sumbangan terkini anda',
-	'mobile-frontend-donate-image-page-title' => 'Muat naik',
 	'mobile-frontend-donate-image-anon' => '[[Special:UserLogin|Akaun pengguna]] diperlukan untuk melihat halaman muat naik',
 	'mobile-frontend-listed-image-no-description' => 'Tiada keterangan',
 	'mobile-frontend-donate-photo-upload-success' => 'Berjaya! Gambar anda kini boleh digunakan di {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Berjaya! Terima kasih atas sumbangan pertama anda!',
+	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} memerlukan gambar-gambar anda untuk menceriakan halaman-halamannya!',
+	'mobile-frontend-first-upload-wizard-page-2' => 'Sila sumbangkan gambar-gambar yang anda ambil sendiri sahaja.',
 	'mobile-frontend-watchlist-add' => '$1 ditambahkan dalam senarai pantau anda',
 	'mobile-frontend-watchlist-removed' => '$1 digugurkan dari senarai pantau anda',
 	'mobile-frontend-watchlist-view' => 'Lihat senarai pantau anda',
@@ -9887,10 +9889,10 @@ Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Batalkan</a> jika terlalu lama.',
 	'mobile-frontend-photo-upload-error' => 'Ralat, cuba lagi.',
 	'mobile-frontend-photo-upload-success-article' => 'Berjaya! Gambar anda kini disiarkan pada halaman ini.',
-	'mobile-frontend-photo-license' => 'Dengan mengklik "Hantar", anda bersetuju dengan [//wikimediafoundation.org/wiki/Terms_of_use Syarat-Syarat Penggunaan] kami dan sudi menyiarkan foto anda dengan [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License Lesen Creative Commons Attribution-ShareAlike 3.0].', # Fuzzy
+	'mobile-frontend-photo-license' => 'Dengan mengklik "Hantar", anda bersetuju dengan [//wikimediafoundation.org/wiki/Terms_of_use Syarat-Syarat Penggunaan] kami dan juga sudi melepaskan gambar anda di bawah [//creativecommons.org/licenses/by-sa/3.0/ Lesen Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Hantar',
 	'mobile-frontend-photo-cancel' => 'Batalkan',
-	'mobile-frontend-photo-upload-user-count' => '$1 muatan naik',
+	'mobile-frontend-photo-upload-user-count' => '$1 muatnaikan',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ muatan naik',
 	'tag-mobile_edit' => 'Suntingan mobil',
 	'tag-mobile_edit-description' => 'Suntingan dari tapak mobil',
@@ -11485,7 +11487,7 @@ Ch'a giuta a fé vive coste pàgine donand soe figure dont a veul dësbarassesse
 	'mobile-frontend-diffview-anonymous' => 'Utent anònim',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} giontà',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} gavà',
-	'mobile-frontend-diffview-explained' => 'Le linie sota a son stàite giontà (+) e gavà (-):',
+	'mobile-frontend-diffview-explained' => 'Le linie sì-dapress a son stàite giontà (+) e gavà (-):',
 	'mobile-frontend-table' => 'Tàula $1',
 	'mobile-frontend-saving-exit-page' => "Soa contribussion a l'é anco' da salvé. S'a chita, soe contribussion a sarà përdùe. É-lo sigur ëd vorèj seurte?",
 	'mobile-frontend-photo-upload' => 'Gionté na plancia a cost artìcol',

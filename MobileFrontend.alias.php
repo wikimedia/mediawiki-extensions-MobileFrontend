@@ -112,6 +112,16 @@ $specialPageAliases['pl'] = array(
 	'Nearby' => array( 'W_pobliżu' ),
 );
 
+/** Russian (русский) */
+$specialPageAliases['ru'] = array(
+	'MobileFeedback' => array( 'Обратная_связь' ),
+	'MobileOptions' => array( 'Настройки_мобильной_версии' ),
+	'Uploads' => array( 'Загрузки' ),
+	'MobileDiff' => array( 'Сравнение_версий' ),
+	'MobileMenu' => array( 'Мобильное_меню' ),
+	'Nearby' => array( 'Поблизости' ),
+);
+
 /** Sicilian (sicilianu) */
 $specialPageAliases['scn'] = array(
 	'MobileFeedback' => array( 'FeedbackMobile' ),
