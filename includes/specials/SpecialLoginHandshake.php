@@ -9,6 +9,7 @@ class SpecialLoginHandshake extends UnlistedSpecialPage {
 		$this->setHeaders();
 
 		$output = $this->getOutput();
+		$output->addModules( 'mobile.loginhandshake.scripts' );
 		$output->setPageTitle( wfMessage( 'mobile-frontend-handshake-title' )->escaped() );
 
 		$html = Html::element(
