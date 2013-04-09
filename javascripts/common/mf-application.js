@@ -218,7 +218,6 @@
 		supportsPositionFixed: supportsPositionFixed,
 		triggerPageReadyHook: triggerPageReadyHook,
 		prettyEncodeTitle: prettyEncodeTitle,
-		utils: $, // FIXME: deprecate
 		template: template
 	} );
 

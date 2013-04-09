@@ -1,33 +1,32 @@
-( function( M ) {
+( function( M, $ ) {
 
 var m = ( function() {
 
 	function enhanceCheckboxes() {
 
-		var inputs = document.getElementsByTagName( 'input' ), i, el, special,
-			u = M.utils;
+		var inputs = document.getElementsByTagName( 'input' ), i, el, special;
 
-		u( document.body ).addClass( 'mw-mf-checkboxes' );
+		$( 'body' ).addClass( 'mw-mf-checkboxes' );
 		function clickChkBox() {
 			var parent = this,
 				box = parent.getElementsByTagName( 'input' )[ 0 ];
 
-			if( !u( parent ).hasClass( 'checked' ) ) {
-				u( parent ).addClass( 'checked' );
+			if( !$( parent ).hasClass( 'checked' ) ) {
+				$( parent ).addClass( 'checked' );
 				box.checked = true;
 			} else {
-				u( parent ).removeClass( 'checked' );
+				$( parent ).removeClass( 'checked' );
 				box.checked = false;
 			}
 		}
 
 		for( i = 0; i < inputs.length; i++ ) {
 			el = inputs[i];
-			special = u( el.parentNode ).hasClass( 'mw-mf-checkbox-css3' );
+			special = $( el.parentNode ).hasClass( 'mw-mf-checkbox-css3' );
 			if( el.getAttribute( 'type' ) === 'checkbox' && special ) {
-				u( el.parentNode ).bind( 'click', clickChkBox );
+				$( el.parentNode ).on( 'click', clickChkBox );
 				if( el.checked ) {
-					u( el.parentNode ).addClass( 'checked ');
+					$( el.parentNode ).addClass( 'checked ');
 				}
 			}
 		}
@@ -44,4 +43,4 @@ var m = ( function() {
 
 M.define( 'mobileoptions', m );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );

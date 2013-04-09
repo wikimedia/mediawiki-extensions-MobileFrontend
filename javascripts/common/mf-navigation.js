@@ -3,7 +3,7 @@
 var m = ( function( $ ) {
 	var View = M.require( 'view' ),
 		menu,
-		u = M.utils, mfePrefix = M.prefix,
+		mfePrefix = M.prefix,
 		inBeta = mw.config.get( 'wgMFMode' ) === 'beta',
 		Overlay,
 		Drawer, CtaDrawer;
@@ -168,13 +168,13 @@ var m = ( function( $ ) {
 
 		if( window.location.hash === '#mw-mf-page-left' ) {
 			openNavigation();
-			u( document.body ).addClass( 'noTransitions' );
+			$( 'body' ).addClass( 'noTransitions' );
 			window.setTimeout( function() {
-				u( document.body ).removeClass( 'noTransitions' );
+				$( 'body' ).removeClass( 'noTransitions' );
 			}, 1000 );
 		}
 
-		u( search ).bind( 'focus', function() {
+		$( search ).bind( 'focus', function() {
 			if ( !inBeta || $( window ).width() < 700 ) {
 				closeNavigation();
 			}
