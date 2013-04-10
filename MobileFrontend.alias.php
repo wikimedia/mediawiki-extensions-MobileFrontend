@@ -79,6 +79,7 @@ $specialPageAliases['ko'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'MobileOptions' => array( 'Mobil_Optiounen' ),
+	'Uploads' => array( 'Eropgeluede_Fichieren' ),
 	'Nearby' => array( 'Nobäi' ),
 );
 

@@ -5650,9 +5650,9 @@ $messages['gu'] = array(
 	'mobile-frontend-main-menu-settings' => 'ગોઠવણીઓ',
 	'mobile-frontend-main-menu-settings-heading' => 'મોબાઇલ સાઇટ ગોઠવણીઓ',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ભાષાઓ',
-	'mobile-frontend-main-menu-contact' => 'સંપર્ક',
 	'mobile-frontend-page-menu-contents' => 'વિષયસૂચિ',
 	'mobile-frontend-page-menu-history' => 'ઇતિહાસ',
+	'mobile-frontend-talk-overlay-header' => 'ચર્ચા',
 );
 
 /** Manx (Gaelg)
