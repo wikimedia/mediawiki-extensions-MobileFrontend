@@ -89,13 +89,6 @@ class SkinMobile extends SkinMobileBase {
 		}
 		$tpl->set( 'sitename', $sitename );
 
-		// @todo: kill me with fire
-		if ( version_compare( $wgVersion, '1.20alpha', '<' ) ) {
-			$tpl->set( 'bcHack', '<script type="text/javascript">mw={loader:{state:function(){}}};</script>' );
-		} else {
-			$tpl->set( 'bcHack', '' );
-		}
-
 		wfProfileOut( __METHOD__ );
 		return $tpl;
 	}
