@@ -64,6 +64,7 @@ $autoloadClasses = array (
 	'UnlistedSpecialMobilePage' => 'specials/UnlistedSpecialMobilePage',
 	'SpecialLoginHandshake' => 'specials/SpecialLoginHandshake',
 
+	'MinervaTemplate' => 'skins/MinervaTemplate',
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
 	'SkinMobileBase' => 'skins/SkinMobileBase',

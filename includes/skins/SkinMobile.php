@@ -47,9 +47,12 @@ class SkinMobile extends SkinMobileBase {
 
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );
+		$tpl->set( 'language_urls', $this->getLanguages() );
+		$tpl->set( 'content_navigation', array(
+			'variants' => $this->getLanguageVariants(),
+		) );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
-		$tpl->set( 'languageCount', count( $this->getLanguageUrls() ) + 1 );
 
 		wfProfileIn( __METHOD__ . '-modules' );
 
@@ -192,9 +195,8 @@ class SkinMobile extends SkinMobileBase {
 				$this->getLanguage()->userTime( $timestamp, $user )
 			)->parse();
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
-			$postBodyText = $this->buildLanguageSelection();
 			// add last modified timestamp
-			$postBodyText .= "<p id=\"mw-mf-last-modified\" data-timestamp=\"$timestamp\">$lastModified</p>";
+			$postBodyText = "<p id=\"mw-mf-last-modified\" data-timestamp=\"$timestamp\">$lastModified</p>";
 		}
 
 		$htmlHeader = $this->getOutput()->getProperty( 'mobile.htmlHeader' );
@@ -301,81 +303,12 @@ class SkinMobile extends SkinMobileBase {
 		}
 	}
 
-	public function buildLanguageSelection() {
-		wfProfileIn( __METHOD__ );
-		$supportedLanguages = array();
-		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['supported_languages'] ) ) {
-			$supportedLanguages = $this->hookOptions['supported_languages'];
-		}
-		$languageUrls = $this->getLanguageUrls();
-		$languageVariantUrls = $this->getLanguageVariantUrls();
-		if ( empty( $languageUrls ) && count( $languageVariantUrls ) <= 1 ) {
-			wfProfileOut( __METHOD__ );
-			return '';
-		}
-
-		// language variants list
-		if ( count( $languageVariantUrls ) > 1 ) {
-			$msgLanguageVariants = wfMessage( 'mobile-frontend-language-variant-header' )->text();
-			$languageVariants = '<p id="mw-mf-language-variant-header">' . $msgLanguageVariants . '</p>';
-			$languageVariants .= Html::openElement( 'ul', array( 'id' => 'mw-mf-language-variant-selection' ) );
-
-			foreach ( $languageVariantUrls as $languageVariantUrl ) {
-				$languageVariants .= Html::openElement( 'li' ) . Html::element( 'a',
-					array( 'href' => $languageVariantUrl['href'],
-						'lang' => $languageVariantUrl['lang'],
-						'hreflang' => $languageVariantUrl['lang']
-					),
-					$languageVariantUrl['text'] ) . Html::closeElement( 'li' );
-				}
-
-			$languageVariants .= Html::closeElement( 'ul' );
-		} else {
-			$languageVariants = '';
-		}
-
-		// languages list
-		$msgLanguages = wfMessage( 'mobile-frontend-language-header', count( $languageUrls ) )->text();
-		$languages = '<p id="mw-mf-language-header">' . $msgLanguages . '</p>';
-		$languages .= Html::openElement( 'ul', array( 'id' => 'mw-mf-language-selection' ) );
-
-		foreach ( $languageUrls as $languageUrl ) {
-			$languageUrlHref = $languageUrl['href'];
-			$languageUrlLanguage = $languageUrl['language'];
-			if ( is_array( $supportedLanguages ) && in_array( $languageUrl['lang'], $supportedLanguages ) ) {
-				if ( isset( $this->hookOptions['toggle_view_desktop'] ) ) {
-					$request = $this->getRequest();
-					$returnto = $request->appendQuery( $this->hookOptions['toggle_view_desktop'] );
-					$languageUrlHref =  $returnto  .
-						urlencode( $languageUrlHref );
-				}
-			}
-			$languages .= Html::openElement( 'li' ) . Html::element( 'a',
-				array( 'href' => $languageUrlHref,
-					'lang' => $languageUrl['lang'],
-					'hreflang' => $languageUrl['lang']
-				),
-				$languageUrlLanguage ) . Html::closeElement( 'li' );
-		}
-
-		$languages .= Html::closeElement( 'ul' );
-
-		$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
-		$output = <<<HTML
-			<div class="section" id="mw-mf-language-section">
-				<h2 id="section_language" class="section_heading">{$heading}</h2>
-				<div id="content_language" class="content_block">
-					{$languageVariants}
-					{$languages}
-				</div>
-			</div>
-HTML;
-		wfProfileOut( __METHOD__ );
-		return $output;
-	}
-
-
-	public function getLanguageUrls() {
+	/*
+		FIXME: Should be a function of SkinTemplate in core - currently this code
+		is bundled inside the outputPage function which we override
+		(grep for $tpl->set( 'language_urls', false );)
+	*/
+	public function getLanguages() {
 		global $wgContLang;
 
 		wfProfileIn( __METHOD__ );
@@ -403,11 +336,15 @@ HTML;
 			}
 		}
 		wfProfileOut( __METHOD__ );
-
 		return $languageUrls;
 	}
 
-	public function getLanguageVariantUrls() {
+	/*
+		FIXME: This should be a function of SkinTemplate in core - currently this code
+		is buried inside the protected buildContentNavigationUrls function and thus
+		cannot be overriden
+	*/
+	public function getLanguageVariants() {
 		global $wgDisableLangConversion;
 
 		wfProfileIn( __METHOD__ );
@@ -443,7 +380,6 @@ HTML;
 		}
 
 		wfProfileOut( __METHOD__ );
-
 		return $languageVariantUrls;
 	}
 
