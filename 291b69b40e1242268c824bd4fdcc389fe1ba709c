@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dt0Puwe8",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-10T17:44:35Z",
+      "side": 1,
+      "message": "Neither URL nor messages are escaped.",
+      "revId": "291b69b40e1242268c824bd4fdcc389fe1ba709c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DtwO5mek",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-10T17:44:35Z",
+      "side": 1,
+      "message": "$historyUrl will be double-escaped.",
+      "revId": "291b69b40e1242268c824bd4fdcc389fe1ba709c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
