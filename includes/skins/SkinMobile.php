@@ -17,7 +17,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'title', $title );
 		$tpl->set( 'user', $user );
 		$tpl->set( 'menuButton', self::getMenuButton() );
-		$specialPage = $title->isSpecialPage();
 		$context = MobileContext::singleton();
 
 		$device = $context->getDevice();
@@ -229,7 +228,7 @@ class SkinMobile extends SkinMobileBase {
 	}
 
 	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
-		global $wgResourceModules, $wgMFVaryResources;
+		global $wgMFVaryResources;
 
 		$out = $this->getOutput();
 		$out->setTarget( 'mobile' );
@@ -265,12 +264,8 @@ class SkinMobile extends SkinMobileBase {
 
 	/**
 	 * Enables RL modules for page
-	 * @param array $modules
-	 * @param Title $title
-	 *
 	 */
 	public function enableModules() {
-		global $wgResourceModules;
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
