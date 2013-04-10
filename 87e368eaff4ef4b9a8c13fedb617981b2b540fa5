@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dt2Oq3Rs",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-04-10T19:16:29Z",
+      "side": 1,
+      "message": "Less DOM:\n\n    var closed \u003d false;\n    $( [ \u0027#section_\u0027 + section_id, \u0027#content_\u0027 + section_id ].join(\u0027, \u0027) )\n        .toggleClass( function (_, classes) {\n            if (classes.split(\u0027 \u0027).indexOf(\u0027openSection\u0027) !\u003d\u003d -1) {\n                closed \u003d true;\n            }\n            return \u0027openSection\u0027;\n        } );",
+      "revId": "87e368eaff4ef4b9a8c13fedb617981b2b540fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DtyNltR8",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-04-10T19:16:29Z",
+      "side": 1,
+      "message": "You don\u0027t need to check for \u0027p\u0027. hasClass will return false if p is empty or false.\n\nBetter:\n\n    p \u003d $(target1).parents(\u0027.content_block, .section_heading\u0027)",
+      "revId": "87e368eaff4ef4b9a8c13fedb617981b2b540fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dt.NuzQA",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-04-10T19:16:29Z",
+      "side": 1,
+      "message": "Are there non-H2 section_heading elements? \u0027.section_heading\u0027 is more efficient as a selector than \u0027H2.section_heading\u0027 because the browser has to perform fewer tests.",
+      "revId": "87e368eaff4ef4b9a8c13fedb617981b2b540fa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
