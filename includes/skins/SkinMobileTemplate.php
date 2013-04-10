@@ -53,42 +53,14 @@ class SkinMobileTemplate extends BaseTemplate {
 		<div id="mw-mf-viewport">
 		<div id="mw-mf-page-left">
 		<ul id="mw-mf-menu-main">
-			<li class="icon-home"><a href="<?php $this->text( 'mainPageUrl' ) ?>"
-				title="<?php $this->msg( 'mobile-frontend-home-button' ) ?>">
-				<?php $this->msg( 'mobile-frontend-home-button' ) ?></a></li>
-			<li class="icon-random"><a href="<?php $this->text( 'randomPageUrl' ) ?>#mw-mf-page-left" id="randomButton"
-				title="<?php $this->msg( 'mobile-frontend-random-button' ) ?>"
-				><?php $this->msg( 'mobile-frontend-random-button' ) ?></a></li>
-			<?php if ( $this->data['isAlphaGroupMember'] && $wgMFNearby ) { ?>
-			<li class='icon-nearby'>
-				<a href="<?php $this->text( 'nearbyURL' ) ?>"
-					title="<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>">
-				<?php $this->msg( 'mobile-frontend-main-menu-nearby' ) ?>
-				</a>
-			</li>
-			<?php } ?>
-			<li class='icon-watchlist'>
-				<a href="<?php $this->text( 'watchlistUrl' ) ?>"
-					title="<?php $this->msg( 'mobile-frontend-main-menu-watchlist' ) ?>">
-				<?php $this->msg( 'mobile-frontend-main-menu-watchlist' ) ?>
-				</a>
-			</li>
-			<li class='icon-uploads'>
-					<a href="<?php $this->text( 'donateImageUrl' ) ?>"
-						class="noHijack"
-						title="<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>">
-					<?php $this->msg( 'mobile-frontend-main-menu-upload' ) ?>
-					</a>
-				</li>
-			<li class='icon-settings'>
-				<a href="<?php $this->text( 'settingsUrl' ) ?>"
-					title="<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>">
-				<?php $this->msg( 'mobile-frontend-main-menu-settings' ) ?>
-				</a>
-			</li>
-			<li class='icon-loginout'>
-				<?php $this->html( 'logInOut' ) ?>
-			</li>
+		<?php
+		foreach( $this->getDiscoveryTools() as $key => $val ):
+			echo $this->makeListItem( $key, $val );
+		endforeach;
+		foreach( $this->getPersonalTools() as $key => $val ):
+			echo $this->makeListItem( $key, $val );
+		endforeach;
+		?>
 		</ul>
 		</div>
 		<div id='mw-mf-page-center'>
@@ -155,6 +127,72 @@ class SkinMobileTemplate extends BaseTemplate {
 			</div>
 		</div>
 		<?php
+	}
+
+	public function getPersonalTools() {
+		global $wgMFNearby;
+		$data = $this->data;
+
+		$items = array(
+			'nearby' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
+				'href' => $data['nearbyURL'],
+				'class' => 'icon-nearby jsonly',
+			),
+			'watchlist' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
+				'href' => $data['watchlistUrl'],
+				'class' => 'icon-watchlist jsonly',
+			),
+			'uploads' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
+				'href' => $data['donateImageUrl'],
+				'class' => 'icon-uploads jsonly',
+			),
+			'settings' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
+				'href' => $data['settingsUrl'],
+				'class' => 'icon-settings',
+			),
+			'auth' => array(
+				'text' => $data['loginLogoutText'],
+				'href' => $data['loginLogoutUrl'],
+				'class' => 'icon-loginout jsonly',
+			),
+		);
+
+		$nav = array();
+
+		if ( $data['isAlphaGroupMember'] && $wgMFNearby ) {
+			$nav[] = $items['nearby'];
+		}
+
+		$nav[] = $items['watchlist'];
+		$nav[] = $items['uploads'];
+
+		$nav[] = $items['settings'];
+
+		$nav[] = $items['auth'];
+		return $nav;
+	}
+
+	public function getDiscoveryTools() {
+		$data = $this->data;
+		$items = array(
+			'home' => array(
+				'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
+				'href' => $data['mainPageUrl'],
+				'class' => 'icon-home',
+			),
+			'random' => array(
+				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
+				'href' => $data['randomPageUrl'],
+				'class' => 'icon-random',
+				'id' => 'randomButton',
+			),
+		);
+
+		return $items;
 	}
 
 	/**

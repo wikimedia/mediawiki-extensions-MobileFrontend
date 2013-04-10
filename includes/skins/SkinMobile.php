@@ -120,6 +120,7 @@ class SkinMobile extends SkinMobileBase {
 		$nearbyUrl = SpecialPage::getTitleFor( 'Nearby' )->getLocalURL();
 		$settingsUrl = SpecialPage::getTitleFor( 'MobileOptions' )->
 			getLocalUrl( array( 'returnto' => $returnToTitle ) );
+		$link = $this->getLogInOutLink();
 
 		// set urls
 		$tpl->set( 'donateImageUrl', $donateUrl );
@@ -127,8 +128,9 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'settingsUrl', $settingsUrl );
 		$tpl->set( 'disclaimer', $this->disclaimerLink() );
 		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
+		$tpl->set( 'loginLogoutText', $link['text'] );
+		$tpl->set( 'loginLogoutUrl', $link['href'] );
 		$tpl->set( 'about', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
-		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 	}
 
 	/**
@@ -457,6 +459,10 @@ HTML;
 		return $languageVariantUrls;
 	}
 
+	/**
+	 * Creates a login or logout button
+	 * @return Array: Representation of button with text and href keys
+	*/
 	private function getLogInOutLink() {
 		global $wgMFForceSecureLogin;
 		wfProfileIn( __METHOD__ );
@@ -475,29 +481,20 @@ HTML;
 			}
 			$url = SpecialPage::getTitleFor( 'UserLogout' )->getFullURL( $query );
 			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
-			$link = Linker::makeExternalLink(
-				$url,
-				wfMessage( 'mobile-frontend-main-menu-logout' )->escaped(),
-				true,
-				'',
-				array( 'class' => 'logout' )
-			);
+			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
 		} else {
 			 // note returnto is not set for mobile (per product spec)
 			$returntoquery[ 'welcome' ] = 'yes';
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = SpecialPage::getTitleFor( 'UserLogin' )->getFullURL( $query );
 			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
-			$link = Linker::makeExternalLink(
-				$url,
-				wfMessage( 'mobile-frontend-main-menu-login' )->escaped(),
-				true,
-				'',
-				array( 'class' => 'login' )
-			);
+			$text = wfMessage( 'mobile-frontend-main-menu-login' )->escaped();
 		}
 		wfProfileOut( __METHOD__ );
-		return $link;
+		return array(
+			'text' => $text,
+			'href' => $url,
+		);
 	}
 
 	public static function getMenuButton() {
