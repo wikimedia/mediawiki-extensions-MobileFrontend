@@ -191,10 +191,6 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
 		global $wgResourceModules, $wgResourceLoaderDebug;
 
-		// run RL in debug mode so that we get real line numbers on errors and
-		// so that sinon.js is loaded within global context
-		$wgResourceLoaderDebug = true;
-
 		$testModuleBoilerplate = array(
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
