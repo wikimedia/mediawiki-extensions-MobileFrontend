@@ -113,8 +113,7 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend, $wgResourceModules, $wgMFSpecialModuleStubs,
-		$wgMFNearby, $wgSpecialPages, $wgMFLoginHandshakeUrl;
+	global $wgExtMobileFrontend, $wgMFNearby, $wgSpecialPages, $wgMFLoginHandshakeUrl;
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 
