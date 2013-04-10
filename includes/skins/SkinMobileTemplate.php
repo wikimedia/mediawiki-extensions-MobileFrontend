@@ -140,33 +140,40 @@ class SkinMobileTemplate extends BaseTemplate {
 
 	private function footer() {
 		?>
-	<div id="footer">
+		<div id="footer">
+			<h2 id="section_footer">
+				<?php $this->html( 'sitename' ); ?>
+			</h2>
+			<div id="content_footer">
 		<?php
-		// @todo: make license icon and text dynamic
+			foreach( $this->getFooterLinks() as $category => $links ):
 		?>
-	<h2 id="section_footer">
-		<?php $this->html( 'license' ) ?>
-	</h2>
-	<div id="content_footer">
-		<ul class="settings">
-			<li>
-				<span class="left separator"><a id="mw-mf-display-toggle" href="<?php $this->text( 'viewNormalSiteURL' ) ?>"><?php
-					$this->msg( 'mobile-frontend-view-desktop' ) ?></a></span><span class="right"><?php
-				$this->msg( 'mobile-frontend-view-mobile' ) ?></span>
-			</li>
-			<li class="notice">
-				<?php $this->html( 'historyLink' ) ?><br>
-				<?php echo wfMessage( 'mobile-frontend-footer-license-text' )->parse() ?>
-				<span>| <?php echo wfMessage( 'mobile-frontend-terms-use-text' )->parse() ?></span>
-			</li>
-		</ul>
-		<ul class="links">
-			<li><?php $this->html( 'privacyLink' ) ?></li><li>
-			<?php $this->html( 'aboutLink' ) ?></li><li>
-			<?php $this->html( 'disclaimerLink' ) ?></li>
-		</ul>
-	</div><!-- close footer.div / #content_footer -->
-	</div><!-- close #footer -->
-	<?php
+				<ul class="footer-<?php echo $category; ?>">
+					<?php foreach( $links as $link ): ?><li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li><?php endforeach; ?>
+				</ul>
+			<?php endforeach; ?>
+			</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Returns an array of footerlinks trimmed down to only those footer links that
+	 * are valid.
+	 * $option currently unused in mobile
+	 * @return array|mixed
+	 */
+	public function getFooterLinks( $option = null ) {
+		return array(
+			'notice' => array(
+				'mobile-switcher',
+				'mobile-notice',
+			),
+			'places' => array(
+				'privacy',
+				'about',
+				'disclaimer',
+			),
+		);
 	}
 }

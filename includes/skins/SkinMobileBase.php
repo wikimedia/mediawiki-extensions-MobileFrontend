@@ -35,7 +35,9 @@ abstract class SkinMobileBase extends SkinTemplate {
 	 * @return String
 	 */
 	public function getPageClasses( $title ) {
-		if ( $title->isMainPage() || $title->isSpecialPage() ) {
+		if ( $title->isMainPage() ) {
+			$className = 'page-Main_Page ';
+		} else if ( $title->isSpecialPage() ) {
 			$className = 'mw-mf-special ';
 		} else {
 			$className = '';
@@ -101,7 +103,9 @@ abstract class SkinMobileBase extends SkinTemplate {
 	 */
 	protected function prepareTemplate() {
 		wfProfileIn( __METHOD__ );
-		$lang = $this->getLanguage();
+		$title = $this->getTitle();
+		$ctx = MobileContext::singleton();
+		$req = $this->getRequest();
 
 		$tpl = $this->setupTemplate( $this->template );
 		$tpl->setRef( 'skin', $this );
@@ -114,7 +118,35 @@ abstract class SkinMobileBase extends SkinTemplate {
 			$hookQuery = $this->hookOptions['toggle_view_desktop'];
 			$url = $this->getRequest()->appendQuery( $hookQuery ) . urlencode( $url );
 		}
-		$tpl->set( 'viewNormalSiteURL', $url );
+		$url = htmlspecialchars( $url );
+
+		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
+		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
+
+		$switcherHtml = <<<HTML
+<span class="left separator"><a id="mw-mf-display-toggle" href="{$url}">{$desktop}
+</a></span><span class="right">{$mobile}</span>
+HTML;
+
+		// urls that do not vary on authentication status
+		if ( !$title->isSpecialPage() ) {
+			$historyUrl = $ctx->getMobileUrl( wfExpandUrl( $req->appendQuery( 'action=history' ) ) );
+			// FIXME: this creates a link with class external - it should be local
+			$historyLink = wfMessage( 'mobile-frontend-footer-contributors-text',
+				$historyUrl )->parse();
+		} else {
+			$historyLink = '';
+		}
+		$licenseText = wfMessage( 'mobile-frontend-footer-license-text' )->parse();
+		$termsUse = wfMessage( 'mobile-frontend-terms-use-text' )->parse();
+
+		$noticeHtml = <<<HTML
+{$historyLink}<br>
+{$licenseText}<span> | {$termsUse}</span>
+HTML;
+
+		$tpl->set( 'mobile-switcher', $switcherHtml );
+		$tpl->set( 'mobile-notice', $noticeHtml );
 		$tpl->set( 'mainPageUrl', Title::newMainPage()->getLocalUrl() );
 		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		$tpl->set( 'watchlistUrl', SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl() );

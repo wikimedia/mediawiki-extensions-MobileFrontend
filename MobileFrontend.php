@@ -187,7 +187,6 @@ $wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + arr
 $wgResourceModules['mobile.styles.page'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
-		'stylesheets/common/mf-footer.css',
 		'stylesheets/common/mf-hacks.css',
 		'stylesheets/common/mf-enwp.css'
 	),
@@ -199,6 +198,7 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 		'stylesheets/common/mf-common.css',
 		'stylesheets/common/ui.css',
 		'stylesheets/common/mf-typography.css',
+		'stylesheets/common/mf-footer.css',
 		// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
 		'stylesheets/common/mf-navigation.css',
 	),

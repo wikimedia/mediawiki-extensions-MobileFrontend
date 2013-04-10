@@ -74,9 +74,8 @@ class SkinMobile extends SkinMobileBase {
 			} else {
 				$suffix = '';
 			}
-			$license = Html::element( 'img', array(
+			$sitename = Html::element( 'img', array(
 				'src' => $wgMFCustomLogos['copyright'],
-				'class' => 'license',
 				'alt' => "{$footerSitename}" . $suffix
 			) );
 		} else {
@@ -85,11 +84,11 @@ class SkinMobile extends SkinMobileBase {
 			} else {
 				$suffix = '';
 			}
-			$license = Html::element( 'span', array( 'class' => 'license' ),
+			$sitename = Html::element( 'span', array(),
 				"{$footerSitename}" . $suffix
 			);
 		}
-		$tpl->set( 'license', $license );
+		$tpl->set( 'sitename', $sitename );
 
 		// @todo: kill me with fire
 		if ( version_compare( $wgVersion, '1.20alpha', '<' ) ) {
@@ -109,8 +108,6 @@ class SkinMobile extends SkinMobileBase {
 	 */
 	public function prepareTemplateLinks( QuickTemplate $tpl ) {
 		$title = $this->getTitle();
-		$req = $this->getRequest();
-		$ctx = MobileContext::singleton();
 		$returnToTitle = $title->getPrefixedText();
 
 		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
@@ -120,27 +117,17 @@ class SkinMobile extends SkinMobileBase {
 			$donateUrl = static::getLoginUrl( array( 'returnto' => $donateTitle ) );
 		}
 
-		// urls that do not vary on authentication status
-		if ( !$title->isSpecialPage() ) {
-			$historyUrl = $ctx->getMobileUrl( wfExpandUrl( $req->appendQuery( 'action=history' ) ) );
-			$historyKey = 'mobile-frontend-footer-contributors-text';
-			// FIXME: this creates a link with class external - it should be local
-			$historyLink = wfMessage( $historyKey, htmlspecialchars( $historyUrl ) )->parse();
-		} else {
-			$historyLink = '';
-		}
 		$nearbyUrl = SpecialPage::getTitleFor( 'Nearby' )->getLocalURL();
 		$settingsUrl = SpecialPage::getTitleFor( 'MobileOptions' )->
 			getLocalUrl( array( 'returnto' => $returnToTitle ) );
 
 		// set urls
 		$tpl->set( 'donateImageUrl', $donateUrl );
-		$tpl->set( 'historyLink', $historyLink );
 		$tpl->set( 'nearbyURL', $nearbyUrl );
 		$tpl->set( 'settingsUrl', $settingsUrl );
-		$tpl->set( 'disclaimerLink', $this->disclaimerLink() );
-		$tpl->set( 'privacyLink', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
-		$tpl->set( 'aboutLink', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
+		$tpl->set( 'disclaimer', $this->disclaimerLink() );
+		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
+		$tpl->set( 'about', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
 		$tpl->set( 'logInOut', $this->getLogInOutLink() );
 	}
 
