@@ -40,7 +40,6 @@ class SkinMobileTemplate extends BaseTemplate {
 		$this->prepareData();
 		$this->html( 'headelement' );
 		$this->renderArticleSkin();
-		$this->html( 'bcHack' );
 		$this->html( 'bottomScripts' ) ?>
 	</body>
 	</html><?php
