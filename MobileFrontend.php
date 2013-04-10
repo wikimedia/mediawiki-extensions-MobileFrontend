@@ -50,6 +50,9 @@ $autoloadClasses = array (
 
 	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
 	'MobileSiteModule' => 'modules/MobileSiteModule',
+	'MobileDeviceDetectModule' => 'modules/MobileDeviceDetectModule',
+	'MobileDeviceDetectScriptsModule' => 'modules/MobileDeviceDetectModule',
+	'MobileDeviceDetectStylesModule' => 'modules/MobileDeviceDetectModule',
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
@@ -652,8 +655,12 @@ $wgResourceModules['mobile.loginhandshake.scripts'] = $wgMFMobileSpecialPageReso
 	'position' => 'top',
 );
 
-$wgResourceModules['mobile.device.detect'] = $wgMFMobileResourceBoilerplate + array(
-	'class' => 'MobileFrontendDeviceDetectModule',
+$wgResourceModules['mobile.device.detect.styles'] = $wgMFMobileResourceBoilerplate + array(
+	'class' => 'MobileDeviceDetectStylesModule',
+);
+
+$wgResourceModules['mobile.device.detect.scripts'] = $wgMFMobileResourceBoilerplate + array(
+	'class' => 'MobileDeviceDetectScriptsModule',
 );
 
 /**

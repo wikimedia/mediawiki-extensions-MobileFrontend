@@ -204,23 +204,3 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileOut( __METHOD__ );
 	}
 }
-
-class MobileFrontendDeviceDetectModule extends ResourceLoaderFileModule {
-	public function getStyles( ResourceLoaderContext $context ) {
-		$response = $context->getRequest()->response();
-		$response->header( 'Vary: Accept-Encoding,X-Device' );
-		$mobileContext = MobileContext::singleton();
-		$xDevice = $mobileContext->getXDevice();
-		// @todo: Autodetection for third parties?
-		if ( $xDevice ) {
-			$response->header( "X-Device: $xDevice" );
-			$device = $mobileContext->getDevice();
-			$file = "stylesheets/devices/{$device->cssFileName()}";
-			if ( $file ) {
-				$this->styles[] = $file;
-			}
-		}
-		return parent::getStyles( $context );
-	}
-
-}

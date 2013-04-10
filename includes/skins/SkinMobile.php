@@ -262,7 +262,8 @@ class SkinMobile extends SkinMobileBase {
 
 		// add device specific CSS separately to avoid cache fragmentation
 		if ( $wgMFVaryResources ) {
-			$out->addModuleStyles( 'mobile.device.detect' );
+			$out->addModuleStyles( 'mobile.device.detect.styles' );
+			$out->addModules( 'mobile.device.detect.scripts' );
 		} elseif ( $device->moduleName() ) {
 			$out->addModuleStyles( $device->moduleName() );
 		}
