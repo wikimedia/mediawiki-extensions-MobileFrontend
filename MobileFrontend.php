@@ -656,6 +656,15 @@ $wgResourceModules['mobile.device.detect.scripts'] = $wgMFMobileResourceBoilerpl
 $wgMFPhotoUploadEndpoint = '';
 
 /**
+ * An optional alternative api to query for nearby pages
+ * e.g. http://en.m.wikipedia.org/w/api.php
+ *
+ * If set forces nearby to operate in JSONP mode
+ * @var String
+ */
+$wgMFNearbyEndpoint = '';
+
+/**
  * The wiki id/dbname for where photos are uploaded, if photos are uploaded to
  * a wiki other than the local wiki (eg commonswiki).
  * @var string
@@ -881,7 +890,6 @@ $wgMFEnableSiteNotice = false;
  * @var bool
  */
 $wgMFEnableXAnalyticsLogging = false;
-
 
 /**
  * If set to true, mobile skin's resources are varied by X-Device.
