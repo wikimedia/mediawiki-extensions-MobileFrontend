@@ -1,14 +1,13 @@
 class BetaPage
   include PageObject
-  include URLModule
 
   def self.url
     if ENV['MEDIAWIKI_URL']
-      base_url = ENV['MEDIAWIKI_URL']
+      mediawiki_url = ENV['MEDIAWIKI_URL']
     else
-      base_url = 'http://127.0.0.1:80/wiki/'
+      mediawiki_url = 'http://127.0.0.1:80/wiki/'
     end
-    "#{base_url}Special:MobileOptions/BetaOptIn"
+    "#{mediawiki_url}Special:MobileOptions/BetaOptIn"
   end
   page_url url
 

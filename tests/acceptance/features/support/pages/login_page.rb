@@ -1,7 +1,15 @@
 class LoginPage
   include PageObject
 
-  page_url '<%=params[:base_url]%>Special:UserLogin'
+  def self.url
+    if ENV['MEDIAWIKI_URL']
+      mediawiki_url = ENV['MEDIAWIKI_URL']
+    else
+      mediawiki_url = 'http://127.0.0.1:80/wiki/'
+    end
+    "#{mediawiki_url}Special:UserLogin"
+  end
+  page_url url
 
   div(:feedback, class: 'errorbox')
   button(:login, id: 'wpLoginAttempt')
