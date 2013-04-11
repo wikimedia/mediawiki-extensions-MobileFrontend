@@ -41,7 +41,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     syntax (1.0.0)
-    watir-webdriver (0.6.2)
+    watir-webdriver (0.6.3)
       selenium-webdriver (>= 2.18.0)
     websocket (1.0.7)
     yml_reader (0.2)
