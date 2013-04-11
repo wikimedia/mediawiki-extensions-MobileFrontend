@@ -16,7 +16,6 @@
 	border-bottom: 1px solid #e2e2e2;
 	line-height: @headerHeight;
 	text-align: center;
-	padding: 0;
 	min-height: @headerHeight;
 	margin: 0;
 	overflow: hidden;
@@ -26,6 +25,11 @@
 		line-height: @headerHeight;
 		margin: 0;
 	}
+}
+
+.mw-mf-overlay .header .search-box,
+#mw-mf-header {
+	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
 }
 
 /* Menu buttons */
@@ -94,7 +98,6 @@ input.searchSubmit {
 }
 
 .search-box {
-	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
