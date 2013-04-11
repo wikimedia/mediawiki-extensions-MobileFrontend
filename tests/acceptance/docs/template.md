@@ -68,10 +68,10 @@
       - master
       - debug
 
-## Site
+## MediaWiki URL
 
-- ID: SITE
-  - Display Name: Site
+- ID: MEDIAWIKI_URL
+  - Display Name: MediaWiki URL
   - Type: Select a string among many
   - UI Mode: Dropdown list (no inline help, but more compact UI)
   - Options
@@ -167,7 +167,7 @@
           <command>
     export BROWSER_LABEL=${BROWSER_LABEL}
     export ENVIRONMENT=cloudbees
-    export MEDIAWIKI_URL=http://${SITE}/wiki/
+    export MEDIAWIKI_URL=http://${MEDIAWIKI_URL}/wiki/
 
     curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
     RUBY_VERSION=2.0.0-p0 \

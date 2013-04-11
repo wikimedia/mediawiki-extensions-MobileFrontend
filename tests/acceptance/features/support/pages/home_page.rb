@@ -3,13 +3,12 @@ class HomePage
 
   def self.url
     if ENV['MEDIAWIKI_URL']
-      base_url = ENV['MEDIAWIKI_URL']
+      mediawiki_url = ENV['MEDIAWIKI_URL']
     else
-      base_url = 'http://127.0.0.1:80/wiki/'
+      mediawiki_url = 'http://127.0.0.1:80/wiki/'
     end
-      "#{base_url}Main_Page"
+    "#{mediawiki_url}Main_Page"
   end
-
   page_url url
 
   a(:mainmenu_button, id: 'mw-mf-main-menu-button')
