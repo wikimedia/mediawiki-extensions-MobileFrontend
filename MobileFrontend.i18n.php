@@ -161,8 +161,8 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-title' => 'Nearby',
 	'mobile-frontend-nearby-loading' => 'Loading topics near your current location',
 	'mobile-frontend-nearby-requirements' => 'This page requires both JavaScript and a location aware browser.',
-	'mobile-frontend-nearby-distance-report' => '$1km from your current location',
-	'mobile-frontend-nearby-lookup-error' => 'Unable to find you. Trying again..',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-lookup-error' => 'Unable to find you. Trying again…',
 	'mobile-frontend-nearby-noresults' => 'You are in the middle of nowhere and we couldn\'t find any topics. Why not write one?',
 	'mobile-frontend-nearby-refresh' => 'We found a more accurate location for you. Click here to refresh the list of nearby pages',
 	'mobile-frontend-nearby-error' => 'An unexpected error occurred whilst trying to find pages nearby',
@@ -314,9 +314,9 @@ This buttons takes the user to the home page.
 	'mobile-frontend-settings-description' => 'Text at top of the settings page explaining its purpose',
 	'mobile-frontend-settings-beta' => 'Text for beta on settings page',
 	'mobile-frontend-settings-alpha' => '<!--[[File:Mobile Contributions Quarterly Review 3 2013.pdf|page=32|thumb|The message in action]]-->
-Heading for alpha mode on settings page ([//commons.wikimedia.org/w/index.php?title=File%3AMobile_Contributions_Quarterly_Review_3_2013.pdf&page=32 screenshot]). This is a highly experimental mode where there might be bugs.',
+Heading for alpha mode on settings page ([//commons.wikimedia.org/w/index.php?title=File%3AMobile_Contributions_Quarterly_Review_3_2013.pdf&page=32 screenshot]). This is a highly experimental mode where there might be bugs. Feel free to simply translate the word "alpha" when translating to other languages.',
 	'mobile-frontend-settings-alpha-description' => 'Disclaimer about dangers and excitement that come with being in an alpha mode',
-	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions.
+	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions. Since this appears on the settings page translating the word save is sufficient
 {{Identical|Save settings}}',
 	'mobile-frontend-random-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
 
@@ -545,7 +545,7 @@ See also:
 {{Identical|Nearby}}',
 	'mobile-frontend-nearby-loading' => 'Informative message telling user that their location is being looked up',
 	'mobile-frontend-nearby-requirements' => 'Message shown to users who have no javascript or a browser that is not capable',
-	'mobile-frontend-nearby-distance-report' => 'Distance to current location',
+	'mobile-frontend-nearby-distance' => 'States distance to current location in kilometers',
 	'mobile-frontend-nearby-lookup-error' => 'Error message that shows in toast notification when location was lost',
 	'mobile-frontend-nearby-noresults' => 'Message shown when nothing is nearby',
 	'mobile-frontend-nearby-refresh' => 'Text of toast notification message shown when user moved and the list can be refreshed.',

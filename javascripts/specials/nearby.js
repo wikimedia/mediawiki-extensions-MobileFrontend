@@ -50,7 +50,7 @@
 				coords = page.coordinates[0],
 				lngLat = { latitude: coords.lat, longitude: coords.lon };
 				page.dist = calculateDistance( curLocation, lngLat );
-				page.proximity = mw.message( 'mobile-frontend-nearby-distance-report',
+				page.proximity = mw.message( 'mobile-frontend-nearby-distance',
 					page.dist.toFixed( 2 ) );
 				pages.push( page );
 				return page;
