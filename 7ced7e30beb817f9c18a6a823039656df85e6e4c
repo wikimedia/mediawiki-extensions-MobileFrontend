@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DuAriG6Q",
+        "filename": "includes/skins/SkinMobileTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-11T00:12:42Z",
+      "side": 1,
+      "message": "The wg prefix is reserved for config variables, of which this is not. \u0027wgMFMode\u0027 should be renamed. I know it\u0027s being basically faked as a config var in MobileFrontendHooks::onMakeGlobalVariablesScript() so it can be accessed by mw.config, but using the \u0027wg\u0027 prefix here is very misleading.",
+      "revId": "7ced7e30beb817f9c18a6a823039656df85e6e4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
