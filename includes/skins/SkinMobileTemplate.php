@@ -162,7 +162,7 @@ class SkinMobileTemplate extends BaseTemplate {
 
 		$nav = array();
 
-		if ( $data['isAlphaGroupMember'] && $wgMFNearby ) {
+		if ( $data['isBetaGroupMember'] && $wgMFNearby ) {
 			$nav[] = $items['nearby'];
 		}
 
