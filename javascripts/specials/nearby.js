@@ -92,6 +92,10 @@
 			el: $content[0],
 			pages: pages
 		} );
+		$content.find( 'a' ).on( 'mousedown', function() {
+			// name funnel for watchlists to catch subsequent uploads
+			$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
+		} );
 	}
 
 	function findResults( lat, lng ) {
