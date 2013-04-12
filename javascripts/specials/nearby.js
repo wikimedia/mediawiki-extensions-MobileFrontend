@@ -37,6 +37,31 @@
 		return distance;
 	}
 
+	function distanceMessage( d ) {
+		var msg = 'mobile-frontend-nearby-distance';
+		if ( d < 1 ) {
+			d *= 100;
+			d = Math.ceil( d ) * 10;
+			if ( d === 1000 ) {
+				d = 1;
+			} else {
+				msg = 'mobile-frontend-nearby-distance-meters';
+			}
+			d = d + '';
+		} else {
+			if ( d > 2 ) {
+				d *= 10;
+				d = Math.ceil( d ) / 10;
+				d = d.toFixed( 1 );
+			} else {
+				d *= 100;
+				d = Math.ceil( d ) / 100;
+				d = d.toFixed( 2 );
+			}
+		}
+		return mw.msg( msg, d );
+	}
+
 	function render( $content, pages ) {
 		pages = $.map( pages, function( page ) {
 			var coords, lngLat, thumb;
@@ -52,8 +77,7 @@
 				coords = page.coordinates[0],
 				lngLat = { latitude: coords.lat, longitude: coords.lon };
 				page.dist = calculateDistance( curLocation, lngLat );
-				page.proximity = mw.message( 'mobile-frontend-nearby-distance',
-					page.dist.toFixed( 2 ) );
+				page.proximity = distanceMessage( page.dist );
 				pages.push( page );
 				return page;
 			}
@@ -135,6 +159,9 @@
 	if ( supported ) {
 		init();
 	}
+	M.define( 'nearby', {
+		distanceMessage: distanceMessage
+	} );
 }() );
 
 

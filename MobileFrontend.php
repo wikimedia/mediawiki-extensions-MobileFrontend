@@ -542,6 +542,7 @@ $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + a
 		'mobile-frontend-nearby-title',
 		'mobile-frontend-nearby-loading',
 		'mobile-frontend-nearby-distance',
+		'mobile-frontend-nearby-distance-meters',
 		'mobile-frontend-nearby-lookup-error',
 		'mobile-frontend-nearby-noresults',
 	),
