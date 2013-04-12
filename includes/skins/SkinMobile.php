@@ -6,8 +6,7 @@ class SkinMobile extends SkinMobileBase {
 	public $template = 'SkinMobileTemplate';
 
 	protected function prepareTemplate() {
-		global $wgAppleTouchIcon, $wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename,
-			$wgMFEnableSiteNotice;
+		global $wgAppleTouchIcon, $wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate();
@@ -62,8 +61,6 @@ class SkinMobile extends SkinMobileBase {
 		// footer
 		$tpl->set( 'copyright', $this->getCopyright() );
 
-		// display site notice
-		$tpl->set( 'enableSiteNotice', $wgMFEnableSiteNotice );
 
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {

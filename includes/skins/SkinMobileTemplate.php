@@ -12,11 +12,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
 		);
 		?>
-		<?php $this->html( 'zeroRatedBanner' ) ?>
-		<?php $this->html( 'notice' ) ?>
-		<?php if ( $this->data[ 'enableSiteNotice' ] ) { ?>
-			<div id="siteNotice"></div>
-		<?php } ?>
 		<?php $this->renderArticleHeader() ?>
 	<div class='show' id='content_wrapper'>
 			<div id="content" class="content">
