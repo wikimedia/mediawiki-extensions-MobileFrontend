@@ -1226,8 +1226,6 @@ $messages['ast'] = array(
 	'mobile-frontend-ajax-random-suggestions' => 'Otres suxerencies:',
 	'mobile-frontend-back-to-top-of-section' => 'Tornar atrás una seición',
 	'mobile-frontend-close-section' => 'Zarrar esta sección',
-	'mobile-frontend-show-button' => 'Amosar',
-	'mobile-frontend-hide-button' => 'Anubrir',
 	'mobile-frontend-empty-homepage-text' => "Esta páxina d'aniciu ta por configurar. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage\">Instrucciones p'activar esti sitiu pa móvil]",
 	'mobile-frontend-regular-site' => "Vista d'escritoriu",
 	'mobile-frontend-wml-continue' => 'Continuar...',
@@ -1393,7 +1391,7 @@ Ayude a dar vida a estes páxines regalando les imaxes quiera dar y que puedan s
 	'mobile-frontend-photo-ownership-confirm' => '¡Yá lo entendí!',
 	'mobile-frontend-photo-ownership-bullet-one' => "Namái podemos aceutar fotos que sacó vusté mesmu. Por favor, nun xuba imaxes qu'alcontró n'otros llugares d'Internet.",
 	'mobile-frontend-photo-ownership-bullet-two' => "Les imaxes con drechos d'autor o inapropiaes, desaniciaránse.",
-	'mobile-frontend-photo-ownership-bullet-three' => 'Les xubes ufrense baxo una llicencia llibre y cualquier persona pue reutilizales llibremente.', # Fuzzy
+	'mobile-frontend-photo-ownership-bullet-three' => 'Les xubes ufrense baxo una llicencia que permite a cualquier persona re-utilizales llibremente.',
 	'mobile-frontend-image-uploading-wait' => 'Xubiendo la imaxe, espere por favor.',
 	'mobile-frontend-image-uploading-long' => '¡Inda ta xubiendo la imaxe! Gracies pola paciencia.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Encaboxar</a> si ta tardando demasiao.',
@@ -4450,8 +4448,6 @@ $messages['fi'] = array(
 	'mobile-frontend-ajax-random-suggestions' => 'Muut ehdotukset:',
 	'mobile-frontend-back-to-top-of-section' => 'Palaa takaisin osioon',
 	'mobile-frontend-close-section' => 'Sulje tämä osio',
-	'mobile-frontend-show-button' => 'Näytä',
-	'mobile-frontend-hide-button' => 'Piilota',
 	'mobile-frontend-empty-homepage-text' => 'Tälle kotisivulle täytyy tehdä määrityksiä. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Ohjeita mobiilisivuston käyttöönotosta]',
 	'mobile-frontend-regular-site' => 'Työpöytänäkymä',
 	'mobile-frontend-wml-continue' => 'Jatka...',
@@ -4548,6 +4544,7 @@ $messages['fi'] = array(
 On monia sivuja, joilla ei ole kuvia, sillä vapaan lisenssin kuvista on vakava puute.
 Auta herättämään nämä sivut eloon lahjoittamalla kuviasi, joita olet valmis antamaan ja joista olisi hyötyä laajemmalle {{SITENAME}}-muokkaajayhteisölle.',
 	'mobile-frontend-donate-image-heading' => 'Tuoreet muokkauksesi',
+	'mobile-frontend-listed-image-no-description' => 'Ei kuvausta',
 	'mobile-frontend-watchlist-add' => '$1 on lisätty tarkkailulistallesi',
 	'mobile-frontend-watchlist-removed' => '$1 on poistettu tarkkailulistaltasi',
 	'mobile-frontend-watchlist-view' => 'Näytä tarkkailulista',
@@ -8170,8 +8167,6 @@ $messages['ko'] = array(
 	'mobile-frontend-ajax-random-suggestions' => '다른 제안:',
 	'mobile-frontend-back-to-top-of-section' => '문단 처음으로',
 	'mobile-frontend-close-section' => '이 문단 닫기',
-	'mobile-frontend-show-button' => '보이기',
-	'mobile-frontend-hide-button' => '숨기기',
 	'mobile-frontend-empty-homepage-text' => '이 홈페이지는 재구성해야 합니다. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage 이 사이트를 모바일로 활성화하는 방법에 대한 지침]',
 	'mobile-frontend-regular-site' => '데스크톱 버전',
 	'mobile-frontend-wml-continue' => '계속...',
@@ -8338,7 +8333,7 @@ $messages['ko'] = array(
 	'mobile-frontend-photo-ownership-confirm' => '알았습니다!',
 	'mobile-frontend-photo-ownership-bullet-one' => '자신이 찍은 사진만 올릴 수 있습니다. 인터넷의 다른 곳에서 찾은 그림을 올리지 마세요.',
 	'mobile-frontend-photo-ownership-bullet-two' => '저작권이 있고 적절하지 않은 그림은 삭제됩니다.',
-	'mobile-frontend-photo-ownership-bullet-three' => '올리는 그림은 자유 라이선스에 따라 공개하고 누구나 자유롭게 활용할 수 있습니다.', # Fuzzy
+	'mobile-frontend-photo-ownership-bullet-three' => '올리는 그림은 누구나 자유롭게 활용할 수 있는 라이선스로 공개됩니다.',
 	'mobile-frontend-image-uploading-wait' => '그림을 올리는 중입니다, 기다려 주세요.',
 	'mobile-frontend-image-uploading-long' => '그림은 아직 올리고 있습니다! 조금만 더 기다려 주세요.',
 	'mobile-frontend-image-uploading-cancel' => '시간이 너무 오래 걸리면 <a href="#">취소</a>하세요.',
@@ -10526,6 +10521,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Dank u wel voor uw geduld.',
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
 	'mobile-frontend-photo-upload-error' => 'Er is een fout opgetreden. Probeer het opnieuw.',
+	'mobile-frontend-photo-upload-error-filename' => 'Fout. Geef een meer beschrijvende samenvatting op.',
 	'mobile-frontend-photo-upload-success-article' => 'Uw afbeelding is nu zichtbaar op deze pagina.',
 	'mobile-frontend-photo-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0].',
 	'mobile-frontend-photo-submit' => 'Opslaan',
@@ -12059,6 +12055,7 @@ $messages['roa-tara'] = array(
  * @author Express2000
  * @author Kaganer
  * @author Lockal
+ * @author MaxSem
  * @author Ole Yves
  * @author Rave
  * @author ShinePhantom
@@ -12090,8 +12087,6 @@ $messages['ru'] = array(
 	'mobile-frontend-ajax-random-suggestions' => 'Другие предложения:',
 	'mobile-frontend-back-to-top-of-section' => 'Вернуться к предыдущему разделу',
 	'mobile-frontend-close-section' => 'Закрыть этот раздел',
-	'mobile-frontend-show-button' => 'Показать',
-	'mobile-frontend-hide-button' => 'Скрыть',
 	'mobile-frontend-empty-homepage-text' => 'Эта заглавная страница нуждается в настройке. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Инструкции по организации мобильной версии сайта]',
 	'mobile-frontend-regular-site' => 'Обычная версия',
 	'mobile-frontend-wml-continue' => 'Далее ...',
@@ -12169,7 +12164,7 @@ $messages['ru'] = array(
 	'mobile-frontend-privacy-link-text' => 'Конфиденциальность',
 	'mobile-frontend-about-link-text' => 'Описание',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license-text' => 'Содержание доступно по лицензии [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile">CC BY-SA 3.0]',
+	'mobile-frontend-footer-license-text' => 'Содержание доступно по лицензии [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ru?useformat=mobile Условия использования]',
 	'mobile-frontend-footer-contact' => 'Контактная информация',
 	'mobile-frontend-search-noresults' => 'Нет страниц, названия которых соответствуют вашему запросу. Измените свой запрос, или нажмите на клавиатуре кнопку для поиска внутри страниц.',
@@ -14277,6 +14272,7 @@ $messages['uz'] = array(
 );
 
 /** vèneto (vèneto)
+ * @author Candalua
  * @author Frigotoni
  * @author GatoSelvadego
  */
@@ -14305,8 +14301,6 @@ $messages['vec'] = array(
 	'mobile-frontend-ajax-random-suggestions' => 'Altri sugerimenti:',
 	'mobile-frontend-back-to-top-of-section' => 'Va a inisio sesion',
 	'mobile-frontend-close-section' => 'Sara sta sesion',
-	'mobile-frontend-show-button' => 'Mostra',
-	'mobile-frontend-hide-button' => 'Scondi',
 	'mobile-frontend-empty-homepage-text' => "Sta pàjina prinsipałe ła ga da esar configurà. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Istrusion so come abiłitar sto sito pa' dispoxitivi mobiłi]",
 	'mobile-frontend-regular-site' => 'Vista desktop',
 	'mobile-frontend-wml-continue' => 'Continua ...',
@@ -14395,11 +14389,10 @@ $messages['vec'] = array(
 	'mobile-frontend-main-menu-logout' => 'Và fora',
 	'mobile-frontend-main-menu-watchlist' => "Pàjine tegnùe d'ocio",
 	'mobile-frontend-main-menu-settings' => 'Inpostasion',
-	'mobile-frontend-main-menu-upload' => 'Carga',
+	'mobile-frontend-main-menu-upload' => 'caricamenti',
 	'mobile-frontend-main-menu-settings-heading' => 'Inpostasion del sito par celulari',
 	'mobile-frontend-settings-site-header' => 'Léngue {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} xe disponibiłe in $1 {{PLURAL:$1|léngua|léngue}}. Tute łe version disponibiłi łe xe elencae de seguito',
-	'mobile-frontend-main-menu-contact' => 'Contato',
 	'mobile-frontend-main-menu-account-create' => 'Crea un utente novo',
 	'mobile-frontend-page-menu-contents' => 'contegnùi',
 	'mobile-frontend-page-menu-history' => 'Istòria',
@@ -14416,14 +14409,13 @@ $messages['vec'] = array(
 	'mobile-frontend-nearby-noresults' => 'Te si in mexo al gnente e nó semo boni catar nisun articoło. Parché no te ghi ne scrivi uno?',
 	'mobile-frontend-nearby-refresh' => 'Te ghemo catà na poxision pì precixa. Struca cuà par ricrear ła lista de łe pàjine visine',
 	'mobile-frontend-nearby-error' => 'Ghe xe sta un eror nó spetà mentre se jera drio sercar łe pàjine visine',
-	'mobile-frontend-donate-image-login' => 'Entra par varda i file che te ghe cargà',
+	'mobile-frontend-donate-image-login' => 'Entra par varda i file che te ghe cargà', # Fuzzy
 	'mobile-frontend-photo-upload-generic' => "Dona n'imaxene",
-	'mobile-frontend-donate-image-title' => "Dona n'imaxene",
+	'mobile-frontend-donate-image-title' => 'Caricamenti',
 	'mobile-frontend-donate-image-summary' => "Łe someje łe porta łe pàjine so {{SITENAME}} a ła vita.
 Ghe xe tante pàjine che nó łe ga gnanca na someja a cauxa de na grave mancansa de someje có licensa libara.
 Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca esar utiłe pa' ła pì granda comunità de editing de {{SITENAME}}.",
 	'mobile-frontend-donate-image-heading' => 'I to contributi resenti',
-	'mobile-frontend-donate-image-page-title' => 'Carga',
 	'mobile-frontend-donate-image-anon' => 'Un [[Special:UserLogin|account utente]] el xe dimandà par vardar ła pàjina de cargamento',
 	'mobile-frontend-listed-image-no-description' => 'Nisuna descrision',
 	'mobile-frontend-watchlist-add' => "Xonta $1 a łe to tegnùe d'ocio",
@@ -14463,15 +14455,20 @@ Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca es
 	'mobile-frontend-photo-upload-comment' => 'Xonta sta someja a na pàjina',
 	'mobile-frontend-photo-caption-placeholder' => 'Xonta na descrision (obligatoria)',
 	'mobile-frontend-image-loading' => 'Cargamento imaxene',
+	'mobile-frontend-photo-ownership' => 'Mi, $1, gò creà sta imagine.',
+	'mobile-frontend-photo-ownership-help' => 'Sa vol dir?',
+	'mobile-frontend-photo-ownership-confirm' => 'Go capìo!',
 	'mobile-frontend-image-uploading-wait' => 'Cargamento imaxene, speta.', # Fuzzy
 	'mobile-frontend-photo-upload-error' => 'Eror, proa oncora.',
 	'mobile-frontend-photo-upload-success-article' => 'Fato! Ła to imaxene ła xe deso inte ła pàjina.',
-	'mobile-frontend-photo-license' => 'Strucando "Manda", te dixi de esar d\'acordo có i nostri [//wikimediafoundation.org/wiki/Terms_of_use Termini d\'Uxo] e te rełasi łe to someje có ła [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licensa Creative Common Atribusion-Condividi al steso modo 3.0]',
+	'mobile-frontend-photo-license' => 'Strucando "Manda", te dixi de esar d\'acordo có i nostri [//wikimediafoundation.org/wiki/Terms_of_use Termini d\'Uxo] e te rełasi łe to someje có ła [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License licensa Creative Common Atribusion-Condividi al steso modo 3.0]', # Fuzzy
 	'mobile-frontend-photo-submit' => 'Manda',
 	'mobile-frontend-photo-cancel' => 'Anuła',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500 e passa caricamenti',
 	'tag-mobile_edit' => 'Canbiamento da tełefonin',
 	'tag-mobile_edit-description' => "Modifega fata dal sito pa' dispoxitivi mobiłi",
 	'mobile-frontend-drawer-cancel' => 'Anuła',
+	'mobile-frontend-talk-overlay-header' => 'Discusion',
 );
 
 /** Veps (vepsän kel’)
