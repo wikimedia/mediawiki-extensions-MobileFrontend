@@ -18,8 +18,13 @@ class MinervaTemplate extends BaseTemplate {
 		);
 	}
 
+	public function prepareData() { // expects to be overriden
+	}
+
 	public function execute() {
 		$this->prepareCommonData();
+		$this->prepareData();
+		$this->render( $this->data );
 	}
 
 	public function getLanguageVariants() {
@@ -56,5 +61,9 @@ class MinervaTemplate extends BaseTemplate {
 		</div>
 		<?php
 		}
+	}
+
+	private function render( $data ) { // FIXME: replace with template engines
+		echo $data[ 'headelement' ];
 	}
 }
