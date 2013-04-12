@@ -67,7 +67,7 @@
 	}
 
 	function findResults( lat, lng ) {
-		var $content = $( '#mw-mf-nearby' ), range = 10000, endpoint = mw.config.get( 'wgMFNearbyEndpoint' );
+		var $content = $( '#mw-mf-nearby' ), range = 10000, endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 			limit = 50;
 
 		$.ajax( {
