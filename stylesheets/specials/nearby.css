@@ -1,0 +1,11 @@
+ul.a-to-z li .proximity {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  padding-top: 15px;
+  font-weight: bold;
+  color: #000;
+  font-size: 1.2em;
+  height: 100%;
+  vertical-align: middle;
+}
