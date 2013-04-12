@@ -31,14 +31,14 @@ class SkinMobileTemplate extends MinervaTemplate {
 	}
 
 	public function prepareData() {
-		global $wgExtensionAssetsPath,
-			$wgMobileFrontendLogo;
+		global $wgExtensionAssetsPath;
 		$data = $this->data;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
-		$this->set( 'wgMobileFrontendLogo', $wgMobileFrontendLogo );
 
+		$this->set( 'bodytext', $data['bodytext'] );
+		$this->set( 'bottomscripts', $data['bottomScripts'] );
 		if ( isset( $data['specialPageHeader'] ) ) {
 			$this->set( 'header', $data['specialPageHeader'] );
 		}
@@ -109,6 +109,10 @@ class SkinMobileTemplate extends MinervaTemplate {
 		);
 
 		return $items;
+	}
+
+	public function getUserActionTools() {
+		return array();
 	}
 
 	/**

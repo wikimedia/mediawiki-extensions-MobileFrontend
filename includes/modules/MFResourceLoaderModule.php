@@ -9,7 +9,7 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	protected $messages = array();
 	protected $templates = array();
 	protected $localBasePath;
-	protected $targets = array( 'mobile' );
+	protected $targets = array( 'mobile', 'desktop' );
 	/** String: The local path to where templates are located, see __construct() */
 	protected $localTemplateBasePath = '';
 

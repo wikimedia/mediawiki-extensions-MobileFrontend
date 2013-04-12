@@ -1,6 +1,6 @@
 <?php
 
-abstract class SkinMobileBase extends SkinTemplate {
+class SkinMobileBase extends SkinMinerva {
 	/**
 	 * @var ExtMobileFrontend
 	 */
@@ -92,6 +92,7 @@ abstract class SkinMobileBase extends SkinTemplate {
 			$notice = '';
 			wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
 			$tpl->set( 'notice', $notice );
+			$tpl->set( 'reporttime', wfReportTime() );
 			$tpl->execute();
 			wfProfileOut( __METHOD__  . '-tpl' );
 		}
