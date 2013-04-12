@@ -1,46 +1,28 @@
-( function( M, $ ) {
-
-var m = ( function() {
+( function( $ ) {
 
 	function enhanceCheckboxes() {
 
-		var inputs = document.getElementsByTagName( 'input' ), i, el, special;
-
-		$( 'body' ).addClass( 'mw-mf-checkboxes' );
 		function clickChkBox() {
-			var parent = this,
-				box = parent.getElementsByTagName( 'input' )[ 0 ];
+			var $parent = $( this ),
+				box = $parent.children( 'input' )[ 0 ];
 
-			if( !$( parent ).hasClass( 'checked' ) ) {
-				$( parent ).addClass( 'checked' );
-				box.checked = true;
-			} else {
-				$( parent ).removeClass( 'checked' );
+			if ( $parent.hasClass( 'checked' ) ) {
+				$parent.removeClass( 'checked' );
 				box.checked = false;
+			} else {
+				$parent.addClass( 'checked' );
+				box.checked = true;
 			}
 		}
 
-		for( i = 0; i < inputs.length; i++ ) {
-			el = inputs[i];
-			special = $( el.parentNode ).hasClass( 'mw-mf-checkbox-css3' );
-			if( el.getAttribute( 'type' ) === 'checkbox' && special ) {
-				$( el.parentNode ).on( 'click', clickChkBox );
-				if( el.checked ) {
-					$( el.parentNode ).addClass( 'checked ');
-				}
+		$( '.mw-mf-checkbox-css3 > input[type=checkbox]' ).each( function( i, el ) {
+			var $parent = $( el ).parent();
+			$parent.on( 'click', clickChkBox );
+			if ( el.checked ) {
+				$parent.addClass( 'checked ');
 			}
-		}
+		} );
 	}
 
-	function init() {
-		enhanceCheckboxes();
-	}
-
-	return {
-		init: init
-	};
-}() );
-
-M.define( 'mobileoptions', m );
-
-}( mw.mobileFrontend, jQuery ) );
+	$( enhanceCheckboxes );
+}( jQuery ) );

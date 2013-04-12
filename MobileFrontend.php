@@ -522,7 +522,8 @@ $wgResourceModules['mobile.mobileoptions.styles'] = $wgMFMobileSpecialPageResour
 		'stylesheets/specials/mobileoptions.css',
 	),
 );
-$wgResourceModules['mobile.mobileoptions.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+$wgResourceModules['mobile.mobileoptions.scripts'] = $wgMFMobileSpecialPageResourceBoilerplate + array(
+	'position' => 'top',
 	'scripts' => array(
 		'javascripts/specials/mobileoptions.js',
 	),
