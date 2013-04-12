@@ -25,10 +25,10 @@
 	}
 
 	function findResults( lat, lng ) {
-		var $content = $( '#mw-mf-nearby' ), range = 10000;
+		var $content = $( '#mw-mf-nearby' ), range = 10000, endpoint = mw.config.get( 'wgMFNearbyEndpoint' );
 		$.ajax( {
-			dataType: 'json',
-			url: M.getApiUrl(),
+			dataType: endpoint ? 'jsonp' : 'json',
+			url: endpoint || M.getApiUrl(),
 			data: {
 				action: 'query',
 				list: 'geosearch',
