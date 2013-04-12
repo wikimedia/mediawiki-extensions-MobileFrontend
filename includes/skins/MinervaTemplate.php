@@ -6,11 +6,20 @@ class MinervaTemplate extends BaseTemplate {
 			'variants' => array(),
 		) );
 		$this->set( 'language_urls', array() );
+
+		// menu button
+		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
+		$this->set( 'menuButton',
+			Html::element( 'a', array(
+			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
+			'href' => $url,
+			'id'=> 'mw-mf-main-menu-button',
+			) )
+		);
 	}
 
 	public function execute() {
 		$this->prepareCommonData();
-		parent::execute();
 	}
 
 	public function getLanguageVariants() {
