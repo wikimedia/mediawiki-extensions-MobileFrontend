@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DuIQiegM",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-12T00:21:29Z",
+      "side": 1,
+      "message": "will [\u0027variants\u0027] always be set? if not, this will throw a warning.",
+      "revId": "be6574e326d24969c682ce1811d9d96b555444ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DuCQfDrY",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-12T00:21:29Z",
+      "side": 1,
+      "message": "this will throw a warning if [\u0027variants\u0027] doesn\u0027t exist.",
+      "revId": "be6574e326d24969c682ce1811d9d96b555444ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DuEQcgr4",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-12T00:21:29Z",
+      "side": 1,
+      "message": "this will throw a warning if [\u0027language_urls\u0027] doesn\u0027t exist.",
+      "revId": "be6574e326d24969c682ce1811d9d96b555444ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DuGQlBgw",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-12T00:21:29Z",
+      "side": 1,
+      "message": "IMO it would be better to have this method return $languageUrls rather than set the $tpl var in here. This has a number of advantages, including being decoupled and making it easier to unit test.",
+      "revId": "be6574e326d24969c682ce1811d9d96b555444ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DuMQPEog",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-12T00:21:29Z",
+      "side": 1,
+      "message": "IMO it would be better to have this method return $languageVariantUrls rather than set the $tpl var in here. This has a number of advantages, including being decoupled and making it easier to unit test.",
+      "revId": "be6574e326d24969c682ce1811d9d96b555444ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DuMSIcus",
+        "filename": "includes/skins/SkinMobileTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-12T00:21:29Z",
+      "side": 1,
+      "message": "i find the $data param to be misleading (since it\u0027s totally different from $this-\u003edata). this is totally just a stylistic point, but i recommend making it clearer what this is.",
+      "revId": "be6574e326d24969c682ce1811d9d96b555444ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DuOR59vo",
+        "filename": "includes/skins/SkinMobileTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-12T00:21:29Z",
+      "side": 1,
+      "message": "trust your data sources enough to not escape stuff stored in $data before output? there\u0027s no escaping happening in the $data preparation in renderArticleSkin().",
+      "revId": "be6574e326d24969c682ce1811d9d96b555444ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
