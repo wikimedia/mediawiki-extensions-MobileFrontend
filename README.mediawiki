@@ -9,6 +9,9 @@ See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settin
 
 == Development ==
 
+=== PHP ===
+See http://meta.wikimedia.org/wiki/Mobile_team/Mobile_web/Engineering_conventions/PHP_naming_conventions
+
 === CSS ===
 We currently use http://lesscss.org/ to generate stylesheets.
 Ensure when you contribute CSS code you update the less files in stylesheets/less and to generate run:
