@@ -199,7 +199,7 @@
           <notifyCulprits>false</notifyCulprits>
           <notifyFixers>false</notifyFixers>
           <notifyUpstreamCommitters>false</notifyUpstreamCommitters>
-          <buildToChatNotifier class="hudson.plugins.im.build_notify.DefaultBuildToChatNotifier" plugin="instant-messaging@1.25"/>
+          <buildToChatNotifier class="hudson.plugins.im.build_notify.SummaryOnlyBuildToChatNotifier" plugin="instant-messaging@1.25"/>
           <matrixMultiplier>ONLY_CONFIGURATIONS</matrixMultiplier>
           <channels/>
         </hudson.plugins.ircbot.IrcPublisher>
