@@ -1,4 +1,7 @@
 ( function( $ ) {
+	function supportsTouchEvents() {
+		return 'ontouchstart' in window;
+	}
 
 	function enhanceCheckboxes() {
 
@@ -16,8 +19,9 @@
 		}
 
 		$( '.mw-mf-checkbox-css3 > input[type=checkbox]' ).each( function( i, el ) {
-			var $parent = $( el ).parent();
-			$parent.on( 'click', clickChkBox );
+			var $parent = $( el ).parent(),
+				eventName = supportsTouchEvents() ? 'touchstart' : 'click';
+			$parent.on( eventName, clickChkBox );
 			if ( el.checked ) {
 				$parent.addClass( 'checked ');
 			}
