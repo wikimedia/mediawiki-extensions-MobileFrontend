@@ -1,6 +1,29 @@
 <?php
 class MinervaTemplate extends BaseTemplate {
+	public function getSearchPlaceholderText() {
+		return wfMessage( 'mobile-frontend-placeholder' )->escaped();
+	}
+
 	private function prepareCommonData() {
+		$searchBox = $this->makeSearchInput(
+			array(
+				'id' => 'searchInput',
+				'class' => 'search',
+				'autocomplete' => 'off',
+				'placeholder' => $this->getSearchPlaceholderText(),
+			)
+		);
+		$script = $this->data['wgScript'];
+		$searchButton = $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit' ) );
+		$header = <<<HTML
+<form action="{$script}" class="search-box">
+	<div class="divclearable">
+		{$searchBox}
+		{$searchButton}
+	</div>
+</form>
+HTML;
+		$this->set( 'header', $header );
 
 		// menu button
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
@@ -13,7 +36,8 @@ class MinervaTemplate extends BaseTemplate {
 		);
 	}
 
-	public function prepareData() { // expects to be overriden
+	public function prepareData() {
+		$this->set( 'isSpecialPage', Title::newFromText( $this->data[ 'title' ] )->isSpecialPage() );
 	}
 
 	private function prepareBannerData() {
@@ -93,5 +117,15 @@ class MinervaTemplate extends BaseTemplate {
 				<!-- start -->
 				<?php
 					echo $this->html( 'banners' );
+				?>
+				<div class="header">
+				<?php
+					echo $this->html( 'menuButton' );
+					echo $this->html( 'header' );
+				?>
+					<ul id="mw-mf-menu-page">
+					</ul>
+				</div>
+		<?php
 	}
 }

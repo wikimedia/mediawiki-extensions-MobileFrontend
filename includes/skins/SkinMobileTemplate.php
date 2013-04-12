@@ -1,6 +1,35 @@
 <?php
 
 class SkinMobileTemplate extends MinervaTemplate {
+	public function getMode() {
+		$context = MobileContext::singleton();
+		if ( $context->isAlphaGroupMember() ) {
+			return 'alpha';
+		} else if ( $context->isBetaGroupMember() ) {
+			return 'beta';
+		} else {
+			return 'stable';
+		}
+	}
+
+	public function getSearchPlaceholderText() {
+		$mode = $this->getMode();
+		if ( $mode === 'alpha' ) {
+			return wfMessage( 'mobile-frontend-placeholder-alpha' )->escaped();
+		} else if ( $mode === 'beta' ) {
+			return wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
+		} else {
+			return wfMessage( 'mobile-frontend-placeholder' )->escaped();
+		}
+	}
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		parent::__construct();
+	}
+
 	public function renderArticleSkin() {
 		$languages = $this->getLanguages();
 		$variants = $this->getLanguageVariants();
@@ -12,7 +41,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
 		);
 		?>
-		<?php $this->renderArticleHeader() ?>
 	<div class='show' id='content_wrapper'>
 			<div id="content" class="content">
 			<?php
@@ -29,17 +57,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 		} ?>
 		<?php
 			$this->navigationEnd();
-	}
-
-	public function renderArticleHeader() {
-		echo '<div class="header">';
-		if ( $this->data['htmlHeader'] ) {
-			$this->html( 'menuButton' );
-			echo $this->data['htmlHeader'];
-		} else {
-			$this->searchBox();
-		}
-		echo '</div>';
 	}
 
 	public function execute() {
@@ -61,36 +78,16 @@ class SkinMobileTemplate extends MinervaTemplate {
 	public function prepareData() {
 		global $wgExtensionAssetsPath,
 			$wgMobileFrontendLogo;
+		$data = $this->data;
 
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
 		$this->set( 'wgMobileFrontendLogo', $wgMobileFrontendLogo );
 
-		wfProfileOut( __METHOD__ );
-	}
-
-	private function searchBox() {
-		if ( $this->data['isAlphaGroupMember'] ) {
-			$placeholder = wfMessage( 'mobile-frontend-placeholder-alpha' )->text();
-		} else if ( $this->data['isBetaGroupMember'] ) {
-			$placeholder = wfMessage( 'mobile-frontend-placeholder-beta' )->text();
-		} else {
-			$placeholder = wfMessage( 'mobile-frontend-placeholder' )->text();
+		if ( isset( $data['specialPageHeader'] ) ) {
+			$this->set( 'header', $data['specialPageHeader'] );
 		}
-		?>
-		<?php $this->html( 'menuButton' ) ?>
-		<form id="mw-mf-searchForm" action="<?php $this->text( 'wgScript' ) ?>" class="search-box" method="get">
-			<input type="hidden" value="Special:Search" name="title" />
-			<div id="mw-mf-sq" class="divclearable">
-				<input type="search" name="search" id="searchInput" size="22" value="<?php $this->text( 'searchField' )
-					?>" autocomplete="off" maxlength="1024" class="search"
-					placeholder="<?php echo $placeholder ?>"
-					/>
-				<input class='searchSubmit' type="submit" value="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
-			</div>
-		</form>
-		<ul id="mw-mf-menu-page"></ul>
-		<?php
+		wfProfileOut( __METHOD__ );
 	}
 
 	private function footer() {
