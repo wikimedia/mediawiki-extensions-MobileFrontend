@@ -3,25 +3,25 @@
 ( function() {
 	var supported = !!navigator.geolocation,
 		popup = M.require( 'notifications' ),
-		cachedPages;
+		View = M.require( 'view' ),
+		cachedPages,
+		Nearby = View.extend( {
+			template: M.template.get( 'articleList' )
+		} );
 
 	function render( $content, pages ) {
-		var $ul, $li;
-
-		$content.empty();
-		$ul = $( '<ul class="suggestions-results">' );
 		pages.sort( function( a, b ) {
 			return a.dist > b.dist ? 1 : -1;
 		} ).forEach( function( page ) {
-			$li = $( '<li class="suggestions-result">' ).
-				appendTo( $ul );
-			$( '<a>' ).attr( 'href', M.history.getArticleUrl( page.title ) ).
-				attr( '_target', 'blank' ). // horrible hack for time being
-				text( page.title ).appendTo( $li );
-			$( '<p>' ).text( mw.message( 'mobile-frontend-nearby-distance-report',
-				( page.dist / 1000 ).toFixed( 2 ) ) ).appendTo( $li );
+			page.url = M.history.getArticleUrl( page.title );
+			page.proximity = mw.message( 'mobile-frontend-nearby-distance-report',
+				( page.dist / 1000 ).toFixed( 2 ) );
 		} );
-		$ul.appendTo( $content );
+
+		new Nearby( {
+			el: $content[0],
+			pages: pages
+		} );
 	}
 
 	function findResults( lat, lng ) {

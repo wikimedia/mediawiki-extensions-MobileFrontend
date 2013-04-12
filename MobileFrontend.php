@@ -525,7 +525,17 @@ $wgResourceModules['mobile.mobileoptions.scripts'] = $wgMFMobileSpecialPageResou
 		'javascripts/specials/mobileoptions.js',
 	),
 );
-$wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+
+$wgResourceModules['mobile.nearby.plumbing'] = $wgMFMobileResourceTemplateBoilerplate + array(
+	'templates' => array(
+		'articleList',
+	),
+);
+$wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.nearby.plumbing',
+		'mobile.stable',
+	),
 	'messages' => array(
 		'mobile-frontend-nearby-error',
 		'mobile-frontend-nearby-refresh',
@@ -534,6 +544,9 @@ $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileSpecialPageResourceScri
 		'mobile-frontend-nearby-distance-report',
 		'mobile-frontend-nearby-lookup-error',
 		'mobile-frontend-nearby-noresults',
+	),
+	'styles' => array(
+		'stylesheets/specials/watchlist.css',
 	),
 	'scripts' => array(
 		'javascripts/specials/nearby.js',
