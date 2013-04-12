@@ -39,11 +39,13 @@
 
 	function render( $content, pages ) {
 		pages = $.map( pages, function( page ) {
-			var coords, lngLat;
+			var coords, lngLat, thumb;
 
 			if ( page.coordinates ) { // FIXME: protecting us against an api bug 47133
 				if ( page.thumbnail ) {
-					page.pageimage = page.thumbnail.source;
+					thumb = page.thumbnail;
+					page.pageimage = thumb.source;
+					page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
 				}
 				page.url = M.history.getArticleUrl( page.title );
 
