@@ -61,5 +61,21 @@ class MinervaTemplate extends BaseTemplate {
 
 	private function render( $data ) { // FIXME: replace with template engines
 		echo $data[ 'headelement' ];
+		?>
+		<div id="mw-mf-viewport">
+			<div id="mw-mf-page-left">
+				<ul id="mw-mf-menu-main">
+				<?php
+				foreach( $this->getDiscoveryTools() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+				foreach( $this->getPersonalTools() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+				?>
+				</ul>
+			</div>
+			<div id='mw-mf-page-center'>
+		<?php
 	}
 }
