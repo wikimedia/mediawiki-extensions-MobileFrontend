@@ -66,23 +66,21 @@
 		pages = $.map( pages, function( page ) {
 			var coords, lngLat, thumb;
 
-			if ( page.coordinates ) { // FIXME: protecting us against an api bug 47133
-				if ( page.thumbnail ) {
-					thumb = page.thumbnail;
-					page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
-					page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
-				} else {
-					page.pageimageClass = 'needsPhoto';
-				}
-				page.url = M.history.getArticleUrl( page.title );
-
-				coords = page.coordinates[0],
-				lngLat = { latitude: coords.lat, longitude: coords.lon };
-				page.dist = calculateDistance( curLocation, lngLat );
-				page.proximity = distanceMessage( page.dist );
-				pages.push( page );
-				return page;
+			if ( page.thumbnail ) {
+				thumb = page.thumbnail;
+				page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
+				page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
+			} else {
+				page.pageimageClass = 'needsPhoto';
 			}
+			page.url = M.history.getArticleUrl( page.title );
+
+			coords = page.coordinates[0],
+			lngLat = { latitude: coords.lat, longitude: coords.lon };
+			page.dist = calculateDistance( curLocation, lngLat );
+			page.proximity = distanceMessage( page.dist );
+			pages.push( page );
+			return page;
 		} );
 		pages.sort( function( a, b ) {
 			return a.dist > b.dist ? 1 : -1;
@@ -107,6 +105,7 @@
 			url: endpoint || M.getApiUrl(),
 			data: {
 				action: 'query',
+				colimit: 'max',
 				prop: 'pageimages|coordinates',
 				pithumbsize: 180,
 				pilimit: limit,
