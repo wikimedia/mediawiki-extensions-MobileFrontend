@@ -1,3 +1,5 @@
+MW_INSTALL_PATH ?= ../..
+
 .PHONY: less
 
 jshinttests:
@@ -13,7 +15,7 @@ lesswatch:
 	@scripts/less.sh
 
 phpunit:
-	cd ../../tests/phpunit && php phpunit.php --configuration ../../extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend
+	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend
 
 qunit:
 	@scripts/qunit.sh
