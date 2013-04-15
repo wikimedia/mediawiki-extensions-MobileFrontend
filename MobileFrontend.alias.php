@@ -80,6 +80,8 @@ $specialPageAliases['ko'] = array(
 $specialPageAliases['lb'] = array(
 	'MobileOptions' => array( 'Mobil_Optiounen' ),
 	'Uploads' => array( 'Eropgeluede_Fichieren' ),
+	'MobileDiff' => array( 'Mobilen_Ënnerscheed' ),
+	'MobileMenu' => array( 'Mobile_Menü' ),
 	'Nearby' => array( 'Nobäi' ),
 );
 
