@@ -1,7 +1,12 @@
-@import "../mf-variables.less";
+@import "../mf-mixins.less";
 
 ul.a-to-z {
 	li {
+		.listThumb.needsPhoto {
+			background-image: url(images/camera.png);
+			.background-size( 50%, auto );
+		}
+
 		.proximity {
 			position: absolute;
 			right: @searchBarPaddingRight;
