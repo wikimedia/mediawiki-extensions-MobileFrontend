@@ -651,11 +651,12 @@ $wgResourceModules['mobile.loginhandshake.scripts'] = $wgMFMobileSpecialPageReso
 	'position' => 'top',
 );
 
-$wgResourceModules['mobile.device.detect.styles'] = $wgMFMobileResourceBoilerplate + array(
+//@hack: xdevice instead of device to force this module to be last in a link
+$wgResourceModules['mobile.xdevice.detect.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'class' => 'MobileDeviceDetectStylesModule',
 );
 
-$wgResourceModules['mobile.device.detect.scripts'] = $wgMFMobileResourceBoilerplate + array(
+$wgResourceModules['mobile.xdevice.detect.scripts'] = $wgMFMobileResourceBoilerplate + array(
 	'class' => 'MobileDeviceDetectScriptsModule',
 );
 
