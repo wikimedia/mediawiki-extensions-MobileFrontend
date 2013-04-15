@@ -69,8 +69,10 @@
 			if ( page.coordinates ) { // FIXME: protecting us against an api bug 47133
 				if ( page.thumbnail ) {
 					thumb = page.thumbnail;
-					page.pageimage = thumb.source;
+					page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
 					page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
+				} else {
+					page.pageimageClass = 'needsPhoto';
 				}
 				page.url = M.history.getArticleUrl( page.title );
 
