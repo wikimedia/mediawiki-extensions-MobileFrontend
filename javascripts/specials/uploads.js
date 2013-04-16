@@ -166,7 +166,7 @@ m = ( function() {
 			new photo.PhotoUploader( {
 				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
 				pageTitle: mw.config.get( 'wgTitle' ),
-				funnel: $.cookie( 'mwUploadsFunnel' ) || 'uploads'
+				funnel: 'uploads'
 			} ).
 				appendTo( $container ).
 				on( 'success', function( image ) {

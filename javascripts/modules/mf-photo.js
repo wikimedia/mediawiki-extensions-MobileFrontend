@@ -531,7 +531,7 @@
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
 			pageTitle: mw.config.get( 'wgTitle' ),
-			funnel: 'article'
+			funnel: $.cookie( 'mwUploadsFunnel' ) || 'article'
 		} ).
 			insertAfter( $pageHeading ).
 			on( 'start', function() {
