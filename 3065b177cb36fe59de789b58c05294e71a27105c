@@ -16,6 +16,23 @@
       "revId": "3065b177cb36fe59de789b58c05294e71a27105c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DuiJRQmE",
+        "filename": "javascripts/modules/search-2.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-04-16T14:38:15Z",
+      "side": 1,
+      "message": "Still fails if the first letter of the entity isn\u0027t what trips it.\n\n\"Moobie \u0026 Foobie\" search for \"m\" -\u003e highlights the \u0027m\u0027 in \u0027\u0026amp;\u0027\n\nCan we use the same code that\u0027s on the desktop site for search highlighting instead of duplicating, or is it not factored well enough to reuse?\n\nThis is an edge case that was previously broken, so I\u0027m willing to let it pass for now, but it\u0027s nice to fix these things. Sloppy escaping can be a security problem, but there shouldn\u0027t be anything exploitable here.",
+      "revId": "3065b177cb36fe59de789b58c05294e71a27105c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
