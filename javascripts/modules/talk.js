@@ -23,6 +23,7 @@
 		} );
 		req.done( function( resp ) {
 			var topOverlay, sections, page,
+				leadHeading = mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 				explanation;
 
 			if ( resp.error ) {
@@ -38,13 +39,21 @@
 				mw.msg( 'mobile-frontend-talk-explained-empty' );
 			topOverlay = new TalkOverlay( {
 				heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
+				leadHeading: leadHeading,
 				explanation: explanation,
 				sections: sections
 			} );
 			topOverlay.show();
+			if ( !page.lead ) {
+				topOverlay.$( '.lead-discussion' ).remove();
+			}
 			topOverlay.$( 'a' ).on( 'click', function() {
-				var
-					section = page.getSubSection( parseInt( $( this ).data( 'id' ), 10 ) ),
+				var id = parseInt( $( this ).data( 'id' ), 10 ),
+					leadSection = {
+						content: page.lead,
+						heading: leadHeading
+					},
+					section = id === 0 ? leadSection : page.getSubSection( id ),
 					childOverlay = new nav.Overlay( {
 						content: M.template.get( 'talkSection' ).render( section ),
 						parent: topOverlay
