@@ -309,16 +309,28 @@ input.search:focus {
 input.searchSubmit {
   position: absolute;
   top: 9px;
-  right: -36px;
+  right: 4px;
   padding-top: 9px;
   padding-bottom: 9px;
   font-size: 9px;
 }
+.search-box {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.search-box #mw-mf-sq {
+  padding-right: 48px;
+}
+#mw-mf-menu-page {
+  display: none;
+}
 .client-js input.searchSubmit {
   display: none;
 }
-.search-box {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+.client-js #mw-mf-sq {
+  padding-right: 0;
+}
+.client-js #mw-mf-menu-page {
+  display: block;
 }
 /* samsung galaxy s gt-19000 */
 @media all and (max-width: 240px) {
