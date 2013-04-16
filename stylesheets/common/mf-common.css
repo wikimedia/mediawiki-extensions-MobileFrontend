@@ -261,6 +261,7 @@ table.floatright {
   background: none !important;
   padding: 0 !important;
 }
+strong,
 b {
   font-weight: bold;
 }
