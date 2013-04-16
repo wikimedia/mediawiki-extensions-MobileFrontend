@@ -356,6 +356,7 @@ $wgResourceModules['mobile.alpha.plumbing'] = array(
 	'localTemplateBasePath' => $localBasePath . '/templates',
 	'templates' => array(
 		'overlays/talk',
+		'overlays/talkSectionAdd',
 		'talkSection',
 	),
 	'class' => 'MFResourceLoaderModule',
@@ -384,6 +385,10 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-talk-explained-empty',
 		'mobile-frontend-talk-overlay-lead-header',
 		'mobile-frontend-talk-overlay-header',
+		'mobile-frontend-talk-add-overlay-subject-placeholder',
+		'mobile-frontend-talk-add-overlay-content-placeholder',
+		'mobile-frontend-talk-edit-summary',
+		'mobile-frontend-talk-add-overlay-submit',
 	),
 	'styles' => array(
 		'stylesheets/modules/mf-random.css',

@@ -141,6 +141,10 @@ html.overlay #footer {
 .mw-mf-overlay div.content {
   padding-bottom: 20px;
 }
+.mw-mf-overlay div.content textarea {
+  display: block;
+  width: 100%;
+}
 .mw-mf-overlay .content {
   margin-top: 14pt;
 }
@@ -173,6 +177,11 @@ html.overlay #footer {
   display: inline;
   color: #002BB8;
 }
+.search.error,
+.error {
+  border: solid 1px #dd0000;
+  background-color: #fae1e1;
+}
 .alert {
   padding: 0.5em 1em;
   background-repeat: no-repeat;
@@ -189,10 +198,6 @@ html.overlay #footer {
   border: solid 1px #008000;
   background-image: url(images/success.png);
 }
-.alert.error {
-  border: solid 1px #dd0000;
-  background-color: #fae1e1;
-}
 .alert h2 {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 100%;
@@ -201,6 +206,23 @@ html.overlay #footer {
 }
 #content .alert {
   margin: 0;
+}
+#mw-mf-page-center .header input.search,
+.overlay .header input.search {
+  margin-top: 0;
+}
+#mw-mf-page-center .header button.add,
+.overlay .header button.add {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#mw-mf-page-center .header h2,
+.overlay .header h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 46px;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 .overlay ul {
   text-align: left;

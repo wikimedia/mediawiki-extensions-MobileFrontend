@@ -26,8 +26,9 @@
 		initialize: function( options ) {
 			var s, i, level, text,
 				$tmpContainer = $( '<div>' ),
-				html, section,
+				html,
 				sectionNum = 0,
+				lastId = 0,
 				secs = options.sections,
 				sectionData = {};
 
@@ -41,6 +42,7 @@
 				}
 
 				if ( level === '2' ) {
+					lastId = s.id;
 					sectionNum = sectionNum + 1;
 					sectionData[ sectionNum ] = { content: text,
 						id: s.id, heading: s.line };
@@ -63,11 +65,20 @@
 			this._sectionLookup = {};
 			for ( s in sectionData ) {
 				if ( sectionData.hasOwnProperty( s ) ) {
-					section = new Section( sectionData[ s ] );
-					this.sections.push( section );
-					this._sectionLookup[ section.id ] = section; // allow easy lookup of section
+					this.appendSection( sectionData[ s ] );
 				}
 			}
+			this._lastSectionId = lastId;
+		},
+		appendSection: function( data ) {
+			var section;
+			if ( !data.id ) {
+				data.id = ++this._lastSectionId;
+			}
+			section = new Section( data );
+			this.sections.push( section );
+			this._sectionLookup[ section.id ] = section; // allow easy lookup of section
+			return section;
 		},
 		getSubSection: function( id ) {
 			return this._sectionLookup[ id ];
