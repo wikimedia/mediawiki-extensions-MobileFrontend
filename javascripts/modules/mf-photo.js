@@ -302,7 +302,7 @@
 					parent: self.overlay
 				} );
 				overlay.show();
-				self.log( { action: 'whatDoesThisMean' } );
+				M.log( { action: 'whatDoesThisMean' } );
 			} );
 			$( '<img>' ).attr( 'src', url ).prependTo( this.overlay.$( '.photoPreview' ) );
 		}
