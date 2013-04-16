@@ -237,7 +237,7 @@ class SkinMobile extends SkinMobileBase {
 			$out->addModuleStyles( $device->moduleName() );
 		}
 
-		// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack
+		// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack to get around bug 47296
 		if ( in_array( 'mobile.action.edit', $out->getModules() ) ) {
 			$bottomScripts = Html::inlineScript(
 				'mw.loader.implement("mediawiki.action.edit", [],{},{});' .
