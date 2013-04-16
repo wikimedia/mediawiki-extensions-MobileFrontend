@@ -5551,6 +5551,7 @@ $messages['gsw'] = array(
 );
 
 /** Gujarati (ગુજરાતી)
+ * @author Ashok modhvadia
  * @author Dsvyas
  * @author KartikMistry
  * @author Sushant savla
@@ -5578,7 +5579,7 @@ $messages['gu'] = array(
 	'mobile-frontend-enable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો',
 	'mobile-frontend-off' => 'બંધ',
 	'mobile-frontend-on' => 'ચાલુ',
-	'mobile-frontend-footer-contributors-text' => 'તમારા જેવા <a href="$1">ફાળો આપનારા</a> દ્વારા લેખ', # Fuzzy
+	'mobile-frontend-footer-contributors-text' => 'તમારા જેવા [$1 ફાળો આપનારા] દ્વારા લેખ',
 	'mobile-frontend-featured-article' => 'આજનો વિશેષ લેખ',
 	'mobile-frontend-news-items' => 'સમાચારમાં',
 	'mobile-frontend-leave-feedback-notice' => 'તમારો સુઝાવ અમને મોબાઈલ સાઈટના અનુભવને સુધારવામાં મદદ કરશે. આને (તમારા સભ્યનામ, બ્રાઉઝર આવૃત્તિ, અને ઓપરેટીંગ સીસ્ટમ સાથે)  સાર્વજનીક રીતે &quot;$1&quot પાના પર પ્રસિદ્ધ કરવામાં આવશે. કૃપા કરી માહિતીપૂર્વકને હરોળ પસંદ કરશો. દા.ત. "Formatting issues with wide tables".  તમરો સુઝાવ અમારા નિતી નિયમોને આધીન રહેશે.',
@@ -5591,7 +5592,7 @@ $messages['gu'] = array(
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'ટેકનિકલ મુશ્કેલી',
 	'mobile-frontend-leave-feedback-general-section-header' => 'સામાન્ય',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'લેખ પ્રતિભાવ',
-	'mobile-frontend-leave-feedback-email-body' => 'મહેરબાની કરી આ લીટીની ઉપર તમારું ઇ-મેલ લખો.', # Fuzzy
+	'mobile-frontend-leave-feedback-email-body' => 'મહેરબાની કરી આ લીટીની ઉપર તમારો {{SITENAME}} સાથેની સમસ્યાના અનુભવનું વર્ણન કરો. કૃપયા નોંધો કે અમે મળનારા દરેક સંદેશનો પ્રત્યુત્તર આપી શકતા નથી.',
 	'mobile-frontend-leave-feedback-technical-link-text' => 'ટેકનિકલ મુશ્કેલી',
 	'mobile-frontend-leave-feedback-general-link-text' => 'સામાન્ય પ્રતિભાવ',
 	'mobile-frontend-leave-feedback-article-factual-link-text' => 'સત્યતા ક્ષતિ વિષે',
@@ -5605,7 +5606,7 @@ $messages['gu'] = array(
 	'mobile-frontend-feedback-no-message' => 'મહેરબાની કરી સંદેશ અહીં લખો',
 	'mobile-frontend-leave-feedback-thanks' => 'તમારા પ્રતિભાવ માટે, આભાર!',
 	'mobile-frontend-language' => 'ભાષા:',
-	'mobile-frontend-language-footer' => '{{SITENAME}} બીજી ભાષાઓમાં પ્રાપ્ત છે.', # Fuzzy
+	'mobile-frontend-language-footer' => 'નોંધ: કદાચ આ પાનું આપની પસંદગીની ભાષામાં લખાયેલું નથી. તમે અહીં ક્લિક કરીને જોઈ શકો છો કે {{SITENAME}} કઈ ભાષાઓમાં પ્રાપ્ત છે.',
 	'mobile-frontend-language-site-choose' => 'શોધ ભાષા',
 	'mobile-frontend-username' => 'સભ્યનામ:',
 	'mobile-frontend-password' => 'પાસવર્ડ:',
@@ -8268,6 +8269,8 @@ $messages['ko'] = array(
 	'mobile-frontend-nearby-title' => '근처',
 	'mobile-frontend-nearby-loading' => '현재 위치 근처에 주제를 불러오는 중',
 	'mobile-frontend-nearby-requirements' => '이 문서는 자바스크립트와 위치 인식 브라우저 모두 필요합니다.',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-lookup-error' => '찾을 수 없습니다. 다시 시도하세요.',
 	'mobile-frontend-nearby-noresults' => '어딘지 모를 한가운데에 어떠한 주제도 찾을 수 없습니다. 문서를 써보지 않겠습니까?',
 	'mobile-frontend-nearby-refresh' => '정확한 위치를 찾았습니다. 근처 문서의 목록을 새로 고치려면 여기를 클릭하세요',
