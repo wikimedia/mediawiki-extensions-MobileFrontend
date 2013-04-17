@@ -2,6 +2,7 @@
 
 var Overlay = M.require( 'navigation' ).Overlay, SearchOverlay,
 	api = M.require( 'api' ),
+	searchOverlay,
 	overlayInitialize = Overlay.prototype.initialize;
 
 /**
@@ -106,8 +107,9 @@ SearchOverlay = Overlay.extend( {
 	}
 } );
 
+searchOverlay = new SearchOverlay();
+
 function init() {
-	var searchOverlay = new SearchOverlay();
 	// don't use focus event (https://bugzilla.wikimedia.org/show_bug.cgi?id=47499)
 	$( '#searchInput' ).on( 'touchend keydown', function( ev ) {
 		// if touch or key not Tab or Shift
@@ -120,6 +122,7 @@ init();
 
 M.define( 'search', {
 	SearchOverlay: SearchOverlay,
+	overlay: searchOverlay,
 	highlightSearchTerm: highlightSearchTerm
 } );
 

@@ -91,6 +91,7 @@ $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
 $wgHooks['MakeGlobalVariablesScript'][] = 'MobileFrontendHooks::onMakeGlobalVariablesScript';
+$wgHooks['EnableMobileModules'][] = 'MobileFrontendHooks::onEnableMobileModules';
 $wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::onRequestContextCreateSkin';
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec';
 $wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::onBeforePageRedirect';
@@ -528,6 +529,21 @@ $wgMFMobileSpecialPageResourceStyleBoilerplate = $wgMFMobileSpecialPageResourceB
 	// ensure special css is always loaded after mobile.styles for cascading purposes (keep jgonera happy)
 	'dependencies' => array( 'mobile.styles' ),
 );
+
+// Special page modules we only want to load in beta/alpha:
+$wgResourceModules['mobile.special.alpha.scripts'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+	'scripts' => array(
+		'javascripts/specials/modules/search-btn.js',
+	),
+);
+
+$wgResourceModules['mobile.special.alpha.styles'] = $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+	'styles' => array(
+		'stylesheets/specials/modules/search-btn.css',
+	),
+);
+
+
 /**
 	* Special page modules
 	*

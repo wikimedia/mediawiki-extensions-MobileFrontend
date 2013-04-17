@@ -10,6 +10,26 @@
 
 class MobileFrontendHooks {
 
+	/**
+	 * EnableMobileModules hook handler
+	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/EnableMobileModules
+	 * Adds modules depending on alpha/beta status.
+	 *
+	 * @param OutputPage $out
+	 * @param string $mode
+	 * @return boolean
+	 */
+	public static function onEnableMobileModules( $out, $mode ) {
+		if ( $mode === 'alpha' && $out->getTitle()->isSpecialPage() ) {
+			$out->addModules(
+				array(
+					'mobile.special.alpha.scripts',
+					'mobile.special.alpha.styles',
+				)
+			);
+		}
+		return true;
+	}
 
 	/**
 	 * MakeGlobalVariablesScript hook handler
