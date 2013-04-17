@@ -165,6 +165,9 @@ html.overlay #footer {
   min-height: 64px;
   font-size: 1em;
 }
+.alert.warning {
+  border: solid 1px #ffa500;
+}
 .alert.success {
   padding-left: 80px;
   border: solid 1px #008000;

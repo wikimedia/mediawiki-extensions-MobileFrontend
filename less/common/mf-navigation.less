@@ -2,6 +2,7 @@
 
 @InfoBoxWLogoSize: 98px;
 @overlayAlertTipColor: black;
+@overlayAlertWarningColor: orange;
 @overlayAlertSuccessColor: green;
 @overlayAlertErrorBorderColor: #D00;
 @overlayAlertErrorBackgroundColor: #FAE1E1;
@@ -178,6 +179,10 @@ html.overlay {
 	margin-bottom: 1em;
 	min-height: 64px;
 	font-size: @baseFontSize;
+
+	&.warning {
+		border: solid @overlayBorderWidth @overlayAlertWarningColor;
+	}
 
 	&.success {
 		padding-left: ( 80px + @overlayAlertPadding );
