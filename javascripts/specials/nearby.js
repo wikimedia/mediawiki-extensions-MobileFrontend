@@ -74,11 +74,12 @@
 				page.pageimageClass = 'needsPhoto';
 			}
 			page.url = M.history.getArticleUrl( page.title );
-
-			coords = page.coordinates[0],
-			lngLat = { latitude: coords.lat, longitude: coords.lon };
-			page.dist = calculateDistance( curLocation, lngLat );
-			page.proximity = distanceMessage( page.dist );
+			if ( page.coordinates ) { // FIXME: protect against bug 47133 (remove when resolved)
+				coords = page.coordinates[0],
+				lngLat = { latitude: coords.lat, longitude: coords.lon };
+				page.dist = calculateDistance( curLocation, lngLat );
+				page.proximity = distanceMessage( page.dist );
+			}
 			pages.push( page );
 			return page;
 		} );
