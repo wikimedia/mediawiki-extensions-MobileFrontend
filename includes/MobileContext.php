@@ -599,11 +599,14 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Take a URL Host Template and return the host portion
+	 * Take a URL Host Template and return the mobile token portion
+	 *
+	 * Eg if a desktop domain is en.wikipedia.org, but the mobile variant is
+	 * en.m.wikipedia.org, the mobile token is 'm.'
 	 * @param $mobileUrlHostTemplate string
 	 * @return string
 	 */
-	public function getMobileHost( $mobileUrlHostTemplate ) {
+	public function getMobileHostToken( $mobileUrlHostTemplate ) {
 		wfProfileIn( __METHOD__ );
 		$mobileToken = preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
 		wfProfileOut( __METHOD__ );
@@ -625,7 +628,7 @@ class MobileContext extends ContextSource {
 				if ( !empty( $subdomainTokenReplacement ) ) {
 					global $wgMobileUrlTemplate;
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
-					$mobileToken = $this->getMobileHost( $mobileUrlHostTemplate );
+					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
 					$wgMobileUrlTemplate = str_replace( $mobileToken, $subdomainTokenReplacement, $wgMobileUrlTemplate );
 				}
 			}
@@ -699,7 +702,7 @@ class MobileContext extends ContextSource {
 		}
 
 		// identify the mobile token by stripping out normal host parts
-		$mobileToken = $this->getMobileHost( $mobileUrlHostTemplate );
+		$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
 
 		// replace the mobile token with nothing, resulting in the normal hostname
 		$parsedUrl['host'] = str_replace( '.' . $mobileToken, '.', $parsedUrl['host'] );

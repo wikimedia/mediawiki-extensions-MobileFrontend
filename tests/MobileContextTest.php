@@ -431,4 +431,20 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( 'foo=bar+%24blat', 'foo', 'bar $blat' ),
 		);
 	}
+
+	/**
+	 * @dataProvider getMobileHostTokenProvider
+	 */
+	public function testGetMobileHostToken( $domainTemplate, $result ) {
+		$context = MobileContext::singleton();
+		$this->assertEquals( $context->getMobileHostToken( $domainTemplate ), $result );
+	}
+
+	public function getMobileHostTokenProvider() {
+		return array(
+			array( '%h1.m.%h2.%h3', 'm.' ),
+			array( '', '' ),
+			array( 'bananas.%h2.%h3', 'bananas.' ),
+		);
+	}
 }
