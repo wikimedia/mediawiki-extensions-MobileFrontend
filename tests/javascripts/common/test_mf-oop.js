@@ -4,7 +4,7 @@ var oop = M.require( 'oop' );
 
 QUnit.module( 'MobileFrontend oop' );
 
-QUnit.test( '#extend', 4, function() {
+QUnit.test( '#extend', 5, function() {
 	var Child, child;
 
 	function Parent() {}
@@ -17,6 +17,10 @@ QUnit.test( '#extend', 4, function() {
 		return 'override';
 	};
 
+	Parent.prototype.callSuper = function() {
+		return 'super';
+	};
+
 	Parent.extend = oop.extend;
 
 	Child = Parent.extend( {
@@ -25,6 +29,9 @@ QUnit.test( '#extend', 4, function() {
 		},
 		child: function() {
 			return 'child';
+		},
+		callSuper: function() {
+			return this._super() + ' duper';
 		}
 	} );
 
@@ -32,6 +39,7 @@ QUnit.test( '#extend', 4, function() {
 	strictEqual( child.parent(), 'parent', 'inherit parent properties' );
 	strictEqual( child.override(), 'overriden', 'override parent properties' );
 	strictEqual( child.child(), 'child', 'add new properties' );
+	strictEqual( child.callSuper(), 'super duper', "call parent's functions" );
 	strictEqual( Child.extend, oop.extend, 'make Child extendeable' );
 } );
 
