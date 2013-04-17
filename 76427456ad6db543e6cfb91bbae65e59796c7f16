@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DuuOkiVs",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-17T14:18:12Z",
+      "side": 1,
+      "message": "Assumes English-language wiki.",
+      "revId": "76427456ad6db543e6cfb91bbae65e59796c7f16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
