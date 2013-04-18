@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvjMBkrI",
+        "filename": "javascripts/modules/mf-tables.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-18T21:12:04Z",
+      "side": 1,
+      "message": "Let\u0027s just make this module not load on the main page. Also, the commit title is confusing because we are special casing main page here.",
+      "revId": "93b9068a2213810cde33cad062310006254572ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
