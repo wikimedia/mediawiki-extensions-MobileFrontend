@@ -375,14 +375,6 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile.beta',
 	),
 	'messages' => array(
-		// for mf-random.js
-		'mobile-frontend-ajax-random-heading',
-		'mobile-frontend-ajax-random-quote',
-		'mobile-frontend-ajax-random-quote-author',
-		'mobile-frontend-ajax-random-question',
-		'mobile-frontend-ajax-random-yes',
-		'mobile-frontend-ajax-random-retry',
-		'mobile-frontend-ajax-random-suggestions',
 
 		// for mf-table.js
 		'mobile-frontend-table',
@@ -398,7 +390,6 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-talk-add-overlay-submit',
 	),
 	'styles' => array(
-		'stylesheets/modules/mf-random.css',
 		'stylesheets/modules/mf-tables.css',
 		'stylesheets/modules/talk.css',
 	),
@@ -406,7 +397,6 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/application-alpha.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
 		'javascripts/common/mf-history-jquery.js',
-		'javascripts/modules/mf-random.js',
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-translator.js',
 		'javascripts/modules/mf-toggle-dynamic.js',

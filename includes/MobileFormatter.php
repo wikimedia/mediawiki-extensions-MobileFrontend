@@ -163,8 +163,8 @@ class MobileFormatter extends HtmlFormatter {
 						$xpath = new DOMXpath( $doc );
 						$elements = $xpath->query( '//*[@class="content_block"]' );
 						/** @var $element DOMElement */
-						foreach ( $elements as $element ) {
-							$element->parentNode->removeChild( $element );
+						foreach ( $elements as $element ) { // empty elements
+							$element->nodeValue = '';
 						}
 						$html = $temp->getText();
 					}

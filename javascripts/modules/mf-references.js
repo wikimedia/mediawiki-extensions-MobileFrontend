@@ -65,13 +65,8 @@ var references = ( function() {
 		}
 
 		function init() {
-			if ( M.history.isDynamicPageLoadEnabled ) {
-				M.on( 'page-loaded', function() {
-					setupReferences( $( '#content' )[ 0 ] );
-				} ).on( 'section-rendered', setupReferences );
-			} else {
-				setupReferences.apply( this, arguments );
-			}
+			M.on( 'section-rendered', setupReferences ).on( 'references-loaded', setupReferences );
+			setupReferences();
 		}
 		return {
 			init: init,

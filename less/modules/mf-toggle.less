@@ -55,21 +55,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 
 .togglingEnabled .openSection.content_block {
 	-webkit-tap-highlight-color: normal; /* fix for Bug 36196 */
-	&.loading,
-	&.ajaxError {
-		.box-sizing( border-box );
-		padding-top: 48px;
-		line-height: 2em;
-		background-position: left top;
-
-		button {
-			display: block;
-		}
-	}
-
-	&.ajaxError {
-		background-image: url(images/warning.png);
-	}
 }
 
 .page-loading .section_anchors,

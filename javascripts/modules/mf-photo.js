@@ -524,7 +524,7 @@
 			$pageHeading = $page.find( 'h1' ).first(),
 			photoUploader;
 
-		if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $page ) ) {
+		if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $page ) || mw.config.get( 'wgIsMainPage' ) ) {
 			return;
 		}
 
@@ -555,12 +555,7 @@
 		isSupported() && mw.config.get( 'wgIsPageEditable' ) &&
 		( M.isLoggedIn() || mw.config.get( 'wgMFEnablePhotoUploadCTA' ) )
 	) {
-		// FIXME: https://bugzilla.wikimedia.org/show_bug.cgi?id=45299
-		if ( M.history.isDynamicPageLoadEnabled ) {
-			M.on( 'page-loaded', initialize );
-		} else if ( !mw.config.get( 'wgIsMainPage' ) ) {
-			$( initialize );
-		}
+		$( initialize );
 	}
 
 	M.define( 'photo', {

@@ -2,38 +2,33 @@
 
 var T = ( function() {
 	var
-		sectionData = {},
-		anchorSection,
-		footerInitialised = false;
+		currentPage,
+		Page = M.require( 'page' );
 
-	function wm_toggle_section( section_id, keepHash ) {
+	function wm_toggle_section( section_id ) {
 		var id = 'section_' + section_id, content_id = 'content_' + section_id,
-			closed, sectionInfo = sectionData[ section_id ],
-			$container,
+			closed,
 			$section = $( '#' + id ), $content = $( '#' + content_id ),
+			loaded = $content.data( 'loaded' ), section,
 			selector = '#' + content_id + ',#' + id;
 
-		if ( sectionInfo && $content.length === 0 ) {
-			$container = $( '<div class="content_block">' ).attr( 'id', content_id ).html( sectionInfo.html ).insertAfter( '#' + id );
-			M.emit( 'section-rendered', $container );
-			// FIXME: this should live in the hidpi module when dynamic sections is promoted from beta
-			if ( $container.hidpi ) {
-				$container.hidpi();
+		if ( !loaded ) {
+			section = currentPage.getSectionFromAnchor( id );
+			if ( section ) {
+				$content.html( section.content ).data( 'loaded', true );
 			}
-			M.history.hijackLinks( $container );
+			M.emit( 'section-rendered', $content );
 		}
 
 		$( selector ).toggleClass( 'openSection' );
 		closed = $section.hasClass( 'openSection' );
-
-		// NOTE: # means top of page so using a dummy hash #_ to prevent page jump
-		if ( !keepHash ) {
-			M.history.replaceHash( closed ? '#' + id : '#_' );
-		}
 	}
 
-	function wm_reveal_for_hash( hash, keepHash ) {
-		wm_toggle_section( anchorSection[ hash.slice( 1 ) ], keepHash );
+	function wm_reveal_for_hash( hash ) {
+		var section = currentPage.getSectionFromAnchor( hash.slice( 1 ) );
+		if ( section ) {
+			wm_toggle_section( section.index );
+		}
 	}
 
 	function checkHash() {
@@ -69,31 +64,31 @@ var T = ( function() {
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
 
+	function refresh() {
+		var references = currentPage.getReferenceSection();
+		if ( references ) {
+			$( '#content_' + references.index ).html( references.content ).data( 'loaded', true );
+			M.emit( 'references-loaded' );
+		}
+		if ( $( '#content .section_heading' ).length > 1 ) {
+			enableToggling( $( '#content' ) );
+		}
+		checkHash();
+	}
+
 	function init() {
 		var pageTitle = mw.config.get( 'wgTitle'),
 			inViewMode = mw.config.get( 'wgAction' ) === 'view',
 			isMainPage = mw.config.get( 'wgIsMainPage' ),
 			isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) ===  mw.config.get( 'wgNamespaceIds' ).special;
 
-		M.on( 'page-loaded', function( article ) {
-			sectionData = article.data || {};
-
-			anchorSection = article.anchorSection;
-			if ( $( '#content .section_heading' ).length > 1 ) {
-				enableToggling( $( '#content' ) );
-			}
-			if ( !footerInitialised ) {
-				enableToggling( $( '#footer' ) );
-				footerInitialised = true;
-			}
-			checkHash();
-		} );
-
-		if ( !isMainPage && !isSpecialPage && inViewMode ) {
-			M.history.loadPage( pageTitle, false );
+		if ( !isMainPage && !isSpecialPage && inViewMode ) { // talk pages and normal pages only?
+			M.history.retrievePage( pageTitle ).done( function( pageData ) {
+				currentPage = new Page( pageData );
+				refresh();
+			} );
 		} else {
 			enableToggling();
-			footerInitialised = true;
 		}
 	}
 
