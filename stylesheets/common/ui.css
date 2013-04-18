@@ -236,7 +236,6 @@ input[type=submit].cancel {
   border-bottom: 1px solid #e2e2e2;
   line-height: 46px;
   text-align: center;
-  padding: 0;
   min-height: 46px;
   margin: 0;
   overflow: hidden;
@@ -246,6 +245,10 @@ input[type=submit].cancel {
   color: #000000;
   line-height: 46px;
   margin: 0;
+}
+.mw-mf-overlay .header .search-box,
+#mw-mf-header {
+  padding: 0 40px 0 40px;
 }
 /* Menu buttons */
 #mw-mf-menu-page,
@@ -315,7 +318,6 @@ input.searchSubmit {
   display: none;
 }
 .search-box {
-  padding: 0 40px 0 40px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 /* samsung galaxy s gt-19000 */
