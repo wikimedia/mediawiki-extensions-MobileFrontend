@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvrN1gpU",
+        "filename": "javascripts/specials/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-18T20:47:33Z",
+      "side": 1,
+      "message": "Why not \"return \u0027ontouchstart\u0027 in window\"? Or even skip this function and use  \"\u0027ontouchstart\u0027 in window\" directly.",
+      "revId": "191da03d6925971b89c44a6adce8b66150ebf4f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
