@@ -292,7 +292,7 @@ class MobileContext extends ContextSource {
 			if ( $wgMFVaryResources ) {
 				if ( $xDevice ) {
 					$xWap = $request->getHeader( 'X-WAP' );
-					if ( $xWap === 'yes' && $xDevice !== 'wap' ) {
+					if ( $xWap === 'yes' && $xDevice !== 'wml' ) {
 						wfDebugLog( 'mobile', "Unexpected combination of headers: X-Device = $xDevice, X-WAP = $xWap" );
 					}
 				}
