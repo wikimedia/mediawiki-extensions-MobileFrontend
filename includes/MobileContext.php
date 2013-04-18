@@ -238,6 +238,7 @@ class MobileContext extends ContextSource {
 	 * @return bool Value for shouldDisplayMobileView()
 	 */
 	private function shouldDisplayMobileViewInternal() {
+		global $wgMobileUrlTemplate;
 		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
 		$req = $this->getRequest();
@@ -262,6 +263,19 @@ class MobileContext extends ContextSource {
 		if ( $useFormat == 'desktop' ) {
 			return false;
 		} elseif ( $this->isFauxMobileDevice() ) {
+			return true;
+		}
+
+		/**
+		 * If a mobile-domain is specified by the $wgMobileUrlTemplate and
+		 * there's an X-Device header, then we assume the user is accessing
+		 * the site from the mobile-specific domain (because why would the
+		 * desktop site set X-Device header?). If a user is accessing the
+		 * site from a mobile domain, then we should always display the mobile
+		 * version of the site (otherwise, the cache may get polluted). See
+		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=46473
+		 */
+		if ( $wgMobileUrlTemplate && $this->getXDevice() ) {
 			return true;
 		}
 
