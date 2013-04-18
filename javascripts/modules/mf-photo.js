@@ -255,10 +255,11 @@
 
 		template: M.template.get( 'photoUploadPreview' ),
 
-		initialize: function() {
+		initialize: function( options ) {
 			var self = this,
 				$overlay, $description, $submitButton;
 
+			this.log = options.log;
 			this.overlay = new Overlay( {
 				content: $( '<div>' ).html( this.$el ).html()
 			} );
@@ -302,7 +303,7 @@
 					parent: self.overlay
 				} );
 				overlay.show();
-				M.log( { action: 'whatDoesThisMean' } );
+				self.log( { action: 'whatDoesThisMean' } );
 			} );
 			$( '<img>' ).attr( 'src', url ).prependTo( this.overlay.$( '.photoPreview' ) );
 		}
@@ -442,7 +443,7 @@
 				// accept must be set via attr otherwise cannot use camera on Android
 				attr( 'accept', 'image/*;' ).
 				on( 'change', function() {
-					var preview = self.preview = new PhotoUploaderPreview(),
+					var preview = self.preview = new PhotoUploaderPreview( { log: self.log } ),
 						fileReader = new FileReader();
 
 					self.file = $input[0].files[0];
