@@ -42,8 +42,9 @@
 
 	LanguageOverlay = Overlay.extend( {
 		template: M.template.get( 'overlays/languages' ),
-		init: function() { // FIXME: rename to initialize when you can inherit from parent.
+		initialize: function( options ) {
 			var $footer, $lists;
+			this._super( options );
 
 			$lists = this.$( 'ul' );
 			$footer = this.$( '.mw-mf-overlay-footer' );
@@ -71,7 +72,6 @@
 			languagesLink: M.history.getArticleUrl( 'Special:MobileOptions/Language' ),
 			languagesText: mw.msg( 'mobile-frontend-language-footer' )
 		} );
-		overlay.init();
 		overlay.show();
 	}
 
