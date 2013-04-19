@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DvuGVYeM",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:20:46Z",
+      "side": 1,
+      "message": "OK, but replacing it with prepareBannerData() in L41 got me confused.",
+      "parentUuid": "DvqHmibE",
+      "revId": "d3c4d70406aa64863097a075746fe41730422cb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvqHNKTM",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 5
