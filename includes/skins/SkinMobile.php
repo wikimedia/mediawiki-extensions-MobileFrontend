@@ -45,7 +45,6 @@ class SkinMobile extends SkinMobileBase {
 
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );
-		$tpl->set( 'language_urls', $this->getLanguages() );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 
@@ -317,42 +316,6 @@ class SkinMobile extends SkinMobileBase {
 		} else if ( $action === 'history' ) {
 			$out->addModules( 'mobile.action.history' );
 		}
-	}
-
-	/*
-		FIXME: Should be a function of SkinTemplate in core - currently this code
-		is bundled inside the outputPage function which we override
-		(grep for $tpl->set( 'language_urls', false );)
-	*/
-	public function getLanguages() {
-		global $wgContLang;
-
-		wfProfileIn( __METHOD__ );
-		$context = MobileContext::singleton();
-		$languageUrls = array();
-		$out = $this->getOutput();
-
-		foreach ( $out->getLanguageLinks() as $l ) {
-			$tmp = explode( ':', $l, 2 );
-			$class = 'interwiki-' . $tmp[0];
-			$lang = $tmp[0];
-			unset( $tmp );
-			$nt = Title::newFromText( $l );
-			if ( $nt ) {
-				$languageUrl = $context->getMobileUrl( $nt->getFullURL() );
-				$languageUrls[] = array(
-					'href' => $languageUrl,
-					'text' => ( $wgContLang->fetchLanguageName( $nt->getInterwiki() ) != ''
-						? $wgContLang->fetchLanguageName( $nt->getInterwiki() )
-						: $l ),
-					'language' => $wgContLang->fetchLanguageName( $lang ),
-					'class' => $class,
-					'lang' => $lang,
-				);
-			}
-		}
-		wfProfileOut( __METHOD__ );
-		return $languageUrls;
 	}
 
 	/**

@@ -171,8 +171,23 @@ HTML;
 		$this->loggedin = $this->getUser()->isLoggedIn();
 		$content_navigation = $this->buildContentNavigationUrls();
 		$tpl->setRef( 'content_navigation', $content_navigation );
+		$tpl->set( 'language_urls', $this->mobilizeUrls( $this->getLanguages() ) );
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;
+	}
+
+	/**
+	 * Takes an array of link elements and applies mobile urls to any urls contained in them
+	 * @param $urls Array
+	 * @return Array
+	 */
+	public function mobilizeUrls( $urls ) {
+		function fn( $url ) {
+			$ctx = MobileContext::singleton();
+			$url['href'] = $ctx->getMobileUrl( $url['href'] );
+			return $url;
+		}
+		return array_map( 'fn', $urls );
 	}
 }

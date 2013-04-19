@@ -7,7 +7,6 @@ class MinervaTemplate extends BaseTemplate {
 	private function prepareCommonData() {
 		// set defaults
 		$this->set( 'postbodytext', '' );
-		$this->set( 'language_urls', array() );
 
 		$searchBox = $this->makeSearchInput(
 			array(
