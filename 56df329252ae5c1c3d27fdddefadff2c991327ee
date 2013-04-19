@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dvi5raIg",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-19T18:19:02Z",
+      "side": 1,
+      "message": "Html::element() escapes the attributes itself.",
+      "revId": "56df329252ae5c1c3d27fdddefadff2c991327ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
