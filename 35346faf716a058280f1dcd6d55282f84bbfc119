@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DvqGfaf8",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:25:06Z",
+      "side": 1,
+      "message": "OK, I see.",
+      "parentUuid": "DvkHfldM",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvoFUrVI",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 5
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "See https://gerrit.wikimedia.org/r/#/c/58997/4/includes/skins/MinervaTemplate.php - I deal with it then. In current form this is not a non-mobile skin.",
       "parentUuid": "DvoFUrVI",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvsGk5Vs",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:25:06Z",
+      "side": 1,
+      "message": "OK, I see.",
+      "parentUuid": "DvoHVjbc",
       "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -107,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "DvmGK0cI",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:25:06Z",
+      "side": 1,
+      "message": "I know, but although http://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP doesn\u0027t explicitly forbid this syntax, it doesn\u0027t use it either. grep -nr endforeach shows usage only in our code and in Vector.php.",
+      "parentUuid": "DviHimaQ",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvkFOtcI",
         "filename": "includes/skins/SkinMobileTemplate.php",
         "patchSetId": 5
@@ -136,6 +190,24 @@
       "side": 1,
       "message": "Yes it is.\nCan fix that separately.",
       "parentUuid": "DvkFOtcI",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvoGHzbc",
+        "filename": "includes/skins/SkinMobileTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:25:06Z",
+      "side": 1,
+      "message": "OK.",
+      "parentUuid": "DvuHsgZU",
       "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
