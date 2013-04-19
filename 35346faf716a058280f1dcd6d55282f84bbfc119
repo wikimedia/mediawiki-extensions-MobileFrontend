@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DviFROWE",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:00:28Z",
+      "side": 1,
+      "message": "What is this function actually rendering? Only \u003chead\u003e and navigation? If yes, isn\u0027t the name too general?",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvoFUrVI",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:00:28Z",
+      "side": 1,
+      "message": "getDiscoveryTools() is not present in BaseTemplate. Won\u0027t this explode when using as a non-mobile skin?",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvuHDIQg",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:00:28Z",
+      "side": 1,
+      "message": "I\u0027m not sure if we use this syntax in MW. Why not regular curly braces?",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvkFOtcI",
+        "filename": "includes/skins/SkinMobileTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-19T23:00:28Z",
+      "side": 1,
+      "message": "I know it\u0027s not this patchset, but isn\u0027t nearby a discovery tool?",
+      "revId": "35346faf716a058280f1dcd6d55282f84bbfc119",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
