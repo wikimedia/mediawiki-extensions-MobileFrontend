@@ -1,7 +1,16 @@
 <?php
 
-class SkinMobileTemplate extends BaseTemplate {
+class SkinMobileTemplate extends MinervaTemplate {
 	public function renderArticleSkin() {
+		$languages = $this->getLanguages();
+		$variants = $this->getLanguageVariants();
+		$languageData = array(
+			'heading' => wfMessage( 'mobile-frontend-language-article-heading' )->text(),
+			'languages' => $languages,
+			'variants' => $variants,
+			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
+			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
+		);
 		$this->navigationStart();
 		?>
 		<?php $this->html( 'zeroRatedBanner' ) ?>
@@ -12,9 +21,12 @@ class SkinMobileTemplate extends BaseTemplate {
 		<?php $this->renderArticleHeader() ?>
 	<div class='show' id='content_wrapper'>
 			<div id="content" class="content">
-			<?php $this->html( 'prebodytext' ) ?>
-			<?php $this->html( 'bodytext' ) ?>
-			<?php $this->html( 'postbodytext' ) ?>
+			<?php
+				$this->html( 'prebodytext' );
+				$this->html( 'bodytext' );
+				$this->renderLanguages( $languageData );
+				$this->html( 'postbodytext' );
+			?>
 			</div><!-- close #content -->
 	</div><!-- close #content_wrapper -->
 		<?php
