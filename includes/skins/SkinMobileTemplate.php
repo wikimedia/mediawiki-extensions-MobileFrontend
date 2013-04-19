@@ -50,8 +50,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 
 	public function execute() {
 		parent::execute();
-		$this->prepareData();
-		$this->html( 'headelement' );
 		$this->renderArticleSkin();
 		$this->html( 'bottomScripts' ) ?>
 	</body>
