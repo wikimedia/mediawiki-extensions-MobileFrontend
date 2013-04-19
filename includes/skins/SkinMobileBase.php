@@ -152,6 +152,9 @@ HTML;
 		$tpl->set( 'watchlistUrl', SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl() );
 		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
 		$tpl->set( 'loggedin', $this->getUser()->isLoggedIn() );
+		$this->loggedin = $this->getUser()->isLoggedIn();
+		$content_navigation = $this->buildContentNavigationUrls();
+		$tpl->setRef( 'content_navigation', $content_navigation );
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;

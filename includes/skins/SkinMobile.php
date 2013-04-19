@@ -48,9 +48,6 @@ class SkinMobile extends SkinMobileBase {
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );
 		$tpl->set( 'language_urls', $this->getLanguages() );
-		$tpl->set( 'content_navigation', array(
-			'variants' => $this->getLanguageVariants(),
-		) );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 
@@ -345,50 +342,6 @@ class SkinMobile extends SkinMobileBase {
 		}
 		wfProfileOut( __METHOD__ );
 		return $languageUrls;
-	}
-
-	/*
-		FIXME: This should be a function of SkinTemplate in core - currently this code
-		is buried inside the protected buildContentNavigationUrls function and thus
-		cannot be overriden
-	*/
-	public function getLanguageVariants() {
-		global $wgDisableLangConversion;
-
-		wfProfileIn( __METHOD__ );
-		$languageVariantUrls = array();
-		$title = $this->getRelevantTitle();
-		$user = $this->getUser();
-		$userCanRead = $title->quickUserCan( 'read', $user );
-
-		if ( $userCanRead && !$wgDisableLangConversion ) {
-			$pageLang = $title->getPageLanguage();
-			// Gets list of language variants
-			$variants = $pageLang->getVariants();
-			// Checks that language conversion is enabled and variants exist
-			// And if it is not in the special namespace
-			if ( count( $variants ) > 1 ) {
-				// Loops over each variant
-				foreach ( $variants as $code ) {
-					// Gets variant name from language code
-					$varname = $pageLang->getVariantname( $code );
-					// Checks if the variant is marked as disabled
-					if ( $varname == 'disable' ) {
-						// Skips this variant
-						continue;
-					}
-					// Appends variant link
-					$languageVariantUrls[] = (array(
-						'text' => $varname,
-						'href' => $title->getLocalURL( array( 'variant' => $code ) ),
-						'lang' => $code
-					));
-				}
-			}
-		}
-
-		wfProfileOut( __METHOD__ );
-		return $languageVariantUrls;
 	}
 
 	/**
