@@ -4,6 +4,8 @@
  * @group MobileFrontend
  */
 class MobileContextTest extends MediaWikiTestCase {
+	private $savedGlobals;
+
 	/**
 	* PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
 	* protected and private methods directly through the Reflection API
@@ -20,7 +22,9 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	protected function setUp() {
 		global $wgMFAutodetectMobileView;
+
 		parent::setUp();
+		$this->savedGlobals = $GLOBALS;
 		$context = new DerivativeContext( RequestContext::getMain() );
 		$context->setRequest( new FauxRequest() );
 		$wgMFAutodetectMobileView = false;
@@ -28,6 +32,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	protected function tearDown() {
+		$GLOBALS = $this->savedGlobals;
 		MobileContext::setInstance( null ); //refresh it
 		parent::tearDown();
 	}
@@ -41,6 +46,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function testGetMobileUrl() {
 		global $wgMobileUrlTemplate;
+
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
 		$this->assertEquals( 'http://en.m.wikipedia.org/wiki/Article', MobileContext::singleton()->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' ) );
 		$this->assertEquals( '//en.m.wikipedia.org/wiki/Article', MobileContext::singleton()->getMobileUrl( '//en.wikipedia.org/wiki/Article' ) );
@@ -48,6 +54,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function testParseMobileUrlTemplate() {
 		global $wgMobileUrlTemplate;
+
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2/path/morepath";
 		$this->assertEquals( '%h0.m.%h1.%h2', MobileContext::singleton()->parseMobileUrlTemplate( 'host' ) );
 		$this->assertEquals( '/path/morepath', MobileContext::singleton()->parseMobileUrlTemplate( 'path' ) );
@@ -56,6 +63,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function testUpdateMobileUrlHost() {
 		global $wgMobileUrlTemplate;
+
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
 		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/Gustavus_Airport" );
@@ -85,6 +93,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testUpdateDesktopUrlHost( $mobile, $desktop ) {
 		global $wgMobileUrlTemplate;
+
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
 		$parsedUrl = wfParseUrl( $mobile );
@@ -109,6 +118,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function testUpdateMobileUrlPath() {
 		global $wgMobileUrlTemplate, $wgScriptPath;
+
 		$wgScriptPath = '/wiki';
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlPath" );
 		$wgMobileUrlTemplate = "/mobile/%p";
@@ -317,7 +327,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		global $wgCookieExpiration, $wgMobileFrontendFormatCookieExpiry;
 		$getUseFormatCookieExpiry = self::getMethod( 'getUseFormatCookieExpiry' );
 
-		$origMFCookieExpiry = $wgMobileFrontendFormatCookieExpiry;
 		$startTime = time();
 		$wgMobileFrontendFormatCookieExpiry = 60;
 		$mfCookieExpected = $startTime + 60;
@@ -326,9 +335,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		$wgMobileFrontendFormatCookieExpiry = null;
 		$defaultMWCookieExpected = $startTime + $wgCookieExpiration;
 		$this->assertTrue( $defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs( MobileContext::singleton(), array( $startTime ) ), 'Using default MediaWiki cookie expiry.' );
-
-		// reset global back to original value
-		$wgMobileFrontendFormatCookieExpiry = $origMFCookieExpiry;
 	}
 
 	public function testGetStopMobileRedirectCookieDomain(){
@@ -349,16 +355,13 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function testDisableIncompatibleJs() {
 		global $wgUseSiteJs, $wgAllowUserJs;
-		$wgUseSiteJsOrig = $wgUseSiteJs;
-		$wgAllowUserJsOrig = $wgAllowUserJs;
+
 		$wgUseSiteJs = true;
 		$wgAllowUserJs = true;
 		$disablsIncompatibleJs = $this->getMethod( 'disableIncompatibleJs' );
 		$disablsIncompatibleJs->invoke( MobileContext::singleton() );
 		$this->assertFalse( $wgAllowUserJs );
 		$this->assertFalse( $wgUseSiteJs );
-		$wgUseSiteJs = $wgUseSiteJsOrig;
-		$wgAllowUserJs = $wgAllowUserJsOrig;
 	}
 
 	/**
