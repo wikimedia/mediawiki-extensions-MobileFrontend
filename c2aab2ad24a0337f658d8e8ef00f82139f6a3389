@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dvk4wJOg",
+        "filename": "includes/modules/MobileDeviceDetectModule.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-19T16:49:06Z",
+      "side": 1,
+      "message": "is this related to this commit? - I\u0027m a little confused..",
+      "revId": "c2aab2ad24a0337f658d8e8ef00f82139f6a3389",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
