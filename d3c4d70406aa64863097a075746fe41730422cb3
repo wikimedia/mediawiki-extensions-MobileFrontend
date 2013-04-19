@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DvqHmibE",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-19T23:10:29Z",
+      "side": 1,
+      "message": "As the comment says - it expects to be overridden. All becomes clear when I enable it as a desktop skin. I can write a huge commit if you prefer :)",
+      "parentUuid": "DvsHSpdA",
+      "revId": "d3c4d70406aa64863097a075746fe41730422cb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvqHNKTM",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2013-04-19T23:04:46Z",
       "side": 1,
       "message": "The name of this variable is a bit confusing. Maybe $notices or $banners instead? I would also set it to an empty string at the very beginning (not in an else clause) and then always use \".\u003d\" operator to append. This way you can remove L26 and L32.",
+      "revId": "d3c4d70406aa64863097a075746fe41730422cb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvsHrhXg",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-19T23:10:29Z",
+      "side": 1,
+      "message": "Agreed. I was trying to keep consistent with previous code but your right using the variable banner here may be better",
+      "parentUuid": "DvqHNKTM",
       "revId": "d3c4d70406aa64863097a075746fe41730422cb3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
