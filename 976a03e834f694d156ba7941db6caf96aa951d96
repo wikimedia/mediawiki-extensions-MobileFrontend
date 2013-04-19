@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvqtWass",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-19T13:42:16Z",
+      "side": 1,
+      "message": "$formatter-\u003esetIsMainPage( $this-\u003egetTitle()-\u003eisMainPage() \u0026\u0026 !$context-\u003eisAlphaGroupMember() );",
+      "revId": "976a03e834f694d156ba7941db6caf96aa951d96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvotuDpY",
+        "filename": "stylesheets/mainpage/mainpage.css",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-19T13:42:16Z",
+      "side": 1,
+      "message": "Works only for English Wikipedia",
+      "revId": "976a03e834f694d156ba7941db6caf96aa951d96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
