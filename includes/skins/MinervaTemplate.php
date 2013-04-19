@@ -1,10 +1,6 @@
 <?php
 class MinervaTemplate extends BaseTemplate {
 	private function prepareCommonData() {
-		// set defaults
-		$this->set( 'content_navigation', array(
-			'variants' => array(),
-		) );
 		$this->set( 'language_urls', array() );
 
 		// menu button
