@@ -168,7 +168,10 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		wfProfileIn( __METHOD__ . '-getText' );
-		$formatter->setIsMainPage( $this->getTitle()->isMainPage() );
+		if ( !$context->isAlphaGroupMember() ) {
+			$formatter->setIsMainPage( $this->getTitle()->isMainPage() );
+		}
+
 		if ( $context->getContentFormat() == 'HTML'
 			&& $this->getRequest()->getText( 'search' ) == '' )
 		{

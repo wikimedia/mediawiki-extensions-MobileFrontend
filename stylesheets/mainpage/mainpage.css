@@ -1,0 +1,11 @@
+body.page-Main_Page table tr,
+body.page-Main_Page table td {
+  display: block !important;
+}
+body.page-Main_Page table tr ul li,
+body.page-Main_Page table td ul li {
+  display: inline;
+}
+body.page-Main_Page table .section_heading button {
+  display: none !important;
+}
