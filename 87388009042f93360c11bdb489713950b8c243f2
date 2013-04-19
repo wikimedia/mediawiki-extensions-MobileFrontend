@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvkuddmE",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-19T20:08:42Z",
+      "side": 1,
+      "message": "MW standard for variables is camelCase.",
+      "revId": "87388009042f93360c11bdb489713950b8c243f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
