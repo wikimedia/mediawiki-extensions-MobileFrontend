@@ -16,6 +16,24 @@
       "revId": "93b9068a2213810cde33cad062310006254572ea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dvh5XvSY",
+        "filename": "javascripts/modules/mf-tables.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-19T00:23:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DvjMBkrI",
+      "revId": "93b9068a2213810cde33cad062310006254572ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
