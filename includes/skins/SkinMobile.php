@@ -16,7 +16,6 @@ class SkinMobile extends SkinMobileBase {
 		$user = $this->getUser();
 		$tpl->set( 'title', $title );
 		$tpl->set( 'user', $user );
-		$tpl->set( 'menuButton', self::getMenuButton() );
 		$context = MobileContext::singleton();
 
 		$device = $context->getDevice();
@@ -427,14 +426,5 @@ class SkinMobile extends SkinMobileBase {
 			'text' => $text,
 			'href' => $url,
 		);
-	}
-
-	public static function getMenuButton() {
-		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
-		return Html::element( 'a', array(
-				'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' )->text(),
-				'href' => $url,
-				'id'=> 'mw-mf-main-menu-button',
-			) );
 	}
 }
