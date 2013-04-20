@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvoQ-27A",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T00:25:43Z",
+      "side": 1,
+      "message": "How will this work on desktop now?",
+      "revId": "08464417239e724dd14f3e6ef6fb479990e8b27c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
