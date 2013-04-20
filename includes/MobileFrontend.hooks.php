@@ -32,6 +32,29 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * LinksUpdate hook handler - saves a count of h2 elements that occur in the WikiPage
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/LinksUpdate
+	 *
+	 * @param LinksUpdate $lu
+	 * @return bool
+	 */
+	public static function onLinksUpdate( LinksUpdate $lu ) {
+		if ( $lu->getTitle()->isTalkPage() ) {
+			$parserOutput = $lu->getParserOutput();
+			$sections = $parserOutput->getSections();
+			$numTopics = 0;
+			foreach( $sections as $section ) {
+				if ( $section['toclevel'] == 1 ) {
+					$numTopics += 1;
+				}
+			}
+			$lu->mProperties['page_top_level_section_count'] = $numTopics;
+		}
+
+		return true;
+	}
+
+	/**
 	 * MakeGlobalVariablesScript hook handler
 	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
 	 * Adds various mobile specific config variables
@@ -209,7 +232,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onResourceLoaderTestModules( array &$testModules, ResourceLoader &$resourceLoader ) {
-		global $wgResourceModules, $wgResourceLoaderDebug;
+		global $wgResourceModules;
 
 		$testModuleBoilerplate = array(
 			'localBasePath' => dirname( __DIR__ ),

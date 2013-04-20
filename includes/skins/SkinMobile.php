@@ -6,7 +6,7 @@ class SkinMobile extends SkinMobileBase {
 	public $template = 'SkinMobileTemplate';
 
 	protected function prepareTemplate() {
-		global $wgAppleTouchIcon, $wgMFCustomLogos, $wgVersion, $wgMFTrademarkSitename;
+		global $wgAppleTouchIcon, $wgMFCustomLogos, $wgMFTrademarkSitename;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate();
@@ -172,13 +172,26 @@ class SkinMobile extends SkinMobileBase {
 			if ( $pageHeading ) {
 				$preBodyText = Html::rawElement( 'h1', $headingOptions, $pageHeading );
 				// talk page link for logged in alpha users
-				if ( $inAlpha && $user->isLoggedIn() ) {
-					$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' ); // FIXME: make this the number of sections on the talk page
-					if ( $title->getNamespace() !== NS_TALK ) {
-						$preBodyText .= Html::element( 'a',
-							array( 'href' => $title->getTalkPage()->getFullUrl(), 'id' => 'talk' ),
-							$talkLabel );
+				if ( $inAlpha && $user->isLoggedIn() && !$title->isTalkPage() ) {
+					$talkTitle = $title->getTalkPage();
+					if ( $talkTitle->getArticleID() ) {
+						$dbr = wfGetDB( DB_SLAVE );
+						$numTopics = $dbr->selectField( 'page_props', 'pp_value',
+							array( 'pp_page' => $talkTitle->getArticleID(), 'pp_propname' => 'page_top_level_section_count' ),
+							__METHOD__
+						);
+					} else {
+						$numTopics = 0;
 					}
+					if ( $numTopics ) {
+						$talkLabel = $this->getLanguage()->formatNum( $numTopics );
+					} else {
+						$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
+					}
+					// @todo: Redlink support when we have good editing
+					$preBodyText .= Html::element( 'a',
+						array( 'href' => $talkTitle->getLocalURL(), 'id' => 'talk' ),
+						$talkLabel );
 				}
 			}
 
