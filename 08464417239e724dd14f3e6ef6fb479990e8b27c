@@ -16,6 +16,24 @@
       "revId": "08464417239e724dd14f3e6ef6fb479990e8b27c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DviTBR4M",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-20T03:42:59Z",
+      "side": 1,
+      "message": "In theory since this would give desktop a beta/alpha/stable mode so we\u0027d probably need to vary HTML on the opt in cookie.\n\nWould need to check this with performance team of course but I\u0027m guessing that\u0027s a no no. ;-)\n\nOtherwise we\u0027ll need to find a nice way to do this that can be overridden by mobile... I\u0027ll have a think about this.",
+      "parentUuid": "DvoQ-27A",
+      "revId": "08464417239e724dd14f3e6ef6fb479990e8b27c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
