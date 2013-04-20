@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvkSzI00",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T00:48:00Z",
+      "side": 1,
+      "message": "This seems to be modifying the input array too.\nAlso, maybe use array_map?",
+      "revId": "5b467c26971735fc8eb4e582b004a826e8b78d0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
