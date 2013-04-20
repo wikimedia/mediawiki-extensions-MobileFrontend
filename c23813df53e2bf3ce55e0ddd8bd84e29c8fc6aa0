@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvmSV-4U",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T01:01:04Z",
+      "side": 1,
+      "message": "This is always overwritten in prepareData().",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvkSMg4A",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T01:01:04Z",
+      "side": 1,
+      "message": "var is PHP4. Use public/private/protected.",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DviSPB3g",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T01:01:04Z",
+      "side": 1,
+      "message": "Unused?",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvoSSe50",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T01:01:04Z",
+      "side": 1,
+      "message": "Why do we overwrite this method if it only calls parent method?",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvuTp7xw",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T01:01:04Z",
+      "side": 1,
+      "message": "Why do we remove abstract? Can this be instantiated on its own now? Why?",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvgTvayA",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-20T01:01:04Z",
+      "side": 1,
+      "message": "What does it do?",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
