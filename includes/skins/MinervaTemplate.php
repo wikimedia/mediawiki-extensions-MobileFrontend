@@ -17,9 +17,24 @@ class MinervaTemplate extends BaseTemplate {
 	public function prepareData() { // expects to be overriden
 	}
 
+	private function prepareBannerData() {
+		global $wgMFEnableSiteNotice;
+		$banners = '';
+		if ( isset( $this->data['zeroRatedBanner'] ) ) { // FIXME: Add hook and move to Zero extension?
+			$banners .= $this->data['zeroRatedBanner'];
+		}
+		if ( isset( $this->data['notice'] ) ) {
+			$banners .= $this->data['notice'];
+		}
+		if ( $wgMFEnableSiteNotice ) {
+			$banners .= '<div id="siteNotice"><div>';
+		}
+		$this->set( 'banners', $banners );
+	}
 	public function execute() {
 		$this->prepareCommonData();
 		$this->prepareData();
+		$this->prepareBannerData();
 		$this->render( $this->data );
 	}
 
@@ -61,5 +76,23 @@ class MinervaTemplate extends BaseTemplate {
 
 	private function render( $data ) { // FIXME: replace with template engines
 		echo $data[ 'headelement' ];
+		?>
+		<div id="mw-mf-viewport">
+			<div id="mw-mf-page-left">
+				<ul id="mw-mf-menu-main">
+				<?php
+				foreach( $this->getDiscoveryTools() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+				foreach( $this->getPersonalTools() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+				?>
+				</ul>
+			</div>
+			<div id='mw-mf-page-center'>
+				<!-- start -->
+				<?php
+					echo $this->html( 'banners' );
 	}
 }

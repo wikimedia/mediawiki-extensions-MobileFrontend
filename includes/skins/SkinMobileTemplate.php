@@ -11,13 +11,7 @@ class SkinMobileTemplate extends MinervaTemplate {
 			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
 			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
 		);
-		$this->navigationStart();
 		?>
-		<?php $this->html( 'zeroRatedBanner' ) ?>
-		<?php $this->html( 'notice' ) ?>
-		<?php if ( $this->data[ 'enableSiteNotice' ] ) { ?>
-			<div id="siteNotice"></div>
-		<?php } ?>
 		<?php $this->renderArticleHeader() ?>
 	<div class='show' id='content_wrapper'>
 			<div id="content" class="content">
@@ -54,27 +48,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 		$this->html( 'bottomScripts' ) ?>
 	</body>
 	</html><?php
-	}
-
-	public function navigationStart() {
-		global $wgMFNearby;
-
-		?>
-		<div id="mw-mf-viewport">
-		<div id="mw-mf-page-left">
-		<ul id="mw-mf-menu-main">
-		<?php
-		foreach( $this->getDiscoveryTools() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		foreach( $this->getPersonalTools() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?>
-		</ul>
-		</div>
-		<div id='mw-mf-page-center'>
-		<?php
 	}
 
 	public function navigationEnd() {
