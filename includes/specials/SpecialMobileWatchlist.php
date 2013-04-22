@@ -465,7 +465,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => $usernameClass ), $username ).
 			Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
-			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $ts->getHumanTimestamp() ) .
+			Html::element( 'div', array( 'class' => 'info' ), $ts->getHumanTimestamp() ) .
 			Html::closeElement( 'a' ) .
 			'</li>'
 		);
@@ -487,7 +487,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
 			$this->renderThumb( $row ) .
 			Html::element( 'h2', array(), $titleText ).
-			Html::element( 'div', array( 'class' => 'mw-mf-time' ), $lastModified ) .
+			Html::element( 'div', array( 'class' => 'info' ), $lastModified ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' )
 		);
