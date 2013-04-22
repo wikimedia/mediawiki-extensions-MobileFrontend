@@ -65,34 +65,6 @@ $messages['en'] = array (
 	'mobile-frontend-footer-contributors-text' => 'Page by [$1 contributors] like you',
 	'mobile-frontend-featured-article' => 'Today\'s Featured Article',
 	'mobile-frontend-news-items' => 'In The News',
-	'mobile-frontend-leave-feedback-notice' => 'Your feedback helps us to improve your mobile site experience. It will be posted publicly (along with your user name, browser version and operating system) to the page &quot;$1&quot;. Please try to choose an informative subject line, e.g. "Formatting issues with wide tables". Your feedback is subject to our terms of use.',
-	'mobile-frontend-leave-feedback-warning' => 'Unless you agree to have your information made public, please do not include personal information in your comments.',
-	'mobile-frontend-leave-feedback-subject' => 'Subject:',
-	'mobile-frontend-leave-feedback-message' => 'Message:',
-	'mobile-frontend-leave-feedback-submit' => 'Submit feedback',
-	'mobile-frontend-leave-feedback-link-text' => 'MobileFrontend Extension feedback',
-	'mobile-frontend-leave-feedback' => 'Mobile site feedback',
-	'mobile-frontend-leave-feedback-title' => 'Mobile site feedback',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technical problem',
-	'mobile-frontend-leave-feedback-general-section-header' => 'General',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Article feedback',
-	'mobile-frontend-leave-feedback-email-body' => 'Please describe the problem you are experiencing with {{SITENAME}} above this line. Please note that we cannot reply to every message we receive.',
-	'mobile-frontend-leave-feedback-technical-link-text' => 'Technical problem',
-	'mobile-frontend-leave-feedback-general-link-text' => 'General feedback',
-	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Regarding me, a person, or a company I represent',
-	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Regarding a factual error',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'Regarding another problem',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Message subject',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Type your comment here',
-	'mobile-frontend-leave-feedback-page-title' => 'Mobile site feedback',
-	'mobile-frontend-feedback-page' => 'Project:Mobile Extension Feedback',
-	'mobile-frontend-leave-feedback-special-title' => 'Contact us',
-	'mobile-frontend-feedback-no-subject' => '(no subject)',
-	'mobile-frontend-feedback-no-subject-field' => 'Please enter a subject',
-	'mobile-frontend-feedback-no-message' => 'Please enter a message here',
-	'mobile-frontend-feedback-edit-summary' => '$1 - automatically posted using the [[Special:MobileFeedback|mobile feedback tool]]',
-	'mobile-frontend-leave-feedback-thanks' => 'Thanks for your feedback!',
-	'mobile-frontend-leave-feedback-post-error' => 'There was an error processing your message. Please try again later.',
 	'mobile-frontend-language' => 'Language:',
 	'mobile-frontend-language-article-heading' => 'Read in another language',
 	'mobile-frontend-current-language' => '{{#language:{{CONTENTLANG}}}}',
@@ -359,50 +331,6 @@ See also:
 	'mobile-frontend-footer-contributors-text' => 'Link to history page',
 	'mobile-frontend-featured-article' => 'The title that will appear before the element with the mf-tfa selector.',
 	'mobile-frontend-news-items' => 'The title that will appear before the element with the mf-itn selector.',
-	'mobile-frontend-leave-feedback-notice' => 'Parameters:
-* "$1" is a link  to the page where the feedback will be posted.',
-	'mobile-frontend-leave-feedback-warning' => 'Used as warning in [[Special:MobileFeedback]].',
-	'mobile-frontend-leave-feedback-subject' => '{{Identical|Subject}}',
-	'mobile-frontend-leave-feedback-message' => '{{Identical|Message}}',
-	'mobile-frontend-leave-feedback-submit' => 'Used as label for the Submit button in [[Special:MobileFeedback]].',
-	'mobile-frontend-leave-feedback-link-text' => 'Unused at this time.',
-	'mobile-frontend-leave-feedback' => 'Unused at this time.',
-	'mobile-frontend-leave-feedback-title' => '{{doc-special|MobileFeedback|unlisted=1}}',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Section header text for technical feedback portion of feedback form',
-	'mobile-frontend-leave-feedback-general-section-header' => 'Section header text for general feedback portion of feedback form
-{{Identical|General}}',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Section header text for article feedback portion of feedback form',
-	'mobile-frontend-leave-feedback-email-body' => "Text that will appear in the e-mail body for feedback e-mails, instructing users to reply above this line of text with their technical problem. Please ensure that this doesn't request an e-mail address as we have this already! Also include a reference to the fact that they may not receive a reply to prevent follow ups.",
-	'mobile-frontend-leave-feedback-technical-link-text' => 'Text for a link to give feedback about a technical problem.',
-	'mobile-frontend-leave-feedback-general-link-text' => 'Text for a link to give general feedback',
-	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Text for a link to give article feedback regarding the user or another person',
-	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Text for a link to give article feedback regarding a factual error',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'Text for a link to give article feedback regarding some other problem',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Placeholder for the "subject" field in the feedback form, which regards the subject of the message being submitted',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Placeholder for the "message" field in the feedback form, which regards the feedback the user is submitting',
-	'mobile-frontend-leave-feedback-page-title' => 'Special page title',
-	'mobile-frontend-feedback-page' => '{{optional}}',
-	'mobile-frontend-leave-feedback-special-title' => 'Title of special page containing the feedback form',
-	'mobile-frontend-feedback-no-subject' => 'Used for section heading on the feedback page if user entered no subject',
-	'mobile-frontend-feedback-no-subject-field' => 'Error message on feedback form in [[Special:MobileFeedback]].
-
-See also:
-* {{msg-mw|Mobile-frontend-feedback-no-message}}',
-	'mobile-frontend-feedback-no-message' => 'Error message on feedback form in [[Special:MobileFeedback]].
-
-See also:
-* {{msg-mw|Mobile-frontend-feedback-no-subject-field}}',
-	'mobile-frontend-feedback-edit-summary' => '{{doc-important|Do not translate the special page name "<code>Special:MobileFeedback</code>".}}
-Edit summary. Parameters:
-* $1 - feedback subject',
-	'mobile-frontend-leave-feedback-thanks' => 'Used as success message in [[Special:MobileFeedback]].
-
-See also:
-* {{msg-mw|Mobile-frontend-leave-feedback-post-error}}',
-	'mobile-frontend-leave-feedback-post-error' => 'Message displayed to user in [[Special:MobileFeedback]], when there is an internal error processing form submission.
-
-See also:
-* {{msg-mw|Mobile-frontend-leave-feedback-thanks}}',
 	'mobile-frontend-language' => '{{Identical|Language}}',
 	'mobile-frontend-language-article-heading' => 'A heading within the article the content of which lists the other languages available for this article: translate the message considering the list to have an undetermined number of items.',
 	'mobile-frontend-current-language' => '{{optional}}',

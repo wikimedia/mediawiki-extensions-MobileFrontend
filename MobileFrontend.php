@@ -56,7 +56,6 @@ $autoloadClasses = array (
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
-	'SpecialMobileFeedback' => 'specials/SpecialMobileFeedback',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
@@ -109,7 +108,6 @@ $wgHooks['BeforePageDisplay'][] = 'MobileFrontendHooks::onBeforePageDisplay';
 
 $wgSpecialPages['Uploads'] = 'SpecialUploads';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
-$wgSpecialPages['MobileFeedback'] = 'SpecialMobileFeedback';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
@@ -761,55 +759,9 @@ $wgMobileUrlTemplate = '';
 $wgMobileFrontendFormatCookieExpiry = null;
 
 /**
- * When set to true, the feedback form will post to a remote wiki, which
- * must also be configured.
- * @param bool
- */
-$wgMFRemotePostFeedback = false;
-$wgMFRemotePostFeedbackUrl = null;
-$wgMFRemotePostFeedbackUsername = null;
-$wgMFRemotePostFeedbackPassword = null;
-$wgMFRemotePostFeedbackArticle = null;
-
-/**
- * Configure the href links for the various links that appear on the
- * MobileFrontend feedback form.
- *
- * These can be any value that you can use as an href value in <a href="">,
- * eg "GeneralFeedback", "http://mysite.com/wiki/GeneralFeedback",
- *   "mailto:someone@example.com"
- *
- * Leaving a value empty will default to a value of '#'
- *
- * Alternatively, you can invoke the 'MobileFrontendOverrideFeedbackLinks' hook
- * rather than just set this var in your LocalSettings. This is really useful
- * if you have more complicated/variable needs for setting up this configuration
- * var that you might not want running on every single page load.
- */
-$wgMFFeedbackLinks = array(
-	'General' => '', // General feedback
-	'ArticlePersonal' => '', // Regarding me, a person, or a company I work for
-	'ArticleFactual' => '', // Regarding a factual error
-	'ArticleOther' => '', // Regarding another problem
-);
-
-/**
  * @var ExtMobileFrontend $wgExtMobileFrontend
  */
 $wgExtMobileFrontend = null;
-
-/**
- * A fallback URL for a 'contact us' page if one cannot be dynamically
- * determined for the project (using wfMessage( 'contact-us' )). This is only
- * used in non-beta mode.
- */
-$wgMFFeedbackFallbackURL = '#';
-
-/**
- * Whether or not to display sections other than 'Technical feedback' on feedback page
- * @param bool
- */
-$wgMFDisplayNonTechnicalFeedback = false;
 
 /**
  * Make the classes, tags and ids stripped from page content configurable.
