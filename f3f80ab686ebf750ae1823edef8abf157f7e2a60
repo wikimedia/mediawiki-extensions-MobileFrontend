@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dvlbi8qQ",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-22T18:06:40Z",
+      "side": 1,
+      "message": "Use section\u003dnew instead of constructing headers manually.",
+      "revId": "f3f80ab686ebf750ae1823edef8abf157f7e2a60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
