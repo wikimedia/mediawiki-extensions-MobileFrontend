@@ -502,7 +502,8 @@ See also:
 {{Identical|Clear}}',
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
 {{Identical|Privacy}}',
-	'mobile-frontend-about-link-text' => 'Custom version of "About {{Sitename}}" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible',
+	'mobile-frontend-about-link-text' => 'Custom version of "About <nowiki>{{SITENAME}}</nowiki>" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
+{{Identical|About}}',
 	'mobile-frontend-footer-sitename' => 'Name of site',
 	'mobile-frontend-footer-license-text' => 'License shown in footer',
 	'mobile-frontend-terms-use-text' => 'Label for terms of use link',
@@ -2308,15 +2309,14 @@ $messages['ca'] = array(
 );
 
 /** Chechen (нохчийн)
+ * @author Умар
  */
 $messages['ce'] = array(
 	'mobile-frontend-search-submit' => 'Дехьа вала',
 	'mobile-frontend-home-button' => 'Цlехьа',
 	'mobile-frontend-random-button' => 'Нисделларг',
 	'mobile-frontend-back-to-top-of-section' => 'Юхагlо оцу даакъан',
-	'mobile-frontend-show-button' => 'Гайта',
-	'mobile-frontend-hide-button' => 'Къайла яккха',
-	'mobile-frontend-regular-site' => 'Хьажа гуттаралера Википедийа агlоне', # Fuzzy
+	'mobile-frontend-regular-site' => 'Хьажа гуттаралера Википеди агlоне', # Fuzzy
 	'mobile-frontend-featured-article' => 'Хаьржина яззам',
 );
 
@@ -5671,6 +5671,7 @@ $messages['haw'] = array(
  * @author Amire80
  * @author Deror avi
  * @author Inkbug
+ * @author Michagogo
  * @author Ypnypn
  */
 $messages['he'] = array(
@@ -5779,7 +5780,7 @@ $messages['he'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license-text' => 'התוכן זמין לפי [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
 	'mobile-frontend-footer-contact' => 'יצירת קשר',
-	'mobile-frontend-search-noresults' => 'שום כותרת של דף לא תאמה לחיפוש שלך. יש להחליף את החיפוש או ללחוץ על כתפור החיפוש במקלדת כדי לחפש בדפים.',
+	'mobile-frontend-search-noresults' => 'שום כותרת של דף לא תאמה לחיפוש שלך. יש לשנות את החיפוש או ללחוץ על מקש החיפוש במקלדת כדי לחפש בתוך עמודים.',
 	'mobile-frontend-main-menu-button-tooltip' => 'פתיחת התפריט הראשי',
 	'mobile-frontend-main-menu-page-title' => 'ניווט באתר',
 	'mobile-frontend-main-menu-featured' => 'מומלץ',
@@ -9795,6 +9796,8 @@ $messages['ms'] = array(
 	'mobile-frontend-nearby-title' => 'Berdekatan',
 	'mobile-frontend-nearby-loading' => 'Memuatkan topik yang berdekatan dengan kedudukan semasa anda',
 	'mobile-frontend-nearby-requirements' => 'Halaman ini memerlukan JavaScript dan pelayar yang peka lokasi.',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-lookup-error' => 'Tidak dapat mencari anda. Sedang mencuba lagi…',
 	'mobile-frontend-nearby-noresults' => 'Entah di mana anda berada, kami tak dapat cari apa-apa topik. Apa kata anda tulis topik sendiri?',
 	'mobile-frontend-nearby-refresh' => 'Kami telah menjumpai lokasi yang lebih tepat untuk anda. Klik di sini untuk memuat semula senarai halaman-halaman yang berdekatan.',
@@ -9812,6 +9815,7 @@ Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar
 	'mobile-frontend-donate-photo-first-upload-success' => 'Berjaya! Terima kasih atas sumbangan pertama anda!',
 	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} memerlukan gambar-gambar anda untuk menceriakan halaman-halamannya!',
 	'mobile-frontend-first-upload-wizard-page-2' => 'Sila sumbangkan gambar-gambar yang anda ambil sendiri sahaja.',
+	'mobile-frontend-first-upload-wizard-page-3' => 'Gambar-gambar sumbangan anda boleh dikongsikan, diguna semula dan diadun semula oleh jutaan orang.',
 	'mobile-frontend-watchlist-add' => '$1 ditambahkan dalam senarai pantau anda',
 	'mobile-frontend-watchlist-removed' => '$1 digugurkan dari senarai pantau anda',
 	'mobile-frontend-watchlist-view' => 'Lihat senarai pantau anda',
@@ -9850,19 +9854,31 @@ Tolong kami hidupkan halaman-halaman berkenaan dengan menghulurkan gambar-gambar
 	'mobile-frontend-photo-upload-comment' => 'Meletakkan foto pada halaman',
 	'mobile-frontend-photo-caption-placeholder' => 'Isikan keterangan (wajib)',
 	'mobile-frontend-image-loading' => 'Imej sedang dimuatkan',
+	'mobile-frontend-photo-ownership' => 'Saya, $1, adalah pencipta gambar ini.',
+	'mobile-frontend-photo-ownership-help' => 'Apa maksudnya?',
+	'mobile-frontend-photo-ownership-confirm' => 'Faham!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Kami hanya boleh menerima gambar yang anda ambil sendiri. Tolong jangan muat naik gambar yang anda jumpa di mana-mana di Internet.',
+	'mobile-frontend-photo-ownership-bullet-two' => 'Gambar-gambar yang berhak cipta atau tidak sesuai akan dipadamkan.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Hasil muat naik anda dikeluarkan dengan lesen yang membolehkan penggunaan semula secara bebas oleh sesiapa jua.',
 	'mobile-frontend-image-uploading-wait' => 'Sila tunggu, gambar sedang dimuat naik.',
 	'mobile-frontend-image-uploading-long' => 'Imej masih sedang dimuat naik. Terima kasih atas kesabaran anda.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Batalkan</a> jika terlalu lama.',
 	'mobile-frontend-photo-upload-error' => 'Ralat, cuba lagi.',
+	'mobile-frontend-photo-upload-error-filename' => 'Ralat, sila berikan ringkasan yang lebih memerikan.',
 	'mobile-frontend-photo-upload-success-article' => 'Berjaya! Gambar anda kini disiarkan pada halaman ini.',
 	'mobile-frontend-photo-license' => 'Dengan mengklik "Hantar", anda bersetuju dengan [//wikimediafoundation.org/wiki/Terms_of_use Syarat-Syarat Penggunaan] kami dan juga sudi melepaskan gambar anda di bawah [//creativecommons.org/licenses/by-sa/3.0/ Lesen Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Hantar',
 	'mobile-frontend-photo-cancel' => 'Batalkan',
 	'mobile-frontend-photo-upload-user-count' => '$1 muatnaikan',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ muatan naik',
+	'mobile-frontend-photo-upload-cta' => 'Sila log masuk atau daftar diri untuk meletakkan gambar.',
+	'mobile-frontend-photo-upload-login' => 'Anda mesti log masuk untuk meletakkan gambar.',
 	'tag-mobile_edit' => 'Suntingan mobil',
 	'tag-mobile_edit-description' => 'Suntingan dari tapak mobil',
 	'mobile-frontend-drawer-cancel' => 'Batalkan',
+	'mobile-frontend-talk-explained' => 'Yang berikut adalah penukaran-penukaran yang sedang giat dijalankan',
+	'mobile-frontend-talk-explained-empty' => 'Tiada penukaran berkenaan halaman ini.',
+	'mobile-frontend-talk-overlay-header' => 'Perbualan',
 );
 
 /** Maltese (Malti)
@@ -10064,8 +10080,6 @@ $messages['nb'] = array(
 	'mobile-frontend-ajax-random-suggestions' => 'Andre forslag:',
 	'mobile-frontend-back-to-top-of-section' => 'Hopp tilbake et avsnitt',
 	'mobile-frontend-close-section' => 'Lukk dette avsnittet',
-	'mobile-frontend-show-button' => 'Vis',
-	'mobile-frontend-hide-button' => 'Skjul',
 	'mobile-frontend-empty-homepage-text' => 'Denne hjemmesiden må konfigureres. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instruksjoner for hvordan man aktiverer denne mobilsiden]',
 	'mobile-frontend-regular-site' => 'Bordmaskinvisning',
 	'mobile-frontend-wml-continue' => 'Fortsett&nbsp;…',
@@ -10075,22 +10089,22 @@ $messages['nb'] = array(
 	'mobile-frontend-view-mobile' => 'Mobil',
 	'mobile-frontend-opt-in-explain' => 'Ved å bli med på betatestingen vil du få tilgang til eksperimentelle funksjoner, som kan inneholde feil og problemer.',
 	'mobile-frontend-images-status' => 'Bilder',
-	'mobile-frontend-disable-images' => 'Deaktiver bilder på mobilsiden',
-	'mobile-frontend-enable-images' => 'Gjør tilgjengelig bilder på mobilnettstedet',
+	'mobile-frontend-disable-images' => 'Ikke vis bilder på mobilutgaven',
+	'mobile-frontend-enable-images' => 'Vis bilder på mobilutgaven',
 	'mobile-frontend-missing-image' => 'Bilde',
 	'mobile-frontend-off' => 'AV',
 	'mobile-frontend-on' => 'PÅ',
 	'mobile-frontend-footer-contributors-text' => 'Artikkel av [$1 bidragsytere] som deg',
 	'mobile-frontend-featured-article' => 'Dagens utvalgte artikkel',
 	'mobile-frontend-news-items' => 'I nyhetene',
-	'mobile-frontend-leave-feedback-notice' => 'Din tilbakemelding hjelper oss å forbedre brukeropplevelsen på ditt mobilnettsted. Den vil bli publisert offentlig, sammen med ditt brukernavn, nettleserversjon og operativsystem, på siden «$1». Vennligst lag en informativ emnetekst, f. eks. «Formateringsdetaljer for brede tabeller». Bruksvilkårene våre gjelder for tilbakemeldingen.',
+	'mobile-frontend-leave-feedback-notice' => 'Din tilbakemelding hjelper oss å forbedre brukeropplevelsen på mobilutgaven. Den vil bli publisert offentlig, sammen med ditt brukernavn, nettleserversjon og operativsystem, på siden «$1». Prøv å lage en informativ emnelinje, f. eks. «Formateringsdetaljer for brede tabeller». Bruksvilkårene våre gjelder for tilbakemeldingen.',
 	'mobile-frontend-leave-feedback-warning' => 'Ikke legg inn personlig informasjon i kommentarene dine med mindre du samtykker i at informasjonen blir offentliggjort,',
 	'mobile-frontend-leave-feedback-subject' => 'Emne:',
 	'mobile-frontend-leave-feedback-message' => 'Melding:',
 	'mobile-frontend-leave-feedback-submit' => 'Send tilbakemelding',
 	'mobile-frontend-leave-feedback-link-text' => 'Tilbakemelding på utvidelsen MobileFrontend',
 	'mobile-frontend-leave-feedback' => 'Tilbakemelding på mobilnettsted',
-	'mobile-frontend-leave-feedback-title' => 'Gi oss tilbakemelding om din erfaring med mobilnettstedet',
+	'mobile-frontend-leave-feedback-title' => 'Tilbakemelding på mobilnettsted',
 	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Teknisk problem',
 	'mobile-frontend-leave-feedback-general-section-header' => 'Generelt',
 	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Tilbakemelding på artikkelen',
@@ -10134,8 +10148,8 @@ $messages['nb'] = array(
 	'mobile-frontend-account-create-captcha-placeholder' => 'Skriv inn sikkerhetstekst',
 	'mobile-frontend-overlay-escape' => 'Gå tilbake',
 	'mobile-frontend-placeholder' => 'Søk i {{SITENAME}}',
-	'mobile-frontend-placeholder-beta' => 'Søk i {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Søk i {{SITENAME}} (Dragemodus)',
+	'mobile-frontend-placeholder-beta' => 'Søk i {{SITENAME}} (beta)',
+	'mobile-frontend-placeholder-alpha' => 'Søk i {{SITENAME}} (dragemodus)',
 	'mobile-frontend-search-help' => 'Skriv inn søkeord ovenfor og treffene vil vises her.',
 	'mobile-frontend-dismiss-notification' => 'fjern denne beskjeden',
 	'mobile-frontend-clear-search' => 'Tilbakestill',
@@ -10169,7 +10183,8 @@ $messages['nb'] = array(
 	'mobile-frontend-nearby-title' => 'I nærheten',
 	'mobile-frontend-nearby-loading' => 'Laster inn emner nær din nåværende posisjon',
 	'mobile-frontend-nearby-requirements' => 'Denne siden krever både JavaScript og en nettleser som kan finne din posisjon.',
-	'mobile-frontend-nearby-distance-report' => '$1km fra din nåværende posisjon',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-lookup-error' => 'Kunne ikke finne deg. Prøver igjen&nbsp;…',
 	'mobile-frontend-nearby-noresults' => 'Du er utenfor allfarvei og vi kunne ikke finne noen emner. Hvorfor ikke skrive en ny artikkel?',
 	'mobile-frontend-nearby-refresh' => 'Vi fant en mer nøyaktig posisjon for deg. Trykk her for å oppfriske listen.',
@@ -10229,7 +10244,7 @@ $messages['nb'] = array(
 	'mobile-frontend-photo-ownership-confirm' => 'Jeg forstår!',
 	'mobile-frontend-photo-ownership-bullet-one' => 'Vi kan kun akseptere bilder du har tatt selv. Vennligst ikke last opp bilder du fant et annet sted på internett.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'Bilder som er beskyttet av opphavsrett eller som er upassende vil bli fjernet.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'Dine opplastede filer slippes under en fri lisens og kan gjenrbrukes gratis av enhver.', # Fuzzy
+	'mobile-frontend-photo-ownership-bullet-three' => 'Dine opplastede filer slippes under en lisens som tillater hvem som helst å gjenbruke de kostnadsløst.',
 	'mobile-frontend-image-uploading-wait' => 'Laster opp bilde, vennligst vent.',
 	'mobile-frontend-image-uploading-long' => 'Bildet holder fremdeles på å lastes opp! Takk for at du venter.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Avbryt</a> hvis det tar for lang tid.',
@@ -11437,7 +11452,7 @@ Ch'a giuta a fé vive coste pàgine donand soe figure dont a veul dësbarassesse
 	'mobile-frontend-watchlist-removed' => "Gavà $1 da la lista ëd lòn ch'as ten sot-euj",
 	'mobile-frontend-watchlist-view' => "Vëdde la lista ëd lòn ch'as ten sot-euj",
 	'mobile-frontend-watchlist-more' => 'ëd pi',
-	'mobile-frontend-watchlist-cta' => "Për piasì intra o registr-te për ten-e d'euj sta pagina.",
+	'mobile-frontend-watchlist-cta' => "Për piasì, ch'a intra ant ël sistema o ch'as anscriva për ten-e sot-euj sta pàgina.",
 	'mobile-frontend-watchlist-cta-button-login' => 'Intré ant ël sistema',
 	'mobile-frontend-watchlist-cta-button-signup' => "Ch'as anscriva",
 	'mobile-frontend-watchlist-a-z' => 'Tùit',
