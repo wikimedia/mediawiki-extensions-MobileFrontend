@@ -1,3 +1,4 @@
+/* jshint loopfunc: true */
 ( function( M ) {
 
 	function extend( prototype ) {
