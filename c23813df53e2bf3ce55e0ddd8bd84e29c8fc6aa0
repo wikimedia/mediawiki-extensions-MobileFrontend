@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DvuQzL8I",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-23T19:23:42Z",
+      "side": 1,
+      "message": "Nope. postbodytext and prebodytext get set in this class for desktop.\n\nSkinMobile.php does override this but for mobile mode only.",
+      "parentUuid": "DvmSV-4U",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvkSMg4A",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2013-04-20T01:01:04Z",
       "side": 1,
       "message": "var is PHP4. Use public/private/protected.",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvqQ9N40",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-23T19:23:42Z",
+      "side": 1,
+      "message": "copied and pasted this from vector. My bad.",
+      "parentUuid": "DvkSMg4A",
       "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "DvgQ5q6A",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-23T19:23:42Z",
+      "side": 1,
+      "message": "seems so..",
+      "parentUuid": "DviSPB3g",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvoSSe50",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2013-04-20T01:01:04Z",
       "side": 1,
       "message": "Why do we overwrite this method if it only calls parent method?",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dvss914w",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-23T19:23:42Z",
+      "side": 1,
+      "message": "Think this is a mistake. Shouldn\u0027t even exist :)",
+      "parentUuid": "DvoSSe50",
       "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "DvsRCsxI",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-23T19:23:42Z",
+      "side": 1,
+      "message": "SkinMinerva is not abstract..",
+      "parentUuid": "DvuTp7xw",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvgTvayA",
         "filename": "includes/skins/SkinMobileBase.php",
         "patchSetId": 5
@@ -98,6 +188,24 @@
       "writtenOn": "2013-04-20T01:01:04Z",
       "side": 1,
       "message": "What does it do?",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvmRInzA",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-23T19:23:42Z",
+      "side": 1,
+      "message": "have a look - prints a useful comment in html telling how long the page took to render. Will be useful to compare to desktop equivalent pages.\nWhy not.",
+      "parentUuid": "DvgTvayA",
       "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
