@@ -2,17 +2,20 @@ MW_INSTALL_PATH ?= ../..
 
 .PHONY: less
 
-jshinttests:
-	jshint tests/javascripts/* --config .jshintrc
+nodecheck:
+	@scripts/nodecheck.sh
 
-jshint: jshinttests
-	jshint javascripts/* --config .jshintrc
+jshinttests: nodecheck
+	@node_modules/.bin/jshint tests/javascripts/* --config .jshintrc
 
-less:
-	@scripts/less.sh --no-watch
+jshint: nodecheck jshinttests
+	@node_modules/.bin/jshint javascripts/* --config .jshintrc
 
-lesswatch:
-	@scripts/less.sh
+less: nodecheck
+	@node_modules/.bin/autoless --no-watch less/ stylesheets/
+
+lesswatch: nodecheck
+	@node_modules/.bin/autoless less/ stylesheets/
 
 phpunit:
 	cd ${MW_INSTALL_PATH}/tests/phpunit && php phpunit.php --configuration ${MW_INSTALL_PATH}/extensions/MobileFrontend/tests/mfe.suite.xml --group=MobileFrontend

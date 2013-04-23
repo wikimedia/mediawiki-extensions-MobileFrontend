@@ -1,7 +1,9 @@
 {
 	"name": "MobileFrontend-dependencies",
 	"description": "Node.js dependencies used in MobileFrontend",
+	"version": "0.0.1",
 	"dependencies": {
-		"autoless": "*"
+		"jshint": ">=1.1.0",
+		"autoless": ">=0.1.4"
 	}
 }
