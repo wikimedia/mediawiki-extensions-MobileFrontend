@@ -32,7 +32,7 @@ class SkinMobileTemplate extends MinervaTemplate {
 	}
 
 	public function renderArticleHeader() {
-		echo '<div id="mw-mf-header">';
+		echo '<div class="header">';
 		if ( $this->data['htmlHeader'] ) {
 			$this->html( 'menuButton' );
 			echo $this->data['htmlHeader'];

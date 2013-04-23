@@ -79,9 +79,25 @@ html.overlay #footer {
   background-color: white;
   z-index: 4;
 }
-.mw-mf-overlay a.escapeOverlay,
-.mw-mf-overlay button.escapeOverlay {
+.mw-mf-overlay .header .cancel {
   display: block;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  height: 46px;
+  width: 40px;
+  left: 0;
+  background: none;
+  background-image: url(images/arrow-left.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -999px;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 30px;
+  -o-background-size: auto 30px;
+  -webkit-background-size: auto 30px;
+  background-size: auto 30px;
 }
 .mw-mf-overlay div.languageOverlay ul li,
 .mw-mf-overlay ul.content li {
@@ -183,17 +199,6 @@ html.overlay #footer {
 #content .alert {
   margin: 0;
 }
-#mw-mf-page-center .header input.search,
-.overlay .header input.search {
-  margin-top: 0;
-}
-#mw-mf-page-center .header h2,
-.overlay .header h2 {
-  margin: 0;
-  padding: 0;
-  line-height: 46px;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
 .overlay ul {
   text-align: left;
   left: 0;
@@ -215,27 +220,7 @@ html.overlay #footer {
 .overlay ul.informative li {
   margin-bottom: 8px;
 }
-a.escapeOverlay,
-button.escapeOverlay {
-  position: absolute;
-  cursor: pointer;
-  border: none;
-  height: 46px;
-  width: 40px;
-  background: none;
-  background-image: url(images/arrow-left.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-indent: -999px;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: auto 30px;
-  -o-background-size: auto 30px;
-  -webkit-background-size: auto 30px;
-  background-size: auto 30px;
-}
-html[dir="rtl"] a.escapeOverlay,
-html[dir="rtl"] button.escapeOverlay {
+html[dir="rtl"] .mw-mf-overlay .header .cancel {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }

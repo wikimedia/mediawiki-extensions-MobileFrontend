@@ -194,7 +194,7 @@ class SkinMobile extends SkinMobileBase {
 
 		$htmlHeader = $this->getOutput()->getProperty( 'mobile.htmlHeader' );
 		if ( !$htmlHeader && $isSpecialPage ) {
-			$htmlHeader = Html::element( 'h1', array( 'class' => 'header' ), $pageHeading );
+			$htmlHeader = Html::element( 'h1', array(), $pageHeading );
 		}
 
 		$tpl->set( 'prebodytext', $preBodyText );

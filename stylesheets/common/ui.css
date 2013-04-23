@@ -219,12 +219,11 @@ input[type=submit].cancel {
   }
 }
 /* Header */
-#mw-mf-header form,
+.header form,
 #mw-mf-sq {
   height: 46px;
 }
-.header,
-#mw-mf-header {
+.header {
   z-index: 2;
   color: black;
   background-color: #f3f3f3;
@@ -239,16 +238,14 @@ input[type=submit].cancel {
   min-height: 46px;
   margin: 0;
   overflow: hidden;
+  position: relative;
+  padding: 0 40px 0 40px;
 }
 .header h1,
-#mw-mf-header h1 {
+.header h2 {
+  font-size: 1.6em;
   color: #000000;
-  line-height: 46px;
-  margin: 0;
-}
-.mw-mf-overlay .header .search-box,
-#mw-mf-header {
-  padding: 0 40px 0 40px;
+  margin: 10.12px 0 0;
 }
 /* Menu buttons */
 #mw-mf-menu-page,
