@@ -27,7 +27,7 @@ class MinervaTemplate extends BaseTemplate {
 			$banners .= $this->data['notice'];
 		}
 		if ( $wgMFEnableSiteNotice ) {
-			$banners .= '<div id="siteNotice"><div>';
+			$banners .= '<div id="siteNotice"></div>';
 		}
 		$this->set( 'banners', $banners );
 	}
