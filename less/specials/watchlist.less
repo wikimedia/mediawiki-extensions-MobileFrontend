@@ -104,10 +104,15 @@ ul.mw-mf-watchlist-results {
 	}
 }
 
-ul.mw-mf-watchlist-results.a-to-z {
+ul.a-to-z {
 	li {
 		a.title {
 			padding-left: (@thumbSpace - @ragWidth);
+		}
+
+		.listThumb.needsPhoto {
+			background-image: url(images/camera.png);
+			.background-size( 50%, auto );
 		}
 	}
 }

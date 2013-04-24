@@ -399,19 +399,23 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	private function renderThumb( $row ) {
 		wfProfileIn( __METHOD__ );
 
-		if ( $this->usePageImages && !is_null( $row->pp_value ) ) {
-			$file = wfFindFile( $row->pp_value );
-			if ( $file ) {
-				$thumb = $file->transform( array( 'width' => self::THUMB_SIZE, 'height' => self::THUMB_SIZE ) );
-				if ( $thumb ) {
-					return Html::element( 'div',
-						array(
-							'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' ),
-							'style' => 'background-image: url("' . wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
-						)
-					);
+		if ( $this->usePageImages ) {
+			$props = array(
+				'class' => 'listThumb needsPhoto',
+			);
+			if ( !is_null( $row->pp_value ) ) {
+				$file = wfFindFile( $row->pp_value );
+				if ( $file ) {
+					$thumb = $file->transform( array( 'width' => self::THUMB_SIZE, 'height' => self::THUMB_SIZE ) );
+					if ( $thumb ) {
+						$props = array(
+								'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' ),
+								'style' => 'background-image: url("' . wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
+						);
+					}
 				}
 			}
+			return Html::element( 'div', $props );
 		}
 
 		wfProfileOut( __METHOD__ );
