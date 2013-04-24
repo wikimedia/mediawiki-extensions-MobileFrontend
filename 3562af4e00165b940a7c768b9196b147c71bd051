@@ -16,6 +16,24 @@
       "revId": "3562af4e00165b940a7c768b9196b147c71bd051",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dvmeqz3Q",
+        "filename": "javascripts/modules/search-2.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-24T22:01:21Z",
+      "side": 1,
+      "message": "Thanks, didn\u0027t know jQuery normalizes that now.",
+      "parentUuid": "Dvuxw5qY",
+      "revId": "3562af4e00165b940a7c768b9196b147c71bd051",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
