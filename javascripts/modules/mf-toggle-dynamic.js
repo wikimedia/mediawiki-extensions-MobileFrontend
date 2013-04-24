@@ -71,7 +71,9 @@ var T = ( function() {
 
 	function init() {
 		var pageTitle = mw.config.get( 'wgTitle'),
-			specialPage = $( '#content_wrapper' ).hasClass( 'mw-mf-special' );
+			inViewMode = mw.config.get( 'wgAction' ) === 'view',
+			isMainPage = mw.config.get( 'wgIsMainPage' ),
+			isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) ===  mw.config.get( 'wgNamespaceIds' ).special;
 
 		M.on( 'page-loaded', function( article ) {
 			sectionData = article.data || {};
@@ -87,7 +89,7 @@ var T = ( function() {
 			checkHash();
 		} );
 
-		if ( !specialPage && !$( '#editform' )[ 0 ] ) {
+		if ( !isMainPage && !isSpecialPage && inViewMode ) {
 			M.history.loadPage( pageTitle, false );
 		} else {
 			enableToggling();
