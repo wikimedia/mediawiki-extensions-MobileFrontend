@@ -168,14 +168,15 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		wfProfileIn( __METHOD__ . '-getText' );
+		$isMainPage = $this->getTitle()->isMainPage();
 		if ( !$context->isAlphaGroupMember() ) {
-			$formatter->setIsMainPage( $this->getTitle()->isMainPage() );
+			$formatter->setIsMainPage( $isMainPage );
 		}
 
 		if ( $context->getContentFormat() == 'HTML'
 			&& $this->getRequest()->getText( 'search' ) == '' )
 		{
-			$formatter->enableExpandableSections();
+			$formatter->enableExpandableSections( !$isMainPage );
 		}
 		$contentHtml = $formatter->getText();
 		wfProfileOut( __METHOD__ . '-getText' );

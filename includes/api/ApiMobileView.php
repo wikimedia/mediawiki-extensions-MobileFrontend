@@ -173,6 +173,7 @@ class ApiMobileView extends ApiBase {
 			$mf->filterContent();
 			$mf->setIsMainPage( $this->mainPage );
 		}
+		$mf->enableExpandableSections( !$this->mainPage );
 		$html = $mf->getText();
 		wfProfileOut( __METHOD__ . '-MobileFormatter' );
 

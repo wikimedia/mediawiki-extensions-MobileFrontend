@@ -153,7 +153,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected function onHtmlReady( $html ) {
 		switch ( $this->format ) {
 			case 'HTML':
-				if ( $this->expandableSections && !$this->mainPage && strlen( $html ) > 4000 ) {
+				if ( $this->expandableSections && strlen( $html ) > 4000 ) {
 					$html = $this->headingTransform( $html );
 					if ( $this->removeSections ) {
 						$temp = new HtmlFormatter( $html ); // hack hack hack
