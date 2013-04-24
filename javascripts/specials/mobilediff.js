@@ -38,7 +38,7 @@
 	}
 
 	$( function() {
-		if ( mw.config.get( 'wgMFMode' ) === 'alpha' ) {
+		if ( mw.config.get( 'wgMFMode' ) !== 'stable' ) {
 			makePrettyDiff( $( '#mw-mf-minidiff' ) );
 		}
 	} );
