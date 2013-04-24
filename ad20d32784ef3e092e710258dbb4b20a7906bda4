@@ -16,6 +16,24 @@
       "revId": "ad20d32784ef3e092e710258dbb4b20a7906bda4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvnH1rX8",
+        "filename": "scripts/nodecheck.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-24T16:44:11Z",
+      "side": 1,
+      "message": "Why does it need to be run as root on your system? The whole point of this is not running it as a root, installing everything to the local node_modules directory...",
+      "parentUuid": "DvtPVibY",
+      "revId": "ad20d32784ef3e092e710258dbb4b20a7906bda4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
