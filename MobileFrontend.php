@@ -220,7 +220,6 @@ $wgResourceModules['mobile.file.scripts'] = $wgMFMobileResourceBoilerplate + arr
 $wgResourceModules['mobile.styles.page'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array( 'mobile.startup' ),
 	'styles' => array(
-		'stylesheets/common/mf-hacks.css',
 		'stylesheets/common/mf-enwp.css'
 	),
 );
@@ -234,6 +233,7 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 		'stylesheets/common/mf-footer.css',
 		// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
 		'stylesheets/common/mf-navigation.css',
+		'stylesheets/common/mf-hacks.css',
 	),
 	'position' => 'top',
 );
@@ -293,6 +293,8 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-languages.js',
+		'javascripts/common/history-beta.js',
+		'javascripts/views/page.js',
 	),
 	'position' => 'bottom',
 	'messages' => array(
@@ -368,6 +370,7 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.alpha.plumbing',
 		'mobile.stable',
+		'mobile.beta',
 	),
 	'messages' => array(
 		// for mf-random.js
@@ -399,7 +402,6 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	),
 	'scripts' => array(
 		'javascripts/common/application-alpha.js',
-		'javascripts/views/page.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
 		'javascripts/common/mf-history-jquery.js',
 		'javascripts/modules/mf-random.js',
@@ -585,6 +587,8 @@ $wgResourceModules['mobile.mobileoptions.scripts'] = $wgMFMobileSpecialPageResou
 $wgResourceModules['mobile.nearby.plumbing'] = $wgMFMobileResourceTemplateBoilerplate + array(
 	'templates' => array(
 		'articleList',
+		'overlays/pagePreview',
+		'overlays/loading',
 	),
 );
 $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + array(
@@ -592,6 +596,7 @@ $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + a
 		'mobile.nearby.plumbing',
 		'mobile.stable',
 		'jquery.json',
+		'mobile.beta',
 	),
 	'messages' => array(
 		'mobile-frontend-nearby-error',
@@ -602,6 +607,8 @@ $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + a
 		'mobile-frontend-nearby-distance-meters',
 		'mobile-frontend-nearby-lookup-error',
 		'mobile-frontend-nearby-noresults',
+		'mobile-frontend-ajax-preview-loading',
+		'mobile-frontend-nearby-link',
 	),
 	'styles' => array(
 		'stylesheets/specials/watchlist.css',

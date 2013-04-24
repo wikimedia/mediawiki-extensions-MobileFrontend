@@ -63,6 +63,7 @@ body.navigation-enabled #mw-mf-page-center {
 html.overlay .mw-mf-overlay {
   display: block;
 }
+html.overlay #mf-notification,
 html.overlay #mw-mf-viewport {
   display: none;
 }

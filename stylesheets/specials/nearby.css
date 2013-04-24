@@ -1,3 +1,9 @@
+.mw-mf-overlay .message {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 8px;
+  border-bottom: solid 1px #e3e3e3;
+}
 ul.a-to-z li .proximity {
   font-size: .8em;
   text-transform: none;

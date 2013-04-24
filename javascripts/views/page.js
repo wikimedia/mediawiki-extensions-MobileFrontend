@@ -61,6 +61,7 @@
 					}
 				}
 			}
+			this.heading = options.heading;
 			this.sections = [];
 			this._sectionLookup = {};
 			for ( s in sectionData ) {
