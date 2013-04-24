@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dvuxw5qY",
+        "filename": "javascripts/modules/search-2.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-24T19:23:40Z",
+      "side": 1,
+      "message": "Right solution but this is unnecessary. Just use which\nhttp://api.jquery.com/category/events/event-object/\n\nFeel free to fix and self merge.",
+      "revId": "3562af4e00165b940a7c768b9196b147c71bd051",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
