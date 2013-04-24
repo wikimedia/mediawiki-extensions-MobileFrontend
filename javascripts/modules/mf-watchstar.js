@@ -129,16 +129,14 @@ var api = M.require( 'api' ), w = ( function() {
 			}
 		} ).done( function( data ) {
 				var pages = data.query.pages,
-					notEmpty = !pages[ '-1' ], statuses = {}, page, i;
+					statuses = {}, page, i;
 				for( i in pages ) {
-					if( pages.hasOwnProperty( i ) ) {
+					if( pages.hasOwnProperty( i ) && i > -1 ) { // if i is < 0 then the page doesn't exist in the wiki
 						page = pages[ i ];
 						statuses[ page.title ] = page.hasOwnProperty( 'watched' );
 					}
 				}
-				if( notEmpty ) {
-					callback( statuses );
-				}
+				callback( statuses );
 		} );
 	}
 
@@ -205,11 +203,15 @@ var api = M.require( 'api' ), w = ( function() {
 				var title = $( this ).attr( 'title' );
 				createWatchListButton( this, title, true );
 			} );
-		} else {
-			checkWatchStatus( titles, function( status ) {
+		} else if ( M.isLoggedIn() && titles.length > 0 ) {
+			checkWatchStatus( titles, function( statuses ) {
 				$container.find( 'li' ).each( function() {
-					var title = $( this ).attr( 'title' );
-					createWatchListButton( this, title, status[ title ] );
+					var title = $( this ).attr( 'title' ),
+						status = statuses[ title ];
+
+					if ( status !== undefined ) {
+						createWatchListButton( this, title, status );
+					}
 				} );
 			} );
 		}
