@@ -510,4 +510,23 @@ class MobileFrontendHooks {
 		return true;
 	}
 
+	/**
+	 * GetPreferences hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
+	 *
+	 * @param User $user
+	 * @param array $preferences
+	 *
+	 * @return bool
+	 */
+	public static function onGetPreferences( $user, &$preferences ) {
+		$definition = array(
+			'type' => 'api',
+			'default' => '',
+		);
+		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
+		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
+
+		return true;
+	}
 }
