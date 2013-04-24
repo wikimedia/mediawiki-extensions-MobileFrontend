@@ -1,7 +1,6 @@
 <?php
 class MinervaTemplate extends BaseTemplate {
 	private function prepareCommonData() {
-		$this->set( 'language_urls', array() );
 
 		// menu button
 		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
