@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvtPVibY",
+        "filename": "scripts/nodecheck.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-24T05:09:39Z",
+      "side": 1,
+      "message": "running this throws an error on my instance\n\nnpm ERR! install Couldn\u0027t read dependencies\nnpm ERR! Error: no version\n\nSeems package.json should have a version...\n\nWhen I add a version it works but my npm needs to be run by root. I guess I could fix this but I wonder how many other people this might effect and if there is a more elegant solution.",
+      "revId": "ad20d32784ef3e092e710258dbb4b20a7906bda4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
