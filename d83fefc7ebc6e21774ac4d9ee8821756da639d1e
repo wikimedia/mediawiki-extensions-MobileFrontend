@@ -16,6 +16,24 @@
       "revId": "d83fefc7ebc6e21774ac4d9ee8821756da639d1e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dvs7yu5g",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-25T19:23:14Z",
+      "side": 1,
+      "message": "I can do that in a follow-up. Is the reason for this supporting old browsers?",
+      "parentUuid": "DvjO-PWA",
+      "revId": "d83fefc7ebc6e21774ac4d9ee8821756da639d1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
