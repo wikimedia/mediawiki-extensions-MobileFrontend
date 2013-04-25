@@ -215,11 +215,6 @@ table.floatright {
 #content_wrapper.home h1 {
   display: none;
 }
-#mw-mf-header {
-  margin: 0;
-  position: relative;
-  border-bottom: solid 1px #CCC;
-}
 #mw-mf-last-modified {
   margin-top: 1em;
 }

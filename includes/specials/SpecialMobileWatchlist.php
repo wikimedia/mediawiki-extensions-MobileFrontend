@@ -105,7 +105,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$html =
 			Html::openElement( 'div',
 				array(
-					'class' => 'mw-mf-watchlist-views header' )
+					'class' => 'mw-mf-watchlist-views' )
 				) .
 			Html::openElement( 'div',
 				array(

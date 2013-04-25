@@ -144,7 +144,7 @@ m = ( function() {
 				} );
 				carousel.insertBefore( '.ctaUploadPhoto' );
 				$( function() {
-					window.scrollTo( 0, $( '#mw-mf-header' ).offset().top );
+					window.scrollTo( 0, $( '.header' ).offset().top );
 				} );
 			}
 		} );

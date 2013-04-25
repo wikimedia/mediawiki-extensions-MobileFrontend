@@ -3,13 +3,12 @@
 @import 'mainmenu.less';
 
 /* Header */
-#mw-mf-header form,
+.header form,
 #mw-mf-sq {
 	height: @headerHeight;
 }
 
-.header,
-#mw-mf-header {
+.header {
 	z-index: 2;
 	color: black;
 	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
@@ -19,17 +18,14 @@
 	min-height: @headerHeight;
 	margin: 0;
 	overflow: hidden;
-
-	h1 {
-		color: @chromeHeadingColor;
-		line-height: @headerHeight;
-		margin: 0;
-	}
-}
-
-.mw-mf-overlay .header .search-box,
-#mw-mf-header {
+	position: relative;
 	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
+
+	h1, h2 {
+		font-size: @baseFontSize * 1.6;
+		color: @chromeHeadingColor;
+		margin: @headerHeight*0.22 0 0;
+	}
 }
 
 /* Menu buttons */
