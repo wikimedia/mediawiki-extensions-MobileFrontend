@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DvvHJllw",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-25T21:22:02Z",
+      "side": 1,
+      "message": "Sorry, must have misread this. Why isn\u0027t prebodytext and postbodytext set in the same method though?",
+      "parentUuid": "DvuQzL8I",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvkSMg4A",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 5
@@ -177,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "DvrGqPnE",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-25T21:22:02Z",
+      "side": 1,
+      "message": "Right, I forgot ;)",
+      "parentUuid": "DvsRCsxI",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvgTvayA",
         "filename": "includes/skins/SkinMobileBase.php",
         "patchSetId": 5
@@ -206,6 +242,24 @@
       "side": 1,
       "message": "have a look - prints a useful comment in html telling how long the page took to render. Will be useful to compare to desktop equivalent pages.\nWhy not.",
       "parentUuid": "DvgTvayA",
+      "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvnG1ps0",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-25T21:22:02Z",
+      "side": 1,
+      "message": "If it, itself doesn\u0027t slow anything down then it\u0027s OK. I\u0027d change the name to reportTime.",
+      "parentUuid": "DvmRInzA",
       "revId": "c23813df53e2bf3ce55e0ddd8bd84e29c8fc6aa0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
