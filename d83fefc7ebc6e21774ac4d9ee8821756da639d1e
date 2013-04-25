@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvjO-PWA",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-25T17:12:13Z",
+      "side": 1,
+      "message": "actually this rule should be destroyed. We should define an images/arrow-right.png and apply the @flip directive which i believe turns -right to -left / -left to -right (forget exact syntax)\n\nSeems like a good time to do so...\n\nPlease can you either do that here or in a follow up?",
+      "revId": "d83fefc7ebc6e21774ac4d9ee8821756da639d1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
