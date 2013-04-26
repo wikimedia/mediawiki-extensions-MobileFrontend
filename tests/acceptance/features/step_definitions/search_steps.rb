@@ -3,7 +3,7 @@ Given /^I am on the home page$/ do
 end
 
 When /^I type (.+)$/ do |search_term|
-  on(HomePage).search_box= search_term
+  on(HomePage).search_box_element.send_keys "san"
 end
 
 Then /^Search box should be there$/ do

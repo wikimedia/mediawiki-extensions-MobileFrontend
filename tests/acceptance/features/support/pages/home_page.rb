@@ -14,8 +14,11 @@ class HomePage
   a(:mainmenu_button, id: 'mw-mf-main-menu-button')
   a(:login_button, class: 'external login')
   a(:login, text: 'Login')
-  a(:search_result, class: 'search-result-item')
-  text_field(:search_box, id: 'searchInput')
+  ul(:search_results, class: 'suggestions-results')
+  a(:search_result) do |page|
+    page.search_results_element.a
+  end
+  text_field(:search_box, name: 'search')
   div(:main_page, id: 'mainpage')
   a(:watch_link, class: 'watch-this-article')
   a(:watched_link, class: 'watch-this-article watched')
