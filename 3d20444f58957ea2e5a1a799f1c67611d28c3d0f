@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "DvwkEbcE",
+        "filename": "javascripts/common/feature-detect.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:32:27Z",
+      "side": 1,
+      "message": "I would not any classes to \u003chtml\u003e based on position: fixed detection. We already have a .position-fixed class for elements that have position: fixed. We should revisit this issue and if something do:\n\nif ( !supportsPositionFixed() ) {\n  // do something with everything matching $(\u0027.position-fixed\u0027)\n}",
+      "parentUuid": "DvykwSec",
+      "revId": "3d20444f58957ea2e5a1a799f1c67611d28c3d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv6ktGUY",
+        "filename": "javascripts/common/feature-detect.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:32:27Z",
+      "side": 1,
+      "message": "This one is even more controversial for me. We shouldn\u0027t care in CSS if we have geo location or not.",
+      "revId": "3d20444f58957ea2e5a1a799f1c67611d28c3d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv2k2Qeg",
         "filename": "javascripts/common/mf-application.js",
         "patchSetId": 1
@@ -47,6 +82,23 @@
       "writtenOn": "2013-04-26T20:32:12Z",
       "side": 1,
       "message": "same as above",
+      "revId": "3d20444f58957ea2e5a1a799f1c67611d28c3d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv0nkpRA",
+        "filename": "stylesheets/common/ui.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:32:27Z",
+      "side": 1,
+      "message": "Can\u0027t we just remove this menu option in JS? We did that with Uploads, didn\u0027t we? I\u0027d rather not have two different ways of hiding menu items.",
       "revId": "3d20444f58957ea2e5a1a799f1c67611d28c3d0f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
