@@ -529,4 +529,13 @@ class MobileFrontendHooks {
 
 		return true;
 	}
+
+	/**
+	 * Gadgets::allowLegacy hook handler
+	 *
+	 * @return bool
+	 */
+	public static function onAllowLegacyGadgets() {
+		return !MobileContext::singleton()->shouldDisplayMobileView();
+	}
 }
