@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvykwSec",
+        "filename": "javascripts/common/feature-detect.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-26T20:32:12Z",
+      "side": 1,
+      "message": "this may be a php vs js best practices, but in OOPHP i would keep this strictly for detecting features (since it\u0027s called feature-detect) and leave any functionality that depends on detected features elsewhere. That is, i would NOT do:\nif ( supportsPositionFixed() ) { // take some aciton } here",
+      "revId": "3d20444f58957ea2e5a1a799f1c67611d28c3d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv2k2Qeg",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-26T20:32:12Z",
+      "side": 1,
+      "message": "it seems weird to me to use the same function name as what you\u0027ve defined in feature-detect.js",
+      "revId": "3d20444f58957ea2e5a1a799f1c67611d28c3d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvwkzDfc",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-26T20:32:12Z",
+      "side": 1,
+      "message": "same as above",
+      "revId": "3d20444f58957ea2e5a1a799f1c67611d28c3d0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
