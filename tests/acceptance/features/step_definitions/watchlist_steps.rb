@@ -9,7 +9,7 @@ Given /^I am not logged in$/ do
   # nothing to do here, user in not logged in by default
 end
 
-When /^Select the watchlist icon$/ do
+When /^I select the watchlist icon$/ do
   on(HomePage).watch_link_element.when_present.click
 end
 
@@ -36,15 +36,8 @@ Given /^I am logged into the mobile website$/ do
   end
 end
 
-When /^I search for an article and select the watchlist icon$/ do
-  on(HomePage) do |page|
-    page.search_box="san francisco chronicle"
-    page.search_result_element.when_present
-    page.search_form_element.submit
-    @browser.url.should match Regexp.escape('San_Francisco_Chronicle')
-    page.text.should include "San Francisco Chronicle"
-    page.watch_link_element.when_present.click
-  end
+When /^I go to random page$/ do
+  visit(RandomPage)
 end
 
 Then /^I receive notification that the article has been added to the watchlist$/ do

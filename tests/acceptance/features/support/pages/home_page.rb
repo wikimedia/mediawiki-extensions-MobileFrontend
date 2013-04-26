@@ -12,7 +12,7 @@ class HomePage
   page_url url
 
   a(:mainmenu_button, id: 'mw-mf-main-menu-button')
-  a(:login_button, class: 'external login')
+  a(:login_button, href: /Special:UserLogin/)
   a(:login, text: 'Login')
   ul(:search_results, class: 'suggestions-results')
   a(:search_result) do |page|
