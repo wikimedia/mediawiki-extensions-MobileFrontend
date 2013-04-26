@@ -6,7 +6,7 @@ Given /^I am in beta mode$/ do
 end
 
 Given /^I am not logged in$/ do
-  on(HomePage).login_button_element.should exist
+  # nothing to do here, user in not logged in by default
 end
 
 When /^Select the watchlist icon$/ do
