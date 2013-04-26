@@ -299,11 +299,12 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgCookiePath, $wgMFEnablePhotoUploadCTA, $wgMFNearbyEndpoint;
+		global $wgCookiePath, $wgMFEnablePhotoUploadCTA, $wgMFNearbyEndpoint, $wgMFAnonymousEditing;
 		$vars['wgCookiePath'] = $wgCookiePath;
 		$vars['wgMFStopRedirectCookieHost'] = MobileContext::singleton()->getStopMobileRedirectCookieDomain();
 		$vars['wgMFEnablePhotoUploadCTA'] = $wgMFEnablePhotoUploadCTA;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
+		$vars['wgMFAnonymousEditing'] = $wgMFAnonymousEditing;
 		return true;
 	}
 
@@ -486,4 +487,27 @@ class MobileFrontendHooks {
 		wfProfileOut( __METHOD__ );
 		return true;
 	}
+
+	/**
+	 * CustomEditor hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/CustomEditor
+	 *
+	 * @param Article $article
+	 * @param User $user
+	 * @return bool
+	 */
+	public static function onCustomEditor( $article, $user ) {
+		global $wgMFAnonymousEditing;
+		$context = MobileContext::singleton();
+
+		// redirect anonymous users back to the article instead of showing the editor
+		if ( $context->shouldDisplayMobileView() && $user->isAnon() && !$wgMFAnonymousEditing ) {
+			$articleUrl = $context->getMobileUrl( $article->getTitle()->getFullURL() );
+			$context->getOutput()->redirect( $articleUrl );
+			return false;
+		}
+
+		return true;
+	}
+
 }
