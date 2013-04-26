@@ -468,22 +468,22 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( &$out, &$sk ) {
-			global $wgMFEnableXAnalyticsLogging;
-			wfProfileIn( __METHOD__ );
+		global $wgMFEnableXAnalyticsLogging;
+		wfProfileIn( __METHOD__ );
 
-			if ( !$wgMFEnableXAnalyticsLogging ) {
-				return true;
-			}
-
-			// Set X-Analytics HTTP response header if necessary
-			$context = MobileContext::singleton();
-			$analyticsHeader = $context->getXAnalyticsHeader();
-			if ( $analyticsHeader ) {
-				$resp = $out->getRequest()->response();
-				$resp->header( $analyticsHeader );
-			}
-
-			wfProfileOut( __METHOD__ );
+		if ( !$wgMFEnableXAnalyticsLogging ) {
 			return true;
+		}
+
+		// Set X-Analytics HTTP response header if necessary
+		$context = MobileContext::singleton();
+		$analyticsHeader = $context->getXAnalyticsHeader();
+		if ( $analyticsHeader ) {
+			$resp = $out->getRequest()->response();
+			$resp->header( $analyticsHeader );
+		}
+
+		wfProfileOut( __METHOD__ );
+		return true;
 	}
 }
