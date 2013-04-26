@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv2nboXo",
+        "filename": "javascripts/common/history-beta.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:22:18Z",
+      "side": 1,
+      "message": "Is this loading the whole page instead of just loading the first section? Also, maybe this should be a function in page.js?",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvylP6TY",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:22:18Z",
+      "side": 1,
+      "message": "Why mousedown? mouseup? touchend? click?",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv6nRmVU",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:22:18Z",
+      "side": 1,
+      "message": "Maybe localStorage instead?",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv6kUOfQ",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:22:18Z",
+      "side": 1,
+      "message": "I think it would be more intuitive if retrievePage returned a Page.",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv.lh0aw",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T21:22:18Z",
+      "side": 1,
+      "message": "Let\u0027s not get too overlayed. Maybe a toast?",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
