@@ -10,7 +10,6 @@ $specialPageAliases = array();
 
 /** English (English) */
 $specialPageAliases['en'] = array(
-	'MobileFeedback' => array( 'MobileFeedback' ),
 	'MobileOptions' => array( 'MobileOptions' ),
 	'Uploads' => array( 'Uploads' ),
 	'MobileDiff' => array( 'MobileDiff' ),
