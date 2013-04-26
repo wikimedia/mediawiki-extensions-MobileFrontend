@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dvrww1QE",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-26T03:08:47Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be mfWatchlistView or mobileWatchlistView or whatever we agreed upon? AFAIR we decided on hyphens in CSS classes and ids only.",
+      "revId": "8ec38b9084b7edf38d2fad02cefadfde16397670",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
