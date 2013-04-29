@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 
 ( function() {
-	var supported = !!navigator.geolocation,
+	var supported = M.supportsGeoLocation(),
 		popup = M.require( 'notifications' ),
 		View = M.require( 'view' ),
 		cachedPages,
