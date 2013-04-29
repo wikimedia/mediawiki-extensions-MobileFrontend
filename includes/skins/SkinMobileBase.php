@@ -104,7 +104,6 @@ class SkinMobileBase extends SkinMinerva {
 	 */
 	protected function prepareTemplate() {
 		wfProfileIn( __METHOD__ );
-		$title = $this->getTitle();
 		$ctx = MobileContext::singleton();
 		$req = $this->getRequest();
 
@@ -113,40 +112,6 @@ class SkinMobileBase extends SkinMinerva {
 		$tpl->set( 'wgScript', wfScript() );
 
 		$this->initPage( $this->getOutput() );
-		$url = MobileContext::singleton()->getDesktopUrl( wfExpandUrl(
-			$this->getRequest()->appendQuery( 'mobileaction=toggle_view_desktop' )
-		) );
-		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['toggle_view_desktop'] ) ) {
-			$hookQuery = $this->hookOptions['toggle_view_desktop'];
-			$url = $this->getRequest()->appendQuery( $hookQuery ) . urlencode( $url );
-		}
-		$url = htmlspecialchars( $url );
-
-		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
-		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
-
-		$switcherHtml = <<<HTML
-<span class="left separator"><a id="mw-mf-display-toggle" href="{$url}">{$desktop}
-</a></span><span class="right">{$mobile}</span>
-HTML;
-
-		// urls that do not vary on authentication status
-		if ( !$title->isSpecialPage() ) {
-			$historyUrl = $ctx->getMobileUrl( wfExpandUrl( $req->appendQuery( 'action=history' ) ) );
-			// FIXME: this creates a link with class external - it should be local
-			$historyLink = wfMessage( 'mobile-frontend-footer-contributors-text',
-				$historyUrl )->parse();
-		} else {
-			$historyLink = '';
-		}
-		$licenseText = wfMessage( 'mobile-frontend-footer-license-text' )->parse();
-		$termsUse = wfMessage( 'mobile-frontend-terms-use-text' )->parse();
-
-		$noticeHtml = <<<HTML
-{$historyLink}<br>
-{$licenseText}<span> | {$termsUse}</span>
-HTML;
-
 		// user specific configurations
 		$user = $this->getUser();
 		$watchlistQuery = array();
@@ -161,8 +126,6 @@ HTML;
 			}
 		}
 
-		$tpl->set( 'mobile-switcher', $switcherHtml );
-		$tpl->set( 'mobile-notice', $noticeHtml );
 		$tpl->set( 'mainPageUrl', Title::newMainPage()->getLocalUrl() );
 		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		$tpl->set( 'watchlistUrl', SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl( $watchlistQuery ) );

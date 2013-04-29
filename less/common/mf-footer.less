@@ -5,127 +5,58 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 @import "../mf-variables.less";
 
 #footer {
-	padding: 12px @contentMarginRight 12px @contentMarginLeft;
-	border-top: solid 1px #aaa;
-	line-height: 24px;
-	position: relative;
+	padding: 2em @contentMarginRight 1.5em @contentMarginLeft;
+	margin: 2em 0 0;
+	border-top: 1px solid #aaa;
 	clear: both; /* cancel any floating in the content */
+	font-size: @baseFontSize * 0.9;
 
 	h2 {
-		height: 24px;
-		display: block;
+		display: inline;
 		margin: 0;
+		line-height: inherit;
 		font-weight: bold;
 		font-size: @baseFontSize;
-		line-height: 22px;
 
 		img {
-			margin-top: 3px; /* (22px line height - 16px height) / 2) */
-			height: 16px;
+			height: 1em;
 		}
-
-		ul, span {
-			float: left;
-			margin-right: 4px;
-		}
-	}
-
-	div {
-		font-size: @baseFontSize * 0.9;
-		clear: both;
 	}
 
 	ul {
 		text-align: center;
-		width: 100%;
-		padding: 0;
 		list-style: none;
 		margin: 0;
 
-		&.footer-places {
-			li {
-				display: inline-block;
-				width: 33%;
-				font-size: 0.9em;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
-				line-height: 1.4;
-			}
+		li {
+			line-height: 1.2;
+			padding: 0 0 .7em;
 		}
 
-		&.footer-notice {
-			.left,
-			.right {
-				width: 48%;
-				display: inline-block;
-				box-sizing: border-box;
-			}
-
-			.left {
-				text-align: right;
-				padding-right: 2px;
-			}
-
-			.right {
-				text-align: left;
-				padding-left: 2px;
-			}
+		ul {
+			display: inline
 		}
-	}
 
-	.footer-notice .terms {
-		float: left;
-	}
-}
+		ul li,
+		&.footer-places li {
+			display: inline;
+			padding: 0 8px;
+			border-right: 1px solid #aaa;
 
-/* FIXME: Desktop specific style - move out of css served to mobile */
-.skin-minerva {
-	#footer {
-		ul.footer-places {
-			li {
-				width: 25%;
+			&:last-child {
+				border: none;
 			}
 		}
 	}
 }
 
-.mw-mf-special {
-	#footer {
-		display: none;
-	}
-}
+// FIXME: remove when all cached pages have new footer HTML
+// (change to be deployed May 14, 2013)
+#content_footer {
+	margin: 1em 0 0;
 
-html[dir="rtl"] #footer .footer-notice li:first-child .left:before,
-html[dir="ltr"] #footer .footer-notice li:first-child .left:after {
-	content: " | ";
-	visibility: visible;
-}
-
-html[dir="rtl"] #footer .footer-notice .left:before,
-html[dir="ltr"] #footer .footer-notice .left:after {
-	content: " | ";
-	visibility: hidden;
-}
-
-body {
-	#section_footer button {
-		height: 22px;
-	}
-}
-
-@media all and (min-width: 330px) {
-	#footer .content_block {
-		font-size: 0.9em;
-	}
-
-	#footer ul.footer-places li {
-		font-size: 1.1em;
-	}
-}
-
-@media all and (min-width: 500px) {
-	#footer ul.footer-places li {
-		font-size: 1.2em;
+	.separator {
+		margin: 0 .35em 0 0;
+		border-right: 1px solid #aaa;
 	}
 }

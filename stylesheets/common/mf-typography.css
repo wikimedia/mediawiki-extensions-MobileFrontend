@@ -107,15 +107,9 @@ input.search {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
 }
-#footer {
-  margin-top: 14pt;
-}
 @media all and (max-width: 280px) {
   body {
     font-size: 0.8em;
-  }
-  #footer {
-    padding: 12px 10px;
   }
   #content_wrapper {
     margin: 0 12px;
