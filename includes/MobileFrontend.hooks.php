@@ -20,6 +20,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onEnableMobileModules( $out, $mode ) {
+		global $wgResourceModules;
 		if ( $mode === 'alpha' && $out->getTitle()->isSpecialPage() ) {
 			$out->addModules(
 				array(
@@ -28,6 +29,7 @@ class MobileFrontendHooks {
 				)
 			);
 		}
+		$wgResourceModules['mobile.stable']['dependencies'][] = 'mobile.site';
 		return true;
 	}
 

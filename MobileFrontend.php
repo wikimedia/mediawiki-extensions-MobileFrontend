@@ -465,7 +465,6 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile.stable.universal',
 		'mediawiki.util',
 		'mobile.stable.styles',
-		'mobile.site',
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-cleanuptemplates.js',
