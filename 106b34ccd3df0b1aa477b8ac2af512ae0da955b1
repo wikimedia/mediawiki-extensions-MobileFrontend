@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "Dv2X63bw",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T16:12:53Z",
+      "side": 1,
+      "message": "touchend would also be suitable. mousedown was chosen as it fires earliest.",
+      "parentUuid": "DvylP6TY",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv6nRmVU",
         "filename": "javascripts/specials/nearby.js",
         "patchSetId": 4
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "Dv6UPdeE",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T16:12:53Z",
+      "side": 1,
+      "message": "We are already using this. Why change it?",
+      "parentUuid": "Dv6nRmVU",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv6kUOfQ",
         "filename": "javascripts/specials/nearby.js",
         "patchSetId": 4
@@ -64,6 +100,24 @@
       "writtenOn": "2013-04-26T21:22:18Z",
       "side": 1,
       "message": "I think it would be more intuitive if retrievePage returned a Page.",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv4X32dE",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T16:12:53Z",
+      "side": 1,
+      "message": "Makes sense.",
+      "parentUuid": "Dv6kUOfQ",
       "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
