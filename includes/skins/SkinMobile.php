@@ -16,10 +16,10 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'title', $title );
 		$tpl->set( 'user', $user );
 		$context = MobileContext::singleton();
-
-		$device = $context->getDevice();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
+
+		$device = $context->getDevice();
 
 		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
 		$tpl->set( 'isAlphaGroupMember', $inAlpha );
@@ -193,13 +193,15 @@ class SkinMobile extends SkinMobileBase {
 		}
 
 		$htmlHeader = $this->getOutput()->getProperty( 'mobile.htmlHeader' );
-		if ( !$htmlHeader && $isSpecialPage ) {
-			$htmlHeader = Html::element( 'h1', array(), $pageHeading );
+		if ( $isSpecialPage ) {
+			if ( !$htmlHeader ) {
+				$htmlHeader = Html::element( 'h1', array(), $pageHeading );
+			}
+			$tpl->set( 'specialPageHeader', $htmlHeader );
 		}
 
 		$tpl->set( 'prebodytext', $preBodyText );
 		$tpl->set( 'postbodytext', $postBodyText );
-		$tpl->set( 'htmlHeader', $htmlHeader );
 	}
 
 	/**
