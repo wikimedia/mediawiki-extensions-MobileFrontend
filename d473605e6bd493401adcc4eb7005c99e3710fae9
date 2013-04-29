@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv-sGaog",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-29T21:32:31Z",
+      "side": 1,
+      "message": "it seems the skin supports modes other than stable (in prepareCommonData() for instance. if that\u0027s the case, why would getMode() always just return stable?\n\nyou might consider making an object property to store the current mode, and create a setter to support setting the mode - if you want to go crazy you could even provide a list of available modes for this template (like a whitelist).\n\nanother possibility is to treat this class as an interface or an abstract class and keep it fairly restricted in terms of what it can/can\u0027t do. have it support having multiple modes, but don\u0027t have any mode-specific logic in here, which would keep this more flexible (eg what if we dont want alpha/beta/stable modes for desktop?)",
+      "revId": "d473605e6bd493401adcc4eb7005c99e3710fae9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv7sA8ms",
+        "filename": "includes/skins/SkinMobileTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-29T21:32:31Z",
+      "side": 1,
+      "message": "you removed the explicit creation of the \u0027desktopSkin\u0027 object property out of the MinervaTemplate class. did you forget to remove this too, or do you intend to still use this property?",
+      "revId": "d473605e6bd493401adcc4eb7005c99e3710fae9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
