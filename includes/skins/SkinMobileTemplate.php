@@ -30,51 +30,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 		parent::__construct();
 	}
 
-	public function renderArticleSkin() {
-		$languages = $this->getLanguages();
-		$variants = $this->getLanguageVariants();
-		$languageData = array(
-			'heading' => wfMessage( 'mobile-frontend-language-article-heading' )->text(),
-			'languages' => $languages,
-			'variants' => $variants,
-			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
-			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
-		);
-		?>
-	<div class='show' id='content_wrapper'>
-			<div id="content" class="content">
-			<?php
-				$this->html( 'prebodytext' );
-				$this->html( 'bodytext' );
-				$this->renderLanguages( $languageData );
-				$this->html( 'postbodytext' );
-			?>
-			</div><!-- close #content -->
-	</div><!-- close #content_wrapper -->
-		<?php
-		if ( !$this->data[ 'isSpecialPage' ] ) {
-			$this->footer();
-		} ?>
-		<?php
-			$this->navigationEnd();
-	}
-
-	public function execute() {
-		parent::execute();
-		$this->renderArticleSkin();
-		$this->html( 'bottomScripts' ) ?>
-	</body>
-	</html><?php
-	}
-
-	public function navigationEnd() {
-		//close #mw-mf-page-center then viewport;
-		?>
-		</div><!-- close #mw-mf-page-center -->
-		</div><!-- close #mw-mf-viewport -->
-		<?php
-	}
-
 	public function prepareData() {
 		global $wgExtensionAssetsPath,
 			$wgMobileFrontendLogo;
@@ -88,25 +43,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 			$this->set( 'header', $data['specialPageHeader'] );
 		}
 		wfProfileOut( __METHOD__ );
-	}
-
-	private function footer() {
-		?>
-		<div id="footer">
-			<h2 id="section_footer">
-				<?php $this->html( 'sitename' ); ?>
-			</h2>
-			<div id="content_footer">
-		<?php
-			foreach( $this->getFooterLinks() as $category => $links ):
-		?>
-				<ul class="footer-<?php echo $category; ?>">
-					<?php foreach( $links as $link ): ?><li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li><?php endforeach; ?>
-				</ul>
-			<?php endforeach; ?>
-			</div>
-		</div>
-		<?php
 	}
 
 	public function getPersonalTools() {

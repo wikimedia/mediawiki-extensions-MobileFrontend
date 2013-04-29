@@ -69,7 +69,7 @@ HTML;
 		return $this->data['language_urls'];
 	}
 
-	public function renderLanguages( $languageTemplateData ) {
+	protected function renderLanguages( $languageTemplateData ) {
 		if ( $languageTemplateData['languages'] && count( $languageTemplateData['languages'] ) > 0 ) {
 		?>
 		<div class="section" id="mw-mf-language-section">
@@ -97,7 +97,39 @@ HTML;
 		}
 	}
 
-	private function render( $data ) { // FIXME: replace with template engines
+	protected function renderFooter( $data ) {
+		if ( !$data['isSpecialPage'] ) {
+		?>
+		<div id="footer">
+			<h2 id="section_footer">
+				<?php $this->html( 'sitename' ); ?>
+			</h2>
+			<div id="content_footer">
+		<?php
+			foreach( $this->getFooterLinks() as $category => $links ):
+		?>
+				<ul class="footer-<?php echo $category; ?>">
+					<?php foreach( $links as $link ): ?><li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li><?php endforeach; ?>
+				</ul>
+			<?php endforeach; ?>
+			</div>
+		</div>
+		<?php
+		}
+	}
+
+	protected function render( $data ) { // FIXME: replace with template engines
+		$languages = $this->getLanguages();
+		$variants = $this->getLanguageVariants();
+		$languageData = array(
+			'heading' => wfMessage( 'mobile-frontend-language-article-heading' )->text(),
+			'languages' => $languages,
+			'variants' => $variants,
+			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
+			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
+		);
+
+		// begin rendering
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
@@ -126,6 +158,26 @@ HTML;
 					<ul id="mw-mf-menu-page">
 					</ul>
 				</div>
+				<div class='show' id='content_wrapper'>
+					<div id="content" class="content">
+						<?php
+							echo $data['prebodytext'];
+							echo $data[ 'bodytext' ];
+							echo $this->renderLanguages( $languageData );
+							echo $data['postbodytext'];
+						?>
+					</div><!-- close #content -->
+				</div><!-- close #content_wrapper -->
+				<?php
+					echo $this->renderFooter( $data );
+				?>
+			</div><!-- close #mw-mf-page-center -->
+		</div><!-- close #mw-mf-viewport -->
+		<?php
+			echo $data['bottomScripts'];
+		?>
+		</body>
+		</html>
 		<?php
 	}
 }
