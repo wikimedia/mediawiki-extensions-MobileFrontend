@@ -97,8 +97,17 @@ ul.mw-mf-watchlist-results li .info {
 ul.mw-mf-watchlist-results li .mw-mf-user {
   margin: .5em 0 0;
 }
-ul.mw-mf-watchlist-results.a-to-z li a.title {
+ul.a-to-z li a.title {
   padding-left: 77px;
+}
+ul.a-to-z li .listThumb.needsPhoto {
+  background-image: url(images/camera.png);
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 50% auto;
+  -o-background-size: 50% auto;
+  -webkit-background-size: 50% auto;
+  background-size: 50% auto;
 }
 .mw-mf-user {
   padding: 1px 0 0 20px;
