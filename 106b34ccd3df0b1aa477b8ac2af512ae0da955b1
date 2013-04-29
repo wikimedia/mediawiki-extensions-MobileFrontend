@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dv6Wr9Yk",
+        "filename": "javascripts/common/history-beta.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T16:37:04Z",
+      "side": 1,
+      "message": "Correct.\nI think this should be a method of a view but we currently don\u0027t do views. It thus shouldn\u0027t be part of page.js.",
+      "parentUuid": "Dv2nboXo",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvylP6TY",
         "filename": "javascripts/specials/nearby.js",
         "patchSetId": 4
@@ -124,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "DvyXHBWk",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T16:37:04Z",
+      "side": 1,
+      "message": "Actually not it doesn\u0027t. We cannot make the assumption on how the page will be used. For instance sometimes when initiating a page we add an element to render into sometimes we don\u0027t (see commit that follows)\n\nThis suggests we probably need to return a Page Model rather than a Page view.",
+      "parentUuid": "Dv4X32dE",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv.lh0aw",
         "filename": "javascripts/specials/nearby.js",
         "patchSetId": 4
@@ -135,6 +171,24 @@
       "writtenOn": "2013-04-26T21:22:18Z",
       "side": 1,
       "message": "Let\u0027s not get too overlayed. Maybe a toast?",
+      "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv0XEgWE",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T16:37:04Z",
+      "side": 1,
+      "message": "Is this comment aimed at an error overlay or the fact there is a loader overlay. your comment is not clear. I don\u0027t see how a toast would be useful during the loading of content.",
+      "parentUuid": "Dv.lh0aw",
       "revId": "106b34ccd3df0b1aa477b8ac2af512ae0da955b1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
