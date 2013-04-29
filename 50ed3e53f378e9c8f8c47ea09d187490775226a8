@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv9vrbng",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T22:16:37Z",
+      "side": 1,
+      "message": "IMO, /\\.[^\\.]+$/ is more readable and universal (and probably faster and more error-proof thanks to checking only the string at the end with $). It strips any extension, no matter how long it is.",
+      "revId": "50ed3e53f378e9c8f8c47ea09d187490775226a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv9ukzls",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T22:16:37Z",
+      "side": 1,
+      "message": "I think replace( / \\d{4}-\\d{2}-\\d{2} \\d{2}-\\d{2}$, \u0027\u0027 ) is simpler and faster (instead of the second regex).",
+      "revId": "50ed3e53f378e9c8f8c47ea09d187490775226a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
