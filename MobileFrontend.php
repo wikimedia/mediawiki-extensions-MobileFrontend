@@ -107,6 +107,7 @@ $wgHooks['UserLoginForm'][] = 'MobileFrontendHooks::onUserLoginForm';
 $wgHooks['UserCreateForm'][] = 'MobileFrontendHooks::onUserCreateForm';
 $wgHooks['BeforePageDisplay'][] = 'MobileFrontendHooks::onBeforePageDisplay';
 $wgHooks['CustomEditor'][] = 'MobileFrontendHooks::onCustomEditor';
+$wgHooks['GetPreferences'][] = 'MobileFrontendHooks::onGetPreferences';
 
 $wgSpecialPages['Uploads'] = 'SpecialUploads';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';

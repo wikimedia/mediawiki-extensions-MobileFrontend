@@ -145,11 +145,25 @@ HTML;
 {$licenseText}<span> | {$termsUse}</span>
 HTML;
 
+		// user specific configurations
+		$user = $this->getUser();
+		$watchlistQuery = array();
+		if ( $user ) {
+			$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, false );
+			$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, false );
+			if ( $view ) {
+				$watchlistQuery['watchlistview'] = $view;
+			}
+			if ( $filter && $view === 'feed' ) {
+				$watchlistQuery['filter'] = $filter;
+			}
+		}
+
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-notice', $noticeHtml );
 		$tpl->set( 'mainPageUrl', Title::newMainPage()->getLocalUrl() );
 		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
-		$tpl->set( 'watchlistUrl', SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl() );
+		$tpl->set( 'watchlistUrl', SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl( $watchlistQuery ) );
 		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
 		$tpl->set( 'loggedin', $this->getUser()->isLoggedIn() );
 		$this->loggedin = $this->getUser()->isLoggedIn();

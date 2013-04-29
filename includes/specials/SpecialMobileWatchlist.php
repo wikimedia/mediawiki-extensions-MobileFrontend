@@ -3,12 +3,15 @@
 class SpecialMobileWatchlist extends SpecialWatchlist {
 	const LIMIT = 50; // Performance-safe value with PageImages
 	const THUMB_SIZE = 150;
+	const VIEW_OPTION_NAME = 'mfWatchlistView';
+	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
 
 	private $filter,
 		$seenTitles,
 		$seenDays,
 		$today,
-		$usePageImages;
+		$usePageImages,
+		$optionsChanged = false;
 
 	/** @var Title */
 	private $fromPageTitle;
@@ -18,7 +21,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
-		$this->getOutput()->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
@@ -27,7 +29,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$req = $this->getRequest();
 		$view = $req->getVal( 'watchlistview', 'a-z' );
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
-		$recentChangesView = ( $view === 'feed' ) ? true : false;
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
@@ -40,16 +41,25 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$output->setProperty( 'bodyClassName', 'no-margins' );
 		}
 
-		if ( $recentChangesView ) {
+		if ( $view === 'feed' ) {
 			$this->filter = $this->getRequest()->getVal( 'filter', 'all' );
 			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
 			$this->showFeedResults( $res );
+			// make filter stick on feed view
+			$this->updatePreference( self::FILTER_OPTION_NAME, $this->filter );
 		} else {
 			$this->filter = $this->getRequest()->getVal( 'filter', 'articles' );
 			$res = $this->doListQuery();
 			$this->showListResults( $res );
 		}
+
+		// make view sticky
+		$this->updatePreference( self::VIEW_OPTION_NAME, $view );
+		if ( $this->optionsChanged ) {
+			$user->saveSettings();
+		}
+		$this->getOutput()->setProperty( 'mobile.htmlHeader', $this->getWatchlistHeader() );
 
 		wfProfileOut( __METHOD__ );
 	}
@@ -88,7 +98,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	protected function getWatchlistHeader() {
-		$cur = $this->getRequest()->getVal( 'watchlistview', 'a-z' );
+		$user = $this->getUser();
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
 		$attrsList = array(
 			'class' => 'button mw-mf-watchlist-view-selector'
@@ -96,7 +106,9 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$attrsFeed = array(
 			'class' => 'button mw-mf-watchlist-view-selector'
 		);
-		if ( $cur == 'feed' ) {
+		$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
+		$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, 'all' );
+		if ( $view === 'feed' ) {
 			$attrsFeed[ 'class' ] .= ' active';
 		} else {
 			$attrsList[ 'class' ] .= ' active';
@@ -115,13 +127,14 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
 				$attrsList,
 				array(
-					'watchlistview' => 'a-z'
+					'watchlistview' => 'a-z',
 				)
 			) .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-feed' )->text(),
 				$attrsFeed,
 				array(
+					'filter' => $filter,
 					'watchlistview' => 'feed'
 				)
 			) .
@@ -499,4 +512,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		wfProfileOut( __METHOD__ );
 	}
 
+	private function updatePreference( $name, $value ) {
+		$user = $this->getUser();
+		if ( $user->getOption( $name ) != $value ) {
+			$user->setOption( $name, $value );
+			$this->optionsChanged = true;
+		}
+	}
 }
