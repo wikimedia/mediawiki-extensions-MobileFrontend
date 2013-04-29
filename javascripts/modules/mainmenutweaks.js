@@ -10,5 +10,8 @@
 		// to users who haven't uploaded anything to make the page useful.
 		$( '#mw-mf-menu-main li.icon-uploads' ).remove();
 	}
+	if ( !M.supportsGeoLocation() ) {
+		$( '#mw-mf-menu-main li.icon-nearby' ).remove();
+	}
 
 } )( mw.mobileFrontend, jQuery );

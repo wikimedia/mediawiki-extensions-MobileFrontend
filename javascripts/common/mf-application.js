@@ -86,6 +86,10 @@
 		return support;
 	}
 
+	function supportsGeoLocation() {
+		return !!navigator.geolocation;
+	}
+
 	// Try to scroll and hide URL bar
 	scrollY = window.scrollY || 0;
 	if( !window.location.hash && scrollY < 10 ) {
@@ -215,6 +219,7 @@
 		message: message,
 		on: on,
 		prefix: 'mw-mf-',
+		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		triggerPageReadyHook: triggerPageReadyHook,
 		prettyEncodeTitle: prettyEncodeTitle,
