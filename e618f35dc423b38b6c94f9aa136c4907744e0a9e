@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv.AUe-U",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-29T18:52:35Z",
+      "side": 1,
+      "message": "a comment explaining these regexes would be helpful so future curious code readers don\u0027t have to sit and figure it out :)\n\nalso, a comment explaining why we\u0027re using the title for the description would be helpful too - with no context, i imagine this would seem really confusing.",
+      "revId": "e618f35dc423b38b6c94f9aa136c4907744e0a9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
