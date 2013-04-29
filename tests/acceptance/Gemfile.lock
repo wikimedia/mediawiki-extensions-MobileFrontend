@@ -26,10 +26,10 @@ GEM
       page_navigation (>= 0.7)
       selenium-webdriver (>= 2.32.1)
       watir-webdriver (>= 0.6.3)
-    page_navigation (0.7)
+    page_navigation (0.8)
       data_magic (>= 0.14)
     parallel (0.6.4)
-    parallel_tests (0.11.1)
+    parallel_tests (0.11.3)
       parallel
     rake (10.0.4)
     rspec-expectations (2.13.0)
@@ -41,7 +41,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     syntax (1.0.0)
-    watir-webdriver (0.6.3)
+    watir-webdriver (0.6.4)
       selenium-webdriver (>= 2.18.0)
     websocket (1.0.7)
     yml_reader (0.2)
