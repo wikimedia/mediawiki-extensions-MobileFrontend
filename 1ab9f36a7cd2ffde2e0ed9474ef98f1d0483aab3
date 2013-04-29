@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dv.DR21Q",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T18:32:11Z",
+      "side": 1,
+      "message": "what\u0027s the correct way to do this then? I thought about putting a global in MobileFrontend.php but that seemed wrong as well..",
+      "parentUuid": "Dv4XG.Uo",
+      "revId": "1ab9f36a7cd2ffde2e0ed9474ef98f1d0483aab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv0Wnoao",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-04-29T17:02:29Z",
       "side": 1,
       "message": "Needless unconditional DB writes.",
+      "revId": "1ab9f36a7cd2ffde2e0ed9474ef98f1d0483aab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv6DEQ5Q",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-29T18:32:11Z",
+      "side": 1,
+      "message": "You want me to only write them if they have changed?",
+      "parentUuid": "Dv0Wnoao",
       "revId": "1ab9f36a7cd2ffde2e0ed9474ef98f1d0483aab3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
