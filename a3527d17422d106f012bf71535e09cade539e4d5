@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvwUWiaY",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-29T17:11:42Z",
+      "side": 1,
+      "message": "Can we stay closer to desktop and use \u0027newsectionsummary\u0027?",
+      "revId": "a3527d17422d106f012bf71535e09cade539e4d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv4X4OXo",
+        "filename": "templates/overlays/talkSectionAdd.html",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-29T17:11:42Z",
+      "side": 1,
+      "message": "Not localised.",
+      "revId": "a3527d17422d106f012bf71535e09cade539e4d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
