@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv3YQUU8",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T22:34:17Z",
+      "side": 0,
+      "message": "I\u0027m not sure if we want to remove it. I think enableModule() doesn\u0027t enforce any order of loading modules, dependencies do. Check with someone who know RL well.",
+      "revId": "bacaffc60a6451c20cc490ede0a75378a63bb6ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
