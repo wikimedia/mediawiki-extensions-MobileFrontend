@@ -84,6 +84,7 @@ class ApiParseExtender {
 				);
 				$mf->removeImages( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
+				$mf->enableExpandableSections( !$params['mainpage'] );
 				$mf->filterContent();
 				$data['parse']['text'] = $mf->getText();
 
