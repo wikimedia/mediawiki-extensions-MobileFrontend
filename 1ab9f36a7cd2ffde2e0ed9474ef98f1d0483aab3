@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv4XG.Uo",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-29T17:02:29Z",
+      "side": 1,
+      "message": "When the same string is represented by 2 constants in different classes, the point in using it is lost as it\u0027s now possible to change one constant without changing another one.",
+      "revId": "1ab9f36a7cd2ffde2e0ed9474ef98f1d0483aab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv0Wnoao",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-29T17:02:29Z",
+      "side": 1,
+      "message": "Needless unconditional DB writes.",
+      "revId": "1ab9f36a7cd2ffde2e0ed9474ef98f1d0483aab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
