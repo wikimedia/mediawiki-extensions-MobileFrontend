@@ -106,6 +106,7 @@ $wgHooks['UserLoginComplete'][] = 'MobileFrontendHooks::onUserLoginComplete';
 $wgHooks['UserLoginForm'][] = 'MobileFrontendHooks::onUserLoginForm';
 $wgHooks['UserCreateForm'][] = 'MobileFrontendHooks::onUserCreateForm';
 $wgHooks['BeforePageDisplay'][] = 'MobileFrontendHooks::onBeforePageDisplay';
+$wgHooks['CustomEditor'][] = 'MobileFrontendHooks::onCustomEditor';
 
 $wgSpecialPages['Uploads'] = 'SpecialUploads';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
@@ -911,3 +912,8 @@ $wgMFEnableXAnalyticsLogging = false;
  * Otherwise, page HTML will be varied on it.
  */
 $wgMFVaryResources = false;
+
+/**
+ * Whether or not anonymous (not logged in) users should be able to edit.
+ */
+$wgMFAnonymousEditing = false;

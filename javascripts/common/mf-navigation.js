@@ -107,7 +107,7 @@ var m = ( function( $ ) {
 	function enableEditing( title ) {
 		$( '#mw-mf-edit-page-link' ).remove();
 		if ( title &&
-			mw.config.get( 'wgUserName' ) && // FIXME: currently only shown for users
+			( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
 			mw.config.get( 'wgIsPageEditable' ) && // user is allowed to edit
 			mw.util.getParamValue( 'action' ) !== 'edit' ) {
 			$( '<a id="mw-mf-edit-page-link">' ).text( 'edit' ).attr( 'href',
