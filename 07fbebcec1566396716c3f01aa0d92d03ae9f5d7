@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv9azRec",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "What does it change?",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv9bspco",
+        "filename": "javascripts/common/history-beta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "if ( r.error || !r.mobileview.sections )\n\nand then remove else {}",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv1by9Zk",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "FIXME?",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv-YQwaw",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "What does all of this do?",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv7YKSXk",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "If href has returnto, add returnto?",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv1YcNb4",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "Not sure why this is necessary either. I removed it in Ifd6dff45b7931348db60abed76952d74d7947db4 because it doesn\u0027t seem to do anything useful.",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv3b7cXc",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "Why, oh why the [0]?! It\u0027s and id, there\u0027s no way there\u0027s more than one #content. And if there is, let\u0027s fix the merkup!",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvzZReWE",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "I\u0027d rather fire page-loaded in mf-application or somewhere so that we don\u0027t have to write code for dynamic/non-dynamic page loading separately and assume that page-loaded fires always, independently of dynamic loading.",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvxbyPW8",
+        "filename": "templates/page.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-29T23:28:14Z",
+      "side": 1,
+      "message": "Why would we put the whole content as an attribute?",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
