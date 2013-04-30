@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dv7XGvko",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "To simplify template rendering. Now the toggle module looks in the data-content attribute to tell whether it has injected content or not, previously it looked for the existence of the node.\n\nWhen a section is toggled it now checks data-content, injects it inside to the element and clears the data-content value.\n\nLook at template to understand in more detail.",
+      "parentUuid": "Dv9azRec",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv9bspco",
         "filename": "javascripts/common/history-beta.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-04-29T23:28:14Z",
       "side": 1,
       "message": "if ( r.error || !r.mobileview.sections )\n\nand then remove else {}",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv9Wu2oE",
+        "filename": "javascripts/common/history-beta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "While I think of it, is it worth writing a schema to trap API errors which logs the response and url/parameters -r.mobileview.sections would suggest a different type of error to r.error (something broken in API)",
+      "parentUuid": "Dv9bspco",
       "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "Dv5WgYpY",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "I think judging by your comments you should know this now...",
+      "parentUuid": "Dv-YQwaw",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv7YKSXk",
         "filename": "javascripts/common/mf-history-jquery.js",
         "patchSetId": 2
@@ -81,6 +135,24 @@
       "writtenOn": "2013-04-29T23:28:14Z",
       "side": 1,
       "message": "If href has returnto, add returnto?",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv7WdXlY",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "It replaces returnto with the current page\n\nFor instance if the login link says login then return to page B and I\u0027m now on page C it will be odd to login and return to the page I wasn\u0027t on.",
+      "parentUuid": "Dv7YKSXk",
       "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "Dv1Wq6nM",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "License says \"You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).\"\n\nWithout this change the history link is broken and doesn\u0027t attribute the current page thus is in violation of license. See my comment on your footer change.",
+      "parentUuid": "Dv1YcNb4",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv3b7cXc",
         "filename": "javascripts/common/mf-history-jquery.js",
         "patchSetId": 2
@@ -115,6 +205,24 @@
       "writtenOn": "2013-04-29T23:28:14Z",
       "side": 1,
       "message": "Why, oh why the [0]?! It\u0027s and id, there\u0027s no way there\u0027s more than one #content. And if there is, let\u0027s fix the merkup!",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv3Wn5qo",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "Well.. Views as you designed them expect el to be a DOM element not a jQuery object. :P\n\nif ( options.el ) {\n\t\t\tthis.$el \u003d $( options.el );\n\t\t} else {\n\t\t\tthis.$el \u003d $( \u0027\u003cdiv\u003e\u0027 );\n\t\t}\n\nI don\u0027t see the problem. You would prefer me to use document.getElementById( \u0027content\u0027 ) ?",
+      "parentUuid": "Dv3b7cXc",
       "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +246,24 @@
     },
     {
       "key": {
+        "uuid": "DvzW6zr4",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "I\u0027d prefer to only fire this event when a page has actually been fully loaded via javascript. They are fundamentally different.\n\nThe initial page loaded is very different in current form then the current page after a javascript load - for instance languages are baked into the initial page but need to be fully constructed after a page load via javascript. We need a way to distinguish these two events.\n\nI\u0027d be happy to have 2 events - js-page-loaded and page-loaded but we need to separate these things at the moment",
+      "parentUuid": "DvzZReWE",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DvxbyPW8",
         "filename": "templates/page.html",
         "patchSetId": 2
@@ -149,6 +275,24 @@
       "writtenOn": "2013-04-29T23:28:14Z",
       "side": 1,
       "message": "Why would we put the whole content as an attribute?",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv-Wz1uY",
+        "filename": "templates/page.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-04-30T12:47:16Z",
+      "side": 1,
+      "message": "Whoops I forgot to finish this. see FIXMEs. The idea is to bake references in from the start but for all others place in data attribute so that they can be injected into the DOM easily by the toggle module.",
+      "parentUuid": "DvxbyPW8",
       "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
