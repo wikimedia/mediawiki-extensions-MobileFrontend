@@ -12,14 +12,13 @@ input.search.searching {
 .full-screen-search .search-box {
   padding-right: 8px;
 }
-#mw-mf-searchForm .clearlink {
+form .clear {
   top: 9px;
   right: 10px;
   width: 24px;
   height: 30px;
   background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
   margin: 0;
-  display: none;
   background-position: right center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
