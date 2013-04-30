@@ -1,4 +1,6 @@
 ( function( M, $ ) {
+var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
+	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
 
 ( function() {
 	var supported = !!navigator.geolocation,
@@ -6,6 +8,9 @@
 		View = M.require( 'view' ),
 		cachedPages,
 		curLocation,
+		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
+		cache = M.settings.saveUserSetting,
+		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
 		Nearby = View.extend( {
 			template: M.template.get( 'articleList' )
 		} );
@@ -63,6 +68,7 @@
 	}
 
 	function render( $content, pages ) {
+		cache( CACHE_KEY_RESULTS, $.toJSON( pages ) ); // cache result
 		pages = $.map( pages, function( page ) {
 			var coords, lngLat, thumb;
 
@@ -152,6 +158,7 @@
 		navigator.geolocation.watchPosition( function( geo ) {
 			var lat = geo.coords.latitude, lng = geo.coords.longitude;
 			curLocation = geo.coords;
+			cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
 			findResults( lat, lng );
 		},
 		function() {
@@ -163,7 +170,13 @@
 	}
 
 	if ( supported ) {
+		if ( lastKnownLocation ) {
+			curLocation = $.parseJSON( lastKnownLocation );
+		}
 		init();
+		if ( lastSearchResult ) {
+			render( $( '#content' ), $.parseJSON( lastSearchResult ) );
+		}
 	}
 	M.define( 'nearby', {
 		distanceMessage: distanceMessage

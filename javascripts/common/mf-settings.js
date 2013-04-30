@@ -59,8 +59,9 @@ M.settings = ( function() {
 				( useCookieFallback ? writeCookie( name, value, 1 ) : false );
 	}
 
-	function getUserSetting( name ) {
-		return supportsLocalStorage ? localStorage.getItem( name ) : readCookie( name );
+	function getUserSetting( name, useCookieFallback ) {
+		return supportsLocalStorage ? localStorage.getItem( name ) :
+			( useCookieFallback ? readCookie( name ) : false );
 	}
 
 	return {
