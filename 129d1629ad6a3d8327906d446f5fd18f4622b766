@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dv77huwE",
+        "filename": "javascripts/modules/search-2.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-30T19:27:30Z",
+      "side": 1,
+      "message": "Why such a long selector? Why not \u0027.header .search-box\u0027?",
+      "revId": "129d1629ad6a3d8327906d446f5fd18f4622b766",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dv57k-xE",
+        "filename": "javascripts/modules/search-2.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-04-30T19:27:30Z",
+      "side": 1,
+      "message": "Hello...",
+      "revId": "129d1629ad6a3d8327906d446f5fd18f4622b766",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
