@@ -140,7 +140,7 @@
 					text( mw.message( 'mobile-frontend-nearby-noresults' ).plain() ).
 					appendTo( $content );
 			}
-		} ).error( function() {
+		} ).fail( function() {
 			$( '#mw-mf-nearby' ).addClass( 'alert error content' ).text( mw.message( 'mobile-frontend-nearby-error' ) );
 		} );
 	}
