@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwAg8a94",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:31:09Z",
+      "side": 1,
+      "message": "Better to use #!/usr/bin/env bash",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwKg2HwA",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:31:09Z",
+      "side": 1,
+      "message": "Mention that MEDIAWIKI_URL needs to be set and possibly check if it\u0027s set in the script itself.",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwAhDy3A",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:31:09Z",
+      "side": 1,
+      "message": "Can we make the script check this using git stash list? I never remember if I have something in stash.",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwMgx4ww",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:31:09Z",
+      "side": 1,
+      "message": "Check if tmp exists, if not run mkdir tmp.",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwOhHh3g",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:31:09Z",
+      "side": 1,
+      "message": "open doesn\u0027t work on Linux, let\u0027s replace with echo.",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
