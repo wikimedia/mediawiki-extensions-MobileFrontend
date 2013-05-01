@@ -35,11 +35,6 @@ interface IDeviceProperties {
 	/**
 	 * @return bool
 	 */
-	function supportsJQuery();
-
-	/**
-	 * @return bool
-	 */
 	function isMobileDevice();
 
 	/**
@@ -93,13 +88,6 @@ final class DeviceProperties implements IDeviceProperties {
 	 */
 	public function format() {
 		return $this->device['view_format'];
-	}
-
-	/**
-	 * @return bool
-	 */
-	public function supportsJQuery() {
-		return $this->device['supports_jquery'];
 	}
 
 	/**
@@ -219,102 +207,82 @@ class DeviceDetection implements IDeviceDetector {
 		'android' => array (
 			'view_format' => 'html',
 			'css_file_name' => '',
-			'supports_jquery' => true,
 		),
 		'blackberry' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'blackberry',
-			'supports_jquery' => false,
 		),
 		'blackberry-lt5' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'blackberry',
-			'supports_jquery' => false,
 		),
 		'capable' => array (
 			'view_format' => 'html',
 			'css_file_name' => '',
-			'supports_jquery' => true,
 		),
 		'html' => array (
 			'view_format' => 'html',
 			'css_file_name' => '',
-			'supports_jquery' => false,
 		),
 		'ie' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'ie',
-			'supports_jquery' => true,
 		),
 		'iphone' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'iphone',
-			'supports_jquery' => true,
 		),
 		'kindle' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'kindle',
-			'supports_jquery' => false,
 		),
 		'kindle2' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'kindle',
-			'supports_jquery' => false,
 		),
 		'netfront' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'simple',
-			'supports_jquery' => false,
 		),
 		'nokia' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'nokia',
-			'supports_jquery' => false,
 		),
 		'operamini' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'operamini',
-			'supports_jquery' => false,
 		),
 		'operamobile' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'operamobile',
-			'supports_jquery' => true,
 		),
 		'palm_pre' => array (
 			'view_format' => 'html',
 			'css_file_name' => '',
-			'supports_jquery' => false,
 		),
 		'ps3' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'simple',
-			'supports_jquery' => false,
 		),
 		'psp' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'psp',
-			'supports_jquery' => false,
 		),
 		'wap2' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'simple',
-			'supports_jquery' => false,
 		),
 		'webkit' => array (
 			'view_format' => 'html',
 			'css_file_name' => '',
-			'supports_jquery' => true,
 		),
 		'wii' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'wii',
-			'supports_jquery' => true,
 		),
 		'wml' => array (
 			'view_format' => 'wml',
 			'css_file_name' => '',
-			'supports_jquery' => false,
 		),
 	);
 
@@ -355,7 +323,6 @@ class DeviceDetection implements IDeviceDetector {
 			return new DeviceProperties( array(
 				'view_format' => 'html',
 				'css_file_name' => '',
-				'supports_jquery' => true,
 			), $userAgent );
 		}
 	}

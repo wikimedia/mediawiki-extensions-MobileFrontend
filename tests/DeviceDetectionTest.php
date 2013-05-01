@@ -54,27 +54,6 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideTestDeviceCapabilities
-	 */
-	public function testDeviceCapabilities( $format, $jquery ) {
-		$detector = new DeviceDetection();
-		$device = $detector->getDeviceProperties( $format, '' );
-		$this->assertEquals( $device->supportsJQuery(), $jquery );
-	}
-
-	public function provideTestDeviceCapabilities() {
-		return array(
-			array( 'webkit', true ),
-			array( 'capable', true ),
-			array( 'ie', true ),
-			array( 'nokia', false ),
-			array( 'blackberry', false ),
-			array( 'blackberry-lt5', false ),
-			array( 'html', false ),
-		);
-	}
-
-	/**
 	 * @dataProvider provideTestModuleName
 	 */
 	public function testModuleName( $format, $moduleName ) {
