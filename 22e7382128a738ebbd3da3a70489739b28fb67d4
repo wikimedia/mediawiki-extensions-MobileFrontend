@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DwCtoSbo",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:50:16Z",
+      "side": 1,
+      "message": "Not sure about this comment. \"We did it wrong in qunit.sh, let\u0027s do it wrong here too?\"",
+      "parentUuid": "DwKsp.Yw",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwKg2HwA",
         "filename": "scripts/cachedpage.sh",
         "patchSetId": 3
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "DwKucWb0",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:50:16Z",
+      "side": 1,
+      "message": "Default value? That\u0027s fine too.",
+      "parentUuid": "DwGsX8UQ",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwAhDy3A",
         "filename": "scripts/cachedpage.sh",
         "patchSetId": 3
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "this comment is redundant - the if statement below does that. removing.",
       "parentUuid": "DwAhDy3A",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwAuipf8",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T18:50:16Z",
+      "side": 1,
+      "message": "Are you sure? The if statement below checks for unstaged changes, not stashed changes.",
+      "parentUuid": "DwIsaNWs",
       "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
