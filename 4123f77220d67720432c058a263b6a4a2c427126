@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwLHXqkk",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T21:58:38Z",
+      "side": 1,
+      "message": "I\u0027d rather add a CSS class called e.g. \"visible\" and define all the transition rules in LESS, using mixins (like with the drawer/toast animations in alpha) and making sure that the \u003chtml\u003e class \"transforms\" is present. Or just show it without animation for now and we can play with it later.",
+      "revId": "4123f77220d67720432c058a263b6a4a2c427126",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwPFb8vE",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T21:58:38Z",
+      "side": 1,
+      "message": "I\u0027m still not sure why we wouldn\u0027t do lastSectionId + 1. Do we use that float id anywhere? Why do we need it? Floats for ids are dangerous because of float\u0027s rounding (http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).",
+      "revId": "4123f77220d67720432c058a263b6a4a2c427126",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
