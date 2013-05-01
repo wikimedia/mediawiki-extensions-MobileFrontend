@@ -32,7 +32,7 @@ class SkinMobile extends SkinMobileBase {
 			);
 		}
 		$out->addHeadItem( 'canonical',
-			Html::element( 'link', array( 'href' => $title->getCanonicalURL() ) )
+			Html::element( 'link', array( 'href' => $title->getCanonicalURL(), 'rel' => 'canonical' ) )
 		);
 		$out->addHeadItem( 'viewport',
 			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes' ) )
