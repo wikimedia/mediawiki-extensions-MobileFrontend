@@ -59,6 +59,11 @@ $specialPageAliases['it'] = array(
 	'MobileOptions' => array( 'OpzioniMobile' ),
 );
 
+/** Japanese (日本語) */
+$specialPageAliases['ja'] = array(
+	'Nearby' => array( '付近' ),
+);
+
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
 	'MobileOptions' => array( '모바일설정' ),
