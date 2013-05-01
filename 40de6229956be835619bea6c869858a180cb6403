@@ -16,6 +16,24 @@
       "revId": "40de6229956be835619bea6c869858a180cb6403",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwAv0Ze8",
+        "filename": "scripts/w3c-validate.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T18:58:56Z",
+      "side": 1,
+      "message": "I\u0027d rather not - I\u0027d rather be consistent with where the results go. I think it\u0027s useful for when you want to easily verify thing worked as planned.",
+      "parentUuid": "DwIgJmzQ",
+      "revId": "40de6229956be835619bea6c869858a180cb6403",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
