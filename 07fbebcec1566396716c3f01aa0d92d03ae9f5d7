@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "DwDHKenA",
+        "filename": "javascripts/common/history-beta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T22:46:40Z",
+      "side": 1,
+      "message": "If we want to log API errors (which seems like a good idea) then we should probably do it in the API wrapper, not here, to log it everywhere.",
+      "parentUuid": "Dv9Wu2oE",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv1by9Zk",
         "filename": "javascripts/common/mf-history-jquery.js",
         "patchSetId": 2
@@ -159,6 +177,24 @@
     },
     {
       "key": {
+        "uuid": "DwLGQSkM",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T22:46:40Z",
+      "side": 1,
+      "message": "I see, it was just hard to understand why this isn\u0027t a part of hijackLinks or at least added to the same callback (L146).",
+      "parentUuid": "Dv7WdXlY",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv1YcNb4",
         "filename": "javascripts/common/mf-history-jquery.js",
         "patchSetId": 2
@@ -194,6 +230,24 @@
     },
     {
       "key": {
+        "uuid": "DwBGWVj0",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T22:46:40Z",
+      "side": 1,
+      "message": "So why are we removing it, should it be readded in the footer change?",
+      "parentUuid": "Dv1Wq6nM",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dv3b7cXc",
         "filename": "javascripts/common/mf-history-jquery.js",
         "patchSetId": 2
@@ -223,6 +277,24 @@
       "side": 1,
       "message": "Well.. Views as you designed them expect el to be a DOM element not a jQuery object. :P\n\nif ( options.el ) {\n\t\t\tthis.$el \u003d $( options.el );\n\t\t} else {\n\t\t\tthis.$el \u003d $( \u0027\u003cdiv\u003e\u0027 );\n\t\t}\n\nI don\u0027t see the problem. You would prefer me to use document.getElementById( \u0027content\u0027 ) ?",
       "parentUuid": "Dv3b7cXc",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwBGFtgo",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T22:46:40Z",
+      "side": 1,
+      "message": "Not really. this.$el \u003d $( options.el ); makes it versatile. You can pass whatever $() accepts as an argument, and it does accept jQuery objects too [1]. Therefore, { el: $( \u0027#content\u0027 ) } is a valid option, and the shortest one too.\n\n[1] https://github.com/jquery/jquery/blob/1.9.1/src/core.js#L196",
+      "parentUuid": "Dv3Wn5qo",
       "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -293,6 +365,24 @@
       "side": 1,
       "message": "Whoops I forgot to finish this. see FIXMEs. The idea is to bake references in from the start but for all others place in data attribute so that they can be injected into the DOM easily by the toggle module.",
       "parentUuid": "DvxbyPW8",
+      "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwFHJ-lo",
+        "filename": "templates/page.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-01T22:46:40Z",
+      "side": 1,
+      "message": "I tried reading this three times, maybe I\u0027m too tired. Having two content variables and inserting content as a data attribute seems hackish, no matter what you\u0027re trying to achieve. What is isReferences? In page.js I can only see hasReferences, but I\u0027m also not sure what it refers to. Can you explain this to me on IRC?",
+      "parentUuid": "Dv-Wz1uY",
       "revId": "07fbebcec1566396716c3f01aa0d92d03ae9f5d7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
