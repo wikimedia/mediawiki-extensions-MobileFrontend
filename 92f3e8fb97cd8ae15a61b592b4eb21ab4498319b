@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DwOsFwXo",
+        "filename": "javascripts/common/mf-view.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T20:14:59Z",
+      "side": 1,
+      "message": "I want to do this separately - this will require a big rename of existing definitions that I\u0027d rather avoid. This patchset is far too big already.",
+      "parentUuid": "DwMvp3R0",
+      "revId": "92f3e8fb97cd8ae15a61b592b4eb21ab4498319b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwEvHjZk",
         "filename": "javascripts/modules/talk.js",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-01T19:15:40Z",
       "side": 1,
       "message": "fadeIn can be terribly slow on some phones/browsers. In fact, it doesn\u0027t even work on Android browser 4.2.1 (the new section doesn\u0027t show up, I have to refresh page and reopen talk overlay). CSS transforms are the way to go.",
+      "revId": "92f3e8fb97cd8ae15a61b592b4eb21ab4498319b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwMsG-Yg",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T20:14:59Z",
+      "side": 1,
+      "message": "I assume you mean CSS transitions... I\u0027ve had bad buggy experiences with these so far so I want to be careful in adding them.",
+      "parentUuid": "DwEvHjZk",
       "revId": "92f3e8fb97cd8ae15a61b592b4eb21ab4498319b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
