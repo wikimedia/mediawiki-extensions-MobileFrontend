@@ -382,6 +382,7 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		// for talk.js
 		'mobile-frontend-talk-explained',
 		'mobile-frontend-talk-explained-empty',
+		'mobile-frontend-talk-overlay-lead-header',
 		'mobile-frontend-talk-overlay-header',
 	),
 	'styles' => array(

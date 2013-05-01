@@ -234,6 +234,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-talk-explained' => 'The following conversations are currently active',
 	'mobile-frontend-talk-explained-empty' => 'There are no conversations about this page.',
 	'mobile-frontend-talk-overlay-header' => 'Talk',
+	'mobile-frontend-talk-overlay-lead-header' => 'Unnamed discussion',
 );
 
 /** Message documentation (Message documentation)
@@ -591,6 +592,7 @@ See also:
 	'mobile-frontend-talk-explained-empty' => 'Explains why the list is empty.',
 	'mobile-frontend-talk-overlay-header' => 'Heading for talk overlay.
 {{Identical|Talk}}',
+	'mobile-frontend-talk-overlay-lead-header' => 'Heading for a discussion which has no heading (lead section of talk page)',
 );
 
 /** Achinese (Acèh)
