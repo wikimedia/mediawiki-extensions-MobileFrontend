@@ -36,7 +36,7 @@ SearchOverlay = Overlay.extend( {
 	defaults: {
 		explanation: mw.msg( 'mobile-frontend-search-help' ),
 		noresults: mw.msg( 'mobile-frontend-search-noresults' ),
-		action: $( '#mw-mf-searchForm' ).attr( 'action' )
+		action: mw.config.get( 'wgScript' )
 	},
 	initialize: function() {
 		overlayInitialize.apply( this, arguments );
@@ -52,6 +52,9 @@ SearchOverlay = Overlay.extend( {
 			}
 		} );
 		this.results = [];
+		this.$( '.clear' ).on( 'click', function() {
+			self.$( 'input' ).val( '' ).focus();
+		} );
 	},
 	/**
 	 * A wrapper for $.ajax() to be used when calling server APIs.
