@@ -115,21 +115,21 @@
 	 */
 	function generateFileName( description, fileSuffix, date ) {
 		var allowedLength = 240, // 240 bytes maximum enforced by MediaWiki
-			delimiter = '-', name, suffix;
+			name, suffix;
 
 		fileSuffix = fileSuffix || '.jpg';
 		date = date || new Date();
-		name = description.replace( /[\x1B\n\x7f\.\[#<>\[\]\|\{\}\/:]/g, delimiter );
+		name = description.replace( /[\x1B\n\x7f\.\[#<>\[\]\|\{\}\/:]/g, '-' );
 
 		function pad( number ) {
-			return number < 9 ? '0' + number : number;
+			return number < 10 ? '0' + number : number;
 		}
 
-		suffix = ' ' + date.getFullYear() + delimiter +
-			pad( date.getMonth() + 1 ) + delimiter + pad( date.getDate() ) + ' ' +
-			pad( date.getHours() ) + delimiter + pad( date.getMinutes() ) + fileSuffix;
+		suffix = ' ' + date.getFullYear() + '-' +
+			pad( date.getMonth() + 1 ) + '-' + pad( date.getDate() ) + ' ' +
+			pad( date.getHours() ) + ':' + pad( date.getMinutes() ) + fileSuffix;
 
-		allowedLength = allowedLength - suffix.length;
+		allowedLength -= suffix.length;
 		return trimUtf8String( name, allowedLength ) + suffix;
 	}
 

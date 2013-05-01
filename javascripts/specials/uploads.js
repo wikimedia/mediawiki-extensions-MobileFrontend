@@ -52,7 +52,7 @@ m = ( function() {
 	function getDescription( title ) {
 		title = title.replace( /\.[^\. ]+$/, '' ); // replace filename suffix
 		// strip namespace: prefix and date suffix from remainder
-		return title.replace( /^[^:]*:/, '').replace( / \d{4}-\d{2}-\d{2} \d{2}-\d{2}$/, '' );
+		return title.replace( /^[^:]*:/, '').replace( / \d{4}-\d{1,2}-\d{1,2} \d{1,2}[:-]\d{1,2}$/, '' );
 	}
 
 	function getImageDataFromPage( page ) {
