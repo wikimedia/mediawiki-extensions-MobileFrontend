@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DwKsp.Yw",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T18:43:47Z",
+      "side": 1,
+      "message": "we don\u0027t specify one in qunit.sh so I won\u0027t do so here either.",
+      "parentUuid": "DwAg8a94",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwKg2HwA",
         "filename": "scripts/cachedpage.sh",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-01T18:31:09Z",
       "side": 1,
       "message": "Mention that MEDIAWIKI_URL needs to be set and possibly check if it\u0027s set in the script itself.",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwGsX8UQ",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T18:43:47Z",
+      "side": 1,
+      "message": "i\u0027ll do same as qunit.sh",
+      "parentUuid": "DwKg2HwA",
       "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "DwIsaNWs",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T18:43:47Z",
+      "side": 1,
+      "message": "this comment is redundant - the if statement below does that. removing.",
+      "parentUuid": "DwAhDy3A",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwMgx4ww",
         "filename": "scripts/cachedpage.sh",
         "patchSetId": 3
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "DwAtY5S4",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T18:43:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DwMgx4ww",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwOhHh3g",
         "filename": "scripts/cachedpage.sh",
         "patchSetId": 3
@@ -81,6 +153,24 @@
       "writtenOn": "2013-05-01T18:31:09Z",
       "side": 1,
       "message": "open doesn\u0027t work on Linux, let\u0027s replace with echo.",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwKtSmRA",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-01T18:43:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DwOhHh3g",
       "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
