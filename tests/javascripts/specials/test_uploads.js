@@ -5,11 +5,12 @@ QUnit.module( 'MobileFrontend donate image' );
 
 QUnit.test( 'getDescription', function() {
 	var tests = [
-			[ 'File:Pirates in SF 2013-04-03 15-44.png', 'Pirates in SF' ],
-			[ 'File:Jon lies next to volcano 2013-03-18 13-37.jpeg', 'Jon lies next to volcano' ],
+			[ 'File:Pirates in SF 2013-04-03 15:44.png', 'Pirates in SF' ],
+			[ 'File:Legacy pirates in SF 2013-04-03 15-9.png', 'Legacy pirates in SF' ],
+			[ 'File:Jon lies next to volcano 2013-03-18 13:37.jpeg', 'Jon lies next to volcano' ],
 			[ 'hello world 37.jpg', 'hello world 37' ],
 			[ 'hello world again.jpeg', 'hello world again' ],
-			[ 'Fichier:French Photo Timestamp 2013-04-03 15-44.jpg', 'French Photo Timestamp' ],
+			[ 'Fichier:French Photo Timestamp 2013-04-03 15:44.jpg', 'French Photo Timestamp' ],
 			[ 'Fichier:Full stop. Photo.unknownfileextension', 'Full stop. Photo' ],
 			[ 'File:No file extension but has a . in the title', 'No file extension but has a . in the title' ],
 			[ 'Fichier:French Photo.jpg', 'French Photo' ]

@@ -62,16 +62,16 @@ QUnit.test( 'PhotoUploadProgress', 3, function() {
 } );
 
 QUnit.test( 'generateFileName', 1, function() {
-	var date = new Date( 2010, 9, 15, 12, 51 ),
+	var date = new Date( 2010, 9, 15, 12, 9 ),
 		name = photo.generateFileName( 'Jon eating bacon next to an armadillo', '.jpg', date );
-	strictEqual( name, 'Jon eating bacon next to an armadillo 2010-10-15 12-51.jpg',
+	strictEqual( name, 'Jon eating bacon next to an armadillo 2010-10-15 12:09.jpg',
 		'Check file name is description with appended date' );
 } );
 
 QUnit.test( 'generateFileName test padding', 1, function() {
 	var date = new Date( 2013, 2, 1, 12, 51 ), // note 0 = january
 		name = photo.generateFileName( 'Tomasz eating bacon next to a dinosaur', '.jpg', date );
-	strictEqual( name, 'Tomasz eating bacon next to a dinosaur 2013-03-01 12-51.jpg',
+	strictEqual( name, 'Tomasz eating bacon next to a dinosaur 2013-03-01 12:51.jpg',
 		'Check file name is description with appended date and numbers were padded' );
 } );
 
@@ -85,7 +85,7 @@ QUnit.test( 'generateFileName long line', 2, function() {
 	}
 	name = photo.generateFileName( longDescription, '.jpg', date );
 	strictEqual( name.length, 240, 'Check file name was shortened to the minimum length' );
-	strictEqual( name.substr( 233, 7 ), '-51.jpg', 'ends with date' );
+	strictEqual( name.substr( 233, 7 ), ':51.jpg', 'ends with date' );
 } );
 
 QUnit.test( 'generateFileName with new lines', 1, function() {
@@ -94,7 +94,7 @@ QUnit.test( 'generateFileName with new lines', 1, function() {
 		date = new Date( 2013, 2, 1, 12, 51 ), name;
 
 	name = photo.generateFileName( description, '.jpg', date );
-	strictEqual( name, 'One-Two-Three 2013-03-01 12-51.jpg', 'New lines converted' );
+	strictEqual( name, 'One-Two-Three 2013-03-01 12:51.jpg', 'New lines converted' );
 } );
 
 QUnit.test( 'trimUtf8String', 4, function() {
