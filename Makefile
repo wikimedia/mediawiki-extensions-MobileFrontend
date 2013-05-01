@@ -26,3 +26,7 @@ installhooks:
 	ln -sf ${PWD}/scripts/pre-commit .git/hooks/pre-commit
 	ln -sf ${PWD}/scripts/pre-rebase .git/hooks/pre-rebase
 	ln -sf ${PWD}/scripts/post-rewrite .git/hooks/post-rewrite
+
+# user must create W3CValidationTest wiki page with text 'Hello world' for this to work
+validatehtml:
+	@scripts/validatehtml.sh
