@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Provides device-specific CSS and device type information.
- * Only available when $wgMFVaryResources = true
+ * Provides device-specific CSS
+ * Only added to output when $wgMFVaryResources = true
  */
 class MobileDeviceDetectModule extends ResourceLoaderFileModule {
 	protected $xDevice = null;
@@ -20,16 +20,7 @@ class MobileDeviceDetectModule extends ResourceLoaderFileModule {
 			}
 		}
 	}
-}
 
-class MobileDeviceDetectScriptsModule extends MobileDeviceDetectModule {
-	public function getScript( ResourceLoaderContext $context ) {
-		$this->init( $context );
-		return Xml::encodeJsCall( 'mw.config.set', array( 'wgMobileDeviceName', $this->xDevice ) );
-	}
-}
-
-class MobileDeviceDetectStylesModule extends MobileDeviceDetectModule {
 	public function getStyles( ResourceLoaderContext $context ) {
 		$this->init( $context );
 
