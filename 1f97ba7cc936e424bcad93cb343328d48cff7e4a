@@ -16,6 +16,24 @@
       "revId": "1f97ba7cc936e424bcad93cb343328d48cff7e4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwBc8ht4",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2013-05-02T16:01:08Z",
+      "side": 1,
+      "message": "I always think bitwise OR as the standard way to do getTalkNamespace() because it works on both subject and talk namespaces with no overhead (an extra if)...\n\nNothing in Media namespace is accessible as a web page. When it\u0027s accessed, a redirect to File namespace is returned, thus mw.config.get( \u0027wgNamespaceNumber\u0027 ) is set to 6 as a File page.\n\nFor Special namespace, -1 | 1 \u003d\u003d -1, so this bitwise OR trick still more or less works (at least it\u0027s not returning something meaningless).",
+      "parentUuid": "DwNdfvkg",
+      "revId": "1f97ba7cc936e424bcad93cb343328d48cff7e4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
