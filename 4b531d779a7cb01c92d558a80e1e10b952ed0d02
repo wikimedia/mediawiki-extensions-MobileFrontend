@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwJ94rPE",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-05-02T22:53:49Z",
+      "side": 1,
+      "message": "There is currently 1-1 mapping between x-carrier \u0026 x-cs, x-cs is always set, and the x-carrier will go away, so I don\u0027t think we need the carrier here.",
+      "revId": "4b531d779a7cb01c92d558a80e1e10b952ed0d02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
