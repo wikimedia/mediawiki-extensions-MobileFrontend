@@ -2889,33 +2889,6 @@ $messages['de'] = array(
 	'mobile-frontend-footer-contributors-text' => 'Seite von [$1 Mitwirkenden] wie dir',
 	'mobile-frontend-featured-article' => 'Artikel des Tages',
 	'mobile-frontend-news-items' => 'In den Nachrichten',
-	'mobile-frontend-leave-feedback-notice' => 'Deine Rückmeldung hilft uns dabei, die mobile Ansicht weiter zu verbessern. Sie wird öffentlich auf der Seite &quot;$1&quot; angezeigt. Dabei werden dein Benutzername, die Version des von dir genutzten Browsers sowie das von dir genutzte Betriebssystem angegeben. Bitte wähle einen informativen und aussagekräftigen Betreff, wie bswp. „Probleme bei der Anzeige von Tabellen“. Deine Rückmeldung unterliegt dabei unseren Nutzungsbedingungen.',
-	'mobile-frontend-leave-feedback-warning' => 'Nimm bitte keine personenbezogenen Informationen von dir in deine Kommentare auf, es sei denn, du bist damit einverstanden, dass sie veröffentlicht werden.',
-	'mobile-frontend-leave-feedback-subject' => 'Betreff:',
-	'mobile-frontend-leave-feedback-message' => 'Nachricht:',
-	'mobile-frontend-leave-feedback-submit' => 'Rückmeldung senden',
-	'mobile-frontend-leave-feedback-link-text' => 'Rückmeldung zur mobilen Ansicht',
-	'mobile-frontend-leave-feedback' => 'Rückmeldung geben',
-	'mobile-frontend-leave-feedback-title' => 'Rückmeldung zur mobilen Ansicht',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Technisches Problem',
-	'mobile-frontend-leave-feedback-general-section-header' => 'Allgemein',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Rückmeldung zum Artikel',
-	'mobile-frontend-leave-feedback-email-body' => 'Bitte beschreibe das Problem, das du bei {{SITENAME}} entdeckt hast, oberhalb dieser Linie. Bitte bedenke, dass wir nicht auf jede Nachricht antworten können, die wir erhalten.',
-	'mobile-frontend-leave-feedback-technical-link-text' => 'Technisches Problem',
-	'mobile-frontend-leave-feedback-general-link-text' => 'Allgemeine Rückmeldung',
-	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Zu mir, einer Person oder einem Unternehmen, das ich vertrete',
-	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Zu einem sachlichen Fehler',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'Zu einem anderen Problem',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Betreff der Nachricht',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Gib deine Nachricht hier ein',
-	'mobile-frontend-leave-feedback-page-title' => 'Rückmeldung zur mobilen Ansicht',
-	'mobile-frontend-leave-feedback-special-title' => 'Kontaktiere uns',
-	'mobile-frontend-feedback-no-subject' => '(kein Betreff)',
-	'mobile-frontend-feedback-no-subject-field' => 'Bitte gib einen Betreff ein',
-	'mobile-frontend-feedback-no-message' => 'Bitte gib deine Nachricht an dieser Stelle ein',
-	'mobile-frontend-feedback-edit-summary' => '$1 - automatisch gespeicherte [[Special:MobileFeedback|Rückmeldung]]',
-	'mobile-frontend-leave-feedback-thanks' => 'Vielen Dank für deine Rückmeldung.',
-	'mobile-frontend-leave-feedback-post-error' => 'Beim Verarbeiten deiner Nachricht ist ein Fehler aufgetreten. Bitte versuche es später erneut.',
 	'mobile-frontend-language' => 'Sprache:',
 	'mobile-frontend-language-article-heading' => 'In einer anderen Sprache lesen',
 	'mobile-frontend-language-header' => 'Diese Seite ist in {{PLURAL:$1|einer Sprache|$1 Sprachen}} verfügbar',
@@ -3059,6 +3032,7 @@ Hilf mit, Leben in diese Seiten zu bringen, indem du Bilder spendest, die von de
 	'mobile-frontend-talk-explained' => 'Die folgenden Diskussionen sind derzeit aktiv',
 	'mobile-frontend-talk-explained-empty' => 'Zu dieser Seite gibt es keine Diskussionen.',
 	'mobile-frontend-talk-overlay-header' => 'Diskussion',
+	'mobile-frontend-talk-overlay-lead-header' => 'Unbenannte Diskussion',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4679,6 +4653,7 @@ Il y a beaucoup de pages qui n'ont pas de photo à cause d'un manque important d
 	'mobile-frontend-talk-explained' => 'Les conversations suivantes sont actives en ce moment',
 	'mobile-frontend-talk-explained-empty' => 'Il n’y a pas de conversations sur cette page.',
 	'mobile-frontend-talk-overlay-header' => 'Discussion',
+	'mobile-frontend-talk-overlay-lead-header' => 'Discussion anonyme',
 );
 
 /** Franco-Provençal (arpetan)
@@ -5523,6 +5498,7 @@ $messages['haw'] = array(
  * @author Deror avi
  * @author Inkbug
  * @author Michagogo
+ * @author Orsa
  * @author Ypnypn
  */
 $messages['he'] = array(
@@ -5709,6 +5685,7 @@ $messages['he'] = array(
 	'mobile-frontend-talk-explained' => 'השיחות הבאות פעילות עכשיו',
 	'mobile-frontend-talk-explained-empty' => 'אין שיחות על הדף הזה.',
 	'mobile-frontend-talk-overlay-header' => 'שיחה',
+	'mobile-frontend-talk-overlay-lead-header' => 'דיון ללא שם',
 );
 
 /** Hindi (हिन्दी)
@@ -7059,34 +7036,6 @@ $messages['ja'] = array(
 	'mobile-frontend-footer-contributors-text' => 'あなたのような[$1 投稿者]が執筆したページ',
 	'mobile-frontend-featured-article' => '今日の秀逸な記事',
 	'mobile-frontend-news-items' => '新着情報',
-	'mobile-frontend-leave-feedback-notice' => 'フィードバックは携帯機器ウェブサイトの使用感を向上させる助けになります。フィードバックは (利用者名、ブラウザーのバージョン、オペレーティングシステムとともに) &quot;$1&quot;のページで公開されます。「幅の広い表の書式の問題」のように、情報量が多い表題名を付けるようにしてください。フィードバックは利用規約の対象です。',
-	'mobile-frontend-leave-feedback-warning' => '情報が公開されることに同意できる場合を除いて、コメントには個人情報を含めないでください。',
-	'mobile-frontend-leave-feedback-subject' => '表題:',
-	'mobile-frontend-leave-feedback-message' => '本文:',
-	'mobile-frontend-leave-feedback-submit' => 'フィードバックを送信',
-	'mobile-frontend-leave-feedback-link-text' => '携帯機器フロントエンド拡張機能のフィードバック',
-	'mobile-frontend-leave-feedback' => '携帯機器ウェブサイトのフィードバック',
-	'mobile-frontend-leave-feedback-title' => '携帯機器ウェブサイトのフィードバック',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => '技術的な問題',
-	'mobile-frontend-leave-feedback-general-section-header' => '全般',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => '記事へのフィードバック',
-	'mobile-frontend-leave-feedback-email-body' => 'あなたが {{SITENAME}} で体験した問題点についてこの行の上に書いてください。私たちがメッセージすべてに対しては返信できないことにご注意ください。',
-	'mobile-frontend-leave-feedback-technical-link-text' => '技術的な問題',
-	'mobile-frontend-leave-feedback-general-link-text' => '全般的なフィードバック',
-	'mobile-frontend-leave-feedback-article-personal-link-text' => '自分、または自分が代理人を務める人物や会社について',
-	'mobile-frontend-leave-feedback-article-factual-link-text' => '事実の誤認について',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'その他の問題について',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'メッセージの件名',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'コメントをここに入力',
-	'mobile-frontend-leave-feedback-page-title' => '携帯機器ウェブサイトのフィードバック',
-	'mobile-frontend-feedback-page' => 'Project:携帯機器拡張機能へのフィードバック',
-	'mobile-frontend-leave-feedback-special-title' => 'ウィキメディアに関するお問い合わせ',
-	'mobile-frontend-feedback-no-subject' => '(表題なし)',
-	'mobile-frontend-feedback-no-subject-field' => '件名を入力してください',
-	'mobile-frontend-feedback-no-message' => 'ここにメッセージをお書きください',
-	'mobile-frontend-feedback-edit-summary' => '$1 - [[Special:MobileFeedback|携帯機器版のフィードバックツール]]を使用した自動投稿',
-	'mobile-frontend-leave-feedback-thanks' => 'フィードバックをありがとうございます。',
-	'mobile-frontend-leave-feedback-post-error' => 'メッセージの処理中にエラーが発生しました。後ほどまたお試しください。',
 	'mobile-frontend-language' => '言語:',
 	'mobile-frontend-language-article-heading' => '別の言語で閲覧',
 	'mobile-frontend-language-header' => 'このページは $1 言語で提供されています。',
@@ -7219,6 +7168,7 @@ $messages['ja'] = array(
 	'mobile-frontend-drawer-cancel' => 'キャンセル',
 	'mobile-frontend-talk-explained-empty' => 'このページについての会話はありません。',
 	'mobile-frontend-talk-overlay-header' => 'トーク',
+	'mobile-frontend-talk-overlay-lead-header' => '無題の議論',
 );
 
 /** Javanese (Basa Jawa)
@@ -9168,34 +9118,6 @@ $messages['mk'] = array(
 	'mobile-frontend-footer-contributors-text' => 'Сстраницата ја напишаа [$1 учесници] како вас',
 	'mobile-frontend-featured-article' => 'Избрана статија за денес',
 	'mobile-frontend-news-items' => 'Вести',
-	'mobile-frontend-leave-feedback-notice' => 'Вашето мислење ни помага да ја подобриме мобилната верзија. Мислењето ќе биде објавено јавно (заедно со корисничкото име, верзијата на прелистувачот и оперативниот систем) на страницата „$1“. Одберете информативен наслов, како на пр. „Проблем со форматирање на широките табели“. Искажаното мислење подлежи на условите на употреба.',
-	'mobile-frontend-leave-feedback-warning' => 'Доколку не сакате вашите информации да бидат јавни, ве молиме не наведувајте лични податоци во коментарот.',
-	'mobile-frontend-leave-feedback-subject' => 'Наслов:',
-	'mobile-frontend-leave-feedback-message' => 'Порака:',
-	'mobile-frontend-leave-feedback-submit' => 'Поднеси мислење',
-	'mobile-frontend-leave-feedback-link-text' => 'Мислење за Мобилниот посредник',
-	'mobile-frontend-leave-feedback' => 'Дајте мислење',
-	'mobile-frontend-leave-feedback-title' => 'Мислење за мобилната верзија',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Технички проблем',
-	'mobile-frontend-leave-feedback-general-section-header' => 'Општо',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Оценување на статии',
-	'mobile-frontend-leave-feedback-email-body' => 'Над овој ред опишете го проблемот со кој се соочувате на {{SITENAME}}. Имајте предвид дека не можеме да одговориме на секоја порака што ќе ја примиме.',
-	'mobile-frontend-leave-feedback-technical-link-text' => 'Технички проблем',
-	'mobile-frontend-leave-feedback-general-link-text' => 'Општи мислења',
-	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Во врска со мене, лице или фирма што застапувам',
-	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Во врска со фактографска грешка',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'Во врска со друг проблем',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Наслов на пораката',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Тука внесете го коментарот',
-	'mobile-frontend-leave-feedback-page-title' => 'Мислење за мобилната верзија',
-	'mobile-frontend-feedback-page' => 'Project:Мислења за мобилниот додаток',
-	'mobile-frontend-leave-feedback-special-title' => 'Контактирајте нè',
-	'mobile-frontend-feedback-no-subject' => '(без наслов)',
-	'mobile-frontend-feedback-no-subject-field' => 'Внесете наслов',
-	'mobile-frontend-feedback-no-message' => 'Тука напишете ја пораката',
-	'mobile-frontend-feedback-edit-summary' => '$1 - автоматски објавено користејќи ја [[Special:MobileFeedback|алатката за мислења за мобилната верзија]]',
-	'mobile-frontend-leave-feedback-thanks' => 'Ви благодариме за искажаното мислење!',
-	'mobile-frontend-leave-feedback-post-error' => 'Настана грешка при обработката на пораката. Обидете се повторно.',
 	'mobile-frontend-language' => 'Јазик:',
 	'mobile-frontend-language-article-heading' => 'На други јазици',
 	'mobile-frontend-language-header' => 'Оваа страница е достапна на $1 {{PLURAL:$1|јазик|јазици}}',
@@ -9338,6 +9260,7 @@ $messages['mk'] = array(
 	'mobile-frontend-talk-explained' => 'Моментално се активни следниве разговори',
 	'mobile-frontend-talk-explained-empty' => 'Нема разговори за страницава.',
 	'mobile-frontend-talk-overlay-header' => 'Разговор',
+	'mobile-frontend-talk-overlay-lead-header' => 'Безимена расправа',
 );
 
 /** Malayalam (മലയാളം)
@@ -11502,6 +11425,7 @@ $messages['pt'] = array(
 
 /** Brazilian Portuguese (português do Brasil)
  * @author Giro720
+ * @author Luckas
  * @author MetalBrasil
  * @author Rafael Vargas
  * @author Tuliouel
@@ -11522,21 +11446,13 @@ $messages['pt-br'] = array(
 	'mobile-frontend-enable-images' => 'Ativar imagens no site móvel',
 	'mobile-frontend-featured-article' => 'Artigo em destaque',
 	'mobile-frontend-news-items' => 'Eventos recentes',
-	'mobile-frontend-leave-feedback-notice' => 'Seus comentários nos ajudam a melhorar a sua experiência no site móvel. Ele será postado publicamente (juntamente com seu nome de usuário, a versão do navegador e sistema operacional) na página "$1". Por favor, tente escolher um assunto informativo, por exemplo, "problemas de formatação em tabelas largas". Seus comentários estão sujeitos aos nossos termos de uso.',
-	'mobile-frontend-leave-feedback-subject' => 'Assunto:',
-	'mobile-frontend-leave-feedback-message' => 'Mensagem:',
-	'mobile-frontend-leave-feedback-submit' => 'Enviar comentários',
-	'mobile-frontend-leave-feedback-link-text' => 'Comentário de interface móvel',
-	'mobile-frontend-leave-feedback' => 'Deixar comentário',
-	'mobile-frontend-leave-feedback-title' => 'Deixar feedback sobre a experiência com a interface móvel',
-	'mobile-frontend-leave-feedback-page-title' => 'Deixar feedback sobre a experiência com a interface móvel',
-	'mobile-frontend-leave-feedback-thanks' => 'Obrigado por seus comentários!',
 	'mobile-frontend-language' => 'Idioma:',
 	'mobile-frontend-username' => 'Nome de usuário:',
 	'mobile-frontend-password' => 'Senha:',
 	'mobile-frontend-login' => 'Autenticar-se',
 	'mobile-frontend-placeholder' => 'Digite sua pesquisa aqui...', # Fuzzy
 	'mobile-frontend-nearby-title' => 'Redondezas',
+	'mobile-frontend-listed-image-no-description' => 'Sem descrição',
 );
 
 /** Quechua (Runa Simi)
@@ -11615,33 +11531,6 @@ $messages['ro'] = array(
 	'mobile-frontend-footer-contributors-text' => 'Pagină redactată de [$1 contribuitori] ca dumneavoastră',
 	'mobile-frontend-featured-article' => 'Articolul de calitate al zilei',
 	'mobile-frontend-news-items' => 'Știri',
-	'mobile-frontend-leave-feedback-notice' => 'Părerea dumneavoastră ne va ajuta să îmbunătățim navigarea pe site-ul mobil. Aceasta va fi făcută publică (împreună cu numele dumneavoastră de utilizator, versiunea browserului și sistemul de operare) pe pagina „$1”. Încercați să alegeți un titlu informativ; ex.: „Probleme cu formatarea tabelelor late”. Comentariile dumnevoastră sunt supuse condițiilor noastre de utilizare.',
-	'mobile-frontend-leave-feedback-warning' => 'Dacă nu sunteți de acord ca informațiile dumneavoastră să fie publice, vă rugăm să nu includeți detalii personale în comentarii.',
-	'mobile-frontend-leave-feedback-subject' => 'Subiect:',
-	'mobile-frontend-leave-feedback-message' => 'Mesaj:',
-	'mobile-frontend-leave-feedback-submit' => 'Trimite părerea',
-	'mobile-frontend-leave-feedback-link-text' => 'Păreri despre interfața mobilă',
-	'mobile-frontend-leave-feedback' => 'Scrieți-vă părerea',
-	'mobile-frontend-leave-feedback-title' => 'Păreri despre interfața mobilă',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Problemă tehnică',
-	'mobile-frontend-leave-feedback-general-section-header' => 'Generalități',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Evaluare articol',
-	'mobile-frontend-leave-feedback-email-body' => 'Vă rugăm să detaliați problema cu care vă confruntați la {{SITENAME}} deasupra acestei linii. Rețineți că nu putem răspunde tuturor mesajelor pe care le primim.',
-	'mobile-frontend-leave-feedback-technical-link-text' => 'Problemă tehnică',
-	'mobile-frontend-leave-feedback-general-link-text' => 'Păreri generale',
-	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Cu privire la mine, o persoană, sau o societate pe care o reprezint',
-	'mobile-frontend-leave-feedback-article-factual-link-text' => 'În ceea ce privește o eroare de fapt',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'Cu privire la o altă problemă',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Subiectul mesajului',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Scrieți aici comentariul dumneavoastră',
-	'mobile-frontend-leave-feedback-page-title' => 'Păreri despre interfața mobilă',
-	'mobile-frontend-leave-feedback-special-title' => 'Contactați-ne',
-	'mobile-frontend-feedback-no-subject' => '(fără subiect)',
-	'mobile-frontend-feedback-no-subject-field' => 'Vă rugăm să specificați un subiect',
-	'mobile-frontend-feedback-no-message' => 'Vă rugăm să introduceți un mesaj aici',
-	'mobile-frontend-feedback-edit-summary' => '$1 - publicat automat prin intermediul [[Special:MobileFeedback|uneltei de feedback mobil]]',
-	'mobile-frontend-leave-feedback-thanks' => 'Vă mulțumim pentru păreri!',
-	'mobile-frontend-leave-feedback-post-error' => 'A apărut o eroare în timpul procesării mesajului dumneavoastră. Vă rugăm să reîncercați mai târziu.',
 	'mobile-frontend-language' => 'Limbă:',
 	'mobile-frontend-language-article-heading' => 'Lecturare în altă limbă',
 	'mobile-frontend-language-header' => 'Această pagină este disponibilă {{PLURAL:$1|într-o singură limbă|în $1 limbi|în $1 de limbi}}',
@@ -11784,6 +11673,7 @@ Ajutați-ne să dăm viață acestor pagini, donând acele fotografii pe care do
 	'mobile-frontend-talk-explained' => 'Următoarele conversații sunt active în prezent',
 	'mobile-frontend-talk-explained-empty' => 'Nu există conversații vizavi de această pagină.',
 	'mobile-frontend-talk-overlay-header' => 'Discuție',
+	'mobile-frontend-talk-overlay-lead-header' => 'Discuție neintitulată',
 );
 
 /** tarandíne (tarandíne)
@@ -14353,7 +14243,7 @@ $messages['vec'] = array(
 	'mobile-frontend-nearby-noresults' => 'Te si in mexo al gnente e nó semo boni catar nisun articoło. Parché no te ghi ne scrivi uno?',
 	'mobile-frontend-nearby-refresh' => 'Te ghemo catà na poxision pì precixa. Struca cuà par ricrear ła lista de łe pàjine visine',
 	'mobile-frontend-nearby-error' => 'Ghe xe sta un eror nó spetà mentre se jera drio sercar łe pàjine visine',
-	'mobile-frontend-donate-image-login' => 'Entra par varda i file che te ghe cargà', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'Entra par vardar i file che te ghe cargà.',
 	'mobile-frontend-photo-upload-generic' => "Dona n'imaxene",
 	'mobile-frontend-donate-image-title' => 'Caricamenti',
 	'mobile-frontend-donate-image-summary' => "Łe someje łe porta łe pàjine so {{SITENAME}} a ła vita.
@@ -14366,6 +14256,7 @@ Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca es
 	'mobile-frontend-donate-photo-first-upload-success' => 'Bon! Grassie par el to primo contributo!',
 	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} gà bisogno de foto par darghe vita a le so pagine!',
 	'mobile-frontend-first-upload-wizard-page-2' => 'Par piaser, dona sol che le foto che te ghè scatà proprio ti.',
+	'mobile-frontend-first-upload-wizard-page-3' => 'Le foto che te doni le podarà condivìdar, riutilizar, e modificar milioni de persone.',
 	'mobile-frontend-watchlist-add' => "Xonta $1 a łe to tegnùe d'ocio",
 	'mobile-frontend-watchlist-removed' => "Cava $1 da łe to tegnùe d'ocio",
 	'mobile-frontend-watchlist-view' => "Varda łe to tegnùe d'ocio",
@@ -14406,6 +14297,9 @@ Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca es
 	'mobile-frontend-photo-ownership' => 'Mi, $1, gò creà sta imagine.',
 	'mobile-frontend-photo-ownership-help' => 'Sa vol dir?',
 	'mobile-frontend-photo-ownership-confirm' => 'Go capìo!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Podemo acetar sol che le foto che te ghe fato ti stesso. Par piaser no stà cargar imagini che te ghè catà da calche parte in Internet.',
+	'mobile-frontend-photo-ownership-bullet-two' => 'Le imagini protete da copyright o inaproprià le vegnarà scancelà.',
+	'mobile-frontend-photo-ownership-bullet-three' => 'I to caricamenti i xe rilasià soto na licensa che ghe parmete a tuti quanti de ridopararli a maca.',
 	'mobile-frontend-image-uploading-wait' => "So' drio cargar l'imàxene, porta pasiensa un fià.",
 	'mobile-frontend-image-uploading-long' => "L'imagine la xe 'ncora drio cargarse. Grassie de la to pasiensa.",
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Anula</a> se ghe vole massa tenpo.',
@@ -14421,8 +14315,10 @@ Jutane a portar ste pàjine a ła vita donandoghe łe to someje, podaria anca es
 	'tag-mobile_edit' => 'Canbiamento da tełefonin',
 	'tag-mobile_edit-description' => "Modifega fata dal sito pa' dispoxitivi mobiłi",
 	'mobile-frontend-drawer-cancel' => 'Anuła',
+	'mobile-frontend-talk-explained' => 'Le seguenti conversasion le xe atualmente ative',
 	'mobile-frontend-talk-explained-empty' => 'No ghe xe conversazion su de sta pagina.',
 	'mobile-frontend-talk-overlay-header' => 'Discusion',
+	'mobile-frontend-talk-overlay-lead-header' => 'Discussion sensa nome',
 );
 
 /** Veps (vepsän kel’)
@@ -14495,34 +14391,6 @@ $messages['vi'] = array(
 	'mobile-frontend-footer-contributors-text' => 'Trang do [$1 những người giống bạn] đóng góp',
 	'mobile-frontend-featured-article' => 'Bài viết chọn lọc',
 	'mobile-frontend-news-items' => 'Tin tức',
-	'mobile-frontend-leave-feedback-notice' => 'Phản hồi giúp chúng tôi cải tiến các trang di động. Những cảm nghĩ của bạn sẽ được đăng công khai vào trang “$1”, cùng với tên người dùng, phiên bản trình duyệt, và hệ điều hành của bạn. Xin vui lòng chọn một tiêu đề có ý nghĩa, thí dụ “Vấn đề hiển thị bảng rộng”. Phản hồi của bạn sẽ được xử lý theo các điều khoản sử dụng.',
-	'mobile-frontend-leave-feedback-warning' => 'Xin vui lòng không bao gồm thông tin cá nhân trong bình luận của bạn, không thôi thông tin của bạn sẽ có sẵn công khai.',
-	'mobile-frontend-leave-feedback-subject' => 'Tiêu đề:',
-	'mobile-frontend-leave-feedback-message' => 'Thông điệp:',
-	'mobile-frontend-leave-feedback-submit' => 'Gửi phản hồi',
-	'mobile-frontend-leave-feedback-link-text' => 'Phản hồi về giao diện di động',
-	'mobile-frontend-leave-feedback' => 'Gửi phản hồi',
-	'mobile-frontend-leave-feedback-title' => 'Phản hồi về giao diện di động',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'Vấn đề kỹ thuật',
-	'mobile-frontend-leave-feedback-general-section-header' => 'Tổng quát',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'Phản hồi bài',
-	'mobile-frontend-leave-feedback-email-body' => 'Xin vui lòng miêu tả vấn đề bạn đang gặp tại {{SITENAME}} ở trên dòng này. Lưu ý rằng chúng tôi không thể trả lời tất cả mọi thông điệp được gửi cho chúng tôi.',
-	'mobile-frontend-leave-feedback-technical-link-text' => 'Vấn đề kỹ thuật',
-	'mobile-frontend-leave-feedback-general-link-text' => 'Phản hồi chung',
-	'mobile-frontend-leave-feedback-article-personal-link-text' => 'Về tôi hoặc người hay công ty mà tôi đại diện',
-	'mobile-frontend-leave-feedback-article-factual-link-text' => 'Về thông tin không chính xác',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'Về vấn đề khác',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'Tiêu đề thông điệp',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'Đưa bình luận vào đây',
-	'mobile-frontend-leave-feedback-page-title' => 'Phản hồi về giao diện di động',
-	'mobile-frontend-feedback-page' => 'Project:Phản hồi Phần mở rộng Di động',
-	'mobile-frontend-leave-feedback-special-title' => 'Liên lạc',
-	'mobile-frontend-feedback-no-subject' => '(không tiêu đề)',
-	'mobile-frontend-feedback-no-subject-field' => 'Xin vui lòng đưa vào một tiêu đề',
-	'mobile-frontend-feedback-no-message' => 'Xin vui lòng nhắn tin vào đây',
-	'mobile-frontend-feedback-edit-summary' => '$1 – do [[Special:MobileFeedback|công cụ phản hồi di động]] đăng tự động',
-	'mobile-frontend-leave-feedback-thanks' => 'Cám ơn phản hồi của bạn!',
-	'mobile-frontend-leave-feedback-post-error' => 'Đã xảy ra lỗi khi xử lý thông điệp của bạn. Xin hãy thử lại sau.',
 	'mobile-frontend-language' => 'Ngôn ngữ:',
 	'mobile-frontend-language-article-heading' => 'Đọc trong ngôn ngữ khác',
 	'mobile-frontend-language-header' => 'Trang này có sẵn trong $1 ngôn ngữ',
@@ -14665,6 +14533,7 @@ Hãy giúp làm các trang này thú vị hơn bằng cách vui lòng đóng gó
 	'mobile-frontend-talk-explained' => 'Các cuộc thảo luận sau đây đang tiếp diễn',
 	'mobile-frontend-talk-explained-empty' => 'Không có cuộc thảo luận nào về trang này.',
 	'mobile-frontend-talk-overlay-header' => 'Thảo luận',
+	'mobile-frontend-talk-overlay-lead-header' => 'Thảo luận không tên',
 );
 
 /** Volapük (Volapük)
