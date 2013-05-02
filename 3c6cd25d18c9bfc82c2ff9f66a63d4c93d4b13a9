@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwBdxJqk",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T10:08:43Z",
+      "side": 1,
+      "message": "set to generic?",
+      "revId": "3c6cd25d18c9bfc82c2ff9f66a63d4c93d4b13a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwPd1opQ",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T10:08:43Z",
+      "side": 1,
+      "message": "why change order to make iphone above android?",
+      "revId": "3c6cd25d18c9bfc82c2ff9f66a63d4c93d4b13a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwFdrrrg",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T10:08:43Z",
+      "side": 1,
+      "message": "Opera/9.80 (J2ME/MIDP; Opera Mini/9 (Compatible; MSIE:9.0; iPhone; BlackBerry9700; AppleWebKit/24.746; U; en) Presto/2.5.25 Version/10.54\n\nWill now match as iphone when Opera Mini is found. This is wrong.",
+      "revId": "3c6cd25d18c9bfc82c2ff9f66a63d4c93d4b13a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
