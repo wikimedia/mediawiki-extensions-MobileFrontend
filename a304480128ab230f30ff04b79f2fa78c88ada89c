@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DwOyhVK4",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-02T20:42:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DwAxceOk",
+      "revId": "a304480128ab230f30ff04b79f2fa78c88ada89c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwMwKkNM",
         "filename": "includes/DeviceDetection.php",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "DwCyzPAs",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-02T20:42:30Z",
+      "side": 1,
+      "message": "These are different regexes. And collapsing them into one regex /(iPhone|iPad).* Safari/ will actually make things slower.",
+      "parentUuid": "DwMwKkNM",
+      "revId": "a304480128ab230f30ff04b79f2fa78c88ada89c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwGz6ZLw",
         "filename": "includes/DeviceDetection.php",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2013-05-02T20:29:24Z",
       "side": 1,
       "message": "since we don\u0027t really distinguish between blackberry-lt5 and blackberry (or do we? i haven\u0027t seen anything that suggests we do), can we just collapse these?",
+      "revId": "a304480128ab230f30ff04b79f2fa78c88ada89c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwMzUUCA",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-02T20:42:30Z",
+      "side": 1,
+      "message": "Yes, I\u0027ve thought about this. Need Jon\u0027s comments though.",
+      "parentUuid": "DwGz6ZLw",
       "revId": "a304480128ab230f30ff04b79f2fa78c88ada89c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
