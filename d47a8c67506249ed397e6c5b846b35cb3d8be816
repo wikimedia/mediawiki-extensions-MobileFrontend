@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DwPd-YmE",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T10:59:07Z",
+      "side": 1,
+      "message": "looks like we don\u0027t. I\u0027ll remove after dependencies have been dealt with in review.",
+      "parentUuid": "DwDF8Ohw",
+      "revId": "d47a8c67506249ed397e6c5b846b35cb3d8be816",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwPGa0l4",
         "filename": "javascripts/common/mf-history-jquery.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-01T22:36:04Z",
       "side": 1,
       "message": "see inline comment above (and also apply to javascripts/common/mf-toggle-dynamic.js)",
+      "revId": "d47a8c67506249ed397e6c5b846b35cb3d8be816",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwFeVboU",
+        "filename": "javascripts/common/mf-history-jquery.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T10:59:07Z",
+      "side": 1,
+      "message": "bit confused. did you comment on correct line? the above comment doesn\u0027t seem related..",
+      "parentUuid": "DwPGa0l4",
       "revId": "d47a8c67506249ed397e6c5b846b35cb3d8be816",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
