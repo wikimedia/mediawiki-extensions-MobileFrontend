@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwNdfvkg",
+        "filename": "javascripts/modules/talk.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T15:27:12Z",
+      "side": 1,
+      "message": "Fun bit of javascript ;-) Out of interest why not + 1 ? I\u0027m struggling to see why you choose Bitwise OR...\n\nAlso slight (insignificant?) edge case - Media namespace returns Special as the talk page location - not sure if that\u0027s correct as Media namespace redirects anyway so shouldn\u0027t be a problem but wanted to check..?",
+      "revId": "1f97ba7cc936e424bcad93cb343328d48cff7e4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
