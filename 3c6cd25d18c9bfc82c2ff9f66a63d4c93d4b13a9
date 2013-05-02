@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DwJdlNuU",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 327,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-02T10:12:08Z",
+      "side": 1,
+      "message": "No, it will not detect WAP devices then.",
+      "parentUuid": "DwBdxJqk",
+      "revId": "3c6cd25d18c9bfc82c2ff9f66a63d4c93d4b13a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwPd1opQ",
         "filename": "includes/DeviceDetection.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "DwHdiMtw",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-02T10:12:08Z",
+      "side": 1,
+      "message": "Because iPhone is most popular, so breaking soon with it reduces the average number of regexes run per request. See the commit message;)",
+      "parentUuid": "DwPd1opQ",
+      "revId": "3c6cd25d18c9bfc82c2ff9f66a63d4c93d4b13a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwFdrrrg",
         "filename": "includes/DeviceDetection.php",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2013-05-02T10:08:43Z",
       "side": 1,
       "message": "Opera/9.80 (J2ME/MIDP; Opera Mini/9 (Compatible; MSIE:9.0; iPhone; BlackBerry9700; AppleWebKit/24.746; U; en) Presto/2.5.25 Version/10.54\n\nWill now match as iphone when Opera Mini is found. This is wrong.",
+      "revId": "3c6cd25d18c9bfc82c2ff9f66a63d4c93d4b13a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwNeXvpk",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-02T10:12:08Z",
+      "side": 1,
+      "message": "It won\u0027t, see tests.",
+      "parentUuid": "DwFdrrrg",
       "revId": "3c6cd25d18c9bfc82c2ff9f66a63d4c93d4b13a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
