@@ -108,53 +108,51 @@ final class DeviceProperties implements IDeviceProperties {
 
 		$patterns = array(
 			'mobi',
-			'phone',
-			'android',
-			'ipod',
-			'webos',
-			'palm',
-			'opera.m',
-			'semc-browser',
-			'playstation',
-			'nintendo',
-			'blackberry',
-			'bada',
-			'meego',
-			'vodafone',
-			'docomo',
-			'samsung',
-			'alcatel',
-			'motor',
-			'huawei',
-			'audiovox',
-			'philips',
-			'mot-',
-			'cdm-',
-			'sagem-',
-			'htc[-_]',
-			'ngm_',
-			'mmp\/',
-			'up.browser',
-			'symbian',
-			'midp',
-			'kindle',
-			'softbank',
-			'sec-',
 			'240x240',
 			'240x320',
 			'320x320',
-			'ericsson',
-			'panasonic',
-			'hiptop',
-			'portalmmm',
-			'kddi-',
+			'alcatel',
+			'android',
+			'audiovox',
+			'bada',
 			'benq',
+			'blackberry',
+			'cdm-',
 			'compal-',
-			'sanyo',
-			'sharp',
-			'teleca',
+			'docomo',
+			'ericsson',
+			'hiptop',
+			'htc[-_]',
+			'huawei',
+			'ipod',
+			'kddi-',
+			'kindle',
+			'meego',
+			'midp',
 			'mitsu',
+			'mmp\/',
+			'mot-',
+			'motor',
+			'ngm_',
+			'nintendo',
+			'opera.m',
+			'palm',
+			'panasonic',
+			'philips',
+			'phone',
+			'playstation',
+			'portalmmm',
+			'sagem-',
+			'samsung',
+			'sanyo',
+			'sec-',
 			'sendo',
+			'sharp',
+			'softbank',
+			'symbian',
+			'teleca',
+			'up.browser',
+			'webos',
 		);
 		$patternsStart = array(
 			'lg-',
@@ -204,6 +202,11 @@ final class DeviceProperties implements IDeviceProperties {
 class DeviceDetection implements IDeviceDetector {
 
 	private static $formats = array (
+		'generic' => array (
+			'view_format' => 'html',
+			'css_file_name' => '',
+		),
+
 		'android' => array (
 			'view_format' => 'html',
 			'css_file_name' => '',
@@ -211,18 +214,6 @@ class DeviceDetection implements IDeviceDetector {
 		'blackberry' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'blackberry',
-		),
-		'blackberry-lt5' => array (
-			'view_format' => 'html',
-			'css_file_name' => 'blackberry',
-		),
-		'capable' => array (
-			'view_format' => 'html',
-			'css_file_name' => '',
-		),
-		'html' => array (
-			'view_format' => 'html',
-			'css_file_name' => '',
 		),
 		'ie' => array (
 			'view_format' => 'html',
@@ -233,10 +224,6 @@ class DeviceDetection implements IDeviceDetector {
 			'css_file_name' => 'iphone',
 		),
 		'kindle' => array (
-			'view_format' => 'html',
-			'css_file_name' => 'kindle',
-		),
-		'kindle2' => array (
 			'view_format' => 'html',
 			'css_file_name' => 'kindle',
 		),
@@ -260,25 +247,9 @@ class DeviceDetection implements IDeviceDetector {
 			'view_format' => 'html',
 			'css_file_name' => '',
 		),
-		'ps3' => array (
-			'view_format' => 'html',
-			'css_file_name' => 'simple',
-		),
-		'psp' => array (
-			'view_format' => 'html',
-			'css_file_name' => 'psp',
-		),
-		'wap2' => array (
-			'view_format' => 'html',
-			'css_file_name' => 'simple',
-		),
 		'webkit' => array (
 			'view_format' => 'html',
 			'css_file_name' => '',
-		),
-		'wii' => array (
-			'view_format' => 'html',
-			'css_file_name' => 'wii',
 		),
 		'wml' => array (
 			'view_format' => 'wml',
@@ -317,14 +288,10 @@ class DeviceDetection implements IDeviceDetector {
 	 * @return IDeviceProperties
 	 */
 	public function getDeviceProperties( $deviceName, $userAgent ) {
-		if ( isset( self::$formats[$deviceName] ) ) {
-			return new DeviceProperties( self::$formats[$deviceName], $userAgent );
-		} else {
-			return new DeviceProperties( array(
-				'view_format' => 'html',
-				'css_file_name' => '',
-			), $userAgent );
+		if ( !isset( self::$formats[$deviceName] ) ) {
+			$deviceName = 'generic';
 		}
+		return new DeviceProperties( self::$formats[$deviceName], $userAgent );
 	}
 
 	/**
@@ -336,79 +303,53 @@ class DeviceDetection implements IDeviceDetector {
 		wfProfileIn( __METHOD__ );
 
 		$deviceName = '';
-		if ( preg_match( '/Android/', $userAgent ) ) {
-			$deviceName = 'android';
-			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
-				$deviceName = 'operamini';
-			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
-				$deviceName = 'operamobile';
-			}
-		} elseif ( preg_match( '/MSIE (8|9|1\d)\./', $userAgent ) ) {
-			$deviceName = 'ie';
-		} elseif( preg_match( '/MSIE/', $userAgent ) ) {
-			$deviceName = 'html';
-		} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
-			$deviceName = 'operamobile';
-		} elseif ( preg_match( '/iPad.* Safari/', $userAgent ) ) {
-			$deviceName = 'iphone';
-		} elseif ( preg_match( '/iPhone.* Safari/', $userAgent ) ) {
-			$deviceName = 'iphone';
-		} elseif ( preg_match( '/iPhone/', $userAgent ) ) {
-			if ( strpos( $userAgent, 'Opera' ) !== false ) {
-				$deviceName = 'operamini';
-			} else {
-				$deviceName = 'capable';
-			}
-		} elseif ( preg_match( '/WebKit/', $userAgent ) ) {
-			if ( preg_match( '/Series60/', $userAgent ) ) {
+
+		// These regexes come roughly  in order of popularity per
+		// http://stats.wikimedia.org/wikimedia/squids/SquidReportClients.htm
+		// to reduce the average number of regexes per user-agent.
+		if ( strpos( $userAgent, 'Safari' ) !== false ) {
+			if ( strpos( $userAgent, 'iPhone' ) !== false
+				|| strpos( $userAgent, 'iPad' ) !== false
+			) {
+				$deviceName = 'iphone';
+			} elseif ( strpos( $userAgent, 'Android' ) !== false ) {
+				$deviceName = 'android';
+			} elseif ( strpos( $userAgent, 'Series60' ) !== false ) {
 				$deviceName = 'nokia';
-			} elseif ( preg_match( '/webOS/', $userAgent ) ) {
+			} elseif ( strpos( $userAgent, 'webOS' ) !== false ) {
 				$deviceName = 'palm_pre';
 			} else {
 				$deviceName = 'webkit';
 			}
-		} elseif ( preg_match( '/Opera/', $userAgent ) ) {
-			if ( strpos( $userAgent, 'Nintendo Wii' ) !== false ) {
-				$deviceName = 'wii';
-			} elseif ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
+		} elseif ( strpos( $userAgent, 'Opera/' ) !== false ) {
+			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
 				$deviceName = 'operamini';
-			} else {
+			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
 				$deviceName = 'operamobile';
-			}
-		} elseif ( preg_match( '/Kindle\/1.0/', $userAgent ) ) {
-			$deviceName = 'kindle';
-		} elseif ( preg_match( '/Kindle\/2.0/', $userAgent ) ) {
-			$deviceName = 'kindle2';
-		} elseif ( preg_match( '/Firefox|Maemo Browser|Fennec/', $userAgent ) ) {
-			$deviceName = 'capable';
-		} elseif ( preg_match( '/NetFront/', $userAgent ) ) {
-			$deviceName = 'netfront';
-		} elseif ( preg_match( '/SEMC-Browser/', $userAgent ) ) {
-			$deviceName = 'wap2';
-		} elseif ( preg_match( '/Series60/', $userAgent ) ) {
-			$deviceName = 'wap2';
-		} elseif ( preg_match( '/PlayStation Portable/', $userAgent ) ) {
-			$deviceName = 'psp';
-		} elseif ( preg_match( '/PLAYSTATION 3/', $userAgent ) ) {
-			$deviceName = 'ps3';
-		} elseif ( preg_match( '/SAMSUNG/', $userAgent ) ) {
-			$deviceName = 'capable';
-		} elseif ( preg_match( '/BlackBerry/', $userAgent ) ) {
-			if( preg_match( '/BlackBerry[^\/]*\/[1-4]\./', $userAgent ) ) {
-				$deviceName = 'blackberry-lt5';
+			} elseif ( strpos( $userAgent, 'Wii' ) !== false ) {
+				$deviceName = 'operamobile';
 			} else {
-				$deviceName = 'blackberry';
+				$deviceName = 'generic'; // Desktop Opera
 			}
+		} elseif ( strpos( $userAgent, 'BlackBerry' ) !== false ) {
+			$deviceName = 'blackberry';
+		} elseif ( strpos( $userAgent, 'NetFront' ) !== false ) {
+			if ( strpos( $userAgent, 'Kindle' ) !== false ) {
+				$deviceName = 'kindle';
+			} else {
+				$deviceName = 'netfront';
+			}
+		} elseif ( strpos( $userAgent, 'MSIE' ) !== false ) {
+			$deviceName = 'ie';
 		}
 
 		if ( $deviceName === '' ) {
 			if ( strpos( $acceptHeader, 'application/vnd.wap.xhtml+xml' ) !== false ) {
-				// Should be wap2
-				$deviceName = 'html';
+				$deviceName = 'generic';
 			} elseif ( strpos( $acceptHeader, 'vnd.wap.wml' ) !== false ) {
 				$deviceName = 'wml';
 			} else {
-				$deviceName = 'html';
+				$deviceName = 'generic';
 			}
 		}
 		wfProfileOut( __METHOD__ );
