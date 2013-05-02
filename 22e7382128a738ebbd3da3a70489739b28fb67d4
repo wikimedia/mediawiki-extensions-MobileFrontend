@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "DwHcwcug",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T10:01:35Z",
+      "side": 1,
+      "message": "Roger. I just want consistency. Let\u0027s add it to qunit.sh as well.",
+      "parentUuid": "DwCtoSbo",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwKg2HwA",
         "filename": "scripts/cachedpage.sh",
         "patchSetId": 3
@@ -155,6 +173,24 @@
       "side": 1,
       "message": "Are you sure? The if statement below checks for unstaged changes, not stashed changes.",
       "parentUuid": "DwIsaNWs",
+      "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwJczdvU",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-02T10:01:35Z",
+      "side": 1,
+      "message": "ok i\u0027ve confused myself. Why would I need to deal with _stashed_ changes? The important thing to take care of is make sure we don\u0027t lose the developers work and current place. We stash it if it needs stashing and then stash pop it later.",
+      "parentUuid": "DwAuipf8",
       "revId": "22e7382128a738ebbd3da3a70489739b28fb67d4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
