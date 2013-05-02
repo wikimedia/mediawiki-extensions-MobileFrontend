@@ -113,6 +113,27 @@ input[type=submit] {
   background: #999;
   border: 1px #777 solid;
 }
+.content .button.inline,
+.buttonBar .button.inline,
+.content button.inline,
+.buttonBar button.inline,
+.content input[type=submit].inline,
+.buttonBar input[type=submit].inline {
+  display: inline;
+  padding: 0;
+  color: #002bb8;
+  background: none;
+  border: none;
+  text-shadow: none;
+}
+.content .button.inline:hover,
+.buttonBar .button.inline:hover,
+.content button.inline:hover,
+.buttonBar button.inline:hover,
+.content input[type=submit].inline:hover,
+.buttonBar input[type=submit].inline:hover {
+  text-decoration: underline;
+}
 .header .button,
 .header button {
   margin: 8px 0;

@@ -110,13 +110,6 @@ html.overlay #footer {
   right: 0;
   top: 0;
 }
-#mw-mf-page-center .header h2,
-.overlay .header h2 {
-  margin: 0;
-  padding: 0;
-  line-height: 46px;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
 body.navigation-enabled,
 body.navigation-enabled #mw-mf-viewport,
 body.navigation-enabled #mw-mf-page-center {

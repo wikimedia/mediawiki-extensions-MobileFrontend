@@ -104,3 +104,8 @@
 	-webkit-transition-timing-function: @timingFunction;
 	transition-timing-function: @timingFunction;
 }
+
+.animation( @name, @duration ) {
+	animation: @name @duration ease-in-out infinite alternate;
+	-webkit-animation: @name @duration ease-in-out infinite alternate;
+}
