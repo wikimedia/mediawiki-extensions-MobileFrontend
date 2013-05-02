@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwAxceOk",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-02T20:29:24Z",
+      "side": 1,
+      "message": "It would be nice to mention in the docblock that these are in order of popularity - that way the next person adding a regex will think twice about where to put it in the order.",
+      "revId": "a304480128ab230f30ff04b79f2fa78c88ada89c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwMwKkNM",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-02T20:29:24Z",
+      "side": 1,
+      "message": "isn\u0027t this redundant with line 329?",
+      "revId": "a304480128ab230f30ff04b79f2fa78c88ada89c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwGz6ZLw",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 349,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-02T20:29:24Z",
+      "side": 1,
+      "message": "since we don\u0027t really distinguish between blackberry-lt5 and blackberry (or do we? i haven\u0027t seen anything that suggests we do), can we just collapse these?",
+      "revId": "a304480128ab230f30ff04b79f2fa78c88ada89c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
