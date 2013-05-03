@@ -16,6 +16,24 @@
       "revId": "9664ee19de98f85902a0f6b230ff761a8f948a37",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwB2.ZF8",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-05-03T15:54:14Z",
+      "side": 1,
+      "message": "I thought I saw how we might need to send the actual X-CS and X-Subdomain headers back...but, if I\u0027m not mistaken, Varnish augments the requests before it sends in the X-CS and X-Subdomain. And if Varnish sees that the X-CS and X-Subdomain headers it has augmented plus the URL received from the UA (which will be on http[s]://[LANG_CODE].wikipedia.org after Varnish rewrites) plus the 3 other existing Vary: list items match a stale or nonexistent cache object, Varnish will then proxy the call into Apache instead of returning the object to cache. I may be confused, though...am I?",
+      "parentUuid": "DwIL4T0g",
+      "revId": "9664ee19de98f85902a0f6b230ff761a8f948a37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
