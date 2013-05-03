@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwIL4T0g",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-03T01:37:13Z",
+      "side": 1,
+      "message": "I think you may need to send the X-Subdomain and X-CS headers in the response as well as instructing the cache to vary on them?",
+      "revId": "9664ee19de98f85902a0f6b230ff761a8f948a37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
