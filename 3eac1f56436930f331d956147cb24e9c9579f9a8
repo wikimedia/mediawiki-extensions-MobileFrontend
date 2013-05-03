@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwNg2ygE",
+        "filename": "javascripts/common/mf-settings.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-03T19:35:42Z",
+      "side": 1,
+      "message": "Not related, but can stay.",
+      "revId": "3eac1f56436930f331d956147cb24e9c9579f9a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwPgxDgw",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-03T19:35:42Z",
+      "side": 1,
+      "message": "We can use shorter key names if you want, I guess, since we\u0027re not using cookie fallback (and we shouldn\u0027t, I don\u0027t think there are devices with geo location API but no localStorage).",
+      "revId": "3eac1f56436930f331d956147cb24e9c9579f9a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwJhUQiE",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-03T19:35:42Z",
+      "side": 1,
+      "message": "I would not alias that. It just hides what the code is doing later on.",
+      "revId": "3eac1f56436930f331d956147cb24e9c9579f9a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
