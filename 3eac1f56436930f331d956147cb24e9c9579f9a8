@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "DwFMNezU",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-03T20:01:33Z",
+      "side": 1,
+      "message": "We could possibly drop mf prefix since it\u0027s on en.m domain but I prefer making these cache keys more meaningful.",
+      "parentUuid": "DwPgxDgw",
+      "revId": "3eac1f56436930f331d956147cb24e9c9579f9a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwJhUQiE",
         "filename": "javascripts/specials/nearby.js",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2013-05-03T19:35:42Z",
       "side": 1,
       "message": "I would not alias that. It just hides what the code is doing later on.",
+      "revId": "3eac1f56436930f331d956147cb24e9c9579f9a8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwHMQf08",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-03T20:01:33Z",
+      "side": 1,
+      "message": "I disagree. I think it makes things more readable.",
+      "parentUuid": "DwJhUQiE",
       "revId": "3eac1f56436930f331d956147cb24e9c9579f9a8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
