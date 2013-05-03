@@ -1,31 +1,36 @@
 .button.photo {
   position: relative;
   display: table;
-  padding: 0;
   margin: 0 auto;
+  padding-left: 44px;
   text-align: left;
   /* override text-align center - chrome not clickable */
 
 }
+.button.photo div {
+  background: url(images/camera.png) 10px 45% no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 24px auto;
+  -o-background-size: 24px auto;
+  -webkit-background-size: 24px auto;
+  background-size: 24px auto;
+}
+.button.photo input {
+  opacity: 0;
+  z-index: 2;
+}
 .button.photo input,
 .button.photo div {
   cursor: pointer;
-}
-.button.photo input {
   position: absolute;
-  opacity: 0;
   top: 0;
-  z-index: 2;
+  left: 0;
   width: 100%;
   height: 100%;
 }
-.button.photo div {
-  padding: 0.8em 10px 0.8em 44px;
-  background: url(images/camera.png) no-repeat 10px 45%;
-  background-size: 24px auto;
-}
 #content > .button.photo {
-  width: 100%;
+  display: block;
   margin-bottom: 10px;
 }
 .photoPreview {
@@ -141,7 +146,7 @@
   font-size: 1.2em;
   line-height: 1;
 }
-.transforms .alpha .photo-nag label div.active {
+.transforms .photo-nag label div.active {
   animation: pulse 1s ease-in-out infinite alternate;
   -webkit-animation: pulse 1s ease-in-out infinite alternate;
 }

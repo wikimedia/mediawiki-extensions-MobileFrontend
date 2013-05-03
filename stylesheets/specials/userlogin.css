@@ -40,10 +40,13 @@ form.user-login input {
   width: 100%;
   text-align: left;
   text-shadow: none;
-  padding: 1em 0.5em;
   font-size: 1em;
   border: none;
+  padding: .8em .5em;
   border-bottom: solid 1px #E1E1E1;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -68,17 +71,9 @@ form.user-login div.wpCaptcha img.wpCaptcha {
   margin: auto;
 }
 form.user-login div.wpCaptcha,
-form.user-login #wpLoginAttempt {
-  margin: 12px 0;
-}
 form.user-login #wpLoginAttempt,
 form.user-login #wpCreateaccount {
-  text-align: center;
-  padding-top: 8px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-  font-size: 1em;
+  margin: 12px 0;
 }
 form.user-login .mw-mf-create-account {
   padding-top: 12px;
