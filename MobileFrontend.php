@@ -589,6 +589,7 @@ $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + a
 	'dependencies' => array(
 		'mobile.nearby.plumbing',
 		'mobile.stable',
+		'jquery.json',
 	),
 	'messages' => array(
 		'mobile-frontend-nearby-error',
