@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
+	PRECISION = 2,
 	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
 
 ( function() {
@@ -157,9 +158,14 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 			mw.message( 'mobile-frontend-nearby-loading' ) ).appendTo( $content );
 		navigator.geolocation.watchPosition( function( geo ) {
 			var lat = geo.coords.latitude, lng = geo.coords.longitude;
-			curLocation = geo.coords;
-			cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
-			findResults( lat, lng );
+			if ( curLocation && lat.toFixed( PRECISION ) === curLocation.latitude.toFixed( PRECISION ) &&
+				lng.toFixed( PRECISION ) === curLocation.longitude.toFixed( PRECISION ) ) { // bug 47898
+				return;
+			} else {
+				curLocation = geo.coords;
+				cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
+				findResults( lat, lng );
+			}
 		},
 		function() {
 			popup.show( mw.message( 'mobile-frontend-nearby-lookup-error' ).plain(), 'toast' );
