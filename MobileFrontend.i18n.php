@@ -34,7 +34,7 @@ $messages['en'] = array (
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons Here be dragons] mode',
 	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.',
-	'mobile-frontend-save-settings' => 'Save settings',
+	'mobile-frontend-save-settings' => 'Save',
 	'mobile-frontend-random-button' => 'Random',
 
 	/* related to random widget */
