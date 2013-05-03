@@ -139,6 +139,11 @@ html.overlay {
 
 	div.content {
 		padding-bottom: 20px;
+
+		textarea {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	.content {
@@ -183,6 +188,12 @@ html.overlay {
 	}
 }
 
+.search.error,
+.error {
+	border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
+	background-color: @overlayAlertErrorBackgroundColor;
+}
+
 .alert {
 	padding: @overlayAlertPadding;
 	background-repeat: no-repeat;
@@ -201,11 +212,6 @@ html.overlay {
 		background-image: url(images/success.png);
 	}
 
-	&.error {
-		border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
-		background-color: @overlayAlertErrorBackgroundColor;
-	}
-
 	h2 {
 		font-family: @fontFamily;
 		font-size: 100%;
@@ -217,6 +223,27 @@ html.overlay {
 #content {
 	.alert {
 		margin: 0;
+	}
+}
+
+#mw-mf-page-center .header,
+.overlay .header {
+
+	input.search {
+		margin-top: 0;
+	}
+
+	button.add {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	h2 {
+		margin: 0;
+		padding: 0;
+		line-height: @headerHeight;
+		font-family: @fontFamily;
 	}
 }
 

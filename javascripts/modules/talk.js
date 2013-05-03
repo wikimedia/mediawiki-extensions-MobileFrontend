@@ -1,15 +1,103 @@
 ( function( M, $ ) {
 
 	var nav = M.require( 'navigation' ),
+		api = M.require( 'api' ),
+		leadHeading = mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
+		TalkSectionAddOverlay = nav.Overlay.extend( {
+			defaults: {
+				topicAdd: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
+				topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
+				topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' )
+			},
+			template: M.template.get( 'overlays/talkSectionAdd' ),
+			initialize: function( options ) {
+				var self = this;
+				this._super( options );
+				this.talkOverlay = options.parent;
+				this.title = 'Talk:' + mw.config.get( 'wgTitle' );
+				this.$( 'button.save' ).click( function() {
+					self.save();
+				} );
+			},
+			save: function() {
+				var $subject = this.$( 'input' ),
+					$ta = this.$( 'textarea' ),
+					heading = $subject.val(),
+					self = this,
+					text = $ta.val();
+				$ta.removeClass( 'error' );
+				$subject.removeClass( 'error' );
+				if ( text && heading ) {
+					this.$( '.content' ).empty().addClass( 'loading' );
+					api.getToken().done( function( token ) {
+						api.post( {
+							action: 'edit',
+							section: 'new',
+							sectiontitle: heading,
+							title: self.title,
+							token: token,
+							summary: mw.msg( 'mobile-frontend-talk-edit-summary', heading ),
+							text: text + ' ~~~~'
+						} ).done( function() {
+							self.hide();
+							self.talkOverlay.appendSection( { heading: heading, content: text } ); // FIXME: doesn't add signature and doesn't wikify
+						} );
+					} );
+				} else {
+					if ( !text ) {
+						$ta.addClass( 'error' );
+					}
+					if ( !heading ) {
+						$subject.addClass( 'error' );
+					}
+				}
+			}
+		} ),
 		TalkOverlay = nav.Overlay.extend( {
-			template: M.template.get( 'overlays/talk' )
+			template: M.template.get( 'overlays/talk' ),
+			appendSection: function( heading, text ) {
+				var $newTopic;
+				this.options.page.appendSection( heading, text );
+				this.render( this.options );
+				$newTopic = this.$( 'li' ).last();
+				window.scrollTo( 0, $newTopic.offset().top );
+				// FIXME: add fade in animation
+			},
+			initialize: function( options ) {
+				var self = this,
+					page = options.page;
+
+				this._super( options );
+				this.$( 'button.add' ).click( function() {
+					var overlay = new TalkSectionAddOverlay( {
+						parent: self
+					} );
+					overlay.show();
+				} );
+
+				this.$( 'a' ).on( 'click', function() {
+					var id = parseFloat( $( this ).data( 'id' ), 10 ),
+						leadSection = {
+							content: page.lead,
+							heading: leadHeading
+						},
+						section = id === 0 ? leadSection : page.getSubSection( id ),
+						childOverlay = new nav.Overlay( {
+							content: M.template.get( 'talkSection' ).render( section ),
+							parent: self
+						} );
+					childOverlay.show();
+				} );
+				if ( !$.trim( page.lead ) ) {
+					this.$( '.lead-discussion' ).remove();
+				}
+			}
 		} ),
 		talkPage = mw.config.get( 'wgFormattedNamespaces' )[mw.config.get( 'wgNamespaceNumber' ) + 1] +
 			':' + mw.config.get( 'wgTitle' ),
 		Page = M.require( 'page'),
 		$talk = $( '#talk' ),
-		req,
-		api = M.require( 'api' );
+		req;
 
 	$talk.on( 'click', function( ev ) {
 		// FIXME: this currently gives an indication something async is happening. We can do better.
@@ -24,7 +112,6 @@
 		} );
 		req.done( function( resp ) {
 			var topOverlay, sections, page,
-				leadHeading = mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 				explanation;
 
 			if ( resp.error ) {
@@ -42,25 +129,10 @@
 				heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
 				leadHeading: leadHeading,
 				explanation: explanation,
+				page: page,
 				sections: sections
 			} );
 			topOverlay.show();
-			if ( !page.lead ) {
-				topOverlay.$( '.lead-discussion' ).remove();
-			}
-			topOverlay.$( 'a' ).on( 'click', function() {
-				var id = parseInt( $( this ).data( 'id' ), 10 ),
-					leadSection = {
-						content: page.lead,
-						heading: leadHeading
-					},
-					section = id === 0 ? leadSection : page.getSubSection( id ),
-					childOverlay = new nav.Overlay( {
-						content: M.template.get( 'talkSection' ).render( section ),
-						parent: topOverlay
-					} );
-				childOverlay.show();
-			} );
 		} ).error( function() {
 			$talk.css( 'opacity', '' );
 		} );

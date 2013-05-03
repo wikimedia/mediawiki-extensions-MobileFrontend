@@ -64,9 +64,8 @@
 			this.template = M.template.compile( this.template );
 		}
 
-		this.preRender( options );
+		this.options = options;
 		this.render( options );
-		this.initialize( options );
 	}
 
 	View.prototype = new EventEmitter();
@@ -93,9 +92,12 @@
 	 * @param {Object} data Template data.
 	 */
 	View.prototype.render = function( data ) {
+		data = data || this.options;
+		this.preRender( data );
 		if ( this.template ) {
 			this.$el.html( this.template.render( data ) );
 		}
+		this.initialize( data );
 	};
 
 	/**
