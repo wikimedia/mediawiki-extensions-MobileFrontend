@@ -4,8 +4,8 @@
 		TalkOverlay = nav.Overlay.extend( {
 			template: M.template.get( 'overlays/talk' )
 		} ),
-		talkPage = mw.config.get( 'wgFormattedNamespaces' )[mw.config.get( 'wgNamespaceNumber' ) + 1]
-			+ ':' + mw.config.get( 'wgTitle' ),
+		talkPage = mw.config.get( 'wgFormattedNamespaces' )[mw.config.get( 'wgNamespaceNumber' ) + 1] +
+			':' + mw.config.get( 'wgTitle' ),
 		Page = M.require( 'page'),
 		$talk = $( '#talk' ),
 		req,
