@@ -89,6 +89,8 @@ $wgHooks['APIGetParamDescription'][] = 'ApiParseExtender::onAPIGetParamDescripti
 $wgHooks['APIGetDescription'][] = 'ApiParseExtender::onAPIGetDescription';
 $wgHooks['OpenSearchXml'][] = 'ApiQueryExtracts::onOpenSearchXml';
 
+$wgHooks['LinksUpdate'][] = 'MobileFrontendHooks::onLinksUpdate';
+
 $wgHooks['MakeGlobalVariablesScript'][] = 'MobileFrontendHooks::onMakeGlobalVariablesScript';
 $wgHooks['EnableMobileModules'][] = 'MobileFrontendHooks::onEnableMobileModules';
 $wgHooks['RequestContextCreateSkin'][] = 'MobileFrontendHooks::onRequestContextCreateSkin';
