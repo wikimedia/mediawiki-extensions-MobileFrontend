@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwQGsSqA",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-04T08:11:38Z",
+      "side": 1,
+      "message": "can\u0027t we kill wii - this should be opera based so would be better to make this operamobile",
+      "revId": "1d048428c02d46eee8131b6adc803b0de0e9f609",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DweGwRvY",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-04T08:11:38Z",
+      "side": 1,
+      "message": "let\u0027s just make this generic. We don\u0027t test on this device at all anyway...",
+      "revId": "1d048428c02d46eee8131b6adc803b0de0e9f609",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
