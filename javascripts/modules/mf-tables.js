@@ -3,6 +3,10 @@
 ( function() {
 	var STEP_SIZE = 150;
 
+	function isBlacklisted( $table ) {
+		return $table.hasClass( 'metadata' ) || $table.hasClass( 'navbox' );
+	}
+
 	function collapseTables( $container ) {
 		var nav = M.require( 'navigation' ),
 			$tables = $container ? $container.find( 'table' ) : $( 'table' );
@@ -15,7 +19,7 @@
 				colspan, $tr, maxHeight, $td,
 				$container = $( '<div class="tableContent">' );
 
-			if ( $t.parents( 'table' ).length === 0 && $tc.length > 0 ) {
+			if ( $t.parents( 'table' ).length === 0 && $tc.length > 0 && !isBlacklisted( $t ) ) {
 				$block = $t.parents( '.content_block' );
 				if ( $block ) {
 					$t.addClass( 'expando' ).css( { height: STEP_SIZE } );
