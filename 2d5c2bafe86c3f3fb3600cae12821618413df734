@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dwum3jfI",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-06T20:53:13Z",
+      "side": 1,
+      "message": "nice catch.. should be \u003d\u003d\u003d \u0027alpha\u0027 will fix up.",
+      "parentUuid": "DwilulZc",
+      "revId": "2d5c2bafe86c3f3fb3600cae12821618413df734",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwolrYYY",
         "filename": "javascripts/specials/nearby.js",
         "patchSetId": 4
