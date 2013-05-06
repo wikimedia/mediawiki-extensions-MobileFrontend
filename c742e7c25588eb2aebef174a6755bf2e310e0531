@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DwulubQA",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-06T23:13:55Z",
+      "side": 1,
+      "message": "Sorry, must have missed that (or maybe I lost them when I rebased, because I was sure I added them). I\u0027ll add them.",
+      "parentUuid": "DwmmRve8",
+      "revId": "c742e7c25588eb2aebef174a6755bf2e310e0531",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwimwVYk",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-06T22:33:29Z",
       "side": 1,
       "message": "This hook gets invoked whenever RL gets loaded - even on desktop view. While not necessarily an expensive query, this should only get executed when absolutely needed.",
+      "revId": "c742e7c25588eb2aebef174a6755bf2e310e0531",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwlRrrLg",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-06T23:13:55Z",
+      "side": 1,
+      "message": "True. This is a problem we should fix for many other vars too. I\u0027ll add a condition if ( on mobile \u0026\u0026 user logged in ) for this one. We need it on every page for logged in users because potentially there might be a lead photo upload button.",
+      "parentUuid": "DwimwVYk",
       "revId": "c742e7c25588eb2aebef174a6755bf2e310e0531",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
