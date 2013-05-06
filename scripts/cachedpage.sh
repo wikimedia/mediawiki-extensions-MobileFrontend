@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#usage ./scripts/cachedpage.sh 1bd5bc53ebb04fff7f508712a29fdf1f1d7fe14f
+#usage ./scripts/cachedpage.sh 1bd5bc53ebb04fff7f508712a29fdf1f1d7fe14f San_Francisco
 
 if
 ! git diff --exit-code --quiet # check for unstaged changes
@@ -22,21 +22,20 @@ git checkout $1 #go to commit caller requested
 #Generate the 'cached' pages
 mkdir -p tmp
 URL=${MEDIAWIKI_URL:-"http://127.0.0.1:80"}
+TITLE=${2:="Main_Page"}
 echo "Using $URL as a development environment host."
 echo "To specify a different host set MEDIAWIKI_URL environment variable"
 echo '(e.g. by running "export MEDIAWIKI_URL=http://localhost:8080/w")'
-wget "$URL/index.php/Main_Page?useformat=mobile" -O tmp/cached.html
-wget "$URL/index.php/Special:MobileOptions?useformat=mobile" -O tmp/cached_special.html
+wget "$URL/index.php/$TITLE?useformat=mobile" -O tmp/cached.html
 
 #Return to previous branch
 git checkout $cur_branch
 
 # Print location of urls
 echo
-echo Cached pages generated at following locations
+echo Cached page generated at following locations
 echo
 echo \* $URL/extensions/MobileFrontend/tmp/cached.html
-echo \* $URL/extensions/MobileFrontend/tmp/cached_special.html
 
 if [ $stashed_changes ]
 then
