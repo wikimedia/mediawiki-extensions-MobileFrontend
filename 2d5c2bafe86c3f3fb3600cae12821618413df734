@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwilulZc",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-06T20:42:36Z",
+      "side": 1,
+      "message": "the way you use this later only checks if the value of inAlpha evaluates truthfully (rather than checking for alpha vs beta vs stable)",
+      "revId": "2d5c2bafe86c3f3fb3600cae12821618413df734",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwolrYYY",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-06T20:42:36Z",
+      "side": 1,
+      "message": "see above. this should actually check for alpha-ness.",
+      "revId": "2d5c2bafe86c3f3fb3600cae12821618413df734",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
