@@ -16,6 +16,24 @@
       "revId": "b32e3d8a947a3e917c1493bb9cfd44d28d000ad2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwumJTSY",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-06T20:57:27Z",
+      "side": 1,
+      "message": "please see https://gerrit.wikimedia.org/r/#/c/61775/2/scripts/w3c-validate.sh - this is a problem in other scripts and should be fixed in a single but separate commit which changes MEDIAWIKI_URL.",
+      "parentUuid": "DwsmXKZo",
+      "revId": "b32e3d8a947a3e917c1493bb9cfd44d28d000ad2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
