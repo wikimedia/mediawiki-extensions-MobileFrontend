@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwmmRve8",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-06T22:33:29Z",
+      "side": 1,
+      "message": "There are no qqq messages for the learn more messages. WHile not strictly required, I think they would be valuable in this particular case (would be good to explain the bold text too).",
+      "revId": "c742e7c25588eb2aebef174a6755bf2e310e0531",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwimwVYk",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-06T22:33:29Z",
+      "side": 1,
+      "message": "This hook gets invoked whenever RL gets loaded - even on desktop view. While not necessarily an expensive query, this should only get executed when absolutely needed.",
+      "revId": "c742e7c25588eb2aebef174a6755bf2e310e0531",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
