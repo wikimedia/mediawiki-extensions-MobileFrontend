@@ -63,6 +63,7 @@ $autoloadClasses = array (
 	'UnlistedSpecialMobilePage' => 'specials/UnlistedSpecialMobilePage',
 	'SpecialLoginHandshake' => 'specials/SpecialLoginHandshake',
 
+	'SkinMinerva' => 'skins/SkinMinerva',
 	'MinervaTemplate' => 'skins/MinervaTemplate',
 	'SkinMobile' => 'skins/SkinMobile',
 	'SkinMobileTemplate' => 'skins/SkinMobileTemplate',
@@ -161,7 +162,7 @@ $wgMFMobileResourceBoilerplate = array(
 	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
-	'targets' => 'mobile',
+	'targets' => array( 'mobile', 'desktop' ),
 );
 
 /**
@@ -238,6 +239,7 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'position' => 'top',
 );
 
+// Important: This module is loaded on both mobile and desktop skin
 $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 	),
@@ -422,14 +424,11 @@ $wgResourceModules['mobile.stable.styles'] = $wgMFMobileResourceBoilerplate + ar
 	'position' => 'top',
 );
 
-$wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
+// Important: This module is loaded on both mobile and desktop skin
+$wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
-		'mediawiki.jqueryMsg',
 		'mobile.startup',
 		'mobile.stable.dependencies',
-		'mediawiki.util',
-		'mobile.stable.styles',
-		'mobile.site',
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
@@ -439,6 +438,19 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/widgets/progress-bar.js',
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js',
+	),
+);
+
+$wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mediawiki.jqueryMsg',
+		'mobile.startup',
+		'mobile.stable.universal',
+		'mediawiki.util',
+		'mobile.stable.styles',
+		'mobile.site',
+	),
+	'scripts' => array(
 		'javascripts/modules/mf-cleanuptemplates.js',
 		'javascripts/modules/mf-last-modified.js',
 		'javascripts/modules/mf-watchstar.js',

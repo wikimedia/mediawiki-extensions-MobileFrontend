@@ -5,6 +5,10 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	private function prepareCommonData() {
+		// set defaults
+		$this->set( 'postbodytext', '' );
+		$this->set( 'language_urls', array() );
+
 		$searchBox = $this->makeSearchInput(
 			array(
 				'id' => 'searchInput',
@@ -38,6 +42,7 @@ HTML;
 
 	public function prepareData() {
 		$this->set( 'isSpecialPage', Title::newFromText( $this->data[ 'title' ] )->isSpecialPage() );
+		$this->set( 'prebodytext', '<h1>' . $this->data[ 'title' ] . '</h1>' );
 	}
 
 	private function prepareBannerData() {
@@ -69,7 +74,28 @@ HTML;
 		return $this->data['language_urls'];
 	}
 
-	protected function renderLanguages( $languageTemplateData ) {
+	public function getDiscoveryTools() {
+		return $this->data['sidebar']['navigation'];
+	}
+
+	// FIXME: Design means that currently this menu can only cope with one item
+	public function getUserActionTools() {
+		$menu = array();
+		if ( isset( $this->data['content_navigation']['actions'] ) ) {
+			$actions = $this->data['content_navigation']['actions'];
+
+			if ( isset( $actions['unwatch'] ) ) {
+				$menu['unwatch'] = $actions['unwatch'];
+				$menu['unwatch']['class'] = 'watch-this-article';
+			} else if ( isset( $actions['watch'] ) ) {
+				$menu['watch'] = $actions['watch'];
+				$menu['watch']['class'] = 'watch-this-article';
+			}
+		}
+		return $menu;
+	}
+
+	private function renderLanguages( $languageTemplateData ) {
 		if ( $languageTemplateData['languages'] && count( $languageTemplateData['languages'] ) > 0 ) {
 		?>
 		<div class="section" id="mw-mf-language-section">
@@ -156,6 +182,11 @@ HTML;
 					echo $this->html( 'header' );
 				?>
 					<ul id="mw-mf-menu-page">
+						<?php
+							foreach( $this->getUserActionTools() as $key => $val ):
+								echo $this->makeListItem( $key, $val );
+							endforeach;
+						?>
 					</ul>
 				</div>
 				<div class='show' id='content_wrapper'>
@@ -174,7 +205,8 @@ HTML;
 			</div><!-- close #mw-mf-page-center -->
 		</div><!-- close #mw-mf-viewport -->
 		<?php
-			echo $data['bottomScripts'];
+			echo $data['reporttime'];
+			echo $data['bottomscripts'];
 		?>
 		</body>
 		</html>
