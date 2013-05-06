@@ -4468,7 +4468,7 @@ $messages['fr'] = array(
 	'mobile-frontend-settings-beta' => 'Bêta',
 	'mobile-frontend-settings-alpha' => 'Mode [//en.wikipedia.org/wiki/Here_be_dragons Ici sont les dragons]',
 	'mobile-frontend-settings-alpha-description' => 'Entrez dans un territoire mobile dangereux et inexploré. Obtenez des fonctionnalisés encore plus expérimentales, mais avec plus de dangers de bogues.',
-	'mobile-frontend-save-settings' => 'Enregistrez les paramètres', # Fuzzy
+	'mobile-frontend-save-settings' => 'Enregistrer',
 	'mobile-frontend-random-button' => 'Au hasard',
 	'mobile-frontend-ajax-random-heading' => 'Localisation de la connaissance…',
 	'mobile-frontend-ajax-random-quote' => "Le développement intellectuel devrait commencer à la naissance et ne cesser qu'à la mort",
@@ -5487,6 +5487,7 @@ $messages['haw'] = array(
  * @author Michagogo
  * @author Orsa
  * @author Ypnypn
+ * @author אור שפירא
  */
 $messages['he'] = array(
 	'mobile-frontend-desc' => 'תצוגה עבור מכשירים ניידים',
@@ -5505,7 +5506,7 @@ $messages['he'] = array(
 	'mobile-frontend-settings-beta' => 'להפעיל ניסויים',
 	'mobile-frontend-settings-alpha' => 'מצב שדה מוקשים',
 	'mobile-frontend-settings-alpha-description' => 'כניסה לאזור מסוכן ולא מוכּר. יש פה אפשרויות עוד יותר ניסיוניות, אבל גם יותר סכנה לחוות באגים.',
-	'mobile-frontend-save-settings' => 'שמירת הגדרות', # Fuzzy
+	'mobile-frontend-save-settings' => 'שמירה',
 	'mobile-frontend-random-button' => 'דף אקראי',
 	'mobile-frontend-ajax-random-heading' => 'איתור ידע...',
 	'mobile-frontend-ajax-random-quote' => 'צמיחה שכלית אמורה להתחיל בלידה ולהסתיים רק במוות',
@@ -5566,6 +5567,7 @@ $messages['he'] = array(
 	'mobile-frontend-about-link-text' => 'אודות',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license-text' => 'התוכן זמין לפי [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile תנאי השימוש]',
 	'mobile-frontend-footer-contact' => 'יצירת קשר',
 	'mobile-frontend-search-noresults' => 'שום כותרת של דף לא תאמה לחיפוש שלך. יש לשנות את החיפוש או ללחוץ על מקש החיפוש במקלדת כדי לחפש בתוך עמודים.',
 	'mobile-frontend-main-menu-button-tooltip' => 'פתיחת התפריט הראשי',
@@ -5673,6 +5675,10 @@ $messages['he'] = array(
 	'mobile-frontend-talk-explained-empty' => 'אין שיחות על הדף הזה.',
 	'mobile-frontend-talk-overlay-header' => 'שיחה',
 	'mobile-frontend-talk-overlay-lead-header' => 'דיון ללא שם',
+	'mobile-frontend-talk-add-overlay-submit' => 'להוסיף דיון',
+	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'נושא ראשי',
+	'mobile-frontend-talk-add-overlay-content-placeholder' => 'מה עובר לך בראש?',
+	'mobile-frontend-talk-edit-summary' => 'דיון חדש: $1',
 );
 
 /** Hindi (हिन्दी)
@@ -6810,7 +6816,7 @@ $messages['it'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Oops!',
 	'mobile-frontend-settings-description' => 'Personalizza la tua esperienza sul dispositivo mobile con le impostazioni specifiche per questa versione.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-save-settings' => 'Salva impostazioni', # Fuzzy
+	'mobile-frontend-save-settings' => 'Salva',
 	'mobile-frontend-random-button' => 'Una pagina a caso',
 	'mobile-frontend-ajax-random-heading' => 'Individuazione delle conoscenze...',
 	'mobile-frontend-ajax-random-quote' => 'La crescita intellettuale dovrebbe iniziare alla nascita e cessare solo alla morte',
@@ -6969,6 +6975,10 @@ $messages['it'] = array(
 	'mobile-frontend-talk-explained' => 'Le seguenti conversazioni sono attualmente attive',
 	'mobile-frontend-talk-explained-empty' => 'Non ci sono conversazioni su questa pagina.',
 	'mobile-frontend-talk-overlay-header' => 'discussioni',
+	'mobile-frontend-talk-overlay-lead-header' => 'Discussione senza nome',
+	'mobile-frontend-talk-add-overlay-submit' => 'Aggiungi discussione',
+	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Oggetto della discussione',
+	'mobile-frontend-talk-edit-summary' => 'Nuova sezione di discussione: $1',
 );
 
 /** Japanese (日本語)
@@ -14920,7 +14930,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-settings-beta' => '測試版',
 	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons 妖怪]初版',
 	'mobile-frontend-settings-alpha-description' => '進入危險和探索移動領土。更多實驗性的功能，更危險的錯誤。',
-	'mobile-frontend-save-settings' => '儲存設定', # Fuzzy
+	'mobile-frontend-save-settings' => '儲存',
 	'mobile-frontend-random-button' => '隨機條目',
 	'mobile-frontend-ajax-random-heading' => '查找知識...',
 	'mobile-frontend-ajax-random-quote' => '智力發展始於出生，止於死亡',
