@@ -79,7 +79,7 @@ form.mw-mf-settings ul li.mw-mf-settings-description {
   font-weight: normal;
   padding-right: 8px;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
   border: none;
   min-width: 76px;
   display: block;
@@ -88,7 +88,7 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
   top: 0;
   text-transform: lowercase;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 input {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 input {
   min-width: 76px;
   display: block;
   position: absolute;
@@ -98,7 +98,7 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3 input {
   display: none;
   z-index: 6;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   min-width: 76px;
   display: block;
   position: absolute;
@@ -106,7 +106,7 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   top: 0;
   text-transform: lowercase;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 span::before {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 span::before {
   /* small 'sliding' switch for checkboxes */
 
   content: "";
@@ -123,26 +123,26 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3 span::before {
   bottom: 0;
   top: 0;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on {
   display: none;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on::before {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-on::before {
   right: 0;
   left: auto;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off {
   padding-right: 8px;
   padding-left: 8px;
   display: inline-block;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off::before {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3 .mw-mf-settings-off::before {
   left: 0;
   right: auto;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked {
   border: none;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-on {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-on {
   display: inline-block;
   text-align: left;
   padding-left: 8px;
@@ -151,6 +151,6 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-on {
   background-color: #57a7f2;
   background: #57a7f2;
 }
-form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-off {
+.client-js form.mw-mf-settings ul li .mw-mf-checkbox-css3.checked .mw-mf-settings-off {
   display: none;
 }
