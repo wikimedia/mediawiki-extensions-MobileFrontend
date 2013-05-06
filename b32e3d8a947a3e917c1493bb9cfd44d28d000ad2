@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwsmXKZo",
+        "filename": "scripts/cachedpage.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-06T20:34:22Z",
+      "side": 1,
+      "message": "The article path you\u0027re using here ($URL/index.php) will likely be different in different environments. Maybe make setting it optional via runtime arg or set an env variable for it too.",
+      "revId": "b32e3d8a947a3e917c1493bb9cfd44d28d000ad2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
