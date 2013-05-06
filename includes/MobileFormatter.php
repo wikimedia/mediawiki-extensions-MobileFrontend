@@ -33,7 +33,8 @@ class MobileFormatter extends HtmlFormatter {
 		'#wpPreview', // on action=edit preview button currently does not work in mobile
 		'div.sister-project',
 		'div.magnify',
-		'.editsection',
+		'.editsection', // FIXME: deprecate in favour of mw-editsection
+		'.mw-editsection', // Edit links in section headings
 		'span.t',
 		'.portal',
 		'#protected-icon',
