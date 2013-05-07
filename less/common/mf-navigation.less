@@ -93,101 +93,6 @@ html.overlay {
 	}
 }
 
-.mw-mf-overlay {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: white;
-	z-index: 4;
-
-	.header .cancel {
-		display: block;
-		position: absolute;
-		cursor: pointer;
-		border: none;
-		height: @headerHeight;
-		width: @searchBarPaddingLeft;
-		left: 0;
-		background: none;
-		background-image: url(images/arrow-left.png);
-		background-repeat: no-repeat;
-		background-position: center center;
-		text-indent: -999px;
-		.background-size( auto, @searchBoxHeight );
-	}
-
-	div.languageOverlay ul,
-	ul.content {
-		li {
-			.overlayListItem();
-			&.preferred {
-				font-weight: bold;
-			}
-		}
-	}
-
-	.mw-mf-overlay-header {
-		background-color: #F1F1F1;
-	}
-
-	li {
-		text-align: left;
-	}
-
-	div.content {
-		padding-bottom: 20px;
-
-		textarea {
-			display: block;
-			width: 100%;
-		}
-	}
-
-	.content {
-		margin-top: @headingMarginTop;
-
-		.confirm,
-		.cancel {
-			display: block;
-			margin: auto;
-		}
-	}
-
-	.buttonBar {
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-		padding: 10px 0;
-		border-top: 1px solid #ccc;
-		background: #f3f3f3;
-		text-align: center;
-
-		button {
-			margin: 0 5px;
-		}
-	}
-
-	.mw-mf-overlay-footer,
-	.mw-mf-overlay-header {
-		padding: 4px 8px 4px @searchBarPaddingLeft;
-
-		margin: 0;
-		font-size: 0.8em;
-		color: #666;
-		border-bottom: solid 1px #eee;
-	}
-
-	.mw-mf-overlay-footer {
-		a {
-			display: inline;
-			color: #002BB8;
-		}
-	}
-}
-
 .search.error,
 .error {
 	border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
@@ -244,36 +149,6 @@ html.overlay {
 		padding: 0;
 		line-height: @headerHeight;
 		font-family: @fontFamily;
-	}
-}
-
-.overlay ul {
-	text-align: left;
-	left: 0;
-	width: 100% !important;
-	border: none;
-	z-index: 1;
-	position: relative;
-	opacity: 1;
-	padding: 0;
-	cursor: pointer;
-	margin: 0;
-	list-style: none;
-
-	&.informative {
-		margin-left: 16px;
-		list-style: outside square;
-		margin-bottom: 16px;
-
-		li {
-			margin-bottom: 8px;
-		}
-	}
-}
-
-html[dir="rtl"] {
-	.mw-mf-overlay .header .cancel {
-		.transform( rotate(180deg) );
 	}
 }
 
