@@ -1,0 +1,136 @@
+/* Notifications */
+#mf-notification,
+.drawer {
+  position: fixed;
+  /* -2px to avoid a weird glitch in some browsers where the popup moves
+	 * slightly when scrolling */
+
+  bottom: -2px;
+  width: 100%;
+  background-color: #f3f3f3;
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
+  word-wrap: break-word;
+  z-index: 3;
+  display: none;
+}
+#mf-notification.visible,
+.drawer.visible {
+  display: block;
+}
+.transforms .alpha #mf-notification,
+.transforms .alpha .drawer {
+  display: block;
+  bottom: -100px;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.transforms .alpha #mf-notification.visible,
+.transforms .alpha .drawer.visible {
+  opacity: 1;
+  -webkit-transform: translate3d(0, -98px, 0);
+  transform: translate3d(0, -98px, 0);
+}
+#mf-notification {
+  font-size: 0.9em;
+}
+#mf-notification.noButton button {
+  display: none;
+}
+#mf-notification.loading {
+  background-position: 23px 50%;
+  background-repeat: no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 32px auto;
+  -o-background-size: 32px auto;
+  -webkit-background-size: 32px auto;
+  background-size: 32px auto;
+  padding: 0 0 0 53px;
+}
+#mf-notification.toast {
+  left: 10%;
+  right: 10%;
+  padding: 0;
+  font-size: 0.8em;
+  background-color: #373737;
+  color: white;
+  margin: 0 auto 20px auto;
+  width: 80%;
+  text-align: center;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  box-shadow: 0 0 1px 3px #373737;
+}
+#mf-notification.toast button {
+  display: none;
+}
+#mf-notification.toast.error {
+  background-image: url(images/error.png);
+  background-position: 16px 50%;
+  background-repeat: no-repeat;
+  padding-left: 5%;
+  width: 75%;
+}
+#mf-notification.toast.locked button {
+  display: block;
+  top: 0.8em;
+  right: 1.4em;
+}
+#mf-notification.toast > div {
+  padding: 0.8em 1.4em;
+}
+#mf-notification > div {
+  position: relative;
+  padding: 16px 38px 18px 22px;
+  /* 38px is 22px padding + close button icon 16px */
+
+}
+#mf-notification .mw-cite-backlink {
+  display: none;
+}
+#mf-notification button {
+  top: 22px;
+  right: 22px;
+  /* padding of #content_wrapper */
+
+  width: 16px;
+  height: 12px;
+  background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
+  margin: 0;
+  background-position: right center;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 12px;
+  -o-background-size: auto 12px;
+  -webkit-background-size: auto 12px;
+  background-size: auto 12px;
+  cursor: pointer;
+  position: absolute;
+  text-indent: -999px;
+  overflow: hidden;
+  border: none;
+}
+#mf-notification h3 {
+  margin: 0;
+  padding-right: 4px;
+  line-height: 1em;
+  display: inline;
+}
+#mf-notification a:visited,
+#mf-notification a {
+  color: #3354C0;
+}
+#mf-notification p {
+  line-height: 1.2;
+  margin: 0 0 .5em;
+}
+#mf-notification .progress-bar {
+  margin: .9em 0 0;
+}

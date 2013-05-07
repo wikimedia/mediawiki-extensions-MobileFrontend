@@ -414,6 +414,13 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	),
 );
 
+$wgResourceModules['mobile.notifications'] = $wgMFMobileResourceBoilerplate + array(
+	'styles' => array(
+		'stylesheets/common/notifications.css',
+	),
+	'position' => 'top',
+);
+
 $wgResourceModules['mobile.stable.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/modules/mf-search.css',
@@ -431,6 +438,7 @@ $wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate +
 	'dependencies' => array(
 		'mobile.startup',
 		'mobile.stable.dependencies',
+		'mobile.notifications',
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
