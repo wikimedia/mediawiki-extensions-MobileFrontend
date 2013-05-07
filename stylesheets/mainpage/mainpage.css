@@ -9,3 +9,7 @@ body.page-Main_Page table td ul li {
 body.page-Main_Page table .section_heading button {
   display: none !important;
 }
+body.page-Main_Page .MainPageBG img {
+  float: left;
+  margin-right: 20px;
+}
