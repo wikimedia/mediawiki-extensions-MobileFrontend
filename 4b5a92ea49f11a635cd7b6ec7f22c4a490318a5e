@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwh3NxLk",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-07T22:40:36Z",
+      "side": 0,
+      "message": "please remove corresponding QQQ messages too.",
+      "revId": "4b5a92ea49f11a635cd7b6ec7f22c4a490318a5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
