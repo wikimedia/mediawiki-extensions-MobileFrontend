@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwn1PsDU",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-07T22:35:45Z",
+      "side": 1,
+      "message": "How\u0027s that related?",
+      "revId": "337f6f5ff09c46d57dd8756dc39e8cc92d49c167",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
