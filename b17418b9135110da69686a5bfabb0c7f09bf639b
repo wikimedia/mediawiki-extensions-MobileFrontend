@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwv3sYMo",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 701,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-07T22:45:27Z",
+      "side": 1,
+      "message": "Should this still be .styles?",
+      "revId": "b17418b9135110da69686a5bfabb0c7f09bf639b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
