@@ -16,6 +16,24 @@
       "revId": "17062dd4617f0be7cece21f5bdcc8c8c1559d236",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwjThyAA",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-07T00:08:20Z",
+      "side": 1,
+      "message": "If we cache it on the frontend, we would have to fetch it conditionally, that means writing an API for this.",
+      "parentUuid": "DwtTPvIo",
+      "revId": "17062dd4617f0be7cece21f5bdcc8c8c1559d236",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
