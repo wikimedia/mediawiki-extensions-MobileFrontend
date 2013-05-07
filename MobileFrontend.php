@@ -441,6 +441,11 @@ $wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate +
 		'javascripts/common/mf-navigation.js',
 		'javascripts/common/mf-notification.js',
 	),
+	'messages' => array(
+		// mf-navigation.js
+		'mobile-frontend-watchlist-cta-button-signup',
+		'mobile-frontend-watchlist-cta-button-login',
+	),
 );
 
 $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
@@ -483,8 +488,6 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-watchlist-add',
 		'mobile-frontend-watchlist-removed',
 		'mobile-frontend-watchlist-cta',
-		'mobile-frontend-watchlist-cta-button-signup',
-		'mobile-frontend-watchlist-cta-button-login',
 
 		// mf-photo.js
 		'mobile-frontend-photo-ownership',
