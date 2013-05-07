@@ -127,7 +127,7 @@
 
 		suffix = ' ' + date.getFullYear() + '-' +
 			pad( date.getMonth() + 1 ) + '-' + pad( date.getDate() ) + ' ' +
-			pad( date.getHours() ) + ':' + pad( date.getMinutes() ) + fileSuffix;
+			pad( date.getHours() ) + '-' + pad( date.getMinutes() ) + fileSuffix;
 
 		allowedLength -= suffix.length;
 		return trimUtf8String( name, allowedLength ) + suffix;
