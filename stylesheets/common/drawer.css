@@ -1,0 +1,20 @@
+.drawer {
+  text-align: center;
+  padding: 0 0 1em;
+}
+.drawer a.close {
+  padding: 0 0 1.2em;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 100%;
+  height: 16px;
+  background: url(../modules/images/show.png) 50% 8px no-repeat;
+}
+.drawer a.button {
+  display: block;
+  margin: 1em 40px 1em 40px;
+}
+.drawer a.signup {
+  display: block;
+}
