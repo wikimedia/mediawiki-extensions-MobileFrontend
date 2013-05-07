@@ -234,6 +234,7 @@ $wgResourceModules['mobile.styles'] = $wgMFMobileResourceBoilerplate + array(
 		'stylesheets/common/mf-footer.css',
 		// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
 		'stylesheets/common/mf-navigation.css',
+		'stylesheets/common/overlays.css',
 		'stylesheets/common/mf-hacks.css',
 	),
 	'position' => 'top',
