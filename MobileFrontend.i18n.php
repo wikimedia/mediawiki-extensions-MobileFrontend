@@ -32,7 +32,7 @@ $messages['en'] = array (
 
 	'mobile-frontend-settings-description' => 'Customize your experience on your mobile device with these mobile specific site settings.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => '[//en.wikipedia.org/wiki/Here_be_dragons Here be dragons] mode',
+	'mobile-frontend-settings-alpha' => 'Experimental mode',
 	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.',
 	'mobile-frontend-save-settings' => 'Save',
 	'mobile-frontend-random-button' => 'Random',
@@ -83,7 +83,7 @@ $messages['en'] = array (
 	'mobile-frontend-overlay-escape' => 'Go back',
 	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Search {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Search {{SITENAME}} (Dragon Mode)',
+	'mobile-frontend-placeholder-alpha' => 'Search {{SITENAME}} (Experimental)',
 	'mobile-frontend-search-help' => 'Type search term above and matching page titles will appear here.',
 	'mobile-frontend-dismiss-notification' => 'dismiss this notification',
 	'mobile-frontend-clear-search' => 'Clear',
