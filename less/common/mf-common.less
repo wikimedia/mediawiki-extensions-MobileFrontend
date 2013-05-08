@@ -308,15 +308,16 @@ b {
 	font-weight: bold;
 }
 
+.hlist > ul, // FIXME: to support hlists on enwiki projects - this should be deprecated
+ul.hlist {
+	li {
+		display: inline-block;
+		margin-right: 8px;
+	}
+}
+
 ul {
 	list-style: square inside;
-
-	&.hlist {
-		li {
-			display: inline-block;
-			margin-right: 8px;
-		}
-	}
 }
 
 ol {

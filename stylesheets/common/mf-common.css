@@ -260,12 +260,13 @@ strong,
 b {
   font-weight: bold;
 }
-ul {
-  list-style: square inside;
-}
+.hlist > ul li,
 ul.hlist li {
   display: inline-block;
   margin-right: 8px;
+}
+ul {
+  list-style: square inside;
 }
 ol {
   list-style: decimal inside;
