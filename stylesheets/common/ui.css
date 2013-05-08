@@ -6,10 +6,18 @@ input[type=submit] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  padding: 1em 1.25em 1em;
+  white-space: nowrap;
   line-height: 1;
-  text-align: center;
   cursor: pointer;
+}
+.content .button,
+.buttonBar .button,
+.content button,
+.buttonBar button,
+.content input[type=submit],
+.buttonBar input[type=submit] {
+  padding: 1em 1.25em 1em;
+  text-align: center;
   border: 1px #33589f solid;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -20,9 +28,12 @@ input[type=submit] {
   background-image: -webkit-linear-gradient(top, #3670c8 0, #3366bb 100%);
   background-image: linear-gradient(#3670c8 0, #3366bb 100%);
 }
-.button:hover,
-button:hover,
-input[type=submit]:hover {
+.content .button:hover,
+.buttonBar .button:hover,
+.content button:hover,
+.buttonBar button:hover,
+.content input[type=submit]:hover,
+.buttonBar input[type=submit]:hover {
   background-color: #3f77d7;
   background-image: -moz-linear-gradient(top, #4c84da 0, #3f77d7 100%);
   background-image: -ms-linear-gradient(top, #4c84da 0, #3f77d7 100%);
@@ -30,9 +41,12 @@ input[type=submit]:hover {
   background-image: -webkit-linear-gradient(top, #4c84da 0, #3f77d7 100%);
   background-image: linear-gradient(#4c84da 0, #3f77d7 100%);
 }
-.button:active,
-button:active,
-input[type=submit]:active {
+.content .button:active,
+.buttonBar .button:active,
+.content button:active,
+.buttonBar button:active,
+.content input[type=submit]:active,
+.buttonBar input[type=submit]:active {
   background-color: #2a549c;
   background-image: -moz-linear-gradient(top, #2d5ea9 0, #2a549c 100%);
   background-image: -ms-linear-gradient(top, #2d5ea9 0, #2a549c 100%);
@@ -40,23 +54,38 @@ input[type=submit]:active {
   background-image: -webkit-linear-gradient(top, #2d5ea9 0, #2a549c 100%);
   background-image: linear-gradient(#2d5ea9 0, #2a549c 100%);
 }
-.button:visited,
-button:visited,
-input[type=submit]:visited {
+.content .button:visited,
+.buttonBar .button:visited,
+.content button:visited,
+.buttonBar button:visited,
+.content input[type=submit]:visited,
+.buttonBar input[type=submit]:visited {
   color: #fff;
 }
-.button:disabled,
-button:disabled,
-input[type=submit]:disabled,
-.button:disabled.hover,
-button:disabled.hover,
-input[type=submit]:disabled.hover,
-.button.disabled,
-button.disabled,
-input[type=submit].disabled,
-.button.disabled:hover,
-button.disabled:hover,
-input[type=submit].disabled:hover {
+.content .button:disabled,
+.buttonBar .button:disabled,
+.content button:disabled,
+.buttonBar button:disabled,
+.content input[type=submit]:disabled,
+.buttonBar input[type=submit]:disabled,
+.content .button:disabled.hover,
+.buttonBar .button:disabled.hover,
+.content button:disabled.hover,
+.buttonBar button:disabled.hover,
+.content input[type=submit]:disabled.hover,
+.buttonBar input[type=submit]:disabled.hover,
+.content .button.disabled,
+.buttonBar .button.disabled,
+.content button.disabled,
+.buttonBar button.disabled,
+.content input[type=submit].disabled,
+.buttonBar input[type=submit].disabled,
+.content .button.disabled:hover,
+.buttonBar .button.disabled:hover,
+.content button.disabled:hover,
+.buttonBar button.disabled:hover,
+.content input[type=submit].disabled:hover,
+.buttonBar input[type=submit].disabled:hover {
   color: white;
   text-shadow: none;
   background-color: #7297d7;
@@ -67,28 +96,28 @@ input[type=submit].disabled:hover {
   background-image: linear-gradient(#7297d7 0, #7297d7 100%);
   border-color: #5e89d1;
 }
-.button.languageSelector,
-button.languageSelector,
-input[type=submit].languageSelector {
+.content .button.languageSelector,
+.buttonBar .button.languageSelector,
+.content button.languageSelector,
+.buttonBar button.languageSelector,
+.content input[type=submit].languageSelector,
+.buttonBar input[type=submit].languageSelector {
   margin-top: 14pt;
 }
-.button.cancel,
-button.cancel,
-input[type=submit].cancel {
+.content .button.cancel,
+.buttonBar .button.cancel,
+.content button.cancel,
+.buttonBar button.cancel,
+.content input[type=submit].cancel,
+.buttonBar input[type=submit].cancel {
   background: #999;
   border: 1px #777 solid;
 }
-.header a.button {
-  font-size: 1em;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  padding-top: 7px;
-  padding-bottom: 7px;
+.header .button,
+.header button {
+  margin: 8px 0;
+  padding: 7px 1.25em;
   text-decoration: none;
-  text-shadow: none;
   background-color: #e9e9ea;
   background-image: -moz-linear-gradient(top, #ffffff 45%, #e9e9ea 100%);
   background-image: -ms-linear-gradient(top, #ffffff 45%, #e9e9ea 100%);
@@ -97,21 +126,38 @@ input[type=submit].cancel {
   background-image: linear-gradient(#ffffff 45%, #e9e9ea 100%);
   color: #58595b;
   border: 1px solid #9ea0a3;
-  border-right: none;
   vertical-align: middle;
-  white-space: nowrap;
 }
-.header a.button.active {
+.header .button.cancel,
+.header button.cancel {
+  margin: 0;
+}
+.header .button-bar {
+  text-align: center;
+}
+.header .button-bar li {
+  display: inline-block;
+}
+.header .button-bar li .button,
+.header .button-bar li button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-right: none;
+}
+.header .button-bar li.active .button,
+.header .button-bar li.active button {
   background: #c8cacb;
   font-weight: bold;
 }
-.header a.button:first-child {
+.header .button-bar li:first-child .button,
+.header .button-bar li:first-child button {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
-  border-left: 1px solid #9ea0a3;
 }
-.header a.button:last-child {
+.header .button-bar li:last-child .button,
+.header .button-bar li:last-child button {
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;

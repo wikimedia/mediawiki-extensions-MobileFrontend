@@ -100,46 +100,33 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	protected function getWatchlistHeader() {
 		$user = $this->getUser();
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
-		$attrsList = array(
-			'class' => 'button mw-mf-watchlist-view-selector'
-		);
-		$attrsFeed = array(
-			'class' => 'button mw-mf-watchlist-view-selector'
-		);
+		$attrsList = $attrsFeed = array();
 		$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, 'a-z' );
 		$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, 'all' );
 		if ( $view === 'feed' ) {
-			$attrsFeed[ 'class' ] .= ' active';
+			$attrsFeed[ 'class' ] = 'active';
 		} else {
-			$attrsList[ 'class' ] .= ' active';
+			$attrsList[ 'class' ] = 'active';
 		}
 
 		$html =
-			Html::openElement( 'div',
-				array(
-					'class' => 'mw-mf-watchlist-views' )
-				) .
-			Html::openElement( 'div',
-				array(
-					'class' => 'mw-mf-view-filters' )
-				) .
+		Html::openElement( 'ul', array( 'class' => 'button-bar' ) ) .
+			Html::openElement( 'li', $attrsList ) .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
-				$attrsList,
-				array(
-					'watchlistview' => 'a-z',
-				)
+				array( 'class' => 'button' ),
+				array( 'watchlistview' => 'a-z' )
 			) .
+			Html::closeElement( 'li' ) .
+			Html::openElement( 'li', $attrsFeed ) .
 			Linker::link( $sp,
 				wfMessage( 'mobile-frontend-watchlist-feed' )->text(),
-				$attrsFeed,
-				array(
-					'filter' => $filter,
-					'watchlistview' => 'feed'
-				)
+				array( 'class' => 'button' ),
+				array( 'watchlistview' => 'feed', 'filter' => $filter )
 			) .
-			Html::closeElement( 'div' ) .
-			Html::closeElement( 'div' );
+			Html::closeElement( 'li' ) .
+			Html::closeElement( 'ul' );
+
 		return $html;
 	}
 
