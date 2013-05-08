@@ -6,7 +6,7 @@
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		nav = M.require( 'navigation' ),
 		Overlay = nav.Overlay,
-		msg = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ) ),
+		msg = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
 		CopyrightOverlay = Overlay.extend( {
 			defaults: {
 				bulletPoints: [

@@ -564,7 +564,7 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-upload-comment' => 'Comment associated with the upload of a photo',
 	'mobile-frontend-photo-caption-placeholder' => 'Placeholder text prompting user to add a mandatory caption to a photo',
 	'mobile-frontend-image-loading' => 'Text that displays while an image is loading',
-	'mobile-frontend-photo-ownership' => 'A statement saying the user created the image where $1 is the username',
+	'mobile-frontend-photo-ownership' => 'A statement saying the user created the image where $1 is the username. Supports GENDER.',
 	'mobile-frontend-photo-ownership-help' => 'A link that allows the user to open more information about what {{msg-mw|mobile-frontend-photo-ownership}} entails.
 {{Identical|What does this mean}}',
 	'mobile-frontend-photo-ownership-confirm' => 'Friendly confirmation message expressing understanding',
