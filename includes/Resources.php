@@ -233,21 +233,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.action.edit' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup', 'mobile.beta' ),
-		'messages' => array(
-			// mf-edit.js
-			'mobile-frontend-page-saving',
-		),
-		'styles' => array(
-			'stylesheets/actions/mf-edit.css',
-		),
-		'scripts' => array(
-			'javascripts/actions/mf-edit.js',
-		),
-		'group' => 'mobile.action',
-	),
-
 	'mobile.action.history' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'styles' => array(

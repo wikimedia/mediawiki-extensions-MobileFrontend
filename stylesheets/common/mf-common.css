@@ -31,11 +31,6 @@ a.external {
   background: url(images/external-link-ltr-icon.png) center right no-repeat;
   padding-right: 13px;
 }
-#mw-mf-edit-page-link {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
 .info {
   margin: 4em;
   color: #707070;

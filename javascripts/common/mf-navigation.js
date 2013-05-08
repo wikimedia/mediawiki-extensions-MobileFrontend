@@ -103,18 +103,6 @@ var m = ( function( $ ) {
 		return $( '#mw-mf-menu-page' );
 	}
 
-	function enableEditing( title ) {
-		$( '#mw-mf-edit-page-link' ).remove();
-		if ( title &&
-			( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
-			mw.config.get( 'wgIsPageEditable' ) && // user is allowed to edit
-			mw.util.getParamValue( 'action' ) !== 'edit' ) {
-			$( '<a id="mw-mf-edit-page-link">' ).text( 'edit' ).attr( 'href',
-				M.history.getArticleUrl( title, { action: 'edit' } ) ).
-				prependTo( '#content' );
-		}
-	}
-
 	function init() {
 		var
 			search = document.getElementById(  'searchInput' );
@@ -122,13 +110,6 @@ var m = ( function( $ ) {
 		$( '#mw-mf-menu-main a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
-
-		if ( mw.config.get( 'wgMFMode' ) !== 'stable' ) {
-			enableEditing( mw.config.get( 'wgTitle' ) );
-			M.on( 'page-loaded', function( curPage ) {
-				enableEditing( curPage.title );
-			} );
-		}
 
 		function openNavigation() {
 			$( 'body' ).addClass( 'navigation-enabled' );

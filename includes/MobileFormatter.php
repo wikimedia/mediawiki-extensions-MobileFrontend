@@ -29,8 +29,6 @@ class MobileFormatter extends HtmlFormatter {
 		'table.toc',
 		'div.stub',
 		'#search', // remove search form element from Special:Search
-		'#wpDiff', // on action=edit diff button currently does not work in mobile
-		'#wpPreview', // on action=edit preview button currently does not work in mobile
 		'div.sister-project',
 		'div.magnify',
 		'.editsection', // FIXME: deprecate in favour of mw-editsection
