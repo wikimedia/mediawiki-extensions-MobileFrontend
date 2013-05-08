@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwlbESZM",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 495,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-05-08T15:34:22Z",
+      "side": 1,
+      "message": "Forgot to change this to explain context after copying?",
+      "revId": "9dc02a3bb833c9057557b5544f636bdda2bb2bc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
