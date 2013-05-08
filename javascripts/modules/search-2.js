@@ -63,8 +63,10 @@ SearchOverlay = Overlay.extend( {
 	 * @param {Array} results list of search results with label and url properties set
 	 */
 	writeResults: function( results ) {
+		var $list = this.$( 'ul.suggestions-results' );
+
 		this.data.results = results || [];
-		this.$( 'ul.suggestions-results' ).
+		$list.
 			html( this.templateResults.render( this.data ) );
 
 		if ( results ) {
@@ -74,6 +76,7 @@ SearchOverlay = Overlay.extend( {
 		} else {
 			this.$( '.no-results' ).remove();
 		}
+		this.emit( 'write-results', $list );
 	},
 	performSearch: function() {
 		var self = this,
@@ -83,6 +86,7 @@ SearchOverlay = Overlay.extend( {
 			data = $.map( data[ 1 ], function( item ) {
 				return {
 					label: highlightSearchTerm( item, term ),
+					title: item,
 					url: M.history.getArticleUrl( item )
 				};
 			} );
