@@ -34,6 +34,24 @@
       "revId": "b17418b9135110da69686a5bfabb0c7f09bf639b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwhIGStE",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 701,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-08T23:32:45Z",
+      "side": 1,
+      "message": "could we keep this as-is, then add a mobile.xdevice.detect module and update SkinMobile.php to use mobile.xdevice.detect and then remove the deprecated module in a month? or is that just silly?",
+      "parentUuid": "Dwp0fFLQ",
+      "revId": "b17418b9135110da69686a5bfabb0c7f09bf639b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
