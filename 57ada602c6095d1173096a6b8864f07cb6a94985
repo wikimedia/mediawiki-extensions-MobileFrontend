@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwvKFplw",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-05-08T22:21:40Z",
+      "side": 1,
+      "message": "If there is a legal reason for this change, I would recommend changing the key, so that all translations are ignored. If it\u0027s not critical, this is okay.",
+      "revId": "57ada602c6095d1173096a6b8864f07cb6a94985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
