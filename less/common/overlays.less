@@ -29,13 +29,22 @@ html[dir="rtl"] {
 	}
 }
 
+html.animations .mw-mf-overlay .buttonBar {
+	// workaround for:
+	// http://code.google.com/p/chromium/issues/detail?id=20574
+	// (otherwise hidden drawer causes .buttonBar to render incorrectly)
+	.transform( translate3d(0,0,0) );
+}
+
 .mw-mf-overlay {
 	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	// use min-height instead of bottom 0 so that overlay expands when there's
+	// more content
+	min-height: 100%;
 	background-color: white;
 	z-index: 4;
 
@@ -94,13 +103,23 @@ html[dir="rtl"] {
 		position: fixed;
 		bottom: 0;
 		width: 100%;
-		padding: 10px 0;
 		border-top: 1px solid #ccc;
-		background: #f3f3f3;
+		background-color: #f3f3f3;
 		text-align: center;
 
 		button {
-			margin: 0 5px;
+			margin: 10px 5px;
+		}
+
+		p {
+			margin: 1em 16px 10px;
+			line-height: 1.3;
+			font-size: .9em;
+			text-align: left;
+
+			&:first-child {
+				margin-top: 1.2em;
+			}
 		}
 	}
 

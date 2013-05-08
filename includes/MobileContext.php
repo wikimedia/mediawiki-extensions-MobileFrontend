@@ -259,6 +259,8 @@ class MobileContext extends ContextSource {
 		$action = $this->getAction();
 		$req = $this->getRequest();
 		$stableMode = !$this->isBetaGroupMember();
+
+		// FIXME: remove when editor moves to stable
 		if ( ( $action === 'edit' && $stableMode ) ||
 			 ( $action === 'history' && $stableMode ) ) {
 			return false;

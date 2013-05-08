@@ -509,11 +509,10 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onCustomEditor( $article, $user ) {
-		global $wgMFAnonymousEditing;
 		$context = MobileContext::singleton();
 
-		// redirect anonymous users back to the article instead of showing the editor
-		if ( $context->shouldDisplayMobileView() && $user->isAnon() && !$wgMFAnonymousEditing ) {
+		// redirect instead of showing the desktop editor
+		if ( $context->shouldDisplayMobileView() ) {
 			$articleUrl = $context->getMobileUrl( $article->getTitle()->getFullURL() );
 			$context->getOutput()->redirect( $articleUrl );
 			return false;

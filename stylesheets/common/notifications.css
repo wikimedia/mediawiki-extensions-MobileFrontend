@@ -15,7 +15,7 @@
 }
 #mf-notification.visible,
 .drawer.visible {
-  z-index: 3;
+  z-index: 5;
   display: block;
 }
 .animations #mf-notification,

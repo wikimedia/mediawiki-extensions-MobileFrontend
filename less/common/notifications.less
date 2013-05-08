@@ -16,7 +16,8 @@
 	display: none;
 
 	&.visible {
-		z-index: 3;
+		// needs to be higher than for overlays to show on top of overlays
+		z-index: 5;
 		display: block
 	}
 }

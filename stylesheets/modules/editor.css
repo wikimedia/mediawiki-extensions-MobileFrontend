@@ -1,0 +1,59 @@
+.edit-page {
+  margin-top: .5em;
+  float: right;
+}
+.section_heading .edit-page {
+  margin: 0 30px 0 0;
+  display: none !important;
+  font-size: .65em;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.section_heading.openSection .edit-page {
+  display: block !important;
+}
+.editor-overlay .spinner {
+  height: 100px;
+}
+.editor-overlay textarea {
+  width: 100%;
+  min-height: 50%;
+  padding: 10px 16px 5em;
+  line-height: 1.5;
+  border: none;
+  resize: none;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.editor-overlay textarea:focus {
+  outline: none;
+}
+.editor-overlay .buttonBar {
+  box-shadow: 0 -10px 10px 0 #ffffff;
+}
+.editor-overlay .buttonBar.unpinned {
+  position: absolute;
+}
+.editor-overlay .confirm-bar,
+.editor-overlay .saving-bar {
+  display: none;
+}
+.editor-overlay .saving-bar {
+  background-position: 16px 50%;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 32px auto;
+  -o-background-size: 32px auto;
+  -webkit-background-size: 32px auto;
+  background-size: 32px auto;
+  padding: 0 0 0 46px;
+}
+.editor-overlay .saving-bar p:first-child {
+  margin: 18px 16px 0;
+}
+@media (max-height: 400px) {
+  .edit-overlay .buttonBar {
+    position: absolute;
+  }
+}

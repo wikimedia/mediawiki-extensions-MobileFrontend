@@ -1,0 +1,69 @@
+@import "../mf-variables.less";
+@import "../mf-mixins.less";
+
+.edit-page {
+	margin-top: .5em;
+	float: right;
+}
+
+.section_heading {
+	.edit-page {
+		margin: 0 30px 0 0;
+		display: none !important;
+		font-size: .65em;
+		font-family: @fontFamily;
+	}
+
+	&.openSection .edit-page {
+		display: block !important;
+	}
+}
+
+.editor-overlay {
+	.spinner {
+		height: 100px;
+	}
+
+	textarea {
+		width: 100%;
+		min-height: 50%;
+		padding: 10px 16px 5em;
+		line-height: 1.5;
+		border: none;
+		resize: none;
+		.box-sizing( border-box );
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.buttonBar {
+		box-shadow: 0 -10px 10px 0 #fff;
+
+		&.unpinned {
+			position: absolute;
+		}
+	}
+
+	.confirm-bar, .saving-bar {
+		display: none;
+	}
+
+	.saving-bar {
+		background-position: 16px 50%;
+		.background-size( 32px, auto );
+		padding: 0 0 0 46px;
+
+		p:first-child {
+			margin: 18px 16px 0;
+		}
+	}
+}
+
+// hide the bar (and give more editing space) when the keyboard is visible
+@media (max-height: 400px) {
+	.edit-overlay .buttonBar {
+		position: absolute;
+	}
+}

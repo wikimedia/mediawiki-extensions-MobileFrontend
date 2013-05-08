@@ -224,6 +224,22 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-upload-cta' => 'Please login or sign up to add an image.',
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 
+	// edit
+	'mobile-frontend-editor-save' => 'Save',
+	'mobile-frontend-editor-cancel' => 'Cancel',
+	'mobile-frontend-editor-confirm' => 'Confirm',
+	'mobile-frontend-editor-previous' => 'Previous',
+	'mobile-frontend-editor-next' => 'Next',
+	'mobile-frontend-editor-license' => 'By clicking "Confirm", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
+	'mobile-frontend-editor-section-count' => 'You are about to save {{PLURAL:$1|1 section|$1 sections}}.',
+	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
+	'mobile-frontend-editor-wait' => 'Saving edit, please wait.',
+	'mobile-frontend-editor-success' => 'Success! Your edit was saved.',
+	'mobile-frontend-editor-refresh' => 'Refresh this page to see your changes.',
+	'mobile-frontend-editor-error' => 'Error, edit not saved.',
+	'mobile-frontend-editor-error-conflict' => 'Error, another user has edited this page.',
+	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',
+
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
 	'tag-mobile_edit-description' => 'Edit made from mobile site',
@@ -591,6 +607,20 @@ They can either exit the page and lose them or stay on the page until they are c
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-editor-save' => 'Caption for save button on edit form.',
+	'mobile-frontend-editor-cancel' => 'Caption for cancel button on edit form.',
+	'mobile-frontend-editor-confirm' => 'Caption for confirm button on edit form.',
+	'mobile-frontend-editor-previous' => 'Caption for a button loading previous section on edit form.',
+	'mobile-frontend-editor-next' => 'Caption for a button loading next section on edit form.',
+	'mobile-frontend-editor-license' => 'Text notifying user of license that text will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license. See also: {{msg-mw|mobile-frontend-editor-confirm}}.',
+	'mobile-frontend-editor-section-count' => 'Informs user how many sections they are about to save. Parameter is number of modified sections.',
+	'mobile-frontend-editor-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved edit.',
+	'mobile-frontend-editor-wait' => 'Text that displays while a page edit is being saved.',
+	'mobile-frontend-editor-success' => 'Text that displays when a page edit has been successfully saved.',
+	'mobile-frontend-editor-refresh' => 'Text informing user that they need to refresh the page to see the changes.',
+	'mobile-frontend-editor-error' => 'Text that displays when there have been errors when saving a page edit.',
+	'mobile-frontend-editor-error-conflict' => 'Text that displays when there has been edit conflict when saving a page edit.',
+	'mobile-frontend-editor-error-loading' => 'Text that displays when there have been errors when loading a page section in the editor.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:

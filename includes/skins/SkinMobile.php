@@ -246,16 +246,7 @@ HTML;
 			$out->addModuleStyles( $device->moduleName() );
 		}
 
-		// FIXME: EditPage.php adds an inline script that breaks editing without this - dirty hack to get around bug 47296
-		if ( in_array( 'mobile.action.edit', $out->getModules() ) ) {
-			$bottomScripts = Html::inlineScript(
-				'mw.loader.implement("mediawiki.action.edit", [],{},{});' .
-				'mw.toolbar = { addButton: function(){}, init: function(){} };'
-			);
-		} else {
-			 $bottomScripts = '';
-		}
-		$bottomScripts .= Html::inlineScript(
+		$bottomScripts = Html::inlineScript(
 			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
 		);
 		$bottomScripts .= $out->getBottomScripts();
@@ -310,9 +301,7 @@ HTML;
 			}
 		}
 
-		if ( $action === 'edit' ) {
-			$out->addModules( 'mobile.action.edit' );
-		} else if ( $action === 'history' ) {
+		if ( $action === 'history' ) {
 			$out->addModules( 'mobile.action.history' );
 		}
 	}

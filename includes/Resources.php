@@ -200,6 +200,25 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'languageSection',
 			'overlays/languages',
+			'overlays/editor',
+		),
+		'messages' => array(
+			// editor.js
+			'edit',
+			'mobile-frontend-editor-save',
+			'mobile-frontend-editor-cancel',
+			'mobile-frontend-editor-confirm',
+			'mobile-frontend-editor-previous',
+			'mobile-frontend-editor-next',
+			'mobile-frontend-editor-license' => array( 'parse' ),
+			'mobile-frontend-editor-section-count',
+			'mobile-frontend-editor-cancel-confirm',
+			'mobile-frontend-editor-wait',
+			'mobile-frontend-editor-success',
+			'mobile-frontend-editor-refresh',
+			'mobile-frontend-editor-error',
+			'mobile-frontend-editor-error-conflict',
+			'mobile-frontend-editor-error-loading',
 		),
 		'class' => 'MFResourceLoaderModule',
 	),
@@ -221,7 +240,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.beta.common',
 		),
+		'styles' => array(
+			'stylesheets/modules/editor.css',
+		),
 		'scripts' => array(
+			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/EditorOverlay.js',
+			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-languages.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 		),
@@ -238,21 +263,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-language-site-choose',
 			'mobile-frontend-language-footer',
 		),
-	),
-
-	'mobile.action.edit' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup', 'mobile.beta' ),
-		'messages' => array(
-			// mf-edit.js
-			'mobile-frontend-page-saving',
-		),
-		'styles' => array(
-			'stylesheets/actions/mf-edit.css',
-		),
-		'scripts' => array(
-			'javascripts/actions/mf-edit.js',
-		),
-		'group' => 'mobile.action',
 	),
 
 	'mobile.action.history' => $wgMFMobileResourceBoilerplate + array(
