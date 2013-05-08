@@ -124,12 +124,11 @@ var m = ( function( $ ) {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
 
-		if ( M.history.isDynamicPageLoadEnabled ) {
+		if ( mw.config.get( 'wgMFMode' ) !== 'stable' ) {
+			enableEditing( mw.config.get( 'wgTitle' ) );
 			M.on( 'page-loaded', function( curPage ) {
 				enableEditing( curPage.title );
 			} );
-		} else if ( inBeta ) { // note alpha is caught by above if statement
-			enableEditing( mw.config.get( 'wgTitle' ) );
 		}
 
 		function openNavigation() {
@@ -137,7 +136,6 @@ var m = ( function( $ ) {
 		}
 
 		function closeNavigation() {
-			M.history.pushState( '#' );
 			$( 'body' ).removeClass( 'navigation-enabled' );
 		}
 

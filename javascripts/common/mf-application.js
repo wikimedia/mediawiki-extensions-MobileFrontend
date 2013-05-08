@@ -96,12 +96,6 @@
 		window.scrollTo( 0, 1 );
 	}
 
-	function triggerPageReadyHook( pageTitle, sectionData, anchorSection ) {
-		emit( 'page-loaded', {
-			title: pageTitle, data: sectionData, anchorSection: anchorSection
-		} );
-	}
-
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		// FIXME: use wgIsMainPage
@@ -221,7 +215,6 @@
 		prefix: 'mw-mf-',
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
-		triggerPageReadyHook: triggerPageReadyHook,
 		prettyEncodeTitle: prettyEncodeTitle,
 		template: template
 	} );

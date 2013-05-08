@@ -6,24 +6,28 @@
 
 	Section = View.extend( {
 		defaults: {
+			hasReferences: false, // flag for references
 			heading: '',
 			content: '',
+			index: -1, // index of this section in the given page
 			id: null
 		},
 		initialize: function( options ) {
 			this.heading = options.heading;
+			this.index = options.index;
 			this.content = options.content;
+			this.hasReferences = options.hasReferences;
 			this.id = options.id;
 		}
 	} );
 
 	Page = View.extend( {
 		defaults: {
-			heading: '',
+			title: '',
 			lead: '',
 			sections: []
 		},
-		initialize: function( options ) {
+		preRender: function( options ) {
 			var s, i, level, text,
 				$tmpContainer = $( '<div>' ),
 				html,
@@ -32,6 +36,8 @@
 				secs = options.sections,
 				sectionData = {};
 
+			this._anchorSection = {};
+			this.title = options.title;
 			for ( i = 0; i < secs.length; i++ ) {
 				s = secs[ i ];
 				level = s.level;
@@ -42,11 +48,11 @@
 				}
 
 				if ( level === '2' ) {
+					sectionNum += 1;
 					lastId = s.id;
-					sectionNum = sectionNum + 1;
+					this._anchorSection[ 'section_' + sectionNum ] = lastId;
 					sectionData[ sectionNum ] = { content: text,
-						id: s.id, heading: s.line };
-
+						id: lastId, heading: s.line };
 				} else if ( level ) {
 					$tmpContainer.html( text );
 					$tmpContainer.prepend(
@@ -60,8 +66,11 @@
 						sectionData[ sectionNum ].content += html;
 					}
 				}
+				if ( s.hasOwnProperty( 'references' ) ) {
+					sectionData[ sectionNum ].hasReferences = true;
+				}
+				this._anchorSection[ s.anchor ] = lastId;
 			}
-			this.heading = options.heading;
 			this.sections = [];
 			this._sectionLookup = {};
 			for ( s in sectionData ) {
@@ -70,16 +79,40 @@
 				}
 			}
 			this._lastSectionId = lastId;
+			options = $.extend( options, {
+				sections: this.sections,
+				lead: this.lead
+			} );
 		},
 		appendSection: function( data ) {
 			var section;
 			if ( !data.id ) {
 				data.id = ++this._lastSectionId;
 			}
+			data.index = this.sections.length + 1;
 			section = new Section( data );
+			if ( data.hasReferences ) {
+				this._referenceLookup = section;
+			}
 			this.sections.push( section );
 			this._sectionLookup[ section.id ] = section; // allow easy lookup of section
 			return section;
+		},
+		/**
+		 * Given an anchor that belongs to a heading
+		 * find the Section it belongs to
+		 *
+		 * @param {string} an anchor associated with a section heading
+		 * @return {Section} Section object that it belongs to
+		 */
+		getSectionFromAnchor: function( anchor ) {
+			var parentId = this._anchorSection[ anchor ];
+			if ( parentId ) {
+				return this.getSubSection( parentId );
+			}
+		},
+		getReferenceSection: function() {
+			return this._referenceLookup;
 		},
 		getSubSection: function( id ) {
 			return this._sectionLookup[ id ];

@@ -63,12 +63,13 @@
 	} );
 
 	function createLanguagePage() {
-		var overlay = new LanguageOverlay( {
+		var $container = $( this ).data( 'languages' ), overlay;
+		overlay = new LanguageOverlay( {
 			placeholder: M.message( 'mobile-frontend-language-site-choose' ),
-			variantHeader: $( '#mw-mf-language-variant-header' ).html(),
-			variantItems: $( '#mw-mf-language-variant-selection' ).html(),
-			header: $( '#mw-mf-language-header' ).html(),
-			languageItems: sortList( $( '#mw-mf-language-selection' ) ).html(),
+			variantHeader: $container.find( '#mw-mf-language-variant-header' ).html(),
+			variantItems: $container.find( '#mw-mf-language-variant-selection' ).html(),
+			header: $container.find( '#mw-mf-language-header' ).html(),
+			languageItems: sortList( $container.find( '#mw-mf-language-selection' ) ).html(),
 			languagesLink: M.history.getArticleUrl( 'Special:MobileOptions/Language' ),
 			languagesText: mw.msg( 'mobile-frontend-language-footer' )
 		} );
@@ -81,23 +82,15 @@
 
 		if ( countAvailableLanguages() > 0 ) { // assume the current language is not present
 			$h2.find( 'button' ).remove();
+			// FIXME: construct overlay here rather than on button click
 			$( '<button>' ).text( $h2.text() ).
+				data( 'languages', $a ).
 				addClass( 'languageSelector' ).
 					on( 'click', createLanguagePage ).insertBefore( $a );
 		}
-		$a.hide();
+		$a.detach(); // use detach to avoid interference with inline style scrubbing module in alpha
 	}
 
-	if ( !M.history.isDynamicPageLoadEnabled ) {
-		initButton();
-	} else {
-		M.on( 'history-change', function( curPage ) {
-			if ( curPage.hash === '#mw-mf-overlay-language' ) {
-				createLanguagePage();
-			}
-		} ).on( 'languages-loaded', function() {
-			initButton();
-		} );
-	}
+	$( initButton );
 
 }( mw.mobileFrontend, jQuery ) );

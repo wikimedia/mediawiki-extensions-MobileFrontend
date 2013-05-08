@@ -37,15 +37,6 @@ $messages['en'] = array (
 	'mobile-frontend-save-settings' => 'Save',
 	'mobile-frontend-random-button' => 'Random',
 
-	/* related to random widget */
-	'mobile-frontend-ajax-random-heading' => 'Locating knowledge...',
-	'mobile-frontend-ajax-random-quote' => 'Intellectual growth should commence at birth and cease only at death',
-	'mobile-frontend-ajax-random-quote-author' => 'Albert Einstein',
-	'mobile-frontend-ajax-random-question' => 'Read this page?',
-	'mobile-frontend-ajax-random-yes' => 'Yes',
-	'mobile-frontend-ajax-random-retry' => 'Try again',
-	'mobile-frontend-ajax-random-suggestions' => 'Other suggestions:',
-
 	'mobile-frontend-back-to-top-of-section' => 'Jump back a section',
 	'mobile-frontend-close-section' => 'Close this section',
 	'mobile-frontend-empty-homepage-text' => 'This homepage needs to be configured. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage Instructions on how to get this site mobile enabled]',

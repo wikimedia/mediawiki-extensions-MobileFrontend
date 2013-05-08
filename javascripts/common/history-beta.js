@@ -7,7 +7,9 @@
 			options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {};
 
 		if ( !cachedPage ) {
-			cachedPage = $.Deferred();
+			cachedPage = $.Deferred().fail( function() {
+				delete cache[ pageTitle ];
+			} );
 			api.get( {
 				action: 'mobileview',
 				page: pageTitle,
@@ -16,14 +18,14 @@
 				noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 				sectionprop: 'level|line|anchor', sections: 'all'
 			}, options ).then( function( r ) {
-				if ( r.mobileview.sections ) {
+				if ( r.error || !r.mobileview.sections ) {
+					cachedPage.reject( r );
+				} else {
 					cachedPage.resolve( {
-						heading: pageTitle,
+						title: pageTitle,
 						sections: r.mobileview.sections,
 						mainpage: r.mobileview.hasOwnProperty( 'mainpage' ) ? true : false
 					} );
-				} else {
-					cachedPage.reject( r );
 				}
 			} ).fail( function( r ) {
 				cachedPage.reject( r );

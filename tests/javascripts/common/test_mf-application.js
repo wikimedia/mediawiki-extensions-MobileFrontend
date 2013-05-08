@@ -11,12 +11,6 @@ QUnit.module("MobileFrontend application.js: history", {
 	}
 });
 
-QUnit.test( 'history.replaceHash', 1, function() {
-	MFE.history.replaceHash("#hash3");
-	strictEqual(window.location.hash, "#hash3", "the hash was set for the first time");
-});
-
-
 QUnit.module( 'MobileFrontend modules' );
 
 QUnit.test( 'define()', 1, function() {
