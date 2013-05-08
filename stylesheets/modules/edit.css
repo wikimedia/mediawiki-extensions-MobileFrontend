@@ -1,0 +1,17 @@
+#edit-page {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.edit-overlay textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.edit-overlay textarea:focus {
+  outline: none;
+}

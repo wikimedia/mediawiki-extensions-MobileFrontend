@@ -1,0 +1,20 @@
+@import "../mf-mixins.less";
+
+#edit-page {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.edit-overlay {
+	textarea {
+		width: 100%;
+		border: none;
+		resize: none;
+		.box-sizing( border-box );
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

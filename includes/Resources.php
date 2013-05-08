@@ -193,6 +193,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'languageSection',
 			'overlays/languages',
+			'overlays/edit/edit',
 		),
 		'class' => 'MFResourceLoaderModule',
 	),
@@ -214,7 +215,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable',
 			'mobile.beta.common',
 		),
+		'styles' => array(
+			'stylesheets/modules/edit.css',
+		),
 		'scripts' => array(
+			'javascripts/modules/edit.js',
 			'javascripts/modules/mf-languages.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 		),
@@ -230,6 +235,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for mf-languages.js
 			'mobile-frontend-language-site-choose',
 			'mobile-frontend-language-footer',
+
+			// edit.js
+			'edit',
 		),
 	),
 
