@@ -110,7 +110,7 @@ class ExtMobileFrontend extends ContextSource {
 		}
 		$out->addVaryHeader( 'Cookie' );
 		// @todo: these should be set by Zero
-		$out->addVaryHeader( 'X-Carrier' );
+		$out->addVaryHeader( 'X-CS' );
 		$out->addVaryHeader( 'X-Subdomain' );
 		$out->addVaryHeader( 'X-Images' );
 		wfProfileOut( __METHOD__ );
