@@ -633,6 +633,7 @@ $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + a
 		'mobile-frontend-nearby-noresults',
 		'mobile-frontend-ajax-preview-loading',
 		'mobile-frontend-nearby-link',
+		'mobile-frontend-needs-photo',
 	),
 	'styles' => array(
 		'stylesheets/specials/watchlist.css',

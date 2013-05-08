@@ -119,6 +119,7 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 				page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
 			} else {
 				page.pageimageClass = 'needsPhoto';
+				page.cta = mw.msg( 'mobile-frontend-needs-photo' );
 			}
 			page.url = M.history.getArticleUrl( page.title );
 			if ( page.coordinates ) { // FIXME: protect against bug 47133 (remove when resolved)
