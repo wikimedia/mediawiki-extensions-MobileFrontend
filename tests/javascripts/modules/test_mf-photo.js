@@ -1,6 +1,7 @@
 ( function ( $, M ) {
 
 var photo = M.require( 'photo' ),
+	_wgMFLeadPhotoUploadCssSelector,
 	articles = [
 		// blank #content_0
 		[ $( '<div><div id="content_0"></div></div>' ), true ],
@@ -28,9 +29,12 @@ var photo = M.require( 'photo' ),
 
 QUnit.module( 'MobileFrontend photo', {
 	setup: function() {
+		_wgMFLeadPhotoUploadCssSelector = mw.config.get( 'wgMFLeadPhotoUploadCssSelector' );
+		mw.config.set( 'wgMFLeadPhotoUploadCssSelector', 'img, .navbox, .infobox' );
 		this.clock = sinon.useFakeTimers();
 	},
 	tearDown: function () {
+		mw.config.set( 'wgMFLeadPhotoUploadCssSelector', _wgMFLeadPhotoUploadCssSelector );
 		this.clock.restore();
 	}
 } );
