@@ -440,6 +440,7 @@ $wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate +
 		'mobile-frontend-watchlist-cta-button-signup',
 		'mobile-frontend-watchlist-cta-button-login',
 		'mobile-frontend-drawer-cancel',
+		'mobile-frontend-overlay-escape',
 	),
 );
 
@@ -508,7 +509,6 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		// for search.js
 		'mobile-frontend-search-help',
 		'mobile-frontend-search-noresults',
-		'mobile-frontend-overlay-escape',
 	),
 );
 
