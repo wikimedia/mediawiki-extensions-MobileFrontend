@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwrti2dg",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-09T19:17:15Z",
+      "side": 1,
+      "message": "the name of this method is misleading; i would expect it to return all config variables. also, im not sure but is this really the right place to be sending this vars? if so, it would be good to also implement a way to set specific config vars to be sent (create a setter method and maybe store the values in an object property) and add appropriate phpunit tests.",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
