@@ -6,7 +6,7 @@ class SkinMobile extends SkinMobileBase {
 	public $template = 'SkinMobileTemplate';
 
 	protected function prepareTemplate() {
-		global $wgAppleTouchIcon, $wgMFCustomLogos, $wgMFTrademarkSitename;
+		global $wgAppleTouchIcon;
 
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate();
@@ -45,6 +45,7 @@ class SkinMobile extends SkinMobileBase {
 
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );
+		$this->prepareFooterLinks( $tpl );
 
 		$tpl->set( 'isMainPage', $title->isMainPage() );
 
@@ -56,33 +57,6 @@ class SkinMobile extends SkinMobileBase {
 		$tpl = $this->attachResources( $title, $tpl, $device );
 
 		$tpl->set( 'isSpecialPage', $title->isSpecialPage() );
-
-		// footer
-		$tpl->set( 'copyright', $this->getCopyright() );
-
-
-		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
-		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
-			if ( $wgMFTrademarkSitename ) {
-				$suffix = ' ®';
-			} else {
-				$suffix = '';
-			}
-			$sitename = Html::element( 'img', array(
-				'src' => $wgMFCustomLogos['copyright'],
-				'alt' => "{$footerSitename}" . $suffix
-			) );
-		} else {
-			if ( $wgMFTrademarkSitename ) {
-				$suffix = ' ™';
-			} else {
-				$suffix = '';
-			}
-			$sitename = Html::element( 'span', array(),
-				"{$footerSitename}" . $suffix
-			);
-		}
-		$tpl->set( 'sitename', $sitename );
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;
@@ -113,11 +87,64 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'donateImageUrl', $donateUrl );
 		$tpl->set( 'nearbyURL', $nearbyUrl );
 		$tpl->set( 'settingsUrl', $settingsUrl );
-		$tpl->set( 'disclaimer', $this->disclaimerLink() );
-		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'loginLogoutText', $link['text'] );
 		$tpl->set( 'loginLogoutUrl', $link['href'] );
-		$tpl->set( 'about', $this->footerLink( 'mobile-frontend-about-link-text', 'aboutpage' ) );
+	}
+
+	/**
+	 * Returns the site name for the footer, either as a text or <img> tag
+	 */
+	protected function getSitename() {
+		global $wgMFCustomLogos, $wgMFTrademarkSitename;
+
+		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
+
+		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
+			$suffix = $wgMFTrademarkSitename ? ' ®' : '';
+			$sitename = Html::element( 'img', array(
+				'src' => $wgMFCustomLogos['copyright'],
+				'alt' => $footerSitename . $suffix
+			) );
+		} else {
+			$suffix = $wgMFTrademarkSitename ? ' ™' : '';
+			$sitename = $footerSitename . $suffix;
+		}
+
+		return $sitename;
+	}
+
+	/**
+	 * Prepares links used in the footer
+	 * @param QuickTemplate
+	 */
+	protected function prepareFooterLinks( $tpl ) {
+		$req = $this->getRequest();
+
+		$url = MobileContext::singleton()->getDesktopUrl( wfExpandUrl(
+			$req->appendQuery( 'mobileaction=toggle_view_desktop' )
+		) );
+		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['toggle_view_desktop'] ) ) {
+			$hookQuery = $this->hookOptions['toggle_view_desktop'];
+			$url = $req->appendQuery( $hookQuery ) . urlencode( $url );
+		}
+		$url = htmlspecialchars( $url );
+
+		$desktop = wfMessage( 'mobile-frontend-view-desktop' )->escaped();
+		$mobile = wfMessage( 'mobile-frontend-view-mobile' )->escaped();
+
+		$switcherHtml = <<<HTML
+<h2>{$this->getSitename()}</h2>
+<ul>
+	<li>{$mobile}</li><li><a id="mw-mf-display-toggle" href="{$url}">{$desktop}</a></li>
+</ul>
+HTML;
+
+		$licenseText = wfMessage( 'mobile-frontend-footer-license' )->parse();
+
+		$tpl->set( 'mobile-switcher', $switcherHtml );
+		$tpl->set( 'mobile-license', $licenseText );
+		$tpl->set( 'privacy', $this->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
+		$tpl->set( 'terms-use', wfMessage( 'mobile-frontend-terms-use-text' )->parse() );
 	}
 
 	/**
@@ -149,7 +176,8 @@ class SkinMobile extends SkinMobileBase {
 		$user = $this->getUser();
 		$userLogin = $title->isSpecial( 'Userlogin' );
 		$out = $this->getOutput();
-		$inAlpha = MobileContext::singleton()->isAlphaGroupMember();
+		$ctx = MobileContext::singleton();
+		$inAlpha = $ctx->isAlphaGroupMember();
 
 		if ( $userLogin ) {
 			$pageHeading = $this->getLoginPageHeading();
@@ -194,14 +222,19 @@ class SkinMobile extends SkinMobileBase {
 				}
 			}
 
+			// add last modified timestamp
 			$timestamp = Revision::getTimestampFromId( $this->getTitle(), $this->getRevisionId() );
 			$lastModified = wfMessage( 'mobile-frontend-last-modified-date',
 				$this->getLanguage()->userDate( $timestamp, $user ),
 				$this->getLanguage()->userTime( $timestamp, $user )
 			)->parse();
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
-			// add last modified timestamp
-			$postBodyText = "<p id=\"mw-mf-last-modified\" data-timestamp=\"$timestamp\">$lastModified</p>";
+			$historyUrl = $ctx->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
+			$postBodyText = Html::element( 'a', array(
+				'id' => 'mw-mf-last-modified',
+				'data-timestamp' => $timestamp,
+				'href' => $historyUrl
+			), $lastModified );
 		}
 
 		$htmlHeader = $this->getOutput()->getProperty( 'mobile.htmlHeader' );

@@ -127,18 +127,13 @@ HTML;
 		if ( !$data['isSpecialPage'] ) {
 		?>
 		<div id="footer">
-			<h2 id="section_footer">
-				<?php $this->html( 'sitename' ); ?>
-			</h2>
-			<div id="content_footer">
-		<?php
-			foreach( $this->getFooterLinks() as $category => $links ):
-		?>
+			<?php
+				foreach( $this->getFooterLinks() as $category => $links ):
+			?>
 				<ul class="footer-<?php echo $category; ?>">
-					<?php foreach( $links as $link ): ?><li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li><?php endforeach; ?>
+					<?php foreach( $links as $link ): ?><li><?php $this->html( $link ) ?></li><?php endforeach; ?>
 				</ul>
 			<?php endforeach; ?>
-			</div>
 		</div>
 		<?php
 		}

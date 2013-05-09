@@ -3,100 +3,50 @@ initially moved from beta_common.css in
 Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 */
 #footer {
-  padding: 12px 23px 12px 23px;
-  border-top: solid 1px #aaa;
-  line-height: 24px;
-  position: relative;
+  padding: 2em 23px 1.5em 23px;
+  margin: 2em 0 0;
+  border-top: 1px solid #aaa;
   clear: both;
   /* cancel any floating in the content */
 
+  font-size: 0.9em;
 }
 #footer h2 {
-  height: 24px;
-  display: block;
+  display: inline;
   margin: 0;
+  line-height: inherit;
   font-weight: bold;
   font-size: 1em;
-  line-height: 22px;
 }
 #footer h2 img {
-  margin-top: 3px;
-  /* (22px line height - 16px height) / 2) */
-
-  height: 16px;
-}
-#footer h2 ul,
-#footer h2 span {
-  float: left;
-  margin-right: 4px;
-}
-#footer div {
-  font-size: 0.9em;
-  clear: both;
+  height: 1em;
 }
 #footer ul {
   text-align: center;
-  width: 100%;
-  padding: 0;
   list-style: none;
   margin: 0;
 }
+#footer ul li {
+  line-height: 1.2;
+  padding: 0 0 .7em;
+}
+#footer ul ul {
+  display: inline;
+}
+#footer ul ul li,
 #footer ul.footer-places li {
-  display: inline-block;
-  width: 33%;
-  font-size: 0.9em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: 1.4;
+  display: inline;
+  padding: 0 8px;
+  border-right: 1px solid #aaa;
 }
-#footer ul.footer-notice .left,
-#footer ul.footer-notice .right {
-  width: 48%;
-  display: inline-block;
-  box-sizing: border-box;
+#footer ul ul li:last-child,
+#footer ul.footer-places li:last-child {
+  border: none;
 }
-#footer ul.footer-notice .left {
-  text-align: right;
-  padding-right: 2px;
+#content_footer {
+  margin: 1em 0 0;
 }
-#footer ul.footer-notice .right {
-  text-align: left;
-  padding-left: 2px;
-}
-#footer .footer-notice .terms {
-  float: left;
-}
-/* FIXME: Desktop specific style - move out of css served to mobile */
-.skin-minerva #footer ul.footer-places li {
-  width: 25%;
-}
-.mw-mf-special #footer {
-  display: none;
-}
-html[dir="rtl"] #footer .footer-notice li:first-child .left:before,
-html[dir="ltr"] #footer .footer-notice li:first-child .left:after {
-  content: " | ";
-  visibility: visible;
-}
-html[dir="rtl"] #footer .footer-notice .left:before,
-html[dir="ltr"] #footer .footer-notice .left:after {
-  content: " | ";
-  visibility: hidden;
-}
-body #section_footer button {
-  height: 22px;
-}
-@media all and (min-width: 330px) {
-  #footer .content_block {
-    font-size: 0.9em;
-  }
-  #footer ul.footer-places li {
-    font-size: 1.1em;
-  }
-}
-@media all and (min-width: 500px) {
-  #footer ul.footer-places li {
-    font-size: 1.2em;
-  }
+#content_footer .separator {
+  margin: 0 .35em 0 0;
+  border-right: 1px solid #aaa;
 }

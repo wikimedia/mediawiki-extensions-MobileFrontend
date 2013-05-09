@@ -118,19 +118,18 @@ class SkinMobileTemplate extends MinervaTemplate {
 	/**
 	 * Returns an array of footerlinks trimmed down to only those footer links that
 	 * are valid.
-	 * $option currently unused in mobile
+	 * @param $option currently unused in mobile
 	 * @return array|mixed
 	 */
 	public function getFooterLinks( $option = null ) {
 		return array(
-			'notice' => array(
+			'info' => array(
 				'mobile-switcher',
-				'mobile-notice',
+				'mobile-license',
 			),
 			'places' => array(
+				'terms-use',
 				'privacy',
-				'about',
-				'disclaimer',
 			),
 		);
 	}
