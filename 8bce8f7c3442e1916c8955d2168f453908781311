@@ -16,6 +16,24 @@
       "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwhtgJRA",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-09T20:46:23Z",
+      "side": 1,
+      "message": "Yes it is.\nSee discussion on https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d44133\n\nAs for name how about getSkinConfigVariables ?\n\nI\u0027m not sure how a test would be useful here - it simply creates an array of config variables that are specific to the skin.\n\nSee follow up commit which adds better documentation for when to use this function.",
+      "parentUuid": "Dwrti2dg",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
