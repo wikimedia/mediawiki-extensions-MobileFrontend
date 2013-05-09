@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw9.muxE",
+        "filename": "javascripts/specials/nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-09T21:50:42Z",
+      "side": 1,
+      "message": "No need to pass \"this.\"",
+      "revId": "648152270ccca97cc10fd6881b10686b8369bd42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw19iq9s",
+        "filename": "javascripts/specials/overlays/preview.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-09T21:50:42Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to belong here, especially if we decide to reuse the preview.",
+      "revId": "648152270ccca97cc10fd6881b10686b8369bd42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw5.cM74",
+        "filename": "javascripts/specials/overlays/preview.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-09T21:50:42Z",
+      "side": 1,
+      "message": "Why\u0027s that needed?",
+      "revId": "648152270ccca97cc10fd6881b10686b8369bd42",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
