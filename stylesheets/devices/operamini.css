@@ -11,11 +11,7 @@ table { /* table[style] not supported */
 	float: none !important;
 	margin-left: 0 !important;
 	width: 100% !important;
-	overflow-y: scroll;
-}
-
-tbody {
-	height: 200px;
+	overflow: auto;
 }
 
 .mwm-notice {
