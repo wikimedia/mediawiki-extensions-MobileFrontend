@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwx.pQ98",
+        "filename": "includes/skins/UserLoginAndCreateTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-09T21:53:41Z",
+      "side": 1,
+      "message": "This is not the same as $wgMobileFrontendLogo - we will need to create a new variable name",
+      "revId": "6fba82de938d412c88216d25d3f8d8e1590349de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
