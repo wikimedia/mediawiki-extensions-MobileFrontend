@@ -128,6 +128,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-refresh' => 'We found a more accurate location for you. Click here to refresh the list of nearby pages',
 	'mobile-frontend-nearby-error' => 'An unexpected error occurred whilst trying to find pages nearby',
 	'mobile-frontend-nearby-link' => 'Read this page in full',
+	'mobile-frontend-needs-photo' => 'Visit this page to add an image',
 
 	// image donation
 	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
@@ -475,6 +476,7 @@ See also:
 	'mobile-frontend-nearby-refresh' => 'Text of toast notification message shown when user moved and the list can be refreshed.',
 	'mobile-frontend-nearby-error' => 'Text of generic error message when querying geodata api',
 	'mobile-frontend-nearby-link' => 'Text of link that takes user to full page',
+	'mobile-frontend-needs-photo' => 'Text that appears on page item in Special:Nearby list telling user to upload a photo',
 	'mobile-frontend-donate-image-login' => 'Title for [[Special:UserLogin]] when being redirected to [[Special:Uploads]].
 
 Used when the user is not logged in.
