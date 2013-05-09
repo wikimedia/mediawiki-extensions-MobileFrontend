@@ -147,8 +147,8 @@
   line-height: 1;
 }
 .animations .photo-nag label div.active {
-  animation: pulse 1s ease-in-out infinite alternate;
   -webkit-animation: pulse 1s ease-in-out infinite alternate;
+  animation: pulse 1s ease-in-out infinite alternate;
 }
 @media (min-width: 700px) {
   .photo-nag .preview {

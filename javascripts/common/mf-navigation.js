@@ -101,7 +101,7 @@ var m = ( function( $ ) {
 	} );
 
 	function getPageMenu() {
-		return $( '#mw-mf-menu-page' )[ 0 ];
+		return $( '#mw-mf-menu-page' );
 	}
 
 	function enableEditing( title ) {
