@@ -6,8 +6,9 @@ class MinervaTemplate extends BaseTemplate {
 
 	private function prepareCommonData() {
 		// set defaults
-		$this->set( 'postbodytext', '' );
-
+		if ( !isset( $this->data['postbodytext'] ) ) {
+			$this->set( 'postbodytext', '' ); // not set in desktop skin
+		}
 		$searchBox = $this->makeSearchInput(
 			array(
 				'id' => 'searchInput',
