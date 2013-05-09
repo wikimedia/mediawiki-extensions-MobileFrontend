@@ -6,44 +6,52 @@ button,
 input[type=submit] {
 	display: inline-block;
 	.border-radius( 3px );
-	padding: ( @baseFontSize ) ( @baseFontSize * 1.25 ) ( @baseFontSize );
+	white-space: nowrap;
 	line-height: 1;
-	text-align: center;
 	cursor: pointer;
-	border: 1px #33589f solid;
-	.text-with-shadow( white );
-	.vertical-gradient( #3670C8, @blueBase );
+}
 
-	&:hover {
-		.vertical-gradient( #4c84da, #3f77d7 );
-	}
+.content, .buttonBar {
+	.button,
+	button,
+	input[type=submit] {
+		padding: ( @baseFontSize ) ( @baseFontSize * 1.25 ) ( @baseFontSize );
+		text-align: center;
+		border: 1px #33589f solid;
+		.text-with-shadow( white );
+		.vertical-gradient( #3670C8, @blueBase );
 
-	&:active {
-		.vertical-gradient( #2d5ea9, #2a549c );
-	}
+		&:hover {
+			.vertical-gradient( #4c84da, #3f77d7 );
+		}
 
-	&:visited {
-		color: #fff;
-	}
+		&:active {
+			.vertical-gradient( #2d5ea9, #2a549c );
+		}
 
-	&:disabled,
-	&:disabled.hover,
-	&.disabled,
-	&.disabled:hover {
-		@disabledColor: lighten( desaturate( #3f77d7, 10% ), 10% );
-		color: white;
-		text-shadow:  none;
-		.vertical-gradient( @disabledColor,@disabledColor );
-		border-color: darken( @disabledColor, 5% );
-	}
+		&:visited {
+			color: #fff;
+		}
 
-	&.languageSelector {
-		margin-top: @headingMarginTop;
-	}
+		&:disabled,
+		&:disabled.hover,
+		&.disabled,
+		&.disabled:hover {
+			@disabledColor: lighten( desaturate( #3f77d7, 10% ), 10% );
+			color: white;
+			text-shadow:  none;
+			.vertical-gradient( @disabledColor,@disabledColor );
+			border-color: darken( @disabledColor, 5% );
+		}
 
-	&.cancel {
-		background: #999;
-		border: 1px #777 solid;
+		&.languageSelector {
+			margin-top: @headingMarginTop;
+		}
+
+		&.cancel {
+			background: #999;
+			border: 1px #777 solid;
+		}
 	}
 }
 
@@ -51,35 +59,52 @@ input[type=submit] {
 @buttonVerticalPadding: ( @headerHeight / 2 ) - ( @buttonVerticalMargin * 2 );
 
 .header {
-	a.button {
-		font-size: @baseFontSize;
-		margin-top: @buttonVerticalMargin;
-		margin-bottom: @buttonVerticalMargin;
-		.border-radius( 0 );
-		padding-top: @buttonVerticalPadding;
-		padding-bottom: @buttonVerticalPadding;
+	.button,
+	button {
+		margin: @buttonVerticalMargin 0;
+		padding: @buttonVerticalPadding ( @baseFontSize * 1.25 );
 		text-decoration: none;
-		text-shadow: none;
 		.vertical-gradient(#fff, #e9e9ea, 45%, 100%);
 		color: #58595b;
 		border: 1px solid #9ea0a3;
-		border-right: none;
+		// needed by Safari
 		vertical-align: middle;
-		white-space: nowrap;
 
-		&.active {
-			background: #c8cacb;
-			font-weight: bold;
+		&.cancel {
+			margin: 0;
 		}
+	}
 
-		&:first-child {
-			.border-radius( 3px 0 0 3px );
-			border-left: 1px solid #9ea0a3;
-		}
+	.button-bar {
+		text-align: center;
 
-		&:last-child {
-			.border-radius( 0 3px 3px 0 );
-			border-right: 1px solid #9ea0a3;
+		li {
+			display: inline-block;
+
+			.button, button {
+				.border-radius( 0 );
+				border-right: none;
+			}
+
+			&.active {
+				.button, button {
+					background: #c8cacb;
+					font-weight: bold;
+				}
+			}
+
+			&:first-child {
+				.button, button {
+					.border-radius( 3px 0 0 3px );
+				}
+			}
+
+			&:last-child {
+				.button, button {
+					.border-radius( 0 3px 3px 0 );
+					border-right: 1px solid #9ea0a3;
+				}
+			}
 		}
 	}
 }
