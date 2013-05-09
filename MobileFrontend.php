@@ -599,6 +599,20 @@ $wgResourceModules['mobile.nearby.plumbing'] = $wgMFMobileResourceTemplateBoiler
 		'overlays/loading',
 	),
 );
+
+$wgResourceModules['mobile.nearby.previews'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.nearby.scripts',
+	),
+	'messages' => array(
+		// preview.js
+		'mobile-frontend-ajax-preview-loading',
+	),
+	'scripts' => array(
+		'javascripts/specials/overlays/preview.js',
+	),
+);
+
 $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.nearby.plumbing',
@@ -615,7 +629,6 @@ $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + a
 		'mobile-frontend-nearby-distance-meters',
 		'mobile-frontend-nearby-lookup-error',
 		'mobile-frontend-nearby-noresults',
-		'mobile-frontend-ajax-preview-loading',
 		'mobile-frontend-nearby-link',
 	),
 	'styles' => array(
