@@ -114,10 +114,8 @@ $messages['en'] = array (
 	'mobile-frontend-meta-data-issues-header' => 'Issues',
 	'mobile-frontend-meta-data-issues' => 'This page has some issues',
 
-	'mobile-frontend-ajax-page-loading' => 'Loading $1',
 	'mobile-frontend-ajax-preview-loading' => 'Loading page preview',
 	'mobile-frontend-page-saving' => 'Saving $1',
-	'mobile-frontend-ajax-page-error' => 'Whoops! Something went wrong there. Please try refreshing your browser window.',
 
 	// nearby
 	'mobile-frontend-nearby-title' => 'Nearby',
