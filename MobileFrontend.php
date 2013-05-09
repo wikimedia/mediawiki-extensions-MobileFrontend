@@ -445,6 +445,7 @@ $wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate +
 		// mf-navigation.js
 		'mobile-frontend-watchlist-cta-button-signup',
 		'mobile-frontend-watchlist-cta-button-login',
+		'mobile-frontend-drawer-cancel',
 	),
 );
 
@@ -480,7 +481,6 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-last-modified-years',
 
 		// mf-notification.js
-		'mobile-frontend-drawer-cancel',
 		'mobile-frontend-logged-in-toast-notification',
 
 		// mf-watchstar.js
