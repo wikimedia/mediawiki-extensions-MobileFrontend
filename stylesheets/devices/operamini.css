@@ -1,6 +1,9 @@
 .divclearable {
 	padding-top: 9px;
-	padding-right: 50px;
+}
+
+.divclearable input.search {
+	padding: 0;
 }
 
 .divclearable .searchSubmit {

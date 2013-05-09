@@ -360,6 +360,9 @@ input.searchSubmit {
   padding-bottom: 9px;
   font-size: 9px;
 }
+.client-nojs .search-box .divclearable {
+  padding-right: 40px;
+}
 .search-box {
   position: relative;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
