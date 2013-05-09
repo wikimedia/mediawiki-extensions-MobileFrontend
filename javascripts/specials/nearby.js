@@ -198,7 +198,7 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 				lng.toFixed( PRECISION ) === curLocation.longitude.toFixed( PRECISION ) ) { // bug 47898
 				return;
 			} else {
-				curLocation = geo.coords;
+				curLocation = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
 				cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
 				findResults( lat, lng );
 			}
@@ -214,6 +214,9 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 	if ( supported ) {
 		if ( lastKnownLocation ) {
 			curLocation = $.parseJSON( lastKnownLocation );
+			if ( !curLocation.latitude ) { // Fix damage caused by bug 48268 which will throw an error in watchPosition handler
+				curLocation = false;
+			}
 		}
 		init();
 		if ( lastSearchResult ) {
