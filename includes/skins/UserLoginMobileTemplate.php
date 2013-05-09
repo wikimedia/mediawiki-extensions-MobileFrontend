@@ -54,8 +54,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			$msgBox .= $message;
 			$msgBox .= Html::closeElement( 'div' );
 		} else {
-			$msgBox .= Html::rawElement( 'div', array(
-				'class' => 'watermark' ) );
+			$msgBox .= $this->getLogoHtml();
 		}
 
 		$form = Html::openElement( 'div', array() ) .

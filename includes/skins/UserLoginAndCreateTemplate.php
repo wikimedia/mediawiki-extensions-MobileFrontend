@@ -89,4 +89,20 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 		}
 		return wfMessage( $key )->plain();
 	}
+
+	protected function getLogoHtml() {
+		global $wgMobileFrontendLogo;
+
+		if ( !$wgMobileFrontendLogo ) {
+			return '';
+		}
+		return '<div class="watermark">'
+			. Html::element( 'img',
+				array(
+					'src' => $wgMobileFrontendLogo,
+					'alt' => '',
+				)
+			)
+			. '</div>';
+	}
 }

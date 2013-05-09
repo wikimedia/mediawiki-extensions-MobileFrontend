@@ -6,18 +6,15 @@
 }
 #mw-mf-login .watermark,
 #mw-mf-accountcreate .watermark {
-  background-position: center center;
+  text-align: center;
   height: 72px;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: auto 72px;
-  -o-background-size: auto 72px;
-  -webkit-background-size: auto 72px;
-  background-size: auto 72px;
   width: 100%;
-  background-image: url(images/W.png);
-  background-repeat: no-repeat;
   margin-bottom: 14pt;
+}
+#mw-mf-login .watermark img,
+#mw-mf-accountcreate .watermark img {
+  height: 72px;
+  width: auto;
 }
 #mw-mf-login .headmsg,
 #mw-mf-accountcreate .headmsg {
