@@ -251,7 +251,7 @@ $wgResourceModules['mobile.startup'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/externals/hogan.js',
 		'javascripts/common/eventemitter.js',
 		'javascripts/common/mf-application.js',
-		'javascripts/common/mf-history.js',
+		'javascripts/common/history.js',
 		'javascripts/common/mf-settings.js',
 		'javascripts/modules/mf-stop-mobile-redirect.js',
 	),
@@ -299,6 +299,7 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/modules/mf-languages.js',
 		'javascripts/common/history-beta.js',
 		'javascripts/views/page.js',
+		'javascripts/modules/mf-toggle-dynamic.js',
 	),
 	'position' => 'bottom',
 	'messages' => array(
@@ -312,11 +313,6 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		// for mf-languages.js
 		'mobile-frontend-language-site-choose',
 		'mobile-frontend-language-footer',
-
-		// mf-history-jquery.js
-		'mobile-frontend-ajax-page-loading',
-		'mobile-frontend-ajax-page-error',
-		'mobile-frontend-language-article-heading',
 	),
 );
 
@@ -398,10 +394,8 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	'scripts' => array(
 		'javascripts/common/application-alpha.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
-		'javascripts/common/mf-history-jquery.js',
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-translator.js',
-		'javascripts/modules/mf-toggle-dynamic.js',
 		'javascripts/modules/talk.js',
 	),
 );

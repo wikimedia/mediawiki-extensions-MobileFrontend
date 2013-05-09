@@ -312,12 +312,12 @@ HTML;
 		if ( $inBeta ) {
 			$out->addModules( 'mobile.beta' );
 			$mode = 'beta';
+		} else {
+			$out->addModules( 'mobile.toggling' );
 		}
 		if ( $inAlpha ) {
 			$out->addModules( 'mobile.alpha' );
 			$mode = 'alpha';
-		} else {
-			$out->addModules( 'mobile.toggling' );
 		}
 		wfRunHooks( 'EnableMobileModules', array( $out, $mode ) );
 
