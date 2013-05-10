@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "Dw3MtKKg",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-10T22:34:56Z",
+      "side": 1,
+      "message": "yeah i think getSkingConfigVariables() is fine, so long as it\u0027s something that\u0027s clear that these are indeed config variables that are skin-specific (or i guess otherwise needed by the skin).\n\nas for my comment about a test, i dont think you need one for how this method is currently written, but if you were to change it to how i\u0027m suggesting you approach this (see new comment below), it would be useful to have tests.",
+      "parentUuid": "DwhtgJRA",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwyjbL3s",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "it\u0027s getting more blurry - but this variable is needed for the Minerva skin - so I suggest minervaLeadPhotoUploadCssSelector might be a better name but let\u0027s worry about this in future..",
       "parentUuid": "DwyjbL3s",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw7M2kAA",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-10T22:34:56Z",
+      "side": 1,
+      "message": "This is precisely why I was suggesting we change how getConfigVariables() works; it should not have *any* config variables that are not universally usable in it by default, and I think it would be better if they were stored in an object property returned by this method.",
+      "parentUuid": "Dw3OzaE0",
       "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
