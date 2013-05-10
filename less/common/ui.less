@@ -17,7 +17,6 @@
 	line-height: @headerHeight;
 	text-align: center;
 	min-height: @headerHeight;
-	margin: 0;
 	overflow: hidden;
 	position: relative;
 	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
@@ -57,15 +56,12 @@
 /* Search */
 input.search {
 	-webkit-appearance: none;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	.border-radius( 3px );
-	border: @searchBorderHeight solid #c9c9c9;
+	border: @headerElementBorderHeight solid #c9c9c9;
 	outline: none;
 	padding: 0 0 0 5px;
 	width: 100%;
-	height: @searchBoxHeight;
-	vertical-align: middle; /* don't use line height here as placeholder on ripple positions incorrectly */
+	height: @headerElementHeight;
 	background-color: white; /* remove fennec default background */
 	.box-sizing( border-box );
 	&::-webkit-search-cancel-button {
@@ -77,22 +73,18 @@ input.search {
 	}
 }
 
-input.searchSubmit {
-	@inputThirdHeight: round( @searchBoxHeight / 3 ) - 1;
-
+.searchSubmit {
 	position: absolute;
-	top: @searchMarginTop;
-	right: 4px;
-	padding-top: @inputThirdHeight;
-	padding-bottom: @inputThirdHeight;
-	font-size: @inputThirdHeight;
+	top: ( @headerHeight - @headerElementHeight ) / 2;
+	margin: 0;
+	right: 0;
+	padding: 0 !important;
+	width: @headerElementHeight;
 }
 
 .client-nojs {
 	.search-box {
-		.divclearable {
-			padding-right: 40px;
-		}
+		padding-right: @headerElementHeight + 4px;
 	}
 }
 
@@ -110,7 +102,7 @@ input.searchSubmit {
 }
 
 .client-js {
-	input.searchSubmit {
+	.searchSubmit {
 		display: none;
 	}
 

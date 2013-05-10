@@ -114,9 +114,10 @@ input[type=submit] {
   border: 1px #777 solid;
 }
 .header .button,
-.header button {
-  margin: 8px 0;
-  padding: 7px 1.25em;
+.header button,
+.header input[type=submit] {
+  line-height: 28px;
+  padding: 0 1.25em;
   text-decoration: none;
   background-color: #e9e9ea;
   background-image: -moz-linear-gradient(top, #ffffff 45%, #e9e9ea 100%);
@@ -126,10 +127,10 @@ input[type=submit] {
   background-image: linear-gradient(#ffffff 45%, #e9e9ea 100%);
   color: #58595b;
   border: 1px solid #9ea0a3;
-  vertical-align: middle;
 }
 .header .button.cancel,
-.header button.cancel {
+.header button.cancel,
+.header input[type=submit].cancel {
   margin: 0;
 }
 .header .button-bar {
@@ -283,7 +284,6 @@ input[type=submit] {
   line-height: 46px;
   text-align: center;
   min-height: 46px;
-  margin: 0;
   overflow: hidden;
   position: relative;
   padding: 0 40px 0 40px;
@@ -335,9 +335,6 @@ input.search {
   padding: 0 0 0 5px;
   width: 100%;
   height: 30px;
-  vertical-align: middle;
-  /* don't use line height here as placeholder on ripple positions incorrectly */
-
   background-color: white;
   /* remove fennec default background */
 
@@ -352,16 +349,16 @@ input.search::-webkit-search-cancel-button {
 input.search:focus {
   outline: none;
 }
-input.searchSubmit {
+.searchSubmit {
   position: absolute;
-  top: 9px;
-  right: 4px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  font-size: 9px;
+  top: 8px;
+  margin: 0;
+  right: 0;
+  padding: 0 !important;
+  width: 30px;
 }
-.client-nojs .search-box .divclearable {
-  padding-right: 40px;
+.client-nojs .search-box {
+  padding-right: 34px;
 }
 .search-box {
   position: relative;
@@ -373,7 +370,7 @@ input.searchSubmit {
 #mw-mf-menu-page {
   display: none;
 }
-.client-js input.searchSubmit {
+.client-js .searchSubmit {
   display: none;
 }
 .client-js #mw-mf-sq {

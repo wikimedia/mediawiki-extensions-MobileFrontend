@@ -21,10 +21,8 @@ class MinervaTemplate extends BaseTemplate {
 		$searchButton = $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit' ) );
 		$header = <<<HTML
 <form action="{$script}" class="search-box">
-	<div class="divclearable">
-		{$searchBox}
-		{$searchButton}
-	</div>
+	{$searchBox}
+	{$searchButton}
 </form>
 HTML;
 		$this->set( 'header', $header );

@@ -36,11 +36,6 @@ a.external {
   right: 0;
   top: 0;
 }
-.divclearable {
-  display: block;
-  vertical-align: middle;
-  position: relative;
-}
 .info {
   margin: 4em;
   color: #707070;
