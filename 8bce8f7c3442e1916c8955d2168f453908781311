@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dw9MGtIg",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 951,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-10T21:29:05Z",
+      "side": 1,
+      "message": "In both situations https://en.wikipedia.org/wiki/%C3%87eltik%C3%A7i,_Manavgat will not get a photo upload button. There are too many edge cases but at least with being able to configure the CSS selector we can get smarter.\n\nThe main reason for making this configurable is if people moan about photos being added to pages above an infobox that they need to move we can deal with this by disabling by updating a config variable.",
+      "parentUuid": "Dw0j687s",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dwrti2dg",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
@@ -65,6 +83,24 @@
       "writtenOn": "2013-05-10T19:55:00Z",
       "side": 1,
       "message": "So, Minerva is supposed to work on desktop and we make it dependent on a MF variable?",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw3OzaE0",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-10T21:29:05Z",
+      "side": 1,
+      "message": "it\u0027s getting more blurry - but this variable is needed for the Minerva skin - so I suggest minervaLeadPhotoUploadCssSelector might be a better name but let\u0027s worry about this in future..",
+      "parentUuid": "DwyjbL3s",
       "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
