@@ -1,13 +1,9 @@
 class HomePage
   include PageObject
 
+  include URL
   def self.url
-    if ENV['MEDIAWIKI_URL']
-      mediawiki_url = ENV['MEDIAWIKI_URL']
-    else
-      mediawiki_url = 'http://127.0.0.1:80/wiki/'
-    end
-    "#{mediawiki_url}Main_Page"
+    URL.url('Main_Page')
   end
   page_url url
 
