@@ -104,4 +104,38 @@ QUnit.test( 'trimUtf8String', 4, function() {
 	strictEqual( photo.trimUtf8String( 'こんにちは', 10 ), 'こんに', 'CJK string truncated' );
 } );
 
+QUnit.module( 'MobileFrontend photo', {
+	setup: function() {
+		var resp = {"upload":{"result":"Warning","warnings":{"badfilename":"::.JPG"},"filekey":"1s.1.jpg","sessionkey":"z1.jpg"}},
+			EventEmitter = M.require( 'eventemitter' );
+
+		this.api = new photo.PhotoApi();
+		sinon.stub( this.api, 'getToken', function() {
+			return $.Deferred().resolve( 'foo' );
+		} );
+		sinon.stub( this.api, 'post', function() {
+			var req = $.Deferred().resolve( resp );
+			$.extend( req, EventEmitter.prototype );
+			return req;
+		} );
+	},
+	tearDown: function () {
+		this.api = false;
+	}
+} );
+
+QUnit.test( 'upload with missing filename', 1, function() {
+	var badResponse;
+	this.api.save( {
+		insertInPage: true,
+		file: {
+			name: '::'
+		},
+		description: 'yo:: yo ::'
+	} ).fail( function() {
+		badResponse = true;
+	} );
+	strictEqual( badResponse, true, 'The request caused a bad file name error' );
+} );
+
 }( jQuery, mw.mobileFrontend) );

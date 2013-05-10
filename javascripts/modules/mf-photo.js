@@ -207,6 +207,11 @@
 								mw.msg( 'mobile-frontend-photo-upload-error-filename' ) );
 						}
 					}
+					if ( !options.fileName && data.upload.filename ) {
+						options.fileName = data.upload.filename;
+					} else {
+						return result.reject( 'Missing filename' );
+					}
 					// FIXME: API doesn't return this information on duplicate images...
 					if ( data.upload.imageinfo ) {
 						descriptionUrl = data.upload.imageinfo.descriptionurl;
@@ -559,6 +564,7 @@
 	}
 
 	M.define( 'photo', {
+		PhotoApi: PhotoApi,
 		generateFileName: generateFileName,
 		isSupported: isSupported,
 		PhotoUploader: PhotoUploader,
