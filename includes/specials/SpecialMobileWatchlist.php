@@ -303,6 +303,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$this->showResults( $res, false );
 	}
 
+	// FIXME: use templates/articleList.html to keep consistent with nearby view
 	function showResults( ResultWrapper $res, $feed ) {
 		wfProfileIn( __METHOD__ );
 
@@ -400,6 +401,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		wfProfileIn( __METHOD__ );
 
 		if ( $this->usePageImages ) {
+			$needsPhoto = true;
 			$props = array(
 				'class' => 'listThumb needsPhoto',
 			);
@@ -408,6 +410,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				if ( $file ) {
 					$thumb = $file->transform( array( 'width' => self::THUMB_SIZE, 'height' => self::THUMB_SIZE ) );
 					if ( $thumb ) {
+						$needsPhoto = false;
 						$props = array(
 								'class' => 'listThumb ' . ( $thumb->getWidth() > $thumb->getHeight() ? 'listThumbH' : 'listThumbV' ),
 								'style' => 'background-image: url("' . wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT ) . '")',
@@ -415,11 +418,16 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 					}
 				}
 			}
-			return Html::element( 'div', $props );
+			return array(
+				'html' => Html::element( 'div', $props ),
+				'needsPhoto' => $needsPhoto,
+			);
 		}
 
 		wfProfileOut( __METHOD__ );
-		return '';
+		return array(
+			'html' => '',
+		);
 	}
 
 	private function showFeedResultRow( $row ) {
@@ -486,11 +494,19 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$ts = new MWTimestamp( $row->rev_timestamp );
 		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
 
+		$thumb = $this->renderThumb( $row );
+		if ( isset( $thumb['needsPhoto'] ) && $thumb['needsPhoto'] && MobileContext::singleton()->isBetaGroupMember() ) {
+			$cta = Html::element( 'div', array( 'class' => 'info' ), wfMessage( 'mobile-frontend-needs-photo' )->text() );
+		} else {
+			$cta = '';
+		}
+
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
-			$this->renderThumb( $row ) .
+			$thumb['html'] .
 			Html::element( 'h2', array(), $titleText ).
+			$cta .
 			Html::element( 'div', array( 'class' => 'info' ), $lastModified ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' )
