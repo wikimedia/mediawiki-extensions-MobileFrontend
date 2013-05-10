@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "Dw0j687s",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 951,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-10T19:55:00Z",
+      "side": 1,
+      "message": "We change from \u0027img, .navbox, .infobox\u0027 to \u0027img, .navbox\u0027. This means we will not show the button e.g. on https://en.wikipedia.org/wiki/%C3%87eltik%C3%A7i,_Manavgat\n\nAs MaxSem pointed out in some previous conversations, we should check the size of the image too. We\u0027ll probably want to do that eventually, even if not in this commit.\n\nI\u0027m not sure about moving the CSS selector here (as a PHP variable). If we added checking image size to the algorithm, then having the CSS selector in PHP and the rest of the algorithm (checking image sizes) in JS would make the whole thing really confusing.",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dwrti2dg",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
@@ -31,6 +48,23 @@
       "side": 1,
       "message": "Yes it is.\nSee discussion on https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d44133\n\nAs for name how about getSkinConfigVariables ?\n\nI\u0027m not sure how a test would be useful here - it simply creates an array of config variables that are specific to the skin.\n\nSee follow up commit which adds better documentation for when to use this function.",
       "parentUuid": "Dwrti2dg",
+      "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwyjbL3s",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-10T19:55:00Z",
+      "side": 1,
+      "message": "So, Minerva is supposed to work on desktop and we make it dependent on a MF variable?",
       "revId": "8bce8f7c3442e1916c8955d2168f453908781311",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
