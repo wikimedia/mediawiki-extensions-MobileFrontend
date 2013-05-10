@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "Dw.VHsng",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 455
+      },
+      "writtenOn": "2013-05-10T18:26:08Z",
+      "side": 1,
+      "message": "That\u0027s quite long on a tiny mobile screen. Just \"What to upload\" should do.",
+      "parentUuid": "DwjiKTxo",
+      "revId": "17062dd4617f0be7cece21f5bdcc8c8c1559d236",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwtTPvIo",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
