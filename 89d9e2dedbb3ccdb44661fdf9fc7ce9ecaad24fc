@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwwh7y3k",
+        "filename": "javascripts/specials/overlays/preview.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-10T19:38:07Z",
+      "side": 1,
+      "message": "This should be in nearby.js. And then instead of a \"done\" event we can have an \"itemClick\" event.",
+      "revId": "89d9e2dedbb3ccdb44661fdf9fc7ce9ecaad24fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
