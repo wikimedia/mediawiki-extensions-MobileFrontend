@@ -358,7 +358,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 										'filter' => $this->filter,
 									)
 								),
-							'class' => 'more button',
+							'class' => 'more',
 						)
 					) .
 					wfMessage( 'mobile-frontend-watchlist-more' )->escaped() .

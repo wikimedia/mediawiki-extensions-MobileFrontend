@@ -124,3 +124,8 @@ ul.a-to-z li .listThumb.needsPhoto {
   color: #b24242;
   background-image: url(images/user-anon.png);
 }
+a.more {
+  display: block;
+  margin-top: 1em;
+  text-align: center;
+}
