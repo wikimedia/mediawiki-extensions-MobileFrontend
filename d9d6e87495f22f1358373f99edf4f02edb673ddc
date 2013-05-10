@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw0Wz-pc",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-10T18:08:02Z",
+      "side": 1,
+      "message": "Arguments should be an error text (used for EL) and an optional error message to be shown to the user. Passing an object can mess up EL (or store lots of unreadable mess in EL DB).",
+      "revId": "d9d6e87495f22f1358373f99edf4f02edb673ddc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
