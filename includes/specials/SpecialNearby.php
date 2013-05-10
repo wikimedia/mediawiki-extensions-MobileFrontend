@@ -9,6 +9,12 @@ class SpecialNearby extends UnlistedSpecialMobilePage {
 		$this->setHeaders();
 
 		$output = $this->getOutput();
+		// add previews to mobile only
+		$ctx = MobileContext::singleton();
+		if ( $ctx->shouldDisplayMobileView() && $ctx->isBetaGroupMember() ) {
+			$output->addModules( 'mobile.nearby.previews' );
+		};
+
 		$output->setPageTitle( wfMessage( 'mobile-frontend-nearby-title' )->escaped() );
 
 		$html =

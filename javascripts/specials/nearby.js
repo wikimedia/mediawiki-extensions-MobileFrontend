@@ -6,54 +6,26 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 ( function() {
 	var supported = M.supportsGeoLocation(),
 		popup = M.require( 'notifications' ),
-		Overlay = M.require( 'navigation' ).Overlay,
 		View = M.require( 'view' ),
-		Page = M.require( 'page' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		cachedPages,
 		curLocation,
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
-		LoadingOverlay = Overlay.extend( {
-			defaults: {
-				msg: mw.msg( 'mobile-frontend-ajax-preview-loading' )
-			},
-			template: M.template.get( 'overlays/loading' )
-		} ),
-		PagePreviewOverlay = Overlay.extend( {
-			template: M.template.get( 'overlays/pagePreview' ),
-			preRender: function( options ) {
-				options.heading = options.page.heading;
-				options.content = options.page.lead;
-				options.url = M.history.getArticleUrl( options.heading );
-				options.readMoreLink = mw.msg( 'mobile-frontend-nearby-link' );
-			},
-			initialize: function( options ) {
-				this._super( options );
-				this.$( '.content table' ).remove();
-			}
-		} ),
 		Nearby = View.extend( {
 			template: M.template.get( 'articleList' ),
 			initialize: function() {
-				this.$( 'a' ).on( 'mousedown', function() {
-					var loader = new LoadingOverlay(),
-						title = $( this ).find( 'h2' ).text();
-					loader.show();
-
+				var self = this;
+				this.$( 'a' ).on( 'mousedown', function( ev ) {
 					// name funnel for watchlists to catch subsequent uploads
 					$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
-
-					M.history.retrievePage( title, endpoint ).done( function( page ) {
-						var preview = new PagePreviewOverlay( { page: new Page( page ) } );
-						loader.hide();
-						preview.show();
-					} ).fail( function() {
-						loader.hide(); // FIXME: do something more meaningful e.g. error overlay
-					} );
+					self.emit( 'page-click', ev );
 				} );
 			}
+		} ),
+		overlay = new Nearby( {
+			el: $( '#mw-mf-nearby' )
 		} );
 
 	// FIXME: Api should surely know this and return it in response to save us the hassle
@@ -135,8 +107,7 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 			return a.dist > b.dist ? 1 : -1;
 		} );
 
-		new Nearby( {
-			el: $content[0],
+		overlay.render( {
 			pages: pages
 		} );
 	}
@@ -225,7 +196,9 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 		}
 	}
 	M.define( 'nearby', {
-		distanceMessage: distanceMessage
+		distanceMessage: distanceMessage,
+		endpoint: endpoint,
+		overlay: overlay
 	} );
 }() );
 
