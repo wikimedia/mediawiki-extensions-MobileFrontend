@@ -27,13 +27,11 @@ end
 #Signup takes you to the sign in page... should it take you to the Mobile Create Account page??
 
 Given /^I am logged into the mobile website$/ do
-  on(HomePage) do |page|
+  visit(HomePage) do |page|
     page.mainmenu_button_element.when_present.click
     page.login_button
   end
-  on(LoginPage) do |page|
-    page.login_with(@mediawiki_username, @mediawiki_password)
-  end
+  on(LoginPage).login_with(@mediawiki_username, @mediawiki_password)
 end
 
 When /^I go to random page$/ do

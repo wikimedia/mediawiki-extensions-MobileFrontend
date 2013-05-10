@@ -1,18 +1,21 @@
 Feature: Manage Watchlist
 
   Scenario: I receive notification that I need to log in to use the watchlist functionality
-    Given I am not logged in
+    Given I am on the home page
+      And I am not logged in
     When I select the watchlist icon
     Then I receive notification that I need to log in to use the watchlist functionality
 
   Scenario: Login link leads to login page
-    Given I am not logged in
+    Given I am on the home page
+      And I am not logged in
     When I select the watchlist icon
       And I click Login
     Then Login page opens
 
   Scenario: Sign up link leads to Sign up page
-    Given I am not logged in
+    Given I am on the home page
+      And I am not logged in
     When I select the watchlist icon
       And I click Sign up
     Then Sign up page opens
