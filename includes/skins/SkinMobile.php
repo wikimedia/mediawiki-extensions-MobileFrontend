@@ -273,8 +273,7 @@ HTML;
 
 		// add device specific css file - add separately to avoid cache fragmentation
 		if ( $wgMFVaryResources ) {
-			$out->addModuleStyles( 'mobile.xdevice.detect.styles' );
-			$out->addModules( 'mobile.xdevice.detect.scripts' );
+			$out->addModuleStyles( 'mobile.xdevice.detect' );
 		} elseif ( $device->moduleName() ) {
 			$out->addModuleStyles( $device->moduleName() );
 		}

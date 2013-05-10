@@ -51,8 +51,6 @@ $autoloadClasses = array (
 	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
 	'MobileSiteModule' => 'modules/MobileSiteModule',
 	'MobileDeviceDetectModule' => 'modules/MobileDeviceDetectModule',
-	'MobileDeviceDetectScriptsModule' => 'modules/MobileDeviceDetectModule',
-	'MobileDeviceDetectStylesModule' => 'modules/MobileDeviceDetectModule',
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
@@ -725,12 +723,8 @@ $wgResourceModules['mobile.loginhandshake.scripts'] = $wgMFMobileSpecialPageReso
 );
 
 //@hack: xdevice instead of device to force this module to be last in a link
-$wgResourceModules['mobile.xdevice.detect.styles'] = $wgMFMobileResourceBoilerplate + array(
-	'class' => 'MobileDeviceDetectStylesModule',
-);
-
-$wgResourceModules['mobile.xdevice.detect.scripts'] = $wgMFMobileResourceBoilerplate + array(
-	'class' => 'MobileDeviceDetectScriptsModule',
+$wgResourceModules['mobile.xdevice.detect'] = $wgResourceModules['mobile.xdevice.detect.styles'] = $wgMFMobileResourceBoilerplate + array(
+	'class' => 'MobileDeviceDetectModule',
 );
 
 /**
