@@ -282,7 +282,9 @@ This buttons takes the user to the home page.
 	'mobile-frontend-settings-description' => 'Text at top of the settings page explaining its purpose',
 	'mobile-frontend-settings-beta' => 'Text for beta on settings page',
 	'mobile-frontend-settings-alpha' => '<!--[[File:Mobile Contributions Quarterly Review 3 2013.pdf|page=32|thumb|The message in action]]-->
-Heading for alpha mode on settings page ([//commons.wikimedia.org/w/index.php?title=File%3AMobile_Contributions_Quarterly_Review_3_2013.pdf&page=32 screenshot]). This is a highly experimental mode where there might be bugs. Feel free to simply translate it with the equivalent of the word "alpha" when translating to other languages.',
+Heading for alpha mode on settings page ([//commons.wikimedia.org/w/index.php?title=File%3AMobile_Contributions_Quarterly_Review_3_2013.pdf&page=32 screenshot]). This is a highly experimental mode where there might be bugs. Feel free to simply translate it with the equivalent of the word "alpha" when translating to other languages.
+
+Previously, it was called "Dragons Mode".',
 	'mobile-frontend-settings-alpha-description' => 'Disclaimer about dangers and excitement that come with being in an alpha mode',
 	'mobile-frontend-save-settings' => 'Text for button for saving settings on Special:MobileOptions. Since this appears on the settings page translating the word save is sufficient
 {{Identical|Save}}',
@@ -828,7 +830,7 @@ $messages['ar'] = array(
 	'mobile-frontend-clear-search' => 'إفراغ',
 	'mobile-frontend-privacy-link-text' => 'الخصوصية',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'المحتويات مُرخّصة برخصة [//ar.m.wikipedia.org/wiki/%D9%88%D9%8A%D9%83%D9%8A%D8%A8%D9%8A%D8%AF%D9%8A%D8%A7:%D9%86%D8%B5_%D8%B1%D8%AE%D8%B5%D8%A9_%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B9_%D8%A7%D9%84%D8%A5%D8%A8%D8%AF%D8%A7%D8%B9%D9%8A:_%D8%A7%D9%84%D9%86%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5_%D8%A8%D8%A7%D9%84%D9%85%D8%AB%D9%84_3.0?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'المحتويات مُرخّصة برخصة [//ar.m.wikipedia.org/wiki/%D9%88%D9%8A%D9%83%D9%8A%D8%A8%D9%8A%D8%AF%D9%8A%D8%A7:%D9%86%D8%B5_%D8%B1%D8%AE%D8%B5%D8%A9_%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B9_%D8%A7%D9%84%D8%A5%D8%A8%D8%AF%D8%A7%D8%B9%D9%8A:_%D8%A7%D9%84%D9%86%D8%B3%D8%A8%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D8%AE%D9%8A%D8%B5_%D8%A8%D8%A7%D9%84%D9%85%D8%AB%D9%84_3.0?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile شروط الاستخدام]',
 	'mobile-frontend-footer-contact' => 'اتصل',
 	'mobile-frontend-main-menu-button-tooltip' => 'افتح القائمة الرئيسية',
@@ -992,7 +994,7 @@ $messages['as'] = array(
 	'mobile-frontend-clear-search' => 'পৰিস্কাৰ',
 	'mobile-frontend-privacy-link-text' => 'গোপনীয়তা',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'সমলসমূহ [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]ৰ অধীনত উপলব্ধ', # Fuzzy
+	'mobile-frontend-footer-license' => 'সমলসমূহ [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]ৰ অধীনত উপলব্ধ', # Fuzzy
 	'mobile-frontend-footer-contact' => 'যোগাযোগ',
 	'mobile-frontend-search-noresults' => "কোনো প্ৰবন্ধ আপোনাৰ অনুসন্ধানৰ লগত নিমিলিল। আপোনাৰ অনুসন্ধান সলনি কৰক বা কীব'ৰ্ডৰ অনুসন্ধান (Ctrl+F) বুটাম টিপি ভিতৰৰ পৃষ্ঠাত সন্ধান কৰক।",
 	'mobile-frontend-main-menu-button-tooltip' => 'মূল মেনু খোলক',
@@ -1109,7 +1111,7 @@ $messages['ast'] = array(
 	'mobile-frontend-clear-search' => 'Llimpiar',
 	'mobile-frontend-privacy-link-text' => 'Intimidá',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Conteníu disponible baxo llicencia [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Conteníu disponible baxo llicencia [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile" Condiciones d\'usu]',
 	'mobile-frontend-footer-contact' => 'Contautu',
 	'mobile-frontend-search-noresults' => 'Dengún títulu de páxina casa cola to gueta. Camuda la gueta o calca nel botón de gueta del tecláu pa guetar dientro de les páxines.',
@@ -1286,7 +1288,7 @@ $messages['azb'] = array(
 	'mobile-frontend-clear-search' => 'تمیزله',
 	'mobile-frontend-privacy-link-text' => 'اؤزل‌لیک',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'یازیلار [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] ایجازه‌سی ایله ال‌ده‌دیرلر', # Fuzzy
+	'mobile-frontend-footer-license' => 'یازیلار [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] ایجازه‌سی ایله ال‌ده‌دیرلر', # Fuzzy
 	'mobile-frontend-footer-contact' => 'علاقه قورماق',
 	'mobile-frontend-search-noresults' => 'سیزین آختاریشینیزا بیرنتیجه تاپیلمادی. آختاریشینیزی دَییشدیرین، یوخسا یازیلارین ایچینده آختارماق اوچون کیبورد آختاریش دویمه‌سینی وورون.',
 	'mobile-frontend-main-menu-button-tooltip' => 'آنامِنونو آچ',
@@ -1386,7 +1388,7 @@ $messages['ba'] = array(
 	'mobile-frontend-clear-search' => 'Таҙартыу',
 	'mobile-frontend-privacy-link-text' => 'Сер һаҡлау',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Эстәлеге [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] рөхсәтнәмәһе буйынса асыҡ', # Fuzzy
+	'mobile-frontend-footer-license' => 'Эстәлеге [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] рөхсәтнәмәһе буйынса асыҡ', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Бәйләнеш өсөн мәғлүмәт',
 	'mobile-frontend-search-noresults' => 'Һеҙ кереткән һүҙҙәр менән тап килгән бит исемдәре юҡ. Эҙләү өсөн һүҙҙәрҙе үҙгәртегеҙ, йәки биттәр эсендә эҙләү өсөн «Эҙләргә» төймәһенә баҫығыҙ.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Төп менюны асырға',
@@ -1519,7 +1521,7 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-clear-search' => 'Ачысьціць',
 	'mobile-frontend-privacy-link-text' => 'Прыватнасьць',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Зьмест даступны на ўмовах ліцэнзіі [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Зьмест даступны на ўмовах ліцэнзіі [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Умовы_выкарыстаньня?useformat=mobile Умовы выкарыстаньня]',
 	'mobile-frontend-footer-contact' => 'Кантакты',
 	'mobile-frontend-search-noresults' => 'Старонкі, чые загалоўкі б пасавалі вашаму запыту, ня знойдзеныя. Зьмяніце запыт, або націсьніце на клявіятуры кнопку пошуку, каб шукаць у зьмесьце старонак.',
@@ -1679,6 +1681,7 @@ $messages['bho'] = array(
 );
 
 /** Bengali (বাংলা)
+ * @author Aftab1995
  * @author Bellayet
  * @author Nasir8891
  */
@@ -1687,6 +1690,7 @@ $messages['bn'] = array(
 	'mobile-frontend-search-submit' => 'যাও',
 	'mobile-frontend-home-button' => 'প্রধান পাতা',
 	'mobile-frontend-logged-out' => 'লগইন করা হয়নি',
+	'mobile-frontend-sign-up-heading' => 'নিবন্ধন',
 	'mobile-frontend-sign-in-heading' => 'প্রবেশ',
 	'mobile-frontend-settings-description' => 'মোবাইল থেকে সহজে ব্যবহার করার জন্য মোবাইলের উপযোগী পছন্দসমূহ নির্ধারন করুন।',
 	'mobile-frontend-settings-beta' => 'বেটা সংস্করণ',
@@ -1705,6 +1709,7 @@ $messages['bn'] = array(
 	'mobile-frontend-images-status' => 'চিত্রসমূহ',
 	'mobile-frontend-disable-images' => 'মোবাইল সাইটে চিত্র নিস্ক্রিয়',
 	'mobile-frontend-enable-images' => 'মোবাইল সাইটে চিত্র সক্রিয়',
+	'mobile-frontend-missing-image' => 'চিত্র',
 	'mobile-frontend-off' => 'বন্ধ',
 	'mobile-frontend-on' => 'চালু',
 	'mobile-frontend-featured-article' => 'আজকের নির্বাচিত নিবন্ধ',
@@ -1715,24 +1720,48 @@ $messages['bn'] = array(
 	'mobile-frontend-language-site-choose' => 'ভাষা অনুসন্ধান',
 	'mobile-frontend-username' => 'ব্যবহারকারী নাম:',
 	'mobile-frontend-password' => 'শব্দচাবি:',
+	'mobile-frontend-username-placeholder' => 'ব্যবহারকারী নাম',
+	'mobile-frontend-password-placeholder' => 'শব্দচাবি (Password)',
 	'mobile-frontend-login' => 'প্রবেশ',
+	'mobile-frontend-account-create-submit' => 'নিবন্ধন',
+	'mobile-frontend-password-confirm-placeholder' => 'শব্দচাবি নিশ্চিতকরণ',
+	'mobile-frontend-account-create-email-placeholder' => 'ইমেইল ঠিকানা (ঐচ্ছিক)',
+	'mobile-frontend-overlay-escape' => 'ফিরে যাও',
 	'mobile-frontend-placeholder' => '{{SITENAME}} অনুসন্ধান',
 	'mobile-frontend-search-help' => 'অনুসন্ধানের বিষয়টি উপরে লিখুন এবং এর সাথে মিল রয়েছে এমন নিবন্ধের শিরনামগুলো দেখানো হবে।', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'নোটিফিকেশন বন্ধ করুন',
 	'mobile-frontend-clear-search' => 'পরিস্কার',
 	'mobile-frontend-privacy-link-text' => 'গোপনীয়তা',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'তথ্য প্রকাশিত হয়েছে [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] লাইসেন্সের অধিনে', # Fuzzy
+	'mobile-frontend-footer-license' => 'তথ্য প্রকাশিত হয়েছে [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] লাইসেন্সের অধিনে; এর সাথে বাড়তি পদ প্রযোজ্য হতে পারে।',
 	'mobile-frontend-footer-contact' => 'যোগাযোগ',
 	'mobile-frontend-main-menu-featured' => 'নির্বাচিত',
 	'mobile-frontend-main-menu-nearby' => 'কাছাকাছি',
 	'mobile-frontend-main-menu-login' => 'প্রবেশ',
 	'mobile-frontend-main-menu-logout' => 'প্রস্থান',
+	'mobile-frontend-main-menu-watchlist' => 'নজর তালিকা',
 	'mobile-frontend-main-menu-settings' => 'সেটিং',
+	'mobile-frontend-main-menu-upload' => 'আপলোড',
 	'mobile-frontend-main-menu-settings-heading' => 'মোবাইল সাইট সেটিং',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ভাষাসমূহ',
 	'mobile-frontend-page-menu-contents' => 'বিষয়বস্তু',
 	'mobile-frontend-page-menu-history' => 'ইতিহাস',
+	'mobile-frontend-donate-image-title' => 'আপলোড',
+	'mobile-frontend-watchlist-more' => 'আরও',
+	'mobile-frontend-watchlist-cta-button-login' => 'প্রবেশ',
+	'mobile-frontend-watchlist-cta-button-signup' => 'নিবন্ধন',
+	'mobile-frontend-watchlist-a-z' => 'সমস্ত',
+	'mobile-frontend-watchlist-feed' => 'পরিবর্তিত',
+	'mobile-frontend-watchlist-filter-all' => 'সমস্ত',
+	'mobile-frontend-watchlist-filter-articles' => 'নিবন্ধ',
+	'mobile-frontend-watchlist-filter-talk' => 'আলাপ',
+	'mobile-frontend-watchlist-filter-other' => 'অন্য',
+	'mobile-frontend-diffview-title' => 'পরিবর্তনসমূহ',
+	'mobile-frontend-diffview-anonymous' => 'বেনামী ব্যবহারকারী',
+	'mobile-frontend-photo-submit' => 'জমা দাও',
+	'mobile-frontend-photo-cancel' => 'বাতিল',
+	'mobile-frontend-drawer-cancel' => 'বাতিল',
+	'mobile-frontend-talk-overlay-header' => 'আলাপ',
 );
 
 /** Breton (brezhoneg)
@@ -1944,7 +1973,7 @@ $messages['ca'] = array(
 	'mobile-frontend-clear-search' => 'Anuŀla',
 	'mobile-frontend-privacy-link-text' => 'Privadesa',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contingut disponible sota [//ca.m.wikipedia.org/wiki/Viquip%C3%A8dia:Text_de_la_llic%C3%A8ncia_de_Creative_Commons_Reconeixement-Compartir_Igual_3.0_No_adaptada?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Contingut disponible sota [//ca.m.wikipedia.org/wiki/Viquip%C3%A8dia:Text_de_la_llic%C3%A8ncia_de_Creative_Commons_Reconeixement-Compartir_Igual_3.0_No_adaptada?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Contacte',
 	'mobile-frontend-search-noresults' => "Cap títol d'article coincideix amb la vostra cerca. Modifiqueu-la o utilitzeu el botó de cerca del teclat per cercar en el text dels articles.", # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Destacat',
@@ -2109,7 +2138,7 @@ $messages['cs'] = array(
 	'mobile-frontend-clear-search' => 'Smazat',
 	'mobile-frontend-privacy-link-text' => 'Ochrana soukromí',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Obsah je dostupný pod [//cs.m.wikipedia.org/wiki/Wikipedie:Text_licence_Creative_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Obsah je dostupný pod [//cs.m.wikipedia.org/wiki/Wikipedie:Text_licence_Creative_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/cs?useformat=mobile Podmínky užití]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Vašemu hledání neodpovídají žádné názvy stránek. Změňte zadání nebo stiskněte tlačítko hledání pro hledání ve stránkách.',
@@ -2599,6 +2628,7 @@ $messages['de'] = array(
 	'mobile-frontend-nearby-refresh' => 'Wir haben für dich einen passenderen Standort gefunden. Klicke hier, um die Liste zu aktualisieren.',
 	'mobile-frontend-nearby-error' => 'Beim Auffinden von Seiten in der Nähe ist ein unerwarteter Fehler aufgetreten.',
 	'mobile-frontend-nearby-link' => 'Gesamte Seite lesen',
+	'mobile-frontend-needs-photo' => 'Besuche diese Seite, um ein Bild hinzuzufügen.',
 	'mobile-frontend-donate-image-login' => 'Du musst angemeldet sein, um deine hochgeladenen Dateien anzusehen.',
 	'mobile-frontend-photo-upload-generic' => 'Ein Bild spenden',
 	'mobile-frontend-donate-image-title' => 'Hochgeladene Dateien',
@@ -2769,7 +2799,7 @@ $messages['diq'] = array(
 	'mobile-frontend-clear-search' => 'Pak ke',
 	'mobile-frontend-privacy-link-text' => 'Nımıtış',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Zerrey enay [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] dero', # Fuzzy
+	'mobile-frontend-footer-license' => 'Zerrey enay [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] dero', # Fuzzy
 	'mobile-frontend-footer-contact' => 'İrtıbat',
 	'mobile-frontend-search-noresults' => 'Sernameyo ke şımayê geyrenê wesiqeyo do wuni çıniyo. Cı geyreyışê xo bıvurnê yana zerrey wesiqer de cıgeyrayışi re klawye ra butona cıgeyrayışi pıploğne.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Menuyê bıngehi ake',
@@ -2884,7 +2914,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-clear-search' => 'Wuprozniś',
 	'mobile-frontend-privacy-link-text' => 'Priwatnosć',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Wopśimjeśe stoj pód licencu [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]k dispoziciji', # Fuzzy
+	'mobile-frontend-footer-license' => 'Wopśimjeśe stoj pód licencu [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]k dispoziciji', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/de?useformat=mobile wužywarske wuměnjenja] (nimski)',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Twójomu pytanjeju žedne bokowe titele njewotpówěduju. Změń swójo pytanje abo tłoc pytańsku tastu swójeje tastatury, aby w bokach pytał.',
@@ -3177,7 +3207,7 @@ $messages['eo'] = array(
 	'mobile-frontend-clear-search' => 'Nuligi',
 	'mobile-frontend-privacy-link-text' => 'Privateco',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Enhavo disponas per [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" permesilo CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Enhavo disponas per [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile permesilo CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '<a href="//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile">Kondiĉoj pri Uzado</a>',
 	'mobile-frontend-footer-contact' => 'Kontaktigi',
 	'mobile-frontend-search-noresults' => 'Neniu paĝo kongruas kun via serĉado. Ŝanĝu vian mendon, aŭ klaki la butonon de klavara serĉado por traserĉi ene de paĝoj.',
@@ -3334,7 +3364,7 @@ $messages['es'] = array(
 	'mobile-frontend-clear-search' => 'Limpiar',
 	'mobile-frontend-privacy-link-text' => 'Privacidad',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contenidos disponibles bajo licencia [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Contenidos disponibles bajo licencia [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Términos_de_uso?useformat=mobile Términos de uso]',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'No hay ningún título de página que coincida con tu búsqueda. Cambia tu búsqueda, o pulsa el botón de búsqueda del teclado para buscar dentro de las páginas.',
@@ -3510,7 +3540,7 @@ $messages['et'] = array(
 	'mobile-frontend-dismiss-notification' => 'ära näita seda teadet',
 	'mobile-frontend-clear-search' => 'Tühjenda',
 	'mobile-frontend-privacy-link-text' => 'Privaatsus',
-	'mobile-frontend-footer-license' => 'Sisu on saadaval litsentsi [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] all; võivad lisanduda täiendavad tingimused.',
+	'mobile-frontend-footer-license' => 'Sisu on saadaval litsentsi [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] all; võivad lisanduda täiendavad tingimused.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Kasutustingimused]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Otsitavale vastavad leheküljepealkirjad puuduvad. Vaheta otsisõna või vajuta sõrmistiku otsinuppu, et otsida lehekülgedelt.',
@@ -3720,7 +3750,7 @@ $messages['fa'] = array(
 	'mobile-frontend-clear-search' => 'پاک‌کردن',
 	'mobile-frontend-privacy-link-text' => 'حریم خصوصی',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'محتوی تحت مجوز [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] در دسترس است.', # Fuzzy
+	'mobile-frontend-footer-license' => 'محتوی تحت مجوز [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] در دسترس است.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'تماس',
 	'mobile-frontend-search-noresults' => 'هیچ عنوان مقاله‌ای مطابق با کلیدواژه نیست. کلیدواژهٔ جستجو را تغییر دهید یا برای جستجو درون متن مقاله‌ها دکمه جستجوی کیبرد را بفشارید.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'باز کردن منو اصلی',
@@ -3826,7 +3856,7 @@ $messages['fi'] = array(
 	'mobile-frontend-clear-search' => 'Tyhjennä',
 	'mobile-frontend-privacy-link-text' => 'Yksityisyys',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Sisältö on saatavissa lisenssillä [//fi.m.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Sisältö on saatavissa lisenssillä [//fi.m.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Yhteystiedot',
 	'mobile-frontend-search-noresults' => 'Hakuasi vastavaa artikkelin nimeä ei löytynyt. Muuta hakua tai käytä näppäimistön hakupainiketta etsiäksesi artikkelien sisältä.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Avaa päävalikko',
@@ -3951,7 +3981,7 @@ $messages['fr'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Oups',
 	'mobile-frontend-settings-description' => 'Personnalisez votre expérience sur votre mobile avec ces paramètres spécifiques.',
 	'mobile-frontend-settings-beta' => 'Bêta',
-	'mobile-frontend-settings-alpha' => 'Mode [//en.wikipedia.org/wiki/Here_be_dragons Ici sont les dragons]', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Mode expérimental',
 	'mobile-frontend-settings-alpha-description' => 'Entrez dans un territoire mobile dangereux et inexploré. Obtenez des fonctionnalisés encore plus expérimentales, mais avec plus de dangers de bogues.',
 	'mobile-frontend-save-settings' => 'Enregistrer',
 	'mobile-frontend-random-button' => 'Au hasard',
@@ -3998,7 +4028,7 @@ $messages['fr'] = array(
 	'mobile-frontend-overlay-escape' => 'Retour en arrière',
 	'mobile-frontend-placeholder' => 'Rechercher sur {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Rechercher {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Rechercher sur {{SITENAME}} (Mode Dragon)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Rechercher sur {{SITENAME}} (Expérimental)',
 	'mobile-frontend-search-help' => "Tapez les critères de recherches ci-dessus et les titres de page correspondant s'afficheront ici.",
 	'mobile-frontend-dismiss-notification' => 'rejeter cette notification',
 	'mobile-frontend-clear-search' => 'Effacer',
@@ -4037,6 +4067,7 @@ $messages['fr'] = array(
 	'mobile-frontend-nearby-refresh' => 'Nous vous avons localisé plus précisément. Cliquez ici pour rafraîchir la liste des pages à proximité.',
 	'mobile-frontend-nearby-error' => 'Une erreur inattendue s’est produite lors de la tentative de recherche de pages à proximité',
 	'mobile-frontend-nearby-link' => 'Lire cette page en entier',
+	'mobile-frontend-needs-photo' => 'Allez sur cette page pour ajouter une image',
 	'mobile-frontend-donate-image-login' => 'Vous devez être connecté pour voir vos téléchargements.',
 	'mobile-frontend-photo-upload-generic' => 'Donner une image',
 	'mobile-frontend-donate-image-title' => 'Téléchargements',
@@ -4176,7 +4207,7 @@ $messages['frp'] = array(
 	'mobile-frontend-clear-search' => 'Èfaciér',
 	'mobile-frontend-privacy-link-text' => 'Confidencialitât',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contegnu disponiblo desot [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Contegnu disponiblo desot [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Contacte',
 	'mobile-frontend-main-menu-button-tooltip' => 'Uvrir lo menu principâl',
 	'mobile-frontend-main-menu-page-title' => 'Navigacion du seto',
@@ -4241,7 +4272,7 @@ $messages['frr'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Uups!',
 	'mobile-frontend-settings-description' => 'Paase dan mobiil aperoot mä jodiar iinstelangen uun.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => '[//de.wikipedia.org/wiki/Hic_sunt_dracones „Hic sunt dracones“]-Modus', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Eksperiment-Modus',
 	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.',
 	'mobile-frontend-save-settings' => 'Seekre',
 	'mobile-frontend-random-button' => 'Tufaal',
@@ -4289,13 +4320,13 @@ $messages['frr'] = array(
 	'mobile-frontend-overlay-escape' => 'Turag',
 	'mobile-frontend-placeholder' => 'Schük üüb {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Sjük {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Sjük {{SITENAME}} (Dragon Mode)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Sjük {{SITENAME}} (Eksperiment-Modus)',
 	'mobile-frontend-search-help' => 'Du boowen det wurd iin, huar dü efter sjükst. Paaselk sidjennöömer wurd do heer uunwiset.',
 	'mobile-frontend-dismiss-notification' => 'Detdiar nooracht strik',
 	'mobile-frontend-clear-search' => 'Leesag maage',
 	'mobile-frontend-privacy-link-text' => 'Dootenseekerhaid',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Di tekst as tu sen oner[//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile" CC BY-SA 3.0]; diar kön uk noch ööder reegeln tääl.',
+	'mobile-frontend-footer-license' => 'Di tekst as tu sen oner[//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]; diar kön uk noch ööder reegeln tääl.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Brüker reegeln]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => "So'n sidj jaft at ei. Sjük en ööder sidj of trak üüb di sjük-knoop faan din tastatuur, am det wurd uk banen uun en sidj tu sjüken.",
@@ -4328,6 +4359,7 @@ $messages['frr'] = array(
 	'mobile-frontend-nearby-refresh' => 'Wi haa en beeder steed för di fünjen. Trak diar för aktuel sidjen.',
 	'mobile-frontend-nearby-error' => "Diar as wat skiaf gingen bi't sjüken faan sidjen uun a naite.",
 	'mobile-frontend-nearby-link' => 'Hialer sidj lees',
+	'mobile-frontend-needs-photo' => 'Besjük det sidj, am en bil huuchtusjüüren',
 	'mobile-frontend-donate-image-login' => 'Melde di uun, am din huuchsjüürd dateien uuntulukin.',
 	'mobile-frontend-photo-upload-generic' => 'Skeenk en bil',
 	'mobile-frontend-donate-image-title' => 'Huuchsjüürd dateien',
@@ -4475,7 +4507,7 @@ $messages['gl'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Vaites!',
 	'mobile-frontend-settings-description' => 'Personalice a súa experiencia desde o dispositivo móbil con estas configuracións para versión móbil do sitio.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => 'Modo "[//en.wikipedia.org/wiki/Here_be_dragons Hic sunt dracones]"', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Modo experimental',
 	'mobile-frontend-settings-alpha-description' => 'Entre nun territorio móbil perigoso e sen explorar. Consiga as características máis experimentais, pero con máis risco de erros.',
 	'mobile-frontend-save-settings' => 'Gardar',
 	'mobile-frontend-random-button' => 'Ao chou',
@@ -4522,13 +4554,13 @@ $messages['gl'] = array(
 	'mobile-frontend-overlay-escape' => 'Volver',
 	'mobile-frontend-placeholder' => 'Procurar en {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Procurar en {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Procurar en {{SITENAME}} (modo Dragón)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Procurar en {{SITENAME}} (experimental)',
 	'mobile-frontend-search-help' => 'Escriba o termo que queira procurar e os títulos que coincidan aparecerán aquí.',
 	'mobile-frontend-dismiss-notification' => 'agochar esta notificación',
 	'mobile-frontend-clear-search' => 'Limpar',
 	'mobile-frontend-privacy-link-text' => 'Protección de datos',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Os contidos están dispoñibles baixo a licenza [//gl.m.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'O texto está dispoñible baixo a licenza [//gl.m.wikipedia.org/wiki/Wikipedia:Texto_da_Licenza_Creative_Commons_Recoñecemento-CompartirIgual_3.0?useformat=mobile CC BY-SA 3.0]; pódense aplicar termos adicionais.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/gl?useformat=mobile Termos de uso]',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'Non hai ningún título que coincida coa súa procura. Probe con outras palabras ou prema no botón de procuras do teclado para pescudar dentro das páxinas.',
@@ -4561,6 +4593,7 @@ $messages['gl'] = array(
 	'mobile-frontend-nearby-refresh' => 'Atopamos unha localización máis axeitada para vostede. Prema aquí para recargar a lista de páxinas próximas',
 	'mobile-frontend-nearby-error' => 'Houbo un erro inesperado ao intentar atopar páxinas próximas',
 	'mobile-frontend-nearby-link' => 'Ler esta páxina ao completo',
+	'mobile-frontend-needs-photo' => 'Visite esta páxina para engadir unha imaxe',
 	'mobile-frontend-donate-image-login' => 'Debe acceder ao sistema para ollar as súas cargas.',
 	'mobile-frontend-photo-upload-generic' => 'Doar unha imaxe',
 	'mobile-frontend-donate-image-title' => 'Cargas',
@@ -4700,7 +4733,7 @@ $messages['gsw'] = array(
 	'mobile-frontend-clear-search' => 'Lääre',
 	'mobile-frontend-privacy-link-text' => 'Dateschutz',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'D Inhalt sin verfiegbar unter dr Lizänz [//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'D Inhalt sin verfiegbar unter dr Lizänz [//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Es git kei Artikeltitel, wo dynrer Suechyygab entspricht. Du chasch dyni Suech aapasse, oder druff uff d Suechschaltflächi uff dynrer Tastatur, zume d Suech uff de ganze Inhalt vo de Artikel usszwyte.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Bsundersch glunge',
@@ -4909,7 +4942,7 @@ $messages['he'] = array(
 	'mobile-frontend-clear-search' => 'ניקוי',
 	'mobile-frontend-privacy-link-text' => 'פרטיות',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'התוכן זמין לפי תנאי רישיון [//he.m.wikipedia.org/wiki/ויקיפדיה:רישיון_Creative_Commons_ייחוס-שיתוף_זהה_3.0_לא_מותאם?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'התוכן זמין לפי תנאי רישיון [//he.m.wikipedia.org/wiki/ויקיפדיה:רישיון_Creative_Commons_ייחוס-שיתוף_זהה_3.0_לא_מותאם?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile תנאי השימוש]',
 	'mobile-frontend-footer-contact' => 'יצירת קשר',
 	'mobile-frontend-search-noresults' => 'שום כותרת של דף לא תאמה לחיפוש שלך. יש לשנות את החיפוש או ללחוץ על מקש החיפוש במקלדת כדי לחפש בתוך עמודים.',
@@ -5183,7 +5216,7 @@ $messages['hr'] = array(
 	'mobile-frontend-clear-search' => 'Očisti',
 	'mobile-frontend-privacy-link-text' => 'Privatnost',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Sadržaj je dostupan pod [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] licencijom.', # Fuzzy
+	'mobile-frontend-footer-license' => 'Sadržaj je dostupan pod [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] licencijom.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Nema članka koji odgovara upitu. Promijenite traženi izraz, ili pritisnite gumb za pretraživanje sadržaja članaka.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Otvori glavni izbornik',
@@ -5307,7 +5340,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-clear-search' => 'Wuprózdnić',
 	'mobile-frontend-privacy-link-text' => 'Priwatnosć',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Wobsah steji pod licencu [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] k dispoziciji', # Fuzzy
+	'mobile-frontend-footer-license' => 'Wobsah steji pod licencu [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] k dispoziciji', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/de?useformat=mobile wužiwarske wuměnjenja] (němsce)',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Twojemu pytanju žane titule strony njewotpowěduja. Změń swoje pytanje abo stłóč pytansku tastu swojeje tastatury, zo by znutřka stronow pytał.',
@@ -5455,7 +5488,7 @@ $messages['hu'] = array(
 	'mobile-frontend-clear-search' => 'Törlés',
 	'mobile-frontend-privacy-link-text' => 'Adatvédelem',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'A tartalomra [//hu.m.wikipedia.org/wiki/Wikipédia:CC-BY-SA-3.0?useformat=mobile" CC BY-SA 3.0] licenc vonatkozik', # Fuzzy
+	'mobile-frontend-footer-license' => 'A tartalomra [//hu.m.wikipedia.org/wiki/Wikipédia:CC-BY-SA-3.0?useformat=mobile CC BY-SA 3.0] licenc vonatkozik', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kapcsolatfelvétel',
 	'mobile-frontend-search-noresults' => 'Nincs találat a keresésedre. Változtasd meg a keresőszavakat, vagy nyomd meg a keresés gombot, hogy a szócikkeken belül is keress.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Főmenü megnyitása',
@@ -5554,7 +5587,7 @@ $messages['ia'] = array(
 	'mobile-frontend-clear-search' => 'Rader',
 	'mobile-frontend-privacy-link-text' => 'Confidentialitate',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contento disponibile sub [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Contento disponibile sub [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Conditiones de Uso]',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'Nulle titulo de articulo corresponde a tu recerca. Cambia le recerca, o preme le button de recerca de claviero pro cercar intra articulos.', # Fuzzy
@@ -5595,6 +5628,7 @@ $messages['ia'] = array(
  * @author Aldnonymous
  * @author Anakmalaysia
  * @author Farras
+ * @author Iwan Novirion
  * @author Kenrick95
  * @author Mahali syarifuddin
  */
@@ -5605,35 +5639,41 @@ $messages['id'] = array(
 	'mobile-frontend-logged-out' => 'Belum masuk log',
 	'mobile-frontend-logged-in-homepage-notification' => 'Selamat datang, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Masuk log sebagai $1',
-	'mobile-frontend-handshake-title' => 'Megalihkan...',
+	'mobile-frontend-handshake-title' => 'Mengalihkan...',
+	'mobile-frontend-handshake-wait' => 'Harap tunggu sementara kami mengarahkan Anda ke formulir log masuk.',
 	'mobile-frontend-sign-up-heading' => 'Daftar',
 	'mobile-frontend-sign-in-heading' => 'Masuk log',
+	'mobile-frontend-sign-in-why' => 'Jika Anda memiliki akun {{SITENAME}}, Anda dapat masuk log di bawah ini.',
 	'mobile-frontend-sign-in-error-heading' => 'Ups!',
+	'mobile-frontend-settings-description' => 'Menyesuaikan pengalaman Anda di perangkat seluler dengan pengaturan spesifik untuk situs seluler.',
 	'mobile-frontend-settings-beta' => 'Beta',
+	'mobile-frontend-settings-alpha' => 'Modus eksperimental',
+	'mobile-frontend-settings-alpha-description' => 'Masuk ke wilayah seluler yang berbahaya dan belum dieksplorasi. Dapatkan fitur yang lebih eksperimental, tapi dengan lebih banyak kendala.',
 	'mobile-frontend-save-settings' => 'Simpan pengaturan', # Fuzzy
 	'mobile-frontend-random-button' => 'Sembarang',
-	'mobile-frontend-back-to-top-of-section' => 'Kembali Ke Bagian Sebelumnya',
+	'mobile-frontend-back-to-top-of-section' => 'Kembali ke bagian sebelumnya',
 	'mobile-frontend-close-section' => 'Tutup bagian ini',
+	'mobile-frontend-empty-homepage-text' => 'Halaman Utama ini perlu dikonfigurasi. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage petunjuk cara mengaktifkan situs seluler ini]',
 	'mobile-frontend-regular-site' => 'Tampilan desktop',
 	'mobile-frontend-wml-continue' => 'Lanjutkan...',
 	'mobile-frontend-wml-back' => 'Kembali ...',
 	'mobile-frontend-view' => 'Tampilan seluler',
-	'mobile-frontend-view-desktop' => 'Komputer',
-	'mobile-frontend-view-mobile' => 'Telepon Genggam',
-	'mobile-frontend-opt-in-explain' => 'Dengan bergabung dengan beta, Anda akan mendapatkan akses ke fitur eksperimental, dengan risiko menemukan bug dan masalah.',
+	'mobile-frontend-view-desktop' => 'Tampilan komputer',
+	'mobile-frontend-view-mobile' => 'Tampilan seluler',
+	'mobile-frontend-opt-in-explain' => 'Bergabung dengan beta, Anda akan mendapatkan akses ke fitur eksperimental, dengan risiko menemukan bug dan masalah.',
 	'mobile-frontend-images-status' => 'Gambar',
 	'mobile-frontend-disable-images' => 'Nonaktifkan gambar pada situs seluler',
 	'mobile-frontend-enable-images' => 'Aktifkan gambar pada situs seluler',
 	'mobile-frontend-missing-image' => 'Gambar',
 	'mobile-frontend-off' => 'MATIKAN',
 	'mobile-frontend-on' => 'HIDUPKAN',
-	'mobile-frontend-featured-article' => 'Artikel Pilihan Hari Ini',
-	'mobile-frontend-news-items' => 'Peristiwa Terkini',
+	'mobile-frontend-featured-article' => 'Artikel pilihan',
+	'mobile-frontend-news-items' => 'Peristiwa terkini',
 	'mobile-frontend-language' => 'Bahasa:',
 	'mobile-frontend-language-article-heading' => 'Baca dalam bahasa lain',
-	'mobile-frontend-language-header' => 'Artikel ini tersedia dalam $1 {{PLURAL:$1|bahasa|bahasa}}',
+	'mobile-frontend-language-header' => 'Artikel ini tersedia dalam $1 {{PLURAL:$1|bahasa}}',
 	'mobile-frontend-language-variant-header' => 'Pilih varian {{#language:{{CONTENTLANG}}}}',
-	'mobile-frontend-language-footer' => '{{SITENAME}} tersedia dalam bahasa lain.', # Fuzzy
+	'mobile-frontend-language-footer' => 'Catatan: Halaman ini mungkin tidak ditulis dalam bahasa pilihan Anda. Anda dapat melihat {{SITENAME}} bahasa apa yang didukung dengan mengklik di sini.',
 	'mobile-frontend-language-site-choose' => 'Cari bahasa',
 	'mobile-frontend-username' => 'Nama pengguna:',
 	'mobile-frontend-password' => 'Kata sandi:',
@@ -5641,38 +5681,39 @@ $messages['id'] = array(
 	'mobile-frontend-password-placeholder' => 'Sandi',
 	'mobile-frontend-login' => 'Masuk log',
 	'mobile-frontend-last-modified-date' => 'Terakhir diubah pada $1, $2',
-	'mobile-frontend-last-modified-seconds' => 'Terakhir diubah pada {{PLURAL:$1|$1 detik|$1 detik}} lalu',
-	'mobile-frontend-last-modified-minutes' => 'Terakhir diubah pada {{PLURAL:$1|$1 menit|$1 menit}} lalu',
-	'mobile-frontend-last-modified-hours' => 'Terakhir diubah pada {{PLURAL:$1|$1 jam|$1 jam}} lalu',
-	'mobile-frontend-last-modified-days' => 'Terakhir diubah pada {{PLURAL:$1|$1 hari|$1 hari}} lalu',
-	'mobile-frontend-last-modified-months' => 'Terakhir diubah pada {{PLURAL:$1|$1 bulan|$1 bulan}} lalu',
-	'mobile-frontend-last-modified-years' => 'Terakhir diubah pada {{PLURAL:$1|$1 tahun|$1 tahun}} lalu',
-	'mobile-frontend-account-create-submit' => 'Daftar',
+	'mobile-frontend-last-modified-seconds' => 'Terakhir diubah pada {{PLURAL:$1|$1 detik}} lalu',
+	'mobile-frontend-last-modified-minutes' => 'Terakhir diubah pada {{PLURAL:$1|$1 menit}} lalu',
+	'mobile-frontend-last-modified-hours' => 'Terakhir diubah pada {{PLURAL:$1|$1 jam}} lalu',
+	'mobile-frontend-last-modified-days' => 'Terakhir diubah pada {{PLURAL:$1|$1 hari}} lalu',
+	'mobile-frontend-last-modified-months' => 'Terakhir diubah pada {{PLURAL:$1|$1 bulan}} lalu',
+	'mobile-frontend-last-modified-years' => 'Terakhir diubah pada {{PLURAL:$1|$1 tahun}} lalu',
+	'mobile-frontend-account-create-submit' => 'Mendaftar',
 	'mobile-frontend-password-confirm-placeholder' => 'Konfirmasi sandi',
 	'mobile-frontend-account-create-email-placeholder' => 'Alamat surel (opsional)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Masukkan teks keamanan',
 	'mobile-frontend-overlay-escape' => 'Kembali',
 	'mobile-frontend-placeholder' => 'Cari {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Cari {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Cari {{SITENAME}} (Dragon Mode)', # Fuzzy
-	'mobile-frontend-search-help' => 'Masukkan kueri pencarian di atas dan judul artikel yang sesuai akan muncul di sini.', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Cari {{SITENAME}} (Experimental)',
+	'mobile-frontend-search-help' => 'Masukkan kueri pencarian di atas dan judul halaman yang sesuai akan muncul di sini.',
 	'mobile-frontend-dismiss-notification' => 'tutup pemberitahuan ini',
 	'mobile-frontend-clear-search' => 'Kosongkan',
 	'mobile-frontend-privacy-link-text' => 'Privasi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Konten tersedia di bawah [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Teks tersedia di bawah [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; ketentuan tambahan mungkin berlaku.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Ketentuan Penggunaan]',
 	'mobile-frontend-footer-contact' => 'Kontak',
-	'mobile-frontend-search-noresults' => 'Tidak ada judul artikel yang cocok dengan pencarian Anda. Ubah pencarian Anda, atau tekan tombol pencarian keyboard untuk mencari dalam artikel.', # Fuzzy
+	'mobile-frontend-search-noresults' => 'Tidak ada judul yang cocok dengan pencarian Anda. Ubah pencarian Anda, atau tekan tombol pencarian keyboard untuk mencari halaman.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Buka menu utama',
 	'mobile-frontend-main-menu-page-title' => 'Navigasi situs',
 	'mobile-frontend-main-menu-featured' => 'Terpilih',
 	'mobile-frontend-main-menu-nearby' => 'Terdekat',
 	'mobile-frontend-main-menu-login' => 'Masuk log',
 	'mobile-frontend-main-menu-logout' => 'Keluar log',
-	'mobile-frontend-main-menu-watchlist' => 'Daftar pantauan',
+	'mobile-frontend-main-menu-watchlist' => 'Pantauan',
 	'mobile-frontend-main-menu-settings' => 'Pengaturan',
-	'mobile-frontend-main-menu-settings-heading' => 'Pengaturan situs telepon genggam',
+	'mobile-frontend-main-menu-upload' => 'Unggah',
+	'mobile-frontend-main-menu-settings-heading' => 'Pengaturan situs seluler',
 	'mobile-frontend-settings-site-header' => 'Bahasa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} tersedia dalam $1 {{PLURAL:$1|bahasa|bahasa}}. Semua versi yang tersedia disebutkan di bawah',
 	'mobile-frontend-main-menu-account-create' => 'Buat akun',
@@ -5680,11 +5721,28 @@ $messages['id'] = array(
 	'mobile-frontend-page-menu-history' => 'Versi terdahulu',
 	'mobile-frontend-meta-data-issues-header' => 'Masalah',
 	'mobile-frontend-meta-data-issues' => 'Halaman ini memiliki beberapa masalah',
+	'mobile-frontend-ajax-preview-loading' => 'Memuat halaman pratinjau',
 	'mobile-frontend-page-saving' => 'Menyimpan $1',
-	'mobile-frontend-nearby-lookup-error' => 'Tidak dapat menemukan Anda. Mencoba lagi...',
+	'mobile-frontend-nearby-title' => 'Terdekat',
+	'mobile-frontend-nearby-loading' => 'Memuat topik dekat lokasi Anda saat ini',
+	'mobile-frontend-nearby-requirements' => 'Halaman ini memerlukan JavaScript dan browser sadar lokasi.',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 kilometer}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 meter}}',
+	'mobile-frontend-nearby-lookup-error' => 'Tidak dapat temukan lokasi Anda. Coba lagi...',
+	'mobile-frontend-nearby-noresults' => 'Anda entah dimana dan kita tidak dapat menemukan topik apapun. Mengapa tidak tuliskan satu tentangnya?',
+	'mobile-frontend-nearby-refresh' => 'Kami menemukan lokasi yang lebih akurat untuk Anda. Klik di sini untuk memperbarui daftar halaman terdekat',
+	'mobile-frontend-nearby-error' => 'Terjadi galat sementara mencoba untuk menemukan halaman terdekat',
+	'mobile-frontend-nearby-link' => 'Baca halaman ini secara penuh',
+	'mobile-frontend-needs-photo' => 'Kunjungi Halaman ini untuk menambahkan gambar',
+	'mobile-frontend-donate-image-login' => 'Anda harus masuk log untuk melihat unggahan Anda.',
 	'mobile-frontend-photo-upload-generic' => 'Sumbang gambar',
-	'mobile-frontend-donate-image-title' => 'Sumbang gambar', # Fuzzy
+	'mobile-frontend-donate-image-title' => 'Unggah',
+	'mobile-frontend-donate-image-summary' => 'Foto membuat halaman {{SITENAME}} jadi hidup.
+Ada banyak halaman yang tidak memiliki foto karena kekurangan lisensi bebas untuk foto.
+Membantu membuat Halaman ini jadi hidup dengan menyumbangkan foto Anda yang bersedia untuk Anda berikan dan bisa digunakan untuk komunitas {{SITENAME}} secara luas.',
 	'mobile-frontend-donate-image-heading' => 'Kontribusi terkini Anda',
+	'mobile-frontend-donate-image-anon' => 'Sebuah [[Special:UserLogin|akun penguna]] dibutuhkan untuk melihat halaman pengunggahan',
+	'mobile-frontend-listed-image-no-description' => 'Tidak ada keterangan',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Daftar',
 	'mobile-frontend-watchlist-a-z' => 'Semua',
 	'mobile-frontend-watchlist-feed' => 'Diubah',
@@ -5748,7 +5806,7 @@ $messages['ilo'] = array(
 	'mobile-frontend-clear-search' => 'Dalusan',
 	'mobile-frontend-privacy-link-text' => 'Panaka-pribado',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Ti linaon ket magun-od babaen ti [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Ti linaon ket magun-od babaen ti [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Pagdamagan',
 );
 
@@ -5832,7 +5890,7 @@ $messages['is'] = array(
 	'mobile-frontend-clear-search' => 'Hreinsa',
 	'mobile-frontend-privacy-link-text' => 'Persónuvernd',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Textinn er laus undir [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0 leyfi]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Textinn er laus undir [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0 leyfi]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//meta.wikimedia.org/wiki/Terms_of_use-Summary/is?useformat=mobile Notkunarskilmálar]',
 	'mobile-frontend-footer-contact' => 'Hafa samband',
 	'mobile-frontend-search-noresults' => 'Engin síða með þessum titli fannst. Breyttu leitarorðinu, eða ýttu á leitartakkann á lyklaborðinu til þess að leita inní síðum.',
@@ -6190,6 +6248,7 @@ $messages['ja'] = array(
 	'mobile-frontend-nearby-refresh' => 'より正確な位置情報が見つかりました。ここをクリックすると、近くのページのリストが更新されます。',
 	'mobile-frontend-nearby-error' => '付近のページを検索する際に予期しないエラーが発生しました',
 	'mobile-frontend-nearby-link' => 'このページ全体を閲覧',
+	'mobile-frontend-needs-photo' => '画像を追加するにはこのページをご覧ください',
 	'mobile-frontend-donate-image-login' => '自分のアップロード一覧を表示するにはログインしてください。',
 	'mobile-frontend-photo-upload-generic' => '画像を投稿する',
 	'mobile-frontend-donate-image-title' => 'アップロード',
@@ -6307,7 +6366,7 @@ $messages['jv'] = array(
 	'mobile-frontend-clear-search' => 'Busak',
 	'mobile-frontend-privacy-link-text' => 'Pripasi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Kontèn sumadhiya sakisoré [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Kontèn sumadhiya sakisoré [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontak',
 	'mobile-frontend-search-noresults' => 'Ora ana artikel sing padha karo panggolèkan Sampéyan. Ganti panggolèkan, utawa teken tombol golèk nèng keyboard kanggo nggolèki saknjeroné artikel.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Pinilih',
@@ -6395,7 +6454,7 @@ $messages['ka'] = array(
 	'mobile-frontend-clear-search' => 'გასუფთავება',
 	'mobile-frontend-privacy-link-text' => 'უსაფრთხოება',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'შიგთავსი ხელმისაწვდომია [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] ლიცენზიით', # Fuzzy
+	'mobile-frontend-footer-license' => 'შიგთავსი ხელმისაწვდომია [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] ლიცენზიით', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ka?useformat=mobile გამოყენების პირობები]',
 	'mobile-frontend-footer-contact' => 'კონტაქტი',
 	'mobile-frontend-search-noresults' => 'არ არის გვერდები, რომელთა სახელებიც შეესაბამება თქვენ მოთხოვნას. შეცვალეთ თქვენი მოთხოვნა ან კლავიატურაზე დააჭირეთ გვერდის შეგნით საძიებო ღილაკს.',
@@ -7004,7 +7063,7 @@ $messages['ko'] = array(
 	'mobile-frontend-clear-search' => '지우기',
 	'mobile-frontend-privacy-link-text' => '개인정보 정책',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => '모든 문서는 [//ko.m.wikipedia.org/w/index.php?title=%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License&mobileaction=toggle_view_mobile" 크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0]에 따라 사용할 수 있습니다.', # Fuzzy
+	'mobile-frontend-footer-license' => '모든 문서는 [//ko.m.wikipedia.org/w/index.php?title=%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License&mobileaction=toggle_view_mobile 크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0]에 따라 사용할 수 있습니다.', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ko?useformat=mobile 이용 약관]',
 	'mobile-frontend-footer-contact' => '연락하기',
 	'mobile-frontend-search-noresults' => '찾기 결과와 일치하는 문서를 찾지 못했습니다. 검색어을 바꾸거나, 키보드의 찾기 단추를 누르면 본문 내용을 검색합니다.',
@@ -7162,7 +7221,7 @@ $messages['krc'] = array(
 	'mobile-frontend-clear-search' => 'Кетер',
 	'mobile-frontend-privacy-link-text' => 'Конфиденциаллыкъ',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Ичиндегиси, [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] лицензиягъа кёре бериледи.', # Fuzzy
+	'mobile-frontend-footer-license' => 'Ичиндегиси, [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] лицензиягъа кёре бериледи.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Контакт информация',
 	'mobile-frontend-search-noresults' => 'Сизни соруўугъузгъа келишген статья джокъду. Соруўугъузну тюрлендиригиз, неда клавиатурада статьяны ичинде излер ючюн тиекни басыгъыз.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Баш менюну ач',
@@ -7239,7 +7298,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-clear-search' => 'Läddesch maache',
 	'mobile-frontend-privacy-link-text' => 'Prevaatheit',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Ze han onger dä Lizänz [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Ze han onger dä Lizänz [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kumtak',
 	'mobile-frontend-search-noresults' => 'Kein Tittel vun enem Atikel deiht op dat paße, wat De söhks. Don jät angersch söhke udder nemm dä Knopp zom Söhke onger Dinge Taßte, un söhk der_met em Täx vun de Atikelle.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Äxzälänt',
@@ -7720,7 +7779,7 @@ $messages['li'] = array(
 	'mobile-frontend-clear-search' => 'Wösj',
 	'mobile-frontend-privacy-link-text' => 'Prajvesie',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'De inhawd is besjikbaar óngere licentie [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'De inhawd is besjikbaar óngere licentie [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kóntak',
 	'mobile-frontend-search-noresults' => "Gein rizzeltaote veur dien zeukopdrach. Veranger dien zeukopdrach of klik oppe zeukknoep oppe klaveer óm binne pagina's te zeuke.", # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Oetgelich',
@@ -7859,7 +7918,7 @@ $messages['lus'] = array(
 	'mobile-frontend-clear-search' => 'Nawhrehna',
 	'mobile-frontend-privacy-link-text' => 'Inthupna',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Thuziak leh thildang rëng rëng hi [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] dàn hmanga hman theih a ni.', # Fuzzy
+	'mobile-frontend-footer-license' => 'Thuziak leh thildang rëng rëng hi [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] dàn hmanga hman theih a ni.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Biakna',
 	'mobile-frontend-search-noresults' => 'I thuzawnin thuziak mil pakhat mah a nei lo. I thuzawn i thlâk loh pawhin i khawlthluaknei chhutthlènga zawnna hmehkhep hmet la, thuziak chhúngah i zawng thei ang.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Tlángrèlthang',
@@ -7892,7 +7951,7 @@ $messages['lv'] = array(
 	'mobile-frontend-clear-search' => 'Notīrīt',
 	'mobile-frontend-privacy-link-text' => 'Konfidencialitāte',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Saturs pieejams saskaņā ar [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] licenci', # Fuzzy
+	'mobile-frontend-footer-license' => 'Saturs pieejams saskaņā ar [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] licenci', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Valodas',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} ir pieejams $1 {{PLURAL:$1|valodā|valodās}}. Visas pieejamās versijas ir uzskaitītas zemāk',
 	'mobile-frontend-page-menu-contents' => 'saturs',
@@ -7953,7 +8012,7 @@ $messages['mk'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Упс!',
 	'mobile-frontend-settings-description' => 'Прилагодете си ја околината на мобилниот уред со овие наменски поставки.',
 	'mobile-frontend-settings-beta' => 'Бета',
-	'mobile-frontend-settings-alpha' => 'Режим „[//en.wikipedia.org/wiki/Here_be_dragons кај ламјите]“', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Експериментален режим',
 	'mobile-frontend-settings-alpha-description' => 'Со ова влегувате во опасна и неистражена мобилна територија. Добивате уште повеќе експериментални функции, но со поголема опасност од бубачки и грешки.',
 	'mobile-frontend-save-settings' => 'Зачувај',
 	'mobile-frontend-random-button' => 'Случајна',
@@ -8000,13 +8059,13 @@ $messages['mk'] = array(
 	'mobile-frontend-overlay-escape' => 'Назад',
 	'mobile-frontend-placeholder' => 'Пребарајте ја {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Пребарување на {{SITENAME}} (бета)',
-	'mobile-frontend-placeholder-alpha' => 'Пребарајте по {{SITENAME}} (режим „кај ламјите“)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Пребарајте по {{SITENAME}} (експериментално)',
 	'mobile-frontend-search-help' => 'Погоре внесете го она што го барате, а овде ќе се прикажат страниците што се совпаѓаат со бараното.',
 	'mobile-frontend-dismiss-notification' => 'отстрани го известувањето',
 	'mobile-frontend-clear-search' => 'Исчисти',
 	'mobile-frontend-privacy-link-text' => 'Приватност',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Содржините се достапни под лиценцата [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Содржините се достапни под лиценцата [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; може да вашат дополнителни услови',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/mk?useformat=mobile Услови на употреба]',
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Нема наслови што одговараат на бараното. Изменете го она што го барате или пребарувајте по текстот на самите страници.',
@@ -8039,6 +8098,7 @@ $messages['mk'] = array(
 	'mobile-frontend-nearby-refresh' => 'Најдов поточна местоположба на местото. Стиснете тука за да го освежите списокот на страници во близина',
 	'mobile-frontend-nearby-error' => 'Се јави неочекувана грешка при обидот да најдам страници во близина',
 	'mobile-frontend-nearby-link' => 'Прочитајте ја страницава целосно',
+	'mobile-frontend-needs-photo' => 'Посетете ја страницава за да додадете слика',
 	'mobile-frontend-donate-image-login' => 'Мора да сте најавени за да ги видите вашите подигања',
 	'mobile-frontend-photo-upload-generic' => 'Дарувајте слика',
 	'mobile-frontend-donate-image-title' => 'Подигања',
@@ -8195,7 +8255,7 @@ $messages['ml'] = array(
 	'mobile-frontend-clear-search' => 'ശൂന്യമാക്കുക',
 	'mobile-frontend-privacy-link-text' => 'സ്വകാര്യത',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'ഉള്ളടക്കം [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" സി.സി. ബൈ-എസ്.എ. 3.0] പ്രകാരം ലഭ്യം', # Fuzzy
+	'mobile-frontend-footer-license' => 'ഉള്ളടക്കം [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile സി.സി. ബൈ-എസ്.എ. 3.0] പ്രകാരം ലഭ്യം', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile ഉപയോഗനിബന്ധനകൾ]',
 	'mobile-frontend-footer-contact' => 'സമ്പർക്കം',
 	'mobile-frontend-search-noresults' => 'താങ്കൾ തിരഞ്ഞതുമായി സാമ്യമുള്ള താളുകൾ ഒന്നുമില്ല. ദയവായി മാറ്റി തിരയുക, അല്ലെങ്കിൽ കീബോർഡ് തിരച്ചിൽ ബട്ടൺ ഉപയോഗിച്ച് താളുകൾക്കുള്ളിൽ തിരയുക.',
@@ -8359,7 +8419,7 @@ $messages['mr'] = array(
 	'mobile-frontend-clear-search' => 'स्पष्ट',
 	'mobile-frontend-privacy-link-text' => 'एकान्त',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'हि माहिती [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]
+	'mobile-frontend-footer-license' => 'हि माहिती [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]
 याच्या खाली येते', # Fuzzy
 	'mobile-frontend-footer-contact' => 'संपर्क',
 	'mobile-frontend-main-menu-nearby' => 'जवळपास',
@@ -8439,7 +8499,7 @@ $messages['ms'] = array(
 	'mobile-frontend-clear-search' => 'Padamkan',
 	'mobile-frontend-privacy-link-text' => 'Privasi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Kandungan disediakan di bawah [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Kandungan disediakan di bawah [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Syarat-Syarat Penggunaan]',
 	'mobile-frontend-footer-contact' => 'Hubungi',
 	'mobile-frontend-search-noresults' => 'Tiada tajuk halaman yang sepadan dengan carian anda. Ubah carian anda, atau tekan butang carian papan kekunci untuk mencari di dalam halaman.',
@@ -8607,7 +8667,7 @@ $messages['mt'] = array(
 	'mobile-frontend-clear-search' => 'Ħassar',
 	'mobile-frontend-privacy-link-text' => 'Privatezza',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Kontenut disponibbli taħt il-liċenzja [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Kontenut disponibbli taħt il-liċenzja [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kuntatt',
 	'mobile-frontend-search-noresults' => 'L-ebda titlu ta\' paġna ma kkorrisponda mat-tfittxija tiegħek. Biddel it-tfittxija tiegħek, jew agħfas il-buttuna tat-tastiera "Fittex" sabiex tfittex fi ħdan it-test tal-paġni.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Iftaħ il-menu prinċipali',
@@ -8752,7 +8812,7 @@ $messages['nb'] = array(
 	'mobile-frontend-clear-search' => 'Tilbakestill',
 	'mobile-frontend-privacy-link-text' => 'Personvern',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Innholdet er tilgjengelig under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Innholdet er tilgjengelig under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Bruksvilkår]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Ingen sidetitler samsvarer med søket ditt. Endre søket eller trykk på søkeknappen for å søke i artikkeltekstene.',
@@ -9013,7 +9073,7 @@ $messages['nl'] = array(
 	'mobile-frontend-clear-search' => 'Wissen',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'De inhoud is beschikbaar onder de licentie [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]; er zijn mogelijk extra voorwaarden van toepassing.',
+	'mobile-frontend-footer-license' => 'De inhoud is beschikbaar onder de licentie [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; er zijn mogelijk extra voorwaarden van toepassing.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/nl?useformat=mobile Gebruiksvoorwaarden]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => "Er zijn geen resultaten voor uw zoekopdracht. Wijzig uw zoekopdracht of klik op de zoekknop op het toetsenbord om binnen pagina's te zoeken.",
@@ -9212,7 +9272,7 @@ $messages['nn'] = array(
 	'mobile-frontend-clear-search' => 'Tøm',
 	'mobile-frontend-privacy-link-text' => 'Personvern',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Innhaldet er tilgjengeleg under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Innhaldet er tilgjengeleg under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Ingen artikkeltitlar passar med søket ditt. Endra søket ditt eller trykk på søkjeknappen på tastaturet for å søkja i artikkeltekstane.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Opna hovudmenyen',
@@ -9606,7 +9666,7 @@ $messages['os'] = array(
 	'mobile-frontend-placeholder' => '{{grammar:genitive|{{SITENAME}}}} агурын',
 	'mobile-frontend-clear-search' => 'Схафын',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Ацы æрмæг у сæрибар [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] лицензимæ гæсгæ.', # Fuzzy
+	'mobile-frontend-footer-license' => 'Ацы æрмæг у сæрибар [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] лицензимæ гæсгæ.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Контакт',
 );
 
@@ -9745,7 +9805,7 @@ $messages['pl'] = array(
 	'mobile-frontend-clear-search' => 'Wyczyść',
 	'mobile-frontend-privacy-link-text' => 'Polityka prywatności',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Treść udostępniona na licencji [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Treść udostępniona na licencji [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/pl?useformat=mobile&uselang=pl Warunki użytkowania]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Żaden tytuł strony nie pasuje do Twojego wyszukiwania. Zmień je lub wciśnij przycisk wyszukiwania aby szukać w treści stron.',
@@ -9912,7 +9972,7 @@ $messages['pms'] = array(
 	'mobile-frontend-clear-search' => 'Scancela',
 	'mobile-frontend-privacy-link-text' => 'Confidensialità',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contnù disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => "Ël test a l'é disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; d'àutre condission a podrìo aplichesse.",
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condission d'utilisassion]",
 	'mobile-frontend-footer-contact' => 'Contat',
 	'mobile-frontend-search-noresults' => "A-i é gnun-a pàgina ch'a corëspond a soa arserca. Ch'a modìfica soa arserca, o ch'a gnaca ël boton d'arserca dla tastadura për serché andrinta a le pàgine.",
@@ -10099,7 +10159,7 @@ $messages['pt'] = array(
 	'mobile-frontend-clear-search' => 'Limpar',
 	'mobile-frontend-privacy-link-text' => 'Privacidade',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Conteúdo disponibilizado com a licença [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Conteúdo disponibilizado com a licença [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'Nenhum dos artigos corresponde à sua pesquisa. Altere a pesquisa, ou pressione o botão de pesquisa do teclado para pesquisar dentro dos artigos.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Destacado',
@@ -10244,7 +10304,7 @@ $messages['ro'] = array(
 	'mobile-frontend-clear-search' => 'Curăță',
 	'mobile-frontend-privacy-link-text' => 'Confidențialitate',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Conținut disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Conținut disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termeni de utilizare]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'Niciun titlu de pagină nu corespunde căutării dumneavoastră. Căutați altceva sau apăsați butonul de căutare de pe tastatură pentru a căuta în interiorul paginilor.',
@@ -10371,6 +10431,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-logged-out' => 'Non ge sì collegate',
 	'mobile-frontend-logged-in-homepage-notification' => 'Bovègne, $1!',
 	'mobile-frontend-logged-in-toast-notification' => "E' trasute cumme $1",
+	'mobile-frontend-handshake-title' => 'Stoche a ridirezione...',
 	'mobile-frontend-sign-up-heading' => 'Reggistrate',
 	'mobile-frontend-sign-in-heading' => 'Tràse',
 	'mobile-frontend-sign-in-error-heading' => 'Ooooooh',
@@ -10410,7 +10471,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-overlay-escape' => 'Tuèrne rrete',
 	'mobile-frontend-placeholder' => 'Cirche {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Cirche {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => "Cirche {{SITENAME}} (Mode d'u Draghe)", # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Cirche {{SITENAME}} (Sperimendale)',
 	'mobile-frontend-dismiss-notification' => 'live sta notificazione',
 	'mobile-frontend-clear-search' => 'Pulizze',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
@@ -10442,6 +10503,7 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Vôsce',
 	'mobile-frontend-watchlist-filter-talk' => "'Ngazzamende",
 	'mobile-frontend-watchlist-filter-other' => 'Otre',
+	'mobile-frontend-watchlist-modified' => 'Cangiate $1',
 	'mobile-frontend-diffview-404-title' => 'Revisione brutte',
 	'mobile-frontend-diffview-title' => 'Cangiaminde',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|cangiamende|cangiaminde}}',
@@ -10543,7 +10605,7 @@ $messages['ru'] = array(
 	'mobile-frontend-clear-search' => 'Очистить',
 	'mobile-frontend-privacy-link-text' => 'Конфиденциальность',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Содержание доступно по лицензии [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Содержание доступно по лицензии [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ru?useformat=mobile Условия использования]',
 	'mobile-frontend-footer-contact' => 'Контактная информация',
 	'mobile-frontend-search-noresults' => 'Нет страниц, названия которых соответствуют вашему запросу. Измените свой запрос, или нажмите на клавиатуре кнопку для поиска внутри страниц.',
@@ -10673,7 +10735,7 @@ $messages['rue'] = array(
 	'mobile-frontend-clear-search' => 'Очістити',
 	'mobile-frontend-privacy-link-text' => 'Охорона пріватности',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Обсяг є доступный під [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Обсяг є доступный під [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Вашому гляданю не одповідають ниякы назвы статей. Зміньте ваше гляданя або стистийте клапку гляданя внутрї статей.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Выбране',
@@ -10729,7 +10791,7 @@ $messages['sa'] = array(
 	'mobile-frontend-clear-search' => 'स्वच्छीक्रियताम्',
 	'mobile-frontend-privacy-link-text' => 'व्यक्तिगतम्',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'आधेयः अत्र उपलभ्यते [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'आधेयः अत्र उपलभ्यते [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'सम्पर्कः',
 	'mobile-frontend-search-noresults' => 'किमपि लेखशिरोनाम अन्वेषणपदसादृश्यं नास्ति । अन्वेषणं परिवर्त्यताम् अथवा लेखस्य अन्तः अन्वेषणाय कीलफलकस्य अन्वेषणकुड्मलं नुद्यताम् ।', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'प्रमुखम्',
@@ -10813,7 +10875,7 @@ $messages['scn'] = array(
 	'mobile-frontend-clear-search' => 'Scancella',
 	'mobile-frontend-privacy-link-text' => 'Cunfidinzialitati',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Cuntinutu dispunìbbili sutta la [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Cuntinutu dispunìbbili sutta la [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Cuntatti',
 );
 
@@ -10901,7 +10963,7 @@ $messages['si'] = array(
 	'mobile-frontend-clear-search' => 'හිස් කරන්න',
 	'mobile-frontend-privacy-link-text' => 'පුද්ගලිකත්වය',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'අන්තර්ගතය [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] යටතේ ලබා ගත හැක', # Fuzzy
+	'mobile-frontend-footer-license' => 'අන්තර්ගතය [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] යටතේ ලබා ගත හැක', # Fuzzy
 	'mobile-frontend-footer-contact' => 'සම්බන්ධ කරන්න',
 	'mobile-frontend-main-menu-button-tooltip' => 'ප්‍රධාන මෙනුව විවෘත කරන්න',
 	'mobile-frontend-main-menu-page-title' => 'අඩවි යාන්ත්‍රණය',
@@ -10991,7 +11053,7 @@ $messages['sk'] = array(
 	'mobile-frontend-clear-search' => 'Vyčistiť',
 	'mobile-frontend-privacy-link-text' => 'Súkromie',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Obsah je dostupný za podmienok [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Obsah je dostupný za podmienok [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Žiadne názvy článkov nezodpovedajú vášmu vyhľadávaniu. Zmeňte hľadané slová alebo stlačením tlačidla hľadať na klávesnici hľadajte v texte článkov.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Odporúčané',
@@ -11058,7 +11120,7 @@ $messages['sl'] = array(
 	'mobile-frontend-clear-search' => 'Počisti',
 	'mobile-frontend-privacy-link-text' => 'Zasebnost',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Vsebina je dostopna pod [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Vsebina je dostopna pod [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Stik',
 	'mobile-frontend-main-menu-login' => 'Prijava',
 	'mobile-frontend-main-menu-logout' => 'Odjava',
@@ -11128,7 +11190,7 @@ $messages['sq'] = array(
 	'mobile-frontend-clear-search' => 'Fshije',
 	'mobile-frontend-privacy-link-text' => 'Privatësia',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Përmbajtja në dispozicion nën [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Përmbajtja në dispozicion nën [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakti',
 	'mobile-frontend-search-noresults' => 'Asnjë titull i artikujve nuk u përputh me kërkimin tuaj. Ndryshoni kërkimin tuaj, ose shtypni butonin e kërkimit me tastierë për të kërkuar brenda artikujve.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'I veçuar',
@@ -11185,7 +11247,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-clear-search' => 'Очисти',
 	'mobile-frontend-privacy-link-text' => 'Приватност',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Садржај је доступан под [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Садржај је доступан под [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Нема чланка који одговара претрази. Промените услове претраге, или притисните дугме за претрагу да бисте је проширили на садржај чланака.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Изабрано',
@@ -11237,7 +11299,7 @@ $messages['sr-el'] = array(
 	'mobile-frontend-clear-search' => 'Očisti',
 	'mobile-frontend-privacy-link-text' => 'Privatnost',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Sadržaj je dostupan pod [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Sadržaj je dostupan pod [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Nema članka koji odgovara pretrazi. Promenite uslove pretrage, ili pritisnite dugme za pretragu da biste je proširili na sadržaj članaka.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Izabrano',
@@ -11337,7 +11399,7 @@ $messages['sv'] = array(
 	'mobile-frontend-clear-search' => 'Rensa',
 	'mobile-frontend-privacy-link-text' => 'Sekretess',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Innehåll som finns tillgängligt under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Innehåll som finns tillgängligt under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Användarvillkor]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Inga sidor matchar din sökning. Ändra sökningen eller tryck på tangentbordets sökknapp för att söka inuti sidor.',
@@ -11712,7 +11774,7 @@ $messages['te'] = array(
 	'mobile-frontend-clear-search' => 'తుడిచివేయి',
 	'mobile-frontend-privacy-link-text' => 'మరుగు',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'విషయం [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" సీసీ బై-ఎస్ఏ 3.0] క్రింద లభ్యం', # Fuzzy
+	'mobile-frontend-footer-license' => 'విషయం [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile సీసీ బై-ఎస్ఏ 3.0] క్రింద లభ్యం', # Fuzzy
 	'mobile-frontend-footer-contact' => 'సంప్రదింపులు',
 	'mobile-frontend-main-menu-nearby' => 'దగ్గరలో',
 	'mobile-frontend-main-menu-settings' => 'అమరికలు',
@@ -11737,7 +11799,7 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-off' => 'Хомӯш',
 	'mobile-frontend-on' => 'Равшан',
 	'mobile-frontend-featured-article' => 'Мақолаи Баргузидаи Имрӯз',
-	'mobile-frontend-footer-license' => 'Мӯҳтаво таҳти иҷозатномаи [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] дастрас аст.', # Fuzzy
+	'mobile-frontend-footer-license' => 'Мӯҳтаво таҳти иҷозатномаи [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] дастрас аст.', # Fuzzy
 );
 
 /** Tajik (Latin script) (tojikī)
@@ -11819,7 +11881,7 @@ $messages['tl'] = array(
 	'mobile-frontend-clear-search' => 'Hawiin',
 	'mobile-frontend-privacy-link-text' => 'Pagsasarilinan',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Ang nilalaman ay makukuhang nasa ilalim ng [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Ang nilalaman ay makukuhang nasa ilalim ng [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kaugnayan',
 	'mobile-frontend-search-noresults' => 'Walang mga pamagat ng artikulo na tumugma sa paghahanap mo. Baguhin ang hinahanap mo, pindutin ang pindutang panghanap ng tipahan upang maghanap sa loob ng mga artikulo.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Itinatampok',
@@ -11896,7 +11958,7 @@ $messages['tr'] = array(
 	'mobile-frontend-clear-search' => 'Temizle',
 	'mobile-frontend-privacy-link-text' => 'Gizlilik',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'İçerik [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0] Lisansı altındadır.', # Fuzzy
+	'mobile-frontend-footer-license' => 'İçerik [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] Lisansı altındadır.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'İletişim',
 	'mobile-frontend-main-menu-settings' => 'Ayarlar',
 );
@@ -12090,7 +12152,7 @@ $messages['uk'] = array(
 	'mobile-frontend-clear-search' => 'Очистити',
 	'mobile-frontend-privacy-link-text' => 'Конфіденційність',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Вміст доступний під ліцензією [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Вміст доступний під ліцензією [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile&uselang=uk Умови використання]',
 	'mobile-frontend-footer-contact' => "Зв'язок",
 	'mobile-frontend-search-noresults' => 'Немає заголовків сторінок, які відповідають критеріям пошуку. Змініть параметри пошуку, або натисніть кнопку пошуку, щоб знайти всередині сторінок.',
@@ -12369,7 +12431,7 @@ $messages['vec'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Oops!',
 	'mobile-frontend-settings-description' => "Personałixa ła to esperiensa so'l dispoxitivo mobiłe có łe inpostasion spesifeghe par sta version.",
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => 'Modałità [//en.wikipedia.org/wiki/Here_be_dragons Here be dragons]', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Modałità sperimentale',
 	'mobile-frontend-settings-alpha-description' => 'Ocio te si drio entrar in teritori pericołoxi e nó esplorai. Otien carateristeghe ncora pì sperimentałi ma có pì pericołi e difeti.',
 	'mobile-frontend-save-settings' => 'Salva',
 	'mobile-frontend-random-button' => 'A caso',
@@ -12416,12 +12478,13 @@ $messages['vec'] = array(
 	'mobile-frontend-overlay-escape' => 'Torna indrìo',
 	'mobile-frontend-placeholder' => 'Serca drento de {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Riserca so {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Serca so {{SITENAME}} (Dragon Mode)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Serca so {{SITENAME}} (Sperimentale)',
 	'mobile-frontend-search-help' => 'Digita łe parołe da sercar e i titołi de łe pàjina trovae i aparirà cuà.',
 	'mobile-frontend-dismiss-notification' => 'ignora sta notifega',
 	'mobile-frontend-clear-search' => 'Sneta',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'El testo el xe disponibiłe soto ła licensa [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; podarìa aplicarse altre condision in più.',
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condision d'uxo]",
 	'mobile-frontend-footer-contact' => 'Contati',
 	'mobile-frontend-search-noresults' => 'Nisuna pajina ła ga un titoło che \'l corisponde a ła to riserca. Canbia ła to riserca, opur struca el boton de ła tastiera "Serca" par ła riserca inte\'l testo de łe pàjine.',
@@ -12454,6 +12517,7 @@ $messages['vec'] = array(
 	'mobile-frontend-nearby-refresh' => 'Te ghemo catà na poxision pì precixa. Struca cuà par ricrear ła lista de łe pàjine visine',
 	'mobile-frontend-nearby-error' => 'Ghe xe sta un eror nó spetà mentre se jera drio sercar łe pàjine visine',
 	'mobile-frontend-nearby-link' => 'Lèxi sta pagina par intiero',
+	'mobile-frontend-needs-photo' => 'Và su sta pagina par zontar na imagine',
 	'mobile-frontend-donate-image-login' => 'Entra par vardar i file che te ghe cargà.',
 	'mobile-frontend-photo-upload-generic' => "Dona n'imaxene",
 	'mobile-frontend-donate-image-title' => 'Caricamenti',
@@ -12579,7 +12643,7 @@ $messages['vi'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Ôi',
 	'mobile-frontend-settings-description' => 'Tùy biến giao diện trên thiết bị di động của bạn với các tùy chọn di động này.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => 'Chế độ nguy hiểm', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Chế độ thử nghiệm',
 	'mobile-frontend-settings-alpha-description' => 'Đi vào lãnh thổ nguy hiểm chưa quen. Chịu thêm tính năng di động thử nghiệm có thể có nhiều lỗi hơn.',
 	'mobile-frontend-save-settings' => 'Lưu',
 	'mobile-frontend-random-button' => 'Ngẫu nhiên',
@@ -12626,7 +12690,7 @@ $messages['vi'] = array(
 	'mobile-frontend-overlay-escape' => 'Quay lại',
 	'mobile-frontend-placeholder' => 'Tìm kiếm {{SITENAME}}…',
 	'mobile-frontend-placeholder-beta' => 'Tìm kiếm {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Tìm {{SITENAME}} (Chế độ nguy hiểm)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Tìm {{SITENAME}} (Chế độ thử nghiệm)',
 	'mobile-frontend-search-help' => 'Nhập từ khóa tìm kiếm ở trên để xem các trang trùng tên ở đây.',
 	'mobile-frontend-dismiss-notification' => 'bỏ qua thông báo này',
 	'mobile-frontend-clear-search' => 'Tẩy trống',
@@ -12665,6 +12729,7 @@ $messages['vi'] = array(
 	'mobile-frontend-nearby-refresh' => 'Chúng tôi đã chỉnh lại vị trí của bạn. Nhấn chuột vào đây để tải lại danh sách các trang kề bên.',
 	'mobile-frontend-nearby-error' => 'Xuất hiện lỗi bất ngờ khi tìm kiếm trang kề bên',
 	'mobile-frontend-nearby-link' => 'Đọc toàn bộ trang này',
+	'mobile-frontend-needs-photo' => 'Xem trang này để thêm hình',
 	'mobile-frontend-donate-image-login' => 'Bạn phải đăng nhập để xem các tập tin bạn đã tải lên.',
 	'mobile-frontend-photo-upload-generic' => 'Đóng góp một hình ảnh',
 	'mobile-frontend-donate-image-title' => 'Tập tin tải lên',
@@ -13011,7 +13076,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-clear-search' => '清除',
 	'mobile-frontend-privacy-link-text' => '隐私',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => '内容采用[//zh.m.wikipedia.org/wiki/Wikipedia:CC-BY-SA-3.0协议文本?useformat=mobile" CC BY-SA 3.0]授权', # Fuzzy
+	'mobile-frontend-footer-license' => '内容采用[//zh.m.wikipedia.org/wiki/Wikipedia:CC-BY-SA-3.0协议文本?useformat=mobile CC BY-SA 3.0]授权', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/%E4%BD%BF%E7%94%A8%E6%9D%A1%E6%AC%BE?useformat=mobile 使用条款]',
 	'mobile-frontend-footer-contact' => '联系',
 	'mobile-frontend-search-noresults' => '无页面标题匹配你的搜索。请更换关键词，或按键盘搜索键在页面中搜索。',
@@ -13198,7 +13263,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-clear-search' => '清除',
 	'mobile-frontend-privacy-link-text' => '隱私',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => '內容在[//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile" CC BY-SA 3.0]協議下提供', # Fuzzy
+	'mobile-frontend-footer-license' => '內容在[//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]協議下提供', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile 使用條款]',
 	'mobile-frontend-footer-contact' => '聯繫',
 	'mobile-frontend-search-noresults' => '沒有頁面標題匹配您的搜尋字詞。更改您的搜索，或按鍵盤搜尋鍵進行全文搜索。',
