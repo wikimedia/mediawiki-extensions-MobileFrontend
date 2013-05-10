@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw64A5wQ",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-10T22:37:16Z",
+      "side": 1,
+      "message": "as i said in the parent commit for this, i think the thought here is a good one but i really don\u0027t think this is a good approach. this method should return an object property containing the the config variables, which could be set via a setter method and easily settable by inheriting classes. that makes this a lot more flexible and makes it so you don\u0027t need to munge config vars that mobile or desktop specific in here.",
+      "revId": "ef5acc4c6ca29956bc45f16705b604dbbb08c464",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
