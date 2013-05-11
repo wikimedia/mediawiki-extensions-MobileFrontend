@@ -6033,7 +6033,7 @@ $messages['it'] = array(
 	'mobile-frontend-overlay-escape' => 'Indietro',
 	'mobile-frontend-placeholder' => "Cerca all'interno di {{SITENAME}}",
 	'mobile-frontend-placeholder-beta' => 'Ricerca su {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Cerca su {{SITENAME}} (Dragon Mode)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Cerca su {{SITENAME}} (sperimentale)',
 	'mobile-frontend-search-help' => 'Digita le parole da ricercare ed i titoli delle pagine trovate appariranno qui.',
 	'mobile-frontend-dismiss-notification' => 'ignora questa notifica',
 	'mobile-frontend-clear-search' => 'Pulisci',
@@ -9020,7 +9020,7 @@ $messages['nl'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Fout',
 	'mobile-frontend-settings-description' => 'Pas uw gebruikerservaring op uw mobiele apparaat aan via deze instellingen.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => 'Experimentele functies', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Experimentele functies',
 	'mobile-frontend-settings-alpha-description' => 'Betreed gevaarlijk en onontgonnen mobiel gebied. Verken nog meer experimentele functies met de kan op bugs.',
 	'mobile-frontend-save-settings' => 'Opslaan',
 	'mobile-frontend-random-button' => 'Willekeurig',
@@ -9067,7 +9067,7 @@ $messages['nl'] = array(
 	'mobile-frontend-overlay-escape' => 'Terug',
 	'mobile-frontend-placeholder' => '{{SITENAME}} doorzoeken',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} doorzoeken (Beta)',
-	'mobile-frontend-placeholder-alpha' => '{{SITENAME}} doorzoeken (Drakenmodus)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => '{{SITENAME}} doorzoeken (experimenteel)',
 	'mobile-frontend-search-help' => 'Voer de trefwoorden hierboven in. Zoekresultaten worden hier weergegeven.',
 	'mobile-frontend-dismiss-notification' => 'deze melding verwijderen',
 	'mobile-frontend-clear-search' => 'Wissen',
@@ -9106,6 +9106,7 @@ $messages['nl'] = array(
 	'mobile-frontend-nearby-refresh' => "We hebben uw locatie preciezer kunnen bepalen. Klik hier om de lijst met nabijgelegen pagina's te vernieuwen",
 	'mobile-frontend-nearby-error' => 'Er is een onverwachte fout opgetreden tijdens het zoeken naar nabijgelegen onderwerpen',
 	'mobile-frontend-nearby-link' => 'Volledige pagina lezen',
+	'mobile-frontend-needs-photo' => 'Naar deze pagina gaan om een afbeelding toe te voegen',
 	'mobile-frontend-donate-image-login' => 'U moet aangemeld zijn om uw uploads te bekijken.',
 	'mobile-frontend-photo-upload-generic' => 'Afbeelding uploaden',
 	'mobile-frontend-donate-image-title' => 'Uploads',
@@ -10115,6 +10116,7 @@ $messages['ps'] = array(
  * @author Giro720
  * @author Hamilton Abreu
  * @author João Sousa
+ * @author Luckas
  * @author Malafaya
  * @author MetalBrasil
  * @author Opraco
@@ -10130,7 +10132,7 @@ $messages['pt'] = array(
 	'mobile-frontend-save-settings' => 'Gravar configurações', # Fuzzy
 	'mobile-frontend-random-button' => 'Aleatório',
 	'mobile-frontend-back-to-top-of-section' => 'Retroceder uma secção',
-	'mobile-frontend-close-section' => 'Fechar esta secção',
+	'mobile-frontend-close-section' => 'Fechar esta seção',
 	'mobile-frontend-empty-homepage-text' => 'Esta página inicial deve ser configurada. <a href="http://meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage">Instruções sobre como colocar este site móvel ativado</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Versão normal',
 	'mobile-frontend-wml-continue' => 'Continuar ...',
@@ -10251,7 +10253,7 @@ $messages['ro'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Hopa!',
 	'mobile-frontend-settings-description' => 'Personalizați-vă experiența pe dispozitivele mobile cu aceste setări specifice site-ului mobil.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => 'Modul [//en.wikipedia.org/wiki/Here_be_dragons Exploratorului]', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Modul Experimental',
 	'mobile-frontend-settings-alpha-description' => 'Intrați pe teritoriul periculos și neexplorat al experienței mobile. Beneficiați de și mai multe caracteristici experimentale, însă cu un risc mai mare de erori.',
 	'mobile-frontend-save-settings' => 'Salvare',
 	'mobile-frontend-random-button' => 'Aleatoriu',
@@ -10298,13 +10300,13 @@ $messages['ro'] = array(
 	'mobile-frontend-overlay-escape' => 'Înapoi',
 	'mobile-frontend-placeholder' => 'Căutare în {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Căutare în {{SITENAME}} (beta)',
-	'mobile-frontend-placeholder-alpha' => 'Căutare în {{SITENAME}} (modul Explorator)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Căutare în {{SITENAME}} (Experimental)',
 	'mobile-frontend-search-help' => 'Introduceți deasupra termenii de căutat, iar titlurile paginilor ce corespund vor apărea aici.',
 	'mobile-frontend-dismiss-notification' => 'respinge această notificare',
 	'mobile-frontend-clear-search' => 'Curăță',
 	'mobile-frontend-privacy-link-text' => 'Confidențialitate',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Conținut disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Text disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; pot exista și clauze suplimentare.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termeni de utilizare]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'Niciun titlu de pagină nu corespunde căutării dumneavoastră. Căutați altceva sau apăsați butonul de căutare de pe tastatură pentru a căuta în interiorul paginilor.',
@@ -10337,6 +10339,7 @@ $messages['ro'] = array(
 	'mobile-frontend-nearby-refresh' => 'V-am determinat poziția cu o precizie mai mare. Apăsați aici pentru a reîmprospăta lista cu pagini din apropiere',
 	'mobile-frontend-nearby-error' => 'O eroare neașteptată a apărut în timpul căutării de pagini din apropiere',
 	'mobile-frontend-nearby-link' => 'Citiți această pagină în întregime',
+	'mobile-frontend-needs-photo' => 'Vizitați această pagină pentru a adăuga o imagine',
 	'mobile-frontend-donate-image-login' => 'Trebuie să vă autentificați pentru a vă vizualiza încărcările.',
 	'mobile-frontend-photo-upload-generic' => 'Donează o imagine',
 	'mobile-frontend-donate-image-title' => 'Încărcări',
