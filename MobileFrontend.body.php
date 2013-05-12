@@ -286,6 +286,9 @@ class ExtMobileFrontend extends ContextSource {
 	public function beforePageDisplayHTML( $out ) {
 		wfProfileIn( __METHOD__ );
 
+		if ( wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) ) ) {
+		}
+
 		$request = $this->getRequest();
 		$xDevice = $this->getXDevice();
 		$this->setWmlContextFormat();
