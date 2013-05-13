@@ -46,6 +46,9 @@ ul ul {
 dl {
   margin-left: 1em;
 }
+dl dt {
+  font-weight: bold;
+}
 h1 {
   font-size: 1.833em;
   line-height: 22pt;
