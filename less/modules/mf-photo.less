@@ -3,32 +3,33 @@
 .button.photo {
 	position: relative;
 	display: table;
-	padding: 0;
 	margin: 0 auto;
+	padding-left: 44px;
 	text-align: left; /* override text-align center - chrome not clickable */
 
-	input, div {
-		cursor: pointer;
+	// separate <div> to avoid overriding button's gradient
+	div {
+		background: url(images/camera.png) 10px 45% no-repeat;
+		.background-size( 24px, auto );
 	}
 
 	input {
-		position: absolute;
 		opacity: 0;
-		top: 0;
 		z-index: 2;
-		width: 100%;
-		height: 100%;
 	}
 
-	div {
-		padding: .8*@baseFontSize 10px .8*@baseFontSize 44px;
-		background: url(images/camera.png) no-repeat 10px 45%;
-		background-size: 24px auto;
+	input, div {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 }
 
 #content > .button.photo {
-	width: 100%;
+	display: block;
 	margin-bottom: 10px;
 }
 

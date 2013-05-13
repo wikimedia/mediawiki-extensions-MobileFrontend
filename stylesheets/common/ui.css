@@ -16,7 +16,7 @@ input[type=submit] {
 .buttonBar button,
 .content input[type=submit],
 .buttonBar input[type=submit] {
-  padding: 1em 1.25em 1em;
+  padding: .8em 1.2em;
   text-align: center;
   border: 1px #33589f solid;
   color: #ffffff;
