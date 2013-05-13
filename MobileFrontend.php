@@ -343,7 +343,7 @@ $wgResourceModules['mobile.toggling'] = $wgMFMobileResourceBoilerplate + array(
 );
 
 $wgResourceModules['mobile.action.edit'] = $wgMFMobileResourceBoilerplate + array(
-	'dependencies' => array( 'mobile.startup' ),
+	'dependencies' => array( 'mobile.startup', 'mobile.beta' ),
 	'messages' => array(
 		// mf-edit.js
 		'mobile-frontend-page-saving',

@@ -1,12 +1,13 @@
 ( function( M, $ ) {
 
 var m = ( function() {
-	var $pre = $( '<pre>' ).hide().appendTo( $( '#content_wrapper' ) ), minHeight = 80;
+	var $pre = $( '<pre>' ).hide().appendTo( $( '#content_wrapper' ) ), minHeight = 80,
+		toggling = M.require( 'toggle-dynamic' );
 
 	function makeSection( $editArea, sectionId ) {
 		var $section = $( '<div class="section">' ).insertBefore( $editArea ),
 			$heading = $( '<h2 class="section_heading">' ).attr( 'id', 'section_edit' + sectionId ),
-			$content = $( '<div class="content_block">' );
+			$content = $( '<div class="content_block">' ).data( 'loaded', true );
 
 		if ( sectionId > 0 ) {
 			$section.append( $heading );
@@ -109,7 +110,7 @@ var m = ( function() {
 			$editArea.val( val );
 		} );
 
-		M.emit( 'page-loaded', { title: mw.config.get( 'wgTitle' ) } );
+		toggling.enableToggling( $( '#content_0' ) );
 	}
 
 	function init() {
