@@ -21,6 +21,18 @@ class SkinMinerva extends SkinTemplate {
 			'mobile.stable.universal',
 		);
 		$out->addModules( $modules );
+		$out->addJsConfigVars( $this->getSkinConfigVariables() );
+	}
+
+	/**
+	 * Returns array of config variables that should be added only to this skin for use in javascript
+	 * @return Array
+	 */
+	public function getSkinConfigVariables() {
+		global $wgMFLeadPhotoUploadCssSelector;
+		return array(
+			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
+		);
 	}
 
 	/**

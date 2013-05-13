@@ -964,3 +964,10 @@ $wgMFVaryResources = false;
  * Whether or not anonymous (not logged in) users should be able to edit.
  */
 $wgMFAnonymousEditing = false;
+
+/**
+ * A css selector which is used by mf-photo.js to test whether to prompt the user photo uploads on
+ * the current page. When the selector matches no elements the photo uploader will show.
+ * This is an advanced config variable so use caution in editing.
+ */
+$wgMFLeadPhotoUploadCssSelector = 'img, .navbox';

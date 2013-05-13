@@ -20,7 +20,7 @@
 			$container = $content_0;
 		}
 
-		return $container.find( 'img, .navbox, .infobox' ).length === 0;
+		return $container.find( mw.config.get( 'wgMFLeadPhotoUploadCssSelector' ) ).length === 0;
 	}
 
 	function isSupported() {
