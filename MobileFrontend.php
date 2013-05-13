@@ -311,6 +311,7 @@ $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 		'javascripts/common/history-beta.js',
 		'javascripts/views/page.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
+		'javascripts/common/application-beta.js',
 	),
 	'position' => 'bottom',
 	'messages' => array(
@@ -403,7 +404,6 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 		'stylesheets/modules/talk.css',
 	),
 	'scripts' => array(
-		'javascripts/common/application-alpha.js',
 		'javascripts/modules/mf-inline-style-scrubber.js',
 		'javascripts/modules/mf-tables.js',
 		'javascripts/modules/mf-translator.js',
@@ -971,3 +971,9 @@ $wgMFAnonymousEditing = false;
  * This is an advanced config variable so use caution in editing.
  */
 $wgMFLeadPhotoUploadCssSelector = 'img, .navbox';
+
+/**
+ * Enable CSS animations in all browsers that support them
+ * @var bool
+ */
+$wgMFEnableCssAnimations = true;

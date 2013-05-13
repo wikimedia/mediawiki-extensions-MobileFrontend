@@ -17,8 +17,8 @@
 .drawer.visible {
   display: block;
 }
-.transforms .alpha #mf-notification,
-.transforms .alpha .drawer {
+.animations #mf-notification,
+.animations .drawer {
   display: block;
   bottom: -100px;
   opacity: 0;
@@ -30,8 +30,8 @@
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.transforms .alpha #mf-notification.visible,
-.transforms .alpha .drawer.visible {
+.animations #mf-notification.visible,
+.animations .drawer.visible {
   opacity: 1;
   -webkit-transform: translate3d(0, -98px, 0);
   transform: translate3d(0, -98px, 0);

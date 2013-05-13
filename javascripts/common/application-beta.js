@@ -1,6 +1,14 @@
 jQuery( function( $ ) {
-	// http://stackoverflow.com/a/12621264/365238
-	function supports3dTransforms() {
+	/**
+	 * Checks browser support for CSS transforms, transitions
+	 * and CSS animation.
+	 * Currently assumes support for the latter 2 in the case of the
+	 * former.
+	 * See http://stackoverflow.com/a/12621264/365238
+	 *
+	 * @returns {boolean}
+	 */
+	function supportsAnimations() {
 		var el = $( '<p>' )[0], $iframe = $( '<iframe>' ), has3d, t,
 			transforms = {
 				'webkitTransform': '-webkit-transform',
@@ -25,7 +33,7 @@ jQuery( function( $ ) {
 		return has3d !== undefined && has3d.length > 0 && has3d !== "none";
 	}
 
-	if ( supports3dTransforms() ) {
-		$( 'html' ).addClass( 'transforms' );
+	if ( mw.config.get( 'wgMFEnableCssAnimations' ) && supportsAnimations() ) {
+		$( 'html' ).addClass( 'animations' );
 	}
 } );

@@ -2,7 +2,7 @@ a.watch-this-article.loading {
   background-image: url(../common/images/ajax-loader.gif);
   min-height: auto;
 }
-.alpha .watch-this-article {
+.animations .watch-this-article {
   -webkit-backface-visibility: hidden;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
@@ -11,7 +11,7 @@ a.watch-this-article.loading {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.alpha .watch-this-article.watched {
+.animations .watch-this-article.watched {
   -webkit-transform: rotate(72deg);
   transform: rotate(72deg);
 }

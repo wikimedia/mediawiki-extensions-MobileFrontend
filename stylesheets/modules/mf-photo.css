@@ -146,7 +146,7 @@
   font-size: 1.2em;
   line-height: 1;
 }
-.transforms .photo-nag label div.active {
+.animations .photo-nag label div.active {
   animation: pulse 1s ease-in-out infinite alternate;
   -webkit-animation: pulse 1s ease-in-out infinite alternate;
 }
