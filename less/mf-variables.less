@@ -3,8 +3,8 @@
 @searchResultPaddingVertical: 12px;
 @searchBoxColor: #fafafa;
 @headerHeight: 46px;
-@searchBoxHeight: @headerHeight - 16;
-@searchBorderHeight: 1px;
+@headerElementHeight: @headerHeight - 16;
+@headerElementBorderHeight: 1px;
 @headerBorderBottom: #e3e3e3;
 
 @contentMarginRight: 23px;
@@ -39,8 +39,8 @@
 @ajaxLoadingImage: url(../common/images/ajax-loader.gif);
 
 // calculated values
-@secondaryNavWidth: @searchBoxHeight;
-@searchMarginTop: ( ( @headerHeight - @searchBoxHeight ) / 2 ) + @searchBorderHeight;
+@secondaryNavWidth: @headerElementHeight;
+@searchMarginTop: ( ( @headerHeight - @headerElementHeight ) / 2 ) + @headerElementBorderHeight;
 
 // calculated colors
 @searchBoxColorTo: darken( @searchBoxColor, 2.75% );

@@ -68,20 +68,16 @@ input[type=submit] {
 	}
 }
 
-@buttonVerticalMargin: 8px;
-@buttonVerticalPadding: ( @headerHeight / 2 ) - ( @buttonVerticalMargin * 2 );
-
 .header {
 	.button,
-	button {
-		margin: @buttonVerticalMargin 0;
-		padding: @buttonVerticalPadding ( @baseFontSize * 1.25 );
+	button,
+	input[type=submit] {
+		line-height: @headerElementHeight - 2 * @headerElementBorderHeight;
+		padding: 0 1.25em;
 		text-decoration: none;
 		.vertical-gradient(#fff, #e9e9ea, 45%, 100%);
 		color: #58595b;
-		border: 1px solid #9ea0a3;
-		// needed by Safari
-		vertical-align: middle;
+		border: @headerElementBorderHeight solid #9ea0a3;
 
 		&.cancel {
 			margin: 0;

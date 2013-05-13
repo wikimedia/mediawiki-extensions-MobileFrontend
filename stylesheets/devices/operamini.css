@@ -1,13 +1,5 @@
-.divclearable {
-	padding-top: 9px;
-}
-
-.divclearable input.search {
-	padding: 0;
-}
-
-.divclearable .searchSubmit {
-	top: 4px;
+.header {
+	padding-top: 9px !important;
 }
 
 table { /* table[style] not supported */
