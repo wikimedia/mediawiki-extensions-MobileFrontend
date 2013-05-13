@@ -281,7 +281,7 @@
 			$checkboxes.on( 'click', function() {
 				var $checkbox = $( this ), $next;
 				$checkbox.parent().addClass( 'checked' );
-				$next = $checkboxes.filter( ':not([checked])' ).eq( 0 );
+				$next = $checkboxes.not( ':checked' ).eq( 0 );
 				disable( $checkbox );
 				if ( !$next.length ) {
 					self.emit( 'confirm' );
