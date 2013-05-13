@@ -107,20 +107,30 @@ QUnit.test( 'trimUtf8String', 4, function() {
 QUnit.module( 'MobileFrontend photo', {
 	setup: function() {
 		var resp = {"upload":{"result":"Warning","warnings":{"badfilename":"::.JPG"},"filekey":"1s.1.jpg","sessionkey":"z1.jpg"}},
+			resp2 = {"warnings":{"main":{"*":"Unrecognized parameters: 'useformat', 'r'"}},"upload":{"result":"Success","filename":"Tulip_test_2013-05-13_09-45.jpg","imageinfo":{"timestamp":"2013-05-13T16:45:53Z","user":"Jdlrobson","userid":825,"size":182912,"width":960,"height":578,"parsedcomment":"Added photo for use on page","comment":"Added photo for use on page","url":"http://upload.beta.wmflabs.org/wikipedia/en/b/b3/Tulip_test_2013-05-13_09-45.jpg","descriptionurl":"http://en.wikipedia.beta.wmflabs.org/wiki/File:Tulip_test_2013-05-13_09-45.jpg","sha1":"7e56537b1929d7d4d211bded2d46ba01ddbbe30f","metadata":[{"name":"JPEGFileComment","value":[{"name":0,"value":"*"}]},{"name":"MEDIAWIKI_EXIF_VERSION","value":2}],"mime":"image/jpeg","mediatype":"BITMAP","bitdepth":8}}},
 			EventEmitter = M.require( 'eventemitter' );
 
 		this.api = new photo.PhotoApi();
-		sinon.stub( this.api, 'getToken', function() {
+		this.api2 = new photo.PhotoApi();
+		function getTokenStub() {
 			return $.Deferred().resolve( 'foo' );
-		} );
+		}
+		sinon.stub( this.api, 'getToken', getTokenStub );
 		sinon.stub( this.api, 'post', function() {
 			var req = $.Deferred().resolve( resp );
+			$.extend( req, EventEmitter.prototype );
+			return req;
+		} );
+		sinon.stub( this.api2, 'getToken', getTokenStub );
+		sinon.stub( this.api2, 'post', function() {
+			var req = $.Deferred().resolve( resp2 );
 			$.extend( req, EventEmitter.prototype );
 			return req;
 		} );
 	},
 	tearDown: function () {
 		this.api = false;
+		this.api2 = false;
 	}
 } );
 
@@ -136,6 +146,20 @@ QUnit.test( 'upload with missing filename', 1, function() {
 		badResponse = true;
 	} );
 	strictEqual( badResponse, true, 'The request caused a bad file name error' );
+} );
+
+QUnit.test( 'successful upload', 1, function() {
+	var goodResponse;
+	this.api2.save( {
+		insertInPage: true,
+		file: {
+			name: 'z.jpg'
+		},
+		description: 'hello world'
+	} ).done( function() {
+		goodResponse = true;
+	} );
+	strictEqual( goodResponse, true, 'The request succeeded and ran done callback' );
 } );
 
 }( jQuery, mw.mobileFrontend) );
