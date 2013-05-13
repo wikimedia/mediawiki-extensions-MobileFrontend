@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw9Is5QQ",
+        "filename": "less/modules/mf-photo.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-13T21:07:51Z",
+      "side": 1,
+      "message": "as discussed in person let\u0027s not do this !important is bad - let\u0027s instead either turn of the hover gradient effect or fix the hover gradient http://stackoverflow.com/questions/2504071/is-it-possible-to-combine-a-background-image-and-css3-gradients",
+      "revId": "e10f14c4681bae2a2434e87550742e39f611da1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
