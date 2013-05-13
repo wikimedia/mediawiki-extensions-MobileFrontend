@@ -16,6 +16,24 @@
       "revId": "ef5acc4c6ca29956bc45f16705b604dbbb08c464",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw.Fi-UA",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-13T17:17:58Z",
+      "side": 1,
+      "message": "This adds config variables specific to the mobile Minerva skin for both mobile AND desktop variants of it. There should be no need to override this...",
+      "parentUuid": "Dw64A5wQ",
+      "revId": "ef5acc4c6ca29956bc45f16705b604dbbb08c464",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
