@@ -63,3 +63,96 @@
   text-align: center;
   line-height: 6em;
 }
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+.photo-nag {
+  height: 90%;
+}
+.photo-nag .preview {
+  height: 50%;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.photo-nag .preview.loading {
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto auto;
+  -o-background-size: auto auto;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  background-position: 50% 50%;
+}
+.photo-nag li {
+  clear: both;
+  min-height: 50px;
+  padding: 0 0 1em 73px;
+  line-height: 1.25;
+}
+.photo-nag label div {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 0 -73px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 50px;
+  border: 3px solid #939393;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: #e6e7e8 url(images/confirm.png) 50% 50% no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 24px 24px;
+  -o-background-size: 24px 24px;
+  -webkit-background-size: 24px 24px;
+  background-size: 24px 24px;
+}
+.photo-nag label div input {
+  display: none;
+}
+.photo-nag label div.checked {
+  background-color: #8cc63e;
+  border-color: #d6df23;
+}
+.photo-nag strong {
+  padding: .3em 0;
+  display: block;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1;
+}
+.transforms .alpha .photo-nag label div.active {
+  animation: pulse 1s ease-in-out infinite alternate;
+  -webkit-animation: pulse 1s ease-in-out infinite alternate;
+}
+@media (min-width: 700px) {
+  .photo-nag .preview {
+    /* use -webkit prefix for older android browsers eg. nexus 1 */
+  
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+  }
+}

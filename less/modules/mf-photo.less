@@ -74,3 +74,83 @@
 		}
 	}
 }
+
+@keyframes pulse {
+	from { opacity: 1 }
+	to { opacity: .2 }
+}
+
+@-webkit-keyframes pulse {
+	from { opacity: 1 }
+	to { opacity: .2 }
+}
+
+.photo-nag {
+	@checkboxSize: 50px;
+
+	height: 90%;
+
+	.preview {
+		height: 50%;
+		.background-size( 100%, auto );
+		background-repeat: no-repeat;
+
+		&.loading {
+			.background-size( auto, auto );
+			background-position: 50% 50%;
+		}
+	}
+
+	li {
+		clear: both;
+		min-height: @checkboxSize;
+		padding: 0 0 1em @checkboxSize + @contentMarginLeft;
+		line-height: 1.25;
+	}
+
+	label div {
+		input {
+			display: none;
+		}
+
+		float: left;
+		width: @checkboxSize;
+		height: @checkboxSize;
+		margin: 0 0 0 -(@checkboxSize + @contentMarginLeft);
+		font-size: @checkboxSize * .8;
+		font-weight: bold;
+		line-height: @checkboxSize;
+		border: 3px solid #939393;
+		.border-radius( @checkboxSize );
+		background: #e6e7e8 url(images/confirm.png) 50% 50% no-repeat;
+		.background-size( 24px, 24px );
+
+		&.checked {
+			background-color: #8cc63e;
+			border-color: #d6df23;
+		}
+	}
+
+	strong {
+		padding: .3em 0;
+		display: block;
+		font-weight: normal;
+		font-size: 1.2em;
+		line-height: 1;
+	}
+}
+
+.transforms .photo-nag {
+	label div {
+		&.active {
+			.animation( pulse, 1s );
+		}
+	}
+}
+
+@media (min-width: 700px) {
+	.photo-nag .preview {
+		.background-size( auto, 100% );
+		background-position: 50% 50%;
+	}
+}

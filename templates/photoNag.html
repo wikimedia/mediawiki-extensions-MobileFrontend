@@ -1,0 +1,20 @@
+<div class="header">
+	<button class="cancel">{{closeMsg}}</button>
+</div>
+<div class="photo-nag">
+	<div class="preview loading"></div>
+	<div class="content">
+		<ul>
+			{{#nagMessages}}
+			<li>
+				<label>
+					<div><input type="checkbox"></div>
+					<strong>{{heading}}</strong>
+					{{{text}}}
+				</label>
+				<button class="inline">{{learnMore}}</button>
+			</li>
+			{{/nagMessages}}
+		</ul>
+	</div>
+</div>

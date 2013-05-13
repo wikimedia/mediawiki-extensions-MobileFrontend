@@ -6,23 +6,12 @@
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		nav = M.require( 'navigation' ),
 		Overlay = nav.Overlay,
-		msg = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
-		CopyrightOverlay = Overlay.extend( {
-			defaults: {
-				bulletPoints: [
-					{ text: mw.msg( 'mobile-frontend-photo-ownership-bullet-one' ) },
-					{ text: mw.msg( 'mobile-frontend-photo-ownership-bullet-two' ) },
-					{ text: mw.msg( 'mobile-frontend-photo-ownership-bullet-three' ) }
-				],
-				closeText: mw.msg( 'mobile-frontend-photo-ownership-confirm' ),
-				leadText: msg
-			},
-			template: M.template.get( 'overlays/photoCopyrightDialog' )
-		} ),
+		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
 		popup = M.require( 'notifications' ),
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
-		PhotoApi, PhotoUploaderPreview, LeadPhoto, PhotoUploadProgress, PhotoUploader;
+		PhotoApi, LearnMoreOverlay, NagOverlay, PhotoUploaderPreview, LeadPhoto,
+		PhotoUploadProgress, PhotoUploader;
 
 	function needsPhoto( $container ) {
 		var $content_0 = $container.find( '#content_0' );
@@ -247,6 +236,70 @@
 
 	$.extend( PhotoApi.prototype, EventEmitter.prototype );
 
+	LearnMoreOverlay = Overlay.extend( {
+		defaults: {
+			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
+		},
+		template: M.template.get( 'overlays/learnMore' )
+	} );
+
+	NagOverlay = Overlay.extend( {
+		defaults: {
+			learnMore: mw.msg( 'parentheses', mw.msg( 'mobile-frontend-learn-more' ) )
+		},
+
+		template: M.template.get( 'photoNag' ),
+
+		initialize: function( options ) {
+			var self = this, $checkboxes = this.$( 'input[type=checkbox]' ),
+				learnMoreOverlay;
+
+			this._super( options );
+
+			function disable( $checkbox ) {
+				$checkbox.prop( 'disabled', true );
+				$checkbox.parent().removeClass( 'active' );
+			}
+
+			function enable( $checkbox ) {
+				$checkbox.prop( 'disabled', false );
+				$checkbox.parent().addClass( 'active' );
+			}
+
+			learnMoreOverlay = new LearnMoreOverlay( {
+				parent: self,
+				heading: mw.msg( 'mobile-frontend-photo-nag-learn-more-heading' ),
+				bulletPoints: [
+					mw.msg( 'mobile-frontend-photo-nag-learn-more-1' ),
+					mw.msg( 'mobile-frontend-photo-nag-learn-more-2' ),
+					mw.msg( 'mobile-frontend-photo-nag-learn-more-3' )
+				]
+			} );
+			self.$( 'li button' ).on( 'click', $.proxy( learnMoreOverlay, 'show' ) );
+
+			disable( $checkboxes.not( ':first' ) );
+			enable( $checkboxes.eq( 0 ) );
+
+			$checkboxes.on( 'click', function() {
+				var $checkbox = $( this ), $next;
+				$checkbox.parent().addClass( 'checked' );
+				$next = $checkboxes.filter( ':not([checked])' ).eq( 0 );
+				disable( $checkbox );
+				if ( !$next.length ) {
+					self.emit( 'confirm' );
+				} else {
+					enable( $next );
+				}
+			} );
+		},
+
+		setImageUrl: function( url ) {
+			this.$( '.preview' ).
+				removeClass( 'loading' ).
+				css( 'background-image', 'url(' + url + ')' );
+		}
+	} );
+
 	PhotoUploaderPreview = View.extend( {
 		defaults: {
 			loadingMessage: mw.msg( 'mobile-frontend-image-loading' ),
@@ -255,7 +308,7 @@
 			submitButton: mw.msg( 'mobile-frontend-photo-submit' ),
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
 			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),
-			ownerStatement: mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ) )
+			ownerStatement: ownershipMessage
 		},
 
 		template: M.template.get( 'photoUploadPreview' ),
@@ -304,8 +357,14 @@
 			this.overlay.$( '.loading' ).remove();
 			this.overlay.$( 'a.help' ).on( 'click', function( ev ) {
 				ev.preventDefault(); // avoid setting #
-				var overlay = new CopyrightOverlay( {
-					parent: self.overlay
+				var overlay = new LearnMoreOverlay( {
+					parent: self.overlay,
+					bulletPoints: [
+						mw.msg( 'mobile-frontend-photo-ownership-bullet-one' ),
+						mw.msg( 'mobile-frontend-photo-ownership-bullet-two' ),
+						mw.msg( 'mobile-frontend-photo-ownership-bullet-three' )
+					],
+					leadText: ownershipMessage
 				} );
 				overlay.show();
 				self.log( { action: 'whatDoesThisMean' } );
@@ -448,35 +507,89 @@
 				// accept must be set via attr otherwise cannot use camera on Android
 				attr( 'accept', 'image/*;' ).
 				on( 'change', function() {
-					var preview = self.preview = new PhotoUploaderPreview( { log: self.log } ),
-						fileReader = new FileReader();
+					var nagCount = parseInt( M.settings.getUserSetting( 'uploadNagCount' ) || 0, 10 ),
+						shouldNag = (
+							mw.config.get( 'wgMFMode' ) !== 'stable' &&
+							parseInt( mw.config.get( 'wgUserEditCount' ), 10 ) < 3
+						),
+						fileReader = new FileReader(), nagOverlay;
+
+					self.preview = new PhotoUploaderPreview( { log: self.log } );
 
 					self.file = $input[0].files[0];
 					// clear so that change event is fired again when user selects the same file
 					$input.val( '' );
 
-					self.log( { action: 'preview' } );
-					preview.
-						on( 'cancel', function() {
-							self.log( { action: 'previewCancel' } );
-						} ).
-						on( 'submit', function() {
-							self.log( { action: 'previewSubmit' } );
-							self._submit();
-						} );
-
-					preview.overlay.show();
-					// skip the URL bar if possible
-					window.scrollTo( 0, 1 );
+					// nag if never nagged and shouldNag and then keep nagging (3 times)
+					if ( ( nagCount === 0 && shouldNag ) || ( nagCount > 0 && nagCount < 3 ) ) {
+						// FIXME: possibly set self.preview.parent = nagOverlay when nagOverlay is present
+						// and when PhotoUploaderPreview is rewritten as an overlay
+						nagOverlay = self._showNagOverlay( nagCount );
+					} else {
+						self._showPreview();
+					}
 
 					fileReader.readAsDataURL( self.file );
 					fileReader.onload = function() {
 						var dataUrl = fileReader.result;
 						// add mimetype if not present (some browsers need it, e.g. Android browser)
 						dataUrl = dataUrl.replace( /^data:base64/, 'data:image/jpeg;base64' );
-						preview.setImageUrl( dataUrl );
+
+						if ( nagOverlay ) {
+							nagOverlay.setImageUrl( dataUrl );
+						}
+						self.preview.setImageUrl( dataUrl );
 					};
 				} );
+		},
+
+		_showNagOverlay: function( nagCount ) {
+			var self = this, nagMessages = [], nagOverlay;
+
+			switch ( nagCount ) {
+				case 0:
+					nagMessages = $.map( [1, 2], function( val ) {
+						return {
+							heading: mw.msg( 'mobile-frontend-photo-nag-1-bullet-' + val + '-heading' ),
+							text: mw.msg( 'mobile-frontend-photo-nag-1-bullet-' + val + '-text' )
+						};
+					} );
+					break;
+
+				case 1:
+				case 2:
+					nagMessages = [
+						{ heading: mw.msg( 'mobile-frontend-photo-nag-' + ( nagCount + 1 ) + '-bullet-1-heading' ) }
+					];
+					break;
+			}
+
+			nagOverlay = new NagOverlay( { nagMessages: nagMessages } );
+			nagOverlay.
+				on( 'confirm', $.proxy( self, '_showPreview' ) ).
+				show();
+
+			M.settings.saveUserSetting( 'uploadNagCount', nagCount + 1 );
+
+			return nagOverlay;
+		},
+
+		_showPreview: function() {
+			var self = this;
+
+			self.log( { action: 'preview' } );
+			self.preview.
+				on( 'cancel', function() {
+					self.log( { action: 'previewCancel' } );
+				} ).
+				on( 'submit', function() {
+					self.log( { action: 'previewSubmit' } );
+					self._submit();
+				} );
+
+			self.preview.overlay.show();
+			// skip the URL bar if possible
+			window.scrollTo( 0, 1 );
 		},
 
 		_submit: function() {
