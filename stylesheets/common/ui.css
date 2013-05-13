@@ -12,10 +12,13 @@ input[type=submit] {
 }
 .content .button,
 .buttonBar .button,
+.drawer .button,
 .content button,
 .buttonBar button,
+.drawer button,
 .content input[type=submit],
-.buttonBar input[type=submit] {
+.buttonBar input[type=submit],
+.drawer input[type=submit] {
   padding: .8em 1.2em;
   text-align: center;
   border: 1px #33589f solid;
@@ -30,10 +33,13 @@ input[type=submit] {
 }
 .content .button:hover,
 .buttonBar .button:hover,
+.drawer .button:hover,
 .content button:hover,
 .buttonBar button:hover,
+.drawer button:hover,
 .content input[type=submit]:hover,
-.buttonBar input[type=submit]:hover {
+.buttonBar input[type=submit]:hover,
+.drawer input[type=submit]:hover {
   background-color: #3f77d7;
   background-image: -moz-linear-gradient(top, #4c84da 0, #3f77d7 100%);
   background-image: -ms-linear-gradient(top, #4c84da 0, #3f77d7 100%);
@@ -43,10 +49,13 @@ input[type=submit] {
 }
 .content .button:active,
 .buttonBar .button:active,
+.drawer .button:active,
 .content button:active,
 .buttonBar button:active,
+.drawer button:active,
 .content input[type=submit]:active,
-.buttonBar input[type=submit]:active {
+.buttonBar input[type=submit]:active,
+.drawer input[type=submit]:active {
   background-color: #2a549c;
   background-image: -moz-linear-gradient(top, #2d5ea9 0, #2a549c 100%);
   background-image: -ms-linear-gradient(top, #2d5ea9 0, #2a549c 100%);
@@ -56,36 +65,51 @@ input[type=submit] {
 }
 .content .button:visited,
 .buttonBar .button:visited,
+.drawer .button:visited,
 .content button:visited,
 .buttonBar button:visited,
+.drawer button:visited,
 .content input[type=submit]:visited,
-.buttonBar input[type=submit]:visited {
+.buttonBar input[type=submit]:visited,
+.drawer input[type=submit]:visited {
   color: #fff;
 }
 .content .button:disabled,
 .buttonBar .button:disabled,
+.drawer .button:disabled,
 .content button:disabled,
 .buttonBar button:disabled,
+.drawer button:disabled,
 .content input[type=submit]:disabled,
 .buttonBar input[type=submit]:disabled,
+.drawer input[type=submit]:disabled,
 .content .button:disabled.hover,
 .buttonBar .button:disabled.hover,
+.drawer .button:disabled.hover,
 .content button:disabled.hover,
 .buttonBar button:disabled.hover,
+.drawer button:disabled.hover,
 .content input[type=submit]:disabled.hover,
 .buttonBar input[type=submit]:disabled.hover,
+.drawer input[type=submit]:disabled.hover,
 .content .button.disabled,
 .buttonBar .button.disabled,
+.drawer .button.disabled,
 .content button.disabled,
 .buttonBar button.disabled,
+.drawer button.disabled,
 .content input[type=submit].disabled,
 .buttonBar input[type=submit].disabled,
+.drawer input[type=submit].disabled,
 .content .button.disabled:hover,
 .buttonBar .button.disabled:hover,
+.drawer .button.disabled:hover,
 .content button.disabled:hover,
 .buttonBar button.disabled:hover,
+.drawer button.disabled:hover,
 .content input[type=submit].disabled:hover,
-.buttonBar input[type=submit].disabled:hover {
+.buttonBar input[type=submit].disabled:hover,
+.drawer input[type=submit].disabled:hover {
   color: white;
   text-shadow: none;
   background-color: #7297d7;
@@ -98,27 +122,36 @@ input[type=submit] {
 }
 .content .button.languageSelector,
 .buttonBar .button.languageSelector,
+.drawer .button.languageSelector,
 .content button.languageSelector,
 .buttonBar button.languageSelector,
+.drawer button.languageSelector,
 .content input[type=submit].languageSelector,
-.buttonBar input[type=submit].languageSelector {
+.buttonBar input[type=submit].languageSelector,
+.drawer input[type=submit].languageSelector {
   margin-top: 14pt;
 }
 .content .button.cancel,
 .buttonBar .button.cancel,
+.drawer .button.cancel,
 .content button.cancel,
 .buttonBar button.cancel,
+.drawer button.cancel,
 .content input[type=submit].cancel,
-.buttonBar input[type=submit].cancel {
+.buttonBar input[type=submit].cancel,
+.drawer input[type=submit].cancel {
   background: #999;
   border: 1px #777 solid;
 }
 .content .button.inline,
 .buttonBar .button.inline,
+.drawer .button.inline,
 .content button.inline,
 .buttonBar button.inline,
+.drawer button.inline,
 .content input[type=submit].inline,
-.buttonBar input[type=submit].inline {
+.buttonBar input[type=submit].inline,
+.drawer input[type=submit].inline {
   display: inline;
   padding: 0;
   color: #002bb8;
@@ -128,10 +161,13 @@ input[type=submit] {
 }
 .content .button.inline:hover,
 .buttonBar .button.inline:hover,
+.drawer .button.inline:hover,
 .content button.inline:hover,
 .buttonBar button.inline:hover,
+.drawer button.inline:hover,
 .content input[type=submit].inline:hover,
-.buttonBar input[type=submit].inline:hover {
+.buttonBar input[type=submit].inline:hover,
+.drawer input[type=submit].inline:hover {
   text-decoration: underline;
 }
 .header .button,
