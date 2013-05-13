@@ -10,6 +10,19 @@ class SkinMobileBase extends SkinMinerva {
 	/** @var array of classes that should be present on the body tag */
 	private $pageClassNames = array();
 
+	public function getSkinConfigVariables() {
+		global $wgCookiePath;
+		$ctx = MobileContext::singleton();
+		$wgUseFormatCookie = array(
+			'name' => $ctx->getUseFormatCookieName(),
+			'duration' => -1, // in days
+			'path' => $wgCookiePath,
+			'domain' => $this->getRequest()->getHeader( 'Host' ),
+		);
+		$vars = parent::getSkinConfigVariables();
+		$vars['wgUseFormatCookie'] = $wgUseFormatCookie;
+		return $vars;
+	}
 	/**
 	 * This will be called by OutputPage::headElement when it is creating the
 	 * "<body>" tag, - adds output property bodyClassName to the existing classes

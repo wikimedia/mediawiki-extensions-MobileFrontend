@@ -58,6 +58,8 @@ class MobileFrontendHooks {
 
 	/**
 	 * MakeGlobalVariablesScript hook handler
+	 * Adds global variables to Minerva skin in both desktop and mobile mode that
+	 * vary depending on what page you are on
 	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
 	 * Adds various mobile specific config variables
 	 *
@@ -66,47 +68,18 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
-		global $wgMFPhotoUploadEndpoint, $wgCookiePath,
-			$wgMFPhotoUploadAppendToDesc, $wgMFLoginHandshakeUrl;
+		$skin = $out->getSkin()->getSkinName();
+		if ( $skin === 'minerva' ) {
+			$title = $out->getTitle();
+			$user = $out->getUser();
+			if ( !$user->isAnon() ) {
+				$vars[ 'wgWatchedPageCache' ] = array(
+					$title->getText() => $user->isWatched( $title ),
+				);
+			}
 
-		$context = MobileContext::singleton();
-		$title = $out->getTitle();
-		$user = $out->getUser();
-		if ( !$user->isAnon() ) {
-			$vars[ 'wgWatchedPageCache' ] = array(
-				$title->getText() => $user->isWatched( $title ),
-			);
-		}
-		$vars[ 'wgMFPhotoUploadEndpoint' ] = $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '';
-		// cookie specific
-		$vars[ 'wgUseFormatCookie' ] = array(
-			'name' => $context->getUseFormatCookieName(),
-			'duration' => -1, // in days
-			'path' => $wgCookiePath,
-			'domain' => $_SERVER['HTTP_HOST'],
-		);
-		$vars[ 'wgStopMobileRedirectCookie' ] = array(
-			'name' => 'stopMobileRedirect',
-			'duration' => $context->getUseFormatCookieDuration() / ( 24 * 60 * 60 ), // in days
-			'domain' => $context->getStopMobileRedirectCookieDomain(),
-			'path' => $wgCookiePath,
-		);
-		$vars[ 'wgMFPhotoUploadAppendToDesc' ] = $wgMFPhotoUploadAppendToDesc;
-		$vars[ 'wgImagesDisabled' ] = $context->imagesDisabled();
-
-		if ( $context->isAlphaGroupMember() ) {
-			$env = 'alpha';
-		} else if ( $context->isBetaGroupMember() ) {
-			$env = 'beta';
-		} else {
-			$env = 'stable';
-		}
-		$vars[ 'wgMFMode' ] = $env;
-		$vars[ 'wgIsPageEditable' ] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
-		$vars[ 'wgPreferredVariant' ] = $title->getPageLanguage()->getPreferredVariant();
-
-		if ( $wgMFLoginHandshakeUrl ) {
-			$vars[ 'wgMFLoginHandshakeUrl' ] = $wgMFLoginHandshakeUrl;
+			$vars[ 'wgIsPageEditable' ] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
+			$vars[ 'wgPreferredVariant' ] = $title->getPageLanguage()->getPreferredVariant();
 		}
 
 		return true;
@@ -320,18 +293,36 @@ class MobileFrontendHooks {
 
 	/**
 	 * ResourceLoaderGetConfigVars hook handler
+	 * This should be used for variables which vary with the html
+	 * and for variables this should work cross skin
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
 	 *
 	 * @param array $vars
 	 * @return boolean
 	 */
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
-		global $wgCookiePath, $wgMFEnablePhotoUploadCTA, $wgMFNearbyEndpoint, $wgMFAnonymousEditing;
-		$vars['wgCookiePath'] = $wgCookiePath;
-		$vars['wgMFStopRedirectCookieHost'] = MobileContext::singleton()->getStopMobileRedirectCookieDomain();
-		$vars['wgMFEnablePhotoUploadCTA'] = $wgMFEnablePhotoUploadCTA;
+		global $wgCookiePath, $wgMFNearbyEndpoint;
+		$ctx = MobileContext::singleton();
+		$wgStopMobileRedirectCookie = array(
+			'name' => 'stopMobileRedirect',
+			'duration' => $ctx->getUseFormatCookieDuration() / ( 24 * 60 * 60 ), // in days
+			'domain' => $ctx->getStopMobileRedirectCookieDomain(),
+			'path' => $wgCookiePath,
+		);
+		$vars['wgStopMobileRedirectCookie'] = $wgStopMobileRedirectCookie;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
-		$vars['wgMFAnonymousEditing'] = $wgMFAnonymousEditing;
+		// mobile specific config variables
+		if ( $ctx->shouldDisplayMobileView() ) {
+			$vars[ 'wgImagesDisabled' ] = $ctx->imagesDisabled();
+			if ( $ctx->isAlphaGroupMember() ) {
+				$env = 'alpha';
+			} else if ( $ctx->isBetaGroupMember() ) {
+				$env = 'beta';
+			} else {
+				$env = 'stable';
+			}
+			$vars[ 'wgMFMode' ] = $env;
+		}
 		return true;
 	}
 
@@ -394,15 +385,18 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		global $wgMFForceSecureLogin;
+		global $wgMFForceSecureLogin, $wgMFLoginHandshakeUrl;
 		$mobileContext = MobileContext::singleton();
 		if ( $special->getName() != 'Userlogin' || !$mobileContext->shouldDisplayMobileView() ) {
 			// no further processing necessary
 			return true;
-		} else {
-			$out = $special->getContext()->getOutput();
-			$out->addModules( 'mobile.userlogin.scripts' );
-			$out->addModuleStyles( 'mobile.userlogin.styles' );
+		}
+
+		$out = $special->getContext()->getOutput();
+		$out->addModules( 'mobile.userlogin.scripts' );
+		$out->addModuleStyles( 'mobile.userlogin.styles' );
+		if ( $wgMFLoginHandshakeUrl ) {
+			$out->addJsConfigVars( 'wgMFLoginHandshakeUrl', $wgMFLoginHandshakeUrl );
 		}
 
 		// make sure we're on https if we're supposed to be and currently aren't.

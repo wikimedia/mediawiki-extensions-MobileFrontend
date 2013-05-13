@@ -29,10 +29,17 @@ class SkinMinerva extends SkinTemplate {
 	 * @return Array
 	 */
 	public function getSkinConfigVariables() {
-		global $wgMFLeadPhotoUploadCssSelector, $wgMFEnableCssAnimations;
+		global $wgMFLeadPhotoUploadCssSelector, $wgMFEnableCssAnimations,
+			$wgMFAnonymousEditing, $wgMFEnablePhotoUploadCTA,
+			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc;
+
 		return array(
+			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
+			'wgMFEnablePhotoUploadCTA' => $wgMFEnablePhotoUploadCTA,
+			'wgMFPhotoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
 			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
 			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,
+			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 		);
 	}
 

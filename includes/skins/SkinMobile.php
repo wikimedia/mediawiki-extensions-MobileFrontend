@@ -1,8 +1,6 @@
 <?php
 
 class SkinMobile extends SkinMobileBase {
-	public $skinname = 'mobile';
-	public $stylename = 'mobile';
 	public $template = 'SkinMobileTemplate';
 
 	protected function prepareTemplate() {

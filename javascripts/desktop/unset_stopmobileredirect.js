@@ -1,9 +1,9 @@
 // hijack the link on desktop site to mobile view and unset stopMobileRedirect cookie
 ( function( $ ) {
-	$( '.stopMobileRedirectToggle' ).click( function() {
-		var hostname = mw.config.get( 'wgMFStopRedirectCookieHost' ),
-			path = mw.config.get( 'wgCookiePath' );
-
-		$.cookie( 'stopMobileRedirect', null, { path: path, domain: hostname } );
-	});
+	var cookie = mw.config.get( 'wgStopMobileRedirectCookie' );
+	if ( cookie ) {
+		$( '.stopMobileRedirectToggle' ).click( function() {
+			$.cookie( cookie.name, null, { path: cookie.path, domain: cookie.domain } );
+		} );
+	}
 } )( jQuery );
