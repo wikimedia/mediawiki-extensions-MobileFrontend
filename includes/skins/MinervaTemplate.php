@@ -20,19 +20,7 @@ class MinervaTemplate extends BaseTemplate {
 
 	// FIXME: Design means that currently this menu can only cope with one item
 	public function getUserActionTools() {
-		$menu = array();
-		if ( isset( $this->data['content_navigation']['actions'] ) ) {
-			$actions = $this->data['content_navigation']['actions'];
-
-			if ( isset( $actions['unwatch'] ) ) {
-				$menu['unwatch'] = $actions['unwatch'];
-				$menu['unwatch']['class'] = 'watch-this-article';
-			} else if ( isset( $actions['watch'] ) ) {
-				$menu['watch'] = $actions['watch'];
-				$menu['watch']['class'] = 'watch-this-article';
-			}
-		}
-		return $menu;
+		return array();
 	}
 
 	private function renderLanguages( $languageTemplateData ) {
