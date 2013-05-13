@@ -547,6 +547,9 @@
 			switch ( nagCount ) {
 				case 0:
 					nagMessages = $.map( [1, 2], function( val ) {
+						// Give grep a chance to find the usages:
+						// mobile-frontend-photo-nag-1-bullet-1-heading, mobile-frontend-photo-nag-1-bullet-2-heading,
+						// mobile-frontend-photo-nag-1-bullet-1-text, mobile-frontend-photo-nag-1-bullet-2-text
 						return {
 							heading: mw.msg( 'mobile-frontend-photo-nag-1-bullet-' + val + '-heading' ),
 							text: mw.msg( 'mobile-frontend-photo-nag-1-bullet-' + val + '-text' )
@@ -556,6 +559,8 @@
 
 				case 1:
 				case 2:
+					// Give grep a chance to find the usages:
+					// mobile-frontend-photo-nag-2-bullet-1-heading, mobile-frontend-photo-nag-3-bullet-1-heading
 					nagMessages = [
 						{ heading: mw.msg( 'mobile-frontend-photo-nag-' + ( nagCount + 1 ) + '-bullet-1-heading' ) }
 					];
