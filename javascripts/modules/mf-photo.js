@@ -196,9 +196,7 @@
 								mw.msg( 'mobile-frontend-photo-upload-error-filename' ) );
 						}
 					}
-					if ( !options.fileName && data.upload.filename ) {
-						options.fileName = data.upload.filename;
-					} else {
+					if ( !options.fileName ) {
 						return result.reject( 'Missing filename' );
 					}
 					// FIXME: API doesn't return this information on duplicate images...
