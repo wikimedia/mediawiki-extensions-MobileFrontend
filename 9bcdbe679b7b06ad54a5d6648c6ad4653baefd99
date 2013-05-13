@@ -16,6 +16,40 @@
       "revId": "9bcdbe679b7b06ad54a5d6648c6ad4653baefd99",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw-zDwAc",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-13T19:22:17Z",
+      "side": 1,
+      "message": "this is not a MW config variable, therefore it should NOT be prefixed with \u0027wg\u0027",
+      "revId": "9bcdbe679b7b06ad54a5d6648c6ad4653baefd99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwxzTBNY",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-13T19:22:17Z",
+      "side": 1,
+      "message": "please stop prefixing variables with \u0027wg\u0027 if they are not MW config variables! this is very misleading.",
+      "revId": "9bcdbe679b7b06ad54a5d6648c6ad4653baefd99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
