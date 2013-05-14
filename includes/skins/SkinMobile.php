@@ -304,6 +304,7 @@ HTML;
 		$out = $this->getOutput();
 		$title = $this->getTitle();
 
+		$out->addModules( 'mobile.site' );
 		$out->addModules( 'mobile.stable' );
 		$mode = 'stable';
 		if ( $inBeta ) {

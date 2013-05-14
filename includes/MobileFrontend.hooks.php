@@ -29,7 +29,6 @@ class MobileFrontendHooks {
 				)
 			);
 		}
-		$wgResourceModules['mobile.stable']['dependencies'][] = 'mobile.site';
 		return true;
 	}
 
