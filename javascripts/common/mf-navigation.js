@@ -12,7 +12,7 @@ var m = ( function( $ ) {
 		defaults: {
 			cancelMessage: M.message( 'mobile-frontend-drawer-cancel' )
 		},
-		className: 'drawer position-fixed-element',
+		className: 'drawer position-fixed',
 
 		initialize: function() {
 			var self = this;
