@@ -447,6 +447,9 @@ $wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate +
 		'javascripts/common/mf-notification.js',
 	),
 	'messages' => array(
+		// mf-notification.js
+		'mobile-frontend-logged-in-toast-notification',
+
 		// mf-navigation.js
 		'mobile-frontend-watchlist-cta-button-signup',
 		'mobile-frontend-watchlist-cta-button-login',
@@ -485,9 +488,6 @@ $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 		'mobile-frontend-last-modified-days',
 		'mobile-frontend-last-modified-months',
 		'mobile-frontend-last-modified-years',
-
-		// mf-notification.js
-		'mobile-frontend-logged-in-toast-notification',
 
 		// mf-watchstar.js
 		'mobile-frontend-watchlist-add',
