@@ -258,9 +258,13 @@ class ApiQueryExtracts extends ApiQueryBase {
 		$sentence = ".+?$end+";
 		$regexp = "/^($sentence){{$requestedSentenceCount}}/u";
 		$matches = array();
-		if( preg_match( $regexp, $text, $matches ) ) {
+		$res = preg_match( $regexp, $text, $matches );
+		if( $res ) {
 			$text = $matches[0];
 		} else {
+			if ( $res === false ) {
+				wfDebugLog( 'mobile', "Invalid regular expression: $regexp" );
+			}
 			// Just return the first line
 			$lines = explode( "\n", $text );
 			$text = trim( $lines[0] );
