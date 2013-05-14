@@ -83,15 +83,14 @@ input[type=submit] {
 .content input[type=submit]:disabled,
 .buttonBar input[type=submit]:disabled,
 .drawer input[type=submit]:disabled {
-  color: white;
-  text-shadow: none;
-  background-color: #7297d7;
-  background-image: -moz-linear-gradient(top, #7297d7 0, #7297d7 100%);
-  background-image: -ms-linear-gradient(top, #7297d7 0, #7297d7 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7297d7), color-stop(100%, #7297d7));
-  background-image: -webkit-linear-gradient(top, #7297d7 0, #7297d7 100%);
-  background-image: linear-gradient(#7297d7 0, #7297d7 100%);
-  border-color: #5e89d1;
+  color: #bed1f1;
+  background-color: #7798d2;
+  background-image: -moz-linear-gradient(top, #7798d2 0, #7798d2 100%);
+  background-image: -ms-linear-gradient(top, #7798d2 0, #7798d2 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7798d2), color-stop(100%, #7798d2));
+  background-image: -webkit-linear-gradient(top, #7798d2 0, #7798d2 100%);
+  background-image: linear-gradient(#7798d2 0, #7798d2 100%);
+  border-color: #648acc;
 }
 .content .button.languageSelector,
 .buttonBar .button.languageSelector,
@@ -113,8 +112,8 @@ input[type=submit] {
 .content input[type=submit].cancel,
 .buttonBar input[type=submit].cancel,
 .drawer input[type=submit].cancel {
-  background: #999;
-  border: 1px #777 solid;
+  background: #777;
+  border: 1px #666 solid;
 }
 .content .button.inline,
 .buttonBar .button.inline,
