@@ -25,6 +25,10 @@
 
 	function isSupported() {
 		// FIXME: create a module for browser detection stuff
+		// deal with known false positives which don't support file input (bug 47374)
+		if ( navigator.userAgent.match( /Windows Phone (OS 7|8.0)/ ) ) {
+			return false;
+		}
 		var browserSupported = (
 			typeof FileReader !== 'undefined' &&
 			typeof FormData !== 'undefined' &&
