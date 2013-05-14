@@ -43,6 +43,7 @@ class ExtMobileFrontend extends ContextSource {
 	 * @var WmlContext
 	 */
 	private $wmlContext;
+	private $hookOptions;
 
 	private $forceMobileView = false;
 	private $contentTransformations = true;
@@ -240,6 +241,12 @@ class ExtMobileFrontend extends ContextSource {
 			$this->getRequest()->escapeAppendQuery( 'mobileaction=toggle_view_desktop' ) )
 		);
 
+		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['toggle_view_desktop'] ) ) {
+			$hookQuery = $this->hookOptions['toggle_view_desktop'];
+			self::$viewNormalSiteURL = $this->getRequest()->escapeAppendQuery( $hookQuery ) .
+				urlencode( str_replace( '&amp;', '&', self::$viewNormalSiteURL ) );
+		}
+
 		self::$mobileRedirectFormAction = ( $wgMobileRedirectFormAction !== false )
 				? $wgMobileRedirectFormAction
 				: "{$wgServer}/w/mobileRedirect.php";
@@ -286,7 +293,11 @@ class ExtMobileFrontend extends ContextSource {
 	public function beforePageDisplayHTML( $out ) {
 		wfProfileIn( __METHOD__ );
 
-		if ( wfRunHooks( 'BeforePageDisplayMobile', array( &$out ) ) ) {
+		$options = null;
+		if ( wfRunHooks( 'BeforePageDisplayMobile', array( &$out, &$options ) ) ) {
+			if ( is_array( $options ) ) {
+				$this->hookOptions = $options;
+			}
 		}
 
 		$request = $this->getRequest();
@@ -945,6 +956,7 @@ class ExtMobileFrontend extends ContextSource {
 		}
 		$cssLinks = $out->buildCssLinks();
 		$applicationTemplate = new ApplicationTemplate();
+
 		$options = array(
 						'dir' => $wgContLang->getDir(),
 						'code' => $wgContLang->getCode(),
@@ -968,6 +980,7 @@ class ExtMobileFrontend extends ContextSource {
 						'useFormatCookieDuration' => -1,
 						'useFormatCookiePath' => $wgCookiePath,
 						'useFormatCookieDomain' => $_SERVER['HTTP_HOST'],
+						'hookOptions' => $this->hookOptions,
 						);
 		$applicationTemplate->setByArray( $options );
 		wfProfileOut( __METHOD__ );
@@ -1546,7 +1559,7 @@ class ExtMobileFrontend extends ContextSource {
 	public function resourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
 		$detector = new DeviceDetection();
 		foreach ( $detector->getCssFiles() as $file ) {
-			$resourceLoader->register("ext.mobileFrontend.$file",
+			$resourceLoader->register( "ext.mobileFrontend.$file",
 				array(
 					'styles' => array( "stylesheets/{$file}.css" ),
 					'localBasePath' => dirname( __FILE__ ),

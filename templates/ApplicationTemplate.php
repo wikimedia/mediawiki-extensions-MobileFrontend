@@ -39,6 +39,8 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 
 		$robots = isset( $this->data['robots'] ) ? "\n			{$this->data['robots']}" : '';
 
+		$hookOptions = isset( $this->data['hookOptions']['toggle_view_desktop'] ) ? 'toggle_view_desktop' : '';
+
 		$jsconfig = array(
 			'messages' => array(
 				'expand-section' => wfMsg( 'mobile-frontend-show-button' ),
@@ -54,6 +56,7 @@ class ApplicationTemplate extends MobileFrontendTemplate {
 				'stopMobileRedirectCookieName' => ( $this->data['stopMobileRedirectCookieName'] ),
 				'stopMobileRedirectCookieDuration' => ( $this->data['stopMobileRedirectCookieDuration'] ),
 				'stopMobileRedirectCookieDomain' => ( $this->data['stopMobileRedirectCookieDomain'] ),
+				'hookOptions' => ( $hookOptions ),
 			),
 		);
 		if ( $this->data['title']->isMainPage() ) {
