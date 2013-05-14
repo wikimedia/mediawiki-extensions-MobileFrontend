@@ -39,6 +39,6 @@ button.refresh {
   }
 }
 .animations .refreshing {
-  -webkit-animation: infinite-spin 0.5s linear infinite alternate;
-  animation: infinite-spin 0.5s linear infinite alternate;
+  -webkit-animation: infinite-spin 0.5s linear infinite normal;
+  animation: infinite-spin 0.5s linear infinite normal;
 }
