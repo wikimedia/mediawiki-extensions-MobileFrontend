@@ -9,6 +9,7 @@ input[type=submit] {
   white-space: nowrap;
   line-height: 1;
   cursor: pointer;
+  margin: 0;
 }
 .content .button,
 .buttonBar .button,
@@ -157,11 +158,6 @@ input[type=submit] {
   color: #58595b;
   border: 1px solid #9ea0a3;
 }
-.header .button.cancel,
-.header button.cancel,
-.header input[type=submit].cancel {
-  margin: 0;
-}
 .header .button-bar {
   text-align: center;
 }
@@ -174,6 +170,15 @@ input[type=submit] {
   -moz-border-radius: 0;
   border-radius: 0;
   border-right: none;
+}
+.header .button-bar li:active .button,
+.header .button-bar li:active button {
+  background-color: #e9e9ea;
+  background-image: -moz-linear-gradient(top, #c8cacb 0, #e9e9ea 100%);
+  background-image: -ms-linear-gradient(top, #c8cacb 0, #e9e9ea 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c8cacb), color-stop(100%, #e9e9ea));
+  background-image: -webkit-linear-gradient(top, #c8cacb 0, #e9e9ea 100%);
+  background-image: linear-gradient(#c8cacb 0, #e9e9ea 100%);
 }
 .header .button-bar li.active .button,
 .header .button-bar li.active button {

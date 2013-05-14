@@ -9,6 +9,7 @@ input[type=submit] {
 	white-space: nowrap;
 	line-height: 1;
 	cursor: pointer;
+	margin: 0;
 }
 
 .content, .buttonBar, .drawer {
@@ -74,10 +75,6 @@ input[type=submit] {
 		.vertical-gradient(#fff, #e9e9ea, 45%, 100%);
 		color: #58595b;
 		border: @headerElementBorderHeight solid #9ea0a3;
-
-		&.cancel {
-			margin: 0;
-		}
 	}
 
 	.button-bar {
@@ -89,6 +86,12 @@ input[type=submit] {
 			.button, button {
 				.border-radius( 0 );
 				border-right: none;
+			}
+
+			&:active {
+				.button, button {
+					.vertical-gradient(#c8cacb, #e9e9ea);
+				}
 			}
 
 			&.active {
