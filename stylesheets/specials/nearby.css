@@ -8,3 +8,37 @@ ul.a-to-z li .proximity {
   font-size: .8em;
   text-transform: none;
 }
+button.refresh {
+  background: rgba(0, 0, 0, 0) url(images/refresh.png) no-repeat center center;
+  margin: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 24px;
+  height: 46px;
+  background-size: 24px 25px;
+  border: none;
+}
+@-webkit-keyframes infinite-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes infinite-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.animations .refreshing {
+  -webkit-animation: infinite-spin 0.5s linear infinite alternate;
+  animation: infinite-spin 0.5s linear infinite alternate;
+}

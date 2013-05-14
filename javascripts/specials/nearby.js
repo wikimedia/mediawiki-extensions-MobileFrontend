@@ -1,15 +1,14 @@
 ( function( M, $ ) {
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
-	PRECISION = 2,
 	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
 
 ( function() {
 	var supported = M.supportsGeoLocation(),
 		watchstar = M.require( 'watchstar' ),
 		popup = M.require( 'notifications' ),
+		nav = M.require( 'navigation' ),
 		View = M.require( 'view' ),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
-		cachedPages,
 		curLocation,
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
@@ -29,6 +28,7 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 				}
 			}
 		} ),
+		pendingQuery = false, btn, menu,
 		overlay = new Nearby( {
 			el: $( '#mw-mf-nearby' )
 		} );
@@ -140,20 +140,9 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 		} ).done( function( data ) {
 			var pages = $.map( data.query.pages, function( i ) {
 				return i;
-			} ), $popup;
+			} );
 			if ( pages.length > 0 ) {
-				if ( !cachedPages ) {
-					render( $content, pages );
-				} else {
-					$popup = popup.show(
-						mw.message( 'mobile-frontend-nearby-refresh' ).plain(), 'toast locked' );
-					$popup.click( function() {
-						render( $content, pages );
-						popup.close( true );
-					} );
-				}
-
-				cachedPages = pages;
+				render( $content, pages );
 			} else {
 				$content.empty();
 				$( '<div class="empty content">' ).
@@ -165,27 +154,39 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 		} );
 	}
 
+	function completeRefresh() {
+		$( 'button.refresh' ).removeClass( 'refreshing' );
+		pendingQuery = false;
+	}
+
 	function init() {
 		var $content = $( '#mw-mf-nearby' ).empty();
 		$( '<div class="content loading"> ').text(
 			mw.message( 'mobile-frontend-nearby-loading' ) ).appendTo( $content );
-		navigator.geolocation.watchPosition( function( geo ) {
+		navigator.geolocation.getCurrentPosition( function( geo ) {
 			var lat = geo.coords.latitude, lng = geo.coords.longitude;
-			if ( curLocation && lat.toFixed( PRECISION ) === curLocation.latitude.toFixed( PRECISION ) &&
-				lng.toFixed( PRECISION ) === curLocation.longitude.toFixed( PRECISION ) ) { // bug 47898
-				return;
-			} else {
-				curLocation = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
-				cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
-				findResults( lat, lng );
-			}
+			curLocation = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
+			cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
+			findResults( lat, lng );
+			completeRefresh();
 		},
 		function() {
 			popup.show( mw.message( 'mobile-frontend-nearby-lookup-error' ).plain(), 'toast' );
+			completeRefresh();
 		},
 		{
 			enableHighAccuracy: true
 		} );
+	}
+
+	function refresh() {
+		if ( pendingQuery ) {
+			return;
+		} else {
+			$( 'button.refresh' ).addClass( 'refreshing' );
+			pendingQuery = true;
+			init();
+		}
 	}
 
 	if ( supported ) {
@@ -200,6 +201,10 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 			render( $( '#content' ), $.parseJSON( lastSearchResult ) );
 		}
 	}
+
+	menu = $( '<li>' ).appendTo( nav.getPageMenu() );
+	btn = $( '<button class="refresh">refresh</button></li>' ).on( 'click', refresh ).appendTo( menu );
+
 	M.define( 'nearby', {
 		distanceMessage: distanceMessage,
 		endpoint: endpoint,
