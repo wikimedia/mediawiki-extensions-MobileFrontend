@@ -10,11 +10,12 @@
   background-color: #f3f3f3;
   box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
   word-wrap: break-word;
-  z-index: 3;
+  z-index: -1;
   display: none;
 }
 #mf-notification.visible,
 .drawer.visible {
+  z-index: 3;
   display: block;
 }
 .animations #mf-notification,

@@ -12,10 +12,11 @@
 	background-color: @searchBoxColorTo;
 	.boxshadow( 0, -1px, 8px, 0, rgba(0, 0, 0, 0.35) );
 	word-wrap: break-word;
-	z-index: 3;
+	z-index: -1;
 	display: none;
 
 	&.visible {
+		z-index: 3;
 		display: block
 	}
 }
