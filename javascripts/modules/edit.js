@@ -10,7 +10,7 @@
 			this.pageId = options.pageId;
 		},
 
-		getSection: function( id ) {
+		getSection: function( section ) {
 			var self = this, result = $.Deferred();
 
 			self.get( {
@@ -18,17 +18,20 @@
 				prop: 'revisions',
 				rvprop: [ 'content', 'timestamp' ],
 				pageids: self.pageId,
-				rvsection: id
+				rvsection: section
 			} ).done( function( resp ) {
-				// FIXME: MediaWiki API, seriously?
-				result.resolve( resp.query.pages[ self.pageId ].revisions[0]['*'] );
+				result.resolve( {
+					section: section,
+					// FIXME: MediaWiki API, seriously?
+					content: resp.query.pages[ self.pageId ].revisions[0]['*']
+				} );
 				console.log( resp ); //XXX
 			} );
 
 			return result;
 		},
 
-		setSection: function( id, data ) {
+		setSection: function( section, data ) {
 			console.log(data);
 		},
 
@@ -45,28 +48,37 @@
 			this._super( options );
 
 			this.api = new EditApi( { pageId: options.pageId } );
+			this.sectionCount = options.sectionCount;
+			this.$loading = this.$( '.loading' );
 			this.$content = this.$( 'textarea' );
-
-			this.$( '.prev-section' ).on( 'click', function() {
-				self._loadSection( self.section - 1 );
-			} );
-			this.$( '.next-section' ).on( 'click', function() {
-				self._loadSection( self.section + 1 );
-			} );
+			this.$prev = this.$( '.prev-section' );
+			this.$next = this.$( '.next-section' );
 
 			this._loadSection( options.section );
+			this.$prev.on( 'click', function() {
+				self._loadSection( self.section - 1 );
+			} );
+			this.$next.on( 'click', function() {
+				self._loadSection( self.section + 1 );
+			} );
 		},
 
 		_loadSection: function( section ) {
 			var self = this;
 
-			self.section = section;
-			// TODO: disable/enable Prev/Next
-			// TODO: show loader
+			this.$content.hide();
+			this.$loading.show();
 
-			self.api.getSection( section ).done( function( content ) {
-				self.$content.val( content );
-				// TODO: hide loader
+			this.$prev.prop( 'disabled', section === 0 );
+			this.$next.prop( 'disabled', section === this.sectionCount - 1 );
+			this.section = section;
+
+			this.api.getSection( section ).done( function( data ) {
+				// prevent delayed response overriding content on multiple prev/next clicks
+				if ( data.section === section ) {
+					self.$content.show().val( data.content );
+					self.$loading.hide();
+				}
 			} );
 		}
 	} );
@@ -82,7 +94,10 @@
 				on( 'click', function() {
 					new EditOverlay( {
 						pageId: mw.config.get( 'wgArticleId' ),
-						section: 0
+						section: 0,
+						// FIXME: possibly we should have a global Page instance with
+						// a method for fetching this
+						sectionCount: $( '.section' ).length + 1
 					} ).show();
 				} );
 		}
