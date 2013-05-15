@@ -71,7 +71,7 @@ form.user-login div.wpCaptcha img.wpCaptcha {
 form.user-login div.wpCaptcha,
 form.user-login #wpLoginAttempt,
 form.user-login #wpCreateaccount {
-  margin: 12px 0;
+  margin: 12px 0 0;
 }
 form.user-login .mw-mf-create-account {
   padding-top: 12px;
