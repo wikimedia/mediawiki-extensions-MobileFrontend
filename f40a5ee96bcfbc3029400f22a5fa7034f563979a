@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxETS4gA",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-15T23:54:10Z",
+      "side": 1,
+      "message": "this is a really scary global variable name and this seems dangerous (since it\u0027s intended to be MobileFrontend-specific, but easily could collide elsewhere). i know you didn\u0027t introduce it here (apparently, i introduced to MobileFrontend a long time ago) but just wanted to flag it here as an issue. i\u0027m going to update that var name in a future patchset.",
+      "revId": "f40a5ee96bcfbc3029400f22a5fa7034f563979a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
