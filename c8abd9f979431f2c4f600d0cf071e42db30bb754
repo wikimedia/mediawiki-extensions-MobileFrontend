@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "Dw30LIH8",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 44
+      },
+      "writtenOn": "2013-05-15T18:41:30Z",
+      "side": 1,
+      "message": "If its such an object, then it is missing a type hint here\n\nObvious to you or not, it seems like this convention of using $mf is not helping clarity",
+      "parentUuid": "Dw92.rPo",
+      "revId": "c8abd9f979431f2c4f600d0cf071e42db30bb754",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dw7qKzr4",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 1
@@ -119,6 +137,24 @@
       "side": 1,
       "message": "This is a model widely used throughout MobileFrontend; MobileContext was written specifically for this purpose and is safe to be used this way. While perhaps not the most widely accepted model in the PHP world, this has been an approach that\u0027s worked very well for us given the constraints of basically making a mobile-friendly site from within an extension (since there\u0027s none of this functionality built into core). If you look through the MobileContext code, you\u0027ll see that it basically only gets instantiated once (and at this point in the code path, it\u0027s already been instantiated), so there\u0027s not really much overhead here. So, in essence you\u0027re right, but in this particular case, it\u0027s not a problem - in fact, it\u0027s (imo) very well engineered given the constraints.",
       "parentUuid": "Dw7qKzr4",
+      "revId": "c8abd9f979431f2c4f600d0cf071e42db30bb754",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw71uSC4",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 44
+      },
+      "writtenOn": "2013-05-15T18:41:30Z",
+      "side": 1,
+      "message": "If you say so... I don\u0027t know the constraints after all. However not convinced you are not simply throwing the towel into the ring and giving up on writing proper code because design issues in core are making this difficult.",
+      "parentUuid": "Dw5oMKkQ",
       "revId": "c8abd9f979431f2c4f600d0cf071e42db30bb754",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
