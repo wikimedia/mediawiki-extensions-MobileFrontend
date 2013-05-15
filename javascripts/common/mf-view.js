@@ -78,6 +78,7 @@
 	 */
 	View.prototype.preRender = function() {};
 
+	// FIXME: rename to postRender
 	/**
 	 * Function called after the view is constructed. Can be redefined in
 	 * objects that extend View.

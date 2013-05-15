@@ -14,10 +14,19 @@
 		}
 	} );
 
-	function Api() {
+	function Api( options ) {
 		this.requests = [];
 		this.tokenCache = {};
+		this.initialize( options );
 	}
+
+	// FIXME: make Api and View inherit from an abstract Class object
+	/**
+	 * Constructor that can be overriden.
+	 *
+	 * @param {Object} options Object passed to the constructor.
+	 */
+	Api.prototype.initialize = function() {};
 
 	/**
 	 * A wrapper for $.ajax() to be used when calling server APIs.
