@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw9rrUtw",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-15T16:11:34Z",
+      "side": 1,
+      "message": "Nested function, really?:)",
+      "revId": "f1fe5fe981852b243730f1099ab486d9d8759d12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwxqQGkk",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-15T16:11:34Z",
+      "side": 1,
+      "message": "There should be a way better than regexes - we can change the message, for example.",
+      "revId": "f1fe5fe981852b243730f1099ab486d9d8759d12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw1qKoho",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-15T16:11:34Z",
+      "side": 1,
+      "message": "Is there a need to provide this as a parameter?",
+      "revId": "f1fe5fe981852b243730f1099ab486d9d8759d12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
