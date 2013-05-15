@@ -301,17 +301,26 @@ $wgResourceModules['mobile.beta.plumbing'] = array(
 	'class' => 'MFResourceLoaderModule',
 );
 
+$wgResourceModules['mobile.beta.common'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.beta.plumbing',
+		'mobile.stable.common',
+	),
+	'scripts' => array(
+		'javascripts/common/history-beta.js',
+		'javascripts/views/page.js',
+		'javascripts/common/application-beta.js',
+	),
+);
+
 $wgResourceModules['mobile.beta'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.stable',
-		'mobile.beta.plumbing',
+		'mobile.beta.common',
 	),
 	'scripts' => array(
 		'javascripts/modules/mf-languages.js',
-		'javascripts/common/history-beta.js',
-		'javascripts/views/page.js',
 		'javascripts/modules/mf-toggle-dynamic.js',
-		'javascripts/common/application-beta.js',
 	),
 	'position' => 'bottom',
 	'messages' => array(
@@ -411,7 +420,7 @@ $wgResourceModules['mobile.alpha'] = $wgMFMobileResourceBoilerplate + array(
 	),
 );
 
-$wgResourceModules['mobile.notifications'] = $wgMFMobileResourceBoilerplate + array(
+$wgResourceModules['mobile.notifications.styles'] = $wgMFMobileResourceBoilerplate + array(
 	'styles' => array(
 		'stylesheets/common/notifications.css',
 	),
@@ -431,11 +440,12 @@ $wgResourceModules['mobile.stable.styles'] = $wgMFMobileResourceBoilerplate + ar
 );
 
 // Important: This module is loaded on both mobile and desktop skin
-$wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate + array(
+$wgResourceModules['mobile.stable.common'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.startup',
 		'mobile.stable.dependencies',
-		'mobile.notifications',
+		'mobile.notifications.styles',
+		'mediawiki.jqueryMsg',
 	),
 	'scripts' => array(
 		'javascripts/externals/hogan.js',
@@ -460,9 +470,8 @@ $wgResourceModules['mobile.stable.universal'] = $wgMFMobileResourceBoilerplate +
 
 $wgResourceModules['mobile.stable'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
-		'mediawiki.jqueryMsg',
 		'mobile.startup',
-		'mobile.stable.universal',
+		'mobile.stable.common',
 		'mediawiki.util',
 		'mobile.stable.styles',
 	),
@@ -624,12 +633,21 @@ $wgResourceModules['mobile.nearby.previews'] = $wgMFMobileResourceBoilerplate + 
 	),
 );
 
+$wgResourceModules['mobile.nearby.watchstar'] = $wgMFMobileResourceBoilerplate + array(
+	'dependencies' => array(
+		'mobile.nearby.scripts',
+		'mobile.stable',
+	),
+	'scripts' => array(
+		'javascripts/specials/nearby-watchstar.js',
+	),
+);
+
 $wgResourceModules['mobile.nearby.scripts'] = $wgMFMobileResourceBoilerplate + array(
 	'dependencies' => array(
 		'mobile.nearby.plumbing',
-		'mobile.stable',
 		'jquery.json',
-		'mobile.beta',
+		'mobile.beta.common',
 	),
 	'messages' => array(
 		'mobile-frontend-nearby-error',

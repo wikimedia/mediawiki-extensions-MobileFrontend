@@ -13,6 +13,9 @@ class SpecialNearby extends UnlistedSpecialMobilePage {
 		$ctx = MobileContext::singleton();
 		if ( $ctx->shouldDisplayMobileView() && $ctx->isBetaGroupMember() ) {
 			$output->addModules( 'mobile.nearby.previews' );
+			if ( $ctx->isAlphaGroupMember() ) {
+				$output->addModules( 'mobile.nearby.watchstar' );
+			}
 		};
 
 		$output->setPageTitle( wfMessage( 'mobile-frontend-nearby-title' )->escaped() );

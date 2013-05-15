@@ -4,7 +4,6 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 
 ( function() {
 	var supported = M.supportsGeoLocation(),
-		watchstar = M.require( 'watchstar' ),
 		popup = M.require( 'notifications' ),
 		nav = M.require( 'navigation' ),
 		View = M.require( 'view' ),
@@ -13,7 +12,6 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
-		inAlpha = mw.config.get( 'wgMFMode' ) === 'alpha', // FIXME: sandbox before pushing nearby to stable
 		Nearby = View.extend( {
 			template: M.template.get( 'articleList' ),
 			initialize: function() {
@@ -23,9 +21,7 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 					$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
 					self.emit( 'page-click', ev );
 				} );
-				if ( inAlpha ) {
-					watchstar.initWatchListIconList( this.$( 'ul' ) );
-				}
+				self.emit( 'postRender', this.$el );
 			}
 		} ),
 		pendingQuery = false, btn, menu,
