@@ -100,7 +100,15 @@
 	function init() {
 		// FIXME: use wgIsMainPage
 		var mainPage = document.getElementById( 'mainpage' ),
+			mode, $body = $( 'body' ),
 			$doc = $( 'html' );
+
+		if ( $body.hasClass( 'alpha' ) ) {
+			mode = 'alpha';
+		} else {
+			mode = $body.hasClass( 'beta' ) ? 'beta' : 'stable';
+		}
+		mw.config.set( 'wgMFMode', mode );
 
 		if ( mainPage ) {
 			emit( 'homepage-loaded' );

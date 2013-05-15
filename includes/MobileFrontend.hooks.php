@@ -67,6 +67,7 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
+		// FIXME: replace instances of [ '' ] with ['']
 		$skin = $out->getSkin()->getSkinName();
 		if ( $skin === 'minerva' ) {
 			$title = $out->getTitle();
@@ -79,6 +80,11 @@ class MobileFrontendHooks {
 
 			$vars[ 'wgIsPageEditable' ] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
 			$vars[ 'wgPreferredVariant' ] = $title->getPageLanguage()->getPreferredVariant();
+			$ctx = MobileContext::singleton();
+			// mobile specific config variables
+			if ( $ctx->shouldDisplayMobileView() ) {
+				$vars['wgImagesDisabled'] = $ctx->imagesDisabled();
+			}
 		}
 
 		return true;
@@ -310,18 +316,6 @@ class MobileFrontendHooks {
 		);
 		$vars['wgStopMobileRedirectCookie'] = $wgStopMobileRedirectCookie;
 		$vars['wgMFNearbyEndpoint'] = $wgMFNearbyEndpoint;
-		// mobile specific config variables
-		if ( $ctx->shouldDisplayMobileView() ) {
-			$vars[ 'wgImagesDisabled' ] = $ctx->imagesDisabled();
-			if ( $ctx->isAlphaGroupMember() ) {
-				$env = 'alpha';
-			} else if ( $ctx->isBetaGroupMember() ) {
-				$env = 'beta';
-			} else {
-				$env = 'stable';
-			}
-			$vars[ 'wgMFMode' ] = $env;
-		}
 		return true;
 	}
 
