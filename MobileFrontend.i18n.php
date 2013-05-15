@@ -205,7 +205,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'This is not a personal photo',
 	'mobile-frontend-photo-nag-1-bullet-2-text' => 'And it can help illustrate an important topic.',
 	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Positively not violating copyright, and this photo is educational.',
-	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'I understand what to upload. Don’t show this message again.',
+	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'I understand what to upload. Don\'t show this message again.',
 	'mobile-frontend-photo-nag-learn-more-heading' => 'What to upload',
 	'mobile-frontend-photo-nag-learn-more-1' => "'''Yes!''' Photos you took of places, objects, and events.",
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Yes!''' Photos that can help illustrate and enrich {{SITENAME}} pages.",
