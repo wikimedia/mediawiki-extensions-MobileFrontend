@@ -30,6 +30,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$view = $req->getVal( 'watchlistview', 'a-z' );
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 
+		$this->setHeaders();
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
 		if( $user->isAnon() ) {

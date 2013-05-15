@@ -10,8 +10,6 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 		$ctx = MobileContext::singleton();
 		$user = $this->getUser();
 
-		$mobileSkin = $ctx->getSkin();
-
 		$this->setHeaders();
 		$output = $this->getOutput();
 		$output->htmlClass = 'galleryPage';

@@ -1,13 +1,13 @@
 <?php
 class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 
-	public function __construct( $name, $restriction = '', $function = false, $file = 'default' ) {
-		parent::__construct( $name, $restriction, false, $function, $file );
+	public function setHeaders() {
+		parent::setHeaders();
 		$this->clearPageMargins();
-		$this->addModules( $name );
+		$this->addModules();
 	}
 
-	public function addModules( $name ) {
+	protected function addModules() {
 		global $wgResourceModules;
 		$out = $this->getOutput();
 		$title = $this->getTitle();
@@ -25,8 +25,7 @@ class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 		}
 	}
 
-	public function clearPageMargins() {
-		$ctx = MobileContext::singleton();
+	protected function clearPageMargins() {
 		$this->getOutput()->setProperty( 'bodyClassName', 'no-margins' );
 	}
 }

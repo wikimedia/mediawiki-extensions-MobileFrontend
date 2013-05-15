@@ -14,6 +14,7 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 	}
 
 	function execute( $par ) {
+		$this->setHeaders();
 		$output = $this->getOutput();
 
 		$this->revId = intval( $par );
