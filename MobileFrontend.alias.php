@@ -22,6 +22,11 @@ $specialPageAliases['ar'] = array(
 	'MobileOptions' => array( 'خيارات_المحمول' ),
 );
 
+/** Catalan (català) */
+$specialPageAliases['ca'] = array(
+	'Nearby' => array( 'A_prop' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'MobileOptions' => array( 'Mobile_Optionen' ),
