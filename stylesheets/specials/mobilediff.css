@@ -151,6 +151,11 @@
 .alpha #mw-mf-diffview .prettyDiff span {
   display: inline;
 }
+.beta .revision-history-links,
+.alpha .revision-history-links {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
 .supportsPositionFixed #mw-mf-diffview #mw-mf-userinfo {
   position: fixed;
   bottom: 0;

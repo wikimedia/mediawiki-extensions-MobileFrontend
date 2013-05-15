@@ -200,13 +200,15 @@ HTML;
 			}
 
 			// add last modified timestamp
-			$timestamp = Revision::getTimestampFromId( $this->getTitle(), $this->getRevisionId() );
+			$revId = $this->getRevisionId();
+			$timestamp = Revision::getTimestampFromId( $this->getTitle(), $revId );
 			$lastModified = wfMessage( 'mobile-frontend-last-modified-date',
 				$this->getLanguage()->userDate( $timestamp, $user ),
 				$this->getLanguage()->userTime( $timestamp, $user )
 			)->parse();
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
-			$historyUrl = $ctx->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
+			$historyUrl = $inAlpha ? SpecialPage::getTitleFor( 'MobileDiff', $revId )->getLocalUrl() :
+				$ctx->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
 			$postBodyText = Html::element( 'a', array(
 				'id' => 'mw-mf-last-modified',
 				'data-timestamp' => $timestamp,
