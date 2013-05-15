@@ -67,19 +67,18 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
-		// FIXME: replace instances of [ '' ] with ['']
 		$skin = $out->getSkin()->getSkinName();
 		if ( $skin === 'minerva' ) {
 			$title = $out->getTitle();
 			$user = $out->getUser();
 			if ( !$user->isAnon() ) {
-				$vars[ 'wgWatchedPageCache' ] = array(
+				$vars['wgWatchedPageCache'] = array(
 					$title->getText() => $user->isWatched( $title ),
 				);
 			}
 
-			$vars[ 'wgIsPageEditable' ] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
-			$vars[ 'wgPreferredVariant' ] = $title->getPageLanguage()->getPreferredVariant();
+			$vars['wgIsPageEditable'] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
+			$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
 			$ctx = MobileContext::singleton();
 			// mobile specific config variables
 			if ( $ctx->shouldDisplayMobileView() ) {
