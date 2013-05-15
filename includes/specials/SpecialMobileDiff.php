@@ -13,6 +13,55 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 		parent::__construct( 'MobileDiff' );
 	}
 
+	public function getRevision( $id ) {
+		return Revision::newFromId( $id );
+	}
+
+	public function executeBadQuery() {
+		wfHttpError( 404, $this->msg( 'mobile-frontend-diffview-404-title' )->text(),
+			$this->msg( 'mobile-frontend-diffview-404-desc' )->text() );
+	}
+
+	/**
+	 * Takes 2 ids/keywords and validates them returning respective revisions
+	 *
+	 * @param Array Array of revision ids currently limited to 2 elements
+	 * @return Array of previous and next revision. The next revision is null if a bad parameter is passed
+	 */
+	public function getRevisionsToCompare( $revids ) {
+		$prev = null;
+		$rev = null;
+
+		// check 2 parameters are passed and are numbers
+		if ( count( $revids ) === 2 && $revids[0] && $revids[1] ) {
+			$id = intval( $revids[1] );
+			$prevId = intval( $revids[0] );
+			if ( $id && $prevId ) {
+				$rev = $this->getRevision( $id );
+				// deal with identical ids
+				if ( $id === $prevId ) {
+					$rev = null;
+				} else if ( $rev ) {
+					$prev = $this->getRevision( $prevId );
+					if ( !$prev ) {
+						$rev = null;
+					}
+				} else {
+					$rev = null;
+				}
+			}
+		} else if ( count( $revids ) === 1 ) {
+			$id = intval( $revids[0] );
+			if ( $id ) {
+				$rev = $this->getRevision( $id );
+				if ( $rev ) {
+					$prev = $rev->getPrevious();
+				}
+			}
+		}
+		return array( $prev, $rev );
+	}
+
 	function execute( $par ) {
 		$ctx = MobileContext::singleton();
 		$this->setHeaders();
@@ -21,15 +70,17 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 			$output->addModules( 'mobile.mobilediff.scripts.beta' );
 		}
 
-		$this->revId = intval( $par );
-		$rev = Revision::newFromId( $this->revId );
-		$this->rev = $rev;
-		if ( !$rev ) {
-			wfHttpError( 404, $this->msg( 'mobile-frontend-diffview-404-title' )->text(),
-				$this->msg( 'mobile-frontend-diffview-404-desc' )->text() );
-			return;
+		// @FIXME add full support for git-style notation (eg ...123, 123...)
+		$revisions = $this->getRevisionsToCompare( explode( '...', $par ) );
+		$rev = $revisions[1];
+		$prev = $revisions[0];
+
+		if ( is_null( $rev ) ) {
+			return $this->executeBadQuery();
 		}
-		$this->prevRev = $this->rev->getPrevious();
+		$this->revId = $rev->getId();
+		$this->rev = $rev;
+		$this->prevRev = $prev;
 		$this->targetTitle = $this->rev->getTitle();
 
 		$output->setPageTitle( $this->msg( 'mobile-frontend-diffview-title', $this->targetTitle->getPrefixedText() ) );
@@ -45,6 +96,7 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 		$this->showFooter();
 
 		$output->addHtml( '</div>' );
+		return true;
 	}
 
 	function showHeader() {
