@@ -159,11 +159,11 @@ class SkinMobileBase extends SkinMinerva {
 	 * @return Array
 	 */
 	public function mobilizeUrls( $urls ) {
-		function fn( $url ) {
-			$ctx = MobileContext::singleton();
-			$url['href'] = $ctx->getMobileUrl( $url['href'] );
-			return $url;
-		}
-		return array_map( 'fn', $urls );
+		return array_map( function( $url ) {
+				$ctx = MobileContext::singleton();
+				$url['href'] = $ctx->getMobileUrl( $url['href'] );
+				return $url;
+			},
+			$urls );
 	}
 }
