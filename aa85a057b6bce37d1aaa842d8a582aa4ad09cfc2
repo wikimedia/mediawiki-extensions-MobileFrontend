@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw93lDDs",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-15T17:44:14Z",
+      "side": 1,
+      "message": "Is there a difference between \u0027common\u0027 and \u0027universal\u0027? If so, it would be nice if it were made clear (in a comment maybe?) - if not, let\u0027s standardize on one or the other",
+      "revId": "aa85a057b6bce37d1aaa842d8a582aa4ad09cfc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
