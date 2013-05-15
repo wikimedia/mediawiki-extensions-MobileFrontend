@@ -10,17 +10,18 @@ class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 	protected function addModules() {
 		global $wgResourceModules;
 		$out = $this->getOutput();
+		$rl = $out->getResourceLoader();
 		$title = $this->getTitle();
 		list( $name, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 		$id = strtolower( $name );
 		$specialStyleModuleName = 'mobile.' . $id . '.styles';
 		$specialScriptModuleName = 'mobile.' . $id . '.scripts';
 
-		if ( isset( $wgResourceModules[ $specialStyleModuleName ] ) ) {
+		if ( $rl->getModule( $specialStyleModuleName ) ) {
 			$out->addModuleStyles( $specialStyleModuleName );
 		}
 
-		if ( isset( $wgResourceModules[ $specialScriptModuleName ] ) ) {
+		if ( $rl->getModule( $specialScriptModuleName ) ) {
 			$out->addModules( $specialScriptModuleName );
 		}
 	}

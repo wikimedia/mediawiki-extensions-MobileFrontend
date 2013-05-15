@@ -275,7 +275,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgMFMobileResourceBoilerplate, $wgMFLogEvents, $wgResourceModules;
+		global $wgMFMobileResourceBoilerplate, $wgMFLogEvents, $wgResourceModules, $localBasePath;
 
 		$detector = DeviceDetection::factory();
 		foreach ( $detector->getCssFiles() as $file ) {
