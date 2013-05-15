@@ -64,7 +64,6 @@ var m = ( function( $ ) {
 			content: '',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' )
 		},
-		parent: null,
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
 		initialize: function( options ) {
