@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "Dw30.gIk",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-15T17:38:19Z",
+      "side": 1,
+      "message": "I was following the convention in this function. Have fixed in this one and done a follow up to avoid further confusion.",
+      "parentUuid": "Dw3qgRkc",
+      "revId": "c8abd9f979431f2c4f600d0cf071e42db30bb754",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dw1qlglQ",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2013-05-15T17:24:41Z",
       "side": 1,
       "message": "in the context of mobilefrontend, mf means... mobile frontend; it\u0027s a widely used convention in this extension.",
+      "parentUuid": "Dw1qlglQ",
+      "revId": "c8abd9f979431f2c4f600d0cf071e42db30bb754",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dw92.rPo",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-15T17:38:19Z",
+      "side": 1,
+      "message": "whoops this code was an experimental first pass and wasn\u0027t meant to be included. Removing...",
       "parentUuid": "Dw1qlglQ",
       "revId": "c8abd9f979431f2c4f600d0cf071e42db30bb754",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
