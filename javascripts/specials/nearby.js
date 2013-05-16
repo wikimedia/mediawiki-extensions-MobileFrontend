@@ -134,7 +134,15 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 				ggslimit: limit
 			}
 		} ).done( function( data ) {
-			var pages = $.map( data.query.pages, function( i ) {
+			var pages;
+			// FIXME: API bug 48512
+			if ( data.query ) {
+				pages = data.query.pages || {};
+			} else {
+				pages = {};
+			}
+			// FIXME: API returns object when array would make much sense
+			pages = $.map( pages , function( i ) {
 				return i;
 			} );
 			if ( pages.length > 0 ) {
