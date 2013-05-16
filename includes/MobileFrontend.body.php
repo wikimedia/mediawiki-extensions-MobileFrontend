@@ -140,8 +140,10 @@ class ExtMobileFrontend extends ContextSource {
 			$formatter->disableBackToTop();
 		}
 
-		$isFilePage = $this->getTitle()->getNamespace() === NS_FILE;
-		$formatter->enableRemovableSections( $context->isBetaGroupMember() && !$isFilePage );
+		$ns = $this->getTitle()->getNamespace();
+		$isMainPage = $this->getTitle()->isMainPage();
+		$isFilePage = $ns === NS_FILE;
+		$formatter->enableRemovableSections( $context->isBetaGroupMember() && $ns === NS_MAIN && !$isMainPage );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
@@ -168,7 +170,6 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		wfProfileIn( __METHOD__ . '-getText' );
-		$isMainPage = $this->getTitle()->isMainPage();
 		if ( !$context->isAlphaGroupMember() ) {
 			$formatter->setIsMainPage( $isMainPage );
 		}

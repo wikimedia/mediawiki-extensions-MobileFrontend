@@ -48,9 +48,9 @@ var T = ( function() {
 		var pageTitle = mw.config.get( 'wgTitle'),
 			inViewMode = mw.config.get( 'wgAction' ) === 'view',
 			isMainPage = mw.config.get( 'wgIsMainPage' ),
-			isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) ===  mw.config.get( 'wgNamespaceIds' ).special;
+			isMainNamespace = mw.config.get( 'wgNamespaceNumber' ) ===  mw.config.get( 'wgNamespaceIds' )[''];
 
-		if ( !isMainPage && !isSpecialPage && inViewMode ) { // talk pages and normal pages only?
+		if ( !isMainPage && isMainNamespace && inViewMode ) {
 			M.history.retrievePage( pageTitle ).done( function( pageData ) {
 				currentPage = new Page( pageData );
 				refresh();
