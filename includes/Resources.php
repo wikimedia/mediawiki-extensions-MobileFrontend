@@ -516,8 +516,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'stylesheets/specials/watchlist.css',
+			'stylesheets/specials/nearby.css',
+		),
+	),
+
 	'mobile.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
+			'mobile.nearby.styles',
 			'mobile.nearby.plumbing',
 			'jquery.json',
 			'mobile.beta.common',
@@ -533,10 +541,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-noresults',
 			'mobile-frontend-nearby-link',
 			'mobile-frontend-needs-photo',
-		),
-		'styles' => array(
-			'stylesheets/specials/watchlist.css',
-			'stylesheets/specials/nearby.css',
 		),
 		'scripts' => array(
 			'javascripts/specials/nearby.js',

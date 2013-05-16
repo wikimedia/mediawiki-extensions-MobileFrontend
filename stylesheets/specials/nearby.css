@@ -42,3 +42,6 @@ button.refresh {
   -webkit-animation: infinite-spin 0.5s linear infinite normal;
   animation: infinite-spin 0.5s linear infinite normal;
 }
+.client-js .noscript {
+  display: none;
+}

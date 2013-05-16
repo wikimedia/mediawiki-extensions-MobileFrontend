@@ -28,7 +28,7 @@ class SpecialNearby extends UnlistedSpecialMobilePage {
 			) .
 			Html::element( 'div',
 				array(
-					'class' => 'noscript content',
+					'class' => 'noscript content error',
 				),
 				wfMessage( 'mobile-frontend-nearby-requirements' )->escaped()
 			) .

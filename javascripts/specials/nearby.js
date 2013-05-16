@@ -7,6 +7,7 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 		popup = M.require( 'notifications' ),
 		nav = M.require( 'navigation' ),
 		View = M.require( 'view' ),
+		errorHtml = $( '#mw-mf-nearby' ).html(),
 		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		curLocation,
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
@@ -14,6 +15,10 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
 		Nearby = View.extend( {
 			template: M.template.get( 'articleList' ),
+			renderError: function() {
+				this.$el.html( errorHtml );
+				this.$( '.noscript' ).removeClass( 'noscript' );
+			},
 			initialize: function() {
 				var self = this;
 				this.$( 'a' ).on( 'mousedown', function( ev ) {
@@ -204,6 +209,8 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 		if ( lastSearchResult ) {
 			render( $( '#content' ), $.parseJSON( lastSearchResult ) );
 		}
+	} else {
+		overlay.renderError();
 	}
 
 	menu = $( '<li>' ).appendTo( nav.getPageMenu() );
