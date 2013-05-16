@@ -8,34 +8,75 @@
 		initialize: function( options ) {
 			this._super( options );
 			this.pageId = options.pageId;
+			this._sectionCache = {};
+			this._sectionStage = {};
 		},
 
-		getSection: function( section ) {
+		getSection: function( id ) {
 			var self = this, result = $.Deferred();
 
-			self.get( {
-				action: 'query',
-				prop: 'revisions',
-				rvprop: [ 'content', 'timestamp' ],
-				pageids: self.pageId,
-				rvsection: section
-			} ).done( function( resp ) {
-				result.resolve( {
-					section: section,
-					// FIXME: MediaWiki API, seriously?
-					content: resp.query.pages[ self.pageId ].revisions[0]['*']
+			if ( this._sectionCache[id] ) {
+				result.resolve( this._sectionCache[id] );
+			} else {
+				self.get( {
+					action: 'query',
+					prop: 'revisions',
+					rvprop: [ 'content', 'timestamp' ],
+					pageids: self.pageId,
+					rvsection: id
+				} ).done( function( resp ) {
+					self._sectionCache[id] = {
+						section: id,
+						// FIXME: MediaWiki API, seriously?
+						timestamp: resp.query.pages[ self.pageId ].revisions[0].timestamp,
+						content: resp.query.pages[ self.pageId ].revisions[0]['*']
+					};
+					result.resolve( self._sectionCache[id] );
 				} );
-				console.log( resp ); //XXX
-			} );
+				// TODO: possible failures?
+			}
 
 			return result;
 		},
 
-		setSection: function( section, data ) {
-			console.log(data);
+		stageSection: function( id, content ) {
+			this._sectionStage[id] = {
+				id: id,
+				content: content
+			};
 		},
 
 		save: function() {
+			var self = this, result = $.Deferred(),
+				sections = $.map( this._sectionStage, function( section ) {
+					return section;
+				} );
+
+			function saveSection( token ) {
+				var section = sections.pop(), timestamp = self._sectionCache[section.id].timestamp;
+
+				self.post( {
+					action: 'edit',
+					pageid: self.pageId,
+					section: section.id,
+					text: section.content,
+					token: token,
+					basetimestamp: timestamp,
+					starttimestamp: timestamp
+				} ).done( function( data ) {
+					if ( data && data.error ) {
+						result.reject( data.error.code );
+					} else if ( !sections.length ) {
+						result.resolve();
+					} else {
+						saveSection( token );
+					}
+				} ).fail( $.proxy( result, 'reject', 'HTTP error' ) );
+			}
+
+			this.getToken().done( saveSection ).fail( $.proxy( result, 'reject' ) );
+
+			return result;
 		}
 	} );
 
@@ -50,17 +91,22 @@
 			this.api = new EditApi( { pageId: options.pageId } );
 			this.sectionCount = options.sectionCount;
 			this.$loading = this.$( '.loading' );
-			this.$content = this.$( 'textarea' );
-			this.$prev = this.$( '.prev-section' );
-			this.$next = this.$( '.next-section' );
+			this.$content = this.$( 'textarea' ).
+				// can't use $.proxy because self.section and self.$content change
+				on( 'change', function() {
+					self.api.stageSection( self.section, self.$content.val() );
+				} );
+			this.$prev = this.$( '.prev-section' ).
+				on( 'click', function() {
+					self._loadSection( self.section - 1 );
+				} );
+			this.$next = this.$( '.next-section' ).
+				on( 'click', function() {
+					self._loadSection( self.section + 1 );
+				} );
+			this.$( '.save' ).on( 'click', $.proxy( self.api, 'save' ) );
 
 			this._loadSection( options.section );
-			this.$prev.on( 'click', function() {
-				self._loadSection( self.section - 1 );
-			} );
-			this.$next.on( 'click', function() {
-				self._loadSection( self.section + 1 );
-			} );
 		},
 
 		_loadSection: function( section ) {
