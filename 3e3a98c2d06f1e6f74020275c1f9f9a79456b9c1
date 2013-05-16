@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxOS97mM",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-05-16T00:36:11Z",
+      "side": 1,
+      "message": "Unused?",
+      "revId": "3e3a98c2d06f1e6f74020275c1f9f9a79456b9c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxESzApg",
+        "filename": "includes/specials/UnlistedSpecialMobilePage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-05-16T00:36:11Z",
+      "side": 1,
+      "message": "This fix is perhaps better done in a separate commit but a good move indeed.",
+      "revId": "3e3a98c2d06f1e6f74020275c1f9f9a79456b9c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
