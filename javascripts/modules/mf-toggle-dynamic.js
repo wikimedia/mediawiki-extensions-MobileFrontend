@@ -2,39 +2,31 @@
 
 var T = ( function() {
 	var
+		toggle = M.require( 'toggle' ),
 		currentPage,
 		Page = M.require( 'page' );
 
-	function wm_toggle_section( section_id ) {
-		var id = 'section_' + section_id, content_id = 'content_' + section_id,
-			closed,
-			$section = $( '#' + id ), $content = $( '#' + content_id ),
-			loaded = $content.data( 'loaded' ), section,
-			selector = '#' + content_id + ',#' + id;
+	M.on( 'section-toggle', function( section_id ) {
+		var
+			$content = $( '#content_' + section_id ),
+			loaded = $content.data( 'loaded' ), section;
 
-		if ( !loaded ) {
-			section = currentPage.getSectionFromAnchor( id );
+		if ( !loaded && currentPage ) {
+			section = currentPage.getSectionFromAnchor( 'section_' + section_id );
 			if ( section ) {
 				$content.html( section.content ).data( 'loaded', true );
 			}
 			M.emit( 'section-rendered', $content );
 		}
-
-		$( selector ).toggleClass( 'openSection' );
-		closed = $section.hasClass( 'openSection' );
-	}
-
-	function wm_reveal_for_hash( hash ) {
-		var section = currentPage.getSectionFromAnchor( hash.slice( 1 ) );
-		if ( section ) {
-			wm_toggle_section( section.index );
-		}
-	}
+	} );
 
 	function checkHash() {
-		var hash = window.location.hash, el;
+		var hash = window.location.hash, el, section;
 		if ( hash ) {
-			wm_reveal_for_hash( hash, true );
+			section = currentPage.getSectionFromAnchor( hash.slice( 1 ) );
+			if ( section ) {
+				toggle.wm_toggle_section( section.index );
+			}
 			// force scroll if not scrolled (e.g. after subsection is loaded)
 			el = $( hash );
 			if ( el.length ) {
@@ -43,35 +35,11 @@ var T = ( function() {
 		}
 	}
 
-	function enableToggling( $container ) {
-		var $headings = $container ? $container.find( '.section_heading' ) : $( '.section_heading' );
-		$( 'html' ).addClass( 'togglingEnabled' );
-
-		function openSectionHandler() {
-			var id = $( this ).attr( 'id' );
-			wm_toggle_section( id.split( '_' )[ 1 ] );
-		}
-
-		$headings.each( function() {
-			var $this = $( this );
-			// disable default behavior of the link in the heading
-			$this.find( 'a' ).on( 'click', function( ev ) {
-				ev.preventDefault();
-			} );
-			$this.on( 'click', openSectionHandler );
-		} );
-
-		$( '#content_wrapper a' ).on( 'click', checkHash );
-	}
-
 	function refresh() {
 		var references = currentPage.getReferenceSection();
 		if ( references ) {
 			$( '#content_' + references.index ).html( references.content ).data( 'loaded', true );
 			M.emit( 'references-loaded' );
-		}
-		if ( $( '#content .section_heading' ).length > 1 ) {
-			enableToggling( $( '#content' ) );
 		}
 		checkHash();
 	}
@@ -87,15 +55,10 @@ var T = ( function() {
 				currentPage = new Page( pageData );
 				refresh();
 			} );
-		} else {
-			enableToggling();
 		}
 	}
 
 	return {
-		wm_reveal_for_hash: wm_reveal_for_hash,
-		wm_toggle_section: wm_toggle_section,
-		enableToggling: enableToggling,
 		init: init
 	};
 

@@ -233,20 +233,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.toggling' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup' ),
-		'messages' => array(
-			// for mf-toggle.js
-			'mobile-frontend-close-section',
-			'mobile-frontend-show-button',
-			'mobile-frontend-hide-button',
-		),
-		'styles' => array(),
-		'scripts' => array(
-			'javascripts/modules/mf-toggle.js',
-		),
-	),
-
 	'mobile.action.edit' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup', 'mobile.beta' ),
 		'messages' => array(
@@ -372,6 +358,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.styles',
 		),
 		'scripts' => array(
+			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/mf-cleanuptemplates.js',
 			'javascripts/modules/mf-last-modified.js',
 			'javascripts/modules/mf-watchstar.js',
@@ -381,6 +368,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-references.js'
 		),
 		'messages' => array(
+			// for mf-toggle.js
+			'mobile-frontend-close-section',
+			'mobile-frontend-show-button',
+			'mobile-frontend-hide-button',
+
 			// mf-cleanuptemplates.js
 			'mobile-frontend-meta-data-issues',
 			'mobile-frontend-meta-data-issues-header',

@@ -4,6 +4,7 @@ var toggle = ( function() {
 
 	function wm_toggle_section( section_id ) {
 		$( '#section_' + section_id + ',#content_' + section_id ).toggleClass( 'openSection' );
+		M.emit( 'section-toggle', section_id );
 	}
 
 	function wm_reveal_for_hash( hash ) {
