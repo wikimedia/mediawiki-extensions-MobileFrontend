@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxcAnACA",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-16T22:04:17Z",
+      "side": 1,
+      "message": "Use OOP here, this code path is begging to be done in SkinMinerva.",
+      "revId": "4bede456edaacc510ead1115b56551d94ed66383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxaAsdAM",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-16T22:04:17Z",
+      "side": 1,
+      "message": "Don\u0027t filter each section separately, it looks slower and will cause problems e.g. with tags spanning multiple sections.",
+      "revId": "4bede456edaacc510ead1115b56551d94ed66383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxUA8kC0",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-16T22:04:17Z",
+      "side": 1,
+      "message": "This looks like it needs to belong to the skin, not template. Leave all dumb output to the temlate while all processing should be in the skin.",
+      "revId": "4bede456edaacc510ead1115b56551d94ed66383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxcAG4Ig",
+        "filename": "includes/skins/SkinMobileTemplate.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-16T22:04:17Z",
+      "side": 1,
+      "message": "Use camelCase.",
+      "revId": "4bede456edaacc510ead1115b56551d94ed66383",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
