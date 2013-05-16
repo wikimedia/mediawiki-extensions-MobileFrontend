@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxHIwgOg",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-16T11:21:42Z",
+      "side": 1,
+      "message": "Without getMobileUrl(), it will redirect to desktop site.",
+      "revId": "0cb4f194ce977442c2666cb9c8f6e54073fd8d8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
