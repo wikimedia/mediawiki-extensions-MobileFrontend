@@ -2,7 +2,7 @@
 
 var m = ( function() {
 	var $pre = $( '<pre>' ).hide().appendTo( $( '#content_wrapper' ) ), minHeight = 80,
-		toggling = M.require( 'toggle-dynamic' );
+		toggling = M.require( 'toggle' );
 
 	function makeSection( $editArea, sectionId ) {
 		var $section = $( '<div class="section">' ).insertBefore( $editArea ),
@@ -110,7 +110,7 @@ var m = ( function() {
 			$editArea.val( val );
 		} );
 
-		toggling.enableToggling( $( '#content_0' ) );
+		toggling.init( $( '#content_0' ) );
 	}
 
 	function init() {
