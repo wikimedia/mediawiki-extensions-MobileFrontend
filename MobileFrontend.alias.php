@@ -51,7 +51,7 @@ $specialPageAliases['et'] = array(
 
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = array(
-	'Nearby' => array( 'קרוב' ),
+	'Nearby' => array( 'בסביבה', 'קרוב' ),
 );
 
 /** Hindi (हिन्दी) */
