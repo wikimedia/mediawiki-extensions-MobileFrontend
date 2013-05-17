@@ -23,6 +23,7 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 		} else {
 			$uploadCount = $this->getUserUploadCount( $user->getName() );
 			$html = '';
+			$attrs = array();
 			if ( $uploadCount !== false ) {
 				$threshold = $this->getUploadCountThreshold();
 				$html .= '<div class="ctaUploadPhoto">';
@@ -34,8 +35,11 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 					$msg = $this->msg(
 						'mobile-frontend-photo-upload-user-count'
 					)->numParams( $uploadCount )->parse();
+					if ( $uploadCount === 0 ) {
+						$attrs = array( 'style' => 'display:none' );
+					}
 				}
-				$html .= Html::openElement( 'h2', array() ) . $msg . Html::closeElement( 'h2' );
+				$html .= Html::openElement( 'h2', $attrs ) . $msg . Html::closeElement( 'h2' );
 				$html .= '</div>';
 			}
 			$html .= '<ul class="mobileUserGallery"></ul>';
