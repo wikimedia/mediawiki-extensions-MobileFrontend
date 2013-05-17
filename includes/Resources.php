@@ -195,6 +195,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'overlays/languages',
 			'overlays/edit/edit',
 		),
+		'messages' => array(
+			// edit.js
+			'edit',
+			'mobile-frontend-edit-save',
+			'mobile-frontend-edit-cancel',
+			'mobile-frontend-edit-confirm',
+			'mobile-frontend-edit-previous',
+			'mobile-frontend-edit-next',
+			'mobile-frontend-edit-license' => array( 'parse' ),
+			'mobile-frontend-edit-section-count',
+			'mobile-frontend-edit-cancel-confirm',
+		),
 		'class' => 'MFResourceLoaderModule',
 	),
 
@@ -235,9 +247,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for mf-languages.js
 			'mobile-frontend-language-site-choose',
 			'mobile-frontend-language-footer',
-
-			// edit.js
-			'edit',
 		),
 	),
 

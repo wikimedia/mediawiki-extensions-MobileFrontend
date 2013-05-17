@@ -224,6 +224,16 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-upload-cta' => 'Please login or sign up to add an image.',
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 
+	// edit
+	'mobile-frontend-edit-save' => 'Save',
+	'mobile-frontend-edit-cancel' => 'Cancel',
+	'mobile-frontend-edit-confirm' => 'Confirm',
+	'mobile-frontend-edit-previous' => 'Previous',
+	'mobile-frontend-edit-next' => 'Next',
+	'mobile-frontend-edit-license' => 'By clicking "Save", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
+	'mobile-frontend-edit-section-count' => 'You are about to save {{PLURAL:$1|1 section|$1 sections}}.',
+	'mobile-frontend-edit-cancel-confirm' => 'Do you really want to abandon your changes?',
+
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
 	'tag-mobile_edit-description' => 'Edit made from mobile site',
@@ -591,6 +601,14 @@ They can either exit the page and lose them or stay on the page until they are c
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-edit-save' => 'Caption for save button on edit form.',
+	'mobile-frontend-edit-cancel' => 'Caption for cancel button on edit form.',
+	'mobile-frontend-edit-confirm' => 'Caption for confirm button on edit form.',
+	'mobile-frontend-edit-previous' => 'Caption for a button loading previous section on edit form.',
+	'mobile-frontend-edit-next' => 'Caption for a button loading next section on edit form.',
+	'mobile-frontend-edit-license' => 'Text notifying user of license that text will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license.',
+	'mobile-frontend-edit-section-count' => 'Informs user how many sections they are about to save. Parameter is number of modified sections.',
+	'mobile-frontend-edit-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved changes.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:

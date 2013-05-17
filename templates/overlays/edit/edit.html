@@ -1,17 +1,19 @@
 <div class="header">
   <button class="cancel">{{closeMsg}}</button>
   <ul class="button-bar">
-    <li><button class="prev-section">Previous</button>
-    <li><button class="next-section">Next</button>
+    <li><button class="prev-section">{{previousMsg}}</button>
+      <li><button class="next-section">{{nextMsg}}</button>
   </ul>
 </div>
 <div class="loading"></div>
 <textarea cols="40" rows="10"></textarea>
 <div class="buttonBar initial-bar">
-  <button class="cancel">Cancel</button>
-  <button class="save" disabled>Save</button>
+  <button class="cancel">{{cancelMsg}}</button>
+  <button class="save" disabled>{{saveMsg}}</button>
 </div>
 <div class="buttonBar confirm-bar">
-  <button class="cancel">Cancel</button>
-  <button class="confirm-save" disabled>Confirm</button>
+  <p class="count"></p>
+  <p>{{{license}}}</p>
+  <button class="cancel">{{cancelMsg}}</button>
+  <button class="confirm-save" disabled>{{confirmMsg}}</button>
 </div>

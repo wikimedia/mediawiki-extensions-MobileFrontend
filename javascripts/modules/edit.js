@@ -81,6 +81,15 @@
 	} );
 
 	EditOverlay = Overlay.extend( {
+		defaults: {
+			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' ),
+			saveMsg: mw.msg( 'mobile-frontend-edit-save' ),
+			cancelMsg: mw.msg( 'mobile-frontend-edit-cancel' ),
+			confirmMsg: mw.msg( 'mobile-frontend-edit-confirm' ),
+			previousMsg: mw.msg ( 'mobile-frontend-edit-previous' ),
+			nextMsg: mw.msg ( 'mobile-frontend-edit-next' ),
+			license: mw.msg( 'mobile-frontend-edit-license' )
+		},
 		template: M.template.get( 'overlays/edit/edit' ),
 		className: 'mw-mf-overlay edit-overlay',
 
@@ -88,13 +97,14 @@
 			var self = this;
 			this._super( options );
 
-			this.changed = false;
+			this.changedCount = 0;
 			this.api = new EditApi( { pageId: options.pageId } );
 			this.sectionCount = options.sectionCount;
 			this.$loading = this.$( '.loading' );
 			this.$content = this.$( 'textarea' ).
 				on( 'change', function() {
-					self.changed = true;
+					++self.changedCount;
+					self.$( '.count' ).text( mw.msg( 'mobile-frontend-edit-section-count', self.changedCount ) );
 					self.api.stageSection( self.section, self.$content.val() );
 				} ).
 				// use input event too, Firefox doesn't fire keyup on many devices:
@@ -121,7 +131,7 @@
 		},
 
 		hide: function() {
-			if ( !this.changed || confirm( 'i18n sure?' ) ) {
+			if ( !this.changedCount || window.confirm( mw.msg( 'mobile-frontend-edit-cancel-confirm' ) ) ) {
 				this._super();
 			}
 		},
