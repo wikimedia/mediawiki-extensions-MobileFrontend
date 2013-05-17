@@ -65,6 +65,7 @@ class ApiParseExtender {
 			$data = $module->getResultData();
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && isset( $params['mobileformat'] ) ) {
+				wfProfileIn( __METHOD__ . '-mobiletransform' );
 				$result = $module->getResult();
 				$result->reset();
 
@@ -89,6 +90,7 @@ class ApiParseExtender {
 				$data['parse']['text'] = $mf->getText();
 
 				$result->addValue( null, $module->getModuleName(), $data['parse'] );
+				wfProfileOut( __METHOD__ . '-mobiletransform' );
 			}
 			wfProfileOut( __METHOD__ );
 		}
