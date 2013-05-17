@@ -66,7 +66,7 @@ class MobileTemplate extends MinervaTemplate {
 				'class' => 'icon-nearby jsonly',
 			),
 		);
-		if ( !MobileContext::singleton()->isBetaGroupMember() || !$wgMFNearby ) {
+		if ( !$wgMFNearby ) {
 			unset( $items['nearby'] );
 		}
 
