@@ -44,7 +44,7 @@ a.external {
 }
 .loading {
   background-image: url(images/ajax-loader.gif);
-  min-height: 48px;
+  min-height: 56px;
   background-repeat: no-repeat;
   background-position: center;
 }

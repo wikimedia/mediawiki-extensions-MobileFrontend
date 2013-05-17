@@ -1,13 +1,26 @@
+@import "../mf-variables.less";
 @import "../mf-mixins.less";
 
-#edit-page {
-	position: absolute;
-	right: 0;
-	top: 0;
+.edit-page {
+	margin-top: .5em;
+	float: right;
+}
+
+.section_heading {
+	.edit-page {
+		margin: 0 30px 0 0;
+		display: none !important;
+		font-size: .7em;
+		font-family: @fontFamily;
+	}
+
+	&.openSection .edit-page {
+		display: block !important;
+	}
 }
 
 .edit-overlay {
-	.loading {
+	.spinner {
 		height: 100px;
 	}
 
@@ -25,7 +38,17 @@
 		}
 	}
 
-	.confirm-bar {
+	.confirm-bar, .saving-bar {
 		display: none;
+	}
+
+	.saving-bar {
+		background-position: 16px 50%;
+		.background-size( 32px, auto );
+		padding: 0 0 0 46px;
+
+		p:first-child {
+			margin: 18px 16px 0;
+		}
 	}
 }

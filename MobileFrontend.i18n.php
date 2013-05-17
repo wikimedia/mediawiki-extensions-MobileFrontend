@@ -232,7 +232,11 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-edit-next' => 'Next',
 	'mobile-frontend-edit-license' => 'By clicking "Save", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
 	'mobile-frontend-edit-section-count' => 'You are about to save {{PLURAL:$1|1 section|$1 sections}}.',
-	'mobile-frontend-edit-cancel-confirm' => 'Do you really want to abandon your changes?',
+	'mobile-frontend-edit-cancel-confirm' => 'Do you really want to abandon your edit?',
+	'mobile-frontend-edit-wait' => 'Saving edit, please wait.',
+	'mobile-frontend-edit-success' => 'Success! Your edit was saved.',
+	'mobile-frontend-edit-error' => 'Error, edit not saved.',
+	'mobile-frontend-edit-error-conflict' => 'Error, another user has edited this page.',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -608,7 +612,11 @@ Used when the user is not logged in.
 	'mobile-frontend-edit-next' => 'Caption for a button loading next section on edit form.',
 	'mobile-frontend-edit-license' => 'Text notifying user of license that text will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license.',
 	'mobile-frontend-edit-section-count' => 'Informs user how many sections they are about to save. Parameter is number of modified sections.',
-	'mobile-frontend-edit-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved changes.',
+	'mobile-frontend-edit-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved edit.',
+	'mobile-frontend-edit-wait' => 'Text that displays while a page edit is being saved.',
+	'mobile-frontend-edit-success' => 'Text that displays when a page edit has been successfully saved.',
+	'mobile-frontend-edit-error' => 'Text that displays when there have been errors when saving a page edit.',
+	'mobile-frontend-edit-error-conflict' => 'Text that displays when there has been edit conflict when saving a page edit.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:

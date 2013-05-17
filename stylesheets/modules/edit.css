@@ -1,9 +1,17 @@
-#edit-page {
-  position: absolute;
-  right: 0;
-  top: 0;
+.edit-page {
+  margin-top: .5em;
+  float: right;
 }
-.edit-overlay .loading {
+.section_heading .edit-page {
+  margin: 0 30px 0 0;
+  display: none !important;
+  font-size: .7em;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.section_heading.openSection .edit-page {
+  display: block !important;
+}
+.edit-overlay .spinner {
   height: 100px;
 }
 .edit-overlay textarea {
@@ -21,6 +29,20 @@
 .edit-overlay textarea:focus {
   outline: none;
 }
-.edit-overlay .confirm-bar {
+.edit-overlay .confirm-bar,
+.edit-overlay .saving-bar {
   display: none;
+}
+.edit-overlay .saving-bar {
+  background-position: 16px 50%;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 32px auto;
+  -o-background-size: 32px auto;
+  -webkit-background-size: 32px auto;
+  background-size: 32px auto;
+  padding: 0 0 0 46px;
+}
+.edit-overlay .saving-bar p:first-child {
+  margin: 18px 16px 0;
 }

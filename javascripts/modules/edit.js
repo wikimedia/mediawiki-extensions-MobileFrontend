@@ -2,6 +2,7 @@
 
 	var Overlay = M.require( 'navigation' ).Overlay,
 		Api = M.require( 'api' ).Api,
+		popup = M.require( 'notifications' ),
 		EditApi, EditOverlay;
 
 	EditApi = Api.extend( {
@@ -88,7 +89,8 @@
 			confirmMsg: mw.msg( 'mobile-frontend-edit-confirm' ),
 			previousMsg: mw.msg ( 'mobile-frontend-edit-previous' ),
 			nextMsg: mw.msg ( 'mobile-frontend-edit-next' ),
-			license: mw.msg( 'mobile-frontend-edit-license' )
+			licenseMsg: mw.msg( 'mobile-frontend-edit-license' ),
+			waitMsg: mw.msg( 'mobile-frontend-edit-wait' )
 		},
 		template: M.template.get( 'overlays/edit/edit' ),
 		className: 'mw-mf-overlay edit-overlay',
@@ -97,20 +99,20 @@
 			var self = this;
 			this._super( options );
 
-			this.changedCount = 0;
+			this.modifiedCount = 0;
 			this.api = new EditApi( { pageId: options.pageId } );
 			this.sectionCount = options.sectionCount;
-			this.$loading = this.$( '.loading' );
+			this.$spinner = this.$( '.spinner' );
 			this.$content = this.$( 'textarea' ).
 				on( 'change', function() {
-					++self.changedCount;
-					self.$( '.count' ).text( mw.msg( 'mobile-frontend-edit-section-count', self.changedCount ) );
+					++self.modifiedCount;
+					self.$( '.count' ).text( mw.msg( 'mobile-frontend-edit-section-count', self.modifiedCount ) );
 					self.api.stageSection( self.section, self.$content.val() );
 				} ).
 				// use input event too, Firefox doesn't fire keyup on many devices:
 				// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
 				on( 'keyup input', function() {
-					self.$( '.save, .confirm-save' ).prop( 'disabled', false );
+					self.$( '.save' ).prop( 'disabled', false );
 				} );
 			this.$prev = this.$( '.prev-section' ).
 				// can't use $.proxy because self.section changes
@@ -125,13 +127,13 @@
 				self.$( '.initial-bar' ).hide();
 				self.$( '.confirm-bar' ).show();
 			} );
-			this.$( '.confirm-save' ).on( 'click', $.proxy( self.api, 'save' ) );
+			this.$( '.confirm-save' ).on( 'click', $.proxy( this, '_save' ) );
 
 			this._loadSection( options.section );
 		},
 
 		hide: function() {
-			if ( !this.changedCount || window.confirm( mw.msg( 'mobile-frontend-edit-cancel-confirm' ) ) ) {
+			if ( !this.modifiedCount || window.confirm( mw.msg( 'mobile-frontend-edit-cancel-confirm' ) ) ) {
 				this._super();
 			}
 		},
@@ -140,7 +142,7 @@
 			var self = this;
 
 			this.$content.hide();
-			this.$loading.show();
+			this.$spinner.show();
 
 			this.$prev.prop( 'disabled', section === 0 );
 			this.$next.prop( 'disabled', section === this.sectionCount - 1 );
@@ -150,29 +152,66 @@
 				// prevent delayed response overriding content on multiple prev/next clicks
 				if ( data.section === section ) {
 					self.$content.show().val( data.content );
-					self.$loading.hide();
+					self.$spinner.hide();
 				}
 			} );
+		},
+
+		_save: function() {
+			var self = this;
+
+			this.$( '.confirm-bar' ).hide();
+			this.$( '.saving-bar' ).show();
+
+			this.api.save().
+				done( function() {
+					self.modifiedCount = 0;
+					self.hide();
+					popup.show( mw.msg( 'mobile-frontend-edit-success' ), 'toast' );
+				} ).
+				fail( function( err ) {
+					var msg;
+
+					if ( err === 'editconflict' ) {
+						msg = mw.msg( 'mobile-frontend-edit-error-conflict' );
+					} else {
+						msg = mw.msg( 'mobile-frontend-edit-error' );
+					}
+
+					popup.show( msg, 'toast error' );
+					self.$( '.saving-bar' ).hide();
+					self.$( '.initial-bar' ).show();
+				} );
 		}
 	} );
 
 	( function() {
-		if (
-			( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
-			mw.config.get( 'wgIsPageEditable' )
-		) {
-			$( '<button id="edit-page" class="inline">' ).
+		function addEditButton( section, container ) {
+			$( '<button class="edit-page inline">' ).
 				text( mw.msg( 'edit' ) ).
-				prependTo( '#content' ).
-				on( 'click', function() {
+				prependTo( container ).
+				on( 'click', function( ev ) {
+					// prevent folding section when clicking Edit
+					ev.stopPropagation();
+
 					new EditOverlay( {
 						pageId: mw.config.get( 'wgArticleId' ),
-						section: 0,
+						section: section,
 						// FIXME: possibly we should have a global Page instance with
 						// a method for fetching this
 						sectionCount: $( '.section' ).length + 1
 					} ).show();
 				} );
+		}
+
+		if (
+			( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
+			mw.config.get( 'wgIsPageEditable' )
+		) {
+			addEditButton( 0, '#content' );
+			$( '.section_heading' ).each( function( i ) {
+				addEditButton( i + 1, this );
+			} );
 		}
 	}() );
 

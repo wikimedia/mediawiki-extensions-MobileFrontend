@@ -5,7 +5,7 @@
       <li><button class="next-section">{{nextMsg}}</button>
   </ul>
 </div>
-<div class="loading"></div>
+<div class="spinner loading"></div>
 <textarea cols="40" rows="10"></textarea>
 <div class="buttonBar initial-bar">
   <button class="cancel">{{cancelMsg}}</button>
@@ -13,7 +13,10 @@
 </div>
 <div class="buttonBar confirm-bar">
   <p class="count"></p>
-  <p>{{{license}}}</p>
+  <p>{{{licenseMsg}}}</p>
   <button class="cancel">{{cancelMsg}}</button>
-  <button class="confirm-save" disabled>{{confirmMsg}}</button>
+  <button class="confirm-save">{{confirmMsg}}</button>
+</div>
+<div class="buttonBar saving-bar loading">
+  <p>{{waitMsg}}</p>
 </div>

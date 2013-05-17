@@ -108,7 +108,7 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   bottom: 0;
   width: 100%;
   border-top: 1px solid #ccc;
-  background: #f3f3f3;
+  background-color: #f3f3f3;
   text-align: center;
 }
 .mw-mf-overlay .buttonBar button {
