@@ -14,8 +14,12 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 	}
 
 	function execute( $par ) {
+		$ctx = MobileContext::singleton();
 		$this->setHeaders();
 		$output = $this->getOutput();
+		if ( $ctx->isBetaGroupMember() ) {
+			$output->addModules( 'mobile.mobilediff.scripts.beta' );
+		}
 
 		$this->revId = intval( $par );
 		$rev = Revision::newFromId( $this->revId );

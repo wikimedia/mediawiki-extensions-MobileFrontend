@@ -1,4 +1,4 @@
-( function( M, $ ) {
+( function( $, M ) {
 
 var m = M.require( 'diff' );
 
@@ -40,4 +40,4 @@ QUnit.test( 'makePrettyDiff', function() {
 	} );
 } );
 
-} )( mw.mobileFrontend, jQuery );
+} )( jQuery, mw.mobileFrontend );
