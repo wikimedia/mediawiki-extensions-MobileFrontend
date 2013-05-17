@@ -57,10 +57,12 @@ HTML;
 		}
 		$this->set( 'banners', $banners );
 	}
+
 	public function execute() {
 		$this->prepareCommonData();
 		$this->prepareData();
 		$this->prepareBannerData();
+		wfRunHooks( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
 	}
 
