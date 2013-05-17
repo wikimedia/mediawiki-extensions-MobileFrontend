@@ -3,7 +3,7 @@
 class SkinMobileWML extends SkinMobileBase {
 	public $skinname = 'SkinMobileWML';
 	public $stylename = 'SkinMobileWML';
-	public $template = 'SkinMobileTemplateWML';
+	public $template = 'MobileTemplateWML';
 
 	protected function prepareTemplate() {
 		$out = $this->getOutput();
@@ -12,7 +12,7 @@ class SkinMobileWML extends SkinMobileBase {
 	}
 }
 
-class SkinMobileTemplateWML extends BaseTemplate {
+class MobileTemplateWML extends BaseTemplate {
 	public function execute() {
 		echo '<?xml version="1.0" encoding="utf-8" ?>';
 		?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.3//EN"

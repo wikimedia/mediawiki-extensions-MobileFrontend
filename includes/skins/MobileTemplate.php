@@ -1,6 +1,6 @@
 <?php
 
-class SkinMobileTemplate extends MinervaTemplate {
+class MobileTemplate extends MinervaTemplate {
 	public function getMode() {
 		$context = MobileContext::singleton();
 		if ( $context->isAlphaGroupMember() ) {

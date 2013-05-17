@@ -1,7 +1,7 @@
 <?php
 
 class SkinMobile extends SkinMobileBase {
-	public $template = 'SkinMobileTemplate';
+	public $template = 'MobileTemplate';
 
 	protected function prepareTemplate() {
 		global $wgAppleTouchIcon;
