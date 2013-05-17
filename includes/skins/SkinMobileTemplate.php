@@ -37,7 +37,6 @@ class SkinMobileTemplate extends MinervaTemplate {
 		wfProfileIn( __METHOD__ );
 		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
 
-		$this->set( 'bodytext', $data['bodytext'] );
 		$this->set( 'bottomscripts', $data['bottomScripts'] );
 		if ( isset( $data['specialPageHeader'] ) ) {
 			$this->set( 'header', $data['specialPageHeader'] );
@@ -79,7 +78,7 @@ class SkinMobileTemplate extends MinervaTemplate {
 
 		$nav = array();
 
-		if ( $data['isBetaGroupMember'] && $wgMFNearby ) {
+		if ( MobileContext::singleton()->isBetaGroupMember() && $wgMFNearby ) {
 			$nav[] = $items['nearby'];
 		}
 

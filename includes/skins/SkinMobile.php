@@ -11,17 +11,11 @@ class SkinMobile extends SkinMobileBase {
 		$out = $this->getOutput();
 		$title = $this->getTitle();
 		$user = $this->getUser();
-		$tpl->set( 'title', $title );
-		$tpl->set( 'user', $user );
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
 
 		$device = $context->getDevice();
-
-		$tpl->set( 'action', $context->getRequest()->getText( 'action' ) );
-		$tpl->set( 'isAlphaGroupMember', $inAlpha );
-		$tpl->set( 'isBetaGroupMember', $inBeta );
 
 		// add head items
 		if ( $wgAppleTouchIcon !== false ) {
@@ -53,8 +47,6 @@ class SkinMobile extends SkinMobileBase {
 
 		// setup destinations for styles/scripts at top and at bottom
 		$tpl = $this->attachResources( $title, $tpl, $device );
-
-		$tpl->set( 'isSpecialPage', $title->isSpecialPage() );
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;

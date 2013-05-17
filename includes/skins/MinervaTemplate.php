@@ -39,7 +39,6 @@ HTML;
 	}
 
 	public function prepareData() {
-		$this->set( 'isSpecialPage', Title::newFromText( $this->data[ 'title' ] )->isSpecialPage() );
 		$this->set( 'prebodytext', '<h1>' . $this->data[ 'title' ] . '</h1>' );
 	}
 
@@ -122,7 +121,7 @@ HTML;
 	}
 
 	protected function renderFooter( $data ) {
-		if ( !$data['isSpecialPage'] ) {
+		if ( !$this->getSkin()->getTitle()->isSpecialPage() ) {
 		?>
 		<div id="footer">
 			<?php
