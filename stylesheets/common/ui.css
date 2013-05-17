@@ -171,6 +171,10 @@ input[type=submit] {
   border-radius: 0;
   border-right: none;
 }
+.header .button-bar li .button:disabled,
+.header .button-bar li button:disabled {
+  color: #9ea0a3;
+}
 .header .button-bar li:active .button,
 .header .button-bar li:active button {
   background-color: #e9e9ea;
