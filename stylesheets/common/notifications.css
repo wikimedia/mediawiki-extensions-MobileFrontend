@@ -45,7 +45,6 @@
 }
 #mf-notification.loading {
   background-position: 23px 50%;
-  background-repeat: no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -moz-background-size: 32px auto;
