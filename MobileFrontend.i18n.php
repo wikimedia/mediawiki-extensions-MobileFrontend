@@ -129,7 +129,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-refresh' => 'We found a more accurate location for you. Click here to refresh the list of nearby pages',
 	'mobile-frontend-nearby-error' => 'An unexpected error occurred whilst trying to find pages nearby',
 	'mobile-frontend-nearby-link' => 'Read this page in full',
-	'mobile-frontend-needs-photo' => 'Needs photo',
+	'mobile-frontend-needs-photo' => 'Visit this page to add an image',
 
 	// image donation
 	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
