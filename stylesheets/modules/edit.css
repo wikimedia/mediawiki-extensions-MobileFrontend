@@ -9,7 +9,7 @@
 .edit-overlay textarea {
   width: 100%;
   min-height: 50%;
-  padding: 8px 16px 5em;
+  padding: 10px 16px 5em;
   line-height: 1.5;
   border: none;
   resize: none;
@@ -20,4 +20,7 @@
 }
 .edit-overlay textarea:focus {
   outline: none;
+}
+.edit-overlay .confirm-bar {
+  display: none;
 }

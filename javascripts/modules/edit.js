@@ -88,15 +88,22 @@
 			var self = this;
 			this._super( options );
 
+			this.changed = false;
 			this.api = new EditApi( { pageId: options.pageId } );
 			this.sectionCount = options.sectionCount;
 			this.$loading = this.$( '.loading' );
 			this.$content = this.$( 'textarea' ).
-				// can't use $.proxy because self.section and self.$content change
 				on( 'change', function() {
+					self.changed = true;
 					self.api.stageSection( self.section, self.$content.val() );
+				} ).
+				// use input event too, Firefox doesn't fire keyup on many devices:
+				// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
+				on( 'keyup input', function() {
+					self.$( '.save, .confirm-save' ).prop( 'disabled', false );
 				} );
 			this.$prev = this.$( '.prev-section' ).
+				// can't use $.proxy because self.section changes
 				on( 'click', function() {
 					self._loadSection( self.section - 1 );
 				} );
@@ -104,9 +111,19 @@
 				on( 'click', function() {
 					self._loadSection( self.section + 1 );
 				} );
-			this.$( '.save' ).on( 'click', $.proxy( self.api, 'save' ) );
+			this.$( '.save' ).on( 'click', function() {
+				self.$( '.initial-bar' ).hide();
+				self.$( '.confirm-bar' ).show();
+			} );
+			this.$( '.confirm-save' ).on( 'click', $.proxy( self.api, 'save' ) );
 
 			this._loadSection( options.section );
+		},
+
+		hide: function() {
+			if ( !this.changed || confirm( 'i18n sure?' ) ) {
+				this._super();
+			}
 		},
 
 		_loadSection: function( section ) {
