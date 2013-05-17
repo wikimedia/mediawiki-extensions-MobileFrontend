@@ -2,7 +2,7 @@
 	var api = M.require( 'api' ),
 		cache = {};
 
-	function retrievePage( pageTitle, endpoint ) {
+	function retrievePage( pageTitle, endpoint, leadOnly ) {
 		var cachedPage = cache[ pageTitle ],
 			options = endpoint ? { url: endpoint, dataType: 'jsonp' } : {};
 
@@ -16,7 +16,7 @@
 				variant: mw.config.get( 'wgPreferredVariant' ),
 				redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
 				noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
-				sectionprop: 'level|line|anchor', sections: 'all'
+				sectionprop: 'level|line|anchor', sections: leadOnly ? 0 : 'all'
 			}, options ).then( function( r ) {
 				if ( r.error || !r.mobileview.sections ) {
 					cachedPage.reject( r );

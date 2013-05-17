@@ -19,6 +19,35 @@
   margin: 0 1px 0 0;
   border-bottom: 3px solid transparent;
 }
+.listThumb {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.listThumb.needsPhoto {
+  background-image: url(images/camera.png);
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 50% auto;
+  -o-background-size: 50% auto;
+  -webkit-background-size: 50% auto;
+  background-size: 50% auto;
+}
+.listThumbH {
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+.listThumbV {
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+}
 ul.mw-mf-watchlist-results {
   list-style: none;
 }
@@ -30,27 +59,9 @@ ul.mw-mf-watchlist-results li {
 }
 ul.mw-mf-watchlist-results li .listThumb {
   position: absolute;
-  background-repeat: no-repeat;
-  background-position: center center;
   width: 70px;
   height: 100%;
   margin: 0 0 0 -85px;
-}
-ul.mw-mf-watchlist-results li .listThumbH {
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: auto 100%;
-  -o-background-size: auto 100%;
-  -webkit-background-size: auto 100%;
-  background-size: auto 100%;
-}
-ul.mw-mf-watchlist-results li .listThumbV {
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  -webkit-background-size: 100% auto;
-  background-size: 100% auto;
 }
 ul.mw-mf-watchlist-results li a.title {
   display: block;
@@ -99,15 +110,6 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
 }
 ul.a-to-z li a.title {
   padding-left: 77px;
-}
-ul.a-to-z li .listThumb.needsPhoto {
-  background-image: url(images/camera.png);
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: 50% auto;
-  -o-background-size: 50% auto;
-  -webkit-background-size: 50% auto;
-  background-size: 50% auto;
 }
 .mw-mf-user {
   padding: 1px 0 0 20px;
