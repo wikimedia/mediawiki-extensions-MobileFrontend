@@ -190,7 +190,7 @@
 			$( '<button class="edit-page inline">' ).
 				text( mw.msg( 'edit' ) ).
 				prependTo( container ).
-				on( 'click', function( ev ) {
+				on( 'mousedown', function( ev ) {
 					// prevent folding section when clicking Edit
 					ev.stopPropagation();
 
