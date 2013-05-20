@@ -370,6 +370,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected function parseMainPage( DOMDocument $mainPage ) {
 		wfProfileIn( __METHOD__ );
 
+		// FIXME: Move to ZeroRatedMobileAccess extension
 		$zeroLandingPage = $mainPage->getElementById( 'zero-landing-page' );
 		$featuredArticle = $mainPage->getElementById( 'mp-tfa' );
 		$newsItems = $mainPage->getElementById( 'mp-itn' );
@@ -382,6 +383,7 @@ class MobileFormatter extends HtmlFormatter {
 		$content = $mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'mainpage' );
 
+		// FIXME: Move to ZeroRatedMobileAccess extension
 		if ( $zeroLandingPage ) {
 			$content->appendChild( $zeroLandingPage );
 		}

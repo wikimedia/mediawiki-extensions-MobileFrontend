@@ -101,6 +101,7 @@ class SkinMobileBase extends SkinMinerva {
 			$tpl = $this->prepareTemplate();
 			$tpl->set( 'headelement', $out->headElement( $this ) );
 			$tpl->set( 'bodytext', $html );
+			// FIXME: Move to ZeroRatedMobileAccess extension
 			$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
 			$notice = '';
 			wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
