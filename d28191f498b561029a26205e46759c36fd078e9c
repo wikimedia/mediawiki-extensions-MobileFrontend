@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxYslCw8",
+        "filename": "tests/javascripts/fixtures.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-20T20:29:32Z",
+      "side": 1,
+      "message": "please stop creating variables prefixed with \u0027wg\u0027 that are not mediawiki global config variables.",
+      "revId": "d28191f498b561029a26205e46759c36fd078e9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
