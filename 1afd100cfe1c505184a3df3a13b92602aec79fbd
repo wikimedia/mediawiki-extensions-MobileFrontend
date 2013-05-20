@@ -16,6 +16,24 @@
       "revId": "1afd100cfe1c505184a3df3a13b92602aec79fbd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dxc62AT0",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T22:27:53Z",
+      "side": 1,
+      "message": "Nice catch! Thanks Krinkle - will do a FIXUP :)",
+      "parentUuid": "DxY4QeVA",
+      "revId": "1afd100cfe1c505184a3df3a13b92602aec79fbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
