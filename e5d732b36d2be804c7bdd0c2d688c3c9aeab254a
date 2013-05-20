@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dxct7lIg",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "can you explain this a bit better?\nWe talked about renaming initialize to postRender (plus you also add a FIXME in mf-view.js) - it would be strange for Api to have a postRender function no?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxSv0uO8",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "pedantically could we call this editor.js ?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxUupRN4",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "We should add documentation. Also should it not be EditSectionApi ?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxcuFVF0",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "of course ;-)\nAlso can we trust that this property will exist?\nI wonder if we should add more protection.\n\"resp.query.pages[ self.pageId ].revisions[0].timestamp\" is asking for trouble...",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxQuA3Eg",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "Please include the word \u0027API\u0027 in FIXME to add to its shame. Maybe link to this monstrosity:\nhttp://www.mediawiki.org/wiki/API:Edit#Possible_errors",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dxcvu9CI",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "Should we not do this in initialize?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxevpMB0",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "sections.pop could be undefined if stageSection is never called... let\u0027s bear this in mind and at least throw an exception if this happens.",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxcvXFEk",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "I would prefer this in a separate file. modules/overlays/editor.js ?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxavB6IQ",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "just a note (not sure exactly how to solve) - I dislike our pattern of using _ as a prefix. Seems like in future we could make use of the closure to only surface public functions.",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxYu.rPk",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "why the additional closure here?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxStXmMo",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 1,
+      "message": "This has been annoying me - \n\nhttps://gerrit.wikimedia.org/r/#/c/64358/1/javascripts/specials/mobilediff.js uses a config variable to decide whether - maybe this is a pattern we could adopt (maybe a parameter of define?)\n\nfunction define( name, obj, enableForTestingOnly )",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

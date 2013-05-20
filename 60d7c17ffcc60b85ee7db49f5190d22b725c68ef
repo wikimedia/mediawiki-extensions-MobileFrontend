@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxYtiLNk",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-20T17:52:17Z",
+      "side": 0,
+      "message": "This was introduced for nearby preview. Just to check - can we be sure any open toast messages created from the article do not appear above the overlay?",
+      "revId": "60d7c17ffcc60b85ee7db49f5190d22b725c68ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
