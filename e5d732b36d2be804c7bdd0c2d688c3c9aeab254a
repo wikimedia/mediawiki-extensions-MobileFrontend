@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DxautaDM",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "This would stay as initialize. So both View and Api would have an initialize function which would consistently act as a constructor which is invoked only once, when the object is created.",
+      "parentUuid": "Dxct7lIg",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxSv0uO8",
         "filename": "javascripts/modules/edit.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-20T17:52:17Z",
       "side": 1,
       "message": "pedantically could we call this editor.js ?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxasXJ0M",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "We can.",
+      "parentUuid": "DxSv0uO8",
       "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "DxYuqLBg",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "It allows editing multiple sections. I don\u0027t think we\u0027ll have another EditSthApi so I just prefer a shorter name.",
+      "parentUuid": "DxUupRN4",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxcuFVF0",
         "filename": "javascripts/modules/edit.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-05-20T17:52:17Z",
       "side": 1,
       "message": "of course ;-)\nAlso can we trust that this property will exist?\nI wonder if we should add more protection.\n\"resp.query.pages[ self.pageId ].revisions[0].timestamp\" is asking for trouble...",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dxesa0Hk",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "We need all those values. Edit API requires me to provide a timestamp.",
+      "parentUuid": "DxcuFVF0",
       "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "DxSsV2Eg",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "This is a separate thing. I\u0027m just wondering if I should accommodate for HTTP 404 or 500 or even a timeout here.",
+      "parentUuid": "DxQuA3Eg",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "Dxcvu9CI",
         "filename": "javascripts/modules/edit.js",
         "patchSetId": 1
@@ -98,6 +188,24 @@
       "writtenOn": "2013-05-20T17:52:17Z",
       "side": 1,
       "message": "Should we not do this in initialize?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxYsGrCA",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "This puts all the staged sections in an array for easy iteration. In initialize, there are no staged sections yet.",
+      "parentUuid": "Dxcvu9CI",
       "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "Dxcsac2w",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "In theory, this should not happen, but you\u0027re right. I\u0027ll actually make save do nothing if there\u0027s nothing to save.",
+      "parentUuid": "DxevpMB0",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxcvXFEk",
         "filename": "javascripts/modules/edit.js",
         "patchSetId": 1
@@ -132,6 +258,24 @@
       "writtenOn": "2013-05-20T17:52:17Z",
       "side": 1,
       "message": "I would prefer this in a separate file. modules/overlays/editor.js ?",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxStq.O4",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "I\u0027m against the overlays directory, it separates source code based on the presentation instead of function. We could do modules/editor/editor_overlay.js and modules/editor/editor_api.js, how does it sound?",
+      "parentUuid": "DxcvXFEk",
       "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "DxctNVJw",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "The problem with using closures like that is that you can\u0027t use prototypal inheritance. In other words, you\u0027d need to create private functions every time you create a new object. That\u0027s why I assume that everything is public and use _ as a suggestion, just like Python does. That\u0027s what Backbone does too, when I looked at its source.",
+      "parentUuid": "DxavB6IQ",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxYu.rPk",
         "filename": "javascripts/modules/edit.js",
         "patchSetId": 1
@@ -172,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "DxUsjBME",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "So that I don\u0027t put a var accidentally here. Also, according to our coding rules, addEditButton would have to go to the top of the file too, which would make reading the code harder I guess.",
+      "parentUuid": "DxYu.rPk",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxStXmMo",
         "filename": "javascripts/modules/edit.js",
         "patchSetId": 1
@@ -183,6 +363,24 @@
       "writtenOn": "2013-05-20T17:52:17Z",
       "side": 1,
       "message": "This has been annoying me - \n\nhttps://gerrit.wikimedia.org/r/#/c/64358/1/javascripts/specials/mobilediff.js uses a config variable to decide whether - maybe this is a pattern we could adopt (maybe a parameter of define?)\n\nfunction define( name, obj, enableForTestingOnly )",
+      "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxesxMAw",
+        "filename": "javascripts/modules/edit.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 1,
+      "message": "Yeah, why not. Where\u0027s wgMFTestMode set? In a RL test hook? I\u0027d change it in a separate commit though.",
+      "parentUuid": "DxStXmMo",
       "revId": "e5d732b36d2be804c7bdd0c2d688c3c9aeab254a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

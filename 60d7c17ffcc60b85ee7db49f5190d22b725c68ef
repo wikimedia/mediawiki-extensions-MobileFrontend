@@ -16,6 +16,24 @@
       "revId": "60d7c17ffcc60b85ee7db49f5190d22b725c68ef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxQsle7A",
+        "filename": "less/common/mf-navigation.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-20T18:57:40Z",
+      "side": 0,
+      "message": "I\u0027m not sure if I follow. Why do we want to hide toasts in overlays?",
+      "parentUuid": "DxYtiLNk",
+      "revId": "60d7c17ffcc60b85ee7db49f5190d22b725c68ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
