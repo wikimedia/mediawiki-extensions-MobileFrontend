@@ -1,47 +1,11 @@
 <?php
 
 class MobileTemplate extends MinervaTemplate {
-	public function getMode() {
-		$context = MobileContext::singleton();
-		if ( $context->isAlphaGroupMember() ) {
-			return 'alpha';
-		} else if ( $context->isBetaGroupMember() ) {
-			return 'beta';
-		} else {
-			return 'stable';
-		}
-	}
-
-	public function getSearchPlaceholderText() {
-		$mode = $this->getMode();
-		if ( $mode === 'alpha' ) {
-			return wfMessage( 'mobile-frontend-placeholder-alpha' )->escaped();
-		} else if ( $mode === 'beta' ) {
-			return wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
-		} else {
-			return wfMessage( 'mobile-frontend-placeholder' )->escaped();
-		}
-	}
-
 	/**
 	 * Constructor
 	 */
 	public function __construct() {
 		parent::__construct();
-	}
-
-	public function prepareData() {
-		global $wgExtensionAssetsPath;
-		$data = $this->data;
-
-		wfProfileIn( __METHOD__ );
-		$this->setRef( 'wgExtensionAssetsPath', $wgExtensionAssetsPath );
-
-		$this->set( 'bottomscripts', $data['bottomScripts'] );
-		if ( isset( $data['specialPageHeader'] ) ) {
-			$this->set( 'header', $data['specialPageHeader'] );
-		}
-		wfProfileOut( __METHOD__ );
 	}
 
 	public function getPersonalTools() {

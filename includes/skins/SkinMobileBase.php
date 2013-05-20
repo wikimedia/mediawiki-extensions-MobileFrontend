@@ -10,6 +10,32 @@ class SkinMobileBase extends SkinMinerva {
 	/** @var array of classes that should be present on the body tag */
 	private $pageClassNames = array();
 
+	public function prepareData( BaseTemplate $tpl ) {
+		global $wgMFEnableSiteNotice;
+		parent::prepareData( $tpl );
+		$context = MobileContext::singleton();
+		$search = $tpl->data['searchBox'];
+		if ( $context->isAlphaGroupMember() ) {
+			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-alpha' )->escaped();
+		} else if ( $context->isBetaGroupMember() ) {
+			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
+		}
+		$tpl->set( 'searchBox', $search );
+
+		$banners = '';
+		// FIXME: Move to Zero extension MinervaPreRender hook
+		if ( isset( $tpl->data['zeroRatedBanner'] ) ) {
+			$banners .= $tpl->data['zeroRatedBanner'];
+		}
+		if ( isset( $tpl->data['notice'] ) ) {
+			$banners .= $tpl->data['notice'];
+		}
+		if ( $wgMFEnableSiteNotice ) {
+			$banners .= '<div id="siteNotice"></div>';
+		}
+		$tpl->set( 'banners', $banners );
+	}
+
 	public function getSkinConfigVariables() {
 		global $wgCookiePath;
 		$ctx = MobileContext::singleton();
