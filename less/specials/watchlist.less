@@ -29,6 +29,23 @@
 @thumbSpace: @thumbWidth + 15px;
 @ragWidth: 8px;
 
+.listThumb {
+	background-repeat: no-repeat;
+	background-position: center center;
+	&.needsPhoto {
+		background-image: url(images/camera.png);
+		.background-size( 50%, auto );
+	}
+}
+
+.listThumbH {
+	.background-size(auto, 100%);
+}
+
+.listThumbV {
+	.background-size(100%, auto);
+}
+
 ul.mw-mf-watchlist-results {
 	list-style: none;
 
@@ -40,19 +57,9 @@ ul.mw-mf-watchlist-results {
 
 		.listThumb {
 			position: absolute;
-			background-repeat: no-repeat;
-			background-position: center center;
 			width: @thumbWidth;
 			height: 100%;
 			margin: 0 0 0 -@thumbSpace;
-		}
-
-		.listThumbH {
-			.background-size(auto, 100%);
-		}
-
-		.listThumbV {
-			.background-size(100%, auto);
 		}
 
 		a.title {
@@ -108,11 +115,6 @@ ul.a-to-z {
 	li {
 		a.title {
 			padding-left: (@thumbSpace - @ragWidth);
-		}
-
-		.listThumb.needsPhoto {
-			background-image: url(images/camera.png);
-			.background-size( 50%, auto );
 		}
 	}
 }

@@ -45,3 +45,9 @@ button.refresh {
 .client-js .noscript {
   display: none;
 }
+.mw-mf-overlay .content .listThumb {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
