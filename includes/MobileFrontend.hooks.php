@@ -20,7 +20,6 @@ class MobileFrontendHooks {
 	 * @return boolean
 	 */
 	public static function onEnableMobileModules( $out, $mode ) {
-		global $wgResourceModules;
 		if ( $mode === 'alpha' && $out->getTitle()->isSpecialPage() ) {
 			$out->addModules(
 				array(
@@ -275,7 +274,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgMFMobileResourceBoilerplate, $wgMFLogEvents, $wgResourceModules, $localBasePath;
+		global $wgMFMobileResourceBoilerplate, $wgMFLogEvents, $wgResourceModules;
 
 		$detector = DeviceDetection::factory();
 		foreach ( $detector->getCssFiles() as $file ) {

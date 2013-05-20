@@ -117,8 +117,6 @@ class SkinMobileBase extends SkinMinerva {
 	 */
 	protected function prepareTemplate() {
 		wfProfileIn( __METHOD__ );
-		$ctx = MobileContext::singleton();
-		$req = $this->getRequest();
 
 		$tpl = $this->setupTemplate( $this->template );
 		$tpl->setRef( 'skin', $this );
