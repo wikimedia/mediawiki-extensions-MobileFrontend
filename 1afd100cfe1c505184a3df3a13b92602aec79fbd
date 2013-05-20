@@ -34,6 +34,24 @@
       "revId": "1afd100cfe1c505184a3df3a13b92602aec79fbd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dxe6FvVw",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 278,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-20T22:29:35Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/64633",
+      "parentUuid": "Dxc62AT0",
+      "revId": "1afd100cfe1c505184a3df3a13b92602aec79fbd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
