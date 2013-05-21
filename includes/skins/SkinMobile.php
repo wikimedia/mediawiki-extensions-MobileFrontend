@@ -148,10 +148,10 @@ HTML;
 
 		if ( WebRequest::detectProtocol() != 'https' && $wgMFForceSecureLogin ) {
 			$ctx = MobileContext::singleton();
-			$loginUrl = SpecialPage::getTitleFor( 'UserLogin' )->getFullURL( $query );
+			$loginUrl = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
 			return $ctx->getMobileUrl( $loginUrl, $wgMFForceSecureLogin );
 		}
-		return SpecialPage::getTitleFor( 'UserLogin' )->getLocalURL( $query );
+		return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
 	}
 
 	/**
@@ -340,7 +340,7 @@ HTML;
 			 // note returnto is not set for mobile (per product spec)
 			$returntoquery[ 'welcome' ] = 'yes';
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
-			$url = SpecialPage::getTitleFor( 'UserLogin' )->getFullURL( $query );
+			$url = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
 			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
 			$text = wfMessage( 'mobile-frontend-main-menu-login' )->escaped();
 		}

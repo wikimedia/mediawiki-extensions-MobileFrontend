@@ -31,7 +31,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 			$query['returntoquery'] = $actionQuery['returntoquery'];
 		}
 
-		$signupLink = Linker::link( SpecialPage::getTitleFor( 'UserLogin' ),
+		$signupLink = Linker::link( SpecialPage::getTitleFor( 'Userlogin' ),
 			wfMessage( 'mobile-frontend-main-menu-account-create' )->text(),
 			array( 'class'=> 'mw-mf-create-account' ), $query );
 
