@@ -136,12 +136,19 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// Important: This module is loaded on both mobile and desktop skin
-	'mobile.startup' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-		),
+	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'scripts' => array(
 			'javascripts/common/polyfills.js',
 			'javascripts/common/modules.js',
+		),
+		'position' => 'top',
+	),
+
+	'mobile.startup' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.head',
+		),
+		'scripts' => array(
 			'javascripts/externals/hogan.js',
 			'javascripts/common/eventemitter.js',
 			'javascripts/common/mf-application.js',
@@ -604,10 +611,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.mobilediff.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.mobilediff.scripts.beta' => $wgMFMobileResourceBoilerplate + array(
+		// should be no dependencies except mobile.head and position to top to avoid flash of unstyled content
 		'dependencies' => array(
-			'mobile.startup',
+			'mobile.head',
 		),
+		'position' => 'top',
 		'scripts' => array(
 			'javascripts/externals/jsdiff.js',
 			'javascripts/specials/mobilediff.js',
