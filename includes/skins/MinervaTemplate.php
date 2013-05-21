@@ -1,66 +1,7 @@
 <?php
 class MinervaTemplate extends BaseTemplate {
-	public function getSearchPlaceholderText() {
-		return wfMessage( 'mobile-frontend-placeholder' )->escaped();
-	}
-
-	private function prepareCommonData() {
-		// set defaults
-		if ( !isset( $this->data['postbodytext'] ) ) {
-			$this->set( 'postbodytext', '' ); // not set in desktop skin
-		}
-		$searchBox = $this->makeSearchInput(
-			array(
-				'id' => 'searchInput',
-				'class' => 'search',
-				'autocomplete' => 'off',
-				'placeholder' => $this->getSearchPlaceholderText(),
-			)
-		);
-		$script = $this->data['wgScript'];
-		$searchButton = $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit' ) );
-		$header = <<<HTML
-<form action="{$script}" class="search-box">
-	{$searchBox}
-	{$searchButton}
-</form>
-HTML;
-		$this->set( 'header', $header );
-
-		// menu button
-		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
-		$this->set( 'menuButton',
-			Html::element( 'a', array(
-			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
-			'href' => $url,
-			'id'=> 'mw-mf-main-menu-button',
-			) )
-		);
-	}
-
-	public function prepareData() {
-		$this->set( 'prebodytext', '<h1>' . $this->data[ 'title' ] . '</h1>' );
-	}
-
-	private function prepareBannerData() {
-		global $wgMFEnableSiteNotice;
-		$banners = '';
-		if ( isset( $this->data['zeroRatedBanner'] ) ) { // FIXME: Add hook and move to Zero extension?
-			$banners .= $this->data['zeroRatedBanner'];
-		}
-		if ( isset( $this->data['notice'] ) ) {
-			$banners .= $this->data['notice'];
-		}
-		if ( $wgMFEnableSiteNotice ) {
-			$banners .= '<div id="siteNotice"></div>';
-		}
-		$this->set( 'banners', $banners );
-	}
-
 	public function execute() {
-		$this->prepareCommonData();
-		$this->prepareData();
-		$this->prepareBannerData();
+		$this->getSkin()->prepareData( $this );
 		wfRunHooks( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
 	}
@@ -139,6 +80,7 @@ HTML;
 	}
 
 	protected function render( $data ) { // FIXME: replace with template engines
+		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		$languages = $this->getLanguages();
 		$variants = $this->getLanguageVariants();
 		$languageData = array(
@@ -173,7 +115,18 @@ HTML;
 				<div class="header">
 				<?php
 					echo $this->html( 'menuButton' );
-					echo $this->html( 'header' );
+					if ( $isSpecialPage ) {
+						echo $data['specialPageHeader'];
+					} else {
+						?>
+						<form action="<?php echo $data['wgScript'] ?>" class="search-box">
+						<?php
+						echo $this->makeSearchInput( $data['searchBox'] );
+						echo $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit' ) );
+						?>
+						</form>
+						<?php
+					}
 				?>
 					<ul id="mw-mf-menu-page">
 						<?php
@@ -186,7 +139,10 @@ HTML;
 				<div class='show' id='content_wrapper'>
 					<div id="content" class="content">
 						<?php
-							echo $data['prebodytext'];
+							if ( !$isSpecialPage ) {
+								echo $data['prebodytext'];
+								echo $data['talklink'];
+							}
 							echo $data[ 'bodytext' ];
 							echo $this->renderLanguages( $languageData );
 							echo $data['postbodytext'];

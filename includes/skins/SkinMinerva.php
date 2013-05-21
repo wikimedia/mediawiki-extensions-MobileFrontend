@@ -24,6 +24,57 @@ class SkinMinerva extends SkinTemplate {
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
 
+	public function prepareData( BaseTemplate $tpl ) {
+		$title = $this->getTitle();
+		$user = $this->getUser();
+		$out = $this->getOutput();
+		if ( $title->isSpecial( 'Userlogin' ) ) {
+			$pageHeading = $this->getLoginPageHeading();
+		} else if ( $title->isMainPage() ) {
+			$pageHeading = $user->isLoggedIn() ?
+				wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() : '';
+		} else {
+			$pageHeading = $out->getPageTitle();
+		}
+
+		$htmlHeader = $out->getProperty( 'mobile.htmlHeader' );
+		if ( $title->isSpecialPage() ) {
+			if ( !$htmlHeader ) {
+				$htmlHeader = Html::element( 'h1', array(), $pageHeading );
+			}
+			$tpl->set( 'specialPageHeader', $htmlHeader );
+		} else {
+			$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading );
+			$tpl->set( 'prebodytext', $preBodyText );
+		}
+		if ( !isset( $tpl->data['talklink'] ) ) {
+			$tpl->set( 'talklink', '' );
+		}
+
+		// set defaults
+		if ( !isset( $this->data['postbodytext'] ) ) {
+			$tpl->set( 'postbodytext', '' ); // not currently set in desktop skin
+		}
+
+		$searchBox = array(
+			'id' => 'searchInput',
+			'class' => 'search',
+			'autocomplete' => 'off',
+			'placeholder' =>  wfMessage( 'mobile-frontend-placeholder' )->escaped(),
+		);
+		$tpl->set( 'searchBox', $searchBox );
+
+		// menu button
+		$url = SpecialPage::getTitleFor( 'MobileMenu' )->getLocalUrl() . '#mw-mf-page-left';
+		$tpl->set( 'menuButton',
+			Html::element( 'a', array(
+			'title' => wfMessage( 'mobile-frontend-main-menu-button-tooltip' ),
+			'href' => $url,
+			'id'=> 'mw-mf-main-menu-button',
+			) )
+		);
+	}
+
 	/**
 	 * Returns array of config variables that should be added only to this skin for use in javascript
 	 * @return Array

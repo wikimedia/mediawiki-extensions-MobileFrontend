@@ -164,52 +164,35 @@ HTML;
 		$isSpecialPage = $title->isSpecialPage();
 		$isMainPage = $title->isMainPage();
 		$user = $this->getUser();
-		$userLogin = $title->isSpecial( 'Userlogin' );
 		$out = $this->getOutput();
 		$ctx = MobileContext::singleton();
 		$inAlpha = $ctx->isAlphaGroupMember();
 
-		if ( $userLogin ) {
-			$pageHeading = $this->getLoginPageHeading();
-		} else {
-			$pageHeading = $out->getPageTitle();
-		}
-
-		$preBodyText = '';
 		$postBodyText = '';
 		if ( !$isSpecialPage ) {
-			$headingOptions = array();
-			if ( $isMainPage ) {
-				$pageHeading = $user->isLoggedIn() ?
-					wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() : '';
-			} else {
-				$headingOptions = array( 'id' => 'section_0' );
-			}
-			// prepend heading to articles
-			if ( $pageHeading ) {
-				$preBodyText = Html::rawElement( 'h1', $headingOptions, $pageHeading );
-				// talk page link for logged in alpha users
-				if ( $inAlpha && $user->isLoggedIn() && !$title->isTalkPage() ) {
-					$talkTitle = $title->getTalkPage();
-					if ( $talkTitle->getArticleID() ) {
-						$dbr = wfGetDB( DB_SLAVE );
-						$numTopics = $dbr->selectField( 'page_props', 'pp_value',
-							array( 'pp_page' => $talkTitle->getArticleID(), 'pp_propname' => 'page_top_level_section_count' ),
-							__METHOD__
-						);
-					} else {
-						$numTopics = 0;
-					}
-					if ( $numTopics ) {
-						$talkLabel = $this->getLanguage()->formatNum( $numTopics );
-					} else {
-						$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
-					}
-					// @todo: Redlink support when we have good editing
-					$preBodyText .= Html::element( 'a',
-						array( 'href' => $talkTitle->getLocalURL(), 'id' => 'talk' ),
-						$talkLabel );
+
+			// talk page link for logged in alpha users
+			if ( $inAlpha && $user->isLoggedIn() && !$title->isTalkPage() ) {
+				$talkTitle = $title->getTalkPage();
+				if ( $talkTitle->getArticleID() ) {
+					$dbr = wfGetDB( DB_SLAVE );
+					$numTopics = $dbr->selectField( 'page_props', 'pp_value',
+						array( 'pp_page' => $talkTitle->getArticleID(), 'pp_propname' => 'page_top_level_section_count' ),
+						__METHOD__
+					);
+				} else {
+					$numTopics = 0;
 				}
+				if ( $numTopics ) {
+					$talkLabel = $this->getLanguage()->formatNum( $numTopics );
+				} else {
+					$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
+				}
+				// @todo: Redlink support when we have good editing
+				$talkLink = Html::element( 'a',
+					array( 'href' => $talkTitle->getLocalURL(), 'id' => 'talk' ),
+					$talkLabel );
+				$tpl->set( 'talklink', $talkLink );
 			}
 
 			// add last modified timestamp
@@ -227,15 +210,6 @@ HTML;
 			), $lastModified );
 		}
 
-		$htmlHeader = $this->getOutput()->getProperty( 'mobile.htmlHeader' );
-		if ( $isSpecialPage ) {
-			if ( !$htmlHeader ) {
-				$htmlHeader = Html::element( 'h1', array(), $pageHeading );
-			}
-			$tpl->set( 'specialPageHeader', $htmlHeader );
-		}
-
-		$tpl->set( 'prebodytext', $preBodyText );
 		$tpl->set( 'postbodytext', $postBodyText );
 	}
 
@@ -282,7 +256,7 @@ HTML;
 		);
 		$bottomScripts .= $out->getBottomScripts();
 
-		$tpl->set( 'bottomScripts', $bottomScripts );
+		$tpl->set( 'bottomscripts', $bottomScripts );
 		return $tpl;
 	}
 
