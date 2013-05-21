@@ -9,15 +9,9 @@ class MobileTemplate extends MinervaTemplate {
 	}
 
 	public function getPersonalTools() {
-		global $wgMFNearby;
 		$data = $this->data;
 
 		$items = array(
-			'nearby' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
-				'href' => $data['nearbyURL'],
-				'class' => 'icon-nearby jsonly',
-			),
 			'watchlist' => array(
 				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
 				'href' => $data['watchlistUrl'],
@@ -42,10 +36,6 @@ class MobileTemplate extends MinervaTemplate {
 
 		$nav = array();
 
-		if ( MobileContext::singleton()->isBetaGroupMember() && $wgMFNearby ) {
-			$nav[] = $items['nearby'];
-		}
-
 		$nav[] = $items['watchlist'];
 		$nav[] = $items['uploads'];
 
@@ -56,6 +46,7 @@ class MobileTemplate extends MinervaTemplate {
 	}
 
 	public function getDiscoveryTools() {
+		global $wgMFNearby;
 		$data = $this->data;
 		$items = array(
 			'home' => array(
@@ -69,7 +60,15 @@ class MobileTemplate extends MinervaTemplate {
 				'class' => 'icon-random',
 				'id' => 'randomButton',
 			),
+			'nearby' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
+				'href' => $data['nearbyURL'],
+				'class' => 'icon-nearby jsonly',
+			),
 		);
+		if ( !MobileContext::singleton()->isBetaGroupMember() || !$wgMFNearby ) {
+			unset( $items['nearby'] );
+		}
 
 		return $items;
 	}
