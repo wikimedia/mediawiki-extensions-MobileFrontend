@@ -14,12 +14,16 @@ class SkinMobileBase extends SkinMinerva {
 		global $wgMFEnableSiteNotice;
 		parent::prepareData( $tpl );
 		$context = MobileContext::singleton();
+		$menuHeaders = true;
 		$search = $tpl->data['searchBox'];
 		if ( $context->isAlphaGroupMember() ) {
 			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-alpha' )->escaped();
 		} else if ( $context->isBetaGroupMember() ) {
 			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
+		} else { // stable mode
+			$menuHeaders = false;
 		}
+		$tpl->set( '_show_menu_headers', $menuHeaders );
 		$tpl->set( 'searchBox', $search );
 
 		$banners = '';

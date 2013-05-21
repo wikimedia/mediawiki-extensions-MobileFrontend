@@ -90,17 +90,28 @@ class MinervaTemplate extends BaseTemplate {
 			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
 			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
 		);
+		$showMenuHeaders = isset( $this->data['_show_menu_headers'] ) && $this->data['_show_menu_headers'];
 
 		// begin rendering
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
 			<div id="mw-mf-page-left">
+			<?php if ( $showMenuHeaders ) { ?>
+				<h2><?php echo wfMessage( 'mobile-frontend-main-menu-discovery' )->text() ?></h2>
+			<?php } ?>
 				<ul id="mw-mf-menu-main">
 				<?php
 				foreach( $this->getDiscoveryTools() as $key => $val ):
 					echo $this->makeListItem( $key, $val );
 				endforeach;
+				?>
+				</ul>
+				<?php if ( $showMenuHeaders ) { ?>
+				<h2><?php echo wfMessage( 'mobile-frontend-main-menu-personal' )->text() ?></h2>
+				<?php } ?>
+				<ul>
+				<?php
 				foreach( $this->getPersonalTools() as $key => $val ):
 					echo $this->makeListItem( $key, $val );
 				endforeach;
