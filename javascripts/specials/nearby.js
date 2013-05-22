@@ -35,19 +35,40 @@ function distanceMessage( d ) {
 
 $( function() {
 	var supported = M.supportsGeoLocation(),
-		popup = M.require( 'notifications' ),
 		nav = M.require( 'navigation' ),
 		View = M.require( 'view' ),
-		errorHtml = $( '#mw-mf-nearby' ).html(),
+		errorMessages = {
+			empty: {
+				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
+				guidance: mw.msg( 'mobile-frontend-nearby-noresults-guidance' )
+			},
+			location: {
+				heading: mw.msg( 'mobile-frontend-nearby-lookup-ui-error' ),
+				guidance: mw.msg( 'mobile-frontend-nearby-lookup-ui-error-guidance' )
+			},
+			server: {
+				heading: mw.msg( 'mobile-frontend-nearby-error' ),
+				guidance: mw.msg( 'mobile-frontend-nearby-error-guidance' )
+			},
+			// recycle it's already in html
+			incompatible: {
+				heading: $( '#mw-mf-nearby .noscript h2' ).text(),
+				guidance: $( '#mw-mf-nearby .noscript p' ).text()
+			}
+		},
 		curLocation,
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
 		Nearby = View.extend( {
 			template: M.template.get( 'articleList' ),
-			renderError: function() {
-				this.$el.html( errorHtml );
-				this.$( '.noscript' ).removeClass( 'noscript' );
+			/**
+			 * Renders an error in the existing view
+			 *
+			 * @param {String} type A string that identifies a particular type of error message
+			 */
+			renderError: function( type ) {
+				this.render( { error: errorMessages[ type ] } );
 			},
 			openPage: function( ev ) {
 				// help back button work
@@ -164,13 +185,10 @@ $( function() {
 			if ( pages.length > 0 ) {
 				render( $content, pages );
 			} else {
-				$content.empty();
-				$( '<div class="empty content">' ).
-					text( mw.message( 'mobile-frontend-nearby-noresults' ).plain() ).
-					appendTo( $content );
+				overlay.renderError( 'empty' );
 			}
 		} ).fail( function() {
-			$( '#mw-mf-nearby' ).addClass( 'alert error content' ).text( mw.message( 'mobile-frontend-nearby-error' ) );
+			overlay.renderError( 'server' );
 		} );
 	}
 
@@ -191,10 +209,11 @@ $( function() {
 			completeRefresh();
 		},
 		function() {
-			popup.show( mw.message( 'mobile-frontend-nearby-lookup-error' ).plain(), 'toast' );
+			overlay.renderError( 'location' );
 			completeRefresh();
 		},
 		{
+			timeout: 10000,
 			enableHighAccuracy: true
 		} );
 	}
@@ -222,7 +241,7 @@ $( function() {
 			init();
 		}
 	} else {
-		overlay.renderError();
+		overlay.renderError( 'incompatible' );
 	}
 
 	menu = $( '<li>' ).appendTo( nav.getPageMenu() );

@@ -4,6 +4,17 @@
   padding: 8px;
   border-bottom: solid 1px #e3e3e3;
 }
+.error {
+  color: #C85353;
+  background-color: #FAE1E1;
+  border: none;
+}
+.error .content {
+  margin-top: 0;
+}
+.error .content p {
+  margin-bottom: 0;
+}
 ul.a-to-z li .proximity {
   font-size: .8em;
   text-transform: none;

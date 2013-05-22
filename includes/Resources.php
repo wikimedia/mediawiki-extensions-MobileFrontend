@@ -542,13 +542,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			'mobile-frontend-nearby-error',
+			'mobile-frontend-nearby-error-guidance',
 			'mobile-frontend-nearby-refresh',
 			'mobile-frontend-nearby-title',
 			'mobile-frontend-nearby-loading',
 			'mobile-frontend-nearby-distance',
 			'mobile-frontend-nearby-distance-meters',
-			'mobile-frontend-nearby-lookup-error',
+			'mobile-frontend-nearby-lookup-ui-error',
+			'mobile-frontend-nearby-lookup-ui-error-guidance',
 			'mobile-frontend-nearby-noresults',
+			'mobile-frontend-nearby-noresults-guidance',
 			'mobile-frontend-nearby-link',
 		),
 		'scripts' => array(

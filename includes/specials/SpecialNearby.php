@@ -26,13 +26,23 @@ class SpecialNearby extends UnlistedSpecialMobilePage {
 					'id' => 'mw-mf-nearby',
 				)
 			) .
-			Html::element( 'div',
+			Html::openElement( 'div',
 				array(
-					'class' => 'noscript content error',
-				),
-				wfMessage( 'mobile-frontend-nearby-requirements' )->escaped()
+					'class' => 'noscript error alert',
+				)
 			) .
-			Html::closeElement( 'div' );
+			Html::openElement( 'div',
+				array(
+					'class' => 'content',
+				)
+			) .
+			Html::element( 'h2', array(),
+				wfMessage( 'mobile-frontend-nearby-requirements' ) ) .
+			Html::element( 'p', array(),
+				wfMessage( 'mobile-frontend-nearby-requirements-guidance' ) ) .
+			Html::closeElement( 'div' ) . // .content
+			Html::closeElement( 'div' ) . // .noscript
+			Html::closeElement( 'div' ); // #mw-mf-nearby
 
 		$output->addHTML( $html );
 	}
