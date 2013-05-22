@@ -495,6 +495,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.nearby.previews' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.nearby.scripts',
+			'mobile.beta.common',
 		),
 		'messages' => array(
 			// preview.js
@@ -524,10 +525,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
+			'mobile.stable',
 			'mobile.nearby.styles',
 			'mobile.nearby.plumbing',
 			'jquery.json',
-			'mobile.beta.common',
 		),
 		'messages' => array(
 			'mobile-frontend-nearby-error',
@@ -544,6 +545,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/specials/nearby.js',
 		),
+		// stop flash of unstyled content when loading from cache
+		'position' => 'top',
 	),
 	'mobile.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(

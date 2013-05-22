@@ -1,14 +1,44 @@
 ( function( M, $ ) {
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
+	endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
+	overlay,
 	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
 
-( function() {
+function getOverlay() {
+	return overlay;
+}
+
+function distanceMessage( d ) {
+	var msg = 'mobile-frontend-nearby-distance';
+	if ( d < 1 ) {
+		d *= 100;
+		d = Math.ceil( d ) * 10;
+		if ( d === 1000 ) {
+			d = 1;
+		} else {
+			msg = 'mobile-frontend-nearby-distance-meters';
+		}
+		d = d + '';
+	} else {
+		if ( d > 2 ) {
+			d *= 10;
+			d = Math.ceil( d ) / 10;
+			d = d.toFixed( 1 );
+		} else {
+			d *= 100;
+			d = Math.ceil( d ) / 100;
+			d = d.toFixed( 2 );
+		}
+	}
+	return mw.msg( msg, d );
+}
+
+$( function() {
 	var supported = M.supportsGeoLocation(),
 		popup = M.require( 'notifications' ),
 		nav = M.require( 'navigation' ),
 		View = M.require( 'view' ),
 		errorHtml = $( '#mw-mf-nearby' ).html(),
-		endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 		curLocation,
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
@@ -29,7 +59,8 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 				self.emit( 'postRender', this.$el );
 			}
 		} ),
-		pendingQuery = false, btn, menu,
+		pendingQuery = false, btn, menu;
+
 		overlay = new Nearby( {
 			el: $( '#mw-mf-nearby' )
 		} );
@@ -59,31 +90,6 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 			return 2 * radius * Math.asin( Math.sqrt( a ) );
 		}
 		return distance;
-	}
-
-	function distanceMessage( d ) {
-		var msg = 'mobile-frontend-nearby-distance';
-		if ( d < 1 ) {
-			d *= 100;
-			d = Math.ceil( d ) * 10;
-			if ( d === 1000 ) {
-				d = 1;
-			} else {
-				msg = 'mobile-frontend-nearby-distance-meters';
-			}
-			d = d + '';
-		} else {
-			if ( d > 2 ) {
-				d *= 10;
-				d = Math.ceil( d ) / 10;
-				d = d.toFixed( 1 );
-			} else {
-				d *= 100;
-				d = Math.ceil( d ) / 100;
-				d = d.toFixed( 2 );
-			}
-		}
-		return mw.msg( msg, d );
 	}
 
 	function render( $content, pages ) {
@@ -215,13 +221,13 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 
 	menu = $( '<li>' ).appendTo( nav.getPageMenu() );
 	btn = $( '<button class="refresh">refresh</button></li>' ).on( 'click', refresh ).appendTo( menu );
+} );
 
-	M.define( 'nearby', {
-		distanceMessage: distanceMessage,
-		endpoint: endpoint,
-		overlay: overlay
-	} );
-}() );
+M.define( 'nearby', {
+	distanceMessage: distanceMessage,
+	endpoint: endpoint,
+	getOverlay: getOverlay
+} );
 
 
 }( mw.mobileFrontend, jQuery ) );
