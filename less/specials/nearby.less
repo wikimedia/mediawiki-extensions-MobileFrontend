@@ -27,32 +27,6 @@ button.refresh {
 	border: none;
 }
 
-@-webkit-keyframes infinite-spin {
-	from {
-		.transform( rotate(0deg) );
-	}
-
-	to {
-		.transform( rotate(360deg) );
-	}
-}
-
-@keyframes infinite-spin {
-	from {
-		.transform( rotate(0deg) );
-	}
-
-	to {
-		.transform( rotate(360deg) );
-	}
-}
-
-.animations {
-	.refreshing {
-		.animation( infinite-spin, 0.5s, linear, infinite, normal );
-	}
-}
-
 .client-js {
 	// note this also means non-ResourceLoader enabled browsers hence not using tag
 	.noscript {

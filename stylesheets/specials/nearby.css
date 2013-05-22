@@ -18,30 +18,6 @@ button.refresh {
   background-size: 24px 25px;
   border: none;
 }
-@-webkit-keyframes infinite-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes infinite-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-.animations .refreshing {
-  -webkit-animation: infinite-spin 0.5s linear infinite normal;
-  animation: infinite-spin 0.5s linear infinite normal;
-}
 .client-js .noscript {
   display: none;
 }
