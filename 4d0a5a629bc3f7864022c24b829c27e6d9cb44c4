@@ -16,6 +16,24 @@
       "revId": "4d0a5a629bc3f7864022c24b829c27e6d9cb44c4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dxer74EI",
+        "filename": "includes/skins/MobileTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-22T16:31:53Z",
+      "side": 1,
+      "message": "I just feel like it\u0027s cleaner and lends itself better to promotion. The other way we might do this is have a MobileBetaTemplate..",
+      "parentUuid": "DxXQpezk",
+      "revId": "4d0a5a629bc3f7864022c24b829c27e6d9cb44c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
