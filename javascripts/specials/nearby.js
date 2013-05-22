@@ -49,12 +49,17 @@ $( function() {
 				this.$el.html( errorHtml );
 				this.$( '.noscript' ).removeClass( 'noscript' );
 			},
+			openPage: function( ev ) {
+				// help back button work
+				window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
+				window.location = $( ev.currentTarget ).attr( 'href' );
+			},
 			initialize: function() {
 				var self = this;
 				this.$( 'a' ).on( 'mousedown', function( ev ) {
 					// name funnel for watchlists to catch subsequent uploads
 					$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
-					self.emit( 'page-click', ev );
+					self.openPage( ev );
 				} );
 				self.emit( 'postRender', this.$el );
 			}
@@ -94,7 +99,7 @@ $( function() {
 
 	function render( $content, pages ) {
 		cache( CACHE_KEY_RESULTS, $.toJSON( pages ) ); // cache result
-		pages = $.map( pages, function( page ) {
+		pages = $.map( pages, function( page, i ) {
 			var coords, lngLat, thumb;
 
 			if ( page.thumbnail ) {
@@ -105,6 +110,7 @@ $( function() {
 				page.pageimageClass = 'needsPhoto';
 				page.cta = mw.msg( 'mobile-frontend-needs-photo' );
 			}
+			page.anchor = 'item_' + i;
 			page.url = M.history.getArticleUrl( page.title );
 			if ( page.coordinates ) { // FIXME: protect against bug 47133 (remove when resolved)
 				coords = page.coordinates[0],
@@ -211,9 +217,10 @@ $( function() {
 				curLocation = false;
 			}
 		}
-		init();
-		if ( lastSearchResult ) {
+		if ( lastSearchResult && window.location.hash ) {
 			render( $( '#content' ), $.parseJSON( lastSearchResult ) );
+		} else {
+			init();
 		}
 	} else {
 		overlay.renderError();

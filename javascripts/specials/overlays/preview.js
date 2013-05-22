@@ -34,7 +34,8 @@
 		endpoint = module.endpoint;
 
 	$( function() {
-		module.getOverlay().on( 'page-click', function( ev ) {
+		// FIXME: temporary code, replace if previews get to stable or are removed
+		module.getOverlay().openPage = function( ev ) {
 			ev.preventDefault();
 			var loader = new LoadingOverlay(),
 				$a = $( ev.currentTarget ),
@@ -48,7 +49,6 @@
 			} ).fail( function() {
 				loader.hide(); // FIXME: do something more meaningful e.g. error overlay
 			} );
-		} );
+		};
 	} );
-
 }( mw.mobileFrontend, jQuery ) );
