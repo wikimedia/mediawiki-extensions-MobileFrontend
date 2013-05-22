@@ -14,7 +14,6 @@ class MobileFormatter extends HtmlFormatter {
 	protected $title;
 
 	protected $expandableSections = false;
-	protected $removeSections = false;
 	protected $mainPage = false;
 	protected $backToTopLink = true;
 
@@ -89,10 +88,6 @@ class MobileFormatter extends HtmlFormatter {
 		$this->backToTopLink = false;
 	}
 
-	public function enableRemovableSections( $flag = true ) {
-		$this->removeSections = $flag;
-	}
-
 	public function setIsMainPage( $value = true ) {
 		$this->mainPage = $value;
 	}
@@ -153,18 +148,6 @@ class MobileFormatter extends HtmlFormatter {
 			case 'HTML':
 				if ( $this->expandableSections && strlen( $html ) > 4000 ) {
 					$html = $this->headingTransform( $html );
-					if ( $this->removeSections ) {
-						$temp = new HtmlFormatter( $html ); // hack hack hack
-						$doc = $temp->getDoc();
-
-						$xpath = new DOMXpath( $doc );
-						$elements = $xpath->query( '//*[@class="content_block"]' );
-						/** @var $element DOMElement */
-						foreach ( $elements as $element ) { // empty elements
-							$element->nodeValue = '';
-						}
-						$html = $temp->getText();
-					}
 				}
 				break;
 			case 'WML':

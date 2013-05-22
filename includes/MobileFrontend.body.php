@@ -121,7 +121,6 @@ class ExtMobileFrontend extends ContextSource {
 		$ns = $this->getTitle()->getNamespace();
 		$isMainPage = $this->getTitle()->isMainPage();
 		$isFilePage = $ns === NS_FILE;
-		$formatter->enableRemovableSections( $context->isBetaGroupMember() && $ns === NS_MAIN && !$isMainPage );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
