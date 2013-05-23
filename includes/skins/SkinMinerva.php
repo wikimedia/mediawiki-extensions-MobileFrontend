@@ -52,7 +52,7 @@ class SkinMinerva extends SkinTemplate {
 		}
 
 		// set defaults
-		if ( !isset( $this->data['postbodytext'] ) ) {
+		if ( !isset( $tpl->data['postbodytext'] ) ) {
 			$tpl->set( 'postbodytext', '' ); // not currently set in desktop skin
 		}
 
