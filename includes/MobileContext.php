@@ -51,7 +51,7 @@ class MobileContext extends ContextSource {
 		self::$instance = $instance;
 	}
 
-	private function __construct( IContextSource $context ) {
+	protected function __construct( IContextSource $context ) {
 		$this->setContext( $context );
 	}
 
@@ -228,10 +228,65 @@ class MobileContext extends ContextSource {
 		wfProfileIn( __METHOD__ );
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
+			$this->redirectMobileEnabledPages();
 			wfRunHooks( 'EnterMobileMode', array( $this ) );
 		}
 		wfProfileOut( __METHOD__ );
 		return $this->mobileView;
+	}
+
+	/**
+	 * If a page has an equivalent but different mobile page redirect to it
+	 *
+	 */
+	private function redirectMobileEnabledPages() {
+		$req = $this->getRequest();
+		$rev2 = $req->getText( 'diff' );
+		$rev1 = $req->getText( 'oldid' );
+		// redirect requests to the diff page to mobile view
+		if ( !$rev2 ) {
+			if ( $rev1 ) {
+				$rev2 = $rev1;
+				$rev1 = '';
+			} else {
+				return;
+			}
+		}
+
+		if ( $rev1 ) {
+			$rev = $this->getRevision( $rev1 );
+			if ( $rev ) {
+				// the diff parameter could be the string prev or next - deal with these cases
+				if ( $rev2 === 'prev' ) {
+					$prev = $rev->getPrevious();
+					// yes this is confusing - this is how it works arrgghh
+					$rev2 = $rev1;
+					$rev1 = $prev ? $prev->getId() : '';
+				} else if ( $rev2 === 'next' ) {
+					$next = $rev->getNext();
+					$rev2 = $next ? $next->getId() : '';
+				} else {
+					$rev2 = $this->getRevision( $rev2 );
+					$rev2 = $rev2 ? $rev2->getId() : '';
+				}
+			} else {
+				$rev2 = '';
+			}
+		}
+
+		if ( $rev2 ) {
+			$subpage = $rev1 ? $rev1 . '...' . $rev2 : $rev2;
+			$title = SpecialPage::getTitleFor( 'MobileDiff', $subpage );
+			$this->getOutput()->redirect( $this->getMobileUrl( $title->getFullURL() ) );
+		}
+	}
+
+	/**
+	 * @param int $revisioniId
+	 * @return Revision
+	 */
+	protected function getRevision( $revisioniId ) {
+		return Revision::newFromId( $revisioniId );
 	}
 
 	/**
@@ -243,13 +298,8 @@ class MobileContext extends ContextSource {
 		$action = $this->getAction();
 		$req = $this->getRequest();
 		$stableMode = !$this->isBetaGroupMember();
-		$isDiff = $req->getText( 'diff' );
 		if ( ( $action === 'edit' && $stableMode ) ||
 			 ( $action === 'history' && $stableMode ) ) {
-			return false;
-		}
-
-		if ( $isDiff ) {
 			return false;
 		}
 

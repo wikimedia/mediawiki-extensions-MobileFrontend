@@ -450,4 +450,53 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( 'bananas.%h2.%h3', 'bananas.' ),
 		);
 	}
+
+	/**
+	 * @dataProvider getMobileRedirection
+	 */
+	public function testDiffRedirection( array $query, $isMobile, $expected ) {
+		$req = new FauxRequest( $query );
+		if ( $isMobile ) {
+			$req->setHeader( 'X-Device', 'test' );
+		}
+		if ( $expected ) {
+			$expected = wfExpandUrl( Title::newFromText( $expected )->getFullURL(), PROTO_HTTP );
+		}
+		$context = new RequestContext();
+		$context->setRequest( $req );
+		$mobileContext = new MFMockMobileContext( $context );
+		$mobileContext->shouldDisplayMobileView();
+		$this->assertEquals( $expected, $context->getOutput()->mRedirect );
+	}
+
+	public function getMobileRedirection() {
+		return array(
+			array( array(), true, '' ),
+			// simple case
+			array( array(), false, '' ),
+			// this makes no sense but this is the url for newly created pages (oldid but no diff)
+			array( array( 'oldid' => 5 ), true, 'Special:MobileDiff/5' ),
+			array( array( 'diff' => 123 ), true, 'Special:MobileDiff/123' ),
+			// some more complicated cases...
+			array( array( 'oldid' => 90, 'diff' => 100 ), true, 'Special:MobileDiff/90...100' ),
+			array( array( 'oldid' => 123, 'diff' => 'next' ), true, 'Special:MobileDiff/123...124' ),
+			array( array( 'oldid' => 123, 'diff' => 'prev' ), true, 'Special:MobileDiff/122...123' ),
+			// bad id given (revisions older than 200 do not exist in our MockRevision)
+			array( array( 'diff' => 208, 'oldid' => 50 ), true, '' ),
+			array( array( 'diff' => 50, 'oldid' => 208 ), true, '' ),
+			array( array( 'diff' => 'prev', 'oldid' => 201 ), true, '' ),
+			// weird edge case comparing identical things
+			array( array( 'oldid' => 101, 'diff' => 101 ), true, 'Special:MobileDiff/101...101' ),
+		);
+	}
+}
+
+class MFMockMobileContext extends MobileContext {
+	public function __construct( IContextSource $context ) {
+		parent::__construct( $context );
+	}
+
+	protected function getRevision( $revisionId ) {
+		return MFMockRevision::newFromId( $revisionId );
+	}
 }

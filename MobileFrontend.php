@@ -139,6 +139,9 @@ $wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
  */
 function efExtMobileFrontendUnitTests( &$files ) {
 	$dir = dirname( __FILE__ ) . '/tests';
+	// mocks
+	$files[] = "$dir/mocks/MFMockRevision.php";
+
 	$files[] = "$dir/ApiParseExtenderTest.php";
 	$files[] = "$dir/MobileContextTest.php";
 	$files[] = "$dir/MobileFrontendTest.php";
@@ -146,6 +149,9 @@ function efExtMobileFrontendUnitTests( &$files ) {
 	$files[] = "$dir/HtmlFormatterTest.php";
 	$files[] = "$dir/MobileFormatterTest.php";
 	$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
+
+	// special page tests
+	$files[] = "$dir/specials/SpecialMobileDiffTest.php";
 	return true;
 }
 
