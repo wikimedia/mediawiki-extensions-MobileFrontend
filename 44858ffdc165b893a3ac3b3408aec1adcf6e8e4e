@@ -16,6 +16,24 @@
       "revId": "44858ffdc165b893a3ac3b3408aec1adcf6e8e4e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxtAnzB8",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-23T22:23:51Z",
+      "side": 1,
+      "message": "ok, i see this is taken care of in future patchset.",
+      "parentUuid": "DxjD4sHg",
+      "revId": "44858ffdc165b893a3ac3b3408aec1adcf6e8e4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
