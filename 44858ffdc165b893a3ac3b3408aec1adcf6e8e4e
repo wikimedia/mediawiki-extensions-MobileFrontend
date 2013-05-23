@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxjD4sHg",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-23T22:19:29Z",
+      "side": 1,
+      "message": "any reason not to do just $tpl-\u003edata[\u0027banners\u0027][] \u003d $tpl-\u003edata[\u0027zeroRatedBanner\u0027];\nand avoid re-setting the banners variable below?",
+      "revId": "44858ffdc165b893a3ac3b3408aec1adcf6e8e4e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
