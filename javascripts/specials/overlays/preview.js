@@ -31,22 +31,23 @@
 			}
 		} ),
 		module = M.require( 'nearby' ),
-		endpoint = module.endpoint,
-		nearby = module.overlay;
+		endpoint = module.endpoint;
 
-	nearby.on( 'page-click', function( ev ) {
-		ev.preventDefault();
-		var loader = new LoadingOverlay(),
-			$a = $( ev.currentTarget ),
-			title = $a.find( 'h2' ).text();
-		loader.show();
+	$( function() {
+		module.getOverlay().on( 'page-click', function( ev ) {
+			ev.preventDefault();
+			var loader = new LoadingOverlay(),
+				$a = $( ev.currentTarget ),
+				title = $a.find( 'h2' ).text();
+			loader.show();
 
-		M.history.retrievePage( title, endpoint, true ).done( function( page ) {
-			var preview = new PagePreviewOverlay( { page: new Page( page ), img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html() } );
-			loader.hide();
-			preview.show();
-		} ).fail( function() {
-			loader.hide(); // FIXME: do something more meaningful e.g. error overlay
+			M.history.retrievePage( title, endpoint, true ).done( function( page ) {
+				var preview = new PagePreviewOverlay( { page: new Page( page ), img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html() } );
+				loader.hide();
+				preview.show();
+			} ).fail( function() {
+				loader.hide(); // FIXME: do something more meaningful e.g. error overlay
+			} );
 		} );
 	} );
 

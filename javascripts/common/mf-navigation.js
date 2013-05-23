@@ -115,7 +115,16 @@ var m = ( function( $ ) {
 		}
 	}
 
-	function init() {
+
+	function openNavigation() {
+		$( 'body' ).addClass( 'navigation-enabled' );
+	}
+
+	function closeNavigation() {
+		$( 'body' ).removeClass( 'navigation-enabled' );
+	}
+
+	$( function() {
 		var
 			search = document.getElementById(  'searchInput' );
 
@@ -128,14 +137,6 @@ var m = ( function( $ ) {
 			M.on( 'page-loaded', function( curPage ) {
 				enableEditing( curPage.title );
 			} );
-		}
-
-		function openNavigation() {
-			$( 'body' ).addClass( 'navigation-enabled' );
-		}
-
-		function closeNavigation() {
-			$( 'body' ).removeClass( 'navigation-enabled' );
 		}
 
 		function isOpen() {
@@ -176,13 +177,12 @@ var m = ( function( $ ) {
 				closeNavigation();
 			}
 		} );
-		return {
-			close: closeNavigation,
-			open: openNavigation
-		};
-	}
+	} );
 
-	menu = init();
+	menu = {
+		close: closeNavigation,
+		open: openNavigation
+	};
 
 	return {
 		CtaDrawer: CtaDrawer,
