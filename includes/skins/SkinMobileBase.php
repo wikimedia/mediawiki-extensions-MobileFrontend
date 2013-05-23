@@ -11,7 +11,6 @@ class SkinMobileBase extends SkinMinerva {
 	private $pageClassNames = array();
 
 	public function prepareData( BaseTemplate $tpl ) {
-		global $wgMFEnableSiteNotice;
 		parent::prepareData( $tpl );
 		$context = MobileContext::singleton();
 		$search = $tpl->data['searchBox'];
@@ -22,16 +21,10 @@ class SkinMobileBase extends SkinMinerva {
 		}
 		$tpl->set( 'searchBox', $search );
 
-		$banners = '';
+		$banners = $tpl->data['banners'];
 		// FIXME: Move to Zero extension MinervaPreRender hook
 		if ( isset( $tpl->data['zeroRatedBanner'] ) ) {
-			$banners .= $tpl->data['zeroRatedBanner'];
-		}
-		if ( isset( $tpl->data['notice'] ) ) {
-			$banners .= $tpl->data['notice'];
-		}
-		if ( $wgMFEnableSiteNotice ) {
-			$banners .= '<div id="siteNotice"></div>';
+			$banners[] = $tpl->data['zeroRatedBanner'];
 		}
 		$tpl->set( 'banners', $banners );
 	}

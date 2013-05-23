@@ -25,6 +25,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	public function prepareData( BaseTemplate $tpl ) {
+		global $wgMFEnableSiteNotice;
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$out = $this->getOutput();
@@ -73,6 +74,14 @@ class SkinMinerva extends SkinTemplate {
 			'id'=> 'mw-mf-main-menu-button',
 			) )
 		);
+		$banners = array();
+		if ( isset( $tpl->data['notice'] ) ) {
+			$banners[] = $tpl->data['notice'];
+		}
+		if ( $wgMFEnableSiteNotice ) {
+			$banners[] = '<div id="siteNotice"></div>';
+		}
+		$tpl->set( 'banners', $banners );
 	}
 
 	/**

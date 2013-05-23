@@ -110,7 +110,9 @@ class MinervaTemplate extends BaseTemplate {
 			<div id='mw-mf-page-center'>
 				<!-- start -->
 				<?php
-					echo $this->html( 'banners' );
+					foreach( $this->data['banners'] as $banner ):
+						echo $banner;
+					endforeach;
 				?>
 				<div class="header">
 				<?php
