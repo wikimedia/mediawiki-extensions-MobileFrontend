@@ -9,6 +9,7 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
+	 * FIXME: Move to ZeroRatedMobileAccess extension
 	 * @return string
 	 */
 	public function getZeroRatedBanner() {
