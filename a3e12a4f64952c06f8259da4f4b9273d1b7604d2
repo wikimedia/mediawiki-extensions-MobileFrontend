@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxpAzhPU",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-23T18:40:50Z",
+      "side": 1,
+      "message": "What happens if the diff is for the *first* revision (eg an article that was just created?) Currently, this will results in executeBadQuery() getting called :(",
+      "revId": "a3e12a4f64952c06f8259da4f4b9273d1b7604d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
