@@ -42,7 +42,7 @@
 		loader.show();
 
 		M.history.retrievePage( title, endpoint, true ).done( function( page ) {
-			var preview = new PagePreviewOverlay( { page: new Page( page ), img: $( '<div>' ).append( $a.find( '.listThumb' ) ).html() } );
+			var preview = new PagePreviewOverlay( { page: new Page( page ), img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html() } );
 			loader.hide();
 			preview.show();
 		} ).fail( function() {
