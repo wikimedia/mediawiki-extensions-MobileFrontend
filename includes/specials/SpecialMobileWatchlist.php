@@ -496,18 +496,12 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
 
 		$thumb = $this->renderThumb( $row );
-		if ( isset( $thumb['needsPhoto'] ) && $thumb['needsPhoto'] && MobileContext::singleton()->isBetaGroupMember() ) {
-			$cta = Html::element( 'div', array( 'class' => 'info' ), wfMessage( 'mobile-frontend-needs-photo' )->text() );
-		} else {
-			$cta = '';
-		}
 
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
 			$thumb['html'] .
 			Html::element( 'h2', array(), $titleText ).
-			$cta .
 			Html::element( 'div', array( 'class' => 'info' ), $lastModified ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' )

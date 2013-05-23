@@ -25,12 +25,6 @@
 }
 .listThumb.needsPhoto {
   background-image: url(images/camera.png);
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -moz-background-size: 50% auto;
-  -o-background-size: 50% auto;
-  -webkit-background-size: 50% auto;
-  background-size: 50% auto;
 }
 .listThumbH {
   /* use -webkit prefix for older android browsers eg. nexus 1 */

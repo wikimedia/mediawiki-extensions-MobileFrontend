@@ -540,7 +540,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-lookup-error',
 			'mobile-frontend-nearby-noresults',
 			'mobile-frontend-nearby-link',
-			'mobile-frontend-needs-photo',
 		),
 		'scripts' => array(
 			'javascripts/specials/nearby.js',

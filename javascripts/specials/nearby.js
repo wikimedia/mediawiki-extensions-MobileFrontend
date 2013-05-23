@@ -108,7 +108,6 @@ $( function() {
 				page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
 			} else {
 				page.pageimageClass = 'needsPhoto';
-				page.cta = mw.msg( 'mobile-frontend-needs-photo' );
 			}
 			page.anchor = 'item_' + i;
 			page.url = M.history.getArticleUrl( page.title );
