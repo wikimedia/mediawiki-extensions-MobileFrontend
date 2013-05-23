@@ -13,7 +13,7 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 		parent::__construct( 'MobileDiff' );
 	}
 
-	public function getRevision( $id ) {
+	public static function getRevision( $id ) {
 		return Revision::newFromId( $id );
 	}
 
@@ -37,12 +37,12 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 			$id = intval( $revids[1] );
 			$prevId = intval( $revids[0] );
 			if ( $id && $prevId ) {
-				$rev = $this->getRevision( $id );
+				$rev = static::getRevision( $id );
 				// deal with identical ids
 				if ( $id === $prevId ) {
 					$rev = null;
 				} else if ( $rev ) {
-					$prev = $this->getRevision( $prevId );
+					$prev = static::getRevision( $prevId );
 					if ( !$prev ) {
 						$rev = null;
 					}
@@ -53,7 +53,7 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 		} else if ( count( $revids ) === 1 ) {
 			$id = intval( $revids[0] );
 			if ( $id ) {
-				$rev = $this->getRevision( $id );
+				$rev = static::getRevision( $id );
 				if ( $rev ) {
 					$prev = $rev->getPrevious();
 				}
@@ -230,5 +230,48 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 		}
 
 		return $this->getLanguage()->commaList( $userMembers );
+	}
+
+	public static function getMobileUrlFromDesktop() {
+		$req = MobileContext::singleton()->getRequest();
+		$rev2 = $req->getText( 'diff' );
+		$rev1 = $req->getText( 'oldid' );
+		// redirect requests to the diff page to mobile view
+		if ( !$rev2 ) {
+			if ( $rev1 ) {
+				$rev2 = $rev1;
+				$rev1 = '';
+			} else {
+				return false;
+			}
+		}
+
+		if ( $rev1 ) {
+			$rev = static::getRevision( $rev1 );
+			if ( $rev ) {
+				// the diff parameter could be the string prev or next - deal with these cases
+				if ( $rev2 === 'prev' ) {
+					$prev = $rev->getPrevious();
+					// yes this is confusing - this is how it works arrgghh
+					$rev2 = $rev1;
+					$rev1 = $prev ? $prev->getId() : '';
+				} else if ( $rev2 === 'next' ) {
+					$next = $rev->getNext();
+					$rev2 = $next ? $next->getId() : '';
+				} else {
+					$rev2 = static::getRevision( $rev2 );
+					$rev2 = $rev2 ? $rev2->getId() : '';
+				}
+			} else {
+				$rev2 = '';
+			}
+		}
+
+		if ( $rev2 ) {
+			$subpage = $rev1 ? $rev1 . '...' . $rev2 : $rev2;
+			$title = SpecialPage::getTitleFor( 'MobileDiff', $subpage );
+			return $title->getLocalURL();
+		}
+		return false;
 	}
 }
