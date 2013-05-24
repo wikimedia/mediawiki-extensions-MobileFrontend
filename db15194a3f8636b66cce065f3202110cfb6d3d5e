@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxvnREFU",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-24T22:34:38Z",
+      "side": 1,
+      "message": "getFullUrl() is inappropriate here unless you also run it through getMobileUrl() - on sites that use a separate mobile domain (like WMF production), this will result in generating a desktop URL.\n\ngetLocalUrl() should be fine instead.",
+      "revId": "db15194a3f8636b66cce065f3202110cfb6d3d5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
