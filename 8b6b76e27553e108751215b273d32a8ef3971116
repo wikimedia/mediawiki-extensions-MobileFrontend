@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxvEUivU",
+        "filename": "includes/api/ApiQueryExtracts.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 65
+      },
+      "writtenOn": "2013-05-24T12:22:44Z",
+      "side": 1,
+      "message": "The doubled quote looks like a syntax error.",
+      "revId": "8b6b76e27553e108751215b273d32a8ef3971116",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
