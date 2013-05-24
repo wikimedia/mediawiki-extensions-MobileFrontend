@@ -404,7 +404,8 @@ class ExtractFormatter extends HtmlFormatter {
 		$this->sectionFormat = $sectionFormat;
 
 		$this->removeImages();
-		$this->remove( array( 'table', 'div', '.editsection', 'sup.reference', 'span.coordinates',
+		// @fixme: use rules from MobileFormatter?
+		$this->remove( array( 'table', 'div', '.editsection', '.mw-editsection', 'sup.reference', 'span.coordinates',
 			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error' )
 		);
 		if ( $plainText ) {
