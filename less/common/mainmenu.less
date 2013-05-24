@@ -1,29 +1,58 @@
 /* Left menu */
+@leftBorder: 12px;
 #mw-mf-page-left {
 	background-color: @mainMenuBackgroundColor;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.2em;
 	bottom: 0;
 	top: 0;
+	left: 0;
 	margin-right: 0;
 	position: absolute;
 	border-right: solid 1px #AAA;
 	display: none; /* JS only */
+	height: 100%;
+	border-left: solid @leftBorder #252525;
+
+	h2 {
+		box-sizing: border-box;
+		margin: 0 0 0 -@leftBorder;
+		padding: 0.2em 0 0.1em 0.6em;
+		line-height: 1.5em;
+		text-transform: uppercase;
+		text-shadow: 0px -1px 0px #777;
+		color: white;
+		font-size: 0.9em;
+		font-weight:bold;
+		font-family: sans-serif;
+		.vertical-gradient ( #757575, #9e9e9e );
+	}
+
+	ul, h2,
+	{
+		border-right: solid 1px black;
+	}
 }
 
-#mw-mf-menu-main {
+.beta, .alpha {
+	#mw-mf-page-left ul li {
+		&:last-child {
+			border-bottom: none
+		}
+	}
+}
+
+#mw-mf-page-left ul {
 	background-color: @mainMenuBackgroundColor;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	border-left: solid 12px #252525;
-	border-right: solid 1px black;
 
 	li {
+		font-size: 1.2em;
 		text-shadow: 0 1px 0 black;
 		border-bottom: 1px solid #717171;
 		font-weight: normal;
+
 		&:hover {
 			background-color: #5C5C5C;
 			border-left: solid 12px #3366BB;

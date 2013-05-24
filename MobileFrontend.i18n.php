@@ -105,6 +105,9 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-watchlist' => 'Watchlist',
 	'mobile-frontend-main-menu-settings' => 'Settings',
 	'mobile-frontend-main-menu-upload' => 'Uploads',
+	'mobile-frontend-main-menu-discovery' => 'Discovery',
+	'mobile-frontend-main-menu-personal' => 'My Stuff',
+
 	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below',
@@ -472,6 +475,8 @@ See also:
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
 	'mobile-frontend-main-menu-upload' => 'Uploads link text in main menu.
 {{Identical|Upload}}',
+	'mobile-frontend-main-menu-discovery' => 'Discovery menu header in main menu',
+	'mobile-frontend-main-menu-personal' => 'Menu header in main menu for pages personalised for a user',
 	'mobile-frontend-main-menu-settings-heading' => '{{doc-special|MobileOptions|unlisted=1}}',
 	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non javascript users',
 	'mobile-frontend-settings-site-description' => 'Shown on Special:MobileOptions
