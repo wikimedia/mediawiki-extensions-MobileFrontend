@@ -607,11 +607,15 @@ They can either exit the page and lose them or stay on the page until they are c
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
-	'mobile-frontend-editor-save' => 'Caption for save button on edit form.',
-	'mobile-frontend-editor-cancel' => 'Caption for cancel button on edit form.',
+	'mobile-frontend-editor-save' => 'Caption for save button on edit form.
+{{Identical|Save}}',
+	'mobile-frontend-editor-cancel' => 'Caption for cancel button on edit form.
+{{Identical|Cancel}}',
 	'mobile-frontend-editor-confirm' => 'Caption for confirm button on edit form.',
-	'mobile-frontend-editor-previous' => 'Caption for a button loading previous section on edit form.',
-	'mobile-frontend-editor-next' => 'Caption for a button loading next section on edit form.',
+	'mobile-frontend-editor-previous' => 'Caption for a button loading previous section on edit form.
+{{Identical|Previous}}',
+	'mobile-frontend-editor-next' => 'Caption for a button loading next section on edit form.
+{{Identical|Next}}',
 	'mobile-frontend-editor-license' => 'Text notifying user of license that text will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license. See also: {{msg-mw|mobile-frontend-editor-confirm}}.',
 	'mobile-frontend-editor-section-count' => 'Informs user how many sections they are about to save. Parameter is number of modified sections.',
 	'mobile-frontend-editor-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved edit.',
@@ -4140,6 +4144,7 @@ $messages['fo'] = array(
  * @author Davidtsm
  * @author Gomoko
  * @author Hashar
+ * @author Hello71
  * @author Ltrlg
  * @author Lucky
  * @author Metroitendo
@@ -4252,7 +4257,7 @@ $messages['fr'] = array(
 	'mobile-frontend-nearby-refresh' => 'Nous vous avons localisé plus précisément. Cliquez ici pour rafraîchir la liste des pages à proximité.',
 	'mobile-frontend-nearby-error' => 'Une erreur inattendue s’est produite lors de la tentative de recherche de pages à proximité',
 	'mobile-frontend-nearby-link' => 'Lire cette page en entier',
-	'mobile-frontend-needs-photo' => 'Allez sur cette page pour ajouter une image', # Fuzzy
+	'mobile-frontend-needs-photo' => 'Besoin de photo',
 	'mobile-frontend-donate-image-login' => 'Vous devez être connecté pour voir vos téléchargements.',
 	'mobile-frontend-photo-upload-generic' => 'Donner une image',
 	'mobile-frontend-donate-image-title' => 'Téléchargements',
@@ -6562,6 +6567,10 @@ $messages['ja'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'アップロード 500+ 件',
 	'mobile-frontend-photo-upload-cta' => '画像を追加するにはログインまたは利用者登録をしてください。',
 	'mobile-frontend-photo-upload-login' => '画像を追加するにはログインしてください。',
+	'mobile-frontend-editor-save' => '保存',
+	'mobile-frontend-editor-cancel' => 'キャンセル',
+	'mobile-frontend-editor-previous' => '前へ',
+	'mobile-frontend-editor-next' => '次へ',
 	'tag-mobile_edit' => '携帯機器での編集',
 	'tag-mobile_edit-description' => '携帯機器版サイトでの編集',
 	'mobile-frontend-drawer-cancel' => 'キャンセル',
@@ -8280,6 +8289,14 @@ $messages['mi'] = array(
 	'mobile-frontend-search-submit' => 'Haere',
 );
 
+/** Minangkabau (Baso Minangkabau)
+ * @author Iwan Novirion
+ */
+$messages['min'] = array(
+	'tag-mobile_edit' => 'Suntiangan seluler',
+	'tag-mobile_edit-description' => 'Suntingan dibuek dari seluler',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
@@ -9488,6 +9505,13 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Ik schend geen auteursrechten',
 	'mobile-frontend-photo-nag-1-bullet-1-text' => "Het is '''geen''' afbeelding die ik op het internet heb gevonden. Het is mijn eigen werk.",
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Dit is geen persoonlijke foto',
+	'mobile-frontend-photo-nag-1-bullet-2-text' => 'En het kan helpen een belangrijk onderwerp te illustreren.',
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Geen auteursrechtenschending en deze afbeelding dient een educatief doel.',
+	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Ik weet wat ik kan uploaden. Dit bericht niet opnieuw weergeven.',
+	'mobile-frontend-photo-nag-learn-more-heading' => 'Wat te uploaden',
+	'mobile-frontend-photo-nag-learn-more-1' => "'''Ja!''' Foto's van plaatsen, dingen en gebeurtenissen.",
+	'mobile-frontend-photo-nag-learn-more-2' => "'''Ja!''' Foto's die kunnen helpen met het illustreren en verrijken van de pagina's van {{SITENAME}}.",
+	'mobile-frontend-photo-nag-learn-more-3' => "'''Nee.''' Foto's van filmposters, boekomslagen of ander auteursrechtelijk beschermd materiaal. Deze worden verwijderd.",
 	'mobile-frontend-image-uploading-wait' => 'Bezig met het uploaden van de afbeelding.',
 	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Dank u wel voor uw geduld.',
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
@@ -11544,6 +11568,7 @@ $messages['sq'] = array(
 );
 
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
+ * @author Milicevic01
  * @author Nikola Smolenski
  * @author Rancher
  * @author Милан Јелисавчић
@@ -11555,7 +11580,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-home-button' => 'Почетак',
 	'mobile-frontend-logged-out' => 'Нисте пријављени',
 	'mobile-frontend-settings-beta' => 'Бета',
-	'mobile-frontend-save-settings' => 'Сними подешавања', # Fuzzy
+	'mobile-frontend-save-settings' => 'Сачувај',
 	'mobile-frontend-random-button' => 'Насумице',
 	'mobile-frontend-back-to-top-of-section' => 'Назад на претходни одељак',
 	'mobile-frontend-close-section' => 'Затварање овог одељка',
@@ -11581,13 +11606,14 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-username' => 'Корисничко име:',
 	'mobile-frontend-password' => 'Лозинка:',
 	'mobile-frontend-login' => 'Пријави ме',
+	'mobile-frontend-learn-more' => 'Сазнајте више',
 	'mobile-frontend-placeholder' => 'Претражите {{SITENAME}}',
 	'mobile-frontend-search-help' => 'Изнад унесите оно што тражите, а овде ће се приказати чланци који одговарају захтеву.', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'склони ово обавештење',
 	'mobile-frontend-clear-search' => 'Очисти',
 	'mobile-frontend-privacy-link-text' => 'Приватност',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Садржај је доступан под [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Садржај је доступан под [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] додатни услови су можда примењиви.',
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Нема чланка који одговара претрази. Промените услове претраге, или притисните дугме за претрагу да бисте је проширили на садржај чланака.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Изабрано',
@@ -13233,15 +13259,10 @@ $messages['yi'] = array(
 	'mobile-frontend-sign-in-heading' => 'איינשרייבונג',
 	'mobile-frontend-settings-description' => 'פאַסט צו אײַער מאבייל דערפֿאַרונג מיט די ספעציפישע אײַנשטעלונגען פאר מאבייל אפאראטן.',
 	'mobile-frontend-settings-beta' => 'בעטע',
-	'mobile-frontend-save-settings' => 'אויפהיטן אײַנשטעלונגען',
+	'mobile-frontend-save-settings' => 'אויפהיטן',
 	'mobile-frontend-random-button' => 'צופֿעליג',
-	'mobile-frontend-ajax-random-question' => 'געליינטט דעם בלאט?',
-	'mobile-frontend-ajax-random-yes' => 'יאָ',
-	'mobile-frontend-ajax-random-retry' => 'פרובירט נאכאמאל',
 	'mobile-frontend-back-to-top-of-section' => 'צוריקשפרינגען אַן אָפטייל',
 	'mobile-frontend-close-section' => 'פארמאכן דעם אפטייל',
-	'mobile-frontend-show-button' => 'ווײַזן',
-	'mobile-frontend-hide-button' => 'באַהאַלטן',
 	'mobile-frontend-empty-homepage-text' => 'דעם היימבלאט דארף מען קאנפיגורירן. [//meta.wikimedia.org/wiki/Mobile_Projects/Mobile_Gateway#Mobile_homepage אנווייזן ווי צו שאפן דאס וועבזייטל מאבייל־אקטיווירט]',
 	'mobile-frontend-regular-site' => 'נארמאַלער קאמפיוטער באַקוק',
 	'mobile-frontend-wml-continue' => 'ווײַטער …',
@@ -13254,28 +13275,8 @@ $messages['yi'] = array(
 	'mobile-frontend-enable-images' => 'אקטיווירן בילדער פאר מאביילן',
 	'mobile-frontend-off' => 'אויס',
 	'mobile-frontend-on' => 'אקטיוויזירט',
-	'mobile-frontend-footer-contributors-text' => 'בלאט פון [$1 בײַשטײַערער] ווי איר',
 	'mobile-frontend-featured-article' => 'דער הײַנטיקער רעקאמענדירטער אַרטיקל',
 	'mobile-frontend-news-items' => 'אין די נײַעס',
-	'mobile-frontend-leave-feedback-subject' => 'טעמע:',
-	'mobile-frontend-leave-feedback-message' => 'מעלדונג:',
-	'mobile-frontend-leave-feedback-submit' => 'ארײַנגעבן פֿידבעק',
-	'mobile-frontend-leave-feedback-title' => 'מאבייל וועבארט פידבעק',
-	'mobile-frontend-leave-feedback-technical-problem-section-header' => 'טעכנישער פראבלעם',
-	'mobile-frontend-leave-feedback-general-section-header' => 'אַלגעמיין',
-	'mobile-frontend-leave-feedback-article-feedback-section-header' => 'ארטיקל פֿידבעק',
-	'mobile-frontend-leave-feedback-email-body' => '!ביטע שילדערט דעם פראבלעם וואס איר האט מיט {{SITENAME}} איבער דער שורה. ליידער קענען מיר נישט ענטפערן יעדע מעלדונג וואס מיר באקומען.',
-	'mobile-frontend-leave-feedback-technical-link-text' => 'טעכנישער פראבלעם',
-	'mobile-frontend-leave-feedback-general-link-text' => 'אלגעמיינער פֿידבעק',
-	'mobile-frontend-leave-feedback-article-other-link-text' => 'וועגן אן אנדער פראבלעם',
-	'mobile-frontend-leave-feedback-form-subject-placeholder' => 'מעלדונג טעמע',
-	'mobile-frontend-leave-feedback-form-message-placeholder' => 'קלאפט ארײַן אײַער הערה דא',
-	'mobile-frontend-leave-feedback-special-title' => 'קאנטאקטירן אונז',
-	'mobile-frontend-feedback-no-subject' => '(קיין טעמע)',
-	'mobile-frontend-feedback-no-subject-field' => 'ביטע ארײַנגעבן א סוביעקט',
-	'mobile-frontend-feedback-no-message' => 'ביטע גיט ארײַן א מעלדונג דא',
-	'mobile-frontend-leave-feedback-thanks' => 'ייש"כ פאר אייער פידבעק!',
-	'mobile-frontend-leave-feedback-post-error' => 'עס האט פאסירט א פעלער ביים פראצעסירן אייער מעלדונג. ביטע פרובירט נאכאמאל שפעטער.',
 	'mobile-frontend-language' => 'שפּראַך:',
 	'mobile-frontend-language-article-heading' => 'לייענען אין אן אנדער שפראך',
 	'mobile-frontend-language-header' => 'דער בלאט איז פאראן אין $1 {{PLURAL:$1|שפראך|שפראכן}}',
@@ -13288,7 +13289,6 @@ $messages['yi'] = array(
 	'mobile-frontend-dismiss-notification' => 'באהאלטן דעם קאמוניקאט',
 	'mobile-frontend-clear-search' => 'רייניקן',
 	'mobile-frontend-privacy-link-text' => 'פריוואטקייט',
-	'mobile-frontend-about-link-text' => 'וועגן',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-contact' => 'קאנטאקט',
 	'mobile-frontend-main-menu-featured' => 'רעקאמנדירט',
@@ -13299,14 +13299,11 @@ $messages['yi'] = array(
 	'mobile-frontend-main-menu-settings-heading' => 'מאביילן איינשטעלונגען',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} שפראכן',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} איז דערגרייכלעך אין $1 {{PLURAL:$1|שפראך|שפראכן}}. אלע דערגרייכלעכע ווערסיעס געפינען זיך אונטן',
-	'mobile-frontend-main-menu-contact' => 'קאנטאַקט',
 	'mobile-frontend-page-menu-contents' => 'אינהאַלט',
 	'mobile-frontend-page-menu-history' => 'היסטאריע',
 	'mobile-frontend-meta-data-issues-header' => 'פראגעס',
 	'mobile-frontend-meta-data-issues' => 'דער בלאט האט עטלעכע פֿראגעס',
-	'mobile-frontend-ajax-page-loading' => 'לאָדן $1',
 	'mobile-frontend-page-saving' => 'אויפֿהיטן $1',
-	'mobile-frontend-ajax-page-error' => 'אוי־וויי! עפעס איז געשען דא. זייט אזוי גוט פרובירט דערפרישן אייער בלעטער פענסטער.',
 	'mobile-frontend-watchlist-add' => 'צוגעלייגט $1 צו אייער אויפפאסונג ליסטע',
 	'mobile-frontend-watchlist-removed' => 'אראפגענומען $1 פון אייער אויפפאסונג ליסטע',
 	'mobile-frontend-watchlist-view' => 'באקוקן אייער אויפפאסונג ליסטע',
@@ -13460,6 +13457,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-nearby-noresults' => '你位于一个偏僻的地方，我们找不到任何主题。为什么不写一个呢？',
 	'mobile-frontend-nearby-refresh' => '我们为您找到一个更准确位置。若要刷新附近的页面列表，请点击此处',
 	'mobile-frontend-nearby-error' => '试图找到附近的页面时发生意外错误',
+	'mobile-frontend-needs-photo' => '需要照片',
 	'mobile-frontend-donate-image-login' => '您必须登录查看您上传的图像',
 	'mobile-frontend-photo-upload-generic' => '贡献图像',
 	'mobile-frontend-donate-image-title' => '上传',

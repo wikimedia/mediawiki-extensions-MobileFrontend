@@ -22,6 +22,11 @@ $specialPageAliases['ar'] = array(
 	'MobileOptions' => array( 'خيارات_المحمول' ),
 );
 
+/** Asturian (asturianu) */
+$specialPageAliases['ast'] = array(
+	'Nearby' => array( 'Cercano' ),
+);
+
 /** Catalan (català) */
 $specialPageAliases['ca'] = array(
 	'Nearby' => array( 'A_prop' ),
