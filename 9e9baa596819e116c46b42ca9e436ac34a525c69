@@ -16,6 +16,24 @@
       "revId": "9e9baa596819e116c46b42ca9e436ac34a525c69",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxnCRmO8",
+        "filename": "tests/MobileContextTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-24T00:25:03Z",
+      "side": 0,
+      "message": "So, these aren\u0027t really unit tests; which is part of why I changed how they work. The only thing these tests give you (as far as I can tell) is testing for mobile vs non-mobile redirect (which again, is not a \u0027unit\u0027 of functionality in our code). So we should either make that logic more contained and testable, or write a selenium test for that.",
+      "parentUuid": "DxhCgFEY",
+      "revId": "9e9baa596819e116c46b42ca9e436ac34a525c69",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
