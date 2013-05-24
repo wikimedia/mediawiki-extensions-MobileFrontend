@@ -46,9 +46,6 @@ class SkinMinerva extends SkinTemplate {
 			$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading );
 			$tpl->set( 'prebodytext', $preBodyText );
 		}
-		if ( !isset( $tpl->data['talklink'] ) ) {
-			$tpl->set( 'talklink', '' );
-		}
 
 		// set defaults
 		if ( !isset( $tpl->data['postbodytext'] ) ) {
@@ -82,6 +79,7 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'banners', $banners );
 		// site_urls is used on beta only
 		$tpl->set( 'site_urls', array() );
+		$tpl->set( 'page_actions', array() );
 	}
 
 	/**

@@ -22,9 +22,8 @@ class MinervaTemplate extends BaseTemplate {
 		return $this->data['site_urls'];
 	}
 
-	// FIXME: Design means that currently this menu can only cope with one item
-	public function getUserActionTools() {
-		return array();
+	public function getPageActions() {
+		return $this->data['page_actions'];
 	}
 
 	private function renderLanguages( $languageTemplateData ) {
@@ -69,6 +68,14 @@ class MinervaTemplate extends BaseTemplate {
 		</div>
 		<?php
 		}
+	}
+
+	protected function renderPageActions( $data ) {
+		?><ul id="page-actions" class="hlist"><?php
+		foreach( $this->getPageActions() as $key => $val ):
+			echo $this->makeListItem( $key, $val );
+		endforeach;
+		?></ul><?php
 	}
 
 	protected function render( $data ) { // FIXME: replace with template engines
@@ -139,21 +146,16 @@ class MinervaTemplate extends BaseTemplate {
 						</form>
 						<?php
 					}
+					// FIXME: #mw-mf-menu-page should be used for Echo (and probably renamed)
 				?>
-					<ul id="mw-mf-menu-page">
-						<?php
-							foreach( $this->getUserActionTools() as $key => $val ):
-								echo $this->makeListItem( $key, $val );
-							endforeach;
-						?>
-					</ul>
+					<ul id="mw-mf-menu-page"></ul>
 				</div>
 				<div class='show' id='content_wrapper'>
 					<div id="content" class="content">
 						<?php
 							if ( !$isSpecialPage ) {
 								echo $data['prebodytext'];
-								echo $data['talklink'];
+								$this->renderPageActions( $data );
 							}
 							echo $data[ 'bodytext' ];
 							echo $this->renderLanguages( $languageData );

@@ -134,7 +134,7 @@ m = ( function() {
 		if ( photo.isSupported() ) {
 			$container = $( '.ctaUploadPhoto' );
 
-			new photo.PhotoUploader( {
+			new photo.PhotoUploaderButton( {
 				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
 				pageTitle: mw.config.get( 'wgTitle' ),
 				funnel: 'uploads'

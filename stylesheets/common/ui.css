@@ -457,3 +457,6 @@ input.search:focus {
     padding-left: 0;
   }
 }
+.stable #mw-mf-page-actions {
+  display: none;
+}

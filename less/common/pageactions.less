@@ -1,0 +1,73 @@
+@import "../mf-mixins.less";
+
+// hide menu items when not possible to use
+#ca-upload,
+#ca-edit,
+.client-nojs #ca-watch.cta,
+#ca-edit.istalk {
+	display: none;
+}
+
+#section_0 {
+	margin-bottom: 0;
+	padding-bottom: @headingMarginBottom;
+	border-bottom: dotted 1px #CACACA;
+}
+
+#page-actions {
+	// FIXME: negative margin hacks
+	margin: 0 -@contentMarginRight @headingMarginBottom -@contentMarginRight;
+	padding: 8px @contentMarginRight;
+	// end hacks
+	border-bottom: solid 1px #CACACA;
+	height: 40px;
+
+	li {
+		position: relative;
+		height: 40px;
+		width: 40px;
+
+		button,
+		input,
+		a {
+			width: 40px; // undo rules set in watchlist / nearby lists
+			background-position: center center;
+			.background-size( auto, @watchStarSize );
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			text-indent: -9999px;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.watch-this-article {
+	background-image: url(images/pagemenu/watch.png);
+	&.watched {
+		background-image: url(images/pagemenu/watched.png);
+	}
+}
+
+#ca-talk {
+	a {
+		background-image: url(images/pagemenu/talk.png);
+	}
+}
+
+// FIXME: button.edit-page,
+#ca-edit button {
+	margin-top: 0;
+	background-image: url(images/pagemenu/edit.png);
+}
+
+#ca-edit.enabled,
+#ca-upload.enabled {
+	display: inline-block;
+	input {
+		border: none;
+		background-image: url(images/pagemenu/upload.png);
+	}
+}

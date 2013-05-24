@@ -1,0 +1,63 @@
+#ca-upload,
+#ca-edit,
+.client-nojs #ca-watch.cta,
+#ca-edit.istalk {
+  display: none;
+}
+#section_0 {
+  margin-bottom: 0;
+  padding-bottom: 9pt;
+  border-bottom: dotted 1px #CACACA;
+}
+#page-actions {
+  margin: 0 -23px 9pt -23px;
+  padding: 8px 23px;
+  border-bottom: solid 1px #CACACA;
+  height: 40px;
+}
+#page-actions li {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+#page-actions li button,
+#page-actions li input,
+#page-actions li a {
+  width: 40px;
+  background-position: center center;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 22px;
+  -o-background-size: auto 22px;
+  -webkit-background-size: auto 22px;
+  background-size: auto 22px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+}
+.watch-this-article {
+  background-image: url(images/pagemenu/watch.png);
+}
+.watch-this-article.watched {
+  background-image: url(images/pagemenu/watched.png);
+}
+#ca-talk a {
+  background-image: url(images/pagemenu/talk.png);
+}
+#ca-edit button {
+  margin-top: 0;
+  background-image: url(images/pagemenu/edit.png);
+}
+#ca-edit.enabled,
+#ca-upload.enabled {
+  display: inline-block;
+}
+#ca-edit.enabled input,
+#ca-upload.enabled input {
+  border: none;
+  background-image: url(images/pagemenu/upload.png);
+}

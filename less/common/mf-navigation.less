@@ -11,6 +11,7 @@
 @overlayBorderWidth: 1px;
 @watchThisArticleSize: 22px;
 
+// FIXME: Remove when new nav goes to stable
 #mw-mf-menu-page {
 	right: 0;
 	list-style: none;
@@ -25,8 +26,8 @@
 	}
 }
 
-li.watch-this-article,
-a.watch-this-article { // FIXME: Make the page watch star appear to non-JavaScript users so this css rule is used on non-js devices
+// FIXME: Refactor when pageactions.less moves to stable
+.watch-this-article {
 	background-image: url(images/watch.png);
 	background-position: center center;
 	.background-size( auto, @watchThisArticleSize );
@@ -36,7 +37,6 @@ a.watch-this-article { // FIXME: Make the page watch star appear to non-JavaScri
 	text-indent: -9999px;
 	background-repeat: no-repeat;
 
-	&#ca-watch,
 	&.watched {
 		background-image: url(images/watched.png);
 	}

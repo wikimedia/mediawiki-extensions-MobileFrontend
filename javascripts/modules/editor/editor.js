@@ -25,7 +25,8 @@
 		( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
 		mw.config.get( 'wgIsPageEditable' )
 	) {
-		addEditButton( 0, '#content' );
+		$( '#ca-edit' ).addClass( 'enabled' );
+		addEditButton( 0, '#ca-edit' );
 		$( '.section_heading' ).each( function( i ) {
 			addEditButton( i + 1, this );
 		} );

@@ -135,6 +135,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'stylesheets/common/pageactions.css',
+		),
+		'position' => 'top',
+	),
+
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'scripts' => array(
@@ -186,6 +193,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'overlays/learnMore',
 			'overlays/search/search',
 			'overlays/search/results',
+			// mf-photo.js
+			// For new page action menu
+			'photoUploadAction',
 			'photoUploader',
 			'photoUploadPreview',
 			'photoNag',

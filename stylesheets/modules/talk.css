@@ -1,24 +1,8 @@
-.alpha #talk {
-  right: 23px;
-  z-index: 5;
-  position: fixed;
-  bottom: 0;
-  padding: 0 15px;
-  height: 30px;
-  line-height: 30px;
-  margin: 7.5px 0 30px;
+.alpha #page-actions #ca-talk.count a {
+  text-indent: 0;
   text-align: center;
-  color: white;
-  display: inline-block;
-  background: #c91f2c;
-  font-size: 15px;
-}
-.alpha #talk:before {
-  content: "";
-  position: absolute;
-  bottom: -14px;
-  right: 0;
-  border-width: 0 0 21px 21px;
-  border-style: solid;
-  border-color: transparent #c91f2c;
+  line-height: 40px;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 9px;
 }

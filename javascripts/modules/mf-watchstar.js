@@ -223,19 +223,23 @@ var api = M.require( 'api' ), w = ( function() {
 		} );
 	}
 
-	function init( container, title ) {
+	// FIXME: Here for backwards compatability in stable. Removed when echo goes to stable
+	if ( !$( '#ca-watch' ).length ) {
+		$( '<li id="ca-watch">' ).appendTo( '#mw-mf-menu-page' );
+	}
+	function init( $container, title ) {
 		var pageTitle = mw.config.get( 'wgTitle' ),
 			isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special;
-		container = container || $( '<li>' ).appendTo( nav.getPageMenu() )[ 0 ];
+		$container = $container || $( '#ca-watch' ).removeClass( 'watched watch-this-article' ).empty();
 		title = title || pageTitle;
 		// initialise on current page
-		if ( container && !isSpecialPage ) {
-			initWatchListIcon( container, title );
+		if ( $container && !isSpecialPage ) {
+			initWatchListIcon( $container, title );
 		}
 
 		// bind to future page loads
 		M.on( 'page-loaded', function( article ) {
-			initWatchListIcon( container, article.title );
+			initWatchListIcon( $container, article.title );
 		} );
 
 		upgradeUI();

@@ -3,6 +3,15 @@
 class SkinMobile extends SkinMobileBase {
 	public $template = 'MobileTemplate';
 
+	public function initPage( OutputPage $out ) {
+		parent::initPage( $out );
+		$ctx = MobileContext::singleton();
+		if ( $ctx->isBetaGroupMember() ) {
+			$out->addModuleStyles( 'mobile.styles.beta' );
+		}
+	}
+
+	// FIXME: move addModuleStyles calls to initPage get should not have side effects
 	public function getDefaultModules() {
 		global $wgMFVaryResources;
 
@@ -235,14 +244,12 @@ HTML;
 				}
 				if ( $numTopics ) {
 					$talkLabel = $this->getLanguage()->formatNum( $numTopics );
+					$class = 'count';
 				} else {
 					$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
+					$class = '';
 				}
-				// @todo: Redlink support when we have good editing
-				$talkLink = Html::element( 'a',
-					array( 'href' => $talkTitle->getLocalURL(), 'id' => 'talk' ),
-					$talkLabel );
-				$tpl->set( 'talklink', $talkLink );
+				$tpl->set( '_talkdata', array( 'text' => $talkLabel, 'class' => $class ) );
 			}
 
 			// add last modified timestamp

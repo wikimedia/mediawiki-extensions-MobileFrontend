@@ -11,7 +11,7 @@
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 		apiUrl = endpoint || M.getApiUrl(),
 		PhotoApi, LearnMoreOverlay, NagOverlay, PhotoUploaderPreview, LeadPhoto,
-		PhotoUploadProgress, PhotoUploader;
+		PhotoUploadProgress, PhotoUploader, PhotoUploaderButton, PhotoUploaderPageActionButton;
 
 	function needsPhoto( $container ) {
 		var $content_0 = $container.find( '#content_0' );
@@ -478,8 +478,6 @@
 	 * @event PhotoUploader#cancel
 	 */
 	PhotoUploader = View.extend( {
-		template: M.template.get( 'photoUploader' ),
-		className: 'button photo',
 
 		initialize: function( options ) {
 			var self = this, $input = this.$( 'input' ), ctaDrawer;
@@ -640,6 +638,17 @@
 		}
 	} );
 
+	PhotoUploaderPageActionButton = PhotoUploader.extend( {
+		template: M.template.get( 'photoUploadAction' ),
+		className: 'enabled'
+	} );
+
+	// An extension of the PhotoUploader which instead of treating it as a button treats it as a full screen bar
+	PhotoUploaderButton = PhotoUploader.extend( {
+		template: M.template.get( 'photoUploader' ),
+		className: 'button photo'
+	} );
+
 	function initialize() {
 		// FIXME: make some general function for that (or a page object with a method)
 		var namespaceIds = mw.config.get( 'wgNamespaceIds' ),
@@ -647,20 +656,28 @@
 			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user ),
 			$page = $( '#content' ),
 			$pageHeading = $page.find( 'h1' ).first(),
+			optionsPhotoUploader,
 			photoUploader;
 
 		if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $page ) || mw.config.get( 'wgIsMainPage' ) ) {
 			return;
 		}
 
-		photoUploader = new PhotoUploader( {
+		optionsPhotoUploader = {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
 			pageTitle: mw.config.get( 'wgTitle' ),
 			funnel: $.cookie( 'mwUploadsFunnel' ) || 'article'
-		} ).
-			insertAfter( $pageHeading ).
-			on( 'start', function() {
+		};
+
+		if ( $( '#ca-upload' ).length ) {
+			optionsPhotoUploader.el = '#ca-upload';
+			photoUploader = new PhotoUploaderPageActionButton( optionsPhotoUploader );
+		// FIXME: Remove else clause when page actions go to stable
+		} else {
+			photoUploader = new PhotoUploaderButton( optionsPhotoUploader ).insertAfter( $pageHeading );
+		}
+		photoUploader.on( 'start', function() {
 				photoUploader.detach();
 			} ).
 			on( 'success', function( data ) {
@@ -688,6 +705,7 @@
 		generateFileName: generateFileName,
 		isSupported: isSupported,
 		PhotoUploader: PhotoUploader,
+		PhotoUploaderButton: PhotoUploaderButton,
 		trimUtf8String: trimUtf8String,
 		// just for testing
 		_needsPhoto: needsPhoto,

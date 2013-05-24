@@ -96,7 +96,7 @@
 		talkPage = mw.config.get( 'wgFormattedNamespaces' )[mw.config.get( 'wgNamespaceNumber' ) + 1] +
 			':' + mw.config.get( 'wgTitle' ),
 		Page = M.require( 'page'),
-		$talk = $( '#talk' ),
+		$talk = $( '#ca-talk' ),
 		req;
 
 	$talk.on( 'click', function( ev ) {

@@ -10,8 +10,7 @@
   left: 0;
   bottom: 0;
 }
-li.watch-this-article,
-a.watch-this-article {
+.watch-this-article {
   background-image: url(images/watch.png);
   background-position: center center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
@@ -26,10 +25,7 @@ a.watch-this-article {
   text-indent: -9999px;
   background-repeat: no-repeat;
 }
-li.watch-this-article#ca-watch,
-a.watch-this-article#ca-watch,
-li.watch-this-article.watched,
-a.watch-this-article.watched {
+.watch-this-article.watched {
   background-image: url(images/watched.png);
 }
 .client-js #mw-mf-main-menu-button {

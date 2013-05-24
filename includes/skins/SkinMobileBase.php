@@ -52,6 +52,44 @@ class SkinMobileBase extends SkinMinerva {
 				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->escaped(),
 			),
 		) );
+
+		// Reuse template data variable from SkinTemplate to construct page menu
+		$menu = array();
+		$actions = $tpl->data['content_navigation']['actions'];
+		$namespaces = $tpl->data['content_navigation']['namespaces'];
+		$views = $tpl->data['content_navigation']['views'];
+
+		// empty placeholder for edit photos which both require js
+		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '' );
+		$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '' );
+
+		if ( isset( $namespaces['talk'] ) ) {
+			$menu['talk'] = $namespaces['talk'];
+			if ( isset( $tpl->data['_talkdata'] ) ) {
+				$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
+				$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
+			}
+		}
+
+		$watchTemplate = array(
+			'id' => 'ca-watch',
+			'class' => 'watch-this-article',
+		);
+		// standardise watch article into one menu item
+		if ( isset( $actions['watch'] ) ) {
+			$menu['watch'] = array_merge( $actions['watch'], $watchTemplate );
+		} else if ( isset( $actions['unwatch'] ) ) {
+			$menu['watch'] = array_merge( $actions['unwatch'], $watchTemplate );
+			$menu['watch']['class'] .= ' watched';
+		} else {
+			// placeholder for not logged in
+			$menu['watch'] = $watchTemplate;
+			// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
+			$menu['watch']['text'] = '';
+			$menu['watch']['class'] = 'cta';
+		}
+
+		$tpl->set( 'page_actions', $menu );
 	}
 
 	public function getSkinConfigVariables() {
