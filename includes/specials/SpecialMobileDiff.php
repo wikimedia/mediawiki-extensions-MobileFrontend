@@ -136,6 +136,7 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 	}
 
 	function showDiff() {
+		$ctx = MobileContext::singleton();
 		if ( $this->prevRev ) {
 			$prevId = $this->prevRev->getId();
 			$contentHandler = $this->rev->getContentHandler();
@@ -150,6 +151,25 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 			$processedDiff .
 			'</div>'
 		);
+		$prev = $this->rev->getPrevious();
+		$next = $this->rev->getNext();
+		if ( $ctx->isAlphaGroupMember() && (  $prev || $next ) ) {
+			$history = Html::openElement( 'ul', array( 'class' => 'hlist revision-history-links' ) );
+			if ( $prev ) {
+				$history .= Html::openElement( 'li' ) .
+					Html::element( 'a', array(
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )->getLocalUrl()
+					), $this->msg( 'previousdiff' ) ) . Html::closeElement( 'li' );
+			}
+			if ( $next ) {
+				$history .= Html::openElement( 'li' ) .
+					Html::element( 'a', array(
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )->getLocalUrl()
+					), $this->msg( 'nextdiff' ) ) . Html::closeElement( 'li' );
+			}
+			$history .= Html::closeElement( 'ul' );
+			$this->getOutput()->addHtml( $history );
+		}
 	}
 
 	function processDiff( $diff ) {
