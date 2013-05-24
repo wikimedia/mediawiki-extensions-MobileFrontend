@@ -24,6 +24,13 @@
   background-position: center center;
 }
 .listThumb.needsPhoto {
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  background-color: #3b6fba;
   background-image: url(images/camera.png);
 }
 .listThumbH {
