@@ -207,11 +207,6 @@ input[type=submit] {
   /* JS only */
 
 }
-#mw-mf-content-left {
-  height: 100%;
-  border-left: solid 12px #252525;
-  border-right: solid 1px black;
-}
 #mw-mf-menu-main {
   background-color: #4e4e4e;
   list-style: none;
