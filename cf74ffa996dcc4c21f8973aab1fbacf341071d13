@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxkapQ94",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-24T19:07:31Z",
+      "side": 1,
+      "message": "did you mean wfMessage()-\u003etext()?\nhttp://www.mediawiki.org/wiki/Wfmessage#Handling_messages",
+      "revId": "cf74ffa996dcc4c21f8973aab1fbacf341071d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxuaAT08",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-24T19:07:31Z",
+      "side": 1,
+      "message": "same as above.",
+      "revId": "cf74ffa996dcc4c21f8973aab1fbacf341071d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
