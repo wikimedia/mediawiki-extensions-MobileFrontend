@@ -62,13 +62,11 @@ ul.mw-mf-watchlist-results li a.title {
   position: relative;
   padding: 0 23px 15px 23px;
   margin: -1px 0;
-  border-left: 8px solid transparent;
   /* FIXME: remove if we reset text-decoration in common styles */
 
   text-decoration: none;
 }
 ul.mw-mf-watchlist-results li a:active {
-  border-left-color: #3366bb;
   background: #e8e8e9;
   background: rgba(232, 232, 233, 0.5);
 }
@@ -103,7 +101,7 @@ ul.mw-mf-watchlist-results li .mw-mf-user {
   margin: .5em 0 0;
 }
 ul.a-to-z li a.title {
-  padding-left: 77px;
+  padding-left: 85px;
 }
 .mw-mf-user {
   padding: 1px 0 0 20px;

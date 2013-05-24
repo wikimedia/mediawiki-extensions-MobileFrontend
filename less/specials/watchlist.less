@@ -27,7 +27,6 @@
 
 @thumbWidth: 70px;
 @thumbSpace: @thumbWidth + 15px;
-@ragWidth: 8px;
 
 .listThumb {
 	background-repeat: no-repeat;
@@ -66,13 +65,11 @@ ul.mw-mf-watchlist-results {
 			position: relative;
 			padding: 0 @contentMarginRight @articleListPaddingTop @contentMarginLeft;
 			margin: -1px 0;
-			border-left: @ragWidth solid transparent;
 			/* FIXME: remove if we reset text-decoration in common styles */
 			text-decoration: none;
 		}
 
 		a:active {
-			border-left-color: #3366bb;
 			.background-alpha(232, 232, 233, .5);
 		}
 
@@ -113,7 +110,7 @@ ul.mw-mf-watchlist-results {
 ul.a-to-z {
 	li {
 		a.title {
-			padding-left: (@thumbSpace - @ragWidth);
+			padding-left: @thumbSpace;
 		}
 	}
 }
