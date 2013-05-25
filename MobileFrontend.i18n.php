@@ -125,7 +125,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-title' => 'Nearby',
 	'mobile-frontend-nearby-loading' => 'Loading topics near your current location',
 	'mobile-frontend-nearby-requirements' => 'Sorry! Your web browser doesn\'t support {{SITENAME}} Nearby.',
-	'mobile-frontend-nearby-requirements-guidance' => 'Try a different browser or enable javascript if you\'ve disabled it.',
+	'mobile-frontend-nearby-requirements-guidance' => 'Try a different browser or enable JavaScript if you\'ve disabled it.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} Nearby can\'t figure out where you are… try again?',
@@ -478,7 +478,7 @@ See also:
 	'mobile-frontend-main-menu-discovery' => 'Discovery menu header in main menu',
 	'mobile-frontend-main-menu-personal' => 'Menu header in main menu for pages personalised for a user',
 	'mobile-frontend-main-menu-settings-heading' => '{{doc-special|MobileOptions|unlisted=1}}',
-	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non javascript users',
+	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non JavaScript users',
 	'mobile-frontend-settings-site-description' => 'Shown on Special:MobileOptions
 *$1 - the number of other language versions for this wiki',
 	'mobile-frontend-main-menu-account-create' => 'Account creation link in main menu.
@@ -492,13 +492,13 @@ See also:
 {{Identical|History}}',
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
-	'mobile-frontend-ajax-preview-loading' => 'Text that accompanies an ajax loader when you dynamically load an article preview overlay via javascript',
+	'mobile-frontend-ajax-preview-loading' => 'Text that accompanies an ajax loader when you dynamically load an article preview overlay via JavaScript',
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved.
 {{Identical|Saving}}',
 	'mobile-frontend-nearby-title' => 'Title of Special:Nearby.
 {{Identical|Nearby}}',
 	'mobile-frontend-nearby-loading' => 'Informative message telling user that their location is being looked up',
-	'mobile-frontend-nearby-requirements' => 'Message shown to users who have no javascript or a browser that is not capable',
+	'mobile-frontend-nearby-requirements' => 'Message shown to users who have no JavaScript or a browser that is not capable',
 	'mobile-frontend-nearby-requirements-guidance' => 'Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-requirements}}',
 	'mobile-frontend-nearby-distance' => 'States distance to current location in kilometers',
 	'mobile-frontend-nearby-distance-meters' => 'States distance to current location in meters for numbers less than 1km',
@@ -534,7 +534,7 @@ Used when the user is not logged in.
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
 	'mobile-frontend-watchlist-more' => 'Label for link that shows more pages of the watchlist a-z view.
 {{Identical|More}}',
-	'mobile-frontend-watchlist-cta' => 'Appears above the login form when you click watchlist icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in javascript.',
+	'mobile-frontend-watchlist-cta' => 'Appears above the login form when you click watchlist icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
 	'mobile-frontend-watchlist-cta-button-login' => 'A link with label to login page
 {{Identical|Login}}',
 	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page

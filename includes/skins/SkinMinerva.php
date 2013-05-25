@@ -85,7 +85,8 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
-	 * Returns array of config variables that should be added only to this skin for use in javascript
+	 * Returns array of config variables that should be added only to this skin
+	 * for use in JavaScript.
 	 * @return Array
 	 */
 	public function getSkinConfigVariables() {
