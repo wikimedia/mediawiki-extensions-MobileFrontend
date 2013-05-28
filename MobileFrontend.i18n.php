@@ -232,6 +232,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 
 	// edit
+	'mobile-frontend-editor-edit' => 'Edit',
 	'mobile-frontend-editor-save' => 'Save',
 	'mobile-frontend-editor-cancel' => 'Cancel',
 	'mobile-frontend-editor-confirm' => 'Confirm',
@@ -620,6 +621,7 @@ They can either exit the page and lose them or stay on the page until they are c
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-editor-edit' => 'Caption for the link showing edit form.',
 	'mobile-frontend-editor-save' => 'Caption for save button on edit form.
 {{Identical|Save}}',
 	'mobile-frontend-editor-cancel' => 'Caption for cancel button on edit form.

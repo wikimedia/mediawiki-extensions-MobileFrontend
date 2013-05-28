@@ -204,7 +204,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			// editor.js
-			'edit',
+			'mobile-frontend-editor-edit',
 			'mobile-frontend-editor-save',
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-confirm',

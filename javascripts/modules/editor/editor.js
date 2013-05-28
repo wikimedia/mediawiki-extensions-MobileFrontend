@@ -4,7 +4,7 @@
 
 	function addEditButton( section, container ) {
 		$( '<button class="edit-page inline">' ).
-			text( mw.msg( 'edit' ) ).
+			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container ).
 			on( 'mousedown', function( ev ) {
 				// prevent folding section when clicking Edit
