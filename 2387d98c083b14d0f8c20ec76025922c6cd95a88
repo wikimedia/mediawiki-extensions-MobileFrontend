@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxkjOZS8",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-28T19:50:25Z",
+      "side": 1,
+      "message": "Please, just use names. This makes it more obscure. I have to jump from one place to another in code to know what self.log( 5 ); is.",
+      "revId": "2387d98c083b14d0f8c20ec76025922c6cd95a88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
