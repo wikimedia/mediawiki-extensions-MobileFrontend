@@ -19,6 +19,23 @@
 		template: M.template.get( 'overlays/editor' ),
 		className: 'mw-mf-overlay editor-overlay',
 
+		log: function( action, errorText ) {
+			var
+				data = {
+					token: M.getSessionId(),
+					action: action,
+					section: this.sectionId,
+					pageId: mw.config.get( 'wgArticleId' ),
+					username: mw.config.get( 'wgUserName' ),
+					mobileMode: mw.config.get( 'wgMFMode' ),
+					userAgent: window.navigator.userAgent
+				};
+			if ( errorText ) {
+				data.errorText = errorText;
+			}
+			M.log( 'MobileWebEditing', data );
+		},
+
 		initialize: function( options ) {
 			var self = this;
 			this._super( options );
@@ -38,17 +55,25 @@
 			this.$prev = this.$( '.prev-section' ).
 				on( 'click', function() {
 					self._loadSection( self.sectionId - 1 );
+					self.log( 'sectionPrevious' );
 				} );
 			this.$next = this.$( '.next-section' ).
 				on( 'click', function() {
 					self._loadSection( self.sectionId + 1 );
+					self.log( 'sectionNext' );
 				} );
 			this.$( '.save' ).on( 'click', function() {
+				// log save button click
+				self.log( 'save' );
 				self.$( '.count' ).text( mw.msg( 'mobile-frontend-editor-section-count', self.api.getStagedCount() ) );
 				self.$( '.initial-bar' ).hide();
 				self.$( '.confirm-bar' ).show();
 			} );
 			this.$( '.confirm-save' ).on( 'click', $.proxy( this, '_save' ) );
+			this.$( '.cancel' ).on( 'click', function() {
+				// log cancel attempt
+				self.log( 'cancel' );
+			} );
 
 			// This is used to avoid position: fixed weirdness in mobile Safari when
 			// the keyboard is visible
@@ -63,6 +88,8 @@
 			}
 
 			this._loadSection( options.section );
+			// log section edit attempt
+			self.log( 'attempt' );
 		},
 
 		hide: function() {
@@ -110,17 +137,22 @@
 					} else {
 						popup.show( mw.msg( 'mobile-frontend-editor-error-loading' ), 'toast error' );
 					}
+					// log error that occurred in retrieving section
+					self.log( 'error', error );
 				} );
 		},
 
 		_save: function() {
 			var self = this;
 
+			self.log( 'submit' );
 			this.$( '.confirm-bar' ).hide();
 			this.$( '.saving-bar' ).show();
 
 			this.api.save().
 				done( function() {
+					// log success!
+					self.log( 'success' );
 					self.hide();
 					popup.show(
 						mw.msg( 'mobile-frontend-editor-success' ) + ' ' + mw.msg( 'mobile-frontend-editor-refresh' ),
@@ -139,6 +171,8 @@
 					popup.show( msg, 'toast error' );
 					self.$( '.saving-bar' ).hide();
 					self.$( '.initial-bar' ).show();
+					// log error that occurred in retrieving section
+					self.log( 'error', err );
 				} );
 		}
 	} );
