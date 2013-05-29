@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxuRRVWI",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-29T23:28:11Z",
+      "side": 1,
+      "message": "This test fails. Chrome browser is different from Android native browser.",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxiTE3Q8",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-29T23:28:11Z",
+      "side": 1,
+      "message": "Generic seems harsh - this is quite a capable browser..?",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxsRO2cA",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-29T23:28:11Z",
+      "side": 1,
+      "message": "Firefox mobile is very different from Android. Should we really describe it like so?",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxgTJ4SY",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-29T23:28:11Z",
+      "side": 1,
+      "message": "Fennec currently isn\u0027t recognised as a mobile device.",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxkTT6dQ",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-29T23:28:11Z",
+      "side": 1,
+      "message": "Opera Tablet should be caught under operamobile. This test fails.",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
