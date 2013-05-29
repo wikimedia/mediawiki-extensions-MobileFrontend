@@ -20,6 +20,7 @@ table.geography td {
   max-width: 100%;
 }
 img.tex,
+.image img,
 .thumb img {
   max-width: 100% !important;
   width: auto !important;
