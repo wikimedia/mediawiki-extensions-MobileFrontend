@@ -92,5 +92,6 @@
 	}
 
 	$( initButton );
+	M.on( 'languages-loaded', initButton );
 
 }( mw.mobileFrontend, jQuery ) );

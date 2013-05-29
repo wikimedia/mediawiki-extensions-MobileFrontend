@@ -47,5 +47,8 @@ var toggle = ( function() {
 }());
 
 M.define( 'toggle', toggle );
+M.on( 'page-loaded', function() {
+	toggle.init();
+} );
 
 }( mw.mobileFrontend, jQuery ) );

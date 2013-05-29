@@ -1,0 +1,18 @@
+<h1 id="section_0">{{title}}</h1>
+<ul id="page-actions" class="hlist">
+	<li id="ca-edit"></li><li id="ca-upload">
+	</li><li id="ca-talk"><a href="{{talkLink}}" id="talk">{{talkLabel}}</a>
+	</li><li id="ca-watch"></li>
+</ul>
+<div id="content_0" class="content_block openSection">{{{lead}}}</div>
+{{#sections}}
+<div class="section">
+	<h2 class="section_heading" id="section_{{index}}">{{{heading}}}</h2>
+	<div class="content_block" id="content_{{index}}"
+		data-references="{{isReferences}}"
+		data-content="{{content}}">
+	</div>
+</div>
+{{/sections}}
+<div class="section" id="mw-mf-language-section"></div>
+<a href="{{historyUrl}}" id="mw-mf-last-modified" data-timestamp="{{lastModifiedTimestamp}}"></a>

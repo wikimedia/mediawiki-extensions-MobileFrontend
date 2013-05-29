@@ -35,8 +35,9 @@ var T = ( function() {
 		}
 	}
 
-	function refresh() {
-		var references = currentPage.getReferenceSection();
+	function refresh( page ) {
+		var references = page.getReferenceSection();
+		currentPage = page;
 		if ( references ) {
 			$( '#content_' + references.index ).html( references.content ).data( 'loaded', true );
 			M.emit( 'references-loaded' );
@@ -53,10 +54,11 @@ var T = ( function() {
 		if ( !isMainPage && isMainNamespace && inViewMode ) {
 			M.history.retrievePage( pageTitle ).done( function( pageData ) {
 				currentPage = new Page( pageData );
-				refresh();
+				refresh( currentPage );
 			} );
 		}
 	}
+	M.on( 'page-loaded', refresh );
 
 	return {
 		init: init

@@ -698,6 +698,9 @@
 		( M.isLoggedIn() || mw.config.get( 'wgMFEnablePhotoUploadCTA' ) )
 	) {
 		$( initialize );
+		M.on( 'page-loaded', function() {
+			initialize();
+		} );
 	}
 
 	M.define( 'photo', {

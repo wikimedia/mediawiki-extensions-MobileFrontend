@@ -23,11 +23,52 @@
 	} );
 
 	Page = View.extend( {
+		template: M.template.get( 'page' ),
 		defaults: {
 			title: '',
 			lead: '',
-			sections: []
+			isMainPage: false,
+			talkLabel: mw.msg( 'mobile-frontend-talk-overlay-header' ),
+			// FIXME: this is not a useful default and asking for trouble (only valid on a just edited page)
+			lastModifiedTimestamp: ( "" + new Date().getTime() ).substr( 0,10 ) // Default to current timestamp
 		},
+
+		render: function( options ) {
+			var pageTitle = options.title, self = this,
+				$el = this.$el, _super = self._super;
+
+			if ( !options.sections ) {
+				$el.empty().addClass( 'loading' );
+				M.history.retrievePage( pageTitle ).done( function( pageData ) {
+					options = $.extend( options, pageData );
+					_super.call( self, options );
+
+					// FIXME: currently wasteful due to bug 40678
+					M.history.retrieveAllLanguages().done( function( languages ) {
+						M.history.retrievePageLanguages( pageTitle, languages ).done( function( langlinks ) {
+							var template = M.template.get( 'languageSection' ),
+								data = {
+									langlinks: langlinks,
+									heading: mw.msg( 'mobile-frontend-language-article-heading' ),
+									description: mw.msg( 'mobile-frontend-language-header', langlinks.length )
+								};
+
+							$el.find( '#mw-mf-language-section' ).html( template.render( data ) );
+							M.emit( 'languages-loaded' );
+						} );
+					} );
+
+					// reset loader
+					$el.removeClass( 'loading' );
+
+					// emit events so that modules can reinitialise
+					M.emit( 'page-loaded', self );
+				} );
+			} else {
+				self._super( options );
+			}
+		},
+		// FIXME: Move to an api object
 		preRender: function( options ) {
 			var s, i, level, text,
 				$tmpContainer = $( '<div>' ),
@@ -82,7 +123,9 @@
 			this._lastSectionId = lastId;
 			options = $.extend( options, {
 				sections: this.sections,
-				lead: this.lead
+				lead: this.lead,
+				historyUrl: M.history.getArticleUrl( options.title, { action: 'history' } ),
+				lastModifiedTimestamp: options.timestamp
 			} );
 		},
 		appendSection: function( data ) {

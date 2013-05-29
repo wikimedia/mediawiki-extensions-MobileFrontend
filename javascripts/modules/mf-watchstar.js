@@ -238,13 +238,13 @@ var api = M.require( 'api' ), w = ( function() {
 			initWatchListIcon( $container, title );
 		}
 
-		// bind to future page loads
-		M.on( 'page-loaded', function( article ) {
-			initWatchListIcon( $container, article.title );
-		} );
-
 		upgradeUI();
 	}
+
+	// bind to future page loads
+	M.on( 'page-loaded', function( article ) {
+		initWatchListIcon( $( '#ca-watch' ), article.title );
+	} );
 
 	return {
 		init: init,

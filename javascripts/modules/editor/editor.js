@@ -21,15 +21,20 @@
 			} );
 	}
 
-	if (
-		( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
-		mw.config.get( 'wgIsPageEditable' )
-	) {
+	function init() {
 		$( '#ca-edit' ).addClass( 'enabled' );
 		addEditButton( 0, '#ca-edit' );
 		$( '.section_heading' ).each( function( i ) {
 			addEditButton( i + 1, this );
 		} );
+	}
+
+	if (
+		( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
+		mw.config.get( 'wgIsPageEditable' )
+	) {
+		init();
+		M.on( 'page-loaded', init );
 	}
 
 }( mw.mobileFrontend, jQuery ) );
