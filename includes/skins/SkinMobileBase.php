@@ -13,11 +13,12 @@ class SkinMobileBase extends SkinMinerva {
 	public function prepareData( BaseTemplate $tpl ) {
 		parent::prepareData( $tpl );
 		$context = MobileContext::singleton();
+		$inBeta = $context->isBetaGroupMember();
 		$menuHeaders = true;
 		$search = $tpl->data['searchBox'];
 		if ( $context->isAlphaGroupMember() ) {
 			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-alpha' )->escaped();
-		} else if ( $context->isBetaGroupMember() ) {
+		} else if ( $inBeta ) {
 			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
 		} else { // stable mode
 			$menuHeaders = false;
@@ -31,6 +32,26 @@ class SkinMobileBase extends SkinMinerva {
 			$banners[] = $tpl->data['zeroRatedBanner'];
 		}
 		$tpl->set( 'banners', $banners );
+		if ( $inBeta ) {
+			$this->prepareDataBeta( $tpl );
+		}
+	}
+
+	/**
+	 * Prepares data required by the mobile beta skin only. This runs after prepareData
+	 * @param $tpl BaseTemplate
+	 */
+	protected function prepareDataBeta( BaseTemplate $tpl ) {
+		$tpl->set( 'site_urls', array(
+			array(
+				'href' => Title::newFromText( 'About', NS_PROJECT )->getLocalUrl(),
+				'text'=> $this->msg( 'mobile-frontend-main-menu-about' )->escaped(),
+			),
+			array(
+				'href' => Title::newFromText( 'General_disclaimer', NS_PROJECT )->getLocalUrl(),
+				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->escaped(),
+			),
+		) );
 	}
 
 	public function getSkinConfigVariables() {
