@@ -98,8 +98,7 @@
 
 	// TODO: separate main menu navigation code into separate module
 	function init() {
-		// FIXME: use wgIsMainPage
-		var mainPage = document.getElementById( 'mainpage' ),
+		var
 			mode, $body = $( 'body' ),
 			$doc = $( 'html' );
 
@@ -109,10 +108,6 @@
 			mode = $body.hasClass( 'beta' ) ? 'beta' : 'stable';
 		}
 		mw.config.set( 'wgMFMode', mode );
-
-		if ( mainPage ) {
-			emit( 'homepage-loaded' );
-		}
 
 		$doc.removeClass( 'page-loading' ); // FIXME: Kill with fire. This is here for historic reasons in case old HTML is cached
 		if( supportsPositionFixed() ) {
