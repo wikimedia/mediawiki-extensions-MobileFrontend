@@ -8090,10 +8090,12 @@ $messages['lb'] = array(
 	'mobile-frontend-ajax-preview-loading' => 'Preview vun der Säit gëtt gelueden',
 	'mobile-frontend-page-saving' => '$1 späicheren',
 	'mobile-frontend-nearby-title' => 'Nobäi',
+	'mobile-frontend-nearby-requirements' => 'Leider ënnerstëtzt Ären Internetbrowser {{SITENAM}} Nearby net.',
 	'mobile-frontend-nearby-requirements-guidance' => 'Probéiert en anere Browser oder aktivéiert Javascript wann Dir deen ausgeschalt hutt.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-error' => "{{SITENAME}} 'Nearby' huet e puer Problemer.",
+	'mobile-frontend-nearby-error-guidance' => "Probéiert d'Plaz wou Dir sidd z'aktualiséieren.",
 	'mobile-frontend-nearby-link' => 'Dës Säit ganz liesen',
 	'mobile-frontend-needs-photo' => 'Brauch eng Foto',
 	'mobile-frontend-donate-image-login' => 'Dir musst ageloggt si fir déi Fichieren ze gesinn déi Dir eropgelueden hutt.',
@@ -8132,6 +8134,7 @@ $messages['lb'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|Byte|Byten}} ewechgeholl',
 	'mobile-frontend-table' => 'Tabell $1',
 	'mobile-frontend-photo-upload' => 'Setzt eng Foto an dësen Artikel',
+	'mobile-frontend-photo-article-edit-comment' => "Foto fir d'Benotzen op der Säit gouf derbäigesat",
 	'mobile-frontend-photo-upload-comment' => "Foto op d'Säit derbäigesat",
 	'mobile-frontend-photo-caption-placeholder' => 'Setzt eng Beschreiwung derbäi (obligatoresch)',
 	'mobile-frontend-image-loading' => 'Bild gëtt gelueden',
@@ -9711,6 +9714,7 @@ Help de pagina's tot leven te brengen door afbeeldingen te uploaden die u wilt w
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
 	'mobile-frontend-photo-upload-cta' => 'Meld u aan of registreer u om een afbeelding toe te voegen.',
 	'mobile-frontend-photo-upload-login' => 'U moet aangemeld zijn om een afbeelding te kunnen toevoegen.',
+	'mobile-frontend-editor-edit' => 'Bewerken',
 	'mobile-frontend-editor-save' => 'Opslaan',
 	'mobile-frontend-editor-cancel' => 'Annuleren',
 	'mobile-frontend-editor-confirm' => 'Bevestigen',
@@ -10752,6 +10756,9 @@ $messages['pt-br'] = array(
 	'mobile-frontend-placeholder' => 'Digite sua pesquisa aqui...', # Fuzzy
 	'mobile-frontend-nearby-title' => 'Redondezas',
 	'mobile-frontend-listed-image-no-description' => 'Sem descrição',
+	'mobile-frontend-photo-cancel' => 'Cancelar',
+	'mobile-frontend-editor-cancel' => 'Cancelar',
+	'mobile-frontend-drawer-cancel' => 'Cancelar',
 );
 
 /** Quechua (Runa Simi)
