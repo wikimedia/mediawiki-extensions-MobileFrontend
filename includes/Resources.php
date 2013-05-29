@@ -211,6 +211,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'languageSection',
 			'overlays/languages',
 			'overlays/editor',
+			// talk.js
+			'overlays/talk',
+			'overlays/talkSectionAdd',
+			'talkSection',
 		),
 		'messages' => array(
 			// editor.js
@@ -252,6 +256,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'stylesheets/modules/editor.css',
+			'stylesheets/modules/talk.css',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
@@ -259,6 +264,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-languages.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
+			'javascripts/modules/talk.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(
@@ -272,6 +278,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for mf-languages.js
 			'mobile-frontend-language-site-choose',
 			'mobile-frontend-language-footer',
+
+			// for talk.js
+			'mobile-frontend-talk-explained',
+			'mobile-frontend-talk-explained-empty',
+			'mobile-frontend-talk-overlay-lead-header',
+			'mobile-frontend-talk-overlay-header',
+			'mobile-frontend-talk-add-overlay-subject-placeholder',
+			'mobile-frontend-talk-add-overlay-content-placeholder',
+			'mobile-frontend-talk-edit-summary',
+			'mobile-frontend-talk-add-overlay-submit',
 		),
 	),
 
@@ -285,20 +301,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'mobile.action',
 	),
 
-	'mobile.alpha.plumbing' => array(
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
-		'templates' => array(
-			'overlays/talk',
-			'overlays/talkSectionAdd',
-			'talkSection',
-		),
-		'class' => 'MFResourceLoaderModule',
-	),
-
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.alpha.plumbing',
 			'mobile.stable',
 			'mobile.beta',
 		),
@@ -306,26 +310,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// for mf-table.js
 			'mobile-frontend-table',
-
-			// for talk.js
-			'mobile-frontend-talk-explained',
-			'mobile-frontend-talk-explained-empty',
-			'mobile-frontend-talk-overlay-lead-header',
-			'mobile-frontend-talk-overlay-header',
-			'mobile-frontend-talk-add-overlay-subject-placeholder',
-			'mobile-frontend-talk-add-overlay-content-placeholder',
-			'mobile-frontend-talk-edit-summary',
-			'mobile-frontend-talk-add-overlay-submit',
 		),
 		'styles' => array(
 			'stylesheets/modules/mf-tables.css',
-			'stylesheets/modules/talk.css',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-inline-style-scrubber.js',
 			'javascripts/modules/mf-tables.js',
 			'javascripts/modules/mf-translator.js',
-			'javascripts/modules/talk.js',
 		),
 	),
 
