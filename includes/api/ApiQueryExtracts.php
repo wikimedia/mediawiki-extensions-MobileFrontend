@@ -399,6 +399,7 @@ class ExtractFormatter extends HtmlFormatter {
 	);
 
 	public function __construct( $text, $plainText, $sectionFormat ) {
+		wfProfileIn( __METHOD__ );
 		parent::__construct( HtmlFormatter::wrapHTML( $text ) );
 		$this->plainText = $plainText;
 		$this->sectionFormat = $sectionFormat;
@@ -413,9 +414,11 @@ class ExtractFormatter extends HtmlFormatter {
 		} else {
 			$this->flatten( array( 'span', 'a' ) );
 		}
+		wfProfileOut( __METHOD__ );
 	}
 
 	public function getText( $dummy = null ) {
+		wfProfileIn( __METHOD__ );
 		$this->filterContent();
 		$text = parent::getText();
 		if ( $this->plainText ) {
@@ -423,16 +426,19 @@ class ExtractFormatter extends HtmlFormatter {
 			$text = str_replace( "\r", "\n", $text ); // for Windows
 			$text = preg_replace( "/\n{3,}/", "\n\n", $text ); // normalise newlines
 		}
+		wfProfileOut( __METHOD__ );
 		return $text;
 	}
 
 	public function onHtmlReady( $html ) {
+		wfProfileIn( __METHOD__ );
 		if ( $this->plainText ) {
 			$html = preg_replace( '/\s*(<h([1-6])\b)/i',
 				"\n\n" . ApiQueryExtracts::SECTION_MARKER_START . '$2' . ApiQueryExtracts::SECTION_MARKER_END . '$1' ,
 				$html
 			);
 		}
+		wfProfileOut( __METHOD__ );
 		return $html;
 	}
 }
