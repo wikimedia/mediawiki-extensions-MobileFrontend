@@ -5,6 +5,9 @@
 		leadHeading = mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 		TalkSectionAddOverlay = nav.Overlay.extend( {
 			defaults: {
+				cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
+				confirmMsg: mw.msg( 'mobile-frontend-editor-confirm' ),
+				licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 				topicAdd: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 				topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 				topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' )
@@ -15,7 +18,7 @@
 				this._super( options );
 				this.talkOverlay = options.parent;
 				this.title = 'Talk:' + mw.config.get( 'wgTitle' );
-				this.$( 'button.save' ).click( function() {
+				this.$( 'button.confirm-save' ).click( function() {
 					self.save();
 				} );
 			},
