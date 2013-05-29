@@ -263,6 +263,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/views/page.js',
 			'javascripts/common/application-beta.js',
 		),
+		'messages' => array(
+			// page.js and talk.js (alpha)
+			'mobile-frontend-talk-overlay-header',
+		),
 	),
 
 	'mobile.beta' => $wgMFMobileResourceBoilerplate + array(
@@ -322,21 +326,33 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'mobile.action',
 	),
 
+	'mobile.history' => $wgMFMobileResourceBoilerplate + array(
+		'scripts' => array(
+			'javascripts/externals/history.js',
+			'javascripts/externals/history.adapter.jquery.js',
+		),
+	),
+
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta',
+			'mobile.history',
 		),
 		'messages' => array(
 
 			// for mf-table.js
 			'mobile-frontend-table',
+
+			// history-alpha.js
+			'mobile-frontend-language-article-heading',
 		),
 		'styles' => array(
 			'stylesheets/modules/mf-tables.css',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-inline-style-scrubber.js',
+			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-tables.js',
 			'javascripts/modules/mf-translator.js',
 		),
