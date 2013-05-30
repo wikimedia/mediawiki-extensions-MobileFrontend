@@ -262,7 +262,8 @@ class MobileContext extends ContextSource {
 
 		// FIXME: remove when editor moves to stable
 		if ( ( $action === 'edit' && $stableMode ) ||
-			 ( $action === 'history' && $stableMode ) ) {
+			// FIXME: redirect to last diff ?
+			 ( $action === 'history' ) ) {
 			return false;
 		}
 
