@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dxkab6hU",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-30T23:25:31Z",
+      "side": 1,
+      "message": "especially since this is public, it would be prudent to enforce the type here, eg:\npublic function prepareDataBeta( BaseTemplate $tpl ) {",
+      "revId": "35e015a3c5d65bd9b1fa1114d713b234835711c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxqbnTq4",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-30T23:25:31Z",
+      "side": 1,
+      "message": "http://www.mediawiki.org/wiki/Wfmessage#Parameters",
+      "revId": "35e015a3c5d65bd9b1fa1114d713b234835711c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dxobs0pE",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-30T23:25:31Z",
+      "side": 1,
+      "message": "http://www.mediawiki.org/wiki/Wfmessage#Parameters",
+      "revId": "35e015a3c5d65bd9b1fa1114d713b234835711c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
