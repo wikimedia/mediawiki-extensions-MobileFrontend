@@ -15,6 +15,7 @@ class HtmlFormatter {
 	private $removeImages = false;
 	private $idWhitelist = array();
 	private $flattenRedLinks = false;
+	private $useImgAlt = true;
 
 	/**
 	 * Constructor
@@ -107,6 +108,13 @@ class HtmlFormatter {
 	}
 
 	/**
+	 * @param bool $value
+	 */
+	public function useImgAlt( $value ) {
+		$this->useImgAlt = $value;
+	}
+
+	/**
 	 * Checks whether specified element should not be removed due to whitelist
 	 * @param DOMElement $element: Element to check
 	 * @return bool
@@ -149,7 +157,7 @@ class HtmlFormatter {
 			$tagToRemoveNodes = $doc->getElementsByTagName( $tagToRemove );
 			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
 				if ( $tagToRemoveNode && $this->elementNotWhitelisted( $tagToRemoveNode ) ) {
-					if ( $tagToRemoveNode->nodeName == 'img' ) {
+					if ( $this->useImgAlt && $tagToRemoveNode->nodeName == 'img' ) {
 						$domElemsToReplace[] = $tagToRemoveNode;
 					} else {
 						$domElemsToRemove[] = $tagToRemoveNode;
@@ -171,30 +179,33 @@ class HtmlFormatter {
 			$domElement->parentNode->replaceChild( $replacement, $domElement );
 		}
 
-		foreach ( $domElemsToRemove as $domElement ) {
-			$domElement->parentNode->removeChild( $domElement );
-		}
+		$this->removeElements( $domElemsToRemove );
 
 		// Elements with named IDs
+		$domElemsToRemove = array();
 		foreach ( $removals['ID'] as $itemToRemove ) {
 			$itemToRemoveNode = $doc->getElementById( $itemToRemove );
 			if ( $itemToRemoveNode ) {
-				$itemToRemoveNode->parentNode->removeChild( $itemToRemoveNode );
+				$domElemsToRemove[] = $itemToRemoveNode;
 			}
 		}
+		$this->removeElements( $domElemsToRemove );
 
 		// CSS Classes
+		$domElemsToRemove = array();
 		$xpath = new DOMXpath( $doc );
 		foreach ( $removals['CLASS'] as $classToRemove ) {
-			$elements = $xpath->query( '//*[@class="' . $classToRemove . '"]' );
+			$elements = $xpath->query( '//*[contains(@class, "' . $classToRemove . '")]' );
 
 			/** @var $element DOMElement */
 			foreach ( $elements as $element ) {
-				if ( $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
-					$element->parentNode->removeChild( $element );
+				$classes = $element->getAttribute( 'class' );
+				if ( preg_match( "/\b$classToRemove\b/", $classes ) && $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
+					$domElemsToRemove[] = $element;
 				}
 			}
 		}
+		$this->removeElements( $domElemsToRemove );
 
 		// Tags with CSS Classes
 		foreach ( $removals['TAG_CLASS'] as $classToRemove ) {
@@ -233,6 +244,13 @@ class HtmlFormatter {
 			}
 		}
 		wfProfileOut( __METHOD__ );
+	}
+
+	private function removeElements( array $elements ) {
+		/** @var $element DOMElement */
+		foreach ( $elements as $element ) {
+			$element->parentNode->removeChild( $element );
+		}
 	}
 
 	/**
