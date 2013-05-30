@@ -3,6 +3,49 @@
 class SkinMobile extends SkinMobileBase {
 	public $template = 'MobileTemplate';
 
+	public function getDefaultModules() {
+		global $wgMFVaryResources;
+
+		$ctx = MobileContext::singleton();
+		$out = $this->getOutput();
+		$inAlpha = $ctx->isAlphaGroupMember();
+		$device = $ctx->getDevice();
+
+		// add device specific css file - add separately to avoid cache fragmentation
+		if ( $wgMFVaryResources ) {
+			$out->addModuleStyles( 'mobile.xdevice.detect' );
+		} elseif ( $device->moduleName() ) {
+			$out->addModuleStyles( $device->moduleName() );
+		}
+
+		$modules = parent::getDefaultModules();
+		$mode = 'stable';
+		if ( $ctx->isBetaGroupMember() ) {
+			$modules['beta'] = array( 'mobile.beta' );
+			$mode = 'beta';
+		}
+		if ( $inAlpha ) {
+			$modules['alpha'] = array( 'mobile.alpha' );
+			$mode = 'alpha';
+		}
+
+		// main page special casing
+		if ( $this->getTitle()->isMainPage() ) {
+			if ( $inAlpha ) {
+				$out->addModuleStyles( 'mobile.mainpage.styles' );
+			} else {
+				$modules['mainpage'] = array( 'mobile.mainpage.scripts' );
+			}
+		}
+
+		// flush unnecessary modules
+		$modules['content'] = array();
+		$modules['legacy'] = array();
+
+		wfRunHooks( 'EnableMobileModules', array( $out, $mode ) );
+		return $modules;
+	}
+
 	protected function prepareTemplate() {
 		global $wgAppleTouchIcon;
 
@@ -14,8 +57,6 @@ class SkinMobile extends SkinMobileBase {
 		$context = MobileContext::singleton();
 		$inBeta = $context->isBetaGroupMember();
 		$inAlpha = $context->isAlphaGroupMember();
-
-		$device = $context->getDevice();
 
 		// add head items
 		if ( $wgAppleTouchIcon !== false ) {
@@ -49,8 +90,13 @@ class SkinMobile extends SkinMobileBase {
 
 		wfProfileOut( __METHOD__ . '-modules' );
 
-		// setup destinations for styles/scripts at top and at bottom
-		$tpl = $this->attachResources( $title, $tpl, $device );
+		$out->setTarget( 'mobile' );
+
+		$bottomScripts = Html::inlineScript(
+			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
+		);
+		$bottomScripts .= $out->getBottomScripts();
+		$tpl->set( 'bottomscripts', $bottomScripts );
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;
@@ -230,82 +276,6 @@ HTML;
 			$key = 'mobile-frontend-sign-in-heading';
 		}
 		return wfMessage( $key )->plain();
-	}
-
-	protected function attachResources( Title $title, QuickTemplate $tpl, IDeviceProperties $device ) {
-		global $wgMFVaryResources;
-
-		$out = $this->getOutput();
-		$out->setTarget( 'mobile' );
-
-		$out->addModuleStyles( 'mobile.styles' );
-		$this->enableModules();
-
-		// add device specific css file - add separately to avoid cache fragmentation
-		if ( $wgMFVaryResources ) {
-			$out->addModuleStyles( 'mobile.xdevice.detect' );
-		} elseif ( $device->moduleName() ) {
-			$out->addModuleStyles( $device->moduleName() );
-		}
-
-		$bottomScripts = Html::inlineScript(
-			"document.documentElement.className = document.documentElement.className.replace( 'page-loading', '' );"
-		);
-		$bottomScripts .= $out->getBottomScripts();
-
-		$tpl->set( 'bottomscripts', $bottomScripts );
-		return $tpl;
-	}
-
-	/**
-	 * Enables RL modules for page
-	 */
-	public function enableModules() {
-		$context = MobileContext::singleton();
-		$inBeta = $context->isBetaGroupMember();
-		$inAlpha = $context->isAlphaGroupMember();
-		$out = $this->getOutput();
-		$title = $this->getTitle();
-
-		$out->addModules( 'mobile.site' );
-		$out->addModules( 'mobile.stable' );
-		$mode = 'stable';
-		if ( $inBeta ) {
-			$out->addModules( 'mobile.beta' );
-			$mode = 'beta';
-		}
-		if ( $inAlpha ) {
-			$out->addModules( 'mobile.alpha' );
-			$mode = 'alpha';
-		}
-		wfRunHooks( 'EnableMobileModules', array( $out, $mode ) );
-
-		// modules based on context
-		$isFilePage = $title->getNamespace() == NS_FILE;
-		$action = $context->getRequest()->getText( 'action' );
-		$isSpecialPage = $title->isSpecialPage();
-
-		// specific to current context
-		if ( $isFilePage ) {
-			$out->addModules( 'mobile.file.scripts' );
-			$out->addModuleStyles( 'mobile.file.styles' );
-		}
-
-		if ( !$isSpecialPage ) {
-			$out->addModuleStyles( 'mobile.styles.page' );
-		}
-
-		if ( $title->isMainPage() ) {
-			if ( $context->isAlphaGroupMember() ) {
-				$out->addModuleStyles( 'mobile.mainpage.styles' );
-			} else {
-				$out->addModules( 'mobile.mainpage.scripts' );
-			}
-		}
-
-		if ( $action === 'history' ) {
-			$out->addModules( 'mobile.action.history' );
-		}
 	}
 
 	/**

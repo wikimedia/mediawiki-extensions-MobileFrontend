@@ -73,10 +73,6 @@ class MobileTemplate extends MinervaTemplate {
 		return $items;
 	}
 
-	public function getUserActionTools() {
-		return array();
-	}
-
 	/**
 	 * Returns an array of footerlinks trimmed down to only those footer links that
 	 * are valid.

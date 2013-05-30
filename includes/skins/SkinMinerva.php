@@ -16,11 +16,9 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-		$modules = array(
-			'mobile.startup',
-			'mobile.stable.common',
-		);
-		$out->addModules( $modules );
+		// add styling
+		$out->addModuleStyles( 'mobile.styles' );
+
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
 
@@ -102,6 +100,41 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 		);
+	}
+
+	public function getDefaultModules() {
+		$modules = parent::getDefaultModules();
+		$out = $this->getOutput();
+
+		$modules['mobile'] = array(
+			'mobile.startup',
+			'mobile.site',
+			// FIXME: separate mobile.stable into more meaningful groupings
+			'mobile.stable',
+		);
+
+		$modules['watch'] = array();
+		$modules['search'] = array();
+
+		$title = $this->getTitle();
+		// modules based on context
+		$action = $this->getContext()->getRequest()->getText( 'action' );
+
+		// specific to current context
+		if ( $title->getNamespace() == NS_FILE ) {
+			$modules['file'] = array( 'mobile.file.scripts' );
+			$out->addModuleStyles( 'mobile.file.styles' );
+		}
+
+		if ( !$title->isSpecialPage() ) {
+			$out->addModuleStyles( 'mobile.styles.page' );
+		}
+
+		if ( $action === 'history' ) {
+			$out->addModuleStyles( 'mobile.action.history' );
+		}
+		$out->addModuleStyles( 'mobile.styles' );
+		return $modules;
 	}
 
 	/**
