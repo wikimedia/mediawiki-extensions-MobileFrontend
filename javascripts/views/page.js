@@ -5,6 +5,7 @@
 		Section, Page;
 
 	Section = View.extend( {
+		template: M.template.get( 'section' ),
 		defaults: {
 			hasReferences: false, // flag for references
 			heading: '',
@@ -123,5 +124,6 @@
 	} );
 
 	M.define( 'page', Page );
+	M.define( 'Section', Section );
 
 }( mw.mobileFrontend, jQuery ) );

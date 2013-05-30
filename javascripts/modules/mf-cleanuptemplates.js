@@ -7,20 +7,22 @@ var module = (function() {
 			template: M.template.get( 'overlays/cleanup' )
 		} );
 
-	function run() {
-		var $metadata = $( '#content_0 table.ambox' ),
+	function run( $container, parentOverlay ) {
+		$container = $container || $( '#content_0' );
+		var $metadata = $container.find( 'table.ambox' ),
 			overlay,
-			$container = $( '<div>' );
+			$tmp = $( '<div>' );
 
 		$metadata.each( function() {
 			if ( $( this ).find( 'table.ambox' ).length === 0 ) {
-				$container.append( $( this ).clone() );
+				$tmp.append( $( this ).clone() );
 			}
 		} );
 
 		overlay = new CleanupOverlay( {
+			parent: parentOverlay,
 			heading: M.message( 'mobile-frontend-meta-data-issues-header' ),
-			content: $container.html()
+			content: $tmp.html()
 		} );
 
 		$( '<a class="mw-mf-cleanup">' ).click( function() {
@@ -31,7 +33,13 @@ var module = (function() {
 
 	function init() {
 		run();
-		M.on( 'page-loaded', run );
+		M.on( 'page-loaded', function() {
+			// don't page the page-loaded parameter to run.
+			run();
+		} );
+		M.on( 'edit-preview', function( overlay ) {
+			run( overlay.$el, overlay );
+		} );
 	}
 
 	return {

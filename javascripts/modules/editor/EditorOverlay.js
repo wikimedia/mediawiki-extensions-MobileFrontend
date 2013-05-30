@@ -3,6 +3,7 @@
 	var Overlay = M.require( 'navigation' ).Overlay,
 		popup = M.require( 'notifications' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
+		PreviewOverlay = M.require( 'modules/editor/PreviewOverlay' ),
 		EditorOverlay;
 
 	EditorOverlay = Overlay.extend( {
@@ -12,6 +13,7 @@
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-confirm' ),
 			previousMsg: mw.msg ( 'mobile-frontend-editor-previous' ),
+			previewMsg: mw.msg( 'mobile-frontend-editor-preview' ),
 			nextMsg: mw.msg ( 'mobile-frontend-editor-next' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' )
@@ -41,6 +43,15 @@
 			this._super( options );
 
 			this.api = new EditorApi( { title: options.title, isNew: options.isNew } );
+			this.$( '.preview' ).on( 'click', function() {
+				var overlay = new PreviewOverlay( {
+					parent: self,
+					title: options.title,
+					wikitext: self.$( 'textarea' ).val()
+				} );
+				self.previewClicked = true;
+				overlay.show();
+			} );
 			this.sectionCount = options.sectionCount;
 			this.$spinner = this.$( '.spinner' );
 			this.$content = this.$( 'textarea' ).
@@ -93,7 +104,10 @@
 		},
 
 		hide: function() {
-			if ( !this.api.getStagedCount() || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
+			if ( this.previewClicked ) {
+				this._super();
+				this.previewClicked = false;
+			} else if ( !this.api.getStagedCount() || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
 				this._super();
 			}
 		},

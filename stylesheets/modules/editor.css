@@ -29,6 +29,9 @@
 .editor-overlay textarea:focus {
   outline: none;
 }
+.editor-overlay .content {
+  padding-bottom: 5em;
+}
 .editor-overlay .buttonBar {
   box-shadow: 0 -10px 10px 0 #ffffff;
 }

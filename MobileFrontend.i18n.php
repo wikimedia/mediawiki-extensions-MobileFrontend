@@ -249,6 +249,9 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-editor-error' => 'Error, edit not saved.',
 	'mobile-frontend-editor-error-conflict' => 'Error, another user has edited this page.',
 	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',
+	'mobile-frontend-editor-preview' => 'Preview',
+	'mobile-frontend-editor-preview-explanation' => 'A preview of this edit will be shown below.',
+	'mobile-frontend-editor-error-preview' => 'Error, something unexpected happened upon loading the preview. Please close and try again.',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -665,6 +668,10 @@ Used as "toast" error message.',
 
 See also:
 * {{msg-mw|tag-mobile_edit-description}}',
+	'mobile-frontend-editor-preview' => 'Text shown on preview button in edit overlay screen that when clicked launches a preview of the associated wikitext',
+	'mobile-frontend-editor-preview-explanation' => 'A summary explaining that the preview is being prepared and will appear below.',
+	'mobile-frontend-editor-error-preview' => 'Error message for when a preview fails to load for an unknown reason',
+
 	'tag-mobile_edit-description' => 'Change tag description e.g. in [[Special:Tags]], see also {{msg-mw|tag-mobile_edit}}',
 	'mobile-frontend-drawer-cancel' => 'Not visible, but the text label for the cancel button inside a navigation overlay
 {{Identical|Cancel}}',

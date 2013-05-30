@@ -211,6 +211,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'languageSection',
 			'overlays/languages',
 			'overlays/editor',
+			'overlays/editPreview',
+			'section',
+
 			// talk.js
 			'overlays/talk',
 			'overlays/talkSectionAdd',
@@ -233,6 +236,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
 			'mobile-frontend-editor-error-loading',
+
+			// modules/editor/EditorOverlay.js
+			'mobile-frontend-editor-preview',
+			// modules/editor/PreviewOverlay.js
+			'mobile-frontend-editor-error-preview',
+			'mobile-frontend-editor-preview-explanation',
 		),
 		'class' => 'MFResourceLoaderModule',
 	),
@@ -260,6 +269,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/PreviewOverlay.js',
 			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-languages.js',

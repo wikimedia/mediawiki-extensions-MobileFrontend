@@ -95,9 +95,6 @@ html.animations .mw-mf-overlay .buttonBar {
 .mw-mf-overlay li {
   text-align: left;
 }
-.mw-mf-overlay div.content {
-  padding-bottom: 20px;
-}
 .mw-mf-overlay div.content textarea {
   display: block;
   width: 100%;
@@ -129,7 +126,7 @@ html.animations .mw-mf-overlay .buttonBar {
 }
 .mw-mf-overlay .mw-mf-overlay-footer,
 .mw-mf-overlay .mw-mf-overlay-header {
-  padding: 4px 8px 4px 40px;
+  padding: 4px 8px 4px 23px;
   margin: 0;
   font-size: 0.8em;
   color: #666;
