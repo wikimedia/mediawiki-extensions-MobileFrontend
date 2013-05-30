@@ -16,6 +16,24 @@
       "revId": "0b74eee7408ffd0718843a0f77501bfcca233e92",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxkYWSqc",
+        "filename": "templates/overlays/talkSectionAdd.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-05-30T22:55:07Z",
+      "side": 1,
+      "message": "Not missing a div... \u003c/div\u003e for .header, \u003c/div\u003e for .content and \u003c/div\u003e for .buttonBar...\n\nI think your looking at the diff rather than the entire html file.",
+      "parentUuid": "DxqYBDnE",
+      "revId": "0b74eee7408ffd0718843a0f77501bfcca233e92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
