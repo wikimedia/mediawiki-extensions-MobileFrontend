@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DxqBY1jA",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-30T18:39:08Z",
+      "side": 1,
+      "message": "That\u0027s something that behaved so in the past. Btw, is the difference in WebKit versions significant enough to warrant a different CSS file? My plan in the first place was to merge everything WebKit-based into one group because we need to care only about CSS now.",
+      "parentUuid": "DxuRRVWI",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DxiTE3Q8",
         "filename": "tests/DeviceDetectionTest.php",
         "patchSetId": 10
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-29T23:28:11Z",
       "side": 1,
       "message": "Generic seems harsh - this is quite a capable browser..?",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxmBOznE",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-30T18:39:08Z",
+      "side": 1,
+      "message": "Generic is quite capable:) I see no contradiction here.",
+      "parentUuid": "DxiTE3Q8",
       "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -64,6 +100,24 @@
       "writtenOn": "2013-05-29T23:28:11Z",
       "side": 1,
       "message": "Fennec currently isn\u0027t recognised as a mobile device.",
+      "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxoOAREs",
+        "filename": "tests/DeviceDetectionTest.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-05-30T18:39:08Z",
+      "side": 1,
+      "message": "Fennec is history - and its successor, FF mobile, is detected properly.",
+      "parentUuid": "DxgTJ4SY",
       "revId": "cd781e3875237aadf4fbcc1a991b4370ffb2b3ef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
