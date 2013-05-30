@@ -34,6 +34,24 @@
       "revId": "0b74eee7408ffd0718843a0f77501bfcca233e92",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxkbEivc",
+        "filename": "templates/overlays/talkSectionAdd.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-05-30T23:29:03Z",
+      "side": 1,
+      "message": "i am looking at the entire html file (talkSectionAdd.html). the previous version of this file (\u0027Base\u0027) opens three divs (header, search-box, content) but closes four, hence my confusion.",
+      "parentUuid": "DxkYWSqc",
+      "revId": "0b74eee7408ffd0718843a0f77501bfcca233e92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
