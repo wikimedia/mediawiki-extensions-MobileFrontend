@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dx77pNR4",
+        "filename": "less/common/mf-buttons.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-05-31T23:49:13Z",
+      "side": 1,
+      "message": "I think this is too small. I\u0027d rather put the preview button on the bottom with other buttons. Have you checked with design about that?",
+      "revId": "efb78409dde6ce4bfe23a79ce312557e86cb379d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
