@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxlS6cL4",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-05-31T19:50:54Z",
+      "side": 1,
+      "message": "You can do:\n\n    var config \u003d mw.config.get( [ \u0027wgArticleId\u0027, \u0027wgUserName\u0027, \u0027wgMFMode\u0027 ] );\n\nAnd get back an object that has the values you want. It\u0027s occasionally nicer.\n\nI\u0027m just pointing it out in case you weren\u0027t familiar with it; it\u0027s not a point against this change set.",
+      "revId": "19da9fdae4ffe9b720677514b249f5e25913c073",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
