@@ -107,6 +107,8 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-upload' => 'Uploads',
 	'mobile-frontend-main-menu-discovery' => 'Discovery',
 	'mobile-frontend-main-menu-personal' => 'My Stuff',
+	'mobile-frontend-main-menu-about' => 'About {{SITENAME}}',
+	'mobile-frontend-main-menu-disclaimer' => 'Disclaimer',
 
 	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
@@ -478,6 +480,8 @@ See also:
 {{Identical|Upload}}',
 	'mobile-frontend-main-menu-discovery' => 'Discovery menu header in main menu',
 	'mobile-frontend-main-menu-personal' => 'Menu header in main menu for pages personalised for a user',
+	'mobile-frontend-main-menu-about' => 'Text for link to site about page in main menu',
+	'mobile-frontend-main-menu-disclaimer' => 'Text for link to site disclaimer page in main menu',
 	'mobile-frontend-main-menu-settings-heading' => '{{doc-special|MobileOptions|unlisted=1}}',
 	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non JavaScript users',
 	'mobile-frontend-settings-site-description' => 'Shown on Special:MobileOptions

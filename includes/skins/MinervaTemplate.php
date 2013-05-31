@@ -18,6 +18,10 @@ class MinervaTemplate extends BaseTemplate {
 		return $this->data['sidebar']['navigation'];
 	}
 
+	public function getSiteLinks() {
+		return $this->data['site_urls'];
+	}
+
 	// FIXME: Design means that currently this menu can only cope with one item
 	public function getUserActionTools() {
 		return array();
@@ -101,6 +105,13 @@ class MinervaTemplate extends BaseTemplate {
 				<ul>
 				<?php
 				foreach( $this->getPersonalTools() as $key => $val ):
+					echo $this->makeListItem( $key, $val );
+				endforeach;
+				?>
+				</ul>
+				<ul class="hlist">
+				<?php
+				foreach( $this->getSiteLinks() as $key => $val ):
 					echo $this->makeListItem( $key, $val );
 				endforeach;
 				?>

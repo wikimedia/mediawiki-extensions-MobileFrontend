@@ -80,6 +80,8 @@ class SkinMinerva extends SkinTemplate {
 			$banners[] = '<div id="siteNotice"></div>';
 		}
 		$tpl->set( 'banners', $banners );
+		// site_urls is used on beta only
+		$tpl->set( 'site_urls', array() );
 	}
 
 	/**

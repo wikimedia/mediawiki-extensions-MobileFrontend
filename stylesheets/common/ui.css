@@ -307,6 +307,18 @@ input[type=submit] {
   /* @embed */
   background-image: url(images/menu/loginout.png);
 }
+#mw-mf-page-left ul.hlist li {
+  font-size: 0.8em;
+  border-bottom: none;
+}
+#mw-mf-page-left ul.hlist li:hover {
+  border-left: none;
+  margin-left: 0;
+}
+#mw-mf-page-left ul.hlist li a {
+  border-bottom: none;
+  padding: 0.5em;
+}
 @media all and (min-width: 700px) {
   body.navigation-enabled.alpha #mw-mf-page-left,
   body.navigation-enabled.beta #mw-mf-page-left {
