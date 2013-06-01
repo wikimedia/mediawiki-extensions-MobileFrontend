@@ -68,15 +68,20 @@
 			},
 			initialize: function( options ) {
 				var self = this,
+					$add = this.$( 'button.add' ),
 					page = options.page;
 
 				this._super( options );
-				this.$( 'button.add' ).click( function() {
-					var overlay = new TalkSectionAddOverlay( {
-						parent: self
+				if ( M.isLoggedIn() ) {
+					$add.click( function() {
+						var overlay = new TalkSectionAddOverlay( {
+							parent: self
+						} );
+						overlay.show();
 					} );
-					overlay.show();
-				} );
+				} else {
+					$add.remove();
+				}
 
 				this.$( 'a' ).on( 'click', function() {
 					var id = parseFloat( $( this ).data( 'id' ), 10 ),
