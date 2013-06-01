@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dx35RbWA",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-06-01T01:07:42Z",
+      "side": 1,
+      "message": "#getDefaultModules is an accessor. It should return an array, possibly with some accessing here/there to determine the values of the array. \n\nHowever this method must not have side-effects like getting OutputPage to inject and set (\"add\") extra modules directly.\n\nI understand you did it to load them with addModuleStyles (instead of addModules). But I\u0027d highly recommend you find another Skin method to call those methods, not in here please. During the clean up in core we both frowned at others doing things like this (mixed logic and acting on OutputPage directly from a \"get array of module names\" method).\n\nAlso, if this method is called twice, it\u0027ll potentially add the same modules twice. Fortunately OutputPage covers for that, though that\u0027s an undocumented luck.",
+      "revId": "81093f6e4ef78092e2a93b7cc5ef6dbd0e860df2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dx15OMcI",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-06-01T01:07:42Z",
+      "side": 1,
+      "message": "Don\u0027t look at the WebRequest directly to determine the current action.",
+      "revId": "81093f6e4ef78092e2a93b7cc5ef6dbd0e860df2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
