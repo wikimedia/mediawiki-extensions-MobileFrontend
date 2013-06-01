@@ -309,15 +309,12 @@ input[type=submit] {
 }
 #mw-mf-page-left ul.hlist li {
   font-size: 0.8em;
-  border-bottom: none;
-}
-#mw-mf-page-left ul.hlist li:hover {
-  border-left: none;
-  margin-left: 0;
+  margin: 0;
+  border: none;
 }
 #mw-mf-page-left ul.hlist li a {
-  border-bottom: none;
-  padding: 0.5em;
+  border: none;
+  padding: .7em 14px;
 }
 @media all and (min-width: 700px) {
   body.navigation-enabled.alpha #mw-mf-page-left,
