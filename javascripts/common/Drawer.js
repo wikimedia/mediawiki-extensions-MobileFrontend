@@ -29,6 +29,14 @@ var View = M.require( 'view' ),
 
 		isVisible: function() {
 			return this.$el.hasClass( 'visible' );
+		},
+
+		toggle: function() {
+			if ( this.isVisible() ) {
+				this.hide();
+			} else {
+				this.show();
+			}
 		}
 	} );
 

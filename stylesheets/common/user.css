@@ -1,0 +1,40 @@
+#user-button {
+  right: 0;
+  background: url(images/user.png) 50% 50% no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -moz-background-size: auto 24px;
+  -o-background-size: auto 24px;
+  -webkit-background-size: auto 24px;
+  background-size: auto 24px;
+}
+#user-button span {
+  position: absolute;
+  right: 5px;
+  bottom: 7px;
+  font-size: .8em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+  padding: 1px 4px;
+  background: #c91f2c;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#user-button span.zero {
+  display: none;
+}
+#mw-echo-special-container {
+  list-style: none;
+}
+#mw-echo-special-container .mw-echo-date-section {
+  font-family: Georgia, serif;
+  font-size: 1.16em;
+}
+#mw-echo-special-container .mw-echo-notification {
+  margin: .5em 0 1em;
+}
+.mw-echo-unread .mw-echo-title {
+  font-weight: bold;
+}

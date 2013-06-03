@@ -9,28 +9,6 @@
  */
 
 class MobileFrontendHooks {
-
-	/**
-	 * EnableMobileModules hook handler
-	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/EnableMobileModules
-	 * Adds modules depending on alpha/beta status.
-	 *
-	 * @param OutputPage $out
-	 * @param string $mode
-	 * @return boolean
-	 */
-	public static function onEnableMobileModules( $out, $mode ) {
-		if ( $mode === 'alpha' && $out->getTitle()->isSpecialPage() ) {
-			$out->addModules(
-				array(
-					'mobile.special.alpha.scripts',
-					'mobile.special.alpha.styles',
-				)
-			);
-		}
-		return true;
-	}
-
 	/**
 	 * LinksUpdate hook handler - saves a count of h2 elements that occur in the WikiPage
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/LinksUpdate

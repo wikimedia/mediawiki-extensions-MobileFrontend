@@ -138,6 +138,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'stylesheets/common/pageactions.css',
+			'stylesheets/common/user.css',
 		),
 		'position' => 'top',
 	),
@@ -275,6 +276,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-languages.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk.js',
+			'javascripts/common/user.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(
@@ -298,6 +300,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-add-overlay-content-placeholder',
 			'mobile-frontend-talk-edit-summary',
 			'mobile-frontend-talk-add-overlay-submit',
+
+			// user.js
+			'mobile-frontend-user-cta',
 		),
 	),
 
@@ -465,20 +470,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'remoteExtPath' => $remoteExtPath,
 		'targets' => 'desktop',
 	),
-
-	// Special page modules we only want to load in beta/alpha:
-	'mobile.special.alpha.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
-		'scripts' => array(
-			'javascripts/specials/modules/search-btn.js',
-		),
-	),
-
-	'mobile.special.alpha.styles' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
-		'styles' => array(
-			'stylesheets/specials/modules/search-btn.css',
-		),
-	),
-
 
 	/**
 		* Special page modules

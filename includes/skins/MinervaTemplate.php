@@ -132,23 +132,22 @@ class MinervaTemplate extends BaseTemplate {
 					endforeach;
 				?>
 				<div class="header">
-				<?php
-					echo $this->html( 'menuButton' );
-					if ( $isSpecialPage ) {
-						echo $data['specialPageHeader'];
-					} else {
-						?>
-						<form action="<?php echo $data['wgScript'] ?>" class="search-box">
-						<?php
-						echo $this->makeSearchInput( $data['searchBox'] );
-						echo $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit' ) );
-						?>
-						</form>
-						<?php
-					}
-					// FIXME: #mw-mf-menu-page should be used for Echo (and probably renamed)
-				?>
-					<ul id="mw-mf-menu-page"></ul>
+					<?php
+						echo $this->html( 'menuButton' );
+						if ( $isSpecialPage ) {
+							echo $data['specialPageHeader'];
+						} else {
+							?>
+							<form action="<?php echo $data['wgScript'] ?>" class="search-box">
+							<?php
+							echo $this->makeSearchInput( $data['searchBox'] );
+							echo $this->makeSearchButton( 'go', array( 'class' => 'searchSubmit' ) );
+							?>
+							</form>
+							<?php
+						}
+						echo $data['userButton'];
+					?>
 				</div>
 				<div class='show' id='content_wrapper'>
 					<div id="content" class="content">

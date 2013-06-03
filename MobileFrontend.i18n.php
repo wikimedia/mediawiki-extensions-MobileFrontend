@@ -123,6 +123,8 @@ $messages['en'] = array (
 	'mobile-frontend-ajax-preview-loading' => 'Loading page preview',
 	'mobile-frontend-page-saving' => 'Saving $1',
 
+	'mobile-frontend-user-cta' => 'Please login or sign up to see your notifications.',
+
 	// nearby
 	'mobile-frontend-nearby-title' => 'Nearby',
 	'mobile-frontend-nearby-loading' => 'Loading topics near your current location',
@@ -504,6 +506,7 @@ See also:
 	'mobile-frontend-ajax-preview-loading' => 'Text that accompanies an ajax loader when you dynamically load an article preview overlay via JavaScript',
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved.
 {{Identical|Saving}}',
+	'mobile-frontend-user-cta' => 'Appears when you click user icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
 	'mobile-frontend-nearby-title' => 'Title of Special:Nearby.
 {{Identical|Nearby}}',
 	'mobile-frontend-nearby-loading' => 'Informative message telling user that their location is being looked up',
@@ -543,7 +546,7 @@ Used when the user is not logged in.
 	'mobile-frontend-watchlist-view' => 'Link to your watchlist',
 	'mobile-frontend-watchlist-more' => 'Label for link that shows more pages of the watchlist a-z view.
 {{Identical|More}}',
-	'mobile-frontend-watchlist-cta' => 'Appears above the login form when you click watchlist icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
+	'mobile-frontend-watchlist-cta' => 'Appears when you click watchlist icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
 	'mobile-frontend-watchlist-cta-button-login' => 'A link with label to login page
 {{Identical|Login}}',
 	'mobile-frontend-watchlist-cta-button-signup' => 'A link with label to sign up page

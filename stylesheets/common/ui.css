@@ -366,7 +366,8 @@ input[type=submit] {
 }
 /* Menu buttons */
 #mw-mf-menu-page,
-#mw-mf-main-menu-button {
+#mw-mf-main-menu-button,
+#user-button {
   display: inline-block;
   height: 46px;
   width: 40px;

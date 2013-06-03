@@ -69,6 +69,8 @@ class SkinMinerva extends SkinTemplate {
 			'id'=> 'mw-mf-main-menu-button',
 			) )
 		);
+		$tpl->set( 'userButton', '<ul id="mw-mf-menu-page"></ul>' );
+
 		$banners = array();
 		if ( isset( $tpl->data['notice'] ) ) {
 			$banners[] = $tpl->data['notice'];

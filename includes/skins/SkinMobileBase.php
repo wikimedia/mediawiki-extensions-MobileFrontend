@@ -83,6 +83,30 @@ class SkinMobileBase extends SkinMinerva {
 		}
 
 		$tpl->set( 'page_actions', $menu );
+
+		$this->prepareUserButton( $tpl );
+	}
+
+	/**
+	 * Prepares the user button.
+	 * @param $tpl BaseTemplate
+	 */
+	protected function prepareUserButton( $tpl ) {
+		if ( class_exists( 'MWEchoNotifUser' ) ) {
+			$user = $this->getUser();
+			// FIXME: cap higher counts
+			$count = $user->isLoggedIn() ? MWEchoNotifUser::newFromUser( $user )->getNotificationCount() : 0;
+
+			$tpl->set( 'userButton',
+				Html::openElement( 'a', array(
+					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
+					'href' => SpecialPage::getTitleFor( 'Notifications' )->getLocalURL(),
+					'id'=> 'user-button',
+				) ) .
+				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $count ) .
+				Html::closeElement( 'a' )
+			);
+		}
 	}
 
 	public function getSkinConfigVariables() {
