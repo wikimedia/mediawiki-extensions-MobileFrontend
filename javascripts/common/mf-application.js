@@ -5,6 +5,7 @@
 		// FIXME: when mobileFrontend is an object with a constructor,
 		// just inherit from EventEmitter instead
 		eventEmitter = new EventEmitter(),
+		$viewport, viewport,
 		template,
 		templates = {},
 		scrollY;
@@ -96,6 +97,14 @@
 		window.scrollTo( 0, 1 );
 	}
 
+	function lockViewport() {
+		$viewport.attr( 'content', 'minimum-scale=1.0, maximum-scale=1.0' );
+	}
+
+	function unlockViewport() {
+		$viewport.attr( 'content', viewport );
+	}
+
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var
@@ -114,23 +123,24 @@
 			$doc.addClass( 'supportsPositionFixed' );
 		}
 
+		$viewport = $( 'meta[name="viewport"]' );
+		viewport = $viewport.attr( 'content' );
+		// FIXME: If minimum-scale and maximum-scale are not set locking viewport will prevent a reset
+		if ( viewport && viewport.indexOf( 'minimum-scale' ) === -1 ) {
+			viewport += ', minimum-scale=0.25, maximum-scale=1.6';
+		}
+
 		// when rotating to landscape stop page zooming on ios
 		// allow disabling of transitions in android ics 4.0.2
 		function fixBrowserBugs() {
-			// see http://adactio.com/journal/4470/
-			var viewportmeta = document.querySelector && document.querySelector( 'meta[name="viewport"]' ),
-				ua = navigator.userAgent,
-				android = ua.match( /Android/ );
-			if( viewportmeta && ua.match( /iPhone|iPad/i )  ) {
-				viewportmeta.content = 'minimum-scale=1.0, maximum-scale=1.0';
+			// see http://adactio.com/journal/4470/ (fixed in ios 6)
+			var
+				ua = navigator.userAgent;
+			if( $viewport[0] && ua.match( /iPhone|iPad/i ) && ua.match( /OS [4-5]_0/ )  ) {
+				lockViewport();
 				document.addEventListener( 'gesturestart', function() {
-					viewportmeta.content = 'minimum-scale=0.25, maximum-scale=1.6';
+					lockViewport();
 				}, false );
-			} else if( ua.match(/Android 4\.0\.2/) ){
-				$doc.addClass( 'android4-0-2' );
-			}
-			if ( android ) {
-				$doc.addClass( 'android' );
 			}
 		}
 		fixBrowserBugs();
@@ -199,6 +209,7 @@
 		getOrigin: getOrigin,
 		getSessionId: getSessionId,
 		isLoggedIn: isLoggedIn,
+		lockViewport: lockViewport,
 		log: log,
 		message: message,
 		on: on,
@@ -206,7 +217,8 @@
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,
-		template: template
+		template: template,
+		unlockViewport: unlockViewport
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
