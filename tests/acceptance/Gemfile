@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'chunky_png'
 gem 'cucumber'
+gem 'json'
 gem 'net-http-persistent'
 gem 'page-object'
 gem 'parallel_tests'
