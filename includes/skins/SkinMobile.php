@@ -306,19 +306,6 @@ HTML;
 	}
 
 	/**
-	 * Determines what the heading of the login page should be based on the context
-	 * @return string
-	 */
-	protected function getLoginPageHeading() {
-		if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
-			$key = 'mobile-frontend-sign-up-heading';
-		} else {
-			$key = 'mobile-frontend-sign-in-heading';
-		}
-		return wfMessage( $key )->plain();
-	}
-
-	/**
 	 * Creates a login or logout button
 	 * @return Array: Representation of button with text and href keys
 	*/

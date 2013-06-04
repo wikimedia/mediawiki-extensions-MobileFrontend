@@ -53,6 +53,7 @@ $autoloadClasses = array (
 	'MobileDeviceDetectModule' => 'modules/MobileDeviceDetectModule',
 
 	'SpecialUploads' => 'specials/SpecialUploads',
+	'SpecialMobileUserlogin' => 'specials/SpecialMobileUserlogin',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
