@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-var Overlay = M.require( 'navigation' ).Overlay,
+var Overlay = M.require( 'Overlay' ),
 	Section = M.require( 'Section' ),
 	api = M.require( 'api' ),
 	PreviewOverlay = Overlay.extend( {
