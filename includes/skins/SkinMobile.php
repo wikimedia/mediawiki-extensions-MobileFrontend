@@ -61,11 +61,6 @@ class SkinMobile extends SkinMobileBase {
 		wfProfileIn( __METHOD__ );
 		$tpl = parent::prepareTemplate();
 		$out = $this->getOutput();
-		$title = $this->getTitle();
-		$user = $this->getUser();
-		$context = MobileContext::singleton();
-		$inBeta = $context->isBetaGroupMember();
-		$inAlpha = $context->isAlphaGroupMember();
 
 		// add head items
 		if ( $wgAppleTouchIcon !== false ) {
@@ -74,7 +69,7 @@ class SkinMobile extends SkinMobileBase {
 			);
 		}
 		$out->addHeadItem( 'canonical',
-			Html::element( 'link', array( 'href' => $title->getCanonicalURL(), 'rel' => 'canonical' ) )
+			Html::element( 'link', array( 'href' => $this->getTitle()->getCanonicalURL(), 'rel' => 'canonical' ) )
 		);
 		$out->addHeadItem( 'viewport',
 			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes' ) )
@@ -92,12 +87,6 @@ class SkinMobile extends SkinMobileBase {
 		$this->prepareTemplatePageContent( $tpl );
 		$this->prepareTemplateLinks( $tpl );
 		$this->prepareFooterLinks( $tpl );
-
-		$tpl->set( 'isMainPage', $title->isMainPage() );
-
-		wfProfileIn( __METHOD__ . '-modules' );
-
-		wfProfileOut( __METHOD__ . '-modules' );
 
 		$out->setTarget( 'mobile' );
 
