@@ -2,6 +2,7 @@
 
 	var
 		Overlay = M.require( 'Overlay' ),
+		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		api = M.require( 'api' ),
 		leadHeading = mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 		TalkSectionAddOverlay = Overlay.extend( {
@@ -101,12 +102,14 @@
 					var id = parseFloat( $( this ).data( 'id' ), 10 ),
 						leadSection = {
 							content: page.lead,
+							id: 0,
 							heading: leadHeading
 						},
 						section = id === 0 ? leadSection : page.getSubSection( id ),
-						childOverlay = new Overlay( {
-							content: M.template.get( 'talkSection' ).render( section ),
-							parent: self
+						childOverlay = new TalkSectionOverlay( {
+							parent: self,
+							title: page.title,
+							section: section
 						} );
 					childOverlay.show();
 				} );
