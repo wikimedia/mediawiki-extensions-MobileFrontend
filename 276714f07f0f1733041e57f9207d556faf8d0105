@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxxNi1z4",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-06-04T00:33:08Z",
+      "side": 0,
+      "message": "Some of these classes were moved to WMF-specific config in https://gerrit.wikimedia.org/r/66891",
+      "revId": "276714f07f0f1733041e57f9207d556faf8d0105",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
