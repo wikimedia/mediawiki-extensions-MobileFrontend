@@ -1,8 +1,8 @@
 ( function( M,  $ ) {
 
 var module = (function() {
-	var nav = M.require( 'navigation' ),
-		Overlay = nav.Overlay,
+	var
+		Overlay = M.require( 'Overlay' ),
 		CleanupOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/cleanup' )
 		} );

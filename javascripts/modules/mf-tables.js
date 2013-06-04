@@ -1,4 +1,5 @@
 ( function( M,  $ ) {
+var Overlay = M.require( 'Overlay' );
 
 ( function() {
 	var STEP_SIZE = 150;
@@ -8,7 +9,7 @@
 	}
 
 	function collapseTables( $container ) {
-		var nav = M.require( 'navigation' ),
+		var
 			$tables = $container ? $container.find( 'table' ) : $( 'table' );
 
 		$tables.each( function( i ) {
@@ -33,7 +34,7 @@
 
 					$tr = $( '<tr class="overlayZoomer">' ).prependTo( $tc );
 					$( '<td>' ).attr( 'colspan', colspan ).click( function() {
-						var overlay = new nav.Overlay( {
+						var overlay = new Overlay( {
 							heading: '<h2>' + $( this ).text() + '</h2>',
 							content: $( '<div>').append( $container ).html()
 						} );

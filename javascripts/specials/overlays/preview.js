@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var Overlay = M.require( 'navigation' ).Overlay,
+	var Overlay = M.require( 'Overlay' ),
 		Page = M.require( 'page' ),
 		LoadingOverlay = Overlay.extend( {
 			defaults: {

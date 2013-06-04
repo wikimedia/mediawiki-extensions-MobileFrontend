@@ -2,10 +2,10 @@
 
 	var View = M.require( 'view' ),
 		Api = M.require( 'api' ).Api,
+		CtaDrawer = M.require( 'CtaDrawer' ),
 		EventEmitter = M.require( 'eventemitter' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
-		nav = M.require( 'navigation' ),
-		Overlay = nav.Overlay,
+		Overlay = M.require( 'Overlay' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
 		popup = M.require( 'notifications' ),
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
@@ -487,7 +487,7 @@
 
 			// show CTA instead if not logged in
 			if ( !M.isLoggedIn() ) {
-				ctaDrawer = new nav.CtaDrawer( {
+				ctaDrawer = new CtaDrawer( {
 					content: mw.msg( 'mobile-frontend-photo-upload-cta' ),
 					returnToQuery: 'article_action=photo-upload'
 				} );

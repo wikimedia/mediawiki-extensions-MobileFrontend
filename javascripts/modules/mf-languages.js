@@ -1,6 +1,6 @@
 ( function( M,  $ ) {
 
-	var Overlay = M.require( 'navigation' ).Overlay,
+	var Overlay = M.require( 'Overlay' ),
 		LanguageOverlay;
 
 	function countAvailableLanguages() {

@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-var Overlay = M.require( 'navigation' ).Overlay, SearchOverlay,
+var Overlay = M.require( 'Overlay' ), SearchOverlay,
 	api = M.require( 'api' ),
 	searchOverlay,
 	overlayInitialize = Overlay.prototype.initialize;

@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var Overlay = M.require( 'navigation' ).Overlay,
+	var Overlay = M.require( 'Overlay' ),
 		popup = M.require( 'notifications' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		PreviewOverlay = M.require( 'modules/editor/PreviewOverlay' ),
