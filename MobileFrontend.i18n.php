@@ -247,7 +247,6 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
 	'mobile-frontend-editor-wait' => 'Saving edit, please wait.',
 	'mobile-frontend-editor-success' => 'Success! Your edit was saved.',
-	'mobile-frontend-editor-refresh' => 'Refresh this page to see your changes.',
 	'mobile-frontend-editor-error' => 'Error, edit not saved.',
 	'mobile-frontend-editor-error-conflict' => 'Error, another user has edited this page.',
 	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',

@@ -56,6 +56,15 @@
 	}
 
 	/**
+	 * Invalidate the internal cache for a given page
+	 *
+	 * @param {String} pageTitle the title of the page who's cache you want to invalidate
+	 */
+	function invalidateCachedPage( pageTitle ) {
+		delete cache[ pageTitle ];
+	}
+
+	/**
 	 * Retrieve a page from the api
 	 *
 	 * @param {Object} pageTitle the title of the page to be retrieved
@@ -97,6 +106,7 @@
 	}
 
 	M.history = $.extend( M.history, {
+		invalidateCachedPage: invalidateCachedPage,
 		retrieveAllLanguages: retrieveAllLanguages,
 		retrievePage: retrievePage,
 		retrievePageLanguages: retrievePageLanguages

@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ),
+		Page = M.require( 'page' ),
 		popup = M.require( 'notifications' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		PreviewOverlay = M.require( 'modules/editor/PreviewOverlay' ),
@@ -165,11 +166,14 @@
 
 			this.api.save().
 				done( function() {
+					var title = self.options.title;
 					// log success!
 					self.log( 'success' );
+					M.history.invalidateCachedPage( title );
+					new Page( { title: title, el: $( '#content' ) } );
 					self.hide();
 					popup.show(
-						mw.msg( 'mobile-frontend-editor-success' ) + ' ' + mw.msg( 'mobile-frontend-editor-refresh' ),
+						mw.msg( 'mobile-frontend-editor-success' ),
 						'toast'
 					);
 				} ).
