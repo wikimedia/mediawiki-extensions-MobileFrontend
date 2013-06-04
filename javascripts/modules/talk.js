@@ -1,9 +1,10 @@
 ( function( M, $ ) {
 
-	var nav = M.require( 'navigation' ),
+	var
+		Overlay = M.require( 'Overlay' ),
 		api = M.require( 'api' ),
 		leadHeading = mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
-		TalkSectionAddOverlay = nav.Overlay.extend( {
+		TalkSectionAddOverlay = Overlay.extend( {
 			defaults: {
 				cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 				confirmMsg: mw.msg( 'mobile-frontend-editor-confirm' ),
@@ -56,7 +57,7 @@
 				}
 			}
 		} ),
-		TalkOverlay = nav.Overlay.extend( {
+		TalkOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/talk' ),
 			appendSection: function( heading, text ) {
 				var $newTopic;
@@ -85,7 +86,7 @@
 							heading: leadHeading
 						},
 						section = id === 0 ? leadSection : page.getSubSection( id ),
-						childOverlay = new nav.Overlay( {
+						childOverlay = new Overlay( {
 							content: M.template.get( 'talkSection' ).render( section ),
 							parent: self
 						} );

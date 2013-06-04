@@ -1,8 +1,9 @@
 (function( M, $ ) {
 
 var api = M.require( 'api' ), w = ( function() {
-	var nav = M.require( 'navigation' ), popup = M.require( 'notifications' ),
-		drawer = new nav.CtaDrawer( {
+	var popup = M.require( 'notifications' ),
+		CtaDrawer = M.require( 'CtaDrawer' ),
+		drawer = new CtaDrawer( {
 			content: mw.msg( 'mobile-frontend-watchlist-cta' ),
 			returnToQuery: 'article_action=watch'
 		} );
