@@ -199,23 +199,6 @@ class SkinMobileBase extends SkinMinerva {
 		$tpl->set( 'wgScript', wfScript() );
 
 		$this->initPage( $this->getOutput() );
-		// user specific configurations
-		$user = $this->getUser();
-		$watchlistQuery = array();
-		if ( $user ) {
-			$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, false );
-			$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, false );
-			if ( $view ) {
-				$watchlistQuery['watchlistview'] = $view;
-			}
-			if ( $filter && $view === 'feed' ) {
-				$watchlistQuery['filter'] = $filter;
-			}
-		}
-
-		$tpl->set( 'mainPageUrl', Title::newMainPage()->getLocalUrl() );
-		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
-		$tpl->set( 'watchlistUrl', SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl( $watchlistQuery ) );
 		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
 		$this->loggedin = $this->getUser()->isLoggedIn();
 		$content_navigation = $this->buildContentNavigationUrls();
