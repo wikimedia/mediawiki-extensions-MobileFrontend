@@ -72,7 +72,7 @@ class SkinMobile extends SkinMobileBase {
 			Html::element( 'link', array( 'href' => $this->getTitle()->getCanonicalURL(), 'rel' => 'canonical' ) )
 		);
 		$out->addHeadItem( 'viewport',
-			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes' ) )
+			Html::element( 'meta', array( 'name' => 'viewport', 'content' => 'initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=1.6' ) )
 		);
 		// hide chrome on bookmarked sites
 		$out->addHeadItem( 'apple-mobile-web-app-capable',
