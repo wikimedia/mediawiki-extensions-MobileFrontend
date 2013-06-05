@@ -102,13 +102,11 @@
 				}
 			}
 		} ),
-		talkPage = mw.config.get( 'wgFormattedNamespaces' )[mw.config.get( 'wgNamespaceNumber' ) + 1] +
-			':' + mw.config.get( 'wgTitle' ),
 		Page = M.require( 'page'),
-		$talk = $( '#ca-talk' ),
 		req;
 
-	$talk.on( 'click', function( ev ) {
+	function onTalkClick( ev ) {
+		var $talk = $( this ), talkPage = $talk.data( 'title' );
 		// FIXME: this currently gives an indication something async is happening. We can do better.
 		$talk.css( 'opacity', 0.2 );
 		ev.preventDefault();
@@ -145,6 +143,16 @@
 		} ).error( function() {
 			$talk.css( 'opacity', '' );
 		} );
+	}
+
+	function init( title ) {
+		var talkPrefix = mw.config.get( 'wgFormattedNamespaces' ) [mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
+		$( '#ca-talk' ).on( 'click', onTalkClick ).data( 'title', talkPrefix + title );
+	}
+
+	init( mw.config.get( 'wgTitle' ) );
+	M.on( 'page-loaded', function( page ) {
+		init( page.title );
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
