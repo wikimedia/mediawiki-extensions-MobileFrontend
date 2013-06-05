@@ -76,7 +76,7 @@ class MobileTemplate extends MinervaTemplate {
 	/**
 	 * Returns an array of footerlinks trimmed down to only those footer links that
 	 * are valid.
-	 * @param $option currently unused in mobile
+	 * @param null $option: Currently unused in mobile
 	 * @return array|mixed
 	 */
 	public function getFooterLinks( $option = null ) {

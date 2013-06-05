@@ -133,7 +133,7 @@ class MinervaTemplate extends BaseTemplate {
 				?>
 				<div class="header">
 					<?php
-						echo $this->html( 'menuButton' );
+						$this->html( 'menuButton' );
 						if ( $isSpecialPage ) {
 							echo $data['specialPageHeader'];
 						} else {
@@ -157,13 +157,13 @@ class MinervaTemplate extends BaseTemplate {
 								$this->renderPageActions( $data );
 							}
 							echo $data[ 'bodytext' ];
-							echo $this->renderLanguages( $languageData );
+							$this->renderLanguages( $languageData );
 							echo $data['postbodytext'];
 						?>
 					</div><!-- close #content -->
 				</div><!-- close #content_wrapper -->
 				<?php
-					echo $this->renderFooter( $data );
+					$this->renderFooter( $data );
 				?>
 			</div><!-- close #mw-mf-page-center -->
 		</div><!-- close #mw-mf-viewport -->

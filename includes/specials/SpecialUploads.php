@@ -8,13 +8,11 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 
 	public function execute( $par = '' ) {
 		global $wgMFPhotoUploadEndpoint;
-		$ctx = MobileContext::singleton();
 		$user = $this->getUser();
 
 		$this->setHeaders();
 		$output = $this->getOutput();
-		$endpoint = $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '';
-		$output->addJsConfigVars( 'wgMFPhotoUploadEndpoint',  $endpoint );
+		$output->addJsConfigVars( 'wgMFPhotoUploadEndpoint',  $wgMFPhotoUploadEndpoint );
 		$output->htmlClass = 'galleryPage';
 		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
@@ -62,7 +60,7 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 	 *		or will return false if there are database errors.
 	 */
 	private function getUserUploadCount( $username ) {
-		global $wgMFPhotoUploadEndpoint, $wgMFPhotoUploadWiki, $wgConf;
+		global $wgMFPhotoUploadWiki, $wgConf;
 
 		if ( !$wgMFPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_SLAVE );
