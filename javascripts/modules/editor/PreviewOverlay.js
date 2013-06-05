@@ -22,7 +22,7 @@ var Overlay = M.require( 'Overlay' ),
 			this.$( '.preview-cancel' ).on( 'click', function() {
 				self.hide();
 			} );
-			api.get( {
+			api.post( {
 				action: 'parse',
 				title: options.title,
 				text: options.wikitext,
