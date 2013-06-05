@@ -58,7 +58,6 @@ class MobileFormatter extends HtmlFormatter {
 	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
 		parent::__construct( $html );
 
-		$this->setHtmlMode( true ); // Our current mobile skins always output HTML
 		$this->title = $title;
 		$this->format = $format;
 		if ( !$wmlContext && $format == 'WML' ) {
@@ -277,7 +276,7 @@ class MobileFormatter extends HtmlFormatter {
 			: $segments[$requestedSegment];
 
 		$card .= "<card id='s{$idx}' title='{$title}'><p>{$segmentText}</p>";
-		$idx = $requestedSegment + 1;
+		$idx = intval( $requestedSegment ) + 1;
 		$segmentsCount = $this->wmlContext->getOnlyThisSegment()
 			? $idx + 1 // @todo: when using from API we don't have the total section count
 			: count( $segments );

@@ -10,7 +10,6 @@ class HtmlFormatter {
 	private $doc;
 
 	private $html;
-	private $htmlMode;
 	private $itemsToRemove = array();
 	private $elementsToFlatten = array();
 	private $removeImages = false;
@@ -23,13 +22,7 @@ class HtmlFormatter {
 	 * @param string $html: Text to process
 	 */
 	public function __construct( $html ) {
-		global $wgHtml5;
-		wfProfileIn( __METHOD__ );
-
 		$this->html = $html;
-		$this->htmlMode = $wgHtml5;
-
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
@@ -65,21 +58,6 @@ class HtmlFormatter {
 			$this->doc->encoding = 'UTF-8';
 		}
 		return $this->doc;
-	}
-
-	/**
-	 * @return bool: Whether this class should output HTML
-	 */
-	public function getHtmlMode() {
-		return $this->htmlMode;
-	}
-
-	/**
-	 * Sets whether this class should output HTML
-	 * @param bool $value
-	 */
-	public function setHtmlMode( $value ) {
-		$this->htmlMode = $value;
 	}
 
 	/**
@@ -295,28 +273,24 @@ class HtmlFormatter {
 			if ( $element !== null && !( $element instanceof DOMElement ) ) {
 				$element = $this->doc->getElementById( $element );
 			}
-			if ( $this->htmlMode ) {
-				if ( $element ) {
-					$body = $this->doc->getElementsByTagName( 'body' )->item( 0 );
-					$nodesArray = array();
-					foreach ( $body->childNodes as $node ) {
-						$nodesArray[] = $node;
-					}
-					foreach ( $nodesArray as $nodeArray ) {
-						$body->removeChild( $nodeArray );
-					}
-					$body->appendChild( $element );
+			if ( $element ) {
+				$body = $this->doc->getElementsByTagName( 'body' )->item( 0 );
+				$nodesArray = array();
+				foreach ( $body->childNodes as $node ) {
+					$nodesArray[] = $node;
 				}
-				$html = $this->doc->saveHTML();
-				$html = $this->fixLibXml( $html );
-			} else {
-				$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+				foreach ( $nodesArray as $nodeArray ) {
+					$body->removeChild( $nodeArray );
+				}
+				$body->appendChild( $element );
 			}
-			if ( wfIsWindows() ) {
-				$html = str_replace( '&#13;', '', $html );
-			}
+			$html = $this->doc->saveHTML();
+			$html = $this->fixLibXml( $html );
 		} else {
-			$html = $this->html;
+			$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+		}
+		if ( wfIsWindows() ) {
+			$html = str_replace( '&#13;', '', $html );
 		}
 		$html = preg_replace( '/<!--.*?-->|^.*?<body>|<\/body>.*$/s', '', $html );
 		$html = $this->onHtmlReady( $html );
