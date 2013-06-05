@@ -3,6 +3,8 @@
 	var View = M.require( 'view' ),
 		Api = M.require( 'api' ).Api,
 		CtaDrawer = M.require( 'CtaDrawer' ),
+		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
+		showCta = mw.config.get( 'wgMFEnablePhotoUploadCTA' ) || funnel === 'nearby',
 		EventEmitter = M.require( 'eventemitter' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		Overlay = M.require( 'Overlay' ),
@@ -21,6 +23,11 @@
 		}
 
 		return $container.find( mw.config.get( 'wgMFLeadPhotoUploadCssSelector' ) ).length === 0;
+	}
+
+	// reset the funnel cookie as it is no longer valid (this stops upload cta showing on further page loads)
+	if ( funnel ) {
+		$.cookie( 'mwUploadsFunnel', null );
 	}
 
 	function isSupported() {
@@ -667,7 +674,7 @@
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
 			pageTitle: mw.config.get( 'wgTitle' ),
-			funnel: $.cookie( 'mwUploadsFunnel' ) || 'article'
+			funnel: funnel
 		};
 
 		if ( $( '#ca-upload' ).length ) {
@@ -695,7 +702,7 @@
 
 	if (
 		isSupported() && mw.config.get( 'wgIsPageEditable' ) &&
-		( M.isLoggedIn() || mw.config.get( 'wgMFEnablePhotoUploadCTA' ) )
+		( M.isLoggedIn() || showCta )
 	) {
 		$( initialize );
 		M.on( 'page-loaded', function() {
