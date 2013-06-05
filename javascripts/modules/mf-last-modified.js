@@ -37,6 +37,7 @@ var module = ( function() {
 
 		$lastModified.text( message );
 	}
+	M.on( 'page-loaded', init );
 
 	return {
 		timeAgo: timeAgo,
