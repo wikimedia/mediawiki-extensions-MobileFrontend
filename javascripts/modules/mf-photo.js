@@ -17,7 +17,7 @@
 
 	function needsPhoto( $container ) {
 		var $content_0 = $container.find( '#content_0' );
-		// workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
+		// FIXME: workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
 		if ( $content_0.length ) {
 			$container = $content_0;
 		}
@@ -685,18 +685,22 @@
 			photoUploader = new PhotoUploaderButton( optionsPhotoUploader ).insertAfter( $pageHeading );
 		}
 		photoUploader.on( 'start', function() {
-				photoUploader.detach();
+				photoUploader.$el.hide();
 			} ).
 			on( 'success', function( data ) {
 				popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
+				// FIXME: workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
+				if ( !$( '#content_0' ).length ) {
+					$( '<div id="content_0" >' ).insertAfter( $( '#section_0,#page-actions' ).last() );
+				}
 				new LeadPhoto( {
 					url: data.url,
 					pageUrl: data.descriptionUrl,
 					caption: data.description
-				} ).insertAfter( $pageHeading ).animate();
+				} ).prependTo( '#content_0' ).animate();
 			} ).
 			on( 'error cancel', function() {
-				photoUploader.insertAfter( $pageHeading );
+				photoUploader.$el.show();
 			} );
 	}
 
