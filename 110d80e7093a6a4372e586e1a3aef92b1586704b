@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DyNqaRV8",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-05T21:59:57Z",
+      "side": 1,
+      "message": "Not clear how this is related...",
+      "revId": "110d80e7093a6a4372e586e1a3aef92b1586704b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
