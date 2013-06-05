@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DyJ0p540",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-06-05T23:12:58Z",
+      "side": 1,
+      "message": "This can be removed after all pages cache expires, right? Let\u0027s add a FIXME that it should be removed later.",
+      "revId": "3281c0e4e8d3c7335d1640fd5f4ed85c4c14c9ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
