@@ -160,4 +160,17 @@ class SkinMinerva extends SkinTemplate {
 		);
 		$out->addModuleStyles( $styles );
 	}
+
+	/**
+	 * Determines what the heading of the login page should be based on the context
+	 * @return string
+	 */
+	protected function getLoginPageHeading() {
+		if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
+			$key = 'mobile-frontend-sign-up-heading';
+		} else {
+			$key = 'mobile-frontend-sign-in-heading';
+		}
+		return wfMessage( $key )->plain();
+	}
 }

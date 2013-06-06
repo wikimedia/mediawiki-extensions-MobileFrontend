@@ -257,7 +257,6 @@ class MobileContext extends ContextSource {
 		global $wgMobileUrlTemplate;
 		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
-		$req = $this->getRequest();
 		$stableMode = !$this->isBetaGroupMember();
 
 		// FIXME: remove when editor moves to stable

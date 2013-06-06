@@ -184,7 +184,6 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 			$this->msg( 'mobile-frontend-diffview-explained' )->plain() );
 		/** @var $el DOMElement */
 		foreach( $els as $el ) {
-			$name = $el->nodeName;
 			$class = $el->getAttribute( 'class' );
 			if ( $class === 'diff-deletedline' ) {
 				$out .= Html::element( 'del', array(), $el->nodeValue );

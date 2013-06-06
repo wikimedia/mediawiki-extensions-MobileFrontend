@@ -8,7 +8,6 @@ class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 	}
 
 	protected function addModules() {
-		global $wgResourceModules;
 		$out = $this->getOutput();
 		$rl = $out->getResourceLoader();
 		$title = $this->getTitle();

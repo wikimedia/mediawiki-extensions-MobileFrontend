@@ -57,7 +57,6 @@ class SkinMobileBase extends SkinMinerva {
 		$menu = array();
 		$actions = $tpl->data['content_navigation']['actions'];
 		$namespaces = $tpl->data['content_navigation']['namespaces'];
-		$views = $tpl->data['content_navigation']['views'];
 
 		// empty placeholder for edit photos which both require js
 		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '' );
