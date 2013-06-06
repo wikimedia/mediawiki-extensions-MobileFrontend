@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DyJ3x52w",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-06-06T00:47:01Z",
+      "side": 1,
+      "message": "$.proxy( self, \u0027emit\u0027 )",
+      "revId": "3d2f85273801283414a5bd602b779327a0a50039",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
