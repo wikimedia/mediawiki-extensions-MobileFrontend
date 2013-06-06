@@ -67,6 +67,16 @@
 				window.scrollTo( 0, $newTopic.offset().top );
 				// FIXME: add fade in animation
 			},
+			preRender: function( options ) {
+				var page = options.page,
+					sections = page.getSubSections(),
+					explanation = sections.length > 0 ? mw.msg( 'mobile-frontend-talk-explained' ) :
+						mw.msg( 'mobile-frontend-talk-explained-empty' );
+
+				options.sections = sections;
+				options.explanation = explanation;
+				this._super( options );
+			},
 			initialize: function( options ) {
 				var self = this,
 					$add = this.$( 'button.add' ),
@@ -102,45 +112,36 @@
 				}
 			}
 		} ),
-		Page = M.require( 'page'),
-		req;
+		Page = M.require( 'page' );
+
+	function renderTalkOverlay( pageData ) {
+		var topOverlay,
+			page = new Page( pageData );
+
+		topOverlay = new TalkOverlay( {
+			heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
+			leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
+			page: page
+		} );
+		topOverlay.show();
+	}
 
 	function onTalkClick( ev ) {
 		var $talk = $( this ), talkPage = $talk.data( 'title' );
 		// FIXME: this currently gives an indication something async is happening. We can do better.
 		$talk.css( 'opacity', 0.2 );
 		ev.preventDefault();
-		req = req || api.get( {
-			action: 'mobileview', page: talkPage,
-			variant: mw.config.get( 'wgPreferredVariant' ),
-			prop: 'sections|text', noheadings: 'yes',
-			noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
-			sectionprop: 'level|line|anchor', sections: 'all'
-		} );
-		req.done( function( resp ) {
-			var topOverlay, sections, page,
-				explanation;
 
-			if ( resp.error ) {
-				// page doesn't exist
-				page = new Page( { sections: {} } );
+		M.history.retrievePage( talkPage ).fail( function( resp ) {
+			if ( resp.error && resp.error.code === 'missingtitle' ) {
+				renderTalkOverlay( {
+					sections: [], title: talkPage
+				} );
 			} else {
-				page = new Page( { sections: resp.mobileview.sections } );
+				$talk.css( 'opacity', '' );
 			}
-
-			$talk.css( 'opacity', '' );
-			sections = page.getSubSections();
-			explanation = sections.length > 0 ? mw.msg( 'mobile-frontend-talk-explained' ) :
-				mw.msg( 'mobile-frontend-talk-explained-empty' );
-			topOverlay = new TalkOverlay( {
-				heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
-				leadHeading: leadHeading,
-				explanation: explanation,
-				page: page,
-				sections: sections
-			} );
-			topOverlay.show();
-		} ).error( function() {
+		} ).done( function( pageData ) {
+			renderTalkOverlay( pageData );
 			$talk.css( 'opacity', '' );
 		} );
 	}
