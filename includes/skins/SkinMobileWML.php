@@ -1,19 +1,43 @@
 <?php
 
-class SkinMobileWML extends SkinMobileBase {
+class SkinMobileWML extends SkinTemplate {
+	protected $extMobileFrontend;
 	public $skinname = 'SkinMobileWML';
 	public $stylename = 'SkinMobileWML';
 	public $template = 'MobileTemplateWML';
 
-	protected function prepareTemplate() {
-		$out = $this->getOutput();
+	public function __construct( ExtMobileFrontend $extMobileFrontend ) {
+		$this->setContext( $extMobileFrontend );
+		$this->extMobileFrontend = $extMobileFrontend;
+	}
+
+	public function outputPage( OutputPage $out = null ) {
+		wfProfileIn( __METHOD__ );
+		if ( !$out ) {
+			$out = $this->getOutput();
+		}
 		$out->getRequest()->response()->header( 'Content-Type: text/vnd.wap.wml' );
-		return parent::prepareTemplate();
+		$tpl = $this->setupTemplate( $this->template );
+		$tpl->setRef( 'skin', $this );
+		$lang = $this->getLanguage();
+		$tpl->set( 'code', $lang->getCode() );
+		$tpl->set( 'dir', $lang->isRTL() ? 'rtl' : 'ltr' );
+		$tpl->set( 'mainPageUrl', Title::newMainPage()->getLocalUrl() );
+		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
+		$tpl->set( 'wgScript', wfScript() );
+		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
+		$html = $this->extMobileFrontend->DOMParse( $out );
+		$tpl->set( 'bodytext', $html );
+
+		$tpl->execute();
+
+		wfProfileOut( __METHOD__ );
 	}
 }
 
 class MobileTemplateWML extends BaseTemplate {
 	public function execute() {
+		wfProfileIn( __METHOD__ );
 		echo '<?xml version="1.0" encoding="utf-8" ?>';
 		?><!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.3//EN"
 		"http://www.wapforum.org/DTD/wml13.dtd">
@@ -32,6 +56,7 @@ class MobileTemplateWML extends BaseTemplate {
 		</p>
 		<?php $this->html( 'bodytext' ) ?>
 	</wml>
-	<?php
+<?php
+		wfProfileOut( __METHOD__ );
 	}
 }
