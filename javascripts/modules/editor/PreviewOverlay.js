@@ -13,7 +13,7 @@ var Overlay = M.require( 'Overlay' ),
 		template: M.template.get( 'overlays/editPreview' ),
 		className: 'mw-mf-overlay editor-overlay',
 
-		initialize: function( options ) {
+		postRender: function( options ) {
 			this._super( options );
 			var self = this,
 				d = $.Deferred(),

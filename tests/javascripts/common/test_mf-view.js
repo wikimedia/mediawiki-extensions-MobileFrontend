@@ -78,16 +78,16 @@ QUnit.test( 'View#preRender', 1, function() {
 	strictEqual( view.$el.html(), '<p>hello</p>', 'manipulate template data' );
 } );
 
-QUnit.test( 'View#initialize', 1, function() {
+QUnit.test( 'View#postRender', 1, function() {
 	var ChildView, view, spy = sinon.spy();
 	ChildView = View.extend( {
-		initialize: function() {
+		postRender: function() {
 			spy();
 		}
 	} );
 
 	view = new ChildView();
-	ok( spy.calledOnce, 'invoke initialize' );
+	ok( spy.calledOnce, 'invoke postRender' );
 } );
 
 }( mw.mobileFrontend, jQuery) );

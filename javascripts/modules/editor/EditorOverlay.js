@@ -40,10 +40,14 @@
 		},
 
 		initialize: function( options ) {
+			this.api = new EditorApi( { title: options.title, isNew: options.isNew } );
+			this.sectionCount = options.sectionCount;
+		},
+
+		postRender: function( options ) {
 			var self = this;
 			this._super( options );
 
-			this.api = new EditorApi( { title: options.title, isNew: options.isNew } );
 			this.$( '.preview' ).on( 'click', function() {
 				var overlay = new PreviewOverlay( {
 					parent: self,
@@ -53,7 +57,6 @@
 				self.previewClicked = true;
 				overlay.show();
 			} );
-			this.sectionCount = options.sectionCount;
 			this.$spinner = this.$( '.spinner' );
 			this.$content = this.$( 'textarea' ).
 				// can't use $.proxy because self.section changes

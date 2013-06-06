@@ -15,7 +15,7 @@
 				options.url = M.history.getArticleUrl( options.heading );
 				options.readMoreLink = mw.msg( 'mobile-frontend-nearby-link' );
 			},
-			initialize: function( options ) {
+			postRender: function( options ) {
 				var $preview, nodes;
 				this._super( options );
 				$preview = this.$( '.preview' );

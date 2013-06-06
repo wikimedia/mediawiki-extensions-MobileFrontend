@@ -10,9 +10,11 @@ var View = M.require( 'view' ),
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
 		initialize: function( options ) {
-			var self = this;
 			this.parent = options.parent;
 			this.isOpened = false;
+		},
+		postRender: function() {
+			var self = this;
 			this.$( '.cancel,.confirm' ).click( function( ev ) {
 				ev.preventDefault();
 				self.hide();

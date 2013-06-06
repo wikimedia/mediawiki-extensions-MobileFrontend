@@ -15,13 +15,12 @@
 			},
 			template: M.template.get( 'overlays/talkSectionAdd' ),
 			initialize: function( options ) {
-				var self = this;
-				this._super( options );
 				this.talkOverlay = options.parent;
 				this.title = 'Talk:' + mw.config.get( 'wgTitle' );
-				this.$( 'button.confirm-save' ).click( function() {
-					self.save();
-				} );
+			},
+			postRender: function( options ) {
+				this._super( options );
+				this.$( 'button.confirm-save' ).click( $.proxy( this, 'save' ) );
 			},
 			save: function() {
 				var $subject = this.$( 'input' ),
@@ -77,7 +76,7 @@
 				options.explanation = explanation;
 				this._super( options );
 			},
-			initialize: function( options ) {
+			postRender: function( options ) {
 				var self = this,
 					$add = this.$( 'button.add' ),
 					page = options.page;

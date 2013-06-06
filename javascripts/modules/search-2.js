@@ -2,8 +2,7 @@
 
 var Overlay = M.require( 'Overlay' ), SearchOverlay,
 	api = M.require( 'api' ),
-	searchOverlay,
-	overlayInitialize = Overlay.prototype.initialize;
+	searchOverlay;
 
 /**
  * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
@@ -38,9 +37,10 @@ SearchOverlay = Overlay.extend( {
 		noresults: mw.msg( 'mobile-frontend-search-noresults' ),
 		action: mw.config.get( 'wgScript' )
 	},
-	initialize: function() {
-		overlayInitialize.apply( this, arguments );
+	postRender: function( options ) {
 		var self = this;
+
+		this._super( options );
 
 		this.data = this.defaults;
 

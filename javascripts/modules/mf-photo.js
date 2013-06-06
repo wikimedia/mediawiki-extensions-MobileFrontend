@@ -259,9 +259,20 @@
 
 		template: M.template.get( 'photoNag' ),
 
-		initialize: function( options ) {
-			var self = this, $checkboxes = this.$( 'input[type=checkbox]' ),
-				learnMoreOverlay;
+		initialize: function() {
+			this.learnMoreOverlay = new LearnMoreOverlay( {
+				parent: this,
+				heading: mw.msg( 'mobile-frontend-photo-nag-learn-more-heading' ),
+				bulletPoints: [
+					mw.msg( 'mobile-frontend-photo-nag-learn-more-1' ),
+					mw.msg( 'mobile-frontend-photo-nag-learn-more-2' ),
+					mw.msg( 'mobile-frontend-photo-nag-learn-more-3' )
+				]
+			} );
+		},
+
+		postRender: function( options ) {
+			var self = this, $checkboxes = this.$( 'input[type=checkbox]' );
 
 			this._super( options );
 
@@ -275,16 +286,7 @@
 				$checkbox.parent().addClass( 'active' );
 			}
 
-			learnMoreOverlay = new LearnMoreOverlay( {
-				parent: self,
-				heading: mw.msg( 'mobile-frontend-photo-nag-learn-more-heading' ),
-				bulletPoints: [
-					mw.msg( 'mobile-frontend-photo-nag-learn-more-1' ),
-					mw.msg( 'mobile-frontend-photo-nag-learn-more-2' ),
-					mw.msg( 'mobile-frontend-photo-nag-learn-more-3' )
-				]
-			} );
-			self.$( 'li button' ).on( 'click', $.proxy( learnMoreOverlay, 'show' ) );
+			self.$( 'li button' ).on( 'click', $.proxy( self.learnMoreOverlay, 'show' ) );
 
 			disable( $checkboxes.not( ':first' ) );
 			enable( $checkboxes.eq( 0 ) );
@@ -323,10 +325,13 @@
 		template: M.template.get( 'photoUploadPreview' ),
 
 		initialize: function( options ) {
+			this.log = options.log;
+		},
+
+		postRender: function() {
 			var self = this,
 				$overlay, $description, $submitButton;
 
-			this.log = options.log;
 			this.overlay = new Overlay( {
 				content: $( '<div>' ).html( this.$el ).html()
 			} );
@@ -402,7 +407,7 @@
 			'<p class="cancel">{{{cancelMessage}}}</p>'
 		),
 
-		initialize: function( options ) {
+		postRender: function( options ) {
 			var self = this, longMessage = false;
 
 			this.$( 'a' ).on( 'click', function() {
@@ -487,10 +492,11 @@
 	PhotoUploader = View.extend( {
 
 		initialize: function( options ) {
-			var self = this, $input = this.$( 'input' ), ctaDrawer;
-
-			this.options = options;
 			this.log = getLog( options.funnel );
+		},
+
+		postRender: function() {
+			var self = this, $input = this.$( 'input' ), ctaDrawer;
 
 			// show CTA instead if not logged in
 			if ( !M.isLoggedIn() ) {

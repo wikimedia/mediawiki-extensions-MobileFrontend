@@ -65,27 +65,35 @@
 		}
 
 		this.options = options;
+		this.initialize( options );
 		this.render( options );
 	}
 
 	View.prototype = new EventEmitter();
 
+	// FIXME: make Api and View inherit from an abstract Class object
 	/**
-	 * Function called before the view is constructed. Can be redefined in
+	 * Constructor that can be overriden.
+	 *
+	 * @param {Object} options Object passed to the constructor.
+	 */
+	View.prototype.initialize = function() {};
+
+	/**
+	 * Function called before the view is rendered. Can be redefined in
 	 * objects that extend View.
 	 *
 	 * @param {Object} options Object passed to the constructor.
 	 */
 	View.prototype.preRender = function() {};
 
-	// FIXME: rename to postRender
 	/**
-	 * Function called after the view is constructed. Can be redefined in
+	 * Function called after the view is rendered. Can be redefined in
 	 * objects that extend View.
 	 *
 	 * @param {Object} options Object passed to the constructor.
 	 */
-	View.prototype.initialize = function() {};
+	View.prototype.postRender = function() {};
 
 	/**
 	 * Fill this.$el with template rendered using data if template is set.
@@ -98,7 +106,7 @@
 		if ( this.template ) {
 			this.$el.html( this.template.render( data ) );
 		}
-		this.initialize( data );
+		this.postRender( data );
 	};
 
 	/**

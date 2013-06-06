@@ -4,7 +4,7 @@
 
 	Carousel = View.extend( {
 		template: M.template.get( 'specials/uploads/carousel' ),
-		initialize: function() {
+		postRender: function() {
 			var self = this, $pages;
 			$pages = this.$( '.page' );
 			this.page = 0;

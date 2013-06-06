@@ -7,7 +7,7 @@ var View = M.require( 'view' ),
 		},
 		className: 'drawer position-fixed',
 
-		initialize: function() {
+		postRender: function() {
 			var self = this;
 			this.$( '.close' ).click( function( ev ) {
 				ev.preventDefault();

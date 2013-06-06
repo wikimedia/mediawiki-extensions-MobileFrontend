@@ -75,14 +75,14 @@ $( function() {
 				window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
 				window.location = $( ev.currentTarget ).attr( 'href' );
 			},
-			initialize: function() {
+			postRender: function() {
 				var self = this;
 				this.$( 'a' ).on( 'mousedown', function( ev ) {
 					// name funnel for watchlists to catch subsequent uploads
 					$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
 					self.openPage( ev );
 				} );
-				self.emit( 'postRender', this.$el );
+				self.emit( 'rendered', this.$el );
 			}
 		} ),
 		pendingQuery = false, btn, menu;
