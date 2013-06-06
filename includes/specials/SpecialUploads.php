@@ -7,11 +7,14 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 	}
 
 	public function execute( $par = '' ) {
+		global $wgMFPhotoUploadEndpoint;
 		$ctx = MobileContext::singleton();
 		$user = $this->getUser();
 
 		$this->setHeaders();
 		$output = $this->getOutput();
+		$endpoint = $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '';
+		$output->addJsConfigVars( 'wgMFPhotoUploadEndpoint',  $endpoint );
 		$output->htmlClass = 'galleryPage';
 		$output->setPageTitle( $this->msg( 'mobile-frontend-donate-image-title' ) );
 
