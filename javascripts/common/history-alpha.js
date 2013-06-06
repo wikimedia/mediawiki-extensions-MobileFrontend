@@ -31,10 +31,13 @@
 		// FIXME: use fuzzy link hijacking in the main namespace - core should be updated to make links more explicit
 		var useFuzzyLinkHijacking = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' )[''];
 
-		// Bind to StateChange Event
+		// initial history state does not contain title
+		// run before binding to avoid nasty surprises
+		History.replaceState( null, mw.config.get( 'wgTitle' ) );
+
+		// Bind to future StateChange Events
 		History.Adapter.bind( window, 'statechange', function(){
 			var s = History.getState();
-
 			new Page( { title: s.title, el: $( '#content' ) } ).on( 'error', function() {
 				window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
 			} );
@@ -100,9 +103,6 @@
 
 			hijackLinks( $( '#content_0' ), useFuzzyLinkHijacking );
 		} );
-
-		// initial history state does not contain title
-		History.replaceState( null, mw.config.get( 'wgTitle' ) );
 	}
 
 	if ( History.enabled ) {
