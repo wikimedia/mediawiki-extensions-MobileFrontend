@@ -25,7 +25,6 @@ class ExtMobileFrontend extends ContextSource {
 
 	/**
 	 * @param $out OutputPage
-	 * @return bool: Whether processing should be continued
 	 */
 	protected function beforePageDisplay( $out ) {
 		wfProfileIn( __METHOD__ );
@@ -36,7 +35,6 @@ class ExtMobileFrontend extends ContextSource {
 		$this->sendHeaders();
 
 		wfProfileOut( __METHOD__ );
-		return true;
 	}
 
 	public static function parseContentFormat( $format ) {
@@ -53,7 +51,6 @@ class ExtMobileFrontend extends ContextSource {
 
 	/**
 	 * Disables caching if the request is coming from a trusted proxy
-	 * @return bool
 	 */
 	private function disableCaching() {
 		wfProfileIn( __METHOD__ );
@@ -75,7 +72,6 @@ class ExtMobileFrontend extends ContextSource {
 		}
 
 		wfProfileOut( __METHOD__ );
-		return true;
 	}
 
 	private function sendHeaders() {
@@ -99,7 +95,6 @@ class ExtMobileFrontend extends ContextSource {
 		$out->addVaryHeader( 'X-Subdomain' );
 		$out->addVaryHeader( 'X-Images' );
 		wfProfileOut( __METHOD__ );
-		return true;
 	}
 
 	/**
@@ -110,9 +105,7 @@ class ExtMobileFrontend extends ContextSource {
 	public function DOMParse( OutputPage $out ) {
 		wfProfileIn( __METHOD__ );
 
-		if ( !$this->beforePageDisplay( $out ) ) {
-			return false;
-		}
+		$this->beforePageDisplay( $out );
 		$html = $out->getHTML();
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
