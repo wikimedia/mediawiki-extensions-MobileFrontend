@@ -27,14 +27,11 @@ class SkinMinerva extends SkinTemplate {
 		$title = $this->getTitle();
 		$user = $this->getUser();
 		$out = $this->getOutput();
-		if ( $title->isSpecial( 'Userlogin' ) ) {
-			$pageHeading = $this->getLoginPageHeading();
-		} else if ( $title->isMainPage() ) {
-			$pageHeading = $user->isLoggedIn() ?
-				wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() : '';
-		} else {
-			$pageHeading = $out->getPageTitle();
+		if ( $title->isMainPage() ) {
+			$out->setPageTitle( $user->isLoggedIn() ?
+				wfMessage( 'mobile-frontend-logged-in-homepage-notification', $user->getName() )->text() : '' );
 		}
+		$pageHeading = $out->getPageTitle();
 
 		$htmlHeader = $out->getProperty( 'mobile.htmlHeader' );
 		if ( $title->isSpecialPage() ) {
