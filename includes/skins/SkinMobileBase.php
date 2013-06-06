@@ -190,7 +190,9 @@ class SkinMobileBase extends SkinMinerva {
 	public function outputPage( OutputPage $out = null ) {
 		global $wgMFNoindexPages;
 		wfProfileIn( __METHOD__ );
-		$out = $this->getOutput();
+		if ( !$out ) {
+			$out = $this->getOutput();
+		}
 		if ( $wgMFNoindexPages ) {
 			$out->setRobotPolicy( 'noindex,nofollow' );
 		}
@@ -202,20 +204,20 @@ class SkinMobileBase extends SkinMinerva {
 			}
 		}
 		$html = $this->extMobileFrontend->DOMParse( $out );
-		if ( $html !== false ) {
-			wfProfileIn( __METHOD__  . '-tpl' );
-			$tpl = $this->prepareTemplate();
-			$tpl->set( 'headelement', $out->headElement( $this ) );
-			$tpl->set( 'bodytext', $html );
-			// FIXME: Move to ZeroRatedMobileAccess extension
-			$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
-			$notice = '';
-			wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
-			$tpl->set( 'notice', $notice );
-			$tpl->set( 'reporttime', wfReportTime() );
-			$tpl->execute();
-			wfProfileOut( __METHOD__  . '-tpl' );
-		}
+
+		wfProfileIn( __METHOD__  . '-tpl' );
+		$tpl = $this->prepareTemplate();
+		$tpl->set( 'headelement', $out->headElement( $this ) );
+		$tpl->set( 'bodytext', $html );
+		// FIXME: Move to ZeroRatedMobileAccess extension
+		$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
+		$notice = '';
+		wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
+		$tpl->set( 'notice', $notice );
+		$tpl->set( 'reporttime', wfReportTime() );
+		$tpl->execute();
+		wfProfileOut( __METHOD__  . '-tpl' );
+
 		wfProfileOut( __METHOD__ );
 	}
 
