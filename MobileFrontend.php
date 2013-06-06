@@ -241,9 +241,14 @@ $wgMFRemovableClasses = array();
 
 /**
  * Make the logos configurable.
- * Key for site.
- * Key for logo.
- * Example: array('site' => 'mysite', 'logo' => 'mysite_logo.png');
+ *
+ * 'logo' is the principle logo for your site, 'copyright' is the copyright
+ * logo to be used in the footer of your site.
+ *
+ * Example: array(
+ * 	'logo' => 'mysite_logo.png',
+ *	'copyright' => 'mysite_copyright_logo.png',
+ * 	);
  */
 $wgMFCustomLogos = array();
 

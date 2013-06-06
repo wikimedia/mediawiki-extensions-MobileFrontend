@@ -24,22 +24,6 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	/**
-	 * Work out the site and language name from a database name
-	 * @param $site string
-	 * @param $lang string
-	 * @return string
-	 */
-	protected function getSite( &$site, &$lang ) {
-		global $wgConf;
-		wfProfileIn( __METHOD__ );
-		$dbr = wfGetDB( DB_SLAVE );
-		$dbName = $dbr->getDBname();
-		list( $site, $lang ) = $wgConf->siteFromDB( $dbName );
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
-	/**
 	 * @param $out OutputPage
 	 * @return bool: Whether processing should be continued
 	 */
@@ -197,15 +181,8 @@ class ExtMobileFrontend extends ContextSource {
 			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/images/mw.png';
 		}
 
-		if ( MobileContext::singleton()->isBetaGroupMember() ) {
-			$this->getSite( $site, $lang );
-			if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['site'] ) ) {
-				if ( isset( $wgMFCustomLogos['site'] ) && $site == $wgMFCustomLogos['site'] ) {
-					if ( isset( $wgMFCustomLogos['logo'] ) ) {
-						$wgMobileFrontendLogo = $wgMFCustomLogos['logo'];
-					}
-				}
-			}
+		if ( MobileContext::singleton()->isBetaGroupMember() && isset( $wgMFCustomLogos['logo'] ) ) {
+			$wgMobileFrontendLogo = $wgMFCustomLogos['logo'];
 		}
 		wfProfileOut( __METHOD__ );
 	}
