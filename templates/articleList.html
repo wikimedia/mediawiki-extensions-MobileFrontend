@@ -1,16 +1,17 @@
 {{#error}}
 <div class="alert error">
 	<div class="content">
-		<h2>{{heading}}</h2>
+		{{#heading}}<h2>{{heading}}</h2>{{/heading}}
 		<p>{{guidance}}</p>
 	</div>
+</div>
 {{/error}}
-<ul class="mw-mf-watchlist-results a-to-z">
+<ul class="page-list a-to-z">
 	{{#pages}}
 	<li title="{{title}}">
 		<a href="{{url}}" class="title" name="{{anchor}}" data-latlng="{{latitude}},{{longitude}}">
 			<div class="listThumb {{pageimageClass}}" style="{{listThumbStyleAttribute}}"></div>
-			<h2>{{title}}</h2>
+			<h2>{{{heading}}}</h2>
 			<div class="info proximity">{{proximity}}</div>
 		</a>
 	</li>

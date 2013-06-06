@@ -140,6 +140,7 @@ $( function() {
 				page.longitude = coords.lon;
 				page.proximity = distanceMessage( page.dist );
 			}
+			page.heading = page.title;
 			pages.push( page );
 			return page;
 		} );

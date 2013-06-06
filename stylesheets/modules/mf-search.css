@@ -29,13 +29,6 @@ form .clear {
   cursor: pointer;
   position: absolute;
 }
-#results {
-  display: none;
-  width: 100%;
-}
-#remove-results {
-  display: none;
-}
 .full-screen-search .header {
   z-index: 2;
   color: white;
@@ -61,45 +54,16 @@ form .clear {
 .full-screen-search .goButton {
   display: none !important;
 }
-.full-screen-search #results {
-  left: 0;
-  width: 100% !important;
-  max-height: 99999px;
-  border: none;
-  z-index: 1;
-  background-color: #E6E6E6;
-  position: relative;
-  opacity: 1;
-}
-ul.suggestions-results {
-  padding: 0;
-  position: relative;
-  padding-bottom: 20px;
-  cursor: pointer;
-  margin: 0;
-  background-color: white;
-  list-style: none;
-}
-ul.suggestions-results li {
+.suggestions-results .error {
   color: #666;
   border: none;
-  position: relative;
-  border-bottom: solid 1px #999999;
   border-bottom: solid 1px #eee;
   padding: 12px 40px;
+  background: none;
+  min-height: auto;
   font-size: 0.9em;
 }
-ul.suggestions-results li a {
-  display: block;
-  text-decoration: none;
-  color: #666;
-}
-ul.suggestions-results li a:active,
-ul.suggestions-results li a:hover,
-ul.suggestions-results li a:visited {
-  text-decoration: none;
-  color: #666;
-}
-ul.suggestions-results li:hover {
-  background-color: #ACD1E9;
+.suggestions-results .error p,
+.suggestions-results .error .content {
+  margin: 0;
 }

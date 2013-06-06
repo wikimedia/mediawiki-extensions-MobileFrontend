@@ -2,7 +2,7 @@
 	var star = M.require( 'watchstar' );
 
 	function init() {
-		var $watchlist = $( 'ul.mw-mf-watchlist-results' );
+		var $watchlist = $( 'ul.page-list' );
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
 			star.initWatchListIconList( $watchlist, true );

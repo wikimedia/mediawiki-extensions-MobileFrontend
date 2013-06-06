@@ -193,8 +193,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'overlay',
 			'overlays/cleanup',
 			'overlays/learnMore',
+			// search-2.js
+			'articleList',
 			'overlays/search/search',
-			'overlays/search/results',
 			// PhotoUploader.js
 			// For new page action menu
 			'photoUploadAction',
@@ -291,6 +292,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk.js',
 			'javascripts/common/user.js',
+			'javascripts/modules/search-pageimages.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(
@@ -371,6 +373,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.stable.styles' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.pagelist.styles',
+		),
 		'styles' => array(
 			'stylesheets/common/common-js.css',
 			'stylesheets/modules/mf-search.css',
@@ -449,6 +454,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-image-uploading-wait',
 			'mobile-frontend-image-uploading-long',
 			'mobile-frontend-image-uploading-cancel',
+		),
+	),
+
+	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'stylesheets/common/pagelist.css',
 		),
 	),
 
@@ -586,6 +597,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.nearby.styles',
 			'mobile.nearby.plumbing',
 			'jquery.json',
+			'mobile.pagelist.styles',
 		),
 		'messages' => array(
 			'mobile-frontend-nearby-error',
@@ -626,6 +638,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.watchlist.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
+			'stylesheets/common/pagelist.css',
 			'stylesheets/specials/watchlist.css',
 		),
 	),

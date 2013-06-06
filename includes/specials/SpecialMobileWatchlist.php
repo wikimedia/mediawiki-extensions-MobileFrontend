@@ -326,7 +326,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$output->addHtml(
 				Html::openElement( 'ul',
 					array(
-						'class' => $feed ? 'mw-mf-watchlist-results' : 'mw-mf-watchlist-results a-to-z',
+						'class' => $feed ? 'page-list' : 'page-list a-to-z',
 					)
 				)
 			);

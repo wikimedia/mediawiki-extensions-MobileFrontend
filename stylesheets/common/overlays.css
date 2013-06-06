@@ -107,3 +107,35 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   display: inline;
   color: #002BB8;
 }
+.mw-mf-overlay > ul {
+  padding: 0;
+  position: relative;
+  padding-bottom: 20px;
+  cursor: pointer;
+  margin: 0;
+  background-color: white;
+  list-style: none;
+}
+.mw-mf-overlay > ul li {
+  color: #666;
+  border: none;
+  position: relative;
+  border-bottom: solid 1px #999999;
+  border-bottom: solid 1px #eee;
+  padding: 12px 40px;
+  font-size: 0.9em;
+}
+.mw-mf-overlay > ul li a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+}
+.mw-mf-overlay > ul li a:active,
+.mw-mf-overlay > ul li a:hover,
+.mw-mf-overlay > ul li a:visited {
+  text-decoration: none;
+  color: #666;
+}
+.mw-mf-overlay > ul li:hover {
+  background-color: #ACD1E9;
+}

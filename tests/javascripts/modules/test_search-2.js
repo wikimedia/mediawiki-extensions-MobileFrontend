@@ -4,20 +4,20 @@ QUnit.module( 'MobileFrontend: mf-search-2.js - test highlight' );
 QUnit.test( 'no results', 1, function() {
 	var overlay = new s.SearchOverlay();
 	overlay.writeResults( [] );
-	strictEqual( overlay.$( 'li.no-results' ).length, 1, 'Only no results list item present' );
+	strictEqual( overlay.$( '.error' ).length, 1, 'Only no results list item present' );
 } ) ;
 
 QUnit.test( 'results', 5, function() {
 	var overlay = new s.SearchOverlay();
 	overlay.writeResults( [
-		{ label: 'Hello World', url: '/hello world' },
-		{ label: 'Goodbye', url: '/goodbye' }
+		{ heading: 'Hello World', url: '/hello world' },
+		{ heading: 'Goodbye', url: '/goodbye' }
 	] );
-	strictEqual( overlay.$( 'li.no-results' ).length, 0, 'No no results list item present' );
+	strictEqual( overlay.$( '.error' ).length, 0, 'No no results list item present' );
 	strictEqual( overlay.$( 'li' ).length, 2, '2 results items' );
 	strictEqual( overlay.$( 'li a[href="/hello world"]' ).length, 1, '1 link with correct url' );
 	strictEqual( overlay.$( 'li a[href="/goodbye"]' ).length, 1, '1 link with correct url' );
-	strictEqual( overlay.$( 'li a[href="/goodbye"]' ).text(), 'Goodbye', 'check label of link' );
+	strictEqual( overlay.$( 'li a[href="/goodbye"] h2' ).text(), 'Goodbye', 'check label of link' );
 } ) ;
 
 QUnit.test( 'highlightSearchTerm', 14, function() {
