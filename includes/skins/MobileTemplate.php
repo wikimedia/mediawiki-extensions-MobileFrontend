@@ -8,69 +8,12 @@ class MobileTemplate extends MinervaTemplate {
 		parent::__construct();
 	}
 
-	public function getPersonalTools() {
-		$data = $this->data;
-
-		$items = array(
-			'watchlist' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-				'href' => $data['watchlistUrl'],
-				'class' => 'icon-watchlist jsonly',
-			),
-			'uploads' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-				'href' => $data['donateImageUrl'],
-				'class' => 'icon-uploads jsonly',
-			),
-			'settings' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
-				'href' => $data['settingsUrl'],
-				'class' => 'icon-settings',
-			),
-			'auth' => array(
-				'text' => $data['loginLogoutText'],
-				'href' => $data['loginLogoutUrl'],
-				'class' => 'icon-loginout jsonly',
-			),
-		);
-
-		$nav = array();
-
-		$nav[] = $items['watchlist'];
-		$nav[] = $items['uploads'];
-
-		$nav[] = $items['settings'];
-
-		$nav[] = $items['auth'];
-		return $nav;
+	public function getDiscoveryTools() {
+		return $this->data['discovery_urls'];
 	}
 
-	public function getDiscoveryTools() {
-		global $wgMFNearby;
-		$data = $this->data;
-		$items = array(
-			'home' => array(
-				'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
-				'href' => $data['mainPageUrl'],
-				'class' => 'icon-home',
-			),
-			'random' => array(
-				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-				'href' => $data['randomPageUrl'],
-				'class' => 'icon-random',
-				'id' => 'randomButton',
-			),
-			'nearby' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
-				'href' => $data['nearbyURL'],
-				'class' => 'icon-nearby jsonly',
-			),
-		);
-		if ( !$wgMFNearby ) {
-			unset( $items['nearby'] );
-		}
-
-		return $items;
+	public function getPersonalTools() {
+		return $this->data['personal_urls'];
 	}
 
 	/**

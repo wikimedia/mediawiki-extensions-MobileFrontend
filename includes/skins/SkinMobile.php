@@ -85,7 +85,8 @@ class SkinMobile extends SkinMobileBase {
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 
 		$this->prepareTemplatePageContent( $tpl );
-		$this->prepareTemplateLinks( $tpl );
+		$this->prepareDiscoveryTools( $tpl );
+		$this->preparePersonalTools( $tpl );
 		$this->prepareFooterLinks( $tpl );
 
 		$out->setTarget( 'mobile' );
@@ -100,33 +101,76 @@ class SkinMobile extends SkinMobileBase {
 		return $tpl;
 	}
 
+	protected function prepareDiscoveryTools( QuickTemplate $tpl ) {
+		global $wgMFNearby;
+
+		$items = array(
+			'home' => array(
+				'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
+				'href' => Title::newMainPage()->getLocalUrl(),
+				'class' => 'icon-home',
+			),
+			'random' => array(
+				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
+				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl(),
+				'class' => 'icon-random',
+				'id' => 'randomButton',
+			),
+			'nearby' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
+				'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
+				'class' => 'icon-nearby jsonly',
+			),
+		);
+		if ( !$wgMFNearby ) {
+			unset( $items['nearby'] );
+		}
+		$tpl->set( 'discovery_urls', $items );
+	}
 
 	/**
 	 * Prepares urls and links used by the page
 	 * @param QuickTemplate
 	 */
-	public function prepareTemplateLinks( QuickTemplate $tpl ) {
-		$title = $this->getTitle();
-		$returnToTitle = $title->getPrefixedText();
-
+	protected function preparePersonalTools( QuickTemplate $tpl ) {
+		$returnToTitle = $this->getTitle()->getPrefixedText();
 		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
-		if ( $this->getUser()->isLoggedIn() ) {
-			$donateUrl = $donateTitle->getLocalUrl();
-		} else {
-			$donateUrl = static::getLoginUrl( array( 'returnto' => $donateTitle ) );
+
+		// watchlist link
+		$watchlistQuery = array();
+		$user = $this->getUser();
+		if ( $user ) {
+			$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, false );
+			$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, false );
+			if ( $view ) {
+				$watchlistQuery['watchlistview'] = $view;
+			}
+			if ( $filter && $view === 'feed' ) {
+				$watchlistQuery['filter'] = $filter;
+			}
 		}
 
-		$nearbyUrl = SpecialPage::getTitleFor( 'Nearby' )->getLocalURL();
-		$settingsUrl = SpecialPage::getTitleFor( 'MobileOptions' )->
-			getLocalUrl( array( 'returnto' => $returnToTitle ) );
-		$link = $this->getLogInOutLink();
-
-		// set urls
-		$tpl->set( 'donateImageUrl', $donateUrl );
-		$tpl->set( 'nearbyURL', $nearbyUrl );
-		$tpl->set( 'settingsUrl', $settingsUrl );
-		$tpl->set( 'loginLogoutText', $link['text'] );
-		$tpl->set( 'loginLogoutUrl', $link['href'] );
+		$items = array(
+			'watchlist' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
+				'href' => SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl( $watchlistQuery ),
+				'class' => 'icon-watchlist jsonly',
+			),
+			'uploads' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
+				'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
+					static::getLoginUrl( array( 'returnto' => $donateTitle ) ),
+				'class' => 'icon-uploads jsonly',
+			),
+			'settings' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
+				'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
+					getLocalUrl( array( 'returnto' => $returnToTitle ) ),
+				'class' => 'icon-settings',
+			),
+			'auth' => $this->getLogInOutLink(),
+		);
+		$tpl->set( 'personal_urls', $items );
 	}
 
 	/**
@@ -309,6 +353,7 @@ HTML;
 		return array(
 			'text' => $text,
 			'href' => $url,
+			'class' => 'icon-loginout jsonly',
 		);
 	}
 }
