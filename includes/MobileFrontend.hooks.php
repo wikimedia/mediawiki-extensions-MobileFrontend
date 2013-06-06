@@ -528,4 +528,27 @@ class MobileFrontendHooks {
 	public static function onAllowLegacyGadgets() {
 		return !MobileContext::singleton()->shouldDisplayMobileView();
 	}
+
+	/**
+	 * UnitTestsList hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UnitTestsList
+	 *
+	 * @param $files array
+	 * @return bool
+	 */
+	public static function onUnitTestsList( &$files ) {
+		$dir = dirname( dirname( __FILE__ ) ) . '/tests';
+
+		$files[] = "$dir/ApiParseExtenderTest.php";
+		$files[] = "$dir/MobileContextTest.php";
+		$files[] = "$dir/MobileFrontendTest.php";
+		$files[] = "$dir/DeviceDetectionTest.php";
+		$files[] = "$dir/HtmlFormatterTest.php";
+		$files[] = "$dir/MobileFormatterTest.php";
+		$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
+
+		// special page tests
+		$files[] = "$dir/specials/SpecialMobileDiffTest.php";
+		return true;
+	}
 }

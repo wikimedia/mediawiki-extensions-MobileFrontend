@@ -110,6 +110,7 @@ $wgHooks['BeforePageDisplay'][] = 'MobileFrontendHooks::onBeforePageDisplay';
 $wgHooks['CustomEditor'][] = 'MobileFrontendHooks::onCustomEditor';
 $wgHooks['GetPreferences'][] = 'MobileFrontendHooks::onGetPreferences';
 $wgHooks['Gadgets::allowLegacy'][] = 'MobileFrontendHooks::onAllowLegacyGadgets';
+$wgHooks['UnitTestsList'][] = 'MobileFrontendHooks::onUnitTestsList';
 
 $wgSpecialPages['Uploads'] = 'SpecialUploads';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
@@ -128,29 +129,6 @@ function efMobileFrontend_Setup() {
 	if ( $wgMFLoginHandshakeUrl ) {
 		$wgSpecialPages['LoginHandshake'] = 'SpecialLoginHandshake';
 	}
-}
-
-// Unit tests
-$wgHooks['UnitTestsList'][] = 'efExtMobileFrontendUnitTests';
-
-/**
- * @param $files array
- * @return bool
- */
-function efExtMobileFrontendUnitTests( &$files ) {
-	$dir = dirname( __FILE__ ) . '/tests';
-
-	$files[] = "$dir/ApiParseExtenderTest.php";
-	$files[] = "$dir/MobileContextTest.php";
-	$files[] = "$dir/MobileFrontendTest.php";
-	$files[] = "$dir/DeviceDetectionTest.php";
-	$files[] = "$dir/HtmlFormatterTest.php";
-	$files[] = "$dir/MobileFormatterTest.php";
-	$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
-
-	// special page tests
-	$files[] = "$dir/specials/SpecialMobileDiffTest.php";
-	return true;
 }
 
 // ResourceLoader modules
