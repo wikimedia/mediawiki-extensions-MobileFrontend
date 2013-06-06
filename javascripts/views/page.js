@@ -39,6 +39,7 @@
 
 			if ( !options.sections ) {
 				$el.empty().addClass( 'loading' );
+				// FIXME: api response should also return last modified timestamp and page_top_level_section_count property
 				M.history.retrievePage( pageTitle ).done( function( pageData ) {
 					options = $.extend( options, pageData );
 					_super.call( self, options );
@@ -63,7 +64,7 @@
 
 					// emit events so that modules can reinitialise
 					M.emit( 'page-loaded', self );
-				} );
+				} ).fail( $.proxy( self, 'emit', 'error' ) );
 			} else {
 				self._super( options );
 			}
