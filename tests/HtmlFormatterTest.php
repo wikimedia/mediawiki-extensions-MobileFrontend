@@ -10,7 +10,6 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 	public function testTransform( $input, $expected, $callback = false ) {
 		$input = self::normalize( $input );
 		$formatter = new HtmlFormatter( HtmlFormatter::wrapHTML( $input ) );
-		$formatter->setHtmlMode( true );
 		if ( $callback ) {
 			$callback( $formatter );
 		}
