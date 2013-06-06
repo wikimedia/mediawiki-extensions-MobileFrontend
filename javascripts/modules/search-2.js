@@ -76,7 +76,7 @@ SearchOverlay = Overlay.extend( {
 		} else {
 			this.$( '.no-results' ).remove();
 		}
-		this.emit( 'write-results', this );
+		this.emit( 'write-results' );
 	},
 	performSearch: function() {
 		var self = this,

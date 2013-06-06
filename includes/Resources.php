@@ -420,10 +420,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/mf-cleanuptemplates.js',
 			'javascripts/modules/mf-last-modified.js',
-			'javascripts/modules/mf-watchstar.js',
 			'javascripts/modules/mf-photo.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/search-2.js',
+			'javascripts/modules/mf-watchstar.js',
 			'javascripts/modules/mf-references.js'
 		),
 		'messages' => array(
