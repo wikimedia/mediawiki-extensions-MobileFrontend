@@ -170,10 +170,10 @@ Help bring these pages to life by donating your images that you are willing to g
 
 	'mobile-frontend-watchlist-a-z' => 'All',
 	'mobile-frontend-watchlist-feed' => 'Modified',
-	'mobile-frontend-watchlist-a-z-empty' => 'You are currently not watching any pages',
+	'mobile-frontend-watchlist-a-z-empty' => 'You are currently not watching any pages.',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Click the star at the top of the page',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'Watch a page you have found interesting by clicking the star icon at the top of the screen. This will allow you to bookmark pages of interest as well as see when they have changed.',
-	'mobile-frontend-watchlist-feed-empty' => 'There are no pages with recent changes',
+	'mobile-frontend-watchlist-feed-empty' => 'There are no pages with recent changes.',
 	'mobile-frontend-watchlist-back-home' => 'Back home',
 
 	'mobile-frontend-changeslist-ip' => 'Anonymous user',
@@ -185,7 +185,7 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-watchlist-modified' => 'Modified $1',
 
 	'mobile-frontend-diffview-404-title' => 'Bad revision',
-	'mobile-frontend-diffview-404-desc' => 'The id for the revision you requested does not exist',
+	'mobile-frontend-diffview-404-desc' => 'The id for the revision you requested does not exist.',
 	'mobile-frontend-diffview-title' => 'Changes',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edit|edits}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonymous user',
