@@ -98,17 +98,7 @@ class ExtMobileFrontend extends ContextSource {
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
 		$context = MobileContext::singleton();
-		$wmlContext = $context->getContentFormat() == 'WML' ? new WmlContext( $context ) : null;
-		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $this->getTitle(),
-			$context->getContentFormat(), $wmlContext
-		);
-		if ( $context->isBetaGroupMember() ) {
-			$formatter->disableBackToTop();
-		}
-
-		$ns = $this->getTitle()->getNamespace();
-		$isMainPage = $this->getTitle()->isMainPage();
-		$isFilePage = $ns === NS_FILE;
+		$formatter = MobileFormatter::newFromContext( $context, $html );
 		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
@@ -124,25 +114,13 @@ class ExtMobileFrontend extends ContextSource {
 		}
 		wfProfileOut( __METHOD__ . '-zero' );
 
+		wfProfileIn( __METHOD__ . '-filter' );
 		if ( $context->getContentTransformations() ) {
-			wfProfileIn( __METHOD__ . '-filter' );
-			if ( !$isFilePage ) {
-				$formatter->removeImages( $context->imagesDisabled() );
-			}
 			$formatter->filterContent();
-			wfProfileOut( __METHOD__ . '-filter' );
 		}
+		wfProfileOut( __METHOD__ . '-filter' );
 
 		wfProfileIn( __METHOD__ . '-getText' );
-		if ( !$context->isAlphaGroupMember() ) {
-			$formatter->setIsMainPage( $isMainPage );
-		}
-
-		if ( $context->getContentFormat() == 'HTML'
-			&& $this->getRequest()->getText( 'search' ) == '' )
-		{
-			$formatter->enableExpandableSections( !$isMainPage );
-		}
 		$contentHtml = $formatter->getText();
 		wfProfileOut( __METHOD__ . '-getText' );
 
