@@ -19,6 +19,7 @@ var View = M.require( 'view' ),
 			} );
 		},
 		show: function() {
+			M.lockViewport();
 			if ( this.parent ) {
 				this.parent.hide();
 			}
@@ -31,6 +32,7 @@ var View = M.require( 'view' ),
 			window.scrollTo( 0, 1 );
 		},
 		hide: function() {
+			M.unlockViewport();
 			this.$el.detach();
 			if ( !this.parent ) {
 				$( 'html' ).removeClass( 'overlay' );
