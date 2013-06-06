@@ -16,6 +16,24 @@
       "revId": "110d80e7093a6a4372e586e1a3aef92b1586704b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DyMAn8h8",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-06-06T10:07:42Z",
+      "side": 1,
+      "message": "Couldn\u0027t help myself to fix a random problem in process...",
+      "parentUuid": "DyNqaRV8",
+      "revId": "110d80e7093a6a4372e586e1a3aef92b1586704b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
