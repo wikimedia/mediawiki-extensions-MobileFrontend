@@ -355,6 +355,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-tables.js',
 			'javascripts/modules/mf-translator.js',
+			'javascripts/modules/lazyload.js',
 		),
 	),
 

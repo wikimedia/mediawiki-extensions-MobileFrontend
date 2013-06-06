@@ -28,9 +28,6 @@
 
 	// do not run more than once
 	function init() {
-		// FIXME: use fuzzy link hijacking in the main namespace - core should be updated to make links more explicit
-		var useFuzzyLinkHijacking = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' )[''];
-
 		// initial history state does not contain title
 		// run before binding to avoid nasty surprises
 		History.replaceState( null, mw.config.get( 'wgTitle' ) );
@@ -86,31 +83,17 @@
 			} );
 		}
 
-		hijackLinks( $( '#content_0' ), useFuzzyLinkHijacking );
-
-		// Bind events
-		M.on( 'section-rendered', function( $container ) {
-			hijackLinks( $container, useFuzzyLinkHijacking );
-		} ).on( 'page-loaded', function( page ) {
-			var title = M.prettyEncodeTitle( page.title );
-
-			// Change UI to reflect new current page - Fix menu item returnto link
-			// FIXME: give menu items with returnto=[article] generic class name
-			$( '#mw-mf-menu-main' ).find( '.icon-settings, .icon-loginout' ).find( 'a' ).each( function() {
-				var href = $( this ).attr( 'href' );
-				$( this ).attr( 'href', updateQueryStringParameter( href, 'returnto', title ) );
-			} );
-
-			hijackLinks( $( '#content_0' ), useFuzzyLinkHijacking );
-		} );
+		return {
+			hijackLinks: hijackLinks
+		};
 	}
 
 	if ( History.enabled ) {
-		init();
+		$.extend( M.history, init() );
 	}
 
 	$.extend( M.history, {
-		_updateQueryStringParameter: updateQueryStringParameter
+		updateQueryStringParameter: updateQueryStringParameter
 	} );
 
 } ( mw.mobileFrontend, jQuery ) );
