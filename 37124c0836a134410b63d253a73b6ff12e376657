@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DzF9o54g",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "The commit message is not clear to me. What \"validation tests for mobile\" means?",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzD9Iiy8",
+        "filename": "tests/acceptance/features/step_definitions/validation_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "Is this committed by mistake? Do you really need to output the element?",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzB9Fzxc",
+        "filename": "tests/acceptance/features/step_definitions/validation_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "Should \"exists?\" be \"should exist\"?",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzJ8Kf9I",
+        "filename": "tests/acceptance/features/support/pages/home_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "There should be a space between \"id:\" and \u0027mw-mf-language-section\u0027",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzN8U9-U",
+        "filename": "tests/acceptance/features/support/pages/random_page.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "There should be a space between \"class:\" and the rest of the line.",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzF9PRzU",
+        "filename": "tests/acceptance/features/validation.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "I would prefer using \"should\" instead of \"have\" in step names. For example: \"And home button should be there\"",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzD9xq3c",
+        "filename": "tests/acceptance/features/validation.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "I think each step should be a complete sentence, so this one  (and the following few steps) should be something like: \"And random button should be there\"",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzN9CNxI",
+        "filename": "tests/acceptance/features/validation.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-06-07T13:50:54Z",
+      "side": 1,
+      "message": "Why did you commit commented out code?",
+      "revId": "37124c0836a134410b63d253a73b6ff12e376657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
