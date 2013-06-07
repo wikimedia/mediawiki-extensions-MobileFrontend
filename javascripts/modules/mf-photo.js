@@ -147,6 +147,29 @@
 			} );
 		},
 
+		// FIXME: See UploadBase::checkWarnings - why these are not errors only the MediaWiki Gods know See Bug 48261
+		_handleWarnings: function( result, warnings ) {
+			var errorMsg = 'Missing filename: ', humanErrorMsg;
+			if ( warnings.exists ) {
+				errorMsg += 'Filename exists';
+				humanErrorMsg = mw.msg( 'mobile-frontend-photo-upload-error-filename' );
+			} else if ( warnings.badfilename ) {
+				errorMsg += 'Bad filename';
+			} else if ( warnings.emptyfile ) {
+				errorMsg += 'Empty file';
+			} else if ( warnings['filetype-unwanted-type'] ) {
+				errorMsg += 'Bad filetype';
+			} else if ( warnings['duplicate-archive'] ) {
+				errorMsg += 'Duplicate archive';
+			} else if ( warnings['large-file'] ) {
+				errorMsg += 'Large file';
+			} else {
+				errorMsg += 'Unknown warning ' + $.toJSON( warnings );
+			}
+
+			return result.reject( errorMsg, humanErrorMsg );
+		},
+
 		save: function( options ) {
 			var self = this, result = $.Deferred();
 
@@ -199,16 +222,14 @@
 						return;
 					}
 					options.fileName = data.upload.filename;
-					if ( warnings ) {
-						if ( warnings.duplicate ) {
-							options.fileName = warnings.duplicate[ '0' ];
-						} else if ( warnings.exists ) {
-							return result.reject( 'Filename exists',
-								mw.msg( 'mobile-frontend-photo-upload-error-filename' ) );
-						}
-					}
 					if ( !options.fileName ) {
-						return result.reject( 'Missing filename' );
+						if ( warnings && warnings.duplicate ) {
+							options.fileName = warnings.duplicate[ '0' ];
+						} else if ( warnings ) {
+							return self._handleWarnings( result, warnings );
+						} else {
+							return result.reject( 'Missing filename: ' + $.toJSON( data.upload ) );
+						}
 					}
 					// FIXME: API doesn't return this information on duplicate images...
 					if ( data.upload.imageinfo ) {

@@ -166,4 +166,19 @@ QUnit.test( 'successful upload', 1, function() {
 	strictEqual( goodResponse, true, 'The request succeeded and ran done callback' );
 } );
 
+QUnit.test( 'warnings (large file)', 1, function() {
+	var d = $.Deferred(),
+		stub = sinon.stub( d, 'reject' );
+	this.api2._handleWarnings( d, { 'large-file': true } );
+	strictEqual( stub.calledWith( 'Missing filename: Large file' ), true );
+} );
+
+QUnit.test( 'warnings (existing file)', 1, function() {
+	var d = $.Deferred(),
+		stub = sinon.stub( d, 'reject' );
+	this.api2._handleWarnings( d, { exists: true } );
+	strictEqual( stub.calledWith( 'Missing filename: Filename exists', mw.msg( 'mobile-frontend-photo-upload-error-filename' ) ),
+		true );
+} );
+
 }( jQuery, mw.mobileFrontend) );
