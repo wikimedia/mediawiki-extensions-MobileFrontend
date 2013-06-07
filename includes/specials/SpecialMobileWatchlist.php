@@ -188,7 +188,9 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				array(
 					'wl_user' => $user->getId(),
 					'wl_namespace=rc_namespace',
-					'wl_title=rc_title'
+					'wl_title=rc_title',
+					// FIXME: Filter out wikidata changes which currently show as anonymous (see bug 49315)
+					'rc_type!=' . RC_EXTERNAL,
 				),
 			),
 		);
