@@ -26,12 +26,6 @@ class SkinMobileBase extends SkinMinerva {
 		$tpl->set( '_show_menu_headers', $menuHeaders );
 		$tpl->set( 'searchBox', $search );
 
-		$banners = $tpl->data['banners'];
-		// FIXME: Move to Zero extension MinervaPreRender hook
-		if ( isset( $tpl->data['zeroRatedBanner'] ) ) {
-			$banners[] = $tpl->data['zeroRatedBanner'];
-		}
-		$tpl->set( 'banners', $banners );
 		if ( $inBeta ) {
 			$this->prepareDataBeta( $tpl );
 		}
@@ -199,8 +193,6 @@ class SkinMobileBase extends SkinMinerva {
 		$tpl = $this->prepareTemplate();
 		$tpl->set( 'headelement', $out->headElement( $this ) );
 		$tpl->set( 'bodytext', $html );
-		// FIXME: Move to ZeroRatedMobileAccess extension
-		$tpl->set( 'zeroRatedBanner', $this->extMobileFrontend->getZeroRatedBanner() );
 		$notice = '';
 		wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
 		$tpl->set( 'notice', $notice );

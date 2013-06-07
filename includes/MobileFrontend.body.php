@@ -2,25 +2,8 @@
 
 class ExtMobileFrontend extends ContextSource {
 
-	protected $zeroRatedBanner;
-
 	public function __construct( IContextSource $context ) {
 		$this->setContext( $context );
-	}
-
-	/**
-	 * FIXME: Move to ZeroRatedMobileAccess extension
-	 * @return string
-	 */
-	public function getZeroRatedBanner() {
-		$zeroRatedBanner = $this->zeroRatedBanner ? str_replace( 'display:none;', '', $this->zeroRatedBanner ) : '';
-
-		if ( $zeroRatedBanner ) {
-			if ( strstr( $zeroRatedBanner, 'id="zero-rated-banner"><span' ) ) {
-				$zeroRatedBanner = str_replace( 'id="zero-rated-banner"><span', 'id="zero-rated-banner"><span', $zeroRatedBanner );
-			}
-		}
-		return $zeroRatedBanner;
 	}
 
 	private function sendHeaders() {
@@ -60,21 +43,9 @@ class ExtMobileFrontend extends ContextSource {
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
 		$context = MobileContext::singleton();
+
 		$formatter = MobileFormatter::newFromContext( $context, $html );
-		$doc = $formatter->getDoc();
 		wfProfileOut( __METHOD__ . '-formatter-init' );
-
-		wfProfileIn( __METHOD__ . '-zero' );
-		$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner' );
-
-		if ( !$zeroRatedBannerElement ) {
-			$zeroRatedBannerElement = $doc->getElementById( 'zero-rated-banner-red' );
-		}
-
-		if ( $zeroRatedBannerElement ) {
-			$this->zeroRatedBanner = $doc->saveXML( $zeroRatedBannerElement, LIBXML_NOEMPTYTAG );
-		}
-		wfProfileOut( __METHOD__ . '-zero' );
 
 		wfProfileIn( __METHOD__ . '-filter' );
 		if ( $context->getContentTransformations() ) {
