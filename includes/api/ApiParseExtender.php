@@ -80,7 +80,7 @@ class ApiParseExtender {
 				$context->setOnlyThisSegment( isset( $params['section'] ) );
 				$mf = new MobileFormatter( MobileFormatter::wrapHTML( $data['parse']['text']['*'] ),
 					$title,
-					ExtMobileFrontend::parseContentFormat( $params['mobileformat'] ),
+					MobileContext::parseContentFormat( $params['mobileformat'] ),
 					$context
 				);
 				$mf->removeImages( $params['noimages'] );
