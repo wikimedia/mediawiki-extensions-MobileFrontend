@@ -25,7 +25,9 @@ var toggle = ( function() {
 		}
 
 		$( 'html' ).addClass( 'togglingEnabled' );
-		$( '.section_heading' ).on( 'mousedown', openSectionHandler );
+		// use mouseup because mousedown blocks the click event and links
+		// in headings won't work
+		$( '.section_heading' ).on( 'mouseup', openSectionHandler );
 		$( '.section_anchors' ).remove();
 
 		function checkHash() {

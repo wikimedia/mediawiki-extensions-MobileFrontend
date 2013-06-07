@@ -159,6 +159,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/externals/hogan.js',
 			'javascripts/common/eventemitter.js',
+			'javascripts/common/Router.js',
 			'javascripts/common/mf-application.js',
 			'javascripts/common/history.js',
 			'javascripts/common/mf-settings.js',
