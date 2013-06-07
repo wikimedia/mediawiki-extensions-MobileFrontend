@@ -164,9 +164,8 @@ $wgMFNearbyEndpoint = '';
 $wgMFPhotoUploadWiki = null;
 
 /**
- * Path to the logo used in the mobile view
- *
- * Should be 22px tall at most
+ * Path to the logo used in the login/signup form
+ * The standard height is 72px
  */
 $wgMobileFrontendLogo = false;
 
