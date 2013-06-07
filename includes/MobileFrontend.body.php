@@ -141,7 +141,6 @@ class ExtMobileFrontend extends ContextSource {
 			if ( !$isFilePage ) {
 				$formatter->removeImages( $context->imagesDisabled() );
 			}
-			$formatter->whitelistIds( 'zero-language-search' );
 			$formatter->filterContent();
 			wfProfileOut( __METHOD__ . '-filter' );
 		}
