@@ -1,10 +1,9 @@
 ( function( M, $ ) {
 
-var T = ( function() {
+( function() {
 	var
 		toggle = M.require( 'toggle' ),
-		currentPage,
-		Page = M.require( 'page' );
+		currentPage;
 
 	M.on( 'section-toggle', function( section_id ) {
 		var
@@ -45,27 +44,8 @@ var T = ( function() {
 		checkHash();
 	}
 
-	function init() {
-		var pageTitle = mw.config.get( 'wgTitle'),
-			inViewMode = mw.config.get( 'wgAction' ) === 'view',
-			isMainPage = mw.config.get( 'wgIsMainPage' ),
-			isMainNamespace = mw.config.get( 'wgNamespaceNumber' ) ===  mw.config.get( 'wgNamespaceIds' )[''];
-
-		if ( !isMainPage && isMainNamespace && inViewMode ) {
-			M.history.retrievePage( pageTitle ).done( function( pageData ) {
-				currentPage = new Page( pageData );
-				refresh( currentPage );
-			} );
-		}
-	}
 	M.on( 'page-loaded', refresh );
 
-	return {
-		init: init
-	};
-
 }() );
-
-M.define( 'toggle-dynamic', T );
 
 }( mw.mobileFrontend, jQuery ) );
