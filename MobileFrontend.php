@@ -299,6 +299,11 @@ $wgMFForceSecureLogin = false;
 $wgMFNearby = false;
 
 /**
+ * The range in meters that should be searched to find nearby pages on Special:Nearby (defaults to 10km)
+ */
+$wgMFNearbyRange = 10000;
+
+/**
  * Whether the login form should redirect to another URL on the first login attempt.
  *
  * Defaults to false.
