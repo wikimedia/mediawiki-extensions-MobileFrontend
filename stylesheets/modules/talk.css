@@ -6,3 +6,8 @@
   color: #FFF;
   font-size: 9px;
 }
+.overlay .header button.add {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

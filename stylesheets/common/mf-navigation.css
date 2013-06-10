@@ -95,12 +95,6 @@ html.overlay #footer {
 #content .alert {
   margin: 0;
 }
-#mw-mf-page-center .header button.add,
-.overlay .header button.add {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
 body.navigation-enabled,
 body.navigation-enabled #mw-mf-viewport,
 body.navigation-enabled #mw-mf-page-center {
