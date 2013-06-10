@@ -37,18 +37,6 @@ class ExtMobileFrontend extends ContextSource {
 		wfProfileOut( __METHOD__ );
 	}
 
-	public static function parseContentFormat( $format ) {
-		if ( $format === 'wml' ) {
-			return 'WML';
-		} elseif ( $format === 'html' ) {
-			return 'HTML';
-		}
-		if ( $format === 'mobile-wap' ) {
-			return 'WML';
-		}
-		return 'HTML';
-	}
-
 	/**
 	 * Disables caching if the request is coming from a trusted proxy
 	 */

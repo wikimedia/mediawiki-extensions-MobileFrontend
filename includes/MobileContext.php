@@ -90,11 +90,29 @@ class MobileContext extends ContextSource {
 		if ( $this->contentFormat ) {
 			return $this->contentFormat;
 		}
-		// honor useformat=mobile-wap if it's set, otherwise determine by device
+		// honor useformat if it's set, otherwise determine by device
 		$device = $this->getDevice();
-		$viewFormat = ( $this->getUseFormat() == 'mobile-wap' ) ? 'mobile-wap' : $device->format();
-		$this->contentFormat = ExtMobileFrontend::parseContentFormat( $viewFormat );
+		$viewFormat = ( $this->getUseFormat() != '' ) ? $this->getUseFormat() : $device->format();
+		$this->contentFormat = static::parseContentFormat( $viewFormat );
 		return $this->contentFormat;
+	}
+
+	/**
+	 * Converts a multitude of format strings to 'HTML' or 'WML'
+	 * @param string $format
+	 *
+	 * @return string
+	 */
+	public static function parseContentFormat( $format ) {
+		if ( $format === 'wml' ) {
+			return 'WML';
+		} elseif ( $format === 'html' ) {
+			return 'HTML';
+		}
+		if ( $format === 'mobile-wap' ) {
+			return 'WML';
+		}
+		return 'HTML';
 	}
 
 	public function imagesDisabled() {
