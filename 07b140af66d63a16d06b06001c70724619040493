@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D03LiVqU",
+        "filename": "javascripts/modules/mf-photo.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-06-10T19:08:27Z",
+      "side": 1,
+      "message": "I think we should serialize data.upload and do result.reject( \u0027Missing filename: \u0027 + serialized data.upload ) because we can\u0027t be sure what\u0027s luring in there. This, of course, would be only temporary (FIXME), say for a week, until we found out the cause of errors.",
+      "revId": "07b140af66d63a16d06b06001c70724619040493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
