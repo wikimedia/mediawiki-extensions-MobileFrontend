@@ -33,7 +33,7 @@ QUnit.module( 'MobileFrontend photo', {
 		mw.config.set( 'wgMFLeadPhotoUploadCssSelector', 'img, .navbox, .infobox' );
 		this.clock = sinon.useFakeTimers();
 	},
-	tearDown: function () {
+	teardown: function() {
 		mw.config.set( 'wgMFLeadPhotoUploadCssSelector', _wgMFLeadPhotoUploadCssSelector );
 		this.clock.restore();
 	}
