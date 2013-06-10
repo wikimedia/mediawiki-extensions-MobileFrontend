@@ -359,7 +359,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.notifications.styles' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.toast.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'stylesheets/common/notifications.css',
 		),
@@ -383,7 +383,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.stable.dependencies',
-			'mobile.notifications.styles',
+			'mobile.toast.styles',
 			'mediawiki.jqueryMsg',
 		),
 		'scripts' => array(
@@ -587,6 +587,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/specials/nearby.js',
 		),
 		// stop flash of unstyled content when loading from cache
+		'position' => 'top',
+	),
+	'mobile.notifications.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'stylesheets/specials/notifications.css',
+		),
 		'position' => 'top',
 	),
 	'mobile.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(

@@ -13,6 +13,7 @@ class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 		$title = $this->getTitle();
 		list( $name, /* $subpage */ ) = SpecialPageFactory::resolveAlias( $title->getDBkey() );
 		$id = strtolower( $name );
+		// FIXME: These names should be more specific
 		$specialStyleModuleName = 'mobile.' . $id . '.styles';
 		$specialScriptModuleName = 'mobile.' . $id . '.scripts';
 
