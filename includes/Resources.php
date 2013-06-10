@@ -368,6 +368,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.stable.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
+			'stylesheets/common/common-js.css',
 			'stylesheets/modules/mf-search.css',
 			'stylesheets/modules/mf-toggle.css',
 			'stylesheets/modules/mf-references.css',
