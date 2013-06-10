@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D0xLPilg",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-10T18:53:13Z",
+      "side": 0,
+      "message": "I dont see this in https://gerrit.wikimedia.org/r/#/c/66891/1/wmf-config/InitialiseSettings.php - is that expected?",
+      "revId": "9e1f80a2c2e92a1194921716da47c6391df2e2c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D03LcFhA",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-10T18:53:13Z",
+      "side": 0,
+      "message": "same",
+      "revId": "9e1f80a2c2e92a1194921716da47c6391df2e2c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
