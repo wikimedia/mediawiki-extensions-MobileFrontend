@@ -65,39 +65,6 @@ html.animations .mw-mf-overlay .buttonBar {
   -webkit-background-size: auto 30px;
   background-size: auto 30px;
 }
-.mw-mf-overlay div.languageOverlay ul li,
-.mw-mf-overlay ul.content li {
-  color: #666;
-  border: none;
-  position: relative;
-  border-bottom: solid 1px #999999;
-  border-bottom: solid 1px #eee;
-  padding: 12px 40px;
-  font-size: 0.9em;
-}
-.mw-mf-overlay div.languageOverlay ul li a,
-.mw-mf-overlay ul.content li a {
-  display: block;
-  text-decoration: none;
-  color: #666;
-}
-.mw-mf-overlay div.languageOverlay ul li a:active,
-.mw-mf-overlay ul.content li a:active,
-.mw-mf-overlay div.languageOverlay ul li a:hover,
-.mw-mf-overlay ul.content li a:hover,
-.mw-mf-overlay div.languageOverlay ul li a:visited,
-.mw-mf-overlay ul.content li a:visited {
-  text-decoration: none;
-  color: #666;
-}
-.mw-mf-overlay div.languageOverlay ul li:hover,
-.mw-mf-overlay ul.content li:hover {
-  background-color: #ACD1E9;
-}
-.mw-mf-overlay div.languageOverlay ul li.preferred,
-.mw-mf-overlay ul.content li.preferred {
-  font-weight: bold;
-}
 .mw-mf-overlay .mw-mf-overlay-header {
   background-color: #F1F1F1;
 }

@@ -276,6 +276,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'stylesheets/modules/editor.css',
+			'stylesheets/modules/languages.css',
 			'stylesheets/modules/talk.css',
 		),
 		'scripts' => array(

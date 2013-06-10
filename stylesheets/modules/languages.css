@@ -1,0 +1,9 @@
+button.languageSelector {
+  margin-top: 14pt;
+}
+div.languageOverlay .suggestions-results {
+  padding-bottom: 0;
+}
+div.languageOverlay .suggestions-results .preferred {
+  font-weight: bold;
+}

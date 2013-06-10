@@ -93,17 +93,6 @@ input[type=submit] {
   background-image: linear-gradient(#7798d2 0, #7798d2 100%);
   border-color: #648acc;
 }
-.content .button.languageSelector,
-.buttonBar .button.languageSelector,
-.drawer .button.languageSelector,
-.content button.languageSelector,
-.buttonBar button.languageSelector,
-.drawer button.languageSelector,
-.content input[type=submit].languageSelector,
-.buttonBar input[type=submit].languageSelector,
-.drawer input[type=submit].languageSelector {
-  margin-top: 14pt;
-}
 .content .button.cancel,
 .buttonBar .button.cancel,
 .drawer .button.cancel,
