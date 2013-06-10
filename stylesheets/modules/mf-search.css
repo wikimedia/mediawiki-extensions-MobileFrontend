@@ -61,9 +61,6 @@ form .clear {
 .full-screen-search .goButton {
   display: none !important;
 }
-.full-screen-search #mw-mf-sq {
-  margin-right: 0;
-}
 .full-screen-search #results {
   left: 0;
   width: 100% !important;

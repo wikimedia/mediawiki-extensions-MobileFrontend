@@ -334,8 +334,7 @@ input[type=submit] {
   }
 }
 /* Header */
-.header form,
-#mw-mf-sq {
+.header form {
   height: 46px;
 }
 #mw-mf-header,
@@ -433,17 +432,11 @@ input.search:focus {
   position: relative;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-.search-box #mw-mf-sq {
-  padding-right: 48px;
-}
 #mw-mf-menu-page {
   display: none;
 }
 .client-js .searchSubmit {
   display: none;
-}
-.client-js #mw-mf-sq {
-  padding-right: 0;
 }
 .client-js #mw-mf-menu-page {
   display: block;
