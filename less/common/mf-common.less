@@ -89,17 +89,7 @@ ul.gallery {
 	}
 }
 
-.mwm-message.mwm-notice {
-	background: #FFFFFF;
-	font-size: 1.1em;
-	color: #000000;
-}
-.mwm-message.mwm-notice a {
-	text-decoration: underline;
-	font-weight: bold;
-	color: #000000;
-}
-
+// FIXME: Review what introduces .mwm-notice
 .mwm-notice {
 	padding: 5px;
 	background: #dddddd;
@@ -107,6 +97,18 @@ ul.gallery {
 	margin-top: 5px;
 	text-align: center;
 	border: 1px solid gray;
+
+	&.mwm-message {
+		background: #FFFFFF;
+		font-size: 1.1em;
+		color: #000000;
+
+		 a {
+			text-decoration: underline;
+			font-weight: bold;
+			color: #000000;
+		}
+	}
 }
 
 #content {
@@ -158,9 +160,7 @@ table {
 
 p,
 li,
-dl,
-#mainpage,
-#featured_article {
+dl {
 	line-height: 1.65;
 }
 
@@ -191,15 +191,6 @@ a.new:hover {
 	color: red;
 }
 
-#contentSub {
-	margin-bottom: 10px;
-}
-
-#featured_article .noprint,
-.today .noprint {
-	display: none;
-}
-
 img.thumbborder {
 	border: 1px solid #cccccc;
 }
@@ -212,38 +203,14 @@ img.thumbborder {
 	float: left;
 }
 
-#content_wrapper.home h1 {
-	display: none;
-}
-
 #mw-mf-last-modified {
 	display: block;
 	font-size: .9em;
 	margin-top: 1.5em;
 }
 
-#disableButtons {
-	text-align: center;
-}
-
-#disableButtons button {
-	background: url(images/buttonbg.gif) no-repeat center;
-	border: 0;
-	height: 23px;
-	width: 83px;
-}
-
-#disableButtons #backButton {
-	margin-top: 5em;
-	margin-bottom: 2em;
-}
-
 .mwm-message.mwm-notice {
 	font-size: 1.1em;
-}
-
-#image_wrapper {
-	margin: 8px 0 8px -3px;
 }
 
 @media all and (max-width: 500px) {

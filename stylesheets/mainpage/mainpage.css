@@ -1,3 +1,11 @@
+#mainpage,
+#featured_article {
+  line-height: 1.65;
+}
+#featured_article .noprint,
+.today .noprint {
+  display: none;
+}
 body.page-Main_Page table tr,
 body.page-Main_Page table td {
   display: block !important;
