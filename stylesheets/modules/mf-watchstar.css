@@ -16,7 +16,7 @@ a.watch-this-article.loading {
   transform: rotate(72deg);
 }
 li a.watch-this-article {
-  right: 12px;
+  right: 8px;
   top: 0;
   bottom: 0;
   height: 100%;
