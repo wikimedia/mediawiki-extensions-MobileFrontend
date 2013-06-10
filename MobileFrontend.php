@@ -147,6 +147,12 @@ require_once( "$localBasePath/includes/Resources.php" );
  */
 $wgMFDefaultSkinClass = 'SkinMobile';
 
+/*
+ * Allow editing (uploading) to external CentralAuth-enabled wikis where
+ * the user might not be logged in.
+ */
+$wgMFUseCentralAuthToken = false;
+
 /**
  * An api to which any photos should be uploaded
  * e.g. $wgMFPhotoUploadEndpoint = 'http://commons.wikimedia.org/w/api.php';

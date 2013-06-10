@@ -76,6 +76,7 @@
 	}
 
 	PhotoApi = Api.extend( {
+		useCentralAuthToken: mw.config.get( 'wgMFUseCentralAuthToken' ),
 		updatePage: function( options, callback ) {
 			var self = this;
 			self.getToken().done( function( token ) {
@@ -119,7 +120,7 @@
 				'mobile-frontend-photo-article-edit-comment' :
 				'mobile-frontend-photo-article-donate-comment';
 
-			function doUpload( token ) {
+			function doUpload( token, caToken ) {
 				var formData = new FormData(),
 					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 ),
 					request;
@@ -131,6 +132,9 @@
 				// add origin only when doing CORS
 				if ( endpoint ) {
 					formData.append( 'origin', M.getOrigin() );
+					if ( caToken ) {
+						formData.append( 'centralauthtoken', caToken );
+					}
 				}
 				formData.append( 'filename', options.fileName );
 				formData.append( 'comment', mw.msg( options.editSummaryMessage ) );
@@ -200,11 +204,24 @@
 				} );
 			}
 
-			self.getToken( 'edit', endpoint ).done( function( token ) {
-				doUpload( token );
-			} ).fail( function( err ) {
-				result.reject( err );
-			} );
+			function getToken() {
+				return self.getToken.apply( self, arguments ).fail( $.proxy( result, 'reject' ) );
+			}
+
+			if ( self.useCentralAuthToken && endpoint ) {
+				// get caToken for obtaining the edit token from external wiki (the one we want to upload to)
+				getToken( 'centralauth' ).done( function( caTokenForEditToken ) {
+					// request edit token using the caToken
+					getToken( 'edit', endpoint, caTokenForEditToken ).done( function( token ) {
+						// tokens are only valid for one go so let's get another one for the upload itself
+						getToken( 'centralauth' ).done( function( caTokenForUpload ) {
+							doUpload( token, caTokenForUpload );
+						} );
+					} );
+				} );
+			} else {
+				getToken( 'edit', endpoint ).done( doUpload );
+			}
 
 			return result;
 		}

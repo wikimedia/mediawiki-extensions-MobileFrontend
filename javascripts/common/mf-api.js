@@ -130,20 +130,24 @@
 	 *
 	 * @param {String} tokenType: Name of the type of token needed e.g. edit, upload - defaults to edit
 	 * @param {String} endpoint: Optional alternative host to query via CORS
+	 * @param {String} caToken: Optional additional CentralAuth token to be
+	 * sent with the request. This is needed for requests to external wikis
+	 * where the user is not logged in. caToken is for single use only.
 	 * @return {jQuery.Deferred} Object returned by $.ajax(), callback will be passed
 	 *   the token string, false if the user is anon or undefined where not available or a warning is set
 	 */
-	Api.prototype.getToken = function( tokenType, endpoint ) {
-		var data, d = $.Deferred();
+	Api.prototype.getToken = function( tokenType, endpoint, caToken ) {
+		var data, d = $.Deferred(), isCacheable;
 
 		tokenType = tokenType || 'edit';
+		isCacheable = tokenType !== 'centralauth';
 
 		if ( !this.tokenCache[ endpoint ] ) {
 			this.tokenCache[ endpoint ] = {};
 		}
 		if ( !M.isLoggedIn() ) {
 			return d.reject( 'Token requested when not logged in.' );
-		} else if ( this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
+		} else if ( isCacheable && this.tokenCache[ endpoint ].hasOwnProperty( tokenType ) ) {
 			return this.tokenCache[ endpoint ][ tokenType ];
 		} else {
 			data = {
@@ -152,6 +156,9 @@
 			};
 			if ( endpoint ) {
 				data.origin = M.getOrigin();
+				if ( caToken ) {
+					data.centralauthtoken = caToken;
+				}
 			}
 			this.ajax( data, {
 					url: endpoint || M.getApiUrl(),

@@ -88,6 +88,7 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function getSkinConfigVariables() {
 		global $wgMFLeadPhotoUploadCssSelector, $wgMFEnableCssAnimations,
+			$wgMFUseCentralAuthToken,
 			$wgMFAnonymousEditing, $wgMFEnablePhotoUploadCTA,
 			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc;
 
@@ -96,6 +97,7 @@ class SkinMinerva extends SkinTemplate {
 		$userCanCreatePage = !$title->exists() && $title->quickUserCan( 'create', $user );
 
 		$vars = array(
+			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
 			'wgMFEnablePhotoUploadCTA' => $wgMFEnablePhotoUploadCTA,
 			'wgMFPhotoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
