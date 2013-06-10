@@ -6,10 +6,6 @@ var m = ( function( $ ) {
 		mfePrefix = M.prefix,
 		inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
 
-	function getPageMenu() {
-		return $( '#mw-mf-menu-page' );
-	}
-
 	function openNavigation() {
 		$( 'body' ).addClass( 'navigation-enabled' );
 	}
@@ -72,7 +68,6 @@ var m = ( function( $ ) {
 	};
 
 	return {
-		getPageMenu: getPageMenu,
 		getMenu: menu
 	};
 }( jQuery ));

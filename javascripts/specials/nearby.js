@@ -35,8 +35,8 @@ function distanceMessage( d ) {
 
 $( function() {
 	var supported = M.supportsGeoLocation(),
-		nav = M.require( 'navigation' ),
 		View = M.require( 'view' ),
+		$userBtn = $( '#user-button' ),
 		errorMessages = {
 			empty: {
 				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
@@ -85,7 +85,7 @@ $( function() {
 				self.emit( 'rendered', this.$el );
 			}
 		} ),
-		pendingQuery = false, btn, menu;
+		pendingQuery = false, btn;
 
 		overlay = new Nearby( {
 			el: $( '#mw-mf-nearby' )
@@ -244,8 +244,11 @@ $( function() {
 		overlay.renderError( 'incompatible' );
 	}
 
-	menu = $( '<li>' ).appendTo( nav.getPageMenu() );
-	btn = $( '<button class="refresh">refresh</button></li>' ).on( 'click', refresh ).appendTo( menu );
+	if ( $userBtn.length ) {
+		$( '<ul id="mw-mf-menu-page">' ).insertAfter( $userBtn );
+		$userBtn.remove();
+	}
+	btn = $( '<li><button class="refresh">refresh</button></li>' ).on( 'click', refresh ).appendTo( '#mw-mf-menu-page' );
 } );
 
 M.define( 'nearby', {
