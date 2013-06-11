@@ -4,6 +4,7 @@
 
 	Carousel = View.extend( {
 		template: M.template.get( 'specials/uploads/carousel' ),
+		className: 'carousel',
 		postRender: function() {
 			var self = this, $pages;
 			$pages = this.$( '.page' );
@@ -22,8 +23,8 @@
 			} );
 		},
 		showCurrentPage: function() {
-			this.$( '.page' ).hide();
-			this.$( '.page' ).eq( this.page ).show();
+			this.$( '.page' ).removeClass( 'active' );
+			this.$( '.page' ).eq( this.page ).addClass( 'active' );
 			this.$( 'ul li' ).removeClass( 'active' ).
 				eq( this.page ).addClass( 'active' );
 			this.$( 'button' ).removeClass( 'active' );

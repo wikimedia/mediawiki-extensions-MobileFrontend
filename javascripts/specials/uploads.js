@@ -3,7 +3,7 @@ var
 	photo = M.require( 'photo' ),
 	popup = M.require( 'notifications' ),
 	View = M.require( 'view' ),
-	Carousel = M.require( 'widgets/carousel' ),
+	CarouselOverlay = M.require( 'overlays/CarouselOverlay' ),
 	carousel,
 	m;
 
@@ -106,14 +106,26 @@ m = ( function() {
 
 			if ( pages.length === 0 ) {
 				$( '.ctaUploadPhoto h2' ).hide(); // hide the count if 0 uploads have been made
-				carousel = new Carousel( {
+				carousel = new CarouselOverlay( {
 					pages: [
-						{ text: mw.msg( 'mobile-frontend-first-upload-wizard-page-1' ), className: 'page-1', id: 1 },
-						{ text: mw.msg( 'mobile-frontend-first-upload-wizard-page-2' ), className: 'page-2', id: 2 },
-						{ text: mw.msg( 'mobile-frontend-first-upload-wizard-page-3' ), className: 'page-3', id: 3 }
+						{
+							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1-header' ),
+							text: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1' ),
+							className: 'page-1', id: 1
+						},
+						{
+							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-2-header' ),
+							text: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-2' ),
+							className: 'page-2', id: 2
+						},
+						{
+							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-header' ),
+							cancel: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
+							className: 'page-3', id: 3
+						}
 					]
 				} );
-				carousel.insertBefore( '.ctaUploadPhoto' );
+				carousel.show();
 				$( function() {
 					window.scrollTo( 0, $( '.header' ).offset().top );
 				} );
@@ -157,10 +169,9 @@ m = ( function() {
 			showGallery( username );
 		}
 	}
-
+	$( init );
 	return {
-		getDescription: getDescription,
-		init: init
+		getDescription: getDescription
 	};
 }() );
 
