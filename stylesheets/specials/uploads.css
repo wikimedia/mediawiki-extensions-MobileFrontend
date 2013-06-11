@@ -7,6 +7,12 @@
   background-color: #006398;
   color: white;
   height: 100%;
+  padding-left: 23px;
+  padding-right: 23px;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .carousel > button {
   padding: 0;
@@ -44,7 +50,7 @@
   border-radius: 0;
 }
 .carousel .page {
-  padding: 162px 27px 0 27px;
+  padding: 162px 0 0 0;
   text-align: center;
   line-height: 1.3;
   background-size: auto 130px;
@@ -53,7 +59,7 @@
   top: 10px;
   left: 100%;
   bottom: 0;
-  right: 23px;
+  width: 100%;
   position: absolute;
   visibility: hidden;
 }
@@ -106,6 +112,32 @@
   font-size: 1.25em;
   margin: 0 0 .5em;
   text-align: center;
+}
+.slideable {
+  width: 100%;
+  overflow: hidden;
+}
+.slideable .slider {
+  position: absolute;
+}
+.slideable .slider.slider-left {
+  left: -100%;
+}
+.slideable .slider.active {
+  left: 0;
+  position: relative;
+}
+.slideable .slider.slider-right {
+  left: 100%;
+}
+.animations .slider {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: 'left, right';
+  transition-property: 'left, right';
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 ul.mobileUserGallery {
   list-style: none;
