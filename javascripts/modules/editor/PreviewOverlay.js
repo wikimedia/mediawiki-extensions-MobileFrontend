@@ -24,10 +24,6 @@ var Overlay = M.require( 'Overlay' ),
 			} );
 			api.post( {
 				action: 'parse',
-				// the following two parameters are here due to API (don't ask)
-				preview: true,
-				// This means "I am section #0 - it doesn't matter if this is not true" \o/ API
-				section: 0,
 				title: options.title,
 				text: options.wikitext,
 				prop: 'text'
