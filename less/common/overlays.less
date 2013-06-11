@@ -42,9 +42,10 @@ html.animations .mw-mf-overlay .buttonBar {
 	top: 0;
 	left: 0;
 	right: 0;
-	// use min-height instead of bottom 0 so that overlay expands when there's
-	// more content
-	min-height: 100%;
+	// use height instead of bottom 0 so that overlay expands when there's
+	// more content, don't use min-height because of
+	// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
+	height: 100%;
 	background-color: white;
 	z-index: 4;
 
