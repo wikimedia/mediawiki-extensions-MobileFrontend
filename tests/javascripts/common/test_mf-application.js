@@ -1,16 +1,5 @@
 ( function ( $, MFE ) {
 
-QUnit.module("MobileFrontend application.js: history", {
-	setup: function() {
-		window.location.hash = "#hash1";
-		window.location.hash = "#hash2";
-		$( '<div id="hash3">' ).appendTo( document.body );
-	},
-	teardown: function() {
-		$( '#hash3' ).remove();
-	}
-});
-
 QUnit.module( 'MobileFrontend modules' );
 
 QUnit.test( 'define()', 1, function() {
