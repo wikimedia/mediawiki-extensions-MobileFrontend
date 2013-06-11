@@ -38,8 +38,8 @@
 		}
 
 		function notifyAuthenticatedUser() {
-			var msg = mw.message( 'mobile-frontend-logged-in-toast-notification',
-				mw.config.get( 'wgUserName' ) ).plain();
+			var msg = mw.msg( 'mobile-frontend-logged-in-toast-notification',
+				mw.config.get( 'wgUserName' ) );
 
 			if ( window.location.search.indexOf( 'welcome=yes' ) > -1 ) {
 				show( msg, 'toast' );

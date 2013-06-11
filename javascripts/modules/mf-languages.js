@@ -65,7 +65,7 @@
 	function createLanguagePage() {
 		var $container = $( this ).data( 'languages' ), overlay;
 		overlay = new LanguageOverlay( {
-			placeholder: M.message( 'mobile-frontend-language-site-choose' ),
+			placeholder: mw.msg( 'mobile-frontend-language-site-choose' ),
 			variantHeader: $container.find( '#mw-mf-language-variant-header' ).html(),
 			variantItems: $container.find( '#mw-mf-language-variant-selection' ).html(),
 			header: $container.find( '#mw-mf-language-header' ).html(),

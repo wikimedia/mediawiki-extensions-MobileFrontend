@@ -21,13 +21,13 @@ var module = (function() {
 
 		overlay = new CleanupOverlay( {
 			parent: parentOverlay,
-			heading: M.message( 'mobile-frontend-meta-data-issues-header' ),
+			heading: mw.msg( 'mobile-frontend-meta-data-issues-header' ),
 			content: $tmp.html()
 		} );
 
 		$( '<a class="mw-mf-cleanup">' ).click( function() {
 			overlay.show();
-		} ).text( M.message( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
+		} ).text( mw.msg( 'mobile-frontend-meta-data-issues' ) ).insertBefore( $metadata.eq( 0 ) );
 		$metadata.remove();
 	}
 

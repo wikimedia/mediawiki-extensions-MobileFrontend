@@ -3,7 +3,7 @@
 var View = M.require( 'view' ),
 	Drawer = View.extend( {
 		defaults: {
-			cancelMessage: M.message( 'mobile-frontend-drawer-cancel' )
+			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
 		},
 		className: 'drawer position-fixed',
 

@@ -39,7 +39,7 @@ var Overlay = M.require( 'Overlay' );
 							content: $( '<div>').append( $container ).html()
 						} );
 						overlay.show();
-					} ).text( M.message( 'mobile-frontend-table', tableId ) ).appendTo( $tr );
+					} ).text( mw.msg( 'mobile-frontend-table', tableId ) ).appendTo( $tr );
 
 					// make the vertical expando
 					$tr = $( '<tr class="expandoVertical">' ).appendTo( $tc );

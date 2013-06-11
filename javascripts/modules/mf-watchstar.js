@@ -37,12 +37,12 @@ var api = M.require( 'api' ), w = ( function() {
 			format: 'json', action: 'watch',
 			title: title, token: token
 		},
-			msg = M.message( 'mobile-frontend-watchlist-add', title ),
+			msg = mw.msg( 'mobile-frontend-watchlist-add', title ),
 			popupClass = 'watch-action toast';
 
 		if( unwatchflag ) {
 			data.unwatch = true;
-			msg = M.message( 'mobile-frontend-watchlist-removed', title );
+			msg = mw.msg( 'mobile-frontend-watchlist-removed', title );
 		} else {
 			popupClass += ' watched';
 		}
