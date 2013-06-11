@@ -21,7 +21,8 @@ var View = M.require( 'view' ),
 			} );
 		},
 		show: function() {
-			M.lockViewport();
+			// FIXME: prevent zooming within overlays but don't break the rendering!
+			// M.lockViewport();
 			if ( this.parent ) {
 				this.parent.hide();
 			}
@@ -34,7 +35,8 @@ var View = M.require( 'view' ),
 			window.scrollTo( 0, 1 );
 		},
 		hide: function() {
-			M.unlockViewport();
+			// FIXME: allow zooming outside the overlay again
+			// M.unlockViewport();
 			this.$el.detach();
 			if ( !this.parent ) {
 				$( 'html' ).removeClass( 'overlay' );
