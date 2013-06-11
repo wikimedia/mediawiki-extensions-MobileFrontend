@@ -70,19 +70,20 @@ class ApiParseExtender {
 				$result->reset();
 
 				$title = Title::newFromText( $data['parse']['title'] );
-				$context = new WmlContext();
-				$context->setCurrentUrl( $title->getCanonicalURL() );
-				$context->setRequestedSegment( isset( $params['section'] )
-					? $params['section'] + 1 // Segment numbers start from 1
-					: 0
-				);
-				$context->setUseFormat( 'wml' ); // Force WML links just in case
-				$context->setOnlyThisSegment( isset( $params['section'] ) );
-				$mf = new MobileFormatter( MobileFormatter::wrapHTML( $data['parse']['text']['*'] ),
-					$title,
-					MobileContext::parseContentFormat( $params['mobileformat'] ),
-					$context
-				);
+				$html = MobileFormatter::wrapHTML( $data['parse']['text']['*'] );
+				if ( MobileContext::parseContentFormat( $params['mobileformat'] ) === 'WML' ) {
+					$context = new WmlContext();
+					$context->setCurrentUrl( $title->getCanonicalURL() );
+					$context->setRequestedSegment( isset( $params['section'] )
+							? $params['section'] + 1 // Segment numbers start from 1
+							: 0
+					);
+					$context->setUseFormat( 'wml' ); // Force WML links just in case
+					$context->setOnlyThisSegment( isset( $params['section'] ) );
+					$mf = new MobileFormatterWML( $html, $title, $context );
+				} else {
+					$mf = new MobileFormatterHTML( $html, $title );
+				}
 				$mf->removeImages( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
 				$mf->enableExpandableSections( !$params['mainpage'] );

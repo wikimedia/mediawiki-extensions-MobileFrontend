@@ -38,10 +38,13 @@ $autoloadClasses = array (
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
 	'DeviceDetection' => 'DeviceDetection',
-	'HtmlFormatter' => 'HtmlFormatter',
 	'MobileContext' => 'MobileContext',
-	'MobileFormatter' => 'MobileFormatter',
 	'WmlContext' => 'WmlContext',
+
+	'HtmlFormatter' => 'formatters/HtmlFormatter',
+	'MobileFormatter' => 'formatters/MobileFormatter',
+	'MobileFormatterHTML' => 'formatters/MobileFormatterHTML',
+	'MobileFormatterWML' => 'formatters/MobileFormatterWML',
 
 	'ApiMobileView' => 'api/ApiMobileView',
 	'ApiParseExtender' => 'api/ApiParseExtender',

@@ -10,7 +10,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	public function testHtmlTransform( $input, $expected, $callback = false ) {
 		$t = Title::newFromText( 'Mobile' );
 		$input = str_replace( "\r", '', $input ); // "yay" to Windows!
-		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $input ), $t, 'HTML' );
+		$mf = new MobileFormatterHTML( MobileFormatter::wrapHTML( $input ), $t );
 		if ( $callback ) {
 			$callback( $mf );
 		}

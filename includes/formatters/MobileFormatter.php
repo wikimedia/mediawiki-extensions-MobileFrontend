@@ -3,11 +3,7 @@
 /**
  * Converts HTML into a mobile-friendly version
  */
-class MobileFormatter extends HtmlFormatter {
-	const WML_SECTION_SEPARATOR = '***************************************************************************';
-
-	protected $format;
-
+abstract class MobileFormatter extends HtmlFormatter {
 	/**
 	 * @var Title
 	 */
@@ -17,12 +13,7 @@ class MobileFormatter extends HtmlFormatter {
 	protected $mainPage = false;
 	protected $backToTopLink = true;
 
-	private $headings = 0;
-
-	/**
-	 * @var WmlContext
-	 */
-	protected $wmlContext;
+	protected $headings = 0;
 
 	private $defaultItemsToRemove = array(
 		'table.toc',
@@ -50,19 +41,11 @@ class MobileFormatter extends HtmlFormatter {
 	 *
 	 * @param string $html: Text to process
 	 * @param Title $title: Title to which $html belongs
-	 * @param string $format: 'HTML' or 'WML'
-	 * @param WmlContext $wmlContext: Context for creation of WML cards, can be omitted if $format == 'HTML'
-	 * @throws MWException
 	 */
-	public function __construct( $html, $title, $format, WmlContext $wmlContext = null ) {
+	public function __construct( $html, $title ) {
 		parent::__construct( $html );
 
 		$this->title = $title;
-		$this->format = $format;
-		if ( !$wmlContext && $format == 'WML' ) {
-			throw new MWException( __METHOD__ . '(): WML context not set' );
-		}
-		$this->wmlContext = $wmlContext;
 		$this->flattenRedLinks();
 	}
 
@@ -77,26 +60,24 @@ class MobileFormatter extends HtmlFormatter {
 	public static function newFromContext( $context, $html ) {
 		wfProfileIn( __METHOD__ );
 
-		$wmlContext = $context->getContentFormat() == 'WML' ? new WmlContext( $context ) : null;
 		$title = $context->getTitle();
-		$formatter = new MobileFormatter( self::wrapHTML( $html ), $title,
-			$context->getContentFormat(), $wmlContext
-		);
-		if ( $context->isBetaGroupMember() ) {
-			$formatter->disableBackToTop();
-		}
-
 		$isMainPage = $title->isMainPage();
 		$isFilePage = $title->inNamespace( NS_FILE );
 
-		if ( !$context->isAlphaGroupMember() ) {
-			$formatter->setIsMainPage( $isMainPage );
+		$html = self::wrapHTML( $html );
+		if ( $context->getContentFormat() === 'WML' ) {
+			$wmlContext = new WmlContext( $context );
+			$formatter = new MobileFormatterWML( $html, $title, $wmlContext );
+		} else {
+			$formatter = new MobileFormatterHTML( $html, $title );
+			$formatter->enableExpandableSections( !$isMainPage );
 		}
 
-		if ( $context->getContentFormat() == 'HTML'
-			&& $context->getRequest()->getText( 'search' ) == '' )
-		{
-			$formatter->enableExpandableSections( !$isMainPage );
+		if ( $context->isBetaGroupMember() ) {
+			$formatter->disableBackToTop();
+		}
+		if ( !$context->isAlphaGroupMember() ) {
+			$formatter->setIsMainPage( $isMainPage );
 		}
 		if ( $context->getContentTransformations() && !$isFilePage ) {
 			$formatter->removeImages( $context->imagesDisabled() );
@@ -109,13 +90,11 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * @return string: Output format
 	 */
-	public function getFormat() {
-		return $this->format;
-	}
+	public abstract function getFormat();
 
 	/**
 	 * @todo: kill with fire when there will be minimum of pre-1.1 app users remaining
-	 * @param bool $flag 
+	 * @param bool $flag
 	 */
 	public function enableExpandableSections( $flag = true ) {
 		$this->expandableSections = $flag;
@@ -183,160 +162,24 @@ class MobileFormatter extends HtmlFormatter {
 		$this->defaultItemsToRemove = $defaultItemsToRemove;
 	}
 
-	protected function onHtmlReady( $html ) {
-		switch ( $this->format ) {
-			case 'HTML':
-				if ( $this->expandableSections && strlen( $html ) > 4000 ) {
-					$html = $this->headingTransform( $html );
-				}
-				break;
-			case 'WML':
-				$html = $this->headingTransform( $html );
-				// Content removal for WML rendering
-				$this->flatten( array( 'span', 'div', 'sup', 'h[1-6]', 'sup', 'sub' ) );
-				// Content wrapping
-				$html = $this->createWMLCard( $html );
-				break;
-		}
-		return $html;
-	}
-
 	/**
 	 * Callback for headingTransform()
 	 * @param array $matches
 	 * @return string
 	 */
-	private function headingTransformCallbackWML( $matches ) {
-		wfProfileIn( __METHOD__ );
-		$this->headings++;
-
-		$base = self::WML_SECTION_SEPARATOR .
-				"<h2 class='section_heading' id='section_{$this->headings}'>{$matches[2]}</h2>";
-
-		wfProfileOut( __METHOD__ );
-		return $base;
-	}
+	protected abstract function headingTransformCallback( $matches );
 
 	/**
 	 * generates a back top link for a given section number
 	 * @param int $headingNumber: The number corresponding to the section heading
 	 * @return string
 	 */
-	private function backToTopLink( $headingNumber ) {
+	protected function backToTopLink( $headingNumber ) {
 		return Html::rawElement( 'a',
 				array( 'id' => 'anchor_' . $headingNumber,
 					'href' => '#section_' . $headingNumber,
 					'class' => 'section_anchors' ),
 				'&#8593;' . $this->msg( 'mobile-frontend-back-to-top-of-section' ) );
-	}
-	/**
-	 * Callback for headingTransform()
-	 * @param array $matches
-	 * @return string
-	 */
-	private function headingTransformCallbackHTML( $matches ) {
-		wfProfileIn( __METHOD__ );
-		if ( isset( $matches[0] ) ) {
-			preg_match( '/id="([^"]*)"/', $matches[0], $headlineMatches );
-		}
-
-		$headlineId = ( isset( $headlineMatches[1] ) ) ? $headlineMatches[1] : '';
-
-		$this->headings++;
-		// Back to top link
-		if ( $this->backToTopLink ) {
-			$backToTop = $this->backToTopLink( intval( $this->headings - 1 ) );
-		} else {
-			$backToTop = '';
-		}
-
-		// generate the HTML we are going to inject
-		if ( $this->headings === 1 ) {
-			$base = '</div>'; // close up content_0 section
-		} else {
-			$base = '';
-		}
-		$base .= Html::openElement( 'div', array( 'class' => 'section' ) );
-		$base .= Html::openElement( 'h2',
-				array( 'class' => 'section_heading', 'id' => 'section_' . $this->headings )
-			);
-		$base .=
-			Html::rawElement( 'span',
-					array( 'id' => $headlineId ),
-					$matches[2]
-				)
-				. Html::closeElement( 'h2' )
-				. Html::openElement( 'div',
-					array( 'class' => 'content_block', 'id' => 'content_' . $this->headings )
-				);
-
-		if ( $this->headings > 1 ) {
-			// Close it up here
-			$base = '</div>' // <div class="content_block">
-				. $backToTop
-				. "</div>" // <div class="section">
-				. $base;
-		}
-
-		wfProfileOut( __METHOD__ );
-		return $base;
-	}
-
-	/**
-	 * Creates a WML card from input
-	 * @param string $s: Raw WML
-	 * @return string: WML card
-	 */
-	protected function createWMLCard( $s ) {
-		wfProfileIn( __METHOD__ );
-		$segments = explode( self::WML_SECTION_SEPARATOR, $s );
-		$card = '';
-		$idx = 0;
-		$requestedSegment = htmlspecialchars( $this->wmlContext->getRequestedSegment() );
-		$title = htmlspecialchars( $this->title->getText() );
-		$segmentText = $this->wmlContext->getOnlyThisSegment()
-			? str_replace( self::WML_SECTION_SEPARATOR, '', $s )
-			: $segments[$requestedSegment];
-
-		$card .= "<card id='s{$idx}' title='{$title}'><p>{$segmentText}</p>";
-		$idx = intval( $requestedSegment ) + 1;
-		$segmentsCount = $this->wmlContext->getOnlyThisSegment()
-			? $idx + 1 // @todo: when using from API we don't have the total section count
-			: count( $segments );
-		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
-
-		$useFormatParam = ( $this->wmlContext->getUseFormat() )
-			? '&amp;useformat=' . $this->wmlContext->getUseFormat()
-			: '';
-
-		// Title::getLocalUrl doesn't work at this point since PHP 5.1.x, all objects have their destructors called
-		// before the output buffer callback function executes.
-		// Thus, globalized objects will not be available as expected in the function.
-		// This is stated to be intended behavior, as per the following: [http://bugs.php.net/bug.php?id=40104]
-		$defaultQuery = wfCgiToArray( preg_replace( '/^.*?(\?|$)/', '', $this->wmlContext->getCurrentUrl() ) );
-		unset( $defaultQuery['seg'] );
-		unset( $defaultQuery['useformat'] );
-
-		$qs = wfArrayToCgi( $defaultQuery );
-		$delimiter = ( !empty( $qs ) ) ? '?' : '';
-		$basePageParts = wfParseUrl( $this->wmlContext->getCurrentUrl() );
-		$basePage = $basePageParts['scheme'] . $basePageParts['delimiter'] . $basePageParts['host'] . $basePageParts['path'] . $delimiter . $qs;
-		$appendDelimiter = ( $delimiter === '?' ) ? '&amp;' : '?';
-
-		if ( $idx < $segmentsCount ) {
-			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$idx}{$useFormatParam}\">"
-				. $this->msg( 'mobile-frontend-wml-continue' ) . "</a></p>";
-		}
-
-		if ( $idx > 1 ) {
-			$back_idx = $requestedSegment - 1;
-			$card .= "<p><a href=\"{$basePage}{$appendDelimiter}seg={$back_idx}{$useFormatParam}\">"
-				. $this->msg( 'mobile-frontend-wml-back' ) . "</a></p>";
-		}
-
-		$card .= '</card>';
-		wfProfileOut( __METHOD__ );
-		return $card;
 	}
 
 	/**
@@ -346,17 +189,16 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	protected function headingTransform( $s ) {
 		wfProfileIn( __METHOD__ );
-		$callback = "headingTransformCallback{$this->format}";
 
 		// Closures are a PHP 5.3 feature.
 		// MediaWiki currently requires PHP 5.2.3 or higher.
 		// So, using old style for now.
 		$s = '<div id="content_0" class="content_block openSection">'
 			. preg_replace_callback(
-			'%<h2(.*)<span class="mw-headline" [^>]*>(.+)</span>[\s\r\n]*</h2>%sU',
-			array( $this, $callback ),
-			$s
-		);
+				'%<h2(.*)<span class="mw-headline" [^>]*>(.+)</span>[\s\r\n]*</h2>%sU',
+				array( $this, 'headingTransformCallback' ),
+				$s
+			);
 
 		// if we had any, make sure to close the whole thing!
 		if ( $this->headings > 0 ) {
