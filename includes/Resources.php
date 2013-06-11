@@ -77,7 +77,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'other',
 	),
 
-	'mobile.mainpage.dependencies' => array(
+	'mobile.mainpage.plumbing' => array(
 		'messages' => array(
 			// mf-homepage.js
 			'mobile-frontend-empty-homepage-text' => array( 'parse' ),
@@ -89,7 +89,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.mainpage.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.mainpage.dependencies',
+			'mobile.mainpage.plumbing',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-homepage.js',
@@ -167,7 +167,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'bottom',
 	),
 
-	'mobile.stable.dependencies' => array(
+	'mobile.stable.plumbing' => array(
 		'messages' => array(
 			// mf-photo.js
 			'mobile-frontend-photo-license' => array( 'parse' ),
@@ -200,7 +200,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'photoUploader',
 			'photoUploadPreview',
 			'photoNag',
-			'ctaDrawer'
+			'ctaDrawer',
 		),
 		'class' => 'MFResourceLoaderModule',
 	),
@@ -383,7 +383,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.stable.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.stable.dependencies',
+			'mobile.stable.plumbing',
 			'mobile.toast.styles',
 			'mediawiki.jqueryMsg',
 		),
