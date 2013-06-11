@@ -25,18 +25,6 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		MobileContext::setInstance( null ); // refresh it
 	}
 
-	public function testDisableCaching() {
-		global $wgRequest, $wgExtMobileFrontend, $wgSquidServers;
-		$disableCaching = self::getMethod( 'disableCaching' );
-
-		$wgSquidServers = array( '10.64.0.131' );
-		$_SERVER['REMOTE_ADDR'] = '10.64.0.131';
-		$disableCaching->invokeArgs( $wgExtMobileFrontend, array() );
-		$this->assertEquals( 'no-cache, must-revalidate', $wgRequest->response()->getheader( 'Cache-Control' ) );
-		$this->assertEquals( 'Sat, 26 Jul 1997 05:00:00 GMT', $wgRequest->response()->getheader( 'Expires' ) );
-		$this->assertEquals( 'no-cache', $wgRequest->response()->getheader( 'Pragma' ) );
-	}
-
 	public function testSendHeaders() {
 		global $wgExtMobileFrontend, $wgMFVaryResources;
 		$wgMFVaryResources = false;
