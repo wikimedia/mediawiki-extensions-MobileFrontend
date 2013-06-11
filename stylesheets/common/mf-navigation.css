@@ -56,15 +56,6 @@ body.navigation-enabled #mw-mf-page-center {
   left: 80% !important;
   overflow-x: hidden;
 }
-html.overlay .mw-mf-overlay {
-  display: block;
-}
-html.overlay #mw-mf-viewport {
-  display: none;
-}
-html.overlay #footer {
-  display: none !important;
-}
 .search.error,
 .error {
   border: solid 1px #dd0000;

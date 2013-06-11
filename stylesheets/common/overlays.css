@@ -18,6 +18,15 @@
 .overlay ul.informative li {
   margin-bottom: 8px;
 }
+html.overlay .mw-mf-overlay {
+  display: block;
+}
+html.overlay #mw-mf-viewport {
+  display: none;
+}
+html.overlay #footer {
+  display: none !important;
+}
 html[dir="rtl"] .mw-mf-overlay .header .cancel {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
