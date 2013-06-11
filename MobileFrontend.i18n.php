@@ -810,6 +810,7 @@ $messages['anp'] = array(
 );
 
 /** Arabic (العربية)
+ * @author Abanima
  * @author AwamerT
  * @author Bassem JARKAS
  * @author Meno25
@@ -954,6 +955,7 @@ $messages['ar'] = array(
 	'mobile-frontend-photo-cancel' => 'إلغاء',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|ملف واحد|ملفان|<span>$1</span> ملفات|<span>$1</span> ملفا|<span>$1</span> ملف}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500 + ملف',
+	'mobile-frontend-editor-success' => 'نجاح! تعديلك محفوظ.',
 	'tag-mobile_edit' => 'تحرير من الجوال',
 	'tag-mobile_edit-description' => 'تحرير بواسطة موقع الجوال',
 	'mobile-frontend-drawer-cancel' => 'إلغاء',
@@ -6203,6 +6205,7 @@ $messages['is'] = array(
  * @author Gloria sah
  * @author Nemo bis
  * @author Raoli
+ * @author Una giornata uggiosa '94
  * @author Ximo17
  */
 $messages['it'] = array(
@@ -6221,6 +6224,7 @@ $messages['it'] = array(
 	'mobile-frontend-settings-description' => 'Personalizza la tua esperienza sul dispositivo mobile con le impostazioni specifiche per questa versione.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-settings-alpha' => 'Modalità sperimentale',
+	'mobile-frontend-settings-alpha-description' => 'Accedi ad un territorio mobile pericoloso ed inesplorato. Hai ancora più funzioni sperimentali, ma con un rischio maggiore di trovare bug.',
 	'mobile-frontend-save-settings' => 'Salva',
 	'mobile-frontend-random-button' => 'Una pagina a caso',
 	'mobile-frontend-back-to-top-of-section' => 'Vai a inizio sezione',
@@ -6266,7 +6270,7 @@ $messages['it'] = array(
 	'mobile-frontend-account-create-captcha-placeholder' => 'Inserire il testo di sicurezza',
 	'mobile-frontend-overlay-escape' => 'Indietro',
 	'mobile-frontend-placeholder' => "Cerca all'interno di {{SITENAME}}",
-	'mobile-frontend-placeholder-beta' => 'Ricerca su {{SITENAME}} (Beta)',
+	'mobile-frontend-placeholder-beta' => 'Ricerca su {{SITENAME}} (beta)',
 	'mobile-frontend-placeholder-alpha' => 'Cerca su {{SITENAME}} (sperimentale)',
 	'mobile-frontend-search-help' => 'Digita le parole da ricercare ed i titoli delle pagine trovate appariranno qui.',
 	'mobile-frontend-dismiss-notification' => 'ignora questa notifica',
@@ -6286,6 +6290,8 @@ $messages['it'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Osservati speciali',
 	'mobile-frontend-main-menu-settings' => 'Impostazioni',
 	'mobile-frontend-main-menu-upload' => 'Caricamenti',
+	'mobile-frontend-main-menu-discovery' => 'Scopri',
+	'mobile-frontend-main-menu-personal' => 'Area personale',
 	'mobile-frontend-main-menu-about' => 'Informazioni su {{SITENAME}}',
 	'mobile-frontend-main-menu-disclaimer' => 'Avvertenze',
 	'mobile-frontend-main-menu-settings-heading' => 'Impostazioni del sito per cellulari',
@@ -6298,25 +6304,34 @@ $messages['it'] = array(
 	'mobile-frontend-meta-data-issues' => 'Questa pagina ha alcuni problemi',
 	'mobile-frontend-ajax-preview-loading' => "Carico l'anteprima della pagina",
 	'mobile-frontend-page-saving' => 'Sto salvando $1',
+	'mobile-frontend-user-cta' => "Effettua l'accesso o registrati per vedere le tue notifiche.",
 	'mobile-frontend-nearby-title' => 'Nelle vicinanze',
 	'mobile-frontend-nearby-loading' => 'Carico gli argomenti vicini alla tua posizione attuale',
-	'mobile-frontend-nearby-requirements' => 'Ci dispiace! Il tuo browser non supporta {{SITENAME}} nelle vicinanze.',
+	'mobile-frontend-nearby-requirements' => 'Ci dispiace! Il tuo browser non supporta "Nelle vicinanze" di {{SITENAME}}.',
+	'mobile-frontend-nearby-requirements-guidance' => 'Prova ad usare un browser diverso o attiva JavaScript se lo hai disattivato.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-nearby-noresults' => "E' tranquillo qui… non abbiamo trovato voci nelle vicinanze.",
+	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} non riesce a capire dove ti trovi... provare di nuovo?',
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => "Prova in un'area aperta con un segnale migliore.",
+	'mobile-frontend-nearby-noresults' => 'È tranquillo da queste parti… non abbiamo trovato voci nelle vicinanze.',
+	'mobile-frontend-nearby-noresults-guidance' => 'Prova a creare una nuova voce o ad aggiungere le coordinate della posizione ad una esistente.',
 	'mobile-frontend-nearby-refresh' => "Abbiamo trovato una posizione più precisa. Clicca qui per aggiornare l'elenco delle pagine nelle tue vicinanze",
-	'mobile-frontend-nearby-error' => '{{SITENAME}} nelle vicinanze sta avendo alcuni problemi.',
+	'mobile-frontend-nearby-error' => '{{SITENAME}} sta avendo alcuni problemi.',
+	'mobile-frontend-nearby-error-guidance' => 'Prova ad aggiornare la tua posizione.',
 	'mobile-frontend-nearby-link' => "Leggi l'intera pagina",
 	'mobile-frontend-needs-photo' => 'Ha bisogno di foto',
 	'mobile-frontend-donate-image-login' => "Devi aver effettuato l'accesso per vedere i file che hai caricato.",
 	'mobile-frontend-photo-upload-generic' => "Dona un'immagine",
 	'mobile-frontend-donate-image-title' => 'Caricamenti',
+	'mobile-frontend-donate-image-summary' => "Le fotografie rendono vive le voci di {{SITENAME}}.
+Ci sono molte voci che non hanno foto a causa della grave mancanza di immagini a licenza libera.
+Aiuta a rendere vive queste voci donando le tue immagini che sei disposto a dare via e che potrebbero essere utili all'intera comunità dei contributori di {{SITENAME}}.",
 	'mobile-frontend-donate-image-heading' => 'I tuoi contributi recenti',
 	'mobile-frontend-donate-image-anon' => "Per visualizzare la pagina di caricamento è necessario un'[[Special:UserLogin|utenza]]",
 	'mobile-frontend-listed-image-no-description' => 'Nessuna descrizione',
 	'mobile-frontend-donate-photo-upload-success' => 'Finito! La tua immagine ora può essere usata su {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Fatto! Grazie per il tuo primo contributo!',
-	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} ha bisogno di foto per portare le sue pagine alla vita!',
+	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} ha bisogno di foto per rendere vive le sue voci!',
 	'mobile-frontend-first-upload-wizard-page-2' => 'Per favore, dona solamente foto che hai scattato tu stesso.',
 	'mobile-frontend-first-upload-wizard-page-3' => 'Le foto che doni possono essere condivise, riutilizzate e modificate da milioni di persone.',
 	'mobile-frontend-watchlist-add' => 'Aggiunto $1 ai tuoi osservati speciali',
@@ -6331,6 +6346,7 @@ $messages['it'] = array(
 	'mobile-frontend-watchlist-feed' => 'Modificate',
 	'mobile-frontend-watchlist-a-z-empty' => 'Attualmente non stai osservando alcuna pagina',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Fai clic sulla stella in alto nella pagina',
+	'mobile-frontend-watchlist-a-z-empty-howto' => "Aggiungi agli osservati speciali una voce che hai trovato interessante cliccando l'icona a forma di stella, in cima alla schermata. Questo ti permetterà di salvare le voci di tuo interesse e di vedere quando vengono modificate.",
 	'mobile-frontend-watchlist-feed-empty' => 'Non ci sono pagine con modifiche recenti',
 	'mobile-frontend-watchlist-back-home' => 'Torna alla pagina principale',
 	'mobile-frontend-changeslist-ip' => 'Utente anonimo',
@@ -6358,16 +6374,25 @@ $messages['it'] = array(
 	'mobile-frontend-image-loading' => 'Caricamento immagine',
 	'mobile-frontend-photo-ownership' => 'Io, $1, ho creato questa immagine.',
 	'mobile-frontend-photo-ownership-help' => 'Che cosa significa questo?',
+	'mobile-frontend-photo-ownership-confirm' => 'Ho capito!',
+	'mobile-frontend-photo-ownership-bullet-one' => 'Possiamo accettare solo le foto che hai scattato di persona. Per favore non caricare immagini che hai trovato da qualche altra parte su Internet.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'Immagini protette da copyright o inappropriate saranno rimosse.',
 	'mobile-frontend-photo-ownership-bullet-three' => 'I file che hai caricato sono rilasciati con una licenza che permette a chiunque di riutilizzarli liberamente.',
 	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Io non sto violando il copyright',
+	'mobile-frontend-photo-nag-1-bullet-1-text' => "'''Non''' è una foto che ho trovato su Internet. È opera mia.",
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Questa non è una foto personale',
 	'mobile-frontend-photo-nag-1-bullet-2-text' => 'E può aiutare a illustrare un argomento importante.',
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Senza dubbio non viola il copyright e ha scopo educativo.',
+	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Ho capito cosa si può caricare. Non visualizzare più questo messaggio.',
 	'mobile-frontend-photo-nag-learn-more-heading' => 'Cosa caricare',
+	'mobile-frontend-photo-nag-learn-more-1' => "'''Sì!''' Foto di luoghi, oggetti ed eventi che hai scattato tu.",
+	'mobile-frontend-photo-nag-learn-more-2' => "'''Sì!''' Foto che possono aiutare ad illustrare ed arricchire le voci di {{SITENAME}}.",
+	'mobile-frontend-photo-nag-learn-more-3' => "'''No.''' Foto di locandine di film, copertine di libri o altro materiale protetto da copyright. Queste saranno cancellate.",
 	'mobile-frontend-image-uploading-wait' => 'Caricamento immagine, attendi.',
 	'mobile-frontend-image-uploading-long' => "Sto ancora caricando l'immagine! Grazie per la pazienza.",
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Annulla</a> se sta impiegando troppo tempo.',
 	'mobile-frontend-photo-upload-error' => 'Errore, prova ancora.',
+	'mobile-frontend-photo-upload-error-filename' => 'Errore, per favore fornisci un riassunto più descrittivo.',
 	'mobile-frontend-photo-upload-success-article' => 'Finito! La tua immagine è ora visibile su questa pagina.',
 	'mobile-frontend-photo-license' => 'Cliccando sul pulsante "Invia", accetti le nostre [//wikimediafoundation.org/wiki/Terms_of_use/it condizioni d\'uso] e accetti di rilasciare la tua foto sotto la licenza [//creativecommons.org/licenses/by-sa/3.0/deed.it Creative Commons Attribuzione-Condividi allo stesso modo 3.0].',
 	'mobile-frontend-photo-submit' => 'Invia',
@@ -6392,6 +6417,7 @@ $messages['it'] = array(
 	'mobile-frontend-editor-error-loading' => 'Errore, impossibile caricare la sezione.',
 	'mobile-frontend-editor-preview' => 'Anteprima',
 	'mobile-frontend-editor-preview-explanation' => "Un'anteprima di questa modifica verrà mostrata qui sotto.",
+	'mobile-frontend-editor-error-preview' => "Errore, qualcosa di inaspettato è accaduto durante il caricamento dell'anteprima. Per favore chiudi e prova di nuovo.",
 	'tag-mobile_edit' => 'Modifica da mobile',
 	'tag-mobile_edit-description' => 'Modifica apportata dal sito per dispositivi mobili',
 	'mobile-frontend-drawer-cancel' => 'Annulla',
@@ -6401,6 +6427,7 @@ $messages['it'] = array(
 	'mobile-frontend-talk-overlay-lead-header' => 'Discussione senza nome',
 	'mobile-frontend-talk-add-overlay-submit' => 'Aggiungi discussione',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Oggetto della discussione',
+	'mobile-frontend-talk-add-overlay-content-placeholder' => 'A cosa stai pensando?',
 	'mobile-frontend-talk-edit-summary' => 'Nuova sezione di discussione: $1',
 );
 
@@ -6518,7 +6545,7 @@ $messages['ja'] = array(
 	'mobile-frontend-nearby-requirements-guidance' => '別のブラウザーを試すか、または JavaScript を無効にしている場合は有効にしてください。',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-nearby-lookup-ui-error-guidance' => '電波の良い、開けた場所で試してください。',
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => '電波がよく届く、開けた場所で試してください。',
 	'mobile-frontend-nearby-refresh' => 'より正確な位置情報が見つかりました。ここをクリックすると、近くのページのリストが更新されます。',
 	'mobile-frontend-nearby-error' => '{{SITENAME}} 付近の検索で問題が発生しました。',
 	'mobile-frontend-nearby-link' => 'このページ全体を閲覧',
@@ -6526,14 +6553,16 @@ $messages['ja'] = array(
 	'mobile-frontend-donate-image-login' => '自分のアップロード一覧を表示するにはログインしてください。',
 	'mobile-frontend-photo-upload-generic' => '画像を投稿する',
 	'mobile-frontend-donate-image-title' => 'アップロード',
-	'mobile-frontend-donate-image-summary' => '写真は {{SITENAME}} のページをいきいきとしたものにします。自由なライセンスの写真がないため、写真を持つことのできないページがたくさんあります。あなたが持っている写真を寄贈し、より広く {{SITENAME}} の編集者たちが利用できるようにすることで、それらのページをいきいきとしたものにする手助けをしてください。',
+	'mobile-frontend-donate-image-summary' => '写真は {{SITENAME}} のページをいきいきとしたものにします。
+自由なライセンスの写真がないため、写真を掲載できないページがたくさんあります。
+あなたが持っている写真を寄贈し、より広く {{SITENAME}} の編集者たちが利用できるようにすることで、それらのページをいきいきとしたものにする手助けをしてください。',
 	'mobile-frontend-donate-image-heading' => '最近の投稿記録',
 	'mobile-frontend-donate-image-anon' => 'アップロードページを閲覧するには[[Special:UserLogin|利用者アカウント]]が必要です',
 	'mobile-frontend-listed-image-no-description' => '説明なし',
 	'mobile-frontend-donate-photo-upload-success' => '完了しました! 画像は{{SITENAME}}上で使用できるようになりました!',
 	'mobile-frontend-donate-photo-first-upload-success' => '完了しました! 初めてのアップロードありがとうございます!',
 	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}}では、ページを豊かにするためにあなたの写真を必要としています。',
-	'mobile-frontend-first-upload-wizard-page-2' => 'あなたが自分で撮った写真のみを寄贈してください。',
+	'mobile-frontend-first-upload-wizard-page-2' => 'あなたが自分で撮影した写真のみを寄贈してください。',
 	'mobile-frontend-first-upload-wizard-page-3' => 'あなたが寄贈した写真は何百万もの人により共有、再利用、再編集される可能性があります。',
 	'mobile-frontend-watchlist-add' => '$1 をウォッチリストに追加しました',
 	'mobile-frontend-watchlist-removed' => '$1 をウォッチリストから除去しました',
@@ -6545,10 +6574,10 @@ $messages['ja'] = array(
 	'mobile-frontend-watch-login' => 'ページをウォッチするにはログインしてください。',
 	'mobile-frontend-watchlist-a-z' => 'すべて',
 	'mobile-frontend-watchlist-feed' => '変更あり',
-	'mobile-frontend-watchlist-a-z-empty' => '現在ウォッチしているページはありません',
+	'mobile-frontend-watchlist-a-z-empty' => '現在ウォッチしているページはありません。',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'ページ上部の星アイコンをクリックします',
 	'mobile-frontend-watchlist-a-z-empty-howto' => '興味深いページを見つけたら、画面上部の星アイコンをクリックすることでページをウォッチできます。これにより、ページをブックマークできるだけでなく、ページが変更された際にそれを知ることができるようになります。',
-	'mobile-frontend-watchlist-feed-empty' => '最近更新されたページはありません',
+	'mobile-frontend-watchlist-feed-empty' => '最近更新されたページはありません。',
 	'mobile-frontend-watchlist-back-home' => 'ホームに戻る',
 	'mobile-frontend-changeslist-ip' => '匿名利用者',
 	'mobile-frontend-changeslist-nocomment' => '編集の要約なし',
@@ -6558,7 +6587,7 @@ $messages['ja'] = array(
 	'mobile-frontend-watchlist-filter-other' => 'その他',
 	'mobile-frontend-watchlist-modified' => '$1に変更',
 	'mobile-frontend-diffview-404-title' => '版指定の誤り',
-	'mobile-frontend-diffview-404-desc' => '指定した ID の版は存在しません',
+	'mobile-frontend-diffview-404-desc' => '指定した ID の版は存在しません。',
 	'mobile-frontend-diffview-title' => '差分',
 	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|回編集}}',
 	'mobile-frontend-diffview-anonymous' => '匿名利用者',
@@ -6586,8 +6615,8 @@ $messages['ja'] = array(
 	'mobile-frontend-photo-nag-2-bullet-1-heading' => '絶対に著作権を侵害しておらず、この写真は学習に役立ちます。',
 	'mobile-frontend-photo-nag-3-bullet-1-heading' => '私は何をアップロードすべきか理解しています。今後はこのメッセージを表示しないでください。',
 	'mobile-frontend-photo-nag-learn-more-heading' => '何をアップロードすべきか',
-	'mobile-frontend-photo-nag-learn-more-1' => "'''はい！'''あなたが撮った場所や物、イベントの写真です。",
-	'mobile-frontend-photo-nag-learn-more-2' => "'''はい！''' {{SITENAME}} のページを図解し、価値を高める写真です。",
+	'mobile-frontend-photo-nag-learn-more-1' => "'''はい!''' あなたが撮った場所や物、イベントの写真です。",
+	'mobile-frontend-photo-nag-learn-more-2' => "'''はい!''' {{SITENAME}} のページを図解し、価値を高める写真です。",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''いいえ。'''映画のポスターや本の表紙など、著作権のある物の写真です。それらは削除されます。",
 	'mobile-frontend-image-uploading-wait' => '画像をアップロード中です。お待ちください。',
 	'mobile-frontend-image-uploading-long' => '画像をまだアップロード中です! もうしばらくお待ちください。',
@@ -6709,7 +6738,7 @@ $messages['ka'] = array(
 	'mobile-frontend-settings-beta' => 'ბეტა',
 	'mobile-frontend-settings-alpha' => 'რეჟიმი „[//ka.wikipedia.org/wiki/Hic_sunt_dracones აქ ბინადრობენ დრაკონები]“', # Fuzzy
 	'mobile-frontend-settings-alpha-description' => 'შედით საშიშ და გამოუკვლეველ მობილურ ტერიტორიაზე. მიიღეთ უფრო მეტი ექსპერიმენტის საშუალება და შეცდომების წარმოქმნის დიდი საშიშროება.',
-	'mobile-frontend-save-settings' => 'პარამეტრების შენახვა', # Fuzzy
+	'mobile-frontend-save-settings' => 'შენახვა',
 	'mobile-frontend-random-button' => 'შემთხვევითი',
 	'mobile-frontend-back-to-top-of-section' => 'დაბრუნება უკან',
 	'mobile-frontend-close-section' => 'ამ სექციის დახურვა',
@@ -12147,7 +12176,9 @@ $messages['ta'] = array(
 	'mobile-frontend-editor-confirm' => 'உறுதிசெய்',
 	'mobile-frontend-editor-previous' => 'முந்தைய',
 	'mobile-frontend-editor-next' => 'அடுத்தது',
+	'mobile-frontend-editor-preview' => 'முன்தோற்றம்',
 	'mobile-frontend-drawer-cancel' => 'விட்டுவிடு',
+	'mobile-frontend-talk-overlay-header' => 'பேச்சு',
 );
 
 /** Telugu (తెలుగు)
