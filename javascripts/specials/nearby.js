@@ -200,7 +200,7 @@ $( function() {
 	function init() {
 		var $content = $( '#mw-mf-nearby' ).empty();
 		$( '<div class="content loading"> ').text(
-			mw.message( 'mobile-frontend-nearby-loading' ) ).appendTo( $content );
+			mw.msg( 'mobile-frontend-nearby-loading' ) ).appendTo( $content );
 		navigator.geolocation.getCurrentPosition( function( geo ) {
 			var lat = geo.coords.latitude, lng = geo.coords.longitude;
 			curLocation = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268

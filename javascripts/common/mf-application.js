@@ -59,13 +59,6 @@
 		}
 	};
 
-	/**
-	 * @deprecated
-	 */
-	function message( name, arg1 ) {
-		return mw.msg( name, arg1 );
-	}
-
 	// TODO: only apply to places that need it
 	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 	// https://github.com/Modernizr/Modernizr/issues/167
@@ -211,7 +204,6 @@
 		isLoggedIn: isLoggedIn,
 		lockViewport: lockViewport,
 		log: log,
-		message: message,
 		on: on,
 		prefix: 'mw-mf-',
 		supportsGeoLocation: supportsGeoLocation,
