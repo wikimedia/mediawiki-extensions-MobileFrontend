@@ -294,7 +294,7 @@ HTML;
 			)->parse();
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
 			$historyUrl = $inAlpha ? SpecialPage::getTitleFor( 'MobileDiff', $revId )->getLocalUrl() :
-				$ctx->getMobileUrl( wfExpandUrl( $this->getRequest()->appendQuery( 'action=history' ) ) );
+				$ctx->getMobileUrl( $title->getFullURL( 'action=history' ) );
 			$postBodyText = Html::element( 'a', array(
 				'id' => 'mw-mf-last-modified',
 				'data-timestamp' => $timestamp,
