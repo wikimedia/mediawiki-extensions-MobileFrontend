@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D04yRlvI",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-12T17:50:25Z",
+      "side": 1,
+      "message": "we should take into account if hashchange is supported.",
+      "revId": "5411a81984c6b6a88c897e9cb2c0fd77f0a05b5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D0.yVwuM",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-12T17:50:25Z",
+      "side": 1,
+      "message": "Why not just use window.location.hash ?",
+      "revId": "5411a81984c6b6a88c897e9cb2c0fd77f0a05b5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D08yafhE",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-12T17:50:25Z",
+      "side": 1,
+      "message": "In isolation it is not clear why this change is made and what the dangers of using mousedown are.\n\nShould add a comment above this line",
+      "revId": "5411a81984c6b6a88c897e9cb2c0fd77f0a05b5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D0yygakY",
+        "filename": "less/common/pageactions.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-12T17:50:25Z",
+      "side": 1,
+      "message": "Minor question (not a blocker).. any reason why you use a class rather than a tag?\n\nClass might be more performant (generally using classes is better than tags)\n\nhttp://stevesouders.com/efws/css-selectors/csscreate.php?n\u003d1000\u0026sel\u003d%23ca-edit+.edit-page\u0026body\u003dmargin-top%3A+0%3B%09background-image%3A+url%28images%2Fpagemenu%2Fedit.png%29%3B%09%C2%BB%09background-image%3A+url%28images%2Fpagemenu%2Fedit.png%29%3B\u0026ne\u003d1000",
+      "revId": "5411a81984c6b6a88c897e9cb2c0fd77f0a05b5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
