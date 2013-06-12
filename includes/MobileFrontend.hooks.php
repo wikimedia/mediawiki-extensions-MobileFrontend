@@ -136,8 +136,8 @@ class MobileFrontendHooks {
 			 */
 			$queryString =  strlen( $wgMobileUrlTemplate ) ? '' : 'mobileaction=toggle_view_mobile';
 			$mobileViewUrl = $title->getFullURL( $queryString );
+			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( $mobileViewUrl );
 
-			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( wfExpandUrl( $mobileViewUrl ) );
 			$link = Html::element( 'a',
 				array( 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ),
 				wfMessage( 'mobile-frontend-view' )->text()
