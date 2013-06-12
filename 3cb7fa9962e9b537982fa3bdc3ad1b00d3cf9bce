@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D072QAkM",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-06-12T23:51:11Z",
+      "side": 1,
+      "message": "Shouldn\u0027t a default for that be in MobileFrontend.php? Why isn\u0027t it called wgUseCentralAuthToken (as in mf-photo.js)?",
+      "revId": "3cb7fa9962e9b537982fa3bdc3ad1b00d3cf9bce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D072PYio",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-06-12T23:51:11Z",
+      "side": 1,
+      "message": "What\u0027s the difference between setting tokenType \u003d \u0027centralauth\u0027 and providing caToken? Do we need a token to get a token? Seems confusing.",
+      "revId": "3cb7fa9962e9b537982fa3bdc3ad1b00d3cf9bce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
