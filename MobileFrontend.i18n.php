@@ -154,9 +154,12 @@ Help bring these pages to life by donating your images that you are willing to g
 	'mobile-frontend-listed-image-no-description' => 'No description',
 	'mobile-frontend-donate-photo-upload-success' => 'Success! Your image can now be used on {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Success! Thanks for your first contribution!',
-	'mobile-frontend-first-upload-wizard-page-1' => '{{SITENAME}} needs your photos to bring its pages to life!',
-	'mobile-frontend-first-upload-wizard-page-2' => 'Please only donate photos that you took yourself.',
-	'mobile-frontend-first-upload-wizard-page-3' => 'Your donated photos can be shared, reused, and remixed by millions.',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Contribute your images. Help {{SITENAME}} articles come to life!',
+	'mobile-frontend-first-upload-wizard-new-page-1' => 'Images on {{SITENAME}} come from Wikimedia Commons',
+	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Your images help educate people around the world',
+	'mobile-frontend-first-upload-wizard-new-page-2' => 'Avoid copyrighted materials you found from the internet as well as images of posters, book covers, etc.',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Got it?',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Yes!',
 
 	// watchlist
 	'mobile-frontend-watchlist-add' => 'Added $1 to your watchlist',
@@ -535,9 +538,13 @@ Used when the user is not logged in.
 	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
 	'mobile-frontend-donate-photo-upload-success' => 'On upload page - notification shown after a successful upload',
 	'mobile-frontend-donate-photo-first-upload-success' => 'On upload page - notification shown after a successful upload when it is the first upload by that user',
-	'mobile-frontend-first-upload-wizard-page-1' => 'Message shown to users who have never uploaded a photo to commons. Explain why photos are important.',
-	'mobile-frontend-first-upload-wizard-page-2' => 'Explains important of the photos being owned by the person uploading them.',
-	'mobile-frontend-first-upload-wizard-page-3' => 'Explains implications of uploading a photo.',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Call to action asking the user to upload an image',
+	'mobile-frontend-first-upload-wizard-new-page-1' => 'Informative statement about where images come from.',
+	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Guidance on why images might be uploaded on Special:Uploads',
+	'mobile-frontend-first-upload-wizard-new-page-2' => 'Guidance on avoiding copyright materials shown to first time users on Special:Uploads',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Question asking user if they understood the tutorial',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Label for button which escapes overlay and starts upload',
+
 	'mobile-frontend-watchlist-add' => 'Notification message when you add an article to your watchlist
 *$1 - the title of the article',
 	'mobile-frontend-watchlist-removed' => 'Notification message when you remove an article from your watchlist
