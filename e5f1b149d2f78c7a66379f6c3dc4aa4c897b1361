@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D0z3hsgA",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-06-12T23:39:40Z",
+      "side": 1,
+      "message": "What\u0027s the point of getting \u0027banners\u0027 from $tpl and re-adding it right the next line?",
+      "revId": "e5f1b149d2f78c7a66379f6c3dc4aa4c897b1361",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
