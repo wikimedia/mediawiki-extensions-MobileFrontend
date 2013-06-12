@@ -33,40 +33,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * MakeGlobalVariablesScript hook handler
-	 * Adds global variables to Minerva skin in both desktop and mobile mode that
-	 * vary depending on what page you are on
-	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
-	 * Adds various mobile specific config variables
-	 *
-	 * @param array &$vars
-	 * @param OutputPage $out
-	 * @return boolean
-	 */
-	public static function onMakeGlobalVariablesScript( &$vars, $out ) {
-		$skin = $out->getSkin()->getSkinName();
-		if ( $skin === 'minerva' ) {
-			$title = $out->getTitle();
-			$user = $out->getUser();
-			if ( !$user->isAnon() ) {
-				$vars['wgWatchedPageCache'] = array(
-					$title->getText() => $user->isWatched( $title ),
-				);
-			}
-
-			$vars['wgIsPageEditable'] = $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN;
-			$vars['wgPreferredVariant'] = $title->getPageLanguage()->getPreferredVariant();
-			$ctx = MobileContext::singleton();
-			// mobile specific config variables
-			if ( $ctx->shouldDisplayMobileView() ) {
-				$vars['wgImagesDisabled'] = $ctx->imagesDisabled();
-			}
-		}
-
-		return true;
-	}
-
-	/**
 	 * RequestContextCreateSkin hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RequestContextCreateSkin
 	 *

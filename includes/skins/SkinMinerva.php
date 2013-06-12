@@ -91,14 +91,30 @@ class SkinMinerva extends SkinTemplate {
 			$wgMFAnonymousEditing, $wgMFEnablePhotoUploadCTA,
 			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc;
 
-		return array(
+		$title = $this->getTitle();
+		$user = $this->getUser();
+
+		$vars = array(
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
 			'wgMFEnablePhotoUploadCTA' => $wgMFEnablePhotoUploadCTA,
 			'wgMFPhotoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
 			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
 			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
+			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
+			'wgIsPageEditable' => $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN,
 		);
+		if ( !$user->isAnon() ) {
+			$vars['wgWatchedPageCache'] = array(
+				$title->getText() => $user->isWatched( $title ),
+			);
+		}
+		$ctx = MobileContext::singleton();
+		// mobile specific config variables
+		if ( $ctx->shouldDisplayMobileView() ) {
+			$vars['wgImagesDisabled'] = $ctx->imagesDisabled();
+		}
+		return $vars;
 	}
 
 	public function getDefaultModules() {
