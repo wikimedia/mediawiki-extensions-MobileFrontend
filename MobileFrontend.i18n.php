@@ -140,6 +140,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-error' => '{{SITENAME}} Nearby is having some issues.',
 	'mobile-frontend-nearby-error-guidance' => 'Try refreshing your location.',
 	'mobile-frontend-nearby-link' => 'Read this page in full',
+	'mobile-frontend-nearby-directions' => 'Navigate here',
 
 	// image donation
 	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
@@ -520,6 +521,7 @@ See also:
 	'mobile-frontend-nearby-error' => 'Text of generic error message when querying geodata api',
 	'mobile-frontend-nearby-error-guidance' => 'Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-error}}',
 	'mobile-frontend-nearby-link' => 'Text of link that takes user to full page',
+	'mobile-frontend-nearby-directions' => 'Text of directions link',
 	'mobile-frontend-donate-image-login' => 'Title for [[Special:UserLogin]] when being redirected to [[Special:Uploads]].
 
 Used when the user is not logged in.
