@@ -136,8 +136,9 @@
   display: none;
 }
 .photo-nag label div.checked {
-  background-color: #8cc63e;
-  border-color: #d6df23;
+  background-color: #006398;
+  background-image: url(images/confirmChecked.png);
+  border-color: #006398;
 }
 .photo-nag strong {
   padding: .3em 0;

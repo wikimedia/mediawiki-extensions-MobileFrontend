@@ -582,7 +582,7 @@
 
 			switch ( nagCount ) {
 				case 0:
-					nagMessages = $.map( [1, 2], function( val ) {
+					nagMessages = $.map( [2, 1], function( val ) {
 						// Give grep a chance to find the usages:
 						// mobile-frontend-photo-nag-1-bullet-1-heading, mobile-frontend-photo-nag-1-bullet-2-heading,
 						// mobile-frontend-photo-nag-1-bullet-1-text, mobile-frontend-photo-nag-1-bullet-2-text
