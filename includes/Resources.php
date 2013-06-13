@@ -565,7 +565,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.stable',
+			'mobile.stable.common',
 			'mobile.nearby.styles',
 			'mobile.nearby.plumbing',
 			'jquery.json',
