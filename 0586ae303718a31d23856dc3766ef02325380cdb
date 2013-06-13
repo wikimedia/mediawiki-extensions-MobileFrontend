@@ -16,6 +16,24 @@
       "revId": "0586ae303718a31d23856dc3766ef02325380cdb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D071.Qt8",
+        "filename": "javascripts/specials/overlays/preview.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-13T00:23:37Z",
+      "side": 1,
+      "message": "I wanted to make this cheap. Creating 1-3 regexs every time you create a preview overlay is unnecessary.",
+      "parentUuid": "D0729otY",
+      "revId": "0586ae303718a31d23856dc3766ef02325380cdb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
