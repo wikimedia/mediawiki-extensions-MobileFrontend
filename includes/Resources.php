@@ -50,7 +50,7 @@ $wgMFMobileSpecialPageResourceBoilerplate = array(
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => 'mobile',
-	'group' => 'mobile.special',
+	'group' => 'other',
 );
 
 /**
@@ -323,7 +323,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'stylesheets/actions/mf-history.css',
 		),
-		'group' => 'mobile.action',
+		'group' => 'other',
 	),
 
 	'mobile.history' => $wgMFMobileResourceBoilerplate + array(
@@ -505,11 +505,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.mobilemenu.styles' => $wgMFMobileSpecialPageResourceStyleBoilerplate + array(
 		'styles' => array(
 			'stylesheets/specials/mobilemenu.css',
-		),
-	),
-	'mobile.mobilefeedback.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'stylesheets/specials/mobilefeedback.css',
 		),
 	),
 	'mobile.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
