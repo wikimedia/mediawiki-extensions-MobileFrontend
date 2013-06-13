@@ -287,7 +287,7 @@ class HtmlFormatter {
 			$html = $this->doc->saveHTML();
 			$html = $this->fixLibXml( $html );
 		} else {
-			$html = $this->doc->saveXML( $element, LIBXML_NOEMPTYTAG );
+			$html = $this->html;
 		}
 		if ( wfIsWindows() ) {
 			$html = str_replace( '&#13;', '', $html );
