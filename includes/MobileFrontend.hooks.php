@@ -506,12 +506,11 @@ class MobileFrontendHooks {
 		$dir = dirname( dirname( __FILE__ ) ) . '/tests';
 
 		$files[] = "$dir/ApiParseExtenderTest.php";
-		$files[] = "$dir/DeviceDetectionTest.php";
-		$files[] = "$dir/ExtractFormatterTest.php";
-		$files[] = "$dir/HtmlFormatterTest.php";
 		$files[] = "$dir/MobileContextTest.php";
-		$files[] = "$dir/MobileFormatterTest.php";
 		$files[] = "$dir/MobileFrontendTest.php";
+		$files[] = "$dir/DeviceDetectionTest.php";
+		$files[] = "$dir/HtmlFormatterTest.php";
+		$files[] = "$dir/MobileFormatterTest.php";
 		$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
 
 		// special page tests

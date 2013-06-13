@@ -38,7 +38,6 @@ $autoloadClasses = array (
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
 	'DeviceDetection' => 'DeviceDetection',
-	'ExtractFormatter' => 'ExtractFormatter',
 	'HtmlFormatter' => 'HtmlFormatter',
 	'MobileContext' => 'MobileContext',
 	'MobileFormatter' => 'MobileFormatter',
