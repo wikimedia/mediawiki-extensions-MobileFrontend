@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D03ZCNEM",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-06-13T21:57:11Z",
+      "side": 1,
+      "message": "Why outer parentheses?",
+      "revId": "9df9dadf95d42ba799618268f0232a68cc9b1809",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
