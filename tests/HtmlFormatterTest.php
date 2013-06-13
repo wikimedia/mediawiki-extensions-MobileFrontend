@@ -25,8 +25,12 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 	}
 
 	public function getHtmlData() {
-		$disableImages = function( HtmlFormatter $f ) {
+		$removeImages = function( HtmlFormatter $f ) {
 			$f->removeImages();
+		};
+		$fullyRemoveImages = function( HtmlFormatter $f ) {
+			$f->removeImages();
+			$f->useImgAlt( false );
 		};
 		$removeTags = function( HtmlFormatter $f ) {
 			$f->remove( array( 'table', '.foo', '#bar', 'div.baz' ) );
@@ -43,11 +47,21 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 			array(
 				'<img src="/foo/bar.jpg">Blah</img>',
 				'<span class="mw-mf-image-replacement">['. wfMessage( 'mobile-frontend-missing-image' ) .']</span>Blah',
-				$disableImages,
+				$removeImages,
+			),
+			array(
+				'<img src="/foo/bar.jpg" alt="Blah"/>',
+				'<span class="mw-mf-image-replacement">[Blah]</span>',
+				$removeImages,
+			),
+			array(
+				'<img src="/foo/bar.jpg" alt="Blah"/>',
+				'',
+				$fullyRemoveImages,
 			),
 			// basic tag removal
 			array(
-				'<table><tr><td>foo</td></tr></table><div class="foo">foo</div><span id="bar">bar</span>
+				'<table><tr><td>foo</td></tr></table><div class="foo">foo</div><div class="foo quux">foo</div><span id="bar">bar</span>
 <strong class="foo" id="bar">foobar</strong><div class="notfoo">test</div><div class="baz"/>
 <span class="baz">baz</span> <span class="foo" id="jedi">jedi</span>',
 
@@ -75,23 +89,23 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 			array(
 				'<img alt="picture of kitty" src="kitty.jpg">',
 				'<span class="mw-mf-image-replacement">[picture of kitty]</span>',
-				$disableImages,
+				$removeImages,
 			),
 			array(
 				'<img src="kitty.jpg">',
 				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$disableImages,
+				$removeImages,
 			),
 			array(
 				'<img alt src="kitty.jpg">',
 				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$disableImages,
+				$removeImages,
 			),
 			array(
 				'<img alt src="kitty.jpg">look at the cute kitty!<img alt="picture of angry dog" src="dog.jpg">',
 				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!'.
 					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
-				$disableImages,
+				$removeImages,
 			)
 		);
 	}
