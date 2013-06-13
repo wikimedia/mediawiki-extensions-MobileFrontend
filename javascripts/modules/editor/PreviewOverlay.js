@@ -24,6 +24,8 @@ var Overlay = M.require( 'Overlay' ),
 			} );
 			api.post( {
 				action: 'parse',
+				// Enable section preview mode to avoid errors (bug 49218)
+				sectionpreview: true,
 				title: options.title,
 				text: options.wikitext,
 				prop: 'text'
