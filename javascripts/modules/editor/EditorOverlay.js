@@ -95,10 +95,10 @@
 			if ( ( /ipad|iphone/i ).test( navigator.userAgent ) ) {
 				this.$content.
 					on( 'focus', function() {
-						self.$( '.buttonBar' ).addClass( 'unpinned' );
+						self.$( '.buttonBar' ).removeClass( 'position-fixed' );
 					} ).
 					on( 'blur', function() {
-						self.$( '.buttonBar' ).removeClass( 'unpinned' );
+						self.$( '.buttonBar' ).addClass( 'position-fixed' );
 					} );
 			}
 
