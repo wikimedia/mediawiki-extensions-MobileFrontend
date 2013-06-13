@@ -26,11 +26,19 @@ class MobileFormatter extends HtmlFormatter {
 
 	private $defaultItemsToRemove = array(
 		'table.toc',
+		'div.stub',
 		'#search', // remove search form element from Special:Search
+		'div.sister-project',
 		'div.magnify',
 		'.editsection', // FIXME: deprecate in favour of mw-editsection
 		'.mw-editsection', // Edit links in section headings
 		'span.t',
+		'.portal',
+		'#protected-icon',
+		'.boilerplate',
+		'#id-articulo-destacado', // FA star on eswiki, @todo: remove class="metadata topicon" instead
+		'.hiddenStructure',
+		'.medialist',
 		'.mw-search-createlink',
 		'#ogg_player_1',
 		'#ogg_player_2',
