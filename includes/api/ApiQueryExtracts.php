@@ -29,8 +29,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 		$limit = intval( $params['limit'] );
 		if ( $limit > 1 && !$params['intro'] ) {
 			$limit = 1;
-			///@todo:
-			//$result->setWarning( "Provided limit was too large for requests for whole article extracts, lowered to $limit" );
+			$result->setWarning( "exlimit was too large for a whole article extracts request, lowered to $limit" );
 		}
 		if ( isset( $params['continue'] ) ) {
 			$continue = intval( $params['continue'] );
