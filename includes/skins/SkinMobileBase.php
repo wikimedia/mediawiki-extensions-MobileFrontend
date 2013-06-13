@@ -163,15 +163,6 @@ class SkinMobileBase extends SkinMinerva {
 		return $className . implode( ' ', array_keys( $this->pageClassNames ) );
 	}
 
-	public static function factory( ExtMobileFrontend $extMobileFrontend ) {
-		if ( MobileContext::singleton()->getContentFormat() == 'HTML' ) {
-			$skinClass = 'SkinMobile';
-		} else {
-			$skinClass = 'SkinMobileWML';
-		}
-		return new $skinClass( $extMobileFrontend );
-	}
-
 	public function __construct( ExtMobileFrontend $extMobileFrontend ) {
 		$this->setContext( $extMobileFrontend );
 		$this->extMobileFrontend = $extMobileFrontend;

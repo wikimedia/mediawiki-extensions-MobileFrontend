@@ -41,7 +41,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFEnableDesktopResources, $wgExtMobileFrontend;
+		global $wgMFEnableDesktopResources, $wgExtMobileFrontend, $wgMFDefaultSkinClass;
 
 		// check whether or not the user has requested to toggle their view
 		$mobileContext = MobileContext::singleton();
@@ -73,7 +73,13 @@ class MobileFrontendHooks {
 		// log whether user is using alpha/beta/stable
 		$mobileContext->logMobileMode();
 
-		$skin = SkinMobile::factory( $wgExtMobileFrontend );
+		if ( $mobileContext->getContentFormat() == 'WML' ) {
+			# Grab the skin class and initialise it.
+			$skin = new SkinMobileWML( $wgExtMobileFrontend );
+		} else {
+			$skin = new $wgMFDefaultSkinClass( $wgExtMobileFrontend );
+		}
+
 		return false;
 	}
 

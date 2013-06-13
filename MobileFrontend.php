@@ -140,6 +140,12 @@ require_once( "$localBasePath/includes/Resources.php" );
  */
 
 /**
+ * The default skin for MobileFrontend
+ * Defaults to MobileSkin
+ */
+$wgMFDefaultSkinClass = 'SkinMobile';
+
+/**
  * An api to which any photos should be uploaded
  * e.g. $wgMFPhotoUploadEndpoint = 'http://commons.wikimedia.org/w/api.php';
  * Defaults to the current wiki
