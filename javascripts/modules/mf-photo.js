@@ -5,7 +5,6 @@
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
 		showCta = mw.config.get( 'wgMFEnablePhotoUploadCTA' ) || funnel === 'nearby',
-		EventEmitter = M.require( 'eventemitter' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		Overlay = M.require( 'Overlay' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
@@ -179,7 +178,8 @@
 
 			function doUpload( token ) {
 				var formData = new FormData(),
-					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 );
+					ext = options.file.name.slice( options.file.name.lastIndexOf( '.' ) + 1 ),
+					request;
 
 				options.fileName = generateFileName( options.description, '.' + ext );
 
@@ -201,7 +201,7 @@
 					} )
 				);
 
-				self.post( formData, {
+				request = self.post( formData, {
 					// iOS seems to ignore the cache parameter so sending r parameter
 					// send useformat=mobile for sites where endpoint is a desktop url so that they are mobile edit tagged
 					url: apiUrl + '?useformat=mobile&r=' + Math.random(),
@@ -209,10 +209,6 @@
 					cache: false,
 					contentType: false,
 					processData: false
-				} ).on( 'progress', function( ev ) {
-					if ( ev.lengthComputable ) {
-						self.emit( 'progress', ev.loaded / ev.total );
-					}
 				} ).done( function( data ) {
 					var descriptionUrl = '',
 						warnings = data.upload ? data.upload.warnings : false;
@@ -253,7 +249,14 @@
 						result.reject( status + ': ' + error );
 					}
 				} );
+
+				self.on( 'progress', function( req, progress ) {
+					if ( req === request ) {
+						self.emit( 'uploadProgress', progress );
+					}
+				} );
 			}
+
 			self.getToken( 'edit', endpoint ).done( function( token ) {
 				doUpload( token );
 			} ).fail( function( err ) {
@@ -263,8 +266,6 @@
 			return result;
 		}
 	} );
-
-	$.extend( PhotoApi.prototype, EventEmitter.prototype );
 
 	LearnMoreOverlay = Overlay.extend( {
 		defaults: {
@@ -666,7 +667,7 @@
 				self.emit( 'error' );
 			} );
 
-			api.on( 'progress', function( value ) {
+			api.on( 'uploadProgress', function( value ) {
 				progressPopup.setValue( value );
 			} );
 		}
