@@ -23,19 +23,6 @@ class ExtMobileFrontend extends ContextSource {
 		return $zeroRatedBanner;
 	}
 
-	/**
-	 * @param $out OutputPage
-	 */
-	protected function beforePageDisplay( $out ) {
-		wfProfileIn( __METHOD__ );
-
-		$this->setDefaultLogo();
-
-		$this->sendHeaders();
-
-		wfProfileOut( __METHOD__ );
-	}
-
 	private function sendHeaders() {
 		global $wgMFVaryResources;
 
@@ -67,7 +54,8 @@ class ExtMobileFrontend extends ContextSource {
 	public function DOMParse( OutputPage $out ) {
 		wfProfileIn( __METHOD__ );
 
-		$this->beforePageDisplay( $out );
+		$this->sendHeaders();
+
 		$html = $out->getHTML();
 
 		wfProfileIn( __METHOD__ . '-formatter-init' );
@@ -100,21 +88,5 @@ class ExtMobileFrontend extends ContextSource {
 
 		wfProfileOut( __METHOD__ );
 		return $contentHtml;
-	}
-
-	/**
-	 * Sets up the default logo image used in mobile view if none is set
-	 */
-	public function setDefaultLogo() {
-		global $wgMobileFrontendLogo, $wgExtensionAssetsPath, $wgMFCustomLogos;
-		wfProfileIn( __METHOD__ );
-		if ( $wgMobileFrontendLogo === false ) {
-			$wgMobileFrontendLogo = $wgExtensionAssetsPath . '/MobileFrontend/images/mw.png';
-		}
-
-		if ( MobileContext::singleton()->isBetaGroupMember() && isset( $wgMFCustomLogos['logo'] ) ) {
-			$wgMobileFrontendLogo = $wgMFCustomLogos['logo'];
-		}
-		wfProfileOut( __METHOD__ );
 	}
 }

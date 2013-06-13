@@ -181,7 +181,7 @@ class SkinMobile extends SkinMobileBase {
 
 		$footerSitename = $this->msg( 'mobile-frontend-footer-sitename' )->text();
 
-		if ( is_array( $wgMFCustomLogos ) && isset( $wgMFCustomLogos['copyright'] ) ) {
+		if ( isset( $wgMFCustomLogos['copyright'] ) ) {
 			$suffix = $wgMFTrademarkSitename ? ' ®' : '';
 			$sitename = Html::element( 'img', array(
 				'src' => $wgMFCustomLogos['copyright'],
