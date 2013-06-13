@@ -31,33 +31,7 @@ class ExtMobileFrontend extends ContextSource {
 
 		$this->setDefaultLogo();
 
-		$this->disableCaching();
 		$this->sendHeaders();
-
-		wfProfileOut( __METHOD__ );
-	}
-
-	/**
-	 * Disables caching if the request is coming from a trusted proxy
-	 */
-	private function disableCaching() {
-		wfProfileIn( __METHOD__ );
-
-		// Fetch the REMOTE_ADDR and check if it's a trusted proxy.
-		// Is this enough, or should we actually step through the entire
-		// X-FORWARDED-FOR chain?
-		if ( isset( $_SERVER['REMOTE_ADDR'] ) ) {
-			$ip = IP::canonicalize( $_SERVER['REMOTE_ADDR'] );
-		} else {
-			$ip = null;
-		}
-
-		$request = $this->getRequest();
-		if ( wfIsConfiguredProxy( $ip ) ) {
-			$request->response()->header( 'Cache-Control: no-cache, must-revalidate' );
-			$request->response()->header( 'Expires: Sat, 26 Jul 1997 05:00:00 GMT' );
-			$request->response()->header( 'Pragma: no-cache' );
-		}
 
 		wfProfileOut( __METHOD__ );
 	}
