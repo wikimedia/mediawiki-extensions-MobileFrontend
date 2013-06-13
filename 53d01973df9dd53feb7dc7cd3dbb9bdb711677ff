@@ -16,6 +16,24 @@
       "revId": "53d01973df9dd53feb7dc7cd3dbb9bdb711677ff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D07V4FvE",
+        "filename": "includes/api/ApiQueryExtracts.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 336,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-06-13T18:27:09Z",
+      "side": 1,
+      "message": "ExtractFormatter doesn\u0027t format these.",
+      "parentUuid": "D0-IABm0",
+      "revId": "53d01973df9dd53feb7dc7cd3dbb9bdb711677ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
