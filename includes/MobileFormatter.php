@@ -86,9 +86,8 @@ class MobileFormatter extends HtmlFormatter {
 			$formatter->disableBackToTop();
 		}
 
-		$ns = $title->getNamespace();
 		$isMainPage = $title->isMainPage();
-		$isFilePage = $ns === NS_FILE;
+		$isFilePage = $title->inNamespace( NS_FILE );
 
 		if ( !$context->isAlphaGroupMember() ) {
 			$formatter->setIsMainPage( $isMainPage );

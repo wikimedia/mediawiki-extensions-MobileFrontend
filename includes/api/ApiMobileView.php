@@ -37,7 +37,7 @@ class ApiMobileView extends ApiBase {
 		if ( !$title ) {
 			$this->dieUsageMsg( array( 'invalidtitle', $params['page'] ) );
 		}
-		if ( $title->getNamespace() == NS_FILE ) {
+		if ( $title->inNamespace( NS_FILE ) ) {
 			$this->file = wfFindFile( $title );
 		}
 		if ( !$title->exists() && !$this->file ) {

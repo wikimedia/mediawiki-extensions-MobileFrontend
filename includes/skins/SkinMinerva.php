@@ -102,7 +102,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
-			'wgIsPageEditable' => $user->isAllowed( 'edit' ) && $title->getNamespace() == NS_MAIN,
+			'wgIsPageEditable' => $user->isAllowed( 'edit' ) && $title->inNamespace( NS_MAIN ),
 		);
 		if ( !$user->isAnon() ) {
 			$vars['wgWatchedPageCache'] = array(
@@ -136,7 +136,7 @@ class SkinMinerva extends SkinTemplate {
 		$action = $this->getContext()->getRequest()->getText( 'action' );
 
 		// specific to current context
-		if ( $title->getNamespace() == NS_FILE ) {
+		if ( $title->inNamespace( NS_FILE ) ) {
 			$modules['file'] = array( 'mobile.file.scripts' );
 			$out->addModuleStyles( 'mobile.file.styles' );
 		}
