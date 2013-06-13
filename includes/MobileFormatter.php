@@ -67,6 +67,47 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
+	 * Creates and returns a MobileFormatter
+	 *
+	 * @param MobileContext $context
+	 * @param string $html
+	 *
+	 * @return MobileFormatter
+	 */
+	public static function newFromContext( $context, $html ) {
+		wfProfileIn( __METHOD__ );
+
+		$wmlContext = $context->getContentFormat() == 'WML' ? new WmlContext( $context ) : null;
+		$title = $context->getTitle();
+		$formatter = new MobileFormatter( self::wrapHTML( $html ), $title,
+			$context->getContentFormat(), $wmlContext
+		);
+		if ( $context->isBetaGroupMember() ) {
+			$formatter->disableBackToTop();
+		}
+
+		$ns = $title->getNamespace();
+		$isMainPage = $title->isMainPage();
+		$isFilePage = $ns === NS_FILE;
+
+		if ( !$context->isAlphaGroupMember() ) {
+			$formatter->setIsMainPage( $isMainPage );
+		}
+
+		if ( $context->getContentFormat() == 'HTML'
+			&& $context->getRequest()->getText( 'search' ) == '' )
+		{
+			$formatter->enableExpandableSections( !$isMainPage );
+		}
+		if ( $context->getContentTransformations() && !$isFilePage ) {
+			$formatter->removeImages( $context->imagesDisabled() );
+		}
+
+		wfProfileOut( __METHOD__ );
+		return $formatter;
+	}
+
+	/**
 	 * @return string: Output format
 	 */
 	public function getFormat() {
