@@ -31,10 +31,6 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-html.animations .mw-mf-overlay .buttonBar {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
 .mw-mf-overlay {
   display: none;
   position: absolute;
@@ -114,7 +110,6 @@ html.animations .mw-mf-overlay .buttonBar {
   margin: auto;
 }
 .mw-mf-overlay .buttonBar {
-  position: fixed;
   bottom: 0;
   width: 100%;
   border-top: 1px solid #ccc;

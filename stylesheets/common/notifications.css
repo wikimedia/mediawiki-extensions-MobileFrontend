@@ -1,7 +1,6 @@
 /* Notifications */
 #mf-notification,
 .drawer {
-  position: fixed;
   /* -2px to avoid a weird glitch in some browsers where the popup moves
 	 * slightly when scrolling */
 

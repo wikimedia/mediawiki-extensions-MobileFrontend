@@ -35,9 +35,6 @@
 .editor-overlay .buttonBar {
   box-shadow: 0 -10px 10px 0 #ffffff;
 }
-.editor-overlay .buttonBar.unpinned {
-  position: absolute;
-}
 .editor-overlay .confirm-bar,
 .editor-overlay .saving-bar {
   display: none;
@@ -55,7 +52,13 @@
 .editor-overlay .saving-bar p:first-child {
   margin: 18px 16px 0;
 }
-@media (max-height: 400px) {
+/*
+hide the bar (and give more editing space) when the keyboard is visible
+Note: Although an iPhone in portrait mode has a height of 480px, when you take into account
+the navigation bar which has height of about 124px the screen shrinks to 356px
+http://www.zingdesign.com/responsive-website-design-cheatsheet1/
+*/
+@media (max-height: 355px) {
   .editor-overlay .buttonBar {
     position: absolute;
   }

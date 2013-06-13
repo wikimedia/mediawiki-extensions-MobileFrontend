@@ -43,13 +43,6 @@ html[dir="rtl"] {
 	}
 }
 
-html.animations .mw-mf-overlay .buttonBar {
-	// workaround for:
-	// http://code.google.com/p/chromium/issues/detail?id=20574
-	// (otherwise hidden drawer causes .buttonBar to render incorrectly)
-	.transform( translate3d(0,0,0) );
-}
-
 .mw-mf-overlay {
 	display: none;
 	position: absolute;
@@ -114,7 +107,6 @@ html.animations .mw-mf-overlay .buttonBar {
 	}
 
 	.buttonBar {
-		position: fixed;
 		bottom: 0;
 		width: 100%;
 		border-top: 1px solid #ccc;
