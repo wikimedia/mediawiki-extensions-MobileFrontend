@@ -194,7 +194,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 				),
 			),
 		);
-		$options = array( 'ORDER BY' => 'rc_timestamp DESC' );
+		$options = array( 'ORDER BY' => 'rc_timestamp DESC', 'USE INDEX' => array( 'recentchanges' => 'rc_timestamp' ) );
 		$options['LIMIT'] = self::LIMIT;
 
 		$rollbacker = $user->isAllowed('rollback');
