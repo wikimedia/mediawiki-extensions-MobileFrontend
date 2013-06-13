@@ -16,6 +16,24 @@
       "revId": "e5f1b149d2f78c7a66379f6c3dc4aa4c897b1361",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D0ycVIPA",
+        "filename": "includes/skins/SkinMobileBase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-06-13T14:09:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "D0z3hsgA",
+      "revId": "e5f1b149d2f78c7a66379f6c3dc4aa4c897b1361",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
