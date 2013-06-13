@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "D0x0LDoA",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-13T00:21:56Z",
+      "side": 1,
+      "message": "$wgCentralAuthLoginWiki is provided by CentralAuth extension.",
+      "parentUuid": "D072QAkM",
+      "revId": "3cb7fa9962e9b537982fa3bdc3ad1b00d3cf9bce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "D072PYio",
         "filename": "javascripts/common/mf-api.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2013-06-12T23:51:11Z",
       "side": 1,
       "message": "What\u0027s the difference between setting tokenType \u003d \u0027centralauth\u0027 and providing caToken? Do we need a token to get a token? Seems confusing.",
+      "revId": "3cb7fa9962e9b537982fa3bdc3ad1b00d3cf9bce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D030c2r4",
+        "filename": "javascripts/common/mf-api.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-13T00:21:56Z",
+      "side": 1,
+      "message": "A centralauth token is only valid for one request so all requests for centralauth tokens should not be cached.\n\nIf a caToken is provided then the response will be different so we shouldn\u0027t cache in this situation either. I suspect a comment might help here?",
+      "parentUuid": "D072PYio",
       "revId": "3cb7fa9962e9b537982fa3bdc3ad1b00d3cf9bce",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
