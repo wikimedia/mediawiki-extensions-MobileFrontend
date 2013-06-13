@@ -1,21 +1,24 @@
 @import "../mf-mixins.less";
 
 .mw-mf-watchlist-selector {
-	border-bottom: 1px solid #e2e2e2;
 
 	li {
+		border-bottom: 1px solid #e2e2e2;
 		text-align: center;
 		display: inline-block;
 		border-left: 1px solid #e2e2e2;
 		width: 25%;
 		margin: 0 0 0 -1px;
 
-		&.selected a {
-			font-weight: bold;
-			border-bottom-color: #3366bb;
+		&.selected {
+			a {
+				border-bottom: solid 3px #3366bb;
+				font-weight: bold;
+			}
 		}
 
 		a {
+			line-height: 1.5;
 			display: block;
 			color: #58595b;
 			padding: 5px 0 0;
