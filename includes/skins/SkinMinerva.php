@@ -93,6 +93,7 @@ class SkinMinerva extends SkinTemplate {
 
 		$title = $this->getTitle();
 		$user = $this->getUser();
+		$userCanCreatePage = !$title->exists() && $title->quickUserCan( 'create', $user );
 
 		$vars = array(
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
@@ -102,7 +103,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
-			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) && $title->inNamespace( NS_MAIN ),
+			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) || $userCanCreatePage,
 		);
 		if ( !$user->isAnon() ) {
 			$vars['wgWatchedPageCache'] = array(
