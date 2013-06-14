@@ -16,6 +16,24 @@
       "revId": "3ff3f3ae2f0d8487925b1edc569cc5c2291978db",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D036d5lM",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-06-14T20:06:28Z",
+      "side": 1,
+      "message": "I guess not, because in all other other cases the hide function is issued by a history back action. In those cases, no new URL should be pushed but instead changed to a previous one. We need a new URL only when someone successfully saves, only then the workflow \"goes forward\" instead of \"going back.\"",
+      "parentUuid": "D016Fggk",
+      "revId": "3ff3f3ae2f0d8487925b1edc569cc5c2291978db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
