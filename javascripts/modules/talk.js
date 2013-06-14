@@ -15,6 +15,7 @@
 			},
 			template: M.template.get( 'overlays/talkSectionAdd' ),
 			initialize: function( options ) {
+				this._super( options );
 				this.talkOverlay = options.parent;
 				this.title = 'Talk:' + mw.config.get( 'wgTitle' );
 			},
@@ -32,6 +33,7 @@
 				$subject.removeClass( 'error' );
 				if ( text && heading ) {
 					this.$( '.content' ).empty().addClass( 'loading' );
+					this.$( '.buttonBar' ).hide();
 					api.getToken().done( function( token ) {
 						api.post( {
 							action: 'edit',
@@ -43,6 +45,7 @@
 							text: text + ' ~~~~'
 						} ).done( function() {
 							self.hide();
+							M.history.invalidateCachedPage( self.title );
 							self.talkOverlay.appendSection( { heading: heading, content: text } ); // FIXME: doesn't add signature and doesn't wikify
 						} );
 					} );
