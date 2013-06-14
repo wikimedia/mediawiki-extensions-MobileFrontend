@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D016Fggk",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-14T19:34:07Z",
+      "side": 1,
+      "message": "This seems icky.. shouldn\u0027t this be part of the hide function?",
+      "revId": "3ff3f3ae2f0d8487925b1edc569cc5c2291978db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
