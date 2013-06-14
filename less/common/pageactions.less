@@ -26,26 +26,26 @@
 		position: relative;
 		height: 40px;
 		width: 40px;
+		text-indent: -9999px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		.background-size( auto, @watchStarSize );
 
-		button,
+		// file inputs are notoriously difficult to style
+		input {
+			opacity: 0;
+		}
+
 		input,
 		a {
-			width: 40px; // undo rules set in watchlist / nearby lists
-			background-position: center center;
-			.background-size( auto, @watchStarSize );
 			position: absolute;
 			top: 0;
 			right: 0;
 			bottom: 0;
 			left: 0;
-			text-indent: -9999px;
-			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
 		}
-	}
-
-	.edit-page {
-		margin-top: 0;
-		background-image: url(images/pagemenu/edit.png);
 	}
 }
 
@@ -56,17 +56,19 @@
 	}
 }
 
+#ca-edit {
+	background-image: url(images/pagemenu/edit.png);
+}
+
 #ca-talk {
-	a {
-		background-image: url(images/pagemenu/talk.png);
-	}
+	background-image: url(images/pagemenu/talk.png);
+}
+
+#ca-upload {
+	background-image: url(images/pagemenu/upload.png);
 }
 
 #ca-edit.enabled,
 #ca-upload.enabled {
 	display: inline-block;
-	input {
-		border: none;
-		background-image: url(images/pagemenu/upload.png);
-	}
 }
