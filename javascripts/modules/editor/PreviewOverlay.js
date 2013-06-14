@@ -54,6 +54,8 @@ var Overlay = M.require( 'Overlay' ),
 					heading: heading,
 					content: $tmp.html()
 				} );
+				// bug 49218: stop links from being clickable (note user can still hold down to navigate to them)
+				$container.find( 'a' ).on( 'click', false );
 				// Emit event so we can perform enhancements to page
 				M.emit( 'edit-preview', self );
 			} ).fail( function() {
