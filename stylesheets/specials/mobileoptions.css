@@ -29,7 +29,6 @@ form.mw-mf-settings ul li {
 form.mw-mf-settings ul li div.mw-mf-checkbox-css3 {
   display: inline;
 }
-form.mw-mf-settings ul li #mw-mf-settings-save,
 form.mw-mf-settings ul li .mw-mf-checkbox-css3 {
   cursor: pointer;
   position: relative;
@@ -41,18 +40,11 @@ form.mw-mf-settings ul li #mw-mf-settings-save {
   min-width: 50%;
   text-align: center;
   display: block;
-  text-transform: none;
-}
-form.mw-mf-settings ul li #mw-mf-settings-save:hover {
-  text-decoration: none;
-  background-color: #57a7f2;
-  background: #57a7f2;
 }
 form.mw-mf-settings ul li span.mw-mf-settings-on,
 form.mw-mf-settings ul li span.mw-mf-settings-off {
   display: none;
 }
-form.mw-mf-settings ul li input[type=submit],
 form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   border-radius: 8px;
   font-weight: normal;
@@ -66,14 +58,6 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   background-image: linear-gradient(#aeaeae 0, #818181 100%);
   position: relative;
   border: solid 1px #818181;
-}
-form.mw-mf-settings ul li input[type=submit] {
-  min-width: 76px;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-transform: lowercase;
 }
 form.mw-mf-settings ul li.mw-mf-settings-description {
   font-size: 0.8em;
