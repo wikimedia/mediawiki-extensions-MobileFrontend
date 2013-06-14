@@ -5,12 +5,11 @@
   display: none;
 }
 #section_0 {
-  margin-bottom: 0;
+  margin: 14pt 23px 0 23px;
   padding-bottom: 9pt;
   border-bottom: dotted 1px #CACACA;
 }
 #page-actions {
-  margin: 0 -23px 9pt -23px;
   padding: 8px 23px;
   border-bottom: solid 1px #CACACA;
   height: 40px;

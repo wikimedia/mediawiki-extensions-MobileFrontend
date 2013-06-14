@@ -16,6 +16,9 @@ class SkinMobile extends SkinMinerva {
 		$this->setContext( $extMobileFrontend );
 		$this->extMobileFrontend = $extMobileFrontend;
 		$ctx = MobileContext::singleton();
+		if ( $ctx->isBetaGroupMember() ) {
+			$this->template = 'MobileTemplateBeta';
+		}
 		$this->addPageClass( 'mobile' );
 		if ( $ctx->isAlphaGroupMember() ) {
 			$this->addPageClass( 'alpha' );
