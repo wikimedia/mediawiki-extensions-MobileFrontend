@@ -80,8 +80,6 @@ class MobileFrontendHooks {
 			$skin = new $wgMFDefaultSkinClass( $wgExtMobileFrontend );
 		}
 
-		wfRunHooks( 'MobileSkinCreated', array( $skin, $mobileContext ) );
-
 		return false;
 	}
 
