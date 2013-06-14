@@ -5,12 +5,23 @@
 			diff;
 
 		$diffclone.find( 'del,ins' ).each( function() {
-			if ( this.tagName === 'DEL' ) {
-				before += $( this ).text() + '<br>';
-			} else {
-				after += $( this ).text() + '<br>';
+			var text = $( this ).text();
+			if ( text ) {
+				if ( this.tagName === 'DEL' ) {
+					before += text + '\n';
+				} else {
+					after += $( this ).text() + '\n';
+				}
 			}
 		} );
+		// remove last 2 new lines
+		if ( before ) {
+			before = before.substr( 0, before.length - 1 );
+		}
+		if ( after ) {
+			after = after.substr( 0, after.length - 1 );
+		}
+
 		$diff.empty().addClass( 'prettyDiff' );
 
 		diff = JsDiff.diffWords( before, after );
@@ -23,13 +34,13 @@
 			} else {
 				tag = '<span>';
 			}
-			vals = change.value.split( '<br>' );
-			vals.forEach( function( val ) {
+			vals = change.value.split( '\n' );
+			vals.forEach( function( val, i ) {
 				if ( val ) {
 					$( tag ).text( val ).appendTo( $diff );
-					if ( vals.length > 1 ) {
-						$( '<br>' ).appendTo( $diff );
-					}
+				}
+				if ( i < vals.length - 1 ) {
+					$( '<br>' ).appendTo( $diff );
 				}
 			} );
 		} );
