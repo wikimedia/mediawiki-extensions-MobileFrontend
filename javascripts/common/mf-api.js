@@ -20,6 +20,8 @@
 		this.initialize( options );
 	}
 
+	Api.prototype = new EventEmitter();
+
 	// FIXME: make Api and View inherit from an abstract Class object
 	/**
 	 * Constructor that can be overriden.
@@ -74,7 +76,9 @@
 				// need to bind this event before we open the connection (see note at
 				// https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
 				xhr.upload.addEventListener( 'progress', function( ev ) {
-					request.emit( 'progress', ev );
+					if ( ev.lengthComputable ) {
+						self.emit( 'progress', request, ev.loaded / ev.total );
+					}
 				} );
 			}
 			return xhr;
@@ -82,7 +86,6 @@
 		*/
 
 		request = $.ajax( options );
-		$.extend( request, EventEmitter.prototype );
 		this.requests.push( request );
 		return request;
 	};

@@ -39,6 +39,10 @@
   text-indent: -9999px;
   background-repeat: no-repeat;
 }
+#page-actions .edit-page {
+  margin-top: 0;
+  background-image: url(images/pagemenu/edit.png);
+}
 .watch-this-article {
   background-image: url(images/pagemenu/watch.png);
 }
@@ -47,10 +51,6 @@
 }
 #ca-talk a {
   background-image: url(images/pagemenu/talk.png);
-}
-#ca-edit button {
-  margin-top: 0;
-  background-image: url(images/pagemenu/edit.png);
 }
 #ca-edit.enabled,
 #ca-upload.enabled {

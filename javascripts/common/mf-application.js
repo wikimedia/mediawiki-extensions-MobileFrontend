@@ -2,6 +2,7 @@
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 ( function( M, $ ) {
 	var EventEmitter = M.require( 'eventemitter' ),
+		Router = M.require( 'Router' ),
 		// FIXME: when mobileFrontend is an object with a constructor,
 		// just inherit from EventEmitter instead
 		eventEmitter = new EventEmitter(),
@@ -210,7 +211,8 @@
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,
 		template: template,
-		unlockViewport: unlockViewport
+		unlockViewport: unlockViewport,
+		router: new Router()
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

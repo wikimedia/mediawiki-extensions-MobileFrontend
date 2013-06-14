@@ -35,4 +35,5 @@ QUnit.test( '#getSessionId', 3, function() {
 	strictEqual( MFE.getSessionId(), sessionId, 'session ID is not regenerated if present' );
 } );
 
+
 }( jQuery, mw.mobileFrontend ) );

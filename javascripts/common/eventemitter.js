@@ -1,5 +1,12 @@
 ( function( M, $ ) {
 
+	function callbackProxy( callback ) {
+		return function() {
+			var args = Array.prototype.slice.call( arguments, 1 );
+			callback.apply( callback, args );
+		};
+	}
+
 	function EventEmitter() {}
 
 	/**
@@ -9,10 +16,18 @@
 	 * @param {Function} callback Callback to be bound.
 	 */
 	EventEmitter.prototype.on = function( event, callback ) {
-		$( this ).on( event, function() {
-			var args = Array.prototype.slice.call( arguments, 1 );
-			callback.apply( callback, args );
-		} );
+		$( this ).on( event, callbackProxy( callback ) );
+		return this;
+	};
+
+	/**
+	 * Bind a callback to the event and run it only once.
+	 *
+	 * @param {string} event Event name.
+	 * @param {Function} callback Callback to be bound.
+	 */
+	EventEmitter.prototype.one = function( event, callback ) {
+		$( this ).one( event, callbackProxy( callback ) );
 		return this;
 	};
 
@@ -24,7 +39,10 @@
 	 */
 	EventEmitter.prototype.emit = function( event /* , arg1, arg2, ... */ ) {
 		var args = Array.prototype.slice.call( arguments, 1 );
-		$( this ).trigger( event, args );
+		// use .triggerHandler() for emitting events to avoid accidentally
+		// invoking object's functions, e.g. don't call obj.something() when
+		// doing obj.emit( 'something' )
+		$( this ).triggerHandler( event, args );
 		return this;
 	};
 

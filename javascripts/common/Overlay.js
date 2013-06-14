@@ -9,15 +9,35 @@ var View = M.require( 'view' ),
 		},
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
+		closeOnBack: false,
 		initialize: function( options ) {
+			var self = this;
+			this._super( options );
 			this.parent = options.parent;
 			this.isOpened = false;
+
+			function hideOnRoute() {
+				M.router.one( 'route', function( ev ) {
+					if ( !self.hide() ) {
+						ev.preventDefault();
+						hideOnRoute();
+					}
+				} );
+			}
+
+			if ( this.closeOnBack ) {
+				hideOnRoute();
+			}
 		},
 		postRender: function() {
 			var self = this;
 			this.$( '.cancel,.confirm' ).click( function( ev ) {
 				ev.preventDefault();
-				self.hide();
+				if ( self.closeOnBack ) {
+					window.history.back();
+				} else {
+					self.hide();
+				}
 			} );
 		},
 		show: function() {
@@ -45,6 +65,7 @@ var View = M.require( 'view' ),
 			} else {
 				this.parent.show();
 			}
+			return true;
 		}
 	} );
 

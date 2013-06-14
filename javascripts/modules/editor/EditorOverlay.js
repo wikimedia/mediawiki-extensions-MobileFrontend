@@ -21,6 +21,7 @@
 		},
 		template: M.template.get( 'overlays/editor' ),
 		className: 'mw-mf-overlay editor-overlay',
+		closeOnBack: true,
 
 		log: function( action, errorText ) {
 			var
@@ -40,6 +41,7 @@
 		},
 
 		initialize: function( options ) {
+			this._super( options );
 			this.api = new EditorApi( { title: options.title, isNew: options.isNew } );
 			this.sectionCount = options.sectionCount;
 		},
@@ -59,11 +61,8 @@
 			} );
 			this.$spinner = this.$( '.spinner' );
 			this.$content = this.$( 'textarea' ).
-				// can't use $.proxy because self.section changes
-				on( 'change', function() {
-					self.api.stageSection( self.sectionId, self.$content.val() );
-				} ).
 				on( 'input', function() {
+					self.api.stageSection( self.sectionId, self.$content.val() );
 					self.$( '.save' ).prop( 'disabled', false );
 					self._resizeContent();
 				} );
@@ -109,10 +108,12 @@
 
 		hide: function() {
 			if ( this.previewClicked ) {
-				this._super();
 				this.previewClicked = false;
+				return this._super();
 			} else if ( !this.api.getStagedCount() || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
-				this._super();
+				return this._super();
+			} else {
+				return false;
 			}
 		},
 
