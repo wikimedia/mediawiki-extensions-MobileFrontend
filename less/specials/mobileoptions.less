@@ -3,18 +3,13 @@ SETTINGS PAGE
 based on http://acidmartin.wordpress.com/2011/06/18/css3-iphone-toggle-buttons/
 */
 
+@import "../mf-mixins.less";
+
 /* variables */
 @btngrey:#818181;
 @btnblue:#57A7F2;
 
 /* mixins */
-.gradient(@pos, @from, @to) {
-	background: @to;
-	background: -moz-linear-gradient(@pos, @from, @to);
-	background: -webkit-linear-gradient(@pos, @from, @to);
-	background: linear-gradient(@pos, @from, @to);
-}
-
 .checkboxBtn() {
 	min-width: 76px;
 	display: block;
@@ -86,7 +81,7 @@ form.mw-mf-settings ul {
 			font-weight: normal;
 			font-size: 15px;
 			color: white;
-			.gradient(top, #AEAEAE, @btngrey);
+			.vertical-gradient( #AEAEAE, @btngrey);
 			position: relative;
 			border: solid 1px @btngrey;
 		}
@@ -128,7 +123,7 @@ form.mw-mf-settings ul {
 						border: solid 1px white;
 						border-top: none;
 						border-bottom: solid 1px #aaa;
-						.gradient(top, #EEE, #EBEBEB);
+						.vertical-gradient( #EEE, #EBEBEB );
 						border-radius: 8px;
 						position: absolute;
 						bottom: 0;
