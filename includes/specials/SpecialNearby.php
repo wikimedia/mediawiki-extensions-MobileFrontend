@@ -6,9 +6,15 @@ class SpecialNearby extends UnlistedSpecialMobilePage {
 	}
 
 	public function execute( $par = '' ) {
+		global $wgMFNearbyRange;
+
 		$this->setHeaders();
 
 		$output = $this->getOutput();
+
+		// set config
+		$output->addJsConfigVars( 'wgMFNearbyRange', $wgMFNearbyRange );
+
 		// add previews to mobile only
 		$ctx = MobileContext::singleton();
 		if ( $ctx->shouldDisplayMobileView() && $ctx->isBetaGroupMember() ) {

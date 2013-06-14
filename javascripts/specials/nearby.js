@@ -151,7 +151,7 @@ $( function() {
 	}
 
 	function findResults( lat, lng ) {
-		var $content = $( '#mw-mf-nearby' ), range = 10000,
+		var $content = $( '#mw-mf-nearby' ), range = mw.config.get( 'wgMFNearbyRange' ),
 			limit = 50;
 
 		$.ajax( {
