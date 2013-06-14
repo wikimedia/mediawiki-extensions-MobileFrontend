@@ -136,6 +136,8 @@ $( function() {
 				coords = page.coordinates[0],
 				lngLat = { latitude: coords.lat, longitude: coords.lon };
 				page.dist = calculateDistance( curLocation, lngLat );
+				page.latitude = coords.lat;
+				page.longitude = coords.lon;
 				page.proximity = distanceMessage( page.dist );
 			}
 			pages.push( page );

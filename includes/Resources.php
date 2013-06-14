@@ -579,6 +579,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-noresults',
 			'mobile-frontend-nearby-noresults-guidance',
 			'mobile-frontend-nearby-link',
+			'mobile-frontend-nearby-directions',
 		),
 		'scripts' => array(
 			'javascripts/specials/nearby.js',
