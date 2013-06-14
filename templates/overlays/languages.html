@@ -5,12 +5,14 @@
 	</div>
 </div>
 <div class="languageOverlay">
+	{{#variantItems}}
 	<p class="mw-mf-overlay-header">{{{variantHeader}}}</p>
-	<ul>
+	<ul class="suggestions-results">
 		{{{variantItems}}}
 	</ul>
+	{{/variantItems}}
 	<p class="mw-mf-overlay-header">{{{header}}}</p>
-	<ul>
+	<ul class="suggestions-results">
 		{{{languageItems}}}
 	</ul>
 	<p class="mw-mf-overlay-footer" style="display:none">

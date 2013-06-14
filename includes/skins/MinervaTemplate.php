@@ -32,6 +32,7 @@ class MinervaTemplate extends BaseTemplate {
 		<div class="section" id="mw-mf-language-section">
 			<h2 id="section_language" class="section_heading"><?php echo $languageTemplateData['heading']; ?></h2>
 			<div id="content_language" class="content_block">
+				<?php if ( count( $languageTemplateData['variants'] ) > 0 ) { ?>
 				<p id="mw-mf-language-variant-header"><?php echo $languageTemplateData['variantSummary']; ?></p>
 				<ul id="mw-mf-language-variant-selection">
 				<?php
@@ -40,6 +41,7 @@ class MinervaTemplate extends BaseTemplate {
 				endforeach;
 				?>
 				</ul>
+				<?php } ?>
 				<p id="mw-mf-language-header"><?php echo $languageTemplateData['languageSummary']; ?></p>
 				<ul id="mw-mf-language-selection">
 				<?php
