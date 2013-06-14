@@ -175,6 +175,7 @@
 					self.log( 'success' );
 					M.history.invalidateCachedPage( title );
 					new Page( { title: title, el: $( '#content' ) } );
+					M.router.navigate( '' );
 					self.hide();
 					popup.show(
 						mw.msg( 'mobile-frontend-editor-success' ),
