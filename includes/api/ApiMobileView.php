@@ -164,16 +164,13 @@ class ApiMobileView extends ApiBase {
 		}
 
 		wfProfileIn( __METHOD__ . '-MobileFormatter' );
-		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ),
-			$title,
-			'HTML'
-		);
-		$mf->removeImages( $noImages );
 		if ( !$this->noTransform ) {
+			$mf = new MobileFormatterHTML( MobileFormatter::wrapHTML( $html ), $title );
+			$mf->removeImages( $noImages );
 			$mf->filterContent();
 			$mf->setIsMainPage( $this->mainPage );
+			$html = $mf->getText();
 		}
-		$html = $mf->getText();
 		wfProfileOut( __METHOD__ . '-MobileFormatter' );
 
 		if ( $this->mainPage || $this->file ) {
