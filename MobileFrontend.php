@@ -113,7 +113,6 @@ $wgHooks['GetPreferences'][] = 'MobileFrontendHooks::onGetPreferences';
 $wgHooks['Gadgets::allowLegacy'][] = 'MobileFrontendHooks::onAllowLegacyGadgets';
 $wgHooks['UnitTestsList'][] = 'MobileFrontendHooks::onUnitTestsList';
 
-$wgSpecialPages['Uploads'] = 'SpecialUploads';
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';

@@ -277,6 +277,8 @@ class MobileFrontendHooks {
 		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
 			// Replace the standard watchlist view with our custom one
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
+			// FIXME: Make uploads work on desktop
+			$list['Uploads'] = 'SpecialUploads';
 			$list['Userlogin'] = 'SpecialMobileUserlogin';
 		}
 		return true;
