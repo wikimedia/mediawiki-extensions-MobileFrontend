@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 var
-	photo = M.require( 'photo' ),
+	PhotoUploaderButton = M.require( 'uploads/PhotoUploaderButton' ),
 	popup = M.require( 'notifications' ),
 	View = M.require( 'view' ),
 	CarouselOverlay = M.require( 'overlays/CarouselOverlay' ),
@@ -140,10 +140,10 @@ m = ( function() {
 			$placeholder: $( '#content p' ).eq( 0 )
 		} );
 
-		if ( photo.isSupported() ) {
+		if ( PhotoUploaderButton.isSupported ) {
 			$container = $( '.ctaUploadPhoto' );
 
-			new photo.PhotoUploaderButton( {
+			new PhotoUploaderButton( {
 				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
 				pageTitle: mw.config.get( 'wgTitle' ),
 				funnel: 'uploads'
