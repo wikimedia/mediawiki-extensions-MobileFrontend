@@ -27,7 +27,7 @@
 }
 .carousel > button.prev {
   left: 4px;
-  background: url(images/uploads/chevron_left.png) 20% 8px no-repeat;
+  background: url(images/uploads/chevron_left.png) 20% center no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -moz-background-size: auto 20px;
@@ -37,7 +37,7 @@
 }
 .carousel > button.next {
   right: 4px;
-  background: url(images/uploads/chevron_right.png) 80% 8px no-repeat;
+  background: url(images/uploads/chevron_right.png) 80% center no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -moz-background-size: auto 20px;
