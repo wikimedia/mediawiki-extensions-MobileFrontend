@@ -6,8 +6,6 @@
 }
 
 .carousel {
-	@indicatorHeight: 10px;
-	@indicatorPadding: 4px;
 	@buttonPadding: 4px;
 
 	position: relative;
@@ -27,7 +25,7 @@
 		position: absolute;
 		top: 0;
 		width: @searchBarPaddingLeft;
-		bottom: @indicatorHeight + @indicatorPadding;
+		bottom: 0;
 
 		&.prev {
 			left: @buttonPadding;
@@ -99,28 +97,6 @@
 
 		&.page-3 {
 			background-image: url(images/uploads/SplashScreen3.png);
-		}
-	}
-
-	ul {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: @indicatorPadding 0 24px 0;
-		text-align: center;
-
-		li {
-			display: inline-block;
-			text-indent: -999px;
-			overflow: hidden;
-			width: 10px;
-			height: @indicatorHeight;
-			background: url(images/uploads/Indicator_default.png) 50% 50% no-repeat;
-
-			&.active {
-				background-image: url(images/uploads/Indicator_active.png);
-			}
 		}
 	}
 }

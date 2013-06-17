@@ -23,7 +23,7 @@
   position: absolute;
   top: 0;
   width: 40px;
-  bottom: 14px;
+  bottom: 0;
 }
 .carousel > button.prev {
   left: 4px;
@@ -96,25 +96,6 @@
 }
 .carousel .page.page-3 {
   background-image: url(images/uploads/SplashScreen3.png);
-}
-.carousel ul {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 4px 0 24px 0;
-  text-align: center;
-}
-.carousel ul li {
-  display: inline-block;
-  text-indent: -999px;
-  overflow: hidden;
-  width: 10px;
-  height: 10px;
-  background: url(images/uploads/Indicator_default.png) 50% 50% no-repeat;
-}
-.carousel ul li.active {
-  background-image: url(images/uploads/Indicator_active.png);
 }
 .ctaUploadPhoto {
   padding: 8px;
