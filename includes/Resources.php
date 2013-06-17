@@ -646,6 +646,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'specials/uploads/carousel',
 			'specials/uploads/photo',
+			'specials/uploads/userGallery',
 		),
 	),
 	'mobile.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(

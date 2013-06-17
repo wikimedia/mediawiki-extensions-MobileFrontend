@@ -2,11 +2,47 @@
 var
 	PhotoUploaderButton = M.require( 'uploads/PhotoUploaderButton' ),
 	popup = M.require( 'notifications' ),
+	Api = M.require( 'api' ).Api,
 	View = M.require( 'view' ),
 	CarouselOverlay = M.require( 'overlays/CarouselOverlay' ),
 	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
+	userName = mw.config.get( 'wgUserName' ),
 	IMAGE_WIDTH = 320,
-	PhotoItem, PhotoList, userGallery, carousel;
+	UserGalleryApi, PhotoItem, PhotoList;
+
+	UserGalleryApi = Api.extend( {
+		getPhotos: function() {
+			var result = $.Deferred();
+
+			this.get( {
+				action: 'query',
+				generator: 'allimages',
+				gaisort: 'timestamp',
+				gaidir: 'descending',
+				gaiuser: userName,
+				gailimit: 10,
+				prop: 'imageinfo',
+				origin: corsUrl ? M.getOrigin() : undefined,
+				// FIXME: have to request timestamp since api returns a json rather than an array thus we need a way to sort
+				iiprop: 'url|timestamp',
+				iiurlwidth: IMAGE_WIDTH
+			}, {
+				url: corsUrl || M.getApiUrl(),
+				xhrFields: { withCredentials: true }
+			} ).done( function( resp ) {
+				if ( resp.query && resp.query.pages ) {
+					// FIXME: API work around - in an ideal world imageData would be a sorted array
+					result.resolve( $.map( resp.query.pages, getImageDataFromPage ).sort( function( a, b ) {
+						return a.timestamp > b.timestamp ? 1 : -1;
+					} ) );
+				} else {
+					result.reject();
+				}
+			} );
+
+			return result;
+		}
+	} );
 
 	PhotoItem = View.extend( {
 		template: M.template.get( 'specials/uploads/photo' ),
@@ -14,12 +50,29 @@ var
 	} );
 
 	PhotoList = View.extend( {
+		template: M.template.get( 'specials/uploads/userGallery' ),
+		initialize: function() {
+			this.api = new UserGalleryApi();
+		},
+		postRender: function() {
+			var self = this;
+			this.$end = this.$( '.end' );
+
+			this.api.getPhotos().done( function( photos ) {
+				$.each( photos, function() {
+					self.addPhoto( this );
+				} );
+			} ).fail( function() {
+				self.$end.hide();
+				self.emit( 'empty' );
+			} );
+		},
 		isEmpty: function() {
 			return this.$( 'li' ).length === 0;
 		},
 		addPhoto: function( photoData, notify ) {
 			var msgKey;
-			new PhotoItem( photoData ).prependTo( this.$el );
+			new PhotoItem( photoData ).prependTo( this.$( 'ul' ) );
 			if ( notify ) {
 				if ( this.isEmpty() ) {
 					msgKey = 'mobile-frontend-donate-photo-first-upload-success';
@@ -56,41 +109,14 @@ var
 		};
 	}
 
-	function showGallery( username ) {
-		// FIXME: use api module
-		$.ajax( {
-			url: corsUrl || M.getApiUrl(),
-			data: {
-				action: 'query',
-				generator: 'allimages',
-				format: 'json',
-				gaisort: 'timestamp',
-				gaidir: 'descending',
-				gaiuser: username,
-				gailimit: 10,
-				prop: 'imageinfo',
-				origin: corsUrl ? M.getOrigin() : undefined,
-				// FIXME: have to request timestamp since api returns a json rather than an array thus we need a way to sort
-				iiprop: 'url|timestamp',
-				iiurlwidth: IMAGE_WIDTH
-			},
-			xhrFields: {
-				'withCredentials': true
-			}
-		} ).done( function( resp ) {
-			var pages;
+	function init() {
+		var $container, userGallery;
 
-			if ( resp.query && resp.query.pages ) {
-				// FIXME: API work around - in an ideal world imageData would be a sorted array
-				pages = $.map( resp.query.pages, getImageDataFromPage ).sort( function( a, b ) {
-					return a.timestamp > b.timestamp ? 1 : -1;
-				} );
-				$.each( pages, function() {
-					userGallery.addPhoto( this );
-				} );
-			} else {
+		userGallery = new PhotoList().
+			appendTo( '#content' ).
+			on( 'empty', function() {
 				$( '.ctaUploadPhoto h2' ).hide(); // hide the count if 0 uploads have been made
-				carousel = new CarouselOverlay( {
+				new CarouselOverlay( {
 					pages: [
 						{
 							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1-header' ),
@@ -108,19 +134,8 @@ var
 							className: 'page-3', id: 3
 						}
 					]
-				} );
-				carousel.show();
-			}
-		} );
-	}
-
-	function init() {
-		var $container,
-			username = mw.config.get( 'wgUserName' );
-
-		userGallery = new PhotoList( {
-			el: 'ul.mobileUserGallery'
-		} );
+				} ).show();
+			} );
 
 		if ( PhotoUploaderButton.isSupported ) {
 			$container = $( '.ctaUploadPhoto' );
@@ -139,17 +154,13 @@ var
 						newCount = parseInt( $counter.text(), 10 ) + 1;
 						$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) ).show();
 					}
-					if ( carousel ) {
-						carousel.remove();
-					}
 				} );
-		}
-		if ( username ) {
-			showGallery( username );
 		}
 	}
 
-	$( init );
+	if ( userName ) {
+		$( init );
+	}
 
 	M.define( 'specials/uploads', {
 		getDescription: getDescription
