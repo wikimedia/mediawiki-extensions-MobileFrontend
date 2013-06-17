@@ -6,7 +6,8 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 3;
 
-	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant;
+	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen;
+
 	/**
 	 * @var File
 	 */
@@ -32,6 +33,14 @@ class ApiMobileView extends ApiBase {
 		$this->followRedirects = $params['redirect'] == 'yes';
 		$this->noHeadings = $params['noheadings'];
 		$this->noTransform = $params['notransform'];
+		$this->offset = $params['offset'];
+		$this->maxlen = $params['maxlen'];
+
+		if ( $this->offset === 0 && $this->maxlen === 0 ) {
+			$this->offset = -1; // Disable text splitting
+		} elseif ( $this->maxlen === 0 ) {
+			$this->maxlen = PHP_INT_MAX;
+		}
 
 		$title = Title::newFromText( $params['page'] );
 		if ( !$title ) {
@@ -73,7 +82,7 @@ class ApiMobileView extends ApiBase {
 				}
 				$section['id'] = $i;
 				if ( isset( $prop['text'] ) && isset( $requestedSections[$i] ) && isset( $data['text'][$i] ) ) {
-					$section[$textElement] = $this->prepareSection( $data['text'][$i] );
+					$section[$textElement] = $this->stringSplitter( $this->prepareSection( $data['text'][$i] ) );
 					unset( $requestedSections[$i] );
 				}
 				if ( isset( $data['refsections'][$i] ) ) {
@@ -86,7 +95,7 @@ class ApiMobileView extends ApiBase {
 			foreach ( array_keys( $requestedSections ) as $index ) {
 				$section = array( 'id' => $index );
 				if ( isset( $data['text'][$index] ) ) {
-					$section[$textElement] = $data['text'][$index];
+					$section[$textElement] = $this->stringSplitter( $data['text'][$index] );
 				} else {
 					$missingSections[] = $index;
 				}
@@ -96,9 +105,39 @@ class ApiMobileView extends ApiBase {
 		if ( count( $missingSections ) && isset( $prop['text'] ) ) {
 			$this->setWarning( 'Section(s) ' . implode( ', ', $missingSections ) . ' not found' );
 		}
+		if ( $this->maxlen < 0 ) {
+			// There is more data available
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'continue-offset' => $params['offset'] + $params['maxlen'] )
+			);
+		}
 		$this->getResult()->setIndexedTagName( $result, 'section' );
 		$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
 		wfProfileOut( __METHOD__ );
+	}
+
+	private function stringSplitter( $text ) {
+		if ( $this->offset < 0  ) {
+			return $text; // NOOP - string splitting mode is off
+		} elseif ( $this->maxlen < 0 ) {
+			return ''; // Limit exceeded
+		}
+		$textLen = mb_strlen( $text );
+		$start = $this->offset;
+		$len = $textLen - $start;
+		if ( $len > 0 ) {
+			// At least part of the $text should be included
+			if ( $len > $this->maxlen ) {
+				$len = $this->maxlen;
+				$this->maxlen = -1;
+			} else {
+				$this->maxlen -= $len;
+			}
+			$this->offset = 0;
+			return mb_substr( $text, $start, $len );
+		}
+		$this->offset -= $textLen;
+		return '';
 	}
 
 	private function prepareSection( $html ) {
@@ -269,6 +308,16 @@ class ApiMobileView extends ApiBase {
 			'noimages' => false,
 			'noheadings' => false,
 			'notransform' => false,
+			'offset' => array(
+				ApiBase::PARAM_TYPE => 'integer',
+				ApiBase::PARAM_MIN => 0,
+				ApiBase::PARAM_DFLT => 0,
+			),
+			'maxlen' => array(
+				ApiBase::PARAM_TYPE => 'integer',
+				ApiBase::PARAM_MIN => 0,
+				ApiBase::PARAM_DFLT => 0,
+			),
 		);
 	}
 
@@ -289,6 +338,8 @@ class ApiMobileView extends ApiBase {
 			'noimages' => 'Return HTML without images',
 			'noheadings' => "Don't include headings in output",
 			'notransform' => "Don't transform HTML into mobile-specific version",
+			'offset' => 'Pretend all text result is one string, and return the substring starting at this point',
+			'maxlen' => 'Pretend all text result is one string, and limit result to this length',
 		);
 	}
 
