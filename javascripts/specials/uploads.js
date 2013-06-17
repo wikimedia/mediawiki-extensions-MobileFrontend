@@ -126,9 +126,6 @@ m = ( function() {
 					]
 				} );
 				carousel.show();
-				$( function() {
-					window.scrollTo( 0, $( '.header' ).offset().top );
-				} );
 			}
 		} );
 	}
