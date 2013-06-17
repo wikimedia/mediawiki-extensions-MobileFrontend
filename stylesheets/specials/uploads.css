@@ -59,11 +59,11 @@
   border-radius: 0;
 }
 .carousel .page {
-  padding: 146px 0 0 0;
+  padding: 180px 0 0 0;
   text-align: center;
-  background-size: auto 130px;
+  background-size: auto 180px;
   background-repeat: no-repeat;
-  background-position: center 24px;
+  background-position: center 0;
   top: 10px;
   left: 100%;
   bottom: 0;
@@ -82,7 +82,7 @@
 .carousel .page strong {
   display: block;
   font-size: 1.1em;
-  margin: 32px 26px 16px;
+  margin: 0 26px 16px;
 }
 .carousel .page p {
   font-size: 0.9em;
