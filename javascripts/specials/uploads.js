@@ -11,34 +11,49 @@ var
 	UserGalleryApi, PhotoItem, PhotoList;
 
 	UserGalleryApi = Api.extend( {
+		initialize: function() {
+			this.limit = 10;
+		},
 		getPhotos: function() {
-			var result = $.Deferred();
+			var self = this, result = $.Deferred();
 
-			this.get( {
-				action: 'query',
-				generator: 'allimages',
-				gaisort: 'timestamp',
-				gaidir: 'descending',
-				gaiuser: userName,
-				gailimit: 10,
-				prop: 'imageinfo',
-				origin: corsUrl ? M.getOrigin() : undefined,
-				// FIXME: have to request timestamp since api returns a json rather than an array thus we need a way to sort
-				iiprop: 'url|timestamp',
-				iiurlwidth: IMAGE_WIDTH
-			}, {
-				url: corsUrl || M.getApiUrl(),
-				xhrFields: { withCredentials: true }
-			} ).done( function( resp ) {
-				if ( resp.query && resp.query.pages ) {
-					// FIXME: API work around - in an ideal world imageData would be a sorted array
-					result.resolve( $.map( resp.query.pages, getImageDataFromPage ).sort( function( a, b ) {
-						return a.timestamp > b.timestamp ? 1 : -1;
-					} ) );
-				} else {
-					result.reject();
-				}
-			} );
+			if ( this.endTimestamp !== false ) {
+				this.get( {
+					action: 'query',
+					generator: 'allimages',
+					gaisort: 'timestamp',
+					gaidir: 'descending',
+					gaiuser: userName,
+					gailimit: this.limit,
+					gaistart: this.endTimestamp,
+					prop: 'imageinfo',
+					origin: corsUrl ? M.getOrigin() : undefined,
+					// FIXME: [API] have to request timestamp since api returns an object
+					// rather than an array thus we need a way to sort
+					iiprop: 'url|timestamp',
+					iiurlwidth: IMAGE_WIDTH
+				}, {
+					url: corsUrl || M.getApiUrl(),
+					xhrFields: { withCredentials: true }
+				} ).done( function( resp ) {
+					if ( resp.query && resp.query.pages ) {
+						// FIXME: [API] in an ideal world imageData would be a sorted array
+						var photos = $.map( resp.query.pages, getImageDataFromPage ).sort( function( a, b ) {
+							return a.timestamp < b.timestamp ? 1 : -1;
+						} );
+						if ( resp['query-continue'] ) {
+							self.endTimestamp = resp['query-continue'].allimages.gaistart;
+						} else {
+							self.endTimestamp = false;
+						}
+						result.resolve( photos );
+					} else {
+						result.resolve( [] );
+					}
+				} ).fail( $.proxy( result, 'reject' ) );
+			} else {
+				result.resolve( [] );
+			}
 
 			return result;
 		}
@@ -52,34 +67,52 @@ var
 	PhotoList = View.extend( {
 		template: M.template.get( 'specials/uploads/userGallery' ),
 		initialize: function() {
+			// how close a spinner needs to be to the viewport to trigger loading (px)
+			this.threshold = 1000;
+			this.loading = false;
 			this.api = new UserGalleryApi();
 		},
 		postRender: function() {
-			var self = this;
 			this.$end = this.$( '.end' );
+			this.$list = this.$( 'ul' );
 
-			this.api.getPhotos().done( function( photos ) {
-				$.each( photos, function() {
-					self.addPhoto( this );
-				} );
-			} ).fail( function() {
-				self.$end.hide();
-				self.emit( 'empty' );
-			} );
+			this._loadPhotos();
+			if ( mw.config.get( 'wgMFMode' ) !== 'stable' ) {
+				$( window ).on( 'scroll', $.proxy( this, '_loadPhotos' ) );
+			} else {
+				this.$end.remove();
+			}
 		},
 		isEmpty: function() {
-			return this.$( 'li' ).length === 0;
+			return this.$list.find( 'li' ).length === 0;
 		},
-		addPhoto: function( photoData, notify ) {
-			var msgKey;
-			new PhotoItem( photoData ).prependTo( this.$( 'ul' ) );
-			if ( notify ) {
-				if ( this.isEmpty() ) {
-					msgKey = 'mobile-frontend-donate-photo-first-upload-success';
-				} else {
-					msgKey = 'mobile-frontend-donate-photo-upload-success';
-				}
-				popup.show( mw.msg( msgKey ), 'toast' );
+		prependPhoto: function( photoData ) {
+			new PhotoItem( photoData ).prependTo( this.$list );
+		},
+		appendPhoto: function( photoData ) {
+			new PhotoItem( photoData ).appendTo( this.$list );
+		},
+		_isEndNear: function() {
+			var scrollBottom = $( window ).scrollTop() + $( window ).height();
+			return scrollBottom + this.threshold > this.$end.offset().top;
+		},
+		_loadPhotos: function() {
+			var self = this;
+
+			if ( this._isEndNear() && !this.loading ) {
+				this.loading = true;
+
+				this.api.getPhotos().always( function() {
+					self.loading = false;
+				} ).done( function( photos ) {
+					if ( photos.length ) {
+						$.each( photos, function() {
+							self.appendPhoto( this );
+						} );
+					} else {
+						self.$end.remove();
+					}
+				} );
 			}
 		}
 	} );
@@ -147,9 +180,18 @@ var
 			} ).
 				appendTo( $container ).
 				on( 'success', function( image ) {
-					var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount;
+					var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount, msgKey;
+
+					if ( userGallery.isEmpty() ) {
+						msgKey = 'mobile-frontend-donate-photo-first-upload-success';
+					} else {
+						msgKey = 'mobile-frontend-donate-photo-upload-success';
+					}
+					popup.show( mw.msg( msgKey ), 'toast' );
+
 					image.width = IMAGE_WIDTH;
-					userGallery.addPhoto( image, true );
+					userGallery.prependPhoto( image );
+
 					if ( $counter.length ) {
 						newCount = parseInt( $counter.text(), 10 ) + 1;
 						$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) ).show();
