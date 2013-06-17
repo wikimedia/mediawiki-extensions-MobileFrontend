@@ -170,7 +170,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.stable.plumbing' => array(
 		'messages' => array(
-			// mf-photo.js
+			// NagOverlay.js
 			'mobile-frontend-photo-license' => array( 'parse' ),
 			'mobile-frontend-photo-nag-1-bullet-1-heading',
 			'mobile-frontend-photo-nag-1-bullet-1-text' => array( 'parse' ),
@@ -195,11 +195,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'overlays/learnMore',
 			'overlays/search/search',
 			'overlays/search/results',
-			// mf-photo.js
+			// PhotoUploader.js
 			// For new page action menu
 			'photoUploadAction',
 			'photoUploader',
+			// PhotoUploaderPreview.js
 			'photoUploadPreview',
+			// NagOverlay.js
 			'photoNag',
 			'ctaDrawer',
 		),
@@ -400,6 +402,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/widgets/progress-bar.js',
 			'javascripts/common/mf-navigation.js',
 			'javascripts/common/mf-notification.js',
+			// Upload specific code
+			'javascripts/common/uploads/LearnMoreOverlay.js',
+			'javascripts/common/uploads/PhotoApi.js',
+			'javascripts/common/uploads/NagOverlay.js',
+			'javascripts/common/uploads/PhotoUploadProgress.js',
+			'javascripts/common/uploads/PhotoUploaderPreview.js',
+			'javascripts/common/uploads/PhotoUploader.js',
+			'javascripts/common/uploads/LeadPhoto.js',
 		),
 		'messages' => array(
 			// mf-notification.js
@@ -410,6 +420,35 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-watchlist-cta-button-login',
 			'mobile-frontend-drawer-cancel',
 			'mobile-frontend-overlay-escape',
+
+			// LearnMoreOverlay.js
+			'mobile-frontend-photo-ownership-confirm',
+
+			// PhotoApi.js
+			'mobile-frontend-photo-article-edit-comment',
+			'mobile-frontend-photo-article-donate-comment',
+			'mobile-frontend-photo-upload-error-filename',
+			'mobile-frontend-photo-upload-comment',
+
+			// PhotoUploader.js
+			'mobile-frontend-photo-upload-error',
+			'mobile-frontend-photo-upload-cta',
+
+			// PhotoUploaderPreview.js
+			'mobile-frontend-photo-ownership',
+			'mobile-frontend-photo-ownership-help',
+			'mobile-frontend-photo-caption-placeholder',
+			'mobile-frontend-image-loading',
+			'mobile-frontend-photo-submit',
+			'mobile-frontend-photo-cancel',
+			'mobile-frontend-photo-ownership-bullet-one',
+			'mobile-frontend-photo-ownership-bullet-two',
+			'mobile-frontend-photo-ownership-bullet-three',
+
+			// PhotoUploadProgress.js
+			'mobile-frontend-image-uploading-wait',
+			'mobile-frontend-image-uploading-long',
+			'mobile-frontend-image-uploading-cancel',
 		),
 	),
 
@@ -424,7 +463,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/mf-cleanuptemplates.js',
 			'javascripts/modules/mf-last-modified.js',
-			'javascripts/modules/mf-photo.js',
+			'javascripts/modules/leadphoto.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/search-2.js',
 			'javascripts/modules/mf-watchstar.js',
@@ -449,33 +488,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-months',
 			'mobile-frontend-last-modified-years',
 
+			// leadphoto.js
+			'mobile-frontend-photo-upload-success-article',
+			'mobile-frontend-photo-upload',
+
 			// mf-watchstar.js
 			'mobile-frontend-watchlist-add',
 			'mobile-frontend-watchlist-removed',
 			'mobile-frontend-watchlist-cta',
-
-			// mf-photo.js
-			'mobile-frontend-photo-ownership',
-			'mobile-frontend-photo-ownership-help',
-			'mobile-frontend-photo-article-edit-comment',
-			'mobile-frontend-photo-article-donate-comment',
-			'mobile-frontend-photo-upload-error',
-			'mobile-frontend-photo-upload-error-filename',
-			'mobile-frontend-photo-upload-success-article',
-			'mobile-frontend-photo-caption-placeholder',
-			'mobile-frontend-image-loading',
-			'mobile-frontend-image-uploading-wait',
-			'mobile-frontend-image-uploading-long',
-			'mobile-frontend-image-uploading-cancel',
-			'mobile-frontend-photo-upload',
-			'mobile-frontend-photo-upload-comment',
-			'mobile-frontend-photo-submit',
-			'mobile-frontend-photo-cancel',
-			'mobile-frontend-photo-ownership-confirm',
-			'mobile-frontend-photo-ownership-bullet-one',
-			'mobile-frontend-photo-ownership-bullet-two',
-			'mobile-frontend-photo-ownership-bullet-three',
-			'mobile-frontend-photo-upload-cta',
 
 			// for search.js
 			'mobile-frontend-search-help',
@@ -630,7 +650,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.uploads.plumbing',
-			'mobile.stable',
+			'mobile.stable.styles',
+			'mobile.stable.common',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-generic',
