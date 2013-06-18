@@ -114,6 +114,12 @@ $specialPageAliases['nl'] = array(
 	'Nearby' => array( 'InDeBuurt' ),
 );
 
+/** Norwegian Nynorsk (norsk nynorsk) */
+$specialPageAliases['nn'] = array(
+	'Uploads' => array( 'Opplastingar' ),
+	'Nearby' => array( 'Nær_her' ),
+);
+
 /** Polish (polski) */
 $specialPageAliases['pl'] = array(
 	'Nearby' => array( 'W_pobliżu' ),
