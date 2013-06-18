@@ -26,7 +26,7 @@
 	} );
 
 	QUnit.asyncTest( '#route, RegExp', 1, function( assert ) {
-		router.route( /testre-(\d+)/, function( param ) {
+		router.route( /^testre-(\d+)$/, function( param ) {
 			assert.strictEqual( param, '123', 'run callback for route with correct params' );
 			QUnit.start();
 		} );

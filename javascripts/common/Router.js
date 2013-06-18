@@ -2,10 +2,10 @@
 
 	var EventEmitter = M.require( 'eventemitter' );
 
-	function matchRoute( hash, route ) {
-		var match = hash.match( route.path );
+	function matchRoute( hash, entry ) {
+		var match = hash.match( entry.path );
 		if ( match ) {
-			route.callback.apply( this, match.slice( 1 ) );
+			entry.callback.apply( this, match.slice( 1 ) );
 			return true;
 		}
 		return false;
@@ -18,7 +18,9 @@
 
 	function Router() {
 		var self = this;
-		this.routes = [];
+		// use an object instead of an array for routes so that we don't
+		// duplicate entries that already exist
+		this.routes = {};
 		this._enabled = true;
 
 		$( window ).on( 'hashchange', function( ev ) {
@@ -33,7 +35,7 @@
 			self.emit( 'route', routeEv );
 
 			if ( !routeEv.isDefaultPrevented() ) {
-				$.each( self.routes, function( i, entry ) {
+				$.each( self.routes, function( id, entry ) {
 					return !matchRoute( hash, entry );
 				} );
 			} else {
@@ -60,11 +62,21 @@
 	 */
 	Router.prototype.route = function( path, callback ) {
 		var entry = {
-			path: path instanceof RegExp ? path : new RegExp( '^' + path + '$' ),
+			path: typeof path === 'string' ? new RegExp( '^' + path + '$' ) : path,
 			callback: callback
 		};
-		this.routes.push( entry );
+		this.routes[entry.path] = entry;
 		matchRoute( window.location.hash.slice( 1 ), entry );
+	};
+
+	/**
+	 * Navigate to a specific route. This is only a wrapper for changing the
+	 * hash now.
+	 *
+	 * @param {string} path String with a route (hash without #).
+	 */
+	Router.prototype.navigate = function( path ) {
+		window.location.hash = path;
 	};
 
 	Router.prototype.isSupported = function() {
