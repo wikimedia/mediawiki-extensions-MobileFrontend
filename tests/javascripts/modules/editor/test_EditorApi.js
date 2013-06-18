@@ -111,7 +111,7 @@
 	} );
 
 	QUnit.test( '#save, new page', 2, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test', isNew: true } );
+		var editorApi = new EditorApi( { title: 'Talk:test', isNew: true } );
 
 		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve() );
 
@@ -120,7 +120,7 @@
 		editorApi.save().done( function() {
 			assert.ok( editorApi.post.calledWith( {
 				action: 'edit',
-				title: 'test',
+				title: 'Talk:test',
 				section: 0,
 				text: 'section 0',
 				token: 'fake token',

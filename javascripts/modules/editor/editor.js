@@ -14,9 +14,10 @@
 
 	function init() {
 		M.router.route( /^editor-(\d+)$/, function( section ) {
+			var title = mw.config.get( 'wgTitle' ), ns = mw.config.get( 'wgCanonicalNamespace' );
 			section = parseInt( section, 10 );
 			new EditorOverlay( {
-				title: mw.config.get( 'wgTitle' ),
+				title: ns ? ns + ':' + title : title,
 				isNew: mw.config.get( 'wgArticleId' ) === 0,
 				section: section,
 				// FIXME: possibly we should have a global Page instance with
