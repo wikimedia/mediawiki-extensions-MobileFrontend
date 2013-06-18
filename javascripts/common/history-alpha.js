@@ -2,6 +2,7 @@
 
 	var
 		Page = M.require( 'page' ),
+		isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special,
 		History = window.History;
 
 		/**
@@ -88,7 +89,7 @@
 		};
 	}
 
-	if ( History.enabled ) {
+	if ( History.enabled && !isSpecialPage ) {
 		$.extend( M.history, init() );
 	}
 
