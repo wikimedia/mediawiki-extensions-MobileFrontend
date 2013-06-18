@@ -69,7 +69,6 @@ $autoloadClasses = array (
 	'MobileTemplateWML' => 'skins/MobileTemplateWML',
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMobile' => 'skins/SkinMobile',
-	'SkinMobileBase' => 'skins/SkinMobileBase',
 	'SkinMobileWML' => 'skins/SkinMobileWML',
 	'UserLoginAndCreateTemplate' => 'skins/UserLoginAndCreateTemplate',
 	'UserLoginMobileTemplate' => 'skins/UserLoginMobileTemplate',
