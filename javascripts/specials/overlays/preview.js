@@ -24,7 +24,7 @@
 					if ( device === 'iphone' ) {
 						directionUrl = 'http://maps.apple.com/?daddr=' + options.latLngString;
 					} else if ( device === 'android' ) {
-						directionUrl = 'geo:' + options.latLngString + '?z=15';
+						directionUrl = 'geo:' + options.latLngString + '?q=' + options.latLngString + '(' + encodeURIComponent( options.heading ) + ')&z=20';
 					} else if ( device === 'wp' ) {
 						directionUrl = 'maps:' + options.latLngString;
 					} // FIXME: what in other cases?!
