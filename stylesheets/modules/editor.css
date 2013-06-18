@@ -60,6 +60,6 @@ http://www.zingdesign.com/responsive-website-design-cheatsheet1/
 */
 @media (max-height: 355px) {
   .editor-overlay .buttonBar {
-    position: absolute;
+    position: static;
   }
 }
