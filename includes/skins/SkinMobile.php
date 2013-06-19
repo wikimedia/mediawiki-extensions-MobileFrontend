@@ -470,9 +470,7 @@ HTML;
 	function prepareTemplatePageContent( QuickTemplate $tpl ) {
 		$title = $this->getTitle();
 		$isSpecialPage = $title->isSpecialPage();
-		$isMainPage = $title->isMainPage();
 		$user = $this->getUser();
-		$out = $this->getOutput();
 		$ctx = MobileContext::singleton();
 		$inAlpha = $ctx->isAlphaGroupMember();
 
