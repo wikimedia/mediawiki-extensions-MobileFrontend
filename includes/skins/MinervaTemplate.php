@@ -26,7 +26,16 @@ class MinervaTemplate extends BaseTemplate {
 		return $this->data['page_actions'];
 	}
 
-	private function renderLanguages( $languageTemplateData ) {
+	protected function renderLanguages( $data ) {
+		$languages = $this->getLanguages();
+		$variants = $this->getLanguageVariants();
+		$languageTemplateData = array(
+			'heading' => wfMessage( 'mobile-frontend-language-article-heading' )->text(),
+			'languages' => $languages,
+			'variants' => $variants,
+			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
+			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
+		);
 		if ( $languageTemplateData['languages'] && count( $languageTemplateData['languages'] ) > 0 ) {
 		?>
 		<div class="section" id="mw-mf-language-section">
@@ -80,17 +89,27 @@ class MinervaTemplate extends BaseTemplate {
 		?></ul><?php
 	}
 
+	protected function renderContentWrapper( $data ) {
+		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
+		?>
+		<div class='show' id='content_wrapper'>
+			<div id="content" class="content">
+				<?php
+					if ( !$isSpecialPage ) {
+						echo $data['prebodytext'];
+						$this->renderPageActions( $data );
+					}
+					echo $data[ 'bodytext' ];
+					$this->renderLanguages( $data );
+					echo $data['postbodytext'];
+				?>
+			</div><!-- close #content -->
+		</div><!-- close #content_wrapper -->
+		<?php
+	}
+
 	protected function render( $data ) { // FIXME: replace with template engines
 		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
-		$languages = $this->getLanguages();
-		$variants = $this->getLanguageVariants();
-		$languageData = array(
-			'heading' => wfMessage( 'mobile-frontend-language-article-heading' )->text(),
-			'languages' => $languages,
-			'variants' => $variants,
-			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
-			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
-		);
 		$showMenuHeaders = isset( $this->data['_show_menu_headers'] ) && $this->data['_show_menu_headers'];
 
 		// begin rendering
@@ -151,20 +170,8 @@ class MinervaTemplate extends BaseTemplate {
 						echo $data['userButton'];
 					?>
 				</div>
-				<div class='show' id='content_wrapper'>
-					<div id="content" class="content">
-						<?php
-							if ( !$isSpecialPage ) {
-								echo $data['prebodytext'];
-								$this->renderPageActions( $data );
-							}
-							echo $data[ 'bodytext' ];
-							$this->renderLanguages( $languageData );
-							echo $data['postbodytext'];
-						?>
-					</div><!-- close #content -->
-				</div><!-- close #content_wrapper -->
 				<?php
+					$this->renderContentWrapper( $data );
 					$this->renderFooter( $data );
 				?>
 			</div><!-- close #mw-mf-page-center -->
