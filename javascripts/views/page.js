@@ -7,18 +7,18 @@
 	Section = View.extend( {
 		template: M.template.get( 'section' ),
 		defaults: {
-			hasReferences: false, // flag for references
 			heading: '',
-			content: '',
-			index: -1, // index of this section in the given page
-			id: null
+			content: ''
 		},
 		initialize: function( options ) {
 			this.heading = options.heading;
-			this.index = options.index;
+			// index of this section in the given page
+			this.index = options.index || -1;
 			this.content = options.content;
-			this.hasReferences = options.hasReferences;
-			this.id = options.id;
+			// flag for references
+			this.hasReferences = options.hasReferences || false;
+			this.id = options.id || null;
+			this._super( options );
 		}
 	} );
 

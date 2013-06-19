@@ -12,7 +12,7 @@ var View = M.require( 'view' ),
 		closeOnBack: false,
 		initialize: function( options ) {
 			var self = this;
-			this._super( options );
+			options = options || {};
 			this.parent = options.parent;
 			this.isOpened = false;
 
@@ -28,6 +28,8 @@ var View = M.require( 'view' ),
 			if ( this.closeOnBack ) {
 				hideOnRoute();
 			}
+
+			this._super( options );
 		},
 		postRender: function() {
 			var self = this;

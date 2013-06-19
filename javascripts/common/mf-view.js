@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 
-	var oop = M.require( 'oop' ),
-		EventEmitter = M.require( 'eventemitter' );
+	var EventEmitter = M.require( 'eventemitter' ), View;
 
 	/**
 	 * An abstraction over a jQuery element. Should be extended using extend().
@@ -48,78 +47,76 @@
 	 * @param {Object} options Options for the view, containing the el or
 	 * template data or any other information you want to use in the view.
 	 */
-	function View( options ) {
-		options = $.extend( {}, this.defaults, options );
-		if ( options.el ) {
-			this.$el = $( options.el );
-		} else {
-			this.$el = $( '<' + this.tagName + '>' );
+	View = EventEmitter.extend( {
+		tagName: 'div',
+
+		/**
+		 * Constructor, if you override it, use _super().
+		 *
+		 * @param {Object} options Object passed to the constructor.
+		 */
+		initialize: function( options ) {
+			this._super();
+			options = $.extend( {}, this.defaults, options );
+			if ( options.el ) {
+				this.$el = $( options.el );
+			} else {
+				this.$el = $( '<' + this.tagName + '>' );
+			}
+			this.$el.addClass( this.className );
+
+			// TODO: if template compilation is too slow, don't compile them on a
+			// per object basis, but don't worry about it now (maybe add cache to
+			// M.template.compile())
+			if ( typeof this.template === 'string' ) {
+				this.template = M.template.compile( this.template );
+			}
+
+			this.options = options;
+			this.render( options );
+		},
+
+		/**
+		 * Function called before the view is rendered. Can be redefined in
+		 * objects that extend View.
+		 *
+		 * @param {Object} options Object passed to the constructor.
+		 */
+		preRender: function() {},
+
+		/**
+		 * Function called after the view is rendered. Can be redefined in
+		 * objects that extend View.
+		 *
+		 * @param {Object} options Object passed to the constructor.
+		 */
+		postRender: function() {},
+
+		/**
+		 * Fill this.$el with template rendered using data if template is set.
+		 *
+		 * @param {Object} data Template data.
+		 */
+		render: function( data ) {
+			data = data || this.options;
+			this.preRender( data );
+			if ( this.template ) {
+				this.$el.html( this.template.render( data ) );
+			}
+			this.postRender( data );
+		},
+
+		/**
+		 * Wraps this.$el.find, so that you can search for elements in the view's
+		 * ($el's) scope.
+		 *
+		 * @param {string} query A jQuery CSS selector.
+		 * @return {jQuery} jQuery object containing results of the search.
+		 */
+		$: function( query ) {
+			return this.$el.find( query );
 		}
-		this.$el.addClass( this.className );
-
-		// TODO: if template compilation is too slow, don't compile them on a
-		// per object basis, but don't worry about it now (maybe add cache to
-		// M.template.compile())
-		if ( typeof this.template === 'string' ) {
-			this.template = M.template.compile( this.template );
-		}
-
-		this.options = options;
-		this.initialize( options );
-		this.render( options );
-	}
-
-	View.prototype = new EventEmitter();
-	View.prototype.tagName = 'div';
-
-	// FIXME: make Api and View inherit from an abstract Class object
-	/**
-	 * Constructor that can be overriden.
-	 *
-	 * @param {Object} options Object passed to the constructor.
-	 */
-	View.prototype.initialize = function() {};
-
-	/**
-	 * Function called before the view is rendered. Can be redefined in
-	 * objects that extend View.
-	 *
-	 * @param {Object} options Object passed to the constructor.
-	 */
-	View.prototype.preRender = function() {};
-
-	/**
-	 * Function called after the view is rendered. Can be redefined in
-	 * objects that extend View.
-	 *
-	 * @param {Object} options Object passed to the constructor.
-	 */
-	View.prototype.postRender = function() {};
-
-	/**
-	 * Fill this.$el with template rendered using data if template is set.
-	 *
-	 * @param {Object} data Template data.
-	 */
-	View.prototype.render = function( data ) {
-		data = data || this.options;
-		this.preRender( data );
-		if ( this.template ) {
-			this.$el.html( this.template.render( data ) );
-		}
-		this.postRender( data );
-	};
-
-	/**
-	 * Wraps this.$el.find, so that you can search for elements in the view's
-	 * ($el's) scope.
-	 *
-	 * @param {string} query A jQuery CSS selector.
-	 * @return {jQuery} jQuery object containing results of the search.
-	 */
-	View.prototype.$ = function( query ) {
-		return this.$el.find( query );
-	};
+	} );
 
 	[
 		'append',
@@ -138,8 +135,6 @@
 			return this;
 		};
 	} );
-
-	View.extend = oop.extend;
 
 	M.define( 'view', View );
 

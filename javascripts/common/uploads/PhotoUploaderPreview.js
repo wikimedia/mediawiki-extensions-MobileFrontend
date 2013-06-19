@@ -21,6 +21,7 @@
 
 		initialize: function( options ) {
 			this.log = options.log;
+			this._super( options );
 		},
 
 		postRender: function() {

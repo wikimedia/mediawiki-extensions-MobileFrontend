@@ -41,9 +41,9 @@
 		},
 
 		initialize: function( options ) {
-			this._super( options );
 			this.api = new EditorApi( { title: options.title, isNew: options.isNew } );
 			this.sectionCount = options.sectionCount;
+			this._super( options );
 		},
 
 		postRender: function( options ) {

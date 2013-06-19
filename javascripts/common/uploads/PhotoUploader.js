@@ -99,6 +99,7 @@
 
 		initialize: function( options ) {
 			this.log = getLog( options.funnel );
+			this._super( options );
 		},
 
 		postRender: function() {
