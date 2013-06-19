@@ -43,7 +43,6 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 				$html .= Html::openElement( 'h2', $attrs ) . $msg . Html::closeElement( 'h2' );
 				$html .= '</div>';
 			}
-			$html .= '<ul class="mobileUserGallery"></ul>';
 		}
 		$output->addHTML( $html );
 	}
