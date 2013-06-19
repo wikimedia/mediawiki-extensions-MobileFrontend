@@ -26,7 +26,7 @@ class MinervaTemplate extends BaseTemplate {
 		return $this->data['page_actions'];
 	}
 
-	protected function renderLanguages( $data ) {
+	protected function renderLanguages() {
 		$languages = $this->getLanguages();
 		$variants = $this->getLanguageVariants();
 		$languageTemplateData = array(
@@ -100,7 +100,7 @@ class MinervaTemplate extends BaseTemplate {
 						$this->renderPageActions( $data );
 					}
 					echo $data[ 'bodytext' ];
-					$this->renderLanguages( $data );
+					$this->renderLanguages();
 					echo $data['postbodytext'];
 				?>
 			</div><!-- close #content -->
