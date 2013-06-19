@@ -17,17 +17,9 @@ abstract class MobileFormatter extends HtmlFormatter {
 
 	private $defaultItemsToRemove = array(
 		'.toc',
-		'div.stub',
 		'#search', // remove search form element from Special:Search
-		'div.sister-project',
 		'div.magnify',
 		'span.t',
-		'.portal',
-		'#protected-icon',
-		'.boilerplate',
-		'#id-articulo-destacado', // FA star on eswiki, @todo: remove class="metadata topicon" instead
-		'.hiddenStructure',
-		'.medialist',
 		'.mw-search-createlink',
 		'#ogg_player_1',
 		'#ogg_player_2',

@@ -1,9 +1,6 @@
 <?php
 
 class ApiQueryExtracts extends ApiQueryBase {
-	const SECTION_MARKER_START = "\1\2";
-	const SECTION_MARKER_END = "\2\1";
-
 	/**
 	 * @var ParserOptions
 	 */
@@ -143,7 +140,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 
 	private function getFirstSection( $text, $plainText ) {
 		if ( $plainText ) {
-			$regexp = '/^(.*?)(?=' . self::SECTION_MARKER_START . ')/s';
+			$regexp = '/^(.*?)(?=' . ExtractFormatter::SECTION_MARKER_START . ')/s';
 		} else {
 			$regexp = '/^(.*?)(?=<h[1-6]\b)/s';
 		}
@@ -299,7 +296,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 
 	private function doSections( $text ) {
 		$text = preg_replace_callback(
-			"/" . self::SECTION_MARKER_START . '(\d)'. self::SECTION_MARKER_END . "(.*?)$/m",
+			"/" . ExtractFormatter::SECTION_MARKER_START . '(\d)'. ExtractFormatter::SECTION_MARKER_END . "(.*?)$/m",
 			array( $this, 'sectionCallback' ),
 			$text
 		);
@@ -344,7 +341,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 			'intro' => false,
 			'plaintext' => false,
 			'sectionformat' => array(
-				ApiBase::PARAM_TYPE => ExtractFormatter::$sectionFormats,
+				ApiBase::PARAM_TYPE => array( 'plain', 'wiki', 'raw' ),
 				ApiBase::PARAM_DFLT => 'wiki',
 			),
 			'continue' => array(
@@ -393,60 +390,5 @@ class ApiQueryExtracts extends ApiQueryBase {
 
 	public function getVersion() {
 		return __CLASS__ . ': $Id$';
-	}
-}
-
-class ExtractFormatter extends HtmlFormatter {
-	private $plainText;
-	private $sectionFormat;
-
-	public static $sectionFormats = array(
-		'plain',
-		'wiki',
-		'raw',
-	);
-
-	public function __construct( $text, $plainText, $sectionFormat ) {
-		wfProfileIn( __METHOD__ );
-		parent::__construct( HtmlFormatter::wrapHTML( $text ) );
-		$this->plainText = $plainText;
-		$this->sectionFormat = $sectionFormat;
-
-		$this->removeImages();
-		// @fixme: use rules from MobileFormatter?
-		$this->remove( array( 'table', 'div', '.editsection', '.mw-editsection', 'sup.reference', 'span.coordinates',
-			'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error' )
-		);
-		if ( $plainText ) {
-			$this->flattenAllTags();
-		} else {
-			$this->flatten( array( 'span', 'a' ) );
-		}
-		wfProfileOut( __METHOD__ );
-	}
-
-	public function getText( $dummy = null ) {
-		wfProfileIn( __METHOD__ );
-		$this->filterContent();
-		$text = parent::getText();
-		if ( $this->plainText ) {
-			$text = html_entity_decode( $text );
-			$text = str_replace( "\r", "\n", $text ); // for Windows
-			$text = preg_replace( "/\n{3,}/", "\n\n", $text ); // normalise newlines
-		}
-		wfProfileOut( __METHOD__ );
-		return $text;
-	}
-
-	public function onHtmlReady( $html ) {
-		wfProfileIn( __METHOD__ );
-		if ( $this->plainText ) {
-			$html = preg_replace( '/\s*(<h([1-6])\b)/i',
-				"\n\n" . ApiQueryExtracts::SECTION_MARKER_START . '$2' . ApiQueryExtracts::SECTION_MARKER_END . '$1' ,
-				$html
-			);
-		}
-		wfProfileOut( __METHOD__ );
-		return $html;
 	}
 }
