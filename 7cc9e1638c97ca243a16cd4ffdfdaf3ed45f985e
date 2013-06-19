@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1K5.DN8",
+        "filename": "javascripts/modules/search-pageimages.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-06-19T23:14:36Z",
+      "side": 1,
+      "message": "Indent.",
+      "revId": "7cc9e1638c97ca243a16cd4ffdfdaf3ed45f985e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
