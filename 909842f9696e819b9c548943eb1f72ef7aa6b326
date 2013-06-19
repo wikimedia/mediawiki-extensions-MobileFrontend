@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1GgBv7E",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-19T00:14:46Z",
+      "side": 1,
+      "message": "Let\u0027s call this PhotoListItem",
+      "revId": "909842f9696e819b9c548943eb1f72ef7aa6b326",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1IgE68M",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-19T00:14:46Z",
+      "side": 1,
+      "message": "Let\u0027s call this PhotoList",
+      "revId": "909842f9696e819b9c548943eb1f72ef7aa6b326",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
