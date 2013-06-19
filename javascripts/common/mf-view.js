@@ -53,7 +53,7 @@
 		if ( options.el ) {
 			this.$el = $( options.el );
 		} else {
-			this.$el = $( '<div>' );
+			this.$el = $( '<' + this.tagName + '>' );
 		}
 		this.$el.addClass( this.className );
 
@@ -70,6 +70,7 @@
 	}
 
 	View.prototype = new EventEmitter();
+	View.prototype.tagName = 'div';
 
 	// FIXME: make Api and View inherit from an abstract Class object
 	/**

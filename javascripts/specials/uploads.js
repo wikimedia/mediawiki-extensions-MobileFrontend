@@ -4,42 +4,32 @@ var
 	popup = M.require( 'notifications' ),
 	View = M.require( 'view' ),
 	CarouselOverlay = M.require( 'overlays/CarouselOverlay' ),
-	carousel,
-	m;
+	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
+	IMAGE_WIDTH = 320,
+	PhotoItem, PhotoList, userGallery, carousel;
 
-m = ( function() {
-	var IMAGE_WIDTH = 320,
-		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
-		UserGallery = View.extend( {
-			initialize: function( options ) {
-				this.$placeholder = options.$placeholder;
-			},
-			isEmpty: function() {
-				return this.$( 'li' ).length === 0;
-			},
-			removePlaceholder: function() {
-				this.$placeholder.remove(); // remove placeholder text in case of first upload
-			},
-			templateItem: M.template.compile(
-				'<li><a href="{{descriptionUrl}}" alt="{{description}}"><img src="{{url}}" width="{{width}}"></a><p>{{description}}</p></li>'
-			),
-			addPhoto: function( photoData, notify ) {
-				var msgKey, $li;
+	PhotoItem = View.extend( {
+		template: M.template.get( 'specials/uploads/photo' ),
+		tagName: 'li'
+	} );
+
+	PhotoList = View.extend( {
+		isEmpty: function() {
+			return this.$( 'li' ).length === 0;
+		},
+		addPhoto: function( photoData, notify ) {
+			var msgKey;
+			new PhotoItem( photoData ).prependTo( this.$el );
+			if ( notify ) {
 				if ( this.isEmpty() ) {
-					this.removePlaceholder();
 					msgKey = 'mobile-frontend-donate-photo-first-upload-success';
 				} else {
 					msgKey = 'mobile-frontend-donate-photo-upload-success';
 				}
-				$li = $( this.templateItem.render( photoData ) ).
-					prependTo( this.$el );
-				if ( notify ) {
-					$li.hide().slideDown();
-					popup.show( mw.msg( msgKey ), 'toast' );
-				}
+				popup.show( mw.msg( msgKey ), 'toast' );
 			}
-		} ),
-		userGallery;
+		}
+	} );
 
 	/**
 	 * Returns a description based on the file name using
@@ -88,23 +78,17 @@ m = ( function() {
 				'withCredentials': true
 			}
 		} ).done( function( resp ) {
-			var pages = [];
+			var pages;
 
 			if ( resp.query && resp.query.pages ) {
-				pages = resp.query.pages;
-				pages = $.map( pages, function ( p ) {
-					return getImageDataFromPage( p );
-				} );
-				// FIXME: API work around - in an ideal world imageData would be an array
-				pages = pages.sort( function( a, b ) {
+				// FIXME: API work around - in an ideal world imageData would be a sorted array
+				pages = $.map( resp.query.pages, getImageDataFromPage ).sort( function( a, b ) {
 					return a.timestamp > b.timestamp ? 1 : -1;
 				} );
 				$.each( pages, function() {
 					userGallery.addPhoto( this );
 				} );
-			}
-
-			if ( pages.length === 0 ) {
+			} else {
 				$( '.ctaUploadPhoto h2' ).hide(); // hide the count if 0 uploads have been made
 				carousel = new CarouselOverlay( {
 					pages: [
@@ -134,10 +118,8 @@ m = ( function() {
 		var $container,
 			username = mw.config.get( 'wgUserName' );
 
-		userGallery = new UserGallery( {
-			el: 'ul.mobileUserGallery',
-			// FIXME: should be possible to do this more elegantly
-			$placeholder: $( '#content p' ).eq( 0 )
+		userGallery = new PhotoList( {
+			el: 'ul.mobileUserGallery'
 		} );
 
 		if ( PhotoUploaderButton.isSupported ) {
@@ -153,7 +135,7 @@ m = ( function() {
 					var $counter = $container.find( 'h2' ).show().find( 'span' ), newCount;
 					image.width = IMAGE_WIDTH;
 					userGallery.addPhoto( image, true );
-					if ( $counter[ 0 ] ) {
+					if ( $counter.length ) {
 						newCount = parseInt( $counter.text(), 10 ) + 1;
 						$counter.parent().html( mw.msg( 'mobile-frontend-photo-upload-user-count', newCount ) ).show();
 					}
@@ -166,12 +148,11 @@ m = ( function() {
 			showGallery( username );
 		}
 	}
-	$( init );
-	return {
-		getDescription: getDescription
-	};
-}() );
 
-M.define( 'userGallery', m );
+	$( init );
+
+	M.define( 'specials/uploads', {
+		getDescription: getDescription
+	} );
 
 }( mw.mobileFrontend, jQuery ) );
