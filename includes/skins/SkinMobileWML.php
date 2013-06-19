@@ -16,6 +16,10 @@ class SkinMobileWML extends SkinTemplate {
 		if ( !$out ) {
 			$out = $this->getOutput();
 		}
+
+		$options = null;
+		wfRunHooks( 'BeforePageDisplayMobile', array( &$out, &$options ) );
+
 		$out->getRequest()->response()->header( 'Content-Type: text/vnd.wap.wml' );
 		$tpl = $this->setupTemplate( $this->template );
 		$tpl->setRef( 'skin', $this );
@@ -26,6 +30,9 @@ class SkinMobileWML extends SkinTemplate {
 		$tpl->set( 'randomPageUrl', SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl() );
 		$tpl->set( 'wgScript', wfScript() );
 		$tpl->set( 'searchField', $this->getRequest()->getText( 'search', '' ) );
+		$notice = '';
+		wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
+		$tpl->set( 'banner', $notice );
 		$html = $this->extMobileFrontend->DOMParse( $out );
 		$tpl->set( 'bodytext', $html );
 
@@ -50,6 +57,9 @@ class MobileTemplateWML extends BaseTemplate {
 				<go href="<?php $this->text( 'randomPageUrl' ) ?>"/>
 			</do>
 		</template>
+
+		<?php echo $this->data['banner']; ?>
+
 		<p><input emptyok="true" format="*M" type="text" name="search" value="" size="16" />
 			<do type="accept" label="<?php $this->msg( 'mobile-frontend-search-submit' ) ?>">
 				<go href="<?php $this->text( 'wgScript' ) ?>?title=Special%3ASearch&amp;search=<?php $this->text( 'searchField' ) ?>"></go></do>
