@@ -9,14 +9,12 @@
 }
 
 #section_0 {
-	margin-bottom: 0;
+	margin: @headingMarginTop @contentMarginRight 0 @contentMarginLeft;
 	padding-bottom: @headingMarginBottom;
 	border-bottom: dotted 1px #CACACA;
 }
 
 #page-actions {
-	// FIXME: negative margin hacks
-	margin: 0 -@contentMarginRight @headingMarginBottom -@contentMarginRight;
 	padding: 8px @contentMarginRight;
 	// end hacks
 	border-bottom: solid 1px #CACACA;
