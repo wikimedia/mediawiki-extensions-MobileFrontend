@@ -4,11 +4,11 @@ button.languageSelector {
 	margin-top: @headingMarginTop;
 }
 
-div.languageOverlay {
-	.suggestions-results {
-		padding-bottom: 0;
-		.preferred {
-			font-weight: bold;
-		}
+// remove bottom padding from language lists with variants
+.language-overlay > ul {
+	padding-bottom: 0;
+	// highlight commonly used languages (alpha)
+	.preferred {
+		font-weight: bold;
 	}
 }

@@ -30,7 +30,6 @@ function highlightSearchTerm( label, term ) {
 }
 
 SearchOverlay = Overlay.extend( {
-	templateResults: M.template.get( 'overlays/search/results' ),
 	template: M.template.get( 'overlays/search/search' ),
 	defaults: {
 		explanation: mw.msg( 'mobile-frontend-search-help' ),
@@ -57,27 +56,24 @@ SearchOverlay = Overlay.extend( {
 		} );
 	},
 	/**
-	 * A wrapper for $.ajax() to be used when calling server APIs.
-	 * Sends a GET request. See ajax() for details.
+	 * Renders a list of results
 	 *
 	 * @param {Array} results list of search results with label and url properties set
 	 */
 	writeResults: function( results ) {
-		var $list = this.$( 'ul.suggestions-results' );
-
-		this.data.results = results || [];
-		$list.
-			html( this.templateResults.render( this.data ) );
-
-		if ( results ) {
-			if ( results.length > 0 ) {
-				this.$( '.no-results' ).remove();
-			}
-		} else {
-			this.$( '.no-results' ).remove();
+		var $content = this.$( 'div.suggestions-results' ),
+			data = {
+				pages: results || []
+			};
+		if ( results.length === 0 ) {
+			data.error = {
+				guidance: mw.msg( 'mobile-frontend-search-noresults' )
+			};
 		}
-		this.emit( 'write-results' );
+		$content.html( M.template.get( 'articleList' ).render( data ) );
+		this.emit( 'write-results', results );
 	},
+
 	performSearch: function() {
 		var self = this,
 			term = this.$( 'input' ).val();
@@ -85,13 +81,14 @@ SearchOverlay = Overlay.extend( {
 		function completeSearch( data ) {
 			data = $.map( data[ 1 ], function( item ) {
 				return {
-					label: highlightSearchTerm( item, term ),
+					heading: highlightSearchTerm( item, term ),
 					title: item,
 					url: M.history.getArticleUrl( item )
 				};
 			} );
 
 			self.writeResults( data );
+
 			self.$( 'input' ).removeClass( 'searching' );
 		}
 

@@ -41,6 +41,7 @@
 	}
 
 	LanguageOverlay = Overlay.extend( {
+		className: 'language-overlay mw-mf-overlay',
 		template: M.template.get( 'overlays/languages' ),
 		postRender: function( options ) {
 			var $footer, $lists;

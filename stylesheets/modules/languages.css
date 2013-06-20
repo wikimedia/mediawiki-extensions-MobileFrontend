@@ -1,9 +1,9 @@
 button.languageSelector {
   margin-top: 14pt;
 }
-div.languageOverlay .suggestions-results {
+.language-overlay > ul {
   padding-bottom: 0;
 }
-div.languageOverlay .suggestions-results .preferred {
+.language-overlay > ul .preferred {
   font-weight: bold;
 }

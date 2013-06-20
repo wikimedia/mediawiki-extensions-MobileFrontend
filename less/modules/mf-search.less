@@ -33,16 +33,6 @@ form {
 	}
 }
 
-#results {
-	display: none;
-	width: 100%;
-}
-
-// FIXME: This becomes redundant when search is rewritten as an overlay
-#remove-results {
-	display: none;
-}
-
 .full-screen-search {
 
 	.header {
@@ -67,30 +57,20 @@ form {
 	.goButton {
 		display: none !important;
 	}
+}
 
-	#results {
-		left: 0;
-		width: 100% !important;
-		max-height: 99999px;
+.suggestions-results {
+	.error {
+		color: #666;
 		border: none;
-		z-index: 1;
-		background-color: #E6E6E6;
-		position: relative;
-		opacity: 1;
+		border-bottom: solid 1px #eee;
+		padding: 12px 40px;
+		background: none;
+		min-height: auto;
+		font-size: 0.9em;
+		p,
+		.content {
+			margin: 0;
+		}
 	}
 }
-
-ul.suggestions-results {
-	padding: 0;
-	position: relative;
-	padding-bottom: 20px;
-	cursor: pointer;
-	margin: 0;
-	background-color: white;
-	list-style: none;
-
-	li {
-		.overlayListItem();
-	}
-}
-
