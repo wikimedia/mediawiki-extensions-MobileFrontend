@@ -224,16 +224,18 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgMFMobileResourceBoilerplate, $wgMFLogEvents, $wgResourceModules;
+		global $wgMFMobileResourceBoilerplate, $wgMFLogEvents, $wgResourceModules, $wgMFVaryResources;
 
-		$detector = DeviceDetection::factory();
-		foreach ( $detector->getCssFiles() as $file ) {
-			$resourceLoader->register( "mobile.device.$file",
-				$wgMFMobileResourceBoilerplate +
-					array(
-						'styles' => array( "stylesheets/devices/{$file}.css" ),
-					)
-			);
+		if ( !$wgMFVaryResources ) {
+			$detector = DeviceDetection::factory();
+			foreach ( $detector->getCssFiles() as $file ) {
+				$resourceLoader->register( "mobile.device.$file",
+					$wgMFMobileResourceBoilerplate +
+						array(
+							'styles' => array( "stylesheets/devices/{$file}.css" ),
+						)
+				);
+			}
 		}
 
 		// disable event logging module on mobile
