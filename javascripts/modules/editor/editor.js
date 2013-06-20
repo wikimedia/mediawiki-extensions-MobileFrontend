@@ -28,7 +28,11 @@
 		$( '#ca-edit' ).addClass( 'enabled' );
 		addEditButton( 0, '#ca-edit' );
 		$( '.section_heading' ).each( function( i ) {
-			addEditButton( i + 1, this );
+			// Avoid Bug 49780
+			// FIXME: Addressing bug 40678 will render this unnecessary
+			if ( $( this ).attr( 'id' ) !== 'section_language' ) {
+				addEditButton( i + 1, this );
+			}
 		} );
 	}
 
