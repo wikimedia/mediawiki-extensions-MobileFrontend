@@ -204,12 +204,10 @@ class DeviceDetection implements IDeviceDetector {
 	private static $formats = array (
 		'generic' => array (
 			'view_format' => 'html',
-			'css_file_name' => '',
 		),
 
 		'android' => array (
 			'view_format' => 'html',
-			'css_file_name' => '',
 		),
 		'blackberry' => array (
 			'view_format' => 'html',
@@ -245,15 +243,12 @@ class DeviceDetection implements IDeviceDetector {
 		),
 		'palm_pre' => array (
 			'view_format' => 'html',
-			'css_file_name' => '',
 		),
 		'webkit' => array (
 			'view_format' => 'html',
-			'css_file_name' => '',
 		),
 		'wml' => array (
 			'view_format' => 'wml',
-			'css_file_name' => '',
 		),
 	);
 
