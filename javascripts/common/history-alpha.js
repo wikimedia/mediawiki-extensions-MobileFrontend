@@ -36,7 +36,7 @@
 		// Bind to future StateChange Events
 		History.Adapter.bind( window, 'statechange', function(){
 			var s = History.getState();
-			new Page( { title: s.title, el: $( '#content' ) } ).on( 'error', function() {
+			new Page( { title: s.title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
 				window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
 			} );
 		} );

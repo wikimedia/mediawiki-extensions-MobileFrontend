@@ -174,7 +174,7 @@
 					// log success!
 					self.log( 'success' );
 					M.history.invalidateCachedPage( title );
-					new Page( { title: title, el: $( '#content' ) } );
+					new Page( { title: title, el: $( '#content_wrapper' ) } );
 					M.router.navigate( '' );
 					self.hide();
 					popup.show(
