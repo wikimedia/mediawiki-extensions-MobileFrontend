@@ -127,10 +127,7 @@
 				attr( 'accept', 'image/*;' ).
 				on( 'change', function() {
 					var nagCount = parseInt( M.settings.getUserSetting( 'uploadNagCount' ) || 0, 10 ),
-						shouldNag = (
-							mw.config.get( 'wgMFMode' ) !== 'stable' &&
-							parseInt( mw.config.get( 'wgUserEditCount' ), 10 ) < 3
-						),
+						shouldNag = parseInt( mw.config.get( 'wgUserEditCount' ), 10 ) < 3,
 						fileReader = new FileReader(), nagOverlay;
 
 					self.preview = new PhotoUploaderPreview( { log: self.log } );
