@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1AW-Nl8",
+        "filename": "includes/skins/SkinMobileWML.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-06-21T17:27:51Z",
+      "side": 1,
+      "message": "why create a new variable $wap for this instead of just passing true? Also, should we have a \"mode\" setting instead of a boolean, and pass the word \"wap\"? This way we could later add another mode of operations. But this is up for discussion.",
+      "revId": "9957c3d7981150646a8012f895067406cafeae55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
