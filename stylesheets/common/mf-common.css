@@ -19,6 +19,10 @@ input {
 textarea {
   padding: 5px 0 5px 5px;
 }
+input,
+textarea {
+  font-size: 1.11em;
+}
 input:not([type=submit]),
 textarea {
   background: #fff;

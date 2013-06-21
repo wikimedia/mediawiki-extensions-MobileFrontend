@@ -1,7 +1,7 @@
 @import "../mf-variables.less";
 
 html {
-	font-size: 90%; /* default browser size is 16px (12pt - our @baseFontSize) */
+	font-size: 100% * @fontScalingFactor; /* default browser size is 16px (12pt - our @baseFontSize) */
 }
 
 @bodyLineHeight: ( @baseFontSize / 3 ) * 4; /* = 16pt */
@@ -118,7 +118,6 @@ body.no-margins {
 
 input.search {
 	font-family: @fontFamily;
-	font-size: @baseFontSize;
 }
 
 @media all and (max-width: 280px) {
