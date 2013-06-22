@@ -98,6 +98,7 @@ ul.a-to-z li a.title {
 }
 .mw-mf-overlay ul.a-to-z li .listThumb {
   width: 40px;
+  height: 100%;
   margin-left: -55px;
 }
 .mw-mf-overlay ul.a-to-z li a.title {

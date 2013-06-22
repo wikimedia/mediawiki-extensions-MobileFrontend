@@ -1,3 +1,4 @@
+// FIXME: Refactor to use modules/nearby/Nearby
 ( function( M, $ ) {
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 	endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),

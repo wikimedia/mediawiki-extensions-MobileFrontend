@@ -6,6 +6,9 @@
 	</div>
 </div>
 {{/error}}
+{{#loadingMessage}}
+<div class="content loading">{{loadingMessage}}</div>
+{{/loadingMessage}}
 <ul class="page-list a-to-z">
 	{{#pages}}
 	<li title="{{title}}">

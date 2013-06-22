@@ -341,11 +341,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.alpha.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
+		'templates' => array(
+			'overlays/nearby',
+		),
+	),
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta',
 			'mobile.history',
+			'mobile.alpha.plumbing',
+			'mobile.nearby',
 		),
 		'messages' => array(
 
@@ -354,9 +361,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// history-alpha.js
 			'mobile-frontend-language-article-heading',
+
+			// nearbypages.js
+			'mobile-frontend-nearby-to-page',
 		),
 		'styles' => array(
 			'stylesheets/modules/mf-tables.css',
+			'stylesheets/modules/nearbypages.css',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-inline-style-scrubber.js',
@@ -364,6 +375,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-tables.js',
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
+			'javascripts/modules/nearbypages.js'
 		),
 	),
 
@@ -577,6 +589,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// preview.js
 			'mobile-frontend-ajax-preview-loading',
+			'mobile-frontend-nearby-directions',
+			'mobile-frontend-nearby-link',
 		),
 		'scripts' => array(
 			'javascripts/specials/overlays/preview.js',
@@ -600,7 +614,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable.common',
 			'mobile.nearby.styles',
@@ -609,22 +623,36 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.pagelist.styles',
 		),
 		'messages' => array(
-			'mobile-frontend-nearby-error',
-			'mobile-frontend-nearby-error-guidance',
-			'mobile-frontend-nearby-refresh',
-			'mobile-frontend-nearby-title',
-			'mobile-frontend-nearby-loading',
+			// NearbyApi.js
 			'mobile-frontend-nearby-distance',
 			'mobile-frontend-nearby-distance-meters',
-			'mobile-frontend-nearby-lookup-ui-error',
-			'mobile-frontend-nearby-lookup-ui-error-guidance',
+			// other
+			'mobile-frontend-nearby-error',
+			'mobile-frontend-nearby-error-guidance',
+			'mobile-frontend-nearby-title',
+			'mobile-frontend-nearby-loading',
 			'mobile-frontend-nearby-noresults',
 			'mobile-frontend-nearby-noresults-guidance',
-			'mobile-frontend-nearby-link',
-			'mobile-frontend-nearby-directions',
 		),
 		'scripts' => array(
 			'javascripts/modules/nearby/NearbyApi.js',
+			'javascripts/modules/nearby/Nearby.js',
+		),
+	),
+
+	'mobile.nearby.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.nearby',
+		),
+		'messages' => array(
+			// specials/nearby.js
+			'mobile-frontend-nearby-refresh',
+			'mobile-frontend-nearby-lookup-ui-error',
+			'mobile-frontend-nearby-lookup-ui-error-guidance',
+			'mobile-frontend-nearby-requirements',
+			'mobile-frontend-nearby-requirements-guidance',
+		),
+		'scripts' => array(
 			'javascripts/specials/nearby.js',
 		),
 		// stop flash of unstyled content when loading from cache

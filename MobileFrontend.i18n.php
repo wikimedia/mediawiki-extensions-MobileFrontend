@@ -123,6 +123,9 @@ $messages['en'] = array (
 
 	'mobile-frontend-user-cta' => 'Please login or sign up to see your notifications.',
 
+	// nearby overlay
+	'mobile-frontend-nearby-to-page' => 'The following pages are related to $1 by their geographical location',
+
 	// nearby
 	'mobile-frontend-nearby-title' => 'Nearby',
 	'mobile-frontend-nearby-loading' => 'Loading topics near your current location',
@@ -504,6 +507,7 @@ See also:
 	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved.
 {{Identical|Saving}}',
 	'mobile-frontend-user-cta' => 'Appears when you click user icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
+	'mobile-frontend-nearby-to-page' => 'Header that describes that the pages are related as they have locations near the location of the current article',
 	'mobile-frontend-nearby-title' => 'Title of Special:Nearby.
 {{Identical|Nearby}}',
 	'mobile-frontend-nearby-loading' => 'Informative message telling user that their location is being looked up',
