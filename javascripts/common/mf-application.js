@@ -8,8 +8,7 @@
 		eventEmitter = new EventEmitter(),
 		$viewport, viewport,
 		template,
-		templates = {},
-		scrollY;
+		templates = {};
 
 	/**
 	 * See EventEmitter#on.
@@ -83,12 +82,6 @@
 
 	function supportsGeoLocation() {
 		return !!navigator.geolocation;
-	}
-
-	// Try to scroll and hide URL bar
-	scrollY = window.scrollY || 0;
-	if( !window.location.hash && scrollY < 10 ) {
-		window.scrollTo( 0, 1 );
 	}
 
 	function lockViewport() {
