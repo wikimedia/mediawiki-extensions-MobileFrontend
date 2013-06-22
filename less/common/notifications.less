@@ -25,13 +25,18 @@
 	#mf-notification,
 	.drawer {
 		display: block;
-		bottom: -100px;
+		/* we can't determine the actual size of the drawer in CSS, so this is
+		 * an estimate; it doesn't have to be exact because it's used only for
+		 * the sliding animation, not for hiding the drawer */
+		bottom: -11em;
 		opacity: 0;
 		.transition( all, .2s );
 
 		&.visible {
 			opacity: 1;
-			.transform( translate3d(0, -98px, 0) );
+			/* -0.2em to avoid a weird glitch in some browsers where the popup moves
+			 * slightly when scrolling */
+			.transform( translate3d(0, -10.8em, 0) );
 		}
 	}
 }
