@@ -4,6 +4,7 @@ This file should not need to exist
 IMPORTANT: do not use selectors containing attribute notation e.g. [style] [colspan]
         as they are known to damage the ios app
 */
+@import "../mf-variables.less";
 
 code,
 pre {
@@ -113,4 +114,16 @@ table.infobox th {
 	-moz-column-width: 35em;
 	-webkit-column-width: 35em;
 	column-width: 35em;
+}
+
+/* Tablet specific styling */
+@media all and (min-width: 768px) {
+	// FIXME [Templates]: Inline styles force us to use !important
+	table.infobox {
+		max-width: 400px;
+		width: auto !important;
+		float: right !important;
+		margin-left: @contentMarginRight !important;
+		clear: right !important;
+	}
 }
