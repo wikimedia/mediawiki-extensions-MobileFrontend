@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1TDHJps",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-24T19:09:34Z",
+      "side": 1,
+      "message": "remove this line and friends instead",
+      "revId": "4cf3ff865870d6df4e41cf58da3babcd78ddb026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1fDMfr8",
+        "filename": "includes/DeviceDetection.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-24T19:09:34Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be better to just rely on it being set?",
+      "revId": "4cf3ff865870d6df4e41cf58da3babcd78ddb026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
