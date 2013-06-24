@@ -6,7 +6,7 @@
 		useFuzzyLinkHijacking = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' )[''];
 
 	if ( history.hijackLinks ) {
-		history.hijackLinks( $( '#content_0' ), useFuzzyLinkHijacking );
+		history.hijackLinks( $( '#content' ), useFuzzyLinkHijacking );
 
 		M.on( 'section-rendered', function( $container ) {
 			history.hijackLinks( $container, useFuzzyLinkHijacking );
