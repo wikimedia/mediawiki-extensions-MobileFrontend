@@ -448,6 +448,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-ownership-bullet-one',
 			'mobile-frontend-photo-ownership-bullet-two',
 			'mobile-frontend-photo-ownership-bullet-three',
+			'mobile-frontend-photo-upload-error-file-type',
 
 			// PhotoUploadProgress.js
 			'mobile-frontend-image-uploading-wait',
