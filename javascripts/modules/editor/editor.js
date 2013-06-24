@@ -26,7 +26,15 @@
 			} ).show();
 		} );
 		$( '#ca-edit' ).addClass( 'enabled' );
-		addEditButton( 0, '#ca-edit' );
+
+		if ( $( '#content_0' ).text() ) {
+			// if lead section is not empty, open editor with lead section
+			addEditButton( 0, '#ca-edit' );
+		} else {
+			// if lead section is empty, open editor with first section
+			addEditButton( 1, '#ca-edit' );
+		}
+
 		$( '.section_heading' ).each( function( i ) {
 			// Avoid Bug 49780
 			// FIXME: Addressing bug 40678 will render this unnecessary
