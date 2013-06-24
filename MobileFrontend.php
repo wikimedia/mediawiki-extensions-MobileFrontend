@@ -170,6 +170,12 @@ $wgMFPhotoUploadEndpoint = '';
 $wgMFNearbyEndpoint = '';
 
 /**
+ * An optional alternative api to query for nearby pages in a different namespace
+ * @var Integer
+ */
+$wgMFNearbyNamespace = NS_MAIN;
+
+/**
  * The wiki id/dbname for where photos are uploaded, if photos are uploaded to
  * a wiki other than the local wiki (eg commonswiki).
  * @var string
