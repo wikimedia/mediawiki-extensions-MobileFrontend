@@ -78,7 +78,7 @@ body.navigation-enabled #mw-mf-page-center {
   background-image: url(images/success.png);
 }
 .alert h2 {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Nimbus Sans L", "Arial", "Liberation Sans", sans-serif;
   font-size: 100%;
   font-weight: bold;
   margin: 0 0 8px 0;

@@ -5,7 +5,7 @@ html {
 }
 /* = 16pt */
 body {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Nimbus Sans L", "Arial", "Liberation Sans", sans-serif;
   font-size: 1em;
   line-height: 1.3333333333333333em;
   color: #252525;
@@ -99,7 +99,7 @@ body.no-margins #content_wrapper > .content {
   margin: 15px 0 15px 0;
 }
 input.search {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Nimbus Sans L", "Arial", "Liberation Sans", sans-serif;
   font-size: 1em;
 }
 @media all and (max-width: 280px) {
