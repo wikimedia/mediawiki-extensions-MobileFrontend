@@ -95,3 +95,13 @@ table.infobox th {
   -webkit-column-width: 35em;
   column-width: 35em;
 }
+/* Tablet specific styling */
+@media all and (min-width: 768px) {
+  table.infobox {
+    max-width: 400px;
+    width: auto !important;
+    float: right !important;
+    margin-left: 23px !important;
+    clear: right !important;
+  }
+}
