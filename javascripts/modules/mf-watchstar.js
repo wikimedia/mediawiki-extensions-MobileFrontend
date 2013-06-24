@@ -172,15 +172,12 @@ var api = M.require( 'api' ), w = ( function() {
 				createWatchListButton( container, title, status[ title ] );
 			} );
 		} else {
-			$( createButton( container ) ).click( function( ev ) {
+			$( createButton( container ) ).click( function() {
 				if ( !drawer.isVisible() ) {
 					// log if enabled
 					logWatchEvent( 2 );
 					drawer.show();
-				} else {
-					drawer.hide();
 				}
-				ev.stopPropagation();
 			} );
 		}
 	}

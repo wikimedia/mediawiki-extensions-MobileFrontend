@@ -8,8 +8,7 @@
 
 		$( '#user-button' ).on( 'click', function( ev ) {
 			ev.preventDefault();
-			ev.stopPropagation();
-			drawer.toggle();
+			drawer.show();
 		} );
 	}
 }( mw.mobileFrontend, jQuery ) );

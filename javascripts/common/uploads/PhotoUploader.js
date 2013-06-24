@@ -111,13 +111,8 @@
 					returnToQuery: 'article_action=photo-upload'
 				} );
 				this.$el.click( function( ev ) {
-					if ( !ctaDrawer.isVisible() ) {
-						ctaDrawer.show();
-					} else {
-						ctaDrawer.hide();
-					}
+					ctaDrawer.show();
 					ev.preventDefault();
-					ev.stopPropagation();
 				} );
 				return;
 			}

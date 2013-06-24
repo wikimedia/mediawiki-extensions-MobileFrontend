@@ -13,14 +13,18 @@ var View = M.require( 'view' ),
 				ev.preventDefault();
 				self.hide();
 			} );
-			$( window ).on( 'scroll click', function() {
-				self.hide();
-			} );
 			this.appendTo( '#mw-mf-page-center' );
 		},
 
 		show: function() {
-			this.$el.addClass( 'visible' );
+			var self = this;
+			if ( !this.isVisible() ) {
+				this.$el.addClass( 'visible' );
+				// ignore a possible click that called show()
+				setTimeout( function() {
+					$( window ).one( 'scroll click', $.proxy( self, 'hide' ) );
+				}, 0 );
+			}
 		},
 
 		hide: function() {
@@ -29,14 +33,6 @@ var View = M.require( 'view' ),
 
 		isVisible: function() {
 			return this.$el.hasClass( 'visible' );
-		},
-
-		toggle: function() {
-			if ( this.isVisible() ) {
-				this.hide();
-			} else {
-				this.show();
-			}
 		}
 	} );
 
