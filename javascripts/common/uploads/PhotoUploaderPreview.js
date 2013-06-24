@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 	var View = M.require( 'view' ),
+		popup = M.require( 'notifications' ),
 		Overlay = M.require( 'Overlay' ),
 		LearnMoreOverlay = M.require( 'uploads/LearnMoreOverlay' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
@@ -60,7 +61,8 @@
 		},
 
 		setImageUrl: function( url ) {
-			var self = this;
+			var self = this, $img;
+
 			this.imageUrl = url;
 			this.overlay.$( '.loading' ).remove();
 			this.overlay.$( 'a.help' ).on( 'click', function( ev ) {
@@ -77,7 +79,13 @@
 				overlay.show();
 				self.log( { action: 'whatDoesThisMean' } );
 			} );
-			$( '<img>' ).attr( 'src', url ).prependTo( this.overlay.$( '.photoPreview' ) );
+			$img = $( '<img>' ).attr( 'src', url ).prependTo( this.overlay.$( '.photoPreview' ) );
+
+			// When using a bad filetype close the overlay
+			$img.on( 'error', function() {
+				popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
+				self.overlay.hide();
+			} );
 		}
 	} );
 
