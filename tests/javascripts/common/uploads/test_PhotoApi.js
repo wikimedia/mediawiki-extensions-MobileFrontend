@@ -108,8 +108,8 @@
 			longDescription += 'a';
 		}
 		name = photo.generateFileName( longDescription, '.jpg', date );
-		strictEqual( name.length, 240, 'Check file name was shortened to the minimum length' );
-		strictEqual( name.substr( 233, 7 ), '-51.jpg', 'ends with date' );
+		strictEqual( name.length, 230, 'Check file name was shortened to the minimum length' );
+		strictEqual( name.substr( 223, 7 ), '-51.jpg', 'ends with date' );
 	} );
 
 	QUnit.test( 'generateFileName with new lines', 1, function() {

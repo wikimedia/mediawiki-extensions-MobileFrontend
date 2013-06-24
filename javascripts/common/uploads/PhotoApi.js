@@ -56,7 +56,8 @@
 	 * @return {String} a legal filename
 	 */
 	function generateFileName( description, fileSuffix, date ) {
-		var allowedLength = 240, // 240 bytes maximum enforced by MediaWiki
+		// 240 bytes maximum enforced by MediaWiki - allow 10bytes margin of error
+		var allowedLength = 230,
 			name, suffix;
 
 		fileSuffix = fileSuffix || '.jpg';
