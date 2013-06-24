@@ -97,7 +97,7 @@
 				errorMsg += 'Filename exists';
 				humanErrorMsg = mw.msg( 'mobile-frontend-photo-upload-error-filename' );
 			} else if ( warnings.badfilename ) {
-				errorMsg += 'Bad filename';
+				errorMsg = 'Bad filename: [' + warnings.badfilename + ']';
 			} else if ( warnings.emptyfile ) {
 				errorMsg += 'Empty file';
 			} else if ( warnings['filetype-unwanted-type'] ) {
