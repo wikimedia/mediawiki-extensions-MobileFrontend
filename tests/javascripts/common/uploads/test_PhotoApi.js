@@ -85,6 +85,13 @@
 			'Check file name is description with appended date' );
 	} );
 
+	QUnit.test( 'generateFileName with double apostrophes', 1, function() {
+		var date = new Date( 2010, 9, 15, 12, 9 ),
+			name = photo.generateFileName( "Image of '' the double apostrophe", '.jpg', date );
+		strictEqual( name, 'Image of \'_ the double apostrophe 2010-10-15 12-09.jpg',
+			'Check double apostrophe stripped out' );
+	} );
+
 	QUnit.test( 'generateFileName test padding', 1, function() {
 		var date = new Date( 2013, 2, 1, 12, 51 ), // note 0 = january
 			name = photo.generateFileName( 'Tomasz eating bacon next to a dinosaur', '.jpg', date );
