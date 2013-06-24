@@ -8,25 +8,20 @@ class SkinMobile extends SkinMinerva {
 	 */
 	protected $extMobileFrontend;
 	protected $hookOptions;
+	protected $mode = 'stable';
 
 	/** @var array of classes that should be present on the body tag */
 	private $pageClassNames = array();
 
+	protected function getMode() {
+		return $this->mode;
+	}
+
 	public function __construct( ExtMobileFrontend $extMobileFrontend ) {
 		$this->setContext( $extMobileFrontend );
 		$this->extMobileFrontend = $extMobileFrontend;
-		$ctx = MobileContext::singleton();
-		if ( $ctx->isBetaGroupMember() ) {
-			$this->template = 'MobileTemplateBeta';
-		}
 		$this->addPageClass( 'mobile' );
-		if ( $ctx->isAlphaGroupMember() ) {
-			$this->addPageClass( 'alpha' );
-		} else if ( $ctx->isBetaGroupMember() ) {
-			$this->addPageClass( 'beta' );
-		} else {
-			$this->addPageClass( 'stable' );
-		}
+		$this->addPageClass( $this->getMode() );
 	}
 
 	public function outputPage( OutputPage $out = null ) {
@@ -96,111 +91,15 @@ class SkinMobile extends SkinMinerva {
 		return $className . implode( ' ', array_keys( $this->pageClassNames ) );
 	}
 
-	public function initPage( OutputPage $out ) {
-		parent::initPage( $out );
-		$ctx = MobileContext::singleton();
-		if ( $ctx->isBetaGroupMember() ) {
-			$out->addModuleStyles( 'mobile.styles.beta' );
-		}
+	protected function getSearchPlaceHolderText() {
+		return wfMessage( 'mobile-frontend-placeholder' )->escaped();
 	}
 
 	public function prepareData( BaseTemplate $tpl ) {
 		parent::prepareData( $tpl );
-		$context = MobileContext::singleton();
-		$inBeta = $context->isBetaGroupMember();
-		$menuHeaders = true;
 		$search = $tpl->data['searchBox'];
-		if ( $context->isAlphaGroupMember() ) {
-			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-alpha' )->escaped();
-		} else if ( $inBeta ) {
-			$search['placeholder'] = wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
-		} else { // stable mode
-			$menuHeaders = false;
-		}
-		$tpl->set( '_show_menu_headers', $menuHeaders );
+		$search['placeholder'] = $this->getSearchPlaceHolderText();
 		$tpl->set( 'searchBox', $search );
-
-		if ( $inBeta ) {
-			$this->prepareDataBeta( $tpl );
-		}
-	}
-
-	/**
-	 * Prepares data required by the mobile beta skin only. This runs after prepareData
-	 * @param $tpl BaseTemplate
-	 */
-	protected function prepareDataBeta( BaseTemplate $tpl ) {
-		$tpl->set( 'site_urls', array(
-			array(
-				'href' => Title::newFromText( 'About', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-about' )->escaped(),
-			),
-			array(
-				'href' => Title::newFromText( 'General_disclaimer', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->escaped(),
-			),
-		) );
-
-		// Reuse template data variable from SkinTemplate to construct page menu
-		$menu = array();
-		$actions = $tpl->data['content_navigation']['actions'];
-		$namespaces = $tpl->data['content_navigation']['namespaces'];
-
-		// empty placeholder for edit photos which both require js
-		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '' );
-		$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '' );
-
-		if ( isset( $namespaces['talk'] ) ) {
-			$menu['talk'] = $namespaces['talk'];
-			if ( isset( $tpl->data['_talkdata'] ) ) {
-				$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
-				$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
-			}
-		}
-
-		$watchTemplate = array(
-			'id' => 'ca-watch',
-			'class' => 'watch-this-article',
-		);
-		// standardise watch article into one menu item
-		if ( isset( $actions['watch'] ) ) {
-			$menu['watch'] = array_merge( $actions['watch'], $watchTemplate );
-		} else if ( isset( $actions['unwatch'] ) ) {
-			$menu['watch'] = array_merge( $actions['unwatch'], $watchTemplate );
-			$menu['watch']['class'] .= ' watched';
-		} else {
-			// placeholder for not logged in
-			$menu['watch'] = $watchTemplate;
-			// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
-			$menu['watch']['text'] = '';
-			$menu['watch']['class'] = 'cta';
-		}
-
-		$tpl->set( 'page_actions', $menu );
-
-		$this->prepareUserButton( $tpl );
-	}
-
-	/**
-	 * Prepares the user button.
-	 * @param $tpl BaseTemplate
-	 */
-	protected function prepareUserButton( $tpl ) {
-		if ( class_exists( 'MWEchoNotifUser' ) ) {
-			$user = $this->getUser();
-			// FIXME: cap higher counts
-			$count = $user->isLoggedIn() ? MWEchoNotifUser::newFromUser( $user )->getNotificationCount() : 0;
-
-			$tpl->set( 'userButton',
-				Html::openElement( 'a', array(
-					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
-					'href' => SpecialPage::getTitleFor( 'Notifications' )->getLocalURL(),
-					'id'=> 'user-button',
-				) ) .
-				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $count ) .
-				Html::closeElement( 'a' )
-			);
-		}
 	}
 
 	public function getSkinConfigVariables() {
@@ -223,7 +122,6 @@ class SkinMobile extends SkinMinerva {
 
 		$ctx = MobileContext::singleton();
 		$out = $this->getOutput();
-		$inAlpha = $ctx->isAlphaGroupMember();
 		$device = $ctx->getDevice();
 
 		// add device specific css file - add separately to avoid cache fragmentation
@@ -234,31 +132,22 @@ class SkinMobile extends SkinMinerva {
 		}
 
 		$modules = parent::getDefaultModules();
-		$mode = 'stable';
-		if ( $ctx->isBetaGroupMember() ) {
-			$modules['beta'] = array( 'mobile.beta' );
-			$mode = 'beta';
-		}
-		if ( $inAlpha ) {
-			$modules['alpha'] = array( 'mobile.alpha' );
-			$mode = 'alpha';
-		}
 
 		// main page special casing
 		if ( $this->getTitle()->isMainPage() ) {
-			if ( $inAlpha ) {
-				$out->addModuleStyles( 'mobile.mainpage.styles' );
-			} else {
-				$modules['mainpage'] = array( 'mobile.mainpage.scripts' );
-			}
+			$modules['mainpage'] = array( 'mobile.mainpage.scripts' );
 		}
 
 		// flush unnecessary modules
 		$modules['content'] = array();
 		$modules['legacy'] = array();
 
-		wfRunHooks( 'EnableMobileModules', array( $out, $mode ) );
+		$this->addExternalModules( $out );
 		return $modules;
+	}
+
+	private function addExternalModules( $out ) {
+		wfRunHooks( 'EnableMobileModules', array( $out, $this->getMode() ) );
 	}
 
 	protected function prepareTemplate() {
@@ -472,32 +361,8 @@ HTML;
 		$isSpecialPage = $title->isSpecialPage();
 		$user = $this->getUser();
 		$ctx = MobileContext::singleton();
-		$inAlpha = $ctx->isAlphaGroupMember();
 
-		$postBodyText = '';
 		if ( !$isSpecialPage ) {
-
-			// talk page link for logged in alpha users
-			if ( $inAlpha && $user->isLoggedIn() && !$title->isTalkPage() ) {
-				$talkTitle = $title->getTalkPage();
-				if ( $talkTitle->getArticleID() ) {
-					$dbr = wfGetDB( DB_SLAVE );
-					$numTopics = $dbr->selectField( 'page_props', 'pp_value',
-						array( 'pp_page' => $talkTitle->getArticleID(), 'pp_propname' => 'page_top_level_section_count' ),
-						__METHOD__
-					);
-				} else {
-					$numTopics = 0;
-				}
-				if ( $numTopics ) {
-					$talkLabel = $this->getLanguage()->formatNum( $numTopics );
-					$class = 'count';
-				} else {
-					$talkLabel = wfMessage( 'mobile-frontend-talk-overlay-header' );
-					$class = '';
-				}
-				$tpl->set( '_talkdata', array( 'text' => $talkLabel, 'class' => $class ) );
-			}
 
 			// add last modified timestamp
 			$revId = $this->getRevisionId();
@@ -507,16 +372,15 @@ HTML;
 				$this->getLanguage()->userTime( $timestamp, $user )
 			)->parse();
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
-			$historyUrl = $inAlpha ? SpecialPage::getTitleFor( 'MobileDiff', $revId )->getLocalUrl() :
-				$ctx->getMobileUrl( $title->getFullURL( 'action=history' ) );
-			$postBodyText = Html::element( 'a', array(
+			$historyUrl = $ctx->getMobileUrl( $title->getFullURL( 'action=history' ) );
+			$historyLink = array(
 				'id' => 'mw-mf-last-modified',
 				'data-timestamp' => $timestamp,
-				'href' => $historyUrl
-			), $lastModified );
+				'href' => $historyUrl,
+				'text' => $lastModified,
+			);
+			$tpl->set( 'historyLink', $historyLink );
 		}
-
-		$tpl->set( 'postbodytext', $postBodyText );
 	}
 
 	/**

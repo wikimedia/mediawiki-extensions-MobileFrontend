@@ -89,6 +89,15 @@ class MinervaTemplate extends BaseTemplate {
 		?></ul><?php
 	}
 
+	protected function renderHistoryLink( $data ) {
+		if ( isset( $data['historyLink'] ) ) {
+			$historyLink = $data['historyLink'];
+			$historyLabel = $historyLink['text'];
+			unset( $historyLink['text'] );
+			echo Html::element( 'a', $historyLink, $historyLabel );
+		}
+	}
+
 	protected function renderContentWrapper( $data ) {
 		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		?>
@@ -101,49 +110,43 @@ class MinervaTemplate extends BaseTemplate {
 					}
 					echo $data[ 'bodytext' ];
 					$this->renderLanguages();
-					echo $data['postbodytext'];
+					$this->renderHistoryLink( $data );
 				?>
 			</div><!-- close #content -->
 		</div><!-- close #content_wrapper -->
 		<?php
 	}
 
+	protected function renderMainMenu( $data ) {
+		?>
+		<ul id="mw-mf-menu-main">
+		<?php
+		foreach( $this->getDiscoveryTools() as $key => $val ):
+			echo $this->makeListItem( $key, $val );
+		endforeach;
+		?>
+		</ul>
+		<ul>
+		<?php
+		foreach( $this->getPersonalTools() as $key => $val ):
+			echo $this->makeListItem( $key, $val );
+		endforeach;
+		?>
+		</ul>
+		<?php
+	}
+
 	protected function render( $data ) { // FIXME: replace with template engines
 		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
-		$showMenuHeaders = isset( $this->data['_show_menu_headers'] ) && $this->data['_show_menu_headers'];
 
 		// begin rendering
 		echo $data[ 'headelement' ];
 		?>
 		<div id="mw-mf-viewport">
 			<div id="mw-mf-page-left">
-			<?php if ( $showMenuHeaders ) { ?>
-				<h2><?php echo wfMessage( 'mobile-frontend-main-menu-discovery' )->text() ?></h2>
-			<?php } ?>
-				<ul id="mw-mf-menu-main">
 				<?php
-				foreach( $this->getDiscoveryTools() as $key => $val ):
-					echo $this->makeListItem( $key, $val );
-				endforeach;
+					$this->renderMainMenu( $data );
 				?>
-				</ul>
-				<?php if ( $showMenuHeaders ) { ?>
-				<h2><?php echo wfMessage( 'mobile-frontend-main-menu-personal' )->text() ?></h2>
-				<?php } ?>
-				<ul>
-				<?php
-				foreach( $this->getPersonalTools() as $key => $val ):
-					echo $this->makeListItem( $key, $val );
-				endforeach;
-				?>
-				</ul>
-				<ul class="hlist">
-				<?php
-				foreach( $this->getSiteLinks() as $key => $val ):
-					echo $this->makeListItem( $key, $val );
-				endforeach;
-				?>
-				</ul>
 			</div>
 			<div id='mw-mf-page-center'>
 				<!-- start -->
