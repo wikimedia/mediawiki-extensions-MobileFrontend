@@ -62,6 +62,8 @@
 		fileSuffix = fileSuffix || '.jpg';
 		date = date || new Date();
 		name = description.replace( /[\x1B\n\x7f\.\[#<>\[\]\|\{\}\/:]/g, '-' );
+		// http://commons.wikimedia.org/wiki/MediaWiki:Titleblacklist-custom-double-apostrophe
+		name = name.replace( /''/g, '\'_' );
 
 		function pad( number ) {
 			return number < 10 ? '0' + number : number;
