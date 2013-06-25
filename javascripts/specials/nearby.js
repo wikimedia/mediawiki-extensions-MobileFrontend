@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 	endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
+	ns = mw.config.get( 'wgMFNearbyNamespace' ),
 	overlay,
 	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
 
@@ -170,7 +171,7 @@ $( function() {
 				format: 'json',
 				ggscoord: lat + '|' + lng,
 				ggsradius: range,
-				ggsnamespace: 0,
+				ggsnamespace: ns,
 				ggslimit: limit
 			}
 		} ).done( function( data ) {
