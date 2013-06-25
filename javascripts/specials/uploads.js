@@ -111,6 +111,9 @@ var
 						} );
 					} else {
 						self.$end.remove();
+						if ( self.isEmpty() ) {
+							self.emit( 'empty' );
+						}
 					}
 				} );
 			}
@@ -148,7 +151,6 @@ var
 		userGallery = new PhotoList().
 			appendTo( '#content' ).
 			on( 'empty', function() {
-				$( '.ctaUploadPhoto h2' ).hide(); // hide the count if 0 uploads have been made
 				new CarouselOverlay( {
 					pages: [
 						{
