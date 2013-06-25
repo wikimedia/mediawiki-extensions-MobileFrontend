@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "D1vLNoDI",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-06-25T18:15:06Z",
+      "side": 1,
+      "message": "For the same reason we don\u0027t use !empty(). It isn\u0027t about the least key strokes, it\u0027s about treating it like an array and not silently tolerating so many falsey/bottom values.\n\nThough unfortunately count() is only slightly better. It appears that it, too, is quite tolerant. It returns 1 for non-arrays.",
+      "parentUuid": "D1vKD4M0",
+      "revId": "981154e0c86cebd4365bdacc67b917b4ea0f0381",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "D1lIcdL4",
         "filename": "includes/modules/MFResourceLoaderModule.php",
         "patchSetId": 1
