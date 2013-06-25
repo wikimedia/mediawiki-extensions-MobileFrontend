@@ -2,7 +2,8 @@ a.watch-this-article.loading {
   background-image: url(../common/images/ajax-loader.gif);
   min-height: auto;
 }
-.animations .watch-this-article {
+.animations .beta .watch-this-article,
+.animations .alpha .watch-this-article {
   -webkit-backface-visibility: hidden;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
@@ -11,7 +12,8 @@ a.watch-this-article.loading {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.animations .watch-this-article.watched {
+.animations .beta .watch-this-article.watched,
+.animations .alpha .watch-this-article.watched {
   -webkit-transform: rotate(72deg);
   transform: rotate(72deg);
 }
