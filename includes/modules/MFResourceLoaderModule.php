@@ -146,10 +146,9 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	 * @return Integer: UNIX timestamp
 	 */
 	public function getModifiedTime( ResourceLoaderContext $context ) {
-		global $IP;
 		return max(
-			filemtime( "$IP/extensions/MobileFrontend/MobileFrontend.php" ),
-			filemtime( "$IP/extensions/MobileFrontend/MobileFrontend.i18n.php" )
+			filemtime( dirname( dirname( __DIR__ ) ) . "MobileFrontend.php" ),
+			filemtime( dirname( dirname( __DIR__ ) ) . "MobileFrontend.i18n.php" )
 		);
 	}
 }
