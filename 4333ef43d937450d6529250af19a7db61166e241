@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1aFhBq4",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-25T17:47:51Z",
+      "side": 1,
+      "message": "I don\u0027t like this. Desktop skin should inherit nothing that is mobile specific.\n\nAlso testing shows this breaks SkinMinerva",
+      "revId": "4333ef43d937450d6529250af19a7db61166e241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1rInmCA",
+        "filename": "includes/skins/SkinMobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-25T17:47:51Z",
+      "side": 1,
+      "message": "The formatter should not be part of the skin - it should be part of ParserOutput.",
+      "revId": "4333ef43d937450d6529250af19a7db61166e241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1vIAAG0",
+        "filename": "includes/skins/SkinMobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-25T17:47:51Z",
+      "side": 1,
+      "message": "I actually believe this belongs in ContextSource as it was before or at least a child of OutputPage since this already adds a lot of headers.\n\nA skin should not be aware of any headers whatsoever.\n\nMobileOutputPage extends OutputPage {\n\n}",
+      "revId": "4333ef43d937450d6529250af19a7db61166e241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1UFxQnY",
+        "filename": "includes/skins/SkinMobileWML.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-06-25T17:47:51Z",
+      "side": 1,
+      "message": "Should extend SkinMobile if anything...",
+      "revId": "4333ef43d937450d6529250af19a7db61166e241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
