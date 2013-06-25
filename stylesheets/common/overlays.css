@@ -107,6 +107,10 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   display: inline;
   color: #002BB8;
 }
+.mw-mf-overlay.list-overlay .mw-mf-overlay-footer,
+.mw-mf-overlay.list-overlay .mw-mf-overlay-header {
+  padding-left: 40px;
+}
 .mw-mf-overlay > ul {
   padding: 0;
   position: relative;

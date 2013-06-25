@@ -9,7 +9,7 @@
 			languagesText: mw.msg( 'mobile-frontend-language-footer' ),
 			placeholder: mw.msg( 'mobile-frontend-language-site-choose' )
 		},
-		className: 'language-overlay mw-mf-overlay',
+		className: 'language-overlay mw-mf-overlay list-overlay',
 		template: M.template.get( 'overlays/languages' ),
 		initialize: function( options ) {
 			if ( options.languages ) {
