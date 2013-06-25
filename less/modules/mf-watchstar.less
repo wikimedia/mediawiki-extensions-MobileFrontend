@@ -8,11 +8,14 @@ a.watch-this-article {
 	}
 }
 
-.animations .watch-this-article {
-	.transition( transform, .5s );
+.animations .beta,
+.animations .alpha {
+	.watch-this-article {
+		.transition( transform, .5s );
 
-	&.watched {
-		.transform( rotate(72deg) );
+		&.watched {
+			.transform( rotate(72deg) );
+		}
 	}
 }
 

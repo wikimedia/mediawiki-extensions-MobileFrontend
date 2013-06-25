@@ -124,7 +124,8 @@
 .slideable .slider.slider-right {
   left: 100%;
 }
-.animations .slideable .slider {
+.animations .beta .slideable .slider,
+.animations .alpha .slideable .slider {
   left: 0;
   -webkit-backface-visibility: hidden;
   -webkit-transition-property: all;
@@ -134,11 +135,13 @@
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.animations .slideable .slider.slider-left {
+.animations .beta .slideable .slider.slider-left,
+.animations .alpha .slideable .slider.slider-left {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
-.animations .slideable .slider.slider-right {
+.animations .beta .slideable .slider.slider-right,
+.animations .alpha .slideable .slider.slider-right {
   -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0);
 }

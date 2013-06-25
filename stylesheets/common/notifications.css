@@ -17,8 +17,10 @@
   z-index: 5;
   display: block;
 }
-.animations #mf-notification,
-.animations .drawer {
+.animations .beta #mf-notification,
+.animations .alpha #mf-notification,
+.animations .beta .drawer,
+.animations .alpha .drawer {
   display: block;
   /* we can't determine the actual size of the drawer in CSS, so this is
 		 * an estimate; it doesn't have to be exact because it's used only for
@@ -34,8 +36,10 @@
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.animations #mf-notification.visible,
-.animations .drawer.visible {
+.animations .beta #mf-notification.visible,
+.animations .alpha #mf-notification.visible,
+.animations .beta .drawer.visible,
+.animations .alpha .drawer.visible {
   opacity: 1;
   /* -0.2em to avoid a weird glitch in some browsers where the popup moves
 			 * slightly when scrolling */

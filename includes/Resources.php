@@ -265,7 +265,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/common/history-beta.js',
 			'javascripts/views/page.js',
-			'javascripts/common/application-beta.js',
 		),
 		'messages' => array(
 			// page.js and talk.js (alpha)
