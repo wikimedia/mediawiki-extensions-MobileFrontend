@@ -171,8 +171,7 @@ class MobileFrontendHooks {
 		);
 
 		// additional frameworks and fixtures we use in tests
-		// FIXME: Find a way to make this load before sibling dependencies without resorting to 0. prefix
-		$testModules['qunit']['0.mobile.tests.base'] = $testModuleBoilerplate + array(
+		$testModules['qunit']['mobile.tests.base'] = $testModuleBoilerplate + array(
 			'scripts' => array(
 				'tests/externals/sinon.js',
 				'tests/javascripts/fixtures.js',
@@ -193,7 +192,7 @@ class MobileFrontendHooks {
 				// if test files exist for given module, create a corresponding test module
 				if ( !empty( $testFiles ) ) {
 					$testModules['qunit']["$key.tests"] = $testModuleBoilerplate + array(
-						'dependencies' => array( '0.mobile.tests.base', $key ),
+						'dependencies' => array( 'mobile.tests.base', $key ),
 						'scripts' => $testFiles,
 					);
 				}
