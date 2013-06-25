@@ -213,7 +213,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'localBasePath' => $localBasePath,
 		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
-			'languageSection',
 			'overlays/languages',
 			'overlays/editor',
 			'overlays/editPreview',
@@ -224,6 +223,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'talkSection',
 			// page.js
 			'page',
+			'languageSection',
 		),
 		'messages' => array(
 			// editor.js
@@ -251,7 +251,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// page.js
 			'mobile-frontend-talk-overlay-header',
 			// history-beta.js
-			'mobile-frontend-language-header',
 			'mobile-frontend-language-article-heading',
 		),
 		'class' => 'MFResourceLoaderModule',
@@ -265,10 +264,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/common/history-beta.js',
 			'javascripts/views/page.js',
+			// Language specific code
+			'javascripts/common/languages/LanguageOverlay.js',
 		),
 		'messages' => array(
 			// page.js and talk.js (alpha)
 			'mobile-frontend-talk-overlay-header',
+			// LanguageOverlay.js
+			'mobile-frontend-language-header',
+			'mobile-frontend-language-site-choose',
+			'mobile-frontend-language-footer',
 		),
 	),
 
@@ -287,24 +292,20 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/PreviewOverlay.js',
 			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
-			'javascripts/modules/mf-languages.js',
+			'javascripts/modules/languages.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk.js',
 			'javascripts/common/user.js',
 			'javascripts/modules/search-pageimages.js',
+			'javascripts/modules/languages-preferred.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(
 			'pagetitle',
-			'mobile-frontend-language-header',
 
 			// for mf-toggle-dynamic.js
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
-
-			// for mf-languages.js
-			'mobile-frontend-language-site-choose',
-			'mobile-frontend-language-footer',
 
 			// for talk.js
 			'mobile-frontend-talk-explained',

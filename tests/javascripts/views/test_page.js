@@ -192,7 +192,7 @@ QUnit.test( 'render page from api (lead only)', 4, function() {
 	strictEqual( $container.find( '.section' ).last().find( 'li' ).length, 0, 'No languages' );
 } );
 
-QUnit.test( 'render page from api (multiple sections)', 18, function() {
+QUnit.test( 'render page from api (multiple sections)', 21, function() {
 	var $langs, $content;
 	new Page( { title: 'San Francisco', el: $container } );
 	strictEqual( $container.find( 'h1' ).text(), 'San Francisco', 'Check page title' );
@@ -214,9 +214,12 @@ QUnit.test( 'render page from api (multiple sections)', 18, function() {
 	// languages
 	$langs = $container.find( '.section' ).last().find( 'li' );
 	strictEqual( $langs.length, 3, '3 languages printed in list' );
-	strictEqual( $langs.eq( 0 ).find( 'a' ).text(), 'French (bonjour)' );
-	strictEqual( $langs.eq( 1 ).find( 'a' ).text(), 'Italian (ciao)' );
-	strictEqual( $langs.eq( 2 ).find( 'a' ).text(), 'Spanish (hola)' );
+	strictEqual( $langs.eq( 0 ).find( 'a' ).attr( 'title' ), 'bonjour' );
+	strictEqual( $langs.eq( 1 ).find( 'a' ).attr( 'title' ), 'ciao' );
+	strictEqual( $langs.eq( 2 ).find( 'a' ).attr( 'title' ), 'hola' );
+	strictEqual( $langs.eq( 0 ).find( 'a' ).text(), 'French' );
+	strictEqual( $langs.eq( 1 ).find( 'a' ).text(), 'Italian' );
+	strictEqual( $langs.eq( 2 ).find( 'a' ).text(), 'Spanish' );
 	strictEqual( $langs.eq( 0 ).find( 'a' ).attr( 'href' ), 'http://fr.wikipedia.org' );
 	strictEqual( $langs.eq( 0 ).find( 'a' ).attr( 'lang' ), 'fr' );
 } );
