@@ -390,3 +390,13 @@ $wgMFLeadPhotoUploadCssSelector = 'img, .navbox';
  * @var bool
  */
 $wgMFEnableCssAnimations = true;
+
+/**
+ * DB key of the category which members will never display mobile view
+ */
+$wgMFNoMobileCategory = false;
+
+/**
+ * Prefixed names of pages that will never display mobile view
+ */
+$wgMFNoMobilePages = array();

@@ -272,7 +272,7 @@ class MobileContext extends ContextSource {
 	 * @return bool Value for shouldDisplayMobileView()
 	 */
 	private function shouldDisplayMobileViewInternal() {
-		global $wgMobileUrlTemplate;
+		global $wgMobileUrlTemplate, $wgMFNoMobileCategory, $wgMFNoMobilePages;
 		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
 		$stableMode = !$this->isBetaGroupMember();
@@ -282,6 +282,31 @@ class MobileContext extends ContextSource {
 			// FIXME: redirect to last diff ?
 			 ( $action === 'history' ) ) {
 			return false;
+		}
+
+		// Check for blacklisted category membership
+		$title = $this->getTitle();
+		if ( $wgMFNoMobileCategory && $title ) {
+			$id = $title->getArticleID();
+			if ( $id ) {
+				$dbr = wfGetDB( DB_SLAVE );
+				if ( $dbr->selectField( 'categorylinks',
+					'cl_from',
+					array( 'cl_from' => $id, 'cl_to' => $wgMFNoMobileCategory ),
+					__METHOD__
+				) ) {
+					return false;
+				}
+			}
+		}
+		// ...and individual page blacklisting
+		if ( $wgMFNoMobilePages && $title ) {
+			$name = $title->getPrefixedText();
+			foreach ( $wgMFNoMobilePages as $page ) {
+				if ( $page === $name ) {
+					return false;
+				}
+			}
 		}
 
 		// May be overridden programmatically
