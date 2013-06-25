@@ -170,8 +170,8 @@ $wgMFPhotoUploadEndpoint = '';
 $wgMFNearbyEndpoint = '';
 
 /**
- * An optional alternative api to query for nearby pages in a different namespace
- * @var Integer
+ * Namespace(s) where Special:Nearby should search. Should be one or more of NS_* constants, pipe-separated
+ * @var int|string
  */
 $wgMFNearbyNamespace = NS_MAIN;
 
