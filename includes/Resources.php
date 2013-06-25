@@ -189,6 +189,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
 			'wikitext/commons-upload',
+			// LanguageOverlay.js
+			'overlays/languages',
+			// leadphoto.js
 			'leadPhoto',
 			'overlay',
 			'overlays/cleanup',
@@ -213,7 +216,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'localBasePath' => $localBasePath,
 		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
-			'overlays/languages',
 			'overlays/editor',
 			'overlays/editPreview',
 			'section',
@@ -264,8 +266,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/common/history-beta.js',
 			'javascripts/views/page.js',
-			// Language specific code
-			'javascripts/common/languages/LanguageOverlay.js',
 		),
 		'messages' => array(
 			// page.js and talk.js (alpha)
@@ -284,7 +284,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'stylesheets/modules/editor.css',
-			'stylesheets/modules/languages.css',
 			'stylesheets/modules/talk.css',
 		),
 		'scripts' => array(
@@ -292,7 +291,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/PreviewOverlay.js',
 			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
-			'javascripts/modules/languages.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk.js',
 			'javascripts/common/user.js',
@@ -378,6 +376,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'styles' => array(
 			'stylesheets/common/common-js.css',
+			'stylesheets/modules/languages.css',
 			'stylesheets/modules/mf-search.css',
 			'stylesheets/modules/mf-toggle.css',
 			'stylesheets/modules/mf-references.css',
@@ -414,6 +413,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/uploads/PhotoUploaderPreview.js',
 			'javascripts/common/uploads/PhotoUploader.js',
 			'javascripts/common/uploads/LeadPhoto.js',
+			// Language specific code
+			'javascripts/common/languages/LanguageOverlay.js',
 		),
 		'messages' => array(
 			// mf-notification.js
@@ -454,6 +455,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-image-uploading-wait',
 			'mobile-frontend-image-uploading-long',
 			'mobile-frontend-image-uploading-cancel',
+
+			// LanguageOverlay.js
+			'mobile-frontend-language-header',
+			'mobile-frontend-language-site-choose',
+			'mobile-frontend-language-footer',
 		),
 	),
 
@@ -473,6 +479,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/mf-cleanuptemplates.js',
+			'javascripts/modules/languages.js',
 			'javascripts/modules/mf-last-modified.js',
 			'javascripts/modules/leadphoto.js',
 			'javascripts/modules/mainmenutweaks.js',
