@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "D1pJ.3N8",
+        "filename": "includes/skins/SkinMobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-25T18:09:24Z",
+      "side": 1,
+      "message": "maybe in future - but let\u0027s not put the cart before the horse. moving this functionality to core will be non-trivial. it\u0027s a good goal for us to get to, but i think we should do it in small steps. i think for the sake of this refactor, this is totally fine here.",
+      "parentUuid": "D1rInmCA",
+      "revId": "4333ef43d937450d6529250af19a7db61166e241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "D1vIAAG0",
         "filename": "includes/skins/SkinMobileFrontend.php",
         "patchSetId": 1
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "D1hJrDCE",
+        "filename": "includes/skins/SkinMobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-25T18:09:24Z",
+      "side": 1,
+      "message": "i agree that this probably ought to be in MobileContext. I think extending OutputPage is overkill - and potentially brittle in the long run. Max, what was the idea behind moving it into the Skin?",
+      "parentUuid": "D1vIAAG0",
+      "revId": "4333ef43d937450d6529250af19a7db61166e241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "D1UFxQnY",
         "filename": "includes/skins/SkinMobileWML.php",
         "patchSetId": 1
@@ -64,6 +100,24 @@
       "writtenOn": "2013-06-25T17:47:51Z",
       "side": 1,
       "message": "Should extend SkinMobile if anything...",
+      "revId": "4333ef43d937450d6529250af19a7db61166e241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1jIlaA0",
+        "filename": "includes/skins/SkinMobileWML.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-25T18:09:24Z",
+      "side": 1,
+      "message": "Why would this extend SkinMobile (which extends SkinMinerva)? Extending the abstract class SkinMobileFrontend helps keep this lightweight, isolated, and ultimately less fragile.",
+      "parentUuid": "D1UFxQnY",
       "revId": "4333ef43d937450d6529250af19a7db61166e241",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
