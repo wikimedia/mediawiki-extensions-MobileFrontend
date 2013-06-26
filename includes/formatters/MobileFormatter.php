@@ -21,8 +21,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 		'#search', // remove search form element from Special:Search
 		'div.sister-project',
 		'div.magnify',
-		'.editsection', // FIXME: deprecate in favour of mw-editsection
-		'.mw-editsection', // Edit links in section headings
 		'span.t',
 		'.portal',
 		'#protected-icon',

@@ -60,3 +60,7 @@ ul.gallery li.gallerybox > div {
 ul.gallery li.gallerybox > div > div.thumb {
   width: auto !important;
 }
+.editsection,
+.mw-editsection {
+  display: none;
+}

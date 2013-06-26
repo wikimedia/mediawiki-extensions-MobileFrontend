@@ -15,14 +15,8 @@
 		 * @return {String} the new absolute or relative url
 		 */
 	function updateQueryStringParameter( url, key, value ) {
-		var args = url.split( '?' ), qs = args[1] || '',
-			params = {};
-		if ( qs ) {
-			qs.split( '&' ).map( function( p ) {
-				p = p.split( '=' );
-				params[ p[0] ] = p[1];
-			} );
-		}
+		var args = url.split( '?' ),
+			params = M.deParam( args[1] );
 		params[key] = value;
 		return args[0] + '?' + $.param( params );
 	}

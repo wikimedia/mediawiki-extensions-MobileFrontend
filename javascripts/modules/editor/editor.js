@@ -39,12 +39,15 @@
 			addEditButton( 1, '#ca-edit' );
 		}
 
-		$( '.section_heading' ).each( function( i ) {
-			// Avoid Bug 49780
-			// FIXME: Addressing bug 40678 will render this unnecessary
-			if ( $( this ).attr( 'id' ) !== 'section_language' ) {
-				addEditButton( i + 1, this );
+		$( '.mw-editsection' ).each( function() {
+			// FIXME [ParserOutput]: This is nasty
+			var editHref = $( this ).find( 'a' ).attr( 'href' ),
+				qs = editHref.split( '?' )[ 1 ],
+				section = M.deParam( qs ).section;
+			if ( section ) {
+				addEditButton( section, $( this ).parent() );
 			}
+			$( this ).remove();
 		} );
 	}
 
