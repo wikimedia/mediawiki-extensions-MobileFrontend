@@ -16,6 +16,57 @@
       "revId": "019e221457668dc725cc97d2cb816243d5bd79d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1raFxV0",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-26T18:32:06Z",
+      "side": 1,
+      "message": "why \u0027getModeClass\u0027 as opposed to getMode() or something more generic?",
+      "revId": "019e221457668dc725cc97d2cb816243d5bd79d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1pa2yTs",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-26T18:32:06Z",
+      "side": 1,
+      "message": "instead of explicitly stating \u0027stable\u0027, why not use $this-\u003egetModeClass()?",
+      "revId": "019e221457668dc725cc97d2cb816243d5bd79d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1jbblXs",
+        "filename": "includes/skins/SkinMobileAlpha.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-26T18:32:06Z",
+      "side": 1,
+      "message": "you should enforce the object type here (and everywhere else you do something similar). especially since you\u0027re not using docblocks for the methods, that helps keep it clear what the expected input is.",
+      "revId": "019e221457668dc725cc97d2cb816243d5bd79d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
