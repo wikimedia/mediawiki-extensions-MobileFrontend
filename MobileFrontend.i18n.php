@@ -172,7 +172,7 @@ $messages['en'] = array (
 	'mobile-frontend-watchlist-feed' => 'Modified',
 	'mobile-frontend-watchlist-a-z-empty' => 'You are currently not watching any pages.',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Click the star at the top of the page',
-	'mobile-frontend-watchlist-a-z-empty-howto' => 'Watch a page you have found interesting by clicking the star icon at the top of the screen. This will allow you to bookmark pages of interest as well as see when they have changed.',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'You are not currently watching any pages. Your watchlist helps you keep track of the pages that you are interested in. Watch pages by tapping the star icon.',
 	'mobile-frontend-watchlist-feed-empty' => 'There are no pages with recent changes.',
 	'mobile-frontend-watchlist-back-home' => 'Back home',
 
@@ -13924,7 +13924,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-nearby-error' => '{{SITENAME}}附近功能有一些問題。',
 	'mobile-frontend-nearby-error-guidance' => '嘗試更新你的位置。',
 	'mobile-frontend-nearby-link' => '以全顯幕閱讀此頁',
-	'mobile-frontend-nearby-directions' => '瀏覽這𥚃',
+	'mobile-frontend-nearby-directions' => '瀏覽這嚃',
 	'mobile-frontend-donate-image-login' => '您必須登入以查看您的上傳。',
 	'mobile-frontend-photo-upload-generic' => '貢獻圖片',
 	'mobile-frontend-donate-image-title' => '上載',
