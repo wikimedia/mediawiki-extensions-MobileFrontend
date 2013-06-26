@@ -158,6 +158,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/hogan.js',
+			'javascripts/common/Class.js',
 			'javascripts/common/eventemitter.js',
 			'javascripts/common/Router.js',
 			'javascripts/common/mf-application.js',
@@ -396,7 +397,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.jqueryMsg',
 		),
 		'scripts' => array(
-			'javascripts/common/mf-oop.js',
 			'javascripts/common/mf-api.js',
 			'javascripts/common/mf-view.js',
 			'javascripts/common/Drawer.js',

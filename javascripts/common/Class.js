@@ -40,8 +40,12 @@
 		return Child;
 	}
 
-	M.define( 'oop', {
-		extend: extend
-	} );
+	function Class() {
+		this.initialize.apply( this, arguments );
+	}
+	Class.prototype.initialize = function() {};
+	Class.extend = extend;
+
+	M.define( 'Class', Class );
 
 }( mw.mobileFrontend ) );

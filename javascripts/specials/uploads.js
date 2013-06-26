@@ -12,6 +12,7 @@ var
 
 	UserGalleryApi = Api.extend( {
 		initialize: function() {
+			this._super();
 			this.limit = 10;
 		},
 		getPhotos: function() {
@@ -71,6 +72,7 @@ var
 			this.threshold = 1000;
 			this.loading = false;
 			this.api = new UserGalleryApi();
+			this._super();
 		},
 		postRender: function() {
 			this.$end = this.$( '.end' );
