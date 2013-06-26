@@ -237,6 +237,7 @@ $messages['en'] = array (
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 
 	// edit
+	'mobile-frontend-editor-cta' => 'You must be logged in to edit pages on mobile.',
 	'mobile-frontend-editor-edit' => 'Edit',
 	'mobile-frontend-editor-save' => 'Save',
 	'mobile-frontend-editor-cancel' => 'Cancel',
@@ -637,6 +638,7 @@ They can either exit the page and lose them or stay on the page until they are c
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-editor-cta' => 'Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn\'t allow anonymous editing.)',
 	'mobile-frontend-editor-edit' => 'Caption for the link showing edit form.
 {{Identical|Edit}}',
 	'mobile-frontend-editor-save' => 'Caption for save button on edit form.

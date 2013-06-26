@@ -1,6 +1,10 @@
 ( function( M, $ ) {
 
-	var EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+	var EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
+		CtaDrawer = M.require( 'CtaDrawer' ),
+		drawer = new CtaDrawer( {
+			content: mw.msg( 'mobile-frontend-editor-cta' )
+		} );
 
 	function addEditButton( section, container ) {
 		$( '<a class="edit-page inline" href="#editor-' + section + '">' ).
@@ -44,11 +48,12 @@
 		} );
 	}
 
-	if (
-		( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) &&
-		mw.config.get( 'wgIsPageEditable' ) && M.router.isSupported()
-	) {
-		init();
+	if ( mw.config.get( 'wgIsPageEditable' ) && M.router.isSupported() ) {
+		if ( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) {
+			init();
+		} else {
+			$( '#ca-edit' ).addClass( 'enabled' ).on( 'click', $.proxy( drawer, 'show' ) );
+		}
 		M.on( 'page-loaded', init );
 	}
 
