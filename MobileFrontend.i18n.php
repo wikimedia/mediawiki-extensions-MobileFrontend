@@ -105,8 +105,6 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-watchlist' => 'Watchlist',
 	'mobile-frontend-main-menu-settings' => 'Settings',
 	'mobile-frontend-main-menu-upload' => 'Uploads',
-	'mobile-frontend-main-menu-discovery' => 'Discovery',
-	'mobile-frontend-main-menu-personal' => 'My Stuff',
 	'mobile-frontend-main-menu-about' => 'About {{SITENAME}}',
 	'mobile-frontend-main-menu-disclaimer' => 'Disclaimer',
 

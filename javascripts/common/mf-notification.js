@@ -48,8 +48,8 @@
 
 		function init( firstRun ) {
 			// FIXME: turn into view with template
-			var el = $( '<div id="mf-notification"><div></div></div>' ).
-				appendTo( document.body )[ 0 ];
+			var el = $( '<div id="mf-notification" class="position-fixed"><div></div></div>' ).
+				appendTo( '#mw-mf-page-center' )[ 0 ];
 
 			if ( inBeta ) {
 				notifyAuthenticatedUser();

@@ -1,25 +1,8 @@
 <?php
 class MobileTemplateBeta extends MobileTemplate {
 	protected function renderMainMenu( $data ) {
-		echo Html::element( 'h2', array(), wfMessage( 'mobile-frontend-main-menu-discovery' )->text() );
+		parent::renderMainMenu( $data );
 		?>
-		<ul id="mw-mf-menu-main">
-		<?php
-		foreach( $this->getDiscoveryTools() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?>
-		</ul>
-		<?php
-		echo Html::element( 'h2', array(), wfMessage( 'mobile-frontend-main-menu-personal' )->text() );
-		?>
-		<ul>
-		<?php
-		foreach( $this->getPersonalTools() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?>
-		</ul>
 		<ul class="hlist">
 		<?php
 		foreach( $this->getSiteLinks() as $key => $val ):
