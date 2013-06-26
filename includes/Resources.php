@@ -263,6 +263,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 		),
 		'scripts' => array(
+			'javascripts/common/application-beta.js',
 			'javascripts/common/history-beta.js',
 			'javascripts/views/page.js',
 		),
