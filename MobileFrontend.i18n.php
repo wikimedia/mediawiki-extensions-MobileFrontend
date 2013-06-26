@@ -2138,6 +2138,8 @@ $messages['ce'] = array(
 	'mobile-frontend-language-site-choose' => 'Лаха или',
 	'mobile-frontend-placeholder-beta' => 'Лаха translatewiki.net чухула (бета-верси)',
 	'mobile-frontend-photo-submit' => 'ДӀадахьийта',
+	'mobile-frontend-photo-cancel' => 'Цаоьшу',
+	'mobile-frontend-drawer-cancel' => 'Цаоьшу',
 );
 
 /** Sorani Kurdish (کوردی)
@@ -6706,14 +6708,14 @@ $messages['ja'] = array(
 	'tag-mobile_edit' => '携帯機器での編集',
 	'tag-mobile_edit-description' => '携帯機器版サイトでの編集',
 	'mobile-frontend-drawer-cancel' => 'キャンセル',
-	'mobile-frontend-talk-explained' => '以下の会話が現在進行中です。',
+	'mobile-frontend-talk-explained' => '以下の会話が現在進行中です',
 	'mobile-frontend-talk-explained-empty' => 'このページについての会話はありません。',
 	'mobile-frontend-talk-overlay-header' => 'トーク',
 	'mobile-frontend-talk-overlay-lead-header' => '無題の議論',
 	'mobile-frontend-talk-add-overlay-submit' => '議論を追加',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => '話題の題名',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => '本文を入力',
-	'mobile-frontend-talk-edit-summary' => '新しい会話のセクション: $1',
+	'mobile-frontend-talk-edit-summary' => 'トークの節の新規作成: $1',
 );
 
 /** Javanese (Basa Jawa)
@@ -8594,6 +8596,7 @@ $messages['mk'] = array(
 	'mobile-frontend-image-uploading-long' => 'Сликата сè уште се подига! Ви благодариме за трпението.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Откажете</a> ако ова трае предолго.',
 	'mobile-frontend-photo-upload-error' => 'Грешка. Обидете се повторно.',
+	'mobile-frontend-photo-upload-error-file-type' => 'Подигајте само слики.',
 	'mobile-frontend-photo-upload-error-filename' => 'Грешка. Напишете нешто поописно.',
 	'mobile-frontend-photo-upload-success-article' => 'Успеа! Вашата слика сега поставена на страницата.',
 	'mobile-frontend-photo-license' => 'Стискајќи на „Поднеси“, се согласувате на [//wikimediafoundation.org/wiki/Terms_of_use/mk Условите на употреба] и се согласувате да ја објавите сликата под лиценцата [//creativecommons.org/licenses/by-sa/3.0/deed.mk Криејтив комонс НаведиИзвор-СподелиПодИстиУслови 3.0].',
