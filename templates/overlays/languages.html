@@ -4,15 +4,23 @@
 		<input type="search" class="search" placeholder="{{placeholder}}">
 	</div>
 </div>
-{{#variantItems}}
+{{#variants}}
 <p class="mw-mf-overlay-header">{{{variantHeader}}}</p>
 <ul>
-	{{{variantItems}}}
+	{{#variants}}
+		<li>
+			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}}  ({{pageName}}){{/pageName}}</a>
+		</li>
+	{{/variants}}
 </ul>
-{{/variantItems}}
+{{/variants}}
 <p class="mw-mf-overlay-header">{{{header}}}</p>
 <ul>
-	{{{languageItems}}}
+	{{#languages}}
+		<li {{#preferred}}class="preferred"{{/preferred}}>
+			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}} ({{pageName}}){{/pageName}}</a>
+		</li>
+	{{/languages}}
 </ul>
 <p class="mw-mf-overlay-footer" style="display:none">
 	<a href="{{languagesLink}}">{{languagesText}}</a>

@@ -61,6 +61,7 @@
 		} ),
 		TalkOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/talk' ),
+			className: 'mw-mf-overlay list-overlay',
 			appendSection: function( heading, text ) {
 				var $newTopic;
 				this.options.page.appendSection( heading, text );
