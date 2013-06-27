@@ -326,24 +326,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'other',
 	),
 
-	'mobile.history' => $wgMFMobileResourceBoilerplate + array(
-		'scripts' => array(
-			'javascripts/externals/history.js',
-			'javascripts/externals/history.adapter.jquery.js',
-		),
-	),
-
 	'mobile.alpha.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
 		'templates' => array(
 			'overlays/nearby',
 			'modules/ImageOverlay',
 		),
 	),
+
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta',
-			'mobile.history',
 			'mobile.alpha.plumbing',
 			'mobile.nearby',
 		),
@@ -366,6 +359,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/mf-inline-style-scrubber.js',
+			'javascripts/externals/epoch.js',
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-tables.js',
 			'javascripts/modules/mf-translator.js',
