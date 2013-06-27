@@ -119,7 +119,7 @@ class MinervaTemplate extends BaseTemplate {
 
 	protected function renderMainMenu( $data ) {
 		?>
-		<ul id="mw-mf-menu-main">
+		<ul>
 		<?php
 		foreach( $this->getDiscoveryTools() as $key => $val ):
 			echo $this->makeListItem( $key, $val );

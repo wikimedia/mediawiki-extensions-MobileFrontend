@@ -15,7 +15,7 @@
 
 			// Change UI to reflect new current page - Fix menu item returnto link
 			// FIXME: give menu items with returnto=[article] generic class name
-			$( '#mw-mf-menu-main' ).find( '.icon-settings, .icon-loginout' ).find( 'a' ).each( function() {
+			$( '#mw-mf-page-left' ).find( '.icon-settings, .icon-loginout' ).find( 'a' ).each( function() {
 				var href = $( this ).attr( 'href' );
 				$( this ).attr( 'href', history.updateQueryStringParameter( href, 'returnto', title ) );
 			} );

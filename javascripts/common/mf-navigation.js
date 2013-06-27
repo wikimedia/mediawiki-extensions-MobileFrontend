@@ -19,7 +19,7 @@ var m = ( function( $ ) {
 			moved = false,
 			search = document.getElementById(  'searchInput' );
 
-		$( '#mw-mf-menu-main a' ).click( function() {
+		$( '#mw-mf-page-left a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
 		} );
 
