@@ -46,8 +46,8 @@ class MobileTemplateBeta extends MobileTemplate {
 					$this->renderLanguages( $data );
 					$this->renderHistoryLink( $data );
 				?>
-			</div><!-- close #content -->
-		</div><!-- close #content_wrapper -->
+			</div>
+		</div>
 		<?php
 	}
 }

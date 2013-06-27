@@ -112,8 +112,8 @@ class MinervaTemplate extends BaseTemplate {
 					$this->renderLanguages();
 					$this->renderHistoryLink( $data );
 				?>
-			</div><!-- close #content -->
-		</div><!-- close #content_wrapper -->
+			</div>
+		</div>
 		<?php
 	}
 
@@ -149,7 +149,6 @@ class MinervaTemplate extends BaseTemplate {
 				?>
 			</div>
 			<div id='mw-mf-page-center'>
-				<!-- start -->
 				<?php
 					foreach( $this->data['banners'] as $banner ):
 						echo $banner;
@@ -177,8 +176,8 @@ class MinervaTemplate extends BaseTemplate {
 					$this->renderContentWrapper( $data );
 					$this->renderFooter( $data );
 				?>
-			</div><!-- close #mw-mf-page-center -->
-		</div><!-- close #mw-mf-viewport -->
+			</div>
+		</div>
 		<?php
 			echo $data['reporttime'];
 			echo $data['bottomscripts'];
