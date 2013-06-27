@@ -77,7 +77,15 @@ class MobileFrontendHooks {
 			# Grab the skin class and initialise it.
 			$skin = new SkinMobileWML( $wgExtMobileFrontend );
 		} else {
-			$skin = new $wgMFDefaultSkinClass( $wgExtMobileFrontend );
+			$skinName = $wgMFDefaultSkinClass;
+			$betaSkinName = $skinName . 'Beta';
+			$alphaSkinName = $skinName . 'Alpha';
+			if ( $mobileContext->isAlphaGroupMember() && class_exists( $alphaSkinName ) ) {
+				$skinName = $alphaSkinName;
+			} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
+				$skinName = $betaSkinName;
+			}
+			$skin = new $skinName( $wgExtMobileFrontend );
 		}
 
 		return false;
