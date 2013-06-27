@@ -624,6 +624,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-directions',
 		),
 		'scripts' => array(
+			'javascripts/modules/nearby/NearbyApi.js',
 			'javascripts/specials/nearby.js',
 		),
 		// stop flash of unstyled content when loading from cache

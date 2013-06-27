@@ -1,37 +1,13 @@
 ( function( M, $ ) {
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 	endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
-	ns = mw.config.get( 'wgMFNearbyNamespace' ),
 	overlay,
+	NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
+	api = new NearbyApi(),
 	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
 
 function getOverlay() {
 	return overlay;
-}
-
-function distanceMessage( d ) {
-	var msg = 'mobile-frontend-nearby-distance';
-	if ( d < 1 ) {
-		d *= 100;
-		d = Math.ceil( d ) * 10;
-		if ( d === 1000 ) {
-			d = 1;
-		} else {
-			msg = 'mobile-frontend-nearby-distance-meters';
-		}
-		d = d + '';
-	} else {
-		if ( d > 2 ) {
-			d *= 10;
-			d = Math.ceil( d ) / 10;
-			d = d.toFixed( 1 );
-		} else {
-			d *= 100;
-			d = Math.ceil( d ) / 100;
-			d = d.toFixed( 2 );
-		}
-	}
-	return mw.msg( msg, d );
 }
 
 $( function() {
@@ -92,100 +68,18 @@ $( function() {
 			el: $( '#mw-mf-nearby' )
 		} );
 
-	// FIXME: Api should surely know this and return it in response to save us the hassle
-	// haversine formula ( http://en.wikipedia.org/wiki/Haversine_formula )
-	function calculateDistance( from, to ) {
-		var distance, a,
-			toRadians = Math.PI / 180,
-			deltaLat, deltaLng,
-			startLat, endLat,
-			haversinLat, haversinLng,
-			radius = 6378; // radius of Earth in km
-
-		if( from.latitude === to.latitude && from.longitude === to.longitude ) {
-			distance = 0;
-		} else {
-			deltaLat = ( to.longitude - from.longitude ) * toRadians;
-			deltaLng = ( to.latitude - from.latitude ) * toRadians;
-			startLat = from.latitude * toRadians;
-			endLat = to.latitude * toRadians;
-
-			haversinLat = Math.sin( deltaLat / 2 ) * Math.sin( deltaLat / 2 );
-			haversinLng = Math.sin( deltaLng / 2 ) * Math.sin( deltaLng / 2 );
-
-			a = haversinLat + Math.cos( startLat ) * Math.cos( endLat ) * haversinLng;
-			return 2 * radius * Math.asin( Math.sqrt( a ) );
-		}
-		return distance;
-	}
-
 	function render( $content, pages ) {
 		cache( CACHE_KEY_RESULTS, $.toJSON( pages ) ); // cache result
-		pages = $.map( pages, function( page, i ) {
-			var coords, lngLat, thumb;
-
-			if ( page.thumbnail ) {
-				thumb = page.thumbnail;
-				page.listThumbStyleAttribute = 'background-image: url(' + thumb.source + ')';
-				page.pageimageClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
-			} else {
-				page.pageimageClass = 'needsPhoto';
-			}
-			page.anchor = 'item_' + i;
-			page.url = M.history.getArticleUrl( page.title );
-			if ( page.coordinates ) { // FIXME: protect against bug 47133 (remove when resolved)
-				coords = page.coordinates[0],
-				lngLat = { latitude: coords.lat, longitude: coords.lon };
-				page.dist = calculateDistance( curLocation, lngLat );
-				page.latitude = coords.lat;
-				page.longitude = coords.lon;
-				page.proximity = distanceMessage( page.dist );
-			}
-			page.heading = page.title;
-			pages.push( page );
-			return page;
-		} );
-		pages.sort( function( a, b ) {
-			return a.dist > b.dist ? 1 : -1;
-		} );
 
 		overlay.render( {
 			pages: pages
 		} );
 	}
 
-	function findResults( lat, lng ) {
-		var $content = $( '#mw-mf-nearby' ), range = mw.config.get( 'wgMFNearbyRange' ),
-			limit = 50;
+	function findResults( location ) {
+		var $content = $( '#mw-mf-nearby' ), range = mw.config.get( 'wgMFNearbyRange' );
 
-		$.ajax( {
-			dataType: endpoint ? 'jsonp' : 'json',
-			url: endpoint || M.getApiUrl(),
-			data: {
-				action: 'query',
-				colimit: 'max',
-				prop: 'pageimages|coordinates',
-				pithumbsize: 180,
-				pilimit: limit,
-				generator: 'geosearch',
-				format: 'json',
-				ggscoord: lat + '|' + lng,
-				ggsradius: range,
-				ggsnamespace: ns,
-				ggslimit: limit
-			}
-		} ).done( function( data ) {
-			var pages;
-			// FIXME: API bug 48512
-			if ( data.query ) {
-				pages = data.query.pages || {};
-			} else {
-				pages = {};
-			}
-			// FIXME: API returns object when array would make much sense
-			pages = $.map( pages , function( i ) {
-				return i;
-			} );
+		api.getPages( location, range ).done( function( pages ) {
 			if ( pages.length > 0 ) {
 				render( $content, pages );
 			} else {
@@ -209,7 +103,7 @@ $( function() {
 			var lat = geo.coords.latitude, lng = geo.coords.longitude;
 			curLocation = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
 			cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
-			findResults( lat, lng );
+			findResults( curLocation );
 			completeRefresh();
 		},
 		function() {
@@ -256,7 +150,6 @@ $( function() {
 } );
 
 M.define( 'nearby', {
-	distanceMessage: distanceMessage,
 	endpoint: endpoint,
 	getOverlay: getOverlay
 } );
