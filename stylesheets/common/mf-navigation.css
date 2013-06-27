@@ -112,7 +112,3 @@ body {
 .supportsPositionFixed body.navigation-enabled #mw-mf-viewport {
   overflow-y: auto;
 }
-/* Page actions */
-.full-screen-search #mw-mf-menu-page {
-  display: none;
-}
