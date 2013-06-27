@@ -49,8 +49,6 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 		return array(
 			array( array( 'mobileformat' => 'html', 'text' => "I exist\n\n<span class='nomobile'>I don't</span>" ),
 				"<p>I exist\n</p><p></p>" ),
-			array( array( 'mobileformat' => 'wml', 'text' => 'I am <span class="nomobile">not</span> a <span>span</span>' ),
-				"<card id='s0' title='API'><p><p>I am  a span</p>\n</p><p>1/1</p></card>" ),
 		);
 	}
 }
