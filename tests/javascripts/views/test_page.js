@@ -200,10 +200,10 @@ QUnit.test( 'render page from api (multiple sections)', 21, function() {
 	strictEqual( $container.find( 'h2' ).last().text(), mw.msg( 'mobile-frontend-language-article-heading' ), 'Language heading is the last' );
 	strictEqual( $container.find( 'h3' ).length, 0, 'No h3 present due to lazy loading' );
 	strictEqual( $container.find( '#content_0' ).find( 'p' ).text(), 'Lead section' );
-	strictEqual( $container.find( 'h2#section_1' ).text(), 'History' );
+	strictEqual( $.trim( $container.find( 'h2#section_1' ).text() ), 'History' );
 	$content = $container.find( '#content_1' ).data( 'content' );
 	strictEqual( $( '<div>' ).html( $content ).text(), 'History section' );
-	strictEqual( $container.find( 'h2#section_2' ).text(), 'Geography' );
+	strictEqual( $.trim( $container.find( 'h2#section_2' ).text() ), 'Geography' );
 	$content = $( '<div>' ).html( $container.find( '#content_2' ).data( 'content' ) );
 	strictEqual( $content.find( 'h3' ).length, 1, 'h3 is present but not loaded into DOM yet' );
 	strictEqual( $content.find( 'p' ).length, 2, '1 for Geography and 1 for climate' );
