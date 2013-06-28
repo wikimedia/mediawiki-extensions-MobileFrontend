@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09d66d82_dfeb3f78",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-28T17:24:00Z",
+      "side": 1,
+      "message": "is this the most performant way to do this? making an extra db call on every page request makes me squirm, but based on indexing looks like this should be a quick query.",
+      "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09d66d82_ffe603b2",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-28T17:24:00Z",
+      "side": 1,
+      "message": "maybe wrap this in a if( $wgMFNoMobilePages \u0026\u0026 is_array( $wgMFNoMobilePages ))",
+      "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
