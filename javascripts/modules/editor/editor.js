@@ -23,10 +23,7 @@
 			new EditorOverlay( {
 				title: ns ? ns + ':' + title : title,
 				isNew: mw.config.get( 'wgArticleId' ) === 0,
-				section: section,
-				// FIXME: possibly we should have a global Page instance with
-				// a method for fetching this
-				sectionCount: $( '#content h2' ).length + 1
+				section: section
 			} ).show();
 		} );
 		$( '#ca-edit' ).addClass( 'enabled' );

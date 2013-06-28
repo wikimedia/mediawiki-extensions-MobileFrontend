@@ -13,9 +13,7 @@
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-confirm' ),
-			previousMsg: mw.msg ( 'mobile-frontend-editor-previous' ),
 			previewMsg: mw.msg( 'mobile-frontend-editor-preview' ),
-			nextMsg: mw.msg ( 'mobile-frontend-editor-next' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' )
 		},
@@ -42,7 +40,6 @@
 
 		initialize: function( options ) {
 			this.api = new EditorApi( { title: options.title, isNew: options.isNew } );
-			this.sectionCount = options.sectionCount;
 			this._super( options );
 		},
 
@@ -66,20 +63,9 @@
 					self.$( '.save' ).prop( 'disabled', false );
 					self._resizeContent();
 				} );
-			this.$prev = this.$( '.prev-section' ).
-				on( 'click', function() {
-					self._loadSection( self.sectionId - 1 );
-					self.log( 'sectionPrevious' );
-				} );
-			this.$next = this.$( '.next-section' ).
-				on( 'click', function() {
-					self._loadSection( self.sectionId + 1 );
-					self.log( 'sectionNext' );
-				} );
 			this.$( '.save' ).on( 'click', function() {
 				// log save button click
 				self.log( 'save' );
-				self.$( '.count' ).text( mw.msg( 'mobile-frontend-editor-section-count', self.api.getStagedCount() ) );
 				self.$( '.initial-bar' ).hide();
 				self.$( '.confirm-bar' ).show();
 			} );
@@ -129,33 +115,18 @@
 			this.$content.hide();
 			this.$spinner.show();
 
-			this.$prev.prop( 'disabled', id === 0 );
-			this.$next.prop( 'disabled', id === this.sectionCount - 1 );
 			this.sectionId = id;
 
 			this.api.getSection( id ).
 				done( function( section ) {
-					// prevent delayed response overriding content on multiple prev/next clicks
-					if ( section.id === id ) {
-						self.$content.
-							show().
-							val( section.content ).
-							// shrink the textarea if needed
-							css( 'height', 'auto' );
-						self._resizeContent();
-						self.$spinner.hide();
-					}
+					self.$content.
+						show().
+						val( section.content );
+					self._resizeContent();
+					self.$spinner.hide();
 				} ).
 				fail( function( error ) {
-					if ( error === 'rvnosuchsection' ) {
-						// disable next button if section not found (this happens if
-						// additional non-section heading <h2> tags are present)
-						self.sectionCount = id;
-						self.$next.prop( 'disabled', true );
-						self._loadSection( id - 1 );
-					} else {
-						popup.show( mw.msg( 'mobile-frontend-editor-error-loading' ), 'toast error' );
-					}
+					popup.show( mw.msg( 'mobile-frontend-editor-error-loading' ), 'toast error' );
 					// log error that occurred in retrieving section
 					self.log( 'error', error );
 				} );
@@ -177,10 +148,7 @@
 					new Page( { title: title, el: $( '#content_wrapper' ) } );
 					M.router.navigate( '' );
 					self.hide();
-					popup.show(
-						mw.msg( 'mobile-frontend-editor-success' ),
-						'toast'
-					);
+					popup.show( mw.msg( 'mobile-frontend-editor-success' ), 'toast' );
 				} ).
 				fail( function( err ) {
 					var msg;
