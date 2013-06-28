@@ -27,6 +27,9 @@ phpunit:
 qunit:
 	@scripts/qunit.sh
 
+qunitdebug:
+	@scripts/qunit.sh 'MobileFrontend&debug=true'
+
 tests: jshint phpunit qunit
 
 installhooks:
