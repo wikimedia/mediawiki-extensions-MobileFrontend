@@ -72,7 +72,8 @@
 						$a.data( 'title', tooltip );
 						hijackLink( $a );
 					}
-				} else {
+				// only hijack link if possible
+				} else if ( title ) {
 					hijackLink( $a );
 				}
 			} );
