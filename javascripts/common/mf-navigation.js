@@ -16,6 +16,7 @@ var m = ( function( $ ) {
 
 	$( function() {
 		var
+			moved = false,
 			search = document.getElementById(  'searchInput' );
 
 		$( '#mw-mf-menu-main a' ).click( function() {
@@ -36,16 +37,20 @@ var m = ( function( $ ) {
 		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
 			toggleNavigation();
 			ev.preventDefault();
-		} ).on( 'touchend', function( ev ) {
+		} ).on( 'touchend mouseup', function( ev ) {
 			ev.stopPropagation();
 		} );
 
 		// close navigation if content tapped
-		$( '#mw-mf-page-center' ).on( 'touchend', function() {
-			if ( isOpen() ) {
-				closeNavigation();
-			}
-		} );
+		$( '#mw-mf-page-center' ).
+			on( 'touchend mouseup', function() {
+				if ( isOpen() && !moved ) {
+					closeNavigation();
+				}
+			} ).
+			// but don't close if scrolled
+			on( 'touchstart', function() { moved = false; } ).
+			on( 'touchmove', function() { moved = true; } );
 
 		if( window.location.hash === '#mw-mf-page-left' ) {
 			openNavigation();

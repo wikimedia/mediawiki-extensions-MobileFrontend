@@ -42,42 +42,6 @@
 	}
 }
 
-.client-js {
-	#mw-mf-main-menu-button {
-		/* @embed */background-image: url(images/menu/main.png);
-
-	}
-}
-
-#mw-mf-viewport {
-	width: 100%;
-	position: relative;
-	height: 100%; /* for non-existant file pages */
-}
-
-#mw-mf-page-center {
-	width: 100%;
-	background-color: white;
-	position: relative;
-	z-index: 3;
-	min-height: 100%;
-}
-
-body.navigation-enabled {
-
-	#mw-mf-page-left {
-		width: 80%;
-		right: 20%;
-		display: block;
-	}
-
-	.position-fixed,
-	#mw-mf-page-center {
-		left: 80% !important;
-		overflow-x: hidden; // prevent horizontal scroll on chrome
-	}
-}
-
 .search.error,
 .error {
 	border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
@@ -116,40 +80,9 @@ body.navigation-enabled {
 	}
 }
 
-body.navigation-enabled {
-	&,
-	#mw-mf-viewport,
-	#mw-mf-page-center {
-		overflow: hidden;
-		height: 100%;
-	}
-}
-
 html,
 body {
+	background: #fff;
 	height: 100%;
 }
 
-#mw-mf-page-left,
-#mw-mf-page-center {
-	min-height: 100%;
-}
-
-.supportsPositionFixed #mw-mf-page-center {
-	min-height: auto !important;
-}
-
-@media all and (max-width: 240px) {
-	#mw-mf-page-left ul li {
-		background-position: 0 0;
-		font-size: 0.8em;
-	}
-}
-
-.supportsPositionFixed {
-	body.navigation-enabled {
-		#mw-mf-viewport {
-			overflow-y: auto;
-		}
-	}
-}
