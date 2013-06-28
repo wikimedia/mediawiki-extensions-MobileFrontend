@@ -9,9 +9,6 @@ input.search {
 input.search.searching {
   background-color: #eee;
 }
-.full-screen-search .search-box {
-  padding-right: 8px;
-}
 form .clear {
   top: 9px;
   right: 10px;
@@ -28,31 +25,6 @@ form .clear {
   background-size: auto 12px;
   cursor: pointer;
   position: absolute;
-}
-.full-screen-search .header {
-  z-index: 2;
-  color: white;
-  background-color: #f3f3f3;
-  background-image: -moz-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
-  background-image: -ms-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(100%, #f3f3f3));
-  background-image: -webkit-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
-  background-image: linear-gradient(#fafafa 0, #f3f3f3 100%);
-}
-.full-screen-search #results,
-.full-screen-search .search-box.notEmpty .clearlink,
-.full-screen-search #remove-results {
-  display: block;
-}
-.full-screen-search #mw-mf-page-left,
-.full-screen-search #mw-mf-main-menu-button,
-.full-screen-search #footer,
-.full-screen-search #zero-rated-banner-red,
-.full-screen-search #zero-rated-banner,
-.full-screen-search #mw-mf-logo,
-.full-screen-search #content_wrapper,
-.full-screen-search .goButton {
-  display: none !important;
 }
 .suggestions-results .error {
   color: #666;

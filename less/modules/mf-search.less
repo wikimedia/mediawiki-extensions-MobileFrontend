@@ -11,12 +11,6 @@ input.search {
 	}
 }
 
-.full-screen-search {
-	.search-box {
-		padding-right: 8px;
-	}
-}
-
 form {
 
 	.clear {
@@ -30,32 +24,6 @@ form {
 		.background-size( auto, 12px );
 		cursor: pointer;
 		position: absolute;
-	}
-}
-
-.full-screen-search {
-
-	.header {
-		z-index: 2;
-		color: white;
-		.vertical-gradient( @searchBoxColor, darken( @searchBoxColor, 2.75% ) );
-	}
-
-	#results,
-	.search-box.notEmpty .clearlink,
-	#remove-results {
-		display: block;
-	}
-
-	#mw-mf-page-left,
-	#mw-mf-main-menu-button,
-	#footer,
-	#zero-rated-banner-red, // FIXME: Move to ZeroRatedMobileAccess extension
-	#zero-rated-banner, // FIXME: Move to ZeroRatedMobileAccess extension
-	#mw-mf-logo,
-	#content_wrapper,
-	.goButton {
-		display: none !important;
 	}
 }
 
