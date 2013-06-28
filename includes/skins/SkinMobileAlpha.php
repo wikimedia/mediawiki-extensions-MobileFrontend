@@ -13,7 +13,7 @@ class SkinMobileAlpha extends SkinMobileBeta {
 		$modules['alpha'] = array( 'mobile.alpha' );
 		// main page special casing
 		if ( $this->getTitle()->isMainPage() ) {
-			$out->addModuleStyles( 'mobile.mainpage.styles' );
+			$this->getOutput()->addModuleStyles( 'mobile.mainpage.styles' );
 			$modules['mainpage'] = array();
 		}
 		return $modules;
