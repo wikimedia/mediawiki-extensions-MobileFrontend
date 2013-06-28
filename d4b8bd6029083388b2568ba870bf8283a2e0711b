@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "09d66d82_1f8797b9",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-28T17:35:58Z",
+      "side": 1,
+      "message": "Makes sense!",
+      "parentUuid": "09d66d82_ff9f23fe",
+      "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "09d66d82_ffe603b2",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "What\u0027s the differennce? If the array is empty, it will make zero loops.",
       "parentUuid": "09d66d82_ffe603b2",
+      "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09d66d82_3f8a5bc1",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-06-28T17:35:58Z",
+      "side": 1,
+      "message": "It\u0027s defensive - the foreach will error if someone sets $wgMFNoMobilePages \u003d false;",
+      "parentUuid": "09d66d82_5ff8ef46",
       "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
