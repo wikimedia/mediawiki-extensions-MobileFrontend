@@ -2,13 +2,10 @@
 moved from beta_common.css in
 Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 */
-.page-loading .section {
-  opacity: 0.2;
+.content_block {
+  width: 100%;
 }
-.page-loading.togglingEnabled .section {
-  opacity: 1;
-}
-.togglingEnabled .section_heading {
+.client-js .section_heading {
   background-image: url(images/show.png);
   background-position: right center;
   background-repeat: no-repeat;
@@ -20,48 +17,42 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
   background-size: auto 9px;
   cursor: pointer;
 }
-.togglingEnabled .section_heading.openSection {
+.client-js .section_heading.openSection {
   background-image: url(images/hide.png);
 }
-.content_block {
-  width: 100%;
+.client-js a.section_anchors {
+  display: none;
+  margin-bottom: 5px;
+  margin-top: 7px;
+  color: blue;
 }
-.togglingEnabled .content_block {
+.client-js a.section_anchors.openSection {
+  display: block;
+}
+.client-js .openSection.content_block {
+  -webkit-tap-highlight-color: normal;
+  /* fix for Bug 36196 */
+
+  display: block;
+}
+.client-js .content_block {
   position: relative;
   overflow: hidden;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* fix for Bug 36196 */
 
 }
-.togglingEnabled #footer .content_block,
-.togglingEnabled .content_block:last-child {
+.client-js .content_block:last-child {
   border-bottom: none;
-}
-.togglingEnabled a.section_anchors {
-  display: none;
-  margin-bottom: 5px;
-  margin-top: 7px;
-  color: blue;
-}
-.togglingEnabled a.section_anchors.openSection {
-  display: block;
-}
-.togglingEnabled .openSection.content_block {
-  -webkit-tap-highlight-color: normal;
-  /* fix for Bug 36196 */
-
 }
 .page-loading .section_anchors,
 .page-loading .content_block,
-.togglingEnabled .content_block {
+.client-js .content_block {
   display: none;
 }
 .page-loading .section_anchors.openSection,
 .page-loading .content_block.openSection,
-.togglingEnabled .content_block.openSection {
-  display: block;
-}
-.togglingEnabled .openSection.content_block {
+.client-js .content_block.openSection {
   display: block;
 }
 #content_wrapper .section {
