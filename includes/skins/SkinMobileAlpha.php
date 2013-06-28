@@ -27,9 +27,11 @@ class SkinMobileAlpha extends SkinMobileBeta {
 
 	protected function prepareHistoryLink( BaseTemplate $tpl ) {
 		$revId = $this->getRevisionId();
-		$h = $tpl->data['historyLink'];
-		$h['href'] = SpecialPage::getTitleFor( 'MobileDiff', $revId )->getLocalUrl();
-		$tpl->set( 'historyLink', $h );
+		if ( isset( $tpl->data['historyLink'] ) ) {
+			$h = $tpl->data['historyLink'];
+			$h['href'] = SpecialPage::getTitleFor( 'MobileDiff', $revId )->getLocalUrl();
+			$tpl->set( 'historyLink', $h );
+		}
 	}
 
 	protected function prepareTalkLabel( BaseTemplate $tpl ) {
