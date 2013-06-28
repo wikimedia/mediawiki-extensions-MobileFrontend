@@ -70,7 +70,7 @@ var
 		initialize: function() {
 			// how close a spinner needs to be to the viewport to trigger loading (px)
 			this.threshold = 1000;
-			this.loading = false;
+			this.shouldLoad = true;
 			this.api = new UserGalleryApi();
 			this._super();
 		},
@@ -101,22 +101,26 @@ var
 		_loadPhotos: function() {
 			var self = this;
 
-			if ( this._isEndNear() && !this.loading ) {
-				this.loading = true;
+			if ( this.shouldLoad && this._isEndNear() ) {
+				// don't try to load more until current request is finished
+				this.shouldLoad = false;
 
-				this.api.getPhotos().always( function() {
-					self.loading = false;
-				} ).done( function( photos ) {
+				this.api.getPhotos().done( function( photos ) {
 					if ( photos.length ) {
 						$.each( photos, function() {
 							self.appendPhoto( this );
 						} );
+						// try loading more when end is near only if we got photos last time
+						self.shouldLoad = true;
 					} else {
 						self.$end.remove();
 						if ( self.isEmpty() ) {
 							self.emit( 'empty' );
 						}
 					}
+				} ).fail( function() {
+					// try loading again if request failed
+					self.shouldLoad = true;
 				} );
 			}
 		}
