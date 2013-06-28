@@ -126,6 +126,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/common/ui.css',
 			'stylesheets/common/mf-typography.css',
 			'stylesheets/common/mf-footer.css',
+			'stylesheets/modules/mf-toggle.css',
 			// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
 			'stylesheets/common/mf-navigation.css',
 			'stylesheets/common/overlays.css',
@@ -381,7 +382,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/common/common-js.css',
 			'stylesheets/modules/languages.css',
 			'stylesheets/modules/mf-search.css',
-			'stylesheets/modules/mf-toggle.css',
 			'stylesheets/modules/mf-references.css',
 			'stylesheets/modules/mf-cleanuptemplates.css',
 			'stylesheets/modules/mf-watchstar.css',
