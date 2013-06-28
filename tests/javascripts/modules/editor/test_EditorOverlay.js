@@ -24,24 +24,4 @@
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
 	} );
 
-	QUnit.test( '#initialize, Previous button', 3, function( assert ) {
-		var editorOverlay = new EditorOverlay( { title: 'test', section: 1, sectionCount: 3 } );
-
-		editorOverlay.$prev.click();
-		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load previous section' );
-		assert.ok( editorOverlay.$prev.is( ':disabled' ), 'disable Previous on lead section' );
-		editorOverlay.$next.click();
-		assert.ok( editorOverlay.$prev.is( ':enabled' ), 'enable Previous on non-lead section' );
-	} );
-
-	QUnit.test( '#initialize, Next button', 3, function( assert ) {
-		var editorOverlay = new EditorOverlay( { title: 'test', section: 1, sectionCount: 3 } );
-
-		editorOverlay.$next.click();
-		assert.strictEqual( editorOverlay.$content.val(), 'section 2', 'load next section' );
-		assert.ok( editorOverlay.$next.is( ':disabled' ), 'disable Next on last section' );
-		editorOverlay.$prev.click();
-		assert.ok( editorOverlay.$next.is( ':enabled' ), 'enable Next on not last section' );
-	} );
-
 }( mw.mobileFrontend, jQuery ) );
