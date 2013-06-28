@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "09d66d82_ff9f23fe",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-06-28T17:33:19Z",
+      "side": 1,
+      "message": "We already do a lot of requests per page view, ant this one is going to be one of fastest of them. Also, we\u0027re not going to use this feature anywhere else but foundationwiki.",
+      "parentUuid": "09d66d82_dfeb3f78",
+      "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "09d66d82_ffe603b2",
         "filename": "includes/MobileContext.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-06-28T17:24:00Z",
       "side": 1,
       "message": "maybe wrap this in a if( $wgMFNoMobilePages \u0026\u0026 is_array( $wgMFNoMobilePages ))",
+      "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09d66d82_5ff8ef46",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-06-28T17:33:19Z",
+      "side": 1,
+      "message": "What\u0027s the differennce? If the array is empty, it will make zero loops.",
+      "parentUuid": "09d66d82_ffe603b2",
       "revId": "d4b8bd6029083388b2568ba870bf8283a2e0711b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
