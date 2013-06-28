@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 	var m = ( function() {
 		var calculatePosition = function() {},
+			canCancel = true,
 			inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
 
 		if ( !M.supportsPositionFixed() ) {
@@ -20,6 +21,10 @@
 		}
 
 		function show( html, classes ) {
+			canCancel = false;
+			window.setTimeout( function() {
+				canCancel = true;
+			}, 1000 );
 			$( '#mf-notification div' ).html( html );
 			calculatePosition();
 			return $( '#mf-notification' ).
@@ -30,7 +35,7 @@
 
 		function close( forceClose ) {
 			var $notification = $( '#mf-notification' );
-			if ( !$notification.hasClass( 'visible' ) ) {
+			if ( !$notification.hasClass( 'visible' ) || !canCancel ) {
 				return;
 			} else if ( !$notification.hasClass( 'locked' ) || forceClose ) {
 				$( '#mf-notification' ).removeClass( 'visible' );
