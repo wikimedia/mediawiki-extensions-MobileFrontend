@@ -89,16 +89,14 @@
 	transform: @transform;
 }
 
-.transition( @property: all, @duration: .2s, @timingFunction: ease ) {
+// http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
+.transition( @dummy, @dummier: X, ... ) {
 	// avoid Webkit bugs
 	-webkit-backface-visibility: hidden;
 
-	-webkit-transition-property: ~`"@{property}" === "transform" ? "-webkit-@{property}" : "@{property}"`;
-	transition-property: @property;
-	-webkit-transition-duration: @duration;
-	transition-duration: @duration;
-	-webkit-transition-timing-function: @timingFunction;
-	transition-timing-function: @timingFunction;
+	@args: ~`"@{arguments}".replace(/^\[|(, X)?\]$/g, '')`;
+	-webkit-transition: ~`"@{args}".replace('transform', '-webkit-transform')`;
+	transition: @args;
 }
 
 .animation( @name, @duration, @function: ease-in-out, @iterationCount: infinite, @direction: alternate ) {

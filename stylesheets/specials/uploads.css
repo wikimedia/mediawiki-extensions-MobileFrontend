@@ -128,12 +128,8 @@
 .animations .alpha .slideable .slider {
   left: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .animations .beta .slideable .slider.slider-left,
 .animations .alpha .slideable .slider.slider-left {

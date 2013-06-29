@@ -4,18 +4,6 @@
 			canCancel = true,
 			inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
 
-		if ( !M.supportsPositionFixed() ) {
-			calculatePosition = function() {
-				var h = $( '#mf-notification' ).outerHeight();
-				$( '#mf-notification' ).css( {
-					top:  ( window.innerHeight + window.pageYOffset ) - h,
-					bottom: 'auto',
-					position: 'absolute'
-				} );
-			};
-			$( document ).scroll( calculatePosition );
-		}
-
 		function isVisible() {
 			return $( '#mf-notification' ).is( ':visible' );
 		}
@@ -54,7 +42,7 @@
 		function init( firstRun ) {
 			// FIXME: turn into view with template
 			var el = $( '<div id="mf-notification" class="position-fixed"><div></div></div>' ).
-				appendTo( '#mw-mf-page-center' )[ 0 ];
+				appendTo( '#notifications' )[ 0 ];
 
 			if ( inBeta ) {
 				notifyAuthenticatedUser();

@@ -6,7 +6,7 @@
 		// FIXME: when mobileFrontend is an object with a constructor,
 		// just inherit from EventEmitter instead
 		eventEmitter = new EventEmitter(),
-		$viewport, viewport,
+		$viewportMeta, viewport,
 		template,
 		templates = {};
 
@@ -59,21 +59,24 @@
 		}
 	};
 
-	// TODO: only apply to places that need it
 	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 	// https://github.com/Modernizr/Modernizr/issues/167
+	// http://mobilehtml5.org/
 	function supportsPositionFixed() {
-		// TODO: don't use device detection
-		var agent = navigator.userAgent,
-			support = false,
-			supportedAgents = [
-			// match anything over Webkit 534
+		var support = false;
+		[
+			// Webkit 534+
+			// FIXME: this will fail if Webkit goes past 599 and for Blink
+			// (http://www.chromium.org/blink)
 			/AppleWebKit\/(53[4-9]|5[4-9]\d?|[6-9])\d?\d?/,
 			// Android 3+
-			/Android [3-9]/
-		];
-		supportedAgents.forEach( function( item ) {
-			if( agent.match( item ) ) {
+			/Android [3-9]/,
+			// any Firefox
+			/Firefox/,
+			// MSIE 10+
+			/MSIE 1\d/
+		].forEach( function( item ) {
+			if ( item.test( navigator.userAgent ) ) {
 				support = true;
 			}
 		} );
@@ -85,18 +88,20 @@
 	}
 
 	function lockViewport() {
-		$viewport.attr( 'content', 'minimum-scale=1.0, maximum-scale=1.0' );
+		$viewportMeta.attr( 'content', 'minimum-scale=1.0, maximum-scale=1.0' );
 	}
 
 	function unlockViewport() {
-		$viewport.attr( 'content', viewport );
+		$viewportMeta.attr( 'content', viewport );
 	}
 
 	// TODO: separate main menu navigation code into separate module
 	function init() {
 		var
 			mode, $body = $( 'body' ),
-			$doc = $( 'html' );
+			$doc = $( 'html' ),
+			$viewport = $( '#mw-mf-viewport' ),
+			$pageCenter = $( '#mw-mf-page-center' );
 
 		if ( $body.hasClass( 'alpha' ) ) {
 			mode = 'alpha';
@@ -106,12 +111,33 @@
 		mw.config.set( 'wgMFMode', mode );
 
 		$doc.removeClass( 'page-loading' ); // FIXME: Kill with fire. This is here for historic reasons in case old HTML is cached
-		if( supportsPositionFixed() ) {
-			$doc.addClass( 'supportsPositionFixed' );
+
+		$( '<div id="notifications">' ).appendTo( $viewport );
+
+		if ( !supportsPositionFixed() ) {
+			$doc.addClass( 'no-position-fixed' );
+
+			$( window ).on( 'scroll', function() {
+				var scrollTop = $( window ).scrollTop(),
+					scrollBottom = scrollTop + $( window ).height();
+
+				if ( scrollTop === 0 ) {
+					// special case when we're at the beginning of the page and many
+					// browsers (e.g. Android 2.x) return wrong window height because
+					// of the URL bar
+					$viewport.height( '100%' );
+				} else if ( scrollBottom < $pageCenter.height() ) {
+					// keep expanding the viewport until it's as big as main content
+					// (prevents possible infinite scroll in some browsers, can be tested
+					// on desktop Chrome forcing supportsPositionFixed() to return false)
+					// #notification has bottom: 0 and sticks to the end of the viewport
+					$viewport.height( scrollBottom );
+				}
+			} );
 		}
 
-		$viewport = $( 'meta[name="viewport"]' );
-		viewport = $viewport.attr( 'content' );
+		$viewportMeta = $( 'meta[name="viewport"]' );
+		viewport = $viewportMeta.attr( 'content' );
 		// FIXME: If minimum-scale and maximum-scale are not set locking viewport will prevent a reset
 		if ( viewport && viewport.indexOf( 'minimum-scale' ) === -1 ) {
 			viewport += ', minimum-scale=0.25, maximum-scale=1.6';
@@ -123,7 +149,7 @@
 			// see http://adactio.com/journal/4470/ (fixed in ios 6)
 			var
 				ua = navigator.userAgent;
-			if( $viewport[0] && ua.match( /iPhone|iPad/i ) && ua.match( /OS [4-5]_0/ )  ) {
+			if( $viewportMeta[0] && ua.match( /iPhone|iPad/i ) && ua.match( /OS [4-5]_0/ )  ) {
 				lockViewport();
 				document.addEventListener( 'gesturestart', function() {
 					lockViewport();

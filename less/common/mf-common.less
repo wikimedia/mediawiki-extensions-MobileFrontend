@@ -273,12 +273,20 @@ i {
 	display: block;
 }
 
-.supportsPositionFixed {
+.position-fixed {
+	position: fixed;
+	// workaround for:
+	// http://code.google.com/p/chromium/issues/detail?id=20574
+	// (otherwise hidden drawer causes .buttonBar to render incorrectly)
+	.transform( translate3d(0,0,0) );
+}
+
+.no-position-fixed {
+	#notifications {
+		bottom: 0;
+	}
+
 	.position-fixed {
-		position: fixed;
-		// workaround for:
-		// http://code.google.com/p/chromium/issues/detail?id=20574
-		// (otherwise hidden drawer causes .buttonBar to render incorrectly)
-		.transform( translate3d(0,0,0) );
+		position: absolute;
 	}
 }

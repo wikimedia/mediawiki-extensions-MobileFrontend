@@ -1,20 +1,22 @@
+#notifications {
+  height: 0;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+}
 /* Notifications */
 #mf-notification,
 .drawer {
-  /* -2px to avoid a weird glitch in some browsers where the popup moves
-	 * slightly when scrolling */
-
-  bottom: -2px;
+  bottom: 0;
   width: 100%;
   background-color: #f3f3f3;
   box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
   word-wrap: break-word;
-  z-index: -1;
+  z-index: 5;
   display: none;
 }
 #mf-notification.visible,
 .drawer.visible {
-  z-index: 5;
   display: block;
 }
 .animations .beta #mf-notification,
@@ -22,30 +24,29 @@
 .animations .beta .drawer,
 .animations .alpha .drawer {
   display: block;
+  visibility: hidden;
   /* we can't determine the actual size of the drawer in CSS, so this is
 		 * an estimate; it doesn't have to be exact because it's used only for
 		 * the sliding animation, not for hiding the drawer */
 
-  bottom: -11em;
+  -webkit-transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 100px, 0);
   opacity: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
+  -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0 0.25s;
+  transition: transform 0.25s, opacity 0.25s, visibility 0 0.25s;
 }
 .animations .beta #mf-notification.visible,
 .animations .alpha #mf-notification.visible,
 .animations .beta .drawer.visible,
 .animations .alpha .drawer.visible {
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+  transition: transform 0.25s, opacity 0.25s;
+  visibility: visible;
   opacity: 1;
-  /* -0.2em to avoid a weird glitch in some browsers where the popup moves
-			 * slightly when scrolling */
-
-  -webkit-transform: translate3d(0, -10.8em, 0);
-  transform: translate3d(0, -10.8em, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 #mf-notification {
   font-size: 0.9em;
