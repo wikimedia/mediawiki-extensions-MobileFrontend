@@ -13,6 +13,7 @@ mw.mobileFrontend = {
 		}
 		return this._modules[ id ];
 	},
+	testMode: mw.config.get( 'wgCanonicalSpecialPageName' ) === 'JavaScriptTest',
 
 	/**
 	 * Define a module which can be later required (imported) using require().
@@ -26,7 +27,7 @@ mw.mobileFrontend = {
 		}
 		this._modules[ id ] = obj;
 		// FIXME: modules should not self initialise
-		if ( obj.init && mw.config.get( 'wgInitOnDefine', true ) ) {
+		if ( obj.init && !this.testMode ) {
 			obj.init();
 		}
 	}
