@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e9daf9a7_9d36f300",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-06-30T05:12:26Z",
+      "side": 1,
+      "message": "Use (bug 123) as prefix or drop it entirely. Avoid inconsistent patterns. Also this title (\"Fix extracts\") could be rewritten to be more a useful summary of the actual change.",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
