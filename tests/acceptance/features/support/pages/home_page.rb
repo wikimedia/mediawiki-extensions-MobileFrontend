@@ -10,7 +10,7 @@ class HomePage
   a(:mainmenu_button, id: 'mw-mf-main-menu-button')
   a(:login_button, href: /Special:UserLogin/)
   a(:login, text: 'Login')
-  ul(:search_results, class: 'suggestions-results')
+  li(:search_results, title: 'San Francisco')
   a(:search_result) do |page|
     page.search_results_element.a
   end
