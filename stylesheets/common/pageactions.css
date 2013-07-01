@@ -1,31 +1,32 @@
-#ca-upload,
-#ca-edit,
 .client-nojs #ca-watch.cta,
 #ca-talk.selected {
   display: none;
 }
 #section_0 {
-  margin: 14pt 23px 0 23px;
-  padding-bottom: 9pt;
+  margin: 10px 23px 0 23px;
+  padding-bottom: 9px;
   border-bottom: dotted 1px #CACACA;
 }
 #page-actions {
-  padding: 8px 23px;
+  padding: 10px 23px 8px;
   border-bottom: solid 1px #CACACA;
-  height: 40px;
+  height: 30px;
+}
+#page-actions li,
+#page-actions .watch-this-article {
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -o-background-size: auto 30px;
+  -webkit-background-size: auto 30px;
+  background-size: auto 30px;
 }
 #page-actions li {
   position: relative;
-  height: 40px;
+  height: 30px;
   width: 40px;
   text-indent: -9999px;
-  background-position: center center;
+  background-position: 50% 0;
   background-repeat: no-repeat;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -o-background-size: auto 22px;
-  -webkit-background-size: auto 22px;
-  background-size: auto 22px;
 }
 #page-actions li input {
   opacity: 0;
@@ -47,15 +48,20 @@
   background-image: url(images/pagemenu/watched.png);
 }
 #ca-edit {
+  background-image: url(images/pagemenu/edit-locked.png);
+  margin-right: 17px;
+}
+#ca-edit.enabled {
   background-image: url(images/pagemenu/edit.png);
 }
 #ca-talk {
+  margin-right: 14px;
   background-image: url(images/pagemenu/talk.png);
 }
 #ca-upload {
-  background-image: url(images/pagemenu/upload.png);
+  margin-right: 19px;
+  background-image: url(images/pagemenu/upload-locked.png);
 }
-#ca-edit.enabled,
 #ca-upload.enabled {
-  display: inline-block;
+  background-image: url(images/pagemenu/upload.png);
 }
