@@ -45,6 +45,12 @@ class SkinMobileBeta extends SkinMobile {
 
 		if ( isset( $namespaces['talk'] ) ) {
 			$menu['talk'] = $namespaces['talk'];
+		// FIXME [Core Skin]: I'm not sure why this is treated differently.
+		} else if ( isset( $namespaces['project_talk'] ) ) {
+			$menu['talk'] = $namespaces['project_talk'];
+		}
+
+		if ( isset( $menu['talk'] ) ) {
 			if ( isset( $tpl->data['_talkdata'] ) ) {
 				$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
 				$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
