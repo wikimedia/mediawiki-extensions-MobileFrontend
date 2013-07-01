@@ -41,6 +41,15 @@ $specialPageAliases['de'] = array(
 	'Nearby' => array( 'In_der_Nähe' ),
 );
 
+/** Zazaki (Zazaki) */
+$specialPageAliases['diq'] = array(
+	'MobileOptions' => array( 'MobilWeçenegi' ),
+	'Uploads' => array( 'Barkerdışi' ),
+	'MobileDiff' => array( 'MobilVer' ),
+	'MobileMenu' => array( 'MıobilMenu' ),
+	'Nearby' => array( 'Nezdıra' ),
+);
+
 /** Esperanto (Esperanto) */
 $specialPageAliases['eo'] = array(
 	'MobileOptions' => array( 'Opcioj_pri_poŝaparato' ),
