@@ -208,7 +208,7 @@ var
 		}
 	}
 
-	if ( userName ) {
+	if ( userName && !M.testMode ) {
 		$( init );
 	}
 
