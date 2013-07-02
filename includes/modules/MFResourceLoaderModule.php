@@ -147,8 +147,8 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	 */
 	public function getModifiedTime( ResourceLoaderContext $context ) {
 		return max(
-			filemtime( dirname( dirname( __DIR__ ) ) . "MobileFrontend.php" ),
-			filemtime( dirname( dirname( __DIR__ ) ) . "MobileFrontend.i18n.php" )
+			filemtime( dirname( dirname( __DIR__ ) ) . "/MobileFrontend.php" ),
+			filemtime( dirname( dirname( __DIR__ ) ) . "/MobileFrontend.i18n.php" )
 		);
 	}
 }
