@@ -188,7 +188,7 @@ $messages['en'] = array (
 	'mobile-frontend-diffview-404-title' => 'Bad revision',
 	'mobile-frontend-diffview-404-desc' => 'The id for the revision you requested does not exist.',
 	'mobile-frontend-diffview-title' => 'Changes',
-	'mobile-frontend-diffview-editcount' => '$1 {{PLURAL:$1|edit|edits}}',
+	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|edit|edits}}',
 	'mobile-frontend-diffview-anonymous' => 'Anonymous user',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} added',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} removed',
@@ -583,7 +583,7 @@ Used when the user is not logged in.
 	'mobile-frontend-diffview-title' => 'Header for common mobile diff/change view. Parameters:
 * $1 - page title (an optional parameter for backwards compatibility)
 {{Identical|Change}}',
-	'mobile-frontend-diffview-editcount' => 'Edit count of user in common mobile diff/change view. $1 is the count, may use PLURAL.',
+	'mobile-frontend-diffview-editcount' => 'Edit count of user in common mobile diff/change view. $1 is the count, may use PLURAL. Ensure number is wrapped in a div element',
 	'mobile-frontend-diffview-anonymous' => 'Label to indicate anonymous user in common mobile diff/change view.
 {{Identical|Anonymous user}}',
 	'mobile-frontend-diffview-bytesadded' => 'Edit byte-changed counter for common mobile diff/change view when change adds bytes. $1 is byte count; may use PLURAL.',
