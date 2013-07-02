@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9cff5e9_659d6162",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-02T20:30:25Z",
+      "side": 0,
+      "message": "SkinMinerva should be cleaned up as well\nif ( isset( $tpl-\u003edata[\u0027notice\u0027] ) ) {\n\nAlso I notice SkinMobileWML.php treats banners as a string rather than array. Guess this should be tidied up?",
+      "revId": "09c91ec38feb89c8a51011dfe3638440c2c734fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
