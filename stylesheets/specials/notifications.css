@@ -5,16 +5,6 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-#mw-echo-special-container {
-  list-style: none;
-}
-#mw-echo-special-container .mw-echo-date-section {
-  font-family: Georgia, serif;
-  font-size: 1.16em;
-}
-#mw-echo-special-container .mw-echo-notification {
-  margin: .5em 0 1em;
-}
 .mw-echo-unread .mw-echo-title {
   font-weight: bold;
 }
