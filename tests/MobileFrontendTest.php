@@ -26,13 +26,12 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 	}
 
 	public function testSendHeaders() {
-		global $wgExtMobileFrontend, $wgMFVaryResources;
-		$wgMFVaryResources = false;
+		global $wgExtMobileFrontend;
 		$sendHeaders = self::getMethod( 'sendHeaders' );
-		MobileContext::singleton()->getRequest()->setHeader( 'X-Device', 'device' );
+		MobileContext::singleton()->getRequest()->setHeader( 'X-WAP', 'yessir!' );
 		$sendHeaders->invokeArgs( $wgExtMobileFrontend, array() );
-		$this->assertEquals( 'device', MobileContext::singleton()->getRequest()->
-			response()->getheader( 'X-Device' ) );
+		$this->assertEquals( 'yessir!', MobileContext::singleton()->getRequest()->
+			response()->getheader( 'X-WAP' ) );
 	}
 
 	/**

@@ -14,10 +14,6 @@ class MobileContext extends ContextSource {
 	 */
 	protected $analyticsLogItems = array();
 
-	/**
-	 * @var string xDevice header information
-	 */
-	private $xDevice;
 	/** @var IDeviceProperties */
 	private $device;
 
@@ -68,12 +64,12 @@ class MobileContext extends ContextSource {
 		$detector = DeviceDetection::factory();
 		$request = $this->getRequest();
 
-		$xDevice = $this->getXDevice();
-		$userAgent = $request->getHeader( 'User-agent' );
-		if ( $xDevice ) {
-			$formatName = $xDevice;
-			$this->device = $detector->getDeviceProperties( $formatName, $userAgent );
+		$wap = $this->getRequest()->getHeader( 'X-WAP' );
+		if ( $wap ) {
+			$className = ( $wap === 'no' ) ? 'HtmlDeviceProperties' : 'WmlDeviceProperties';
+			$this->device = new $className;
 		} else {
+			$userAgent = $request->getHeader( 'User-agent' );
 			$acceptHeader = $request->getHeader( 'Accept' );
 			$acceptHeader = $acceptHeader === false ? '' : $acceptHeader;
 			$this->device = $detector->detectDeviceProperties( $userAgent, $acceptHeader );
@@ -126,9 +122,8 @@ class MobileContext extends ContextSource {
 	public function isMobileDevice() {
 		global $wgMFAutodetectMobileView;
 
-		return $this->getXDevice()
-			|| $this->getAMF()
-			|| ( $wgMFAutodetectMobileView && $this->getDevice()->isMobileDevice() );
+		return ( $wgMFAutodetectMobileView && $this->getDevice()->isMobileDevice() )
+			|| $this->getAMF();
 	}
 
 	/**
@@ -324,14 +319,14 @@ class MobileContext extends ContextSource {
 
 		/**
 		 * If a mobile-domain is specified by the $wgMobileUrlTemplate and
-		 * there's an X-Device header, then we assume the user is accessing
+		 * there's an X-WAP header, then we assume the user is accessing
 		 * the site from the mobile-specific domain (because why would the
-		 * desktop site set X-Device header?). If a user is accessing the
+		 * desktop site set X-WAP header?). If a user is accessing the
 		 * site from a mobile domain, then we should always display the mobile
 		 * version of the site (otherwise, the cache may get polluted). See
 		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=46473
 		 */
-		if ( $wgMobileUrlTemplate && $this->getXDevice() ) {
+		if ( $wgMobileUrlTemplate && $this->getRequest()->getHeader( 'X-WAP' ) ) {
 			return true;
 		}
 
@@ -351,26 +346,6 @@ class MobileContext extends ContextSource {
 		}
 
 		return false;
-	}
-
-	public function getXDevice() {
-		if ( is_null( $this->xDevice ) ) {
-			$request = $this->getRequest();
-			$xDevice = $request->getHeader( 'X-Device' );
-
-			global $wgMFVaryResources;
-			if ( $wgMFVaryResources ) {
-				if ( $xDevice ) {
-					$xWap = $request->getHeader( 'X-WAP' );
-					if ( $xWap === 'yes' && $xDevice !== 'wml' ) {
-						wfDebugLog( 'mobile', "Unexpected combination of headers: X-Device = $xDevice, X-WAP = $xWap" );
-					}
-				}
-			}
-			$this->xDevice = $xDevice === false ? '' : $xDevice;
-		}
-
-		return $this->xDevice;
 	}
 
 	public function getMobileAction() {

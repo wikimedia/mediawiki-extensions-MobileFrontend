@@ -114,21 +114,8 @@ class SkinMobile extends SkinMinerva {
 		return $vars;
 	}
 
-	// FIXME: move addModuleStyles calls to initPage get should not have side effects
 	public function getDefaultModules() {
-		global $wgMFVaryResources;
-
-		$ctx = MobileContext::singleton();
 		$out = $this->getOutput();
-		$device = $ctx->getDevice();
-
-		// add device specific css file - add separately to avoid cache fragmentation
-		if ( $wgMFVaryResources ) {
-			$out->addModuleStyles( 'mobile.xdevice.detect' );
-		} elseif ( $device->moduleName() ) {
-			$out->addModuleStyles( $device->moduleName() );
-		}
-
 		$modules = parent::getDefaultModules();
 
 		// flush unnecessary modules

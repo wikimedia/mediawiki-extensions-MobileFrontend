@@ -21,13 +21,10 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	protected function setUp() {
-		global $wgMFAutodetectMobileView;
-
 		parent::setUp();
 		$this->savedGlobals = $GLOBALS;
 		$context = new DerivativeContext( RequestContext::getMain() );
 		$context->setRequest( new FauxRequest() );
-		$wgMFAutodetectMobileView = false;
 		MobileContext::singleton()->setContext( $context );
 	}
 
@@ -185,7 +182,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider shouldDisplayMobileViewProvider
 	 */
-	public function testShouldDisplayMobileView( $shouldDisplay, $xDevice = null, $requestVal = array(), $msg = null ) {
+	public function testShouldDisplayMobileView( $shouldDisplay, $xWap = null, $requestVal = array(), $msg = null ) {
 		$testMethod = ( $shouldDisplay ) ? 'assertTrue' : 'assertFalse';
 
 		$request = MobileContext::singleton()->getRequest();
@@ -199,8 +196,8 @@ class MobileContextTest extends MediaWikiTestCase {
 			}
 		}
 
-		if ( !is_null( $xDevice ) ) {
-			MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
+		if ( !is_null( $xWap ) ) {
+			MobileContext::singleton()->getRequest()->setHeader( 'X-WAP', $xWap );
 		}
 
 		$this->$testMethod( MobileContext::singleton()->shouldDisplayMobileView(), $msg );
@@ -209,9 +206,10 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function shouldDisplayMobileViewProvider() {
 		return array(
 			array( false, null, array() ),
-			array( true, 'webkit', array() ),
-			array( false, 'webkit', array( 'action' => 'edit' ) ),
-			array( false, 'webkit', array( 'useformat' => 'desktop' ) ),
+			array( true, 'yes', array() ),
+			array( true, 'no', array() ),
+			array( false, 'yes', array( 'action' => 'edit' ) ),
+			array( false, 'yes', array( 'useformat' => 'desktop' ) ),
 			array( true, null, array( 'useformat' => 'mobile-wap' ) ),
 			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'edit' ) ),
 			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'history' ) ),
@@ -219,47 +217,6 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( true, null, array( 'useformat' => 'mobile' ) ),
 			array( false, null, array( 'useformat' => 'mobile', 'action' => 'edit' ) ),
 			array( false, null, array( 'useformat' => 'mobile', 'action' => 'history' ) ),
-		);
-	}
-
-	/**
-	 * @dataProvider getXDeviceProvider
-	 */
-	public function testGetXDevice( $xDevice ) {
-		global $wgMFVaryResources;
-		$wgMFVaryResources = false;
-		if ( is_null( $xDevice ) ) {
-			MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
-			$assert = $xDevice;
-		} else {
-			$assert = '';
-		}
-		$this->assertEquals( $assert, MobileContext::singleton()->getXDevice() );
-	}
-
-	public function getXDeviceProvider() {
-		return array(
-			array( 'webkit' ),
-			array( null ),
-		);
-	}
-
-	/**
-	 * @dataProvider getXDeviceInVaryModeProvider
-	 */
-	public function testGetXDeviceInVaryMode( $xDevice, $xWap, $expected ) {
-		global $wgMFVaryResources;
-		$wgMFVaryResources = true;
-		MobileContext::singleton()->getRequest()->setHeader( 'X-Device', $xDevice );
-		MobileContext::singleton()->getRequest()->setHeader( 'X-WAP', $xWap );
-		$this->assertEquals( $expected, MobileContext::singleton()->getXDevice() );
-	}
-
-	public function getXDeviceInVaryModeProvider() {
-		return array(
-			array( 'webkit', 'no', 'webkit' ),
-			array( 'capable', 'no', 'capable' ),
-			array( 'wap', 'yes', 'wap' ),
 		);
 	}
 

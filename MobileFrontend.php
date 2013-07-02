@@ -34,12 +34,13 @@ $wgExtensionMessagesFiles['MobileFrontendAlias'] = "$cwd/MobileFrontend.alias.ph
 // autoload extension classes
 $autoloadClasses = array (
 	'ExtMobileFrontend' => 'MobileFrontend.body',
-	'MobileFrontendDeviceDetectModule' => 'MobileFrontend.body',
 	'MobileFrontendHooks' => 'MobileFrontend.hooks',
 
 	'DeviceDetection' => 'DeviceDetection',
+	'HtmlDeviceProperties' => 'DeviceDetection',
 	'MobileContext' => 'MobileContext',
 	'WmlContext' => 'WmlContext',
+	'WmlDeviceProperties' => 'DeviceDetection',
 
 	'HtmlFormatter' => 'formatters/HtmlFormatter',
 	'MobileFormatter' => 'formatters/MobileFormatter',
@@ -52,7 +53,6 @@ $autoloadClasses = array (
 
 	'MFResourceLoaderModule' => 'modules/MFResourceLoaderModule',
 	'MobileSiteModule' => 'modules/MobileSiteModule',
-	'MobileDeviceDetectModule' => 'modules/MobileDeviceDetectModule',
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialMobileUserlogin' => 'specials/SpecialMobileUserlogin',
@@ -368,12 +368,6 @@ $wgMFEnableSiteNotice = false;
  * @var bool
  */
 $wgMFEnableXAnalyticsLogging = false;
-
-/**
- * If set to true, mobile skin's resources are varied by X-Device.
- * Otherwise, page HTML will be varied on it.
- */
-$wgMFVaryResources = false;
 
 /**
  * Whether or not anonymous (not logged in) users should be able to edit.
