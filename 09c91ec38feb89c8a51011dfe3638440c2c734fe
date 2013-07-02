@@ -16,6 +16,24 @@
       "revId": "09c91ec38feb89c8a51011dfe3638440c2c734fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9cff5e9_e50f9187",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-07-02T20:52:14Z",
+      "side": 0,
+      "message": "Addressed comment one in patchset 2. Comment two: SkinMobileWML.php changes should be deferred until change 69336 is crystallized.",
+      "parentUuid": "c9cff5e9_659d6162",
+      "revId": "09c91ec38feb89c8a51011dfe3638440c2c734fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
