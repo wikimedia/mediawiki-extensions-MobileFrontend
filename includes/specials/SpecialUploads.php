@@ -18,8 +18,15 @@ class SpecialUploads extends UnlistedSpecialMobilePage {
 
 		// TODO: what if the user cannot upload to the destination wiki in $wgMFPhotoUploadEndpoint?
 		if( $user->isAnon() ) {
+			$returnTo = $this->getTitle()->getPrefixedText();
+			$loginLink = Linker::link(
+				SpecialPage::getTitleFor( 'UserLogin' ),
+				wfMessage( 'mobile-frontend-user-account' )->plain(),
+				array(),
+				array( 'returnto' => $returnTo )
+			);
 			$html = '<div class="alert error">' .
-				$this->msg( 'mobile-frontend-donate-image-anon' )->parse() .
+				$this->msg( 'mobile-frontend-donate-image-anon' )->rawParams( $loginLink )->parse() .
 				'</div>';
 		} else {
 			$uploadCount = $this->getUserUploadCount( $user->getName() );

@@ -148,7 +148,8 @@ $messages['en'] = array (
 	'mobile-frontend-photo-upload-generic' => 'Contribute an image',
 	'mobile-frontend-donate-image-title' => 'Uploads',
 	'mobile-frontend-donate-image-heading' => 'Your recent contributions',
-	'mobile-frontend-donate-image-anon' => 'A [[Special:UserLogin|user account]] is required to view the uploads page',
+	'mobile-frontend-donate-image-anon' => 'A $1 is required to view the uploads page.',
+	'mobile-frontend-user-account' => 'user account',
 	'mobile-frontend-listed-image-no-description' => 'No description',
 	'mobile-frontend-donate-photo-upload-success' => 'Success! Your image can now be used on {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Success! Thanks for your first contribution!',
@@ -530,7 +531,9 @@ Used when the user is not logged in.
 	'mobile-frontend-donate-image-title' => '{{doc-special|Uploads|unlisted=1}}
 {{Identical|Upload}}',
 	'mobile-frontend-donate-image-heading' => 'heading for a list of recent contributions',
-	'mobile-frontend-donate-image-anon' => 'Message shown to user who visits the Special:Uploads page without a user account',
+	'mobile-frontend-donate-image-anon' => 'Message shown to user who visits the Special:Uploads page without a user account
+*$1 - link to the user login page, see {{msg-mw|mobile-frontend-user-account}}',
+	'mobile-frontend-user-account' => 'Text for a link to the user login page. Displayed as part of the sentence {{msg-mw|mobile-frontend-donate-image-anon}}.',
 	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
 	'mobile-frontend-donate-photo-upload-success' => 'On upload page - notification shown after a successful upload',
 	'mobile-frontend-donate-photo-first-upload-success' => 'On upload page - notification shown after a successful upload when it is the first upload by that user',
