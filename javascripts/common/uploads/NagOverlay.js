@@ -10,7 +10,7 @@
 
 		template: M.template.get( 'photoNag' ),
 
-		initialize: function() {
+		initialize: function( options ) {
 			this.learnMoreOverlay = new LearnMoreOverlay( {
 				parent: this,
 				heading: mw.msg( 'mobile-frontend-photo-nag-learn-more-heading' ),
@@ -20,6 +20,8 @@
 					mw.msg( 'mobile-frontend-photo-nag-learn-more-3' )
 				]
 			} );
+
+			this._super( options );
 		},
 
 		postRender: function( options ) {
