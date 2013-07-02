@@ -215,7 +215,7 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 					$this->listGroups( $user ) .
 				'</div>' .
 				'<div class="mw-mf-edit-count">' .
-					$this->msg( 'mobile-frontend-diffview-editcount', '<div>' . $this->getLanguage()->formatNum( $edits ) . '</div>' )->parse() .
+					$this->msg( 'mobile-frontend-diffview-editcount', $this->getLanguage()->formatNum( $edits ) )->parse() .
 				'</div>'
 			);
 		} else {
