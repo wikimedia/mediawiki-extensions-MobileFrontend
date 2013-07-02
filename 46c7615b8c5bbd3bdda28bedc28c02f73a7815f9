@@ -16,6 +16,24 @@
       "revId": "46c7615b8c5bbd3bdda28bedc28c02f73a7815f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9cff5e9_886b4c86",
+        "filename": "includes/specials/SpecialUploads.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-02T23:06:45Z",
+      "side": 1,
+      "message": "SpecialEditWatchlist in core seems to do this:\n$out-\u003eaddHTML( $this-\u003emsg( \u0027watchlistanontext\u0027 )-\u003erawParams( $llink )-\u003eparse() );",
+      "parentUuid": "c9cff5e9_684ff835",
+      "revId": "46c7615b8c5bbd3bdda28bedc28c02f73a7815f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
