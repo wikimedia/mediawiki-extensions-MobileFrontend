@@ -17,19 +17,22 @@
 	}
 
 	function init() {
+		// FIXME: this doesn't work when loading page dynamically
+		var isNew = mw.config.get( 'wgArticleId' ) === 0;
+
 		M.router.route( /^editor-(\d+)$/, function( section ) {
 			var title = mw.config.get( 'wgTitle' ), ns = mw.config.get( 'wgCanonicalNamespace' );
 			section = parseInt( section, 10 );
 			new EditorOverlay( {
 				title: ns ? ns + ':' + title : title,
-				isNew: mw.config.get( 'wgArticleId' ) === 0,
+				isNew: isNew,
 				section: section
 			} ).show();
 		} );
 		$( '#ca-edit' ).addClass( 'enabled' );
 
 		// FIXME: unfortunately the main page is special cased.
-		if ( mw.config.get( 'wgIsMainPage' ) || $( '#content_0' ).text() ) {
+		if ( mw.config.get( 'wgIsMainPage' ) || isNew || $( '#content_0' ).text() ) {
 			// if lead section is not empty, open editor with lead section
 			addEditButton( 0, '#ca-edit' );
 		} else {
