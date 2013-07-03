@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-var toggle = ( function() {
+var MIN_SECTIONS = 2, toggle = ( function() {
 
 	function wm_toggle_section( section_id ) {
 		$( '#section_' + section_id + ',#content_' + section_id ).toggleClass( 'openSection' );
@@ -17,6 +17,7 @@ var toggle = ( function() {
 	}
 
 	function init() {
+		$( 'html' ).removeClass( 'stub' );
 		function openSectionHandler() {
 			var sectionName = this.id ? this.id.split( '_' )[1] : -1;
 			if ( sectionName !== -1 ) {
@@ -39,17 +40,24 @@ var toggle = ( function() {
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
 
+	// page is not long enough to collapse so don't worry
+	if ( $( '#content h2' ).length < MIN_SECTIONS ) {
+		$( 'html' ).addClass( 'stub' );
+	} else {
+		init();
+	}
+
 	return {
 		wm_reveal_for_hash: wm_reveal_for_hash,
 		wm_toggle_section: wm_toggle_section,
-		init: init
+		enable: init
 	};
 
 }());
 
 M.define( 'toggle', toggle );
 M.on( 'page-loaded', function() {
-	toggle.init();
+	toggle.enable();
 } );
 
 }( mw.mobileFrontend, jQuery ) );

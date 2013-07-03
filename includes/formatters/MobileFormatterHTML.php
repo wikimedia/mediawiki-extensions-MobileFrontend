@@ -17,7 +17,7 @@ class MobileFormatterHTML extends MobileFormatter {
 
 	protected function onHtmlReady( $html ) {
 		wfProfileIn( __METHOD__ );
-		if ( $this->expandableSections && strlen( $html ) > 4000 ) {
+		if ( $this->expandableSections ) {
 			$html = $this->headingTransform( $html );
 		}
 		wfProfileOut( __METHOD__ );
