@@ -305,6 +305,7 @@ body.navigation-enabled {
 body.navigation-enabled #mw-mf-viewport {
   margin-left: -12px;
   overflow: hidden;
+  min-height: 100%;
   height: auto !important;
 }
 body.navigation-enabled #mw-mf-page-center {
