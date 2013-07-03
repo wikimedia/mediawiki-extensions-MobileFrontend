@@ -271,6 +271,9 @@ $messages['en'] = array (
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Topic subject',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'What is on your mind?',
 	'mobile-frontend-talk-edit-summary' => 'New talk section: $1',
+	'mobile-frontend-talk-reply-success' => 'Your reply was successfully saved to the talk page.',
+	'mobile-frontend-talk-reply-info' => 'Note your reply will be automatically signed with your username.',
+	'mobile-frontend-talk-reply' => 'Reply',
 );
 
 /** Message documentation (Message documentation)
@@ -698,6 +701,9 @@ See also:
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Placeholder text to prompt user to add a talk page topic subject',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Placeholder text to prompt user to add content to talk page content',
 	'mobile-frontend-talk-edit-summary' => 'Edit summary when creating a new talk section ($1 is name of section)',
+	'mobile-frontend-talk-reply-success' => 'Toast message when you have saved a reply successfully.',
+	'mobile-frontend-talk-reply-info' => 'Inform the user their talk reply will be automatically signed.',
+	'mobile-frontend-talk-reply' => 'Reply heading',
 );
 
 /** Achinese (Acèh)

@@ -296,6 +296,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
+			'javascripts/modules/talk/TalkSectionOverlay.js',
 			'javascripts/modules/talk.js',
 			'javascripts/common/user.js',
 			'javascripts/modules/search-pageimages.js',
@@ -318,6 +319,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-add-overlay-content-placeholder',
 			'mobile-frontend-talk-edit-summary',
 			'mobile-frontend-talk-add-overlay-submit',
+			'mobile-frontend-talk-reply-success',
+			'mobile-frontend-talk-reply',
+			'mobile-frontend-talk-reply-info',
 
 			// user.js
 			'mobile-frontend-user-cta',
