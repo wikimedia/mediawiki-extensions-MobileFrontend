@@ -1,23 +1,31 @@
 @import "../mf-mixins.less";
 @toastNotificationColor: #373737;
 
+#notifications {
+	// it's only a container, should not get in the way
+	height: 0;
+	// needed for Android 4.x
+	position: absolute;
+	z-index: 5;
+	// needed for MSIE 9 (Windows Phone 7)
+	width: 100%;
+}
+
 /* Notifications */
 #mf-notification,
 .drawer {
-	/* -2px to avoid a weird glitch in some browsers where the popup moves
-	 * slightly when scrolling */
-	bottom: -2px;
+	bottom: 0;
 	width: 100%;
 	background-color: @searchBoxColorTo;
 	.boxshadow( 0, -1px, 8px, 0, rgba(0, 0, 0, 0.35) );
 	word-wrap: break-word;
-	z-index: -1;
+	// needs to be higher than for overlays to show on top of overlays
+	z-index: 5;
+	// don't use visibility: hidden in old browsers that don't support animations
 	display: none;
 
 	&.visible {
-		// needs to be higher than for overlays to show on top of overlays
-		z-index: 5;
-		display: block
+		display: block;
 	}
 }
 
@@ -25,19 +33,23 @@
 .animations .alpha {
 	#mf-notification,
 	.drawer {
+		@duration: .25s;
 		display: block;
+		visibility: hidden;
 		/* we can't determine the actual size of the drawer in CSS, so this is
 		 * an estimate; it doesn't have to be exact because it's used only for
 		 * the sliding animation, not for hiding the drawer */
-		bottom: -11em;
+		.transform( translate3d(0, 100px, 0) );
 		opacity: 0;
-		.transition( all, .2s );
+		// delay visibility transition to make other transitions visible
+		// http://fvsch.com/code/transition-fade/test5.html/
+		.transition( transform @duration, opacity @duration, visibility 0 @duration );
 
 		&.visible {
+			.transition( transform @duration, opacity @duration );
+			visibility: visible;
 			opacity: 1;
-			/* -0.2em to avoid a weird glitch in some browsers where the popup moves
-			 * slightly when scrolling */
-			.transform( translate3d(0, -10.8em, 0) );
+			.transform( translate3d(0, 0, 0) );
 		}
 	}
 }
@@ -125,7 +137,7 @@
 	}
 
 	a:visited, a {
-	color: #3354C0;
+		color: #3354C0;
 	}
 
 	p {

@@ -13,7 +13,7 @@ var View = M.require( 'view' ),
 				ev.preventDefault();
 				self.hide();
 			} );
-			this.appendTo( '#mw-mf-page-center' );
+			this.appendTo( '#notifications' );
 		},
 
 		show: function() {
@@ -22,13 +22,16 @@ var View = M.require( 'view' ),
 				this.$el.addClass( 'visible' );
 				// ignore a possible click that called show()
 				setTimeout( function() {
-					$( window ).one( 'scroll click', $.proxy( self, 'hide' ) );
+					$( window ).one( 'scroll.drawer click.drawer', $.proxy( self, 'hide' ) );
 				}, 0 );
 			}
 		},
 
 		hide: function() {
 			this.$el.removeClass( 'visible' );
+			// .one() registers one callback for scroll and click independently
+			// if one fired, get rid of the other one
+			$( window ).off( '.drawer' );
 		},
 
 		isVisible: function() {

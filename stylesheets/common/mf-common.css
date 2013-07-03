@@ -227,8 +227,14 @@ i {
 .client-js .jsonly {
   display: block;
 }
-.supportsPositionFixed .position-fixed {
+.position-fixed {
   position: fixed;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+.no-position-fixed #notifications {
+  bottom: 0;
+}
+.no-position-fixed .position-fixed {
+  position: absolute;
 }
