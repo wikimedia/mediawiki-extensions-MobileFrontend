@@ -28,7 +28,8 @@
 		} );
 		$( '#ca-edit' ).addClass( 'enabled' );
 
-		if ( $( '#content_0' ).text() ) {
+		// FIXME: unfortunately the main page is special cased.
+		if ( mw.config.get( 'wgIsMainPage' ) || $( '#content_0' ).text() ) {
 			// if lead section is not empty, open editor with lead section
 			addEditButton( 0, '#ca-edit' );
 		} else {
