@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c609db_05dbd27a",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-03T22:49:08Z",
+      "side": 1,
+      "message": "just add in JavaScript unnecessary here.",
+      "revId": "d10c9cd03fa3066d18eb66e2ee145ccd9fedef59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_c5141af6",
+        "filename": "javascripts/common/mf-application.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-03T22:49:08Z",
+      "side": 1,
+      "message": "no need for FIXME if you remove in SkinTemplate",
+      "revId": "d10c9cd03fa3066d18eb66e2ee145ccd9fedef59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
