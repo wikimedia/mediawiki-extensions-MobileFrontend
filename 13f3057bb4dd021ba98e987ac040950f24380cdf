@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89c97deb_5a62c5db",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-03T22:03:22Z",
+      "side": 1,
+      "message": "I\u0027d rather not have a method that\u0027s used only in tests. Let\u0027s used the global directly or make it an argument for MobileFormatter constructor.",
+      "revId": "13f3057bb4dd021ba98e987ac040950f24380cdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
