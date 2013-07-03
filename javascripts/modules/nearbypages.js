@@ -10,10 +10,10 @@
 			className: 'mw-mf-overlay list-overlay',
 			template: M.template.get( 'overlays/nearby' ),
 			defaults: {
-				heading: 'Nearby',
-				pretext: mw.message( 'mobile-frontend-nearby-to-page', mw.config.get( 'wgTitle' ) )
+				heading: 'Nearby'
 			},
 			initialize: function( options ) {
+				options.pretext = mw.message( 'mobile-frontend-nearby-to-page', options.title );
 				this._super( options );
 				this.latLngString = options.latitude + ',' + options.longitude;
 			},
@@ -30,16 +30,18 @@
 	} );
 
 
-	function initNearbyButton( latitude, longitude ) {
+	function initNearbyButton( title, latitude, longitude ) {
 		$( '<button class="nearby">' ).on( 'click', function() {
 			if ( !overlay ) {
-				overlay = new NearbyOverlay( { latitude: latitude, longitude: longitude } );
+				overlay = new NearbyOverlay( { title: title, latitude: latitude, longitude: longitude } );
 			}
 			overlay.show();
 		} ).appendTo( '#section_0' );
 	}
 
-	function init() {
+	function init( page ) {
+		// reset the overlay in case a new page was loaded
+		overlay = null;
 		// in form 37.783; -122.417 - take the first one
 		latLng = $( '.geo' ).eq( 0 ).text();
 		// Matches <number>;<spaces><number> where number can be negative or positive and a float or integer
@@ -51,7 +53,7 @@
 
 		if ( lat && lng ) {
 			// in business!
-			initNearbyButton( lat, lng );
+			initNearbyButton( page ? page.title : mw.config.get( 'wgTitle' ), lat, lng );
 		}
 	}
 	init();
