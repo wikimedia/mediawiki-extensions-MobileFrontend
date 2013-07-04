@@ -377,7 +377,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	function showEmptyList( $feed ) {
 		global $wgExtensionAssetsPath;
 		$output = $this->getOutput();
-		$msg = $feed ? 'mobile-frontend-watchlist-feed-empty' : 'mobile-frontend-watchlist-a-z-empty';
 		$dir = $this->getLanguage()->isRTL() ? 'rtl' : 'ltr';
 
 		// FIXME: This is necessary until new nav pushed to beta
@@ -386,16 +385,20 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		} else {
 			$imgUrl = $wgExtensionAssetsPath . "/MobileFrontend/images/emptywatchlist-$dir.png";
 		}
-
-		$output->addHtml(
-				Html::openElement( 'div', array( 'class' => 'info' ) ) .
-				Html::element( 'p', null, wfMessage( $msg )->plain() ) .
-				Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain() ) .
+		if ( $feed ) {
+			$msg = Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );
+		} else {
+			$msg  = Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain() ) .
 				Html::element( 'img', array(
 					'src' => $imgUrl,
 					'alt' => wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
 					)
-				) .
+				);
+		}
+
+		$output->addHtml(
+				Html::openElement( 'div', array( 'class' => 'info' ) ) .
+				$msg .
 				Html::openElement( 'div' ) .
 				Html::element( 'a',
 					array( 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ),
