@@ -16,6 +16,91 @@
       "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_5a1c81be",
+        "filename": "includes/formatters/ExtractFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-05T18:22:33Z",
+      "side": 1,
+      "message": "A class description would be useful here.",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_ba7935fc",
+        "filename": "includes/formatters/ExtractFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-05T18:22:33Z",
+      "side": 1,
+      "message": "I know you\u0027re just moving this from another location, but it would be nice to have function documentation here: description, params, return, etc.",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_fa83adcd",
+        "filename": "includes/formatters/ExtractFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-05T18:22:33Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_7a785df0",
+        "filename": "includes/formatters/HtmlFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-05T18:22:33Z",
+      "side": 1,
+      "message": "I would suggest changing this function name to setUseImgAlt. Having a member variable and member function with the same name can cause confusion.",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_5a75a1f6",
+        "filename": "includes/formatters/HtmlFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-05T18:22:33Z",
+      "side": 1,
+      "message": "I know it\u0027s a simple function, but it would still be helpful to have a function description and param definition here, e.g.:\n\n/**\n * Removes elements from the DOM\n * @param array $elements Array of DOM nodes to be removed\n */",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
