@@ -146,6 +146,10 @@ $messages['en'] = array (
 
 	// image donation
 	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
+	'mobile-frontend-photo-upload-disabled' => 'No image is needed on this page.',
+	'mobile-frontend-photo-upload-anon' => 'You need to be logged in to add an image to this page.',
+	'mobile-frontend-photo-upload-protected' => 'You do not have permission to add an image to this page.',
+	'mobile-frontend-photo-upload-unavailable' => 'Your browser does not support image uploads.',
 	'mobile-frontend-photo-upload-generic' => 'Contribute an image',
 	'mobile-frontend-donate-image-title' => 'Uploads',
 	'mobile-frontend-donate-image-heading' => 'Your recent contributions',
@@ -239,6 +243,7 @@ $messages['en'] = array (
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 
 	// edit
+	'mobile-frontend-editor-disabled' => 'You are not allowed to edit this page.',
 	'mobile-frontend-editor-cta' => 'You must be logged in to edit pages on mobile.',
 	'mobile-frontend-editor-edit' => 'Edit',
 	'mobile-frontend-editor-save' => 'Save',
@@ -531,6 +536,10 @@ See also:
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-photo-upload-disabled' => 'Message that shows when user clicks on image upload button when a page doesn\'t need an image',
+	'mobile-frontend-photo-upload-anon' => 'Message that shows when user clicks on image upload button when anon and without CTA enabled',
+	'mobile-frontend-photo-upload-protected' => 'Message that shows when user clicks on image upload button when the page is protected',
+	'mobile-frontend-photo-upload-unavailable' => 'YMessage that shows when user clicks on image upload button when photo uploads are not supported',
 	'mobile-frontend-photo-upload-generic' => 'Label on button on Special:Uploads.',
 	'mobile-frontend-donate-image-title' => '{{doc-special|Uploads|unlisted=1}}
 {{Identical|Upload}}',
@@ -654,6 +663,7 @@ They can either exit the page and lose them or stay on the page until they are c
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon',
 	'mobile-frontend-editor-cta' => "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)",
 	'mobile-frontend-editor-edit' => 'Caption for the link showing edit form.
 {{Identical|Edit}}',

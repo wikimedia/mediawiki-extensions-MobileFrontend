@@ -231,6 +231,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			// editor.js
+			'mobile-frontend-editor-disabled',
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-edit',
 			'mobile-frontend-editor-save',
@@ -522,6 +523,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-years',
 
 			// leadphoto.js
+			'mobile-frontend-photo-upload-disabled',
+			'mobile-frontend-photo-upload-protected',
+			'mobile-frontend-photo-upload-anon',
+			'mobile-frontend-photo-upload-unavailable',
 			'mobile-frontend-photo-upload-success-article',
 			'mobile-frontend-photo-upload',
 

@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
 	var EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
+		popup = M.require( 'notifications' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			content: mw.msg( 'mobile-frontend-editor-cta' )
@@ -59,6 +60,10 @@
 			$( '#ca-edit' ).addClass( 'enabled' ).on( 'click', $.proxy( drawer, 'show' ) );
 		}
 		M.on( 'page-loaded', init );
+	} else {
+		$( '#ca-edit' ).on( 'click', function() {
+			popup.show( mw.msg( 'mobile-frontend-editor-disabled' ), 'toast' );
+		} );
 	}
 
 }( mw.mobileFrontend, jQuery ) );
