@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c609db_315a8b4e",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-05T22:07:31Z",
+      "side": 1,
+      "message": "Not sure why we would display the message only in feed view...",
+      "revId": "b1812a9753798c16d7ac630026aa197a1b5a1bfa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
