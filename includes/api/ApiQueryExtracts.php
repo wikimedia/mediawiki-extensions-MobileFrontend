@@ -45,7 +45,8 @@ class ApiQueryExtracts extends ApiQueryBase {
 				break;
 			}
 			$text = $this->getExtract( $t );
-			$text = $this->truncate( $text );
+			$pageName = $t->getText();
+			$text = $this->truncate( $text, $pageName );
 			if ( $this->params['plaintext'] ) {
 				$text = $this->doSections( $text );
 			}
@@ -204,11 +205,17 @@ class ApiQueryExtracts extends ApiQueryBase {
 		return trim( $text );
 	}
 
-	private function truncate( $text ) {
+	/**
+	 * Truncate the given text to a certain number of characters or sentences
+	 * @param string $text The text to truncate
+	 * @param string $pageName Title of the page (for debugging)
+	 * @return string
+	 */
+	private function truncate( $text, $pageName ) {
 		if ( $this->params['chars'] ) {
 			return $this->getFirstChars( $text, $this->params['chars'] );
 		} elseif ( $this->params['sentences'] ) {
-			return $this->getFirstSentences( $text, $this->params['sentences'] );
+			return $this->getFirstSentences( $text, $this->params['sentences'], $pageName );
 		}
 		return $text;
 	}
@@ -240,9 +247,10 @@ class ApiQueryExtracts extends ApiQueryBase {
 	 *
 	 * @param string $text
 	 * @param int $requestedSentenceCount
+	 * @param string $pageName Title of the page (for debugging)
 	 * @return string
 	 */
-	private function getFirstSentences( $text, $requestedSentenceCount ) {
+	private function getFirstSentences( $text, $requestedSentenceCount, $pageName ) {
 		wfProfileIn( __METHOD__ );
 		// Based on code from OpenSearchXml by Brion Vibber
 		$endchars = array(
@@ -262,7 +270,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 			$text = $matches[0];
 		} else {
 			if ( $res === false ) {
-				wfDebugLog( 'mobile', "Invalid regular expression: $regexp" );
+				wfDebugLog( 'mobile', "Regular expresssion compilation failure. Page: $pageName; RegEx: $regexp" );
 			}
 			// Just return the first line
 			$lines = explode( "\n", $text );
