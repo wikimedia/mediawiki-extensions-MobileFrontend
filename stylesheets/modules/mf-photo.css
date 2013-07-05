@@ -118,8 +118,6 @@
   font-weight: bold;
   line-height: 50px;
   border: 3px solid #939393;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
   border-radius: 50px;
   background: #e6e7e8 url(images/confirm.png) 50% 50% no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */

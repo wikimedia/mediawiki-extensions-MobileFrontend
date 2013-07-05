@@ -52,8 +52,6 @@
   border: none;
   background-color: #F0F0F0;
   font-weight: bold;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .carousel .page {

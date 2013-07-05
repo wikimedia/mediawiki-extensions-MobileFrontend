@@ -11,7 +11,7 @@ button {
 button,
 input[type=submit] {
 	display: inline-block;
-	.border-radius( 3px );
+	border-radius: 3px;
 	white-space: nowrap;
 	line-height: 1;
 	cursor: pointer;
@@ -86,7 +86,7 @@ input[type=submit] {
 			display: inline-block;
 
 			.button, button {
-				.border-radius( 0 );
+				border-radius: 0;
 				border-right: none;
 
 				&:disabled {
@@ -109,13 +109,13 @@ input[type=submit] {
 
 			&:first-child {
 				.button, button {
-					.border-radius( 3px 0 0 3px );
+					border-radius: 3px 0 0 3px;
 				}
 			}
 
 			&:last-child {
 				.button, button {
-					.border-radius( 0 3px 3px 0 );
+					border-radius: 0 3px 3px 0;
 					border-right: 1px solid #9ea0a3;
 				}
 			}

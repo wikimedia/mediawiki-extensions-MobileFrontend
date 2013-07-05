@@ -90,8 +90,7 @@ body.no-margins #content_wrapper > .content {
 }
 #content_wrapper .thumb {
   border: 1px solid #cccccc;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  border-radius: 5px;
   background: #f9f9f9;
   text-align: center;
 }

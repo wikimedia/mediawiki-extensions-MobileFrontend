@@ -7,8 +7,6 @@ button {
 button,
 input[type=submit] {
   display: inline-block;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   white-space: nowrap;
   line-height: 1;
@@ -154,8 +152,6 @@ input[type=submit] {
 }
 .header .button-bar li .button,
 .header .button-bar li button {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   border-right: none;
 }
@@ -178,14 +174,10 @@ input[type=submit] {
 }
 .header .button-bar li:first-child .button,
 .header .button-bar li:first-child button {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
 .header .button-bar li:last-child .button,
 .header .button-bar li:last-child button {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
   border-right: 1px solid #9ea0a3;
 }
@@ -402,8 +394,6 @@ body.navigation-enabled #mw-mf-page-center {
 /* Search */
 input.search {
   -webkit-appearance: none;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #c9c9c9;
   outline: none;

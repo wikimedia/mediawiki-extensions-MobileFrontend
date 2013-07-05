@@ -17,8 +17,6 @@
   line-height: 1;
   padding: 1px 4px;
   background: #c91f2c;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 #user-button span.zero {

@@ -73,8 +73,6 @@
   margin: 0 auto 20px auto;
   width: 80%;
   text-align: center;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
   border-radius: 1px;
   box-shadow: 0 0 1px 3px #373737;
 }
