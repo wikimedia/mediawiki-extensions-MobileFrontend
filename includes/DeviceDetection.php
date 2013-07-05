@@ -211,7 +211,6 @@ class DeviceDetection implements IDeviceDetector {
 		),
 		'blackberry' => array (
 			'view_format' => 'html',
-			'css_file_name' => 'blackberry',
 		),
 		'ie' => array (
 			'view_format' => 'html',
