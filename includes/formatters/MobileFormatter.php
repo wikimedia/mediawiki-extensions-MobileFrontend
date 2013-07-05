@@ -16,7 +16,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 	protected $headings = 0;
 
 	private $defaultItemsToRemove = array(
-		'table.toc',
+		'.toc',
 		'div.stub',
 		'#search', // remove search form element from Special:Search
 		'div.sister-project',
