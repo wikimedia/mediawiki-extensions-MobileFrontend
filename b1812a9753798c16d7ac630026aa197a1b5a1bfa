@@ -16,6 +16,24 @@
       "revId": "b1812a9753798c16d7ac630026aa197a1b5a1bfa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_041f4b59",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 380,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-05T22:27:15Z",
+      "side": 1,
+      "message": "As it adds additional information.. take a look at the contents of those messages.\n\nWe /could/ rewrite the feed message - but I worry this causes unnecessary translation work...",
+      "parentUuid": "69c609db_315a8b4e",
+      "revId": "b1812a9753798c16d7ac630026aa197a1b5a1bfa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
