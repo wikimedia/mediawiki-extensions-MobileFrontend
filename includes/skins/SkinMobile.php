@@ -92,7 +92,7 @@ class SkinMobile extends SkinMinerva {
 	}
 
 	protected function getSearchPlaceHolderText() {
-		return wfMessage( 'mobile-frontend-placeholder' )->escaped();
+		return wfMessage( 'mobile-frontend-placeholder' )->text();
 	}
 
 	public function prepareData( BaseTemplate $tpl ) {

@@ -53,7 +53,9 @@ class SkinMinerva extends SkinTemplate {
 			'id' => 'searchInput',
 			'class' => 'search',
 			'autocomplete' => 'off',
-			'placeholder' =>  wfMessage( 'mobile-frontend-placeholder' )->escaped(),
+			// The placeholder gets fed to HTML::element later which escapes all
+			// attribute values, so no need to escape the string here.
+			'placeholder' =>  wfMessage( 'mobile-frontend-placeholder' )->text(),
 		);
 		$tpl->set( 'searchBox', $searchBox );
 

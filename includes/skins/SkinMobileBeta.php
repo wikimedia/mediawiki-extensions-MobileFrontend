@@ -5,7 +5,7 @@ class SkinMobileBeta extends SkinMobile {
 	protected $mode = 'beta';
 
 	protected function getSearchPlaceHolderText() {
-		return wfMessage( 'mobile-frontend-placeholder-beta' )->escaped();
+		return wfMessage( 'mobile-frontend-placeholder-beta' )->text();
 	}
 
 	public function initPage( OutputPage $out ) {
