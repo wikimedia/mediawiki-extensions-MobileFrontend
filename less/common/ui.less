@@ -69,7 +69,8 @@ input.search {
 	padding: 0 0 0 5px;
 	width: 100%;
 	height: @headerElementHeight;
-	background-color: white; /* remove fennec default background */
+	// FIXME: unable to check but the important may not be needed for Nokia S60;
+	background-color: white !important; /* remove fennec default background also see bug 36490 */
 	.box-sizing( border-box );
 	&::-webkit-search-cancel-button {
 		-webkit-appearance: none;

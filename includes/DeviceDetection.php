@@ -229,7 +229,6 @@ class DeviceDetection implements IDeviceDetector {
 		),
 		'nokia' => array (
 			'view_format' => 'html',
-			'css_file_name' => 'nokia',
 		),
 		'operamini' => array (
 			'view_format' => 'html',

@@ -89,7 +89,7 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 			array( 'iphone', 'mobile.device.iphone' ),
 			array( 'kindle', 'mobile.device.kindle' ),
 			array( 'blackberry', 'mobile.device.blackberry' ),
-			array( 'nokia', 'mobile.device.nokia' ),
+			array( 'nokia', '' ),
 			array( 'wml', '' )
 		);
 	}
