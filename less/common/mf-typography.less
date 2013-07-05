@@ -1,6 +1,8 @@
 @import "../mf-variables.less";
 
 html {
+	/* prevent font scaling in landscape in Safari */
+	-webkit-text-size-adjust: none;
 	font-size: 100% * @fontScalingFactor; /* default browser size is 16px (12pt - our @baseFontSize) */
 }
 

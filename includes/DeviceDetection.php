@@ -217,7 +217,6 @@ class DeviceDetection implements IDeviceDetector {
 		),
 		'iphone' => array (
 			'view_format' => 'html',
-			'css_file_name' => 'iphone',
 		),
 		'kindle' => array (
 			'view_format' => 'html',

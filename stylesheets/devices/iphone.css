@@ -1,8 +1,0 @@
-html {
-	/* prevent font scaling in landscape in Safari */
-	-webkit-text-size-adjust: none;
-}
-
-#searchInput {
-	line-height: normal; /* placeholder displays incorrectly on iphones */
-}
