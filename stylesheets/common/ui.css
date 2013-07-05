@@ -249,7 +249,6 @@ input[type=submit] {
   background-repeat: no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 24px 24px;
   -o-background-size: 24px 24px;
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
@@ -390,7 +389,6 @@ body.navigation-enabled #mw-mf-page-center {
   background-image: url(images/menu/lowres/main.png);
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 24px 30px;
   -o-background-size: 24px 30px;
   -webkit-background-size: 24px 30px;
   background-size: 24px 30px;

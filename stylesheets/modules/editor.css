@@ -43,7 +43,6 @@
   background-position: 16px 50%;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 32px auto;
   -o-background-size: 32px auto;
   -webkit-background-size: 32px auto;
   background-size: 32px auto;

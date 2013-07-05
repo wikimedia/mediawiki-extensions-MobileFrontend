@@ -56,7 +56,6 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   text-indent: -999px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto 30px;
   -o-background-size: auto 30px;
   -webkit-background-size: auto 30px;
   background-size: auto 30px;

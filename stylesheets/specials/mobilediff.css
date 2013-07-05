@@ -12,7 +12,6 @@
   padding-left: 1.5em;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 1em 1em;
   -o-background-size: 1em 1em;
   -webkit-background-size: 1em 1em;
   background-size: 1em 1em;

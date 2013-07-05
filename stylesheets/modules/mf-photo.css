@@ -11,7 +11,6 @@
   background: url(images/camera.png) 10px 45% no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 24px auto;
   -o-background-size: 24px auto;
   -webkit-background-size: 24px auto;
   background-size: 24px auto;
@@ -91,7 +90,6 @@
   height: 50%;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
@@ -100,7 +98,6 @@
 .photo-nag .preview.loading {
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto auto;
   -o-background-size: auto auto;
   -webkit-background-size: auto auto;
   background-size: auto auto;
@@ -127,7 +124,6 @@
   background: #e6e7e8 url(images/confirm.png) 50% 50% no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 24px 24px;
   -o-background-size: 24px 24px;
   -webkit-background-size: 24px 24px;
   background-size: 24px 24px;
@@ -155,7 +151,6 @@
   .photo-nag .preview {
     /* use -webkit prefix for older android browsers eg. nexus 1 */
   
-    -moz-background-size: auto 100%;
     -o-background-size: auto 100%;
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
