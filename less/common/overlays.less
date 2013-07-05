@@ -1,5 +1,6 @@
 @import "../mf-mixins.less";
 
+// FIXME: this looks suspicious (overlay class is added to <html>)
 .overlay ul {
 	text-align: left;
 	left: 0;
@@ -8,7 +9,6 @@
 	position: relative;
 	opacity: 1;
 	padding: 0;
-	cursor: pointer;
 	margin: 0;
 	list-style: none;
 
@@ -144,17 +144,45 @@ html[dir="rtl"] {
 	}
 }
 
+.mw-mf-overlay {
+	ul.actionable {
+		cursor: pointer;
+
+		li {
+			&:hover {
+				background-color: #ACD1E9;
+			}
+		}
+	}
+}
 
 .mw-mf-overlay > ul {
 	padding: 0;
 	position: relative;
 	padding-bottom: 20px;
-	cursor: pointer;
 	margin: 0;
 	background-color: white;
 	list-style: none;
 
 	li {
-		.overlayListItem();
+		color: #666;
+		border: none;
+		position: relative;
+		border-bottom: solid 1px #999999;
+		border-bottom: solid 1px #eee;
+		padding: @searchResultPaddingVertical @searchBarPaddingLeft;
+		font-size: 0.9em;
+		> a {
+			display: block;
+			text-decoration: none;
+			color: #666;
+
+			&:active,
+			&:hover,
+			&:visited {
+				text-decoration: none;
+				color: #666;
+			}
+		}
 	}
 }

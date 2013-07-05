@@ -6,7 +6,7 @@
 </div>
 {{#variants}}
 <p class="mw-mf-overlay-header">{{{variantHeader}}}</p>
-<ul>
+<ul class="actionable">
 	{{#variants}}
 		<li>
 			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}}  ({{pageName}}){{/pageName}}</a>
@@ -15,7 +15,7 @@
 </ul>
 {{/variants}}
 <p class="mw-mf-overlay-header">{{{header}}}</p>
-<ul>
+<ul class="actionable">
 	{{#languages}}
 		<li {{#preferred}}class="preferred"{{/preferred}}>
 			<a href="{{url}}" hreflang="{{lang}}" lang="{{lang}}"><span>{{langName}}</span>{{#pageName}} ({{pageName}}){{/pageName}}</a>

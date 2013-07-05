@@ -2,6 +2,8 @@
 	<button class="cancel">{{closeMsg}}</button>
 	<h2>{{heading}}</h2>
 </div>
-<div class="content">
-	{{{content}}}
-</div>
+<ul class="cleanup">
+	{{#issues}}
+	<li><img src="{{icon}}"> {{{text}}}</li>
+	{{/issues}}
+</ul>

@@ -4,6 +4,9 @@ This file should not need to exist
 IMPORTANT: do not use selectors containing attribute notation e.g. [style] [colspan]
         as they are known to damage the ios app
 */
+#content table.ambox {
+  display: none;
+}
 code,
 pre {
   font-family: monospace;
