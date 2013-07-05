@@ -17,7 +17,7 @@
 	bottom: 0;
 	width: 100%;
 	background-color: @searchBoxColorTo;
-	.boxshadow( 0, -1px, 8px, 0, rgba(0, 0, 0, 0.35) );
+	box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
 	word-wrap: break-word;
 	// needs to be higher than for overlays to show on top of overlays
 	z-index: 5;
@@ -78,7 +78,7 @@
 		width: 80%;
 		text-align: center;
 		.border-radius( 1px );
-		.boxshadow( 0, 0, 1px, 3px, @toastNotificationColor );
+		box-shadow: 0 0 1px 3px @toastNotificationColor;
 
 		button {
 			display: none;
