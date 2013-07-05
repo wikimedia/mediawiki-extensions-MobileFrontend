@@ -52,7 +52,6 @@ form.mw-mf-settings ul li .mw-mf-checkbox-css3 span {
   color: white;
   background-color: #818181;
   background-image: -moz-linear-gradient(top, #aeaeae 0, #818181 100%);
-  background-image: -ms-linear-gradient(top, #aeaeae 0, #818181 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aeaeae), color-stop(100%, #818181));
   background-image: -webkit-linear-gradient(top, #aeaeae 0, #818181 100%);
   background-image: linear-gradient(#aeaeae 0, #818181 100%);
@@ -102,7 +101,6 @@ form.mw-mf-settings ul li.mw-mf-settings-description {
   border-bottom: solid 1px #aaa;
   background-color: #ebebeb;
   background-image: -moz-linear-gradient(top, #eeeeee 0, #ebebeb 100%);
-  background-image: -ms-linear-gradient(top, #eeeeee 0, #ebebeb 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(100%, #ebebeb));
   background-image: -webkit-linear-gradient(top, #eeeeee 0, #ebebeb 100%);
   background-image: linear-gradient(#eeeeee 0, #ebebeb 100%);
