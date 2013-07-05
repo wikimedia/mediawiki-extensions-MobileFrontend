@@ -173,7 +173,6 @@ $messages['en'] = array (
 
 	'mobile-frontend-watchlist-a-z' => 'All',
 	'mobile-frontend-watchlist-feed' => 'Modified',
-	'mobile-frontend-watchlist-a-z-empty' => 'You are currently not watching any pages.',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Click the star at the top of the page',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'You are not currently watching any pages. Your watchlist helps you keep track of the pages that you are interested in. Watch pages by tapping the star icon.',
 	'mobile-frontend-watchlist-feed-empty' => 'There are no pages with recent changes.',
