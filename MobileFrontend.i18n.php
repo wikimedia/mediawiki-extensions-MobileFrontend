@@ -705,7 +705,8 @@ See also:
 	'mobile-frontend-talk-edit-summary' => 'Edit summary when creating a new talk section ($1 is name of section)',
 	'mobile-frontend-talk-reply-success' => 'Toast message when you have saved a reply successfully.',
 	'mobile-frontend-talk-reply-info' => 'Inform the user their talk reply will be automatically signed.',
-	'mobile-frontend-talk-reply' => 'Reply heading',
+	'mobile-frontend-talk-reply' => 'Reply heading.
+{{Identical|Reply}}',
 );
 
 /** Achinese (Acèh)
@@ -1710,7 +1711,15 @@ $messages['bcl'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '$1 na {{PLURAL:$1|bayta|mga bayta}} pinagtangkas',
 	'mobile-frontend-diffview-explained' => 'An minasunod na mga linya pinagdugang na (+) asin pinagtangkas na (-):',
 	'mobile-frontend-table' => 'Lamesa kan $1',
-	'mobile-frontend-photo-upload' => 'Magdugang nin imahe sa artikulong ini',
+	'mobile-frontend-photo-upload' => 'Magdugang nin sarong imahe sa artikulong ini',
+	'mobile-frontend-photo-article-edit-comment' => 'Pinagdugang nin imahe para gamiton sa pahina',
+	'mobile-frontend-photo-article-donate-comment' => 'Pinag-ambag an imahe gikan sa Espesyal:Mga Ikinarga',
+	'mobile-frontend-photo-upload-comment' => 'Pinagdugang an imahe sa pahina',
+	'mobile-frontend-photo-caption-placeholder' => 'Magdugang nin deskription (pinaghahagad)',
+	'mobile-frontend-image-loading' => 'Ikinakarga an imahe',
+	'mobile-frontend-photo-ownership' => 'Ako si, $1, pinagmukna ining imahe.',
+	'mobile-frontend-photo-ownership-help' => 'Ano an boot sabihon kaini?',
+	'mobile-frontend-photo-ownership-confirm' => 'Kua ko!',
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -2309,6 +2318,13 @@ $messages['ca'] = array(
 	'tag-mobile_edit' => 'Des de mòbil',
 	'tag-mobile_edit-description' => 'Modificació feta des de la versió per a mòbils',
 	'mobile-frontend-drawer-cancel' => 'Anul·la',
+);
+
+/** Min Dong Chinese (Mìng-dĕ̤ng-ngṳ̄)
+ * @author Yejianfei
+ */
+$messages['cdo'] = array(
+	'mobile-frontend-talk-reply' => '回覆',
 );
 
 /** Chechen (нохчийн)
@@ -3102,6 +3118,9 @@ $messages['de'] = array(
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Thema',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Wo drückt der Schuh?',
 	'mobile-frontend-talk-edit-summary' => 'Neuer Diskussionsabschnitt: $1',
+	'mobile-frontend-talk-reply-success' => 'Deine Antwort wurde erfolgreich auf der Diskussionsseite gespeichert.',
+	'mobile-frontend-talk-reply-info' => 'Deine Antwort wird automatisch mit deinem Benutzernamen signiert.',
+	'mobile-frontend-talk-reply' => 'Antwort',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4580,6 +4599,9 @@ $messages['fr'] = array(
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Sujet de la rubrique',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Qu’avez-vous à l’esprit?',
 	'mobile-frontend-talk-edit-summary' => 'Nouvelle section de discussion : $1',
+	'mobile-frontend-talk-reply-success' => 'Votre réponse a été correctement enregistrée sur la page de discussion.',
+	'mobile-frontend-talk-reply-info' => 'Veuillez noter que votre réponse sera automatiquement signée avec votre nom d’utilisateur.',
+	'mobile-frontend-talk-reply' => 'Répondre',
 );
 
 /** Franco-Provençal (arpetan)
@@ -6681,6 +6703,9 @@ in tutto il mondo',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Oggetto della discussione',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'A cosa stai pensando?',
 	'mobile-frontend-talk-edit-summary' => 'Nuova sezione di discussione: $1',
+	'mobile-frontend-talk-reply-success' => 'La tua risposta è stata salvata correttamente nella pagina di discussione.',
+	'mobile-frontend-talk-reply-info' => 'La risposta sarà firmata automaticamente con il tuo nome utente.',
+	'mobile-frontend-talk-reply' => 'Rispondi',
 );
 
 /** Japanese (日本語)
@@ -6905,6 +6930,9 @@ $messages['ja'] = array(
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => '話題の題名',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => '本文を入力',
 	'mobile-frontend-talk-edit-summary' => 'トークの節の新規作成: $1',
+	'mobile-frontend-talk-reply-success' => '返信をトークページに保存しました。',
+	'mobile-frontend-talk-reply-info' => '返信にあなたの利用者名の署名が自動的に付くことにご注意ください。',
+	'mobile-frontend-talk-reply' => '返信',
 );
 
 /** Javanese (Basa Jawa)
@@ -8313,6 +8341,7 @@ $messages['lb'] = array(
 	'mobile-frontend-photo-upload-error-file-type' => 'Lued w.e.g. nëmme Biller erop.',
 	'mobile-frontend-photo-upload-error-filename' => 'Feeler, gitt w.e.g. e Resumé un dee eng besser Beschreiwung ass.',
 	'mobile-frontend-photo-upload-success-article' => 'Et huet geklappt! Ärt Bild ass elo op dëser Säit drop.',
+	'mobile-frontend-photo-submit' => 'Schécken',
 	'mobile-frontend-photo-cancel' => 'Ofbriechen',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ eropgeluede Fichieren',
 	'mobile-frontend-photo-upload-cta' => 'Loggt Iech w.e.g. an oder mellt Iech u fir e Bild derbäizesetzen.',
@@ -8340,6 +8369,8 @@ $messages['lb'] = array(
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Thema',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Wat mengt Dir?',
 	'mobile-frontend-talk-edit-summary' => 'Neien Diskussiounsabschnitt: $1',
+	'mobile-frontend-talk-reply-info' => 'Är Äntwert gëtt automatesch mat Ärem Benotzernumm ënnerschriwwen.',
+	'mobile-frontend-talk-reply' => 'Äntwerten',
 );
 
 /** Lezghian (лезги)
@@ -8820,6 +8851,9 @@ $messages['mk'] = array(
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Тема',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Што имате на ум?',
 	'mobile-frontend-talk-edit-summary' => 'Нова тема на разговор: $1',
+	'mobile-frontend-talk-reply-success' => 'Одговорот е успешно зачуван на страницата за разговор.',
+	'mobile-frontend-talk-reply-info' => 'Одговорот ќе биде автоматски потпишан со вашето корисничко име.',
+	'mobile-frontend-talk-reply' => 'Одговори',
 );
 
 /** Malayalam (മലയാളം)
@@ -9284,6 +9318,9 @@ $messages['ms'] = array(
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Tajuk topik',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Apa pendapat anda?',
 	'mobile-frontend-talk-edit-summary' => 'Bahagian perbualan baru: $1',
+	'mobile-frontend-talk-reply-success' => 'Balasan anda berjaya disimpan dalam halaman perbualan.',
+	'mobile-frontend-talk-reply-info' => 'Sila ambil perhatian bahawa balasan anda akan ditandatangani secara automatik dengan nama pengguna anda.',
+	'mobile-frontend-talk-reply' => 'Balas',
 );
 
 /** Maltese (Malti)
@@ -11187,6 +11224,9 @@ din întreaga lume',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Subiectul rubricii',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Ce aveți de spus?',
 	'mobile-frontend-talk-edit-summary' => 'Secțiune de discuție nouă: $1',
+	'mobile-frontend-talk-reply-success' => 'Răspunsul dumneavoastră a fost înregistrat cu succes în pagina de discuții.',
+	'mobile-frontend-talk-reply-info' => 'Rețineți că răspunsul dumneavoastră va fi semnat în mod automat cu numele dumneavoastră de utilizator.',
+	'mobile-frontend-talk-reply' => 'Răspuns',
 );
 
 /** tarandíne (tarandíne)
@@ -11925,7 +11965,8 @@ $messages['sq'] = array(
 	'mobile-frontend-random-button' => 'I rastit',
 	'mobile-frontend-back-to-top-of-section' => 'Kalo në seksionin A',
 	'mobile-frontend-close-section' => 'Mbylleni këtë seksion',
-	'mobile-frontend-empty-homepage-text' => 'Kjo ballinë ka nevojë që të konfigurohet. <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting"> Udhëzimet në atë se si ta mundësoni këtë faqe të lëvizhshme</a>',
+	'mobile-frontend-empty-homepage-text' => 'Kjo faqe kryesore ka nevojë që të konfigurohet
+[https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting Udhëzimet se si ta aktivizoni këtë faqe]',
 	'mobile-frontend-regular-site' => 'Shiko këtë faqe në versionin e rregullt të {{SITENAME}}', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Vazhdo...',
 	'mobile-frontend-wml-back' => 'Prapa ...',
