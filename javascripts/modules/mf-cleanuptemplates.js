@@ -2,27 +2,36 @@
 
 var module = (function() {
 	var
+		issues = [],
 		Overlay = M.require( 'Overlay' ),
 		CleanupOverlay = Overlay.extend( {
+			defaults: $.extend( Overlay.prototype.defaults, {
+				heading: mw.msg( 'mobile-frontend-meta-data-issues-header' )
+			} ),
 			template: M.template.get( 'overlays/cleanup' )
 		} );
 
 	function run( $container, parentOverlay ) {
 		$container = $container || $( '#content_0' );
 		var $metadata = $container.find( 'table.ambox' ),
-			overlay,
-			$tmp = $( '<div>' );
+			overlay;
 
+		// clean it up a little
+		$metadata.find( '.NavFrame' ).remove();
 		$metadata.each( function() {
+			var $this = $( this );
+
 			if ( $( this ).find( 'table.ambox' ).length === 0 ) {
-				$tmp.append( $( this ).clone() );
+				issues.push( {
+					icon: $this.find( '.mbox-image img' ).attr( 'src' ),
+					text: $this.find( '.mbox-text' ).html()
+				} );
 			}
 		} );
 
 		overlay = new CleanupOverlay( {
 			parent: parentOverlay,
-			heading: mw.msg( 'mobile-frontend-meta-data-issues-header' ),
-			content: $tmp.html()
+			issues: issues
 		} );
 
 		$( '<a class="mw-mf-cleanup">' ).click( function() {

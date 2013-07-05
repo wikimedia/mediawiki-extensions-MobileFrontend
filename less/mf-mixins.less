@@ -39,32 +39,6 @@
 	background-size: @width @height;
 }
 
-.overlayListItem() {
-	color: #666;
-	border: none;
-	position: relative;
-	border-bottom: solid 1px #999999;
-	border-bottom: solid 1px #eee;
-	padding: @searchResultPaddingVertical @searchBarPaddingLeft;
-	font-size: 0.9em;
-	a {
-		display: block;
-		text-decoration: none;
-		color: #666;
-
-		&:active,
-		&:hover,
-		&:visited {
-			text-decoration: none;
-			color: #666;
-		}
-	}
-
-	&:hover {
-		background-color: #ACD1E9;
-	}
-}
-
 .text-with-shadow( @color:white ){
   color: @color;
   text-shadow:  0 -1px 0 fade( black, 25% );

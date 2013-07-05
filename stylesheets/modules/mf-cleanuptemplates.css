@@ -18,35 +18,7 @@ a.mw-mf-cleanup:hover {
   color: #565656;
   background-color: #f0f0f0;
 }
-/* styling for warning boxes (see bug 36674)*/
-td.mbox-image div {
-  width: 100% !important;
-}
-.mbox-text div {
-  text-align: center !important;
-}
-th.mbox-text,
-td.mbox-text,
-td.mbox-image {
+ul.cleanup img {
   display: block;
-  width: 100%;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center !important;
-}
-td.mbox-image div,
-th.mbox-text,
-td.mbox-text,
-td.mbox-image,
-table.ambox-content {
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-table.ambox-content {
-  border-left: 1px solid #AAA;
-  border-bottom: 10px solid #F28500;
+  margin: 0 auto 1em auto;
 }
