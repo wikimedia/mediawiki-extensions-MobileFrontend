@@ -71,9 +71,6 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'userButton', '<ul id="mw-mf-menu-page"></ul>' );
 
 		$banners = array();
-		if ( isset( $tpl->data['notice'] ) ) {
-			$banners[] = $tpl->data['notice'];
-		}
 		if ( $wgMFEnableSiteNotice ) {
 			$banners[] = '<div id="siteNotice"></div>';
 		}
