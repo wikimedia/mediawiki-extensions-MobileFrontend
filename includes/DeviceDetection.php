@@ -227,7 +227,6 @@ class DeviceDetection implements IDeviceDetector {
 		),
 		'netfront' => array (
 			'view_format' => 'html',
-			'css_file_name' => 'simple',
 		),
 		'nokia' => array (
 			'view_format' => 'html',
@@ -235,11 +234,9 @@ class DeviceDetection implements IDeviceDetector {
 		),
 		'operamini' => array (
 			'view_format' => 'html',
-			'css_file_name' => 'operamini',
 		),
 		'operamobile' => array (
 			'view_format' => 'html',
-			'css_file_name' => 'operamobile',
 		),
 		'palm_pre' => array (
 			'view_format' => 'html',
