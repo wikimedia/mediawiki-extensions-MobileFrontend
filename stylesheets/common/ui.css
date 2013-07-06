@@ -201,7 +201,6 @@ input[type=submit] {
   background: #4e4e4e;
   border-left: solid 12px #252525;
   -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -404,7 +403,6 @@ input.search {
   /* remove fennec default background */
 
   -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }

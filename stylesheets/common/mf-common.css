@@ -112,7 +112,6 @@ ul.gallery li.gallerybox div.gallerytext {
 }
 table {
   -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
