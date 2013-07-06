@@ -221,7 +221,6 @@ class DeviceDetection implements IDeviceDetector {
 		),
 		'kindle' => array (
 			'view_format' => 'html',
-			'css_file_name' => 'kindle',
 		),
 		'netfront' => array (
 			'view_format' => 'html',
