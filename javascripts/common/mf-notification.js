@@ -41,8 +41,11 @@
 
 		function init( firstRun ) {
 			// FIXME: turn into view with template
-			var el = $( '<div id="mf-notification" class="position-fixed"><div></div></div>' ).
-				appendTo( '#notifications' )[ 0 ];
+			$( '<div id="mf-notification" class="position-fixed"><div></div></div>' ).
+				on( 'touchstart', function( ev ) {
+					ev.stopPropagation();
+				} ).
+				appendTo( '#notifications' );
 
 			if ( inBeta ) {
 				notifyAuthenticatedUser();
@@ -50,10 +53,6 @@
 
 			firstRun = firstRun === undefined ? true : firstRun;
 
-			function cancelBubble( ev ) {
-				ev.stopPropagation();
-			}
-			el.ontouchstart = cancelBubble;
 			$( '<button>' ).click( function( ev ) {
 				ev.stopPropagation();
 				close( true );
