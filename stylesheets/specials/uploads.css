@@ -30,7 +30,6 @@
   background: url(images/uploads/chevron_left.png) 20% center no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto 20px;
   -o-background-size: auto 20px;
   -webkit-background-size: auto 20px;
   background-size: auto 20px;
@@ -40,7 +39,6 @@
   background: url(images/uploads/chevron_right.png) 80% center no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto 20px;
   -o-background-size: auto 20px;
   -webkit-background-size: auto 20px;
   background-size: auto 20px;

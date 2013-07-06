@@ -24,7 +24,6 @@
   background: url(images/user.png) 0 -2px no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 16px 16px;
   -o-background-size: 16px 16px;
   -webkit-background-size: 16px 16px;
   background-size: 16px 16px;

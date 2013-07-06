@@ -58,7 +58,6 @@
   background-position: 23px 50%;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 32px auto;
   -o-background-size: 32px auto;
   -webkit-background-size: 32px auto;
   background-size: 32px auto;
@@ -119,7 +118,6 @@
   background-position: right center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto 12px;
   -o-background-size: auto 12px;
   -webkit-background-size: auto 12px;
   background-size: auto 12px;

@@ -5,7 +5,6 @@
 .listThumb.needsPhoto {
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
@@ -15,7 +14,6 @@
 .listThumbH {
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto 100%;
   -o-background-size: auto 100%;
   -webkit-background-size: auto 100%;
   background-size: auto 100%;
@@ -23,7 +21,6 @@
 .listThumbV {
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;

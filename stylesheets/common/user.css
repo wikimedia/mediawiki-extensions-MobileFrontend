@@ -3,7 +3,6 @@
   background: url(images/user.png) 50% 50% no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -moz-background-size: auto 24px;
   -o-background-size: auto 24px;
   -webkit-background-size: auto 24px;
   background-size: auto 24px;
