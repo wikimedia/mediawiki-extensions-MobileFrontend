@@ -21,7 +21,7 @@ html.overlay .mw-mf-overlay {
   display: block;
 }
 html.overlay #mw-mf-viewport {
-  display: none;
+  overflow: hidden;
 }
 html.overlay #footer {
   display: none !important;
