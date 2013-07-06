@@ -1,6 +1,6 @@
 a.watch-this-article.loading {
   background-image: url(../common/images/ajax-loader.gif);
-  min-height: auto;
+  min-height: 0;
 }
 .animations .beta .watch-this-article,
 .animations .alpha .watch-this-article {
