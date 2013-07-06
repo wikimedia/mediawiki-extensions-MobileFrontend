@@ -139,6 +139,9 @@
   line-height: 1.2;
   margin: 0 0 .5em;
 }
+#mf-notification p:last-child {
+  margin: 0;
+}
 #mf-notification .progress-bar {
   margin: .9em 0 0;
 }

@@ -76,22 +76,21 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
 }
 .mw-mf-overlay .buttonBar {
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   border-top: 1px solid #ccc;
   background-color: #f3f3f3;
   text-align: center;
+  padding: 0 1em;
 }
 .mw-mf-overlay .buttonBar button {
-  margin: 10px 5px;
+  margin: .7em .3em;
 }
 .mw-mf-overlay .buttonBar p {
-  margin: 1em 16px 10px;
+  margin: .7em 0;
   line-height: 1.3;
   font-size: .9em;
   text-align: left;
-}
-.mw-mf-overlay .buttonBar p:first-child {
-  margin-top: 1.2em;
 }
 .mw-mf-overlay .mw-mf-overlay-footer,
 .mw-mf-overlay .mw-mf-overlay-header {

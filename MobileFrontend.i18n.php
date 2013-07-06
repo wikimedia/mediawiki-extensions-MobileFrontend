@@ -241,17 +241,18 @@ $messages['en'] = array (
 	// edit
 	'mobile-frontend-editor-cta' => 'You must be logged in to edit pages on mobile.',
 	'mobile-frontend-editor-edit' => 'Edit',
+	'mobile-frontend-editor-continue' => 'Continue',
 	'mobile-frontend-editor-save' => 'Save',
 	'mobile-frontend-editor-cancel' => 'Cancel',
-	'mobile-frontend-editor-confirm' => 'Confirm',
-	'mobile-frontend-editor-license' => 'By clicking "Confirm", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
+	'mobile-frontend-editor-keep-editing' => 'Keep editing',
+	'mobile-frontend-editor-license' => 'By clicking "Save", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
+	'mobile-frontend-editor-summary-placeholder' => 'Tell us what you changed (optional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
 	'mobile-frontend-editor-wait' => 'Saving edit, please wait.',
 	'mobile-frontend-editor-success' => 'Success! Your edit was saved.',
 	'mobile-frontend-editor-error' => 'Error, edit not saved.',
 	'mobile-frontend-editor-error-conflict' => 'Error, another user has edited this page.',
 	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',
-	'mobile-frontend-editor-preview' => 'Preview',
 	'mobile-frontend-editor-preview-explanation' => 'A preview of this edit will be shown below.',
 	'mobile-frontend-editor-error-preview' => 'Error, something unexpected happened upon loading the preview. Please close and try again.',
 
@@ -657,16 +658,17 @@ Used when the user is not logged in.
 	'mobile-frontend-editor-cta' => "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)",
 	'mobile-frontend-editor-edit' => 'Caption for the link showing edit form.
 {{Identical|Edit}}',
+	'mobile-frontend-editor-continue' => 'Caption for the continue button on edit form which takes you to the screen that shows a preview and license information.',
 	'mobile-frontend-editor-save' => 'Caption for save button on edit form.
+
+Should be consistent with the following message:
+* {{msg-mw|mobile-frontend-editor-license}}
 {{Identical|Save}}',
 	'mobile-frontend-editor-cancel' => 'Caption for cancel button on edit form.
 {{Identical|Cancel}}',
-	'mobile-frontend-editor-confirm' => 'Caption for confirm button on edit form.
-
-Should be consistent with the following message:
-* {{msg-mw|Mobile-frontend-editor-license}}
-{{Identical|Confirm}}',
+	'mobile-frontend-editor-keep-editing' => 'Caption for a button that takes you back to editing from edit preview screen.',
 	'mobile-frontend-editor-license' => 'Text notifying user of license that text will be published under. You can change the URL to a "local" Wikipedia URL, but you cannot make it point to the country specific CC BY-SA 3.0 license. See also: {{msg-mw|mobile-frontend-editor-confirm}}.',
+	'mobile-frontend-editor-summary-placeholder' => 'A placeholder for the summary input field asking user what they changed (the field is optional).',
 	'mobile-frontend-editor-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved edit.',
 	'mobile-frontend-editor-wait' => 'Text that displays while a page edit is being saved.',
 	'mobile-frontend-editor-success' => 'Text that displays when a page edit has been successfully saved.
@@ -681,8 +683,6 @@ Used as "toast" error message.',
 	'mobile-frontend-editor-error-loading' => 'Text that displays when there have been errors when loading a page section in the editor.
 
 Used as "toast" error message.',
-	'mobile-frontend-editor-preview' => 'Text shown on preview button in edit overlay screen that when clicked launches a preview of the associated wikitext
-{{Identical|Preview}}',
 	'mobile-frontend-editor-preview-explanation' => 'A summary explaining that the preview is being prepared and will appear below.',
 	'mobile-frontend-editor-error-preview' => 'Error message for when a preview fails to load for an unknown reason',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].

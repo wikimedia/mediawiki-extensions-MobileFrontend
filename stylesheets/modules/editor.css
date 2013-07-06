@@ -32,13 +32,25 @@
 .editor-overlay textarea:focus {
   outline: none;
 }
-.editor-overlay .content {
-  padding-bottom: 5em;
+.editor-overlay input {
+  margin: .7em 0 0;
+  width: 100%;
+}
+.editor-overlay .preview {
+  display: none;
+  padding-bottom: 15em;
+}
+.editor-overlay .license {
+  background: url('images/cc-by-sa.png') 0 0.2em no-repeat;
+  background-size: auto 16px;
+  padding: 0 0 0 55px;
+  color: #707070;
+  font-size: .75em !important;
 }
 .editor-overlay .buttonBar {
   box-shadow: 0 -10px 10px 0 #ffffff;
 }
-.editor-overlay .confirm-bar,
+.editor-overlay .save-bar,
 .editor-overlay .saving-bar {
   display: none;
 }

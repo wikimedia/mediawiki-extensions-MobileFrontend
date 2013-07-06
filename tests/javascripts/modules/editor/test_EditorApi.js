@@ -87,12 +87,13 @@
 		editorApi.stageSection( 1, 'section 1' );
 		editorApi.getSection( 2 );
 		editorApi.stageSection( 2, 'section 2' );
-		editorApi.save().done( function() {
+		editorApi.save( 'summary' ).done( function() {
 			assert.ok( editorApi.post.calledWith( {
 				action: 'edit',
 				title: 'test',
 				section: 1,
 				text: 'section 1',
+				summary: 'summary',
 				token: 'fake token',
 				basetimestamp: '2013-05-15T00:30:26Z',
 				starttimestamp: '2013-05-15T00:30:26Z'
@@ -102,6 +103,7 @@
 				title: 'test',
 				section: 2,
 				text: 'section 2',
+				summary: 'summary',
 				token: 'fake token',
 				basetimestamp: '2013-05-15T00:30:26Z',
 				starttimestamp: '2013-05-15T00:30:26Z'
@@ -117,12 +119,13 @@
 
 		editorApi.getSection( 0 );
 		editorApi.stageSection( 0, 'section 0' );
-		editorApi.save().done( function() {
+		editorApi.save( 'summary' ).done( function() {
 			assert.ok( editorApi.post.calledWith( {
 				action: 'edit',
 				title: 'Talk:test',
 				section: 0,
 				text: 'section 0',
+				summary: 'summary',
 				token: 'fake token',
 				basetimestamp: undefined,
 				starttimestamp: undefined
