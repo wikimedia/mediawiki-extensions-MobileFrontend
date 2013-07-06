@@ -206,9 +206,9 @@ abstract class MobileFormatter extends HtmlFormatter {
 				$bt = '';
 			}
 			$s .= '</div>' // <div class="content_block">
-				. $bt
-				. "\n</div>"; // <div class="section">
+				. $bt;
 		}
+		$s .= "\n</div>";
 		wfProfileOut( __METHOD__ );
 		return $s;
 	}

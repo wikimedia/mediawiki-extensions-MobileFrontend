@@ -14,7 +14,7 @@ function makeSections() {
 QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	setup: function() {
 		$container = makeSections();
-		toggle.init();
+		toggle.enable();
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
@@ -65,7 +65,7 @@ QUnit.module( 'MobileFrontend toggle.js (beta): closing sections', {
 		$("body").addClass('beta');
 		$container = makeSections();
 
-		toggle.init();
+		toggle.enable();
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
