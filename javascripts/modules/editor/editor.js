@@ -40,7 +40,7 @@
 			addEditButton( 1, '#ca-edit' );
 		}
 
-		$( '.mw-editsection' ).each( function() {
+		$( 'h2 .mw-editsection' ).each( function() {
 			// FIXME [ParserOutput]: This is nasty
 			var editHref = $( this ).find( 'a' ).attr( 'href' ),
 				qs = editHref.split( '?' )[ 1 ],
