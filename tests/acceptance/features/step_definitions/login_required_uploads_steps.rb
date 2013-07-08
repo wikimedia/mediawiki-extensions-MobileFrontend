@@ -1,5 +1,5 @@
 When /^I select Uploads$/ do
-  on(HomePage).mainmenu_button_element.when_present.click
+  visit(HomePage).mainmenu_button_element.when_present.click
   on(RandomPage).uploads_link_element.when_present.click
 end
 
