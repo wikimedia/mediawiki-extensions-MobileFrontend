@@ -61,14 +61,32 @@ class MobileContextTest extends MediaWikiTestCase {
 		$this->assertEquals( array( 'host' => '%h0.m.%h1.%h2', 'path' => '/path/morepath' ), MobileContext::singleton()->parseMobileUrlTemplate() );
 	}
 
-	public function testUpdateMobileUrlHost() {
+	/**
+	 * @dataProvider updateMobileUrlHostProvider
+	 */
+	public function testUpdateMobileUrlHost( $url, $expected, $urlTemplate ) {
 		global $wgMobileUrlTemplate;
 
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
-		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
-		$parsedUrl = wfParseUrl( "http://en.wikipedia.org/wiki/Gustavus_Airport" );
+		$wgMobileUrlTemplate = $urlTemplate;
+		$parsedUrl = wfParseUrl( $url );
 		$updateMobileUrlHost->invokeArgs( MobileContext::singleton(), array( &$parsedUrl ) );
-		$this->assertEquals( "http://en.m.wikipedia.org/wiki/Gustavus_Airport", wfAssembleUrl( $parsedUrl ) );
+		$this->assertEquals( $expected, wfAssembleUrl( $parsedUrl ) );
+	}
+
+	public function updateMobileUrlHostProvider() {
+		return array(
+			array(
+				'http://en.wikipedia.org/wiki/Gustavus_Airport',
+				'http://en.m.wikipedia.org/wiki/Gustavus_Airport',
+				'%h0.m.%h1.%h2',
+			),
+			array(
+				'https://wikimediafoundation.org/wiki/FAQ',
+				'https://m.wikimediafoundation.org/wiki/FAQ',
+				'm.%h0.%h1',
+			),
+		);
 	}
 
 	/**
@@ -84,18 +102,21 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function updateDesktopUrlQueryProvider() {
 		return array(
-			array( 'http://en.m.wikipedia.org/wiki/Gustavus_Airport?useformat=mobile&mobileaction=toggle_desktop_view', 'http://en.m.wikipedia.org/wiki/Gustavus_Airport?mobileaction=toggle_desktop_view' ),
+			array(
+				'http://en.m.wikipedia.org/wiki/Gustavus_Airport?useformat=mobile&mobileaction=toggle_desktop_view',
+				'http://en.m.wikipedia.org/wiki/Gustavus_Airport?mobileaction=toggle_desktop_view'
+			),
 		);
 	}
 
 	/**
 	 * @dataProvider updateDesktopUrlHostProvider
 	 */
-	public function testUpdateDesktopUrlHost( $mobile, $desktop ) {
-		global $wgMobileUrlTemplate;
+	public function testUpdateDesktopUrlHost( $mobile, $desktop, $server ) {
+		global $wgServer;
 
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
-		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
+		$wgServer = $server;
 		$parsedUrl = wfParseUrl( $mobile );
 		$updateMobileUrlHost->invokeArgs(
 			MobileContext::singleton(),
@@ -105,13 +126,20 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	public function updateDesktopUrlHostProvider() {
 		return array(
-			array( 
-				'http://en.m.wikipedia.org/wiki/Gustavus_Airport',
-				'http://en.wikipedia.org/wiki/Gustavus_Airport'
-			),
 			array(
 				'http://bm.m.wikipedia.org/wiki/' . urlencode( 'Nyɛ_fɔlɔ' ),
-				'http://bm.wikipedia.org/wiki/' . urlencode( 'Nyɛ_fɔlɔ' )
+				'http://bm.wikipedia.org/wiki/' . urlencode( 'Nyɛ_fɔlɔ' ),
+				'//bm.wikipedia.org',
+			),
+			array(
+				'http://en.m.wikipedia.org/wiki/Gustavus_Airport',
+				'http://en.wikipedia.org/wiki/Gustavus_Airport',
+				'//en.wikipedia.org',
+			),
+			array(
+				'https://m.wikimediafoundation.org/wiki/FAQ',
+				'https://wikimediafoundation.org/wiki/FAQ',
+				'//wikimediafoundation.org',
 			),
 		);
 	}

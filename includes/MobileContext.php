@@ -768,16 +768,14 @@ class MobileContext extends ContextSource {
 	 *		Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateDesktopUrlHost( &$parsedUrl ) {
+		global $wgServer;
 		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 		if ( !strlen( $mobileUrlHostTemplate ) ) {
 			return;
 		}
 
-		// identify the mobile token by stripping out normal host parts
-		$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
-
-		// replace the mobile token with nothing, resulting in the normal hostname
-		$parsedUrl['host'] = str_replace( '.' . $mobileToken, '.', $parsedUrl['host'] );
+		$parsedWgServer = wfParseUrl( $wgServer );
+		$parsedUrl['host'] = $parsedWgServer['host'];
 	}
 
 	/**
