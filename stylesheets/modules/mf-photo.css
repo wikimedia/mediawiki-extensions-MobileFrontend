@@ -39,38 +39,29 @@
   display: block;
   margin-bottom: 10px;
 }
-.photoPreview {
-  padding-bottom: 70px !important;
+.photo-overlay .content {
+  padding-bottom: 11em !important;
 }
-.photoPreview .help {
+.photo-overlay .help {
   display: block;
 }
-.photoPreview img {
+.photo-overlay img {
   height: 90px;
   float: left;
   margin: 0 8px 8px 0;
 }
-.photoPreview .loading {
+.photo-overlay .loading {
   background-position: 0 50%;
   padding: 0 0 0 48px;
   margin: 0;
   line-height: 90px;
 }
-.photoPreview .license {
-  background: url('images/cc-by-sa.png') no-repeat;
-  background-size: auto 22px;
-  padding: 26px 0 0;
-  margin: 1em 0;
-  color: #707070;
-  font-size: .75em;
-  line-height: 150%;
-}
-.photoPreview textarea {
+.photo-overlay textarea {
   width: 100%;
   height: 6em;
 }
-.photoPreview textarea::-webkit-input-placeholder,
-.photoPreview textarea::-moz-placeholder {
+.photo-overlay textarea::-webkit-input-placeholder,
+.photo-overlay textarea::-moz-placeholder {
   text-align: center;
   line-height: 6em;
 }

@@ -135,7 +135,6 @@
 					// nag if never nagged and shouldNag and then keep nagging (3 times)
 					if ( ( nagCount === 0 && shouldNag ) || ( nagCount > 0 && nagCount < 3 ) ) {
 						// FIXME: possibly set self.preview.parent = nagOverlay when nagOverlay is present
-						// and when PhotoUploaderPreview is rewritten as an overlay
 						nagOverlay = self._showNagOverlay( nagCount );
 					} else {
 						self._showPreview();
@@ -203,7 +202,7 @@
 					self._submit();
 				} );
 
-			self.preview.overlay.show();
+			self.preview.show();
 			// skip the URL bar if possible
 			window.scrollTo( 0, 1 );
 		},
@@ -215,7 +214,7 @@
 				progressPopup = new PhotoUploadProgress();
 
 			this.emit( 'start' );
-			this.preview.overlay.hide();
+			this.preview.hide();
 			popup.show( progressPopup.$el, 'locked noButton loading' );
 			progressPopup.on( 'cancel', function() {
 				api.abort();

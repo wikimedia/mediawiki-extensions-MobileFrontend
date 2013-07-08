@@ -62,13 +62,6 @@
   margin: 0;
   padding: 0;
 }
-.editor-overlay .license {
-  background: url('images/cc-by-sa.png') 0 0.2em no-repeat;
-  background-size: auto 16px;
-  padding: 0 0 0 55px;
-  color: #707070;
-  font-size: .75em !important;
-}
 .editor-overlay .buttonBar {
   box-shadow: 0 -10px 10px 0 #ffffff;
 }

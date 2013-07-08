@@ -99,6 +99,14 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   font-size: .9em;
   text-align: left;
 }
+.mw-mf-overlay .buttonBar .license {
+  background: url('../modules/images/cc-by-sa.png') 0 0.2em no-repeat;
+  background-size: auto 16px;
+  padding: 0 0 0 55px;
+  margin-bottom: 1.2em;
+  color: #707070;
+  font-size: .75em !important;
+}
 .mw-mf-overlay .mw-mf-overlay-footer,
 .mw-mf-overlay .mw-mf-overlay-header {
   padding: 4px 8px 4px 23px;
