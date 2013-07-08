@@ -75,6 +75,8 @@
 				// log cancel attempt
 				self.log( 'cancel' );
 			} );
+			// make license links open in separate tabs
+			this.$( '.license a' ).attr( 'target', '_blank' );
 
 			// This is used to avoid position: fixed weirdness in mobile Safari when
 			// the keyboard is visible
