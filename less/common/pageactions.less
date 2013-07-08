@@ -1,33 +1,34 @@
 @import "../mf-mixins.less";
 
 // hide menu items when not possible to use
-#ca-upload,
-#ca-edit,
 .client-nojs #ca-watch.cta,
 #ca-talk.selected {
 	display: none;
 }
 
 #section_0 {
-	margin: @headingMarginTop @contentMarginRight 0 @contentMarginLeft;
-	padding-bottom: @headingMarginBottom;
+	margin: 10px @contentMarginRight 0 @contentMarginLeft;
+	padding-bottom: 9px;
 	border-bottom: dotted 1px #CACACA;
 }
 
 #page-actions {
-	padding: 8px @contentMarginRight;
+	padding: 10px @contentMarginRight 8px;
 	// end hacks
 	border-bottom: solid 1px #CACACA;
-	height: 40px;
+	height: 30px;
 
+	li,
+	.watch-this-article {
+		.background-size( auto, 30px );
+	}
 	li {
 		position: relative;
-		height: 40px;
+		height: 30px;
 		width: 40px;
 		text-indent: -9999px;
-		background-position: center center;
+		background-position: 50% 0;
 		background-repeat: no-repeat;
-		.background-size( auto, @watchStarSize );
 
 		// file inputs are notoriously difficult to style
 		input {
@@ -55,18 +56,22 @@
 }
 
 #ca-edit {
-	background-image: url(images/pagemenu/edit.png);
+	background-image: url(images/pagemenu/edit-locked.png);
+	margin-right: 17px;
+	&.enabled {
+		background-image: url(images/pagemenu/edit.png);
+	}
 }
 
 #ca-talk {
+	margin-right: 14px;
 	background-image: url(images/pagemenu/talk.png);
 }
 
 #ca-upload {
-	background-image: url(images/pagemenu/upload.png);
-}
-
-#ca-edit.enabled,
-#ca-upload.enabled {
-	display: inline-block;
+	margin-right: 19px;
+	background-image: url(images/pagemenu/upload-locked.png);
+	&.enabled {
+		background-image: url(images/pagemenu/upload.png);
+	}
 }
