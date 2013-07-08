@@ -225,7 +225,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Performs transformations specific to main page
 	 * @param DOMDocument $mainPage: Tree to process
-	 * @return DOMElement
+	 * @return DOMElement|null
 	 */
 	protected function parseMainPage( DOMDocument $mainPage ) {
 		wfProfileIn( __METHOD__ );
@@ -242,11 +242,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 
 		$content = $mainPage->createElement( 'div' );
 		$content->setAttribute( 'id', 'mainpage' );
-
-		// FIXME: Move to ZeroRatedMobileAccess extension
-		if ( $zeroLandingPage ) {
-			$content->appendChild( $zeroLandingPage );
-		}
 
 		if ( $featuredArticle ) {
 			$h2FeaturedArticle = $mainPage->createElement( 'h2', $this->msg( 'mobile-frontend-featured-article' ) );
@@ -276,6 +271,14 @@ abstract class MobileFormatter extends HtmlFormatter {
 					$content->appendChild( $element );
 					$content->appendChild( $br );
 				}
+			}
+		}
+		if ( $content->childNodes->length == 0 ) {
+			$content = null;
+		} else {
+			// FIXME: Move to ZeroRatedMobileAccess extension
+			if ( $zeroLandingPage ) {
+				$content->appendChild( $zeroLandingPage );
 			}
 		}
 

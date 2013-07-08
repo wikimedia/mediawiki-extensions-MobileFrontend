@@ -77,26 +77,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'group' => 'other',
 	),
 
-	'mobile.mainpage.plumbing' => array(
-		'messages' => array(
-			// mf-homepage.js
-			'mobile-frontend-empty-homepage-text' => array( 'parse' ),
-		),
-		'class' => 'MFResourceLoaderModule',
-		'group' => 'other',
-	),
-
-	'mobile.mainpage.scripts' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.startup',
-			'mobile.mainpage.plumbing',
-		),
-		'scripts' => array(
-			'javascripts/modules/mf-homepage.js',
-		),
-		'group' => 'other',
-	),
-
 	// Filepages
 	'mobile.file.styles' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
