@@ -152,6 +152,17 @@ html[dir="rtl"] {
 			&:hover {
 				background-color: #ACD1E9;
 			}
+			> a {
+				display: block;
+				color: #666;
+
+				&:active,
+				&:hover,
+				&:visited {
+					text-decoration: none;
+					color: #666;
+				}
+			}
 		}
 	}
 }
@@ -172,17 +183,5 @@ html[dir="rtl"] {
 		border-bottom: solid 1px #eee;
 		padding: @searchResultPaddingVertical @searchBarPaddingLeft;
 		font-size: 0.9em;
-		> a {
-			display: block;
-			text-decoration: none;
-			color: #666;
-
-			&:active,
-			&:hover,
-			&:visited {
-				text-decoration: none;
-				color: #666;
-			}
-		}
 	}
 }
