@@ -5,7 +5,7 @@ var module = (function() {
 		issues = [],
 		Overlay = M.require( 'Overlay' ),
 		CleanupOverlay = Overlay.extend( {
-			defaults: $.extend( Overlay.prototype.defaults, {
+			defaults: $.extend( {}, Overlay.prototype.defaults, {
 				heading: mw.msg( 'mobile-frontend-meta-data-issues-header' )
 			} ),
 			template: M.template.get( 'overlays/cleanup' )
