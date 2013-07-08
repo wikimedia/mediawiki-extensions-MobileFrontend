@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "69c609db_16b13cf8",
+        "filename": "includes/formatters/ExtractFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-07-08T13:44:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69c609db_5a1c81be",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "69c609db_ba7935fc",
         "filename": "includes/formatters/ExtractFormatter.php",
         "patchSetId": 4
@@ -47,6 +65,24 @@
       "writtenOn": "2013-07-05T18:22:33Z",
       "side": 1,
       "message": "I know you\u0027re just moving this from another location, but it would be nice to have function documentation here: description, params, return, etc.",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_7696b04c",
+        "filename": "includes/formatters/ExtractFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-07-08T13:44:35Z",
+      "side": 1,
+      "message": "I prefer not to document overridding virtual functions as these comments tend to become outdated. The parent function is sufficiently documented.",
+      "parentUuid": "69c609db_ba7935fc",
       "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "69c609db_d6a684c3",
+        "filename": "includes/formatters/HtmlFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-07-08T13:44:35Z",
+      "side": 1,
+      "message": "get*/set* is non-standard for this class, I renamed the property instead.",
+      "parentUuid": "69c609db_7a785df0",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "69c609db_5a75a1f6",
         "filename": "includes/formatters/HtmlFormatter.php",
         "patchSetId": 4
@@ -98,6 +152,24 @@
       "writtenOn": "2013-07-05T18:22:33Z",
       "side": 1,
       "message": "I know it\u0027s a simple function, but it would still be helpful to have a function description and param definition here, e.g.:\n\n/**\n * Removes elements from the DOM\n * @param array $elements Array of DOM nodes to be removed\n */",
+      "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_36ac38a1",
+        "filename": "includes/formatters/HtmlFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-07-08T13:44:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69c609db_5a75a1f6",
       "revId": "b2dd3165e6f394b5dbd52422365f6b16e4aac031",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
