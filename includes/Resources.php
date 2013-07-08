@@ -219,7 +219,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
 			'overlays/editor',
-			'overlays/editPreview',
 			'section',
 			// talk.js
 			'overlays/talk',
@@ -233,10 +232,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// editor.js
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-edit',
+			// modules/editor/EditorOverlay.js
+			'mobile-frontend-editor-continue',
 			'mobile-frontend-editor-save',
 			'mobile-frontend-editor-cancel',
-			'mobile-frontend-editor-confirm',
+			'mobile-frontend-editor-keep-editing',
 			'mobile-frontend-editor-license' => array( 'parse' ),
+			'mobile-frontend-editor-summary-placeholder',
 			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-wait',
 			'mobile-frontend-editor-success',
@@ -244,9 +246,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
 			'mobile-frontend-editor-error-loading',
-
-			// modules/editor/EditorOverlay.js
-			'mobile-frontend-editor-preview',
 			// modules/editor/PreviewOverlay.js
 			'mobile-frontend-editor-error-preview',
 			'mobile-frontend-editor-preview-explanation',
@@ -289,7 +288,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
-			'javascripts/modules/editor/PreviewOverlay.js',
 			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle-dynamic.js',

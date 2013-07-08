@@ -69,7 +69,7 @@
 			} ).length;
 		},
 
-		save: function() {
+		save: function( summary ) {
 			var self = this, result = $.Deferred(),
 				sections = $.map( this._sectionStage, function( section ) {
 					return section;
@@ -87,6 +87,7 @@
 					title: self.title,
 					section: section.id,
 					text: section.content,
+					summary: summary,
 					token: token,
 					basetimestamp: section.timestamp,
 					starttimestamp: section.timestamp

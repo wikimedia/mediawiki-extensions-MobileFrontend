@@ -3,17 +3,17 @@
 </div>
 <div class="spinner loading"></div>
 <textarea cols="40" rows="10"></textarea>
+<div class="preview content"></div>
 <div class="position-fixed buttonBar initial-bar">
-  <button class="cancel">{{cancelMsg}}</button>
-	<button class="preview">{{previewMsg}}</button>
-  <button class="save" disabled>{{saveMsg}}</button>
+	<button class="cancel inline">{{cancelMsg}}</button>
+	<button class="continue" disabled>{{continueMsg}}</button>
 </div>
-<div class="position-fixed buttonBar confirm-bar">
-  <p>{{{licenseMsg}}}</p>
-  <button class="cancel">{{cancelMsg}}</button>
-	<button class="preview">{{previewMsg}}</button>
-  <button class="confirm-save">{{confirmMsg}}</button>
+<div class="position-fixed buttonBar save-bar">
+	<input class="summary" placeholder="{{summaryMsg}}" />
+	<button class="inline back">{{keepEditingMsg}}</button>
+	<button class="save">{{saveMsg}}</button>
+	<p class="license">{{{licenseMsg}}}</p>
 </div>
 <div class="position-fixed buttonBar saving-bar loading">
-  <p>{{waitMsg}}</p>
+	<p>{{waitMsg}}</p>
 </div>
