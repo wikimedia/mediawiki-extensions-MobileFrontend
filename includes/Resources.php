@@ -234,7 +234,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-edit',
 			// modules/editor/EditorOverlay.js
 			'mobile-frontend-editor-continue',
-			'mobile-frontend-editor-save',
 			'mobile-frontend-editor-cancel',
 			'mobile-frontend-editor-keep-editing',
 			'mobile-frontend-editor-license' => array( 'parse' ),
@@ -249,6 +248,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// modules/editor/PreviewOverlay.js
 			'mobile-frontend-editor-error-preview',
 			'mobile-frontend-editor-preview-explanation',
+			// modules/editor/EditorOverlay.js and modules/talk.js
+			'mobile-frontend-editor-save',
 			// page.js
 			'mobile-frontend-talk-overlay-header',
 			// history-beta.js

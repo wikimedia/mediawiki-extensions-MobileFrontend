@@ -8,7 +8,7 @@
 		TalkSectionAddOverlay = Overlay.extend( {
 			defaults: {
 				cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
-				confirmMsg: mw.msg( 'mobile-frontend-editor-confirm' ),
+				confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 				licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 				topicAdd: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 				topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
