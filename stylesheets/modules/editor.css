@@ -32,6 +32,9 @@
 .editor-overlay input {
   margin: .7em 0 0;
   width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .editor-overlay .preview {
   display: none;
