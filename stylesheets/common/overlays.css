@@ -100,12 +100,13 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   text-align: left;
 }
 .mw-mf-overlay .buttonBar .license {
-  background: url('../modules/images/cc-by-sa.png') 0 0.2em no-repeat;
+  background: url('../modules/images/cc-by-sa.png') 0 2px no-repeat;
   background-size: auto 16px;
   padding: 0 0 0 55px;
   margin-bottom: 1.2em;
   color: #707070;
   font-size: .75em !important;
+  min-height: 18px;
 }
 .mw-mf-overlay .mw-mf-overlay-footer,
 .mw-mf-overlay .mw-mf-overlay-header {

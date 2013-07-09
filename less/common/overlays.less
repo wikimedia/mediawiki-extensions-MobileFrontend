@@ -118,12 +118,14 @@ html[dir="rtl"] {
 
 		.license {
 			// FIXME: move this image?
-			background: url('../modules/images/cc-by-sa.png') 0 .2em no-repeat;
+			background: url('../modules/images/cc-by-sa.png') 0 2px no-repeat;
 			background-size: auto 16px;
 			padding: 0 0 0 55px;
 			margin-bottom: 1.2em;
 			color: #707070;
 			font-size: .75em !important;
+			// if license is only one line (big screens) prevent cutting off the image
+			min-height: 18px;
 		}
 	}
 
