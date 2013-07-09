@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c609db_d04cbf73",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-09T21:31:34Z",
+      "side": 1,
+      "message": "I\u0027d like to explore making this more generic if possible before merging and apply to cleanup templates /  talk",
+      "revId": "89fc501c9bec87aa234c142988f9501673e61b55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_703fcbb1",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-09T21:31:34Z",
+      "side": 1,
+      "message": "agreed do what the FIXME saids instead...",
+      "revId": "89fc501c9bec87aa234c142988f9501673e61b55",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
