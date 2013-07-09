@@ -114,6 +114,7 @@ input[type=submit] {
 .drawer input[type=submit].inline {
   display: inline;
   padding: 0;
+  line-height: inherit;
   color: #002bb8;
   background: none;
   border: none;
