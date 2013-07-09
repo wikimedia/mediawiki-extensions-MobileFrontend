@@ -103,7 +103,7 @@
 					page.anchor = 'item_' + i;
 					page.url = M.history.getArticleUrl( page.title );
 					if ( page.coordinates ) { // FIXME: protect against bug 47133 (remove when resolved)
-						coords = page.coordinates[0],
+						coords = page.coordinates[0];
 						lngLat = { latitude: coords.lat, longitude: coords.lon };
 						page.dist = calculateDistance( location, lngLat );
 						page.latitude = coords.lat;

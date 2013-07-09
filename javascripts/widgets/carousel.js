@@ -49,7 +49,7 @@
 			}
 			this.showCurrentPage();
 		}
-	} ),
+	} );
 
 	M.define( 'widgets/carousel', Carousel );
 
