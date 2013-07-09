@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c609db_b24e6bbf",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-09T20:34:17Z",
+      "side": 1,
+      "message": "Remove the global as well.",
+      "revId": "6984d94004912c548097e2e82734f5c77c4f0577",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_12c49f0f",
+        "filename": "includes/modules/MobileDeviceDetectModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-09T20:34:17Z",
+      "side": 1,
+      "message": "There is no device folder. Why not just remove this function altogether?",
+      "revId": "6984d94004912c548097e2e82734f5c77c4f0577",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
