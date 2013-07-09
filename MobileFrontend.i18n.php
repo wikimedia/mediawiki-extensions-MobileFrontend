@@ -257,7 +257,7 @@ $messages['en'] = array (
 	'mobile-frontend-editor-error' => 'Error, edit not saved.',
 	'mobile-frontend-editor-error-conflict' => 'Error, another user has edited this page.',
 	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',
-	'mobile-frontend-editor-preview-explanation' => 'A preview of this edit will be shown below.',
+	'mobile-frontend-editor-preview-header' => 'Preview',
 	'mobile-frontend-editor-error-preview' => 'Error, something unexpected happened upon loading the preview. Please close and try again.',
 
 	// Change tags
@@ -693,7 +693,7 @@ Used as "toast" error message.',
 	'mobile-frontend-editor-error-loading' => 'Text that displays when there have been errors when loading a page section in the editor.
 
 Used as "toast" error message.',
-	'mobile-frontend-editor-preview-explanation' => 'A summary explaining that the preview is being prepared and will appear below.',
+	'mobile-frontend-editor-preview-header' => 'A header explaining that user is viewing a preview of the changes they made in the editor.',
 	'mobile-frontend-editor-error-preview' => 'Error message for when a preview fails to load for an unknown reason',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 

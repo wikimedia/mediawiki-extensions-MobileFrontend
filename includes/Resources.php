@@ -226,9 +226,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
 			'mobile-frontend-editor-error-loading',
-			// modules/editor/PreviewOverlay.js
+			'mobile-frontend-editor-preview-header',
 			'mobile-frontend-editor-error-preview',
-			'mobile-frontend-editor-preview-explanation',
 			// modules/editor/EditorOverlay.js and modules/talk.js
 			'mobile-frontend-editor-save',
 			// page.js
