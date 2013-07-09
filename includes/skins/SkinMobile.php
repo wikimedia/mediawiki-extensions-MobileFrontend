@@ -131,11 +131,6 @@ class SkinMobile extends SkinMinerva {
 
 		$modules = parent::getDefaultModules();
 
-		// main page special casing
-		if ( $this->getTitle()->isMainPage() ) {
-			$modules['mainpage'] = array( 'mobile.mainpage.scripts' );
-		}
-
 		// flush unnecessary modules
 		$modules['content'] = array();
 		$modules['legacy'] = array();
