@@ -7,17 +7,11 @@ class ExtMobileFrontend extends ContextSource {
 	}
 
 	private function sendHeaders() {
-		global $wgMFVaryResources;
-
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
-		$xDevice = MobileContext::singleton()->getXDevice();
 		$request = $this->getRequest();
 		$xWap = $request->getHeader( 'X-WAP' );
-		if ( $xDevice !== '' && !$wgMFVaryResources ) {
-			$request->response()->header( "X-Device: {$xDevice}" );
-			$out->addVaryHeader( 'X-Device' );
-		} elseif ( $xWap ) {
+		if ( $xWap ) {
 			$out->addVaryHeader( 'X-WAP' );
 			$request->response()->header( "X-WAP: $xWap" );
 		}

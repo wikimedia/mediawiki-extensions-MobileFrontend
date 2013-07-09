@@ -756,9 +756,4 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'position' => 'top',
 	),
-
-	//@hack: xdevice instead of device to force this module to be last in a link
-	'mobile.xdevice.detect' => $wgMFMobileResourceBoilerplate + array(
-		'class' => 'MobileDeviceDetectModule',
-	),
 ) );

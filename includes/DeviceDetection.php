@@ -37,15 +37,6 @@ interface IDeviceProperties {
 	 */
 	function isMobileDevice();
 
-	/**
-	 * @return string
-	 */
-	function moduleName();
-
-	/**
-	 * @return string
-	 */
-	function cssFileName();
 }
 
 interface IDeviceDetector {
@@ -55,39 +46,54 @@ interface IDeviceDetector {
 	 * @return IDeviceProperties
 	 */
 	function detectDeviceProperties( $userAgent, $acceptHeader = '' );
-
-	/**
-	 * @param $deviceName
-	 * @param $userAgent
-	 *
-	 * @return IDeviceProperties
-	 */
-	function getDeviceProperties( $deviceName, $userAgent );
-
-	/**
-	 * @return array
-	 */
-	function getCssFiles();
 }
 
 /**
- * MediaWiki's default IDeviceProperties implementation
+ * MobileFrontend's default IDeviceProperties implementation
  */
-final class DeviceProperties implements IDeviceProperties {
-	private $device,
-		$userAgent,
-		$isMobile = null;
+class DeviceProperties implements IDeviceProperties {
+	private $userAgent,
+		$acceptHeader,
+		$isMobile = null,
+		$format = null;
 
-	public function __construct( array $deviceCapabilities, $userAgent ) {
-		$this->device = $deviceCapabilities;
+	public function __construct( $userAgent, $acceptHeader ) {
 		$this->userAgent = $userAgent;
+		$this->acceptHeader = $acceptHeader;
 	}
 
 	/**
 	 * @return string
 	 */
 	public function format() {
-		return $this->device['view_format'];
+		wfProfileIn( __METHOD__ );
+		if ( !$this->format ) {
+			$this->format = $this->detectFormat( $this->userAgent, $this->acceptHeader );
+		}
+		wfProfileOut( __METHOD__ );
+		return $this->format;
+	}
+
+	/**
+	 * @return string
+	 */
+	protected function detectFormat() {
+		if ( strpos( $this->userAgent, 'WebKit' ) !== false
+			|| strpos( $this->userAgent, 'Opera/' ) !== false
+			|| strpos( $this->userAgent, 'BlackBerry' ) !== false
+			|| strpos( $this->userAgent, 'NetFront' ) !== false
+			|| strpos( $this->userAgent, 'Kindle' ) !== false
+			|| strpos( $this->userAgent, 'MSIE' ) !== false )
+		{
+			return 'html';
+		}
+
+		if ( strpos( $this->acceptHeader, 'vnd.wap.wml' ) !== false
+			&& strpos( $this->acceptHeader, 'application/vnd.wap.xhtml+xml' ) === false )
+		{
+			return 'wml';
+		}
+		return 'html';
 	}
 
 	/**
@@ -168,29 +174,39 @@ final class DeviceProperties implements IDeviceProperties {
 		wfProfileOut( __METHOD__ );
 		return $isMobile;
 	}
+}
+
+class HtmlDeviceProperties implements IDeviceProperties {
 
 	/**
 	 * @return string
 	 */
-	public function moduleName() {
-		if ( isset( $this->device['css_file_name'] ) &&
-				$this->device['css_file_name'] ) {
-			return "mobile.device.{$this->device['css_file_name']}";
-		} else {
-			return '';
-		}
+	function format() {
+		return 'html';
 	}
 
 	/**
+	 * @return bool
+	 */
+	function isMobileDevice() {
+		return true;
+	}
+}
+
+class WmlDeviceProperties implements IDeviceProperties {
+
+	/**
 	 * @return string
 	 */
-	public function cssFileName() {
-		if ( isset( $this->device['css_file_name'] ) &&
-			$this->device['css_file_name'] ) {
-			return "{$this->device['css_file_name']}.css";
-		} else {
-			return '';
-		}
+	function format() {
+		return 'wml';
+	}
+
+	/**
+	 * @return bool
+	 */
+	function isMobileDevice() {
+		return true;
 	}
 }
 
@@ -200,49 +216,6 @@ final class DeviceProperties implements IDeviceProperties {
  * may be extended to provide access to particular device functionality.
  */
 class DeviceDetection implements IDeviceDetector {
-
-	private static $formats = array (
-		'generic' => array (
-			'view_format' => 'html',
-		),
-
-		'android' => array (
-			'view_format' => 'html',
-		),
-		'blackberry' => array (
-			'view_format' => 'html',
-		),
-		'ie' => array (
-			'view_format' => 'html',
-		),
-		'iphone' => array (
-			'view_format' => 'html',
-		),
-		'kindle' => array (
-			'view_format' => 'html',
-		),
-		'netfront' => array (
-			'view_format' => 'html',
-		),
-		'nokia' => array (
-			'view_format' => 'html',
-		),
-		'operamini' => array (
-			'view_format' => 'html',
-		),
-		'operamobile' => array (
-			'view_format' => 'html',
-		),
-		'palm_pre' => array (
-			'view_format' => 'html',
-		),
-		'webkit' => array (
-			'view_format' => 'html',
-		),
-		'wml' => array (
-			'view_format' => 'wml',
-		),
-	);
 
 	/**
 	 * Returns an instance of detection class, overridable by extensions
@@ -264,96 +237,6 @@ class DeviceDetection implements IDeviceDetector {
 	 * @return IDeviceProperties
 	 */
 	public function detectDeviceProperties( $userAgent, $acceptHeader = '' ) {
-		$deviceName = $this->detectDeviceName( $userAgent, $acceptHeader );
-		return $this->getDeviceProperties( $deviceName, $userAgent );
-	}
-
-	/**
-	 * @param $deviceName
-	 * @param $userAgent
-	 *
-	 * @return IDeviceProperties
-	 */
-	public function getDeviceProperties( $deviceName, $userAgent ) {
-		if ( !isset( self::$formats[$deviceName] ) ) {
-			$deviceName = 'generic';
-		}
-		return new DeviceProperties( self::$formats[$deviceName], $userAgent );
-	}
-
-	/**
-	 * @param $userAgent string
-	 * @param $acceptHeader string
-	 * @return string
-	 */
-	public function detectDeviceName( $userAgent, $acceptHeader = '' ) {
-		wfProfileIn( __METHOD__ );
-
-		$deviceName = '';
-
-		// These regexes come roughly  in order of popularity per
-		// http://stats.wikimedia.org/wikimedia/squids/SquidReportClients.htm
-		// to reduce the average number of regexes per user-agent.
-		if ( strpos( $userAgent, 'Safari' ) !== false ) {
-			if ( strpos( $userAgent, 'iPhone' ) !== false
-				|| strpos( $userAgent, 'iPad' ) !== false
-			) {
-				$deviceName = 'iphone';
-			} elseif ( strpos( $userAgent, 'Android' ) !== false ) {
-				$deviceName = 'android';
-			} elseif ( strpos( $userAgent, 'Series60' ) !== false ) {
-				$deviceName = 'nokia';
-			} elseif ( strpos( $userAgent, 'webOS' ) !== false ) {
-				$deviceName = 'palm_pre';
-			} else {
-				$deviceName = 'webkit';
-			}
-		} elseif ( strpos( $userAgent, 'Opera/' ) !== false ) {
-			if ( strpos( $userAgent, 'Opera Mini' ) !== false ) {
-				$deviceName = 'operamini';
-			} elseif ( strpos( $userAgent, 'Opera Mobi' ) !== false ) {
-				$deviceName = 'operamobile';
-			} elseif ( strpos( $userAgent, 'Wii' ) !== false ) {
-				$deviceName = 'operamobile';
-			} else {
-				$deviceName = 'generic'; // Desktop Opera
-			}
-		} elseif ( strpos( $userAgent, 'BlackBerry' ) !== false ) {
-			$deviceName = 'blackberry';
-		} elseif ( strpos( $userAgent, 'NetFront' ) !== false ) {
-			if ( strpos( $userAgent, 'Kindle' ) !== false ) {
-				$deviceName = 'kindle';
-			} else {
-				$deviceName = 'netfront';
-			}
-		} elseif ( strpos( $userAgent, 'MSIE' ) !== false ) {
-			$deviceName = 'ie';
-		}
-
-		if ( $deviceName === '' ) {
-			if ( strpos( $acceptHeader, 'application/vnd.wap.xhtml+xml' ) !== false ) {
-				$deviceName = 'generic';
-			} elseif ( strpos( $acceptHeader, 'vnd.wap.wml' ) !== false ) {
-				$deviceName = 'wml';
-			} else {
-				$deviceName = 'generic';
-			}
-		}
-		wfProfileOut( __METHOD__ );
-		return $deviceName;
-	}
-
-	/**
-	 * @return array: List of all device-specific stylesheets
-	 */
-	public function getCssFiles() {
-		$files = array();
-
-		foreach ( self::$formats as $dev ) {
-			if ( isset( $dev['css_file_name'] ) ) {
-				$files[] = $dev['css_file_name'];
-			}
-		}
-		return array_unique( $files );
+		return new DeviceProperties( $userAgent, $acceptHeader );
 	}
 }
