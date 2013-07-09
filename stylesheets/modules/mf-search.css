@@ -5,18 +5,17 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 input.search {
   /* visual indication that search is happening */
 
+  padding-right: 24px;
 }
 input.search.searching {
   background-color: #eee;
 }
 form .clear {
-  top: 9px;
+  top: 0;
+  bottom: 0;
   right: 10px;
   width: 24px;
-  height: 30px;
-  background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
-  margin: 0;
-  background-position: right center;
+  background: url(../common/images/close-button-beta.png) no-repeat scroll 100% 50%;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: auto 12px;

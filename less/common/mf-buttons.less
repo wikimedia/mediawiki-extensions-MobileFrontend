@@ -72,12 +72,13 @@ input[type=submit] {
 	.button,
 	button,
 	input[type=submit] {
-		line-height: @headerElementHeight - 2 * @headerElementBorderHeight;
+		// 2 is top and bottom border
+		line-height: @headerElementHeight - 2;
 		padding: 0 1.25em;
 		text-decoration: none;
 		.vertical-gradient(#fff, #e9e9ea, 45%, 100%);
 		color: #58595b;
-		border: @headerElementBorderHeight solid #9ea0a3;
+		border: 1px solid #9ea0a3;
 	}
 
 	.button-bar {

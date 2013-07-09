@@ -3,24 +3,24 @@ moved from beta_common.css in
 Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
 */
 @import "../mf-mixins.less";
+@clearWidth: 24px;
 
 input.search {
 	/* visual indication that search is happening */
 	&.searching {
 		background-color: #eee;
 	}
+	padding-right: @clearWidth;
 }
 
 form {
 
 	.clear {
-		top: @searchMarginTop;
+		top: 0;
+		bottom: 0;
 		right: 10px;
-		width: 24px;
-		height: @headerElementHeight;
-		background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
-		margin: 0;
-		background-position: right center;
+		width: @clearWidth;
+		background: url(../common/images/close-button-beta.png) no-repeat scroll 100% 50%;
 		.background-size( auto, 12px );
 		cursor: pointer;
 		position: absolute;
