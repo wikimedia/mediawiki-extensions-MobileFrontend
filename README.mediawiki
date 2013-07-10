@@ -91,6 +91,9 @@ Open terminal in tests/acceptance. Update RubyGems and install required gems wit
   gem install bundler
   bundle install
 
+You will need to create a user account on your local wiki
+See https://github.com/wikimedia/qa-browsertests/blob/master/README.md for details
+
 Run the tests with:
 
   bundle exec rake
