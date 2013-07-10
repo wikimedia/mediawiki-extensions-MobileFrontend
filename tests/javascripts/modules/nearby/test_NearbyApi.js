@@ -8,9 +8,9 @@ QUnit.module( 'MobileFrontend NearbyApi', {
 		m = new NearbyApi();
 		sinon.stub( m, 'get', function() {
 			return $.Deferred().resolve( {"query":{"pages":{
-				"20004112":{"pageid":20004112,"ns":0,"title":"The Montgomery (San Francisco)","thumbnail":{"source":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Montgomery%2C_San_Francisco.jpg/119px-The_Montgomery%2C_San_Francisco.jpg","width":119,"height":180},"pageimage":"The_Montgomery,_San_Francisco.jpg","coordinates":[{"lat":37.787,"lon":-122.4,"primary":"","globe":"earth"}]},
-				"18618509":{"pageid":18618509,"ns":0,"title":"Wikimedia Foundation","thumbnail":{"source":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Wikimedia_Foundation_RGB_logo_with_text.svg/180px-Wikimedia_Foundation_RGB_logo_with_text.svg.png","width":180,"height":180},"pageimage":"Wikimedia_Foundation_RGB_logo_with_text.svg","coordinates":[{"lat":37.787,"lon":-122.4,"primary":"","globe":"earth"}]},
-				"9297443":{"pageid":9297443,"ns":0,"title":"W San Francisco","coordinates":[{"lat":37.7854,"lon":-122.4,"primary":"","globe":"earth"}]}
+				"20004112":{"pageid":20004112,"ns":0,"title":"The Montgomery (San Francisco)","thumbnail":{"source":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Montgomery%2C_San_Francisco.jpg/119px-The_Montgomery%2C_San_Francisco.jpg","width":119,"height":180},"pageimage":"The_Montgomery,_San_Francisco.jpg","coordinates":[{"lat":37.787,"lon":-122.41,"primary":"","globe":"earth"}]},
+				"18618509":{"pageid":18618509,"ns":0,"title":"Wikimedia Foundation","thumbnail":{"source":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Wikimedia_Foundation_RGB_logo_with_text.svg/180px-Wikimedia_Foundation_RGB_logo_with_text.svg.png","width":180,"height":180},"pageimage":"Wikimedia_Foundation_RGB_logo_with_text.svg","coordinates":[{"lat":37.787,"lon":-122.51,"primary":"","globe":"earth"}]},
+				"9297443":{"pageid":9297443,"ns":0,"title":"W San Francisco","coordinates":[{"lat":37.7854,"lon":-122.61,"primary":"","globe":"earth"}]}
 				} } } );
 		} );
 	}
@@ -41,13 +41,13 @@ QUnit.test( '#_distanceMessage', function( assert ) {
 } );
 
 QUnit.test( '#getPages', 6, function( assert ) {
-	m.getPages( { latitude: 37.786825199999996, longitude: -122.3995087 } ).done( function( pages ) {
+	m.getPages( { latitude: 37.786825199999996, longitude: -122.4 } ).done( function( pages ) {
 		assert.strictEqual( pages.length, 3 );
-		assert.strictEqual( pages[0].title, 'Wikimedia Foundation' );
+		assert.strictEqual( pages[0].title, 'The Montgomery (San Francisco)' );
 		assert.strictEqual( pages[0].pageimageClass, 'listThumbV' );
 		assert.strictEqual( pages[2].title, 'W San Francisco' );
 		assert.strictEqual( pages[2].pageimageClass, 'needsPhoto' );
-		assert.strictEqual( pages[2].dist, 0.13678959681870956 );
+		assert.strictEqual( pages[2].dist, 23.376927175788786 );
 	} );
 } );
 
