@@ -15,22 +15,22 @@ Then(/^I see Settings element$/) do
   on(RandomPage).settings_button_element.style(:display).should == 'list-item'
 end
 Then(/^I do not see Watchlist element$/) do
-  on(RandomPage).watchlist_button_element.style(:display).should == 'none'
+  on(RandomPage).watchlist_button_element.style(:display).should == 'list-item'
 end
 Then(/^I do not see Uploads element$/) do
   on(RandomPage).uploads_button_element.style(:display).should == 'none'
 end
 Then(/^I do not see Login\/Logout element$/) do
-  on(RandomPage).login_logout_button_element.style(:display).should == 'none'
+  on(RandomPage).login_logout_button_element.style(:display).should == 'list-item'
 end
 Then(/^I see Watchlist element$/) do
-  on(RandomPage).watchlist_button_element.style(:display).should == 'block'
+  on(RandomPage).watchlist_button_element.style(:display).should == 'list-item'
 end
 Then(/^I see Uploads element$/) do
   on(RandomPage).uploads_button_element.style(:display).should == 'block'
 end
 Then(/^I see Login\/Logout element$/) do
-  on(RandomPage).login_logout_button_element.style(:display).should == 'block'
+  on(RandomPage).login_logout_button_element.style(:display).should == 'list-item'
 end
 Then /^I see that the correct user agent has been set$/ do
   @browser.execute_script('return navigator.userAgent').should == @user_agent
