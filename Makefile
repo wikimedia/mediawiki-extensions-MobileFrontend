@@ -32,6 +32,9 @@ qunitdebug:
 
 tests: jshint phpunit qunit
 
+cucumber:
+	@scripts/cucumber.sh
+
 installhooks:
 	ln -sf ${PWD}/scripts/pre-commit .git/hooks/pre-commit
 	ln -sf ${PWD}/scripts/pre-rebase .git/hooks/pre-rebase
