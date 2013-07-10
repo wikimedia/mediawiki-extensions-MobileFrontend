@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49c305cb_58be4dfc",
+        "filename": "javascripts/common/uploads/PhotoUploaderPreview.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-10T23:08:34Z",
+      "side": 1,
+      "message": "This needs to change to self..",
+      "revId": "166c8c6e43aa30f44cd31792830002c76cd2fd8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
