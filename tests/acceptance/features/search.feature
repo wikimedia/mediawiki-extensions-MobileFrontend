@@ -1,10 +1,7 @@
 Feature: Search
 
-  Scenario: User can search from home page
+  Scenario: Seach for partial text
     Given I am on the home page
-    Then Search box should be there
-
-  Scenario: Search for partial string
-    Given I am on the home page
-    When I type san
+     When I click the placeholder search box
+       And I type into search box san
     Then Search results should contain San Francisco
