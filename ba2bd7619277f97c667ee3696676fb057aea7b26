@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49c305cb_f80f39e0",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-10T23:22:49Z",
+      "side": 1,
+      "message": "I\u0027d suggest SkinMobileFrontend is a bit confusing - this is a desktop skin so it\u0027s weird it is extending something about mobile.\n\nCan we call this SkinTemplate2 - since we are effectively redefining the SkinTemplate?",
+      "revId": "ba2bd7619277f97c667ee3696676fb057aea7b26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_581acd14",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-10T23:22:49Z",
+      "side": 1,
+      "message": "I find implementing an empty function strange and hacky.\nOut of interest why not enable the formatter on the desktop skin as well. Since the desktop skin is not surface / enabled this would be restricted only to developers who know what they are doing and will make the code more readable and easy to follow.",
+      "revId": "ba2bd7619277f97c667ee3696676fb057aea7b26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_38e43110",
+        "filename": "includes/skins/SkinMobileFrontend.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-10T23:22:49Z",
+      "side": 1,
+      "message": "I find this weird. In my head SkinMinerva extends SkinTemplate and SkinMobileFrontend should extend SkinMinerva.",
+      "revId": "ba2bd7619277f97c667ee3696676fb057aea7b26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_1820554b",
+        "filename": "includes/skins/SkinMobileFrontend.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-10T23:22:49Z",
+      "side": 1,
+      "message": "Seems weird putting outputMobilePage here which gets inherited by the desktop skin but never used.\n\nThere should be some reference to it in here otherwise it should be moved out.",
+      "revId": "ba2bd7619277f97c667ee3696676fb057aea7b26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
