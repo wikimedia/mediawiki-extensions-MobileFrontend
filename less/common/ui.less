@@ -8,7 +8,6 @@
 
 .header {
 	z-index: 2;
-	color: black;
 	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
 	border-bottom: 1px solid #e2e2e2;
 	line-height: @headerHeight;
@@ -20,8 +19,7 @@
 
 	h1, h2 {
 		font-size: @baseFontSize * 1.6;
-		color: @chromeHeadingColor;
-		margin: @headerHeight*0.22 0 0;
+		margin: round( @headerHeight*0.22 ) 0 0;
 	}
 }
 

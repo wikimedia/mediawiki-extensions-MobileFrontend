@@ -343,7 +343,6 @@ body.navigation-enabled #mw-mf-page-center {
 }
 .header {
   z-index: 2;
-  color: black;
   background-color: #f3f3f3;
   background-image: -moz-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(100%, #f3f3f3));
@@ -360,8 +359,7 @@ body.navigation-enabled #mw-mf-page-center {
 .header h1,
 .header h2 {
   font-size: 1.6em;
-  color: #000000;
-  margin: 10.12px 0 0;
+  margin: 10px 0 0;
 }
 /* Menu buttons */
 #mw-mf-menu-page,

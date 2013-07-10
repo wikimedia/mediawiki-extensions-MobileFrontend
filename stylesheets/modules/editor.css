@@ -59,8 +59,6 @@
   background-size: auto 0.8em;
   line-height: 1.7;
   text-transform: uppercase;
-  margin: 0;
-  padding: 0;
 }
 .editor-overlay .buttonBar {
   box-shadow: 0 -10px 10px 0 #ffffff;
