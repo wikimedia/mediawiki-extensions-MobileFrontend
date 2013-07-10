@@ -20,21 +20,17 @@ body {
   line-height: 1.3333333333333333em;
   color: #252525;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.header h2,
+h1 {
   font-family: Georgia, serif;
-  margin-bottom: 9pt;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 14pt;
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-family: Georgia, serif;
+  margin: 14pt 0 9pt;
 }
 p {
   margin-bottom: 8pt;
@@ -54,7 +50,6 @@ dl dt {
 h1 {
   font-size: 1.833em;
   line-height: 22pt;
-  color: black;
 }
 h2 {
   font-size: 1.5em;

@@ -16,13 +16,16 @@ body {
 	color: #252525;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.header h2,
+h1 {
 	font-family: @fontFamilyHeading;
-	margin-bottom: 9pt;
 }
 
-h2, h3, h4, h5, h6 {
-	margin-top: @headingMarginTop;
+.content {
+	h2, h3, h4, h5, h6 {
+		font-family: @fontFamilyHeading;
+		margin: @headingMarginTop 0 9pt;
+	}
 }
 
 p {
@@ -48,7 +51,6 @@ dl {
 h1 {
 	font-size: @baseFontSize * 1.833;
 	line-height: @headingLineHeight;
-	color: black;
 }
 
 h2 {
