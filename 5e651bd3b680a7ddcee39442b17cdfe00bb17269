@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "49c305cb_38a0b194",
+        "filename": "tests/acceptance/features/step_definitions/menu_opens_page.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-10T23:40:39Z",
+      "side": 1,
+      "message": "I\u0027m also not sure about the HomePage vs. RandomPage thing... Shouldn\u0027t we have a class Page with all the common elements (mainmenu_button, all the menu links) and then MainPage that inherits from page and has elements specific to the main page?\n\nWhat is RandomPage anyway? It just seems like any page (i.e. Page)...",
+      "revId": "5e651bd3b680a7ddcee39442b17cdfe00bb17269",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49c305cb_98ee0522",
         "filename": "tests/acceptance/features/support/pages/random_page.rb",
         "patchSetId": 2
