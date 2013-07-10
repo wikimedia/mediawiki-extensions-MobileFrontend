@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c609db_cbdc0e12",
+        "filename": "tests/javascripts/common/uploads/test_PhotoApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-07-10T00:30:13Z",
+      "side": 1,
+      "message": "Should be {} instead I guess? name is already set below.",
+      "revId": "f20f2fdce170d68aacec71456c51527687cdb0b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
