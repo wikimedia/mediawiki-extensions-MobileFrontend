@@ -4,7 +4,7 @@
 
 	QUnit.module( 'MobileFrontend modules/editor/EditorApi', {
 		setup: function() {
-			sinon.stub( EditorApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+			this.spy = sinon.stub( EditorApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 				"query": {
 					"pages": {
 						"1": {
@@ -26,67 +26,58 @@
 		}
 	} );
 
-	QUnit.test( '#getSection', 2, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test' } );
+	QUnit.test( '#getContent (no section)', 1, function( assert ) {
+		var editorApi = new EditorApi( { title: 'MediaWiki:Test.css' } );
 
-		editorApi.getSection( 1 ).done( function( resp ) {
-			assert.deepEqual(
-				resp,
-				{ id: 1, timestamp: '2013-05-15T00:30:26Z', content: 'section' },
-				'return section content'
-			);
-		} );
-		editorApi.getSection( 1 );
-		assert.ok( editorApi.get.calledOnce, 'cache sections' );
+		editorApi.getContent();
+		assert.ok( this.spy.calledWith( {
+				action: 'query',
+				prop: 'revisions',
+				rvprop: [ 'content', 'timestamp' ],
+				titles: 'MediaWiki:Test.css'
+			} ), 'rvsection not passed to api request' );
 	} );
 
-	QUnit.test( '#getSection, new page', 2, function( assert ) {
+	QUnit.test( '#getContent', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } );
+
+		editorApi.getContent().done( function( resp ) {
+			assert.strictEqual( resp, 'section', 'return section content' );
+		} );
+		editorApi.getContent();
+		assert.ok( editorApi.get.calledOnce, 'cache content' );
+	} );
+
+	QUnit.test( '#getContent, new page', 2, function( assert ) {
 		var editorApi = new EditorApi( { title: 'test', isNew: true } );
 
-		editorApi.getSection( 0 ).done( function( resp ) {
-			assert.deepEqual(
-				resp,
-				{ id: 0, content: '' },
-				'return empty section'
-			);
+		editorApi.getContent().done( function( resp ) {
+			assert.strictEqual( resp, '', 'return empty section' );
 		} );
-		assert.ok( !editorApi.get.called, "don't try to retrieve section using API" );
+		assert.ok( !editorApi.get.called, "don't try to retrieve content using API" );
 	} );
 
-	QUnit.test( '#getSection, missing section', 2, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test', isNew: true } ), doneSpy = sinon.spy();
+	QUnit.test( '#getContent, missing section', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ), doneSpy = sinon.spy();
 
 		EditorApi.prototype.get.restore();
 		sinon.stub( EditorApi.prototype, 'get' ).returns( $.Deferred().resolve( {
-			"error":{ "code": "rvnosuchsection" }
+			"error": { "code": "rvnosuchsection" }
 		} ) );
 
-		editorApi.getSection( 1 ).done( doneSpy ).fail( function( error ) {
+		editorApi.getContent().done( doneSpy ).fail( function( error ) {
 			assert.strictEqual( error, 'rvnosuchsection', "return error code" );
 		} );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 
-	QUnit.test( '#stageSection', 1, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test' } );
-
-		editorApi.getSection( 1 ).done( function() {
-			editorApi.stageSection( 1, 'updated section' );
-			editorApi.getSection( 1 ).done( function( resp ) {
-				assert.strictEqual( resp.content, 'updated section', 'update cache' );
-			} );
-		} );
-	} );
-
-	QUnit.test( '#save, success', 3, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test' } );
+	QUnit.test( '#save, success', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } );
 
 		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve() );
 
-		editorApi.getSection( 1 );
-		editorApi.stageSection( 1, 'section 1' );
-		editorApi.getSection( 2 );
-		editorApi.stageSection( 2, 'section 2' );
+		editorApi.getContent();
+		editorApi.setContent( 'section 1' );
 		editorApi.save( 'summary' ).done( function() {
 			assert.ok( editorApi.post.calledWith( {
 				action: 'edit',
@@ -98,18 +89,8 @@
 				basetimestamp: '2013-05-15T00:30:26Z',
 				starttimestamp: '2013-05-15T00:30:26Z'
 			} ), 'save first section' );
-			assert.ok( editorApi.post.calledWith( {
-				action: 'edit',
-				title: 'test',
-				section: 2,
-				text: 'section 2',
-				summary: 'summary',
-				token: 'fake token',
-				basetimestamp: '2013-05-15T00:30:26Z',
-				starttimestamp: '2013-05-15T00:30:26Z'
-			} ), 'save second section' );
-			assert.strictEqual( editorApi.getStagedCount(), 0, 'reset the stage' );
 		} );
+		assert.strictEqual( editorApi.hasChanged, false, 'reset hasChanged' );
 	} );
 
 	QUnit.test( '#save, new page', 2, function( assert ) {
@@ -117,67 +98,62 @@
 
 		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve() );
 
-		editorApi.getSection( 0 );
-		editorApi.stageSection( 0, 'section 0' );
+		editorApi.getContent();
+		editorApi.setContent( 'section 0' );
 		editorApi.save( 'summary' ).done( function() {
 			assert.ok( editorApi.post.calledWith( {
 				action: 'edit',
 				title: 'Talk:test',
-				section: 0,
 				text: 'section 0',
 				summary: 'summary',
 				token: 'fake token',
 				basetimestamp: undefined,
 				starttimestamp: undefined
 			} ), 'save lead section' );
-			assert.strictEqual( editorApi.getStagedCount(), 0, 'reset the stage' );
 		} );
+		assert.strictEqual( editorApi.hasChanged, false, 'reset hasChanged' );
 	} );
 
-	QUnit.test( '#save, request failure', 3, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test' } ), doneSpy = sinon.spy(), failSpy = sinon.spy();
+	QUnit.test( '#save, request failure', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ),
+			doneSpy = sinon.spy(), failSpy = sinon.spy();
 
 		sinon.stub( editorApi, 'post' ).returns( $.Deferred().reject() );
 
-		editorApi.getSection( 1 );
-		editorApi.stageSection( 1, 'section 1' );
-		editorApi.getSection( 2 );
-		editorApi.stageSection( 2, 'section 2' );
+		editorApi.getContent();
+		editorApi.setContent( 'section 1' );
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
 		assert.ok( failSpy.calledWith( 'HTTP error' ), "call fail" );
 		assert.ok( !doneSpy.called, "don't call done" );
-		assert.ok( editorApi.post.calledOnce, 'stop after first failure' );
 	} );
 
-	QUnit.test( '#save, API failure', 3, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test' } ), doneSpy = sinon.spy(), failSpy = sinon.spy();
+	QUnit.test( '#save, API failure', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ),
+			doneSpy = sinon.spy(), failSpy = sinon.spy();
 
 		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve(
 			{ error: { code: 'error code' } }
 		) );
 
-		editorApi.getSection( 1 );
-		editorApi.stageSection( 1, 'section 1' );
-		editorApi.getSection( 2 );
-		editorApi.stageSection( 2, 'section 2' );
+		editorApi.getContent();
+		editorApi.setContent( 'section 1' );
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
 		assert.ok( failSpy.calledWith( 'error code' ), "call fail" );
 		assert.ok( !doneSpy.called, "don't call done" );
-		assert.ok( editorApi.post.calledOnce, 'stop after first failure' );
 	} );
 
-	QUnit.test( '#save, without staged sections', 2, function( assert ) {
-		var editorApi = new EditorApi( { title: 'test' } );
+	QUnit.test( '#save, without changes', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } );
 
 		assert.throws(
 			function() {
 				editorApi.save();
 			},
-			/staged section/,
+			/no changes/i,
 			'throw an error'
 		);
 		assert.ok( !editorApi.getToken.called, "don't get the token" );

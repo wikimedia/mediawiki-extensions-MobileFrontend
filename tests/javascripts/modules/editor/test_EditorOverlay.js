@@ -1,27 +1,35 @@
 ( function ( M, $ ) {
 
 	var EditorApi = M.require( 'modules/editor/EditorApi' ),
-		EditorOverlay = M.require( 'modules/editor/EditorOverlay' );
+		EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
+		apiSpy;
 
 	QUnit.module( 'MobileFrontend modules/editor/EditorOverlay', {
 		setup: function() {
-			sinon.stub( EditorApi.prototype, 'getSection' ).
-				withArgs( 0 ).returns( $.Deferred().resolve( { id: 0, content: 'section 0' } ) ).
-				withArgs( 1 ).returns( $.Deferred().resolve( { id: 1, content: 'section 1' } ) ).
-				withArgs( 2 ).returns( $.Deferred().resolve( { id: 2, content: 'section 2' } ) );
+			apiSpy = sinon.spy( EditorApi.prototype, 'initialize' );
+
+			sinon.stub( EditorApi.prototype, 'getContent' ).
+				returns( $.Deferred().resolve( 'section 0' ) );
 		},
 		teardown: function() {
-			EditorApi.prototype.getSection.restore();
+			EditorApi.prototype.initialize.restore();
+			EditorApi.prototype.getContent.restore();
 		}
 	} );
 
 	QUnit.test( '#initialize, with given page and section', 3, function( assert ) {
-		var apiSpy = sinon.spy( EditorApi.prototype, 'initialize' ),
-			editorOverlay = new EditorOverlay( { title: 'test', section: 0, sectionCount: 3 } );
+		var editorOverlay = new EditorOverlay( { title: 'test', sectionId: 0 } );
 
 		assert.ok( apiSpy.calledOnce, 'initialize EditorApi once' );
-		assert.ok( apiSpy.calledWith( { title: 'test', isNew: undefined } ), 'initialize EditorApi with correct pageTitle' );
+		assert.ok( apiSpy.calledWith( { title: 'test', isNew: undefined, sectionId: 0} ), 'initialize EditorApi with correct pageTitle' );
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
+	} );
+
+	QUnit.test( '#initialize, without a section', 2, function( assert ) {
+		new EditorOverlay( { title: 'test.css' } );
+
+		assert.ok( apiSpy.calledOnce, 'initialize EditorApi once' );
+		assert.ok( apiSpy.calledWith( { title: 'test.css', isNew: undefined, sectionId: undefined } ), 'initialize EditorApi without a section' );
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

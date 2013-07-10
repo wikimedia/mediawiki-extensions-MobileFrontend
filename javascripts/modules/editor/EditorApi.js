@@ -5,28 +5,29 @@
 		initialize: function( options ) {
 			this._super( options );
 			this.title = options.title;
-			this._sectionCache = {};
-			this._sectionStage = {};
-
+			this.sectionId = options.sectionId;
 			// return an empty section for new pages
-			if ( options.isNew ) {
-				this._sectionCache[0] = { id: 0, content: '' };
-			}
+			this.content = options.isNew ? '' : null;
+			this.hasChanged = false;
 		},
 
-		getSection: function( id ) {
-			var self = this, result = $.Deferred();
+		getContent: function() {
+			var self = this, result = $.Deferred(), options;
 
-			if ( this._sectionCache[id] ) {
-				result.resolve( this._sectionCache[id] );
+			if ( this.content !== null ) {
+				result.resolve( this.content );
 			} else {
-				self.get( {
+				options = {
 					action: 'query',
 					prop: 'revisions',
 					rvprop: [ 'content', 'timestamp' ],
-					titles: self.title,
-					rvsection: id
-				} ).done( function( resp ) {
+					titles: this.title
+				};
+				// See Bug 50136 - passing rvsection will fail with non wikitext
+				if ( $.isNumeric( this.sectionId ) ) {
+					options.rvsection = this.sectionId;
+				}
+				this.get( options ).done( function( resp ) {
 					var revision;
 
 					if ( resp.error ) {
@@ -39,12 +40,10 @@
 						return page;
 					} )[0].revisions[0];
 
-					self._sectionCache[id] = {
-						id: id,
-						timestamp: revision.timestamp,
-						content: revision['*']
-					};
-					result.resolve( self._sectionCache[id] );
+					self.content = revision['*'];
+					self.timestamp = revision.timestamp;
+
+					result.resolve( self.content );
 				} );
 			}
 
@@ -52,58 +51,49 @@
 		},
 
 		/**
-		 * Mark section as modified and queue changes to be submitted when #save
+		 * Mark content as modified and set changes to be submitted when #save
 		 * is invoked.
 		 *
-		 * @param id Number Section id.
 		 * @param content String New section content.
 		 */
-		stageSection: function( id, content ) {
-			this._sectionCache[id].content = content;
-			this._sectionStage[id] = this._sectionCache[id];
-		},
-
-		getStagedCount: function() {
-			return $.map( this._sectionStage, function( section ) {
-					return section;
-			} ).length;
+		setContent: function( content ) {
+			this.content = content;
+			this.hasChanged = true;
 		},
 
 		save: function( summary ) {
-			var self = this, result = $.Deferred(),
-				sections = $.map( this._sectionStage, function( section ) {
-					return section;
-				} );
+			var self = this, result = $.Deferred();
 
-			if ( !sections.length ) {
-				throw new Error( 'No staged sections' );
+			if ( !this.hasChanged ) {
+				throw new Error( 'No changes to save' );
 			}
 
-			function saveSection( token ) {
-				var section = sections.pop();
-
-				self.post( {
+			function saveContent( token ) {
+				var options = {
 					action: 'edit',
 					title: self.title,
-					section: section.id,
-					text: section.content,
+					text: self.content,
 					summary: summary,
 					token: token,
-					basetimestamp: section.timestamp,
-					starttimestamp: section.timestamp
-				} ).done( function( data ) {
+					basetimestamp: self.timestamp,
+					starttimestamp: self.timestamp
+				};
+
+				if ( $.isNumeric( self.sectionId ) ) {
+					options.section = self.sectionId;
+				}
+
+				self.post( options ).done( function( data ) {
 					if ( data && data.error ) {
 						result.reject( data.error.code );
-					} else if ( !sections.length ) {
-						self._sectionStage = {};
-						result.resolve();
 					} else {
-						saveSection( token );
+						self.hasChanged = false;
+						result.resolve();
 					}
 				} ).fail( $.proxy( result, 'reject', 'HTTP error' ) );
 			}
 
-			this.getToken().done( saveSection ).fail( $.proxy( result, 'reject' ) );
+			this.getToken().done( saveContent ).fail( $.proxy( result, 'reject' ) );
 
 			return result;
 		}

@@ -21,13 +21,15 @@
 		// FIXME: this doesn't work when loading page dynamically
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 
-		M.router.route( /^editor-(\d+)$/, function( section ) {
+		M.router.route( /^editor-(\d+)$/, function( sectionId ) {
+			// FIXME: This doesn't work in alpha - doesn't represent latest page.
 			var title = mw.config.get( 'wgTitle' ), ns = mw.config.get( 'wgCanonicalNamespace' );
-			section = parseInt( section, 10 );
+
+			sectionId = parseInt( sectionId, 10 );
 			new EditorOverlay( {
 				title: ns ? ns + ':' + title : title,
 				isNew: isNew,
-				section: section
+				sectionId: mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? sectionId : null
 			} ).show();
 		} );
 		$( '#ca-edit' ).addClass( 'enabled' );

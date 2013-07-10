@@ -42,7 +42,12 @@
 		},
 
 		initialize: function( options ) {
-			this.api = new EditorApi( { title: options.title, isNew: options.isNew } );
+			this.api = new EditorApi( {
+				title: options.title,
+				sectionId: options.sectionId,
+				isNew: options.isNew
+			} );
+			this.sectionId = options.sectionId;
 			this._super( options );
 		},
 
@@ -54,7 +59,7 @@
 			this.$preview = this.$( '.preview' );
 			this.$content = this.$( 'textarea' ).
 				on( 'input', function() {
-					self.api.stageSection( self.sectionId, self.$content.val() );
+					self.api.setContent( self.$content.val() );
 					self.$( '.continue' ).prop( 'disabled', false );
 					self._resizeContent();
 				} );
@@ -91,13 +96,13 @@
 					} );
 			}
 
-			this._loadSection( options.section );
+			this._loadContent();
 			// log section edit attempt
 			self.log( 'attempt' );
 		},
 
 		hide: function() {
-			if ( !this.api.getStagedCount() || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
+			if ( !this.api.hasChanged || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
 				return this._super();
 			} else {
 				return false;
@@ -158,19 +163,17 @@
 			}
 		},
 
-		_loadSection: function( id ) {
+		_loadContent: function() {
 			var self = this;
 
 			this.$content.hide();
 			this.$spinner.show();
 
-			this.sectionId = id;
-
-			this.api.getSection( id ).
-				done( function( section ) {
+			this.api.getContent().
+				done( function( content ) {
 					self.$content.
 						show().
-						val( section.content );
+						val( content );
 					self._resizeContent();
 					self.$spinner.hide();
 				} ).
