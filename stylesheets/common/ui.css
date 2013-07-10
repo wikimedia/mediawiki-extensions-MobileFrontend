@@ -341,7 +341,6 @@ body.navigation-enabled #mw-mf-page-center {
 .header form {
   height: 46px;
 }
-#mw-mf-header,
 .header {
   z-index: 2;
   color: black;
@@ -358,9 +357,7 @@ body.navigation-enabled #mw-mf-page-center {
   position: relative;
   padding: 0 40px 0 40px;
 }
-#mw-mf-header h1,
 .header h1,
-#mw-mf-header h2,
 .header h2 {
   font-size: 1.6em;
   color: #000000;
