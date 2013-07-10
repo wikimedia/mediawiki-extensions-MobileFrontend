@@ -116,11 +116,8 @@ searchOverlay = new SearchOverlay();
 
 function init() {
 	// don't use focus event (https://bugzilla.wikimedia.org/show_bug.cgi?id=47499)
-	$( '#searchInput' ).on( 'touchend keydown', function( ev ) {
-		// if touch or key not Tab or Shift
-		if ( ev.type === 'touchend' || ( ev.which !== 9 && ev.which !== 16 ) ) {
-			searchOverlay.showAndFocus();
-		}
+	$( '#searchInput' ).on( 'touchend mouseup', function() {
+		searchOverlay.showAndFocus();
 	} );
 }
 init();
