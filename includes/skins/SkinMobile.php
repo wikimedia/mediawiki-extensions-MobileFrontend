@@ -220,6 +220,7 @@ class SkinMobile extends SkinMinerva {
 	protected function preparePersonalTools( QuickTemplate $tpl ) {
 		$returnToTitle = $this->getTitle()->getPrefixedText();
 		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
+		$watchTitle = SpecialPage::getTitleFor( 'Watchlist' );
 
 		// watchlist link
 		$watchlistQuery = array();
@@ -238,7 +239,9 @@ class SkinMobile extends SkinMinerva {
 		$items = array(
 			'watchlist' => array(
 				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'Watchlist' )->getLocalUrl( $watchlistQuery ),
+				'href' => $this->getUser()->isLoggedIn() ?
+					$watchTitle->getLocalUrl( $watchlistQuery ) :
+					static::getLoginUrl( array( 'returnto' => $watchTitle ) ),
 				'class' => 'icon-watchlist jsonly',
 			),
 			'uploads' => array(
