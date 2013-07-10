@@ -23,8 +23,10 @@ var module = (function() {
 
 			if ( $( this ).find( 'table.ambox' ).length === 0 ) {
 				issues.push( {
-					icon: $this.find( '.mbox-image img' ).attr( 'src' ),
-					text: $this.find( '.mbox-text' ).html()
+					// FIXME: [templates] might be inconsistent
+					// .ambox- is used e.g. on eswiki
+					icon: $this.find( '.mbox-image img, .ambox-image img' ).attr( 'src' ),
+					text: $this.find( '.mbox-text, .ambox-text' ).html()
 				} );
 			}
 		} );
