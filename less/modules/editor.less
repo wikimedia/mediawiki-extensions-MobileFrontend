@@ -47,6 +47,20 @@
 	.preview {
 		display: none;
 		padding-bottom: 15em;
+
+		> h2 {
+			font: bold .75em @fontFamily;
+			color: #707070;
+			text-align: center;
+			background: #f3f3f3 url('images/preview-bg.png') 50% 50% repeat-x;
+			.background-size( auto, .8em );
+			line-height: 1.7;
+			text-transform: uppercase;
+			// FIXME: possibly the default styling of headings should apply to
+			// headings in #content only and this wouldn't be necessary?
+			margin: 0;
+			padding: 0;
+		}
 	}
 
 	.license {

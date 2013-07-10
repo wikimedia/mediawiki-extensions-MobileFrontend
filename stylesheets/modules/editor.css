@@ -47,6 +47,21 @@
   display: none;
   padding-bottom: 15em;
 }
+.editor-overlay .preview > h2 {
+  font: bold 0.75em "Helvetica Neue", "Helvetica", "Nimbus Sans L", "Arial", "Liberation Sans", sans-serif;
+  color: #707070;
+  text-align: center;
+  background: #f3f3f3 url('images/preview-bg.png') 50% 50% repeat-x;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -o-background-size: auto 0.8em;
+  -webkit-background-size: auto 0.8em;
+  background-size: auto 0.8em;
+  line-height: 1.7;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
 .editor-overlay .license {
   background: url('images/cc-by-sa.png') 0 0.2em no-repeat;
   background-size: auto 16px;
