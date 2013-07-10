@@ -391,6 +391,7 @@ HTML;
 			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
 		} else {
 			 // note returnto is not set for mobile (per product spec)
+			// note welcome=yes in return to query allows us to detect accounts created from the left nav
 			$returntoquery[ 'welcome' ] = 'yes';
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			$url = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );

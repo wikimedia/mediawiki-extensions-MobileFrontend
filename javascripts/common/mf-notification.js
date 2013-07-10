@@ -1,8 +1,7 @@
 ( function( M, $ ) {
 	var m = ( function() {
 		var calculatePosition = function() {},
-			canCancel = true,
-			inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
+			canCancel = true;
 
 		function isVisible() {
 			return $( '#mf-notification' ).is( ':visible' );
@@ -30,15 +29,6 @@
 			}
 		}
 
-		function notifyAuthenticatedUser() {
-			var msg = mw.msg( 'mobile-frontend-logged-in-toast-notification',
-				mw.config.get( 'wgUserName' ) );
-
-			if ( window.location.search.indexOf( 'welcome=yes' ) > -1 ) {
-				show( msg, 'toast' );
-			}
-		}
-
 		function init( firstRun ) {
 			// FIXME: turn into view with template
 			$( '<div id="mf-notification" class="position-fixed"><div></div></div>' ).
@@ -46,10 +36,6 @@
 					ev.stopPropagation();
 				} ).
 				appendTo( '#notifications' );
-
-			if ( inBeta ) {
-				notifyAuthenticatedUser();
-			}
 
 			firstRun = firstRun === undefined ? true : firstRun;
 
