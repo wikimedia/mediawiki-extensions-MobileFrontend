@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49c305cb_eed13055",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-11T20:19:05Z",
+      "side": 1,
+      "message": "Use the \u0027mw-\u0027 prefix on class and ID names per coding conventions.",
+      "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
