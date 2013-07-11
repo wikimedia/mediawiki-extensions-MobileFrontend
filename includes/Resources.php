@@ -411,9 +411,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/languages/LanguageOverlay.js',
 		),
 		'messages' => array(
-			// mf-notification.js
-			'mobile-frontend-logged-in-toast-notification',
-
 			// mf-navigation.js
 			'mobile-frontend-watchlist-cta-button-signup',
 			'mobile-frontend-watchlist-cta-button-login',
