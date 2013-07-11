@@ -47,7 +47,7 @@ ul.page-list li .listThumb {
   height: 100%;
   margin: 0 0 0 -85px;
 }
-ul.page-list li a.title {
+ul.page-list li .title {
   display: block;
   position: relative;
   padding: 0 23px 15px 23px;
@@ -55,6 +55,16 @@ ul.page-list li a.title {
   /* FIXME: remove if we reset text-decoration in common styles */
 
   text-decoration: none;
+}
+ul.page-list li .title h2 {
+  font: inherit;
+  margin: 0;
+  font-weight: bold;
+  color: #404040;
+  padding: 20px 24px 0 0;
+}
+ul.page-list li .title.new h2 {
+  color: #cc0000;
 }
 ul.page-list li a:active {
   background: #e8e8e9;
@@ -73,13 +83,6 @@ ul.page-list li p {
   overflow: hidden;
   line-height: 1;
   margin: .25em 0 0;
-}
-ul.page-list li h2 {
-  font: inherit;
-  margin: 0;
-  font-weight: bold;
-  color: #404040;
-  padding: 20px 24px 0 0;
 }
 ul.page-list li .info {
   color: #a6a6a6;

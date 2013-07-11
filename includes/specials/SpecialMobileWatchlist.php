@@ -253,11 +253,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			'MAX(' . $dbr->tableName( 'revision' ) . '.rev_timestamp) AS rev_timestamp'
 		);
 		$joinConds = array(
-			'page' => array( 'JOIN', array(
+			'page' => array( 'LEFT JOIN', array(
 				'wl_namespace = page_namespace',
 				'wl_title = page_title'
 			)	),
-			'revision' => array( 'JOIN', array(
+			'revision' => array( 'LEFT JOIN', array(
 				'page_id = rev_page'
 			) )
 		);
@@ -507,14 +507,21 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output = $this->getOutput();
 		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
 		$titleText = $title->getPrefixedText();
-		$ts = new MWTimestamp( $row->rev_timestamp );
-		$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
+		$ts = $row->rev_timestamp;
+		if ( $ts ) {
+			$ts = new MWTimestamp( $ts );
+			$lastModified = wfMessage( 'mobile-frontend-watchlist-modified', $ts->getHumanTimestamp() )->text();
+			$className = 'title';
+		} else {
+			$className = 'title new';
+			$lastModified = '';
+		}
 
 		$thumb = $this->renderThumb( $row );
 
 		$output->addHtml(
 			Html::openElement( 'li', array( 'title' => $titleText ) ) .
-			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => 'title' ) ) .
+			Html::openElement( 'a', array( 'href' => $title->getLocalUrl(), 'class' => $className ) ) .
 			$thumb['html'] .
 			Html::element( 'h2', array(), $titleText ).
 			Html::element( 'div', array( 'class' => 'info' ), $lastModified ) .

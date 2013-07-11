@@ -40,13 +40,26 @@ ul.page-list {
 			margin: 0 0 0 -@thumbSpace;
 		}
 
-		a.title {
+
+		.title {
 			display: block;
 			position: relative;
 			padding: 0 @contentMarginRight @articleListPaddingTop @contentMarginLeft;
 			margin: -1px 0;
 			/* FIXME: remove if we reset text-decoration in common styles */
 			text-decoration: none;
+
+			h2 {
+				.watchlist-heading();
+				// 22px is the width of the watchlist star, +2px for additional padding
+				padding: 20px 24px 0 0;
+			}
+
+			&.new {
+				h2 {
+					color: @redBase;
+				}
+			}
 		}
 
 		a:active {
@@ -66,12 +79,6 @@ ul.page-list {
 			overflow: hidden;
 			line-height: 1;
 			margin: .25em 0 0;
-		}
-
-		h2 {
-			.watchlist-heading();
-			// 22px is the width of the watchlist star, +2px for additional padding
-			padding: 20px 24px 0 0;
 		}
 
 		.info {
