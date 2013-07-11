@@ -30,7 +30,7 @@ h1 {
 .content h5,
 .content h6 {
   font-family: Georgia, serif;
-  margin: 14pt 0 9pt;
+  padding: 9pt 0;
 }
 .content p {
   margin-bottom: 8pt;
@@ -79,7 +79,7 @@ sup {
   font-size: 0.75em;
 }
 .content {
-  margin: 14pt 23px 0 23px;
+  margin: 9pt 23px 0 23px;
 }
 body.no-margins #content_wrapper > .content {
   margin: 0;

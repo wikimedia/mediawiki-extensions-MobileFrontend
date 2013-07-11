@@ -9,6 +9,23 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 }
 
 .client-js {
+	.alpha, .beta {
+		.section_heading {
+			position: relative;
+			background: url(images/show.png) left 1.1em no-repeat;
+			.background-size( 15px, auto );
+			padding-left: 24px;
+			padding-right: 0;
+
+			&.openSection {
+				padding-right: @sectionIconWidth + 15px;
+				border-bottom: solid 1px @sectionBorderColor;
+				margin-bottom: @headingMargin;
+			}
+		}
+	}
+
+	// FIXME: replace some rules with the above rules when editor in stable
 	.section_heading {
 		background-image: url(images/show.png);
 		background-position: right center;
@@ -68,6 +85,6 @@ Change-Id: I683d029d09340a460b02016c5c4fbd6ada5a9b35
 
 #content_wrapper .section {
 	clear: both;
-	border-bottom: solid 1px #E2E3E4;
+	border-bottom: solid 1px @sectionBorderColor;
 }
 

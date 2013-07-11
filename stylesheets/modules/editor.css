@@ -6,14 +6,26 @@
  * See README.mediawiki for details on installing.
  */
 .section_heading .edit-page {
-  float: right;
-  margin: 0 30px 0 0;
+  position: absolute;
+  background: url(../common/images/pagemenu/edit.png) 5px 9pt no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -o-background-size: auto 30px;
+  -webkit-background-size: auto 30px;
+  background-size: auto 30px;
+  text-indent: -9999px;
+  border-left: solid 1px #e2e3e4;
+  width: 35px;
+  top: 0;
+  bottom: 0;
+  right: 0;
   display: none;
-  font-size: .65em;
-  font-family: "Helvetica Neue", "Helvetica", "Nimbus Sans L", "Arial", "Liberation Sans", sans-serif;
 }
 .section_heading.openSection .edit-page {
   display: block;
+}
+html[dir="rtl"] .section_heading .edit-page {
+  background-position: 0 9pt;
 }
 .stub .edit-page {
   margin: 0;
