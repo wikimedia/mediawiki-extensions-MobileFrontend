@@ -41,6 +41,8 @@ class ExtMobileFrontend extends ContextSource {
 		$formatter = MobileFormatter::newFromContext( $context, $html );
 		wfProfileOut( __METHOD__ . '-formatter-init' );
 
+		wfRunHooks( 'MobileFrontendBeforeDOM', array( $context, $formatter ) );
+
 		wfProfileIn( __METHOD__ . '-filter' );
 		if ( $context->getContentTransformations() ) {
 			$formatter->filterContent();
