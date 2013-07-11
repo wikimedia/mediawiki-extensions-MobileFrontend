@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "49c305cb_2efea835",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-11T21:26:04Z",
+      "side": 1,
+      "message": "I want to keep this. It\u0027s highly possible a core change might occur in which case I think we should have an easy way to change this.\n\nFor instance I was surprised \u0027javascript\u0027 wasn\u0027t text/javascript\nand wikitext something like\nx-html/wikitext",
+      "parentUuid": "49c305cb_eeb770f2",
+      "revId": "9b731b5be8d1a14b9046c1b0c359f5a3c53546d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49c305cb_2eca2870",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-07-11T20:47:15Z",
       "side": 1,
       "message": "Just do:\n\nnew EditorApi( { title: options.title, isNew: options.isNew, contentModel: options.contentModel } );\n\nIf it\u0027s undefined, then it\u0027ll just pass undefined.",
+      "revId": "9b731b5be8d1a14b9046c1b0c359f5a3c53546d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_4e01643c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-11T21:26:04Z",
+      "side": 1,
+      "message": "this was a styling preference but i\u0027m not bothered either way - it just means more fixes to the tests.",
+      "parentUuid": "49c305cb_2eca2870",
       "revId": "9b731b5be8d1a14b9046c1b0c359f5a3c53546d0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
