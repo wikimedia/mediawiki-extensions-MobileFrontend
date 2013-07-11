@@ -1,28 +1,5 @@
 @import "../mf-mixins.less";
 
-// FIXME: this looks suspicious (overlay class is added to <html>)
-.overlay ul {
-	text-align: left;
-	left: 0;
-	border: none;
-	z-index: 1;
-	position: relative;
-	opacity: 1;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-
-	&.informative {
-		margin-left: 16px;
-		list-style: outside square;
-		margin-bottom: 16px;
-
-		li {
-			margin-bottom: 8px;
-		}
-	}
-}
-
 html.overlay {
 	.mw-mf-overlay {
 		display: block;
@@ -76,8 +53,21 @@ html[dir="rtl"] {
 		background-color: #F1F1F1;
 	}
 
-	li {
-		text-align: left;
+	ul {
+		list-style: none;
+		li {
+			text-align: left;
+		}
+
+		&.informative {
+			margin-left: 16px;
+			list-style: outside square;
+			margin-bottom: 16px;
+
+			li {
+				margin-bottom: 8px;
+			}
+		}
 	}
 
 	// FIXME: talk overlay specific (style talk textarea like the editor)

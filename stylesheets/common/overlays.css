@@ -5,25 +5,6 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-.overlay ul {
-  text-align: left;
-  left: 0;
-  border: none;
-  z-index: 1;
-  position: relative;
-  opacity: 1;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.overlay ul.informative {
-  margin-left: 16px;
-  list-style: outside square;
-  margin-bottom: 16px;
-}
-.overlay ul.informative li {
-  margin-bottom: 8px;
-}
 html.overlay .mw-mf-overlay {
   display: block;
 }
@@ -69,8 +50,19 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
 .mw-mf-overlay .mw-mf-overlay-header {
   background-color: #F1F1F1;
 }
-.mw-mf-overlay li {
+.mw-mf-overlay ul {
+  list-style: none;
+}
+.mw-mf-overlay ul li {
   text-align: left;
+}
+.mw-mf-overlay ul.informative {
+  margin-left: 16px;
+  list-style: outside square;
+  margin-bottom: 16px;
+}
+.mw-mf-overlay ul.informative li {
+  margin-bottom: 8px;
 }
 .mw-mf-overlay div.content textarea {
   display: block;
