@@ -1,18 +1,5 @@
 <?php
 class MobileTemplateBeta extends MobileTemplate {
-	protected function renderMainMenu( $data ) {
-		parent::renderMainMenu( $data );
-		?>
-		<ul class="hlist">
-		<?php
-		foreach( $this->getSiteLinks() as $key => $val ):
-			echo $this->makeListItem( $key, $val );
-		endforeach;
-		?>
-		</ul>
-		<?php
-	}
-
 	protected function renderContentWrapper( $data ) {
 		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		?>

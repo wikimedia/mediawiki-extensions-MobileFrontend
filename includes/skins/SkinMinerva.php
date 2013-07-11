@@ -75,8 +75,16 @@ class SkinMinerva extends SkinTemplate {
 			$banners[] = '<div id="siteNotice"></div>';
 		}
 		$tpl->set( 'banners', $banners );
-		// site_urls is used on beta only
-		$tpl->set( 'site_urls', array() );
+		$tpl->set( 'site_urls', array(
+			array(
+				'href' => Title::newFromText( 'About', NS_PROJECT )->getLocalUrl(),
+				'text'=> $this->msg( 'mobile-frontend-main-menu-about' )->text(),
+			),
+			array(
+				'href' => Title::newFromText( 'General_disclaimer', NS_PROJECT )->getLocalUrl(),
+				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->text(),
+			),
+		) );
 		$tpl->set( 'page_actions', array() );
 	}
 

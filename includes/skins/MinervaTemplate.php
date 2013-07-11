@@ -133,6 +133,13 @@ class MinervaTemplate extends BaseTemplate {
 		endforeach;
 		?>
 		</ul>
+		<ul class="hlist">
+		<?php
+		foreach( $this->getSiteLinks() as $key => $val ):
+			echo $this->makeListItem( $key, $val );
+		endforeach;
+		?>
+		</ul>
 		<?php
 	}
 

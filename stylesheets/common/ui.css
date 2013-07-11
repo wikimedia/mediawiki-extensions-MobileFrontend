@@ -212,15 +212,14 @@ input[type=submit] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.beta #mw-mf-page-left ul:first-child,
-.alpha #mw-mf-page-left ul:first-child {
-  border-bottom: 12px solid #252525;
-}
 #mw-mf-page-left ul {
   background-color: #4e4e4e;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+#mw-mf-page-left ul:first-child {
+  border-bottom: 12px solid #252525;
 }
 #mw-mf-page-left ul:first-child li:first-child a {
   border-top: none;
