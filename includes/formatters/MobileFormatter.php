@@ -230,8 +230,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 	protected function parseMainPage( DOMDocument $mainPage ) {
 		wfProfileIn( __METHOD__ );
 
-		// FIXME: Move to ZeroRatedMobileAccess extension
-		$zeroLandingPage = $mainPage->getElementById( 'zero-landing-page' );
 		$featuredArticle = $mainPage->getElementById( 'mp-tfa' );
 		$newsItems = $mainPage->getElementById( 'mp-itn' );
 
@@ -275,11 +273,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 		}
 		if ( $content->childNodes->length == 0 ) {
 			$content = null;
-		} else {
-			// FIXME: Move to ZeroRatedMobileAccess extension
-			if ( $zeroLandingPage ) {
-				$content->appendChild( $zeroLandingPage );
-			}
 		}
 
 		wfProfileOut( __METHOD__ );
