@@ -94,6 +94,9 @@
   width: 75%;
   border: none;
 }
+#mf-notification.toast.landmark {
+  color: #F7F737;
+}
 #mf-notification.toast.locked button {
   display: block;
   top: 0.8em;
