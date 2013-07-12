@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49c305cb_b0294d8d",
+        "filename": "javascripts/common/historylib.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-12T20:54:12Z",
+      "side": 1,
+      "message": "I don\u0027t think conversion to boolean is needed here (assuming this isn\u0027t a typo of \u0027!\u0027).",
+      "revId": "f5a1344583ed32bfe0bf9342ad70d754a08af4a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
