@@ -7,7 +7,7 @@
 		template: M.template.get( 'overlays/learnMore' )
 	} );
 
-	M.define( 'uploads/LearnMoreOverlay', LearnMoreOverlay );
+	M.define( 'modules/uploads/LearnMoreOverlay', LearnMoreOverlay );
 
 }( mw.mobileFrontend ) );
 

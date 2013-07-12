@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	var popup = M.require( 'notifications' ),
 		Overlay = M.require( 'Overlay' ),
-		LearnMoreOverlay = M.require( 'uploads/LearnMoreOverlay' ),
+		LearnMoreOverlay = M.require( 'modules/uploads/LearnMoreOverlay' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
 		PhotoUploaderPreview;
 
@@ -83,6 +83,6 @@
 		}
 	} );
 
-	M.define( 'uploads/PhotoUploaderPreview', PhotoUploaderPreview );
+	M.define( 'modules/uploads/PhotoUploaderPreview', PhotoUploaderPreview );
 
 }( mw.mobileFrontend, jQuery ) );

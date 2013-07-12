@@ -45,6 +45,6 @@
 		}
 	} );
 
-	M.define( 'uploads/PhotoUploadProgress', PhotoUploadProgress );
+	M.define( 'modules/uploads/PhotoUploadProgress', PhotoUploadProgress );
 
 }( mw.mobileFrontend ) );

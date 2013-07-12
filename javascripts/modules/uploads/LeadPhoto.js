@@ -10,6 +10,6 @@
 		}
 	} );
 
-	M.define( 'uploads/LeadPhoto', LeadPhoto );
+	M.define( 'modules/uploads/LeadPhoto', LeadPhoto );
 
 }( mw.mobileFrontend ) );

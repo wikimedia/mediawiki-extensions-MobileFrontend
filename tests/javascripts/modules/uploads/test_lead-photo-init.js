@@ -1,6 +1,6 @@
 ( function ( $, M ) {
 
-var photo = M.require( '_leadphoto' ),
+var photo = M.require( 'modules/uploads/_leadphoto' ),
 	_wgMFLeadPhotoUploadCssSelector,
 	articles = [
 		// blank #content_0

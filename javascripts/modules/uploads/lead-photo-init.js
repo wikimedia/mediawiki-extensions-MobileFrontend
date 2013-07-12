@@ -4,10 +4,10 @@
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
 		showCta = mw.config.get( 'wgMFEnablePhotoUploadCTA' ) || funnel === 'nearby',
 		popup = M.require( 'notifications' ),
-		PhotoUploaderPageActionButton = M.require( 'uploads/PhotoUploaderPageActionButton' ),
-		PhotoUploaderButton = M.require( 'uploads/PhotoUploaderButton' ),
+		PhotoUploaderPageActionButton = M.require( 'modules/uploads/PhotoUploaderPageActionButton' ),
+		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 		isSupported = PhotoUploaderButton.isSupported,
-		LeadPhoto = M.require( 'uploads/LeadPhoto' );
+		LeadPhoto = M.require( 'modules/uploads/LeadPhoto' );
 
 	function needsPhoto( $container ) {
 		var $content_0 = $container.find( '#content_0' );
@@ -94,7 +94,7 @@
 		makeDisabledButton( 'mobile-frontend-photo-upload-unavailable' );
 	}
 
-	M.define( '_leadphoto', {
+	M.define( 'modules/uploads/_leadphoto', {
 		needsPhoto: needsPhoto
 	} );
 

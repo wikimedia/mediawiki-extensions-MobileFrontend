@@ -2,10 +2,10 @@
 	var View = M.require( 'view' ),
 		popup = M.require( 'notifications' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
-		NagOverlay = M.require( 'uploads/NagOverlay' ),
-		PhotoApi = M.require( 'uploads/PhotoApi' ),
-		PhotoUploadProgress = M.require( 'uploads/PhotoUploadProgress' ),
-		PhotoUploaderPreview = M.require( 'uploads/PhotoUploaderPreview' ),
+		NagOverlay = M.require( 'modules/uploads/NagOverlay' ),
+		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
+		PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' ),
+		PhotoUploaderPreview = M.require( 'modules/uploads/PhotoUploaderPreview' ),
 		PhotoUploader,
 		PhotoUploaderButton,
 		PhotoUploaderPageActionButton;
@@ -262,7 +262,7 @@
 	PhotoUploaderButton.isSupported = PhotoUploaderPageActionButton.isSupported = isSupported();
 
 	// FIXME: should we allow more than one define() per file?
-	M.define( 'uploads/PhotoUploaderButton', PhotoUploaderButton );
-	M.define( 'uploads/PhotoUploaderPageActionButton', PhotoUploaderPageActionButton );
+	M.define( 'modules/uploads/PhotoUploaderButton', PhotoUploaderButton );
+	M.define( 'modules/uploads/PhotoUploaderPageActionButton', PhotoUploaderPageActionButton );
 
 }( mw.mobileFrontend, jQuery ) );

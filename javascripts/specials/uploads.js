@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 var
-	PhotoUploaderButton = M.require( 'uploads/PhotoUploaderButton' ),
+	PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
 	popup = M.require( 'notifications' ),
 	Api = M.require( 'api' ).Api,
 	View = M.require( 'view' ),

@@ -1,7 +1,7 @@
 ( function ( $, M ) {
 
-	var photo = M.require( '_photo' ),
-		PhotoApi = M.require( 'uploads/PhotoApi' );
+	var photo = M.require( 'modules/uploads/_photo' ),
+		PhotoApi = M.require( 'modules/uploads/PhotoApi' );
 
 	QUnit.module( 'MobileFrontend photo', {
 		setup: function() {
