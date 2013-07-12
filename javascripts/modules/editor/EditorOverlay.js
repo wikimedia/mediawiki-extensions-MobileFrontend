@@ -185,7 +185,7 @@
 		},
 
 		_save: function() {
-			var self = this;
+			var self = this, msg, className = 'toast landmark';
 
 			self.log( 'submit' );
 			this.$( '.save-bar' ).hide();
@@ -200,7 +200,13 @@
 					new Page( { title: title, el: $( '#content_wrapper' ) } );
 					M.router.navigate( '' );
 					self.hide();
-					popup.show( mw.msg( 'mobile-frontend-editor-success' ), 'toast' );
+					if ( mw.config.get( 'wgUserEditCount' ) === '0' ) {
+						msg = 'mobile-frontend-editor-success-landmark-1';
+					} else {
+						className = 'toast';
+						msg = 'mobile-frontend-editor-success';
+					}
+					popup.show( mw.msg( msg ), className );
 				} ).
 				fail( function( err ) {
 					var msg;

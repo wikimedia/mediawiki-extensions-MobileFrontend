@@ -254,6 +254,7 @@ $messages['en'] = array (
 	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
 	'mobile-frontend-editor-wait' => 'Saving edit, please wait.',
 	'mobile-frontend-editor-success' => 'Success! Your edit was saved.',
+	'mobile-frontend-editor-success-landmark-1' => 'Congratulations, you are now a {{SITENAME}} editor!',
 	'mobile-frontend-editor-error' => 'Error, edit not saved.',
 	'mobile-frontend-editor-error-conflict' => 'Error, another user has edited this page.',
 	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',
@@ -684,6 +685,7 @@ Should be consistent with the following message:
 	'mobile-frontend-editor-success' => 'Text that displays when a page edit has been successfully saved.
 
 Used as "toast" message.',
+	'mobile-frontend-editor-success-landmark-1' => 'Special save confirmation message shown to users on their 1st edit.',
 	'mobile-frontend-editor-error' => 'Text that displays when there have been errors when saving a page edit.
 
 Used as "toast" error message.',

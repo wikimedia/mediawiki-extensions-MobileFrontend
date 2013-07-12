@@ -222,6 +222,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-cancel-confirm',
 			'mobile-frontend-editor-wait',
 			'mobile-frontend-editor-success',
+			'mobile-frontend-editor-success-landmark-1' => array( 'parse' ),
 			'mobile-frontend-editor-refresh',
 			'mobile-frontend-editor-error',
 			'mobile-frontend-editor-error-conflict',
