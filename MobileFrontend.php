@@ -100,7 +100,6 @@ $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'MobileFrontendHooks::onSkinTem
 $wgHooks['BeforePageRedirect'][] = 'MobileFrontendHooks::onBeforePageRedirect';
 $wgHooks['ResourceLoaderTestModules'][] = 'MobileFrontendHooks::onResourceLoaderTestModules';
 $wgHooks['GetCacheVaryCookies'][] = 'MobileFrontendHooks::onGetCacheVaryCookies';
-$wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::onResourceLoaderRegisterModules';
 $wgHooks['ResourceLoaderGetConfigVars'][] = 'MobileFrontendHooks::onResourceLoaderGetConfigVars';
 $wgHooks['SpecialPage_initList'][] = 'MobileFrontendHooks::onSpecialPage_initList';
 $wgHooks['ListDefinedTags'][] = 'MobileFrontendHooks::onListDefinedTags';
@@ -279,14 +278,6 @@ $wgMFStopRedirectCookieHost = null;
  * @var bool
  */
 $wgMFEnableDesktopResources = false;
-
-/**
- * Log events to a (currently Wikimedia-specific) logging endpoint in beta mode.
- * When off, events will still log to local console.
- *
- * Defaults to false.
- */
-$wgMFLogEvents = false;
 
 /**
  * Whether to append ™ to the sitename in page footer, or

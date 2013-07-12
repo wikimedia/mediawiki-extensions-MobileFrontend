@@ -224,24 +224,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ResourceLoaderRegisterModules hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
-	 *
-	 * @param ResourceLoader $resourceLoader
-	 * @return bool
-	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		global $wgMFLogEvents, $wgResourceModules;
-
-		// disable event logging module on mobile
-		if ( !$wgMFLogEvents && isset( $wgResourceModules['ext.eventLogging'] ) ) {
-			$wgResourceModules['ext.eventLogging']['targets'] = array( 'desktop' );
-		}
-
-		return true;
-	}
-
-	/**
 	 * ResourceLoaderGetConfigVars hook handler
 	 * This should be used for variables which vary with the html
 	 * and for variables this should work cross skin
