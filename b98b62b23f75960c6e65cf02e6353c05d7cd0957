@@ -34,6 +34,24 @@
       "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_d5483b8e",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-12T20:30:55Z",
+      "side": 1,
+      "message": "We should use the existing core class \u0027new\u0027 rather than creating a new class with the same meaning (\u0027non-existent\u0027).",
+      "parentUuid": "49c305cb_3af7fed3",
+      "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
