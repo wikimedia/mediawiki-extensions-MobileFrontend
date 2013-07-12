@@ -52,6 +52,40 @@
       "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_f5473778",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-12T20:38:51Z",
+      "side": 1,
+      "message": "All the other skins use \u0027new\u0027 for non-existent links, so we should probably use that as well to be consistent. We need to define \u0027new\u0027 as a top-level class anyway since we\u0027re promoting editing to stable.",
+      "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_555d6b44",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-12T20:38:51Z",
+      "side": 1,
+      "message": "Normally, non-existent links are styled as color: #BA0000 on wikipedia. I\u0027m not sure anyone would recognize what a page link in italics means.",
+      "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
