@@ -97,10 +97,7 @@
 		},
 
 		hide: function() {
-			if ( this.previewClicked ) {
-				this.previewClicked = false;
-				return this._super();
-			} else if ( !this.api.getStagedCount() || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
+			if ( !this.api.getStagedCount() || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
 				return this._super();
 			} else {
 				return false;
