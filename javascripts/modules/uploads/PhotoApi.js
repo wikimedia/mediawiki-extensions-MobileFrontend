@@ -230,8 +230,8 @@
 		}
 	} );
 
-	M.define( 'uploads/PhotoApi', PhotoApi );
-	M.define( '_photo', {
+	M.define( 'modules/uploads/PhotoApi', PhotoApi );
+	M.define( 'modules/uploads/_photo', {
 		generateFileName: generateFileName,
 		trimUtf8String: trimUtf8String
 	} );

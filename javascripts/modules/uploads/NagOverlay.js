@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 	var Overlay = M.require( 'Overlay' ),
-		LearnMoreOverlay = M.require( 'uploads/LearnMoreOverlay' ),
+		LearnMoreOverlay = M.require( 'modules/uploads/LearnMoreOverlay' ),
 		NagOverlay;
 
 	NagOverlay = Overlay.extend( {
@@ -64,6 +64,6 @@
 		}
 	} );
 
-	M.define( 'uploads/NagOverlay', NagOverlay );
+	M.define( 'modules/uploads/NagOverlay', NagOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -1,6 +1,6 @@
 ( function ( $, M ) {
 
-	var PhotoUploadProgress = M.require( 'uploads/PhotoUploadProgress' );
+	var PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' );
 
 	QUnit.module( 'MobileFrontend PhotoUploadProgress', {
 		setup: function() {
