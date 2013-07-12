@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49c305cb_506bb9b8",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-12T21:17:20Z",
+      "side": 1,
+      "message": "These don\u0027t need to be escaped since they are passed to BaseTemplate:makeLink() which escapes the text.",
+      "revId": "2163449734567a102ed514e32e45367eaba936e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_3068bdba",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-12T21:17:20Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "2163449734567a102ed514e32e45367eaba936e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
