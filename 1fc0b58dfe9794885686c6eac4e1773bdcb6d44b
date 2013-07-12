@@ -16,6 +16,24 @@
       "revId": "1fc0b58dfe9794885686c6eac4e1773bdcb6d44b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_d03329c2",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-12T21:54:47Z",
+      "side": 1,
+      "message": "JSHint found it too. For some reason only the one that runs on Jenkins...",
+      "parentUuid": "49c305cb_90c1b185",
+      "revId": "1fc0b58dfe9794885686c6eac4e1773bdcb6d44b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
