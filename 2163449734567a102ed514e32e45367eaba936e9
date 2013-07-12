@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "49c305cb_f07f4561",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-12T21:23:31Z",
+      "side": 1,
+      "message": "Typically, you should only validate input and not escape until you are generating output. Otherwise, you end up with double-escaping.",
+      "parentUuid": "49c305cb_506bb9b8",
+      "revId": "2163449734567a102ed514e32e45367eaba936e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49c305cb_3068bdba",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 2
