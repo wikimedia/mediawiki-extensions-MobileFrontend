@@ -86,6 +86,7 @@ body.no-margins #content_wrapper > .content {
 }
 #content_wrapper {
   position: relative;
+  min-height: 100px;
 }
 #content_wrapper .section h3:first-child {
   margin-top: 0;

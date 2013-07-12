@@ -15,7 +15,8 @@
 #mf-notification,
 .drawer {
 	bottom: 0;
-	width: 100%;
+	left: 0;
+	right: 0;
 	background-color: @searchBoxColorTo;
 	box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
 	word-wrap: break-word;
@@ -56,15 +57,10 @@
 
 #mf-notification {
 	font-size: 0.9em;
+	padding: 16px 38px 18px 22px;  /* 38px is 22px padding + close button icon 16px */
 
 	&.noButton button {
 		display: none;
-	}
-
-	&.loading {
-		background-position: @contentMarginLeft 50%;
-		.background-size( 32px, auto );
-		padding: 0 0 0 @contentMarginLeft + 30px;
 	}
 
 	&.toast {
@@ -110,7 +106,6 @@
 
 	> div {
 		position: relative;
-		padding: 16px 38px 18px 22px;  /* 38px is 22px padding + close button icon 16px */
 	}
 
 	.mw-cite-backlink {

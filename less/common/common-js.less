@@ -1,8 +1,8 @@
 @import "../mf-mixins.less";
 
 .loading {
-	background-image: url(images/ajax-loader.gif);
-	min-height: 56px;
+	// needs !important to override images from more specific rules
+	background-image: url(images/ajax-loader.gif) !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	.background-size( 32px, auto );
@@ -11,6 +11,11 @@
 		padding-top: 48px;
 		text-align: center;
 		background-position: 50% 0;
+	}
+
+	&#mf-notification, &.buttonBar {
+		background-position: 16px 50%;
+		padding-left: 60px;
 	}
 }
 

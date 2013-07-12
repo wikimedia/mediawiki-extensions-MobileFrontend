@@ -135,7 +135,7 @@
 	function onTalkClick( ev ) {
 		var $talk = $( this ), talkPage = $talk.data( 'title' );
 		// FIXME: this currently gives an indication something async is happening. We can do better.
-		$talk.css( 'opacity', 0.2 );
+		$talk.addClass( 'loading' );
 		ev.preventDefault();
 
 		M.history.retrievePage( talkPage ).fail( function( resp ) {
@@ -143,12 +143,11 @@
 				renderTalkOverlay( {
 					sections: [], title: talkPage
 				} );
-			} else {
-				$talk.css( 'opacity', '' );
 			}
+			$talk.removeClass( 'loading' );
 		} ).done( function( pageData ) {
 			renderTalkOverlay( pageData );
-			$talk.css( 'opacity', '' );
+			$talk.removeClass( 'loading' );
 		} );
 	}
 
