@@ -263,7 +263,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 		$endgroup = implode( '|', $endchars );
 		$end = "(?:$endgroup)";
 		$sentence = ".+?$end+";
-		$regexp = "/^($sentence){{$requestedSentenceCount}}/u";
+		$regexp = "/^($sentence){1,{$requestedSentenceCount}}/u";
 		$matches = array();
 		$res = preg_match( $regexp, $text, $matches );
 		if( $res ) {
@@ -332,6 +332,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 			'sentences' => array(
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 1,
+				ApiBase::PARAM_MAX => 10,
 			),
 			'limit' => array(
 				ApiBase::PARAM_DFLT => 1,
