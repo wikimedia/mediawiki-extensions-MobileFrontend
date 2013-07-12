@@ -16,6 +16,24 @@
       "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_3af7fed3",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-12T17:27:08Z",
+      "side": 1,
+      "message": "Juliusz, Kaldari and I discussed in person that we don\u0027t want to prefix classes in mobile. We want to break out of this habit and encourage more reuse of default skin classes and instead resort to nesting. We will however get into the habit of using the mw- prefix on ID\u0027s in future HTML.\n\nI will formalise these notes and post to a mobile-l when they are more comprehensible but here is the discussion so far: http://etherpad.wikimedia.org/WsWWUiRllf",
+      "parentUuid": "49c305cb_eed13055",
+      "revId": "b98b62b23f75960c6e65cf02e6353c05d7cd0957",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
