@@ -69,6 +69,11 @@ class SkinMobileBeta extends SkinMobile {
 		$this->prepareUserButton( $tpl );
 	}
 
+	public function getSkinConfigVariables() {
+		$vars = parent::getSkinConfigVariables();
+		$vars['wgMFEnablePhotoUploadCTA'] = true;
+		return $vars;
+	}
 	/**
 	 * Prepares the user button.
 	 * @param $tpl BaseTemplate

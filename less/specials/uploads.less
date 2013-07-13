@@ -9,11 +9,6 @@
 	@buttonPadding: 4px;
 
 	position: relative;
-	background-color: #006398;
-	color: white;
-	height: 100%;
-	padding-left: @contentMarginRight;
-	padding-right: @contentMarginRight;
 	.box-sizing( border-box );
 
 	> button {
@@ -44,27 +39,8 @@
 		}
 	}
 
-	button.cancel {
-		color: #006398;
-		padding: 12px;
-		border: none;
-		background-color: #F0F0F0;
-		font-weight: bold;
-		border-radius: 0;
-	}
-
-	@imageHeight: 180px;
-	.page {
-		padding: @imageHeight 0 0 0;
-		text-align: center;
-		background-size: auto @imageHeight;
-		background-repeat: no-repeat;
-		background-position: center 0;
-		top: 10px;
+	.slide {
 		left: 100%;
-		bottom: 0;
-		width: 100%;
-		position: absolute;
 		visibility: hidden;
 
 		&.active {
@@ -82,21 +58,13 @@
 			margin: 0 26px 16px;
 		}
 
-		p {
-			font-size: 0.9em;
-			margin: 0 26px;
-		}
-
+		// FIXME: Make page-1 and page-2 more generic and reusable?
 		&.page-1 {
 			background-image: url(images/uploads/SplashScreen1.png);
 		}
 
 		&.page-2 {
 			background-image: url(images/uploads/SplashScreen2.png);
-		}
-
-		&.page-3 {
-			background-image: url(images/uploads/SplashScreen3.png);
 		}
 	}
 }

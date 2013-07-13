@@ -5,7 +5,10 @@ html.overlay {
 		display: block;
 	}
 
-	#mw-mf-viewport {
+	#mw-mf-page-center,
+	#content_wrapper {
+		// without this when overlay is open the content is visible underneath the overlay
+		height: 100%;
 		overflow: hidden;
 	}
 
@@ -25,7 +28,7 @@ html[dir="rtl"] {
 	position: absolute;
 	top: 0;
 	left: 0;
-	right: 0;
+	width: 100%;
 	// use height instead of bottom 0 so that overlay expands when there's
 	// more content, don't use min-height because of
 	// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
@@ -86,12 +89,7 @@ html[dir="rtl"] {
 		}
 	}
 
-	.buttonBar {
-		bottom: 0;
-		left: 0;
-		right: 0;
-		border-top: 1px solid #ccc;
-		background-color: #f3f3f3;
+	.button-bar-centered {
 		text-align: center;
 		padding: .7em 1em;
 		color: #707070;
@@ -99,6 +97,14 @@ html[dir="rtl"] {
 		button {
 			margin: 0 .3em;
 		}
+	}
+
+	.buttonBar {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-top: 1px solid #ccc;
+		background-color: #f3f3f3;
 
 		p {
 			padding: .7em 0;

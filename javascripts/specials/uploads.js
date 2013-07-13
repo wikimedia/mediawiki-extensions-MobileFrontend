@@ -172,7 +172,7 @@ var
 						{
 							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-header' ),
 							cancel: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
-							className: 'page-3', id: 3
+							className: 'slide-image', id: 3
 						}
 					]
 				} ).show();

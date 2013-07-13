@@ -206,6 +206,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'talkSection',
 			// page.js
 			'page',
+			'pageActionTutorial',
 			'languageSection',
 		),
 		'messages' => array(
@@ -249,6 +250,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/application-beta.js',
 			'javascripts/common/history-beta.js',
 			'javascripts/views/page.js',
+			'javascripts/common/ContentOverlay.js',
 		),
 		'messages' => array(
 			// page.js and talk.js (alpha)
@@ -279,6 +281,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/user.js',
 			'javascripts/modules/search-pageimages.js',
 			'javascripts/modules/languages-preferred.js',
+			'javascripts/modules/tutorials/PageActionOverlay.js',
+			'javascripts/modules/tutorials/newbie.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(
@@ -287,6 +291,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for mf-toggle-dynamic.js
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
+
+			// newbie.js
+			'mobile-frontend-lead-image-tutorial-summary',
 
 			// for talk.js
 			'mobile-frontend-talk-explained',
@@ -380,6 +387,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/modules/mf-cleanuptemplates.css',
 			'stylesheets/modules/mf-watchstar.css',
 			'stylesheets/modules/mf-photo.css',
+			'stylesheets/modules/tutorials.css',
 		),
 		'position' => 'top',
 	),
@@ -419,7 +427,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-drawer-cancel',
 			'mobile-frontend-overlay-escape',
 
-			// LearnMoreOverlay.js
+			// LearnMoreOverlay.js, newbie.js
 			'mobile-frontend-photo-ownership-confirm',
 
 			// PhotoApi.js
