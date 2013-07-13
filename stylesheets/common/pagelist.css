@@ -50,7 +50,7 @@ ul.page-list li .listThumb {
 ul.page-list li .title {
   display: block;
   position: relative;
-  padding: 0 23px 15px 23px;
+  padding: 0 16px 15px 16px;
   margin: -1px 0;
   /* FIXME: remove if we reset text-decoration in common styles */
 

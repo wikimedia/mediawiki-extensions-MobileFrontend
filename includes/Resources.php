@@ -113,13 +113,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/common/overlays.css',
 			'stylesheets/common/drawer.css',
 			'stylesheets/common/mf-hacks.css',
+			'stylesheets/common/pageactions.css',
 		),
 		'position' => 'top',
 	),
 
 	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/common/pageactions.css',
 			'stylesheets/common/user.css',
 		),
 		'position' => 'top',
@@ -144,6 +144,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/eventemitter.js',
 			'javascripts/common/Router.js',
 			'javascripts/common/mf-application.js',
+			'javascripts/common/mf-api.js',
 			'javascripts/common/history.js',
 			'javascripts/common/mf-settings.js',
 			'javascripts/modules/mf-stop-mobile-redirect.js',
@@ -167,50 +168,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-nag-learn-more-1' => array( 'parse' ),
 			'mobile-frontend-photo-nag-learn-more-2' => array( 'parse' ),
 			'mobile-frontend-photo-nag-learn-more-3' => array( 'parse' ),
-		),
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
-		'templates' => array(
-			'wikitext/commons-upload',
-			// LanguageOverlay.js
-			'overlays/languages',
-			// leadphoto.js
-			'leadPhoto',
-			'overlay',
-			'overlays/cleanup',
-			'overlays/learnMore',
-			// search-2.js
-			'articleList',
-			'overlays/search/search',
-			// PhotoUploader.js
-			// For new page action menu
-			'photoUploadAction',
-			'photoUploader',
-			// PhotoUploaderPreview.js
-			'photoUploadPreview',
-			// NagOverlay.js
-			'photoNag',
-			'ctaDrawer',
-		),
-		'class' => 'MFResourceLoaderModule',
-	),
-
-	'mobile.beta.plumbing' => array(
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
-		'templates' => array(
-			'overlays/editor',
-			'section',
-			// talk.js
-			'overlays/talk',
-			'overlays/talkSectionAdd',
-			'talkSection',
 			// page.js
-			'page',
-			'pageActionTutorial',
-			'languageSection',
-		),
-		'messages' => array(
+			'mobile-frontend-talk-overlay-header',
+			'mobile-frontend-language-article-heading',
 			// editor.js
 			'mobile-frontend-editor-disabled',
 			'mobile-frontend-editor-cta',
@@ -235,10 +195,49 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error-preview',
 			// modules/editor/EditorOverlay.js and modules/talk.js
 			'mobile-frontend-editor-save',
+		),
+		'localBasePath' => $localBasePath,
+		'localTemplateBasePath' => $localBasePath . '/templates',
+		'templates' => array(
+			'overlays/editor',
+			'section',
+			'wikitext/commons-upload',
+			// LanguageOverlay.js
+			'overlays/languages',
+			// leadphoto.js
+			'leadPhoto',
+			'overlay',
+			'overlays/cleanup',
+			'overlays/learnMore',
+			// search-2.js
+			'articleList',
+			'overlays/search/search',
 			// page.js
-			'mobile-frontend-talk-overlay-header',
-			// history-beta.js
-			'mobile-frontend-language-article-heading',
+			'page',
+			'languageSection',
+			// PhotoUploader.js
+			// For new page action menu
+			'photoUploadAction',
+			'photoUploader',
+			// PhotoUploaderPreview.js
+			'photoUploadPreview',
+			// NagOverlay.js
+			'photoNag',
+			'ctaDrawer',
+		),
+		'class' => 'MFResourceLoaderModule',
+	),
+
+	'mobile.beta.plumbing' => array(
+		'localBasePath' => $localBasePath,
+		'localTemplateBasePath' => $localBasePath . '/templates',
+		'templates' => array(
+			// talk.js
+			'overlays/talk',
+			'overlays/talkSectionAdd',
+			'talkSection',
+			// page.js
+			'pageActionTutorial',
 		),
 		'class' => 'MFResourceLoaderModule',
 	),
@@ -249,14 +248,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 		),
 		'scripts' => array(
-			'javascripts/common/application-beta.js',
-			'javascripts/common/history-beta.js',
-			'javascripts/views/page.js',
 			'javascripts/common/ContentOverlay.js',
 		),
 		'messages' => array(
-			// page.js and talk.js (alpha)
-			'mobile-frontend-talk-overlay-header',
 			// LanguageOverlay.js
 			'mobile-frontend-language-header',
 			'mobile-frontend-language-site-choose',
@@ -270,13 +264,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta.common',
 		),
 		'styles' => array(
-			'stylesheets/modules/editor.css',
 			'stylesheets/modules/talk.css',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/EditorApi.js',
-			'javascripts/modules/editor/EditorOverlay.js',
-			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/TalkSectionOverlay.js',
 			'javascripts/modules/talk.js',
@@ -288,8 +278,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'position' => 'bottom',
 		'messages' => array(
-			'pagetitle',
-
 			// for mf-toggle-dynamic.js
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
@@ -350,9 +338,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for mf-table.js
 			'mobile-frontend-table',
 
-			// history-alpha.js
-			'mobile-frontend-language-article-heading',
-
 			// nearbypages.js
 			'mobile-frontend-nearby-to-page',
 		),
@@ -387,6 +372,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/modules/mf-watchstar.css',
 			'stylesheets/modules/mf-photo.css',
 			'stylesheets/modules/tutorials.css',
+			'stylesheets/modules/editor.css',
 		),
 		'position' => 'top',
 	),
@@ -400,7 +386,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.jqueryMsg',
 		),
 		'scripts' => array(
-			'javascripts/common/mf-api.js',
 			'javascripts/common/mf-view.js',
 			'javascripts/common/Drawer.js',
 			'javascripts/common/CtaDrawer.js',
@@ -408,6 +393,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/widgets/progress-bar.js',
 			'javascripts/common/mf-navigation.js',
 			'javascripts/common/mf-notification.js',
+			'javascripts/views/page.js',
 			// Upload specific code
 			'javascripts/modules/uploads/LearnMoreOverlay.js',
 			'javascripts/modules/uploads/PhotoApi.js',
@@ -471,6 +457,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.styles',
 		),
 		'scripts' => array(
+			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/EditorOverlay.js',
+			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/mf-cleanuptemplates.js',
 			'javascripts/modules/languages.js',

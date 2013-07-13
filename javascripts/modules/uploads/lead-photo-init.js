@@ -38,7 +38,6 @@
 			isEditable = mw.config.get( 'wgIsPageEditable' ),
 			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user ),
 			$page = $( '#content' ),
-			$pageHeading = $page.find( 'h1' ).first(),
 			optionsPhotoUploader,
 			photoUploader;
 
@@ -54,17 +53,12 @@
 		optionsPhotoUploader = {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
+			el: '#ca-upload',
 			pageTitle: mw.config.get( 'wgTitle' ),
 			funnel: funnel
 		};
 
-		if ( $( '#ca-upload' ).length ) {
-			optionsPhotoUploader.el = '#ca-upload';
-			photoUploader = new PhotoUploaderPageActionButton( optionsPhotoUploader );
-		// FIXME: Remove else clause when page actions go to stable
-		} else {
-			photoUploader = new PhotoUploaderButton( optionsPhotoUploader ).insertAfter( $pageHeading );
-		}
+		photoUploader = new PhotoUploaderPageActionButton( optionsPhotoUploader );
 		photoUploader.on( 'start', function() {
 				photoUploader.$el.hide();
 			} ).

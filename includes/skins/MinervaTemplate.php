@@ -102,12 +102,14 @@ class MinervaTemplate extends BaseTemplate {
 		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		?>
 		<div class='show' id='content_wrapper'>
+			<?php
+				if ( !$isSpecialPage ) {
+					echo $data['prebodytext'];
+					$this->renderPageActions( $data );
+				}
+			?>
 			<div id="content" class="content">
 				<?php
-					if ( !$isSpecialPage ) {
-						echo $data['prebodytext'];
-						$this->renderPageActions( $data );
-					}
 					echo $data[ 'bodytext' ];
 					$this->renderLanguages();
 					$this->renderHistoryLink( $data );

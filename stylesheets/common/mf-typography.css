@@ -79,7 +79,7 @@ sup {
   font-size: 0.75em;
 }
 .content {
-  margin: 9pt 23px 0 23px;
+  margin: 9pt 16px 0 16px;
 }
 body.no-margins #content_wrapper > .content {
   margin: 0;

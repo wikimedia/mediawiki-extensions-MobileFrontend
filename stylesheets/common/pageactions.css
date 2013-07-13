@@ -5,17 +5,18 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
+.stable #ca-talk,
 .client-nojs #ca-watch.cta,
 #ca-talk.selected {
   display: none;
 }
 #section_0 {
-  margin: 10px 23px 0 23px;
+  margin: 14px 16px 0 16px;
   padding-bottom: 9px;
   border-bottom: dotted 1px #CACACA;
 }
 #page-actions {
-  padding: 8px 23px 8px 15px;
+  padding: 8px 16px 8px 8px;
   border-bottom: solid 1px #CACACA;
   height: 30px;
 }

@@ -263,6 +263,17 @@
 		return sessionId;
 	}
 
+	function deParam( qs ) {
+		var params = {};
+		if ( qs ) {
+			qs.split( '&' ).forEach( function( p ) {
+				p = p.split( '=' );
+				params[ p[0] ] = p[1];
+			} );
+		}
+		return params;
+	}
+
 	$( init );
 
 	$.extend( M, {
@@ -282,7 +293,8 @@
 		prettyEncodeTitle: prettyEncodeTitle,
 		template: template,
 		unlockViewport: unlockViewport,
-		router: new Router()
+		router: new Router(),
+		deParam: deParam
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
