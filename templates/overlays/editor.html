@@ -8,6 +8,9 @@
 	<div class="content"></div>
 </div>
 <div class="position-fixed buttonBar initial-bar">
+	{{#isNewEditor}}
+	<div><p>{{guiderMsg}}</p></div>
+	{{/isNewEditor}}
 	<button class="cancel inline">{{cancelMsg}}</button>
 	<button class="continue" disabled>{{continueMsg}}</button>
 </div>
