@@ -1,18 +1,32 @@
 ( function( M, $ ) {
-	var Router = M.require( 'Router' ), router;
+	var Router = M.require( 'Router' ), hashQueue = [], interval, router;
+
+	// we can't change hash too quickly because hashchange callbacks are async
+	// (don't fire immediately after the hash is changed) and all the callbacks
+	// would get the same (latest) hash; see setup and teardown too
+	function setHash( hash ) {
+		hashQueue.push( hash );
+	}
 
 	QUnit.module( 'MobileFrontend Router', {
 		setup: function() {
 			router = new Router();
+			interval = setInterval( function() {
+				var hash = hashQueue.pop();
+				if ( hash !== undefined ) {
+					window.location.hash = hash;
+				}
+			}, 10 );
 		},
 
 		teardown: function() {
 			// hashchange is async, we need to wait
 			$( window ).one( 'hashchange.test', function() {
 				$( window ).off( 'hashchange.test' );
+				clearInterval( interval );
 				QUnit.start();
 			} );
-			window.location.hash = '';
+			setHash( '' );
 			QUnit.stop();
 		}
 	} );
@@ -22,7 +36,7 @@
 			assert.ok( true, 'run callback for route' );
 			QUnit.start();
 		} );
-		window.location.hash = '#teststring';
+		setHash( '#teststring' );
 	} );
 
 	QUnit.asyncTest( '#route, RegExp', 1, function( assert ) {
@@ -30,8 +44,8 @@
 			assert.strictEqual( param, '123', 'run callback for route with correct params' );
 			QUnit.start();
 		} );
-		window.location.hash = '#testre-abc';
-		window.location.hash = '#testre-123';
+		setHash( '#testre-abc' );
+		setHash( '#testre-123' );
 	} );
 
 	QUnit.asyncTest( 'on route', 2, function( assert ) {
@@ -41,12 +55,12 @@
 
 		// try preventing second route (#testprevent)
 		router.one( 'route', function() {
+			setHash( '#testprevent' );
 			router.one( 'route', function( ev ) {
 				ev.preventDefault();
 			} );
 		} );
-		window.location.hash = '#initial';
-		window.location.hash = '#testprevent';
+		setHash( '#initial' );
 
 		$( window ).on( 'hashchange.test', function() {
 			++count;
