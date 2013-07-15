@@ -26,11 +26,11 @@ class SkinMobileBeta extends SkinMobile {
 		$tpl->set( 'site_urls', array(
 			array(
 				'href' => Title::newFromText( 'About', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-about' )->escaped(),
+				'text'=> $this->msg( 'mobile-frontend-main-menu-about' )->text(),
 			),
 			array(
 				'href' => Title::newFromText( 'General_disclaimer', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->escaped(),
+				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->text(),
 			),
 		) );
 
