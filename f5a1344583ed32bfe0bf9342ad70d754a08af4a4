@@ -16,6 +16,24 @@
       "revId": "f5a1344583ed32bfe0bf9342ad70d754a08af4a4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_5092929f",
+        "filename": "javascripts/common/historylib.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-15T18:51:10Z",
+      "side": 1,
+      "message": "probably not. Modernizer does this but then it is returning a boolean which we are not doing here.",
+      "parentUuid": "49c305cb_b0294d8d",
+      "revId": "f5a1344583ed32bfe0bf9342ad70d754a08af4a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
