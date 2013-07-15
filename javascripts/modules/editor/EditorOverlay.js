@@ -63,19 +63,8 @@
 					self.$( '.continue' ).prop( 'disabled', false );
 					self._resizeContent();
 				} );
-			this.$( '.continue' ).on( 'click', function() {
-				// log save button click
-				self.log( 'save' );
-				self._showPreview();
-				self.$( '.initial-bar' ).hide();
-				self.$( '.save-bar' ).show();
-			} );
-			this.$( '.back' ).on( 'click', function() {
-				self.$preview.hide();
-				self.$content.show();
-				self.$( '.save-bar' ).hide();
-				self.$( '.initial-bar' ).show();
-			} );
+			this.$( '.continue' ).on( 'click', $.proxy( this, '_showPreview' ) );
+			this.$( '.back' ).on( 'click', $.proxy( this, '_hidePreview' ) );
 			this.$( '.save' ).on( 'click', $.proxy( this, '_save' ) );
 			this.$( '.cancel' ).on( 'click', function() {
 				// log cancel attempt
@@ -112,6 +101,12 @@
 		_showPreview: function() {
 			var self = this;
 
+			// log save button click
+			this.log( 'save' );
+			this.$( '.initial-bar' ).hide();
+			this.$( '.save-bar' ).show();
+
+			this.scrollTop = $( 'body' ).scrollTop();
 			this.$content.hide();
 			this.$spinner.show();
 
@@ -155,6 +150,14 @@
 				self.$spinner.hide();
 				self.$preview.show();
 			} );
+		},
+
+		_hidePreview: function() {
+			this.$preview.hide();
+			this.$content.show();
+			window.scrollTo( 0, this.scrollTop );
+			this.$( '.save-bar' ).hide();
+			this.$( '.initial-bar' ).show();
 		},
 
 		_resizeContent: function() {
