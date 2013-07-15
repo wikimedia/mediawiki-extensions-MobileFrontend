@@ -170,7 +170,7 @@ a:hover {
 a.new,
 a.new:visited,
 a.new:hover {
-  color: red;
+  color: #cc0000;
 }
 img.thumbborder {
   border: 1px solid #cccccc;
