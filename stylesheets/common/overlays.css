@@ -80,10 +80,10 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   border-top: 1px solid #ccc;
   background-color: #f3f3f3;
   text-align: center;
-  padding: 0 1em;
+  padding: .7em 1em;
 }
 .mw-mf-overlay .buttonBar button {
-  margin: .7em .3em;
+  margin: 0 .3em;
 }
 .mw-mf-overlay .buttonBar p {
   margin: .7em 0;
@@ -95,7 +95,7 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   background: url('../modules/images/cc-by-sa.png') 0 2px no-repeat;
   background-size: auto 16px;
   padding: 0 0 0 55px;
-  margin-bottom: 1.2em;
+  margin-bottom: 0;
   color: #707070;
   font-size: .75em !important;
   min-height: 18px;

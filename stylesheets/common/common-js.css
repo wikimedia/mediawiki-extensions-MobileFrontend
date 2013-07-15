@@ -6,8 +6,7 @@
  * See README.mediawiki for details on installing.
  */
 .loading {
-  background-image: url(images/ajax-loader.gif);
-  min-height: 56px;
+  background-image: url(images/ajax-loader.gif) !important;
   background-repeat: no-repeat;
   background-position: center;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
@@ -20,6 +19,11 @@
   padding-top: 48px;
   text-align: center;
   background-position: 50% 0;
+}
+.loading#mf-notification,
+.loading.buttonBar {
+  background-position: 16px 50%;
+  padding-left: 60px;
 }
 .progress-bar {
   width: 100%;

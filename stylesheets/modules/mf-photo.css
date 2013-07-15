@@ -96,10 +96,9 @@
 .photo-nag .preview.loading {
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
-  -o-background-size: auto auto;
-  -webkit-background-size: auto auto;
-  background-size: auto auto;
-  background-position: 50% 50%;
+  -o-background-size: 32px auto;
+  -webkit-background-size: 32px auto;
+  background-size: 32px auto;
 }
 .photo-nag li {
   clear: both;

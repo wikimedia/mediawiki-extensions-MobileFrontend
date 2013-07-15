@@ -15,7 +15,8 @@
 #mf-notification,
 .drawer {
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   background-color: #f3f3f3;
   box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.35);
   word-wrap: break-word;
@@ -57,18 +58,12 @@
 }
 #mf-notification {
   font-size: 0.9em;
+  padding: 16px 38px 18px 22px;
+  /* 38px is 22px padding + close button icon 16px */
+
 }
 #mf-notification.noButton button {
   display: none;
-}
-#mf-notification.loading {
-  background-position: 23px 50%;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -o-background-size: 32px auto;
-  -webkit-background-size: 32px auto;
-  background-size: 32px auto;
-  padding: 0 0 0 53px;
 }
 #mf-notification.toast {
   left: 10%;
@@ -107,9 +102,6 @@
 }
 #mf-notification > div {
   position: relative;
-  padding: 16px 38px 18px 22px;
-  /* 38px is 22px padding + close button icon 16px */
-
 }
 #mf-notification .mw-cite-backlink {
   display: none;

@@ -95,6 +95,9 @@ body.no-margins {
 
 #content_wrapper {
 	position: relative;
+	// make sure that the spinner is visible on lazy loading
+	// (room for spinner + margins)
+	min-height: 100px;
 
 	.section {
 		h3:first-child {
