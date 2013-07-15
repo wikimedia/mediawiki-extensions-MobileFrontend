@@ -107,6 +107,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/common/mf-typography.css',
 			'stylesheets/common/mf-footer.css',
 			'stylesheets/modules/mf-toggle.css',
+			'stylesheets/common/pagelist.css',
 			// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
 			'stylesheets/common/mf-navigation.css',
 			'stylesheets/common/overlays.css',
@@ -367,9 +368,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.stable.styles' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.pagelist.styles',
-		),
 		'styles' => array(
 			'stylesheets/common/common-js.css',
 			'stylesheets/modules/languages.css',
@@ -454,12 +452,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-language-header',
 			'mobile-frontend-language-site-choose',
 			'mobile-frontend-language-footer',
-		),
-	),
-
-	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'stylesheets/common/pagelist.css',
 		),
 	),
 
@@ -593,7 +585,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/watchlist.css',
 			'stylesheets/specials/nearby.css',
 		),
 	),
@@ -604,7 +595,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.nearby.styles',
 			'mobile.nearby.plumbing',
 			'jquery.json',
-			'mobile.pagelist.styles',
 		),
 		'messages' => array(
 			// NearbyApi.js
@@ -660,7 +650,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.watchlist.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/common/pagelist.css',
 			'stylesheets/specials/watchlist.css',
 		),
 	),
