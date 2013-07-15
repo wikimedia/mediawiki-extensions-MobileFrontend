@@ -253,6 +253,7 @@ $messages['en'] = array (
 	'mobile-frontend-editor-summary-placeholder' => 'Tell us what you changed (optional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
 	'mobile-frontend-editor-wait' => 'Saving edit, please wait.',
+	'mobile-frontend-editor-guider' => '"{{int:mobile-frontend-editor-continue}}" will allow you to preview and save.',
 	'mobile-frontend-editor-success' => 'Success! Your edit was saved.',
 	'mobile-frontend-editor-success-landmark-1' => 'Congratulations, you are now a {{SITENAME}} editor!',
 	'mobile-frontend-editor-error' => 'Error, edit not saved.',
@@ -685,6 +686,7 @@ See also:
 	'mobile-frontend-editor-summary-placeholder' => 'A placeholder for the summary input field asking user what they changed (the field is optional).',
 	'mobile-frontend-editor-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved edit.',
 	'mobile-frontend-editor-wait' => 'Text that displays while a page edit is being saved.',
+	'mobile-frontend-editor-guider' => 'Text that explains to editors with no edits that taping "Continue" will allow them to see a preview and save.',
 	'mobile-frontend-editor-success' => 'Text that displays when a page edit has been successfully saved.
 
 Used as "toast" message.

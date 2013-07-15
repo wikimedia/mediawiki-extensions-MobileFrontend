@@ -18,7 +18,8 @@
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 			previewMsg: mw.msg( 'mobile-frontend-editor-preview-header' ),
-			waitMsg: mw.msg( 'mobile-frontend-editor-wait' )
+			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
+			guiderMsg: mw.msg( 'mobile-frontend-editor-guider' )
 		},
 		template: M.template.get( 'overlays/editor' ),
 		className: 'mw-mf-overlay editor-overlay',
@@ -48,6 +49,7 @@
 				isNew: options.isNew
 			} );
 			this.sectionId = options.sectionId;
+			this.isNewEditor = options.isNewEditor;
 			this._super( options );
 		},
 
@@ -203,7 +205,7 @@
 					new Page( { title: title, el: $( '#content_wrapper' ) } );
 					M.router.navigate( '' );
 					self.hide();
-					if ( mw.config.get( 'wgUserEditCount' ) === '0' ) {
+					if ( self.isNewEditor ) {
 						msg = 'mobile-frontend-editor-success-landmark-1';
 					} else {
 						className = 'toast';

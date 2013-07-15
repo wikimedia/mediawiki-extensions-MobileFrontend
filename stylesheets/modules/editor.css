@@ -63,6 +63,13 @@
 .editor-overlay .buttonBar {
   box-shadow: 0 -10px 10px 0 #ffffff;
 }
+.editor-overlay .initial-bar p {
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
+  margin: 0 0 .7em;
+  border-bottom: 1px solid #ccc;
+}
 .editor-overlay .save-bar,
 .editor-overlay .saving-bar {
   display: none;
