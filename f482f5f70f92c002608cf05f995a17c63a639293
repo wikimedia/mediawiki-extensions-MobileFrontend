@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49c305cb_ff10b1ac",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-07-15T00:00:06Z",
+      "side": 1,
+      "message": "Use \"{{int:key}} here for consistency of the referenced UI text.",
+      "revId": "f482f5f70f92c002608cf05f995a17c63a639293",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
