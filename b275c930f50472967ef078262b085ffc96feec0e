@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29c091be_b7a150af",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "Is this a good idea? Overriding config during runtime?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_17cae46f",
+        "filename": "javascripts/modules/newbie/TutorialPhotoNewbieOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "TutorialPhotoNewbieOverlay -\u003e NewbiePhotoTutorialOverlay?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_f7abc888",
+        "filename": "javascripts/widgets/carousel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "What does it change? Do we want every Carousel to be a tutorial?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_b7cf908b",
+        "filename": "less/common/overlays.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "Why is height: 100% needed? Why are those rules needed for #content_wrapper? Let\u0027s write some comments or those questions will reappear.",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_f728e837",
+        "filename": "less/common/overlays.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "Why right: 0 was not correct? Do we need left: 0 then?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_1720244b",
+        "filename": "less/common/overlays.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "Why not \u0026.centered inside .buttonBar rules?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_17e14400",
+        "filename": "less/modules/newbie.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "I\u0027d rather not call it newbie. What if we want to have a tutorial about something for all the users, not only newbies? Let\u0027s name files/classes/CSS based on what they are, not on what they currently do.",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_97bd34d7",
+        "filename": "less/modules/newbie.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "This and border: none, why do we need it? What rules are we canceling?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_3796004c",
+        "filename": "templates/leadPhotoTutorial.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-16T22:28:03Z",
+      "side": 1,
+      "message": "Possibly className: \u0027tutorial\u0027 in TutorialPhotoNewbieOverlay instead?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
