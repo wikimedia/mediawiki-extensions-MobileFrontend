@@ -3,7 +3,7 @@
 .section_heading {
 	.edit-page {
 		position: absolute;
-		background: url(../common/images/pagemenu/edit.png) 5px @headingMargin no-repeat;
+		background: url(../common/images/pagemenu/edit.png) 100% @headingMargin no-repeat;
 		.background-size( auto, 30px );
 		text-indent: -9999px;
 		border-left: solid 1px @sectionBorderColor;
@@ -16,12 +16,6 @@
 
 	&.openSection .edit-page {
 		display: block;
-	}
-}
-
-html[dir="rtl"] {
-	.section_heading .edit-page {
-		background-position: 0 @headingMargin;
 	}
 }
 
