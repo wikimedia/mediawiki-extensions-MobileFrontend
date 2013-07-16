@@ -237,6 +237,8 @@ i {
 }
 .position-fixed {
   position: fixed;
+}
+.animations .position-fixed {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
