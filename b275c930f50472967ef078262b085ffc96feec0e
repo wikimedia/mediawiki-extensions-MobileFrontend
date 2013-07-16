@@ -36,6 +36,58 @@
     },
     {
       "key": {
+        "uuid": "29c091be_370f203a",
+        "filename": "javascripts/modules/newbie/TutorialPhotoNewbieOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-16T23:27:48Z",
+      "side": 1,
+      "message": "I like Juliusz\u0027 suggestion.",
+      "parentUuid": "29c091be_17cae46f",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_d7196c84",
+        "filename": "javascripts/modules/newbie/TutorialPhotoNewbieOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-16T23:27:48Z",
+      "side": 1,
+      "message": "Need to have separate cancel and continue messages, per discussion. You can use the core message \u0027cancel\u0027 for cancelling.",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_172304c2",
+        "filename": "javascripts/modules/newbie/newbie.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-16T23:27:48Z",
+      "side": 1,
+      "message": "This should be something more specific, like shouldShowUploadTutorial()",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "29c091be_f7abc888",
         "filename": "javascripts/widgets/carousel.js",
         "patchSetId": 3
@@ -149,6 +201,40 @@
       "writtenOn": "2013-07-16T22:28:03Z",
       "side": 1,
       "message": "Possibly className: \u0027tutorial\u0027 in TutorialPhotoNewbieOverlay instead?",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_77099831",
+        "filename": "templates/leadPhotoTutorial.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-16T23:27:48Z",
+      "side": 1,
+      "message": "(Not related to Juliusz\u0027s comment)\nThis template is generic enough to use for a variety of 1-page tutorials. Let\u0027s rename it something more generic like shortTutorial.html or simpleTutorial.html.",
+      "revId": "b275c930f50472967ef078262b085ffc96feec0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_b2fb1e12",
+        "filename": "templates/leadPhotoTutorial.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-16T23:27:48Z",
+      "side": 1,
+      "message": "Need to add separate cancel and continue buttons here per discussion.",
       "revId": "b275c930f50472967ef078262b085ffc96feec0e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
