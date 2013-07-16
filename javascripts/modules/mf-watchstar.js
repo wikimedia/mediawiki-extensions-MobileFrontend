@@ -1,4 +1,5 @@
-(function( M, $ ) {
+// FIXME: This needs a big rewrite
+( function( M, $ ) {
 
 var api = M.require( 'api' ), w = ( function() {
 	var popup = M.require( 'notifications' ),
@@ -226,26 +227,22 @@ var api = M.require( 'api' ), w = ( function() {
 	if ( !$( '#ca-watch' ).length ) {
 		$( '<li id="ca-watch">' ).appendTo( '#mw-mf-menu-page' );
 	}
-	function init( $container, title ) {
-		var pageTitle = mw.config.get( 'wgTitle' ),
-			isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special;
-		$container = $container || $( '#ca-watch' ).removeClass( 'watched watch-this-article' ).empty();
-		title = title || pageTitle;
+	function init( page ) {
+		var isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special,
+			$container = $container || $( '#ca-watch' ).removeClass( 'watched watch-this-article' ).empty();
 		// initialise on current page
-		if ( $container && !isSpecialPage ) {
-			initWatchListIcon( $container, title );
+		if ( !isSpecialPage ) {
+			initWatchListIcon( $container, page.title );
 		}
-
 		upgradeUI();
 	}
 
 	// bind to future page loads
-	M.on( 'page-loaded', function( article ) {
-		initWatchListIcon( $( '#ca-watch' ), article.title );
-	} );
+	M.on( 'page-loaded', init );
+
+	init( { title: mw.config.get( 'wgPageName' ) } );
 
 	return {
-		init: init,
 		initWatchListIcon: initWatchListIcon,
 		initWatchListIconList: initWatchListIconList
 	};
