@@ -176,6 +176,13 @@
 				'transform': 'transform'
 			};
 
+			// don't trust Android 2.x, really
+			// animations cause textareas to misbehave on it
+			// (http://stackoverflow.com/a/5734984/365238)
+			if ( /Android 2/.test( navigator.userAgent ) ) {
+				return false;
+			}
+
 			// Add it to the body to get the computed style
 			// Sandbox it inside an iframe to avoid Android Browser quirks
 			$iframe.appendTo( 'body' ).contents().find( 'body' ).append( el );
