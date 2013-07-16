@@ -11,9 +11,8 @@
 		return false;
 	}
 
-	function extractHash( url ) {
-		var match = url.match( /#(.*)$/ );
-		return ( match && match[1] ) || '';
+	function getHash() {
+		return window.location.hash.slice( 1 );
 	}
 
 	function Router() {
@@ -22,28 +21,30 @@
 		// duplicate entries that already exist
 		this.routes = {};
 		this._enabled = true;
+		this._oldHash = getHash();
 
-		$( window ).on( 'hashchange', function( ev ) {
-			// hashchange is async and location.hash might not contain the right hash anymore
-			var hash = extractHash( ev.originalEvent.newURL ), routeEv = $.Event();
+		$( window ).on( 'hashchange', function() {
+			// ev.originalEvent.newURL is undefined on Android 2.x
+			var hash = getHash(), routeEv = $.Event();
 
-			if ( !self._enabled ) {
-				self._enabled = true;
-				return;
-			}
+			if ( self._enabled ) {
+				self.emit( 'route', routeEv );
 
-			self.emit( 'route', routeEv );
-
-			if ( !routeEv.isDefaultPrevented() ) {
-				$.each( self.routes, function( id, entry ) {
-					return !matchRoute( hash, entry );
-				} );
+				if ( !routeEv.isDefaultPrevented() ) {
+					$.each( self.routes, function( id, entry ) {
+						return !matchRoute( hash, entry );
+					} );
+				} else {
+					// if route was prevented, ignore the next hash change and revert the
+					// hash to its old value
+					self._enabled = false;
+					window.location.hash = self._oldHash;
+				}
 			} else {
-				// if route was prevented, ignore the next hash change and revert the
-				// hash to its old value
-				self._enabled = false;
-				window.location.hash = extractHash( ev.originalEvent.oldURL );
+				self._enabled = true;
 			}
+
+			self._oldHash = hash;
 		} );
 	}
 
