@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29c091be_3748c02f",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-16T22:03:10Z",
+      "side": 1,
+      "message": "i feel like this would be better in css.. (adding a class android2 to body tag)\nit can get confusing having css introduced in JavaScript...",
+      "revId": "cbcb46315a2c9f2f801b953ee6bc513e86b72893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
