@@ -19,10 +19,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		'.toc',
 		'#search', // remove search form element from Special:Search
 		'div.magnify',
-		'span.t',
 		'.mw-search-createlink',
-		'#ogg_player_1',
-		'#ogg_player_2',
 		'.nomobile',
 	);
 
