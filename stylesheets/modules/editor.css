@@ -7,7 +7,7 @@
  */
 .section_heading .edit-page {
   position: absolute;
-  background: url(../common/images/pagemenu/edit.png) 5px 9pt no-repeat;
+  background: url(../common/images/pagemenu/edit.png) 100% 9pt no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: auto 30px;
@@ -23,9 +23,6 @@
 }
 .section_heading.openSection .edit-page {
   display: block;
-}
-html[dir="rtl"] .section_heading .edit-page {
-  background-position: 0 9pt;
 }
 .stub .edit-page {
   margin: 0;
