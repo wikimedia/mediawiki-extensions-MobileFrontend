@@ -93,7 +93,7 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   text-align: left;
 }
 .mw-mf-overlay .buttonBar .license {
-  background: url('../modules/images/cc-by-sa.png') 0 2px no-repeat;
+  background: url('../modules/images/cc-by-sa.png') 0 10px no-repeat;
   background-size: auto 16px;
   padding-bottom: 0;
   padding-left: 55px;
