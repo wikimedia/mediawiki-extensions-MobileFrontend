@@ -41,12 +41,16 @@
 		 * an estimate; it doesn't have to be exact because it's used only for
 		 * the sliding animation, not for hiding the drawer */
 		.transform( translate3d(0, 100px, 0) );
+		// counter translate3d with bottom to avoid empty blank space at the bottom
+		// especially on browsers that don't support position: fixed
+		bottom: 100px;
 		opacity: 0;
 		// delay visibility transition to make other transitions visible
 		// http://fvsch.com/code/transition-fade/test5.html
-		.transition( transform @duration, opacity @duration, visibility 0s @duration );
+		.transition( transform @duration, opacity @duration, visibility 0s @duration, bottom 0s @duration );
 
 		&.visible {
+			bottom: 0;
 			.transition( transform @duration, opacity @duration );
 			visibility: visible;
 			opacity: 1;
