@@ -23,17 +23,6 @@ class SkinMobileBeta extends SkinMobile {
 	 * @param $tpl BaseTemplate
 	 */
 	protected function prepareDataBeta( BaseTemplate $tpl ) {
-		$tpl->set( 'site_urls', array(
-			array(
-				'href' => Title::newFromText( 'About', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-about' )->text(),
-			),
-			array(
-				'href' => Title::newFromText( 'General_disclaimer', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->text(),
-			),
-		) );
-
 		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = array();
 		$actions = $tpl->data['content_navigation']['actions'];
