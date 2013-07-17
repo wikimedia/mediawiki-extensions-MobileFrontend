@@ -51,7 +51,7 @@ var View = M.require( 'view' ),
 			}
 			this.$el.appendTo( this.appendTo );
 			this.scrollTop = document.body.scrollTop;
-			$( 'html' ).addClass( 'overlay' );
+			$( 'html' ).addClass( 'overlay-enabled' );
 			$( 'body' ).removeClass( 'navigation-enabled' );
 
 			// skip the URL bar if possible
@@ -62,7 +62,7 @@ var View = M.require( 'view' ),
 			// M.unlockViewport();
 			this.$el.detach();
 			if ( !this.parent ) {
-				$( 'html' ).removeClass( 'overlay' );
+				$( 'html' ).removeClass( 'overlay-enabled' );
 				// return to last known scroll position
 				window.scrollTo( document.body.scrollLeft, this.scrollTop );
 			} else {
