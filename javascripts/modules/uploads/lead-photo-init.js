@@ -4,10 +4,9 @@
 		funnel = $.cookie( 'mwUploadsFunnel' ) || 'article',
 		showCta = mw.config.get( 'wgMFEnablePhotoUploadCTA' ) || funnel === 'nearby',
 		popup = M.require( 'notifications' ),
-		PhotoUploaderPageActionButton = M.require( 'modules/uploads/PhotoUploaderPageActionButton' ),
+		LeadPhotoUploaderButton = M.require( 'modules/uploads/LeadPhotoUploaderButton' ),
 		PhotoUploaderButton = M.require( 'modules/uploads/PhotoUploaderButton' ),
-		isSupported = PhotoUploaderButton.isSupported,
-		LeadPhoto = M.require( 'modules/uploads/LeadPhoto' );
+		isSupported = PhotoUploaderButton.isSupported;
 
 	function needsPhoto( $container ) {
 		var $content_0 = $container.find( '#content_0' );
@@ -37,9 +36,7 @@
 			// FIXME: not updated on dynamic page loads
 			isEditable = mw.config.get( 'wgIsPageEditable' ),
 			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user ),
-			$page = $( '#content' ),
-			optionsPhotoUploader,
-			photoUploader;
+			$page = $( '#content' );
 
 		if ( !M.isLoggedIn() && !showCta ) {
 			// Note with the CTA this is unnecessary but the new nav requires showing the upload button at all times
@@ -50,33 +47,13 @@
 			return makeDisabledButton();
 		}
 
-		optionsPhotoUploader = {
+		new LeadPhotoUploaderButton( {
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
 			el: '#ca-upload',
 			pageTitle: mw.config.get( 'wgTitle' ),
 			funnel: funnel
-		};
-
-		photoUploader = new PhotoUploaderPageActionButton( optionsPhotoUploader );
-		photoUploader.on( 'start', function() {
-				photoUploader.$el.hide();
-			} ).
-			on( 'success', function( data ) {
-				popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
-				// FIXME: workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
-				if ( !$( '#content_0' ).length ) {
-					$( '<div id="content_0" >' ).insertAfter( $( '#section_0,#page-actions' ).last() );
-				}
-				new LeadPhoto( {
-					url: data.url,
-					pageUrl: data.descriptionUrl,
-					caption: data.description
-				} ).prependTo( '#content_0' ).animate();
-			} ).
-			on( 'error cancel', function() {
-				photoUploader.$el.show();
-			} );
+		} );
 	}
 
 	if ( isSupported ) {
