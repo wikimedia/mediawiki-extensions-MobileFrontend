@@ -4,6 +4,7 @@
 		popup = M.require( 'notifications' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
+			returnToQuery: 'article_action=edit',
 			content: mw.msg( 'mobile-frontend-editor-cta' )
 		} );
 
