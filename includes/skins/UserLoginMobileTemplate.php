@@ -80,6 +80,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 					'tabindex' => '2',
 					'size' => '20' ) ) .
 			Html::closeElement( 'div' ) .
+			Html::input( 'wpRemember', '1', 'hidden' ) .
 			Html::input( 'wpLoginAttempt', wfMessage( 'mobile-frontend-login' )->text(), 'submit',
 				array( 'id' => 'wpLoginAttempt',
 					'tabindex' => '3' ) ) .
