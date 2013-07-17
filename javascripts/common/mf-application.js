@@ -185,7 +185,7 @@
 
 			// Add it to the body to get the computed style
 			// Sandbox it inside an iframe to avoid Android Browser quirks
-			$iframe.appendTo( 'body' ).contents().find( 'body' ).append( el );
+			$iframe.appendTo( $body ).contents().find( 'body' ).append( el );
 
 			for ( t in transforms ) {
 				if ( el.style[t] !== undefined ) {
@@ -200,7 +200,7 @@
 		}
 
 		if ( mw.config.get( 'wgMFEnableCssAnimations' ) && supportsAnimations() ) {
-			$( 'html' ).addClass( 'animations' );
+			$doc.addClass( 'animations' );
 		}
 	}
 
