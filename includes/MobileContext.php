@@ -7,6 +7,7 @@ class MobileContext extends ContextSource {
 	protected $useFormatCookieName;
 	protected $disableImages;
 	protected $useFormat;
+	protected $blacklistedPage;
 
 	/**
 	 * Key/value pairs of things to add to X-Analytics response header for anlytics
@@ -267,7 +268,7 @@ class MobileContext extends ContextSource {
 	 * @return bool Value for shouldDisplayMobileView()
 	 */
 	private function shouldDisplayMobileViewInternal() {
-		global $wgMobileUrlTemplate, $wgMFNoMobileCategory, $wgMFNoMobilePages;
+		global $wgMobileUrlTemplate;
 		// always display non-mobile view for edit/history/diff
 		$action = $this->getAction();
 		$stableMode = !$this->isBetaGroupMember();
@@ -277,31 +278,6 @@ class MobileContext extends ContextSource {
 			// FIXME: redirect to last diff ?
 			 ( $action === 'history' ) ) {
 			return false;
-		}
-
-		// Check for blacklisted category membership
-		$title = $this->getTitle();
-		if ( $wgMFNoMobileCategory && $title ) {
-			$id = $title->getArticleID();
-			if ( $id ) {
-				$dbr = wfGetDB( DB_SLAVE );
-				if ( $dbr->selectField( 'categorylinks',
-					'cl_from',
-					array( 'cl_from' => $id, 'cl_to' => $wgMFNoMobileCategory ),
-					__METHOD__
-				) ) {
-					return false;
-				}
-			}
-		}
-		// ...and individual page blacklisting
-		if ( $wgMFNoMobilePages && $title ) {
-			$name = $title->getPrefixedText();
-			foreach ( $wgMFNoMobilePages as $page ) {
-				if ( $page === $name ) {
-					return false;
-				}
-			}
 		}
 
 		// May be overridden programmatically
@@ -345,6 +321,52 @@ class MobileContext extends ContextSource {
 			return true;
 		}
 
+		return false;
+	}
+
+	/**
+	 * Checks whether current page is blacklisted from displaying mobile view
+	 * @return bool
+	 */
+	public function isBlacklistedPage() {
+
+		wfProfileIn( __METHOD__ );
+
+		if ( is_null( $this->blacklistedPage ) ) {
+			$this->blacklistedPage = $this->isBlacklistedPageInternal();
+		}
+
+		wfProfileOut( __METHOD__ );
+
+		return $this->blacklistedPage;
+	}
+
+	private function isBlacklistedPageInternal() {
+		global $wgMFNoMobileCategory, $wgMFNoMobilePages;
+		// Check for blacklisted category membership
+		$title = $this->getTitle();
+		if ( $wgMFNoMobileCategory && $title ) {
+			$id = $title->getArticleID();
+			if ( $id ) {
+				$dbr = wfGetDB( DB_SLAVE );
+				if ( $dbr->selectField( 'categorylinks',
+					'cl_from',
+					array( 'cl_from' => $id, 'cl_to' => $wgMFNoMobileCategory ),
+					__METHOD__
+				) ) {
+					return true;
+				}
+			}
+		}
+		// ...and individual page blacklisting
+		if ( $wgMFNoMobilePages && $title ) {
+			$name = $title->getPrefixedText();
+			foreach ( $wgMFNoMobilePages as $page ) {
+				if ( $page === $name ) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 
