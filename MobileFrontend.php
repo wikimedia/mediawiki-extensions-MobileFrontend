@@ -340,7 +340,7 @@ $wgMFAutodetectMobileView = false;
  * it will show on page visits that come from the nearby page
  * it will be overriden in beta and alpha modes of the site
  */
-$wgMFEnablePhotoUploadCTA = false;
+$wgMFEnablePhotoUploadCTA = true;
 
 /**
  * (wiki)text to append to photo description during photo upload.
