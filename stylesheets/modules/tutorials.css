@@ -6,6 +6,14 @@
  * See README.mediawiki for details on installing.
  */
 /* Tutorial overlay styling */
+.cloaked input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .tutorial {
   padding-left: 16px;
   padding-right: 16px;
@@ -16,11 +24,11 @@
   height: 100%;
 }
 .tutorial .slide {
-  padding: 180px 0 0 0;
+  padding: 160px 0 0 0;
   text-align: center;
   background-size: auto 180px;
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: center -10px;
   top: 10px;
   left: 0;
   bottom: 0;
@@ -28,16 +36,22 @@
   position: absolute;
 }
 .tutorial .slide p {
-  font-size: 0.9em;
-  margin: 0 26px;
+  line-height: 1.4;
+  margin: 0 26px 1em;
 }
-.tutorial .slide .cancel {
+.tutorial .slide button.actionable,
+.tutorial .slide button,
+.tutorial .slide .button {
+  position: relative;
+  background-color: white;
   color: #006398;
   padding: 12px;
-  border: none;
-  background-color: #F0F0F0;
   font-weight: bold;
   border-radius: 0;
+}
+.tutorial .slide .cancel {
+  background: none;
+  color: white;
 }
 .tutorial .slide-image {
   background-image: url(images/tutorials/photos.png);

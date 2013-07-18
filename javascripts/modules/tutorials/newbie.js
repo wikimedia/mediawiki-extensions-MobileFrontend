@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var PageActionOverlay = M.require( 'tutorials/PageActionOverlay' );
+	var LeadPhotoTutorialOverlay = M.require( 'tutorials/LeadPhotoTutorialOverlay' );
 
 	function shouldShowUploadTutorial() {
 		// FIXME: Limit audience to only users with low edit count
@@ -11,8 +11,9 @@
 		var photoOverlay;
 
 		if ( shouldShowUploadTutorial() ) {
-			photoOverlay = new PageActionOverlay( {
-				target: $( '#ca-upload' )
+			photoOverlay = new LeadPhotoTutorialOverlay( {
+				target: $( '#ca-upload' ),
+				funnel: 'newbie'
 			} );
 			photoOverlay.show();
 			$( '#ca-upload' ).on( 'mousedown', $.proxy( photoOverlay, 'hide' ) );
