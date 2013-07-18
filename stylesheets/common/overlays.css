@@ -52,9 +52,6 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
 .mw-mf-overlay .mw-mf-overlay-header {
   background-color: #F1F1F1;
 }
-.mw-mf-overlay ul {
-  list-style: none;
-}
 .mw-mf-overlay ul li {
   text-align: left;
 }
