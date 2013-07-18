@@ -5,6 +5,9 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
+#user-button {
+  display: none;
+}
 #mw-mf-login .watermark,
 #mw-mf-accountcreate .watermark {
   text-align: center;
