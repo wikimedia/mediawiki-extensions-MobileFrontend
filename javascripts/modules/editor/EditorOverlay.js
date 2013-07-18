@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ),
+		isTestA = mw.config.get( 'wgUserId' ) % 2 === 0,
 		Page = M.require( 'page' ),
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
@@ -32,6 +33,9 @@
 					token: M.getSessionId(),
 					action: action,
 					section: this.sectionId,
+					namespace: mw.config.get( 'wgNamespaceNumber' ),
+					userEditCount: mw.config.get( 'wgUserEditCount' ),
+					isTestA: isTestA,
 					pageId: mw.config.get( 'wgArticleId' ),
 					username: mw.config.get( 'wgUserName' ),
 					mobileMode: mw.config.get( 'wgMFMode' ),
@@ -199,19 +203,23 @@
 
 			this.api.save( this.$( '.summary' ).val() ).
 				done( function() {
-					var title = self.options.title;
+					var title = self.options.title,
+						editCount = mw.config.get( 'wgUserEditCount' );
 					// log success!
 					self.log( 'success' );
 					M.history.invalidateCachedPage( title );
 					new Page( { title: title, el: $( '#content_wrapper' ) } );
 					M.router.navigate( '' );
 					self.hide();
-					if ( self.isNewEditor ) {
+					if ( isTestA && self.isNewEditor ) {
 						msg = 'mobile-frontend-editor-success-landmark-1';
 					} else {
 						className = 'toast';
 						msg = 'mobile-frontend-editor-success';
 					}
+					// update edit count
+					// FIXME: this should be an integer (see bug 51633)
+					mw.config.set( 'wgUserEditCount', ( parseInt( editCount, 10 ) + 1 ).toString() );
 					popup.show( mw.msg( msg ), className );
 				} ).
 				fail( function( err ) {
