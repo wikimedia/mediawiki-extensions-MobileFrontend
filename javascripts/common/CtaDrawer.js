@@ -10,7 +10,8 @@ var Drawer = M.require( 'Drawer' ),
 
 		preRender: function( options ) {
 			var params = {
-				returnto: mw.config.get( 'wgTitle' ),
+				// use wgPageName as this includes the namespace if outside Main
+				returnto: mw.config.get( 'wgPageName' ),
 				returntoquery: options.returnToQuery
 			};
 
