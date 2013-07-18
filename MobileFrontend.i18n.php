@@ -251,6 +251,7 @@ $messages['en'] = array (
 	'mobile-frontend-editor-cancel' => 'Cancel',
 	'mobile-frontend-editor-keep-editing' => 'Keep editing',
 	'mobile-frontend-editor-license' => 'By clicking "Save", you agree to our [//wikimediafoundation.org/wiki/Terms_of_use Terms of Use] and agree to release your text under the [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0 License].',
+	'mobile-frontend-editor-placeholder' => 'This section is empty. Be the first to expand it!',
 	'mobile-frontend-editor-summary-placeholder' => 'Tell us what you changed (optional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Do you really want to abandon your edit?',
 	'mobile-frontend-editor-wait' => 'Saving edit, please wait.',
@@ -685,6 +686,7 @@ Should be consistent with the following message:
 
 See also:
 * {{msg-mw|Mobile-frontend-editor-save}}',
+	'mobile-frontend-editor-placeholder' => 'Placeholder text for empty sections.',
 	'mobile-frontend-editor-summary-placeholder' => 'A placeholder for the summary input field asking user what they changed (the field is optional).',
 	'mobile-frontend-editor-cancel-confirm' => 'Question asking user if they are positive about abandoning unsaved edit.',
 	'mobile-frontend-editor-wait' => 'Text that displays while a page edit is being saved.',

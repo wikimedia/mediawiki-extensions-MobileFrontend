@@ -17,6 +17,7 @@
 			keepEditingMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
 			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
+			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
 			previewMsg: mw.msg( 'mobile-frontend-editor-preview-header' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
 			guiderMsg: mw.msg( 'mobile-frontend-editor-guider' )
