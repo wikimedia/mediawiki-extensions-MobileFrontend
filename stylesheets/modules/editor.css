@@ -94,3 +94,6 @@ http://www.zingdesign.com/responsive-website-design-cheatsheet1/
     position: static;
   }
 }
+.android2 .editor-overlay textarea {
+  line-height: 1.2;
+}

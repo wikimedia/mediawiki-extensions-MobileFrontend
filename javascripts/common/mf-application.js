@@ -155,6 +155,12 @@
 					lockViewport();
 				}, false );
 			}
+
+			// FIXME: Android 2.x can act weird
+			// (remove if we drop support for some features on it)
+			if ( /Android 2/.test( navigator.userAgent ) ) {
+				$body.addClass( 'android2' );
+			}
 		}
 		fixBrowserBugs();
 

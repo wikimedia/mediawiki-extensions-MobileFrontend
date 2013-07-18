@@ -92,3 +92,10 @@ http://www.zingdesign.com/responsive-website-design-cheatsheet1/
 		position: static;
 	}
 }
+
+// FIXME: high line-height (1.5) causes weird behavior in textareas on
+// Android 2.x, remove this if we don't want to support editor there
+.android2 .editor-overlay textarea {
+	line-height: 1.2;
+}
+
