@@ -39,8 +39,8 @@
 		strictEqual( this.c.page, 0, 'Initialises to page 0' );
 		this.c.next();
 		this.c.showCurrentPage();
-		strictEqual( this.c.$( '.page' ).eq( 0 ).hasClass( 'active' ), false, 'First page is hidden' );
-		strictEqual( this.c.$( '.page' ).eq( 1 ).hasClass( 'active' ), true, 'Second page is visible' );
+		strictEqual( this.c.$( '.slide' ).eq( 0 ).hasClass( 'active' ), false, 'First page is hidden' );
+		strictEqual( this.c.$( '.slide' ).eq( 1 ).hasClass( 'active' ), true, 'Second page is visible' );
 	} );
 
 }( mw.mobileFrontend, jQuery ) );

@@ -11,11 +11,6 @@
 }
 .carousel {
   position: relative;
-  background-color: #006398;
-  color: white;
-  height: 100%;
-  padding-left: 23px;
-  padding-right: 23px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -52,52 +47,28 @@
 .carousel > button.active {
   visibility: visible;
 }
-.carousel button.cancel {
-  color: #006398;
-  padding: 12px;
-  border: none;
-  background-color: #F0F0F0;
-  font-weight: bold;
-  border-radius: 0;
-}
-.carousel .page {
-  padding: 180px 0 0 0;
-  text-align: center;
-  background-size: auto 180px;
-  background-repeat: no-repeat;
-  background-position: center 0;
-  top: 10px;
+.carousel .slide {
   left: 100%;
-  bottom: 0;
-  width: 100%;
-  position: absolute;
   visibility: hidden;
 }
-.carousel .page.active {
+.carousel .slide.active {
   visibility: visible;
   left: 23px;
 }
-.carousel .page p,
-.carousel .page strong {
+.carousel .slide p,
+.carousel .slide strong {
   line-height: 1.4;
 }
-.carousel .page strong {
+.carousel .slide strong {
   display: block;
   font-size: 1.1em;
   margin: 0 26px 16px;
 }
-.carousel .page p {
-  font-size: 0.9em;
-  margin: 0 26px;
-}
-.carousel .page.page-1 {
+.carousel .slide.page-1 {
   background-image: url(images/uploads/SplashScreen1.png);
 }
-.carousel .page.page-2 {
+.carousel .slide.page-2 {
   background-image: url(images/uploads/SplashScreen2.png);
-}
-.carousel .page.page-3 {
-  background-image: url(images/uploads/SplashScreen3.png);
 }
 .ctaUploadPhoto {
   padding: 8px;

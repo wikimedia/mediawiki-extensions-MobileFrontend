@@ -2,12 +2,13 @@
 
 	var View = M.require( 'view' ), Carousel;
 
+	// FIXME: the name Carousel is no longer accurate
 	Carousel = View.extend( {
 		template: M.template.get( 'specials/uploads/carousel' ),
-		className: 'carousel slideable',
+		className: 'carousel tutorial slideable',
 		postRender: function() {
 			var self = this, $pages;
-			$pages = this.$( '.page' );
+			$pages = this.$( '.slide' );
 			this.page = 0;
 			this.totalPages = $pages.length;
 			this.$( 'ul li' ).on( 'click', function() {
@@ -23,10 +24,10 @@
 			} );
 		},
 		showCurrentPage: function() {
-			this.$( '.page' ).removeClass( 'active' ).removeClass( 'slider-left' ).removeClass( 'slider-right' );
-			this.$( '.page' ).eq( this.page - 1 ).addClass( 'slider-left' );
-			this.$( '.page' ).eq( this.page ).addClass( 'active' );
-			this.$( '.page' ).eq( this.page + 1 ).addClass( 'slider-right' );
+			this.$( '.slide' ).removeClass( 'active' ).removeClass( 'slider-left' ).removeClass( 'slider-right' );
+			this.$( '.slide' ).eq( this.page - 1 ).addClass( 'slider-left' );
+			this.$( '.slide' ).eq( this.page ).addClass( 'active' );
+			this.$( '.slide' ).eq( this.page + 1 ).addClass( 'slider-right' );
 			this.$( 'ul li' ).removeClass( 'active' ).
 				eq( this.page ).addClass( 'active' );
 			this.$( 'button' ).removeClass( 'active' );

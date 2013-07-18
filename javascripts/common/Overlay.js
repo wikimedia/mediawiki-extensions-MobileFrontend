@@ -10,6 +10,7 @@ var View = M.require( 'view' ),
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
 		closeOnBack: false,
+		appendTo: 'body',
 		initialize: function( options ) {
 			var self = this;
 			options = options || {};
@@ -48,7 +49,7 @@ var View = M.require( 'view' ),
 			if ( this.parent ) {
 				this.parent.hide();
 			}
-			this.$el.appendTo( 'body' );
+			this.$el.appendTo( this.appendTo );
 			this.scrollTop = document.body.scrollTop;
 			$( 'html' ).addClass( 'overlay' );
 			$( 'body' ).removeClass( 'navigation-enabled' );

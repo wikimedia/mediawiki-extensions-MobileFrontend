@@ -336,8 +336,9 @@ $wgMFAutodetectMobileView = false;
 
 /**
  * Whether or not to show the upload CTA to logged out users.
- * Note there is one exception:
- * it will show on page visits that come from the nearby page.
+ * Note there are a couple of exceptions:
+ * it will show on page visits that come from the nearby page
+ * it will be overriden in beta and alpha modes of the site
  */
 $wgMFEnablePhotoUploadCTA = false;
 

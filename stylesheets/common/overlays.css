@@ -8,7 +8,9 @@
 html.overlay .mw-mf-overlay {
   display: block;
 }
-html.overlay #mw-mf-viewport {
+html.overlay #mw-mf-page-center,
+html.overlay #content_wrapper {
+  height: 100%;
   overflow: hidden;
 }
 html.overlay #footer {
@@ -23,7 +25,7 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 100%;
   background-color: white;
   z-index: 4;
@@ -73,18 +75,20 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   display: block;
   margin: auto;
 }
+.mw-mf-overlay .button-bar-centered {
+  text-align: center;
+  padding: .7em 1em;
+  color: #707070;
+}
+.mw-mf-overlay .button-bar-centered button {
+  margin: 0 .3em;
+}
 .mw-mf-overlay .buttonBar {
   bottom: 0;
   left: 0;
   right: 0;
   border-top: 1px solid #ccc;
   background-color: #f3f3f3;
-  text-align: center;
-  padding: .7em 1em;
-  color: #707070;
-}
-.mw-mf-overlay .buttonBar button {
-  margin: 0 .3em;
 }
 .mw-mf-overlay .buttonBar p {
   padding: .7em 0;
