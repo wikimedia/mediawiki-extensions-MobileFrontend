@@ -47,7 +47,9 @@ class MobileFrontendHooks {
 		$mobileContext = MobileContext::singleton();
 		$mobileContext->checkToggleView();
 
-		if ( !$mobileContext->shouldDisplayMobileView() ) {
+		if ( !$mobileContext->shouldDisplayMobileView()
+			|| $mobileContext->isBlacklistedPage() )
+		{
 			// add any necessary resources for desktop view, if enabled
 			if ( $wgMFEnableDesktopResources ) {
 				$out = $context->getOutput();
