@@ -5,11 +5,8 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-.overlay body.mw-mf-special {
-  background-color: #ffffff;
-}
-.overlay body.mw-mf-special .mw-mf-overlay .header h1 {
-  padding-left: 0.4em;
+#user-button {
+  display: none;
 }
 #mw-mf-login .watermark,
 #mw-mf-accountcreate .watermark {

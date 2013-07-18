@@ -1,18 +1,8 @@
 @import "../mf-mixins.less";
 
-.overlay {
-
-	body.mw-mf-special {
-		background-color: @overlayContentBackground;
-		.mw-mf-overlay {
-			.header {
-				h1 {
-					padding-left: @overlayHeadingIndent;
-				}
-			}
-		}
-	}
-
+// This serves no purpose on the login screen as you are not logged in so cannot use.
+#user-button {
+	display: none;
 }
 
 #mw-mf-login,
