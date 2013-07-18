@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_6fc19d82",
+        "filename": "javascripts/modules/uploads/PhotoUploader.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-18T22:37:55Z",
+      "side": 1,
+      "message": "My comment from patchset 1 not addressed...",
+      "revId": "d300bbb9a8f20c50033bcc2cce4f64d383568364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9845590_4fc4d993",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-18T22:37:55Z",
+      "side": 1,
+      "message": "My comment from patchset 1 not addressed...",
+      "revId": "d300bbb9a8f20c50033bcc2cce4f64d383568364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
