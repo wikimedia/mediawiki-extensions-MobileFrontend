@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_e3e6acb2",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-18T19:06:35Z",
+      "side": 1,
+      "message": "It seems unlikely that blacklist status would be checked more than once in a single MediaWiki request. Do we really need a member variable for this?",
+      "revId": "1c1b1f712d054aa587f11b6f3edc3b9b5b27ff68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
