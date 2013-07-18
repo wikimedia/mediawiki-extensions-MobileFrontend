@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_490cd942",
+        "filename": "javascripts/modules/uploads/PhotoUploader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-18T20:46:17Z",
+      "side": 1,
+      "message": "Not sure when this happened, but animate() without arguments does nothing.",
+      "revId": "9c3b279f14d5b9dd5102112cd641b2ca9cef0241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9845590_290f9539",
+        "filename": "javascripts/modules/uploads/lead-photo-init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-18T20:46:17Z",
+      "side": 1,
+      "message": "Not needed, see line 55.",
+      "revId": "9c3b279f14d5b9dd5102112cd641b2ca9cef0241",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
