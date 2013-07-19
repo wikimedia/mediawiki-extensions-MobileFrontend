@@ -271,7 +271,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/TalkSectionOverlay.js',
 			'javascripts/modules/talk.js',
 			'javascripts/common/user.js',
-			'javascripts/modules/search-pageimages.js',
+			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages-preferred.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbie.js',
@@ -366,7 +366,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'stylesheets/common/common-js.css',
 			'stylesheets/modules/languages.css',
-			'stylesheets/modules/mf-search.css',
+			'stylesheets/modules/search.css',
 			'stylesheets/modules/mf-references.css',
 			'stylesheets/modules/mf-cleanuptemplates.css',
 			'stylesheets/modules/mf-watchstar.css',
@@ -466,7 +466,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-last-modified.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
-			'javascripts/modules/search-2.js',
+			'javascripts/modules/search/search.js',
 			'javascripts/modules/mf-watchstar.js',
 			'javascripts/modules/mf-references.js'
 		),
