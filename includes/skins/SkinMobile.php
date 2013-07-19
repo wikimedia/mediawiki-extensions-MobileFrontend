@@ -1,6 +1,7 @@
 <?php
 
 class SkinMobile extends SkinMinerva {
+	public $skinname = 'mobile';
 	public $template = 'MobileTemplate';
 
 	/**
