@@ -182,7 +182,7 @@ class SkinMinerva extends SkinTemplate {
 		);
 		if ( !$user->isAnon() ) {
 			$vars['wgWatchedPageCache'] = array(
-				$title->getText() => $user->isWatched( $title ),
+				$title->getPrefixedDBkey() => $user->isWatched( $title ),
 			);
 		}
 		$ctx = MobileContext::singleton();
