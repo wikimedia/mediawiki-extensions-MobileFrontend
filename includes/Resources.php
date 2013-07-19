@@ -368,7 +368,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/modules/languages.css',
 			'stylesheets/modules/search.css',
 			'stylesheets/modules/mf-references.css',
-			'stylesheets/modules/mf-cleanuptemplates.css',
+			'stylesheets/modules/issues.css',
 			'stylesheets/modules/mf-watchstar.css',
 			'stylesheets/modules/uploads.css',
 			'stylesheets/modules/tutorials.css',
@@ -461,7 +461,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle.js',
-			'javascripts/modules/mf-cleanuptemplates.js',
+			'javascripts/modules/issues/issues.js',
 			'javascripts/modules/languages/languages.js',
 			'javascripts/modules/mf-last-modified.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
@@ -476,7 +476,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
 
-			// mf-cleanuptemplates.js
+			// issues.js
 			'mobile-frontend-meta-data-issues',
 			'mobile-frontend-meta-data-issues-header',
 
