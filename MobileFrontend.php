@@ -63,7 +63,6 @@ $autoloadClasses = array (
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
 	'SpecialNearby' => 'specials/SpecialNearby',
 	'UnlistedSpecialMobilePage' => 'specials/UnlistedSpecialMobilePage',
-	'SpecialLoginHandshake' => 'specials/SpecialLoginHandshake',
 
 	'MinervaTemplate' => 'skins/MinervaTemplate',
 	'MobileTemplate' => 'skins/MobileTemplate',
@@ -120,16 +119,12 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend, $wgMFNearby, $wgSpecialPages, $wgMFLoginHandshakeUrl;
+	global $wgExtMobileFrontend, $wgMFNearby, $wgSpecialPages;
 
 	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
-	}
-
-	if ( $wgMFLoginHandshakeUrl ) {
-		$wgSpecialPages['LoginHandshake'] = 'SpecialLoginHandshake';
 	}
 }
 
@@ -313,13 +308,6 @@ $wgMFNearby = false;
  * The range in meters that should be searched to find nearby pages on Special:Nearby (defaults to 10km)
  */
 $wgMFNearbyRange = 10000;
-
-/**
- * Whether the login form should redirect to another URL on the first login attempt.
- *
- * Defaults to false.
- */
-$wgMFLoginHandshakeUrl = false;
 
 /**
  * Pages with smaller parsed HTML size are not cached

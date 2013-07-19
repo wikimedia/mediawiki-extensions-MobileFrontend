@@ -311,7 +311,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		global $wgMFForceSecureLogin, $wgMFLoginHandshakeUrl;
+		global $wgMFForceSecureLogin;
 		$mobileContext = MobileContext::singleton();
 		if ( $special->getName() != 'Userlogin' || !$mobileContext->shouldDisplayMobileView() ) {
 			// no further processing necessary
@@ -319,11 +319,7 @@ class MobileFrontendHooks {
 		}
 
 		$out = $special->getContext()->getOutput();
-		$out->addModules( 'mobile.userlogin.scripts' );
 		$out->addModuleStyles( 'mobile.userlogin.styles' );
-		if ( $wgMFLoginHandshakeUrl ) {
-			$out->addJsConfigVars( 'wgMFLoginHandshakeUrl', $wgMFLoginHandshakeUrl );
-		}
 
 		// make sure we're on https if we're supposed to be and currently aren't.
 		// most of this is lifted from https redirect code in SpecialUserlogin::execute()

@@ -77,25 +77,3 @@ form.user-login .mw-mf-create-account {
   display: block;
   text-align: center;
 }
-#mw-returnto {
-  padding-top: 2em;
-  height: 100%;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-  text-align: center;
-}
-.client-js #mw-returnto {
-  text-indent: -9999px;
-  background-image: url(../common/images/ajax-loader.gif);
-  background-repeat: no-repeat;
-  background-position: 50% 30%;
-}
-.client-js #mw-returnto.loaded {
-  text-indent: 0;
-  background: #fff;
-}
