@@ -7,6 +7,8 @@
  */
 .stable #ca-talk,
 .client-nojs #ca-watch.cta,
+.client-nojs #ca-edit,
+.client-nojs #ca-upload,
 #ca-talk.selected {
   display: none;
 }
