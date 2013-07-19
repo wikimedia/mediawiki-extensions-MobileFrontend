@@ -39,15 +39,17 @@
 
   -webkit-transform: translate3d(0, 100px, 0);
   transform: translate3d(0, 100px, 0);
+  bottom: 100px;
   opacity: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0s 0.25s;
-  transition: transform 0.25s, opacity 0.25s, visibility 0s 0.25s;
+  -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0s 0.25s, bottom 0s 0.25s;
+  transition: transform 0.25s, opacity 0.25s, visibility 0s 0.25s, bottom 0s 0.25s;
 }
 .animations .beta #mf-notification.visible,
 .animations .alpha #mf-notification.visible,
 .animations .beta .drawer.visible,
 .animations .alpha .drawer.visible {
+  bottom: 0;
   -webkit-backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
   transition: transform 0.25s, opacity 0.25s;

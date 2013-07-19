@@ -100,8 +100,7 @@
 		var
 			mode, $body = $( 'body' ),
 			$doc = $( 'html' ),
-			$viewport = $( '#mw-mf-viewport' ),
-			$pageCenter = $( '#mw-mf-page-center' );
+			$viewport = $( '#mw-mf-viewport' );
 
 		if ( $body.hasClass( 'alpha' ) ) {
 			mode = 'alpha';
@@ -125,13 +124,11 @@
 					// special case when we're at the beginning of the page and many
 					// browsers (e.g. Android 2.x) return wrong window height because
 					// of the URL bar
-					$viewport.height( '100%' );
-				} else if ( scrollBottom < $pageCenter.height() ) {
-					// keep expanding the viewport until it's as big as main content
-					// (prevents possible infinite scroll in some browsers, can be tested
-					// on desktop Chrome forcing supportsPositionFixed() to return false)
+					$viewport.add( '.mw-mf-overlay' ).height( '100%' );
+				} else {
+					// keep expanding the viewport until the end of the page reached
 					// #notification has bottom: 0 and sticks to the end of the viewport
-					$viewport.height( scrollBottom );
+					$viewport.add( '.mw-mf-overlay' ).height( scrollBottom );
 				}
 			} );
 		}
