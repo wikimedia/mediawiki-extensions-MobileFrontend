@@ -360,6 +360,9 @@ body.navigation-enabled #mw-mf-page-center {
   font-size: 1.6em;
   margin: 10px 0 0;
 }
+.stable .header {
+  padding-right: 10px;
+}
 /* Menu buttons */
 #mw-mf-menu-page,
 #mw-mf-main-menu-button,
@@ -369,6 +372,9 @@ body.navigation-enabled #mw-mf-page-center {
   width: 40px;
   position: absolute;
   top: 0;
+}
+.stable #user-button {
+  display: none;
 }
 /* hamburger */
 #mw-mf-main-menu-button {

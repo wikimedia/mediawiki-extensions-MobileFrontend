@@ -5,18 +5,6 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-#mw-mf-menu-page {
-  right: 0;
-  list-style: none;
-}
-#mw-mf-menu-page li.watch-this-article,
-#mw-mf-menu-page li.watch-this-article a {
-  position: absolute;
-  right: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
 .watch-this-article {
   background-image: url(images/watch.png);
   background-position: center center;

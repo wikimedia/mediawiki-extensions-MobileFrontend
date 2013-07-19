@@ -103,7 +103,7 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
 }
 .mw-mf-overlay .mw-mf-overlay-footer,
 .mw-mf-overlay .mw-mf-overlay-header {
-  padding: 4px 8px 4px 23px;
+  padding: 4px 8px 4px 16px;
   margin: 0;
   font-size: 0.8em;
   color: #666;

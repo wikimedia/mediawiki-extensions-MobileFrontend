@@ -22,6 +22,30 @@ class SkinMinerva extends SkinTemplate {
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
 
+	/**
+	 * Prepares the user button.
+	 * @param $tpl BaseTemplate
+	 */
+	protected function prepareUserButton( BaseTemplate $tpl ) {
+		if ( class_exists( 'MWEchoNotifUser' ) ) {
+			$user = $this->getUser();
+			// FIXME: cap higher counts
+			$count = $user->isLoggedIn() ? MWEchoNotifUser::newFromUser( $user )->getNotificationCount() : 0;
+
+			$tpl->set( 'userButton',
+				Html::openElement( 'a', array(
+					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
+					'href' => SpecialPage::getTitleFor( 'Notifications' )->getLocalURL(),
+					'id'=> 'user-button',
+				) ) .
+				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $count ) .
+				Html::closeElement( 'a' )
+			);
+		} else {
+			$tpl->set( 'userButton', '' );
+		}
+	}
+
 	public function prepareData( BaseTemplate $tpl ) {
 		global $wgMFEnableSiteNotice;
 		$title = $this->getTitle();
@@ -68,7 +92,6 @@ class SkinMinerva extends SkinTemplate {
 			'id'=> 'mw-mf-main-menu-button',
 			) )
 		);
-		$tpl->set( 'userButton', '<ul id="mw-mf-menu-page"></ul>' );
 
 		$banners = array();
 		if ( $wgMFEnableSiteNotice ) {
@@ -86,6 +109,49 @@ class SkinMinerva extends SkinTemplate {
 			),
 		) );
 		$tpl->set( 'page_actions', array() );
+
+		// Reuse template data variable from SkinTemplate to construct page menu
+		$menu = array();
+		$namespaces = $tpl->data['content_navigation']['namespaces'];
+		$actions = $tpl->data['content_navigation']['actions'];
+
+		// empty placeholder for edit and photos which both require js
+		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '' );
+		$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '' );
+
+		if ( isset( $namespaces['talk'] ) ) {
+			$menu['talk'] = $namespaces['talk'];
+		// FIXME [Core Skin]: I'm not sure why this is treated differently.
+		} else if ( isset( $namespaces['project_talk'] ) ) {
+			$menu['talk'] = $namespaces['project_talk'];
+		}
+
+		if ( isset( $menu['talk'] ) ) {
+			if ( isset( $tpl->data['_talkdata'] ) ) {
+				$menu['talk']['text'] = $tpl->data['_talkdata']['text'];
+				$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
+			}
+		}
+
+		$watchTemplate = array(
+			'id' => 'ca-watch',
+			'class' => 'watch-this-article',
+		);
+		// standardise watch article into one menu item
+		if ( isset( $actions['watch'] ) ) {
+			$menu['watch'] = array_merge( $actions['watch'], $watchTemplate );
+		} else if ( isset( $actions['unwatch'] ) ) {
+			$menu['watch'] = array_merge( $actions['unwatch'], $watchTemplate );
+			$menu['watch']['class'] .= ' watched';
+		} else {
+			// placeholder for not logged in
+			$menu['watch'] = $watchTemplate;
+			// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
+			$menu['watch']['text'] = '';
+		}
+
+		$tpl->set( 'page_actions', $menu );
+		$this->prepareUserButton( $tpl );
 	}
 
 	/**
