@@ -1,6 +1,4 @@
 ( function( M, $ ) {
-
-( function() {
 	var
 		toggle = M.require( 'toggle' ),
 		currentPage;
@@ -45,7 +43,5 @@
 	}
 
 	M.on( 'page-loaded', refresh );
-
-}() );
 
 }( mw.mobileFrontend, jQuery ) );
