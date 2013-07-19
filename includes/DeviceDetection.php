@@ -41,11 +41,11 @@ interface IDeviceProperties {
 
 interface IDeviceDetector {
 	/**
-	 * @param $userAgent
+	 * @param string $userAgent
 	 * @param string $acceptHeader
 	 * @return IDeviceProperties
 	 */
-	function detectDeviceProperties( $userAgent, $acceptHeader = '' );
+	function detectDeviceProperties( $userAgent, $acceptHeader );
 }
 
 /**
@@ -78,17 +78,8 @@ class DeviceProperties implements IDeviceProperties {
 	 * @return string
 	 */
 	protected function detectFormat() {
-		if ( strpos( $this->userAgent, 'WebKit' ) !== false
-			|| strpos( $this->userAgent, 'Opera/' ) !== false
-			|| strpos( $this->userAgent, 'BlackBerry' ) !== false
-			|| strpos( $this->userAgent, 'NetFront' ) !== false
-			|| strpos( $this->userAgent, 'Kindle' ) !== false
-			|| strpos( $this->userAgent, 'MSIE' ) !== false )
-		{
-			return 'html';
-		}
-
 		if ( strpos( $this->acceptHeader, 'vnd.wap.wml' ) !== false
+			&& strpos( $this->acceptHeader, 'text/html' ) === false
 			&& strpos( $this->acceptHeader, 'application/vnd.wap.xhtml+xml' ) === false )
 		{
 			return 'wml';
@@ -232,11 +223,11 @@ class DeviceDetection implements IDeviceDetector {
 	}
 
 	/**
-	 * @param $userAgent
+	 * @param string $userAgent
 	 * @param string $acceptHeader
 	 * @return IDeviceProperties
 	 */
-	public function detectDeviceProperties( $userAgent, $acceptHeader = '' ) {
+	public function detectDeviceProperties( $userAgent, $acceptHeader ) {
 		return new DeviceProperties( $userAgent, $acceptHeader );
 	}
 }
