@@ -8,7 +8,8 @@
 		PhotoUploaderPreview = M.require( 'modules/uploads/PhotoUploaderPreview' ),
 		PhotoUploader,
 		PhotoUploaderButton,
-		PhotoUploaderPageActionButton;
+		LeadPhoto = M.require( 'modules/uploads/LeadPhoto' ),
+		LeadPhotoUploaderButton;
 
 	function isSupported() {
 		// FIXME: create a module for browser detection stuff
@@ -254,15 +255,37 @@
 		className: 'button photo'
 	} );
 
-	PhotoUploaderPageActionButton = PhotoUploader.extend( {
+	LeadPhotoUploaderButton = PhotoUploader.extend( {
 		template: M.template.get( 'photoUploadAction' ),
-		className: 'enabled'
+		className: 'enabled',
+		initialize: function( options ) {
+			var self = this;
+			this._super( options );
+			this.on( 'start', function() {
+					self.$el.hide();
+				} ).
+				on( 'success', function( data ) {
+					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
+					// FIXME: workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
+					if ( !$( '#content_0' ).length ) {
+						$( '<div id="content_0" >' ).insertAfter( $( '#section_0,#page-actions' ).last() );
+					}
+					new LeadPhoto( {
+						url: data.url,
+						pageUrl: data.descriptionUrl,
+						caption: data.description
+					} ).prependTo( '#content_0' );
+				} ).
+				on( 'error cancel', function() {
+					self.$el.show();
+				} );
+		}
 	} );
 
-	PhotoUploaderButton.isSupported = PhotoUploaderPageActionButton.isSupported = isSupported();
+	PhotoUploaderButton.isSupported = LeadPhotoUploaderButton.isSupported = isSupported();
 
 	// FIXME: should we allow more than one define() per file?
 	M.define( 'modules/uploads/PhotoUploaderButton', PhotoUploaderButton );
-	M.define( 'modules/uploads/PhotoUploaderPageActionButton', PhotoUploaderPageActionButton );
+	M.define( 'modules/uploads/LeadPhotoUploaderButton', LeadPhotoUploaderButton );
 
 }( mw.mobileFrontend, jQuery ) );

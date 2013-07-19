@@ -400,8 +400,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/uploads/NagOverlay.js',
 			'javascripts/modules/uploads/PhotoUploadProgress.js',
 			'javascripts/modules/uploads/PhotoUploaderPreview.js',
-			'javascripts/modules/uploads/PhotoUploader.js',
 			'javascripts/modules/uploads/LeadPhoto.js',
+			'javascripts/modules/uploads/PhotoUploader.js',
 			// Language specific code
 			'javascripts/common/languages/LanguageOverlay.js',
 		),
