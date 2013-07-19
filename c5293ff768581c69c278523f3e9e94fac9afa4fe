@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_8aeeccec",
+        "filename": "javascripts/modules/tutorials/newbie.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-19T18:28:31Z",
+      "side": 1,
+      "message": "This is not reused anywhere, seems like it could be a var inside the $() callback below.",
+      "revId": "c5293ff768581c69c278523f3e9e94fac9afa4fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
