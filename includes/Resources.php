@@ -370,7 +370,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/modules/mf-references.css',
 			'stylesheets/modules/mf-cleanuptemplates.css',
 			'stylesheets/modules/mf-watchstar.css',
-			'stylesheets/modules/mf-photo.css',
+			'stylesheets/modules/uploads.css',
 			'stylesheets/modules/tutorials.css',
 			'stylesheets/modules/editor.css',
 		),
