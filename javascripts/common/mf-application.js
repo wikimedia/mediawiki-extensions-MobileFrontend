@@ -284,7 +284,6 @@
 		lockViewport: lockViewport,
 		log: log,
 		on: on,
-		prefix: 'mw-mf-',
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,

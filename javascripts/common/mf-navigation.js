@@ -3,7 +3,6 @@
 var m = ( function( $ ) {
 	var
 		menu,
-		mfePrefix = M.prefix,
 		inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
 
 	function openNavigation() {
@@ -34,7 +33,7 @@ var m = ( function( $ ) {
 				closeNavigation();
 			}
 		}
-		$( '#' + mfePrefix + 'main-menu-button' ).click( function( ev ) {
+		$( '#mw-mf-main-menu-button' ).click( function( ev ) {
 			toggleNavigation();
 			ev.preventDefault();
 		} ).on( 'touchend mouseup', function( ev ) {
