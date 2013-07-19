@@ -1,8 +1,5 @@
 ( function( M,  $ ) {
-var Overlay = M.require( 'Overlay' );
-
-( function() {
-	var STEP_SIZE = 150;
+	var Overlay = M.require( 'Overlay' ), STEP_SIZE = 150;
 
 	function isBlacklisted( $table ) {
 		return $table.hasClass( 'metadata' ) || $table.hasClass( 'navbox' );
@@ -69,6 +66,5 @@ var Overlay = M.require( 'Overlay' );
 			initTables( $( '#content_0' ) );
 		} ).
 		on( 'section-rendered', initTables );
-}() );
 
 }( mw.mobileFrontend, jQuery ));
