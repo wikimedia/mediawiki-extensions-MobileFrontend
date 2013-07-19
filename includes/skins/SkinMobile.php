@@ -47,7 +47,6 @@ class SkinMobile extends SkinMinerva {
 		$tpl = $this->prepareTemplate();
 		$tpl->set( 'headelement', $out->headElement( $this ) );
 		$tpl->set( 'bodytext', $html );
-		$notice = '';
 		$tpl->set( 'reporttime', wfReportTime() );
 		$tpl->execute();
 		wfProfileOut( __METHOD__  . '-tpl' );

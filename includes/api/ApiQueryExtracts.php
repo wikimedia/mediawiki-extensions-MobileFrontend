@@ -36,6 +36,7 @@ class ApiQueryExtracts extends ApiQueryBase {
 			$titles = array_slice( $titles, $continue, null, true );
 		}
 		$count = 0;
+		/** @var Title $t */
 		foreach ( $titles as $id => $t ) {
 			if ( ++$count > $limit ) {
 				$this->setContinueEnumParameter( 'continue', $continue + $count - 1 );
