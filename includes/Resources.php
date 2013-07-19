@@ -655,12 +655,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/specials/userlogin.css',
 		),
 	),
-	'mobile.userlogin.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'scripts' => array(
-			'javascripts/specials/userlogin.js',
-		),
-		'position' => 'top',
-	),
 
 	// Special:Uploads
 	'mobile.uploads.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
@@ -719,26 +713,5 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/externals/jsdiff.js',
 			'javascripts/specials/mobilediff.js',
 		),
-	),
-
-	// FIXME: temporary hack to get round CentralAuth logout screen
-	'mobile.userlogout.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
-		'scripts' => array(
-			'javascripts/specials/userlogin.js',
-		),
-	),
-	'mobile.userlogout.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'styles' => array(
-			'stylesheets/specials/userlogin.css',
-		),
-	),
-	'mobile.loginhandshake.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
-		'dependencies' => array(
-			'jquery.cookie',
-		),
-		'scripts' => array(
-			'javascripts/specials/loginhandshake.js',
-		),
-		'position' => 'top',
 	),
 ) );

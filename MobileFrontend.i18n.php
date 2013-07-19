@@ -20,8 +20,6 @@ $messages['en'] = array (
 	'mobile-frontend-logged-out' => 'Not logged in',
 	'mobile-frontend-logged-in-homepage-notification' => 'Welcome, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Logged in as $1.',
-	'mobile-frontend-handshake-title' => 'Redirecting...',
-	'mobile-frontend-handshake-wait' => 'Please wait while we redirect you to the login form.',
 
 	/** log-in page **/
 	'mobile-frontend-sign-up-heading' => 'Sign up',
@@ -326,8 +324,6 @@ This buttons takes the user to the home page.
 	'mobile-frontend-logged-in-homepage-notification' => 'Heading at top of homepage telling user they are logged in',
 	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
 *$1 - username',
-	'mobile-frontend-handshake-title' => 'Title for the page redirecting the user to the login form.',
-	'mobile-frontend-handshake-wait' => 'Text asking the user to wait while he is redirected to the login form.',
 	'mobile-frontend-sign-up-heading' => 'Header for sign up page.
 {{Identical|Sign up}}',
 	'mobile-frontend-sign-in-heading' => 'Header for login page.
