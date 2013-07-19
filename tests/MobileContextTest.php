@@ -408,4 +408,41 @@ class MobileContextTest extends MediaWikiTestCase {
 		);
 	}
 
+	/**
+	 * @dataProvider optInProvider
+	 */
+	public function testOptIn( array $cookies, $isAlpha, $isBeta ) {
+		$ctx = new RequestContext();
+		$ctx->setRequest( new MFFauxRequest( $cookies ) );
+		MobileContext::setInstance( null );
+		$mobileContext = MobileContext::singleton();
+		$mobileContext->setContext( $ctx );
+		$this->assertEquals( $isAlpha, $mobileContext->isAlphaGroupMember() );
+		$this->assertEquals( $isBeta, $mobileContext->isBetaGroupMember() );
+	}
+
+	public function optInProvider() {
+		return array(
+			array( array(), false, false ),
+			array( array( 'optin' => '1' ), false, true ),
+			array( array( 'optin' => 'beta' ), false, true ),
+			array( array( 'optin' => 'alpha' ), true, true ),
+			array( array( 'optin' => 'foobar' ), false, false ),
+			array( array( 'optin' => '1', 'mf_alpha' => '1' ), true, true ),
+			array( array( 'mf_alpha' => '1' ), true, true ),
+			array( array( 'mf_alpha' => 'foobar' ), false, false ),
+		);
+	}
+}
+
+class MFFauxRequest extends FauxRequest {
+	private $cookies;
+
+	public function __construct( array $cookies ) {
+		$this->cookies = $cookies;
+	}
+
+	public function getCookie( $key, $prefix = null, $default = null ) {
+		return isset( $this->cookies[$key] ) ? $this->cookies[$key] : $default;
+	}
 }
