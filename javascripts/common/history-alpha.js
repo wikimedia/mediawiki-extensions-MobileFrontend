@@ -1,4 +1,5 @@
 ( function( M, $ ) {
+	M.assertMode( [ 'alpha' ] );
 
 	var
 		Page = M.require( 'page' ),

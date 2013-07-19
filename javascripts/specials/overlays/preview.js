@@ -1,4 +1,5 @@
 ( function( M, $ ) {
+	M.assertMode( [ 'beta', 'alpha' ] );
 	var Overlay = M.require( 'Overlay' ),
 		ua = window.navigator.userAgent,
 		device = 'unknown',
