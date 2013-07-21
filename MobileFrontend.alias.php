@@ -80,6 +80,9 @@ $specialPageAliases['it'] = array(
 
 /** Japanese (日本語) */
 $specialPageAliases['ja'] = array(
+	'MobileOptions' => array( '携帯機器オプション' ),
+	'MobileDiff' => array( '携帯機器差分' ),
+	'MobileMenu' => array( '携帯機器メニュー' ),
 	'Nearby' => array( '付近' ),
 );
 
