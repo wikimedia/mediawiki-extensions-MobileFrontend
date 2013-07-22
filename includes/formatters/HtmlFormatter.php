@@ -253,7 +253,9 @@ class HtmlFormatter {
 	private function removeElements( array $elements ) {
 		/** @var $element DOMElement */
 		foreach ( $elements as $element ) {
-			$element->parentNode->removeChild( $element );
+			if ( $element->parentNode ) {
+				$element->parentNode->removeChild( $element );
+			}
 		}
 	}
 
