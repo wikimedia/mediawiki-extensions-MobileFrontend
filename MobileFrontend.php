@@ -113,6 +113,8 @@ $wgHooks['CustomEditor'][] = 'MobileFrontendHooks::onCustomEditor';
 $wgHooks['GetPreferences'][] = 'MobileFrontendHooks::onGetPreferences';
 $wgHooks['Gadgets::allowLegacy'][] = 'MobileFrontendHooks::onAllowLegacyGadgets';
 $wgHooks['UnitTestsList'][] = 'MobileFrontendHooks::onUnitTestsList';
+$wgHooks['CentralAuthLoginRedirectData'][] = 'MobileFrontendHooks::onCentralAuthLoginRedirectData';
+$wgHooks['CentralAuthSilentLoginRedirect'][] = 'MobileFrontendHooks::onCentralAuthSilentLoginRedirect';
 
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';

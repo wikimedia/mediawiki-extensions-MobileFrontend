@@ -504,4 +504,42 @@ class MobileFrontendHooks {
 		$files[] = "$dir/specials/SpecialMobileDiffTest.php";
 		return true;
 	}
+
+	/**
+	 * CentralAuthLoginRedirectData hook handler
+	 * Saves mobile host so that the CentralAuth wiki could redirect back properly
+	 *
+	 * @param $centralUser
+	 * @param $data
+	 *
+	 * @return bool
+	 */
+	public static function onCentralAuthLoginRedirectData( $centralUser, &$data ) {
+		global $wgServer;
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ) {
+			$data['mobileServer'] = $context->getMobileUrl( $wgServer );
+		}
+		return true;
+	}
+
+	/**
+	 * CentralAuthSilentLoginRedirect hook handler
+	 * Points redirects from CentralAuth wiki to mobile domain if user has logged in from it
+	 *
+	 * @param $centralUser
+	 * @param $url
+	 * @param $info
+	 *
+	 * @return bool
+	 */
+	public static function onCentralAuthSilentLoginRedirect( $centralUser, &$url, $info ) {
+		if ( isset( $info['mobileServer'] ) ) {
+			$mobileUrlParsed = wfParseUrl( $info['mobileServer'] );
+			$urlParsed = wfParseUrl( $url );
+			$urlParsed['host'] = $mobileUrlParsed['host'];
+			$url = wfAssembleUrl( $urlParsed );
+		}
+		return true;
+	}
 }
