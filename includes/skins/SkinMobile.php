@@ -243,7 +243,7 @@ class SkinMobile extends SkinMinerva {
 				'href' => $this->getUser()->isLoggedIn() ?
 					$watchTitle->getLocalUrl( $watchlistQuery ) :
 					static::getLoginUrl( array( 'returnto' => $watchTitle ) ),
-				'class' => 'icon-watchlist jsonly',
+				'class' => 'icon-watchlist',
 			),
 			'uploads' => array(
 				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
@@ -395,15 +395,14 @@ HTML;
 			// note welcome=yes in return to query allows us to detect accounts created from the left nav
 			$returntoquery[ 'welcome' ] = 'yes';
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
-			$url = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
-			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
+			$url = static::getLoginUrl( $query );
 			$text = wfMessage( 'mobile-frontend-main-menu-login' )->escaped();
 		}
 		wfProfileOut( __METHOD__ );
 		return array(
 			'text' => $text,
 			'href' => $url,
-			'class' => 'icon-loginout jsonly',
+			'class' => 'icon-loginout',
 		);
 	}
 

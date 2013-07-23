@@ -46,6 +46,16 @@ class SkinMinerva extends SkinTemplate {
 		}
 	}
 
+	/**
+	 * Prepares a url to the Special:UserLogin with query parameters,
+	 * taking into account $wgMFForceSecureLogin
+	 * @param array $query
+	 * @return string
+	 */
+	public static function getLoginUrl( $query ) {
+		return SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
+	}
+
 	public function prepareData( BaseTemplate $tpl ) {
 		global $wgMFEnableSiteNotice;
 		$title = $this->getTitle();
@@ -148,6 +158,7 @@ class SkinMinerva extends SkinTemplate {
 			$menu['watch'] = $watchTemplate;
 			// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
 			$menu['watch']['text'] = '';
+			$menu['watch']['href'] = static::getLoginUrl( array( 'returnto' => $title ) );
 		}
 
 		$tpl->set( 'page_actions', $menu );
