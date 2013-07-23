@@ -414,6 +414,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// LearnMoreOverlay.js, newbie.js
 			'mobile-frontend-photo-ownership-confirm',
+			'cancel',
 
 			// PhotoApi.js
 			'mobile-frontend-photo-article-edit-comment',
