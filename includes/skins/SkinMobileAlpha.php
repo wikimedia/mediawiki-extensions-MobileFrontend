@@ -36,7 +36,6 @@ class SkinMobileAlpha extends SkinMobileBeta {
 
 	protected function prepareTalkLabel( BaseTemplate $tpl ) {
 		$title = $this->getTitle();
-		$user = $this->getUser();
 		$isSpecialPage = $title->isSpecialPage();
 
 		// talk page link for logged in alpha users
