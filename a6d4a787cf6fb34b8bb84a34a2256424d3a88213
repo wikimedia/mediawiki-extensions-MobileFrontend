@@ -16,6 +16,23 @@
       "revId": "a6d4a787cf6fb34b8bb84a34a2256424d3a88213",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9845590_e73302c2",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-23T00:24:59Z",
+      "side": 1,
+      "message": "Ignore my previous review. So why do we still have this here? Why is the code different?",
+      "revId": "a6d4a787cf6fb34b8bb84a34a2256424d3a88213",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
