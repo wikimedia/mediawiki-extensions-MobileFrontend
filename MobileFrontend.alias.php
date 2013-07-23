@@ -32,6 +32,15 @@ $specialPageAliases['ca'] = array(
 	'Nearby' => array( 'A_prop' ),
 );
 
+/** Chechen (нохчийн) */
+$specialPageAliases['ce'] = array(
+	'MobileOptions' => array( 'Мобильни_верси_нисяр' ),
+	'Uploads' => array( 'Чуйохурш' ),
+	'MobileDiff' => array( 'Версеш_муха_ю_хьажар' ),
+	'MobileMenu' => array( 'Мобильни_меню' ),
+	'Nearby' => array( 'Гергахьо' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'MobileOptions' => array( 'Mobile_Optionen' ),
