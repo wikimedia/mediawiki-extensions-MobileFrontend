@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_e7d2225b",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-23T00:20:18Z",
+      "side": 1,
+      "message": "I\u0027m puzzled. How did this work before if we added getLoginUrl() only in this patchset?",
+      "revId": "a6d4a787cf6fb34b8bb84a34a2256424d3a88213",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
