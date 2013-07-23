@@ -221,7 +221,17 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onGetCacheVaryCookies( $out, &$cookies ) {
-		$cookies[] = 'mf_useformat';
+		global $wgMobileUrlTemplate;
+
+		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME; // Enables mobile cookies on wikis w/o mobile domain
+		$cookies[] = 'stopMobileRedirect'; // Don't redirect to mobile if user had explicitly opted out of it
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() || !$wgMobileUrlTemplate ) {
+			$cookies[] = 'optin'; // Alpha/beta cookie
+			$cookies[] = 'disableImages';
+		}
+		// Redirect people who want so from HTTP to HTTPS. Ideally, should be only for HTTP but we don't vary on protocol
+		$cookies[] = 'forceHTTPS';
 		return true;
 	}
 

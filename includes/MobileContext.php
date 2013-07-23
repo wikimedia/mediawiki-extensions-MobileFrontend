@@ -1,9 +1,9 @@
 <?php
 
 class MobileContext extends ContextSource {
+	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	protected $mobileMode;
 	protected $contentFormat = '';
-	protected $useFormatCookieName;
 	protected $disableImages;
 	protected $useFormat;
 	protected $blacklistedPage;
@@ -463,7 +463,7 @@ class MobileContext extends ContextSource {
 	 * @return string|null
 	 */
 	public function getUseFormatCookie() {
-		$useFormatFromCookie = $this->getRequest()->getCookie( $this->getUseFormatCookieName(), '' );
+		$useFormatFromCookie = $this->getRequest()->getCookie( self::USEFORMAT_COOKIE_NAME, '' );
 
 		return $useFormatFromCookie;
 	}
@@ -522,21 +522,15 @@ class MobileContext extends ContextSource {
 	 *
 	 * @param string $cookieFormat
 	 * @param null $expiry
-	 * @param bool $force Whether or not to force the cookie getting set
 	 */
-	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null, $force = false ) {
+	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null ) {
 		global $wgCookiePath, $wgCookieSecure;
-
-		// sanity check before setting the cookie
-		if ( !$this->shouldSetUseFormatCookie() && !$force ) {
-			return;
-		}
 
 		if ( is_null( $expiry ) ) {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 
-		setcookie( $this->getUseFormatCookieName(), $cookieFormat, $expiry, $wgCookiePath,
+		setcookie( self::USEFORMAT_COOKIE_NAME, $cookieFormat, $expiry, $wgCookiePath,
 			$this->getRequest()->getHeader( 'Host' ), $wgCookieSecure );
 		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
 	}
@@ -549,37 +543,6 @@ class MobileContext extends ContextSource {
 		// set expiration date in the past
 		$expire = $this->getUseFormatCookieExpiry( time(), -3600 );
 		$this->setUseFormatCookie( '', $expire, true );
-	}
-
-	public function getUseFormatCookieName() {
-		if ( !isset( $this->useFormatCookieName ) ) {
-			$this->useFormatCookieName = 'mf_mobileFormat';
-		}
-		return $this->useFormatCookieName;
-	}
-
-	/**
-	 * Determine whether or not the requested cookie value should get set
-	 *
-	 * Ignores certain URL patterns, eg initial requests to a mobile-specific
-	 * domain with no path. This is intended to avoid pitfalls for certain
-	 * server configurations, but should not get in the way of
-	 * out-of-the-box configs.
-	 *
-	 * Also will not set cookie if the cookie's value has already been
-	 * appropriately set.
-	 * @return bool
-	 */
-	protected function shouldSetUseFormatCookie() {
-		global $wgScriptPath;
-
-		$reqUrl = $this->getRequest()->getRequestUrl();
-		$urlsToIgnore = array( '/?useformat=mobile', $wgScriptPath . '/?useformat=mobile' );
-		if ( in_array( $reqUrl, $urlsToIgnore ) ) {
-			return false;
-		}
-
-		return true;
 	}
 
 	/**
