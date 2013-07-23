@@ -15,7 +15,7 @@
 			if ( options.languages ) {
 				options.header = mw.msg( 'mobile-frontend-language-header', options.languages.length );
 			}
-			if ( options.variants ) {
+			if ( options.variants && options.variants.length ) {
 				options.variantHeader = mw.msg( 'mobile-frontend-language-header', options.variants.length );
 			}
 			M.emit( 'language-overlay-initialize', options );
