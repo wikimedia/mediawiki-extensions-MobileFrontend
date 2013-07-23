@@ -271,8 +271,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/TalkSectionOverlay.js',
 			'javascripts/modules/talk.js',
 			'javascripts/common/user.js',
-			'javascripts/modules/search-pageimages.js',
-			'javascripts/modules/languages-preferred.js',
+			'javascripts/modules/search/pageImages.js',
+			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbie.js',
 		),
@@ -366,9 +366,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'stylesheets/common/common-js.css',
 			'stylesheets/modules/languages.css',
-			'stylesheets/modules/mf-search.css',
+			'stylesheets/modules/search.css',
 			'stylesheets/modules/mf-references.css',
-			'stylesheets/modules/mf-cleanuptemplates.css',
+			'stylesheets/modules/issues.css',
 			'stylesheets/modules/mf-watchstar.css',
 			'stylesheets/modules/uploads.css',
 			'stylesheets/modules/tutorials.css',
@@ -462,12 +462,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle.js',
-			'javascripts/modules/mf-cleanuptemplates.js',
-			'javascripts/modules/languages.js',
+			'javascripts/modules/issues/issues.js',
+			'javascripts/modules/languages/languages.js',
 			'javascripts/modules/mf-last-modified.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
-			'javascripts/modules/search-2.js',
+			'javascripts/modules/search/search.js',
 			'javascripts/modules/mf-watchstar.js',
 			'javascripts/modules/mf-references.js'
 		),
@@ -477,7 +477,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
 
-			// mf-cleanuptemplates.js
+			// issues.js
 			'mobile-frontend-meta-data-issues',
 			'mobile-frontend-meta-data-issues-header',
 
