@@ -34,7 +34,7 @@
 					action: action,
 					section: this.sectionId,
 					namespace: mw.config.get( 'wgNamespaceNumber' ),
-					userEditCount: mw.config.get( 'wgUserEditCount' ),
+					userEditCount: parseInt( mw.config.get( 'wgUserEditCount' ), 10 ),
 					isTestA: isTestA,
 					pageId: mw.config.get( 'wgArticleId' ),
 					username: mw.config.get( 'wgUserName' ),
