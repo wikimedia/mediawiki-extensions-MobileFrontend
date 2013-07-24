@@ -83,7 +83,8 @@
 					options.section = self.sectionId;
 				}
 
-				self.post( options ).done( function( data ) {
+				// FIXME: possibly M.getApiUrl() should already return URL with ?useformat=mobile by default?
+				self.post( options, { url: M.getApiUrl() + '?useformat=mobile' } ).done( function( data ) {
 					if ( data && data.error ) {
 						result.reject( data.error.code );
 					} else {
