@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_9f629340",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2013-07-24T18:38:30Z",
+      "side": 1,
+      "message": "Where is this constant defined?",
+      "revId": "e4ca95f945ae1e18c67da20098bf098d98b3b8b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_df5c1b7e",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2013-07-24T18:38:30Z",
+      "side": 1,
+      "message": "Function could use better comments (such as what \u0027optin\u0027 is for). And why does it not have an mf_ prefix or something. I\u0027m not terribly familiar with this code of course.",
+      "revId": "e4ca95f945ae1e18c67da20098bf098d98b3b8b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_ff88ffea",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2013-07-24T18:38:30Z",
+      "side": 1,
+      "message": "Why not just store the host here?",
+      "revId": "e4ca95f945ae1e18c67da20098bf098d98b3b8b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
