@@ -2,6 +2,8 @@
 
 	var EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
 		popup = M.require( 'notifications' ),
+		// FIXME: Disable on IE < 10 for time being
+		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			returnToQuery: 'article_action=edit',
@@ -57,7 +59,7 @@
 		} );
 	}
 
-	if ( mw.config.get( 'wgIsPageEditable' ) && M.router.isSupported() ) {
+	if ( mw.config.get( 'wgIsPageEditable' ) && M.router.isSupported() && !blacklisted ) {
 		if ( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) {
 			init();
 		} else {
