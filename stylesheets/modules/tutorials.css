@@ -46,13 +46,16 @@
   background-color: white;
   color: #006398;
   padding: 12px;
+  border: none;
   font-weight: bold;
-  border-radius: 0;
 }
 .tutorial .slide .cancel {
   background: none;
   color: white;
 }
-.tutorial .slide-image {
+.tutorial .photo-upload {
   background-image: url(images/tutorials/photos.png);
+}
+.tutorial .editing {
+  padding-top: 20px;
 }

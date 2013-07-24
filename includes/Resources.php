@@ -291,6 +291,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// newbie.js
 			'mobile-frontend-lead-image-tutorial-summary',
+			'mobile-frontend-lead-image-tutorial-confirm',
+			'mobile-frontend-editor-tutorial-summary',
+			'mobile-frontend-editor-tutorial-confirm',
 
 			// for talk.js
 			'mobile-frontend-talk-explained',

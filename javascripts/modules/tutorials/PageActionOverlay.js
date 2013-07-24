@@ -7,18 +7,23 @@
 	PageActionOverlay = ContentOverlay.extend( {
 		template: M.template.get( 'pageActionTutorial' ),
 		defaults: {
-			summary: mw.msg( 'mobile-frontend-lead-image-tutorial-summary' ),
-			cancelMsg: mw.msg( 'cancel' )
+			cancelMsg: mw.msg( 'cancel' ),
+			className: 'slide active'
 		}
 	} );
 
 	LeadPhotoTutorialOverlay = PageActionOverlay.extend( {
 		template: M.template.get( 'pageActionTutorial' ),
+		defaults: {
+			className: 'slide active photo-upload',
+			summary: mw.msg( 'mobile-frontend-lead-image-tutorial-summary' ),
+			cancelMsg: mw.msg( 'cancel' )
+		},
 		postRender: function( options ) {
 			this._super( options );
 			new LeadPhotoUploaderButton( {
 				el: this.$( '.button' ),
-				label: 'Start uploading',
+				label: mw.msg( 'mobile-frontend-lead-image-tutorial-confirm' ),
 				pageTitle: mw.config.get( 'wgTitle' ), insertInPage: true } );
 		}
 	} );

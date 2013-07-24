@@ -230,7 +230,7 @@ $messages['en'] = array (
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Yes!''' Photos that can help illustrate and enrich {{SITENAME}} pages.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''No.''' Photos of movie posters, book covers or other copyrighted material. These will be deleted.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Ensure that your image can help illustrate the page. It should be an image that you created which does not violate copyright.',
-	'mobile-frontend-lead-image-tutorial-go' => 'Start uploading',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Start uploading',
 	'mobile-frontend-image-uploading-wait' => 'Uploading image, please wait.',
 	'mobile-frontend-image-uploading-long' => 'Image still uploading! Thanks for your patience.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Cancel</a> if this is taking too long.',
@@ -267,6 +267,8 @@ $messages['en'] = array (
 	'mobile-frontend-editor-error-loading' => 'Error, can\'t load section.',
 	'mobile-frontend-editor-preview-header' => 'Preview',
 	'mobile-frontend-editor-error-preview' => 'Error, something unexpected happened upon loading the preview. Please close and try again.',
+	'mobile-frontend-editor-tutorial-summary' => "Don't be scared of markup. Try improving the $1 page.",
+	'mobile-frontend-editor-tutorial-confirm' => 'Start editing',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -659,7 +661,7 @@ They can either exit the page and lose them or stay on the page until they are c
 	'mobile-frontend-photo-nag-learn-more-2' => 'Explain to users that the image they upload should be a good illustration for an article.',
 	'mobile-frontend-photo-nag-learn-more-3' => "Explain to users that the image can't violate copyrights or else it will be deleted.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Briefly summarise that a lead image should illustrate the page whilst not violating copyright. Shown to new users after logging in',
-	'mobile-frontend-lead-image-tutorial-go' => 'Call to action that when clicked starts uploading an image to a page from tutorial.',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Call to action that when clicked starts uploading an image to a page from tutorial.',
 	'mobile-frontend-image-uploading-wait' => 'Text that displays whilst an image is being uploaded',
 	'mobile-frontend-image-uploading-long' => 'Text that displays whilst an image is taking long to upload',
 	'mobile-frontend-image-uploading-cancel' => 'Text saying that user can cancel the image upload. Word "cancel" should be a link.',
@@ -726,6 +728,8 @@ Used as "toast" error message.',
 	'mobile-frontend-editor-preview-header' => 'A header explaining that user is viewing a preview of the changes they made in the editor.
 {{Identical|Preview}}',
 	'mobile-frontend-editor-error-preview' => 'Error message for when a preview fails to load for an unknown reason',
+	'mobile-frontend-editor-tutorial-summary' => 'Text for tutorial overlay presented to a user the first time they try to edit a page. $1 is the title of the page.',
+	'mobile-frontend-editor-tutorial-confirm' => 'Text for the button a user clicks after they have read the editing tutorial and are ready to edit the page.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:
