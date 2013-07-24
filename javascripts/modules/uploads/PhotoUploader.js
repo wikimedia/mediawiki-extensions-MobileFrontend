@@ -262,7 +262,7 @@
 			var self = this;
 			this._super( options );
 			this.on( 'start', function() {
-					self.$el.hide();
+					self.$el.removeClass( 'enabled' );
 				} ).
 				on( 'success', function( data ) {
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
@@ -277,7 +277,7 @@
 					} ).prependTo( '#content_0' );
 				} ).
 				on( 'error cancel', function() {
-					self.$el.show();
+					self.$el.addClass( 'enabled' );
 				} );
 		}
 	} );
