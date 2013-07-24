@@ -73,6 +73,12 @@
   margin-right: 19px;
   background-image: url(images/pagemenu/upload-locked.png);
 }
+#ca-upload input {
+  display: none;
+}
 #ca-upload.enabled {
   background-image: url(images/pagemenu/upload.png);
+}
+#ca-upload.enabled input {
+  display: inline-block;
 }
