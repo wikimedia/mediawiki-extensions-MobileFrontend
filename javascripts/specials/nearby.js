@@ -144,10 +144,10 @@ $( function() {
 	}
 
 	if ( $userBtn.length ) {
-		$( '<ul id="mw-mf-menu-page">' ).insertAfter( $userBtn );
 		$userBtn.remove();
 	}
-	btn = $( '<li><button class="refresh">refresh</button></li>' ).on( 'click', refresh ).appendTo( '#mw-mf-menu-page' );
+	// FIXME: i18n
+	btn = $( '<button class="refresh">' ).on( 'click', refresh ).appendTo( '.header' );
 } );
 
 M.define( 'nearby', {

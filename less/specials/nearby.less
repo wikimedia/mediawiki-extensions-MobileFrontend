@@ -28,6 +28,7 @@ ul.a-to-z {
 	}
 }
 
+// FIXME: has to be button to have precendence over button styling. Would be nice to be just .refresh
 button.refresh {
 	background: rgba(0, 0, 0, 0) url(images/refresh.png) no-repeat center center;
 	margin: 0;
@@ -37,6 +38,9 @@ button.refresh {
 	height: @headerHeight;
 	background-size: 24px 25px;
 	border: none;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 .client-js {

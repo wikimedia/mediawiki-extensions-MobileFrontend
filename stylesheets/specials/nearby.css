@@ -35,6 +35,9 @@ button.refresh {
   height: 46px;
   background-size: 24px 25px;
   border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .client-js .noscript {
   display: none;
