@@ -5,6 +5,6 @@ class SearchPage
   text_field(:search_box2, name: 'search', index: 1)
   li(:search_results, title: 'San Francisco')
   a(:search_result) do |page|
-    page.search_results_element.a
+    page.search_results_element.element.a
   end
 end
