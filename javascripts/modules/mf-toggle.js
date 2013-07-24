@@ -59,5 +59,15 @@ M.define( 'toggle', toggle );
 M.on( 'page-loaded', function() {
 	toggle.enable();
 } );
+// FIXME: Temporary workaround while toggle-dynamic is not in stable
+if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+	M.on( 'section-toggle', function( section_id ) {
+		var $content = $( '#content_' + section_id ),
+			content = $content.data( 'content' );
+		if ( content ) {
+			$content.html( content ).data( 'content', false );
+		}
+	} );
+}
 
 }( mw.mobileFrontend, jQuery ) );
