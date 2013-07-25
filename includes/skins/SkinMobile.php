@@ -4,10 +4,6 @@ class SkinMobile extends SkinMinerva {
 	public $skinname = 'mobile';
 	public $template = 'MobileTemplate';
 
-	/**
-	 * @var ExtMobileFrontend
-	 */
-	protected $extMobileFrontend;
 	protected $hookOptions;
 	protected $mode = 'stable';
 
@@ -18,9 +14,8 @@ class SkinMobile extends SkinMinerva {
 		return $this->mode;
 	}
 
-	public function __construct( ExtMobileFrontend $extMobileFrontend ) {
-		$this->setContext( $extMobileFrontend );
-		$this->extMobileFrontend = $extMobileFrontend;
+	public function __construct( IContextSource $context ) {
+		$this->setContext( $context );
 		$this->addPageClass( 'mobile' );
 		$this->addPageClass( $this->getMode() );
 	}
@@ -41,7 +36,7 @@ class SkinMobile extends SkinMinerva {
 				$this->hookOptions = $options;
 			}
 		}
-		$html = $this->extMobileFrontend->DOMParse( $out );
+		$html = ExtMobileFrontend::DOMParse( $out );
 
 		wfProfileIn( __METHOD__  . '-tpl' );
 		$tpl = $this->prepareTemplate();

@@ -121,9 +121,7 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgExtMobileFrontend, $wgMFNearby, $wgSpecialPages;
-
-	$wgExtMobileFrontend = new ExtMobileFrontend( RequestContext::getMain() );
+	global $wgMFNearby, $wgSpecialPages;
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
@@ -221,11 +219,6 @@ $wgMobileUrlTemplate = '';
  * If this value is not set, it will default to $wgCookieExpiration
  */
 $wgMobileFrontendFormatCookieExpiry = null;
-
-/**
- * @var ExtMobileFrontend $wgExtMobileFrontend
- */
-$wgExtMobileFrontend = null;
 
 /**
  * Make the classes, tags and ids stripped from page content configurable.
