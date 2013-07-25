@@ -654,6 +654,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.watchlist.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
 		'scripts' => array(
+			'javascripts/loggingSchemas/watchlist.js',
 			'javascripts/specials/watchlist.js',
 		),
 	),
@@ -713,6 +714,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 			'stylesheets/specials/watchlist.css',
 			'stylesheets/specials/mobilediff.css',
+		),
+	),
+
+	'mobile.mobilediff.scripts' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/loggingSchemas/watchlist.js',
+			'javascripts/specials/mobilediff.js',
 		),
 	),
 

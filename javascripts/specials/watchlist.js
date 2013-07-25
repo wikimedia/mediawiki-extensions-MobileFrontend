@@ -1,5 +1,6 @@
 ( function( M, $ ) {
-	var star = M.require( 'watchstar' );
+	var star = M.require( 'watchstar' ),
+		schema = M.require( 'loggingSchemas/watchlist' );
 
 	function init() {
 		var $watchlist = $( 'ul.page-list' );
@@ -11,6 +12,16 @@
 				$.cookie( 'mwUploadsFunnel', 'watchlist', { expires: new Date( new Date().getTime() + 60000 ) } );
 			} );
 		}
+
+		// Register EventLogging events
+		schema.hijackLink( '.header .button-bar a', 'switch' );
+		schema.hijackLink( '.mw-mf-watchlist-selector a', 'filter' );
+		schema.hijackLink( '.page-list .title', 'view' );
+		schema.hijackLink( '.more', 'more' );
+
+		M.on( 'watch', function( isWatched ) {
+			schema.log( isWatched ? 'unwatch' : 'watch' );
+		} );
 	}
 
 	$( function() {
