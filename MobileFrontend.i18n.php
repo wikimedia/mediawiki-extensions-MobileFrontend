@@ -196,6 +196,8 @@ $messages['en'] = array (
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} removed',
 	'mobile-frontend-diffview-explained' => 'The following lines were added (+) and removed (-):',
 
+	'mobile-frontend-thanked-notice' => "$1 was told that you liked {{GENDER:$2|his|her|their}} edit.",
+
 	// tables
 	'mobile-frontend-table' => 'Table $1',
 	// confirm exit
@@ -616,6 +618,9 @@ Parameters:
 Parameters:
 * $1 - byte count; may use PLURAL',
 	'mobile-frontend-diffview-explained' => 'Explains the diff view importantly signaling that a "+" symbol means added and a "-" symbol means removed',
+	'mobile-frontend-thanked-notice' => 'Pop-up message that is displayed after a user has thanked another user for their edit. Parameters:
+* $1 - the username of the user that was thanked
+* $2 - the gender of the user that was thanked',
 	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. Parameters:
 * $1 - a unique table number for the article',
 	'mobile-frontend-saving-exit-page' => 'When a user makes an edit in the page which is happening in the background
