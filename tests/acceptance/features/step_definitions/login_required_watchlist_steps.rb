@@ -4,5 +4,5 @@ When /^I select Watchlist$/ do
 end
 
 Then /^I receive watchlist message (.+)$/ do |text|
-  on(RandomPage).login_text_wl_element.when_present.text.should == text
+  on(RandomPage).login_text_wl_element.when_present.text.should match text
 end

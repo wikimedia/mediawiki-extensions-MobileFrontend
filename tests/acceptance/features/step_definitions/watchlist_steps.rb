@@ -62,7 +62,7 @@ Then /^the article no longer has the watchlist icon selected$/ do
 end
 
 When /^I click Login$/ do
-  on(HomePage).login
+  on(HomePage).login_watchlist_element.when_present.click
 end
 
 Then /^Login page opens$/ do
@@ -72,7 +72,7 @@ Then /^Login page opens$/ do
 end
 
 When /^I click Sign up$/ do
-  on(HomePage).sign_up
+  on(HomePage).sign_up_watchlist_element.when_present.click
 end
 
 Then /^Sign up page opens$/ do
