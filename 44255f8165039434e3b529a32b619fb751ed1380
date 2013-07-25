@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_348a86c1",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T20:35:12Z",
+      "side": 1,
+      "message": "Originally Maryana wanted \"Username was told that you liked her edit\", but we don\u0027t have easy access to the recipient\u0027s gender from the client side. I could hack in support for it if you think it\u0027s worth it.",
+      "parentUuid": "a989e1a9_547c6a1c",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_74796e2b",
         "filename": "includes/Resources.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-07-25T18:07:20Z",
       "side": 1,
       "message": "I wonder if we should give this a more generic name and not tie it to Special:MobileDiff since I imagine we might use it elsewhere.\n\nMy suggestion would be to put the file in:\njavascripts/modules/thanks.js\n\nand call the module\nmobile.thanks",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_74940ee1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T20:35:12Z",
+      "side": 1,
+      "message": "Good idear.",
+      "parentUuid": "a989e1a9_74796e2b",
       "revId": "44255f8165039434e3b529a32b619fb751ed1380",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_54870ab8",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 724,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T20:35:12Z",
+      "side": 1,
+      "message": "OK :)",
+      "parentUuid": "a989e1a9_9476f23a",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_d4907a44",
         "filename": "includes/specials/SpecialMobileDiff.php",
         "patchSetId": 3
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_2b8a241a",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T20:35:12Z",
+      "side": 1,
+      "message": "The main reason it\u0027s not a button is because I have no design for a button and Maryana suggested keeping it as simple as possible until we decide it\u0027s a feature we actually want to implement (rather than just a feature experiment). I\u0027m open to making it a button, but I would want a mock-up so I don\u0027t have to redo it 5 times.\n\nRegarding the whitespace: It seems some people at the Foundation prefer keeping code neat and readable by using one-off variables, while others are militantly opposed to ever having single-use variables. I really hate having to switch back and forth between the two styles depending on who\u0027s reviewing my code. Are single-use variables acceptable to all the mobile developers?",
+      "parentUuid": "a989e1a9_d4907a44",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_74f5ee7f",
         "filename": "includes/specials/SpecialMobileDiff.php",
         "patchSetId": 3
@@ -81,6 +153,24 @@
       "writtenOn": "2013-07-25T18:07:20Z",
       "side": 1,
       "message": "can we not use an id here to make this a more reusable component?",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_6b7c2c1d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T20:35:12Z",
+      "side": 1,
+      "message": "I assume you mean class.",
+      "parentUuid": "a989e1a9_74f5ee7f",
       "revId": "44255f8165039434e3b529a32b619fb751ed1380",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
