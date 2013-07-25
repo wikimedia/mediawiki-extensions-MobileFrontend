@@ -208,14 +208,11 @@ class MobileContextTest extends MediaWikiTestCase {
 			array( false, null, array() ),
 			array( true, 'yes', array() ),
 			array( true, 'no', array() ),
-			array( false, 'yes', array( 'action' => 'edit' ) ),
 			array( false, 'yes', array( 'useformat' => 'desktop' ) ),
 			array( true, null, array( 'useformat' => 'mobile-wap' ) ),
-			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'edit' ) ),
 			array( false, null, array( 'useformat' => 'mobile-wap', 'action' => 'history' ) ),
 			array( false, null, array( 'useformat' => 'desktop' ) ),
 			array( true, null, array( 'useformat' => 'mobile' ) ),
-			array( false, null, array( 'useformat' => 'mobile', 'action' => 'edit' ) ),
 			array( false, null, array( 'useformat' => 'mobile', 'action' => 'history' ) ),
 		);
 	}
