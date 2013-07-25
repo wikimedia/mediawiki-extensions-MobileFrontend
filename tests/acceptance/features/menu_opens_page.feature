@@ -1,5 +1,8 @@
 Feature: Menus open correct page
-
+  
+  Background:
+    Given I am on the home page
+    
   Scenario: Home URL is set correctly
     When I click on Home from the left Nav
     Then my URL should be set to the Home Page
