@@ -415,17 +415,33 @@ class MobileFrontendHooks {
 		global $wgMFEnableXAnalyticsLogging;
 		wfProfileIn( __METHOD__ );
 
-		if ( !$wgMFEnableXAnalyticsLogging ) {
+		$context = MobileContext::singleton();
+		if ( !$context->shouldDisplayMobileView() ) {
+			wfProfileOut( __METHOD__);
 			return true;
 		}
 
 		// Set X-Analytics HTTP response header if necessary
-		$context = MobileContext::singleton();
-		$analyticsHeader = $context->getXAnalyticsHeader();
-		if ( $analyticsHeader ) {
-			$resp = $out->getRequest()->response();
-			$resp->header( $analyticsHeader );
+		if ( $wgMFEnableXAnalyticsLogging ) {
+			$analyticsHeader = $context->getXAnalyticsHeader();
+			if ( $analyticsHeader ) {
+				$resp = $out->getRequest()->response();
+				$resp->header( $analyticsHeader );
+			}
 		}
+
+		$request = $context->getRequest();
+		$xWap = $request->getHeader( 'X-WAP' );
+		if ( $xWap ) {
+			$out->addVaryHeader( 'X-WAP' );
+			$request->response()->header( "X-WAP: $xWap" );
+		}
+		$out->addVaryHeader( 'Cookie' );
+		// @todo: these should be set by Zero
+		$out->addVaryHeader( 'X-CS' );
+		$out->addVaryHeader( 'X-Subdomain' );
+		$out->addVaryHeader( 'X-Images' );
+
 
 		wfProfileOut( __METHOD__ );
 		return true;
@@ -498,6 +514,7 @@ class MobileFrontendHooks {
 		$files[] = "$dir/MobileContextTest.php";
 		$files[] = "$dir/MobileFormatterTest.php";
 		$files[] = "$dir/MobileFrontendTest.php";
+		$files[] = "$dir/MobileFrontendHooksTest.php";
 		$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
 
 		// special page tests

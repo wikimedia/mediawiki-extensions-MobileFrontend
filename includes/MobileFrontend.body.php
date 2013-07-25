@@ -6,23 +6,6 @@ class ExtMobileFrontend extends ContextSource {
 		$this->setContext( $context );
 	}
 
-	private function sendHeaders() {
-		wfProfileIn( __METHOD__ );
-		$out = $this->getOutput();
-		$request = $this->getRequest();
-		$xWap = $request->getHeader( 'X-WAP' );
-		if ( $xWap ) {
-			$out->addVaryHeader( 'X-WAP' );
-			$request->response()->header( "X-WAP: $xWap" );
-		}
-		$out->addVaryHeader( 'Cookie' );
-		// @todo: these should be set by Zero
-		$out->addVaryHeader( 'X-CS' );
-		$out->addVaryHeader( 'X-Subdomain' );
-		$out->addVaryHeader( 'X-Images' );
-		wfProfileOut( __METHOD__ );
-	}
-
 	/**
 	 * @param OutputPage $out
 	 *
@@ -30,8 +13,6 @@ class ExtMobileFrontend extends ContextSource {
 	 */
 	public function DOMParse( OutputPage $out ) {
 		wfProfileIn( __METHOD__ );
-
-		$this->sendHeaders();
 
 		$html = $out->getHTML();
 

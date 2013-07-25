@@ -25,15 +25,6 @@ class ExtMobileFrontendTest extends MediaWikiTestCase {
 		MobileContext::setInstance( null ); // refresh it
 	}
 
-	public function testSendHeaders() {
-		global $wgExtMobileFrontend;
-		$sendHeaders = self::getMethod( 'sendHeaders' );
-		MobileContext::singleton()->getRequest()->setHeader( 'X-WAP', 'yessir!' );
-		$sendHeaders->invokeArgs( $wgExtMobileFrontend, array() );
-		$this->assertEquals( 'yessir!', MobileContext::singleton()->getRequest()->
-			response()->getheader( 'X-WAP' ) );
-	}
-
 	/**
 	 * @outputBuffering enabled
 	 */
