@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_7446cec4",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T18:09:56Z",
+      "side": 1,
+      "message": "Per coding conventions, all new methods need to at least define their return value with Doxygen-style comments.\n\nhttp://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Comments_and_documentation",
+      "revId": "c9e96e668993d2aa0190ff99619e845a0a33b2ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_b4277620",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T18:09:56Z",
+      "side": 1,
+      "message": "There is no expandSections member variable.",
+      "revId": "c9e96e668993d2aa0190ff99619e845a0a33b2ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
