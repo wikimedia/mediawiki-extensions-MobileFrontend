@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_547c6a1c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "Seems a little mechanical. Not a blocker but can\u0027t we say something nicer?\n(One to ask Maryana)",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_74796e2b",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 719,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "I wonder if we should give this a more generic name and not tie it to Special:MobileDiff since I imagine we might use it elsewhere.\n\nMy suggestion would be to put the file in:\njavascripts/modules/thanks.js\n\nand call the module\nmobile.thanks",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_9476f23a",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 724,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "I believe we are trying to enforce camel case names from now on in all our files - Juliusz put this in the README DAMMIT!!! :D",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_d4907a44",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "Please make this a button - it\u0027s not a link thus we shouldn\u0027t allow right clicking / holding down on it.\n\nminor moan about whitespace here\nHtml::element( \u0027button\u0027, $attrs, $text ) would be my preference (then set those variables above)",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_74f5ee7f",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "can we not use an id here to make this a more reusable component?",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_94f27297",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "if this is a button it is not needed.",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_d42cfa04",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "Are this needed? currently we only have one tool so it seems premature to wrap these.\n\nInstead I\u0027d suggest adding a tool class to the button and just adding the styling there.",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_94a7d2a9",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "switch round M and $ - we tend to follow this order (the majority of the time)",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_74aa4e74",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "use $( function() { we do this everywhere else.",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_b4b4d6d3",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "instead of setting variable here I\u0027d set it inside click statement\nvar $self \u003d $( this ); - just feels cleaner\n\nCould we also not use an id here and use a class - this will make it more generic in future if we ever wanted to have multiple thank buttons on a page - seems more future proof.",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_34c9a65c",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "I\u0027d abstract this into a separate function to make it easier to test and to avoid all the nested functions.\n\nfunction thankUser( from, to ) {\n\n}",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_d4b95aca",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-25T18:07:20Z",
+      "side": 1,
+      "message": "Would be nicer instead of using a selector here to tie it to the button itself in a data attribute - this way it is more reusable in future.",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
