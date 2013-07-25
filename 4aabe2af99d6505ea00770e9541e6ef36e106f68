@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_347fe613",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-25T17:29:59Z",
+      "side": 1,
+      "message": "I imagine something is supposed to go here like:\nwfIncrStats( \u0027mobile.opt_in_cookie_unset\u0027 );",
+      "revId": "4aabe2af99d6505ea00770e9541e6ef36e106f68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
