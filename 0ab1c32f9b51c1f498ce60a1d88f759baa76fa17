@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_f1e9061d",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-26T22:13:43Z",
+      "side": 1,
+      "message": "Can we rename this to $mode or $mobileMode? That\u0027s the name we\u0027ve been using in JS (mw.config.get(\u0027wgMFMode\u0027)) and event logging schemas (e.g. http://meta.wikimedia.org/wiki/Schema:MobileWebEditing).",
+      "revId": "0ab1c32f9b51c1f498ce60a1d88f759baa76fa17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
