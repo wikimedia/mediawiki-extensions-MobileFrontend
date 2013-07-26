@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_77c6cb4d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-26T16:58:28Z",
+      "side": 1,
+      "message": "I\u0027ll add in the recipient\u0027s gender in a data attr, and change it to the earlier version.",
+      "parentUuid": "a989e1a9_547c6a1c",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_74796e2b",
         "filename": "includes/Resources.php",
         "patchSetId": 3
