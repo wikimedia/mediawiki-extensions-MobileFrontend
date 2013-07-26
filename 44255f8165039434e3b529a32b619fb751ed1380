@@ -228,6 +228,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_17af3f7f",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-26T16:53:51Z",
+      "side": 1,
+      "message": "OK",
+      "parentUuid": "a989e1a9_94a7d2a9",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_74aa4e74",
         "filename": "javascripts/specials/mobilediff-thanks.js",
         "patchSetId": 3
@@ -239,6 +257,24 @@
       "writtenOn": "2013-07-25T18:07:20Z",
       "side": 1,
       "message": "use $( function() { we do this everywhere else.",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_d7b4f7d4",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-26T16:53:51Z",
+      "side": 1,
+      "message": "Will change.",
+      "parentUuid": "a989e1a9_74aa4e74",
       "revId": "44255f8165039434e3b529a32b619fb751ed1380",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -262,6 +298,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_97aa6f71",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-26T16:53:51Z",
+      "side": 1,
+      "message": "Argeed.",
+      "parentUuid": "a989e1a9_b4b4d6d3",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_34c9a65c",
         "filename": "javascripts/specials/mobilediff-thanks.js",
         "patchSetId": 3
@@ -279,6 +333,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_779deb53",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-26T16:53:51Z",
+      "side": 1,
+      "message": "Will do.",
+      "parentUuid": "a989e1a9_34c9a65c",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_d4b95aca",
         "filename": "javascripts/specials/mobilediff-thanks.js",
         "patchSetId": 3
@@ -290,6 +362,24 @@
       "writtenOn": "2013-07-25T18:07:20Z",
       "side": 1,
       "message": "Would be nicer instead of using a selector here to tie it to the button itself in a data attribute - this way it is more reusable in future.",
+      "revId": "44255f8165039434e3b529a32b619fb751ed1380",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_57a0e794",
+        "filename": "javascripts/specials/mobilediff-thanks.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-26T16:53:51Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "a989e1a9_d4b95aca",
       "revId": "44255f8165039434e3b529a32b619fb751ed1380",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
