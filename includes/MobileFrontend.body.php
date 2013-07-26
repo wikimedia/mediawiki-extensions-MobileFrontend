@@ -25,8 +25,10 @@ class ExtMobileFrontend extends ContextSource {
 		wfRunHooks( 'MobileFrontendBeforeDOM', array( $context, $formatter ) );
 
 		wfProfileIn( __METHOD__ . '-filter' );
+		$specialPage = $out->getTitle()->isSpecialPage();
 		if ( $context->getContentTransformations() ) {
-			$formatter->filterContent();
+			// Remove images if they're disabled from special pages, but don't transform otherwise
+			$formatter->filterContent( /* remove defaults */ !$specialPage );
 		}
 		wfProfileOut( __METHOD__ . '-filter' );
 

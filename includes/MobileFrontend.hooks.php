@@ -313,12 +313,22 @@ class MobileFrontendHooks {
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
 		global $wgMFForceSecureLogin;
 		$mobileContext = MobileContext::singleton();
-		if ( $special->getName() != 'Userlogin' || !$mobileContext->shouldDisplayMobileView() ) {
+		$isMobileView = $mobileContext->shouldDisplayMobileView();
+		if ( $special->getName() != 'Userlogin' || !$isMobileView ) {
 			// no further processing necessary
 			return true;
 		}
 
 		$out = $special->getContext()->getOutput();
+		if ( $special->getName() === 'Search' ) {
+			$out->addModuleStyles( 'mobile.search.styles' );
+		}
+
+		// go no further if we're not dealing with the login page
+		if ( $special->getName() != 'Userlogin' ) {
+			return true;
+		}
+
 		$out->addModuleStyles( 'mobile.userlogin.styles' );
 
 		// make sure we're on https if we're supposed to be and currently aren't.

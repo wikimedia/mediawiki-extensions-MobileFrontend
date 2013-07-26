@@ -17,9 +17,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 
 	private $defaultItemsToRemove = array(
 		'.toc',
-		'#search', // remove search form element from Special:Search
 		'div.magnify',
-		'.mw-search-createlink',
 		'.nomobile',
 	);
 
@@ -50,6 +48,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		$title = $context->getTitle();
 		$isMainPage = $title->isMainPage();
 		$isFilePage = $title->inNamespace( NS_FILE );
+		$isSpecialPage = $title->isSpecialPage();
 
 		$html = self::wrapHTML( $html );
 		if ( $context->getContentFormat() === 'WML' ) {
@@ -57,7 +56,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 			$formatter = new MobileFormatterWML( $html, $title, $wmlContext );
 		} else {
 			$formatter = new MobileFormatterHTML( $html, $title );
-			$formatter->enableExpandableSections( !$isMainPage );
+			$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
 		}
 
 		if ( $context->isBetaGroupMember() ) {

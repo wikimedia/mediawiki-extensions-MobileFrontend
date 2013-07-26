@@ -19,3 +19,7 @@
   width: 100%;
   margin-left: 12px;
 }
+.mw-search-createlink,
+#search {
+  display: none;
+}
