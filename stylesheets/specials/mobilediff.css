@@ -75,6 +75,10 @@
   padding-bottom: 1em;
   font-style: italic;
 }
+#mw-mf-diffview .mw-mf-diff-tool {
+  display: inline-block;
+  margin-left: 0.5em;
+}
 #mw-mf-diffview #mw-mf-userinfo {
   min-height: 5em;
   padding: 1em;
@@ -165,4 +169,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+.mw-mf-thank-button {
+  float: right;
 }

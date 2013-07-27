@@ -715,4 +715,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/specials/mobilediffBeta.js',
 		),
 	),
+
+	'mobile.thanks' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.beta.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/thanks.js',
+		),
+		'messages' => array(
+			'thanks-thank',
+			'thanks-thanked',
+			'thanks-error-invalidrevision',
+			'thanks-error-ratelimited',
+			'thanks-error-undefined',
+			'mobile-frontend-thanked-notice',
+		)
+	),
 ) );

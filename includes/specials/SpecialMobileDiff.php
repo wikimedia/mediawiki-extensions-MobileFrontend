@@ -8,6 +8,8 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 	private $prevRev;
 	/** @var Title */
 	private $targetTitle;
+	/** @var boolean */
+	private $useThanks = false;
 
 	public function __construct() {
 		parent::__construct( 'MobileDiff' );
@@ -68,6 +70,15 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 		$output = $this->getOutput();
 		if ( $ctx->isBetaGroupMember() ) {
 			$output->addModules( 'mobile.mobilediff.scripts.beta' );
+			// If the Echo and Thanks extensions are installed and the user is
+			// logged in, show a 'Thank' link.
+			if ( class_exists( 'EchoNotifier' )
+				&& class_exists( 'ApiThank' )
+				&& $this->getUser()->isLoggedIn()
+			) {
+				$this->useThanks = true;
+				$output->addModules( 'mobile.thanks' );
+			}
 		}
 
 		// @FIXME add full support for git-style notation (eg ...123, 123...)
@@ -207,9 +218,19 @@ class SpecialMobileDiff extends UnlistedSpecialMobilePage {
 		if ( $userId ) {
 			$user = User::newFromId( $userId );
 			$edits = $user->getEditCount();
+			$attrs = array(
+				'class' => 'mw-mf-user',
+				'data-revision-id' => $this->revId,
+				'data-user-name' => $user->getName(),
+				'data-user-gender' => $user->getOption( 'gender' ),
+			);
 			$output->addHtml(
-				'<div class="mw-mf-user">' .
-					Linker::link( $user->getUserPage(), htmlspecialchars( $user->getName() ) ) .
+				Html::openElement( 'div', $attrs ) .
+				Linker::link(
+					$user->getUserPage(),
+					htmlspecialchars( $user->getName() ),
+					array( 'class' => 'mw-mf-user-link' )
+				) .
 				'</div>' .
 				'<div class="mw-mf-roles">' .
 					$this->listGroups( $user ) .
