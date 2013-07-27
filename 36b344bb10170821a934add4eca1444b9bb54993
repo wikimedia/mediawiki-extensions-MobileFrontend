@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_d1d96220",
+        "filename": "javascripts/modules/thanks.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-27T00:21:37Z",
+      "side": 1,
+      "message": "Is that used anywhere? If not, I\u0027d get rid of d altogether.",
+      "revId": "36b344bb10170821a934add4eca1444b9bb54993",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_51063287",
+        "filename": "less/specials/mobilediff.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-27T00:21:37Z",
+      "side": 1,
+      "message": "Could be scoped and not prefixed? ;)",
+      "revId": "36b344bb10170821a934add4eca1444b9bb54993",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
