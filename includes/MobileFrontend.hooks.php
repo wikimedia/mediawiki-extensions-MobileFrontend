@@ -41,7 +41,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgMFEnableDesktopResources, $wgExtMobileFrontend, $wgMFDefaultSkinClass;
+		global $wgMFEnableDesktopResources, $wgMFDefaultSkinClass;
 
 		// check whether or not the user has requested to toggle their view
 		$mobileContext = MobileContext::singleton();
@@ -77,7 +77,7 @@ class MobileFrontendHooks {
 
 		if ( $mobileContext->getContentFormat() == 'WML' ) {
 			# Grab the skin class and initialise it.
-			$skin = new SkinMobileWML( $wgExtMobileFrontend );
+			$skin = new SkinMobileWML( $context );
 		} else {
 			$skinName = $wgMFDefaultSkinClass;
 			$betaSkinName = $skinName . 'Beta';
@@ -87,7 +87,7 @@ class MobileFrontendHooks {
 			} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 				$skinName = $betaSkinName;
 			}
-			$skin = new $skinName( $wgExtMobileFrontend );
+			$skin = new $skinName( $context );
 		}
 
 		return false;
@@ -513,7 +513,6 @@ class MobileFrontendHooks {
 		$files[] = "$dir/HtmlFormatterTest.php";
 		$files[] = "$dir/MobileContextTest.php";
 		$files[] = "$dir/MobileFormatterTest.php";
-		$files[] = "$dir/MobileFrontendTest.php";
 		$files[] = "$dir/MobileFrontendHooksTest.php";
 		$files[] = "$dir/modules/MFResourceLoaderModuleTest.php";
 

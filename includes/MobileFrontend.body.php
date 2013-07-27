@@ -1,17 +1,12 @@
 <?php
 
 class ExtMobileFrontend extends ContextSource {
-
-	public function __construct( IContextSource $context ) {
-		$this->setContext( $context );
-	}
-
 	/**
 	 * @param OutputPage $out
 	 *
 	 * @return string
 	 */
-	public function DOMParse( OutputPage $out ) {
+	public static function DOMParse( OutputPage $out ) {
 		wfProfileIn( __METHOD__ );
 
 		$html = $out->getHTML();

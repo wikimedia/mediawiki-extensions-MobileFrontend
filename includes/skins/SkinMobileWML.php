@@ -1,14 +1,12 @@
 <?php
 
 class SkinMobileWML extends SkinTemplate {
-	protected $extMobileFrontend;
 	public $skinname = 'SkinMobileWML';
 	public $stylename = 'SkinMobileWML';
 	public $template = 'MobileTemplateWML';
 
-	public function __construct( ExtMobileFrontend $extMobileFrontend ) {
-		$this->setContext( $extMobileFrontend );
-		$this->extMobileFrontend = $extMobileFrontend;
+	public function __construct( IContextSource $context ) {
+		$this->setContext( $context );
 	}
 
 	public function outputPage( OutputPage $out = null ) {
@@ -33,7 +31,7 @@ class SkinMobileWML extends SkinTemplate {
 		$notice = '';
 		wfRunHooks( 'GetMobileNotice', array( $this, &$notice ) );
 		$tpl->set( 'banner', $notice );
-		$html = $this->extMobileFrontend->DOMParse( $out );
+		$html = ExtMobileFrontend::DOMParse( $out );
 		$tpl->set( 'bodytext', $html );
 
 		$tpl->execute();
