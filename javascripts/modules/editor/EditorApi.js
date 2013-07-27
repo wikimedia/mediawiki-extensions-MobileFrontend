@@ -84,11 +84,22 @@
 				}
 
 				self.post( options ).done( function( data ) {
-					if ( data && data.error ) {
-						result.reject( data.error.code );
-					} else {
+					if ( data && data.edit && data.edit.result === 'Success' ) {
 						self.hasChanged = false;
 						result.resolve();
+					} else if ( data && data.error ) {
+						// Edit API error
+						result.reject( data.error.code );
+					} else if ( data && data.edit && data.edit.captcha ) {
+						// CAPTCHAs
+						// FIXME: we need to support this, see bug 52047
+						result.reject( 'unsupported-captcha' );
+					} else if ( data && data.edit && data.edit.code ) {
+						// extension errors (mostly abusefilter)
+						// FIXME: we need to support this, see bug 52049
+						result.reject( data.edit.code );
+					} else {
+						result.reject( 'unknown' );
 					}
 				} ).fail( $.proxy( result, 'reject', 'HTTP error' ) );
 			}
