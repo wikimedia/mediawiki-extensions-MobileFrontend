@@ -107,6 +107,7 @@
 }
 
 body.navigation-enabled {
+	@menuWidth: 16em;
 	// set background and border here (#mw-mf-page-left doesn't expand height
 	// and #mw-mf-viewport has overflow: hidden and clips blue hover borders)
 	border-left: solid @menuBorder @menuBorderColor;
@@ -132,13 +133,13 @@ body.navigation-enabled {
 	}
 
 	#mw-mf-page-left {
-		width: 15em;
+		width: @menuWidth;
 		display: block;
 	}
 
 	.position-fixed,
 	#mw-mf-page-center {
-		left: 15em !important;
+		left: @menuWidth !important;
 	}
 }
 

@@ -307,12 +307,12 @@ body.navigation-enabled #mw-mf-page-center {
   box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.1);
 }
 body.navigation-enabled #mw-mf-page-left {
-  width: 15em;
+  width: 16em;
   display: block;
 }
 body.navigation-enabled .position-fixed,
 body.navigation-enabled #mw-mf-page-center {
-  left: 15em !important;
+  left: 16em !important;
 }
 @media (min-width: 700px) {
   body.navigation-enabled.alpha,
