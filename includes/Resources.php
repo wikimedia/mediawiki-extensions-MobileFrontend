@@ -712,7 +712,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 		'scripts' => array(
 			'javascripts/externals/jsdiff.js',
-			'javascripts/specials/mobilediff.js',
+			'javascripts/specials/mobilediffBeta.js',
 		),
 	),
 ) );
