@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_7425e40b",
+        "filename": "less/modules/uploads.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-07-27T15:54:21Z",
+      "side": 1,
+      "message": "this should be specified on the ul element. We\u0027re probably want to review the defaults.\n\n\"Setting \u0027list-style\u0027 directly on \u0027LI\u0027 elements can have unexpected results.\"\nhttp://www.w3.org/TR/REC-CSS1/#list-style",
+      "revId": "82775d4c1c1bd1bdc51f42946cf562ab63bc3451",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
