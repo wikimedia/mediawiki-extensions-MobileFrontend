@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_f17906fb",
+        "filename": "javascripts/modules/tutorials/PageActionOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-27T00:43:42Z",
+      "side": 1,
+      "message": "This line does nothing. `defaults` property are default values passed to the template and pageActionTutorial.html doesn\u0027t contain {{className}}.\n\nI assume this should be a property of PageActionOverlay prototype (so one level up).",
+      "revId": "2bb6e2b113d8546de0ba6dd81d8c48f308ccbf90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_117f4ade",
+        "filename": "javascripts/modules/tutorials/PageActionOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-27T00:43:42Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "2bb6e2b113d8546de0ba6dd81d8c48f308ccbf90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_31844ed6",
+        "filename": "javascripts/modules/tutorials/newbie.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-27T00:43:42Z",
+      "side": 1,
+      "message": "Again, this is what is passed to the template and stored as this.options but has no effect on Overlay behaviour.",
+      "revId": "2bb6e2b113d8546de0ba6dd81d8c48f308ccbf90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

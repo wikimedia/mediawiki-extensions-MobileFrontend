@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_d11c02c1",
+        "filename": "javascripts/common/Overlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-07-27T00:43:42Z",
+      "side": 0,
+      "message": "Breaks \u0027Got it\u0027 button in LearnMoreOverlay.",
+      "revId": "2b18dbafc6429cba5462035051136296d62bf61f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
