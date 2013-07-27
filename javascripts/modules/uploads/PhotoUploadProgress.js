@@ -1,26 +1,26 @@
 ( function( M ) {
-	var View = M.require( 'view' ),
-		popup = M.require( 'notifications' ),
+	var Drawer = M.require( 'Drawer' ),
 		ProgressBar = M.require( 'widgets/progress-bar' ),
 		PhotoUploadProgress;
 
-	PhotoUploadProgress = View.extend( {
+	PhotoUploadProgress = Drawer.extend( {
 		defaults: {
 			waitMessage: mw.msg( 'mobile-frontend-image-uploading-wait' ),
 			cancelMessage: mw.msg( 'mobile-frontend-image-uploading-cancel' ),
 			messageInterval: 10000
 		},
 
-		template: (
-			'<p class="wait">{{waitMessage}}</p>' +
-			'<p class="cancel">{{{cancelMessage}}}</p>'
-		),
+		template: M.template.get( 'photoUploadProgress' ),
+		className: 'drawer position-fixed loading',
+		locked: true,
 
 		postRender: function( options ) {
 			var self = this, longMessage = false;
 
+			this._super();
+
 			this.$( 'a' ).on( 'click', function() {
-				popup.close( true );
+				self.hide();
 				self.emit( 'cancel' );
 				return false;
 			} );

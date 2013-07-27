@@ -221,6 +221,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'photoUploader',
 			// PhotoUploaderPreview.js
 			'photoUploadPreview',
+			// PhotoUploadProgress.js
+			'photoUploadProgress',
 			// NagOverlay.js
 			'photoNag',
 			'ctaDrawer',

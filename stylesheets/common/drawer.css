@@ -9,6 +9,14 @@
   text-align: center;
   padding: 0 0 1em;
 }
+.drawer.loading {
+  text-align: left;
+  padding-top: .5em;
+}
+.drawer p {
+  line-height: 1.4;
+  margin-top: .5em;
+}
 .drawer a.close {
   padding: 0 0 1.2em;
   display: block;
@@ -24,4 +32,7 @@
 }
 .drawer a.signup {
   display: block;
+}
+.drawer .progress-bar {
+  margin: .9em 0 0;
 }
