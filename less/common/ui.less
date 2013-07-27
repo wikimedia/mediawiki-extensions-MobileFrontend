@@ -26,12 +26,21 @@
 /* Menu buttons */
 #mw-mf-menu-page,
 #mw-mf-main-menu-button,
+#secondary-button,
+// FIXME: rename this to secondary-button
 #user-button {
 	display: inline-block; //?
 	height: @headerHeight;
 	width: @searchBarPaddingLeft;
 	position: absolute;
 	top: 0;
+}
+
+// FIXME: use the class after cache has cleared
+#user-button,
+.user-button {
+	display: none;
+	background: url(images/user.png) 50% 50% no-repeat;
 }
 
 /* Echo Notifications */
@@ -44,10 +53,10 @@
 	}
 }
 
+#secondary-button,
+// FIXME: rename this to secondary-button
 #user-button {
-	display: none;
 	right: 0;
-	background: url(images/user.png) 50% 50% no-repeat;
 	.background-size( auto, 24px );
 
 	span {

@@ -190,7 +190,7 @@ class MinervaTemplate extends BaseTemplate {
 							</form>
 							<?php
 						}
-						echo $data['userButton'];
+						echo $data['secondaryButton'];
 					?>
 				</div>
 				<script>

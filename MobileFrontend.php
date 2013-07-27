@@ -55,6 +55,7 @@ $autoloadClasses = array (
 	'MobileSiteModule' => 'modules/MobileSiteModule',
 
 	'SpecialUploads' => 'specials/SpecialUploads',
+	'SpecialUserProfile' => 'specials/SpecialUserProfile',
 	'SpecialMobileUserlogin' => 'specials/SpecialMobileUserlogin',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',

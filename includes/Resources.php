@@ -721,7 +721,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/specials/userlogin.css',
 		),
 	),
-
+	// Special:UserProfile
+	'mobile.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
+		'styles' => array(
+			'stylesheets/specials/userprofile.css',
+		),
+	),
 	// Special:Uploads
 	'mobile.special.uploads.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
 		'templates' => array(

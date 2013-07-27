@@ -6,6 +6,7 @@ class SkinMobile extends SkinMinerva {
 
 	protected $hookOptions;
 	protected $mode = 'stable';
+	protected $customisations = array();
 
 	/** @var array of classes that should be present on the body tag */
 	private $pageClassNames = array();
@@ -34,6 +35,16 @@ class SkinMobile extends SkinMinerva {
 			'data-section' => $section,
 			'class' => 'edit-page'
 		), $message );
+	}
+
+	public function setTemplateVariable( $key, $val ) {
+		$this->customisations[$key] = $val;
+	}
+
+	private function applyCustomisations( $tpl ) {
+		foreach( $this->customisations as $key => $value ) {
+			$tpl->set( $key, $value );
+		}
 	}
 
 	public function outputPage( OutputPage $out = null ) {
@@ -109,6 +120,7 @@ class SkinMobile extends SkinMinerva {
 		$search = $tpl->data['searchBox'];
 		$search['placeholder'] = $this->getSearchPlaceHolderText();
 		$tpl->set( 'searchBox', $search );
+		$this->applyCustomisations( $tpl );
 	}
 
 	public function getSkinConfigVariables() {

@@ -72,6 +72,13 @@
   margin-right: 14px;
   background-image: url(images/pagemenu/talk.png);
 }
+.talk {
+  background-image: url(images/pagemenu/talk.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -999px;
+  overflow: hidden;
+}
 #ca-upload {
   margin-right: 19px;
   background-image: url(images/pagemenu/upload-locked.png);
