@@ -226,6 +226,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// NagOverlay.js
 			'photoNag',
 			'ctaDrawer',
+			// mf-references.js
+			'ReferencesDrawer',
 		),
 		'class' => 'MFResourceLoaderModule',
 	),

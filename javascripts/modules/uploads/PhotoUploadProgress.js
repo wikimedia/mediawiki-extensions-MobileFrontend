@@ -11,7 +11,7 @@
 		},
 
 		template: M.template.get( 'photoUploadProgress' ),
-		className: 'drawer position-fixed loading',
+		className: 'drawer position-fixed text loading',
 		locked: true,
 
 		postRender: function( options ) {

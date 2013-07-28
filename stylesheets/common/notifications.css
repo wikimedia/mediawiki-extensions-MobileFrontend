@@ -100,36 +100,6 @@
 #mf-notification > div {
   position: relative;
 }
-#mf-notification .mw-cite-backlink {
-  display: none;
-}
-#mf-notification button {
-  top: 22px;
-  right: 22px;
-  /* padding of #content_wrapper */
-
-  width: 16px;
-  height: 12px;
-  background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
-  margin: 0;
-  background-position: right center;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -o-background-size: auto 12px;
-  -webkit-background-size: auto 12px;
-  background-size: auto 12px;
-  cursor: pointer;
-  position: absolute;
-  text-indent: -999px;
-  overflow: hidden;
-  border: none;
-}
-#mf-notification h3 {
-  margin: 0;
-  padding-right: 4px;
-  line-height: 1em;
-  display: inline;
-}
 #mf-notification a:visited,
 #mf-notification a {
   color: #3354C0;
@@ -140,4 +110,24 @@
 }
 #mf-notification p:last-child {
   margin: 0;
+}
+.references h3 {
+  margin: 0;
+  padding-right: 4px;
+  display: inline;
+}
+.references .mw-cite-backlink {
+  display: none;
+}
+.references button {
+  float: right;
+  margin-top: .7em;
+  width: 16px;
+  height: 12px;
+  background: url(../common/images/close-button-beta.png) no-repeat 0 50%;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -o-background-size: auto 12px;
+  -webkit-background-size: auto 12px;
+  background-size: auto 12px;
 }
