@@ -28,14 +28,3 @@ li a.watch-this-article {
   background-position: center center;
   margin: 0;
 }
-/* notification */
-#mf-notification div.watch-action {
-  background-image: url(images/watch.png);
-  padding-left: 40px;
-  background-repeat: no-repeat;
-  background-position: 8px center;
-  background-size: 24px 24px;
-}
-#mf-notification div.watch-action.watched {
-  background-image: url(images/watched.png);
-}

@@ -12,7 +12,7 @@
   width: 100%;
 }
 /* Notifications */
-#mf-notification,
+.toast,
 .drawer {
   bottom: 0;
   left: 0;
@@ -23,12 +23,12 @@
   z-index: 5;
   display: none;
 }
-#mf-notification.visible,
+.toast.visible,
 .drawer.visible {
   display: block;
 }
-.animations .beta #mf-notification,
-.animations .alpha #mf-notification,
+.animations .beta .toast,
+.animations .alpha .toast,
 .animations .beta .drawer,
 .animations .alpha .drawer {
   display: block;
@@ -45,8 +45,8 @@
   -webkit-transition: -webkit-transform 0.25s, opacity 0.25s, visibility 0s 0.25s, bottom 0s 0.25s;
   transition: transform 0.25s, opacity 0.25s, visibility 0s 0.25s, bottom 0s 0.25s;
 }
-.animations .beta #mf-notification.visible,
-.animations .alpha #mf-notification.visible,
+.animations .beta .toast.visible,
+.animations .alpha .toast.visible,
 .animations .beta .drawer.visible,
 .animations .alpha .drawer.visible {
   bottom: 0;
@@ -58,32 +58,17 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-#mf-notification {
-  font-size: 0.9em;
-  padding: 16px 38px 18px 22px;
-  /* 38px is 22px padding + close button icon 16px */
-
-}
-#mf-notification.noButton button {
-  display: none;
-}
-#mf-notification.toast {
-  left: 10%;
-  right: 10%;
-  padding: 0;
-  font-size: 0.8em;
+.toast {
+  font-size: .9em;
+  padding: .9em 1em;
   background-color: #373737;
-  color: white;
-  margin: 0 auto 20px auto;
+  color: #fff;
+  margin: 0 auto 20px;
   width: 80%;
   text-align: center;
-  border-radius: 1px;
-  box-shadow: 0 0 1px 3px #373737;
+  border-radius: 3px;
 }
-#mf-notification.toast button {
-  display: none;
-}
-#mf-notification.toast.error {
+.toast.error {
   background-image: url(images/error.png);
   background-position: 16px 50%;
   background-repeat: no-repeat;
@@ -91,25 +76,8 @@
   width: 75%;
   border: none;
 }
-#mf-notification.toast.landmark {
+.toast.landmark {
   color: #F7F737;
-}
-#mf-notification.toast > div {
-  padding: 0.8em 1.4em;
-}
-#mf-notification > div {
-  position: relative;
-}
-#mf-notification a:visited,
-#mf-notification a {
-  color: #3354C0;
-}
-#mf-notification p {
-  line-height: 1.2;
-  margin: 0 0 .5em;
-}
-#mf-notification p:last-child {
-  margin: 0;
 }
 .references h3 {
   margin: 0;

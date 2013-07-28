@@ -6,6 +6,7 @@ var View = M.require( 'view' ),
 			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
 		},
 		className: 'drawer position-fixed',
+		minHideDelay: 0, // ms
 
 		postRender: function() {
 			var self = this;
@@ -24,7 +25,7 @@ var View = M.require( 'view' ),
 					// ignore a possible click that called show()
 					setTimeout( function() {
 						$( window ).one( 'scroll.drawer click.drawer', $.proxy( self, 'hide' ) );
-					}, 0 );
+					}, this.minHideDelay );
 				}
 			}
 		},

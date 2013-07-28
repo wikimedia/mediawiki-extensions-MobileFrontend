@@ -12,7 +12,7 @@
 }
 
 /* Notifications */
-#mf-notification,
+.toast,
 .drawer {
 	bottom: 0;
 	left: 0;
@@ -32,7 +32,7 @@
 
 .animations .beta,
 .animations .alpha {
-	#mf-notification,
+	.toast,
 	.drawer {
 		@duration: .25s;
 		display: block;
@@ -59,64 +59,27 @@
 	}
 }
 
-#mf-notification {
-	font-size: 0.9em;
-	padding: 16px 38px 18px 22px;  /* 38px is 22px padding + close button icon 16px */
+.toast {
+	font-size: .9em;
+	padding: .9em 1em;
+	background-color: @toastNotificationColor;
+	color: #fff;
+	margin: 0 auto 20px;
+	width: 80%;
+	text-align: center;
+	border-radius: 3px;
 
-	&.noButton button {
-		display: none;
+	&.error {
+		background-image: url(images/error.png);
+		background-position: 16px 50%;
+		background-repeat: no-repeat;
+		padding-left: 5%;
+		width: 75%;
+		border: none; // FIXME: this is needed because a global .error adds border
 	}
 
-	&.toast {
-		left: 10%;
-		right: 10%;
-		padding: 0;
-		font-size: @baseFontSize * 0.8;
-		background-color: @toastNotificationColor;
-		color: white;
-		margin: 0 auto 20px auto;
-		width: 80%;
-		text-align: center;
-		border-radius: 1px;
-		box-shadow: 0 0 1px 3px @toastNotificationColor;
-
-		button {
-			display: none;
-		}
-
-		&.error {
-			background-image: url(images/error.png);
-			background-position: 16px 50%;
-			background-repeat: no-repeat;
-			padding-left: 5%;
-			width: 75%;
-			border: none; // FIXME: this is needed because a global .error adds border
-		}
-
-		&.landmark {
-			color: #F7F737;
-		}
-
-		> div {
-			padding: 0.8em 1.4em;
-		}
-	}
-
-	> div {
-		position: relative;
-	}
-
-	a:visited, a {
-		color: #3354C0;
-	}
-
-	p {
-		line-height: 1.2;
-		margin: 0 0 .5em;
-
-		&:last-child {
-			margin: 0;
-		}
+	&.landmark {
+		color: #F7F737;
 	}
 }
 
