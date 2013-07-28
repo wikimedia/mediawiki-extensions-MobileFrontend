@@ -3121,7 +3121,7 @@ $messages['de'] = array(
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|Ein|$1}} Kilometer',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|Ein|$1}} Meter',
 	'mobile-frontend-nearby-lookup-ui-error' => '„In der Nähe“ von {{SITENAME}} konnte nicht herausfinden, wo du bist. Erneut versuchen?',
-	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Versuche eine freie Fläche mit einem besseren Signal.',
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Versuche es auf einer freien Fläche mit einem besseren Signal.',
 	'mobile-frontend-nearby-noresults' => 'Hier ist es ruhig … Es wurden keine Artikel in der Nähe gefunden.',
 	'mobile-frontend-nearby-noresults-guidance' => 'Versuche einen neuen Artikel zu erstellen oder den Standort für einen vorhandenen Artikel hinzuzufügen',
 	'mobile-frontend-nearby-refresh' => 'Wir haben für dich einen passenderen Standort gefunden. Klicke hier, um die Liste zu aktualisieren.',
@@ -3177,6 +3177,7 @@ $messages['de'] = array(
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Ein Byte|$1 Byte}} hinzugefügt',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Ein Byte|$1 Byte}} entfernt',
 	'mobile-frontend-diffview-explained' => 'Die folgenden Zeilen wurden hinzugefügt (+) und entfernt (−):',
+	'mobile-frontend-thanked-notice' => '$1 wurde gesagt, dass du {{GENDER:$2|seine|ihre|die}} Bearbeitung magst.',
 	'mobile-frontend-table' => 'Tabelle $1',
 	'mobile-frontend-saving-exit-page' => 'Dein Beitrag wird noch gespeichert. Beim Verlassen gehen deine Beiträge verloren. Willst du wirklich abbrechen?',
 	'mobile-frontend-photo-upload' => 'Ein Bild zu diesem Artikel hinzufügen',
@@ -10240,6 +10241,7 @@ $messages['ne'] = array(
 /** Dutch (Nederlands)
  * @author Akoopal
  * @author AvatarTeam
+ * @author JurgenNL
  * @author Konovalov
  * @author Patio
  * @author Rvlieshout
@@ -10430,6 +10432,7 @@ $messages['nl'] = array(
 	'mobile-frontend-photo-nag-learn-more-1' => "'''Ja!''' Foto's van plaatsen, dingen en gebeurtenissen.",
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Ja!''' Foto's die kunnen helpen met het illustreren en verrijken van de pagina's van {{SITENAME}}.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Nee.''' Foto's van filmposters, boekomslagen of ander auteursrechtelijk beschermd materiaal. Deze worden verwijderd.",
+	'mobile-frontend-lead-image-tutorial-go' => 'Start uploadem',
 	'mobile-frontend-image-uploading-wait' => 'Bezig met het uploaden van de afbeelding.',
 	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Dank u wel voor uw geduld.',
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
@@ -10452,7 +10455,8 @@ $messages['nl'] = array(
 	'mobile-frontend-editor-cancel' => 'Annuleren',
 	'mobile-frontend-editor-keep-editing' => 'Doorgaan met bewerken',
 	'mobile-frontend-editor-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0] en [//nl.wikipedia.org/wiki/GNU-licentie_voor_vrije_documentatie GFDL].',
-	'mobile-frontend-editor-summary-placeholder' => 'Gaaf aan wat u hebt gewijzigd (optioneel)',
+	'mobile-frontend-editor-placeholder' => 'Deze sectie is leeg. Wees de eerste uit te breiden!',
+	'mobile-frontend-editor-summary-placeholder' => 'Geef aan wat u hebt gewijzigd (optioneel)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wilt u uw bewerking echt niet opslaan?',
 	'mobile-frontend-editor-wait' => 'Een moment geduld. De bewerking wordt opgeslagen.',
 	'mobile-frontend-editor-success' => 'Uw bewerking is opgeslagen.',
