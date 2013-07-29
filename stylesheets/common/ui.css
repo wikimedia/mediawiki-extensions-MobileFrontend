@@ -278,7 +278,6 @@ body.navigation-enabled #mw-mf-viewport {
 body.navigation-enabled #mw-mf-page-center {
   position: absolute;
   height: 100%;
-  overflow: hidden;
   border-left: solid 1px #000;
   box-shadow: -5px 0 0 0 rgba(0, 0, 0, 0.1);
 }
@@ -310,6 +309,10 @@ body.navigation-enabled #mw-mf-page-center {
   body.navigation-enabled.alpha #mw-mf-page-center,
   body.navigation-enabled.beta #mw-mf-page-center {
     left: 20% !important;
+  }
+  body.navigation-enabled.alpha #mw-mf-diffview #mw-mf-userinfo,
+  body.navigation-enabled.beta #mw-mf-diffview #mw-mf-userinfo {
+    width: 80%;
   }
 }
 /* Header */

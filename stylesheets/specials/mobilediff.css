@@ -81,9 +81,16 @@
 }
 #mw-mf-diffview #mw-mf-userinfo {
   min-height: 5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
   padding: 1em;
   background-color: #f0f0f0;
   border-top: solid 1px #c0c0c0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #mw-mf-diffview #mw-mf-userinfo::before {
   content: "";
@@ -164,11 +171,6 @@
 .alpha .revision-history-links {
   font-size: 0.9em;
   margin-top: 8px;
-}
-#mw-mf-diffview #mw-mf-userinfo {
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 .mw-mf-thank-button {
   float: right;
