@@ -194,20 +194,16 @@ HTML;
 			wfDebug( __METHOD__ . "(): token mismatch\n" );
 			//return; // Display something here?
 		}
-		$inBeta = $request->getBool( 'enableBeta' );
-		$inAlpha = $request->getBool( 'enableAlpha' );
-		// determine whether or not alpha was disabled
-		if ( $context->isAlphaGroupMember() && !$inAlpha ) {
-			$alphaDisabled = true;
+		if ( $request->getBool( 'enableAlpha' ) ) {
+			$group = 'alpha';
+		} elseif ( $request->getBool( 'enableBeta' ) ) {
+			$group = 'beta';
 		} else {
-			$alphaDisabled = false;
+			$group = '';
 		}
+		$context->setMobileMode( $group );
 		$imagesDisabled = !$request->getBool( 'enableImages' );
 		$context->setDisableImagesCookie( $imagesDisabled );
-		$context->setOptInOutCookie( $inBeta ? '1' : '' );
-		$context->setBetaGroupMember( $inBeta );
-		$context->setAlphaOptInOutCookie( $inAlpha ? '1' : '', $alphaDisabled );
-		$context->setAlphaGroupMember( $inAlpha );
 
 		$returnToTitle = Title::newFromText( $request->getText( 'returnto' ) );
 		if ( $returnToTitle ) {

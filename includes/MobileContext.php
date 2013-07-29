@@ -1,8 +1,7 @@
 <?php
 
 class MobileContext extends ContextSource {
-	protected $betaGroupMember;
-	protected $alphaGroupMember;
+	protected $mobileMode;
 	protected $contentFormat = '';
 	protected $useFormatCookieName;
 	protected $disableImages;
@@ -183,32 +182,70 @@ class MobileContext extends ContextSource {
 		return true;
 	}
 
-	public function isAlphaGroupMember() {
-		if ( is_null( $this->alphaGroupMember ) ) {
-			$this->checkUserStatus();
-			if ( $this->getMobileAction() == 'alpha' ) {
-				$this->setAlphaGroupMember( true );
+	/**
+	 * Returns the testing mode user has opted in: 'alpha', 'beta' or any other value for stable
+	 * @return string
+	 */
+	protected function getMobileMode() {
+		if ( is_null( $this->mobileMode ) ) {
+			$mobileAction = $this->getMobileAction();
+			if ( $mobileAction === 'alpha' || $mobileAction === 'beta' ) {
+				$this->mobileMode = $mobileAction;
+			} else {
+				// First check old cookie
+				// @todo: Remove in September when old cookies expire
+				$req = $this->getRequest();
+				$alpha = $req->getCookie( 'mf_alpha', '' );
+				if ( $alpha == 1 ) {
+					$req->response()->setcookie( 'mf_alpha', '', 0, '' );
+					$this->setMobileMode( 'alpha' );
+				} else {
+					$this->mobileMode = $this->getRequest()->getCookie( 'optin', '' );
+					// Old cookie format - handle it but no point in overwriting the cookie
+					if ( $this->mobileMode == '1' ) {
+						$this->mobileMode = 'beta';
+					}
+				}
 			}
 		}
-		return $this->alphaGroupMember;
+		return $this->mobileMode;
 	}
 
-	public function setAlphaGroupMember( $value ) {
-		$this->alphaGroupMember = $value;
+	/**
+	 * Sets testing group membership, both cookie and this class variables
+	 * @param string $mode: Mode to set
+	 */
+	public function setMobileMode( $mode ) {
+		wfProfileIn( __METHOD__ );
+		if ( $mode !== 'alpha' && $mode !== 'beta' ) {
+			$mode = '';
+		}
+		// Update statistics
+		if ( $mode === 'alpha' && !is_null( $this->mobileMode ) ) {
+			wfIncrStats( 'mobile.alpha.opt_in_cookie_set' );
+		}
+		if ( $mode === 'beta' ) {
+			if ( $this->mobileMode === 'alpha' ) {
+				wfIncrStats( 'mobile.alpha.opt_in_cookie_unset' );
+			} else {
+				wfIncrStats( 'mobile.opt_in_cookie_set' );
+			}
+		}
+		if ( !$mode ) {
+			wfIncrStats( 'mobile.opt_in_cookie_unset' );
+		}
+		$this->mobileMode = $mode;
+		$this->getRequest()->response()->setcookie( 'optin', $mode, 0, '', $this->getBaseDomain() );
+		wfProfileOut( __METHOD__ );
+	}
+
+	public function isAlphaGroupMember() {
+		return $this->getMobileMode() === 'alpha';
 	}
 
 	public function isBetaGroupMember() {
-		if ( is_null( $this->betaGroupMember ) ) {
-			$this->checkUserStatus();
-			if ( $this->getMobileAction() == 'beta' ) {
-				$this->setBetaGroupMember( true );
-			}
-		}
-		return $this->betaGroupMember;
-	}
-
-	public function setBetaGroupMember( $value ) {
-		$this->betaGroupMember = $value;
+		$mode = $this->getMobileMode();
+		return $mode === 'beta' || $mode === 'alpha';
 	}
 
 	public function getMobileToken() {
@@ -429,88 +466,6 @@ class MobileContext extends ContextSource {
 		$useFormatFromCookie = $this->getRequest()->getCookie( $this->getUseFormatCookieName(), '' );
 
 		return $useFormatFromCookie;
-	}
-
-	public function checkUserStatus() {
-		wfProfileIn( __METHOD__ );
-
-		$optInCookie = $this->getOptInOutCookie();
-		$alpha = $this->getAlphaOptInOutCookie();
-		if ( !empty( $optInCookie ) &&
-			$optInCookie == 1 ) {
-			$this->betaGroupMember = true;
-		}
-		if ( !empty( $alpha ) &&
-			$alpha == 1 ) {
-			$this->setAlphaGroupMember( true );
-		} else {
-			$this->setAlphaGroupMember( false );
-		}
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
-	/**
-	 * @param $value bool
-	 * @return bool
-	 */
-	public function setOptInOutCookie( $value ) {
-		global $wgCookieDomain, $wgCookiePrefix;
-		wfProfileIn( __METHOD__ );
-		if ( $value ) {
-			wfIncrStats( 'mobile.opt_in_cookie_set' );
-		}
-		$tempWgCookieDomain = $wgCookieDomain;
-		$wgCookieDomain = $this->getBaseDomain();
-		$tempWgCookiePrefix = $wgCookiePrefix;
-		$wgCookiePrefix = '';
-		$this->getRequest()->response()->setcookie( 'optin', $value ? '1' : '', 0, '' );
-		$wgCookieDomain = $tempWgCookieDomain;
-		$wgCookiePrefix = $tempWgCookiePrefix;
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
-	/**
-	 * @param bool $value
-	 * @param bool $disabled
-	 *
-	 * @return bool
-	 */
-	public function setAlphaOptInOutCookie( $value, $disabled = false ) {
-		wfProfileIn( __METHOD__ );
-		// track opt ins
-		if ( $value ) {
-			wfIncrStats( 'mobile.alpha.opt_in_cookie_set' );
-		}
-		// track opt outs
-		if ( $disabled ) {
-			wfIncrStats( 'mobie.alpha.opt_in_cookie_unset' );
-		}
-		$cookieDomain = $this->getBaseDomain();
-		$this->getRequest()->response()->setcookie( 'mf_alpha', $value ? '1' : '', 0, '', $cookieDomain );
-		wfProfileOut( __METHOD__ );
-		return true;
-	}
-
-	/**
-	 * @return Mixed
-	 */
-	private function getAlphaOptInOutCookie() {
-		wfProfileIn( __METHOD__ );
-		$optInCookie = $this->getRequest()->getCookie( 'mf_alpha', '' );
-		wfProfileOut( __METHOD__ );
-		return $optInCookie;
-	}
-
-	/**
-	 * @return Mixed
-	 */
-	private function getOptInOutCookie() {
-		wfProfileIn( __METHOD__ );
-		$optInCookie = $this->getRequest()->getCookie( 'optin', '' );
-		wfProfileOut( __METHOD__ );
-		return $optInCookie;
 	}
 
 	/**
