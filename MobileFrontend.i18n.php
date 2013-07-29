@@ -618,7 +618,10 @@ Parameters:
 Parameters:
 * $1 - byte count; may use PLURAL',
 	'mobile-frontend-diffview-explained' => 'Explains the diff view importantly signaling that a "+" symbol means added and a "-" symbol means removed',
-	'mobile-frontend-thanked-notice' => 'Pop-up message that is displayed after a user has thanked another user for their edit. Parameters:
+	'mobile-frontend-thanked-notice' => '{{doc-singularthey}}
+Pop-up message that is displayed after a user has thanked another user for their edit.
+
+Parameters:
 * $1 - the username of the user that was thanked
 * $2 - the gender of the user that was thanked',
 	'mobile-frontend-table' => 'Label for a button when clicked that opens a table. Parameters:
@@ -4816,6 +4819,7 @@ $messages['fr'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet supprimé|octets supprimés}}',
 	'mobile-frontend-diffview-explained' => 'Les lignes suivantes ont été ajoutées (+) et supprimées (-):',
+	'mobile-frontend-thanked-notice' => '$1 a été averti que vous avez aimé {{GENDER:$2|sa|sa|leur}} modification.',
 	'mobile-frontend-table' => 'Tableau $1',
 	'mobile-frontend-saving-exit-page' => "Votre contribution est en train d'être enregistrée. Si vous quittez, vos contributions seront perdues. Êtes-vous sûr de vouloir sortir?",
 	'mobile-frontend-photo-upload' => 'Ajouter une image à cet article',
@@ -9174,6 +9178,7 @@ $messages['mk'] = array(
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|Додаден $1 бајт|Додадени $1 бајти}}',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|Одземен $1 бајт|Одземени $1 бајти}}',
 	'mobile-frontend-diffview-explained' => 'Следниве редови се додадени (+) и отстранети (-):',
+	'mobile-frontend-thanked-notice' => '$1 доби известие дека ви се допаѓа {{GENDER:$2|неговото|нејзиното|направеното}} уредување.',
 	'mobile-frontend-table' => 'Табела $1',
 	'mobile-frontend-saving-exit-page' => 'Вашите придонеси сè уште се зачувуваат. Доколку напуштите, ќе ги изгубите придонесите. Дали сте сигурни дека сакате да излезете?',
 	'mobile-frontend-photo-upload' => 'Стави слика во страницава',
@@ -12844,6 +12849,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte}} lades till',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|}} togs bort',
 	'mobile-frontend-diffview-explained' => 'Följande rader har lagts till (+) och tagits bort (-):',
+	'mobile-frontend-thanked-notice' => '$1 fick höra att du gillade {{GENDER:$2|hans|hennes|deras}} redigering.',
 	'mobile-frontend-table' => 'Tabell $1',
 	'mobile-frontend-saving-exit-page' => 'Ditt bidrag sparas fortfarande. Om du lämnar kommer dina bidrag förloras. Är du säker på att du vill avsluta?',
 	'mobile-frontend-photo-upload' => 'Lägg till en bild på denna artikel',
@@ -12869,6 +12875,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Ja!''' Foton som kan hjälpa till att illustrera och berika {{SITENAME}}s sidor.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Nej.''' Foton av filmaffischer, bokomslag eller annat upphovsrättsskyddat material. Dessa kommer att tas bort.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Säkerställer att din bild kan hjälpa till att illustrera artikeln. Det bör vara en bild som du har skapat som inte bryter mot upphovsrätten.',
+	'mobile-frontend-lead-image-tutorial-go' => 'Börja ladda upp',
 	'mobile-frontend-image-uploading-wait' => 'Laddar upp bild, var god vänta.',
 	'mobile-frontend-image-uploading-long' => 'Bilden laddas fortfarande upp! Tack för ditt tålamod.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Avbryt</a> om det tar för lång tid.',
@@ -12890,13 +12897,13 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-editor-save' => 'Spara',
 	'mobile-frontend-editor-cancel' => 'Avbryt',
 	'mobile-frontend-editor-keep-editing' => 'Fortsätt redigera',
-	'mobile-frontend-editor-license' => 'Genom att trycka på "Bekräfta" godkänner du våra [//wikimediafoundation.org/wiki/Terms_of_use användarvillkor] och samtycker till att släppa din text under [//creativecommons.org/licenses/by-sa/3.0/ licensen Creative Commons Attribution-ShareAlike 3.0].', # Fuzzy
+	'mobile-frontend-editor-license' => 'Genom att trycka på "Para" godkänner du våra [//wikimediafoundation.org/wiki/Terms_of_use användarvillkor] och samtycker till att släppa din text under [//creativecommons.org/licenses/by-sa/3.0/ licensen Creative Commons Attribution-ShareAlike 3.0] och [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Detta avsnitt är tomt. Bli den första att bygga ut det!',
 	'mobile-frontend-editor-summary-placeholder' => 'Berätta för oss vad du ändrat (frivilligt)',
 	'mobile-frontend-editor-cancel-confirm' => 'Är du säker på att du vill avbryta din redigering?',
 	'mobile-frontend-editor-wait' => 'Sparar redigering, vänta.',
 	'mobile-frontend-editor-guider' => '"{{int:mobile-frontend-editor-continue}}" gör att du kan förhandsgranska och spara.',
-	'mobile-frontend-editor-success' => 'Din redigeringen har sparats.',
+	'mobile-frontend-editor-success' => 'Din redigering har sparats.',
 	'mobile-frontend-editor-success-landmark-1' => 'Grattis, du är nu en redaktör på {{SITENAME}}!',
 	'mobile-frontend-editor-error' => 'Fel, redigeringen sparades inte.',
 	'mobile-frontend-editor-error-conflict' => 'Fel, en annan användare har redigerat sidan.',
