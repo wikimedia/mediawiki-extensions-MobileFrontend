@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_bb23cb58",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-07-30T16:45:16Z",
+      "side": 0,
+      "message": "Why is this method being removed and is no longer being used? I don\u0027t see this logic replicated elsewhere.",
+      "revId": "de6c7f80a43358913054de747a34462de2312794",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
