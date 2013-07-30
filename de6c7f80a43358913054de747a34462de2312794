@@ -16,6 +16,24 @@
       "revId": "de6c7f80a43358913054de747a34462de2312794",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_9bb1a7fa",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 631,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-07-30T16:50:39Z",
+      "side": 0,
+      "message": "Because we don\u0027t use the hack with /?useformat\u003dmobile in Varnish anymore so this code makes no sense now. Previously, it was required as  we didn\u0027t handle the BeforePageRedirect hook.",
+      "parentUuid": "a989e1a9_bb23cb58",
+      "revId": "de6c7f80a43358913054de747a34462de2312794",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
