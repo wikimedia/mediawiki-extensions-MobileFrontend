@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_49011e6e",
+        "filename": "javascripts/modules/tutorials/PageActionOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-30T00:10:37Z",
+      "side": 1,
+      "message": "pageActionTutorial does contain {{className}}. It\u0027s part of this change.",
+      "parentUuid": "a989e1a9_f17906fb",
+      "revId": "2bb6e2b113d8546de0ba6dd81d8c48f308ccbf90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_117f4ade",
         "filename": "javascripts/modules/tutorials/PageActionOverlay.js",
         "patchSetId": 10
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_6906e287",
+        "filename": "javascripts/modules/tutorials/PageActionOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-30T00:10:37Z",
+      "side": 1,
+      "message": "See above.",
+      "parentUuid": "a989e1a9_117f4ade",
+      "revId": "2bb6e2b113d8546de0ba6dd81d8c48f308ccbf90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_31844ed6",
         "filename": "javascripts/modules/tutorials/newbie.js",
         "patchSetId": 10
@@ -47,6 +83,24 @@
       "writtenOn": "2013-07-27T00:43:42Z",
       "side": 1,
       "message": "Again, this is what is passed to the template and stored as this.options but has no effect on Overlay behaviour.",
+      "revId": "2bb6e2b113d8546de0ba6dd81d8c48f308ccbf90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_a9f8ea79",
+        "filename": "javascripts/modules/tutorials/newbie.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-07-30T00:10:37Z",
+      "side": 1,
+      "message": "{{className}} has been added to the template as part of this change.",
+      "parentUuid": "a989e1a9_31844ed6",
       "revId": "2bb6e2b113d8546de0ba6dd81d8c48f308ccbf90",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
