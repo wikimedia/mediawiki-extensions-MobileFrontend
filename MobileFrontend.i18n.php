@@ -719,7 +719,8 @@ Used as "toast" error message.',
 	'mobile-frontend-editor-error-loading' => 'Text that displays when there have been errors when loading a page section in the editor.
 
 Used as "toast" error message.',
-	'mobile-frontend-editor-preview-header' => 'A header explaining that user is viewing a preview of the changes they made in the editor.',
+	'mobile-frontend-editor-preview-header' => 'A header explaining that user is viewing a preview of the changes they made in the editor.
+{{Identical|Preview}}',
 	'mobile-frontend-editor-error-preview' => 'Error message for when a preview fails to load for an unknown reason',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
@@ -7268,6 +7269,7 @@ $messages['ja'] = array(
 	'mobile-frontend-editor-error' => 'エラー: 編集内容を保存できません。',
 	'mobile-frontend-editor-error-conflict' => 'エラー: 別の利用者がこのページを編集しました。',
 	'mobile-frontend-editor-error-loading' => 'エラー: 節を読み込めません。',
+	'mobile-frontend-editor-preview-header' => 'プレビュー',
 	'mobile-frontend-editor-error-preview' => 'プレビューを読み込む際に予期しないエラーが発生しました。閉じてもう一度お試しください。',
 	'tag-mobile_edit' => '携帯機器での編集',
 	'tag-mobile_edit-description' => '携帯機器版サイトでの編集',
@@ -10232,6 +10234,8 @@ $messages['nds-nl'] = array(
 	'mobile-frontend-watchlist-filter-other' => 'Aanders',
 	'mobile-frontend-watchlist-modified' => '$1 ewiezigd',
 	'mobile-frontend-photo-ownership-confirm' => 'Begrepen!',
+	'tag-mobile_edit' => 'Bewarking via mobiel',
+	'tag-mobile_edit-description' => 'Bewarking edaon via mobiele webstee',
 );
 
 /** Nepali (नेपाली)
@@ -10442,7 +10446,8 @@ $messages['nl'] = array(
 	'mobile-frontend-photo-nag-learn-more-1' => "'''Ja!''' Foto's van plaatsen, dingen en gebeurtenissen.",
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Ja!''' Foto's die kunnen helpen met het illustreren en verrijken van de pagina's van {{SITENAME}}.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Nee.''' Foto's van filmposters, boekomslagen of ander auteursrechtelijk beschermd materiaal. Deze worden verwijderd.",
-	'mobile-frontend-lead-image-tutorial-go' => 'Start uploadem',
+	'mobile-frontend-lead-image-tutorial-summary' => 'Zorg dat uw afbeelding de pagina helpt te illustreren. Het moet een afbeelding zijn die geen auteursrechten schendt.',
+	'mobile-frontend-lead-image-tutorial-go' => 'Beginnen met uploaden',
 	'mobile-frontend-image-uploading-wait' => 'Bezig met het uploaden van de afbeelding.',
 	'mobile-frontend-image-uploading-long' => 'De afbeelding wordt nog geüpload. Dank u wel voor uw geduld.',
 	'mobile-frontend-image-uploading-cancel' => 'Klik op <a href="#">Annuleren</a> als dit te lang duurt.',
@@ -10465,10 +10470,11 @@ $messages['nl'] = array(
 	'mobile-frontend-editor-cancel' => 'Annuleren',
 	'mobile-frontend-editor-keep-editing' => 'Doorgaan met bewerken',
 	'mobile-frontend-editor-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0] en [//nl.wikipedia.org/wiki/GNU-licentie_voor_vrije_documentatie GFDL].',
-	'mobile-frontend-editor-placeholder' => 'Deze sectie is leeg. Wees de eerste uit te breiden!',
+	'mobile-frontend-editor-placeholder' => 'Deze paragraaf is leeg. Breid deze als eerste uit!',
 	'mobile-frontend-editor-summary-placeholder' => 'Geef aan wat u hebt gewijzigd (optioneel)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wilt u uw bewerking echt niet opslaan?',
 	'mobile-frontend-editor-wait' => 'Een moment geduld. De bewerking wordt opgeslagen.',
+	'mobile-frontend-editor-guider' => 'Door te klikken op "{{int:mobile-frontend-editor-continue}}" kunt u een voorvertoning bekijken en opslaan.',
 	'mobile-frontend-editor-success' => 'Uw bewerking is opgeslagen.',
 	'mobile-frontend-editor-success-landmark-1' => 'Gefeliciteerd, u bent nu een bewerker bij {{SITENAME}}!',
 	'mobile-frontend-editor-error' => 'Er is een fout opgetreden. De bewerking is niet opgeslagen.',
@@ -14179,6 +14185,7 @@ $messages['vi'] = array(
 	'mobile-frontend-diffview-bytesadded' => 'thêm $1 byte',
 	'mobile-frontend-diffview-bytesremoved' => 'bớt $1 byte',
 	'mobile-frontend-diffview-explained' => 'Các dòng sau đã được thêm (+) và xóa (-):',
+	'mobile-frontend-thanked-notice' => 'Đã cho $1 biết rằng bạn thích sửa đổi của {{GENDER:$2}}họ.',
 	'mobile-frontend-table' => 'Bảng $1',
 	'mobile-frontend-saving-exit-page' => 'Các đóng góp của bạn còn đang được lưu giữ. Nếu bạn bỏ đi, các đóng góp này sẽ bị mất. Bạn có chắc muốn thoát?',
 	'mobile-frontend-photo-upload' => 'Thêm hình vào bài này',
@@ -14204,6 +14211,7 @@ $messages['vi'] = array(
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Có''' Những hình có thề giúp minh họa và làm phong phú thêm các trang {{SITENAME}}.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Không.''' Những hình về các áp phích phim, bìa sách hoặc các tài liệu được giữ bản quyền khác. Các hình này sẽ bị xóa.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Hãy chắc chắn rằng hình ảnh của bạn có thể minh họa bài. Nó phải là một hình do bạn tạo ra và không vi phạm bản quyền của ai.',
+	'mobile-frontend-lead-image-tutorial-go' => 'Bắt đầu tải lên',
 	'mobile-frontend-image-uploading-wait' => 'Đang tải lên hình; xin vui lòng chờ.',
 	'mobile-frontend-image-uploading-long' => 'Vẫn đang còn tải lên hình! Cám ơn sự kiên nhẫn của bạn.',
 	'mobile-frontend-image-uploading-cancel' => 'Hãy <a href="#">hủy bỏ</a> nếu việc tải lên mất nhiều thì giờ quá.',
@@ -14225,7 +14233,7 @@ $messages['vi'] = array(
 	'mobile-frontend-editor-save' => 'Lưu',
 	'mobile-frontend-editor-cancel' => 'Hủy bỏ',
 	'mobile-frontend-editor-keep-editing' => 'Sửa tiếp',
-	'mobile-frontend-editor-license' => 'Với việc bấm nút “Lưu”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng] của chúng tôi và đồng ý phát hành văn bản của bạn theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].', # Fuzzy
+	'mobile-frontend-editor-license' => 'Với việc bấm nút “Lưu”, bạn chấp nhận [//wikimediafoundation.org/wiki/Terms_of_Use/vi?uselang=vi các Điều khoản Sử dụng] của chúng tôi và đồng ý phát hành văn bản của bạn theo [//creativecommons.org/licenses/by-sa/3.0/deed.vi Giấy phép Creative Commons Ghi công–Chia sẻ tương tự 3.0].',
 	'mobile-frontend-editor-placeholder' => 'Phần này còn trống. Hãy Be the first to expand it! Hãy là người đầu tiên mở rộng nó!',
 	'mobile-frontend-editor-summary-placeholder' => 'Cho chúng tôi biết bạn đã thay đổi những gì (tùy chọn)',
 	'mobile-frontend-editor-cancel-confirm' => 'Bạn có thực sự muốn từ bỏ sửa đổi của bạn?',
