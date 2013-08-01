@@ -62,7 +62,7 @@ $autoloadClasses = array (
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
 	'SpecialNearby' => 'specials/SpecialNearby',
-	'UnlistedSpecialMobilePage' => 'specials/UnlistedSpecialMobilePage',
+	'MobileSpecialPage' => 'specials/MobileSpecialPage',
 
 	'MinervaTemplate' => 'skins/MinervaTemplate',
 	'MobileTemplate' => 'skins/MobileTemplate',
@@ -121,10 +121,11 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgMFNearby, $wgSpecialPages;
+	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups;
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
+		$wgSpecialPageGroups['Nearby'] = 'pages';
 	}
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-class SpecialMobileOptions extends UnlistedSpecialMobilePage {
+class SpecialMobileOptions extends MobileSpecialPage {
 	/**
 	 * @var Title
 	 */
