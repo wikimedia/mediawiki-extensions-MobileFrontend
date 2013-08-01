@@ -5162,6 +5162,7 @@ $messages['frr'] = array(
 	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|ian byte|$1 bytes}} diartu kimen',
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|ian byte|$1 bytes}} wechnimen',
 	'mobile-frontend-diffview-explained' => 'Jodiar räen kaam diartu (+) of san wechnimen wurden (−):',
+	'mobile-frontend-thanked-notice' => '$1 hää bööd füngen, dat dü {{GENDER:$2|sin|hör|hör}} feranrang gud fanjst.',
 	'mobile-frontend-table' => 'Tabel $1',
 	'mobile-frontend-saving-exit-page' => 'Dan bidrach woort noch seekert. Wan dü nü ufbräächst, as dan bidrach wech. Wel dü würelk ufbreeg?',
 	'mobile-frontend-photo-upload' => 'Saat en bil tu di artiikel',
@@ -5187,6 +5188,7 @@ $messages['frr'] = array(
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Ja!''' Bilen, diar {{SITENAME}}-sidjen smoker an beeder maage kön.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Naan.''' Bilen faan filmplakooten, bukamslacher of ööder materiool mä kopiarrochten. Soken wurd stregen.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Wees seeker, dat dü en wäärdag bil för di artiikel heest. Det skul en salew maaget bil wees, huar näämen ööders rochten üüb hää.',
+	'mobile-frontend-lead-image-tutorial-go' => 'Huuchschüüren began',
 	'mobile-frontend-image-uploading-wait' => 'Bil woort huuchschüürd, ... wees so gud an teew.',
 	'mobile-frontend-image-uploading-long' => 'Bil woort huuchschüürd! Föl soonk, dat dü dülag beest.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Breeg uf</a>, wan\'t tu loong düüret.',
@@ -5199,8 +5201,8 @@ $messages['frr'] = array(
 	'mobile-frontend-photo-cancel' => 'Ufbreeg',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> huuchschüürd bil|<span>$1</span> huuchschüürd bilen}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'muar üs 500 huuchschüürd bilen',
-	'mobile-frontend-photo-upload-cta' => 'Wees so gud an melde di uun of skriiw di iin, am det bil huuch tu sjüüren.',
-	'mobile-frontend-photo-upload-login' => 'Dü skel di uunmelde, am bilen huuch tu sjüüren.',
+	'mobile-frontend-photo-upload-cta' => 'Wees so gud an melde di uun of skriiw di iin, am det bil huuch tu schüüren.',
+	'mobile-frontend-photo-upload-login' => 'Dü skel di uunmelde, am bilen huuch tu schüüren.',
 	'mobile-frontend-editor-disabled' => 'Dü heest ei det brükerrocht, am detdiar sidj tu bewerkin.',
 	'mobile-frontend-editor-cta' => 'Dü skel uunmeldet wees, am sidjen mä mobiil aperooten tu feranrin.',
 	'mobile-frontend-editor-edit' => 'Bewerke',
@@ -5208,7 +5210,7 @@ $messages['frr'] = array(
 	'mobile-frontend-editor-save' => 'Seekre',
 	'mobile-frontend-editor-cancel' => 'Ufbreeg',
 	'mobile-frontend-editor-keep-editing' => 'Widjer bewerke',
-	'mobile-frontend-editor-license' => 'Wan dü üüb "Seekre" trakst, stemest dü a [//wikimediafoundation.org/wiki/Terms_of_use brükerreegeln] tu an dat dan tekst oner det lisens [//creativecommons.org/licenses/by-sa/3.0/ Creative Common Attribution-ShareAlike 3.0] uun\'t näät steld woort.', # Fuzzy
+	'mobile-frontend-editor-license' => 'Wan dü üüb "Seekre" trakst, stemest dü a [//wikimediafoundation.org/wiki/Terms_of_use brükerreegeln] tu an dat dan tekst oner det lisens [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] an [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] uun\'t näät steld woort.',
 	'mobile-frontend-editor-placeholder' => 'Didiar kirew as leesag. Wees di iarst, di ham ütjwidjet!',
 	'mobile-frontend-editor-summary-placeholder' => 'Fertel üs, wat dü feranert heest (freiwalag)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wel dü det bewerkin würelk ufbreeg?',
@@ -7851,6 +7853,7 @@ $messages['kn'] = array(
 
 /** Korean (한국어)
  * @author Altostratus
+ * @author Hym411
  * @author Klutzy
  * @author Kwj2772
  * @author SEVEREN
@@ -8016,6 +8019,7 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|바이트}} 추가함',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거함',
 	'mobile-frontend-diffview-explained' => '다음 줄이 추가(+)되고 제거(-)되었습니다.',
+	'mobile-frontend-thanked-notice' => '$1이 당신이 그들의 편집에 감사했다는 것을 통보받았습니다.', # Fuzzy
 	'mobile-frontend-table' => '표 $1',
 	'mobile-frontend-saving-exit-page' => '기여한 내용을 아직 저장하고 있습니다. 만일 떠나면 기여한 내용을 잃게 됩니다. 정말 끝내시겠습니까?',
 	'mobile-frontend-photo-upload' => '이 문서에 그림 추가',
