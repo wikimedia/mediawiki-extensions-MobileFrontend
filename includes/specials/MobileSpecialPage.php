@@ -1,5 +1,10 @@
 <?php
-class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
+
+class MobileSpecialPage extends SpecialPage {
+	/**
+	 * @var bool: Whether this special page should appear on Special:SpecialPages
+	 */
+	protected $listed = false;
 
 	public function setHeaders() {
 		parent::setHeaders();
@@ -28,5 +33,9 @@ class UnlistedSpecialMobilePage extends UnlistedSpecialPage {
 
 	protected function clearPageMargins() {
 		$this->getOutput()->setProperty( 'bodyClassName', 'no-margins' );
+	}
+
+	public function isListed() {
+		return $this->listed;
 	}
 }

@@ -1,6 +1,6 @@
 <?php
 
-class SpecialMobileMenu extends UnlistedSpecialMobilePage {
+class SpecialMobileMenu extends MobileSpecialPage {
 	public function __construct() {
 		parent::__construct( 'MobileMenu' );
 	}

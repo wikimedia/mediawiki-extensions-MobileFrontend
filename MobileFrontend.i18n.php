@@ -12,6 +12,9 @@
 $messages = array();
 
 $messages['en'] = array (
+	/** special pages */
+	'nearby' => 'Pages near you',
+
 	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile.css' => '/* CSS placed here will affect users of the mobile site */', # only translate this message to other languages if you have to change it
 	'mobile.js' => '/* Any JavaScript here will be loaded for users using the mobile site */', # only translate this message to other languages if you have to change it
@@ -309,6 +312,8 @@ $messages['en'] = array (
  * @author Yekrats
  */
 $messages['qqq'] = array(
+	'nearby' => 'Description of Special:Nearby on Special:SpecialPages',
+
 	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=http://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
 *{{msg-mw|Mobile.js}} (optional)

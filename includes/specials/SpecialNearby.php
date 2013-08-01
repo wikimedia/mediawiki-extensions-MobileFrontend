@@ -1,8 +1,9 @@
 <?php
 
-class SpecialNearby extends UnlistedSpecialMobilePage {
+class SpecialNearby extends MobileSpecialPage {
 	public function __construct() {
 		parent::__construct( 'Nearby' );
+		$this->listed = true;
 	}
 
 	public function execute( $par = '' ) {
