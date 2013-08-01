@@ -97,9 +97,8 @@ class SkinMobile extends SkinMinerva {
 
 	public function getSkinConfigVariables() {
 		global $wgCookiePath;
-		$ctx = MobileContext::singleton();
 		$wgUseFormatCookie = array(
-			'name' => $ctx->getUseFormatCookieName(),
+			'name' => MobileContext::USEFORMAT_COOKIE_NAME,
 			'duration' => -1, // in days
 			'path' => $wgCookiePath,
 			'domain' => $this->getRequest()->getHeader( 'Host' ),
