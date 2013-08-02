@@ -24,6 +24,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
+$localBasePath = dirname( __DIR__ );
+$remoteExtPath = 'MobileFrontend';
+
 /**
  * A boilerplate containing common properties for all RL modules served to mobile site
  */
@@ -733,3 +736,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		)
 	),
 ) );
+
+unset( $localBasePath );
+unset( $remoteExtPath );
