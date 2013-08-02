@@ -130,10 +130,9 @@ function efMobileFrontend_Setup() {
 }
 
 // ResourceLoader modules
-$localBasePath = dirname( __FILE__ );
-$remoteExtPath = 'MobileFrontend';
+require_once( "$cwd/includes/Resources.php" );
 
-require_once( "$localBasePath/includes/Resources.php" );
+unset( $cwd );
 
 /**
  * Begin configuration variables
