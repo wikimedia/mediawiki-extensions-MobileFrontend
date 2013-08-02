@@ -605,7 +605,6 @@ class MobileContext extends ContextSource {
 	public function getMobileUrl( $url, $forceHttps = false ) {
 
 		if ( $this->shouldDisplayMobileView() ) {
-			$this->disableIncompatibleJs();
 			$subdomainTokenReplacement = null;
 			if ( wfRunHooks( 'GetMobileUrl', array( &$subdomainTokenReplacement ) ) ) {
 				if ( !empty( $subdomainTokenReplacement ) ) {
@@ -856,19 +855,6 @@ class MobileContext extends ContextSource {
 		$parsedTarget = wfParseUrl( $url );
 		$parsedServer = wfParseUrl( $wgServer );
 		return  $parsedTarget['host'] === $parsedServer['host'];
-	}
-
-	/**
-	 * This evil method disables JS known to be (or is potentially) incompatible with MF
-	 *
-	 * FIXME: We need to prevent things like Common.js from loading on the mobile site. Ultimately,
-	 * this should be handled by ResourceLoader, but this nasty hack has been agreed upon as
-	 * the quickest way forward at the moment. This should be removed ASAP.
-	 */
-	private function disableIncompatibleJs() {
-		global $wgUseSiteJs, $wgAllowUserJs;
-		$wgUseSiteJs = false;
-		$wgAllowUserJs = false;
 	}
 
 	/**
