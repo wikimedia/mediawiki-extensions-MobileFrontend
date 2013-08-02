@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "898eddaf_733342f6",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-02T22:03:16Z",
+      "side": 1,
+      "message": "If getData() returns a cached value, [\u0027lastmodified\u0027] might not be set. You can bump CACHE_VERSION or check if it\u0027s set and not return if data is old.",
+      "revId": "22c14bae39ffac33b6223ad29e3c61a34ccf0fdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
