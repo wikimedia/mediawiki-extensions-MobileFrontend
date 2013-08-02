@@ -16,6 +16,24 @@
       "revId": "22c14bae39ffac33b6223ad29e3c61a34ccf0fdf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "898eddaf_f35752ff",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-08-02T22:06:48Z",
+      "side": 1,
+      "message": "Ah, good catch.",
+      "parentUuid": "898eddaf_733342f6",
+      "revId": "22c14bae39ffac33b6223ad29e3c61a34ccf0fdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
