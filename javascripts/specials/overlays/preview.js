@@ -39,14 +39,17 @@
 				var $preview, nodes;
 				this._super( options );
 				$preview = this.$( '.preview' );
-				$preview.find( ' table,.dablink,.thumb' ).remove();
+				// Remove tables, infoboxes, navboxes, message boxes, hatnotes, and images.
+				$preview.find( 'table, .dablink, .rellink, .thumb' ).remove();
 				// FIXME: IMO meta data should remain hidden from output
-				nodes = $preview.find( 'p,div' ).map( function( i, el ) {
+				// Build an array of content nodes, excluding coordinates
+				nodes = $preview.find( 'p, div' ).map( function( i, el ) {
 					if ( $( el ).find( '#coordinates' ).length === 0 ) {
 						return el;
 					}
 				} );
 				$preview.empty();
+				// Display the first content node
 				$preview.append( nodes[0] );
 			}
 		} ),
