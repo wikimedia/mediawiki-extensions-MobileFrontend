@@ -52,7 +52,9 @@ M.history = ( function() {
 				action: 'mobileview',
 				page: pageTitle,
 				variant: mw.config.get( 'wgPreferredVariant' ),
-				redirects: 'yes', prop: 'sections|text', noheadings: 'yes',
+				redirect: 'yes',
+				prop: 'sections|text',
+				noheadings: 'yes',
 				noimages: mw.config.get( 'wgImagesDisabled', false ) ? 1 : undefined,
 				sectionprop: 'level|line|anchor', sections: leadOnly ? 0 : 'all'
 			}, options ).then( function( r ) {
