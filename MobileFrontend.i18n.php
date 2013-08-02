@@ -313,7 +313,6 @@ $messages['en'] = array (
  */
 $messages['qqq'] = array(
 	'nearby' => 'Description of Special:Nearby on Special:SpecialPages',
-
 	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=http://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
 *{{msg-mw|Mobile.js}} (optional)
@@ -3029,6 +3028,7 @@ $messages['da'] = array(
  * @author Wnme
  */
 $messages['de'] = array(
+	'nearby' => 'Seiten in deiner Nähe',
 	'mobile-frontend-desc' => 'Ermöglicht die für mobile Endgeräte optimierte Darstellung von Seiten',
 	'mobile.css' => '/* Das folgende CSS wird für alle Nutzer der mobilen Version geladen. */',
 	'mobile.js' => '/* Das folgende JavaScript wird für alle Nutzer der Mobilen Version geladen. */',
@@ -6486,6 +6486,7 @@ $messages['ia'] = array(
 /** Indonesian (Bahasa Indonesia)
  * @author Aldnonymous
  * @author Anakmalaysia
+ * @author Bennylin
  * @author Farras
  * @author Iwan Novirion
  * @author Kenrick95
@@ -6498,8 +6499,6 @@ $messages['id'] = array(
 	'mobile-frontend-logged-out' => 'Belum masuk log',
 	'mobile-frontend-logged-in-homepage-notification' => 'Selamat datang, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Masuk log sebagai $1',
-	'mobile-frontend-handshake-title' => 'Mengalihkan...',
-	'mobile-frontend-handshake-wait' => 'Harap tunggu sementara kami mengarahkan Anda ke formulir log masuk.',
 	'mobile-frontend-sign-up-heading' => 'Daftar',
 	'mobile-frontend-sign-in-heading' => 'Masuk log',
 	'mobile-frontend-sign-in-why' => 'Jika Anda memiliki akun {{SITENAME}}, Anda dapat masuk log di bawah ini.',
@@ -6516,8 +6515,8 @@ $messages['id'] = array(
 	'mobile-frontend-wml-continue' => 'Lanjutkan...',
 	'mobile-frontend-wml-back' => 'Kembali ...',
 	'mobile-frontend-view' => 'Tampilan seluler',
-	'mobile-frontend-view-desktop' => 'Tampilan komputer',
-	'mobile-frontend-view-mobile' => 'Tampilan seluler',
+	'mobile-frontend-view-desktop' => "Tampilan besar (''desktop'')",
+	'mobile-frontend-view-mobile' => "Tampilan kecil (''mobile'')",
 	'mobile-frontend-opt-in-explain' => 'Bergabung dengan beta, Anda akan mendapatkan akses ke fitur eksperimental, dengan risiko menemukan bug dan masalah.',
 	'mobile-frontend-images-status' => 'Gambar',
 	'mobile-frontend-disable-images' => 'Nonaktifkan gambar pada situs seluler',
@@ -8024,7 +8023,7 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|바이트}} 추가함',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거함',
 	'mobile-frontend-diffview-explained' => '다음 줄이 추가(+)되고 제거(-)되었습니다.',
-	'mobile-frontend-thanked-notice' => '$1이 당신이 그들의 편집에 감사했다는 것을 통보받았습니다.', # Fuzzy
+	'mobile-frontend-thanked-notice' => '$1님이 당신이 {{GENDER:$2|그|그녀|그들}}의 편집에 감사했다는 것을 들었습니다.',
 	'mobile-frontend-table' => '표 $1',
 	'mobile-frontend-saving-exit-page' => '기여한 내용을 아직 저장하고 있습니다. 만일 떠나면 기여한 내용을 잃게 됩니다. 정말 끝내시겠습니까?',
 	'mobile-frontend-photo-upload' => '이 문서에 그림 추가',
@@ -10263,6 +10262,7 @@ $messages['ne'] = array(
 /** Dutch (Nederlands)
  * @author Akoopal
  * @author AvatarTeam
+ * @author Hansmuller
  * @author JurgenNL
  * @author Konovalov
  * @author Patio
@@ -10479,7 +10479,7 @@ $messages['nl'] = array(
 	'mobile-frontend-editor-cancel' => 'Annuleren',
 	'mobile-frontend-editor-keep-editing' => 'Doorgaan met bewerken',
 	'mobile-frontend-editor-license' => 'Door op "Opslaan" te klikken, gaat u akkoord met onze [//wikimediafoundation.org/wiki/Terms_of_Use Gebruiksvoorwaarden] en gaat u akkoord met het vrijgeven van uw afbeelding onder de licentie [//creativecommons.org/licenses/by-sa/3.0/deed.nl Naamsvermelding-GelijkDelen 3.0] en [//nl.wikipedia.org/wiki/GNU-licentie_voor_vrije_documentatie GFDL].',
-	'mobile-frontend-editor-placeholder' => 'Deze paragraaf is leeg. Breid deze als eerste uit!',
+	'mobile-frontend-editor-placeholder' => 'Deze paragraaf bevat geen tekst. U kunt de eerste zijn die hem schrijft!',
 	'mobile-frontend-editor-summary-placeholder' => 'Geef aan wat u hebt gewijzigd (optioneel)',
 	'mobile-frontend-editor-cancel-confirm' => 'Wilt u uw bewerking echt niet opslaan?',
 	'mobile-frontend-editor-wait' => 'Een moment geduld. De bewerking wordt opgeslagen.',
@@ -13224,7 +13224,7 @@ $messages['tl'] = array(
 	'mobile-frontend-logged-out' => 'Hindi nakalagda',
 	'mobile-frontend-settings-description' => 'Ipasadya ang iyong mobile device sa pamamagitan ng sumusunod na pang-mobile na kagustuhan.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-save-settings' => 'Sagipin ang mga katakdaan', # Fuzzy
+	'mobile-frontend-save-settings' => 'Itala ang mga kagustuhan',
 	'mobile-frontend-random-button' => 'Alin man',
 	'mobile-frontend-back-to-top-of-section' => 'Tumalong Pabalik Ng Isang Seksyon',
 	'mobile-frontend-close-section' => 'Isara ang bahaging ito',
