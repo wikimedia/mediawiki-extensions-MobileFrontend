@@ -1,4 +1,4 @@
-( function( $, M ) {
+( function( M, $ ) {
 
 	function makePrettyDiff( $diff ) {
 		var $diffclone = $diff.clone(), before = '', after = '',
@@ -56,4 +56,4 @@
 		makePrettyDiff: makePrettyDiff
 	} );
 
-} )( jQuery, mw.mobileFrontend );
+} )( mw.mobileFrontend, jQuery );

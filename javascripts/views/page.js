@@ -1,4 +1,4 @@
-( function( M,  $ ) {
+( function( M, $ ) {
 
 	var
 		View = M.require( 'view' ),

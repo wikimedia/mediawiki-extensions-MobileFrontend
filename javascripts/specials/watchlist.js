@@ -1,4 +1,4 @@
-( function( $, M ) {
+( function( M, $ ) {
 	var star = M.require( 'watchstar' );
 
 	function init() {
@@ -17,4 +17,4 @@
 		init();
 	} );
 
-} )( jQuery, mw.mobileFrontend );
+} )( mw.mobileFrontend, jQuery );
