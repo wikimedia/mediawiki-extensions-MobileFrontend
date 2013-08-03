@@ -312,7 +312,7 @@ $messages['en'] = array (
  * @author Yekrats
  */
 $messages['qqq'] = array(
-	'nearby' => 'Description of Special:Nearby on Special:SpecialPages',
+	'nearby' => '{{doc-special|Nearby}}',
 	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=http://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
 *{{msg-mw|Mobile.js}} (optional)
@@ -1157,6 +1157,7 @@ $messages['as'] = array(
  * @author Xuacu
  */
 $messages['ast'] = array(
+	'nearby' => 'Páxines cercanes',
 	'mobile-frontend-desc' => 'Interfaz pa móviles',
 	'mobile-frontend-search-submit' => 'Dir',
 	'mobile-frontend-home-button' => 'Entamu',
@@ -1313,6 +1314,7 @@ $messages['ast'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte amestáu|bytes amestaos}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte desaniciáu|bytes desaniciaos}}',
 	'mobile-frontend-diffview-explained' => "S'amestaron (+) y desaniciaron (-) les siguientes llinies:",
+	'mobile-frontend-thanked-notice' => "$1 recibió l'avisu de que-y gustó {{GENDER:$2|la so}} edición.",
 	'mobile-frontend-table' => 'Tabla $1',
 	'mobile-frontend-saving-exit-page' => 'La to collaboración ta guardandose entá. Si coles se perderán les tos collaboraciones. ¿Seguro que quies colar?',
 	'mobile-frontend-photo-upload' => 'Amestar una foto a esti artículu',
@@ -1338,6 +1340,7 @@ $messages['ast'] = array(
 	'mobile-frontend-photo-nag-learn-more-2' => "'''¡Si!''' Fotos qu'ayuden a ilustrar y arriquecer les páxines de {{SITENAME}}.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Non.''' Fotos de cartelos de películes, portaes de llibros y otros materiales con drechos d'autor. Estes desaniciaránse.",
 	'mobile-frontend-lead-image-tutorial-summary' => "Asegurese de que la imaxe pue ayudar a ilustrar l'artículu. Tendría de ser una imaxe que vusté creó y que nun frañe drechos d'autor.",
+	'mobile-frontend-lead-image-tutorial-go' => 'Empecipiar la carga',
 	'mobile-frontend-image-uploading-wait' => 'Xubiendo la imaxe, espere por favor.',
 	'mobile-frontend-image-uploading-long' => '¡Inda ta xubiendo la imaxe! Gracies pola paciencia.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Encaboxar</a> si ta tardando demasiao.',
@@ -1359,7 +1362,7 @@ $messages['ast'] = array(
 	'mobile-frontend-editor-save' => 'Guardar',
 	'mobile-frontend-editor-cancel' => 'Encaboxar',
 	'mobile-frontend-editor-keep-editing' => 'Siguir editando',
-	'mobile-frontend-editor-license' => 'Al calcar "Guardar", aceuta les [//wikimediafoundation.org/wiki/Terms_of_use Condiciones d\'usu] y ta d\'alcuerdu con distribuir el so testu baxo la [//creativecommons.org/licenses/by-sa/3.0/ Llicencia Creative Commons Reconocimientu-CompartirIgual 3.0].', # Fuzzy
+	'mobile-frontend-editor-license' => "Al calcar «Guardar», aceuta les nueses [//wikimediafoundation.org/wiki/Terms_of_use Condiciones d'usu] y ta d'alcuerdu con distribuir el so testu baxo la [//creativecommons.org/licenses/by-sa/3.0/ Llicencia CC-BY-SA 3.0] y la [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL].",
 	'mobile-frontend-editor-placeholder' => "Esta seición ta balera. ¡Seya'l primeru n'espandela!",
 	'mobile-frontend-editor-summary-placeholder' => 'Diganos lo que camudó (opcional)',
 	'mobile-frontend-editor-cancel-confirm' => '¿Realmente quier abandonar la edición?',
@@ -5285,6 +5288,7 @@ $messages['gd'] = array(
  * @author Toliño
  */
 $messages['gl'] = array(
+	'nearby' => 'Páxinas preto de vostede',
 	'mobile-frontend-desc' => 'Interface para dispositivos móbiles',
 	'mobile.css' => '/* O CSS que se coloque aquí afectará a quen use o sitio móbil */',
 	'mobile.js' => '/* O JavaScript que se coloque aquí afectará a quen use o sitio móbil */',
@@ -7071,6 +7075,7 @@ in tutto il mondo',
  * @author Whym
  */
 $messages['ja'] = array(
+	'nearby' => '付近のページ',
 	'mobile-frontend-desc' => '携帯機器フロントエンド',
 	'mobile.css' => '/* ここに記述したCSSは携帯機器版サイトの利用者に影響します */',
 	'mobile.js' => '/* ここにあるすべてのJavaScriptは携帯機器版サイトの利用者に影響します */',
@@ -9030,6 +9035,7 @@ $messages['min'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
+	'nearby' => 'Страници во ваша близина',
 	'mobile-frontend-desc' => 'Мобилен посредник',
 	'mobile.css' => '/* Тука поставениот CSS ќе се применува врз корисниците на мобилното мрежно место */',
 	'mobile.js' => '/* Тука поставениот JavaScript ќе им се вчитува на корисниците на мобилното мрежно место */',
@@ -12198,7 +12204,7 @@ $messages['sah'] = array(
 	'mobile-frontend-home-button' => 'Дьиэлээ',
 	'mobile-frontend-random-button' => 'Түбэспиччэ',
 	'mobile-frontend-back-to-top-of-section' => 'Биир салаанан кэнники бар',
-	'mobile-frontend-regular-site' => 'Сирэйи көннөрү {{SITENAME}}ҕэ көр', # Fuzzy
+	'mobile-frontend-regular-site' => 'Көннөрү барыла',
 	'mobile-frontend-wml-continue' => 'Салгыы...',
 	'mobile-frontend-wml-back' => 'Төнүн...',
 	'mobile-frontend-view' => 'Мобил барыла',
@@ -13198,13 +13204,70 @@ $messages['tg-latn'] = array(
 $messages['th'] = array(
 	'mobile-frontend-search-submit' => 'ไป',
 	'mobile-frontend-home-button' => 'หน้าหลัก',
+	'mobile-frontend-logged-out' => 'ยังไม่ได้ล็อกอิน',
+	'mobile-frontend-logged-in-homepage-notification' => 'ยินดีต้อนรับ $1!',
+	'mobile-frontend-logged-in-toast-notification' => 'ล็อกอินในชื่อ $1',
+	'mobile-frontend-sign-up-heading' => 'สมัครบัญชี',
+	'mobile-frontend-sign-in-heading' => 'ลงชื่อเข้าใช้',
+	'mobile-frontend-sign-in-why' => 'หากคุณมีบัญชี{{SITENAME}} คุณสามารถลงชื่อเข้าใช้ด้านล่าง',
+	'mobile-frontend-save-settings' => 'บันทึก',
 	'mobile-frontend-random-button' => 'สุ่ม',
 	'mobile-frontend-back-to-top-of-section' => 'กลับไปที่หัวข้อ',
-	'mobile-frontend-regular-site' => 'ดูหน้านี้ในวิกิพีเดียรุ่นปกติ', # Fuzzy
+	'mobile-frontend-close-section' => 'ปิดส่วนนี้',
+	'mobile-frontend-regular-site' => 'ดูรุ่นคอมพิวเตอร์',
 	'mobile-frontend-view' => 'รุ่นโมบายล์',
+	'mobile-frontend-view-desktop' => 'คอมพิวเตอร์ตั้งโต๊ะ',
+	'mobile-frontend-view-mobile' => 'อุปกรณ์เคลื่อนที่',
+	'mobile-frontend-disable-images' => 'ปิดใช้งานภาพบนไซต์อุปกรณ์เคลื่อนที่',
+	'mobile-frontend-enable-images' => 'เปิดใช้งานภาพบนไซต์อุปกรณ์เคลื่อนที่',
+	'mobile-frontend-missing-image' => 'ภาพ',
+	'mobile-frontend-off' => 'ปิด',
+	'mobile-frontend-on' => 'เปิด',
 	'mobile-frontend-featured-article' => 'บทความคัดสรรวันนี้',
 	'mobile-frontend-news-items' => 'เรื่องจากข่าว',
-	'mobile-frontend-language' => 'ภาษา', # Fuzzy
+	'mobile-frontend-language' => 'ภาษา:',
+	'mobile-frontend-language-article-heading' => 'อ่านในภาษาอื่น',
+	'mobile-frontend-language-header' => 'มีหน้านี้ในวิกิพีเดีย $1 ภาษา',
+	'mobile-frontend-language-site-choose' => 'เลือกภาษา',
+	'mobile-frontend-username' => 'ชื่อผู้ใช้:',
+	'mobile-frontend-password' => 'รหัสผ่าน:',
+	'mobile-frontend-username-placeholder' => 'ชื่อผู้ใช้',
+	'mobile-frontend-password-placeholder' => 'รหัสผ่าน',
+	'mobile-frontend-login' => 'ลงชื่อเข้าใช้',
+	'mobile-frontend-last-modified-date' => 'แก้ไขล่าสุดเมื่อ $1 เวลา $2',
+	'mobile-frontend-last-modified-seconds' => 'แก้ไขล่าสุดเมื่อ $1 วินาทีที่แล้ว',
+	'mobile-frontend-last-modified-minutes' => 'แก้ไขล่าสุดเมื่อ $1 นาทีที่แล้ว',
+	'mobile-frontend-last-modified-hours' => 'แก้ไขล่าสุดเมื่อ $1 ชั่วโมงที่แล้ว',
+	'mobile-frontend-last-modified-days' => 'แก้ไขล่าสุดเมื่อ $1 วันที่แล้ว',
+	'mobile-frontend-last-modified-months' => 'แก้ไขล่าสุดเมื่อ $1 เดือนที่แล้ว',
+	'mobile-frontend-last-modified-years' => 'แก้ไขล่าสุดเมื่อ $1 ปีที่แล้ว',
+	'mobile-frontend-learn-more' => 'ทราบข้อมูลเพิ่มเติม',
+	'mobile-frontend-account-create-submit' => 'สมัครบัญชี',
+	'mobile-frontend-password-confirm-placeholder' => 'ยืนยันรหัสผ่าน',
+	'mobile-frontend-account-create-email-placeholder' => 'ที่อยู่อีเมล (เลือกได้)',
+	'mobile-frontend-overlay-escape' => 'ย้อนกลับ',
+	'mobile-frontend-placeholder' => 'ค้นหา{{SITENAME}}',
+	'mobile-frontend-privacy-link-text' => 'ความเป็นส่วนตัว',
+	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'อนุญาตให้เผยแพร่ภายใต้[//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] และอาจมีเงื่อนไขอื่นเพิ่มเติม',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile เงื่อนไขการใช้งาน]',
+	'mobile-frontend-footer-contact' => 'ติดต่อ',
+	'mobile-frontend-search-noresults' => 'ไม่มีชื่อหน้าตรงกับการค้นหาของคุณ เปลี่ยนคำค้น หรือกดปุ่มค้นหาคีย์บอร์ดเพื่อค้นหน้าภายใน',
+	'mobile-frontend-main-menu-button-tooltip' => 'เปิดรายการเลือกหลัก',
+	'mobile-frontend-main-menu-login' => 'ล็อกอิน',
+	'mobile-frontend-main-menu-logout' => 'ล็อกเอาต์',
+	'mobile-frontend-main-menu-watchlist' => 'รายการเฝ้าดู',
+	'mobile-frontend-main-menu-settings' => 'การตั้งค่า',
+	'mobile-frontend-main-menu-about' => 'เกี่ยวกับ{{SITENAME}}',
+	'mobile-frontend-main-menu-disclaimer' => 'ข้อปฏิเสธความรับผิดชอบ',
+	'mobile-frontend-settings-site-header' => 'ภาษาของ{{SITENAME}}',
+	'mobile-frontend-settings-site-description' => 'มี{{SITENAME}}ใน $1 ภาษา ทุกรุ่นที่มีแสดงรายการด้านล่าง',
+	'mobile-frontend-main-menu-account-create' => 'สร้างบัญชี',
+	'mobile-frontend-page-menu-contents' => 'เนื้อหา',
+	'mobile-frontend-page-menu-history' => 'ประวัติ',
+	'mobile-frontend-page-saving' => 'กำลังบันทึก $1',
+	'mobile-frontend-user-cta' => 'โปรดล็อกอินหรือสมัครบัญชีเพื่อดูประกาศของคุณ',
+	'mobile-frontend-user-button-tooltip' => 'แสดงประกาศของฉัน',
 );
 
 /** Turkmen (Türkmençe)
@@ -13297,6 +13360,7 @@ $messages['tpi'] = array(
  * @author Hcagri
  * @author Incelemeelemani
  * @author Nazif İLBEK
+ * @author Rapsar
  * @author Suelnur
  */
 $messages['tr'] = array(
@@ -13407,6 +13471,7 @@ $messages['tr'] = array(
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> yükleme|<span>$1</span> yükleme}}',
 	'mobile-frontend-photo-upload-cta' => 'Resim eklemek için oturum ya da hesap açın.',
 	'mobile-frontend-photo-upload-login' => 'Resim eklemek için oturum açmalısınız.',
+	'tag-mobile_edit' => 'Mobil değişiklik',
 	'mobile-frontend-talk-overlay-header' => 'Tartışma',
 	'mobile-frontend-talk-edit-summary' => 'Yeni tartışma bölümü: $1',
 );
