@@ -4,7 +4,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
-	const CACHE_VERSION = 3;
+	const CACHE_VERSION = 4;
 
 	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen;
 
@@ -63,6 +63,11 @@ class ApiMobileView extends ApiBase {
 			);
 		}
 		$data = $this->getData( $title, $params['noimages'] );
+		if ( isset( $prop['lastmodified'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'lastmodified' => $data['lastmodified'] )
+			);
+		}
 		$result = array();
 		$missingSections = array();
 		$requestedSections = isset( $params['sections'] )
@@ -113,6 +118,7 @@ class ApiMobileView extends ApiBase {
 		}
 		$this->getResult()->setIndexedTagName( $result, 'section' );
 		$this->getResult()->addValue( null, $this->getModuleName(), array( 'sections' => $result ) );
+
 		wfProfileOut( __METHOD__ );
 	}
 
@@ -217,6 +223,7 @@ class ApiMobileView extends ApiBase {
 				'sections' => array(),
 				'text' => array( $html ),
 				'refsections' => array(),
+				'lastmodified' => $wp->getTimestamp(),
 			);
 		} else {
 			wfProfileIn( __METHOD__ . '-sections' );
@@ -246,6 +253,7 @@ class ApiMobileView extends ApiBase {
 				}
 				$data['text'][] = $chunk;
 			}
+			$data['lastmodified'] = $wp->getTimestamp();
 			wfProfileOut( __METHOD__ . '-sections' );
 		}
 		// Don't store small pages to decrease cache size requirements
@@ -286,6 +294,7 @@ class ApiMobileView extends ApiBase {
 					'text',
 					'sections',
 					'normalizedtitle',
+					'lastmodified',
 				)
 			),
 			'sectionprop' => array(
@@ -332,6 +341,7 @@ class ApiMobileView extends ApiBase {
 				' text            - HTML of selected section(s)',
 				' sections        - information about all sections on page',
 				' normalizedtitle - normalized page title',
+				' lastmodified    - MW timestamp for when the page was last modified, e.g. "20130730174438"',
 			),
 			'sectionprop' => 'What information about sections to get',
 			'variant' => "Convert content into this language variant",
