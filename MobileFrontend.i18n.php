@@ -316,7 +316,7 @@ $messages['en'] = array (
  */
 $messages['qqq'] = array(
 	'nearby' => '{{doc-special|Nearby}}',
-	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=http://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
+	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
 *{{msg-mw|Mobile.js}} (optional)
 *{{msg-mw|Mobile.css}} (optional)',

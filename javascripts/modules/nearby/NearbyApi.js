@@ -8,7 +8,7 @@
 
 	// FIXME: Api should surely know this and return it in response to save us the hassle
 	// FIXME: Add some tests :)
-	// haversine formula ( http://en.wikipedia.org/wiki/Haversine_formula )
+	// haversine formula ( https://en.wikipedia.org/wiki/Haversine_formula )
 	function calculateDistance( from, to ) {
 		var distance, a,
 			toRadians = Math.PI / 180,

@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 
 	// removes all inline styles from html output
-	// see http://www.mediawiki.org/wiki/Deprecating_inline_styles
+	// see https://www.mediawiki.org/wiki/Deprecating_inline_styles
 	$( function() {
 		var isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special;
 		function scrub( $container ) {

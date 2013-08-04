@@ -153,14 +153,14 @@ $wgMFUseCentralAuthToken = false;
 
 /**
  * An api to which any photos should be uploaded
- * e.g. $wgMFPhotoUploadEndpoint = 'http://commons.wikimedia.org/w/api.php';
+ * e.g. $wgMFPhotoUploadEndpoint = 'https://commons.wikimedia.org/w/api.php';
  * Defaults to the current wiki
  */
 $wgMFPhotoUploadEndpoint = '';
 
 /**
  * An optional alternative api to query for nearby pages
- * e.g. http://en.m.wikipedia.org/w/api.php
+ * e.g. https://en.m.wikipedia.org/w/api.php
  *
  * If set forces nearby to operate in JSONP mode
  * @var String
@@ -341,7 +341,7 @@ $wgMFEnableSiteNotice = false;
  * Whether or not to enable the use of the X-Analytics HTTP response header
  *
  * This header is used for analytics purposes.
- * @see http://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
+ * @see https://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
  * @var bool
  */
 $wgMFEnableXAnalyticsLogging = false;

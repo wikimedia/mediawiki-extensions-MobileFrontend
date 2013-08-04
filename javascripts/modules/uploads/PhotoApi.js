@@ -13,13 +13,13 @@
 			// JavaScript strings are UTF-16.
 			codeUnit = str.charCodeAt( i );
 
-			// http://en.wikipedia.org/wiki/UTF-8#Description
+			// https://en.wikipedia.org/wiki/UTF-8#Description
 			if ( codeUnit < 0x80 ) {
 				len = 1;
 			} else if ( codeUnit < 0x800 ) {
 				len = 2;
 			} else if ( codeUnit >= 0xd800 && codeUnit < 0xe000 ) {
-				// http://en.wikipedia.org/wiki/UTF-16#Description
+				// https://en.wikipedia.org/wiki/UTF-16#Description
 				// Code point is one half of a surrogate pair.
 				// This and its partner combine to form a single 4 byte character in UTF-8.
 				len = 4;
@@ -63,7 +63,7 @@
 		fileSuffix = fileSuffix || '.jpg';
 		date = date || new Date();
 		name = description.replace( /[\x1B\n\x7f\.\[#<>\[\]\|\{\}\/:]/g, '-' );
-		// http://commons.wikimedia.org/wiki/MediaWiki:Titleblacklist-custom-double-apostrophe
+		// https://commons.wikimedia.org/wiki/MediaWiki:Titleblacklist-custom-double-apostrophe
 		name = name.replace( /''/g, '\'_' );
 
 		function pad( number ) {
