@@ -1034,6 +1034,7 @@ $messages['arc'] = array(
 	'mobile-frontend-regular-site' => 'ܚܘܝ ܐܝܟ ܚܫܘܒܬܐ',
 	'mobile-frontend-view' => 'ܓܠܚܐ ܒܙܥܘܩܐ ܟܘܪܝܐ (ܡܫܢܝܢܐ)',
 	'mobile-frontend-language' => 'ܠܫܢܐ:',
+	'mobile-frontend-settings-site-header' => 'ܠܫܢ̈ܐ ܕ {{SITENAME}}',
 );
 
 /** Moroccan Spoken Arabic (Maġribi)
@@ -6411,7 +6412,7 @@ $messages['ia'] = array(
 	'mobile-frontend-logged-in-homepage-notification' => 'Benvenite, $1!',
 	'mobile-frontend-settings-description' => 'Personalisa tu experientia sur tu apparato mobile con iste configurationes de sito mobile.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-save-settings' => 'Confirmar configurationes', # Fuzzy
+	'mobile-frontend-save-settings' => 'Confirmar',
 	'mobile-frontend-random-button' => 'Aleatori',
 	'mobile-frontend-back-to-top-of-section' => 'Retroceder un section',
 	'mobile-frontend-close-section' => 'Clauder iste section',
@@ -6445,15 +6446,15 @@ $messages['ia'] = array(
 	'mobile-frontend-overlay-escape' => 'Retornar',
 	'mobile-frontend-placeholder' => 'Cercar in {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Cercar {{SITENAME}} (Beta)',
-	'mobile-frontend-search-help' => 'Scribe parolas a cercar hic supra e le titulos del articulos correspondente apparera hic.', # Fuzzy
+	'mobile-frontend-search-help' => 'Scribe le parolas a cercar hic supra e le titulos del paginas correspondente apparera hic.',
 	'mobile-frontend-dismiss-notification' => 'clauder iste notification',
 	'mobile-frontend-clear-search' => 'Rader',
 	'mobile-frontend-privacy-link-text' => 'Confidentialitate',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Contento disponibile sub [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-footer-license' => 'Contento disponibile sub [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional conditiones pote esser in vigor.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Conditiones de Uso]',
 	'mobile-frontend-footer-contact' => 'Contacto',
-	'mobile-frontend-search-noresults' => 'Nulle titulo de articulo corresponde a tu recerca. Cambia le recerca, o preme le button de recerca de claviero pro cercar intra articulos.', # Fuzzy
+	'mobile-frontend-search-noresults' => 'Nulle titulo de pagina corresponde a tu recerca. Cambia le recerca, o preme le button de recerca de claviero pro cercar intra paginas.',
 	'mobile-frontend-main-menu-featured' => 'Eminente',
 	'mobile-frontend-main-menu-nearby' => 'A proximitate',
 	'mobile-frontend-main-menu-login' => 'Aperir session',
@@ -7870,6 +7871,7 @@ $messages['kn'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
+	'nearby' => '근처 문서',
 	'mobile-frontend-desc' => '모바일 프론트엔드',
 	'mobile.css' => '/* 이 CSS 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */',
 	'mobile.js' => '/* 이 자바스크립트 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */',
@@ -7921,7 +7923,7 @@ $messages['ko'] = array(
 	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|$1분}} 전에 마지막으로 수정함',
 	'mobile-frontend-last-modified-hours' => '{{PLURAL:$1|$1시간}} 전에 마지막으로 수정함',
 	'mobile-frontend-last-modified-days' => '{{PLURAL:$1|$1일}} 전에 마지막으로 수정함',
-	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1월}} 전에 마지막으로 수정함',
+	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1달}} 전에 마지막으로 수정함',
 	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|$1년}} 전에 마지막으로 수정함',
 	'mobile-frontend-learn-more' => '더 알아보기',
 	'mobile-frontend-account-create-submit' => '가입하기',
@@ -7954,7 +7956,7 @@ $messages['ko'] = array(
 	'mobile-frontend-main-menu-disclaimer' => '면책 조항',
 	'mobile-frontend-main-menu-settings-heading' => '모바일 사이트 설정',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} 언어',
-	'mobile-frontend-settings-site-description' => '{{SITENAME}}(은)는 언어 $1개로 읽을 수 있습니다. 읽을 수 있는 모든 버전은 다음과 같습니다',
+	'mobile-frontend-settings-site-description' => '{{SITENAME}}(은)는 $1개 {{PLURAL:$1|언어}}로 읽을 수 있습니다. 읽을 수 있는 모든 버전은 다음과 같습니다',
 	'mobile-frontend-main-menu-account-create' => '계정 만들기',
 	'mobile-frontend-page-menu-contents' => '목차',
 	'mobile-frontend-page-menu-history' => '역사',
@@ -8023,7 +8025,7 @@ $messages['ko'] = array(
 	'mobile-frontend-diffview-404-title' => '잘못된 판',
 	'mobile-frontend-diffview-404-desc' => '요청한 판에 대한 id가 존재하지 않습니다',
 	'mobile-frontend-diffview-title' => '바뀜',
-	'mobile-frontend-diffview-editcount' => '편집 $1회',
+	'mobile-frontend-diffview-editcount' => '{{PLURAL:$1|편집}} <div>$1</div>회',
 	'mobile-frontend-diffview-anonymous' => '익명 사용자',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|바이트}} 추가함',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|바이트}} 제거함',
@@ -9518,6 +9520,7 @@ $messages['mr'] = array(
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
+	'nearby' => 'Halaman berdekatan anda',
 	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-search-submit' => 'Pergi',
 	'mobile-frontend-home-button' => 'Laman Utama',
@@ -9674,6 +9677,7 @@ $messages['ms'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 bait ditambah',
 	'mobile-frontend-diffview-bytesremoved' => '$1 bait dibuang',
 	'mobile-frontend-diffview-explained' => 'Baris-baris yang berikut ditambahkan (+) dan digugurkan (-):',
+	'mobile-frontend-thanked-notice' => '$1 telah diberitahu bahawa anda menyukai suntingan{{GENDER:$2|nya}}.',
 	'mobile-frontend-table' => 'Jadual $1',
 	'mobile-frontend-saving-exit-page' => 'Sumbangan anda masih sedang disimpan. Jika anda pergi, sumbangan anda akan hilang. Adakah anda benar-benar ingin keluar?',
 	'mobile-frontend-photo-upload' => 'Letakkan gambar pada rencana ini',
@@ -9699,6 +9703,7 @@ $messages['ms'] = array(
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Boleh!''' Gambar yang boleh membantu dalam menjelaskan dan memperkaya halaman-halaman {{SITENAME}}.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Tak boleh!''' Gambar poster filem, kulit buku atau lain-lain bahan terhak cipta. Semua ini akan dihapuskan.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Pastikan imej anda boleh membantu menjelaskan rencana. Gambar itu seharusnya dihasilkan oleh diri anda sendiri dan tidak menyalahi hak cipta.',
+	'mobile-frontend-lead-image-tutorial-go' => 'Mula memuat naik',
 	'mobile-frontend-image-uploading-wait' => 'Sila tunggu, gambar sedang dimuat naik.',
 	'mobile-frontend-image-uploading-long' => 'Imej masih sedang dimuat naik. Terima kasih atas kesabaran anda.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Batalkan</a> jika terlalu lama.',
@@ -9720,7 +9725,7 @@ $messages['ms'] = array(
 	'mobile-frontend-editor-save' => 'Simpan',
 	'mobile-frontend-editor-cancel' => 'Batalkan',
 	'mobile-frontend-editor-keep-editing' => 'Sambung menyunting',
-	'mobile-frontend-editor-license' => 'Dengan mengklik "Simpan", anda bersetuju dengan [//wikimediafoundation.org/wiki/Terms_of_use Syarat-Syarat Penggunaan] kami dan juga sudi mengeluarkan gambar anda dengan [//creativecommons.org/licenses/by-sa/3.0/ Lesen Creative Commons Attribution-ShareAlike 3.0].', # Fuzzy
+	'mobile-frontend-editor-license' => 'Dengan mengklik "Simpan", anda bersetuju dengan [//wikimediafoundation.org/wiki/Terms_of_use Syarat-Syarat Penggunaan] kami dan juga sudi mengeluarkan gambar anda dengan [//creativecommons.org/licenses/by-sa/3.0/ Lesen Creative Commons Attribution-ShareAlike 3.0] dan [//ms.wikipedia.org/wiki/Wikipedia:Teks_Lesen_Dokumentasi_Bebas_GNU GFDL].',
 	'mobile-frontend-editor-placeholder' => 'Bahagian ini kosong. Jadilah yang pertama untuk mengembangkannya!',
 	'mobile-frontend-editor-summary-placeholder' => 'Terangkan suntingan anda (tidak wajib)',
 	'mobile-frontend-editor-cancel-confirm' => 'Adakah anda benar-benar mahu meninggalkan suntingan anda?',
@@ -11576,6 +11581,7 @@ $messages['rm'] = array(
  * @author Minisarm
  */
 $messages['ro'] = array(
+	'nearby' => 'Pagini în apropierea dumneavoastră',
 	'mobile-frontend-desc' => 'Interfața mobilă',
 	'mobile-frontend-search-submit' => 'Du-te',
 	'mobile-frontend-home-button' => 'Acasă',
@@ -11734,6 +11740,7 @@ din întreaga lume',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|octet adăugat|octeți adăugați|de octeți adăugați}}',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|octet șters|octeți șterși|de octeți șterși}}',
 	'mobile-frontend-diffview-explained' => 'Următoarele rânduri au fost adăugate (+) și șterse (-):',
+	'mobile-frontend-thanked-notice' => '$1 {{GENDER:$2|a|a|au}} fost {{GENDER:$2|informat|informată|informați}} că {{GENDER:$2|i|i|le}}-ați apreciat modificarea.',
 	'mobile-frontend-table' => 'Tabelul $1',
 	'mobile-frontend-saving-exit-page' => 'Contribuția dumneavoastră încă se salvează. Dacă ieșiți, contribuțiile dumneavoastră se vor pierde. Sunteți sigur că doriți să ieșiți?',
 	'mobile-frontend-photo-upload' => 'Adăugați o imagine pentru acest articol',
@@ -14101,6 +14108,7 @@ $messages['vep'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['vi'] = array(
+	'nearby' => 'Trang gần bạn',
 	'mobile-frontend-desc' => 'Giao diện di động',
 	'mobile.css' => '/* Mã CSS đặt ở đây sẽ ảnh hưởng đến những người sử dụng trang di động */',
 	'mobile.js' => '/* Mã JavaScript đặt ở đây sẽ được tải khi nào sử dụng trang di động */',
