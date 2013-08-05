@@ -4675,6 +4675,7 @@ $messages['fo'] = array(
  * @author عبد الحق فارح
  */
 $messages['fr'] = array(
+	'nearby' => 'Pages près de vous',
 	'mobile-frontend-desc' => 'Affichage mobile',
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-home-button' => 'Accueil',
