@@ -98,6 +98,10 @@ class MinervaTemplate extends BaseTemplate {
 		}
 	}
 
+	protected function renderMetaSections() {
+		$this->renderLanguages();
+	}
+
 	protected function renderContentWrapper( $data ) {
 		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		?>
@@ -111,7 +115,7 @@ class MinervaTemplate extends BaseTemplate {
 			<div id="content" class="content">
 				<?php
 					echo $data[ 'bodytext' ];
-					$this->renderLanguages();
+					$this->renderMetaSections();
 					$this->renderHistoryLink( $data );
 				?>
 			</div>

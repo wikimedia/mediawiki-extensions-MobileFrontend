@@ -1,7 +1,7 @@
 <?php
 
 class SkinMobileAlpha extends SkinMobileBeta {
-	public $template = 'MobileTemplateBeta';
+	public $template = 'MobileTemplateAlpha';
 	protected $mode = 'alpha';
 
 	protected function getSearchPlaceHolderText() {
