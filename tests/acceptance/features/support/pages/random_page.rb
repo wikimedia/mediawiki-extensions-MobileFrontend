@@ -10,7 +10,7 @@ class RandomPage
   a(:login_link, text: 'Log in')
   li(:login_logout_button, class: 'icon-loginout')
   div(:login_text, class: 'headmsg')
-  div(:login_text_wl, id: 'content_0')
+  div(:login_text_wl, id: 'content')
   a(:nearby_link, text: 'Nearby')
   li(:random_button, class: 'icon-random')
   a(:random_link, text: 'Random')
