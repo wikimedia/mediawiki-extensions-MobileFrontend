@@ -216,7 +216,7 @@
 
 			this.emit( 'start' );
 			this.preview.hide();
-			popup.show( progressPopup.$el, 'locked noButton loading' );
+			progressPopup.show();
 			progressPopup.on( 'cancel', function() {
 				api.abort();
 				self.log( { action: 'cancel' } );
@@ -229,7 +229,7 @@
 				insertInPage: this.options.insertInPage,
 				pageTitle: this.options.pageTitle
 			} ).done( function( fileName, descriptionUrl ) {
-				popup.close();
+				progressPopup.hide();
 				self.log( { action: 'success' } );
 				self.emit( 'success', {
 					fileName: fileName,
@@ -238,6 +238,7 @@
 					url: self.preview.imageUrl
 				} );
 			} ).fail( function( err, msg ) {
+				progressPopup.hide();
 				popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
 				self.log( { action: 'error', errorText: err } );
 				self.emit( 'error' );

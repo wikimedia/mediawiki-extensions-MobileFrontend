@@ -94,11 +94,6 @@
 #mf-notification.toast.landmark {
   color: #F7F737;
 }
-#mf-notification.toast.locked button {
-  display: block;
-  top: 0.8em;
-  right: 1.4em;
-}
 #mf-notification.toast > div {
   padding: 0.8em 1.4em;
 }
@@ -145,7 +140,4 @@
 }
 #mf-notification p:last-child {
   margin: 0;
-}
-#mf-notification .progress-bar {
-  margin: .9em 0 0;
 }

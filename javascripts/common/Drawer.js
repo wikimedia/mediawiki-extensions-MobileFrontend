@@ -20,10 +20,12 @@ var View = M.require( 'view' ),
 			var self = this;
 			if ( !this.isVisible() ) {
 				this.$el.addClass( 'visible' );
-				// ignore a possible click that called show()
-				setTimeout( function() {
-					$( window ).one( 'scroll.drawer click.drawer', $.proxy( self, 'hide' ) );
-				}, 0 );
+				if ( !this.locked ) {
+					// ignore a possible click that called show()
+					setTimeout( function() {
+						$( window ).one( 'scroll.drawer click.drawer', $.proxy( self, 'hide' ) );
+					}, 0 );
+				}
 			}
 		},
 

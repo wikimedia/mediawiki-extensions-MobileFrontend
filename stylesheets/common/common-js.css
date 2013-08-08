@@ -20,7 +20,7 @@
   text-align: center;
   background-position: 50% 0;
 }
-.loading#mf-notification,
+.loading.drawer,
 .loading.buttonBar {
   background-position: 16px 50%;
   padding-left: 60px;
