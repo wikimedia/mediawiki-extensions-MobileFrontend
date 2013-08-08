@@ -106,33 +106,6 @@
 		position: relative;
 	}
 
-	.mw-cite-backlink {
-		display: none;
-	}
-
-	button {
-		top: 22px;
-		right: 22px; /* padding of #content_wrapper */
-		width: 16px;
-		height: 12px;
-		background: url(../common/images/close-button-beta.png) no-repeat scroll 0 0 transparent;
-		margin: 0;
-		background-position: right center;
-		.background-size( auto, 12px );
-		cursor: pointer;
-		position: absolute;
-		text-indent: -999px;
-		overflow: hidden;
-		border: none;
-	}
-
-	h3 {
-		margin: 0;
-		padding-right: 4px;
-		line-height: 1em;
-		display: inline;
-	}
-
 	a:visited, a {
 		color: #3354C0;
 	}
@@ -144,5 +117,26 @@
 		&:last-child {
 			margin: 0;
 		}
+	}
+}
+
+.references {
+	h3 {
+		margin: 0;
+		padding-right: 4px;
+		display: inline;
+	}
+
+	.mw-cite-backlink {
+		display: none;
+	}
+
+	button {
+		float: right;
+		margin-top: .7em;
+		width: 16px;
+		height: 12px;
+		background: url(../common/images/close-button-beta.png) no-repeat 0 50%;
+		.background-size( auto, 12px );
 	}
 }
