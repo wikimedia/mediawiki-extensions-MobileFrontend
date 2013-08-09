@@ -9,7 +9,7 @@ var
 		defaults: {
 			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' ),
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
-			confirmMsg: mw.msg( 'mobile-frontend-editor-confirm' ),
+			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		},
