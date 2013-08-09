@@ -20,13 +20,14 @@
 			} );
 	}
 
-	function init() {
-		// FIXME: this doesn't work when loading page dynamically
+	function init( page ) {
+		// Note on ajax loaded pages that do not exist we force a refresh of the url using window.location so we can rely on this
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 
 		M.router.route( /^editor-(\d+)$/, function( sectionId ) {
-			// FIXME: This doesn't work in alpha - doesn't represent latest page.
-			var title = mw.config.get( 'wgTitle' ), ns = mw.config.get( 'wgCanonicalNamespace' );
+			var title = page ? page.title : mw.config.get( 'wgTitle' ),
+				// Note in current implementation Page title is prefixed with namespace
+				ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
 
 			sectionId = parseInt( sectionId, 10 );
 			new EditorOverlay( {

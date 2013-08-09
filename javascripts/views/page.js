@@ -25,6 +25,7 @@
 	Page = View.extend( {
 		template: M.template.get( 'page' ),
 		defaults: {
+			// For titles from other namespaces use a prefix e.g. Talk:Foo
 			title: '',
 			lead: '',
 			isMainPage: false,
