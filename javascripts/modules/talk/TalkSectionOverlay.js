@@ -14,40 +14,47 @@ var
 			info: mw.msg( 'mobile-frontend-talk-reply-info' )
 		},
 		postRender: function( options ) {
-			var self = this, $comment = this.$( '.comment' );
+			var self = this, $comment = this.$( '.comment' ),
+				$textarea = $comment.find( 'textarea' );
 			this._super( options );
 			this.$( '.loading' ).remove();
 			if ( !M.isLoggedIn() || mw.config.get( 'wgMFMode' ) !== 'alpha' ) {
 				$comment.remove();
 			} else {
+				$textarea.on( 'focus', function() {
+					$textarea.removeClass( 'error' );
+				} );
 				$comment.find( 'button' ).on( 'click', function() {
-					var $textarea = self.$( 'textarea' ),
-						val = $textarea.val();
-					$comment.hide();
-					self.$( '.loading' ).show();
-					// sign and add newline to front
-					val = '\n\n' + val + ' ~~~~';
-					api.getToken().done( function( token ) {
-						api.post( {
-							action: 'edit',
-							title: options.title,
-							section: options.section.id,
-							token: token,
-							appendtext: val
-						} ).done( function( data ) {
-							self.$( '.loading' ).hide();
-							$comment.show();
-							if ( data.error ) {
-								$textarea.addClass( 'error' );
-							} else {
-								self.hide();
-								self.parent.hide();
-								popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
-								// invalidate the cache
-								M.history.invalidateCachedPage( options.title );
-							}
+					var val = $textarea.val();
+					if ( val ) {
+						$comment.hide();
+						self.$( '.loading' ).show();
+						// sign and add newline to front
+						val = '\n\n' + val + ' ~~~~';
+						api.getToken().done( function( token ) {
+							api.post( {
+								action: 'edit',
+								title: options.title,
+								section: options.section.id,
+								token: token,
+								appendtext: val
+							} ).done( function( data ) {
+								self.$( '.loading' ).hide();
+								$comment.show();
+								if ( data.error ) {
+									$textarea.addClass( 'error' );
+								} else {
+									self.hide();
+									self.parent.hide();
+									popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
+									// invalidate the cache
+									M.history.invalidateCachedPage( options.title );
+								}
+							} );
 						} );
-					} );
+					} else {
+						$textarea.addClass( 'error' );
+					}
 				} );
 			}
 		}
