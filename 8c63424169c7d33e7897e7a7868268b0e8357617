@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "898eddaf_f693a458",
+        "filename": "templates/pageActionTutorial.html",
+        "patchSetId": 11
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-11T05:10:22Z",
+      "side": 1,
+      "message": "OK, I see now, sorry for not noticing. Still, why do we wrap everything in so many divs instead of using the className property on PageActionOverlay?",
+      "revId": "8c63424169c7d33e7897e7a7868268b0e8357617",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
