@@ -108,7 +108,7 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-about' => 'About {{SITENAME}}',
 	'mobile-frontend-main-menu-disclaimer' => 'Disclaimer',
 
-	'mobile-frontend-main-menu-settings-heading' => 'Mobile site settings',
+	'mobile-frontend-main-menu-settings-heading' => 'Settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is available in $1 {{PLURAL:$1|language|languages}}. All available versions are listed below',
 	'mobile-frontend-main-menu-account-create' => 'Create account',
