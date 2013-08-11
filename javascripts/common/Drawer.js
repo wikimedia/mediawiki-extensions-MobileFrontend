@@ -24,7 +24,9 @@ var View = M.require( 'view' ),
 				if ( !this.locked ) {
 					// ignore a possible click that called show()
 					setTimeout( function() {
-						$( window ).one( 'scroll.drawer click.drawer', $.proxy( self, 'hide' ) );
+						$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
+						// FIXME change when micro.tap.js in stable
+						$( '#mw-mf-page-center' ).one( ( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
 					}, this.minHideDelay );
 				}
 			}
@@ -35,6 +37,7 @@ var View = M.require( 'view' ),
 			// .one() registers one callback for scroll and click independently
 			// if one fired, get rid of the other one
 			$( window ).off( '.drawer' );
+			$( '#mw-mf-page-center' ).off( '.drawer' );
 		},
 
 		isVisible: function() {

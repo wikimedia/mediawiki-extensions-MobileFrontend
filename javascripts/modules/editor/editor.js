@@ -63,11 +63,13 @@
 		if ( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) {
 			init();
 		} else {
-			$( '#ca-edit' ).addClass( 'enabled' ).on( 'click', $.proxy( drawer, 'show' ) );
+			// FIXME change when micro.tap.js in stable
+			$( '#ca-edit' ).addClass( 'enabled' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', $.proxy( drawer, 'show' ) );
 		}
 		M.on( 'page-loaded', init );
 	} else {
-		$( '#ca-edit' ).on( 'click', function() {
+		// FIXME change when micro.tap.js in stable
+		$( '#ca-edit' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
 			popup.show( mw.msg( 'mobile-frontend-editor-disabled' ), 'toast' );
 		} );
 	}

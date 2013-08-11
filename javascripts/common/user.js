@@ -6,7 +6,8 @@
 			content: mw.msg( 'mobile-frontend-user-cta' )
 		} );
 
-		$( '#user-button' ).on( 'click', function( ev ) {
+		// FIXME change when micro.tap.js in stable
+		$( '#user-button' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function( ev ) {
 			ev.preventDefault();
 			drawer.show();
 		} );
