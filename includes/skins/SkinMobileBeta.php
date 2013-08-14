@@ -13,6 +13,13 @@ class SkinMobileBeta extends SkinMobile {
 		$out->addModuleStyles( 'mobile.styles.beta' );
 	}
 
+	public function getSkinConfigVariables() {
+		$vars = parent::getSkinConfigVariables();
+		// force cta on in beta
+		$vars['wgMFEnablePhotoUploadCTA'] = true;
+		return $vars;
+	}
+
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['beta'] = array( 'mobile.beta' );
