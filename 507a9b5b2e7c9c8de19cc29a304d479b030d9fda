@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "698b69a3_f2d90e55",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-14T19:55:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a989e1a9_91399a3f",
+      "revId": "507a9b5b2e7c9c8de19cc29a304d479b030d9fda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_5137124c",
         "filename": "javascripts/schemas/watchlist.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-07-27T00:29:17Z",
       "side": 1,
       "message": "Maybe the directory should be called logSchemas or something similar?",
+      "revId": "507a9b5b2e7c9c8de19cc29a304d479b030d9fda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "698b69a3_52cac270",
+        "filename": "javascripts/schemas/watchlist.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-14T19:55:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a989e1a9_5137124c",
       "revId": "507a9b5b2e7c9c8de19cc29a304d479b030d9fda",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "698b69a3_32cd3688",
+        "filename": "javascripts/schemas/watchlist.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-14T19:55:46Z",
+      "side": 1,
+      "message": "I\u0027m not quite sure how this is going to develop so I\u0027m wary of creating a generic Schema class just yet until we have at least one more use-case.",
+      "parentUuid": "a989e1a9_713c162e",
+      "revId": "507a9b5b2e7c9c8de19cc29a304d479b030d9fda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_b1469ec1",
         "filename": "javascripts/schemas/watchlist.js",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2013-07-27T00:29:17Z",
       "side": 1,
       "message": "Why do we do this only to later read from it within the same closure?",
+      "revId": "507a9b5b2e7c9c8de19cc29a304d479b030d9fda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "698b69a3_72eedeef",
+        "filename": "javascripts/schemas/watchlist.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-14T19:55:46Z",
+      "side": 1,
+      "message": "readability... unless I\u0027m misunderstanding what you are saying.",
+      "parentUuid": "a989e1a9_b1469ec1",
       "revId": "507a9b5b2e7c9c8de19cc29a304d479b030d9fda",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
