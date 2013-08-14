@@ -9,9 +9,9 @@
 			loaded = $content.data( 'loaded' ), section;
 
 		if ( !loaded && currentPage ) {
-			section = currentPage.getSectionFromAnchor( 'section_' + section_id );
+			section = currentPage.getSubSection( section_id );
 			if ( section ) {
-				$content.html( section.content ).data( 'loaded', true );
+				$content.html( section.text ).data( 'loaded', true );
 			}
 			M.emit( 'section-rendered', $content );
 		}

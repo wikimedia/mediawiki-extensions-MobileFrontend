@@ -47,7 +47,7 @@
 							text: text + ' ~~~~'
 						} ).done( function() {
 							self.hide();
-							M.history.invalidateCachedPage( self.title );
+							M.pageApi.invalidatePage( self.title );
 							self.talkOverlay.appendSection( { heading: heading, content: text } ); // FIXME: doesn't add signature and doesn't wikify
 						} );
 					} );
@@ -139,7 +139,8 @@
 		$talk.addClass( 'loading' );
 		ev.preventDefault();
 
-		M.history.retrievePage( talkPage ).fail( function( resp ) {
+		// FIXME: use Page's mechanisms for retrieving page data instead
+		M.pageApi.getPage( talkPage ).fail( function( resp ) {
 			if ( resp.error && resp.error.code === 'missingtitle' ) {
 				renderTalkOverlay( {
 					sections: [], title: talkPage

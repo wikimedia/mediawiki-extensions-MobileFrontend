@@ -5,7 +5,7 @@
 
 	LanguageOverlay = Overlay.extend( {
 		defaults: {
-			languagesLink: M.history.getArticleUrl( 'Special:MobileOptions/Language' ),
+			languagesLink: M.pageApi.getPageUrl( 'Special:MobileOptions/Language' ),
 			languagesText: mw.msg( 'mobile-frontend-language-footer' ),
 			placeholder: mw.msg( 'mobile-frontend-language-site-choose' )
 		},

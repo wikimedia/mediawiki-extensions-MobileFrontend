@@ -8,13 +8,13 @@
 	<div id="content_0" class="content_block openSection">{{{lead}}}</div>
 	{{#sections}}
 	<div class="section">
-		<h2 class="section_heading" id="section_{{index}}">
-			<span id="{{anchor}}">{{{heading}}}</span>
+		<h2 class="section_heading" id="section_{{id}}">
+			<span id="{{anchor}}">{{{line}}}</span>
 			<span class="mw-editsection"><a href="?section={{id}}"></a></span>
 		</h2>
-		<div class="content_block" id="content_{{index}}"
+		<div class="content_block" id="content_{{id}}"
 			data-references="{{isReferences}}"
-			data-content="{{content}}">
+			data-content="{{text}}">
 		</div>
 	</div>
 	{{/sections}}

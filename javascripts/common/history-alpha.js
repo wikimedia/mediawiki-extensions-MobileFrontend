@@ -42,7 +42,7 @@
 		 * @param {String} pageTitle String representing the title of a page that should be loaded in the browser
 		 */
 		function navigateToPage( title ) {
-			History.pushState( null, title, M.history.getArticleUrl( title ) );
+			History.pushState( null, title, M.pageApi.getPageUrl( title ) );
 		}
 
 		/**
@@ -85,12 +85,13 @@
 		};
 	}
 
+	// FIXME: use M.define()
+	M.history = {
+		updateQueryStringParameter: updateQueryStringParameter
+	};
+
 	if ( History.enabled && !isSpecialPage ) {
 		$.extend( M.history, init() );
 	}
-
-	$.extend( M.history, {
-		updateQueryStringParameter: updateQueryStringParameter
-	} );
 
 } ( mw.mobileFrontend, jQuery ) );

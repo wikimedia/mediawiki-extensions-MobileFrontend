@@ -3,6 +3,7 @@
 ( function( M, $ ) {
 	var EventEmitter = M.require( 'eventemitter' ),
 		Router = M.require( 'Router' ),
+		PageApi = M.require( 'PageApi' ),
 		// FIXME: when mobileFrontend is an object with a constructor,
 		// just inherit from EventEmitter instead
 		eventEmitter = new EventEmitter(),
@@ -284,6 +285,7 @@
 		template: template,
 		unlockViewport: unlockViewport,
 		router: new Router(),
+		pageApi: new PageApi(),
 		deParam: deParam
 	} );
 

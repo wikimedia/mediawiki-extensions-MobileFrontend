@@ -16,7 +16,7 @@
 				var directionUrl;
 				options.heading = options.page.title;
 				options.preview = options.page.lead;
-				options.url = M.history.getArticleUrl( options.heading );
+				options.url = M.pageApi.getPageUrl( options.heading );
 				options.readMoreLink = mw.msg( 'mobile-frontend-nearby-link' );
 
 				if ( options.latLngString ) {
@@ -74,7 +74,7 @@
 				title = $a.find( 'h2' ).text();
 			loader.show();
 
-			M.history.retrievePage( title, endpoint, true ).done( function( page ) {
+			M.pageApi.getPage( title, endpoint, true ).done( function( page ) {
 				var preview = new PagePreviewOverlay( { page: new Page( page ),
 					latLngString: $a.data( 'latlng' ),
 					img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html() } );

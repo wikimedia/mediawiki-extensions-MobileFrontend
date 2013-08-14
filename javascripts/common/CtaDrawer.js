@@ -15,8 +15,8 @@ var Drawer = M.require( 'Drawer' ),
 				returntoquery: options.returnToQuery
 			};
 
-			options.loginUrl = M.history.getArticleUrl( 'Special:UserLogin', params );
-			options.signupUrl = M.history.getArticleUrl( 'Special:UserLogin', $.extend( params, { type: 'signup' } ) );
+			options.loginUrl = M.pageApi.getPageUrl( 'Special:UserLogin', params );
+			options.signupUrl = M.pageApi.getPageUrl( 'Special:UserLogin', $.extend( params, { type: 'signup' } ) );
 		}
 	} );
 

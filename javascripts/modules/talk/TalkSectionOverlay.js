@@ -48,7 +48,7 @@ var
 									self.parent.hide();
 									popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ), 'toast' );
 									// invalidate the cache
-									M.history.invalidateCachedPage( options.title );
+									M.pageApi.invalidatePage( options.title );
 								}
 							} );
 						} );
