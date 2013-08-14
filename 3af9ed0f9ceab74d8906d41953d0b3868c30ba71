@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "698b69a3_09964c3d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-14T22:39:19Z",
+      "side": 1,
+      "message": "Is this other div really needed?",
+      "revId": "3af9ed0f9ceab74d8906d41953d0b3868c30ba71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "698b69a3_89a09ca4",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-14T22:39:19Z",
+      "side": 1,
+      "message": "arggh.. id inside an id is a bad pattern to have.",
+      "revId": "3af9ed0f9ceab74d8906d41953d0b3868c30ba71",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
