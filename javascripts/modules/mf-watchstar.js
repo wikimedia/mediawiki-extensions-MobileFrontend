@@ -52,12 +52,7 @@ var api = M.require( 'api' ), w = ( function() {
 			popup.show( msg, popupClass );
 		}
 
-		$.ajax( {
-			type: 'post', dataType: 'json',
-			url:  M.getApiUrl(),
-			data: data
-		} ).done( callback ).fail( errback ).
-			done( report );
+		api.post( data ).done( callback ).fail( errback ).done( report );
 	}
 
 	function createButton( container ) {
@@ -126,13 +121,10 @@ var api = M.require( 'api' ), w = ( function() {
 	 * @param {Function} callback: A callback that is passed a json of mappings from title to booleans describing whether page is watched
 	 */
 	function asyncCheckWatchStatus( titles, callback ) {
-		$.ajax( {
-			url:  M.getApiUrl(), dataType: 'json',
-			data: {
-				action: 'query', format: 'json',
-				titles: titles.join( '|' ),
-				prop: 'info', inprop: 'watched'
-			}
+		api.get( {
+			action: 'query', format: 'json',
+			titles: titles.join( '|' ),
+			prop: 'info', inprop: 'watched'
 		} ).done( function( data ) {
 				var pages = data.query.pages,
 					statuses = {}, page, i;

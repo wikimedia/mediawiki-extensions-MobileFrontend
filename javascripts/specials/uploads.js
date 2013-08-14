@@ -36,7 +36,7 @@ var
 					iiprop: 'url|timestamp',
 					iiurlwidth: IMAGE_WIDTH
 				}, {
-					url: corsUrl || M.getApiUrl(),
+					url: corsUrl || this.apiUrl,
 					xhrFields: { withCredentials: true }
 				} ).done( function( resp ) {
 					if ( resp.query && resp.query.pages ) {

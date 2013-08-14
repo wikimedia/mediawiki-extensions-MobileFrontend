@@ -207,14 +207,6 @@
 		}
 	}
 
-	// FIXME: remove when we use api module everywhere
-	/**
-	 * @deprecated
-	 */
-	function getApiUrl() {
-		return mw.config.get( 'wgScriptPath', '' ) + '/api.php';
-	}
-
 	function isLoggedIn() {
 		return mw.config.get( 'wgUserName' ) ? true : false;
 	}
@@ -279,7 +271,6 @@
 		init: init,
 		emit: emit,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
-		getApiUrl: getApiUrl,
 		getOrigin: getOrigin,
 		getSessionId: getSessionId,
 		isLoggedIn: isLoggedIn,

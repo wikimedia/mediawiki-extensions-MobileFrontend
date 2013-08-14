@@ -1,12 +1,13 @@
 ( function( M, $ ) {
 
 	var EventEmitter = M.require( 'eventemitter' ),
+		apiUrl = mw.config.get( 'wgScriptPath', '' ) + '/api.php',
 		Api, api;
 
 	// TODO: this might be dangerous and cause conflicts with other code
 	// should we move it to Api#ajax?
 	$.ajaxSetup( {
-		url: M.getApiUrl(),
+		url: apiUrl,
 		dataType: 'json',
 		data: {
 			format: 'json'
@@ -14,6 +15,8 @@
 	} );
 
 	Api = EventEmitter.extend( {
+		apiUrl: apiUrl,
+
 		/**
 		 * Constructor, if you override it, use _super().
 		 *
@@ -155,7 +158,7 @@
 					}
 				}
 				this.ajax( data, {
-					url: endpoint || M.getApiUrl(),
+					url: endpoint || this.apiUrl,
 					xhrFields: { withCredentials: true }
 				} ).then( function( tokenData ) {
 					var token;
