@@ -6,7 +6,9 @@ var
 	View = M.require( 'view' ),
 	CarouselOverlay = M.require( 'overlays/CarouselOverlay' ),
 	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
-	userName = mw.config.get( 'wgUserName' ),
+	pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
+	currentUserName = mw.config.get( 'wgUserName' ),
+	userName = pageParams[1] ? pageParams[1] : currentUserName,
 	IMAGE_WIDTH = 320,
 	UserGalleryApi, PhotoItem, PhotoList;
 
@@ -88,6 +90,10 @@ var
 		isEmpty: function() {
 			return this.$list.find( 'li' ).length === 0;
 		},
+		showEmptyMessage: function() {
+			$( '<p class="content">' ).text( mw.msg( 'mobile-frontend-donate-image-nouploads' ) ).
+				insertBefore( this.$list );
+		},
 		prependPhoto: function( photoData ) {
 			new PhotoItem( photoData ).prependTo( this.$list );
 		},
@@ -152,11 +158,11 @@ var
 	}
 
 	function init() {
-		var $container, userGallery;
+		var $container, userGallery, emptyHandler;
 
-		userGallery = new PhotoList().
-			appendTo( '#content' ).
-			on( 'empty', function() {
+		userGallery = new PhotoList().appendTo( '#content' );
+		if ( currentUserName === userName ) {
+			emptyHandler = function() {
 				new CarouselOverlay( {
 					pages: [
 						{
@@ -175,10 +181,16 @@ var
 							className: 'slide-image', id: 3
 						}
 					]
-				} ).show();
-			} );
+				} );
+			};
+		} else {
+			emptyHandler = function() {
+				userGallery.showEmptyMessage();
+			};
+		}
+		userGallery.on( 'empty', emptyHandler );
 
-		if ( PhotoUploaderButton.isSupported ) {
+		if ( PhotoUploaderButton.isSupported && currentUserName === userName ) {
 			$container = $( '.ctaUploadPhoto' );
 
 			new PhotoUploaderButton( {

@@ -145,6 +145,7 @@ $messages['en'] = array (
 	'mobile-frontend-nearby-directions' => 'Navigate here',
 
 	// image donation
+	'mobile-frontend-donate-image-nouploads' => 'No uploads.',
 	'mobile-frontend-donate-image-login' => 'You must be logged in to see your uploads.',
 	'mobile-frontend-photo-upload-disabled' => 'No image is needed on this page.',
 	'mobile-frontend-photo-upload-anon' => 'You need to be logged in to add an image to this page.',
@@ -541,6 +542,7 @@ See also:
 	'mobile-frontend-nearby-error-guidance' => 'Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-error}}',
 	'mobile-frontend-nearby-link' => 'Text of link that takes user to full page',
 	'mobile-frontend-nearby-directions' => 'Text of directions link',
+	'mobile-frontend-donate-image-nouploads' => 'Message that shows on uploads page when a user that is not the existing user has not uploaded any images.',
 	'mobile-frontend-donate-image-login' => 'Title for [[Special:UserLogin]] when being redirected to [[Special:Uploads]].
 
 Used when the user is not logged in.

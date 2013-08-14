@@ -695,6 +695,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-first-upload-wizard-new-page-3-header',
 			'mobile-frontend-first-upload-wizard-new-page-3',
 			'mobile-frontend-first-upload-wizard-new-page-3-ok',
+			'mobile-frontend-donate-image-nouploads',
 		),
 		'scripts' => array(
 			'javascripts/widgets/carousel.js',

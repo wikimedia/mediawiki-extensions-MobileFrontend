@@ -8,7 +8,7 @@ class SpecialUploads extends MobileSpecialPage {
 
 	public function execute( $par = '' ) {
 		global $wgMFPhotoUploadEndpoint;
-		$user = $this->getUser();
+		$user = $par ? User::newFromName( $par ) : $this->getUser();
 
 		$this->setHeaders();
 		$output = $this->getOutput();
