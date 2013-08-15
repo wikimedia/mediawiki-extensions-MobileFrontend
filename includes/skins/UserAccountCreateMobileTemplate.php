@@ -124,7 +124,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		}
 		// make sure we've gotten the captchaId
 		if ( !isset( $matches[1] ) ) {
-			return '';
+			return $header;
 		}
 		$captchaId = $matches[1];
 
