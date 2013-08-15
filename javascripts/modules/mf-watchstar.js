@@ -105,7 +105,8 @@ var api = M.require( 'api' ), w = ( function() {
 			} );
 		}
 
-		$( watchBtn ).click( function( ev ) {
+		// FIXME change when micro.tap.js in stable
+		$( watchBtn ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function( ev ) {
 			if( prevent ) {
 				ev.preventDefault();
 			}
@@ -173,7 +174,8 @@ var api = M.require( 'api' ), w = ( function() {
 				createWatchListButton( container, title, status[ title ] );
 			} );
 		} else {
-			$( createButton( container ) ).click( function() {
+			// FIXME change when micro.tap.js in stable
+			$( createButton( container ) ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
 				if ( !drawer.isVisible() ) {
 					// log if enabled
 					logWatchEvent( 2 );

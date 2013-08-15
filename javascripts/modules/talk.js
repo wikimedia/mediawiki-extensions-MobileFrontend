@@ -153,7 +153,8 @@
 
 	function init( title ) {
 		var talkPrefix = mw.config.get( 'wgFormattedNamespaces' ) [mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
-		$( '#ca-talk' ).on( 'click', onTalkClick ).data( 'title', talkPrefix + title );
+		// FIXME change when micro.tap.js in stable
+		$( '#ca-talk' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', onTalkClick ).data( 'title', talkPrefix + title );
 	}
 
 	init( mw.config.get( 'wgTitle' ) );

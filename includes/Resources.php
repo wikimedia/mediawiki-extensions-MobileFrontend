@@ -353,6 +353,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/modules/nearbypages.css',
 		),
 		'scripts' => array(
+			'javascripts/externals/micro.tap.js',
 			'javascripts/modules/mf-inline-style-scrubber.js',
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-tables.js',

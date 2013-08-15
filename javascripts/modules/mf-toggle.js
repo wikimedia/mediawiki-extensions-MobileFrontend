@@ -27,7 +27,8 @@ var MIN_SECTIONS = 2, toggle = ( function() {
 
 		// use mouseup because mousedown blocks the click event and links
 		// in headings won't work
-		$( '.section_heading' ).on( 'mouseup', openSectionHandler );
+		// FIXME change when micro.tap.js in stable
+		$( '.section_heading' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', openSectionHandler );
 		$( '.section_anchors' ).remove();
 
 		function checkHash() {
