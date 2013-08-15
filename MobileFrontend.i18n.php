@@ -283,6 +283,7 @@ $messages['en'] = array (
 	'mobile-frontend-talk-explained' => 'The following conversations are currently active',
 	'mobile-frontend-talk-explained-empty' => 'There are no conversations about this page.',
 	'mobile-frontend-talk-overlay-header' => 'Talk',
+	'mobile-frontend-talk-back-to-page' => 'Return to "$1" page.',
 	'mobile-frontend-talk-overlay-lead-header' => 'Unnamed discussion',
 	'mobile-frontend-talk-add-overlay-submit' => 'Add discussion',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Topic subject',
@@ -752,6 +753,7 @@ See also:
 	'mobile-frontend-talk-explained-empty' => 'Explains why the list is empty.',
 	'mobile-frontend-talk-overlay-header' => 'Heading for talk overlay.
 {{Identical|Talk}}',
+	'mobile-frontend-talk-back-to-page' => 'Label for link from talk page to subject page.',
 	'mobile-frontend-talk-overlay-lead-header' => 'Heading for a discussion which has no heading (lead section of talk page)',
 	'mobile-frontend-talk-add-overlay-submit' => 'Label for button which submits a new talk page topic',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Placeholder text to prompt user to add a talk page topic subject',

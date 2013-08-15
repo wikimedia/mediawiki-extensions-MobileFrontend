@@ -355,8 +355,16 @@ HTML;
 				'data-timestamp' => $timestamp,
 				'href' => $historyUrl,
 				'text' => $lastModified,
+				'class' => 'sibling-page',
 			);
 			$tpl->set( 'historyLink', $historyLink );
+		}
+		if ( $title->isTalkPage() ) {
+			$tpl->set( 'subject-page', Linker::link(
+				$title->getSubjectPage(),
+				wfMessage( 'mobile-frontend-talk-back-to-page', $title->getText() ),
+				array( 'class' => 'sibling-page' )
+			) );
 		}
 	}
 

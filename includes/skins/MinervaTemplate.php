@@ -114,6 +114,9 @@ class MinervaTemplate extends BaseTemplate {
 			?>
 			<div id="content" class="content">
 				<?php
+					if ( isset( $data['subject-page'] ) ) {
+						echo $data['subject-page'];
+					}
 					echo $data[ 'bodytext' ];
 					$this->renderMetaSections();
 					$this->renderHistoryLink( $data );
