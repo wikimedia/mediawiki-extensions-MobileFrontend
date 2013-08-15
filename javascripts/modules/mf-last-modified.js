@@ -22,6 +22,7 @@ var module = ( function() {
 	 */
 	function init() {
 		var $lastModified = $( '#mw-mf-last-modified' ),
+			ts = $lastModified.data( 'timestamp' ),
 			keys = {
 				seconds: 'mobile-frontend-last-modified-seconds',
 				minutes: 'mobile-frontend-last-modified-minutes',
@@ -30,12 +31,15 @@ var module = ( function() {
 				months: 'mobile-frontend-last-modified-months',
 				years: 'mobile-frontend-last-modified-years'
 			},
-			pageTimestamp = parseInt( $lastModified.data( 'timestamp' ), 10 ),
-			currentTimestamp = Math.round( new Date().getTime() / 1000 ),
-			delta = timeAgo( currentTimestamp - pageTimestamp ),
-			message = mw.msg( keys[ delta.unit ], delta.value );
+			message, pageTimestamp, currentTimestamp, delta;
 
-		$lastModified.text( message );
+		if ( ts ) {
+			pageTimestamp = parseInt( ts, 10 );
+			currentTimestamp = Math.round( new Date().getTime() / 1000 );
+			delta = timeAgo( currentTimestamp - pageTimestamp );
+			message = mw.msg( keys[ delta.unit ], delta.value );
+			$lastModified.text( message );
+		}
 	}
 	M.on( 'page-loaded', init );
 

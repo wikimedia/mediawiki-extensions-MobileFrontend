@@ -336,6 +336,7 @@ HTML;
 	function prepareTemplatePageContent( QuickTemplate $tpl ) {
 		$title = $this->getTitle();
 		$isSpecialPage = $title->isSpecialPage();
+		$isMainPage = $title->isMainPage();
 		$user = $this->getUser();
 		$ctx = MobileContext::singleton();
 
@@ -344,15 +345,18 @@ HTML;
 			// add last modified timestamp
 			$revId = $this->getRevisionId();
 			$timestamp = Revision::getTimestampFromId( $this->getTitle(), $revId );
-			$lastModified = wfMessage( 'mobile-frontend-last-modified-date',
-				$this->getLanguage()->userDate( $timestamp, $user ),
-				$this->getLanguage()->userTime( $timestamp, $user )
-			)->parse();
+			// Main pages tend to include transclusions (see bug 51924)
+			$lastModified = $isMainPage ?
+				wfMessage( 'mobile-frontend-history' ) :
+				wfMessage( 'mobile-frontend-last-modified-date',
+					$this->getLanguage()->userDate( $timestamp, $user ),
+					$this->getLanguage()->userTime( $timestamp, $user ) )->parse();
+
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
 			$historyUrl = $ctx->getMobileUrl( $title->getFullURL( 'action=history' ) );
 			$historyLink = array(
 				'id' => 'mw-mf-last-modified',
-				'data-timestamp' => $timestamp,
+				'data-timestamp' => $isMainPage ? '' : $timestamp,
 				'href' => $historyUrl,
 				'text' => $lastModified,
 			);

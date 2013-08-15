@@ -67,6 +67,7 @@ $messages['en'] = array (
 	'mobile-frontend-username-placeholder' => 'Username',
 	'mobile-frontend-password-placeholder' => 'Password',
 	'mobile-frontend-login' => 'Sign in',
+	'mobile-frontend-history' => 'View edit history of this page.',
 	'mobile-frontend-last-modified-date' => 'Last modified on $1, at $2',
 	'mobile-frontend-last-modified-seconds' => 'Last modified {{PLURAL:$1|$1 second|$1 seconds}} ago',
 	'mobile-frontend-last-modified-minutes' => 'Last modified {{PLURAL:$1|$1 minute|$1 minutes}} ago',
@@ -398,6 +399,7 @@ See also:
 {{Identical|Password}}',
 	'mobile-frontend-login' => 'Button text for login in Wikimedia mobile user interface.
 {{Identical|Log in}}',
+	'mobile-frontend-history' => 'This is shown on the Main Page in place of a last modified label to avoid confusion caused by transclusions.',
 	'mobile-frontend-last-modified-date' => 'Text that displays the date the page was last modified. Parameters:
 * $1 - date
 * $2 - time
