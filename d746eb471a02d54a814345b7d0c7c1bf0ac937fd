@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "698b69a3_bc1af878",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-15T15:48:40Z",
+      "side": 1,
+      "message": "Can we move it before the if statement? Or even leave it as\n\nuserGallery \u003d new PhotoList().appendTo( \u0027#content\u0027 );\n\nIt looks kind of confusing here.",
+      "revId": "d746eb471a02d54a814345b7d0c7c1bf0ac937fd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
