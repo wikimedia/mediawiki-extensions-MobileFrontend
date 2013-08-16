@@ -230,7 +230,9 @@
 	// FIXME: sandbox from mf-application.js
 	function log( schemaName, data ) {
 		if ( mw.eventLog ) {
-			mw.eventLog.logEvent( schemaName, data );
+			return mw.eventLog.logEvent( schemaName, data );
+		} else {
+			return $.Deferred().reject( 'EventLogging not installed.' );
 		}
 	}
 

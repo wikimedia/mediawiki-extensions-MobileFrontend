@@ -107,12 +107,14 @@ var api = M.require( 'api' ), w = ( function() {
 
 		// FIXME change when micro.tap.js in stable
 		$( watchBtn ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function( ev ) {
+			var isWatched = $( watchBtn ).hasClass( 'watched' );
 			if( prevent ) {
 				ev.preventDefault();
 			}
 			prevent = true;
 			$( watchBtn ).addClass( 'disabled loading' );
-			toggleWatchStatus( $( watchBtn ).hasClass( 'watched' ) );
+			M.emit( 'watch', isWatched );
+			toggleWatchStatus( isWatched );
 		} );
 
 	}
