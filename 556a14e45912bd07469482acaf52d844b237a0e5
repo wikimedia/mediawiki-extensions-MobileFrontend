@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_3039b0d6",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-16T16:50:15Z",
+      "side": 1,
+      "message": "Move this var definition to a higher closure, use it in line 23 and 24 and avoid adding jQuery in the main closure.",
+      "revId": "556a14e45912bd07469482acaf52d844b237a0e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
