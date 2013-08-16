@@ -55,7 +55,8 @@ $( function() {
 			},
 			postRender: function() {
 				var self = this;
-				this.$( 'a' ).on( 'mousedown', function( ev ) {
+				// use mouseup to allow right click
+				this.$( 'a' ).on( 'mouseup', function( ev ) {
 					// name funnel for watchlists to catch subsequent uploads
 					$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
 					self.openPage( ev );
