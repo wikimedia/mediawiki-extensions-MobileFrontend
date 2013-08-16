@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_70dc1810",
+        "filename": "includes/skins/MobileTemplateAlpha.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-16T18:54:28Z",
+      "side": 1,
+      "message": "O RLY, unlocalised? :)",
+      "revId": "0d5efb0d9c0443321b04c12ee4b0e5a3d2365401",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
