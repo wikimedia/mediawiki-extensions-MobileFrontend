@@ -98,24 +98,24 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.styles.page' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'styles' => array(
-			'stylesheets/common/mf-enwp.css'
+			'stylesheets/common/enwp.css'
 		),
 	),
 
 	'mobile.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'stylesheets/externals/reset.css',
-			'stylesheets/common/mf-common.css',
+			'stylesheets/common/common.css',
 			'stylesheets/common/ui.css',
-			'stylesheets/common/mf-typography.css',
-			'stylesheets/common/mf-footer.css',
-			'stylesheets/modules/mf-toggle.css',
+			'stylesheets/common/typography.css',
+			'stylesheets/common/footer.css',
+			'stylesheets/modules/toggle.css',
 			'stylesheets/common/pagelist.css',
 			// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
-			'stylesheets/common/mf-navigation.css',
+			'stylesheets/common/navigation.css',
 			'stylesheets/common/overlays.css',
 			'stylesheets/common/drawer.css',
-			'stylesheets/common/mf-hacks.css',
+			'stylesheets/common/hacks.css',
 			'stylesheets/common/pageactions.css',
 		),
 		'position' => 'top',
@@ -318,7 +318,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 		),
 		'scripts' => array(
-			'stylesheets/actions/mf-history.css',
+			'stylesheets/actions/history.css',
 		),
 		'group' => 'other',
 	),
@@ -352,7 +352,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-to-page',
 		),
 		'styles' => array(
-			'stylesheets/modules/mf-tables.css',
+			'stylesheets/modules/tables.css',
 			'stylesheets/modules/nearbypages.css',
 		),
 		'scripts' => array(
@@ -378,9 +378,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/common/common-js.css',
 			'stylesheets/modules/languages.css',
 			'stylesheets/modules/search.css',
-			'stylesheets/modules/mf-references.css',
+			'stylesheets/modules/references.css',
 			'stylesheets/modules/issues.css',
-			'stylesheets/modules/mf-watchstar.css',
+			'stylesheets/modules/watchstar.css',
 			'stylesheets/modules/uploads.css',
 			'stylesheets/modules/tutorials.css',
 			'stylesheets/modules/editor.css',
