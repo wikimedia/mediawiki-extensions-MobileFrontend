@@ -47,7 +47,7 @@
 				.on( 'click', function() {
 					var $thankLink = $( this ),
 						name = $user.data( 'user-name' ),
-						rev = $user.data( 'user-id' ),
+						rev = $user.data( 'revision-id' ),
 						gender = $user.data( 'user-gender' );
 
 					if ( !$thankLink.hasClass( 'thanked' ) ) {
