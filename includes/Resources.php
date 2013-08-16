@@ -110,7 +110,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/externals/reset.css',
+			'stylesheets/common/reset.css',
 			'stylesheets/common/common.css',
 			'stylesheets/common/ui.css',
 			'stylesheets/common/typography.css',
