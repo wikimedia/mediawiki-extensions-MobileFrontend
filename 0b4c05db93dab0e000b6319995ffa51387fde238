@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_107674a0",
+        "filename": "javascripts/logging.schemas/watchlist.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-16T16:57:30Z",
+      "side": 1,
+      "message": "Why the dot as a separator in dir name? Why not loggingSchemas/MobileWatchlistInteraction?",
+      "revId": "0b4c05db93dab0e000b6319995ffa51387fde238",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
