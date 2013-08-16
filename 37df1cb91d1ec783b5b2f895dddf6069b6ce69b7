@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_506e3c98",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-16T17:37:19Z",
+      "side": 1,
+      "message": "$ not needed?",
+      "revId": "37df1cb91d1ec783b5b2f895dddf6069b6ce69b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_3071b077",
+        "filename": "javascripts/modules/talk/TalkSectionOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-16T17:37:19Z",
+      "side": 1,
+      "message": "So this and the next line is not $textarea?",
+      "revId": "37df1cb91d1ec783b5b2f895dddf6069b6ce69b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
