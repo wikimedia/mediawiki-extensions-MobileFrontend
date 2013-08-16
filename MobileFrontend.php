@@ -67,6 +67,7 @@ $autoloadClasses = array (
 	'MinervaTemplate' => 'skins/MinervaTemplate',
 	'MobileTemplate' => 'skins/MobileTemplate',
 	'MobileTemplateBeta' => 'skins/MobileTemplateBeta',
+	'MobileTemplateAlpha' => 'skins/MobileTemplateAlpha',
 	'MobileTemplateWML' => 'skins/MobileTemplateWML',
 	'SkinMinerva' => 'skins/SkinMinerva',
 	'SkinMobile' => 'skins/SkinMobile',
