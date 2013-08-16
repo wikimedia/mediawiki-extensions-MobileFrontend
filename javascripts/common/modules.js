@@ -1,6 +1,13 @@
 mw.mobileFrontend = {
 	_modules: {},
 
+	assertMode: function( modes ) {
+		var mode = mw.config.get( 'wgMFMode' );
+		if ( modes.indexOf( mode ) === -1 ) {
+			throw new Error( 'Attempt to run module outside declared environment mode ' + mode  );
+		}
+	},
+
 	/**
 	 * Require (import) a module previously defined using define().
 	 *
