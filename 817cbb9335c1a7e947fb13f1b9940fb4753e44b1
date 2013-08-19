@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_d10164b3",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-19T20:07:52Z",
+      "side": 1,
+      "message": "Not currently available or currently not available?",
+      "revId": "817cbb9335c1a7e947fb13f1b9940fb4753e44b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
