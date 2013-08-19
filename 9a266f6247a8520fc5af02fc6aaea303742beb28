@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_f1c3c007",
+        "filename": "javascripts/common/epoch.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-19T20:59:36Z",
+      "side": 1,
+      "message": "What\u0027s the use for those empty functions?",
+      "revId": "9a266f6247a8520fc5af02fc6aaea303742beb28",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
