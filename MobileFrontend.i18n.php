@@ -249,6 +249,7 @@ $messages['en'] = array (
 
 	// edit
 	'mobile-frontend-editor-disabled' => 'You are not allowed to edit this page.',
+	'mobile-frontend-editor-unavailable' => 'Mobile editing is not currently available on your browser. Please try a different browser.',
 	'mobile-frontend-editor-cta' => 'You must be logged in to edit pages on mobile.',
 	'mobile-frontend-editor-edit' => 'Edit',
 	'mobile-frontend-editor-continue' => 'Continue',
@@ -685,6 +686,7 @@ They can either exit the page and lose them or stay on the page until they are c
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
 	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon',
+	'mobile-frontend-editor-unavailable' => 'Toast message that appears when a user has a browser incapable of editing when they click on the edit button.',
 	'mobile-frontend-editor-cta' => "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)",
 	'mobile-frontend-editor-edit' => 'Caption for the link showing edit form.
 {{Identical|Edit}}',

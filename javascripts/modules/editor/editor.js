@@ -4,6 +4,7 @@
 		popup = M.require( 'notifications' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
+		isEditingSupported = M.router.isSupported() && !blacklisted,
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			returnToQuery: 'article_action=edit',
@@ -59,7 +60,7 @@
 		} );
 	}
 
-	if ( mw.config.get( 'wgIsPageEditable' ) && M.router.isSupported() && !blacklisted ) {
+	if ( mw.config.get( 'wgIsPageEditable' ) && isEditingSupported ) {
 		if ( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) {
 			init();
 		} else {
@@ -70,7 +71,7 @@
 	} else {
 		// FIXME change when micro.tap.js in stable
 		$( '#ca-edit' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
-			popup.show( mw.msg( 'mobile-frontend-editor-disabled' ), 'toast' );
+			popup.show( mw.msg( isEditingSupported ? 'mobile-frontend-editor-disabled' : 'mobile-frontend-editor-unavailable' ), 'toast' );
 		} );
 	}
 
