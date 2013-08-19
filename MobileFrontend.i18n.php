@@ -365,7 +365,7 @@ This buttons takes the user to a random page.',
 {{Identical|Mobile}}',
 	'mobile-frontend-opt-in-explain' => 'Used as description for the "Beta" in [[Special:MobileOptions]], if the beta is not enabled.',
 	'mobile-frontend-images-status' => 'On settings page label for turning on/off images.
-{{Identical|Images}}',
+{{Identical|Image}}',
 	'mobile-frontend-disable-images' => 'Unused at this time.
 
 See also:
@@ -2638,6 +2638,7 @@ $messages['co'] = array(
  * @author Danny B.
  * @author JAn Dudík
  * @author Jezevec
+ * @author Michaelbrabec
  * @author Mormegil
  * @author Reaperman
  * @author Vks
@@ -2736,7 +2737,8 @@ $messages['cs'] = array(
 	'mobile-frontend-nearby-requirements-guidance' => 'Zkuste jiný prohlížeč nebo si zapněte JavaScript, pokud ho máte vypnutý.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-nearby-noresults' => 'Jste uprostřed ničeho a žádná témata jsme nedokázali najít. Proč o nějakém nenapsat?', # Fuzzy
+	'mobile-frontend-nearby-noresults' => 'Je tu trochu ticho... Zde nebyly nalezeny žádné stránky.',
+	'mobile-frontend-nearby-noresults-guidance' => 'Zkuste vytvořit novou stránku, nebo přidat překlad k již existující stránce',
 	'mobile-frontend-nearby-refresh' => 'Upřesnili jsme vaši polohu. Kliknutím sem můžete aktualizovat seznam blízkých stránek',
 	'mobile-frontend-nearby-error' => 'Při hledání blízkých stránek došlo k neočekávané chybě', # Fuzzy
 	'mobile-frontend-nearby-link' => 'Přečíst celou stránku',
@@ -2775,6 +2777,7 @@ $messages['cs'] = array(
 	'mobile-frontend-diffview-explained' => 'Následující řádky byly přidány (+) a odebrány (-):',
 	'mobile-frontend-table' => 'Tabulka $1',
 	'mobile-frontend-saving-exit-page' => 'Váš příspěvek se stále ukládá. Pokud odejdete, budou vaše příspěvky ztraceny. Určitě chcete odejít?',
+	'mobile-frontend-photo-upload' => 'Přidejte obrázek na tuto stránku',
 	'mobile-frontend-photo-caption-placeholder' => 'Přidejte popis (povinné)',
 	'mobile-frontend-image-loading' => 'Načítá se obrázek',
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Toto není osobní obrázek',
@@ -2788,6 +2791,7 @@ $messages['cs'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ načtených souborů',
 	'mobile-frontend-editor-cta' => 'K úpravám stránek přes mobilní rozhraní musíte být přihlášen(a).',
 	'mobile-frontend-editor-edit' => 'Editovat',
+	'mobile-frontend-editor-tutorial-confirm' => 'Začněte editovat',
 	'tag-mobile_edit' => 'Mobilní editace',
 	'tag-mobile_edit-description' => 'Editace provedená ze stránek pro mobily',
 	'mobile-frontend-drawer-cancel' => 'Storno',
@@ -2822,6 +2826,7 @@ $messages['cu'] = array(
  * @author Xxglennxx
  */
 $messages['cy'] = array(
+	'nearby' => 'Tudalennau yn y cyffiniau',
 	'mobile-frontend-desc' => 'Rhaglen pen blaen i declynnau symudol',
 	'mobile-frontend-search-submit' => 'Eler',
 	'mobile-frontend-home-button' => 'Hafan',
@@ -2880,6 +2885,7 @@ $messages['cy'] = array(
 	'mobile-frontend-clear-search' => 'Clirio',
 	'mobile-frontend-privacy-link-text' => 'Preifatrwydd',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termau Defnydd]',
 	'mobile-frontend-footer-contact' => 'Cysylltu',
 	'mobile-frontend-main-menu-button-tooltip' => 'Agor y brif ddewislen',
 	'mobile-frontend-main-menu-page-title' => "Fforio'r wefan",
@@ -2906,12 +2912,24 @@ $messages['cy'] = array(
 	'mobile-frontend-nearby-title' => 'Gerllaw',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
+	'mobile-frontend-nearby-noresults' => "Mae'n llonydd yma... Ni chafwyd dim tudalen gerllaw.",
+	'mobile-frontend-nearby-error-guidance' => 'Ceisiwch adnewyddu eich lleoliad.',
+	'mobile-frontend-nearby-link' => 'Darllen y dudalen hon yn gyfan',
+	'mobile-frontend-nearby-directions' => 'Llywio yma',
+	'mobile-frontend-donate-image-nouploads' => 'Dim uwchlwythiadau.',
+	'mobile-frontend-photo-upload-disabled' => 'Nid oes angen llun ar y dudalen hon.',
 	'mobile-frontend-donate-image-title' => 'Uwchlwythiadau',
 	'mobile-frontend-donate-image-heading' => 'Eich cyfraniadau diweddar',
 	'mobile-frontend-user-account' => 'cyfrif y defnyddiwr',
 	'mobile-frontend-listed-image-no-description' => 'Dim disgrifiad',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Wedi deall?',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Do!',
+	'mobile-frontend-watchlist-add' => 'Ychwanegwyd $1 at eich rhestr wylio',
+	'mobile-frontend-watchlist-removed' => 'Tynnwyd $1 oddi ar eich rhestr wylio',
+	'mobile-frontend-watchlist-view' => 'Gweld eich rhestr wylio',
 	'mobile-frontend-watchlist-more' => 'rhagor',
-	'mobile-frontend-watchlist-cta-button-login' => 'Mewngofnodwch',
+	'mobile-frontend-watchlist-cta' => "Rhaid mewngofnodi neu gofrestru er mwyn gwylio'r dudalen hon.",
+	'mobile-frontend-watchlist-cta-button-login' => 'Mewngofnodi',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Cofrestru',
 	'mobile-frontend-watch-login' => 'Rhaid mewngofnodi er mwyn gwylio tudalennau.',
 	'mobile-frontend-watchlist-a-z' => 'Oll',
@@ -2924,14 +2942,20 @@ $messages['cy'] = array(
 	'mobile-frontend-watchlist-filter-talk' => 'Sgwrs',
 	'mobile-frontend-watchlist-filter-other' => 'Arall',
 	'mobile-frontend-watchlist-modified' => 'Addaswyd $1',
+	'mobile-frontend-diffview-404-title' => 'Golygiad gwael',
 	'mobile-frontend-diffview-title' => 'Newidiadau',
+	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|golygiad|golygiad|olygiad|golygiad}}',
 	'mobile-frontend-diffview-anonymous' => 'Defnyddiwr anhysbys',
+	'mobile-frontend-table' => 'Tabl $1',
 	'mobile-frontend-photo-upload' => "Ychwanegwch ddelwedd i'r dudalen hon",
 	'mobile-frontend-image-loading' => 'Yn llwytho delwedd',
 	'mobile-frontend-photo-ownership' => 'Myfi, $1, dynnodd y llun hwn.',
 	'mobile-frontend-photo-ownership-help' => 'Beth yw ystyr hwn?',
 	'mobile-frontend-photo-ownership-confirm' => 'Wedi deall!',
+	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Nid wyf yn torri hawlfraint',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Dechreuer uwchlwytho',
 	'mobile-frontend-image-uploading-wait' => "Wrthi'n uwchlwytho delwedd...",
+	'mobile-frontend-photo-upload-error' => 'Gwall, ceisiwch eto.',
 	'mobile-frontend-photo-upload-error-file-type' => "Uwchlwythwch ddelweddau'n unig os gwelwch yn dda.",
 	'mobile-frontend-photo-submit' => 'Cyflwyner',
 	'mobile-frontend-photo-cancel' => 'Diddymer',
@@ -2941,9 +2965,16 @@ $messages['cy'] = array(
 	'mobile-frontend-photo-upload-login' => 'Rhaid mewngofnodi er mwyn ychwanegu delwedd.',
 	'mobile-frontend-editor-cta' => "Mae'n rhaid eich bod wedi mewngofnodi er mwyn golygu tudalennau ar declyn symudol.",
 	'mobile-frontend-editor-edit' => 'Golygu',
+	'mobile-frontend-editor-continue' => 'Ymlaen',
 	'mobile-frontend-editor-save' => 'Cadwer',
 	'mobile-frontend-editor-cancel' => 'Diddymer',
+	'mobile-frontend-editor-keep-editing' => 'Parhau i olygu',
 	'mobile-frontend-editor-license' => 'Wrth bwyso ar "Cadwer", rydych yn ymrwymo wrth ein [//wikimediafoundation.org/wiki/Terms_of_use Telerau Defnyddio] ac yn cytuno i ryddhau eich testun â thrwyddedi [//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA 3.0] a [//en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License GFDL] arno.',
+	'mobile-frontend-editor-success' => 'Llwyddiant! Rhoddwyd eich golygiad ar gadw.',
+	'mobile-frontend-editor-success-landmark-1' => 'Llongyfarchiadau, rydych yn awr yn olygydd ar {{SITENAME}}!',
+	'mobile-frontend-editor-error' => 'Gwall, ni roddwyd y golygiad ar gadw.',
+	'mobile-frontend-editor-error-conflict' => "Gwall; mae defnyddiwr arall wedi golygu'r dudalen hon.",
+	'mobile-frontend-editor-preview-header' => 'Rhagolwg',
 	'mobile-frontend-editor-tutorial-confirm' => 'Dechrau golygu',
 	'tag-mobile_edit' => 'Golygiad drwy declyn symudol',
 	'tag-mobile_edit-description' => 'Newidiwyd gyda theclyn symudol',
@@ -5467,7 +5498,7 @@ $messages['frr'] = array(
 	'mobile-frontend-main-menu-upload' => 'Huuchschüürd datein',
 	'mobile-frontend-main-menu-about' => 'Auer {{SITENAME}}',
 	'mobile-frontend-main-menu-disclaimer' => 'Disclaimer',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobiil iinstelangen', # Fuzzy
+	'mobile-frontend-main-menu-settings-heading' => 'Iinstelangen',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Spriaken',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} jaft at uun {{PLURAL:$1|ian spriak|$1 spriaken}}. A spriaken san oner apfeerd.',
 	'mobile-frontend-main-menu-account-create' => 'Brükerkonto iinracht',
@@ -5495,6 +5526,7 @@ $messages['frr'] = array(
 	'mobile-frontend-nearby-error-guidance' => 'Ferschük, din steed tu aktualisiarin.',
 	'mobile-frontend-nearby-link' => 'Hialer sidj lees',
 	'mobile-frontend-nearby-directions' => 'Nawigiare heerhen',
+	'mobile-frontend-donate-image-nouploads' => 'Nian huuchschüürd datein.',
 	'mobile-frontend-donate-image-login' => 'Melde di uun, am din huuchschüürd datein uuntulukin.',
 	'mobile-frontend-photo-upload-disabled' => 'Üüb detdiar sidj woort nian bil brükt.',
 	'mobile-frontend-photo-upload-anon' => 'Dü skel uunmeldet wees, am en bil üüb detdiar sidj tu saaten.',
@@ -5569,7 +5601,7 @@ $messages['frr'] = array(
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Ja!''' Bilen, diar {{SITENAME}}-sidjen smoker an beeder maage kön.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Naan.''' Bilen faan filmplakooten, bukamslacher of ööder materiool mä kopiarrochten. Soken wurd stregen.",
 	'mobile-frontend-lead-image-tutorial-summary' => 'Wees seeker, dat dü en wäärdag bil för det sidj heest. Det skul en salew maaget bil wees, huar näämen ööders rochten üüb hää.',
-	'mobile-frontend-lead-image-tutorial-confirm' => 'Huuchschüüren began', # Fuzzy
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Huuchschüüren began',
 	'mobile-frontend-image-uploading-wait' => 'Bil woort huuchschüürd, ... wees so gud an teew.',
 	'mobile-frontend-image-uploading-long' => 'Bil woort huuchschüürd! Föl soonk, dat dü dülag beest.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Breeg uf</a>, wan\'t tu loong düüret.',
@@ -5604,6 +5636,9 @@ $messages['frr'] = array(
 	'mobile-frontend-editor-error-loading' => 'Diar as wat skiaf gingen. Koon det kirew ei loose.',
 	'mobile-frontend-editor-preview-header' => 'Föörskau',
 	'mobile-frontend-editor-error-preview' => "Bi't loosin faan det föörskau as wat skiaf gingen. Breeg uf an ferschük det man noch ans.",
+	'mobile-frontend-editor-tutorial-summary' => 'Wees ei baang föör markup-spriak.
+Ferschük, det sidj "$1" beeder tu maagin.',
+	'mobile-frontend-editor-tutorial-confirm' => "Mä't skriiwen began",
 	'tag-mobile_edit' => 'Mobiil bewerket',
 	'tag-mobile_edit-description' => 'Faan en mobiil wääbsidj feranert',
 	'mobile-frontend-drawer-cancel' => 'Ufbreeg',
@@ -7664,7 +7699,7 @@ $messages['ja'] = array(
 	'mobile-frontend-watchlist-a-z' => 'すべて',
 	'mobile-frontend-watchlist-feed' => '変更あり',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'ページ上部の星アイコンをクリックします',
-	'mobile-frontend-watchlist-a-z-empty-howto' => '興味深いページを見つけたら、画面上部の星アイコンをクリックすることでページをウォッチできます。これにより、ページをブックマークできるだけでなく、ページが変更された際にそれを知ることができるようになります。', # Fuzzy
+	'mobile-frontend-watchlist-a-z-empty-howto' => '現在、どのページもウォッチしていません。ウォッチリストは、あなたが興味を持ったページを追跡しやすくします。ページをウォッチリストに追加するには、星アイコンをタップしてください。',
 	'mobile-frontend-watchlist-feed-empty' => '最近更新されたページはありません。',
 	'mobile-frontend-watchlist-back-home' => 'ホームに戻る',
 	'mobile-frontend-changeslist-ip' => '匿名利用者',
@@ -13932,57 +13967,85 @@ $messages['tk'] = array(
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  * @author Jojit fb
+ * @author Sky Harbor
  */
 $messages['tl'] = array(
 	'mobile-frontend-desc' => 'Frontend ng Mobile',
 	'mobile-frontend-search-submit' => 'Ipadala',
 	'mobile-frontend-home-button' => 'Tahanan',
 	'mobile-frontend-logged-out' => 'Hindi nakalagda',
+	'mobile-frontend-logged-in-homepage-notification' => 'Mabuhay, $1!',
+	'mobile-frontend-logged-in-toast-notification' => 'Nakalagda ka bilang si $1.',
+	'mobile-frontend-sign-up-heading' => 'Magpatala',
+	'mobile-frontend-sign-in-heading' => 'Lumagda',
+	'mobile-frontend-sign-in-why' => 'Kung may kuwenta ka sa {{SITENAME}}, maaari kang lumagda sa ibaba.',
 	'mobile-frontend-settings-description' => 'Ipasadya ang iyong mobile device sa pamamagitan ng sumusunod na pang-mobile na kagustuhan.',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Itala ang mga kagustuhan',
 	'mobile-frontend-random-button' => 'Alin man',
 	'mobile-frontend-back-to-top-of-section' => 'Tumalong Pabalik Ng Isang Seksyon',
 	'mobile-frontend-close-section' => 'Isara ang bahaging ito',
-	'mobile-frontend-regular-site' => 'Pang-desktop na view',
+	'mobile-frontend-regular-site' => 'Bersiyong pangkompyuter',
 	'mobile-frontend-wml-continue' => 'Magpatuloy...',
 	'mobile-frontend-wml-back' => 'Bumalik...',
-	'mobile-frontend-view' => 'Pang-mobile na view',
+	'mobile-frontend-view' => 'Bersiyong pantelepono',
 	'mobile-frontend-view-desktop' => 'Desktop',
-	'mobile-frontend-view-mobile' => 'Mobile',
-	'mobile-frontend-opt-in-explain' => 'Sa pagsali sa beta, magkakaroon ka ng pagkanakakapunta sa mga tampok na iniiksperimento, na maaaring makipagsapalaran sa pagharap sa mga sira at mga suliranin.',
+	'mobile-frontend-view-mobile' => 'Telepono',
+	'mobile-frontend-opt-in-explain' => 'Sa pagsali sa beta, magkakaroon ka ng pagkanakakapunta sa mga tampok na ineeksperimento, na maaaring makipagsapalaran sa pagharap sa mga sira at mga suliranin.',
 	'mobile-frontend-images-status' => 'Mga larawan',
-	'mobile-frontend-disable-images' => 'Huwag paganahin ang mga larawan sa mobile site',
-	'mobile-frontend-enable-images' => 'Paganahin ang mga larawan sa mobile site',
-	'mobile-frontend-off' => 'HUWAG BUHAYIN',
-	'mobile-frontend-on' => 'BUHAYIN',
-	'mobile-frontend-featured-article' => 'Napiling Artikulo Ngayon', # Fuzzy
+	'mobile-frontend-disable-images' => 'Huwag paganahin ang mga larawan sa sityong pantelepono',
+	'mobile-frontend-enable-images' => 'Paganahin ang mga larawan sa sityong pantelepono',
+	'mobile-frontend-missing-image' => 'Larawan',
+	'mobile-frontend-off' => 'PATAYIN',
+	'mobile-frontend-on' => 'PAGANAHIN',
+	'mobile-frontend-featured-article' => 'Napiling nilalaman ngayon',
 	'mobile-frontend-news-items' => 'Nasa Balita',
 	'mobile-frontend-language' => 'Wika:',
-	'mobile-frontend-language-header' => 'Ang artikulong ito ay makukuhang nasa $1 {{PLURAL:$1|wika|mga wika}}', # Fuzzy
+	'mobile-frontend-language-article-heading' => 'Basahin sa ibang wika',
+	'mobile-frontend-language-header' => 'Mababasa sa $1 {{PLURAL:$1|wika}} ang pahinang ito',
 	'mobile-frontend-language-footer' => 'Ang {{SITENAME}} ay makukuha sa iba pang mga wika.', # Fuzzy
 	'mobile-frontend-language-site-choose' => 'Maghanap ng wika',
 	'mobile-frontend-username' => 'Pangalan ng tagagamit:',
 	'mobile-frontend-password' => 'Hudyat:',
+	'mobile-frontend-username-placeholder' => 'Pangalan ng tagagamit',
+	'mobile-frontend-password-placeholder' => 'Hudyat',
 	'mobile-frontend-login' => 'Lumagda',
+	'mobile-frontend-account-create-submit' => 'Magpatala',
+	'mobile-frontend-password-confirm-placeholder' => 'Tiyakin ang hudyat',
+	'mobile-frontend-account-create-email-placeholder' => 'Direksiyong e-liham (opsiyonal)',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Ipasok ang tekstong panseguridad',
+	'mobile-frontend-overlay-escape' => 'Bumalik',
 	'mobile-frontend-placeholder' => 'Maghanap sa {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Maghanap sa {{SITENAME}} (Beta)',
+	'mobile-frontend-placeholder-alpha' => 'Maghanap sa {{SITENAME}} (Eksperimental)',
 	'mobile-frontend-search-help' => 'Makinilyahin sa itaas ang katagang hinahanap at dito lilitaw ang tumutugmang mga pamagat ng artikulo.', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'iwaksi ang pagpapabatid na ito',
 	'mobile-frontend-clear-search' => 'Hawiin',
-	'mobile-frontend-privacy-link-text' => 'Pagsasarilinan',
+	'mobile-frontend-privacy-link-text' => 'Paglilihim',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Ang nilalaman ay makukuhang nasa ilalim ng [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
-	'mobile-frontend-footer-contact' => 'Kaugnayan',
+	'mobile-frontend-footer-contact' => 'Makipag-ugnayan',
 	'mobile-frontend-search-noresults' => 'Walang mga pamagat ng artikulo na tumugma sa paghahanap mo. Baguhin ang hinahanap mo, pindutin ang pindutang panghanap ng tipahan upang maghanap sa loob ng mga artikulo.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Itinatampok',
 	'mobile-frontend-main-menu-nearby' => 'Kalapit',
+	'mobile-frontend-main-menu-login' => 'Lumagda',
+	'mobile-frontend-main-menu-logout' => 'Umalis sa pagkakalagda',
 	'mobile-frontend-main-menu-settings' => 'Mga katakdaan',
-	'mobile-frontend-main-menu-settings-heading' => 'Mga kagustuhan na pang-mobile',
+	'mobile-frontend-main-menu-about' => 'Tungkol sa {{SITENAME}}',
+	'mobile-frontend-main-menu-disclaimer' => 'Pagtatanggi',
+	'mobile-frontend-main-menu-settings-heading' => 'Mga kagustuhan',
 	'mobile-frontend-settings-site-header' => 'Mga Wika sa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => 'Makukuha ang {{SITENAME}} sa $1 {{PLURAL:$1|wika|mga wika}}. Ang lahat ng mga bersiyon ay nakalista sa ibaba',
+	'mobile-frontend-main-menu-account-create' => 'Lumikha ng kuwenta',
 	'mobile-frontend-page-menu-contents' => 'mga nilalaman',
 	'mobile-frontend-page-menu-language-current' => '{{#language:{{CONTENTLANG}}}}',
 	'mobile-frontend-page-menu-history' => 'Kasaysayan',
+	'mobile-frontend-page-saving' => 'Itinatala ang $1',
+	'mobile-frontend-user-cta' => 'Mangyaring lumagda o magpatala upang makita ang inyong mga notipikasyon.',
+	'mobile-frontend-user-button-tooltip' => 'Ipakita ang aking mga notipikasyon.',
+	'mobile-frontend-nearby-loading' => 'Ikinakarga ang mga paksang malapit sa inyong kasalukuyang lokasyon',
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Mangyaring subukan ang isang bukas na lugar na may mas mabuting senyales',
+	'mobile-frontend-nearby-link' => 'Basahin ang pahinang ito nang buo',
 );
 
 /** толышә зывон (толышә зывон)
@@ -14223,6 +14286,7 @@ $messages['ug-arab'] = array(
  * @author A1
  * @author AS
  * @author Amire80
+ * @author Andriykopanytsia
  * @author AtUkr
  * @author Base
  * @author Dim Grits
@@ -14232,19 +14296,19 @@ $messages['ug-arab'] = array(
  * @author Olvin
  * @author Sodmy
  * @author Steve.rusyn
+ * @author SteveR
  * @author WTM
  * @author Ата
  * @author Тест
  */
 $messages['uk'] = array(
+	'nearby' => 'Сторінки поруч з вами',
 	'mobile-frontend-desc' => 'Мобільний інтерфейс',
 	'mobile-frontend-search-submit' => 'Перейти',
 	'mobile-frontend-home-button' => 'Домашня',
 	'mobile-frontend-logged-out' => 'Ви не ввійшли до системи',
 	'mobile-frontend-logged-in-homepage-notification' => 'Вітаємо, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Увійти в систему як $1',
-	'mobile-frontend-handshake-title' => 'Перенаправлення…',
-	'mobile-frontend-handshake-wait' => 'Будь ласка, зачекайте доки Вас перенаправить до форми входу.',
 	'mobile-frontend-sign-up-heading' => 'Реєстрація',
 	'mobile-frontend-sign-in-heading' => 'Увійти',
 	'mobile-frontend-sign-in-why' => 'Якщо у вас уже є акаунт у {{GRAMMAR:genitive|{{SITENAME}}}}, то можете представитись нижче.',
@@ -14270,7 +14334,7 @@ $messages['uk'] = array(
 	'mobile-frontend-missing-image' => 'Зображення',
 	'mobile-frontend-off' => 'ВИМК',
 	'mobile-frontend-on' => 'ВМК',
-	'mobile-frontend-featured-article' => 'Вибрана стаття',
+	'mobile-frontend-featured-article' => 'Вибраний вміст',
 	'mobile-frontend-news-items' => 'У новинах',
 	'mobile-frontend-language' => 'Мова:',
 	'mobile-frontend-language-article-heading' => 'Читати іншою мовою',
@@ -14319,7 +14383,7 @@ $messages['uk'] = array(
 	'mobile-frontend-main-menu-upload' => 'Завантаження',
 	'mobile-frontend-main-menu-about' => 'Про {{grammar:accusative|{{SITENAME}}}}',
 	'mobile-frontend-main-menu-disclaimer' => 'Відмова від відповідальності',
-	'mobile-frontend-main-menu-settings-heading' => 'Налаштування мобільної версії сайту',
+	'mobile-frontend-main-menu-settings-heading' => 'Налаштування',
 	'mobile-frontend-settings-site-header' => 'Мови проекту {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} доступний на {{PLURAL:$1|мові|мовах}}. Всі доступні версії перелічені нижче',
 	'mobile-frontend-main-menu-account-create' => 'Створити обліковий запис',
@@ -14330,23 +14394,37 @@ $messages['uk'] = array(
 	'mobile-frontend-ajax-preview-loading' => 'Завантаження попереднього перегляду сторінки',
 	'mobile-frontend-page-saving' => 'Збереження $1',
 	'mobile-frontend-user-cta' => 'Будь ласка, увійдіть до системи, або зареєструйтеся, щоб побачити Ваші сповіщення.',
+	'mobile-frontend-user-button-tooltip' => 'Відображати мої сповіщення',
+	'mobile-frontend-nearby-to-page' => 'Наступні сторінки, що відносяться до $1 за географічним розташуванням',
 	'mobile-frontend-nearby-title' => 'Поблизу',
 	'mobile-frontend-nearby-loading' => 'Завантаження інформації про те, що знаходиться поблизу Вас',
-	'mobile-frontend-nearby-requirements' => 'Ця сторінка вимагає увімкненого JavaScript і браузера, що отримує інформацію про місцеположення.', # Fuzzy
+	'mobile-frontend-nearby-requirements' => 'На жаль! Веб-переглядач неподалік не підтримує {{SITENAME}}.',
 	'mobile-frontend-nearby-requirements-guidance' => 'Спробуйте інший браузер або увімкніть JavaScript, якщо Ви його вимкнули.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}',
+	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} Поблизу не може зрозуміти, де ви знаходитесь... ще раз спробувати?',
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Спробуйте відкрити області з кращим сигналом.',
 	'mobile-frontend-nearby-noresults' => 'Ви знаходитесь в центрі невідомості і нам не вдалося знайти ніяких тем. Чому б не написати щось?', # Fuzzy
+	'mobile-frontend-nearby-noresults-guidance' => 'Спробуйте створити нову сторінку або додайте розташування до вже існуючої',
 	'mobile-frontend-nearby-refresh' => 'Ми визначити Ваше місцеположення точніше. Натисніть тут, щоб оновити список найближчих сторінок',
 	'mobile-frontend-nearby-error' => "Сталася неочікувана помилка при спробі знайти сторінки, пов'язані з Вашим місцеперебуванням", # Fuzzy
+	'mobile-frontend-nearby-error-guidance' => 'Спробуйте оновити своє місцезнаходження.',
+	'mobile-frontend-nearby-link' => 'Прочитайте цю сторінку в повному обсязі',
+	'mobile-frontend-nearby-directions' => 'Перейти сюди',
+	'mobile-frontend-donate-image-nouploads' => 'Нема вивантажень.',
 	'mobile-frontend-donate-image-login' => 'Ви повинні увійти в систему, щоб побачити свої завантаження.',
-	'mobile-frontend-photo-upload-generic' => 'Пожертвувати зображення', # Fuzzy
-	'mobile-frontend-donate-image-title' => 'Пожертвувати зображення', # Fuzzy
+	'mobile-frontend-photo-upload-disabled' => 'Немає зображення необхідного на цій сторінці.',
+	'mobile-frontend-photo-upload-anon' => 'Ви повинні увійти в систему, аби додати зображення на цій сторінці.',
+	'mobile-frontend-photo-upload-protected' => 'У вас немає дозволу для додавання зображення на цій сторінці.',
+	'mobile-frontend-photo-upload-unavailable' => 'Ваш браузер не підтримує передавання зображень.',
+	'mobile-frontend-photo-upload-generic' => 'Прислати зображення',
+	'mobile-frontend-donate-image-title' => 'Вивантаження',
 	'mobile-frontend-donate-image-heading' => 'Ваш недавній внесок',
 	'mobile-frontend-donate-image-anon' => 'Для перегляду сторінки завантажень треба мати [[Special:UserLogin|обліковий запис користувача]]', # Fuzzy
 	'mobile-frontend-listed-image-no-description' => 'Немає опису',
 	'mobile-frontend-donate-photo-upload-success' => 'Успішно! Тепер Ваше зображення можна використовувати на сайті {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Успішно! Дякуємо за Ваш перший внесок!',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Так!',
 	'mobile-frontend-watchlist-add' => 'Додано $1 у ваш список спостереження',
 	'mobile-frontend-watchlist-removed' => 'Вилучено $1 з Вашого списку спостереження',
 	'mobile-frontend-watchlist-view' => 'Переглянути список спостереження',
@@ -14378,13 +14456,14 @@ $messages['uk'] = array(
 	'mobile-frontend-diffview-explained' => 'Наступні рядки були додані (+) і видалені (-):',
 	'mobile-frontend-table' => 'Таблиця $1',
 	'mobile-frontend-saving-exit-page' => 'Ваш внесок збережений. Якщо Ви залишите сторінку, Ваш внесок буде втрачено. Ви впевнені что бажаєте вийти?',
-	'mobile-frontend-photo-upload' => 'Додати фото до цієї статті',
-	'mobile-frontend-photo-article-edit-comment' => 'Додані фотографії для використання на сторінці.', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Додавання зображення до цієї сторінки',
+	'mobile-frontend-photo-article-edit-comment' => 'Додані зображення для використання на сторінці',
 	'mobile-frontend-photo-article-donate-comment' => 'Пожертвував зображення з мобільного пристрою', # Fuzzy
-	'mobile-frontend-photo-upload-comment' => 'Додати фото на сторінку', # Fuzzy
+	'mobile-frontend-photo-upload-comment' => 'Додане зображення на сторінку',
 	'mobile-frontend-photo-caption-placeholder' => "Додати опис (обов'язково)",
 	'mobile-frontend-image-loading' => 'Завантаження зображень',
 	'mobile-frontend-photo-ownership-help' => 'Що це означає?',
+	'mobile-frontend-photo-ownership-confirm' => 'Зрозуміло!',
 	'mobile-frontend-image-uploading-wait' => 'Завантаження зображення, зачекайте, будь ласка.',
 	'mobile-frontend-image-uploading-long' => 'Зображення досі завантажується! Дякуємо за ваше терпіння.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Скасувати</a>, якщо це займає надто багато часу.',
@@ -14398,6 +14477,7 @@ $messages['uk'] = array(
 	'tag-mobile_edit' => 'Редагування з мобільного пристрою',
 	'tag-mobile_edit-description' => 'Редагування, зроблені з мобільної версії сайту',
 	'mobile-frontend-drawer-cancel' => 'Скасувати',
+	'mobile-frontend-talk-reply' => 'Відповісти',
 );
 
 /** Urdu (اردو)
