@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_4db3fe97",
+        "filename": "includes/skins/MobileTemplateAlpha.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T16:53:59Z",
+      "side": 1,
+      "message": "How can a special page have categories?",
+      "revId": "54fc57b72c2fc0473729835c43d3e3da0f6c20f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
