@@ -37,6 +37,14 @@ textarea {
   border-radius: 3px;
   padding: 5px;
 }
+.mw-input [type=submit],
+.mw-submit input,
+.mw-submit[type=submit],
+.mw-submit {
+  margin-top: 8px;
+  display: block;
+  min-width: 80%;
+}
 button.disabled {
   opacity: 0.2;
 }

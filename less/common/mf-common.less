@@ -9,6 +9,7 @@
 	display: inline-block;
 }
 
+// FIXME: Separate form css from common.css into its own file?
 /* FIXME: make our own customized rest CSS and move it there */
 input, textarea, button {
 	font-size: 100%;
@@ -23,7 +24,6 @@ textarea {
 	padding: 5px 0 5px 5px;
 }
 
-
 input,
 textarea {
 	font-size: round( 1em / @fontScalingFactor, 2 ); // Fixed font on purpose to avoid zooming on iOS
@@ -34,6 +34,16 @@ input:not([type=submit]), textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 5px;
+}
+
+// For old style forms
+.mw-input [type=submit],
+.mw-submit input,
+.mw-submit[type=submit],
+.mw-submit {
+	margin-top: 8px;
+	display: block;
+	min-width: 80%;
 }
 
 button.disabled {
