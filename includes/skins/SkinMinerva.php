@@ -129,11 +129,11 @@ class SkinMinerva extends SkinTemplate {
 		$menu['edit'] = array( 'id' => 'ca-edit', 'text' => '' );
 		$menu['photo'] = array( 'id' => 'ca-upload', 'text' => '' );
 
-		if ( isset( $namespaces['talk'] ) ) {
-			$menu['talk'] = $namespaces['talk'];
-		// FIXME [Core Skin]: I'm not sure why this is treated differently.
-		} else if ( isset( $namespaces['project_talk'] ) ) {
-			$menu['talk'] = $namespaces['project_talk'];
+		// FIXME [core]: This seems unnecessary..
+		$subjectId = $title->getNamespaceKey( '' );
+		$talkId = $subjectId === 'main' ? 'talk' : "{$subjectId}_talk";
+		if ( isset( $namespaces[$talkId] ) ) {
+			$menu['talk'] = $namespaces[$talkId];
 		}
 
 		if ( isset( $menu['talk'] ) ) {
