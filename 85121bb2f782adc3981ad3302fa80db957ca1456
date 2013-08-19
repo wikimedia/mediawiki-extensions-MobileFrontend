@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_542462b1",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-19T21:59:47Z",
+      "side": 1,
+      "message": "That will fail for dynamically loaded talk pages, won\u0027t it?",
+      "revId": "85121bb2f782adc3981ad3302fa80db957ca1456",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
