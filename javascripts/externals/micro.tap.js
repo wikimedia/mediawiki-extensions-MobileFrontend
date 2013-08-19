@@ -11,7 +11,7 @@
     if (!moved) $(ev.target).trigger(tapEv);
   }
 
-  // jQuery's on() doesn't allow useCapture argument (last argument, true)
+  // FIXME: jQuery's on() doesn't allow useCapture argument (last argument, true)
   window.addEventListener('click', function(ev) {
     if (tapEv.isDefaultPrevented()) {
       ev.stopPropagation();
@@ -29,7 +29,8 @@
       }).
       on('touchend', handleTap);
   } else {
-    $window.on('mouseup', handleTap);
+    // FIXME: jQuery's on() doesn't allow useCapture argument (last argument, true)
+    window.addEventListener('mouseup', handleTap, true);
   }
 }(jQuery));
 
