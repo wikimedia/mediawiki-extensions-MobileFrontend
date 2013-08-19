@@ -70,6 +70,10 @@
 				self._super( options );
 			}
 		},
+		// FIXME: [ajax page loading] Note this will not work when we ajax load namespaces other than main which we currently do not do.
+		isTalkPage: function() {
+			return mw.config.get( 'wgNamespaceIds' ).talk === mw.config.get( 'wgNamespaceNumber' );
+		},
 		// FIXME: Move to an api object
 		preRender: function( options ) {
 			var s, i, level, text,
@@ -82,6 +86,7 @@
 
 			this._anchorSection = {};
 			this.title = options.title;
+			options.isTalkPage = this.isTalkPage();
 			for ( i = 0; i < secs.length; i++ ) {
 				s = secs[ i ];
 				level = s.level;
