@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_e89af810",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use sentence case.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_28a5c055",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use plural.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_488a0cc2",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use plural.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_6887c8b8",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use plural.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_889414e2",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use plural.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_a891d0f1",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use gender.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_e8c3d8ee",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use plural, also probably a separate message for today.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_08b9e477",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use gender.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_48b3ec97",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use gender.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_88adf433",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use gender.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_c85ffc48",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use gender.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_e864b825",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-19T18:59:34Z",
+      "side": 1,
+      "message": "Use gender.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
