@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "499865f5_71fb3077",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-19T20:51:41Z",
+      "side": 1,
+      "message": "sorry should read \"Note on ajax loaded pages /that do not exist/ we force a refresh /of the url using window.location/ so we can rely on this \"",
+      "parentUuid": "499865f5_11be6cd1",
+      "revId": "dc10d40987c48cde5392428b40fc13f3c3e3f04f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "499865f5_f1b820e8",
         "filename": "javascripts/views/page.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-08-19T20:18:07Z",
       "side": 1,
       "message": "Is this a fixme? If not, why \"should\" and not \"is\"?",
+      "revId": "dc10d40987c48cde5392428b40fc13f3c3e3f04f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_d1f24498",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-19T20:51:41Z",
+      "side": 1,
+      "message": "this is not a FIXME. We currently do not ajax load other namespaces. This is more a note to explain how to use it. On main namespaces it is not needed. I will refactor.",
+      "parentUuid": "499865f5_f1b820e8",
       "revId": "dc10d40987c48cde5392428b40fc13f3c3e3f04f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
