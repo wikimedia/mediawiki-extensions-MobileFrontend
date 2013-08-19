@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_11be6cd1",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-19T20:18:07Z",
+      "side": 1,
+      "message": "We force a refresh? What does it mean? We don\u0027t refresh the page in the browser.",
+      "revId": "dc10d40987c48cde5392428b40fc13f3c3e3f04f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_f1b820e8",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-19T20:18:07Z",
+      "side": 1,
+      "message": "Is this a fixme? If not, why \"should\" and not \"is\"?",
+      "revId": "dc10d40987c48cde5392428b40fc13f3c3e3f04f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
