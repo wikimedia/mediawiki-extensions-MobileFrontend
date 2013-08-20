@@ -203,6 +203,40 @@
       "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_51f9d4e5",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-20T15:05:32Z",
+      "side": 1,
+      "message": "Should be a const.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_aee8f912",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-20T15:05:32Z",
+      "side": 1,
+      "message": "Uhhhhh.... I don\u0027t like this....",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
