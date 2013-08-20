@@ -51,7 +51,7 @@
 			buttonCaption: mw.msg( 'mobile-frontend-photo-upload' ),
 			insertInPage: true,
 			el: '#ca-upload',
-			pageTitle: mw.config.get( 'wgTitle' ),
+			pageTitle: mw.config.get( 'wgPageName' ),
 			funnel: funnel
 		} );
 	}
