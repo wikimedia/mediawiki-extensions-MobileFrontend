@@ -15,7 +15,7 @@
 		$( '<a class="edit-page inline" href="#editor-' + section + '">' ).
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container ).
-			on( 'mouseup', function( ev ) {
+			on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', function( ev ) {
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
 			} );
