@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_9501813f",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-20T22:44:34Z",
+      "side": 1,
+      "message": "This line will be interpreted by doxygen as \"variable \u0026$builder of type Builder\".",
+      "revId": "89d73221ad756e650a5e4901bcc329f3eae01148",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
