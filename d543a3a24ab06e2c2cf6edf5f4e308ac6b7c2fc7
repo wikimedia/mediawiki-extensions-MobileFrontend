@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_35ba6dbe",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-20T22:26:52Z",
+      "side": 1,
+      "message": "Can\u0027t we somehow do that in onResourceLoaderTestModules (just asking)?",
+      "revId": "d543a3a24ab06e2c2cf6edf5f4e308ac6b7c2fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_d5c3093a",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-20T22:26:52Z",
+      "side": 1,
+      "message": "Add date when the change was made.",
+      "revId": "d543a3a24ab06e2c2cf6edf5f4e308ac6b7c2fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_35e34dde",
+        "filename": "javascripts/externals/micro.tap.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-20T22:26:52Z",
+      "side": 1,
+      "message": "This should never happen. Both touchend and mouseup should fire before click always.\n\nI wonder if simply using addEventListener() everywhere (L24-30) wouldn\u0027t be a better (more consistent and logical) solution.",
+      "revId": "d543a3a24ab06e2c2cf6edf5f4e308ac6b7c2fc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
