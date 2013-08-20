@@ -109,7 +109,12 @@ class MinervaTemplate extends BaseTemplate {
 			<?php
 				if ( !$isSpecialPage ) {
 					echo $data['prebodytext'];
-					$this->renderPageActions( $data );
+					// FIXME: Temporary solution until we have design
+					if ( isset( $data['_old_revision_warning'] ) ) {
+						echo $data['_old_revision_warning'];
+					} else {
+						$this->renderPageActions( $data );
+					}
 				}
 			?>
 			<div id="content" class="content">
