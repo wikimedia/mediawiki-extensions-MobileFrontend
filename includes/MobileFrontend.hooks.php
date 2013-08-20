@@ -82,7 +82,9 @@ class MobileFrontendHooks {
 			$skinName = $wgMFDefaultSkinClass;
 			$betaSkinName = $skinName . 'Beta';
 			$alphaSkinName = $skinName . 'Alpha';
-			if ( $mobileContext->isAlphaGroupMember() && class_exists( $alphaSkinName ) ) {
+			// Force alpha for test mode to sure all modules can run
+			$inTestMode = $context->getTitle()->getDBkey() === 'JavaScriptTest/qunit';
+			if ( ( $mobileContext->isAlphaGroupMember() || $inTestMode ) && class_exists( $alphaSkinName ) ) {
 				$skinName = $alphaSkinName;
 			} else if ( $mobileContext->isBetaGroupMember() && class_exists( $betaSkinName ) ) {
 				$skinName = $betaSkinName;

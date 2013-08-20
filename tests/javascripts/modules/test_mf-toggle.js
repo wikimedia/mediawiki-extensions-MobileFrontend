@@ -55,7 +55,7 @@ QUnit.test( 'clicking hash links', 2, function() {
 
 QUnit.test( 'clicking a heading toggles it', 2, function() {
 	var visibilityStart = $("#content_2").hasClass("openSection");
-	$( '#section_2' ).trigger( 'mouseup' );
+	$( '#section_2' ).trigger( 'tap' );
 	strictEqual(visibilityStart, false, "check content is hidden at start");
 	strictEqual($("#content_2").hasClass("openSection"), true, "check content is shown on a toggle");
 });

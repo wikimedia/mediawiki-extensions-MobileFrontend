@@ -13,7 +13,8 @@
 
   // FIXME: jQuery's on() doesn't allow useCapture argument (last argument, true)
   window.addEventListener('click', function(ev) {
-    if (tapEv.isDefaultPrevented()) {
+    // a tap event might be fired programmatically so ensure tapEv has been defined
+    if (tapEv && tapEv.isDefaultPrevented()) {
       ev.stopPropagation();
       ev.preventDefault();
     }

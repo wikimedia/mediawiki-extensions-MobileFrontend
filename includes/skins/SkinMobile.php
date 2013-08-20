@@ -105,6 +105,7 @@ class SkinMobile extends SkinMinerva {
 		);
 		$vars = parent::getSkinConfigVariables();
 		$vars['wgUseFormatCookie'] = $wgUseFormatCookie;
+		$vars['wgMFMode'] = $this->getMode();
 		return $vars;
 	}
 

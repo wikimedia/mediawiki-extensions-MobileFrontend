@@ -38,7 +38,7 @@ QUnit.test( 'Stacked overlays', 6, function() {
 		'The first overlay is no longer in the DOM' );
 
 	// now close the top stacked one...
-	overlayTwo.$( '.cancel' ).trigger( 'click' );
+	overlayTwo.$( '.cancel' ).trigger( 'tap' );
 	strictEqual( overlayTwo.$el[0].parentNode, null, 'No longer in DOM' );
 	strictEqual( overlay.$el[0].parentNode, document.body, 'Still in DOM' );
 	strictEqual( $( 'html' ).hasClass( 'overlay-enabled' ), true, 'Still in overlay mode' );
