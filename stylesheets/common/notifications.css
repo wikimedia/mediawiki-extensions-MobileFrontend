@@ -63,7 +63,10 @@
   padding: .9em 1em;
   background-color: #373737;
   color: #fff;
-  margin: 0 auto 20px;
+  margin: 0 10% 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   width: 80%;
   text-align: center;
   border-radius: 3px;
