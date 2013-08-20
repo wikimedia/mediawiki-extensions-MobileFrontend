@@ -293,6 +293,9 @@ $messages['en'] = array (
 	'mobile-frontend-talk-reply-success' => 'Your reply was successfully saved to the talk page.',
 	'mobile-frontend-talk-reply-info' => 'Note your reply will be automatically signed with your username.',
 	'mobile-frontend-talk-reply' => 'Reply',
+
+	// AbuseFilter variable
+	'abusefilter-edit-builder-vars-user-mobile' => 'Whether or not a user is editing through the mobile interface',
 );
 
 /** Message documentation (Message documentation)
@@ -771,6 +774,7 @@ See also:
 	'mobile-frontend-talk-reply-info' => 'Inform the user their talk reply will be automatically signed.',
 	'mobile-frontend-talk-reply' => 'Reply heading.
 {{Identical|Reply}}',
+	'abusefilter-edit-builder-vars-user-mobile' => 'See abusefilter-edit-builder-vars-user-name (from AbuseFilter extension), for example.',
 );
 
 /** Achinese (Acèh)

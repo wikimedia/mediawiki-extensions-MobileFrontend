@@ -309,6 +309,38 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * AbuseFilter-getUserVars hook handler that adds a user_mobile variable.
+	 *
+	 * @param $vars AbuseFilterVariableHolder object to add vars to
+	 * @param $user User object
+	 * @return true
+	 */
+	public static function onAbuseFilterGenerateUserVars( $vars, $user ) {
+		$context = MobileContext::singleton();
+
+		if ( $context->shouldDisplayMobileView() ) {
+			$vars->setVar( 'user_mobile', true );
+		} else {
+			$vars->setVar( 'user_mobile', false );
+		}
+
+		return true;
+	}
+
+	/**
+	 * AbuseFilter-builder hook handler that adds user_mobile variable to list
+	 *  of valid vars
+	 *
+	 * @param &$builder array Array in AbuseFilter::getBuilderValues to add to.
+	 * @return true
+	 */
+	public static function onAbuseFilterBuilder( &$builder ) {
+		$builder['vars']['user_mobile'] = 'user-mobile';
+		return true;
+	}
+
+
+	/**
 	 * Invocation of hook SpecialPageBeforeExecute
 	 *
 	 * We use this hook to ensure that login/account creation pages
