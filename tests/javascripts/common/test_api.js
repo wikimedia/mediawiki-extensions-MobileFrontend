@@ -20,7 +20,7 @@ QUnit.test( '$.ajaxSetup()', 1, function() {
 	$.ajax( {
 		data: { test: 'test' }
 	} );
-	strictEqual( this.lastXhr.url.indexOf( M.getApiUrl() ), 0, 'set default API URL' );
+	strictEqual( this.lastXhr.url.indexOf( Api.prototype.apiUrl ), 0, 'set default API URL' );
 } );
 
 QUnit.test( 'default instance', 1, function() {
@@ -111,7 +111,7 @@ QUnit.module( 'MobileFrontend api.getToken', {
 		this.api = new Api();
 		stub = sinon.stub( this.api , 'ajax' );
 		params = {
-			url: M.getApiUrl(),
+			url: this.api.apiUrl,
 			xhrFields: { withCredentials: true }
 		};
 		corsData = { action: 'tokens', type: 'watch',

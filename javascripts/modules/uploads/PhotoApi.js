@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 	var Api = M.require( 'api' ).Api,
 		endpoint = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
-		apiUrl = endpoint || M.getApiUrl(),
 		PhotoApi;
 
 	// Originally written by Brion for WikiLovesMonuments app
@@ -117,7 +116,7 @@
 		},
 
 		save: function( options ) {
-			var self = this, result = $.Deferred();
+			var self = this, result = $.Deferred(), apiUrl = endpoint || this.apiUrl;
 
 			options.editSummaryMessage = options.insertInPage ?
 				'mobile-frontend-photo-article-edit-comment' :

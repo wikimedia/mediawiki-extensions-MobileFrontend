@@ -18,6 +18,7 @@
 			// flag for references
 			this.hasReferences = options.hasReferences || false;
 			this.id = options.id || null;
+			this.anchor = options.anchor;
 			this._super( options );
 		}
 	} );
@@ -101,7 +102,7 @@
 					lastId = s.id;
 					this._anchorSection[ 'section_' + sectionNum ] = lastId;
 					sectionData[ sectionNum ] = { content: text,
-						id: lastId, heading: s.line };
+						id: lastId, heading: s.line, anchor: s.anchor };
 				} else if ( level ) {
 					$tmpContainer.html( text );
 					$tmpContainer.prepend(

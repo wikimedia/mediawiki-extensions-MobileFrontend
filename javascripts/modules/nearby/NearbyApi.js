@@ -75,7 +75,7 @@
 			},
 			{
 				dataType: endpoint ? 'jsonp' : 'json',
-				url: endpoint || M.getApiUrl()
+				url: endpoint || this.apiUrl
 			} ).then( function( resp ) {
 				var pages;
 				// FIXME: API bug 48512

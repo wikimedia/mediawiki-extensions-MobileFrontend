@@ -1,5 +1,10 @@
 <div class="section">
-	{{#heading}}<h2 id="section_{{index}}">{{{heading}}}</h2>{{/heading}}
+	{{#heading}}
+	<h2 class="section_heading" id="section_{{index}}">
+		<span id="{{anchor}}">{{{heading}}}</span>
+		<span class="mw-editsection"><a href="?section={{id}}"></a></span>
+	</h2>
+	{{/heading}}
 	<div class="content_block openSection"
 		id="content_{{index}}">
 	{{{content}}}
