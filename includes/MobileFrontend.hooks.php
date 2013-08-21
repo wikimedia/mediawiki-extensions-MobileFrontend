@@ -313,7 +313,7 @@ class MobileFrontendHooks {
 	 *
 	 * @param $vars AbuseFilterVariableHolder object to add vars to
 	 * @param $user User object
-	 * @return true
+	 * @return bool
 	 */
 	public static function onAbuseFilterGenerateUserVars( $vars, $user ) {
 		$context = MobileContext::singleton();
@@ -332,7 +332,7 @@ class MobileFrontendHooks {
 	 *  of valid vars
 	 *
 	 * @param &$builder array Array in AbuseFilter::getBuilderValues to add to.
-	 * @return true
+	 * @return bool
 	 */
 	public static function onAbuseFilterBuilder( &$builder ) {
 		$builder['vars']['user_mobile'] = 'user-mobile';
