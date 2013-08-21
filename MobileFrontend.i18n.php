@@ -774,7 +774,7 @@ See also:
 	'mobile-frontend-talk-reply-info' => 'Inform the user their talk reply will be automatically signed.',
 	'mobile-frontend-talk-reply' => 'Reply heading.
 {{Identical|Reply}}',
-	'abusefilter-edit-builder-vars-user-mobile' => 'See abusefilter-edit-builder-vars-user-name (from AbuseFilter extension), for example.',
+	'abusefilter-edit-builder-vars-user-mobile' => 'See {{msg-mw|Abusefilter-edit-builder-vars-user-name}} (from AbuseFilter extension), for example.',
 );
 
 /** Achinese (Acèh)
@@ -3517,6 +3517,7 @@ $messages['de'] = array(
 	'mobile-frontend-talk-reply-success' => 'Deine Antwort wurde erfolgreich auf der Diskussionsseite gespeichert.',
 	'mobile-frontend-talk-reply-info' => 'Deine Antwort wird automatisch mit deinem Benutzernamen signiert.',
 	'mobile-frontend-talk-reply' => 'Antwort',
+	'abusefilter-edit-builder-vars-user-mobile' => 'Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -5338,6 +5339,7 @@ $messages['fr'] = array(
 	'mobile-frontend-talk-reply-success' => 'Votre réponse a été correctement enregistrée sur la page de discussion.',
 	'mobile-frontend-talk-reply-info' => 'Veuillez noter que votre réponse sera automatiquement signée avec votre nom d’utilisateur.',
 	'mobile-frontend-talk-reply' => 'Répondre',
+	'abusefilter-edit-builder-vars-user-mobile' => 'Si un utilisateur est ou non en cours de modification via l’interface mobile',
 );
 
 /** Franco-Provençal (arpetan)
@@ -6185,6 +6187,7 @@ $messages['he'] = array(
 	'mobile-frontend-username-placeholder' => 'שם המשתמש',
 	'mobile-frontend-password-placeholder' => 'סיסמה',
 	'mobile-frontend-login' => 'כניסה',
+	'mobile-frontend-history' => 'הצגת היסטוריית העריכה של הדף הזה.',
 	'mobile-frontend-last-modified-date' => 'השינוי האחרון נעשה בֹ־$1 ב־$2',
 	'mobile-frontend-last-modified-seconds' => 'עודכן לאחרונה לפני {{PLURAL:$1|שנייה אחת|$1 שניות}}',
 	'mobile-frontend-last-modified-minutes' => 'עודכן לאחרונה לפני {{PLURAL:$1|דקה אחת|$1 דקות}}',
@@ -6340,6 +6343,7 @@ $messages['he'] = array(
 	'mobile-frontend-photo-upload-cta' => 'נא להיכנס או להירשם כדי להוסיף תמונה.',
 	'mobile-frontend-photo-upload-login' => 'חובה להיכנס כדי להוסיף תמונה.',
 	'mobile-frontend-editor-disabled' => 'אין לך הרשאה לערוך את הדף הזה.',
+	'mobile-frontend-editor-unavailable' => 'עריכה ממכשירים ניידים אינה מופעלת בדפדפן שלך. נא לנסות דפדפן אחר.',
 	'mobile-frontend-editor-cta' => 'יש להיכנס לחשבון כדי לערוך דפים ממכשיר נייד.',
 	'mobile-frontend-editor-edit' => 'עריכה',
 	'mobile-frontend-editor-continue' => 'הבא',
@@ -6367,6 +6371,7 @@ $messages['he'] = array(
 	'mobile-frontend-talk-explained' => 'השיחות הבאות פעילות עכשיו',
 	'mobile-frontend-talk-explained-empty' => 'אין שיחות על הדף הזה.',
 	'mobile-frontend-talk-overlay-header' => 'שיחה',
+	'mobile-frontend-talk-back-to-page' => 'חזרה לדף "$1".',
 	'mobile-frontend-talk-overlay-lead-header' => 'דיון ללא שם',
 	'mobile-frontend-talk-add-overlay-submit' => 'להוסיף דיון',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'נושא ראשי',
@@ -7824,6 +7829,7 @@ $messages['ja'] = array(
 	'mobile-frontend-talk-reply-success' => '返信をトークページに保存しました。',
 	'mobile-frontend-talk-reply-info' => '返信にあなたの利用者名の署名が自動的に付くことにご注意ください。',
 	'mobile-frontend-talk-reply' => '返信',
+	'abusefilter-edit-builder-vars-user-mobile' => '利用者が携帯機器版インターフェイスで編集しているかどうか',
 );
 
 /** Javanese (Basa Jawa)
@@ -9755,6 +9761,7 @@ $messages['mk'] = array(
 	'mobile-frontend-username-placeholder' => 'Корисничко име',
 	'mobile-frontend-password-placeholder' => 'Лозинка',
 	'mobile-frontend-login' => 'Најава',
+	'mobile-frontend-history' => 'Преглед и уредување на историјата на страницава.',
 	'mobile-frontend-last-modified-date' => 'Последна измена на $1, во $2 ч.',
 	'mobile-frontend-last-modified-seconds' => 'Последните измени се направени пред {{PLURAL:$1|$1 секунда|$1 секунди}}',
 	'mobile-frontend-last-modified-minutes' => 'Последните измени се направени пред {{PLURAL:$1|$1 минута|$1 минути}}',
@@ -9913,6 +9920,7 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-upload-cta' => 'Најавете се или регистрирајте се за да можете да ставате слики.',
 	'mobile-frontend-photo-upload-login' => 'Мора да сте најавени за да ставате слики.',
 	'mobile-frontend-editor-disabled' => 'Не ви е дозволено да ја уредувате оваа страница.',
+	'mobile-frontend-editor-unavailable' => 'Вашиот прелистувач моментално не поддржува мобилно уредување. Користете друг.',
 	'mobile-frontend-editor-cta' => 'Мора да се најавите за да уредувате страници од мобилен уред.',
 	'mobile-frontend-editor-edit' => 'Уреди',
 	'mobile-frontend-editor-continue' => 'Продолжи',
@@ -9940,6 +9948,7 @@ $messages['mk'] = array(
 	'mobile-frontend-talk-explained' => 'Моментално се активни следниве разговори',
 	'mobile-frontend-talk-explained-empty' => 'Нема разговори за страницава.',
 	'mobile-frontend-talk-overlay-header' => 'Разговор',
+	'mobile-frontend-talk-back-to-page' => 'Назад на страницата „$1“.',
 	'mobile-frontend-talk-overlay-lead-header' => 'Безимена расправа',
 	'mobile-frontend-talk-add-overlay-submit' => 'Додај расправа',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Тема',
@@ -14582,6 +14591,7 @@ $messages['uk'] = array(
 	'mobile-frontend-talk-reply-success' => 'Вашу відповідь було успішно збережено на сторінках обговорення.',
 	'mobile-frontend-talk-reply-info' => "Зверніть увагу, що ваші відповіді будуть автоматично підписані вашим ім'ям користувача.",
 	'mobile-frontend-talk-reply' => 'Відповісти',
+	'abusefilter-edit-builder-vars-user-mobile' => 'Чи користувач редагує через мобільний інтерфейс, чи ні',
 );
 
 /** Urdu (اردو)
@@ -15330,6 +15340,7 @@ $messages['yue'] = array(
  * @author 乌拉跨氪
  */
 $messages['zh-hans'] = array(
+	'nearby' => '在您身边的页面',
 	'mobile-frontend-desc' => '移动前端',
 	'mobile-frontend-search-submit' => '搜索',
 	'mobile-frontend-home-button' => '首页',
@@ -15361,7 +15372,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-missing-image' => '图像',
 	'mobile-frontend-off' => '关',
 	'mobile-frontend-on' => '开',
-	'mobile-frontend-featured-article' => '特色条目', # Fuzzy
+	'mobile-frontend-featured-article' => '特色内容',
 	'mobile-frontend-news-items' => '新闻动态',
 	'mobile-frontend-language' => '语言：',
 	'mobile-frontend-language-article-heading' => '用其他语言阅读',
@@ -15374,6 +15385,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-username-placeholder' => '用户名',
 	'mobile-frontend-password-placeholder' => '密码',
 	'mobile-frontend-login' => '登录',
+	'mobile-frontend-history' => '查看此页面的编辑记录',
 	'mobile-frontend-last-modified-date' => '最后修改于$1 $2',
 	'mobile-frontend-last-modified-seconds' => '最后修改于{{PLURAL:$1|$1秒}}前',
 	'mobile-frontend-last-modified-minutes' => '最后修改于{{PLURAL:$1|$1分}}前',
@@ -15410,7 +15422,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-main-menu-upload' => '上传',
 	'mobile-frontend-main-menu-about' => '关于{{SITENAME}}',
 	'mobile-frontend-main-menu-disclaimer' => '免责声明',
-	'mobile-frontend-main-menu-settings-heading' => '移动版网站设置', # Fuzzy
+	'mobile-frontend-main-menu-settings-heading' => '设置',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}语言',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}有$1种语言版本。下面列出了所有语言版本',
 	'mobile-frontend-main-menu-account-create' => '创建账户',
@@ -15431,13 +15443,14 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1米}}',
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}}周边无法获知您在哪里，再试一次吗？',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => '请尝试去户外，以便有更好的信号。',
-	'mobile-frontend-nearby-noresults' => '这里太偏僻了...在周围找不到任何条目。', # Fuzzy
-	'mobile-frontend-nearby-noresults-guidance' => '尝试创建一个新条目或添加位置信息到已有的条目里', # Fuzzy
+	'mobile-frontend-nearby-noresults' => '这里太偏僻了...在周围找不到任何页面。',
+	'mobile-frontend-nearby-noresults-guidance' => '尝试创建一个新页面或添加位置信息到已有的页面里',
 	'mobile-frontend-nearby-refresh' => '我们获得了你更精确的位置。请点击这里刷新周边页面列表',
 	'mobile-frontend-nearby-error' => '“{{SITENAME}}周边”遇到一些问题。',
 	'mobile-frontend-nearby-error-guidance' => '请尝试刷新您的位置。',
 	'mobile-frontend-nearby-link' => '阅读本页的完整版本',
 	'mobile-frontend-nearby-directions' => '导航到这里',
+	'mobile-frontend-donate-image-nouploads' => '无上传。',
 	'mobile-frontend-donate-image-login' => '您必须登录后查看您的上传。',
 	'mobile-frontend-photo-upload-disabled' => '本页不需要再增加图像。',
 	'mobile-frontend-photo-upload-anon' => '您需要登录后才能向本页添加图像。',
@@ -15451,7 +15464,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-listed-image-no-description' => '没有说明',
 	'mobile-frontend-donate-photo-upload-success' => '成功！你的图像现在可以在{{SITENAME}}使用！',
 	'mobile-frontend-donate-photo-first-upload-success' => '成功！感谢你的首次贡献！',
-	'mobile-frontend-first-upload-wizard-new-page-1-header' => '贡献您的图像。帮助{{SITENAME}}条目走进生活！', # Fuzzy
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => '贡献您的图像。帮助{{SITENAME}}的条目走进生活！',
 	'mobile-frontend-first-upload-wizard-new-page-1' => '{{SITENAME}}上的图像来自维基共享资源',
 	'mobile-frontend-first-upload-wizard-new-page-2-header' => '您的图像将可以帮助教育世界各地的人。',
 	'mobile-frontend-first-upload-wizard-new-page-2' => '避免来自互联网的图像、海报、书籍封面等受版权保护的材料。',
@@ -15489,7 +15502,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-thanked-notice' => '$1告诉你喜欢{{GENDER:$2|他|她|它}}的编辑。',
 	'mobile-frontend-table' => '表$1',
 	'mobile-frontend-saving-exit-page' => '正在保存您的贡献。如果离开的话，你的贡献将会丢失。你真的要离开吗？',
-	'mobile-frontend-photo-upload' => '添加图像至本页面', # Fuzzy
+	'mobile-frontend-photo-upload' => '添加图像至本页面',
 	'mobile-frontend-photo-article-edit-comment' => '添加照片以用于页面',
 	'mobile-frontend-photo-article-donate-comment' => '贡献图像自Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => '添加照片到页面',
@@ -15511,8 +15524,8 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-nag-learn-more-1' => "'''是的! '''你可以拍摄地方、 对象和事件的照片。",
 	'mobile-frontend-photo-nag-learn-more-2' => "'''是的!'''照片可以帮助说明和丰富{{SITENAME}}的页面。",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''不。'''电影海报、书籍封面或其他受版权保护材料的照片。这些将被删除。",
-	'mobile-frontend-lead-image-tutorial-summary' => '请确保你的图像有助于说明条目。图像应该是您创建的，不能违反版权。', # Fuzzy
-	'mobile-frontend-lead-image-tutorial-confirm' => '开始上传', # Fuzzy
+	'mobile-frontend-lead-image-tutorial-summary' => '请确保你的图像有助于说明条目。图像应该是您创建的，不能违反版权。',
+	'mobile-frontend-lead-image-tutorial-confirm' => '开始上传',
 	'mobile-frontend-image-uploading-wait' => '正在上传图像，请稍候。',
 	'mobile-frontend-image-uploading-long' => '图像仍在上传！感谢你的耐心等候。',
 	'mobile-frontend-image-uploading-cancel' => '如果耗时过长，请<a href="#">取消</a>。',
@@ -15547,12 +15560,14 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-editor-error-loading' => '出错，无法载入段落。',
 	'mobile-frontend-editor-preview-header' => '预览',
 	'mobile-frontend-editor-error-preview' => '出错，加载预览时发生意外。请关闭并再试一次。',
+	'mobile-frontend-editor-tutorial-confirm' => '开始编辑',
 	'tag-mobile_edit' => '移动版编辑',
 	'tag-mobile_edit-description' => '移动版网站编辑',
 	'mobile-frontend-drawer-cancel' => '取消',
 	'mobile-frontend-talk-explained' => '以下会话当前活跃',
 	'mobile-frontend-talk-explained-empty' => '没有关于本页面的会话。',
 	'mobile-frontend-talk-overlay-header' => '讨论',
+	'mobile-frontend-talk-back-to-page' => '返回至“$1”页面。',
 	'mobile-frontend-talk-overlay-lead-header' => '未命名讨论',
 	'mobile-frontend-talk-add-overlay-submit' => '添加讨论',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => '讨论话题',
@@ -15561,6 +15576,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-talk-reply-success' => '您的回复已成功保存在讨论页。',
 	'mobile-frontend-talk-reply-info' => '请注意您的回复将会把您的用户名自动签署。',
 	'mobile-frontend-talk-reply' => '回复',
+	'abusefilter-edit-builder-vars-user-mobile' => '无论用户是否使用移动界面编辑',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
