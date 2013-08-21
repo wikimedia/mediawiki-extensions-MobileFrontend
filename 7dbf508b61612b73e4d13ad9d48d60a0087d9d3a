@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_8b488431",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-21T10:10:06Z",
+      "side": 1,
+      "message": "Should be simply:\n\n$inTestMode \u003d $context-\u003egetTitle()-\u003egetText() \u003d\u003d\u003d \u0027JavaScriptTest/qunit\u0027;",
+      "revId": "7dbf508b61612b73e4d13ad9d48d60a0087d9d3a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
