@@ -6,19 +6,29 @@
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
 		CtaDrawer = M.require( 'CtaDrawer' ),
-		drawer = new CtaDrawer( {
-			returnToQuery: 'article_action=edit',
-			content: mw.msg( 'mobile-frontend-editor-cta' )
-		} );
+		drawer = new CtaDrawer( { content: mw.msg( 'mobile-frontend-editor-cta' ) } );
 
 	function addEditButton( section, container ) {
-		$( '<a class="edit-page inline" href="#editor-' + section + '">' ).
+		return $( '<a class="edit-page inline" href="#editor-' + section + '">' ).
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container ).
+			// FIXME change when micro.tap.js in stable
 			on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', function( ev ) {
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
 			} );
+	}
+
+	function addCtaButton( sectionId, container ) {
+		addEditButton( '', container ).
+			// FIXME change when micro.tap.js in stable
+			on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', function( ev ) {
+				ev.preventDefault();
+				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
+				drawer.render( { returnTo: mw.config.get( 'wgPageName' ) + '#' + sectionId } ).toggle();
+			} ).
+			// needed until we use tap everywhere to prevent the link from being followed
+			on( 'click', false );
 	}
 
 	function init( page ) {
@@ -61,14 +71,26 @@
 		} );
 	}
 
+	function initCta() {
+		// FIXME change when micro.tap.js in stable
+		$( '#ca-edit' ).addClass( 'enabled' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
+			drawer.render( { returnToQuery: 'article_action=edit' } ).show();
+		} );
+
+		$( 'h2' ).each( function() {
+			var $el = $( this );
+			addCtaButton( $el.attr( 'id' ), $el );
+		} );
+	}
+
 	if ( mw.config.get( 'wgIsPageEditable' ) && isEditingSupported ) {
 		if ( mw.config.get( 'wgMFAnonymousEditing' ) || mw.config.get( 'wgUserName' ) ) {
 			init();
+			M.on( 'page-loaded', init );
 		} else {
-			// FIXME change when micro.tap.js in stable
-			$( '#ca-edit' ).addClass( 'enabled' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', $.proxy( drawer, 'show' ) );
+			initCta();
+			M.on( 'page-loaded', initCta );
 		}
-		M.on( 'page-loaded', init );
 	} else {
 		// FIXME change when micro.tap.js in stable
 		$( '#ca-edit' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {

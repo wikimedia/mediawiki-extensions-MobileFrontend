@@ -19,29 +19,48 @@ var View = M.require( 'view' ),
 
 		show: function() {
 			var self = this;
-			if ( !this.isVisible() ) {
-				this.$el.addClass( 'visible' );
-				if ( !this.locked ) {
-					// ignore a possible click that called show()
-					setTimeout( function() {
-						$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
-						// FIXME change when micro.tap.js in stable
-						$( '#mw-mf-page-center' ).one( ( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
-					}, this.minHideDelay );
-				}
+
+			if ( !self.isVisible() ) {
+				// use setTimeout to allow the browser to redraw if render() was called
+				// just before show(); this is important for animations to work
+				// (0ms doesn't work on Firefox, 10ms is enough)
+				setTimeout( function() {
+					self.$el.addClass( 'visible' );
+					if ( !self.locked ) {
+						// ignore a possible click that called show()
+						setTimeout( function() {
+							$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
+							// FIXME change when micro.tap.js in stable
+							$( '#mw-mf-page-center' ).one( ( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+						}, self.minHideDelay );
+					}
+				}, 10 );
 			}
 		},
 
 		hide: function() {
-			this.$el.removeClass( 'visible' );
-			// .one() registers one callback for scroll and click independently
-			// if one fired, get rid of the other one
-			$( window ).off( '.drawer' );
-			$( '#mw-mf-page-center' ).off( '.drawer' );
+			var self = this;
+
+			// see comment in show()
+			setTimeout( function() {
+				self.$el.removeClass( 'visible' );
+				// .one() registers one callback for scroll and click independently
+				// if one fired, get rid of the other one
+				$( window ).off( '.drawer' );
+				$( '#mw-mf-page-center' ).off( '.drawer' );
+			}, 10 );
 		},
 
 		isVisible: function() {
 			return this.$el.hasClass( 'visible' );
+		},
+
+		toggle: function() {
+			if ( this.isVisible() ) {
+				this.hide();
+			} else {
+				this.show();
+			}
 		}
 	} );
 
