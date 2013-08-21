@@ -62,6 +62,7 @@ $autoloadClasses = array (
 	'SpecialMobileMenu' => 'specials/SpecialMobileMenu',
 	'SpecialMobileWatchlist' => 'specials/SpecialMobileWatchlist',
 	'SpecialNearby' => 'specials/SpecialNearby',
+	'SpecialMobileNotifications' => 'specials/SpecialMobileNotifications',
 	'MobileSpecialPage' => 'specials/MobileSpecialPage',
 
 	'MinervaTemplate' => 'skins/MinervaTemplate',

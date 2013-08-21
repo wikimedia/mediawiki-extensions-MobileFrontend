@@ -15,17 +15,12 @@
 	min-height: @headerHeight;
 	overflow: hidden;
 	position: relative;
-	padding: 0 @searchBarPaddingRight 0 @searchBarPaddingLeft;
+	padding: 0 10px 0 @searchBarPaddingLeft;
 
 	h1, h2 {
 		font-size: @baseFontSize * 1.6;
 		margin: round( @headerHeight*0.22 ) 0 0;
 	}
-}
-
-// FIXME: Delete when Echo moves to stable
-.stable .header {
-	padding-right: 10px;
 }
 
 /* Menu buttons */
@@ -39,9 +34,38 @@
 	top: 0;
 }
 
-// FIXME: hide Echo Notifications button in stable
-.stable #user-button {
+/* Echo Notifications */
+.is-authenticated {
+	.header {
+		padding-right: @searchBarPaddingRight;
+	}
+	#user-button {
+		display: block;
+	}
+}
+
+#user-button {
 	display: none;
+	right: 0;
+	background: url(images/user.png) 50% 50% no-repeat;
+	.background-size( auto, 24px );
+
+	span {
+		position: absolute;
+		right: 5px;
+		bottom: 7px;
+		font-size: .8em;
+		font-weight: bold;
+		color: #fff;
+		line-height: 1;
+		padding: 1px 4px;
+		background: #c91f2c;
+		border-radius: 3px;
+
+		&.zero {
+			display: none;
+		}
+	}
 }
 
 /* hamburger */

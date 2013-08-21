@@ -329,15 +329,12 @@ body.navigation-enabled #mw-mf-page-center {
   min-height: 46px;
   overflow: hidden;
   position: relative;
-  padding: 0 40px 0 40px;
+  padding: 0 10px 0 40px;
 }
 .header h1,
 .header h2 {
   font-size: 1.6em;
   margin: 10px 0 0;
-}
-.stable .header {
-  padding-right: 10px;
 }
 /* Menu buttons */
 #mw-mf-menu-page,
@@ -349,7 +346,36 @@ body.navigation-enabled #mw-mf-page-center {
   position: absolute;
   top: 0;
 }
-.stable #user-button {
+/* Echo Notifications */
+.is-authenticated .header {
+  padding-right: 40px;
+}
+.is-authenticated #user-button {
+  display: block;
+}
+#user-button {
+  display: none;
+  right: 0;
+  background: url(images/user.png) 50% 50% no-repeat;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -o-background-size: auto 24px;
+  -webkit-background-size: auto 24px;
+  background-size: auto 24px;
+}
+#user-button span {
+  position: absolute;
+  right: 5px;
+  bottom: 7px;
+  font-size: .8em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+  padding: 1px 4px;
+  background: #c91f2c;
+  border-radius: 3px;
+}
+#user-button span.zero {
   display: none;
 }
 /* hamburger */

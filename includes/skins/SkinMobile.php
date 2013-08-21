@@ -18,6 +18,9 @@ class SkinMobile extends SkinMinerva {
 		$this->setContext( $context );
 		$this->addPageClass( 'mobile' );
 		$this->addPageClass( $this->getMode() );
+		if ( !$this->getUser()->isAnon() ) {
+			$this->addPageClass( 'is-authenticated' );
+		}
 	}
 
 	public function outputPage( OutputPage $out = null ) {
