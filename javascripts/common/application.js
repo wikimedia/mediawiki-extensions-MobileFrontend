@@ -107,6 +107,7 @@
 		} else {
 			mode = $body.hasClass( 'beta' ) ? 'beta' : 'stable';
 		}
+		// FIXME: To remove. We currently set it here as well in case it is not in the raw HTML due to a caching problem
 		mw.config.set( 'wgMFMode', mode );
 
 		$doc.removeClass( 'page-loading' ); // FIXME: Kill with fire. This is here for historic reasons in case old HTML is cached
