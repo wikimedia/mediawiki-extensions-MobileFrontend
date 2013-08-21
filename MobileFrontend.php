@@ -118,6 +118,7 @@ $wgHooks['Gadgets::allowLegacy'][] = 'MobileFrontendHooks::onAllowLegacyGadgets'
 $wgHooks['UnitTestsList'][] = 'MobileFrontendHooks::onUnitTestsList';
 $wgHooks['CentralAuthLoginRedirectData'][] = 'MobileFrontendHooks::onCentralAuthLoginRedirectData';
 $wgHooks['CentralAuthSilentLoginRedirect'][] = 'MobileFrontendHooks::onCentralAuthSilentLoginRedirect';
+$wgHooks['UserRequiresHTTPS'][] = 'MobileFrontendHooks::onUserRequiresHTTPS';
 
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';

@@ -610,4 +610,22 @@ class MobileFrontendHooks {
 		}
 		return true;
 	}
+
+	/**
+	 * UserRequiresHTTPS hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserRequiresHTTPS
+	 *
+	 * @param User $user
+	 * @param bool $https
+	 *
+	 * @return bool
+	 */
+	public static function onUserRequiresHTTPS( $user, &$https ) {
+		// WAP phones allegedly can't handle HTTPS, don't redirect them there
+		if ( MobileContext::singleton()->getDevice()->format() === 'wml' ) {
+			$https = false;
+			return false; // Stop further hook processing
+		}
+		return true;
+	}
 }
