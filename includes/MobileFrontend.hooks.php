@@ -624,7 +624,8 @@ class MobileFrontendHooks {
 	 */
 	public static function onUserRequiresHTTPS( $user, &$https ) {
 		// WAP phones allegedly can't handle HTTPS, don't redirect them there
-		if ( MobileContext::singleton()->getDevice()->format() === 'wml' ) {
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() && $context->getDevice()->format() === 'wml' ) {
 			$https = false;
 			return false; // Stop further hook processing
 		}
