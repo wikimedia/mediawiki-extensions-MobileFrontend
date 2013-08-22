@@ -243,8 +243,8 @@ var api = M.require( 'api' ), w = ( function() {
 
 	// bind to future page loads
 	M.on( 'page-loaded', init );
-
-	init( { title: mw.config.get( 'wgPageName' ) } );
+	// wgPageName contains _ instead of spaces. Clean these up for readability here. (see bug 53078)
+	init( { title: mw.config.get( 'wgPageName' ).replace( /_/gi, ' ' ) } );
 
 	return {
 		initWatchListIcon: initWatchListIcon,
