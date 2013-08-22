@@ -177,7 +177,7 @@ $messages['en'] = array (
 	'mobile-frontend-watchlist-cta-button-signup' => 'Sign up',
 	'mobile-frontend-watch-login' => 'You must be logged in to watch pages.',
 
-	'mobile-frontend-watchlist-a-z' => 'All',
+	'mobile-frontend-watchlist-a-z' => 'List',
 	'mobile-frontend-watchlist-feed' => 'Modified',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Click the star at the top of the page',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'You are not currently watching any pages. Your watchlist helps you keep track of the pages that you are interested in. Watch pages by tapping the star icon.',
