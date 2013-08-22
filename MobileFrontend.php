@@ -228,9 +228,26 @@ $wgMobileFrontendFormatCookieExpiry = null;
 /**
  * Make the classes, tags and ids stripped from page content configurable.
  * Each item will be stripped from the page.
- * See $itemsToRemove for more information.
  */
-$wgMFRemovableClasses = array();
+$wgMFRemovableClasses = array(
+	// These rules will be used for all transformations
+	'base' => array(
+		'.toc',
+		'div.magnify',
+		'.nomobile',
+	),
+	// HTML view
+	'HTML' => array(),
+	// WML view
+	'WML' => array(
+		'.mw-editsection',
+		'sup.reference', // References generally don't work in WML due to per-section views
+	),
+	// Text extracts
+	'extracts' => array(
+		'table', 'div', '.mw-editsection', 'sup.reference', '.noexcerpt', '.error'
+	),
+);
 
 /**
  * Make the logos configurable.

@@ -15,12 +15,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 
 	protected $headings = 0;
 
-	private $defaultItemsToRemove = array(
-		'.toc',
-		'div.magnify',
-		'.nomobile',
-	);
-
 	/**
 	 * Constructor
 	 *
@@ -99,14 +93,14 @@ abstract class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Removes content inappropriate for mobile devices
-	 * @param bool $removeDefaults: Whether default settings at self::$defaultItemsToRemove should be used
+	 * @param bool $removeDefaults: Whether default settings at $wgMFRemovableClasses should be used
 	 */
 	public function filterContent( $removeDefaults = true ) {
 		global $wgMFRemovableClasses;
 
 		if ( $removeDefaults ) {
-			$this->remove( $this->getDefaultItemsToRemove() );
-			$this->remove( $wgMFRemovableClasses );
+			$this->remove( $wgMFRemovableClasses['base'] );
+			$this->remove( $wgMFRemovableClasses[$this->getFormat()] );
 		}
 		parent::filterContent();
 	}
@@ -125,27 +119,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 		$html = parent::getText( $element );
 		wfProfileOut( __METHOD__ );
 		return $html;
-	}
-
-	/**
-	 * Getter for $this->defaultItemsToRemove
-	 * @return array
-	 */
-	public function getDefaultItemsToRemove() {
-		return $this->defaultItemsToRemove;
-	}
-
-	/**
-	 * Setter for $this->defaultItemsToRemove
-	 * @param array $defaultItemsToRemove: Indexed array of HTML elements to be stripped during mobile formatting
-	 * @throws MWException
-	 * @return array
-	 */
-	public function setDefaultItemsToRemove( $defaultItemsToRemove ) {
-		if ( !is_array( $defaultItemsToRemove ) ) {
-			throw new MWException( __METHOD__ . '(): defaultItemsToRemove must be an array.' );
-		}
-		$this->defaultItemsToRemove = $defaultItemsToRemove;
 	}
 
 	/**
