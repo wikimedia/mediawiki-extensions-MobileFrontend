@@ -16,6 +16,24 @@
       "revId": "271d19f72fe815c383e95c3602f2971c6574d565",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_c3deec69",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-08-22T17:34:34Z",
+      "side": 0,
+      "message": "It causes a bug in Chrome and Safari. Specifically, the userinfo panel disappears when the the sidebar drawer is opened, but only when the window is large. I\u0027ll see if I can test on Android 2.",
+      "parentUuid": "499865f5_00dd2a0b",
+      "revId": "271d19f72fe815c383e95c3602f2971c6574d565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
