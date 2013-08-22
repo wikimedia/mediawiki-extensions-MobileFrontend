@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "499865f5_632d18fe",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-08-22T18:25:05Z",
+      "side": 1,
+      "message": "I don\u0027t think it would make sense to apply to .position-fixed. The other fixed position elements are mostly drawers which are both fine to squish and not affected by this problem anyway, since they dismiss when opening the sidebar. The problem only affects the userinfo panel.",
+      "parentUuid": "499865f5_c0d262ff",
+      "revId": "d20c66dc4449da3c9f8d1d2e393483cea15deb50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "499865f5_40073285",
         "filename": "less/specials/mobilediff.less",
         "patchSetId": 9
