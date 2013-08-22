@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_c0d262ff",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-22T14:51:49Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we apply it to .position-fixed instead?",
+      "revId": "d20c66dc4449da3c9f8d1d2e393483cea15deb50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_40073285",
+        "filename": "less/specials/mobilediff.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-22T14:51:49Z",
+      "side": 1,
+      "message": "Is this (and box-sizing) necessary with left and right set to 0?",
+      "revId": "d20c66dc4449da3c9f8d1d2e393483cea15deb50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
