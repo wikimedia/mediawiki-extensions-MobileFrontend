@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_80af7a7d",
+        "filename": "javascripts/modules/mf-watchstar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-22T14:46:33Z",
+      "side": 1,
+      "message": "Why don\u0027t we go back to using wgTitle for displaying the message? Is the underscore the only character the we might need to replace?",
+      "revId": "e20ce3a9c904d9a230c020a2792e8cb9487b3e29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
