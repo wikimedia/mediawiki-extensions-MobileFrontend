@@ -33,6 +33,24 @@
       "revId": "d20c66dc4449da3c9f8d1d2e393483cea15deb50",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_a3df2036",
+        "filename": "less/specials/mobilediff.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-08-22T17:56:28Z",
+      "side": 1,
+      "message": "Yes, this is the most important part of the changeset as it is what actually fixes the bug.",
+      "parentUuid": "499865f5_40073285",
+      "revId": "d20c66dc4449da3c9f8d1d2e393483cea15deb50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
