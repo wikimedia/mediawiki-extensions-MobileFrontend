@@ -274,6 +274,10 @@ class MobileFrontendHooks {
 			// FIXME: Make uploads work on desktop
 			$list['Uploads'] = 'SpecialUploads';
 			$list['Userlogin'] = 'SpecialMobileUserlogin';
+
+			if ( class_exists( 'MWEchoNotifUser' ) ) {
+				$list['Notifications'] = 'SpecialMobileNotifications';
+			}
 		}
 		return true;
 	}

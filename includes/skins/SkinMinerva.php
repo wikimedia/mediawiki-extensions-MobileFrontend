@@ -35,7 +35,7 @@ class SkinMinerva extends SkinTemplate {
 			$tpl->set( 'userButton',
 				Html::openElement( 'a', array(
 					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
-					'href' => SpecialPage::getTitleFor( 'Notifications' )->getLocalURL(),
+					'href' => SpecialPage::getTitleFor( 'Notifications' )->getLocalURL( array( 'returnto' => $this->getTitle()->getPrefixedText() ) ),
 					'id'=> 'user-button',
 				) ) .
 				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $count ) .

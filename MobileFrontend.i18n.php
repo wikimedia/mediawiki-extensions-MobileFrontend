@@ -122,7 +122,6 @@ $messages['en'] = array (
 	'mobile-frontend-ajax-preview-loading' => 'Loading page preview',
 	'mobile-frontend-page-saving' => 'Saving $1',
 
-	'mobile-frontend-user-cta' => 'Please login or sign up to see your notifications.',
 	'mobile-frontend-user-button-tooltip' => 'Show my notifications',
 
 	// nearby overlay

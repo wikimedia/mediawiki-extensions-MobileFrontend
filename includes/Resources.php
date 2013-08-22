@@ -121,13 +121,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
-	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
-		'styles' => array(
-			'stylesheets/common/user.css',
-		),
-		'position' => 'top',
-	),
-
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'scripts' => array(
@@ -278,7 +271,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/TalkSectionOverlay.js',
 			'javascripts/modules/talk.js',
-			'javascripts/common/user.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
@@ -308,9 +300,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply-success',
 			'mobile-frontend-talk-reply',
 			'mobile-frontend-talk-reply-info',
-
-			// user.js
-			'mobile-frontend-user-cta',
 		),
 	),
 
