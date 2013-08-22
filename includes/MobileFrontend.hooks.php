@@ -359,7 +359,7 @@ class MobileFrontendHooks {
 	 *
 	 * We use this hook to ensure that login/account creation pages
 	 * are redirected to HTTPS if they are not accessed via HTTPS and
-	 * $wgMFForceSecureLogin == true - but only when using the
+	 * $wgSecureLogin == true - but only when using the
 	 * mobile site.
 	 *
 	 * @param $special SpecialPage
@@ -367,7 +367,7 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		global $wgMFForceSecureLogin;
+		global $wgSecureLogin;
 		$mobileContext = MobileContext::singleton();
 		$isMobileView = $mobileContext->shouldDisplayMobileView();
 		if ( $special->getName() != 'Userlogin' || !$isMobileView ) {
@@ -391,7 +391,7 @@ class MobileFrontendHooks {
 		// most of this is lifted from https redirect code in SpecialUserlogin::execute()
 		// also, checking for 'https' in $wgServer is a little funky, but this is what
 		// is done on the WMF cluster (see config in CommonSettings.php)
-		if ( $wgMFForceSecureLogin && WebRequest::detectProtocol() != 'https' ) {
+		if ( $wgSecureLogin && WebRequest::detectProtocol() != 'https' ) {
 			// get the https url and redirect
 			$query = $special->getContext()->getRequest()->getQueryValues();
 			if ( isset( $query['title'] ) )  {

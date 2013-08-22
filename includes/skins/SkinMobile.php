@@ -378,16 +378,16 @@ HTML;
 
 	/**
 	 * Prepares a url to the Special:UserLogin with query parameters,
-	 * taking into account $wgMFForceSecureLogin
+	 * taking into account $wgSecureLogin
 	 * @param array $query
 	 * @return string
 	 */
 	public function getLoginUrl( $query ) {
-		global $wgMFForceSecureLogin;
+		global $wgSecureLogin;
 
-		if ( WebRequest::detectProtocol() != 'https' && $wgMFForceSecureLogin ) {
+		if ( WebRequest::detectProtocol() != 'https' && $wgSecureLogin ) {
 			$loginUrl = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
-			return $this->mobileContext->getMobileUrl( $loginUrl, $wgMFForceSecureLogin );
+			return $this->mobileContext->getMobileUrl( $loginUrl, $wgSecureLogin );
 		}
 		return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
 	}
