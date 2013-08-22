@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_e3c6884b",
+        "filename": "javascripts/common/CtaDrawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-22T18:26:39Z",
+      "side": 1,
+      "message": "Can we call this hash? - it\u0027s not clear that it is a hash",
+      "revId": "c80a1aa98fd7e97abad04d2543d66e91ca47d3e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
