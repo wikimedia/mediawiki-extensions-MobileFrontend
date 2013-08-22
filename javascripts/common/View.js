@@ -98,7 +98,7 @@
 		 * @param {Object} data Template data.
 		 */
 		render: function( data ) {
-			data = $.extend( {}, this.options, data );
+			data = $.extend( true, {}, this.options, data );
 			this.preRender( data );
 			if ( this.template ) {
 				this.$el.html( this.template.render( data ) );

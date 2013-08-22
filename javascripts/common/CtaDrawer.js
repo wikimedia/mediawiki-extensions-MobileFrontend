@@ -9,11 +9,10 @@ var Drawer = M.require( 'Drawer' ),
 		template: M.template.get( 'ctaDrawer' ),
 
 		preRender: function( options ) {
-			var params = {
+			var params = $.extend( {
 				// use wgPageName as this includes the namespace if outside Main
-				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
-				returntoquery: options.returnToQuery
-			};
+				returnto: options.returnTo || mw.config.get( 'wgPageName' )
+			}, options.queryParams );
 
 			options.loginUrl = M.pageApi.getPageUrl( 'Special:UserLogin', params );
 			options.signupUrl = M.pageApi.getPageUrl( 'Special:UserLogin', $.extend( params, { type: 'signup' } ) );

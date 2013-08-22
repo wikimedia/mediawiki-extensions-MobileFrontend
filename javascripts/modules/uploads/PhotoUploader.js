@@ -110,7 +110,10 @@
 			if ( !M.isLoggedIn() ) {
 				ctaDrawer = new CtaDrawer( {
 					content: mw.msg( 'mobile-frontend-photo-upload-cta' ),
-					returnToQuery: 'article_action=photo-upload'
+					queryParams: {
+						campaign: 'mobile_uploadPageActionCta',
+						returntoquery: 'article_action=photo-upload'
+					}
 				} );
 				this.$el.click( function( ev ) {
 					ctaDrawer.show();
