@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_9fb0ba8b",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-08-22T00:43:41Z",
+      "side": 1,
+      "message": "The extra div is necessary since we\u0027re assigning a percent width here, but we also need a 1em padding. If we assign both to the same element the actual width won\u0027t match the other content elements.",
+      "revId": "7272df2c45a4963a30191272fa1891352ad0df68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
