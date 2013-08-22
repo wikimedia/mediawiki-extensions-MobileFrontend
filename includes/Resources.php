@@ -176,6 +176,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-language-article-heading',
 			// editor.js
 			'mobile-frontend-editor-disabled',
+			'mobile-frontend-editor-unavailable',
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-edit',
 			// modules/editor/EditorOverlay.js
