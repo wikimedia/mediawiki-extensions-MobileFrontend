@@ -341,7 +341,7 @@ HTML;
 		$user = $this->getUser();
 		$ctx = MobileContext::singleton();
 
-		if ( !$isSpecialPage ) {
+		if ( !$isSpecialPage && $this->getWikiPage()->exists() ) {
 
 			// add last modified timestamp
 			$revId = $this->getRevisionId();
