@@ -191,8 +191,13 @@ HTML;
 		$request = $this->getRequest();
 
 		if ( $request->getVal( 'token' ) != $context->getMobileToken() ) {
-			wfDebug( __METHOD__ . "(): token mismatch\n" );
-			//return; // Display something here?
+			wfDebugLog( 'mobile', __METHOD__ . "(): token mismatch" );
+			$this->getOutput()->addHTML( '<div class="error">'
+				. $this->msg( "mobile-frontend-save-error" )->parse()
+				. '</div>'
+			);
+			$this->getSettingsForm();
+			return;
 		}
 		if ( $request->getBool( 'enableAlpha' ) ) {
 			$group = 'alpha';

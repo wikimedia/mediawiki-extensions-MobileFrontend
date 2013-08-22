@@ -36,6 +36,7 @@ $messages['en'] = array (
 	'mobile-frontend-settings-alpha' => 'Experimental mode',
 	'mobile-frontend-settings-alpha-description' => 'Enter dangerous and unexplored mobile territory. Get even more experimental features, but with more danger of bugs.',
 	'mobile-frontend-save-settings' => 'Save',
+	'mobile-frontend-save-error' => 'Error saving settings. Please make sure that you have cookies enabled.',
 	'mobile-frontend-random-button' => 'Random',
 
 	'mobile-frontend-back-to-top-of-section' => 'Jump back a section',
