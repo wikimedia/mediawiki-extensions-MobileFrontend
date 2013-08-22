@@ -291,8 +291,7 @@ class MobileContext extends ContextSource {
 	 */
 	private function redirectMobileEnabledPages() {
 		$redirectUrl = null;
-		if ( $this->getRequest()->getText( 'diff' ) ||
-				$this->getRequest()->getText( 'oldid' ) ) {
+		if ( $this->getRequest()->getCheck( 'diff' ) ) {
 			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop();
 		}
 

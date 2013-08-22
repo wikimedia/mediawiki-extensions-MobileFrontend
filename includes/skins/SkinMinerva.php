@@ -119,7 +119,11 @@ class SkinMinerva extends SkinTemplate {
 			),
 		) );
 		$tpl->set( 'page_actions', array() );
-
+		if ( $out->getRequest()->getText( 'oldid' ) ) {
+			$subtitle = $out->getSubtitle();
+			$tpl->set( '_old_revision_warning',
+				Html::openElement( 'div', array( 'class' => 'alert warning' ) ) . $subtitle . Html::closeElement( 'div' ) );
+		}
 		// Reuse template data variable from SkinTemplate to construct page menu
 		$menu = array();
 		$namespaces = $tpl->data['content_navigation']['namespaces'];
