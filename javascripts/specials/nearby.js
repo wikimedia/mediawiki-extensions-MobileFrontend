@@ -4,49 +4,22 @@ var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 	endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 	overlay,
 	wgMFMode = mw.config.get( 'wgMFMode' ),
+	Nearby = M.require( 'modules/nearby/Nearby' ),
 	NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 	api = new NearbyApi(),
 	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
 
 $( function() {
 	var supported = M.supportsGeoLocation(),
-		View = M.require( 'view' ),
 		$userBtn = $( '#user-button' ),
-		errorMessages = {
-			empty: {
-				heading: mw.msg( 'mobile-frontend-nearby-noresults' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-noresults-guidance' )
-			},
-			location: {
-				heading: mw.msg( 'mobile-frontend-nearby-lookup-ui-error' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-lookup-ui-error-guidance' )
-			},
-			server: {
-				heading: mw.msg( 'mobile-frontend-nearby-error' ),
-				guidance: mw.msg( 'mobile-frontend-nearby-error-guidance' )
-			},
-			// recycle it's already in html
-			incompatible: {
-				heading: $( '#mw-mf-nearby .noscript h2' ).text(),
-				guidance: $( '#mw-mf-nearby .noscript p' ).text()
-			}
-		},
 		curLocation,
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
 		// FIXME: Adapt modules/nearby/Nearby.js and use that instead
-		SpecialNearby = View.extend( {
-			template: M.template.get( 'articleList' ),
-			/**
-			 * Renders an error in the existing view
-			 *
-			 * @param {String} type A string that identifies a particular type of error message
-			 */
-			renderError: function( type ) {
-				this.render( { error: errorMessages[ type ] } );
-			},
-			postRender: function() {
+		SpecialNearby = Nearby.extend( {
+			postRender: function( options ) {
+				this._super( options );
 				var self = this;
 				this.$( 'a' ).on( 'click', function( ev ) {
 					var $a = $( ev.currentTarget );
@@ -112,9 +85,8 @@ $( function() {
 	}
 
 	function init() {
-		var $content = $( '#mw-mf-nearby' ).empty();
-		$( '<div class="content loading"> ').text(
-			mw.msg( 'mobile-frontend-nearby-loading' ) ).appendTo( $content );
+		// FIXME: Move searching for geolocation into Nearby module
+		overlay.render( { showLoader: true } );
 		navigator.geolocation.getCurrentPosition( function( geo ) {
 			var lat = geo.coords.latitude, lng = geo.coords.longitude;
 			curLocation = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
