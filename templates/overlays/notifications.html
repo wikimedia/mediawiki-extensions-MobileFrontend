@@ -1,0 +1,13 @@
+<div class="header">
+	<button class="cancel">{{closeMsg}}</button>
+	<h2>{{heading}}</h2>
+</div>
+<div class="loading"></div>
+{{#errorMessage}}<div class="content">{{errorMessage}}</div>{{/errorMessage}}
+<ul class="mw-mf-notifications">
+	{{#notifications}}
+		<li class="mw-echo-notification">
+			{{{message}}}
+		</li>
+	{{/notifications}}
+</ul>
