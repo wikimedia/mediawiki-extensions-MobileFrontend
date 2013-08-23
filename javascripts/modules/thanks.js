@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 	var api = M.require( 'api' ),
-		popup = M.require( 'notifications' ),
-		popupClass = 'toast';
+		popup = M.require( 'notifications' );
 
 	function thankUser( name, revision, gender ) {
 		var d = $.Deferred();
@@ -13,22 +12,19 @@
 				'token' : token
 			} )
 			.done( function() {
-				popup.show(
-					mw.msg( 'mobile-frontend-thanked-notice', name, gender ),
-					popupClass
-				);
+				popup.show( mw.msg( 'mobile-frontend-thanked-notice', name, gender ) );
 				d.resolve();
 			} )
 			.fail( function( errorCode ) {
 				switch( errorCode ) {
 					case 'invalidrevision':
-						popup.show( mw.msg( 'thanks-error-invalidrevision' ), popupClass );
+						popup.show( mw.msg( 'thanks-error-invalidrevision' ) );
 						break;
 					case 'ratelimited':
-						popup.show( mw.msg( 'thanks-error-ratelimited' ), popupClass );
+						popup.show( mw.msg( 'thanks-error-ratelimited' ) );
 						break;
 					default:
-						popup.show( mw.msg( 'thanks-error-undefined' ), popupClass );
+						popup.show( mw.msg( 'thanks-error-undefined' ) );
 				}
 				d.reject();
 			} );
@@ -36,19 +32,20 @@
 		return d;
 	}
 
-	function createThankLink() {
-		var $user = $( '.mw-mf-user' );
-		// Don't show thank button for anonymous users or self
-		if ( !$user.hasClass( 'mw-mf-anon' ) &&
-			$user.data( 'user-name' ) !== mw.config.get( 'wgUserName' ) )
-		{
-			$( '<button class="mw-mf-thank-button">' )
+	/**
+	 * Create a thank button for a given edit
+	 *
+	 * @param name String The username of the user who made the edit
+	 * @param rev String The revision the user created
+	 * @param gender String The gender of the user who made the edit
+	 */
+	function createThankLink( name, rev, gender ) {
+		// Don't make thank button for self
+		if ( name !== mw.config.get( 'wgUserName' ) ) {
+			return $( '<button class="mw-mf-thank-button">' )
 				.text( mw.msg( 'thanks-thank' ) )
 				.on( 'click', function() {
-					var $thankLink = $( this ),
-						name = $user.data( 'user-name' ),
-						rev = $user.data( 'revision-id' ),
-						gender = $user.data( 'user-gender' );
+					var $thankLink = $( this );
 
 					if ( !$thankLink.hasClass( 'thanked' ) ) {
 						thankUser( name, rev, gender  ).done( function() {
@@ -56,12 +53,11 @@
 							$thankLink.text( mw.message( 'thanks-thanked', mw.user ).escaped() );
 						} );
 					}
-				} )
-				.prependTo( '#mw-mf-userinfo' );
+				} );
 		}
 	}
 
-	$( function() {
-		createThankLink();
+	M.define( 'thanks', {
+		createThankLink: createThankLink
 	} );
 } )( mw.mobileFrontend, jQuery );
