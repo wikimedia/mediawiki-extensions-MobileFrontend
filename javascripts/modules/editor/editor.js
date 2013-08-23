@@ -77,7 +77,8 @@
 			drawer.render( { returnToQuery: 'article_action=edit' } ).show();
 		} );
 
-		$( 'h2' ).each( function() {
+		// Don't use h2 as there can be h2s elsewhere in interface (e.g. footer)
+		$( '.section_heading' ).each( function() {
 			var $el = $( this );
 			addCtaButton( $el.attr( 'id' ), $el );
 		} );
