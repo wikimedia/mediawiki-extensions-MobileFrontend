@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		View = M.require( 'view' ),
-		range = 1000,
 		wgMFMode = mw.config.get( 'wgMFMode' ),
 		Nearby;
 
@@ -36,8 +35,30 @@
 				guidance: mw.msg( 'mobile-frontend-nearby-requirements-guidance' )
 			}
 		},
+		loadFromCurrentLocation: function() {
+			var self = this;
+			if ( M.supportsGeoLocation() ) {
+				this.render( { showLoader: true } );
+				navigator.geolocation.getCurrentPosition( function( geo ) {
+					var lat = geo.coords.latitude, lng = geo.coords.longitude;
+					self.location = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
+					self.render( { location: self.location } );
+					self.emit( 'end-load-from-current-location' );
+				},
+				function() {
+					self.renderError( 'location' );
+					self.emit( 'end-load-from-current-location' );
+				},
+				{
+					timeout: 10000,
+					enableHighAccuracy: true
+				} );
+			} else {
+				self.renderError( 'incompatible' );
+			}
+		},
 		initialize: function( options ) {
-			this.range = options.range;
+			this.range = options.range || mw.config.get( 'wgMFNearbyRange' ) || 1000;
 			if ( options.location ) {
 				this.location = options.location;
 			}
@@ -52,17 +73,22 @@
 		postRender: function( options ) {
 			var self = this;
 			if ( options.showLoader ) {
-				self.$( '.loading' ).show();
-			} else if ( !options.pages && !options.error && this.location ) {
-				self.$( '.loading' ).show();
-				this.api.getPages( this.location, range ).done( function( pages ) {
-					self.render( { pages: pages } );
+				this.$( '.loading' ).show();
+			} else if ( !options.pages && !options.error && options.location ) {
+				this.$( '.loading' ).show();
+				this.api.getPages( options.location, this.range ).done( function( pages ) {
+					self.emit( 'searchResult', pages );
+					if ( pages.length > 0 ) {
+						self.render( { pages: pages } );
+					} else {
+						self.renderError( 'empty' );
+					}
 				} ).fail( function() {
-					self.render( { error:  self.errorMessages.server } );
+					self.renderError( 'server' );
 				} );
 			} else {
-				self.$( '.loading' ).hide();
-				self._postRenderLinks();
+				this.$( '.loading' ).hide();
+				this._postRenderLinks();
 			}
 		},
 		_postRenderLinks: function() {
