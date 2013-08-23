@@ -98,12 +98,14 @@
 		 * @param {Object} data Template data.
 		 */
 		render: function( data ) {
-			data = data || this.options;
+			data = $.extend( {}, this.options, data );
 			this.preRender( data );
 			if ( this.template ) {
 				this.$el.html( this.template.render( data ) );
 			}
 			this.postRender( data );
+
+			return this;
 		},
 
 		/**
