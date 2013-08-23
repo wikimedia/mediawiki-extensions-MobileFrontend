@@ -5,6 +5,7 @@
 		Nearby = M.require( 'modules/nearby/Nearby' ),
 		NearbyOverlay;
 
+	// FIXME: Move to nearby/NearbyOverlay.js
 	NearbyOverlay = Overlay.extend( {
 			active: false,
 			className: 'mw-mf-overlay list-overlay',
@@ -23,6 +24,7 @@
 				this._super( options );
 				widget = new Nearby( {
 					range: 2000,
+					parentOverlay: this,
 					location: { longitude: options.longitude, latitude: options.latitude },
 					el: this.$( '.container' )
 				} );
