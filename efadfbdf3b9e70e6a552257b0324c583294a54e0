@@ -223,6 +223,40 @@
     },
     {
       "key": {
+        "uuid": "2995f1bc_1bd21b00",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 915
+      },
+      "writtenOn": "2013-08-23T05:58:32Z",
+      "side": 1,
+      "message": "Should this be count(*) to avoid pulling all rows down to the client and/or unnessarily buffering rows on the server?\n\nQuery is indexed ok.",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_9b062b88",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 915
+      },
+      "writtenOn": "2013-08-23T05:58:32Z",
+      "side": 1,
+      "message": "As above, should this be count(*)?",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "499865f5_aee8f912",
         "filename": "includes/specials/SpecialUserProfile.php",
         "patchSetId": 4
