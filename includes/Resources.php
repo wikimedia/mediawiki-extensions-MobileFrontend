@@ -102,6 +102,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'stylesheets/common/pagelist.css',
+		),
+		'position' => 'top',
+	),
+
 	'mobile.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'stylesheets/externals/reset.css',
@@ -110,7 +117,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'stylesheets/common/typography.css',
 			'stylesheets/common/footer.css',
 			'stylesheets/modules/toggle.css',
-			'stylesheets/common/pagelist.css',
 			// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
 			'stylesheets/common/navigation.css',
 			'stylesheets/common/overlays.css',

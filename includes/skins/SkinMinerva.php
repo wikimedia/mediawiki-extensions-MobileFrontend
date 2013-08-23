@@ -18,6 +18,7 @@ class SkinMinerva extends SkinTemplate {
 		parent::initPage( $out );
 		// add styling
 		$out->addModuleStyles( 'mobile.styles' );
+		$out->addModuleStyles( 'mobile.pagelist.styles' );
 
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
