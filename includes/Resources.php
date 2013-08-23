@@ -574,17 +574,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-link',
 		),
 		'scripts' => array(
-			'javascripts/specials/overlays/preview.js',
-		),
-	),
-
-	'mobile.nearby.watchstar' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.nearby.scripts',
-			'mobile.stable',
-		),
-		'scripts' => array(
-			'javascripts/specials/nearby-watchstar.js',
+			'javascripts/specials/overlays/PagePreviewOverlay.js',
 		),
 	),
 

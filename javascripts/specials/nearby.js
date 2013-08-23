@@ -3,13 +3,10 @@
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 	endpoint = mw.config.get( 'wgMFNearbyEndpoint' ),
 	overlay,
+	wgMFMode = mw.config.get( 'wgMFMode' ),
 	NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 	api = new NearbyApi(),
 	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
-
-function getOverlay() {
-	return overlay;
-}
 
 $( function() {
 	var supported = M.supportsGeoLocation(),
@@ -38,7 +35,8 @@ $( function() {
 		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
-		Nearby = View.extend( {
+		// FIXME: Adapt modules/nearby/Nearby.js and use that instead
+		SpecialNearby = View.extend( {
 			template: M.template.get( 'articleList' ),
 			/**
 			 * Renders an error in the existing view
@@ -48,25 +46,41 @@ $( function() {
 			renderError: function( type ) {
 				this.render( { error: errorMessages[ type ] } );
 			},
-			openPage: function( ev ) {
-				// help back button work
-				window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
-				window.location = $( ev.currentTarget ).attr( 'href' );
-			},
 			postRender: function() {
 				var self = this;
-				// use mouseup to allow right click
-				this.$( 'a' ).on( 'mouseup', function( ev ) {
+				this.$( 'a' ).on( 'click', function( ev ) {
+					var $a = $( ev.currentTarget );
 					// name funnel for watchlists to catch subsequent uploads
 					$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
-					self.openPage( ev );
+					if ( wgMFMode === 'stable' ) {
+						window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
+					} else {
+						ev.preventDefault();
+
+						// Trigger preview mode
+						mw.loader.using( 'mobile.nearby.previews', function() {
+								var PagePreviewOverlay = M.require( 'PagePreviewOverlay' );
+								new PagePreviewOverlay( {
+									endpoint: endpoint,
+									latLngString: $a.data( 'latlng' ),
+									img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html(),
+									title: $a.find( 'h2' ).text()
+								} );
+						} );
+					}
 				} );
-				self.emit( 'rendered', this.$el );
+
+				// Load watch stars in alpha
+				if ( wgMFMode === 'alpha' ) {
+					mw.loader.using( 'mobile.stable', function() {
+						M.require( 'watchstar' ).initWatchListIconList( self.$( 'ul' ) );
+					} );
+				}
 			}
 		} ),
 		pendingQuery = false, btn;
 
-		overlay = new Nearby( {
+		overlay = new SpecialNearby( {
 			el: $( '#mw-mf-nearby' )
 		} );
 
@@ -150,11 +164,5 @@ $( function() {
 	// FIXME: i18n
 	btn = $( '<button class="refresh">' ).on( 'click', refresh ).appendTo( '.header' );
 } );
-
-M.define( 'nearby', {
-	endpoint: endpoint,
-	getOverlay: getOverlay
-} );
-
 
 }( mw.mobileFrontend, jQuery ) );

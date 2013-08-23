@@ -20,9 +20,6 @@ class SpecialNearby extends MobileSpecialPage {
 		$ctx = MobileContext::singleton();
 		if ( $ctx->shouldDisplayMobileView() && $ctx->isBetaGroupMember() ) {
 			$output->addModules( 'mobile.nearby.previews' );
-			if ( $ctx->isAlphaGroupMember() ) {
-				$output->addModules( 'mobile.nearby.watchstar' );
-			}
 		} else {
 			// Only the Minerva skin loads this module so make sure we load it for desktop
 			$output->addModuleStyles( 'mobile.pagelist.styles' );

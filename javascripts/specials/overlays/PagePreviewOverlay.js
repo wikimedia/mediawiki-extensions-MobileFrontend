@@ -12,7 +12,22 @@
 		} ),
 		PagePreviewOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/pagePreview' ),
+			initialize: function( options ) {
+				var self = this, loader = new LoadingOverlay();
+				this._super( options );
+				loader.show();
+				M.pageApi.getPage( options.title, options.endpoint, true ).done( function( page ) {
+					options.page = new Page( page );
+					loader.hide();
+					self.render( options ).show();
+				} ).fail( function() {
+					loader.hide(); // FIXME: do something more meaningful e.g. error overlay
+				} );
+			},
 			preRender: function( options ) {
+				if ( !options.page ) {
+					return;
+				}
 				var directionUrl;
 				options.heading = options.page.title;
 				options.preview = options.page.lead;
@@ -37,6 +52,9 @@
 				}
 			},
 			postRender: function( options ) {
+				if ( !options.page ) {
+					return;
+				}
 				var $preview, nodes;
 				this._super( options );
 				$preview = this.$( '.preview' );
@@ -53,9 +71,7 @@
 				// Display the first content node
 				$preview.append( nodes[0] );
 			}
-		} ),
-		module = M.require( 'nearby' ),
-		endpoint = module.endpoint;
+		} );
 
 	if ( ua.match( /OS [0-9]+_[0-9]+ like Mac OS X/ ) ) {
 		device = 'iphone';
@@ -65,24 +81,5 @@
 		device = 'wp';
 	}
 
-	$( function() {
-		// FIXME: temporary code, replace if previews get to stable or are removed
-		module.getOverlay().openPage = function( ev ) {
-			ev.preventDefault();
-			var loader = new LoadingOverlay(),
-				$a = $( ev.currentTarget ),
-				title = $a.find( 'h2' ).text();
-			loader.show();
-
-			M.pageApi.getPage( title, endpoint, true ).done( function( page ) {
-				var preview = new PagePreviewOverlay( { page: new Page( page ),
-					latLngString: $a.data( 'latlng' ),
-					img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html() } );
-				loader.hide();
-				preview.show();
-			} ).fail( function() {
-				loader.hide(); // FIXME: do something more meaningful e.g. error overlay
-			} );
-		};
-	} );
+	M.define( 'PagePreviewOverlay', PagePreviewOverlay );
 }( mw.mobileFrontend, jQuery ) );
