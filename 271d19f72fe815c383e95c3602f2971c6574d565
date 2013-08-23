@@ -34,6 +34,24 @@
       "revId": "271d19f72fe815c383e95c3602f2971c6574d565",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_e414f04e",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-08-23T21:00:30Z",
+      "side": 0,
+      "message": "I tested in Andriod 2.2 and didn\u0027t see any problems, although FWIW, the userinfo panel doesn\u0027t work right in Android 2.2 regardless.",
+      "parentUuid": "499865f5_c3deec69",
+      "revId": "271d19f72fe815c383e95c3602f2971c6574d565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
