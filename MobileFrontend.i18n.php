@@ -337,7 +337,8 @@ This buttons takes the user to the home page.
 {{Identical|Home}}',
 	'mobile-frontend-logged-out' => 'Message telling user they are not logged in on settings page.
 {{Identical|Not logged in}}',
-	'mobile-frontend-logged-in-homepage-notification' => 'Heading at top of homepage telling user they are logged in',
+	'mobile-frontend-logged-in-homepage-notification' => 'Heading at top of homepage telling user they are logged in. Parameters:
+* $1 - username',
 	'mobile-frontend-logged-in-toast-notification' => 'Message telling user that they are logged in. Shows as a notification at bottom of page
 *$1 - username',
 	'mobile-frontend-sign-up-heading' => 'Header for sign up page.
@@ -413,68 +414,25 @@ If not the Main Page, the following message is used:
 * {{msg-mw|Mobile-frontend-last-modified-date}}',
 	'mobile-frontend-last-modified-date' => 'Text that displays the date the page was last modified. Parameters:
 * $1 - date
-* $2 - time
-See also:
-* {{msg-mw|Mobile-frontend-last-modified-seconds}}
-* {{msg-mw|Mobile-frontend-last-modified-minutes}}
-* {{msg-mw|Mobile-frontend-last-modified-hours}}
-* {{msg-mw|Mobile-frontend-last-modified-days}}
-* {{msg-mw|Mobile-frontend-last-modified-months}}
-* {{msg-mw|Mobile-frontend-last-modified-years}}',
-	'mobile-frontend-last-modified-seconds' => 'Text displayed on page to show how long ago the page was updated in seconds.
-
-See also:
-* {{msg-mw|Mobile-frontend-last-modified-minutes}}
-* {{msg-mw|Mobile-frontend-last-modified-hours}}
-* {{msg-mw|Mobile-frontend-last-modified-days}}
-* {{msg-mw|Mobile-frontend-last-modified-months}}
-* {{msg-mw|Mobile-frontend-last-modified-years}}
-* {{msg-mw|Mobile-frontend-last-modified-date}}',
-	'mobile-frontend-last-modified-minutes' => 'Text displayed on page to show how long ago the page was updated in minutes.
-
-See also:
-* {{msg-mw|Mobile-frontend-last-modified-seconds}}
-* {{msg-mw|Mobile-frontend-last-modified-hours}}
-* {{msg-mw|Mobile-frontend-last-modified-days}}
-* {{msg-mw|Mobile-frontend-last-modified-months}}
-* {{msg-mw|Mobile-frontend-last-modified-years}}
-* {{msg-mw|Mobile-frontend-last-modified-date}}',
-	'mobile-frontend-last-modified-hours' => 'Text displayed on page to show how long ago the page was updated in hours.
-
-See also:
-* {{msg-mw|Mobile-frontend-last-modified-seconds}}
-* {{msg-mw|Mobile-frontend-last-modified-minutes}}
-* {{msg-mw|Mobile-frontend-last-modified-days}}
-* {{msg-mw|Mobile-frontend-last-modified-months}}
-* {{msg-mw|Mobile-frontend-last-modified-years}}
-* {{msg-mw|Mobile-frontend-last-modified-date}}',
-	'mobile-frontend-last-modified-days' => 'Text displayed on page to show how long ago the page was updated in days.
-
-See also:
-* {{msg-mw|Mobile-frontend-last-modified-seconds}}
-* {{msg-mw|Mobile-frontend-last-modified-minutes}}
-* {{msg-mw|Mobile-frontend-last-modified-hours}}
-* {{msg-mw|Mobile-frontend-last-modified-months}}
-* {{msg-mw|Mobile-frontend-last-modified-years}}
-* {{msg-mw|Mobile-frontend-last-modified-date}}',
-	'mobile-frontend-last-modified-months' => 'Text displayed on page to show how long ago the page was updated in months.
-
-See also:
-* {{msg-mw|Mobile-frontend-last-modified-seconds}}
-* {{msg-mw|Mobile-frontend-last-modified-minutes}}
-* {{msg-mw|Mobile-frontend-last-modified-hours}}
-* {{msg-mw|Mobile-frontend-last-modified-days}}
-* {{msg-mw|Mobile-frontend-last-modified-years}}
-* {{msg-mw|Mobile-frontend-last-modified-date}}',
-	'mobile-frontend-last-modified-years' => 'Text displayed on page to show how long ago the page was updated in years.
-
-See also:
-* {{msg-mw|Mobile-frontend-last-modified-seconds}}
-* {{msg-mw|Mobile-frontend-last-modified-minutes}}
-* {{msg-mw|Mobile-frontend-last-modified-hours}}
-* {{msg-mw|Mobile-frontend-last-modified-days}}
-* {{msg-mw|Mobile-frontend-last-modified-months}}
-* {{msg-mw|Mobile-frontend-last-modified-date}}',
+* $2 - time',
+	'mobile-frontend-last-modified-seconds' => 'Text displayed on page to show how long ago the page was updated. Parameters:
+* $1 - number of seconds
+{{Related|Mobile-frontend-last-modified}}',
+	'mobile-frontend-last-modified-minutes' => 'Text displayed on page to show how long ago the page was updated. Parameters:
+* $1 - number of minutes
+{{Related|Mobile-frontend-last-modified}}',
+	'mobile-frontend-last-modified-hours' => 'Text displayed on page to show how long ago the page was updated. Parameters:
+* $1 - number of hours
+{{Related|Mobile-frontend-last-modified}}',
+	'mobile-frontend-last-modified-days' => 'Text displayed on page to show how long ago the page was updated. Parameters:
+* $1 - number of days
+{{Related|Mobile-frontend-last-modified}}',
+	'mobile-frontend-last-modified-months' => 'Text displayed on page to show how long ago the page was updated. Parameters:
+* $1 - number of months
+{{Related|Mobile-frontend-last-modified}}',
+	'mobile-frontend-last-modified-years' => 'Text displayed on page to show how long ago the page was updated. Parameters:
+* $1 - number of years
+{{Related|Mobile-frontend-last-modified}}',
 	'mobile-frontend-learn-more' => 'A caption of a button or a link leading to details about a given piece of information.
 {{Identical|Learn more}}',
 	'mobile-frontend-account-create-submit' => 'Text in account creation submit button.
@@ -534,18 +492,32 @@ See also:
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
 	'mobile-frontend-ajax-preview-loading' => 'Text that accompanies an ajax loader when you dynamically load an article preview overlay via JavaScript',
-	'mobile-frontend-page-saving' => 'Text shown whilst an article is being saved.
+	'mobile-frontend-page-saving' => 'Unused at this time.
+
+Text shown whilst a page is being saved. Parameters:
+* $1 - page title
 {{Identical|Saving}}',
 	'mobile-frontend-user-cta' => 'Appears when you click user icon when not logged in. First link is to login form, 2nd to sign up form. Links are created in JavaScript.',
 	'mobile-frontend-user-button-tooltip' => 'Title tooltip for the user notifications button',
-	'mobile-frontend-nearby-to-page' => 'Header that describes that the pages are related as they have locations near the location of the current article',
+	'mobile-frontend-nearby-to-page' => 'Header that describes that the pages are related as they have locations near the location of the current page.
+
+Parameters:
+* $1 - page title',
 	'mobile-frontend-nearby-title' => 'Title of Special:Nearby.
 {{Identical|Nearby}}',
 	'mobile-frontend-nearby-loading' => 'Informative message telling user that their location is being looked up',
 	'mobile-frontend-nearby-requirements' => 'Message shown to users who have no JavaScript or a browser that is not capable',
 	'mobile-frontend-nearby-requirements-guidance' => 'Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-requirements}}',
-	'mobile-frontend-nearby-distance' => 'States distance to current location in kilometers',
-	'mobile-frontend-nearby-distance-meters' => 'States distance to current location in meters for numbers less than 1km',
+	'mobile-frontend-nearby-distance' => 'States distance to current location. Parameters:
+* $1 - distance (in kilometers)
+See also:
+* {{msg-mw|Mobile-frontend-nearby-distance-meters}}',
+	'mobile-frontend-nearby-distance-meters' => 'States distance to current location for numbers less than 1km.
+
+Parameters:
+* $1 - distance (in meters)
+See also:
+* {{msg-mw|Mobile-frontend-nearby-distance}}',
 	'mobile-frontend-nearby-lookup-ui-error' => 'Error message shown when location was not found',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Message explaining actions user can take when keying error {{msg-mw|mobile-frontend-nearby-lookup-ui-error}}',
 	'mobile-frontend-nearby-noresults' => 'Message shown when nothing is nearby',
@@ -689,7 +661,12 @@ They can either exit the page and lose them or stay on the page until they are c
 {{Identical|Submit}}',
 	'mobile-frontend-photo-cancel' => 'Caption for the cancel button on the image upload form.
 {{Identical|Cancel}}',
-	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded. Parameter is number of images. Wrap the number in a span tag to allow the number to be incremented programatically',
+	'mobile-frontend-photo-upload-user-count' => 'Displays the number of images the user has uploaded.
+
+Wrap the number in a <code><nowiki><span></nowiki></code> tag to allow the number to be incremented automatically.
+
+Parameters:
+* $1 - number of images',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Displayed in place of mobile-frontend-photo-upload-user-count when user has uploaded more than 500 images.',
 	'mobile-frontend-photo-upload-cta' => 'Appears in a notification when user clicks image upload button (see {{msg-mw|mobile-frontend-photo-upload}}) when not logged in.',
 	'mobile-frontend-photo-upload-login' => 'Message for [[Special:UserLogin]] when being redirected back to add an image to a page.
@@ -4484,6 +4461,7 @@ $messages['et'] = array(
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>Üks</span> üleslaadimine|<span>$1</span> üleslaadimist}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'Üle 500 üleslaadimise',
 	'mobile-frontend-photo-upload-login' => 'Pildi lisamiseks pead olema sisse logitud.',
+	'mobile-frontend-editor-disabled' => 'Sul pole lubatud seda lehekülge redigeerida.',
 	'mobile-frontend-editor-cta' => 'Mobiilis lehekülgede redigeerimiseks pead olema sisse logitud.',
 	'mobile-frontend-editor-edit' => 'Redigeeri',
 	'mobile-frontend-editor-continue' => 'Jätka',
@@ -11345,8 +11323,6 @@ $messages['nn'] = array(
 	'mobile-frontend-logged-out' => 'Ikkje innlogga',
 	'mobile-frontend-logged-in-homepage-notification' => 'Velkomen, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Innlogga som $1.',
-	'mobile-frontend-handshake-title' => 'Omdirigerer …',
-	'mobile-frontend-handshake-wait' => 'Vent medan me omdirigerer deg til innloggingsskjemaet.',
 	'mobile-frontend-sign-up-heading' => 'Registrer deg',
 	'mobile-frontend-sign-in-heading' => 'Logg inn',
 	'mobile-frontend-sign-in-why' => 'Har du ein {{SITENAME}}-konto kan du logga inn nedanfor.',
@@ -11372,7 +11348,7 @@ $messages['nn'] = array(
 	'mobile-frontend-missing-image' => 'Bilete',
 	'mobile-frontend-off' => 'AV',
 	'mobile-frontend-on' => 'PÅ',
-	'mobile-frontend-featured-article' => 'Dagens artikkel',
+	'mobile-frontend-featured-article' => 'Dagens artikkel', # Fuzzy
 	'mobile-frontend-news-items' => 'Nyhende',
 	'mobile-frontend-language' => 'Språk:',
 	'mobile-frontend-language-article-heading' => 'Les på eit anna språk',
@@ -11421,7 +11397,7 @@ $messages['nn'] = array(
 	'mobile-frontend-main-menu-upload' => 'Opplastingar',
 	'mobile-frontend-main-menu-about' => 'Om {{SITENAME}}',
 	'mobile-frontend-main-menu-disclaimer' => 'Atterhald',
-	'mobile-frontend-main-menu-settings-heading' => 'Innstillingar for mobilsida',
+	'mobile-frontend-main-menu-settings-heading' => 'Innstillingar for mobilsida', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}-språk',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} er tilgjengeleg på {{PLURAL:$1|eitt språk|$1 språk}}. Alle tilgjengelege utgåver er lista opp nedanfor',
 	'mobile-frontend-main-menu-account-create' => 'Opprett konto',
@@ -11439,8 +11415,8 @@ $messages['nn'] = array(
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}}-funksjonen «nær her» kan ikkje finna ut kvar du er...freist om att?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Freist i eit ope område med betre dekking.',
-	'mobile-frontend-nearby-noresults' => 'Det er stille her ute... Det vart ikkje funne nokon artiklar nær deg.',
-	'mobile-frontend-nearby-noresults-guidance' => 'Freist å oppretta ein ny artikkel eller legg til stad til ein som alt finst.',
+	'mobile-frontend-nearby-noresults' => 'Det er stille her ute... Det vart ikkje funne nokon artiklar nær deg.', # Fuzzy
+	'mobile-frontend-nearby-noresults-guidance' => 'Freist å oppretta ein ny artikkel eller legg til stad til ein som alt finst.', # Fuzzy
 	'mobile-frontend-nearby-refresh' => 'Me fann ein meir nøyaktig stad for deg. Klikk her for å oppdatera lista over nære sider.',
 	'mobile-frontend-nearby-error' => '{{SITENAME}} Nær her har vanskar.',
 	'mobile-frontend-nearby-error-guidance' => 'Freist å oppdatera staden din.',
@@ -11479,6 +11455,8 @@ $messages['nn'] = array(
 	'mobile-frontend-editor-wait' => 'Lagrar endring, vent litt.',
 	'mobile-frontend-editor-success' => 'Det gjekk! Endringa di vart lagra.',
 	'mobile-frontend-editor-error' => 'Feil, endringa vart ikkje lagra.',
+	'tag-mobile_edit' => 'mobilendring',
+	'tag-mobile_edit-description' => 'Endring gjord frå mobilsida',
 );
 
 /** Occitan (occitan)
@@ -11834,6 +11812,7 @@ $messages['pfl'] = array(
  * @author Woytecr
  */
 $messages['pl'] = array(
+	'nearby' => 'W pobliżu ciebie',
 	'mobile-frontend-desc' => 'Mobilny interfejs użytkownika',
 	'mobile-frontend-search-submit' => 'Przejdź',
 	'mobile-frontend-home-button' => 'Główna',
@@ -11928,15 +11907,15 @@ $messages['pl'] = array(
 	'mobile-frontend-user-button-tooltip' => 'Pokaż powiadomienia',
 	'mobile-frontend-nearby-title' => 'W pobliżu',
 	'mobile-frontend-nearby-loading' => 'Pobieranie informacji o tym, co znajduje się w pobliżu ciebie',
-	'mobile-frontend-nearby-requirements' => 'Przepraszamy! Twoja przeglądarka nie obsługuje {{SITENAME}} - W pobliżu.',
+	'mobile-frontend-nearby-requirements' => 'Przepraszamy! Twoja przeglądarka nie obsługuje „{{SITENAME}} - W pobliżu ciebie”.',
 	'mobile-frontend-nearby-requirements-guidance' => 'Spróbuj innej przeglądarki lub włącz obsługę JavaScript, jeżeli masz teraz wyłączoną.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} W pobliżu nie potrafi ustalić gdzie jesteś… spróbować jeszcze raz?',
+	'mobile-frontend-nearby-lookup-ui-error' => '„{{SITENAME}} – W pobliżu ciebie” nie potrafi ustalić gdzie jesteś… czy spróbować jeszcze raz?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Spróbuj przejść na otwartą przestrzeń z lepszym zasięgiem.',
-	'mobile-frontend-nearby-noresults' => 'Jesteś w szczerym polu… Nie znaleziono żadnych artykułów w pobliżu.', # Fuzzy
+	'mobile-frontend-nearby-noresults' => 'Jesteś w szczerym polu… Nic nie znaleziono w pobliżu.',
 	'mobile-frontend-nearby-refresh' => 'Określiliśmy dokładniej twojej położenie. Kliknij tutaj, aby odświeżyć listę stron w pobliżu',
-	'mobile-frontend-nearby-error' => 'Podczas próby znalezienia stron w pobliżu wystąpił nieoczekiwany błąd', # Fuzzy
+	'mobile-frontend-nearby-error' => '„{{SITENAME}} –  pobliżu” ma pewne problemy.',
 	'mobile-frontend-nearby-link' => 'Przeczytaj tę stronę w całości',
 	'mobile-frontend-donate-image-login' => 'Musisz się zalogować, aby zobaczyć przesłane przez siebie pliki.',
 	'mobile-frontend-photo-upload-disabled' => 'Grafiki nie są potrzebne na tej stronie.',
@@ -11963,7 +11942,7 @@ $messages['pl'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Zaloguj się',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Zarejestruj się',
 	'mobile-frontend-watch-login' => 'Musisz by zalogowany, żeby obserwować strony.',
-	'mobile-frontend-watchlist-a-z' => 'Wszystkie', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Lista',
 	'mobile-frontend-watchlist-feed' => 'Zmienione',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Kliknij gwiazdkę w górnej części strony',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'Obserwuj interesującą cię stronę klikając na gwiazdkę w górnej części ekranu. W ten sposób możesz utworzyć zakładkę do interesującej strony oraz sprawdzać, co się w niej zmieniło.', # Fuzzy
