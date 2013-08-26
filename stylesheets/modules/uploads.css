@@ -15,7 +15,8 @@
 
 }
 .button.photo div {
-  background: url(images/camera.png) 10px 45% no-repeat;
+  background: url(images/camera.png) left 45% no-repeat;
+  margin: 0 10px;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: 24px auto;

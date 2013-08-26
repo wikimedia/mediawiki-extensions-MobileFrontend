@@ -9,7 +9,9 @@
 
 	// separate <div> to avoid overriding button's gradient
 	div {
-		background: url(images/camera.png) 10px 45% no-repeat;
+		// Note: Use left to ensure it flips in RTL mode
+		background: url(images/camera.png) left 45% no-repeat;
+		margin: 0 10px;
 		.background-size( 24px, auto );
 	}
 
