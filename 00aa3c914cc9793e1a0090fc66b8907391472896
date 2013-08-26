@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2995f1bc_c980e04f",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-26T19:34:43Z",
+      "side": 1,
+      "message": "Can be null for old users.",
+      "revId": "00aa3c914cc9793e1a0090fc66b8907391472896",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
