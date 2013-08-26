@@ -23,7 +23,10 @@ class SpecialNearby extends MobileSpecialPage {
 			if ( $ctx->isAlphaGroupMember() ) {
 				$output->addModules( 'mobile.nearby.watchstar' );
 			}
-		};
+		} else {
+			// Only the Minerva skin loads this module so make sure we load it for desktop
+			$output->addModuleStyles( 'mobile.pagelist.styles' );
+		}
 
 		$output->setPageTitle( wfMessage( 'mobile-frontend-nearby-title' )->escaped() );
 
