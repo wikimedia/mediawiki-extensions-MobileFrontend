@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2995f1bc_8e1fbeb3",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-08-26T18:43:38Z",
+      "side": 1,
+      "message": ". \u0027sdaws\u0027? was this left over by accident from testing?",
+      "revId": "84bb379b4225c614d5a1f9d787dc4c501db67998",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
