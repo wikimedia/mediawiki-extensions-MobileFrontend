@@ -16,8 +16,11 @@ IMPORTANT: do not use selectors containing attribute notation e.g. [style] [cols
 }
 code,
 pre {
+  padding: 0.2em 0.5em;
   font-family: monospace;
   border: solid 1px #CCC;
+}
+pre {
   padding: 1em;
 }
 .mobile #coordinates {
