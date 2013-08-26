@@ -69,6 +69,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->setHeaders();
 		$output = $this->getOutput();
 		if ( $ctx->isBetaGroupMember() ) {
+			$output->addModules( 'mobile.mobilediff.scripts.beta.head' );
 			$output->addModules( 'mobile.mobilediff.scripts.beta' );
 			// If the Echo and Thanks extensions are installed and the user is
 			// logged in, show a 'Thank' link.
