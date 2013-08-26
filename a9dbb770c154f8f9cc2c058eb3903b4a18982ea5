@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2995f1bc_ee85a25c",
+        "filename": "javascripts/specials/overlays/PagePreviewOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-26T17:37:45Z",
+      "side": 1,
+      "message": "Why? Isn\u0027t it the default? Anyway, now that the other patch is merged, this needs to be changed.",
+      "revId": "a9dbb770c154f8f9cc2c058eb3903b4a18982ea5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_0e7bae79",
+        "filename": "javascripts/specials/overlays/PagePreviewOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-26T17:37:45Z",
+      "side": 1,
+      "message": "Same.",
+      "revId": "a9dbb770c154f8f9cc2c058eb3903b4a18982ea5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
