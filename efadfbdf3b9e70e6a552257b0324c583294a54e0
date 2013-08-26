@@ -240,6 +240,24 @@
     },
     {
       "key": {
+        "uuid": "2995f1bc_aeb39a4b",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-26T17:34:04Z",
+      "side": 1,
+      "message": "Because the user might have made a lot of edits recently, we\u0027d like to know the exact number only if it\u0027s \u003c\u003d 500. I\u0027ve modified this and next queries to return only the short field present in index used, to take advantage of covering index. Does this sound right?",
+      "parentUuid": "2995f1bc_1bd21b00",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2995f1bc_9b062b88",
         "filename": "includes/specials/SpecialUserProfile.php",
         "patchSetId": 4
