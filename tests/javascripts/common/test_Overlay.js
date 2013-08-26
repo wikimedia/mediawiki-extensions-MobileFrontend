@@ -5,7 +5,7 @@ QUnit.module( 'MobileFrontend: Overlay.js' );
 QUnit.test( 'Simple overlay', 1, function() {
 	var overlay = new Overlay( { heading: '<h2>Title</h2>', content: 'Text' } );
 	overlay.show();
-	strictEqual( overlay.$el[0].parentNode, document.body, 'In DOM' );
+	strictEqual( overlay.$el[0].parentNode, $( '#mw-mf-viewport' )[0], 'In DOM' );
 	overlay.hide();
 } );
 
@@ -40,7 +40,7 @@ QUnit.test( 'Stacked overlays', 6, function() {
 	// now close the top stacked one...
 	overlayTwo.$( '.cancel' ).trigger( 'tap' );
 	strictEqual( overlayTwo.$el[0].parentNode, null, 'No longer in DOM' );
-	strictEqual( overlay.$el[0].parentNode, document.body, 'Still in DOM' );
+	strictEqual( overlay.$el[0].parentNode, $( '#mw-mf-viewport' )[0], 'Still in DOM' );
 	strictEqual( $( 'html' ).hasClass( 'overlay-enabled' ), true, 'Still in overlay mode' );
 	overlay.hide();
 } );
