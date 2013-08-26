@@ -19,16 +19,24 @@
 			} );
 	}
 
-	function addCtaButton( sectionId, container ) {
+	function addCtaButton( sectionHash, container ) {
 		addEditButton( '', container ).
 			// FIXME change when micro.tap.js in stable
 			on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', function( ev ) {
 				ev.preventDefault();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
-				drawer.render( { returnTo: mw.config.get( 'wgPageName' ) + '#' + sectionId } ).toggle();
+				drawer.render( { returnTo: mw.config.get( 'wgPageName' ) + '#' + sectionHash } ).toggle();
 			} ).
 			// needed until we use tap everywhere to prevent the link from being followed
 			on( 'click', false );
+	}
+
+	// FIXME [ParserOutput]: This is nasty
+	function extractSectionIdFromEditLink( $a ) {
+		var editHref = $a.attr( 'href' ),
+			qs = editHref.split( '?' )[ 1 ],
+			section = M.deParam( qs ).section;
+		return section;
 	}
 
 	function init( page ) {
@@ -60,10 +68,7 @@
 		}
 
 		$( 'h2 .mw-editsection' ).each( function() {
-			// FIXME [ParserOutput]: This is nasty
-			var editHref = $( this ).find( 'a' ).attr( 'href' ),
-				qs = editHref.split( '?' )[ 1 ],
-				section = M.deParam( qs ).section;
+			var section = extractSectionIdFromEditLink( $( this ).find( 'a' ) );
 			if ( section ) {
 				addEditButton( section, $( this ).parent() );
 			}
@@ -77,10 +82,9 @@
 			drawer.render( { returnToQuery: 'article_action=edit' } ).show();
 		} );
 
-		// Don't use h2 as there can be h2s elsewhere in interface (e.g. footer)
-		$( '.section_heading' ).each( function() {
-			var $el = $( this );
-			addCtaButton( $el.attr( 'id' ), $el );
+		$( 'h2 .mw-editsection' ).each( function() {
+			var $heading = $( this ).parent();
+			addCtaButton( $heading.attr( 'id' ), $heading );
 		} );
 	}
 
