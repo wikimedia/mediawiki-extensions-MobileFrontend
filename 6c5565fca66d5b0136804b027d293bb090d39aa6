@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2995f1bc_d076c03b",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "i18n (you probably know this but just a reminder)",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_f08bbc16",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "i think this should be an argument passed into initialize e.g. assign to this.$badge; The badge in future may even need to be an overlay.",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_509b9063",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "use this.$( \u0027.container\u0027 ) this can match other things",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_70a08c95",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "I\u0027d switch the if and else for readability. if ( options.error ) {",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_909d1857",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "Re-render the template in this situation. Move any html to the template itself.\nself.render( newData );",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_b0aa1471",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "likewise - let the template do this.",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_d0a7a0a8",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "this.$( \u0027.container )",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_f0b49cd4",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "Not needed if done in the template",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_10bae8bd",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "we tend to use ev instead of e - should probably standardise on one.",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_70c96c5b",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "overlay variable not defined..",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_90c6f84a",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "you may want to just run initNotificationsButton here since page-loaded is purely for ajax page loads.",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_f0dd7c12",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T22:06:28Z",
+      "side": 1,
+      "message": "Do you need to reinitialise on every page load? Seems somewhat unnecessary (we may want to investigating polling for new notifications separately after a given time period - since the button itself will not change and could lead to inconsistencies between number of notifications and the overlay screen ?)",
+      "revId": "6c5565fca66d5b0136804b027d293bb090d39aa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
