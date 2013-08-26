@@ -11,7 +11,7 @@ var View = M.require( 'view' ),
 		className: 'mw-mf-overlay',
 		closeOnBack: false,
 		// use document.body rather than 'body' - for some reasons this has odd consequences on Opera Mobile (see bug 52361)
-		appendTo: document.body,
+		appendTo: '#mw-mf-viewport',
 		initialize: function( options ) {
 			var self = this;
 			options = options || {};
