@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2995f1bc_8e1a5e6b",
+        "filename": "javascripts/modules/thanks.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-26T17:33:27Z",
+      "side": 1,
+      "message": "Toast is a View. And a Drawer.",
+      "revId": "e636b09fd63eb0f379e278837c44b03678b2865d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
