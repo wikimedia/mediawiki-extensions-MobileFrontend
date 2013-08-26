@@ -16,6 +16,24 @@
       "revId": "89ba3dd9fbffbcd3f920ac095dbea17d920492c1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2995f1bc_6ec43294",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-26T17:44:07Z",
+      "side": 1,
+      "message": "addModuleStyles has no concept of dependencies.",
+      "parentUuid": "2995f1bc_0e580e2f",
+      "revId": "89ba3dd9fbffbcd3f920ac095dbea17d920492c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
