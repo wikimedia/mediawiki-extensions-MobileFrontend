@@ -25,23 +25,20 @@
 	background-color: @colorTutorial;
 	color: white;
 	height: 100%;
+	box-shadow: 0 1px 5px 0 rgba(117, 117, 117, .8);
 
 	@imageHeight: 180px;
 	.slide {
-		padding: (@imageHeight - 20) 0 0 0;
 		text-align: center;
 		background-size: auto @imageHeight;
 		background-repeat: no-repeat;
 		background-position: center -10px;
-		top: 10px;
-		left: 0;
-		bottom: 0;
+		padding: 10px 0;
 		width: 100%;
-		position: absolute;
 
 		p {
 			line-height: 1.4;
-			margin: 0 26px 1em;
+			margin: 0 0 1em;
 		}
 
 		// FIXME: exists because of inconsistency in new user uploads tutorial workflow
@@ -64,6 +61,7 @@
 	}
 
 	.photo-upload {
+		padding-top: (@imageHeight - 20);
 		background-image: url(images/tutorials/photos.png);
 	}
 

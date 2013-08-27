@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ),
-		isTestA = mw.config.get( 'wgUserId' ) % 2 === 0,
 		Page = M.require( 'page' ),
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
@@ -35,7 +34,7 @@
 					section: this.sectionId,
 					namespace: mw.config.get( 'wgNamespaceNumber' ),
 					userEditCount: parseInt( mw.config.get( 'wgUserEditCount' ), 10 ),
-					isTestA: isTestA,
+					isTestA: M.isTestA,
 					pageId: mw.config.get( 'wgArticleId' ),
 					username: mw.config.get( 'wgUserName' ),
 					mobileMode: mw.config.get( 'wgMFMode' ),
@@ -213,7 +212,7 @@
 					new Page( { title: title, el: $( '#content_wrapper' ) } );
 					M.router.navigate( '' );
 					self.hide();
-					if ( isTestA && self.isNewEditor ) {
+					if ( M.isTestA && self.isNewEditor ) {
 						msg = 'mobile-frontend-editor-success-landmark-1';
 					} else {
 						className = 'toast';

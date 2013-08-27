@@ -5,9 +5,6 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-.overlay-enabled .mw-mf-overlay {
-  display: block;
-}
 .overlay-enabled #mw-mf-page-center,
 .overlay-enabled #content_wrapper {
   height: 100%;
@@ -16,17 +13,18 @@
 .overlay-enabled #footer {
   display: none !important;
 }
+.overlay-enabled .mw-mf-overlay {
+  height: 100%;
+}
 html[dir="rtl"] .mw-mf-overlay .header .cancel {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .mw-mf-overlay {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background-color: white;
   z-index: 4;
 }

@@ -10,6 +10,7 @@ var View = M.require( 'view' ),
 		template: M.template.get( 'overlay' ),
 		className: 'mw-mf-overlay',
 		closeOnBack: false,
+		fullScreen: true,
 		// use '#mw-mf-viewport' rather than 'body' - for some reasons this has
 		// odd consequences on Opera Mobile (see bug 52361)
 		appendTo: '#mw-mf-viewport',
@@ -55,22 +56,25 @@ var View = M.require( 'view' ),
 			}
 			this.$el.appendTo( this.appendTo );
 			this.scrollTop = document.body.scrollTop;
-			$( 'html' ).addClass( 'overlay-enabled' );
+			if ( this.fullScreen ) {
+				$( 'html' ).addClass( 'overlay-enabled' );
+				// skip the URL bar if possible
+				window.scrollTo( 0, 1 );
+			} else {
+				$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ), $.proxy( this, 'hide' ) );
+			}
 			$( 'body' ).removeClass( 'navigation-enabled' );
-
-			// skip the URL bar if possible
-			window.scrollTo( 0, 1 );
 		},
 		hide: function() {
 			// FIXME: allow zooming outside the overlay again
 			// M.unlockViewport();
 			this.$el.detach();
-			if ( !this.parent ) {
+			if ( this.parent ) {
+				this.parent.show();
+			} else if ( this.fullScreen ) {
 				$( 'html' ).removeClass( 'overlay-enabled' );
 				// return to last known scroll position
 				window.scrollTo( document.body.scrollLeft, this.scrollTop );
-			} else {
-				this.parent.show();
 			}
 			return true;
 		}

@@ -1,10 +1,6 @@
 @import "../mixins.less";
 
 .overlay-enabled {
-	.mw-mf-overlay {
-		display: block;
-	}
-
 	#mw-mf-page-center,
 	#content_wrapper {
 		// without this when overlay is open the content is visible underneath the overlay
@@ -15,6 +11,13 @@
 	#footer {
 		display: none !important;
 	}
+
+	.mw-mf-overlay {
+		// use height instead of bottom 0 so that overlay expands when there's
+		// more content, don't use min-height because of
+		// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
+		height: 100%;
+	}
 }
 
 html[dir="rtl"] {
@@ -24,15 +27,10 @@ html[dir="rtl"] {
 }
 
 .mw-mf-overlay {
-	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	// use height instead of bottom 0 so that overlay expands when there's
-	// more content, don't use min-height because of
-	// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
-	height: 100%;
 	background-color: white;
 	z-index: 4;
 

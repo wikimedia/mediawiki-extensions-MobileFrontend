@@ -15,28 +15,32 @@
 	}
 
 	$( function() {
-		var photoOverlay, editOverlay;
+		var photoOverlay, editOverlay, target;
 
 		if ( shouldShowEditTutorial() ) {
+			if ( window.location.hash ) {
+				target = window.location.hash + ' .edit-page';
+			} else {
+				target = '#ca-edit .edit-page';
+			}
+
 			editOverlay = new PageActionOverlay( {
-				target: $( '#ca-edit' ),
-				noArrow: true,
+				target: target,
 				className: 'slide active editing',
 				summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
 				confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' )
 			} );
 			editOverlay.show();
 			$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
-			$( '.tutorial .actionable' ).click( function( ev ) {
-				ev.preventDefault();
+			editOverlay.$( '.actionable' ).on( M.tapEvent( 'click' ), function() {
 				// Hide the tutorial
 				editOverlay.hide();
 				// Load the editing interface
-				window.location.href = $( '#ca-edit a.edit-page' ).attr( 'href' );
+				window.location.href = $( target ).attr( 'href' );
 			} );
 		} else if ( shouldShowUploadTutorial() ) {
 			photoOverlay = new LeadPhotoTutorialOverlay( {
-				target: $( '#ca-upload' ),
+				target: $( '#ca-upload input' ),
 				funnel: 'newbie'
 			} );
 			photoOverlay.show();

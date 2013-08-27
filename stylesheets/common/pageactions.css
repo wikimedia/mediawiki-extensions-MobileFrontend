@@ -51,6 +51,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+  margin-bottom: 8px;
+  padding: 0;
+  border: 0;
 }
 .watch-this-article {
   background-image: url(images/pagemenu/watch.png);

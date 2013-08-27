@@ -22,22 +22,19 @@
   background-color: #006398;
   color: white;
   height: 100%;
+  box-shadow: 0 1px 5px 0 rgba(117, 117, 117, 0.8);
 }
 .tutorial .slide {
-  padding: 160px 0 0 0;
   text-align: center;
   background-size: auto 180px;
   background-repeat: no-repeat;
   background-position: center -10px;
-  top: 10px;
-  left: 0;
-  bottom: 0;
+  padding: 10px 0;
   width: 100%;
-  position: absolute;
 }
 .tutorial .slide p {
   line-height: 1.4;
-  margin: 0 26px 1em;
+  margin: 0 0 1em;
 }
 .tutorial .slide button.actionable,
 .tutorial .slide button,
@@ -54,6 +51,7 @@
   color: white;
 }
 .tutorial .photo-upload {
+  padding-top: 160px;
   background-image: url(images/tutorials/photos.png);
 }
 .tutorial .editing {

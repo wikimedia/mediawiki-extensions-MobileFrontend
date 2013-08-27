@@ -14,7 +14,7 @@
 		} );
 
 	function addEditButton( section, container ) {
-		return $( '<a class="edit-page inline" href="#editor-' + section + '">' ).
+		return $( '<a class="edit-page" href="#editor-' + section + '">' ).
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container ).
 			// FIXME change when micro.tap.js in stable
@@ -24,14 +24,17 @@
 			} );
 	}
 
-	function addCtaButton( sectionHash, container ) {
+	function addCtaButton( hash, container, returnToQuery ) {
 		addEditButton( '', container ).
 			// FIXME change when micro.tap.js in stable
 			on( M.tapEvent( 'mouseup' ), function( ev ) {
 				ev.preventDefault();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
 				drawer.
-					render( { queryParams: { returnto: mw.config.get( 'wgPageName' ) + '#' + sectionHash } } ).
+					render( { queryParams: {
+						returnto: mw.config.get( 'wgPageName' ) + '#' + hash,
+						returntoquery: returnToQuery
+					} } ).
 					toggle();
 			} ).
 			// needed until we use tap everywhere to prevent the link from being followed
@@ -90,8 +93,18 @@
 		} );
 
 		$( 'h2 .mw-editsection' ).each( function() {
-			var $heading = $( this ).parent();
-			addCtaButton( $heading.attr( 'id' ), $heading );
+			var $heading = $( this ).parent(), section;
+
+			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+				addCtaButton( $heading.attr( 'id' ), $heading );
+			} else {
+				if ( !M.isTestA ) {
+					section = extractSectionIdFromEditLink( $( this ).find( 'a' ) );
+					addCtaButton( 'editor-' + section, $heading );
+				} else {
+					addCtaButton( $heading.attr( 'id' ), $heading, 'article_action=edit' );
+				}
+			}
 		} );
 	}
 

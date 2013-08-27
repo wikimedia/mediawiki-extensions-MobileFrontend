@@ -3,6 +3,7 @@
 	var Overlay = M.require( 'Overlay' ), ContentOverlay;
 
 	ContentOverlay = Overlay.extend( {
+		fullScreen: false,
 		appendTo: '#mw-mf-page-center',
 		postRender: function( options ) {
 			this._super( options );
@@ -13,9 +14,9 @@
 		addPointerArrow: function( $pa ) {
 			var tb = 'solid 10px transparent',
 				paOffset = $pa.offset(),
-				h = $pa.outerHeight();
+				h = $pa.outerHeight( true );
 
-			this.$el.css( 'top', paOffset.top + h + 8 );
+			this.$el.css( 'top', paOffset.top + h );
 			$( '<div>' ).css( {
 				'border-bottom': 'solid 10px #006398',
 				'border-right': tb,

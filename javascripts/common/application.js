@@ -289,6 +289,8 @@
 		router: new Router(),
 		pageApi: new PageApi(),
 		deParam: deParam,
+		// for A/B testing (we want this to be the same everywhere)
+		isTestA: mw.config.get( 'wgUserId' ) % 2 === 0,
 		// FIXME: get rid off this (grep M.tapEvent) when micro.tap.js is in stable
 		tapEvent: function( fallbackEvent ) {
 			return mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : fallbackEvent;

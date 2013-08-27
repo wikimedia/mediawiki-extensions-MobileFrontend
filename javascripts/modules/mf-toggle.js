@@ -17,6 +17,8 @@ var MIN_SECTIONS = 2, toggle = ( function() {
 
 			if ( $p.length > 0 && !$p.hasClass( 'openSection' ) ) {
 				wm_toggle_section( $p.attr( 'id' ).split( '_' )[1] );
+				// scroll again after opening section (opening section makes the page longer)
+				window.scrollTo( 0, $target.offset().top );
 			}
 		} catch ( e ) {}
 	}
