@@ -239,6 +239,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'localBasePath' => $localBasePath,
 		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
+			// notifications.js
+			'overlays/notifications',
 			// talk.js
 			'overlays/talk',
 			'overlays/talkSectionAdd',
@@ -271,10 +273,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta.common',
 		),
 		'styles' => array(
+			'stylesheets/modules/notifications.css',
 			'stylesheets/modules/talk.css',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-toggle-dynamic.js',
+			'javascripts/modules/notifications.js',
 			'javascripts/modules/talk/TalkSectionOverlay.js',
 			'javascripts/modules/talk.js',
 			'javascripts/modules/search/pageImages.js',
@@ -306,6 +310,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply-success',
 			'mobile-frontend-talk-reply',
 			'mobile-frontend-talk-reply-info',
+
+			// notifications.js (defined in Echo)
+			'echo-none',
+			'notifications',
 		),
 	),
 
