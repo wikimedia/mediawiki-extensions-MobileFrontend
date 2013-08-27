@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c95d3502_816240d9",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-08-27T17:45:16Z",
+      "side": 1,
+      "message": "Just a note we should spell out some conditions for being added here. Does a user have to have X amount of commits merged? Does a 1 patch contribution get you in here? Would be good to explain.",
+      "revId": "ef45fd1c88c0c24cfbe62e19ccb45e4bf2c4ae05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
