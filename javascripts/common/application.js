@@ -70,8 +70,8 @@
 			// FIXME: this will fail if Webkit goes past 599 and for Blink
 			// (http://www.chromium.org/blink)
 			/AppleWebKit\/(53[4-9]|5[4-9]\d?|[6-9])\d?\d?/,
-			// Android 3+
-			/Android [3-9]/,
+			// Android 2+ (we lockViewport for Android 2 meaning we can support it)
+			/Android [2-9]/,
 			// any Firefox
 			/Firefox/,
 			// MSIE 10+
