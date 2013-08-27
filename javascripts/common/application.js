@@ -89,7 +89,7 @@
 	}
 
 	function lockViewport() {
-		$viewportMeta.attr( 'content', 'minimum-scale=1.0, maximum-scale=1.0' );
+		$viewportMeta.attr( 'content', 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no' );
 	}
 
 	function unlockViewport() {
@@ -159,6 +159,8 @@
 			// (remove if we drop support for some features on it)
 			if ( /Android 2/.test( navigator.userAgent ) ) {
 				$body.addClass( 'android2' );
+				// lock the viewport for this device - too problematic
+				lockViewport();
 			}
 		}
 		fixBrowserBugs();
