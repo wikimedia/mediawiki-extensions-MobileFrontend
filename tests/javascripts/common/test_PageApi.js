@@ -55,6 +55,7 @@
 		pageApi.getPage( 'Test' ).done( function( resp ) {
 			assert.deepEqual( resp, {
 				title: 'Test',
+				id: -1,
 				isMainPage: false,
 				lead: 'lead content',
 				sections: [

@@ -74,6 +74,8 @@
 					} else {
 						page.resolve( {
 							title: title,
+							// FIXME [api] should return the page id - this is needed to tell if a page is new or not
+							id: -1,
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
 							isMainPage: resp.mobileview.hasOwnProperty( 'mainpage' ) ? true : false

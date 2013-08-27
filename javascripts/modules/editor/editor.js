@@ -50,7 +50,6 @@
 	}
 
 	function init( page ) {
-		// Note on ajax loaded pages that do not exist we force a refresh of the url using window.location so we can rely on this
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 
 		M.router.route( /^editor-(\d+)$/, function( sectionId ) {
