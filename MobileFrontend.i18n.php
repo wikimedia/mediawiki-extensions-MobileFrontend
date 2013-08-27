@@ -597,7 +597,7 @@ Used when the user is not logged in.
 	'mobile-frontend-diffview-404-title' => 'Heading on 404 page when bad revision id parameter is passed',
 	'mobile-frontend-diffview-404-desc' => 'Text for 404 page when bad revision id parameter is passed',
 	'mobile-frontend-diffview-title' => 'Header for common mobile diff/change view. Parameters:
-* $1 - page title (an optional parameter for backwards compatibility)
+* $1 - (Optional) page title (for backwards compatibility)
 {{Identical|Change}}',
 	'mobile-frontend-diffview-editcount' => 'Edit count of user in common mobile diff/change view. Parameters:
 * $1 - the count, may use PLURAL
@@ -883,6 +883,7 @@ $messages['anp'] = array(
  * @author Abanima
  * @author AwamerT
  * @author Bassem JARKAS
+ * @author Kuwaity26
  * @author Meno25
  * @author Mido
  * @author OsamaK
@@ -928,7 +929,7 @@ $messages['ar'] = array(
 	'mobile-frontend-language-article-heading' => 'اقرأ بلغة أخرى',
 	'mobile-frontend-language-header' => 'هذه الصفحة متوفرة في {{PLURAL:$1||لغة واحدة|لغتين|$1 لغات|$1 لغة}}',
 	'mobile-frontend-language-footer' => '!ملاحظة: قد لا تكون هذه الصفحة مكتوبة بلغتك المفضلة. يمكنك مشاهدة اللغات التي تدعمها {{SITENAME}} بالنقر هنا.',
-	'mobile-frontend-language-site-choose' => 'بحث اللغة',
+	'mobile-frontend-language-site-choose' => 'ابحث عن لغة',
 	'mobile-frontend-username' => 'اسم المستخدم:',
 	'mobile-frontend-password' => 'كلمة السر:',
 	'mobile-frontend-username-placeholder' => 'اسم المستخدم',
@@ -978,7 +979,7 @@ $messages['ar'] = array(
 	'mobile-frontend-page-menu-contents' => 'محتويات',
 	'mobile-frontend-page-menu-history' => 'التاريخ',
 	'mobile-frontend-meta-data-issues-header' => 'قضايا',
-	'mobile-frontend-meta-data-issues' => 'تعاني الصفحة من بعض المشاكل',
+	'mobile-frontend-meta-data-issues' => 'تعاني الصفحة من بعض المشكلات',
 	'mobile-frontend-ajax-preview-loading' => 'يحمّل صفحة المعاينة',
 	'mobile-frontend-page-saving' => 'يجري حفظ $1',
 	'mobile-frontend-user-cta' => 'رجاء ادخل أو سجّل لترى إشعاراتك.',
@@ -995,7 +996,7 @@ $messages['ar'] = array(
 	'mobile-frontend-nearby-noresults' => 'هذا المكان هادئ...لا وجود لأية صفحات عن أماكن قريبة.',
 	'mobile-frontend-nearby-noresults-guidance' => 'حاول إنشاء صفحة جديدة أو إضافة الموقع لصفحة موجودة',
 	'mobile-frontend-nearby-refresh' => 'عثرنا على مكان أدق لك. انقر هنا لإنعاش قائمة الصفحات القريبة.',
-	'mobile-frontend-nearby-error' => 'الصفحات القريبة في {{SITENAME}} تعاني من بعض المشاكل.',
+	'mobile-frontend-nearby-error' => 'الصفحات القريبة في {{SITENAME}} تعاني من بعض المشكلات.',
 	'mobile-frontend-nearby-error-guidance' => 'حاول إنعاش مكانك.',
 	'mobile-frontend-nearby-link' => 'اقرأ هذه الصفحة كاملة',
 	'mobile-frontend-nearby-directions' => 'أبحر إلى هنا',
@@ -3364,6 +3365,7 @@ $messages['de'] = array(
 	'mobile-frontend-settings-alpha' => 'Experimenteller Modus',
 	'mobile-frontend-settings-alpha-description' => 'Steige in ein gefährliches und unentdecktes mobiles Territorium ein. Bekomme mehr experimentelle Funktionen, jedoch mit erhöhten Fehlerrisiken.',
 	'mobile-frontend-save-settings' => 'Speichern',
+	'mobile-frontend-save-error' => 'Fehler beim Speichern der Einstellungen. Stelle sicher, dass Cookies aktiviert sind.',
 	'mobile-frontend-random-button' => 'Zufall',
 	'mobile-frontend-back-to-top-of-section' => 'Einen Abschnitt zurück springen',
 	'mobile-frontend-close-section' => 'Diesen Abschnitt schließen',
@@ -5193,6 +5195,7 @@ $messages['fr'] = array(
 	'mobile-frontend-settings-alpha' => 'Mode expérimental',
 	'mobile-frontend-settings-alpha-description' => 'Entrez dans un territoire mobile dangereux et inexploré. Obtenez des fonctionnalisés encore plus expérimentales, mais avec plus de dangers de bogues.',
 	'mobile-frontend-save-settings' => 'Enregistrer',
+	'mobile-frontend-save-error' => 'Erreur d’enregistrement des paramètres. Veuillez vérifier que vos cookies sont activés.',
 	'mobile-frontend-random-button' => 'Au hasard',
 	'mobile-frontend-back-to-top-of-section' => "Revenir d'une section",
 	'mobile-frontend-close-section' => 'Fermer cette section',
@@ -5822,6 +5825,7 @@ $messages['gl'] = array(
 	'mobile-frontend-settings-alpha' => 'Modo experimental',
 	'mobile-frontend-settings-alpha-description' => 'Entre nun territorio móbil perigoso e sen explorar. Consiga as características máis experimentais, pero con máis risco de erros.',
 	'mobile-frontend-save-settings' => 'Gardar',
+	'mobile-frontend-save-error' => 'Erro ao gardar a configuración. Asegúrese de ter as cookies activadas.',
 	'mobile-frontend-random-button' => 'Ao chou',
 	'mobile-frontend-back-to-top-of-section' => 'Volver ao comezo da sección',
 	'mobile-frontend-close-section' => 'Pechar esta sección',
@@ -6248,6 +6252,7 @@ $messages['he'] = array(
 	'mobile-frontend-settings-alpha' => 'מצב ניסויים',
 	'mobile-frontend-settings-alpha-description' => 'כניסה לאזור מסוכן ולא מוכּר. יש פה אפשרויות עוד יותר ניסיוניות, אבל גם יותר סכנה לחוות באגים.',
 	'mobile-frontend-save-settings' => 'שמירה',
+	'mobile-frontend-save-error' => 'שגיאה בשמירת העדפות. יש לוודא שהעוגיות מופעלות.',
 	'mobile-frontend-random-button' => 'דף אקראי',
 	'mobile-frontend-back-to-top-of-section' => 'חזרה לקטע הקודם',
 	'mobile-frontend-close-section' => 'לסגור את החלק הזה',
@@ -7719,6 +7724,7 @@ $messages['ja'] = array(
 	'mobile-frontend-settings-alpha' => '実験モード',
 	'mobile-frontend-settings-alpha-description' => '携帯機器向けの危険で未探検の領域に入ります。よりいっそう実験的な機能が手に入りますが、バグの危険性もより大きくなります。',
 	'mobile-frontend-save-settings' => '保存',
+	'mobile-frontend-save-error' => '設定を保存する際にエラーが発生しました。Cookie を有効にしていることを確認してください。',
 	'mobile-frontend-random-button' => 'おまかせ表示',
 	'mobile-frontend-back-to-top-of-section' => '節の先頭に戻る',
 	'mobile-frontend-close-section' => 'この節を閉じる',
@@ -9834,6 +9840,7 @@ $messages['mk'] = array(
 	'mobile-frontend-settings-alpha' => 'Експериментален режим',
 	'mobile-frontend-settings-alpha-description' => 'Со ова влегувате во опасна и неистражена мобилна територија. Добивате уште повеќе експериментални функции, но со поголема опасност од бубачки и грешки.',
 	'mobile-frontend-save-settings' => 'Зачувај',
+	'mobile-frontend-save-error' => 'Грешка при зачувувањето на поставките. Проверете дали имате овозможено колачиња.',
 	'mobile-frontend-random-button' => 'Случајна',
 	'mobile-frontend-back-to-top-of-section' => 'Оди на претх. заглавие',
 	'mobile-frontend-close-section' => 'Затвори го поднасловот',
@@ -12737,11 +12744,15 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-donate-image-title' => 'Carecaminde',
 	'mobile-frontend-donate-image-heading' => 'Le condrebbute recende tune',
 	'mobile-frontend-listed-image-no-description' => 'Nisciuna descrizione',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Pigghiale?',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Sìne!',
+	'mobile-frontend-watchlist-add' => "Aggiunde $1 a l'elenghe de le pàggene condrollate",
+	'mobile-frontend-watchlist-removed' => "Luate $1 da l'elenghe de le pàggene condrollate",
 	'mobile-frontend-watchlist-view' => "'Ndruche le pàggene condrollate tune",
 	'mobile-frontend-watchlist-more' => 'de cchiù',
 	'mobile-frontend-watchlist-cta-button-login' => 'Tràse',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Reggistrate',
-	'mobile-frontend-watchlist-a-z' => 'Tutte', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Elenghe',
 	'mobile-frontend-watchlist-feed' => 'Cangiate',
 	'mobile-frontend-changeslist-ip' => 'Utende anonime',
 	'mobile-frontend-watchlist-filter-all' => 'Tutte',
@@ -12758,11 +12769,17 @@ $messages['roa-tara'] = array(
 	'mobile-frontend-table' => 'Tabbelle $1',
 	'mobile-frontend-photo-caption-placeholder' => "Aggiunge 'na descrizione (richieste)",
 	'mobile-frontend-image-loading' => "Stoche a scareche 'n'immaggine",
+	'mobile-frontend-photo-ownership-confirm' => 'Pigghiale!',
 	'mobile-frontend-image-uploading-wait' => "Stoche a careche 'n'immaggine, pe piacere aspitte.",
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Annulle</a> ce te ste pigghie assaije tiembe.',
 	'mobile-frontend-photo-upload-error' => 'Errore, pruève arrete.',
 	'mobile-frontend-photo-submit' => 'Conferme',
 	'mobile-frontend-photo-cancel' => 'Annulle',
+	'mobile-frontend-editor-edit' => 'Cange',
+	'mobile-frontend-editor-continue' => 'Condinue',
+	'mobile-frontend-editor-save' => 'Reggìstre',
+	'mobile-frontend-editor-cancel' => 'Annulle',
+	'mobile-frontend-editor-keep-editing' => "Mandìne 'u cangiamende",
 	'mobile-frontend-drawer-cancel' => 'Annulle',
 );
 
@@ -13706,7 +13723,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Logga in',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Registrera dig',
 	'mobile-frontend-watch-login' => 'Du måste vara inloggad för att bevaka sidor.',
-	'mobile-frontend-watchlist-a-z' => 'Alla', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Lista',
 	'mobile-frontend-watchlist-feed' => 'Ändrade',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klicka på stjärnan längst upp på sidan',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'Du bevakar för närvarande inte några sidor. Din bevakningslista hjälper dig att hålla reda på de sidor som du är intresserad av. Bevaka sidor genom att trycka på stjärnikonen.',
@@ -15083,6 +15100,7 @@ $messages['vi'] = array(
 	'mobile-frontend-settings-alpha' => 'Chế độ thử nghiệm',
 	'mobile-frontend-settings-alpha-description' => 'Đi vào lãnh thổ nguy hiểm chưa quen. Chịu thêm tính năng di động thử nghiệm có thể có nhiều lỗi hơn.',
 	'mobile-frontend-save-settings' => 'Lưu',
+	'mobile-frontend-save-error' => 'Lỗi khi lưu cấu hình. Xin vui lòng chắc chắn bật cookie.',
 	'mobile-frontend-random-button' => 'Ngẫu nhiên',
 	'mobile-frontend-back-to-top-of-section' => 'Nhảy về đầu phần',
 	'mobile-frontend-close-section' => 'Đóng phần này',
