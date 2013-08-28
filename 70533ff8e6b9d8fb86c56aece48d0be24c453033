@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c95d3502_8d4351b2",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-28T06:05:52Z",
+      "side": 1,
+      "message": "This kind of breaks the rules. An object that can be instantiated multiple times (Page) sets a global which is common for everything. We use Page in talk overlays, so after loading talks, wgArticleId will be messed up, won\u0027t it?\n\nWe should probably abstract away wgArticleId and use a property of Page instead.",
+      "revId": "70533ff8e6b9d8fb86c56aece48d0be24c453033",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
