@@ -258,6 +258,24 @@
     },
     {
       "key": {
+        "uuid": "c95d3502_82eebbec",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 915
+      },
+      "writtenOn": "2013-08-28T15:40:21Z",
+      "side": 1,
+      "message": "Ah, ok. You\u0027re worried about limit being applied after count.\n\nYep, fewer fields is better for mysqld.\n\nBut I\u0027m assuming the PHP db layer would still pull up to 500 single-field rows over the network just to call -\u003enumRows?  This sort of thing can be avoided with: SELECT count(*) FROM (SELECT rc_id ... LIMIT) t;\n\nI don\u0027t know the mediawiki policy on sub-queries :)  I have no problem with them if they don\u0027t suck performance-wise, which this type doesn\u0027t.",
+      "parentUuid": "2995f1bc_aeb39a4b",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2995f1bc_9b062b88",
         "filename": "includes/specials/SpecialUserProfile.php",
         "patchSetId": 4
