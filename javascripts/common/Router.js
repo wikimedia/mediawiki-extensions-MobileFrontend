@@ -25,15 +25,13 @@
 
 		$( window ).on( 'hashchange', function() {
 			// ev.originalEvent.newURL is undefined on Android 2.x
-			var hash = getHash(), routeEv = $.Event();
+			var routeEv = $.Event();
 
 			if ( self._enabled ) {
 				self.emit( 'route', routeEv );
 
 				if ( !routeEv.isDefaultPrevented() ) {
-					$.each( self.routes, function( id, entry ) {
-						return !matchRoute( hash, entry );
-					} );
+					self.checkRoute();
 				} else {
 					// if route was prevented, ignore the next hash change and revert the
 					// hash to its old value
@@ -44,11 +42,22 @@
 				self._enabled = true;
 			}
 
-			self._oldHash = hash;
+			self._oldHash = getHash();
 		} );
 	}
 
 	Router.prototype = new EventEmitter();
+
+	/**
+	 * Check the current route and run appropriate callback if it matches.
+	 */
+	Router.prototype.checkRoute = function() {
+		var hash = getHash();
+
+		$.each( this.routes, function( id, entry ) {
+			return !matchRoute( hash, entry );
+		} );
+	};
 
 	/**
 	 * Bind a specific callback to a hash-based route, e.g.
@@ -67,7 +76,7 @@
 			callback: callback
 		};
 		this.routes[entry.path] = entry;
-		matchRoute( window.location.hash.slice( 1 ), entry );
+		matchRoute( getHash(), entry );
 	};
 
 	/**

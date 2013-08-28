@@ -295,6 +295,9 @@ $messages['en'] = array (
 	'mobile-frontend-talk-reply-info' => 'Note your reply will be automatically signed with your username.',
 	'mobile-frontend-talk-reply' => 'Reply',
 
+	// media viewer
+	'mobile-frontend-media-details' => 'Details',
+
 	// AbuseFilter variable
 	'abusefilter-edit-builder-vars-user-mobile' => 'Whether or not a user is editing through the mobile interface',
 );
@@ -752,6 +755,7 @@ See also:
 	'mobile-frontend-talk-reply-info' => 'Inform the user their talk reply will be automatically signed.',
 	'mobile-frontend-talk-reply' => 'Reply heading.
 {{Identical|Reply}}',
+	'mobile-frontend-media-details' => 'Caption for a button leading to the details of a media file (e.g. an image) in a preview.',
 	'abusefilter-edit-builder-vars-user-mobile' => 'See {{msg-mw|Abusefilter-edit-builder-vars-user-name}} (from AbuseFilter extension), for example.',
 );
 

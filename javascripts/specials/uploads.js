@@ -95,10 +95,12 @@ var
 				insertBefore( this.$list );
 		},
 		prependPhoto: function( photoData ) {
-			new PhotoItem( photoData ).prependTo( this.$list );
+			var photoItem = new PhotoItem( photoData ).prependTo( this.$list );
+			M.emit( 'photo-loaded', photoItem.$el );
 		},
 		appendPhoto: function( photoData ) {
-			new PhotoItem( photoData ).appendTo( this.$list );
+			var photoItem = new PhotoItem( photoData ).appendTo( this.$list );
+			M.emit( 'photo-loaded', photoItem.$el );
 		},
 		_isEndNear: function() {
 			var scrollBottom = $( window ).scrollTop() + $( window ).height();

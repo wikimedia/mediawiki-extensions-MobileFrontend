@@ -336,6 +336,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.alpha.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
 		'templates' => array(
 			'overlays/nearby',
+			'modules/ImageOverlay',
 		),
 	),
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
@@ -353,10 +354,14 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// nearbypages.js
 			'mobile-frontend-nearby-to-page',
+
+			// mediaViewer.js
+			'mobile-frontend-media-details',
 		),
 		'styles' => array(
 			'stylesheets/modules/tables.css',
 			'stylesheets/modules/nearbypages.css',
+			'stylesheets/modules/mediaViewer.css',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
@@ -365,7 +370,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-tables.js',
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
-			'javascripts/modules/nearbypages.js'
+			'javascripts/modules/nearbypages.js',
+			'javascripts/modules/mediaViewer.js',
 		),
 	),
 

@@ -8,12 +8,17 @@ var MIN_SECTIONS = 2, toggle = ( function() {
 	}
 
 	function wm_reveal_for_hash( hash ) {
-		var $target = $( hash ),
+		var $target, $p;
+
+		// jQuery will throw for hashes containing certain characters which can break toggling
+		try {
+			$target = $( hash );
 			$p = $target.closest( '.content_block, .section_heading' ).eq( 0 );
 
-		if ( $p.length > 0 && !$p.hasClass( 'openSection' ) ) {
-			wm_toggle_section( $p.attr( 'id' ).split( '_' )[1] );
-		}
+			if ( $p.length > 0 && !$p.hasClass( 'openSection' ) ) {
+				wm_toggle_section( $p.attr( 'id' ).split( '_' )[1] );
+			}
+		} catch ( e ) {}
 	}
 
 	function init() {
