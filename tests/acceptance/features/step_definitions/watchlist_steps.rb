@@ -24,14 +24,26 @@ Then /^When I click Sign In I go to the Log In page$/ do
   end
 end
 
-#Signup takes you to the sign in page... should it take you to the Mobile Create Account page??
-
 Given /^I am logged into the mobile website$/ do
   visit(HomePage) do |page|
     page.mainmenu_button_element.when_present.click
     page.login_button
   end
-  on(LoginPage).login_with(@mediawiki_username, @mediawiki_password)
+  on(LoginPage) do |page|
+  page.login_with(@mediawiki_username, @mediawiki_password)
+  if page.text.include? "There is no user by the name "
+    puts @mediawiki_username + ' does not exist... trying to add user'
+    on(HomePage).create_account_element.when_present.click
+    on(LoginPage) do |page|
+      page.username_element.element.when_present.set @mediawiki_username
+      page.signup_password_element.element.when_present.set @mediawiki_password
+      page.confirm_password_element.element.when_present.set @mediawiki_password
+      page.signup_submit_element.element.when_present.click
+      page.text.should include 'Welcome, ' + @mediawiki_username + '!'
+      #Can't get around captcha in order to create a user
+    end
+  end
+  end
 end
 
 When /^I go to random page$/ do

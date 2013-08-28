@@ -32,6 +32,17 @@ When /^I click on Watchlist from the left Nav$/ do
   on(RandomPage).watchlist_link_element.when_present.click
 end
 
+When /^I click on About Wikipedia from the left Nav$/ do
+  on(HomePage).mainmenu_button_element.when_present.click
+  on(HomePage).about_link_element.when_present.click
+end
+
+
+When /^I click on the Disclaimer link on the left Nav$/ do
+  on(HomePage).mainmenu_button_element.when_present.click
+  on(HomePage).disclaimer_link_element.when_present.click
+end
+
 Then /^my URL should be set to the Watchlist Page$/ do
   @browser.url.should match Regexp.escape('Special%3AWatchlist')
 end
@@ -58,4 +69,13 @@ end
 
 Then /^my URL should be set to the Log In Page$/ do
   @browser.url.should match Regexp.escape('Special:UserLogin')
+end
+
+Then /^my URL should be set to the About Wikipedia Page$/ do
+  @browser.url.should match Regexp.escape('Wikipedia:About')
+end
+
+
+Then /^my URL should be set to the Disclaimer Page$/ do
+  @browser.url.should match Regexp.escape('Wikipedia:General_disclaimer')
 end
