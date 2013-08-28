@@ -7,7 +7,10 @@ var api = M.require( 'api' ), w = ( function() {
 		CtaDrawer = M.require( 'CtaDrawer' ),
 		drawer = new CtaDrawer( {
 			content: mw.msg( 'mobile-frontend-watchlist-cta' ),
-			returnToQuery: 'article_action=watch'
+			queryParams: {
+				campaign: 'mobile_watchPageActionCta',
+				returntoquery: 'article_action=watch'
+			}
 		} );
 
 	// FIXME: this should live in a separate module and make use of MobileFrontend events

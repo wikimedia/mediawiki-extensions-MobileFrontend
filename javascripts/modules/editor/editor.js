@@ -6,7 +6,12 @@
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 		isEditingSupported = M.router.isSupported() && !blacklisted,
 		CtaDrawer = M.require( 'CtaDrawer' ),
-		drawer = new CtaDrawer( { content: mw.msg( 'mobile-frontend-editor-cta' ) } );
+		drawer = new CtaDrawer( {
+			queryParams: {
+				campaign: 'mobile_editPageActionCta'
+			},
+			content: mw.msg( 'mobile-frontend-editor-cta' )
+		} );
 
 	function addEditButton( section, container ) {
 		return $( '<a class="edit-page inline" href="#editor-' + section + '">' ).
@@ -25,7 +30,9 @@
 			on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', function( ev ) {
 				ev.preventDefault();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
-				drawer.render( { returnTo: mw.config.get( 'wgPageName' ) + '#' + sectionHash } ).toggle();
+				drawer.
+					render( { queryParams: { returnto: mw.config.get( 'wgPageName' ) + '#' + sectionHash } } ).
+					toggle();
 			} ).
 			// needed until we use tap everywhere to prevent the link from being followed
 			on( 'click', false );
@@ -79,7 +86,7 @@
 	function initCta() {
 		// FIXME change when micro.tap.js in stable
 		$( '#ca-edit' ).addClass( 'enabled' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
-			drawer.render( { returnToQuery: 'article_action=edit' } ).show();
+			drawer.render( { queryParams :{ returntoquery: 'article_action=edit' } } ).show();
 		} );
 
 		$( 'h2 .mw-editsection' ).each( function() {
