@@ -4,7 +4,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
-	const CACHE_VERSION = 4;
+	const CACHE_VERSION = 5;
 
 	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen;
 
@@ -106,6 +106,11 @@ class ApiMobileView extends ApiBase {
 				}
 				$result[] = $section;
 			}
+		}
+		if ( $data['liquidthreads'] ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'liquidthreads' => '' )
+			);
 		}
 		if ( count( $missingSections ) && isset( $prop['text'] ) ) {
 			$this->setWarning( 'Section(s) ' . implode( ', ', $missingSections ) . ' not found' );
@@ -224,6 +229,7 @@ class ApiMobileView extends ApiBase {
 				'text' => array( $html ),
 				'refsections' => array(),
 				'lastmodified' => $wp->getTimestamp(),
+				'liquidthreads' => false,
 			);
 		} else {
 			wfProfileIn( __METHOD__ . '-sections' );
@@ -254,6 +260,10 @@ class ApiMobileView extends ApiBase {
 				$data['text'][] = $chunk;
 			}
 			$data['lastmodified'] = $wp->getTimestamp();
+			// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
+			// Inform ppl if the page is infested with LiquidThreads but that's the only thing we support about it.
+			$data['liquidthreads'] = isset( $parserOutput->mLqtReplacements );
+
 			wfProfileOut( __METHOD__ . '-sections' );
 		}
 		// Don't store small pages to decrease cache size requirements
