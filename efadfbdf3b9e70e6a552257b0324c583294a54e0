@@ -276,6 +276,24 @@
     },
     {
       "key": {
+        "uuid": "c95d3502_e2bdb7d5",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-08-28T15:45:27Z",
+      "side": 1,
+      "message": "In general, they\u0027re discouraged - however a DBA approval changes everything:) Except for subquery support in DB abstraction layer, which is non-existent:) I\u0027ll see what can be done though:)",
+      "parentUuid": "c95d3502_82eebbec",
+      "revId": "efadfbdf3b9e70e6a552257b0324c583294a54e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2995f1bc_9b062b88",
         "filename": "includes/specials/SpecialUserProfile.php",
         "patchSetId": 4
