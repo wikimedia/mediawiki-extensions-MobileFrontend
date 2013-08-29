@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c95d3502_3eb41fcf",
+        "filename": "includes/formatters/HtmlFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-29T23:38:44Z",
+      "side": 1,
+      "message": "Die commented debug line, die!",
+      "revId": "fa0352800c0a8f514e2002bab2020778773f331b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
