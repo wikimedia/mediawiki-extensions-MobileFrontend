@@ -7,7 +7,6 @@ Feature: Header Validation
     When I click the edit icon
     Then I receive edit icon message You must be logged in to edit pages on mobile.
 
-
   Scenario: Receive notification message - Upload Icon
     When I click on the upload icon
     Then I receive upload icon message You need to be logged in to add an image to this page.

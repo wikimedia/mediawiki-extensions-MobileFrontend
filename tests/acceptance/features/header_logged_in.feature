@@ -4,15 +4,12 @@ Feature: Header Validation - Logged In
     Given I am logged into the mobile website
       And I am on the home page
 
-
   Scenario: Edit mode
-    When I click the enabled edit icon
-    Then I can click Cancel
-
+    Then I should see the edit icon
 
   Scenario: Uploading Image
     When I click on the upload icon
-    Then I receive the locked upload message No image is needed on this page.
+    Then I receive an upload error message
 
   Scenario: Watchlist icon from article page
     When I click on watchlist icon
