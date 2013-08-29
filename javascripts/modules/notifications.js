@@ -43,9 +43,6 @@
 						if ( result.query && result.query.notifications ) {
 							notifications = $.map( result.query.notifications.list, function( a ) {
 								return { message: a['*'], timestamp: a.timestamp.mw };
-							} ).sort( function( a, b ) {
-								// make sure newer notifications are at the top
-								return a.timestamp < b.timestamp;
 							} );
 						} else {
 							this._error();
@@ -53,7 +50,7 @@
 
 						// Add the notifications to the overlay
 						if ( notifications.length ) {
-							options.notifications = notifications;
+							options.notifications = notifications.reverse();
 						} else {
 							options.errorMessage = mw.msg( 'echo-none' );
 						}

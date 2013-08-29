@@ -5,9 +5,6 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-.mw-mf-overlay .container {
-  min-height: 100px;
-}
 .mw-mf-overlay .mw-echo-icon {
   width: 30px;
   height: 30px;
@@ -16,4 +13,10 @@
 }
 .mw-mf-overlay .mw-echo-content {
   margin-left: 40px;
+}
+.mw-mf-overlay .mw-echo-notification-footer {
+  font-size: 0.8em;
+}
+.mw-mf-overlay .mw-echo-notification-primary-link {
+  display: none;
 }
