@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c95d3502_14b9f7e9",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-30T23:05:28Z",
+      "side": 1,
+      "message": "First, didn\u0027t we decide on hyphens for events? ;) Second shouldn\u0027t it be endLoad (end-load)? Or maybe just load-current-location?",
+      "revId": "adbeebe5db19e2501008dbb7cef5f3e52db882d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
