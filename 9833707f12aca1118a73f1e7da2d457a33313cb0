@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c95d3502_11074986",
+        "filename": "stylesheets/common/images/close-button-beta.png",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-08-30T20:17:10Z",
+      "side": 0,
+      "message": "This icon is blurry on retina displays; double the resolution and scale it down with background-size?\n\nConsider also putting in a semitransparent circle or something so it\u0027s still visible on a mid-gray background.",
+      "revId": "9833707f12aca1118a73f1e7da2d457a33313cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
