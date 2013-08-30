@@ -1,7 +1,7 @@
 Feature: Header Validation
 
   Background:
-    Given I am on the home page
+    Given I go to random page
 
   Scenario: Receive notification message - Edit Icon
     When I click the edit icon
