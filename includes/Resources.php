@@ -319,7 +319,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'localBasePath' => $localBasePath,
 		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
-			// notifications.js
+			// NotificationsOverlay.js
 			'overlays/notifications',
 			// page.js
 			'pageActionTutorial',
@@ -355,7 +355,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-toggle-dynamic.js',
-			'javascripts/modules/notifications.js',
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
@@ -704,11 +703,37 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		// stop flash of unstyled content when loading from cache
 		'position' => 'top',
 	),
-	'mobile.notifications.styles' => $wgMFMobileResourceBoilerplate + array(
+	'mobile.notifications.special.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/notifications.less',
 		),
 		'position' => 'top',
+	),
+	'mobile.notifications.special.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+		'scripts' => array(
+			'javascripts/specials/notifications.js',
+		),
+		'messages' => array(
+			// defined in Echo
+			'echo-load-more-error',
+		),
+	),
+	'mobile.notifications.overlay' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+		),
+		'scripts' => array(
+			'javascripts/modules/NotificationsOverlay.js',
+		),
+		'styles' => array(
+			'less/modules/NotificationsOverlay.less',
+		),
+		'messages' => array(
+			// defined in Echo
+			'echo-none',
+			'notifications',
+			'echo-overlay-link',
+		),
 	),
 	'mobile.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
