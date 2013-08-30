@@ -1,2 +1,2 @@
-ci: --format Cucumber::Formatter::Sauce --out reports/junit --format html --out reports/cucumber<%= ENV['TEST_ENV_NUMBER'] %>.html
+ci: --format Cucumber::Formatter::Sauce --out reports/junit
 default: --format progress

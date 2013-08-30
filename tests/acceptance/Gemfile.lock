@@ -31,10 +31,6 @@ GEM
       watir-webdriver (>= 0.6.4)
     page_navigation (0.9)
       data_magic (>= 0.14)
-    parallel (0.7.1)
-    parallel_tests (0.15.0)
-      parallel
-    rake (10.1.0)
     rspec-expectations (2.14.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rubyzip (0.9.9)
@@ -58,7 +54,5 @@ DEPENDENCIES
   json
   net-http-persistent
   page-object
-  parallel_tests
-  rake
   rspec-expectations
   syntax
