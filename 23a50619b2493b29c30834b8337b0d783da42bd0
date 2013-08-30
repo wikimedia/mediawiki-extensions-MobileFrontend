@@ -16,6 +16,24 @@
       "revId": "23a50619b2493b29c30834b8337b0d783da42bd0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c95d3502_112829ef",
+        "filename": "javascripts/modules/mediaViewer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-30T20:19:54Z",
+      "side": 1,
+      "message": "Will do that.",
+      "parentUuid": "c95d3502_5101c16d",
+      "revId": "23a50619b2493b29c30834b8337b0d783da42bd0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

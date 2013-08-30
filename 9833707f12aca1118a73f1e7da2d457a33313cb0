@@ -16,6 +16,24 @@
       "revId": "9833707f12aca1118a73f1e7da2d457a33313cb0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c95d3502_5132a15e",
+        "filename": "stylesheets/common/images/close-button-beta.png",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-30T20:19:54Z",
+      "side": 0,
+      "message": "I know about this. I just didn\u0027t want to spend too much time on it because if this gets out of alpha I can just ask the designers to provide me with a new icon ;) I added a slight white glow to it, hence the change, but maybe not enough.",
+      "parentUuid": "c95d3502_11074986",
+      "revId": "9833707f12aca1118a73f1e7da2d457a33313cb0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
