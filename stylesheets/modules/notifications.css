@@ -20,3 +20,6 @@
 .mw-mf-overlay .mw-echo-notification-primary-link {
   display: none;
 }
+.mw-mf-overlay .mw-echo-notification:hover {
+  background-color: #F9F9F9;
+}

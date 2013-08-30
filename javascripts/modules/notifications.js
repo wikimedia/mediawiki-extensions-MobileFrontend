@@ -55,6 +55,19 @@
 							options.errorMessage = mw.msg( 'echo-none' );
 						}
 						self.render( options );
+
+						// If there is a primary link, make the entire notification clickable.
+						$( '.mw-echo-notification' ).each( function() {
+							var $notification = $( this ),
+								$primaryLink = $notification.find( '.mw-echo-notification-primary-link' );
+							if ( $primaryLink.length ) {
+								$notification.css( 'cursor', 'pointer' );
+								$notification.click( function() {
+									window.location.href = $primaryLink.attr( 'href' );
+								} );
+							}
+						} );
+
 						self.markAllAsRead();
 					} ).fail( function () {
 						self._error();
