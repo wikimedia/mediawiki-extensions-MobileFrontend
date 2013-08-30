@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c95d3502_74d2335a",
+        "filename": "javascripts/modules/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-08-30T22:44:20Z",
+      "side": 1,
+      "message": "Assign $notification.find( \u0027.mw-echo-notification-primary-link\u0027 ) to a variable. This way JS minifiers will replace this with a single character.",
+      "revId": "06189ac86dc6dd62ae60df77ebdf4c34e502f7e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
