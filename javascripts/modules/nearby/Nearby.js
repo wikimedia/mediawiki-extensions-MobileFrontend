@@ -1,7 +1,8 @@
-( function( M ) {
+( function( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		View = M.require( 'view' ),
 		range = 1000,
+		wgMFMode = mw.config.get( 'wgMFMode' ),
 		Nearby;
 
 	Nearby = View.extend( {
@@ -61,10 +62,43 @@
 				} );
 			} else {
 				self.$( '.loading' ).hide();
+				self._postRenderLinks();
+			}
+		},
+		_postRenderLinks: function() {
+			var self = this;
+			this.$( 'a' ).on( 'click', function( ev ) {
+				var $a = $( ev.currentTarget );
+				// name funnel for watchlists to catch subsequent uploads
+				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
+				if ( wgMFMode === 'stable' ) {
+					window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
+				} else {
+					ev.preventDefault();
+
+					// Trigger preview mode
+					mw.loader.using( 'mobile.nearby.previews', function() {
+							var PagePreviewOverlay = M.require( 'PagePreviewOverlay' );
+							new PagePreviewOverlay( {
+								parent: self.options.parentOverlay,
+								endpoint: mw.config.get( 'wgMFNearbyEndpoint' ),
+								latLngString: $a.data( 'latlng' ),
+								img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html(),
+								title: $a.find( 'h2' ).text()
+							} );
+					} );
+				}
+			} );
+
+			// Load watch stars in alpha
+			if ( wgMFMode === 'alpha' ) {
+				mw.loader.using( 'mobile.stable', function() {
+					M.require( 'watchstar' ).initWatchListIconList( self.$( 'ul' ) );
+				} );
 			}
 		}
 	} );
 
 	M.define( 'modules/nearby/Nearby', Nearby );
 
-}( mw.mobileFrontend ) );
+}( mw.mobileFrontend, jQuery ) );
