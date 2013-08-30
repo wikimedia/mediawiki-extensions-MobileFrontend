@@ -604,6 +604,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-distance',
 			'mobile-frontend-nearby-distance-meters',
 			// other
+			'mobile-frontend-nearby-requirements',
+			'mobile-frontend-nearby-requirements-guidance',
 			'mobile-frontend-nearby-error',
 			'mobile-frontend-nearby-error-guidance',
 			'mobile-frontend-nearby-title',
