@@ -25,6 +25,9 @@
   margin: 0 1px 0 0;
   border-bottom: 3px solid transparent;
 }
+.lqt_watchlist_messages_notice {
+  display: none;
+}
 .mw-mf-user {
   padding: 1px 0 0 20px;
   color: #565656 !important;
