@@ -11,7 +11,6 @@ if git diff --name-only --cached | grep -P '\.js$' ; then
 fi
 for file in `git diff --cached --name-only | grep ".png\$"`
 do
-	[ -f $file ] && echo "Crushing $file" &&  \
-		pngcrush -rem alla -brute -reduce $file ${file%.png}.tmp | grep "filesize" || echo 'png was removed'
-	[ -f $file ] && mv -f ${file%.png}.tmp $file || echo 'png was removed'
+	[ -f $file ] && echo "Compressing $file" &&  \
+		optipng -q -o7 "$file" && advpng -z -4 "$file" && advdef -z -4 "$file" | grep "Output" || echo 'png was removed'
 done
