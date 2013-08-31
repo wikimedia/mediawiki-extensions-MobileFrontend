@@ -14,7 +14,10 @@
   -o-background-size: 32px auto;
   -webkit-background-size: 32px auto;
   background-size: 32px auto;
-  min-height: 50px;
+  min-height: 30px;
+}
+.loading.spinner {
+  height: 100px;
 }
 .loading.content {
   padding-top: 48px;

@@ -28,9 +28,6 @@
   margin: 0;
   display: block;
 }
-.editor-overlay .spinner {
-  height: 100px;
-}
 .editor-overlay textarea {
   width: 100%;
   min-height: 50%;
