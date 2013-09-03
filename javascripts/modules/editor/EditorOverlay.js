@@ -121,6 +121,8 @@
 				action: 'parse',
 				// Enable section preview mode to avoid errors (bug 49218)
 				sectionpreview: true,
+				// needed for pre-save transform to work (bug 53692)
+				pst: true,
 				title: self.options.title,
 				text: self.$content.val(),
 				prop: 'text'
