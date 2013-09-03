@@ -17,6 +17,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	public function execute( $par = '' ) {
 		$context = MobileContext::singleton();
 
+		wfIncrStats( 'mobile.options.views' );
 		$this->returnToTitle = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
 		if ( !$this->returnToTitle ) {
 			$this->returnToTitle = Title::newMainPage();
@@ -191,6 +192,7 @@ HTML;
 		$request = $this->getRequest();
 
 		if ( $request->getVal( 'token' ) != $context->getMobileToken() ) {
+			wfIncrStats( 'mobile.options.errors' );
 			wfDebugLog( 'mobile', __METHOD__ . "(): token mismatch" );
 			$this->getOutput()->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
@@ -199,6 +201,7 @@ HTML;
 			$this->getSettingsForm();
 			return;
 		}
+		wfIncrStats( 'mobile.options.saves' );
 		if ( $request->getBool( 'enableAlpha' ) ) {
 			$group = 'alpha';
 		} elseif ( $request->getBool( 'enableBeta' ) ) {
