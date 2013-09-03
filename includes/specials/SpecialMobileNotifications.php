@@ -6,8 +6,8 @@ class SpecialMobileNotifications extends SpecialNotifications {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$title = $out->getRequest()->getText( 'returnto' );
+		$title = Title::newFromText( $title );
 		if ( $title ) {
-			$title = Title::newFromText( $title );
 			$out->addHtml(
 				Html::openElement( 'p' ) .
 				Html::element( 'a', array( 'href' => $title->getLocalUrl() ), wfMessage( 'returnto', $title->getText() ) ) .
