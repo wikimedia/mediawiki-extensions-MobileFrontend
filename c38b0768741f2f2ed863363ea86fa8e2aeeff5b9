@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8977bd7d_05b47cce",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "You can combine this and the following message in one message, by using \"|0\u003dNo edits\" in this message.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_25c9785c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "You can combine this and the following message in one message, by using \"|0\u003dNo uploads\" in this message.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_65c3703c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "This needs plural, as it\u0027s presumably a configuration setting, that the i18n/L10n should use properly.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_85c08c2f",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "This needs plural, as it\u0027s presumably a configuration setting, that the i18n/L10n should use properly.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_a5dd8813",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "This needs GENDER support. If it\u0027s already there, please add it explicitly, to avoid questions or doubt with translators:\n\n {{GENDER:$1|$1}} has never uploaded anything.\n\nIf $1 is a link, this needs a $2 with a plain username, for proper gender support, etc. ;).",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_45cf5457",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "$2 needs plural support.\n\n$1 needs documentation. Mind that periods of time in running sentences may cause grammatical problems if we don\u0027t have the proper logic for it yet.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_65dc5010",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "Needs GENDER support.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_85d96c21",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "Needs GENDER support.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_a5066887",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "Needs GENDER support.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_c5e284d8",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 776,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "Incorrect documentation for the below?\n\n $1, uploaded $2.\n\nAlso some other below keys appear to simply be copies of the English keys.",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8977bd7d_25d25800",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 805,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-03T12:51:34Z",
+      "side": 1,
+      "message": "Documentation for a key that doesn\u0027t exist. Future proof message docs? :).",
+      "revId": "c38b0768741f2f2ed863363ea86fa8e2aeeff5b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
