@@ -104,7 +104,7 @@ var api = M.require( 'api' ), w = ( function() {
 		}
 
 		// FIXME change when micro.tap.js in stable
-		$( watchBtn ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function( ev ) {
+		$( watchBtn ).on( M.tapEvent( 'click' ), function( ev ) {
 			var isWatched = $( watchBtn ).hasClass( 'watched' );
 			if( prevent ) {
 				ev.preventDefault();
@@ -172,7 +172,7 @@ var api = M.require( 'api' ), w = ( function() {
 			} );
 		} else {
 			// FIXME change when micro.tap.js in stable
-			$( createButton( container ) ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
+			$( createButton( container ) ).on( M.tapEvent( 'click' ), function() {
 				if ( !drawer.isVisible() ) {
 					// log if enabled
 					logWatchEvent( 2 );

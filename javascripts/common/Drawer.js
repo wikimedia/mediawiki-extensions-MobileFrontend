@@ -31,7 +31,7 @@ var View = M.require( 'view' ),
 						setTimeout( function() {
 							$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
 							// FIXME change when micro.tap.js in stable
-							$( '#mw-mf-page-center' ).one( ( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+							$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
 						}, self.minHideDelay );
 					}
 				}, 10 );

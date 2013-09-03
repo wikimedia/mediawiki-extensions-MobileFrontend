@@ -288,7 +288,11 @@
 		unlockViewport: unlockViewport,
 		router: new Router(),
 		pageApi: new PageApi(),
-		deParam: deParam
+		deParam: deParam,
+		// FIXME: get rid off this (grep M.tapEvent) when micro.tap.js is in stable
+		tapEvent: function( fallbackEvent ) {
+			return mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : fallbackEvent;
+		}
 	} );
 
 }( mw.mobileFrontend, jQuery ) );
