@@ -17,7 +17,9 @@
 	$( function() {
 		var photoOverlay, editOverlay, target;
 
-		if ( shouldShowEditTutorial() ) {
+		if ( !M.isLoggedIn() ) {
+			return;
+		} else if ( shouldShowEditTutorial() ) {
 			if ( window.location.hash ) {
 				target = window.location.hash + ' .edit-page';
 			} else {
