@@ -50,6 +50,7 @@
 				$next = $checkboxes.not( ':checked' ).eq( 0 );
 				disable( $checkbox );
 				if ( !$next.length ) {
+					self.hide();
 					self.emit( 'confirm' );
 				} else {
 					enable( $next );
