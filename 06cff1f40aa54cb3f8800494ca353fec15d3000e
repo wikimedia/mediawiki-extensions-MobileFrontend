@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "296ed1b0_19fa2bbb",
+        "filename": "includes/Resources.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-04T22:18:40Z",
+      "side": 1,
+      "message": "It\u0027s still a mess right now but should be NotificationsOverlay.js (to mimic conventions from PHP).",
+      "revId": "06cff1f40aa54cb3f8800494ca353fec15d3000e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "296ed1b0_39f7e7d3",
+        "filename": "includes/Resources.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 489,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-04T22:18:40Z",
+      "side": 1,
+      "message": "notificationsBase.js\n\nAnyway, I don\u0027t see this file in the patchset...",
+      "revId": "06cff1f40aa54cb3f8800494ca353fec15d3000e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "296ed1b0_3920c74b",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-04T22:18:40Z",
+      "side": 1,
+      "message": "What is all this JS doing and why do we need to attach it to a global (mw.echo)? Is it used somewhere externally?",
+      "revId": "06cff1f40aa54cb3f8800494ca353fec15d3000e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "296ed1b0_f9148ff5",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-04T22:18:40Z",
+      "side": 1,
+      "message": "We usually require things at the top of the module.",
+      "revId": "06cff1f40aa54cb3f8800494ca353fec15d3000e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
