@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8977bd7d_b35cefee",
+        "filename": "less/modules/talk.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-04T00:45:54Z",
+      "side": 1,
+      "message": "Why not just \u0027display: none;\u0027?",
+      "revId": "e1e3768529b3fb8945ed042371584179ef158056",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
