@@ -14,6 +14,9 @@
   padding-left: 4px;
   font-size: 9px;
 }
+.alpha #page-actions #ca-talk.count.loading a {
+  display: none;
+}
 .mw-mf-overlay .header button.add {
   position: absolute;
   right: 0;

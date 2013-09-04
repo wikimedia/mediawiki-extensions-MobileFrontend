@@ -1,12 +1,16 @@
 @import "../mixins.less";
 
 .loading {
+	&.spinner {
+		height: 100px;
+	}
+
 	// needs !important to override images from more specific rules
 	background-image: url(images/ajax-loader.gif) !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	.background-size( 32px, auto );
-	min-height: 50px;
+	min-height: 30px;
 
 	&.content {
 		padding-top: 48px;
