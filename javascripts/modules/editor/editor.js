@@ -18,7 +18,7 @@
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
 			prependTo( container ).
 			// FIXME change when micro.tap.js in stable
-			on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', function( ev ) {
+			on( M.tapEvent( 'mouseup' ), function( ev ) {
 				// prevent folding section when clicking Edit
 				ev.stopPropagation();
 			} );
@@ -27,7 +27,7 @@
 	function addCtaButton( sectionHash, container ) {
 		addEditButton( '', container ).
 			// FIXME change when micro.tap.js in stable
-			on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'mouseup', function( ev ) {
+			on( M.tapEvent( 'mouseup' ), function( ev ) {
 				ev.preventDefault();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
 				drawer.
@@ -85,7 +85,7 @@
 
 	function initCta() {
 		// FIXME change when micro.tap.js in stable
-		$( '#ca-edit' ).addClass( 'enabled' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
+		$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
 			drawer.render( { queryParams :{ returntoquery: 'article_action=edit' } } ).show();
 		} );
 
@@ -105,7 +105,7 @@
 		}
 	} else {
 		// FIXME change when micro.tap.js in stable
-		$( '#ca-edit' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function() {
+		$( '#ca-edit' ).on( M.tapEvent( 'click' ), function() {
 			popup.show( mw.msg( isEditingSupported ? 'mobile-frontend-editor-disabled' : 'mobile-frontend-editor-unavailable' ), 'toast' );
 		} );
 	}

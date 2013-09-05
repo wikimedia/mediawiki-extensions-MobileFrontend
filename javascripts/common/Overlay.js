@@ -37,7 +37,7 @@ var View = M.require( 'view' ),
 		postRender: function() {
 			var self = this;
 			// FIXME change when micro.tap.js in stable
-			this.$( '.cancel, .confirm' ).on( mw.config.get( 'wgMFMode' ) === 'alpha' ? 'tap' : 'click', function( ev ) {
+			this.$( '.cancel, .confirm' ).on( M.tapEvent( 'click' ), function( ev ) {
 				ev.preventDefault();
 				if ( self.closeOnBack ) {
 					window.history.back();
