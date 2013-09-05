@@ -50,12 +50,15 @@ class HtmlFormatter {
 	public function getDoc() {
 		if ( !$this->doc ) {
 			$html = mb_convert_encoding( $this->html, 'HTML-ENTITIES', "UTF-8" );
+
+			// https://bugzilla.wikimedia.org/show_bug.cgi?id=53086
+			$html = str_replace( ' <', '&#32;<', $html );
+
 			libxml_use_internal_errors( true );
 			$this->doc = new DOMDocument();
+			$this->doc->strictErrorChecking = false;
 			$this->doc->loadHTML( $html );
 			libxml_use_internal_errors( false );
-			$this->doc->preserveWhiteSpace = false;
-			$this->doc->strictErrorChecking = false;
 			$this->doc->encoding = 'UTF-8';
 		}
 		return $this->doc;

@@ -106,7 +106,12 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!'.
 					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
 				$removeImages,
-			)
+			),
+			// https://bugzilla.wikimedia.org/show_bug.cgi?id=53086
+			array(
+				'Foo<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> <a href="/wiki/Bar" title="Bar" class="mw-redirect">Bar</a>',
+				'Foo<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup> <a href="/wiki/Bar" title="Bar" class="mw-redirect">Bar</a>',
+			),
 		);
 	}
 }
