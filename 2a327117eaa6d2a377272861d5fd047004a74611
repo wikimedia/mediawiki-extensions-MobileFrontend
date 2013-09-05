@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_75c41a62",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-05T22:24:29Z",
+      "side": 1,
+      "message": "Should we use that? Is this \"user CSS\"?",
+      "revId": "2a327117eaa6d2a377272861d5fd047004a74611",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
