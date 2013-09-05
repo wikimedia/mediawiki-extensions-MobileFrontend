@@ -34,7 +34,6 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 		};
 		$removeTags = function( HtmlFormatter $f ) {
 			$f->remove( array( 'table', '.foo', '#bar', 'div.baz' ) );
-			$f->whitelistIds( 'jedi' );
 		};
 		$flattenSomeStuff = function( HtmlFormatter $f ) {
 			$f->flatten( array( 's', 'div' ) );
@@ -63,10 +62,10 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 			array(
 				'<table><tr><td>foo</td></tr></table><div class="foo">foo</div><div class="foo quux">foo</div><span id="bar">bar</span>
 <strong class="foo" id="bar">foobar</strong><div class="notfoo">test</div><div class="baz"/>
-<span class="baz">baz</span> <span class="foo" id="jedi">jedi</span>',
+<span class="baz">baz</span>',
 
 				'<div class="notfoo">test</div>
-<span class="baz">baz</span> <span class="foo" id="jedi">jedi</span>',
+<span class="baz">baz</span>',
 				$removeTags,
 			),
 			// don't flatten tags that start like chosen ones
