@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_751c1abf",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-05T23:05:43Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this use window.scrollTo since we use that pattern elsewhere? Also shouldn\u0027t this be in a separate patchset?",
+      "revId": "151ec5a394589630002b2c395ba4847048c047da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
