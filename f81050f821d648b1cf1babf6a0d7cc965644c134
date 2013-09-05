@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_9527c620",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-05T22:55:31Z",
+      "side": 1,
+      "message": "should this not be isset to be ultra cautious (I know stringSplitter makes sure it is set but this seems to be open to problems)?",
+      "revId": "f81050f821d648b1cf1babf6a0d7cc965644c134",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
