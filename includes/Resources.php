@@ -31,7 +31,6 @@ $remoteExtPath = 'MobileFrontend';
  * A boilerplate containing common properties for all RL modules served to mobile site
  */
 $wgMFMobileResourceBoilerplate = array(
-	'raw' => true,
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
 	'targets' => array( 'mobile', 'desktop' ),
