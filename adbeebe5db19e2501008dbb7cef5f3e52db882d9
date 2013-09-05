@@ -16,6 +16,24 @@
       "revId": "adbeebe5db19e2501008dbb7cef5f3e52db882d9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "893c1da4_ae52b710",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-05T00:21:26Z",
+      "side": 1,
+      "message": "I keep telling you I\u0027m bad at names. Feel free to suggest a new one. Plus if it\u0027s not in the README we didn\u0027t decide anything :)\nAs I recall hyphens were for CSS rules",
+      "parentUuid": "c95d3502_14b9f7e9",
+      "revId": "adbeebe5db19e2501008dbb7cef5f3e52db882d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
