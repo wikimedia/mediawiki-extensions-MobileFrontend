@@ -3153,6 +3153,7 @@ $messages['cy'] = array(
 	'mobile-frontend-listed-image-no-description' => 'Dim disgrifiad',
 	'mobile-frontend-donate-photo-upload-success' => 'Llwyddiant! Gall eich delwedd gael ei defnyddio nawr ar {{SITENAME}}.',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Llwyddodd eich cyfraniad cyntaf!',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Cyfrannwch eich delweddau. Rhowch dipyn o sbonc yn {{SITENAME}}!',
 	'mobile-frontend-first-upload-wizard-new-page-1' => 'Mae delweddau o {{SITENAME}} yn dod o Gomin Wikimedia',
 	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Mae eich lluniau o gymorth wrth addysgu pobl y byd',
 	'mobile-frontend-first-upload-wizard-new-page-2' => 'Osgowch deunyddiau a hawlfraint arnynt, y gwnaethoch eu cael ar y rhyngrwyd, ac hefyd delweddau o bosteri, cloriau llyfrau, ayb.',
@@ -3186,7 +3187,10 @@ $messages['cy'] = array(
 	'mobile-frontend-diffview-anonymous' => 'Defnyddiwr anhysbys',
 	'mobile-frontend-diffview-bytesadded' => 'Ychwanegwyd $1 {{PLURAL:$1|beit|beit|feit|beit}}',
 	'mobile-frontend-diffview-bytesremoved' => 'Lleihawyd o $1 {{PLURAL:$1|beit|beit|feit|beit}}',
+	'mobile-frontend-diffview-explained' => 'Ychwanegwyd (+) a dilewyd (-) y llinellau a ganlyn:',
+	'mobile-frontend-thanked-notice' => "Dywedwyd wrth $1 eich bod yn hoff o'i {{GENDER:$2|adolygiad|hadolygiad|}}.",
 	'mobile-frontend-table' => 'Tabl $1',
+	'mobile-frontend-saving-exit-page' => "Mae eich golygiad yn dal i fod wrthi'n cael ei roi ar gadw. Os y gadewch bydd y golygiad yn cael ei golli. Ydych chi wir am ymadael?",
 	'mobile-frontend-photo-upload' => "Ychwanegwch ddelwedd i'r dudalen hon",
 	'mobile-frontend-photo-article-edit-comment' => "Ychwanegwyd delwedd i'r dudalen",
 	'mobile-frontend-photo-article-donate-comment' => 'Cyfranwyd delwedd drwy Arbennig:Uwchlwythiadau',
@@ -3196,16 +3200,20 @@ $messages['cy'] = array(
 	'mobile-frontend-photo-ownership' => 'Myfi, $1, dynnodd y llun hwn.',
 	'mobile-frontend-photo-ownership-help' => 'Beth yw ystyr hwn?',
 	'mobile-frontend-photo-ownership-confirm' => 'Wedi deall!',
+	'mobile-frontend-photo-ownership-bullet-one' => "Dim ond delweddau sy'n eiddo i chi y gallwn eu derbyn. Peidiwch ag uwchlwytho delweddau y cawsoch rhywle ar y rhyngrwyd.",
 	'mobile-frontend-photo-ownership-bullet-two' => 'Bydd delweddau a hawlfraint arnynt, a delweddau anaddas, yn cael eu dileu.',
 	'mobile-frontend-photo-ownership-bullet-three' => "Mae eich uwchlwythiadau yn cael eu rhyddhau gyda thrwydded sy'n caniatau i unrhyw un eu hailddefnyddio am ddim.",
 	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Nid wyf yn torri hawlfraint',
 	'mobile-frontend-photo-nag-1-bullet-1-text' => "'''Nid''' delwedd a gefais ar y rhyngrwyd yw hon. Fy ngwaith fy hunan yw.",
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Nid delwedd bersonol yw hon',
+	'mobile-frontend-photo-nag-1-bullet-2-text' => 'Ac fe all gynorthwyo i ddarlunio pwnc pwysig.',
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => "Yn bendant ddim yn torri hawlfraint, ac mae'r ddelwedd yn addysgol.",
 	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Rwyn deall pa bethau y caf eu huwchlwytho. Peidier dangos y neges hon eto.',
 	'mobile-frontend-photo-nag-learn-more-heading' => 'Dewis uwchlwytho ai pheidio',
 	'mobile-frontend-photo-nag-learn-more-1' => "'''Ie!''' Lluniau y tynnoch o lefydd, pethau, a digwyddiadau.",
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Ie!''' Lluniau sy'n gallu darlunio a chyfoethogi tudalennau ar {{SITENAME}}.",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Na.''' Lluniau o bosteri ffilmiau, cloriau llyfrau a deunydd arall sydd a hawlfraint arno. Caiff y rhain eu dileu.",
+	'mobile-frontend-lead-image-tutorial-summary' => "Sicrhewch y gall eich delwedd ddarlunio'r dudalen. dylai fod yn ddelwedd y gwnaethoch chi ei chynhyrchu, nag ydyw'n torri hawlfraint.",
 	'mobile-frontend-lead-image-tutorial-confirm' => 'Dechreuer uwchlwytho',
 	'mobile-frontend-image-uploading-wait' => "Wrthi'n uwchlwytho delwedd...",
 	'mobile-frontend-image-uploading-long' => "Wrthi'n uwchlwytho o hyd! Diolch am eich amynedd.",
@@ -3214,6 +3222,7 @@ $messages['cy'] = array(
 	'mobile-frontend-photo-upload-error-file-type' => "Uwchlwythwch ddelweddau'n unig os gwelwch yn dda.",
 	'mobile-frontend-photo-upload-error-filename' => 'Gwall, ymhelaethwch ar y disgrifiad yn y crynodeb.',
 	'mobile-frontend-photo-upload-success-article' => "Llwyddiant! Mae eich delwedd i'w weld ar y dudalen hon.",
+	'mobile-frontend-photo-license' => 'Wrth glicio ar "Cyflwyner", rydych yn cytuno â\'n [//wikimediafoundation.org/wiki/Terms_of_use Termau Defnydd] ac yn cytuno i ryddhau eich delwedd yn ôl termau\'r drwydded [//creativecommons.org/licenses/by-sa/3.0/ Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Cyflwyner',
 	'mobile-frontend-photo-cancel' => 'Diddymer',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>0</span> uwchlwythiadau|<span>1</span> uwchlwythiad|<span>$1</span> uwchlwythiad}}',
@@ -3221,6 +3230,7 @@ $messages['cy'] = array(
 	'mobile-frontend-photo-upload-cta' => 'Rhaid mewngofnodi neu gofrestru er mwyn ychwanegu delwedd.',
 	'mobile-frontend-photo-upload-login' => 'Rhaid mewngofnodi er mwyn ychwanegu delwedd.',
 	'mobile-frontend-editor-disabled' => "Ni chewch olygu'r dudalen hon.",
+	'mobile-frontend-editor-unavailable' => "Ar hyn o bryd, nid oes modd golygu â'ch porwr presennol o'r teclyn symudol. Ceisiwch ddefnyddio porwr gwahanol.",
 	'mobile-frontend-editor-cta' => "Mae'n rhaid eich bod wedi mewngofnodi er mwyn golygu tudalennau ar declyn symudol.",
 	'mobile-frontend-editor-edit' => 'Golygu',
 	'mobile-frontend-editor-continue' => 'Ymlaen',
@@ -5281,7 +5291,7 @@ plakatum, forsíðum á bókum osfr.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Rita inn',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Skráset teg',
 	'mobile-frontend-watch-login' => 'Tú mást vera innritað/ur fyri at halda eyga við síðum.',
-	'mobile-frontend-watchlist-a-z' => 'Allar', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Listi',
 	'mobile-frontend-watchlist-feed' => 'Broytt',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Trýst á stjørnuna ovast á síðuni',
 	'mobile-frontend-watchlist-back-home' => 'Heim aftur',
@@ -9687,6 +9697,7 @@ Déi gi geläscht.",
 	'mobile-frontend-editor-error-conflict' => 'Feeler, en anere Benotzer huet dës Säit geännert.',
 	'mobile-frontend-editor-error-loading' => 'Feeler, den Abschnitt kann net geluede ginn.',
 	'mobile-frontend-editor-preview-header' => 'Kucken ouni ofzespäicheren',
+	'mobile-frontend-editor-tutorial-summary' => "Erféiert Iech net wéinst der Markéierung. Probéiert fir d'Säit $1 ze verbesseren.",
 	'mobile-frontend-editor-tutorial-confirm' => 'Ufänke mat änneren',
 	'tag-mobile_edit' => 'Mobil Ännerung',
 	'tag-mobile_edit-description' => 'Ännerung déi vun engem mobile Site gemaach gouf',
@@ -10506,7 +10517,7 @@ $messages['mr'] = array(
 	'mobile-frontend-news-items' => 'बातम्यांमध्ये',
 	'mobile-frontend-language' => 'भाषा', # Fuzzy
 	'mobile-frontend-language-article-heading' => 'इतर भाषांत वाचा',
-	'mobile-frontend-language-header' => 'हे पान $1 {{PLURAL:$1|language|भाषेत}} उपलब्ध आहे',
+	'mobile-frontend-language-header' => 'हे पान $1 {{PLURAL:$1|भाषेत}} उपलब्ध आहे',
 	'mobile-frontend-language-site-choose' => 'भाषा शोधा',
 	'mobile-frontend-username' => 'सदस्य नाव:',
 	'mobile-frontend-password' => 'परवलीचा शब्द:',
@@ -10525,9 +10536,9 @@ $messages['mr'] = array(
 	'mobile-frontend-account-create-submit' => 'नोंदणी करा',
 	'mobile-frontend-password-confirm-placeholder' => 'परवलीच्या शब्दाची निश्चिती करा',
 	'mobile-frontend-account-create-email-placeholder' => 'विपत्रपत्ता (ई-मेल) (ऐच्छिक)',
-	'mobile-frontend-overlay-escape' => 'मागे जा',
-	'mobile-frontend-placeholder' => 'आपला हवा असलेला शोध येथे टंकलिखित करा ...',
-	'mobile-frontend-dismiss-notification' => 'ही सूचना पुसा',
+	'mobile-frontend-overlay-escape' => 'परत जा',
+	'mobile-frontend-placeholder' => '{{SITENAME}} शोधा',
+	'mobile-frontend-dismiss-notification' => 'या सूचनेस काढा',
 	'mobile-frontend-clear-search' => 'हटवा',
 	'mobile-frontend-privacy-link-text' => 'एकान्त',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
@@ -12493,6 +12504,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (português)
+ * @author Cainamarques
  * @author Giro720
  * @author Hamilton Abreu
  * @author João Sousa
@@ -12503,6 +12515,7 @@ $messages['ps'] = array(
  * @author SandroHc
  */
 $messages['pt'] = array(
+	'nearby' => 'Páginas próximas a você',
 	'mobile-frontend-desc' => 'Interface para Telemóveis',
 	'mobile-frontend-search-submit' => 'Prosseguir',
 	'mobile-frontend-home-button' => 'Início',
@@ -12559,6 +12572,7 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
  * @author Giro720
  * @author Luckas
  * @author MetalBrasil
@@ -12567,6 +12581,7 @@ $messages['pt'] = array(
  * @author 555
  */
 $messages['pt-br'] = array(
+	'nearby' => 'Páginas próximas a você',
 	'mobile-frontend-desc' => 'Interface para dispositivos móveis',
 	'mobile-frontend-search-submit' => 'Ir',
 	'mobile-frontend-home-button' => 'Início',
@@ -12582,7 +12597,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-disable-images' => 'Desativar imagens no site móvel',
 	'mobile-frontend-enable-images' => 'Ativar imagens no site móvel',
 	'mobile-frontend-missing-image' => 'Imagem',
-	'mobile-frontend-featured-article' => 'Artigo em destaque', # Fuzzy
+	'mobile-frontend-featured-article' => 'Conteúdo em destaque',
 	'mobile-frontend-news-items' => 'Eventos recentes',
 	'mobile-frontend-language' => 'Idioma:',
 	'mobile-frontend-username' => 'Nome de usuário:',
