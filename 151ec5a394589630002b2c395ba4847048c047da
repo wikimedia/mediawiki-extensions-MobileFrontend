@@ -16,6 +16,24 @@
       "revId": "151ec5a394589630002b2c395ba4847048c047da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_60653ae2",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-06T00:46:45Z",
+      "side": 1,
+      "message": "It should not be a separate patchset because it\u0027s needed for this story to work. Without this, the tutorial overlay is shown, but the page is not scrolled to appropriate place and the user doesn\u0027t see it.\n\nI used jQuery as we use jQuery anyway, but if window.scrollTo() is more common in our codebase, I\u0027ll change that.",
+      "parentUuid": "4946a543_751c1abf",
+      "revId": "151ec5a394589630002b2c395ba4847048c047da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
