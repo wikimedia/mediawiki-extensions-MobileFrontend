@@ -45,6 +45,18 @@ img.tex,
   width: auto !important;
   clear: both !important;
 }
+/* Fix for bug 53437 - nav boxes can disrupt reading experience on smaller screens */
+#content .navbox,
+#content .vertical-navbox {
+  display: none;
+}
+/* Revert to showing nav boxes on tablet/desktop */
+@media all and (min-width: 768px) {
+  #content .navbox,
+  #content .vertical-navbox {
+    display: inherit;
+  }
+}
 /* Galleries */
 /* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
 ul.gallery {
