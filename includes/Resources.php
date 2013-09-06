@@ -358,7 +358,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
-			'javascripts/modules/mf-inline-style-scrubber.js',
 			'javascripts/externals/epoch.js',
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-tables.js',
