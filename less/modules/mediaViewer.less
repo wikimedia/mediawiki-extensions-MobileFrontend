@@ -1,0 +1,76 @@
+@import "../mixins.less";
+
+.mw-mf-overlay.media-viewer {
+	// http://stackoverflow.com/a/10910802/36523i8
+	display: table;
+	background: #000;
+
+	.container {
+		width: 100%;
+		height: 100%;
+		display: table-row;
+		text-align: center;
+
+		div {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.loading img {
+		display: none;
+	}
+
+	img {
+		// get rid of a small bottom margin and vertical scrollbar
+		vertical-align: bottom;
+		// for images with transparent background
+		background: #fff;
+
+		&.ratio-width {
+			width: 100%;
+		}
+
+		&.ratio-height {
+			height: 100%;
+		}
+	}
+
+	// FIXME: change styling after overlay overhaul
+	.cancel {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		text-indent: -9999px;
+		width: 24px;
+		height: 24px;
+		background: url(../common/images/close-button-beta.png) no-repeat;
+	}
+
+	.details {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 8px 10px;
+		margin: 0;
+		opacity: 0;
+		color: #ccc;
+		background: rgba(0, 0, 0, .5);
+
+		&.visible {
+			opacity: 1;
+		}
+
+		a {
+			float: right;
+		}
+	}
+}
+
+.animations .media-viewer {
+	.details {
+		.transition( opacity .5s );
+	}
+}
+

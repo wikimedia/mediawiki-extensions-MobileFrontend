@@ -39,6 +39,7 @@ var View = M.require( 'view' ),
 			// FIXME change when micro.tap.js in stable
 			this.$( '.cancel, .confirm' ).on( M.tapEvent( 'click' ), function( ev ) {
 				ev.preventDefault();
+				ev.stopPropagation();
 				if ( self.closeOnBack ) {
 					window.history.back();
 				} else {
