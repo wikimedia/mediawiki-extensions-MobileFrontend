@@ -101,9 +101,6 @@
   -webkit-background-size: 32px auto;
   background-size: 32px auto;
 }
-.photo-nag ul {
-  list-style: none;
-}
 .photo-nag li {
   clear: both;
   min-height: 50px;

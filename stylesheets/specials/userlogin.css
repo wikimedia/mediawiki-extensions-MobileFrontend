@@ -39,9 +39,11 @@ form.user-login {
 }
 form.user-login input {
   width: 100%;
+  display: block;
 }
 form.user-login div.wpInputs,
 form.user-login div.wpCaptcha {
+  padding: 1px;
   border: solid 1px #E1E1E1;
   border-radius: 5px;
 }

@@ -6,10 +6,6 @@
  * See README.mediawiki for details on installing.
  */
 /* reuses https://github.com/wikimedia/agora */
-button {
-  border: none;
-  background-color: transparent;
-}
 .button,
 button,
 input[type=submit] {
