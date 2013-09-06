@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_e01e8a5b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:21:52Z",
+      "side": 1,
+      "message": "Do this in SkinMobileBeta instead. Hooks should be a last resort.",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_26234a5b",
+        "filename": "includes/specials/SpecialMobileNotifications.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:21:52Z",
+      "side": 1,
+      "message": "addModuleStyles will add to the head of the document and ignore any dependencies. addModules will make the module load in JS if listed as a dependency. This results in adding that style twice so don\u0027t do it :)",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_002476b0",
+        "filename": "javascripts/modules/notifications-overlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:21:52Z",
+      "side": 1,
+      "message": "we\u0027ve been using M.getArticleUrl - we should probably continue to do this - although we may want to change the implemtnation of that function to use mw.util.wikiGetlink",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_4620564c",
+        "filename": "javascripts/modules/notifications-overlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:21:52Z",
+      "side": 1,
+      "message": "put this in CSS file not in JS.",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_e6d94255",
+        "filename": "javascripts/modules/notifications-shared.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:21:52Z",
+      "side": 1,
+      "message": "This sounds like a bad idea. Why not enable the echo JavaScript for mobile by editing the Echo extension?",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_06df2e38",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:21:52Z",
+      "side": 1,
+      "message": "Again this should live in the Echo extension...",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
