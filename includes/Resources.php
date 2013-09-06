@@ -489,7 +489,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/search/search.js',
 			'javascripts/modules/mf-watchstar.js',
-			'javascripts/modules/mf-references.js'
+			'javascripts/modules/mf-references.js',
 		),
 		'messages' => array(
 			// for mf-toggle.js
