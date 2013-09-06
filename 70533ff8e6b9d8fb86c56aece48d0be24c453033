@@ -16,6 +16,24 @@
       "revId": "70533ff8e6b9d8fb86c56aece48d0be24c453033",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_a633bac2",
+        "filename": "javascripts/views/page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:16:19Z",
+      "side": 1,
+      "message": "Well we currently assume only one Page view can live at a time. You\u0027ll note this function also emits a page loaded event and loads languages. Currently it is only used for rendering a page loaded via ajax or after an edit a page refresh which it probably shouldn\u0027t.. will a FIXME do?",
+      "parentUuid": "c95d3502_8d4351b2",
+      "revId": "70533ff8e6b9d8fb86c56aece48d0be24c453033",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
