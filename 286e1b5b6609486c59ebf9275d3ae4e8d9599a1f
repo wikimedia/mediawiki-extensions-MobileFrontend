@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_46c6964d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 505,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-06T19:14:47Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "4946a543_e01e8a5b",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_26234a5b",
         "filename": "includes/specials/SpecialMobileNotifications.php",
         "patchSetId": 15
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-06T18:21:52Z",
       "side": 1,
       "message": "addModuleStyles will add to the head of the document and ignore any dependencies. addModules will make the module load in JS if listed as a dependency. This results in adding that style twice so don\u0027t do it :)",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_26c98a5c",
+        "filename": "includes/specials/SpecialMobileNotifications.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-06T19:14:47Z",
+      "side": 1,
+      "message": "The style isn\u0027t listed as a dependency of either of the modules below.",
+      "parentUuid": "4946a543_26234a5b",
       "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -71,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_a6065a87",
+        "filename": "javascripts/modules/notifications-overlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-06T19:14:47Z",
+      "side": 1,
+      "message": "I would agree that it\u0027s probably better to use the core function and deprecate our custom version. It looks like the two functions are basically the same except that our version supports adding query string params. Should be easy enough to add to mw.util.wikiGetlink, but in a separate patch.",
+      "parentUuid": "4946a543_869dde64",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_4620564c",
         "filename": "javascripts/modules/notifications-overlay.js",
         "patchSetId": 15
@@ -105,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_c62c4605",
+        "filename": "javascripts/modules/notifications-shared.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-06T19:14:47Z",
+      "side": 1,
+      "message": "The Echo Javascript has a bunch of extra stuff that we don\u0027t need. I was thinking it would be better to keep the mobile version lean. It does mean, however, that there are two copies to maintain, which is bad. I\u0027m open to either strategy if you feel like the it\u0027s worth changing.",
+      "parentUuid": "4946a543_e6d94255",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_06df2e38",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 15
@@ -116,6 +188,24 @@
       "writtenOn": "2013-09-06T18:21:52Z",
       "side": 1,
       "message": "Again this should live in the Echo extension...",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_263c2a2d",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-06T19:14:47Z",
+      "side": 1,
+      "message": "See comment in javascripts/modules/notifications-shared.js",
+      "parentUuid": "4946a543_06df2e38",
       "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
