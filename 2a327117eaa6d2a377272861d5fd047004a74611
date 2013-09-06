@@ -16,6 +16,24 @@
       "revId": "2a327117eaa6d2a377272861d5fd047004a74611",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_26c7ca9a",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-06T18:10:37Z",
+      "side": 1,
+      "message": "Although badly named according to Skin.php comment the purpose of this function is to \"Add skin specific stylesheets\" also https://www.mediawiki.org/wiki/Manual:Skinning points at its use.",
+      "parentUuid": "4946a543_75c41a62",
+      "revId": "2a327117eaa6d2a377272861d5fd047004a74611",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
