@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_869dde64",
+        "filename": "javascripts/modules/notifications-overlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-06T18:36:56Z",
+      "side": 1,
+      "message": "I think I\u0027d do the opposite: replace PageApi#getPageUrl with mw.util.wikiGetlink if they do the same thing. But this should be done in a separate patch.",
+      "parentUuid": "4946a543_002476b0",
+      "revId": "286e1b5b6609486c59ebf9275d3ae4e8d9599a1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_4620564c",
         "filename": "javascripts/modules/notifications-overlay.js",
         "patchSetId": 15
