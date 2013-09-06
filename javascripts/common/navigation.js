@@ -73,16 +73,6 @@ var m = ( function( $ ) {
 				on( 'touchmove', function() { moved = true; } );
 		}
 
-
-
-		if( window.location.hash === '#mw-mf-page-left' ) {
-			openNavigation();
-			$( 'body' ).addClass( 'noTransitions' );
-			window.setTimeout( function() {
-				$( 'body' ).removeClass( 'noTransitions' );
-			}, 1000 );
-		}
-
 		$( search ).bind( 'focus', function() {
 			if ( !inBeta || $( window ).width() < 700 ) {
 				closeNavigation();
