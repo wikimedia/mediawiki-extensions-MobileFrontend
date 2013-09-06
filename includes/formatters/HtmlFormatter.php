@@ -13,7 +13,6 @@ class HtmlFormatter {
 	private $itemsToRemove = array();
 	private $elementsToFlatten = array();
 	private $removeImages = false;
-	private $idWhitelist = array();
 	private $flattenRedLinks = false;
 	private $imgAlt = true;
 
@@ -104,33 +103,10 @@ class HtmlFormatter {
 	}
 
 	/**
-	 * @param Array|string $ids: Id(s) of content to keep
-	 */
-	public function whitelistIds( $ids ) {
-		$this->idWhitelist = array_merge( $this->idWhitelist, array_flip( (array)$ids ) );
-	}
-
-	/**
 	 * @param bool $value
 	 */
 	public function useImgAlt( $value ) {
 		$this->imgAlt = $value;
-	}
-
-	/**
-	 * Checks whether specified element should not be removed due to whitelist
-	 * @param DOMElement $element: Element to check
-	 * @return bool
-	 */
-	private function elementNotWhitelisted( DOMElement $element ) {
-		$idAttribute = $element->getAttributeNode( 'id' );
-		if ( $idAttribute ) {
-			$id = $idAttribute->value;
-			if ( isset( $this->idWhitelist[$id] ) ) {
-				return false;
-			}
-		}
-		return true;
 	}
 
 	/**
@@ -159,7 +135,7 @@ class HtmlFormatter {
 		foreach ( $removals['TAG'] as $tagToRemove ) {
 			$tagToRemoveNodes = $doc->getElementsByTagName( $tagToRemove );
 			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
-				if ( $tagToRemoveNode && $this->elementNotWhitelisted( $tagToRemoveNode ) ) {
+				if ( $tagToRemoveNode ) {
 					if ( $this->imgAlt && $tagToRemoveNode->nodeName == 'img' ) {
 						$domElemsToReplace[] = $tagToRemoveNode;
 					} else {
@@ -203,7 +179,7 @@ class HtmlFormatter {
 			/** @var $element DOMElement */
 			foreach ( $elements as $element ) {
 				$classes = $element->getAttribute( 'class' );
-				if ( preg_match( "/\b$classToRemove\b/", $classes ) && $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
+				if ( preg_match( "/\b$classToRemove\b/", $classes ) && $element->parentNode ) {
 					$domElemsToRemove[] = $element;
 				}
 			}
@@ -220,7 +196,7 @@ class HtmlFormatter {
 
 			/** @var $element DOMElement */
 			foreach ( $elements as $element ) {
-				if ( $element->parentNode && $this->elementNotWhitelisted( $element ) ) {
+				if ( $element->parentNode ) {
 					$element->parentNode->removeChild( $element );
 				}
 			}
