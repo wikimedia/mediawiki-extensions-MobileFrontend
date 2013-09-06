@@ -307,7 +307,7 @@ class SkinMobile extends SkinMinerva {
 </ul>
 HTML;
 
-		$licenseText = wfMessage( 'mobile-frontend-footer-license' )->parse();
+		$licenseText = wfMessage( 'mobile-frontend-footer-license' )->inContentLanguage()->parse();
 
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-license', $licenseText );
