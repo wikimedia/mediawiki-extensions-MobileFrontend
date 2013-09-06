@@ -16,6 +16,24 @@
       "revId": "f99fb5b43ff8489a1924e1d2a483ecc4ead09f68",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_c16190ad",
+        "filename": "less/common/hacks.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-06T21:36:07Z",
+      "side": 1,
+      "message": "Hmm, possibly. I could imagine an interface element called \"navbox\", especially since we don\u0027t prefix our classes :P\n\nIf you want to get rid of it though, I\u0027m fine with that.",
+      "parentUuid": "4946a543_61529cdf",
+      "revId": "f99fb5b43ff8489a1924e1d2a483ecc4ead09f68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
