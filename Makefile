@@ -2,10 +2,6 @@ MW_INSTALL_PATH ?= ../..
 
 .PHONY: less
 
-remotes:
-	wget https://raw.github.com/browserstate/history.js/master/scripts/uncompressed/history.adapter.jquery.js -O javascripts/externals/history.adapter.jquery.js --no-check-certificate
-	wget https://raw.github.com/browserstate/history.js/master/scripts/uncompressed/history.js -O javascripts/externals/history.js --no-check-certificate
-
 nodecheck:
 	@scripts/nodecheck.sh
 
