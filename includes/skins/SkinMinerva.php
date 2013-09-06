@@ -16,9 +16,6 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
-		// add styling
-		$out->addModuleStyles( 'mobile.styles' );
-		$out->addModuleStyles( 'mobile.pagelist.styles' );
 
 		$out->addJsConfigVars( $this->getSkinConfigVariables() );
 	}
@@ -257,6 +254,7 @@ class SkinMinerva extends SkinTemplate {
 	}
 
 	/**
+	 * Add skin-specific stylesheets
 	 * @param $out OutputPage
 	 */
 	public function setupSkinUserCss( OutputPage $out ) {
@@ -265,6 +263,7 @@ class SkinMinerva extends SkinTemplate {
 		$styles = array(
 			'mobile.styles',
 			'mobile.styles.page',
+			'mobile.pagelist.styles',
 		);
 		$out->addModuleStyles( $styles );
 	}
