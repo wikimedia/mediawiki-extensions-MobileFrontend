@@ -1,7 +1,5 @@
 ( function( M, $ ) {
-	var
-		toggle = M.require( 'toggle' ),
-		currentPage;
+	var currentPage;
 
 	M.on( 'section-toggle', function( section_id ) {
 		var
@@ -17,21 +15,6 @@
 		}
 	} );
 
-	function checkHash() {
-		var hash = window.location.hash, el, section;
-		if ( hash ) {
-			section = currentPage.getSectionFromAnchor( hash.slice( 1 ) );
-			if ( section ) {
-				toggle.wm_toggle_section( section.index );
-			}
-			// force scroll if not scrolled (e.g. after subsection is loaded)
-			el = $( hash );
-			if ( el.length ) {
-				el[ 0 ].scrollIntoView( true );
-			}
-		}
-	}
-
 	function refresh( page ) {
 		var references = page.getReferenceSection();
 		currentPage = page;
@@ -39,7 +22,6 @@
 			$( '#content_' + references.index ).html( references.content ).data( 'loaded', true );
 			M.emit( 'references-loaded' );
 		}
-		checkHash();
 	}
 
 	M.on( 'page-loaded', refresh );
