@@ -211,6 +211,7 @@ class SkinMinerva extends SkinTemplate {
 		$out = $this->getOutput();
 
 		$modules['mobile'] = array(
+			'mobile.head',
 			'mobile.startup',
 			'mobile.site',
 			// FIXME: separate mobile.stable into more meaningful groupings
