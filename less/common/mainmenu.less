@@ -112,6 +112,8 @@ body.navigation-enabled {
 	// and #mw-mf-viewport has overflow: hidden and clips blue hover borders)
 	border-left: solid @menuBorder @menuBorderColor;
 	background: @mainMenuBackgroundColor;
+	// On small pages ensure that the navigation fills the entire screen vertically
+	height: 100%;
 
 	#mw-mf-viewport {
 		margin-left: -@menuBorder;

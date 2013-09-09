@@ -51,8 +51,9 @@
 #content .alert {
   margin: 0;
 }
-html,
+html {
+  height: 100%;
+}
 body {
   background: #fff;
-  height: 100%;
 }
