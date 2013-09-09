@@ -49,5 +49,8 @@
 	} );
 
 	M.define( 'eventemitter', EventEmitter );
+	// FIXME: if we want more of M's functionality in loaded in <head>,
+	// move this to a separate file
+	$.extend( M, new EventEmitter() );
 
 }( mw.mobileFrontend, jQuery ) );

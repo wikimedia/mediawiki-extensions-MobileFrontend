@@ -193,6 +193,9 @@ class MinervaTemplate extends BaseTemplate {
 						echo $data['userButton'];
 					?>
 				</div>
+				<script>
+					mw.mobileFrontend.emit( 'header-loaded' );
+				</script>
 				<?php
 					$this->renderContentWrapper( $data );
 					$this->renderFooter( $data );
