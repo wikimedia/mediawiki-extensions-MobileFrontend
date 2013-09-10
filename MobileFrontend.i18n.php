@@ -5016,6 +5016,7 @@ $messages['fa'] = array(
  * @author Nedergard
  * @author Nike
  * @author Olli
+ * @author Samoasambia
  * @author Silvonen
  * @author Stryn
  * @author VezonThunder
@@ -5052,7 +5053,7 @@ $messages['fi'] = array(
 	'mobile-frontend-missing-image' => 'Kuva',
 	'mobile-frontend-off' => 'pois',
 	'mobile-frontend-on' => 'päällä',
-	'mobile-frontend-featured-article' => 'Suositeltu artikkeli',
+	'mobile-frontend-featured-article' => 'Päivän suositeltu sisätö',
 	'mobile-frontend-news-items' => 'Uutisissa',
 	'mobile-frontend-language' => 'Kieli:',
 	'mobile-frontend-language-article-heading' => 'Lue toisella kielellä',
@@ -5093,7 +5094,7 @@ $messages['fi'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Tarkkailulista',
 	'mobile-frontend-main-menu-settings' => 'Asetukset',
 	'mobile-frontend-main-menu-disclaimer' => 'Vastuuvapaus',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobiilisivuston asetukset',
+	'mobile-frontend-main-menu-settings-heading' => 'Asetukset',
 	'mobile-frontend-settings-site-header' => 'Sivuston {{SITENAME}} kielet',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} on saatavilla {{PLURAL:$1|yhdellä|$1}} kielellä. Kaikki saatavilla olevat kieliversiot on listattu alla.',
 	'mobile-frontend-main-menu-account-create' => 'Luo tunnus',
@@ -5121,7 +5122,7 @@ $messages['fi'] = array(
 	'mobile-frontend-watchlist-more' => 'lisää',
 	'mobile-frontend-watchlist-cta-button-login' => 'Kirjaudu',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Rekisteröidy',
-	'mobile-frontend-watchlist-a-z' => 'Kaikki',
+	'mobile-frontend-watchlist-a-z' => 'Lista',
 	'mobile-frontend-watchlist-feed' => 'Muokatut',
 	'mobile-frontend-watchlist-back-home' => 'Siirry etusivulle',
 	'mobile-frontend-changeslist-ip' => 'Rekisteröitymätön käyttäjä',
@@ -5138,8 +5139,8 @@ $messages['fi'] = array(
 	'mobile-frontend-table' => 'Taulukko $1',
 	'mobile-frontend-saving-exit-page' => 'Muutoksiasi tallennetaan yhä. Jos poistut nyt, muutoksesi eivät tallennu. Haluatko varmasti poistua?',
 	'mobile-frontend-photo-upload' => 'Lisää kuva tälle sivulle',
-	'mobile-frontend-photo-article-edit-comment' => 'Lisäsi kuvan sivulla käytettäväksi', # Fuzzy
-	'mobile-frontend-photo-upload-comment' => 'Lisäsi kuvan sivulle', # Fuzzy
+	'mobile-frontend-photo-article-edit-comment' => 'Lisäsi kuvan sivulla käytettäväksi',
+	'mobile-frontend-photo-upload-comment' => 'Lisäsi kuvan sivulle',
 	'mobile-frontend-photo-caption-placeholder' => 'Lisää kuvaus (vaaditaan)',
 	'mobile-frontend-image-loading' => 'Ladataan kuvaa',
 	'mobile-frontend-photo-ownership' => 'Minä, $1, tein tämän kuvan.',
@@ -5361,6 +5362,7 @@ plakatum, forsíðum á bókum osfr.',
  * @author Hashar
  * @author Hello71
  * @author Hercule
+ * @author Jean-Frédéric
  * @author Louperivois
  * @author Ltrlg
  * @author Lucky
@@ -5613,6 +5615,7 @@ $messages['fr'] = array(
 	'mobile-frontend-talk-reply-success' => 'Votre réponse a été correctement enregistrée sur la page de discussion.',
 	'mobile-frontend-talk-reply-info' => 'Veuillez noter que votre réponse sera automatiquement signée avec votre nom d’utilisateur.',
 	'mobile-frontend-talk-reply' => 'Répondre',
+	'mobile-frontend-media-details' => 'Détails',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un utilisateur est ou non en cours de modification via l’interface mobile',
 );
 
@@ -13859,11 +13862,19 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-username-placeholder' => 'Корисничко име',
 	'mobile-frontend-password-placeholder' => 'Лозинка',
 	'mobile-frontend-login' => 'Пријави ме',
+	'mobile-frontend-history' => 'Види историју измена ове странице.',
+	'mobile-frontend-last-modified-seconds' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 секунда|$1 секунди}}',
+	'mobile-frontend-last-modified-minutes' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 минут|$1 минута}}',
+	'mobile-frontend-last-modified-hours' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 сат|$1 сата}}',
+	'mobile-frontend-last-modified-days' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 дан|$1 дана}}',
+	'mobile-frontend-last-modified-months' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 месец|$1 месеци}}',
+	'mobile-frontend-last-modified-years' => 'Ова страница је последњи пут измењена пре {{PLURAL:$1|$1 године|$1 година}}',
 	'mobile-frontend-learn-more' => 'Сазнајте више',
 	'mobile-frontend-account-create-submit' => 'Отвори налог',
 	'mobile-frontend-password-confirm-placeholder' => 'Потврдите лозинку',
 	'mobile-frontend-account-create-email-placeholder' => 'Адреса е-поште (опцијоно)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Унесите текст који видите изнад',
+	'mobile-frontend-overlay-escape' => 'Назад',
 	'mobile-frontend-placeholder' => 'Претражите {{SITENAME}}',
 	'mobile-frontend-search-help' => 'Изнад унесите оно што тражите, а овде ће се приказати чланци који одговарају захтеву.', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'склони ово обавештење',
@@ -13887,6 +13898,8 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-page-menu-history' => 'Историја',
 	'mobile-frontend-donate-image-login' => 'Морате бити пријављени да би сте видели ову стрницу.',
 	'mobile-frontend-donate-image-title' => 'Отпремања',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Да!',
+	'mobile-frontend-watchlist-cta-button-login' => 'Пријава',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Отвори налог',
 	'mobile-frontend-watchlist-a-z' => 'Списак',
 	'mobile-frontend-watchlist-back-home' => 'Назад на почетну страну',
@@ -15889,6 +15902,7 @@ $messages['yue'] = array(
  * @author Simon Shek
  * @author Xiaomingyan
  * @author Yfdyh000
+ * @author Zhuyifei1999
  * @author 乌拉跨氪
  */
 $messages['zh-hans'] = array(
@@ -16131,6 +16145,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-talk-reply-success' => '你的回复已成功保存至讨论页面。',
 	'mobile-frontend-talk-reply-info' => '请注意，你的回复将自动签署你的用户名。',
 	'mobile-frontend-talk-reply' => '回复',
+	'mobile-frontend-media-details' => '详细信息',
 	'abusefilter-edit-builder-vars-user-mobile' => '无论用户是否使用移动版界面编辑',
 );
 
