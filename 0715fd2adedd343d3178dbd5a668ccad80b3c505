@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_18293b3a",
+        "filename": "less/common/overlays.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-10T23:08:33Z",
+      "side": 1,
+      "message": "can we not reuse the definition that navigation-enabled used or come up with a more generic solution?",
+      "revId": "0715fd2adedd343d3178dbd5a668ccad80b3c505",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
