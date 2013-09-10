@@ -5,13 +5,8 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-.overlay-enabled #mw-mf-page-center,
-.overlay-enabled #content_wrapper {
-  height: 100%;
-  overflow: hidden;
-}
-.overlay-enabled #footer {
-  display: none !important;
+.overlay-enabled #mw-mf-page-center {
+  display: none;
 }
 .overlay-enabled .mw-mf-overlay {
   height: 100%;
