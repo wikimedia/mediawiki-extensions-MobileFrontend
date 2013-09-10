@@ -14,25 +14,22 @@
 		} );
 
 	function addEditButton( section, container ) {
-		return $( '<a class="edit-page" href="#editor-' + section + '">' ).
+		return $( '<a class="edit-page" href="#editor/' + section + '">' ).
 			text( mw.msg( 'mobile-frontend-editor-edit' ) ).
-			prependTo( container ).
-			// FIXME change when micro.tap.js in stable
-			on( M.tapEvent( 'mouseup' ), function( ev ) {
-				// prevent folding section when clicking Edit
-				ev.stopPropagation();
-			} );
+			prependTo( container );
 	}
 
-	function addCtaButton( hash, container, returnToQuery ) {
-		addEditButton( '', container ).
+	function makeCta( $el, hash, returnToQuery ) {
+		$el.
 			// FIXME change when micro.tap.js in stable
 			on( M.tapEvent( 'mouseup' ), function( ev ) {
 				ev.preventDefault();
+				// prevent folding section when clicking Edit
+				ev.stopPropagation();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
 				drawer.
 					render( { queryParams: {
-						returnto: mw.config.get( 'wgPageName' ) + '#' + hash,
+						returnto: mw.config.get( 'wgPageName' ) + hash,
 						returntoquery: returnToQuery
 					} } ).
 					toggle();
@@ -41,7 +38,7 @@
 			on( 'click', false );
 	}
 
-	// FIXME [ParserOutput]: This is nasty
+	// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
 	function extractSectionIdFromEditLink( $a ) {
 		var editHref = $a.attr( 'href' ),
 			qs = editHref.split( '?' )[ 1 ],
@@ -52,7 +49,7 @@
 	function init( page ) {
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 
-		M.router.route( /^editor-(\d+)$/, function( sectionId ) {
+		M.router.route( /^editor\/(\d+)$/, function( sectionId ) {
 			var title = page ? page.title : mw.config.get( 'wgTitle' ),
 				// Note in current implementation Page title is prefixed with namespace
 				ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
@@ -76,10 +73,22 @@
 			addEditButton( 1, '#ca-edit' );
 		}
 
+		// FIXME change when micro.tap.js in stable
+		$( '.edit-page' ).on( M.tapEvent( 'mouseup' ), function( ev ) {
+			// prevent folding section when clicking Edit
+			ev.stopPropagation();
+		} );
+
+		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
 		$( 'h2 .mw-editsection' ).each( function() {
 			var section = extractSectionIdFromEditLink( $( this ).find( 'a' ) );
 			if ( section ) {
-				addEditButton( section, $( this ).parent() );
+				addEditButton( section, $( this ).parent() ).
+					// FIXME change when micro.tap.js in stable
+					on( M.tapEvent( 'mouseup' ), function( ev ) {
+						// prevent folding section when clicking Edit
+						ev.stopPropagation();
+					} );
 			}
 			$( this ).remove();
 		} );
@@ -91,17 +100,32 @@
 			drawer.render( { queryParams :{ returntoquery: 'article_action=edit' } } ).show();
 		} );
 
-		$( 'h2 .mw-editsection' ).each( function() {
-			var $heading = $( this ).parent(), section;
+		$( '.edit-page' ).each( function() {
+			var $a = $( this ), $heading = $( this ).closest( 'h2' );
 
 			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
-				addCtaButton( $heading.attr( 'id' ), $heading );
+				makeCta( $a, '#' + $heading.attr( 'id' ) );
+			} else {
+				if ( !M.isTestA ) {
+					makeCta( $a, $a.attr( 'href' ) );
+				} else {
+					makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
+				}
+			}
+		} );
+
+		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
+		$( 'h2 .mw-editsection' ).each( function() {
+			var $heading = $( this ).closest( 'h2' ), $a = addEditButton( '', $heading ), section;
+
+			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+				makeCta( $a, '#' + $heading.attr( 'id' ) );
 			} else {
 				if ( !M.isTestA ) {
 					section = extractSectionIdFromEditLink( $( this ).find( 'a' ) );
-					addCtaButton( 'editor-' + section, $heading );
+					makeCta( $a, '#editor/' + section );
 				} else {
-					addCtaButton( $heading.attr( 'id' ), $heading, 'article_action=edit' );
+					makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
 				}
 			}
 		} );
@@ -117,8 +141,9 @@
 		}
 	} else {
 		// FIXME change when micro.tap.js in stable
-		$( '#ca-edit' ).on( M.tapEvent( 'click' ), function() {
+		$( '#ca-edit, .edit-page' ).on( M.tapEvent( 'click' ), function( ev ) {
 			popup.show( mw.msg( isEditingSupported ? 'mobile-frontend-editor-disabled' : 'mobile-frontend-editor-unavailable' ), 'toast' );
+			ev.preventDefault();
 		} );
 	}
 

@@ -23,6 +23,19 @@ class SkinMobile extends SkinMinerva {
 		}
 	}
 
+	/**
+	 * Overrides Skin::doEditSectionLink
+	 */
+	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
+		$lang = wfGetLangObj( $lang );
+		$message = wfMessage( 'mobile-frontend-editor-edit' )->inLanguage( $lang )->text();
+		return Html::element( 'a', array(
+			'href' => '#editor/' . $section,
+			'data-section' => $section,
+			'class' => 'edit-page'
+		), $message );
+	}
+
 	public function outputPage( OutputPage $out = null ) {
 		global $wgMFNoindexPages;
 		wfProfileIn( __METHOD__ );

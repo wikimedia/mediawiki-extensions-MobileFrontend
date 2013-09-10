@@ -220,7 +220,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		// So, using old style for now.
 		$s = '<div id="content_0" class="content_block openSection">'
 			. preg_replace_callback(
-				'%<h2(.*)<span class="mw-headline" [^>]*>(.+)</span>[\s\r\n]*</h2>%sU',
+				'%<h2(.*)<span class="mw-headline" [^>]*>(.+)</span>(.*)[\s\r\n]*</h2>%sU',
 				array( $this, 'headingTransformCallback' ),
 				$s
 			);

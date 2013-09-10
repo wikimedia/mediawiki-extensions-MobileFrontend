@@ -9,6 +9,13 @@ class SkinMobileWML extends SkinTemplate {
 		$this->setContext( $context );
 	}
 
+	/**
+	 * Overrides Skin::doEditSectionLink
+	 */
+	public function doEditSectionLink( Title $nt, $section, $tooltip = null, $lang = false ) {
+		return '';
+	}
+
 	public function outputPage( OutputPage $out = null ) {
 		wfProfileIn( __METHOD__ );
 		if ( !$out ) {

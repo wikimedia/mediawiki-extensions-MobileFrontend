@@ -5,7 +5,7 @@
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-.section_heading .edit-page {
+.section .edit-page {
   position: absolute;
   background: url(../common/images/pagemenu/edit.png) 100% 9pt no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
@@ -19,9 +19,8 @@
   top: 0;
   bottom: 0;
   right: 0;
-  display: none;
 }
-.section_heading.openSection .edit-page {
+.section h2.openSection .edit-page {
   display: block;
 }
 .stub .edit-page {

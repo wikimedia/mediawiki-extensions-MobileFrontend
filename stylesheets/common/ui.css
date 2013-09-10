@@ -434,7 +434,8 @@ input.search:focus {
   position: relative;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-#mw-mf-menu-page {
+#mw-mf-menu-page,
+.edit-page {
   display: none;
 }
 .client-js .searchSubmit {

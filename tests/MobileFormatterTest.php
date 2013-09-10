@@ -57,21 +57,21 @@ Foobar!</div></div></div>',
 			),
 			// \n</h2> in headers
 			array(
-				'<h2><span class="editsection">[<a href="/w/index.php?title=California_Gold_Rush&amp;action=edit&amp;section=2" title="Edit section: Forty-niners">edit</a>]</span> <span class="mw-headline" id="Forty-niners">Forty-niners</span>
+				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span><a class="edit-page" href="#editor/2">Edit</a>
 
  	 </h2>' . $longLine,
 				$summarySection.
-				'<div class="section"><h2 class="section_heading" id="section_1"><span id="Forty-niners">Forty-niners</span></h2><div class="content_block" id="content_1">'
+				'<div class="section"><h2 class="section_heading" id="section_1"><span id="Forty-niners">Forty-niners</span><a class="edit-page" href="#editor/2">Edit</a></h2><div class="content_block" id="content_1">'
 					. $longLine . '</div>'
 					. $anchor . '</div>',
 				$enableSections
 			),
 			// Bug 36670
 			array(
-				'<h2><span class="editsection">[<a href="/w/index.php?title=California_Gold_Rush&amp;action=edit&amp;section=1" title="Edit section: History">edit</a>]</span> <span class="mw-headline" id="History"><span id="Overview"></span>History</span></h2>'
+				'<h2><span class="mw-headline" id="History"><span id="Overview"></span>History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
 				$summarySection.
-				'<div class="section"><h2 class="section_heading" id="section_1"><span id="History"><span id="Overview"></span>History</span></h2><div class="content_block" id="content_1">'
+				'<div class="section"><h2 class="section_heading" id="section_1"><span id="History"><span id="Overview"></span>History</span><a class="edit-page" href="#editor/2">Edit</a></h2><div class="content_block" id="content_1">'
 					. $longLine . '</div>'
 					. $anchor
 					. '</div>',

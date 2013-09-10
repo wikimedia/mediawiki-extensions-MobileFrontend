@@ -55,6 +55,7 @@ class MobileFormatterHTML extends MobileFormatter {
 				array( 'id' => $headlineId ),
 				$matches[2]
 			)
+			. $matches[3]
 			. Html::closeElement( 'h2' )
 			. Html::openElement( 'div',
 				array( 'class' => 'content_block', 'id' => 'content_' . $this->headings )
