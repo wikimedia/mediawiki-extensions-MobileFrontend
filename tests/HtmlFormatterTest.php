@@ -28,10 +28,6 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 		$removeImages = function( HtmlFormatter $f ) {
 			$f->removeImages();
 		};
-		$fullyRemoveImages = function( HtmlFormatter $f ) {
-			$f->removeImages();
-			$f->useImgAlt( false );
-		};
 		$removeTags = function( HtmlFormatter $f ) {
 			$f->remove( array( 'table', '.foo', '#bar', 'div.baz' ) );
 		};
@@ -44,19 +40,9 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 		return array(
 			// remove images if asked
 			array(
-				'<img src="/foo/bar.jpg">Blah</img>',
-				'<span class="mw-mf-image-replacement">['. wfMessage( 'mobile-frontend-missing-image' ) .']</span>Blah',
-				$removeImages,
-			),
-			array(
-				'<img src="/foo/bar.jpg" alt="Blah"/>',
-				'<span class="mw-mf-image-replacement">[Blah]</span>',
-				$removeImages,
-			),
-			array(
 				'<img src="/foo/bar.jpg" alt="Blah"/>',
 				'',
-				$fullyRemoveImages,
+				$removeImages,
 			),
 			// basic tag removal
 			array(
@@ -84,27 +70,6 @@ class MF_HtmlFormatterTest extends MediaWikiTestCase {
 			array(
 				'<span title="&quot; \' &amp;">&lt;Тест!&gt;</span> &amp;&lt;&#38;&#0038;&#x26;&#x026;',
 				'<span title="&quot; \' &amp;">&lt;Тест!&gt;</span> &amp;&lt;&amp;&amp;&amp;&amp;',
-			),
-			array(
-				'<img alt="picture of kitty" src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">[picture of kitty]</span>',
-				$removeImages,
-			),
-			array(
-				'<img src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$removeImages,
-			),
-			array(
-				'<img alt src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$removeImages,
-			),
-			array(
-				'<img alt src="kitty.jpg">look at the cute kitty!<img alt="picture of angry dog" src="dog.jpg">',
-				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!'.
-					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
-				$removeImages,
 			),
 			// https://bugzilla.wikimedia.org/show_bug.cgi?id=53086
 			array(

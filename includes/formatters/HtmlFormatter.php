@@ -12,8 +12,7 @@ class HtmlFormatter {
 	private $html;
 	private $itemsToRemove = array();
 	private $elementsToFlatten = array();
-	private $removeImages = false;
-	private $imgAlt = true;
+	protected $removeImages = false;
 
 	/**
 	 * Constructor
@@ -94,13 +93,6 @@ class HtmlFormatter {
 	}
 
 	/**
-	 * @param bool $value
-	 */
-	public function useImgAlt( $value ) {
-		$this->imgAlt = $value;
-	}
-
-	/**
 	 * Removes content inappropriate for mobile devices
 	 */
 	public function filterContent() {
@@ -122,31 +114,13 @@ class HtmlFormatter {
 		// For example:
 
 		$domElemsToRemove = array();
-		$domElemsToReplace = array();
 		foreach ( $removals['TAG'] as $tagToRemove ) {
 			$tagToRemoveNodes = $doc->getElementsByTagName( $tagToRemove );
 			foreach ( $tagToRemoveNodes as $tagToRemoveNode ) {
 				if ( $tagToRemoveNode ) {
-					if ( $this->imgAlt && $tagToRemoveNode->nodeName == 'img' ) {
-						$domElemsToReplace[] = $tagToRemoveNode;
-					} else {
-						$domElemsToRemove[] = $tagToRemoveNode;
-					}
+					$domElemsToRemove[] = $tagToRemoveNode;
 				}
 			}
-		}
-
-		/** @var $domElement DOMElement */
-		foreach ( $domElemsToReplace as $domElement ) {
-			$alt = $domElement->getAttribute( 'alt' );
-			if ( $alt === '' ) {
-				$alt = '[' . wfMessage( 'mobile-frontend-missing-image' )->inContentLanguage() . ']';
-			} else {
-				$alt = '[' . $alt . ']';
-			}
-			$replacement = $doc->createElement( 'span', htmlspecialchars( $alt ) );
-			$replacement->setAttribute( 'class', 'mw-mf-image-replacement' );
-			$domElement->parentNode->replaceChild( $replacement, $domElement );
 		}
 
 		$this->removeElements( $domElemsToRemove );
