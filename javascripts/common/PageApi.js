@@ -67,11 +67,12 @@
 					sectionprop: 'level|line|anchor',
 					sections: leadOnly ? 0 : 'all'
 				}, options ).done( function( resp ) {
-					var sections = transformSections( resp.mobileview.sections );
+					var sections;
 
 					if ( resp.error || !resp.mobileview.sections ) {
 						page.reject( resp );
 					} else {
+						sections = transformSections( resp.mobileview.sections );
 						page.resolve( {
 							title: title,
 							// FIXME [api] should return the page id - this is needed to tell if a page is new or not
