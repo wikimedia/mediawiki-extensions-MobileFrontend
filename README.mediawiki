@@ -41,6 +41,9 @@ NEVER use [http://www.w3.org/TR/CSS2/selector.html#attribute-selectors attribute
 === JavaScript ===
 JavaScript can be found in the javascript folder. Any JavaScript committed to the core must pass the [https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
 
+Additional Naming conventions:
+* When naming events that are emitted using mw.mobileFrontend.emit use hyphens.
+
 ==== JSHint ====
 Install JSHint
 <code>

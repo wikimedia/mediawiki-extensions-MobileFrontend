@@ -2,71 +2,24 @@
 ( function( M, $ ) {
 var CACHE_KEY_RESULTS = 'mfNearbyLastSearchResult',
 	overlay,
-	Nearby = M.require( 'modules/nearby/Nearby' ),
-	NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
-	api = new NearbyApi(),
-	CACHE_KEY_LAST_LOCATION = 'mfNearbyLastKnownLocation';
+	Nearby = M.require( 'modules/nearby/Nearby' );
 
 $( function() {
-	var supported = M.supportsGeoLocation(),
+	var
 		$userBtn = $( '#user-button' ),
-		curLocation,
-		lastKnownLocation = M.settings.getUserSetting( CACHE_KEY_LAST_LOCATION ),
 		cache = M.settings.saveUserSetting,
 		lastSearchResult = M.settings.getUserSetting( CACHE_KEY_RESULTS ),
 		// FIXME: Adapt modules/nearby/Nearby.js and use that instead
 		pendingQuery = false, btn;
 
-		overlay = new Nearby( {
-			el: $( '#mw-mf-nearby' )
-		} );
-
-	function render( $content, pages ) {
-		cache( CACHE_KEY_RESULTS, $.toJSON( pages ) ); // cache result
-
-		overlay.render( {
-			pages: pages
-		} );
-	}
-
-	function findResults( location ) {
-		var $content = $( '#mw-mf-nearby' ), range = mw.config.get( 'wgMFNearbyRange' );
-
-		api.getPages( location, range ).done( function( pages ) {
-			if ( pages.length > 0 ) {
-				render( $content, pages );
-			} else {
-				overlay.renderError( 'empty' );
-			}
-		} ).fail( function() {
-			overlay.renderError( 'server' );
-		} );
-	}
-
-	function completeRefresh() {
+	overlay = new Nearby( {
+		el: $( '#mw-mf-nearby' )
+	} ).on( 'end-load-from-current-location', function() {
 		$( 'button.refresh' ).removeClass( 'refreshing' );
 		pendingQuery = false;
-	}
-
-	function init() {
-		// FIXME: Move searching for geolocation into Nearby module
-		overlay.render( { showLoader: true } );
-		navigator.geolocation.getCurrentPosition( function( geo ) {
-			var lat = geo.coords.latitude, lng = geo.coords.longitude;
-			curLocation = { latitude: lat, longitude: lng }; // save as json so it can be cached bug 48268
-			cache( CACHE_KEY_LAST_LOCATION, $.toJSON( curLocation ) );
-			findResults( curLocation );
-			completeRefresh();
-		},
-		function() {
-			overlay.renderError( 'location' );
-			completeRefresh();
-		},
-		{
-			timeout: 10000,
-			enableHighAccuracy: true
-		} );
-	}
+	} ).on( 'searchResult', function( pages ) {
+		cache( CACHE_KEY_RESULTS, $.toJSON( pages ) );
+	} );
 
 	function refresh() {
 		if ( pendingQuery ) {
@@ -74,26 +27,18 @@ $( function() {
 		} else {
 			$( 'button.refresh' ).addClass( 'refreshing' );
 			pendingQuery = true;
-			init();
+			overlay.loadFromCurrentLocation();
 		}
 	}
 
-	if ( supported ) {
-		if ( lastKnownLocation ) {
-			curLocation = $.parseJSON( lastKnownLocation );
-			if ( !curLocation.latitude ) { // Fix damage caused by bug 48268 which will throw an error in watchPosition handler
-				curLocation = false;
-			}
-		}
-		if ( lastSearchResult && window.location.hash ) {
-			render( $( '#content' ), $.parseJSON( lastSearchResult ) );
-		} else {
-			init();
-		}
+	// render from cache or render from current location
+	if ( lastSearchResult && window.location.hash ) {
+		overlay.render( { pages: $.parseJSON( lastSearchResult ) } );
 	} else {
-		overlay.renderError( 'incompatible' );
+		overlay.loadFromCurrentLocation();
 	}
 
+	// replace user button with refresh button
 	if ( $userBtn.length ) {
 		$userBtn.remove();
 	}
