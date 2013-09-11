@@ -111,29 +111,63 @@ abstract class MobileFormatter extends HtmlFormatter {
 			$this->remove( $wgMFRemovableClasses['base'] );
 			$this->remove( $wgMFRemovableClasses[$this->getFormat()] );
 		}
+
+		if ( $this->removeImages ) {
+			$this->doRemoveImages();
+		}
 		parent::filterContent();
 
 		// Handle red links with action equal to edit
 		if ( $this->flattenRedLinks ) {
-			$doc = $this->getDoc();
-			$xpath = new DOMXpath( $doc );
-			$redLinks = $xpath->query( '//a[@class="new"]' );
-			/** @var $redLink DOMElement */
-			foreach ( $redLinks as $redLink ) {
-				// PHP Bug #36795 — Inappropriate "unterminated entity reference"
-				$spanNode = $doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
+			$this->doFlattenRedLinks();
+		}
+	}
 
-				if ( $redLink->hasAttributes() ) {
-					$attributes = $redLink->attributes;
-					foreach ( $attributes as $attribute ) {
-						if ( $attribute->name != 'href' ) {
-							$spanNode->setAttribute( $attribute->name, $attribute->value );
-						}
+	/**
+	 * Replaces images with [annotations from alt]
+	 */
+	private function doRemoveImages() {
+		$doc = $this->getDoc();
+		$domElemsToReplace = array();
+		foreach( $doc->getElementsByTagName( 'img' ) as $element ) {
+			$domElemsToReplace[] = $element;
+		}
+		/** @var $element DOMElement */
+		foreach ( $domElemsToReplace as $element ) {
+			$alt = $element->getAttribute( 'alt' );
+			if ( $alt === '' ) {
+				$alt = '[' . wfMessage( 'mobile-frontend-missing-image' )->inContentLanguage() . ']';
+			} else {
+				$alt = '[' . $alt . ']';
+			}
+			$replacement = $doc->createElement( 'span', htmlspecialchars( $alt ) );
+			$replacement->setAttribute( 'class', 'mw-mf-image-replacement' );
+			$element->parentNode->replaceChild( $replacement, $element );
+		}
+	}
+
+	/**
+	 * Replaces red links with plain text
+	 */
+	private function doFlattenRedLinks() {
+		$doc = $this->getDoc();
+		$xpath = new DOMXpath( $doc );
+		$redLinks = $xpath->query( '//a[@class="new"]' );
+		/** @var $redLink DOMElement */
+		foreach ( $redLinks as $redLink ) {
+			// PHP Bug #36795 — Inappropriate "unterminated entity reference"
+			$spanNode = $doc->createElement( "span", str_replace( "&", "&amp;", $redLink->nodeValue ) );
+
+			if ( $redLink->hasAttributes() ) {
+				$attributes = $redLink->attributes;
+				foreach ( $attributes as $attribute ) {
+					if ( $attribute->name != 'href' ) {
+						$spanNode->setAttribute( $attribute->name, $attribute->value );
 					}
 				}
-
-				$redLink->parentNode->replaceChild( $spanNode, $redLink );
 			}
+
+			$redLink->parentNode->replaceChild( $spanNode, $redLink );
 		}
 	}
 

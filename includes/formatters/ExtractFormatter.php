@@ -21,7 +21,6 @@ class ExtractFormatter extends HtmlFormatter {
 		$this->plainText = $plainText;
 
 		$this->removeImages();
-		$this->useImgAlt( false );
 		$this->remove( $wgMFRemovableClasses['base'] );
 		$this->remove( $wgMFRemovableClasses['extracts'] );
 		$this->remove( array( 'table', 'div', '.editsection', '.mw-editsection', 'sup.reference', 'span.coordinates',

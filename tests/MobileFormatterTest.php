@@ -26,9 +26,21 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$summarySection = '<div id="content_0" class="content_block openSection"></div>';
 		$anchor = '<a id="anchor_1" href="#section_1" class="section_anchors">&#8593;Jump back a section</a>';
+		$removeImages = function( MobileFormatter $f ) {
+			$f->removeImages();
+		};
 
 		return array(
-			// remove magnifying glass
+			array(
+				'<img src="/foo/bar.jpg">Blah</img>',
+				'<span class="mw-mf-image-replacement">['. wfMessage( 'mobile-frontend-missing-image' ) .']</span>Blah',
+				$removeImages,
+			),
+			array(
+				'<img src="/foo/bar.jpg" alt="Blah"/>',
+				'<span class="mw-mf-image-replacement">[Blah]</span>',
+				$removeImages,
+			),			// remove magnifying glass
 			array(
 				'<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Foo.jpg" class="image">
 <img alt="" src="/foo.jpg" width="220" height="165" class="thumbimage"/></a><div class="thumbcaption">
@@ -64,6 +76,27 @@ Foobar!</div></div></div>',
 					. $anchor
 					. '</div>',
 				$enableSections
+			),
+			array(
+				'<img alt="picture of kitty" src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[picture of kitty]</span>',
+				$removeImages,
+			),
+			array(
+				'<img src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
+				$removeImages,
+			),
+			array(
+				'<img alt src="kitty.jpg">',
+				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
+				$removeImages,
+			),
+			array(
+				'<img alt src="kitty.jpg">look at the cute kitty!<img alt="picture of angry dog" src="dog.jpg">',
+				'<span class="mw-mf-image-replacement">[' . wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!'.
+					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
+				$removeImages,
 			),
 		);
 	}
