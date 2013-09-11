@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_d395d4e3",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-11T16:55:45Z",
+      "side": 1,
+      "message": "i suspect we can just remove these Max? (Since any non-cached versions will make use of doEditSectionLink and any cached versions will already be stored with these stripped...",
+      "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_538ac4c1",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-11T16:55:45Z",
+      "side": 1,
+      "message": "why? That\u0027s a load of css we\u0027d now need to load at the top that is actually used by things that run at the bottom...\n(\n\u0027stylesheets/common/common-js.css\u0027,\n\t\t\t\u0027stylesheets/modules/languages.css\u0027,\n\t\t\t\u0027stylesheets/modules/search.css\u0027,\n\t\t\t\u0027stylesheets/modules/references.css\u0027,\n\t\t\t\u0027stylesheets/modules/issues.css\u0027,\n\t\t\t\u0027stylesheets/modules/watchstar.css\u0027,\n\t\t\t\u0027stylesheets/modules/uploads.css\u0027,\n\t\t\t\u0027stylesheets/modules/tutorials.css\u0027,\n\t\t\t\u0027stylesheets/modules/editor.css\u0027,\n)",
+      "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_7387c0b8",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-11T16:55:45Z",
+      "side": 1,
+      "message": "Can we document this regex it\u0027s getting even more confusing...  (or even better find a way to kill it today! ) :)",
+      "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_b39128f2",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-11T16:55:45Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure that Html::element can be passed the result of wfMessage without -\u003etext() and it will get escaped.",
+      "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
