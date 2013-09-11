@@ -263,10 +263,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			// notifications.js
 			'overlays/notifications',
-			// talk.js
-			'overlays/talk',
-			'overlays/talkSectionAdd',
-			'talkSection',
 			// page.js
 			'pageActionTutorial',
 		),
@@ -301,8 +297,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/notifications.js',
-			'javascripts/modules/talk/TalkSectionOverlay.js',
-			'javascripts/modules/talk.js',
+			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
@@ -321,10 +316,39 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-tutorial-confirm',
 
 			// for talk.js
+			'mobile-frontend-talk-overlay-header',
+
+			// notifications.js (defined in Echo)
+			'echo-none',
+			'notifications',
+		),
+	),
+
+	'mobile.talk' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.beta',
+			'mobile.talk.plumbing',
+		),
+		'scripts' => array(
+			'javascripts/modules/talk/TalkSectionOverlay.js',
+			'javascripts/modules/talk/TalkOverlay.js',
+		),
+	),
+
+	'mobile.talk.plumbing' => array(
+		'class' => 'MFResourceLoaderModule',
+		'localBasePath' => $localBasePath,
+		'localTemplateBasePath' => $localBasePath . '/templates',
+		'templates' => array(
+			// talk.js
+			'overlays/talk',
+			'overlays/talkSectionAdd',
+			'talkSection',
+		),
+		'messages' => array(
 			'mobile-frontend-talk-explained',
 			'mobile-frontend-talk-explained-empty',
 			'mobile-frontend-talk-overlay-lead-header',
-			'mobile-frontend-talk-overlay-header',
 			'mobile-frontend-talk-add-overlay-subject-placeholder',
 			'mobile-frontend-talk-add-overlay-content-placeholder',
 			'mobile-frontend-talk-edit-summary',
@@ -332,10 +356,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-talk-reply-success',
 			'mobile-frontend-talk-reply',
 			'mobile-frontend-talk-reply-info',
-
-			// notifications.js (defined in Echo)
-			'echo-none',
-			'notifications',
 		),
 	),
 

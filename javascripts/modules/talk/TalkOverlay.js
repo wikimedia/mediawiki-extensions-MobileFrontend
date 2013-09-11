@@ -5,7 +5,6 @@
 		Overlay = M.require( 'Overlay' ),
 		TalkSectionOverlay = M.require( 'modules/talk/TalkSectionOverlay' ),
 		api = M.require( 'api' ),
-		leadHeading = mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 		TalkSectionAddOverlay = Overlay.extend( {
 			defaults: {
 				cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
@@ -64,6 +63,10 @@
 		TalkOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/talk' ),
 			className: 'mw-mf-overlay list-overlay',
+			defaults: {
+				heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
+				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
+			},
 			appendSection: function( heading, text ) {
 				var $newTopic;
 				this.options.page.appendSection( heading, text );
@@ -104,7 +107,7 @@
 						leadSection = {
 							content: page.lead,
 							id: 0,
-							heading: leadHeading
+							heading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
 						},
 						section = id === 0 ? leadSection : page.getSubSection( id ),
 						childOverlay = new TalkSectionOverlay( {
@@ -118,50 +121,8 @@
 					this.$( '.lead-discussion' ).remove();
 				}
 			}
-		} ),
-		Page = M.require( 'page' );
-
-	function renderTalkOverlay( pageData ) {
-		var topOverlay,
-			page = new Page( pageData );
-
-		topOverlay = new TalkOverlay( {
-			heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
-			leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
-			page: page
 		} );
-		topOverlay.show();
-	}
 
-	function onTalkClick( ev ) {
-		var $talk = $( this ), talkPage = $talk.data( 'title' );
-		// FIXME: this currently gives an indication something async is happening. We can do better.
-		$talk.addClass( 'loading' );
-		ev.preventDefault();
-
-		// FIXME: use Page's mechanisms for retrieving page data instead
-		M.pageApi.getPage( talkPage ).fail( function( resp ) {
-			if ( resp.error && resp.error.code === 'missingtitle' ) {
-				renderTalkOverlay( {
-					sections: [], title: talkPage
-				} );
-			}
-			$talk.removeClass( 'loading' );
-		} ).done( function( pageData ) {
-			renderTalkOverlay( pageData );
-			$talk.removeClass( 'loading' );
-		} );
-	}
-
-	function init( title ) {
-		var talkPrefix = mw.config.get( 'wgFormattedNamespaces' ) [mw.config.get( 'wgNamespaceNumber' ) + 1 ] + ':';
-		// FIXME change when micro.tap.js in stable
-		$( '#ca-talk' ).on( M.tapEvent( 'click' ), onTalkClick ).data( 'title', talkPrefix + title );
-	}
-
-	init( mw.config.get( 'wgTitle' ) );
-	M.on( 'page-loaded', function( page ) {
-		init( page.title );
-	} );
+	M.define( 'modules/talk/TalkOverlay', TalkOverlay );
 
 }( mw.mobileFrontend, jQuery ) );
