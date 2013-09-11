@@ -328,11 +328,11 @@ $messages['qqq'] = array(
 	'nearby' => '{{doc-special|Nearby}}',
 	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
-*{{msg-mw|Mobile.js}} (optional)
-*{{msg-mw|Mobile.css}} (optional)',
+See also:
+* {{msg-mw|Mobile.js}} (Optional message)',
 	'mobile.js' => '{{optional}}
-*{{msg-mw|Mobile.js}} (optional)
-*{{msg-mw|Mobile.css}} (optional)',
+See also:
+* {{msg-mw|Mobile.css}} (Optional message)',
 	'mobile-frontend-search-submit' => 'Label for the button near the search box.
 {{Identical|Go}}',
 	'mobile-frontend-home-button' => 'This is the label of one of the buttons that appear if you click the wiki logo near the search box.
@@ -4515,6 +4515,7 @@ $messages['es'] = array(
 	'mobile-frontend-talk-explained' => 'Las siguientes conversaciones están actualmente activas',
 	'mobile-frontend-talk-explained-empty' => 'No hay ninguna conversación sobre esta página.',
 	'mobile-frontend-talk-overlay-header' => 'Discusión',
+	'mobile-frontend-media-details' => 'Detalles',
 );
 
 /** Estonian (eesti)
@@ -14238,6 +14239,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-talk-reply-success' => 'Ditt svar sparades framgångsrikt på diskussionssidan.',
 	'mobile-frontend-talk-reply-info' => 'Observera att ditt svar automatiskt kommer att undertecknas med ditt användarnamn.',
 	'mobile-frontend-talk-reply' => 'Svara',
+	'mobile-frontend-media-details' => 'Detaljer',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Huruvida eller inte en användare redigerar via mobila gränssnittet',
 );
 
