@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_85a06396",
+        "filename": "includes/Resources.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-11T18:30:52Z",
+      "side": 1,
+      "message": "mobile.stable.styles has \u0027position\u0027 \u003d\u003e \u0027top\u0027, this only ensures that it works. We want editor.css to be loaded at the top so that the edit links are styled from the very beginning.",
+      "parentUuid": "4946a543_538ac4c1",
+      "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_7387c0b8",
         "filename": "includes/formatters/MobileFormatter.php",
         "patchSetId": 2
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_25ba4fbe",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-11T18:30:52Z",
+      "side": 1,
+      "message": "I\u0027m not sure how to document it. A comment containing HTML example it parses? Possibly could be killed, but maybe in a follow-up?",
+      "parentUuid": "4946a543_7387c0b8",
+      "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_b39128f2",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 2
@@ -64,6 +100,24 @@
       "writtenOn": "2013-09-11T16:55:45Z",
       "side": 1,
       "message": "I\u0027m pretty sure that Html::element can be passed the result of wfMessage without -\u003etext() and it will get escaped.",
+      "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_85c9435e",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-11T18:30:52Z",
+      "side": 1,
+      "message": "That\u0027s copy and paste from core\u0027s Skin::doEditSectionLink.",
+      "parentUuid": "4946a543_b39128f2",
       "revId": "5a768ef1a941ed9e35d9ca30ea10a533c3b765c7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
