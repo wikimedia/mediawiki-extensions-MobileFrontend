@@ -144,6 +144,9 @@ class SkinMinerva extends SkinTemplate {
 				$menu['talk']['class'] = $tpl->data['_talkdata']['class'];
 			}
 		}
+		// sanitize to avoid invalid HTML5 markup being produced
+		unset( $menu['talk']['primary'] );
+		unset( $menu['talk']['context'] );
 
 		$watchTemplate = array(
 			'id' => 'ca-watch',
