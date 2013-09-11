@@ -1,4 +1,6 @@
 ( function( M, $ ) {
+	M.assertMode( [ 'alpha' ] );
+
 	var Overlay = M.require( 'Overlay' ),
 		Api = M.require( 'api' ).Api,
 		ImageApi, ImageOverlay, api;
