@@ -20,9 +20,7 @@ window.History = {
 			// iOS 5+
 			ua.match( /OS [5-9]_.*like Mac OS X/ ) ||
 			// iOS 10+ (future proofing)
-			ua.match( /OS [1-9][0-9]_.*like Mac OS X/ ) ||
-			// Firefox (ignoring version < 4 in the check)
-			ua.match( /Firefox/ )
+			ua.match( /OS [1-9][0-9]_.*like Mac OS X/ )
 		) ? true : false;
 	}
 
