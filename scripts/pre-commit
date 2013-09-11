@@ -9,6 +9,9 @@ make jshint
 if git diff --name-only --cached | grep -P '\.js$' ; then
 	make qunit
 fi
+if git diff --name-only --cached | grep -P 'includes/skins/.*php$' ; then
+	make validatehtml
+fi
 for file in `git diff --cached --name-only | grep ".png\$"`
 do
 	[ -f $file ] && echo "Compressing $file" &&  \
