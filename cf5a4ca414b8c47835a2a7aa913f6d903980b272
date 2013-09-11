@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_bbe2dea1",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-09-11T20:49:22Z",
+      "side": 1,
+      "message": "it looks to me like this could potentially resolve https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d48730",
+      "revId": "cf5a4ca414b8c47835a2a7aa913f6d903980b272",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
