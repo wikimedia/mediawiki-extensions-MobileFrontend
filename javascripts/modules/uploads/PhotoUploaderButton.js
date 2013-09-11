@@ -137,10 +137,6 @@
 				} ).
 				on( 'success', function( data ) {
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
-					// FIXME: workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
-					if ( !$( '#content_0' ).length ) {
-						$( '<div id="content_0" >' ).insertAfter( $( '#section_0,#page-actions' ).last() );
-					}
 
 					// just in case, LeadPhoto should be loaded by now anyway
 					mw.loader.using( 'mobile.uploads', function() {
@@ -150,7 +146,7 @@
 							url: data.url,
 							pageUrl: data.descriptionUrl,
 							caption: data.description
-						} ).prependTo( '#content_0' );
+						} ).prependTo( M.getLeadSection() );
 					} );
 				} ).
 				on( 'error cancel', function() {

@@ -20,7 +20,7 @@
 				$( this ).attr( 'href', history.updateQueryStringParameter( href, 'returnto', title ) );
 			} );
 
-			history.hijackLinks( $( '#content_0' ), useFuzzyLinkHijacking );
+			history.hijackLinks( M.getLeadSection(), useFuzzyLinkHijacking );
 		} );
 
 		searchOverlay.on( 'write-results', function() {

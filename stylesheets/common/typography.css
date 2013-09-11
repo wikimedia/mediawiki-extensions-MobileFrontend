@@ -88,10 +88,10 @@ body.no-margins #content_wrapper > .content {
   position: relative;
   min-height: 100px;
 }
-#content_wrapper .section h3:first-child {
+#content_wrapper .content_block h3:first-child {
   margin-top: 0;
 }
-#content_wrapper .section:last-child {
+#content_wrapper .content_block:last-child {
   border-bottom: none;
 }
 #content_wrapper .thumb {

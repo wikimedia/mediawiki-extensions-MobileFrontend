@@ -12,7 +12,7 @@ var module = (function() {
 		} );
 
 	function run( $container, parentOverlay ) {
-		$container = $container || $( '#content_0' );
+		$container = $container || M.getLeadSection();
 		var $metadata = $container.find( 'table.ambox' ),
 			overlay;
 

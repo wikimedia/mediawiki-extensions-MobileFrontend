@@ -257,6 +257,10 @@
 		init: init,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getOrigin: getOrigin,
+		// FIXME: No Page object exists on initial page load but would be better to make this a function of Page object
+		getLeadSection: function() {
+			return $( '#content div' ).eq( 0 );
+		},
 		getSessionId: getSessionId,
 		isLoggedIn: isLoggedIn,
 		lockViewport: lockViewport,

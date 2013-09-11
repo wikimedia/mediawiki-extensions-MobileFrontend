@@ -1,7 +1,7 @@
 <?php
 
 class MobileFormatterWML extends MobileFormatter {
-	const WML_SECTION_SEPARATOR = '***************************************************************************';
+	protected $headingTransformStart = '***************************************************************************';
 
 	/**
 	 * @var WmlContext
@@ -47,13 +47,13 @@ class MobileFormatterWML extends MobileFormatter {
 	 */
 	private function createWMLCard( $s ) {
 		wfProfileIn( __METHOD__ );
-		$segments = explode( self::WML_SECTION_SEPARATOR, $s );
+		$segments = explode( $this->headingTransformStart, $s );
 		$card = '';
 		$idx = 0;
 		$requestedSegment = htmlspecialchars( $this->wmlContext->getRequestedSegment() );
 		$title = htmlspecialchars( $this->title->getText() );
 		$segmentText = $this->wmlContext->getOnlyThisSegment()
-			? str_replace( self::WML_SECTION_SEPARATOR, '', $s )
+			? str_replace( $this->headingTransformStart, '', $s )
 			: $segments[$requestedSegment];
 
 		$card .= "<card id='s{$idx}' title='{$title}'><p>{$segmentText}</p>";
@@ -95,16 +95,5 @@ class MobileFormatterWML extends MobileFormatter {
 		$card .= '</card>';
 		wfProfileOut( __METHOD__ );
 		return $card;
-	}
-
-	protected function headingTransformCallback( $matches ) {
-		wfProfileIn( __METHOD__ );
-		$this->headings++;
-
-		$base = self::WML_SECTION_SEPARATOR .
-			"<h2 class='section_heading' id='section_{$this->headings}'>{$matches[2]}</h2>";
-
-		wfProfileOut( __METHOD__ );
-		return $base;
 	}
 }

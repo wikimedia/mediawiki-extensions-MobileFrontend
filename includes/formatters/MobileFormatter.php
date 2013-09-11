@@ -4,6 +4,17 @@
  * Converts HTML into a mobile-friendly version
  */
 abstract class MobileFormatter extends HtmlFormatter {
+	/*
+		String prefixes to be applied at start and end of output from Parser
+	*/
+	protected $pageTransformStart = '';
+	protected $pageTransformEnd = '';
+	/*
+		String prefixes to be applied before and after section content.
+	*/
+	protected $headingTransformStart = '';
+	protected $headingTransformEnd = '';
+
 	/**
 	 * @var Title
 	 */
@@ -188,59 +199,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Callback for headingTransform()
-	 * @param array $matches
-	 * @return string
-	 */
-	protected abstract function headingTransformCallback( $matches );
-
-	/**
-	 * generates a back top link for a given section number
-	 * @param int $headingNumber: The number corresponding to the section heading
-	 * @return string
-	 */
-	protected function backToTopLink( $headingNumber ) {
-		return Html::rawElement( 'a',
-				array( 'id' => 'anchor_' . $headingNumber,
-					'href' => '#section_' . $headingNumber,
-					'class' => 'section_anchors' ),
-				'&#8593;' . $this->msg( 'mobile-frontend-back-to-top-of-section' ) );
-	}
-
-	/**
-	 * Prepares headings in WML mode, makes sections expandable in HTML mode
-	 * @param string $s
-	 * @return string
-	 */
-	protected function headingTransform( $s ) {
-		wfProfileIn( __METHOD__ );
-
-		// Closures are a PHP 5.3 feature.
-		// MediaWiki currently requires PHP 5.2.3 or higher.
-		// So, using old style for now.
-		$s = '<div id="content_0" class="content_block openSection">'
-			. preg_replace_callback(
-				'%<h2(.*)<span class="mw-headline" [^>]*>(.+)</span>(.*)[\s\r\n]*</h2>%sU',
-				array( $this, 'headingTransformCallback' ),
-				$s
-			);
-
-		// if we had any, make sure to close the whole thing!
-		if ( $this->headings > 0 ) {
-			if ( $this->backToTopLink ) {
-				$bt = $this->backToTopLink( intval( $this->headings ) );
-			} else {
-				$bt = '';
-			}
-			$s .= '</div>' // <div class="content_block">
-				. $bt;
-		}
-		$s .= "\n</div>";
-		wfProfileOut( __METHOD__ );
-		return $s;
-	}
-
-	/**
 	 * Returns interface message text
 	 * @param string $key: Message key
 	 * @return string Wiki text
@@ -304,5 +262,19 @@ abstract class MobileFormatter extends HtmlFormatter {
 
 		wfProfileOut( __METHOD__ );
 		return $content;
+	}
+
+	/**
+	 * Prepares headings in WML mode, makes sections expandable in HTML mode
+	 * @param string $s
+	 * @return string
+	 */
+	protected function headingTransform( $s ) {
+		wfProfileIn( __METHOD__ );
+		$s = $this->pageTransformStart .
+			preg_replace( '%(<h2.*</h2>)%sU', $this->headingTransformStart . '\1' . $this->headingTransformEnd, $s ) .
+			$this->pageTransformEnd;
+		wfProfileOut( __METHOD__ );
+		return $s;
 	}
 }

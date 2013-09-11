@@ -25,24 +25,24 @@ QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 
 QUnit.test( 'wm_toggle_section', 5, function() {
 	strictEqual($("#section_1").hasClass("openSection"), true, "openSection class present");
-	toggle.wm_toggle_section( '1' );
+	toggle.toggle( $( '#section_1' ) );
 	strictEqual($("#content_1").hasClass("openSection"), false, "check content is closed on a toggle");
 	strictEqual($("#section_1").hasClass("openSection"), false, "check section is closed");
 
 	// perform second toggle
-	toggle.wm_toggle_section( '1' );
+	toggle.toggle( $( '#section_1' ) );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content reopened");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section has reopened");
 });
 
 QUnit.test( 'clicking a hash link to reveal an already open section', 2, function() {
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section is open");
-	toggle.wm_reveal_for_hash( 'First_Section' );
+	toggle.reveal( 'First_Section' );
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section is still open");
 });
 
-QUnit.test( 'wm_reveal_for_hash', 2, function() {
-	toggle.wm_reveal_for_hash( '#First_Section_2' );
+QUnit.test( 'reveal', 2, function() {
+	toggle.reveal( '#First_Section_2' );
 	strictEqual($("#content_1").hasClass("openSection"), true, "check content is visible on a toggle");
 	strictEqual($("#section_1").hasClass("openSection"), true, "check section is marked as open");
 });

@@ -96,6 +96,7 @@
 		},
 
 		// FIXME: rename to getSection
+		// FIXME: Change function signature to take the anchor of the heading
 		getSubSection: function( id ) {
 			return this._sectionLookup[ id ];
 		},

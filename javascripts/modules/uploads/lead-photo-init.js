@@ -9,12 +9,6 @@
 		isSupported = PhotoUploaderButton.isSupported;
 
 	function needsPhoto( $container ) {
-		var $content_0 = $container.find( '#content_0' );
-		// FIXME: workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
-		if ( $content_0.length ) {
-			$container = $content_0;
-		}
-
 		return $container.find( mw.config.get( 'wgMFLeadPhotoUploadCssSelector' ) ).length === 0;
 	}
 
@@ -35,15 +29,14 @@
 			namespace = mw.config.get( 'wgNamespaceNumber' ),
 			// FIXME: not updated on dynamic page loads
 			isEditable = mw.config.get( 'wgIsPageEditable' ),
-			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user ),
-			$page = $( '#content' );
+			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user );
 
 		if ( !M.isLoggedIn() && !showCta ) {
 			// Note with the CTA this is unnecessary but the new nav requires showing the upload button at all times
 			return makeDisabledButton( 'mobile-frontend-photo-upload-anon' );
 		} else if ( !isEditable ) {
 			return makeDisabledButton( 'mobile-frontend-photo-upload-protected' );
-		} else if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( $page ) || mw.config.get( 'wgIsMainPage' ) ) {
+		} else if ( !validNamespace || mw.util.getParamValue( 'action' ) || !needsPhoto( M.getLeadSection() ) || mw.config.get( 'wgIsMainPage' ) ) {
 			return makeDisabledButton();
 		}
 
