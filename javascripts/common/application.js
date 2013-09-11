@@ -1,29 +1,11 @@
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 ( function( M, $ ) {
-	var EventEmitter = M.require( 'eventemitter' ),
-		Router = M.require( 'Router' ),
+	var Router = M.require( 'Router' ),
 		PageApi = M.require( 'PageApi' ),
-		// FIXME: when mobileFrontend is an object with a constructor,
-		// just inherit from EventEmitter instead
-		eventEmitter = new EventEmitter(),
 		$viewportMeta, viewport,
 		template,
 		templates = {};
-
-	/**
-	 * See EventEmitter#on.
-	 */
-	function on(/* event, callback */ ) {
-		return eventEmitter.on.apply( eventEmitter, arguments );
-	}
-
-	/**
-	 * See EventEmitter#emit.
-	 */
-	function emit(/* event, arg1, arg2, ... */ ) {
-		return eventEmitter.emit.apply( eventEmitter, arguments );
-	}
 
 	template = {
 		/**
@@ -273,14 +255,12 @@
 
 	$.extend( M, {
 		init: init,
-		emit: emit,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getOrigin: getOrigin,
 		getSessionId: getSessionId,
 		isLoggedIn: isLoggedIn,
 		lockViewport: lockViewport,
 		log: log,
-		on: on,
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,

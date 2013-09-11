@@ -3,6 +3,8 @@
 var m = ( function( $ ) {
 	var
 		menu,
+		// FIXME: remove when header-loaded is in all cached pages
+		initialized = false,
 		inAlpha = mw.config.get( 'wgMFMode' ) === 'alpha',
 		inBeta = mw.config.get( 'wgMFMode' ) === 'beta';
 
@@ -14,10 +16,16 @@ var m = ( function( $ ) {
 		$( 'body' ).removeClass( 'navigation-enabled' );
 	}
 
-	$( function() {
+	function initialize() {
 		var
 			moved = false,
 			search = document.getElementById(  'searchInput' );
+
+		// FIXME: remove when header-loaded is in all cached pages
+		if ( initialized ) {
+			return;
+		}
+		initialized = true;
 
 		$( '#mw-mf-page-left a' ).click( function() {
 			toggleNavigation(); // close before following link so that certain browsers on back don't show menu open
@@ -78,7 +86,11 @@ var m = ( function( $ ) {
 				closeNavigation();
 			}
 		} );
-	} );
+	}
+
+	M.on( 'header-loaded', initialize );
+	// FIXME: remove when header-loaded is in all cached pages
+	$( initialize );
 
 	menu = {
 		close: closeNavigation,

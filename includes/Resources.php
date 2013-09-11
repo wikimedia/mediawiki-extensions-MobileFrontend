@@ -131,6 +131,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/common/polyfills.js',
 			'javascripts/common/modules.js',
+			'javascripts/common/Class.js',
+			'javascripts/common/eventemitter.js',
+			'javascripts/common/navigation.js',
 		),
 		'position' => 'top',
 	),
@@ -141,8 +144,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/externals/hogan.js',
-			'javascripts/common/Class.js',
-			'javascripts/common/eventemitter.js',
 			'javascripts/common/Router.js',
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
@@ -404,7 +405,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/CtaDrawer.js',
 			'javascripts/common/Overlay.js',
 			'javascripts/widgets/progress-bar.js',
-			'javascripts/common/navigation.js',
 			'javascripts/common/notification.js',
 			'javascripts/views/page.js',
 			// Upload specific code
