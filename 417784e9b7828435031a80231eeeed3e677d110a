@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_d35f9448",
+        "filename": "includes/formatters/HtmlFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-11T16:57:18Z",
+      "side": 1,
+      "message": "why the change in status?",
+      "revId": "417784e9b7828435031a80231eeeed3e677d110a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_f3649025",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-11T16:57:18Z",
+      "side": 1,
+      "message": "If we are moving this I would prefer a filterImages function that filterContent calls - for better readability.",
+      "revId": "417784e9b7828435031a80231eeeed3e677d110a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
