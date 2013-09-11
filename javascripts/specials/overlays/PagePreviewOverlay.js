@@ -31,7 +31,7 @@
 				var directionUrl;
 				options.heading = options.page.title;
 				options.preview = options.page.lead;
-				options.url = mw.util.wikiGetlink( options.heading );
+				options.url = M.pageApi.getPageUrl( options.heading );
 				options.readMoreLink = mw.msg( 'mobile-frontend-nearby-link' );
 
 				if ( options.latLngString ) {

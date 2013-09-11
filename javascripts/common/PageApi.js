@@ -28,6 +28,22 @@
 		},
 
 		/**
+		 * Generate a URL for a given page title.
+		 *
+		 * @param {string} title Title of the page to generate link for.
+		 * @param {Object} params A mapping of query parameter names to values,
+		 * e.g. { action: 'edit' }.
+		 * @return {string}
+		 */
+		getPageUrl: function( title, params ) {
+			var url = mw.config.get( 'wgArticlePath' ).replace( '$1', M.prettyEncodeTitle( title ) );
+			if ( !$.isEmptyObject( params ) ) {
+				url += '?' + $.param( params );
+			}
+			return url;
+		},
+
+		/**
 		 * Retrieve a page from the api
 		 *
 		 * @param {string} title the title of the page to be retrieved

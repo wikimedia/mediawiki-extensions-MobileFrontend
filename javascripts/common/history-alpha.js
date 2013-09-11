@@ -42,7 +42,7 @@
 		 * @param {String} pageTitle String representing the title of a page that should be loaded in the browser
 		 */
 		function navigateToPage( title ) {
-			History.pushState( null, title, mw.util.wikiGetlink( title ) );
+			History.pushState( null, title, M.pageApi.getPageUrl( title ) );
 		}
 
 		/**

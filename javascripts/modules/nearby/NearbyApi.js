@@ -101,7 +101,7 @@
 						page.pageimageClass = 'needsPhoto';
 					}
 					page.anchor = 'item_' + i;
-					page.url = mw.util.wikiGetlink( page.title );
+					page.url = M.pageApi.getPageUrl( page.title );
 					if ( page.coordinates ) { // FIXME: protect against bug 47133 (remove when resolved)
 						coords = page.coordinates[0];
 						lngLat = { latitude: coords.lat, longitude: coords.lon };
