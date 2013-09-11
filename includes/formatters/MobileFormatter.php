@@ -12,7 +12,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 	protected $expandableSections = false;
 	protected $mainPage = false;
 	protected $backToTopLink = true;
-	protected $flattenRedLinks = false;
+	protected $flattenRedLinks = true;
 
 	protected $headings = 0;
 
@@ -26,7 +26,6 @@ abstract class MobileFormatter extends HtmlFormatter {
 		parent::__construct( $html );
 
 		$this->title = $title;
-		$this->flattenRedLinks();
 	}
 
 	/**
@@ -52,6 +51,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		} else {
 			$formatter = new MobileFormatterHTML( $html, $title );
 			$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
+			$formatter->flattenRedLinks( !$context->isAlphaGroupMember() );
 		}
 
 		if ( $context->isBetaGroupMember() ) {

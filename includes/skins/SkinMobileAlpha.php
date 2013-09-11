@@ -4,6 +4,16 @@ class SkinMobileAlpha extends SkinMobileBeta {
 	public $template = 'MobileTemplateAlpha';
 	protected $mode = 'alpha';
 
+	public function outputPage( OutputPage $out = null ) {
+		wfProfileIn( __METHOD__ );
+		if ( !$out ) {
+			$out = $this->getOutput();
+		}
+		# Replace page content before DOMParse to make sure images are scrubbed and Zero transformations are applied
+		$this->handleNewPages( $out );
+		parent::outputPage( $out );
+	}
+
 	protected function getSearchPlaceHolderText() {
 		return wfMessage( 'mobile-frontend-placeholder-alpha' )->text();
 	}
@@ -17,6 +27,20 @@ class SkinMobileAlpha extends SkinMobileBeta {
 			$modules['mainpage'] = array();
 		}
 		return $modules;
+	}
+
+	protected function handleNewPages( OutputPage $out ) {
+		# Show error message
+		# @todo: What if user can't create new pages here?
+		$title = $this->getTitle();
+		if ( !$title->exists() && !$title->isSpecialPage() ) {
+			$out->clearHTML();
+			$out->addHTML(
+				Html::openElement( 'div', array( 'id' => 'mw-mf-newpage' ) )
+					. wfMessage( 'mobile-frontend-editor-newpage-prompt' )->parse()
+					. Html::closeElement( 'div' )
+			);
+		}
 	}
 
 	public function prepareData( BaseTemplate $tpl ) {
