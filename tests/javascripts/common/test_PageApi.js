@@ -7,13 +7,6 @@
 		}
 	} );
 
-	QUnit.test( '#getPageUrl, with parameters', 2, function( assert ) {
-		sinon.stub( mw.config, 'get' ).withArgs( 'wgArticlePath' ).returns( '/w/index.php/$1' );
-		assert.strictEqual( pageApi.getPageUrl( 'Foo', {} ), '/w/index.php/Foo' );
-		assert.strictEqual( pageApi.getPageUrl( 'Foo', { action: 'edit' } ), '/w/index.php/Foo?action=edit' );
-		mw.config.get.restore();
-	} );
-
 	QUnit.test( '#getPage', 2, function( assert ) {
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
