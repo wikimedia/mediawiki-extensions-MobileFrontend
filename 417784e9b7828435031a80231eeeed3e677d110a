@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_6589b7ec",
+        "filename": "includes/formatters/HtmlFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-09-11T18:55:27Z",
+      "side": 1,
+      "message": "Because it\u0027s now needed in the parent class.",
+      "parentUuid": "4946a543_d35f9448",
+      "revId": "417784e9b7828435031a80231eeeed3e677d110a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_f3649025",
         "filename": "includes/formatters/MobileFormatter.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-11T16:57:18Z",
       "side": 1,
       "message": "If we are moving this I would prefer a filterImages function that filterContent calls - for better readability.",
+      "revId": "417784e9b7828435031a80231eeeed3e677d110a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_65be1761",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-09-11T18:55:27Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "4946a543_f3649025",
       "revId": "417784e9b7828435031a80231eeeed3e677d110a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
