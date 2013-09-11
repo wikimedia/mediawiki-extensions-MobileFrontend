@@ -119,7 +119,6 @@ $messages['en'] = array (
 	'mobile-frontend-meta-data-issues-header' => 'Issues',
 	'mobile-frontend-meta-data-issues' => 'This page has some issues',
 
-	'mobile-frontend-ajax-preview-loading' => 'Loading page preview',
 	'mobile-frontend-page-saving' => 'Saving $1',
 
 	'mobile-frontend-user-cta' => 'Please login or sign up to see your notifications.',

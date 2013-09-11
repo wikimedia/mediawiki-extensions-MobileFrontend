@@ -178,31 +178,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-unavailable',
 			'mobile-frontend-editor-cta',
 			'mobile-frontend-editor-edit',
-			// modules/editor/EditorOverlay.js
-			'mobile-frontend-editor-continue',
-			'mobile-frontend-editor-cancel',
-			'mobile-frontend-editor-keep-editing',
-			'mobile-frontend-editor-license' => array( 'parse' ),
-			'mobile-frontend-editor-placeholder',
-			'mobile-frontend-editor-summary-placeholder',
-			'mobile-frontend-editor-cancel-confirm',
-			'mobile-frontend-editor-wait',
-			'mobile-frontend-editor-guider',
-			'mobile-frontend-editor-success',
-			'mobile-frontend-editor-success-landmark-1' => array( 'parse' ),
-			'mobile-frontend-editor-refresh',
-			'mobile-frontend-editor-error',
-			'mobile-frontend-editor-error-conflict',
-			'mobile-frontend-editor-error-loading',
-			'mobile-frontend-editor-preview-header',
-			'mobile-frontend-editor-error-preview',
 			// modules/editor/EditorOverlay.js and modules/talk.js
 			'mobile-frontend-editor-save',
 		),
 		'localBasePath' => $localBasePath,
 		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
-			'overlays/editor',
+			'LoadingOverlay',
 			'section',
 			'wikitext/commons-upload',
 			// LanguageOverlay.js
@@ -233,6 +215,46 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'ReferencesDrawer',
 		),
 		'class' => 'MFResourceLoaderModule',
+	),
+
+	'mobile.editor' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.editor.plumbing',
+		),
+		'scripts' => array(
+			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/EditorOverlay.js',
+		),
+	),
+
+	'mobile.editor.plumbing' => array(
+		'class' => 'MFResourceLoaderModule',
+		'localBasePath' => $localBasePath,
+		'localTemplateBasePath' => $localBasePath . '/templates',
+		'templates' => array(
+			'overlays/editor',
+		),
+		'messages' => array(
+			// modules/editor/EditorOverlay.js
+			'mobile-frontend-editor-continue',
+			'mobile-frontend-editor-cancel',
+			'mobile-frontend-editor-keep-editing',
+			'mobile-frontend-editor-license' => array( 'parse' ),
+			'mobile-frontend-editor-placeholder',
+			'mobile-frontend-editor-summary-placeholder',
+			'mobile-frontend-editor-cancel-confirm',
+			'mobile-frontend-editor-wait',
+			'mobile-frontend-editor-guider',
+			'mobile-frontend-editor-success',
+			'mobile-frontend-editor-success-landmark-1' => array( 'parse' ),
+			'mobile-frontend-editor-refresh',
+			'mobile-frontend-editor-error',
+			'mobile-frontend-editor-error-conflict',
+			'mobile-frontend-editor-error-loading',
+			'mobile-frontend-editor-preview-header',
+			'mobile-frontend-editor-error-preview',
+		),
 	),
 
 	'mobile.beta.plumbing' => array(
@@ -405,6 +427,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/Drawer.js',
 			'javascripts/common/CtaDrawer.js',
 			'javascripts/common/Overlay.js',
+			'javascripts/common/LoadingOverlay.js',
 			'javascripts/widgets/progress-bar.js',
 			'javascripts/common/notification.js',
 			'javascripts/views/page.js',
@@ -472,8 +495,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.styles',
 		),
 		'scripts' => array(
-			'javascripts/modules/editor/EditorApi.js',
-			'javascripts/modules/editor/EditorOverlay.js',
 			'javascripts/modules/editor/editor.js',
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/issues/issues.js',
@@ -565,7 +586,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'articleList',
 			'overlays/pagePreview',
-			'overlays/loading',
 		),
 	),
 
@@ -576,7 +596,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'messages' => array(
 			// preview.js
-			'mobile-frontend-ajax-preview-loading',
 			'mobile-frontend-nearby-directions',
 			'mobile-frontend-nearby-link',
 		),
