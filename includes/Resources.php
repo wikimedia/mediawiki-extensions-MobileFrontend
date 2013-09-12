@@ -398,6 +398,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.plumbing',
 			'mobile.toast.styles',
 			'mediawiki.jqueryMsg',
+			'mediawiki.util',
 		),
 		'scripts' => array(
 			'javascripts/common/View.js',
