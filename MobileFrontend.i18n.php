@@ -678,7 +678,7 @@ Parameters:
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
-	'mobile-frontend-editor-newpage-prompt' => 'Message shown when a page doesn\'t exist.',
+	'mobile-frontend-editor-newpage-prompt' => "Message shown when a page doesn't exist.",
 	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon',
 	'mobile-frontend-editor-unavailable' => 'Toast message that appears when a user has a browser incapable of editing when they click on the edit button.',
 	'mobile-frontend-editor-cta' => "Caption for call to action when an anonymous user clicks on edit icon. (Note the mobile site currently doesn't allow anonymous editing.)",
@@ -704,7 +704,7 @@ See also:
 	'mobile-frontend-editor-wait' => 'Text that displays while a page edit is being saved.',
 	'mobile-frontend-editor-guider' => 'Text that explains to editors with no edits that tapping "Continue" will allow them to see a preview and save.
 
-Refers the message {{msg-mw|Mobile-frontend-editor-continue}}.',
+Refers to {{msg-mw|Mobile-frontend-editor-continue}}.',
 	'mobile-frontend-editor-success' => 'Text that displays when a page edit has been successfully saved.
 
 Used as "toast" message.
@@ -3745,6 +3745,7 @@ $messages['de'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ hochgeladene Dateien',
 	'mobile-frontend-photo-upload-cta' => 'Bitte melde dich an oder registriere dich, um ein Bild hinzuzufügen.',
 	'mobile-frontend-photo-upload-login' => 'Du musst angemeldet sein, um ein Bild hinzuzufügen.',
+	'mobile-frontend-editor-newpage-prompt' => 'Diese Seite ist nicht vorhanden. Warum bist du nicht mutig und erstellst sie?',
 	'mobile-frontend-editor-disabled' => 'Du bist nicht berechtigt, diese Seite zu bearbeiten.',
 	'mobile-frontend-editor-unavailable' => 'Das mobile Bearbeiten ist derzeit für deinen Browser nicht verfügbar. Bitte versuche einen anderen Browser.',
 	'mobile-frontend-editor-cta' => 'Du musst angemeldet sein, um Seiten auf mobilen Geräten zu bearbeiten.',
@@ -5166,6 +5167,7 @@ $messages['fi'] = array(
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Keskustelun aihe',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Mitä on mielessäsi?',
 	'mobile-frontend-talk-edit-summary' => 'Uusi keskusteluaihe: $1',
+	'mobile-frontend-media-details' => 'Tiedot',
 );
 
 /** Faroese (føroyskt)
@@ -6219,6 +6221,7 @@ $messages['gl'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '+500 cargas',
 	'mobile-frontend-photo-upload-cta' => 'Acceda ao sistema ou cree unha conta para engadir unha imaxe.',
 	'mobile-frontend-photo-upload-login' => 'Debe acceder ao sistema para engadir unha imaxe.',
+	'mobile-frontend-editor-newpage-prompt' => 'Esta páxina non existe. Sexa valente e empece a escribila!',
 	'mobile-frontend-editor-disabled' => 'Non lle está permitido editar esta páxina.',
 	'mobile-frontend-editor-unavailable' => 'A edición a través do móbil non está dispoñible no seu navegador. Probe cun navegador diferente.',
 	'mobile-frontend-editor-cta' => 'Debe acceder ao sistema para editar páxinas desde o móbil.',
@@ -7866,6 +7869,7 @@ in tutto il mondo',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ caricamenti',
 	'mobile-frontend-photo-upload-cta' => "Effettua l'accesso o registrati per aggiungere un'immagine.",
 	'mobile-frontend-photo-upload-login' => "È necessario effettuare l'accesso per aggiungere un'immagine.",
+	'mobile-frontend-editor-newpage-prompt' => 'Questa pagina non esiste. Perché non essere audaci e crearla?',
 	'mobile-frontend-editor-disabled' => 'Non è consentito modificare questa pagina.',
 	'mobile-frontend-editor-unavailable' => 'La modifica attraverso dispositivo mobile non è attualmente disponibile sul tuo browser. Prova un browser diverso.',
 	'mobile-frontend-editor-cta' => "Devi aver effettuato l'accesso per poter modificare pagine da dispositivi mobili.",
@@ -8109,6 +8113,7 @@ $messages['ja'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'アップロード 500+ 件',
 	'mobile-frontend-photo-upload-cta' => '画像を追加するにはログインまたは利用者登録をしてください。',
 	'mobile-frontend-photo-upload-login' => '画像を追加するにはログインしてください。',
+	'mobile-frontend-editor-newpage-prompt' => 'このページは存在しません。作成してみませんか?',
 	'mobile-frontend-editor-disabled' => 'あなたはこのページの編集を許可されていません。',
 	'mobile-frontend-editor-unavailable' => 'ご利用中のブラウザーでは、現在編集できません。他のブラウザーをお試しください。',
 	'mobile-frontend-editor-cta' => '携帯機器でページを編集するにはログインしてください。',
@@ -10245,6 +10250,7 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ подигања',
 	'mobile-frontend-photo-upload-cta' => 'Најавете се или регистрирајте се за да можете да ставате слики.',
 	'mobile-frontend-photo-upload-login' => 'Мора да сте најавени за да ставате слики.',
+	'mobile-frontend-editor-newpage-prompt' => 'Страницата не постои. Бидете смели — Направете ја!',
 	'mobile-frontend-editor-disabled' => 'Не ви е дозволено да ја уредувате оваа страница.',
 	'mobile-frontend-editor-unavailable' => 'Вашиот прелистувач моментално не поддржува мобилно уредување. Користете друг.',
 	'mobile-frontend-editor-cta' => 'Мора да се најавите за да уредувате страници од мобилен уред.',
@@ -15108,6 +15114,7 @@ $messages['uk'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ завантажень',
 	'mobile-frontend-photo-upload-cta' => 'Будь ласка, увійдіть або зареєструйтесь, щоб додати зображення.',
 	'mobile-frontend-photo-upload-login' => 'Ви повинні увійти в систему, щоб додати зображення.',
+	'mobile-frontend-editor-newpage-prompt' => 'Ця сторінка не існує. Чому б не бути сміливим і створити її?',
 	'mobile-frontend-editor-disabled' => 'Вам не дозволено редагувати цю сторінку.',
 	'mobile-frontend-editor-unavailable' => 'Мобільне редагування наразі недоступне у вашому веб-переглядачі. Будь ласка, спробуйте інший веб-переглядач.',
 	'mobile-frontend-editor-cta' => 'Ви повинні увійти в систему, щоб редагувати сторінки на мобільному телефоні.',
@@ -15899,6 +15906,7 @@ $messages['yue'] = array(
  * @author Li3939108
  * @author Liangent
  * @author Linforest
+ * @author Liuxinyu970226
  * @author Mys 721tx
  * @author PhiLiP
  * @author Shirayuki
@@ -16111,6 +16119,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+上传',
 	'mobile-frontend-photo-upload-cta' => '请登录或注册以添加图像。',
 	'mobile-frontend-photo-upload-login' => '你必需登录以添加图像。',
+	'mobile-frontend-editor-newpage-prompt' => '此页面不存在。为什么不勇于创建它呢？',
 	'mobile-frontend-editor-disabled' => '你不能编辑本页。',
 	'mobile-frontend-editor-unavailable' => '移动版编辑目前不能在你的浏览器上使用。请尝试使用其他浏览器。',
 	'mobile-frontend-editor-cta' => '你必须登录以在移动设备上编辑页面。',
