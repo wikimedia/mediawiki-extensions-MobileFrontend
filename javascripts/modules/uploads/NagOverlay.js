@@ -8,7 +8,7 @@
 			learnMore: mw.msg( 'parentheses', mw.msg( 'mobile-frontend-learn-more' ) )
 		},
 
-		template: M.template.get( 'photoNag' ),
+		template: M.template.get( 'uploads/NagOverlay' ),
 
 		initialize: function( options ) {
 			this.learnMoreOverlay = new LearnMoreOverlay( {

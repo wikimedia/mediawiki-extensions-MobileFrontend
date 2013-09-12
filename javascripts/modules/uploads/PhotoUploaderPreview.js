@@ -18,7 +18,7 @@
 
 		className: 'mw-mf-overlay photo-overlay',
 
-		template: M.template.get( 'photoUploadPreview' ),
+		template: M.template.get( 'uploads/PhotoUploadPreview' ),
 
 		initialize: function( options ) {
 			this.log = options.log;

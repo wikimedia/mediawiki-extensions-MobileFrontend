@@ -156,20 +156,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.stable.plumbing' => array(
 		'messages' => array(
-			// NagOverlay.js
-			'mobile-frontend-photo-license' => array( 'parse' ),
-			'mobile-frontend-photo-nag-1-bullet-1-heading',
-			'mobile-frontend-photo-nag-1-bullet-1-text' => array( 'parse' ),
-			'mobile-frontend-photo-nag-1-bullet-2-heading',
-			'mobile-frontend-photo-nag-1-bullet-2-text',
-			'mobile-frontend-photo-nag-2-bullet-1-heading',
-			'mobile-frontend-photo-nag-3-bullet-1-heading',
-			'parentheses',
-			'mobile-frontend-learn-more',
-			'mobile-frontend-photo-nag-learn-more-heading',
-			'mobile-frontend-photo-nag-learn-more-1' => array( 'parse' ),
-			'mobile-frontend-photo-nag-learn-more-2' => array( 'parse' ),
-			'mobile-frontend-photo-nag-learn-more-3' => array( 'parse' ),
 			// page.js
 			'mobile-frontend-talk-overlay-header',
 			'mobile-frontend-language-article-heading',
@@ -189,27 +175,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'wikitext/commons-upload',
 			// LanguageOverlay.js
 			'overlays/languages',
-			// leadphoto.js
-			'leadPhoto',
 			'overlay',
 			'overlays/cleanup',
-			'overlays/learnMore',
 			// search-2.js
 			'articleList',
 			'overlays/search/search',
 			// page.js
 			'page',
 			'languageSection',
-			// PhotoUploader.js
+			// PhotoUploaderButton.js
 			// For new page action menu
-			'photoUploadAction',
-			'photoUploader',
-			// PhotoUploaderPreview.js
-			'photoUploadPreview',
-			// PhotoUploadProgress.js
-			'photoUploadProgress',
-			// NagOverlay.js
-			'photoNag',
+			'uploads/LeadPhotoUploaderButton',
+			// FIXME: this should be in special.uploads.plumbing (need to split
+			// code in PhotoUploaderButton.js into separate files too)
+			'uploads/PhotoUploaderButton',
+
 			'ctaDrawer',
 			// mf-references.js
 			'ReferencesDrawer',
@@ -254,6 +234,80 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error-loading',
 			'mobile-frontend-editor-preview-header',
 			'mobile-frontend-editor-error-preview',
+		),
+	),
+
+	'mobile.uploads' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.uploads.plumbing',
+		),
+		'scripts' => array(
+			'javascripts/modules/uploads/LearnMoreOverlay.js',
+			'javascripts/modules/uploads/PhotoApi.js',
+			'javascripts/modules/uploads/NagOverlay.js',
+			'javascripts/modules/uploads/PhotoUploadProgress.js',
+			'javascripts/modules/uploads/PhotoUploaderPreview.js',
+			'javascripts/modules/uploads/LeadPhoto.js',
+			'javascripts/modules/uploads/PhotoUploader.js',
+		),
+	),
+
+	'mobile.uploads.plumbing' => array(
+		'class' => 'MFResourceLoaderModule',
+		'localBasePath' => $localBasePath,
+		'localTemplateBasePath' => $localBasePath . '/templates',
+		'templates' => array(
+			'uploads/PhotoUploadPreview',
+			'uploads/PhotoUploadProgress',
+			'uploads/NagOverlay',
+			'uploads/LearnMoreOverlay',
+			'uploads/LeadPhoto',
+		),
+		'messages' => array(
+			'mobile-frontend-photo-upload-success-article',
+			'mobile-frontend-photo-upload-error',
+
+			// LearnMoreOverlay.js
+			'mobile-frontend-photo-ownership-confirm',
+
+			// PhotoApi.js
+			'mobile-frontend-photo-article-edit-comment',
+			'mobile-frontend-photo-article-donate-comment',
+			'mobile-frontend-photo-upload-error-filename',
+			'mobile-frontend-photo-upload-comment',
+
+			// PhotoUploaderPreview.js
+			'mobile-frontend-photo-ownership',
+			'mobile-frontend-photo-ownership-help',
+			'mobile-frontend-photo-caption-placeholder',
+			'mobile-frontend-image-loading',
+			'mobile-frontend-photo-submit',
+			'mobile-frontend-photo-cancel',
+			'mobile-frontend-photo-ownership-bullet-one',
+			'mobile-frontend-photo-ownership-bullet-two',
+			'mobile-frontend-photo-ownership-bullet-three',
+			'mobile-frontend-photo-upload-error-file-type',
+
+			// PhotoUploadProgress.js
+			'mobile-frontend-image-uploading-wait',
+			'mobile-frontend-image-uploading-long',
+			'mobile-frontend-image-uploading-cancel',
+
+			// NagOverlay.js
+			'mobile-frontend-photo-license' => array( 'parse' ),
+			'mobile-frontend-photo-nag-1-bullet-1-heading',
+			'mobile-frontend-photo-nag-1-bullet-1-text' => array( 'parse' ),
+			'mobile-frontend-photo-nag-1-bullet-2-heading',
+			'mobile-frontend-photo-nag-1-bullet-2-text',
+			'mobile-frontend-photo-nag-2-bullet-1-heading',
+			'mobile-frontend-photo-nag-3-bullet-1-heading',
+			'parentheses',
+			'mobile-frontend-learn-more',
+			'mobile-frontend-photo-nag-learn-more-heading',
+			'mobile-frontend-photo-nag-learn-more-1' => array( 'parse' ),
+			'mobile-frontend-photo-nag-learn-more-2' => array( 'parse' ),
+			'mobile-frontend-photo-nag-learn-more-3' => array( 'parse' ),
 		),
 	),
 
@@ -432,13 +486,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/notification.js',
 			'javascripts/views/page.js',
 			// Upload specific code
-			'javascripts/modules/uploads/LearnMoreOverlay.js',
-			'javascripts/modules/uploads/PhotoApi.js',
-			'javascripts/modules/uploads/NagOverlay.js',
-			'javascripts/modules/uploads/PhotoUploadProgress.js',
-			'javascripts/modules/uploads/PhotoUploaderPreview.js',
-			'javascripts/modules/uploads/LeadPhoto.js',
-			'javascripts/modules/uploads/PhotoUploader.js',
+			'javascripts/modules/uploads/PhotoUploaderButton.js',
 			// Language specific code
 			'javascripts/common/languages/LanguageOverlay.js',
 		),
@@ -449,36 +497,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-drawer-cancel',
 			'mobile-frontend-overlay-escape',
 
-			// LearnMoreOverlay.js, newbie.js
-			'mobile-frontend-photo-ownership-confirm',
-			'cancel',
-
-			// PhotoApi.js
-			'mobile-frontend-photo-article-edit-comment',
-			'mobile-frontend-photo-article-donate-comment',
-			'mobile-frontend-photo-upload-error-filename',
-			'mobile-frontend-photo-upload-comment',
-
-			// PhotoUploader.js
-			'mobile-frontend-photo-upload-error',
+			// PhotoUploaderButton.js
 			'mobile-frontend-photo-upload-cta',
 
-			// PhotoUploaderPreview.js
-			'mobile-frontend-photo-ownership',
-			'mobile-frontend-photo-ownership-help',
-			'mobile-frontend-photo-caption-placeholder',
-			'mobile-frontend-image-loading',
-			'mobile-frontend-photo-submit',
-			'mobile-frontend-photo-cancel',
-			'mobile-frontend-photo-ownership-bullet-one',
-			'mobile-frontend-photo-ownership-bullet-two',
-			'mobile-frontend-photo-ownership-bullet-three',
-			'mobile-frontend-photo-upload-error-file-type',
-
-			// PhotoUploadProgress.js
-			'mobile-frontend-image-uploading-wait',
-			'mobile-frontend-image-uploading-long',
-			'mobile-frontend-image-uploading-cancel',
+			// LearnMoreOverlay.js, newbie.js
+			'cancel',
 
 			// LanguageOverlay.js
 			'mobile-frontend-language-header',
@@ -530,7 +553,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-upload-protected',
 			'mobile-frontend-photo-upload-anon',
 			'mobile-frontend-photo-upload-unavailable',
-			'mobile-frontend-photo-upload-success-article',
 			'mobile-frontend-photo-upload',
 
 			// mf-watchstar.js
@@ -560,6 +582,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	/**
 		* Special page modules
+		* FIXME: Remove the need for these by making more reusable CSS
+		* FIXME: Rename these modules in the interim to clarify that they are modules for use on special pages
 		*
 		* Note: Use correct names to ensure modules load on pages
 		* Name must be the name of the special page lowercased prefixed by 'mobile.'
@@ -681,7 +705,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// Special:Uploads
-	'mobile.uploads.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
+	'mobile.special.uploads.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
 		'templates' => array(
 			'specials/uploads/carousel',
 			'specials/uploads/photo',
@@ -690,9 +714,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.uploads.plumbing',
+			'mobile.special.uploads.plumbing',
 			'mobile.stable.styles',
 			'mobile.stable.common',
+			'mobile.uploads',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-generic',
