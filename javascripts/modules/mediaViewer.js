@@ -92,7 +92,7 @@
 		}
 	} );
 
-	M.router.route( /^image-(.+)$/, function( hrefPart ) {
+	M.router.route( /^image\/(.+)$/, function( hrefPart ) {
 		// FIXME: replace hrefPart with title when we get rid of History.js
 		// (which apart from slashes doesn't like dots...)
 		var $a = $( 'a[href*="' + hrefPart + '"]' ), title = $a.data( 'title' );
@@ -113,7 +113,7 @@
 
 			if ( match ) {
 				$a.data( 'title', match[1] );
-				$a.attr( 'href', '#image-' + match[2] );
+				$a.attr( 'href', '#image/' + match[2] );
 			}
 		} );
 
