@@ -47,11 +47,17 @@
 		opacity: 0;
 		// delay visibility transition to make other transitions visible
 		// http://fvsch.com/code/transition-fade/test5.html
-		.transition( transform @duration, opacity @duration, visibility 0s @duration, bottom 0s @duration );
+		// need to assign to a temporary variable to preserve commas
+		// https://github.com/leafo/lessphp/issues/105#issuecomment-2872598
+		@transition: @duration, opacity @duration, visibility 0s @duration, bottom 0s @duration;
+		.transition-transform( @transition );
 
 		&.visible {
 			bottom: 0;
-			.transition( transform @duration, opacity @duration );
+			// need to assign to a temporary variable to preserve commas
+			// https://github.com/leafo/lessphp/issues/105#issuecomment-2872598
+			@transition: @duration, opacity @duration;
+			.transition-transform( @transition );
 			visibility: visible;
 			opacity: 1;
 			.transform( translate3d(0, 0, 0) );

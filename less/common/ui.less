@@ -1,3 +1,4 @@
+@import "mediawiki.mixins";
 @import "buttons.less";
 @import 'mainmenu.less';
 
@@ -80,7 +81,7 @@
 
 .client-js {
 	#mw-mf-main-menu-button {
-		/* @embed */background-image: url(images/menu/main.png);
+		.background-image('images/menu/main.png');
 	}
 
 	.searchSubmit {

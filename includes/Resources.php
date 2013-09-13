@@ -84,17 +84,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.mainpage.styles' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'styles' => array(
-			'stylesheets/mainpage/mainpage.css',
+			'less/mainpage/mainpage.less',
 		),
 		'group' => 'other',
-	),
-
-	// Filepages
-	'mobile.file.styles' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup' ),
-		'styles' => array(
-			'stylesheets/file/filepage.css',
-		),
 	),
 
 	'mobile.file.scripts' => $wgMFMobileResourceBoilerplate + array(
@@ -107,31 +99,31 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.styles.page' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'styles' => array(
-			'stylesheets/common/enwp.css'
+			'less/common/enwp.less'
 		),
 	),
 
 	'mobile.pagelist.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/common/pagelist.css',
+			'less/common/pagelist.less',
 		),
 		'position' => 'top',
 	),
 
 	'mobile.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/common/reset.css',
-			'stylesheets/common/common.css',
-			'stylesheets/common/ui.css',
-			'stylesheets/common/typography.css',
-			'stylesheets/common/footer.css',
-			'stylesheets/modules/toggle.css',
+			'less/common/reset.less',
+			'less/common/common.less',
+			'less/common/ui.less',
+			'less/common/typography.less',
+			'less/common/footer.less',
+			'less/modules/toggle.less',
 			// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
-			'stylesheets/common/navigation.css',
-			'stylesheets/common/overlays.css',
-			'stylesheets/common/drawer.css',
-			'stylesheets/common/hacks.css',
-			'stylesheets/common/pageactions.css',
+			'less/common/navigation.less',
+			'less/common/overlays.less',
+			'less/common/drawer.less',
+			'less/common/hacks.less',
+			'less/common/pageactions.less',
 		),
 		'position' => 'top',
 	),
@@ -358,8 +350,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta.common',
 		),
 		'styles' => array(
-			'stylesheets/modules/notifications.css',
-			'stylesheets/modules/talk.css',
+			'less/modules/notifications.less',
+			'less/modules/talk.less',
 		),
 		'scripts' => array(
 			'javascripts/modules/mf-toggle-dynamic.js',
@@ -434,7 +426,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'styles' => array(
 		),
 		'scripts' => array(
-			'stylesheets/actions/history.css',
+			'less/actions/history.less',
 		),
 		'group' => 'other',
 	),
@@ -465,8 +457,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-media-details',
 		),
 		'styles' => array(
-			'stylesheets/modules/nearbypages.css',
-			'stylesheets/modules/mediaViewer.css',
+			'less/modules/nearbypages.less',
+			'less/modules/mediaViewer.less',
 		),
 		'scripts' => array(
 			'javascripts/externals/micro.tap.js',
@@ -481,22 +473,21 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.toast.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/common/notifications.css',
+			'less/common/notifications.less',
 		),
 		'position' => 'top',
 	),
 
 	'mobile.stable.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/common/common-js.css',
-			'stylesheets/modules/languages.css',
-			'stylesheets/modules/search.css',
-			'stylesheets/modules/references.css',
-			'stylesheets/modules/issues.css',
-			'stylesheets/modules/watchstar.css',
-			'stylesheets/modules/uploads.css',
-			'stylesheets/modules/tutorials.css',
-			'stylesheets/modules/editor.css',
+			'less/common/common-js.less',
+			'less/modules/languages.less',
+			'less/modules/search.less',
+			'less/modules/issues.less',
+			'less/modules/watchstar.less',
+			'less/modules/uploads.less',
+			'less/modules/tutorials.less',
+			'less/modules/editor.less',
 		),
 		'position' => 'top',
 	),
@@ -625,12 +616,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		*/
 	'mobile.mobilemenu.styles' => $wgMFMobileSpecialPageResourceStyleBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/mobilemenu.css',
+			'less/specials/mobilemenu.less',
 		),
 	),
 	'mobile.mobileoptions.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/mobileoptions.css',
+			'less/specials/mobileoptions.less',
 		),
 	),
 	'mobile.mobileoptions.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
@@ -664,7 +655,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/nearby.css',
+			'less/specials/nearby.less',
 		),
 	),
 
@@ -715,13 +706,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.notifications.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/notifications.css',
+			'less/specials/notifications.less',
 		),
 		'position' => 'top',
 	),
 	'mobile.search.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/search.css',
+			'less/specials/search.less',
 		),
 	),
 	'mobile.watchlist.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
@@ -734,18 +725,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.watchlist.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/watchlist.css',
+			'less/specials/watchlist.less',
 		),
 	),
 	'mobile.userlogin.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/userlogin.css',
+			'less/specials/userlogin.less',
 		),
 	),
 	// Special:UserProfile
 	'mobile.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/userprofile.css',
+			'less/specials/userprofile.less',
 		),
 	),
 	// Special:Uploads
@@ -787,13 +778,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.uploads.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/uploads.css',
+			'less/specials/uploads.less',
 		),
 	),
 	'mobile.mobilediff.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
-			'stylesheets/specials/watchlist.css',
-			'stylesheets/specials/mobilediff.css',
+			'less/specials/watchlist.less',
+			'less/specials/mobilediff.less',
 		),
 	),
 

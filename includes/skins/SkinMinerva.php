@@ -248,7 +248,6 @@ class SkinMinerva extends SkinTemplate {
 		// specific to current context
 		if ( $title->inNamespace( NS_FILE ) ) {
 			$modules['file'] = array( 'mobile.file.scripts' );
-			$out->addModuleStyles( 'mobile.file.styles' );
 		}
 
 		if ( !$title->isSpecialPage() ) {

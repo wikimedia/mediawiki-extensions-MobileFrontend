@@ -4,5 +4,4 @@
 .*.swp
 .idea/
 node_modules/
-.lessignore
 tmp/

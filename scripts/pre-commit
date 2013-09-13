@@ -3,7 +3,7 @@
 # Enable this pre-commit hook by executing the following from the project root directory
 # $ ln -s $PWD/scripts/pre-commit .git/hooks/pre-commit
 if git diff --name-only --cached | grep -P '\.less$' ; then
-	make less
+	make checkless
 fi
 make jshint
 if git diff --name-only --cached | grep -P '\.js$' ; then
