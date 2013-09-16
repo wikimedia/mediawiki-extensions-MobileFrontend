@@ -28,7 +28,7 @@ window.History = {
 		return {
 			data: data,
 			title: title,
-			id: url || window.location.pathname
+			url: url || window.location.pathname
 		};
 	}
 
