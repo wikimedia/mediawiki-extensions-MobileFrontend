@@ -299,6 +299,8 @@ class SkinMobile extends SkinMinerva {
 	 * @param QuickTemplate $tpl
 	 */
 	protected function prepareFooterLinks( $tpl ) {
+		global $wgRightsPage, $wgRightsUrl, $wgRightsText;
+
 		$req = $this->getRequest();
 
 		$url = MobileContext::singleton()->getDesktopUrl( wfExpandUrl(
@@ -320,7 +322,20 @@ class SkinMobile extends SkinMinerva {
 </ul>
 HTML;
 
-		$licenseText = wfMessage( 'mobile-frontend-footer-license' )->inContentLanguage()->parse();
+		if ( $wgRightsPage ) {
+			$title = Title::newFromText( $wgRightsPage );
+			$link = Linker::linkKnown( $title, $wgRightsText );
+		} elseif ( $wgRightsUrl ) {
+			$link = Linker::makeExternalLink( $wgRightsUrl, $wgRightsText );
+		} elseif ( $wgRightsText ) {
+			$link = $wgRightsText;
+		} else {
+			// Give up
+			$link = '';
+		}
+		// The license message is displayed in the content language rather than the user
+		// language. See Skin::getCopyright.
+		$licenseText = $this->msg( 'copyright' )->rawParams( $link )->inContentLanguage()->text();
 
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-license', $licenseText );
