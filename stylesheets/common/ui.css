@@ -264,7 +264,6 @@ input[type=submit] {
 body.navigation-enabled {
   border-left: solid 12px #252525;
   background: #4e4e4e;
-  height: 100%;
 }
 body.navigation-enabled #mw-mf-viewport {
   margin-left: -12px;

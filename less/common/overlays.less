@@ -1,15 +1,9 @@
 @import "../mixins.less";
 
 .overlay-enabled {
-	#mw-mf-page-center,
-	#content_wrapper {
+	#mw-mf-page-center {
 		// without this when overlay is open the content is visible underneath the overlay
-		height: 100%;
-		overflow: hidden;
-	}
-
-	#footer {
-		display: none !important;
+		display: none;
 	}
 
 	.mw-mf-overlay {
