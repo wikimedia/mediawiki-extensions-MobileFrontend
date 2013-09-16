@@ -602,15 +602,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// NearbyApi.js
 			'mobile-frontend-nearby-distance',
 			'mobile-frontend-nearby-distance-meters',
-			// other
+			// Nearby.js
 			'mobile-frontend-nearby-requirements',
 			'mobile-frontend-nearby-requirements-guidance',
 			'mobile-frontend-nearby-error',
 			'mobile-frontend-nearby-error-guidance',
-			'mobile-frontend-nearby-title',
 			'mobile-frontend-nearby-loading',
 			'mobile-frontend-nearby-noresults',
 			'mobile-frontend-nearby-noresults-guidance',
+			'mobile-frontend-nearby-lookup-ui-error',
+			'mobile-frontend-nearby-lookup-ui-error-guidance',
 		),
 		'scripts' => array(
 			'javascripts/modules/nearby/NearbyApi.js',
@@ -625,10 +626,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'messages' => array(
 			// specials/nearby.js
 			'mobile-frontend-nearby-refresh',
-			'mobile-frontend-nearby-lookup-ui-error',
-			'mobile-frontend-nearby-lookup-ui-error-guidance',
-			'mobile-frontend-nearby-requirements',
-			'mobile-frontend-nearby-requirements-guidance',
 		),
 		'scripts' => array(
 			'javascripts/specials/nearby.js',
