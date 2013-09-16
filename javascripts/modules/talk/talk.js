@@ -22,10 +22,18 @@
 
 		// FIXME: use Page's mechanisms for retrieving page data instead
 		M.pageApi.getPage( talkPage ).fail( function( resp ) {
-			if ( resp.error && resp.error.code === 'missingtitle' ) {
-				renderTalkOverlay( {
-					sections: [], title: talkPage
-				} );
+			var code;
+			if ( resp.error ) {
+				code = resp.error.code;
+				if ( code === 'missingtitle' ) {
+					renderTalkOverlay( {
+						sections: [], title: talkPage
+					} );
+				// FIXME: [LQT] remove when liquid threads is dead (see Bug 51586)
+				} else if ( code === 'lqt' ) {
+					// Force a visit to the page
+					window.location = mw.util.wikiGetlink( talkPage );
+				}
 			}
 		} ).done( function( pageData ) {
 			renderTalkOverlay( pageData );

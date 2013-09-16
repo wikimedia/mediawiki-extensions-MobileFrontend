@@ -17,6 +17,9 @@ class ApiMobileView extends ApiBase {
 		parent::__construct( $main, $action );
 	}
 
+	/**
+	 * FIXME: Write some unit tests for API results
+	 */
 	public function execute() {
 		wfProfileIn( __METHOD__ );
 
@@ -107,7 +110,9 @@ class ApiMobileView extends ApiBase {
 				$result[] = $section;
 			}
 		}
-		if ( $data['liquidthreads'] ) {
+		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
+		// Inform ppl if the page is infested with LiquidThreads but that's the only thing we support about it.
+		if ( class_exists( 'LqtDispatch' ) && LqtDispatch::isLqtPage( $title ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'liquidthreads' => '' )
 			);
@@ -229,7 +234,6 @@ class ApiMobileView extends ApiBase {
 				'text' => array( $html ),
 				'refsections' => array(),
 				'lastmodified' => $wp->getTimestamp(),
-				'liquidthreads' => false,
 			);
 		} else {
 			wfProfileIn( __METHOD__ . '-sections' );
@@ -260,9 +264,6 @@ class ApiMobileView extends ApiBase {
 				$data['text'][] = $chunk;
 			}
 			$data['lastmodified'] = $wp->getTimestamp();
-			// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
-			// Inform ppl if the page is infested with LiquidThreads but that's the only thing we support about it.
-			$data['liquidthreads'] = isset( $parserOutput->mLqtReplacements );
 
 			wfProfileOut( __METHOD__ . '-sections' );
 		}
