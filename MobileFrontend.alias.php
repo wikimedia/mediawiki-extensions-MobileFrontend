@@ -70,6 +70,10 @@ $specialPageAliases['eo'] = array(
 /** Estonian (eesti) */
 $specialPageAliases['et'] = array(
 	'MobileOptions' => array( 'Mobiili_suvandid' ),
+	'Uploads' => array( 'Üleslaaditud_failid' ),
+	'MobileDiff' => array( 'Mobiilierinevus' ),
+	'MobileMenu' => array( 'Mobiili_menüü' ),
+	'Nearby' => array( 'Lähikond' ),
 );
 
 /** Hebrew (עברית) */
