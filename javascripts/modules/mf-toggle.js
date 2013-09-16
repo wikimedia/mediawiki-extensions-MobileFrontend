@@ -51,6 +51,7 @@ var MIN_SECTIONS = 2, toggle = ( function() {
 	// page is not long enough to collapse so don't worry
 	if ( $( '#content h2' ).length < MIN_SECTIONS ) {
 		$( 'html' ).addClass( 'stub' );
+		$( '.section_heading, .content_block' ).addClass( 'openSection' );
 	} else {
 		init();
 	}
