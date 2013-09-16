@@ -122,7 +122,6 @@ blockquote {
   margin-top: 20px;
   margin-right: 0;
   position: relative;
-  width: 90%;
 }
 blockquote:before {
   content: open-quote;
@@ -135,6 +134,6 @@ blockquote:after {
   font-weight: bold;
   float: right;
   position: absolute;
-  right: -10px;
+  right: 0;
   bottom: 0;
 }
