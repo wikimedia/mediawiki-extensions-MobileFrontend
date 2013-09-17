@@ -108,12 +108,12 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'banners', $banners );
 		$tpl->set( 'site_urls', array(
 			array(
-				'href' => Title::newFromText( 'About', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-about' )->text(),
+				'href' => Title::newFromText( $this->msg( 'aboutpage' )->inContentLanguage()->text() ),
+				'text'=> $this->msg( 'aboutsite' )->text(),
 			),
 			array(
-				'href' => Title::newFromText( 'General_disclaimer', NS_PROJECT )->getLocalUrl(),
-				'text'=> $this->msg( 'mobile-frontend-main-menu-disclaimer' )->text(),
+				'href' => Title::newFromText( $this->msg( 'disclaimerpage' )->inContentLanguage()->text() ),
+				'text'=> $this->msg( 'disclaimers' )->text(),
 			),
 		) );
 		$tpl->set( 'page_actions', array() );
