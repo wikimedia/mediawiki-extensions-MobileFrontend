@@ -10,42 +10,9 @@ See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settin
 
 == Development ==
 
-=== PHP ===
-See http://meta.wikimedia.org/wiki/Mobile_team/Mobile_web/Engineering_conventions/PHP_naming_conventions
-
-=== CSS ===
-We currently use http://lesscss.org/ to generate stylesheets.
-Ensure when you contribute CSS code you update the less files in
-stylesheets/less and to generate run:
-
-  make less
-
-You need Node.js for the LESS compiler to run.
-
-Ensure all CSS passes the
-[https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS style guidelines]
-
-In mobile ensure all CSS class names use hyphens (not camel case)
-e.g. overlay-enabled not overlayEnabled
-
-When adding a JavaScript module, ensure that the css module has the same
-name, e.g. javascripts/modules/mf-toggle.js has the corresponding
-less/css stylesheets stylesheets/less/modules/mf-toggle.less and
-stylesheets/modules/mf-toggle.css
-
-NEVER use
-[http://www.w3.org/TR/CSS2/selector.html#attribute-selectors attribute selectors]
-- these are known to cause issues in the
-[https://github.com/wikimedia/WikipediaMobile phonegap app] which
-shares some of this codebase.
-
-=== JavaScript ===
-JavaScript can be found in the javascript folder. Any JavaScript
-committed to the core must pass the
-[https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
-
-Additional Naming conventions:
-* When naming events that are emitted using mw.mobileFrontend.emit use hyphens.
+=== Coding conventions ==
+Please follow the coding conventions of MobileFrontend:
+https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions
 
 ==== Git hooks ====
 Git hooks are provided in the scripts directory to assist with adhering
@@ -53,10 +20,6 @@ to JavaScript code standards, optimizing PNG files, etc. Install like
 so:
 
   make installhooks
-
-=== HTML ===
-HTML should validate via http://validator.w3.org/ - note at the current
-time do not worry about markup introduced via wikitext.
 
 === Committing ===
 Commits are important as they give the reviewer more information to
