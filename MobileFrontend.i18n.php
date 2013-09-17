@@ -93,6 +93,7 @@ $messages['en'] = array (
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional terms may apply.',
+	'mobile-frontend-copyright' => 'Content is available under $1 unless otherwise noted.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Terms of Use]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'No page titles match your search. Change your search, or press the keyboard search button to search inside pages.',
@@ -458,6 +459,9 @@ If not the Main Page, the following message is used:
 {{Identical|Privacy}}',
 	'mobile-frontend-footer-sitename' => 'Name of site',
 	'mobile-frontend-footer-license' => 'License shown in footer',
+	'mobile-frontend-copyright' => 'A short sentence explaining that the content of the page is available under a particular license. Parameters:
+* $1 - license name
+{{Identical|Copyright}}',
 	'mobile-frontend-terms-use-text' => 'Label for terms of use link',
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',

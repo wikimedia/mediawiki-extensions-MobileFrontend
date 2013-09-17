@@ -322,20 +322,26 @@ class SkinMobile extends SkinMinerva {
 </ul>
 HTML;
 
-		if ( $wgRightsPage ) {
-			$title = Title::newFromText( $wgRightsPage );
-			$link = Linker::linkKnown( $title, $wgRightsText );
-		} elseif ( $wgRightsUrl ) {
-			$link = Linker::makeExternalLink( $wgRightsUrl, $wgRightsText );
-		} elseif ( $wgRightsText ) {
-			$link = $wgRightsText;
+		// Construct the link to the licensinsing terms
+		if ( $wgRightsText ) {
+			if ( $wgRightsPage ) {
+				$title = Title::newFromText( $wgRightsPage );
+				$link = Linker::linkKnown( $title, $wgRightsText );
+			} elseif ( $wgRightsUrl ) {
+				$link = Linker::makeExternalLink( $wgRightsUrl, $wgRightsText );
+			} else {
+				$link = $wgRightsText;
+			}
 		} else {
-			// Give up
 			$link = '';
 		}
 		// The license message is displayed in the content language rather than the user
 		// language. See Skin::getCopyright.
-		$licenseText = $this->msg( 'copyright' )->rawParams( $link )->inContentLanguage()->text();
+		if ( $link ) {
+			$licenseText = $this->msg( 'mobile-frontend-copyright' )->rawParams( $link )->inContentLanguage()->text();
+		} else {
+			$licenseText = '';
+		}
 
 		$tpl->set( 'mobile-switcher', $switcherHtml );
 		$tpl->set( 'mobile-license', $licenseText );
