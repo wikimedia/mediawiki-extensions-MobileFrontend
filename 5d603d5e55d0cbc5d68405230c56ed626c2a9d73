@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_90d88def",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-09-17T06:10:12Z",
+      "side": 1,
+      "message": "Space after colon",
+      "revId": "5d603d5e55d0cbc5d68405230c56ed626c2a9d73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_70d321d5",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-09-17T06:10:12Z",
+      "side": 1,
+      "message": "What happens if Title::newFromText returns null? Will it be converted to empty string?",
+      "revId": "5d603d5e55d0cbc5d68405230c56ed626c2a9d73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
