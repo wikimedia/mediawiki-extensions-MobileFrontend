@@ -8,7 +8,7 @@ class HomePage
   page_url url
 
   a(:about_link, text: 'About')
-  a(:content_link, text: 'CC BY-SA 3.0')
+  a(:content_link, text: 'Creative Commons Attribution-Share Alike 3.0 Unported')
   a(:contrib_link, text: 'contributors')
   a(:desktop_link, text: 'Desktop')
   a(:disclaimer_link, text: 'Disclaimers')

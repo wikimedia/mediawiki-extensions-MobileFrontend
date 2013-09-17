@@ -13,8 +13,8 @@ Feature: Feature: Footer links resolve - Logged In
       Then I go to the desktop wiki page
 
     Scenario:
-      When I click on the CC BY-SA link
-      Then I go to the CC BY-SA page
+      When I click on the Content license link
+      Then I go to the Content license page
 
     Scenario:
       When I click on the Terms of Use link

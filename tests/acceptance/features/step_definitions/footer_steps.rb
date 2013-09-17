@@ -14,12 +14,12 @@ Then /^I go to the desktop wiki page$/ do
   @browser.url.should match Regexp.escape('toggle_view_desktop')
 end
 
-When /^I click on the CC BY\-SA link$/ do
+When /^I click on the Content license link$/ do
   on(HomePage).content_link_element.when_present.click
 end
 
-Then /^I go to the CC BY\-SA page$/ do
-  @browser.url.should match Regexp.escape('Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile')
+Then /^I go to the Content license page$/ do
+  @browser.url.should match Regexp.escape('creativecommons.org')
 end
 
 When /^I click on the Terms of Use link$/ do
