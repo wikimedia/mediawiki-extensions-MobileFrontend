@@ -16,6 +16,24 @@
       "revId": "54ec5e4d7dfb6e89e10b5d76514b3718c281681a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_b03f49b0",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-17T00:09:58Z",
+      "side": 1,
+      "message": "the two messages are always together as explained by the qqq - does this need to be more descriptive?\n\nusually this is due to browser security preference or the user saying no to sharing their location.\n\nPlease feel free to suggest better wording...",
+      "parentUuid": "4946a543_705de11d",
+      "revId": "54ec5e4d7dfb6e89e10b5d76514b3718c281681a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
