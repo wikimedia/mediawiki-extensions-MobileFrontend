@@ -34,6 +34,24 @@
       "revId": "54ec5e4d7dfb6e89e10b5d76514b3718c281681a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_7080814a",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-17T00:20:49Z",
+      "side": 1,
+      "message": "Consider adding \"Most likely, your browser cannot reveal your location.\" or something similar?",
+      "parentUuid": "4946a543_b03f49b0",
+      "revId": "54ec5e4d7dfb6e89e10b5d76514b3718c281681a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
