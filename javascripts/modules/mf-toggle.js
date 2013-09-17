@@ -36,9 +36,12 @@ var toggle = ( function() {
 	}
 
 	function init() {
-		var $page = $( '#content' );
+		var $page = $( '#content' ), tagName = 'h2';
 		$( 'html' ).removeClass( 'stub' );
-		$page.find( 'h2' ).addClass( 'section_heading' );
+		if ( $page.find( 'h1' ).length > 0 ) {
+			tagName = 'h1';
+		}
+		$page.find( tagName ).addClass( 'section_heading' );
 		$page.find( '.section_heading' ).next( 'div' ).addClass( 'content_block' );
 
 		// use mouseup because mousedown blocks the click event and links

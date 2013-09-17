@@ -31,6 +31,10 @@ FIXME: Rename section_heading to section-heading and content_block to section-co
   border-bottom: solid 1px #e2e3e4;
   margin-bottom: 9pt;
 }
+.client-js h1.section_heading {
+  background-position: left 0.9em;
+  padding: 9pt 24px 9pt;
+}
 .client-js a.section_anchors {
   display: none;
   margin-bottom: 5px;

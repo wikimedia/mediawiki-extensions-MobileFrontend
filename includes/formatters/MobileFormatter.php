@@ -269,10 +269,11 @@ abstract class MobileFormatter extends HtmlFormatter {
 	 * @param string $s
 	 * @return string
 	 */
-	protected function headingTransform( $s ) {
+	protected function headingTransform( $s, $tagName = 'h2' ) {
 		wfProfileIn( __METHOD__ );
+		$tagRegEx = '<' . $tagName . '.*</' . $tagName . '>';
 		$s = $this->pageTransformStart .
-			preg_replace( '%(<h2.*</h2>)%sU', $this->headingTransformStart . '\1' . $this->headingTransformEnd, $s ) .
+			preg_replace( '%(' . $tagRegEx . ')%sU', $this->headingTransformStart . '\1' . $this->headingTransformEnd, $s ) .
 			$this->pageTransformEnd;
 		wfProfileOut( __METHOD__ );
 		return $s;

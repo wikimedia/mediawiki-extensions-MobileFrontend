@@ -20,6 +20,7 @@
   bottom: 0;
   right: 0;
 }
+.content h1.openSection .edit-page,
 .content h2.openSection .edit-page {
   display: block;
 }

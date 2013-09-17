@@ -22,7 +22,8 @@ class MobileFormatterHTML extends MobileFormatter {
 	protected function onHtmlReady( $html ) {
 		wfProfileIn( __METHOD__ );
 		if ( $this->expandableSections ) {
-			$html = $this->headingTransform( $html );
+			$tagName = strrpos( $html, '<h1' ) !== false ? 'h1' : 'h2';
+			$html = $this->headingTransform( $html, $tagName );
 		}
 		wfProfileOut( __METHOD__ );
 		return $html;

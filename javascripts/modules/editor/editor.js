@@ -87,7 +87,7 @@
 		} );
 
 		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
-		$( 'h2 .mw-editsection' ).each( function() {
+		$( '#content' ).find( 'h1,h2' ).find( '.mw-editsection' ).each( function() {
 			var section = extractSectionIdFromEditLink( $( this ).find( 'a' ) );
 			if ( section ) {
 				addEditButton( section, $( this ).parent() ).
@@ -118,7 +118,7 @@
 		} );
 
 		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
-		$( 'h2 .mw-editsection' ).each( function() {
+		$( '#content' ).find( 'h1,h2' ).find( '.mw-editsection' ).each( function() {
 			var $heading = $( this ).closest( 'h2' ), $a = addEditButton( '', $heading );
 
 			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
