@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_c57b3277",
+        "filename": "includes/formatters/MobileFormatterHTML.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-09-17T23:01:34Z",
+      "side": 1,
+      "message": "\u003d This page text will sneak past this check \u003d",
+      "revId": "38013c7751d66bb01c64309c3008622ecc85b26e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
