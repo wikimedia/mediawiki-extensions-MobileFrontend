@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_e1c10584",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-09-17T18:04:37Z",
+      "side": 1,
+      "message": "Uppercase should be used only for constants and defines.",
+      "revId": "a2d958141673ab2edc9c45adb2ee862c295c38ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
