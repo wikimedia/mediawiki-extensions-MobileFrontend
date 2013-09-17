@@ -26,20 +26,25 @@
 				target = '#ca-edit .edit-page';
 			}
 
-			editOverlay = new PageActionOverlay( {
-				target: target,
-				className: 'slide active editing',
-				summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
-				confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' )
-			} );
-			editOverlay.show();
-			$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
-			editOverlay.$( '.actionable' ).on( M.tapEvent( 'click' ), function() {
-				// Hide the tutorial
-				editOverlay.hide();
-				// Load the editing interface
+			if ( mw.config.get( 'wgMFMode' ) !== 'stable' && window.location.hash && M.isTestA ) {
+				// go straight to the editor if in beta/alpha, editing a section and in bucket A
 				window.location.href = $( target ).attr( 'href' );
-			} );
+			} else {
+				editOverlay = new PageActionOverlay( {
+					target: target,
+					className: 'slide active editing',
+					summary: mw.msg( 'mobile-frontend-editor-tutorial-summary', mw.config.get( 'wgTitle' ) ),
+					confirmMsg: mw.msg( 'mobile-frontend-editor-tutorial-confirm' )
+				} );
+				editOverlay.show();
+				$( '#ca-edit' ).on( 'mousedown', $.proxy( editOverlay, 'hide' ) );
+				editOverlay.$( '.actionable' ).on( M.tapEvent( 'click' ), function() {
+					// Hide the tutorial
+					editOverlay.hide();
+					// Load the editing interface
+					window.location.href = $( target ).attr( 'href' );
+				} );
+			}
 		} else if ( shouldShowUploadTutorial() ) {
 			photoOverlay = new LeadPhotoTutorialOverlay( {
 				target: $( '#ca-upload input' ),

@@ -106,27 +106,18 @@
 			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
 				makeCta( $a, '#' + $heading.attr( 'id' ) );
 			} else {
-				if ( !M.isTestA ) {
-					makeCta( $a, $a.attr( 'href' ) );
-				} else {
-					makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
-				}
+				makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
 			}
 		} );
 
 		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
 		$( 'h2 .mw-editsection' ).each( function() {
-			var $heading = $( this ).closest( 'h2' ), $a = addEditButton( '', $heading ), section;
+			var $heading = $( this ).closest( 'h2' ), $a = addEditButton( '', $heading );
 
 			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
 				makeCta( $a, '#' + $heading.attr( 'id' ) );
 			} else {
-				if ( !M.isTestA ) {
-					section = extractSectionIdFromEditLink( $( this ).find( 'a' ) );
-					makeCta( $a, '#editor/' + section );
-				} else {
-					makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
-				}
+				makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
 			}
 		} );
 	}
