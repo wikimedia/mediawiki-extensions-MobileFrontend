@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_705de11d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-17T00:08:37Z",
+      "side": 1,
+      "message": "I guess that the first message is the title for the second message? By itself, the first message doesn\u0027t really provide much information.\n\nAs for the second message, is there a hint that can be given as to the most likely reason why nearby cannot run because of issues with the browser settings? I could imagine there would be a list of requirements for Nearby to be able to run (as brief as possible of course).",
+      "revId": "54ec5e4d7dfb6e89e10b5d76514b3718c281681a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
