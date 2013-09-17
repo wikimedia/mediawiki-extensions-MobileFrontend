@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_868937ef",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-09-17T17:12:00Z",
+      "side": 1,
+      "message": "LqtDispatch should be a string shouldn\u0027t it?",
+      "revId": "76e21962603e1e53937a1368ca6173f78dcb700f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
