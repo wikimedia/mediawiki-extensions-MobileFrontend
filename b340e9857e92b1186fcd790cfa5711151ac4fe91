@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_1121f84f",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 368,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-18T17:04:37Z",
+      "side": 1,
+      "message": "moving seems hacky... but I understand why.",
+      "revId": "b340e9857e92b1186fcd790cfa5711151ac4fe91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_11e2d804",
+        "filename": "javascripts/modules/mf-tables.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-18T17:04:37Z",
+      "side": 1,
+      "message": "should be #content ... otherwise only tables in lead will get initialised\nalso these ids are being deprecated in formatter changes...",
+      "revId": "b340e9857e92b1186fcd790cfa5711151ac4fe91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
