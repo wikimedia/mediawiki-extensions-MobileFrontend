@@ -1,5 +1,6 @@
 = MobileFrontend Extension =
-The MobileFrontend extension adds a mobile view to your mediawiki instance.
+The MobileFrontend extension adds a mobile view to your mediawiki
+instance.
 
 == Installation ==
 See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Installation
@@ -9,86 +10,79 @@ See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settin
 
 == Development ==
 
-=== PHP ===
-See http://meta.wikimedia.org/wiki/Mobile_team/Mobile_web/Engineering_conventions/PHP_naming_conventions
-
-=== CSS ===
-We currently use http://lesscss.org/ to generate stylesheets.
-Ensure when you contribute CSS code you update the less files in stylesheets/less and to generate run:
-
-	make less
-
-You need Node.js for the LESS compiler to run.
-
-Ensure all CSS passes the [https://www.mediawiki.org/wiki/Manual:Coding_conventions/CSS style guidelines]
-
-In mobile ensure all CSS class names use hyphens (not camel case)
-e.g. overlay-enabled not overlayEnabled
-
-When adding a JavaScript module, ensure that the css module has the same name.
-e.g. javascripts/modules/mf-toggle.js has the corresponding less/css stylesheets stylesheets/less/modules/mf-toggle.less and stylesheets/modules/mf-toggle.css
-
-Introduce any browser specific patches in the relevant stylesheet. If the browser does not have its own stylesheet considering adding one in DeviceDetection.php
-
-NEVER use [http://www.w3.org/TR/CSS2/selector.html#attribute-selectors attribute selectors] - these are known to cause issues in the [https://github.com/wikimedia/WikipediaMobile phonegap app] which shares some of this codebase.
-
-=== JavaScript ===
-JavaScript can be found in the javascript folder. Any JavaScript committed to the core must pass the [https://www.mediawiki.org/wiki/Manual:Coding_conventions/JavaScript style guidelines]
-
-Additional Naming conventions:
-* When naming events that are emitted using mw.mobileFrontend.emit use hyphens.
+=== Coding conventions ==
+Please follow the coding conventions of MobileFrontend:
+https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions
 
 ==== Git hooks ====
-Git hooks are provided in the scripts directory to assist with adhering to JavaScript code standards, optimizing PNG files, etc. Install like so:
+Git hooks are provided in the scripts directory to assist with adhering
+to JavaScript code standards, optimizing PNG files, etc. Install like
+so:
 
-	make installhooks
-
-=== HTML ===
-HTML should validate via http://validator.w3.org/ - note at the current time do not worry about markup introduced via wikitext.
+  make installhooks
 
 === Committing ===
-* Commits are important as they give the reviewer more information to successfully review your code and find errors or potential problems you might not have thought of
-* Commits are also useful when troubleshooting issues and refactoring. If it's not clear why a line of code is in the repository important bug fixes could be lost.
-* Commits should be as minor as possible. Please avoid removing unrelated console.log statements, fixing unrelated whitespace etc.. do that in a separate commit which mentions the word cleanup.
-* First line commit should summarise the commit with bug it fixes if applicable. e.g. Fix problem with toggling see bug x
-* Second line should be blank
-* Third line should go into detail where necessary providing links to blog posts/other bugs to provide more background. Mention the platforms/browsers the change is for where necessary
-** e.g. 'this is a problem on Android but not OSX see http://<url> which explains problem in detail'
-** e.g. 'this is a workaround for a known bug in opera mobile see http://<url>'
+Commits are important as they give the reviewer more information to
+successfully review your code and find errors or potential problems you
+might not have thought of.
+
+Commits are also useful when troubleshooting issues and refactoring.  If
+it's not clear why a line of code is in the repository important bug
+fixes could be lost.
+
+Commits should be as minor as possible. Please avoid removing unrelated
+console.log statements, fixing unrelated whitespace etc.  do that in a
+separate commit which mentions the word cleanup.
+
+First line commit should summarise the commit with bug it fixes if
+applicable. e.g. Fix problem with toggling see bug x. Second line should
+be blank. Third line should go into detail where necessary providing
+links to blog posts/other bugs to provide more background. Mention the
+platforms/browsers the change is for where necessary, e.g.:
+
+* 'this is a problem on Android but not OSX see http://<url> which explains problem in detail'
+* 'this is a workaround for a known bug in opera mobile see http://<url>'
 
 === Testing ===
 
 ==== Unit tests ====
 To run the full test suite run:
 
-	make tests
+  make tests
 
 To run only PHP tests:
 
-	make phpunit
+  make phpunit
 
 To run only JS tests:
 
-	make qunit
+  make qunit
 
 ==== Selenium tests ====
-To run the Selenium tests you will have to install Ruby (for the exact version see tests/acceptance/.ruby-version), the latest versions of RubyGems and Firefox.
+To run the Selenium tests you will have to install Ruby (for the exact
+version see tests/acceptance/.ruby-version), the latest versions of
+RubyGems and Firefox.
 
-The easiest way to install Ruby on *nix is RVM (https://rvm.io/) and on Windows RubyInstaller (http://rubyinstaller.org/).
+The easiest way to install Ruby on *nix is RVM (https://rvm.io/) and on
+Windows RubyInstaller (http://rubyinstaller.org/).
 
-Open terminal in tests/acceptance. Update RubyGems and install required gems with:
+Open terminal in tests/acceptance. Update RubyGems and install required
+gems with:
 
   gem update --system
   gem install bundler
   bundle install
 
 You will need to create a user account on your local wiki
-See https://github.com/wikimedia/qa-browsertests/blob/master/README.md for details
+See https://github.com/wikimedia/qa-browsertests/blob/master/README.md
+for details
 
 Run the tests with:
 
   bundle exec rake
 
-HTML report is created at tests/acceptance/reports and XML report (for Jenkins) is created at tests/acceptance/reports/junit.
+HTML report is created at tests/acceptance/reports and XML report (for
+Jenkins) is created at tests/acceptance/reports/junit.
 
-Jenkins is hosted at https://wmf.ci.cloudbees.com/ and it drives browsers at http://saucelabs.com/
+Jenkins is hosted at https://wmf.ci.cloudbees.com/ and it drives
+browsers at http://saucelabs.com/
