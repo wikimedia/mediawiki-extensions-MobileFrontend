@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_221b0172",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-09-19T08:26:06Z",
+      "side": 1,
+      "message": "Real linebreaks introduced. Are they intended? See https://translatewiki.net/w/i.php?title\u003dMediaWiki:Mobile-frontend-footer-license/en\u0026diff\u003d5001653\u0026oldid\u003d4714136",
+      "revId": "f0b74d25740d7980c3f5c68e8d381dc862cc1e40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
