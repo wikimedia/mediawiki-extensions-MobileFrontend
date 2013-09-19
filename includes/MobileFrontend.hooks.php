@@ -516,10 +516,12 @@ class MobileFrontendHooks {
 	public static function onCustomEditor( $article, $user ) {
 		$context = MobileContext::singleton();
 
-		// redirect instead of showing the desktop editor
+		// redirect to mobile editor instead of showing desktop editor
 		if ( $context->shouldDisplayMobileView() ) {
 			$articleUrl = $context->getMobileUrl( $article->getTitle()->getFullURL() );
-			$context->getOutput()->redirect( $articleUrl );
+			$output = $context->getOutput();
+			$section = (int)$output->getRequest()->getVal( 'section', 0 );
+			$output->redirect( $articleUrl . '#editor/' . $section );
 			return false;
 		}
 
