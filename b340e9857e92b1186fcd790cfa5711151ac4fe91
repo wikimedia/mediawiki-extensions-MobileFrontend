@@ -33,6 +33,24 @@
       "revId": "b340e9857e92b1186fcd790cfa5711151ac4fe91",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_4c768605",
+        "filename": "javascripts/modules/mf-tables.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-19T00:31:15Z",
+      "side": 1,
+      "message": "Not true I guess, because we also bind to on( \u0027section-rendered\u0027, initTables );",
+      "parentUuid": "4946a543_11e2d804",
+      "revId": "b340e9857e92b1186fcd790cfa5711151ac4fe91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
