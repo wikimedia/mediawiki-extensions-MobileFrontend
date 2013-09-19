@@ -92,6 +92,9 @@ $messages['en'] = array (
 	'mobile-frontend-clear-search' => 'Clear',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wiki
+pedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA
+3.0]; additional terms may apply.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Terms of Use]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'No page titles match your search. Change your search, or press the keyboard search button to search inside pages.',
@@ -457,6 +460,7 @@ If not the Main Page, the following message is used:
 	'mobile-frontend-privacy-link-text' => 'Custom version of "Privacy policy" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.
 {{Identical|Privacy}}',
 	'mobile-frontend-footer-sitename' => 'Name of site',
+	'mobile-frontend-footer-license' => 'License shown in footer',
 	'mobile-frontend-terms-use-text' => 'Label for terms of use link',
 	'mobile-frontend-footer-contact' => 'Label for contact in footer',
 	'mobile-frontend-search-noresults' => 'Text that appears when a search returns no results',
