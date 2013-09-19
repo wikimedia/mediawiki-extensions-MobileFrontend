@@ -495,11 +495,6 @@ class MobileFrontendHooks {
 			$request->response()->header( "X-WAP: $xWap" );
 		}
 		$out->addVaryHeader( 'Cookie' );
-		// @todo: these should be set by Zero
-		$out->addVaryHeader( 'X-CS' );
-		$out->addVaryHeader( 'X-Subdomain' );
-		$out->addVaryHeader( 'X-Images' );
-
 
 		wfProfileOut( __METHOD__ );
 		return true;
