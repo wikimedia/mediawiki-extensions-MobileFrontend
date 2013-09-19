@@ -2,7 +2,7 @@
 	M.assertMode( [ 'alpha' ] );
 
 	var
-		Page = M.require( 'page' ),
+		Page = M.require( 'Page' ),
 		isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special,
 		History = window.History;
 
@@ -33,7 +33,7 @@
 			var s = History.getState();
 			new Page( { title: s.title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
 				window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
-			} );
+			} ).on( 'ready', M.reloadPage );
 		} );
 
 		/**

@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 
 	var Overlay = M.require( 'Overlay' ),
-		Page = M.require( 'page' ),
+		Page = M.require( 'Page' ),
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
 		Section = M.require( 'Section' ),
@@ -209,7 +209,7 @@
 					// log success!
 					self.log( 'success' );
 					M.pageApi.invalidatePage( title );
-					new Page( { title: title, el: $( '#content_wrapper' ) } );
+					new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
 					M.router.navigate( '' );
 					self.hide();
 					if ( M.isTestA && self.isNewEditor ) {

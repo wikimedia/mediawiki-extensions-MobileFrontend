@@ -32,6 +32,10 @@
 			lastModifiedTimestamp: ( "" + new Date().getTime() ).substr( 0,10 ) // Default to current timestamp
 		},
 
+		isMainPage: function() {
+			return this.options.isMainPage;
+		},
+
 		// FIXME: This assumes only one page can be rendered at one time - emits a page-loaded event and sets wgArticleId
 		render: function( options ) {
 			var pageTitle = options.title, self = this,
@@ -62,10 +66,7 @@
 					// reset loader
 					$el.removeClass( 'loading' );
 
-					// FIXME: Reset the page id
-					mw.config.set( 'wgArticleId', pageData.id );
-					// FIXME: emit events so that modules can reinitialise
-					M.emit( 'page-loaded', self );
+					self.emit( 'ready', self );
 				} ).fail( $.proxy( self, 'emit', 'error' ) );
 			} else {
 				self._super( options );
@@ -107,7 +108,7 @@
 		}
 	} );
 
-	M.define( 'page', Page );
+	M.define( 'Page', Page );
 	M.define( 'Section', Section );
 
 }( mw.mobileFrontend, jQuery ) );

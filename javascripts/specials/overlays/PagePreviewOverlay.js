@@ -3,7 +3,7 @@
 	var Overlay = M.require( 'Overlay' ),
 		ua = window.navigator.userAgent,
 		device = 'unknown',
-		Page = M.require( 'page' ),
+		Page = M.require( 'Page' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		PagePreviewOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/pagePreview' ),

@@ -502,7 +502,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/LoadingOverlay.js',
 			'javascripts/widgets/progress-bar.js',
 			'javascripts/common/notification.js',
-			'javascripts/views/page.js',
+			'javascripts/common/Page.js',
 			// Upload specific code
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
 			// Language specific code

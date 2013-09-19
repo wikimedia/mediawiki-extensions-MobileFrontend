@@ -2,7 +2,7 @@
 	M.assertMode( [ 'beta', 'alpha' ] );
 
 	var LoadingOverlay = M.require( 'LoadingOverlay' ),
-		Page = M.require( 'page' ),
+		Page = M.require( 'Page' ),
 		loadingOverlay = new LoadingOverlay();
 
 	function renderTalkOverlay( pageData ) {

@@ -251,6 +251,23 @@
 		return params;
 	}
 
+	/**
+	 * Sets the JavaScript configuration and HTML environment for a given page
+	 * Emits a page-loaded event that modules can subscribe to, so that they can
+	 * re-initialize
+	 *
+	 */
+	function reloadPage( page ) {
+		if ( page.isMainPage() ) {
+			$( 'body' ).addClass( 'page-Main_Page' );
+		} else {
+			$( 'body' ).removeClass( 'page-Main_Page' );
+		}
+
+		mw.config.set( 'wgArticleId', page.id );
+		M.emit( 'page-loaded', page );
+	}
+
 	$( init );
 
 	$.extend( M, {
@@ -265,6 +282,7 @@
 		isLoggedIn: isLoggedIn,
 		lockViewport: lockViewport,
 		log: log,
+		reloadPage: reloadPage,
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,
