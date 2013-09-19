@@ -1,9 +1,9 @@
 /**
  * Handle cookies for switching from mobile -> desktop mode
  *
- * Sets stopMobileRedirect cookie and, if present, unsets the mf_mobileFormat
- * cookie (which is used on sites that do not have a separate mobile domain
- * to keep users on the mobile version of the site).
+ * Sets stopMobileRedirect cookie and, if present, unsets the cookie defined
+ * by wgUseFormatCookie (which is used on sites that do not have a separate
+ * mobile domain to keep users on the mobile version of the site).
  *
  * We have backend code to handle this too, however if a user is sent to a
  * cached page, the PHP code that handles this will not get executed. Hence
@@ -18,11 +18,11 @@
 		writeCookie = M.settings.writeCookie;
 
 	function desktopViewClick() {
-		// get mf_mobileFormat cookie info
+		// get info from cookie defined by wgUseFormatCookie
 		var useFormatCookie = mw.config.get( 'wgUseFormatCookie' ),
 			redirectCookie = mw.config.get( 'wgStopMobileRedirectCookie' );
 
-		// expire the mf_mobileFormat cookie
+		// expire the cookie defined by wgUseFormatCookie
 		writeCookie( useFormatCookie.name, '', useFormatCookie.duration,
 			useFormatCookie.path, useFormatCookie.domain );
 
