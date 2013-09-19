@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_ac436a6e",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-19T01:33:58Z",
+      "side": 1,
+      "message": "Is the  use of \"be bold\" a good choice here? https://en.wikipedia.org/wiki/Wikipedia:Be_bold is probably something that\u0027s not known to first time editors, i.e. it may be misinterpreted? (A/B test opportunity?)",
+      "revId": "8ba4329d4c04dde22f770821e17daf75d69f8541",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
