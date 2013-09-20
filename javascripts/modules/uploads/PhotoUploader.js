@@ -1,30 +1,11 @@
 ( function( M, $ ) {
-	var View = M.require( 'view' ),
+	var Class = M.require( 'Class' ),
 		popup = M.require( 'notifications' ),
-		CtaDrawer = M.require( 'CtaDrawer' ),
 		NagOverlay = M.require( 'modules/uploads/NagOverlay' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
 		PhotoUploadProgress = M.require( 'modules/uploads/PhotoUploadProgress' ),
 		PhotoUploaderPreview = M.require( 'modules/uploads/PhotoUploaderPreview' ),
-		PhotoUploader,
-		PhotoUploaderButton,
-		LeadPhoto = M.require( 'modules/uploads/LeadPhoto' ),
-		LeadPhotoUploaderButton;
-
-	function isSupported() {
-		// FIXME: create a module for browser detection stuff
-		// deal with known false positives which don't support file input (bug 47374)
-		if ( navigator.userAgent.match( /Windows Phone (OS 7|8.0)/ ) ) {
-			return false;
-		}
-		var browserSupported = (
-			typeof FileReader !== 'undefined' &&
-			typeof FormData !== 'undefined' &&
-			($('<input type="file"/>').prop('type') === 'file') // Firefox OS 1.0 turns <input type="file"> into <input type="text">
-		);
-
-		return browserSupported && !mw.config.get( 'wgImagesDisabled', false );
-	}
+		PhotoUploader;
 
 	function getLog( funnel ) {
 		return function( data ) {
@@ -43,119 +24,39 @@
 		};
 	}
 
-	/**
-	 * PhotoUploader is a component for uploading images to the wiki.
-	 *
-	 * @example
-	 * <code>
-	 * var photoUploader = new PhotoUploader( {
-	 *     buttonCaption: 'Add a photo',
-	 * } );
-	 * photoUploader.
-	 *     insertAfter( 'h1' ).
-	 *     on( 'upload', function( fileName, url ) {
-	 *         $( '.someImage' ).attr( 'src', url );
-	 *     } );
-	 * </code>
-	 *
-	 * @constructor
-	 * @param {Object} options Uploader options.
-	 * @param {string} options.buttonCaption Caption for the upload button.
-	 * @param {boolean} options.insertInPage If the image should be prepended
-	 * to the wikitext of a page specified by options.pageTitle.
-	 * @param {string} options.pageTitle Title of the page to which the image
-	 * belongs (image name will be based on this) and to which it should be
-	 * prepended (if options.insertInPage is true).
-	 * @fires PhotoUploader#start
-	 * @fires PhotoUploader#success
-	 * @fires PhotoUploader#error
-	 * @fires PhotoUploader#cancel
-	 */
-	/**
-	 * Triggered when image upload starts.
-	 *
-	 * @event PhotoUploader#start
-	 */
-	/**
-	 * Triggered when image upload is finished successfully.
-	 *
-	 * @event PhotoUploader#success
-	 * @property {Object} data Uploaded image data.
-	 * @property {string} data.fileName Name of the uploaded image.
-	 * @property {string} data.description Name of the uploaded image.
-	 * @property {string} data.url URL to the uploaded image (can be a
-	 * local data URL).
-	 */
-	/**
-	 * Triggered when image upload fails.
-	 *
-	 * @event PhotoUploader#error
-	 */
-	/**
-	 * Triggered when image upload is cancelled.
-	 *
-	 * @event PhotoUploader#cancel
-	 */
-	PhotoUploader = View.extend( {
+	PhotoUploader = Class.extend( {
 
 		initialize: function( options ) {
+			var nagCount = parseInt( M.settings.getUserSetting( 'uploadNagCount' ) || 0, 10 ),
+				shouldNag = parseInt( mw.config.get( 'wgUserEditCount' ), 10 ) < 3,
+				fileReader = new FileReader(), nagOverlay, preview;
+
 			this.log = getLog( options.funnel );
-			this._super( options );
-		},
+			preview = this.preview = new PhotoUploaderPreview( { log: this.log } );
 
-		postRender: function() {
-			var self = this, $input = this.$( 'input' ), ctaDrawer;
+			this.options = options;
+			this.parent = options.parent;
+			this.file = options.file;
 
-			// show CTA instead if not logged in
-			if ( !M.isLoggedIn() ) {
-				ctaDrawer = new CtaDrawer( {
-					content: mw.msg( 'mobile-frontend-photo-upload-cta' ),
-					queryParams: {
-						campaign: 'mobile_uploadPageActionCta',
-						returntoquery: 'article_action=photo-upload'
-					}
-				} );
-				this.$el.click( function( ev ) {
-					ctaDrawer.show();
-					ev.preventDefault();
-				} );
-				return;
+			// nag if never nagged and shouldNag and then keep nagging (3 times)
+			if ( ( nagCount === 0 && shouldNag ) || ( nagCount > 0 && nagCount < 3 ) ) {
+				// FIXME: possibly set self.preview.parent = nagOverlay when nagOverlay is present
+				nagOverlay = this._showNagOverlay( nagCount );
+			} else {
+				this._showPreview();
 			}
 
-			$input.
-				// accept must be set via attr otherwise cannot use camera on Android
-				attr( 'accept', 'image/*;' ).
-				on( 'change', function() {
-					var nagCount = parseInt( M.settings.getUserSetting( 'uploadNagCount' ) || 0, 10 ),
-						shouldNag = parseInt( mw.config.get( 'wgUserEditCount' ), 10 ) < 3,
-						fileReader = new FileReader(), nagOverlay;
+			fileReader.readAsDataURL( this.file );
+			fileReader.onload = function() {
+				var dataUrl = fileReader.result;
+				// add mimetype if not present (some browsers need it, e.g. Android browser)
+				dataUrl = dataUrl.replace( /^data:base64/, 'data:image/jpeg;base64' );
 
-					self.preview = new PhotoUploaderPreview( { log: self.log } );
-
-					self.file = $input[0].files[0];
-					// clear so that change event is fired again when user selects the same file
-					$input.val( '' );
-
-					// nag if never nagged and shouldNag and then keep nagging (3 times)
-					if ( ( nagCount === 0 && shouldNag ) || ( nagCount > 0 && nagCount < 3 ) ) {
-						// FIXME: possibly set self.preview.parent = nagOverlay when nagOverlay is present
-						nagOverlay = self._showNagOverlay( nagCount );
-					} else {
-						self._showPreview();
-					}
-
-					fileReader.readAsDataURL( self.file );
-					fileReader.onload = function() {
-						var dataUrl = fileReader.result;
-						// add mimetype if not present (some browsers need it, e.g. Android browser)
-						dataUrl = dataUrl.replace( /^data:base64/, 'data:image/jpeg;base64' );
-
-						if ( nagOverlay ) {
-							nagOverlay.setImageUrl( dataUrl );
-						}
-						self.preview.setImageUrl( dataUrl );
-					};
-				} );
+				if ( nagOverlay ) {
+					nagOverlay.setImageUrl( dataUrl );
+				}
+				preview.setImageUrl( dataUrl );
+			};
 		},
 
 		_showNagOverlay: function( nagCount ) {
@@ -217,13 +118,13 @@
 				api = new PhotoApi(),
 				progressPopup = new PhotoUploadProgress();
 
-			this.emit( 'start' );
+			this.parent.emit( 'start' );
 			this.preview.hide();
 			progressPopup.show();
 			progressPopup.on( 'cancel', function() {
 				api.abort();
 				self.log( { action: 'cancel' } );
-				self.emit( 'cancel' );
+				self.parent.emit( 'cancel' );
 			} );
 
 			api.save( {
@@ -234,7 +135,7 @@
 			} ).done( function( fileName, descriptionUrl ) {
 				progressPopup.hide();
 				self.log( { action: 'success' } );
-				self.emit( 'success', {
+				self.parent.emit( 'success', {
 					fileName: fileName,
 					description: description,
 					descriptionUrl: descriptionUrl,
@@ -244,7 +145,7 @@
 				progressPopup.hide();
 				popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
 				self.log( { action: 'error', errorText: err } );
-				self.emit( 'error' );
+				self.parent.emit( 'error' );
 			} );
 
 			api.on( 'uploadProgress', function( value ) {
@@ -253,43 +154,6 @@
 		}
 	} );
 
-	// An extension of the PhotoUploader which instead of treating it as a button treats it as a full screen bar
-	PhotoUploaderButton = PhotoUploader.extend( {
-		template: M.template.get( 'photoUploader' ),
-		className: 'button photo'
-	} );
-
-	LeadPhotoUploaderButton = PhotoUploader.extend( {
-		template: M.template.get( 'photoUploadAction' ),
-		className: 'enabled',
-		initialize: function( options ) {
-			var self = this;
-			this._super( options );
-			this.on( 'start', function() {
-					self.$el.removeClass( 'enabled' );
-				} ).
-				on( 'success', function( data ) {
-					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
-					// FIXME: workaround for https://bugzilla.wikimedia.org/show_bug.cgi?id=43271
-					if ( !$( '#content_0' ).length ) {
-						$( '<div id="content_0" >' ).insertAfter( $( '#section_0,#page-actions' ).last() );
-					}
-					new LeadPhoto( {
-						url: data.url,
-						pageUrl: data.descriptionUrl,
-						caption: data.description
-					} ).prependTo( '#content_0' );
-				} ).
-				on( 'error cancel', function() {
-					self.$el.addClass( 'enabled' );
-				} );
-		}
-	} );
-
-	PhotoUploaderButton.isSupported = LeadPhotoUploaderButton.isSupported = isSupported();
-
-	// FIXME: should we allow more than one define() per file?
-	M.define( 'modules/uploads/PhotoUploaderButton', PhotoUploaderButton );
-	M.define( 'modules/uploads/LeadPhotoUploaderButton', LeadPhotoUploaderButton );
+	M.define( 'modules/uploads/PhotoUploader', PhotoUploader );
 
 }( mw.mobileFrontend, jQuery ) );

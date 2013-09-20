@@ -10,7 +10,7 @@
 			messageInterval: 10000
 		},
 
-		template: M.template.get( 'photoUploadProgress' ),
+		template: M.template.get( 'uploads/PhotoUploadProgress' ),
 		className: 'drawer position-fixed text loading',
 		locked: true,
 
