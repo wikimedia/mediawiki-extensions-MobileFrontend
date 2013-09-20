@@ -9,6 +9,21 @@
 	display: inline-block;
 }
 
+.input-box {
+	padding: 1px;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	background: #fff;
+
+	input:not([type=submit]) {
+		-webkit-appearance: none;
+		border: none;
+		padding: .8em .5em;
+		margin: 0;
+		.box-sizing( border-box );
+	}
+}
+
 input {
 	word-break: normal;
 }

@@ -20,7 +20,9 @@
 			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
 			previewMsg: mw.msg( 'mobile-frontend-editor-preview-header' ),
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
-			guiderMsg: mw.msg( 'mobile-frontend-editor-guider' )
+			guiderMsg: mw.msg( 'mobile-frontend-editor-guider' ),
+			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
+			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' )
 		},
 		template: M.template.get( 'overlays/editor' ),
 		className: 'mw-mf-overlay editor-overlay',
@@ -109,8 +111,7 @@
 
 			// log save button click
 			this.log( 'save' );
-			this.$( '.initial-bar' ).hide();
-			this.$( '.save-bar' ).show();
+			this._showBar( '.save-bar' );
 
 			this.scrollTop = $( 'body' ).scrollTop();
 			this.$content.hide();
@@ -162,8 +163,7 @@
 			this.$preview.hide();
 			this.$content.show();
 			window.scrollTo( 0, this.scrollTop );
-			this.$( '.save-bar' ).hide();
-			this.$( '.initial-bar' ).show();
+			this._showBar( '.initial-bar' );
 		},
 
 		_resizeContent: function() {
@@ -193,14 +193,37 @@
 				} );
 		},
 
+		_showCaptcha: function( url ) {
+			var self = this, $input = this.$( '.captcha-word' );
+
+			if ( this.captchaShown ) {
+				$input.val( '' );
+				$input.attr( 'placeholder', this.options.captchaTryAgainMsg );
+				setTimeout( function() {
+					$input.attr( 'placeholder', self.options.captchaMsg );
+				}, 2000 );
+			}
+
+			this.$( '.captcha-bar img' ).attr( 'src', url );
+			this._showBar( '.captcha-bar' );
+
+			this.captchaShown = true;
+		},
+
 		_save: function() {
-			var self = this, msg, className = 'toast landmark';
+			var self = this, className = 'toast landmark',
+				options = { summary: this.$( '.summary' ).val() },
+				msg;
+
+			if ( this.captchaId ) {
+				options.captchaId = this.captchaId;
+				options.captchaWord = this.$( '.captcha-word' ).val();
+			}
 
 			self.log( 'submit' );
-			this.$( '.save-bar' ).hide();
-			this.$( '.saving-bar' ).show();
+			this._showBar( '.saving-bar' );
 
-			this.api.save( this.$( '.summary' ).val() ).
+			this.api.save( options ).
 				done( function() {
 					var title = self.options.title,
 						editCount = mw.config.get( 'wgUserEditCount' );
@@ -221,21 +244,30 @@
 					mw.config.set( 'wgUserEditCount', ( parseInt( editCount, 10 ) + 1 ).toString() );
 					popup.show( mw.msg( msg ), className );
 				} ).
-				fail( function( err ) {
+				fail( function( data ) {
 					var msg;
 
-					if ( err === 'editconflict' ) {
-						msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
+					if ( data.type === 'captcha' ) {
+						self.captchaId = data.details.id;
+						self._showCaptcha( data.details.url );
 					} else {
-						msg = mw.msg( 'mobile-frontend-editor-error' );
-					}
+						if ( data.details === 'editconflict' ) {
+							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
+						} else {
+							msg = mw.msg( 'mobile-frontend-editor-error' );
+						}
 
-					popup.show( msg, 'toast error' );
-					self.$( '.saving-bar' ).hide();
-					self.$( '.save-bar' ).show();
-					// log error that occurred in retrieving section
-					self.log( 'error', err );
+						popup.show( msg, 'toast error' );
+						self._showBar( '.save-bar' );
+						// log error that occurred in retrieving section
+						self.log( 'error', data.details );
+					}
 				} );
+		},
+
+		_showBar: function( className ) {
+			this.$( '.buttonBar' ).hide();
+			this.$( className ).show();
 		}
 	} );
 

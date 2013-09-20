@@ -234,6 +234,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error-loading',
 			'mobile-frontend-editor-preview-header',
 			'mobile-frontend-editor-error-preview',
+			'mobile-frontend-account-create-captcha-placeholder',
+			'mobile-frontend-editor-captcha-try-again',
 		),
 	),
 

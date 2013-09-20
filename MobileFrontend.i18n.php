@@ -274,6 +274,7 @@ $messages['en'] = array (
 	'mobile-frontend-editor-error-preview' => 'Error, something unexpected happened upon loading the preview. Please close and try again.',
 	'mobile-frontend-editor-tutorial-summary' => "Don't be scared of markup. Try improving the $1 page.",
 	'mobile-frontend-editor-tutorial-confirm' => 'Start editing',
+	'mobile-frontend-editor-captcha-try-again' => 'Wrong code, try again.',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -753,6 +754,7 @@ Parameters:
 
 See also:
 * {{msg-mw|Mobile-frontend-editor-tutorial-summary}}',
+	'mobile-frontend-editor-captcha-try-again' => 'A message shown when user enters wrong CAPTCHA and a new one is displayed.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:

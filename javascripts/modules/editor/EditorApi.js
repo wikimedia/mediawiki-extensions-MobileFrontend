@@ -61,47 +61,61 @@
 			this.hasChanged = true;
 		},
 
-		save: function( summary ) {
+		/**
+		 * Save the new content of the section, previously set using #setContent.
+		 *
+		 * @param [options.summary] String Optional summary for the edit.
+		 * @param [options.captchaId] String If CAPTCHA was requested, ID of the
+		 * captcha.
+		 * @param [options.captchaWord] String If CAPTCHA was requested, term
+		 * displayed in the CAPTCHA.
+		 * @return jQuery.Deferred On failure callback is passed an object with
+		 * `type` and `details` properties. `type` is a string describing the type
+		 * of error, `details` can be any object (usually error message).
+		 */
+		save: function( options ) {
 			var self = this, result = $.Deferred();
+			options = options || {};
 
 			if ( !this.hasChanged ) {
 				throw new Error( 'No changes to save' );
 			}
 
 			function saveContent( token ) {
-				var options = {
+				var apiOptions = {
 					action: 'edit',
 					title: self.title,
 					text: self.content,
-					summary: summary,
+					summary: options.summary,
+					captchaid: options.captchaId,
+					captchaword: options.captchaWord,
 					token: token,
 					basetimestamp: self.timestamp,
 					starttimestamp: self.timestamp
 				};
 
 				if ( $.isNumeric( self.sectionId ) ) {
-					options.section = self.sectionId;
+					apiOptions.section = self.sectionId;
 				}
 
-				self.post( options ).done( function( data ) {
+				self.post( apiOptions ).done( function( data ) {
 					if ( data && data.edit && data.edit.result === 'Success' ) {
 						self.hasChanged = false;
 						result.resolve();
 					} else if ( data && data.error ) {
 						// Edit API error
-						result.reject( data.error.code );
+						result.reject( { type: 'error', details: data.error.code } );
 					} else if ( data && data.edit && data.edit.captcha ) {
 						// CAPTCHAs
-						// FIXME: we need to support this, see bug 52047
-						result.reject( 'unsupported-captcha' );
+						result.reject( { type: 'captcha', details: data.edit.captcha } );
 					} else if ( data && data.edit && data.edit.code ) {
 						// extension errors (mostly abusefilter)
 						// FIXME: we need to support this, see bug 52049
-						result.reject( data.edit.code );
+						result.reject( { type: 'error', details: data.edit.code } );
 					} else {
-						result.reject( 'unknown' );
+						result.reject( { type: 'error', details: 'unknown' } );
 					}
-				} ).fail( $.proxy( result, 'reject', 'HTTP error' ) );
+				} ).fail( $.proxy( result, 'reject', { type: 'error', details: 'HTTP error' } ) );
 			}
 
 			this.getToken().done( saveContent ).fail( $.proxy( result, 'reject' ) );
