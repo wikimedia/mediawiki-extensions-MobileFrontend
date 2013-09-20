@@ -4,12 +4,7 @@
 		ua = window.navigator.userAgent,
 		device = 'unknown',
 		Page = M.require( 'page' ),
-		LoadingOverlay = Overlay.extend( {
-			defaults: {
-				msg: mw.msg( 'mobile-frontend-ajax-preview-loading' )
-			},
-			template: M.template.get( 'overlays/loading' )
-		} ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		PagePreviewOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/pagePreview' ),
 			initialize: function( options ) {

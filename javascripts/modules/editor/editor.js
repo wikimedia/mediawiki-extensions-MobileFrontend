@@ -1,6 +1,6 @@
 ( function( M, $ ) {
 
-	var EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
+	var LoadingOverlay = M.require( 'LoadingOverlay' ),
 		popup = M.require( 'notifications' ),
 		// FIXME: Disable on IE < 10 for time being
 		blacklisted = /MSIE \d\./.test( navigator.userAgent ),
@@ -50,17 +50,24 @@
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 
 		M.router.route( /^editor\/(\d+)$/, function( sectionId ) {
-			var title = page ? page.title : mw.config.get( 'wgTitle' ),
-				// Note in current implementation Page title is prefixed with namespace
-				ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
+			var loadingOverlay = new LoadingOverlay();
+			loadingOverlay.show();
 
-			sectionId = parseInt( sectionId, 10 );
-			new EditorOverlay( {
-				title: ns ? ns + ':' + title : title,
-				isNew: isNew,
-				isNewEditor: mw.config.get( 'wgUserEditCount' ) === '0',
-				sectionId: mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? sectionId : null
-			} ).show();
+			mw.loader.using( 'mobile.editor', function() {
+				var EditorOverlay = M.require( 'modules/editor/EditorOverlay' ),
+					title = page ? page.title : mw.config.get( 'wgTitle' ),
+					// Note in current implementation Page title is prefixed with namespace
+					ns = page ? '' : mw.config.get( 'wgCanonicalNamespace' );
+
+				sectionId = parseInt( sectionId, 10 );
+				loadingOverlay.hide();
+				new EditorOverlay( {
+					title: ns ? ns + ':' + title : title,
+					isNew: isNew,
+					isNewEditor: mw.config.get( 'wgUserEditCount' ) === '0',
+					sectionId: mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? sectionId : null
+				} ).show();
+			} );
 		} );
 		$( '#ca-edit' ).addClass( 'enabled' );
 
