@@ -80,6 +80,7 @@ html[dir="rtl"] .mw-mf-overlay .header .cancel {
   right: 0;
   border-top: 1px solid #ccc;
   background-color: #f3f3f3;
+  z-index: 4;
 }
 .mw-mf-overlay .buttonBar p {
   padding: .7em 0;
