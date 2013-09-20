@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_cded0991",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-09-20T18:26:32Z",
+      "side": 1,
+      "message": "Frankly, I severely dislike LSB as misleading and having no analogs in sane languages. So I personally don\u0027t  think consts are needed here.",
+      "parentUuid": "4946a543_4de5990b",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_adc35d59",
         "filename": "javascripts/common/application.js",
         "patchSetId": 13
