@@ -1,13 +1,15 @@
 ( function( M, $ ) {
 	var currentPage;
 
-	M.on( 'section-toggle', function( section_id ) {
+	M.on( 'section-toggle', function( $heading ) {
 		var
-			$content = $( '#content_' + section_id ),
-			loaded = $content.data( 'loaded' ), section;
+			$content = $heading.next( '.content_block' ),
+			loaded = $content.data( 'loaded' ), section,
+			// FIXME: see JavaScript for Page.js
+			id = $heading.data( 'id' );
 
-		if ( !loaded && currentPage ) {
-			section = currentPage.getSubSection( section_id );
+		if ( !loaded && currentPage && id ) {
+			section = currentPage.getSubSection( id );
 			if ( section ) {
 				$content.html( section.text ).data( 'loaded', true );
 			}

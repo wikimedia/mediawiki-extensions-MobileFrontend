@@ -108,12 +108,12 @@
 		} );
 
 		$( '.edit-page' ).each( function() {
-			var $a = $( this ), $heading = $( this ).closest( 'h2' );
+			var $a = $( this ), anchor = '#' + $( this ).parent().find( '[id]' ).attr( 'id' );
 
 			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
-				makeCta( $a, '#' + $heading.attr( 'id' ) );
+				makeCta( $a, anchor );
 			} else {
-				makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
+				makeCta( $a, anchor, 'article_action=edit' );
 			}
 		} );
 

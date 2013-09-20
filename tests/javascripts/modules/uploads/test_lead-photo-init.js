@@ -6,11 +6,11 @@ var photo = M.require( 'modules/uploads/_leadphoto' ),
 		// blank #content_0
 		[ $( '<div><div id="content_0"></div></div>' ), true ],
 		// infobox in #content_1
-		[ $( '<div><div id="content_0"></div><div id="content_1"><table class="infobox"></div>' ), true ],
+		[ $( '<div><div id="content_1"><table class="infobox"></div>' ), false ],
 		// infobox in #content_0
 		[ $( '<div><div id="content_0"><table class="infobox"></div></div>' ), false ],
-		// navbox in #content_1
-		[ $( '<div><div id="content_0"></div><div id="content_1"><table class="navbox"></div></div>' ), true ],
+		// navbox in #content_0
+		[ $( '<div><table class="navbox"></table></div>' ), false ],
 		// navbox in #content_0
 		[ $( '<div><div id="content_0"><table class="navbox"></div></div>' ), false ],
 		// thumbnail in #content_0

@@ -21,7 +21,7 @@
 			return;
 		} else if ( shouldShowEditTutorial() ) {
 			if ( window.location.hash ) {
-				target = window.location.hash + ' .edit-page';
+				target = window.location.hash + ' ~ .edit-page';
 			} else {
 				target = '#ca-edit .edit-page';
 			}

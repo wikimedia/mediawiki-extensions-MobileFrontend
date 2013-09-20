@@ -24,8 +24,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$mf->enableExpandableSections();
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
-		$summarySection = '<div id="content_0" class="content_block openSection"></div>';
-		$anchor = '<a id="anchor_1" href="#section_1" class="section_anchors">&#8593;Jump back a section</a>';
 		$removeImages = function( MobileFormatter $f ) {
 			$f->removeImages();
 		};
@@ -57,24 +55,19 @@ Foobar!</div></div></div>',
 			),
 			// \n</h2> in headers
 			array(
-				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span><a class="edit-page" href="#editor/2">Edit</a>
-
- 	 </h2>' . $longLine,
-				$summarySection.
-				'<div class="section"><h2 class="section_heading" id="section_1"><span id="Forty-niners">Forty-niners</span><a class="edit-page" href="#editor/2">Edit</a></h2><div class="content_block" id="content_1">'
-					. $longLine . '</div>'
-					. $anchor . '</div>',
+				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
+				. $longLine,
+				'<div></div>' .
+				'<h2><span class="mw-headline" id="Forty-niners">Forty-niners</span><a class="edit-page" href="#editor/2">Edit</a></h2>' .
+				'<div>' . $longLine . '</div>',
 				$enableSections
 			),
 			// Bug 36670
 			array(
 				'<h2><span class="mw-headline" id="History"><span id="Overview"></span>History</span><a class="edit-page" href="#editor/2">Edit</a></h2>'
 					. $longLine,
-				$summarySection.
-				'<div class="section"><h2 class="section_heading" id="section_1"><span id="History"><span id="Overview"></span>History</span><a class="edit-page" href="#editor/2">Edit</a></h2><div class="content_block" id="content_1">'
-					. $longLine . '</div>'
-					. $anchor
-					. '</div>',
+				'<div></div><h2><span class="mw-headline" id="History"><span id="Overview"></span>History</span><a class="edit-page" href="#editor/2">Edit</a></h2><div>'
+					. $longLine . '</div>',
 				$enableSections
 			),
 			array(

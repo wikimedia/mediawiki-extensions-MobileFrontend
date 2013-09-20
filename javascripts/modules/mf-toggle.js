@@ -1,22 +1,34 @@
 ( function( M, $ ) {
 
-var MIN_SECTIONS = 2, toggle = ( function() {
+var toggle = ( function() {
 
-	function wm_toggle_section( section_id ) {
-		$( '#section_' + section_id + ',#content_' + section_id ).toggleClass( 'openSection' );
-		M.emit( 'section-toggle', section_id );
+	/**
+	 * Given a heading, toggle it and any of its children
+	 * emits a section-toggle event
+	 *
+	 * @param {jQuery object} $heading A heading belonging to a section
+	 */
+	function toggle( $heading ) {
+		$heading.toggleClass( 'openSection' );
+		$heading.next().toggleClass( 'openSection' );
+		M.emit( 'section-toggle', $heading );
 	}
 
-	function wm_reveal_for_hash( hash ) {
-		var $target, $p;
+	/**
+	 * Reveals an element and its parent section as identified by it's id
+	 *
+	 * @param {String} selector A css selector that identifies a single element
+	 */
+	function reveal( selector ) {
+		var $target, $heading;
 
 		// jQuery will throw for hashes containing certain characters which can break toggling
 		try {
-			$target = $( hash );
-			$p = $target.closest( '.content_block, .section_heading' ).eq( 0 );
+			$target = $( selector );
+			$heading = $target.closest( '.section_heading' ).eq( 0 );
 
-			if ( $p.length > 0 && !$p.hasClass( 'openSection' ) ) {
-				wm_toggle_section( $p.attr( 'id' ).split( '_' )[1] );
+			if ( $heading.length > 0 && !$heading.hasClass( 'openSection' ) ) {
+				toggle( $heading );
 				// scroll again after opening section (opening section makes the page longer)
 				window.scrollTo( 0, $target.offset().top );
 			}
@@ -24,41 +36,37 @@ var MIN_SECTIONS = 2, toggle = ( function() {
 	}
 
 	function init() {
+		var $page = $( '#content' );
 		$( 'html' ).removeClass( 'stub' );
-		function openSectionHandler() {
-			var sectionName = this.id ? this.id.split( '_' )[1] : -1;
-			if ( sectionName !== -1 ) {
-				wm_toggle_section( sectionName );
-			}
-		}
+		$page.find( 'h2' ).addClass( 'section_heading' );
+		$page.find( '.section_heading' ).next( 'div' ).addClass( 'content_block' );
 
 		// use mouseup because mousedown blocks the click event and links
 		// in headings won't work
 		// FIXME change when micro.tap.js in stable
-		$( '.section_heading' ).on( M.tapEvent( 'mouseup' ), openSectionHandler );
+		$( '.section_heading' ).on( M.tapEvent( 'mouseup' ), function() {
+			toggle( $( this ) );
+		} );
 		$( '.section_anchors' ).remove();
 
 		function checkHash() {
 			var hash = window.location.hash;
 			if ( hash.indexOf( '#' ) === 0 ) {
-				wm_reveal_for_hash( hash );
+				reveal( hash );
 			}
 		}
 		checkHash();
 		$( '#content_wrapper a' ).on( 'click', checkHash );
 	}
 
-	// page is not long enough to collapse so don't worry
-	if ( $( '#content h2' ).length < MIN_SECTIONS ) {
-		$( 'html' ).addClass( 'stub' );
-		$( '.section_heading, .content_block' ).addClass( 'openSection' );
-	} else {
+	// avoid this running on Watchlist
+	if ( mw.config.get( 'wgNamespaceNumber' ) !== mw.config.get( 'wgNamespaceIds' ).special ) {
 		init();
 	}
 
 	return {
-		wm_reveal_for_hash: wm_reveal_for_hash,
-		wm_toggle_section: wm_toggle_section,
+		reveal: reveal,
+		toggle: toggle,
 		enable: init
 	};
 
@@ -70,8 +78,8 @@ M.on( 'page-loaded', function() {
 } );
 // FIXME: Temporary workaround while toggle-dynamic is not in stable
 if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
-	M.on( 'section-toggle', function( section_id ) {
-		var $content = $( '#content_' + section_id ),
+	M.on( 'section-toggle', function( $section ) {
+		var $content = $section.next(),
 			content = $content.data( 'content' );
 		if ( content ) {
 			$content.html( content ).data( 'content', false );
