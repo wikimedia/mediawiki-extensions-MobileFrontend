@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_79a853db",
+        "filename": "tests/acceptance/features/uploads.feature",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-20T23:26:29Z",
+      "side": 1,
+      "message": "Indentation for Cucumber tests is 2 spaces.",
+      "revId": "50b5816b4d6839ab3aacd2be8069c95e07be5d7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
