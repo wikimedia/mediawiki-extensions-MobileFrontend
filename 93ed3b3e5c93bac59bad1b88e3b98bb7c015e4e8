@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_4de5990b",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-20T18:16:05Z",
+      "side": 1,
+      "message": "I preferred the previous implementation with a callback, seemed more flexible (obviously those callbacks could be simplified). But not a deal breaker.\n\nIf you want to keep it this way, I\u0027d make those const instead of variables. They should never change during runtime.",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_adc35d59",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-20T18:16:05Z",
+      "side": 1,
+      "message": "Why not $( \u0027#content div\u0027 ).eq( 0 ) ?\n\nAlso, wouldn\u0027t it make more sense to make it a method of Page?",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_ed8e452e",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-20T18:16:05Z",
+      "side": 1,
+      "message": "That\u0027s not descriptive enough.",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_4da11998",
+        "filename": "less/common/typography.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-20T18:16:05Z",
+      "side": 1,
+      "message": "Why do we change this name? And if we do, why not .content-block?",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
