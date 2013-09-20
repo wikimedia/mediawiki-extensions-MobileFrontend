@@ -51,6 +51,24 @@
       "revId": "b340e9857e92b1186fcd790cfa5711151ac4fe91",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_aaf7c356",
+        "filename": "javascripts/modules/mf-tables.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-20T16:04:32Z",
+      "side": 1,
+      "message": "Yeh but this assumes alpha - I think code should be in a form that it can move from alpha-\u003ebeta / vice versa independently of other features.. also the initial page load doesn\u0027t emit a section-rendered event as it is already loaded into the DOM.",
+      "parentUuid": "4946a543_4c768605",
+      "revId": "b340e9857e92b1186fcd790cfa5711151ac4fe91",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
