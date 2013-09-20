@@ -13,15 +13,26 @@
   padding: 10px;
   display: inline-block;
 }
-.input-box {
+.inputs-box {
   padding: 1px;
-  border: solid 1px #ccc;
+  border: solid 1px #e1e1e1;
   border-radius: 5px;
   background: #fff;
+  margin: 0 0 .8em;
+  text-align: center;
 }
-.input-box input:not([type=submit]) {
-  -webkit-appearance: none;
+.inputs-box input:not([type=submit]),
+.inputs-box img {
   border: none;
+  border-top: solid 1px #e1e1e1;
+}
+.inputs-box input:not([type=submit]):first-child,
+.inputs-box img:first-child {
+  border-top: none;
+}
+.inputs-box input:not([type=submit]) {
+  -webkit-appearance: none;
+  border-radius: 0;
   padding: .8em .5em;
   margin: 0;
   -moz-box-sizing: border-box;

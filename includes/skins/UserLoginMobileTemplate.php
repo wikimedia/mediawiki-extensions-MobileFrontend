@@ -69,7 +69,7 @@ class UserLoginMobileTemplate extends UserLoginAndCreateTemplate {
 					'method' => 'post',
 					'action' => $action ) ) .
 			Html::openElement( 'div', array(
-				'class' => 'wpInputs',
+				'class' => 'inputs-box',
 			) ) .
 			Html::input( 'wpName', $username, 'text',
 				array( 'class' => 'loginText',

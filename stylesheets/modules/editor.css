@@ -41,8 +41,7 @@
 .editor-overlay textarea:focus {
   outline: none;
 }
-.editor-overlay input,
-.editor-overlay .input-box {
+.editor-overlay input {
   margin: 0 0 .7em;
   width: 100%;
   -moz-box-sizing: border-box;

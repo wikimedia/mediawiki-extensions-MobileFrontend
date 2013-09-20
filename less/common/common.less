@@ -9,15 +9,26 @@
 	display: inline-block;
 }
 
-.input-box {
+.inputs-box {
 	padding: 1px;
-	border: solid 1px #ccc;
+	border: solid 1px #e1e1e1;
 	border-radius: 5px;
 	background: #fff;
+	margin: 0 0 .8em;
+	text-align: center;
+
+	input:not([type=submit]), img {
+		border: none;
+		border-top: solid 1px #e1e1e1;
+
+		&:first-child {
+			border-top: none;
+		}
+	}
 
 	input:not([type=submit]) {
 		-webkit-appearance: none;
-		border: none;
+		border-radius: 0;
 		padding: .8em .5em;
 		margin: 0;
 		.box-sizing( border-box );
