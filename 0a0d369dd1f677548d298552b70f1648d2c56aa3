@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_4dd919f1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-09-20T18:24:45Z",
+      "side": 1,
+      "message": "this needs to be escaped.",
+      "revId": "0a0d369dd1f677548d298552b70f1648d2c56aa3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
