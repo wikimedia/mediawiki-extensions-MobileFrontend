@@ -92,9 +92,7 @@ $messages['en'] = array (
 	'mobile-frontend-clear-search' => 'Clear',
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wiki
-pedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA
-3.0]; additional terms may apply.',
+	'mobile-frontend-footer-license' => 'Text is available under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional terms may apply.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Terms of Use]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'No page titles match your search. Change your search, or press the keyboard search button to search inside pages.',
