@@ -232,7 +232,7 @@
 
 					popup.show( msg, 'toast error' );
 					self.$( '.saving-bar' ).hide();
-					self.$( '.initial-bar' ).show();
+					self.$( '.save-bar' ).show();
 					// log error that occurred in retrieving section
 					self.log( 'error', err );
 				} );
