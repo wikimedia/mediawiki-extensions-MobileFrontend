@@ -395,7 +395,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-media-details',
 		),
 		'styles' => array(
-			'stylesheets/modules/tables.css',
 			'stylesheets/modules/nearbypages.css',
 			'stylesheets/modules/mediaViewer.css',
 		),
@@ -403,7 +402,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/externals/micro.tap.js',
 			'javascripts/externals/epoch.js',
 			'javascripts/common/history-alpha.js',
-			'javascripts/modules/mf-tables.js',
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
 			'javascripts/modules/nearbypages.js',
