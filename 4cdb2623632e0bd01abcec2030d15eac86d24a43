@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_f8e1a1d4",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-20T19:14:23Z",
+      "side": 1,
+      "message": "Maybe just reloadPage() since it also changes config?",
+      "revId": "4cdb2623632e0bd01abcec2030d15eac86d24a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_b8d8f91b",
+        "filename": "tests/javascripts/common/test_Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-20T19:14:23Z",
+      "side": 1,
+      "message": "Not sure if we need a test for something that simple, but it can stay ;)",
+      "revId": "4cdb2623632e0bd01abcec2030d15eac86d24a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
