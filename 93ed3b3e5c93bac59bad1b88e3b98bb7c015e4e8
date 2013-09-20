@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_4d583986",
+        "filename": "includes/formatters/MobileFormatter.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-20T18:33:19Z",
+      "side": 1,
+      "message": "I can\u0027t override constants in sub classes and we need to for WML and HTML :(",
+      "parentUuid": "4946a543_4de5990b",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_adc35d59",
         "filename": "javascripts/common/application.js",
         "patchSetId": 13
@@ -48,6 +66,24 @@
       "writtenOn": "2013-09-20T18:16:05Z",
       "side": 1,
       "message": "Why not $( \u0027#content div\u0027 ).eq( 0 ) ?\n\nAlso, wouldn\u0027t it make more sense to make it a method of Page?",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_0dcf112b",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-20T18:33:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4946a543_adc35d59",
       "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -71,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_6d86d5bd",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-20T18:33:19Z",
+      "side": 1,
+      "message": "added a FIXME",
+      "parentUuid": "4946a543_ed8e452e",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_4da11998",
         "filename": "less/common/typography.less",
         "patchSetId": 13
@@ -82,6 +136,24 @@
       "writtenOn": "2013-09-20T18:16:05Z",
       "side": 1,
       "message": "Why do we change this name? And if we do, why not .content-block?",
+      "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_ed63a51a",
+        "filename": "less/common/typography.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-20T18:33:19Z",
+      "side": 1,
+      "message": "renaming to section-content",
+      "parentUuid": "4946a543_4da11998",
       "revId": "93ed3b3e5c93bac59bad1b88e3b98bb7c015e4e8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
