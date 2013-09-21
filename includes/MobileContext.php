@@ -192,20 +192,8 @@ class MobileContext extends ContextSource {
 			if ( $mobileAction === 'alpha' || $mobileAction === 'beta' ) {
 				$this->mobileMode = $mobileAction;
 			} else {
-				// First check old cookie
-				// @todo: Remove in September when old cookies expire
 				$req = $this->getRequest();
-				$alpha = $req->getCookie( 'mf_alpha', '' );
-				if ( $alpha == 1 ) {
-					$req->response()->setcookie( 'mf_alpha', '', 0, '' );
-					$this->setMobileMode( 'alpha' );
-				} else {
-					$this->mobileMode = $this->getRequest()->getCookie( 'optin', '' );
-					// Old cookie format - handle it but no point in overwriting the cookie
-					if ( $this->mobileMode == '1' ) {
-						$this->mobileMode = 'beta';
-					}
-				}
+				$this->mobileMode = $req->getCookie( 'optin', '' );
 			}
 		}
 		return $this->mobileMode;

@@ -438,13 +438,9 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function optInProvider() {
 		return array(
 			array( array(), false, false ),
-			array( array( 'optin' => '1' ), false, true ),
 			array( array( 'optin' => 'beta' ), false, true ),
 			array( array( 'optin' => 'alpha' ), true, true ),
 			array( array( 'optin' => 'foobar' ), false, false ),
-			array( array( 'optin' => '1', 'mf_alpha' => '1' ), true, true ),
-			array( array( 'mf_alpha' => '1' ), true, true ),
-			array( array( 'mf_alpha' => 'foobar' ), false, false ),
 		);
 	}
 }
