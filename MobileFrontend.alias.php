@@ -129,6 +129,10 @@ $specialPageAliases['mk'] = array(
 /** Malayalam (മലയാളം) */
 $specialPageAliases['ml'] = array(
 	'MobileOptions' => array( 'മൊബൈൽഐച്ഛികങ്ങൾ' ),
+	'Uploads' => array( 'അപ്‌ലോഡുകൾ' ),
+	'MobileDiff' => array( 'മൊബൈൽവ്യത്യാസം' ),
+	'MobileMenu' => array( 'മൊബൈൽമെനു' ),
+	'Nearby' => array( 'സമീപസ്ഥം' ),
 );
 
 /** Dutch (Nederlands) */

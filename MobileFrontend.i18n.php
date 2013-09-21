@@ -499,7 +499,6 @@ If not the Main Page, the following message is used:
 {{Identical|History}}',
 	'mobile-frontend-meta-data-issues-header' => 'Heading for overlay listing all cleanup templates',
 	'mobile-frontend-meta-data-issues' => 'This should be several words and should explain that an article has cleanup templates on it - meaning there is room for improvement on the page. It appears in a button that when clicked opens the overlay with heading {{msg-mw|mobile-frontend-meta-data-issues-header}}',
-	'mobile-frontend-ajax-preview-loading' => 'Text that accompanies an ajax loader when you dynamically load an article preview overlay via JavaScript',
 	'mobile-frontend-page-saving' => 'Unused at this time.
 
 Text shown whilst a page is being saved. Parameters:
@@ -761,7 +760,7 @@ See also:
 	'mobile-frontend-talk-reply' => 'Reply heading.
 {{Identical|Reply}}',
 	'mobile-frontend-media-details' => 'Caption for a button leading to the details of a media file (e.g. an image) in a preview.
-{{Identical|Details}}',
+{{Identical|Detail}}',
 	'abusefilter-edit-builder-vars-user-mobile' => 'See {{msg-mw|Abusefilter-edit-builder-vars-user-name}} (from AbuseFilter extension), for example.',
 );
 
@@ -2685,6 +2684,7 @@ $messages['ce'] = array(
 	'mobile-frontend-username-placeholder' => 'Декъашхочун цӀе',
 	'mobile-frontend-last-modified-months' => 'ТӀаьхьара хийцамаш бина {{PLURAL:$1|$1 бутт}} хьалха',
 	'mobile-frontend-placeholder-beta' => 'Лаха translatewiki.net чухула (бета-верси)',
+	'mobile-frontend-copyright' => 'Йоза тlекхочучехь ду оцу хьола бакъойаларца <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike</a>, цхьайолчу хенахь хила мега хьоле хьаьжжина локхаллий таронца. Мадарра хьажа. <a href="http://wikimediafoundation.org/wiki/Terms_of_Use/ce">Лелоран хьал</a>. «{{SITENAME}}» — дlаязъйинайолу йохкаэцар доцуш вовшахтохаран <a href=\'http://www.wikimediafoundation.org/\'>«Хьундуз Викимедийа»</a>.', # Fuzzy
 	'mobile-frontend-main-menu-login' => 'Системин чугӀо',
 	'mobile-frontend-settings-site-header' => '«{{SITENAME}}» проектан меттанаш',
 	'mobile-frontend-watchlist-more' => 'кхин дӀа',
@@ -3110,6 +3110,9 @@ $messages['cy'] = array(
 	'mobile-frontend-privacy-link-text' => 'Preifatrwydd',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => "Darperir y testun hwn yn ôl termau'r drwydded [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; hwyrach bod termau ychwanegol yn weithredol.",
+	'mobile-frontend-copyright' => "Rhoddir testun y dudalen ar gael ar delerau'r drwydded <a href=\"http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>;
+gall fod telerau ychwanegol yn perthyn i'r testun.
+Gweler <a href=\"http://wikimediafoundation.org/wiki/Terms_of_Use\">Telerau Defnyddio'r Drwydded</a> am fanylion pellach. Mae {{SITENAME}} yn nod masnachol cofrestredig, y mae'r sefydliad di-elw <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> yn berchen arno.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termau Defnydd]',
 	'mobile-frontend-footer-contact' => 'Cysylltu',
 	'mobile-frontend-search-noresults' => "Nid oes unrhyw deitlau tudalennau yn cyfateb i'r chwiliad. Newidiwch y chwiliad, neu pwyswch y botwm chwilio ar eich bysellfwrdd er mwyn chwilio oddi mewn i'r tudalennau.",
@@ -3368,6 +3371,7 @@ $messages['da'] = array(
 	'mobile-frontend-privacy-link-text' => 'Fortrolighed',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Tekst er tilgængelig under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; yderligere betingelser kan være gældende.',
+	'mobile-frontend-copyright' => "Tekst er tilgængelig under <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike-licensen</a>; yderligere betingelser kan være gældende. Se <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>brugsbetingelserne</a> for flere oplysninger. {{SITENAME}} er et registreret varemærke under den ideelle organisation <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Brugsbetingelser]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Ingen sidetitler svarer til din søgning. Ændre søgningen, eller tryk på søgeknappen på tastaturet for at søge inde i sider.',
@@ -3624,6 +3628,7 @@ $messages['de'] = array(
 	'mobile-frontend-privacy-link-text' => 'Datenschutz',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Der Text ist verfügbar unter [//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC-BY-SA 3.0]; zusätzliche Bedingungen können anwendbar sein.',
+	'mobile-frontend-copyright' => 'Der Inhalt ist verfügbar unter $1, sofern nicht anders angegeben.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/de?useformat=mobile Nutzungsbedingungen]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Kein Seitentitel entspricht deiner Suche. Ändere deine Suche oder drücke die Suchschaltfläche deiner Tastatur, um die Suche auf den Inhalt der Seiten auszuweiten.',
@@ -3647,7 +3652,6 @@ $messages['de'] = array(
 	'mobile-frontend-page-menu-history' => 'Versionsgeschichte',
 	'mobile-frontend-meta-data-issues-header' => 'Probleme',
 	'mobile-frontend-meta-data-issues' => 'Mit dieser Seite gibt es einige Probleme',
-	'mobile-frontend-ajax-preview-loading' => 'Lade Seitenvorschau',
 	'mobile-frontend-page-saving' => 'Speichere $1',
 	'mobile-frontend-user-cta' => 'Bitte melde dich an oder registriere dich, um deine Benachrichtigungen anzusehen.',
 	'mobile-frontend-user-button-tooltip' => 'Meine Benachrichtigungen anzeigen',
@@ -4602,6 +4606,8 @@ $messages['et'] = array(
 	'mobile-frontend-clear-search' => 'Tühjenda',
 	'mobile-frontend-privacy-link-text' => 'Privaatsus',
 	'mobile-frontend-footer-license' => 'Sisu on saadaval litsentsi [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] all; võivad lisanduda täiendavad tingimused.',
+	'mobile-frontend-copyright' => "Tekst on kasutatav Creative Commonsi litsentsi <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Attribution/Share-Alike</a> tingimustel; sellele võivad lisanduda täiendavad tingimused.
+Üksikasjad leiad <a href=\"http://wikimediafoundation.org/wiki/Terms_of_Use\">Wikimedia kasutustingimustest</a>. {{SITENAME}} on mittetulundusliku organisatsiooni <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc</a> registreeritud kaubamärk.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Kasutustingimused]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Otsitavale vastavad leheküljepealkirjad puuduvad. Vaheta otsisõna või vajuta sõrmistiku otsinuppu, et otsida lehekülgedelt.',
@@ -5100,6 +5106,7 @@ $messages['fi'] = array(
 	'mobile-frontend-privacy-link-text' => 'Yksityisyys',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Sisältö on saatavissa lisenssillä [//fi.m.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot?useformat=mobile CC BY-SA 3.0]. Lisäehtoja voi sisältyä.',
+	'mobile-frontend-copyright' => 'Teksti on saatavilla <a href="http://fi.wikipedia.org/wiki/{{SITENAME}}:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot">Creative Commons Attribution/Share-Alike</a> -lisenssillä; lisäehtoja voi sisältyä. Katso <a href="http://wikimediafoundation.org/wiki/Käyttöehdot">käyttöehdot</a>. {{SITENAME}} on <a href=\'http://www.wikimediafoundation.org/\'>Wikimedia Foundation, Inc.:n</a>, voittoa tavoittelemattoman yleishyödyllisen järjestön rekisteröimä tavaramerkki.', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Käyttöehdot]',
 	'mobile-frontend-footer-contact' => 'Yhteystiedot',
 	'mobile-frontend-search-noresults' => 'Hakuasi vastavaa artikkelin nimeä ei löytynyt. Muuta hakua tai käytä näppäimistön hakupainiketta etsiäksesi artikkelien sisältä.',
@@ -5475,6 +5482,7 @@ $messages['fr'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidentialité',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Contenu disponible sous [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]',
+	'mobile-frontend-copyright' => "<a class='internal' href='/wiki/Wikip%C3%A9dia:Droit_d%27auteur' title='Droit d'auteur'>Droit d'auteur</a> : les textes sont disponibles sous <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.fr'>licence Creative Commons paternité–partage à l’identique</a> ; d’autres conditions peuvent s’appliquer. Voyez les <a href='http://wikimediafoundation.org/wiki/Conditions_d'utilisation'>conditions d’utilisation</a> pour plus de détails. {{SITENAME}}® est une marque déposée de la <a href='http://wikimediafoundation.org/wiki/Accueil' title='Wikimedia Foundation'>Wikimedia Foundation, Inc.</a>, une organisation à but non lucratif.", # Fuzzy
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Conditions d'utilisation]",
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => "Aucun titre de page ne correspond à votre recherche. Modifiez-la, ou appuyez sur le bouton de recherche du clavier pour chercher à l'intérieur des pages.",
@@ -6542,6 +6550,7 @@ $messages['he'] = array(
 	'mobile-frontend-privacy-link-text' => 'פרטיות',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'התוכן זמין לפי תנאי רישיון [//he.m.wikipedia.org/wiki/ויקיפדיה:רישיון_Creative_Commons_ייחוס-שיתוף_זהה_3.0_לא_מותאם?useformat=mobile CC BY-SA 3.0]; ייתכן שחלים תנאים נוספים.',
+	'mobile-frontend-copyright' => "הטקסט מוגש בכפוף לרישיון <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons ייחוס/שיתוף זהה</a>; ייתכן שיש תנאים נוספים. ראו <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>תנאי השימוש</a> לפרטים. ויקיפדיה היא סימן רשום של <a href='http://www.wikimediafoundation.org/'>קרן ויקמדיה בע\"מ</a>, ארגון ללא מטרות רווח.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile תנאי השימוש]',
 	'mobile-frontend-footer-contact' => 'יצירת קשר',
 	'mobile-frontend-search-noresults' => 'שום כותרת של דף לא תאמה לחיפוש שלך. יש לשנות את החיפוש או ללחוץ על מקש החיפוש במקלדת כדי לחפש בתוך עמודים.',
@@ -6564,7 +6573,6 @@ $messages['he'] = array(
 	'mobile-frontend-page-menu-history' => 'היסטוריה',
 	'mobile-frontend-meta-data-issues-header' => 'בעיות',
 	'mobile-frontend-meta-data-issues' => 'בדף הזה יש בעיות',
-	'mobile-frontend-ajax-preview-loading' => 'טעינת תצוגה מקדימה של דף',
 	'mobile-frontend-page-saving' => 'שמירת $1',
 	'mobile-frontend-user-cta' => 'נא להיכנס או להירשם כדי לראות את ההודעות שלך.',
 	'mobile-frontend-user-button-tooltip' => 'הצגת ההודעות שלי',
@@ -6674,6 +6682,7 @@ $messages['he'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'יותר מ־500 העלאות',
 	'mobile-frontend-photo-upload-cta' => 'נא להיכנס או להירשם כדי להוסיף תמונה.',
 	'mobile-frontend-photo-upload-login' => 'חובה להיכנס כדי להוסיף תמונה.',
+	'mobile-frontend-editor-newpage-prompt' => 'הדף הזה אינו קיים. מה עם לאזור אומץ וליצור אותו?',
 	'mobile-frontend-editor-disabled' => 'אין לך הרשאה לערוך את הדף הזה.',
 	'mobile-frontend-editor-unavailable' => 'עריכה ממכשירים ניידים אינה מופעלת בדפדפן שלך. נא לנסות דפדפן אחר.',
 	'mobile-frontend-editor-cta' => 'יש להיכנס לחשבון כדי לערוך דפים ממכשיר נייד.',
@@ -6712,6 +6721,7 @@ $messages['he'] = array(
 	'mobile-frontend-talk-reply-success' => 'תשובתך נשמרה בהצלחה בדף השיחה.',
 	'mobile-frontend-talk-reply-info' => 'לתשומת לבך: לתשובתך תתווסף חתימה עם שם המשתמש שלך.',
 	'mobile-frontend-talk-reply' => 'תשובה',
+	'mobile-frontend-media-details' => 'פרטים',
 	'abusefilter-edit-builder-vars-user-mobile' => 'האם משתמש עורך דרך הממשק למכשירים ניידים או לא',
 );
 
@@ -9032,6 +9042,7 @@ $messages['ko'] = array(
 	'mobile-frontend-privacy-link-text' => '개인정보 정책',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => '내용은 [//ko.m.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile 크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0]에 따라 사용할 수 있습니다. 추가적인 조건이 적용될 수 있습니다.',
+	'mobile-frontend-copyright' => '모든 문서는 <a href="http://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0</a>에 따라 사용할 수 있습니다. 추가적인 조건이 적용될 수 있습니다. 자세한 내용은 <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">이용 규칙</a>을 참고하십시오. {{SITENAME}}®는 미국 및 다른 국가에 등록되어 있는, <a class=\'internal\' href="http://www.wikimediafoundation.org">Wikimedia Foundation, Inc.</a> 소유의 등록 상표입니다.', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ko?useformat=mobile 이용 약관]',
 	'mobile-frontend-footer-contact' => '연락하기',
 	'mobile-frontend-search-noresults' => '찾기 결과와 일치하는 문서를 찾지 못했습니다. 검색어을 바꾸거나, 키보드의 찾기 단추를 누르면 본문 내용을 검색합니다.',
@@ -9829,6 +9840,7 @@ $messages['lb'] = array(
 	'mobile-frontend-privacy-link-text' => 'Dateschutz',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text disponibel ënner [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; zousätzlech Konditioune kënnen applicabel sinn.',
+	'mobile-frontend-copyright' => "Den Text ass ënnert der <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike Lizenz</a> disponibel; zousätzlech Konditioune kënne gëllen. Kuckt <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Benotzungsbedingungen</a> fir méi Detailer. {{SITENAME}} ass eng registréiert Marque vun der <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, enger Organisatioun ouni Gewënnzweck.", # Fuzzy
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=Bedingunge fir d'mobilt Benotzen]",
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => "Keng Säit gouf beim siche fonnt. Ännert d'Critèren oder dréckt de Sichknäppchen op Ärer Tastatur fir bannen an de Säiten ze sichen.",
@@ -10618,6 +10630,7 @@ $messages['ml'] = array(
 	'mobile-frontend-privacy-link-text' => 'സ്വകാര്യത',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'എഴുത്തുകൾ [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile സി.സി. ബൈ-എസ്.എ. 3.0] പ്രകാരം ലഭ്യം; മേൽ നിബന്ധനകൾ ഉണ്ടായേക്കാം.',
+	'mobile-frontend-copyright' => "<a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>ക്രിയേറ്റീവ് കോമൺസ് ആട്രിബ്യൂഷൻ/ഷെയർ-എലൈക്ക്</a> അനുമതിപ്രകാരമാണ് കൃതി ലഭ്യമായിരിക്കുന്നത്; മറ്റ് നിബന്ധനകൾ ഉണ്ടായേക്കാം. കൂടുതൽ വിവരങ്ങൾക്ക് <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>ഉപയോഗ നിബന്ധനകൾ</a> കാണുക. വിക്കിപീഡിയ എന്നത് <a href='http://www.wikimediafoundation.org/'>വിക്കിമീഡിയ ഫൗണ്ടേഷൻ, Inc.</a>, എന്ന ലാഭേച്ഛാരഹിത സംഘടനയുടെ ഔദ്യോഗിക വ്യാപാരമുദ്രയാണ്.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile ഉപയോഗനിബന്ധനകൾ]',
 	'mobile-frontend-footer-contact' => 'സമ്പർക്കം',
 	'mobile-frontend-search-noresults' => 'താങ്കൾ തിരഞ്ഞതുമായി സാമ്യമുള്ള താളുകൾ ഒന്നുമില്ല. ദയവായി മാറ്റി തിരയുക, അല്ലെങ്കിൽ കീബോർഡ് തിരച്ചിൽ ബട്ടൺ ഉപയോഗിച്ച് താളുകൾക്കുള്ളിൽ തിരയുക.',
@@ -11350,6 +11363,7 @@ $messages['nb'] = array(
 	'mobile-frontend-privacy-link-text' => 'Personvern',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Innholdet er tilgjengelig under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; ytterligere betingelser kan gjelde.',
+	'mobile-frontend-copyright' => "Tekst er tilgjengelig under <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike Lisens</a>. Tillegg til lisensen kan gjelde. Se	<a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>bruksvilkår</a> for detaljer. {{SITENAME}} er et registrert varemerk av den ideele organisasjonen <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Bruksvilkår]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Ingen sidetitler samsvarer med søket ditt. Endre søket eller trykk på søkeknappen for å søke i artikkeltekstene.',
@@ -11744,6 +11758,7 @@ $messages['nl'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'De inhoud is beschikbaar onder de licentie [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; er zijn mogelijk extra voorwaarden van toepassing.',
+	'mobile-frontend-copyright' => "De tekst is beschikbaar onder de licentie <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Naamsvermelding/Gelijk delen</a>. Het is mogelijk dat aanvullende voorwaarden van toepassing zijn. Zie de <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Algemene Voorwaarden</a> voor meer informatie.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/nl?useformat=mobile Gebruiksvoorwaarden]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => "Er zijn geen resultaten voor uw zoekopdracht. Wijzig uw zoekopdracht of klik op de zoekknop op het toetsenbord om binnen pagina's te zoeken.",
@@ -12955,6 +12970,7 @@ $messages['pt-br'] = array(
 	'mobile-frontend-clear-search' => 'Limpar',
 	'mobile-frontend-privacy-link-text' => 'Privacidade',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Este texto é disponibilizado nos termos da licença <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; pode estar sujeito a condições adicionais. Consulte as <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Condições de Uso</a> para mais detalhes. {{SITENAME}} é uma marca registrada da <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, uma organização sem fins lucrativos.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termos de uso]',
 	'mobile-frontend-footer-contact' => 'Contato',
 	'mobile-frontend-main-menu-button-tooltip' => 'Abrir menu principal',
@@ -13124,6 +13140,7 @@ $messages['ro'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidențialitate',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text disponibil sub licența [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; pot exista și clauze suplimentare.',
+	'mobile-frontend-copyright' => 'Acest text este disponibil sub licența <a href="http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons cu atribuire și distribuire în condiții identice</a>; pot exista și clauze suplimentare. Vedeți detalii la <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Termenii de utilizare</a>. {{SITENAME}} este o marcă înregistrată a organizației nonprofit <a href=\'http://www.wikimediafoundation.org/\'>Fundația Wikimedia, Inc.</a>', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termeni de utilizare]',
 	'mobile-frontend-footer-contact' => 'Contact',
 	'mobile-frontend-search-noresults' => 'Niciun titlu de pagină nu corespunde căutării dumneavoastră. Căutați altceva sau apăsați butonul de căutare de pe tastatură pentru a căuta în interiorul paginilor.',
@@ -13511,6 +13528,7 @@ $messages['ru'] = array(
 	'mobile-frontend-privacy-link-text' => 'Конфиденциальность',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Содержание доступно по лицензии [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0], могут применяться дополнительные условия.',
+	'mobile-frontend-copyright' => "Текст доступен по <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.ru\">лицензии Creative Commons Attribution/Share-Alike</a>, в отдельных случаях могут действовать дополнительные условия. Подробнее см. <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a>. «{{SITENAME}}» — зарегистрированная торговая марка некоммерческой организации «<a href='http://www.wikimediafoundation.org/'>Фонд Викимедиа</a>».", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ru?useformat=mobile Условия использования]',
 	'mobile-frontend-footer-contact' => 'Контактная информация',
 	'mobile-frontend-search-noresults' => 'Нет страниц, названия которых соответствуют вашему запросу. Измените свой запрос, или нажмите на клавиатуре кнопку для поиска внутри страниц.',
@@ -13534,8 +13552,8 @@ $messages['ru'] = array(
 	'mobile-frontend-page-saving' => 'Сохранение $1',
 	'mobile-frontend-nearby-title' => 'Рядом',
 	'mobile-frontend-nearby-loading' => 'Загрузка информации о том, что находится невдалеке от вас',
-	'mobile-frontend-nearby-requirements' => 'Эта страница требует, чтобы был включён JavaScript и браузер мог получать информацию о местоположении.', # Fuzzy
-	'mobile-frontend-nearby-noresults' => 'Вы находитесь в центре неизвестности, и нам не удалось найти никаких подходящих тем. Почему бы вам не написать что-либо?', # Fuzzy
+	'mobile-frontend-nearby-requirements' => 'Извините! Ваш браузер не поддерживает работу с {{SITENAME}}.',
+	'mobile-frontend-nearby-noresults' => 'Что-то тихо здесь… Поблизости нет ни одной страницы.',
 	'mobile-frontend-nearby-refresh' => 'Мы определили ваше местоположение точнее. Нажмите здесь, чтобы обновить список ближайших страниц',
 	'mobile-frontend-nearby-error' => 'Произошла неожиданная ошибка при попытке найти страницы, связанные с вашим местоположением', # Fuzzy
 	'mobile-frontend-donate-image-login' => 'Вы должны авторизоваться для просмотра своих загрузок.',
@@ -13578,7 +13596,7 @@ $messages['ru'] = array(
 	'mobile-frontend-saving-exit-page' => 'Ваша правка всё ещё сохраняется. Если вы покинете страницу, ваши изменения будут потеряны. Вы уверены, что хотите уйти?',
 	'mobile-frontend-photo-upload' => 'Добавить на эту страницу изображение',
 	'mobile-frontend-photo-article-edit-comment' => 'Добавлено изображение для использования на странице',
-	'mobile-frontend-photo-article-donate-comment' => 'Пожертвовал изображение с мобильного устройства', # Fuzzy
+	'mobile-frontend-photo-article-donate-comment' => 'Пожертвованные изображения из Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'Добавлено изображение на страницу',
 	'mobile-frontend-photo-caption-placeholder' => 'Добавить описание (обязательно)',
 	'mobile-frontend-image-loading' => 'Изображение загружается',
@@ -14017,6 +14035,7 @@ $messages['sl'] = array(
 	'mobile-frontend-privacy-link-text' => 'Zasebnost',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Besedilo je dostopno pod licenco [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; veljajo lahko še drugi pogoji.',
+	'mobile-frontend-copyright' => 'Besedilo je na razpolago pod <a href="http://creativecommons.org/licenses/by-sa/3.0/">licenco Creative Commons Priznanje avtorstva-Deljenje pod enakimi pogoji 3.0</a>; veljajo lahko tudi dodatni pogoji. Podrobnosti so razložene na strani <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Pogoji uporabe</a>. {{SITENAME}} je registrirana blagovna znamka nepridobitne organizacije <a href=\'http://www.wikimediafoundation.org/\'>Wikimedia Foundation, Inc.</a>', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Pogoji uporabe]',
 	'mobile-frontend-footer-contact' => 'Stik',
 	'mobile-frontend-main-menu-button-tooltip' => 'Odpre glavni meni',
@@ -14221,6 +14240,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-privacy-link-text' => 'Приватност',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Садржај је доступан под [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] додатни услови су можда примењиви.',
+	'mobile-frontend-copyright' => "Овај текст је доступан под лиценцом <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Кријејтив комонс Ауторство-Делити под истим условима </a>; могао би бити подложан и додатним условима. Погледајте <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>услове коришћења</a> за детаље. Википедија је регистровани знак <a href='http://www.wikimediafoundation.org/'>Викимедијине фондације</a>, непрофитне организације.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Услови коришћења]',
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-search-noresults' => 'Нема чланка који одговара претрази. Промените услове претраге, или притисните дугме за претрагу да бисте је проширили на садржај чланака.', # Fuzzy
@@ -15130,6 +15150,7 @@ $messages['tr'] = array(
 	'mobile-frontend-privacy-link-text' => 'Gizlilik',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Metin [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] Lisansı altındadır; ek koşullar uygulanabilir.',
+	'mobile-frontend-copyright' => "Metin <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike Lisansı</a> altındadır; ek koşullar uygulanabilir. Ayrıntılar için <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Kullanım Koşulları</a>na bakınız. {{SITENAME}}, kâr amacı gütmeyen kuruluş olan <a href='http://www.wikimediafoundation.org/'>Wikimedia Vakfı</a>'nın tescilli markasıdır.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Kullanım Şartları]',
 	'mobile-frontend-footer-contact' => 'İletişim',
 	'mobile-frontend-search-noresults' => 'Arama kriterinize uygun sayfa başlıkları bulunamadı. Aramanızı değiştirin veya sayfada arama yapmak için klavyenizdeki arama butonuna basın.',
@@ -16031,6 +16052,7 @@ $messages['vi'] = array(
 	'mobile-frontend-privacy-link-text' => 'Riêng tư',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Văn bản có sẵn theo [//vi.m.wikipedia.org/wiki/Wikipedia:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi?useformat=mobile CC BY-SA 3.0]; có thể áp dụng điều khoản bổ sung.',
+	'mobile-frontend-copyright' => "Văn bản được phát hành theo <a href='http://vi.wikipedia.org/wiki/{{SITENAME}}:Nguyên_văn_Giấy_phép_Creative_Commons_Ghi_công–Chia_sẻ_tương_tự_phiên_bản_3.0_Chưa_chuyển_đổi?uselang=vi'>Giấy phép Creative Commons Ghi công–Chia sẻ tương tự</a>; có thể áp dụng điều khoản bổ sung. Xem <a href='http://wikimediafoundation.org/wiki/Điều_khoản_Sử_dụng?uselang=vi'>Điều khoản Sử dụng</a> để biết thêm chi tiết. {{SITENAME}} là thương hiệu đã đăng ký của <a href='http://www.wikimediafoundation.org/wiki/Trang_chủ?uselang=vi'>Wikimedia Foundation, Inc.</a>, một tổ chức phi lợi nhuận.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Điều_khoản_Sử_dụng?useformat=mobile&uselang=vi Các Điều khoản Sử dụng]',
 	'mobile-frontend-footer-contact' => 'Liên lạc',
 	'mobile-frontend-search-noresults' => 'Không tìm thấy trang trùng tên. Hãy thay đổi truy vấn hoặc bấm phím tìm kiếm để tìm kiếm trong trang.',
