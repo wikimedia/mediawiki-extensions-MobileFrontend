@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_7f166949",
+        "filename": "includes/skins/UserLoginMobileTemplate.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T22:43:31Z",
+      "side": 1,
+      "message": "wpInputs is a core css class and maybe we shouldn\u0027t depart from that or maybe we should? (just background on why it was this class before - I\u0027m not sure about the proper thing to do but we should maybe talk to kaldari about it)",
+      "revId": "bf3d613e8987f37e5289c2641ddc6ddbc8e0a7c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
