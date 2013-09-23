@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_d684aad8",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T19:14:37Z",
+      "side": 1,
+      "message": "Where is this used?",
+      "revId": "eaf34338f6bd976469f2ebe4866417c88e5c9e6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

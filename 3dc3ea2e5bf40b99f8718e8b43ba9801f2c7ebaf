@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_967a22ed",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T19:14:37Z",
+      "side": 0,
+      "message": "Why have you removed the FIXMEs?",
+      "revId": "3dc3ea2e5bf40b99f8718e8b43ba9801f2c7ebaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
