@@ -16,6 +16,24 @@
       "revId": "3dc3ea2e5bf40b99f8718e8b43ba9801f2c7ebaf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_56799af2",
+        "filename": "javascripts/modules/editor/editor.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T19:16:20Z",
+      "side": 0,
+      "message": "i don\u0027t know.. i guess a rebase got borked.",
+      "parentUuid": "4946a543_967a22ed",
+      "revId": "3dc3ea2e5bf40b99f8718e8b43ba9801f2c7ebaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
