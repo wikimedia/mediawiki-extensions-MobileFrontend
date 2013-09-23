@@ -72,7 +72,7 @@
 		$( '#ca-edit' ).addClass( 'enabled' );
 
 		// FIXME: unfortunately the main page is special cased.
-		if ( mw.config.get( 'wgIsMainPage' ) || isNew || $( '#content_0' ).text() ) {
+		if ( mw.config.get( 'wgIsMainPage' ) || isNew || M.getLeadSection().text() ) {
 			// if lead section is not empty, open editor with lead section
 			addEditButton( 0, '#ca-edit' );
 		} else {
