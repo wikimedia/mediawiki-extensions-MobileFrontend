@@ -24,16 +24,21 @@
 
 	// do not run more than once
 	function init() {
+		var title = mw.config.get( 'wgTitle' ),
+			currentUrl = mw.util.wikiGetlink( title );
 		// initial history state does not contain title
 		// run before binding to avoid nasty surprises
-		History.replaceState( null, mw.config.get( 'wgTitle' ) );
+		History.replaceState( null, title, currentUrl );
 
 		// Bind to future StateChange Events
 		History.Adapter.bind( window, 'statechange', function(){
 			var s = History.getState();
-			new Page( { title: s.title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
-				window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
-			} ).on( 'ready', M.reloadPage );
+			if ( currentUrl !== s.url ) {
+				new Page( { title: s.title, el: $( '#content_wrapper' ) } ).on( 'error', function() {
+					window.location.reload(); // the page either doesn't exist or was a Special:Page so force a refresh
+				} ).on( 'ready', M.reloadPage );
+			}
+			currentUrl = s.url;
 		} );
 
 		/**

@@ -30,12 +30,12 @@
 		H.pushState( { a: 1 }, 'Hello world', '/HW' );
 		assert.deepEqual( H.getState().data, { a: 1 }, 'check reflected by current state' );
 		assert.strictEqual( H.getState().title, 'Hello world', 'check reflected by current state' );
-		assert.strictEqual( H.getState().id, '/HW', 'check reflected by current state' );
+		assert.strictEqual( H.getState().url, '/HW', 'check reflected by current state' );
 	} );
 
 	QUnit.test( '#pushState (use pathname)', 1, function( assert ) {
 		H.pushState( null, 'current' );
-		assert.strictEqual( H.getState().id, window.location.pathname, 'check reflected by path' );
+		assert.strictEqual( H.getState().url, window.location.pathname, 'check reflected by path' );
 	} );
 
 	QUnit.test( '#replaceState (fires event)', 1, function( assert ) {
@@ -49,7 +49,7 @@
 
 	QUnit.test( '#replaceState (unicode characters, bug 49647)', 1, function( assert ) {
 		H.replaceState( null, 'current', '/Crêpe' );
-		assert.strictEqual( H.getState().id, '/Crêpe', 'Url saved without encoding issues' );
+		assert.strictEqual( H.getState().url, '/Crêpe', 'Url saved without encoding issues' );
 	} );
 
 }( window.History, jQuery ) );
