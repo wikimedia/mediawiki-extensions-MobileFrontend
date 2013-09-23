@@ -55,6 +55,9 @@
 
 					if ( resp.error || !resp.mobileview.sections ) {
 						page.reject( resp );
+					// FIXME: [LQT] remove when liquid threads is dead (see Bug 51586)
+					} else if ( resp.mobileview.hasOwnProperty( 'liquidthreads' ) ) {
+						page.reject( { error: { code: 'lqt' } } );
 					} else {
 						sections = transformSections( resp.mobileview.sections );
 						page.resolve( {
