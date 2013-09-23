@@ -108,8 +108,6 @@ $messages['en'] = array (
 	'mobile-frontend-main-menu-watchlist' => 'Watchlist',
 	'mobile-frontend-main-menu-settings' => 'Settings',
 	'mobile-frontend-main-menu-upload' => 'Uploads',
-	'mobile-frontend-main-menu-about' => 'About {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Disclaimer',
 
 	'mobile-frontend-main-menu-settings-heading' => 'Settings',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Languages',
@@ -480,9 +478,6 @@ If not the Main Page, the following message is used:
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
 	'mobile-frontend-main-menu-upload' => 'Uploads link text in main menu.
 {{Identical|Upload}}',
-	'mobile-frontend-main-menu-about' => 'Text for link to site about page in main menu',
-	'mobile-frontend-main-menu-disclaimer' => 'Text for link to site disclaimer page in main menu.
-{{Identical|Disclaimer}}',
 	'mobile-frontend-main-menu-settings-heading' => '{{doc-special|MobileOptions|unlisted=1}}
 {{Identical|Settings}}',
 	'mobile-frontend-settings-site-header' => 'Heading for the Special:MobileOptions/Language page - only visible to non JavaScript users',
