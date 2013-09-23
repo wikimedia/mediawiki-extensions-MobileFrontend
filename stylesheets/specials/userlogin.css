@@ -41,39 +41,6 @@ form.user-login input {
   width: 100%;
   display: block;
 }
-form.user-login div.wpInputs,
-form.user-login div.wpCaptcha {
-  padding: 1px;
-  border: solid 1px #E1E1E1;
-  border-radius: 5px;
-}
-form.user-login div.wpInputs input,
-form.user-login div.wpCaptcha input {
-  -webkit-appearance: none;
-  border: none;
-  padding: .8em .5em;
-  border-bottom: solid 1px #E1E1E1;
-  border-radius: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-form.user-login div.wpInputs input:last-child,
-form.user-login div.wpCaptcha input:last-child {
-  border-bottom: none;
-}
-form.user-login div.wpCaptcha input {
-  border-bottom: none;
-}
-form.user-login div.wpCaptcha img.wpCaptcha {
-  display: block;
-  margin: auto;
-}
-form.user-login div.wpCaptcha,
-form.user-login #wpLoginAttempt,
-form.user-login #wpCreateaccount {
-  margin: 12px 0 0;
-}
 form.user-login .mw-mf-create-account {
   padding-top: 12px;
   display: block;

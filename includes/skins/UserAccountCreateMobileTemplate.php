@@ -52,7 +52,7 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 					'id' => 'userlogin2' ) ) .
 			Html::openElement( 'div',
 				array(
-					'class' => 'wpInputs'
+					'class' => 'inputs-box'
 				)
 			) .
 			Html::input( 'wpName', $username, 'text',
@@ -134,11 +134,10 @@ class UserAccountCreateMobileTemplate extends UserLoginAndCreateTemplate {
 		// captcha output html
 		$captchaHtml =
 			Html::openElement( 'div',
-				array( 'class' => 'wpCaptcha' ) ) .
+				array( 'class' => 'inputs-box' ) ) .
 			Html::element( 'img',
 				array(
 					'src' => $captchaSrc,
-					'class' => 'wpCaptcha',
 				)
 			) .
 			Html::input( 'wpCaptchaWord', null, 'text',
