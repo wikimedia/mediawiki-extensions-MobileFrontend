@@ -30,17 +30,18 @@ class SkinMinerva extends SkinTemplate {
 			// FIXME: cap higher counts
 			$count = $user->isLoggedIn() ? MWEchoNotifUser::newFromUser( $user )->getNotificationCount() : 0;
 
-			$tpl->set( 'userButton',
+			$tpl->set( 'secondaryButton',
 				Html::openElement( 'a', array(
 					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
 					'href' => SpecialPage::getTitleFor( 'Notifications' )->getLocalURL( array( 'returnto' => $this->getTitle()->getPrefixedText() ) ),
-					'id'=> 'user-button',
+					'class' => 'user-button',
+					'id'=> 'secondary-button',
 				) ) .
 				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $count ) .
 				Html::closeElement( 'a' )
 			);
 		} else {
-			$tpl->set( 'userButton', '' );
+			$tpl->set( 'secondaryButton', '' );
 		}
 	}
 

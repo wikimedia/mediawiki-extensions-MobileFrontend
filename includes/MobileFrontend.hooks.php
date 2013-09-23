@@ -268,7 +268,8 @@ class MobileFrontendHooks {
 	 * @return boolean hook return value
 	 */
 	public static function onSpecialPage_initList( &$list ) {
-		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
+		$ctx = MobileContext::singleton();
+		if ( $ctx->shouldDisplayMobileView() ) {
 			// Replace the standard watchlist view with our custom one
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
 			// FIXME: Make uploads work on desktop
@@ -278,6 +279,8 @@ class MobileFrontendHooks {
 			if ( class_exists( 'MWEchoNotifUser' ) ) {
 				$list['Notifications'] = 'SpecialMobileNotifications';
 			}
+
+			$list['UserProfile'] = 'SpecialUserProfile';
 		}
 		return true;
 	}

@@ -301,6 +301,23 @@ $messages['en'] = array (
 
 	// AbuseFilter variable
 	'abusefilter-edit-builder-vars-user-mobile' => 'Whether or not a user is editing through the mobile interface',
+
+	// Special:UserProfile
+	'mobile-frontend-profile-title' => 'User profile',
+	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 edit|$1 edits|0=No edits}} in last month',
+	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 upload|$1 uploads|0=No uploads}} in last month',
+	'mobile-frontend-profile-edits-limit' => 'Over {{PLURAL:$1|$1 edit|$1 edits}} in last month',
+	'mobile-frontend-profile-uploads-limit' => 'Over {{PLURAL:$1|$1 upload|$1 uploads}} in last month',
+	'mobile-frontend-profile-upload-caption' => '$1 was the last upload by {{GENDER:$2|$2}} and was uploaded {{PLURAL:$3|$3 day ago|$3 days ago}}.',
+	'mobile-frontend-profile-heading-recent' => 'Recent',
+	'mobile-frontend-profile-registered' => 'Member for {{PLURAL:$1|$1 day|$1 days}} with {{PLURAL:$2|$2 edit|$2 edits}}.',
+	'mobile-frontend-profile-usertalk' => 'View talk page.',
+	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
+	'mobile-frontend-profile-yours' => 'Visit your profile page.',
+	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|This user}} is a new editor.',
+	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|This user}} is a somewhat experienced editor.',
+	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|This user}} is a profilic editor.',
+	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.'
 );
 
 /** Message documentation (Message documentation)
@@ -761,6 +778,22 @@ See also:
 	'mobile-frontend-media-details' => 'Caption for a button leading to the details of a media file (e.g. an image) in a preview.
 {{Identical|Detail}}',
 	'abusefilter-edit-builder-vars-user-mobile' => 'See {{msg-mw|Abusefilter-edit-builder-vars-user-name}} (from AbuseFilter extension), for example.',
+
+	'mobile-frontend-profile-title' => 'Title of the Special:UserProfile page',
+	'mobile-frontend-profile-edits' => 'Edit count. $1 is number of edits in the last month.',
+	'mobile-frontend-profile-uploads' => 'Upload count in the last month.',
+	'mobile-frontend-profile-edits-limit' => 'Edit count when expressed to be over a certain number.',
+	'mobile-frontend-profile-uploads-limit' => 'Upload count when expressed to be over a certain number.',
+	'mobile-frontend-profile-upload-caption' => '$1 is the filename, $2 is the username and $3 is the amount of days ago the image was uploaded.',
+	'mobile-frontend-profile-heading-recent' => 'Heading for recent section profile.',
+	'mobile-frontend-profile-registered' => 'Summary saying how many days the user has been a member ($1) and how many total edits they have made ($2).',
+	'mobile-frontend-profile-usertalk' => 'Link label to user talk page.',
+	'mobile-frontend-profile-noargs' => 'Message shown when no user profile URL is specified.',
+	'mobile-frontend-profile-yours' => 'Label pointing user to their profile.',
+	'mobile-frontend-profile-user-desc-1' => 'Summary describing that this user is new.',
+	'mobile-frontend-profile-user-desc-2' => 'Summary describing that the user is somewhat experienced.',
+	'mobile-frontend-profile-user-desc-3' => 'Summary describing the type of experience the user has.',
+	'mobile-frontend-requires-optin' => 'Message that shows when a page requires beta mode to work. Wikitext that links to [[Special:MobileOptions]] page.',
 );
 
 /** Achinese (Acèh)

@@ -338,12 +338,18 @@ body.navigation-enabled #mw-mf-page-center {
 /* Menu buttons */
 #mw-mf-menu-page,
 #mw-mf-main-menu-button,
+#secondary-button,
 #user-button {
   display: inline-block;
   height: 46px;
   width: 40px;
   position: absolute;
   top: 0;
+}
+#user-button,
+.user-button {
+  display: none;
+  background: url(images/user.png) 50% 50% no-repeat;
 }
 /* Echo Notifications */
 .is-authenticated .header {
@@ -352,16 +358,16 @@ body.navigation-enabled #mw-mf-page-center {
 .is-authenticated #user-button {
   display: block;
 }
+#secondary-button,
 #user-button {
-  display: none;
   right: 0;
-  background: url(images/user.png) 50% 50% no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: auto 24px;
   -webkit-background-size: auto 24px;
   background-size: auto 24px;
 }
+#secondary-button span,
 #user-button span {
   position: absolute;
   right: 5px;
@@ -374,6 +380,7 @@ body.navigation-enabled #mw-mf-page-center {
   background: #c91f2c;
   border-radius: 3px;
 }
+#secondary-button span.zero,
 #user-button span.zero {
   display: none;
 }

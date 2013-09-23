@@ -1,0 +1,21 @@
+.profile .statements li,
+.profile .statement {
+  font-family: Georgia;
+  font-size: 1.95em;
+  margin-bottom: 0;
+}
+.profile .secondary-statement {
+  font-family: Arial;
+  font-style: italic;
+  font-size: 21px;
+  color: #919191;
+}
+.content h2 {
+  font-family: Arial;
+  font-size: 1.47em;
+  text-transform: uppercase;
+  color: #919191;
+}
+ul {
+  list-style: none;
+}
