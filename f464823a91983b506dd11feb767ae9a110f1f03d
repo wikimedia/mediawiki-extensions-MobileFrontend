@@ -16,6 +16,24 @@
       "revId": "f464823a91983b506dd11feb767ae9a110f1f03d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_df32fd5c",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T23:35:46Z",
+      "side": 1,
+      "message": "Possibly, less code.\n\nBut it should be simply\n\nif ( isset( $licenses[$wgRightsText] ) ) {\n  $wgRightsText \u003d $licenses[$wgRightsText];\n}",
+      "parentUuid": "4946a543_1fa1e598",
+      "revId": "f464823a91983b506dd11feb767ae9a110f1f03d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
