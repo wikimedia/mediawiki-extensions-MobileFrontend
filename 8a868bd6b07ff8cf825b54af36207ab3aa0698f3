@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_bc60dfa8",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-23T20:52:44Z",
+      "side": 1,
+      "message": "How about \"Nearby doesn\u0027t have permission to access your location.\"? Also, I believe the preferred format for i18n messages with apostrophes is \"Something doesn\u0027t work\" rather than \u0027Something doesn\\\u0027t work\u0027, although perhaps Siebrand could clarify this.",
+      "revId": "8a868bd6b07ff8cf825b54af36207ab3aa0698f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
