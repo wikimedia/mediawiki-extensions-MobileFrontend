@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_50ec41c8",
+        "filename": "javascripts/common/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T17:26:10Z",
+      "side": 1,
+      "message": "could we not just apply it to \u0027#mw-mf-viewport\u0027 (parent element of both) ? This doesn\u0027t seem sustainable on long term...",
+      "revId": "10a96d605a8d8ddd390e106880bb634bd3c6b31c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
