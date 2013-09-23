@@ -16,6 +16,24 @@
       "revId": "38461409d2779aa668a75b7300dc7dcd8b79492f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_b6147e9e",
+        "filename": "templates/section.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T19:11:02Z",
+      "side": 1,
+      "message": "Indeed. Funny it worked, or I just didn\u0027t refresh the page.",
+      "parentUuid": "4946a543_d6e82ab8",
+      "revId": "38461409d2779aa668a75b7300dc7dcd8b79492f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
