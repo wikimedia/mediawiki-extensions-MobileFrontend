@@ -20,7 +20,7 @@ class ExtractFormatter extends HtmlFormatter {
 		parent::__construct( HtmlFormatter::wrapHTML( $text ) );
 		$this->plainText = $plainText;
 
-		$this->removeImages();
+		$this->setRemoveMedia( true );
 		$this->remove( $wgMFRemovableClasses['base'] );
 		$this->remove( $wgMFRemovableClasses['extracts'] );
 		$this->remove( array( 'table', 'div', '.editsection', '.mw-editsection', 'sup.reference', 'span.coordinates',
