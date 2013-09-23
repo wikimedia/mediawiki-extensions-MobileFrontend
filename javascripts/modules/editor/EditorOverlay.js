@@ -135,12 +135,10 @@
 			} ).done( function( parsedText ) {
 				// FIXME: hacky
 				var $tmp = $( '<div>' ).html( parsedText ), heading;
-				// FIXME: yuck.
-				$tmp.find( '.mw-editsection' ).remove();
 				// Extract the first heading
-				heading = $tmp.find( 'h2' ).eq( 0 ).text();
+				heading = $tmp.find( 'h1 span, h2 span' ).eq( 0 ).text();
 				// remove heading from the parsed output
-				$tmp.find( 'h2' ).eq( 0 ).remove();
+				$tmp.find( 'h1,h2' ).eq( 0 ).remove();
 
 				new Section( {
 					el: self.$preview.find( '.content' ),
