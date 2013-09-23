@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_d52ca3ae",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-23T13:51:37Z",
+      "side": 1,
+      "message": "Just checking grammar. Should this be \"by $2\" instead of \"from $2\", or are both correct?",
+      "revId": "eb4ed5de569a6a2008cb8ce98dfda2ff0a4801da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
