@@ -209,8 +209,11 @@ class ApiMobileView extends ApiBase {
 			$html = $this->getFilePage( $title );
 		} else {
 			wfProfileIn( __METHOD__ . '-parserOutput' );
+			$time = microtime( true );
 			$parserOutput = $wp->getParserOutput( $parserOptions );
+			$time = microtime( true ) - $time;
 			if ( !$parserOutput ) {
+				wfDebugLog( 'mobile', "Empty parser output on '{$title->getPrefixedText()}': rev $latest, time $time, cache key $key" );
 				throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
 			}
 			$html = $parserOutput->getText();
