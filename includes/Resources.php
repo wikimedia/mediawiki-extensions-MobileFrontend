@@ -673,6 +673,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-nearby-noresults-guidance',
 			'mobile-frontend-nearby-lookup-ui-error',
 			'mobile-frontend-nearby-lookup-ui-error-guidance',
+			'mobile-frontend-nearby-permission',
+			'mobile-frontend-nearby-permission-guidance',
 		),
 		'scripts' => array(
 			'javascripts/modules/nearby/NearbyApi.js',

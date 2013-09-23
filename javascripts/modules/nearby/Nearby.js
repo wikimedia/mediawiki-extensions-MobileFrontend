@@ -26,6 +26,10 @@
 				heading: mw.msg( 'mobile-frontend-nearby-lookup-ui-error' ),
 				guidance: mw.msg( 'mobile-frontend-nearby-lookup-ui-error-guidance' )
 			},
+			permission: {
+				heading: mw.msg( 'mobile-frontend-nearby-permission' ),
+				guidance: mw.msg( 'mobile-frontend-nearby-permission-guidance' )
+			},
 			server: {
 				heading: mw.msg( 'mobile-frontend-nearby-error' ),
 				guidance: mw.msg( 'mobile-frontend-nearby-error-guidance' )
@@ -45,8 +49,13 @@
 					self.render( { location: self.location } );
 					self.emit( 'end-load-from-current-location' );
 				},
-				function() {
-					self.renderError( 'location' );
+				function( err ) {
+					// see https://developer.mozilla.org/en-US/docs/Web/API/PositionError
+					if ( err.code === 1 ) {
+						self.renderError( 'permission' );
+					} else {
+						self.renderError( 'location' );
+					}
 					self.emit( 'end-load-from-current-location' );
 				},
 				{
