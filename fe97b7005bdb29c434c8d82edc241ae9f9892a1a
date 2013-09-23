@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_5cab7b76",
+        "filename": "less/common/hacks.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-23T21:13:26Z",
+      "side": 1,
+      "message": "Should say \"more than 100%\".",
+      "revId": "fe97b7005bdb29c434c8d82edc241ae9f9892a1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
