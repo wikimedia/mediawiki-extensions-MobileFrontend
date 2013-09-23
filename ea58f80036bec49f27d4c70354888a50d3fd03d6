@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_dc3ccbe1",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T22:27:17Z",
+      "side": 1,
+      "message": "Suggest something ;) It needs to be short, the message from create account form is too long.",
+      "parentUuid": "4946a543_bc0a9f89",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_5cf61b8e",
         "filename": "javascripts/modules/editor/EditorApi.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-23T21:56:52Z",
       "side": 1,
       "message": "we should add a comment above this function explaining its purpose and the signature.",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_bc353ff7",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T22:27:17Z",
+      "side": 1,
+      "message": "OK.",
+      "parentUuid": "4946a543_5cf61b8e",
       "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_9c32430e",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T22:27:17Z",
+      "side": 1,
+      "message": "True, this might be error prone.",
+      "parentUuid": "4946a543_fc350744",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_3cfdcf38",
         "filename": "less/common/common.less",
         "patchSetId": 4
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_5c58db53",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T22:27:17Z",
+      "side": 1,
+      "message": "See following patchset (captcha cleanup).",
+      "parentUuid": "4946a543_3cfdcf38",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_3c386f38",
         "filename": "less/modules/editor.less",
         "patchSetId": 4
@@ -81,6 +153,24 @@
       "writtenOn": "2013-09-23T21:56:52Z",
       "side": 1,
       "message": "i smell a generic class.. \u0027.bar\u0027",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_7c53d738",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-23T22:27:17Z",
+      "side": 1,
+      "message": "Possibly I could just hide all the bars in the editor by default and then override display for the initial one.",
+      "parentUuid": "4946a543_3c386f38",
       "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
