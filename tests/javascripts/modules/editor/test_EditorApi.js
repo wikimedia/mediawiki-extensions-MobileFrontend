@@ -80,13 +80,15 @@
 
 		editorApi.getContent();
 		editorApi.setContent( 'section 1' );
-		editorApi.save( 'summary' ).done( function() {
+		editorApi.save( { summary: 'summary' } ).done( function() {
 			assert.ok( editorApi.post.calledWith( {
 				action: 'edit',
 				title: 'test',
 				section: 1,
 				text: 'section 1',
 				summary: 'summary',
+				captchaid: undefined,
+				captchaword: undefined,
 				token: 'fake token',
 				basetimestamp: '2013-05-15T00:30:26Z',
 				starttimestamp: '2013-05-15T00:30:26Z'
@@ -104,16 +106,44 @@
 
 		editorApi.getContent();
 		editorApi.setContent( 'section 0' );
-		editorApi.save( 'summary' ).done( function() {
+		editorApi.save( { summary: 'summary' } ).done( function() {
 			assert.ok( editorApi.post.calledWith( {
 				action: 'edit',
 				title: 'Talk:test',
 				text: 'section 0',
 				summary: 'summary',
+				captchaid: undefined,
+				captchaword: undefined,
 				token: 'fake token',
 				basetimestamp: undefined,
 				starttimestamp: undefined
 			} ), 'save lead section' );
+		} );
+		assert.strictEqual( editorApi.hasChanged, false, 'reset hasChanged' );
+	} );
+
+	QUnit.test( '#save, submit CAPTCHA', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } );
+
+		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve(
+			{ edit: { result: 'Success' } }
+		) );
+
+		editorApi.getContent();
+		editorApi.setContent( 'section 1' );
+		editorApi.save( { summary: 'summary', captchaId: 123, captchaWord: 'abc' } ).done( function() {
+			assert.ok( editorApi.post.calledWith( {
+				action: 'edit',
+				title: 'test',
+				section: 1,
+				text: 'section 1',
+				summary: 'summary',
+				captchaid: 123,
+				captchaword: 'abc',
+				token: 'fake token',
+				basetimestamp: '2013-05-15T00:30:26Z',
+				starttimestamp: '2013-05-15T00:30:26Z'
+			} ), 'save first section' );
 		} );
 		assert.strictEqual( editorApi.hasChanged, false, 'reset hasChanged' );
 	} );
@@ -129,7 +159,7 @@
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
-		assert.ok( failSpy.calledWith( 'HTTP error' ), "call fail" );
+		assert.ok( failSpy.calledWith( { type: 'error', details: 'HTTP error' } ), "call fail" );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 
@@ -146,23 +176,24 @@
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
-		assert.ok( failSpy.calledWith( 'error code' ), "call fail" );
+		assert.ok( failSpy.calledWith( { type: 'error', details: 'error code' } ), "call fail" );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 
-	QUnit.test( '#save, CAPTCHAs', 2, function( assert ) {
+	QUnit.test( '#save, CAPTCHA response with image URL', 2, function( assert ) {
 		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ),
+			captcha = {
+				type: "image",
+				mime: "image/png",
+				id: "1852528679",
+				url: "/w/index.php?title=Especial:Captcha/image&wpCaptchaId=1852528679"
+			},
 			doneSpy = sinon.spy(), failSpy = sinon.spy();
 
 		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
 			edit: {
 				result: 'Failure',
-				captcha: {
-					type: "image",
-					mime: "image/png",
-					id: "1852528679",
-					url: "/w/index.php?title=Especial:Captcha/image&wpCaptchaId=1852528679"
-				}
+				captcha: captcha
 			}
 		} ) );
 
@@ -171,7 +202,7 @@
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
-		assert.ok( failSpy.calledWith( 'unsupported-captcha' ), "call fail" );
+		assert.ok( failSpy.calledWith( { type: 'captcha', details: captcha } ), "call fail" );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 
@@ -193,7 +224,7 @@
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
-		assert.ok( failSpy.calledWith( 'abusefilter-warning-usuwanie-tekstu' ), "call fail with code" );
+		assert.ok( failSpy.calledWith( { type: 'error', details: 'abusefilter-warning-usuwanie-tekstu' } ), "call fail with code" );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 
@@ -208,7 +239,7 @@
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
-		assert.ok( failSpy.calledWith( 'unknown' ), "call fail with unknown" );
+		assert.ok( failSpy.calledWith( { type: 'error', details: 'unknown' } ), "call fail with unknown" );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 

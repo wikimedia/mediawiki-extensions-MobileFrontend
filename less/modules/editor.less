@@ -41,7 +41,7 @@
 		}
 	}
 
-	input {
+	input, .input-box {
 		margin: 0 0 .7em;
 		width: 100%;
 		.box-sizing( border-box );
@@ -63,19 +63,21 @@
 	}
 
 	.buttonBar {
+		// hide button bars by default
+		display: none;
 		box-shadow: 0 -10px 10px 0 #fff;
 	}
 
-	.initial-bar p {
-		display: inline-block;
-		text-align: center;
-		padding-top: 0;
-		margin: 0 0 .7em;
-		border-bottom: 1px solid #ccc;
-	}
+	.initial-bar {
+		display: block;
 
-	.save-bar, .saving-bar {
-		display: none;
+		p {
+			display: inline-block;
+			text-align: center;
+			padding-top: 0;
+			margin: 0 0 .7em;
+			border-bottom: 1px solid #ccc;
+		}
 	}
 }
 
