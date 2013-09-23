@@ -64,6 +64,9 @@
   font-size: 1.1em;
   margin: 0 26px 16px;
 }
+.carousel .slide.slide-image {
+  padding-top: 146px;
+}
 .carousel .slide.page-1 {
   background-image: url(images/uploads/SplashScreen1.png);
 }

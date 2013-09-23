@@ -170,20 +170,20 @@ var
 						{
 							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1-header' ),
 							text: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1' ),
-							className: 'page-1', id: 1
+							className: 'page-1 slide-image', id: 1
 						},
 						{
 							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-2-header' ),
 							text: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-2' ),
-							className: 'page-2', id: 2
+							className: 'page-2 slide-image', id: 2
 						},
 						{
 							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-header' ),
 							cancel: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
-							className: 'slide-image', id: 3
+							className: 'photo-upload slide-image', id: 3
 						}
 					]
-				} );
+				} ).show();
 			};
 		} else {
 			emptyHandler = function() {
