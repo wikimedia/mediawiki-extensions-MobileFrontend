@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_1fa1e598",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T23:25:53Z",
+      "side": 1,
+      "message": "Open question: would this be better as an array that can be added to?\ne.g.\n$licenses \u003d array(\n\u0027Creative Commons Attribution Share Alike\u0027 \u003d \u0027CC BY-SA\u0027,\n)\n$wgRightsText \u003d isset( $licenses[$wgRightsText] ) ?$licenses[$wgRightsText] : $licenses[$wgRightsText];",
+      "revId": "f464823a91983b506dd11feb767ae9a110f1f03d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
