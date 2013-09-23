@@ -77,7 +77,7 @@ class ApiParseExtender {
 					$module->setWarning( 'mobileformat=wml is not supported anymore' );
 				}
 				$mf = new MobileFormatterHTML( $html, $title );
-				$mf->removeImages( $params['noimages'] );
+				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
 				$mf->enableExpandableSections( !$params['mainpage'] );
 				$mf->filterContent();

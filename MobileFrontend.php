@@ -43,7 +43,6 @@ $autoloadClasses = array (
 	'WmlDeviceProperties' => 'DeviceDetection',
 
 	'ExtractFormatter' => 'formatters/ExtractFormatter',
-	'HtmlFormatter' => 'formatters/HtmlFormatter',
 	'MobileFormatter' => 'formatters/MobileFormatter',
 	'MobileFormatterHTML' => 'formatters/MobileFormatterHTML',
 	'MobileFormatterWML' => 'formatters/MobileFormatterWML',

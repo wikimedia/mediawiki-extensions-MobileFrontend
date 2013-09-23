@@ -72,7 +72,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 			$formatter->setIsMainPage( $isMainPage );
 		}
 		if ( $context->getContentTransformations() && !$isFilePage ) {
-			$formatter->removeImages( $context->imagesDisabled() );
+			$formatter->setRemoveMedia( $context->imagesDisabled() );
 		}
 
 		wfProfileOut( __METHOD__ );
@@ -123,7 +123,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 			$this->remove( $wgMFRemovableClasses[$this->getFormat()] );
 		}
 
-		if ( $this->removeImages ) {
+		if ( $this->removeMedia ) {
 			$this->doRemoveImages();
 		}
 		parent::filterContent();

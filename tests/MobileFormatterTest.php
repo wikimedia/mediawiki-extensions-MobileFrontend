@@ -25,7 +25,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$removeImages = function( MobileFormatter $f ) {
-			$f->removeImages();
+			$f->setRemoveMedia();
 		};
 
 		return array(
