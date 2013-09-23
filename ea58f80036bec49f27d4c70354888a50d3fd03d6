@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_bc0a9f89",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T21:56:52Z",
+      "side": 1,
+      "message": "seems a bit robotic. Think we can do better.",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_5cf61b8e",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T21:56:52Z",
+      "side": 1,
+      "message": "we should add a comment above this function explaining its purpose and the signature.",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_fc350744",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T21:56:52Z",
+      "side": 1,
+      "message": "I keep seeing this pattern everywhere - we should probably have some better mechanism of doing this line and the one below e.g. this.$( \u0027.bar\u0027 ).hide(); this.$( \u0027.active-bar\u0027 ).show();",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_3cfdcf38",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T21:56:52Z",
+      "side": 1,
+      "message": "not sure how I feel about this class.. it should certainly not be \u0027common\u0027 as it is only used when JavaScript is available - please put in editor.less for time being.",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_3c386f38",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T21:56:52Z",
+      "side": 1,
+      "message": "i smell a generic class.. \u0027.bar\u0027",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
