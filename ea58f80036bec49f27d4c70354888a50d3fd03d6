@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_df583d32",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T22:44:14Z",
+      "side": 1,
+      "message": "Yes, I was just saying. I\u0027ve been thinking about more suitable text I just wanted to record this view somewhere. It doesn\u0027t need to block it.",
+      "parentUuid": "4946a543_dc3ccbe1",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_5cf61b8e",
         "filename": "javascripts/modules/editor/EditorApi.js",
         "patchSetId": 4
@@ -142,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_7f2f4989",
+        "filename": "less/common/common.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T22:44:14Z",
+      "side": 1,
+      "message": "Ok this makes a little more sense now (it just doesn\u0027t in isolation)\nWhen we do this sort of thing in future we should probably get in the habit of documenting the classes so we know where they are being used at least (e.g. for time being add a comment saying // FIXME: used by editor.js, with plans to be used for login/register)",
+      "parentUuid": "4946a543_5c58db53",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_3c386f38",
         "filename": "less/modules/editor.less",
         "patchSetId": 4
@@ -171,6 +207,24 @@
       "side": 1,
       "message": "Possibly I could just hide all the bars in the editor by default and then override display for the initial one.",
       "parentUuid": "4946a543_3c386f38",
+      "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_7c059714",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-23T22:44:14Z",
+      "side": 1,
+      "message": "Yes. I think this would be good. This is tied to my comment earlier about show/hide.",
+      "parentUuid": "4946a543_7c53d738",
       "revId": "ea58f80036bec49f27d4c70354888a50d3fd03d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
