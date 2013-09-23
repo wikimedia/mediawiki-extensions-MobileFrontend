@@ -31,7 +31,7 @@ var View = M.require( 'view' ),
 						setTimeout( function() {
 							$( window ).one( 'scroll.drawer', $.proxy( self, 'hide' ) );
 							// FIXME change when micro.tap.js in stable
-							$( '#mw-mf-page-center' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
+							$( 'body' ).one( M.tapEvent( 'click' ) + '.drawer', $.proxy( self, 'hide' ) );
 						}, self.minHideDelay );
 					}
 				}, 10 );
@@ -47,7 +47,7 @@ var View = M.require( 'view' ),
 				// .one() registers one callback for scroll and click independently
 				// if one fired, get rid of the other one
 				$( window ).off( '.drawer' );
-				$( '#mw-mf-page-center' ).off( '.drawer' );
+				$( 'body' ).off( '.drawer' );
 			}, 10 );
 		},
 
