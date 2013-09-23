@@ -324,6 +324,19 @@ HTML;
 
 		// Construct the link to the licensinsing terms
 		if ( $wgRightsText ) {
+			// Use shorter text for some common licensing strings.
+			// See Installer.i18n.php for the currently offered strings.
+			$licenses = array(
+				'Creative Commons Attribution-Share Alike 3.0' => 'CC BY-SA 3.0',
+				'Creative Commons Attribution Share Alike' => 'CC BY-SA',
+				'Creative Commons Attribution' => 'CC BY',
+				'Creative Commons Attribution Non-Commercial Share Alike' => 'CC BY-NC-SA',
+				'Creative Commons Zero (Public Domain)' => 'CC0 (Public Domain)',
+				'GNU Free Documentation License 1.3 or later' => 'GFDL 1.3 or later',
+			);
+			if ( isset( $licenses[$wgRightsText] ) ) {
+				$wgRightsText = $licenses[$wgRightsText];
+			}
 			if ( $wgRightsPage ) {
 				$title = Title::newFromText( $wgRightsPage );
 				$link = Linker::linkKnown( $title, $wgRightsText );
