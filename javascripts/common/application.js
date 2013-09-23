@@ -266,6 +266,8 @@
 
 		mw.config.set( 'wgArticleId', page.id );
 		M.emit( 'page-loaded', page );
+		// Update page title
+		document.title = page.title;
 	}
 
 	$( init );
