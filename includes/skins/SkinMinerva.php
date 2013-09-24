@@ -107,13 +107,15 @@ class SkinMinerva extends SkinTemplate {
 			$banners[] = '<div id="siteNotice"></div>';
 		}
 		$tpl->set( 'banners', $banners );
+		$aboutPageTitleText = $this->msg( 'aboutpage' )->inContentLanguage()->text();
+		$disclaimerPageTitleText = $this->msg( 'disclaimerpage' )->inContentLanguage()->text();
 		$tpl->set( 'site_urls', array(
 			array(
-				'href' => Title::newFromText( $this->msg( 'aboutpage' )->inContentLanguage()->text() ),
+				'href' => Title::newFromText( $aboutPageTitleText )->getLocalUrl(),
 				'text'=> $this->msg( 'aboutsite' )->text(),
 			),
 			array(
-				'href' => Title::newFromText( $this->msg( 'disclaimerpage' )->inContentLanguage()->text() ),
+				'href' => Title::newFromText( $disclaimerPageTitleText )->getLocalUrl(),
 				'text'=> $this->msg( 'disclaimers' )->text(),
 			),
 		) );
