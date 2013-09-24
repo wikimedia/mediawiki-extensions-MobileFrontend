@@ -109,16 +109,22 @@ class SkinMinerva extends SkinTemplate {
 		$tpl->set( 'banners', $banners );
 		$aboutPageTitleText = $this->msg( 'aboutpage' )->inContentLanguage()->text();
 		$disclaimerPageTitleText = $this->msg( 'disclaimerpage' )->inContentLanguage()->text();
-		$tpl->set( 'site_urls', array(
-			array(
-				'href' => Title::newFromText( $aboutPageTitleText )->getLocalUrl(),
+		$urls = array();
+		$t = Title::newFromText( $aboutPageTitleText );
+		if ( $t ) {
+			$urls[] = array(
+				'href' => $t->getLocalUrl(),
 				'text'=> $this->msg( 'aboutsite' )->text(),
-			),
-			array(
-				'href' => Title::newFromText( $disclaimerPageTitleText )->getLocalUrl(),
+			);
+		}
+		$t = Title::newFromText( $disclaimerPageTitleText );
+		if ( $t ) {
+			$urls[] = array(
+				'href' => $t->getLocalUrl(),
 				'text'=> $this->msg( 'disclaimers' )->text(),
-			),
-		) );
+			);
+		}
+		$tpl->set( 'site_urls', $urls );
 		$tpl->set( 'page_actions', array() );
 		if ( $out->getRequest()->getText( 'oldid' ) ) {
 			$subtitle = $out->getSubtitle();
