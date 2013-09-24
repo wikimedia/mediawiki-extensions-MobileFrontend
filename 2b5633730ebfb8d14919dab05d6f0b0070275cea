@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_cbb95f79",
+        "filename": "less/mixins.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-24T19:45:05Z",
+      "side": 1,
+      "message": "That change is not relevant, can we make a separate patch for it? I\u0027d prefer to test it thoroughly before merging.",
+      "revId": "2b5633730ebfb8d14919dab05d6f0b0070275cea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
