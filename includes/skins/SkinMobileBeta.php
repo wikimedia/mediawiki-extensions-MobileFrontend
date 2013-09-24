@@ -27,4 +27,31 @@ class SkinMobileBeta extends SkinMobile {
 		return $modules;
 	}
 
+	/**
+	 * Creates a login or logout button
+	 * @return Array: Representation of button with text and href keys
+	*/
+	protected function getLogInOutLink() {
+		$loginLogoutLink = parent::getLoginOutLink();
+		$user = $this->getUser();
+		if ( $user->isLoggedIn() ) {
+			$loginLogoutLink['class'] = 'icon-secondary icon-secondary-logout';
+			$name = $user->getName();
+			$loginLogoutLink = array(
+				'links' => array(
+					array(
+						'text' => $name,
+						'href' => SpecialPage::getTitleFor( 'UserProfile', $name )->getLocalUrl(),
+						'class' => 'icon-profile',
+					),
+					$loginLogoutLink
+				),
+			);
+			$loginLogoutLink['class'] = 'icon-user';
+		} else {
+			$loginLogoutLink['class'] = 'icon-anon';
+		}
+		return $loginLogoutLink;
+	}
+
 }

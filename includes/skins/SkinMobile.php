@@ -441,7 +441,7 @@ HTML;
 	 * Creates a login or logout button
 	 * @return Array: Representation of button with text and href keys
 	*/
-	private function getLogInOutLink() {
+	protected function getLogInOutLink() {
 		global $wgMFForceSecureLogin;
 		wfProfileIn( __METHOD__ );
 		$context = MobileContext::singleton();
