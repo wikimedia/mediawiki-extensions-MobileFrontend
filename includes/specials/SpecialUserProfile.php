@@ -175,8 +175,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$secondaryButton = Html::element( 'a', $attrs, $this->msg( 'mobile-frontend-profile-usertalk' ) );
 
 		// define heading
-		$userPageLink = Html::element( 'a', array( 'href' => $user->getUserPage()->getLocalUrl() ), $user->getName() );
-		$heading = Html::openElement( 'h1', array() ) . $userPageLink . Html::closeElement( 'h1' );
+		$heading = Html::element( 'h1', array(), $user->getName() );
 
 		// set values
 		$skin = $this->getSkin();
