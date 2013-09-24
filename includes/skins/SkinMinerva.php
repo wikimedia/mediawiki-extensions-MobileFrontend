@@ -25,10 +25,10 @@ class SkinMinerva extends SkinTemplate {
 	 * @param $tpl BaseTemplate
 	 */
 	protected function prepareUserButton( BaseTemplate $tpl ) {
-		if ( class_exists( 'MWEchoNotifUser' ) ) {
-			$user = $this->getUser();
+		$user = $this->getUser();
+		if ( class_exists( 'MWEchoNotifUser' ) && $user->isLoggedIn() ) {
 			// FIXME: cap higher counts
-			$count = $user->isLoggedIn() ? MWEchoNotifUser::newFromUser( $user )->getNotificationCount() : 0;
+			$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
 
 			$tpl->set( 'secondaryButton',
 				Html::openElement( 'a', array(

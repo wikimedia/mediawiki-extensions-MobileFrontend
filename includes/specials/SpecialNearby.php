@@ -16,6 +16,12 @@ class SpecialNearby extends MobileSpecialPage {
 		// set config
 		$output->addJsConfigVars( 'wgMFNearbyRange', $wgMFNearbyRange );
 
+		$skin = $this->getSkin();
+		if ( method_exists( $skin, 'setTemplateVariable' ) ) {
+			// remove the Echo button to make way for a refresh button
+			$this->getSkin()->setTemplateVariable( 'secondaryButton', '' );
+		}
+
 		// add previews to mobile only
 		$ctx = MobileContext::singleton();
 		if ( $ctx->shouldDisplayMobileView() && $ctx->isBetaGroupMember() ) {
