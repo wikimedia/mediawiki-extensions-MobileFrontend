@@ -52,6 +52,24 @@
       "revId": "2b5633730ebfb8d14919dab05d6f0b0070275cea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_fdac1ea3",
+        "filename": "less/mixins.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-09-24T21:18:01Z",
+      "side": 1,
+      "message": "Bootstrap just keeps a separate mixin:\n\n    .transition-transform(@transition) {\n        -webkit-transition: -webkit-transform @transition;\n        -moz-transition: -moz-transform @transition;\n        -o-transition: -o-transform @transition;\n        transition: transform @transition;\n    }",
+      "parentUuid": "4946a543_6ba94b24",
+      "revId": "2b5633730ebfb8d14919dab05d6f0b0070275cea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
