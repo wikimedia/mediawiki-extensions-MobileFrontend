@@ -106,6 +106,24 @@
       "revId": "2b5633730ebfb8d14919dab05d6f0b0070275cea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_3d2786ce",
+        "filename": "less/mixins.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-24T23:14:31Z",
+      "side": 1,
+      "message": "This actually makes me slightly worried about lessphp. The original lessc prints an error as it should \"SyntaxError: variable @args is undefined\", but lessphp silently fails...",
+      "parentUuid": "4946a543_5d9c5258",
+      "revId": "2b5633730ebfb8d14919dab05d6f0b0070275cea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
