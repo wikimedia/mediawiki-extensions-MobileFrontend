@@ -101,7 +101,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$res = $dbr->select( 'image', 'img_name, img_timestamp', $where, __METHOD__, $constraints );
 		foreach( $res as $row ) {
 			$name = $row->img_name;
-			$file = wfLocalFile( $name );
+			$file = wfFindFile( $name );
 			$title = Title::newFromText( $name, NS_FILE );
 			$ts = new MWTimestamp( wfTimestamp( TS_UNIX, $row->img_timestamp ) );
 			$daysAgo = $this->getDaysAgo( $ts );
