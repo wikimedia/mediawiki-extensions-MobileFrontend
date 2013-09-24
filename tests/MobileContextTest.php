@@ -42,11 +42,20 @@ class MobileContextTest extends MediaWikiTestCase {
 	}
 
 	public function testGetMobileUrl() {
-		global $wgMobileUrlTemplate;
+		global $wgMobileUrlTemplate, $wgHooks;
 
+		$invokes = 0;
+		$context = MobileContext::singleton();
+		$asserter = $this;
 		$wgMobileUrlTemplate = "%h0.m.%h1.%h2";
-		$this->assertEquals( 'http://en.m.wikipedia.org/wiki/Article', MobileContext::singleton()->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' ) );
-		$this->assertEquals( '//en.m.wikipedia.org/wiki/Article', MobileContext::singleton()->getMobileUrl( '//en.wikipedia.org/wiki/Article' ) );
+		$wgHooks['GetMobileUrl'][] = function( &$string, $hookCtx ) use ( $asserter, &$invokes, $context ) {
+			$asserter->assertEquals( $context, $hookCtx );
+			$invokes++;
+		};
+		$context->getRequest()->setHeader( 'X-WAP', 'no' );
+		$this->assertEquals( 'http://en.m.wikipedia.org/wiki/Article', $context->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' ) );
+		$this->assertEquals( '//en.m.wikipedia.org/wiki/Article', $context->getMobileUrl( '//en.wikipedia.org/wiki/Article' ) );
+		$this->assertEquals( 2, $invokes, 'Ensure that hook got the right context' );
 	}
 
 	public function testParseMobileUrlTemplate() {
