@@ -92,7 +92,7 @@
 	} );
 
 	function init() {
-		$( '#user-button' ).on( 'click', function( ev ) {
+		$( '#secondary-button.user-button' ).on( 'click', function( ev ) {
 			ev.preventDefault();
 			new NotificationsOverlay( { $badge: $( this ) } ).show();
 		} );
