@@ -212,9 +212,13 @@ class SpecialUserProfile extends MobileSpecialPage {
 		} else if ( $par ) {
 			$user = User::newFromName( $par );
 			// prepare content
-			$this->setUserProfileUIElements( $user );
-			$html = Html::openElement( 'div', array( 'class' => 'profile' ) ) .
-				$this->getUserSummary( $user ) . $this->getRecentActivityHtml( $user ) . '</div>';
+			if ( $user ) {
+				$this->setUserProfileUIElements( $user );
+				$html = Html::openElement( 'div', array( 'class' => 'profile' ) ) .
+					$this->getUserSummary( $user ) . $this->getRecentActivityHtml( $user ) . '</div>';
+			} else {
+				$html = $this->getHtmlNoArg();
+			}
 		} else {
 			$html = $this->getHtmlNoArg();
 		}
