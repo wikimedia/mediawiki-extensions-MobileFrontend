@@ -63,7 +63,7 @@ var toggle = ( function() {
 	}
 
 	// avoid this running on Watchlist
-	if ( mw.config.get( 'wgNamespaceNumber' ) !== mw.config.get( 'wgNamespaceIds' ).special ) {
+	if ( mw.config.get( 'wgNamespaceNumber' ) !== mw.config.get( 'wgNamespaceIds' ).special && !mw.config.get( 'wgIsMainPage' ) ) {
 		init();
 	}
 
@@ -76,8 +76,10 @@ var toggle = ( function() {
 }());
 
 M.define( 'toggle', toggle );
-M.on( 'page-loaded', function() {
-	toggle.enable();
+M.on( 'page-loaded', function( page ) {
+	if ( !page.isMainPage() ) {
+		toggle.enable();
+	}
 } );
 // FIXME: Temporary workaround while toggle-dynamic is not in stable
 if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
