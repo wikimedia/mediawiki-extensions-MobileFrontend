@@ -336,8 +336,10 @@ HTML;
 
 		// Construct the link to the licensinsing terms
 		if ( $wgRightsText ) {
-			// Use shorter text for some common licensing strings.
-			// See Installer.i18n.php for the currently offered strings.
+			// Use shorter text for some common licensing strings. See Installer.i18n.php
+			// for the currently offered strings. Unfortunately, there is no good way to
+			// comprehensively support localized licensing strings since the license (as
+			// stored in LocalSetttings.php) is just freeform text, not an i18n key.
 			$licenses = array(
 				'Creative Commons Attribution-Share Alike 3.0' => 'CC BY-SA 3.0',
 				'Creative Commons Attribution Share Alike' => 'CC BY-SA',
