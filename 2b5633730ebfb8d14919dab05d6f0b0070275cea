@@ -88,6 +88,24 @@
       "revId": "2b5633730ebfb8d14919dab05d6f0b0070275cea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_5d9c5258",
+        "filename": "less/mixins.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-24T21:38:33Z",
+      "side": 1,
+      "message": "Ugh, wait, this is commented. This completely breaks animations everywhere. I\u0027ll try to work this out. In the worst case we\u0027ll have to use various mixins (.transition-transform, .transition-opacity, etc.).",
+      "parentUuid": "4946a543_dd8f6221",
+      "revId": "2b5633730ebfb8d14919dab05d6f0b0070275cea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
