@@ -46,8 +46,10 @@
 							text: text + ' ~~~~'
 						} ).done( function() {
 							self.hide();
+							// close the list of topics overlay as well
+							self.parent.hide();
+							// FIXME: give nicer user experience - toast message would be nice at least!
 							M.pageApi.invalidatePage( self.title );
-							self.talkOverlay.appendSection( { heading: heading, content: text } ); // FIXME: doesn't add signature and doesn't wikify
 						} );
 					} );
 				} else {
@@ -66,14 +68,6 @@
 			defaults: {
 				heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )
-			},
-			appendSection: function( heading, text ) {
-				var $newTopic;
-				this.options.page.appendSection( heading, text );
-				this.render( this.options );
-				$newTopic = this.$( 'li' ).last();
-				window.scrollTo( 0, $newTopic.offset().top );
-				// FIXME: add fade in animation
 			},
 			preRender: function( options ) {
 				var page = options.page,
