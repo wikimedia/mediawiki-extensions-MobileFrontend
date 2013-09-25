@@ -129,9 +129,15 @@
 				text: self.$content.val(),
 				prop: 'text'
 			} ).then( function( resp ) {
+				var html;
 				// FIXME: Don't trust the api response
 				if ( resp && resp.parse && resp.parse.text ) {
-					return $.Deferred().resolve( resp.parse.text['*'] );
+					html = resp.parse.text;
+					// FIXME: [API] inconsistency (again) workaround for bug 54607
+					if ( typeof html !== 'string' ) {
+						html = html['*'];
+					}
+					return $.Deferred().resolve( html );
 				} else {
 					return $.Deferred().reject();
 				}
