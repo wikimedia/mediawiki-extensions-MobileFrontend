@@ -123,6 +123,8 @@
 				sectionpreview: true,
 				// needed for pre-save transform to work (bug 53692)
 				pst: true,
+				// Output mobile HTML (bug 54243)
+				mobileformat: 'html',
 				title: self.options.title,
 				text: self.$content.val(),
 				prop: 'text'
