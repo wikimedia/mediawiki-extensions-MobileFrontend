@@ -16,6 +16,24 @@
       "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_91f78157",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-25T22:50:30Z",
+      "side": 1,
+      "message": "No, the mediawiki.user module is not loaded by mobile :(",
+      "parentUuid": "4946a543_d1f02968",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
