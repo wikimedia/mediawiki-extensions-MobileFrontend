@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_d1f02968",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-09-25T22:47:59Z",
+      "side": 1,
+      "message": "I\u0027m not familiar with MobileFrontend, but can you load the mediawik.user module and use mw.user.tokens.get(\u0027editToken\u0027)?",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
