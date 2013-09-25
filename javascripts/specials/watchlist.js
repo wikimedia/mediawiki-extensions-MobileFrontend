@@ -1,9 +1,15 @@
 ( function( M, $ ) {
 	var star = M.require( 'watchstar' ),
-		schema = M.require( 'loggingSchemas/watchlist' );
+		qs = window.location.search.substr( 1 ),
+		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
+		pageName = mw.config.get( 'wgCanonicalSpecialPageName' ) === 'Watchlist' ? 'watchlist' : 'diff',
+		params = mw.mobileFrontend.deParam( qs ),
+		subPageName = params.watchlistview || 'a-z';
 
 	function init() {
-		var $watchlist = $( 'ul.page-list' );
+		var $watchlist = $( 'ul.page-list' ),
+			actionNamePrefix = pageName + '-' + subPageName + '-';
+
 		// FIXME: find more elegant way to not show watchlist stars on recent changes
 		if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {
 			star.initWatchListIconList( $watchlist, true );
@@ -14,13 +20,14 @@
 		}
 
 		// Register EventLogging events
-		schema.hijackLink( '.header .button-bar a', 'switch' );
-		schema.hijackLink( '.mw-mf-watchlist-selector a', 'filter' );
-		schema.hijackLink( '.page-list .title', 'view' );
-		schema.hijackLink( '.more', 'more' );
+		schema.hijackLink( '.header .button-bar a', actionNamePrefix + 'switch' );
+		schema.hijackLink( '.mw-mf-watchlist-selector a', actionNamePrefix + 'filter' );
+		schema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
+		schema.hijackLink( '.more', actionNamePrefix + 'more' );
 
 		M.on( 'watch', function( isWatched ) {
-			schema.log( isWatched ? 'unwatch' : 'watch' );
+			var action = isWatched ? 'unwatch' : 'watch';
+			schema.log( actionNamePrefix + action );
 		} );
 	}
 
