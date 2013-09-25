@@ -57,7 +57,7 @@
 					d = d.toFixed( 2 );
 				}
 			}
-			return mw.msg( msg, d );
+			return mw.msg( msg, mw.language.convertNumber( d ) );
 		},
 		getPages: function( location, range ) {
 			var d = $.Deferred(), self = this;

@@ -662,6 +662,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.nearby.styles',
 			'mobile.nearby.plumbing',
 			'jquery.json',
+			'mediawiki.language',
 		),
 		'messages' => array(
 			// NearbyApi.js
