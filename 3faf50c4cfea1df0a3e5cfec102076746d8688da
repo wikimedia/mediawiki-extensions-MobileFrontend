@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_40d9c9f0",
+        "filename": "tests/acceptance/features/step_definitions/uploads_steps.rb",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 487
+      },
+      "writtenOn": "2013-09-25T08:16:43Z",
+      "side": 1,
+      "message": "Captchas are made so the action could not be automated. :) We should probably figure out how to create a new user via API, if that is also not disabled to prevent spam.",
+      "revId": "3faf50c4cfea1df0a3e5cfec102076746d8688da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
