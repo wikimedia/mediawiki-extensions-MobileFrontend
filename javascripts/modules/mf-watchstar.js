@@ -222,10 +222,6 @@ var api = M.require( 'api' ), w = ( function() {
 		} );
 	}
 
-	// FIXME: Here for backwards compatability in stable. Removed when echo goes to stable
-	if ( !$( '#ca-watch' ).length ) {
-		$( '<li id="ca-watch">' ).appendTo( '#mw-mf-menu-page' );
-	}
 	function init( page ) {
 		var isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special,
 			$container = $container || $( '#ca-watch' ).removeClass( 'watched watch-this-article' ).empty();

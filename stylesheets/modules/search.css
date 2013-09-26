@@ -9,20 +9,23 @@ Change-Id: Id7715a83f8dc42cbdb23d8cbf982801606236f7c
  * Please edit the corresponding less file instead.
  * See README.mediawiki for details on installing.
  */
-input.search {
+.mw-mf-overlay input.search {
   /* visual indication that search is happening */
 
-  padding-right: 24px;
+  padding-right: 32px;
 }
-input.search.searching {
+.mw-mf-overlay input.search.searching {
   background-color: #eee;
 }
+form {
+  position: relative;
+}
 form .clear {
-  top: 0;
-  bottom: 0;
-  right: 10px;
-  width: 24px;
-  background: url(../common/images/close-button-beta.png) no-repeat scroll 100% 50%;
+  top: .5em;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: url(../common/images/close-button-beta.png) no-repeat scroll 50% 50%;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: auto 12px;

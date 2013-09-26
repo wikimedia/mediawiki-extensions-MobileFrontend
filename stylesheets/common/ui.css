@@ -311,12 +311,7 @@ body.navigation-enabled #mw-mf-page-center {
     width: 80%;
   }
 }
-/* Header */
-.header form {
-  height: 46px;
-}
 .header {
-  z-index: 2;
   background-color: #f3f3f3;
   background-image: -moz-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(100%, #f3f3f3));
@@ -326,49 +321,26 @@ body.navigation-enabled #mw-mf-page-center {
   line-height: 46px;
   text-align: center;
   min-height: 46px;
-  overflow: hidden;
-  position: relative;
   padding: 0 10px 0 40px;
 }
 .header h1,
 .header h2 {
   font-size: 1.6em;
-  margin: 10px 0 0;
+  padding: 10px 0 0;
 }
 /* Menu buttons */
-#mw-mf-menu-page,
 #mw-mf-main-menu-button,
 #secondary-button,
 #user-button {
-  display: inline-block;
   height: 46px;
   width: 40px;
   position: absolute;
   top: 0;
 }
-#user-button,
 .user-button {
-  display: none;
   background: url(images/user.png) 50% 50% no-repeat;
 }
-/* Echo Notifications */
-.is-authenticated .header {
-  padding-right: 40px;
-}
-.is-authenticated #user-button {
-  display: block;
-}
-#secondary-button,
-#user-button {
-  right: 0;
-  /* use -webkit prefix for older android browsers eg. nexus 1 */
-
-  -o-background-size: auto 24px;
-  -webkit-background-size: auto 24px;
-  background-size: auto 24px;
-}
-#secondary-button span,
-#user-button span {
+.user-button span {
   position: absolute;
   right: 5px;
   bottom: 7px;
@@ -380,80 +352,65 @@ body.navigation-enabled #mw-mf-page-center {
   background: #c91f2c;
   border-radius: 3px;
 }
-#secondary-button span.zero,
-#user-button span.zero {
+.user-button span.zero {
   display: none;
+}
+/* Echo Notifications */
+.is-authenticated .header {
+  padding-right: 40px;
+}
+#secondary-button,
+#user-button {
+  right: 0;
+  /* use -webkit prefix for older android browsers eg. nexus 1 */
+
+  -o-background-size: auto 24px;
+  -webkit-background-size: auto 24px;
+  background-size: auto 24px;
 }
 /* hamburger */
 #mw-mf-main-menu-button {
-  background-image: url(images/menu/lowres/main.png);
+  background: url(images/menu/lowres/main.png) 50% 50% no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: 24px 30px;
   -webkit-background-size: 24px 30px;
   background-size: 24px 30px;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  z-index: 2;
   left: 0;
-  border-radius: 5px 5px 5px;
-  background-position: center center;
-}
-#mw-mf-main-menu-button:active {
-  background-color: #f9f9f9;
 }
 .client-js #mw-mf-main-menu-button {
   /* @embed */
   background-image: url(images/menu/main.png);
 }
+.client-js .searchSubmit {
+  display: none;
+}
 /* Search */
 input.search {
-  -webkit-appearance: none;
   outline: none;
   width: 100%;
   height: 30px;
-  background-color: white !important;
+  background-color: #fff !important;
   /* remove fennec default background also see bug 36490 */
 
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-appearance: none;
 }
 input.search::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
-input.search:focus {
-  outline: none;
-}
 .searchSubmit {
-  position: absolute;
-  top: 8px;
-  margin: 0;
-  right: 0;
   padding: 0 !important;
-  width: 30px;
+  width: 20%;
 }
-.client-nojs .search-box {
-  padding-right: 34px;
+.client-nojs input.search {
+  width: 80%;
 }
 .search-box {
-  position: relative;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-#mw-mf-menu-page,
 .content .edit-page {
   display: none;
-}
-.client-js .searchSubmit {
-  display: none;
-}
-.client-js #mw-mf-menu-page {
-  display: block;
-}
-/* samsung galaxy s gt-19000 */
-@media all and (max-width: 240px) {
-  .search-box input.search {
-    font-size: 0.8em;
-    padding-left: 0;
-  }
 }
