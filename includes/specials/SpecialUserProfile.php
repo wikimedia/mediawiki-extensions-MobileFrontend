@@ -110,7 +110,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
 				$file->transform( array( 'width' => 320, 'height' => 320 ) )->toHtml() .
 				Html::openElement( 'div', array( 'class' => 'thumbcaption' ) ) .
-				$this->msg( 'mobile-frontend-profile-upload-caption', $name, $user, $daysAgo )->parse() .
+				$this->msg( 'mobile-frontend-profile-upload-caption', $title->getText(), $user, $daysAgo )->parse() .
 				Html::closeElement( 'div' ) .
 				Html::closeElement( 'a' ) .
 				Html::closeElement( 'div' );
