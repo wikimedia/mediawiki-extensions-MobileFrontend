@@ -197,6 +197,7 @@ input[type=submit] {
   border-top: none;
 }
 #mw-mf-page-left ul li {
+  position: relative;
   font-size: 1.2em;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
 }
@@ -204,6 +205,25 @@ input[type=submit] {
   background-color: #5C5C5C;
   border-left: solid 12px #3366bb;
   margin-left: -12px;
+}
+#mw-mf-page-left ul li .icon-secondary {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-position: center center;
+  background-size: 18px 18px;
+  text-indent: -999px;
+  overflow: hidden;
+  padding-right: 0;
+  width: 0;
+  border-left: 1px solid #717171;
+}
+#mw-mf-page-left ul li .icon-profile {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 40px;
 }
 #mw-mf-page-left ul li a {
   color: white;
@@ -247,9 +267,18 @@ input[type=submit] {
   /* @embed */
   background-image: url(images/menu/settings.png);
 }
+#mw-mf-page-left ul li.icon-user .icon-secondary-logout,
 #mw-mf-page-left ul li.icon-loginout a {
   /* @embed */
   background-image: url(images/menu/loginout.png);
+}
+#mw-mf-page-left ul li.icon-user a {
+  /* @embed */
+  background-image: url(images/menu/user.png);
+}
+#mw-mf-page-left ul li.icon-anon a {
+  /* @embed */
+  background-image: url(images/menu/anon.png);
 }
 #mw-mf-page-left ul.hlist li {
   font-size: 0.8em;
