@@ -191,6 +191,11 @@ class ApiMobileView extends ApiBase {
 			}
 		}
 		$latest = $wp->getLatest();
+		if ( !$latest ) {
+			// https://bugzilla.wikimedia.org/show_bug.cgi?id=53378
+			// Title::exists() above doesn't seem to always catch recently deleted pages
+			$this->dieUsageMsg( array( 'notanarticle', $title->getPrefixedText() ) );
+		}
 		if ( $this->file ) {
 			$key = wfMemcKey( 'mf', 'mobileview', self::CACHE_VERSION, $noImages,
 				$latest, $this->noTransform, $this->file->getSha1(), $this->variant );
