@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_cbd235d0",
+        "filename": "includes/Resources.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 795,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:19:51Z",
+      "side": 1,
+      "message": "just remove it all.",
+      "revId": "a1f9afc1e429d0b533712ab5856c1023f2627266",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_ebd9b1f2",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:19:51Z",
+      "side": 1,
+      "message": "cannot the user be worked out from the output?\nIs ctx needed?\nThus why pass all 3 of these?",
+      "revId": "a1f9afc1e429d0b533712ab5856c1023f2627266",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
