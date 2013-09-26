@@ -11,6 +11,15 @@ class SkinMinerva extends SkinTemplate {
 	public $useHeadElement = true;
 
 	/**
+	 * @var MobileContext
+	 */
+	protected $mobileContext;
+
+	public function __construct() {
+		$this->mobileContext = MobileContext::singleton();
+	}
+
+	/**
 	 * Initializes output page and sets up skin-specific parameters
 	 * @param $out OutputPage object to initialize
 	 */
@@ -51,7 +60,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @param array $query
 	 * @return string
 	 */
-	public static function getLoginUrl( $query ) {
+	public function getLoginUrl( $query ) {
 		return SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
 	}
 
@@ -172,7 +181,7 @@ class SkinMinerva extends SkinTemplate {
 			$menu['watch'] = $watchTemplate;
 			// FIXME: makeLink (used by makeListItem) when no text is present defaults to use the key
 			$menu['watch']['text'] = '';
-			$menu['watch']['href'] = static::getLoginUrl( array( 'returnto' => $title ) );
+			$menu['watch']['href'] = $this->getLoginUrl( array( 'returnto' => $title ) );
 		}
 
 		$tpl->set( 'page_actions', $menu );
@@ -210,10 +219,9 @@ class SkinMinerva extends SkinTemplate {
 				$title->getPrefixedDBkey() => $user->isWatched( $title ),
 			);
 		}
-		$ctx = MobileContext::singleton();
 		// mobile specific config variables
-		if ( $ctx->shouldDisplayMobileView() ) {
-			$vars['wgImagesDisabled'] = $ctx->imagesDisabled();
+		if ( $this->mobileContext->shouldDisplayMobileView() ) {
+			$vars['wgImagesDisabled'] = $this->mobileContext->imagesDisabled();
 		}
 		return $vars;
 	}

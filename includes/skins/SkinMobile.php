@@ -16,6 +16,7 @@ class SkinMobile extends SkinMinerva {
 	}
 
 	public function __construct( IContextSource $context ) {
+		parent::__construct();
 		$this->setContext( $context );
 		$this->addPageClass( 'mobile' );
 		$this->addPageClass( $this->getMode() );
@@ -264,13 +265,13 @@ class SkinMobile extends SkinMinerva {
 				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
 				'href' => $this->getUser()->isLoggedIn() ?
 					$watchTitle->getLocalUrl( $watchlistQuery ) :
-					static::getLoginUrl( array( 'returnto' => $watchTitle ) ),
+					$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
 				'class' => 'icon-watchlist',
 			),
 			'uploads' => array(
 				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
 				'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
-					static::getLoginUrl( array( 'returnto' => $donateTitle ) ),
+					$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
 				'class' => 'icon-uploads jsonly',
 			),
 			'settings' => array(
@@ -315,7 +316,7 @@ class SkinMobile extends SkinMinerva {
 
 		$req = $this->getRequest();
 
-		$url = MobileContext::singleton()->getDesktopUrl( wfExpandUrl(
+		$url = $this->mobileContext->getDesktopUrl( wfExpandUrl(
 			$req->appendQuery( 'mobileaction=toggle_view_desktop' )
 		) );
 		if ( is_array( $this->hookOptions ) && isset( $this->hookOptions['toggle_view_desktop'] ) ) {
@@ -382,13 +383,12 @@ HTML;
 	 * @param array $query
 	 * @return string
 	 */
-	public static function getLoginUrl( $query ) {
+	public function getLoginUrl( $query ) {
 		global $wgMFForceSecureLogin;
 
 		if ( WebRequest::detectProtocol() != 'https' && $wgMFForceSecureLogin ) {
-			$ctx = MobileContext::singleton();
 			$loginUrl = SpecialPage::getTitleFor( 'Userlogin' )->getFullURL( $query );
-			return $ctx->getMobileUrl( $loginUrl, $wgMFForceSecureLogin );
+			return $this->mobileContext->getMobileUrl( $loginUrl, $wgMFForceSecureLogin );
 		}
 		return SpecialPage::getTitleFor( 'Userlogin' )->getLocalURL( $query );
 	}
@@ -403,7 +403,6 @@ HTML;
 		$isSpecialPage = $title->isSpecialPage();
 		$isMainPage = $title->isMainPage();
 		$user = $this->getUser();
-		$ctx = MobileContext::singleton();
 
 		if ( !$isSpecialPage && $this->getWikiPage()->exists() ) {
 
@@ -418,7 +417,7 @@ HTML;
 					$this->getLanguage()->userTime( $timestamp, $user ) )->parse();
 
 			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
-			$historyUrl = $ctx->getMobileUrl( $title->getFullURL( 'action=history' ) );
+			$historyUrl = $this->mobileContext->getMobileUrl( $title->getFullURL( 'action=history' ) );
 			$historyLink = array(
 				'id' => 'mw-mf-last-modified',
 				'data-timestamp' => $isMainPage ? '' : $timestamp,
@@ -444,7 +443,6 @@ HTML;
 	private function getLogInOutLink() {
 		global $wgMFForceSecureLogin;
 		wfProfileIn( __METHOD__ );
-		$context = MobileContext::singleton();
 		$query = array();
 		if ( !$this->getRequest()->wasPosted() ) {
 			$returntoquery = $this->getRequest()->getValues();
@@ -458,14 +456,14 @@ HTML;
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
 			$url = SpecialPage::getTitleFor( 'UserLogout' )->getFullURL( $query );
-			$url = $context->getMobileUrl( $url, $wgMFForceSecureLogin );
+			$url = $this->mobileContext->getMobileUrl( $url, $wgMFForceSecureLogin );
 			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
 		} else {
 			 // note returnto is not set for mobile (per product spec)
 			// note welcome=yes in return to query allows us to detect accounts created from the left nav
 			$returntoquery[ 'welcome' ] = 'yes';
 			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
-			$url = static::getLoginUrl( $query );
+			$url = $this->getLoginUrl( $query );
 			$text = wfMessage( 'mobile-frontend-main-menu-login' )->escaped();
 		}
 		wfProfileOut( __METHOD__ );
@@ -482,8 +480,8 @@ HTML;
 	 * @return Array
 	 */
 	public function mobilizeUrls( $urls ) {
-		return array_map( function( $url ) {
-				$ctx = MobileContext::singleton();
+		$ctx = $this->mobileContext; // $this in closures is allowed only in PHP 5.4
+		return array_map( function( $url ) use ( $ctx ) {
 				$url['href'] = $ctx->getMobileUrl( $url['href'] );
 				return $url;
 			},
