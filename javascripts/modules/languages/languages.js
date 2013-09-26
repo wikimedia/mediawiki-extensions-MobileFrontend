@@ -28,7 +28,7 @@
 			variants = parseList( $section.find( '#mw-mf-language-variant-selection' ) );
 
 		// assume the current language is not present
-		if ( languages.length > 0 ) {
+		if ( languages.length > 0 || variants.length > 1 ) {
 			$( '<button>' ).text( $h2.text() ).
 				addClass( 'languageSelector' ).
 				on( 'click', function() {

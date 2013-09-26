@@ -29,38 +29,42 @@ class MinervaTemplate extends BaseTemplate {
 	protected function renderLanguages() {
 		$languages = $this->getLanguages();
 		$variants = $this->getLanguageVariants();
-		$languageTemplateData = array(
-			'heading' => wfMessage( 'mobile-frontend-language-article-heading' )->text(),
-			'languages' => $languages,
-			'variants' => $variants,
-			'languageSummary' => wfMessage( 'mobile-frontend-language-header', count( $languages ) )->text(),
-			'variantSummary' => count( $variants ) > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '',
-		);
-		if ( $languageTemplateData['languages'] && count( $languageTemplateData['languages'] ) > 0 ) {
-		?>
-		<div class="section" id="mw-mf-language-section">
-			<h2 id="section_language" class="section_heading"><?php echo $languageTemplateData['heading']; ?></h2>
-			<div id="content_language" class="content_block">
-				<?php if ( count( $languageTemplateData['variants'] ) > 0 ) { ?>
-				<p id="mw-mf-language-variant-header"><?php echo $languageTemplateData['variantSummary']; ?></p>
-				<ul id="mw-mf-language-variant-selection">
-				<?php
-				foreach( $languageTemplateData['variants'] as $key => $val ):
-					echo $this->makeListItem( $key, $val );
-				endforeach;
-				?>
-				</ul>
-				<?php } ?>
-				<p id="mw-mf-language-header"><?php echo $languageTemplateData['languageSummary']; ?></p>
-				<ul id="mw-mf-language-selection">
-				<?php
-				foreach( $languageTemplateData['languages'] as $key => $val ):
-					echo $this->makeListItem( $key, $val );
-				endforeach;
-				?>
-				</ul>
+		$languagesCount = count( $languages );
+		$variantsCount = count( $variants );
+
+		if ( $languagesCount > 0 || $variantsCount > 1 ) {
+			$heading = wfMessage( 'mobile-frontend-language-article-heading' )->text();
+			$languageSummary = wfMessage( 'mobile-frontend-language-header', $languagesCount )->text();
+			$variantSummary = $variantsCount > 1 ? wfMessage( 'mobile-frontend-language-variant-header' )->text() : '';
+			?>
+			<div class="section" id="mw-mf-language-section">
+				<h2 id="section_language" class="section_heading"><?php echo $heading; ?></h2>
+				<div id="content_language" class="content_block">
+
+					<?php if ( $variantsCount > 1 ) { ?>
+					<p id="mw-mf-language-variant-header"><?php echo $variantSummary; ?></p>
+					<ul id="mw-mf-language-variant-selection">
+					<?php
+					foreach( $variants as $key => $val ):
+						echo $this->makeListItem( $key, $val );
+					endforeach;
+					?>
+					</ul>
+					<?php } ?>
+
+					<?php if ( $languagesCount > 0 ) { ?>
+					<p id="mw-mf-language-header"><?php echo $languageSummary; ?></p>
+					<ul id="mw-mf-language-selection">
+					<?php
+					foreach( $languages as $key => $val ):
+						echo $this->makeListItem( $key, $val );
+					endforeach;
+					?>
+					</ul>
+					<?php } ?>
+
+				</div>
 			</div>
-		</div>
 		<?php
 		}
 	}
