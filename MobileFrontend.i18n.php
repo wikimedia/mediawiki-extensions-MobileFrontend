@@ -317,7 +317,7 @@ $messages['en'] = array (
 	'mobile-frontend-profile-yours' => 'Visit your profile page.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|This user}} is a new editor.',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|This user}} is a somewhat experienced editor.',
-	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|This user}} is a profilic editor.',
+	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|This user}} is a prolific editor.',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.'
 );
 
