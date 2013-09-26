@@ -2,6 +2,91 @@
   "comments": [
     {
       "key": {
+        "uuid": "4946a543_ee11bf53",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:48:26Z",
+      "side": 1,
+      "message": "Any reason why this is an object?\nWhy not just have scoped functions.\nThis is somewhat confusing coding style as it looks like a View or a Class but is neither.",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_eb5e1141",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:48:26Z",
+      "side": 1,
+      "message": "use on  instead of click (maybe even make compatible with tapClick that is in alpha)\n\nuse ev instead of e:\nhttps://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions#Variables",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_4b2d65a7",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:48:26Z",
+      "side": 1,
+      "message": "just do $( \u0027\u003cli\u003e\u0027 )",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_0b0c3d41",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:48:26Z",
+      "side": 1,
+      "message": "why do you not use data( {  here? and merge with the above ones?",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_8b366d00",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:48:26Z",
+      "side": 1,
+      "message": "This looks messy. I\u0027d personally rather just live with red links.",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_d1f02968",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 21

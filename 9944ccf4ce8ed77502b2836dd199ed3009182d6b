@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_0b227d04",
+        "filename": "javascripts/modules/notifications-overlay.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-26T21:48:26Z",
+      "side": 0,
+      "message": "Call this file NotificationsOverlay to be consistent with other naming conventions.",
+      "revId": "9944ccf4ce8ed77502b2836dd199ed3009182d6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
