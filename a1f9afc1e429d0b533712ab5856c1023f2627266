@@ -33,6 +33,24 @@
       "revId": "a1f9afc1e429d0b533712ab5856c1023f2627266",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_2eeae70a",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-26T22:09:46Z",
+      "side": 1,
+      "message": "The ctx is needed if the extensions wants to add something only for beta or alpha. The user can be extracted from the $output, but I was including it for convenience. I\u0027ll remove it if you think it\u0027s unnecessary.",
+      "parentUuid": "4946a543_ebd9b1f2",
+      "revId": "a1f9afc1e429d0b533712ab5856c1023f2627266",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
