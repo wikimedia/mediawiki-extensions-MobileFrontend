@@ -172,6 +172,41 @@
   font-size: 0.9em;
   margin-top: 8px;
 }
-.mw-mf-thank-button {
+/* Need .content to match the button selectors in ui.css */
+.content .mw-mf-action-button {
   float: right;
+  border: 1px #25A260 solid;
+  background-color: #27AA65;
+  background-image: -moz-linear-gradient(top, #2ec977 0, #27aa65 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ec977), color-stop(100%, #27aa65));
+  background-image: -webkit-linear-gradient(top, #2ec977 0, #27aa65 100%);
+  background-image: linear-gradient(#2ec977 0, #27aa65 100%);
+}
+.content .mw-mf-action-button:hover {
+  background-color: #2EC977;
+  background-image: -moz-linear-gradient(top, #3ed384 0, #2ec977 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3ed384), color-stop(100%, #2ec977));
+  background-image: -webkit-linear-gradient(top, #3ed384 0, #2ec977 100%);
+  background-image: linear-gradient(#3ed384 0, #2ec977 100%);
+}
+.content .mw-mf-action-button:active {
+  background-color: #249E5E;
+  background-image: -moz-linear-gradient(top, #31b570 0, #249e5e 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #31b570), color-stop(100%, #249e5e));
+  background-image: -webkit-linear-gradient(top, #31b570 0, #249e5e 100%);
+  background-image: linear-gradient(#31b570 0, #249e5e 100%);
+}
+.content .mw-mf-action-button:disabled {
+  color: white;
+  border: 1px #80D1A7 solid;
+  background-color: #80D1A7;
+  background-image: -moz-linear-gradient(top, #90deb5 0, #80d1a7 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #90deb5), color-stop(100%, #80d1a7));
+  background-image: -webkit-linear-gradient(top, #90deb5 0, #80d1a7 100%);
+  background-image: linear-gradient(#90deb5 0, #80d1a7 100%);
+}
+.content .mw-mf-action-button-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.5em 0 -5px;
 }

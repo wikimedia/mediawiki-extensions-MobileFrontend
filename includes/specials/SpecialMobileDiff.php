@@ -71,15 +71,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( $ctx->isBetaGroupMember() ) {
 			$output->addModules( 'mobile.mobilediff.scripts.beta.head' );
 			$output->addModules( 'mobile.mobilediff.scripts.beta' );
-			// If the Echo and Thanks extensions are installed and the user is
-			// logged in, show a 'Thank' link.
-			if ( class_exists( 'EchoNotifier' )
-				&& class_exists( 'ApiThank' )
-				&& $this->getUser()->isLoggedIn()
-			) {
-				$this->useThanks = true;
-				$output->addModules( 'mobile.thanks' );
-			}
 		}
 
 		// @FIXME add full support for git-style notation (eg ...123, 123...)
@@ -98,6 +89,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output->setPageTitle( $this->msg( 'mobile-frontend-diffview-title', $this->targetTitle->getPrefixedText() ) );
 
 		$output->addModules( 'mobile.watchlist' );
+
+		// Allow other extensions to load more stuff here
+		wfRunHooks( 'BeforeSpecialMobileDiffDisplay', array( &$output, $ctx ) );
 
 		$output->addHtml( '<div id="mw-mf-diffview"><div id="mw-mf-diffarea">' );
 

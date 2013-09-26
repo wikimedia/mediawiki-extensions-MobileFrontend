@@ -796,22 +796,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	// Note that this module is declared as a dependency in the Thanks extension (for the
+	// mobile diff thanks button code). Keep the module name there in sync with this one.
 	'mobile.mobilediff.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.loggingSchemas',
+			'mobile.stable.common',
 		),
 		'scripts' => array(
 			'javascripts/specials/mobilediff.js',
-		),
-	),
-
-	'mobile.mobilediff.scripts.beta' => $wgMFMobileResourceBoilerplate + array(
-		// should be no dependencies except mobile.head and position to top to avoid flash of unstyled content
-		'dependencies' => array(
-			'mobile.thanks',
-		),
-		'scripts' => array(
-			'javascripts/specials/mobilediffThanks.js',
 		),
 	),
 
@@ -825,23 +818,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/externals/jsdiff.js',
 			'javascripts/specials/mobilediffBeta.js',
 		),
-	),
-
-	'mobile.thanks' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.beta.common',
-		),
-		'scripts' => array(
-			'javascripts/modules/thanks.js',
-		),
-		'messages' => array(
-			'thanks-thank',
-			'thanks-thanked',
-			'thanks-error-invalidrevision',
-			'thanks-error-ratelimited',
-			'thanks-error-undefined',
-			'mobile-frontend-thanked-notice',
-		)
 	),
 ) );
 
