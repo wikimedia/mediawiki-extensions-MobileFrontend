@@ -133,8 +133,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					$title->getPrefixedText()
 				).
 				Html::closeElement( 'h2' ) .
-				Html::element( 'span', array( 'class' => $sizeClass ), $this->msg( $changeMsg, $bytesChanged )->text() ) .
-				', ' .
+				Html::element( 'span', array( 'class' => $sizeClass ), $this->msg( $changeMsg )->numParams( $bytesChanged )->text() ) .
+				$this->msg( 'comma-separator' )->text() .
 				Html::element( 'span', array( 'class' => 'mw-mf-diff-date' ), $ts->getHumanTimestamp() ) .
 			Html::closeElement( 'div' ) .
 			Html::element( 'div', array( 'id' => 'mw-mf-diff-comment' ), $this->rev->getComment() )
