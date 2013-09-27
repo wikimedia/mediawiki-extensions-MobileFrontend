@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_d123c2a8",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-27T00:04:52Z",
+      "side": 1,
+      "message": "Not sure how much hijackLink() belongs to schemas, but let\u0027s leave it here for now.\n\nOne suggestion is to define those two functions in the main closure, not as properties of an object. This way you don\u0027t have to do module.function() all the time and the minifier that MaxSem is working on will be happier too (local variables).\n\nThen you can just do M.define( \u0027...\u0027, { fn: fn ... } );",
+      "revId": "ff16befabf14ece538dd03e8641bd9235274eed8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_f13a7ec9",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-27T00:04:52Z",
+      "side": 1,
+      "message": "Why don\u0027t we use name from the arguments of hijackLink? Assigning a data property seems unnecessary unless I\u0027m missing something.",
+      "revId": "ff16befabf14ece538dd03e8641bd9235274eed8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_3135e6d8",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-27T00:04:52Z",
+      "side": 1,
+      "message": "This could be not enough when we use tap event more extensively. Can you put something like // FIXME rethink when micro.tap.js in stable ?",
+      "revId": "ff16befabf14ece538dd03e8641bd9235274eed8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
