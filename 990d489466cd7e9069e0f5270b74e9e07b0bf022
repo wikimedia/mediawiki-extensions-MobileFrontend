@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_7cbae5df",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-27T11:23:46Z",
+      "side": 1,
+      "message": "msg() should have an output type specified. See https://www.mediawiki.org/wiki/Manual:Messages_API#Output_modes_and_escaping for details.",
+      "revId": "990d489466cd7e9069e0f5270b74e9e07b0bf022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
