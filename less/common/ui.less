@@ -1,63 +1,33 @@
 @import "buttons.less";
 @import 'mainmenu.less';
 
-/* Header */
-.header form {
-	height: @headerHeight;
-}
-
 .header {
-	z-index: 2;
 	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
 	border-bottom: 1px solid #e2e2e2;
 	line-height: @headerHeight;
 	text-align: center;
 	min-height: @headerHeight;
-	overflow: hidden;
-	position: relative;
 	padding: 0 10px 0 @searchBarPaddingLeft;
 
 	h1, h2 {
 		font-size: @baseFontSize * 1.6;
-		margin: round( @headerHeight*0.22 ) 0 0;
+		padding: round( @headerHeight*0.22 ) 0 0;
 	}
 }
 
 /* Menu buttons */
-#mw-mf-menu-page,
 #mw-mf-main-menu-button,
 #secondary-button,
-// FIXME: rename this to secondary-button
+// FIXME: remove when cache cleared
 #user-button {
-	display: inline-block; //?
 	height: @headerHeight;
 	width: @searchBarPaddingLeft;
 	position: absolute;
 	top: 0;
 }
 
-// FIXME: use the class after cache has cleared
-#user-button,
 .user-button {
-	display: none;
 	background: url(images/user.png) 50% 50% no-repeat;
-}
-
-/* Echo Notifications */
-.is-authenticated {
-	.header {
-		padding-right: @searchBarPaddingRight;
-	}
-	#user-button {
-		display: block;
-	}
-}
-
-#secondary-button,
-// FIXME: rename this to secondary-button
-#user-button {
-	right: 0;
-	.background-size( auto, 24px );
 
 	span {
 		position: absolute;
@@ -77,87 +47,70 @@
 	}
 }
 
+/* Echo Notifications */
+.is-authenticated {
+	.header {
+		padding-right: @searchBarPaddingRight;
+	}
+}
+
+#secondary-button,
+// FIXME: remove when cache cleared
+#user-button {
+	right: 0;
+	.background-size( auto, 24px );
+}
+
 /* hamburger */
 // FIXME: make consistent with user-button
 #mw-mf-main-menu-button {
-	background-image: url(images/menu/lowres/main.png);
+	background: url(images/menu/lowres/main.png) 50% 50% no-repeat;
 	.background-size( 24px, 30px );
-	overflow: hidden;
-	background-repeat: no-repeat;
-	z-index: 2;
 	left: 0;
-	border-radius: 5px 5px 5px;
-	background-position: center center;
-	&:active {
-		background-color: darken( @searchBoxColor, 0.4% );
-	}
 }
 
 .client-js {
 	#mw-mf-main-menu-button {
 		/* @embed */background-image: url(images/menu/main.png);
 	}
+
+	.searchSubmit {
+		display: none;
+	}
 }
 
 /* Search */
 input.search {
-	-webkit-appearance: none;
 	outline: none;
 	width: 100%;
 	height: @headerElementHeight;
 	// FIXME: unable to check but the important may not be needed for Nokia S60;
-	background-color: white !important; /* remove fennec default background also see bug 36490 */
+	background-color: #fff !important; /* remove fennec default background also see bug 36490 */
 	.box-sizing( border-box );
+	// get rid of rounded corners in Safari
+	-webkit-appearance: none;
+	// get rid of X in Chrome
 	&::-webkit-search-cancel-button {
 		-webkit-appearance: none;
-	}
-
-	&:focus {
-		outline: none;
 	}
 }
 
 .searchSubmit {
-	position: absolute;
-	top: ( @headerHeight - @headerElementHeight ) / 2;
-	margin: 0;
-	right: 0;
+	// FIXME: do all buttons in header need to have padding by default?
 	padding: 0 !important;
-	width: @headerElementHeight;
+	width: 20%;
 }
 
 .client-nojs {
-	.search-box {
-		padding-right: @headerElementHeight + 4px;
+	input.search {
+		width: 80%;
 	}
 }
 
 .search-box {
-	position: relative;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-// FIXME: remove #mw-mf-menu-page
-#mw-mf-menu-page,
 .content .edit-page {
 	display: none;
 }
-
-.client-js {
-	.searchSubmit {
-		display: none;
-	}
-
-	#mw-mf-menu-page {
-		display: block;
-	}
-}
-
-/* samsung galaxy s gt-19000 */
-@media all and ( max-width:240px ) {
-	.search-box input.search {
-		font-size: 0.8em;
-		padding-left: 0;
-	}
-}
-
