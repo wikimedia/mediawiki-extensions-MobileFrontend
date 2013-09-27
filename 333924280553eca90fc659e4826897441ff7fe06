@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_5caa891a",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-09-27T14:26:35Z",
+      "side": 1,
+      "message": "Message:numParam() does not exist. It should be numParams().",
+      "revId": "333924280553eca90fc659e4826897441ff7fe06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
