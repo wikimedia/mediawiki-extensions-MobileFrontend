@@ -25,7 +25,8 @@
 	// do not run more than once
 	function init() {
 		var title = mw.config.get( 'wgTitle' ),
-			currentUrl = mw.util.wikiGetlink( title );
+			qs = window.location.search.split( '?' )[1],
+			currentUrl = mw.util.wikiGetlink( title, M.deParam( qs ) );
 		// initial history state does not contain title
 		// run before binding to avoid nasty surprises
 		History.replaceState( null, title, currentUrl );
