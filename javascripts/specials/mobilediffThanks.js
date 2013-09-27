@@ -1,5 +1,5 @@
 ( function( M, $ ) {
-	var schema = M.require( 'loggingSchemas/watchlist' ),
+	var schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		thanks = M.require( 'thanks' );
 
 	$( function() {
@@ -12,7 +12,7 @@
 			$thankBtn = thanks.createThankLink( username, rev, gender );
 			if ( $thankBtn ) {
 				$thankBtn.on( 'click', function() {
-					schema.log( 'thanks', username );
+					schema.log( 'diff-thanks', username );
 				} ).prependTo( '#mw-mf-userinfo' );
 			}
 		}

@@ -70,6 +70,16 @@ $wgMFMobileSpecialPageResourceStyleBoilerplate = $wgMFMobileSpecialPageResourceB
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
+	// EventLogging
+	'mobile.loggingSchemas' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'scripts' => array(
+			'javascripts/loggingSchemas/MobileWebClickTracking.js',
+		)
+	),
+
 	// main page
 	'mobile.mainpage.styles' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
@@ -329,6 +339,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.beta.plumbing',
 			'mobile.stable.common',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
 			'javascripts/common/ContentOverlay.js',
@@ -713,8 +724,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 	'mobile.watchlist.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+		'dependencies' => array(
+			'mobile.loggingSchemas',
+		),
 		'scripts' => array(
-			'javascripts/loggingSchemas/watchlist.js',
 			'javascripts/specials/watchlist.js',
 		),
 	),
@@ -785,10 +798,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.mobilediff.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.startup',
+			'mobile.loggingSchemas',
 		),
 		'scripts' => array(
-			'javascripts/loggingSchemas/watchlist.js',
 			'javascripts/specials/mobilediff.js',
 		),
 	),
