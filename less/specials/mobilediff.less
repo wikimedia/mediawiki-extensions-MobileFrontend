@@ -183,6 +183,43 @@
 	}
 }
 
-.mw-mf-thank-button {
-	float: right;
+/* Need .content to match the button selectors in ui.css */
+.content {
+	.mw-mf-action-button {
+		float: right;
+		border: 1px #25A260 solid;
+		background-color: #27AA65;
+		background-image: -moz-linear-gradient(top, #2EC977 0, #27AA65 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2EC977), color-stop(100%, #27AA65));
+		background-image: -webkit-linear-gradient(top, #2EC977 0, #27AA65 100%);
+		background-image: linear-gradient(#2EC977 0, #27AA65 100%);
+	}
+	.mw-mf-action-button:hover {
+		background-color: #2EC977;
+		background-image: -moz-linear-gradient(top, #3ED384 0, #2EC977 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3ED384), color-stop(100%, #2EC977));
+		background-image: -webkit-linear-gradient(top, #3ED384 0, #2EC977 100%);
+		background-image: linear-gradient(#3ED384 0, #2EC977 100%);
+	}
+	.mw-mf-action-button:active {
+		background-color: #249E5E;
+		background-image: -moz-linear-gradient(top, #31B570 0, #249E5E 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #31B570), color-stop(100%, #249E5E));
+		background-image: -webkit-linear-gradient(top, #31B570 0, #249E5E 100%);
+		background-image: linear-gradient(#31B570 0, #249E5E 100%);
+	}
+	.mw-mf-action-button:disabled {
+		color: white;
+		border: 1px #80D1A7 solid;
+		background-color: #80D1A7;
+		background-image: -moz-linear-gradient(top, #90DEB5 0, #80D1A7 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #90DEB5), color-stop(100%, #80D1A7));
+		background-image: -webkit-linear-gradient(top, #90DEB5 0, #80D1A7 100%);
+		background-image: linear-gradient(#90DEB5 0, #80D1A7 100%);
+	}
+	.mw-mf-action-button-icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 0.6em 0 -0.5em;
+	}
 }
