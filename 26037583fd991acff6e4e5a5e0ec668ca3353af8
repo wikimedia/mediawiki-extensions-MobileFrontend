@@ -70,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "4946a543_ddde733a",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-09-28T00:01:03Z",
+      "side": 1,
+      "message": "It was originally done this way to facilitate the \u0027dismiss\u0027 functionality. The dismiss button needed access to this data in order to figure out what was being dismissed and provide options for dismissing the entire notification category, etc. None of the that functionality exists anymore, so I\u0027ll just remove these.",
+      "parentUuid": "4946a543_0b0c3d41",
+      "revId": "26037583fd991acff6e4e5a5e0ec668ca3353af8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4946a543_8b366d00",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 21
