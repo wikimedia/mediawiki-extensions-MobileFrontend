@@ -77,6 +77,16 @@ $specialPageAliases['et'] = array(
 	'Nearby' => array( 'Lähikond' ),
 );
 
+/** Persian (فارسی) */
+$specialPageAliases['fa'] = array(
+	'MobileOptions' => array( 'گزینه‌های_تلفن_همراه' ),
+	'Uploads' => array( 'بارگذاری‌ها' ),
+	'MobileDiff' => array( 'تفاوت_تلفن_همراه' ),
+	'MobileMenu' => array( 'گزینگان_تلفن_همراه' ),
+	'Nearby' => array( 'درنزدیکی', 'در_نزدیکی' ),
+	'UserProfile' => array( 'شناسنامهٔ_کاربری', 'شناسنامه_کاربری' ),
+);
+
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = array(
 	'Nearby' => array( 'בסביבה', 'קרוב' ),
