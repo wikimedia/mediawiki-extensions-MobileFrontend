@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_4e79532b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-09-30T16:50:16Z",
+      "side": 1,
+      "message": "Thhis $out-\u003eaddModule() call should be done within ULS -- you can check if in mobile output mode by checking if $out-\u003egetTarget() \u003d\u003d\u003d \u0027mobile\u0027 I believe.",
+      "revId": "5d0521b52d0889f527c008d755777b071c7b2ce7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_6e760f3e",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-09-30T16:50:16Z",
+      "side": 1,
+      "message": "This also should really be triggered from the ULS side, though I\u0027m not 100% sure where to put it.",
+      "revId": "5d0521b52d0889f527c008d755777b071c7b2ce7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
