@@ -32,6 +32,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	 * @return Integer the amount of edits
 	 */
 	protected function countRecentEdits( $user, $fromDate ) {
+		wfProfileIn( __METHOD__ );
 		$dbr = wfGetDB( DB_SLAVE );
 		$where = array(
 			'rc_user_text' => $user->getName(),
@@ -41,7 +42,9 @@ class SpecialUserProfile extends MobileSpecialPage {
 			'limit' => self::LIMIT + 1,
 		);
 		$res = $dbr->select( 'recentchanges', 'rc_timestamp', $where, __METHOD__, $constraints );
-		return $res->numRows();
+		$res = $res->numRows();
+		wfProfileOut( __METHOD__ );
+		return $res;
 	}
 
 	/**
@@ -54,6 +57,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	protected function countRecentUploads( $user, $fromDate ) {
 		global $wgMFPhotoUploadWiki, $wgConf;
 
+		wfProfileIn( __METHOD__ );
 		if ( !$wgMFPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_SLAVE );
 		} elseif (
@@ -61,6 +65,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				!in_array( $wgMFPhotoUploadWiki, $wgConf->getLocalDatabases() )
 			) {
 			// early return if the database is invalid
+			wfProfileOut( __METHOD__ );
 			return false;
 		} else {
 			$dbr = wfGetDB( DB_SLAVE, array(), $wgMFPhotoUploadWiki );
@@ -72,7 +77,9 @@ class SpecialUserProfile extends MobileSpecialPage {
 			'limit' => self::LIMIT + 1,
 		);
 		$res = $dbr->select( 'image', 'img_timestamp', $where, __METHOD__, $constraints );
-		return $res->numRows();
+		$res = $res->numRows();
+		wfProfileOut( __METHOD__ );
+		return $res;
 	}
 
 	/**
@@ -84,6 +91,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	protected function getLastUpload( $user ) {
 		global $wgMFPhotoUploadWiki, $wgConf;
 
+		wfProfileIn( __METHOD__ );
 		if ( !$wgMFPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_SLAVE );
 		} elseif (
@@ -91,6 +99,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				!in_array( $wgMFPhotoUploadWiki, $wgConf->getLocalDatabases() )
 			) {
 			// early return if the database is invalid
+			wfProfileOut( __METHOD__ );
 			return false;
 		} else {
 			$dbr = wfGetDB( DB_SLAVE, array(), $wgMFPhotoUploadWiki );
@@ -114,8 +123,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 				Html::closeElement( 'div' ) .
 				Html::closeElement( 'a' ) .
 				Html::closeElement( 'div' );
+			wfProfileOut( __METHOD__ );
 			return $img;
 		}
+		wfProfileOut( __METHOD__ );
 		return '';
 	}
 
@@ -139,6 +150,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	}
 
 	protected function getRecentActivityHtml( User $user ) {
+		wfProfileIn( __METHOD__ );
 		// render
 		$fromDate = time() - ( 3600 * 24 * 30 );
 		$count = $this->countRecentEdits( $user, $fromDate );
@@ -161,6 +173,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 		$html = Html::element( 'h2', array(), $this->msg( 'mobile-frontend-profile-heading-recent' ) ) .
 			$this->getListHtml( 'ul', array( 'class' => 'statements' ), $statsRecent );
+		wfProfileOut( __METHOD__ );
 
 		return $html;
 	}
@@ -202,6 +215,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 	}
 
 	public function execute( $par = '' ) {
+		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$this->addModules();
 		$out->setPageTitle( $this->msg( 'mobile-frontend-profile-title' ) );
@@ -221,6 +235,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 		} else {
 			$html = $this->getHtmlNoArg();
 		}
+		wfProfileOut( __METHOD__ );
 		$out->addHtml( $html );
 	}
 }
