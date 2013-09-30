@@ -34,6 +34,24 @@
       "revId": "df3bab5500eed282af70070c61df40596e953391",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_b10bf88e",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-09-30T19:09:45Z",
+      "side": 1,
+      "message": "Let\u0027s maybe call it \u0027isLargeScreen()\u0027 ... or \u0027isWideScreen()\u0027 but then it needs a note clarifying that landscape on phones is too small. :D",
+      "parentUuid": "29433135_71d9901e",
+      "revId": "df3bab5500eed282af70070c61df40596e953391",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
