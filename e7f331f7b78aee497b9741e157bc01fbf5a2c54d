@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_5452c2de",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-30T20:42:58Z",
+      "side": 1,
+      "message": "What does .common suffix mean? I\u0027ve read https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions but it doesn\u0027t mention it.",
+      "revId": "e7f331f7b78aee497b9741e157bc01fbf5a2c54d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_110f6c39",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-30T20:42:58Z",
+      "side": 1,
+      "message": "Why? I would understand if we were merging templates in core, but this is not the case now, right?",
+      "revId": "e7f331f7b78aee497b9741e157bc01fbf5a2c54d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
