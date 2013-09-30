@@ -1,25 +1,50 @@
+@import "../mixins.less";
 .profile {
-	.statements li,
+	// FIXME: reconsider top margin for all pages?
+	margin-top: 1.5em;
+
+	.last-upload {
+		margin-top: 0.6em;
+	}
+
 	.statement {
-		font-family: Georgia;
-		font-size: 1.95em;
+		font-size: 1.4em;
+		line-height: 1.25;
 		margin-bottom: 0;
 	}
+
 	.secondary-statement {
-		font-family: Arial;
+		font-size: 1.1em;
+		color: #ccc;
 		font-style: italic;
-		font-size: 21px;
-		color: #919191;
+		line-height: 1.1;
+		margin-top: .2em;
+	}
+
+	.section-end {
+		margin-bottom: 2em;
 	}
 }
 
-.content h2 {
-	font-family: Arial;
-	font-size: 1.47em;
-	text-transform: uppercase;
-	color: rgb(145, 145, 145);
+.section,
+.user-page {
+	background-repeat: no-repeat;
+	.background-size( 18px, 19px );
+	padding-left: 30px;
+	background-position: left 4px;
 }
 
-ul {
-	list-style: none;
+.section-registered {
+	background-image: url(images/profile/registration.png);
+}
+
+.section-activity {
+	background-image: url(images/profile/activity.png);
+}
+
+.user-page {
+	padding-top: 6px;
+	line-height: 19px;
+	display: inline-block;
+	background-image: url(images/profile/user.png);
 }

@@ -309,12 +309,13 @@ $messages['en'] = array (
 	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 upload|$1 uploads|0=No uploads}} in last month',
 	'mobile-frontend-profile-edits-limit' => 'Over {{PLURAL:$1|$1 edit|$1 edits}} in last month',
 	'mobile-frontend-profile-uploads-limit' => 'Over {{PLURAL:$1|$1 upload|$1 uploads}} in last month',
-	'mobile-frontend-profile-upload-caption' => '$1 was the last upload by {{GENDER:$2|$2}} and was uploaded {{PLURAL:$3|$3 day ago|$3 days ago}}.',
+	'mobile-frontend-profile-last-upload-caption' => 'Last upload by {{GENDER:$1|$1}}, {{PLURAL:$2|yesterday|$2 days ago|0=today}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recent',
-	'mobile-frontend-profile-registered' => 'Member for {{PLURAL:$1|$1 day|$1 days}} with {{PLURAL:$2|$2 edit|$2 edits}}.',
+	'mobile-frontend-profile-registration' => '$1 has been a member for {{PLURAL:$2|$2 day|$2 days}} and has made {{PLURAL:$3|$3 edit|$3 edits}}.',
 	'mobile-frontend-profile-usertalk' => 'View talk page.',
 	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
 	'mobile-frontend-profile-yours' => 'Visit your profile page.',
+	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|This user}} is a new editor.',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|This user}} is a somewhat experienced editor.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|This user}} is a prolific editor.',
@@ -792,10 +793,10 @@ See also:
 See also:
 * {{msg-mw|Mobile-frontend-profile-edits}}',
 	'mobile-frontend-profile-uploads-limit' => 'Upload count when expressed to be over a certain number.',
-	'mobile-frontend-profile-upload-caption' => '$1 is the filename, $2 is the username and $3 is the amount of days ago the image was uploaded.',
+	'mobile-frontend-profile-last-upload-caption' => '$1 is the username and $2 is the amount of days ago the image was uploaded.',
 	'mobile-frontend-profile-heading-recent' => 'Heading for recent section profile.
 {{Identical|Recent}}',
-	'mobile-frontend-profile-registered' => 'Summary saying how many days the user has been a member ($1) and how many total edits they have made ($2).',
+	'mobile-frontend-profile-registration' => 'Summary saying how many days the user ($1) has been a member ($2) and how many total edits they have made ($3).',
 	'mobile-frontend-profile-usertalk' => 'Link label to user talk page.',
 	'mobile-frontend-profile-noargs' => 'Message shown when no user profile URL is specified.
 
@@ -806,6 +807,7 @@ If the user is logged in, this message is followed by:
 Used if the user is logged in.
 
 Preceded by {{msg-mw|Mobile-frontend-profile-noargs}}.',
+	'mobile-frontend-profile-userpage-link' => 'Label for a link to user page that shows on Special:UserProfile.',
 	'mobile-frontend-profile-user-desc-1' => 'Summary describing that this user is new.',
 	'mobile-frontend-profile-user-desc-2' => 'Summary describing that the user is somewhat experienced.',
 	'mobile-frontend-profile-user-desc-3' => 'Summary describing the type of experience the user has.',

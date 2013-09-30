@@ -115,11 +115,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$ts = new MWTimestamp( wfTimestamp( TS_UNIX, $row->img_timestamp ) );
 			$daysAgo = $this->getDaysAgo( $ts );
 
-			$img = Html::openElement( 'div', array( 'class' => 'thumb' ) ) .
+			$img = Html::openElement( 'div', array( 'class' => 'last-upload section-end' ) ) .
 				Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
 				$file->transform( array( 'width' => 320, 'height' => 320 ) )->toHtml() .
-				Html::openElement( 'div', array( 'class' => 'thumbcaption' ) ) .
-				$this->msg( 'mobile-frontend-profile-upload-caption', $title->getText(), $user, $daysAgo )->parse() .
+				Html::openElement( 'div', array( 'class' => 'thumbcaption secondary-statement' ) ) .
+				$this->msg( 'mobile-frontend-profile-last-upload-caption', $user, $daysAgo )->parse() .
 				Html::closeElement( 'div' ) .
 				Html::closeElement( 'a' ) .
 				Html::closeElement( 'div' );
@@ -144,9 +144,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$role = $this->msg( 'mobile-frontend-profile-user-desc-3', $user );
 		}
 
-		return Html::element( 'p', array( 'class' => 'statement' ),
-			$this->msg( 'mobile-frontend-profile-registered', $daysAgo, $editCount )->parse() ) .
-			Html::element( 'p', array( 'class' => 'secondary-statement' ), $role );
+		return Html::openElement( 'div', array( 'class' => 'section section-registered' ) ) .
+			Html::element( 'p', array( 'class' => 'statement' ),
+			$this->msg( 'mobile-frontend-profile-registration', $user->getName(), $daysAgo, $editCount )->parse() ) .
+			Html::element( 'p', array( 'class' => 'secondary-statement section-end' ), $role ) .
+			Html::closeElement( 'div' );
 	}
 
 	protected function getRecentActivityHtml( User $user ) {
@@ -163,18 +165,20 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$msgEdits = $count > self::LIMIT ? $this->msg( 'mobile-frontend-profile-edits-limit', self::LIMIT ) :
 				$this->msg( 'mobile-frontend-profile-edits', $count );
 		$statsRecent = array(
-			Html::element( 'a', array( 'href' => $urlContributions ), $msgEdits ),
-			Html::element( 'a', array( 'href' => $urlUploads ), $msgUploads ),
+			Html::element( 'a',
+				array( 'href' => $urlContributions, 'class' => 'statement' ),
+				$msgEdits ),
+			Html::element( 'a',
+				array( 'href' => $urlUploads, 'class' => 'statement' ),
+				$msgUploads ),
 		);
 		$lastUploadHtml = $this->getLastUpload( $user );
 		if ( $lastUploadHtml ) {
 			$statsRecent[] = $lastUploadHtml;
 		}
 
-		$html = Html::element( 'h2', array(), $this->msg( 'mobile-frontend-profile-heading-recent' ) ) .
-			$this->getListHtml( 'ul', array( 'class' => 'statements' ), $statsRecent );
+		$html = $this->getListHtml( 'ul', array( 'class' => 'section section-activity' ), $statsRecent );
 		wfProfileOut( __METHOD__ );
-
 		return $html;
 	}
 
@@ -228,7 +232,11 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $user ) {
 				$this->setUserProfileUIElements( $user );
 				$html = Html::openElement( 'div', array( 'class' => 'profile' ) ) .
-					$this->getUserSummary( $user ) . $this->getRecentActivityHtml( $user ) . '</div>';
+					$this->getUserSummary( $user ) . $this->getRecentActivityHtml( $user ) .
+					Linker::link( $user->getUserPage(),
+						$this->msg( 'mobile-frontend-profile-userpage-link' ),
+						array( 'class' => 'user-page section-end' ) ) .
+					Html::closeElement( 'div' );
 			} else {
 				$html = $this->getHtmlNoArg();
 			}
