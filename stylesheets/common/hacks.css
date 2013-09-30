@@ -44,9 +44,12 @@ img.tex,
   width: auto !important;
   clear: both !important;
 }
-/* Fix for bug 53437 - nav boxes can disrupt reading experience on smaller screens */
+/* Hide some on-wiki defined classes */
 #content .navbox,
-#content .vertical-navbox {
+#content .vertical-navbox,
+#content .topicon,
+#content .metadata,
+#content div.magnify {
   display: none;
 }
 /* Revert to showing nav boxes on tablet/desktop */

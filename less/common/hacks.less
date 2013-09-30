@@ -54,9 +54,10 @@ img.tex,
 	clear: both !important;
 }
 
-/* Fix for bug 53437 - nav boxes can disrupt reading experience on smaller screens */
+/* Hide some on-wiki defined classes */
 #content {
-	.navbox, .vertical-navbox {
+	// Hide article badges, clean-up notices, stub notices, and navigation boxes
+	.navbox, .vertical-navbox, .topicon, .metadata, div.magnify {
 		display: none;
 	}
 }
