@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_1f48532f",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-30T23:25:41Z",
+      "side": 1,
+      "message": "Why href is empty?",
+      "revId": "e285e91735639dbf70b82b7bf91c3fd925ecdd60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_7fe5d738",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-30T23:25:41Z",
+      "side": 1,
+      "message": "pt? Why not em?",
+      "revId": "e285e91735639dbf70b82b7bf91c3fd925ecdd60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_bfee5f21",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-30T23:25:41Z",
+      "side": 1,
+      "message": "Use mixin.",
+      "revId": "e285e91735639dbf70b82b7bf91c3fd925ecdd60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_1fde936a",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-30T23:25:41Z",
+      "side": 1,
+      "message": "This overrides what\u0027s in line 27, does it have to be like that? Also, 0 0 is shorter, or are we doing it this way for the RTL magic?",
+      "revId": "e285e91735639dbf70b82b7bf91c3fd925ecdd60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
