@@ -146,6 +146,9 @@ ul.gallery li.gallerybox div.gallerytext {
   word-break: normal;
   display: block;
 }
+#content div.magnify {
+  display: none;
+}
 table {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -275,4 +278,7 @@ i {
 }
 .no-position-fixed .position-fixed {
   position: absolute;
+}
+.nomobile {
+  display: none;
 }

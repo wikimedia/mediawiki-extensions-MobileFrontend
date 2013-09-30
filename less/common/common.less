@@ -150,15 +150,20 @@ ul.gallery {
 
 #content {
 	position: relative; // allow absolute positioned children e.g. edit link
-}
 
-#content table {
-	/* following 5 rules are needed for scrolling */
-	overflow: auto; /* for browsers that don't support overflow-y */
-	overflow-y: hidden;
-	overflow-x: auto;
-	word-break: normal;
-	display: block;
+	table {
+		/* following 5 rules are needed for scrolling */
+		overflow: auto; /* for browsers that don't support overflow-y */
+		overflow-y: hidden;
+		overflow-x: auto;
+		word-break: normal;
+		display: block;
+	}
+
+	// Hide the image magnification icon normally displayed in image captions
+	div.magnify {
+		display: none;
+	}
 }
 
 table {
@@ -327,4 +332,8 @@ i {
 	.position-fixed {
 		position: absolute;
 	}
+}
+
+.nomobile {
+	display: none;
 }
