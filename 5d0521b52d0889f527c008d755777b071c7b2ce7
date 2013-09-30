@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "29433135_ee611f3b",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 506,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-30T17:46:35Z",
+      "side": 1,
+      "message": "I think this should also take into account whether WebFonts are needed. It seems unfair to penalise sites by giving them this JavaScript when they don\u0027t make use of this....",
+      "parentUuid": "29433135_4e79532b",
+      "revId": "5d0521b52d0889f527c008d755777b071c7b2ce7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "29433135_6e760f3e",
         "filename": "includes/skins/SkinMobileBeta.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-30T16:50:16Z",
       "side": 1,
       "message": "This also should really be triggered from the ULS side, though I\u0027m not 100% sure where to put it.",
+      "revId": "5d0521b52d0889f527c008d755777b071c7b2ce7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_6e4e0fc3",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-09-30T17:46:35Z",
+      "side": 1,
+      "message": "+1. Make use of the hook EnterMobileMode\nhttps://www.mediawiki.org/wiki/Manual:Hooks/EnterMobileMode",
+      "parentUuid": "29433135_6e760f3e",
       "revId": "5d0521b52d0889f527c008d755777b071c7b2ce7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
