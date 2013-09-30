@@ -127,13 +127,37 @@ table.infobox th {
 
 /* Tablet specific styling */
 @media all and (min-width: 768px) {
-	// FIXME [Templates]: Inline styles force us to use !important
-	table.infobox {
-		max-width: 400px;
-		width: auto !important;
-		float: right !important;
-		margin-left: @contentMarginRight !important;
-		clear: right !important;
+	.beta #content_wrapper {
+		@infoboxWidth: 400px;
+
+		.section_heading,
+		.content_block {
+			margin-right: @infoboxWidth + 16;
+		}
+
+		.content_block {
+			width: auto;
+			clear: none;
+		}
+
+		// Override rules in common.less
+		table {
+			display: table;
+			tbody {
+				display: table-row-group;
+			}
+		}
+
+		// Float infoboxes to the right of the page
+		table.infobox {
+			// Note this is fixed to ensure that we leave enough space for the sections to the infoboxes left
+			max-width: @infoboxWidth;
+			// FIXME [Templates]: Inline styles force us to use !important
+			width: auto !important;
+			float: right !important;
+			margin-left: @contentMarginRight !important;
+			clear: right !important;
+		}
 	}
 }
 
