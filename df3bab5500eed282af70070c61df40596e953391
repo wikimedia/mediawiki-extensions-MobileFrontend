@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_b1e218d7",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-09-30T19:06:37Z",
+      "side": 1,
+      "message": "Not sure about this heuristic... I think this\u0027ll catch *landscape* iPad but not *portrait* iPad (should report innerWidth \u003d\u003d 768?), and some smaller 7\" tablets have a smaller width in portrait like ~600px.",
+      "revId": "df3bab5500eed282af70070c61df40596e953391",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
