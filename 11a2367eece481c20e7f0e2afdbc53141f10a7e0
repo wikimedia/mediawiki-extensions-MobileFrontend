@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_91627c40",
+        "filename": "less/common/enwp.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-09-30T19:51:11Z",
+      "side": 1,
+      "message": "Why are those rules necessary? Aren\u0027t those the defaults?",
+      "revId": "11a2367eece481c20e7f0e2afdbc53141f10a7e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
