@@ -48,8 +48,7 @@ img.tex,
 #content .navbox,
 #content .vertical-navbox,
 #content .topicon,
-#content .metadata,
-#content div.magnify {
+#content .metadata {
   display: none;
 }
 /* Revert to showing nav boxes on tablet/desktop */
