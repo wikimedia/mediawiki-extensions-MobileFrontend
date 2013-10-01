@@ -35,10 +35,6 @@
 	}
 }
 
-input {
-	word-break: normal;
-}
-
 textarea {
 	padding: 5px 0 5px 5px;
 }
@@ -56,36 +52,24 @@ input:not([type=submit]), textarea {
 }
 
 // For old style forms
+// Special:MovePage?target=San%20Francisco
+// Special:Import
+// Special:NewPages
+// Special:RecentChanges
+// Special:Prefixindex
+// Special:Contributions
+// Special:ChangePassword
+// Special:ChangeEmail
+// Special:Allpages
 .mw-input [type=submit],
-.mw-submit input,
-.mw-submit[type=submit],
 .mw-submit {
 	margin-top: 8px;
-	display: block;
 	min-width: 80%;
-}
-
-button.disabled {
-	opacity: 0.2;
 }
 
 a.external {
 	background: url(images/external-link-ltr-icon.png) center right no-repeat;
 	padding-right: 13px;
-}
-
-.info {
-	margin: @infoMargin;
-	color: @infoColor;
-
-	img {
-		width: 100%;
-		max-width: 600px;
-	}
-
-	.button {
-		margin: 2em 0 0;
-	}
 }
 
 /* Galleries */
@@ -126,78 +110,8 @@ ul.gallery {
 	}
 }
 
-// FIXME: Review what introduces .mwm-notice
-.mwm-notice {
-	padding: 5px;
-	background: #dddddd;
-	border-radius: 5px;
-	margin-top: 5px;
-	text-align: center;
-	border: 1px solid gray;
-
-	&.mwm-message {
-		background: #FFFFFF;
-		font-size: 1.1em;
-		color: #000000;
-
-		 a {
-			text-decoration: underline;
-			font-weight: bold;
-			color: #000000;
-		}
-	}
-}
-
 #content {
 	position: relative; // allow absolute positioned children e.g. edit link
-
-	table {
-		/* following 5 rules are needed for scrolling */
-		overflow: auto; /* for browsers that don't support overflow-y */
-		overflow-y: hidden;
-		overflow-x: auto;
-		word-break: normal;
-		display: block;
-	}
-
-	// Hide the image magnification icon normally displayed in image captions
-	div.magnify {
-		display: none;
-	}
-}
-
-table {
-	.box-sizing( border-box );
-
-	tbody {
-		display: inline-block;
-	}
-
-	td,
-	th {
-		padding: 3px;
-	}
-
-	th {
-		word-break: normal;
-	}
-
-	&.wikitable {
-		th {
-			background: #f3f3f3;
-		}
-	}
-
-	table {
-		border: 0;
-		margin-bottom: 0;
-
-		td,
-		th {
-			border: 0;
-			padding: 0;
-		}
-	}
 }
 
 p,
@@ -234,41 +148,13 @@ a.new:hover {
 }
 
 img.thumbborder {
-	border: 1px solid #cccccc;
+	border: 1px solid #ccc;
 }
 
-/* @noflip */div.floatright, table.floatright {
-	float: right;
-}
-
-/* @noflip */div.floatleft, table.floatright {
-	float: left;
-}
-
-.sibling-page,
-// FIXME: Remove styling on id in 1 month
-#mw-mf-last-modified {
+.sibling-page {
 	display: block;
 	font-size: .9em;
 	margin-top: 1.5em;
-}
-
-.mwm-message.mwm-notice {
-	font-size: 1.1em;
-}
-
-@media all and (max-width: 500px) {
-	.mobile div.tleft,
-	.mobile div.floatleft,
-	.mobile table.floatleft,
-	.mobile div.tright,
-	.mobile div.floatright,
-	.mobile table.floatright {
-		float: none;
-		clear: none;
-		margin: auto;
-		width: auto !important;
-	}
 }
 
 /* Plainlinks - this can be used to switch
@@ -283,6 +169,11 @@ b {
 	font-weight: bold;
 }
 
+em,
+i {
+	font-style: italic;
+}
+
 .hlist > ul, // FIXME: to support hlists on enwiki projects - this should be deprecated
 ul.hlist {
 	li {
@@ -291,18 +182,32 @@ ul.hlist {
 	}
 }
 
-.content_block {
+.content {
 	ul {
 		list-style: square inside;
 	}
+
 	ol {
 		list-style: decimal inside;
 	}
-}
 
-em,
-i {
-	font-style: italic;
+	table {
+		/* following 4 rules are needed for scrolling */
+		overflow: auto; /* for browsers that don't support overflow-y */
+		overflow-y: hidden;
+		overflow-x: auto;
+		display: block;
+
+		td,
+		th {
+		 padding: 3px;
+		}
+	}
+
+	// Hide the image magnification icon normally displayed in image captions
+	div.magnify {
+		display: none;
+	}
 }
 
 .jsonly {
@@ -336,4 +241,18 @@ i {
 
 .nomobile {
 	display: none;
+}
+
+// classes added by thumbnails
+// e.g. [[File:Scholars mate animation.gif|frame|left|"[[Scholar's mate]]"]]
+@media all and (min-width: 768px) {
+	.content {
+		.tleft {
+			float: left;
+		}
+
+		.tright {
+			float: right;
+		}
+	}
 }
