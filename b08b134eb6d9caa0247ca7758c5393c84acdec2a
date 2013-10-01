@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_0db4a8ce",
+        "filename": "less/common/typography.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T22:42:55Z",
+      "side": 1,
+      "message": "use #section_0 instead ?",
+      "revId": "b08b134eb6d9caa0247ca7758c5393c84acdec2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_6dc36c3c",
+        "filename": "less/common/typography.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T22:42:55Z",
+      "side": 1,
+      "message": "merge this with the .content below",
+      "revId": "b08b134eb6d9caa0247ca7758c5393c84acdec2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_addd5413",
+        "filename": "less/common/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T22:42:55Z",
+      "side": 1,
+      "message": "can we explain why -2px (not clear to me)?",
+      "revId": "b08b134eb6d9caa0247ca7758c5393c84acdec2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
