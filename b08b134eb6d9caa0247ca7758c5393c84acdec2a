@@ -50,6 +50,24 @@
       "revId": "b08b134eb6d9caa0247ca7758c5393c84acdec2a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_081f3659",
+        "filename": "less/common/ui.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-01T23:53:38Z",
+      "side": 1,
+      "message": "CSS magic, but looks good.",
+      "parentUuid": "29433135_addd5413",
+      "revId": "b08b134eb6d9caa0247ca7758c5393c84acdec2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
