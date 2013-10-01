@@ -14,9 +14,14 @@ FIXME: Rename section_heading to section-heading and content_block to section-co
 .content_block {
   width: 100%;
 }
+.client-js .section_heading,
+.client-js .content_block {
+  border-bottom: solid 1px #e2e3e4;
+  clear: both;
+}
 .client-js .section_heading {
   position: relative;
-  background: url(images/show.png) left 1.1em no-repeat;
+  background: url(images/show.png) left 1.05em no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: 15px auto;
@@ -29,48 +34,11 @@ FIXME: Rename section_heading to section-heading and content_block to section-co
   background-image: url(images/hide.png);
   padding-right: 45px;
   border-bottom: solid 1px #e2e3e4;
-  margin-bottom: 9pt;
+  margin-bottom: 0.5em;
 }
-.client-js h1.section_heading {
-  background-position: left 0.9em;
-  padding: 9pt 24px 9pt;
-}
-.client-js a.section_anchors {
-  display: none;
-  margin-bottom: 5px;
-  margin-top: 7px;
-  color: blue;
-}
-.client-js a.section_anchors.openSection {
-  display: block;
-}
-.client-js .openSection.content_block {
-  -webkit-tap-highlight-color: normal;
-  /* fix for Bug 36196 */
-
-  display: block;
-}
-.client-js .content_block {
-  position: relative;
-  overflow: hidden;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* fix for Bug 36196 */
-
-}
-.page-loading .section_anchors,
-.page-loading .content_block,
 .client-js .content_block {
   display: none;
 }
-.page-loading .section_anchors.openSection,
-.page-loading .content_block.openSection,
 .client-js .content_block.openSection {
   display: block;
-}
-#content_wrapper .section_heading,
-#content_wrapper .content_block {
-  border-bottom: solid 1px #e2e3e4;
-}
-#content_wrapper .content_block {
-  clear: both;
 }

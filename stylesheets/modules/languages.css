@@ -6,7 +6,7 @@
  * See README.mediawiki for details on installing.
  */
 button.languageSelector {
-  margin-top: 9pt;
+  margin-top: 0.5em;
 }
 .language-overlay > ul {
   padding-bottom: 0;
