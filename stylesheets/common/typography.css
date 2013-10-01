@@ -16,7 +16,6 @@ html {
 /* = 16pt */
 body {
   font-family: "Helvetica Neue", "Helvetica", "Nimbus Sans L", "Arial", "Liberation Sans", sans-serif;
-  font-size: 1em;
   line-height: 1.3333333333333333em;
   color: #252525;
 }
@@ -80,59 +79,41 @@ sup {
 }
 .content {
   margin: 9pt 16px 0 16px;
-}
-body.no-margins #content_wrapper > .content {
-  margin: 0;
-}
-#content_wrapper {
-  position: relative;
   min-height: 100px;
 }
-#content_wrapper .content_block h3:first-child {
+.content .content_block h3:first-child {
   margin-top: 0;
 }
-#content_wrapper .content_block:last-child {
-  border-bottom: none;
-}
-#content_wrapper .thumb {
-  border: 1px solid #cccccc;
+.content .thumb {
+  margin: 15px 0 15px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
   background: #f9f9f9;
   text-align: center;
 }
-#content .thumb {
-  margin: 15px 0 15px 0;
-}
-input.search {
-  font-family: "Helvetica Neue", "Helvetica", "Nimbus Sans L", "Arial", "Liberation Sans", sans-serif;
+body.no-margins #content_wrapper > .content {
+  margin: 0;
 }
 @media all and (max-width: 280px) {
   body {
-    font-size: 0.8em;
+    font-size: .8em;
   }
-  #content_wrapper {
+  .content {
     margin: 0 12px;
   }
 }
 blockquote {
   quotes: "\201C" "\201D";
-  padding-left: 10px;
-  padding-bottom: 30px;
-  padding-right: 0;
-  margin-top: 20px;
-  margin-right: 0;
+  padding: 1em 0 1em 10px;
   position: relative;
 }
 blockquote:before {
   content: open-quote;
   font-size: 3em;
-  font-weight: bold;
 }
 blockquote:after {
   font-size: 3em;
   content: close-quote;
-  font-weight: bold;
-  float: right;
   position: absolute;
   right: 0;
   bottom: 0;

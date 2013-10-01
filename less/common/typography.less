@@ -11,7 +11,6 @@ html {
 
 body {
 	font-family: @fontFamily;
-	font-size: @baseFontSize;
 	line-height: @bodyLineHeight;
 	color: #252525;
 }
@@ -47,7 +46,6 @@ dl {
 	}
 }
 
-@2xBaseFontSize: ( @baseFontSize * 2 );
 h1 {
 	font-size: @baseFontSize * 1.833;
 	line-height: @headingLineHeight;
@@ -84,6 +82,24 @@ sup {
 
 .content {
 	margin: @headingMargin @contentMarginRight 0 @contentMarginLeft;
+
+	// make sure that the spinner is visible on lazy loading
+	// (room for spinner + margins)
+	min-height: 100px;
+
+	.content_block {
+		h3:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.thumb {
+		margin: 15px 0 15px 0;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background: #f9f9f9;
+		text-align: center;
+	}
 }
 
 // FIXME: This is included on all pages but only used by certain special pages.
@@ -93,69 +109,29 @@ body.no-margins {
 	}
 }
 
-#content_wrapper {
-	position: relative;
-	// make sure that the spinner is visible on lazy loading
-	// (room for spinner + margins)
-	min-height: 100px;
-
-	.content_block {
-		h3:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			border-bottom: none;
-		}
-	}
-
-	.thumb {
-		border: 1px solid #cccccc;
-		border-radius: 5px;
-		background: #f9f9f9;
-		text-align: center;
-	}
-}
-
-#content {
-	.thumb {
-		margin: 15px 0 15px 0;
-	}
-}
-
-input.search {
-	font-family: @fontFamily;
-}
-
 @media all and (max-width: 280px) {
 	body {
-		font-size: @baseFontSize * 0.8;
+		font-size: .8em;
 	}
 
-	#content_wrapper {
+	.content {
 		margin: 0 12px;
 	}
 }
 
 blockquote {
-	quotes:"\201C" "\201D";
-	padding-left: 10px;
-	padding-bottom: 30px;
-	padding-right: 0;
-	margin-top: 20px;
-	margin-right: 0;
+	quotes: "\201C" "\201D";
+	padding: 1em 0 1em 10px;
 	position: relative;
 
 	&:before {
 		content: open-quote;
-		font-size: @baseFontSize * 3;
-		font-weight: bold;
+		font-size: 3em;
 	}
 
 	&:after{
-		font-size: @baseFontSize * 3;
+		font-size: 3em;
 		content: close-quote;
-		font-weight: bold;
-		float: right;
 		position: absolute;
 		right: 0;
 		bottom: 0;
