@@ -34,7 +34,7 @@ QUnit.test( '#_distanceMessage', function( assert ) {
 	QUnit.expect( tests.length );
 	$( tests ).each( function( i ) {
 		m._distanceMessage( this[0] );
-		assert.ok( mw.msg.getCall( i ).calledWith( this[1], this[2] ), 'failed test ' + i );
+		assert.ok( mw.msg.getCall( i ).calledWith( this[1], mw.language.convertNumber( this[2] ) ), 'failed test ' + i );
 	} );
 
 	mw.msg.restore();
