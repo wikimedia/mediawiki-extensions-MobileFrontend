@@ -16,6 +16,24 @@
       "revId": "29b6dc40f013d1e2ab67d6065db8874dbf0ad6a2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_0d1ae877",
+        "filename": "less/common/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-01T23:45:50Z",
+      "side": 1,
+      "message": "Actually, it\u0027s already in reset.less so it was a redundant rule.",
+      "parentUuid": "29433135_0ded88c4",
+      "revId": "29b6dc40f013d1e2ab67d6065db8874dbf0ad6a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
