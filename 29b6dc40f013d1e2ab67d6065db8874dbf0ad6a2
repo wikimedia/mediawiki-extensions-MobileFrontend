@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_0ded88c4",
+        "filename": "less/common/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T22:49:29Z",
+      "side": 1,
+      "message": "Use font-family: inherit; instead.\nAccording to http://stackoverflow.com/questions/2874813/why-textarea-and-textfield-not-taking-font-family-and-font-size-from-body\nwe should also apply this to select and button tags\n\nalso maybe this should be in the reset file?",
+      "revId": "29b6dc40f013d1e2ab67d6065db8874dbf0ad6a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
