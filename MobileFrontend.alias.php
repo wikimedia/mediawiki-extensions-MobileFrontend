@@ -49,6 +49,7 @@ $specialPageAliases['de'] = array(
 	'MobileDiff' => array( 'Mobiler_Unterschied' ),
 	'MobileMenu' => array( 'Mobiles_Menü' ),
 	'Nearby' => array( 'In_der_Nähe' ),
+	'UserProfile' => array( 'Benutzerprofil' ),
 );
 
 /** Zazaki (Zazaki) */
@@ -135,6 +136,7 @@ $specialPageAliases['mk'] = array(
 	'MobileDiff' => array( 'МобилнаРазлика' ),
 	'MobileMenu' => array( 'МобилноМени' ),
 	'Nearby' => array( 'ВоБлизина' ),
+	'UserProfile' => array( 'КорисничкиПрофил' ),
 );
 
 /** Malayalam (മലയാളം) */
