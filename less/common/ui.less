@@ -4,14 +4,13 @@
 .header {
 	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
 	border-bottom: 1px solid #e2e2e2;
-	line-height: @headerHeight;
+	line-height: (@headerHeight - 2px);
 	text-align: center;
-	min-height: @headerHeight;
-	padding: 0 10px 0 @searchBarPaddingLeft;
+	min-height: (@headerHeight - 2px);
+	padding: 2px 10px 0 @searchBarPaddingLeft;
 
 	h1, h2 {
 		font-size: @baseFontSize * 1.6;
-		padding: round( @headerHeight*0.22 ) 0 0;
 	}
 }
 

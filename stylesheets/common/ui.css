@@ -347,15 +347,14 @@ body.navigation-enabled #mw-mf-page-center {
   background-image: -webkit-linear-gradient(top, #fafafa 0, #f3f3f3 100%);
   background-image: linear-gradient(#fafafa 0, #f3f3f3 100%);
   border-bottom: 1px solid #e2e2e2;
-  line-height: 46px;
+  line-height: 44px;
   text-align: center;
-  min-height: 46px;
-  padding: 0 10px 0 40px;
+  min-height: 44px;
+  padding: 2px 10px 0 40px;
 }
 .header h1,
 .header h2 {
   font-size: 1.6em;
-  padding: 10px 0 0;
 }
 /* Menu buttons */
 #mw-mf-main-menu-button,

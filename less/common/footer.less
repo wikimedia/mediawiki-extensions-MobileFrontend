@@ -8,13 +8,10 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 	padding: 2em @contentMarginRight 1.5em @contentMarginLeft;
 	margin: 2em 0 0;
 	border-top: 1px solid #aaa;
-	clear: both; /* cancel any floating in the content */
-	font-size: @baseFontSize * 0.9;
+	font-size: 0.9em;
 
 	h2 {
 		display: inline;
-		margin: 0;
-		line-height: inherit;
 		font-weight: bold;
 		font-size: @baseFontSize;
 
@@ -25,8 +22,6 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 
 	ul {
 		text-align: center;
-		list-style: none;
-		margin: 0;
 
 		li {
 			line-height: 1.2;
@@ -47,16 +42,5 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 				border: none;
 			}
 		}
-	}
-}
-
-// FIXME: remove when all cached pages have new footer HTML
-// (change to be deployed May 14, 2013)
-#content_footer {
-	margin: 1em 0 0;
-
-	.separator {
-		margin: 0 .35em 0 0;
-		border-right: 1px solid #aaa;
 	}
 }
