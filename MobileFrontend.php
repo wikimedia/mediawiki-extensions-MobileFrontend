@@ -233,21 +233,19 @@ $wgMFRemovableClasses = array(
 	// These rules will be used for all transformations
 	'base' => array(
 		'.toc',
-		'div.magnify',
-		'.nomobile',
 	),
 	// HTML view
 	'HTML' => array(),
 	// WML view
 	'WML' => array(
-		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
-		'.mw-editsection',
 		'sup.reference', // References generally don't work in WML due to per-section views
+		'div.magnify',
+		'.nomobile',
 	),
 	// Text extracts
 	'extracts' => array(
 		// FIXME: remove .mw-editsection when SkinMobile::doEditSectionLink present in cached pages
-		'table', 'div', '.mw-editsection', 'sup.reference', '.noexcerpt', '.error'
+		'table', 'div', '.mw-editsection', 'sup.reference', '.noexcerpt', '.error', '.nomobile'
 	),
 );
 
