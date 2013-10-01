@@ -3,7 +3,13 @@
 ( function( M, $ ) {
 	var Router = M.require( 'Router' ),
 		PageApi = M.require( 'PageApi' ),
-		$viewportMeta, viewport;
+		$viewportMeta, viewport,
+		ua = window.navigator.userAgent,
+		isAppleDevice = /ipad|iphone/i.test( ua ),
+		isIPhone4 = isAppleDevice && /OS 4_/.test( ua ),
+		isOldIPhone = isAppleDevice && /OS [4]_[0-2]|OS [3]_/.test( ua ),
+		isIPhone5 = isAppleDevice && /OS 5_/.test( ua ),
+		isAndroid2 = /Android 2/.test( ua );
 
 	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 	// https://github.com/Modernizr/Modernizr/issues/167
@@ -65,7 +71,18 @@
 
 			$( window ).on( 'scroll', function() {
 				var scrollTop = $( window ).scrollTop(),
-					scrollBottom = scrollTop + $( window ).height();
+					windowHeight = $( window ).height(),
+					activeElement = document.activeElement,
+					scrollBottom = scrollTop + windowHeight;
+				if ( isOldIPhone ) {
+					if ( activeElement.tagName === 'TEXTAREA' || activeElement.tagName === 'INPUT' ) {
+						// add the height of the open soft keyboard
+						scrollBottom -= 120;
+					} else {
+						// add the height of the address bar
+						scrollBottom += 60;
+					}
+				}
 
 				if ( scrollTop === 0 ) {
 					// special case when we're at the beginning of the page and many
@@ -91,9 +108,7 @@
 		// allow disabling of transitions in android ics 4.0.2
 		function fixBrowserBugs() {
 			// see http://adactio.com/journal/4470/ (fixed in ios 6)
-			var
-				ua = navigator.userAgent;
-			if( $viewportMeta[0] && ua.match( /iPhone|iPad/i ) && ua.match( /OS [4-5]_0/ )  ) {
+			if( $viewportMeta[0] && ( isIPhone4 || isIPhone5 ) ) {
 				lockViewport();
 				document.addEventListener( 'gesturestart', function() {
 					lockViewport();
@@ -102,7 +117,7 @@
 
 			// FIXME: Android 2.x can act weird
 			// (remove if we drop support for some features on it)
-			if ( /Android 2/.test( navigator.userAgent ) ) {
+			if ( isAndroid2 ) {
 				$body.addClass( 'android2' );
 				// lock the viewport for this device - too problematic
 				lockViewport();
@@ -131,7 +146,7 @@
 			// don't trust Android 2.x, really
 			// animations cause textareas to misbehave on it
 			// (http://stackoverflow.com/a/5734984/365238)
-			if ( /Android 2/.test( navigator.userAgent ) ) {
+			if ( isAndroid2 ) {
 				return false;
 			}
 
