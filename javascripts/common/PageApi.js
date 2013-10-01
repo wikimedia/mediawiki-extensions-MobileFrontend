@@ -3,10 +3,12 @@
 	var Api = M.require( 'api' ).Api, PageApi;
 
 	function transformSections( sections ) {
-		var result = [], $tmpContainer = $( '<div>' );
+		var
+			collapseLevel = Math.min.apply( this, $.map( sections, function( s ) { return s.level; } ) ) + '',
+			result = [], $tmpContainer = $( '<div>' );
 
 		$.each( sections, function( i, section ) {
-			if ( !section.level || section.level === '2' ) {
+			if ( !section.level || section.level === collapseLevel ) {
 				result.push( section );
 			} else {
 				// FIXME: ugly, maintain structure returned by API and use templates instead
