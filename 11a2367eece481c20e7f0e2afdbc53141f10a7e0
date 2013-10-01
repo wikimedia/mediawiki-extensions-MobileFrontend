@@ -34,6 +34,23 @@
       "revId": "11a2367eece481c20e7f0e2afdbc53141f10a7e0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_7f4eb7c2",
+        "filename": "less/common/enwp.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-01T00:33:42Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we just set it to \u0027max-width: none;\u0027 if they\u0027re on a tablet? I\u0027ve never seen an infobox wider than 400px anyway, but if there was one, I don\u0027t think it would be much of a problem (moreso than it would be on desktop).",
+      "revId": "11a2367eece481c20e7f0e2afdbc53141f10a7e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
