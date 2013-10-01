@@ -2,6 +2,9 @@
 @import 'mainmenu.less';
 
 .header {
+	// .header needs position: relative, it's not always at the top of the page
+	// (Zero banners, campaigns)
+	position: relative;
 	.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
 	border-bottom: 1px solid #e2e2e2;
 	line-height: @headerHeight;
