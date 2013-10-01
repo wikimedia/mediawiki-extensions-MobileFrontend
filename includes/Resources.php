@@ -369,6 +369,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbie.js',
+			'javascripts/modules/lastModifiedBeta.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(
