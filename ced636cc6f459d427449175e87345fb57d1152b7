@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_05b806e2",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-01T13:52:48Z",
+      "side": 1,
+      "message": "I like the way you\u0027re using i18n here. Creative.",
+      "revId": "ced636cc6f459d427449175e87345fb57d1152b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
