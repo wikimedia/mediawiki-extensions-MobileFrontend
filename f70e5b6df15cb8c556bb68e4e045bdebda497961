@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_4d93105b",
+        "filename": "less/common/common.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T22:40:28Z",
+      "side": 1,
+      "message": "this is not the same rule.\nAccording to commit:\n Improving styling of button on following pages:\n    \n    * Special:MovePage?target\u003dSan%20Francisco\n    * Special:Import\n    * Special:NewPages\n    * Special:RecentChanges\n    * Special:Prefixindex\n    * Special:Contributions\n    * Special:ChangePassword\n    * Special:ChangeEmail\n    * Special:Allpages\n    \n    Change-Id: I01eeab6df72b59b2a953d585c7e45d4dcbb210d7\n\nWe should probably instead comment each scenario in the css file itself.",
+      "revId": "f70e5b6df15cb8c556bb68e4e045bdebda497961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_cd8f002a",
+        "filename": "less/common/hacks.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T22:40:28Z",
+      "side": 1,
+      "message": "Should probably add some documentation in the process to which template this belongs to (or kill it if we don\u0027t know)",
+      "revId": "f70e5b6df15cb8c556bb68e4e045bdebda497961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
