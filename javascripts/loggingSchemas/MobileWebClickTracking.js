@@ -33,6 +33,7 @@
 	hijackLink( '#mw-mf-page-left .icon-watchlist a', 'hamburger-watchlist' );
 	hijackLink( '#mw-mf-page-left .icon-settings a', 'hamburger-settings' );
 	hijackLink( '#mw-mf-page-left .icon-uploads a', 'hamburger-uploads' );
-	hijackLink( '#mw-mf-page-left .icon-profile a', 'hamburger-profile' );
-	hijackLink( '#mw-mf-page-left .icon-logout a', 'hamburger-logout' );
+	hijackLink( '#mw-mf-page-left .icon-profile', 'hamburger-profile' );
+	hijackLink( '#mw-mf-page-left .icon-anon a', 'hamburger-login' );
+	hijackLink( '#mw-mf-page-left .icon-secondary-logout', 'hamburger-logout' );
 } )( mw.mobileFrontend, jQuery );
