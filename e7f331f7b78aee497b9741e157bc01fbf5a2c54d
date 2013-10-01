@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "29433135_8db3384c",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T21:56:55Z",
+      "side": 1,
+      "message": "This patch does not rename any RL modules it just merges them.",
+      "parentUuid": "29433135_5452c2de",
+      "revId": "e7f331f7b78aee497b9741e157bc01fbf5a2c54d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "29433135_110f6c39",
         "filename": "javascripts/common/application.js",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2013-09-30T20:42:58Z",
       "side": 1,
       "message": "Why? I would understand if we were merging templates in core, but this is not the case now, right?",
+      "revId": "e7f331f7b78aee497b9741e157bc01fbf5a2c54d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_2d95e486",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 291,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-01T21:56:55Z",
+      "side": 1,
+      "message": "i figured since event logging binds itself to mw we should do the same.\n\nThe template stuff doesn\u0027t need to and shouldn\u0027t depend on mw.mobileFrontend existing - that way it can live as it\u0027s own module and the dependencies in MFResourceLoaderModule.php are easier to manage.\n\nThis also leaves a clear path to putting this in core.\n\nPlease please reconsider your -1.",
+      "parentUuid": "29433135_110f6c39",
       "revId": "e7f331f7b78aee497b9741e157bc01fbf5a2c54d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
