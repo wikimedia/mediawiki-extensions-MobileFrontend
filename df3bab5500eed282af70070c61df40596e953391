@@ -52,6 +52,23 @@
       "revId": "df3bab5500eed282af70070c61df40596e953391",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_7fdf97d3",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-01T00:37:29Z",
+      "side": 1,
+      "message": "Perhaps 768 should be a global variable in MobileFrontend.php so that it\u0027s easy to maintain and configure.",
+      "revId": "df3bab5500eed282af70070c61df40596e953391",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
