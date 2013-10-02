@@ -1,4 +1,4 @@
-/* Fork of http://meyerweb.com/eric/tools/css/reset/ 
+/* Fork of http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -49,6 +49,7 @@ legend,
 input,
 textarea,
 button,
+select,
 table,
 caption,
 tbody,
@@ -64,7 +65,6 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  font-family: inherit;
   vertical-align: baseline;
 }
 button {
