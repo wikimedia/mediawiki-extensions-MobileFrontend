@@ -20,7 +20,21 @@ h1 {
 	font-family: @fontFamilyHeading;
 }
 
+// h1#section_0 is not inside .content...
+#section_0 {
+	line-height: @headingLineHeight;
+}
+
 .content {
+	margin: @headingMargin @contentMarginRight 0 @contentMarginLeft;
+	// make sure that the spinner is visible on lazy loading
+	// (room for spinner + margins)
+	min-height: 100px;
+
+	h1, h2, h3 {
+		line-height: @headingLineHeight;
+	}
+
 	h2, h3, h4, h5, h6 {
 		font-family: @fontFamilyHeading;
 		padding: @headingMargin 0;
@@ -29,13 +43,27 @@ h1 {
 	p {
 		margin-bottom: 8pt;
 	}
-}
 
-ol,
-ul {
+	.content_block {
+		h3:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.thumb {
+		margin: 15px 0 15px 0;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background: #f9f9f9;
+		text-align: center;
+	}
+
 	ol,
 	ul {
-		margin-left: 1em;
+		ol,
+		ul {
+			margin-left: 1em;
+		}
 	}
 }
 
@@ -48,17 +76,14 @@ dl {
 
 h1 {
 	font-size: @baseFontSize * 1.833;
-	line-height: @headingLineHeight;
 }
 
 h2 {
 	font-size: ( @baseFontSize / 2 ) * 3; /* 18pt */
-	line-height: @headingLineHeight;
 }
 
 h3 {
 	font-size: ( @baseFontSize / 6 ) * 7; /* 14pt */
-	line-height: @headingLineHeight;
 	font-weight: bold;
 	margin-bottom: 8pt;
 }
@@ -78,28 +103,6 @@ sub {
 sub,
 sup {
 	font-size: ( 3 * @baseFontSize / 4 );
-}
-
-.content {
-	margin: @headingMargin @contentMarginRight 0 @contentMarginLeft;
-
-	// make sure that the spinner is visible on lazy loading
-	// (room for spinner + margins)
-	min-height: 100px;
-
-	.content_block {
-		h3:first-child {
-			margin-top: 0;
-		}
-	}
-
-	.thumb {
-		margin: 15px 0 15px 0;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		background: #f9f9f9;
-		text-align: center;
-	}
 }
 
 // FIXME: This is included on all pages but only used by certain special pages.

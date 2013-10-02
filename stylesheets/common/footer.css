@@ -13,15 +13,10 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
   padding: 2em 16px 1.5em 16px;
   margin: 2em 0 0;
   border-top: 1px solid #aaa;
-  clear: both;
-  /* cancel any floating in the content */
-
   font-size: 0.9em;
 }
 #footer h2 {
   display: inline;
-  margin: 0;
-  line-height: inherit;
   font-weight: bold;
   font-size: 1em;
 }
@@ -30,8 +25,6 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 }
 #footer ul {
   text-align: center;
-  list-style: none;
-  margin: 0;
 }
 #footer ul li {
   line-height: 1.2;
@@ -49,11 +42,4 @@ Change-Id: I48bcdc43e72f2a9b60e6d1bfe877d79ad80b6d5d
 #footer ul ul li:last-child,
 #footer ul.footer-places li:last-child {
   border: none;
-}
-#content_footer {
-  margin: 1em 0 0;
-}
-#content_footer .separator {
-  margin: 0 .35em 0 0;
-  border-right: 1px solid #aaa;
 }
