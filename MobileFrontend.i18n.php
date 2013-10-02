@@ -12,6 +12,14 @@
 $messages = array();
 
 $messages['en'] = array (
+	// KeepGoingCta
+	'mobilefrontend-keepgoing-ask' => "Well done! You're getting the hang of this! Do you want to try editing another page?",
+	'mobilefrontend-keepgoing-ask-first' => 'Congratulations on making your first edit! Do you want to try editing another page?',
+	'mobilefrontend-keepgoing-explain' => 'Great! Another user said this page needs help. Try this one, or try another one.',
+	'mobilefrontend-keepgoing-cancel' => 'No, thanks',
+	'mobilefrontend-keepgoing-suggest' => 'Yes, please',
+	'mobilefrontend-keepgoing-suggest-again' => 'Try another',
+
 	/** special pages */
 	'nearby' => 'Pages near you',
 
@@ -346,6 +354,16 @@ $messages['en'] = array (
  * @author 아라
  */
 $messages['qqq'] = array(
+	// KeepGoingCta
+	'mobilefrontend-keepgoing-ask' => "Congratulations message shown to a user who has completed an edit in the keepgoing campaign. Prompts them to edit again.",
+	'mobilefrontend-keepgoing-ask-first' => 'Congratulate user on first edit. Ask them if they want to edit again.',
+	'mobilefrontend-keepgoing-explain' => 'Message explaining that the page they are looking at has issues. Gives them the option to try another.',
+	'mobilefrontend-keepgoing-cancel' => 'Label for button that user can express a desire to no longer edit.',
+	'mobilefrontend-keepgoing-suggest' => 'Label for button that user can answer question posed in {{msg-mw|Mobilefrontend-keepgoing-ask-first}}
+or {{msg-mw|Mobilefrontend-keepgoing-ask}}.',
+	'mobilefrontend-keepgoing-suggest-again' => 'Label for a button that allows uer to try another page as a response to
+{{msg-mw|Mobilefrontend-keepgoing-explain}}.',
+
 	'nearby' => '{{doc-special|Nearby}}',
 	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}

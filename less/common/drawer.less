@@ -26,8 +26,11 @@
 		background: url(../modules/images/show.png) 50% 8px no-repeat;
 	}
 
-	a.button {
+	.button.wide {
 		display: block;
+	}
+
+	a.button {
 		margin: 1em @contentMarginLeft;
 	}
 
@@ -37,5 +40,12 @@
 
 	.progress-bar {
 		margin: .9em 0 0;
+	}
+}
+
+// When overlays are opened drawers do not look good
+.overlay-enabled  {
+	.drawer {
+		display: none;
 	}
 }

@@ -277,6 +277,28 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.keepgoing' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.beta',
+			'mobile.templates',
+		),
+		'templates' => array(
+			'keepgoing/KeepGoingDrawer',
+		),
+		'messages' => array(
+			'mobilefrontend-keepgoing-suggest',
+			'mobilefrontend-keepgoing-suggest-again',
+			'mobilefrontend-keepgoing-cancel',
+			'mobilefrontend-keepgoing-ask',
+			'mobilefrontend-keepgoing-ask-first',
+			'mobilefrontend-keepgoing-explain',
+		),
+		'scripts' => array(
+			'javascripts/loggingSchemas/mobileWebCta.js',
+			'javascripts/modules/keepgoing/KeepGoingDrawer.js',
+		),
+	),
+
 	'mobile.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
@@ -293,6 +315,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbie.js',
 			'javascripts/modules/lastModifiedBeta.js',
+			'javascripts/modules/keepgoing/keepgoing.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(

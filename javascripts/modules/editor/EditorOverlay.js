@@ -4,8 +4,11 @@
 		Page = M.require( 'Page' ),
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
+		inBetaOrAlpha = mw.config.get( 'wgMFMode' ) !== 'stable',
+		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
+		KeepGoingDrawer,
 		EditorOverlay;
 
 	EditorOverlay = Overlay.extend( {
@@ -35,7 +38,7 @@
 					action: action,
 					section: this.sectionId,
 					namespace: mw.config.get( 'wgNamespaceNumber' ),
-					userEditCount: parseInt( mw.config.get( 'wgUserEditCount' ), 10 ),
+					userEditCount: mw.config.get( 'wgUserEditCount' ),
 					isTestA: M.isTestA,
 					pageId: mw.config.get( 'wgArticleId' ),
 					username: mw.config.get( 'wgUserName' ),
@@ -56,6 +59,8 @@
 			} );
 			this.sectionId = options.sectionId;
 			this.isNewEditor = options.isNewEditor;
+			this.editCount = mw.config.get( 'wgUserEditCount' );
+			this.isFirstEdit = this.editCount === 0;
 			this._super( options );
 		},
 
@@ -116,6 +121,13 @@
 			this.scrollTop = $( 'body' ).scrollTop();
 			this.$content.hide();
 			this.$spinner.show();
+
+			// pre-fetch keep going with expectation user will go on to save
+			if ( inBetaOrAlpha && ( this.isFirstEdit || inKeepGoingCampaign ) ) {
+				mw.loader.using( 'mobile.keepgoing', function() {
+					KeepGoingDrawer = M.require( 'KeepGoingDrawer' );
+				} );
+			}
 
 			api.post( {
 				action: 'parse',
@@ -218,6 +230,12 @@
 			this.captchaShown = true;
 		},
 
+		_updateEditCount: function() {
+			this.isFirstEdit = false;
+			this.editCount += 1;
+			mw.config.set( 'wgUserEditCount', this.editCount );
+		},
+
 		_save: function() {
 			var self = this, className = 'toast landmark',
 				options = { summary: this.$( '.summary' ).val() },
@@ -233,8 +251,8 @@
 
 			this.api.save( options ).
 				done( function() {
-					var title = self.options.title,
-						editCount = mw.config.get( 'wgUserEditCount' );
+					var title = self.options.title;
+
 					// log success!
 					self.log( 'success' );
 					M.pageApi.invalidatePage( title );
@@ -247,10 +265,14 @@
 						className = 'toast';
 						msg = 'mobile-frontend-editor-success';
 					}
-					// update edit count
-					// FIXME: this should be an integer (see bug 51633)
-					mw.config.set( 'wgUserEditCount', ( parseInt( editCount, 10 ) + 1 ).toString() );
-					popup.show( mw.msg( msg ), className );
+					self._updateEditCount();
+					// double check it was successfully pre-fetched during preview phase
+					if ( KeepGoingDrawer ) {
+						new KeepGoingDrawer( { isFirstEdit: self.isFirstEdit } );
+					} else {
+						// just show a toast
+						popup.show( mw.msg( msg ), className );
+					}
 				} ).
 				fail( function( data ) {
 					var msg;
