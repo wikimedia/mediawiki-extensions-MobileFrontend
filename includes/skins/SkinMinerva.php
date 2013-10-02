@@ -254,9 +254,6 @@ class SkinMinerva extends SkinTemplate {
 			$out->addModuleStyles( 'mobile.styles.page' );
 		}
 
-		if ( $action === 'history' ) {
-			$out->addModuleStyles( 'mobile.action.history' );
-		}
 		$out->addModuleStyles( 'mobile.styles' );
 		return $modules;
 	}

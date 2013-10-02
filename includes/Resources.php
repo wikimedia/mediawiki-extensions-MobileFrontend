@@ -421,16 +421,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.action.history' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup' ),
-		'styles' => array(
-		),
-		'scripts' => array(
-			'less/actions/history.less',
-		),
-		'group' => 'other',
-	),
-
 	'mobile.alpha.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
 		'templates' => array(
 			'overlays/nearby',
