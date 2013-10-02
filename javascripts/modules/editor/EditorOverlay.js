@@ -139,19 +139,14 @@
 				// needed for pre-save transform to work (bug 53692)
 				pst: true,
 				// Output mobile HTML (bug 54243)
-				mobileformat: 'html',
+				mobileformat: true,
 				title: self.options.title,
 				text: self.$content.val(),
 				prop: 'text'
 			} ).then( function( resp ) {
 				var html;
-				// FIXME: Don't trust the api response
 				if ( resp && resp.parse && resp.parse.text ) {
-					html = resp.parse.text;
-					// FIXME: [API] inconsistency (again) workaround for bug 54607
-					if ( typeof html !== 'string' ) {
-						html = html['*'];
-					}
+					html = resp.parse.text['*'];
 					return $.Deferred().resolve( html );
 				} else {
 					return $.Deferred().reject();
