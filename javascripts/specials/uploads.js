@@ -162,7 +162,7 @@ var
 	function init() {
 		var $container, userGallery, emptyHandler;
 
-		userGallery = new PhotoList().appendTo( '#content' );
+		userGallery = new PhotoList().appendTo( '#content_wrapper' );
 		if ( currentUserName === userName ) {
 			emptyHandler = function() {
 				new CarouselOverlay( {

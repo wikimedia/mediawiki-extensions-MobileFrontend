@@ -39,7 +39,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			wfProfileOut( __METHOD__ );
 			return;
 		} else {
-			$output->setProperty( 'bodyClassName', 'no-margins' );
+			$output->setProperty( 'unstyledContent', true );
 		}
 
 		if ( $view === 'feed' ) {

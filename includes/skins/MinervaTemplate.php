@@ -121,6 +121,7 @@ class MinervaTemplate extends BaseTemplate {
 					}
 				}
 			?>
+			<?php if ( !$data[ 'unstyledContent' ] ) { ?>
 			<div id="content" class="content">
 				<?php
 					if ( isset( $data['subject-page'] ) ) {
@@ -131,6 +132,9 @@ class MinervaTemplate extends BaseTemplate {
 					$this->renderHistoryLink( $data );
 				?>
 			</div>
+			<?php } else {
+				echo $data[ 'bodytext' ];
+			} ?>
 		</div>
 		<?php
 	}

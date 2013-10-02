@@ -5,11 +5,18 @@ class MobileSpecialPage extends SpecialPage {
 	 * @var bool: Whether this special page should appear on Special:SpecialPages
 	 */
 	protected $listed = false;
+	/**
+	 * @var bool: Whether the special page's content should be wrapped in div.content
+	 */
+	protected $unstyledContent = true;
 
 	public function setHeaders() {
 		parent::setHeaders();
-		$this->clearPageMargins();
 		$this->addModules();
+
+		if ( $this->unstyledContent ) {
+			$this->getOutput()->setProperty( 'unstyledContent', true );
+		}
 	}
 
 	protected function addModules() {
@@ -29,10 +36,6 @@ class MobileSpecialPage extends SpecialPage {
 		if ( $rl->getModule( $specialScriptModuleName ) ) {
 			$out->addModules( $specialScriptModuleName );
 		}
-	}
-
-	protected function clearPageMargins() {
-		$this->getOutput()->setProperty( 'bodyClassName', 'no-margins' );
 	}
 
 	public function isListed() {

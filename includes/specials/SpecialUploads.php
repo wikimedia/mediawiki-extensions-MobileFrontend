@@ -34,7 +34,7 @@ class SpecialUploads extends MobileSpecialPage {
 			$attrs = array();
 			if ( $uploadCount !== false ) {
 				$threshold = $this->getUploadCountThreshold();
-				$html .= '<div class="ctaUploadPhoto">';
+				$html .= '<div class="ctaUploadPhoto content">';
 				if ( $uploadCount > $threshold ) {
 					$msg = $this->msg(
 						'mobile-frontend-photo-upload-user-count-over-limit'
