@@ -5,7 +5,6 @@ function makeSections() {
 	$container = $( '<div id="content_wrapper">' ).appendTo( document.body );
 	$( '<h2 class="section_heading" id="section_1"><span id="First_Section">First Section</span></h2>' ).appendTo( $container );
 	$( '<div class="content_block" id="content_1"><p>Text</p></div>' ).appendTo( $container );
-	$( '<div id="anchor_1" class="section_anchors" style="display:none"><a href="#section_1" class="back_to_top">&#8593;Jump back a section</a></div>' ).appendTo( $container );
 
 	$( '<h2 class="section_heading" id="section_2">' ).appendTo( $container );
 	$( '<div class="content_block" id="content_2">' ).appendTo( $container );

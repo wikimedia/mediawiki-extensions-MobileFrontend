@@ -7,7 +7,7 @@ html {
 }
 
 @bodyLineHeight: ( @baseFontSize / 3 ) * 4; /* = 16pt */
-@headingLineHeight: 22pt;
+@headingLineHeight: 1.3;
 
 body {
 	font-family: @fontFamily;
@@ -26,28 +26,19 @@ h1 {
 }
 
 .content {
-	margin: @headingMargin @contentMarginRight 0 @contentMarginLeft;
+	margin: .8em @contentMarginRight 0 @contentMarginLeft;
 	// make sure that the spinner is visible on lazy loading
 	// (room for spinner + margins)
 	min-height: 100px;
 
-	h1, h2, h3 {
+	h1, h2, h3, h4, h5, h6 {
 		line-height: @headingLineHeight;
-	}
-
-	h2, h3, h4, h5, h6 {
 		font-family: @fontFamilyHeading;
 		padding: @headingMargin 0;
 	}
 
 	p {
-		margin-bottom: 8pt;
-	}
-
-	.content_block {
-		h3:first-child {
-			margin-top: 0;
-		}
+		margin-bottom: .7em;
 	}
 
 	.thumb {
@@ -85,7 +76,6 @@ h2 {
 h3 {
 	font-size: ( @baseFontSize / 6 ) * 7; /* 14pt */
 	font-weight: bold;
-	margin-bottom: 8pt;
 }
 
 h4 {

@@ -7,7 +7,7 @@
  */
 .content .edit-page {
   position: absolute;
-  background: url(../common/images/pagemenu/edit.png) 100% 9pt no-repeat;
+  background: url(../common/images/pagemenu/edit.png) 100% 0.5em no-repeat;
   /* use -webkit prefix for older android browsers eg. nexus 1 */
 
   -o-background-size: auto 30px;
