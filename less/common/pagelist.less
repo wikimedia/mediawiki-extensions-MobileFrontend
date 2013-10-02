@@ -24,8 +24,16 @@
 	.background-size(100%, auto);
 }
 
-ul.page-list {
+.content ul.page-list {
 	list-style: none;
+
+	&.a-to-z {
+		li {
+			.title {
+				padding-left: @thumbSpace;
+			}
+		}
+	}
 
 	li {
 		border-bottom: solid 1px #e2e2e2;
@@ -90,14 +98,6 @@ ul.page-list {
 
 		.mw-mf-user {
 			margin: .5em 0 0;
-		}
-	}
-}
-
-ul.a-to-z {
-	li {
-		a.title {
-			padding-left: @thumbSpace;
 		}
 	}
 }
