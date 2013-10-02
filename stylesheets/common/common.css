@@ -39,9 +39,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-input {
-  word-break: normal;
-}
 textarea {
   padding: 5px 0 5px 5px;
 }
@@ -57,30 +54,13 @@ textarea {
   padding: 5px;
 }
 .mw-input [type=submit],
-.mw-submit input,
-.mw-submit[type=submit],
 .mw-submit {
   margin-top: 8px;
-  display: block;
   min-width: 80%;
-}
-button.disabled {
-  opacity: 0.2;
 }
 a.external {
   background: url(images/external-link-ltr-icon.png) center right no-repeat;
   padding-right: 13px;
-}
-.info {
-  margin: 4em;
-  color: #707070;
-}
-.info img {
-  width: 100%;
-  max-width: 600px;
-}
-.info .button {
-  margin: 2em 0 0;
 }
 /* Galleries */
 /* See https://www.mediawiki.org/wiki/Help:Images#Rendering_a_gallery_of_images */
@@ -114,67 +94,8 @@ ul.gallery li.gallerybox div.gallerytext {
   padding: 2px 4px;
   word-wrap: break-word;
 }
-.mwm-notice {
-  padding: 5px;
-  background: #dddddd;
-  border-radius: 5px;
-  margin-top: 5px;
-  text-align: center;
-  border: 1px solid gray;
-}
-.mwm-notice.mwm-message {
-  background: #FFFFFF;
-  font-size: 1.1em;
-  color: #000000;
-}
-.mwm-notice.mwm-message a {
-  text-decoration: underline;
-  font-weight: bold;
-  color: #000000;
-}
 #content {
   position: relative;
-}
-#content table {
-  /* following 5 rules are needed for scrolling */
-
-  overflow: auto;
-  /* for browsers that don't support overflow-y */
-
-  overflow-y: hidden;
-  overflow-x: auto;
-  word-break: normal;
-  display: block;
-}
-#content div.magnify {
-  display: none;
-}
-table {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-table tbody {
-  display: inline-block;
-}
-table td,
-table th {
-  padding: 3px;
-}
-table th {
-  word-break: normal;
-}
-table.wikitable th {
-  background: #f3f3f3;
-}
-table table {
-  border: 0;
-  margin-bottom: 0;
-}
-table table td,
-table table th {
-  border: 0;
-  padding: 0;
 }
 p,
 li,
@@ -203,37 +124,12 @@ a.new:hover {
   color: #cc0000;
 }
 img.thumbborder {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
-/* @noflip */div.floatright,
-table.floatright {
-  float: right;
-}
-/* @noflip */div.floatleft,
-table.floatright {
-  float: left;
-}
-.sibling-page,
-#mw-mf-last-modified {
+.sibling-page {
   display: block;
   font-size: .9em;
   margin-top: 1.5em;
-}
-.mwm-message.mwm-notice {
-  font-size: 1.1em;
-}
-@media all and (max-width: 500px) {
-  .mobile div.tleft,
-  .mobile div.floatleft,
-  .mobile table.floatleft,
-  .mobile div.tright,
-  .mobile div.floatright,
-  .mobile table.floatright {
-    float: none;
-    clear: none;
-    margin: auto;
-    width: auto !important;
-  }
 }
 /* Plainlinks - this can be used to switch
  * off special external link styling */
@@ -245,20 +141,37 @@ strong,
 b {
   font-weight: bold;
 }
+em,
+i {
+  font-style: italic;
+}
 .hlist > ul li,
 ul.hlist li {
   display: inline-block;
   margin-right: 8px;
 }
-.content_block ul {
+.content ul {
   list-style: square inside;
 }
-.content_block ol {
+.content ol {
   list-style: decimal inside;
 }
-em,
-i {
-  font-style: italic;
+.content table {
+  /* following 4 rules are needed for scrolling */
+
+  overflow: auto;
+  /* for browsers that don't support overflow-y */
+
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: block;
+}
+.content table td,
+.content table th {
+  padding: 3px;
+}
+.content div.magnify {
+  display: none;
 }
 .jsonly {
   display: none;
@@ -281,4 +194,12 @@ i {
 }
 .nomobile {
   display: none;
+}
+@media all and (min-width: 768px) {
+  .content .tleft {
+    float: left;
+  }
+  .content .tright {
+    float: right;
+  }
 }
