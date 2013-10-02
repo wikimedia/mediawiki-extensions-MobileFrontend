@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# remove .lessignore file after git rebase to let autoless know that it can
-# compile .less files
-rm less/.lessignore

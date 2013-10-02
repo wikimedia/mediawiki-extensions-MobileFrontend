@@ -50,14 +50,21 @@
 	transform: @transform;
 }
 
-// http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
-.transition( @dummy, @dummier: X, ... ) {
+.transition( ... ) {
 	// avoid Webkit bugs
 	-webkit-backface-visibility: hidden;
 
-	@args: ~`"@{arguments}".replace(/^\[|(, X)?\]$/g, '')`;
-	-webkit-transition: ~`"@{args}".replace('transform', '-webkit-transform')`;
-	transition: @args;
+	-webkit-transition: @arguments;
+	transition: @arguments;
+}
+
+// can't use `.transition()` because WebKit requires `-webkit-` prefix before `transform`
+.transition-transform( ... ) {
+	// avoid Webkit bugs
+	-webkit-backface-visibility: hidden;
+
+	-webkit-transition: -webkit-transform @arguments;
+	transition: transform @arguments;
 }
 
 .animation( @args ) {

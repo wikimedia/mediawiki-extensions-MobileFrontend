@@ -1,5 +1,0 @@
-These images are all at 2x resolution (48x48) for Retina and xhdpi devices.
-Currently, they are scaled down in the browser for hdpi and mdpi/non-Retina devices.
-
-There are lowres icons available for old phones (only for features available on
-those phones).

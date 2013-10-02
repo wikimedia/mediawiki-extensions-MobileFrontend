@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# create a .lessignore file so that autoless doesn't try to compile .less
-# files when git is rebasing
-touch less/.lessignore
