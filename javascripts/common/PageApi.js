@@ -70,7 +70,15 @@
 							id: -1,
 							lead: sections[0].text,
 							sections: sections.slice( 1 ),
-							isMainPage: resp.mobileview.hasOwnProperty( 'mainpage' ) ? true : false
+							isMainPage: resp.mobileview.hasOwnProperty( 'mainpage' ) ? true : false,
+							historyUrl: mw.util.wikiGetlink( title, { action: 'history' } ),
+							// FIXME: [API] This is incorrect in alpha where lazy loading is possible. Should come from API
+							// Note: In stable/beta only time this happens is on an edit so this is accurate there.
+							lastModifiedUserName: mw.config.get( 'wgUserName' ),
+							// FIXME: [API] This should come from the API
+							lastModifiedUserGender: mw.config.get( 'wgMFUserGender' ),
+							// FIXME [API] Only valid on a recently edited page (not true in alpha)
+							lastModifiedTimestamp: ( "" + new Date().getTime() ).substr( 0,10 ) // Default to current timestamp
 						} );
 					}
 				} ).fail( $.proxy( page, 'reject' ) );

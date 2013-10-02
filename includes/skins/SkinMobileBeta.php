@@ -17,6 +17,13 @@ class SkinMobileBeta extends SkinMobile {
 		$vars = parent::getSkinConfigVariables();
 		// force cta on in beta
 		$vars['wgMFEnablePhotoUploadCTA'] = true;
+		// Kill this when we fix the functionality in PageApi.js
+		$user = $this->getUser();
+		if ( $user->isLoggedIn() ) {
+			$vars['wgMFUserGender'] = $this->getUser()->getOption( 'gender' );
+		} else {
+			$vars['wgMFUserGender'] = 'unknown';
+		}
 		return $vars;
 	}
 
@@ -27,7 +34,8 @@ class SkinMobileBeta extends SkinMobile {
 			$modules['beta'][] = 'mobile.notifications.overlay';
 		}
 		$modules['beta'][] = 'mobile.geonotahack';
-
+		// turn off stable only modules
+		$modules['stableonly'] = array();
 		return $modules;
 	}
 

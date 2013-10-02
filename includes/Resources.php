@@ -333,7 +333,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
-			'javascripts/modules/lastModifiedBeta.js',
+			'javascripts/modules/lastEdited/lastEditedBeta.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
 			'javascripts/modules/tutorials/LeadPhotoTutorialOverlay.js',
 			'javascripts/modules/tutorials/newbieUploads.js',
@@ -354,6 +354,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// newbieUploads.js
 			'mobile-frontend-lead-image-tutorial-summary',
 			'mobile-frontend-lead-image-tutorial-confirm',
+
+			// LastEditedBeta.js
+			'mobile-frontend-last-modified-with-user-seconds',
+			'mobile-frontend-last-modified-with-user-minutes',
+			'mobile-frontend-last-modified-with-user-hours',
+			'mobile-frontend-last-modified-with-user-days',
+			'mobile-frontend-last-modified-with-user-months',
+			'mobile-frontend-last-modified-with-user-years',
+			'mobile-frontend-last-modified-with-user-just-now',
 		),
 	),
 
@@ -516,6 +525,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-edit',
 			// modules/editor/EditorOverlay.js and modules/talk.js
 			'mobile-frontend-editor-save',
+			// PageApi.js
+			'mobile-frontend-last-modified-with-user-date',
+		),
+	),
+
+	'mobile.lastEdited.stable' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+		),
+		'scripts' => array(
+			'javascripts/modules/lastEdited/lastEdited.js',
 		),
 	),
 
@@ -533,7 +553,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-toggle.js',
 			'javascripts/modules/issues/issues.js',
 			'javascripts/modules/languages/languages.js',
-			'javascripts/modules/mf-last-modified.js',
+			'javascripts/modules/lastEdited/time.js',
 			'javascripts/modules/uploads/lead-photo-init.js',
 			'javascripts/modules/mainmenutweaks.js',
 			'javascripts/modules/search/search.js',
@@ -553,7 +573,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-meta-data-issues',
 			'mobile-frontend-meta-data-issues-header',
 
-			// mf-last-modified.js
+			// lastEdited.js
 			'mobile-frontend-last-modified-seconds',
 			'mobile-frontend-last-modified-hours',
 			'mobile-frontend-last-modified-minutes',
@@ -561,6 +581,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-last-modified-days',
 			'mobile-frontend-last-modified-months',
 			'mobile-frontend-last-modified-years',
+			'mobile-frontend-last-modified-just-now',
 
 			// leadphoto.js
 			'mobile-frontend-photo-upload-disabled',

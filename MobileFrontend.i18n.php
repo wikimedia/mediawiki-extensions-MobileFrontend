@@ -84,6 +84,14 @@ $messages['en'] = array (
 	'mobile-frontend-last-modified-days' => 'Last modified {{PLURAL:$1|$1 day|$1 days}} ago',
 	'mobile-frontend-last-modified-months' => 'Last modified {{PLURAL:$1|$1 month|$1 months}} ago',
 	'mobile-frontend-last-modified-years' => 'Last modified {{PLURAL:$1|$1 year|$1 years}} ago',
+	'mobile-frontend-last-modified-just-now' => 'Last modified just now',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 second|$3 seconds}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 minute|$3 minutes}} ago] by  {{PLURAL:$5|[$6 $2]|0=an anonymous user}}.',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 hour|$3 hours}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 day|$3 days}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 month|$3 months}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 year|$3 years}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Last {{GENDER:$1|edited}}] just now by {{PLURAL:$4|[$5 $2]|0=an anonymous user}}.',
 	'mobile-frontend-learn-more' => 'Learn more',
 	// account creation
 	'mobile-frontend-account-create-submit' => 'Sign up',
@@ -485,6 +493,61 @@ If not the Main Page, the following message is used:
 	'mobile-frontend-last-modified-years' => 'Text displayed on page to show how long ago the page was updated. Parameters:
 * $1 - number of years
 {{Related|Mobile-frontend-last-modified}}',
+	'mobile-frontend-last-modified-just-now' => 'Text displayed on page to show that the page was edited within the last few seconds.',
+	'mobile-frontend-last-modified-with-user-date' => 'Text that displays the date the page was last modified and who modified it. Parameters:
+* $1 - date
+* $2 - time
+* $3 - link to user profile
+* $4 - gender of user who performed the edit
+* $5 - parameters for link to page history',
+	'mobile-frontend-last-modified-with-user-seconds' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
+* $1 - user's gender
+* $2 - username
+* $3 - number of seconds
+* $4 - link to page history
+* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile.",
+	'mobile-frontend-last-modified-with-user-minutes' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
+* $1 - user's gender
+* $2 - username
+* $3 - number of minutes
+* $4 - link to page history
+* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile.",
+	'mobile-frontend-last-modified-with-user-hours' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
+* $1 - user's gender
+* $2 - username
+* $3 - number of hours
+* $4 - link to page history
+* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile.",
+	'mobile-frontend-last-modified-with-user-days' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
+* $1 - user's gender
+* $2 - username
+* $3 - number of days
+* $4 - link to page history
+* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile.",
+	'mobile-frontend-last-modified-with-user-months' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
+* $1 - user's gender
+* $2 - username
+* $3 - number of months
+* $4 - link to page history
+* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile.",
+	'mobile-frontend-last-modified-with-user-years' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
+* $1 - user's gender
+* $2 - username
+* $3 - number of years
+* $4 - link to page history
+* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile.",
+	'mobile-frontend-last-modified-with-user-just-now' => "Text displayed on page to show when a page was very recently updated and who updated it. Parameters:
+* $1 - user's gender
+* $2 - username
+* $4 - link to page history
+* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile.",
 	'mobile-frontend-learn-more' => 'A caption of a button or a link leading to details about a given piece of information.
 {{Identical|Learn more}}',
 	'mobile-frontend-account-create-submit' => 'Text in account creation submit button.

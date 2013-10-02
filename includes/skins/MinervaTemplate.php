@@ -1,10 +1,17 @@
 <?php
 class MinervaTemplate extends BaseTemplate {
+	/**
+	 * @var Boolean
+	 */
+	protected $isSpecialPage;
+
 	public function getPersonalTools() {
 		return $this->data['personal_urls'];
 	}
 
 	public function execute() {
+		$title = $this->getSkin()->getTitle();
+		$this->isSpecialPage = $title->isSpecialPage();
 		$this->getSkin()->prepareData( $this );
 		wfRunHooks( 'MinervaPreRender', array( $this ) );
 		$this->render( $this->data );
@@ -74,7 +81,7 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	protected function renderFooter( $data ) {
-		if ( !$this->getSkin()->getTitle()->isSpecialPage() ) {
+		if ( !$this->isSpecialPage ) {
 		?>
 		<div id="footer">
 			<?php
@@ -97,6 +104,10 @@ class MinervaTemplate extends BaseTemplate {
 		?></ul><?php
 	}
 
+	/**
+	 * Outputs the 'Last edited' message, e.g. 'Last edited on...'
+	 * @param Array $data Data used to build the page
+	 */
 	protected function renderHistoryLink( $data ) {
 		if ( isset( $data['historyLink'] ) ) {
 			$historyLink = $data['historyLink'];
@@ -111,11 +122,10 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	protected function renderContentWrapper( $data ) {
-		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		?>
 		<div id="content_wrapper">
 			<?php
-				if ( !$isSpecialPage ) {
+				if ( !$this->isSpecialPage ) {
 					echo $data['prebodytext'];
 					// FIXME: Temporary solution until we have design
 					if ( isset( $data['_old_revision_warning'] ) ) {
@@ -170,7 +180,6 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	protected function render( $data ) { // FIXME: replace with template engines
-		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 
 		// begin rendering
 		echo $data[ 'headelement' ];
@@ -190,7 +199,7 @@ class MinervaTemplate extends BaseTemplate {
 				<div class="header">
 					<?php
 						$this->html( 'menuButton' );
-						if ( $isSpecialPage ) {
+						if ( $this->isSpecialPage ) {
 							echo $data['specialPageHeader'];
 						} else {
 							?>

@@ -30,9 +30,7 @@
 			inBetaOrAlpha: mw.config.get( 'wgMFMode' ) !== 'stable',
 			isMainPage: false,
 			talkLabel: mw.msg( 'mobile-frontend-talk-overlay-header' ),
-			editLabel: mw.msg( 'mobile-frontend-editor-edit' ),
-			// FIXME: this is not a useful default and asking for trouble (only valid on a just edited page)
-			lastModifiedTimestamp: ( "" + new Date().getTime() ).substr( 0,10 ) // Default to current timestamp
+			editLabel: mw.msg( 'mobile-frontend-editor-edit' )
 		},
 
 		isMainPage: function() {

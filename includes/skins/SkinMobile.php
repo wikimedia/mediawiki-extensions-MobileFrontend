@@ -315,38 +315,13 @@ HTML;
 	 */
 	function prepareTemplatePageContent( QuickTemplate $tpl ) {
 		$title = $this->getTitle();
-		$isSpecialPage = $title->isSpecialPage();
-		$isMainPage = $title->isMainPage();
-		$user = $this->getUser();
 
-		if ( !$isSpecialPage && $this->getWikiPage()->exists() ) {
-
-			// add last modified timestamp
-			$revId = $this->getRevisionId();
-			$timestamp = Revision::getTimestampFromId( $this->getTitle(), $revId );
-			// Main pages tend to include transclusions (see bug 51924)
-			$lastModified = $isMainPage ?
-				wfMessage( 'mobile-frontend-history' ) :
-				wfMessage( 'mobile-frontend-last-modified-date',
-					$this->getLanguage()->userDate( $timestamp, $user ),
-					$this->getLanguage()->userTime( $timestamp, $user ) )->parse();
-
-			$timestamp = wfTimestamp( TS_UNIX, $timestamp );
-			$historyUrl = $this->mobileContext->getMobileUrl( $title->getFullURL( 'action=history' ) );
-			$historyLink = array(
-				'id' => 'mw-mf-last-modified',
-				'data-timestamp' => $isMainPage ? '' : $timestamp,
-				'href' => $historyUrl,
-				'text' => $lastModified,
-				'class' => 'sibling-page',
-			);
-			$tpl->set( 'historyLink', $historyLink );
-		}
+		// If it's a talk page, add a link to the main namespace page
 		if ( $title->isTalkPage() ) {
 			$tpl->set( 'subject-page', Linker::link(
 				$title->getSubjectPage(),
 				wfMessage( 'mobile-frontend-talk-back-to-page', $title->getText() ),
-				array( 'class' => 'sibling-page' )
+				array( 'class' => 'return-link' )
 			) );
 		}
 	}

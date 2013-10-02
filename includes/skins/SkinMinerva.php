@@ -186,6 +186,52 @@ class SkinMinerva extends SkinTemplate {
 		);
 	}
 
+	/**
+	 * Prepare the content for the 'last edited' message, e.g. 'Last edited on 30 August
+	 * 2013, at 23:31'. This message is different for the main page since main page
+	 * content is typically transcuded rather than edited directly.
+	 * @param Title $title The Title object of the page being viewed
+	 */
+	protected function getHistoryLink( Title $title ) {
+		$user = $this->getUser();
+		$isMainPage = $title->isMainPage();
+		// add last modified timestamp
+		$revId = $this->getRevisionId();
+		$timestamp = Revision::getTimestampFromId( $this->getTitle(), $revId );
+		// Main pages tend to include transclusions (see bug 51924)
+		if ( $isMainPage ) {
+			$lastModified = wfMessage( 'mobile-frontend-history' )->plain();
+		} else {
+			$lastModified = wfMessage(
+				'mobile-frontend-last-modified-date',
+				$this->getLanguage()->userDate( $timestamp, $user ),
+				$this->getLanguage()->userTime( $timestamp, $user )
+			)->parse();
+		}
+		$unixTimestamp = wfTimestamp( TS_UNIX, $timestamp );
+		$historyUrl = $this->mobileContext->getMobileUrl( $title->getFullURL( 'action=history' ) );
+		$link = array(
+			'id' => 'mw-mf-last-modified',
+			'data-timestamp' => $isMainPage ? '' : $unixTimestamp,
+			'href' => $historyUrl,
+			'text' => $lastModified,
+		);
+		$rev = Revision::newFromId( $this->getRevisionId() );
+		if ( $rev ) {
+			$userId = $rev->getUser();
+			if ( $userId ) {
+				$revUser = User::newFromId( $userId );
+				$link += array(
+					'data-user-name' => $revUser->getName(),
+					'data-user-gender' => $revUser->getOption( 'gender' ),
+				);
+			} else {
+				$link['data-user-gender'] = 'unknown';
+			}
+		}
+		return $link;
+	}
+
 	public function prepareData( BaseTemplate $tpl ) {
 		global $wgMFEnableSiteNotice;
 		$title = $this->getTitle();
@@ -206,6 +252,11 @@ class SkinMinerva extends SkinTemplate {
 		} else {
 			$preBodyText = Html::rawElement( 'h1', array( 'id' => 'section_0' ), $pageHeading );
 			$tpl->set( 'prebodytext', $preBodyText );
+
+			// If it's a page that exists, add last edited timestamp
+			if ( $this->getWikiPage()->exists() ) {
+				$tpl->set( 'historyLink', $this->getHistoryLink( $title ) );
+			}
 		}
 
 		// set defaults
@@ -370,6 +421,7 @@ class SkinMinerva extends SkinTemplate {
 
 		$modules['watch'] = array();
 		$modules['search'] = array();
+		$modules['stableonly'] = array( 'mobile.lastEdited.stable' );
 
 		$title = $this->getTitle();
 		// modules based on context

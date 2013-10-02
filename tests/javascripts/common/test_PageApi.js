@@ -20,7 +20,13 @@
 		} ) );
 
 		pageApi.getPage( 'Test' ).done( function( resp ) {
+			// FIXME: Hack to reset this since it is variable at the moment
+			resp.lastModifiedTimestamp = '';
 			assert.deepEqual( resp, {
+				historyUrl: mw.util.wikiGetlink( 'Test', { action: 'history' } ),
+				lastModifiedUserName: '',
+				lastModifiedUserGender: 'unknown',
+				lastModifiedTimestamp: '',
 				title: 'Test',
 				id: -1,
 				isMainPage: false,
@@ -85,7 +91,13 @@
 		} ) );
 
 		pageApi.getPage( 'Test' ).done( function( resp ) {
+			// FIXME: Hack to reset this since it is variable at the moment
+			resp.lastModifiedTimestamp = '';
 			assert.deepEqual( resp, {
+				historyUrl: mw.util.wikiGetlink( 'Test', { action: 'history' } ),
+				lastModifiedUserName: '',
+				lastModifiedUserGender: 'unknown',
+				lastModifiedTimestamp: '',
 				title: 'Test',
 				id: -1,
 				isMainPage: false,
