@@ -81,7 +81,6 @@ class SpecialUploads extends MobileSpecialPage {
 		}
 
 		$limit = $this->getUploadCountThreshold() + 1;
-		$dbr->ignoreErrors( true );
 		// not using SQL's count(*) because it's more expensive with big number of rows
 		$res = $dbr->select(
 			'image',
