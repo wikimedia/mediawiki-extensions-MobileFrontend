@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_3e68c1ba",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T23:27:43Z",
+      "side": 1,
+      "message": "Yeah, I should change to \u0027LastEdited\u0027 throughout.",
+      "parentUuid": "0932edd2_5309ee30",
+      "revId": "e57645ffb10ef1a9b7ba47b3e3287d9fbe642734",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_b31f8a68",
         "filename": "less/common/common.less",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2013-10-03T23:18:55Z",
       "side": 1,
       "message": "Shouldn\u0027t be #last-modified-history-link? Or rename it in JS?",
+      "revId": "e57645ffb10ef1a9b7ba47b3e3287d9fbe642734",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_be7bd188",
+        "filename": "less/common/common.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T23:27:43Z",
+      "side": 1,
+      "message": "No, the block and the link are now separate:\n\n\u003cdiv id\u003d\"last-modified\"\u003e\u003ca id\u003d\"last-modified-history-link\"\u003eLast modified on XXX\u003c/a\u003e\u003c/div\u003e\n\nThis will allow us to do:\n\n\u003cdiv id\u003d\"last-modified\"\u003e\u003ca id\u003d\"last-modified-history-link\"\u003eLast modified\u003c/a\u003e on XXX by \u003ca id\u003d\"last-modified-user\"\u003eJohn Doe\u003c/a\u003e\u003c/div\u003e\n\n...in the next changeset.\n\nAlso the reason I\u0027m breaking #last-modified into it\u0027s own definition is because it will soon change radically from the \u0027Return to...\u0027 links.",
+      "parentUuid": "0932edd2_130f7639",
       "revId": "e57645ffb10ef1a9b7ba47b3e3287d9fbe642734",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
