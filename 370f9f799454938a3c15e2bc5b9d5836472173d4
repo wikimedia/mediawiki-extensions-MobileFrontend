@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_fe2389a8",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T23:21:45Z",
+      "side": 1,
+      "message": "Can\u0027t be empty? Why -1?",
+      "revId": "370f9f799454938a3c15e2bc5b9d5836472173d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
