@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_10cdac87",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-03T20:57:47Z",
+      "side": 1,
+      "message": "Both usernames have to be available in plain text as a parameter for GENDER.",
+      "revId": "da471b36ebe393739d2d4317de53c61f0c693966",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
