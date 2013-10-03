@@ -248,6 +248,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_f005787a",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T21:17:38Z",
+      "side": 1,
+      "message": "I don\u0027t think it\u0027s necessary. The only way you can use a variable value as a property name is by using square braces, e.g. obj[token] \u003d token.",
+      "parentUuid": "0932edd2_90335cc3",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_8d06e587",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 23
@@ -415,6 +433,24 @@
       "writtenOn": "2013-10-03T20:37:41Z",
       "side": 1,
       "message": "Yeah, that would be good.",
+      "parentUuid": "0932edd2_8dc34509",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_6d545120",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 23
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T21:17:38Z",
+      "side": 1,
+      "message": "Still not sure about having classes with a single CSS rule ;)",
       "parentUuid": "0932edd2_8dc34509",
       "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
