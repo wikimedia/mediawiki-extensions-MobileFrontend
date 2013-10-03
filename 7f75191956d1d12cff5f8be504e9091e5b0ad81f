@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_8d27c520",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T18:55:43Z",
+      "side": 1,
+      "message": "I don\u0027t think this will work. Probably you meant self.onError();",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_0d3cb52c",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T18:55:43Z",
+      "side": 1,
+      "message": "I think we usually use on( \u0027click\u0027, ... ) for the sake of consistency.",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_ed36814f",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T18:55:43Z",
+      "side": 1,
+      "message": "$( this )? Not $notification?",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_8d06e587",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T18:55:43Z",
+      "side": 1,
+      "message": "notContinue?",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_0dfbd577",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T18:55:43Z",
+      "side": 1,
+      "message": "done( onSuccess ).fail( onError );",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_6df2919a",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T18:55:43Z",
+      "side": 1,
+      "message": "$( initialize );\nor even initialize(); since the JS is loaded at the bottom, isn\u0027t it?",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
