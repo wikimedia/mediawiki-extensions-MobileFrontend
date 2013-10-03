@@ -46,13 +46,19 @@
 	}
 
 	function init() {
-		var $page = $( '#content' ), tagName = 'h2';
+		var $page = $( '#content' ), tagName = 'h2', additionalClassNames = '';
+
+		// in beta expand all sections by default
+		if ( M.isWideScreen() && mw.config.get( 'wgMFMode' ) !== 'stable' ) {
+			additionalClassNames = 'openSection';
+		}
+
 		$( 'html' ).removeClass( 'stub' );
 		if ( $page.find( 'h1' ).length > 0 ) {
 			tagName = 'h1';
 		}
-		$page.find( tagName ).addClass( 'section_heading' );
-		$page.find( '.section_heading' ).next( 'div' ).addClass( 'content_block' );
+		$page.find( tagName ).addClass( [ 'section_heading', additionalClassNames ].join( ' ' ) );
+		$page.find( '.section_heading' ).next( 'div' ).addClass( [ 'content_block', additionalClassNames ].join( ' ' ) );
 
 		// use mouseup because mousedown blocks the click event and links
 		// in headings won't work
