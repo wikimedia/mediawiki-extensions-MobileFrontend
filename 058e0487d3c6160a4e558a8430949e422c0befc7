@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_f0ec98ca",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T21:17:28Z",
+      "side": 1,
+      "message": "So after thinking a little about this idea, I\u0027ve decided that I really dislike adding these rules and not using them. (YAGNI [1])\nMake use of the styled / margin class somewhere with a note to remove another rule when cache clears otherwise do this in a separate patch.\n\n[1] https://en.wikipedia.org/wiki/You_aren\u0027t_gonna_need_it",
+      "revId": "058e0487d3c6160a4e558a8430949e422c0befc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d000746d",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T21:17:28Z",
+      "side": 1,
+      "message": "I\u0027m not entirely sure how this is better than clearPageMargins\nI think the use of the name unstyledContent is misleading - this suggests that the content will not be styled at all!\n\nTrying to think of a better name for this variable.. but so far failing.",
+      "revId": "058e0487d3c6160a4e558a8430949e422c0befc7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
