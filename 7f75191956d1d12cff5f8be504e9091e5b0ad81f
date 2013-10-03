@@ -266,6 +266,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_d00a347a",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T21:21:03Z",
+      "side": 1,
+      "message": "If that\u0027s true, I guess I\u0027ll change it, although \u0027token: token\u0027 seems a bit confusing to me.",
+      "parentUuid": "0932edd2_f005787a",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_8d06e587",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 23
