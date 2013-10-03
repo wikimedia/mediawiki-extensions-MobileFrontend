@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_b37b0a89",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T22:00:29Z",
+      "side": 1,
+      "message": "Are you sure? .icon-anon is a \u003cli\u003e.",
+      "revId": "c64dea5c6b5074d1a48e94299f3d1104998d4c82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
