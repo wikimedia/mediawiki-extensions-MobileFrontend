@@ -34,6 +34,24 @@
       "revId": "4d0c270591a09fc0d981ed4f3c40beb1405d0276",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f3bd8263",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T23:09:24Z",
+      "side": 1,
+      "message": "Because someone might remove this space and then we end up with class .content_blocopenSection\n\nJust do addClass( \u0027content_block\u0027 ).addClass( openClassName )",
+      "parentUuid": "0932edd2_5351ee5f",
+      "revId": "4d0c270591a09fc0d981ed4f3c40beb1405d0276",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
