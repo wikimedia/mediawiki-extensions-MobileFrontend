@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_f3ebc277",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T23:07:06Z",
+      "side": 1,
+      "message": "Not really. You can break out of the loop when the condition is met, but I\u0027m not sure if I\u0027d bother, there\u0027s at most several dozen elements there.\n\nA shorter and more idiomatic version would be to do:\n\nvar collapseLevel \u003d Math.min.apply( null, $.map( section, function( s ) { return s.level } ) ); // replaces lines 7 and 11-15",
+      "revId": "b63271d89db625a3a9f5781d6ecf387d354551dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
