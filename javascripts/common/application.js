@@ -251,6 +251,10 @@
 		return params;
 	}
 
+	function isWideScreen() {
+		return window.innerWidth > mw.config.get( 'wgMFDeviceWidthTablet' );
+	}
+
 	/**
 	 * Sets the JavaScript configuration and HTML environment for a given page
 	 * Emits a page-loaded event that modules can subscribe to, so that they can
@@ -282,6 +286,7 @@
 		},
 		getSessionId: getSessionId,
 		isLoggedIn: isLoggedIn,
+		isWideScreen: isWideScreen,
 		lockViewport: lockViewport,
 		log: log,
 		reloadPage: reloadPage,

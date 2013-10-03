@@ -196,6 +196,7 @@ class SkinMinerva extends SkinTemplate {
 	public function getSkinConfigVariables() {
 		global $wgMFLeadPhotoUploadCssSelector, $wgMFEnableCssAnimations,
 			$wgMFUseCentralAuthToken,
+			$wgMFDeviceWidthTablet,
 			$wgMFAnonymousEditing, $wgMFEnablePhotoUploadCTA,
 			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc;
 
@@ -213,6 +214,7 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFPhotoUploadEndpoint' => $wgMFPhotoUploadEndpoint ? $wgMFPhotoUploadEndpoint : '',
 			'wgPreferredVariant' => $title->getPageLanguage()->getPreferredVariant(),
 			'wgIsPageEditable' => $title->quickUserCan( 'edit', $user ) || $userCanCreatePage,
+			'wgMFDeviceWidthTablet' => $wgMFDeviceWidthTablet,
 		);
 		if ( !$user->isAnon() ) {
 			$vars['wgWatchedPageCache'] = array(
