@@ -1,13 +1,20 @@
 ( function( M, $ ) {
 
 	function log( name, destination ) {
-		return M.log( 'MobileWebClickTracking', {
-			name: name,
-			destination: destination,
-			username: mw.config.get( 'wgUserName' ),
-			userEditCount: parseInt( mw.config.get( 'wgUserEditCount' ), 10 ),
-			mobileMode: mw.config.get( 'wgMFMode' )
-		} );
+		var
+			username = mw.config.get( 'wgUserName' ),
+			data = {
+				name: name,
+				destination: destination,
+				mobileMode: mw.config.get( 'wgMFMode' )
+			};
+
+		if ( username ) {
+			data.username = username;
+			data.userEditCount = mw.config.get( 'wgUserEditCount' );
+		}
+
+		return M.log( 'MobileWebClickTracking', data );
 	}
 
 	function hijackLink( selector, name ) {
