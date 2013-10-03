@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_1325b60c",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T22:59:12Z",
+      "side": 1,
+      "message": "Should probably apply it regardless. No harm and makes the variable name more meaningful - I will update regex.",
+      "parentUuid": "0932edd2_93e9a61e",
+      "revId": "831b7e70592692a513f5c74f169ad7b1221a840e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_53e80e12",
         "filename": "javascripts/common/application.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_d30a3e7a",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T22:59:12Z",
+      "side": 1,
+      "message": "k",
+      "parentUuid": "0932edd2_53e80e12",
+      "revId": "831b7e70592692a513f5c74f169ad7b1221a840e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_f3f822e5",
         "filename": "javascripts/common/application.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-10-03T22:14:00Z",
       "side": 1,
       "message": "What is this bitwise operator doing here? Plus, have you checked that iOS 6 and iOS 7 don\u0027t require this fix?",
+      "revId": "831b7e70592692a513f5c74f169ad7b1221a840e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_9310c6ac",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T22:59:12Z",
+      "side": 1,
+      "message": "Yes see comment above. Bitwise operator is a typo",
+      "parentUuid": "0932edd2_f3f822e5",
       "revId": "831b7e70592692a513f5c74f169ad7b1221a840e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
