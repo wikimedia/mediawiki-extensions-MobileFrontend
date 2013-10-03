@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_93e9a61e",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T22:14:00Z",
+      "side": 1,
+      "message": "Not sure if we care about 3.x. It\u0027s 0.02% of our traffic and I bet the UA is different too (https://en.wikipedia.org/wiki/IOS_version_history#iPhone_OS_3.x). And if we do, than this regex definitely doesn\u0027t take into account 3.3-3.9.",
+      "revId": "831b7e70592692a513f5c74f169ad7b1221a840e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_53e80e12",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T22:14:00Z",
+      "side": 1,
+      "message": "Maybe move this comment below if.",
+      "revId": "831b7e70592692a513f5c74f169ad7b1221a840e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f3f822e5",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T22:14:00Z",
+      "side": 1,
+      "message": "What is this bitwise operator doing here? Plus, have you checked that iOS 6 and iOS 7 don\u0027t require this fix?",
+      "revId": "831b7e70592692a513f5c74f169ad7b1221a840e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
