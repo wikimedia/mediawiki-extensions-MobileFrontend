@@ -3289,7 +3289,7 @@ $messages['cy'] = array(
 	'mobile-frontend-diffview-bytesadded' => 'Ychwanegwyd $1 {{PLURAL:$1|beit|beit|feit|beit}}',
 	'mobile-frontend-diffview-bytesremoved' => 'Lleihawyd o $1 {{PLURAL:$1|beit|beit|feit|beit}}',
 	'mobile-frontend-diffview-explained' => 'Ychwanegwyd (+) a dilewyd (-) y llinellau a ganlyn:',
-	'mobile-frontend-thanked-notice' => "Dywedwyd wrth $1 eich bod yn hoff o'i {{GENDER:$2|adolygiad|hadolygiad|}}.",
+	'mobile-frontend-thanked-notice' => "Dywedwyd wrth $1 eich bod yn hoff o'i {{GENDER:$2|adolygiad|hadolygiad|adolygiad}}.",
 	'mobile-frontend-table' => 'Tabl $1',
 	'mobile-frontend-saving-exit-page' => "Mae eich golygiad yn dal i fod wrthi'n cael ei roi ar gadw. Os y gadewch bydd y golygiad yn cael ei golli. Ydych chi wir am ymadael?",
 	'mobile-frontend-photo-upload' => "Ychwanegwch ddelwedd i'r dudalen hon",
@@ -4646,6 +4646,7 @@ $messages['es'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ subidas',
 	'mobile-frontend-photo-upload-cta' => 'Por favor inicia sesión o registrate para añadir una imagen.',
 	'mobile-frontend-photo-upload-login' => 'Necesitas iniciar sesión para añadir una imagen.',
+	'mobile-frontend-editor-cancel' => 'Cancelar',
 	'mobile-frontend-editor-captcha-try-again' => 'Código incorrecto, inténtalo de nuevo.',
 	'tag-mobile_edit' => 'Edición desde móvil',
 	'tag-mobile_edit-description' => 'Edición realizada desde el sitio móvil',
@@ -9290,6 +9291,8 @@ $messages['ko'] = array(
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} 근처는 당신이 어디에 있는지 알아낼 수 없습니다… 다시 시도하겠습니까?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => '전파가 좋은, 열린 장소에서 시도하세요.',
+	'mobile-frontend-nearby-permission' => '{{SITENAME}} 근처는 당신의 위치에 접근할 권한이 없습니다.',
+	'mobile-frontend-nearby-permission-guidance' => '당신이 어디에 있는지 보여줄 권한을 부여하세요. 브라우저 위치 설정을 확인할 필요가 있습니다.',
 	'mobile-frontend-nearby-noresults' => '여기는 조용합니다… 근처에 문서를 찾을 수 없습니다.',
 	'mobile-frontend-nearby-noresults-guidance' => '새 문서를 만드거나 기존 문서에 위치를 추가하세요',
 	'mobile-frontend-nearby-refresh' => '정확한 위치를 찾았습니다. 근처 문서의 목록을 새로 고치려면 여기를 클릭하세요',
@@ -9411,6 +9414,7 @@ $messages['ko'] = array(
 	'mobile-frontend-editor-error-preview' => '예상치 못한 오류가 미리 보기를 불러올 때 일어났습니다. 닫고 다시 시도하세요.',
 	'mobile-frontend-editor-tutorial-summary' => '문법에 무서워하지 마세요. $1 문서를 개선해보세요.',
 	'mobile-frontend-editor-tutorial-confirm' => '편집 시작',
+	'mobile-frontend-editor-captcha-try-again' => '코드가 잘못되었습니다, 다시 시도하세요.',
 	'tag-mobile_edit' => '모바일 편집',
 	'tag-mobile_edit-description' => '모바일 사이트에서 편집',
 	'mobile-frontend-drawer-cancel' => '취소',
@@ -9433,7 +9437,17 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-uploads' => '지난 달에 {{PLURAL:$1|올린 파일 1개|올린 파일 $1개|0=올린 파일 없음}}',
 	'mobile-frontend-profile-edits-limit' => '지난 달에 {{PLURAL:$1|편집 $1회}} 이상',
 	'mobile-frontend-profile-uploads-limit' => '지난 달에 {{PLURAL:$1|올린 파일 $1회}} 이상',
+	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$2|어제|$2일 전에|0=오늘}} {{GENDER:$1|$1}} 사용자가 마지막으로 올렸습니다.',
 	'mobile-frontend-profile-heading-recent' => '최근',
+	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.',
+	'mobile-frontend-profile-usertalk' => '토론 문서를 봅니다.',
+	'mobile-frontend-profile-noargs' => '프로필을 보려면 사용자 이름을 제공하세요.',
+	'mobile-frontend-profile-yours' => '내 프로필 페이지를 방문합니다.',
+	'mobile-frontend-profile-userpage-link' => '사용자 문서를 방문합니다.',
+	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|이 사용자}}는 새 편집자입니다.',
+	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|이 사용자}}는 다소 경험 있는 편집자입니다.',
+	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|이 사용자}}는 많이 편집한 편집자입니다.',
+	'mobile-frontend-requires-optin' => '우리의 베타 모드로 선택하지 않으면 이 페이지를 사용할 수 없습니다. 선택하려면 [[Special:MobileOptions|설정 문서]]를 방문하세요.',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -10231,6 +10245,7 @@ Déi gi geläscht.",
 	'mobile-frontend-profile-usertalk' => 'Diskussiounssäit kucken.',
 	'mobile-frontend-profile-noargs' => 'Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.',
 	'mobile-frontend-profile-yours' => 'Besicht Är Profilsäit.',
+	'mobile-frontend-profile-userpage-link' => 'Benotzersäit besichen.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Dëse Benotzer}} ass e Benotzer mat Erfarung.',
 );
 
@@ -10867,7 +10882,7 @@ $messages['ml'] = array(
 	'mobile-frontend-overlay-escape' => 'പഴയ താളിലേയ്ക്ക് മടങ്ങുക',
 	'mobile-frontend-placeholder' => '{{SITENAME}} സംരംഭത്തിൽ തിരയുക',
 	'mobile-frontend-placeholder-beta' => '{{SITENAME}} (ബീറ്റ) സംരംഭത്തിൽ തിരയുക',
-	'mobile-frontend-placeholder-alpha' => '{{SITENAME}} തിരയുക (പരീക്ഷണാടിസ്ഥാനം)',
+	'mobile-frontend-placeholder-alpha' => '{{SITENAME}} സംരംഭത്തിൽ തിരയുക (പരീക്ഷണാടിസ്ഥാനം)',
 	'mobile-frontend-search-help' => 'തിരയാനുള്ള പദം മുകളിൽ നൽകുക, ചേർച്ചയുള്ള താളുകളുടെ തലക്കെട്ടുകൾ ഇവിടെ വരും.',
 	'mobile-frontend-dismiss-notification' => 'ഈ അറിയിപ്പ് ഒഴിവാക്കുക',
 	'mobile-frontend-clear-search' => 'ശൂന്യമാക്കുക',
@@ -10875,7 +10890,7 @@ $messages['ml'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'എഴുത്തുകൾ [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile സി.സി. ബൈ-എസ്.എ. 3.0] പ്രകാരം ലഭ്യം; മേൽ നിബന്ധനകൾ ഉണ്ടായേക്കാം.',
 	'mobile-frontend-copyright' => 'പ്രത്യേകം പറയാത്ത പക്ഷം ഉള്ളടക്കം $1 പ്രകാരം ലഭ്യം.',
-	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile ഉപയോഗനിബന്ധനകൾ]',
+	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/ml?useformat=mobile ഉപയോഗനിബന്ധനകൾ]',
 	'mobile-frontend-footer-contact' => 'സമ്പർക്കം',
 	'mobile-frontend-search-noresults' => 'താങ്കൾ തിരഞ്ഞതുമായി സാമ്യമുള്ള താളുകൾ ഒന്നുമില്ല. ദയവായി മാറ്റി തിരയുക, അല്ലെങ്കിൽ കീബോർഡ് തിരച്ചിൽ ബട്ടൺ ഉപയോഗിച്ച് താളുകൾക്കുള്ളിൽ തിരയുക.',
 	'mobile-frontend-main-menu-button-tooltip' => 'പ്രധാന മെനു തുറക്കുക',
@@ -10909,7 +10924,7 @@ $messages['ml'] = array(
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'മെച്ചപ്പെട്ട സിഗ്നൽ ഉള്ള തുറന്ന പ്രദേശം ഉപയോഗിക്കുക.',
 	'mobile-frontend-nearby-permission' => 'താങ്കളുടെ സ്ഥലം കണ്ടെത്താൻ {{SITENAME}} സമീപസ്ഥത്തിന് അനുമതിയില്ല.',
 	'mobile-frontend-nearby-permission-guidance' => 'താങ്കളെവിടെയാണെന്ന് കാണാനുള്ള അനുമതി താങ്കൾ നൽകിയിട്ടുണ്ടെന്നുറപ്പാക്കുക. താങ്കളുടെ ബ്രൗസറിന്റെ സ്ഥാനസജ്ജീകരണങ്ങൾ പരിശോധിക്കേണ്ടി വന്നേക്കാം.',
-	'mobile-frontend-nearby-noresults' => 'നിതാന്തനിശബ്ദത തന്നെ... സമീപസ്ഥമായി ഞങ്ങൾക്ക് വിഷയങ്ങളൊന്നും കണ്ടെത്താനായില്ല.',
+	'mobile-frontend-nearby-noresults' => 'ഏകാന്തതയുടെ അപാരതീരം... സമീപസ്ഥമായി ഞങ്ങൾക്ക് വിഷയങ്ങളൊന്നും കണ്ടെത്താനായില്ല.',
 	'mobile-frontend-nearby-noresults-guidance' => 'പുതിയൊരു താൾ സൃഷ്ടിക്കാൻ ശ്രമിക്കുക അല്ലെങ്കിൽ നിലവിലുള്ള ഒന്നിൽ ഒരു പുതിയ സ്ഥാനം ചേർക്കുക',
 	'mobile-frontend-nearby-refresh' => 'താങ്കളുടെ കൂടുതൽ കൃത്യമായ സ്ഥാനം ഞങ്ങൾക്ക് കണ്ടെത്താനായി. താങ്കളുടെ സമീപസ്ഥമായ താളുകൾ പുതുക്കാനായി ഇവിടെ ഞെക്കുക',
 	'mobile-frontend-nearby-error' => '{{SITENAME}} സമീപസ്ഥം കണ്ടെത്തുന്നതിനിടെ ചില പ്രശ്നങ്ങളുണ്ടായി.',
@@ -11015,7 +11030,7 @@ $messages['ml'] = array(
 	'mobile-frontend-editor-save' => 'സേവ് ചെയ്യുക',
 	'mobile-frontend-editor-cancel' => 'റദ്ദാക്കുക',
 	'mobile-frontend-editor-keep-editing' => 'തിരുത്തൽ തുടരുക',
-	'mobile-frontend-editor-license' => '"സേവ് ചെയ്യുക" എന്നത് അമർത്തുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_use/ml ഉപയോഗനിബന്ധനകൾ] അംഗീകരിക്കുന്നുവെന്നും, താങ്കൾ എഴുതി നൽകിയത് [//creativecommons.org/licenses/by-sa/3.0/ സി.സി. ബൈ-എസ്.എ. 3.0 അനുവാദപത്രം] ഒപ്പം [//ml.wikipedia.org/wiki/WP:GFDL-ml ജി.എഫ്.ഡി.എൽ.] പ്രകാരം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും അംഗീകരിക്കുന്നുണ്ട്.',
+	'mobile-frontend-editor-license' => '"സേവ് ചെയ്യുക" എന്നത് അമർത്തുമ്പോൾ, താങ്കൾ ഞങ്ങളുടെ [//wikimediafoundation.org/wiki/Terms_of_Use/ml ഉപയോഗനിബന്ധനകൾ] അംഗീകരിക്കുന്നുവെന്നും, താങ്കൾ എഴുതി നൽകിയത് [//creativecommons.org/licenses/by-sa/3.0/ സി.സി. ബൈ-എസ്.എ. 3.0 അനുവാദപത്രം] ഒപ്പം [//ml.wikipedia.org/wiki/WP:GFDL-ml ജി.എഫ്.ഡി.എൽ.] പ്രകാരം പ്രസിദ്ധീകരിക്കുന്നുവെന്നും അംഗീകരിക്കുന്നുണ്ട്.',
 	'mobile-frontend-editor-placeholder' => 'ഈ ഭാഗം ശൂന്യമാണ്. ഇത് വികസിപ്പിക്കുന്ന ആദ്യത്തെയാളാവുക!',
 	'mobile-frontend-editor-summary-placeholder' => 'താങ്കളെന്താണ് മാറ്റം വരുത്തിയതെന്ന് പറയുക (നിർബന്ധമില്ല)',
 	'mobile-frontend-editor-cancel-confirm' => 'താങ്കളുടെ തിരുത്ത് ഉപേക്ഷിക്കണം എന്നുറപ്പാണോ?',
@@ -11034,7 +11049,7 @@ $messages['ml'] = array(
 	'tag-mobile_edit' => 'മൊബൈൽ സൈറ്റ്',
 	'tag-mobile_edit-description' => 'മൊബൈൽ സൈറ്റ് വഴി വരുത്തിയ തിരുത്തുകൾ',
 	'mobile-frontend-drawer-cancel' => 'റദ്ദാക്കുക',
-	'mobile-frontend-talk-explained' => 'താഴെക്കൊടുത്തിരിക്കുന്ന സംഭാഷണങ്ങൾ ഇപ്പോൾ സജീവമാണ്',
+	'mobile-frontend-talk-explained' => 'താഴെക്കൊടുത്തിരിക്കുന്ന സംവാദങ്ങൾ ഇപ്പോൾ സജീവമാണ്',
 	'mobile-frontend-talk-explained-empty' => 'ഈ താളിനെക്കുറിച്ച് സംവാദങ്ങളൊന്നുമില്ല.',
 	'mobile-frontend-talk-overlay-header' => 'സംവാദം',
 	'mobile-frontend-talk-back-to-page' => '"$1" താളിലേക്ക് മടങ്ങുക.',
@@ -14675,6 +14690,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-main-menu-account-create' => 'Отвори налог',
 	'mobile-frontend-page-menu-contents' => 'садржај',
 	'mobile-frontend-page-menu-history' => 'Историја',
+	'mobile-frontend-page-saving' => 'Чување $1',
 	'mobile-frontend-donate-image-login' => 'Морате бити пријављени да би сте видели ову стрницу.',
 	'mobile-frontend-photo-upload-disabled' => 'На овој страници није потребна слика.',
 	'mobile-frontend-photo-upload-anon' => 'Морате бити пријављени да би додали слику на ову страницу.',
@@ -14701,6 +14717,7 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Чланци',
 	'mobile-frontend-watchlist-filter-talk' => 'Разговор',
 	'mobile-frontend-watchlist-filter-other' => 'Друго',
+	'mobile-frontend-diffview-404-title' => 'Лоша ревизија',
 	'mobile-frontend-diffview-title' => 'Измене',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|измена|измене}}',
 	'mobile-frontend-diffview-anonymous' => 'Анониман корисник',
@@ -14719,6 +14736,8 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-photo-upload-error' => 'Грешка, покушајте поново.',
 	'mobile-frontend-photo-submit' => 'Пошаљи',
 	'mobile-frontend-photo-cancel' => 'Откажи',
+	'mobile-frontend-photo-upload-login' => 'Морате бити пријављени да бисте додали слику.',
+	'mobile-frontend-editor-disabled' => 'Није вам дозвољено да уређујете ову страницу.',
 	'mobile-frontend-editor-unavailable' => 'Ваш веб прегледач не подржава мобилно уређивање. Покушајте са неким другим веб прегледачем.',
 	'mobile-frontend-editor-cta' => 'Морате бити пријављени да би сте уређивали преко мобилног телефона.',
 	'mobile-frontend-editor-edit' => 'Уреди',
@@ -14735,9 +14754,14 @@ $messages['sr-ec'] = array(
 	'tag-mobile_edit-description' => 'Измена начињена са мобилне верзије википедије',
 	'mobile-frontend-drawer-cancel' => 'Откажи',
 	'mobile-frontend-talk-overlay-header' => 'Разговор',
+	'mobile-frontend-talk-overlay-lead-header' => 'Неименована тема',
+	'mobile-frontend-talk-add-overlay-submit' => 'Додај тему',
+	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Предмет теме',
 	'mobile-frontend-talk-reply-success' => 'Ваш одговор је успешно сачуван на страници за разговор.',
 	'mobile-frontend-talk-reply' => 'Одговори',
 	'mobile-frontend-media-details' => 'Детаљи',
+	'mobile-frontend-profile-title' => 'Кориснички профил',
+	'mobile-frontend-profile-heading-recent' => 'Скорашње',
 );
 
 /** Serbian (Latin script) (srpski (latinica)‎)
@@ -17119,6 +17143,7 @@ $messages['zh-hans'] = array(
  * @author Cwlin0416
  * @author Lauhenry
  * @author Liangent
+ * @author Liuxinyu970226
  * @author Shirayuki
  * @author Simon Shek
  * @author StephDC
@@ -17208,7 +17233,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-main-menu-watchlist' => '監視列表',
 	'mobile-frontend-main-menu-settings' => '設定',
 	'mobile-frontend-main-menu-upload' => '上傳',
-	'mobile-frontend-main-menu-settings-heading' => '手機版網頁設定', # Fuzzy
+	'mobile-frontend-main-menu-settings-heading' => '設定',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}的語言版本',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}有$1種語言版本。下面列出所有版本',
 	'mobile-frontend-main-menu-account-create' => '建立帳戶',
@@ -17234,7 +17259,9 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-nearby-error-guidance' => '嘗試更新你的位置。',
 	'mobile-frontend-nearby-link' => '以全顯幕閱讀此頁',
 	'mobile-frontend-nearby-directions' => '瀏覽這嚃',
+	'mobile-frontend-donate-image-nouploads' => '無上載。',
 	'mobile-frontend-donate-image-login' => '您必須登入以查看您的上傳。',
+	'mobile-frontend-photo-upload-disabled' => '此頁面不需要圖像。',
 	'mobile-frontend-photo-upload-generic' => '貢獻圖片',
 	'mobile-frontend-donate-image-title' => '上載',
 	'mobile-frontend-donate-image-heading' => '您最近的貢獻',
@@ -17257,7 +17284,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => '登入',
 	'mobile-frontend-watchlist-cta-button-signup' => '註冊',
 	'mobile-frontend-watch-login' => '您必須登入以查看監視頁面。',
-	'mobile-frontend-watchlist-a-z' => '所有', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => '列表',
 	'mobile-frontend-watchlist-feed' => '曾修改',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => '按位於頁頂的星號',
 	'mobile-frontend-watchlist-a-z-empty-howto' => '您現時並沒有監視任何頁面。您旳監視列表讓您跟踪您有興趣的頁面。按位於頁頂的星號把頁面加到監視列表，',
@@ -17303,6 +17330,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-photo-nag-learn-more-2' => "''可以！''可以幫助説明和豐富{{SITENAME}}頁面的照片。",
 	'mobile-frontend-photo-nag-learn-more-3' => "''不可以！''電影海報、 書籍封面或其他受版權保護的材料。這些檔案將會被刪除。",
 	'mobile-frontend-lead-image-tutorial-summary' => '請確保您的圖片可以幫助說明文章，由您創建並且不侵犯版權。', # Fuzzy
+	'mobile-frontend-lead-image-tutorial-confirm' => '開始上載',
 	'mobile-frontend-image-uploading-wait' => '正在上傳圖片，請稍候。',
 	'mobile-frontend-image-uploading-long' => '圖像仍在上傳中！感謝您耐心等候。',
 	'mobile-frontend-image-uploading-cancel' => '若耗時過長，可<a href="#">取消</a>。',
@@ -17335,6 +17363,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-editor-error-loading' => '錯誤，無法載入章節。',
 	'mobile-frontend-editor-preview-header' => '預覽',
 	'mobile-frontend-editor-error-preview' => '錯誤，載入預覽時，發生錯誤。請關閉後再試。',
+	'mobile-frontend-editor-tutorial-confirm' => '開始編輯',
 	'tag-mobile_edit' => '手機編輯',
 	'tag-mobile_edit-description' => '從手機版所作的編輯',
 	'mobile-frontend-drawer-cancel' => '取消',
@@ -17349,7 +17378,9 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-talk-reply-success' => '您的答覆已保存在討論頁。',
 	'mobile-frontend-talk-reply' => '回覆',
 	'mobile-frontend-profile-last-upload-caption' => '上次上傳由 {{GENDER:$1|$1}}，{{PLURAL:$2|昨日|$2 天 前|0=今天}}.',
+	'mobile-frontend-profile-usertalk' => '參見討論頁。',
 	'mobile-frontend-profile-userpage-link' => '檢查使用者頁面',
+	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|此用戶}}是一個新手。',
 );
 
 /** Chinese (Hong Kong) (‪中文(香港)‬)
