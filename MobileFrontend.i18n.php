@@ -305,10 +305,8 @@ $messages['en'] = array (
 
 	// Special:UserProfile
 	'mobile-frontend-profile-title' => 'User profile',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 edit|$1 edits|0=No edits}} in last month',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 upload|$1 uploads|0=No uploads}} in last month',
-	'mobile-frontend-profile-edits-limit' => 'Over {{PLURAL:$1|$1 edit|$1 edits}} in last month',
-	'mobile-frontend-profile-uploads-limit' => 'Over {{PLURAL:$1|$1 upload|$1 uploads}} in last month',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 edit|$2 edits|0=No edits|501=More than 500 edits}}]] and
+[[Special:Uploads/$1|{{PLURAL:$3|1 upload|$3 uploads|0=no uploads|501=more than 500 uploads}}]] in the last 30 days.',
 	'mobile-frontend-profile-last-upload-caption' => 'Last upload by {{GENDER:$1|$1}}, {{PLURAL:$2|yesterday|$2 days ago|0=today}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recent',
 	'mobile-frontend-profile-registration' => '$1 has been a member for {{PLURAL:$2|$2 day|$2 days}} and has made {{PLURAL:$3|$3 edit|$3 edits}}.',
@@ -786,10 +784,11 @@ See also:
 	'abusefilter-edit-builder-vars-user-mobile' => 'See {{msg-mw|Abusefilter-edit-builder-vars-user-name}} (from AbuseFilter extension), for example.',
 	'mobile-frontend-profile-title' => 'Title of the [[Special:UserProfile]] page.
 {{Identical|User profile}}',
-	'mobile-frontend-profile-edits' => 'Edit count. Parameters:
-* $1 - number of edits in the last month
-See also:
-* {{msg-mw|Mobile-frontend-profile-edits-limit}}',
+	'mobile-frontend-profile-contributions' => 'Description of recent activity
+* $1 - username of person who owns profile
+* $2 - number of edits in the last 30 days
+* $3 - number of uploads in the last 30 days
+Note: $2 and $3 are capped at the value of MobileUserInfo::LIMIT currently 500.',
 	'mobile-frontend-profile-uploads' => 'Upload count in the last month.',
 	'mobile-frontend-profile-edits-limit' => 'Edit count when expressed to be over a certain number. Parameters:
 * $1 - number of edits

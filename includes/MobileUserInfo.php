@@ -4,6 +4,7 @@
  * Retrieves information about a user for Special:MobileProfile
  */
 class MobileUserInfo {
+	// Note: If changing this please check mobile-frontend-profile-contributions message key
 	const LIMIT = 500;
 
 	/**
@@ -19,7 +20,7 @@ class MobileUserInfo {
 	}
 
 	/**
-	 * Returns a count of the most recent edits since a given timestamp
+	 * Returns a count of the most recent edits since a given timestamp, not exceeding LIMIT
 	 *
 	 * @param Integer $fromDate Time to measure from
 	 * @return Integer the amount of edits
@@ -32,7 +33,7 @@ class MobileUserInfo {
 		);
 		$where[] = 'rc_timestamp > ' . $dbr->addQuotes( $dbr->timestamp( $fromDate ) );
 		$constraints = array(
-			'limit' => self::LIMIT + 1,
+			'LIMIT' => self::LIMIT + 1,
 		);
 		$innerSelect = $dbr->selectSQLText( 'recentchanges', 'rc_timestamp', $where, __METHOD__, $constraints );
 		$res = $dbr->query( "SELECT COUNT(*) FROM ($innerSelect) t", __METHOD__ );
@@ -46,7 +47,7 @@ class MobileUserInfo {
 	}
 
 	/**
-	 * Returns a count of the most recent uploads to $wgMFPhotoUploadWiki since a given timestamp
+	 * Returns a count of the most recent uploads to $wgMFPhotoUploadWiki since a given timestamp, not exceeding LIMIT
 	 *
 	 * @param Integer $fromDate Time to measure from
 	 * @return Integer the amount of edits
@@ -71,7 +72,7 @@ class MobileUserInfo {
 		$where = array( 'img_user_text' => $this->user->getName() );
 		$where[] = 'img_timestamp > ' . $dbr->addQuotes( $dbr->timestamp( $fromDate ) );
 		$constraints = array(
-			'limit' => self::LIMIT + 1,
+			'LIMIT' => self::LIMIT + 1,
 		);
 		$innerSelect = $dbr->selectSQLText( 'image', 'img_timestamp', $where, __METHOD__, $constraints );
 		$res = $dbr->query( "SELECT COUNT(*) FROM ($innerSelect) t", __METHOD__ );
