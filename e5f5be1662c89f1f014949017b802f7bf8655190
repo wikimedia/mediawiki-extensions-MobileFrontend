@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_7e8cf980",
+        "filename": "less/common/enwp.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T23:50:36Z",
+      "side": 1,
+      "message": "The float and clear are already set to \u0027right\u0027 in MediaWiki:Common.css. Setting width to auto is a bad idea. That will cause most infoboxes with image captions to expand to 400px. And if we get rid of width: auto, we don\u0027t really need the max-width either since I\u0027ve never seen an infobox set to more than 400px.",
+      "revId": "e5f5be1662c89f1f014949017b802f7bf8655190",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
