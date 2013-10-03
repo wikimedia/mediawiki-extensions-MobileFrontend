@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0932edd2_adf1e96b",
+        "filename": "includes/specials/SpecialMobileNotifications.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "This is going to conflict with https://gerrit.wikimedia.org/r/#/c/87263/",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_8d27c520",
         "filename": "javascripts/modules/NotificationsOverlay.js",
         "patchSetId": 23
@@ -13,6 +30,23 @@
       "writtenOn": "2013-10-03T18:55:43Z",
       "side": 1,
       "message": "I don\u0027t think this will work. Probably you meant self.onError();",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_6d1c51bf",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "probably worth restricting this to the existing view e.g. self.$( \u0027.mw-echo-notification\u0027 )",
       "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -36,6 +70,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_8d7985fc",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "yup. https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions",
+      "parentUuid": "0932edd2_0d3cb52c",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_ed36814f",
         "filename": "javascripts/modules/NotificationsOverlay.js",
         "patchSetId": 23
@@ -53,6 +105,41 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_6d7531f7",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "yeh this is wrong. This will refer to window.",
+      "parentUuid": "0932edd2_ed36814f",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_cd5c5d7e",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "please just use action, all, and token without quotes. This should fail jshint. Not sure why it doesn\u0027t.",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_8d06e587",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 23
@@ -64,6 +151,40 @@
       "writtenOn": "2013-10-03T18:55:43Z",
       "side": 1,
       "message": "notContinue?",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_2d541951",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "please don\u0027t quote these parameters",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_4d514d60",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "please don\u0027t quote these either.",
       "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -98,6 +219,23 @@
       "writtenOn": "2013-10-03T18:55:43Z",
       "side": 1,
       "message": "$( initialize );\nor even initialize(); since the JS is loaded at the bottom, isn\u0027t it?",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_8dc34509",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 23
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T19:08:06Z",
+      "side": 1,
+      "message": "We should probably have a generic class for things we want to have pointers and put it in common.less",
       "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
