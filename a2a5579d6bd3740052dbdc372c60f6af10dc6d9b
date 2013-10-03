@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_b3d78a49",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T22:16:13Z",
+      "side": 1,
+      "message": "true instead? If we want to, we can convert all trues to 1s in the api module.",
+      "revId": "a2a5579d6bd3740052dbdc372c60f6af10dc6d9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
