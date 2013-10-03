@@ -41,10 +41,15 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$constraints = array(
 			'limit' => self::LIMIT + 1,
 		);
-		$res = $dbr->select( 'recentchanges', 'rc_timestamp', $where, __METHOD__, $constraints );
-		$res = $res->numRows();
+		$innerSelect = $dbr->selectSQLText( 'recentchanges', 'rc_timestamp', $where, __METHOD__, $constraints );
+		$res = $dbr->query( "SELECT COUNT(*) FROM ($innerSelect) t", __METHOD__ );
+		$row = $res->fetchRow();
+		$result = 0;
+		if ( $row ) {
+			$result = $row[0];
+		}
 		wfProfileOut( __METHOD__ );
-		return $res;
+		return $result;
 	}
 
 	/**
@@ -76,10 +81,15 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$constraints = array(
 			'limit' => self::LIMIT + 1,
 		);
-		$res = $dbr->select( 'image', 'img_timestamp', $where, __METHOD__, $constraints );
-		$res = $res->numRows();
+		$innerSelect = $dbr->selectSQLText( 'image', 'img_timestamp', $where, __METHOD__, $constraints );
+		$res = $dbr->query( "SELECT COUNT(*) FROM ($innerSelect) t", __METHOD__ );
+		$row = $res->fetchRow();
+		$result = 0;
+		if ( $row ) {
+			$result = $row[0];
+		}
 		wfProfileOut( __METHOD__ );
-		return $res;
+		return $result;
 	}
 
 	/**
