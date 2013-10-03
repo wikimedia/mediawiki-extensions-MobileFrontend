@@ -8,9 +8,11 @@
 			className: 'mw-mf-overlay list-overlay',
 			template: M.template.get( 'overlays/notifications' ),
 			defaults: {
-				heading: mw.msg( 'notifications' )
+				heading: mw.msg( 'notifications' ),
+				archiveLink: mw.util.wikiGetlink( 'Special:Notifications' ),
+				archiveLinkMsg: mw.msg( 'echo-overlay-link' )
 			},
-			_error: function() {
+			onError: function() {
 				// Fall back to notifications archive page.
 				window.location.href = this.$badge.attr( 'href' );
 			},
@@ -30,13 +32,12 @@
 				this.$badge = options.$badge;
 				// On error use the url as a fallback
 				if ( options.error ) {
-					this._error();
+					this.onError();
 				} else {
 					api.get( {
 						action : 'query',
 						meta : 'notifications',
 						notformat : 'flyout',
-						notallunread : true,
 						notprop : 'index|list|count'
 					} ).done( function ( result ) {
 						var notifications;
@@ -45,7 +46,7 @@
 								return { message: a['*'], timestamp: a.timestamp.mw };
 							} );
 						} else {
-							this._error();
+							self.onError();
 						}
 
 						// Add the notifications to the overlay
@@ -56,29 +57,35 @@
 						}
 						self.render( options );
 
-						// If there is a primary link, make the entire notification clickable.
-						$( '.mw-echo-notification' ).each( function() {
+						self.$( '.mw-echo-notification' ).each( function() {
 							var $notification = $( this ),
 								$primaryLink = $notification.find( '.mw-echo-notification-primary-link' );
+							// If there is a primary link, make the entire notification clickable.
 							if ( $primaryLink.length ) {
-								$notification.css( 'cursor', 'pointer' );
-								$notification.click( function() {
+								$notification.addClass( 'mw-echo-linked-notification' );
+								$notification.on( 'click', function() {
 									window.location.href = $primaryLink.attr( 'href' );
 								} );
 							}
+							// Set up event logging for each notification
+							mw.loader.using( 'ext.echo.base', function() {
+								mw.echo.setupNotificationLogging( $notification, 'mobile-overlay' );
+							} );
 						} );
 
 						self.markAllAsRead();
 					} ).fail( function () {
-						self._error();
+						self.onError();
 					} );
 				}
 			},
 			markAllAsRead: function() {
-				api.post( {
-					action: 'query',
-					meta: 'notifications',
-					notmarkallread : true
+				api.getToken( 'edit' ).done( function( token ) {
+					api.post( {
+						action : 'echomarkread',
+						all : true,
+						token : token
+					} );
 				} );
 			},
 			postRender: function( options ) {

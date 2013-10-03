@@ -23,6 +23,9 @@ class SkinMobileBeta extends SkinMobile {
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['beta'] = array( 'mobile.beta' );
+		if ( $this->getUser()->isLoggedIn() ) {
+			$modules['beta'][] = 'mobile.notifications.overlay';
+		}
 
 		return $modules;
 	}
