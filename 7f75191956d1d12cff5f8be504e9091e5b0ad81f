@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_d0ccf4bf",
+        "filename": "includes/specials/SpecialMobileNotifications.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "See comments at that changeset.",
+      "parentUuid": "0932edd2_adf1e96b",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_8d27c520",
         "filename": "javascripts/modules/NotificationsOverlay.js",
         "patchSetId": 23
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_5052c4de",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "Good catch.",
+      "parentUuid": "0932edd2_8d27c520",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_6d1c51bf",
         "filename": "javascripts/modules/NotificationsOverlay.js",
         "patchSetId": 23
@@ -47,6 +83,24 @@
       "writtenOn": "2013-10-03T19:08:06Z",
       "side": 1,
       "message": "probably worth restricting this to the existing view e.g. self.$( \u0027.mw-echo-notification\u0027 )",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_b038609e",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "0932edd2_6d1c51bf",
       "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -88,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_d03dd48c",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "Will change.",
+      "parentUuid": "0932edd2_8d7985fc",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_ed36814f",
         "filename": "javascripts/modules/NotificationsOverlay.js",
         "patchSetId": 23
@@ -123,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_10484c2f",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "oops.",
+      "parentUuid": "0932edd2_6d7531f7",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_cd5c5d7e",
         "filename": "javascripts/modules/NotificationsOverlay.js",
         "patchSetId": 23
@@ -134,6 +224,24 @@
       "writtenOn": "2013-10-03T19:08:06Z",
       "side": 1,
       "message": "please just use action, all, and token without quotes. This should fail jshint. Not sure why it doesn\u0027t.",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_90335cc3",
+        "filename": "javascripts/modules/NotificationsOverlay.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "token is a variable name here, so the quotes are necessary (and make it less confusing)",
+      "parentUuid": "0932edd2_cd5c5d7e",
       "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -174,6 +282,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_b06140ae",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "Yeah, I don\u0027t know why those are quoted :P",
+      "parentUuid": "0932edd2_2d541951",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_4d514d60",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 23
@@ -208,6 +334,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_d056b4cc",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "Good idea.",
+      "parentUuid": "0932edd2_0dfbd577",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_6df2919a",
         "filename": "javascripts/specials/notifications.js",
         "patchSetId": 23
@@ -225,6 +369,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_b00a20d2",
+        "filename": "javascripts/specials/notifications.js",
+        "patchSetId": 23
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "I believe so. I\u0027ll simplify it.",
+      "parentUuid": "0932edd2_6df2919a",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_8dc34509",
         "filename": "less/modules/NotificationsOverlay.less",
         "patchSetId": 23
@@ -236,6 +398,24 @@
       "writtenOn": "2013-10-03T19:08:06Z",
       "side": 1,
       "message": "We should probably have a generic class for things we want to have pointers and put it in common.less",
+      "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_10fa0cbb",
+        "filename": "less/modules/NotificationsOverlay.less",
+        "patchSetId": 23
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-03T20:37:41Z",
+      "side": 1,
+      "message": "Yeah, that would be good.",
+      "parentUuid": "0932edd2_8dc34509",
       "revId": "7f75191956d1d12cff5f8be504e9091e5b0ad81f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
