@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_5333aef5",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T21:58:04Z",
+      "side": 1,
+      "message": "If it\u0027s a variable, then why does it look like a constant? I know it should be constant...\nAlso, how about making this an int without \u0027px\u0027 and create a LESS var in variables.less:\n\n@deviceWidthTablet \u003d \"@{DEVICE_WIDTH_TABLET}px\";",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_b3522a11",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T21:58:04Z",
+      "side": 1,
+      "message": "That\u0027s confusing because it doesn\u0027t contain all the properties of $wgResourceLoaderLESSVar. Maybe just add it as MFDeviceWidthTablet?",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f35ca224",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T21:58:04Z",
+      "side": 1,
+      "message": "If we make this var an int, parseInt() wouldn\u0027t be needed.",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d3579eff",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T21:58:04Z",
+      "side": 1,
+      "message": "I\u0027m not sure if that\u0027s even needed.",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
