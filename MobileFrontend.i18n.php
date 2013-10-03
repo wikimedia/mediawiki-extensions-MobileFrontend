@@ -310,7 +310,7 @@ $messages['en'] = array (
 [[Special:Uploads/$1|{{PLURAL:$3|1 upload|$3 uploads|0=no uploads|501=more than 500 uploads}}]] in the last 30 days.',
 	'mobile-frontend-profile-last-upload-caption' => 'Last upload by {{GENDER:$1|$1}}, {{PLURAL:$2|yesterday|$2 days ago|0=today}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recent',
-	'mobile-frontend-profile-registration' => '$1 has been a member for {{PLURAL:$2|$2 day|$2 days}} and has made {{PLURAL:$3|$3 edit|$3 edits}}.',
+	'mobile-frontend-profile-registration' => '$1 has been contributing to {{SITENAME}} for {{PLURAL:$2|$2 day|$2 days}} and has made {{PLURAL:$3|$3 edit|$3 edits}}.',
 	'mobile-frontend-profile-usertalk' => 'View talk page.',
 	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
 	'mobile-frontend-profile-yours' => 'Visit your profile page.',
@@ -318,7 +318,8 @@ $messages['en'] = array (
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|This user}} is a new editor.',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|This user}} is a somewhat experienced editor.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|This user}} is a prolific editor.',
-	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.'
+	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Last thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
 );
 
 /** Message documentation (Message documentation)
@@ -823,6 +824,11 @@ Preceded by {{msg-mw|Mobile-frontend-profile-noargs}}.',
 	'mobile-frontend-profile-user-desc-2' => 'Summary describing that the user is somewhat experienced.',
 	'mobile-frontend-profile-user-desc-3' => 'Summary describing the type of experience the user has.',
 	'mobile-frontend-requires-optin' => 'Message that shows when a page requires beta mode to work. Wikitext that links to [[Special:MobileOptions]] page.',
+	'mobile-frontend-profile-last-thanked' => 'Informs about person who last thanked a user on Special:UserProfile
+Parameters:
+* $1 - name of user who thanked
+* $2 - title of page for editing which the thank was given
+* $3 - name of user who was thanked, for <nowiki>{{GENDER}}</nowiki>',
 );
 
 /** Achinese (Acèh)
