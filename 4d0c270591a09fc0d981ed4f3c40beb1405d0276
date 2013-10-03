@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_93b8c6e7",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T22:39:17Z",
+      "side": 1,
+      "message": "This space add the beginning seems very bug prone. You could just use a separate addClass() call (and also leave openClassName undefined).\n\nAlternatively, you could store the nodes where you want to add this class in variable(s) and then just add the class without stroing the class name in any variable.",
+      "revId": "4d0c270591a09fc0d981ed4f3c40beb1405d0276",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
