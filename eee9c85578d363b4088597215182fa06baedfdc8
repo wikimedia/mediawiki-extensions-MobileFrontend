@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_30c6304d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-03T21:09:18Z",
+      "side": 1,
+      "message": "Should a comma be added? Same in \"No, thanks\"?",
+      "revId": "eee9c85578d363b4088597215182fa06baedfdc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
