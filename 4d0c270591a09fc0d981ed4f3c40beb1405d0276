@@ -16,6 +16,24 @@
       "revId": "4d0c270591a09fc0d981ed4f3c40beb1405d0276",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_5351ee5f",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-03T23:04:39Z",
+      "side": 1,
+      "message": "It seems cleaner to me this way as class names are only added in one place (below)... Why does this seem bug prone to you?",
+      "parentUuid": "0932edd2_93b8c6e7",
+      "revId": "4d0c270591a09fc0d981ed4f3c40beb1405d0276",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
