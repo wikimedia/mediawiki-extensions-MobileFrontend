@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_135db645",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T23:13:36Z",
+      "side": 1,
+      "message": "Maybe, I don\u0027t have a very strong opinion about that. It just looks odd, because we don\u0027t use capital letters anywhere in LESS or in mw.config.",
+      "parentUuid": "0932edd2_137f7613",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_b3522a11",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Yeh I couldn\u0027t decide how best to do this. I wanted to be consistent with the other variable names - they tend to describe a global. Not sure what is the right thing to do here.",
       "parentUuid": "0932edd2_b3522a11",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_b336aa00",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T23:13:36Z",
+      "side": 1,
+      "message": "Not all of them, we probably have to refactor this a bit. We can leave this for now I guess, but I feel someone will be surprised DEVICE_WIDTH_MOBILE_SMALL is not there.",
+      "parentUuid": "0932edd2_337c7a1c",
       "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -118,6 +154,24 @@
       "side": 1,
       "message": "why?\nIf I\u0027m on a phone I\u0027m more likely to be on a slow connection. We search on every character...",
       "parentUuid": "0932edd2_d3579eff",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_737b52bc",
+        "filename": "javascripts/modules/search/pageImages.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-03T23:13:36Z",
+      "side": 1,
+      "message": "Oh, right, I forgot that we search on every character. Maybe we should add a delay (but a smaller one) for the search itself?",
+      "parentUuid": "0932edd2_5379ee2a",
       "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
