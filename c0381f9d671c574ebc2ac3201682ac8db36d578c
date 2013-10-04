@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_34fb7d78",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-04T21:54:04Z",
+      "side": 1,
+      "message": "The indenting here seems rather random.",
+      "revId": "c0381f9d671c574ebc2ac3201682ac8db36d578c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_14067986",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-04T21:54:04Z",
+      "side": 1,
+      "message": "Aren\u0027t you missing \"Html::closeElement( \u0027div\u0027 );\" here?",
+      "revId": "c0381f9d671c574ebc2ac3201682ac8db36d578c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
