@@ -80,15 +80,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		)
 	),
 
-	// main page
-	'mobile.mainpage.styles' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array( 'mobile.startup' ),
-		'styles' => array(
-			'less/mainpage/mainpage.less',
-		),
-		'group' => 'other',
-	),
-
 	'mobile.file.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array( 'mobile.startup' ),
 		'scripts' => array(

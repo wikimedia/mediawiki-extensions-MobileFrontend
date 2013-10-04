@@ -21,11 +21,6 @@ class SkinMobileAlpha extends SkinMobileBeta {
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['alpha'] = array( 'mobile.alpha' );
-		// main page special casing
-		if ( $this->getTitle()->isMainPage() ) {
-			$this->getOutput()->addModuleStyles( 'mobile.mainpage.styles' );
-			$modules['mainpage'] = array();
-		}
 		return $modules;
 	}
 
