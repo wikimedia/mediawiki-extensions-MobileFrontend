@@ -11,7 +11,7 @@ When /^I click on the desktop link$/ do
 end
 
 Then /^I go to the desktop wiki page$/ do
-  @browser.url.should match Regexp.escape('toggle_view_desktop')
+  on(HomePage).mobile_view_element.element.wait_until_present
 end
 
 When /^I click on the Content license link$/ do
