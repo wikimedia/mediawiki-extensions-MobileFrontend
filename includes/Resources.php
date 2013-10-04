@@ -350,7 +350,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta.common',
 		),
 		'styles' => array(
-			'less/modules/notifications.less',
 			'less/modules/talk.less',
 		),
 		'scripts' => array(
