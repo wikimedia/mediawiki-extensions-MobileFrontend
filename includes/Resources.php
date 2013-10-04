@@ -28,19 +28,11 @@ $localBasePath = dirname( __DIR__ );
 $remoteExtPath = 'MobileFrontend';
 
 /**
- * A boilerplate containing common properties for all RL modules served to mobile site
+ * A boilerplate for the MFResourceLoaderModule that supports templates
  */
 $wgMFMobileResourceBoilerplate = array(
 	'localBasePath' => $localBasePath,
 	'remoteExtPath' => $remoteExtPath,
-	'targets' => array( 'mobile', 'desktop' ),
-);
-
-/**
- * A boilerplate for the MFResourceLoaderModule that supports templates
- */
-$wgMFMobileResourceTemplateBoilerplate = array(
-	'localBasePath' => $localBasePath,
 	'localTemplateBasePath' => $localBasePath . '/templates',
 	'class' => 'MFResourceLoaderModule',
 );
@@ -70,6 +62,17 @@ $wgMFMobileSpecialPageResourceStyleBoilerplate = $wgMFMobileSpecialPageResourceB
 );
 
 $wgResourceModules = array_merge( $wgResourceModules, array(
+	// FIXME: Upstream to core
+	'mobile.templates' => array(
+		'localBasePath' => $localBasePath,
+		'remoteExtPath' => $remoteExtPath,
+		'scripts' => array(
+			'javascripts/externals/hogan.js',
+			'javascripts/common/templates.js'
+		),
+		'targets' => array( 'mobile', 'desktop' ),
+	),
+
 	// EventLogging
 	'mobile.loggingSchemas' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
@@ -77,7 +80,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/loggingSchemas/MobileWebClickTracking.js',
-		)
+		),
 	),
 
 	'mobile.file.scripts' => $wgMFMobileResourceBoilerplate + array(
@@ -134,9 +137,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.startup' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.head',
+			'mobile.templates',
 		),
 		'scripts' => array(
-			'javascripts/externals/hogan.js',
 			'javascripts/common/Router.js',
 			'javascripts/common/api.js',
 			'javascripts/common/PageApi.js',
@@ -147,64 +150,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'bottom',
 	),
 
-	'mobile.stable.plumbing' => array(
-		'messages' => array(
-			// page.js
-			'mobile-frontend-talk-overlay-header',
-			'mobile-frontend-language-article-heading',
-			// editor.js
-			'mobile-frontend-editor-disabled',
-			'mobile-frontend-editor-unavailable',
-			'mobile-frontend-editor-cta',
-			'mobile-frontend-editor-edit',
-			// modules/editor/EditorOverlay.js and modules/talk.js
-			'mobile-frontend-editor-save',
-		),
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
-		'templates' => array(
-			'LoadingOverlay',
-			'section',
-			'wikitext/commons-upload',
-			// LanguageOverlay.js
-			'overlays/languages',
-			'overlay',
-			'overlays/cleanup',
-			// search-2.js
-			'articleList',
-			'overlays/search/search',
-			// page.js
-			'page',
-			'languageSection',
-			// PhotoUploaderButton.js
-			// For new page action menu
-			'uploads/LeadPhotoUploaderButton',
-			// FIXME: this should be in special.uploads.plumbing (need to split
-			// code in PhotoUploaderButton.js into separate files too)
-			'uploads/PhotoUploaderButton',
-
-			'ctaDrawer',
-			// mf-references.js
-			'ReferencesDrawer',
-		),
-		'class' => 'MFResourceLoaderModule',
-	),
-
 	'mobile.editor' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
-			'mobile.editor.plumbing',
+			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
 			'javascripts/modules/editor/EditorOverlay.js',
 		),
-	),
-
-	'mobile.editor.plumbing' => array(
-		'class' => 'MFResourceLoaderModule',
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
 			'overlays/editor',
 		),
@@ -235,7 +189,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.uploads' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
-			'mobile.uploads.plumbing',
+			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/modules/uploads/LearnMoreOverlay.js',
@@ -246,12 +200,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/uploads/LeadPhoto.js',
 			'javascripts/modules/uploads/PhotoUploader.js',
 		),
-	),
-
-	'mobile.uploads.plumbing' => array(
-		'class' => 'MFResourceLoaderModule',
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
 			'uploads/PhotoUploadPreview',
 			'uploads/PhotoUploadProgress',
@@ -306,23 +254,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.beta.plumbing' => array(
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
+	'mobile.beta.common' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
 			// NotificationsOverlay.js
 			'overlays/notifications',
 			// page.js
 			'pageActionTutorial',
 		),
-		'class' => 'MFResourceLoaderModule',
-	),
-
-	'mobile.beta.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.beta.plumbing',
 			'mobile.stable.common',
 			'mobile.loggingSchemas',
+			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/common/ContentOverlay.js',
@@ -376,18 +318,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.talk' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.beta',
-			'mobile.talk.plumbing',
+			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/modules/talk/TalkSectionOverlay.js',
 			'javascripts/modules/talk/TalkOverlay.js',
 		),
-	),
-
-	'mobile.talk.plumbing' => array(
-		'class' => 'MFResourceLoaderModule',
-		'localBasePath' => $localBasePath,
-		'localTemplateBasePath' => $localBasePath . '/templates',
 		'templates' => array(
 			// talk.js
 			'overlays/talk',
@@ -410,19 +346,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.alpha.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
+	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
 			'overlays/nearby',
 			'modules/ImageOverlay',
 		),
-	),
-
-	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta',
-			'mobile.alpha.plumbing',
 			'mobile.nearby',
+			'mobile.templates',
 		),
 		'messages' => array(
 
@@ -475,10 +408,34 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.stable.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
-			'mobile.stable.plumbing',
 			'mobile.toast.styles',
 			'mediawiki.jqueryMsg',
 			'mediawiki.util',
+		),
+		'templates' => array(
+			'LoadingOverlay',
+			'section',
+			'wikitext/commons-upload',
+			// LanguageOverlay.js
+			'overlays/languages',
+			'overlay',
+			'overlays/cleanup',
+			// search-2.js
+			'articleList',
+			'overlays/search/search',
+			// page.js
+			'page',
+			'languageSection',
+			// PhotoUploaderButton.js
+			// For new page action menu
+			'uploads/LeadPhotoUploaderButton',
+			// FIXME: this should be in special.uploads (need to split
+			// code in PhotoUploaderButton.js into separate files too)
+			'uploads/PhotoUploaderButton',
+
+			'ctaDrawer',
+			// mf-references.js
+			'ReferencesDrawer',
 		),
 		'scripts' => array(
 			'javascripts/common/View.js',
@@ -511,6 +468,17 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-language-header',
 			'mobile-frontend-language-site-choose',
 			'mobile-frontend-language-footer',
+
+			// page.js
+			'mobile-frontend-talk-overlay-header',
+			'mobile-frontend-language-article-heading',
+			// editor.js
+			'mobile-frontend-editor-disabled',
+			'mobile-frontend-editor-unavailable',
+			'mobile-frontend-editor-cta',
+			'mobile-frontend-editor-edit',
+			// modules/editor/EditorOverlay.js and modules/talk.js
+			'mobile-frontend-editor-save',
 		),
 	),
 
@@ -520,6 +488,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.stable.common',
 			'mediawiki.util',
 			'mobile.stable.styles',
+			'mobile.templates',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/editor.js',
@@ -610,13 +579,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.nearby.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
-		'templates' => array(
-			'articleList',
-			'overlays/pagePreview',
-		),
-	),
-
 	'mobile.nearby.previews' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.nearby.scripts',
@@ -639,12 +601,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(
+		'templates' => array(
+			'articleList',
+			'overlays/pagePreview',
+		),
 		'dependencies' => array(
 			'mobile.stable.common',
 			'mobile.nearby.styles',
-			'mobile.nearby.plumbing',
 			'jquery.json',
 			'mediawiki.language',
+			'mobile.templates',
 		),
 		'messages' => array(
 			// NearbyApi.js
@@ -745,7 +711,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 	// Special:Uploads
-	'mobile.special.uploads.plumbing' => $wgMFMobileResourceTemplateBoilerplate + array(
+	'mobile.special.uploads.plumbing' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
 			'specials/uploads/carousel',
 			'specials/uploads/photo',
@@ -754,10 +720,15 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 	'mobile.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
-			'mobile.special.uploads.plumbing',
 			'mobile.stable.styles',
 			'mobile.stable.common',
 			'mobile.uploads',
+			'mobile.templates',
+		),
+		'templates' => array(
+			'specials/uploads/carousel',
+			'specials/uploads/photo',
+			'specials/uploads/userGallery',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-generic',

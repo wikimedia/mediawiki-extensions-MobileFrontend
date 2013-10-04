@@ -27,6 +27,11 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 			)
 		),
 
+		'dependenciesTemplatesModule' => array(
+			'templates' => array( 'foo' ),
+			'dependencies' => array( 'dependency1', 'dependency2' )
+		),
+
 		'dependenciesModule' => array(
 			'dependencies' => array( 'dependency1', 'dependency2' )
 		)
@@ -145,14 +150,5 @@ class MFResourceLoaderModuleTest extends MediaWikiTestCase {
 		$js = $rl->getTemplateScript();
 
 		$this->assertEquals( $js, $expected );
-	}
-
-	public function testGetDependencies() {
-		$rlModule = new MFResourceLoaderModule( $this->modules['dependenciesModule'] );
-		$dependencies = $rlModule->getDependencies();
-
-		$this->assertContains( 'dependency1', $dependencies );
-		$this->assertContains( 'dependency2', $dependencies );
-		$this->assertContains( 'mobile.startup', $dependencies );
 	}
 }

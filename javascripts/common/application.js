@@ -3,44 +3,7 @@
 ( function( M, $ ) {
 	var Router = M.require( 'Router' ),
 		PageApi = M.require( 'PageApi' ),
-		$viewportMeta, viewport,
-		template,
-		templates = {};
-
-	template = {
-		/**
-		 * Define template using html. Compiles newly added templates
-		 *
-		 * @param {string} name: Name of template to add
-		 * @param {string} markup: Associated markup (html)
-		 */
-		add: function( name, markup ) {
-			templates[ name ] = this.compile( markup );
-		},
-		/**
-		 * Retrieve defined template
-		 *
-		 * @param {string} name: Name of template to be retrieved
-		 * @return {Hogan.Template}
-		 * accepts template data object as its argument.
-		 */
-		get: function( name ) {
-			if ( !templates[ name ] ) {
-				throw new Error( 'Template not found: ' + name );
-			}
-			return templates[ name ];
-		},
-		/**
-		 * Wraps our template engine of choice (currently Hogan).
-		 *
-		 * @param {string} templateBody Template body.
-		 * @return {Hogan.Template}
-		 * accepts template data object as its argument.
-		 */
-		compile: function( templateBody ) {
-			return Hogan.compile( templateBody );
-		}
-	};
+		$viewportMeta, viewport;
 
 	// http://www.quirksmode.org/blog/archives/2010/12/the_fifth_posit.html
 	// https://github.com/Modernizr/Modernizr/issues/167
@@ -288,7 +251,8 @@
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,
-		template: template,
+		// FIXME: Replace all instances of M.template with mw.template
+		template: mw.template,
 		unlockViewport: unlockViewport,
 		router: new Router(),
 		pageApi: new PageApi(),
