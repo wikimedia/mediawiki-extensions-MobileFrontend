@@ -16,6 +16,24 @@
       "revId": "370f9f799454938a3c15e2bc5b9d5836472173d4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_5e52d5de",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-04T00:03:56Z",
+      "side": 1,
+      "message": "I was trying to avoid a dependency - but I\u0027ll make these optional instead if you find it confusing.",
+      "parentUuid": "0932edd2_fe2389a8",
+      "revId": "370f9f799454938a3c15e2bc5b9d5836472173d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
