@@ -109,7 +109,7 @@ class MinervaTemplate extends BaseTemplate {
 	protected function renderContentWrapper( $data ) {
 		$isSpecialPage = $this->getSkin()->getTitle()->isSpecialPage();
 		?>
-		<div class='show' id='content_wrapper'>
+		<div id="content_wrapper">
 			<?php
 				if ( !$isSpecialPage ) {
 					echo $data['prebodytext'];
