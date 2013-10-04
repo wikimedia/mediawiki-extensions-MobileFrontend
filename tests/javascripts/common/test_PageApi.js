@@ -7,6 +7,45 @@
 		}
 	} );
 
+	QUnit.test( '#getPage (h1s)', 1, function( assert ) {
+		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+			"mobileview": {
+				"sections":[
+					{"id":0,"text":""},
+					{"level":"1","line":"1","anchor":"1","id":1,"text":"<p>Text of 1\n</p>"},
+					{"level":"2","line":"1.1","anchor":"1.1","id":2,"text":"<p>Text of 1.1\n</p>"},
+					{"level":"1","line":"2","anchor":"2","id":3,"text":"<p>Text of 2\n</p>"},
+					{"level":"2","line":"2.1","anchor":"2.1","id":4,"text":"<p>Text of 2.1\n</p>"} ]
+			}
+		} ) );
+
+		pageApi.getPage( 'Test' ).done( function( resp ) {
+			assert.deepEqual( resp, {
+				title: 'Test',
+				id: -1,
+				isMainPage: false,
+				lead: '',
+				sections: [
+					{
+						"level": "1",
+						"line": "1",
+						"anchor": "1",
+						"id": 1,
+						"text": '<p>Text of 1\n</p><h2 id="1.1">1.1</h2><p>Text of 1.1\n</p>'
+					},
+					{
+						"level": "1",
+						"line": "2",
+						"anchor": "2",
+						"id": 3,
+						"text": '<p>Text of 2\n</p><h2 id="2.1">2.1</h2><p>Text of 2.1\n</p>'
+					}
+				]
+			}, 'return lead and sections' );
+		} );
+		PageApi.prototype.get.restore();
+	} );
+
 	QUnit.test( '#getPage', 2, function( assert ) {
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
