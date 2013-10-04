@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_878cf981",
+        "filename": "javascripts/loggingSchemas/MobileWebClickTracking.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:17:06Z",
+      "side": 1,
+      "message": "Use username variable.",
+      "revId": "a402f552c8149668272aecbc359894839d0fce6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
