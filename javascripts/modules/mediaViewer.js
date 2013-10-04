@@ -121,7 +121,7 @@
 	}
 
 	// FIXME: this should bind to only 1-2 events
-	init( $( '#content' ) );
+	init( $( '#content_wrapper' ) );
 	M.on( 'page-loaded', function( page ) {
 		init( page.$el );
 	} );

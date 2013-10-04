@@ -78,18 +78,6 @@ class SkinMobile extends SkinMinerva {
 	}
 
 	/**
-	 * This will be called by OutputPage::headElement when it is creating the
-	 * "<body>" tag, - adds output property bodyClassName to the existing classes
-	 * @param $out OutputPage
-	 * @param $bodyAttrs Array
-	 */
-	public function addToBodyAttributes( $out, &$bodyAttrs ) {
-		// does nothing by default
-		$classes = $out->getProperty( 'bodyClassName' );
-		$bodyAttrs[ 'class' ] .= ' ' . $classes;
-	}
-
-	/**
 	 * @param string $className: valid class name
 	 */
 	private function addPageClass( $className ) {

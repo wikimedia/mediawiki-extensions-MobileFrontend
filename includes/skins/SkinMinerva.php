@@ -186,6 +186,8 @@ class SkinMinerva extends SkinTemplate {
 
 		$tpl->set( 'page_actions', $menu );
 		$this->prepareUserButton( $tpl );
+
+		$tpl->set( 'unstyledContent', $out->getProperty( 'unstyledContent' ) );
 	}
 
 	/**

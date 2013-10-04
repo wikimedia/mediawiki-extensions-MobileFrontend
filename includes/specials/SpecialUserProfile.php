@@ -96,20 +96,28 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$this->msg( 'mobile-frontend-profile-uploads', $uploadCount );
 		$msgEdits = $count > MobileUserInfo::LIMIT ? $this->msg( 'mobile-frontend-profile-edits-limit', MobileUserInfo::LIMIT ) :
 				$this->msg( 'mobile-frontend-profile-edits', $count );
-		$statsRecent = array(
+
+		$html =
+			Html::openElement( 'div', array( 'class' => 'section section-activity' ) ) .
+			Html::openElement( 'div' ) .
 			Html::element( 'a',
 				array( 'href' => $urlContributions, 'class' => 'statement' ),
-				$msgEdits ),
+				$msgEdits ) .
+			Html::closeElement( 'div' ) .
+			Html::openElement( 'div' ) .
 			Html::element( 'a',
 				array( 'href' => $urlUploads, 'class' => 'statement' ),
-				$msgUploads ),
-		);
+				$msgUploads ) .
+			Html::closeElement( 'div' );
+
 		$lastUploadHtml = $this->getLastUpload();
+
 		if ( $lastUploadHtml ) {
-			$statsRecent[] = $lastUploadHtml;
+			$html .= $lastUploadHtml;
 		}
 
-		$html = $this->getListHtml( 'ul', array( 'class' => 'section section-activity' ), $statsRecent );
+		$html .= Html::closeElement( 'div' );
+
 		wfProfileOut( __METHOD__ );
 		return $html;
 	}
