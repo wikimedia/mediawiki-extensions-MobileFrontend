@@ -45,7 +45,7 @@
 
 			// FIXME: this is horrible, because it makes preRender run _during_ render...
 			if ( !options.sections ) {
-				$el.empty().addClass( 'loading' );
+				$el.empty().addClass( 'spinner loading' );
 				// FIXME: api response should also return last modified timestamp and page_top_level_section_count property
 				M.pageApi.getPage( pageTitle ).done( function( pageData ) {
 					options = $.extend( options, pageData );
@@ -66,7 +66,7 @@
 					} );
 
 					// reset loader
-					$el.removeClass( 'loading' );
+					$el.removeClass( 'spinner loading' );
 
 					self.emit( 'ready', self );
 				} ).fail( $.proxy( self, 'emit', 'error' ) );
