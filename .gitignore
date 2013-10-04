@@ -5,4 +5,3 @@
 .idea/
 node_modules/
 tmp/
-tests/acceptance/Gemfile.lock

@@ -18,7 +18,7 @@ fi
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Checking required dependencies..."
-cd "$DIR/../tests/acceptance"
+cd "$DIR/../tests/browser"
 bundle install
 echo "Running Cucumber tests..."
 echo "Please ensure you have a user account for User:Selenium_user"

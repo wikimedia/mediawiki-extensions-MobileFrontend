@@ -60,13 +60,13 @@ To run only JS tests:
 
 ==== Selenium tests ====
 To run the Selenium tests you will have to install Ruby (for the exact
-version see tests/acceptance/.ruby-version), the latest versions of
+version see tests/browser/Gemfile), the latest versions of
 RubyGems and Firefox.
 
 The easiest way to install Ruby on *nix is RVM (https://rvm.io/) and on
 Windows RubyInstaller (http://rubyinstaller.org/).
 
-Open terminal in tests/acceptance. Update RubyGems and install required
+Open terminal in tests/browser. Update RubyGems and install required
 gems with:
 
   gem update --system
@@ -82,8 +82,7 @@ Run the tests with:
 
   bundle exec cucumber
 
-HTML report is created at tests/acceptance/reports and XML report (for
-Jenkins) is created at tests/acceptance/reports/junit.
+XML report (for Jenkins) is created at tests/browser/reports/junit.
 
 Jenkins is hosted at https://wmf.ci.cloudbees.com/ and it drives
 browsers at http://saucelabs.com/
