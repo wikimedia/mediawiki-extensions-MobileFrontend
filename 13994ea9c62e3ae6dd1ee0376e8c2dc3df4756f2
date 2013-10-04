@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_5120034c",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-10-04T18:36:26Z",
+      "side": 1,
+      "message": "The variable name is also a bit unclear -- I\u0027d throw in a MobileFrontend-specific prefix on the name.",
+      "parentUuid": "0932edd2_135db645",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_b3522a11",
         "filename": "includes/skins/SkinMinerva.php",
         "patchSetId": 1
@@ -119,6 +137,24 @@
       "writtenOn": "2013-10-03T21:58:04Z",
       "side": 1,
       "message": "If we make this var an int, parseInt() wouldn\u0027t be needed.",
+      "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_31e46f10",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-10-04T18:36:26Z",
+      "side": 1,
+      "message": "This will also break if someone tries non-px units. :)\n\nI\u0027d recommend setting the width in a global config var, then add the \u0027px\u0027 units in the LESS var since CSS prefers numbers to keep their units on them, but expose it to JS as an int.",
+      "parentUuid": "0932edd2_f35ca224",
       "revId": "13994ea9c62e3ae6dd1ee0376e8c2dc3df4756f2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
