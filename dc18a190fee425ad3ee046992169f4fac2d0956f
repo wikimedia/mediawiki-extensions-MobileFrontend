@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_87e5d93b",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:31:19Z",
+      "side": 1,
+      "message": "It\u0027s an integer, no need to do that.",
+      "revId": "dc18a190fee425ad3ee046992169f4fac2d0956f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_87beb9f9",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 258,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:31:19Z",
+      "side": 1,
+      "message": "Don\u0027t we need a spinner here? Or maybe we don\u0027t care in this case? What if this takes several seconds to load and user gets no feedback about their edit?",
+      "revId": "dc18a190fee425ad3ee046992169f4fac2d0956f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_c738b19f",
+        "filename": "javascripts/modules/keepgoing/KeepGoingCta.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:31:19Z",
+      "side": 1,
+      "message": "So we need to override render() because we\u0027re waiting for async call to finish? We should put a FIXME here and think about a better way of handling this.",
+      "revId": "dc18a190fee425ad3ee046992169f4fac2d0956f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_e75695cc",
+        "filename": "javascripts/modules/random/random.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:31:19Z",
+      "side": 1,
+      "message": "Is that file used anywhere? Maybe we should abstract that code for initializing KeepGoing CTA? It seems to appear in various places.",
+      "revId": "dc18a190fee425ad3ee046992169f4fac2d0956f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_071569ef",
+        "filename": "less/common/drawer.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:31:19Z",
+      "side": 1,
+      "message": ".button.large !",
+      "revId": "dc18a190fee425ad3ee046992169f4fac2d0956f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_670465c3",
+        "filename": "templates/ctaDrawer.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:31:19Z",
+      "side": 1,
+      "message": "large",
+      "revId": "dc18a190fee425ad3ee046992169f4fac2d0956f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_4720414c",
+        "filename": "templates/keepgoing/drawer.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T23:31:19Z",
+      "side": 1,
+      "message": "Maybe KeepGoingCta.html?",
+      "revId": "dc18a190fee425ad3ee046992169f4fac2d0956f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
