@@ -3,7 +3,7 @@
  * ResourceLoaderModule subclass for mobile
  * Allows basic parsing of messages without arguments
  */
-class MFResourceLoaderModule extends ResourceLoaderModule {
+class MFResourceLoaderModule extends ResourceLoaderFileModule {
 	protected $dependencies = array();
 	protected $parsedMessages = array();
 	protected $messages = array();
@@ -12,6 +12,8 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	protected $targets = array( 'mobile', 'desktop' );
 	/** String: The local path to where templates are located, see __construct() */
 	protected $localTemplateBasePath = '';
+	private $hasParsedMessages = false;
+	private $hasTemplates = false;
 
 	/**
 	 * Registers core modules and runs registration hooks.
@@ -20,24 +22,22 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 		foreach ( $options as $member => $option ) {
 			switch ( $member ) {
 				case 'localTemplateBasePath':
-				case 'localBasePath':
 					$this->{$member} = (string) $option;
 					break;
 				case 'templates':
-				case 'dependencies':
+					$this->hasTemplates = true;
 					$this->{$member} = (array) $option;
 					break;
 				case 'messages':
 					$this->processMessages( $option );
+					$this->hasParsedMessages = true;
+					// Prevent them being reinitialised when parent construct is called.
+					unset( $options[$member] );
 					break;
 			}
 		}
 
-		// MFResourceLoaderModule must depend on mobile.startup because
-		// mobile.startup contains code responsible for compiling templates
-		if ( !in_array( 'mobile.startup', $this->dependencies ) ) {
-			$this->dependencies[] = 'mobile.startup';
-		}
+		parent::__construct( $options );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 			$localPath = $this->getLocalTemplatePath( $templateName );
 			if ( file_exists( $localPath ) ) {
 				$content = file_get_contents( $localPath );
-				$js .= Xml::encodeJsCall( 'mw.mobileFrontend.template.add', array( $templateName, $content ) );
+				$js .= Xml::encodeJsCall( 'mw.template.add', array( $templateName, $content ) );
 			} else {
 				$msg = __METHOD__.": template file not found: \"$localPath\"";
 				throw new MWException( $msg );
@@ -129,6 +129,11 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 		return $this->messages;
 	}
 
+	public function supportsURLLoading() {
+		// When templates or parsed messages are present in the module force load.php urls
+		return $this->hasTemplates || $this->hasParsedMessages ? false : true;
+	}
+
 	/**
 	 * Gets all scripts for a given context concatenated together including processed messages
 	 *
@@ -136,7 +141,8 @@ class MFResourceLoaderModule extends ResourceLoaderModule {
 	 * @return String: JavaScript code for $context
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
-		return $this->addParsedMessages() . $this->getTemplateScript();
+		$script = parent::getScript( $context );
+		return $this->addParsedMessages() . $this->getTemplateScript() . $script;
 	}
 
 	/**
