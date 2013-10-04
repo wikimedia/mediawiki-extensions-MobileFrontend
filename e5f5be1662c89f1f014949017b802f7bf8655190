@@ -16,6 +16,24 @@
       "revId": "e5f5be1662c89f1f014949017b802f7bf8655190",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_3e6e0198",
+        "filename": "less/common/enwp.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-04T00:06:42Z",
+      "side": 1,
+      "message": "To quote Kaldari \"ignore me\"\n(He may be right but I\u0027d rather do this as a separate patchset and just keep the existing styling :))",
+      "parentUuid": "0932edd2_7e8cf980",
+      "revId": "e5f5be1662c89f1f014949017b802f7bf8655190",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
