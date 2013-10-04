@@ -1,0 +1,225 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_993387c3",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "Something smells fishy. The using code looks like this:\n\n $this-\u003emsg( \u0027mobile-frontend-profile-last-thanked\u0027, $user, $title-\u003egetFullText() )-\u003erawParams( $link )\n\nI only see two parameters used and documented. Also see comment on PS1.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_990547c7",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$daysAgo should be numParams() as it\u0027s used for plural and displayed.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_b90a0bd2",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$msg() does not have an output format specified.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d90fbfe0",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$msg() does not have an output format specified.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f91483f5",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$msg() does not have an output format specified.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_19fa37bb",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$daysAgo and $editCount should be numParams() most probably.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_39f7fbd3",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$user-\u003egetName() should not be numParams, I think?",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_995c67ef",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "There\u0027s no output format specified for msg(). Also checked the rest of this file for this issue, which is why there may be comments not directly related to this change.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_790173b1",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$msg() does not have an output format specified.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_3920db4b",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$msg() does not have an output format specified.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_591d8f0a",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$msg() does not have an output format specified.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d956dfcc",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "No need to use wfMessage here. Use $this-\u003emsg().",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_791a5315",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T08:08:14Z",
+      "side": 1,
+      "message": "$msg() does not have an output format specified.",
+      "revId": "04fd28d77d482c00b9a6c50319a321a595b6e045",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
