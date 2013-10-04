@@ -2,7 +2,7 @@
 
 	var Api = M.require( 'api' ).Api,
 		// impose a 1 second delay for smaller devices to minimise data charges
-		delay = window.innerWidth > 768 ? 0 : 1000,
+		delay = M.isWideScreen() ? 0 : 1000,
 		PageImageApi = Api.extend( {
 			getPageImages: function( titles ) {
 				var result = $.Deferred();
