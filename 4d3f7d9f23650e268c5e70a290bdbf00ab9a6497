@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_34cd3d88",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T21:34:20Z",
+      "side": 1,
+      "message": "I\u0027m missing something here. Afaik this should have:\n\n if ( $uploadCount \u003e 500 ) {\n   $uploadCount \u003d 501;\n }\n\nPossibly accompanied by a witty comment. Or does countRecentUploads() already cap the count at 501?",
+      "revId": "4d3f7d9f23650e268c5e70a290bdbf00ab9a6497",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
