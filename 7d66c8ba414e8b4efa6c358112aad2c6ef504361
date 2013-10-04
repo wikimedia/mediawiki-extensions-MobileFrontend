@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_9e31ad0d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 787,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T06:08:20Z",
+      "side": 1,
+      "message": "This should probably state that whenever the number of uploads is higher than 500, $3 it is always 500\n\n(for completeness sake, you actually mean \"more than 499\" - yes, I\u0027m trying to be smart here...)",
+      "revId": "7d66c8ba414e8b4efa6c358112aad2c6ef504361",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_be367100",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 788,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-04T06:08:20Z",
+      "side": 1,
+      "message": "Superfluous newline.",
+      "revId": "7d66c8ba414e8b4efa6c358112aad2c6ef504361",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
