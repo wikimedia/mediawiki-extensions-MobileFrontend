@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_d436a101",
+        "filename": "less/.DS_Store",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T22:48:56Z",
+      "side": 1,
+      "message": "Oops",
+      "revId": "dfb512a64f4f5e7206c70693be3d277ed679553d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_b4312d0d",
+        "filename": "less/modules/uploads.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-04T22:48:56Z",
+      "side": 1,
+      "message": "Old name?",
+      "revId": "dfb512a64f4f5e7206c70693be3d277ed679553d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
