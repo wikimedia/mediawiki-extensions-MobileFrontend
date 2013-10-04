@@ -68,9 +68,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		if ( $context->isBetaGroupMember() ) {
 			$formatter->disableBackToTop();
 		}
-		if ( !$context->isAlphaGroupMember() ) {
-			$formatter->setIsMainPage( $isMainPage );
-		}
+		$formatter->setIsMainPage( $isMainPage );
 		if ( $context->getContentTransformations() && !$isFilePage ) {
 			$formatter->setRemoveMedia( $context->imagesDisabled() );
 		}
