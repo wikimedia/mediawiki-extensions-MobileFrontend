@@ -34,6 +34,24 @@
       "revId": "4d3f7d9f23650e268c5e70a290bdbf00ab9a6497",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_949d0965",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-04T21:38:26Z",
+      "side": 1,
+      "message": "where? previously we had:\n\n// cap uploads for purpose of i18n message\n$msgEdits \u003d $count \u003e self::LIMIT ? $this-\u003emsg( \u0027mobile-frontend-profile-edits-limit\u0027, self::LIMIT ) : $count \u003d $count \u003e self::LIMIT ? self::LIMIT : $count;\t\\\n\n$this-\u003emsg( \u0027mobile-frontend-profile-edits\u0027, $count );\n$uploadCount \u003d $uploadCount \u003e self::LIMIT ? self::LIMIT : $uploadCount;\n\nI\u0027d rename countRecentUploads or countRecentEdits if they handle this - the names of these functions are misleading .",
+      "parentUuid": "0932edd2_f4aba588",
+      "revId": "4d3f7d9f23650e268c5e70a290bdbf00ab9a6497",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
