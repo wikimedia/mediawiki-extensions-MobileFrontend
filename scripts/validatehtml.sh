@@ -6,7 +6,7 @@ curl -sG "$URL/index.php/$TITLE?useformat=mobile" > tmp/validate.html
 curl -sF "uploaded_file=@tmp/validate.html;type=text/html" -F output=json http://validator.w3.org/check > tmp/validate.json
 
 #check the validation results of a page in the main namespace
-if grep -q '"type": "error"' tmp/validate_page.json
+if grep -q '"type": "error"' tmp/validate.json
 then
 	num=`grep -c '"type": "error"' tmp/validate.json`
 	echo $num validation errors found in main namespace page [see tmp/validate.json]
