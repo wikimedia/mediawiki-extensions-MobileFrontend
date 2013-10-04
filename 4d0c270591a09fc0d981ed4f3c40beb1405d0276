@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0932edd2_316b8fba",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2013-10-04T18:04:08Z",
+      "side": 1,
+      "message": "This doesn\u0027t get called, as M.isWideScreen() is used instead...",
+      "revId": "4d0c270591a09fc0d981ed4f3c40beb1405d0276",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_93b8c6e7",
         "filename": "javascripts/modules/mf-toggle.js",
         "patchSetId": 2
