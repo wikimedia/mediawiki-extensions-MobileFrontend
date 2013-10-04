@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 	var LeadPhotoTutorialOverlay = M.require( 'tutorials/LeadPhotoTutorialOverlay' ),
-		PageActionOverlay = M.require( 'tutorials/PageActionOverlay' );
+		PageActionOverlay = M.require( 'tutorials/PageActionOverlay' ),
+		escapeHash = M.require( 'toggle' ).escapeHash;
 
 	function shouldShowUploadTutorial() {
 		// FIXME: Limit audience to only users with low edit count
@@ -21,7 +22,7 @@
 			return;
 		} else if ( shouldShowEditTutorial() ) {
 			if ( window.location.hash ) {
-				target = window.location.hash + ' ~ .edit-page';
+				target = escapeHash( window.location.hash ) + ' ~ .edit-page';
 			} else {
 				target = '#ca-edit .edit-page';
 			}
