@@ -39,6 +39,7 @@ $autoloadClasses = array (
 	'DeviceDetection' => 'DeviceDetection',
 	'HtmlDeviceProperties' => 'DeviceDetection',
 	'MobileContext' => 'MobileContext',
+	'MobileUserInfo' => 'MobileUserInfo',
 	'WmlContext' => 'WmlContext',
 	'WmlDeviceProperties' => 'DeviceDetection',
 
