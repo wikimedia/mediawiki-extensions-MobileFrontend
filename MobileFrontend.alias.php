@@ -5,7 +5,6 @@
  * @file
  * @ingroup Extensions
  */
-// @codingStandardsIgnoreFile
 
 $specialPageAliases = array();
 
@@ -155,7 +154,6 @@ $specialPageAliases['nl'] = array(
 	'MobileDiff' => array( 'MobielVerschillen' ),
 	'MobileMenu' => array( 'MobielMenu' ),
 	'Nearby' => array( 'InDeBuurt' ),
-	'UserProfile' => array( 'Gebruikersprofiel' ),
 );
 
 /** Norwegian Nynorsk (norsk nynorsk) */
