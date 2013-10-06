@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_60452b17",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-06T17:29:19Z",
+      "side": 1,
+      "message": "Making this limit dynamic makes it impossible to localise anymore...",
+      "revId": "edf9947930d43d60947cf56550eaf4bfe5b0fff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
