@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_2d488388",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-07T18:55:10Z",
+      "side": 1,
+      "message": "\"on mobile devices\"/\"in mobile editing mode\"?",
+      "revId": "0a4b688da157029d76d2a0e13b1732ce4bde97bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
