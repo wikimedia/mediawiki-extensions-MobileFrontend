@@ -1,0 +1,71 @@
+// FIXME: merge with mainmenu.less when this gets to stable
+// FIXME: doesn't work in Firefox due to https://bugzilla.mozilla.org/show_bug.cgi?id=625289
+// do we want to work around it?
+@import "../mixins.less";
+
+@duration: .1s;
+
+.animations .alpha {
+	#mw-mf-page-center {
+		// *2 to avoid weird glitch of left nav flickering after closing
+		@transition: @duration, height 0s (@duration*2);
+		.transition-transform(@transition);
+	}
+
+	#mw-mf-page-left {
+		.transition(visibility 0s @duration);
+	}
+
+	&.navigation-enabled {
+		.position-fixed,
+		#mw-mf-page-center {
+			// override non-animated version
+			left: 0 !important;
+			.transform(translate3d(@menuWidth, 0, 0));
+			.transition-transform(@duration);
+		}
+
+		#mw-mf-page-left {
+			.transition(none);
+		}
+	}
+}
+
+#mw-mf-page-left {
+	// override non-animated version, can be removed when animation is in stable
+	// and position: absolute + visibility: hidden proves to be sufficient
+	display: block !important;
+	position: absolute;
+	z-index: 0;
+	visibility: hidden;
+}
+
+.navigation-enabled {
+	#mw-mf-page-left {
+		// make menu scrollable when open (on small screens)
+		position: static;
+		visibility: visible;
+	}
+}
+
+// don't use translate3d for tablets as it may introduce slight blur and
+// we can't use % in it
+@media (min-width: @wgMFDeviceWidthTablet) {
+	.animations {
+		.alpha,
+		.beta {
+			#mw-mf-page-center {
+				.transition(width @duration, left @duration, height 0s (@duration*2););
+			}
+		}
+
+		.navigation-enabled.alpha,
+		.navigation-enabled.beta {
+			#mw-mf-page-center {
+				.transition(width @duration, left @duration;);
+				.transform(none);
+				left: 20% !important;
+			}
+		}
+	}
+}
