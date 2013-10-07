@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_edc3cbee",
+        "filename": "tests/acceptance/features/support/modules/url_module.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-07T18:52:32Z",
+      "side": 1,
+      "message": "Why? We use the cookie anyway.",
+      "revId": "57ce914cab440aa324f74775fc52a32103046ba7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
