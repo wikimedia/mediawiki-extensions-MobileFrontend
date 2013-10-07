@@ -79,25 +79,15 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$count = $this->userInfo->countRecentEdits( $fromDate );
 		$uploadCount = $this->userInfo->countRecentUploads( $fromDate );
 
-		$urlContributions = SpecialPage::getTitleFor( 'Contributions', $this->targetUser->getName() )->getLocalUrl();
-		$urlUploads = SpecialPage::getTitleFor( 'Uploads', $this->targetUser->getName() )->getLocalUrl();
-		$msgUploads = $uploadCount > MobileUserInfo::LIMIT ? $this->msg( 'mobile-frontend-profile-uploads-limit', MobileUserInfo::LIMIT ) :
-			$this->msg( 'mobile-frontend-profile-uploads', $uploadCount );
-		$msgEdits = $count > MobileUserInfo::LIMIT ? $this->msg( 'mobile-frontend-profile-edits-limit', MobileUserInfo::LIMIT ) :
-				$this->msg( 'mobile-frontend-profile-edits', $count );
+		$msgContributions = $this->msg( 'mobile-frontend-profile-contributions', $this->targetUser->getName() )
+			->numParams( $count, $uploadCount )
+			->parse();
 
 		$html =
 			Html::openElement( 'div', array( 'class' => 'section section-activity' ) ) .
-			Html::openElement( 'div' ) .
-			Html::element( 'a',
-				array( 'href' => $urlContributions, 'class' => 'statement' ),
-				$msgEdits ) .
-			Html::closeElement( 'div' ) .
-			Html::openElement( 'div' ) .
-			Html::element( 'a',
-				array( 'href' => $urlUploads, 'class' => 'statement' ),
-				$msgUploads ) .
-			Html::closeElement( 'div' );
+			Html::openElement( 'p', array( 'class' => 'statement' ) ) .
+			$msgContributions .
+			Html::closeElement( 'p' );
 
 		$lastUploadHtml = $this->getLastUpload();
 
