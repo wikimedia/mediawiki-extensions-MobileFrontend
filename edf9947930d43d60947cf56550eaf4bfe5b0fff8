@@ -16,6 +16,24 @@
       "revId": "edf9947930d43d60947cf56550eaf4bfe5b0fff8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d2fb0611",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-07T15:06:40Z",
+      "side": 1,
+      "message": "Why?",
+      "parentUuid": "0932edd2_60452b17",
+      "revId": "edf9947930d43d60947cf56550eaf4bfe5b0fff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
