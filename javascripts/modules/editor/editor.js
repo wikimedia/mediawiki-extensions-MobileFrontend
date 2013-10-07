@@ -48,7 +48,9 @@
 
 	function init( page ) {
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
-
+		if ( M.query.undo ) {
+			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
+		}
 		M.router.route( /^editor\/(\d+)$/, function( sectionId ) {
 			var loadingOverlay = new LoadingOverlay();
 			loadingOverlay.show();

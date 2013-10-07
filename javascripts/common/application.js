@@ -2,6 +2,7 @@
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 ( function( M, $ ) {
 	var Router = M.require( 'Router' ),
+		qs = window.location.search.split( '?' )[1],
 		PageApi = M.require( 'PageApi' ),
 		$viewportMeta, viewport,
 		ua = window.navigator.userAgent,
@@ -271,6 +272,7 @@
 		supportsGeoLocation: supportsGeoLocation,
 		supportsPositionFixed: supportsPositionFixed,
 		prettyEncodeTitle: prettyEncodeTitle,
+		query: deParam( qs ),
 		// FIXME: Replace all instances of M.template with mw.template
 		template: mw.template,
 		unlockViewport: unlockViewport,

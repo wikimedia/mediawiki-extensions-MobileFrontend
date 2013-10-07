@@ -516,8 +516,12 @@ class MobileFrontendHooks {
 
 		// redirect to mobile editor instead of showing desktop editor
 		if ( $context->shouldDisplayMobileView() ) {
-			$articleUrl = $context->getMobileUrl( $article->getTitle()->getFullURL() );
 			$output = $context->getOutput();
+			$data = $output->getRequest()->getValues();
+			// Unset these to avoid a redirect loop but make sure we pass other parameters to edit e.g. undo actions
+			unset( $data['action'] );
+			unset( $data['title'] );
+			$articleUrl = $context->getMobileUrl( $article->getTitle()->getFullURL( $data ) );
 			$section = (int)$output->getRequest()->getVal( 'section', 0 );
 			$output->redirect( $articleUrl . '#editor/' . $section );
 			return false;

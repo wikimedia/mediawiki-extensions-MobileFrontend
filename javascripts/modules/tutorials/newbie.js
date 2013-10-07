@@ -1,18 +1,19 @@
 ( function( M, $ ) {
 	var LeadPhotoTutorialOverlay = M.require( 'tutorials/LeadPhotoTutorialOverlay' ),
 		PageActionOverlay = M.require( 'tutorials/PageActionOverlay' ),
+		action = M.query.article_action,
 		escapeHash = M.require( 'toggle' ).escapeHash;
 
 	function shouldShowUploadTutorial() {
 		// FIXME: Limit audience to only users with low edit count
 		return $( '#ca-upload' ).hasClass( 'enabled' ) &&
-			window.location.search.indexOf( 'article_action=photo-upload' ) > -1;
+			action === 'photo-upload';
 	}
 
 	function shouldShowEditTutorial() {
 		// FIXME: Limit audience to only users with low edit count
 		return $( '#ca-edit' ).hasClass( 'enabled' ) &&
-			window.location.search.indexOf( 'article_action=edit' ) > -1;
+			action === 'edit';
 	}
 
 	$( function() {
