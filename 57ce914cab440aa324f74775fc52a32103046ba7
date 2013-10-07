@@ -16,6 +16,24 @@
       "revId": "57ce914cab440aa324f74775fc52a32103046ba7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_0d6adfee",
+        "filename": "tests/acceptance/features/support/modules/url_module.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-07T18:54:37Z",
+      "side": 1,
+      "message": "I talked to Michelle about the need going forward for desktop and mobile tests e.g. . Ideally we should use the same mediawiki_url and force mobile or desktop. The useformat parameter doesn\u0027t hurt but we may want to think about using mediawiki_mobile_url/.\n\n\nResolved later...?",
+      "parentUuid": "0932edd2_edc3cbee",
+      "revId": "57ce914cab440aa324f74775fc52a32103046ba7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
