@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_acdf19d2",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-07T13:27:47Z",
+      "side": 1,
+      "message": "Because mobileformat is now a bool parameter and the value is normalised accordingly but we need the raw value to detect old callers.",
+      "parentUuid": "0932edd2_ecc83125",
+      "revId": "bad0e8f22ce8bee546817f5bcb8c7385cfdf7f94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_ccc36d08",
         "filename": "includes/api/ApiParseExtender.php",
         "patchSetId": 2
