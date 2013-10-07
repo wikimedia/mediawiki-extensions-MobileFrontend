@@ -69,6 +69,24 @@
       "revId": "bad0e8f22ce8bee546817f5bcb8c7385cfdf7f94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_a72d72aa",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-07T15:02:40Z",
+      "side": 1,
+      "message": "That function normalizes empty string to \u0027HTML\u0027, thus making this check always return true.",
+      "parentUuid": "0932edd2_ccc36d08",
+      "revId": "bad0e8f22ce8bee546817f5bcb8c7385cfdf7f94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
