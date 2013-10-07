@@ -250,6 +250,7 @@ $messages['en'] = array (
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 
 	// edit
+	'mobile-frontend-editor-undo-unsupported' => 'Undo is not currently supported on mobile devices.',
 	'mobile-frontend-editor-newpage-prompt' => 'This page doesn\'t exist. Why not be bold and create it?',
 	'mobile-frontend-editor-disabled' => 'You are not allowed to edit this page.',
 	'mobile-frontend-editor-unavailable' => 'Mobile editing is not currently available on your browser. Please try a different browser.',
@@ -698,6 +699,7 @@ Parameters:
 
 Used when the user is not logged in.
 {{Related|Mobile-frontend-login}}',
+	'mobile-frontend-editor-undo-unsupported' => 'Shown when user attempts to do an undo which is currently not supported.',
 	'mobile-frontend-editor-newpage-prompt' => "Message shown when a page doesn't exist.",
 	'mobile-frontend-editor-disabled' => 'Toast message that appears when a user is unable to edit a page and clicks edit icon',
 	'mobile-frontend-editor-unavailable' => 'Toast message that appears when a user has a browser incapable of editing when they click on the edit button.',

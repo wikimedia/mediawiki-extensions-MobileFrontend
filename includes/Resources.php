@@ -508,6 +508,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
 
+			// editor.js
+			'mobile-frontend-editor-undo-unsupported',
+
 			// issues.js
 			'mobile-frontend-meta-data-issues',
 			'mobile-frontend-meta-data-issues-header',

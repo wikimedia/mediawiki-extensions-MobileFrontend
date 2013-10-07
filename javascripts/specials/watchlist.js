@@ -1,10 +1,8 @@
 ( function( M, $ ) {
 	var star = M.require( 'watchstar' ),
-		qs = window.location.search.substr( 1 ),
 		schema = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		pageName = mw.config.get( 'wgCanonicalSpecialPageName' ) === 'Watchlist' ? 'watchlist' : 'diff',
-		params = mw.mobileFrontend.deParam( qs ),
-		subPageName = params.watchlistview || 'a-z';
+		subPageName = M.query.watchlistview || 'a-z';
 
 	function init() {
 		var $watchlist = $( 'ul.page-list' ),
