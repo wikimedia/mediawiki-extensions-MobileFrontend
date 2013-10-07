@@ -489,6 +489,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mediawiki.util',
 			'mobile.stable.styles',
 			'mobile.templates',
+			'mediawiki.language',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/editor.js',
