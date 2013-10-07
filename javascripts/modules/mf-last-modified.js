@@ -37,7 +37,7 @@ var module = ( function() {
 			pageTimestamp = parseInt( ts, 10 );
 			currentTimestamp = Math.round( new Date().getTime() / 1000 );
 			delta = timeAgo( currentTimestamp - pageTimestamp );
-			message = mw.msg( keys[ delta.unit ], delta.value );
+			message = mw.msg( keys[ delta.unit ], mw.language.convertNumber( delta.value ) );
 			$lastModified.text( message );
 		}
 	}
