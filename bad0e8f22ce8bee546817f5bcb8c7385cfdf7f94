@@ -87,6 +87,23 @@
       "revId": "bad0e8f22ce8bee546817f5bcb8c7385cfdf7f94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_3f718aa9",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-10-07T19:03:52Z",
+      "side": 1,
+      "message": "Would be great if you can change this to use ApiResult::setContent()",
+      "revId": "bad0e8f22ce8bee546817f5bcb8c7385cfdf7f94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
