@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_ecc83125",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-10-07T13:25:48Z",
+      "side": 1,
+      "message": "why are you using request instead of $params[] array?",
+      "revId": "bad0e8f22ce8bee546817f5bcb8c7385cfdf7f94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_ccc36d08",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-10-07T13:25:48Z",
+      "side": 1,
+      "message": "weren\u0027t you normalizing \u0027mobileformat\u0027 param with the MobileContext::parseContentFormat() - like casing, etc?",
+      "revId": "bad0e8f22ce8bee546817f5bcb8c7385cfdf7f94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
