@@ -4,6 +4,68 @@
  * @group MobileFrontend
  */
 class DeviceDetectionTest extends MediaWikiTestCase {
+	private $mobiles = array(
+		// Firefox OS (bug 40919)
+		'Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0',
+		'Mozilla/5.0 (Android; Mobile; rv:20.0) Gecko/20.0 Firefox/20.0',
+		// Blackberry 10 (bug 40513)
+		'Mozilla/5.0 (BB10; Touch) AppleWebKit/537.3+ (KHTML, like Gecko) Version/10.0.9.386 Mobile Safari/537.3+',
+		'Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11+',
+		// Windows Phone 8 / IE 10 (bug 41517)
+		'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; ARM; Touch; IEMobile/10.0; <Manufacturer>; <Device> [;<Operator>])',
+		// Others
+		'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17',
+		'Mozilla/5.0 (ipod: U;CPU iPhone OS 2_2 like Mac OS X: es_es) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.0 Mobile/3B48b Safari/419.3',
+		'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3B48b Safari/419.3',
+		'Mozilla/5.0 (SymbianOS/9.1; U; [en]; SymbianOS/91 Series60/3.0) AppleWebKit/413 (KHTML, like Gecko) Safari/413',
+		'Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0',
+		// Opera
+		'Opera/9.50 (J2ME/MIDP; Opera Mini/4.0.10031/298; U; en)',
+		'Opera/9.80 (iPhone; Opera Mini/7.0.4/28.2555; U; fr) Presto/2.8.119 Version/11.10',
+		'Opera/9.51 Beta (Microsoft Windows; PPC; Opera Mobi/1718; U; en)',
+		'Opera/9.80 (Android 4.1.1; Linux; Opera Mobi/ADR-1301080958) Presto/2.11.355 Version/12.10',
+		'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)',
+		'Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 824x1200; rotate)',
+		// Later Kindles use WebKit
+		'Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600X800; rotate)',
+		'Mozilla/4.08 (Windows; Mobile Content Viewer/1.0) NetFront/3.2',
+		'SonyEricssonK608i/R2L/SN356841000828910 Browser/SEMC-Browser/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1',
+		'NokiaN73-2/3.0-630.0.2 Series60/3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1',
+		'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)',
+		'Mozilla/5.0 (PLAYSTATION 3; 1.00)',
+		// Blackberry
+		'BlackBerry9300/5.0.0.716 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/133',
+		'BlackBerry7250/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1',
+		// https://bugzilla.wikimedia.org/show_bug.cgi?id=30827
+		'SAMSUNG-S8000/S800MXEJA1 SHP/VPP/R5 Jasmine/1.0 Nextreaming SMM-MMS/1.2.0 profile/MIDP-2.1 configuration/CLDC-1.1 SS-Widget/S8000-FM',
+		// WML
+		array( 'KDDI-KC31 UP.Browser/6.2.0.5 (GUI) MMP/2.0', 'text/bullshit, text/vnd.wap.wml' ),
+	);
+	private $tablets = array(
+		'Mozilla/5.0 (iPad; CPU OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A501 Safari/9537.53',
+		'Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2',
+		'Opera/9.80 (Android 4.0.4; Linux; Opera Tablet/ADR-1301080958) Presto/2.11.355 Version/12.10',
+		'Mozilla/5.0 (Android; Tablet; rv:24.0) Gecko/24.0 Firefox/24.0',
+		'Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; Portablet 01 Build/JRO03C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30',
+		'Opera/9.00 (Nintendo Wii; U; ; 1309-9; en)',
+		'Mozilla/5.0 (Nintendo WiiU) AppleWebKit/536.28 (KHTML, like Gecko) NX/3.0.3.12.6 NintendoBrowser/2.0.0.9362.EU',
+		// @todo:
+		//'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML, like Gecko) Version/7.2.1.0 Safari/536.2+',
+		//'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDR; .NET4.0C; .NET4.0E; .NET CLR 1.1.4322; Tablet PC 2.0); 360Spider',
+	);
+
+	private function map( $array, $flag ) {
+		return array_map(
+			function( $ua ) use ( $flag ) {
+				if ( is_array( $ua ) ) {
+					array_unshift( $ua, $flag );
+					return $ua;
+				}
+				return array( $flag, $ua );
+			},
+			 $array
+		);
+	}
 
 	/**
 	 * @dataProvider provideTestFormat
@@ -34,44 +96,7 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 	}
 
 	private function mobileDevices() {
-		return array(
-			// Firefox OS (bug 40919)
-			array( true, 'Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0' ),
-			array( true, 'Mozilla/5.0 (Android; Mobile; rv:20.0) Gecko/20.0 Firefox/20.0' ),
-			// Blackberry 10 (bug 40513)
-			array( true, 'Mozilla/5.0 (BB10; Touch) AppleWebKit/537.3+ (KHTML, like Gecko) Version/10.0.9.386 Mobile Safari/537.3+' ),
-			array( true, 'Mozilla/5.0 (BlackBerry; U; BlackBerry 9850; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.254 Mobile Safari/534.11+' ),
-			// Windows Phone 8 / IE 10 (bug 41517)
-			array( true, 'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; ARM; Touch; IEMobile/10.0; <Manufacturer>; <Device> [;<Operator>])' ),
-			// Others
-			array( true, 'Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17' ),
-			array( true, 'Mozilla/5.0 (ipod: U;CPU iPhone OS 2_2 like Mac OS X: es_es) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.0 Mobile/3B48b Safari/419.3' ),
-			array( true, 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3B48b Safari/419.3' ),
-			array( true, 'Mozilla/5.0 (SymbianOS/9.1; U; [en]; SymbianOS/91 Series60/3.0) AppleWebKit/413 (KHTML, like Gecko) Safari/413' ),
-			array( true, 'Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0' ),
-			// Opera
-			array( true, 'Opera/9.00 (Nintendo Wii; U; ; 1309-9; en)' ),
-			array( true, 'Opera/9.50 (J2ME/MIDP; Opera Mini/4.0.10031/298; U; en)' ),
-			array( true, 'Opera/9.80 (iPhone; Opera Mini/7.0.4/28.2555; U; fr) Presto/2.8.119 Version/11.10' ),
-			array( true, 'Opera/9.51 Beta (Microsoft Windows; PPC; Opera Mobi/1718; U; en)' ),
-			array( true, 'Opera/9.80 (Android 4.1.1; Linux; Opera Mobi/ADR-1301080958) Presto/2.11.355 Version/12.10' ),
-			array( true, 'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)' ),
-			array( true, 'Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 824x1200; rotate)' ),
-			// Later Kindles use WebKit
-			array( true, 'Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600X800; rotate)' ),
-			array( true, 'Mozilla/4.08 (Windows; Mobile Content Viewer/1.0) NetFront/3.2' ),
-			array( true, 'SonyEricssonK608i/R2L/SN356841000828910 Browser/SEMC-Browser/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1' ),
-			array( true, 'NokiaN73-2/3.0-630.0.2 Series60/3.0 Profile/MIDP-2.0 Configuration/CLDC-1.1' ),
-			array( true, 'Mozilla/4.0 (PSP (PlayStation Portable); 2.00)' ),
-			array( true, 'Mozilla/5.0 (PLAYSTATION 3; 1.00)' ),
-			// Blackberry
-			array( true, 'BlackBerry9300/5.0.0.716 Profile/MIDP-2.1 Configuration/CLDC-1.1 VendorID/133' ),
-			array( true, 'BlackBerry7250/4.0.0 Profile/MIDP-2.0 Configuration/CLDC-1.1' ),
-			// https://bugzilla.wikimedia.org/show_bug.cgi?id=30827
-			array( true, 'SAMSUNG-S8000/S800MXEJA1 SHP/VPP/R5 Jasmine/1.0 Nextreaming SMM-MMS/1.2.0 profile/MIDP-2.1 configuration/CLDC-1.1 SS-Widget/S8000-FM' ),
-			// WML
-			array( 'wml',  'KDDI-KC31 UP.Browser/6.2.0.5 (GUI) MMP/2.0', 'text/bullshit, text/vnd.wap.wml' ),
-		);
+		return $this->map( array_merge( $this->mobiles, $this->tablets ), true );
 	}
 
 	/**
@@ -115,4 +140,24 @@ class DeviceDetectionTest extends MediaWikiTestCase {
 			)
 		);
 	}
+
+	/**
+	 * @dataProvider provideTestIsTablet
+	 */
+	public function testIsTablet( $expected, $userAgent ) {
+		$detector = new DeviceDetection();
+		$device = $detector->detectDeviceProperties( $userAgent, '' );
+		$this->assertEquals( (bool)$expected, $device->isTablet() );
+		if ( $expected ) {
+			$this->assertTrue( $device->isMobileDevice(), 'Tablets are always mobile devices' );
+		}
+	}
+
+	public function provideTestIsTablet() {
+		return array_merge(
+			$this->map( $this->tablets, true ),
+			$this->map( $this->mobiles, false )
+		);
+	}
+
 }

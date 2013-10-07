@@ -120,10 +120,18 @@ class MobileContext extends ContextSource {
 	}
 
 	public function isMobileDevice() {
-		global $wgMFAutodetectMobileView;
+		global $wgMFAutodetectMobileView, $wgMFShowMobileViewToTablets;
 
-		return ( $wgMFAutodetectMobileView && $this->getDevice()->isMobileDevice() )
-			|| $this->getAMF();
+		if ( !$wgMFAutodetectMobileView ) {
+			return false;
+		}
+		if ( $this->getAMF() ) {
+			return true;
+		}
+		$device =  $this->getDevice();
+		return $device->isMobileDevice()
+			&& !( !$wgMFShowMobileViewToTablets && $device->isTablet() );
+
 	}
 
 	/**
@@ -137,12 +145,13 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function getAMF() {
-		if ( isset( $_SERVER['AMF_DEVICE_IS_MOBILE'] ) && 
-			$_SERVER['AMF_DEVICE_IS_MOBILE'] === "true" &&
-			$_SERVER['AMF_DEVICE_IS_TABLET'] === "false" ) {
-				return true;
+		global  $wgMFShowMobileViewToTablets;
+
+		$amf = isset( $_SERVER['AMF_DEVICE_IS_MOBILE'] ) && $_SERVER['AMF_DEVICE_IS_MOBILE'] === 'true';
+		if ( !$wgMFShowMobileViewToTablets && $amf ) {
+			$amf &= $_SERVER['AMF_DEVICE_IS_TABLET'] === 'false';
 		}
-		return false;
+		return $amf;
 	}
 
 	/**
