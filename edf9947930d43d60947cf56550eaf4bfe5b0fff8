@@ -34,6 +34,24 @@
       "revId": "edf9947930d43d60947cf56550eaf4bfe5b0fff8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_12f4beef",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-07T15:26:02Z",
+      "side": 1,
+      "message": "Because it\u0027s unknown which plural form will gramatically be correct for $5 in all languages of the world.\n\nSee http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html for a little overview.",
+      "parentUuid": "0932edd2_d2fb0611",
+      "revId": "edf9947930d43d60947cf56550eaf4bfe5b0fff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
