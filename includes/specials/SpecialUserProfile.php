@@ -14,21 +14,10 @@ class SpecialUserProfile extends MobileSpecialPage {
 		parent::__construct( 'UserProfile' );
 	}
 
-	protected function getDaysAgo( $ts ) {
+	protected function getDaysAgo( MWTimestamp $ts ) {
 		$now = new MWTimestamp();
 		$diff = $ts->diff( $now );
 		return $diff->days;
-	}
-
-	protected function getListHtml( $tag, $attrs, $items ) {
-		$html = Html::openElement( $tag, $attrs );
-		foreach( $items as $item ) {
-			$html .= Html::openElement( 'li' );
-			$html .= $item;
-			$html .= Html::closeElement( 'li' );
-		}
-		$html .= Html::closeElement( $tag );
-		return $html;
 	}
 
 	/**
@@ -135,6 +124,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$heading = Html::element( 'h1', array(), $this->targetUser->getName() );
 
 		// set values
+		/** @var SkinMobile $skin */
 		$skin = $this->getSkin();
 		$skin->setTemplateVariable( 'secondaryButton', $secondaryButton );
 		$skin->setTemplateVariable( 'specialPageHeader', $heading );
