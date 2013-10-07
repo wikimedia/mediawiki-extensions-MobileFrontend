@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_22ba4dbe",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-07T20:53:43Z",
+      "side": 1,
+      "message": "Also, use .transition() mixin (for older Webkits).",
+      "revId": "1dfd5a0c0cf410e8422e0a040ebf3d59bc6461e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
