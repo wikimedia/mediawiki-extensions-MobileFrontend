@@ -114,4 +114,36 @@ class MobileUserInfo {
 		wfProfileOut( __METHOD__ );
 		return $file;
 	}
+
+	/**
+	 * Returns user who last thanked current user. Requires Extension:Echo
+	 *
+	 * @return array|null
+	 */
+	public function getLastThanking() {
+		wfProfileIn( __METHOD__ );
+		$thank = false;
+		if ( class_exists( 'MWEchoDbFactory' ) ) {
+			$dbr = MWEchoDbFactory::getDB( DB_SLAVE );
+			$rows = $dbr->select(
+				array( 'echo_event', 'echo_notification' ),
+				'event_agent_id, event_page_id, notification_timestamp',
+				array(
+					'notification_user' => $this->user->getId(),
+					'event_id=notification_event',
+					'event_type' => 'edit-thank' ),
+				__METHOD__,
+				array( 'ORDER BY' => 'notification_timestamp DESC' )
+			);
+			$row = $rows->fetchObject();
+			if ( $row ) {
+				$thank = array(
+					'title' => Title::newFromId( $row->event_page_id ),
+					'user' => User::newFromId( $row->event_agent_id ),
+				);
+			}
+		}
+		wfProfileOut( __METHOD__ );
+		return $thank;
+	}
 }

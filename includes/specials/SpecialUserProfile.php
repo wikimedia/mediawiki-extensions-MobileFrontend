@@ -42,7 +42,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
 			$file->transform( array( 'width' => 320, 'height' => 320 ) )->toHtml() .
 			Html::openElement( 'div', array( 'class' => 'thumbcaption secondary-statement' ) ) .
-			$this->msg( 'mobile-frontend-profile-last-upload-caption', $this->targetUser->getName(), $daysAgo )->parse() .
+			$this->msg( 'mobile-frontend-profile-last-upload-caption', $this->targetUser->getName() )->numParams( $daysAgo )->parse() .
 			Html::closeElement( 'div' ) .
 			Html::closeElement( 'a' ) .
 			Html::closeElement( 'div' );
@@ -67,7 +67,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 		return Html::openElement( 'div', array( 'class' => 'section section-registered' ) ) .
 			Html::element( 'p', array( 'class' => 'statement' ),
-			$this->msg( 'mobile-frontend-profile-registration', $name, $daysAgo, $editCount )->parse() ) .
+			$this->msg( 'mobile-frontend-profile-registration', $name )->numParams( $daysAgo, $editCount )->parse() ) .
 			Html::element( 'p', array( 'class' => 'secondary-statement section-end' ), $role ) .
 			Html::closeElement( 'div' );
 	}
@@ -97,6 +97,25 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 		$html .= Html::closeElement( 'div' );
 
+		wfProfileOut( __METHOD__ );
+		return $html;
+	}
+
+	protected function getLastThanks() {
+		wfProfileIn( __METHOD__ );
+		$html = '';
+		$thank = $this->userInfo->getLastThanking();
+		if ( $thank ) {
+			$user = $thank['user'];
+			$title = $thank['title'];
+			$html = Html::openElement( 'div', array( 'class' => 'section section-thanks statement section-end' ) );
+			$html .= $this->msg( 'mobile-frontend-profile-last-thanked',
+				$user,
+				$title->getFullText(),
+				$this->targetUser
+			)->parse();
+			$html .= '</div>';
+		}
 		wfProfileOut( __METHOD__ );
 		return $html;
 	}
@@ -134,7 +153,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 
 	public function getHtmlBetaAlphaOptIn() {
 		return Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
-			wfMessage( 'mobile-frontend-requires-optin' )->parse() .
+			$this->msg( 'mobile-frontend-requires-optin' )->parse() .
 			Html::closeElement( 'div' );
 	}
 
@@ -152,12 +171,16 @@ class SpecialUserProfile extends MobileSpecialPage {
 			if ( $this->targetUser ) {
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$this->setUserProfileUIElements();
-				$html = Html::openElement( 'div', array( 'class' => 'profile' ) ) .
-					$this->getUserSummary() . $this->getRecentActivityHtml() .
-					Linker::link( $this->targetUser->getUserPage(),
-						$this->msg( 'mobile-frontend-profile-userpage-link' ),
-						array( 'class' => 'user-page section-end' ) ) .
-					Html::closeElement( 'div' );
+				$link = Linker::link( $this->targetUser->getUserPage(),
+					$this->msg( 'mobile-frontend-profile-userpage-link' )->escaped(),
+					array( 'class' => 'statement section user-page section-end' )
+				);
+				$html = Html::openElement( 'div', array( 'class' => 'profile' ) )
+					. $this->getUserSummary()
+					. $this->getRecentActivityHtml()
+					. $this->getLastThanks()
+					. $link
+					. Html::closeElement( 'div' );
 			} else {
 				$html = $this->getHtmlNoArg();
 			}
