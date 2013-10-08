@@ -52,6 +52,24 @@
       "revId": "57ce914cab440aa324f74775fc52a32103046ba7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f5be3161",
+        "filename": "tests/acceptance/features/support/modules/url_module.rb",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-08T00:24:09Z",
+      "side": 1,
+      "message": "It does when your own personal MEDIAWIKI_URL points to the desktop skin..",
+      "parentUuid": "0932edd2_7f96a24c",
+      "revId": "57ce914cab440aa324f74775fc52a32103046ba7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
