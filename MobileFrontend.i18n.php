@@ -791,12 +791,6 @@ See also:
 * $2 - number of edits in the last 30 days
 * $3 - number of uploads in the last 30 days
 Note: $2 and $3 are capped at the value of MobileUserInfo::LIMIT currently 500.',
-	'mobile-frontend-profile-uploads' => 'Upload count in the last month.',
-	'mobile-frontend-profile-edits-limit' => 'Edit count when expressed to be over a certain number. Parameters:
-* $1 - number of edits
-See also:
-* {{msg-mw|Mobile-frontend-profile-edits}}',
-	'mobile-frontend-profile-uploads-limit' => 'Upload count when expressed to be over a certain number.',
 	'mobile-frontend-profile-last-upload-caption' => 'Parameters:
 * $1 - the username
 * $2 - the amount of days ago the image was uploaded',
@@ -833,7 +827,8 @@ $messages['ace'] = array(
 	'mobile-frontend-random-button' => 'Beurangkari',
 	'mobile-frontend-back-to-top-of-section' => 'Riwang u bagian sigoh nyoe',
 	'mobile-frontend-regular-site' => 'Eu on nyoe bak {{SITENAME}} biyasa', # Fuzzy
-	'mobile-frontend-featured-article' => 'Teunuleh Peunileh Uroe Nyoe',
+	'mobile-frontend-featured-article' => 'Teunuleh Peunileh Uroe Nyoe', # Fuzzy
+	'mobile-frontend-copyright' => "Teks na di yup <ahref='http://ace.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisensi Creative Commons Atribusi-PembagianSerupa</a>; syarat teunamah kadang na. Eu <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Cara Nguy</a> keu leubeh rinci. {{SITENAME}} nakeuh saboh cap meukat teudapeuta nibak <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, saboh teunuboh hana mita laba.", # Fuzzy
 );
 
 /** Afrikaans (Afrikaans)
@@ -847,7 +842,6 @@ $messages['af'] = array(
 	'mobile-frontend-logged-out' => 'Nie aangemeld nie',
 	'mobile-frontend-logged-in-homepage-notification' => 'Welkom, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Aangemeld as $1.',
-	'mobile-frontend-handshake-title' => 'Besig met aanstuur...',
 	'mobile-frontend-sign-up-heading' => 'Registreer',
 	'mobile-frontend-sign-in-heading' => 'Meld aan',
 	'mobile-frontend-sign-in-error-heading' => 'Fout',
@@ -867,7 +861,7 @@ $messages['af'] = array(
 	'mobile-frontend-missing-image' => 'Beeld',
 	'mobile-frontend-off' => 'AF',
 	'mobile-frontend-on' => 'AAN',
-	'mobile-frontend-featured-article' => 'Uitgelig',
+	'mobile-frontend-featured-article' => 'Uitgelig', # Fuzzy
 	'mobile-frontend-news-items' => 'In die nuus',
 	'mobile-frontend-language' => 'Taal:',
 	'mobile-frontend-language-article-heading' => "Lees in 'n ander taal",
@@ -886,6 +880,7 @@ $messages['af'] = array(
 	'mobile-frontend-placeholder' => 'Deursoek {{SITENAME}}',
 	'mobile-frontend-privacy-link-text' => 'Privaatheid',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Die teks is beskikbaar onder die <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Erkenning-Insgelyks Deel</a> lisensie. Dit is moontlik dat aanvullende voorwaardes van toepassing is. Sien die <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Algemene Voorwaardes</a> vir meer inligting.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontak',
 	'mobile-frontend-main-menu-featured' => 'Uitgelig',
 	'mobile-frontend-main-menu-settings' => 'Voorkeure',
@@ -899,7 +894,7 @@ $messages['ak'] = array(
 	'mobile-frontend-home-button' => 'Fie',
 	'mobile-frontend-random-button' => 'Randɔm',
 	'mobile-frontend-regular-site' => 'Hwɛ krataafa yi wɔ {{SITENAME}} a yenim dada so', # Fuzzy
-	'mobile-frontend-featured-article' => 'Aatikel a Ɛwɔ So Ndɛ',
+	'mobile-frontend-featured-article' => 'Aatikel a Ɛwɔ So Ndɛ', # Fuzzy
 );
 
 /** Amharic (አማርኛ)
@@ -909,7 +904,7 @@ $messages['am'] = array(
 	'mobile-frontend-home-button' => 'ቤት',
 	'mobile-frontend-random-button' => 'በነሲብ',
 	'mobile-frontend-back-to-top-of-section' => 'ወደኋላ ምዕራፍ ዝለል',
-	'mobile-frontend-featured-article' => 'ለዛሬ የተመረጠ ድርሰት',
+	'mobile-frontend-featured-article' => 'ለዛሬ የተመረጠ ድርሰት', # Fuzzy
 );
 
 /** Aragonese (aragonés)
@@ -928,7 +923,7 @@ $messages['an'] = array(
 	'mobile-frontend-opt-in-explain' => 'Prebando a beta, tendrá acceso a caracteristicas experimentals, con o risgo de trobar problemas u errors.',
 	'mobile-frontend-disable-images' => 'Desactivar imachens en a versión ta mobils',
 	'mobile-frontend-enable-images' => 'Activar imachens en a versión ta mobils',
-	'mobile-frontend-featured-article' => 'Articlo destacau de hue',
+	'mobile-frontend-featured-article' => 'Articlo destacau de hue', # Fuzzy
 	'mobile-frontend-news-items' => 'Actualidat',
 	'mobile-frontend-language' => 'Idioma', # Fuzzy
 	'mobile-frontend-username' => "Nombre d'usuario:",
@@ -936,6 +931,7 @@ $messages['an'] = array(
 	'mobile-frontend-login' => 'Encetar sesión',
 	'mobile-frontend-placeholder' => 'Introduzca a suya busca...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'refusar ista notificación',
+	'mobile-frontend-copyright' => "O texto ye disponible baixo a <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; puede que sigan d'aplicación atros termins. Se veiga as <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Condicions d'uso</a> ta más detalles. {{SITENAME}} ye una marca rechistrada d'a <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, una organización sin animo de lucro.", # Fuzzy
 );
 
 /** Angika (अङ्गिका)
@@ -946,7 +942,8 @@ $messages['anp'] = array(
 	'mobile-frontend-random-button' => 'बेतरतीब',
 	'mobile-frontend-back-to-top-of-section' => 'एक अनुभाग पीछू जा',
 	'mobile-frontend-regular-site' => 'इ पृष्ठ नियमित विकीपीडिया मॆ देखॊ', # Fuzzy
-	'mobile-frontend-featured-article' => 'आजकॊ विशेष लेख',
+	'mobile-frontend-featured-article' => 'आजकॊ विशेष लेख', # Fuzzy
+	'mobile-frontend-copyright' => "लेख <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; नुसार उपलब्ध छै, अधिक अटॆ नै सकॆ छै. विशेष जानकारी लेली <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> देखॊ. विकीपिडीया <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> केरॊ एगॊ रजिस्टर्ड ट्रेडमार्क आरू स्वंयसेवी संस्था छेकै.", # Fuzzy
 );
 
 /** Arabic (العربية)
@@ -1218,7 +1215,7 @@ $messages['ary'] = array(
 	'mobile-frontend-random-button' => 'Ĝel l-lah',
 	'mobile-frontend-back-to-top-of-section' => 'Ṛjeĝ s-séksyon li men qbel',
 	'mobile-frontend-regular-site' => 'Qra had ṣ-ṣefḫa fe l-Wikipédya l-ĝadi', # Fuzzy
-	'mobile-frontend-featured-article' => 'L-Maqal dyal lyoma',
+	'mobile-frontend-featured-article' => 'L-Maqal dyal lyoma', # Fuzzy
 );
 
 /** Assamese (অসমীয়া)
@@ -1256,7 +1253,7 @@ $messages['as'] = array(
 	'mobile-frontend-missing-image' => 'চিত্ৰ',
 	'mobile-frontend-off' => 'বন্ধ',
 	'mobile-frontend-on' => 'আৰম্ভ',
-	'mobile-frontend-featured-article' => 'আজিৰ নিৰ্বাচিত প্ৰবন্ধ',
+	'mobile-frontend-featured-article' => 'আজিৰ নিৰ্বাচিত প্ৰবন্ধ', # Fuzzy
 	'mobile-frontend-news-items' => 'খবৰৰ শীৰ্ষত',
 	'mobile-frontend-language' => 'ভাষাসমূহ:',
 	'mobile-frontend-language-article-heading' => 'অন্য ভাষাত পঢ়ক',
@@ -1292,7 +1289,7 @@ $messages['as'] = array(
 	'mobile-frontend-main-menu-logout' => 'প্ৰস্থান',
 	'mobile-frontend-main-menu-watchlist' => 'লক্ষ্য তালিকা',
 	'mobile-frontend-main-menu-settings' => 'ছেটিং',
-	'mobile-frontend-main-menu-settings-heading' => 'ম’বাইল ছাইট ছেটিং',
+	'mobile-frontend-main-menu-settings-heading' => 'ম’বাইল ছাইট ছেটিং', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ভাষাসমূহ',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} $1 {{PLURAL:$1|ভাষা|ভাষাসমূহত}} উপলদ্ধ, সকলো সংস্কৰণ তলত দিয়া হৈছে',
 	'mobile-frontend-main-menu-account-create' => 'একাউণ্ট সৃষ্টি কৰক',
@@ -1575,10 +1572,6 @@ $messages['ast'] = array(
 	'mobile-frontend-media-details' => 'Detalles',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un usuariu ta editando o non pela interfaz pa móvil',
 	'mobile-frontend-profile-title' => 'Perfil del usuariu',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 edición|$1 ediciones|0=Sin ediciones}} nel últimu mes',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 carga|$1 cargues|0=Sin cargues}} nel últimu mes',
-	'mobile-frontend-profile-edits-limit' => "Más {{PLURAL:$1|d'una edición|de $1 ediciones}} nel últimu mes",
-	'mobile-frontend-profile-uploads-limit' => "Más {{PLURAL:$1|d'una carga|de $1 cargues}} nel últimu mes",
 	'mobile-frontend-profile-last-upload-caption' => 'Última carga de {{GENDER:$1|$1}} {{PLURAL:$2|ayeri|hai $2 díes|0=güei}}.',
 	'mobile-frontend-profile-heading-recent' => 'De recién',
 	'mobile-frontend-profile-registration' => '$1 ye miembru dende hai {{PLURAL:$2|$2 día|$2 díes}} y fizo {{PLURAL:$3|$3 edición|$3 ediciones}}.',
@@ -1605,12 +1598,13 @@ $messages['az'] = array(
 	'mobile-frontend-wml-continue' => 'Davam et ...',
 	'mobile-frontend-wml-back' => 'Geri ...',
 	'mobile-frontend-view' => 'Mobil görüntü',
-	'mobile-frontend-featured-article' => 'Günün seçilmiş məqaləsi',
+	'mobile-frontend-featured-article' => 'Günün seçilmiş məqaləsi', # Fuzzy
 	'mobile-frontend-language' => 'Dil', # Fuzzy
 	'mobile-frontend-username' => 'İstifadəçi adı:',
 	'mobile-frontend-password' => 'Parol:',
 	'mobile-frontend-login' => 'Daxil ol',
 	'mobile-frontend-clear-search' => 'Təmizlə',
+	'mobile-frontend-copyright' => "Mətn <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.az\">Creative Commons Attribution/Share-Alike lisenziyası</a> üzrə icazəlidir, xüsusi hallarda digər şərtlər də əlavə ola bilər. Daha ətraflı bax: <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/az'>İstifadə şərtləri</a>. «{{SITENAME}}» — «<a href='http://www.wikimediafoundation.org/'>Vikimediya Fondu</a>» qeyri-kommersiya təşkilatının qeydə alınmış ticarət markasıdır.", # Fuzzy
 );
 
 /** South Azerbaijani (تورکجه)
@@ -1636,7 +1630,7 @@ $messages['azb'] = array(
 	'mobile-frontend-missing-image' => 'شکیل',
 	'mobile-frontend-off' => 'سون دور (گئچیت)',
 	'mobile-frontend-on' => 'آلیشدیر (یاندیر)',
-	'mobile-frontend-featured-article' => 'گونون سئچیلمیش مقاله‌سی',
+	'mobile-frontend-featured-article' => 'گونون سئچیلمیش مقاله‌سی', # Fuzzy
 	'mobile-frontend-news-items' => 'خبرلرده',
 	'mobile-frontend-language' => 'دیل:',
 	'mobile-frontend-language-site-choose' => 'دیل آختاریشی',
@@ -1664,7 +1658,7 @@ $messages['azb'] = array(
 	'mobile-frontend-main-menu-logout' => 'چیخیش',
 	'mobile-frontend-main-menu-watchlist' => 'ایزلمه سیاهینیزداکی',
 	'mobile-frontend-main-menu-settings' => 'تنظیملر',
-	'mobile-frontend-main-menu-settings-heading' => 'موبایل سایت ترجیحلری',
+	'mobile-frontend-main-menu-settings-heading' => 'موبایل سایت ترجیحلری', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} دیل‌لری',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}، {{PLURAL:$1|بیر|$1}} دیل‌ده ال‌ده‌دیر. بوتون ال‌ده اولان نوسخه‌لر آشاغیدا لیست اولونوبلار',
 	'mobile-frontend-main-menu-account-create' => 'حساب یارات',
@@ -1690,8 +1684,8 @@ $messages['azb'] = array(
 	'mobile-frontend-table' => 'جدول $1',
 	'mobile-frontend-saving-exit-page' => 'سیزین چالیشمانیز قئید اولونماقدادیر. آیریلساز، او چالیشمانیز ایته‌جکدیر. چیخماقدان آرخایین‌سینیز؟',
 	'mobile-frontend-photo-upload' => 'ایلک عکسی بو صحیفه‌یه آرتیر', # Fuzzy
-	'mobile-frontend-photo-article-edit-comment' => 'صحیفه‌ده ایشلدمک اوچون عکس آرتیریلدی',
-	'mobile-frontend-photo-upload-comment' => 'صحیفه‌یه عکس آرتیریلدی',
+	'mobile-frontend-photo-article-edit-comment' => 'صحیفه‌ده ایشلدمک اوچون عکس آرتیریلدی', # Fuzzy
+	'mobile-frontend-photo-upload-comment' => 'صحیفه‌یه عکس آرتیریلدی', # Fuzzy
 	'mobile-frontend-photo-caption-placeholder' => 'بو عکسه بیر باشلیق آرتیر', # Fuzzy
 	'mobile-frontend-image-loading' => 'عکس یوکله‌نیر',
 	'mobile-frontend-image-uploading-wait' => 'عکس یوکله‌نیر', # Fuzzy
@@ -1722,7 +1716,6 @@ $messages['ba'] = array(
 	'mobile-frontend-random-button' => 'Осраҡлы',
 	'mobile-frontend-back-to-top-of-section' => 'Бер бүлеккә кире ҡайтырға',
 	'mobile-frontend-close-section' => 'Был бүлекте ябырға',
-	'mobile-frontend-empty-homepage-text' => 'Был баш битте көйләргә кәрәк. <a href="https:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">Сайтың мобиль нөхсәһен булдырыу буйынса күрһәтмәләр</a>',
 	'mobile-frontend-regular-site' => 'Ғәҙәти нөхсә',
 	'mobile-frontend-wml-continue' => 'Дауамы...',
 	'mobile-frontend-wml-back' => 'Кирегә...',
@@ -1736,7 +1729,7 @@ $messages['ba'] = array(
 	'mobile-frontend-missing-image' => 'Рәсем',
 	'mobile-frontend-off' => 'ЮҠ',
 	'mobile-frontend-on' => 'БАР',
-	'mobile-frontend-featured-article' => 'Бөгөнгө көндә иң яҡшы мәҡәлә',
+	'mobile-frontend-featured-article' => 'Бөгөнгө көндә иң яҡшы мәҡәлә', # Fuzzy
 	'mobile-frontend-news-items' => 'Яңылыҡтар',
 	'mobile-frontend-language' => 'Тел:',
 	'mobile-frontend-language-article-heading' => 'Башҡа телдә уҡырға',
@@ -1755,6 +1748,7 @@ $messages['ba'] = array(
 	'mobile-frontend-privacy-link-text' => 'Сер һаҡлау',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Эстәлеге [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] рөхсәтнәмәһе буйынса асыҡ', # Fuzzy
+	'mobile-frontend-copyright' => "Текст <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензияһы шарттары буйынса асыҡ, айырым осраҡтарҙа өҫтәмә шарттар ғәмәлдә булыуы мөмкин. Тулы мәғлүмәт өсөн ҡарағыҙ: <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Ҡулаланыу шарттары (урыҫса)</a>. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> исемле мәтди файҙа көҫәмәгән ойошманың рәсми теркәлгән тамғаһы.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Бәйләнеш өсөн мәғлүмәт',
 	'mobile-frontend-search-noresults' => 'Һеҙ кереткән һүҙҙәр менән тап килгән бит исемдәре юҡ. Эҙләү өсөн һүҙҙәрҙе үҙгәртегеҙ, йәки биттәр эсендә эҙләү өсөн «Эҙләргә» төймәһенә баҫығыҙ.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Төп менюны асырға',
@@ -1765,7 +1759,7 @@ $messages['ba'] = array(
 	'mobile-frontend-main-menu-logout' => 'Тамамлау',
 	'mobile-frontend-main-menu-watchlist' => 'Күҙәтеү исемлеге',
 	'mobile-frontend-main-menu-settings' => 'Көйләүҙәр',
-	'mobile-frontend-main-menu-settings-heading' => 'Сайттың мобиль нөхсәһен көйләү',
+	'mobile-frontend-main-menu-settings-heading' => 'Сайттың мобиль нөхсәһен көйләү', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} проектындағы телдәр',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} проекты $1 {{PLURAL:$1|телдә}} бар. Түбәндә бөтә телдәр теҙмәһе килтерелгән.',
 	'mobile-frontend-page-menu-contents' => 'йөкмәткеһе',
@@ -1792,7 +1786,7 @@ $messages['bar'] = array(
 	'mobile-frontend-opt-in-explain' => "Durch d' Teilnaum am Beta-Test dahoitst an Zuagrieff af experimenteje Funkzióner, dé dert owerraa Próbléme und Feeler vaursocher kennern.",
 	'mobile-frontend-disable-images' => "Bijder a' da móbiln Auhsicht deaktiviern",
 	'mobile-frontend-enable-images' => "Bijder a' da móbiln Auhsicht aktiviern",
-	'mobile-frontend-featured-article' => 'Artiké vam Toog',
+	'mobile-frontend-featured-article' => 'Artiké vam Toog', # Fuzzy
 	'mobile-frontend-news-items' => "A' d' Noochrichten",
 	'mobile-frontend-language' => 'Sprooch', # Fuzzy
 	'mobile-frontend-username' => 'Benutzernaum:',
@@ -1839,7 +1833,7 @@ $messages['bcl'] = array(
 	'mobile-frontend-missing-image' => 'Imahe',
 	'mobile-frontend-off' => 'Saraduhon',
 	'mobile-frontend-on' => 'Bukason',
-	'mobile-frontend-featured-article' => 'Estimadong Artikulo Ngunyan',
+	'mobile-frontend-featured-article' => 'Estimadong Artikulo Ngunyan', # Fuzzy
 	'mobile-frontend-news-items' => 'Yaon sa Mga Bareta',
 	'mobile-frontend-language' => 'Lengguwahe:',
 	'mobile-frontend-language-article-heading' => 'Basahon sa ibang lengguwahe',
@@ -1886,9 +1880,7 @@ $messages['bcl'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Bantay-listahan',
 	'mobile-frontend-main-menu-settings' => 'Mga Panuytoy',
 	'mobile-frontend-main-menu-upload' => 'Mga ikinarga',
-	'mobile-frontend-main-menu-about' => 'Mapanungod sa {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Pangindahan',
-	'mobile-frontend-main-menu-settings-heading' => 'Kagiwasang mga panuytoy kan sityo',
+	'mobile-frontend-main-menu-settings-heading' => 'Kagiwasang mga panuytoy kan sityo', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} na mga lengwahe',
 	'mobile-frontend-settings-site-description' => 'An {{SITENAME}} manunumpungan sa $1 {{PLURAL:$1|lengguwahe|mga lengguwahe}}. An gabos na yaon na mga bersyon pinaglista sa ibaba',
 	'mobile-frontend-main-menu-account-create' => 'Magmukna nin panindog',
@@ -1896,7 +1888,6 @@ $messages['bcl'] = array(
 	'mobile-frontend-page-menu-history' => 'Historiya',
 	'mobile-frontend-meta-data-issues-header' => 'Mga isyu',
 	'mobile-frontend-meta-data-issues' => 'Ining pahina igwa nin nagkapirang mga isyu',
-	'mobile-frontend-ajax-preview-loading' => 'Patanaw sa ikinakargang pahina',
 	'mobile-frontend-page-saving' => 'Itinatagama an $1',
 	'mobile-frontend-user-cta' => 'Pakilaog tabi o magpirma paitaas tanganing mahiling mo an saimong mga notipikasyon.',
 	'mobile-frontend-user-button-tooltip' => 'Ipahiling an sakuyang mga notipikasyon',
@@ -1909,8 +1900,8 @@ $messages['bcl'] = array(
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 metro}}',
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}} na Haranihon dae nakakanumpong kun yaon saen ka... pakiotroha giraray?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Pakiprubar sa sarong bukas na lugar na igwang marhayon na signal.',
-	'mobile-frontend-nearby-noresults' => 'Matuninongon digde... Mayo nin arinman na mga artikulo an mananagboan sa haranihon.',
-	'mobile-frontend-nearby-noresults-guidance' => 'Maprubar na magmukna nin sarong baguhong artikulo o magdugang nin lokasyon sa yaon nang eksistido',
+	'mobile-frontend-nearby-noresults' => 'Matuninongon digde... Mayo nin arinman na mga artikulo an mananagboan sa haranihon.', # Fuzzy
+	'mobile-frontend-nearby-noresults-guidance' => 'Maprubar na magmukna nin sarong baguhong artikulo o magdugang nin lokasyon sa yaon nang eksistido', # Fuzzy
 	'mobile-frontend-nearby-refresh' => 'Kami nakanagbo nin sarong mas eksaktuhong lokasyon para saimo. Paki-klik digde tanganing hunsayon an listahan kan haranihong mga pahina',
 	'mobile-frontend-nearby-error' => '{{SITENAME}} na Haranihon igwa nin nagkapirang mga isyu.',
 	'mobile-frontend-nearby-error-guidance' => 'Magprubar na paghunsayon an saimong lokasyon.',
@@ -1929,7 +1920,7 @@ $messages['bcl'] = array(
 	'mobile-frontend-listed-image-no-description' => 'Mayong deskripsyon',
 	'mobile-frontend-donate-photo-upload-success' => 'Matrayumpo! An saimong imahe ngunyan magagamit na sa {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Matrayumpo! Mabalos para sa saimong enot na kaambagan!',
-	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Mag-ambag kan saimong mga imahe. Magtabang sa {{SITENAME}} na mga artikulo na magka-igwa nin buhay!',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Mag-ambag kan saimong mga imahe. Magtabang sa {{SITENAME}} na mga artikulo na magka-igwa nin buhay!', # Fuzzy
 	'mobile-frontend-first-upload-wizard-new-page-1' => 'An mga imahe sa {{SITENAME}} naggigikan sa Wikimedia Commons',
 	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'An saimong mga imahe makakatabang sa pag-edukar nin mga katawohan sa bilog na kinaban',
 	'mobile-frontend-first-upload-wizard-new-page-2' => 'Maglikay sa mga materyales na igwang katanosan sa pagsasadiri na saimong manunumpungan gikan sa internet siring man sa mga imaheng poster, balat kan libro, ibpa.',
@@ -1943,7 +1934,7 @@ $messages['bcl'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Maglaog',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Mag-ayon',
 	'mobile-frontend-watch-login' => 'Ika dapat nakalaog na tanganing mabantayan an mga pahina.',
-	'mobile-frontend-watchlist-a-z' => 'Gabos',
+	'mobile-frontend-watchlist-a-z' => 'Gabos', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Pinaghira',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'I-klik an bitoon sa ibabaw kan pahina',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'Ika sa ngunyan mayong binabantayan na arinmang mga pahina. An saimong bantay-listahan makakatabang saimo na baybayon an mga pahina na ika interesadong gayo. Bantayan an mga pahina sa paagi nin pagdutdot kan ikonong bitoon.',
@@ -1966,7 +1957,7 @@ $messages['bcl'] = array(
 	'mobile-frontend-diffview-explained' => 'An minasunod na mga linya pinagdugang na (+) asin pinagtangkas na (-):',
 	'mobile-frontend-table' => 'Lamesa kan $1',
 	'mobile-frontend-saving-exit-page' => 'An saimong kaambagan itinatagama pa. Kun ika magbaya sa saimong mga kaambagan mawawara. Segurado ka tabi na magluwas na?',
-	'mobile-frontend-photo-upload' => 'Magdugang nin imahe sa artikulong ini',
+	'mobile-frontend-photo-upload' => 'Magdugang nin imahe sa artikulong ini', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Nagdugang nin imahe para gamiton sa pahina',
 	'mobile-frontend-photo-article-donate-comment' => 'Nag-ambag nin imahe para sa Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'Nagdugang nin imahe sa pahina',
@@ -1988,7 +1979,7 @@ $messages['bcl'] = array(
 	'mobile-frontend-photo-nag-learn-more-1' => "'''Iyo!''' Mga litrato na saimong pinagkua sa mga lugar, mga bagay, asin mga pangyayari.",
 	'mobile-frontend-photo-nag-learn-more-2' => "'''Iyo!''' Mga litrato na makakatabang sa paglaladawan asin pagpapagayon sa mga pahina kan {{SITENAME}}",
 	'mobile-frontend-photo-nag-learn-more-3' => "'''Dae.''' An mga litrato kan mga poster sa sine, mga pabalat kan libro o iba na igwang katanosan sa pagsasadire na mga materyal. An mga ini pagpupuraon.",
-	'mobile-frontend-lead-image-tutorial-summary' => 'Paseguruhon na an saimong imahe makakatabang sa paglaladawan kan artikulo. Ini dapat na sarong imahe na ika an nagmukna na dae nakakabalga sa katanosan nin pagsasadire.',
+	'mobile-frontend-lead-image-tutorial-summary' => 'Paseguruhon na an saimong imahe makakatabang sa paglaladawan kan artikulo. Ini dapat na sarong imahe na ika an nagmukna na dae nakakabalga sa katanosan nin pagsasadire.', # Fuzzy
 	'mobile-frontend-image-uploading-wait' => 'Ikinakarga an imahe, pakihalat tabi.',
 	'mobile-frontend-image-uploading-long' => 'An imahe ikinakarga pa! Salamat tabi sa saimong pasensiya.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Kanselaron</a> kun ini minahaloy-haloy pa.',
@@ -2037,6 +2028,12 @@ $messages['bcl'] = array(
 	'mobile-frontend-talk-reply-success' => 'An saimong simbag matrayumpong ipinagtagama sa pahina nin orolay.',
 	'mobile-frontend-talk-reply-info' => 'Tandai an saimong simbag awtomatikong pinagpirmahan nin saimong ngaran-paragamit.',
 	'mobile-frontend-talk-reply' => 'Kasimbagan',
+);
+
+/** Belarusian (беларуская)
+ */
+$messages['be'] = array(
+	'mobile-frontend-copyright' => "Тэкст даступны па <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.be\">ліцэнзіі Creative Commons Attribution/Share-Alike</a>, у асобных выпадках могуць дзейнічаць дадатковыя ўмовы. Больш падрабязна глядзі <a href='http://wikimediafoundation.org/wiki/%D0%A3%D0%BC%D0%BE%D0%B2%D1%8B_%D0%B2%D1%8B%D0%BA%D0%B0%D1%80%D1%8B%D1%81%D1%82%D0%B0%D0%BD%D1%8C%D0%BD%D1%8F'>Умовы выкарыстаньня</a>. «{{SITENAME}}» — зарэгістраваная гандлёвая марка некамерцыйнай арганізацыі «<a href='http://www.wikimediafoundation.org/'>Фонд Вікімэдыя</a>».", # Fuzzy
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -2115,6 +2112,8 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-privacy-link-text' => 'Прыватнасьць',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Зьмест даступны на ўмовах ліцэнзіі [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; могуць ужывацца дадатковыя ўмовы.',
+	'mobile-frontend-copyright' => "Тэкст распаўсюджваецца на ўмовах ліцэнзіі <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; могуць прымяняцца дадатковыя ўмовы. Глядзіце
+падрабязнасьці ва <a href='http://wikimediafoundation.org/wiki/Умовы_выкарыстаньня'>Ўмовах карыстаньня</a>. «{{SITENAME}}» — зарэгістраваная гандлёвая марка некамэрцыйнай арганізацыі <a href='http://www.wikimediafoundation.org/'>фундацыя «Вікімэдыя»</a>.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Умовы_выкарыстаньня?useformat=mobile Умовы выкарыстаньня]',
 	'mobile-frontend-footer-contact' => 'Кантакты',
 	'mobile-frontend-search-noresults' => 'Старонкі, чые загалоўкі б пасавалі вашаму запыту, ня знойдзеныя. Зьмяніце запыт, або націсьніце на клявіятуры кнопку пошуку, каб шукаць у зьмесьце старонак.',
@@ -2127,8 +2126,6 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Сьпіс назіраньня',
 	'mobile-frontend-main-menu-settings' => 'Налады',
 	'mobile-frontend-main-menu-upload' => 'Запампоўкі',
-	'mobile-frontend-main-menu-about' => 'Пра {{GRAMMAR:вінавальны|{{SITENAME}}}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Адмова ад адказнасьці',
 	'mobile-frontend-main-menu-settings-heading' => 'Налады',
 	'mobile-frontend-settings-site-header' => 'Мовы {{GRAMMAR:родны|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => 'Праект «{{SITENAME}}» даступны на $1 {{PLURAL:$1|мове|мовах}}. Ніжэй выкладзеныя ўсе даступныя вэрсіі.',
@@ -2137,7 +2134,6 @@ $messages['be-tarask'] = array(
 	'mobile-frontend-page-menu-history' => 'Гісторыя',
 	'mobile-frontend-meta-data-issues-header' => 'Хібы',
 	'mobile-frontend-meta-data-issues' => 'Гэтая старонка мае хібы',
-	'mobile-frontend-ajax-preview-loading' => 'Загрузка папярэднягя прагляду старонкі',
 	'mobile-frontend-page-saving' => 'Захоўваем «$1»',
 	'mobile-frontend-user-cta' => 'Увайдзіце або зарэгіструйцеся, каб пабачыць вашыя абвесткі.',
 	'mobile-frontend-user-button-tooltip' => 'Паказаць мае абвесткі',
@@ -2239,7 +2235,7 @@ $messages['bg'] = array(
 	'mobile-frontend-missing-image' => 'Изображение',
 	'mobile-frontend-off' => 'ИЗКЛ.',
 	'mobile-frontend-on' => 'ВКЛ.',
-	'mobile-frontend-featured-article' => 'Избрана статия на деня',
+	'mobile-frontend-featured-article' => 'Избрана статия на деня', # Fuzzy
 	'mobile-frontend-news-items' => 'В новините',
 	'mobile-frontend-language' => 'Език:',
 	'mobile-frontend-language-article-heading' => 'Прочитане на друг език',
@@ -2255,6 +2251,7 @@ $messages['bg'] = array(
 	'mobile-frontend-clear-search' => 'Изчистване',
 	'mobile-frontend-privacy-link-text' => 'Поверителност',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Този текст е лицензиран под условията на договора <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.bg'> Криейтив Комънс Признание-Споделяне на споделеното 3.0 Нелокализиран</a>; към който могат да са в сила и допълнителни условия. Вижте <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/bg'>Условия за ползване</a> за подробности. Уикипедия е запазена марка на <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, организация с нестопанска цел.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Контакт',
 	'mobile-frontend-main-menu-button-tooltip' => 'Отвори главното меню',
 	'mobile-frontend-main-menu-page-title' => 'Навигация на сайта',
@@ -2263,7 +2260,7 @@ $messages['bg'] = array(
 	'mobile-frontend-main-menu-login' => 'Влизане',
 	'mobile-frontend-main-menu-logout' => 'Излизане',
 	'mobile-frontend-main-menu-settings' => 'Настройки',
-	'mobile-frontend-main-menu-settings-heading' => 'Настройки за мобилен сайт',
+	'mobile-frontend-main-menu-settings-heading' => 'Настройки за мобилен сайт', # Fuzzy
 	'mobile-frontend-page-menu-contents' => 'съдържание',
 	'mobile-frontend-page-menu-history' => 'История',
 	'mobile-frontend-watchlist-cta-button-login' => 'Влизане',
@@ -2434,8 +2431,6 @@ $messages['bn'] = array(
 	'mobile-frontend-talk-reply' => 'উত্তর',
 	'mobile-frontend-media-details' => 'বিস্তারিত',
 	'mobile-frontend-profile-title' => 'ব্যবহারকারী বৃত্তান্ত',
-	'mobile-frontend-profile-edits' => 'গত মাসে {{PLURAL:$1|১টি সম্পাদনা|$1টি সম্পাদনা|0=কোন সম্পাদনা নেই}}',
-	'mobile-frontend-profile-uploads' => 'গত মাসে {{PLURAL:$1|১টি আপলোড|$1টি আপলোড|0=কোন আপলোড নেই}}',
 	'mobile-frontend-profile-heading-recent' => 'সাম্প্রতিক',
 	'mobile-frontend-profile-usertalk' => 'আলাপ পাতা দেখুন।',
 	'mobile-frontend-profile-noargs' => 'একটি প্রোফাইল দেখতে একটি ব্যবহারকারী নাম প্রদান করুন।',
@@ -2471,7 +2466,7 @@ $messages['br'] = array(
 	'mobile-frontend-enable-images' => "Gweredekaat ar skeudennoù war al lec'hienn hezoug",
 	'mobile-frontend-off' => 'LAZHET',
 	'mobile-frontend-on' => 'ENAOUET',
-	'mobile-frontend-featured-article' => 'Un tamm sell war...',
+	'mobile-frontend-featured-article' => 'Un tamm sell war...', # Fuzzy
 	'mobile-frontend-news-items' => "Er C'heleier",
 	'mobile-frontend-language' => 'Yezh :',
 	'mobile-frontend-language-article-heading' => 'Lenn en ur yezh all',
@@ -2493,6 +2488,7 @@ $messages['br'] = array(
 	'mobile-frontend-clear-search' => 'Riñsañ',
 	'mobile-frontend-privacy-link-text' => 'Prevezded',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Gallout a reer ober gant an destenn-mañ zo diouzh an <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Aotre Creative Commons/Aotre Rannañ Heñvel</a>; diferadurioù ouzhpenn a c'hall talvezout ivez. Gwelet <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>an doare implijout</a> evit gouzout hiroc'h. Ur merk marilhet gant <a href='http://www.wikimediafoundation.org/'>Diazezadur Wikimedia, Inc.</a>, anezhañ un aozadur hep pal arc'hant, eo {{SITENAME}}.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Darempred',
 	'mobile-frontend-main-menu-button-tooltip' => 'Digeriñ al lañser pennañ',
 	'mobile-frontend-main-menu-featured' => 'War wel',
@@ -2502,7 +2498,7 @@ $messages['br'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Roll evezhiañ',
 	'mobile-frontend-main-menu-settings' => 'Arventennoù',
 	'mobile-frontend-main-menu-upload' => 'Enporzhiañ', # Fuzzy
-	'mobile-frontend-main-menu-settings-heading' => "Arventennoù al lec'hienn evit ar pellgomzerioù hezoug",
+	'mobile-frontend-main-menu-settings-heading' => "Arventennoù al lec'hienn evit ar pellgomzerioù hezoug", # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Yezhoù {{SITENAME}}',
 	'mobile-frontend-main-menu-account-create' => 'Krouiñ ur gont',
 	'mobile-frontend-page-menu-contents' => 'Danvez',
@@ -2511,13 +2507,13 @@ $messages['br'] = array(
 	'mobile-frontend-meta-data-issues' => 'Kudennoù zo gant ar bajenn-mañ',
 	'mobile-frontend-page-saving' => "Oc'h enrollañ $1",
 	'mobile-frontend-nearby-title' => 'Nepell',
-	'mobile-frontend-photo-upload-generic' => 'Reiñ ur skeudenn',
+	'mobile-frontend-photo-upload-generic' => 'Reiñ ur skeudenn', # Fuzzy
 	'mobile-frontend-donate-image-title' => 'Reiñ ur skeudenn', # Fuzzy
 	'mobile-frontend-listed-image-no-description' => 'Deskrivadur ebet',
 	'mobile-frontend-watchlist-more' => "muioc'h",
 	'mobile-frontend-watchlist-cta-button-login' => 'Kevreañ',
 	'mobile-frontend-watchlist-cta-button-signup' => 'En em enskrivañ',
-	'mobile-frontend-watchlist-a-z' => 'An holl',
+	'mobile-frontend-watchlist-a-z' => 'An holl', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Kemmet',
 	'mobile-frontend-watchlist-back-home' => "Distreiñ d'an degemer",
 	'mobile-frontend-watchlist-filter-all' => 'An holl',
@@ -2532,6 +2528,7 @@ $messages['br'] = array(
 	'mobile-frontend-photo-submit' => 'Kas',
 	'mobile-frontend-photo-cancel' => 'Nullañ',
 	'mobile-frontend-drawer-cancel' => 'Nullañ',
+	'mobile-frontend-profile-userpage-link' => 'Gweladenniñ pajenn an implijer.',
 );
 
 /** Bosnian (bosanski)
@@ -2547,7 +2544,8 @@ $messages['bs'] = array(
 	'mobile-frontend-regular-site' => 'Vidi ovu stranicu na običnoj Wikipediji', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Nastavi…',
 	'mobile-frontend-wml-back' => 'Nazad…',
-	'mobile-frontend-featured-article' => 'Odabrani članak',
+	'mobile-frontend-featured-article' => 'Odabrani članak', # Fuzzy
+	'mobile-frontend-copyright' => "Tekst je dostupan pod <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike licencom</a>; mogu se primjeniti i dodatna pravila. Pogledajte <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Pravila upotrebe</a> za više detalja. {{SITENAME}} je registrirana trgovačka marka od <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, neprofitne organizacije.", # Fuzzy
 	'mobile-frontend-nearby-to-page' => 'Sljedeće stranice su povezane na $1 po svom geografskom položaju',
 );
 
@@ -2927,6 +2925,7 @@ $messages['cs'] = array(
 	'mobile-frontend-privacy-link-text' => 'Ochrana soukromí',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Text je dostupný pod [//cs.m.wikipedia.org/wiki/Wikipedie:Text_licence_Creative_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]; případně za dalších podmínek.',
+	'mobile-frontend-copyright' => 'Text je dostupný pod <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.cs">licencí Creative Commons Uveďte autora&nbsp;– Zachovejte licenci</a>, případně za dalších podmínek. Podrobnosti naleznete na stránce <a href="http://wikimediafoundation.org/wiki/Podmínky_užití">Podmínky užití</a>. {{SITENAME}} je registrovaná ochranná známka neziskové organizace <a href=\'http://www.wikimediafoundation.org/\'>Wikimedia Foundation, Inc.</a>', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/cs?useformat=mobile Podmínky užití]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Vašemu hledání neodpovídají žádné názvy stránek. Změňte zadání nebo stiskněte tlačítko hledání pro hledání ve stránkách.',
@@ -2939,8 +2938,6 @@ $messages['cs'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Sledované',
 	'mobile-frontend-main-menu-settings' => 'Nastavení',
 	'mobile-frontend-main-menu-upload' => 'Načtení souboru', # Fuzzy
-	'mobile-frontend-main-menu-about' => 'O&nbsp;{{grammar:6sg|{{SITENAME}}}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Vyloučení odpovědnosti',
 	'mobile-frontend-main-menu-settings-heading' => 'Nastavení',
 	'mobile-frontend-settings-site-header' => 'Jazyky {{grammar:2sg|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} existuje v $1 {{PLURAL:$1|jazyce|jazycích}}. Níže jsou uvedeny všechny dostupné verze',
@@ -2949,7 +2946,6 @@ $messages['cs'] = array(
 	'mobile-frontend-page-menu-history' => 'Historie',
 	'mobile-frontend-meta-data-issues-header' => 'Nedostatky',
 	'mobile-frontend-meta-data-issues' => 'Tato stránka má nedostatky',
-	'mobile-frontend-ajax-preview-loading' => 'Načítá se náhled stránky',
 	'mobile-frontend-page-saving' => 'Ukládání $1',
 	'mobile-frontend-user-cta' => 'Abyste mohli vidět svá upozornění, musíte se přihlásit.',
 	'mobile-frontend-user-button-tooltip' => 'Zobrazit má upozornění',
@@ -3089,6 +3085,7 @@ $messages['cu'] = array(
 	'mobile-frontend-placeholder-alpha' => '{{SITENAME}} : исканиѥ (опꙑтъ)',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'подъ прощєниѥмь [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] пьсано ѥстъ · инꙑ оуставлєниꙗ тако жє могѫтъ бꙑти',
+	'mobile-frontend-copyright' => 'подъ прощєниѥмь <a href="http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution/Share-Alike License</a> пьсано ѥстъ · доплънитєл҄ьнꙑ оуставлєниꙗ тако жє могѫтъ бꙑти ⁙ Ꙁьри <a href="http://wikimediafoundation.org/wiki/Terms_of_Use/cu">польꙃєваниꙗ оуставъ</a> пльна расъмощрѥниꙗ дѣл̑ьма ⁙ ⁖ Википє́дїꙗ ⁖ нєтръжьна органїсма Wikimedia Foundation, Inc. єпїсимьнъ ꙁнакъ ѥстъ', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile польꙃєваниꙗ оуставъ]',
 	'mobile-frontend-main-menu-featured' => 'иꙁбрано',
 	'mobile-frontend-main-menu-nearby' => 'блиꙁъ',
@@ -3097,7 +3094,6 @@ $messages['cu'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'блюдєниꙗ',
 	'mobile-frontend-main-menu-settings' => 'строи',
 	'mobile-frontend-main-menu-upload' => 'положєнꙑ дѣла',
-	'mobile-frontend-main-menu-about' => '{{grammar:genitive|{{SITENAME}}}} опьсаниѥ',
 	'mobile-frontend-main-menu-settings-heading' => 'строи',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} : ѩꙁꙑци',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} пьсана $1 {{PLURAL:$1|ѩꙁꙑкомь|ѩꙁꙑкома|ѩꙁꙑкꙑ}} ѥстъ ⁙ сѥ ихъжє пльнъ каталогъ ѥстъ',
@@ -3382,10 +3378,6 @@ $messages['cy'] = array(
 	'mobile-frontend-media-details' => 'Manylion',
 	'abusefilter-edit-builder-vars-user-mobile' => "P'un ai yw defnyddiwr yn golygu gyda'r rhyngwyneb symudol ai pheidio",
 	'mobile-frontend-profile-title' => 'Data personol',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|Dim golygiadau|$1 golygiad|$1 olygiad|$1 golygiad}} yn ystod y mis diwethaf',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|Dim uwchlwythiadau|$1 uwchlwythiad}} yn ystod y mis diwethaf',
-	'mobile-frontend-profile-edits-limit' => 'Mwy na {{PLURAL:$1|$1 golygiad|$1 golygiad|$1 olygiad|$1 golygiad}} yn ystod y mis diwethaf',
-	'mobile-frontend-profile-uploads-limit' => 'Mwy na {{PLURAL:$1|$1 uwchlwythiad}} yn ystod y mis diwethaf',
 	'mobile-frontend-profile-heading-recent' => 'Diweddar',
 	'mobile-frontend-profile-usertalk' => 'Edrych ar y dudalen sgwrs.',
 	'mobile-frontend-profile-noargs' => 'Rhowch enw defnyddiwr i weld y data personol.',
@@ -3655,10 +3647,6 @@ $messages['da'] = array(
 	'mobile-frontend-media-details' => 'Detaljer',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Hvorvidt en bruger redigerer via mobil-grænsefladen',
 	'mobile-frontend-profile-title' => 'Brugerdata',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 redigering|$1 redigeringer|0=ingen redigeringer}} i den seneste måned',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 upload|$1 uploads|0=Ingen uploads}} i den seneste måned',
-	'mobile-frontend-profile-edits-limit' => 'Mere end {{PLURAL:$1|en redigering|$1 redigeringer}} i den seneste måned',
-	'mobile-frontend-profile-uploads-limit' => 'Mere end {{PLURAL:$1|en upload|$1 uploads}} i den seneste måned',
 	'mobile-frontend-profile-last-upload-caption' => 'Seneste upload af {{GENDER:$1|$1}}, {{PLURAL:$2|i går|for $2 dage siden|0=i dag}}.',
 	'mobile-frontend-profile-heading-recent' => 'Seneste',
 	'mobile-frontend-profile-registration' => '$1 har været medlem i {{PLURAL:$2|en dag|$2 dage}} og har lavet {{PLURAL:$3|en redigering|$3 redigeringer}}.',
@@ -3930,10 +3918,6 @@ $messages['de'] = array(
 	'mobile-frontend-media-details' => 'Einzelheiten',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet',
 	'mobile-frontend-profile-title' => 'Benutzerprofil',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|Eine Bearbeitung|$1 Bearbeitungen|0=Keine Bearbeitungen}} im letzten Monat',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|Eine hochgeladene Datei|$1 hochgeladene Dateien|0=Keine hochgeladenen Dateien}} im letzten Monat',
-	'mobile-frontend-profile-edits-limit' => 'Über {{PLURAL:$1|eine Bearbeitung|$1 Bearbeitungen}} im letzten Monat',
-	'mobile-frontend-profile-uploads-limit' => 'Über {{PLURAL:$1|eine hochgeladene Datei|$1 hochgeladene Dateien}} im letzten Monat',
 	'mobile-frontend-profile-last-upload-caption' => 'Letzter Upload von {{GENDER:$1|$1}}, {{PLURAL:$2|gestern|vor $2 Tagen|0=heute}}.',
 	'mobile-frontend-profile-heading-recent' => 'Kürzlich',
 	'mobile-frontend-profile-registration' => '$1 ist Mitglied seit {{PLURAL:$2|einem Tag|$2 Tagen}} und hat {{PLURAL:$3|eine Bearbeitung|$3 Bearbeitungen}} durchgeführt.',
@@ -3978,7 +3962,6 @@ $messages['diq'] = array(
 	'mobile-frontend-logged-out' => 'Şıma cıkewtış nêvıraşto',
 	'mobile-frontend-logged-in-homepage-notification' => 'Xeyr amey, $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Zey $1 cıkewtış.',
-	'mobile-frontend-handshake-title' => 'Heteneya...',
 	'mobile-frontend-sign-up-heading' => 'Qeyd be',
 	'mobile-frontend-sign-in-heading' => 'Cı kewe',
 	'mobile-frontend-sign-in-why' => 'Eke yew hesabê {{SITENAME}} şıma esto, wa şıma şenê cêr qeyd bê.',
@@ -4002,7 +3985,7 @@ $messages['diq'] = array(
 	'mobile-frontend-missing-image' => 'Resım',
 	'mobile-frontend-off' => 'RACNE',
 	'mobile-frontend-on' => 'AKE',
-	'mobile-frontend-featured-article' => 'Meqaleyê Ewroyênê Weçinıtey',
+	'mobile-frontend-featured-article' => 'Meqaleyê Ewroyênê Weçinıtey', # Fuzzy
 	'mobile-frontend-news-items' => 'Xeberi',
 	'mobile-frontend-language' => 'Zıwan:',
 	'mobile-frontend-language-article-heading' => 'Zıwanê bin de bıwane',
@@ -4040,7 +4023,7 @@ $messages['diq'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Lista seyri',
 	'mobile-frontend-main-menu-settings' => 'Eyari',
 	'mobile-frontend-main-menu-upload' => 'Barkerdışi',
-	'mobile-frontend-main-menu-settings-heading' => 'Eyarê sita mobile',
+	'mobile-frontend-main-menu-settings-heading' => 'Eyarê sita mobile', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Zıwanê {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} de $1 {{PLURAL:$1|zıwan mewcudo|zıwani mewcudê}}. Versiyonê cıyê bini lista cêrêne de estê.',
 	'mobile-frontend-main-menu-account-create' => 'Hesab vıraze',
@@ -4049,7 +4032,6 @@ $messages['diq'] = array(
 	'mobile-frontend-page-menu-history' => 'Tarix',
 	'mobile-frontend-meta-data-issues-header' => 'Meseley',
 	'mobile-frontend-meta-data-issues' => 'Na pele de tayê meseley estê',
-	'mobile-frontend-ajax-preview-loading' => 'Verasayışe pere ro barino',
 	'mobile-frontend-page-saving' => '$1 qeyd beno',
 	'mobile-frontend-nearby-title' => 'Nezdıra',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
@@ -4061,7 +4043,7 @@ $messages['diq'] = array(
 	'mobile-frontend-watchlist-more' => 'Zewbi',
 	'mobile-frontend-watchlist-cta-button-login' => 'Cıkewtış',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Qeyd be',
-	'mobile-frontend-watchlist-a-z' => 'Pêro',
+	'mobile-frontend-watchlist-a-z' => 'Pêro', # Fuzzy
 	'mobile-frontend-changeslist-ip' => 'Karbero bêname',
 	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
 	'mobile-frontend-watchlist-filter-all' => 'Pêro',
@@ -4125,7 +4107,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-missing-image' => 'Wobraz',
 	'mobile-frontend-off' => 'WUŠALTOWANY',
 	'mobile-frontend-on' => 'ZAŠALTOWANY',
-	'mobile-frontend-featured-article' => 'Nastawk dnja',
+	'mobile-frontend-featured-article' => 'Nastawk dnja', # Fuzzy
 	'mobile-frontend-news-items' => 'W nowosćach',
 	'mobile-frontend-language' => 'Rěc:',
 	'mobile-frontend-language-article-heading' => 'W drugej rěcy cytaś',
@@ -4152,6 +4134,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-privacy-link-text' => 'Priwatnosć',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Wopśimjeśe stoj pód licencu [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]k dispoziciji', # Fuzzy
+	'mobile-frontend-copyright' => "Tekst stoj pód <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a> k dispoziciji; pśidatne wuměnjenja mógu se nałožowaś. Glědaj <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Wužywańske wuměnjenja</a> za drobnostki. Wikipedija jo zregistrěrowana wikowańska marka załožby <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, za wše wužytneje organizacije.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/de?useformat=mobile wužywarske wuměnjenja] (nimski)',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Twójomu pytanjeju žedne bokowe titele njewotpówěduju. Změń swójo pytanje abo tłoc pytańsku tastu swójeje tastatury, aby w bokach pytał.',
@@ -4164,7 +4147,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Wobglědowańka',
 	'mobile-frontend-main-menu-settings' => 'Nastajenja',
 	'mobile-frontend-main-menu-upload' => 'Nagraśa',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Rěcy {{GRAMMAR:genitiw|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} stoj w $1 {{PLURAL:$1|rěcy|rěcoma|rěcach|rěcach}} k dispoziciji. Wšykne k dispoziciji stojece wersije su dołojce nalicone:',
 	'mobile-frontend-main-menu-account-create' => 'Konto załožyś',
@@ -4190,7 +4173,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Pśizjawiś',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Registrěrowaś',
 	'mobile-frontend-watch-login' => 'Musyš pśizjawjony byś, aby dataje wobglědował.',
-	'mobile-frontend-watchlist-a-z' => 'Wšykne',
+	'mobile-frontend-watchlist-a-z' => 'Wšykne', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Změnjony',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klikni na gwězdku górjejce na boku',
 	'mobile-frontend-watchlist-feed-empty' => 'Njejsu žedne boki z nowymi změnami',
@@ -4212,7 +4195,7 @@ $messages['dsb'] = array(
 	'mobile-frontend-diffview-explained' => 'Slědujuce smužki su se pśidali (+) a wótpórali (-):',
 	'mobile-frontend-table' => 'Tabela $1',
 	'mobile-frontend-saving-exit-page' => 'Twój pśinosk hyšći se składujo. Jolic něnto kóńcyš, se twóje pśinoski zgubiju. Coš napšawdu kóńcyś?',
-	'mobile-frontend-photo-upload' => 'Wobraz toś tomu nastawkoju pśidaś',
+	'mobile-frontend-photo-upload' => 'Wobraz toś tomu nastawkoju pśidaś', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Foto za wužywanje w boku pśidane', # Fuzzy
 	'mobile-frontend-photo-article-donate-comment' => 'Pósćony wobraz z mobilnego rěda', # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'Foto bokoju pśidane', # Fuzzy
@@ -4241,7 +4224,8 @@ $messages['dtp'] = array(
 	'mobile-frontend-random-button' => 'Songko',
 	'mobile-frontend-back-to-top-of-section' => 'Poningguli Id Boogian A',
 	'mobile-frontend-regular-site' => 'Intaai bolikon koubasanan Wikipodia', # Fuzzy
-	'mobile-frontend-featured-article' => 'Babasaon Tadau Diti',
+	'mobile-frontend-featured-article' => 'Babasaon Tadau Diti', # Fuzzy
+	'mobile-frontend-copyright' => "Oguno o tik id siriba <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Tinimungan Pogiompinaian Gonsupu/Lisin Miagal-Mogiolos</a>; kikooturon poinruhang milo pokionuon. Intaai <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Kooturan Pomogunaan</a> montok kointalangan. Wikipodia nopo nga tanda poniagaan <a href='http://www.wikimediafoundation.org/'>Yayasan Wikimodia, Pinoingkakat.</a>, tinimungan awu mokiuntung.", # Fuzzy
 );
 
 /** Ewe (eʋegbe)
@@ -4302,6 +4286,7 @@ $messages['el'] = array(
 	'mobile-frontend-clear-search' => 'Εκκαθάριση',
 	'mobile-frontend-privacy-link-text' => 'Ιδιωτικότητα',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Τα κείμενα είναι διαθέσιμα υπό την άδεια <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.el\">Creative Commons Attribution/Share-Alike</a>, μπορεί να ισχύουν πρόσθετοι όροι. Δείτε τους <a href='http://wikimediafoundation.org/wiki/%CE%8C%CF%81%CE%BF%CE%B9_%CE%A7%CF%81%CE%AE%CF%83%CE%B7%CF%82'>Όρους Χρήσης</a> για λεπτομέρειες. Το όνομα «{{SITENAME}}» είναι κατοχυρωμένο σήμα του <a href='http://www.wikimediafoundation.org/'>Ιδρύματος Wikimedia, Inc.</a>, ενός μη κερδοσκοπικού οργανισμού.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Επικοινωνία',
 	'mobile-frontend-main-menu-button-tooltip' => 'Άνοιγμα κυρίως μενού',
 	'mobile-frontend-main-menu-featured' => 'Επιλεγμένο',
@@ -4349,6 +4334,7 @@ $messages['el'] = array(
  */
 $messages['en-gb'] = array(
 	'mobile-frontend-settings-description' => 'Customise your experience on your mobile device with these mobile specific site settings.',
+	'mobile-frontend-copyright' => "Text is available under the <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; additional terms may apply. See <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> for details. {{SITENAME}} is a registered trademark of the <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, a non-profit organisation.", # Fuzzy
 );
 
 /** Esperanto (Esperanto)
@@ -4684,7 +4670,6 @@ $messages['es'] = array(
 	'mobile-frontend-talk-overlay-header' => 'Discusión',
 	'mobile-frontend-media-details' => 'Detalles',
 	'mobile-frontend-profile-title' => 'Perfil de usuario',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 edición|$1 ediciones|0=Ninguna edición}} en el último mes',
 	'mobile-frontend-profile-heading-recent' => 'Reciente',
 	'mobile-frontend-profile-yours' => 'Visita su página de perfil.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Este usuario}} es un editor nuevo.',
@@ -4881,10 +4866,6 @@ $messages['et'] = array(
 	'mobile-frontend-talk-reply' => 'Vastus',
 	'mobile-frontend-media-details' => 'Üksikasjad',
 	'mobile-frontend-profile-title' => 'Kasutajaprofiil',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|Üks muudatus|$1 muudatust|0=Ühtegi muudatust}} viimase kuu jooksul',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|Üks üleslaaditud fail|$1 üleslaaditud faili|0=Ühtegi üleslaaditud faili}} viimase kuu jooksul',
-	'mobile-frontend-profile-edits-limit' => 'Üle {{PLURAL:$1|ühe|$1}} muudatuse viimase kuu jooksul',
-	'mobile-frontend-profile-uploads-limit' => 'Üle {{PLURAL:$1|ühe|$1}} üleslaaditud faili viimase kuu jooksul',
 	'mobile-frontend-profile-last-upload-caption' => 'Viimase faili laadis $1 üles {{PLURAL:$2|eile|$2 päeva tagasi|0=täna}}.',
 	'mobile-frontend-profile-registration' => '$1 on kaastööline olnud {{PLURAL:$2|üks päev|$2 päeva}} ja on teinud {{PLURAL:$3|ühe muudatuse|$3 muudatust}}.',
 	'mobile-frontend-profile-noargs' => 'Palun määra profiili vaatamiseks kasutajanimi.',
@@ -4917,7 +4898,7 @@ $messages['eu'] = array(
 	'mobile-frontend-images-status' => 'Irudiak',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-featured-article' => 'Gaur Nabarmendutako Artikulua',
+	'mobile-frontend-featured-article' => 'Gaur Nabarmendutako Artikulua', # Fuzzy
 	'mobile-frontend-news-items' => 'Albisteak',
 	'mobile-frontend-language' => 'Hizkuntza:',
 	'mobile-frontend-language-site-choose' => 'Hikzuntza bilatu',
@@ -4927,6 +4908,7 @@ $messages['eu'] = array(
 	'mobile-frontend-clear-search' => 'Garbitu',
 	'mobile-frontend-privacy-link-text' => 'Pribatutasuna',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Testua ondorengo lizentziapean dago <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Atribuzioa/Partekatu-Alike Lizentzia</a>. Informazio gehiagorako <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Erabilpen-baldintzak</a> ikusi. {{SITENAME}} <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, erakundearen irabazi-asmorik gabeko erregistratutako proiektua da.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontaktatu',
 	'mobile-frontend-main-menu-featured' => 'Nabarmendua',
 	'mobile-frontend-main-menu-nearby' => 'Gertukoak',
@@ -4946,7 +4928,8 @@ $messages['ext'] = array(
 	'mobile-frontend-random-button' => 'Aleatóriu',
 	'mobile-frontend-back-to-top-of-section' => 'Dil alatrás un apaltihu',
 	'mobile-frontend-regular-site' => 'Guipal esta páhina ena Güiquipeya estándal', # Fuzzy
-	'mobile-frontend-featured-article' => 'Artículu destacau',
+	'mobile-frontend-featured-article' => 'Artículu destacau', # Fuzzy
+	'mobile-frontend-copyright' => "El testu está disponibri baju la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Licéncia Creative Commons Attribution/Share-Alike</a>; cláusulas adicionalis puén apricalsi. Guipai <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> pa conocel más detallis. Güiquipeya es una marca rustria la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, una olganización sin ánimu de lucru.", # Fuzzy
 );
 
 /** Persian (فارسی)
@@ -5212,10 +5195,6 @@ $messages['fa'] = array(
 	'mobile-frontend-media-details' => 'جزئیات',
 	'abusefilter-edit-builder-vars-user-mobile' => 'اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه',
 	'mobile-frontend-profile-title' => 'مشخصات کاربر',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|یک ویرایش|$1 ویرایش|0=هیچ ویرایشی}} در ماه گذشته',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|یک  باگذاری|$1 بارگذاری|0=هیچ بارگذاری}} در ماه اخیر',
-	'mobile-frontend-profile-edits-limit' => 'بیش از {{PLURAL:$1|$1 ویرایش}} در ماه اخیر',
-	'mobile-frontend-profile-uploads-limit' => 'بیش از {{PLURAL:$1|$1 بارگذاری}} در ماه اخیر',
 	'mobile-frontend-profile-last-upload-caption' => 'آخرین بارگذاری توسط {{GENDER:$1|$1}}، {{PLURAL:$2|دیروز|$2 روز پیش|0=امروز}}',
 	'mobile-frontend-profile-heading-recent' => 'اخیر',
 	'mobile-frontend-profile-registration' => '$1 برای {{PLURAL:$2|$2 روز}} عضو بوده و {{PLURAL:$3|$3 ویرایش}} انجام داده‌است.',
@@ -5480,8 +5459,6 @@ $messages['fo'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Eftirlitslisti',
 	'mobile-frontend-main-menu-settings' => 'Innstillingar',
 	'mobile-frontend-main-menu-upload' => 'Útleggingar',
-	'mobile-frontend-main-menu-about' => 'Um {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Fyrivarni',
 	'mobile-frontend-main-menu-settings-heading' => 'Innstillingar',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} mál',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} er tøk á $1 {{PLURAL:$1|máli|málum}}. Allar tøkar versjónir síggjast niðanfyri',
@@ -5490,7 +5467,6 @@ $messages['fo'] = array(
 	'mobile-frontend-page-menu-history' => 'Søga',
 	'mobile-frontend-meta-data-issues-header' => 'Trupulleikar',
 	'mobile-frontend-meta-data-issues' => 'Henda síðan hevur nakrar trupulleikar',
-	'mobile-frontend-ajax-preview-loading' => 'Lesur inn forskoðan',
 	'mobile-frontend-page-saving' => 'Goymir $1',
 	'mobile-frontend-user-cta' => 'Rita inn ella skráset teg fyri at síggja tínar fráboðanir.',
 	'mobile-frontend-user-button-tooltip' => 'Vís mínar fráboðanir',
@@ -5856,10 +5832,6 @@ $messages['fr'] = array(
 	'mobile-frontend-media-details' => 'Détails',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un utilisateur est ou non en cours de modification via l’interface mobile',
 	'mobile-frontend-profile-title' => 'Profil utilisateur',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 modification|$1 modifications|0=Aucune modification}} le mois passé',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 import|$1 imports|0=Aucun import}} le mois passé',
-	'mobile-frontend-profile-edits-limit' => 'Sur {{PLURAL:$1|$1 modification|$1 modifications}} le mois passé',
-	'mobile-frontend-profile-uploads-limit' => 'Sur {{PLURAL:$1|$1 import|$1 imports}} le mois passé',
 	'mobile-frontend-profile-last-upload-caption' => 'Dernier téléchargement par {{GENDER:$1|$1}}, {{PLURAL:$2|hier|il y a $2 jours|0=aujourd’hui}}.',
 	'mobile-frontend-profile-heading-recent' => 'Récent',
 	'mobile-frontend-profile-registration' => '$1 a été un membre pendant {{PLURAL:$2|$2 jour|$2 jours}} et a fait {{PLURAL:$3|$3 modification|$3 modifications}}.',
@@ -5904,7 +5876,7 @@ $messages['frp'] = array(
 	'mobile-frontend-missing-image' => 'Émâge',
 	'mobile-frontend-off' => 'NAN',
 	'mobile-frontend-on' => 'OUÈ',
-	'mobile-frontend-featured-article' => 'Lumiére dessus...',
+	'mobile-frontend-featured-article' => 'Lumiére dessus...', # Fuzzy
 	'mobile-frontend-news-items' => 'Dens les novèles',
 	'mobile-frontend-language' => 'Lengoua :',
 	'mobile-frontend-language-article-heading' => 'Liére dens n’ôtra lengoua',
@@ -5939,7 +5911,7 @@ $messages['frp'] = array(
 	'mobile-frontend-main-menu-logout' => 'Sè dèbranchiér',
 	'mobile-frontend-main-menu-watchlist' => 'Lista de survelyence',
 	'mobile-frontend-main-menu-settings' => 'Configuracion',
-	'mobile-frontend-main-menu-settings-heading' => 'Configuracion du seto mobilo',
+	'mobile-frontend-main-menu-settings-heading' => 'Configuracion du seto mobilo', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Lengoues de {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} est disponiblo en $1 lengou{{PLURAL:$1|a|es}}. Totes les vèrsions disponibles sont listâyes ce-desot',
 	'mobile-frontend-main-menu-account-create' => 'Fâre un compto',
@@ -6232,7 +6204,8 @@ $messages['fur'] = array(
 	'mobile-frontend-random-button' => 'Casuâl',
 	'mobile-frontend-back-to-top-of-section' => 'Salte indaûr di une sezion',
 	'mobile-frontend-regular-site' => 'Viôt cheste pagjine te Vichipedie', # Fuzzy
-	'mobile-frontend-featured-article' => 'Articul in vitrine di vuê',
+	'mobile-frontend-featured-article' => 'Articul in vitrine di vuê', # Fuzzy
+	'mobile-frontend-copyright' => "Il test al è disponibil sot de <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; a podin aplicâsi altris tiermins. Cjale <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Tiermins dal ûs</a> pai detais. {{SITENAME}} e je une marcje regjistrade de <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, une organizazion cence fin di lucri.", # Fuzzy
 );
 
 /** Irish (Gaeilge)
@@ -6257,7 +6230,8 @@ $messages['gd'] = array(
 	'mobile-frontend-random-button' => 'Air thuaiream',
 	'mobile-frontend-back-to-top-of-section' => 'Leum earrann air ais',
 	'mobile-frontend-regular-site' => 'Sealladh desktop',
-	'mobile-frontend-featured-article' => 'Artaigil taghta an-diugh',
+	'mobile-frontend-featured-article' => 'Artaigil taghta an-diugh', # Fuzzy
+	'mobile-frontend-copyright' => "Tha an teacsa seo ri fhaighinn fo <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'Cheadachas Creative Commons Attribution/Share-Alike</a>; faodaidh gu bheil teirmichean a bharrachd buailteach. Faic <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Teirmichean a' Chleachdaicd</a> airson mion-fhiosrachadh. Tha Uicipeid 'na chomharra-malairt clàraichte aig <a href='http://www.wikimediafoundation.org/'>Fonndas Meadhanan nan Uici, Earr.</a>, buidheann neo-phrothaideach.", # Fuzzy
 );
 
 /** Galician (galego)
@@ -6512,10 +6486,6 @@ $messages['gl'] = array(
 	'mobile-frontend-media-details' => 'Detalles',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Se un usuario está ou non está editando a través da interface móbil',
 	'mobile-frontend-profile-title' => 'Perfil de usuario',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 edición|$1 edición|0=Sen edicións}} no último mes',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 carga|$1 cargas|0=Sen cargas}} no último mes',
-	'mobile-frontend-profile-edits-limit' => 'Máis {{PLURAL:$1|dunha edición|de $1 edición}} no último mes',
-	'mobile-frontend-profile-uploads-limit' => 'Máis {{PLURAL:$1|dunha carga|de $1 cargas}} no último mes',
 	'mobile-frontend-profile-last-upload-caption' => 'A última carga realizouna {{GENDER:$1|$1}} {{PLURAL:$2|onte|hai $2 días|0=hoxe}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recentes',
 	'mobile-frontend-profile-registration' => '$1 é membro desde hai {{PLURAL:$2|$2 día|$2 días}} e realizou {{PLURAL:$3|$3 edición|$3 edicións}}.',
@@ -6562,7 +6532,6 @@ $messages['gsw'] = array(
 	'mobile-frontend-random-button' => 'Zuefall',
 	'mobile-frontend-back-to-top-of-section' => 'Ei Abschnitt zruckgumpe',
 	'mobile-frontend-close-section' => 'De Abschnitt zuemache',
-	'mobile-frontend-empty-homepage-text' => 'Die Homepage mueß konfiguriert wäre. <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">Aeleitige, wie mer di mobil Websyte cha aktiviere</a>',
 	'mobile-frontend-regular-site' => 'Klassischi Aasicht',
 	'mobile-frontend-wml-continue' => 'Wyter ...',
 	'mobile-frontend-wml-back' => 'Zruck ...',
@@ -6576,7 +6545,7 @@ $messages['gsw'] = array(
 	'mobile-frontend-missing-image' => 'Bild',
 	'mobile-frontend-off' => 'UUS',
 	'mobile-frontend-on' => 'AA',
-	'mobile-frontend-featured-article' => 'Artikel vum Tag',
+	'mobile-frontend-featured-article' => 'Artikel vum Tag', # Fuzzy
 	'mobile-frontend-news-items' => 'In dr Nochrichte',
 	'mobile-frontend-language' => 'Sproch:',
 	'mobile-frontend-language-header' => 'De Artikel isch uff {{PLURAL:$1|einere Sprooch|$1 Sprooche}} verfiegbar', # Fuzzy
@@ -6592,12 +6561,13 @@ $messages['gsw'] = array(
 	'mobile-frontend-privacy-link-text' => 'Dateschutz',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'D Inhalt sin verfiegbar unter dr Lizänz [//de.m.wikipedia.org/wiki/Wikipedia:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => "Dr Text isch unter dr Lizenz <a class='internal' href='http://de.wikipedia.org/wiki/{{SITENAME}}:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported'>„Creative Commons Attribution/Share-Alike“</a> verfiegbar; zuesätzligi Bedingunge chenne aawändbar syy. Luege d <a class='internal' href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Nutzigsbedingige</a> fir Einzelheite. {{SITENAME}}® isch e yytraiti Marke vu dr Wikimedia Foundation Inc.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Es git kei Artikeltitel, wo dynrer Suechyygab entspricht. Du chasch dyni Suech aapasse, oder druff uff d Suechschaltflächi uff dynrer Tastatur, zume d Suech uff de ganze Inhalt vo de Artikel usszwyte.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Bsundersch glunge',
 	'mobile-frontend-main-menu-nearby' => 'In de Nööchi',
 	'mobile-frontend-main-menu-settings' => 'Yystellige',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobilyystellige',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobilyystellige', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}-Sproche',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} stoht in {{PLURAL:$1|ere Sproch|$1 Sproche}} z Verfiegig. Alli verfiegbare Sprochversione sin unten ufgfiert.',
 	'mobile-frontend-page-menu-contents' => 'Inhalt',
@@ -6635,7 +6605,7 @@ $messages['gu'] = array(
 	'mobile-frontend-enable-images' => 'મોબાઈલ સાઈટ પર ચિત્રો સક્રિય કરો',
 	'mobile-frontend-off' => 'બંધ',
 	'mobile-frontend-on' => 'ચાલુ',
-	'mobile-frontend-featured-article' => 'આજનો વિશેષ લેખ',
+	'mobile-frontend-featured-article' => 'આજનો વિશેષ લેખ', # Fuzzy
 	'mobile-frontend-news-items' => 'સમાચારમાં',
 	'mobile-frontend-language' => 'ભાષા:',
 	'mobile-frontend-language-footer' => 'નોંધ: કદાચ આ પાનું આપની પસંદગીની ભાષામાં લખાયેલું નથી. તમે અહીં ક્લિક કરીને જોઈ શકો છો કે {{SITENAME}} કઈ ભાષાઓમાં પ્રાપ્ત છે.',
@@ -6655,18 +6625,14 @@ $messages['gu'] = array(
 	'mobile-frontend-main-menu-featured' => 'રુપક',
 	'mobile-frontend-main-menu-nearby' => 'નજીકમાં',
 	'mobile-frontend-main-menu-settings' => 'ગોઠવણીઓ',
-	'mobile-frontend-main-menu-settings-heading' => 'મોબાઇલ સાઇટ ગોઠવણીઓ',
+	'mobile-frontend-main-menu-settings-heading' => 'મોબાઇલ સાઇટ ગોઠવણીઓ', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ભાષાઓ',
 	'mobile-frontend-page-menu-contents' => 'વિષયસૂચિ',
 	'mobile-frontend-page-menu-history' => 'ઇતિહાસ',
 	'mobile-frontend-nearby-requirements-guidance' => 'અન્ય બ્રાઉઝર પર પ્રયાસ કરો અથવા તમે જાવાસ્ક્રિપ્ટ અક્રિય કરી હોય તો તેને સક્રિય કરો.',
-	'mobile-frontend-needs-photo' => 'ચિત્રની જરૂર છે',
 	'mobile-frontend-editor-edit' => 'ફેરફાર કરો',
 	'mobile-frontend-editor-save' => 'સાચવો',
 	'mobile-frontend-editor-cancel' => 'રદ કરો',
-	'mobile-frontend-editor-confirm' => 'ખાતરી કરો',
-	'mobile-frontend-editor-previous' => 'પહેલાનું',
-	'mobile-frontend-editor-next' => 'આગળ',
 	'mobile-frontend-talk-overlay-header' => 'ચર્ચા',
 );
 
@@ -6680,6 +6646,7 @@ $messages['gv'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Goll Erash Un Rheynn',
 	'mobile-frontend-regular-site' => 'Jeeagh er y duillag shoh er {{SITENAME}} chadjin', # Fuzzy
 	'mobile-frontend-featured-article' => 'Reih art y laa',
+	'mobile-frontend-copyright' => "Ta'n teks ry-gheddyn fo'n <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Chiedoonys Creative Commons Attribution/Share-Alike</a>; foddee dy vel tooilley conaantyn currit rish. Jeeagh er <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Conaantyn Ymmyd</a> son tooilley mynphoyntyn. She cowrey keirdey jeh'n reagheydys neu-vondeishagh <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> ee {{SITENAME}}.", # Fuzzy
 );
 
 /** Hausa (Hausa)
@@ -6690,7 +6657,8 @@ $messages['ha'] = array(
 	'mobile-frontend-random-button' => 'Randam',
 	'mobile-frontend-back-to-top-of-section' => 'A tsallaka baya sashe guda',
 	'mobile-frontend-regular-site' => 'A duba wannan shafi a kan {{SITENAME}} na kullum', # Fuzzy
-	'mobile-frontend-featured-article' => 'Zaɓaɓɓar maƙala ta yau',
+	'mobile-frontend-featured-article' => 'Zaɓaɓɓar maƙala ta yau', # Fuzzy
+	'mobile-frontend-copyright' => "Matanin ya samu ne a ƙarƙashin lasisin <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; tana yiyuwa wasu ƙa'idoji su yi tasiri. A duba <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> don ƙarin bayani. {{SITENAME}} sunan kasuwanci ne mai rajista na <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, haƙuma wadda ba ta neman riba ba.", # Fuzzy
 );
 
 /** Hawaiian (Hawai`i)
@@ -6701,7 +6669,8 @@ $messages['haw'] = array(
 	'mobile-frontend-random-button' => 'ʻOhi Kaulele',
 	'mobile-frontend-back-to-top-of-section' => 'Hoʻi i ka Māhele ma mua',
 	'mobile-frontend-regular-site' => 'Nānā kēia ʻaoʻao ma Wikipikia maʻamau', # Fuzzy
-	'mobile-frontend-featured-article' => 'Ka ʻAtikala Nui o Kēia Lā',
+	'mobile-frontend-featured-article' => 'Ka ʻAtikala Nui o Kēia Lā', # Fuzzy
+	'mobile-frontend-copyright' => "Loaʻa nā kikokikona i loko o <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; hiki paha kekahi mau mea ʻē aʻe ke pili. ʻIke i <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> no nā kikoʻī. ʻO Wikipikia kekahi Kunikia i kāinoa ʻia e <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, he ʻahahui uku ʻole ia.", # Fuzzy
 );
 
 /** Hebrew (עברית)
@@ -6992,7 +6961,7 @@ $messages['hi'] = array(
 	'mobile-frontend-disable-images' => 'मोबाइल साइट पर छवियों को अक्षम करें',
 	'mobile-frontend-enable-images' => 'मोबाइल साइट पर छवियों को सक्षम करें',
 	'mobile-frontend-missing-image' => 'छवि',
-	'mobile-frontend-featured-article' => 'आज का निर्वाचित लेख',
+	'mobile-frontend-featured-article' => 'आज का निर्वाचित लेख', # Fuzzy
 	'mobile-frontend-news-items' => 'समाचार में',
 	'mobile-frontend-language' => 'भाषा', # Fuzzy
 	'mobile-frontend-username' => 'सदस्य नाम:',
@@ -7001,6 +6970,7 @@ $messages['hi'] = array(
 	'mobile-frontend-password-placeholder' => 'पासवर्ड',
 	'mobile-frontend-login' => 'लॉग इन',
 	'mobile-frontend-placeholder' => 'खोज शब्द यहाँ टाइप करें...', # Fuzzy
+	'mobile-frontend-copyright' => 'इस भाषा के लिए मानक प्रकाशनाधिकार।', # Fuzzy
 	'mobile-frontend-main-menu-account-create' => 'खाता बनाएँ',
 	'mobile-frontend-page-menu-history' => 'इतिहास',
 	'mobile-frontend-watchlist-filter-all' => 'सभी',
@@ -7017,7 +6987,7 @@ $messages['hif-latn'] = array(
 	'mobile-frontend-home-button' => 'Pahila Panna',
 	'mobile-frontend-random-button' => 'Koi bhi',
 	'mobile-frontend-images-status' => 'Chhapa',
-	'mobile-frontend-featured-article' => 'Aaj ke featured article',
+	'mobile-frontend-featured-article' => 'Aaj ke featured article', # Fuzzy
 	'mobile-frontend-language' => 'Bhasa:',
 	'mobile-frontend-username' => 'Sadasya ke naam:',
 	'mobile-frontend-login' => 'Log in karo',
@@ -7034,7 +7004,8 @@ $messages['hil'] = array(
 	'mobile-frontend-home-button' => 'Balay',
 	'mobile-frontend-random-button' => 'Randum',
 	'mobile-frontend-regular-site' => 'Tan-awon ini nga pahina sa regular na Wikipedya', # Fuzzy
-	'mobile-frontend-featured-article' => 'Subong nga Napili na Artikulo',
+	'mobile-frontend-featured-article' => 'Subong nga Napili na Artikulo', # Fuzzy
+	'mobile-frontend-copyright' => "Ang ini nga teksto ay makita sa idalum <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; ang nadugang nga impormasyon ay pwede ma-aply. Tan-awa <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> para sa mga detalye. Ang Wikipedya ay rehistrado trademark sang <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, wala profidad nga organisasyon.", # Fuzzy
 );
 
 /** Croatian (hrvatski)
@@ -7073,7 +7044,7 @@ $messages['hr'] = array(
 	'mobile-frontend-missing-image' => 'Slika',
 	'mobile-frontend-off' => 'isključeno',
 	'mobile-frontend-on' => 'uključeno',
-	'mobile-frontend-featured-article' => 'Današnji izabrani članak',
+	'mobile-frontend-featured-article' => 'Današnji izabrani članak', # Fuzzy
 	'mobile-frontend-news-items' => 'U vijestima',
 	'mobile-frontend-language' => 'Jezik:',
 	'mobile-frontend-language-article-heading' => 'Drugi jezici',
@@ -7100,6 +7071,7 @@ $messages['hr'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privatnost',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Sadržaj je dostupan pod [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] licencijom.', # Fuzzy
+	'mobile-frontend-copyright' => "Tekst je dostupan pod licencijom <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Imenovanje/Dijeli pod istim uvjetima</a>; dodatni uvjeti mogu se primijenjivati. Pogledajte <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Uvjete uporabe</a> za detalje. Wikipedija je registrirani zaštitni znak <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, neprofitne organizacije.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Nema članka koji odgovara upitu. Promijenite traženi izraz, ili pritisnite gumb za pretraživanje sadržaja članaka.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Otvori glavni izbornik',
@@ -7110,7 +7082,7 @@ $messages['hr'] = array(
 	'mobile-frontend-main-menu-logout' => 'Odjava',
 	'mobile-frontend-main-menu-watchlist' => 'Praćene stranice',
 	'mobile-frontend-main-menu-settings' => 'Postavke',
-	'mobile-frontend-main-menu-settings-heading' => 'Postavke mobilnog sučelja',
+	'mobile-frontend-main-menu-settings-heading' => 'Postavke mobilnog sučelja', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} jezici',
 	'mobile-frontend-settings-site-description' => 'Projekt {{SITENAME}} dostupan je na $1 {{PLURAL:$1|jeziku|jezika}}. Sve jezične inačice pobrojane su ovdje',
 	'mobile-frontend-main-menu-account-create' => 'Otvori suradnički račun',
@@ -7186,7 +7158,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-missing-image' => 'Wobraz',
 	'mobile-frontend-off' => 'WUPINJENY',
 	'mobile-frontend-on' => 'ZAPINJENY',
-	'mobile-frontend-featured-article' => 'Nastawk dnja',
+	'mobile-frontend-featured-article' => 'Nastawk dnja', # Fuzzy
 	'mobile-frontend-news-items' => 'W powěsćach',
 	'mobile-frontend-language' => 'Rěč:',
 	'mobile-frontend-language-article-heading' => 'W druhej rěči čitać',
@@ -7221,6 +7193,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-privacy-link-text' => 'Priwatnosć',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Tekst steji pod licencu [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] k dispoziciji; přidatne wuměnjenja dadźa so nałožić',
+	'mobile-frontend-copyright' => 'Tekst steji pod <a href="http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution/Share-Alike License</a> k dispoziciji; přidatne wuměnjenja móžeja so nałožować. Hlej <a href="http://wikimediafoundation.org/wiki/Nutzungsbedingungen">Wužiwanske wuměnjenja</a> za podrobnosće. Wikipedija je zapisane wikowanske znamjo załožby <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, powšitkownosći wužitneje organizacije.', # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_Use/de?useformat=mobile wužiwarske wuměnjenja] (němsce)',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Twojemu pytanju žane titule strony njewotpowěduja. Změń swoje pytanje abo stłóč pytansku tastu swojeje tastatury, zo by znutřka stronow pytał.',
@@ -7233,8 +7206,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Wobkedźbowanki',
 	'mobile-frontend-main-menu-settings' => 'Nastajenja',
 	'mobile-frontend-main-menu-upload' => 'Nahraća',
-	'mobile-frontend-main-menu-about' => 'Wo {{GRAMMAR:lokatiw|{{SITENAME}}}}',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobilne nastajenja', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Rěče {{GRAMMAR:genitiw|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} steji w $1 {{PLURAL:$1|rěči|rěči|rěčach|rěčach}} k dispoziciji. Wšě k dispoziciji stejace wersije su deleka nalistowane:',
 	'mobile-frontend-main-menu-account-create' => 'Konto załožić',
@@ -7248,7 +7220,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-nearby-requirements' => 'Bohužel twój wobhladowak funkciju "blisko {{GRAMMAR:genitiw|{{SITENAME}}}}" njepodpěruje.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
-	'mobile-frontend-nearby-noresults' => 'Zboha měrne tu... W bliskosći njejsu so žane nastawki namakali.',
+	'mobile-frontend-nearby-noresults' => 'Zboha měrne tu... W bliskosći njejsu so žane nastawki namakali.', # Fuzzy
 	'mobile-frontend-nearby-refresh' => 'Smy dokładniše stejnišćo za tebje namakali. Klikń tu, zo by lisćinu ze stronami w bliskosći aktualizował',
 	'mobile-frontend-nearby-error' => 'Funkcija "blisko {{GRAMMAR:genitiw|{{SITENAME}}}}" ma někotre problemy.',
 	'mobile-frontend-donate-image-login' => 'Dyrbiš přizjewjeny być, zo by swoje nahraća widźał.',
@@ -7269,7 +7241,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Přizjewić',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Registrować',
 	'mobile-frontend-watch-login' => 'Dyrbiš přizjewjeny być, zo by strony wobkedźbował.',
-	'mobile-frontend-watchlist-a-z' => 'Wšě',
+	'mobile-frontend-watchlist-a-z' => 'Wšě', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Změnjeny',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klikń na hwěžku horjeka na stronje',
 	'mobile-frontend-watchlist-feed-empty' => 'Njejsu žane strony z nowymi změnami',
@@ -7291,7 +7263,7 @@ $messages['hsb'] = array(
 	'mobile-frontend-diffview-explained' => 'Slědowace linki su so přidali (+) a wotstronili (-):',
 	'mobile-frontend-table' => 'Tabela $1',
 	'mobile-frontend-saving-exit-page' => 'Twój přinošk so hišće składuje. Jeli nětko kónčiš, so twoje přinoški zhubja. Chceš woprawdźe kónčić?',
-	'mobile-frontend-photo-upload' => 'Wobraz tutomu nastawkej přidać',
+	'mobile-frontend-photo-upload' => 'Wobraz tutomu nastawkej přidać', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Wobraz za wužiwanje na stronje přidaty',
 	'mobile-frontend-photo-article-donate-comment' => 'Přinošowany wobraz z Special:Uploads',
 	'mobile-frontend-photo-upload-comment' => 'Wobraz stronje přidaty',
@@ -7358,7 +7330,7 @@ $messages['hu'] = array(
 	'mobile-frontend-missing-image' => 'Kép',
 	'mobile-frontend-off' => 'ki',
 	'mobile-frontend-on' => 'be',
-	'mobile-frontend-featured-article' => 'A nap kiemelt szócikke',
+	'mobile-frontend-featured-article' => 'A nap kiemelt szócikke', # Fuzzy
 	'mobile-frontend-news-items' => 'Hírek',
 	'mobile-frontend-language' => 'Nyelv',
 	'mobile-frontend-language-article-heading' => 'Olvasd el más nyelven',
@@ -7382,6 +7354,7 @@ $messages['hu'] = array(
 	'mobile-frontend-privacy-link-text' => 'Adatvédelem',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'A lap szövege [//hu.m.wikipedia.org/wiki/WP:CC?useformat=mobile Creative Commons Nevezd meg! – Így add tovább! 3.0] licenc alatt van; egyes esetekben más módon is felhasználható.',
+	'mobile-frontend-copyright' => "A lap szövege a <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Nevezd meg!-Így add tovább! Licenc</a> alatt van; egyes esetekben más módon is felhasználható. Részletekért lásd a <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>felhasználási feltételeket</a>. A Wikipédia a <a href='http://www.wikimediafoundation.org/'>Wikimedia, Inc.</a> nonprofit szervezet védjegye.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kapcsolatfelvétel',
 	'mobile-frontend-search-noresults' => 'Nincs találat a keresésedre. Változtasd meg a keresőszavakat, vagy nyomd meg a keresés gombot, hogy a szócikkeken belül is keress.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Főmenü megnyitása',
@@ -7392,7 +7365,7 @@ $messages['hu'] = array(
 	'mobile-frontend-main-menu-logout' => 'Kijelentkezés',
 	'mobile-frontend-main-menu-watchlist' => 'Figyelőlista',
 	'mobile-frontend-main-menu-settings' => 'Beállítások',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobil oldal beállításai',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobil oldal beállításai', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} nyelvek',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}  {{PLURAL:$1|egy nyelven|$1 nyelven}} érhető el. Az összes elérhető verzió alább található',
 	'mobile-frontend-main-menu-account-create' => 'Felhasználói fiók létrehozása',
@@ -7428,6 +7401,7 @@ $messages['hy'] = array(
 	'mobile-frontend-view' => 'Տեսքը բջջայինով',
 	'mobile-frontend-view-mobile' => 'Հեռախոս',
 	'mobile-frontend-featured-article' => 'Օրվա ընտրված հոդվածը', # Fuzzy
+	'mobile-frontend-copyright' => "Տեքստը մատչելի է <a href=\"http://creativecommons.org/licenses/by-sa/3.0/deed.hy\">Քրիեյթիվ Քոմոնս Հղման-Համանման տարածման</a> թույլատրագրի ներքո, առանձին դեպքերում կարող են գործել լրացուցիչ պայմաններ։ Մանրամասնությունների համար այցելեք՝ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Օգտագործման պայմաններ</a>։ {{SITENAME}}ն <a href='http://www.wikimediafoundation.org/'>Վիքիմեդիա հիմնադրամ</a> ոչ-առևտրական կազմակերպության գրանցված ապրանքանիշ է։", # Fuzzy
 );
 
 /** Interlingua (interlingua)
@@ -7482,6 +7456,7 @@ $messages['ia'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidentialitate',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Contento disponibile sub [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; additional conditiones pote esser in vigor.',
+	'mobile-frontend-copyright' => "Le texto es disponibile sub le licentia <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; additional conditiones pote esser in vigor. Vide le <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>conditiones de uso</a> pro detalios. {{SITENAME}} es un marca registrate de <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, un organisation sin scopo lucrative.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Conditiones de Uso]',
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'Nulle titulo de pagina corresponde a tu recerca. Cambia le recerca, o preme le button de recerca de claviero pro cercar intra paginas.',
@@ -7492,7 +7467,7 @@ $messages['ia'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Observatorio',
 	'mobile-frontend-main-menu-settings' => 'Configuration',
 	'mobile-frontend-main-menu-upload' => 'Incargamentos',
-	'mobile-frontend-main-menu-settings-heading' => 'Configuration de sito mobile',
+	'mobile-frontend-main-menu-settings-heading' => 'Configuration de sito mobile', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Linguas de {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} es disponibile in $1 {{PLURAL:$1|lingua|linguas}}. Tote le versiones disponibile es listate hic infra.',
 	'mobile-frontend-main-menu-account-create' => 'Crear un conto',
@@ -7508,7 +7483,7 @@ $messages['ia'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Aperir session',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Crear un conto',
 	'mobile-frontend-watch-login' => 'Tu debe aperir un session pro vider paginas.',
-	'mobile-frontend-watchlist-a-z' => 'Totes',
+	'mobile-frontend-watchlist-a-z' => 'Totes', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Modificate',
 	'mobile-frontend-changeslist-ip' => 'Usator anonyme',
 	'mobile-frontend-watchlist-filter-talk' => 'Discussion',
@@ -7596,6 +7571,7 @@ $messages['id'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privasi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Teks tersedia di bawah [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; ketentuan tambahan mungkin berlaku.',
+	'mobile-frontend-copyright' => "Teks tersedia di bawah <a href='http://id.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisensi Creative Commons Atribusi-PembagianSerupa</a>; syarat tambahan mungkin berlaku. Lihat <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Ketentuan Pemakaian</a> untuk detailnya. {{SITENAME}} adalah sebuah merek dagang terdaftar dari <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, sebuah organisasi nirlaba.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Ketentuan Penggunaan]',
 	'mobile-frontend-footer-contact' => 'Kontak',
 	'mobile-frontend-search-noresults' => 'Tidak ada judul yang cocok dengan pencarian Anda. Ubah pencarian Anda, atau tekan tombol pencarian keyboard untuk mencari halaman.',
@@ -7608,8 +7584,6 @@ $messages['id'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Pantauan',
 	'mobile-frontend-main-menu-settings' => 'Pengaturan',
 	'mobile-frontend-main-menu-upload' => 'Unggah',
-	'mobile-frontend-main-menu-about' => 'Tentang {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Penyangkalan',
 	'mobile-frontend-main-menu-settings-heading' => 'Pengaturan situs seluler', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Bahasa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} tersedia dalam $1 {{PLURAL:$1|bahasa|bahasa}}. Semua versi yang tersedia disebutkan di bawah',
@@ -7618,7 +7592,6 @@ $messages['id'] = array(
 	'mobile-frontend-page-menu-history' => 'Versi terdahulu',
 	'mobile-frontend-meta-data-issues-header' => 'Masalah',
 	'mobile-frontend-meta-data-issues' => 'Halaman ini memiliki beberapa masalah',
-	'mobile-frontend-ajax-preview-loading' => 'Memuat halaman pratinjau',
 	'mobile-frontend-page-saving' => 'Menyimpan $1',
 	'mobile-frontend-user-cta' => 'Silakan masuk log atau mendaftar untuk melihat pemberitahuan Anda.',
 	'mobile-frontend-user-button-tooltip' => 'Tampilkan pemberitahuan saya',
@@ -7661,7 +7634,7 @@ $messages['id'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Masuk log',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Daftar',
 	'mobile-frontend-watch-login' => 'Anda harus masuk log untuk memantau halaman.',
-	'mobile-frontend-watchlist-a-z' => 'Semua',
+	'mobile-frontend-watchlist-a-z' => 'Semua', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Diubah',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik bintang di bagian atas halaman',
 	'mobile-frontend-watchlist-feed-empty' => 'Tidak ada halaman dengan perubahan terbaru.',
@@ -7986,10 +7959,6 @@ $messages['ilo'] = array(
 	'mobile-frontend-media-details' => 'Dagiti salaysay',
 	'abusefilter-edit-builder-vars-user-mobile' => 'No man wenno saan a ti agar-aramat ket agur-urnos babaen ti interface ti mobile',
 	'mobile-frontend-profile-title' => 'Bariweswes ti agar-aramat',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 nga inurnos|$1 nga inur-urnos|0=Awan ti inur-urnos}} iti napalabas a bulan',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 a naipan|$1 a naip-ipan|0=Awan ti naip-ipan}} iti napalabas a bulan',
-	'mobile-frontend-profile-edits-limit' => 'Sumurok a {{PLURAL:$1|$1 nga inurnos|$1 nga inur-urnos}} iti napalabas a bulan',
-	'mobile-frontend-profile-uploads-limit' => 'Sumurok a {{PLURAL:$1|$1 a naipan|$1 a naip-ipan}} iti napalabas a bulan',
 	'mobile-frontend-profile-heading-recent' => 'Kinaudi',
 	'mobile-frontend-profile-usertalk' => 'Kitaen ti tungtungan a panid.',
 	'mobile-frontend-profile-noargs' => 'Pangngaasi a mangited ti bariweswes ti agar-aramat tapno makita ti bariweswes.',
@@ -8007,7 +7976,7 @@ $messages['inh'] = array(
 	'mobile-frontend-search-submit' => 'Дехьавала/яла',
 	'mobile-frontend-home-button' => 'ЦӀенга',
 	'mobile-frontend-regular-site' => 'Ер оагӀув Вкипадечу хьажа', # Fuzzy
-	'mobile-frontend-featured-article' => 'Укх ден хьаржа йоазув',
+	'mobile-frontend-featured-article' => 'Укх ден хьаржа йоазув', # Fuzzy
 );
 
 /** Icelandic (íslenska)
@@ -8021,8 +7990,6 @@ $messages['is'] = array(
 	'mobile-frontend-logged-out' => 'Ekki innskráð(ur)',
 	'mobile-frontend-logged-in-homepage-notification' => 'Velkomin(n), $1!',
 	'mobile-frontend-logged-in-toast-notification' => 'Skráð/ur inn sem $1.',
-	'mobile-frontend-handshake-title' => 'Áframsendi...',
-	'mobile-frontend-handshake-wait' => 'Vinsamlegast bíddu á meðan við áframsendum þig á innskráningar formið.',
 	'mobile-frontend-sign-up-heading' => 'Nýskráning',
 	'mobile-frontend-sign-in-heading' => 'Innskrá',
 	'mobile-frontend-sign-in-why' => 'Ef þú átt {{SITENAME}} aðgang, þá getur þú skráð þig inn hér fyrir neðan.',
@@ -8046,7 +8013,7 @@ $messages['is'] = array(
 	'mobile-frontend-missing-image' => 'Mynd',
 	'mobile-frontend-off' => 'AF',
 	'mobile-frontend-on' => 'Á',
-	'mobile-frontend-featured-article' => 'Grein mánaðarins',
+	'mobile-frontend-featured-article' => 'Grein mánaðarins', # Fuzzy
 	'mobile-frontend-news-items' => 'Í fréttum',
 	'mobile-frontend-language' => 'Tungumál:',
 	'mobile-frontend-language-article-heading' => 'Lesa á öðru tungumáli',
@@ -8089,7 +8056,7 @@ $messages['is'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Vaktlisti',
 	'mobile-frontend-main-menu-settings' => 'Stillingar',
 	'mobile-frontend-main-menu-upload' => 'Upphöl',
-	'mobile-frontend-main-menu-settings-heading' => 'Stillingar farsímaútgáfunnar',
+	'mobile-frontend-main-menu-settings-heading' => 'Stillingar farsímaútgáfunnar', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} tungumál',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} er aðgengilegt á $1 {{PLURAL:$1|tungumáli|tungumálum}}. Allar aðgengilegar útgáfur eru skráðar hér fyrir neðan',
 	'mobile-frontend-main-menu-account-create' => 'Nýskrá',
@@ -8110,7 +8077,7 @@ $messages['is'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Innskrá',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Nýskrá',
 	'mobile-frontend-watch-login' => 'Þú verður að vera skráð/ur inn til að fylgjast með síðum.',
-	'mobile-frontend-watchlist-a-z' => 'Allt',
+	'mobile-frontend-watchlist-a-z' => 'Allt', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Breytt',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Smelltu á stjörnuna efst á síðunni',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'Fylgstu með síðu sem þér finnst áhugaverð með því að smella á stjörnuna efst á skjánum. Þetta leyfir þér að bókarmerkja síður sem þú hefur áhuga á og sjá hvenær þeim er breytt.', # Fuzzy
@@ -8409,10 +8376,6 @@ in tutto il mondo',
 	'mobile-frontend-media-details' => 'Dettagli',
 	'abusefilter-edit-builder-vars-user-mobile' => "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
 	'mobile-frontend-profile-title' => 'Profilo utente',
-	'mobile-frontend-profile-edits' => "{{PLURAL:$1|1 modifica|$1 modifiche|0=Nessuna modifica}} nell'ultimo mese",
-	'mobile-frontend-profile-uploads' => "{{PLURAL:$1|1 caricamento|$1 caricamenti|0=Nessun caricamento}} nell'ultimo mese",
-	'mobile-frontend-profile-edits-limit' => "Più di {{PLURAL:$1|1 modifica|$1 modifiche}} nell'ultimo mese",
-	'mobile-frontend-profile-uploads-limit' => "Più di {{PLURAL:$1|1 caricamento|$1 caricamenti}} nell'ultimo mese",
 	'mobile-frontend-profile-last-upload-caption' => 'Ultimo caricamento di {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|$2 giorni fa|0=oggi}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recenti',
 	'mobile-frontend-profile-registration' => '$1 è stato membro per {{PLURAL:$2|$2 giorno|$2 giorni}} ed ha fatto {{PLURAL:$3|$3 modifica|$3 modifiche}}.',
@@ -8668,10 +8631,6 @@ $messages['ja'] = array(
 	'mobile-frontend-media-details' => '詳細',
 	'abusefilter-edit-builder-vars-user-mobile' => '利用者が携帯機器版インターフェイスで編集しているかどうか',
 	'mobile-frontend-profile-title' => '利用者情報',
-	'mobile-frontend-profile-edits' => '過去1か月で{{PLURAL:$1|&#32;$1 回編集|0=の編集なし}}',
-	'mobile-frontend-profile-uploads' => '過去1か月で{{PLURAL:$1|&#32;$1 件アップロード|0=のアップロードなし}}',
-	'mobile-frontend-profile-edits-limit' => '過去1か月で {{PLURAL:$1|$1 回}}編集',
-	'mobile-frontend-profile-uploads-limit' => '過去1か月でのアップロードが {{PLURAL:$1|$1 件}}を超過',
 	'mobile-frontend-profile-last-upload-caption' => '最終アップロード: {{GENDER:$1|$1}}、{{PLURAL:$2|昨日|$2 日前|0=今日}}',
 	'mobile-frontend-profile-heading-recent' => '最近のもの',
 	'mobile-frontend-profile-usertalk' => 'トークページを閲覧',
@@ -8706,7 +8665,7 @@ $messages['jv'] = array(
 	'mobile-frontend-enable-images' => 'Urubaké gambar nèng situs ponsèl',
 	'mobile-frontend-off' => 'MATI',
 	'mobile-frontend-on' => 'MURUB',
-	'mobile-frontend-featured-article' => 'Artikel Pinilih Dina Iki',
+	'mobile-frontend-featured-article' => 'Artikel Pinilih Dina Iki', # Fuzzy
 	'mobile-frontend-news-items' => 'Warta Pinjunjul',
 	'mobile-frontend-language' => 'Basa:',
 	'mobile-frontend-language-header' => 'Artikel iki sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}', # Fuzzy
@@ -8727,7 +8686,7 @@ $messages['jv'] = array(
 	'mobile-frontend-main-menu-featured' => 'Pinilih',
 	'mobile-frontend-main-menu-nearby' => 'Paling cedhak',
 	'mobile-frontend-main-menu-settings' => 'Pangaturan',
-	'mobile-frontend-main-menu-settings-heading' => 'Pangaturan situs ponsèl',
+	'mobile-frontend-main-menu-settings-heading' => 'Pangaturan situs ponsèl', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Basa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} sumadhiya nèng $1 {{PLURAL:$1|basa|basa}}. Kabéh vèrsi sumadhiya kadaptar nèng ngisor',
 	'mobile-frontend-page-menu-contents' => 'isi',
@@ -8807,6 +8766,7 @@ $messages['ka'] = array(
 	'mobile-frontend-privacy-link-text' => 'უსაფრთხოება',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'შიგთავსი ხელმისაწვდომია [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] ლიცენზიით', # Fuzzy
+	'mobile-frontend-copyright' => "ეს ტექსტი ვრცელდება <a  href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative	 Commons Attribution/Share-Alike ლიცენზიით</a>; ზოგ შემთხვევაში შესაძლებელია დამატებითი პირობები. იხილეთ <a	 href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>გამოყენების პირობი</a>. «{{SITENAME}}» — არაკომერციული ორგანიზაციია <a  href='http://www.wikimediafoundation.org/'>«ფონდ ვიკიმედიის»</a> პროექტია.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use/ka?useformat=mobile გამოყენების პირობები]',
 	'mobile-frontend-footer-contact' => 'კონტაქტი',
 	'mobile-frontend-search-noresults' => 'არ არის გვერდები, რომელთა სახელებიც შეესაბამება თქვენ მოთხოვნას. შეცვალეთ თქვენი მოთხოვნა ან კლავიატურაზე დააჭირეთ გვერდის შეგნით საძიებო ღილაკს.',
@@ -8915,7 +8875,8 @@ $messages['kbd-cyrl'] = array(
 	'mobile-frontend-random-button' => 'ЗэрамыщIэкIэрэ',
 	'mobile-frontend-back-to-top-of-section' => 'Зы разделкIэ къэгъэзэжын',
 	'mobile-frontend-regular-site' => 'НапэкIуэцIым Википедиедыдэм щеплъын', # Fuzzy
-	'mobile-frontend-featured-article' => 'Нобэ и статья хэхар',
+	'mobile-frontend-featured-article' => 'Нобэ и статья хэхар', # Fuzzy
+	'mobile-frontend-copyright' => "Текстыр уи пащхьэ илъщ лицензэ <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a>-м теухуауэ, изыныкъуэхэм нэгъуэщI лицензэ иIэнкIи мэхъу. Нэхъ гурIуэгъуэу ухемэ еплъ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Къызэрыбгъэсэбэпыным и щыхьэт</a>. «{{SITENAME}}» — зарегистрированнэ торговэ маркэ мыкоммерческэ зэIущIэныгъэм <a href='http://www.wikimediafoundation.org/'>«Викимедым и Фонд»</a>.", # Fuzzy
 );
 
 /** Kongo (Kongo)
@@ -8981,7 +8942,7 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-missing-image' => 'Сурет',
 	'mobile-frontend-off' => 'Өшіру',
 	'mobile-frontend-on' => 'Қосу',
-	'mobile-frontend-featured-article' => 'Таңдаулы мақала',
+	'mobile-frontend-featured-article' => 'Таңдаулы мақала', # Fuzzy
 	'mobile-frontend-news-items' => 'Жаңалықтар',
 	'mobile-frontend-language' => 'Тілі:',
 	'mobile-frontend-language-article-heading' => 'Басқа тілде оқу',
@@ -9023,7 +8984,7 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Бақылау',
 	'mobile-frontend-main-menu-settings' => 'Баптаулар',
 	'mobile-frontend-main-menu-upload' => 'Жүктеулер',
-	'mobile-frontend-main-menu-settings-heading' => 'Сайттың мобильдік нұсқасының баптаулары',
+	'mobile-frontend-main-menu-settings-heading' => 'Сайттың мобильдік нұсқасының баптаулары', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Тілдер',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} $1 {{PLURAL:$1|тілде|тілде}} қол жетімді. Барлық қол жетімді нұсқалары төменде көрсетілген.',
 	'mobile-frontend-main-menu-account-create' => 'Жаңа тіркелгі',
@@ -9041,7 +9002,7 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Кіру',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Тіркелу',
 	'mobile-frontend-watch-login' => 'Беттерді көру үшін кіруіңіз қажет.',
-	'mobile-frontend-watchlist-a-z' => 'Барлығы',
+	'mobile-frontend-watchlist-a-z' => 'Барлығы', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Өзгертілгендер',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Жоғарғы жақтағы жұлдызшаны басыңыз',
 	'mobile-frontend-watchlist-back-home' => 'Артқа',
@@ -9061,7 +9022,7 @@ $messages['kk-cyrl'] = array(
 	'mobile-frontend-diffview-explained' => 'Келесі жолдар қосылған (+) және өшірілген (-) еді:',
 	'mobile-frontend-table' => '$1 кесте',
 	'mobile-frontend-saving-exit-page' => 'Сіздің өзгерістереңіз әлі сақталу үстінде. Егер сіз шығып кететін болсаңыз, өзгерістер сақталмайды. Шығу туралы сенімдісіз бе?',
-	'mobile-frontend-photo-upload' => 'Бұл тақырыпқа сурет қосу',
+	'mobile-frontend-photo-upload' => 'Бұл тақырыпқа сурет қосу', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Бетке пайдалану үшін қосылған фотосурет', # Fuzzy
 	'mobile-frontend-photo-article-donate-comment' => 'Ұялы телефон арқылы бөліскен сурет', # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'Бетке қосылған суреттер', # Fuzzy
@@ -9090,7 +9051,8 @@ $messages['kl'] = array(
 	'mobile-frontend-random-button' => 'Nalaatsornikkut',
 	'mobile-frontend-back-to-top-of-section' => 'Immikkoortup qulaanut',
 	'mobile-frontend-regular-site' => 'Takutiguk {{SITENAME}} naliginnaasumut', # Fuzzy
-	'mobile-frontend-featured-article' => 'Allaaserisaq ullumi',
+	'mobile-frontend-featured-article' => 'Allaaserisaq ullumi', # Fuzzy
+	'mobile-frontend-copyright' => "Allatat ilaatinneqarput  <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike-licensen</a> ataani; allat piumasaqaatit atuutinneqarsinnaapput. Takuuk <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>brugsbetingelserne</a> paasissutissaanerusut. {{SITENAME}} nioqqutissiatut nalunaaqqutserneqarsimavoq suliniuteqarfittut una <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.", # Fuzzy
 );
 
 /** Khmer (ភាសាខ្មែរ)
@@ -9127,7 +9089,7 @@ $messages['km'] = array(
 	'mobile-frontend-missing-image' => 'រូបភាព',
 	'mobile-frontend-off' => 'បិទ',
 	'mobile-frontend-on' => 'បើក',
-	'mobile-frontend-featured-article' => 'អត្ថបទពិសេសសំរាប់ថ្ងៃនេះ',
+	'mobile-frontend-featured-article' => 'អត្ថបទពិសេសសំរាប់ថ្ងៃនេះ', # Fuzzy
 	'mobile-frontend-news-items' => 'នៅក្នុងសារព័ត៌មាន',
 	'mobile-frontend-language' => 'ភាសា៖',
 	'mobile-frontend-language-article-heading' => 'អាន​ជា​ភាសា​ផ្សេង​ទៀត',
@@ -9151,6 +9113,9 @@ $messages['km'] = array(
 	'mobile-frontend-clear-search' => 'ជំរះ',
 	'mobile-frontend-privacy-link-text' => 'ភាព​ឯកជន',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => 'អត្ថបទ​នេះ​អាចរកបាន ក្រោម​[http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License អាជ្ញាបណ្ណ Creative Commons Attribution/Share-Alike]។ លក្ខខណ្ឌបន្ថែម​ផ្សេងៗទៀតក៏នឹងអាចត្រូវបានអនុវត្ត។​
+សូមមើល [http://wikimediafoundation.org/wiki/Terms_of_Use/ លក្ខខណ្ឌ​ក្នុងការ​ប្រើប្រាស់] សម្រាប់​ព័ត៌មានលម្អិត​។
+វិគីភីឌា​គឺជាផ្លាកសញ្ញាដែលបានចុះបញ្ជីពាណិជ្ជកម្ម នៃ[http://www.wikimediafoundation.org មូលនិធិវិគីមេឌា (Wikimedia Foundation, Inc.)] ដែលជាអង្គការមិនរកប្រាក់ចំនេញ​។', # Fuzzy
 	'mobile-frontend-footer-contact' => 'ទំនាក់ទំនង',
 	'mobile-frontend-main-menu-button-tooltip' => 'បើក​ម៉ឺនុយ​មេ',
 	'mobile-frontend-main-menu-page-title' => 'ការ​រុករក​បណ្ដាញ',
@@ -9159,7 +9124,7 @@ $messages['km'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'បញ្ជី​តាមដាន',
 	'mobile-frontend-main-menu-settings' => 'ការ​កំណត់',
 	'mobile-frontend-main-menu-upload' => 'ផ្ទុកឡើង', # Fuzzy
-	'mobile-frontend-main-menu-settings-heading' => 'ការ​កំណត់​សម្រាប់​តំបន់​បណ្ដាញ​ទូរស័ព្ទ',
+	'mobile-frontend-main-menu-settings-heading' => 'ការ​កំណត់​សម្រាប់​តំបន់​បណ្ដាញ​ទូរស័ព្ទ', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'ភាសារបស់ {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} អាចអានបានជាំ $1 {{PLURAL:$1|ភាសា|ភាសា}} ដូចខាងក្រោម',
 	'mobile-frontend-main-menu-account-create' => 'បង្កើតគណនី',
@@ -9171,7 +9136,7 @@ $messages['km'] = array(
 	'mobile-frontend-nearby-title' => 'ជិតខាង',
 	'mobile-frontend-nearby-loading' => 'ផ្ទុក​ប្រធាន​បទ​ដែល​នៅ​ទីតាំង​បច្ចុប្បន្ន​របស់​អ្នក',
 	'mobile-frontend-donate-image-login' => 'ចូល​ដើម្បី​មើល​ការ​ផ្ទុក​របស់​អ្នក', # Fuzzy
-	'mobile-frontend-photo-upload-generic' => 'បរិច្ចាគ​រូបភាព',
+	'mobile-frontend-photo-upload-generic' => 'បរិច្ចាគ​រូបភាព', # Fuzzy
 	'mobile-frontend-donate-image-title' => 'បរិច្ចាក​រូបភាព', # Fuzzy
 	'mobile-frontend-listed-image-no-description' => 'គ្មាន​ការ​ពណ៌នា',
 	'mobile-frontend-watchlist-add' => 'បន្ថែម $1 ទៅ​បញ្ជី​មើល​របស់​អ្នក',
@@ -9183,7 +9148,6 @@ $messages['km'] = array(
 	'mobile-frontend-watchlist-cta-button-signup' => 'ចុះ​ឈ្មោះ',
 	'mobile-frontend-watchlist-a-z' => 'ទំព័រ​ដែល​តាមដាន', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'ទំព័រ​ដែល​មាន​ការ​ផ្លាស់ប្ដូរ', # Fuzzy
-	'mobile-frontend-watchlist-a-z-empty' => 'អ្នក​បច្ចុប្បន្ន​មិន​កំពុង​មើល​ទំព័រ​ណា​មួយ​ទេ',
 	'mobile-frontend-watchlist-back-home' => 'ត្រឡប់​ទៅ​ដើម',
 	'mobile-frontend-changeslist-ip' => 'អ្នក​ប្រើ​អនាមិក',
 	'mobile-frontend-changeslist-nocomment' => 'គ្មាន​ការ​សង្ខេប​កែ​សម្រួល',
@@ -9199,8 +9163,8 @@ $messages['km'] = array(
 	'mobile-frontend-diffview-explained' => 'បន្ទាត់​ខាងក្រោម​ត្រូវ​បាន​បន្ថែម (+) និង​យក​ចេញ (-)៖',
 	'mobile-frontend-table' => 'តារាង $1',
 	'mobile-frontend-photo-upload' => 'បន្ថែម​រូបភាព​ដំបូង​ទៅ​ទំព័រ​នេះ', # Fuzzy
-	'mobile-frontend-photo-article-edit-comment' => 'បាន​បន្ថែម​រូបថត​សម្រាប់​ប្រើ​លើ​ទំព័រ',
-	'mobile-frontend-photo-upload-comment' => 'បាន​បន្ថែម​រូបភាព​ទៅ​ទំព័រ',
+	'mobile-frontend-photo-article-edit-comment' => 'បាន​បន្ថែម​រូបថត​សម្រាប់​ប្រើ​លើ​ទំព័រ', # Fuzzy
+	'mobile-frontend-photo-upload-comment' => 'បាន​បន្ថែម​រូបភាព​ទៅ​ទំព័រ', # Fuzzy
 	'mobile-frontend-photo-caption-placeholder' => 'បន្ថែម​ចំណង​ជើង​សម្រាប់​រូបភាព​នេះ', # Fuzzy
 	'mobile-frontend-image-loading' => 'កំពុង​ផ្ទុក​រូបភាព',
 	'mobile-frontend-image-uploading-wait' => 'មាន​កំហុស​កើត​ឡើង ខណៈ​ពេល​ផ្ទុក​រូបភាព​នេះ​ឡើង', # Fuzzy
@@ -9230,7 +9194,7 @@ $messages['kn'] = array(
 	'mobile-frontend-opt-in-explain' => 'ಬೀಟಾವನ್ನು ಸೇರುವುದರಿಂದ, ದೋಷಗಳು ಮತ್ತು ವಿವಾದಾಂಶಗಳ ಅಪಾಯದೊಂದಿಗೆ, ನೀವು ಪ್ರಾಯೋಗಿಕ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪಡೆಯುವಿರಿ.',
 	'mobile-frontend-disable-images' => 'ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ಅಡಗಿಸು',
 	'mobile-frontend-enable-images' => 'ಮೊಬೈಲ್ ಜಾಲತಾಣದಲ್ಲಿ ಚಿತ್ರಗಳನ್ನು ತೋರಿಸು',
-	'mobile-frontend-featured-article' => 'ಇಂದಿನ ವಿಶೇಷ ಲೇಖನ',
+	'mobile-frontend-featured-article' => 'ಇಂದಿನ ವಿಶೇಷ ಲೇಖನ', # Fuzzy
 	'mobile-frontend-news-items' => 'ಸುದ್ದಿಯಲ್ಲಿ',
 	'mobile-frontend-language' => 'ಭಾಷೆ', # Fuzzy
 	'mobile-frontend-username' => 'ಬಳಕೆದಾರ ಹೆಸರು:',
@@ -9239,6 +9203,7 @@ $messages['kn'] = array(
 	'mobile-frontend-placeholder' => 'ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'ಈ ಅಧಿಸೂಚನೆಯನ್ನು ತೊಡೆದುಹಾಕಿ',
 	'mobile-frontend-clear-search' => 'ಅಳಿಸಿ',
+	'mobile-frontend-copyright' => "ಈ ಮಾಹಿತಿ <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>ಕ್ರಿಯೇಟಿವ್ ಕಾಮನ್ಸ್ ಆಟ್ರಿಬ್ಯೂಶನ್ ಶೇರ್ ಅಲೈಕ್ ಲೈಸೆನ್ಸಿನಡಿ</a> ಲಭ್ಯವಿದೆ. ಕೆಲವು ಹೆಚ್ಚಿನ ನಿಬಂಧನೆಗಳು ಕೂಡ ಅನ್ವಯಿಸಬಹುದು. ಮಾಹಿತಿಗೆ <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>ಬಳಕೆಯ ನಿಬಂಧನೆಗಳು</a> ಪುಟ ನೋಡಿ. ವಿಕಿಪೀಡಿಯ <a href='http://www.wikimediafoundation.org/'>ವಿಕಿಮೀಡಿಯ ಫೌಂಡೇಶನ್</a> ಎಂಬ ಲಾಭರಹಿತ ಸಂಸ್ಥೆಯ ಟ್ರೇಡ್ ಮಾರ್ಕ್.", # Fuzzy
 );
 
 /** Korean (한국어)
@@ -9497,10 +9462,6 @@ $messages['ko'] = array(
 	'mobile-frontend-media-details' => '자세한 사항',
 	'abusefilter-edit-builder-vars-user-mobile' => '사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부',
 	'mobile-frontend-profile-title' => '사용자 프로필',
-	'mobile-frontend-profile-edits' => '지난 달에 {{PLURAL:$1|편집 1회|편집 $1회|0=편집 없음}}',
-	'mobile-frontend-profile-uploads' => '지난 달에 {{PLURAL:$1|올린 파일 1개|올린 파일 $1개|0=올린 파일 없음}}',
-	'mobile-frontend-profile-edits-limit' => '지난 달에 {{PLURAL:$1|편집 $1회}} 이상',
-	'mobile-frontend-profile-uploads-limit' => '지난 달에 {{PLURAL:$1|올린 파일 $1회}} 이상',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$2|어제|$2일 전에|0=오늘}} {{GENDER:$1|$1}} 사용자가 마지막으로 올렸습니다.',
 	'mobile-frontend-profile-heading-recent' => '최근',
 	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.',
@@ -9531,7 +9492,6 @@ $messages['krc'] = array(
 	'mobile-frontend-random-button' => 'Эсде болмагъан бет',
 	'mobile-frontend-back-to-top-of-section' => 'Бир бёлюмге артха атла',
 	'mobile-frontend-close-section' => 'Бу бёлюмню джаб',
-	'mobile-frontend-empty-homepage-text' => 'Бу баш бет джарашдырылыргъа керекди. <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">Сайтны мобил версиясын къураргъа юретген инструкция</a>',
 	'mobile-frontend-regular-site' => 'Тюз Википедияда къара бетге',
 	'mobile-frontend-wml-continue' => 'Мындан арысы ...',
 	'mobile-frontend-wml-back' => 'Артха ...',
@@ -9545,7 +9505,7 @@ $messages['krc'] = array(
 	'mobile-frontend-missing-image' => 'Сурат',
 	'mobile-frontend-off' => 'ДЖУКЪЛ',
 	'mobile-frontend-on' => 'ДЖАНД',
-	'mobile-frontend-featured-article' => 'Бюгюннгю сайланнган статья',
+	'mobile-frontend-featured-article' => 'Бюгюннгю сайланнган статья', # Fuzzy
 	'mobile-frontend-news-items' => 'Джангылыкълада',
 	'mobile-frontend-language' => 'Тил:',
 	'mobile-frontend-language-article-heading' => 'Башха тилде окъу',
@@ -9563,6 +9523,7 @@ $messages['krc'] = array(
 	'mobile-frontend-privacy-link-text' => 'Конфиденциаллыкъ',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Ичиндегиси, [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] лицензиягъа кёре бериледи.', # Fuzzy
+	'mobile-frontend-copyright' => "Текст, <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензияны шартларында бериледи, бир-бирледе къошакъ шартла да болургъа боллукъдула. Толуракъ къарагъыз: <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/'>Хайырланыу шартла</a>. «{{SITENAME}}», <a href='http://www.wikimediafoundation.org/'>«Викимедиа» фонд</a> коммерциялыкъсыз организацияны регистрация ётген сатыу маркасыды.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Контакт информация',
 	'mobile-frontend-search-noresults' => 'Сизни соруўугъузгъа келишген статья джокъду. Соруўугъузну тюрлендиригиз, неда клавиатурада статьяны ичинде излер ючюн тиекни басыгъыз.', # Fuzzy
 	'mobile-frontend-main-menu-button-tooltip' => 'Баш менюну ач',
@@ -9572,7 +9533,7 @@ $messages['krc'] = array(
 	'mobile-frontend-main-menu-login' => 'Кириў',
 	'mobile-frontend-main-menu-logout' => 'Чыгъыў',
 	'mobile-frontend-main-menu-settings' => 'Джарашдырыўла',
-	'mobile-frontend-main-menu-settings-heading' => 'Сайтны мобил версиясыны джарашдырыўлары',
+	'mobile-frontend-main-menu-settings-heading' => 'Сайтны мобил версиясыны джарашдырыўлары', # Fuzzy
 	'mobile-frontend-settings-site-header' => '«{{SITENAME}}» проектни тиллери',
 	'mobile-frontend-settings-site-description' => '«{{SITENAME}}» проект $1 {{PLURAL:$1|тилде}} барды. Тюберекде болгъан версия да тизилибди.',
 	'mobile-frontend-page-menu-contents' => 'ичиндегиси',
@@ -9607,7 +9568,6 @@ $messages['ksh'] = array(
 	'mobile-frontend-random-button' => 'Zohfallsigg',
 	'mobile-frontend-back-to-top-of-section' => 'Jangk ene Afschnett zerök',
 	'mobile-frontend-close-section' => 'Donn dä Afschnet heh aan et Ängk bränge',
-	'mobile-frontend-empty-homepage-text' => 'He di Aanfangssigg moß noch <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">enjereschdt wääde</a>.', # Fuzzy
 	'mobile-frontend-regular-site' => 'jangk op de nomaale Belscherrem',
 	'mobile-frontend-wml-continue' => 'Wiggermaache&nbsp;...',
 	'mobile-frontend-wml-back' => 'Retuur&nbsp;...',
@@ -9621,7 +9581,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-missing-image' => 'Beld',
 	'mobile-frontend-off' => 'Uß',
 	'mobile-frontend-on' => 'Aan',
-	'mobile-frontend-featured-article' => 'Der Atikel vum Daach',
+	'mobile-frontend-featured-article' => 'Der Atikel vum Daach', # Fuzzy
 	'mobile-frontend-news-items' => 'En de Präß',
 	'mobile-frontend-language' => 'Schprooch:',
 	'mobile-frontend-language-article-heading' => 'En ener andere Schprooch beloore.',
@@ -9641,6 +9601,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-privacy-link-text' => 'Prevaatheit',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Ze han onger dä Lizänz [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => 'Dä Täx shtäjt unger dä <a href="http://de.wikipedia.org/wiki/{{SITENAME}}:Lizenzbestimmungen_Commons_Attribution-ShareAlike_3.0_Unported"><span lang="de">Creative Commons Attribution/Share-Alike</span> Lizänz</a>; un et künnt noch mieh Bestemmunge doför jävve. Loor op de <a href="http://wikimediafoundation.org/wiki/Nutzungsbedingungen">Sigg met de Bedengunge</a> noh der Einzelheite. {{SITENAME}} es e ennjedraare Waarezeiche vun de <a href="http://www.wikimediafoundation.org/">Wikimedia Shtefftung</a>, en Ojanisazuhn, di kei Jeld verdeent.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kumtak',
 	'mobile-frontend-search-noresults' => 'Kein Tittel vun enem Atikel deiht op dat paße, wat De söhks. Don jät angersch söhke udder nemm dä Knopp zom Söhke onger Dinge Taßte, un söhk der_met em Täx vun de Atikelle.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Äxzälänt',
@@ -9649,7 +9610,7 @@ $messages['ksh'] = array(
 	'mobile-frontend-main-menu-logout' => 'Ußlogge',
 	'mobile-frontend-main-menu-watchlist' => 'De Oppassleß',
 	'mobile-frontend-main-menu-settings' => 'Enschtällonge',
-	'mobile-frontend-main-menu-settings-heading' => 'Enschtällonge för Mobiljerääte',
+	'mobile-frontend-main-menu-settings-heading' => 'Enschtällonge för Mobiljerääte', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Schprooche {{GRAMMAR:vun+Dative|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{ucfirst:{{GRAMMAR:Nomminatif|{{ucfirst:{{SITENAME}}}}}}}} jiidd_et en {{PLURAL:$1|jenou eine Schprooch|$1 Schprooche|jaakein Schprooche}}. {{PLURAL:$1|Di Schprooch|Di Schprooche|Nix es dröm}} heh noh opjelėß.',
 	'mobile-frontend-main-menu-account-create' => 'Ene neue Zohjang aanlääje',
@@ -9775,6 +9736,7 @@ $messages['kw'] = array(
 	'mobile-frontend-clear-search' => 'Klerhe',
 	'mobile-frontend-privacy-link-text' => 'Privetter',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => 'Kavadow yw an tekst en-dadn an <a href="http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Kubmyas Creative Commons Attribution/Share-Alike</a>; termynyow keworansel a alsa bos omvyskys. Gwelowgh <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Termynyow Devnydh</a> rag manylyon. {{SITENAME}} yw merk-kenwerth a <a href=\'http://www.wikimediafoundation.org/\'>Fondyans Wikimedia, Inc.</a>, restrans heb budh.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kestava',
 	'mobile-frontend-main-menu-button-tooltip' => 'Ygeri an rol jyf',
 	'mobile-frontend-main-menu-page-title' => "Lewya y'n wiasva",
@@ -9785,7 +9747,6 @@ $messages['kw'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Rol wolya',
 	'mobile-frontend-main-menu-settings' => 'Settyansow',
 	'mobile-frontend-main-menu-upload' => 'Ughkargansow',
-	'mobile-frontend-main-menu-about' => 'A-dro dhe {{SITENAME}}',
 	'mobile-frontend-main-menu-settings-heading' => 'Settyansow an wiasva bellgowsel', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Yethow {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => "Kavadow yw {{SITENAME}} yn $1 {{PLURAL:$1|yeth}}. Yma keniver versyon kavadow y'n rol a-woles.",
@@ -9794,7 +9755,6 @@ $messages['kw'] = array(
 	'mobile-frontend-page-menu-history' => 'Istori',
 	'mobile-frontend-meta-data-issues-header' => 'Kudynnow',
 	'mobile-frontend-meta-data-issues' => "An folen-ma a's teves kudynnow",
-	'mobile-frontend-ajax-preview-loading' => "Ow karga ragwel a'n folen",
 	'mobile-frontend-page-saving' => 'Ow kwitha $1',
 	'mobile-frontend-user-cta' => 'Omgelmewgh po kovskrifewgh rag gweles agas gwarnyansow.',
 	'mobile-frontend-user-button-tooltip' => 'Diskwedhes ow gwarnyansow',
@@ -9805,7 +9765,7 @@ $messages['kw'] = array(
 	'mobile-frontend-donate-image-heading' => 'Agas kevrohow a-dhiwedhes',
 );
 
-/** Kirghiz (Кыргызча)
+/** Kyrgyz (Кыргызча)
  * @author Chorobek
  */
 $messages['ky'] = array(
@@ -10303,8 +10263,6 @@ Déi gi geläscht.",
 	'mobile-frontend-media-details' => 'Detailer',
 	'abusefilter-edit-builder-vars-user-mobile' => "Ob e Benotzer de mobilen Interface benotzt fir z'änneren",
 	'mobile-frontend-profile-title' => 'Benotzerprofil',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|Eng Ännerung|$1 Ännerungen|0=Keng Ännerung}} am leschte Mount',
-	'mobile-frontend-profile-edits-limit' => 'Méi wéi {{PLURAL:$1|eng Ännerung|$1 Ännerungen}} am leschte Mount',
 	'mobile-frontend-profile-heading-recent' => 'Rezent',
 	'mobile-frontend-profile-usertalk' => 'Diskussiounssäit kucken.',
 	'mobile-frontend-profile-noargs' => 'Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.',
@@ -10341,7 +10299,6 @@ $messages['li'] = array(
 	'mobile-frontend-random-button' => 'Willekäörig',
 	'mobile-frontend-back-to-top-of-section' => 'Ein köpke tröksjpringe',
 	'mobile-frontend-close-section' => 'Sloet dit deil',
-	'mobile-frontend-empty-homepage-text' => 'Dees startpagina mót waere samegesteldj. <a href="https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">Hie kóns se mieë laeze</a>.', # Fuzzy
 	'mobile-frontend-regular-site' => 'Standerdbetrachting',
 	'mobile-frontend-wml-continue' => 'Gank door ...',
 	'mobile-frontend-wml-back' => 'Trögk ...',
@@ -10354,7 +10311,7 @@ $messages['li'] = array(
 	'mobile-frontend-enable-images' => 'Zèt aafbeildinge óppe mobiel site aan',
 	'mobile-frontend-off' => 'OET',
 	'mobile-frontend-on' => 'AAN',
-	'mobile-frontend-featured-article' => 'Sjterartikel',
+	'mobile-frontend-featured-article' => 'Sjterartikel', # Fuzzy
 	'mobile-frontend-news-items' => "In 't nuujs",
 	'mobile-frontend-language' => 'Spraok:',
 	'mobile-frontend-language-header' => 'Dees pagina is besjikbaar in {{PLURAL:$1|ein spraok|$1 spräök}}', # Fuzzy
@@ -10370,12 +10327,13 @@ $messages['li'] = array(
 	'mobile-frontend-privacy-link-text' => 'Prajvesie',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'De inhawd is besjikbaar óngere licentie [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => 'De teks is besjikbaar ónger de <a href="http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Naomsvermelding/Geliek Deile</a> licentie. \'t Is mäögelik dat aanvöllende veurwaarde van toepassing zeen. Betrach de <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Algemein Veurwaarde</a> veur mie informatie.', # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kóntak',
 	'mobile-frontend-search-noresults' => "Gein rizzeltaote veur dien zeukopdrach. Veranger dien zeukopdrach of klik oppe zeukknoep oppe klaveer óm binne pagina's te zeuke.", # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Oetgelich',
 	'mobile-frontend-main-menu-nearby' => 'Kórtbie',
 	'mobile-frontend-main-menu-settings' => 'Insjtèllinge',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobiel veurkäöre',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobiel veurkäöre', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Spräök veur {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} is besjikbaar in {{PLURAL:$1|ein spraok|$1 spräök}}. Al besjikbaar versies staon hieónger',
 	'mobile-frontend-page-menu-contents' => 'inhawd',
@@ -10390,7 +10348,8 @@ $messages['lmo'] = array(
 	'mobile-frontend-random-button' => 'A cas',
 	'mobile-frontend-back-to-top-of-section' => "Sàlta Indree d'una Sezión",
 	'mobile-frontend-regular-site' => "Varda 'sta pagina chì in sü la {{SITENAME}} nurmala", # Fuzzy
-	'mobile-frontend-featured-article' => 'Vedrína',
+	'mobile-frontend-featured-article' => 'Vedrína', # Fuzzy
+	'mobile-frontend-copyright' => "El test a l'è dispunìbil suta la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; pödass che s'àplichen anca cundizión adiziunaj. Varda <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> per i detaj. {{SITENAME}} a l'è un march argistraa de la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, un urganizazion non-profit.", # Fuzzy
 );
 
 /** Lingala (lingála)
@@ -10426,7 +10385,7 @@ $messages['lt'] = array(
 	'mobile-frontend-enable-images' => 'Įjungti vaizdus mobilioje svetainėje',
 	'mobile-frontend-off' => 'IŠJUNGTI',
 	'mobile-frontend-on' => 'IJUNGTI',
-	'mobile-frontend-featured-article' => 'Dienos straipsnis',
+	'mobile-frontend-featured-article' => 'Dienos straipsnis', # Fuzzy
 	'mobile-frontend-news-items' => 'Naujienose',
 	'mobile-frontend-language' => 'Kalba:',
 	'mobile-frontend-language-header' => 'Šis straipsnis prieinamas $1 {{PLURAL:$1|kalba|kalbomis}}', # Fuzzy
@@ -10439,10 +10398,11 @@ $messages['lt'] = array(
 	'mobile-frontend-clear-search' => 'Išvalyti',
 	'mobile-frontend-privacy-link-text' => 'Privatumas',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Tekstas pateikiamas pagal <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution / Share-Alike</a> ; gali būti taikomos papildomos sąlygos. Žiūrėkite <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Naudojimo sąlygas</a> norėdami gauti daugiau informacijos. Vikipedija yra pelno nesiekiančios organizacijos <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc</a> registruotas prekinis ženklas.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontaktai',
 	'mobile-frontend-main-menu-nearby' => 'Netoli',
 	'mobile-frontend-main-menu-settings' => 'Nustatymai',
-	'mobile-frontend-main-menu-settings-heading' => 'Mobiliosios svetainės nustatymai',
+	'mobile-frontend-main-menu-settings-heading' => 'Mobiliosios svetainės nustatymai', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Kalbos',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} yra prieinamas $1 {{PLURAL:$1|kalba|kalbomis}}. Visos prieinamos versijos nurodytos žemiau',
 	'mobile-frontend-page-menu-contents' => 'turinys',
@@ -10466,14 +10426,13 @@ $messages['lus'] = array(
 	'mobile-frontend-random-button' => 'Kahpah',
 	'mobile-frontend-back-to-top-of-section' => 'Hlawm khat zuan lêtna',
 	'mobile-frontend-close-section' => 'Hläwm khàrna',
-	'mobile-frontend-empty-homepage-text' => 'Inpui herrem a ngai. <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">\'Tah hian chhiar belh rawh.</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Hmaipui thlir',
 	'mobile-frontend-wml-continue' => 'Chhunzawmna...',
 	'mobile-frontend-wml-back' => 'Lêtna...',
 	'mobile-frontend-view' => 'Biakhlatna hmanga thlìrna',
 	'mobile-frontend-view-desktop' => 'Khawlthluaknei',
 	'mobile-frontend-view-mobile' => 'Biakhlatna',
-	'mobile-frontend-featured-article' => 'Tlangrèlthang...',
+	'mobile-frontend-featured-article' => 'Tlangrèlthang...', # Fuzzy
 	'mobile-frontend-news-items' => 'Chanchin thar',
 	'mobile-frontend-language' => 'Ṭawng:',
 	'mobile-frontend-username' => 'Hmangtuhming:',
@@ -10576,7 +10535,8 @@ $messages['lzz'] = array(
 	'mobile-frontend-random-button' => 'Randomi',
 	'mobile-frontend-back-to-top-of-section' => "Ar burme uk'uni idi",
 	'mobile-frontend-regular-site' => "Am but'k'a normaluri Vik'ip'edias ko3'iri", # Fuzzy
-	'mobile-frontend-featured-article' => "Dolonişi Favori St'at'ia",
+	'mobile-frontend-featured-article' => "Dolonişi Favori St'at'ia", # Fuzzy
+	'mobile-frontend-copyright' => "Tekst'i <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike Lisansi</a>şi doloxe ren; çkva şeyepeti ixvenen. Detayepe şeni <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Oxmaruşi K'aidepe</a>s o3'k'edit. Vik'ip'edia mogapa na var ikips ar k'idala na ren <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>-şi tesciloni mark'a muşi ren.", # Fuzzy
 );
 
 /** Malagasy (Malagasy)
@@ -10589,7 +10549,7 @@ $messages['mg'] = array(
 	'mobile-frontend-random-button' => 'Takelaka kisendra',
 	'mobile-frontend-back-to-top-of-section' => 'Hiverina any amina fizarana nialoha',
 	'mobile-frontend-regular-site' => "Aseho amin'ny {{SITENAME}} tsotra ity pejy ity", # Fuzzy
-	'mobile-frontend-featured-article' => "Takelak'ity andro ity",
+	'mobile-frontend-featured-article' => "Takelak'ity andro ity", # Fuzzy
 );
 
 /** Maori (Māori)
@@ -10859,10 +10819,8 @@ $messages['mk'] = array(
 	'mobile-frontend-media-details' => 'Подробно',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Дали корисникот уредува од мобилниот посредник',
 	'mobile-frontend-profile-title' => 'Кориснички профил',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 уредување|$1 уредувања|0=Нема уредувања}} во изминатиов месец',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 подигање|$1 подигања|0=Нема подигања}} во изминатиов месец',
-	'mobile-frontend-profile-edits-limit' => 'Преку {{PLURAL:$1|$1 уредување|$1 уредувања}} во изминатиов месец',
-	'mobile-frontend-profile-uploads-limit' => 'Преку {{PLURAL:$1|$1 подигање|$1 подигања}} во изминатиов месец',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 уредување|$2 уредувања|0=Нема уредувања|501=Преку 500 уредувања}}]] и
+[[Special:Uploads/$1|{{PLURAL:$3|1 подигање|$3 подигања|0=нема подигања|501=преку 500 подигања}}]] во изминатите 30 дена.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Последно подигање на {{GENDER:$1|$1}}, {{PLURAL:$2|вчера|пред $2 дена|0=денес}}.',
 	'mobile-frontend-profile-heading-recent' => 'Скорешни',
 	'mobile-frontend-profile-registration' => '$1 членува веќе {{PLURAL:$2|$2 ден|$2 дена}} и има направено {{PLURAL:$3|$3 уредување|$3 уредувања}}.',
@@ -11128,10 +11086,6 @@ $messages['ml'] = array(
 	'mobile-frontend-media-details' => 'വിശദാംശങ്ങൾ',
 	'abusefilter-edit-builder-vars-user-mobile' => 'ഉപയോക്താവ് മൊബൈൽ സമ്പർക്കമുഖം ഉപയോഗിച്ചാണോ അല്ലയോ തിരുത്തുന്നത്',
 	'mobile-frontend-profile-title' => 'എന്നെപ്പറ്റി',
-	'mobile-frontend-profile-edits' => 'കഴിഞ്ഞ മാസം {{PLURAL:$1|ഒരു തിരുത്ത്|$1 തിരുത്തുകൾ|0=തിരുത്തുകളൊന്നുമില്ല}}',
-	'mobile-frontend-profile-uploads' => 'കഴിഞ്ഞ മാസം {{PLURAL:$1|ഒരു അപ്‌ലോഡ്|$1 അപ്‌ലോഡുകൾ|0=അപ്‌ലോഡുകളൊന്നുമില്ല}}',
-	'mobile-frontend-profile-edits-limit' => 'കഴിഞ്ഞമാസം {{PLURAL:$1|ഒന്നിലധികം തിരുത്തുകൾ|$1എണ്ണത്തിലധികം തിരുത്തുകൾ}}',
-	'mobile-frontend-profile-uploads-limit' => 'കഴിഞ്ഞമാസം {{PLURAL:$1|ഒന്നിലധികം അപ്‌ലോഡുകൾ|$1എണ്ണത്തിലധികം അപ്‌ലോഡുകൾ}}',
 	'mobile-frontend-profile-last-upload-caption' => 'അവസാന അപ്‌ലോഡ് ചെയ്തത്   {{PLURAL:$2|ഇന്നലെ|$2 ദിവസം മുമ്പ്|0=ഇന്ന്}} {{GENDER:$1|$1}} ആണ്.',
 	'mobile-frontend-profile-heading-recent' => 'സമീപകാലം',
 	'mobile-frontend-profile-registration' => '$1 {{PLURAL:$2|ഒരു ദിവസം|$2 ദിവസം}} ആയി അംഗമാണ്, {{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്തുകൾ}} ചെയ്തിട്ടുണ്ട്.',
@@ -11153,7 +11107,8 @@ $messages['mn'] = array(
 	'mobile-frontend-random-button' => 'Санамсаргүй',
 	'mobile-frontend-back-to-top-of-section' => 'Өмнөх хэсэг руу буцах',
 	'mobile-frontend-regular-site' => 'Энэ хуудсыг ердийн Википедиа дээр үзэх', # Fuzzy
-	'mobile-frontend-featured-article' => 'Өнөөдрийн онцлох өгүүлэл',
+	'mobile-frontend-featured-article' => 'Өнөөдрийн онцлох өгүүлэл', # Fuzzy
+	'mobile-frontend-copyright' => "Текст нь <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>-ийн хувьд оршин буй; зарим нэг нэмэлт нөхцөл байж магадгүй. <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Хэрэглээний нөхцөл</a> хуудсаас илүү дэлгэрэнгүй мэдээлэл авна уу. Википедиа нь <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc. (Викимедиа сан)</a> ашгийн бус байгууллагын доор бүртгэлтэй таних тэмдэг болно.", # Fuzzy
 );
 
 /** Moldavian (молдовеняскэ)
@@ -11236,6 +11191,7 @@ $messages['mr'] = array(
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'हि माहिती [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]
 याच्या खाली येते', # Fuzzy
+	'mobile-frontend-copyright' => "लेख <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; नुसार उपलब्ध आहेत, अधिक अटी असू शकतात. विशेष माहितीसाठी <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> पाहा. विकीपिडीया हे <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a> या ना-नफा तत्त्वावर चालणार्‍या संस्थेचे नोंदणीकृत व्यवसायचिन्ह आहे.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'संपर्क',
 	'mobile-frontend-main-menu-nearby' => 'जवळपास',
 	'mobile-frontend-main-menu-login' => 'सनोंद-प्रवेश करा',
@@ -11340,6 +11296,7 @@ $messages['ms'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privasi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Teks disediakan dengan lesen [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; mungkin tertakluk pada syarat-syarat tambahan.',
+	'mobile-frontend-copyright' => "Teks boleh didapati di bawah <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Lesen Creative Commons Attribution/Share-Alike</a>; syarat tambahan mungkin terpakai. Lihat <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terma Penggunaan</a> untuk perincian. {{SITENAME}} merupakan tanda dagangan berdaftar <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, sebuah pertubuhan bukan untung.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Syarat-Syarat Penggunaan]',
 	'mobile-frontend-footer-contact' => 'Hubungi',
 	'mobile-frontend-search-noresults' => 'Tiada tajuk halaman yang sepadan dengan carian anda. Ubah carian anda, atau tekan butang carian papan kekunci untuk mencari di dalam halaman.',
@@ -11352,8 +11309,6 @@ $messages['ms'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Senarai pantau',
 	'mobile-frontend-main-menu-settings' => 'Tetapan',
 	'mobile-frontend-main-menu-upload' => 'Muatan naik',
-	'mobile-frontend-main-menu-about' => 'Perihal {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Penafian',
 	'mobile-frontend-main-menu-settings-heading' => 'Tetapan tapak mudah alih', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Bahasa-bahasa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} terdapat dalam $1 bahasa. Berikut adalah semua versi yang ada',
@@ -11362,7 +11317,6 @@ $messages['ms'] = array(
 	'mobile-frontend-page-menu-history' => 'Sejarah',
 	'mobile-frontend-meta-data-issues-header' => 'Isu',
 	'mobile-frontend-meta-data-issues' => 'Halaman ini ada beberapa isu',
-	'mobile-frontend-ajax-preview-loading' => 'Halaman pratayang sedang dimuatkan',
 	'mobile-frontend-page-saving' => 'Menyimpan $1',
 	'mobile-frontend-user-cta' => 'Sila log masuk atau berdaftar untuk membaca pemberitahuan untuk anda.',
 	'mobile-frontend-user-button-tooltip' => 'Paparkan pemberitahuan untuk saya',
@@ -11410,7 +11364,7 @@ Langsung tak ada halaman dekat sini.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Log masuk',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Daftar diri',
 	'mobile-frontend-watch-login' => 'Anda mesti log masuk untuk melihat halaman.',
-	'mobile-frontend-watchlist-a-z' => 'Semua',
+	'mobile-frontend-watchlist-a-z' => 'Semua', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Diubah',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik pada bintang di atas halaman',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'Anda tidak memantau sebarang halaman buat masa ini. Senarai pantau membantu anda untuk mengikuti perkembangan halaman-halaman yang anda minati. Pantau halaman dengan mengetik ikon bintang.',
@@ -11542,7 +11496,7 @@ $messages['mt'] = array(
 	'mobile-frontend-missing-image' => 'Stampa',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-featured-article' => 'Vetrina',
+	'mobile-frontend-featured-article' => 'Vetrina', # Fuzzy
 	'mobile-frontend-news-items' => 'Fl-aħbarijiet',
 	'mobile-frontend-language' => 'Lingwa:',
 	'mobile-frontend-language-article-heading' => "Aqra f'lingwa oħra",
@@ -11567,6 +11521,7 @@ $messages['mt'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privatezza',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Kontenut disponibbli taħt il-liċenzja [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; termini addizjonali jistgħu japplikaw.',
+	'mobile-frontend-copyright' => "It-test hu disponibbli taħt il-<a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Liċenzja Creative Commons Attribution/Share-Alike</a>; termini addizjonali jistgħu japplikaw. Ara t-<a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>termini ta' użu</a> għal aktar dettalji. Il-Wikipedija hija trejdmark reġistrata mill-<a href='http://www.wikimediafoundation.org/'>Fondazzjoni Wikimedia, Inc.</a>, organizzazzjoni mingħajr ebda fini ta' profitt.", # Fuzzy
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Termini ta' użu]",
 	'mobile-frontend-footer-contact' => 'Kuntatt',
 	'mobile-frontend-search-noresults' => 'L-ebda titlu ta\' paġna ma kkorrisponda mat-tfittxija tiegħek. Biddel it-tfittxija tiegħek, jew agħfas il-buttuna tat-tastiera "Fittex" sabiex tfittex fi ħdan it-test tal-paġni.',
@@ -11578,9 +11533,7 @@ $messages['mt'] = array(
 	'mobile-frontend-main-menu-logout' => 'Oħroġ',
 	'mobile-frontend-main-menu-watchlist' => "Lista ta' osservazzjonijiet",
 	'mobile-frontend-main-menu-settings' => 'Konfigurazzjoni',
-	'mobile-frontend-main-menu-about' => 'Dwar {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Ċaħda',
-	'mobile-frontend-main-menu-settings-heading' => 'Konfigurazzjoni għas-sit għall-mowbajl',
+	'mobile-frontend-main-menu-settings-heading' => 'Konfigurazzjoni għas-sit għall-mowbajl', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Lingwi {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => "{{SITENAME}} hija disponibbli f'$1 {{PLURAL:$1|lingwa|lingwi}}. Il-verżjonijiet disponibbli kollha huma mniżżla hawn taħt",
 	'mobile-frontend-main-menu-account-create' => 'Oħloq kont',
@@ -11593,8 +11546,8 @@ $messages['mt'] = array(
 	'mobile-frontend-nearby-title' => 'Fil-qrib',
 	'mobile-frontend-nearby-loading' => 'Telgħin xi artikli qrib il-pożizzjoni attwali tiegħek',
 	'mobile-frontend-nearby-requirements' => 'Jiddispjaċina! Il-browżer tiegħek ma jsostnix "Fil-qrib" ta\' {{SITENAME}}.',
-	'mobile-frontend-nearby-noresults' => "Jidher kwiet f'dawn in-naħat… m'għandna l-ebda artiklu f'dawn in-naħat.",
-	'mobile-frontend-nearby-noresults-guidance' => 'Prova ibda artiklu ġdid jew iżżid lokalità fuq wieħed eżistenti',
+	'mobile-frontend-nearby-noresults' => "Jidher kwiet f'dawn in-naħat… m'għandna l-ebda artiklu f'dawn in-naħat.", # Fuzzy
+	'mobile-frontend-nearby-noresults-guidance' => 'Prova ibda artiklu ġdid jew iżżid lokalità fuq wieħed eżistenti', # Fuzzy
 	'mobile-frontend-photo-upload-anon' => 'Trid tkun dħalt fil-kont tiegħek sabiex iżżid stampa fuq din il-paġna.',
 	'mobile-frontend-photo-upload-generic' => "Tella' stampa",
 	'mobile-frontend-donate-image-title' => 'Agħti stampa', # Fuzzy
@@ -11604,7 +11557,7 @@ $messages['mt'] = array(
 	'mobile-frontend-watchlist-view' => "Ara l-lista ta' osservazzjonijiet tiegħek",
 	'mobile-frontend-watchlist-cta' => 'Idħol fil-kont jew irreġistra sabiex tosserva din il-paġna.',
 	'mobile-frontend-watch-login' => 'Trid tkun dħalt fil-kont tiegħek sabiex tosserva paġna.',
-	'mobile-frontend-watchlist-a-z' => 'Kollha',
+	'mobile-frontend-watchlist-a-z' => 'Kollha', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Modifikati',
 	'mobile-frontend-changeslist-ip' => 'Utent anonimu',
 	'mobile-frontend-changeslist-nocomment' => 'l-ebda taqsira',
@@ -11619,7 +11572,7 @@ $messages['mt'] = array(
 	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|byte|$1 bytes}} imneħħija',
 	'mobile-frontend-table' => 'Tabella $1',
 	'mobile-frontend-saving-exit-page' => 'Il-kontribuzzjoni tiegħek għadha qed tiġi salvata. Jekk se titlaq, il-kontribuzzjonijiet tiegħek jintilfu. Inti ċert li tixtieq titlaq?',
-	'mobile-frontend-photo-upload' => "Żid stampa f'dan l-artiklu",
+	'mobile-frontend-photo-upload' => "Żid stampa f'dan l-artiklu", # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => "Miżjuda stampa f'din il-paġna",
 	'mobile-frontend-photo-upload-comment' => 'Stampa miżjuda fuq il-paġna',
 	'mobile-frontend-photo-caption-placeholder' => 'Żid deskrizzjoni (neċessarja)',
@@ -11637,14 +11590,17 @@ $messages['my'] = array(
 	'mobile-frontend-random-button' => 'ကျပန်း',
 	'mobile-frontend-back-to-top-of-section' => 'အပိုင်းတစ်ခု ခုန်ကျော်ရန်',
 	'mobile-frontend-regular-site' => 'ဤစာမျက်နှာကို ပုံမှန် ဝီကီပီးဒီးယား စာမျက်နှာတွင် ကြည့်ရန်', # Fuzzy
-	'mobile-frontend-featured-article' => 'ယနေ့အထူးဆောင်းပါး',
+	'mobile-frontend-featured-article' => 'ယနေ့အထူးဆောင်းပါး', # Fuzzy
+	'mobile-frontend-copyright' => "စာသားများသည် <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike လိုင်စင်</a>အောက်တွင် ရရှိနိုင်ပါသည်။ အပိုသတ်မှတ်ချက်များ ရှိကောင်းရှိမည်ဖြစ်သည်။ အသေးစိတ်အတွက် <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>အသုံးပြုရာတွင် သတိပြုရမည့် အချက်များ</a>ကို ကြည့်ပါ။ ဝီကီပီးဒီးယားသည် အကျိုးအမြတ် မရယူသော <a href='http://www.wikimediafoundation.org/'>ဝီကီမီဒီယာဖောင်ဒေးရှင်း Inc.</a>၏ မှတ်ပုံတင်ထားသော ကုန်အမှတ်တံဆိပ် ဖြစ်သည်။", # Fuzzy
 );
 
 /** Mazanderani (مازِرونی)
+ * @author Mehdi
  * @author محک
  */
 $messages['mzn'] = array(
 	'mobile-frontend-view' => 'موبایلی هارشائن',
+	'mobile-frontend-copyright' => "کل نوشتارون <a href='http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>موجوز Creative Commons Attribution/Share-Alike</a> اساس شمه دسترس درنه؛ مومکنه ای بعدن اته سری نو شرط و شروط ایضافه بوه. اگه اطلاعات ویشتری خواننی <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>قوانین و موقررات ایستفاده</a> ره هارشین. ویکی‌پدیا ، <a href='http://www.wikimediafoundation.org/'>ویکی‌مدیا بونیاد</a>اته تجاری علومت ثبت بئی هسه که اتا ناسودبر سازمون هسه.", # Fuzzy
 );
 
 /** Norwegian Bokmål (norsk bokmål)
@@ -11739,8 +11695,6 @@ $messages['nb'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Overvåkningsliste',
 	'mobile-frontend-main-menu-settings' => 'Innstillinger',
 	'mobile-frontend-main-menu-upload' => 'Opplastinger',
-	'mobile-frontend-main-menu-about' => 'Om {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Ansvarsfraskrivelse',
 	'mobile-frontend-main-menu-settings-heading' => 'Innstillinger',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}-språk',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} er tilgjengelig på $1 {{PLURAL:$1|språk|språk}}. Alle tilgjengelige utgaver er listet opp nedenfor',
@@ -11917,7 +11871,7 @@ $messages['nds'] = array(
 	'mobile-frontend-login' => 'Anmellen',
 	'mobile-frontend-page-menu-contents' => 'Inholt',
 	'mobile-frontend-listed-image-no-description' => 'Keen Beschrieven',
-	'mobile-frontend-watchlist-a-z' => 'All',
+	'mobile-frontend-watchlist-a-z' => 'All', # Fuzzy
 	'mobile-frontend-watchlist-filter-all' => 'All',
 	'mobile-frontend-watchlist-filter-talk' => 'Diskuschoon',
 	'mobile-frontend-watchlist-filter-other' => 'Annere',
@@ -12034,8 +11988,9 @@ $messages['ne'] = array(
 	'mobile-frontend-random-button' => 'कुनै पनि एक',
 	'mobile-frontend-back-to-top-of-section' => 'एक खण्ड पछाडि जाने',
 	'mobile-frontend-regular-site' => 'यो पृष्ठलाई नियमित {{SITENAME}}मा हेर्ने', # Fuzzy
-	'mobile-frontend-featured-article' => 'आजको जोडदिएको लेख',
+	'mobile-frontend-featured-article' => 'आजको जोडदिएको लेख', # Fuzzy
 	'mobile-frontend-username' => 'प्रयोगकर्ता नाम:',
+	'mobile-frontend-copyright' => "यी पाठहरु <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>;मा उपलब्ध छन् । थप सर्तहरु लागुहुन सक्छन् । थपजानकारीको लागि <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> मा हेर्नुहोस् । {{SITENAME}}  <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc. एक नाफा रहित संस्था , को एक दर्ता गरिएको ब्यापार संकेत हो </a>.", # Fuzzy
 );
 
 /** Dutch (Nederlands)
@@ -12249,6 +12204,7 @@ $messages['nl'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
 	'mobile-frontend-photo-upload-cta' => 'Meld u aan of registreer u om een afbeelding toe te voegen.',
 	'mobile-frontend-photo-upload-login' => 'U moet aangemeld zijn om een afbeelding te kunnen toevoegen.',
+	'mobile-frontend-editor-undo-unsupported' => 'Ongedaan maken is op het moment niet mogelijk op mobiele apparaten.',
 	'mobile-frontend-editor-disabled' => 'U mag deze pagina niet bewerken.',
 	'mobile-frontend-editor-unavailable' => 'Mobiel bewerken is op dit moment niet beschikbaar met uw browser. Probeer een andere browser.',
 	'mobile-frontend-editor-cta' => "U moet aangemeld zijn op pagina's via de mobiele site te bewerken.",
@@ -12284,6 +12240,8 @@ $messages['nl'] = array(
 	'mobile-frontend-talk-reply-success' => 'Uw antwoord is opgeslagen op de overlegpagina.',
 	'mobile-frontend-talk-reply-info' => 'Uw antwoord wordt automatisch ondertekend met uw gebruikersnaam.',
 	'mobile-frontend-talk-reply' => 'Antwoorden',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 bewerking|$2 bewerkingen|0=Geen bewerkingen|501=Meer dan 500 bewerkingen}}]] en
+[[Special:Uploads/$1|{{PLURAL:$3|1 upload|$3 uploads|0=geen uploads|501=meer dan 500 uploads}}]] in de afgelopen 30 dagen.', # Fuzzy
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -12369,6 +12327,7 @@ $messages['nn'] = array(
 	'mobile-frontend-privacy-link-text' => 'Personvern',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Tekst er tilgjengeleg under [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; fleire vilkår kan gjelda.',
+	'mobile-frontend-copyright' => "Teksten er tilgjengeleg under <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike-lisensen</a>, med eventuelle tillegg. Sjå <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>vilkåra</a> for detaljar. {{SITENAME}} er eit registrert varemerke som tilhøyrer <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, som er ein ideell organisasjon.", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Bruksvilkår]',
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Ingen sidetitlar passar med søket ditt. Endra søket ditt eller trykk på søkjeknappen på tastaturet for å søkja i sidetekstane.',
@@ -12381,8 +12340,6 @@ $messages['nn'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Overvakingsliste',
 	'mobile-frontend-main-menu-settings' => 'Innstillingar',
 	'mobile-frontend-main-menu-upload' => 'Opplastingar',
-	'mobile-frontend-main-menu-about' => 'Om {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Atterhald',
 	'mobile-frontend-main-menu-settings-heading' => 'Innstillingar for mobilsida', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}}-språk',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} er tilgjengeleg på {{PLURAL:$1|eitt språk|$1 språk}}. Alle tilgjengelege utgåver er lista opp nedanfor',
@@ -12391,7 +12348,6 @@ $messages['nn'] = array(
 	'mobile-frontend-page-menu-history' => 'Historikk',
 	'mobile-frontend-meta-data-issues-header' => 'Vanskar',
 	'mobile-frontend-meta-data-issues' => 'Denne sida har vanskar',
-	'mobile-frontend-ajax-preview-loading' => 'Lastar førehandsvising',
 	'mobile-frontend-page-saving' => 'Lagrar $1',
 	'mobile-frontend-nearby-title' => 'Nær her',
 	'mobile-frontend-nearby-loading' => 'Lastar inn emne nær staden du er no',
@@ -12500,6 +12456,7 @@ $messages['oc'] = array(
 	'mobile-frontend-clear-search' => 'Escafar',
 	'mobile-frontend-privacy-link-text' => 'Confidencialitat',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "<a class='internal' href='/wiki/Wikipèdia:Drech_d%27autor' title='Drech d'autor'>Drech d'autor</a> : Los tèxtes son disponibles jos <a href='http://creativecommons.org/licenses/by-sa/3.0/'>licéncia Creative Commons atribucion pertatge a l’identic</a> ; d’autres tèrmes se pòdon aplicar. Vejatz los <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>tèrmes d’utilizacion</a> per mai de detalhs. {{SITENAME}}® es una marca depausada de la <a href='http://wikimediafoundation.org/wiki/Acuèlh' title='Wikimedia Foundation'>Wikimedia Foundation, Inc.</a>, organizacion de benfasença regida pel paragraf <a class='internal' href='/wiki/501c' title='501c'>501(c)(3)</a> del còde fiscal dels Estats Units.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Contacte',
 	'mobile-frontend-main-menu-button-tooltip' => 'Dobrir lo menú principal',
 	'mobile-frontend-main-menu-page-title' => 'Navigacion dins lo site',
@@ -12575,7 +12532,7 @@ $messages['or'] = array(
 	'mobile-frontend-missing-image' => 'ଛବି',
 	'mobile-frontend-off' => 'ବନ୍ଦ',
 	'mobile-frontend-on' => 'ଚାଲୁ',
-	'mobile-frontend-featured-article' => 'ଆଜିର ବଛା ଲେଖା',
+	'mobile-frontend-featured-article' => 'ଆଜିର ବଛା ଲେଖା', # Fuzzy
 	'mobile-frontend-news-items' => 'ଖବରରେ',
 	'mobile-frontend-language' => 'ଭାଷା :',
 	'mobile-frontend-language-article-heading' => 'ଅନ୍ୟ ଭାଷାରେ ପଢିବେ',
@@ -12620,7 +12577,7 @@ $messages['or'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'ଦେଖଣାତାଲିକା',
 	'mobile-frontend-main-menu-settings' => 'ସଜାଣି',
 	'mobile-frontend-main-menu-upload' => 'ଅପଲୋଡ଼ କରିବେ', # Fuzzy
-	'mobile-frontend-main-menu-settings-heading' => 'ମୋବାଇଲ ସାଇଟ ସଜାଣି',
+	'mobile-frontend-main-menu-settings-heading' => 'ମୋବାଇଲ ସାଇଟ ସଜାଣି', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} ଭାଷାଗୁଡିକ',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}}ଟି $1 {{PLURAL:$1|ଭାଷା|ଭାଷାଗୁଡିକ}}ରେ ଉପଲବ୍ଧ ।ସମସ୍ତ ଉପଲବ୍ଧ ସଂସ୍କରଣର ତାଲିକା ତଳେ ଅଛି',
 	'mobile-frontend-main-menu-account-create' => 'ଖାତାଟିଏ ଖୋଲିବେ',
@@ -12650,7 +12607,7 @@ $messages['or'] = array(
 	'mobile-frontend-watchlist-cta' => 'ଏହି ପୃଷ୍ଠାକୁ ଦେଖବା ପାଇଁ ଦୟାକରି ଲଗଇନ କରନ୍ତୁ କିମ୍ବା  ନାମ ଲେଖାନ୍ତୁ ।',
 	'mobile-frontend-watchlist-cta-button-login' => 'ଲଗଇନ',
 	'mobile-frontend-watchlist-cta-button-signup' => 'ନାମ ଲେଖାଇବେ',
-	'mobile-frontend-watchlist-a-z' => 'ସମସ୍ତ',
+	'mobile-frontend-watchlist-a-z' => 'ସମସ୍ତ', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'ବଦଳାଯାଇଥିବା',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'ପୃଷ୍ଠାଟିର ଉପରେ ଥିବା ତାରା ଚିହ୍ନ ଉପରେ କ୍ଲିକ କରନ୍ତୁ',
 	'mobile-frontend-watchlist-a-z-empty-howto' => 'ସ୍କ୍ରୀନର ଉପରେ ଥିବା ତାରା ଚିହ୍ନ ଉପରେ କ୍ଲିକ କରି ଆପଣଙ୍କୁ ଭଲ ଲାଗିଥିବା ପୃଷ୍ଠାଟିକୁ ଦେଖନ୍ତୁ । ଏହା ଆପଣଙ୍କୁ ଏହି ପୃଷ୍ଠଟିକୁ ବୁକମାର୍କ କରେଇବାରେ ଏବଂ ସେଥିରେ ବଦଳ ହେଲେ ଦେଖେଇବାରେ ସାହାଯ୍ୟ କରିବ ।', # Fuzzy
@@ -12673,7 +12630,7 @@ $messages['or'] = array(
 	'mobile-frontend-diffview-explained' => 'ଏହି ଧାଡିଗୁଡିକ ଯୋଡାଗଲା (+) ଏବଂ କଢାଗଲା (-):',
 	'mobile-frontend-table' => '$1 ସାରଣୀ',
 	'mobile-frontend-saving-exit-page' => 'ଆପଣଙ୍କ ଅବଦାନଗୁଡିକ ଏଯାଏଁ ସାଇତା ଯାଉଛି । ଯଦି ଆପଣ ଚାଲିଯିବେ ତାହେଲେ ଆପଣଙ୍କ ଅବଦାନଗୁଡିକ କଟିଯିବା । ଆପଣ ନିଶ୍ଚିତ ଯେ ଏହି ପୃଷ୍ଠାକୁ ବନ୍ଦ କରିବେ ?',
-	'mobile-frontend-photo-upload' => 'ଏହି ଲେଖାରେ ଛବିଟିଏ ଯୋଡନ୍ତୁ',
+	'mobile-frontend-photo-upload' => 'ଏହି ଲେଖାରେ ଛବିଟିଏ ଯୋଡନ୍ତୁ', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'ଏହି ପୃଷ୍ଠାରେ ବ୍ୟବହାର ପାଇଁ ଫଟୋ ଯୋଡାଗଲା', # Fuzzy
 	'mobile-frontend-photo-article-donate-comment' => 'ମୋବାଇଲ ଦ୍ଵାରା ଛବି ଅବଦାନ କରିବେ', # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'ପୃଷ୍ଠାରେ ଫଟୋ ଯୋଡାଗଲା', # Fuzzy
@@ -12712,7 +12669,6 @@ $messages['os'] = array(
 	'mobile-frontend-random-button' => 'Халæй',
 	'mobile-frontend-back-to-top-of-section' => 'Раздæхын иу хай фæстæмæ',
 	'mobile-frontend-close-section' => 'Ацы хай сæхгæнын',
-	'mobile-frontend-empty-homepage-text' => 'Ацы хæдзарон фарс хъæуы саразын. <a href="https:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting"> Ацы сайты мобилон хуыз куыд хъæуы баиу кæнын, уый разамынд</a>',
 	'mobile-frontend-regular-site' => 'Æнæхъæнæй',
 	'mobile-frontend-wml-continue' => 'Дарддæр...',
 	'mobile-frontend-wml-back' => 'Фæстæмæ...',
@@ -12726,7 +12682,7 @@ $messages['os'] = array(
 	'mobile-frontend-missing-image' => 'Ныв',
 	'mobile-frontend-off' => 'ХИЦӔН',
 	'mobile-frontend-on' => 'ИУ',
-	'mobile-frontend-featured-article' => 'Боны сæрмагонд статья',
+	'mobile-frontend-featured-article' => 'Боны сæрмагонд статья', # Fuzzy
 	'mobile-frontend-news-items' => 'Нæуæг хабæртты',
 	'mobile-frontend-language' => 'Æвзаг:',
 	'mobile-frontend-username' => 'Архайæджы ном:',
@@ -12736,6 +12692,7 @@ $messages['os'] = array(
 	'mobile-frontend-clear-search' => 'Схафын',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Ацы æрмæг у сæрибар [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] лицензимæ гæсгæ.', # Fuzzy
+	'mobile-frontend-copyright' => "Текст у сæрибар<a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a> лицензимæ гæсгæ; гæнæн ис æндæр æм ис. Бæстондæр бакæс <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Пайда гæныны домæнтæ</a>. {{SITENAME}} у<a href='http://www.wikimediafoundation.org/'> Викимеди фондыон</a> регистраци гонд нысан.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Контакт',
 );
 
@@ -12746,7 +12703,7 @@ $messages['pa'] = array(
 	'mobile-frontend-home-button' => 'ਘਰ',
 	'mobile-frontend-back-to-top-of-section' => 'A ਸ਼ੈਕਸ਼ਨ ਉੱਤੇ ਵਾਪਸ ਜਾਉ',
 	'mobile-frontend-regular-site' => 'ਇਹ ਸਫ਼ਾ ਪੂਰੇ ਵਿਕਿਪੀਡਿਆ ਉੱਤੇ ਵੇਖੋ', # Fuzzy
-	'mobile-frontend-featured-article' => 'ਅੱਜ ਦੇ ਖਾਸ ਲੇਖ',
+	'mobile-frontend-featured-article' => 'ਅੱਜ ਦੇ ਖਾਸ ਲੇਖ', # Fuzzy
 );
 
 /** Papiamento (Papiamentu)
@@ -12757,7 +12714,8 @@ $messages['pap'] = array(
 	'mobile-frontend-random-button' => 'Kualkier',
 	'mobile-frontend-back-to-top-of-section' => 'Bai un sekshon patras',
 	'mobile-frontend-regular-site' => 'Mira e página aki riba un base regular', # Fuzzy
-	'mobile-frontend-featured-article' => 'E Artíkulo Estelar Di Awe',
+	'mobile-frontend-featured-article' => 'E Artíkulo Estelar Di Awe', # Fuzzy
+	'mobile-frontend-copyright' => "Teksto ta disponibel bou di e a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; otro rekisitonan por ta aplikabel. Mira <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Rekisitonan pa uso</a> pa detayenan. {{SITENAME}} ta un marka registrá di e <a href='http://www.wikimediafoundation.org/'>Fundashon Wikimedia, Inc.</a>, un organisashon káritativo.", # Fuzzy
 );
 
 /** Deitsch (Deitsch)
@@ -13052,7 +13010,7 @@ $messages['pms'] = array(
 	'mobile-frontend-missing-image' => 'Figura',
 	'mobile-frontend-off' => 'Dëstiss',
 	'mobile-frontend-on' => 'Anvisch',
-	'mobile-frontend-featured-article' => 'Artìcol dël dì',
+	'mobile-frontend-featured-article' => 'Artìcol dël dì', # Fuzzy
 	'mobile-frontend-news-items' => 'Ant le Neuve',
 	'mobile-frontend-language' => 'Lenga:',
 	'mobile-frontend-language-article-heading' => "Les an n'àutra lenga",
@@ -13086,6 +13044,7 @@ $messages['pms'] = array(
 	'mobile-frontend-privacy-link-text' => 'Confidensialità',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => "Ël test a l'é disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; d'àutre condission a podrìo aplichesse.",
+	'mobile-frontend-copyright' => "Ël test a l'é disponìbil sota la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; condission adissionaj a peulo aplichesse. Varda <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> për ij detaj. {{SITENAME}} a l'é un march argistrà ëd la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, n'organisassion non-profit.", # Fuzzy
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condission d'utilisassion]",
 	'mobile-frontend-footer-contact' => 'Contat',
 	'mobile-frontend-search-noresults' => "A-i é gnun-a pàgina ch'a corëspond a soa arserca. Ch'a modìfica soa arserca, o ch'a gnaca ël boton d'arserca dla tastadura për serché andrinta a le pàgine.",
@@ -13097,7 +13056,7 @@ $messages['pms'] = array(
 	'mobile-frontend-main-menu-logout' => 'Seurte dal sistema',
 	'mobile-frontend-main-menu-watchlist' => 'Ròba che as ten sot euj',
 	'mobile-frontend-main-menu-settings' => 'Regolassion',
-	'mobile-frontend-main-menu-settings-heading' => 'Regolassion dël sit për ij sacociàbij',
+	'mobile-frontend-main-menu-settings-heading' => 'Regolassion dël sit për ij sacociàbij', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Lenghe ëd {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => "{{SITENAME}} a l'é disponìbil an $1 {{PLURAL:$1|lenga|lenghe}}. Tute le version disponìbij a son listà sì-sota",
 	'mobile-frontend-main-menu-account-create' => 'Creé un cont',
@@ -13116,7 +13075,7 @@ $messages['pms'] = array(
 	'mobile-frontend-watchlist-cta' => "Për piasì, ch'a intra ant ël sistema o ch'as anscriva për ten-e sot-euj sta pàgina.",
 	'mobile-frontend-watchlist-cta-button-login' => 'Intré ant ël sistema',
 	'mobile-frontend-watchlist-cta-button-signup' => "Ch'as anscriva",
-	'mobile-frontend-watchlist-a-z' => 'Tùit',
+	'mobile-frontend-watchlist-a-z' => 'Tùit', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Modificà',
 	'mobile-frontend-watchlist-feed-empty' => "A-i son pa ëd pàgine con j'ùltime modìfiche",
 	'mobile-frontend-changeslist-ip' => 'Utent anònim',
@@ -13136,7 +13095,7 @@ $messages['pms'] = array(
 	'mobile-frontend-diffview-explained' => 'Le linie sì-dapress a son stàite giontà (+) e gavà (-):',
 	'mobile-frontend-table' => 'Tàula $1',
 	'mobile-frontend-saving-exit-page' => "Soa contribussion a l'é anco' da salvé. S'a chita, soe contribussion a sarà përdùe. É-lo sigur ëd vorèj seurte?",
-	'mobile-frontend-photo-upload' => 'Gionté na plancia a cost artìcol',
+	'mobile-frontend-photo-upload' => 'Gionté na plancia a cost artìcol', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Fòto giontà për esse dovrà an sla pàgina', # Fuzzy
 	'mobile-frontend-photo-article-donate-comment' => "Figura donà da 'n sacociàbil", # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'Fòto giontà a la pàgina', # Fuzzy
@@ -13166,7 +13125,7 @@ $messages['pnb'] = array(
 	'mobile-frontend-opt-in-explain' => 'بیٹا پسند کرن نال تسیں اج کم ہوندیاں تھانواں تے آؤگے جتھے مسلے تے بگز ہوسکدے نیں۔',
 	'mobile-frontend-disable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں بند کرو',
 	'mobile-frontend-enable-images' => 'موبائل آلی ویب سائٹ تے فوٹواں آن کرو',
-	'mobile-frontend-featured-article' => 'اج دا چونواں آرٹیکل',
+	'mobile-frontend-featured-article' => 'اج دا چونواں آرٹیکل', # Fuzzy
 	'mobile-frontend-news-items' => 'دساں چ',
 	'mobile-frontend-language' => 'بولی', # Fuzzy
 	'mobile-frontend-username' => 'ورتن والہ:',
@@ -13261,6 +13220,7 @@ $messages['pt'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privacidade',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Conteúdo disponibilizado com a licença [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => "Este texto é disponibilizado nos termos da licença <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; pode estar sujeito a condições adicionais. Consulte as <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Condições de Uso</a> para mais detalhes. {{SITENAME}} é uma marca registrada da <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, uma organização sem fins lucrativos.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Contacto',
 	'mobile-frontend-search-noresults' => 'Nenhum dos artigos corresponde à sua pesquisa. Altere a pesquisa, ou pressione o botão de pesquisa do teclado para pesquisar dentro dos artigos.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Destacado',
@@ -13426,7 +13386,8 @@ $messages['rm'] = array(
 	'mobile-frontend-wml-continue' => 'Cuntinuar…',
 	'mobile-frontend-wml-back' => 'Enavos…',
 	'mobile-frontend-view' => 'Versiun mobila',
-	'mobile-frontend-featured-article' => 'Artitgels dal di',
+	'mobile-frontend-featured-article' => 'Artitgels dal di', # Fuzzy
+	'mobile-frontend-copyright' => "Il text è disponibel sut la licenza <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; ulteriuras cundiziuns pon esser applitgablas. Detagls chattas ti en las <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cundiziuns d'utilisaziun</a>. Vichipedia è ina marca registrada da la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, ina organisaziun senza finamira da profit.", # Fuzzy
 );
 
 /** Romanian (română)
@@ -13680,10 +13641,8 @@ din întreaga lume',
 	'mobile-frontend-media-details' => 'Detalii',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Dacă un utilizator modifică sau nu prin intermediul interfeței mobile',
 	'mobile-frontend-profile-title' => 'Profil utilizator',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|O modificare|$1 modificări|$1 de modificări|0=Nicio modificare}} în ultima lună',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|O încărcare|$1 încărcări|$1 de încărcări|0=Nicio încărcare}} în ultima lună',
-	'mobile-frontend-profile-edits-limit' => '{{PLURAL:$1|Mai mult de $1 modificare|Peste $1 modificări|Peste $1 de modificări}} în ultima lună',
-	'mobile-frontend-profile-uploads-limit' => '{{PLURAL:$1|Mai mult de $1 încărcare|Peste $1 încărcări|Peste $1 de încărcări}} în ultima lună',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modificare|$2 modificări|0=Nicio modificare|501=Peste 500 de modificări}}]] și
+[[Special:Uploads/$1|{{PLURAL:$3|1 încărcare|$3 încărcări|0=nicio încărcare|501=peste 500 de încărcări}}]] în ultimele 30 de zile.',
 	'mobile-frontend-profile-last-upload-caption' => 'Ultima încărcare de către {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=astăzi}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recent',
 	'mobile-frontend-profile-registration' => '$1 a fost membru pentru {{PLURAL:$2|o zi|$2 zile|$2 de zile}} și a efectuat {{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}.',
@@ -14005,7 +13964,6 @@ $messages['rue'] = array(
 	'mobile-frontend-random-button' => 'Трафункова',
 	'mobile-frontend-back-to-top-of-section' => 'Вернути ся о секцію назад',
 	'mobile-frontend-close-section' => 'Заперти тоту секцію',
-	'mobile-frontend-empty-homepage-text' => 'Тота домашня сторінка мусить быти переконфіґурована. <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">Далшы інформації як тоту сторінку позволити мобілом</a>',
 	'mobile-frontend-regular-site' => 'Штандартне зображіня сторінкы',
 	'mobile-frontend-wml-continue' => 'Дале ...',
 	'mobile-frontend-wml-back' => 'Назад...',
@@ -14018,7 +13976,7 @@ $messages['rue'] = array(
 	'mobile-frontend-enable-images' => 'Занути образчікы в мобілній верзії',
 	'mobile-frontend-off' => 'ВЫП',
 	'mobile-frontend-on' => 'ЗАП',
-	'mobile-frontend-featured-article' => 'Статя дня',
+	'mobile-frontend-featured-article' => 'Статя дня', # Fuzzy
 	'mobile-frontend-news-items' => 'Новины',
 	'mobile-frontend-language' => 'Язык:',
 	'mobile-frontend-language-header' => 'Статя доступна в $1 {{PLURAL:$1|языцї|языках}}', # Fuzzy
@@ -14039,7 +13997,7 @@ $messages['rue'] = array(
 	'mobile-frontend-main-menu-featured' => 'Выбране',
 	'mobile-frontend-main-menu-nearby' => 'Наблизко',
 	'mobile-frontend-main-menu-settings' => 'Наставлїня',
-	'mobile-frontend-main-menu-settings-heading' => 'Наштелёваня мобілной верзії',
+	'mobile-frontend-main-menu-settings-heading' => 'Наштелёваня мобілной верзії', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Языкы {{grammar:2sg|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} є доступна в $1 {{PLURAL:$1|языцї|языках}}. Ниже суть зазначены вшыткы доступны верзії',
 	'mobile-frontend-page-menu-contents' => 'обсяг',
@@ -14061,7 +14019,6 @@ $messages['sa'] = array(
 	'mobile-frontend-random-button' => 'यादृच्छिकम्',
 	'mobile-frontend-back-to-top-of-section' => 'पृष्ठतः अध्यायं प्रति गम्यताम्',
 	'mobile-frontend-close-section' => 'अयं भागः पिधीयताम्',
-	'mobile-frontend-empty-homepage-text' => 'अस्य मूलपृष्ठस्य विन्यासः करणीयः । <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">इदं क्षेत्रं कथं जङ्गमोपकरणे सक्रियं करणीयमिति सूचनाः</a>',
 	'mobile-frontend-regular-site' => 'उत्पीठदृश्यम्',
 	'mobile-frontend-wml-continue' => 'अनुवर्त्यते.....',
 	'mobile-frontend-wml-back' => 'प्रतिनिर्वर्तनम्.....',
@@ -14074,7 +14031,7 @@ $messages['sa'] = array(
 	'mobile-frontend-enable-images' => 'चरक्षेत्रे चित्राणि सक्रियाणि क्रियन्ताम्',
 	'mobile-frontend-off' => 'निर्वापणम्',
 	'mobile-frontend-on' => 'प्रचालनम्',
-	'mobile-frontend-featured-article' => 'अद्यतनः प्रमुखः लेखः',
+	'mobile-frontend-featured-article' => 'अद्यतनः प्रमुखः लेखः', # Fuzzy
 	'mobile-frontend-news-items' => 'वार्तायाम्',
 	'mobile-frontend-language' => 'भाषा :',
 	'mobile-frontend-language-header' => 'अयं लेखः $1 {{PLURAL:$1|lभाषा|भाषाः}} इत्यत्र उपलभ्यते', # Fuzzy
@@ -14095,7 +14052,7 @@ $messages['sa'] = array(
 	'mobile-frontend-main-menu-featured' => 'प्रमुखम्',
 	'mobile-frontend-main-menu-nearby' => 'निकटम् ।',
 	'mobile-frontend-main-menu-settings' => 'संरचनम्',
-	'mobile-frontend-main-menu-settings-heading' => 'जङ्गमक्षेत्रसन्निवेशः',
+	'mobile-frontend-main-menu-settings-heading' => 'जङ्गमक्षेत्रसन्निवेशः', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} भाषाः',
 	'mobile-frontend-settings-site-description' => '$1 {{PLURAL:$1|भाषायां|भाषासु}} {{SITENAME}} उपलभ्यते । लभ्यमानाः आवृत्तयः अधः सूचिताः ।',
 	'mobile-frontend-page-menu-contents' => 'अन्तर्विषयाः',
@@ -14127,6 +14084,7 @@ $messages['sah'] = array(
 	'mobile-frontend-placeholder' => 'Көрдөбүл устуруоката...', # Fuzzy
 	'mobile-frontend-dismiss-notification' => 'бу биллэриини кистээ',
 	'mobile-frontend-clear-search' => 'Сот',
+	'mobile-frontend-copyright' => "Бу тиэкис	 <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензиянан тарҕанар, сорох түбэлтэлэргэ эбии көрдөбүллэр баар буолуохтары сөп. Сиһилии <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a> көр. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>«Викимедиа пуондата»</a> диэн барыыс киллэрбэт тэрилтэ бигэргэтиллибит тус бэйэтин бэлиэтэ.", # Fuzzy
 );
 
 /** Sicilian (sicilianu)
@@ -14139,7 +14097,6 @@ $messages['scn'] = array(
 	'mobile-frontend-home-button' => 'Pàggina principali',
 	'mobile-frontend-random-button' => 'Na pàggina a muzzu',
 	'mobile-frontend-back-to-top-of-section' => 'Vai â ccuminzata dû paràgrufu',
-	'mobile-frontend-empty-homepage-text' => 'Sta pàggina havi a siri cunfigurata. <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">Pi sapìrinni cchiossai</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Disattivari la virsioni mòbbili',
 	'mobile-frontend-wml-continue' => 'Camina...',
 	'mobile-frontend-wml-back' => 'Narreri',
@@ -14151,7 +14108,7 @@ $messages['scn'] = array(
 	'mobile-frontend-enable-images' => 'Abbilita li mmàggini supra lu situ pi dispusitivi mòbbili',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-featured-article' => 'Vitrina',
+	'mobile-frontend-featured-article' => 'Vitrina', # Fuzzy
 	'mobile-frontend-news-items' => 'Attualitati',
 	'mobile-frontend-language' => 'Lingua:',
 	'mobile-frontend-username' => 'Utenti:',
@@ -14163,6 +14120,7 @@ $messages['scn'] = array(
 	'mobile-frontend-privacy-link-text' => 'Cunfidinzialitati',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Cuntinutu dispunìbbili sutta la [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => "Lu testu è dispunibbili secunnu la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>licenza Creative Commons Attribuzione-Condividi allo stesso modo</a>; si ponnu applicari àutri cunnizzioni. Talia li <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>cunnizziuni d'usu</a> pi li dittagghi. {{SITENAME}} è nu marchiu arriggistratu dâ <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, n'urganizzazzioni senza scopu di lucru", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Cuntatti',
 );
 
@@ -14174,7 +14132,8 @@ $messages['sh'] = array(
 	'mobile-frontend-random-button' => 'Slučajna',
 	'mobile-frontend-back-to-top-of-section' => 'Skoči nazad za jednu sekciju',
 	'mobile-frontend-regular-site' => 'Pogledaj ovu stranicu na običnoj Wikipediji', # Fuzzy
-	'mobile-frontend-featured-article' => 'Odabrani članak',
+	'mobile-frontend-featured-article' => 'Odabrani članak', # Fuzzy
+	'mobile-frontend-copyright' => "Tekst je dostupan pod <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike licencom</a>; mogu se primjeniti i dodatna pravila. Pogledajte <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Pravila upotrebe</a> za više detalja. {{SITENAME}} je registrirana trgovačka marka od <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, neprofitne organizacije.", # Fuzzy
 );
 
 /** Tachelhit (Tašlḥiyt/ⵜⴰⵛⵍⵃⵉⵜ)
@@ -14183,7 +14142,8 @@ $messages['shi'] = array(
 	'mobile-frontend-home-button' => 'Asbrk',
 	'mobile-frontend-back-to-top-of-section' => 'Urrid s yan wayyaw',
 	'mobile-frontend-regular-site' => 'Ml tasna yad ɣ wikipidya tamqrant', # Fuzzy
-	'mobile-frontend-featured-article' => 'Isisfiwn f ...',
+	'mobile-frontend-featured-article' => 'Isisfiwn f ...', # Fuzzy
+	'mobile-frontend-copyright' => "<a class='internal' href='/wiki/Wikip%C3%A9dia:Izrfan n umgay' title='Izrfan n umgay'>Izrfan n umgay</a> : Iṭṛiṣn rad tn taft ɣid  <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.fr'>taragt n usnufl Commons tibḍit–baba iga zund</a> ;s tiwtilin lli f fllasn ittuyskarn. Zṛ f mayad ɣ <a href='http://wikimediafoundation.org/wiki/Conditions_d'utilisation'>tiwtlin  n uskr </a> bac a taft isisfin frurin yaḍn . {{SITENAME}}® est une marque déposée de la <a href='http://wikimediafoundation.org/wiki/Accueil' title='Wikimedia Foundation'>Wikimedia Foundation, Inc.</a>, tga yat tamaddast lli dar awttas bla tiɣrad.", # Fuzzy
 );
 
 /** Sinhala (සිංහල)
@@ -14309,7 +14269,6 @@ $messages['sk'] = array(
 	'mobile-frontend-random-button' => 'Náhodná',
 	'mobile-frontend-back-to-top-of-section' => 'Skočiť o sekciu späť',
 	'mobile-frontend-close-section' => 'Zatvoriť túto sekciu',
-	'mobile-frontend-empty-homepage-text' => 'Túto domovskú stránku treba nastaviť. <a href="http:https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting">Podrobnosti sa dozviete tu</a>', # Fuzzy
 	'mobile-frontend-regular-site' => 'Klasické zobrazenie',
 	'mobile-frontend-wml-continue' => 'Pokračovať...',
 	'mobile-frontend-wml-back' => 'Späť...',
@@ -14322,7 +14281,7 @@ $messages['sk'] = array(
 	'mobile-frontend-enable-images' => 'Zapnúť obrázky v mobilnom rozhraní',
 	'mobile-frontend-off' => 'VYP',
 	'mobile-frontend-on' => 'ZAP',
-	'mobile-frontend-featured-article' => 'Článok dňa',
+	'mobile-frontend-featured-article' => 'Článok dňa', # Fuzzy
 	'mobile-frontend-news-items' => 'V novinkách',
 	'mobile-frontend-language' => 'Jazyk:',
 	'mobile-frontend-language-header' => 'Tento článok je dostupný v $1 {{PLURAL:$1|jazyku|jazykoch}}', # Fuzzy
@@ -14338,12 +14297,13 @@ $messages['sk'] = array(
 	'mobile-frontend-privacy-link-text' => 'Súkromie',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Obsah je dostupný za podmienok [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => "Tento text je dostupný za podmienok licencie <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; môžu sa naň vzťahovať dodatočné ďalšie podmienky. Podrobnosti nájdete v <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Podmienkach používania</a>. Wikipédia je registrovaná obchodná značka neziskovej organizácie <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakt',
 	'mobile-frontend-search-noresults' => 'Žiadne názvy článkov nezodpovedajú vášmu vyhľadávaniu. Zmeňte hľadané slová alebo stlačením tlačidla hľadať na klávesnici hľadajte v texte článkov.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Odporúčané',
 	'mobile-frontend-main-menu-nearby' => 'V blízkosti',
 	'mobile-frontend-main-menu-settings' => 'Nastavenia',
-	'mobile-frontend-main-menu-settings-heading' => 'Nastavenia mobilného webu',
+	'mobile-frontend-main-menu-settings-heading' => 'Nastavenia mobilného webu', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Jazyky {{GRAMMAR:genitív|{{SITENAME}}}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} je {{GENDER:$1|dostupný|dostupná|dostupné}} v $1 {{PLURAL:$1|jazyku|jazykoch}}. Všetky dostupné verzie sú uvedené nižšie',
 	'mobile-frontend-page-menu-contents' => 'obsah',
@@ -14600,10 +14560,6 @@ $messages['sl'] = array(
 	'mobile-frontend-media-details' => 'Podrobnosti',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Ali uporabnik ureja prek mobilnega vmesnika ali ne',
 	'mobile-frontend-profile-title' => 'Podatki o uporabniku',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 urejanje|$1 urejanji|$1 urejanja|$1 urejanj|0=Brez urejanj}} v zadnjem mesecu',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 nalaganje|$1 nalaganji|$1 nalaganja|$1 nalaganj|0=Nobenega nalaganja}} v zadnjem mesecu',
-	'mobile-frontend-profile-edits-limit' => 'Čez {{PLURAL:$1|$1 urejanje|$1 urejanji|$1 urejanja|$1 urejanj}} v zadnjem mesecu',
-	'mobile-frontend-profile-uploads-limit' => 'Čez {{PLURAL:$1|$1 nalaganje|$1 nalaganji|$1 nalaganja|$1 nalaganj}} v zadnjem mesecu',
 	'mobile-frontend-profile-last-upload-caption' => 'Zadnje nalaganje {{GENDER:$1|uporabnika $1|uporabnice $1}}, {{PLURAL:$2|včeraj|pred $2 dnevoma|pred $2 dnevi|0=danes}}.',
 	'mobile-frontend-profile-heading-recent' => 'Nedavno',
 	'mobile-frontend-profile-registration' => '$1 je član že {{PLURAL:$2|$2 dan|$2 dneva|$2 dni}} in je napravil {{PLURAL:$3|$3 urejanje|$3 urejanji|$3 urejanja|$3 urejanj}}.',
@@ -14631,8 +14587,6 @@ $messages['sq'] = array(
 	'mobile-frontend-random-button' => 'I rastit',
 	'mobile-frontend-back-to-top-of-section' => 'Kalo në seksionin A',
 	'mobile-frontend-close-section' => 'Mbylleni këtë seksion',
-	'mobile-frontend-empty-homepage-text' => 'Kjo faqe kryesore ka nevojë që të konfigurohet
-[https://www.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting Udhëzimet se si ta aktivizoni këtë faqe]',
 	'mobile-frontend-regular-site' => 'Shiko këtë faqe në versionin e rregullt të {{SITENAME}}', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Vazhdo...',
 	'mobile-frontend-wml-back' => 'Prapa ...',
@@ -14645,7 +14599,7 @@ $messages['sq'] = array(
 	'mobile-frontend-enable-images' => 'Aktivizo figurat në versionin për celular',
 	'mobile-frontend-off' => 'Të paparaqitura',
 	'mobile-frontend-on' => 'Të paraqitura',
-	'mobile-frontend-featured-article' => 'Artikulli i ditës',
+	'mobile-frontend-featured-article' => 'Artikulli i ditës', # Fuzzy
 	'mobile-frontend-news-items' => 'Në lajme',
 	'mobile-frontend-language' => 'Gjuha', # Fuzzy
 	'mobile-frontend-language-header' => 'Ky artikull është në dispozicion në $1 {{PLURAL:$1|gjuhën|gjuhët}}', # Fuzzy
@@ -14661,12 +14615,14 @@ $messages['sq'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privatësia',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Përmbajtja në dispozicion nën [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => "Përmbajtja është në dispozicion nën <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:
+Text_of_Creative_Commons_Attribution_ShareAlike_3.0_Unported_License'>Krijuesi i  atributeve të përbashkëta/License e ndarë njësoj</a>; kushte shtesë mund të aplikohen. Shiko <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Kushtet e përdorimit</a> për detaje. {{SITENAME}} është një markë e regjistruar e <a href='http://www.wikimediafoundation.org/'> Wikimedia Foundation, Inc.</a>, një organizatë jo fitim prurëse.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Kontakti',
 	'mobile-frontend-search-noresults' => 'Asnjë titull i artikujve nuk u përputh me kërkimin tuaj. Ndryshoni kërkimin tuaj, ose shtypni butonin e kërkimit me tastierë për të kërkuar brenda artikujve.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'I veçuar',
 	'mobile-frontend-main-menu-nearby' => 'Pranë',
 	'mobile-frontend-main-menu-settings' => 'Parametrat',
-	'mobile-frontend-main-menu-settings-heading' => 'Parametrat e faqes për celular',
+	'mobile-frontend-main-menu-settings-heading' => 'Parametrat e faqes për celular', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Gjuhë',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} është në dispozicion në $1 {{PLURAL:$1|gjuhën|gjuhët}}. Të gjitha versionet janë të listuara më poshtë',
 	'mobile-frontend-page-menu-contents' => 'Përmbajtja',
@@ -14891,7 +14847,8 @@ $messages['su'] = array(
 	'mobile-frontend-random-button' => 'Acak',
 	'mobile-frontend-back-to-top-of-section' => 'Balik ka Bagian Saméméhna',
 	'mobile-frontend-regular-site' => 'Pidangkeun ieu kaca dina Wikipédia biasa', # Fuzzy
-	'mobile-frontend-featured-article' => 'Artikel Petingan Poé Ieu',
+	'mobile-frontend-featured-article' => 'Artikel Petingan Poé Ieu', # Fuzzy
+	'mobile-frontend-copyright' => "Tulisan ditangtayungan ku <a href='http://id.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisénsi Creative Commons Atribusi-PembagianSerupa</a>; sarta bisa aya katangtuan émbohna. Pikeun lengkepna, mangga baca <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Katangtuan Maké</a>. Wikipédia mangrupakeun mérek dagang ti organisasi nirlaba <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>.", # Fuzzy
 );
 
 /** Swedish (svenska)
@@ -15170,7 +15127,7 @@ $messages['sw'] = array(
 	'mobile-frontend-view-mobile' => 'Simu ya rununu',
 	'mobile-frontend-images-status' => 'Picha',
 	'mobile-frontend-enable-images' => 'Wezesha picha katika wavuti wa simu ya rununu',
-	'mobile-frontend-featured-article' => 'Makala Bora ya Leo',
+	'mobile-frontend-featured-article' => 'Makala Bora ya Leo', # Fuzzy
 	'mobile-frontend-news-items' => 'Katika habari',
 	'mobile-frontend-language' => 'Lugha:',
 	'mobile-frontend-language-header' => 'Makala haya yanapatikana katika {{PLURAL:$1|language|lugha}} $1', # Fuzzy
@@ -15183,10 +15140,11 @@ $messages['sw'] = array(
 	'mobile-frontend-clear-search' => 'Futa',
 	'mobile-frontend-privacy-link-text' => 'Faragha',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "Nakala inapatikana chini ya <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; masuala ya ziada yanaweza kukubalika. Tazama <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Masharti ya Utumiaji</a> kwa maelezo zaidi. {{SITENAME}} ni nembo iliosajiliwa na <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, asasi isiyokuwa ya kifaida.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Mawasiliano',
 	'mobile-frontend-main-menu-nearby' => 'Karibu',
 	'mobile-frontend-main-menu-settings' => 'Mpangilio',
-	'mobile-frontend-main-menu-settings-heading' => 'Mpangilio wa wavuti wa simu ya rununu',
+	'mobile-frontend-main-menu-settings-heading' => 'Mpangilio wa wavuti wa simu ya rununu', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Lugha',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} inapatikana katika $1 {{PLURAL:$1|language|lugha}}. Toleo zote zinazopatikana zimeorodhweshwa hapa chini',
 	'mobile-frontend-page-menu-contents' => 'Maudhui',
@@ -15236,7 +15194,7 @@ $messages['ta'] = array(
 	'mobile-frontend-missing-image' => 'படம்',
 	'mobile-frontend-off' => 'அணை',
 	'mobile-frontend-on' => 'இயங்குகிறது',
-	'mobile-frontend-featured-article' => 'முதற்பக்கக் கட்டுரைகள்',
+	'mobile-frontend-featured-article' => 'முதற்பக்கக் கட்டுரைகள்', # Fuzzy
 	'mobile-frontend-news-items' => 'செய்திகளில்',
 	'mobile-frontend-language' => 'மொழி:',
 	'mobile-frontend-language-article-heading' => 'வேறொரு மொழியில் படிக்கவும்',
@@ -15259,6 +15217,7 @@ $messages['ta'] = array(
 	'mobile-frontend-clear-search' => 'வெறுமையாக்கு',
 	'mobile-frontend-privacy-link-text' => 'தகவல் பாதுகாப்பு',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "இத்திட்ட உரை இங்கு கிடைக்கும் <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; கூடுதல் நிபந்தனைகளுக்கு உட்பட்டது. விவரங்களுக்கு பார்க்க <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>பொறுப்புத் துறப்புகள்</a>. வீக்கிப்பீடியா ஒரு இலாபநோக்கற்ற <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>  நிறுவனத்தின் பதிவு பெற்ற வர்த்தகச் சின்னமாகும்.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'தொடர்புக்கு',
 	'mobile-frontend-main-menu-button-tooltip' => 'முதன்மை பட்டியைத் திறக்கவும்',
 	'mobile-frontend-main-menu-page-title' => 'தள வழிசெலுத்துதல்',
@@ -15269,7 +15228,7 @@ $messages['ta'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'கவனிப்புப் பட்டியல்',
 	'mobile-frontend-main-menu-settings' => 'அமைப்புகள்',
 	'mobile-frontend-main-menu-upload' => 'பதிவேற்றங்கள்',
-	'mobile-frontend-main-menu-settings-heading' => 'அலைபேசி தள அமைப்புகள்',
+	'mobile-frontend-main-menu-settings-heading' => 'அலைபேசி தள அமைப்புகள்', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} மொழிகள்',
 	'mobile-frontend-settings-site-description' => '$1 {{PLURAL:$1|மொழியில்|மொழிகளில்}} {{SITENAME}} உள்ளது. கிடைக்கின்ற அனைத்துப் பதிப்புகளும் கீழே பட்டியலிடப்பட்டுள்ளன',
 	'mobile-frontend-main-menu-account-create' => 'கணக்கை உருவாக்கு',
@@ -15292,7 +15251,7 @@ $messages['ta'] = array(
 	'mobile-frontend-watchlist-cta' => 'இந்த பக்கத்தை கவனிக்க புகுபதிகை செய்யவும் அல்லது பதிவு செய்யவும்',
 	'mobile-frontend-watchlist-cta-button-login' => 'புகுபதிகை',
 	'mobile-frontend-watchlist-cta-button-signup' => 'பதிவுசெய்',
-	'mobile-frontend-watchlist-a-z' => 'அனைத்தும்',
+	'mobile-frontend-watchlist-a-z' => 'அனைத்தும்', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'மாற்றங்களுடன் கூடிய பக்கங்கள்', # Fuzzy
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'பக்கத்தில் தொடக்கத்தில் உள்ள நட்சத்திரத்தை சொடுக்கவும்',
 	'mobile-frontend-watchlist-feed-empty' => 'தற்பொழுதைய மாற்றங்கள் கொண்ட பக்கங்கள் ஏதும் இல்லை',
@@ -15308,7 +15267,7 @@ $messages['ta'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|பைட்டு|பைட்டுகள்}} சேர்க்கப்பட்டது',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|பைட்டு|பைட்டுகள்}} நீக்கப்பட்டது',
 	'mobile-frontend-table' => 'அட்டவணை $1',
-	'mobile-frontend-photo-upload' => 'இந்ந பக்கத்திற்கு ஒரு படம் சேர்க்கவும்',
+	'mobile-frontend-photo-upload' => 'இந்ந பக்கத்திற்கு ஒரு படம் சேர்க்கவும்', # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'பக்கத்திற்கு படம் சேர்க்கப்பட்டுள்ளது', # Fuzzy
 	'mobile-frontend-image-loading' => 'படிமம் ஏற்றப்படுகிறது',
 	'mobile-frontend-image-uploading-wait' => 'படம் பதிவேற்றப்படுகிறது', # Fuzzy
@@ -15342,7 +15301,7 @@ $messages['te'] = array(
 	'mobile-frontend-images-status' => 'బొమ్మలు',
 	'mobile-frontend-off' => 'చూపించకు',
 	'mobile-frontend-on' => 'చూపించు',
-	'mobile-frontend-featured-article' => 'నేటి విశేష వ్యాసం',
+	'mobile-frontend-featured-article' => 'నేటి విశేష వ్యాసం', # Fuzzy
 	'mobile-frontend-news-items' => 'వార్తల్లో',
 	'mobile-frontend-language' => 'భాష:',
 	'mobile-frontend-language-header' => 'ఈ వ్యాసం $1 {{PLURAL:$1|భాషలో|భాషలలో}} లభ్యం', # Fuzzy
@@ -15358,10 +15317,11 @@ $messages['te'] = array(
 	'mobile-frontend-privacy-link-text' => 'మరుగు',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'విషయం [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile సీసీ బై-ఎస్ఏ 3.0] క్రింద లభ్యం', # Fuzzy
+	'mobile-frontend-copyright' => "పాఠ్యం <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>క్రియేటివ్ కామన్స్ అట్రిబ్యూషన్/షేర్-అలైక్ లైసెన్సు</a> క్రింద లభ్యం; అదనపు నియమాలు పర్తించవచ్చు. మరిన్ని వివరాలకు <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>వినియోగ నియమావళి</a>ని చూడండి. వికీపీడియా అనేది లాభాపేక్ష లేని సంస్థ అయిన <a href='http://www.wikimediafoundation.org/'>వికీమీడియా ఫౌండేషన్, ఇంక్.</a> యొక్క నమోదైన ట్రేడుమార్కు.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'సంప్రదింపులు',
 	'mobile-frontend-main-menu-nearby' => 'దగ్గరలో',
 	'mobile-frontend-main-menu-settings' => 'అమరికలు',
-	'mobile-frontend-main-menu-settings-heading' => 'మొబైలు సైటు అమరికలు',
+	'mobile-frontend-main-menu-settings-heading' => 'మొబైలు సైటు అమరికలు', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} భాషలు',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} $1 {{PLURAL:$1|భాషలో|భాషలలో}} లభ్యమవుతూంది. లభ్యమయ్యే సంచికలు అన్నీ క్రింద ఇవ్వబడ్డాయి',
 	'mobile-frontend-page-menu-contents' => 'విషయ సూచిక',
@@ -15381,8 +15341,9 @@ $messages['tg-cyrl'] = array(
 	'mobile-frontend-view-mobile' => 'Мобил',
 	'mobile-frontend-off' => 'Хомӯш',
 	'mobile-frontend-on' => 'Равшан',
-	'mobile-frontend-featured-article' => 'Мақолаи Баргузидаи Имрӯз',
+	'mobile-frontend-featured-article' => 'Мақолаи Баргузидаи Имрӯз', # Fuzzy
 	'mobile-frontend-footer-license' => 'Мӯҳтаво таҳти иҷозатномаи [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] дастрас аст.', # Fuzzy
+	'mobile-frontend-copyright' => "Ҳамаи навиштаҳо таҳти иҷозаномаи <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a> қобили дастрасӣ мебошанд; шартҳои изофӣ мумкин аст баъдан изофа шавад. Барои ҷузъиёти бештар нигаред <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Қавонин ва муқарароти истифода</a>. Википедиа як аломати тиҷории <a href='http://www.wikimediafoundation.org/'>Бунёди Викимедиа</a>, як созмони ғайри интифоӣ аст.", # Fuzzy
 );
 
 /** Tajik (Latin script) (tojikī)
@@ -15392,7 +15353,7 @@ $messages['tg-latn'] = array(
 	'mobile-frontend-home-button' => 'Xona',
 	'mobile-frontend-random-button' => 'Tasodufī',
 	'mobile-frontend-back-to-top-of-section' => 'Bozgaşt Ba Qismati A',
-	'mobile-frontend-featured-article' => 'Maqolai Barguzidai Imrūz',
+	'mobile-frontend-featured-article' => 'Maqolai Barguzidai Imrūz', # Fuzzy
 );
 
 /** Thai (ไทย)
@@ -15447,6 +15408,8 @@ $messages['th'] = array(
 	'mobile-frontend-privacy-link-text' => 'ความเป็นส่วนตัว',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'อนุญาตให้เผยแพร่ภายใต้[//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] และอาจมีเงื่อนไขอื่นเพิ่มเติม',
+	'mobile-frontend-copyright' => "ข้อความทั้งหมดอยู่ภายใต้ <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>สัญญาอนุญาตครีเอทีฟคอมมอนส์/Share-Alike</a> และ<a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>เงื่อนไขอื่นเพิ่มเติม</a>ตามนโยบายด้านลิขสิทธิ์
+{{SITENAME}}® เป็นเครื่องหมายการค้าจดทะเบียนของ <a href='http://www.wikimediafoundation.org/'>มูลนิธิวิกิมีเดีย</a>", # Fuzzy
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile เงื่อนไขการใช้งาน]',
 	'mobile-frontend-footer-contact' => 'ติดต่อ',
 	'mobile-frontend-search-noresults' => 'ไม่มีชื่อหน้าตรงกับการค้นหาของคุณ เปลี่ยนคำค้น หรือกดปุ่มค้นหาคีย์บอร์ดเพื่อค้นหน้าภายใน',
@@ -15455,8 +15418,6 @@ $messages['th'] = array(
 	'mobile-frontend-main-menu-logout' => 'ล็อกเอาต์',
 	'mobile-frontend-main-menu-watchlist' => 'รายการเฝ้าดู',
 	'mobile-frontend-main-menu-settings' => 'การตั้งค่า',
-	'mobile-frontend-main-menu-about' => 'เกี่ยวกับ{{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'ข้อปฏิเสธความรับผิดชอบ',
 	'mobile-frontend-settings-site-header' => 'ภาษาของ{{SITENAME}}',
 	'mobile-frontend-settings-site-description' => 'มี{{SITENAME}}ใน $1 ภาษา ทุกรุ่นที่มีแสดงรายการด้านล่าง',
 	'mobile-frontend-main-menu-account-create' => 'สร้างบัญชี',
@@ -15533,6 +15494,7 @@ $messages['tl'] = array(
 	'mobile-frontend-privacy-link-text' => 'Paglilihim',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Ang nilalaman ay makukuhang nasa ilalim ng [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]', # Fuzzy
+	'mobile-frontend-copyright' => "Makukuha ang teksto sa ilalim ng Lisensyang <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; maaaring ginagamitan ng karagdagang mga termino. Tingnan <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Mga Termino ng Paggamit</a> para sa mga detalye.	Ang {{SITENAME}} ay isang rehistradong tatak ng <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, isang hindi kumikinabang na organisasyon.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'Makipag-ugnayan',
 	'mobile-frontend-search-noresults' => 'Walang mga pamagat ng artikulo na tumugma sa paghahanap mo. Baguhin ang hinahanap mo, pindutin ang pindutang panghanap ng tipahan upang maghanap sa loob ng mga artikulo.', # Fuzzy
 	'mobile-frontend-main-menu-featured' => 'Itinatampok',
@@ -15540,8 +15502,6 @@ $messages['tl'] = array(
 	'mobile-frontend-main-menu-login' => 'Lumagda',
 	'mobile-frontend-main-menu-logout' => 'Umalis sa pagkakalagda',
 	'mobile-frontend-main-menu-settings' => 'Mga katakdaan',
-	'mobile-frontend-main-menu-about' => 'Tungkol sa {{SITENAME}}',
-	'mobile-frontend-main-menu-disclaimer' => 'Pagtatanggi',
 	'mobile-frontend-main-menu-settings-heading' => 'Mga kagustuhan',
 	'mobile-frontend-settings-site-header' => 'Mga Wika sa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => 'Makukuha ang {{SITENAME}} sa $1 {{PLURAL:$1|wika|mga wika}}. Ang lahat ng mga bersiyon ay nakalista sa ibaba',
@@ -15575,7 +15535,7 @@ $messages['tpi'] = array(
 	'mobile-frontend-search-submit' => 'Go',
 	'mobile-frontend-home-button' => 'Fran pes',
 	'mobile-frontend-random-button' => 'Wanpela pes',
-	'mobile-frontend-featured-article' => 'Pes long dispela de',
+	'mobile-frontend-featured-article' => 'Pes long dispela de', # Fuzzy
 );
 
 /** Turkish (Türkçe)
@@ -15798,7 +15758,8 @@ $messages['tt-cyrl'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Бер бүлеккә артка',
 	'mobile-frontend-regular-site' => 'Сәхифәне гади {{SITENAME}} сәхифәсендә карау', # Fuzzy
 	'mobile-frontend-view' => 'Мобиль юрама',
-	'mobile-frontend-featured-article' => 'Көннең сайланган мәкаләсе',
+	'mobile-frontend-featured-article' => 'Көннең сайланган мәкаләсе', # Fuzzy
+	'mobile-frontend-copyright' => "Текст <a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution/Share-Alike</a> лицензиясе шартларында ачык, махсус очракларда өстәмә шартлар кулланыла ала. Күбрәк <a href='http://wikimediafoundation.org/wiki/Terms_of_Use/ru'>Условия использования</a> кара. «{{SITENAME}}» — <a href='http://www.wikimediafoundation.org/'>«Викимедиа фонды»</a> табышсыз оешманың теркәлгән сәүдә маркасы.", # Fuzzy
 );
 
 /** Tati (Tati)
@@ -15839,7 +15800,7 @@ $messages['ug-arab'] = array(
 	'mobile-frontend-view-mobile' => 'يانفون',
 	'mobile-frontend-images-status' => 'سۈرەتلەر',
 	'mobile-frontend-missing-image' => 'سۈرەت',
-	'mobile-frontend-featured-article' => 'بۈگۈنكى ئالاھىدە ماقالە',
+	'mobile-frontend-featured-article' => 'بۈگۈنكى ئالاھىدە ماقالە', # Fuzzy
 	'mobile-frontend-language' => 'تىل:',
 	'mobile-frontend-username' => 'ئىشلەتكۈچى ئاتى:',
 	'mobile-frontend-password' => 'ئىم:',
@@ -16134,10 +16095,6 @@ $messages['uk'] = array(
 	'mobile-frontend-media-details' => 'Деталі',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Чи користувач редагує через мобільний інтерфейс, чи ні',
 	'mobile-frontend-profile-title' => 'Профіль користувача',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|1 редагування|$1 редагування|$1 редагувань|0=Немає редагувань}} за останній місяць',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|1 завантаження|$1 завантаження|$1 завантажень|0=Немає завантажень}} за останній місяць',
-	'mobile-frontend-profile-edits-limit' => 'Більше {{PLURAL:$1|$1 редагування|$1 редагувань}} за останній місяць',
-	'mobile-frontend-profile-uploads-limit' => 'Більше {{PLURAL:$1|$1 завантаження|$1 завантажень}} за останній місяць',
 	'mobile-frontend-profile-last-upload-caption' => 'Останнє завантаження від {{GENDER:$1|$1}}, {{PLURAL:$2|вчора|$2 дні тому|$2 днів тому|0=сьогодні}}.',
 	'mobile-frontend-profile-heading-recent' => 'Останні',
 	'mobile-frontend-profile-registration' => '$1 вже є учасником {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і вже зробив {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.',
@@ -16169,7 +16126,7 @@ $messages['ur'] = array(
 	'mobile-frontend-view-desktop' => 'ڈیسک ٹاپ',
 	'mobile-frontend-view-mobile' => 'موبائل',
 	'mobile-frontend-images-status' => 'تصویر',
-	'mobile-frontend-featured-article' => 'آج کا منتخب مقالہ',
+	'mobile-frontend-featured-article' => 'آج کا منتخب مقالہ', # Fuzzy
 	'mobile-frontend-language' => 'زبان:',
 	'mobile-frontend-username' => 'صارف کا نام:',
 	'mobile-frontend-password' => 'پاس ورڈ:',
@@ -16177,6 +16134,7 @@ $messages['ur'] = array(
 	'mobile-frontend-clear-search' => 'واضح',
 	'mobile-frontend-privacy-link-text' => 'پرائیویسی',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
+	'mobile-frontend-copyright' => "تمام متن <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>تخلیقی العام انتساب/مماثل-شراکت اجازہ</a> کے تحت دستیاب ہے; اِضافی شرائط عائد ہوسکتی ہیں. تفصیل کیلئے <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>استعمال کی شرائط</a> دیکھئے. ویکیپیڈیا <a href='http://www.wikimediafoundation.org/'>موسسۂ ویکیمیڈیا، متشرک.</a>، ایک غیر-منافع بخش تنظیم، کا ایک درج شدہ نشانِ تجارت ہے.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'سے رابطہ کریں',
 	'mobile-frontend-main-menu-featured' => 'نمایاں',
 	'mobile-frontend-main-menu-nearby' => 'قریبی',
@@ -16198,8 +16156,6 @@ $messages['uz'] = array(
 	'mobile-frontend-logged-out' => 'Siz tizimga kirmagansiz',
 	'mobile-frontend-logged-in-homepage-notification' => 'Xush kelibsiz, $1!',
 	'mobile-frontend-logged-in-toast-notification' => '$1 sifatida kirdingiz.',
-	'mobile-frontend-handshake-title' => 'Yoʻnaltirish...',
-	'mobile-frontend-handshake-wait' => 'Iltimos, kuting, login formasiga yoʻnaltirilmoqdasiz.',
 	'mobile-frontend-sign-up-heading' => 'Roʻyxatdan oʻt',
 	'mobile-frontend-sign-in-heading' => 'Kirish',
 	'mobile-frontend-sign-in-why' => '{{SITENAME}} hisobingiz boʻlsa, quyida kirishingiz mumkin.',
@@ -16222,7 +16178,7 @@ $messages['uz'] = array(
 	'mobile-frontend-missing-image' => 'Tasvir',
 	'mobile-frontend-off' => 'OʻCH',
 	'mobile-frontend-on' => 'YON',
-	'mobile-frontend-featured-article' => 'Bugungi tanlangan maqola',
+	'mobile-frontend-featured-article' => 'Bugungi tanlangan maqola', # Fuzzy
 	'mobile-frontend-news-items' => 'Yangiliklar',
 	'mobile-frontend-language' => 'Til:',
 	'mobile-frontend-language-article-heading' => 'Boshqa tilda oʻqish',
@@ -16261,7 +16217,7 @@ $messages['uz'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'Kuzatuv roʻyxati',
 	'mobile-frontend-main-menu-settings' => 'Moslamalar',
 	'mobile-frontend-main-menu-upload' => 'Yuklash',
-	'mobile-frontend-main-menu-settings-heading' => 'Sayt mobil versiyasining moslamalari',
+	'mobile-frontend-main-menu-settings-heading' => 'Sayt mobil versiyasining moslamalari', # Fuzzy
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} tillari',
 	'mobile-frontend-main-menu-account-create' => 'Hisob yaratish',
 	'mobile-frontend-page-menu-contents' => 'mundarija',
@@ -16279,7 +16235,7 @@ $messages['uz'] = array(
 	'mobile-frontend-watchlist-more' => 'batafsil',
 	'mobile-frontend-watchlist-cta-button-login' => 'Kirish',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Roʻyxatdan oʻting',
-	'mobile-frontend-watchlist-a-z' => 'Barchasi',
+	'mobile-frontend-watchlist-a-z' => 'Barchasi', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Tahrirlangan',
 	'mobile-frontend-changeslist-ip' => 'Anonim foydalanuvchi',
 	'mobile-frontend-watchlist-filter-articles' => 'Maqolalar',
@@ -16342,7 +16298,7 @@ $messages['vec'] = array(
 	'mobile-frontend-missing-image' => 'Imaxene',
 	'mobile-frontend-off' => 'OFF',
 	'mobile-frontend-on' => 'ON',
-	'mobile-frontend-featured-article' => 'Vetrina',
+	'mobile-frontend-featured-article' => 'Vetrina', # Fuzzy
 	'mobile-frontend-news-items' => 'Novità',
 	'mobile-frontend-language' => 'Léngua:',
 	'mobile-frontend-language-article-heading' => "Lexe inte n'altra léngua",
@@ -16376,6 +16332,7 @@ $messages['vec'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privacy',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'El testo el xe disponibiłe soto ła licensa [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; podarìa aplicarse altre condision in più.',
+	'mobile-frontend-copyright' => "El testo el xe disponibile soto la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>licensa Creative Commons Attribution/Share-Alike</a>; podarìà aplicarse condission ulteriori. Varda le <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>condission d'uso</a> par i detagli. {{SITENAME}} la xe un marchio registrà de la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, na organixassion non a scopo de lucro.", # Fuzzy
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condision d'uxo]",
 	'mobile-frontend-footer-contact' => 'Contati',
 	'mobile-frontend-search-noresults' => 'Nisuna pajina ła ga un titoło che \'l corisponde a ła to riserca. Canbia ła to riserca, opur struca el boton de ła tastiera "Serca" par ła riserca inte\'l testo de łe pàjine.',
@@ -16388,7 +16345,7 @@ $messages['vec'] = array(
 	'mobile-frontend-main-menu-watchlist' => "Pàjine tegnùe d'ocio",
 	'mobile-frontend-main-menu-settings' => 'Inpostasion',
 	'mobile-frontend-main-menu-upload' => 'caricamenti',
-	'mobile-frontend-main-menu-settings-heading' => 'Inpostasion del sito par celulari',
+	'mobile-frontend-main-menu-settings-heading' => 'Inpostasion del sito par celulari', # Fuzzy
 	'mobile-frontend-settings-site-header' => 'Léngue {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} xe disponibiłe in $1 {{PLURAL:$1|léngua|léngue}}. Tute łe version disponibiłi łe xe elencae de seguito',
 	'mobile-frontend-main-menu-account-create' => 'Crea un utente novo',
@@ -16396,7 +16353,6 @@ $messages['vec'] = array(
 	'mobile-frontend-page-menu-history' => 'Istòria',
 	'mobile-frontend-meta-data-issues-header' => 'Anomałie',
 	'mobile-frontend-meta-data-issues' => 'Sta pàjina ła ga calche problema',
-	'mobile-frontend-ajax-preview-loading' => "Caregamento de l'anteprima de la pagina",
 	'mobile-frontend-page-saving' => 'So drio salvar $1',
 	'mobile-frontend-nearby-title' => 'Arente cuà',
 	'mobile-frontend-nearby-loading' => 'Carga argomenti visini a ła to poxision atuałe',
@@ -16423,7 +16379,7 @@ $messages['vec'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Va drento',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Notate',
 	'mobile-frontend-watch-login' => "Te ghè da ver fato el login par tegner d'ocio le pagine.",
-	'mobile-frontend-watchlist-a-z' => 'Tute',
+	'mobile-frontend-watchlist-a-z' => 'Tute', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Canbiae',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Struca so ła steła in sima a ła pàjina',
 	'mobile-frontend-watchlist-a-z-empty-howto' => "Tien d'ocio ła pàjina che te ghe catà interesante strucando so ła steła in sima a ła pàjina. Sta asion te consentirà de segnarte łe pàjine che te intaresa e de tegner d'ocio cuando che łe vien modifegae.", # Fuzzy
@@ -16446,7 +16402,7 @@ $messages['vec'] = array(
 	'mobile-frontend-diffview-explained' => 'Łe righe seguenti łe xe stae xontae (+) e cavae (-):',
 	'mobile-frontend-table' => 'Tabeła $1',
 	'mobile-frontend-saving-exit-page' => 'El to canbiamento el xe ncora da salvar. Se te ve fora i to contributi i ndarà persi. Sito seguro de vołer ndar fora?',
-	'mobile-frontend-photo-upload' => 'Xonta na someja a sta voxe',
+	'mobile-frontend-photo-upload' => 'Xonta na someja a sta voxe', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Xonta na someja a sta pàjina', # Fuzzy
 	'mobile-frontend-photo-article-donate-comment' => 'Imaxine donà da tełefonin', # Fuzzy
 	'mobile-frontend-photo-upload-comment' => 'Xonta sta someja a na pàjina', # Fuzzy
@@ -16751,10 +16707,6 @@ $messages['vi'] = array(
 	'mobile-frontend-media-details' => 'Chi tiết',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Người dùng có sửa đổi qua giao diện di động hay không',
 	'mobile-frontend-profile-title' => 'Thông tin cá nhân',
-	'mobile-frontend-profile-edits' => '{{PLURAL:$1|Sửa đổi 1 lần|Sửa đổi $1 lần|0=Không sửa đổi}} vào tháng trước',
-	'mobile-frontend-profile-uploads' => '{{PLURAL:$1|Tải lên 1 tập tin|Tải lên $1 tập tin|0=Không tải lên tập tin}} vào tháng trước',
-	'mobile-frontend-profile-edits-limit' => 'Sửa đổi hơn $1 lần vào tháng trước',
-	'mobile-frontend-profile-uploads-limit' => 'Tải lên hơn $1 tập tin vào tháng trước',
 	'mobile-frontend-profile-last-upload-caption' => 'Tập tin mới nhất do $1 tải lên {{PLURAL:$2|hôm qua|$2 ngày trước|0=hôm nay}}.',
 	'mobile-frontend-profile-heading-recent' => 'Gần đây',
 	'mobile-frontend-profile-registration' => '$1 đã là thành viên cho $2 ngày và đã sửa đổi $3 lần.',
@@ -16783,7 +16735,8 @@ $messages['vro'] = array(
 	'mobile-frontend-random-button' => 'Johuslinõ leht',
 	'mobile-frontend-back-to-top-of-section' => 'Mineq tagasi	 jakko A',
 	'mobile-frontend-regular-site' => 'Näütäq seod lehte hariligun Vikipeediän', # Fuzzy
-	'mobile-frontend-featured-article' => 'Täämbädse päävä artikli',
+	'mobile-frontend-featured-article' => 'Täämbädse päävä artikli', # Fuzzy
+	'mobile-frontend-copyright' => "Tekst om ilmutõt <a href=\"http://fi.wikipedia.org/wiki/{{SITENAME}}:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot\">Creative Commons Attribution/Share-Alike</a> litsendsi perrä; kost või löüdäq lisateedüst. Kaeq <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> ligembält siist. Vikipeediä om <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.:n</a>, mittetullosaamisütisüse kirjäpant kaubamärk.", # Fuzzy
 );
 
 /** Wolof (Wolof)
@@ -16792,7 +16745,7 @@ $messages['wo'] = array(
 	'mobile-frontend-search-submit' => 'Ayca',
 	'mobile-frontend-home-button' => ' xët wu njëkk',
 	'mobile-frontend-regular-site' => 'Wone xët wi ci {{SITENAME}} wees baaxoo', # Fuzzy
-	'mobile-frontend-featured-article' => 'Jukkib bés bi',
+	'mobile-frontend-featured-article' => 'Jukkib bés bi', # Fuzzy
 );
 
 /** Wu (吴语)
@@ -16813,7 +16766,8 @@ $messages['xal'] = array(
 	'mobile-frontend-random-button' => 'Уршг',
 	'mobile-frontend-back-to-top-of-section' => 'Хүвәр хәрү',
 	'mobile-frontend-regular-site' => 'Кирин Бикипедин халх хәләх', # Fuzzy
-	'mobile-frontend-featured-article' => 'Өдрә суңһгдсн халх',
+	'mobile-frontend-featured-article' => 'Өдрә суңһгдсн халх', # Fuzzy
+	'mobile-frontend-copyright' => 'Бичг <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution/Share-Alike</a> зөвшлтин болзани орлһта, зәрм бәәдлт дәкәд болзан йоста бәәдг. Тодрхаһар <a href="http://wikimediafoundation.org/wiki/Terms_of_Use/ru">Эдллһнә болзан</a> хәләтн. Бикипеди ({{SITENAME}}) бедрг уга <a href=\'http://www.wikimediafoundation.org/\'>«Бикимедиа көрңг»</a> бүрдәцин бүртклсн гүүлглһнә темдг мөн.', # Fuzzy
 );
 
 /** Mingrelian (მარგალური)
@@ -17187,10 +17141,6 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-media-details' => '详细信息',
 	'abusefilter-edit-builder-vars-user-mobile' => '无论用户是否使用移动版界面编辑',
 	'mobile-frontend-profile-title' => '用户信息',
-	'mobile-frontend-profile-edits' => '上个月{{PLURAL:$1|有1次编辑|有$1次编辑|0=没有任何编辑}}',
-	'mobile-frontend-profile-uploads' => '上个月{{PLURAL:$1|1次上载|$1次上载|0=无上载}}',
-	'mobile-frontend-profile-edits-limit' => '上个月{{PLURAL:$1|有超过$1次编辑|有超过$1次编辑}}',
-	'mobile-frontend-profile-uploads-limit' => '上个月{{PLURAL:$1|有超过$1次上传|有超过$1次上传}}',
 	'mobile-frontend-profile-last-upload-caption' => '最后由$1在{{PLURAL:$2|昨天|$2天前|0=今天}}上传。',
 	'mobile-frontend-profile-heading-recent' => '最近',
 	'mobile-frontend-profile-registration' => '$1已经做了$2天的会员并进行了$3次编辑。',
