@@ -509,9 +509,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
 
-			// editor.js
-			'mobile-frontend-editor-undo-unsupported',
-
 			// issues.js
 			'mobile-frontend-meta-data-issues',
 			'mobile-frontend-meta-data-issues-header',
@@ -690,9 +687,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/specials/search.less',
 		),
 	),
-	'mobile.watchlist.scripts' => $wgMFMobileSpecialPageResourceScriptBoilerplate + array(
+	'mobile.watchlist.scripts' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.loggingSchemas',
+			'mobile.stable',
 		),
 		'scripts' => array(
 			'javascripts/specials/watchlist.js',
