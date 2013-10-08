@@ -73,13 +73,14 @@ gems with:
   gem install bundler
   bundle install
 
-You will need to create a user account on your local wiki
-See https://github.com/wikimedia/qa-browsertests/blob/master/README.md
-for details
+You will need to create a user account for selenium on your local wiki with the
+username 'Selenium_user' and then store the password in /private/wmf/secret.yml
+in the following format:
+mediawiki_password: <local selenium account password>
 
 Run the tests with:
 
-  bundle exec rake
+  bundle exec cucumber
 
 HTML report is created at tests/acceptance/reports and XML report (for
 Jenkins) is created at tests/acceptance/reports/junit.
