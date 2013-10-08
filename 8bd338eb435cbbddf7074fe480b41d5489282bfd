@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_ce751af9",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-10-08T06:43:42Z",
+      "side": 1,
+      "message": "These are not used yet? No gender support?",
+      "revId": "8bd338eb435cbbddf7074fe480b41d5489282bfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_6e6eee31",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 404,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-10-08T06:43:42Z",
+      "side": 1,
+      "message": "No -\u003eparse() here?",
+      "revId": "8bd338eb435cbbddf7074fe480b41d5489282bfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_8e6b221f",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 420,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-10-08T06:43:42Z",
+      "side": 1,
+      "message": "So you are escaping the output you just -\u003eparse()d above? If that is on purpose, please document why.",
+      "revId": "8bd338eb435cbbddf7074fe480b41d5489282bfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_ae78e6f0",
+        "filename": "less/common/common.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-10-08T06:43:42Z",
+      "side": 1,
+      "message": "You prolly want empty line here",
+      "revId": "8bd338eb435cbbddf7074fe480b41d5489282bfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
