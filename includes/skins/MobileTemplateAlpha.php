@@ -1,5 +1,5 @@
 <?php
-class MobileTemplateAlpha extends MobileTemplate {
+class MobileTemplateAlpha extends MobileTemplateBeta {
 	protected function renderCategories() {
 		$skin = $this->getSkin();
 		$categories = $skin->getCategoryLinks( false /* don't render the heading */ );

@@ -122,6 +122,13 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'position' => 'top',
 	),
 
+	'mobile.styles.beta' => $wgMFMobileResourceBoilerplate + array(
+		'styles' => array(
+			'less/common/secondaryPageActions.less',
+		),
+		'position' => 'top',
+	),
+
 	// Important: This module is loaded on both mobile and desktop skin
 	'mobile.head' => $wgMFMobileResourceBoilerplate + array(
 		'scripts' => array(
@@ -299,6 +306,18 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
+	'mobile.geonotahack' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.startup',
+		),
+		'messages' => array(
+			'mobile-frontend-geonotahack',
+		),
+		'scripts' => array(
+			'javascripts/modules/nearbypages.js',
+		)
+	),
+
 	'mobile.beta' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
@@ -371,13 +390,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 	'mobile.alpha' => $wgMFMobileResourceBoilerplate + array(
 		'templates' => array(
-			'overlays/nearby',
 			'modules/ImageOverlay',
 		),
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.beta',
-			'mobile.nearby',
 			'mobile.templates',
 		),
 		'messages' => array(
@@ -385,14 +402,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for mf-table.js
 			'mobile-frontend-table',
 
-			// NearbyOverlay.js
-			'mobile-frontend-nearby-to-page',
-
 			// mediaViewer.js
 			'mobile-frontend-media-details',
 		),
 		'styles' => array(
-			'less/modules/nearbypages.less',
 			'less/modules/mediaViewer.less',
 		),
 		'scripts' => array(
@@ -401,10 +414,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
-			// Do not put in mobile.nearby until promoted to stable
-			// FIXME: when out of alpha, load nearby files dynamically
-			'javascripts/modules/nearby/NearbyOverlay.js',
-			'javascripts/modules/nearbypages.js',
 			'javascripts/modules/mediaViewer.js',
 		),
 	),
@@ -607,25 +616,34 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.nearby.previews' => $wgMFMobileResourceBoilerplate + array(
-		'dependencies' => array(
-			'mobile.nearby.scripts',
-			'mobile.beta.common',
-		),
-		'messages' => array(
-			// preview.js
-			'mobile-frontend-nearby-directions',
-			'mobile-frontend-nearby-link',
-		),
-		'scripts' => array(
-			'javascripts/specials/overlays/PagePreviewOverlay.js',
-		),
-	),
-
 	'mobile.nearby.styles' => $wgMFMobileResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/nearby.less',
 		),
+	),
+
+	// FIXME: Merge with mobile.nearby when geonotahack moves to  stable
+	'mobile.nearby.beta' => $wgMFMobileResourceBoilerplate + array(
+		'messages' => array(
+			// NearbyOverlay.js
+			'mobile-frontend-nearby-to-page',
+
+			// PagePreviewOverlay
+			'mobile-frontend-nearby-directions',
+			'mobile-frontend-nearby-link',
+		),
+		'templates' => array(
+			'overlays/nearby',
+		),
+		'dependencies' => array(
+			'mobile.stable.common',
+			'mobile.nearby',
+			'mobile.beta.common',
+		),
+		'scripts' => array(
+			'javascripts/specials/overlays/PagePreviewOverlay.js',
+			'javascripts/modules/nearby/NearbyOverlay.js',
+		)
 	),
 
 	'mobile.nearby' => $wgMFMobileResourceBoilerplate + array(

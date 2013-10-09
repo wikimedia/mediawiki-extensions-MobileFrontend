@@ -1,15 +1,16 @@
 ( function( M, $ ) {
 	var latLng, lat, lng,
-		NearbyOverlay = M.require( 'modules/nearby/NearbyOverlay' ),
 		overlay;
 
 	function initNearbyButton( title, latitude, longitude ) {
-
 		function loadGeoNotAHack() {
-			if ( !overlay ) {
-				overlay = new NearbyOverlay( { title: title, latitude: latitude, longitude: longitude } );
-			}
-			overlay.show();
+			mw.loader.using( 'mobile.nearby.beta', function() {
+				var NearbyOverlay = M.require( 'modules/nearby/NearbyOverlay' );
+				if ( !overlay ) {
+					overlay = new NearbyOverlay( { title: title, latitude: latitude, longitude: longitude } );
+				}
+				overlay.show();
+			} );
 		}
 
 		var $btn;
@@ -19,7 +20,7 @@
 		} else {
 			$btn = $( '<button class="nearby">' ).on( 'click', loadGeoNotAHack );
 		}
-		$btn.appendTo( '#section_0' );
+		$btn.text( mw.msg( 'mobile-frontend-geonotahack' ) ).appendTo( '#page-secondary-actions' );
 	}
 
 	function init( page ) {

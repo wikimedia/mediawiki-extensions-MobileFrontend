@@ -36,7 +36,7 @@
 								} )[0].thumbnail;
 								if ( thumb ) {
 									options.imageUrl = thumb.source;
-									options.imgClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbW';
+									options.imgClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbV';
 								} else {
 									options.imgClass = 'needsPhoto';
 								}

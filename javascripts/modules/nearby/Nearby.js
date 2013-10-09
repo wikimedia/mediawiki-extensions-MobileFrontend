@@ -116,7 +116,7 @@
 
 					// Trigger preview mode ensure preview code has fully loaded first!
 					loader.show();
-					mw.loader.using( 'mobile.nearby.previews', function() {
+					mw.loader.using( 'mobile.nearby.beta', function() {
 						loader.hide();
 						// FIXME: [API] should be able to determine longitude/latitude from title
 						window.location.hash = '#preview/' + $a.data( 'latlng' ) + '/' + $a.find( 'h2' ).text();

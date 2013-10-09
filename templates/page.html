@@ -16,6 +16,8 @@
 		data-content="{{text}}">
 	</div>
 	{{/sections}}
+	{{#inBetaOrAlpha}}<div id="page-secondary-actions">{{/inBetaOrAlpha}}
 	<div class="section" id="mw-mf-language-section"></div>
+	{{#inBetaOrAlpha}}</div>{{/inBetaOrAlpha}}
 	<a href="{{historyUrl}}" id="mw-mf-last-modified" data-timestamp="{{lastModifiedTimestamp}}"></a>
 </div>
