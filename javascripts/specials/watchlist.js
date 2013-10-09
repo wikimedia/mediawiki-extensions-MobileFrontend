@@ -23,7 +23,7 @@
 		schema.hijackLink( '.page-list .title', actionNamePrefix + 'view' );
 		schema.hijackLink( '.more', actionNamePrefix + 'more' );
 
-		M.on( 'watch', function( isWatched ) {
+		M.on( 'watched', function( isWatched ) {
 			var action = isWatched ? 'unwatch' : 'watch';
 			schema.log( actionNamePrefix + action );
 		} );
