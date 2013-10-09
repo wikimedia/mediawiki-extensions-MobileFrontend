@@ -310,7 +310,7 @@ $messages['en'] = array (
 [[Special:Uploads/$1|{{PLURAL:$3|1 upload|$3 uploads|0=no uploads|501=more than 500 uploads}}]] in the last 30 days.',
 	'mobile-frontend-profile-last-upload-caption' => 'Last upload by {{GENDER:$1|$1}}, {{PLURAL:$2|yesterday|$2 days ago|0=today}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recent',
-	'mobile-frontend-profile-registration' => '$1 has been contributing to {{SITENAME}} for {{PLURAL:$2|$2 day|$2 days}} and has made {{PLURAL:$3|$3 edit|$3 edits}}.',
+	'mobile-frontend-profile-registration' => '$1 has been contributing to {{SITENAME}} for {{PLURAL:$2|$2 day|$2 days}} and {{GENDER:$1|has made}} {{PLURAL:$3|$3 edit|$3 edits}}.',
 	'mobile-frontend-profile-usertalk' => 'View talk page.',
 	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
 	'mobile-frontend-profile-yours' => 'Visit your profile page.',
