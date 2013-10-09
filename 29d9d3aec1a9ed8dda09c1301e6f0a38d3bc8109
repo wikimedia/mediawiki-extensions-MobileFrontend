@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_c07f9e10",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-10-09T07:00:06Z",
+      "side": 1,
+      "message": "what about \u0027parse\u0027 subelem?\nSuggest code:\n$arr \u003d array();\nApiResult::setContent( $arr, $mf-\u003egetText() );\n$data[\u0027parse\u0027][\u0027text\u0027] \u003d $arr;",
+      "revId": "29d9d3aec1a9ed8dda09c1301e6f0a38d3bc8109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
