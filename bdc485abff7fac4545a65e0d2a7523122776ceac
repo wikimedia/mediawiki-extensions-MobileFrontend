@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_430bb57e",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "Shouldn\u0027t it be \"No, thanks\"?",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_8325ad0e",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "Shouldn\u0027t it be \"Yes, please\"?",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_c3516562",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "keepGoing/KeepGoingDrawer\n\n\"Template and LESS/CSS files used only by a single class in JavaScript should be named after the class, e.g. TutorialOverlay.less.\" (https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions)",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_63d359d5",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "Not sure if this belongs here, but I guess we don\u0027t have a proper User class.\nWhat do we need this.editCount for? Why don\u0027t we just use wgUserEditCount?",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_c3e245a3",
+        "filename": "javascripts/modules/keepgoing/KeepGoingDrawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "I thought we talked about using that much nesting and reached a conclusion that it\u0027s better to first declare a variable and then defined it in a separate line.",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_63a51955",
+        "filename": "javascripts/modules/keepgoing/keepgoing.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "Space before ), my favourite coding convention... Do we need to set it to a variable anyway? Why not just use it directly in line 7?",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_63bef960",
+        "filename": "less/common/drawer.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "Won\u0027t this make the bottom part of the overlay unclickable? Anyway, when would we show a drawer when an overlay is open?",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_c3ade532",
+        "filename": "templates/keepgoing/drawer.html",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T19:35:56Z",
+      "side": 1,
+      "message": "Are both cancel and close necessary?",
+      "revId": "bdc485abff7fac4545a65e0d2a7523122776ceac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
