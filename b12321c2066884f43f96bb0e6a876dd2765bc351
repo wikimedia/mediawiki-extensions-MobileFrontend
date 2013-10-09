@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_dc4ce673",
+        "filename": "README.mediawiki",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-09T23:22:59Z",
+      "side": 1,
+      "message": "This is the line I am referring too..\nI don\u0027t think we need to say this specifically for QA. There are enother pointers.",
+      "revId": "b12321c2066884f43f96bb0e6a876dd2765bc351",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_7c769aa1",
+        "filename": "README.mediawiki",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-09T23:22:59Z",
+      "side": 1,
+      "message": "I don\u0027t want this to be the case so I\u0027d rather avoid this line. Let\u0027s fix it so you can run from the root directory - https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d55539",
+      "revId": "b12321c2066884f43f96bb0e6a876dd2765bc351",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
