@@ -16,6 +16,24 @@
       "revId": "29d9d3aec1a9ed8dda09c1301e6f0a38d3bc8109",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_4dacc6a1",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-09T14:54:52Z",
+      "side": 1,
+      "message": "Erggh, this is pretty much unreadable and unmaintainable - the original simple array member assignment is much clearer and explains clearly the difference between two output structures.",
+      "parentUuid": "0932edd2_c07f9e10",
+      "revId": "29d9d3aec1a9ed8dda09c1301e6f0a38d3bc8109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
