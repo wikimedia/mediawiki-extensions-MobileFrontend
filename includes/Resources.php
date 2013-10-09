@@ -413,6 +413,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.toast.styles',
 			'mediawiki.jqueryMsg',
 			'mediawiki.util',
+			'mobile.templates',
 		),
 		'templates' => array(
 			'LoadingOverlay',
@@ -712,14 +713,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.userprofile.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/userprofile.less',
-		),
-	),
-	// Special:Uploads
-	'mobile.special.uploads.plumbing' => $wgMFMobileResourceBoilerplate + array(
-		'templates' => array(
-			'specials/uploads/carousel',
-			'specials/uploads/photo',
-			'specials/uploads/userGallery',
 		),
 	),
 	'mobile.uploads.scripts' => $wgMFMobileResourceBoilerplate + array(
