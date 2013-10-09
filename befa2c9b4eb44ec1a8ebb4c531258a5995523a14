@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_4d0be67e",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 405,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-09T15:30:21Z",
+      "side": 1,
+      "message": "Probably worth extracting this to a separate function.",
+      "revId": "befa2c9b4eb44ec1a8ebb4c531258a5995523a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_8d25de0e",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-09T15:30:21Z",
+      "side": 1,
+      "message": "HTML produced by MW never has such spacing.",
+      "revId": "befa2c9b4eb44ec1a8ebb4c531258a5995523a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
