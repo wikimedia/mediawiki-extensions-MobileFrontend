@@ -498,7 +498,7 @@ If not the Main Page, the following message is used:
 	'mobile-frontend-main-menu-logout' => 'Text for logout link in main menu.
 {{Identical|Log out}}',
 	'mobile-frontend-main-menu-watchlist' => 'Text for watchlist link in main menu.
-{{Identical|My watchlist}}',
+{{Identical|Watchlist}}',
 	'mobile-frontend-main-menu-settings' => 'Settings link text in main menu',
 	'mobile-frontend-main-menu-upload' => 'Uploads link text in main menu.
 {{Identical|Upload}}',
@@ -818,7 +818,8 @@ Preceded by {{msg-mw|Mobile-frontend-profile-noargs}}.',
 	'mobile-frontend-profile-user-desc-2' => 'Summary describing that the user is somewhat experienced.',
 	'mobile-frontend-profile-user-desc-3' => 'Summary describing the type of experience the user has.',
 	'mobile-frontend-requires-optin' => 'Message that shows when a page requires beta mode to work. Wikitext that links to [[Special:MobileOptions]] page.',
-	'mobile-frontend-profile-last-thanked' => 'Informs about person who last thanked a user on Special:UserProfile
+	'mobile-frontend-profile-last-thanked' => 'Informs about person who last thanked a user on [[Special:UserProfile]].
+
 Parameters:
 * $1 - name of user who thanked
 * $2 - title of page for editing which the thank was given
@@ -1580,7 +1581,7 @@ $messages['ast'] = array(
 	'mobile-frontend-profile-title' => 'Perfil del usuariu',
 	'mobile-frontend-profile-last-upload-caption' => 'Última carga de {{GENDER:$1|$1}} {{PLURAL:$2|ayeri|hai $2 díes|0=güei}}.',
 	'mobile-frontend-profile-heading-recent' => 'De recién',
-	'mobile-frontend-profile-registration' => '$1 ye miembru dende hai {{PLURAL:$2|$2 día|$2 díes}} y fizo {{PLURAL:$3|$3 edición|$3 ediciones}}.',
+	'mobile-frontend-profile-registration' => '$1 ye miembru dende hai {{PLURAL:$2|$2 día|$2 díes}} y fizo {{PLURAL:$3|$3 edición|$3 ediciones}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => "Ver la páxina d'alderique.",
 	'mobile-frontend-profile-noargs' => "Por favor, indique un nome d'usuariu pa ver un perfil.",
 	'mobile-frontend-profile-yours' => 'Visite la so páxina de perfil.',
@@ -2754,7 +2755,7 @@ $messages['ca'] = array(
 	'mobile-frontend-talk-reply-success' => 'La teva resposta ha estat desada amb èxit a la pàgina de discussió.',
 	'mobile-frontend-talk-reply-info' => "Tingues en compte que la teva resposta serà automàticament signada amb el teu nom d'usuari.",
 	'mobile-frontend-talk-reply' => 'Respondre',
-	'mobile-frontend-profile-registration' => '$1 ha estat membre des de fa {{PLURAL:$2|$2 dia|$2 dies}} i ha fet {{PLURAL:$3|$3 edició|$3 edicions}}.',
+	'mobile-frontend-profile-registration' => '$1 ha estat membre des de fa {{PLURAL:$2|$2 dia|$2 dies}} i ha fet {{PLURAL:$3|$3 edició|$3 edicions}}.', # Fuzzy
 	'mobile-frontend-profile-userpage-link' => "Visita la pàgina d'usuari.",
 );
 
@@ -3655,7 +3656,7 @@ $messages['da'] = array(
 	'mobile-frontend-profile-title' => 'Brugerdata',
 	'mobile-frontend-profile-last-upload-caption' => 'Seneste upload af {{GENDER:$1|$1}}, {{PLURAL:$2|i går|for $2 dage siden|0=i dag}}.',
 	'mobile-frontend-profile-heading-recent' => 'Seneste',
-	'mobile-frontend-profile-registration' => '$1 har været medlem i {{PLURAL:$2|en dag|$2 dage}} og har lavet {{PLURAL:$3|en redigering|$3 redigeringer}}.',
+	'mobile-frontend-profile-registration' => '$1 har været medlem i {{PLURAL:$2|en dag|$2 dage}} og har lavet {{PLURAL:$3|en redigering|$3 redigeringer}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Se diskussionssiden.',
 	'mobile-frontend-profile-noargs' => 'Angiv et brugernavn for at se en profil.',
 	'mobile-frontend-profile-yours' => 'Besøg din profilside.',
@@ -3881,6 +3882,7 @@ $messages['de'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ hochgeladene Dateien',
 	'mobile-frontend-photo-upload-cta' => 'Bitte melde dich an oder registriere dich, um ein Bild hinzuzufügen.',
 	'mobile-frontend-photo-upload-login' => 'Du musst angemeldet sein, um ein Bild hinzuzufügen.',
+	'mobile-frontend-editor-undo-unsupported' => 'Das Rückgängigmachen wird derzeit von mobilen Geräten nicht unterstützt.',
 	'mobile-frontend-editor-newpage-prompt' => 'Diese Seite ist nicht vorhanden. Warum bist du nicht mutig und erstellst sie?',
 	'mobile-frontend-editor-disabled' => 'Du bist nicht berechtigt, diese Seite zu bearbeiten.',
 	'mobile-frontend-editor-unavailable' => 'Das mobile Bearbeiten ist derzeit für deinen Browser nicht verfügbar. Bitte versuche einen anderen Browser.',
@@ -3924,9 +3926,11 @@ $messages['de'] = array(
 	'mobile-frontend-media-details' => 'Einzelheiten',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Ob ein Benutzer mit der mobilen Schnittstelle bearbeitet',
 	'mobile-frontend-profile-title' => 'Benutzerprofil',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|Eine Bearbeitung|$2 Bearbeitungen}}]] und
+[[Special:Uploads/$1|{{PLURAL:$3|eine hochgeladene Datei|$3 hochgeladene Dateien}}]] in den letzten 30 Tagen.',
 	'mobile-frontend-profile-last-upload-caption' => 'Letzter Upload von {{GENDER:$1|$1}}, {{PLURAL:$2|gestern|vor $2 Tagen|0=heute}}.',
 	'mobile-frontend-profile-heading-recent' => 'Kürzlich',
-	'mobile-frontend-profile-registration' => '$1 ist Mitglied seit {{PLURAL:$2|einem Tag|$2 Tagen}} und hat {{PLURAL:$3|eine Bearbeitung|$3 Bearbeitungen}} durchgeführt.',
+	'mobile-frontend-profile-registration' => '$1 ist {{SITENAME}}-Autor seit {{PLURAL:$2|einem Tag|$2 Tagen}} und hat {{PLURAL:$3|eine Bearbeitung|$3 Bearbeitungen}} durchgeführt.',
 	'mobile-frontend-profile-usertalk' => 'Diskussionsseite ansehen.',
 	'mobile-frontend-profile-noargs' => 'Bitte gib einen Benutzernamen an, um ein Profil anzusehen.',
 	'mobile-frontend-profile-yours' => 'Besuche deine Profilseite.',
@@ -3935,6 +3939,7 @@ $messages['de'] = array(
 	'mobile-frontend-profile-user-desc-2' => 'Dies ist {{GENDER:$1|ein einigermaßen erfahrener Benutzer|eine einigermaßen erfahrene Benutzerin}}.',
 	'mobile-frontend-profile-user-desc-3' => 'Dies ist {{GENDER:$1|ein profilierter Benutzer|eine profilierte Benutzerin}}.',
 	'mobile-frontend-requires-optin' => 'Diese Seite ist nicht verfügbar, bis du dich für unseren Beta-Modus angemeldet hast. Besuche zur Anmeldung die [[Special:MobileOptions|Einstellungsseite]].',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Zuletzt gedankt}} durch [[Special:UserProfile/$1|$1]] für eine Bearbeitung an [[$2]].',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -4049,7 +4054,8 @@ $messages['diq'] = array(
 	'mobile-frontend-watchlist-more' => 'Zewbi',
 	'mobile-frontend-watchlist-cta-button-login' => 'Cıkewtış',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Qeyd be',
-	'mobile-frontend-watchlist-a-z' => 'Pêro', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Liste',
+	'mobile-frontend-watchlist-feed' => 'Vırneya',
 	'mobile-frontend-changeslist-ip' => 'Karbero bêname',
 	'mobile-frontend-changeslist-nocomment' => 'nê vurnaye xulasa',
 	'mobile-frontend-watchlist-filter-all' => 'Pêro',
@@ -4058,7 +4064,7 @@ $messages['diq'] = array(
 	'mobile-frontend-watchlist-filter-other' => 'Zewmi',
 	'mobile-frontend-watchlist-modified' => '$1 timariya yo',
 	'mobile-frontend-diffview-404-title' => 'Rewizyono xırab',
-	'mobile-frontend-diffview-title' => 'Vurnayışê $1', # Fuzzy
+	'mobile-frontend-diffview-title' => 'Vırnayışi',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|vurnayiş|vurnayişi}}',
 	'mobile-frontend-diffview-anonymous' => 'Karbero bêname',
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bayt|bayti}} debiyay de',
@@ -4066,9 +4072,10 @@ $messages['diq'] = array(
 	'mobile-frontend-table' => 'Tabloye $1',
 	'mobile-frontend-photo-upload' => 'Resımê sıfteyıni na pele ke', # Fuzzy
 	'mobile-frontend-photo-article-edit-comment' => 'Seba gurenayışi resım bi be pele', # Fuzzy
-	'mobile-frontend-photo-upload-comment' => 'Resım bi be pele', # Fuzzy
-	'mobile-frontend-photo-caption-placeholder' => 'Seba nê resımi yew sernote cı ke', # Fuzzy
+	'mobile-frontend-photo-upload-comment' => 'Resim debya per miyan',
+	'mobile-frontend-photo-caption-placeholder' => 'malumat dek (wezéno)',
 	'mobile-frontend-image-loading' => 'Barkerdışê resımi',
+	'mobile-frontend-photo-ownership' => 'Mı, $1, na resim vıraşt',
 	'mobile-frontend-photo-ownership-confirm' => 'Şo ri!',
 	'mobile-frontend-image-uploading-wait' => 'Resım bar beno, kerem ke sero bıvınde.',
 	'mobile-frontend-photo-license' => 'Note: Resımê ke şıma pêro weşanenê bınê [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 lisans]i de weşaniyenê.', # Fuzzy
@@ -4076,7 +4083,15 @@ $messages['diq'] = array(
 	'mobile-frontend-photo-cancel' => 'Bıtexelne',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> barkerdış|<span>$1</span> barkerdışi}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ barkerdışi',
+	'mobile-frontend-editor-edit' => 'Bıvırn',
+	'mobile-frontend-editor-continue' => 'Dewam k',
+	'mobile-frontend-editor-save' => 'Star ke',
+	'mobile-frontend-editor-cancel' => 'Bıterkn',
+	'mobile-frontend-editor-preview-header' => 'Verqayt',
 	'mobile-frontend-drawer-cancel' => 'Bıtexelne',
+	'mobile-frontend-talk-overlay-header' => 'Vaten',
+	'mobile-frontend-talk-reply' => 'Cewab',
+	'mobile-frontend-media-details' => 'Detayi',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -4873,7 +4888,7 @@ $messages['et'] = array(
 	'mobile-frontend-media-details' => 'Üksikasjad',
 	'mobile-frontend-profile-title' => 'Kasutajaprofiil',
 	'mobile-frontend-profile-last-upload-caption' => 'Viimase faili laadis $1 üles {{PLURAL:$2|eile|$2 päeva tagasi|0=täna}}.',
-	'mobile-frontend-profile-registration' => '$1 on kaastööline olnud {{PLURAL:$2|üks päev|$2 päeva}} ja on teinud {{PLURAL:$3|ühe muudatuse|$3 muudatust}}.',
+	'mobile-frontend-profile-registration' => '$1 on kaastööline olnud {{PLURAL:$2|üks päev|$2 päeva}} ja on teinud {{PLURAL:$3|ühe muudatuse|$3 muudatust}}.', # Fuzzy
 	'mobile-frontend-profile-noargs' => 'Palun määra profiili vaatamiseks kasutajanimi.',
 	'mobile-frontend-profile-yours' => 'Vaata oma profiili lehekülge.',
 	'mobile-frontend-profile-userpage-link' => 'Vaata kasutajalehekülge.',
@@ -4950,6 +4965,7 @@ $messages['ext'] = array(
  * @author Leyth
  * @author Mahdiz
  * @author Mjbmr
+ * @author Omidh
  * @author Pouyana
  * @author Reza1615
  * @author Rmashhadi
@@ -5129,9 +5145,9 @@ $messages['fa'] = array(
 	'mobile-frontend-photo-ownership' => 'اینجانب  $1 این تصویر را ایجاد کرده‌ام',
 	'mobile-frontend-photo-ownership-help' => 'این به چه معنی است؟',
 	'mobile-frontend-photo-ownership-confirm' => 'متوجه شدید؟',
-	'mobile-frontend-photo-ownership-bullet-one' => 'ما فقط میتوانیم تصاویری را قبول کنیم که مال شما باشد. لطفا تصاویری را که از جاهای دیگر نظیر اینترنت پیدا کرده اید را در اینجا بارگزاری نکنید.',
+	'mobile-frontend-photo-ownership-bullet-one' => 'ما فقط می‌توانیم تصاویری را قبول کنیم که مال شما باشند. لطفاً نگاره‌هایی را که از جایی دیگر در اینترنت پیدا کرده‌اید را در اینجا بارگذاری نکنید.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'تصاویر دارای حق تکثیر و یا نامناسب حذف خواهند شد.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'پرونده های شخصی که بارگزاری می کنید، تحت مجوز آزاد خواهد بود، بدان معنی که هرکسی میتواند به صورت رایگان از آن استفاده کند',
+	'mobile-frontend-photo-ownership-bullet-three' => 'پرونده‌های شخصی که بارگذاری می‌کنید، تحت مجوز آزاد خواهد بود، بدان معنی که هر کسی می‌تواند به صورت رایگان از آن استفاده کند',
 	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'من حق تکثیر را نقض نکردم',
 	'mobile-frontend-photo-nag-1-bullet-1-text' => "این یک تصویر یافت شده از اینترنت ''' نیست'''. این اثر خود من است.",
 	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'این یک تصویر شخصی است',
@@ -5203,7 +5219,7 @@ $messages['fa'] = array(
 	'mobile-frontend-profile-title' => 'مشخصات کاربر',
 	'mobile-frontend-profile-last-upload-caption' => 'آخرین بارگذاری توسط {{GENDER:$1|$1}}، {{PLURAL:$2|دیروز|$2 روز پیش|0=امروز}}',
 	'mobile-frontend-profile-heading-recent' => 'اخیر',
-	'mobile-frontend-profile-registration' => '$1 برای {{PLURAL:$2|$2 روز}} عضو بوده و {{PLURAL:$3|$3 ویرایش}} انجام داده‌است.',
+	'mobile-frontend-profile-registration' => '$1 برای {{PLURAL:$2|$2 روز}} عضو بوده و {{PLURAL:$3|$3 ویرایش}} انجام داده‌است.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'نمایش صفحه بحث.',
 	'mobile-frontend-profile-noargs' => 'لطفاً یک نام کاربری برای نمایش مشخصات بدهید.',
 	'mobile-frontend-profile-yours' => 'نمایش صفحهٔ مشحصات شما.',
@@ -5795,6 +5811,7 @@ $messages['fr'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ téléchargements',
 	'mobile-frontend-photo-upload-cta' => 'Veuillez vous connecter ou vous inscrire pour ajouter une image.',
 	'mobile-frontend-photo-upload-login' => 'Vous devez être connecté pour ajouter une image.',
+	'mobile-frontend-editor-undo-unsupported' => 'L’annulation n’est pour le moment pas supportée sur les terminaux mobiles.',
 	'mobile-frontend-editor-newpage-prompt' => 'Cette page n’existe pas. Pourquoi ne pas vous lancer et la créer ?',
 	'mobile-frontend-editor-disabled' => 'Vous n’êtes pas autorisé à modifier cette page.',
 	'mobile-frontend-editor-unavailable' => 'La modification via mobile n’est actuellement pas disponible sur votre navigateur. Veuillez essayer un autre navigateur.',
@@ -5838,9 +5855,11 @@ $messages['fr'] = array(
 	'mobile-frontend-media-details' => 'Détails',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un utilisateur est ou non en cours de modification via l’interface mobile',
 	'mobile-frontend-profile-title' => 'Profil utilisateur',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modification|$2 modifications|0=Aucune modification|501=Plus de 500 modifications}}]] et
+[[Special:Uploads/$1|{{PLURAL:$3|1 téléchargement|$3 téléchargements|0=aucun téléchargement|501=plus de 500 téléchargements}}]] durant les 30 derniers jours.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Dernier téléchargement par {{GENDER:$1|$1}}, {{PLURAL:$2|hier|il y a $2 jours|0=aujourd’hui}}.',
 	'mobile-frontend-profile-heading-recent' => 'Récent',
-	'mobile-frontend-profile-registration' => '$1 a été un membre pendant {{PLURAL:$2|$2 jour|$2 jours}} et a fait {{PLURAL:$3|$3 modification|$3 modifications}}.',
+	'mobile-frontend-profile-registration' => '$1 a contribué à {{SITENAME}} pendant {{PLURAL:$2|$2 jour|$2 jours}} et a fait {{PLURAL:$3|$3 modification|$3 modifications}}.',
 	'mobile-frontend-profile-usertalk' => 'Afficher la page de discussion.',
 	'mobile-frontend-profile-noargs' => 'Veuillez indiquer un nom d’utilisateur pour afficher un profil.',
 	'mobile-frontend-profile-yours' => 'Visiter votre page de profil.',
@@ -5849,6 +5868,7 @@ $messages['fr'] = array(
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Cet utilisateur|Cette utilisatrice}} est un éditeur assez expérimenté.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Cet utilisateur|Cette utilisatrice}} est un éditeur prolifique.',
 	'mobile-frontend-requires-optin' => 'Cette page n’est pas accessible sauf si vous avez choisi notre mode bêta. Allez sur la [[Special:MobileOptions|page de paramètres]] pour le choisir.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Remercié la dernière fois}} par [[Special:UserProfile/$1|$1]] pour une modification sur [[$2]].',
 );
 
 /** Franco-Provençal (arpetan)
@@ -6449,6 +6469,7 @@ $messages['gl'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '+500 cargas',
 	'mobile-frontend-photo-upload-cta' => 'Acceda ao sistema ou cree unha conta para engadir unha imaxe.',
 	'mobile-frontend-photo-upload-login' => 'Debe acceder ao sistema para engadir unha imaxe.',
+	'mobile-frontend-editor-undo-unsupported' => 'A función de desfacer non está soportada actualmente nos dispositivos móbiles.',
 	'mobile-frontend-editor-newpage-prompt' => 'Esta páxina non existe. Sexa valente e empece a escribila!',
 	'mobile-frontend-editor-disabled' => 'Non lle está permitido editar esta páxina.',
 	'mobile-frontend-editor-unavailable' => 'A edición a través do móbil non está dispoñible no seu navegador. Probe cun navegador diferente.',
@@ -6492,9 +6513,11 @@ $messages['gl'] = array(
 	'mobile-frontend-media-details' => 'Detalles',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Se un usuario está ou non está editando a través da interface móbil',
 	'mobile-frontend-profile-title' => 'Perfil de usuario',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 edición|$2 edicións|0=Ningunha edición|501=Máis de 500 edicións}}]] e
+[[Special:Uploads/$1|{{PLURAL:$3|1 carga|$3 cargas|0=ningunha carga|501=máis de 500 cargas}}]] nos últimos 30 días.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'A última carga realizouna {{GENDER:$1|$1}} {{PLURAL:$2|onte|hai $2 días|0=hoxe}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recentes',
-	'mobile-frontend-profile-registration' => '$1 é membro desde hai {{PLURAL:$2|$2 día|$2 días}} e realizou {{PLURAL:$3|$3 edición|$3 edicións}}.',
+	'mobile-frontend-profile-registration' => '$1 contribúe en {{SITENAME}} desde hai {{PLURAL:$2|$2 día|$2 días}} e realizou {{PLURAL:$3|$3 edición|$3 edicións}}.',
 	'mobile-frontend-profile-usertalk' => 'Ver a páxina de conversa.',
 	'mobile-frontend-profile-noargs' => 'Indique un nome de usuario para ollar un perfil.',
 	'mobile-frontend-profile-yours' => 'Visite a súa páxina de perfil.',
@@ -6503,6 +6526,7 @@ $messages['gl'] = array(
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|O usuario|A usuaria}} é {{GENDER:$1|un editor experimentado|unha editora experimentada}}.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|O usuario|A usuaria}} é {{GENDER:$1|un editor prolífico|unha editora prolífica}}.',
 	'mobile-frontend-requires-optin' => 'Esta páxina non está dispoñible a menos que active o noso modo beta. Visite a [[Special:MobileOptions|páxina de configuración]] para activalo.',
+	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] foi {{GENDER:$1|o último|a última}} en agradecerlle unha edición feita en "[[$2]]".',
 );
 
 /** Guarani (Avañe'ẽ)
@@ -8339,6 +8363,7 @@ in tutto il mondo',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ caricamenti',
 	'mobile-frontend-photo-upload-cta' => "Effettua l'accesso o registrati per aggiungere un'immagine.",
 	'mobile-frontend-photo-upload-login' => "È necessario effettuare l'accesso per aggiungere un'immagine.",
+	'mobile-frontend-editor-undo-unsupported' => "L'annullamento non è attualmente supportato sui dispositivi mobili.",
 	'mobile-frontend-editor-newpage-prompt' => 'Questa pagina non esiste. Perché non essere audaci e crearla?',
 	'mobile-frontend-editor-disabled' => 'Non è consentito modificare questa pagina.',
 	'mobile-frontend-editor-unavailable' => 'La modifica attraverso dispositivo mobile non è attualmente disponibile sul tuo browser. Prova un browser diverso.',
@@ -8382,9 +8407,11 @@ in tutto il mondo',
 	'mobile-frontend-media-details' => 'Dettagli',
 	'abusefilter-edit-builder-vars-user-mobile' => "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
 	'mobile-frontend-profile-title' => 'Profilo utente',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modifica|$2 modifiche|0=Nessuna modifica|501=Più di 500 modifiche}}]] e
+[[Special:Uploads/$1|{{PLURAL:$3|1 caricamento|$3 caricamenti|0=nessun caricamento|501=più di 500 caricamenti}}]] negli ultimi 30 giorni.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Ultimo caricamento di {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|$2 giorni fa|0=oggi}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recenti',
-	'mobile-frontend-profile-registration' => '$1 è stato membro per {{PLURAL:$2|$2 giorno|$2 giorni}} ed ha fatto {{PLURAL:$3|$3 modifica|$3 modifiche}}.',
+	'mobile-frontend-profile-registration' => '$1 ha contribuito a {{SITENAME}} per {{PLURAL:$2|$2 giorno|$2 giorni}} ed ha fatto {{PLURAL:$3|$3 modifica|$3 modifiche}}.',
 	'mobile-frontend-profile-usertalk' => 'Vedi la pagina di discussione.',
 	'mobile-frontend-profile-noargs' => 'Inserisci un nome utente per vedere un profilo.',
 	'mobile-frontend-profile-yours' => 'Vedi la pagina del tuo profilo.',
@@ -8596,6 +8623,7 @@ $messages['ja'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => 'アップロード 500+ 件',
 	'mobile-frontend-photo-upload-cta' => '画像を追加するにはログインまたは利用者登録をしてください。',
 	'mobile-frontend-photo-upload-login' => '画像を追加するにはログインしてください。',
+	'mobile-frontend-editor-undo-unsupported' => '現在、「元に戻す」は携帯機器に対応していません。',
 	'mobile-frontend-editor-newpage-prompt' => 'このページは存在しません。作成してみませんか?',
 	'mobile-frontend-editor-disabled' => 'あなたはこのページの編集を許可されていません。',
 	'mobile-frontend-editor-unavailable' => 'ご利用中のブラウザーでは、現在編集できません。他のブラウザーをお試しください。',
@@ -8637,6 +8665,8 @@ $messages['ja'] = array(
 	'mobile-frontend-media-details' => '詳細',
 	'abusefilter-edit-builder-vars-user-mobile' => '利用者が携帯機器版インターフェイスで編集しているかどうか',
 	'mobile-frontend-profile-title' => '利用者情報',
+	'mobile-frontend-profile-contributions' => '過去30日間に、[[Special:Contributions/$1|{{PLURAL:$2|1 件の編集|$2 件の編集|0=0 件の編集|501=500 件以上の編集}}]]と
+[[Special:Uploads/$1|{{PLURAL:$3|1 件のアップロード|$3 件のアップロード|0=0 件のアップロード|501=500 件以上のアップロード}}]]がなされました。',
 	'mobile-frontend-profile-last-upload-caption' => '最終アップロード: {{GENDER:$1|$1}}、{{PLURAL:$2|昨日|$2 日前|0=今日}}',
 	'mobile-frontend-profile-heading-recent' => '最近のもの',
 	'mobile-frontend-profile-usertalk' => 'トークページを閲覧',
@@ -9470,7 +9500,7 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-title' => '사용자 프로필',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$2|어제|$2일 전에|0=오늘}} {{GENDER:$1|$1}} 사용자가 마지막으로 올렸습니다.',
 	'mobile-frontend-profile-heading-recent' => '최근',
-	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.',
+	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => '토론 문서를 봅니다.',
 	'mobile-frontend-profile-noargs' => '프로필을 보려면 사용자 이름을 제공하세요.',
 	'mobile-frontend-profile-yours' => '내 프로필 페이지를 방문합니다.',
@@ -10460,8 +10490,11 @@ $messages['lus'] = array(
  * @author Papuass
  */
 $messages['lv'] = array(
+	'nearby' => 'Lapas jūsu tuvumā',
 	'mobile-frontend-search-submit' => 'Meklēt',
 	'mobile-frontend-home-button' => 'Sākumlapa',
+	'mobile-frontend-sign-up-heading' => 'Reģistrēties',
+	'mobile-frontend-sign-in-heading' => 'Pieslēgties',
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Saglabāt',
 	'mobile-frontend-random-button' => 'Nejaušs raksts',
@@ -10483,7 +10516,10 @@ $messages['lv'] = array(
 	'mobile-frontend-language-site-choose' => 'Meklēt valodu',
 	'mobile-frontend-username' => 'Lietotājvārds:',
 	'mobile-frontend-password' => 'Parole:',
+	'mobile-frontend-username-placeholder' => 'Lietotājvārds',
+	'mobile-frontend-password-placeholder' => 'Parole',
 	'mobile-frontend-login' => 'Pieslēgties',
+	'mobile-frontend-history' => 'Apskatīt šīs lapas labojumu vēsturi',
 	'mobile-frontend-last-modified-date' => 'Pēdējoreiz mainīts $1, $2',
 	'mobile-frontend-last-modified-seconds' => 'Pēdējoreiz mainīts pirms {{PLURAL:$1|$1 sekundes|$1 sekundēm}}',
 	'mobile-frontend-last-modified-minutes' => 'Pēdējoreiz mainīts pirms {{PLURAL:$1|$1 minūtes|$1 minūtēm}}',
@@ -10492,13 +10528,29 @@ $messages['lv'] = array(
 	'mobile-frontend-last-modified-months' => 'Pēdējoreiz mainīts pirms {{PLURAL:$1|$1 mēneša|$1 mēnešiem}}',
 	'mobile-frontend-last-modified-years' => 'Pēdējoreiz mainīts pirms {{PLURAL:$1|$1 gada|$1 gadiem}}',
 	'mobile-frontend-learn-more' => 'Uzzināt vairāk',
+	'mobile-frontend-account-create-submit' => 'Reģistrēties',
+	'mobile-frontend-password-confirm-placeholder' => 'Apstipriniet paroli',
+	'mobile-frontend-account-create-email-placeholder' => 'E-pasta adrese (nav obligāta)',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Ievadiet drošības tekstu',
+	'mobile-frontend-overlay-escape' => 'Atpakaļ',
 	'mobile-frontend-placeholder' => 'Meklēt {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Meklēt {{SITENAME}} (Beta)',
+	'mobile-frontend-placeholder-alpha' => 'Meklēt {{SITENAME}} (eksperimentāli)',
 	'mobile-frontend-dismiss-notification' => 'paslēpt šo paziņojumu',
 	'mobile-frontend-clear-search' => 'Notīrīt',
 	'mobile-frontend-privacy-link-text' => 'Konfidencialitāte',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'Saturs pieejams saskaņā ar [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0] licenci; var tikt piemēroti papildus ierobežojumi.',
+	'mobile-frontend-copyright' => 'Saturs ir pieejams saskaņā ar $1, ja vien nav norādīts citādi.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Izmantošanas noteikumi]',
+	'mobile-frontend-footer-contact' => 'Kontakti',
+	'mobile-frontend-main-menu-button-tooltip' => 'Atvērt galveno izvēlni',
+	'mobile-frontend-main-menu-page-title' => 'Vietnes navigācija',
+	'mobile-frontend-main-menu-nearby' => 'Tuvumā',
+	'mobile-frontend-main-menu-login' => 'Pieslēgties',
+	'mobile-frontend-main-menu-logout' => 'Iziet',
+	'mobile-frontend-main-menu-watchlist' => 'Uzraugāmie raksti',
+	'mobile-frontend-main-menu-settings' => 'Iestatījumi',
 	'mobile-frontend-main-menu-upload' => 'Augšupielādes',
 	'mobile-frontend-main-menu-settings-heading' => 'Iestatījumi',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} Valodas',
@@ -10506,14 +10558,39 @@ $messages['lv'] = array(
 	'mobile-frontend-main-menu-account-create' => 'Izveidot kontu',
 	'mobile-frontend-page-menu-contents' => 'saturs',
 	'mobile-frontend-page-menu-history' => 'Vēsture',
+	'mobile-frontend-meta-data-issues-header' => 'Problēmas',
 	'mobile-frontend-meta-data-issues' => 'Šajā lapā ir dažas problēmas',
 	'mobile-frontend-page-saving' => 'Saglabā $1',
 	'mobile-frontend-nearby-title' => 'Tuvumā',
+	'mobile-frontend-nearby-loading' => 'Ielādē tēmas netālu no jūsu pašreizējās atrašanās vietas',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
+	'mobile-frontend-nearby-noresults' => 'Visapkārt tik kluss... Tuvumā netika atrasta neviena lapa.',
+	'mobile-frontend-nearby-noresults-guidance' => 'Pamēģiniet izveidot jaunu lapu vai pievienojiet atrašanās vietu jau esošai',
+	'mobile-frontend-photo-upload-disabled' => 'Šai lapai nav nepieciešams attēls.',
 	'mobile-frontend-user-account' => 'lietotāja konts',
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Sapratāt?',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Jā!',
+	'mobile-frontend-watchlist-add' => '$1 pievienots jūsu uzraugāmajam sarakstam',
+	'mobile-frontend-watchlist-removed' => '$1 tika izņemts no jūsu uzraugāmo lapu saraksta',
 	'mobile-frontend-watchlist-more' => 'vairāk',
 	'mobile-frontend-watchlist-cta-button-login' => 'Pieslēgties',
+	'mobile-frontend-watchlist-a-z' => 'Saraksts',
+	'mobile-frontend-watchlist-feed' => 'Izmaiņas',
+	'mobile-frontend-watchlist-filter-all' => 'Visi',
+	'mobile-frontend-watchlist-filter-articles' => 'Raksti',
+	'mobile-frontend-watchlist-filter-talk' => 'Diskusijas',
+	'mobile-frontend-watchlist-filter-other' => 'Citi',
+	'mobile-frontend-photo-ownership-help' => 'Ko tas nozīmē?',
+	'mobile-frontend-photo-ownership-confirm' => 'Sapratu!',
+	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Es nepārkāpju autortiesības',
+	'mobile-frontend-photo-nag-1-bullet-1-text' => "Šis '''nav''' attēls, ko es atradu internetā. Tas ir mans darbs.",
+	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Šis nav personīgs attēls',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Sākt augšupielādi',
+	'mobile-frontend-image-uploading-wait' => 'Augšupielādē attēlu, lūdzu, uzgaidiet.',
+	'mobile-frontend-image-uploading-cancel' => '<a href="#">Atcelt</a>, ja tas aizņem pārāk ilgu laiku.',
+	'mobile-frontend-photo-upload-error' => 'Kļūda, mēģiniet vēlreiz.',
+	'mobile-frontend-photo-upload-error-file-type' => 'Lūdzu, augšupielādējiet tikai attēlus.',
 	'mobile-frontend-photo-submit' => 'Iesniegt',
 	'mobile-frontend-photo-cancel' => 'Atcelt',
 	'mobile-frontend-editor-edit' => 'Labot',
@@ -10523,6 +10600,7 @@ $messages['lv'] = array(
 	'mobile-frontend-editor-keep-editing' => 'Turpināt labot',
 	'mobile-frontend-editor-wait' => 'Saglabā labojumu, lūdzu uzgaidiet.',
 	'tag-mobile_edit' => 'Labojums no mobilās verijas',
+	'mobile-frontend-drawer-cancel' => 'Atcelt',
 	'mobile-frontend-talk-explained-empty' => 'Par šo lapu nav diskusiju.',
 	'mobile-frontend-talk-overlay-header' => 'Diskusija',
 	'mobile-frontend-talk-overlay-lead-header' => 'Nenosaukta diskusija',
@@ -10531,6 +10609,7 @@ $messages['lv'] = array(
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Kas jums prātā?',
 	'mobile-frontend-talk-edit-summary' => 'Jauna diskusiju sadaļa: $1',
 	'mobile-frontend-talk-reply' => 'Atbilde',
+	'mobile-frontend-profile-userpage-link' => 'Apmeklēt lietotāja lapu.',
 );
 
 /** Lazuri (Lazuri)
@@ -10782,6 +10861,7 @@ $messages['mk'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ подигања',
 	'mobile-frontend-photo-upload-cta' => 'Најавете се или регистрирајте се за да можете да ставате слики.',
 	'mobile-frontend-photo-upload-login' => 'Мора да сте најавени за да ставате слики.',
+	'mobile-frontend-editor-undo-unsupported' => 'Поништувањето засега не е достапно на мобилни уреди.',
 	'mobile-frontend-editor-newpage-prompt' => 'Страницата не постои. Бидете смели — Направете ја!',
 	'mobile-frontend-editor-disabled' => 'Не ви е дозволено да ја уредувате оваа страница.',
 	'mobile-frontend-editor-unavailable' => 'Вашиот прелистувач моментално не поддржува мобилно уредување. Користете друг.',
@@ -10829,7 +10909,7 @@ $messages['mk'] = array(
 [[Special:Uploads/$1|{{PLURAL:$3|1 подигање|$3 подигања|0=нема подигања|501=преку 500 подигања}}]] во изминатите 30 дена.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Последно подигање на {{GENDER:$1|$1}}, {{PLURAL:$2|вчера|пред $2 дена|0=денес}}.',
 	'mobile-frontend-profile-heading-recent' => 'Скорешни',
-	'mobile-frontend-profile-registration' => '$1 членува веќе {{PLURAL:$2|$2 ден|$2 дена}} и има направено {{PLURAL:$3|$3 уредување|$3 уредувања}}.',
+	'mobile-frontend-profile-registration' => '$1 учествува во {{SITENAME}} веќе {{PLURAL:$2|$2 ден|$2 дена}} и има направено {{PLURAL:$3|$3 уредување|$3 уредувања}}.',
 	'mobile-frontend-profile-usertalk' => 'Погл. страницата за разговор',
 	'mobile-frontend-profile-noargs' => 'Наведете корисничко име за да го погледате профилот.',
 	'mobile-frontend-profile-yours' => 'Посетете ја вашата профилна страница.',
@@ -10838,6 +10918,7 @@ $messages['mk'] = array(
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Овој корисник}} е уредник со извесно искуство.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Овој корисник}} има многу уредувања.',
 	'mobile-frontend-requires-optin' => 'Страницава не е достапна доколку не изберете да ги користите бета-можностите. Ова можете да го направите во [[Special:MobileOptions|поставките]].',
+	'mobile-frontend-profile-last-thanked' => 'Ја {{GENDER:$1|добил|добила}} последната благодарница од [[Special:UserProfile/$1|$1]] за уредувањето на [[$2]].',
 );
 
 /** Malayalam (മലയാളം)
@@ -11094,7 +11175,7 @@ $messages['ml'] = array(
 	'mobile-frontend-profile-title' => 'എന്നെപ്പറ്റി',
 	'mobile-frontend-profile-last-upload-caption' => 'അവസാന അപ്‌ലോഡ് ചെയ്തത്   {{PLURAL:$2|ഇന്നലെ|$2 ദിവസം മുമ്പ്|0=ഇന്ന്}} {{GENDER:$1|$1}} ആണ്.',
 	'mobile-frontend-profile-heading-recent' => 'സമീപകാലം',
-	'mobile-frontend-profile-registration' => '$1 {{PLURAL:$2|ഒരു ദിവസം|$2 ദിവസം}} ആയി അംഗമാണ്, {{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്തുകൾ}} ചെയ്തിട്ടുണ്ട്.',
+	'mobile-frontend-profile-registration' => '$1 {{PLURAL:$2|ഒരു ദിവസം|$2 ദിവസം}} ആയി അംഗമാണ്, {{PLURAL:$3|ഒരു തിരുത്ത്|$3 തിരുത്തുകൾ}} ചെയ്തിട്ടുണ്ട്.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'സംവാദത്താൾ കാണുക.',
 	'mobile-frontend-profile-noargs' => 'ഉപയോക്തൃവിവരങ്ങൾ കാണാനായി ഒരു ഉപയോക്തൃനാമം നൽകുക.',
 	'mobile-frontend-profile-yours' => 'താങ്കളെപ്പറ്റിയുള്ള താൾ സന്ദർശിക്കുക.',
@@ -12248,6 +12329,7 @@ $messages['nl'] = array(
 	'mobile-frontend-talk-reply' => 'Antwoorden',
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 bewerking|$2 bewerkingen|0=Geen bewerkingen|501=Meer dan 500 bewerkingen}}]] en
 [[Special:Uploads/$1|{{PLURAL:$3|1 upload|$3 uploads|0=geen uploads|501=meer dan 500 uploads}}]] in de afgelopen 30 dagen.', # Fuzzy
+	'mobile-frontend-profile-userpage-link' => 'Gebruikerspagina bekijken.',
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -13238,7 +13320,7 @@ $messages['pt'] = array(
 	'mobile-frontend-page-menu-contents' => 'índice',
 	'mobile-frontend-page-menu-history' => 'Histórico',
 	'mobile-frontend-photo-cancel' => 'Cancelar',
-	'mobile-frontend-editor-save' => 'Salvar',
+	'mobile-frontend-editor-save' => 'Gravar',
 	'mobile-frontend-editor-cancel' => 'Cancelar',
 	'mobile-frontend-editor-success' => 'Sucesso! A sua edição foi gravada.',
 	'mobile-frontend-drawer-cancel' => 'Cancelar',
@@ -13604,6 +13686,7 @@ din întreaga lume',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ încărcări',
 	'mobile-frontend-photo-upload-cta' => 'Vă rugăm să vă autentificați sau să vă înregistrați pentru a adăuga o imagine.',
 	'mobile-frontend-photo-upload-login' => 'Trebuie să fiți autentificat pentru a adăuga o imagine.',
+	'mobile-frontend-editor-undo-unsupported' => 'Anularea nu este acceptată în prezent pe dispozitivele mobile.',
 	'mobile-frontend-editor-newpage-prompt' => 'Această pagină nu există. De ce nu ați fi îndrăzneț și să o creați?',
 	'mobile-frontend-editor-disabled' => 'Nu vă este permisă modificarea acestei pagini.',
 	'mobile-frontend-editor-unavailable' => 'Modificarea prin site-ul mobil nu este actualmente disponibilă pentru navigatorul dumneavoastră. Încercați cu un alt navigator.',
@@ -13651,7 +13734,7 @@ din întreaga lume',
 [[Special:Uploads/$1|{{PLURAL:$3|1 încărcare|$3 încărcări|0=nicio încărcare|501=peste 500 de încărcări}}]] în ultimele 30 de zile.',
 	'mobile-frontend-profile-last-upload-caption' => 'Ultima încărcare de către {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=astăzi}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recent',
-	'mobile-frontend-profile-registration' => '$1 a fost membru pentru {{PLURAL:$2|o zi|$2 zile|$2 de zile}} și a efectuat {{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}.',
+	'mobile-frontend-profile-registration' => '$1 a contribuit la {{SITENAME}} pentru {{PLURAL:$2|o zi|$2 zile|$2 de zile}} și a efectuat {{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}.',
 	'mobile-frontend-profile-usertalk' => 'Vezi pagina de discuții.',
 	'mobile-frontend-profile-noargs' => 'Furnizați un nume de utilizator pentru a vizualiza un profil.',
 	'mobile-frontend-profile-yours' => 'Vizitați-vă pagina de profil.',
@@ -13660,6 +13743,7 @@ din întreaga lume',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Acest utilizator|Această utilizatoare}} este întrucâtva un editor cu experiență.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Acest utilizator|Această utilizatoare}} este un editor prolific.',
 	'mobile-frontend-requires-optin' => 'Această pagină este disponibilă doar dacă alegeți modul beta. Accesați [[Special:MobileOptions|pagina cu setări]] pentru a comuta la beta.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Ultima mulțumire}} de către [[Special:UserProfile/$1|$1]] pentru o modificare asupra paginii [[$2]].',
 );
 
 /** tarandíne (tarandíne)
@@ -13909,6 +13993,7 @@ $messages['ru'] = array(
 	'mobile-frontend-listed-image-no-description' => 'Нет описания',
 	'mobile-frontend-donate-photo-upload-success' => 'Получилось! Ваше изображние может быть использован на сайте {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Получилось! Спасибо за ваш вклад!',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Да!',
 	'mobile-frontend-watchlist-add' => '$1 добавлена в ваш список наблюдения',
 	'mobile-frontend-watchlist-removed' => '$1 удалена из вашего списка наблюдения',
 	'mobile-frontend-watchlist-view' => 'Просмотреть свой список наблюдения',
@@ -14568,7 +14653,7 @@ $messages['sl'] = array(
 	'mobile-frontend-profile-title' => 'Podatki o uporabniku',
 	'mobile-frontend-profile-last-upload-caption' => 'Zadnje nalaganje {{GENDER:$1|uporabnika $1|uporabnice $1}}, {{PLURAL:$2|včeraj|pred $2 dnevoma|pred $2 dnevi|0=danes}}.',
 	'mobile-frontend-profile-heading-recent' => 'Nedavno',
-	'mobile-frontend-profile-registration' => '$1 je član že {{PLURAL:$2|$2 dan|$2 dneva|$2 dni}} in je napravil {{PLURAL:$3|$3 urejanje|$3 urejanji|$3 urejanja|$3 urejanj}}.',
+	'mobile-frontend-profile-registration' => '$1 je član že {{PLURAL:$2|$2 dan|$2 dneva|$2 dni}} in je napravil {{PLURAL:$3|$3 urejanje|$3 urejanji|$3 urejanja|$3 urejanj}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Prikaz pogovorne strani.',
 	'mobile-frontend-profile-noargs' => 'Prosimo, vnesite uporabniško ime za ogled profila.',
 	'mobile-frontend-profile-yours' => 'Obiščite svojo profilno stran.',
@@ -16058,6 +16143,7 @@ $messages['uk'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ завантажень',
 	'mobile-frontend-photo-upload-cta' => 'Будь ласка, увійдіть або зареєструйтесь, щоб додати зображення.',
 	'mobile-frontend-photo-upload-login' => 'Ви повинні увійти в систему, щоб додати зображення.',
+	'mobile-frontend-editor-undo-unsupported' => 'Відміна дії наразі не підтримується на мобільних пристроях.',
 	'mobile-frontend-editor-newpage-prompt' => 'Ця сторінка не існує. Чому б не бути сміливим і створити її?',
 	'mobile-frontend-editor-disabled' => 'Вам не дозволено редагувати цю сторінку.',
 	'mobile-frontend-editor-unavailable' => 'Мобільне редагування наразі недоступне у вашому веб-переглядачі. Будь ласка, спробуйте інший веб-переглядач.',
@@ -16101,9 +16187,11 @@ $messages['uk'] = array(
 	'mobile-frontend-media-details' => 'Деталі',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Чи користувач редагує через мобільний інтерфейс, чи ні',
 	'mobile-frontend-profile-title' => 'Профіль користувача',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 зміна|$2 зміни|$2 змін|0=Немає змін|501=Понад 500 змін}}]] та
+[[Special:Uploads/$1|{{PLURAL:$3|1 завантаження|$3 завантаження|$3 завантажень|0=Немає завантажень|501=понад 500 завантажень}}]] за останні 30 днів.',
 	'mobile-frontend-profile-last-upload-caption' => 'Останнє завантаження від {{GENDER:$1|$1}}, {{PLURAL:$2|вчора|$2 дні тому|$2 днів тому|0=сьогодні}}.',
 	'mobile-frontend-profile-heading-recent' => 'Останні',
-	'mobile-frontend-profile-registration' => '$1 вже є учасником {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і вже зробив {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.',
+	'mobile-frontend-profile-registration' => '$1 вже вносить свій внесок на {{SITENAME}} {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і вже зробив {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.',
 	'mobile-frontend-profile-usertalk' => 'Перегляд сторінки обговорення.',
 	'mobile-frontend-profile-noargs' => "Будь ласка, введіть ім'я користувача, щоб переглянути профіль.",
 	'mobile-frontend-profile-yours' => 'Відвідайте сторінку вашого профілю.',
@@ -16112,6 +16200,7 @@ $messages['uk'] = array(
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Цей користувач|Ця користувачка}} - це досить {{GENDER:$1|досвідчений редактор|досвідчена редакторка}}.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Цей користувач|Ця користувачка}} є {{GENDER:$1|профільним редактором|профільною редакторкою}}.',
 	'mobile-frontend-requires-optin' => 'Ця сторінка недоступна, якщо ви виберете в нашому режимі бета. Відвідайте [[Special:MobileOptions|сторінку налаштувань]], щоб відмовитися.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Востаннє подякував}} [[Special:UserProfile/$1|$1]] за редагування на [[$2]].',
 );
 
 /** Urdu (اردو)
@@ -16715,7 +16804,7 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-title' => 'Thông tin cá nhân',
 	'mobile-frontend-profile-last-upload-caption' => 'Tập tin mới nhất do $1 tải lên {{PLURAL:$2|hôm qua|$2 ngày trước|0=hôm nay}}.',
 	'mobile-frontend-profile-heading-recent' => 'Gần đây',
-	'mobile-frontend-profile-registration' => '$1 đã là thành viên cho $2 ngày và đã sửa đổi $3 lần.',
+	'mobile-frontend-profile-registration' => '$1 đã là thành viên cho $2 ngày và đã sửa đổi $3 lần.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Xem trang tin nhắn.',
 	'mobile-frontend-profile-noargs' => 'Xin vui lòng nhập tên người dùng để xem trang thành viên.',
 	'mobile-frontend-profile-yours' => 'Xem trang cá nhân của bạn.',
@@ -17149,7 +17238,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-profile-title' => '用户信息',
 	'mobile-frontend-profile-last-upload-caption' => '最后由$1在{{PLURAL:$2|昨天|$2天前|0=今天}}上传。',
 	'mobile-frontend-profile-heading-recent' => '最近',
-	'mobile-frontend-profile-registration' => '$1已经做了$2天的会员并进行了$3次编辑。',
+	'mobile-frontend-profile-registration' => '$1已经做了$2天的会员并进行了$3次编辑。', # Fuzzy
 	'mobile-frontend-profile-usertalk' => '见讨论页。',
 	'mobile-frontend-profile-noargs' => '请指定一个用户名以查看资料。',
 	'mobile-frontend-profile-yours' => '访问您的个人资料页。',

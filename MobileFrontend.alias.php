@@ -89,6 +89,12 @@ $specialPageAliases['fa'] = array(
 	'UserProfile' => array( 'شناسنامهٔ_کاربری', 'شناسنامه_کاربری' ),
 );
 
+/** Galician (galego) */
+$specialPageAliases['gl'] = array(
+	'Uploads' => array( 'Cargas' ),
+	'UserProfile' => array( 'Perfil_de_usuario' ),
+);
+
 /** Hebrew (עברית) */
 $specialPageAliases['he'] = array(
 	'Nearby' => array( 'בסביבה', 'קרוב' ),
