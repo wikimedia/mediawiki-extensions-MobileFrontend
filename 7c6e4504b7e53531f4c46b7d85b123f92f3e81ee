@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_cd1fd6b2",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-09T15:33:13Z",
+      "side": 1,
+      "message": "Why public?",
+      "revId": "7c6e4504b7e53531f4c46b7d85b123f92f3e81ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_6d898aec",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-09T15:33:13Z",
+      "side": 1,
+      "message": "Function result is always the same and is never used.",
+      "revId": "7c6e4504b7e53531f4c46b7d85b123f92f3e81ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
