@@ -3,14 +3,23 @@
 		NearbyOverlay = M.require( 'modules/nearby/NearbyOverlay' ),
 		overlay;
 
-
 	function initNearbyButton( title, latitude, longitude ) {
-		$( '<button class="nearby">' ).on( 'click', function() {
+
+		function loadGeoNotAHack() {
 			if ( !overlay ) {
 				overlay = new NearbyOverlay( { title: title, latitude: latitude, longitude: longitude } );
 			}
 			overlay.show();
-		} ).appendTo( '#section_0' );
+		}
+
+		var $btn;
+		if ( M.router.isSupported() ) {
+			$btn = $( '<a class="button nearby">' ).attr( 'href', '#geonotahack' );
+			M.router.route( /^geonotahack$/, loadGeoNotAHack );
+		} else {
+			$btn = $( '<button class="nearby">' ).on( 'click', loadGeoNotAHack );
+		}
+		$btn.appendTo( '#section_0' );
 	}
 
 	function init( page ) {

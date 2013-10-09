@@ -6,6 +6,7 @@
 
 	NearbyOverlay = Overlay.extend( {
 			active: false,
+			closeOnBack: true,
 			className: 'mw-mf-overlay list-overlay',
 			template: M.template.get( 'overlays/nearby' ),
 			defaults: {

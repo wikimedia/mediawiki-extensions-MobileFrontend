@@ -2,6 +2,8 @@
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		View = M.require( 'view' ),
 		wgMFMode = mw.config.get( 'wgMFMode' ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
+		loader = new LoadingOverlay(),
 		Nearby;
 
 	Nearby = View.extend( {
@@ -106,21 +108,18 @@
 				var $a = $( ev.currentTarget );
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
-				if ( wgMFMode === 'stable' ) {
+				// Note router support required for page previews in beta
+				if ( wgMFMode === 'stable' || !M.router.isSupported() ) {
 					window.location.hash = '#' + $( ev.currentTarget ).attr( 'name' );
 				} else {
 					ev.preventDefault();
 
-					// Trigger preview mode
+					// Trigger preview mode ensure preview code has fully loaded first!
+					loader.show();
 					mw.loader.using( 'mobile.nearby.previews', function() {
-							var PagePreviewOverlay = M.require( 'PagePreviewOverlay' );
-							new PagePreviewOverlay( {
-								parent: self.options.parentOverlay,
-								endpoint: mw.config.get( 'wgMFNearbyEndpoint' ),
-								latLngString: $a.data( 'latlng' ),
-								img: $( '<div>' ).append( $a.find( '.listThumb' ).clone() ).html(),
-								title: $a.find( 'h2' ).text()
-							} );
+						loader.hide();
+						// FIXME: [API] should be able to determine longitude/latitude from title
+						window.location.hash = '#preview/' + $a.data( 'latlng' ) + '/' + $a.find( 'h2' ).text();
 					} );
 				}
 			} );

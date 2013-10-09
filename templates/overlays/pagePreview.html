@@ -6,7 +6,7 @@
 	<a href="{{url}}">{{readMoreLink}}</a>
 </p>
 <div class="content">
-	{{{img}}}
+	<div class="listThumb {{imgClass}}" {{#imageUrl}}style="background-image: url({{imageUrl}})"{{/imageUrl}}></div>
 	<h2>{{heading}}</h2>
 	<div class="preview">{{{preview}}}</div>
 	<p><a href="{{url}}">{{readMoreLink}}</a></p>
