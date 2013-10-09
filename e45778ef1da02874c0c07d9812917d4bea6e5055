@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_a1962949",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T21:32:31Z",
+      "side": 1,
+      "message": "Evil, state not dependent on the route!\nRelated, go to a preview, read full article, click back. The URL contains #nearby-preview, but you\u0027re not in the preview. Consequently, clicking any article will not open a preview anymore.",
+      "revId": "e45778ef1da02874c0c07d9812917d4bea6e5055",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
