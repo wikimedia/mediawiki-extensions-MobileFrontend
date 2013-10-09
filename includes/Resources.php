@@ -405,6 +405,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.templates',
 		),
 		'messages' => array(
+			// for random.js
+			'mobilefrontend-random-explain',
+			'mobilefrontend-random-cancel',
 
 			// for mf-table.js
 			'mobile-frontend-table',
@@ -422,6 +425,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
 			'javascripts/modules/mediaViewer.js',
+			'javascripts/modules/random/random.js',
 		),
 	),
 

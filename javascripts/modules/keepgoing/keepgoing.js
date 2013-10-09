@@ -3,7 +3,7 @@
 		mw.loader.using( 'mobile.keepgoing', function() {
 			var KeepGoingDrawer = M.require( 'modules/keepgoing/KeepGoingDrawer' );
 			// deal with case when campaign_step is undefined
-			new KeepGoingDrawer( { tryAgain: true, step: parseInt( M.query.campaign_step, 10 ) || 0 } );
+			new KeepGoingDrawer( { tryAgain: true } );
 		} );
 	}
 }( mw.mobileFrontend ) );

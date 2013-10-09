@@ -200,6 +200,81 @@ class SkinMobile extends SkinMinerva {
 		return $tpl;
 	}
 
+	protected function prepareDiscoveryTools( QuickTemplate $tpl ) {
+		global $wgMFNearby;
+
+		$items = array(
+			'home' => array(
+				'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
+				'href' => Title::newMainPage()->getLocalUrl(),
+				'class' => 'icon-home',
+			),
+			'random' => array(
+				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
+				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl( array( 'campaign' => 'random' ) ),
+				'class' => 'icon-random',
+				'id' => 'randomButton',
+			),
+			'nearby' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
+				'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
+				'class' => 'icon-nearby jsonly',
+			),
+		);
+		if ( !$wgMFNearby ) {
+			unset( $items['nearby'] );
+		}
+		$tpl->set( 'discovery_urls', $items );
+	}
+
+	/**
+	 * Prepares urls and links used by the page
+	 * @param QuickTemplate
+	 */
+	protected function preparePersonalTools( QuickTemplate $tpl ) {
+		$returnToTitle = $this->getTitle()->getPrefixedText();
+		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
+		$watchTitle = SpecialPage::getTitleFor( 'Watchlist' );
+
+		// watchlist link
+		$watchlistQuery = array();
+		$user = $this->getUser();
+		if ( $user ) {
+			$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, false );
+			$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, false );
+			if ( $view ) {
+				$watchlistQuery['watchlistview'] = $view;
+			}
+			if ( $filter && $view === 'feed' ) {
+				$watchlistQuery['filter'] = $filter;
+			}
+		}
+
+		$items = array(
+			'watchlist' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
+				'href' => $this->getUser()->isLoggedIn() ?
+					$watchTitle->getLocalUrl( $watchlistQuery ) :
+					$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
+				'class' => 'icon-watchlist',
+			),
+			'uploads' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
+				'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
+					$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
+				'class' => 'icon-uploads jsonly',
+			),
+			'settings' => array(
+				'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
+				'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
+					getLocalUrl( array( 'returnto' => $returnToTitle ) ),
+				'class' => 'icon-settings',
+			),
+			'auth' => $this->getLogInOutLink(),
+		);
+		$tpl->set( 'personal_urls', $items );
+	}
+
 	/**
 	 * Returns the site name for the footer, either as a text or <img> tag
 	 */

@@ -12,6 +12,10 @@
 $messages = array();
 
 $messages['en'] = array (
+	// Random
+	'mobilefrontend-random-explain' => 'Does this random page interest you?',
+	'mobilefrontend-random-cancel' => 'Let me read!',
+
 	// KeepGoingCta
 	'mobilefrontend-keepgoing-ask' => "Well done! You're getting the hang of this! Do you want to try editing another page?",
 	'mobilefrontend-keepgoing-ask-first' => 'Congratulations on making your first edit! Do you want to try editing another page?',
@@ -362,6 +366,8 @@ $messages['en'] = array (
  * @author 아라
  */
 $messages['qqq'] = array(
+	'mobilefrontend-random-explain' => 'Asks if the reader is happy with the random page they were given.',
+	'mobilefrontend-random-cancel' => 'Allows the reader to start reading the current article.',
 	'mobilefrontend-keepgoing-ask' => 'Congratulations message shown to a user who has completed an edit in the keepgoing campaign. Prompts them to edit again.',
 	'mobilefrontend-keepgoing-ask-first' => 'Congratulate user on first edit. Ask them if they want to edit again.',
 	'mobilefrontend-keepgoing-explain' => 'Message explaining that the page they are looking at has issues. Gives them the option to try another.',
