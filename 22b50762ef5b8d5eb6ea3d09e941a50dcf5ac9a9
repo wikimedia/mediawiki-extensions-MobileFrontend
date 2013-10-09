@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_c1cf9d55",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-09T21:48:45Z",
+      "side": 1,
+      "message": "No it is completely unwise. And I wouldn\u0027t do it if there were any other way to implement it. (See comments regarding i18n implementation for more info, or just ask me to explain it).",
+      "parentUuid": "0932edd2_e1c3c139",
+      "revId": "22b50762ef5b8d5eb6ea3d09e941a50dcf5ac9a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_46290339",
         "filename": "includes/skins/MinervaTemplate.php",
         "patchSetId": 8

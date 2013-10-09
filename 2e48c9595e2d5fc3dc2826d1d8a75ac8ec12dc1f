@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_01da9513",
+        "filename": "javascripts/modules/lastEditedBeta.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-09T21:48:45Z",
+      "side": 0,
+      "message": "OK",
+      "parentUuid": "0932edd2_a1c9c95d",
+      "revId": "2e48c9595e2d5fc3dc2826d1d8a75ac8ec12dc1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_e1aae171",
         "filename": "javascripts/modules/mf-last-edited.js",
         "patchSetId": 8
