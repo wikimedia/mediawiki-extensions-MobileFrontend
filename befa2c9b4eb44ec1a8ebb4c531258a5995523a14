@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_a16b89b7",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-09T20:28:47Z",
+      "side": 1,
+      "message": "Anonymous users are always neuter. Does that eliminate the problem you\u0027re thinking of?",
+      "parentUuid": "0932edd2_860f7b37",
+      "revId": "befa2c9b4eb44ec1a8ebb4c531258a5995523a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_4d0be67e",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 1
