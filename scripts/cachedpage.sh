@@ -21,12 +21,12 @@ git checkout $1 #go to commit caller requested
 
 #Generate the 'cached' pages
 mkdir -p tmp
-URL=${MEDIAWIKI_URL:-"http://127.0.0.1:80/w/index.php"}
+URL=${MEDIAWIKI_URL:-"http://127.0.0.1:80/w/index.php/"}
 TITLE=${2:="Main_Page"}
 echo "Using $URL as a development environment host."
 echo "To specify a different host set MEDIAWIKI_URL environment variable"
 echo '(e.g. by running "export MEDIAWIKI_URL=http://127.0.0.1:80/w/index.php")'
-wget "$URL/$TITLE?useformat=mobile" -O tmp/cached.html
+wget "$URL$TITLE?useformat=mobile" -O tmp/cached.html
 
 #Return to previous branch
 git checkout $cur_branch
