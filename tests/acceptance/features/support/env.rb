@@ -121,5 +121,5 @@ After do |scenario|
     sauce_api(%Q{{"passed": #{scenario.passed?}}}, saucelabs_username, saucelabs_key)
     sauce_api(%Q{{"public": true}}, saucelabs_username, saucelabs_key)
   end
-  @browser.close
+  @browser.close unless ENV['KEEP_BROWSER_OPEN'] == 'true'
 end
