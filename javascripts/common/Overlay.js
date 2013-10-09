@@ -15,24 +15,9 @@ var View = M.require( 'view' ),
 		// odd consequences on Opera Mobile (see bug 52361)
 		appendTo: '#mw-mf-viewport',
 		initialize: function( options ) {
-			var self = this;
 			options = options || {};
 			this.parent = options.parent;
 			this.isOpened = false;
-
-			function hideOnRoute() {
-				M.router.one( 'route', function( ev ) {
-					if ( !self.hide() ) {
-						ev.preventDefault();
-						hideOnRoute();
-					}
-				} );
-			}
-
-			if ( this.closeOnBack ) {
-				hideOnRoute();
-			}
-
 			this._super( options );
 		},
 		postRender: function() {
@@ -49,11 +34,27 @@ var View = M.require( 'view' ),
 			} );
 		},
 		show: function() {
+			var self = this;
+
+			function hideOnRoute() {
+				M.router.one( 'route', function( ev ) {
+					if ( !self.hide() ) {
+						ev.preventDefault();
+						hideOnRoute();
+					}
+				} );
+			}
+
+			if ( this.closeOnBack ) {
+				hideOnRoute();
+			}
+
 			// FIXME: prevent zooming within overlays but don't break the rendering!
 			// M.lockViewport();
 			if ( this.parent ) {
 				this.parent.hide();
 			}
+
 			this.$el.appendTo( this.appendTo );
 			this.scrollTop = document.body.scrollTop;
 			if ( this.fullScreen ) {
