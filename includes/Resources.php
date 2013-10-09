@@ -362,7 +362,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for mf-table.js
 			'mobile-frontend-table',
 
-			// nearbypages.js
+			// NearbyOverlay.js
 			'mobile-frontend-nearby-to-page',
 
 			// mediaViewer.js
@@ -378,6 +378,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/history-alpha.js',
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
+			// Do not put in mobile.nearby until promoted to stable
+			'javascripts/modules/nearby/NearbyOverlay.js',
 			'javascripts/modules/nearbypages.js',
 			'javascripts/modules/mediaViewer.js',
 		),

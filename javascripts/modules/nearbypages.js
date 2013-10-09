@@ -1,35 +1,7 @@
 ( function( M, $ ) {
 	var latLng, lat, lng,
-		Overlay = M.require( 'Overlay' ),
-		overlay,
-		Nearby = M.require( 'modules/nearby/Nearby' ),
-		NearbyOverlay;
-
-	// FIXME: Move to nearby/NearbyOverlay.js
-	NearbyOverlay = Overlay.extend( {
-			active: false,
-			className: 'mw-mf-overlay list-overlay',
-			template: M.template.get( 'overlays/nearby' ),
-			defaults: {
-				heading: 'Nearby'
-			},
-			initialize: function( options ) {
-				options.pretext = mw.message( 'mobile-frontend-nearby-to-page', options.title );
-				this._super( options );
-				this.latLngString = options.latitude + ',' + options.longitude;
-			},
-			postRender: function( options ) {
-				var widget;
-
-				this._super( options );
-				widget = new Nearby( {
-					range: 2000,
-					parentOverlay: this,
-					location: { longitude: options.longitude, latitude: options.latitude },
-					el: this.$( '.container' )
-				} );
-			}
-	} );
+		NearbyOverlay = M.require( 'modules/nearby/NearbyOverlay' ),
+		overlay;
 
 
 	function initNearbyButton( title, latitude, longitude ) {
