@@ -111,7 +111,7 @@ var api = M.require( 'api' ), w = ( function() {
 			}
 			prevent = true;
 			$( watchBtn ).addClass( 'disabled loading' );
-			M.emit( 'watch', isWatched );
+			M.emit( 'watched', isWatched );
 			toggleWatchStatus( isWatched );
 		} );
 
