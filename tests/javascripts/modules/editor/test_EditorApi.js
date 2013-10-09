@@ -206,7 +206,7 @@
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 
-	QUnit.test( '#save, extension errors', 2, function( assert ) {
+	QUnit.test( '#save, AbuseFilter warning', 2, function( assert ) {
 		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ),
 			doneSpy = sinon.spy(), failSpy = sinon.spy();
 
@@ -214,7 +214,7 @@
 			edit: {
 				code: "abusefilter-warning-usuwanie-tekstu",
 				info: "Hit AbuseFilter: Usuwanie du\u017cej ilo\u015bci tekstu",
-				warning: "<table id=\"\" class=\"plainlinks fmbox fmbox-warning\" style=\"\">\n<tr>\n<td class=\"mbox-image\">\n  <img alt=\"Nuvola apps important.svg\" src=\"//upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Nuvola_apps_important.svg/35px-Nuvola_apps_important.svg.png\" width=\"35\" height=\"29\" srcset=\"//upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Nuvola_apps_important.svg/53px-Nuvola_apps_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Nuvola_apps_important.svg/70px-Nuvola_apps_important.svg.png 2x\" /></td>\n<td class=\"mbox-text\" style=\"\"> <big><b><a href=\"/wiki/Wikipedia:Filtr_nadu%C5%BCy%C4%87\" title=\"Wikipedia:Filtr nadu\u017cy\u0107\">Filtr nadu\u017cy\u0107</a> zidentyfikowa\u0142 Twoj\u0105 edycj\u0119 jako szkodliw\u0105.</b></big>\n<p>Usuwanie du\u017cej ilo\u015bci tekstu jest potencjalnie szkodliwe, je\u015bli jednak usuwasz np. <a href=\"/wiki/Wikipedia:Wandalizm\" title=\"Wikipedia:Wandalizm\">wandalizm</a> lub tekst \u0142ami\u0105cy <a href=\"/wiki/Wikipedia:Prawa_autorskie\" title=\"Wikipedia:Prawa autorskie\">prawa autorskie</a>, nie kr\u0119puj si\u0119 i naci\u015bnij ponownie przycisk \u201eZapisz\u201d. Miej jednak na uwadze, \u017ce je\u015bli dokonasz niekonstruktywnej edycji, mo\u017ce to poskutkowa\u0107 zablokowaniem Twojego konta lub adresu IP.\n</p>\n<hr />\n<small>W razie w\u0105tpliwo\u015bci mo\u017cesz skontaktowa\u0107 si\u0119 z jednym z <a href=\"/wiki/Wikipedia:Administratorzy\" title=\"Wikipedia:Administratorzy\">administrator\u00f3w</a>.</small> </td>\n\n</tr>\n</table>\n",
+				warning: "horrible desktop-formatted message",
 				result: "Failure"
 			}
 		} ) );
@@ -224,7 +224,89 @@
 
 		editorApi.save().done( doneSpy ).fail( failSpy );
 
-		assert.ok( failSpy.calledWith( { type: 'error', details: 'abusefilter-warning-usuwanie-tekstu' } ), "call fail with code" );
+		assert.ok( failSpy.calledWith( {
+			type: 'abusefilter',
+			details: {
+				type: 'warning',
+				message: "horrible desktop-formatted message"
+			}
+		} ), "call fail with type and message" );
+		assert.ok( !doneSpy.called, "don't call done" );
+	} );
+
+	QUnit.test( '#save, AbuseFilter disallow', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ),
+			doneSpy = sinon.spy(), failSpy = sinon.spy();
+
+		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
+			edit: {
+				code: "abusefilter-disallow",
+				info: "Scary filter",
+				warning: "horrible desktop-formatted message",
+				result: "Failure"
+			}
+		} ) );
+
+		editorApi.getContent();
+		editorApi.setContent( 'section 1' );
+
+		editorApi.save().done( doneSpy ).fail( failSpy );
+
+		assert.ok( failSpy.calledWith( {
+			type: 'abusefilter',
+			details: {
+				type: 'disallow',
+				message: "horrible desktop-formatted message"
+			}
+		} ), "call fail with type and message" );
+		assert.ok( !doneSpy.called, "don't call done" );
+	} );
+
+	QUnit.test( '#save, AbuseFilter other', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ),
+			doneSpy = sinon.spy(), failSpy = sinon.spy();
+
+		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
+			edit: {
+				code: "abusefilter-something",
+				info: "Scary filter",
+				warning: "horrible desktop-formatted message",
+				result: "Failure"
+			}
+		} ) );
+
+		editorApi.getContent();
+		editorApi.setContent( 'section 1' );
+
+		editorApi.save().done( doneSpy ).fail( failSpy );
+
+		assert.ok( failSpy.calledWith( {
+			type: 'abusefilter',
+			details: {
+				type: 'other',
+				message: "horrible desktop-formatted message"
+			}
+		} ), "call fail with type and message" );
+		assert.ok( !doneSpy.called, "don't call done" );
+	} );
+
+	QUnit.test( '#save, extension errors', 2, function( assert ) {
+		var editorApi = new EditorApi( { title: 'test', sectionId: 1 } ),
+			doneSpy = sinon.spy(), failSpy = sinon.spy();
+
+		sinon.stub( editorApi, 'post' ).returns( $.Deferred().resolve( {
+			edit: {
+				code: "testerror",
+				result: "Failure"
+			}
+		} ) );
+
+		editorApi.getContent();
+		editorApi.setContent( 'section 1' );
+
+		editorApi.save().done( doneSpy ).fail( failSpy );
+
+		assert.ok( failSpy.calledWith( { type: 'error', details: 'testerror' } ), "call fail with code" );
 		assert.ok( !doneSpy.called, "don't call done" );
 	} );
 

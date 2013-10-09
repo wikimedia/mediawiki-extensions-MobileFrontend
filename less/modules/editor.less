@@ -66,18 +66,29 @@
 		// hide button bars by default
 		display: none;
 		box-shadow: 0 -10px 10px 0 #fff;
+
+		.message {
+			margin: 0 0 .7em;
+			padding: 0 0 1em;
+			border-bottom: 1px solid #ccc;
+
+			p {
+				display: inline-block;
+				text-align: center;
+				padding-top: 0;
+			}
+		}
 	}
 
 	.initial-bar {
 		display: block;
+	}
+}
 
-		p {
-			display: inline-block;
-			text-align: center;
-			padding-top: 0;
-			margin: 0 0 .7em;
-			border-bottom: 1px solid #ccc;
-		}
+.abusefilter-overlay {
+	// FIXME: enwiki only?
+	.mbox-image {
+		min-width: 30px;
 	}
 }
 

@@ -9,7 +9,7 @@
 </div>
 <div class="position-fixed buttonBar button-bar-centered initial-bar">
 	{{#isNewEditor}}
-	<div><p>{{guiderMsg}}</p></div>
+	<div class="message"><p>{{guiderMsg}}</p></div>
 	{{/isNewEditor}}
 	<button class="cancel inline">{{cancelMsg}}</button>
 	<button class="continue" disabled>{{continueMsg}}</button>
@@ -24,6 +24,13 @@
 	<div class="inputs-box">
 		<img src="">
 		<input class="captcha-word" placeholder="{{captchaMsg}}" />
+	</div>
+	<button class="inline back">{{keepEditingMsg}}</button>
+	<button class="save">{{saveMsg}}</button>
+</div>
+<div class="position-fixed buttonBar button-bar-centered abusefilter-bar">
+	<div class="message">
+		<p></p><button class="readmore inline">{{abusefilterReadMoreMsg}}</button>
 	</div>
 	<button class="inline back">{{keepEditingMsg}}</button>
 	<button class="save">{{saveMsg}}</button>
