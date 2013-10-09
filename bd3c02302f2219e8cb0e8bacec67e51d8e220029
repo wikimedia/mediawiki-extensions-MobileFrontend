@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_81b4c5d0",
+        "filename": "javascripts/loggingSchemas/MobileWebCta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T21:45:45Z",
+      "side": 1,
+      "message": "Why not now? ;)",
+      "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_c1c6bd4b",
+        "filename": "javascripts/loggingSchemas/MobileWebCta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T21:45:45Z",
+      "side": 1,
+      "message": "Maybe I missed that before, but according to our naming conventions, only constructor functions should start with a capital letter.",
+      "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_21deb90e",
+        "filename": "javascripts/modules/keepgoing/KeepGoingDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T21:45:45Z",
+      "side": 1,
+      "message": "this?",
+      "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_61e8b1b6",
+        "filename": "javascripts/modules/keepgoing/keepgoing.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-09T21:45:45Z",
+      "side": 1,
+      "message": "parseInt( M.query.campaign_step, 10 ) + 1 || 1",
+      "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
