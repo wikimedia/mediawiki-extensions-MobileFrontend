@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_81412560",
+        "filename": "javascripts/loggingSchemas/MobileWebCta.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-09T23:10:32Z",
+      "side": 1,
+      "message": "Because I wasn\u0027t sure how to do this in a nice reusable way and didn\u0027t want to risk breaking other things using existing methods until this code was stabilised.",
+      "parentUuid": "0932edd2_81b4c5d0",
+      "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_c1c6bd4b",
         "filename": "javascripts/loggingSchemas/MobileWebCta.js",
         "patchSetId": 2
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_211b1980",
+        "filename": "javascripts/modules/keepgoing/KeepGoingDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-09T23:10:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_21deb90e",
+      "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_61e8b1b6",
         "filename": "javascripts/modules/keepgoing/keepgoing.js",
         "patchSetId": 2
@@ -64,6 +100,24 @@
       "writtenOn": "2013-10-09T21:45:45Z",
       "side": 1,
       "message": "parseInt( M.query.campaign_step, 10 ) + 1 || 1",
+      "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_41200db0",
+        "filename": "javascripts/modules/keepgoing/keepgoing.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-09T23:10:32Z",
+      "side": 1,
+      "message": "doesn\u0027t deal with undefined",
+      "parentUuid": "0932edd2_61e8b1b6",
       "revId": "bd3c02302f2219e8cb0e8bacec67e51d8e220029",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
