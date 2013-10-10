@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_9490824b",
+        "filename": "scripts/cucumber.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-10T16:52:16Z",
+      "side": 1,
+      "message": "I\u0027m confused.. I can\u0027t rebase your patchset and this line above is an old one...",
+      "revId": "23137f29e53607642e1340d6f88adccfffec91db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
