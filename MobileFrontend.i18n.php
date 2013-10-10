@@ -821,9 +821,9 @@ Preceded by {{msg-mw|Mobile-frontend-profile-noargs}}.',
 	'mobile-frontend-profile-last-thanked' => 'Informs about person who last thanked a user on [[Special:UserProfile]].
 
 Parameters:
-* $1 - name of user who thanked
+* $1 - name of user who thanked, can be used for GENDER
 * $2 - title of page for editing which the thank was given
-* $3 - name of user who was thanked, for <nowiki>{{GENDER}}</nowiki>',
+* $3 - (optional) name of user who was thanked, for GENDER support',
 );
 
 /** Achinese (Acèh)
@@ -3389,6 +3389,7 @@ $messages['cy'] = array(
 	'mobile-frontend-profile-usertalk' => 'Edrych ar y dudalen sgwrs.',
 	'mobile-frontend-profile-noargs' => 'Rhowch enw defnyddiwr i weld y data personol.',
 	'mobile-frontend-profile-yours' => 'Ymweld â thudalen eich data personol.',
+	'mobile-frontend-profile-userpage-link' => 'Ymweld â thudalen y defnyddiwr.',
 	'mobile-frontend-profile-user-desc-1' => "Mae'r {{GENDER:$1|defnyddiwr hwn}} yn olygydd newydd.",
 	'mobile-frontend-profile-user-desc-2' => 'Mae ychydig o brofiad gan y {{GENDER:$1|defnyddiwr hwn}}.',
 	'mobile-frontend-profile-user-desc-3' => "Mae'r {{GENDER:$1|defnyddiwr hwn}} yn olygydd toreithiog.",
@@ -3930,7 +3931,7 @@ $messages['de'] = array(
 [[Special:Uploads/$1|{{PLURAL:$3|eine hochgeladene Datei|$3 hochgeladene Dateien}}]] in den letzten 30 Tagen.',
 	'mobile-frontend-profile-last-upload-caption' => 'Letzter Upload von {{GENDER:$1|$1}}, {{PLURAL:$2|gestern|vor $2 Tagen|0=heute}}.',
 	'mobile-frontend-profile-heading-recent' => 'Kürzlich',
-	'mobile-frontend-profile-registration' => '$1 ist {{SITENAME}}-Autor seit {{PLURAL:$2|einem Tag|$2 Tagen}} und hat {{PLURAL:$3|eine Bearbeitung|$3 Bearbeitungen}} durchgeführt.',
+	'mobile-frontend-profile-registration' => '$1 ist {{SITENAME}}-{{GENDER:$1|Autor|Autorin}} seit {{PLURAL:$2|einem Tag|$2 Tagen}} und hat {{PLURAL:$3|eine Bearbeitung|$3 Bearbeitungen}} durchgeführt.',
 	'mobile-frontend-profile-usertalk' => 'Diskussionsseite ansehen.',
 	'mobile-frontend-profile-noargs' => 'Bitte gib einen Benutzernamen an, um ein Profil anzusehen.',
 	'mobile-frontend-profile-yours' => 'Besuche deine Profilseite.',
@@ -5859,7 +5860,7 @@ $messages['fr'] = array(
 [[Special:Uploads/$1|{{PLURAL:$3|1 téléchargement|$3 téléchargements|0=aucun téléchargement|501=plus de 500 téléchargements}}]] durant les 30 derniers jours.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Dernier téléchargement par {{GENDER:$1|$1}}, {{PLURAL:$2|hier|il y a $2 jours|0=aujourd’hui}}.',
 	'mobile-frontend-profile-heading-recent' => 'Récent',
-	'mobile-frontend-profile-registration' => '$1 a contribué à {{SITENAME}} pendant {{PLURAL:$2|$2 jour|$2 jours}} et a fait {{PLURAL:$3|$3 modification|$3 modifications}}.',
+	'mobile-frontend-profile-registration' => '$1 a contribué à {{SITENAME}} pendant {{PLURAL:$2|$2 jour|$2 jours}} et a fait {{PLURAL:$3|$3 modification|$3 modifications}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Afficher la page de discussion.',
 	'mobile-frontend-profile-noargs' => 'Veuillez indiquer un nom d’utilisateur pour afficher un profil.',
 	'mobile-frontend-profile-yours' => 'Visiter votre page de profil.',
@@ -6517,7 +6518,7 @@ $messages['gl'] = array(
 [[Special:Uploads/$1|{{PLURAL:$3|1 carga|$3 cargas|0=ningunha carga|501=máis de 500 cargas}}]] nos últimos 30 días.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'A última carga realizouna {{GENDER:$1|$1}} {{PLURAL:$2|onte|hai $2 días|0=hoxe}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recentes',
-	'mobile-frontend-profile-registration' => '$1 contribúe en {{SITENAME}} desde hai {{PLURAL:$2|$2 día|$2 días}} e realizou {{PLURAL:$3|$3 edición|$3 edicións}}.',
+	'mobile-frontend-profile-registration' => '$1 contribúe en {{SITENAME}} desde hai {{PLURAL:$2|$2 día|$2 días}} e {{GENDER:$1|realizou}} {{PLURAL:$3|$3 edición|$3 edicións}}.',
 	'mobile-frontend-profile-usertalk' => 'Ver a páxina de conversa.',
 	'mobile-frontend-profile-noargs' => 'Indique un nome de usuario para ollar un perfil.',
 	'mobile-frontend-profile-yours' => 'Visite a súa páxina de perfil.',
@@ -8411,7 +8412,7 @@ in tutto il mondo',
 [[Special:Uploads/$1|{{PLURAL:$3|1 caricamento|$3 caricamenti|0=nessun caricamento|501=più di 500 caricamenti}}]] negli ultimi 30 giorni.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Ultimo caricamento di {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|$2 giorni fa|0=oggi}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recenti',
-	'mobile-frontend-profile-registration' => '$1 ha contribuito a {{SITENAME}} per {{PLURAL:$2|$2 giorno|$2 giorni}} ed ha fatto {{PLURAL:$3|$3 modifica|$3 modifiche}}.',
+	'mobile-frontend-profile-registration' => '$1 ha contribuito a {{SITENAME}} per {{PLURAL:$2|$2 giorno|$2 giorni}} ed ha fatto {{PLURAL:$3|$3 modifica|$3 modifiche}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Vedi la pagina di discussione.',
 	'mobile-frontend-profile-noargs' => 'Inserisci un nome utente per vedere un profilo.',
 	'mobile-frontend-profile-yours' => 'Vedi la pagina del tuo profilo.',
@@ -8420,6 +8421,7 @@ in tutto il mondo',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Questo utente}} è un editor piuttosto esperto.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Questo utente}} è un editor prolifico.',
 	'mobile-frontend-requires-optin' => 'Questa pagina non è disponibile se non si opta per la modalità beta. Visita la [[Special:MobileOptions|pagina delle impostazioni]] per scegliere.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Ultimo ringraziamento}} di [[Special:UserProfile/$1|$1]] per una modifica a [[$2]].',
 );
 
 /** Japanese (日本語)
@@ -9500,7 +9502,7 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-title' => '사용자 프로필',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$2|어제|$2일 전에|0=오늘}} {{GENDER:$1|$1}} 사용자가 마지막으로 올렸습니다.',
 	'mobile-frontend-profile-heading-recent' => '최근',
-	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.', # Fuzzy
+	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 {{SITENAME}}의 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.',
 	'mobile-frontend-profile-usertalk' => '토론 문서를 봅니다.',
 	'mobile-frontend-profile-noargs' => '프로필을 보려면 사용자 이름을 제공하세요.',
 	'mobile-frontend-profile-yours' => '내 프로필 페이지를 방문합니다.',
@@ -10909,7 +10911,7 @@ $messages['mk'] = array(
 [[Special:Uploads/$1|{{PLURAL:$3|1 подигање|$3 подигања|0=нема подигања|501=преку 500 подигања}}]] во изминатите 30 дена.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Последно подигање на {{GENDER:$1|$1}}, {{PLURAL:$2|вчера|пред $2 дена|0=денес}}.',
 	'mobile-frontend-profile-heading-recent' => 'Скорешни',
-	'mobile-frontend-profile-registration' => '$1 учествува во {{SITENAME}} веќе {{PLURAL:$2|$2 ден|$2 дена}} и има направено {{PLURAL:$3|$3 уредување|$3 уредувања}}.',
+	'mobile-frontend-profile-registration' => '$1 учествува во {{SITENAME}} веќе {{PLURAL:$2|$2 ден|$2 дена}} и има направено {{PLURAL:$3|$3 уредување|$3 уредувања}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Погл. страницата за разговор',
 	'mobile-frontend-profile-noargs' => 'Наведете корисничко име за да го погледате профилот.',
 	'mobile-frontend-profile-yours' => 'Посетете ја вашата профилна страница.',
@@ -13734,7 +13736,7 @@ din întreaga lume',
 [[Special:Uploads/$1|{{PLURAL:$3|1 încărcare|$3 încărcări|0=nicio încărcare|501=peste 500 de încărcări}}]] în ultimele 30 de zile.',
 	'mobile-frontend-profile-last-upload-caption' => 'Ultima încărcare de către {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=astăzi}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recent',
-	'mobile-frontend-profile-registration' => '$1 a contribuit la {{SITENAME}} pentru {{PLURAL:$2|o zi|$2 zile|$2 de zile}} și a efectuat {{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}.',
+	'mobile-frontend-profile-registration' => '$1 a contribuit la {{SITENAME}} pentru {{PLURAL:$2|o zi|$2 zile|$2 de zile}} și a efectuat {{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Vezi pagina de discuții.',
 	'mobile-frontend-profile-noargs' => 'Furnizați un nume de utilizator pentru a vizualiza un profil.',
 	'mobile-frontend-profile-yours' => 'Vizitați-vă pagina de profil.',
@@ -14564,8 +14566,8 @@ $messages['sl'] = array(
 	'mobile-frontend-diffview-title' => 'Spremembe',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|urejanje|urejanji|urejanja|urejanj}}',
 	'mobile-frontend-diffview-anonymous' => 'Brezimni uporabnik',
-	'mobile-frontend-diffview-bytesadded' => 'dodanih $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}',
-	'mobile-frontend-diffview-bytesremoved' => 'odstranjenih $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}',
+	'mobile-frontend-diffview-bytesadded' => '{{PLURAL:$1|dodan|dodana|dodani|dodanih}} $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}',
+	'mobile-frontend-diffview-bytesremoved' => '{{PLURAL:$1|odstranjen|odstranjena|odstranjeni|odstranjenih}} $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}',
 	'mobile-frontend-diffview-explained' => 'Dodane (+) in odstranjene (-) so bile naslednje vrstice:',
 	'mobile-frontend-thanked-notice' => '$1 ste sporočili, da vam je bilo všeč {{GENDER:$2|njegovo|njeno|njihovo}} urejanje.',
 	'mobile-frontend-table' => 'Tabela $1',
@@ -16191,7 +16193,7 @@ $messages['uk'] = array(
 [[Special:Uploads/$1|{{PLURAL:$3|1 завантаження|$3 завантаження|$3 завантажень|0=Немає завантажень|501=понад 500 завантажень}}]] за останні 30 днів.',
 	'mobile-frontend-profile-last-upload-caption' => 'Останнє завантаження від {{GENDER:$1|$1}}, {{PLURAL:$2|вчора|$2 дні тому|$2 днів тому|0=сьогодні}}.',
 	'mobile-frontend-profile-heading-recent' => 'Останні',
-	'mobile-frontend-profile-registration' => '$1 вже вносить свій внесок на {{SITENAME}} {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і вже зробив {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.',
+	'mobile-frontend-profile-registration' => '$1 вже вносить свій внесок на {{SITENAME}} {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і вже зробив {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'Перегляд сторінки обговорення.',
 	'mobile-frontend-profile-noargs' => "Будь ласка, введіть ім'я користувача, щоб переглянути профіль.",
 	'mobile-frontend-profile-yours' => 'Відвідайте сторінку вашого профілю.',
