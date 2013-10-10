@@ -34,6 +34,24 @@
       "revId": "29d9d3aec1a9ed8dda09c1301e6f0a38d3bc8109",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_92b33597",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-10-10T14:54:29Z",
+      "side": 1,
+      "message": "We could eventually make a \"getContentName()\" static method of ApiResult to allow for that if you want. But I think the approach I outlined is used in a number of other places. You are also welcome to make a better core function to do this :)",
+      "parentUuid": "0932edd2_4dacc6a1",
+      "revId": "29d9d3aec1a9ed8dda09c1301e6f0a38d3bc8109",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
