@@ -16,6 +16,24 @@
       "revId": "78835d825a35d52be5ed209cbc7ad1da74e2317a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d71aff6b",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-10T07:40:53Z",
+      "side": 1,
+      "message": "It\u0027s not that important where it\u0027s used in this English string (just as long as it\u0027s used to make clear it\u0027s there). Having it available in one part of the string, obviously allows it to be used again elsewhere in the same string. At some point someone (I forgot who), started putting GENDER on the verb in English. My personal opinion has always been that it\u0027s less distracting to languages that have less with gender to simply put it on the parameter itself. Not worth bikeshedding over, though, I think.",
+      "parentUuid": "0932edd2_9cfa6eb9",
+      "revId": "78835d825a35d52be5ed209cbc7ad1da74e2317a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
