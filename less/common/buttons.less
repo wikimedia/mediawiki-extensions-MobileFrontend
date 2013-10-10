@@ -10,54 +10,47 @@ input[type=submit] {
 	line-height: 1;
 	cursor: pointer;
 	margin: 0;
-}
+	padding: .8em 1.2em;
+	text-align: center;
+	border: 1px #33589f solid;
+	color: white;
+	.vertical-gradient( #3670C8, @blueBase );
 
-.content, .buttonBar {
-	.button,
-	button,
-	input[type=submit] {
-		padding: .8em 1.2em;
-		text-align: center;
-		border: 1px #33589f solid;
-		.text-with-shadow( white );
-		.vertical-gradient( #3670C8, @blueBase );
+	&:hover {
+		.vertical-gradient( #4c84da, #3f77d7 );
+	}
+
+	&:active {
+		.vertical-gradient( #2d5ea9, #2a549c );
+	}
+
+	&:visited {
+		color: #fff;
+	}
+
+	&:disabled {
+		@disabledColor: lighten( desaturate( #3f77d7, 15% ), 10% );
+		color: lighten( #3f77d7, 30% );;
+		.vertical-gradient( @disabledColor,@disabledColor );
+		border-color: darken( @disabledColor, 5% );
+	}
+
+	&.cancel {
+		background: #777;
+		border: 1px #666 solid;
+	}
+
+	&.inline {
+		display: inline;
+		padding: 0;
+		line-height: inherit;
+		color: #002bb8;
+		background: none;
+		border: none;
+		text-shadow: none;
 
 		&:hover {
-			.vertical-gradient( #4c84da, #3f77d7 );
-		}
-
-		&:active {
-			.vertical-gradient( #2d5ea9, #2a549c );
-		}
-
-		&:visited {
-			color: #fff;
-		}
-
-		&:disabled {
-			@disabledColor: lighten( desaturate( #3f77d7, 15% ), 10% );
-			color: lighten( #3f77d7, 30% );;
-			.vertical-gradient( @disabledColor,@disabledColor );
-			border-color: darken( @disabledColor, 5% );
-		}
-
-		&.cancel {
-			background: #777;
-			border: 1px #666 solid;
-		}
-
-		&.inline {
-			display: inline;
-			padding: 0;
-			line-height: inherit;
-			color: #002bb8;
-			background: none;
-			border: none;
-			text-shadow: none;
-
-			&:hover {
-				text-decoration: underline;
-			}
+			text-decoration: underline;
 		}
 	}
 }
