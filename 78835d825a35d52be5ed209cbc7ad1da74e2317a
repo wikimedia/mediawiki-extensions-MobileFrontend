@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_9cfa6eb9",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-10T00:35:05Z",
+      "side": 1,
+      "message": "should $1 has been contributing have GENDER?\nIt does in example above..",
+      "revId": "78835d825a35d52be5ed209cbc7ad1da74e2317a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
