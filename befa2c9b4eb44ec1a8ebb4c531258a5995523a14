@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_37ba7bbe",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-10T10:27:03Z",
+      "side": 1,
+      "message": "I\u0027ve added Niklas and Santhosh as reviewers.",
+      "parentUuid": "0932edd2_6101916e",
+      "revId": "befa2c9b4eb44ec1a8ebb4c531258a5995523a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_4d0be67e",
         "filename": "includes/skins/SkinMobile.php",
         "patchSetId": 1
