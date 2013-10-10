@@ -423,7 +423,8 @@ class MobileFrontendHooks {
 		$watch = $context->getRequest()->getVal( 'watch' );
 		if ( !is_null( $watch ) ) {
 			$title = Title::newFromText( $watch );
-			if ( !is_null( $title ) ) {
+			// protect against watching special pages (these cannot be watched!)
+			if ( !is_null( $title ) && !$title->isSpecialPage() ) {
 				WatchAction::doWatch( $title, $currentUser );
 			}
 		}
