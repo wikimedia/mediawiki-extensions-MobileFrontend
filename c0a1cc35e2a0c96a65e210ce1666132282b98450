@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_b43ca6e0",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-10T18:04:53Z",
+      "side": 1,
+      "message": "See \"AbuseFilter error codes and MobileFrontend\" @ mobile-tech. We can deal with this later.",
+      "parentUuid": "0932edd2_b46ae6ec",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_d46f5afb",
         "filename": "javascripts/modules/editor/EditorOverlay.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-10-10T17:50:18Z",
       "side": 1,
       "message": "We should standardise on one class. This looks like a bad smell similar to our cancel and close situation.",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d4411a5f",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-10T18:04:53Z",
+      "side": 1,
+      "message": "Why? I don\u0027t get it. Those buttons do two completely different things.",
+      "parentUuid": "0932edd2_d46f5afb",
       "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_140d723e",
+        "filename": "less/common/typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-10T18:04:53Z",
+      "side": 1,
+      "message": "It does. Vibha wanted the content of the AbuseFilter message to have grey background but it\u0027s still a wiki page and needs to be formatted as such so I need to add .content to containing div. Margin causes a white border around it (because it\u0027s a margin and overlay background is white).\n\nThis might change though as I have a suggestion of how we can show those messages differently. I\u0027ll discuss it with Vibha.",
+      "parentUuid": "0932edd2_f4745ed0",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_547c4ab2",
         "filename": "less/modules/editor.less",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2013-10-10T17:50:18Z",
       "side": 1,
       "message": "Use a more generic name then abusefilter and preview please.",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_170e5433",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-10T18:04:53Z",
+      "side": 1,
+      "message": ".preview-and-abusefilter? I understand the need of finding patterns in CSS, but two occurrences are hardly a pattern. I think you\u0027re being overstrict about it lately ;)",
+      "parentUuid": "0932edd2_547c4ab2",
       "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
