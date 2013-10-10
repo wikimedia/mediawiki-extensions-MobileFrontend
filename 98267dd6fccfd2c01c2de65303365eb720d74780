@@ -34,6 +34,24 @@
       "revId": "98267dd6fccfd2c01c2de65303365eb720d74780",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_97108750",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-10T07:38:14Z",
+      "side": 1,
+      "message": "That\u0027s the wrong patch set. It\u0027s https://gerrit.wikimedia.org/r/#/c/88905/. Still: thanks.",
+      "parentUuid": "0932edd2_9c48ae31",
+      "revId": "98267dd6fccfd2c01c2de65303365eb720d74780",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
