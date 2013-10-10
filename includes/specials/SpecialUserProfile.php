@@ -83,13 +83,13 @@ class SpecialUserProfile extends MobileSpecialPage {
 			->numParams( $count, $uploadCount )
 			->parse();
 
+		$lastUploadHtml = $this->getLastUpload();
+		$activityClassName = $lastUploadHtml? 'section section-activity' : 'section section-activity section-end';
 		$html =
-			Html::openElement( 'div', array( 'class' => 'section section-activity' ) ) .
+			Html::openElement( 'div', array( 'class' => $activityClassName ) ) .
 			Html::openElement( 'p', array( 'class' => 'statement' ) ) .
 			$msgContributions .
 			Html::closeElement( 'p' );
-
-		$lastUploadHtml = $this->getLastUpload();
 
 		if ( $lastUploadHtml ) {
 			$html .= $lastUploadHtml;
