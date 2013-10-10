@@ -20,39 +20,32 @@
 
 /* Menu buttons */
 #mw-mf-main-menu-button,
-#secondary-button,
-// FIXME: remove when cache cleared
-#user-button {
+#secondary-button {
 	height: @headerHeight;
 	width: @searchBarPaddingLeft;
 	position: absolute;
 	top: 0;
 }
 
-// FIXME: Remove rule when profiles go to stable
-.stable {
-	.user-button {
-		background: url(images/user-old.png) 50% 50% no-repeat;
-	}
-}
-
 .user-button {
-	background: url(images/user.png) 50% 50% no-repeat;
+	line-height: @headerHeight;
+
+	&:hover {
+		text-decoration: none;
+	}
 
 	span {
-		position: absolute;
-		right: 5px;
-		bottom: 7px;
-		font-size: .8em;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
 		font-weight: bold;
 		color: #fff;
-		line-height: 1;
-		padding: 1px 4px;
+		line-height: 24px;
 		background: #c91f2c;
-		border-radius: 3px;
+		border-radius: 2px;
 
 		&.zero {
-			display: none;
+			background: #cecece;
 		}
 	}
 }
@@ -64,11 +57,8 @@
 	}
 }
 
-#secondary-button,
-// FIXME: remove when cache cleared
-#user-button {
+#secondary-button {
 	right: 0;
-	.background-size( auto, 24px );
 }
 
 /* hamburger */
