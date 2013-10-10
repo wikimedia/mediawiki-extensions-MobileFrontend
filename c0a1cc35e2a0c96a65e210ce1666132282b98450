@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_b46ae6ec",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-10T17:50:18Z",
+      "side": 1,
+      "message": "This seems really horrible. Can we not improve these error messages somehow in AbuseFilter extension itself?",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d46f5afb",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-10T17:50:18Z",
+      "side": 1,
+      "message": "We should standardise on one class. This looks like a bad smell similar to our cancel and close situation.",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f4745ed0",
+        "filename": "less/common/typography.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-10T17:50:18Z",
+      "side": 1,
+      "message": "why...? This doesn\u0027t seem related to AbuseFilter or EditorOverlay",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_547c4ab2",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-10T17:50:18Z",
+      "side": 1,
+      "message": "Use a more generic name then abusefilter and preview please.",
+      "revId": "c0a1cc35e2a0c96a65e210ce1666132282b98450",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
