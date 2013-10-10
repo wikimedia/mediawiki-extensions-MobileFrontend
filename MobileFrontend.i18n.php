@@ -313,6 +313,7 @@ $messages['en'] = array (
 	'mobile-frontend-profile-registration' => '$1 has been contributing to {{SITENAME}} for {{PLURAL:$2|$2 day|$2 days}} and {{GENDER:$1|has made}} {{PLURAL:$3|$3 edit|$3 edits}}.',
 	'mobile-frontend-profile-usertalk' => 'View talk page.',
 	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
+	'mobile-frontend-profile-nouser' => 'Non-existent or invalid username',
 	'mobile-frontend-profile-yours' => 'Visit your profile page.',
 	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|This user}} is a new editor.',
@@ -805,6 +806,10 @@ Parameters:
 * $3 - number of edits the user has made',
 	'mobile-frontend-profile-usertalk' => 'Link label to user talk page.',
 	'mobile-frontend-profile-noargs' => 'Message shown when no user profile URL is specified.
+
+If the user is logged in, this message is followed by:
+* {{msg-mw|Mobile-frontend-profile-yours}}',
+	'mobile-frontend-profile-nouser' => 'Message shown when the username requested is non-existent or invalid.
 
 If the user is logged in, this message is followed by:
 * {{msg-mw|Mobile-frontend-profile-yours}}',
