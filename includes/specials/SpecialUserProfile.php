@@ -139,13 +139,27 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$skin->setTemplateVariable( 'specialPageHeader', $heading );
 	}
 
-	public function getHtmlNoArg() {
+	// FIXME: Change this into 404 error
+	protected function getHtmlNoArg() {
 		$html = Html::element( 'p', array(), $this->msg( 'mobile-frontend-profile-noargs' ) );
 		$user = $this->getUser();
 		if ( $user->isLoggedIn() ) {
 			$profileUrl = SpecialPage::getTitleFor( $this->getName(), $user->getName() )->getLocalURL();
 			$html .= Html::openElement( 'p', array() );
-			$html .= Html::element( 'a', array( 'href' => $profileUrl ), $this->msg( 'mobile-frontend-profile-yours' ) );
+			$html .= Html::element( 'a', array( 'href' => $profileUrl ), $this->msg( 'mobile-frontend-profile-yours' )->plain() );
+			$html .= Html::closeElement( 'p', array() );
+		}
+		return $html;
+	}
+
+	// FIXME: Change this into 404 error (and possibly merge with getHtmlNoArg)
+	protected function getHtmlNoUser() {
+		$html = Html::element( 'p', array(), $this->msg( 'mobile-frontend-profile-nouser' ) );
+		$user = $this->getUser();
+		if ( $user->isLoggedIn() ) {
+			$profileUrl = SpecialPage::getTitleFor( $this->getName(), $user->getName() )->getLocalURL();
+			$html .= Html::openElement( 'p', array() );
+			$html .= Html::element( 'a', array( 'href' => $profileUrl ), $this->msg( 'mobile-frontend-profile-yours' )->plain() );
 			$html .= Html::closeElement( 'p', array() );
 		}
 		return $html;
@@ -167,8 +181,9 @@ class SpecialUserProfile extends MobileSpecialPage {
 			$html = $this->getHtmlBetaAlphaOptIn();
 		} else if ( $par ) {
 			$this->targetUser = User::newFromName( $par );
-			// prepare content
-			if ( $this->targetUser ) {
+			// Make sure this is a valid registered user
+			if ( $this->targetUser->getId() ) {
+				// prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$this->setUserProfileUIElements();
 				$link = Linker::link( $this->targetUser->getUserPage(),
@@ -182,7 +197,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 					. $link
 					. Html::closeElement( 'div' );
 			} else {
-				$html = $this->getHtmlNoArg();
+				$html = $this->getHtmlNoUser();
 			}
 		} else {
 			$html = $this->getHtmlNoArg();
