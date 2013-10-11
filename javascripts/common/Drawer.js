@@ -10,6 +10,7 @@ var View = M.require( 'view' ),
 
 		postRender: function() {
 			var self = this;
+			// FIXME: Standardise on either close or cancel to be consistent with Overlay.js
 			this.$( '.close' ).click( function( ev ) {
 				ev.preventDefault();
 				self.hide();
