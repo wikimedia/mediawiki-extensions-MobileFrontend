@@ -48,7 +48,7 @@
 		 * @return {jQuery.Deferred} Object returned by $.ajax()
 		 */
 		ajax: function( data, options ) {
-			var key, request;
+			var key, request, self = this;
 			options = $.extend( {}, options );
 
 			if (
@@ -65,11 +65,9 @@
 			}
 			options.data = data;
 
-			// FIXME: uncomment when https://bugzilla.wikimedia.org/show_bug.cgi?id=44921 is resolved
-			/*
 			options.xhr = function() {
 				var xhr = $.ajaxSettings.xhr();
-				if ( xhr.upload ) {
+				if ( xhr.upload && ( mw.config.get( 'wgMFAjaxUploadProgressSupport' ) ) ) {
 					// need to bind this event before we open the connection (see note at
 					// https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
 					xhr.upload.addEventListener( 'progress', function( ev ) {
@@ -80,7 +78,6 @@
 				}
 				return xhr;
 			};
-			*/
 
 			request = $.ajax( options );
 			this.requests.push( request );
