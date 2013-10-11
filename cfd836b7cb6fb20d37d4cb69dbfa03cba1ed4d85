@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_9185e90c",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-11T22:00:26Z",
+      "side": 1,
+      "message": "Please make this a member function and use mag() below to pass additional state to l10n.",
+      "revId": "cfd836b7cb6fb20d37d4cb69dbfa03cba1ed4d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_11a1f9a6",
         "filename": "includes/specials/MobileSpecialPage.php",
         "patchSetId": 1
