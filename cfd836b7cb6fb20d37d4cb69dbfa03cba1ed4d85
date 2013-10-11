@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_91ac09a3",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:56:31Z",
+      "side": 1,
+      "message": "Per Manual:Coding_conventions/PHP, new member functions should include doxygen comments.",
+      "revId": "cfd836b7cb6fb20d37d4cb69dbfa03cba1ed4d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_11a1f9a6",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:56:31Z",
+      "side": 1,
+      "message": "Why not just use Html::element? It would be simpler.",
+      "revId": "cfd836b7cb6fb20d37d4cb69dbfa03cba1ed4d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
