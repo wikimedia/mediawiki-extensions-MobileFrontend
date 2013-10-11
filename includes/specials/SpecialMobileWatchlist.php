@@ -390,12 +390,10 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output->addHtml(
 				Html::openElement( 'div', array( 'class' => 'info' ) ) .
 				$msg .
-				Html::openElement( 'div' ) .
 				Html::element( 'a',
 					array( 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ),
 					wfMessage( 'mobile-frontend-watchlist-back-home' )->plain()
 				) .
-				Html::closeElement( 'div' ) .
 				Html::closeElement( 'div' )
 		);
 	}
