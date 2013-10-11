@@ -464,7 +464,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$revId = $row->rc_this_oldid;
 
 		if ( $revId ) {
-			$diffTitle = Title::makeTitle( NS_SPECIAL, 'MobileDiff/' . $revId ); // @fixme this seems lame
+			$diffTitle = SpecialPage::getTitleFor( 'MobileDiff', $revId );
 			$diffLink = $diffTitle->getLocalUrl();
 		} else {
 			// hack -- use full log entry display
