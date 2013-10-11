@@ -36,6 +36,42 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_518c512f",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-11T22:01:33Z",
+      "side": 1,
+      "message": "What is mag?",
+      "parentUuid": "0932edd2_9185e90c",
+      "revId": "cfd836b7cb6fb20d37d4cb69dbfa03cba1ed4d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_71915545",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-11T22:01:33Z",
+      "side": 1,
+      "message": "OK",
+      "parentUuid": "0932edd2_91ac09a3",
+      "revId": "cfd836b7cb6fb20d37d4cb69dbfa03cba1ed4d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_11a1f9a6",
         "filename": "includes/specials/MobileSpecialPage.php",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2013-10-11T21:56:31Z",
       "side": 1,
       "message": "Why not just use Html::element? It would be simpler.",
+      "revId": "cfd836b7cb6fb20d37d4cb69dbfa03cba1ed4d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_3177dd39",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-11T22:01:33Z",
+      "side": 1,
+      "message": "Html::element doesn\u0027t allow HTML as the 3rd argument to my knowledge...",
+      "parentUuid": "0932edd2_11a1f9a6",
       "revId": "cfd836b7cb6fb20d37d4cb69dbfa03cba1ed4d85",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
