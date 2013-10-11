@@ -7,9 +7,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
 
 	private $filter,
-		$seenTitles,
-		$seenDays,
-		$today,
 		$usePageImages,
 		$optionsChanged = false;
 
@@ -311,12 +308,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		wfProfileIn( __METHOD__ );
 
 		$empty = $res->numRows() === 0;
-		$this->seenTitles = array();
-
-		if ( $feed ) {
-			$this->today = $this->day( wfTimestamp() );
-			$this->seenDays = array( $this->today => true );
-		}
 
 		$output = $this->getOutput();
 
@@ -409,10 +400,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		);
 	}
 
-	private function day( $ts ) {
-		return $this->getLanguage()->date( $ts, true );
-	}
-
 	private function renderThumb( $row ) {
 		wfProfileIn( __METHOD__ );
 
@@ -453,11 +440,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
 		$titleText = $title->getPrefixedText();
-		if ( array_key_exists( $titleText, $this->seenTitles ) ) {
-			// todo: skip seen titles and show only the latest?
-			// return;
-		}
-		$this->seenTitles[$titleText] = true;
 
 		$comment = $row->rc_comment;
 		$ts = new MWTimestamp( $row->rc_timestamp );
