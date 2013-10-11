@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_c82419b4",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-11T06:15:08Z",
+      "side": 1,
+      "message": "Many msg() calls in this file have no output mode specified. They should. See https://www.mediawiki.org/wiki/Manual:Messages_API#Output_modes_and_escaping for details.",
+      "revId": "6f4c44c7f5317dc9d79dbab2a94f56a83e8f5471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_e839ddd6",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-11T06:15:08Z",
+      "side": 1,
+      "message": "Many msg() calls in this file have no output mode specified. They should. See https://www.mediawiki.org/wiki/Manual:Messages_API#Output_modes_and_escaping for details.",
+      "revId": "6f4c44c7f5317dc9d79dbab2a94f56a83e8f5471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_083711e3",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-11T06:15:08Z",
+      "side": 1,
+      "message": "Many msg() calls in this file have no output mode specified. They should. See https://www.mediawiki.org/wiki/Manual:Messages_API#Output_modes_and_escaping for details.",
+      "revId": "6f4c44c7f5317dc9d79dbab2a94f56a83e8f5471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_483109eb",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-11T06:15:08Z",
+      "side": 1,
+      "message": "Many msg() calls in this file have no output mode specified. They should. See https://www.mediawiki.org/wiki/Manual:Messages_API#Output_modes_and_escaping for details.",
+      "revId": "6f4c44c7f5317dc9d79dbab2a94f56a83e8f5471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_2834d5db",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-11T06:15:08Z",
+      "side": 1,
+      "message": "Many msg() calls in this file have no output mode specified. They should. See https://www.mediawiki.org/wiki/Manual:Messages_API#Output_modes_and_escaping for details.",
+      "revId": "6f4c44c7f5317dc9d79dbab2a94f56a83e8f5471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_a81fe556",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-11T06:15:08Z",
+      "side": 1,
+      "message": "Many msg() calls in this file have no output mode specified. They should. See https://www.mediawiki.org/wiki/Manual:Messages_API#Output_modes_and_escaping for details.",
+      "revId": "6f4c44c7f5317dc9d79dbab2a94f56a83e8f5471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
