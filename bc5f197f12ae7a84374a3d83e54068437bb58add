@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_7e9be415",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-11T20:10:34Z",
+      "side": 1,
+      "message": "Isn\u0027t this unnecessary due to its later use in Html::element  ?",
+      "revId": "bc5f197f12ae7a84374a3d83e54068437bb58add",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_9ea09848",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-11T20:10:34Z",
+      "side": 1,
+      "message": "Why the -\u003eplain()",
+      "revId": "bc5f197f12ae7a84374a3d83e54068437bb58add",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
