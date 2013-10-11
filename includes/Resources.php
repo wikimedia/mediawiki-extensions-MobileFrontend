@@ -379,6 +379,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/mf-translator.js',
 			'javascripts/modules/lazyload.js',
 			// Do not put in mobile.nearby until promoted to stable
+			// FIXME: when out of alpha, load nearby files dynamically
 			'javascripts/modules/nearby/NearbyOverlay.js',
 			'javascripts/modules/nearbypages.js',
 			'javascripts/modules/mediaViewer.js',

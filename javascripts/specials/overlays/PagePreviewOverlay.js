@@ -1,20 +1,51 @@
+// FIXME: Move this file somewhere more logical
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 	var Overlay = M.require( 'Overlay' ),
+		api = M.require( 'api' ),
 		ua = window.navigator.userAgent,
 		device = 'unknown',
 		Page = M.require( 'Page' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		PagePreviewOverlay = Overlay.extend( {
+			closeOnBack: true,
 			template: M.template.get( 'overlays/pagePreview' ),
 			initialize: function( options ) {
-				var self = this, loader = new LoadingOverlay();
+				var self = this, loader = new LoadingOverlay(),
+					endpoint = options.endpoint;
 				this._super( options );
 				loader.show();
 				M.pageApi.getPage( options.title, options.endpoint, true ).done( function( page ) {
 					options.page = new Page( page );
-					loader.hide();
-					self.render( options ).show();
+					// FIXME [API]: This additional ajax request should be unnecessary.
+					api.get( {
+							action : 'query',
+							prop: 'pageimages',
+							piprop: 'thumbnail',
+							// keep consistent with Special:Watchlist::THUMB_SIZE
+							pithumbsize: 150,
+							titles: options.title
+						}, {
+							url: endpoint, dataType: endpoint ? 'jsonp' : 'json'
+						} ).done( function ( resp ) {
+							var thumb;
+							// FIXME [API] more terrible MediaWiki API fun
+							if ( resp.query && resp.query.pages ) {
+								thumb = $.map( resp.query.pages, function( page ) {
+									return page;
+								} )[0].thumbnail;
+								if ( thumb ) {
+									options.imageUrl = thumb.source;
+									options.imgClass = thumb.width > thumb.height ? 'listThumbH' : 'listThumbW';
+								} else {
+									options.imgClass = 'needsPhoto';
+								}
+							} else {
+								options.imgClass = 'needsPhoto';
+							}
+							loader.hide();
+							self.render( options ).show();
+						} );
 				} ).fail( function() {
 					loader.hide(); // FIXME: do something more meaningful e.g. error overlay
 				} );
@@ -77,4 +108,12 @@
 	}
 
 	M.define( 'PagePreviewOverlay', PagePreviewOverlay );
+	M.router.route( /^preview\/(.*)\/(.*)$/, function( latLngString, title ) {
+		// FIXME: API doesn't return pageimage or longitude latitude properties (yet)
+		new PagePreviewOverlay( {
+			title: title,
+			latLngString: latLngString,
+			endpoint: mw.config.get( 'wgMFNearbyEndpoint' )
+		} );
+	} );
 }( mw.mobileFrontend, jQuery ) );
