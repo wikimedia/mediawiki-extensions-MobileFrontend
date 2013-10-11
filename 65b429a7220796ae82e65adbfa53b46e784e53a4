@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_5d446db9",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-11T00:02:31Z",
+      "side": 1,
+      "message": "Why public?",
+      "revId": "65b429a7220796ae82e65adbfa53b46e784e53a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_7d1131ae",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-11T00:02:31Z",
+      "side": 1,
+      "message": "Why not make the link in message wikitext?",
+      "revId": "65b429a7220796ae82e65adbfa53b46e784e53a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
