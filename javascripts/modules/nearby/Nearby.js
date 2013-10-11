@@ -1,6 +1,7 @@
 ( function( M, $ ) {
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		View = M.require( 'view' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		wgMFMode = mw.config.get( 'wgMFMode' ),
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		loader = new LoadingOverlay(),
@@ -73,6 +74,7 @@
 			if ( options.location ) {
 				this.location = options.location;
 			}
+			this.source = options.source || 'nearby';
 			this.api = new NearbyApi();
 			this._super( options );
 		},
@@ -105,7 +107,9 @@
 		_postRenderLinks: function() {
 			var self = this;
 			this.$( 'a' ).on( 'click', function( ev ) {
-				var $a = $( ev.currentTarget );
+				var $a = $( ev.currentTarget ),
+					title = $a.find( 'h2' ).text();
+
 				// name funnel for watchlists to catch subsequent uploads
 				$.cookie( 'mwUploadsFunnel', 'nearby', { expires: new Date( new Date().getTime() + 60000) } );
 				// Note router support required for page previews in beta
@@ -115,11 +119,12 @@
 					ev.preventDefault();
 
 					// Trigger preview mode ensure preview code has fully loaded first!
+					MobileWebClickTracking.log( self.source + '-preview', title );
 					loader.show();
 					mw.loader.using( 'mobile.nearby.beta', function() {
 						loader.hide();
 						// FIXME: [API] should be able to determine longitude/latitude from title
-						window.location.hash = '#preview/' + $a.data( 'latlng' ) + '/' + $a.find( 'h2' ).text();
+						window.location.hash = '#preview/' + self.source + '/' + $a.data( 'latlng' ) + '/' + $a.find( 'h2' ).text();
 					} );
 				}
 			} );

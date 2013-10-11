@@ -1,5 +1,6 @@
 ( function( M, $ ) {
 	var latLng, lat, lng,
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		overlay;
 
 	function initNearbyButton( title, latitude, longitude ) {
@@ -7,7 +8,8 @@
 			mw.loader.using( 'mobile.nearby.beta', function() {
 				var NearbyOverlay = M.require( 'modules/nearby/NearbyOverlay' );
 				if ( !overlay ) {
-					overlay = new NearbyOverlay( { title: title, latitude: latitude, longitude: longitude } );
+					MobileWebClickTracking.log( 'geonotahack-clicked' );
+					overlay = new NearbyOverlay( { title: title, latitude: latitude, longitude: longitude, source: 'geonotahack' } );
 				}
 				overlay.show();
 			} );

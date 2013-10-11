@@ -22,6 +22,7 @@
 
 				this._super( options );
 				widget = new Nearby( {
+					source: options.source,
 					range: 2000,
 					parentOverlay: this,
 					location: { longitude: options.longitude, latitude: options.latitude },
