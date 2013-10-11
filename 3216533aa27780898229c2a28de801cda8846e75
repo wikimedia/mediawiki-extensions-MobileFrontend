@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_b1766d9e",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-11T21:05:01Z",
+      "side": 1,
+      "message": "This variable is not used anywhere.",
+      "revId": "3216533aa27780898229c2a28de801cda8846e75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
