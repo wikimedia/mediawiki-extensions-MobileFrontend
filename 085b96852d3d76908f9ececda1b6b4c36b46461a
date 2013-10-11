@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_7b2a1681",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:44:52Z",
+      "side": 1,
+      "message": "Is this for every instance of Naerby? Probably should be in initialize.\n\nI actually made a small test and this would work because strings in JS are immutable. But let\u0027s keep it safe and not write it like this. This code illustrates what I mean:\n\n\tvar Test \u003d Class.extend( {\n\t\ttest: {},\n\n\t\tinitialize: function( arg ) {\n\t\t\tthis.test.arg \u003d arg;\n\t\t}\n\t} );\n\n\tvar a \u003d new Test( \u0027a\u0027 );\n\tvar b \u003d new Test( \u0027b\u0027 );\n\n\tconsole.log( a.test.arg ); // prints \u0027b\u0027\n\nThis produces expected behaviour:\n\n\tvar Test \u003d Class.extend( {\n\t\tinitialize: function( arg ) {\n\t\t\tthis.test \u003d {\n\t\t\t\targ: arg\n\t\t\t};\n\t\t}\n\t} );\n\n\tvar a \u003d new Test( \u0027a\u0027 );\n\tvar b \u003d new Test( \u0027b\u0027 );\n\n\tconsole.log( a.test.arg ); // prints \u0027a\u0027",
+      "revId": "085b96852d3d76908f9ececda1b6b4c36b46461a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_9b1fca57",
+        "filename": "javascripts/modules/nearby/Nearby.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:44:52Z",
+      "side": 1,
+      "message": "this.source \u003d options.source || \u0027nearby\u0027;",
+      "revId": "085b96852d3d76908f9ececda1b6b4c36b46461a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_fb92869d",
+        "filename": "javascripts/specials/overlays/PagePreviewOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:44:52Z",
+      "side": 1,
+      "message": "Why don\u0027t we do it in PagePreviewOverlay#postRender?",
+      "revId": "085b96852d3d76908f9ececda1b6b4c36b46461a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
