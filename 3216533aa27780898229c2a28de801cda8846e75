@@ -16,6 +16,24 @@
       "revId": "3216533aa27780898229c2a28de801cda8846e75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f168e5bc",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-11T21:06:22Z",
+      "side": 1,
+      "message": "argg the change that added it to the skin isn\u0027t here. Well spotted - I\u0027ll update :)",
+      "parentUuid": "0932edd2_b1766d9e",
+      "revId": "3216533aa27780898229c2a28de801cda8846e75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
