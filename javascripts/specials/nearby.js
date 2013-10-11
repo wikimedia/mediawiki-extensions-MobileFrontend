@@ -43,7 +43,7 @@ $( function() {
 		$userBtn.remove();
 	}
 	// FIXME: i18n
-	btn = $( '<button class="refresh">' ).on( 'click', refresh ).appendTo( '.header' );
+	btn = $( '<button class="refresh" id="secondary-button">' ).on( 'click', refresh ).appendTo( '.header' );
 } );
 
 }( mw.mobileFrontend, jQuery ) );
