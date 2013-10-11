@@ -2777,6 +2777,7 @@ $messages['ce'] = array(
 	'mobile-frontend-regular-site' => 'Хьажа гуттаралера Википеди агlоне', # Fuzzy
 	'mobile-frontend-wml-continue' => 'Кхин дӀа ...',
 	'mobile-frontend-view' => 'Мобильни верси',
+	'mobile-frontend-missing-image' => 'Сурт',
 	'mobile-frontend-featured-article' => 'Хаьржина яззам', # Fuzzy
 	'mobile-frontend-language' => 'Мотт:',
 	'mobile-frontend-language-site-choose' => 'Лаха мотт',
@@ -5856,11 +5857,11 @@ $messages['fr'] = array(
 	'mobile-frontend-media-details' => 'Détails',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un utilisateur est ou non en cours de modification via l’interface mobile',
 	'mobile-frontend-profile-title' => 'Profil utilisateur',
-	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modification|$2 modifications|0=Aucune modification|501=Plus de 500 modifications}}]] et
-[[Special:Uploads/$1|{{PLURAL:$3|1 téléchargement|$3 téléchargements|0=aucun téléchargement|501=plus de 500 téléchargements}}]] durant les 30 derniers jours.', # Fuzzy
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modification|$2 modifications|0=Aucune modification}}]] et
+[[Special:Uploads/$1|{{PLURAL:$3|1 téléchargement|$3 téléchargements|0=aucun téléchargement}}]] durant les 30 derniers jours.',
 	'mobile-frontend-profile-last-upload-caption' => 'Dernier téléchargement par {{GENDER:$1|$1}}, {{PLURAL:$2|hier|il y a $2 jours|0=aujourd’hui}}.',
 	'mobile-frontend-profile-heading-recent' => 'Récent',
-	'mobile-frontend-profile-registration' => '$1 a contribué à {{SITENAME}} pendant {{PLURAL:$2|$2 jour|$2 jours}} et a fait {{PLURAL:$3|$3 modification|$3 modifications}}.', # Fuzzy
+	'mobile-frontend-profile-registration' => '$1 a contribué à {{SITENAME}} pendant {{PLURAL:$2|$2 jour|$2 jours}} et {{GENDER:$1|a fait}} {{PLURAL:$3|$3 modification|$3 modifications}}.',
 	'mobile-frontend-profile-usertalk' => 'Afficher la page de discussion.',
 	'mobile-frontend-profile-noargs' => 'Veuillez indiquer un nom d’utilisateur pour afficher un profil.',
 	'mobile-frontend-profile-yours' => 'Visiter votre page de profil.',
@@ -8412,7 +8413,7 @@ in tutto il mondo',
 [[Special:Uploads/$1|{{PLURAL:$3|1 caricamento|$3 caricamenti|0=nessun caricamento|501=più di 500 caricamenti}}]] negli ultimi 30 giorni.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Ultimo caricamento di {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|$2 giorni fa|0=oggi}}.',
 	'mobile-frontend-profile-heading-recent' => 'Recenti',
-	'mobile-frontend-profile-registration' => '$1 ha contribuito a {{SITENAME}} per {{PLURAL:$2|$2 giorno|$2 giorni}} ed ha fatto {{PLURAL:$3|$3 modifica|$3 modifiche}}.', # Fuzzy
+	'mobile-frontend-profile-registration' => '$1 ha contribuito a {{SITENAME}} per {{PLURAL:$2|$2 giorno|$2 giorni}} ed {{GENDER:$1|ha fatto}} {{PLURAL:$3|$3 modifica|$3 modifiche}}.',
 	'mobile-frontend-profile-usertalk' => 'Vedi la pagina di discussione.',
 	'mobile-frontend-profile-noargs' => 'Inserisci un nome utente per vedere un profilo.',
 	'mobile-frontend-profile-yours' => 'Vedi la pagina del tuo profilo.',
@@ -12093,6 +12094,7 @@ $messages['ne'] = array(
  * @author SPQRobin
  * @author Saruman
  * @author Siebrand
+ * @author Sjoerddebruin
  * @author Southparkfan
  * @author User555
  * @author Wiki13
@@ -12117,8 +12119,8 @@ $messages['nl'] = array(
 	'mobile-frontend-back-to-top-of-section' => 'Een kopje terugspringen',
 	'mobile-frontend-close-section' => 'Deze paragraaf sluiten',
 	'mobile-frontend-regular-site' => 'Standaardweergave',
-	'mobile-frontend-wml-continue' => 'Doorgaan ...',
-	'mobile-frontend-wml-back' => 'Terug ...',
+	'mobile-frontend-wml-continue' => 'Doorgaan...',
+	'mobile-frontend-wml-back' => 'Terug...',
 	'mobile-frontend-view' => 'Mobiele weergave',
 	'mobile-frontend-view-desktop' => 'Desktopweergave',
 	'mobile-frontend-view-mobile' => 'Mobiele weergave',
@@ -12142,6 +12144,7 @@ $messages['nl'] = array(
 	'mobile-frontend-username-placeholder' => 'Gebruikersnaam',
 	'mobile-frontend-password-placeholder' => 'Wachtwoord',
 	'mobile-frontend-login' => 'Aanmelden',
+	'mobile-frontend-history' => 'Bekijk bewerkingsgeschiedenis van deze pagina.',
 	'mobile-frontend-last-modified-date' => 'Gewijzigd op $1 om $2',
 	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|Eén seconde|$1 seconden}} geleden gewijzigd',
 	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|Eén minuut|$1 minuten}} geleden gewijzigd',
@@ -12204,6 +12207,7 @@ $messages['nl'] = array(
 	'mobile-frontend-nearby-error-guidance' => 'Probeer uw locatie bij te werken.',
 	'mobile-frontend-nearby-link' => 'Volledige pagina lezen',
 	'mobile-frontend-nearby-directions' => 'Routebeschrijving hierheen',
+	'mobile-frontend-donate-image-nouploads' => 'Geen uploads',
 	'mobile-frontend-donate-image-login' => 'U moet aangemeld zijn om uw uploads te bekijken.',
 	'mobile-frontend-photo-upload-disabled' => 'Er is geen afbeelding nodig voor deze pagina.',
 	'mobile-frontend-photo-upload-anon' => 'U moet aangemeld zijn om een afbeelding te kunnen toevoegen aan deze pagina.',
@@ -12294,6 +12298,7 @@ $messages['nl'] = array(
 	'mobile-frontend-photo-upload-cta' => 'Meld u aan of registreer u om een afbeelding toe te voegen.',
 	'mobile-frontend-photo-upload-login' => 'U moet aangemeld zijn om een afbeelding te kunnen toevoegen.',
 	'mobile-frontend-editor-undo-unsupported' => 'Ongedaan maken is op het moment niet mogelijk op mobiele apparaten.',
+	'mobile-frontend-editor-newpage-prompt' => 'Deze pagina bestaat niet. Waarom maak je hem niet aan?',
 	'mobile-frontend-editor-disabled' => 'U mag deze pagina niet bewerken.',
 	'mobile-frontend-editor-unavailable' => 'Mobiel bewerken is op dit moment niet beschikbaar met uw browser. Probeer een andere browser.',
 	'mobile-frontend-editor-cta' => "U moet aangemeld zijn op pagina's via de mobiele site te bewerken.",
@@ -12315,12 +12320,15 @@ $messages['nl'] = array(
 	'mobile-frontend-editor-error-loading' => 'Er is een fout opgetreden. De paragraaf kan niet geladen worden.',
 	'mobile-frontend-editor-preview-header' => 'Voorvertoning',
 	'mobile-frontend-editor-error-preview' => 'Fout. Er is iets onverwachts gebeurd tijdens het laden van de voorvertoning. Sluit dit venster en probeer het opnieuw.',
+	'mobile-frontend-editor-tutorial-confirm' => 'Begin met bewerken',
+	'mobile-frontend-editor-captcha-try-again' => 'Verkeerde code, probeer het opnieuw.',
 	'tag-mobile_edit' => 'Bewerking via mobiel',
 	'tag-mobile_edit-description' => 'Bewerking gemaakt via mobiele site',
 	'mobile-frontend-drawer-cancel' => 'Annuleren',
 	'mobile-frontend-talk-explained' => 'Op dit moment worden de volgende overleggen gevoerd',
 	'mobile-frontend-talk-explained-empty' => 'Er zijn geen overleggen op deze pagina.',
 	'mobile-frontend-talk-overlay-header' => 'Overleg',
+	'mobile-frontend-talk-back-to-page' => 'Terugkeren naar "$1"-pagina.',
 	'mobile-frontend-talk-overlay-lead-header' => 'Naamloos overleg',
 	'mobile-frontend-talk-add-overlay-submit' => 'Onderwerp toevoegen',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Onderwerp',
@@ -12329,9 +12337,15 @@ $messages['nl'] = array(
 	'mobile-frontend-talk-reply-success' => 'Uw antwoord is opgeslagen op de overlegpagina.',
 	'mobile-frontend-talk-reply-info' => 'Uw antwoord wordt automatisch ondertekend met uw gebruikersnaam.',
 	'mobile-frontend-talk-reply' => 'Antwoorden',
+	'mobile-frontend-media-details' => 'Details',
+	'mobile-frontend-profile-title' => 'Gebruikersprofiel',
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 bewerking|$2 bewerkingen|0=Geen bewerkingen|501=Meer dan 500 bewerkingen}}]] en
 [[Special:Uploads/$1|{{PLURAL:$3|1 upload|$3 uploads|0=geen uploads|501=meer dan 500 uploads}}]] in de afgelopen 30 dagen.', # Fuzzy
+	'mobile-frontend-profile-heading-recent' => 'Recent',
+	'mobile-frontend-profile-usertalk' => 'Overlegpagina weergeven.',
+	'mobile-frontend-profile-yours' => 'Je profielpagina bezoeken.',
 	'mobile-frontend-profile-userpage-link' => 'Gebruikerspagina bekijken.',
+	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Deze gebruiker}} is een nieuw op Wikipedia.',
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -13278,7 +13292,7 @@ $messages['pt'] = array(
 	'mobile-frontend-logged-out' => 'Não autenticado',
 	'mobile-frontend-settings-description' => 'Personalize o comportamento do seu dispositivo móvel com estas configurações específicas para o site móvel.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-save-settings' => 'Salvar',
+	'mobile-frontend-save-settings' => 'Gravar',
 	'mobile-frontend-random-button' => 'Aleatório',
 	'mobile-frontend-back-to-top-of-section' => 'Retroceder uma seção',
 	'mobile-frontend-close-section' => 'Fechar esta seção',
@@ -16193,7 +16207,7 @@ $messages['uk'] = array(
 [[Special:Uploads/$1|{{PLURAL:$3|1 завантаження|$3 завантаження|$3 завантажень|0=Немає завантажень|501=понад 500 завантажень}}]] за останні 30 днів.',
 	'mobile-frontend-profile-last-upload-caption' => 'Останнє завантаження від {{GENDER:$1|$1}}, {{PLURAL:$2|вчора|$2 дні тому|$2 днів тому|0=сьогодні}}.',
 	'mobile-frontend-profile-heading-recent' => 'Останні',
-	'mobile-frontend-profile-registration' => '$1 вже вносить свій внесок на {{SITENAME}} {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і вже зробив {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.', # Fuzzy
+	'mobile-frontend-profile-registration' => '$1 вже вносить свій внесок на {{SITENAME}} {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і {{GENDER:$1|вже зробив|вже зробила}} {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.',
 	'mobile-frontend-profile-usertalk' => 'Перегляд сторінки обговорення.',
 	'mobile-frontend-profile-noargs' => "Будь ласка, введіть ім'я користувача, щоб переглянути профіль.",
 	'mobile-frontend-profile-yours' => 'Відвідайте сторінку вашого профілю.',
