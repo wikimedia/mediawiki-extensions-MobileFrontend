@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_b1a74d0d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 328,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-11T21:12:53Z",
+      "side": 1,
+      "message": "1) boolean parameters are strongly discouraged per https://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Functions_and_parameters\n2) spacing\n3) casing - False should be lowercase",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
