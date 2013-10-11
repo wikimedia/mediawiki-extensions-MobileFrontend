@@ -64,6 +64,7 @@ $autoloadClasses = array (
 
 	'SpecialUploads' => 'specials/SpecialUploads',
 	'SpecialUserProfile' => 'specials/SpecialUserProfile',
+	'SpecialHistory' => 'specials/SpecialHistory',
 	'SpecialMobileUserlogin' => 'specials/SpecialMobileUserlogin',
 	'SpecialMobileDiff' => 'specials/SpecialMobileDiff',
 	'SpecialMobileOptions' => 'specials/SpecialMobileOptions',
@@ -72,6 +73,7 @@ $autoloadClasses = array (
 	'SpecialNearby' => 'specials/SpecialNearby',
 	'SpecialMobileNotifications' => 'specials/SpecialMobileNotifications',
 	'MobileSpecialPage' => 'specials/MobileSpecialPage',
+	'MobileSpecialPageFeed' => 'specials/MobileSpecialPageFeed',
 
 	'MinervaTemplate' => 'skins/MinervaTemplate',
 	'MobileTemplate' => 'skins/MobileTemplate',

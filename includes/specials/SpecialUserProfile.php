@@ -1,6 +1,8 @@
 <?php
 
 class SpecialUserProfile extends MobileSpecialPage {
+	protected $mode = 'beta';
+
 	/**
 	 * @var User
 	 */
@@ -171,21 +173,12 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $html;
 	}
 
-	public function getHtmlBetaAlphaOptIn() {
-		return Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
-			$this->msg( 'mobile-frontend-requires-optin' )->parse() .
-			Html::closeElement( 'div' );
-	}
-
-	public function execute( $par = '' ) {
+	public function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
 		$this->addModules();
 		$out->setPageTitle( $this->msg( 'mobile-frontend-profile-title' ) );
-		$ctx = MobileContext::singleton();
-		if ( !$ctx->isBetaGroupMember() ) {
-			$html = $this->getHtmlBetaAlphaOptIn();
-		} else if ( $par ) {
+		if ( $par ) {
 			$this->targetUser = User::newFromName( $par );
 			// Make sure this is a valid registered user
 			if ( $this->targetUser->getId() ) {
