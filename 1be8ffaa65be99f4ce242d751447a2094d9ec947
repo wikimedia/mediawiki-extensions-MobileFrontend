@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_491d8bb9",
+        "filename": "includes/skins/MobileTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:30:22Z",
+      "side": 1,
+      "message": "#page-secondary-actions?",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_c9897bee",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:30:22Z",
+      "side": 1,
+      "message": "Load dynamically instead, when the icon is clicked.",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_49766b05",
+        "filename": "javascripts/modules/nearbypages.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:30:22Z",
+      "side": 1,
+      "message": "So do we call it nearby or not? Why do we use the same message?",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_e9571f55",
+        "filename": "less/common/buttons.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:30:22Z",
+      "side": 1,
+      "message": "Why is this necessary? What button requires it?",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_69496f8f",
+        "filename": "less/common/secondarypageactions.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T18:30:22Z",
+      "side": 1,
+      "message": "Why would inline-block cause that?",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
