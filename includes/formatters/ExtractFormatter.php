@@ -23,9 +23,7 @@ class ExtractFormatter extends HtmlFormatter {
 		$this->setRemoveMedia( true );
 		$this->remove( $wgMFRemovableClasses['base'] );
 		$this->remove( $wgMFRemovableClasses['extracts'] );
-		$this->remove( array( 'table', 'div', '.editsection', '.mw-editsection', 'sup.reference', 'span.coordinates',
-				'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error' )
-		);
+
 		if ( $plainText ) {
 			$this->flattenAllTags();
 		} else {
