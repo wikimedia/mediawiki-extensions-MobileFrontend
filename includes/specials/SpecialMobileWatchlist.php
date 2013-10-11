@@ -63,6 +63,34 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	}
 
 	/**
+	 * Returns an array of conditions restricting namespace in queries
+	 * @param string $column
+	 *
+	 * @return array
+	 */
+	protected function getNSConditions( $column ) {
+		$conds = array();
+		switch( $this->filter ) {
+			case 'all':
+				// no-op
+				break;
+			case 'articles':
+				// @fixme content namespaces
+				$conds[] = "$column = 0"; // Has to be unquoted or MySQL will filesort for wl_namespace
+				break;
+			case 'talk':
+				// @fixme associate with content namespaces? or all talks?
+				$conds[] = "$column = 1";
+				break;
+			case 'other':
+				// @fixme
+				$conds[] = "$column IN (2, 4)";
+				break;
+		}
+		return $conds;
+	}
+
+	/**
 	 * Add thumbs to a query, if installed and other preconditions are met
 	 *
 	 * @param array $tables
@@ -173,7 +201,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
 
 		# Possible where conditions
-		$conds = array();
+		$conds = $this->getNSConditions( 'rc_namespace' );
 
 		// snip....
 
@@ -203,24 +231,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			}
 		}
 
-		switch( $this->filter ) {
-		case 'all':
-			// no-op
-			break;
-		case 'articles':
-			// @fixme content namespaces
-			$conds['rc_namespace'] = 0;
-			break;
-		case 'talk':
-			// @fixme associate with content namespaces? or all talks?
-			$conds['rc_namespace'] = 1;
-			break;
-		case 'other':
-			// @fixme
-			$conds['rc_namespace'] = array(2, 4);
-			break;
-		}
-
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $options, '' );
 		$values = array();
 		wfRunHooks( 'SpecialWatchlistQuery', array( &$conds, &$tables, &$join_conds, &$fields, &$values ) );
@@ -240,9 +250,8 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$dbr = wfGetDB( DB_SLAVE, 'watchlist' );
 
 		# Possible where conditions
-		$conds = array(
-			'wl_user' => $user->getId()
-		);
+		$conds = $this->getNSConditions( 'wl_namespace' );
+		$conds['wl_user'] = $user->getId();
 		$tables = array( 'watchlist', 'page', 'revision' );
 		$fields = array(
 			$dbr->tableName( 'watchlist' ) . '.*',
@@ -266,20 +275,6 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$this->doPageImages( $tables, $fields, $joinConds, 'page' );
 
 		$options['LIMIT'] = self::LIMIT + 1; // add one to decide whether to show the more button
-
-		switch( $this->filter ) {
-		case 'all':
-			break;
-		case 'articles':
-			$conds[] = 'wl_namespace = 0'; // Has to be unquoted or MySQL will filesort
-			break;
-		case 'talk':
-			$conds[] = 'wl_namespace = 1';
-			break;
-		case 'other':
-			$conds['wl_namespace'] = array(2, 4);
-			break;
-		}
 
 		if ( $this->fromPageTitle ) {
 			$ns = $this->fromPageTitle->getNamespace();
