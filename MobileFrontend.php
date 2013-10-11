@@ -258,8 +258,8 @@ $wgMFRemovableClasses = array(
 	),
 	// Text extracts
 	'extracts' => array(
-		// FIXME: remove .mw-editsection when SkinMobile::doEditSectionLink present in cached pages
-		'table', 'div', '.mw-editsection', 'sup.reference', '.noexcerpt', '.error', '.nomobile'
+		'table', 'div', '.mw-editsection', 'sup.reference', 'span.coordinates',
+		'span.geo-multi-punct', 'span.geo-nondefault', '.noexcerpt', '.error', '.nomobile'
 	),
 );
 
