@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_09c5538f",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T17:45:26Z",
+      "side": 1,
+      "message": "Maybe it should be back in ui.less for #secondary-button? Why didn\u0027t this break the nearby refresh button?",
+      "revId": "a9edcd443badf586f2f65442cbd1129d43e1213b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
