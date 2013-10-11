@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_e9de3f69",
+        "filename": "scripts/cucumber.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-11T17:42:07Z",
+      "side": 1,
+      "message": "This is wrong. It will install all the dependencies in the global gemset instead of the MobileFrontend gemset. It\u0027s like an equivalent of doing npm install -g instead of installing locally. We need to somehow trigger rvm gemset use \u003cgemset from Gemfile\u003e.",
+      "revId": "1d9494405efee00f790bb3ed8d27619598638a90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
