@@ -59,7 +59,7 @@ class MobileFormatterWML extends MobileFormatter {
 		$card .= "<card id='s{$idx}' title='{$title}'><p>{$segmentText}</p>";
 		$idx = intval( $requestedSegment ) + 1;
 		$segmentsCount = $this->wmlContext->getOnlyThisSegment()
-			? $idx + 1 // @todo: when using from API we don't have the total section count
+			? $idx + 1
 			: count( $segments );
 		$card .= "<p>" . $idx . "/" . $segmentsCount . "</p>";
 
