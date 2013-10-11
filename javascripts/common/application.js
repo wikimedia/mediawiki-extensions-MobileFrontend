@@ -5,6 +5,7 @@
 		qs = window.location.search.split( '?' )[1],
 		PageApi = M.require( 'PageApi' ),
 		$viewportMeta, viewport,
+		currentPage,
 		ua = window.navigator.userAgent,
 		isAppleDevice = /ipad|iphone/i.test( ua ),
 		isIPhone4 = isAppleDevice && /OS 4_/.test( ua ),
@@ -241,6 +242,7 @@
 	 *
 	 */
 	function reloadPage( page ) {
+		currentPage = page;
 		if ( page.isMainPage() ) {
 			$( 'body' ).addClass( 'page-Main_Page' );
 		} else {
@@ -257,11 +259,17 @@
 		return mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' )[namespace];
 	}
 
+	function getCurrentPage() {
+		// FIXME: Currently returns undefined when a page has not been rendered via JavaScript
+		return currentPage;
+	}
+
 	$( init );
 
 	$.extend( M, {
 		init: init,
 		inNamespace: inNamespace,
+		getCurrentPage: getCurrentPage,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getOrigin: getOrigin,
 		// FIXME: No Page object exists on initial page load but would be better to make this a function of Page object
