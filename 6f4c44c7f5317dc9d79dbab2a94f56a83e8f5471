@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_2e95bddc",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-11T16:12:04Z",
+      "side": 1,
+      "message": "No explicit format results in text() being used, which is exactly what\u0027s needed in all these cases.",
+      "parentUuid": "0932edd2_c82419b4",
+      "revId": "6f4c44c7f5317dc9d79dbab2a94f56a83e8f5471",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_e839ddd6",
         "filename": "includes/specials/SpecialUserProfile.php",
         "patchSetId": 3
