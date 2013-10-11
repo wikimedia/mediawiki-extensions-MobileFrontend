@@ -1,66 +1,40 @@
+// FIXME: what is the purpose of this file?
+// those rules should probably go somewhere else
 @import "../mixins.less";
 
-@InfoBoxWLogoSize: 98px;
-@overlayAlertTipColor: black;
-@overlayAlertWarningColor: orange;
-@overlayAlertSuccessColor: green;
-@overlayAlertErrorBorderColor: #D00;
-@overlayAlertErrorBackgroundColor: #FAE1E1;
-@overlayAlertPaddingHorizontal: 1em;
-@overlayAlertPadding: 0.5em @overlayAlertPaddingHorizontal;
-@overlayBorderWidth: 1px;
-@watchThisArticleSize: 22px;
-
-// FIXME: Refactor when pageactions.less moves to stable
+// FIXME: this is here only because non-JS version doesn't load watchstar.less
 .watch-this-article {
-	background-image: url(images/watch.png);
-	background-position: center center;
-	.background-size( auto, @watchThisArticleSize );
-	position: absolute;
-	top: 0;
-	right: 0;
+	background: url(../common/images/watch.png) 50% 50% no-repeat;
 	text-indent: -9999px;
-	background-repeat: no-repeat;
 
 	&.watched {
-		background-image: url(images/watched.png);
+		background-image: url(../common/images/watched.png);
+	}
+
+	&.loading {
+		background-image: @ajaxLoadingImage;
 	}
 }
 
 .search.error,
 .error {
-	border: solid @overlayBorderWidth @overlayAlertErrorBorderColor;
-	background-color: @overlayAlertErrorBackgroundColor;
+	color: #C85353;
+	background: #FAE1E1;
 }
 
 .alert {
-	padding: @overlayAlertPadding;
-	background-repeat: no-repeat;
-	background-position: @overlayAlertPaddingHorizontal center;
-	min-height: 64px;
-	font-size: @baseFontSize;
+	padding: 1em @contentMarginLeft;
+	margin: 0 0 1em;
 
 	&.warning {
-		border: solid @overlayBorderWidth @overlayAlertWarningColor;
-	}
-
-	&.success {
-		padding-left: ( 80px + @overlayAlertPadding );
-		border: solid @overlayBorderWidth @overlayAlertSuccessColor;
-		background-image: url(images/success.png);
+		color: #850;
+		background: #feb
 	}
 
 	h2 {
-		font-family: @fontFamily;
-		font-size: 100%;
-		font-weight: bold;
-		margin: 0 0 8px 0;
-	}
-}
-
-#content {
-	.alert {
-		margin: 0;
+		font: bold 100% @fontFamily;
+		padding: 0;
+		margin: 0 0 .5em 0;
 	}
 }
 
