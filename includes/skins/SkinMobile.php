@@ -438,7 +438,12 @@ HTML;
 			unset( $returntoquery['returnto'] );
 			unset( $returntoquery['returntoquery'] );
 		}
-		$query[ 'returnto' ] = $this->getTitle()->getPrefixedText();
+		$title = $this->getTitle();
+		// Don't ever redirect back to the login page (bug 55379)
+		if ( !$title->isSpecial( 'Userlogin' ) ) {
+			$query[ 'returnto' ] = $title->getPrefixedText();
+		}
+
 		if ( $this->getUser()->isLoggedIn() ) {
 			if ( !empty( $returntoquery ) ) {
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
