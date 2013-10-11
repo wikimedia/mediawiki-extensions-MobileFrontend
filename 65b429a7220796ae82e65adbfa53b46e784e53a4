@@ -33,6 +33,24 @@
       "revId": "65b429a7220796ae82e65adbfa53b46e784e53a4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_5d1d4db9",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T00:07:51Z",
+      "side": 1,
+      "message": "eh, we could. I was just copying from getHtmlNoArg() above.",
+      "parentUuid": "0932edd2_7d1131ae",
+      "revId": "65b429a7220796ae82e65adbfa53b46e784e53a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
