@@ -2,6 +2,125 @@
   "comments": [
     {
       "key": {
+        "uuid": "0932edd2_116659ef",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:53:05Z",
+      "side": 1,
+      "message": "New member variables should have a description per https://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Comments_and_documentation unless they are obvious. So something like:\n/**\n * @var array $databaseGroups: Name of the query group that is assigned to the watchlist database queries.\n */",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d1acc1f1",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:53:05Z",
+      "side": 1,
+      "message": "This parameter would benefit from a description as it isn\u0027t obvious what it is for without tracing the code.",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f192a59d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:53:05Z",
+      "side": 1,
+      "message": "This is usually written like...\n( $isFeed \u003d false )\n...with spaces and lowercase.",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d195a187",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:53:05Z",
+      "side": 1,
+      "message": "Why do we include the page table if the user has rollback permission? A comment would be useful here to explain it.",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f1a9c5df",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:53:05Z",
+      "side": 1,
+      "message": "See above.",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_11901994",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:53:05Z",
+      "side": 1,
+      "message": "See above.",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_71d87579",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-11T21:53:05Z",
+      "side": 1,
+      "message": "Having two different variables in the same function with the same name is confusing. I would suggest calling this one something like $nsField.",
+      "revId": "14054bf8c249f9c5e9250253480b405a47959b64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_b1a74d0d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 1
