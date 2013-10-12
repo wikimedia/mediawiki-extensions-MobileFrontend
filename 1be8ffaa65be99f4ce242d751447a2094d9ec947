@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_b10bcd24",
+        "filename": "includes/skins/MobileTemplateBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-12T00:09:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_491d8bb9",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_c9897bee",
         "filename": "includes/skins/SkinMobileBeta.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_111bb971",
+        "filename": "includes/skins/SkinMobileBeta.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-12T00:09:49Z",
+      "side": 1,
+      "message": "I know what you mean but this module will continue to be added but I will change its contents)",
+      "parentUuid": "0932edd2_c9897bee",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_49766b05",
         "filename": "javascripts/modules/nearbypages.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-10-11T18:30:22Z",
       "side": 1,
       "message": "So do we call it nearby or not? Why do we use the same message?",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_717cf580",
+        "filename": "javascripts/modules/nearbypages.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-12T00:09:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_49766b05",
       "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -81,6 +135,24 @@
       "writtenOn": "2013-10-11T18:30:22Z",
       "side": 1,
       "message": "Why would inline-block cause that?",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_11c2d987",
+        "filename": "less/common/secondarypageactions.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-12T00:09:49Z",
+      "side": 1,
+      "message": "inline-block elements default to vertical-align: baseline. I don\u0027t want this I want top. I\u0027m not sure how I can make this comment more descriptive...",
+      "parentUuid": "0932edd2_69496f8f",
       "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
