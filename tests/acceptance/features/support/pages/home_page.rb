@@ -46,6 +46,7 @@ class HomePage
   div(:rl_notification, id:'notifications')
   a(:edit_history_link, id:'mw-mf-last-modified')
   a(:notification_button, id:'secondary-button')
+  a(:notifications_archive_link, id:'notifications-archive-link')
   a(:edit_icon_enabled, text:'Edit')
   li(:mobile_view, id:'footer-places-mobileview')
 end

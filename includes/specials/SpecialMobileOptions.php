@@ -86,7 +86,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$betaSetting = <<<HTML
 		<li>
 			{$betaEnableMsg}
-			<div class="mw-mf-checkbox-css3">
+			<div class="mw-mf-checkbox-css3" id="enable-beta-toggle">
 				<input type="checkbox" name="enableBeta"
 				{$imagesBeta}>{$onoff}
 			</div>
@@ -105,7 +105,7 @@ HTML;
 			$alphaSetting .= <<<HTML
 			<li>
 				{$alphaEnableMsg}
-				<div class="mw-mf-checkbox-css3">
+				<div class="mw-mf-checkbox-css3" id="enable-alpha-toggle">
 					<input type="checkbox" name="enableAlpha"
 					{$alphaChecked}>{$onoff}
 				</div>
@@ -123,7 +123,7 @@ HTML;
 	<ul>
 		<li>
 			{$disableMsg}
-			<span class="mw-mf-checkbox-css3">
+			<span class="mw-mf-checkbox-css3" id="enable-images-toggle">
 				<input type="checkbox" name="enableImages"
 				{$imagesChecked}>{$onoff}
 			</span>
