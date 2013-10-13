@@ -8200,6 +8200,7 @@ $messages['is'] = array(
  * @author Ximo17
  */
 $messages['it'] = array(
+	'mobilefrontend-keepgoing-cancel' => 'No, grazie',
 	'nearby' => 'Pagine nelle vicinanze',
 	'mobile-frontend-desc' => 'Interfaccia mobile',
 	'mobile.css' => '/* Gli stili CSS inseriti qui si applicano agli utenti che usano il sito per dispositivi mobili */',
@@ -8456,6 +8457,7 @@ in tutto il mondo',
 	'mobile-frontend-profile-registration' => '$1 ha contribuito a {{SITENAME}} per {{PLURAL:$2|$2 giorno|$2 giorni}} ed {{GENDER:$1|ha fatto}} {{PLURAL:$3|$3 modifica|$3 modifiche}}.',
 	'mobile-frontend-profile-usertalk' => 'Vedi la pagina di discussione.',
 	'mobile-frontend-profile-noargs' => 'Inserisci un nome utente per vedere un profilo.',
+	'mobile-frontend-profile-nouser' => 'Nome utente inesistente o non valido',
 	'mobile-frontend-profile-yours' => 'Vedi la pagina del tuo profilo.',
 	'mobile-frontend-profile-userpage-link' => 'Visita la pagina utente.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Questo utente}} è un nuovo editor.',
@@ -9298,6 +9300,9 @@ $messages['kn'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
+	'mobilefrontend-keepgoing-explain' => '좋아요! 다른 사용자가 이 문서가 도움이 필요하다고 했습니다. 이 문서를 고치거나, 다른 문서를 고치세요.',
+	'mobilefrontend-keepgoing-cancel' => '괜찮습니다',
+	'mobilefrontend-keepgoing-suggest-again' => '다른 문서',
 	'nearby' => '근처 문서',
 	'mobile-frontend-desc' => '모바일 프론트엔드',
 	'mobile.css' => '/* 이 CSS 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */',
@@ -9552,6 +9557,7 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 {{SITENAME}}의 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.',
 	'mobile-frontend-profile-usertalk' => '토론 문서를 봅니다.',
 	'mobile-frontend-profile-noargs' => '프로필을 보려면 사용자 이름을 제공하세요.',
+	'mobile-frontend-profile-nouser' => '존재하지 않거나 잘못된 사용자명',
 	'mobile-frontend-profile-yours' => '내 프로필 페이지를 방문합니다.',
 	'mobile-frontend-profile-userpage-link' => '사용자 문서를 방문합니다.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|이 사용자}}는 새 편집자입니다.',
@@ -10709,6 +10715,12 @@ $messages['min'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
+	'mobilefrontend-keepgoing-ask' => 'Одлично! Веќе се оспособувате за уредување! Дали би сакале да уредите друга страница?',
+	'mobilefrontend-keepgoing-ask-first' => 'Честитки за вашето прво уредување! Дали би сакале да уредите друга страница?',
+	'mobilefrontend-keepgoing-explain' => 'Одлично! Еден наш корисник смета дека на страницава ѝ треба помош. Видете што можете да направите тука, или пак на некоја друга страница.',
+	'mobilefrontend-keepgoing-cancel' => 'Не, благодарам',
+	'mobilefrontend-keepgoing-suggest' => 'Да',
+	'mobilefrontend-keepgoing-suggest-again' => 'Дај друга',
 	'nearby' => 'Страници во ваша близина',
 	'mobile-frontend-desc' => 'Мобилен посредник',
 	'mobile.css' => '/* Тука поставениот CSS ќе се применува врз корисниците на мобилното мрежно место */',
@@ -10966,6 +10978,7 @@ $messages['mk'] = array(
 	'mobile-frontend-profile-registration' => '$1 учествува во {{SITENAME}} веќе {{PLURAL:$2|$2 ден|$2 дена}} и  {{GENDER:$1|има направено}} {{PLURAL:$3|$3 уредување|$3 уредувања}}.',
 	'mobile-frontend-profile-usertalk' => 'Погл. страницата за разговор',
 	'mobile-frontend-profile-noargs' => 'Наведете корисничко име за да го погледате профилот.',
+	'mobile-frontend-profile-nouser' => 'Непостоечко или неважечко корисничко име',
 	'mobile-frontend-profile-yours' => 'Посетете ја вашата профилна страница.',
 	'mobile-frontend-profile-userpage-link' => 'Посетете ја корисничката страница',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Овој корисник}} е нов уредник.',
@@ -13319,7 +13332,7 @@ $messages['ps'] = array(
 	'mobile-frontend-copyright' => "دا متن د<a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; له مخې دلته پروت دی، خو تر دې نور شرايط هم کېدای شي چې د دې متن په کارولو کې پلي وي. د نورو مالوماتو لپاره <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>د کارولو شرايط وگورۍ</a> . ويکيپېډيا د <a href='http://www.wikimediafoundation.org/'>ويکيمېډيا د بنسټ د بې گټې سازمان.</a> يوه سوداگريزه نښه ده.", # Fuzzy
 	'mobile-frontend-footer-contact' => 'اړيکه',
 	'mobile-frontend-main-menu-settings' => 'امستنې',
-	'mobile-frontend-page-menu-contents' => 'منځپانګه',
+	'mobile-frontend-page-menu-contents' => 'منځپانگه',
 	'mobile-frontend-page-menu-history' => 'پېښليک',
 	'mobile-frontend-editor-success' => 'بريال! سمون مو خوندي شو.',
 );
@@ -13390,6 +13403,7 @@ $messages['pt'] = array(
 	'mobile-frontend-editor-save' => 'Gravar',
 	'mobile-frontend-editor-cancel' => 'Cancelar',
 	'mobile-frontend-editor-success' => 'Sucesso! A sua edição foi gravada.',
+	'tag-mobile_edit' => 'Edição via telefone móvel',
 	'mobile-frontend-drawer-cancel' => 'Cancelar',
 );
 
@@ -13550,6 +13564,12 @@ $messages['rm'] = array(
  * @author Minisarm
  */
 $messages['ro'] = array(
+	'mobilefrontend-keepgoing-ask' => 'Bine lucrat! Sunteți pe drumul cel bun! Doriți să modificați o altă pagină?',
+	'mobilefrontend-keepgoing-ask-first' => 'Felicitări pentru prima dumneavoastră modificare! Doriți să modificați o altă pagină?',
+	'mobilefrontend-keepgoing-explain' => 'Minunat! Un alt utilizator a precizat că această pagină are nevoie de ajutor. Puteți încerca cu această pagină ori cu o alta.',
+	'mobilefrontend-keepgoing-cancel' => 'Nu, mulțumesc',
+	'mobilefrontend-keepgoing-suggest' => 'Da, desigur',
+	'mobilefrontend-keepgoing-suggest-again' => 'Încerc cu o altă pagină',
 	'nearby' => 'Pagini în apropierea dumneavoastră',
 	'mobile-frontend-desc' => 'Interfața mobilă',
 	'mobile-frontend-search-submit' => 'Du-te',
@@ -13804,6 +13824,7 @@ din întreaga lume',
 	'mobile-frontend-profile-registration' => '$1 a contribuit la {{SITENAME}} pentru {{PLURAL:$2|o zi|$2 zile|$2 de zile}} și {{GENDER:$1|a efectuat}} {{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}.',
 	'mobile-frontend-profile-usertalk' => 'Vezi pagina de discuții.',
 	'mobile-frontend-profile-noargs' => 'Furnizați un nume de utilizator pentru a vizualiza un profil.',
+	'mobile-frontend-profile-nouser' => 'Nume de utilizator inexistent sau incorect',
 	'mobile-frontend-profile-yours' => 'Vizitați-vă pagina de profil.',
 	'mobile-frontend-profile-userpage-link' => 'Vizitează pagina de utilizator.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Acest utilizator|Această utilizatoare}} este un editor nou.',
@@ -13959,6 +13980,7 @@ $messages['roa-tara'] = array(
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
+	'nearby' => 'Страницы об объектах поблизости',
 	'mobile-frontend-desc' => 'Мобильный интерфейс',
 	'mobile-frontend-search-submit' => 'Перейти',
 	'mobile-frontend-home-button' => 'Домой',
@@ -17092,10 +17114,13 @@ $messages['yue'] = array(
  * @author 乌拉跨氪
  */
 $messages['zh-hans'] = array(
+	'mobilefrontend-keepgoing-ask' => '干的不错！您开始编辑了这个弃坑！您想尝试编辑其他页面么？',
 	'mobilefrontend-keepgoing-ask-first' => '恭喜你做了你的第一次编辑 ！你想尝试着编辑另一页吗？',
+	'mobilefrontend-keepgoing-explain' => '好哇！其他用户说这个页面需要帮助。尝试它，或者尝试其他一个。',
 	'mobilefrontend-keepgoing-cancel' => '不，谢谢',
+	'mobilefrontend-keepgoing-suggest' => '是的，请',
 	'mobilefrontend-keepgoing-suggest-again' => '尝试另一页',
-	'nearby' => '您附近的页面',
+	'nearby' => '你附近的页面',
 	'mobile-frontend-desc' => '移动前端',
 	'mobile-frontend-search-submit' => '搜索',
 	'mobile-frontend-home-button' => '首页',
@@ -17296,6 +17321,7 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+上传',
 	'mobile-frontend-photo-upload-cta' => '请登录或注册以添加图像。',
 	'mobile-frontend-photo-upload-login' => '你必需登录以添加图像。',
+	'mobile-frontend-editor-undo-unsupported' => '撤销编辑操作尚不支持移动设备。',
 	'mobile-frontend-editor-newpage-prompt' => '此页面不存在。为什么不勇于创建它呢？',
 	'mobile-frontend-editor-disabled' => '你不能编辑本页。',
 	'mobile-frontend-editor-unavailable' => '移动版编辑目前不能在你的浏览器上使用。请尝试使用其他浏览器。',
@@ -17339,17 +17365,21 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-media-details' => '详细信息',
 	'abusefilter-edit-builder-vars-user-mobile' => '无论用户是否使用移动版界面编辑',
 	'mobile-frontend-profile-title' => '用户信息',
+	'mobile-frontend-profile-contributions' => '在最近30天内的[[Special:Contributions/$1|{{PLURAL:$2|1次编辑|$2次编辑|0=没有编辑|501=超过500次编辑}}]]以及
+[[Special:Uploads/$1|{{PLURAL:$3|1次上传|$3次上传|0=没有上传|501=超过500次上传}}]]。',
 	'mobile-frontend-profile-last-upload-caption' => '最后由$1在{{PLURAL:$2|昨天|$2天前|0=今天}}上传。',
 	'mobile-frontend-profile-heading-recent' => '最近',
 	'mobile-frontend-profile-registration' => '$1已经在{{SITENAME}}编辑了$2天并进行了$3次编辑。',
 	'mobile-frontend-profile-usertalk' => '见讨论页。',
 	'mobile-frontend-profile-noargs' => '请指定一个用户名以查看资料。',
+	'mobile-frontend-profile-nouser' => '不存在或无效的用户名',
 	'mobile-frontend-profile-yours' => '访问您的个人资料页。',
 	'mobile-frontend-profile-userpage-link' => '访问用户页',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|这位用于}}是一位新手。',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|此用户}}是一个有些编辑经验的编者。',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|这位用户}}是一位活跃用户。',
 	'mobile-frontend-requires-optin' => '此页不可用，除非您选择使用我们的 beta 版。访问[[Special:MobileOptions|设置页]]进行选择。',
+	'mobile-frontend-profile-last-thanked' => '由[[Special:UserProfile/$1|$1]]对[[$2]]的一次编辑所做出的{{GENDER:$1|最近一次感谢}}。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
@@ -17368,6 +17398,10 @@ $messages['zh-hans'] = array(
  * @author Yfdyh000
  */
 $messages['zh-hant'] = array(
+	'mobilefrontend-keepgoing-cancel' => '不，謝謝',
+	'mobilefrontend-keepgoing-suggest' => '是的，請',
+	'mobilefrontend-keepgoing-suggest-again' => '嘗試其他',
+	'nearby' => '臨近您的頁面',
 	'mobile-frontend-desc' => '手機前端',
 	'mobile-frontend-search-submit' => '進入',
 	'mobile-frontend-home-button' => '首頁',
@@ -17383,6 +17417,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-settings-alpha' => '實驗模式',
 	'mobile-frontend-settings-alpha-description' => '進入危險和探索移動領土。更多實驗性的功能，更危險的錯誤。',
 	'mobile-frontend-save-settings' => '儲存',
+	'mobile-frontend-save-error' => '保存設定時出錯。請確保您已啟用cookies。',
 	'mobile-frontend-random-button' => '隨機條目',
 	'mobile-frontend-back-to-top-of-section' => '跳轉至前一章節',
 	'mobile-frontend-close-section' => '關閉本章節',
@@ -17399,7 +17434,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-missing-image' => '圖片',
 	'mobile-frontend-off' => '關',
 	'mobile-frontend-on' => '開',
-	'mobile-frontend-featured-article' => '特色條目', # Fuzzy
+	'mobile-frontend-featured-article' => '今日特色條目',
 	'mobile-frontend-news-items' => '新聞動態',
 	'mobile-frontend-language' => '語言:',
 	'mobile-frontend-language-article-heading' => '閱讀其他語言',
@@ -17458,6 +17493,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-meta-data-issues' => '此頁上的一些問題',
 	'mobile-frontend-page-saving' => '正在保存$1',
 	'mobile-frontend-user-cta' => '請登入或註冊以查閱您的通知。',
+	'mobile-frontend-user-button-tooltip' => '顯示本人通知',
 	'mobile-frontend-nearby-to-page' => '以下與$1位置有關的頁面',
 	'mobile-frontend-nearby-title' => '附近',
 	'mobile-frontend-nearby-loading' => '載入您當前的位置附近的主題',
@@ -17467,6 +17503,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1米}}',
 	'mobile-frontend-nearby-lookup-ui-error' => '{{SITENAME}}的附近功能搞不清楚你在哪裡，要再試嗎？',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => '嘗試往空曠的地方以接收更好的信號。',
+	'mobile-frontend-nearby-permission' => '{{SITENAME}}附近沒有權限訪問您所在的位置。',
 	'mobile-frontend-nearby-noresults' => '這裡很靜...找不到與附近相關的條目。', # Fuzzy
 	'mobile-frontend-nearby-noresults-guidance' => '嘗試創建一條新條目或添加位置到現有的條目', # Fuzzy
 	'mobile-frontend-nearby-refresh' => '我們為您找到更準確的位置定位。點擊這裡刷新附近頁面列表',
@@ -17564,20 +17601,23 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+上載',
 	'mobile-frontend-photo-upload-cta' => '請登入或註冊來添加圖像。',
 	'mobile-frontend-photo-upload-login' => '您必須登入來添加圖像。',
+	'mobile-frontend-editor-undo-unsupported' => '撤銷操作尚不支援行動裝置。',
 	'mobile-frontend-editor-newpage-prompt' => '此頁面不存在。何不勇於創建之？',
 	'mobile-frontend-editor-disabled' => '你不允許編輯此頁。',
+	'mobile-frontend-editor-unavailable' => '行動編輯器尚不支援您的瀏覽器。請嘗試另一個瀏覽器。',
 	'mobile-frontend-editor-cta' => '您必須登入才可在手機上進行編輯。',
 	'mobile-frontend-editor-edit' => '編輯',
 	'mobile-frontend-editor-continue' => '繼續',
 	'mobile-frontend-editor-save' => '儲存',
 	'mobile-frontend-editor-cancel' => '取消',
 	'mobile-frontend-editor-keep-editing' => '繼續編輯',
-	'mobile-frontend-editor-license' => '點擊「保存編輯」按鈕表示您同意我們的 [//wikimediafoundation.org/wiki/Terms_of_use 使用條款]，並同意依據[//creativecommons.org/licenses/by-sa/3.0/ CC-BY-SA-3.0]協議發表您的貢獻。', # Fuzzy
+	'mobile-frontend-editor-license' => '點擊「保存編輯」按鈕表示您同意我們的[//wikimediafoundation.org/wiki/Terms_of_use 使用條款]並同意通過[//creativecommons.org/licenses/by-sa/3.0/ CC BY-SA 3.0協議]和[//zh.wikipedia.org/wiki/Wikipedia:GFDL GFDL協議]發表您的貢獻。',
 	'mobile-frontend-editor-placeholder' => '這一部分是空的。成為第一個編輯它的人吧！',
 	'mobile-frontend-editor-summary-placeholder' => '告訴我們您做了哪些修改 （可選）',
 	'mobile-frontend-editor-cancel-confirm' => '你確認要放棄你的編輯？',
 	'mobile-frontend-editor-wait' => '正在儲存編輯，請稍候。',
 	'mobile-frontend-editor-success' => '成功 ！你的編輯經已儲存。',
+	'mobile-frontend-editor-success-landmark-1' => '祝賀您，您現在已是{{SITENAME}}編輯者之一！',
 	'mobile-frontend-editor-error' => '錯誤，編輯未儲存。',
 	'mobile-frontend-editor-error-conflict' => '錯誤，其他用戶已編輯該頁面。',
 	'mobile-frontend-editor-error-loading' => '錯誤，無法載入章節。',
