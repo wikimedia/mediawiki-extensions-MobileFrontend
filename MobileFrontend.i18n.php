@@ -3434,6 +3434,12 @@ $messages['cy'] = array(
  * @author Tjernobyl
  */
 $messages['da'] = array(
+	'mobilefrontend-keepgoing-ask' => 'Godt gået! Du er ved at have styr på det! Vil du prøve at redigere en anden side?',
+	'mobilefrontend-keepgoing-ask-first' => 'Tillykke med din første redigering! Vil du prøve at redigere en anden side?',
+	'mobilefrontend-keepgoing-explain' => 'Enestående! En anden bruger har sagt at denne side har brug for hjælp. Prøv den, eller prøv en anden.',
+	'mobilefrontend-keepgoing-cancel' => 'Nej tak',
+	'mobilefrontend-keepgoing-suggest' => 'Ja tak',
+	'mobilefrontend-keepgoing-suggest-again' => 'Prøv en anden',
 	'nearby' => 'Sider i nærheden af dig',
 	'mobile-frontend-desc' => 'Mobil grænseflade',
 	'mobile-frontend-search-submit' => 'Gå til',
@@ -3686,6 +3692,7 @@ $messages['da'] = array(
 	'mobile-frontend-profile-registration' => '$1 har bidraget til {{SITENAME}} i {{PLURAL:$2|en dag|$2 dage}} og {{GENDER:$1|har lavet}} {{PLURAL:$3|en redigering|$3 redigeringer}}.',
 	'mobile-frontend-profile-usertalk' => 'Se diskussionssiden.',
 	'mobile-frontend-profile-noargs' => 'Angiv et brugernavn for at se en profil.',
+	'mobile-frontend-profile-nouser' => 'Brugernavnet er ugyldigt eller eksistere ikke',
 	'mobile-frontend-profile-yours' => 'Besøg din profilside.',
 	'mobile-frontend-profile-userpage-link' => 'Besøg brugerside.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Denne bruger}} er en ny redaktør.',
@@ -5645,6 +5652,12 @@ plakatum, forsíðum á bókum osfr.',
  * @author عبد الحق فارح
  */
 $messages['fr'] = array(
+	'mobilefrontend-keepgoing-ask' => 'Bien ! Vous avez pris le coup ! Voulez-vous essayer de modifier une autre page ?',
+	'mobilefrontend-keepgoing-ask-first' => 'Félicitations pour avoir fait votre première modification ! Voulez-vous essayer de modifier une autre page ?',
+	'mobilefrontend-keepgoing-explain' => 'Super ! Un autre utilisateur a dit que cette page nécessite de l’aide. Essayez-la, ou bien une autre.',
+	'mobilefrontend-keepgoing-cancel' => 'Non merci',
+	'mobilefrontend-keepgoing-suggest' => 'Oui, s’il vous plaît',
+	'mobilefrontend-keepgoing-suggest-again' => 'Essayer une autre',
 	'nearby' => 'Pages près de vous',
 	'mobile-frontend-desc' => 'Affichage mobile',
 	'mobile-frontend-search-submit' => 'Go',
@@ -5897,6 +5910,7 @@ $messages['fr'] = array(
 	'mobile-frontend-profile-registration' => '$1 a contribué à {{SITENAME}} pendant {{PLURAL:$2|$2 jour|$2 jours}} et {{GENDER:$1|a fait}} {{PLURAL:$3|$3 modification|$3 modifications}}.',
 	'mobile-frontend-profile-usertalk' => 'Afficher la page de discussion.',
 	'mobile-frontend-profile-noargs' => 'Veuillez indiquer un nom d’utilisateur pour afficher un profil.',
+	'mobile-frontend-profile-nouser' => 'Nom d’utilisateur inexistant ou non valide',
 	'mobile-frontend-profile-yours' => 'Visiter votre page de profil.',
 	'mobile-frontend-profile-userpage-link' => 'Visiter la page de l’utilisateur.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Cet utilisateur|cette utilisatrice}} est un nouvel éditeur.',
@@ -7081,6 +7095,7 @@ $messages['hil'] = array(
 );
 
 /** Croatian (hrvatski)
+ * @author MaGa
  * @author Roberta F.
  * @author SpeedyGonsales
  */
@@ -7167,7 +7182,7 @@ $messages['hr'] = array(
 	'mobile-frontend-donate-image-title' => 'Darujte nam sliku', # Fuzzy
 	'mobile-frontend-donate-image-heading' => 'Vaši nedavni doprinosi',
 	'mobile-frontend-watchlist-add' => 'Stranica $1 dodana je na popis praćenih stranica',
-	'mobile-frontend-watchlist-removed' => 'Stranica $1 uklonjena je sa popisa praćenih stranica',
+	'mobile-frontend-watchlist-removed' => 'Stranica $1 uklonjena je s popisa praćenih stranica',
 	'mobile-frontend-watchlist-view' => 'Pregled popisa praćenih stranica',
 	'mobile-frontend-watchlist-a-z' => 'Praćene stranice', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Promijenjene stranice', # Fuzzy
@@ -7463,9 +7478,13 @@ $messages['hu'] = array(
 
 /** Armenian (Հայերեն)
  * @author Chaojoker
+ * @author Jazz
  * @author Vadgt
  */
 $messages['hy'] = array(
+	'mobilefrontend-keepgoing-explain' => 'Հիանալի է: Մեկ այլ օգտվող էլ է ասել, որ այս էջն օգնության կարիք ունի: Փորձել այս մեկը կամ մեկ ուրիշը:',
+	'mobilefrontend-keepgoing-cancel' => 'Ոչ,շնորհակալություն:',
+	'mobilefrontend-keepgoing-suggest-again' => 'Փորձե´լ մեկ ուրիշը:',
 	'mobile-frontend-home-button' => 'Դեպի տուն',
 	'mobile-frontend-save-settings' => 'Պահպանել կարգավորումները', # Fuzzy
 	'mobile-frontend-random-button' => 'Պատահական',
@@ -17120,7 +17139,7 @@ $messages['zh-hans'] = array(
 	'mobilefrontend-keepgoing-cancel' => '不，谢谢',
 	'mobilefrontend-keepgoing-suggest' => '是的，请',
 	'mobilefrontend-keepgoing-suggest-again' => '尝试另一页',
-	'nearby' => '你附近的页面',
+	'nearby' => '您附近的页面',
 	'mobile-frontend-desc' => '移动前端',
 	'mobile-frontend-search-submit' => '搜索',
 	'mobile-frontend-home-button' => '首页',
