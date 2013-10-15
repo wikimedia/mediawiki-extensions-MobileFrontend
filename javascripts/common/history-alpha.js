@@ -3,7 +3,6 @@
 
 	var
 		Page = M.require( 'Page' ),
-		isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special,
 		History = window.History;
 
 		/**
@@ -95,7 +94,7 @@
 		updateQueryStringParameter: updateQueryStringParameter
 	};
 
-	if ( History.enabled && !isSpecialPage ) {
+	if ( History.enabled && !M.inNamespace( 'special' ) ) {
 		$.extend( M.history, init() );
 	}
 

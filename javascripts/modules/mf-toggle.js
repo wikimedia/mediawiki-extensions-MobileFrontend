@@ -80,7 +80,7 @@
 	}
 
 	// avoid this running on Watchlist
-	if ( mw.config.get( 'wgNamespaceNumber' ) !== mw.config.get( 'wgNamespaceIds' ).special && !mw.config.get( 'wgIsMainPage' ) ) {
+	if ( !M.inNamespace( 'special' ) && !mw.config.get( 'wgIsMainPage' ) ) {
 		init();
 	}
 

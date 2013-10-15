@@ -25,11 +25,10 @@
 
 	function initialize() {
 		// FIXME: make some general function for that (or a page object with a method)
-		var namespaceIds = mw.config.get( 'wgNamespaceIds' ),
-			namespace = mw.config.get( 'wgNamespaceNumber' ),
+		var
 			// FIXME: not updated on dynamic page loads
 			isEditable = mw.config.get( 'wgIsPageEditable' ),
-			validNamespace = ( namespace === namespaceIds[''] || namespace === namespaceIds.user );
+			validNamespace = ( M.inNamespace( '' ) || M.inNamespace( 'user' ) );
 
 		if ( !M.isLoggedIn() && !showCta ) {
 			// Note with the CTA this is unnecessary but the new nav requires showing the upload button at all times

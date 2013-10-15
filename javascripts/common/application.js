@@ -253,10 +253,15 @@
 		document.title = page.title;
 	}
 
+	function inNamespace( namespace ) {
+		return mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' )[namespace];
+	}
+
 	$( init );
 
 	$.extend( M, {
 		init: init,
+		inNamespace: inNamespace,
 		jQuery: typeof jQuery  !== 'undefined' ? jQuery : false,
 		getOrigin: getOrigin,
 		// FIXME: No Page object exists on initial page load but would be better to make this a function of Page object
