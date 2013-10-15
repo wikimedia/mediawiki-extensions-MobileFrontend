@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_81fd8c3a",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-10-15T07:13:29Z",
+      "side": 1,
+      "message": "Minor; trailing space",
+      "revId": "5d9b97851c4d18abb380a351fb952166d42ea87d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
