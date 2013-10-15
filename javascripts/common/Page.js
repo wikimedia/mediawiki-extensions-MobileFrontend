@@ -41,6 +41,8 @@
 		render: function( options ) {
 			var pageTitle = options.title, self = this,
 				$el = this.$el, _super = self._super;
+			// prevent talk icon being re-rendered after an edit to a talk page
+			options.isTalkPage = self.isTalkPage();
 
 			// FIXME: this is horrible, because it makes preRender run _during_ render...
 			if ( !options.sections ) {
@@ -74,9 +76,20 @@
 			}
 		},
 
-		// FIXME: [ajax page loading] Note this will not work when we ajax load namespaces other than main which we currently do not do.
+		getNamespaceId: function() {
+			var args = this.options.title.split( ':' ), nsId;
+			if ( args[1] ) {
+				nsId = mw.config.get( 'wgNamespaceIds' )[ args[0].toLowerCase().replace( ' ', '_' ) ] || 0;
+			} else {
+				nsId = 0;
+			}
+			return nsId;
+		},
+
 		isTalkPage: function() {
-			return M.inNamespace( 'talk' );
+			var ns = this.getNamespaceId();
+			// all talk pages are odd numbers (except the case of special pages)
+			return ns > 0 && ns % 2 === 1;
 		},
 
 		preRender: function( options ) {
