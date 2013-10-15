@@ -363,7 +363,8 @@ $messages['qqq'] = array(
 	'mobilefrontend-keepgoing-suggest' => 'Label for button that user can answer question posed in {{msg-mw|Mobilefrontend-keepgoing-ask-first}}
 or {{msg-mw|Mobilefrontend-keepgoing-ask}}.',
 	'mobilefrontend-keepgoing-suggest-again' => 'Label for a button that allows uer to try another page as a response to
-{{msg-mw|Mobilefrontend-keepgoing-explain}}.',
+{{msg-mw|Mobilefrontend-keepgoing-explain}}.
+{{Identical|Try another}}',
 	'nearby' => '{{doc-special|Nearby}}',
 	'mobile-frontend-desc' => '{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}',
 	'mobile.css' => '{{optional}}
@@ -8219,7 +8220,12 @@ $messages['is'] = array(
  * @author Ximo17
  */
 $messages['it'] = array(
+	'mobilefrontend-keepgoing-ask' => "Ben fatto, ci stai prendendo la mano! Vuoi provare a modificare un'altra pagina?",
+	'mobilefrontend-keepgoing-ask-first' => "Congratulazioni per il tuo primo edit! Vuoi provare a modificare un'altra pagina?",
+	'mobilefrontend-keepgoing-explain' => "Grande! Un altro utente ha detto che questa pagina ha bisogno di aiuto. Vuoi provare con questa o con un'altra?",
 	'mobilefrontend-keepgoing-cancel' => 'No, grazie',
+	'mobilefrontend-keepgoing-suggest' => 'Sì, per favore',
+	'mobilefrontend-keepgoing-suggest-again' => "Prova con un'altra",
 	'nearby' => 'Pagine nelle vicinanze',
 	'mobile-frontend-desc' => 'Interfaccia mobile',
 	'mobile.css' => '/* Gli stili CSS inseriti qui si applicano agli utenti che usano il sito per dispositivi mobili */',
@@ -10473,6 +10479,49 @@ $messages['lmo'] = array(
 $messages['ln'] = array(
 	'mobile-frontend-placeholder' => 'Luka na {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Luka na {{SITENAME}} (Beta)',
+);
+
+/** لوری (لوری)
+ * @author Mogoeilor
+ */
+$messages['lrc'] = array(
+	'mobilefrontend-keepgoing-cancel' => 'نه منمون',
+	'mobilefrontend-keepgoing-suggest' => 'هری لطف بكيد',
+	'nearby' => 'بلگه نزيكتو',
+	'mobile-frontend-search-submit' => 'رو',
+	'mobile-frontend-home-button' => 'سرآسونه',
+	'mobile-frontend-sign-up-heading' => 'ثوت نام كردن',
+	'mobile-frontend-sign-in-heading' => 'اومائن',
+	'mobile-frontend-settings-beta' => 'بتا',
+	'mobile-frontend-save-settings' => 'ذخيره كردن',
+	'mobile-frontend-random-button' => 'بختكی',
+	'mobile-frontend-wml-continue' => 'ادامه ديئن',
+	'mobile-frontend-wml-back' => 'ورئرد',
+	'mobile-frontend-view' => 'ديئن موبايل',
+	'mobile-frontend-view-desktop' => 'ميزكار',
+	'mobile-frontend-view-mobile' => 'موبايل',
+	'mobile-frontend-images-status' => 'عسگيا',
+	'mobile-frontend-missing-image' => 'عسگ',
+	'mobile-frontend-off' => 'روشنا',
+	'mobile-frontend-on' => 'كور',
+	'mobile-frontend-news-items' => 'د حوال',
+	'mobile-frontend-language' => 'زون',
+	'mobile-frontend-language-site-choose' => 'پی جوری زون',
+	'mobile-frontend-username' => 'نوم كاروری:',
+	'mobile-frontend-password' => 'رمز:',
+	'mobile-frontend-username-placeholder' => 'نوم كاروری',
+	'mobile-frontend-password-placeholder' => 'رمز',
+	'mobile-frontend-login' => 'اومائن',
+	'mobile-frontend-learn-more' => 'بيشتر يا بيئريت',
+	'mobile-frontend-account-create-submit' => 'ثوت نام كردن',
+	'mobile-frontend-password-confirm-placeholder' => 'رمز محكم كو',
+	'mobile-frontend-account-create-email-placeholder' => 'نشونی ايميل',
+	'mobile-frontend-account-create-captcha-placeholder' => 'متن امنيتی نه وارد كو',
+	'mobile-frontend-overlay-escape' => 'ورئرد',
+	'mobile-frontend-main-menu-logout' => 'د سيستم دراومائن',
+	'mobile-frontend-watchlist-filter-talk' => 'چك چنه',
+	'mobile-frontend-talk-overlay-header' => 'چك چنه',
+	'mobile-frontend-profile-usertalk' => 'بلگه چك چنه نه بوينيت',
 );
 
 /** Lithuanian (lietuvių)
@@ -13365,6 +13414,7 @@ $messages['ps'] = array(
  * @author Malafaya
  * @author MetalBrasil
  * @author Opraco
+ * @author Polyethylen
  * @author SandroHc
  */
 $messages['pt'] = array(
@@ -13377,7 +13427,7 @@ $messages['pt'] = array(
 	'mobile-frontend-settings-beta' => 'Beta',
 	'mobile-frontend-save-settings' => 'Gravar',
 	'mobile-frontend-random-button' => 'Aleatório',
-	'mobile-frontend-back-to-top-of-section' => 'Retroceder uma seção',
+	'mobile-frontend-back-to-top-of-section' => 'Retroceder uma secção',
 	'mobile-frontend-close-section' => 'Fechar esta seção',
 	'mobile-frontend-regular-site' => 'Versão normal',
 	'mobile-frontend-wml-continue' => 'Continuar ...',
@@ -16697,6 +16747,9 @@ $messages['vep'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['vi'] = array(
+	'mobilefrontend-keepgoing-cancel' => 'Thôi',
+	'mobilefrontend-keepgoing-suggest' => 'Có, cảm ơn',
+	'mobilefrontend-keepgoing-suggest-again' => 'Thử cái nữa',
 	'nearby' => 'Trang gần bạn',
 	'mobile-frontend-desc' => 'Giao diện di động',
 	'mobile.css' => '/* Mã CSS đặt ở đây sẽ ảnh hưởng đến những người sử dụng trang di động */',
@@ -16900,6 +16953,7 @@ $messages['vi'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ tải lên',
 	'mobile-frontend-photo-upload-cta' => 'Xin vui lòng đăng nhập hay mở tài khoản để thêm hình ảnh.',
 	'mobile-frontend-photo-upload-login' => 'Bạn phải đăng nhập để thêm hình ảnh.',
+	'mobile-frontend-editor-undo-unsupported' => 'Chưa hỗ trợ hoàn tác trên các thiết bị di động.',
 	'mobile-frontend-editor-newpage-prompt' => 'Trang này chưa tồn tại. Hãy can đảm tạo ra nó!',
 	'mobile-frontend-editor-disabled' => 'Bạn không có quyền sửa đổi trang này.',
 	'mobile-frontend-editor-unavailable' => 'Tính năng sửa đổi di động hiện không có sẵn cho trình duyệt của bạn. Xin vui lòng thử một trình duyệt khác.',
@@ -16943,17 +16997,21 @@ $messages['vi'] = array(
 	'mobile-frontend-media-details' => 'Chi tiết',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Người dùng có sửa đổi qua giao diện di động hay không',
 	'mobile-frontend-profile-title' => 'Thông tin cá nhân',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|Đã sửa đổi 1 lần|Đã sửa đổi $2 lần|0=Chưa có sửa đổi|501=Đã sửa đổi hơn 500 lần}}]] và
+[[Special:Uploads/$1|{{PLURAL:$3|đã tải lên 1 tập tin|đã tải lên $3 tập tin|0=chưa tải lên tập tin nào|501=đã tải lên hơn 500 tập tin}}]] vào 30 ngày qua.',
 	'mobile-frontend-profile-last-upload-caption' => 'Tập tin mới nhất do $1 tải lên {{PLURAL:$2|hôm qua|$2 ngày trước|0=hôm nay}}.',
 	'mobile-frontend-profile-heading-recent' => 'Gần đây',
-	'mobile-frontend-profile-registration' => '$1 đã là thành viên cho $2 ngày và đã sửa đổi $3 lần.', # Fuzzy
+	'mobile-frontend-profile-registration' => '$1 đã đóng góp vào {{SITENAME}} trong thời gian $2 ngày và đã sửa đổi $3 lần.',
 	'mobile-frontend-profile-usertalk' => 'Xem trang tin nhắn.',
 	'mobile-frontend-profile-noargs' => 'Xin vui lòng nhập tên người dùng để xem trang thành viên.',
+	'mobile-frontend-profile-nouser' => 'Tên người dùng không tồn tại hoặc không hợp lệ.',
 	'mobile-frontend-profile-yours' => 'Xem trang cá nhân của bạn.',
 	'mobile-frontend-profile-userpage-link' => 'Xem trang thành viên.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1}}Người dùng này mới bắt đầu sửa đổi.',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1}}Người dùng này có vẻ có kinh nghiệm sửa đổi.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1}}Người dùng này sửa đổi rất nhiều.',
 	'mobile-frontend-requires-optin' => 'Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.',
+	'mobile-frontend-profile-last-thanked' => 'Đã nhận lời cảm ơn lần cuối cùng từ [[Special:UserProfile/$1|$1]] vì một sửa đổi tại [[$2]].',
 );
 
 /** Volapük (Volapük)
