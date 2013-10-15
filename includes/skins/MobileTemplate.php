@@ -1,19 +1,15 @@
 <?php
-
+// FIXME: kill the need for this file (MinervaTemplate instead)
+/**
+ * MobileTemplate: 
+ * Extends MinervaTemplate with mobile specific functionality
+ */
 class MobileTemplate extends MinervaTemplate {
 	/**
 	 * Constructor
 	 */
 	public function __construct() {
 		parent::__construct();
-	}
-
-	public function getDiscoveryTools() {
-		return $this->data['discovery_urls'];
-	}
-
-	public function getPersonalTools() {
-		return $this->data['personal_urls'];
 	}
 
 	/**
