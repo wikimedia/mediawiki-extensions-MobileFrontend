@@ -12992,6 +12992,8 @@ $messages['pfl'] = array(
  * @author Woytecr
  */
 $messages['pl'] = array(
+	'mobilefrontend-keepgoing-cancel' => 'Nie, dziękuję',
+	'mobilefrontend-keepgoing-suggest' => 'Tak, proszę',
 	'nearby' => 'W pobliżu ciebie',
 	'mobile-frontend-desc' => 'Mobilny interfejs użytkownika',
 	'mobile-frontend-search-submit' => 'Przejdź',
