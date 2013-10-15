@@ -1,9 +1,16 @@
 @import "../mixins.less";
 
-a.watch-this-article {
-	&.loading {
-		background-image: @ajaxLoadingImage;
-	}
+@watchThisArticleSize: 22px;
+
+// watchlist and search results
+.page-list .watch-this-article {
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	margin-top: -(@watchThisArticleSize / 2);
+	width: @watchThisArticleSize;
+	height: @watchThisArticleSize;
+	.background-size( auto, @watchThisArticleSize );
 }
 
 .animations {
@@ -15,14 +22,3 @@ a.watch-this-article {
 		}
 	}
 }
-
-li a.watch-this-article {
-	right: 8px;
-	top: 0;
-	bottom: 0;
-	height: 100%;
-	width: @searchResultPaddingVertical * 2;
-	background-position: center center;
-	margin: 0;
-}
-
