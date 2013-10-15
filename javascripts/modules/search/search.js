@@ -36,7 +36,7 @@ SearchOverlay = Overlay.extend( {
 		noresults: mw.msg( 'mobile-frontend-search-noresults' ),
 		action: mw.config.get( 'wgScript' )
 	},
-	className: 'mw-mf-overlay list-overlay',
+	className: 'mw-mf-overlay',
 	postRender: function( options ) {
 		var self = this;
 

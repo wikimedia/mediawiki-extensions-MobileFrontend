@@ -66,7 +66,7 @@
 		} ),
 		TalkOverlay = Overlay.extend( {
 			template: M.template.get( 'overlays/talk' ),
-			className: 'mw-mf-overlay list-overlay',
+			className: 'mw-mf-overlay',
 			defaults: {
 				heading: mw.msg( 'mobile-frontend-talk-overlay-header' ),
 				leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' )

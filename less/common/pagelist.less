@@ -8,7 +8,7 @@
 
 .listThumb {
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 50% 50%;
 	&.needsPhoto {
 		.background-size(100%, auto);
 		background-color: #3b6fba;
@@ -24,116 +24,119 @@
 	.background-size(100%, auto);
 }
 
-ul.page-list {
-	list-style: none;
+.page-list {
+	cursor: pointer;
 
 	li {
-		border-bottom: solid 1px #e2e2e2;
-		color: #808080;
-		line-height: 1;
+		color: #666;
 		position: relative;
+		border-bottom: solid 1px #eee;
+		padding: 18px @contentMarginRight;
+		// avoid the gap between thumbnails
+		margin: 0 0 -1px;
+		line-height: 1;
 
-		.listThumb {
-			position: absolute;
-			width: @thumbWidth;
-			height: 100%;
-			margin: 0 0 0 -@thumbSpace;
-		}
-
-
-		.title {
+		> a {
 			display: block;
-			position: relative;
-			padding: 0 @contentMarginRight @articleListPaddingTop @contentMarginLeft;
-			margin: -1px 0;
-			/* FIXME: remove if we reset text-decoration in common styles */
-			text-decoration: none;
-
-			h2 {
-				.watchlist-heading();
-				// 22px is the width of the watchlist star, +2px for additional padding
-				padding: 20px 24px 0 0;
-			}
-
-			&.new {
-				h2 {
-					color: @redBase;
-				}
-			}
-		}
-
-		a:active {
-			.background-alpha(232, 232, 233, .5);
-		}
-
-		div, p {
-			font-size: .9em;
-			margin: 0;
-			color: #999b9e;
-		}
-
-		p {
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			-webkit-text-overflow: ellipsis;
-			overflow: hidden;
-			line-height: 1;
-			margin: .25em 0 0;
-		}
-
-		.info {
-			color: #a6a6a6;
-			font-size: .7em;
-			text-transform: uppercase;
-			margin: .6em 0 0;
-		}
-
-		.mw-mf-user {
-			margin: .5em 0 0;
-		}
-	}
-}
-
-ul.a-to-z {
-	li {
-		a.title {
-			padding-left: @thumbSpace;
-		}
-	}
-}
-
-.mw-mf-overlay {
-	ul.a-to-z li {
-		font-size: 0.9em;
-		h2 {
-			font-weight: normal;
 			color: #666;
+
+			&:active,
+			&:hover,
+			&:visited {
+				text-decoration: none;
+				color: #666;
+			}
 		}
-		.listThumb {
-			width: @thumbOverlayWidth;
-			height: 100%;
-			margin-left: -@thumbOverlaySpace;
+	}
+
+	&.thumbs li {
+		padding-left: @thumbSpace;
+	}
+
+	.title {
+		// 22px is the width of the watchlist star, +2px for additional padding
+		padding-right: 24px;
+
+		h2 {
+			.watchlist-heading();
 		}
-		a.title {
+	}
+
+	.listThumb {
+		position: absolute;
+		width: @thumbWidth;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	// something on watchlist that doesn't exist
+	.title.new h2 {
+		color: @redBase;
+	}
+
+	div, p {
+		font-size: .9em;
+		margin: 0;
+		color: #999b9e;
+	}
+
+	p {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		-webkit-text-overflow: ellipsis;
+		overflow: hidden;
+		line-height: 1;
+		margin: .25em 0 0;
+	}
+
+	.info {
+		color: #a6a6a6;
+		font-size: .7em;
+		text-transform: uppercase;
+		margin: .6em 0 0;
+	}
+
+	.mw-mf-user {
+		margin: .5em 0 0;
+	}
+}
+
+// FIXME: there is no reason for styling in overlays to be different!
+.mw-mf-overlay {
+	.page-list {
+		font-size: .9em;
+
+		li {
+			padding-left: @searchBarPaddingLeft;
+		}
+
+		&.thumbs li {
 			padding-left: @thumbOverlaySpace;
 		}
+
+		h2 {
+			font: inherit;
+		}
+
+		.listThumb {
+			width: @thumbOverlayWidth;
+		}
+	}
+
+	.actionable {
+		li:hover {
+			background-color: #ACD1E9;
+		}
 	}
 }
 
-// FIXME: Remove these rules when page images in search results are moved to stable.
-.stable .mw-mf-overlay {
-	ul.a-to-z li {
-		padding: 12px 40px;
-		line-height: 1.65;
-		a.title {
-			padding: 0;
-			margin: 0;
-			h2 {
-				padding: 0;
-			}
-			.info {
-				display: none;
-			}
+// search without page images
+// FIXME: remove when page images are in stable
+.stable {
+	.suggestions-results {
+		li {
+			padding-left: @searchBarPaddingLeft !important;
 		}
 	}
 }
