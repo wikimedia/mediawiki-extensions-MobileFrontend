@@ -148,7 +148,7 @@ require_once( "$cwd/includes/Resources.php" );
 $wgMFDeviceWidthTablet = 768;
 
 // Set LESS global variables
-$wgResourceLoaderLESSVars['wgMFDeviceWidthTablet'] = $wgMFDeviceWidthTablet + 'px';
+$wgResourceLoaderLESSVars['wgMFDeviceWidthTablet'] = $wgMFDeviceWidthTablet . 'px';
 $wgResourceLoaderLESSVars['wgMFDeviceWidthMobileSmall'] = '280px';
 
 unset( $cwd );
