@@ -125,6 +125,7 @@ $specialPageAliases['ko'] = array(
 	'MobileDiff' => array( '모바일차이점' ),
 	'MobileMenu' => array( '모바일메뉴' ),
 	'Nearby' => array( '근처' ),
+	'UserProfile' => array( '사용자프로필' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
