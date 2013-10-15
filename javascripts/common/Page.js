@@ -77,7 +77,7 @@
 
 		// FIXME: [ajax page loading] Note this will not work when we ajax load namespaces other than main which we currently do not do.
 		isTalkPage: function() {
-			return mw.config.get( 'wgNamespaceIds' ).talk === mw.config.get( 'wgNamespaceNumber' );
+			return M.inNamespace( 'talk' );
 		},
 
 		preRender: function( options ) {
