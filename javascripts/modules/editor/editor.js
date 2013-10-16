@@ -66,7 +66,7 @@
 				new EditorOverlay( {
 					title: ns ? ns + ':' + title : title,
 					isNew: isNew,
-					isNewEditor: mw.config.get( 'wgUserEditCount' ) === '0',
+					isNewEditor: mw.config.get( 'wgUserEditCount' ) === 0,
 					sectionId: mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? sectionId : null
 				} ).show();
 			} );

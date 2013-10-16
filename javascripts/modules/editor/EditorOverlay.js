@@ -29,6 +29,7 @@
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			abusefilterReadMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
 		},
+		// FIXME: [QA] Needs an acceptance test to ensure we do not break the first time editor workflow
 		template: M.template.get( 'modules/editor/EditorOverlay' ),
 		className: 'mw-mf-overlay editor-overlay',
 		closeOnBack: true,
@@ -283,6 +284,7 @@
 					new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
 					M.router.navigate( '' );
 					self.hide();
+					// FIXME: What was the outcome of this A-B test?
 					if ( M.isTestA && self.isNewEditor ) {
 						msg = 'mobile-frontend-editor-success-landmark-1';
 					} else {
