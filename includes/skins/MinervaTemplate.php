@@ -1,5 +1,9 @@
 <?php
 class MinervaTemplate extends BaseTemplate {
+	public function getPersonalTools() {
+		return $this->data['personal_urls'];
+	}
+
 	public function execute() {
 		$this->getSkin()->prepareData( $this );
 		wfRunHooks( 'MinervaPreRender', array( $this ) );
@@ -15,7 +19,7 @@ class MinervaTemplate extends BaseTemplate {
 	}
 
 	public function getDiscoveryTools() {
-		return $this->data['sidebar']['navigation'];
+		return $this->data['discovery_urls'];
 	}
 
 	public function getSiteLinks() {

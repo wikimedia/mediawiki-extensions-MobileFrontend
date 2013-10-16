@@ -1,4 +1,8 @@
 <?php
+// FIXME: kill the need for this file (SkinMinerva instead)
+/**
+ * SkinMobile: Extends Minerva with mobile specific code
+ */
 
 class SkinMobile extends SkinMinerva {
 	public $skinname = 'mobile';
@@ -182,8 +186,6 @@ class SkinMobile extends SkinMinerva {
 		$tpl->set( 'pagetitle', $out->getHTMLTitle() );
 
 		$this->prepareTemplatePageContent( $tpl );
-		$this->prepareDiscoveryTools( $tpl );
-		$this->preparePersonalTools( $tpl );
 		$this->prepareFooterLinks( $tpl );
 
 		$out->setTarget( 'mobile' );
@@ -196,81 +198,6 @@ class SkinMobile extends SkinMinerva {
 
 		wfProfileOut( __METHOD__ );
 		return $tpl;
-	}
-
-	protected function prepareDiscoveryTools( QuickTemplate $tpl ) {
-		global $wgMFNearby;
-
-		$items = array(
-			'home' => array(
-				'text' => wfMessage( 'mobile-frontend-home-button' )->escaped(),
-				'href' => Title::newMainPage()->getLocalUrl(),
-				'class' => 'icon-home',
-			),
-			'random' => array(
-				'text' => wfMessage( 'mobile-frontend-random-button' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'Randompage' )->getLocalUrl(),
-				'class' => 'icon-random',
-				'id' => 'randomButton',
-			),
-			'nearby' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-nearby' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'Nearby' )->getLocalURL(),
-				'class' => 'icon-nearby jsonly',
-			),
-		);
-		if ( !$wgMFNearby ) {
-			unset( $items['nearby'] );
-		}
-		$tpl->set( 'discovery_urls', $items );
-	}
-
-	/**
-	 * Prepares urls and links used by the page
-	 * @param QuickTemplate
-	 */
-	protected function preparePersonalTools( QuickTemplate $tpl ) {
-		$returnToTitle = $this->getTitle()->getPrefixedText();
-		$donateTitle = SpecialPage::getTitleFor( 'Uploads' );
-		$watchTitle = SpecialPage::getTitleFor( 'Watchlist' );
-
-		// watchlist link
-		$watchlistQuery = array();
-		$user = $this->getUser();
-		if ( $user ) {
-			$view = $user->getOption( SpecialMobileWatchlist::VIEW_OPTION_NAME, false );
-			$filter = $user->getOption( SpecialMobileWatchlist::FILTER_OPTION_NAME, false );
-			if ( $view ) {
-				$watchlistQuery['watchlistview'] = $view;
-			}
-			if ( $filter && $view === 'feed' ) {
-				$watchlistQuery['filter'] = $filter;
-			}
-		}
-
-		$items = array(
-			'watchlist' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-watchlist' )->escaped(),
-				'href' => $this->getUser()->isLoggedIn() ?
-					$watchTitle->getLocalUrl( $watchlistQuery ) :
-					$this->getLoginUrl( array( 'returnto' => $watchTitle ) ),
-				'class' => 'icon-watchlist',
-			),
-			'uploads' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-upload' )->escaped(),
-				'href' => $this->getUser()->isLoggedIn() ? $donateTitle->getLocalUrl() :
-					$this->getLoginUrl( array( 'returnto' => $donateTitle ) ),
-				'class' => 'icon-uploads jsonly',
-			),
-			'settings' => array(
-				'text' => wfMessage( 'mobile-frontend-main-menu-settings' )->escaped(),
-				'href' => SpecialPage::getTitleFor( 'MobileOptions' )->
-					getLocalUrl( array( 'returnto' => $returnToTitle ) ),
-				'class' => 'icon-settings',
-			),
-			'auth' => $this->getLogInOutLink(),
-		);
-		$tpl->set( 'personal_urls', $items );
 	}
 
 	/**
@@ -422,49 +349,6 @@ HTML;
 				array( 'class' => 'sibling-page' )
 			) );
 		}
-	}
-
-	/**
-	 * Creates a login or logout button
-	 * @return Array: Representation of button with text and href keys
-	*/
-	protected function getLogInOutLink() {
-		global $wgMFForceSecureLogin;
-		wfProfileIn( __METHOD__ );
-		$query = array();
-		if ( !$this->getRequest()->wasPosted() ) {
-			$returntoquery = $this->getRequest()->getValues();
-			unset( $returntoquery['title'] );
-			unset( $returntoquery['returnto'] );
-			unset( $returntoquery['returntoquery'] );
-		}
-		$title = $this->getTitle();
-		// Don't ever redirect back to the login page (bug 55379)
-		if ( !$title->isSpecial( 'Userlogin' ) ) {
-			$query[ 'returnto' ] = $title->getPrefixedText();
-		}
-
-		if ( $this->getUser()->isLoggedIn() ) {
-			if ( !empty( $returntoquery ) ) {
-				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
-			}
-			$url = SpecialPage::getTitleFor( 'UserLogout' )->getFullURL( $query );
-			$url = $this->mobileContext->getMobileUrl( $url, $wgMFForceSecureLogin );
-			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
-		} else {
-			 // note returnto is not set for mobile (per product spec)
-			// note welcome=yes in return to query allows us to detect accounts created from the left nav
-			$returntoquery[ 'welcome' ] = 'yes';
-			$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
-			$url = $this->getLoginUrl( $query );
-			$text = wfMessage( 'mobile-frontend-main-menu-login' )->escaped();
-		}
-		wfProfileOut( __METHOD__ );
-		return array(
-			'text' => $text,
-			'href' => $url,
-			'class' => 'icon-loginout',
-		);
 	}
 
 	/**
