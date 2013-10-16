@@ -434,6 +434,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	private function showFeedResultRow( $row ) {
 		wfProfileIn( __METHOD__ );
 
+		if ( $row->rc_deleted ) {
+			wfProfileOut( __METHOD__ );
+			return;
+		}
+
 		$output = $this->getOutput();
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
@@ -483,6 +488,11 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 
 	private function showListResultRow( $row ) {
 		wfProfileIn( __METHOD__ );
+
+		if ( $row->rc_deleted ) {
+			wfProfileOut( __METHOD__ );
+			return;
+		}
 
 		$output = $this->getOutput();
 		$title = Title::makeTitle( $row->wl_namespace, $row->wl_title );
