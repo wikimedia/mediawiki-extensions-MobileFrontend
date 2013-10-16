@@ -8,6 +8,8 @@
 			result = [], $tmpContainer = $( '<div>' );
 
 		$.each( sections, function( i, section ) {
+			// FIXME: [API] should probably do this for us - we want to be able to control the styling of these headings - no inline styles!
+			section.line = $( '<div>' ).html( section.line ).text();
 			if ( !section.level || section.level === collapseLevel ) {
 				result.push( section );
 			} else {

@@ -227,4 +227,19 @@
 		pageApi._getAllLanguages.restore();
 	} );
 
+	QUnit.test( '#getPage (html headings get stripped)', 1, function( assert ) {
+		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
+			"mobileview": {
+				"sections":[
+					{"id":0,"text":""},
+					{"level":"1","line":"<i>html text heading</i>","anchor":"1","id":1,"text":"<p>Text of 1\n</p>"}
+				]
+			}
+		} ) );
+		pageApi.getPage( 'Test' ).done( function( resp ) {
+			assert.strictEqual( resp.sections[0].line, 'html text heading' );
+		} );
+		PageApi.prototype.get.restore();
+	} );
+
 }( mw.mobileFrontend, jQuery ) );
