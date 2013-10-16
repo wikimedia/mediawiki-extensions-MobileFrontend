@@ -156,6 +156,24 @@
       "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_e9e703ad",
+        "filename": "less/common/secondarypageactions.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T19:23:16Z",
+      "side": 1,
+      "message": "reset.css makes almost all the elements vertical-align: baseline, not just the ones with display: inline-block, that\u0027s why I don\u0027t understand the comment.",
+      "parentUuid": "0932edd2_11c2d987",
+      "revId": "1be8ffaa65be99f4ce242d751447a2094d9ec947",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
