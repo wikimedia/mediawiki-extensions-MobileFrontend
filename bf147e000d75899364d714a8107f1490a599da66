@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_b4c2c2ea",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:39:54Z",
+      "side": 1,
+      "message": "oops.",
+      "parentUuid": "0932edd2_69315304",
+      "revId": "bf147e000d75899364d714a8107f1490a599da66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_0919b782",
         "filename": "javascripts/specials/overlays/PagePreviewOverlay.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2013-10-16T19:47:31Z",
       "side": 1,
       "message": "?\nH is Height (vertical), W was Width (horizontal). This change confuses me.",
+      "revId": "bf147e000d75899364d714a8107f1490a599da66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d4b9f678",
+        "filename": "javascripts/specials/overlays/PagePreviewOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:39:54Z",
+      "side": 1,
+      "message": "H is horizontal, V vertical. Unrelated bug fix.",
+      "parentUuid": "0932edd2_0919b782",
       "revId": "bf147e000d75899364d714a8107f1490a599da66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_f4bc3a68",
+        "filename": "less/common/secondarypageactions.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:39:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_c9995f1e",
+      "revId": "bf147e000d75899364d714a8107f1490a599da66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_490baf2b",
         "filename": "templates/page.html",
         "patchSetId": 5
@@ -64,6 +118,24 @@
       "writtenOn": "2013-10-16T19:47:31Z",
       "side": 1,
       "message": "This somehow ends up being too close to the buttons when loading pages dynamically.",
+      "revId": "bf147e000d75899364d714a8107f1490a599da66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_34afb22c",
+        "filename": "templates/page.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:39:54Z",
+      "side": 1,
+      "message": "Kaldari is on this.",
+      "parentUuid": "0932edd2_490baf2b",
       "revId": "bf147e000d75899364d714a8107f1490a599da66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
