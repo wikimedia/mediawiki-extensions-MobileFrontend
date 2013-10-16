@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_f46d1a05",
+        "filename": "templates/modules/editor/AbuseFilterOverlay.html",
+        "patchSetId": 9
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-16T21:49:13Z",
+      "side": 1,
+      "message": "There needs to be some whitespace between the message and the button. Either wrap the message in a \u003cp\u003e tag or add some margin-top to the confirm button.",
+      "revId": "ad0700d63d91966ab544fdf551c738b438e462f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
