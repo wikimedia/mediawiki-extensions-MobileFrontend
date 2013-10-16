@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_a98b4b1f",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "I understand this message but it makes no sense from a user perspective. They hit save they probably know they are vandalising. :)\n\nDo we know what sort of situations they see a warning? Is it only when we suspect vandalism? If so maybe we could try and use this message as an opportunity to make them think again. Something like: \"Wikipedia is run by unpaid volunteers. It is believed this edit is un-constructive. Are you sure you want to submit it?\"\n\nI guess this is something we should talk to design about?",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_09b0d7f2",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "Suggested text: \"There was a problem with your edit.\"",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_a9b98beb",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "Needs a full stop.",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_29cafb50",
+        "filename": "includes/Resources.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "Is AbuseFilter an extension? If so should we check that it is enabled and keep it as a separate module?",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_c90a3f8b",
+        "filename": "javascripts/modules/editor/AbuseFilterOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "Are the links returned by AbuseFilter optimal and useful?",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_49f72f8a",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "Please add a FIXME that AbuseFilter should be updated so we don\u0027t have to resort to regular expressions",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_a928abf0",
+        "filename": "javascripts/modules/editor/EditorApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "cache data.edit.warning and data.edit.code once since they are used various times in this file.",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_e932a35c",
+        "filename": "javascripts/modules/editor/EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "Is this rename useful?",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_4921effe",
+        "filename": "less/modules/editor.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-16T21:02:56Z",
+      "side": 1,
+      "message": "Jon to check: Are all initial-bar\u0027s also buttonBars?",
+      "revId": "867272799fb5454cddbb70b2318fed095c1389de",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
