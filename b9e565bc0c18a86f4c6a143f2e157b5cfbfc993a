@@ -16,6 +16,24 @@
       "revId": "b9e565bc0c18a86f4c6a143f2e157b5cfbfc993a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_94285ef1",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-16T21:11:12Z",
+      "side": 1,
+      "message": "I don\u0027t see where getTalkPrefix() is defined either. You could just use the same code you use in talk.js:\nvar talkPrefix \u003d mw.config.get( \u0027wgFormattedNamespaces\u0027 )[ mw.config.get( \u0027wgNamespaceNumber\u0027 )\n+ 1 ] + \u0027:\u0027;",
+      "parentUuid": "0932edd2_547a6621",
+      "revId": "b9e565bc0c18a86f4c6a143f2e157b5cfbfc993a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
