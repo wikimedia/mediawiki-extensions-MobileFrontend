@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "0932edd2_69315304",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T19:47:31Z",
+      "side": 1,
+      "message": "Why is this needed?",
+      "revId": "bf147e000d75899364d714a8107f1490a599da66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_0919b782",
+        "filename": "javascripts/specials/overlays/PagePreviewOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T19:47:31Z",
+      "side": 1,
+      "message": "?\nH is Height (vertical), W was Width (horizontal). This change confuses me.",
+      "revId": "bf147e000d75899364d714a8107f1490a599da66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_c9995f1e",
         "filename": "less/common/secondarypageactions.less",
         "patchSetId": 5
@@ -13,6 +47,23 @@
       "writtenOn": "2013-10-16T19:24:41Z",
       "side": 1,
       "message": "Sorry I missed it last time but should be secondaryPageActions according to our conventions.",
+      "revId": "bf147e000d75899364d714a8107f1490a599da66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_490baf2b",
+        "filename": "templates/page.html",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T19:47:31Z",
+      "side": 1,
+      "message": "This somehow ends up being too close to the buttons when loading pages dynamically.",
       "revId": "bf147e000d75899364d714a8107f1490a599da66",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
