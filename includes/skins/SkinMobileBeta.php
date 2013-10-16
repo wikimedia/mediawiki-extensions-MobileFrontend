@@ -26,6 +26,7 @@ class SkinMobileBeta extends SkinMobile {
 		if ( $this->getUser()->isLoggedIn() ) {
 			$modules['beta'][] = 'mobile.notifications.overlay';
 		}
+		$modules['beta'][] = 'mobile.geonotahack';
 
 		return $modules;
 	}

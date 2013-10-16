@@ -329,6 +329,9 @@ $messages['en'] = array (
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|This user}} is a prolific editor.',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Last thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
+
+	// geo not a hack
+	'mobile-frontend-geonotahack' => 'Near this page',
 );
 
 /** Message documentation (Message documentation)
@@ -848,6 +851,8 @@ Parameters:
 * $1 - name of user who thanked, can be used for GENDER
 * $2 - title of page for editing which the thank was given
 * $3 - (optional) name of user who was thanked, for GENDER support',
+
+	'mobile-frontend-geonotahack' => 'Label for button that shows pages near a given page',
 );
 
 /** Achinese (Acèh)
