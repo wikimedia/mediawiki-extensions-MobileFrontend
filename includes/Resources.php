@@ -164,10 +164,12 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
+			'javascripts/modules/editor/AbuseFilterOverlay.js',
 			'javascripts/modules/editor/EditorOverlay.js',
 		),
 		'templates' => array(
-			'overlays/editor',
+			'modules/editor/EditorOverlay',
+			'modules/editor/AbuseFilterOverlay',
 		),
 		'messages' => array(
 			// modules/editor/EditorOverlay.js
@@ -190,6 +192,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-editor-error-preview',
 			'mobile-frontend-account-create-captcha-placeholder',
 			'mobile-frontend-editor-captcha-try-again',
+			'mobile-frontend-photo-ownership-confirm',
+			'mobile-frontend-editor-abusefilter-warning',
+			'mobile-frontend-editor-abusefilter-disallow',
+			'mobile-frontend-editor-abusefilter-read-more',
 		),
 	),
 

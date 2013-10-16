@@ -9,6 +9,7 @@
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
 		KeepGoingDrawer,
+		AbuseFilterOverlay = M.require( 'modules/editor/AbuseFilterOverlay' ),
 		EditorOverlay;
 
 	EditorOverlay = Overlay.extend( {
@@ -25,9 +26,10 @@
 			waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
 			guiderMsg: mw.msg( 'mobile-frontend-editor-guider' ),
 			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
-			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' )
+			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
+			abusefilterReadMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
 		},
-		template: M.template.get( 'overlays/editor' ),
+		template: M.template.get( 'modules/editor/EditorOverlay' ),
 		className: 'mw-mf-overlay editor-overlay',
 		closeOnBack: true,
 
@@ -73,7 +75,7 @@
 			this.$content = this.$( 'textarea' ).
 				on( 'input', function() {
 					self.api.setContent( self.$content.val() );
-					self.$( '.continue' ).prop( 'disabled', false );
+					self.$( '.continue, .save' ).prop( 'disabled', false );
 					self._resizeContent();
 				} );
 			this.$( '.continue' ).on( 'click', $.proxy( this, '_showPreview' ) );
@@ -104,7 +106,8 @@
 		},
 
 		hide: function() {
-			if ( !this.api.hasChanged || window.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ) ) {
+			var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
+			if ( !this.api.hasChanged || this.canHide || window.confirm( confirmMessage ) ) {
 				return this._super();
 			} else {
 				return false;
@@ -236,6 +239,27 @@
 			mw.config.set( 'wgUserEditCount', this.editCount );
 		},
 
+		_showAbuseFilter: function( type, message ) {
+			var self = this, msg;
+
+			this.$( '.abusefilter-bar .readmore' ).on( 'click', function() {
+				self.canHide = true;
+				new AbuseFilterOverlay( { parent: self, message: message } ).show();
+				self.canHide = false;
+			} );
+
+			if ( type === 'warning' ) {
+				msg = mw.msg( 'mobile-frontend-editor-abusefilter-warning' );
+			} else if ( type === 'disallow' ) {
+				msg = mw.msg( 'mobile-frontend-editor-abusefilter-disallow' );
+				// disable continue and save buttons, reenabled when user changes content
+				this.$( '.continue, .save' ).prop( 'disabled', true );
+			}
+
+			this.$( '.message p' ).text( msg );
+			this._showBar( '.abusefilter-bar' );
+		},
+
 		_save: function() {
 			var self = this, className = 'toast landmark',
 				options = { summary: this.$( '.summary' ).val() },
@@ -280,6 +304,8 @@
 					if ( data.type === 'captcha' ) {
 						self.captchaId = data.details.id;
 						self._showCaptcha( data.details.url );
+					} else if ( data.type === 'abusefilter' ) {
+						self._showAbuseFilter( data.details.type, data.details.message );
 					} else {
 						if ( data.details === 'editconflict' ) {
 							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );

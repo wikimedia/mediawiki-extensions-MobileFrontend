@@ -99,6 +99,8 @@
 				}
 
 				self.post( apiOptions ).done( function( data ) {
+					var code, warning;
+
 					if ( data && data.edit && data.edit.result === 'Success' ) {
 						self.hasChanged = false;
 						result.resolve();
@@ -109,9 +111,32 @@
 						// CAPTCHAs
 						result.reject( { type: 'captcha', details: data.edit.captcha } );
 					} else if ( data && data.edit && data.edit.code ) {
-						// extension errors (mostly abusefilter)
-						// FIXME: we need to support this, see bug 52049
-						result.reject( { type: 'error', details: data.edit.code } );
+						code = data.edit.code;
+						warning = data.edit.warning;
+
+						// FIXME: AbuseFilter should have more consistent API responses
+						if ( /^abusefilter-warning/.test( code ) ) {
+							// AbuseFilter warning
+							result.reject( { type: 'abusefilter', details: {
+								type: 'warning',
+								message: warning
+							} } );
+						} else if ( /^abusefilter-disallow/.test( code ) ) {
+							// AbuseFilter disallow
+							result.reject( { type: 'abusefilter', details: {
+								type: 'disallow',
+								message: warning
+							} } );
+						} else if ( /^abusefilter/.test( code ) ) {
+							// AbuseFilter other
+							result.reject( { type: 'abusefilter', details: {
+								type: 'other',
+								message: warning
+							} } );
+						} else {
+							// other errors
+							result.reject( { type: 'error', details: code } );
+						}
 					} else {
 						result.reject( { type: 'error', details: 'unknown' } );
 					}

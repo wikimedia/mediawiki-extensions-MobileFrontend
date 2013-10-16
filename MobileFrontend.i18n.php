@@ -284,6 +284,9 @@ $messages['en'] = array (
 	'mobile-frontend-editor-tutorial-summary' => "Don't be scared of markup. Try improving the $1 page.",
 	'mobile-frontend-editor-tutorial-confirm' => 'Start editing',
 	'mobile-frontend-editor-captcha-try-again' => 'Wrong code, try again.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Warning: Are you sure you want to save this edit? There may be an issue with it.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'This edit cannot be saved because we have detected an issue.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Read more',
 
 	// Change tags
 	'tag-mobile_edit' => 'Mobile edit',
@@ -783,6 +786,9 @@ Parameters:
 See also:
 * {{msg-mw|Mobile-frontend-editor-tutorial-summary}}',
 	'mobile-frontend-editor-captcha-try-again' => 'A message shown when user enters wrong CAPTCHA and a new one is displayed.',
+	'mobile-frontend-editor-abusefilter-warning' => 'A message telling the user that their edit triggered an AbuseFilter warning.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'A message telling their user that their edit has been disallowed by AbuseFilter.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'A caption for the button allowing the user to read more about the problems with their edit.',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:
