@@ -2,6 +2,7 @@
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 	var Overlay = M.require( 'Overlay' ),
+		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
 		api = M.require( 'api' ),
 		ua = window.navigator.userAgent,
 		device = 'unknown',
@@ -9,6 +10,9 @@
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		PagePreviewOverlay = Overlay.extend( {
 			closeOnBack: true,
+			defaults: {
+				source: 'nearby'
+			},
 			template: M.template.get( 'overlays/pagePreview' ),
 			initialize: function( options ) {
 				var self = this, loader = new LoadingOverlay(),
@@ -96,6 +100,7 @@
 				$preview.empty();
 				// Display the first content node
 				$preview.append( nodes[0] );
+				MobileWebClickTracking.hijackLink( this.$( '.read-in-full' ), options.source + '-view-full' );
 			}
 		} );
 
@@ -108,11 +113,12 @@
 	}
 
 	M.define( 'PagePreviewOverlay', PagePreviewOverlay );
-	M.router.route( /^preview\/(.*)\/(.*)$/, function( latLngString, title ) {
+	M.router.route( /^preview\/(.*)\/(.*)\/(.*)$/, function( source, latLngString, title ) {
 		// FIXME: API doesn't return pageimage or longitude latitude properties (yet)
 		new PagePreviewOverlay( {
 			title: title,
 			latLngString: latLngString,
+			source: source,
 			endpoint: mw.config.get( 'wgMFNearbyEndpoint' )
 		} );
 	} );
