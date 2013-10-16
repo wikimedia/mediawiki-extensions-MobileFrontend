@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_cf5ddf78",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T22:11:41Z",
+      "side": 1,
+      "message": "Not sure what\u0027s the point. It\u0027s not reused, far from the if condition which makes it more difficult to follow.",
+      "revId": "4430381001e8e92b16fe4af43ca8f32ac11a45e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_ef60e337",
+        "filename": "javascripts/modules/mf-toggle.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T22:11:41Z",
+      "side": 1,
+      "message": "...on wide screen devices",
+      "revId": "4430381001e8e92b16fe4af43ca8f32ac11a45e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
