@@ -223,10 +223,9 @@ var api = M.require( 'api' ), w = ( function() {
 	}
 
 	function init( page ) {
-		var isSpecialPage = mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).special,
-			$container = $container || $( '#ca-watch' ).removeClass( 'watched watch-this-article' ).empty();
+		var $container = $container || $( '#ca-watch' ).removeClass( 'watched watch-this-article' ).empty();
 		// initialise on current page
-		if ( !isSpecialPage ) {
+		if ( !M.inNamespace( 'special' ) ) {
 			initWatchListIcon( $container, page.title );
 		}
 		upgradeUI();
