@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_4fae4f2f",
+        "filename": "less/common/overlays.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T22:29:07Z",
+      "side": 1,
+      "message": "The purpose is to make it smaller and it\u0027s 1 character less ;)",
+      "parentUuid": "0932edd2_4ffc8f3b",
+      "revId": "251c4ad8739c9c3113b207d076d206dc50035855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_4f956fdb",
         "filename": "less/common/pagelist.less",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-10-16T22:26:20Z",
       "side": 1,
       "message": "Shouldn\u0027t this be\nmargin: 0 0 -1px 0;\nto match the border-bottom?",
+      "revId": "251c4ad8739c9c3113b207d076d206dc50035855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_6fa95324",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T22:29:07Z",
+      "side": 1,
+      "message": "Maybe, I moved it from a different place. It works so I didn\u0027t change it.",
+      "parentUuid": "0932edd2_4f956fdb",
       "revId": "251c4ad8739c9c3113b207d076d206dc50035855",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

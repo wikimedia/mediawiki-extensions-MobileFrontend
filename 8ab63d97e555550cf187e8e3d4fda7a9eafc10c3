@@ -16,6 +16,24 @@
       "revId": "8ab63d97e555550cf187e8e3d4fda7a9eafc10c3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_2faf5b2c",
+        "filename": "less/common/overlays.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T22:29:07Z",
+      "side": 0,
+      "message": "I tried hovering over the overlay close button and the cursor is still a pointer, there must be another rule somewhere.",
+      "parentUuid": "0932edd2_8f9687ed",
+      "revId": "8ab63d97e555550cf187e8e3d4fda7a9eafc10c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
