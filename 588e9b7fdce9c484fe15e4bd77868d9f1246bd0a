@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_fa5a63ee",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T23:23:45Z",
+      "side": 1,
+      "message": "This is not used anywhere outside profiles. Plus it\u0027s defined there too. Let\u0027s not create reusable functions \"just in case,\" but instead abstract when we need it. Do it the TDD way, write the minimum code necessary for things to work ;)",
+      "revId": "588e9b7fdce9c484fe15e4bd77868d9f1246bd0a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
