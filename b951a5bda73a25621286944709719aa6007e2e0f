@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_5ac28f88",
+        "filename": "javascripts/common/application.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T23:19:07Z",
+      "side": 1,
+      "message": "I\u0027m not sure if stuffing application.js with so many generic functions is good. We don\u0027t reuse it anywhere else as of now...",
+      "revId": "b951a5bda73a25621286944709719aa6007e2e0f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
