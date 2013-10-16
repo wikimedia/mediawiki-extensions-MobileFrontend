@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_547a6621",
+        "filename": "javascripts/modules/talk/TalkOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-16T20:50:40Z",
+      "side": 1,
+      "message": "Where is this function defined? It seems we could have something more generic that uses mw.config variables.",
+      "revId": "b9e565bc0c18a86f4c6a143f2e157b5cfbfc993a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
