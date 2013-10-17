@@ -105,6 +105,24 @@
       "revId": "251c4ad8739c9c3113b207d076d206dc50035855",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_da859f0b",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-17T00:04:47Z",
+      "side": 1,
+      "message": "Yeah \"margin: 0 0 -1px 0;\" works better. Otherwise the thumbnail may overlap the border of the header (and the bottom of other images).",
+      "parentUuid": "0932edd2_cf431f6e",
+      "revId": "251c4ad8739c9c3113b207d076d206dc50035855",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
