@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_756764ba",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-17T07:55:05Z",
+      "side": 1,
+      "message": "I think the work \"topic\" is being used in this context instead of \"page\".",
+      "revId": "736f31c9d2ef874293228b4ac5a64594c8d3ca1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
