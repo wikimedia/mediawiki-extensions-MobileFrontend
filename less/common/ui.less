@@ -117,3 +117,29 @@ input.search {
 .content .edit-page {
 	display: none;
 }
+
+// FIXME: Move to beta/alpha only place?
+.alpha,
+.beta {
+	.top-bar {
+		background-color: #F3F3F3;
+		padding: 8px;
+		display: block;
+		color: #9C9C9C;
+		a {
+			color: #9C9C9C;
+			// If browser supports
+			&:nth-child(2) {
+				font-weight: bold;
+			}
+		}
+
+		&.active {
+			background-color: #00AF8B;
+			color: #fff;
+			a {
+				color: #fff;
+			}
+		}
+	}
+}

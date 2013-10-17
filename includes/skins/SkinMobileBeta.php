@@ -13,6 +13,18 @@ class SkinMobileBeta extends SkinMobile {
 		$out->addModuleStyles( 'mobile.styles.beta' );
 	}
 
+	public function prepareData( BaseTemplate $tpl ) {
+		parent::prepareData( $tpl );
+		// Move last modified link to top as long as it is not the main page
+		$tpl->set( '_lastModifiedAbove', !$this->getTitle()->isMainPage() );
+	}
+
+	protected function getHistoryLink( Title $title ) {
+		$link = parent::getHistoryLink( $title );
+		$link['class'] = 'top-bar';
+		return $link;
+	}
+
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
 		// force cta on in beta

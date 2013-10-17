@@ -32,6 +32,7 @@ var module = ( function() {
 		if ( ts ) {
 			delta = time.getTimeAgoDelta( parseInt( ts, 10 ) );
 			if ( time.isNow( delta ) ) {
+				$lastModified.addClass( 'active' );
 				args = args.concat( [ 'mobile-frontend-last-modified-with-user-just-now', gender, username ] );
 			} else {
 				args = args.concat( [ keys[ delta.unit ], gender, username,
@@ -45,6 +46,7 @@ var module = ( function() {
 					username ? mw.util.wikiGetlink( 'Special:UserProfile/' + username ) : '' ] );
 
 			$( '<div>' ).attr( 'id', 'mw-mf-last-modified' ).
+				attr( 'class', $lastModified.attr( 'class' ) ).
 				html( mw.message.apply( this, args ).parse() ).
 				insertBefore( $lastModified );
 			$lastModified.remove();

@@ -117,8 +117,37 @@ class MinervaTemplate extends BaseTemplate {
 		}
 	}
 
+	/**
+	 * Renders history link at top of page
+	 * @param Array $data Data used to build the page
+	 */
+	protected function renderHistoryLinkBottom( $data ) {
+		$this->renderHistoryLink( $data );
+	}
+
 	protected function renderMetaSections() {
 		$this->renderLanguages();
+	}
+
+	/**
+	 * Renders the content of a page
+	 * @param Array $data Data used to build the page
+	 */
+	protected function renderContent( $data ) {
+		if ( !$data[ 'unstyledContent' ] ) { ?>
+		<div id="content" class="content">
+			<?php
+				if ( isset( $data['subject-page'] ) ) {
+					echo $data['subject-page'];
+				}
+				echo $data[ 'bodytext' ];
+				$this->renderMetaSections();
+				$this->renderHistoryLinkBottom( $data );
+			?>
+		</div>
+		<?php } else {
+			echo $data[ 'bodytext' ];
+		}
 	}
 
 	protected function renderContentWrapper( $data ) {
@@ -134,21 +163,8 @@ class MinervaTemplate extends BaseTemplate {
 						$this->renderPageActions( $data );
 					}
 				}
+				$this->renderContent( $data );
 			?>
-			<?php if ( !$data[ 'unstyledContent' ] ) { ?>
-			<div id="content" class="content">
-				<?php
-					if ( isset( $data['subject-page'] ) ) {
-						echo $data['subject-page'];
-					}
-					echo $data[ 'bodytext' ];
-					$this->renderMetaSections();
-					$this->renderHistoryLink( $data );
-				?>
-			</div>
-			<?php } else {
-				echo $data[ 'bodytext' ];
-			} ?>
 		</div>
 		<?php
 	}
