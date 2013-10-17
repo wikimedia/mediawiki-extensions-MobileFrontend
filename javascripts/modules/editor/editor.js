@@ -10,6 +10,7 @@
 			queryParams: {
 				campaign: 'mobile_editPageActionCta'
 			},
+			signupQueryParams: { returntoquery: 'article_action=signup-edit' },
 			content: mw.msg( 'mobile-frontend-editor-cta' )
 		} );
 
@@ -19,7 +20,7 @@
 			prependTo( container );
 	}
 
-	function makeCta( $el, hash, returnToQuery ) {
+	function makeCta( $el, hash ) {
 		$el.
 			// FIXME change when micro.tap.js in stable
 			on( M.tapEvent( 'mouseup' ), function( ev ) {
@@ -28,10 +29,7 @@
 				ev.stopPropagation();
 				// need to use toggle() because we do ev.stopPropagation() (in addEditButton())
 				drawer.
-					render( { queryParams: {
-						returnto: mw.config.get( 'wgPageName' ) + hash,
-						returntoquery: returnToQuery
-					} } ).
+					render( { queryParams: { returnto: mw.config.get( 'wgPageName' ) + hash } } ).
 					toggle();
 			} ).
 			// needed until we use tap everywhere to prevent the link from being followed
@@ -43,7 +41,7 @@
 		if ( M.query.undo ) {
 			window.alert( mw.msg( 'mobile-frontend-editor-undo-unsupported' ) );
 		}
-		M.router.route( /^editor\/(\d+)$/, function( sectionId ) {
+		M.router.route( /^editor\/(\d+)\/?([^\/]*)$/, function( sectionId, funnel ) {
 			var loadingOverlay = new LoadingOverlay();
 			loadingOverlay.show();
 
@@ -59,7 +57,8 @@
 					title: ns ? ns + ':' + title : title,
 					isNew: isNew,
 					isNewEditor: mw.config.get( 'wgUserEditCount' ) === 0,
-					sectionId: mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? sectionId : null
+					sectionId: mw.config.get( 'wgPageContentModel' ) === 'wikitext' ? sectionId : null,
+					funnel: funnel || 'article'
 				} ).show();
 			} );
 		} );
@@ -79,22 +78,24 @@
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
+
+		// FIXME: remove when edit AB test is done
+		if ( M.query.article_action === 'signup-edit' ) {
+			$( '.edit-page' ).each( function() {
+				$( this ).attr( 'href', $( this ).attr( 'href' ) + '/ctaSignup' );
+			} );
+		}
 	}
 
 	function initCta() {
 		// FIXME change when micro.tap.js in stable
 		$( '#ca-edit' ).addClass( 'enabled' ).on( M.tapEvent( 'click' ), function() {
-			drawer.render( { queryParams :{ returntoquery: 'article_action=edit' } } ).show();
+			drawer.render().show();
 		} );
 
 		$( '.edit-page' ).each( function() {
 			var $a = $( this ), anchor = '#' + $( this ).parent().find( '[id]' ).attr( 'id' );
-
-			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
-				makeCta( $a, anchor );
-			} else {
-				makeCta( $a, anchor, 'article_action=edit' );
-			}
+			makeCta( $a, anchor );
 		} );
 	}
 

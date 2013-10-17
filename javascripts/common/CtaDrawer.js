@@ -17,10 +17,11 @@ var Drawer = M.require( 'Drawer' ),
 			var params = $.extend( {
 				// use wgPageName as this includes the namespace if outside Main
 				returnto: options.returnTo || mw.config.get( 'wgPageName' )
-			}, options.queryParams );
+			}, options.queryParams ),
+				signupParams = $.extend( { type: 'signup' }, options.signupQueryParams );
 
 			options.loginUrl = mw.util.wikiGetlink( 'Special:UserLogin', params );
-			options.signupUrl = mw.util.wikiGetlink( 'Special:UserLogin', $.extend( params, { type: 'signup' } ) );
+			options.signupUrl = mw.util.wikiGetlink( 'Special:UserLogin', $.extend( params, signupParams ) );
 		}
 	} );
 

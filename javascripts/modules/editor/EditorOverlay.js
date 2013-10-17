@@ -46,7 +46,8 @@
 					pageId: mw.config.get( 'wgArticleId' ),
 					username: mw.config.get( 'wgUserName' ),
 					mobileMode: mw.config.get( 'wgMFMode' ),
-					userAgent: window.navigator.userAgent
+					userAgent: window.navigator.userAgent,
+					funnel: this.funnel
 				};
 			if ( errorText ) {
 				data.errorText = errorText;
@@ -64,6 +65,7 @@
 			this.isNewEditor = options.isNewEditor;
 			this.editCount = mw.config.get( 'wgUserEditCount' );
 			this.isFirstEdit = this.editCount === 0;
+			this.funnel = options.funnel;
 			this._super( options );
 		},
 

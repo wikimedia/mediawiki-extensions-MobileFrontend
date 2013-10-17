@@ -271,16 +271,11 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			// NotificationsOverlay.js
 			'overlays/notifications',
-			// page.js
-			'pageActionTutorial',
 		),
 		'dependencies' => array(
 			'mobile.stable.common',
 			'mobile.loggingSchemas',
 			'mobile.templates',
-		),
-		'scripts' => array(
-			'javascripts/common/ContentOverlay.js',
 		),
 		'messages' => array(
 			// LanguageOverlay.js
@@ -338,10 +333,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/talk/talk.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
-			'javascripts/modules/tutorials/PageActionOverlay.js',
-			'javascripts/modules/tutorials/newbie.js',
 			'javascripts/modules/lastModifiedBeta.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
+			'javascripts/modules/tutorials/LeadPhotoTutorialOverlay.js',
+			'javascripts/modules/tutorials/newbieUploads.js',
 		),
 		'position' => 'bottom',
 		'messages' => array(
@@ -349,18 +344,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-show-button',
 			'mobile-frontend-hide-button',
 
-			// newbie.js
-			'mobile-frontend-lead-image-tutorial-summary',
-			'mobile-frontend-lead-image-tutorial-confirm',
-			'mobile-frontend-editor-tutorial-summary',
-			'mobile-frontend-editor-tutorial-confirm',
-
 			// for talk.js
 			'mobile-frontend-talk-overlay-header',
 
 			// notifications.js (defined in Echo)
 			'echo-none',
 			'notifications',
+
+			// newbieUploads.js
+			'mobile-frontend-lead-image-tutorial-summary',
+			'mobile-frontend-lead-image-tutorial-confirm',
 		),
 	),
 
@@ -479,6 +472,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'ctaDrawer',
 			// mf-references.js
 			'ReferencesDrawer',
+			'modules/tutorials/PageActionOverlay',
 		),
 		'scripts' => array(
 			'javascripts/common/View.js',
@@ -545,6 +539,9 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/search/search.js',
 			'javascripts/modules/mf-watchstar.js',
 			'javascripts/modules/mf-references.js',
+			'javascripts/common/ContentOverlay.js',
+			'javascripts/modules/tutorials/PageActionOverlay.js',
+			'javascripts/modules/tutorials/newbieEditor.js',
 		),
 		'messages' => array(
 			// for mf-toggle.js
@@ -580,6 +577,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// for search.js
 			'mobile-frontend-search-help',
 			'mobile-frontend-search-noresults',
+
+			// newbieEditor.js
+			'mobile-frontend-editor-tutorial-summary',
+			'mobile-frontend-editor-tutorial-confirm',
 		),
 	),
 
