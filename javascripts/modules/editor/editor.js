@@ -38,14 +38,6 @@
 			on( 'click', false );
 	}
 
-	// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
-	function extractSectionIdFromEditLink( $a ) {
-		var editHref = $a.attr( 'href' ),
-			qs = editHref.split( '?' )[ 1 ],
-			section = M.deParam( qs ).section;
-		return section;
-	}
-
 	function init( page ) {
 		var isNew = mw.config.get( 'wgArticleId' ) === 0;
 		if ( M.query.undo ) {
@@ -87,20 +79,6 @@
 			// prevent folding section when clicking Edit
 			ev.stopPropagation();
 		} );
-
-		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
-		$( '#content' ).find( 'h1,h2' ).find( '.mw-editsection' ).each( function() {
-			var section = extractSectionIdFromEditLink( $( this ).find( 'a' ) );
-			if ( section ) {
-				addEditButton( section, $( this ).parent() ).
-					// FIXME change when micro.tap.js in stable
-					on( M.tapEvent( 'mouseup' ), function( ev ) {
-						// prevent folding section when clicking Edit
-						ev.stopPropagation();
-					} );
-			}
-			$( this ).remove();
-		} );
 	}
 
 	function initCta() {
@@ -116,17 +94,6 @@
 				makeCta( $a, anchor );
 			} else {
 				makeCta( $a, anchor, 'article_action=edit' );
-			}
-		} );
-
-		// FIXME: remove when SkinMobile::doEditSectionLink present in cached pages
-		$( '#content' ).find( 'h1,h2' ).find( '.mw-editsection' ).each( function() {
-			var $heading = $( this ).closest( 'h2' ), $a = addEditButton( '', $heading );
-
-			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
-				makeCta( $a, '#' + $heading.attr( 'id' ) );
-			} else {
-				makeCta( $a, '#' + $heading.attr( 'id' ), 'article_action=edit' );
 			}
 		} );
 	}
