@@ -788,7 +788,8 @@ See also:
 	'mobile-frontend-editor-captcha-try-again' => 'A message shown when user enters wrong CAPTCHA and a new one is displayed.',
 	'mobile-frontend-editor-abusefilter-warning' => 'A message telling the user that their edit triggered an AbuseFilter warning.',
 	'mobile-frontend-editor-abusefilter-disallow' => 'A message telling their user that their edit has been disallowed by AbuseFilter.',
-	'mobile-frontend-editor-abusefilter-read-more' => 'A caption for the button allowing the user to read more about the problems with their edit.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'A caption for the button allowing the user to read more about the problems with their edit.
+{{Identical|Read more}}',
 	'tag-mobile_edit' => 'Short change tag name that appears e.g. in [[Special:RecentChanges]].
 
 See also:
@@ -857,7 +858,6 @@ Parameters:
 * $1 - name of user who thanked, can be used for GENDER
 * $2 - title of page for editing which the thank was given
 * $3 - (optional) name of user who was thanked, for GENDER support',
-
 	'mobile-frontend-geonotahack' => 'Label for button that shows pages near a given page',
 );
 
@@ -3973,6 +3973,9 @@ $messages['de'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Habe keine Angst vor Markup. Versuche, die Seite „$1“ zu verbessern.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Mit dem Bearbeiten anfangen',
 	'mobile-frontend-editor-captcha-try-again' => 'Falscher Code. Versuche es erneut.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Warnung: Willst du diese Bearbeitung wirklich speichern? Mit dieser könnte es ein Problem geben.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Diese Bearbeitung konnte nicht gespeichert werden, da ein Problem festgestellt wurde.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Mehr lesen',
 	'tag-mobile_edit' => 'Mobile Bearbeitung',
 	'tag-mobile_edit-description' => 'Bearbeitet von der mobilen Website',
 	'mobile-frontend-drawer-cancel' => 'Abbrechen',
@@ -4006,6 +4009,7 @@ $messages['de'] = array(
 	'mobile-frontend-profile-user-desc-3' => 'Dies ist {{GENDER:$1|ein profilierter Benutzer|eine profilierte Benutzerin}}.',
 	'mobile-frontend-requires-optin' => 'Diese Seite ist nicht verfügbar, bis du dich für unseren Beta-Modus angemeldet hast. Besuche zur Anmeldung die [[Special:MobileOptions|Einstellungsseite]].',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Zuletzt gedankt}} durch [[Special:UserProfile/$1|$1]] für eine Bearbeitung an [[$2]].',
+	'mobile-frontend-geonotahack' => 'In der Nähe dieser Seite',
 );
 
 /** Swiss High German (Schweizer Hochdeutsch)
@@ -5909,6 +5913,9 @@ $messages['fr'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'N’ayez pas peur de marquer. Essayez d’améliorer la page $1.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Commencer à modifier',
 	'mobile-frontend-editor-captcha-try-again' => 'Mauvais code, essayez de nouveau.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Attention : Êtes-vous sûr de vouloir enregistrer cette modification ? Elle pourrait présenter un problème.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Cette modification ne peut pas être enregistrée parce que nous avons détecté un problème.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'En savoir plus',
 	'tag-mobile_edit' => 'Modification par mobile',
 	'tag-mobile_edit-description' => 'Modification effectuée depuis la version mobile',
 	'mobile-frontend-drawer-cancel' => 'Annuler',
@@ -5942,6 +5949,7 @@ $messages['fr'] = array(
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Cet utilisateur|Cette utilisatrice}} est un éditeur prolifique.',
 	'mobile-frontend-requires-optin' => 'Cette page n’est pas accessible sauf si vous avez choisi notre mode bêta. Allez sur la [[Special:MobileOptions|page de paramètres]] pour le choisir.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Remercié la dernière fois}} par [[Special:UserProfile/$1|$1]] pour une modification sur [[$2]].',
+	'mobile-frontend-geonotahack' => 'Proche de cette page',
 );
 
 /** Franco-Provençal (arpetan)
@@ -6574,6 +6582,9 @@ $messages['gl'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Non lle teña medo ao formato wiki. Intente mellorar a páxina "$1".',
 	'mobile-frontend-editor-tutorial-confirm' => 'Comece a editar',
 	'mobile-frontend-editor-captcha-try-again' => 'Código incorrecto. Inténteo de novo.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Atención: Está seguro de querer gardar esta edición? Pode haber problemas con ela.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Esta edición non se pode gardar porque detectamos un problema.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Ler máis',
 	'tag-mobile_edit' => 'Edición desde un dispositivo móbil',
 	'tag-mobile_edit-description' => 'Edición feita desde o sitio móbil',
 	'mobile-frontend-drawer-cancel' => 'Cancelar',
@@ -6607,6 +6618,7 @@ $messages['gl'] = array(
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|O usuario|A usuaria}} é {{GENDER:$1|un editor prolífico|unha editora prolífica}}.',
 	'mobile-frontend-requires-optin' => 'Esta páxina non está dispoñible a menos que active o noso modo beta. Visite a [[Special:MobileOptions|páxina de configuración]] para activalo.',
 	'mobile-frontend-profile-last-thanked' => '[[Special:UserProfile/$1|$1]] foi {{GENDER:$1|o último|a última}} en agradecerlle unha edición feita en "[[$2]]".',
+	'mobile-frontend-geonotahack' => 'Preto desta páxina',
 );
 
 /** Guarani (Avañe'ẽ)
@@ -8480,6 +8492,9 @@ in tutto il mondo',
 	'mobile-frontend-editor-tutorial-summary' => 'Non aver paura del markup. Prova a migliorare la pagina su $1.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Inizia a modificare',
 	'mobile-frontend-editor-captcha-try-again' => 'Codice errato, riprova.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Attenzione: sei sicuro di voler salvare questa modifica? Potrebbe esserci un problema con essa.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Questa modifica non può essere salvata perché è stato rilevato un problema.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Per saperne di più',
 	'tag-mobile_edit' => 'Modifica da mobile',
 	'tag-mobile_edit-description' => 'Modifica apportata dal sito per dispositivi mobili',
 	'mobile-frontend-drawer-cancel' => 'Annulla',
@@ -8513,6 +8528,7 @@ in tutto il mondo',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Questo utente}} è un editor prolifico.',
 	'mobile-frontend-requires-optin' => 'Questa pagina non è disponibile se non si opta per la modalità beta. Visita la [[Special:MobileOptions|pagina delle impostazioni]] per scegliere.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Ultimo ringraziamento}} di [[Special:UserProfile/$1|$1]] per una modifica a [[$2]].',
+	'mobile-frontend-geonotahack' => 'Vicino a questa pagina',
 );
 
 /** Japanese (日本語)
@@ -8742,6 +8758,8 @@ $messages['ja'] = array(
 	'mobile-frontend-editor-error-preview' => 'プレビューを読み込む際に予期しないエラーが発生しました。閉じてもう一度お試しください。',
 	'mobile-frontend-editor-tutorial-summary' => 'マークアップを恐れずに、ページ $1 を改善してください。',
 	'mobile-frontend-editor-tutorial-confirm' => '編集を開始',
+	'mobile-frontend-editor-abusefilter-warning' => '警告: この編集内容を本当に保存しますか? 問題点を含んでいるおそれがあります。',
+	'mobile-frontend-editor-abusefilter-disallow' => 'この編集内容で問題点が検出されたため、保存できません。',
 	'tag-mobile_edit' => '携帯機器での編集',
 	'tag-mobile_edit-description' => '携帯機器版サイトでの編集',
 	'mobile-frontend-drawer-cancel' => 'キャンセル',
@@ -8770,6 +8788,7 @@ $messages['ja'] = array(
 	'mobile-frontend-profile-yours' => '自分のプロフィール ページに戻る',
 	'mobile-frontend-profile-userpage-link' => '利用者ページを閲覧',
 	'mobile-frontend-requires-optin' => 'ベータ版モードを有効にしていないため、このページを利用できません。有効にするには[[Special:MobileOptions|設定ページ]]を参照してください。',
+	'mobile-frontend-geonotahack' => 'このページの近辺',
 );
 
 /** Javanese (Basa Jawa)
@@ -9583,6 +9602,9 @@ $messages['ko'] = array(
 	'mobile-frontend-editor-tutorial-summary' => '문법에 무서워하지 마세요. $1 문서를 개선해보세요.',
 	'mobile-frontend-editor-tutorial-confirm' => '편집 시작',
 	'mobile-frontend-editor-captcha-try-again' => '코드가 잘못되었습니다, 다시 시도하세요.',
+	'mobile-frontend-editor-abusefilter-warning' => '경고: 정말로 편집을 저장하겠습니까? 편집에 문제가 있을 수 있습니다.',
+	'mobile-frontend-editor-abusefilter-disallow' => '편집에서 문제가 발생되어 저장될 수 없습니다.',
+	'mobile-frontend-editor-abusefilter-read-more' => '더 읽어보기',
 	'tag-mobile_edit' => '모바일 편집',
 	'tag-mobile_edit-description' => '모바일 사이트에서 편집',
 	'mobile-frontend-drawer-cancel' => '취소',
@@ -16396,6 +16418,9 @@ $messages['uk'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Не лякайтеся розмітки. Спробуйте поліпшити сторінку $1.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Почати редагування',
 	'mobile-frontend-editor-captcha-try-again' => 'Неправильний код, повторіть спробу.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Увага: Ви дійсно бажаєте зберегти цю правку? Там може бути проблема з цим.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Це редагування неможливо зберегти, бо ми виявили проблему.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Детальніше',
 	'tag-mobile_edit' => 'Редагування з мобільного пристрою',
 	'tag-mobile_edit-description' => 'Редагування, зроблені з мобільної версії сайту',
 	'mobile-frontend-drawer-cancel' => 'Скасувати',
@@ -16429,6 +16454,7 @@ $messages['uk'] = array(
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Цей користувач|Ця користувачка}} є {{GENDER:$1|профільним редактором|профільною редакторкою}}.',
 	'mobile-frontend-requires-optin' => 'Ця сторінка недоступна, якщо ви виберете в нашому режимі бета. Відвідайте [[Special:MobileOptions|сторінку налаштувань]], щоб відмовитися.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Востаннє подякував}} [[Special:UserProfile/$1|$1]] за редагування на [[$2]].',
+	'mobile-frontend-geonotahack' => 'Поблизу цієї сторінки',
 );
 
 /** Urdu (اردو)
