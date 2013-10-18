@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_eee53b0d",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:27:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_4f0acf27",
+      "revId": "cfc90ad5a7bcf943d03a2506ead8d8a72cb16b3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_6f2cf3ac",
         "filename": "includes/specials/SpecialHistory.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-10-16T22:41:15Z",
       "side": 1,
       "message": "$this-\u003emsg()",
+      "revId": "cfc90ad5a7bcf943d03a2506ead8d8a72cb16b3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_4eeba7dd",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:27:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_6f2cf3ac",
       "revId": "cfc90ad5a7bcf943d03a2506ead8d8a72cb16b3d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_8ebd9fd6",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:27:13Z",
+      "side": 1,
+      "message": "YAGNI. Let\u0027s do that if there seems to be a use case.",
+      "parentUuid": "0932edd2_9afc070b",
+      "revId": "cfc90ad5a7bcf943d03a2506ead8d8a72cb16b3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_8f1be77d",
         "filename": "includes/specials/SpecialHistory.php",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "0932edd2_eece1b83",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:27:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_8f1be77d",
+      "revId": "cfc90ad5a7bcf943d03a2506ead8d8a72cb16b3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_ef18e380",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2013-10-16T22:41:15Z",
       "side": 1,
       "message": "flase should be lowercase",
+      "revId": "cfc90ad5a7bcf943d03a2506ead8d8a72cb16b3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_0eca8f6f",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 501,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:27:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0932edd2_ef18e380",
       "revId": "cfc90ad5a7bcf943d03a2506ead8d8a72cb16b3d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
