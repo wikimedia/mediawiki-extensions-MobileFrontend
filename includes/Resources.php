@@ -315,6 +315,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.geonotahack' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.startup',
+			'mobile.loggingSchemas',
 		),
 		'messages' => array(
 			'mobile-frontend-geonotahack',
