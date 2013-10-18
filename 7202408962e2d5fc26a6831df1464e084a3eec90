@@ -16,6 +16,24 @@
       "revId": "7202408962e2d5fc26a6831df1464e084a3eec90",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_f4b42c80",
+        "filename": "includes/skins/MinervaTemplate.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T23:35:24Z",
+      "side": 1,
+      "message": "I guess I missed this when refactoring Ryan\u0027s code. Will remove.",
+      "parentUuid": "0932edd2_34dec408",
+      "revId": "7202408962e2d5fc26a6831df1464e084a3eec90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
