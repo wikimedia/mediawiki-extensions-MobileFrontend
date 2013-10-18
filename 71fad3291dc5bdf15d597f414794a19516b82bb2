@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_0e544f50",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:53:47Z",
+      "side": 1,
+      "message": "Let\u0027s move all this CSS into a separate file animatedNav.less or similar and only add it to alpha.",
+      "revId": "71fad3291dc5bdf15d597f414794a19516b82bb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_ee58db87",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:53:47Z",
+      "side": 1,
+      "message": "This 3 changes should be wrapped in an alpha class.",
+      "revId": "71fad3291dc5bdf15d597f414794a19516b82bb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_ce61573b",
+        "filename": "less/common/mainmenu.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:53:47Z",
+      "side": 1,
+      "message": "It\u0027s still not proper sandboxed. Something experimental should ideally not change any thing in stable. It\u0027s not worth it. These changes should also be wrapped in an alpha class.",
+      "revId": "71fad3291dc5bdf15d597f414794a19516b82bb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
