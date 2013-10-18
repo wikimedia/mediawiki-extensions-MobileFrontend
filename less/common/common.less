@@ -97,6 +97,12 @@ ul.gallery {
 
 #content {
 	position: relative; // allow absolute positioned children e.g. edit link
+	img {
+		// FIXME [Inline Styles]: Important ensures we can overwrite any inline styles
+		// It's a leaf node so Nicole Sullivan says its okay
+		max-width: 100% !important;
+		height: auto !important;
+	}
 }
 
 p,
