@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_54c41861",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-18T20:56:17Z",
+      "side": 1,
+      "message": "They should probably both inherit from an abstract class. Logically, history doesn\u0027t seem to be a subclass of watchlist.",
+      "revId": "53bbb03e026e6bcc76d036b294931fad9a10b5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_34c9647a",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-18T20:56:17Z",
+      "side": 1,
+      "message": "Do we want page images for history? Isn\u0027t it the same image all the time?",
+      "revId": "53bbb03e026e6bcc76d036b294931fad9a10b5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_14caa06f",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-18T20:56:17Z",
+      "side": 1,
+      "message": "Not sure what is the purpose of this. PHP doesn\u0027t get minified ;)",
+      "revId": "53bbb03e026e6bcc76d036b294931fad9a10b5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_54a7b8a9",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-18T20:56:17Z",
+      "side": 1,
+      "message": "Why would we even use this class? They are two completely different things. You can\u0027t \"select\" anything in mobile-frontend-history-summary... It doesn\u0027t seem like the right markup.",
+      "revId": "53bbb03e026e6bcc76d036b294931fad9a10b5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_1493805b",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-18T20:56:17Z",
+      "side": 1,
+      "message": "SpecialWatchlist and should not be tied in any way to SpecialHistory. Another reason for an abstract class. The name of this property could be more descriptive too.",
+      "revId": "53bbb03e026e6bcc76d036b294931fad9a10b5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_b4863415",
+        "filename": "less/common/pagelist.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-18T20:56:17Z",
+      "side": 1,
+      "message": "Please, let\u0027s not add new uncommented CSS rules for a temporary design that is not approved.Why don\u0027t we reuse .mw-mf-user styling from the watchlist?",
+      "revId": "53bbb03e026e6bcc76d036b294931fad9a10b5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d489e825",
+        "filename": "less/specials/watchlist.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-18T20:56:17Z",
+      "side": 1,
+      "message": "Please, don\u0027t...",
+      "revId": "53bbb03e026e6bcc76d036b294931fad9a10b5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
