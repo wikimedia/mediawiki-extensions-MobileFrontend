@@ -89,7 +89,7 @@ $messages['en'] = array (
 	'mobile-frontend-account-create-submit' => 'Sign up',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirm password',
 	'mobile-frontend-account-create-email-placeholder' => 'Email address (optional)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Enter security text',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Enter confirmation code',
 	// Search
 	'mobile-frontend-overlay-escape' => 'Go back',
 	'mobile-frontend-placeholder' => 'Search {{SITENAME}}',
