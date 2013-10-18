@@ -129,7 +129,7 @@
 			// pre-fetch keep going with expectation user will go on to save
 			if ( inBetaOrAlpha && ( this.isFirstEdit || inKeepGoingCampaign ) ) {
 				mw.loader.using( 'mobile.keepgoing', function() {
-					KeepGoingDrawer = M.require( 'KeepGoingDrawer' );
+					KeepGoingDrawer = M.require( 'modules/keepgoing/KeepGoingDrawer' );
 				} );
 			}
 
