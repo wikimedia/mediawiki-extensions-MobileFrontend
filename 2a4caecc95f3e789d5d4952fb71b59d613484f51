@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_b7863615",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T23:51:28Z",
+      "side": 1,
+      "message": "I\u0027m seeing this pattern a fair bit - can we not generalise on this rule?\n(there\u0027s on in hacks.less and one in uploads\nalso you are missing a height: auto",
+      "revId": "2a4caecc95f3e789d5d4952fb71b59d613484f51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
