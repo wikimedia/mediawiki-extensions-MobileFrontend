@@ -264,7 +264,9 @@ class ApiMobileView extends ApiBase {
 					$chunk = "<h$chunk";
 				}
 				if ( $wgUseTidy && count( $chunks ) > 1 ) {
+					wfProfileIn( __METHOD__ . '-tidy' );
 					$chunk = MWTidy::tidy( $chunk );
+					wfProfileOut( __METHOD__ . '-tidy' );
 				}
 				if ( preg_match( '/<ol\b[^>]*?class="references"/', $chunk ) ) {
 					$data['refsections'][count( $data['text'] )] = true;
