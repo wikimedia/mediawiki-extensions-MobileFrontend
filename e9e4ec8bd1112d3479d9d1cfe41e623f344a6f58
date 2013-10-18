@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_2e7bd325",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-18T18:31:29Z",
+      "side": 1,
+      "message": "Add a deprecation notice as well?",
+      "revId": "e9e4ec8bd1112d3479d9d1cfe41e623f344a6f58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
