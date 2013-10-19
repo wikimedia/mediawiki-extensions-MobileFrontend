@@ -12,11 +12,13 @@
 				cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 				confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),
 				licenseMsg: mw.msg( 'mobile-frontend-editor-license' ),
-				topicAdd: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
+				heading: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 				topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 				topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' )
 			},
-			template: M.template.get( 'overlays/talkSectionAdd' ),
+			templatePartials: {
+				content: M.template.get( 'overlays/talkSectionAdd' )
+			},
 			initialize: function( options ) {
 				this._super( options );
 				this.talkOverlay = options.parent;

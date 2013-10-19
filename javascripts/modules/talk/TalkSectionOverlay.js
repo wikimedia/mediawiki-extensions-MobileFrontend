@@ -5,7 +5,9 @@ var
 	popup = M.require( 'notifications' ),
 	api = M.require( 'api' ),
 	TalkSectionOverlay = Overlay.extend( {
-		template: M.template.get( 'talkSection' ),
+		templatePartials: {
+			content: M.template.get( 'talkSection' )
+		},
 		defaults: {
 			reply: mw.msg( 'mobile-frontend-talk-reply' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-save' ),

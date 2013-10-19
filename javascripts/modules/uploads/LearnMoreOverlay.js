@@ -4,7 +4,9 @@
 		defaults: {
 			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
 		},
-		template: M.template.get( 'uploads/LearnMoreOverlay' )
+		templatePartials: {
+			content: M.template.get( 'uploads/LearnMoreOverlay' )
+		}
 	} );
 
 	M.define( 'modules/uploads/LearnMoreOverlay', LearnMoreOverlay );

@@ -3,8 +3,6 @@
 var View = M.require( 'view' ),
 	Overlay = View.extend( {
 		defaults: {
-			heading: '',
-			content: '',
 			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' )
 		},
 		template: M.template.get( 'overlay' ),
