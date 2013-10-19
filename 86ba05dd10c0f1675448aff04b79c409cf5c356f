@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_97b932cb",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-19T00:07:22Z",
+      "side": 1,
+      "message": "page-header-bar is fine, mw-mf-watchlist-selector is not. Why not move some rules to page-header-bar and apply mw-mf-watchlist-selector only in the watchlist?",
+      "revId": "86ba05dd10c0f1675448aff04b79c409cf5c356f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
