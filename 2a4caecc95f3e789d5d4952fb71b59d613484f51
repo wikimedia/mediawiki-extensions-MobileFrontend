@@ -16,6 +16,24 @@
       "revId": "2a4caecc95f3e789d5d4952fb71b59d613484f51",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_37ac068d",
+        "filename": "less/specials/userprofile.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-19T00:03:27Z",
+      "side": 1,
+      "message": "OK, prepare the generalisation patch and I\u0027ll rebase and apply it. Or merge this and then prepare the generalisation patch.\n\nheight: auto is unnecessary, see comment in SpecialUserProfile.php.",
+      "parentUuid": "0932edd2_b7863615",
+      "revId": "2a4caecc95f3e789d5d4952fb71b59d613484f51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
