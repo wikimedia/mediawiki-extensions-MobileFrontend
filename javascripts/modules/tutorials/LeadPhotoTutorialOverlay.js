@@ -6,8 +6,7 @@
 	LeadPhotoTutorialOverlay = PageActionOverlay.extend( {
 		defaults: {
 			className: 'slide active photo-upload',
-			summary: mw.msg( 'mobile-frontend-lead-image-tutorial-summary' ),
-			cancelMsg: mw.msg( 'cancel' )
+			summary: mw.msg( 'mobile-frontend-lead-image-tutorial-summary' )
 		},
 		postRender: function( options ) {
 			this._super( options );

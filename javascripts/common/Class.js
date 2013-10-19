@@ -9,6 +9,7 @@
 		function Surrogate() {}
 		Surrogate.prototype = Parent.prototype;
 		Child.prototype = new Surrogate();
+		Child.prototype._parent = Parent.prototype;
 
 		// http://ejohn.org/blog/simple-javascript-inheritance
 		// Copy the properties over onto the new prototype

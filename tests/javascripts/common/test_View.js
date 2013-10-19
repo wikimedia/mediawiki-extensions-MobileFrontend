@@ -65,6 +65,27 @@ QUnit.test( 'View.extend, with defined template', 4, function() {
 	strictEqual( view.content(), 'Some content', 'fill template with data from options' );
 } );
 
+QUnit.test( 'View.extend, extending defaults', 1, function( assert ) {
+	var ParentView, ChildView, view;
+
+	ParentView = View.extend( {
+		defaults: {
+			a: 1,
+			b: 2
+		}
+	} );
+
+	ChildView = ParentView.extend( {
+		defaults: {
+			b: 3,
+			c: 4
+		}
+	} );
+
+	view = new ChildView( { c: 5 } );
+	assert.deepEqual( view.options, { a: 1, b: 3, c: 5 } );
+} );
+
 QUnit.test( 'View#preRender', 1, function() {
 	var ChildView, view;
 	ChildView = View.extend( {
