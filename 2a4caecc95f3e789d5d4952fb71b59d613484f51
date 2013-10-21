@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0932edd2_5d30bbe7",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-21T17:30:15Z",
+      "side": 1,
+      "message": "On second thought this is not as bad as I thought. It seems toHtml also doesn\u0027t return an alt attribute or the srcset support like I first thought (we should probably add an alt to be good web citizens and have valid HTML)\n\nSo I\u0027m  okay with using src here but we should add some kind of alt text if available..",
+      "revId": "2a4caecc95f3e789d5d4952fb71b59d613484f51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0932edd2_b7863615",
         "filename": "less/specials/userprofile.less",
         "patchSetId": 1
