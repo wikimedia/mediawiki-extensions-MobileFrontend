@@ -46,6 +46,7 @@
 // When overlays are opened drawers do not look good
 .overlay-enabled  {
 	.drawer {
-		display: none;
+		// !important to override rules set by animations
+		display: none !important;
 	}
 }
