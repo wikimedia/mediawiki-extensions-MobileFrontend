@@ -16,6 +16,24 @@
       "revId": "e9e4ec8bd1112d3479d9d1cfe41e623f344a6f58",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_6601d0b1",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-21T17:54:14Z",
+      "side": 1,
+      "message": "Will be done in a separate commit, when this one is merged and announced so that I have a link to announcement.",
+      "parentUuid": "0932edd2_2e7bd325",
+      "revId": "e9e4ec8bd1112d3479d9d1cfe41e623f344a6f58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
