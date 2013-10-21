@@ -5,6 +5,7 @@
 		popup = M.require( 'notifications' ),
 		api = M.require( 'api' ),
 		inBetaOrAlpha = mw.config.get( 'wgMFMode' ) !== 'stable',
+		inCampaign = M.query.campaign ? true : false,
 		inKeepGoingCampaign = M.query.campaign === 'mobile-keepgoing',
 		Section = M.require( 'Section' ),
 		EditorApi = M.require( 'modules/editor/EditorApi' ),
@@ -129,7 +130,7 @@
 			this.$spinner.show();
 
 			// pre-fetch keep going with expectation user will go on to save
-			if ( inBetaOrAlpha && ( this.isFirstEdit || inKeepGoingCampaign ) ) {
+			if ( inBetaOrAlpha && ( ( this.isFirstEdit && !inCampaign ) || inKeepGoingCampaign ) ) {
 				mw.loader.using( 'mobile.keepgoing', function() {
 					KeepGoingDrawer = M.require( 'modules/keepgoing/KeepGoingDrawer' );
 				} );

@@ -9,27 +9,29 @@
 	var Drawer = M.require( 'Drawer' ),
 		mobileWebCta = M.require( 'loggingSchemas/mobileWebCta' ),
 		KeepGoingDrawer,
-		campaign = 'mobile-keepgoing',
 		api = M.require( 'api' );
 
 	KeepGoingDrawer = Drawer.extend( {
 		locked: true,
 		defaults: {
-			step: 0,
-			cancel: mw.msg( 'mobilefrontend-keepgoing-cancel' )
+			step: parseInt( M.query.campaign_step, 10 ) || 0,
+			cancel: mw.msg( 'mobilefrontend-keepgoing-cancel' ),
+			nextLabel: mw.msg( 'mobilefrontend-keepgoing-suggest-again' ),
+			campaign: 'mobile-keepgoing'
 		},
 		template: M.template.get( 'keepgoing/KeepGoingDrawer' ),
 		log: function( status ) {
-			mobileWebCta.log( status, campaign, this.options.step );
+			mobileWebCta.log( status, this.options.campaign, this.options.step );
 		},
 		initialize: function( options ) {
 			options = options || {};
-			if ( options.tryAgain ) {
-				options.msg = mw.msg( 'mobilefrontend-keepgoing-explain' );
-				options.nextLabel = mw.msg( 'mobilefrontend-keepgoing-suggest-again' );
-			} else {
-				options.msg = options.isFirstEdit ? mw.msg( 'mobilefrontend-keepgoing-ask-first' ) : mw.msg( 'mobilefrontend-keepgoing-ask' );
-				options.nextLabel = mw.msg( 'mobilefrontend-keepgoing-suggest' );
+			if ( !options.msg ) {
+				if ( options.tryAgain ) {
+					options.msg = mw.msg( 'mobilefrontend-keepgoing-explain' );
+				} else {
+					options.msg = options.isFirstEdit ? mw.msg( 'mobilefrontend-keepgoing-ask-first' ) : mw.msg( 'mobilefrontend-keepgoing-ask' );
+					options.nextLabel = mw.msg( 'mobilefrontend-keepgoing-suggest' );
+				}
 			}
 			this._super( options );
 		},
@@ -42,12 +44,12 @@
 			options = options || {};
 			api.get( { action: 'query', list: 'random', rnnamespace: '0', rnlimit: 1 } ).done( function( resp ) {
 				var page = resp.query.random[0],
-					url = mw.util.wikiGetlink( page.title, { campaign: campaign, campaign_step: nextStep } );
+					url = mw.util.wikiGetlink( page.title, { campaign: options.campaign, campaign_step: nextStep } );
 
 				options.nextUrl = url;
 				_super.call( self, options );
 				self.show();
-				mobileWebCta.hijackLink( self.$( '.continue' ), 'keepgoing-success', campaign, step );
+				mobileWebCta.hijackLink( self.$( '.continue' ), 'keepgoing-success', options.campaign, step );
 				self.$( '.close' ).on( 'click', function() {
 					self.log( 'keepgoing-exit' );
 				} );
