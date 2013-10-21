@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6922898b_8505e2c6",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-21T13:39:26Z",
+      "side": 1,
+      "message": "Indenting this for other reviewers for readability. The trick that\u0027s used\nhere is to use the arbitrary plural form 0 for anonymous users, to avoid\nhaving to special case the anonymous user in separate messages.\n\n [$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 second|$3 seconds}} ago] {{PLURAL:$5|\n  by [$6 $2]|\n  0\u003dby an anonymous user\n }}\n\nTo save a few characters, \"by \" can be taken outside of the PLURAL:$5.\n\nI think this is a very creative use of PLURAL, basically (ab)using it as\na switch. I identified this type of abuse a while after we implemented\nthis flexibility, but this is the first real-world use. It should be fine\nto use it, but we have to be aware that this can confuse translators, and\nmake the strings a lot more complex. Use with care!",
+      "revId": "47da09571dc9159a95315802c5996d90ef8af41b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6922898b_253fceb2",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-10-21T13:39:26Z",
+      "side": 1,
+      "message": "Still has 3 FIXMEs in this file.",
+      "revId": "47da09571dc9159a95315802c5996d90ef8af41b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
