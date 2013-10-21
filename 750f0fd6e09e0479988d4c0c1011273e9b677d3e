@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_57f55c7f",
+        "filename": "javascripts/modules/keepgoing/KeepGoingDrawer.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-21T22:34:35Z",
+      "side": 1,
+      "message": "KeepGoingDrawer should be agnostic of the environment it runs in. Also we currently bind to to touch events where available so this becomes even more troublesome.\n\nI was thinking that we could simply not show the CTA for KeepGoing when a user is in random mode...",
+      "revId": "750f0fd6e09e0479988d4c0c1011273e9b677d3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
