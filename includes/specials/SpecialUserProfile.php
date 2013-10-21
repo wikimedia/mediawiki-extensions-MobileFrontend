@@ -37,10 +37,16 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$title = $file->getTitle();
 		$ts = new MWTimestamp( $file->getTimestamp() );
 		$daysAgo = $this->getDaysAgo( $ts );
-
 		$img = Html::openElement( 'div', array( 'class' => 'last-upload section-end' ) ) .
 			Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
-			$file->transform( array( 'width' => 320, 'height' => 320 ) )->toHtml() .
+			Html::element( 'img', array(
+				// uset MediaTransformOutput::getUrl, unfortunately MediaTransformOutput::toHtml
+				// returns <img> tag with fixed height which causes the image to be deformed when
+				// used with max-width
+				'src' => $file->transform( array( 'width' => 320 ) )->getUrl(),
+				// FIXME: Add more meaningful alt text
+				'alt' => $title->getText(),
+			) ) .
 			Html::openElement( 'div', array( 'class' => 'thumbcaption secondary-statement' ) ) .
 			$this->msg( 'mobile-frontend-profile-last-upload-caption', $this->targetUser->getName() )->numParams( $daysAgo )->parse() .
 			Html::closeElement( 'div' ) .
