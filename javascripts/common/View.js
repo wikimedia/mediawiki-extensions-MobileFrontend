@@ -57,6 +57,7 @@
 		 */
 		initialize: function( options ) {
 			this._super();
+			this.defaults = $.extend( {}, this._parent.defaults, this.defaults );
 			options = $.extend( {}, this.defaults, options );
 			if ( options.el ) {
 				this.$el = $( options.el );

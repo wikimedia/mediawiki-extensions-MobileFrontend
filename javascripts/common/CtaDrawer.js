@@ -8,8 +8,7 @@ var Drawer = M.require( 'Drawer' ),
 	CtaDrawer = Drawer.extend( {
 		defaults: {
 			loginCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
-			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
-			cancelMessage: mw.msg( 'mobile-frontend-drawer-cancel' )
+			signupCaption: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
 		},
 		template: M.template.get( 'ctaDrawer' ),
 

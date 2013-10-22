@@ -47,7 +47,6 @@
 		closeOnBack: true,
 
 		defaults: {
-			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' ),
 			detailsMsg: mw.msg( 'mobile-frontend-media-details' )
 		},
 

@@ -15,7 +15,6 @@
 
 	EditorOverlay = Overlay.extend( {
 		defaults: {
-			closeMsg: mw.msg( 'mobile-frontend-overlay-escape' ),
 			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
 			saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
