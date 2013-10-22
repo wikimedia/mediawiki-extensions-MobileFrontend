@@ -418,6 +418,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-media-details',
 		),
 		'styles' => array(
+			'less/common/mainmenuAnimation.less',
 			'less/modules/mediaViewer.less',
 		),
 		'scripts' => array(

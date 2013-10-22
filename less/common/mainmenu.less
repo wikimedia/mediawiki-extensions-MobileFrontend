@@ -1,3 +1,5 @@
+@import "../mixins.less";
+
 /* Left menu */
 @menuBorder: 12px;
 @menuBorderColor: #252525;
@@ -139,7 +141,6 @@
 }
 
 body.navigation-enabled {
-	@menuWidth: 16em;
 	// set background and border here (#mw-mf-page-left doesn't expand height
 	// and #mw-mf-viewport has overflow: hidden and clips blue hover borders)
 	border-left: solid @menuBorder @menuBorderColor;
