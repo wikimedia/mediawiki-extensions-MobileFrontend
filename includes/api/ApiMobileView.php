@@ -207,9 +207,11 @@ class ApiMobileView extends ApiBase {
 		}
 		$data = $wgMemc->get( $key );
 		if ( $data ) {
+			wfIncrStats( 'mobile.view.cache-hit' );
 			wfProfileOut( __METHOD__ );
 			return $data;
 		}
+		wfIncrStats( 'mobile.view.cache-miss' );
 		if ( $this->file ) {
 			$html = $this->getFilePage( $title );
 		} else {
