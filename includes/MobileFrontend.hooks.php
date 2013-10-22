@@ -125,7 +125,7 @@ class MobileFrontendHooks {
 				$args['mobileaction'] = 'toggle_view_mobile';
 			}
 			$mobileViewUrl = $title->getFullURL( $args );
-			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( $mobileViewUrl, $args );
+			$mobileViewUrl = MobileContext::singleton()->getMobileUrl( $mobileViewUrl );
 
 			$link = Html::element( 'a',
 				array( 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ),
