@@ -373,8 +373,14 @@ $messages['en'] = array (
  * @author 아라
  */
 $messages['qqq'] = array(
-	'mobilefrontend-random-explain' => 'Asks if the reader is happy with the random page they were given.',
-	'mobilefrontend-random-cancel' => 'Allows the reader to start reading the current article.',
+	'mobilefrontend-random-explain' => 'Asks if the reader is happy with the random page they were given.
+
+See also:
+* {{msg-mw|Mobilefrontend-random-cancel}}',
+	'mobilefrontend-random-cancel' => 'Allows the reader to start reading the current article.
+
+See also:
+* {{msg-mw|Mobilefrontend-random-explain}}',
 	'mobilefrontend-keepgoing-ask' => 'Congratulations message shown to a user who has completed an edit in the keepgoing campaign. Prompts them to edit again.',
 	'mobilefrontend-keepgoing-ask-first' => 'Congratulate user on first edit. Ask them if they want to edit again.',
 	'mobilefrontend-keepgoing-explain' => 'Message explaining that the page they are looking at has issues. Gives them the option to try another.',
@@ -479,7 +485,8 @@ If not the Main Page, the following message is used:
 * {{msg-mw|Mobile-frontend-last-modified-date}}',
 	'mobile-frontend-last-modified-date' => 'Text that displays the date the page was last modified. Parameters:
 * $1 - date
-* $2 - time',
+* $2 - time
+{{Related|Mobile-frontend-last-modified}}',
 	'mobile-frontend-last-modified-seconds' => 'Text displayed on page to show how long ago the page was updated. Parameters:
 * $1 - number of seconds
 {{Related|Mobile-frontend-last-modified}}',
@@ -498,61 +505,63 @@ If not the Main Page, the following message is used:
 	'mobile-frontend-last-modified-years' => 'Text displayed on page to show how long ago the page was updated. Parameters:
 * $1 - number of years
 {{Related|Mobile-frontend-last-modified}}',
-	'mobile-frontend-last-modified-just-now' => 'Text displayed on page to show that the page was edited within the last few seconds.',
-	'mobile-frontend-last-modified-with-user-date' => 'Text that displays the date the page was last modified and who modified it. Parameters:
-* $1 - date
-* $2 - time
-* $3 - link to user profile
-* $4 - gender of user who performed the edit
-* $5 - parameters for link to page history',
+	'mobile-frontend-last-modified-just-now' => 'Text displayed on page to show that the page was edited within the last few seconds.
+{{Related|Mobile-frontend-last-modified}}',
 	'mobile-frontend-last-modified-with-user-seconds' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
 * $1 - user's gender
 * $2 - username
 * $3 - number of seconds
 * $4 - link to page history
-* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
-* $6 - link to user's profile.",
+* $5 - integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile
+{{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-last-modified-with-user-minutes' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
 * $1 - user's gender
 * $2 - username
 * $3 - number of minutes
 * $4 - link to page history
-* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
-* $6 - link to user's profile.",
+* $5 - integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile
+{{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-last-modified-with-user-hours' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
 * $1 - user's gender
 * $2 - username
 * $3 - number of hours
 * $4 - link to page history
-* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
-* $6 - link to user's profile.",
+* $5 - integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile
+{{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-last-modified-with-user-days' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
 * $1 - user's gender
 * $2 - username
 * $3 - number of days
 * $4 - link to page history
-* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
-* $6 - link to user's profile.",
+* $5 - integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile
+{{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-last-modified-with-user-months' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
 * $1 - user's gender
 * $2 - username
 * $3 - number of months
 * $4 - link to page history
-* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
-* $6 - link to user's profile.",
+* $5 - integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile
+{{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-last-modified-with-user-years' => "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:
 * $1 - user's gender
 * $2 - username
 * $3 - number of years
 * $4 - link to page history
-* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
-* $6 - link to user's profile.",
+* $5 - integer. When 0 the user is anonymous. When 1 the user is named
+* $6 - link to user's profile
+{{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-last-modified-with-user-just-now' => "Text displayed on page to show when a page was very recently updated and who updated it. Parameters:
 * $1 - user's gender
 * $2 - username
-* $4 - link to page history
-* $5 - Integer. When 0 the user is anonymous. When 1 the user is named
-* $6 - link to user's profile.",
+* $3 - link to page history
+* $4 - integer. When 0 the user is anonymous. When 1 the user is named
+* $5 - link to user's profile
+{{Related|Mobile-frontend-last-modified-with-user}}",
 	'mobile-frontend-learn-more' => 'A caption of a button or a link leading to details about a given piece of information.
 {{Identical|Learn more}}',
 	'mobile-frontend-account-create-submit' => 'Text in account creation submit button.
@@ -893,8 +902,6 @@ Note: $2 and $3 are capped at the value of MobileUserInfo::LIMIT currently 500.'
 	'mobile-frontend-profile-last-upload-caption' => 'Parameters:
 * $1 - the username
 * $2 - the amount of days ago the image was uploaded',
-	'mobile-frontend-profile-heading-recent' => 'Heading for recent section profile.
-{{Identical|Recent}}',
 	'mobile-frontend-profile-registration' => 'Summary saying how many days the user ($1) has been a member ($2) and how many total edits they has made ($3).
 
 Parameters:
@@ -1079,8 +1086,11 @@ $messages['anp'] = array(
  * @author OsamaK
  * @author Samer
  * @author زكريا
+ * @author مشعل الحربي
  */
 $messages['ar'] = array(
+	'mobilefrontend-random-explain' => 'هل تثير هذه الصفحة العشوائية اهتمامك؟',
+	'mobilefrontend-random-cancel' => 'دعني أقرأ!',
 	'nearby' => 'صفحات قريبة منك',
 	'mobile-frontend-desc' => 'واجهة الجوال',
 	'mobile-frontend-search-submit' => 'اذهب',
@@ -1137,7 +1147,7 @@ $messages['ar'] = array(
 	'mobile-frontend-account-create-submit' => 'أنشئ حسابًا',
 	'mobile-frontend-password-confirm-placeholder' => 'أكد كلمة السر',
 	'mobile-frontend-account-create-email-placeholder' => 'البريد الإلكتروني (اختياري)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'أدخل النص الأمني',
+	'mobile-frontend-account-create-captcha-placeholder' => 'أدخل النص الأمني', # Fuzzy
 	'mobile-frontend-overlay-escape' => 'ارجع',
 	'mobile-frontend-placeholder' => 'ابحث في {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'ابحث في {{SITENAME}} (تجريبي)',
@@ -1515,7 +1525,7 @@ $messages['ast'] = array(
 	'mobile-frontend-account-create-submit' => "Date d'alta",
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmar la contraseña',
 	'mobile-frontend-account-create-email-placeholder' => 'Direición de corréu electrónicu (opcional)',
-	'mobile-frontend-account-create-captcha-placeholder' => "Escriba'l testu de seguridá", # Fuzzy
+	'mobile-frontend-account-create-captcha-placeholder' => "Escriba'l códigu de confirmación",
 	'mobile-frontend-overlay-escape' => 'Volver',
 	'mobile-frontend-placeholder' => 'Guetar en {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Gueta en {{SITENAME}} (Beta)',
@@ -1684,6 +1694,9 @@ $messages['ast'] = array(
 	'mobile-frontend-editor-tutorial-summary' => "Nun s'asuste de les marques. Intente ameyorar la páxina $1.",
 	'mobile-frontend-editor-tutorial-confirm' => 'Principiar a editar',
 	'mobile-frontend-editor-captcha-try-again' => 'Códigu incorreutu, vuelva a intentalo.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Atención: ¿Ta seguru de que quier guardar esta edición? Pue haber un problema con ella.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Esta edición nun pue guardase porque detectamos un problema.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Lleer más',
 	'tag-mobile_edit' => 'Edición de móvil',
 	'tag-mobile_edit-description' => "Edición fecha dende'l sitiu pa móviles",
 	'mobile-frontend-drawer-cancel' => 'Encaboxar',
@@ -1702,10 +1715,9 @@ $messages['ast'] = array(
 	'mobile-frontend-media-details' => 'Detalles',
 	'abusefilter-edit-builder-vars-user-mobile' => 'Si un usuariu ta editando o non pela interfaz pa móvil',
 	'mobile-frontend-profile-title' => 'Perfil del usuariu',
-	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 edición|$2 ediciones|0=Ensin ediciones|501=Más de 500 ediciones}}]] y
-[[Special:Uploads/$1|{{PLURAL:$3|1 carga|$3 cargues|0=ensin cargues|501=más de 500 cargues}}]] nos últimos 30 díes.', # Fuzzy
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 edición|$2 ediciones|0=Ensin ediciones}}]] y
+[[Special:Uploads/$1|{{PLURAL:$3|1 carga|$3 cargues|0=ensin cargues}}]] nos últimos 30 díes.',
 	'mobile-frontend-profile-last-upload-caption' => 'Última carga de {{GENDER:$1|$1}} {{PLURAL:$2|ayeri|hai $2 díes|0=güei}}.',
-	'mobile-frontend-profile-heading-recent' => 'De recién',
 	'mobile-frontend-profile-registration' => '$1 lleva collaborando con {{SITENAME}} dende hai {{PLURAL:$2|$2 día|$2 díes}} y {{GENDER:$1|fizo}} {{PLURAL:$3|$3 edición|$3 ediciones}}.',
 	'mobile-frontend-profile-usertalk' => "Ver la páxina d'alderique.",
 	'mobile-frontend-profile-noargs' => "Por favor, indique un nome d'usuariu pa ver un perfil.",
@@ -1717,6 +1729,7 @@ $messages['ast'] = array(
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Esti usuariu|Esta usuaria}} ye {{GENDER:$1|un editor avezáu|una editora avezada}}.',
 	'mobile-frontend-requires-optin' => "Esta páxina nun ta disponible si nun activa'l nuesu mou beta. Visite la [[Special:MobileOptions|páxina de configuración]] p'activalu.",
 	'mobile-frontend-profile-last-thanked' => "[[Special:UserProfile/$1|$1]] foi {{GENDER:$1|l'últimu|la última}} en da-y les gracies por una edición fecha en [[$2]].",
+	'mobile-frontend-geonotahack' => "Cerca d'esta páxina",
 );
 
 /** Azerbaijani (azərbaycanca)
@@ -3526,7 +3539,6 @@ $messages['cy'] = array(
 	'mobile-frontend-media-details' => 'Manylion',
 	'abusefilter-edit-builder-vars-user-mobile' => "P'un ai yw defnyddiwr yn golygu gyda'r rhyngwyneb symudol ai pheidio",
 	'mobile-frontend-profile-title' => 'Data personol',
-	'mobile-frontend-profile-heading-recent' => 'Diweddar',
 	'mobile-frontend-profile-usertalk' => 'Edrych ar y dudalen sgwrs.',
 	'mobile-frontend-profile-noargs' => 'Rhowch enw defnyddiwr i weld y data personol.',
 	'mobile-frontend-profile-yours' => 'Ymweld â thudalen eich data personol.',
@@ -3809,7 +3821,6 @@ $messages['da'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 redigering|$2 redigeringer|0=Ingen redigeringer}}]] og
 [[Special:Uploads/$1|{{PLURAL:$3|1 oplægning|$3 oplægninger|0=ingen oplægninger}}]] i løbet af de sidste 30 dage.',
 	'mobile-frontend-profile-last-upload-caption' => 'Seneste upload af {{GENDER:$1|$1}}, {{PLURAL:$2|i går|for $2 dage siden|0=i dag}}.',
-	'mobile-frontend-profile-heading-recent' => 'Seneste',
 	'mobile-frontend-profile-registration' => '$1 har bidraget til {{SITENAME}} i {{PLURAL:$2|en dag|$2 dage}} og {{GENDER:$1|har lavet}} {{PLURAL:$3|en redigering|$3 redigeringer}}.',
 	'mobile-frontend-profile-usertalk' => 'Se diskussionssiden.',
 	'mobile-frontend-profile-noargs' => 'Angiv et brugernavn for at se en profil.',
@@ -3835,6 +3846,8 @@ $messages['da'] = array(
  * @author Wnme
  */
 $messages['de'] = array(
+	'mobilefrontend-random-explain' => 'Interessiert dich diese zufällige Seite?',
+	'mobilefrontend-random-cancel' => 'Lass mich lesen!',
 	'mobilefrontend-keepgoing-ask' => 'Gut gemacht! Du bekommst den Dreh raus! Willst du eine weitere Seite bearbeiten?',
 	'mobilefrontend-keepgoing-ask-first' => 'Herzlichen Glückwunsch für deine erste Bearbeitung! Möchtest du eine weitere Seite bearbeiten?',
 	'mobilefrontend-keepgoing-explain' => 'Großartig! Ein anderer Benutzer behauptet, dass diese Seite Hilfe benötigt. Versuche diese oder eine andere.',
@@ -3897,6 +3910,14 @@ $messages['de'] = array(
 	'mobile-frontend-last-modified-days' => 'Zuletzt geändert vor {{PLURAL:$1|einem Tag|$1 Tagen}}',
 	'mobile-frontend-last-modified-months' => 'Zuletzt geändert vor {{PLURAL:$1|einem Monat|$1 Monaten}}',
 	'mobile-frontend-last-modified-years' => 'Zuletzt geändert vor {{PLURAL:$1|einem Jahr|$1 Jahren}}',
+	'mobile-frontend-last-modified-just-now' => 'Gerade eben geändert',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einer Sekunde|$3 Sekunden}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einer Minute|$3 Minuten}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einer Stunde|$3 Stunden}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einem Tag|$3 Tagen}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einem Monat|$3 Monaten}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einem Jahr|$3 Jahren}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Zuletzt {{GENDER:$1|bearbeitet}}] gerade eben von {{PLURAL:$4|[$5 $2]|0=einem anonymen Benutzer}}',
 	'mobile-frontend-learn-more' => 'Mehr erfahren',
 	'mobile-frontend-account-create-submit' => 'Registrieren',
 	'mobile-frontend-password-confirm-placeholder' => 'Passwort bestätigen',
@@ -4095,7 +4116,6 @@ $messages['de'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|Eine Bearbeitung|$2 Bearbeitungen}}]] und
 [[Special:Uploads/$1|{{PLURAL:$3|eine hochgeladene Datei|$3 hochgeladene Dateien}}]] in den letzten 30 Tagen.',
 	'mobile-frontend-profile-last-upload-caption' => 'Letzter Upload von {{GENDER:$1|$1}}, {{PLURAL:$2|gestern|vor $2 Tagen|0=heute}}.',
-	'mobile-frontend-profile-heading-recent' => 'Kürzlich',
 	'mobile-frontend-profile-registration' => '$1 ist {{SITENAME}}-{{GENDER:$1|Autor|Autorin}} seit {{PLURAL:$2|einem Tag|$2 Tagen}} und hat {{PLURAL:$3|eine Bearbeitung|$3 Bearbeitungen}} durchgeführt.',
 	'mobile-frontend-profile-usertalk' => 'Diskussionsseite ansehen.',
 	'mobile-frontend-profile-noargs' => 'Bitte gib einen Benutzernamen an, um ein Profil anzusehen.',
@@ -5386,7 +5406,6 @@ $messages['fa'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه',
 	'mobile-frontend-profile-title' => 'مشخصات کاربر',
 	'mobile-frontend-profile-last-upload-caption' => 'آخرین بارگذاری توسط {{GENDER:$1|$1}}، {{PLURAL:$2|دیروز|$2 روز پیش|0=امروز}}',
-	'mobile-frontend-profile-heading-recent' => 'اخیر',
 	'mobile-frontend-profile-registration' => '$1 برای {{PLURAL:$2|$2 روز}} عضو بوده و {{PLURAL:$3|$3 ویرایش}} انجام داده‌است.', # Fuzzy
 	'mobile-frontend-profile-usertalk' => 'نمایش صفحه بحث.',
 	'mobile-frontend-profile-noargs' => 'لطفاً یک نام کاربری برای نمایش مشخصات بدهید.',
@@ -6035,7 +6054,6 @@ $messages['fr'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modification|$2 modifications|0=Aucune modification}}]] et
 [[Special:Uploads/$1|{{PLURAL:$3|1 téléchargement|$3 téléchargements|0=aucun téléchargement}}]] durant les 30 derniers jours.',
 	'mobile-frontend-profile-last-upload-caption' => 'Dernier téléchargement par {{GENDER:$1|$1}}, {{PLURAL:$2|hier|il y a $2 jours|0=aujourd’hui}}.',
-	'mobile-frontend-profile-heading-recent' => 'Récent',
 	'mobile-frontend-profile-registration' => '$1 a contribué à {{SITENAME}} pendant {{PLURAL:$2|$2 jour|$2 jours}} et {{GENDER:$1|a fait}} {{PLURAL:$3|$3 modification|$3 modifications}}.',
 	'mobile-frontend-profile-usertalk' => 'Afficher la page de discussion.',
 	'mobile-frontend-profile-noargs' => 'Veuillez indiquer un nom d’utilisateur pour afficher un profil.',
@@ -6704,7 +6722,6 @@ $messages['gl'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 edición|$2 edicións|0=Ningunha edición|501=Máis de 500 edicións}}]] e
 [[Special:Uploads/$1|{{PLURAL:$3|1 carga|$3 cargas|0=ningunha carga|501=máis de 500 cargas}}]] nos últimos 30 días.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'A última carga realizouna {{GENDER:$1|$1}} {{PLURAL:$2|onte|hai $2 días|0=hoxe}}.',
-	'mobile-frontend-profile-heading-recent' => 'Recentes',
 	'mobile-frontend-profile-registration' => '$1 contribúe en {{SITENAME}} desde hai {{PLURAL:$2|$2 día|$2 días}} e {{GENDER:$1|realizou}} {{PLURAL:$3|$3 edición|$3 edicións}}.',
 	'mobile-frontend-profile-usertalk' => 'Ver a páxina de conversa.',
 	'mobile-frontend-profile-noargs' => 'Indique un nome de usuario para ollar un perfil.',
@@ -7756,7 +7773,15 @@ $messages['ia'] = array(
  * @author Mahali syarifuddin
  */
 $messages['id'] = array(
-	'nearby' => 'Halaman di dekat Anda',
+	'mobilefrontend-random-explain' => 'Apakah halaman sembarang ini menarik bagi Anda?',
+	'mobilefrontend-random-cancel' => 'Saya mau membaca!',
+	'mobilefrontend-keepgoing-ask' => 'Selamat! Anda sudah tahu caranya! Apakah Anda mau mencoba menyunting halaman lain?',
+	'mobilefrontend-keepgoing-ask-first' => 'Selamat untuk suntingan pertama Anda! Apakah Anda mau mencoba menyunting halaman lain?',
+	'mobilefrontend-keepgoing-explain' => 'Bagus! Menurut pengguna lain, halaman ini perlu bantuan. Coba halaman ini, atau coba halaman lain.',
+	'mobilefrontend-keepgoing-cancel' => 'Tidak, terima kasih',
+	'mobilefrontend-keepgoing-suggest' => 'Ya, silakan',
+	'mobilefrontend-keepgoing-suggest-again' => 'Coba yang lain',
+	'nearby' => 'Artikel tentang tempat di dekat Anda',
 	'mobile-frontend-desc' => 'Mobile Frontend',
 	'mobile-frontend-search-submit' => 'Cari',
 	'mobile-frontend-home-button' => 'Utama',
@@ -7767,24 +7792,25 @@ $messages['id'] = array(
 	'mobile-frontend-sign-in-heading' => 'Masuk log',
 	'mobile-frontend-sign-in-why' => 'Jika Anda memiliki akun {{SITENAME}}, Anda dapat masuk log di bawah ini.',
 	'mobile-frontend-sign-in-error-heading' => 'Ups!',
-	'mobile-frontend-settings-description' => 'Menyesuaikan pengalaman Anda di perangkat seluler dengan pengaturan spesifik untuk situs seluler.',
+	'mobile-frontend-settings-description' => 'Menyesuaikan pengalaman Anda di piranti mobil dengan pengaturan spesifik untuk situs mobil.',
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => 'Modus eksperimental',
-	'mobile-frontend-settings-alpha-description' => 'Masuk ke wilayah seluler yang berbahaya dan belum dieksplorasi. Dapatkan fitur yang lebih eksperimental, tapi dengan lebih banyak kendala.',
+	'mobile-frontend-settings-alpha' => 'Mode eksperimental',
+	'mobile-frontend-settings-alpha-description' => 'Masuk ke wilayah seluler yang berbahaya dan belum dieksplorasi. Dapatkan fitur yang lebih eksperimental, tapi dengan lebih banyak kemungkinan kesalahan.',
 	'mobile-frontend-save-settings' => 'Simpan',
+	'mobile-frontend-save-error' => 'Galat menyimpan pengaturan. Pastikan bahwa Anda telah mengaktifkan kuki.',
 	'mobile-frontend-random-button' => 'Sembarang',
 	'mobile-frontend-back-to-top-of-section' => 'Kembali ke bagian sebelumnya',
 	'mobile-frontend-close-section' => 'Tutup bagian ini',
-	'mobile-frontend-regular-site' => 'Tampilan desktop',
+	'mobile-frontend-regular-site' => 'Tampilan komputer meja',
 	'mobile-frontend-wml-continue' => 'Lanjutkan...',
 	'mobile-frontend-wml-back' => 'Kembali ...',
 	'mobile-frontend-view' => 'Tampilan seluler',
 	'mobile-frontend-view-desktop' => "Tampilan besar (''desktop'')",
 	'mobile-frontend-view-mobile' => "Tampilan kecil (''mobile'')",
-	'mobile-frontend-opt-in-explain' => 'Bergabung dengan beta, Anda akan mendapatkan akses ke fitur eksperimental, dengan risiko menemukan bug dan masalah.',
+	'mobile-frontend-opt-in-explain' => 'Dengan bergabung dengan beta, Anda akan mendapatkan akses ke fitur-fitur eksperimental, namun dengan risiko menjumpai bug dan masalah.',
 	'mobile-frontend-images-status' => 'Gambar',
-	'mobile-frontend-disable-images' => 'Nonaktifkan gambar pada situs seluler',
-	'mobile-frontend-enable-images' => 'Aktifkan gambar pada situs seluler',
+	'mobile-frontend-disable-images' => 'Non-aktifkan gambar pada situs mobil',
+	'mobile-frontend-enable-images' => 'Aktifkan gambar pada situs mobil',
 	'mobile-frontend-missing-image' => 'Gambar',
 	'mobile-frontend-off' => 'MATIKAN',
 	'mobile-frontend-on' => 'HIDUPKAN',
@@ -7794,25 +7820,34 @@ $messages['id'] = array(
 	'mobile-frontend-language-article-heading' => 'Baca dalam bahasa lain',
 	'mobile-frontend-language-header' => 'Artikel ini tersedia dalam $1 {{PLURAL:$1|bahasa}}',
 	'mobile-frontend-language-variant-header' => 'Pilih varian {{#language:{{CONTENTLANG}}}}',
-	'mobile-frontend-language-footer' => 'Catatan: Halaman ini mungkin tidak ditulis dalam bahasa pilihan Anda. Anda dapat melihat {{SITENAME}} bahasa apa yang didukung dengan mengklik di sini.',
+	'mobile-frontend-language-footer' => 'Catatan: Halaman ini mungkin tidak ditulis dalam bahasa pilihan Anda. Anda dapat melihat {{SITENAME}} bahasa apa yang didukung dengan mengeklik di sini.',
 	'mobile-frontend-language-site-choose' => 'Cari bahasa',
 	'mobile-frontend-username' => 'Nama pengguna:',
 	'mobile-frontend-password' => 'Kata sandi:',
 	'mobile-frontend-username-placeholder' => 'Nama pengguna',
-	'mobile-frontend-password-placeholder' => 'Sandi',
+	'mobile-frontend-password-placeholder' => 'Kata sandi',
 	'mobile-frontend-login' => 'Masuk log',
+	'mobile-frontend-history' => 'Lihat riwayat suntingan halaman ini.',
 	'mobile-frontend-last-modified-date' => 'Terakhir diubah pada $1, $2',
-	'mobile-frontend-last-modified-seconds' => 'Terakhir diubah pada {{PLURAL:$1|$1 detik}} lalu',
-	'mobile-frontend-last-modified-minutes' => 'Terakhir diubah pada {{PLURAL:$1|$1 menit}} lalu',
-	'mobile-frontend-last-modified-hours' => 'Terakhir diubah pada {{PLURAL:$1|$1 jam}} lalu',
-	'mobile-frontend-last-modified-days' => 'Terakhir diubah pada {{PLURAL:$1|$1 hari}} lalu',
-	'mobile-frontend-last-modified-months' => 'Terakhir diubah pada {{PLURAL:$1|$1 bulan}} lalu',
-	'mobile-frontend-last-modified-years' => 'Terakhir diubah pada {{PLURAL:$1|$1 tahun}} lalu',
+	'mobile-frontend-last-modified-seconds' => 'Terakhir diubah pada {{PLURAL:$1|$1 detik}} yang lalu',
+	'mobile-frontend-last-modified-minutes' => 'Terakhir diubah pada {{PLURAL:$1|$1 menit}} yang lalu',
+	'mobile-frontend-last-modified-hours' => 'Terakhir diubah pada {{PLURAL:$1|$1 jam}} yang lalu',
+	'mobile-frontend-last-modified-days' => 'Terakhir diubah pada {{PLURAL:$1|$1 hari}} yang lalu',
+	'mobile-frontend-last-modified-months' => 'Terakhir diubah pada {{PLURAL:$1|$1 bulan}} yang lalu',
+	'mobile-frontend-last-modified-years' => 'Terakhir diubah pada {{PLURAL:$1|$1 tahun}} yang lalu',
+	'mobile-frontend-last-modified-just-now' => 'Terakhir diubah baru saja',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3 detik|$3 detik}} yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} menit yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} jam yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} hari yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} bulan yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3|$3}} tahun yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Baru saja {{GENDER:$1|disunting}}] oleh {{PLURAL:$4|[$5 $2]|0=seorang pengguna anonim}}',
 	'mobile-frontend-learn-more' => 'Pelajari lebih lanjut',
 	'mobile-frontend-account-create-submit' => 'Mendaftar',
 	'mobile-frontend-password-confirm-placeholder' => 'Konfirmasi sandi',
 	'mobile-frontend-account-create-email-placeholder' => 'Alamat surel (opsional)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Masukkan teks keamanan',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Masukkan kode konfirmasi',
 	'mobile-frontend-overlay-escape' => 'Kembali',
 	'mobile-frontend-placeholder' => 'Cari {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Cari {{SITENAME}} (Beta)',
@@ -7822,21 +7857,21 @@ $messages['id'] = array(
 	'mobile-frontend-clear-search' => 'Kosongkan',
 	'mobile-frontend-privacy-link-text' => 'Privasi',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-footer-license' => 'Teks tersedia di bawah [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; ketentuan tambahan mungkin berlaku.',
-	'mobile-frontend-copyright' => "Teks tersedia di bawah <a href='http://id.wikipedia.org/wiki/{{SITENAME}}:Teks_Lisensi_Creative_Commons_Atribusi-PembagianSerupa_3.0'>Lisensi Creative Commons Atribusi-PembagianSerupa</a>; syarat tambahan mungkin berlaku. Lihat <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Ketentuan Pemakaian</a> untuk detailnya. {{SITENAME}} adalah sebuah merek dagang terdaftar dari <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, sebuah organisasi nirlaba.", # Fuzzy
+	'mobile-frontend-footer-license' => 'Teks tersedia di bawah [//id.m.wikipedia.org/wiki/Wikipedia:Teks_Lisensi_Creative_Commons_Atribusi-BerbagiSerupa_3.0?useformat=mobile CC BY-SA 3.0]; ketentuan tambahan mungkin berlaku.',
+	'mobile-frontend-copyright' => 'Konten tersedia di bawah $1 kecuali apabila disebutkan lisensi yang lain.',
 	'mobile-frontend-terms-use-text' => '[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Ketentuan Penggunaan]',
 	'mobile-frontend-footer-contact' => 'Kontak',
-	'mobile-frontend-search-noresults' => 'Tidak ada judul yang cocok dengan pencarian Anda. Ubah pencarian Anda, atau tekan tombol pencarian keyboard untuk mencari halaman.',
+	'mobile-frontend-search-noresults' => 'Tidak ada judul yang cocok dengan pencarian Anda. Ubah pencarian Anda, atau tekan tombol pencarian di papan ketik untuk mencari di dalam isi artikel.',
 	'mobile-frontend-main-menu-button-tooltip' => 'Buka menu utama',
 	'mobile-frontend-main-menu-page-title' => 'Navigasi situs',
-	'mobile-frontend-main-menu-featured' => 'Terpilih',
-	'mobile-frontend-main-menu-nearby' => 'Terdekat',
+	'mobile-frontend-main-menu-featured' => 'Pilihan',
+	'mobile-frontend-main-menu-nearby' => 'Dekat',
 	'mobile-frontend-main-menu-login' => 'Masuk log',
 	'mobile-frontend-main-menu-logout' => 'Keluar log',
 	'mobile-frontend-main-menu-watchlist' => 'Pantauan',
 	'mobile-frontend-main-menu-settings' => 'Pengaturan',
 	'mobile-frontend-main-menu-upload' => 'Unggah',
-	'mobile-frontend-main-menu-settings-heading' => 'Pengaturan situs seluler', # Fuzzy
+	'mobile-frontend-main-menu-settings-heading' => 'Pengaturan',
 	'mobile-frontend-settings-site-header' => 'Bahasa {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => '{{SITENAME}} tersedia dalam $1 {{PLURAL:$1|bahasa|bahasa}}. Semua versi yang tersedia disebutkan di bawah',
 	'mobile-frontend-main-menu-account-create' => 'Buat akun',
@@ -7847,112 +7882,175 @@ $messages['id'] = array(
 	'mobile-frontend-page-saving' => 'Menyimpan $1',
 	'mobile-frontend-user-cta' => 'Silakan masuk log atau mendaftar untuk melihat pemberitahuan Anda.',
 	'mobile-frontend-user-button-tooltip' => 'Tampilkan pemberitahuan saya',
-	'mobile-frontend-nearby-to-page' => 'Halaman berikut terkait dengan $1 oleh lokasi geografis mereka',
-	'mobile-frontend-nearby-title' => 'Terdekat',
-	'mobile-frontend-nearby-loading' => 'Memuat topik dekat lokasi Anda saat ini',
-	'mobile-frontend-nearby-requirements' => 'Maaf! Peramban Anda tidak mendukung {{SITENAME}} terdekat.',
-	'mobile-frontend-nearby-requirements-guidance' => 'Cobalah peramban lain atau mengaktifkan JavaScript jika Anda telah menonaktifkan ini.',
-	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 kilometer}}',
-	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 meter}}',
+	'mobile-frontend-nearby-to-page' => 'Halaman berikut terkait dengan $1 menurut lokasi geografis mereka',
+	'mobile-frontend-nearby-title' => 'Dekat',
+	'mobile-frontend-nearby-loading' => 'Memuat topik di dekat lokasi Anda saat ini',
+	'mobile-frontend-nearby-requirements' => 'Maaf! Penjelajah Anda tidak mendukung fitur Dekat {{SITENAME}} .',
+	'mobile-frontend-nearby-requirements-guidance' => 'Cobalah penjelajah yang lain atau mengaktifkan JavaScript jika Anda telah menon-aktifkannya.',
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
+	'mobile-frontend-nearby-lookup-ui-error' => 'Fitur Dekat {{SITENAME}} tidak tahu di mana Anda... coba lagi?',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Cobalah area terbuka dengan sinyal yang lebih baik.',
-	'mobile-frontend-nearby-noresults' => 'Tenang di sini... Tidak ada halaman terdekat yang ditemukan.',
-	'mobile-frontend-nearby-refresh' => 'Kami menemukan lokasi yang lebih akurat untuk Anda. Klik di sini untuk memperbarui daftar halaman terdekat',
-	'mobile-frontend-nearby-error' => '{{SITENAME}} terdekatmem iliki beberapa masalah.',
-	'mobile-frontend-nearby-error-guidance' => 'Cobalah segarkan lokasi Anda.',
+	'mobile-frontend-nearby-permission' => 'Fitur Dekat {{SITENAME}} tidak memiliki izin untuk mengakses lokasi Anda.',
+	'mobile-frontend-nearby-permission-guidance' => 'Pastikan Anda memberikan izin untuk menunjukkan lokasi Anda. Anda mungkin perlu mengecek pengaturan lokasi penjelajah Anda.',
+	'mobile-frontend-nearby-noresults' => 'Di luar sana sepi... Tidak ada artikel lain tentang tempat di dekat Anda yang dapat ditemukan.',
+	'mobile-frontend-nearby-noresults-guidance' => 'Cobalah membuat sebuah halaman baru atau menambahkan lokasi ke halaman yang sudah ada',
+	'mobile-frontend-nearby-refresh' => 'Kami menemukan lokasi yang lebih akurat untuk Anda. Klik di sini untuk memperbarui daftar halaman tentang tempat di dekat Anda.',
+	'mobile-frontend-nearby-error' => 'Fitur Dekat {{SITENAME}} memiliki beberapa masalah.',
+	'mobile-frontend-nearby-error-guidance' => 'Cobalah perbarui lokasi Anda.',
 	'mobile-frontend-nearby-link' => 'Baca halaman ini secara penuh',
+	'mobile-frontend-nearby-directions' => 'Navigasi ke sini',
+	'mobile-frontend-donate-image-nouploads' => 'Tidak ada unggahan.',
 	'mobile-frontend-donate-image-login' => 'Anda harus masuk log untuk melihat unggahan Anda.',
 	'mobile-frontend-photo-upload-disabled' => 'Tidak ada gambar yang diperlukan pada halaman ini.',
 	'mobile-frontend-photo-upload-anon' => 'Anda harus masuk log untuk menambahkan gambar ke halaman ini.',
 	'mobile-frontend-photo-upload-protected' => 'Anda tidak memiliki izin untuk menambahkan gambar ke halaman ini.',
-	'mobile-frontend-photo-upload-unavailable' => 'Peramban Anda tidak mendukung pengunggahan gambar.',
+	'mobile-frontend-photo-upload-unavailable' => 'Penjelajah Anda tidak mendukung pengunggahan gambar.',
 	'mobile-frontend-photo-upload-generic' => 'Sumbang sebuah gambar',
 	'mobile-frontend-donate-image-title' => 'Unggah',
-	'mobile-frontend-donate-image-heading' => 'Kontribusi terkini Anda',
+	'mobile-frontend-donate-image-heading' => 'Kontribusi terakhir Anda',
 	'mobile-frontend-donate-image-anon' => '$1 dibutuhkan untuk melihat halaman pengunggahan.',
 	'mobile-frontend-user-account' => 'akun pengguna',
 	'mobile-frontend-listed-image-no-description' => 'Tidak ada keterangan',
 	'mobile-frontend-donate-photo-upload-success' => 'Sukses! Gambar Anda sekarang dapat digunakan pada {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Berhasil! Terima kasih atas kontribusi pertama Anda!',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Kirimkan gambar yang Anda buat. Bantulah {{SITENAME}} menjadi lebih hidup!',
 	'mobile-frontend-first-upload-wizard-new-page-1' => 'Gambar pada {{SITENAME}} berasal dari Wikimedia Commons',
 	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Gambar Anda membantu mendidik orang-orang di seluruh dunia',
-	'mobile-frontend-first-upload-wizard-new-page-2' => 'Hindari materi berhak cipta yang Anda temukan dari internet serta gambar poster, sampul buku, d.l.l.',
+	'mobile-frontend-first-upload-wizard-new-page-2' => 'Hindari materi berhak cipta yang Anda temukan dari internet serta gambar poster, sampul buku, dll.',
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Mengerti?',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Ya!',
-	'mobile-frontend-watchlist-add' => 'Ditambahkan $1 ke daftartonton Anda',
-	'mobile-frontend-watchlist-removed' => 'Dihapus $1 dari daftartonton Anda',
-	'mobile-frontend-watchlist-view' => 'Lihat daftartonton Anda',
+	'mobile-frontend-watchlist-add' => 'Ditambahkan $1 ke daftar pantauan Anda',
+	'mobile-frontend-watchlist-removed' => 'Dihapus $1 dari daftar pantauan Anda',
+	'mobile-frontend-watchlist-view' => 'Lihat daftar pantauan Anda',
 	'mobile-frontend-watchlist-more' => 'lainnya',
 	'mobile-frontend-watchlist-cta' => 'Silakan masuk log atau mendaftar untuk mamantau halaman ini.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Masuk log',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Daftar',
 	'mobile-frontend-watch-login' => 'Anda harus masuk log untuk memantau halaman.',
-	'mobile-frontend-watchlist-a-z' => 'Semua', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Daftar',
 	'mobile-frontend-watchlist-feed' => 'Diubah',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Klik bintang di bagian atas halaman',
+	'mobile-frontend-watchlist-a-z-empty-howto' => 'Anda tidak sedang memantau halamlan apa pun. Daftar pantauan Anda membantu mendaftarkan halaman-halaman yang menarik bagi Anda. Anda dapat memantau halaman dengan menekan simbol bintang.',
 	'mobile-frontend-watchlist-feed-empty' => 'Tidak ada halaman dengan perubahan terbaru.',
 	'mobile-frontend-watchlist-back-home' => 'Kembali ke beranda',
 	'mobile-frontend-changeslist-ip' => 'Pengguna anonim',
 	'mobile-frontend-changeslist-nocomment' => 'tidak ada ringkasan suntingan',
 	'mobile-frontend-watchlist-filter-all' => 'Semua',
 	'mobile-frontend-watchlist-filter-articles' => 'Artikel',
-	'mobile-frontend-watchlist-filter-talk' => 'Bicara',
+	'mobile-frontend-watchlist-filter-talk' => 'Pembicaraan',
 	'mobile-frontend-watchlist-filter-other' => 'Lainnya',
 	'mobile-frontend-watchlist-modified' => 'Diubah $1',
+	'mobile-frontend-diffview-404-title' => 'Revisi buruk',
+	'mobile-frontend-diffview-404-desc' => 'ID untuk revisi yang Anda minta tidak ada.',
 	'mobile-frontend-diffview-title' => 'Perubahan',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|suntingan|suntingan}}',
 	'mobile-frontend-diffview-anonymous' => 'Pengguna anonim',
+	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|bita|bita}} ditambahkan',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|bita|bita}} dihapus',
+	'mobile-frontend-diffview-explained' => 'Baris berikut ini ditambahkan (+) dan dihapus (-):',
+	'mobile-frontend-thanked-notice' => '$1 telah diberitahu bahwa Anda menyukai {{GENDER:$2|suntingannya|suntingannya|suntingan mereka}}.',
 	'mobile-frontend-table' => 'Tabel $1',
-	'mobile-frontend-saving-exit-page' => 'Kontribusi Anda masih disimpan. Jika Anda meninggalkan kontribusi Anda akan hilang. Apakah Anda yakin Anda ingin keluar?',
+	'mobile-frontend-saving-exit-page' => 'Kontribusi Anda sedang disimpan. Jika Anda meninggalkan halaman ini maka kontribusi Anda akan hilang. Apakah Anda yakin Anda ingin keluar?',
 	'mobile-frontend-photo-upload' => 'Tambahkan gambar ke halaman ini',
 	'mobile-frontend-photo-article-edit-comment' => 'Tambahkan gambar untuk digunakan pada halaman',
 	'mobile-frontend-photo-article-donate-comment' => 'Sumbang gambar dari Special:Uploads',
-	'mobile-frontend-photo-upload-comment' => 'Tambahkan gambar ke halaman',
+	'mobile-frontend-photo-upload-comment' => 'Menambahkan gambar ke halaman',
 	'mobile-frontend-photo-caption-placeholder' => 'Menambahkan keterangan (diperlukan)',
 	'mobile-frontend-image-loading' => 'Memuat gambar',
+	'mobile-frontend-photo-ownership' => 'Saya, $1, yang membuat gambar ini.',
 	'mobile-frontend-photo-ownership-help' => 'Apa artinya ini?',
 	'mobile-frontend-photo-ownership-confirm' => 'Mengerti!',
 	'mobile-frontend-photo-ownership-bullet-one' => 'Kami hanya dapat menerima gambar milik Anda. Jangan mengunggah gambar yang Anda temukan di tempat lain di Internet.',
 	'mobile-frontend-photo-ownership-bullet-two' => 'Gambar yang dilindungi hak cipta dan tidak patut akan dihapus.',
-	'mobile-frontend-photo-ownership-bullet-three' => 'Unggahan Anda dirilis di bawah lisensi yang memungkinkan setiap orang untuk menggunakan kembali mereka secara gratis.',
-	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Aku tidak melanggar hak cipta',
+	'mobile-frontend-photo-ownership-bullet-three' => 'Unggahan Anda dirilis di bawah lisensi yang memungkinkan setiap orang untuk menggunakan kembali berkas Anda secara gratis.',
+	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Saya tidak melanggar hak cipta',
 	'mobile-frontend-photo-nag-1-bullet-1-text' => "Ini '''bukan''' gambar yang saya temukan di Internet. Ini adalah buatan saya sendiri.",
-	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Ini bukanlah gambaran pribadi',
-	'mobile-frontend-lead-image-tutorial-confirm' => 'Mulai mengunggah', # Fuzzy
+	'mobile-frontend-photo-nag-1-bullet-2-heading' => 'Ini bukan gambaran diri saya',
+	'mobile-frontend-photo-nag-1-bullet-2-text' => 'Dan dapat membantu mengilustrasikan topik yang penting.',
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => 'Pastsi tidak melanggar hak cipta, dan gambar ini memiliki nilai edukasi.',
+	'mobile-frontend-photo-nag-3-bullet-1-heading' => 'Saya mengerti apa yang boleh diunggah. Jangan tampilkan pesan ini lagi.',
+	'mobile-frontend-photo-nag-learn-more-heading' => 'Apa yang boleh diunggah',
+	'mobile-frontend-photo-nag-learn-more-1' => "'''Ya!''' Foto-foto tempat, benda-benda, dan peristiwa.",
+	'mobile-frontend-photo-nag-learn-more-2' => "'''Ya!''' Foto yang dapat membantu menggambarkan dan memperkaya halaman {{SITENAME}}.",
+	'mobile-frontend-photo-nag-learn-more-3' => "'''Tidak.''' foto poster film, sampul buku, atau materi berhak cipta lainnya. Gambar-gambar seperti ini akan dihapus.",
+	'mobile-frontend-lead-image-tutorial-summary' => 'Pastikan bahwa gambar Anda dapat membantu mengilustrasikan halaman. Gambar tersebut harus gambar yang Anda buat sendiri, yang tidak melanggar hak cipta.',
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Mulai mengunggah',
 	'mobile-frontend-image-uploading-wait' => 'Mengunggah gambar, silakan tunggu.',
 	'mobile-frontend-image-uploading-long' => 'Gambar masih diunggah! Terima kasih atas kesabaran Anda.',
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Batalkan</a> jika ini terlalu lama.',
 	'mobile-frontend-photo-upload-error' => 'Galat, coba lagi.',
 	'mobile-frontend-photo-upload-error-file-type' => 'Harap hanya mengunggah gambar.',
 	'mobile-frontend-photo-upload-error-filename' => 'Galat, harap memberikan ringkasan yang lebih deskriptif.',
-	'mobile-frontend-photo-upload-success-article' => 'Berhasil! Gambar Anda sekarang langsung di halaman ini.',
+	'mobile-frontend-photo-upload-success-article' => 'Berhasil! Gambar Anda sekarang telah tertampil di halaman ini.',
+	'mobile-frontend-photo-license' => 'Dengan mengeklik "Kirim", Anda setuju [//wikimediafoundation.org/wiki/Terms_of_use Ketentuan Penggunaan] kami dan setuju untuk melepaskan gambar Anda di bawah [//creativecommons.org/licenses/by-sa/3.0/deed.id Lisensi Creative Commons Atribusi-BerbagiSerupa 3.0].',
 	'mobile-frontend-photo-submit' => 'Kirim',
 	'mobile-frontend-photo-cancel' => 'Batalkan',
-	'mobile-frontend-photo-upload-user-count-over-limit' => 'unggahan 500+',
+	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> unggah|<span> $1 </span> unggah}}',
+	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ unggahan',
 	'mobile-frontend-photo-upload-cta' => 'Silakan masuk log atau mendaftar untuk menambah gambar.',
 	'mobile-frontend-photo-upload-login' => 'Anda harus masuk log untuk menambah gambar.',
-	'mobile-frontend-editor-disabled' => 'Anda tidak diperbolehkan menambahkan gambar ke halaman ini',
-	'mobile-frontend-editor-cta' => 'Anda harus masuk log untuk menyunting halaman pada ponsel.',
+	'mobile-frontend-editor-undo-unsupported' => 'Fitur pembatalan saat ini tidak didukung pada piranti mobil.',
+	'mobile-frontend-editor-newpage-prompt' => 'Halaman ini tidak ada. Mengapa tidak Anda coba buat saja?',
+	'mobile-frontend-editor-disabled' => 'Anda tidak dapat menyunting halaman ini',
+	'mobile-frontend-editor-unavailable' => 'Penyuntingan lewat piranti mobil saat ini tidak tersedia pada penjelajah Anda. Silakan coba penjelajah yang berbeda.',
+	'mobile-frontend-editor-cta' => 'Anda harus masuk log untuk menyunting halaman pada piranti mobil.',
 	'mobile-frontend-editor-edit' => 'Sunting',
 	'mobile-frontend-editor-continue' => 'Lanjutkan',
 	'mobile-frontend-editor-save' => 'Simpan',
 	'mobile-frontend-editor-cancel' => 'Batal',
-	'mobile-frontend-editor-keep-editing' => 'Terus menyunting',
+	'mobile-frontend-editor-keep-editing' => 'Lanjutkan',
+	'mobile-frontend-editor-license' => 'Dengan mengeklik "Simpan", Anda setuju dengan [//wikimediafoundation.org/wiki/Terms_of_use Ketentuan Penggunaan] kami dan setuju untuk melepaskan teks Anda di bawah [//creativecommons.org/licenses/by-sa/3.0/deed.id Lisensi Creative Commons Atribusi-BerbagiSerupa 3.0] dan [//id.wikipedia.org/wiki/Wikipedia:Teks_Lisensi_Dokumentasi_Bebas_GNU GFDL].',
+	'mobile-frontend-editor-placeholder' => 'Bagian ini kosong. Jadilah orang pertama yang mengembangkannya!',
+	'mobile-frontend-editor-summary-placeholder' => 'Beritahu kami apa Anda ubah (opsional)',
 	'mobile-frontend-editor-cancel-confirm' => 'Apakah Anda benar-benar ingin meninggalkan suntingan Anda?',
 	'mobile-frontend-editor-wait' => 'Menyimpan suntingan, silakan tunggu.',
-	'mobile-frontend-editor-guider' => '"{{int:mobile-frontend-editor-continue}}" akan memungkinkan Anda untuk melihat pratinjau dan menyimpan.',
+	'mobile-frontend-editor-guider' => '"{{int:mobile-frontend-editor-continue}}" akan memungkinkan Anda untuk melihat pratayang dan menyimpan.',
 	'mobile-frontend-editor-success' => 'Berhasil! Suntingan Anda tersimpan.',
 	'mobile-frontend-editor-success-landmark-1' => 'Selamat, sekarang Anda adalah penyunting {{SITENAME}}!',
-	'mobile-frontend-editor-error' => 'Galat, suntingan tidak disimpan.',
+	'mobile-frontend-editor-error' => 'Galat, suntingan tidak tersimpan.',
 	'mobile-frontend-editor-error-conflict' => 'Galat, pengguna lain telah menyunting halaman ini.',
-	'mobile-frontend-editor-error-loading' => 'Kesalahan, tidak dapat memuat bagian.',
+	'mobile-frontend-editor-error-loading' => 'Galat, tidak dapat memuat bagian.',
 	'mobile-frontend-editor-preview-header' => 'Pratayang',
-	'tag-mobile_edit' => 'Penyuntingan seluler',
-	'mobile-frontend-drawer-cancel' => 'Batalkan',
+	'mobile-frontend-editor-error-preview' => 'Galat, sesuatu yang tak terduga terjadi saat memuat pratayang. Silakan tutup dan coba lagi.',
+	'mobile-frontend-editor-tutorial-summary' => 'Jangan takut dengan marka wiki. Cobalah kembangkan halaman $1.',
+	'mobile-frontend-editor-tutorial-confirm' => 'Mulai menyunting',
+	'mobile-frontend-editor-captcha-try-again' => 'Kode salah, coba lagi.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Peringatan: Apakah Anda yakin Anda ingin menyimpan perubahan ini? Mungkin ada masalah dengan suntingan itu.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Suntingan ini tidak bisa disimpan karena kami telah mendeteksi sebuah masalah.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Baca lebih lanjut',
+	'tag-mobile_edit' => 'Penyuntingan piranti mobil',
+	'tag-mobile_edit-description' => 'Suntingan dari situs mobil',
+	'mobile-frontend-drawer-cancel' => 'Batal',
 	'mobile-frontend-talk-explained' => 'Percakapan berikut sedang aktif',
-	'mobile-frontend-talk-explained-empty' => 'Ada tidak ada percakapan tentang halaman ini.',
+	'mobile-frontend-talk-explained-empty' => 'Tidak ada percakapan tentang halaman ini.',
 	'mobile-frontend-talk-overlay-header' => 'Pembicaraan',
-	'mobile-frontend-talk-overlay-lead-header' => 'Diskusi tak bernama',
+	'mobile-frontend-talk-back-to-page' => 'Kembali ke halaman "$1".',
+	'mobile-frontend-talk-overlay-lead-header' => 'Diskusi tanpa nama',
+	'mobile-frontend-talk-add-overlay-submit' => 'Tambahkan diskusi',
+	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Subyek topik',
+	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Apa yang ada di pikiran Anda?',
+	'mobile-frontend-talk-edit-summary' => 'Bagian pembicaraan yang baru: $1',
+	'mobile-frontend-talk-reply-success' => 'Balasan Anda berhasil disimpan di halaman pembicaraan.',
+	'mobile-frontend-talk-reply-info' => 'Catatan: balasan Anda akan secara otomatis ditandatangani dengan nama pengguna Anda.',
+	'mobile-frontend-talk-reply' => 'Balas',
+	'mobile-frontend-media-details' => 'Rincian',
+	'mobile-frontend-profile-title' => 'Profil pengguna',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 suntingan|$2 suntingan|0=Tanpa suntingan|501=Lebih dari 500 suntingan}}]] dan
+[[Special:Uploads/$1|{{PLURAL:$3|1 unggahan|$3 unggahan|0=tanpa unggahan|501=lebih dari 500 unggahan}}]] dalam 30 hari terakhir.',
+	'mobile-frontend-profile-last-upload-caption' => 'Unggahan terakhir oleh {{GENDER:$1|$1}}, {{PLURAL:$2|kemarin|$2 hari yang lalu|0=hari ini}}.',
+	'mobile-frontend-profile-registration' => '$1 telah berkontribusi di {{SITENAME}} selama {{PLURAL:$2|$2 hari|$2 hari}} dan {{GENDER:$1|telah menyunting}} {{PLURAL:$3|$3 kali|$3 kali}}.',
+	'mobile-frontend-profile-usertalk' => 'Lihat halaman pembicaraan',
+	'mobile-frontend-profile-noargs' => 'Harap masukkan nama pengguna untuk melihat profil.',
+	'mobile-frontend-profile-nouser' => 'Nama pengguna tidak ada atau salah',
+	'mobile-frontend-profile-yours' => 'Kunjungi halaman profil Anda.',
+	'mobile-frontend-profile-userpage-link' => 'Kunjungi halaman pengguna.',
+	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|Pengguna ini}} adalah penyunting baru.',
+	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|Pengguna ini}} adalah penyunting yang sudah agak berpengalaman.',
+	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Pengguna ini}} adalah penyunting yang produktif.',
+	'mobile-frontend-requires-optin' => 'Halaman ini tidak tersedia kecuali Anda ikut serta ke dalam mode beta kami. Kunjungi [[Special:MobileOptions|halaman pengaturan]] untuk ikut mode beta.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Terakhir diberi ucapan terima kasih}} oleh [[Special:UserProfile/$1|$1]] untuk suntingan pada [[$2]].',
+	'mobile-frontend-geonotahack' => 'Dekat halaman ini',
 );
 
 /** Igbo (Igbo)
@@ -8642,7 +8740,6 @@ in tutto il mondo',
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modifica|$2 modifiche|0=Nessuna modifica|501=Più di 500 modifiche}}]] e
 [[Special:Uploads/$1|{{PLURAL:$3|1 caricamento|$3 caricamenti|0=nessun caricamento|501=più di 500 caricamenti}}]] negli ultimi 30 giorni.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Ultimo caricamento di {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|$2 giorni fa|0=oggi}}.',
-	'mobile-frontend-profile-heading-recent' => 'Recenti',
 	'mobile-frontend-profile-registration' => '$1 ha contribuito a {{SITENAME}} per {{PLURAL:$2|$2 giorno|$2 giorni}} ed {{GENDER:$1|ha fatto}} {{PLURAL:$3|$3 modifica|$3 modifiche}}.',
 	'mobile-frontend-profile-usertalk' => 'Vedi la pagina di discussione.',
 	'mobile-frontend-profile-noargs' => 'Inserisci un nome utente per vedere un profilo.',
@@ -8667,6 +8764,8 @@ in tutto il mondo',
  * @author Whym
  */
 $messages['ja'] = array(
+	'mobilefrontend-random-explain' => 'このページを見つけましたが読みますか?',
+	'mobilefrontend-random-cancel' => '読みます!',
 	'mobilefrontend-keepgoing-cancel' => '不要です',
 	'mobilefrontend-keepgoing-suggest-again' => '別を試す',
 	'nearby' => '付近のページ',
@@ -8718,13 +8817,21 @@ $messages['ja'] = array(
 	'mobile-frontend-password-placeholder' => 'パスワード',
 	'mobile-frontend-login' => 'ログイン',
 	'mobile-frontend-history' => 'このページの編集履歴を閲覧',
-	'mobile-frontend-last-modified-date' => '最終更新日時 $1 $2',
-	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|$1秒}}前に最終更新',
-	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|$1分}}前に最終更新',
-	'mobile-frontend-last-modified-hours' => '{{PLURAL:$1|$1時間}}前に最終更新',
-	'mobile-frontend-last-modified-days' => '{{PLURAL:$1|$1日}}前に最終更新',
-	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1か月}}前に最終更新',
-	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|$1年}}前に最終更新',
+	'mobile-frontend-last-modified-date' => '最終更新: $1 $2',
+	'mobile-frontend-last-modified-seconds' => '最終更新: {{PLURAL:$1|$1秒}}前',
+	'mobile-frontend-last-modified-minutes' => '最終更新: {{PLURAL:$1|$1分}}前',
+	'mobile-frontend-last-modified-hours' => '最終更新: {{PLURAL:$1|$1時間}}前',
+	'mobile-frontend-last-modified-days' => '最終更新: {{PLURAL:$1|$1日}}前',
+	'mobile-frontend-last-modified-months' => '最終更新: {{PLURAL:$1|$1か月}}前',
+	'mobile-frontend-last-modified-years' => '最終更新: {{PLURAL:$1|$1年}}前',
+	'mobile-frontend-last-modified-just-now' => '最終更新: たった今',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 秒}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 分}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 時間}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 日}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 か月}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 年}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 最終{{GENDER:$1|編集}}]: たった今、{{PLURAL:$4|[$5 $2]|0=匿名利用者}}',
 	'mobile-frontend-learn-more' => '詳細',
 	'mobile-frontend-account-create-submit' => '利用者登録',
 	'mobile-frontend-password-confirm-placeholder' => 'パスワード再入力',
@@ -8908,7 +9015,6 @@ $messages['ja'] = array(
 	'mobile-frontend-profile-contributions' => '過去30日間に、[[Special:Contributions/$1|{{PLURAL:$2|1 件の編集|$2 件の編集|0=0 件の編集|501=500 件以上の編集}}]]と
 [[Special:Uploads/$1|{{PLURAL:$3|1 件のアップロード|$3 件のアップロード|0=0 件のアップロード|501=500 件以上のアップロード}}]]がなされました。',
 	'mobile-frontend-profile-last-upload-caption' => '最終アップロード: {{GENDER:$1|$1}}、{{PLURAL:$2|昨日|$2 日前|0=今日}}',
-	'mobile-frontend-profile-heading-recent' => '最近のもの',
 	'mobile-frontend-profile-usertalk' => 'トークページを閲覧',
 	'mobile-frontend-profile-noargs' => 'プロフィールを表示する利用者名を指定してください。',
 	'mobile-frontend-profile-nouser' => '存在しない、または無効な利用者名です',
@@ -9548,7 +9654,7 @@ $messages['ko'] = array(
 	'mobile-frontend-username-placeholder' => '사용자 이름',
 	'mobile-frontend-password-placeholder' => '비밀번호',
 	'mobile-frontend-login' => '로그인',
-	'mobile-frontend-history' => '이 문서의 편집 내역을 봅니다.',
+	'mobile-frontend-history' => '이 문서의 편집 역사을 봅니다.',
 	'mobile-frontend-last-modified-date' => '$1 $2에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|$1초}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|$1분}} 전에 마지막으로 수정됨',
@@ -9753,7 +9859,6 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-contributions' => '최근 30일 간에 [[Special:Contributions/$1|{{PLURAL:$2|편집 1회|편집 $2회|0=편집이 없고|501=편집 500회 이상}}]]{{PLURAL:$2|와|와|0=|501=과}}
 [[Special:Uploads/$1|{{PLURAL:$3|올린 파일 1개가 있|올린 파일 $3개가 있|0=올린 파일이 없|501=올린 파일 500개 이상이 있}}습니다]].',
 	'mobile-frontend-profile-last-upload-caption' => '{{PLURAL:$2|어제|$2일 전에|0=오늘}} {{GENDER:$1|$1}} 사용자가 마지막으로 올렸습니다.',
-	'mobile-frontend-profile-heading-recent' => '최근',
 	'mobile-frontend-profile-registration' => '$1 사용자는 {{PLURAL:$2|$2일}}에 {{SITENAME}}의 구성원이 되었고 {{PLURAL:$3|$3회 편집}}했습니다.',
 	'mobile-frontend-profile-usertalk' => '토론 문서를 봅니다.',
 	'mobile-frontend-profile-noargs' => '프로필을 보려면 사용자 이름을 제공하세요.',
@@ -10562,7 +10667,6 @@ Déi gi geläscht.",
 	'mobile-frontend-media-details' => 'Detailer',
 	'abusefilter-edit-builder-vars-user-mobile' => "Ob e Benotzer de mobilen Interface benotzt fir z'änneren",
 	'mobile-frontend-profile-title' => 'Benotzerprofil',
-	'mobile-frontend-profile-heading-recent' => 'Rezent',
 	'mobile-frontend-profile-usertalk' => 'Diskussiounssäit kucken.',
 	'mobile-frontend-profile-noargs' => 'Gitt w.e.g. e Benotzernumm u fir ee Profil ze gesinn.',
 	'mobile-frontend-profile-nouser' => 'Benotzernumm gëtt et net oder en ass net valabel',
@@ -10971,6 +11075,8 @@ $messages['min'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
+	'mobilefrontend-random-explain' => 'Дали ве интересира оваа случајна страница?',
+	'mobilefrontend-random-cancel' => 'Да ја прочитам!',
 	'mobilefrontend-keepgoing-ask' => 'Одлично! Веќе се оспособувате за уредување! Дали би сакале да уредите друга страница?',
 	'mobilefrontend-keepgoing-ask-first' => 'Честитки за вашето прво уредување! Дали би сакале да уредите друга страница?',
 	'mobilefrontend-keepgoing-explain' => 'Одлично! Еден наш корисник смета дека на страницава ѝ треба помош. Видете што можете да направите тука, или пак на некоја друга страница.',
@@ -11033,6 +11139,14 @@ $messages['mk'] = array(
 	'mobile-frontend-last-modified-days' => 'Последните измени се направени пред {{PLURAL:$1|$1 ден|$1 дена}}',
 	'mobile-frontend-last-modified-months' => 'Последните измени се направени пред {{PLURAL:$1|$1 месец|$1 месеци}}',
 	'mobile-frontend-last-modified-years' => 'Последните измени се направени пред {{PLURAL:$1|$1 година|$1 години}}',
+	'mobile-frontend-last-modified-just-now' => 'Штотуку изменета',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|една секунда|$3 секунди}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|една минута|$3 минути}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|еден час|$3 часа}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|еден ден|$3 дена}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|еден месец|$3 месеци}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|една година|$3 години}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Штотуку направено {{GENDER:$1|уредување}}]. Вршител: {{PLURAL:$4|[$5 $2]|0=анонимен корисник}}.',
 	'mobile-frontend-learn-more' => 'Дознајте повеќе',
 	'mobile-frontend-account-create-submit' => 'Регистрација',
 	'mobile-frontend-password-confirm-placeholder' => 'Потврдете ја лозинката',
@@ -11233,7 +11347,6 @@ $messages['mk'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|Едно уредување|$2 уредувања|0=Нема уредувања|501=Преку 500 уредувања}}]] и
 [[Special:Uploads/$1|{{PLURAL:$3|едно подигање|$3 подигања|0=нема подигања|501=преку 500 подигања}}]] во изминатите 30 дена.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Последно подигање на {{GENDER:$1|$1}}, {{PLURAL:$2|вчера|пред $2 дена|0=денес}}.',
-	'mobile-frontend-profile-heading-recent' => 'Скорешни',
 	'mobile-frontend-profile-registration' => '$1 учествува во {{SITENAME}} веќе {{PLURAL:$2|$2 ден|$2 дена}} и  {{GENDER:$1|има направено}} {{PLURAL:$3|$3 уредување|$3 уредувања}}.',
 	'mobile-frontend-profile-usertalk' => 'Погл. страницата за разговор',
 	'mobile-frontend-profile-noargs' => 'Наведете корисничко име за да го погледате профилот.',
@@ -12284,7 +12397,6 @@ $messages['nb'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 redigering|$2 redigeringer|0=Ingen redigeringer|501=Mer enn 500 redigeringer}}]] og
 [[Special:Uploads/$1|{{PLURAL:$3|1 opplasting|$3 opplastinger|0=ingen opplastinger|501=mer enn 500 opplastinger}}]] i løpet av de siste 30 dagene.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Siste opplasting av {{GENDER:$1|$1}}, {{PLURAL:$2|i går|for $2 dager siden|0=i dag}}.',
-	'mobile-frontend-profile-heading-recent' => 'Nylig',
 	'mobile-frontend-profile-registration' => '$1 har bidratt til {{SITENAME}} i {{PLURAL:$2|$2 dag|$2 dager}} og {{GENDER:$1|har gjort}} {{PLURAL:$3|$3 redigering|$3 redigeringer}}.',
 	'mobile-frontend-profile-usertalk' => 'Vis diskusjonssiden.',
 	'mobile-frontend-profile-noargs' => 'Oppgi et brukernavn for å vise en profil.',
@@ -13439,7 +13551,15 @@ $messages['pl'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['pms'] = array(
+	'mobilefrontend-random-explain' => "Costa pàgina a l'ancàpit, l'anteress-lo?",
+	'mobilefrontend-random-cancel' => 'Feme lese!',
 	'mobilefrontend-keepgoing-ask' => "Bin fàit| A l'é bin anviarà! A veul prové a modifiché n'àutra pàgina?",
+	'mobilefrontend-keepgoing-ask-first' => "Congratulassion për avèj fàit soa prima modìfica! A veul prové a modifiché n'àutra pàgina?",
+	'mobilefrontend-keepgoing-explain' => "Përfet! N'àutr utent a l'ha dit che costa pàgina a l'ha damanca d'agiut. Ch'a preuva costa-sì, opura n'àutra.",
+	'mobilefrontend-keepgoing-cancel' => 'Nò, mersì',
+	'mobilefrontend-keepgoing-suggest' => 'É, për piasì',
+	'mobilefrontend-keepgoing-suggest-again' => "Prové con n'àutra",
+	'nearby' => 'Pàgine davzin-e a chiel',
 	'mobile-frontend-desc' => 'Visualisassion an sël sacociàbil',
 	'mobile-frontend-search-submit' => 'Va',
 	'mobile-frontend-home-button' => 'Pàgina Prinsipal',
@@ -13452,9 +13572,10 @@ $messages['pms'] = array(
 	'mobile-frontend-sign-in-error-heading' => 'Contacc',
 	'mobile-frontend-settings-description' => "Ch'a përsonalisa soa esperiensa dzora a sò utiss sacociàbil con coste regolassion spessìfiche dël sit pr'ij sacociàbij.",
 	'mobile-frontend-settings-beta' => 'Beta',
-	'mobile-frontend-settings-alpha' => 'Manera [//en.wikipedia.org/wiki/Here_be_dragons Ambelessì a-i son ij dragon]', # Fuzzy
+	'mobile-frontend-settings-alpha' => 'Manera sperimental',
 	'mobile-frontend-settings-alpha-description' => "Ch'a intra ant un teritòri mòbil pericolos e nen esplorà. Ch'a oten-a ëdcò dle funsion pi sperimentaj ma con pi 'd pericol ëd bigat.",
-	'mobile-frontend-save-settings' => 'Salvé le regolassion', # Fuzzy
+	'mobile-frontend-save-settings' => 'Argistré',
+	'mobile-frontend-save-error' => "Eror s'argistrassion dij paràmeter. Për piasì, ch'a verìfica ch'a l'ha ij bëscotin abilità.",
 	'mobile-frontend-random-button' => 'A cas',
 	'mobile-frontend-back-to-top-of-section' => 'Sàuta andré ëd na Session',
 	'mobile-frontend-close-section' => 'Sara sta session-sì',
@@ -13471,7 +13592,7 @@ $messages['pms'] = array(
 	'mobile-frontend-missing-image' => 'Figura',
 	'mobile-frontend-off' => 'Dëstiss',
 	'mobile-frontend-on' => 'Anvisch',
-	'mobile-frontend-featured-article' => 'Artìcol dël dì', # Fuzzy
+	'mobile-frontend-featured-article' => 'Contnù arcomandà dël dì',
 	'mobile-frontend-news-items' => 'Ant le Neuve',
 	'mobile-frontend-language' => 'Lenga:',
 	'mobile-frontend-language-article-heading' => "Les an n'àutra lenga",
@@ -13484,6 +13605,7 @@ $messages['pms'] = array(
 	'mobile-frontend-username-placeholder' => 'Stranòm',
 	'mobile-frontend-password-placeholder' => 'Ciav',
 	'mobile-frontend-login' => 'Intra',
+	'mobile-frontend-history' => 'Smon-e la stòria dle modìfiche ëd costa pàgina.',
 	'mobile-frontend-last-modified-date' => 'Ùltima modìfica ai $1, a $2',
 	'mobile-frontend-last-modified-seconds' => 'Ùltima modìfica {{PLURAL:$1|$1 second}} fà',
 	'mobile-frontend-last-modified-minutes' => 'Ùltima modìfica {{PLURAL:$1|$1 minuta|$1 minute}} fà',
@@ -13491,21 +13613,30 @@ $messages['pms'] = array(
 	'mobile-frontend-last-modified-days' => 'Ùltima modìfica {{PLURAL:$1|$1 di}} fà',
 	'mobile-frontend-last-modified-months' => 'Ùltima modìfica {{PLURAL:$1|$1 mèis}} fà',
 	'mobile-frontend-last-modified-years' => 'Ùltima modìfica {{PLURAL:$1|$1 ann|$1 agn}} fà',
+	'mobile-frontend-last-modified-just-now' => "Pen-a modificà l'ùltima vira",
+	'mobile-frontend-last-modified-with-user-seconds' => "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 second}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
+	'mobile-frontend-last-modified-with-user-minutes' => "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 minuta|$3 minute}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}.",
+	'mobile-frontend-last-modified-with-user-hours' => "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 ora|$3 ore}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
+	'mobile-frontend-last-modified-with-user-days' => "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 di}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
+	'mobile-frontend-last-modified-with-user-months' => "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 mèis}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
+	'mobile-frontend-last-modified-with-user-years' => "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 ann|$3agn}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
+	'mobile-frontend-last-modified-with-user-just-now' => "[$3 {{GENDER:$1|modificà}} l'ùltima vira] pen-a adess da {{PLURAL:$4|[$5 $2]|0=n'utent anònim}}.",
+	'mobile-frontend-learn-more' => 'Savèjne ëd pi',
 	'mobile-frontend-account-create-submit' => "Ch'as anscriva",
 	'mobile-frontend-password-confirm-placeholder' => "Ch'a confirma la ciav",
 	'mobile-frontend-account-create-email-placeholder' => 'Adrëssa ëd pòsta eletrònica (opsional)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Anseriss ël test ëd sicurëssa', # Fuzzy
+	'mobile-frontend-account-create-captcha-placeholder' => 'Anserì ël còdes ëd conferma',
 	'mobile-frontend-overlay-escape' => 'Torna andré',
 	'mobile-frontend-placeholder' => 'Sërca an {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Serca {{SITENAME}} (Beta)',
-	'mobile-frontend-placeholder-alpha' => 'Arserché su {{SITENAME}} (Manera Dragon)', # Fuzzy
+	'mobile-frontend-placeholder-alpha' => 'Arserché su {{SITENAME}} (Sperimental)',
 	'mobile-frontend-search-help' => "Ch'a scriva le paròle d'arserca sì-dzora e ij tìtoj dle pàgine corispondente a compariran ambelessì.",
 	'mobile-frontend-dismiss-notification' => 'arfuda sta notìfica',
 	'mobile-frontend-clear-search' => 'Scancela',
 	'mobile-frontend-privacy-link-text' => 'Confidensialità',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => "Ël test a l'é disponìbil sota [//en.m.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License?useformat=mobile CC BY-SA 3.0]; d'àutre condission a podrìo aplichesse.",
-	'mobile-frontend-copyright' => "Ël test a l'é disponìbil sota la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; condission adissionaj a peulo aplichesse. Varda <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>Terms of Use</a> për ij detaj. {{SITENAME}} a l'é un march argistrà ëd la <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, n'organisassion non-profit.", # Fuzzy
+	'mobile-frontend-copyright' => "Ël contnù a resta disponìbil sota $1 gavà ch'a sia marcà an n'àutra manera.",
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condission d'utilisassion]",
 	'mobile-frontend-footer-contact' => 'Contat',
 	'mobile-frontend-search-noresults' => "A-i é gnun-a pàgina ch'a corëspond a soa arserca. Ch'a modìfica soa arserca, o ch'a gnaca ël boton d'arserca dla tastadura për serché andrinta a le pàgine.",
@@ -13517,7 +13648,8 @@ $messages['pms'] = array(
 	'mobile-frontend-main-menu-logout' => 'Seurte dal sistema',
 	'mobile-frontend-main-menu-watchlist' => 'Ròba che as ten sot euj',
 	'mobile-frontend-main-menu-settings' => 'Regolassion',
-	'mobile-frontend-main-menu-settings-heading' => 'Regolassion dël sit për ij sacociàbij', # Fuzzy
+	'mobile-frontend-main-menu-upload' => 'Carie',
+	'mobile-frontend-main-menu-settings-heading' => 'Paràmeter',
 	'mobile-frontend-settings-site-header' => 'Lenghe ëd {{SITENAME}}',
 	'mobile-frontend-settings-site-description' => "{{SITENAME}} a l'é disponìbil an $1 {{PLURAL:$1|lenga|lenghe}}. Tute le version disponìbij a son listà sì-sota",
 	'mobile-frontend-main-menu-account-create' => 'Creé un cont',
@@ -13526,6 +13658,20 @@ $messages['pms'] = array(
 	'mobile-frontend-meta-data-issues-header' => 'Problema',
 	'mobile-frontend-meta-data-issues' => "Costa pàgina a l'ha chèich problema",
 	'mobile-frontend-page-saving' => 'Salvé $1',
+	'mobile-frontend-user-cta' => "Për piasì, ch'a rintra ant ël sistema o ch'as argistra për podèj vëdde soe notìfiche.",
+	'mobile-frontend-user-button-tooltip' => 'Smon-e mie notìfiche',
+	'mobile-frontend-nearby-to-page' => 'Le pàgine sì-dapress a-i intro con $1 për soa posission geogràfica',
+	'mobile-frontend-nearby-title' => 'Vzin',
+	'mobile-frontend-nearby-loading' => 'Cariament dij soget davzin a soa posission atual',
+	'mobile-frontend-nearby-requirements' => "An dëspias! So navigador ëd l'Aragnà a arconòss nen {{SITENAME}} lì-davzin.",
+	'mobile-frontend-nearby-requirements-guidance' => "Ch'a preuva n'àutr navigador o ch'a abìlita JavaScript s'a l'ha disativalo.",
+	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
+	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
+	'mobile-frontend-nearby-lookup-ui-error' => "{{SITENAME}} lì-davzin a peul pa savèj andoa a l'é chiel... Prové torna?",
+	'mobile-frontend-nearby-lookup-ui-error-guidance' => "Ch'a preuva në spassi al duvert con un mej signal.",
+	'mobile-frontend-nearby-permission' => "{{SITENAME}} davzin a l'ha nen ël përmess d'acede a soa posission.",
+	'mobile-frontend-nearby-permission-guidance' => "Për piasì, ch'as sigura d'avèj dàit ël përmess dë smon-e anté ch'a l'é. Peul desse a dev controlé ij paràmeter ëd localisassion ëd sò navigador.",
+	'mobile-frontend-nearby-noresults' => "A l'é calm ambelessì... A son ëstàite trovà gnun-e pàgine ant j'anviron.",
 	'mobile-frontend-photo-upload-generic' => 'Doné na figura', # Fuzzy
 	'mobile-frontend-donate-image-title' => 'Doné na figura', # Fuzzy
 	'mobile-frontend-donate-image-heading' => 'Toe contribussion recente',
@@ -13858,6 +14004,8 @@ $messages['rm'] = array(
  * @author Minisarm
  */
 $messages['ro'] = array(
+	'mobilefrontend-random-explain' => 'Această pagină aleatoare vă interesează?',
+	'mobilefrontend-random-cancel' => 'Vreau s-o citesc!',
 	'mobilefrontend-keepgoing-ask' => 'Bine lucrat! Sunteți pe drumul cel bun! Doriți să modificați o altă pagină?',
 	'mobilefrontend-keepgoing-ask-first' => 'Felicitări pentru prima dumneavoastră modificare! Doriți să modificați o altă pagină?',
 	'mobilefrontend-keepgoing-explain' => 'Minunat! Un alt utilizator a precizat că această pagină are nevoie de ajutor. Puteți încerca cu această pagină ori cu o alta.',
@@ -13918,6 +14066,14 @@ $messages['ro'] = array(
 	'mobile-frontend-last-modified-days' => 'Ultima modificare acum {{PLURAL:$1|o zi|$1 zile|$1 de zile}}',
 	'mobile-frontend-last-modified-months' => 'Ultima modificare acum {{PLURAL:$1|o lună|$1 luni|$1 de luni}}',
 	'mobile-frontend-last-modified-years' => 'Ultima modificare acum {{PLURAL:$1|un an|$1 ani|$1 de ani}}',
+	'mobile-frontend-last-modified-just-now' => 'Ultima modificare efectuată chiar acum',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 secundă|$3 secunde|$3 de secunde}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 minut|$3 minute|$3 de minute}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 oră|$3 ore|$3 de ore}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 zi|$3 zile|$3 de zile}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 lună|$3 luni|$3 de luni}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 un|$3 ani|$3 de ani}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Ultima {{GENDER:$1|modificare}}] efectuată chiar acum de către {{PLURAL:$4|[$5 $2]|0=un utilizator anonim}}.',
 	'mobile-frontend-learn-more' => 'Aflați mai multe',
 	'mobile-frontend-account-create-submit' => 'Înregistrare',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmați parola',
@@ -14117,7 +14273,6 @@ din întreaga lume',
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 modificare|$2 modificări|0=Nicio modificare|501=Peste 500 de modificări}}]] și
 [[Special:Uploads/$1|{{PLURAL:$3|1 încărcare|$3 încărcări|0=nicio încărcare|501=peste 500 de încărcări}}]] în ultimele 30 de zile.',
 	'mobile-frontend-profile-last-upload-caption' => 'Ultima încărcare de către {{GENDER:$1|$1}}, {{PLURAL:$2|ieri|acum $2 zile|acum $2 de zile|0=astăzi}}.',
-	'mobile-frontend-profile-heading-recent' => 'Recent',
 	'mobile-frontend-profile-registration' => '$1 a contribuit la {{SITENAME}} pentru {{PLURAL:$2|o zi|$2 zile|$2 de zile}} și {{GENDER:$1|a efectuat}} {{PLURAL:$3|o modificare|$3 modificări|$3 de modificări}}.',
 	'mobile-frontend-profile-usertalk' => 'Vezi pagina de discuții.',
 	'mobile-frontend-profile-noargs' => 'Furnizați un nume de utilizator pentru a vizualiza un profil.',
@@ -15045,7 +15200,6 @@ $messages['sl'] = array(
 	'abusefilter-edit-builder-vars-user-mobile' => 'Ali uporabnik ureja prek mobilnega vmesnika ali ne',
 	'mobile-frontend-profile-title' => 'Podatki o uporabniku',
 	'mobile-frontend-profile-last-upload-caption' => 'Zadnje nalaganje {{GENDER:$1|uporabnika $1|uporabnice $1}}, {{PLURAL:$2|včeraj|pred $2 dnevoma|pred $2 dnevi|0=danes}}.',
-	'mobile-frontend-profile-heading-recent' => 'Nedavno',
 	'mobile-frontend-profile-registration' => '$1 prispeva {{GRAMMAR:dajalnik|{{SITENAME}}}} že {{PLURAL:$2|$2 dan|$2 dneva|$2 dni}} in je {{GENDER:$1|naredil|naredila}} {{PLURAL:$3|$3 urejanje|$3 urejanji|$3 urejanja|$3 urejanj}}.',
 	'mobile-frontend-profile-usertalk' => 'Prikaz pogovorne strani.',
 	'mobile-frontend-profile-noargs' => 'Prosimo, vnesite uporabniško ime za ogled profila.',
@@ -15269,7 +15423,6 @@ $messages['sr-ec'] = array(
 	'mobile-frontend-talk-reply' => 'Одговори',
 	'mobile-frontend-media-details' => 'Детаљи',
 	'mobile-frontend-profile-title' => 'Кориснички профил',
-	'mobile-frontend-profile-heading-recent' => 'Скорашње',
 );
 
 /** Serbian (Latin script) (srpski (latinica)‎)
@@ -16362,6 +16515,8 @@ $messages['ug-arab'] = array(
  * @author Тест
  */
 $messages['uk'] = array(
+	'mobilefrontend-random-explain' => 'Ця випадкова сторінка вас цікавить?',
+	'mobilefrontend-random-cancel' => 'Дозвольте мені прочитати!',
 	'mobilefrontend-keepgoing-ask' => 'Гарна робота! Ви здобуваєте навички!Хочете спробувати редагування іншої сторінки?',
 	'mobilefrontend-keepgoing-ask-first' => 'Вітаємо за зроблене своє перше редагування! Ви хочете спробувати редагувати іншу сторінку?',
 	'mobilefrontend-keepgoing-explain' => 'Чудово! Інший користувач сказав, що ця сторінка потребує допомоги. Спробуйте її або спробуйте іншу.',
@@ -16422,6 +16577,14 @@ $messages['uk'] = array(
 	'mobile-frontend-last-modified-days' => 'Остання зміна була $1 {{PLURAL:$1|день|дні|днів}} тому',
 	'mobile-frontend-last-modified-months' => 'Остання зміна була $1 {{PLURAL:$1|місяць|місяці|місяців}} тому',
 	'mobile-frontend-last-modified-years' => 'Остання зміна була $1 {{PLURAL:$1|рік|роки|років}} тому',
+	'mobile-frontend-last-modified-just-now' => 'Останні зміни прямо зараз',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Остання {{GENDER:$1|зміна зроблена}} {{PLURAL:$3|$3 секунду|$3 секунди|$3 секунд}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Остання {{GENDER:$1|зміна зроблена}} {{PLURAL:$3|$3 хвилину|$3 хвилини|$3 хвилин}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Остання {{GENDER:$1|зміна зроблена}} {{PLURAL:$3|$3 годину|$3 години|$3 годин}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Остання {{GENDER:$1|зміна зроблена|зміна зроблена}} {{PLURAL:$3|$3 день|$3 дні|$3 днів}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Остання зміна зроблена {{PLURAL:$3|$3 місяць|$3 місяці|$3 місяців}} тому] {{GENDER:$1|}}{{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Остання {{GENDER:$1|зміна зроблена|зміна зроблена}} {{PLURAL:$3|$3 рік|$3 роки|$3 років}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Остання зміна зроблена {{GENDER:$1|}}] вже щойно зроблена {{PLURAL:$4|[$5 $2]|0=анонімним користувачем}}.',
 	'mobile-frontend-learn-more' => 'Дізнатися більше',
 	'mobile-frontend-account-create-submit' => 'Зареєструватися',
 	'mobile-frontend-password-confirm-placeholder' => 'Підтвердження пароля:',
@@ -16619,7 +16782,6 @@ $messages['uk'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 зміна|$2 зміни|$2 змін|0=Немає змін|501=Понад 500 змін}}]] та
 [[Special:Uploads/$1|{{PLURAL:$3|1 завантаження|$3 завантаження|$3 завантажень|0=Немає завантажень|501=понад 500 завантажень}}]] за останні 30 днів.',
 	'mobile-frontend-profile-last-upload-caption' => 'Останнє завантаження від {{GENDER:$1|$1}}, {{PLURAL:$2|вчора|$2 дні тому|$2 днів тому|0=сьогодні}}.',
-	'mobile-frontend-profile-heading-recent' => 'Останні',
 	'mobile-frontend-profile-registration' => '$1 вже вносить свій внесок на {{SITENAME}} {{PLURAL:$2|$2 день|$2 дні|$2 днів}} і {{GENDER:$1|вже зробив|вже зробила}} {{PLURAL:$3|$3 зміну|$3 зміни|$3 змін}}.',
 	'mobile-frontend-profile-usertalk' => 'Перегляд сторінки обговорення.',
 	'mobile-frontend-profile-noargs' => "Будь ласка, введіть ім'я користувача, щоб переглянути профіль.",
@@ -17240,7 +17402,6 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|Đã sửa đổi 1 lần|Đã sửa đổi $2 lần|0=Chưa có sửa đổi|501=Đã sửa đổi hơn 500 lần}}]] và
 [[Special:Uploads/$1|{{PLURAL:$3|đã tải lên 1 tập tin|đã tải lên $3 tập tin|0=chưa tải lên tập tin nào|501=đã tải lên hơn 500 tập tin}}]] vào 30 ngày qua.',
 	'mobile-frontend-profile-last-upload-caption' => 'Tập tin mới nhất do $1 tải lên {{PLURAL:$2|hôm qua|$2 ngày trước|0=hôm nay}}.',
-	'mobile-frontend-profile-heading-recent' => 'Gần đây',
 	'mobile-frontend-profile-registration' => '$1 đã đóng góp vào {{SITENAME}} trong thời gian $2 ngày và đã sửa đổi $3 lần.',
 	'mobile-frontend-profile-usertalk' => 'Xem trang tin nhắn.',
 	'mobile-frontend-profile-noargs' => 'Xin vui lòng nhập tên người dùng để xem trang thành viên.',
@@ -17431,6 +17592,7 @@ $messages['yue'] = array(
  * @author 乌拉跨氪
  */
 $messages['zh-hans'] = array(
+	'mobilefrontend-random-cancel' => '让我阅读！',
 	'mobilefrontend-keepgoing-ask' => '干的不错！您开始编辑了这个弃坑！您想尝试编辑其他页面么？',
 	'mobilefrontend-keepgoing-ask-first' => '恭喜你做了你的第一次编辑 ！你想尝试着编辑另一页吗？',
 	'mobilefrontend-keepgoing-explain' => '好哇！其他用户说这个页面需要帮助。尝试它，或者尝试其他一个。',
@@ -17688,7 +17850,6 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-profile-contributions' => '在最近30天内的[[Special:Contributions/$1|{{PLURAL:$2|1次编辑|$2次编辑|0=没有编辑|501=超过500次编辑}}]]以及
 [[Special:Uploads/$1|{{PLURAL:$3|1次上传|$3次上传|0=没有上传|501=超过500次上传}}]]。',
 	'mobile-frontend-profile-last-upload-caption' => '最后由$1在{{PLURAL:$2|昨天|$2天前|0=今天}}上传。',
-	'mobile-frontend-profile-heading-recent' => '最近',
 	'mobile-frontend-profile-registration' => '$1已经在{{SITENAME}}编辑了$2天并进行了$3次编辑。',
 	'mobile-frontend-profile-usertalk' => '见讨论页。',
 	'mobile-frontend-profile-noargs' => '请指定一个用户名以查看资料。',
@@ -17719,6 +17880,8 @@ $messages['zh-hans'] = array(
  * @author Yfdyh000
  */
 $messages['zh-hant'] = array(
+	'mobilefrontend-random-cancel' => '讓我閱讀！',
+	'mobilefrontend-keepgoing-ask' => '幹得不錯！您開始編輯了這個棄坑！您想嘗試編輯其他頁面么？',
 	'mobilefrontend-keepgoing-cancel' => '不，謝謝',
 	'mobilefrontend-keepgoing-suggest' => '是的，請',
 	'mobilefrontend-keepgoing-suggest-again' => '嘗試其他',
@@ -17963,6 +18126,7 @@ $messages['zh-hant'] = array(
 	'mobile-frontend-talk-edit-summary' => '新討論段落：$1',
 	'mobile-frontend-talk-reply-success' => '您的答覆已保存在討論頁。',
 	'mobile-frontend-talk-reply' => '回覆',
+	'mobile-frontend-media-details' => '詳細資訊',
 	'mobile-frontend-profile-title' => '用戶訊息',
 	'mobile-frontend-profile-last-upload-caption' => '上次上傳由 {{GENDER:$1|$1}}，{{PLURAL:$2|昨日|$2 天 前|0=今天}}.',
 	'mobile-frontend-profile-usertalk' => '參見討論頁。',
