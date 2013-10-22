@@ -8,9 +8,10 @@ class SkinMobileBeta extends SkinMobile {
 		return wfMessage( 'mobile-frontend-placeholder-beta' )->text();
 	}
 
-	public function initPage( OutputPage $out ) {
-		parent::initPage( $out );
-		$out->addModuleStyles( 'mobile.styles.beta' );
+	protected function getSkinStyles() {
+		$styles = parent::getSkinStyles();
+		$styles[] = 'mobile.styles.beta';
+		return $styles;
 	}
 
 	public function prepareData( BaseTemplate $tpl ) {
