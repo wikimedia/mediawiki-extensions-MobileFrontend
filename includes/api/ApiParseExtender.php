@@ -14,9 +14,7 @@ class ApiParseExtender {
 	 */
 	public static function onAPIGetAllowedParams( ApiBase &$module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
-			$params['mobileformat'] = array(
-				ApiBase::PARAM_TYPE => array( 'wml', 'html' ),
-			);
+			$params['mobileformat'] = false;
 			$params['noimages'] = false;
 			$params['mainpage'] = false;
 		}
@@ -65,23 +63,31 @@ class ApiParseExtender {
 			wfProfileIn( __METHOD__ );
 			$data = $module->getResultData();
 			$params = $module->extractRequestParams();
-			if ( isset( $data['parse']['text'] ) && isset( $params['mobileformat'] ) ) {
+			if ( isset( $data['parse']['text'] ) && $params['mobileformat'] ) {
 				wfProfileIn( __METHOD__ . '-mobiletransform' );
 				$result = $module->getResult();
 				$result->reset();
 
 				$title = Title::newFromText( $data['parse']['title'] );
 				$html = MobileFormatter::wrapHTML( $data['parse']['text']['*'] );
-				if ( MobileContext::parseContentFormat( $params['mobileformat'] ) === 'WML' ) {
-					// @todo: make mobileformat accept only HTML on July 25, 2013
-					$module->setWarning( 'mobileformat=wml is not supported anymore' );
-				}
 				$mf = new MobileFormatterHTML( $html, $title );
 				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] );
 				$mf->enableExpandableSections( !$params['mainpage'] );
 				$mf->filterContent();
-				$data['parse']['text'] = $mf->getText();
+				// HACK: older version of this code had a bug that made its output incompatible
+				// with vanilla action==parse. Older callers that assume that mobileformat is a string
+				// parameter that needs either 'html' or 'wml' get the older version, while newer callers
+				// that treat it as a bool parameter get a fixed version of output structure.
+				// @todo: Remove this no earlier than 6 months from Oct 17, 2013
+				$mobileformat = $module->getRequest()->getText( 'mobileformat' );
+				if ( $mobileformat === 'html' || $mobileformat === 'wml' ) {
+					$data['parse']['text'] = $mf->getText();
+				} else {
+					$arr = array();
+					ApiResult::setContent( $arr, $mf->getText() );
+					$data['parse']['text'] = $arr;
+				}
 
 				$result->addValue( null, $module->getModuleName(), $data['parse'] );
 				wfProfileOut( __METHOD__ . '-mobiletransform' );
