@@ -1,3 +1,4 @@
+// FIXME: Deprecate this file in favour of jQuery / MediaWiki functions
 if ( typeof console === 'undefined' ) {
 	console = { log: function() {} };
 }
