@@ -12,7 +12,7 @@
 			this._super( options );
 			new LeadPhotoUploaderButton( {
 				el: this.$( '.button' ),
-				label: mw.msg( 'mobile-frontend-lead-image-tutorial-confirm' ),
+				buttonCaption: mw.msg( 'mobile-frontend-lead-image-tutorial-confirm' ),
 				pageTitle: mw.config.get( 'wgTitle' ), insertInPage: true } );
 		}
 	} );

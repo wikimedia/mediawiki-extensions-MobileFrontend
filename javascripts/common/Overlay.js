@@ -32,6 +32,11 @@ var View = M.require( 'view' ),
 					self.hide();
 				}
 			} );
+			// stop clicks in the overlay from propagating to the page
+			// (prevents non-fullscreen overlays from being closed when they're tapped)
+			this.$el.on( M.tapEvent( 'click' ), function( ev ) {
+				ev.stopPropagation();
+			} );
 		},
 		show: function() {
 			var self = this;
