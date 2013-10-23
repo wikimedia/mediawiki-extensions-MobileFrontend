@@ -5161,6 +5161,14 @@ $messages['ext'] = array(
  * @author پسر یاس
  */
 $messages['fa'] = array(
+	'mobilefrontend-random-explain' => 'این صفحهٔ تصادفی مورد علاقه شما هست؟',
+	'mobilefrontend-random-cancel' => 'بگذار بخوانم!',
+	'mobilefrontend-keepgoing-ask' => 'آفرین! شما در حال آویختن این هستید! آیا می‌خواهید سعی کنید صفحهٔ دیگری را ویرایش کنید؟',
+	'mobilefrontend-keepgoing-ask-first' => 'تشویق برای انجام اولین ویرایشتان! آیا می‌خواهید سعی کنید صفحهٔ دیگری را ویرایش کنید؟',
+	'mobilefrontend-keepgoing-explain' => 'عالی! کاربر دیگری گفته که می‌خواهد کمک کند. این یکی یا آن دیگری را آزمایش کنید.',
+	'mobilefrontend-keepgoing-cancel' => 'نه، ممنون',
+	'mobilefrontend-keepgoing-suggest' => 'بله، لطفاً',
+	'mobilefrontend-keepgoing-suggest-again' => 'دیگری را آزمایش کنید',
 	'nearby' => 'صفحه‌های نزدیک شما',
 	'mobile-frontend-desc' => 'ظاهر تلفن همراه',
 	'mobile-frontend-search-submit' => 'برو',
@@ -5215,11 +5223,15 @@ $messages['fa'] = array(
 	'mobile-frontend-last-modified-days' => 'آخرین تغییرات {{PLURAL:$1|$1 روز|$1 روز}} پیش',
 	'mobile-frontend-last-modified-months' => 'آخرین تغییرات {{PLURAL:$1|$1 ماه|$1 ماه}} پیش',
 	'mobile-frontend-last-modified-years' => 'آخرین تغییرات {{PLURAL:$1|$1 سال|$1 سال}} پیش',
+	'mobile-frontend-last-modified-just-now' => 'آخرین بار همین الآن ویرایش‌شده',
+	'mobile-frontend-last-modified-with-user-seconds' => 'آخرین {{GENDER:$1|ویرایش}} {{PLURAL:$3|$3 ثانیه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 انجام شده‌است]',
+	'mobile-frontend-last-modified-with-user-minutes' => 'آخرین {{GENDER:$1|ویرایش}} {{PLURAL:$3|$3 دقیقه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 انجام شده‌است].',
+	'mobile-frontend-last-modified-with-user-hours' => 'آخرین {{GENDER:$1|ویرایش}} {{PLURAL:$3|$3 ساعت}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 انجام شده‌است]',
 	'mobile-frontend-learn-more' => 'اطلاعات بیشتر',
 	'mobile-frontend-account-create-submit' => 'ثبت نام',
 	'mobile-frontend-password-confirm-placeholder' => 'تأیید گذرواژه',
 	'mobile-frontend-account-create-email-placeholder' => 'آدرس ایمیل (اختیاری)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'متن امنیت را وارد کنید', # Fuzzy
+	'mobile-frontend-account-create-captcha-placeholder' => 'کد امنیتی را وارد کنید',
 	'mobile-frontend-overlay-escape' => 'بازگشت به عقب',
 	'mobile-frontend-placeholder' => 'جستجوی {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'جستجو {{SITENAME}} (بتا)',
@@ -5362,6 +5374,7 @@ $messages['fa'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ بارگذاری',
 	'mobile-frontend-photo-upload-cta' => 'برای اضافه‌کردن تصویر لطفاً به سامانه وارد شوید یا ثبت‌نام کنید.',
 	'mobile-frontend-photo-upload-login' => 'برای اضافه کردن تصویر لازم است وارد سامانه شوید.',
+	'mobile-frontend-editor-undo-unsupported' => 'خنثی‌سازی در حال حاضر در دستگاه‌های همراه پشتیبانی نشده‌است.',
 	'mobile-frontend-editor-newpage-prompt' => 'این صفحه وجود ندارد. چرا جسور نباشید و ایجادش نکنید؟',
 	'mobile-frontend-editor-disabled' => 'شما مجاز به ویرایش این صفحه هستند.',
 	'mobile-frontend-editor-unavailable' => 'ویرایش تلفن همراه هم‌اکنون در مرورگر شما دردسترس نیست. خواهشمندیم مرورگر دیگری را بیازمایید.',
@@ -5387,6 +5400,9 @@ $messages['fa'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'از نشانه‌گذاری‌ها نترسید. تلاش کنید صفحهٔ $1 را بهبود بخشید.',
 	'mobile-frontend-editor-tutorial-confirm' => 'ویرایش را آغاز کنید',
 	'mobile-frontend-editor-captcha-try-again' => 'کد اشتباه، مجدداً تلاش کنید.',
+	'mobile-frontend-editor-abusefilter-warning' => 'اخطار: شما می‌خواهید این ویرایش را ذخیره کنید؟ ممکن‌است مشکلی با آن وجود داشته باشد.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'این ویرایش نمی‌تواند ذخیره شود به این دلیل که ما خطایی را شناسایی کرده‌ایم.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'بیشتر بخوانید',
 	'tag-mobile_edit' => 'ویرایش موبایل',
 	'tag-mobile_edit-description' => 'ویرایش انجام‌شده از سایت موبایل',
 	'mobile-frontend-drawer-cancel' => 'انصراف',
@@ -5405,16 +5421,20 @@ $messages['fa'] = array(
 	'mobile-frontend-media-details' => 'جزئیات',
 	'abusefilter-edit-builder-vars-user-mobile' => 'اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه',
 	'mobile-frontend-profile-title' => 'مشخصات کاربر',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|یک ویرایش|$2 ویرایش|0=هیچ ویرایشedits|501=بیش از ۵۰۰ ویرایش}}]] و [[Special:Uploads/$1|{{PLURAL:$3|یک بارگذاری|$3 بارگذاری|0=هیچ بارگذاری|501=بیش از ۵۰۰ ویرایش}}]] در ۳۰ روز اخیر.',
 	'mobile-frontend-profile-last-upload-caption' => 'آخرین بارگذاری توسط {{GENDER:$1|$1}}، {{PLURAL:$2|دیروز|$2 روز پیش|0=امروز}}',
-	'mobile-frontend-profile-registration' => '$1 برای {{PLURAL:$2|$2 روز}} عضو بوده و {{PLURAL:$3|$3 ویرایش}} انجام داده‌است.', # Fuzzy
+	'mobile-frontend-profile-registration' => '$1 برای {{PLURAL:$2|$2 روز}} در {{SITENAME}} مشارکت کرده و {{PLURAL:$3|$3 ویرایش}} {{GENDER:$1|انجام داده‌است}}.',
 	'mobile-frontend-profile-usertalk' => 'نمایش صفحه بحث.',
 	'mobile-frontend-profile-noargs' => 'لطفاً یک نام کاربری برای نمایش مشخصات بدهید.',
+	'mobile-frontend-profile-nouser' => 'ناموجود یا نام کاربری ناموجود',
 	'mobile-frontend-profile-yours' => 'نمایش صفحهٔ مشحصات شما.',
 	'mobile-frontend-profile-userpage-link' => 'نمایش صفحه کاربری.',
 	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|این کاربر}} یک ویرایشگر جدید است.',
 	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|این کاربر}} تا حدودی یک ویرایشگر باتجربه است.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|این کاربر}} یک ویرایشگر پرکار است.',
 	'mobile-frontend-requires-optin' => 'این صفحه موجود نخواهد بود مگر اینکه شما واردشده حالت آزمایشی ما باشید. [[Special:MobileOptions|صفحهٔ تنظیمات]] را برای واردشدن مشاهده کنید.',
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|آخرین تشکر}} توسط [[Special:UserProfile/$1|$1]] برای ویرایشی در [[$2]].',
+	'mobile-frontend-geonotahack' => 'نزدیک این صفحه',
 );
 
 /** Finnish (suomi)
@@ -5431,16 +5451,17 @@ $messages['fa'] = array(
  * @author VezonThunder
  */
 $messages['fi'] = array(
+	'mobilefrontend-random-explain' => 'Kiinnostaako tämä satunnainen sivu sinua?',
 	'nearby' => 'Sivut lähellä sinua',
 	'mobile-frontend-desc' => 'Mobiilikäyttöliittymä',
 	'mobile-frontend-search-submit' => 'Siirry',
 	'mobile-frontend-home-button' => 'Etusivu',
 	'mobile-frontend-logged-out' => 'Et ole kirjautunut sisään',
 	'mobile-frontend-logged-in-homepage-notification' => 'Tervetuloa $1!',
-	'mobile-frontend-logged-in-toast-notification' => 'Kirjautunut nimellä $1.',
+	'mobile-frontend-logged-in-toast-notification' => 'Olet kirjautunut käyttäjänä $1.',
 	'mobile-frontend-sign-up-heading' => 'Rekisteröidy',
 	'mobile-frontend-sign-in-heading' => 'Kirjaudu sisään',
-	'mobile-frontend-sign-in-why' => 'Jos sinulla on on {{SITENAME}}-käyttäjätunnus, voit kirjautua sisään alla.',
+	'mobile-frontend-sign-in-why' => 'Voit kirjautua sisään alla, jos sinulla on käyttäjätunnus sivustolle {{SITENAME}}.',
 	'mobile-frontend-sign-in-error-heading' => 'Hups',
 	'mobile-frontend-settings-description' => 'Mukauta mobiilisivuston asetuksia',
 	'mobile-frontend-settings-beta' => 'Beeta',
@@ -5477,16 +5498,16 @@ $messages['fi'] = array(
 	'mobile-frontend-username-placeholder' => 'Käyttäjätunnus',
 	'mobile-frontend-password-placeholder' => 'Salasana',
 	'mobile-frontend-login' => 'Kirjaudu sisään',
-	'mobile-frontend-history' => 'Näytä tämän sivun sivuhistoria.',
-	'mobile-frontend-last-modified-date' => 'Muokattu viimeksi $1 klo $2',
+	'mobile-frontend-history' => 'Näytä tämän sivun muutoshistoria.',
+	'mobile-frontend-last-modified-date' => 'Muokattu viimeksi $1 kello $2',
 	'mobile-frontend-learn-more' => 'Lisätietoja',
 	'mobile-frontend-account-create-submit' => 'Luo tunnus',
 	'mobile-frontend-password-confirm-placeholder' => 'Vahvista salasana',
 	'mobile-frontend-account-create-email-placeholder' => 'Sähköpostiosoite (vapaaehtoinen)',
 	'mobile-frontend-account-create-captcha-placeholder' => 'Kirjoita varmistuskoodi',
 	'mobile-frontend-overlay-escape' => 'Takaisin',
-	'mobile-frontend-placeholder' => 'Etsi sivustolta {{SITENAME}}',
-	'mobile-frontend-placeholder-beta' => '{{SITENAME}}-haku (beta)',
+	'mobile-frontend-placeholder' => 'Hae sivustolta {{SITENAME}}',
+	'mobile-frontend-placeholder-beta' => 'Hae sivustolta {{SITENAME}} (beeta)',
 	'mobile-frontend-placeholder-alpha' => 'Hae sivustolta {{SITENAME}} (kokeellinen)',
 	'mobile-frontend-search-help' => 'Kirjoita hakusana yläpuolelle ja vastaavat artikkelien otsikot näkyvät tässä.',
 	'mobile-frontend-dismiss-notification' => 'Hylkää tämä ilmoitus',
@@ -5501,7 +5522,7 @@ $messages['fi'] = array(
 	'mobile-frontend-main-menu-button-tooltip' => 'Avaa päävalikko',
 	'mobile-frontend-main-menu-page-title' => 'Sivuston navigaatio',
 	'mobile-frontend-main-menu-featured' => 'Suositeltu',
-	'mobile-frontend-main-menu-nearby' => 'Lähellä',
+	'mobile-frontend-main-menu-nearby' => 'Lähistöllä',
 	'mobile-frontend-main-menu-login' => 'Kirjaudu sisään',
 	'mobile-frontend-main-menu-logout' => 'Kirjaudu ulos',
 	'mobile-frontend-main-menu-watchlist' => 'Tarkkailulista',
@@ -5518,7 +5539,7 @@ $messages['fi'] = array(
 	'mobile-frontend-page-saving' => 'Tallennetaan $1',
 	'mobile-frontend-user-button-tooltip' => 'Näytä ilmoitukseni',
 	'mobile-frontend-nearby-title' => 'Lähistöllä',
-	'mobile-frontend-nearby-loading' => 'Ladataan aiheita, jotka ovat lähellä tämänhetkistä sijaintiasi',
+	'mobile-frontend-nearby-loading' => 'Ladataan aiheita, jotka ovat lähellä nykyistä sijaintiasi',
 	'mobile-frontend-nearby-requirements-guidance' => 'Kokeile eri selainta tai JavaScriptin ottamista käyttöön.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
@@ -5526,9 +5547,11 @@ $messages['fi'] = array(
 	'mobile-frontend-nearby-link' => 'Lue tämä sivu kokonaisuudessaan',
 	'mobile-frontend-donate-image-nouploads' => 'Ei tallennettuja tiedostoja.',
 	'mobile-frontend-donate-image-login' => 'Sinun täytyy olla kirjautuneena nähdäksesi tiedostosi.',
-	'mobile-frontend-photo-upload-generic' => 'Lahjoita kuva', # Fuzzy
+	'mobile-frontend-photo-upload-generic' => 'Lahjoita kuva',
 	'mobile-frontend-donate-image-title' => 'Tallennukset',
 	'mobile-frontend-donate-image-heading' => 'Tuoreet muokkauksesi',
+	'mobile-frontend-donate-image-anon' => 'Sinulla täytyy olla $1, jotta voisit nähdä tallennussivun.',
+	'mobile-frontend-user-account' => 'käyttäjätunnus',
 	'mobile-frontend-listed-image-no-description' => 'Ei kuvausta',
 	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Asia selvä?',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Kyllä!',
@@ -5571,22 +5594,29 @@ $messages['fi'] = array(
 	'mobile-frontend-photo-submit' => 'Lähetä',
 	'mobile-frontend-photo-cancel' => 'Peru',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> lataus|<span>$1</span> latausta}}',
-	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ tallennettua tiedostoa',
+	'mobile-frontend-photo-upload-user-count-over-limit' => 'Yli 500 tallennettua tiedostoa',
 	'mobile-frontend-editor-edit' => 'Muokkaa',
 	'mobile-frontend-editor-continue' => 'Jatka',
 	'mobile-frontend-editor-save' => 'Tallenna',
-	'mobile-frontend-editor-cancel' => 'Peru',
+	'mobile-frontend-editor-cancel' => 'Peruuta',
+	'mobile-frontend-editor-keep-editing' => 'Jatka muokkaamista',
+	'mobile-frontend-editor-error-loading' => 'Virhe. Osiota ei voi ladata.',
+	'mobile-frontend-editor-tutorial-confirm' => 'Aloita muokkaaminen',
 	'tag-mobile_edit' => 'Mobiilimuutos',
 	'tag-mobile_edit-description' => 'Muutos, joka on tehty mobiilisivustolta',
 	'mobile-frontend-drawer-cancel' => 'Peru',
 	'mobile-frontend-talk-overlay-header' => 'Keskustelu',
+	'mobile-frontend-talk-back-to-page' => 'Palaa sivulle $1',
 	'mobile-frontend-talk-overlay-lead-header' => 'Nimetön keskustelu',
 	'mobile-frontend-talk-add-overlay-submit' => 'Lisää keskustelu',
 	'mobile-frontend-talk-add-overlay-subject-placeholder' => 'Keskustelun aihe',
 	'mobile-frontend-talk-add-overlay-content-placeholder' => 'Mitä on mielessäsi?',
 	'mobile-frontend-talk-edit-summary' => 'Uusi keskusteluaihe: $1',
+	'mobile-frontend-talk-reply' => 'Vastaa',
 	'mobile-frontend-media-details' => 'Tiedot',
-	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Tämä käyttäjä on tuottelias muokkaaja.}}',
+	'mobile-frontend-profile-usertalk' => 'Näytä keskustelusivu.',
+	'mobile-frontend-profile-userpage-link' => 'Näytä käyttäjäsivu.',
+	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Tämä käyttäjä}} on tuottelias muokkaaja.',
 );
 
 /** Faroese (føroyskt)
@@ -5788,6 +5818,7 @@ plakatum, forsíðum á bókum osfr.',
  * @author Ltrlg
  * @author Lucky
  * @author Metroitendo
+ * @author NemesisIII
  * @author Peter17
  * @author Sherbrooke
  * @author Tititou36
@@ -5797,6 +5828,7 @@ plakatum, forsíðum á bókum osfr.',
  * @author عبد الحق فارح
  */
 $messages['fr'] = array(
+	'mobilefrontend-random-explain' => 'Cette page au hasard vous intéresse-t-elle ?',
 	'mobilefrontend-keepgoing-ask' => 'Bien ! Vous avez pris le coup ! Voulez-vous essayer de modifier une autre page ?',
 	'mobilefrontend-keepgoing-ask-first' => 'Félicitations pour avoir fait votre première modification ! Voulez-vous essayer de modifier une autre page ?',
 	'mobilefrontend-keepgoing-explain' => 'Super ! Un autre utilisateur a dit que cette page nécessite de l’aide. Essayez-la, ou bien une autre.',
@@ -5857,6 +5889,7 @@ $messages['fr'] = array(
 	'mobile-frontend-last-modified-days' => 'Dernière modification il y a {{PLURAL:$1|$1 jour|$1 jours}}',
 	'mobile-frontend-last-modified-months' => 'Dernière modification il y a {{PLURAL:$1|$1 mois}}',
 	'mobile-frontend-last-modified-years' => 'Dernière modification il y a {{PLURAL:$1|$1 an|$1 ans}}',
+	'mobile-frontend-last-modified-just-now' => 'Dernière modification à l’instant.',
 	'mobile-frontend-learn-more' => 'En savoir plus',
 	'mobile-frontend-account-create-submit' => 'Inscrivez-vous',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmez le mot de passe',
@@ -6921,6 +6954,8 @@ $messages['haw'] = array(
  * @author אור שפירא
  */
 $messages['he'] = array(
+	'mobilefrontend-random-explain' => 'האם הדף האקראי הזה מעניין אותך?',
+	'mobilefrontend-random-cancel' => 'תנו לי לקרוא!',
 	'mobilefrontend-keepgoing-ask' => 'עבודה טובה! נראה שלמדת איך לעשות את זה! רוצה לנסות לערוך עוד דף?',
 	'mobilefrontend-keepgoing-ask-first' => 'ברכות לרגל עריכתך הראשונה! רוצה לנסות לערוך עוד דף?',
 	'mobilefrontend-keepgoing-explain' => 'מגניב! משתמש אחר אמר שהדף הזה זקוק לעזרה. אפשר לנסות אותו, או לנסות דף אחר.',
@@ -6983,6 +7018,14 @@ $messages['he'] = array(
 	'mobile-frontend-last-modified-days' => 'עודכן לאחרונה לפני {{PLURAL:$1|יום אחד|יומיים|$1 ימים}}',
 	'mobile-frontend-last-modified-months' => 'עודכן לאחרונה לפני {{PLURAL:$1|חודש אחד|חודשיים|$1 חודשים}}',
 	'mobile-frontend-last-modified-years' => 'עודכן לאחרונה לפני {{PLURAL:$1|שנה אחת|שנתיים|$1 שנים}}',
+	'mobile-frontend-last-modified-just-now' => 'שוּנה לפני זמן קצר',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|שנייה אחת|$3 שניות}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|דקה אחת|$3 דקות}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|שעה אחת|שעתיים|$3 שעות}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|יום אחד|יומיים|$3 ימים}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|חודש אחד|חודשיים|$3 חודשים}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|שנה|שנתיים|$3 שנה|$3 שנים}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$4 {{GENDER:$1|נערך}} זה עתה על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}', # Fuzzy
 	'mobile-frontend-learn-more' => 'מידע נוסף',
 	'mobile-frontend-account-create-submit' => 'רישום',
 	'mobile-frontend-password-confirm-placeholder' => 'אימות ססמה',
@@ -7386,6 +7429,7 @@ $messages['hr'] = array(
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Otkaži</a> ako traje predugo.',
 	'mobile-frontend-photo-upload-error' => 'Pogrješka tijekom slanja. Pokušajte opet, ili pokušajte s nekom drugom slikom.', # Fuzzy
 	'mobile-frontend-photo-license' => 'Napomena: Sve slike koje dodate objavujete pod [//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License CC BY-SA 3.0 licencijom]', # Fuzzy
+	'tag-mobile_edit' => 'Uređivanje s mobilnog uređaja',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|je zadnji zahvalio|je zadnja zahvalila}} preko [[Special:UserProfile/$1|$1]] za uređivanje na [[$2]].',
 );
 
@@ -8479,6 +8523,8 @@ $messages['is'] = array(
  * @author Ximo17
  */
 $messages['it'] = array(
+	'mobilefrontend-random-explain' => 'Ti interessa questa pagina casuale?',
+	'mobilefrontend-random-cancel' => 'Fammela leggere!',
 	'mobilefrontend-keepgoing-ask' => "Ben fatto, ci stai prendendo la mano! Vuoi provare a modificare un'altra pagina?",
 	'mobilefrontend-keepgoing-ask-first' => "Congratulazioni per il tuo primo edit! Vuoi provare a modificare un'altra pagina?",
 	'mobilefrontend-keepgoing-explain' => "Grande! Un altro utente ha detto che questa pagina ha bisogno di aiuto. Vuoi provare con questa o con un'altra?",
@@ -8541,6 +8587,14 @@ $messages['it'] = array(
 	'mobile-frontend-last-modified-days' => 'Ultima modifica {{PLURAL:$1|$1 giorno|$1 giorni}} fa',
 	'mobile-frontend-last-modified-months' => 'Ultima modifica {{PLURAL:$1|$1 mese|$1 mesi}} fa',
 	'mobile-frontend-last-modified-years' => 'Ultima modifica {{PLURAL:$1|$1 anno|$1 anni}} fa',
+	'mobile-frontend-last-modified-just-now' => 'Appena modificata',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Ultima {{GENDER:$1|modifica}} {{PLURAL:$3|$3 secondo|$3 secondi}} fa] di {{PLURAL:$5|[$6 $2]|0=un utente anonimo}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Ultima {{GENDER:$1|modifica}} {{PLURAL:$3|$3 minuto|$3 minuti}} fa] di {{PLURAL:$5|[$6 $2]|0=un utente anonimo}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Ultima {{GENDER:$1|modifica}} {{PLURAL:$3|$3 ora|$3 ore}} fa] di {{PLURAL:$5|[$6 $2]|0=un utente anonimo}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Ultima {{GENDER:$1|modifica}} {{PLURAL:$3|$3 giorno|$3 giorni}} fa] di {{PLURAL:$5|[$6 $2]|0=un utente anonimo}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Ultima {{GENDER:$1|modifica}} {{PLURAL:$3|$3 mese|$3 mesi}} fa] di {{PLURAL:$5|[$6 $2]|0=un utente anonimo}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Ultima {{GENDER:$1|modifica}} {{PLURAL:$3|$3 anno|$3 anni}} fa] di {{PLURAL:$5|[$6 $2]|0=un utente anonimo}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Appena {{GENDER:$1|modificata}}] da {{PLURAL:$4|[$5 $2]|0=un utente anonimo}}.',
 	'mobile-frontend-learn-more' => 'Ulteriori informazioni',
 	'mobile-frontend-account-create-submit' => 'Registrati',
 	'mobile-frontend-password-confirm-placeholder' => 'Conferma password',
@@ -9600,6 +9654,8 @@ $messages['kn'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
+	'mobilefrontend-random-explain' => '이 문서가 당신의 관심을 끕니까?',
+	'mobilefrontend-random-cancel' => '읽어 보기',
 	'mobilefrontend-keepgoing-ask' => '잘 했어요! 이제 문서를 편집하는 요령을 알게 되었습니다! 다른 문서도 편집해 보겠습니까?',
 	'mobilefrontend-keepgoing-ask-first' => '첫 편집을 한 것을 축하드립니다! 다른 문서도 편집해 보겠습니까?',
 	'mobilefrontend-keepgoing-explain' => '좋아요! 다른 사용자가 이 문서가 도움이 필요하다고 했습니다. 이 문서를 고치거나, 다른 문서를 고치세요.',
@@ -9662,6 +9718,14 @@ $messages['ko'] = array(
 	'mobile-frontend-last-modified-days' => '{{PLURAL:$1|$1일}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-months' => '{{PLURAL:$1|$1달}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-years' => '{{PLURAL:$1|$1년}} 전에 마지막으로 수정됨',
+	'mobile-frontend-last-modified-just-now' => '방금 편집됨',
+	'mobile-frontend-last-modified-with-user-seconds' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3초 전에 편집됨]', # Fuzzy
+	'mobile-frontend-last-modified-with-user-minutes' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3분 전에 편집됨]', # Fuzzy
+	'mobile-frontend-last-modified-with-user-hours' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3시간 전에 편집됨]', # Fuzzy
+	'mobile-frontend-last-modified-with-user-days' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3일 전에 편집됨]', # Fuzzy
+	'mobile-frontend-last-modified-with-user-months' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3개월 전에 편집됨]', # Fuzzy
+	'mobile-frontend-last-modified-with-user-years' => '{{PLURAL:$5|[$6 $2] |0=익명 사용자}}에 의해 [$4 $3년 전에 편집됨]', # Fuzzy
+	'mobile-frontend-last-modified-with-user-just-now' => '{{PLURAL:$4|[$5 $2] |0=익명 사용자}}에 의해 [$3 방금 편집됨]', # Fuzzy
 	'mobile-frontend-learn-more' => '더 알아보기',
 	'mobile-frontend-account-create-submit' => '가입하기',
 	'mobile-frontend-password-confirm-placeholder' => '비밀번호 확인',
@@ -10424,6 +10488,8 @@ $messages['la'] = array(
  * @author Soued031
  */
 $messages['lb'] = array(
+	'mobilefrontend-random-explain' => 'Interesséiert dës zoufälleg Säit Iech?',
+	'mobilefrontend-random-cancel' => 'Loosst mech liesen!',
 	'mobilefrontend-keepgoing-ask' => 'Gutt gemaach! Dir hutt den Dréi eraus! Wëllt dir probéieren nach eng Säit ze änneren?',
 	'mobilefrontend-keepgoing-explain' => 'Fantastesch! En anere Benotzer sot dës Säit bréicht Hëllef. Probéiert dës, oder probéiert eng Aner.',
 	'mobilefrontend-keepgoing-cancel' => 'Nee, merci',
@@ -13672,9 +13738,32 @@ $messages['pms'] = array(
 	'mobile-frontend-nearby-permission' => "{{SITENAME}} davzin a l'ha nen ël përmess d'acede a soa posission.",
 	'mobile-frontend-nearby-permission-guidance' => "Për piasì, ch'as sigura d'avèj dàit ël përmess dë smon-e anté ch'a l'é. Peul desse a dev controlé ij paràmeter ëd localisassion ëd sò navigador.",
 	'mobile-frontend-nearby-noresults' => "A l'é calm ambelessì... A son ëstàite trovà gnun-e pàgine ant j'anviron.",
-	'mobile-frontend-photo-upload-generic' => 'Doné na figura', # Fuzzy
-	'mobile-frontend-donate-image-title' => 'Doné na figura', # Fuzzy
+	'mobile-frontend-nearby-noresults-guidance' => "Ch'a preuva a creé na pàgina neuva o ëd gionté na posission a un-a ch'a esist già",
+	'mobile-frontend-nearby-refresh' => "I l'oma localisalo con pi precision. Ch'a sgnaca ambelessì për agiorné la liste dle pàgine dj'anviron.",
+	'mobile-frontend-nearby-error' => "{{SITENAME}} dj'anviron a l'ha chèich problema.",
+	'mobile-frontend-nearby-error-guidance' => "Ch'a preuva a agiorné soa posission.",
+	'mobile-frontend-nearby-link' => 'Lese tuta costa pàgina',
+	'mobile-frontend-nearby-directions' => 'Navighé sì',
+	'mobile-frontend-donate-image-nouploads' => 'Gnun cariament.',
+	'mobile-frontend-donate-image-login' => 'A dev esse rintrà ant ël sistema për vëdde ij sò cariagi.',
+	'mobile-frontend-photo-upload-disabled' => 'A-i é damanca ëd gnun-a plancia su costa pàgina.',
+	'mobile-frontend-photo-upload-anon' => 'A dev esse rintrà ant ël sistema për gionté na plancia a costa pàgina.',
+	'mobile-frontend-photo-upload-protected' => "A l'ha pa ël drit ëd gionté na plancia a costa pàgina.",
+	'mobile-frontend-photo-upload-unavailable' => 'Sò navigador a përmet nen ël cariagi ëd plance.',
+	'mobile-frontend-photo-upload-generic' => 'Contribuì con na figura',
+	'mobile-frontend-donate-image-title' => 'Cariament',
 	'mobile-frontend-donate-image-heading' => 'Toe contribussion recente',
+	'mobile-frontend-donate-image-anon' => "A-i é damanca d'un $1 për vëdde le pàgine carià.",
+	'mobile-frontend-user-account' => 'cont utent',
+	'mobile-frontend-listed-image-no-description' => 'Gnun-a descrission',
+	'mobile-frontend-donate-photo-upload-success' => 'Brav! Adess soa plancia a peul esse dovrà su {{SITENAME}}!',
+	'mobile-frontend-donate-photo-first-upload-success' => 'Brav! Mersì për soa prima contribussion!',
+	'mobile-frontend-first-upload-wizard-new-page-1-header' => "Ch'a contribuissa con soe plance. Ch'a giuta {{SITENAME}} a pijé vita!",
+	'mobile-frontend-first-upload-wizard-new-page-1' => 'Le plance su {{SITENAME}} a ven-o da Wikimedia Comun',
+	'mobile-frontend-first-upload-wizard-new-page-2-header' => 'Soe plance a giuto a eduché la gent daspërtut ant ël mond',
+	'mobile-frontend-first-upload-wizard-new-page-2' => "Evité ij materiaj coatà da drit d'autor ch'a treuva an sl'Aragnà parèj coma le plance ëd tilèt, le cuvertin-e dij lìber e via fòrt.",
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'A va bin?',
+	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Bò!',
 	'mobile-frontend-watchlist-add' => "Giontà $1 a la lista ëd lòn ch'as ten sot-euj",
 	'mobile-frontend-watchlist-removed' => "Gavà $1 da la lista ëd lòn ch'as ten sot-euj",
 	'mobile-frontend-watchlist-view' => "Vëdde la lista ëd lòn ch'as ten sot-euj",
@@ -13682,6 +13771,7 @@ $messages['pms'] = array(
 	'mobile-frontend-watchlist-cta' => "Për piasì, ch'a intra ant ël sistema o ch'as anscriva për ten-e sot-euj sta pàgina.",
 	'mobile-frontend-watchlist-cta-button-login' => 'Intré ant ël sistema',
 	'mobile-frontend-watchlist-cta-button-signup' => "Ch'as anscriva",
+	'mobile-frontend-watch-login' => "A dev esse rintrà ant ël sistema për ten-e d'euj le pàgine.",
 	'mobile-frontend-watchlist-a-z' => 'Tùit', # Fuzzy
 	'mobile-frontend-watchlist-feed' => 'Modificà',
 	'mobile-frontend-watchlist-feed-empty' => "A-i son pa ëd pàgine con j'ùltime modìfiche",
@@ -14098,7 +14188,7 @@ $messages['ro'] = array(
 	'mobile-frontend-main-menu-featured' => 'De calitate',
 	'mobile-frontend-main-menu-nearby' => 'În apropiere',
 	'mobile-frontend-main-menu-login' => 'Autentificare',
-	'mobile-frontend-main-menu-logout' => 'Închidere sesiune',
+	'mobile-frontend-main-menu-logout' => 'Închide sesiunea',
 	'mobile-frontend-main-menu-watchlist' => 'Pagini urmărite',
 	'mobile-frontend-main-menu-settings' => 'Setări',
 	'mobile-frontend-main-menu-upload' => 'Încărcări',
@@ -15500,6 +15590,7 @@ $messages['su'] = array(
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
+	'mobilefrontend-random-cancel' => 'Låt mig läsa!',
 	'mobilefrontend-keepgoing-ask' => 'Bra jobbat! Du börjar får kläm på detta! Vill du prova att redigera en annan sida?',
 	'mobilefrontend-keepgoing-ask-first' => 'Grattis för din försa redigering! Vill du prova att redigera en annan sida?',
 	'mobilefrontend-keepgoing-explain' => 'Jättebra! En annan användare sa att denna sida behöver hjälp. Prova den här, eller prova en annan.',
@@ -15560,11 +15651,19 @@ $messages['sv'] = array(
 	'mobile-frontend-last-modified-days' => 'Senast redigerad {{PLURAL:$1|$1 dag|$1 dagar}} sedan',
 	'mobile-frontend-last-modified-months' => 'Senast redigerad {{PLURAL:$1|$1 månad|$1 månader}} sedan',
 	'mobile-frontend-last-modified-years' => 'Senast redigerad {{PLURAL:$1|$1 år}} sedan',
+	'mobile-frontend-last-modified-just-now' => 'Senast ändrad just nu',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 sekund|$3 sekunder}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 minut|$3 minuter}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 timme|$3 timmar}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 dag|$3 dagar}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 månad|$3 månader}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 år}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Senast {{GENDER:$1|redigeringen}} skedde just av {{PLURAL:$4|[$5 $2]|0=en anonym användare}}.', # Fuzzy
 	'mobile-frontend-learn-more' => 'Läs mer',
 	'mobile-frontend-account-create-submit' => 'Skapa ett konto',
 	'mobile-frontend-password-confirm-placeholder' => 'Bekräfta lösenord',
 	'mobile-frontend-account-create-email-placeholder' => 'E-postadress (valfritt)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Ange säkerhetstext', # Fuzzy
+	'mobile-frontend-account-create-captcha-placeholder' => 'Ange bekräftelsekod',
 	'mobile-frontend-overlay-escape' => 'Gå tillbaka',
 	'mobile-frontend-placeholder' => 'Sök på {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Sök i {{SITENAME}} (Beta)',
@@ -15736,6 +15835,9 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-editor-tutorial-summary' => 'Var inte rädd för kodning. Försök att förbättra sidan $1.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Börja redigera',
 	'mobile-frontend-editor-captcha-try-again' => 'Fel kod, försök igen.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Varning: Är du säker du vill spara denna redigering? Det kan finnas ett problem med den.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Denna redigering kan inte sparas eftersom vi har upptäckt ett problem.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Läs mer',
 	'tag-mobile_edit' => 'Mobilredigering',
 	'tag-mobile_edit-description' => 'Redigering gjordes från mobilsidan',
 	'mobile-frontend-drawer-cancel' => 'Avbryt',
@@ -15756,7 +15858,6 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-title' => 'Användarprofil',
 	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 redigering|$2 redigeringar|0=Inga redigeringar|501=Fler än 500 redigeringar}}]] och [[Special:Uploads/$1|{{PLURAL:$3|1 uppladdning|$3 uppladdningar|0=inga uppladdningar|501=fler än 500 uppladdningar}}]] under de senaste 30 dagarna.', # Fuzzy
 	'mobile-frontend-profile-last-upload-caption' => 'Senast uppladdad av {{GENDER:$1|$1}}, {{PLURAL:$2|igår|$2 dagar sedan|0=idag}}.',
-	'mobile-frontend-profile-heading-recent' => 'Senaste',
 	'mobile-frontend-profile-registration' => '$1 har bidragit till {{SITENAME}} i {{PLURAL:$2|$2 dag|$2 dagar}} och {{GENDER:$1|har gjort}} {{PLURAL:$3|$3 redigering|$3 redigeringar}}.',
 	'mobile-frontend-profile-usertalk' => 'Visa diskussionssidan.',
 	'mobile-frontend-profile-noargs' => 'Var god ange ett användarnamn för att visa en profil.',
@@ -15768,6 +15869,7 @@ bilder av affischer, bokomslag, etc.',
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|Denna användare}} är en flitig redigerare.',
 	'mobile-frontend-requires-optin' => 'Denna sida är inte tillgänglig om du inte väljer att vara i vårt betaläge. Besök [[Special:MobileOptions|inställningssidan]] för att ställa in det.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Tackades senast}} av [[Special:UserProfile/$1|$1]] för en redigering på [[$2]].',
+	'mobile-frontend-geonotahack' => 'Nära denna sida',
 );
 
 /** Swahili (Kiswahili)
