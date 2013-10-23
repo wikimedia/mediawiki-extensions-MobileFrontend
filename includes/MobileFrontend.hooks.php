@@ -644,4 +644,46 @@ class MobileFrontendHooks {
 		}
 		return true;
 	}
+
+	/**
+	 * Handler for ResourceLoaderRegisterModules hook
+	 * Registering our EventLogging schema modules
+	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
+	 * @return bool Always true
+	 */
+	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
+		global $wgResourceModules;
+
+		$mobileEventLoggingSchemas = array(
+			'mobile.uploads.schema' => array(
+				'schema' => 'MobileWebUploads',
+				'revision' => 5383883,
+			),
+			'mobile.watchlist.schema' => array(
+				'schema' => 'MobileBetaWatchlist',
+				'revision' => 5281061,
+			),
+			'mobile.editing.schema' => array(
+				'schema' => 'MobileWebEditing',
+				'revision' => 5644223,
+			),
+			'schema.MobileWebClickTracking' => array(
+				'schema' => 'MobileWebClickTracking',
+				'revision' => 5929948,
+			),
+		);
+
+		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
+			foreach ( $mobileEventLoggingSchemas as $module => $properties ) {
+				$wgResourceModules[ $module ] = array(
+					'class'  => 'ResourceLoaderSchemaModule',
+					'schema' => $properties['schema'],
+					'revision' => $properties['revision'],
+					'targets' => 'mobile',
+				);
+			}
+		}
+
+		return true;
+	}
 }
