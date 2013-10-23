@@ -10,6 +10,12 @@
 	QUnit.test( '#getPage (h1s)', 1, function( assert ) {
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
+				"id": -1,
+				"lastmodifiedby": {
+					"name": "bob",
+					"gender": "unknown"
+				},
+				"lastmodified": "2013-10-28T18:49:56Z",
 				"sections":[
 					{"id":0,"text":""},
 					{"level":"1","line":"1","anchor":"1","id":1,"text":"<p>Text of 1\n</p>"},
@@ -20,13 +26,11 @@
 		} ) );
 
 		pageApi.getPage( 'Test' ).done( function( resp ) {
-			// FIXME: Hack to reset this since it is variable at the moment
-			resp.lastModifiedTimestamp = '';
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.wikiGetlink( 'Test', { action: 'history' } ),
-				lastModifiedUserName: '',
+				lastModifiedUserName: 'bob',
 				lastModifiedUserGender: 'unknown',
-				lastModifiedTimestamp: '',
+				lastModifiedTimestamp: 1382986196,
 				title: 'Test',
 				id: -1,
 				isMainPage: false,
@@ -55,6 +59,12 @@
 	QUnit.test( '#getPage', 2, function( assert ) {
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
+				"id": -1,
+				"lastmodifiedby": {
+					"name": "Melissa",
+					"gender": "female"
+				},
+				"lastmodified": "2013-10-28T18:49:56Z",
 				"sections": [
 					{ "id": 0, "text": "lead content" },
 					{
@@ -91,13 +101,11 @@
 		} ) );
 
 		pageApi.getPage( 'Test' ).done( function( resp ) {
-			// FIXME: Hack to reset this since it is variable at the moment
-			resp.lastModifiedTimestamp = '';
 			assert.deepEqual( resp, {
 				historyUrl: mw.util.wikiGetlink( 'Test', { action: 'history' } ),
-				lastModifiedUserName: '',
-				lastModifiedUserGender: 'unknown',
-				lastModifiedTimestamp: '',
+				lastModifiedUserName: 'Melissa',
+				lastModifiedUserGender: 'female',
+				lastModifiedTimestamp: 1382986196,
 				title: 'Test',
 				id: -1,
 				isMainPage: false,
@@ -242,6 +250,14 @@
 	QUnit.test( '#getPage (html headings get stripped)', 1, function( assert ) {
 		sinon.stub( PageApi.prototype, 'get' ).returns( $.Deferred().resolve( {
 			"mobileview": {
+				"id": -1,
+				"lastmodifiedby": {
+					"user": {
+						"name": "",
+						"gender": "unknown"
+					},
+					"timestamp": "1383071742"
+				},
 				"sections":[
 					{"id":0,"text":""},
 					{"level":"1","line":"<i>html text heading</i>","anchor":"1","id":1,"text":"<p>Text of 1\n</p>"}

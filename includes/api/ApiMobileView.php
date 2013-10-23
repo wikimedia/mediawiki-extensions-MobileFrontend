@@ -4,7 +4,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
-	const CACHE_VERSION = 5;
+	const CACHE_VERSION = 6;
 
 	private $followRedirects, $noHeadings, $mainPage, $noTransform, $variant, $offset, $maxlen;
 
@@ -69,6 +69,16 @@ class ApiMobileView extends ApiBase {
 		if ( isset( $prop['lastmodified'] ) ) {
 			$this->getResult()->addValue( null, $this->getModuleName(),
 				array( 'lastmodified' => $data['lastmodified'] )
+			);
+		}
+		if ( isset( $prop['lastmodifiedby'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'lastmodifiedby' => $data['lastmodifiedby'] )
+			);
+		}
+		if ( isset( $prop['id'] ) ) {
+			$this->getResult()->addValue( null, $this->getModuleName(),
+				array( 'id' => $data['id'] )
 			);
 		}
 		$result = array();
@@ -244,7 +254,6 @@ class ApiMobileView extends ApiBase {
 				'sections' => array(),
 				'text' => array( $html ),
 				'refsections' => array(),
-				'lastmodified' => $wp->getTimestamp(),
 			);
 		} else {
 			wfProfileIn( __METHOD__ . '-sections' );
@@ -276,9 +285,19 @@ class ApiMobileView extends ApiBase {
 				}
 				$data['text'][] = $chunk;
 			}
-			$data['lastmodified'] = $wp->getTimestamp();
-
 			wfProfileOut( __METHOD__ . '-sections' );
+		}
+
+		$data['lastmodified'] = wfTimestamp( TS_ISO_8601, $wp->getTimestamp() );
+
+		// Page id
+		$data['id'] = $wp->getId();
+		$user = User::newFromId( $wp->getUser() );
+		if( !$user->isAnon() ) {
+			$data['lastmodifiedby'] = array(
+				'name' => $wp->getUserText(),
+				'gender' => $user->getOption( 'gender' ),
+			);
 		}
 		// Don't store small pages to decrease cache size requirements
 		if ( strlen( $html ) >= $wgMFMinCachedPageSize ) {
@@ -315,10 +334,12 @@ class ApiMobileView extends ApiBase {
 				ApiBase::PARAM_DFLT => 'text|sections|normalizedtitle',
 				ApiBase::PARAM_ISMULTI => true,
 				ApiBase::PARAM_TYPE => array(
+					'id',
 					'text',
 					'sections',
 					'normalizedtitle',
 					'lastmodified',
+					'lastmodifiedby',
 				)
 			),
 			'sectionprop' => array(
@@ -356,6 +377,7 @@ class ApiMobileView extends ApiBase {
 
 	public function getParamDescription() {
 		return array(
+			'id' => 'Id of the page',
 			'page' => 'Title of page to process',
 			'redirect' => 'Whether redirects should be followed',
 			'sections' => "Pipe-separated list of section numbers for which to return text or `all' to return for all. "
@@ -366,6 +388,7 @@ class ApiMobileView extends ApiBase {
 				' sections        - information about all sections on page',
 				' normalizedtitle - normalized page title',
 				' lastmodified    - MW timestamp for when the page was last modified, e.g. "20130730174438"',
+				' lastmodifiedby  - information about the user who modified the page last',
 			),
 			'sectionprop' => 'What information about sections to get',
 			'variant' => "Convert content into this language variant",
