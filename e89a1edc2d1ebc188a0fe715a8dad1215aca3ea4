@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_36429942",
+        "filename": "scripts/cucumber.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 143
+      },
+      "writtenOn": "2013-10-23T06:50:51Z",
+      "side": 1,
+      "message": "This is not the test you want, \"-s\" will return true for a directory.  I think \"-f\" is correct-enough here, and below.  Double square bracket is also overkill, but whateva.",
+      "revId": "e89a1edc2d1ebc188a0fe715a8dad1215aca3ea4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_5692b59f",
+        "filename": "scripts/cucumber.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 143
+      },
+      "writtenOn": "2013-10-23T06:50:51Z",
+      "side": 1,
+      "message": "`dirname $0` would also work here",
+      "revId": "e89a1edc2d1ebc188a0fe715a8dad1215aca3ea4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
