@@ -3,12 +3,11 @@ window.History = {
 		bind: function() {},
 		trigger: function() {}
 	},
-	enabled: false,
-	history: window.history
+	enabled: false
 };
 
 ( function( H, $ ) {
-	var lastState, currentState, h = H.history;
+	var lastState, currentState, h = window.history;
 
 	function isBrowserSupported( ua ) {
 		// http://caniuse.com/history
