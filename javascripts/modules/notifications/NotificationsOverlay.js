@@ -5,8 +5,8 @@
 
 	NotificationsOverlay = Overlay.extend( {
 			active: false,
-			className: 'mw-mf-overlay list-overlay',
-			template: M.template.get( 'overlays/notifications' ),
+			className: 'mw-mf-overlay',
+			template: M.template.get( 'modules/notifications/NotificationsOverlay' ),
 			defaults: {
 				heading: mw.msg( 'notifications' ),
 				archiveLink: mw.util.wikiGetlink( 'Special:Notifications' ),
@@ -68,9 +68,7 @@
 								} );
 							}
 							// Set up event logging for each notification
-							mw.loader.using( 'ext.echo.base', function() {
-								mw.echo.setupNotificationLogging( $notification, 'mobile-overlay' );
-							} );
+							mw.echo.setupNotificationLogging( $notification, 'mobile-overlay' );
 						} );
 
 						self.markAllAsRead();
@@ -98,12 +96,6 @@
 			}
 	} );
 
-	function init() {
-		$( '#secondary-button.user-button' ).on( 'click', function( ev ) {
-			ev.preventDefault();
-			new NotificationsOverlay( { $badge: $( this ) } ).show();
-		} );
-	}
-	init();
+	M.define( 'modules/notifications/NotificationsOverlay', NotificationsOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

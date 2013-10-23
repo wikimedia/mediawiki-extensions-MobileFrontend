@@ -269,10 +269,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	'mobile.beta.common' => $wgMFMobileResourceBoilerplate + array(
-		'templates' => array(
-			// NotificationsOverlay.js
-			'overlays/notifications',
-		),
 		'dependencies' => array(
 			'mobile.stable.common',
 			'mobile.loggingSchemas',
@@ -332,6 +328,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
+			'javascripts/modules/notifications/notifications.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/lastEdited/lastEditedBeta.js',
@@ -749,12 +746,16 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.notifications.overlay' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
+			'ext.echo.base',
 		),
 		'scripts' => array(
-			'javascripts/modules/NotificationsOverlay.js',
+			'javascripts/modules/notifications/NotificationsOverlay.js',
 		),
 		'styles' => array(
 			'less/modules/NotificationsOverlay.less',
+		),
+		'templates' => array(
+			'modules/notifications/NotificationsOverlay',
 		),
 		'messages' => array(
 			// defined in Echo

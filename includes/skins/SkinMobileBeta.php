@@ -43,9 +43,6 @@ class SkinMobileBeta extends SkinMobile {
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 		$modules['beta'] = array( 'mobile.beta' );
-		if ( $this->getUser()->isLoggedIn() ) {
-			$modules['beta'][] = 'mobile.notifications.overlay';
-		}
 		$modules['beta'][] = 'mobile.geonotahack';
 		// turn off stable only modules
 		$modules['stableonly'] = array();
