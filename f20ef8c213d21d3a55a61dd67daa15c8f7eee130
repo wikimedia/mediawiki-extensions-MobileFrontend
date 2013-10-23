@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_db9c0ebf",
+        "filename": "javascripts/modules/mf-toggle-dynamic.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-23T00:13:35Z",
+      "side": 1,
+      "message": "Since M.getCurrentPage() can currently return undefined, you should check for that here (otherwise the next line might generate a JS error).",
+      "revId": "f20ef8c213d21d3a55a61dd67daa15c8f7eee130",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
