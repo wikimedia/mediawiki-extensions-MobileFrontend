@@ -46,26 +46,30 @@
 	}
 
 	function init() {
-		var $page = $( '#content' ), tagName = 'h2', additionalClassNames = '';
-
-		// in beta expand all sections by default
-		if ( M.isWideScreen() && mw.config.get( 'wgMFMode' ) !== 'stable' ) {
-			additionalClassNames = 'openSection';
-		}
+		var $page = $( '#content' ), tagName = 'h2', $headings;
 
 		$( 'html' ).removeClass( 'stub' );
 		if ( $page.find( 'h1' ).length > 0 ) {
 			tagName = 'h1';
 		}
-		$page.find( tagName ).addClass( [ 'section_heading', additionalClassNames ].join( ' ' ) );
-		$page.find( '.section_heading' ).next( 'div' ).addClass( [ 'content_block', additionalClassNames ].join( ' ' ) );
+		$page.find( tagName ).addClass( 'section_heading' );
+		$headings = $page.find( '.section_heading' );
+		$headings.next( 'div' ).addClass( 'content_block' );
 
 		// use mouseup because mousedown blocks the click event and links
 		// in headings won't work
 		// FIXME change when micro.tap.js in stable
-		$( '.section_heading' ).on( M.tapEvent( 'mouseup' ), function() {
+		$headings.on( M.tapEvent( 'mouseup' ), function() {
 			toggle( $( this ) );
 		} );
+
+		// in beta expand all sections by default on wide screen devices (in beta and alpha)
+		if ( M.isWideScreen() && mw.config.get( 'wgMFMode' ) !== 'stable' ) {
+			$headings.each( function() {
+				toggle( $( this ) );
+			} );
+		}
+
 		// FIXME: remove when this class is no longer in cached pages
 		$( '.section_anchors' ).remove();
 
@@ -92,7 +96,7 @@
 
 	// FIXME: Temporary workaround while toggle-dynamic is not in stable
 	// (needed for dynamic section loading after editing)
-	if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+	if ( mw.config.get( 'wgMFMode' ) !== 'alpha' ) {
 		M.on( 'section-toggle', function( $section ) {
 			var $content = $section.next(),
 				content = $content.data( 'content' );

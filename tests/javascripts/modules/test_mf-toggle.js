@@ -1,8 +1,10 @@
-( function ( $, toggle ) {
+( function ( M, $ ) {
 
-var $container;
+var $container,
+	toggle = M.require( 'toggle' );
+
 function makeSections() {
-	$container = $( '<div id="content_wrapper">' ).appendTo( document.body );
+	$container = $( '<div>' ).appendTo( '#content' );
 	$( '<h2 class="section_heading" id="section_1"><span id="First_Section">First Section</span></h2>' ).appendTo( $container );
 	$( '<div class="content_block" id="content_1"><p>Text</p></div>' ).appendTo( $container );
 
@@ -13,12 +15,14 @@ function makeSections() {
 QUnit.module( 'MobileFrontend toggle.js: wm_toggle_section', {
 	setup: function() {
 		$container = makeSections();
+		sinon.stub( M, 'isWideScreen' ).returns( false );
 		toggle.enable();
 		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
 		window.location.hash = "#";
 		$container.remove();
+		M.isWideScreen.restore();
 	}
 });
 
@@ -54,27 +58,26 @@ QUnit.test( 'clicking hash links', 2, function() {
 
 QUnit.test( 'clicking a heading toggles it', 2, function() {
 	var visibilityStart = $("#content_2").hasClass("openSection");
-	$( '#section_2' ).trigger( 'tap' );
+	$( '#section_2' ).trigger( M.tapEvent( 'mouseup' ) );
 	strictEqual(visibilityStart, false, "check content is hidden at start");
 	strictEqual($("#content_2").hasClass("openSection"), true, "check content is shown on a toggle");
 });
 
-QUnit.module( 'MobileFrontend toggle.js (beta): closing sections', {
+QUnit.module( 'MobileFrontend toggle.js: tablet mode', {
 	setup: function() {
-		$("body").addClass('beta');
 		$container = makeSections();
-
+		sinon.stub( M, 'isWideScreen' ).returns( true );
 		toggle.enable();
-		$("#section_1,#content_1,#anchor_1").addClass("openSection");
 	},
 	teardown: function() {
-		$("body").removeClass('beta');
+		window.location.hash = "#";
 		$container.remove();
+		M.isWideScreen.restore();
 	}
-});
+} );
 
-QUnit.test( 'close a section', 1, function() {
-	strictEqual( $( '#anchor_1' ).length, 0, 'check anchor is no longer present' );
-});
+QUnit.test( 'open by default', 1, function() {
+	strictEqual( $( '#content_1' ).hasClass( 'openSection' ), true, 'check section is visible at start' );
+} );
 
-}( jQuery, mw.mobileFrontend.require( 'toggle' ) ) );
+}( mw.mobileFrontend, jQuery ) );
