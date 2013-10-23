@@ -161,6 +161,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
+			'jquery.cookie',
 		),
 		'scripts' => array(
 			'javascripts/modules/editor/EditorApi.js',
