@@ -23,7 +23,8 @@
 
 	// do not run more than once
 	function init() {
-		var title = mw.config.get( 'wgTitle' ),
+		// use wgPageName to ensure we keep the namespace prefix
+		var title = mw.config.get( 'wgPageName' ),
 			currentUrl = mw.util.wikiGetlink( title, M.query );
 		// initial history state does not contain title
 		// run before binding to avoid nasty surprises
