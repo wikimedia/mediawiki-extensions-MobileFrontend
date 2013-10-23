@@ -16,6 +16,24 @@
       "revId": "6b484c10f0982ef352f4402abe403ae68353d3e9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_db85ee5c",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-23T00:16:44Z",
+      "side": 1,
+      "message": "No.. that has namespace id\u0027s as keys and we are trying to derive the namespace id from the namespace name.",
+      "parentUuid": "291c1151_7bb6ba3e",
+      "revId": "6b484c10f0982ef352f4402abe403ae68353d3e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
