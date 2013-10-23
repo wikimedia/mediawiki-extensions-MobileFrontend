@@ -139,6 +139,15 @@ class SkinMobile extends SkinMinerva {
 		$modules['legacy'] = array();
 
 		$this->addExternalModules( $out );
+		// FIXME: This is duplicate code of that in MobileFrontend.hooks.php. Please apply hygiene.
+		if ( class_exists( 'ResourceLoaderSchemaModule' ) ) {
+			$modules['eventlogging'] = array(
+				'mobile.uploads.schema',
+				'mobile.watchlist.schema',
+				'mobile.editing.schema',
+				'schema.MobileWebClickTracking',
+			);
+		}
 		return $modules;
 	}
 
