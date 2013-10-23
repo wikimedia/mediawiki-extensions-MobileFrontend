@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_7bb6ba3e",
+        "filename": "javascripts/common/Page.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-23T00:15:35Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we use mw.config.get( \u0027wgFormattedNamespaces\u0027 ) instead?",
+      "revId": "6b484c10f0982ef352f4402abe403ae68353d3e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
