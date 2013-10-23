@@ -16,6 +16,24 @@
       "revId": "e62ee775322f5de8f3545931ea7acea0997a09bb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_780ddb35",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 670,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-23T18:02:15Z",
+      "side": 1,
+      "message": "WebResponse::setcookie isn\u0027t static and no response object is available within this hook :(",
+      "parentUuid": "291c1151_3589aeed",
+      "revId": "e62ee775322f5de8f3545931ea7acea0997a09bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
