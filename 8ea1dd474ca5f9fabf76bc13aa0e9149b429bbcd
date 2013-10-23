@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "291c1151_de1a377a",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-23T23:04:49Z",
+      "side": 1,
+      "message": "It shouldn\u0027t be possible to override this.. it should be tied to the current state of master (hence the reason for the move)",
+      "revId": "8ea1dd474ca5f9fabf76bc13aa0e9149b429bbcd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_de31570c",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 5
@@ -30,6 +47,23 @@
       "writtenOn": "2013-10-23T22:56:54Z",
       "side": 1,
       "message": "WMF-specific config variable.",
+      "revId": "8ea1dd474ca5f9fabf76bc13aa0e9149b429bbcd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_fe1ff366",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 657,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-23T23:04:49Z",
+      "side": 1,
+      "message": "unnecessary",
       "revId": "8ea1dd474ca5f9fabf76bc13aa0e9149b429bbcd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
