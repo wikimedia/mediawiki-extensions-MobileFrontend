@@ -409,7 +409,6 @@ class SkinMinerva extends SkinTemplate {
 
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
-		$out = $this->getOutput();
 
 		$modules['mobile'] = array(
 			'mobile.head',
@@ -424,19 +423,11 @@ class SkinMinerva extends SkinTemplate {
 		$modules['stableonly'] = array( 'mobile.lastEdited.stable' );
 
 		$title = $this->getTitle();
-		// modules based on context
-		$action = $this->getContext()->getRequest()->getText( 'action' );
 
 		// specific to current context
 		if ( $title->inNamespace( NS_FILE ) ) {
 			$modules['file'] = array( 'mobile.file.scripts' );
 		}
-
-		if ( !$title->isSpecialPage() ) {
-			$out->addModuleStyles( 'mobile.styles.page' );
-		}
-
-		$out->addModuleStyles( 'mobile.styles' );
 		return $modules;
 	}
 
@@ -452,6 +443,14 @@ class SkinMinerva extends SkinTemplate {
 		$bodyAttrs[ 'class' ] .= ' ' . $classes;
 	}
 
+	protected function getSkinStyles() {
+		return array(
+			'mobile.styles',
+			'mobile.styles.page',
+			'mobile.pagelist.styles',
+		);
+	}
+
 	/**
 	 * Add skin-specific stylesheets
 	 * @param $out OutputPage
@@ -459,12 +458,8 @@ class SkinMinerva extends SkinTemplate {
 	public function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
 		// Add the ResourceLoader module to the page output
-		$styles = array(
-			'mobile.styles',
-			'mobile.styles.page',
-			'mobile.pagelist.styles',
-		);
-		$out->addModuleStyles( $styles );
+
+		$out->addModuleStyles( $this->getSkinStyles() );
 	}
 
 	/**
