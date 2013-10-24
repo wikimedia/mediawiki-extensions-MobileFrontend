@@ -289,6 +289,9 @@
 						msg = 'mobile-frontend-editor-success';
 					}
 					self._updateEditCount();
+					// Set a cookie for 30 days indicating that this user has edited from
+					// the mobile interface.
+					$.cookie( 'mobileEditor', 'true', { expires: 30 } );
 					// double check it was successfully pre-fetched during preview phase
 					if ( KeepGoingDrawer ) {
 						new KeepGoingDrawer( { isFirstEdit: self.isFirstEdit } );
