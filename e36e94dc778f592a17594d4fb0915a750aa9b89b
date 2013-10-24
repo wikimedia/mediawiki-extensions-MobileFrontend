@@ -16,6 +16,24 @@
       "revId": "e36e94dc778f592a17594d4fb0915a750aa9b89b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_b27e87aa",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-24T22:53:47Z",
+      "side": 1,
+      "message": "Oops... will fix.",
+      "parentUuid": "291c1151_320b7780",
+      "revId": "e36e94dc778f592a17594d4fb0915a750aa9b89b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
