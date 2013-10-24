@@ -16,6 +16,23 @@
       "revId": "83a4f2ed06e7fe3c979c772969ba6706252f95f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_4acda186",
+        "filename": "tests/javascripts/common/test_PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-10-24T15:53:49Z",
+      "side": 1,
+      "message": "If you have this test properly extend the MWQUnitEnvironment (instead of overwriting it), then mw.config will be restored automatically in the teardown. See core unit tests for an example.\n\n QUnit.module( \u0027mediawiki.Title\u0027, QUnit.newMwEnvironment() );\n\n QUnit.module( \u0027mediawiki.Title\u0027, QUnit.newMwEnvironment( {\n \tsetup: function () {\n \t\tmw.config.set( .. );\n \t}\n } );",
+      "revId": "83a4f2ed06e7fe3c979c772969ba6706252f95f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
