@@ -81,8 +81,8 @@ class MFResourceLoaderModule extends ResourceLoaderFileModule {
 				$content = file_get_contents( $localPath );
 				$js .= Xml::encodeJsCall( 'mw.template.add', array( $templateName, $content ) );
 			} else {
-				$msg = __METHOD__.": template file not found: \"$localPath\"";
-				throw new MWException( $msg );
+				$msg = __METHOD__.": template not found: \"$templateName\"";
+				$js .= Xml::encodeJsCall( 'throw', array( $msg ) );
 			}
 		}
 		return $js;
