@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_727faf12",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-24T22:16:44Z",
+      "side": 1,
+      "message": "Wrong format - 20131024220426 - we currently use unix timestamp (1382652266)",
+      "revId": "f099455e801b8b8a0251a7154103eedf17cc0f70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
