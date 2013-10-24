@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_e11af312",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-24T19:23:14Z",
+      "side": 1,
+      "message": "I don\u0027t think the name requireBeta is suitable here. It also outputs HTML which makes the name misleading as it suggests it is  Also require_s_Beta\n\nIf I call this twice it will render the warning twice.\n\nTwo functions should be added here\n\n* requiresBeta\n* renderBetaOptInMessge",
+      "revId": "5a57b56ca7dad7b5cae0bc6f43e5a81e08dcc16a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
