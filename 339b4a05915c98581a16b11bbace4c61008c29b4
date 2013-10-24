@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_411f4758",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-24T19:05:21Z",
+      "side": 1,
+      "message": "We should only add the user information if the user is not anonymous.\nCurrently I get:\n{\"mobileview\":{\"lastmodified\":{\"user\":{\"name\":\"0:0:0:0:0:0:0:1\",\"gender\":\"unknown\"},\"time\":\"20131024190333\"}\n\nExpected:\n{\"mobileview\":{\"lastmodified\":{\"time\":\"20131024190333\"}",
+      "revId": "339b4a05915c98581a16b11bbace4c61008c29b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_befbb643",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-24T19:05:21Z",
+      "side": 1,
+      "message": "We should check if the user exists.\nAlso cache resp.mobileview.lastmodified ?\ne.g. lastModified \u003d resp.mobileview.lastmodified;",
+      "revId": "339b4a05915c98581a16b11bbace4c61008c29b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_def87249",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-24T19:05:21Z",
+      "side": 1,
+      "message": "Add only if not anon.",
+      "revId": "339b4a05915c98581a16b11bbace4c61008c29b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
