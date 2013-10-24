@@ -1,0 +1,78 @@
+// FIXME: merge with overlays.less when OverlayNew gets to stable
+@import "../mixins.less";
+
+@headerMargin: .4em;
+
+.overlay-enabled {
+	.overlay {
+		// use height instead of bottom 0 so that overlay expands when there's
+		// more content, don't use min-height because of
+		// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
+		height: 100%;
+	}
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 4;
+
+	.overlay-header {
+		margin: @headerMargin @headerMargin 0;
+		border-bottom: 1px solid #cacaca;
+		overflow: hidden;
+
+		button, h2 {
+			display: inline-block;
+			line-height: 1;
+			padding: 1em .6em;
+		}
+
+		button {
+			border-radius: 0;
+			// needed for proper horizontal icon/text centering in both LTR and RTL
+			min-width: (3em + @headerMargin);
+		}
+
+		.left {
+			float: left;
+			// needed for proper horizontal icon/text centering in both LTR and RTL
+			margin-left: -@headerMargin;
+			border-right: 1px solid #cacaca;
+		}
+
+		.right {
+			float: right;
+
+			button {
+				float: left;
+
+				&:last-child {
+					// needed for proper horizontal icon/text centering in both LTR and RTL
+					margin-right: -@headerMargin;
+					border-left: 1px solid #cacaca;
+				}
+			}
+		}
+
+		.icon {
+			text-indent: -9999px;
+			background-position: 50% .5em;
+			background-repeat: no-repeat;
+			.background-size( 24px, auto );
+
+			&.cancel {
+				background-image: url(images/cancel.png);
+			}
+		}
+
+		h2 {
+			float: left;
+			// FIXME: should not be necessary, scope other h2s to .content
+			font-size: 1em;
+		}
+	}
+}
