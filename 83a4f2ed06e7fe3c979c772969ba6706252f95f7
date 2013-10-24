@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_0ab3a90a",
+        "filename": "tests/javascripts/common/test_PageApi.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-10-24T15:52:13Z",
+      "side": 1,
+      "message": "The \u0027this\u0027 object here is the object literal created here. You own this object, no need for underscore. Discouraged in our coding style in general, but especially not needed here since you own this object.",
+      "revId": "83a4f2ed06e7fe3c979c772969ba6706252f95f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
