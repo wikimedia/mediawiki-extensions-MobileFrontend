@@ -9,12 +9,12 @@
 #mw-mf-accountcreate {
 	.watermark {
 		text-align: center;
+		// FIXME: Should we set the height here?
 		height: 72px;
-		width: 100%;
 		margin-bottom: @headingMargin;
 		img {
-			height: 72px;
-			width: auto;
+			// Important to override default max-width and height auto combo
+			height: 72px !important;
 		}
 	}
 
