@@ -221,6 +221,7 @@ class ApiMobileView extends ApiBase {
 				wfDebugLog( 'mobile', "Empty parser output on '{$title->getPrefixedText()}': rev $latest, time $time, cache key $key" );
 				throw new MWException( __METHOD__ . ": PoolCounter didn't return parser output" );
 			}
+			$parserOutput->setTOCEnabled( false );
 			$html = $parserOutput->getText();
 			$cacheExpiry = $parserOutput->getCacheExpiry();
 			wfProfileOut( __METHOD__ . '-parserOutput' );

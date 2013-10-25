@@ -129,6 +129,7 @@ $wgHooks['CentralAuthLoginRedirectData'][] = 'MobileFrontendHooks::onCentralAuth
 $wgHooks['CentralAuthSilentLoginRedirect'][] = 'MobileFrontendHooks::onCentralAuthSilentLoginRedirect';
 $wgHooks['UserRequiresHTTPS'][] = 'MobileFrontendHooks::onUserRequiresHTTPS';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'MobileFrontendHooks::onResourceLoaderRegisterModules';
+$wgHooks['OutputPageParserOutput'][] = 'MobileFrontendHooks::onOutputPageParserOutput';
 
 $wgSpecialPages['MobileDiff'] = 'SpecialMobileDiff';
 $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
@@ -247,6 +248,8 @@ $wgMobileFrontendFormatCookieExpiry = null;
 $wgMFRemovableClasses = array(
 	// These rules will be used for all transformations
 	'base' => array(
+		// @todo: remove this when cache made before https://gerrit.wikimedia.org/r/91902 dies on WMF
+		// but mind that extracts and action=parse&mobileformat don't currently support it
 		'.toc',
 	),
 	// HTML view
