@@ -51,14 +51,15 @@
 		},
 
 		postRender: function( options ) {
-			var self = this;
+			var self = this, $img;
 			this._super( options );
 
 			api.getThumb( options.title ).done( function( data ) {
 				self.imgRatio = data.thumbwidth / data.thumbheight;
 
 				self.$( '.container' ).removeClass( 'loading' );
-				self.$( 'img' ).attr( 'src', data.thumburl );
+				$img = $( '<img>' ).attr( 'src', data.thumburl ).attr( 'alt', options.caption );
+				self.$( '.container div' ).append( $img );
 				self._positionImage();
 				self.$( '.details a' ).attr( 'href', data.descriptionurl );
 

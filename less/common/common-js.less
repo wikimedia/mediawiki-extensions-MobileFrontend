@@ -6,12 +6,13 @@
 }
 
 .loading {
+
 	&.spinner {
 		height: 100px;
 	}
 
 	// needs !important to override images from more specific rules
-	background-image: url(images/ajax-loader.gif) !important;
+	background-image: @ajaxLoadingImage !important;
 	background-repeat: no-repeat;
 	background-position: center;
 	.background-size( 32px, auto );
