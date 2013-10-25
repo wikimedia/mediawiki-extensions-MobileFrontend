@@ -1,16 +1,20 @@
 ( function( M, $ ) {
 	var latLng, lat, lng,
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
+		LoadingOverlay = M.require( 'LoadingOverlay' ),
+		loader = new LoadingOverlay(),
 		overlay;
 
 	function initNearbyButton( title, latitude, longitude ) {
 		function loadGeoNotAHack() {
+			loader.show();
 			mw.loader.using( 'mobile.nearby.beta', function() {
 				var NearbyOverlay = M.require( 'modules/nearby/NearbyOverlay' );
 				if ( !overlay ) {
 					MobileWebClickTracking.log( 'geonotahack-clicked' );
 					overlay = new NearbyOverlay( { title: title, latitude: latitude, longitude: longitude, source: 'geonotahack' } );
 				}
+				loader.hide();
 				overlay.show();
 			} );
 		}
