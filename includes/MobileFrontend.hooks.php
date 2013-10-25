@@ -646,8 +646,10 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Handler for ResourceLoaderRegisterModules hook
+	 * ResourceLoaderRegisterModules hook handler
 	 * Registering our EventLogging schema modules
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
+	 *
 	 * @param ResourceLoader &$resourceLoader The ResourceLoader object
 	 * @return bool Always true
 	 */
