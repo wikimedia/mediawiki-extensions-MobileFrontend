@@ -46,7 +46,7 @@ class SkinMinerva extends SkinTemplate {
 					'class' => 'user-button',
 					'id'=> 'secondary-button',
 				) ) .
-				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $count ) .
+				Html::element( 'span', array( 'class' => $count ? '' : 'zero' ), $this->getLanguage()->formatNum( $count ) ) .
 				Html::closeElement( 'a' )
 			);
 		} else {
