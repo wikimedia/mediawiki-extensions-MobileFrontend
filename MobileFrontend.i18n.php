@@ -677,7 +677,8 @@ Parameters:
 * $1 - link to the user login page. Its link text is {{msg-mw|mobile-frontend-user-account}}.',
 	'mobile-frontend-user-account' => 'Text for a link to the user login page. Displayed as <code>$1</code> in {{msg-mw|mobile-frontend-donate-image-anon}}.
 {{Identical|User account}}',
-	'mobile-frontend-listed-image-no-description' => 'What to show when no description available',
+	'mobile-frontend-listed-image-no-description' => 'What to show when no description available.
+{{Identical|No description}}',
 	'mobile-frontend-donate-photo-upload-success' => 'On upload page - notification shown after a successful upload',
 	'mobile-frontend-donate-photo-first-upload-success' => 'On upload page - notification shown after a successful upload when it is the first upload by that user',
 	'mobile-frontend-first-upload-wizard-new-page-1-header' => 'Call to action asking the user to upload an image',
@@ -2593,6 +2594,7 @@ $messages['bn'] = array(
  * @author Y-M D
  */
 $messages['br'] = array(
+	'mobilefrontend-random-cancel' => "Leuskel ac'hanon da lenn !",
 	'mobile-frontend-desc' => 'Talbenn evit an hezougoù',
 	'mobile-frontend-search-submit' => 'Mont',
 	'mobile-frontend-home-button' => 'Degemer',
@@ -2765,7 +2767,7 @@ $messages['ca'] = array(
 	'mobile-frontend-account-create-submit' => 'Registreu-vos',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmeu la contrasenya:',
 	'mobile-frontend-account-create-email-placeholder' => 'Correu (opcional)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Introduïu el text de seguretat',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Introduïu el text de seguretat', # Fuzzy
 	'mobile-frontend-overlay-escape' => 'Torna',
 	'mobile-frontend-placeholder' => 'Cerca a {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Cerca a {{SITENAME}} (Beta)',
@@ -2776,7 +2778,7 @@ $messages['ca'] = array(
 	'mobile-frontend-privacy-link-text' => 'Privadesa',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
 	'mobile-frontend-footer-license' => 'El text està disponible sota [//ca.m.wikipedia.org/wiki/Viquip%C3%A8dia:Text_de_la_llic%C3%A8ncia_de_Creative_Commons_Reconeixement-Compartir_Igual_3.0_No_adaptada?useformat=mobile CC BY-SA 3.0]; es poden aplicar termes addicionals.',
-	'mobile-frontend-copyright' => "El text està disponible sota la <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.ca'>Llicència de Creative Commons Reconeixement/Compartir-Igual</a>; es poden aplicar termes addicionals. Vegeu <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>els Termes d'ús</a> per a més informació. {{SITENAME}} és marca registrada de <a href='http://www.wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, una organització sense ànim de lucre.", # Fuzzy
+	'mobile-frontend-copyright' => "El contingut està disponible sota la llicència $1 si no s'indica el contrari.",
 	'mobile-frontend-terms-use-text' => "[//wikimediafoundation.org/wiki/Terms_of_use?useformat=mobile Condicions d'ús]",
 	'mobile-frontend-footer-contact' => 'Contacte',
 	'mobile-frontend-search-noresults' => 'Cap títol de pàgina coincideix amb la vostra cerca. Modifiqueu-la o utilitzeu el botó de cerca del teclat per cercar en el text de les pàgines.',
@@ -2807,7 +2809,7 @@ $messages['ca'] = array(
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 m}}',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Proveu una àrea oberta amb un millor senyal.',
-	'mobile-frontend-nearby-noresults' => "Sou enmig d'enlloc i no hem pogut trobar cap tema. Voleu escriure'n un?", # Fuzzy
+	'mobile-frontend-nearby-noresults' => "Sou enmig d'enlloc i no hem pogut trobar cap tema.",
 	'mobile-frontend-nearby-noresults-guidance' => "Proveu de crear una nova pàgina o afegiu la ubicació d'una d'existent",
 	'mobile-frontend-nearby-refresh' => 'Hem trobat una ubicació més precisa per a vostè. Feu clic aquí per actualitzar la llista de pàgines properes',
 	'mobile-frontend-nearby-link' => 'Mostra aquesta pàgina sencera',
@@ -5224,9 +5226,13 @@ $messages['fa'] = array(
 	'mobile-frontend-last-modified-months' => 'آخرین تغییرات {{PLURAL:$1|$1 ماه|$1 ماه}} پیش',
 	'mobile-frontend-last-modified-years' => 'آخرین تغییرات {{PLURAL:$1|$1 سال|$1 سال}} پیش',
 	'mobile-frontend-last-modified-just-now' => 'آخرین بار همین الآن ویرایش‌شده',
-	'mobile-frontend-last-modified-with-user-seconds' => 'آخرین {{GENDER:$1|ویرایش}} {{PLURAL:$3|$3 ثانیه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 انجام شده‌است]',
-	'mobile-frontend-last-modified-with-user-minutes' => 'آخرین {{GENDER:$1|ویرایش}} {{PLURAL:$3|$3 دقیقه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 انجام شده‌است].',
-	'mobile-frontend-last-modified-with-user-hours' => 'آخرین {{GENDER:$1|ویرایش}} {{PLURAL:$3|$3 ساعت}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 انجام شده‌است]',
+	'mobile-frontend-last-modified-with-user-seconds' => 'آخرین ویرایش {{PLURAL:$3|$3 ثانیه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]',
+	'mobile-frontend-last-modified-with-user-minutes' => 'آخرین ویرایش {{PLURAL:$3|$3 دقیقه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}].',
+	'mobile-frontend-last-modified-with-user-hours' => 'آخرین ویرایش {{PLURAL:$3|$3 ساعت}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]',
+	'mobile-frontend-last-modified-with-user-days' => 'آخرین ویرایش {{PLURAL:$3|$3 روز}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]',
+	'mobile-frontend-last-modified-with-user-months' => 'آخرین ویرایش {{PLURAL:$3|$3 ماه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]',
+	'mobile-frontend-last-modified-with-user-years' => 'آخرین ویرایش {{PLURAL:$3|$3 سال}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]',
+	'mobile-frontend-last-modified-with-user-just-now' => 'آخرین ویرایش همین الآن توسط {{PLURAL:$4|[$5 $2]|0=an کاربر ناشناس}} [$3 {{GENDER:$1|انجام شده‌است}}].',
 	'mobile-frontend-learn-more' => 'اطلاعات بیشتر',
 	'mobile-frontend-account-create-submit' => 'ثبت نام',
 	'mobile-frontend-password-confirm-placeholder' => 'تأیید گذرواژه',
@@ -5392,7 +5398,7 @@ $messages['fa'] = array(
 	'mobile-frontend-editor-guider' => '«{{int:mobile-frontend-editor-continue}}» اجازه خواهد داد پیش‌نمایش را ببینید و ذخیره کنید.',
 	'mobile-frontend-editor-success' => 'کامیاب! ویرایش شما ذخیره شد.',
 	'mobile-frontend-editor-success-landmark-1' => 'تبریک، شما در حال حاضر ویرایشگر {{SITENAME}} هستید!',
-	'mobile-frontend-editor-error' => 'خطا، ویرایش ذخیره نشده است.',
+	'mobile-frontend-editor-error' => 'خطا، ویرایش ذخیره نشده‌است.',
 	'mobile-frontend-editor-error-conflict' => 'خطا، کاربری دیگر این صفحه را ویرایش کرده است.',
 	'mobile-frontend-editor-error-loading' => 'خطا، امکان بارگیری بخش وجود ندارد.',
 	'mobile-frontend-editor-preview-header' => 'پیش‌نمایش',
@@ -5549,7 +5555,7 @@ $messages['fi'] = array(
 	'mobile-frontend-donate-image-login' => 'Sinun täytyy olla kirjautuneena nähdäksesi tiedostosi.',
 	'mobile-frontend-photo-upload-generic' => 'Lahjoita kuva',
 	'mobile-frontend-donate-image-title' => 'Tallennukset',
-	'mobile-frontend-donate-image-heading' => 'Tuoreet muokkauksesi',
+	'mobile-frontend-donate-image-heading' => 'Viimeisimmät muokkauksesi',
 	'mobile-frontend-donate-image-anon' => 'Sinulla täytyy olla $1, jotta voisit nähdä tallennussivun.',
 	'mobile-frontend-user-account' => 'käyttäjätunnus',
 	'mobile-frontend-listed-image-no-description' => 'Ei kuvausta',
@@ -5560,7 +5566,7 @@ $messages['fi'] = array(
 	'mobile-frontend-watchlist-view' => 'Näytä tarkkailulista',
 	'mobile-frontend-watchlist-more' => 'lisää',
 	'mobile-frontend-watchlist-cta' => 'Rekisteröidy tai kirjaudu sisään, jos haluat tarkkailla tätä sivua.',
-	'mobile-frontend-watchlist-cta-button-login' => 'Kirjaudu',
+	'mobile-frontend-watchlist-cta-button-login' => 'Kirjaudu sisään',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Rekisteröidy',
 	'mobile-frontend-watch-login' => 'Voit tarkkailla sivuja, jos kirjaudut sisään.',
 	'mobile-frontend-watchlist-a-z' => 'Lista',
@@ -5573,6 +5579,7 @@ $messages['fi'] = array(
 	'mobile-frontend-watchlist-filter-articles' => 'Artikkelit',
 	'mobile-frontend-watchlist-filter-talk' => 'Keskustelu',
 	'mobile-frontend-watchlist-filter-other' => 'Muut',
+	'mobile-frontend-diffview-404-title' => 'Virheellinen versio',
 	'mobile-frontend-diffview-title' => 'Muutokset',
 	'mobile-frontend-diffview-editcount' => '<div>$1</div> {{PLURAL:$1|muokkaus|muokkausta}}',
 	'mobile-frontend-diffview-anonymous' => 'Rekisteröitymän käyttäjä',
@@ -5600,8 +5607,10 @@ $messages['fi'] = array(
 	'mobile-frontend-editor-save' => 'Tallenna',
 	'mobile-frontend-editor-cancel' => 'Peruuta',
 	'mobile-frontend-editor-keep-editing' => 'Jatka muokkaamista',
+	'mobile-frontend-editor-wait' => 'Tallennetaan. Odota.',
 	'mobile-frontend-editor-error-loading' => 'Virhe. Osiota ei voi ladata.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Aloita muokkaaminen',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Lue lisää',
 	'tag-mobile_edit' => 'Mobiilimuutos',
 	'tag-mobile_edit-description' => 'Muutos, joka on tehty mobiilisivustolta',
 	'mobile-frontend-drawer-cancel' => 'Peru',
@@ -9656,7 +9665,7 @@ $messages['kn'] = array(
 $messages['ko'] = array(
 	'mobilefrontend-random-explain' => '이 문서가 당신의 관심을 끕니까?',
 	'mobilefrontend-random-cancel' => '읽어 보기',
-	'mobilefrontend-keepgoing-ask' => '잘 했어요! 이제 문서를 편집하는 요령을 알게 되었습니다! 다른 문서도 편집해 보겠습니까?',
+	'mobilefrontend-keepgoing-ask' => '잘하셨습니다! 이제 문서를 편집하는 요령을 알게 되었습니다! 다른 문서도 편집해 보겠습니까?',
 	'mobilefrontend-keepgoing-ask-first' => '첫 편집을 한 것을 축하드립니다! 다른 문서도 편집해 보겠습니까?',
 	'mobilefrontend-keepgoing-explain' => '좋아요! 다른 사용자가 이 문서가 도움이 필요하다고 했습니다. 이 문서를 고치거나, 다른 문서를 고치세요.',
 	'mobilefrontend-keepgoing-cancel' => '괜찮습니다',
@@ -9702,7 +9711,7 @@ $messages['ko'] = array(
 	'mobile-frontend-language' => '언어:',
 	'mobile-frontend-language-article-heading' => '다른 언어로 읽기',
 	'mobile-frontend-language-header' => '이 문서는 $1개 {{PLURAL:$1|언어}}로 읽을 수 있습니다.',
-	'mobile-frontend-language-variant-header' => '{{#language:{{CONTENTLANG}}}} 언어 변종을 선택하세요',
+	'mobile-frontend-language-variant-header' => '{{#language:{{CONTENTLANG}}}} 언어 종류를 선택하세요',
 	'mobile-frontend-language-footer' => '참고: 이 문서는 선호하는 언어로 쓰여지지 않았을 수 있습니다. 여기를 클릭하여 {{SITENAME}}에서 지원하는 언어를 볼 수 있습니다.',
 	'mobile-frontend-language-site-choose' => '언어 찾기',
 	'mobile-frontend-username' => '사용자 이름:',
@@ -9710,7 +9719,7 @@ $messages['ko'] = array(
 	'mobile-frontend-username-placeholder' => '사용자 이름',
 	'mobile-frontend-password-placeholder' => '비밀번호',
 	'mobile-frontend-login' => '로그인',
-	'mobile-frontend-history' => '이 문서의 편집 역사을 봅니다.',
+	'mobile-frontend-history' => '이 문서의 편집 역사를 봅니다.',
 	'mobile-frontend-last-modified-date' => '$1 $2에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-seconds' => '{{PLURAL:$1|$1초}} 전에 마지막으로 수정됨',
 	'mobile-frontend-last-modified-minutes' => '{{PLURAL:$1|$1분}} 전에 마지막으로 수정됨',
@@ -9934,6 +9943,7 @@ $messages['ko'] = array(
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|이 사용자}}는 많이 편집한 편집자입니다.',
 	'mobile-frontend-requires-optin' => '우리의 베타 모드로 선택하지 않으면 이 페이지를 사용할 수 없습니다. 선택하려면 [[Special:MobileOptions|설정 문서]]를 방문하세요.',
 	'mobile-frontend-profile-last-thanked' => '[[$2]] 문서로의 편집에 대해 [[Special:UserProfile/$1|$1]]님이 {{GENDER:$1|마지막으로 감사를 표했습니다}}.',
+	'mobile-frontend-geonotahack' => '이 문서 근처',
 );
 
 /** Karachay-Balkar (къарачай-малкъар)
@@ -13772,9 +13782,12 @@ $messages['pms'] = array(
 	'mobile-frontend-watchlist-cta-button-login' => 'Intré ant ël sistema',
 	'mobile-frontend-watchlist-cta-button-signup' => "Ch'as anscriva",
 	'mobile-frontend-watch-login' => "A dev esse rintrà ant ël sistema për ten-e d'euj le pàgine.",
-	'mobile-frontend-watchlist-a-z' => 'Tùit', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'Lista',
 	'mobile-frontend-watchlist-feed' => 'Modificà',
+	'mobile-frontend-watchlist-a-z-empty-howto-alt' => "Ch'a sgnaca an sla stèila an cò dla pàgina",
+	'mobile-frontend-watchlist-a-z-empty-howto' => "Al moment chiel a ten sot-euj gnun-e pàgine. La lista dle ròbe ch'as ten sot-euj a lo giuta a ten-e da ment le pàgine ch'a-j anteresso. Ch'a ten-a sot-euj le pàgine an sgnacand an sla plancia stèila.",
 	'mobile-frontend-watchlist-feed-empty' => "A-i son pa ëd pàgine con j'ùltime modìfiche",
+	'mobile-frontend-watchlist-back-home' => "Artorn a l'intrada",
 	'mobile-frontend-changeslist-ip' => 'Utent anònim',
 	'mobile-frontend-changeslist-nocomment' => 'gnun resumé ëd modìfica',
 	'mobile-frontend-watchlist-filter-all' => 'Tùit',
@@ -13790,17 +13803,41 @@ $messages['pms'] = array(
 	'mobile-frontend-diffview-bytesadded' => '$1 {{PLURAL:$1|byte|bytes}} giontà',
 	'mobile-frontend-diffview-bytesremoved' => '$1 {{PLURAL:$1|byte|bytes}} gavà',
 	'mobile-frontend-diffview-explained' => 'Le linie sì-dapress a son stàite giontà (+) e gavà (-):',
+	'mobile-frontend-thanked-notice' => "$1 a l'é stàit avisà che a chiel a l'é piasuje {{GENDER:$2|soa|soa|soa}} modìfica.",
 	'mobile-frontend-table' => 'Tàula $1',
 	'mobile-frontend-saving-exit-page' => "Soa contribussion a l'é anco' da salvé. S'a chita, soe contribussion a sarà përdùe. É-lo sigur ëd vorèj seurte?",
-	'mobile-frontend-photo-upload' => 'Gionté na plancia a cost artìcol', # Fuzzy
-	'mobile-frontend-photo-article-edit-comment' => 'Fòto giontà për esse dovrà an sla pàgina', # Fuzzy
-	'mobile-frontend-photo-article-donate-comment' => "Figura donà da 'n sacociàbil", # Fuzzy
-	'mobile-frontend-photo-upload-comment' => 'Fòto giontà a la pàgina', # Fuzzy
+	'mobile-frontend-photo-upload' => 'Gionté na plancia a costa pàgina',
+	'mobile-frontend-photo-article-edit-comment' => 'Plancia giontà për esse dovrà an sla pàgina',
+	'mobile-frontend-photo-article-donate-comment' => 'Contribussion ëd plancia a parte da Special:Uploads',
+	'mobile-frontend-photo-upload-comment' => 'Plancia giontà a la pàgina',
 	'mobile-frontend-photo-caption-placeholder' => 'Gionté na descrission (obligatòria)',
 	'mobile-frontend-image-loading' => 'Cariagi ëd la figura',
+	'mobile-frontend-photo-ownership' => "Mi, $1, i l'hai creà sa plancia.",
+	'mobile-frontend-photo-ownership-help' => "Lòn ch'a veul dì sòn?",
+	'mobile-frontend-photo-ownership-confirm' => 'A va bin!',
+	'mobile-frontend-photo-ownership-bullet-one' => "I podoma mach aceté le plance ch'a-j aparten-o. Për piasì, ch'a caria pa dle plance ch'a l'ha trovà da àutre part an sla Rej.",
+	'mobile-frontend-photo-ownership-bullet-two' => "Le plance sota drit d'autor e inapropià a saran gavà.",
+	'mobile-frontend-photo-ownership-bullet-three' => "Ij sò cariament a son butà a disposission sota na licensa ch'a përmet a chicassìa ëd dovreje torna a gràtis.",
+	'mobile-frontend-photo-nag-1-bullet-1-heading' => "I viòlo gnun drit d'autor",
+	'mobile-frontend-photo-nag-1-bullet-1-text' => "A l'é '''nen''' na plancia ch'i l'hai trovà an sla Rej. A l'é mè travaj përsonal.",
+	'mobile-frontend-photo-nag-1-bullet-2-heading' => "A l'é nen na plancia përsonal",
+	'mobile-frontend-photo-nag-1-bullet-2-text' => "E a peul giuté a ilustré n'argoment amportant.",
+	'mobile-frontend-photo-nag-2-bullet-1-heading' => "Ëd fasson la pi assolùa sensa violé dij drit d'autor, e costa plancia a l'é educativa.",
+	'mobile-frontend-photo-nag-3-bullet-1-heading' => "I capisso lòn ch'i cario. Smon-e pi nen ëd mëssagi.",
+	'mobile-frontend-photo-nag-learn-more-heading' => "Cò' carié",
+	'mobile-frontend-photo-nag-learn-more-1' => "'''Sì''' Fòto ch'a l'ha pijà ëd pòst, oget e eveniment.",
+	'mobile-frontend-photo-nag-learn-more-2' => "'''Sì!''' Fòto ch'a peulo giuté a ilustré e anrichì le pàgine ëd {{SITENAME}}.",
+	'mobile-frontend-photo-nag-learn-more-3' => "'''Nò.''' Fòto ëd tilèt ëd film, cuvertin-e ëd lìber o d'àutr material coatà da dij drit d'autor. Cose a saran ëscancelà.",
+	'mobile-frontend-lead-image-tutorial-summary' => "Ch'as sigura che soa plancia a peul giuté a ilustré sa pàgina. A dev esse na plancia ch'a l'ha creà chiel e ch'a viòla gnun drit d'autor.",
+	'mobile-frontend-lead-image-tutorial-confirm' => 'Anandiesse a carié',
 	'mobile-frontend-image-uploading-wait' => 'Cariament ëd la figura, avèj passiensa.',
-	'mobile-frontend-photo-upload-error' => "A l'é capitaje n'eror an cariand la figura. Për piasì preuva n'àutra figura.", # Fuzzy
-	'mobile-frontend-photo-license' => "An sgnacand ansima a «Mandé», chiel a aceta nòstre [//wikimediafoundation.org/wiki/Terms_of_use condission d'utilisassion] e a l'é d'acòrd a buté a disposission soa fòto sota la [//creativecommons.org/licenses/by-sa/3.0/ licensa Creative Commons Attribution-ShareAlike 3.0].", # Fuzzy
+	'mobile-frontend-image-uploading-long' => "La plancia a l'é antramentre ch'as caria! Mersì për la passiensa.",
+	'mobile-frontend-image-uploading-cancel' => '<a href="#">Aunulé</a> s\'a-i buta tròp temp.',
+	'mobile-frontend-photo-upload-error' => "A l'é capitaje n'eror, ch'a preuva torna.",
+	'mobile-frontend-photo-upload-error-file-type' => 'Për piasì, carié mach dle plance.',
+	'mobile-frontend-photo-upload-error-filename' => "Eror, për piasì ch'a smon-a un resumé pi descritiv.",
+	'mobile-frontend-photo-upload-success-article' => "Bin fàit! Soa plancia a l'é adess an linia su costa pàgina.",
+	'mobile-frontend-photo-license' => "An sgnacand ansima a «Mandé», chiel a aceta nòstre [//wikimediafoundation.org/wiki/Terms_of_use condission d'utilisassion] e a l'é d'acòrd a buté a disposission soa plancia sota la [//creativecommons.org/licenses/by-sa/3.0/ licensa Creative Commons Attribution-ShareAlike 3.0].",
 	'tag-mobile_edit' => 'Modìfica për sacociàbil',
 	'tag-mobile_edit-description' => 'Modìfica fàita da un sit për sacociàbil',
 	'mobile-frontend-drawer-cancel' => 'Scancela',
@@ -15590,6 +15627,7 @@ $messages['su'] = array(
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
+	'mobilefrontend-random-explain' => 'Intresserar denna slumpsida dig?',
 	'mobilefrontend-random-cancel' => 'Låt mig läsa!',
 	'mobilefrontend-keepgoing-ask' => 'Bra jobbat! Du börjar får kläm på detta! Vill du prova att redigera en annan sida?',
 	'mobilefrontend-keepgoing-ask-first' => 'Grattis för din försa redigering! Vill du prova att redigera en annan sida?',
@@ -15658,7 +15696,7 @@ $messages['sv'] = array(
 	'mobile-frontend-last-modified-with-user-days' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 dag|$3 dagar}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
 	'mobile-frontend-last-modified-with-user-months' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 månad|$3 månader}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 år}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}',
-	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Senast {{GENDER:$1|redigeringen}} skedde just av {{PLURAL:$4|[$5 $2]|0=en anonym användare}}.', # Fuzzy
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 Senast {{GENDER:$1|redigerad}}] just nu av {{PLURAL:$4|[$5 $2]|0=en anonym användare}}.',
 	'mobile-frontend-learn-more' => 'Läs mer',
 	'mobile-frontend-account-create-submit' => 'Skapa ett konto',
 	'mobile-frontend-password-confirm-placeholder' => 'Bekräfta lösenord',
@@ -15976,7 +16014,7 @@ $messages['ta'] = array(
 	'mobile-frontend-account-create-submit' => 'பதிவுசெய்',
 	'mobile-frontend-password-confirm-placeholder' => 'கடவுச்சொல்லை உறுதிசெய்',
 	'mobile-frontend-account-create-email-placeholder' => 'மின்னஞ்சல் முகவரி (விருப்பத்தேர்வு)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'பாதுகாப்பு உரையை உள்ளிடவும்',
+	'mobile-frontend-account-create-captcha-placeholder' => 'பாதுகாப்புக் குறியீட்டை உள்ளிடவும்',
 	'mobile-frontend-overlay-escape' => 'பின் செல்லவும்',
 	'mobile-frontend-placeholder' => '{{SITENAME}} - இல் தேடுக',
 	'mobile-frontend-dismiss-notification' => 'இந்த அறிவிப்பை அகற்று',
@@ -15994,7 +16032,7 @@ $messages['ta'] = array(
 	'mobile-frontend-main-menu-watchlist' => 'கவனிப்புப் பட்டியல்',
 	'mobile-frontend-main-menu-settings' => 'அமைப்புகள்',
 	'mobile-frontend-main-menu-upload' => 'பதிவேற்றங்கள்',
-	'mobile-frontend-main-menu-settings-heading' => 'அலைபேசி தள அமைப்புகள்', # Fuzzy
+	'mobile-frontend-main-menu-settings-heading' => 'அமைப்புகள்',
 	'mobile-frontend-settings-site-header' => '{{SITENAME}} மொழிகள்',
 	'mobile-frontend-settings-site-description' => '$1 {{PLURAL:$1|மொழியில்|மொழிகளில்}} {{SITENAME}} உள்ளது. கிடைக்கின்ற அனைத்துப் பதிப்புகளும் கீழே பட்டியலிடப்பட்டுள்ளன',
 	'mobile-frontend-main-menu-account-create' => 'கணக்கை உருவாக்கு',
@@ -16004,7 +16042,7 @@ $messages['ta'] = array(
 	'mobile-frontend-meta-data-issues' => 'இந்த பக்கம் சில பிரச்சனைகளை கொண்டுள்ளது',
 	'mobile-frontend-page-saving' => '$1 சேமிக்கப்படுகிறது',
 	'mobile-frontend-nearby-title' => 'அருகிலுள்ள',
-	'mobile-frontend-donate-image-login' => 'உங்கள் பதிவேற்றத்தைப்பார்க்க உள்நுழையவும்', # Fuzzy
+	'mobile-frontend-donate-image-login' => 'உங்கள் பதிவேற்றத்தைப் பார்க்க புகுபதிய வேண்டும்.',
 	'mobile-frontend-photo-upload-generic' => 'ஒரு படத்தை கொடையளிக்கவும்', # Fuzzy
 	'mobile-frontend-donate-image-title' => 'ஒரு படத்தை கொடையளிக்கவும்', # Fuzzy
 	'mobile-frontend-donate-image-heading' => 'உங்களது அண்மைய பங்களிப்புகள்',
@@ -16017,7 +16055,7 @@ $messages['ta'] = array(
 	'mobile-frontend-watchlist-cta' => 'இந்த பக்கத்தை கவனிக்க புகுபதிகை செய்யவும் அல்லது பதிவு செய்யவும்',
 	'mobile-frontend-watchlist-cta-button-login' => 'புகுபதிகை',
 	'mobile-frontend-watchlist-cta-button-signup' => 'பதிவுசெய்',
-	'mobile-frontend-watchlist-a-z' => 'அனைத்தும்', # Fuzzy
+	'mobile-frontend-watchlist-a-z' => 'பட்டியல்',
 	'mobile-frontend-watchlist-feed' => 'மாற்றங்களுடன் கூடிய பக்கங்கள்', # Fuzzy
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'பக்கத்தில் தொடக்கத்தில் உள்ள நட்சத்திரத்தை சொடுக்கவும்',
 	'mobile-frontend-watchlist-feed-empty' => 'தற்பொழுதைய மாற்றங்கள் கொண்ட பக்கங்கள் ஏதும் இல்லை',
@@ -16042,9 +16080,12 @@ $messages['ta'] = array(
 	'mobile-frontend-photo-cancel' => 'விட்டுவிடு',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ பதிவேற்றங்கள்',
 	'mobile-frontend-editor-edit' => 'தொகு',
+	'mobile-frontend-editor-continue' => 'தொடரவும்',
 	'mobile-frontend-editor-save' => 'சேமி',
+	'mobile-frontend-editor-preview-header' => 'முன்தோற்றம்',
 	'mobile-frontend-drawer-cancel' => 'விட்டுவிடு',
 	'mobile-frontend-talk-overlay-header' => 'பேச்சு',
+	'mobile-frontend-media-details' => 'விளக்கம்',
 );
 
 /** Telugu (తెలుగు)
@@ -17251,6 +17292,11 @@ $messages['vep'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['vi'] = array(
+	'mobilefrontend-random-explain' => 'Bạn có quan tâm đến trang ngẫu nhiên này?',
+	'mobilefrontend-random-cancel' => 'Hãy để tôi đọc!',
+	'mobilefrontend-keepgoing-ask' => 'Tuyệt! Bạn có vẻ quen sửa đổi! Bạn có muốn thử sửa một trang nữa không?',
+	'mobilefrontend-keepgoing-ask-first' => 'Chúc mừng bạn đã thực hiện sửa đổi đầu tiên! Bạn có muốn thử sửa một trang nữa không?',
+	'mobilefrontend-keepgoing-explain' => 'Tuyệt! Một người dùng khác đã cho biết rằng trang này cần được chú ý. Hãy thử trang này hoặc một trang khác.',
 	'mobilefrontend-keepgoing-cancel' => 'Thôi',
 	'mobilefrontend-keepgoing-suggest' => 'Có, cảm ơn',
 	'mobilefrontend-keepgoing-suggest-again' => 'Thử cái nữa',
@@ -17310,11 +17356,19 @@ $messages['vi'] = array(
 	'mobile-frontend-last-modified-days' => 'Sửa đổi lần cuối cách đây $1 ngày',
 	'mobile-frontend-last-modified-months' => 'Sửa đổi lần cuối cách đây $1 tháng',
 	'mobile-frontend-last-modified-years' => 'Sửa đổi lần cuối cách đây $1 năm',
+	'mobile-frontend-last-modified-just-now' => 'Vừa được sửa đổi lần cuối cùng',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 giây] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 phút] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}.',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 giờ] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}.',
+	'mobile-frontend-last-modified-with-user-days' => '[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 ngày] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}.',
+	'mobile-frontend-last-modified-with-user-months' => '[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 tháng] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}.',
+	'mobile-frontend-last-modified-with-user-years' => '[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 năm] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}.',
+	'mobile-frontend-last-modified-with-user-just-now' => 'Vừa được [$3 {{GENDER:$1|edited}}sửa đổi lần cuối cùng] bởi {{PLURAL:$4|[$5 $2]|0=một người dùng vô danh}}.',
 	'mobile-frontend-learn-more' => 'Tìm hiểu thêm',
 	'mobile-frontend-account-create-submit' => 'Mở tài khoản',
 	'mobile-frontend-password-confirm-placeholder' => 'Xác nhận mật khẩu',
 	'mobile-frontend-account-create-email-placeholder' => 'Địa chỉ thư điện tử (tùy chọn)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Nhập văn bản bảo mật', # Fuzzy
+	'mobile-frontend-account-create-captcha-placeholder' => 'Nhập mã xác nhận',
 	'mobile-frontend-overlay-escape' => 'Quay lại',
 	'mobile-frontend-placeholder' => 'Tìm kiếm {{SITENAME}}…',
 	'mobile-frontend-placeholder-beta' => 'Tìm kiếm {{SITENAME}} (Beta)',
@@ -17483,6 +17537,9 @@ $messages['vi'] = array(
 	'mobile-frontend-editor-tutorial-summary' => 'Đừng lo ngại về cú pháp mã nguồn. Hãy thử cải thiện trang $1.',
 	'mobile-frontend-editor-tutorial-confirm' => 'Bắt đầu sửa đổi',
 	'mobile-frontend-editor-captcha-try-again' => 'Mã sai, hãy thử lại.',
+	'mobile-frontend-editor-abusefilter-warning' => 'Cảnh báo: Bạn có chắc chắn muốn lưu trang này? Các thay đổi này có thể có vấn đề.',
+	'mobile-frontend-editor-abusefilter-disallow' => 'Không thể lưu sửa đổi này vì đã phát hiện một vấn đề.',
+	'mobile-frontend-editor-abusefilter-read-more' => 'Đọc tiếp',
 	'tag-mobile_edit' => 'Sửa đổi di động',
 	'tag-mobile_edit-description' => 'Trang được sửa đổi dùng trang di động',
 	'mobile-frontend-drawer-cancel' => 'Hủy bỏ',
@@ -17515,6 +17572,7 @@ $messages['vi'] = array(
 	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1}}Người dùng này sửa đổi rất nhiều.',
 	'mobile-frontend-requires-optin' => 'Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.',
 	'mobile-frontend-profile-last-thanked' => 'Đã nhận lời cảm ơn lần cuối cùng từ [[Special:UserProfile/$1|$1]] vì một sửa đổi tại [[$2]].',
+	'mobile-frontend-geonotahack' => 'Lân cận trang này',
 );
 
 /** Volapük (Volapük)
@@ -17684,6 +17742,7 @@ $messages['yue'] = array(
  * @author Liuxinyu970226
  * @author Mys 721tx
  * @author PhiLiP
+ * @author Qiyue2001
  * @author Shirayuki
  * @author Shizhao
  * @author Simon Shek
@@ -17694,6 +17753,7 @@ $messages['yue'] = array(
  * @author 乌拉跨氪
  */
 $messages['zh-hans'] = array(
+	'mobilefrontend-random-explain' => '你对此随机页面有兴趣吗？',
 	'mobilefrontend-random-cancel' => '让我阅读！',
 	'mobilefrontend-keepgoing-ask' => '干的不错！您开始编辑了这个弃坑！您想尝试编辑其他页面么？',
 	'mobilefrontend-keepgoing-ask-first' => '恭喜你做了你的第一次编辑 ！你想尝试着编辑另一页吗？',
@@ -17755,6 +17815,14 @@ $messages['zh-hans'] = array(
 	'mobile-frontend-last-modified-days' => '最后修改于{{PLURAL:$1|$1天}}前',
 	'mobile-frontend-last-modified-months' => '最后修改于{{PLURAL:$1|$1个月}}前',
 	'mobile-frontend-last-modified-years' => '最后修改于{{PLURAL:$1|$1年}}前',
+	'mobile-frontend-last-modified-just-now' => '最后编辑时间：刚才',
+	'mobile-frontend-last-modified-with-user-seconds' => '[$4 最后一次{{GENDER:$1|编辑}}：$3秒前] 由{{PLURAL:$5|[$6 $2]|0=匿名用户}}',
+	'mobile-frontend-last-modified-with-user-minutes' => '[$4 最后一次{{GENDER:$1|编辑}}  $3 分钟前] 由 {{PLURAL:$5|[$6 $2]|0=匿名用户}}。',
+	'mobile-frontend-last-modified-with-user-hours' => '[$4的上次{{GENDER:$1|编辑}}是在$3小时前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
+	'mobile-frontend-last-modified-with-user-days' => '[$4的上次{{GENDER:$1|编辑}}是在$3天前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
+	'mobile-frontend-last-modified-with-user-months' => '[$4的上次{{GENDER:$1|编辑}}是在$3个月前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
+	'mobile-frontend-last-modified-with-user-years' => '[$4的上次{{GENDER:$1|编辑}}是在$3年前]由{{PLURAL:$5|[$6 $2]|0=某匿名用户}}做出的',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3的上次{{GENDER:$1|编辑}}]是刚由{{PLURAL:$4|[$5 $2]|0=某匿名用户}}做出的。',
 	'mobile-frontend-learn-more' => '了解更多',
 	'mobile-frontend-account-create-submit' => '注册',
 	'mobile-frontend-password-confirm-placeholder' => '确认密码',
