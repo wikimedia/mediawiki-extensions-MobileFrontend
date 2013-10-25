@@ -669,7 +669,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.beta.common',
 		),
 		'scripts' => array(
-			'javascripts/specials/overlays/PagePreviewOverlay.js',
+			'javascripts/modules/nearby/PagePreviewOverlay.js',
 			'javascripts/modules/nearby/NearbyOverlay.js',
 		)
 	),

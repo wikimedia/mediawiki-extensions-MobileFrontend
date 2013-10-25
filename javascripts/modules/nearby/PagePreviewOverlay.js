@@ -1,4 +1,3 @@
-// FIXME: Move this file somewhere more logical
 ( function( M, $ ) {
 	M.assertMode( [ 'beta', 'alpha' ] );
 	var Overlay = M.require( 'Overlay' ),
@@ -117,7 +116,6 @@
 		device = 'wp';
 	}
 
-	M.define( 'PagePreviewOverlay', PagePreviewOverlay );
 	M.router.route( /^preview\/(.*)\/(.*)\/(.*)$/, function( source, latLngString, title ) {
 		// FIXME: API doesn't return pageimage or longitude latitude properties (yet)
 		new PagePreviewOverlay( {
