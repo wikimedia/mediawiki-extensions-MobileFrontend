@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_fb6533e3",
+        "filename": "includes/skins/SkinMinerva.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 415,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-25T23:44:02Z",
+      "side": 0,
+      "message": "Is this because it\u0027s a dependency of mobile.stable anyway?",
+      "revId": "dc2577a654b85b5946762fd3496e2a0b985bc421",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
