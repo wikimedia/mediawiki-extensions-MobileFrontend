@@ -1,3 +1,8 @@
+{{#inBetaOrAlpha}}
+<a href="{{historyUrl}}" id="mw-mf-last-modified" data-timestamp="{{lastModifiedTimestamp}}"
+	data-user-name="{{lastModifiedUserName}}" data-user-gender="{{lastModifiedUserGender}}" class="top-bar	"
+	></a>
+{{/inBetaOrAlpha}}
 <h1 id="section_0">{{title}}</h1>
 <ul id="page-actions" class="hlist">
 	<li id="ca-edit"></li><li id="ca-upload">
@@ -19,7 +24,9 @@
 	{{#inBetaOrAlpha}}<div id="page-secondary-actions">{{/inBetaOrAlpha}}
 	<div class="section" id="mw-mf-language-section"></div>
 	{{#inBetaOrAlpha}}</div>{{/inBetaOrAlpha}}
+	{{^inBetaOrAlpha}}
 	<a href="{{historyUrl}}" id="mw-mf-last-modified" data-timestamp="{{lastModifiedTimestamp}}"
 		data-user-name="{{lastModifiedUserName}}" data-user-gender="{{lastModifiedUserGender}}"
 		></a>
+	{{/inBetaOrAlpha}}
 </div>
