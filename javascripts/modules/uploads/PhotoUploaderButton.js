@@ -113,11 +113,21 @@
 						loadingOverlay = new LoadingOverlay();
 
 					loadingOverlay.show();
-					mw.loader.using( 'mobile.uploads', function() {
-						var PhotoUploader = M.require( 'modules/uploads/PhotoUploader' );
-						loadingOverlay.hide();
-						new PhotoUploader( options );
-					} );
+
+					// FIXME: remove when new uploads overlay in stable
+					if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+						mw.loader.using( 'mobile.uploads', function() {
+							var PhotoUploader = M.require( 'modules/uploads/PhotoUploader' );
+							loadingOverlay.hide();
+							new PhotoUploader( options );
+						} );
+					} else {
+						mw.loader.using( 'mobile.uploadsNew', function() {
+							var PhotoUploader = M.require( 'modules/uploadsNew/PhotoUploader' );
+							loadingOverlay.hide();
+							new PhotoUploader( options );
+						} );
+					}
 
 					// clear so that change event is fired again when user selects the same file
 					$input.val( '' );

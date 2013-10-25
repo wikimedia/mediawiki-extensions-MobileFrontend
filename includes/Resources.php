@@ -198,18 +198,42 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		),
 	),
 
-	'mobile.uploads' => $wgMFMobileResourceBoilerplate + array(
+	// FIXME: merge into mobile.uploadsNew when mobile.uploads is gone
+	'mobile.uploads.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
 		),
 		'scripts' => array(
-			'javascripts/modules/uploads/LearnMoreOverlay.js',
 			'javascripts/modules/uploads/PhotoApi.js',
+			'javascripts/modules/uploads/LeadPhoto.js',
+		),
+		'styles' => array(
+			'less/modules/uploads.less',
+		),
+		'templates' => array(
+			'uploads/LeadPhoto',
+		),
+		'messages' => array(
+			// PhotoApi.js
+			'mobile-frontend-photo-article-edit-comment',
+			'mobile-frontend-photo-article-donate-comment',
+			'mobile-frontend-photo-upload-error-filename',
+			'mobile-frontend-photo-upload-comment',
+		),
+	),
+
+	'mobile.uploads' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.templates',
+			'mobile.uploads.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/uploads/LearnMoreOverlay.js',
 			'javascripts/modules/uploads/NagOverlay.js',
 			'javascripts/modules/uploads/PhotoUploadProgress.js',
 			'javascripts/modules/uploads/PhotoUploaderPreview.js',
-			'javascripts/modules/uploads/LeadPhoto.js',
 			'javascripts/modules/uploads/PhotoUploader.js',
 		),
 		'templates' => array(
@@ -226,12 +250,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			// LearnMoreOverlay.js
 			'mobile-frontend-photo-ownership-confirm',
 
-			// PhotoApi.js
-			'mobile-frontend-photo-article-edit-comment',
-			'mobile-frontend-photo-article-donate-comment',
-			'mobile-frontend-photo-upload-error-filename',
-			'mobile-frontend-photo-upload-comment',
-
 			// PhotoUploaderPreview.js
 			'mobile-frontend-photo-ownership',
 			'mobile-frontend-photo-ownership-help',
@@ -243,6 +261,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-ownership-bullet-two',
 			'mobile-frontend-photo-ownership-bullet-three',
 			'mobile-frontend-photo-upload-error-file-type',
+			'mobile-frontend-photo-license' => array( 'parse' ),
 
 			// PhotoUploadProgress.js
 			'mobile-frontend-image-uploading-wait',
@@ -250,7 +269,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-image-uploading-cancel',
 
 			// NagOverlay.js
-			'mobile-frontend-photo-license' => array( 'parse' ),
 			'mobile-frontend-photo-nag-1-bullet-1-heading',
 			'mobile-frontend-photo-nag-1-bullet-1-text' => array( 'parse' ),
 			'mobile-frontend-photo-nag-1-bullet-2-heading',
@@ -263,6 +281,50 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-nag-learn-more-1' => array( 'parse' ),
 			'mobile-frontend-photo-nag-learn-more-2' => array( 'parse' ),
 			'mobile-frontend-photo-nag-learn-more-3' => array( 'parse' ),
+		),
+	),
+
+	'mobile.uploadsNew' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.templates',
+			'mobile.uploads.common',
+		),
+		'scripts' => array(
+			'javascripts/modules/uploadsNew/LearnMoreOverlay.js',
+			'javascripts/modules/uploadsNew/PhotoUploadProgress.js',
+			'javascripts/modules/uploadsNew/PhotoUploaderPreview.js',
+			'javascripts/modules/uploadsNew/PhotoUploader.js',
+		),
+		'templates' => array(
+			'uploadsNew/PhotoUploaderPreview',
+			'uploadsNew/PhotoUploadProgress',
+			'uploadsNew/LearnMoreOverlay',
+		),
+		'messages' => array(
+			'mobile-frontend-photo-upload-success-article',
+			'mobile-frontend-photo-upload-error',
+
+			// LearnMoreOverlay.js
+			'mobile-frontend-photo-ownership-confirm',
+
+			// PhotoUploaderPreview.js
+			'mobile-frontend-photo-ownership',
+			'mobile-frontend-photo-ownership-help',
+			'mobile-frontend-photo-caption-placeholder',
+			'mobile-frontend-image-loading',
+			'mobile-frontend-photo-submit',
+			'mobile-frontend-photo-cancel',
+			'mobile-frontend-photo-ownership-bullet-one',
+			'mobile-frontend-photo-ownership-bullet-two',
+			'mobile-frontend-photo-ownership-bullet-three',
+			'mobile-frontend-photo-upload-error-file-type',
+			'mobile-frontend-photo-license' => array( 'parse' ),
+
+			// PhotoUploadProgress.js
+			'mobile-frontend-image-uploading-wait',
+			'mobile-frontend-image-uploading-long',
+			'mobile-frontend-image-uploading-cancel',
 		),
 	),
 
@@ -444,7 +506,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/modules/search.less',
 			'less/modules/issues.less',
 			'less/modules/watchstar.less',
-			'less/modules/uploads.less',
 			'less/modules/tutorials.less',
 			'less/modules/editor.less',
 		),
@@ -495,7 +556,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/widgets/progress-bar.js',
 			'javascripts/common/notification.js',
 			'javascripts/common/Page.js',
-			// Upload specific code
 			'javascripts/modules/uploads/PhotoUploaderButton.js',
 			// Language specific code
 			'javascripts/common/languages/LanguageOverlay.js',
@@ -832,6 +892,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	'mobile.uploads.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
 		'styles' => array(
 			'less/specials/uploads.less',
+			'less/modules/uploads/PhotoUploaderButton.less',
 		),
 	),
 	'mobile.mobilediff.styles' => $wgMFMobileSpecialPageResourceBoilerplate + array(
