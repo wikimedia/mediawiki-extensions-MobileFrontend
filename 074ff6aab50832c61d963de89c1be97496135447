@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_1b8daf7c",
+        "filename": "less/common/common-js.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-25T23:46:54Z",
+      "side": 1,
+      "message": "That seems way too general. Later we\u0027ll be wondering why stuff disappears when we add a .loading class.",
+      "revId": "074ff6aab50832c61d963de89c1be97496135447",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
