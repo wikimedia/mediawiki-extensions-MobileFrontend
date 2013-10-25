@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_adf54a82",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-25T00:21:13Z",
+      "side": 1,
+      "message": "This will reject any page without last modified information. Not sure if we want to do this. Maybe render anyway but conditionally add the lastModified timestamp if it exists along with the user.",
+      "revId": "01136ca1657ad76b100c320abc7ff679128663a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_6dfb5277",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-25T00:21:13Z",
+      "side": 1,
+      "message": "lastModified.hasOwnProperty( \u0027user\u0027) is safer here - sorry i missed this before.",
+      "revId": "01136ca1657ad76b100c320abc7ff679128663a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
