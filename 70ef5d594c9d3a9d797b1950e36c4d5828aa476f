@@ -16,6 +16,24 @@
       "revId": "70ef5d594c9d3a9d797b1950e36c4d5828aa476f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_0d92d9f4",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2013-10-25T20:21:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_c7d502b7",
+      "revId": "70ef5d594c9d3a9d797b1950e36c4d5828aa476f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
