@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_418bba20",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-26T20:32:03Z",
+      "side": 1,
+      "message": "Not sure about the getData() function. It seems we\u0027re querying the database for all the information in all cases even if we don\u0027t need it. Not that this problem is introduced in this patch, but this patchs adds more queries to it.",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_6190b64a",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-26T20:32:03Z",
+      "side": 1,
+      "message": "\"time\" \u003d\u003e \"timestamp\"",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_01a1c2a6",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-26T20:32:03Z",
+      "side": 1,
+      "message": "You don\u0027t have to set resolveObj to an empty object.",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_219ebe5f",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-26T20:32:03Z",
+      "side": 1,
+      "message": "Maybe \"timestamp\" instead of \"time\" to be consistent?",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e193c658",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-26T20:32:03Z",
+      "side": 1,
+      "message": "M.jQuery? Does it work? Why not $?",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_8185b20c",
+        "filename": "tests/javascripts/common/test_PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-26T20:32:03Z",
+      "side": 1,
+      "message": "Why not just hardcode any value if we\u0027re not using it in the test anyway?",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
