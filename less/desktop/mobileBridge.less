@@ -1,0 +1,81 @@
+@import '../common/common-js.less';
+@import '../common/pagelist.less';
+@import '../common/buttons.less';
+
+.overlay-enabled {
+	.skin-vector {
+		background-color: white;
+
+		// FIXME: Design to be reviewed at a later date.
+		.mw-mf-overlay {
+			height: auto;
+			top: 84px;
+			left: 60%;
+			right: 14px;
+			border: solid 3px #3F77D7;
+			padding: 8px;
+
+			.header {
+				// .header needs position: relative, it's not always at the top of the page
+				// (Zero banners, campaigns)
+				position: relative;
+				.vertical-gradient( @searchBoxColor, @searchBoxColorTo );
+				border-bottom: 1px solid #e2e2e2;
+				line-height: (@headerHeight - 2px);
+				text-align: center;
+				min-height: (@headerHeight - 2px);
+				padding: 2px 10px 0 @searchBarPaddingLeft;
+
+				h2 {
+					font-size: @baseFontSize * 1.6;
+					border: none;
+				}
+
+				.cancel {
+					left: auto;
+					right: 0;
+					background: url(../common/images/close-button-beta.png) no-repeat;
+				}
+			}
+
+			// Override Vector's default
+			p {
+				margin: 0;
+			}
+
+			.page-list {
+				margin: 0;
+				line-height: inherit;
+			}
+
+			.content {
+				margin: .8em @contentMarginRight 0 @contentMarginLeft;
+			}
+		}
+	}
+}
+
+.skin-vector {
+
+	.mw-body {
+		position: relative;
+	}
+
+	#page-secondary-actions {
+		position: absolute;
+		top: 4px;
+		right: 22px;
+
+		.button.nearby {
+			background-image: url(images/geo.png);
+			text-indent: -9999px;
+			.box-sizing(border-box);
+			vertical-align: top;
+			.background-size(30px, auto);
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 40px;
+			height: 40px;
+		}
+	}
+}

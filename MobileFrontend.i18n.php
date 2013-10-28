@@ -352,6 +352,10 @@ $messages['en'] = array (
 
 	// geo not a hack
 	'mobile-frontend-geonotahack' => 'Near this page',
+
+	// Messages to support beta features provided by MobileFrontend
+	'beta-feature-geonotahack' => 'Near this page',
+	'beta-feature-geonotahack-description' => 'Allows you to see other related pages to pages you view which contain longitude and latitude information.',
 );
 
 /** Message documentation (Message documentation)
@@ -961,6 +965,8 @@ Parameters:
 Parameters:
 * $2 - Number of full years the user has been a member for',
 	'mobile-frontend-geonotahack' => 'Label for button that shows pages near a given page',
+	'beta-feature-geonotahack' => 'Title for near this page beta feature.',
+	'beta-feature-geonotahack-description' => 'Description for near this page beta feature.',
 );
 
 /** Achinese (Acèh)
