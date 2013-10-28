@@ -25,23 +25,17 @@ html[dir="rtl"] {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: white;
+	background-color: #fff;
 	z-index: 4;
 
 	.header .cancel {
-		display: block;
 		position: absolute;
-		cursor: pointer;
 		border: none;
 		height: @headerHeight;
 		width: @searchBarPaddingLeft;
-		overflow: hidden; // see bug 53102
 		left: 0;
-		background: none;
-		background-image: url(images/arrow-left.png);
-		background-repeat: no-repeat;
-		background-position: center center;
-		text-indent: -999px;
+		background: url(images/arrow-left.png) 50% 50% no-repeat;
+		text-indent: -9999px;
 		.background-size( auto, @headerElementHeight );
 	}
 
@@ -54,13 +48,13 @@ html[dir="rtl"] {
 			text-align: left;
 		}
 
+		// LearnMoreOverlay
 		&.informative {
-			margin-left: 16px;
+			margin: 0 0 1em 16px;
 			list-style: outside square;
-			margin-bottom: 16px;
 
 			li {
-				margin-bottom: 8px;
+				margin-bottom: .5em;
 			}
 		}
 	}
@@ -108,7 +102,7 @@ html[dir="rtl"] {
 		.license {
 			// FIXME: move this image?
 			background: url('../modules/images/cc-by-sa.png') 0 10px no-repeat;
-			background-size: auto 16px;
+			.background-size( auto, 16px );
 			padding-bottom: 0;
 			padding-left: 55px;
 			font-size: .75em !important;
@@ -119,67 +113,9 @@ html[dir="rtl"] {
 
 	.mw-mf-overlay-footer,
 	.mw-mf-overlay-header {
-		padding: 4px 8px 4px @contentMarginLeft;
-
-		margin: 0;
-		font-size: 0.8em;
+		padding: 4px 8px 4px @searchBarPaddingLeft;
+		font-size: .8em;
 		color: #666;
 		border-bottom: solid 1px #eee;
-	}
-
-	.mw-mf-overlay-footer {
-		a {
-			display: inline;
-			color: #002BB8;
-		}
-	}
-
-	&.list-overlay {
-		.mw-mf-overlay-footer,
-		.mw-mf-overlay-header {
-			padding-left: @searchBarPaddingLeft;
-		}
-	}
-}
-
-.mw-mf-overlay {
-	ul.actionable {
-		cursor: pointer;
-
-		li {
-			&:hover {
-				background-color: #ACD1E9;
-			}
-			> a {
-				display: block;
-				color: #666;
-
-				&:active,
-				&:hover,
-				&:visited {
-					text-decoration: none;
-					color: #666;
-				}
-			}
-		}
-	}
-}
-
-.mw-mf-overlay > ul {
-	padding: 0;
-	position: relative;
-	padding-bottom: 20px;
-	margin: 0;
-	background-color: white;
-	list-style: none;
-
-	li {
-		color: #666;
-		border: none;
-		position: relative;
-		border-bottom: solid 1px #999999;
-		border-bottom: solid 1px #eee;
-		padding: @searchResultPaddingVertical @searchBarPaddingLeft;
-		font-size: 0.9em;
 	}
 }
