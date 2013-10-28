@@ -8,7 +8,9 @@ var module = (function() {
 			defaults: $.extend( {}, Overlay.prototype.defaults, {
 				heading: mw.msg( 'mobile-frontend-meta-data-issues-header' )
 			} ),
-			template: M.template.get( 'overlays/cleanup' )
+			templatePartials: {
+				content: M.template.get( 'overlays/cleanup' )
+			}
 		} );
 
 	function run( $container, parentOverlay ) {

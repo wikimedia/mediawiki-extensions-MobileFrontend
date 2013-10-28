@@ -4,7 +4,9 @@
 		defaults: {
 			confirmMessage: mw.msg( 'mobile-frontend-photo-ownership-confirm' )
 		},
-		template: M.template.get( 'modules/editor/AbuseFilterOverlay' ),
+		templatePartials: {
+			content: M.template.get( 'modules/editor/AbuseFilterOverlay' )
+		},
 		className: 'mw-mf-overlay abusefilter-overlay',
 
 		postRender: function() {

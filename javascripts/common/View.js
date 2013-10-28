@@ -58,6 +58,7 @@
 		initialize: function( options ) {
 			this._super();
 			this.defaults = $.extend( {}, this._parent.defaults, this.defaults );
+			this.templatePartials = $.extend( {}, this._parent.templatePartials, this.templatePartials );
 			options = $.extend( {}, this.defaults, options );
 			if ( options.el ) {
 				this.$el = $( options.el );
@@ -102,7 +103,7 @@
 			data = $.extend( true, {}, this.options, data );
 			this.preRender( data );
 			if ( this.template ) {
-				this.$el.html( this.template.render( data ) );
+				this.$el.html( this.template.render( data, this.templatePartials ) );
 			}
 			this.postRender( data );
 

@@ -30,7 +30,9 @@
 			abusefilterReadMoreMsg: mw.msg( 'mobile-frontend-editor-abusefilter-read-more')
 		},
 		// FIXME: [QA] Needs an acceptance test to ensure we do not break the first time editor workflow
-		template: M.template.get( 'modules/editor/EditorOverlay' ),
+		templatePartials: {
+			content: M.template.get( 'modules/editor/EditorOverlay' )
+		},
 		className: 'mw-mf-overlay editor-overlay',
 		closeOnBack: true,
 

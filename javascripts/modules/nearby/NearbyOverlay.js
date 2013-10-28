@@ -8,7 +8,9 @@
 			active: false,
 			closeOnBack: true,
 			className: 'mw-mf-overlay',
-			template: M.template.get( 'overlays/nearby' ),
+			templatePartials: {
+				content: M.template.get( 'overlays/nearby' )
+			},
 			defaults: {
 				heading: 'Nearby'
 			},

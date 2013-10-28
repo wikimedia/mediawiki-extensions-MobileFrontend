@@ -6,7 +6,9 @@
 	NotificationsOverlay = Overlay.extend( {
 			active: false,
 			className: 'mw-mf-overlay',
-			template: M.template.get( 'modules/notifications/NotificationsOverlay' ),
+			templatePartials: {
+				content: M.template.get( 'modules/notifications/NotificationsOverlay' )
+			},
 			defaults: {
 				heading: mw.msg( 'notifications' ),
 				archiveLink: mw.util.wikiGetlink( 'Special:Notifications' ),
