@@ -135,7 +135,7 @@ class SkinMinerva extends SkinTemplate {
 
 	/**
 	 * Prepares a url to the Special:UserLogin with query parameters,
-	 * taking into account $wgMFForceSecureLogin
+	 * taking into account $wgSecureLogin
 	 * @param array $query
 	 * @return string
 	 */
@@ -148,7 +148,7 @@ class SkinMinerva extends SkinTemplate {
 	 * @return Array: Representation of button with text and href keys
 	*/
 	protected function getLogInOutLink() {
-		global $wgMFForceSecureLogin;
+		global $wgSecureLogin;
 		wfProfileIn( __METHOD__ );
 		$query = array();
 		if ( !$this->getRequest()->wasPosted() ) {
@@ -168,7 +168,7 @@ class SkinMinerva extends SkinTemplate {
 				$query[ 'returntoquery' ] = wfArrayToCgi( $returntoquery );
 			}
 			$url = SpecialPage::getTitleFor( 'UserLogout' )->getFullURL( $query );
-			$url = $this->mobileContext->getMobileUrl( $url, $wgMFForceSecureLogin );
+			$url = $this->mobileContext->getMobileUrl( $url, $wgSecureLogin );
 			$text = wfMessage( 'mobile-frontend-main-menu-logout' )->escaped();
 		} else {
 			 // note returnto is not set for mobile (per product spec)

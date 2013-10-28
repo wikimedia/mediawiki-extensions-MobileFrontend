@@ -62,9 +62,9 @@ abstract class UserLoginAndCreateTemplate extends QuickTemplate {
 	 * @return bool
 	 */
 	protected function doStickHTTPS() {
-		global $wgMFForceSecureLogin;
+		global $wgSecureLogin;
 		$request = $this->getRequestContext()->getRequest();
-		if ( $wgMFForceSecureLogin && $request->detectProtocol() === 'https' ) {
+		if ( $wgSecureLogin && $request->detectProtocol() === 'https' ) {
 			return true;
 		}
 		return false;
