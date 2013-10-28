@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_64da7f4a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-28T18:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_7ba22301",
+      "revId": "0e47d244a7976844996e920c8854f1df94e4f2a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_7b7143a8",
         "filename": "less/common/common-js.less",
         "patchSetId": 1
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_a4e47711",
+        "filename": "less/common/headers.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-28T18:51:09Z",
+      "side": 1,
+      "message": "This is in the wrong commit thus doesn\u0027t make sense here. Moved to the commit it was supposed to be introduced by it will make more sense there.",
+      "parentUuid": "291c1151_1b4a0f56",
+      "revId": "0e47d244a7976844996e920c8854f1df94e4f2a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_db3f97af",
         "filename": "less/common/ui.less",
         "patchSetId": 1
@@ -64,6 +100,24 @@
       "writtenOn": "2013-10-25T23:44:02Z",
       "side": 1,
       "message": "I think the background is pretty obvious. As for height, it\u0027s to make children that use height: 100% take up the whole screen.",
+      "revId": "0e47d244a7976844996e920c8854f1df94e4f2a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_049e2b5f",
+        "filename": "less/common/ui.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-28T18:51:09Z",
+      "side": 1,
+      "message": "I disagree.  Removing these rules on my machine (Chrome on desktop) makes no noticeable UI difference so I would like this clarified.\n* Is the background colour essentially to override the default browser background colour (which by default is white)? If so why do we care?\n* Which children do we have that use height: 100% that break without it (I only found Tutorial on Uploads page but there may be more)?",
+      "parentUuid": "291c1151_db3f97af",
       "revId": "0e47d244a7976844996e920c8854f1df94e4f2a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_c4c6d34b",
+        "filename": "less/desktop/images/geo.png",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-28T18:51:09Z",
+      "side": 1,
+      "message": "Wrong commit. Bad rebase.",
+      "parentUuid": "291c1151_5b53a716",
+      "revId": "0e47d244a7976844996e920c8854f1df94e4f2a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_3b4eeb70",
         "filename": "less/desktop/mobileBridge.less",
         "patchSetId": 1
@@ -98,6 +170,24 @@
       "writtenOn": "2013-10-25T23:44:02Z",
       "side": 1,
       "message": "What is this file? Commit message doesn\u0027t say anything.",
+      "revId": "0e47d244a7976844996e920c8854f1df94e4f2a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e4c3cf39",
+        "filename": "less/desktop/mobileBridge.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-28T18:51:09Z",
+      "side": 1,
+      "message": "Wrong commit. Bad rebase.",
+      "parentUuid": "291c1151_3b4eeb70",
       "revId": "0e47d244a7976844996e920c8854f1df94e4f2a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
