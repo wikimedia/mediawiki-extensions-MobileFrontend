@@ -16,6 +16,24 @@
       "revId": "81ee72164c204d02df072d51b650e141f0ccf7bc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_0469cb8c",
+        "filename": "javascripts/modules/nearby/PagePreviewOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-28T18:35:16Z",
+      "side": 1,
+      "message": "I assume you mean the line below?",
+      "parentUuid": "291c1151_dbdb1778",
+      "revId": "81ee72164c204d02df072d51b650e141f0ccf7bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
