@@ -2,6 +2,29 @@
 @import "buttons.less";
 @import 'mainmenu.less';
 
+html,
+body {
+	// Ensure overlays take up full screen
+	height: 100%;
+}
+
+// Used for messages on login screen, page lists and uploads and when showing old revisions
+.alert {
+	padding: 1em @contentMarginLeft;
+	margin: 0 0 1em;
+
+	&.warning {
+		color: #850;
+		background: #feb
+	}
+
+	h2 {
+		font: bold 100% @fontFamily;
+		padding: 0;
+		margin: 0 0 .5em 0;
+	}
+}
+
 .header {
 	// .header needs position: relative, it's not always at the top of the page
 	// (Zero banners, campaigns)
@@ -116,6 +139,16 @@ input.search {
 
 .content .edit-page {
 	display: none;
+}
+
+// FIXME: this is here only because non-JS version doesn't load watchstar.less
+.watch-this-article {
+	background: url(../common/images/watch.png) 50% 50% no-repeat;
+	text-indent: -9999px;
+
+	&.watched {
+		background-image: url(../common/images/watched.png);
+	}
 }
 
 // FIXME: Move to beta/alpha only place?
