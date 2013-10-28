@@ -16,6 +16,24 @@
       "revId": "e2e4ff16d267e2600d098c4b7fdcfd08aed9de23",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_c4b0938c",
+        "filename": "templates/overlay.html",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-28T19:11:59Z",
+      "side": 1,
+      "message": "Might not be if we\u0027re no longer using or planning to use this template with just regular content variable. I\u0027ll check if that\u0027s the case.",
+      "parentUuid": "291c1151_245de7e9",
+      "revId": "e2e4ff16d267e2600d098c4b7fdcfd08aed9de23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
