@@ -308,6 +308,8 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.startup',
 			'mobile.loggingSchemas',
+			// Needs LoadingOverlay
+			'mobile.stable.common',
 		),
 		'messages' => array(
 			'mobile-frontend-geonotahack',
