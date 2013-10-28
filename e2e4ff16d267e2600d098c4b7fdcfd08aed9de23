@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_245de7e9",
+        "filename": "templates/overlay.html",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-28T18:33:16Z",
+      "side": 1,
+      "message": "Is this line needed? I find it confusing having both..",
+      "revId": "e2e4ff16d267e2600d098c4b7fdcfd08aed9de23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
