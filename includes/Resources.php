@@ -330,7 +330,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'scripts' => array(
 			'javascripts/modules/mf-toggle-dynamic.js',
 			'javascripts/modules/talk/talk.js',
-			'javascripts/modules/notifications/notifications.js',
 			'javascripts/modules/search/pageImages.js',
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/lastEdited/lastEditedBeta.js',
@@ -346,10 +345,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// for talk.js
 			'mobile-frontend-talk-overlay-header',
-
-			// notifications.js (defined in Echo)
-			'echo-none',
-			'notifications',
 
 			// newbieUploads.js
 			'mobile-frontend-lead-image-tutorial-summary',
@@ -567,6 +562,7 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/common/ContentOverlay.js',
 			'javascripts/modules/tutorials/PageActionOverlay.js',
 			'javascripts/modules/tutorials/newbieEditor.js',
+			'javascripts/modules/notifications/notifications.js',
 		),
 		'messages' => array(
 			// for mf-toggle.js
