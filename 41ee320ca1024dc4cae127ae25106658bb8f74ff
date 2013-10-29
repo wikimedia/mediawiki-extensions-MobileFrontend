@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_6d1b3b7f",
+        "filename": "includes/Resources.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-29T22:02:38Z",
+      "side": 0,
+      "message": "These are in the mobile.notifications.overlay module as well.",
+      "revId": "41ee320ca1024dc4cae127ae25106658bb8f74ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
