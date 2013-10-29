@@ -81,11 +81,7 @@ var
 			this.$list = this.$( 'ul' );
 
 			this._loadPhotos();
-			if ( mw.config.get( 'wgMFMode' ) !== 'stable' ) {
-				$( window ).on( 'scroll', $.proxy( this, '_loadPhotos' ) );
-			} else {
-				this.$end.remove();
-			}
+			$( window ).on( 'scroll', $.proxy( this, '_loadPhotos' ) );
 		},
 		isEmpty: function() {
 			return this.$list.find( 'li' ).length === 0;
