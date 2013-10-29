@@ -16,7 +16,14 @@
 			template: M.template.get( 'overlays/pagePreview' ),
 			initialize: function( options ) {
 				var self = this, loader = new LoadingOverlay(),
+					optionalArgs,
 					endpoint = options.endpoint;
+
+				// When $wgMFNearbyEndpoint is set we need to assume JSONP mode and override the default URL
+				if ( endpoint ) {
+					optionalArgs = { url: endpoint, dataType: 'jsonp' };
+				}
+
 				this._super( options );
 				loader.show();
 				M.pageApi.getPage( options.title, options.endpoint, true ).done( function( page ) {
@@ -29,9 +36,7 @@
 							// keep consistent with Special:Watchlist::THUMB_SIZE
 							pithumbsize: 150,
 							titles: options.title
-						}, {
-							url: endpoint, dataType: endpoint ? 'jsonp' : 'json'
-						} ).done( function ( resp ) {
+						}, optionalArgs ).done( function ( resp ) {
 							var thumb;
 							// FIXME [API] more terrible MediaWiki API fun
 							if ( resp.query && resp.query.pages ) {
