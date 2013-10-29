@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_e2a57a56",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-29T18:40:11Z",
+      "side": 1,
+      "message": "Raise this on wikitech / mobile-l for further discussion. This may indeed be an antipattern.\n\nMax any thoughts?",
+      "parentUuid": "291c1151_418bba20",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_6190b64a",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2013-10-26T20:32:03Z",
       "side": 1,
       "message": "\"time\" \u003d\u003e \"timestamp\"",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_62f98a4a",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-29T18:40:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_6190b64a",
       "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_028b76c5",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-29T18:40:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_01a1c2a6",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_219ebe5f",
         "filename": "javascripts/common/PageApi.js",
         "patchSetId": 8
@@ -64,6 +118,24 @@
       "writtenOn": "2013-10-26T20:32:03Z",
       "side": 1,
       "message": "Maybe \"timestamp\" instead of \"time\" to be consistent?",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_42956edb",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-29T18:40:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_219ebe5f",
       "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_62926af6",
+        "filename": "javascripts/common/PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-29T18:40:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_e193c658",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_8185b20c",
         "filename": "tests/javascripts/common/test_PageApi.js",
         "patchSetId": 8
@@ -98,6 +188,24 @@
       "writtenOn": "2013-10-26T20:32:03Z",
       "side": 1,
       "message": "Why not just hardcode any value if we\u0027re not using it in the test anyway?",
+      "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_a2c462f8",
+        "filename": "tests/javascripts/common/test_PageApi.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-29T18:40:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_8185b20c",
       "revId": "e12267c54a3185fbe21a7436d702f65f75a7a777",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
