@@ -6,4 +6,5 @@ class NotificationPage
     page.content_element.p.a
   end
   #a(:return_to_main_link, text:'Return to Main Page')
+
 end
