@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_0dff2732",
+        "filename": "less/modules/mediaViewer.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T21:20:14Z",
+      "side": 0,
+      "message": "I don\u0027t see why an inline style would be better than this...",
+      "revId": "2f46c2cb677d6ce6583da874b6509ee9249e24ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

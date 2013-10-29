@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_2dfce33a",
+        "filename": "templates/modules/ImageOverlay.html",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T21:20:14Z",
+      "side": 1,
+      "message": "Ugh...",
+      "revId": "5786c662f0387c281076b144ec2e496fa8dd6dde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
