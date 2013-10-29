@@ -2,7 +2,8 @@
 	var NearbyApi = M.require( 'modules/nearby/NearbyApi' ),
 		View = M.require( 'view' ),
 		MobileWebClickTracking = M.require( 'loggingSchemas/MobileWebClickTracking' ),
-		wgMFMode = mw.config.get( 'wgMFMode' ),
+		// Set mode to stable when not defined (means you are in desktop mode)
+		wgMFMode = mw.config.get( 'wgMFMode' ) || 'stable',
 		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		loader = new LoadingOverlay(),
 		Nearby;
