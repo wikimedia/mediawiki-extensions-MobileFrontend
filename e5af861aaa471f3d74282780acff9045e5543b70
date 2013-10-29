@@ -70,6 +70,23 @@
     },
     {
       "key": {
+        "uuid": "291c1151_2d4783c0",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-29T21:10:27Z",
+      "side": 1,
+      "message": "Shouldn\u0027t these be protocol-relative URLs?",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_4da83f79",
         "filename": "includes/Resources.php",
         "patchSetId": 4
@@ -98,6 +115,23 @@
       "writtenOn": "2013-10-29T20:54:42Z",
       "side": 1,
       "message": "As I said, I\u0027d prefer a copy and paste into mobileBridge.less rather than creating this file with a single CSS rule...",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_cd898fee",
+        "filename": "less/desktop/mobileBridge.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-29T21:10:27Z",
+      "side": 1,
+      "message": "If we\u0027re going to write our own styles, they should at least be slightly similar to our existing desktop dialog/modal styles:\nborder: 1px solid #CCCCCC;\nwith either a drop shadow:\nbox-shadow: 0 3px 8px rgba(50, 50, 50, 0.35);\nor modal styling.",
       "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
