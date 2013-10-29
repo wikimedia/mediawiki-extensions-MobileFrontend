@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_a8f441f1",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-10-29T23:23:37Z",
+      "side": 1,
+      "message": "I find this method name to be at best confusing at worst misleading. Also, the functionality here just returns whether or not the user is in beta mode - done\u0027s MobileContext::isBetaGroupMember() already do exactly that?",
+      "revId": "e250ad0a4e177141f50b0405fbdf58ccc5355434",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_68d32960",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-10-29T23:23:37Z",
+      "side": 1,
+      "message": "this is what I mean by that method being confusingly named. You\u0027re functionally checking if the user is in beta, but the name implies that this special page \u0027requires beta mode\u0027. It may make more sense to set a property for this class (actually maybe all mobile special page classes) \u0027mode\u0027 or something (possible values are stable, beta, alpha) and in the execute() method always ensure that the correct special page is being shown to the user. This is funcitonality that we need on all special pages anyway, so may as well put it all in one place.",
+      "revId": "e250ad0a4e177141f50b0405fbdf58ccc5355434",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_28c21188",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-10-29T23:23:37Z",
+      "side": 1,
+      "message": "would be nice to summarize the query in a docblock for quicker parsing of what this is supposed to do.",
+      "revId": "e250ad0a4e177141f50b0405fbdf58ccc5355434",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_883945a3",
+        "filename": "includes/specials/SpecialHistory.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-10-29T23:23:37Z",
+      "side": 1,
+      "message": "this is a minor stylistic thing; personally i find @todo\u0027s to easily get burried in code - i find them more useful/visible in docblocks.",
+      "revId": "e250ad0a4e177141f50b0405fbdf58ccc5355434",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_08463524",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 452,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-10-29T23:23:37Z",
+      "side": 1,
+      "message": "this looks like the same method that\u0027s in SpecialMobileHistory - why not put this in the abstract parent class? no sense in duplicating.",
+      "revId": "e250ad0a4e177141f50b0405fbdf58ccc5355434",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_48502dd4",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-10-29T23:23:37Z",
+      "side": 1,
+      "message": "brain explode. see previous comments on similar stuff - let\u0027s just standardize a check for this across all mobile special pages.",
+      "revId": "e250ad0a4e177141f50b0405fbdf58ccc5355434",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
