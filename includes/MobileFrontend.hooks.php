@@ -669,6 +669,10 @@ class MobileFrontendHooks {
 				'schema' => 'MobileWebEditing',
 				'revision' => 6077315,
 			),
+			'schema.MobileWebCta' => array(
+				'schema' => 'MobileWebCta',
+				'revision' => 5972684,
+			),
 			'schema.MobileWebClickTracking' => array(
 				'schema' => 'MobileWebClickTracking',
 				'revision' => 5929948,

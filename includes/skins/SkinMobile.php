@@ -145,6 +145,7 @@ class SkinMobile extends SkinMinerva {
 				'mobile.uploads.schema',
 				'mobile.watchlist.schema',
 				'mobile.editing.schema',
+				'schema.MobileWebCta',
 				'schema.MobileWebClickTracking',
 			);
 		}
