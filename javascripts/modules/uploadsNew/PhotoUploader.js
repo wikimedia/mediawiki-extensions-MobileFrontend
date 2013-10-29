@@ -3,7 +3,7 @@
 		popup = M.require( 'notifications' ),
 		PhotoApi = M.require( 'modules/uploads/PhotoApi' ),
 		PhotoUploadProgress = M.require( 'modules/uploadsNew/PhotoUploadProgress' ),
-		PhotoUploaderPreview = M.require( 'modules/uploadsNew/PhotoUploaderPreview' ),
+		PhotoUploadOverlay = M.require( 'modules/uploadsNew/PhotoUploadOverlay' ),
 		PhotoUploader;
 
 	function getLog( funnel ) {
@@ -29,7 +29,7 @@
 			var fileReader = new FileReader(), preview;
 
 			this.log = getLog( options.funnel );
-			preview = this.preview = new PhotoUploaderPreview( { log: this.log } );
+			preview = this.preview = new PhotoUploadOverlay( { log: this.log } );
 
 			this.options = options;
 			this.parent = options.parent;
@@ -85,7 +85,7 @@
 				insertInPage: this.options.insertInPage,
 				pageTitle: this.options.pageTitle
 			} ).done( function( fileName, descriptionUrl ) {
-				progressPopup.hide();
+				progressPopup.hide( true );
 				self.log( { action: 'success' } );
 				self.parent.emit( 'success', {
 					fileName: fileName,
@@ -94,7 +94,7 @@
 					url: self.preview.imageUrl
 				} );
 			} ).fail( function( err, msg ) {
-				progressPopup.hide();
+				progressPopup.hide( true );
 				popup.show( msg || mw.msg( 'mobile-frontend-photo-upload-error' ), 'toast error' );
 				self.log( { action: 'error', errorText: err } );
 				self.parent.emit( 'error' );

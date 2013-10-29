@@ -2,6 +2,9 @@
 @import "../mixins.less";
 
 @headerMargin: .4em;
+@headingMarginV: 1em;
+@headingFontSize: 1em;
+@buttonSize: @headingFontSize + @headingMarginV * 2;
 
 .overlay-enabled {
 	.overlay {
@@ -21,41 +24,44 @@
 	z-index: 4;
 
 	.overlay-header {
-		margin: @headerMargin @headerMargin 0;
-		border-bottom: 1px solid #cacaca;
-		overflow: hidden;
+		padding: @headerMargin @headerMargin 0;
+		display: table;
+		width: 100%;
+		.box-sizing(border-box);
+
+		> div, h2 {
+			display: table-cell;
+			border-bottom: 1px solid #cacaca;
+		}
 
 		button, h2 {
-			display: inline-block;
 			line-height: 1;
-			padding: 1em .6em;
+			padding: @headingMarginV .6em;
+			// FIXME: should not be necessary, scope other h2s to .content
+			font-size: @headingFontSize;
+		}
+
+		> div, button {
+			width: @buttonSize;
+			white-space: nowrap;
 		}
 
 		button {
 			border-radius: 0;
-			// needed for proper horizontal icon/text centering in both LTR and RTL
-			min-width: (3em + @headerMargin);
+			min-height: @buttonSize;
+			font-weight: bold;
+
+			&.cancel {
+				color: #d11d13;
+			}
 		}
 
-		.left {
-			float: left;
-			// needed for proper horizontal icon/text centering in both LTR and RTL
-			margin-left: -@headerMargin;
+		> div:first-child button {
 			border-right: 1px solid #cacaca;
 		}
 
-		.right {
-			float: right;
-
-			button {
-				float: left;
-
-				&:last-child {
-					// needed for proper horizontal icon/text centering in both LTR and RTL
-					margin-right: -@headerMargin;
-					border-left: 1px solid #cacaca;
-				}
-			}
+		> div:last-child button:last-child {
+			border-left: 1px solid #cacaca;
 		}
 
 		.icon {
@@ -64,15 +70,41 @@
 			background-repeat: no-repeat;
 			.background-size( 24px, auto );
 
+			&[disabled] {
+				opacity: .5;
+			}
+
 			&.cancel {
 				background-image: url(images/cancel.png);
 			}
 		}
+	}
 
-		h2 {
-			float: left;
-			// FIXME: should not be necessary, scope other h2s to .content
-			font-size: 1em;
+	// LearnMoreOverlay
+	.informative {
+		margin: 0 0 1em 16px;
+		list-style: outside square;
+
+		li {
+			margin-bottom: .5em;
 		}
+	}
+
+	// Got it button
+	.confirm {
+		display: block;
+		margin: 1em auto;
+	}
+
+	.license {
+		// FIXME: move this image?
+		background: url('../modules/images/cc-by-sa.png') left 4px no-repeat;
+		.background-size( auto, 16px );
+		padding-left: 55px;
+		font-size: .9em;
+		// if license is only one line (big screens) prevent cutting off the image
+		min-height: 18px;
+		margin-top: .5em;
+		line-height: 1.4;
 	}
 }

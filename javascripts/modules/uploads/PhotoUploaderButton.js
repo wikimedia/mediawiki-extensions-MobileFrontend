@@ -2,7 +2,6 @@
 	var View = M.require( 'view' ),
 		popup = M.require( 'notifications' ),
 		CtaDrawer = M.require( 'CtaDrawer' ),
-		LoadingOverlay = M.require( 'LoadingOverlay' ),
 		PhotoUploaderButton,
 		LeadPhotoUploaderButton;
 
@@ -110,22 +109,31 @@
 						file: $input[0].files[0],
 						parent: self
 					} ),
-						loadingOverlay = new LoadingOverlay();
-
-					loadingOverlay.show();
+						LoadingOverlay, loadingOverlay;
 
 					// FIXME: remove when new uploads overlay in stable
 					if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+						LoadingOverlay = M.require( 'LoadingOverlay' );
+						loadingOverlay = new LoadingOverlay();
+						loadingOverlay.show();
+
 						mw.loader.using( 'mobile.uploads', function() {
 							var PhotoUploader = M.require( 'modules/uploads/PhotoUploader' );
 							loadingOverlay.hide();
 							new PhotoUploader( options );
 						} );
 					} else {
-						mw.loader.using( 'mobile.uploadsNew', function() {
-							var PhotoUploader = M.require( 'modules/uploadsNew/PhotoUploader' );
-							loadingOverlay.hide();
-							new PhotoUploader( options );
+						// make sure LoadingOverlayNew is present
+						mw.loader.using( 'mobile.beta', function() {
+							LoadingOverlay = M.require( 'LoadingOverlayNew' );
+							loadingOverlay = new LoadingOverlay();
+							loadingOverlay.show();
+
+							mw.loader.using( 'mobile.uploadsNew', function() {
+								var PhotoUploader = M.require( 'modules/uploadsNew/PhotoUploader' );
+								loadingOverlay.hide();
+								new PhotoUploader( options );
+							} );
 						} );
 					}
 
@@ -149,7 +157,7 @@
 					popup.show( mw.msg( 'mobile-frontend-photo-upload-success-article' ), 'toast' );
 
 					// just in case, LeadPhoto should be loaded by now anyway
-					mw.loader.using( 'mobile.uploads', function() {
+					mw.loader.using( 'mobile.uploads.common', function() {
 						var LeadPhoto = M.require( 'modules/uploads/LeadPhoto' );
 
 						new LeadPhoto( {

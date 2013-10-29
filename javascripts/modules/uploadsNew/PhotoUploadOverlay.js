@@ -1,25 +1,26 @@
 ( function( M, $ ) {
 	var popup = M.require( 'notifications' ),
-		Overlay = M.require( 'Overlay' ),
+		OverlayNew = M.require( 'OverlayNew' ),
 		LearnMoreOverlay = M.require( 'modules/uploadsNew/LearnMoreOverlay' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
-		PhotoUploaderPreview;
+		PhotoUploadOverlay;
 
-	PhotoUploaderPreview = Overlay.extend( {
+	PhotoUploadOverlay = OverlayNew.extend( {
 		defaults: {
-			loadingMessage: mw.msg( 'mobile-frontend-image-loading' ),
 			license: mw.msg( 'mobile-frontend-photo-license' ),
-			cancelButton: mw.msg( 'mobile-frontend-photo-cancel' ),
-			submitButton: mw.msg( 'mobile-frontend-photo-submit' ),
 			descriptionPlaceholder: mw.msg( 'mobile-frontend-photo-caption-placeholder' ),
 			help: mw.msg( 'mobile-frontend-photo-ownership-help' ),
-			ownerStatement: ownershipMessage
+			ownerStatement: ownershipMessage,
+			heading: mw.msg( 'mobile-frontend-image-heading-describe' ),
+			headerButtons: [
+				{ className: 'submit icon', msg: mw.msg( 'mobile-frontend-photo-submit' ) }
+			]
 		},
 
-		className: 'mw-mf-overlay photo-overlay',
+		className: 'overlay photo-overlay',
 
 		templatePartials: {
-			content: M.template.get( 'uploadsNew/PhotoUploaderPreview' )
+			content: M.template.get( 'uploadsNew/PhotoUploadOverlay' )
 		},
 
 		initialize: function( options ) {
@@ -33,9 +34,11 @@
 			this._super();
 
 			this.$description = $description = this.$( 'textarea' );
-			$submitButton = this.$( '.submit' ).on( 'click', function() {
-				self.emit( 'submit' );
-			} );
+			$submitButton = this.$( '.submit' ).
+				prop( 'disabled', true ).
+				on( 'click', function() {
+					self.emit( 'submit' );
+				} );
 			this.$( '.cancel' ).on( 'click', function() {
 				self.emit( 'cancel' );
 			} );
@@ -45,11 +48,7 @@
 			// use input event too, Firefox doesn't fire keyup on many devices:
 			// https://bugzilla.mozilla.org/show_bug.cgi?id=737658
 			$description.on( 'keyup input', function() {
-				if ( $description.val() ) {
-					$submitButton.removeAttr( 'disabled' );
-				} else {
-					$submitButton.attr( 'disabled', true );
-				}
+				$submitButton.prop( 'disabled', $description.val() === '' );
 			} );
 		},
 
@@ -58,10 +57,10 @@
 		},
 
 		setImageUrl: function( url ) {
-			var self = this, $img;
+			var self = this, $preview = this.$( '.preview' );
 
 			this.imageUrl = url;
-			this.$( '.loading' ).remove();
+			$preview.removeClass( 'loading' );
 			this.$( 'a.help' ).on( 'click', function( ev ) {
 				ev.preventDefault(); // avoid setting #
 				new LearnMoreOverlay( {
@@ -75,16 +74,17 @@
 				} ).show();
 				self.log( { action: 'whatDoesThisMean' } );
 			} );
-			$img = $( '<img>' ).attr( 'src', url ).prependTo( this.$( '.content' ) );
-
-			// When using a bad filetype close the overlay
-			$img.on( 'error', function() {
-				popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
-				self.hide();
-			} );
-		}
+			$( '<img>' ).
+				attr( 'src', url ).
+				appendTo( $preview ).
+				on( 'error', function() {
+					// When using a bad filetype close the overlay
+					popup.show( mw.msg( 'mobile-frontend-photo-upload-error-file-type' ), 'toast error' );
+					self.hide();
+				} );
+			}
 	} );
 
-	M.define( 'modules/uploadsNew/PhotoUploaderPreview', PhotoUploaderPreview );
+	M.define( 'modules/uploadsNew/PhotoUploadOverlay', PhotoUploadOverlay );
 
 }( mw.mobileFrontend, jQuery ) );

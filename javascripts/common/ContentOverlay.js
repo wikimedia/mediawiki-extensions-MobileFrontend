@@ -4,6 +4,7 @@
 
 	ContentOverlay = Overlay.extend( {
 		fullScreen: false,
+		closeOnContentTap: true,
 		appendTo: '#mw-mf-page-center',
 		postRender: function( options ) {
 			this._super( options );
