@@ -78,9 +78,15 @@ username 'Selenium_user' and then store the password in /private/wmf/secret.yml
 in the following format:
 mediawiki_password: <local selenium account password>
 
-Run the tests with:
+Run the tests from the MobileFrontend directory with:
 
-  bundle exec cucumber
+  make cucumber
+
+If you want to run a single set of tests, go to the MobileFrontend/tests/browser/
+directory and call 'bundle exec cucumber' with the path to the test file. For example,
+to run only the watchlist tests:
+
+  bundle exec cucumber features/watchlist.feature
 
 XML report (for Jenkins) is created at tests/browser/reports/junit.
 
