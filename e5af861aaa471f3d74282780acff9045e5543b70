@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_adaff37c",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 350,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "Add a FIXME that this is temporary and will disappear from mobile frontend.",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_0dc72749",
+        "filename": "MobileFrontend.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "Add a FIXME that this is temporary and will disappear from mobile frontend.",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_4d775f38",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 485,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "Add a big FIXME that this is temporary and will disappear from mobile frontend.",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_6d8c1b30",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 566,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "Add a big FIXME that this is temporary and will disappear from mobile frontend.",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_4da83f79",
+        "filename": "includes/Resources.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "Add a FIXME that this is temporary and will disappear from mobile frontend.",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_cd8a6f19",
+        "filename": "less/common/headers.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "As I said, I\u0027d prefer a copy and paste into mobileBridge.less rather than creating this file with a single CSS rule...",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_ede48b12",
+        "filename": "less/mixins.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "Wrong naming, hyphens in CSS.",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_0de2c704",
+        "filename": "less/mixins.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-29T20:54:42Z",
+      "side": 1,
+      "message": "?",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
