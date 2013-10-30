@@ -6,7 +6,7 @@ class SpecialNearby extends MobileSpecialPage {
 		$this->listed = true;
 	}
 
-	public function execute( $par = '' ) {
+	public function executeWhenAvailable( $par = '' ) {
 		global $wgMFNearbyRange;
 
 		$this->setHeaders();

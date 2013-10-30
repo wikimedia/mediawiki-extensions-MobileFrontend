@@ -33,9 +33,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			Html::closeElement( 'div' )
 		);
 	}
-	function execute( $par ) {
+	function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
-		parent::execute( $par );
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
 

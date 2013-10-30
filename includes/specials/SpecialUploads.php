@@ -6,7 +6,7 @@ class SpecialUploads extends MobileSpecialPage {
 		parent::__construct( 'Uploads' );
 	}
 
-	public function execute( $par = '' ) {
+	public function executeWhenAvailable( $par = '' ) {
 		global $wgMFPhotoUploadEndpoint;
 		$user = $par ? User::newFromName( $par ) : $this->getUser();
 
