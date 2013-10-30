@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_563447aa",
+        "filename": "javascripts/modules/notifications/notifications.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-30T22:51:44Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/74079/\nThe way i look at this is in 10 years time I highly doubt anyone is going to look back and say \"That day we choose $( document ).ready over $(function(){ was a turning point in the development of MediaWiki\".\n\nBut let\u0027s be consistent with patterns in core and our own codebase.",
+      "revId": "f39fcc0cd7444f2a2c3a7868329ce3f11f3a94bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
