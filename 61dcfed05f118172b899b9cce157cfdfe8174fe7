@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_c55de31f",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-10-30T18:53:31Z",
+      "side": 1,
+      "message": "API uniformly uses TS_ISO_8601",
+      "revId": "61dcfed05f118172b899b9cce157cfdfe8174fe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
