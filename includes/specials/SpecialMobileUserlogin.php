@@ -2,7 +2,7 @@
 
 class SpecialMobileUserlogin extends LoginForm {
 
-	function execute( $par ) {
+	function executeWhenAvailable( $par ) {
 		if ( $this->getRequest()->getVal( 'type' ) == 'signup' ) {
 			$key = 'mobile-frontend-sign-up-heading';
 		} else {
