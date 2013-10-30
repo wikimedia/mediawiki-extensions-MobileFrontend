@@ -70,6 +70,24 @@
       "revId": "61dcfed05f118172b899b9cce157cfdfe8174fe7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_bba7240d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-30T20:59:29Z",
+      "side": 1,
+      "message": "Changing the format will also require caching considerations - we currently print the timestamp in the history link and we will need to ensure we cater for the new and old timestamp format.",
+      "parentUuid": "291c1151_db422041",
+      "revId": "61dcfed05f118172b899b9cce157cfdfe8174fe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
