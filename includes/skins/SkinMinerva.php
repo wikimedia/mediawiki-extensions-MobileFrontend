@@ -35,14 +35,20 @@ class SkinMinerva extends SkinTemplate {
 	 */
 	protected function prepareUserButton( BaseTemplate $tpl ) {
 		$user = $this->getUser();
-		if ( class_exists( 'MWEchoNotifUser' ) && $user->isLoggedIn() ) {
+		$currentTitle = $this->getTitle();
+		$notificationsTitle = SpecialPage::getTitleFor( 'Notifications' );
+		// If Echo is available, the user is logged in, and they are not already on the
+		// notifications archive, show the notifications icon in the header.
+		if ( class_exists( 'MWEchoNotifUser' ) && $user->isLoggedIn()
+			&& $currentTitle->getPrefixedText() !== $notificationsTitle->getPrefixedText()
+		) {
 			// FIXME: cap higher counts
 			$count = MWEchoNotifUser::newFromUser( $user )->getNotificationCount();
 
 			$tpl->set( 'secondaryButton',
 				Html::openElement( 'a', array(
 					'title' => wfMessage( 'mobile-frontend-user-button-tooltip' ),
-					'href' => SpecialPage::getTitleFor( 'Notifications' )->getLocalURL( array( 'returnto' => $this->getTitle()->getPrefixedText() ) ),
+					'href' => $notificationsTitle->getLocalURL( array( 'returnto' => $currentTitle->getPrefixedText() ) ),
 					'class' => 'user-button',
 					'id'=> 'secondary-button',
 				) ) .
