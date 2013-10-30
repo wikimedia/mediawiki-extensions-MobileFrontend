@@ -16,6 +16,24 @@
       "revId": "61dcfed05f118172b899b9cce157cfdfe8174fe7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_c580834c",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-30T19:04:25Z",
+      "side": 1,
+      "message": "To parse this in JavaScript we\u0027d have to use an external library which I\u0027d rather we didn\u0027t do on mobile. Maybe the solution is to add a parameter to request the format of the timestamp?\nThoughts?",
+      "parentUuid": "291c1151_c55de31f",
+      "revId": "61dcfed05f118172b899b9cce157cfdfe8174fe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
