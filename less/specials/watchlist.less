@@ -1,10 +1,19 @@
 @import "../mixins.less";
 
-.mw-mf-watchlist-selector {
 
-	li {
+.page-header-bar {
+
+	li,
+	div {
+		line-height: 1.5;
+		padding: 5px 0 0;
 		border-bottom: 1px solid #e2e2e2;
 		text-align: center;
+	}
+}
+
+.mw-mf-watchlist-selector {
+	li {
 		display: inline-block;
 		border-left: 1px solid #e2e2e2;
 		width: 25%;
@@ -18,10 +27,8 @@
 		}
 
 		a {
-			line-height: 1.5;
 			display: block;
 			color: #58595b;
-			padding: 5px 0 0;
 			margin: 0 1px 0 0;
 			border-bottom: 3px solid transparent;
 		}

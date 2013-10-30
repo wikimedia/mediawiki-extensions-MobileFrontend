@@ -1,10 +1,14 @@
 <?php
 
-class SpecialMobileWatchlist extends SpecialWatchlist {
+class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	const LIMIT = 50; // Performance-safe value with PageImages
 	const THUMB_SIZE = 150;
 	const VIEW_OPTION_NAME = 'mfWatchlistView';
 	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
+
+	public function __construct() {
+		parent::__construct( 'Watchlist' );
+	}
 
 	private $filter,
 		$usePageImages,
@@ -13,30 +17,42 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 	/** @var Title */
 	private $fromPageTitle;
 
+	protected function renderAnonBanner() {
+		$out = $this->getOutput();
+		$out->setPageTitle( $this->msg( 'watchnologin' ) );
+		$out->setRobotPolicy( 'noindex,nofollow' );
+		$link = Linker::linkKnown(
+			SpecialPage::getTitleFor( 'Userlogin' ),
+			$this->msg( 'loginreqlink' )->escaped(),
+			array(),
+			array( 'returnto' => $this->getTitle()->getPrefixedText() )
+		);
+		$out->addHTML(
+			Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
+			$this->msg( 'watchlistanontext' )->rawParams( $link )->parse() .
+			Html::closeElement( 'div' )
+		);
+	}
 	function execute( $par ) {
 		wfProfileIn( __METHOD__ );
-
+		parent::execute( $par );
 		$ctx = MobileContext::singleton();
 		$this->usePageImages = !$ctx->imagesDisabled() && defined( 'PAGE_IMAGES_INSTALLED' );
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
-		$output->addModuleStyles( 'mobile.watchlist.styles' );
 		$output->addModules( 'mobile.watchlist.scripts' );
 		$req = $this->getRequest();
 		$view = $req->getVal( 'watchlistview', 'a-z' );
 		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 
-		$this->setHeaders();
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
 		if( $user->isAnon() ) {
 			// No watchlist for you.
-			parent::execute( $par );
+			$this->renderAnonBanner();
 			wfProfileOut( __METHOD__ );
 			return;
-		} else {
-			$output->setProperty( 'unstyledContent', true );
 		}
 
 		if ( $view === 'feed' ) {
@@ -166,7 +182,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output = $this->getOutput();
 
 		$output->addHtml(
-			Html::openElement( 'ul', array( 'class' => 'mw-mf-watchlist-selector' ) )
+			Html::openElement( 'ul', array( 'class' => 'mw-mf-watchlist-selector page-header-bar' ) )
 		);
 
 		foreach( $filters as $filter => $msg ) {
@@ -194,7 +210,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		);
 	}
 
-	function doFeedQuery() {
+	protected function doFeedQuery() {
 		wfProfileIn( __METHOD__ );
 
 		$user = $this->getUser();
@@ -426,7 +442,7 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		);
 	}
 
-	private function showFeedResultRow( $row ) {
+	protected function showFeedResultRow( $row ) {
 		wfProfileIn( __METHOD__ );
 
 		if ( $row->rc_deleted ) {
@@ -437,10 +453,9 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 		$output = $this->getOutput();
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
-		$titleText = $title->getPrefixedText();
-
-		$comment = $row->rc_comment;
+		$comment = $this->formatComment( $row->rc_comment , $title );
 		$ts = new MWTimestamp( $row->rc_timestamp );
+		$username = $row->rc_user != 0 && isset( $row->rc_user_text ) ? htmlspecialchars( $row->rc_user_text ) : '';
 		$revId = $row->rc_this_oldid;
 
 		if ( $revId ) {
@@ -451,37 +466,12 @@ class SpecialMobileWatchlist extends SpecialWatchlist {
 			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalUrl();
 		}
 
-		if ( $row->rc_user == 0 ) {
-			$username = $this->msg( 'mobile-frontend-changeslist-ip' )->plain();
-			$usernameClass = 'mw-mf-user mw-mf-anon';
-		} else {
-			$username = htmlspecialchars( $row->rc_user_text );
-			$usernameClass = 'mw-mf-user';
-		}
-
-		if ( $comment === '' ) {
-			$comment = $this->msg( 'mobile-frontend-changeslist-nocomment' )->plain();
-		} else {
-			$comment = Linker::formatComment( $comment, $title );
-			// flatten back to text
-			$comment = Sanitizer::stripAllTags( $comment );
-		}
-
-		$output->addHtml(
-			'<li>' .
-			Html::openElement( 'a', array( 'href' => $diffLink, 'class' => 'title' ) ) .
-			Html::element( 'h2', array(), $titleText ).
-			Html::element( 'div', array( 'class' => $usernameClass ), $username ).
-			Html::element( 'p', array( 'class' => 'mw-mf-comment' ), $comment ) .
-			Html::element( 'div', array( 'class' => 'info' ), $ts->getHumanTimestamp() ) .
-			Html::closeElement( 'a' ) .
-			'</li>'
-		);
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title );
 
 		wfProfileOut( __METHOD__ );
 	}
 
-	private function showListResultRow( $row ) {
+	protected function showListResultRow( $row ) {
 		wfProfileIn( __METHOD__ );
 
 		$output = $this->getOutput();

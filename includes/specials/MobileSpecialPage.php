@@ -1,6 +1,7 @@
 <?php
 
 class MobileSpecialPage extends SpecialPage {
+	protected $mode = 'stable';
 	/**
 	 * @var bool: Whether this special page should appear on Special:SpecialPages
 	 */
@@ -10,6 +11,24 @@ class MobileSpecialPage extends SpecialPage {
 	 */
 	protected $unstyledContent = true;
 
+	/* Executes the page when available in the current $mode */
+	public function executeWhenAvailable( $subPage ) {}
+
+	public function execute( $subPage ) {
+		$ctx = MobileContext::singleton();
+		if ( $this->mode !== 'stable' ) {
+			if ( $this->mode === 'beta' && !$ctx->isBetaGroupMember() ) {
+				$this->renderOptinBanner();
+			} else if ( $this->mode === 'alpha' && !$ctx->isAlphaGroupMember() ) {
+				$this->renderOptinBanner();
+			} else {
+				$this->executeWhenAvailable( $subPage );
+			}
+		} else {
+			$this->executeWhenAvailable( $subPage );
+		}
+	}
+
 	public function setHeaders() {
 		parent::setHeaders();
 		$this->addModules();
@@ -17,6 +36,15 @@ class MobileSpecialPage extends SpecialPage {
 		if ( $this->unstyledContent ) {
 			$this->getOutput()->setProperty( 'unstyledContent', true );
 		}
+	}
+
+	protected function renderOptinBanner() {
+		$out = $this->getOutput();
+		$out->setProperty( 'unstyledContent', true );
+		$out->addHTML( Html::openElement( 'div', array( 'class' => 'alert warning' ) ) .
+			wfMessage( 'mobile-frontend-requires-optin' )->parse() .
+			Html::closeElement( 'div' )
+		);
 	}
 
 	protected function addModules() {
