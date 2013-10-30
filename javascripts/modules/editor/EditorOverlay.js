@@ -283,8 +283,7 @@
 					new Page( { title: title, el: $( '#content_wrapper' ) } ).on( 'ready', M.reloadPage );
 					M.router.navigate( '' );
 					self.hide();
-					// FIXME: What was the outcome of this A-B test?
-					if ( M.isTestA && self.isNewEditor ) {
+					if ( self.isNewEditor ) {
 						msg = 'mobile-frontend-editor-success-landmark-1';
 					} else {
 						className = 'toast';
