@@ -401,8 +401,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'javascripts/modules/languages/preferred.js',
 			'javascripts/modules/lastEdited/lastEditedBeta.js',
 			'javascripts/modules/keepgoing/keepgoing.js',
-			'javascripts/modules/tutorials/LeadPhotoTutorialOverlay.js',
-			'javascripts/modules/tutorials/newbieUploads.js',
 		),
 		'templates' => array(
 			'OverlayNew',
@@ -415,10 +413,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 
 			// for talk.js
 			'mobile-frontend-talk-overlay-header',
-
-			// newbieUploads.js
-			'mobile-frontend-lead-image-tutorial-summary',
-			'mobile-frontend-lead-image-tutorial-confirm',
 
 			// LastEditedBeta.js
 			'mobile-frontend-last-modified-with-user-seconds',
