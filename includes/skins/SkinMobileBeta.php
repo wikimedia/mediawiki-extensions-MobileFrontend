@@ -40,8 +40,6 @@ class SkinMobileBeta extends SkinMobile {
 
 	public function getSkinConfigVariables() {
 		$vars = parent::getSkinConfigVariables();
-		// force cta on in beta
-		$vars['wgMFEnablePhotoUploadCTA'] = true;
 		// Kill this when we fix the functionality in PageApi.js
 		$user = $this->getUser();
 		if ( $user->isLoggedIn() ) {

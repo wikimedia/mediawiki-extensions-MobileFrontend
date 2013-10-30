@@ -572,9 +572,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-drawer-cancel',
 			'mobile-frontend-overlay-escape',
 
-			// PhotoUploaderButton.js
-			'mobile-frontend-photo-upload-cta',
-
 			// LearnMoreOverlay.js, newbie.js
 			'cancel',
 

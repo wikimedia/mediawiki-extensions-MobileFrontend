@@ -1,7 +1,6 @@
 ( function( M, $ ) {
 	var View = M.require( 'view' ),
 		popup = M.require( 'notifications' ),
-		CtaDrawer = M.require( 'CtaDrawer' ),
 		PhotoUploaderButton,
 		LeadPhotoUploaderButton;
 
@@ -83,23 +82,7 @@
 		},
 
 		postRender: function() {
-			var self = this, $input = this.$( 'input' ), ctaDrawer;
-
-			// show CTA instead if not logged in
-			if ( !M.isLoggedIn() ) {
-				ctaDrawer = new CtaDrawer( {
-					content: mw.msg( 'mobile-frontend-photo-upload-cta' ),
-					queryParams: {
-						campaign: 'mobile_uploadPageActionCta',
-						returntoquery: 'article_action=photo-upload'
-					}
-				} );
-				this.$el.click( function( ev ) {
-					ctaDrawer.show();
-					ev.preventDefault();
-				} );
-				return;
-			}
+			var self = this, $input = this.$( 'input' );
 
 			$input.
 				// accept must be set via attr otherwise cannot use camera on Android

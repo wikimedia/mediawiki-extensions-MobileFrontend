@@ -381,7 +381,7 @@ class SkinMinerva extends SkinTemplate {
 			$wgMFUseCentralAuthToken,
 			$wgMFDeviceWidthTablet,
 			$wgMFAjaxUploadProgressSupport,
-			$wgMFAnonymousEditing, $wgMFEnablePhotoUploadCTA,
+			$wgMFAnonymousEditing,
 			$wgMFPhotoUploadEndpoint, $wgMFPhotoUploadAppendToDesc;
 
 		$title = $this->getTitle();
@@ -392,7 +392,6 @@ class SkinMinerva extends SkinTemplate {
 			'wgMFUseCentralAuthToken' => $wgMFUseCentralAuthToken,
 			'wgMFAjaxUploadProgressSupport' => $wgMFAjaxUploadProgressSupport,
 			'wgMFAnonymousEditing' => $wgMFAnonymousEditing,
-			'wgMFEnablePhotoUploadCTA' => $wgMFEnablePhotoUploadCTA,
 			'wgMFPhotoUploadAppendToDesc' => $wgMFPhotoUploadAppendToDesc,
 			'wgMFLeadPhotoUploadCssSelector' => $wgMFLeadPhotoUploadCssSelector,
 			'wgMFEnableCssAnimations' => $wgMFEnableCssAnimations,

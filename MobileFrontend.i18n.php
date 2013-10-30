@@ -270,7 +270,6 @@ $messages['en'] = array (
 	'mobile-frontend-photo-cancel' => 'Cancel',
 	'mobile-frontend-photo-upload-user-count' => '{{PLURAL:$1|<span>1</span> upload|<span>$1</span> uploads}}',
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ uploads',
-	'mobile-frontend-photo-upload-cta' => 'Please login or sign up to add an image.',
 	'mobile-frontend-photo-upload-login' => 'You must be logged in to add an image.',
 	'mobile-frontend-image-heading-describe' => "'''Describe''' image",
 	'mobile-frontend-image-uploading' => "'''Uploading''' image...",
