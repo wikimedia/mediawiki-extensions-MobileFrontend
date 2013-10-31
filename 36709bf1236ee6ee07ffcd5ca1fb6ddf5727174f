@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_ebb8e9c6",
+        "filename": "less/modules/uploads/PhotoUploaderButton.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T19:30:08Z",
+      "side": 1,
+      "message": "It looks like this is only used by Special:Uploads so could be moved to the badly named mobile.uploads.styles (Special page styling for uploads)",
+      "revId": "36709bf1236ee6ee07ffcd5ca1fb6ddf5727174f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_aba6f1ab",
+        "filename": "less/modules/uploadsNew/PhotoUploadOverlay.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T19:30:08Z",
+      "side": 1,
+      "message": "Did you mean to add this? I don\u0027t see it used anywhere.",
+      "revId": "36709bf1236ee6ee07ffcd5ca1fb6ddf5727174f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
