@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_51a1ac97",
+        "filename": "javascripts/specials/overlays/PagePreviewOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-10-31T22:24:24Z",
+      "side": 1,
+      "message": "Could you add a comment here stating what this conditional statement is for?",
+      "revId": "088417f77d52ca9fe811c4ffc5c5e6729cf5f288",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
