@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_31751094",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T21:44:54Z",
+      "side": 1,
+      "message": "I assume we decided not to use something in core like \u0027htmlform-yes\u0027 ?",
+      "revId": "ec6f5826ae262aac56db2f6250d36ae14d731034",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_d1811c52",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T21:44:54Z",
+      "side": 1,
+      "message": "changing this will make the existing stable workflow confusing... you could abuse PLURAL to do this to control the message depending on whether you are in beta or stable\nOr look at mobile-frontend-editor-guider and see if you can do something similar to that.",
+      "revId": "ec6f5826ae262aac56db2f6250d36ae14d731034",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_51dfec65",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T21:44:54Z",
+      "side": 1,
+      "message": "This looks a little nasty (although I understand why so not a criticism by any means).\n\nI\u0027m wondering if we could we not simply always call require( \u0027LoadingOverlay\u0027 )  / require( \u0027LoadingOverlay\u0027 )since it has the same interface and define it differently depending on the environment? Or is that not possible?\ngetDefaultModules could swap in the right javascript file that defines it and  using assertMode we can ensure that they are not loaded at the same time.",
+      "revId": "ec6f5826ae262aac56db2f6250d36ae14d731034",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
