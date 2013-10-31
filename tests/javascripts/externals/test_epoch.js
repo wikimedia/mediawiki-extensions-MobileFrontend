@@ -1,17 +1,13 @@
 ( function( H, $ ) {
-	var _h;
 	QUnit.module( 'epoch.js', {
 		setup: function() {
-			_h = H.history;
-			H.history = {
-				state: {},
-				replaceState: function() {},
-				pushState: function() {}
-			};
+			sinon.stub( window.history, 'pushState' );
+			sinon.stub( window.history, 'replaceState' );
 			H._enable();
 		},
 		teardown: function() {
-			H.history = _h;
+			window.history.replaceState.restore();
+			window.history.pushState.restore();
 		}
 	} );
 
