@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_5180ccf8",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T22:19:26Z",
+      "side": 1,
+      "message": "Is this common practice?",
+      "revId": "4727243519be0a4a1efaee7c35a1d35bf31671dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_71922858",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T22:19:26Z",
+      "side": 1,
+      "message": "This seems very hacky... I have no idea what is going on so please at very least add a comment :)",
+      "revId": "4727243519be0a4a1efaee7c35a1d35bf31671dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_b1c3c059",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T22:19:26Z",
+      "side": 1,
+      "message": "Please don\u0027t have this on a single line.",
+      "revId": "4727243519be0a4a1efaee7c35a1d35bf31671dd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
