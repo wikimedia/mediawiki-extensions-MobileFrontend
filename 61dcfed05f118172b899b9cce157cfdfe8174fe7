@@ -88,6 +88,24 @@
       "revId": "61dcfed05f118172b899b9cce157cfdfe8174fe7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_f1d37834",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T22:07:14Z",
+      "side": 1,
+      "message": "FYI:\nActually the timestamp it currently uses seems to be in the form\n\"20131031220458\"\nso your argument is invalid in 2 cases.\n\nnew Date( \"20131031220458\" )\nInvalid Date",
+      "parentUuid": "291c1151_bba7240d",
+      "revId": "61dcfed05f118172b899b9cce157cfdfe8174fe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
