@@ -5,8 +5,7 @@
 	PageActionOverlay = ContentOverlay.extend( {
 		template: M.template.get( 'modules/tutorials/PageActionOverlay' ),
 		defaults: {
-			cancelMsg: mw.msg( 'cancel' ),
-			className: 'slide active'
+			cancelMsg: mw.msg( 'cancel' )
 		}
 	} );
 

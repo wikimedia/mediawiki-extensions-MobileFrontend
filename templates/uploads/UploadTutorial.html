@@ -1,0 +1,20 @@
+<button class="prev"></button>
+<ul>
+	{{#pages}}
+	<li class="slide slide-image">
+		<strong>{{caption}}</strong>
+		<p>{{text}}</p>
+		{{#button}}
+		{{#fileButton}}
+		<div class="button cloaked">
+			{{button}}<input name="file" type="file">
+		</div>
+		{{/fileButton}}
+		{{^fileButton}}
+		<button class="cancel">{{button}}</button>
+		{{/fileButton}}
+		{{/button}}
+	</li>
+	{{/pages}}
+</ul>
+<button class="next"></button>

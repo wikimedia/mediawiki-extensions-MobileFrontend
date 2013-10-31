@@ -77,49 +77,58 @@
 		template: M.template.get( 'uploads/PhotoUploaderButton' ),
 		className: 'button photo',
 
-		initialize: function( options ) {
-			this._super( options );
-		},
-
 		postRender: function() {
 			var self = this, $input = this.$( 'input' );
+
+			function handleFile( file ) {
+				var options = $.extend( {}, self.options, {
+					file: file,
+					parent: self
+				} ),
+					LoadingOverlay, loadingOverlay;
+
+				// FIXME: remove when new uploads overlay in stable
+				if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+					LoadingOverlay = M.require( 'LoadingOverlay' );
+					loadingOverlay = new LoadingOverlay();
+					loadingOverlay.show();
+
+					mw.loader.using( 'mobile.uploads', function() {
+						var PhotoUploader = M.require( 'modules/uploads/PhotoUploader' );
+						loadingOverlay.hide();
+						new PhotoUploader( options );
+					} );
+				} else {
+					// make sure LoadingOverlayNew is present
+					mw.loader.using( 'mobile.beta', function() {
+						LoadingOverlay = M.require( 'LoadingOverlayNew' );
+						loadingOverlay = new LoadingOverlay();
+						loadingOverlay.show();
+
+						mw.loader.using( 'mobile.uploadsNew', function() {
+							var PhotoUploader = M.require( 'modules/uploadsNew/PhotoUploader' );
+							loadingOverlay.hide();
+							new PhotoUploader( options );
+						} );
+					} );
+				}
+			}
+
+			if ( mw.config.get( 'wgMFMode' ) !== 'stable' && mw.config.get( 'wgUserEditCount' ) === 0 ) {
+				this.$el.on( M.tapEvent( 'click' ), function( ev ) {
+					ev.preventDefault();
+					mw.loader.using( 'mobile.uploads.common', function() {
+						var UploadTutorial = M.require( 'modules/uploads/UploadTutorial' );
+						new UploadTutorial( { fileButton: true } ).on( 'file', handleFile ).show();
+					} );
+				} );
+			}
 
 			$input.
 				// accept must be set via attr otherwise cannot use camera on Android
 				attr( 'accept', 'image/*;' ).
 				on( 'change', function() {
-					var options = $.extend( {}, self.options, {
-						file: $input[0].files[0],
-						parent: self
-					} ),
-						LoadingOverlay, loadingOverlay;
-
-					// FIXME: remove when new uploads overlay in stable
-					if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
-						LoadingOverlay = M.require( 'LoadingOverlay' );
-						loadingOverlay = new LoadingOverlay();
-						loadingOverlay.show();
-
-						mw.loader.using( 'mobile.uploads', function() {
-							var PhotoUploader = M.require( 'modules/uploads/PhotoUploader' );
-							loadingOverlay.hide();
-							new PhotoUploader( options );
-						} );
-					} else {
-						// make sure LoadingOverlayNew is present
-						mw.loader.using( 'mobile.beta', function() {
-							LoadingOverlay = M.require( 'LoadingOverlayNew' );
-							loadingOverlay = new LoadingOverlay();
-							loadingOverlay.show();
-
-							mw.loader.using( 'mobile.uploadsNew', function() {
-								var PhotoUploader = M.require( 'modules/uploadsNew/PhotoUploader' );
-								loadingOverlay.hide();
-								new PhotoUploader( options );
-							} );
-						} );
-					}
-
+					handleFile( $input[0].files[0] );
 					// clear so that change event is fired again when user selects the same file
 					$input.val( '' );
 				} );

@@ -1,7 +1,7 @@
 ( function( M, $ ) {
 	var popup = M.require( 'notifications' ),
 		OverlayNew = M.require( 'OverlayNew' ),
-		LearnMoreOverlay = M.require( 'modules/uploadsNew/LearnMoreOverlay' ),
+		UploadTutorial = M.require( 'modules/uploads/UploadTutorial' ),
 		ownershipMessage = mw.msg( 'mobile-frontend-photo-ownership', mw.config.get( 'wgUserName' ), mw.user ),
 		PhotoUploadOverlay;
 
@@ -61,17 +61,8 @@
 
 			this.imageUrl = url;
 			$preview.removeClass( 'loading' );
-			this.$( 'a.help' ).on( 'click', function( ev ) {
-				ev.preventDefault(); // avoid setting #
-				new LearnMoreOverlay( {
-					parent: self,
-					bulletPoints: [
-						mw.msg( 'mobile-frontend-photo-ownership-bullet-one' ),
-						mw.msg( 'mobile-frontend-photo-ownership-bullet-two' ),
-						mw.msg( 'mobile-frontend-photo-ownership-bullet-three' )
-					],
-					leadText: ownershipMessage
-				} ).show();
+			this.$( '.help' ).on( 'click', function() {
+				new UploadTutorial( { parent: self } ).show();
 				self.log( { action: 'whatDoesThisMean' } );
 			} );
 			$( '<img>' ).

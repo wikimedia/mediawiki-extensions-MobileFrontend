@@ -199,10 +199,38 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 	),
 
 	// FIXME: merge into mobile.uploadsNew when mobile.uploads is gone
+	'mobile.uploads.tutorial' => $wgMFMobileResourceBoilerplate + array(
+		'dependencies' => array(
+			'mobile.stable',
+			'mobile.templates',
+		),
+		'scripts' => array(
+			'javascripts/modules/uploads/UploadTutorial.js',
+		),
+		'styles' => array(
+			'less/modules/uploads/UploadTutorial.less',
+		),
+		'templates' => array(
+			'uploads/UploadTutorial',
+		),
+		'messages' => array(
+			// UploadTutorial.js
+			'mobile-frontend-first-upload-wizard-new-page-1-header',
+			'mobile-frontend-first-upload-wizard-new-page-1',
+			'mobile-frontend-first-upload-wizard-new-page-2-header',
+			'mobile-frontend-first-upload-wizard-new-page-2',
+			'mobile-frontend-first-upload-wizard-new-page-3-header',
+			'mobile-frontend-first-upload-wizard-new-page-3',
+			'mobile-frontend-first-upload-wizard-new-page-3-ok',
+		),
+	),
+
+	// FIXME: merge into mobile.uploadsNew when mobile.uploads is gone
 	'mobile.uploads.common' => $wgMFMobileResourceBoilerplate + array(
 		'dependencies' => array(
 			'mobile.stable',
 			'mobile.templates',
+			'mobile.uploads.tutorial',
 		),
 		'scripts' => array(
 			'javascripts/modules/uploads/PhotoApi.js',
@@ -292,7 +320,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile.uploads.common',
 		),
 		'scripts' => array(
-			'javascripts/modules/uploadsNew/LearnMoreOverlay.js',
 			'javascripts/modules/uploadsNew/PhotoUploadProgress.js',
 			'javascripts/modules/uploadsNew/PhotoUploadOverlay.js',
 			'javascripts/modules/uploadsNew/PhotoUploader.js',
@@ -303,14 +330,10 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'templates' => array(
 			'uploadsNew/PhotoUploadOverlay',
 			'uploadsNew/PhotoUploadProgress',
-			'uploadsNew/LearnMoreOverlay',
 		),
 		'messages' => array(
 			'mobile-frontend-photo-upload-success-article',
 			'mobile-frontend-photo-upload-error',
-
-			// LearnMoreOverlay.js
-			'mobile-frontend-photo-ownership-confirm',
 
 			// PhotoUploadOverlay.js
 			'mobile-frontend-image-heading-describe' => array( 'parse' ),
@@ -318,9 +341,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'mobile-frontend-photo-ownership-help',
 			'mobile-frontend-photo-caption-placeholder',
 			'mobile-frontend-photo-submit',
-			'mobile-frontend-photo-ownership-bullet-one',
-			'mobile-frontend-photo-ownership-bullet-two',
-			'mobile-frontend-photo-ownership-bullet-three',
 			'mobile-frontend-photo-upload-error-file-type',
 			'mobile-frontend-photo-license' => array( 'parse' ),
 
@@ -855,32 +875,23 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 		'dependencies' => array(
 			'mobile.stable.styles',
 			'mobile.stable.common',
-			'mobile.uploads',
 			'mobile.templates',
+			// FIXME: remove when new uploads overlay in stable
+			'mobile.uploads.tutorial',
 		),
 		'templates' => array(
-			'specials/uploads/carousel',
 			'specials/uploads/photo',
 			'specials/uploads/userGallery',
 		),
 		'messages' => array(
+			'mobile-frontend-donate-image-nouploads',
 			'mobile-frontend-photo-upload-generic',
 			'mobile-frontend-donate-photo-upload-success',
 			'mobile-frontend-donate-photo-first-upload-success',
 			'mobile-frontend-listed-image-no-description',
 			'mobile-frontend-photo-upload-user-count',
-			'mobile-frontend-first-upload-wizard-new-page-1-header',
-			'mobile-frontend-first-upload-wizard-new-page-1',
-			'mobile-frontend-first-upload-wizard-new-page-2-header',
-			'mobile-frontend-first-upload-wizard-new-page-2',
-			'mobile-frontend-first-upload-wizard-new-page-3-header',
-			'mobile-frontend-first-upload-wizard-new-page-3',
-			'mobile-frontend-first-upload-wizard-new-page-3-ok',
-			'mobile-frontend-donate-image-nouploads',
 		),
 		'scripts' => array(
-			'javascripts/widgets/carousel.js',
-			'javascripts/specials/overlays/CarouselOverlay.js',
 			'javascripts/specials/uploads.js',
 		),
 		'position' => 'top',

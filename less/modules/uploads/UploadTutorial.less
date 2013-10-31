@@ -1,0 +1,122 @@
+@import "../../mixins.less";
+
+// FIXME: Make this global - file inputs are notoriously difficult to style
+// We already use it in several places
+.cloaked {
+	input {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.carousel {
+	@buttonWidth: 40px;
+
+	position: relative;
+	.box-sizing(border-box);
+	overflow: hidden;
+
+	> button {
+		text-indent: -9999px;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: @buttonWidth;
+		bottom: 0;
+		z-index: 4;
+		background: 50% 50% no-repeat;
+		.background-size( auto, 20px );
+		// remove ugly outline
+		outline: none;
+
+		&.prev {
+			left: 0;
+			background-image: url(../images/uploads/chevronLeft.png);
+		}
+
+		&.next {
+			right: 0;
+			background-image: url(../images/uploads/chevronRight.png);
+		}
+	}
+
+	.slide {
+		@imageHeight: 180px;
+
+		position: absolute;
+		left: 0;
+		right: 0;
+		background: 50% 0 no-repeat;
+		.background-size(auto, @imageHeight);
+		display: none;
+		padding: 0 @buttonWidth;
+
+		&.active {
+			display: block;
+		}
+
+		strong {
+			display: block;
+			font-size: 1.1em;
+			margin: 0 0 1em;
+		}
+
+		&.slide-image {
+			padding-top: @imageHeight;
+		}
+
+		&:nth-child(1) {
+			background-image: url(../images/uploads/page1.png);
+		}
+
+		&:nth-child(2) {
+			background-image: url(../images/uploads/page2.png);
+		}
+
+		&:nth-child(3) {
+			background-image: url(../images/uploads/page3.png);
+		}
+	}
+}
+
+.animations {
+	.carousel {
+		.slide {
+			display: block;
+			.transform( translate3d(-100%, 0, 0) );
+			.transition-transform( .5s );
+
+			&.active {
+				.transform( none );
+			}
+
+			&.active ~ .slide {
+				.transform( translate3d(100%, 0, 0) );
+			}
+		}
+	}
+}
+
+html[dir="rtl"] .carousel > button {
+	.transform(rotate(180deg));
+}
+
+html[dir="rtl"].animations {
+	.carousel {
+		.slide {
+			.transform( translate3d(100%, 0, 0) );
+
+			&.active {
+				.transform( none );
+			}
+
+			&.active ~ .slide {
+				.transform( translate3d(-100%, 0, 0) );
+			}
+		}
+	}
+}

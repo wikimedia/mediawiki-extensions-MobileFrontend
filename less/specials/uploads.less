@@ -1,75 +1,15 @@
 @import "../mixins.less";
 
-/* carousel css */
-.overlay-carousel {
-	height: 100%;
-}
+ul.mobileUserGallery {
+	margin: 20px @contentMarginRight 0 @contentMarginLeft;
 
-// FIXME: merge some of this with .tutorial
-.carousel {
-	@buttonPadding: 4px;
+	li {
+		text-align: center;
+		padding-bottom: 20px;
 
-	position: relative;
-	.box-sizing( border-box );
-
-	> button {
-		padding: 0;
-		visibility: hidden;
-		border: none;
-		text-indent: -9999px;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-		width: @searchBarPaddingLeft;
-		bottom: 0;
-
-		&.prev {
-			left: @buttonPadding;
-			background: url(images/uploads/chevron_left.png) 20% center no-repeat;
-			.background-size( auto, 20px );
-		}
-
-		&.next {
-			right: @buttonPadding;
-			background: url(images/uploads/chevron_right.png) 80% center no-repeat;
-			.background-size( auto, 20px );
-		}
-
-		&.active {
-			visibility: visible;
-		}
-	}
-
-	.slide {
-		left: 100%;
-		visibility: hidden;
-
-		&.active {
-			visibility: visible;
-			left: @contentMarginLeft;
-		}
-
-		p, strong {
-			line-height: 1.4;
-		}
-
-		strong {
-			display: block;
-			font-size: 1.1em;
-			margin: 0 26px 16px;
-		}
-
-		&.slide-image {
-			padding-top: 146px;
-		}
-
-		// FIXME: Make page-1 and page-2 more generic and reusable?
-		&.page-1 {
-			background-image: url(images/uploads/SplashScreen1.png);
-		}
-
-		&.page-2 {
-			background-image: url(images/uploads/SplashScreen2.png);
+		p { // description
+			color: #565656;
+			line-height: 1.2;
 		}
 	}
 }
@@ -85,56 +25,5 @@
 		font-size: 1.25em;
 		margin: 0 0 .5em;
 		text-align: center;
-	}
-}
-
-// Make things slide!
-.slideable {
-	width: 100%;
-	overflow: hidden;
-	.slider {
-		position: absolute;
-		&.slider-left {
-			left: -100%;
-		}
-		&.active {
-			left: 0;
-			position: relative;
-		}
-		&.slider-right {
-			left: 100%;
-		}
-	}
-
-}
-
-.animations {
-	.slideable {
-		.slider {
-			left: 0;
-			.transition( .5s );
-
-			&.slider-left {
-				.transform( translate3d(-100%, 0, 0) )
-			}
-
-			&.slider-right {
-				.transform( translate3d(100%, 0, 0) )
-			}
-		}
-	}
-}
-
-ul.mobileUserGallery {
-	margin: 20px @contentMarginRight 0 @contentMarginLeft;
-
-	li {
-		text-align: center;
-		padding-bottom: 20px;
-
-		p { // description
-			color: #565656;
-			line-height: 1.2;
-		}
 	}
 }

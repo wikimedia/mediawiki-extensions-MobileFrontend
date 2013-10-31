@@ -4,7 +4,6 @@ var
 	popup = M.require( 'notifications' ),
 	Api = M.require( 'api' ).Api,
 	View = M.require( 'view' ),
-	CarouselOverlay = M.require( 'overlays/CarouselOverlay' ),
 	corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
 	pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 	currentUserName = mw.config.get( 'wgUserName' ),
@@ -120,6 +119,7 @@ var
 						self.$end.remove();
 						if ( self.isEmpty() ) {
 							self.emit( 'empty' );
+							self.showEmptyMessage();
 						}
 					}
 				} ).fail( function() {
@@ -156,40 +156,21 @@ var
 	}
 
 	function init() {
-		var $container, userGallery, emptyHandler;
+		var $container, userGallery;
 
 		userGallery = new PhotoList().appendTo( '#content_wrapper' );
-		if ( currentUserName === userName ) {
-			emptyHandler = function() {
-				new CarouselOverlay( {
-					pages: [
-						{
-							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1-header' ),
-							text: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-1' ),
-							className: 'page-1 slide-image', id: 1
-						},
-						{
-							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-2-header' ),
-							text: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-2' ),
-							className: 'page-2 slide-image', id: 2
-						},
-						{
-							caption: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-header' ),
-							cancel: mw.msg( 'mobile-frontend-first-upload-wizard-new-page-3-ok' ),
-							className: 'photo-upload slide-image', id: 3
-						}
-					]
-				} ).show();
-			};
-		} else {
-			emptyHandler = function() {
-				userGallery.showEmptyMessage();
-			};
-		}
-		userGallery.on( 'empty', emptyHandler );
 
 		if ( PhotoUploaderButton.isSupported && currentUserName === userName ) {
 			$container = $( '.ctaUploadPhoto' );
+
+			// FIXME: remove when new uploads overlay in stable
+			if ( mw.config.get( 'wgMFMode' ) === 'stable' ) {
+				userGallery.on( 'empty', function() {
+					console.log(111);
+					var UploadTutorial = M.require( 'modules/uploads/UploadTutorial' );
+					new UploadTutorial().show();
+				} );
+			}
 
 			new PhotoUploaderButton( {
 				buttonCaption: mw.msg( 'mobile-frontend-photo-upload-generic' ),
