@@ -51,6 +51,24 @@
       "revId": "584b6fb8d037a48423ef0ac1be18bd81e8a68991",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_515d31e8",
+        "filename": "less/common/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-10-31T02:02:35Z",
+      "side": 1,
+      "message": "You only need background on the body tag though right for this corner case...\n\nI assume the height 100% is for overlays?",
+      "parentUuid": "291c1151_712a2d81",
+      "revId": "584b6fb8d037a48423ef0ac1be18bd81e8a68991",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
