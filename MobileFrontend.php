@@ -423,3 +423,9 @@ $wgMFDeviceWidthTablet = 768;
  * on small screens
  */
 $wgMFDeviceWidthMobileSmall = 280;
+
+/**
+ * Temporary boolean variable to control EventLogging of viewing infoboxes (see loggingSchemas/MobileWebInfobox)
+ * @var bool
+ */
+$wgMFInfoboxLogging = false;

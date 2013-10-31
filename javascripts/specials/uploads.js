@@ -81,6 +81,9 @@ var
 			this.$list = this.$( 'ul' );
 
 			this._loadPhotos();
+			// FIXME: Consider using setInterval instead or some sort of dethrottling/debouncing to avoid performance
+			// degradation
+			// e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
 			$( window ).on( 'scroll', $.proxy( this, '_loadPhotos' ) );
 		},
 		isEmpty: function() {
