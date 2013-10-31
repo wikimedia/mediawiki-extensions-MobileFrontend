@@ -34,6 +34,23 @@
       "revId": "584b6fb8d037a48423ef0ac1be18bd81e8a68991",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_712a2d81",
+        "filename": "less/common/ui.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-10-31T00:17:24Z",
+      "side": 1,
+      "message": "This is still not a good comment. Setting background to white is quite obvious. Go to Preferences in Firefox -\u003e Content -\u003e Colors and set the background to black. Whoops. We do not want the user to be able to change background color. I know this is a corner case but setting background color on body is a good standard practice.",
+      "revId": "584b6fb8d037a48423ef0ac1be18bd81e8a68991",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
