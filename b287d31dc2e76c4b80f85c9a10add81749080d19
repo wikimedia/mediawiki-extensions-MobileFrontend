@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_e52572b1",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-01T19:46:30Z",
+      "side": 1,
+      "message": "Should this have a leading colon to prevent an image from being displayed instead of a link to an image page?",
+      "revId": "b287d31dc2e76c4b80f85c9a10add81749080d19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
