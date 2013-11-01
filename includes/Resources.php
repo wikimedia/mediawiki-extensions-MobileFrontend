@@ -112,8 +112,6 @@ $wgResourceModules = array_merge( $wgResourceModules, array(
 			'less/common/typography.less',
 			'less/common/footer.less',
 			'less/modules/toggle.less',
-			// FIXME: move to module mobile.stable.styles for some reason it breaks RTL when in that module
-			'less/common/navigation.less',
 			'less/common/overlays.less',
 			'less/common/drawer.less',
 			'less/common/hacks.less',
