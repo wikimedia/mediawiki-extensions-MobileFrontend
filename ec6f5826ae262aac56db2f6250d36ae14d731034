@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_f13538f6",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T00:20:53Z",
+      "side": 1,
+      "message": "I was looking for it. If this message\u0027s key was \"yes\", I\u0027d use it, but I don\u0027t know what htmlform- is...",
+      "parentUuid": "291c1151_31751094",
+      "revId": "ec6f5826ae262aac56db2f6250d36ae14d731034",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_d1811c52",
         "filename": "MobileFrontend.i18n.php",
         "patchSetId": 2
@@ -47,6 +65,24 @@
       "writtenOn": "2013-10-31T21:44:54Z",
       "side": 1,
       "message": "This looks a little nasty (although I understand why so not a criticism by any means).\n\nI\u0027m wondering if we could we not simply always call require( \u0027LoadingOverlay\u0027 )  / require( \u0027LoadingOverlay\u0027 )since it has the same interface and define it differently depending on the environment? Or is that not possible?\ngetDefaultModules could swap in the right javascript file that defines it and  using assertMode we can ensure that they are not loaded at the same time.",
+      "revId": "ec6f5826ae262aac56db2f6250d36ae14d731034",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_113d74db",
+        "filename": "javascripts/modules/uploads/PhotoUploaderButton.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T00:20:53Z",
+      "side": 1,
+      "message": "That\u0027s how I did it at first, but I quickly realised that this makes QUnit tests fail and for a good reason. On the test page, all the modules are loaded, so we can\u0027t invoke M.define() with the same name twice because it will throw an exception that something with that name is already defined...",
+      "parentUuid": "291c1151_51dfec65",
       "revId": "ec6f5826ae262aac56db2f6250d36ae14d731034",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
