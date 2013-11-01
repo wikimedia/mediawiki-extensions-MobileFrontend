@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "291c1151_800cac3b",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-01T22:23:04Z",
+      "side": 1,
+      "message": "Do users know what GeoData is? I can\u0027t really find a definition for what this is spelled this way.",
+      "revId": "e5af861aaa471f3d74282780acff9045e5543b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_0dc72749",
         "filename": "MobileFrontend.php",
         "patchSetId": 4
