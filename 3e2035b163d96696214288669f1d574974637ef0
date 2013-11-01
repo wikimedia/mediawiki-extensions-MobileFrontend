@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_65b4227f",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T21:52:36Z",
+      "side": 1,
+      "message": "?",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e5ed7290",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T21:52:36Z",
+      "side": 1,
+      "message": "Any reason we\u0027re not using jQuery?",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_a5fc5a3c",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T21:52:36Z",
+      "side": 1,
+      "message": "What is startScroll? It\u0027s never set...",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_25a14a4b",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T21:52:36Z",
+      "side": 1,
+      "message": "If I understand correctly, this will also return true if someone scrolls past the infobox and the infobox is no longer in the viewport...\n\nI also don\u0027t like how logData is used. Let\u0027s make it an object that contains only logData and use local variables for other things. This is just confusing.",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_05c36ef1",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T21:52:36Z",
+      "side": 1,
+      "message": "Citation needed.",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e5c49212",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-01T21:52:36Z",
+      "side": 1,
+      "message": "?",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
