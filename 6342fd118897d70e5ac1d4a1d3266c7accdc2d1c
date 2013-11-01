@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_1ae909ba",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-11-01T18:33:25Z",
+      "side": 1,
+      "message": "Translators tell me that if you have a limited number of yes/no questions, they\u0027d rather have this duplicated for each question. Reason for this is that the inflection of the answer to the question may depend on the question in some languages.",
+      "revId": "6342fd118897d70e5ac1d4a1d3266c7accdc2d1c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
