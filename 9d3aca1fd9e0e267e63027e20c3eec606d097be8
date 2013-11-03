@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_03d44145",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-03T21:52:29Z",
+      "side": 1,
+      "message": "Same as I said in earlier patchset this changes the text of the stable photo uploader. I guess this is not a big deal and I don\u0027t really want to -1 on this but we should check with others before doing this.",
+      "revId": "9d3aca1fd9e0e267e63027e20c3eec606d097be8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
