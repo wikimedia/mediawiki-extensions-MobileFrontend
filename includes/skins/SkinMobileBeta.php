@@ -22,7 +22,9 @@ class SkinMobileBeta extends SkinMobile {
 
 	protected function getHistoryLink( Title $title ) {
 		$link = parent::getHistoryLink( $title );
-		$link['class'] = 'top-bar';
+		if ( !$title->isMainPage() ) {
+			$link['class'] = 'top-bar';
+		}
 		return $link;
 	}
 
