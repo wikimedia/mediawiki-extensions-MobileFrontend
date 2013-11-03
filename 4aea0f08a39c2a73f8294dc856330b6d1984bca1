@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_437c796f",
+        "filename": "includes/Resources.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-03T21:47:24Z",
+      "side": 1,
+      "message": "This isn\u0027t being uploaded by the new uploads module... This means that the image preview in beta is now different from the one in stable. Although you obviously change this in the next commit we should ensure every commit leaves the code in a deployable state.",
+      "revId": "4aea0f08a39c2a73f8294dc856330b6d1984bca1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_2385bd5b",
+        "filename": "less/modules/uploads.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2013-11-03T21:47:24Z",
+      "side": 1,
+      "message": "This rule is the one I\u0027m not seeing in beta. Without it, it is impossible to add a summary to an image.",
+      "revId": "4aea0f08a39c2a73f8294dc856330b6d1984bca1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
