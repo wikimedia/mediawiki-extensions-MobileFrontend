@@ -360,6 +360,7 @@ $messages['en'] = array (
  * @author EugeneZelenko
  * @author Fryed-peach
  * @author Kghbln
+ * @author Lloffiwr
  * @author McDutchie
  * @author Minh Nguyen
  * @author Mormegil
@@ -912,7 +913,7 @@ Note: $2 and $3 are capped at the value of MobileUserInfo::LIMIT currently 500.'
 	'mobile-frontend-profile-last-upload-caption' => 'Parameters:
 * $1 - the username
 * $2 - the amount of days ago the image was uploaded',
-	'mobile-frontend-profile-registration' => 'Summary saying how many days the user ($1) has been a member ($2) and how many total edits they has made ($3).
+	'mobile-frontend-profile-registration' => 'Summary saying how many days the user ($1) has been a member ($2) and how many total edits they have made ($3).
 
 Parameters:
 * $1 - username
@@ -2966,6 +2967,7 @@ $messages['ce'] = array(
 	'mobile-frontend-diffview-title' => 'Хийцам',
 	'mobile-frontend-photo-submit' => 'ДӀадахьийта',
 	'mobile-frontend-photo-cancel' => 'Цаоьшу',
+	'mobile-frontend-editor-continue' => 'Кхин дӀа',
 	'tag-mobile_edit' => 'Мобиль-ца. дийна нисдар',
 	'tag-mobile_edit-description' => 'Сайтан мобильни версеца дина нисдарш',
 	'mobile-frontend-drawer-cancel' => 'Цаоьшу',
@@ -3389,6 +3391,7 @@ $messages['cy'] = array(
 	'mobile-frontend-last-modified-with-user-days' => '[$4 Golygwyd {{GENDER:$1|ddiwethaf}} {{PLURAL:$3||$3 diwrnod|deuddydd|tridiau|$3 diwrnod}} yn ôl] gan {{PLURAL:$5|ddefnyddiwr dienw|[$6 $2]}}',
 	'mobile-frontend-last-modified-with-user-months' => '[$4 Golygwyd {{GENDER:$1|ddiwethaf}} {{PLURAL:$3||$3 mis|deufis|$3 mis}} yn ôl] gan {{PLURAL:$5|ddefnyddiwr dienw|[$6 $2]}}',
 	'mobile-frontend-last-modified-with-user-years' => '[$4 Golygwyd {{GENDER:$1|ddiwethaf}} {{PLURAL:$3||blwyddyn|$3 flynedd|$3 mlynedd|$3 mlynedd|$3 blynedd}} yn ôl] gan {{PLURAL:$5|ddefnyddiwr dienw|[$6 $2]}}',
+	'mobile-frontend-last-modified-with-user-just-now' => '[$3 {{GENDER:$1|Golygwyd}}] y dudalen gynnau gan {{PLURAL:$4|ddefnyddiwr dienw|[$5 $2]}}.',
 	'mobile-frontend-learn-more' => 'Mwy o wybodaeth',
 	'mobile-frontend-account-create-submit' => 'Cofrestru',
 	'mobile-frontend-password-confirm-placeholder' => 'Gwirwch eich cyfrinair',
@@ -3536,6 +3539,7 @@ $messages['cy'] = array(
 	'mobile-frontend-photo-upload-user-count-over-limit' => '500+ o uwchlwythiadau',
 	'mobile-frontend-photo-upload-cta' => 'Rhaid mewngofnodi neu gofrestru er mwyn ychwanegu delwedd.',
 	'mobile-frontend-photo-upload-login' => 'Rhaid mewngofnodi er mwyn ychwanegu delwedd.',
+	'mobile-frontend-editor-undo-unsupported' => 'Ni ellir ddadwneud ar declynnau symudol, ar hyn o bryd.',
 	'mobile-frontend-editor-newpage-prompt' => "Nid yw'r dudalen ar gael eto. Beth am fentro a'i dechrau!",
 	'mobile-frontend-editor-disabled' => "Ni chewch olygu'r dudalen hon.",
 	'mobile-frontend-editor-unavailable' => "Ar hyn o bryd, nid oes modd golygu â'ch porwr presennol o'r teclyn symudol. Ceisiwch ddefnyddio porwr gwahanol.",
@@ -3561,6 +3565,8 @@ $messages['cy'] = array(
 	'mobile-frontend-editor-tutorial-summary' => "Peidiwch â bod ofn cystrawen wici. Ceisiwch wella'r dudalen $1.",
 	'mobile-frontend-editor-tutorial-confirm' => 'Dechrau golygu',
 	'mobile-frontend-editor-captcha-try-again' => 'Cod anghywir, ceisiwch eto.',
+	'mobile-frontend-editor-abusefilter-warning' => "Rhybudd: Ydych chi wir am roi'r golygiad hwn ar gadw? Efallai bod problem gan y golygiad.",
+	'mobile-frontend-editor-abusefilter-disallow' => "Ni ellir rhoi'r golgyiad ar gadw oherwydd bod problem i gael.",
 	'mobile-frontend-editor-abusefilter-read-more' => 'Darllen mwy',
 	'tag-mobile_edit' => 'Golygiad drwy declyn symudol',
 	'tag-mobile_edit-description' => 'Newidiwyd gyda theclyn symudol',
@@ -3580,14 +3586,20 @@ $messages['cy'] = array(
 	'mobile-frontend-media-details' => 'Manylion',
 	'abusefilter-edit-builder-vars-user-mobile' => "P'un ai yw defnyddiwr yn golygu gyda'r rhyngwyneb symudol ai pheidio",
 	'mobile-frontend-profile-title' => 'Data personol',
+	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|Dim golygiadau|$2 golygiad|$2 olygiad|$2 golygiad|501=Mwy na 500 golygiad}}]] a
+[[Special:Uploads/$1|{{PLURAL:$3|Dim uwchlwythiadau|$3 uwchlywthiad|501=mwy na 500 uwchlwythiad}}]] yn ystod y 30 diwrnod diwethaf.',
+	'mobile-frontend-profile-last-upload-caption' => '{{GENDER:$1|$1}} gwblhaodd yr uwchlwythiad diweddaraf, {{PLURAL:$2|heddiw|ddoe|deuddydd yn ôl|tridiau yn ôl|$2 diwrnod yn ôl}}.',
+	'mobile-frontend-profile-registration' => 'Mae $1 wedi bod yn cyfrannu i {{SITENAME}} ers {{PLURAL:$2|$2 diwrnod|$2 dydd|deuddydd|tridiau|$2 diwrnod}} gan {{GENDER:$1|gwblhau}} {{PLURAL:$3|$3 golygiad|$3 golygiad|$3 olygiad|$3 golygiad}}.',
 	'mobile-frontend-profile-usertalk' => 'Edrych ar y dudalen sgwrs.',
 	'mobile-frontend-profile-noargs' => 'Rhowch enw defnyddiwr i weld y data personol.',
+	'mobile-frontend-profile-nouser' => "Enw nad yw'n bod neu sy'n annilys",
 	'mobile-frontend-profile-yours' => 'Ymweld â thudalen eich data personol.',
 	'mobile-frontend-profile-userpage-link' => 'Ymweld â thudalen y defnyddiwr.',
 	'mobile-frontend-profile-user-desc-1' => "Mae'r {{GENDER:$1|defnyddiwr hwn}} yn olygydd newydd.",
 	'mobile-frontend-profile-user-desc-2' => 'Mae ychydig o brofiad gan y {{GENDER:$1|defnyddiwr hwn}}.',
 	'mobile-frontend-profile-user-desc-3' => "Mae'r {{GENDER:$1|defnyddiwr hwn}} yn olygydd toreithiog.",
 	'mobile-frontend-requires-optin' => "Rhaid dewis y modd beta er mwyn cael mynediad i'r dudalen hon. Ewch i [[Special:MobileOptions|dudalen y dewisiadau]] i ddewis y modd beta.",
+	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Cafodd ei ddiolch}} ddiwethaf gan [[Special:UserProfile/$1|$1]] am olygiad i [[$2]].',
 	'mobile-frontend-geonotahack' => "Yng nghyffiniau'r dudalen hon",
 );
 
@@ -6383,6 +6395,9 @@ $messages['frr'] = array(
 	'mobile-frontend-password-placeholder' => 'Paaswurd',
 	'mobile-frontend-login' => 'Uunmelde',
 	'mobile-frontend-history' => 'Ferluup faan detdiar sidj uunluke.',
+	'mobile-frontend-history-404-title' => 'Son sidjennööm as ei tuläät',
+	'mobile-frontend-history-404-desc' => "För en sidj, diar't ei jaft, könst dü nään ferluup uunluke. Ferlicht as det sidj stregen wurden, of dü beest en faalsk ferwisang fulagt.",
+	'mobile-frontend-history-summary' => 'Sidjenferluup faan [[$1]]',
 	'mobile-frontend-last-modified-date' => 'Tuleetst feranert di $1 am a klook $2',
 	'mobile-frontend-last-modified-seconds' => 'Tuleetst feranert föör {{PLURAL:$1|ian sekund|$1 sekunden}}',
 	'mobile-frontend-last-modified-minutes' => 'Tuleetst feranert föör {{PLURAL:$1|ian minüüt|$1 minüüten}}',
@@ -10764,7 +10779,7 @@ $messages['lb'] = array(
 	'mobile-frontend-user-button-tooltip' => 'Meng Notifikatioune weisen',
 	'mobile-frontend-nearby-to-page' => 'Dës Säiten hunn, duerch hier geographesch Plaz, eppes mat $1 ze dinn',
 	'mobile-frontend-nearby-title' => 'Nobäi',
-	'mobile-frontend-nearby-loading' => 'Sujete vun no bäi der Plaz wou Dir elo sidd gi gelueden',
+	'mobile-frontend-nearby-loading' => 'Sujete vun no bei der Plaz wou Dir elo sidd gi gelueden',
 	'mobile-frontend-nearby-requirements' => 'Leider ënnerstëtzt Ären Internetbrowser {{SITENAM}} Nearby net.',
 	'mobile-frontend-nearby-requirements-guidance' => 'Probéiert en anere Browser oder aktivéiert Javascript wann Dir deen ausgeschalt hutt.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 km}}',
@@ -10773,7 +10788,7 @@ $messages['lb'] = array(
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Probéiert eng oppe Fläch mat engem bessere Signal.',
 	'mobile-frontend-nearby-permission-guidance' => "Vergewëssert Iech datt Dir d'Autorisatioun ginn hutt fir ze weise wou Dir sidd. Et ka sinn datt Dir Lokalisatiounsastellunge vun Ärem Browser nokucke musst.",
 	'mobile-frontend-nearby-noresults' => 'Et ass roueg hei... Et goufe keng Säiten aus der Géigend fonnt.',
-	'mobile-frontend-nearby-noresults-guidance' => "Probéiert eng nei Säit ze schreiwen oder d'Plaz bäi eng Säit déi et gëtt derbäizesetzen",
+	'mobile-frontend-nearby-noresults-guidance' => "Probéiert eng nei Säit ze schreiwen oder d'Plaz bei eng Säit déi et gëtt derbäizesetzen",
 	'mobile-frontend-nearby-refresh' => "Mir hunn eng Plaz fir Iech fonnt déi besser passt. Klickt hei fir d'Lëscht vun de Säiten aus der Ëmgéigend z'aktualiséieren",
 	'mobile-frontend-nearby-error' => "{{SITENAME}} 'Nearby' huet e puer Problemer.",
 	'mobile-frontend-nearby-error-guidance' => "Probéiert d'Plaz wou Dir sidd z'aktualiséieren.",
@@ -10782,7 +10797,7 @@ $messages['lb'] = array(
 	'mobile-frontend-donate-image-nouploads' => 'Keng eropgeluede Fichieren.',
 	'mobile-frontend-donate-image-login' => 'Dir musst ageloggt si fir déi Fichieren ze gesinn déi Dir eropgelueden hutt.',
 	'mobile-frontend-photo-upload-disabled' => 'Op dëser Säit gëtt kee Bild gebraucht.',
-	'mobile-frontend-photo-upload-anon' => 'Dir musst ageloggt si fir e Bild bäi dës Säit derbäizesetzen.',
+	'mobile-frontend-photo-upload-anon' => 'Dir musst ageloggt si fir e Bild bei dës Säit derbäizesetzen.',
 	'mobile-frontend-photo-upload-protected' => 'Dir hutt net déi néideg Rechter fir op dës Säit e Bild derbäizesetzen.',
 	'mobile-frontend-photo-upload-unavailable' => "Äre Browser ënnerstëtzt d'Eropluede vu Biller net.",
 	'mobile-frontend-photo-upload-generic' => 'E Bild bäidroen',
@@ -13301,7 +13316,7 @@ $messages['oc'] = array(
 	'mobile-frontend-account-create-submit' => 'Inscrivètz-vos',
 	'mobile-frontend-password-confirm-placeholder' => 'Confirmatz lo senhal',
 	'mobile-frontend-account-create-email-placeholder' => 'Adreça de corrièl (facultativa)',
-	'mobile-frontend-account-create-captcha-placeholder' => 'Entratz lo tèxte de seguretat',
+	'mobile-frontend-account-create-captcha-placeholder' => 'Entratz lo còde de confirmacion',
 	'mobile-frontend-overlay-escape' => 'Retorn en arrièr',
 	'mobile-frontend-placeholder' => 'Recercar sus {{SITENAME}}',
 	'mobile-frontend-placeholder-beta' => 'Recercar {{SITENAME}} (Bèta)',
@@ -13310,7 +13325,7 @@ $messages['oc'] = array(
 	'mobile-frontend-clear-search' => 'Escafar',
 	'mobile-frontend-privacy-link-text' => 'Confidencialitat',
 	'mobile-frontend-footer-sitename' => '{{SITENAME}}',
-	'mobile-frontend-copyright' => "<a class='internal' href='/wiki/Wikipèdia:Drech_d%27autor' title='Drech d'autor'>Drech d'autor</a> : Los tèxtes son disponibles jos <a href='http://creativecommons.org/licenses/by-sa/3.0/'>licéncia Creative Commons atribucion pertatge a l’identic</a> ; d’autres tèrmes se pòdon aplicar. Vejatz los <a href='http://wikimediafoundation.org/wiki/Terms_of_Use'>tèrmes d’utilizacion</a> per mai de detalhs. {{SITENAME}}® es una marca depausada de la <a href='http://wikimediafoundation.org/wiki/Acuèlh' title='Wikimedia Foundation'>Wikimedia Foundation, Inc.</a>, organizacion de benfasença regida pel paragraf <a class='internal' href='/wiki/501c' title='501c'>501(c)(3)</a> del còde fiscal dels Estats Units.", # Fuzzy
+	'mobile-frontend-copyright' => 'Lo contengut es disponible jos licéncia $1 levat mencion contrària.',
 	'mobile-frontend-footer-contact' => 'Contacte',
 	'mobile-frontend-main-menu-button-tooltip' => 'Dobrir lo menú principal',
 	'mobile-frontend-main-menu-page-title' => 'Navigacion dins lo site',
@@ -14115,8 +14130,8 @@ Për piasì, ch'a sara e ch'a preuva torna.",
 	'mobile-frontend-profile-user-desc-1' => "{{GENDER:$1|Cost utent}} a l'é un contributor neuv.",
 	'mobile-frontend-profile-user-desc-2' => "{{GENDER:$1|Cost utent}} a l'é un contributor con assè d'esperiensa.",
 	'mobile-frontend-profile-user-desc-3' => "{{GENDER:$1|Cost utent}} a l'é un contributor costant.",
-	'mobile-frontend-requires-optin' => "Costa pàgina a l'é nen disponìbil gavà s'a l'ha sernù nòstra manera beta. Ch'a vada an sla [Special:MobileOptions|pàgina dij sò gust]] për sern-la.", # Fuzzy
-	'mobile-frontend-profile-last-thanked' => "{{GENDER:$1|Ringrassia l'ùltima vira}} da [Special:UserProfile/$1|$1]] për na modìfica a [[$2]].", # Fuzzy
+	'mobile-frontend-requires-optin' => "Costa pàgina-sì a l'é nen disponìbil gavà s'a l'ha sernù nòstra manera beta. Ch'a vada an sla [[Special:MobileOptions|pàgina dij sò gust]] për sern-la.",
+	'mobile-frontend-profile-last-thanked' => "{{GENDER:$1|Ringrassià l'ùltima vira}} da [[Special:UserProfile/$1|$1]] për na modìfica a [[$2]].",
 	'mobile-frontend-geonotahack' => 'Davzin a costa pàgina',
 );
 
@@ -14937,6 +14952,7 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-title' => 'Рядом',
 	'mobile-frontend-nearby-loading' => 'Загрузка информации о том, что находится невдалеке от вас',
 	'mobile-frontend-nearby-requirements' => 'Извините! Ваш браузер не поддерживает работу с {{SITENAME}}.',
+	'mobile-frontend-nearby-requirements-guidance' => 'Попробуйте использовать другой браузер или включите JavaScript, если вы отключили его.',
 	'mobile-frontend-nearby-distance' => '{{PLURAL:$1|$1 км}}',
 	'mobile-frontend-nearby-distance-meters' => '{{PLURAL:$1|$1 м}}',
 	'mobile-frontend-nearby-lookup-ui-error-guidance' => 'Попробуйте найти открытую местность с более лучшей связью.',
@@ -14946,6 +14962,8 @@ $messages['ru'] = array(
 	'mobile-frontend-nearby-error-guidance' => 'Попробуйте обновить ваше местоположение.',
 	'mobile-frontend-donate-image-nouploads' => 'Нет загрузок.',
 	'mobile-frontend-donate-image-login' => 'Вы должны авторизоваться для просмотра своих загрузок.',
+	'mobile-frontend-photo-upload-anon' => 'Вам нужно представиться системе, чтобы добавить изображение на эту страницу.',
+	'mobile-frontend-photo-upload-protected' => 'У вас недостаточно прав для добавления изображения на эту страницу.',
 	'mobile-frontend-photo-upload-unavailable' => 'Ваш браузер не поддерживает загрузку изображений.',
 	'mobile-frontend-photo-upload-generic' => 'Пожертвовать изображение',
 	'mobile-frontend-donate-image-title' => 'Загрузки',
@@ -14955,6 +14973,8 @@ $messages['ru'] = array(
 	'mobile-frontend-listed-image-no-description' => 'Нет описания',
 	'mobile-frontend-donate-photo-upload-success' => 'Получилось! Ваше изображние может быть использован на сайте {{SITENAME}}!',
 	'mobile-frontend-donate-photo-first-upload-success' => 'Получилось! Спасибо за ваш вклад!',
+	'mobile-frontend-first-upload-wizard-new-page-2' => 'Избегайте материалов, найденных в интернете и защищённых авторским правом, а также изображений плакатов, книжных обложек и т.п.',
+	'mobile-frontend-first-upload-wizard-new-page-3-header' => 'Понятно?',
 	'mobile-frontend-first-upload-wizard-new-page-3-ok' => 'Да!',
 	'mobile-frontend-watchlist-add' => '$1 добавлена в ваш список наблюдения',
 	'mobile-frontend-watchlist-removed' => '$1 удалена из вашего списка наблюдения',
@@ -14963,6 +14983,7 @@ $messages['ru'] = array(
 	'mobile-frontend-watchlist-cta' => 'Пожалуйста, авторизуйтесь или зарегистрируйтесь, чтобы посмотреть эту страницу.',
 	'mobile-frontend-watchlist-cta-button-login' => 'Представиться',
 	'mobile-frontend-watchlist-cta-button-signup' => 'Зарегистрироваться',
+	'mobile-frontend-watch-login' => 'Вы должны представиться системе для того, чтобы следить за страницами.',
 	'mobile-frontend-watchlist-a-z' => 'Список',
 	'mobile-frontend-watchlist-feed' => 'Изменено',
 	'mobile-frontend-watchlist-a-z-empty-howto-alt' => 'Нажмите на звёздочку в верхней части страницы',
@@ -14993,6 +15014,7 @@ $messages['ru'] = array(
 	'mobile-frontend-photo-caption-placeholder' => 'Добавить описание (обязательно)',
 	'mobile-frontend-image-loading' => 'Изображение загружается',
 	'mobile-frontend-photo-ownership-help' => 'Что это значит?',
+	'mobile-frontend-photo-ownership-confirm' => 'Понятно!',
 	'mobile-frontend-photo-nag-1-bullet-1-heading' => 'Я не нарушаю авторские права',
 	'mobile-frontend-photo-nag-1-bullet-1-text' => "Это '''не''' изображение, найденное в Интернете. Это моя собственная работа.",
 	'mobile-frontend-photo-nag-learn-more-1' => "'''Да!''' Сделанные вами фотографии мест, объектов и событий.",
@@ -15002,6 +15024,7 @@ $messages['ru'] = array(
 	'mobile-frontend-image-uploading-cancel' => '<a href="#">Отмените</a>, если это занимает слишком много времени.',
 	'mobile-frontend-photo-upload-error' => 'Ошибка, попробуйте заново.',
 	'mobile-frontend-photo-upload-error-file-type' => 'Пожалуйста, загружайте только изображения.',
+	'mobile-frontend-photo-upload-error-filename' => 'Ошибка, просьба представить более детальное описание.',
 	'mobile-frontend-photo-upload-success-article' => 'Загрузка удалась! Теперь ваше изображение размещено на этой странице.',
 	'mobile-frontend-photo-license' => 'Нажимая «Отправить» Вы соглашаетесь с нашими [//wikimediafoundation.org/wiki/Terms_of_use/ru Условиями использования] и соглашаетесь передать Ваше изображение под [//creativecommons.org/licenses/by-sa/3.0/ лицензией Creative Commons Attribution-ShareAlike 3.0].',
 	'mobile-frontend-photo-submit' => 'Отправить',
@@ -15997,6 +16020,7 @@ $messages['sv'] = array(
 	'mobile-frontend-password-placeholder' => 'Lösenord',
 	'mobile-frontend-login' => 'Logga in',
 	'mobile-frontend-history' => 'Visa redigeringshistorik för denna sida.',
+	'mobile-frontend-history-summary' => 'Sidhistorik för [[$1]]',
 	'mobile-frontend-last-modified-date' => 'Senast redigerad den $1, kl $2',
 	'mobile-frontend-last-modified-seconds' => 'Senast redigerad {{PLURAL:$1|$1 sekund|$1 sekunder}} sedan',
 	'mobile-frontend-last-modified-minutes' => 'Senast redigerad {{PLURAL:$1|$1 minut|$1 minuter}} sedan',
