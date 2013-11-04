@@ -138,23 +138,20 @@ $wgSpecialPages['MobileOptions'] = 'SpecialMobileOptions';
 $wgSpecialPages['MobileMenu'] = 'SpecialMobileMenu';
 
 function efMobileFrontend_Setup() {
-	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups;
+	global $wgMFNearby, $wgSpecialPages, $wgSpecialPageGroups, $wgResourceLoaderLESSVars,
+		$wgMFDeviceWidthTablet, $wgMFDeviceWidthMobileSmall;
 
 	if ( $wgMFNearby ) {
 		$wgSpecialPages['Nearby'] = 'SpecialNearby';
 		$wgSpecialPageGroups['Nearby'] = 'pages';
 	}
+	// Set LESS global variables
+	$wgResourceLoaderLESSVars['wgMFDeviceWidthTablet'] = "{$wgMFDeviceWidthTablet}px";
+	$wgResourceLoaderLESSVars['wgMFDeviceWidthMobileSmall'] = "{$wgMFDeviceWidthMobileSmall}px";
 }
 
 // ResourceLoader modules
 require_once( "$cwd/includes/Resources.php" );
-
-$wgMFDeviceWidthTablet = 768;
-
-// Set LESS global variables
-$wgResourceLoaderLESSVars['wgMFDeviceWidthTablet'] = $wgMFDeviceWidthTablet . 'px';
-$wgResourceLoaderLESSVars['wgMFDeviceWidthMobileSmall'] = '280px';
-
 unset( $cwd );
 
 /**
@@ -415,3 +412,14 @@ $wgMFNoMobilePages = array();
  * @var bool
  */
 $wgMFAjaxUploadProgressSupport = false;
+
+/**
+ * Minimum available screen width at which a device can be considered a tablet/desktop
+ */
+$wgMFDeviceWidthTablet = 768;
+
+/**
+ * Devices with available screen of this value and less will have some styles adapted for improved reading
+ * on small screens
+ */
+$wgMFDeviceWidthMobileSmall = 280;
