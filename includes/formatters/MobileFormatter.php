@@ -62,7 +62,7 @@ abstract class MobileFormatter extends HtmlFormatter {
 		} else {
 			$formatter = new MobileFormatterHTML( $html, $title );
 			$formatter->enableExpandableSections( !$isMainPage && !$isSpecialPage );
-			$formatter->flattenRedLinks( !$context->isAlphaGroupMember() );
+			$formatter->flattenRedLinks( !$context->isBetaGroupMember() );
 		}
 
 		if ( $context->isBetaGroupMember() ) {

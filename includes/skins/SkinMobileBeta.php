@@ -4,6 +4,16 @@ class SkinMobileBeta extends SkinMobile {
 	public $template = 'MobileTemplateBeta';
 	protected $mode = 'beta';
 
+	public function outputPage( OutputPage $out = null ) {
+		wfProfileIn( __METHOD__ );
+		if ( !$out ) {
+			$out = $this->getOutput();
+		}
+		# Replace page content before DOMParse to make sure images are scrubbed and Zero transformations are applied
+		$this->handleNewPages( $out );
+		parent::outputPage( $out );
+	}
+
 	protected function getSearchPlaceHolderText() {
 		return wfMessage( 'mobile-frontend-placeholder-beta' )->text();
 	}
@@ -76,4 +86,17 @@ class SkinMobileBeta extends SkinMobile {
 		return $loginLogoutLink;
 	}
 
+	protected function handleNewPages( OutputPage $out ) {
+		# Show error message
+		# @todo: What if user can't create new pages here?
+		$title = $this->getTitle();
+		if ( !$title->exists() && !$title->isSpecialPage() ) {
+			$out->clearHTML();
+			$out->addHTML(
+				Html::openElement( 'div', array( 'id' => 'mw-mf-newpage' ) )
+				. wfMessage( 'mobile-frontend-editor-newpage-prompt' )->parse()
+				. Html::closeElement( 'div' )
+			);
+		}
+	}
 }
