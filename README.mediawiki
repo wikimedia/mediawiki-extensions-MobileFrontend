@@ -10,7 +10,7 @@ See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Configuration_settin
 
 == Development ==
 
-=== Coding conventions ==
+=== Coding conventions ===
 Please follow the coding conventions of MobileFrontend:
 https://www.mediawiki.org/wiki/MobileFrontend/Coding_conventions
 
