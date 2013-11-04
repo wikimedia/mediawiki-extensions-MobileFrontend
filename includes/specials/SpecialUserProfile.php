@@ -39,8 +39,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 		$title = $file->getTitle();
 		$ts = new MWTimestamp( $file->getTimestamp() );
 		$daysAgo = $this->getDaysAgo( $ts );
-		$img = Html::openElement( 'div', array( 'class' => 'last-upload section-end' ) ) .
-			Html::openElement( 'a', array( 'href' => $title->getLocalUrl() ) ) .
+		$img = Html::openElement( 'div', array( 'class' => 'card' ) ) .
+			Html::openElement( 'a', array( 'class' => 'container', 'href' => $title->getLocalUrl() ) ) .
 			Html::element( 'img', array(
 				// uset MediaTransformOutput::getUrl, unfortunately MediaTransformOutput::toHtml
 				// returns <img> tag with fixed height which causes the image to be deformed when
@@ -49,7 +49,7 @@ class SpecialUserProfile extends MobileSpecialPage {
 				// FIXME: Add more meaningful alt text
 				'alt' => $title->getText(),
 			) ) .
-			Html::openElement( 'div', array( 'class' => 'thumbcaption secondary-statement' ) ) .
+			Html::openElement( 'div', array( 'class' => 'caption' ) ) .
 			$this->msg( 'mobile-frontend-profile-last-upload-caption', $this->targetUser->getName() )->numParams( $daysAgo )->parse() .
 			Html::closeElement( 'div' ) .
 			Html::closeElement( 'a' ) .
@@ -59,54 +59,8 @@ class SpecialUserProfile extends MobileSpecialPage {
 	}
 
 	protected function getUserSummary() {
-		$registered = $this->targetUser->getRegistration();
-		$editCount = $this->targetUser->getEditCount();
-		$ts = new MWTimestamp( wfTimestamp( TS_UNIX, $registered ) );
-		$daysAgo = $this->getDaysAgo( $ts );
-
-		$name = $this->targetUser->getName();
-		if( $editCount < 50 ) {
-			$role = $this->msg( 'mobile-frontend-profile-user-desc-1', $name );
-		} else if ( $editCount < 5000 ) {
-			$role = $this->msg( 'mobile-frontend-profile-user-desc-2', $name );
-		} else {
-			$role = $this->msg( 'mobile-frontend-profile-user-desc-3', $name );
-		}
-
-		return Html::openElement( 'div', array( 'class' => 'section section-registered' ) ) .
-			Html::element( 'p', array( 'class' => 'statement' ),
-			$this->msg( 'mobile-frontend-profile-registration', $name )->numParams( $daysAgo, $editCount )->parse() ) .
-			Html::element( 'p', array( 'class' => 'secondary-statement section-end' ), $role ) .
-			Html::closeElement( 'div' );
-	}
-
-	protected function getRecentActivityHtml() {
-		wfProfileIn( __METHOD__ );
-		// render
-		$fromDate = time() - ( 3600 * 24 * 30 );
-		$count = $this->userInfo->countRecentEdits( $fromDate );
-		$uploadCount = $this->userInfo->countRecentUploads( $fromDate );
-
-		$msgContributions = $this->msg( 'mobile-frontend-profile-contributions', $this->targetUser->getName() )
-			->numParams( $count, $uploadCount )
-			->parse();
-
-		$lastUploadHtml = $this->getLastUpload();
-		$activityClassName = $lastUploadHtml? 'section section-activity' : 'section section-activity section-end';
-		$html =
-			Html::openElement( 'div', array( 'class' => $activityClassName ) ) .
-			Html::openElement( 'p', array( 'class' => 'statement' ) ) .
-			$msgContributions .
-			Html::closeElement( 'p' );
-
-		if ( $lastUploadHtml ) {
-			$html .= $lastUploadHtml;
-		}
-
-		$html .= Html::closeElement( 'div' );
-
-		wfProfileOut( __METHOD__ );
-		return $html;
+		// @todo: Story 1218
+		return '';
 	}
 
 	protected function getLastThanks() {
@@ -116,13 +70,15 @@ class SpecialUserProfile extends MobileSpecialPage {
 		if ( $thank ) {
 			$user = $thank['user'];
 			$title = $thank['title'];
-			$html = Html::openElement( 'div', array( 'class' => 'section section-thanks statement section-end' ) );
-			$html .= $this->msg( 'mobile-frontend-profile-last-thanked',
-				$user,
-				$title->getFullText(),
-				$this->targetUser
-			)->parse();
-			$html .= '</div>';
+			$html = Html::openElement( 'div', array( 'class' => 'card' ) )
+				. Html::openElement( 'div', array( 'class' => 'container caption' ) )
+				. $this->msg( 'mobile-frontend-profile-last-thanked',
+					$user,
+					$title->getFullText(),
+					$this->targetUser
+				)->parse()
+				. '</div>'
+				. '</div>';
 		}
 		wfProfileOut( __METHOD__ );
 		return $html;
@@ -173,6 +129,40 @@ class SpecialUserProfile extends MobileSpecialPage {
 		return $html;
 	}
 
+	protected function getUserFooterHtml() {
+		$fromDate = $this->targetUser->getRegistration();
+		$editCount = $this->targetUser->getEditCount();
+		$uploadCount = $this->userInfo->countRecentUploads( $fromDate );
+		$ts = new MWTimestamp( wfTimestamp( TS_UNIX, $fromDate ) );
+		$diff = $ts->diff( new MWTimestamp() );
+		if ( $diff->y ) {
+			$msg = 'mobile-frontend-profile-footer-years';
+			$units = $diff->y;
+		} elseif ( $diff->m ) {
+			$msg = 'mobile-frontend-profile-footer-months';
+			$units = $diff->m;
+		} else {
+			$msg = 'mobile-frontend-profile-footer-days';
+			$units = $diff->d;
+		}
+
+		// Ensure that the upload count is compatible with the i18n message
+		if ( $uploadCount > 500 ) {
+			$uploadCount = 500;
+		}
+
+		return Html::openElement( 'div', array( 'class' => 'footer' ) )
+			. Html::openElement( 'div' )
+			. $this->msg( $msg, $this->targetUser->getName() )->
+				numParams( $units, $editCount, $uploadCount )->parse()
+			. Html::closeElement( 'div' )
+			. Html::openElement( 'div' )
+			. Linker::link( $this->targetUser->getUserPage(),
+				$this->msg( 'mobile-frontend-profile-userpage-link' )->escaped()
+			)
+			. Html::closeElement( 'div' );
+	}
+
 	public function executeWhenAvailable( $par ) {
 		wfProfileIn( __METHOD__ );
 		$out = $this->getOutput();
@@ -185,15 +175,15 @@ class SpecialUserProfile extends MobileSpecialPage {
 				// prepare content
 				$this->userInfo = new MobileUserInfo( $this->targetUser );
 				$this->setUserProfileUIElements();
-				$link = Linker::link( $this->targetUser->getUserPage(),
-					$this->msg( 'mobile-frontend-profile-userpage-link' )->escaped(),
-					array( 'class' => 'statement section user-page section-end' )
-				);
+				$activityHtml = $this->getLastUpload() . $this->getLastThanks();
 				$html = Html::openElement( 'div', array( 'class' => 'profile' ) )
-					. $this->getUserSummary()
-					. $this->getRecentActivityHtml()
-					. $this->getLastThanks()
-					. $link
+					. $this->getUserSummary();
+				if ( $activityHtml ) {
+					$html .= Html::openElement( 'h2' )
+						. $this->msg( 'mobile-frontend-profile-activity-heading' )
+						. Html::closeElement( 'h2' ) . $activityHtml;
+				}
+				$html .= $this->getUserFooterHtml()
 					. Html::closeElement( 'div' );
 			} else {
 				$html = $this->getHtmlNoUser();

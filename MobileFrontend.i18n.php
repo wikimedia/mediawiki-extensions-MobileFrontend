@@ -333,20 +333,18 @@ $messages['en'] = array (
 
 	// Special:UserProfile
 	'mobile-frontend-profile-title' => 'User profile',
-	'mobile-frontend-profile-contributions' => '[[Special:Contributions/$1|{{PLURAL:$2|1 edit|$2 edits|0=No edits|501=More than 500 edits}}]] and
-[[Special:Uploads/$1|{{PLURAL:$3|1 upload|$3 uploads|0=no uploads|501=more than 500 uploads}}]] in the last 30 days.',
 	'mobile-frontend-profile-last-upload-caption' => 'Last upload by {{GENDER:$1|$1}}, {{PLURAL:$2|yesterday|$2 days ago|0=today}}.',
-	'mobile-frontend-profile-registration' => '$1 has been contributing to {{SITENAME}} for {{PLURAL:$2|$2 day|$2 days}} and {{GENDER:$1|has made}} {{PLURAL:$3|$3 edit|$3 edits}}.',
 	'mobile-frontend-profile-usertalk' => 'View talk page.',
 	'mobile-frontend-profile-noargs' => 'Please provide a username to view a profile.',
 	'mobile-frontend-profile-nouser' => 'Non-existent or invalid username',
+	'mobile-frontend-profile-activity-heading' => 'Activity and contributions',
 	'mobile-frontend-profile-yours' => 'Visit your profile page.',
 	'mobile-frontend-profile-userpage-link' => 'Visit user page.',
-	'mobile-frontend-profile-user-desc-1' => '{{GENDER:$1|This user}} is a new editor.',
-	'mobile-frontend-profile-user-desc-2' => '{{GENDER:$1|This user}} is a somewhat experienced editor.',
-	'mobile-frontend-profile-user-desc-3' => '{{GENDER:$1|This user}} is a prolific editor.',
 	'mobile-frontend-requires-optin' => 'This page is not available unless you opt into our beta mode. Visit the [[Special:MobileOptions|settings page]] to opt in.',
 	'mobile-frontend-profile-last-thanked' => '{{GENDER:$1|Last thanked}} by [[Special:UserProfile/$1|$1]] for an edit to [[$2]].',
+	'mobile-frontend-profile-footer-days' => 'Registered for {{PLURAL:$2|1 day|$2 days}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
+	'mobile-frontend-profile-footer-months' => 'Registered for over {{PLURAL:$2|1 month|$2 months}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
+	'mobile-frontend-profile-footer-years' => 'Registered for over {{PLURAL:$2|1 year|$2 years}} with [[Special:Contributions/$1|{{PLURAL:$3|1 edit|$3 edits}}]] and [[Special:Uploads/$1|{{PLURAL:$4|1 upload|$4 uploads|500=500+ uploads}}]].',
 
 	// geo not a hack
 	'mobile-frontend-geonotahack' => 'Near this page',
@@ -931,6 +929,7 @@ If the user is logged in, this message is followed by:
 
 If the user is logged in, this message is followed by:
 * {{msg-mw|Mobile-frontend-profile-yours}}',
+	'mobile-frontend-profile-activity-heading' => 'Heading for recent contributions section.',
 	'mobile-frontend-profile-yours' => 'Label pointing user to their profile.
 
 Used if the user is logged in.
@@ -947,6 +946,23 @@ Parameters:
 * $1 - name of user who thanked, can be used for GENDER
 * $2 - title of page for editing which the thank was given
 * $3 - (optional) name of user who was thanked, for GENDER support',
+	'mobile-frontend-profile-footer-days' => 'Generates the informative footer on Special:UserProfile
+
+Parameters:
+* $1 - Username of user (used for link generation)
+* $2 - Number of days the user has been a member for.
+* $3 - Number of edits
+* $4 - Number of uploads, capped to 500',
+
+	'mobile-frontend-profile-footer-months' => 'See {{msg-mw|mobile-frontend-profile-footer-days}} with one variation:
+
+Parameters:
+* $2 - Number of full months the user has been a member for',
+	'mobile-frontend-profile-footer-years' => 'See {{msg-mw|mobile-frontend-profile-footer-days}} with one variation:
+
+Parameters:
+* $2 - Number of full years the user has been a member for',
+
 	'mobile-frontend-geonotahack' => 'Label for button that shows pages near a given page',
 );
 

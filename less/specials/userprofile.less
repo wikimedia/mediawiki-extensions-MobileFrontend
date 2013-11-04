@@ -1,52 +1,41 @@
 @import "../mixins.less";
 
 .profile {
+	text-align: center;
+	color: @grayMid;
 	// FIXME: reconsider top margin for all pages?
 	margin-top: 1.5em;
 
-	.last-upload {
-		margin-top: 0.6em;
+	a {
+		color: @grayDark;
+		font-weight: bold;
 	}
 
-	.statement {
-		font-size: 1.4em;
-		line-height: 1.25;
-		margin-bottom: 0;
+	h2 {
+		color: @grayLight;
+		text-transform: uppercase;
 	}
 
-	.secondary-statement {
-		font-size: 1.1em;
-		color: #ccc;
-		font-style: italic;
-		line-height: 1.1;
-		margin-top: .2em;
+	.card {
+		min-height: 240px;
+		width: 160px;
+		border: solid 1px @grayLight;
+		display: table;
+		float: left;
+		margin: 4px;
+
+		.container {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.caption {
+			padding: 8px;
+		}
 	}
 
-	.section-end {
-		margin-bottom: 2em;
+	.footer {
+		clear: both;
+		padding: 2em 0;
 	}
-}
-
-.section {
-	background-repeat: no-repeat;
-	.background-size( 20px, 20px );
-	padding-left: 30px;
-	background-position: left 4px;
-}
-
-.section-registered {
-	background-image: url(images/profile/registration.png);
-}
-
-.section-activity {
-	background-image: url(images/profile/activity.png);
-}
-
-.section-thanks {
-	background-image: url(images/profile/thanks.png);
-}
-
-.user-page {
-	display: inline-block;
-	background-image: url(images/profile/user.png);
 }
