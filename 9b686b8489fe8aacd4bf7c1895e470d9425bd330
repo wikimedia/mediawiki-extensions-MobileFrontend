@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_03a43c58",
+        "filename": "includes/skins/SkinMobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 394,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-11-04T21:48:04Z",
+      "side": 1,
+      "message": "preg_match() is one of those annoying PHP funcitons that returns 0 or FALSE - 0 for no matches, FALSE on error. In the event that this preg_match() returns FALSE, you probably do not want to proceed - it may be better to write this as:\nif ( preg_match( \u0027#^(https?:)?//#\u0027, $url ) \u003d\u003d\u003d 0 )\nand possibly handle an error state separately.",
+      "revId": "9b686b8489fe8aacd4bf7c1895e470d9425bd330",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
