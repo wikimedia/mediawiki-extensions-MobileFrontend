@@ -76,6 +76,10 @@
 			}
 		},
 
+		getId: function() {
+			return this.options.id;
+		},
+
 		getNamespaceId: function() {
 			var args = this.options.title.split( ':' ), nsId;
 			if ( args[1] ) {
