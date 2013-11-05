@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "291c1151_f75a76ee",
+        "filename": "MobileFrontend.i18n.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-11-05T14:56:14Z",
+      "side": 1,
+      "message": "This terminology (\"member\") is very non-standard.",
+      "revId": "06fd3a0e6127438ced6a8179b567ebd70d7b3da6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_b709dee0",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-11-05T14:56:14Z",
+      "side": 1,
+      "message": "What if the year was leap?",
+      "revId": "06fd3a0e6127438ced6a8179b567ebd70d7b3da6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_fd6dfd04",
         "filename": "includes/specials/SpecialUserProfile.php",
         "patchSetId": 1
