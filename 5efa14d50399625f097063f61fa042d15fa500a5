@@ -16,6 +16,24 @@
       "revId": "5efa14d50399625f097063f61fa042d15fa500a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_5c9c4a58",
+        "filename": "includes/specials/SpecialUserProfile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-11-05T23:48:00Z",
+      "side": 1,
+      "message": "It can - however this function can fit in one screen so probably not really needed.",
+      "parentUuid": "291c1151_3ce5ce0c",
+      "revId": "5efa14d50399625f097063f61fa042d15fa500a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
