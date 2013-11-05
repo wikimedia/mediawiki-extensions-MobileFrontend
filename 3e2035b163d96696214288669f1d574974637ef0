@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_89dda60d",
+        "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-05T22:01:58Z",
+      "side": 1,
+      "message": "Consistency.",
+      "parentUuid": "291c1151_e9ed3a27",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_a5fc5a3c",
         "filename": "javascripts/loggingSchemas/MobileWebInfobox.js",
         "patchSetId": 1
@@ -206,6 +224,24 @@
       "side": 1,
       "message": "I\u0027ll make this clearer and add a FIXME, but I realised we used scroll in the uploads page and that we would be better off using a setInterval or at the very least use a debounce\n\nSee this to understand it more.\nhttp://benalman.com/projects/jquery-throttle-debounce-plugin/\n\n// FIXME: Add debouncing to avoid performance degradation\nDoes this suffice?",
       "parentUuid": "291c1151_e5c49212",
+      "revId": "3e2035b163d96696214288669f1d574974637ef0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_e92b7ae9",
+        "filename": "javascripts/specials/uploads.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 542
+      },
+      "writtenOn": "2013-11-05T22:01:58Z",
+      "side": 1,
+      "message": "I think throttling is what we want here, not debouncing. We definitely don\u0027t want this do be called only once.",
+      "parentUuid": "291c1151_09db764d",
       "revId": "3e2035b163d96696214288669f1d574974637ef0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
